@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422846"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078586"
 ---
 # <a name="precompiled-header-files"></a>预编译的头文件
 
-在 Visual Studio 中创建新项目时，会将名为 *.pch*的*预编译头文件*添加到项目。 （在 Visual Studio 2017 及更早版本中，该文件称为*stdafx.h*。）此文件的目的是加快生成过程。 应在此处包含任何稳定的标头文件（例如 `<vector>`标准库标头）。 预编译标头仅在修改了它或它包含的任何文件时进行了编译。 如果只在项目源代码中进行更改，则生成将跳过预编译标头的编译。 
+在 Visual Studio 中创建新项目时，会将名为 *.pch*的*预编译头文件*添加到项目。 （在 Visual Studio 2017 及更早版本中，该文件称为*stdafx.h*。）此文件的目的是加快生成过程。 应在此处包含任何稳定的标头文件（例如 `<vector>`标准库标头）。 预编译标头仅在修改了它或它包含的任何文件时进行了编译。 如果只在项目源代码中进行更改，则生成将跳过预编译标头的编译。
 
-预编译标头的编译器选项为[/y](reference/y-precompiled-headers.md)。 在项目属性页中，选项位于 "**配置属性" 下 > "CC++ /> 预编译标头**"。 您可以选择不使用预编译标头，也可以指定头文件名称以及输出文件的名称和路径。 
+预编译标头的编译器选项为[/y](reference/y-precompiled-headers.md)。 在项目属性页中，选项位于 "**配置属性" 下 > "CC++ /> 预编译标头**"。 您可以选择不使用预编译标头，也可以指定头文件名称以及输出文件的名称和路径。
 
 ## <a name="custom-precompiled-code"></a>自定义预编译代码
 

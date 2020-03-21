@@ -4,12 +4,12 @@ ms.date: 08/14/2018
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 955a445fbc29fca479a64684b4b60909234a0b38
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: b9eea6dc466db202ee388a2bfb2e59632e210b7f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467089"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076182"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>使用 C++ Core Guidelines 检查器
 
@@ -17,7 +17,7 @@ C++核心指导原则是有关C++专家和设计人员所C++创建的编码的�
 
 ## <a name="the-c-core-guidelines-project"></a>C++核心准则项目
 
-由 Bjarne Stroustrup 和其他人创建， C++核心准则是使用新式C++安全有效的指南。 这些指南强调了静态类型安全和资源安全性。 它们确定了消除或最小化语言中最容易出错的部分的方法，并建议如何以可靠的方式使代码更简单、更具性能。 这些准则由标准C++基础维护。 若要了解详细信息，请参阅[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的文档、 [ C++核心准则](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)和访问C++核心准则文档项目文件。
+由 Bjarne Stroustrup 和其他人创建， C++核心准则是使用新式C++安全有效的指南。 这些指南强调了静态类型安全和资源安全性。 它们确定了消除或最小化语言中最容易出错的部分的方法，并建议如何以可靠的方式使代码更简单、更具性能。 这些准则由标准C++基础维护。 若要了解详细信息，请参阅[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的文档、 [ C++核心准则](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)和访问C++核心准则文档项目文件。
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>启用代码C++分析中的核心检查指南
 

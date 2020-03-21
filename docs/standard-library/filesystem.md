@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441706"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076510"
 ---
 # &lt;filesystem&gt;
 
@@ -32,7 +32,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> 在 Visual Studio 2017 版本中，\<filesystem> 标头尚不是C++标准的。 C++在 Visual Studio 2017 中，RTW 实现了最终草案标准，可在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到。 Visual Studio 2017 版本15.7 及更高版本支持新的 c + + 17 \<filesystem> standard。
+> 在 Visual Studio 2017 版本中，\<filesystem> 标头尚不是C++标准的。 C++在 Visual Studio 2017 中，RTW 实现了最终草案标准，可在[ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)中找到。 Visual Studio 2017 版本15.7 及更高版本支持新的 c + + 17 \<filesystem> standard。
 > 这是一个全新的实现，与上一个 `std::experimental` 版本不兼容。 这是必要的，如符号支持、bug 修复和标准要求的行为更改。 目前，包括 \<filesystem> 提供了新的 `std::filesystem` 和之前的 `std::experimental::filesystem`。 包括 \<experimental/filesystem> 仅提供旧 experimental 实现。 此 experimental 实现将在下一次 ABI 中断版本的库中删除。
 
 此标头支持两大类主机操作系统（Microsoft Windows 和 POSIX）之一的文件系统。
@@ -93,7 +93,7 @@ using namespace std::experimental::filesystem::v1;
 
 有关详细信息和代码示例，请参阅[文件系统导航C++（）](../standard-library/file-system-navigation.md)。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="classes"></a>类
 

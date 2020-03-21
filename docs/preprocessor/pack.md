@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965248"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079983"
 ---
 # <a name="pack-pragma"></a>包装杂注
 
@@ -26,7 +26,7 @@ ms.locfileid: "73965248"
 > **#pragma pack （pop** [ **，** {*标识符* | *n* }] **）** \
 > **#pragma pack （** [ *n* ] **）**
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 **显示**\
 可有可无显示打包对齐的当前字节值。 该值由警告消息显示。
@@ -35,7 +35,7 @@ ms.locfileid: "73965248"
 可有可无将当前封装对齐值推送到内部编译器堆栈上，并将当前封装对齐值设置为*n*。 如果未指定*n* ，则推送当前封装对齐值。
 
 **pop**\
-可有可无从内部编译器堆栈的顶部移除记录。 如果未用**pop**指定*n* ，则与堆栈顶部的结果记录关联的封装值是新的封装对齐值。 如果指定了*n* ，如 `#pragma pack(pop, 16)`，则*n*将成为新的封装对齐值。 如果使用*标识符*（例如 `#pragma pack(pop, r1)`）进行弹出，则会弹出堆栈上的所有记录，直到找到具有*标识符*的记录。 将弹出该记录，并且与堆栈顶部的结果记录关联的封装值是新的封装对齐值。 如果你使用在堆栈上的任何记录中都找不到的*标识符*来进行弹出，则会忽略**pop** 。 
+可有可无从内部编译器堆栈的顶部移除记录。 如果未用**pop**指定*n* ，则与堆栈顶部的结果记录关联的封装值是新的封装对齐值。 如果指定了*n* ，如 `#pragma pack(pop, 16)`，则*n*将成为新的封装对齐值。 如果使用*标识符*（例如 `#pragma pack(pop, r1)`）进行弹出，则会弹出堆栈上的所有记录，直到找到具有*标识符*的记录。 将弹出该记录，并且与堆栈顶部的结果记录关联的封装值是新的封装对齐值。 如果你使用在堆栈上的任何记录中都找不到的*标识符*来进行弹出，则会忽略**pop** 。
 
 语句 `#pragma pack (pop, r1, 2)` 等效于 `#pragma pack (pop, r1)` 后跟 `#pragma pack(2)`。
 
@@ -120,6 +120,6 @@ int main() {
 #pragma pack(show)   // C4810
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: 清单工具属性页
+title: “清单工具”属性页
 ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927681"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079503"
 ---
-# <a name="manifest-tool-property-pages"></a>清单工具属性页
+# <a name="manifest-tool-property-pages"></a>“清单工具”属性页
 
-使用这些页面指定[mt.exe](/windows/win32/sbscs/mt-exe)的常规选项。 这些页面位于 "**项目** > **属性** > " "**配置属性** > " "**清单工具**" 下。
+使用这些页面指定[mt.exe](/windows/win32/sbscs/mt-exe)的常规选项。 这些页面位于 "**项目** > **属性**" 下的 " > **配置属性** > **清单工具**" 下。
 
 ## <a name="general-property-page"></a>"常规属性" 页
 
@@ -47,11 +47,11 @@ ms.locfileid: "70927681"
 
 ### <a name="assembly-identity"></a>程序集标识 * *
 
-使用 /identity 选项指定标识字符串，该字符串包含 [\<assemblyIdentity> 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-application)的特性。 标识字符串以 `name` 特性的值开头，后面跟特性 = 值对。 标识字符串中的特性以逗号隔开。
+使用 /identity 选项指定标识字符串，该字符串包含 [\<assemblyIdentity> 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-application)的特性。 标识字符串以 `name` 特性的值开头，后面跟特性*值对* = 。 标识字符串中的特性以逗号隔开。
 
-下面是一个示例标识字符串：`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+下面是一个示例标识字符串： `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>"输入和输出" 属性页     
+## <a name="input-and-output-property-page"></a>"输入和输出" 属性页
 
 ###  <a name="additional-manifest-files"></a>附加清单文件
 
@@ -97,15 +97,15 @@ ms.locfileid: "70927681"
 
 指定应用程序是否具有 DPI 感知功能。 默认情况下，MFC 项目设置为“是”，其他项目设置为“否”，因为只有 MFC 项目内置有 DPI 感知功能。 如果添加代码来处理其他 DPI 设置，可将设置改为“是”。 如果在应用程序非 DPI 感知型时将其设置为此类型，应用程序可能显示失真或显示较小。
 
-**方案**
+**选项**
 
-- **无**
+- 无
 - **高 DPI 感知**
 - **每个监视器高 DPI 识别**
 
 ## <a name="isolated-com-property-page"></a>独立 COM 属性页
 
-有关独立 COM 的详细信息，请参阅[独立应用程序](/windows/win32/SbsCs/isolated-applications)和[如何：生成独立应用程序以使用 COM](../how-to-build-isolated-applications-to-consume-com-components.md)组件。
+有关独立 COM 的详细信息，请参阅[独立应用程序](/windows/win32/SbsCs/isolated-applications)和[如何：生成独立应用程序以使用 COM 组件](../how-to-build-isolated-applications-to-consume-com-components.md)。
 
 ###  <a name="type-library-file"></a>类型库文件
 
@@ -133,11 +133,10 @@ ms.locfileid: "70927681"
 
 指定更新文件哈希时要使用的搜索路径。
 
-###  <a name="additional-options"></a>附加选项
+###  <a name="additional-options"></a>其他选项
 
-附加选项
+其他选项
 
-
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++项目属性页引用](property-pages-visual-cpp.md)

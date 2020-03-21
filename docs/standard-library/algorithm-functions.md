@@ -200,16 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b9f1e5c4c5600fa07d2f9c5222bf57fb43446955
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427367"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076826"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
-## <a name="adjacent_find"></a>adjacent_find
+## <a name="adjacent_find"></a><a name="adjacent_find"></a>adjacent_find
 
 搜索相等或满足指定条件的两个相邻元素。
 
@@ -327,7 +327,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a>all_of
+## <a name="all_of"></a><a name="all_of"></a>all_of
 
 当给定范围内的每个元素都存在条件时，返回**true** 。
 
@@ -403,7 +403,7 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a>any_of
+## <a name="any_of"></a><a name="any_of"></a>any_of
 
 如果在指定的元素范围内至少出现一次条件，**则返回 true** 。
 
@@ -480,7 +480,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a>binary_search
+## <a name="binary_search"></a><a name="binary_search"></a>binary_search
 
 测试已排序的范围中是否有等于指定值的元素，或在二元谓词指定的意义上与指定值等效的元素。
 
@@ -619,7 +619,7 @@ Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
 There is an element with a value equivalent to -3 under mod_lesser.
 ```
 
-## <a name="clamp"></a>固定
+## <a name="clamp"></a><a name="clamp"></a>固定
 
 将值与上限和下限进行比较，并返回对边界之间的值的引用，如果值高于或低于这些值，则返回对上限或下限的引用。
 
@@ -660,7 +660,7 @@ constexpr const Type& clamp(
 
 如果*上限*小于*下限*，则行为是不确定的。
 
-## <a name="copy"></a>复本
+## <a name="copy"></a><a name="copy"></a>复本
 
 将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向前方向的新位置。
 
@@ -763,7 +763,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a>copy_backward
+## <a name="copy_backward"></a><a name="copy_backward"></a>copy_backward
 
 将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向后方向的新位置。
 
@@ -860,7 +860,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 ```
 
-## <a name="copy_if"></a>copy_if
+## <a name="copy_if"></a><a name="copy_if"></a>copy_if
 
 在一系列元素中，复制指定条件下为**true**的元素。
 
@@ -939,7 +939,7 @@ int main()
 
     // is_even checks if the element is even.
     auto is_even = [](int const elem) { return !(elem % 2); };
-    // use copy_if to select only even elements from li 
+    // use copy_if to select only even elements from li
     // and copy them to le, starting from le's begin position
     auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
     le.resize(std::distance(le.begin(), ec));  // shrink le to new size
@@ -965,7 +965,7 @@ Even numbers are le = ( 46 88 72 60 40 84 )
 Odd numbers are lo = ( 59 79 71 5 )
 ```
 
-## <a name="copy_n"></a>copy_n
+## <a name="copy_n"></a><a name="copy_n"></a>copy_n
 
 复制指定数量的元素。
 
@@ -1035,7 +1035,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a>计
+## <a name="count"></a><a name="count"></a>计
 
 返回范围中其值与指定值匹配的元素的数量。
 
@@ -1116,7 +1116,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>count_if
+## <a name="count_if"></a><a name="count_if"></a>count_if
 
 返回范围中其值满足指定条件的元素的数量。
 
@@ -1201,7 +1201,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a>=
+## <a name="equal"></a><a name="equal"></a>=
 
 逐个元素比较两个范围是否相等或是否在二元谓词指定的意义上等效。
 
@@ -1336,7 +1336,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a>equal_range
 
 在给定的排序范围中，查找其中所有元素都等效于给定值的子范围。
 
@@ -1502,7 +1502,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a>适合
+## <a name="fill"></a><a name="fill"></a>适合
 
 将相同的新值分配给指定范围中的每个元素。
 
@@ -1580,7 +1580,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a>fill_n
+## <a name="fill_n"></a><a name="fill_n"></a>fill_n
 
 将新值分配给以特定元素开始的范围中指定数量的元素。
 
@@ -1669,7 +1669,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>查找
+## <a name="find"></a><a name="find"></a>查找
 
 在范围中找到具有指定值的元素的第一个匹配项位置。
 
@@ -1712,7 +1712,7 @@ ForwardIterator find(
 
 有关使用 `find()` 的代码示例，请参阅 [find_if](../standard-library/algorithm-functions.md#find_if)。
 
-## <a name="find_end"></a>find_end
+## <a name="find_end"></a><a name="find_end"></a>find_end
 
 在范围中查找与指定序列相同的最后一个序列，或在二元谓词指定的意义上等效的最后一个序列。
 
@@ -1876,7 +1876,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a>find_first_of
+## <a name="find_first_of"></a><a name="find_first_of"></a>find_first_of
 
 在目标范围中搜索若干值中任意值的第一个匹配项，或搜索在二元谓词指定的意义上等效于指定元素集的若干元素中任意元素的第一个匹配项。
 
@@ -2043,7 +2043,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a>find_if
+## <a name="find_if"></a><a name="find_if"></a>find_if
 
 在范围中找到满足指定条件的元素的第一个匹配项位置。
 
@@ -2165,7 +2165,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a>find_if_not
+## <a name="find_if_not"></a><a name="find_if_not"></a>find_if_not
 
 返回指示的范围中不满足条件的第一个元素。
 
@@ -2204,7 +2204,7 @@ ForwardIterator find_if_not(
 
 有关易于适应 `find_if_not()` 的代码示例的信息，请参阅 [find_if](../standard-library/algorithm-functions.md#find_if)。
 
-## <a name="for_each"></a>for_each
+## <a name="for_each"></a><a name="for_each"></a>for_each
 
 将指定的函数对象按向前顺序应用于范围中的每个元素并返回此函数对象。
 
@@ -2359,7 +2359,7 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="for_each_n"></a>for_each_n
+## <a name="for_each_n"></a><a name="for_each_n"></a>for_each_n
 
 ```cpp
 template<class InputIterator, class Size, class Function>
@@ -2376,7 +2376,7 @@ ForwardIterator for_each_n(
     Function f);
 ```
 
-## <a name="generate"></a>带来
+## <a name="generate"></a><a name="generate"></a>带来
 
 将函数对象生成的值分配给范围中的每个元素。
 
@@ -2456,7 +2456,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a>generate_n
+## <a name="generate_n"></a><a name="generate_n"></a>generate_n
 
 将函数对象生成的值分配给范围中指定数量的元素，并返回到超出最后一个分配值的下一位置。
 
@@ -2542,7 +2542,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a>涵盖
+## <a name="includes"></a><a name="includes"></a>涵盖
 
 测试一个排序的范围是否包含另一排序范围中的所有元素，其中元素之间的排序或等效条件可通过二元谓词指定。
 
@@ -2767,7 +2767,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a>inplace_merge
+## <a name="inplace_merge"></a><a name="inplace_merge"></a>inplace_merge
 
 将两个连续的排序范围中的元素合并为一个排序范围，其中排序条件可通过二元谓词指定。
 
@@ -2937,7 +2937,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a>is_heap
+## <a name="is_heap"></a><a name="is_heap"></a>is_heap
 
 如果指定范围中的元素形成堆，**则返回 true** 。
 
@@ -2993,7 +2993,7 @@ bool is_heap(
 
 `is_heap_until(first, last, pred) == last` 列中的一个值匹配。
 
-## <a name="is_heap_until"></a>is_heap_until
+## <a name="is_heap_until"></a><a name="is_heap_until"></a>is_heap_until
 
 返回一个迭代器，它位于范围 [`first`，`last`）中不满足堆排序条件的第一个元素处; 如果范围形成一个堆，则返回*end* 。
 
@@ -3047,7 +3047,7 @@ RandomAccessIterator is_heap_until(
 
 第二个模板函数的行为与第一个相同，只不过它使用谓词*pred*而不是 `std::less<>` 作为堆排序条件。
 
-## <a name="is_partitioned"></a>is_partitioned
+## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
 如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前，则返回**true** 。
 
@@ -3088,7 +3088,7 @@ bool is_partitioned(
 
 仅当 `[first, last)` 中的所有元素都按*pred*分区时，模板函数才返回**true** ;也就是说，`pred (X)` 为 true 的 `[first, last)` 中 `X` 的所有元素出现在 `pred (Y)` 为**false**的所有元素 `Y` 之前。
 
-## <a name="is_permutation"></a>is_permutation
+## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
 如果这两个范围包含相同元素（无论元素是否处于相同顺序），则返回 true。 在 C++14 代码中使用双范围重载，因为对第二个范围仅采用单个迭代器的重载在第二个范围长于第一个范围时不会检测到差异，并且会在第二个范围短于第一个范围时导致未定义的行为。
 
@@ -3208,7 +3208,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a>is_sorted
+## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
 
 如果指定范围中的元素按顺序排序，**则返回 true** 。
 
@@ -3258,7 +3258,7 @@ bool is_sorted(
 
 第二个模板函数返回 `is_sorted_until( first, last , pred ) == last`。 *Pred*谓词函数执行顺序比较。
 
-## <a name="is_sorted_until"></a>is_sorted_until
+## <a name="is_sorted_until"></a><a name="is_sorted_until"></a>is_sorted_until
 
 返回一个 `ForwardIterator`，设置为指定范围中按顺序排序的最后一个元素。
 
@@ -3314,7 +3314,7 @@ ForwardIterator is_sorted_until(
 
 第二个模板函数的行为相同，只不过它将 `operator<(X, Y)` 替换为 `pred(X, Y)`。
 
-## <a name="iter_swap"></a>iter_swap
+## <a name="iter_swap"></a><a name="iter_swap"></a>iter_swap
 
 交换由一对指定迭代器引用的两个值。
 
@@ -3470,7 +3470,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a>lexicographical_compare
+## <a name="lexicographical_compare"></a><a name="lexicographical_compare"></a>lexicographical_compare
 
 逐个元素比较两个序列以确定其中的较小序列。
 
@@ -3637,7 +3637,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
 
 在排序的范围中查找其值大于或等效于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。
 
@@ -3776,7 +3776,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a>make_heap
+## <a name="make_heap"></a><a name="make_heap"></a>make_heap
 
 将指定范围中的元素转换到第一个元素是最大元素的堆中，其中排序条件可通过二元谓词指定。
 
@@ -3858,7 +3858,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a>数量
+## <a name="max"></a><a name="max"></a>数量
 
 比较两个对象并返回较大对象，其中排序条件可通过二元谓词指定。
 
@@ -4071,7 +4071,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a>max_element
+## <a name="max_element"></a><a name="max_element"></a>max_element
 
 在指定范围中查找最大元素的第一个匹配项，其中排序条件可通过二元谓词指定。
 
@@ -4225,7 +4225,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a>merge
+## <a name="merge"></a><a name="merge"></a>merge
 
 将两个已排序源范围中的所有元素合并为一个已排序目标范围，其中排序条件可通过二元谓词指定。
 
@@ -4420,7 +4420,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a>min
+## <a name="min"></a><a name="min"></a>min
 
 比较两个对象并返回较小对象，其中排序条件可通过二元谓词指定。
 
@@ -4635,7 +4635,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a>min_element
+## <a name="min_element"></a><a name="min_element"></a>min_element
 
 在指定范围中查找最小元素的第一个匹配项，其中排序条件可通过二元谓词指定。
 
@@ -4799,7 +4799,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a>minmax_element
+## <a name="minmax_element"></a><a name="minmax_element"></a>minmax_element
 
 在一次调用中执行由 `min_element` 和 `max_element` 执行的操作。
 
@@ -4859,7 +4859,7 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 如果序列为非空，则函数最多执行 `3 * (last - first - 1) / 2` 比较。
 
-## <a name="minmax"></a>minmax
+## <a name="minmax"></a><a name="minmax"></a>minmax
 
 比较两个输入参数，并按较小到较大的顺序将它们作为参数对返回。
 
@@ -4909,7 +4909,7 @@ constexpr pair<Type&, Type&> minmax(
 
 此函数仅执行一次比较。
 
-## <a name="mismatch"></a>匹配
+## <a name="mismatch"></a><a name="mismatch"></a>匹配
 
 逐个元素对比两个范围，并找到出现不同的第一个位置。
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a>&lt;alg&gt; 移动
+## <a name="ltalggt-move"></a><a name="alg_move"></a>&lt;alg&gt; 移动
 
 移动与指定范围关联的元素。
 
@@ -5151,7 +5151,7 @@ ForwardIterator2 move(
 
 模板函数为范围 `[0, last - first)`中的每个 `N` 计算一次 `*(dest + N) = move(*(first + N))` 一次，以从最低值开始严格递增的 `N` 值。 然后返回 `dest + N`。 如果 `dest` 和*首次*指定存储区域，则*目标*不能在 `[first, last)`范围内。
 
-## <a name="move_backward"></a>move_backward
+## <a name="move_backward"></a><a name="move_backward"></a>move_backward
 
 将一个迭代器的元素移动到另一迭代器。 移动从指定范围的最后一个元素开始，并在此范围的第一个元素结束。
 
@@ -5180,7 +5180,7 @@ BidirectionalIterator2 move_backward(
 
 `move` 和 `move_backward` 在功能上等效于将 `copy` 和 `copy_backward` 与移动迭代器结合使用。
 
-## <a name="next_permutation"></a>next_permutation
+## <a name="next_permutation"></a><a name="next_permutation"></a>next_permutation
 
 重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。
 
@@ -5359,7 +5359,7 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a>nth_element
+## <a name="nth_element"></a><a name="nth_element"></a>nth_element
 
 对范围内的元素分区，正确找到范围中序列的第 *n* 个元素，以使序列中位于此元素之前的所有元素小于或等于此元素，位于此元素之后的所有元素大于或等于此元素。
 
@@ -5486,7 +5486,7 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a>none_of
+## <a name="none_of"></a><a name="none_of"></a>none_of
 
 当给定范围内的元素内从不出现条件时，返回**true** 。
 
@@ -5527,7 +5527,7 @@ bool none_of(
 
 仅当范围 `[0, last - first)`中的某些 `N` 的谓词 `pred(*(first + N))` 始终为**false**时，模板函数才返回**true** 。
 
-## <a name="partial_sort"></a>partial_sort
+## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
 将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。
 
@@ -5658,7 +5658,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>partial_sort_copy
+## <a name="partial_sort_copy"></a><a name="partial_sort_copy"></a>partial_sort_copy
 
 将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。
 
@@ -5802,7 +5802,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a>依据
+## <a name="partition"></a><a name="partition"></a>依据
 
 将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。
 
@@ -5888,7 +5888,7 @@ int main()
 }
 ```
 
-## <a name="partition_copy"></a>partition_copy
+## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
 
 将条件为**true**的元素复制到一个目标，并将条件为**false**的元素复制到另一个目标。 元素必须来自于指定范围。
 
@@ -5935,7 +5935,7 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 
 如果 `pred(X)` 为 true，则模板函数将 `[first,last)` 中 `X` 的每个元素复制到 `*dest1++`; 如果不是，则 `*dest2++` 为。 它将返回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。
 
-## <a name="partition_point"></a>partition_point
+## <a name="partition_point"></a><a name="partition_point"></a>partition_point
 
 返回给定范围中不满足条件的第一个元素。 元素经过排序，满足条件的元素在不满足条件的元素之前。
 
@@ -5966,7 +5966,7 @@ ForwardIterator partition_point(
 
 此模板函数查找 `pred(*it)` 为**false**的 `[first, last)` 中的第一个迭代器 `it`。 序列必须按*pred*排序。
 
-## <a name="pop_heap"></a>pop_heap
+## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
 移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。
 
@@ -6075,7 +6075,7 @@ int main()
 }
 ```
 
-## <a name="prev_permutation"></a>prev_permutation
+## <a name="prev_permutation"></a><a name="prev_permutation"></a>prev_permutation
 
 重新排序范围中的元素，以便按字典顺序的前一个更大排列（如果有）替换原有排序，其中“前一个”的意义可通过二元谓词指定。
 
@@ -6250,7 +6250,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a>push_heap
+## <a name="push_heap"></a><a name="push_heap"></a>push_heap
 
 将范围末尾的元素添加到包括范围中前面元素的现有堆中。
 
@@ -6363,11 +6363,11 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a>random_shuffle
+## <a name="random_shuffle"></a><a name="random_shuffle"></a>random_shuffle
 
 Std：： random_shuffle （）函数已弃用，并已替换为[std：：无序](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息，请参阅[\<随机 >](../standard-library/random.md)和 Stack Overflow post[为什么在 c + + 14 中弃用 std：： random_shuffle 方法？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
 
-## <a name="remove"></a>取消
+## <a name="remove"></a><a name="remove"></a>取消
 
 从给定范围中消除指定值，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。
 
@@ -6463,7 +6463,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy"></a>remove_copy
+## <a name="remove_copy"></a><a name="remove_copy"></a>remove_copy
 
 将源范围中的元素复制到目标范围（不复制具有指定值的元素），而不影响剩余元素的顺序，并返回新目标范围的末尾。
 
@@ -6561,7 +6561,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy_if"></a>remove_copy_if
+## <a name="remove_copy_if"></a><a name="remove_copy_if"></a>remove_copy_if
 
 将源范围中的元素复制到目标范围，但满足谓词的元素除外。 复制元素而不影响剩余元素的顺序。 返回新目标范围的末尾。
 
@@ -6668,7 +6668,7 @@ int main()
 }
 ```
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 从给定范围中消除满足谓词的元素，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。
 
@@ -6769,7 +6769,7 @@ int main()
 }
 ```
 
-## <a name="replace"></a>全部
+## <a name="replace"></a><a name="replace"></a>全部
 
 检查范围中的每个元素，并替换与指定值匹配的元素。
 
@@ -6856,7 +6856,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy"></a>replace_copy
+## <a name="replace_copy"></a><a name="replace_copy"></a>replace_copy
 
 检查源范围中的每个元素，并替换与指定值匹配的元素，同时将结果复制到新的目标范围。
 
@@ -6971,7 +6971,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy_if"></a>replace_copy_if
+## <a name="replace_copy_if"></a><a name="replace_copy_if"></a>replace_copy_if
 
 检查源范围中的每个元素，并替换满足指定谓词的元素，同时将结果复制到新的目标范围。
 
@@ -7094,7 +7094,7 @@ int main()
 }
 ```
 
-## <a name="replace_if"></a>replace_if
+## <a name="replace_if"></a><a name="replace_if"></a>replace_if
 
 检查范围中的每个元素，并替换满足指定谓词的元素。
 
@@ -7190,7 +7190,7 @@ int main()
 }
 ```
 
-## <a name="reverse"></a>反向
+## <a name="reverse"></a><a name="reverse"></a>反向
 
 反转范围中元素的顺序。
 
@@ -7265,7 +7265,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a>reverse_copy
+## <a name="reverse_copy"></a><a name="reverse_copy"></a>reverse_copy
 
 反转源范围中元素的顺序，同时将这些元素复制到目标范围
 
@@ -7347,7 +7347,7 @@ int main()
 }
 ```
 
-## <a name="rotate"></a>90
+## <a name="rotate"></a><a name="rotate"></a>90
 
 交换两个相邻范围中的元素。
 
@@ -7461,7 +7461,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a>rotate_copy
+## <a name="rotate_copy"></a><a name="rotate_copy"></a>rotate_copy
 
 交换源范围中两个相邻范围内的元素，并将结果复制到目标范围。
 
@@ -7569,7 +7569,7 @@ int main()
 }
 ```
 
-## <a name="sample"></a>范例
+## <a name="sample"></a><a name="sample"></a>范例
 
 ```cpp
 template<class PopulationIterator, class SampleIterator, class Distance, class UniformRandomBitGenerator>
@@ -7581,7 +7581,7 @@ SampleIterator sample(
     UniformRandomBitGenerator&& g);
 ```
 
-## <a name="search"></a>寻找
+## <a name="search"></a><a name="search"></a>寻找
 
 在目标范围中搜索其元素与给定序列中的元素相等或在二元谓词指定的意义上等效于给定序列中的元素的序列的第一个匹配项。
 
@@ -7759,7 +7759,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a>search_n
+## <a name="search_n"></a><a name="search_n"></a>search_n
 
 在范围中搜索具有特定值或按二元谓词的指定与此值相关的指定数量的元素。
 
@@ -7912,7 +7912,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a>set_difference
+## <a name="set_difference"></a><a name="set_difference"></a>set_difference
 
 将属于一个排序的源范围、但不属于另一排序的源范围的所有元素相并到一个排序的目标范围，其中排序条件可通过二元谓词指定。
 
@@ -8114,7 +8114,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a>set_intersection
+## <a name="set_intersection"></a><a name="set_intersection"></a>set_intersection
 
 将属于两个排序的源范围的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。
 
@@ -8312,7 +8312,7 @@ int main()
 }
 ```
 
-## <a name="set_symmetric_difference"></a>set_symmetric_difference
+## <a name="set_symmetric_difference"></a><a name="set_symmetric_difference"></a>set_symmetric_difference
 
 将属于一个而不是两个排序的源范围的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。
 
@@ -8514,7 +8514,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>set_union
+## <a name="set_union"></a><a name="set_union"></a>set_union
 
 将至少属于两个排序的源范围之一的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。
 
@@ -8716,7 +8716,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>无
+## <a name="shuffle"></a><a name="shuffle"></a>无
 
 通过使用随机数生成器重新排列给定范围中的元素。
 
@@ -8743,7 +8743,7 @@ void shuffle(
 
 有关详细信息和使用 `shuffle()` 的代码示例，请参阅 [\<random>](../standard-library/random.md)。
 
-## <a name="sort"></a>进行
+## <a name="sort"></a><a name="sort"></a>进行
 
 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。
 
@@ -8863,7 +8863,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a>sort_heap
+## <a name="sort_heap"></a><a name="sort_heap"></a>sort_heap
 
 将堆转换为排序的范围。
 
@@ -8963,7 +8963,7 @@ int main()
 }
 ```
 
-## <a name="stable_partition"></a>stable_partition
+## <a name="stable_partition"></a><a name="stable_partition"></a>stable_partition
 
 将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前，并保留等效元素的相对顺序。
 
@@ -9053,7 +9053,7 @@ int main()
 }
 ```
 
-## <a name="stable_sort"></a>stable_sort
+## <a name="stable_sort"></a><a name="stable_sort"></a>stable_sort
 
 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列，并保留等效元素的相对顺序。
 
@@ -9172,7 +9172,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a>购
 
 第一次重写交换两个对象的值。 第二次重写交换两个对象数组之间的值。
 
@@ -9255,7 +9255,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a>swap_ranges
+## <a name="swap_ranges"></a><a name="swap_ranges"></a>swap_ranges
 
 将一个范围中的元素与另一大小相等的范围中的元素交换。
 
@@ -9359,7 +9359,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a>转换
+## <a name="transform"></a><a name="transform"></a>转换
 
 将指定的函数对象应用于源范围中的每个元素或两个源范围中的元素对，并将函数对象的返回值复制到目标范围。
 
@@ -9515,7 +9515,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a>针对
+## <a name="unique"></a><a name="unique"></a>针对
 
 移除指定范围中彼此相邻的重复元素。
 
@@ -9664,7 +9664,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a>unique_copy
+## <a name="unique_copy"></a><a name="unique_copy"></a>unique_copy
 
 将源范围中的元素复制到目标范围，彼此相邻的重复元素除外。
 
@@ -9801,7 +9801,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
 
 在排序的范围中查找其值大于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。
 

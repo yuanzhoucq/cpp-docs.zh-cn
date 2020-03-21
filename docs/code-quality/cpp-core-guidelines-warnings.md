@@ -3,12 +3,12 @@ title: C++核心准则警告
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
-ms.openlocfilehash: f499374c84973be09e2f02e6d2f2e6d9a6548363
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 544c737470a6578e65e82bb3c8cf1824ec93895f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467225"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079965"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>使用 C++ 核心准则检查程序
 
@@ -16,7 +16,7 @@ C++核心指导原则是有关C++专家和设计人员所C++创建的编码的�
 
 ## <a name="the-c-core-guidelines-project"></a>C++核心准则项目
 
-由 Bjarne Stroustrup 和其他人创建， C++核心准则是使用新式C++安全有效的指南。 这些指南强调了静态类型安全和资源安全性。 它们确定了消除或最小化语言中最容易出错的部分的方法，并建议如何以可靠的方式使代码更简单、更具性能。 这些准则由标准C++基础维护。 若要了解详细信息，请参阅[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的文档、 [ C++核心准则](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)和访问C++核心准则文档项目文件。
+由 Bjarne Stroustrup 和其他人创建， C++核心准则是使用新式C++安全有效的指南。 这些指南强调了静态类型安全和资源安全性。 它们确定了消除或最小化语言中最容易出错的部分的方法，并建议如何以可靠的方式使代码更简单、更具性能。 这些准则由标准C++基础维护。 若要了解详细信息，请参阅[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的文档、 [ C++核心准则](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)和访问C++核心准则文档项目文件。
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>启用代码C++分析中的核心检查指南
 
@@ -219,7 +219,7 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 
 ## <a name="use-the-guideline-support-library"></a>使用准则支持库
 
-准则支持库旨在帮助你遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，您可以使用 `span<T>` 类型替换 `T*, length` 参数对。 [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)提供了 GSL。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)中找到该项目。
+准则支持库旨在帮助你遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，您可以使用 `span<T>` 类型替换 `T*, length` 参数对。 [https://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)提供了 GSL。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)中找到该项目。
 
 ## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>使用 Visual C++ Studio 2015 项目中的核心检查指南
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: a3765da94560eb84a1d441a6b25c42822fc857bb
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 38979a058cd6a8b029961708b4197daea2826d85
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509466"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077174"
 ---
 # <a name="hstring-class"></a>HString 类
 
@@ -199,7 +199,6 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 ### <a name="return-value"></a>返回值
 
 指向基础字符串数据的**常量**指针。
-
 
 ## <a name="hstringhstring"></a><a name="hstring"></a>HString：： HString
 

@@ -3,16 +3,16 @@ title: “链接器”属性页
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fd0befd7b8ed4e7a4209c3c80602be2f2a99422f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927708"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079602"
 ---
 # <a name="linker-property-pages"></a>“链接器”属性页
 
-以下属性位于 "**项目** > **属性** > " "**配置属性** > " "**链接器**" 下。 有关链接器的详细信息，请参阅[CL 调用链接器](cl-invokes-the-linker.md)和[链接器选项](linker-options.md)。
+以下属性位于 "**项目** > **属性**" 下 > "**配置属性**" > **链接器**。 有关链接器的详细信息，请参阅[CL 调用链接器](cl-invokes-the-linker.md)和[链接器选项](linker-options.md)。
 
 ## <a name="general-property-page"></a>"常规属性" 页
 
@@ -24,17 +24,17 @@ ms.locfileid: "70927708"
 
 打印链接器进度消息
 
-**方案**
+**选项**
 
 - **未设置**-无详细级别。
-- **显示所有进度消息**-显示所有进度消息。 
+- **显示所有进度消息**-显示所有进度消息。
 - **对于搜索的库**-显示只指示所搜索的库的进度消息。
 - **关于优化链接期间的 COMDAT 折叠**-显示有关优化链接期间的 COMDAT 折叠的信息。
 - **关于优化链接期间移除的数据**-显示有关优化链接期间移除的函数和数据的信息。
 - **关于与 SEH 不兼容的模块**-显示与安全异常处理不兼容的模块的信息。
 - **关于与托管代码相关的链接器活动**-显示有关与托管代码相关的链接器活动的信息。
 
-### <a name="version"></a>Version
+### <a name="version"></a>版本
 
 [/VERSION](version-version-information.md)选项告知链接器将版本号置于 .exe 或 .dll 文件的标头中。 使用 DUMPBIN/HEADERS 查看可选标头值的 "图像版本" 字段，以查看 **/VERSION**的效果。
 
@@ -44,7 +44,7 @@ ms.locfileid: "70927708"
 
 ### <a name="suppress-startup-banner"></a>取消显示启动版权标志
 
-[/Nologo](nologo-suppress-startup-banner-linker.md)选项禁止显示版权消息和版本号。 
+[/Nologo](nologo-suppress-startup-banner-linker.md)选项禁止显示版权消息和版本号。
 
 ### <a name="ignore-import-library"></a>Ignore Import Library
 
@@ -74,7 +74,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 也可通过提供文件名和相对路径来指定 .obj 文件，如“..\\..\MyLibProject\MyObjFile.obj”。 如果 .obj 文件的源代码 #includes 一个预编译标头（例如，.pch），则 pch 文件位于与 MyObjFile 相同的文件夹中。还必须添加 .pch 作为附加依赖项。
 
-### <a name="use-library-dependency-inputs"></a>使用库依赖项输入
+### <a name="use-library-dependency-inputs"></a>使用库依赖关系输入
 
 指定在项目依赖项的库输出中进行链接时，是否使用管理员工具的输入，而不是库文件本身。 在大型项目中，当依赖项目生成 .lib 文件时，将禁用增量链接。 如果有许多依赖项目生成 .lib 文件，则生成应用程序可能需要很长时间。 当此属性设置为 **"是"** 时，项目系统会链接依赖项目生成的 .lib 文件中的 .obj 文件，从而启用增量链接。
 
@@ -96,17 +96,17 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 [/Force](force-force-file-output.md)选项通知链接器创建 .exe 文件或 DLL，即使引用的是符号但未定义或被多次定义。 它可能会创建无效的 .exe 文件。
 
-**方案**
+**选项**
 
 - **已启用**-不带参数的/force 表示多个和未解析。
 - **仅限定义的符号**，使用/FORCE： MULTIPLE 可创建输出文件，即使 LINK 找到符号的多个定义。
-- **仅限未定义的符号**-使用/FORCE：无法解析以创建输出文件，而不管 LINK 是否找到未定义的符号。 /FORCE: 如果入口点符号未解析, 则忽略未解析的。
+- **仅限未定义的符号**-使用/FORCE：无法解析以创建输出文件，而不管 LINK 是否找到未定义的符号。 /FORCE：如果入口点符号未解析，则忽略未解析的。
 
 ### <a name="create-hot-patchable-image"></a>创建热可修补映像
 
 准备映像以进行热修补。
 
-**方案**
+**选项**
 
 - **已启用**-准备映像以进行热修补。
 - **仅 X86 映像**-为热修补准备 X86 映像。
@@ -125,7 +125,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="ignore-all-default-libraries"></a>忽略所有默认库
 
-[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)选项通知链接器从其在解析外部引用时搜索的库列表中删除一个或多个默认库。 
+[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)选项通知链接器从其在解析外部引用时搜索的库列表中删除一个或多个默认库。
 
 ### <a name="ignore-specific-default-libraries"></a>忽略特定默认库
 
@@ -133,7 +133,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="module-definition-file"></a>模块定义文件
 
-[/DEF](def-specify-module-definition-file.md)选项将模块定义文件（.def）传递到链接器。 仅可指定一个 .def 文件来链接。 
+[/DEF](def-specify-module-definition-file.md)选项将模块定义文件（.def）传递到链接器。 仅可指定一个 .def 文件来链接。
 
 ### <a name="add-module-to-assembly"></a>向程序集添加模块
 
@@ -149,7 +149,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="delay-loaded-dlls"></a>延迟加载的 Dll
 
-[/DELAYLOAD](delayload-delay-load-import.md)选项导致延迟加载 dll。 Dll 名称指定要延迟加载的 DLL。 
+[/DELAYLOAD](delayload-delay-load-import.md)选项导致延迟加载 dll。 Dll 名称指定要延迟加载的 DLL。
 
 ### <a name="assembly-link-resource"></a>程序集链接资源
 
@@ -181,7 +181,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 指定在用用户帐户控制运行时为应用程序请求的执行级别。  （/MANIFESTUAC： level = [值]）
 
-**方案**
+**选项**
 
 - **asInvoker** -UAC 执行级别：作为调用程序。
 - **highestAvailable** -UAC 执行级别：最高可用。
@@ -197,12 +197,12 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 此选项可用于创建 .exe 文件或 DLL 的调试信息。
 
-**方案**
+**选项**
 
 - **No** -不生成任何调试信息。
 - **生成调试信息**-创建一个适用于 Microsoft 符号服务器分发的完整程序数据库（PDB）。
-- **为更快的链接生成调试信息优化**-生成适用于编辑-链接-调试周期的程序数据库（PDB）。 
-- **生成经过优化以共享和发布的调试信息**-生成适用于编辑-链接-调试周期的程序数据库（PDB）。 
+- **为更快的链接生成调试信息优化**-生成适用于编辑-链接-调试周期的程序数据库（PDB）。
+- **生成经过优化以共享和发布的调试信息**-生成适用于编辑-链接-调试周期的程序数据库（PDB）。
 
 ### <a name="generate-program-database-file"></a>生成程序数据库文件
 
@@ -234,7 +234,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 [/SUBSYSTEM](subsystem-specify-subsystem.md)选项告知操作系统如何运行 .exe 文件。 子系统的选择会影响链接器将选择的入口点符号（或入口点函数）。
 
-**方案**
+**选项**
 
 - **未设置**-未设置子系统。
 - **Console** -Win32 字符模式应用程序。 操作系统为控制台应用程序提供控制台。 如果定义了 main 或 wmain，则控制台为默认值。
@@ -286,16 +286,16 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 使用[/DRIVER](driver-windows-nt-kernel-mode-driver.md)链接器选项可生成 Windows NT 内核模式驱动程序。
 
-**方案**
+**选项**
 
 - **未设置**-默认驱动程序设置。
 - **驱动**程序-驱动程序
-- **UP** /DRIVER： UPONLY 导致链接器将 IMAGE_FILE_UP_SYSTEM_ONLY 位添加到 output 标头中的特征，以指定它是一个单处理器（UP）驱动程序。 操作系统将拒绝在多处理器（MP）系统上加载 UP 驱动程序。
-- /DRIVER **： wdm 使**链接器设置可选标头的 DLLCHARACTERISTICS 字段中的 IMAGE_DLLCHARACTERISTICS_WDM_DRIVER 位。
+- **UP** /DRIVER： UPONLY 导致链接器将 IMAGE_FILE_UP_SYSTEM_ONLY 位添加到 output 标头中的特性，以指定它是一个单处理器（UP）驱动程序。 操作系统将拒绝在多处理器（MP）系统上加载 UP 驱动程序。
+- **Wdm** -/DRIVER： wdm 使链接器在可选标头的 DLLCHARACTERISTICS 字段中设置 IMAGE_DLLCHARACTERISTICS_WDM_DRIVER 位。
 
 ## <a name="optimization-property-page"></a>"优化" 属性页
 
-### <a name="references"></a>参考资料
+### <a name="references"></a>参考
 
 [/Opt](opt-optimizations.md)： REF 消除了在/opt 时从不引用的函数和/或数据： NOREF 保留从未引用的函数和/或数据。
 
@@ -313,9 +313,9 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="link-time-code-generation"></a>链接时间代码生成
 
-指定链接时间代码生成。 （[/LTCG](ltcg-link-time-code-generation.md)）
+指定链接时间代码生成。 （[/Ltcg](ltcg-link-time-code-generation.md)）
 
-**方案**
+**选项**
 
 - **默认**值-默认 LTCG 设置。
 - **使用快速链接时间代码生成**-使用[/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)的链接时间代码生成。
@@ -352,7 +352,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 启用或禁用 Windows 元数据的生成。
 
-**方案**
+**选项**
 
 - **是**-启用 Windows 元数据文件的生成。
 - **否**-禁用 Windows 元数据文件的生成。
@@ -381,7 +381,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="no-entry-point"></a>无入口点
 
-[/NOENTRY](noentry-no-entry-point.md)选项是创建纯资源 DLL 所必需的。使用此选项可防止链接将引用`_main`链接到 DLL。
+[/NOENTRY](noentry-no-entry-point.md)选项是创建纯资源 DLL 所必需的。使用此选项可防止链接将指向 `_main` 的引用链接到 DLL。
 
 ### <a name="set-checksum"></a>设置校验和
 
@@ -389,19 +389,19 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="base-address"></a>基址
 
-为程序设置基址。 （[/Base](base-base-address.md)： {address\[，size] |@filename，key}）
+为程序设置基址。 （[/Base](base-base-address.md)： {address\[，size] | @filename，key}）
 
 ### <a name="randomized-base-address"></a>随机基址
 
-随机基址。 （[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[： NO]）
+随机基址。 （[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[： no]）
 
 ### <a name="fixed-base-address"></a>固定基址
 
-创建只能在其首选基址加载的程序。 （[/FIXED](fixed-fixed-base-address.md)\[： NO]）
+创建只能在其首选基址加载的程序。 （[/FIXED](fixed-fixed-base-address.md)\[： no]）
 
 ### <a name="data-execution-prevention-dep"></a>数据执行保护（DEP）
 
-将可执行文件标记为经过测试，以与 Windows 数据执行保护功能兼容。 （[/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[： NO]）
+将可执行文件标记为经过测试，以与 Windows 数据执行保护功能兼容。 （[/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[： no]）
 
 ### <a name="turn-off-assembly-generation"></a>关闭程序集生成
 
@@ -427,7 +427,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 [/MACHINE](machine-specify-target-platform.md)选项指定程序的目标平台。
 
-**方案**
+**选项**
 
 - **未设置**
 - **MachineARM**
@@ -451,7 +451,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 显式指定 CLR 程序入口点的线程特性。
 
-**方案**
+**选项**
 
 - **MTA 线程特性**-将 MTAThreadAttribute 特性应用于程序的入口点。
 - **STA 线程特性**-将 STAThreadAttribute 特性应用于程序的入口点。
@@ -461,7 +461,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 设置 CLR 映像的类型（IJW、纯或安全）。
 
-**方案**
+**选项**
 
 - **强制 IJW 映像**
 - **强制纯 IL 映像**
@@ -488,7 +488,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 允许您直接向 Visual C++ 团队提供内部编译器错误(ICE)信息。
 
-**方案**
+**选项**
 
 - **PromptImmediately** -立即提示。
 - 下一次登录时**队列，** 用于下一次登录。
@@ -503,7 +503,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 默认情况下， [/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)将保留通过 P/Invoke 机制调用的函数的最后一个错误代码，该机制允许您通过用/clr 编译的代码调用 dll 中的本机函数。
 
-**方案**
+**选项**
 
 - **Enabled** -Enable CLRSupportLastError。
 - **Disabled** -禁用 CLRSupportLastError。

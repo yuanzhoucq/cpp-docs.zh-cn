@@ -3,12 +3,12 @@ title: 创建项目（ATL 教程，第 1 部分）
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: b4c18d83feb6c61b603bb1880960193cf9150f9b
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509388"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075334"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 
@@ -45,7 +45,7 @@ ms.locfileid: "79509388"
 
     源代码的位置通常默认为 \Users\\\<用户名 > \source\repos，并将自动创建一个新文件夹。
 
-1. 在 Visual Studio 2019 中，接受默认值，然后单击 **"确定"** 。 
+1. 在 Visual Studio 2019 中，接受默认值，然后单击 **"确定"** 。
    在 Visual Studio 2017 中，单击 **"确定"** 以打开**ATL 项目**向导。 单击 "**应用程序设置**" 以查看可用选项。 由于此项目创建一个控件，并且控件必须是进程内服务器，因此将**应用程序类型**保留为 DLL。 单击“确定”。
 
 Visual Studio 将通过生成一些文件来创建项目。 通过展开 `Polygon` 对象，可以在**解决方案资源管理器**中查看这些文件。 下面列出了这些文件。

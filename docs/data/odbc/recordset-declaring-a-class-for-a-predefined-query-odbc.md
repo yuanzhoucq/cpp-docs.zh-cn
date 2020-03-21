@@ -1,5 +1,5 @@
 ---
-title: 记录集：声明预定义查询的类 (ODBC)
+title: 记录集：为预定义查询声明一个类 (ODBC)
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9ef95f4a2ebbc1bdf52e5631389f65391ce7cf8f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 6338de99bf9c3e19e6e15ffbe0bcf5caab066ed8
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707957"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079835"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：声明预定义查询的类 (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：为预定义查询声明一个类 (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建使用者。
 
 本主题适用于 MFC ODBC 类。
@@ -25,7 +25,7 @@ ms.locfileid: "65707957"
 本主题介绍如何为预定义查询（有时称为存储过程，例如在 Microsoft SQL Server 中）创建记录集类。
 
 > [!NOTE]
->  本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果实现了批量提取行，此过程则非常相似。 若要了解实现批量提取行的记录集与未实现批量提取行的记录集之间的差异，请参阅[记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果实现了批量提取行，此过程则非常相似。 若要了解实现批量行提取的记录集和不执行的记录集之间的差异，请参阅[记录集：批量提取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 某些数据库管理系统 (DBMS) 使你能够创建预定义查询并从程序中像函数一样进行调用。 查询具有名称，可能会采用参数，并且可能会返回记录。 本主题中的过程描述了如何调用返回记录（可能还会采用参数）的预定义查询。
 
@@ -44,7 +44,7 @@ ms.locfileid: "65707957"
 
    例如，如果查询从另外两个表中返回三列，则向此类添加六个字段数据成员（具有适当的数据类型）。
 
-1. 在类的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成员函数中手动添加 [RFX](../../data/odbc/record-field-exchange-rfx.md) 函数调用，对应每个添加的字段数据成员的数据类型。
+1. 在类的 [DoFieldExchange](../../data/odbc/record-field-exchange-rfx.md) 成员函数中手动添加 [RFX](../../mfc/reference/crecordset-class.md#dofieldexchange) 函数调用，对应每个添加的字段数据成员的数据类型。
 
     ```cpp
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:
@@ -56,7 +56,7 @@ ms.locfileid: "65707957"
 
 1. 在记录集类构造函数中手动添加新字段数据成员的初始化。
 
-   还必须递增 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) 数据成员的初始化值。 尽管向导将编写初始化，但它仅涵盖其添加的字段数据成员。 例如:
+   还必须递增 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) 数据成员的初始化值。 尽管向导将编写初始化，但它仅涵盖其添加的字段数据成员。 例如：
 
     ```cpp
     m_nFields += 6;
@@ -66,7 +66,7 @@ ms.locfileid: "65707957"
 
 1. 如果查询会采用参数，则为每个参数添加参数数据成员、RFX 函数调用和初始化。
 
-1. 必须为每个添加的参数递增 `m_nParams`，就像在此过程的步骤 4 中为添加的字段执行 `m_nFields` 一样。 有关详细信息，请参阅[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+1. 必须为每个添加的参数递增 `m_nParams`，就像在此过程的步骤 4 中为添加的字段执行 `m_nFields` 一样。 有关详细信息，请参阅[记录集：参数化记录集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 1. 采用以下格式手动编写 SQL 语句字符串：
 
@@ -153,9 +153,9 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 > [!TIP]
 >  你可能需要处理来自存储过程的返回值（输出参数）。 有关详细信息和示例，请参阅 [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：重新查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
 [记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

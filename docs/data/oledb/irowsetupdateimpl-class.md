@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: dba962c761fac0408a3c68a46ec6447aa7832522
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fdd6072f831d7bfb77673169c2ef8062cc7107a6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545719"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077864"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 类
 
@@ -315,7 +315,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 ```cpp
 CAtlMap<
-   HROW hRow, 
+   HROW hRow,
    Storage* pData
 >
 m_mapCachedData;

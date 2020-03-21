@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中导航 C++ 代码
 description: 使用 Visual Studio 中的各种工具来导航 C ++ 代码库。
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446754"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079080"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>在 Visual Studio 中导航 C++ 代码
 
@@ -31,7 +31,7 @@ Visual Studio 提供了一套工具，可用于快速有效地导航代码库。
 
 ## <a name="go-to"></a>转至
 
-“转到”是指一组导航功能，其中每个功能都会根据指定的筛选器提供特定类型的结果。 
+“转到”是指一组导航功能，其中每个功能都会根据指定的筛选器提供特定类型的结果。
 
 使用 Ctrl+, 即可打开“转到”。 此操作会在正在编辑的文档上创建搜索框。
 
@@ -82,7 +82,7 @@ Visual Studio 提供了一套工具，可用于快速有效地导航代码库。
 
 ![C&#43; &#43;查找](../ide/media/find-cpp.png "查找")
 
-“在文件中查找”是“查找”的功能更加强大的版本，它在“查找结果”窗口中显示结果。 可以搜索外部代码依赖项、按文件类型进行筛选等。 
+“在文件中查找”是“查找”的功能更加强大的版本，它在“查找结果”窗口中显示结果。 可以搜索外部代码依赖项、按文件类型进行筛选等。
 
 ![C&#43; &#43;在文件中查找](../ide/media/find-in-files-cpp.png "在文件中查找")
 

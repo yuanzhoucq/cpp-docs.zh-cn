@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626603"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076956"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild 与 MSBuild：在 Visual Studio 2010 中生成系统更改
 
@@ -47,7 +47,7 @@ C++项目的 MSBuild 系统是在 Visual Studio 2010 中引入的。 在 Visual 
 
 在 Visual Studio 2010 中，通过将属性的值指定为一个或多个文本值和属性宏的连接，支持继承。 $(Inherit) 和 $(NoInherit) 宏不受支持。
 
-在以下示例中，以分号分隔的列表被分配盗属性页上的属性。 该列表包含 \<value> 文本和 `MyProperty` 属性值的串联，可通过使用宏表示法 $(<em>MyProperty</em>) 访问。
+在以下示例中，以分号分隔的列表被分配盗属性页上的属性。 该列表包含 *value> 文本和 \< 属性值的串联，可通过使用宏表示法 $(* MyProperty`MyProperty`) 访问。
 
 ```
 Property=<value>;$(MyProperty)
@@ -63,7 +63,7 @@ Property=<value>;$(MyProperty)
 
 ## <a name="vc-directories-settings"></a>VC + + 目录设置
 
-Visual C++ 目录设置在[“VC++ 目录”属性页](../ide/vcpp-directories-property-page.md)上指定。 在 Visual Studio 2008 及更早版本中，目录设置应用于每个用户，并在*sysincl*文件中指定排除目录的列表。 
+Visual C++ 目录设置在[“VC++ 目录”属性页](../ide/vcpp-directories-property-page.md)上指定。 在 Visual Studio 2008 及更早版本中，目录设置应用于每个用户，并在*sysincl*文件中指定排除目录的列表。
 
 如果在命令行上运行 [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe)，则无法更改 VC++ 目录设置。 如果打开“工具”菜单，单击“导入和导出设置”，然后选择“重置所有设置”选项，同样无法更改设置。
 
@@ -71,8 +71,8 @@ Visual C++ 目录设置在[“VC++ 目录”属性页](../ide/vcpp-directories-p
 
 1. 打开 "**工具**" 菜单，单击 "**导入和导出设置**"
 2. 选择 "**导入选定的环境设置**"
-3. 按照向导中的说明进行操作。
+3. 按照向导中的说明操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [命令行上的 MSBuild - C++](../build/msbuild-visual-cpp.md)

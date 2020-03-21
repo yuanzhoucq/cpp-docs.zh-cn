@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 3d8be0cc33e0435bc5a18191303dbbc91277de0b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503799"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075454"
 ---
 # <a name="windows-desktop-wizard"></a>Windows 桌面向导
 
-Windows 桌面向导取代 Win32 应用程序向导中，在 Visual Studio 2017 及更高版本。 该向导允许您创建的四种类型的任何C++项目 （在下表中的标题列出）。 在每种情况下，你都可以指定适合于打开项目类型的其他选项。 
+Windows 桌面向导替换 Visual Studio 2017 和更高版本中的 Win32 应用程序向导。 通过该向导，您可以创建四种类型的C++项目中的任意一种（在下表的标题中列出）。 在每种情况下，你都可以指定适合于打开项目类型的其他选项。
 
    ![Windows 桌面向导](media/windows-desktop-wizard.png)
 
@@ -49,32 +49,32 @@ Windows 桌面向导取代 Win32 应用程序向导中，在 Visual Studio 2017 
 
 创建指定的应用程序类型。
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
-|**控制台应用程序**|创建控制台应用程序。 视觉对象C++[运行时库](../c-runtime-library/c-run-time-library-reference.md)还提供输出和输入从控制台窗口与标准 I/O 函数，如`printf_s()`并`scanf_s()`。 控制台应用程序没有图形用户界面。 它将编译为.exe 文件，并可作为独立的应用程序从命令行运行。<br /><br /> 您可以将 MFC 和 ATL 支持添加到控制台应用程序。|
-|**Windows 应用程序**|创建 Win32 程序。 Win32 程序是用 C 编写的应用可执行程序 (EXE) 或C++，使用对 Win32 API 的调用创建的图形用户界面。<br /><br /> 不能添加 MFC 或 ATL 支持添加到 Windows 应用程序。|
-|**动态链接库**|创建 Win32 动态链接库 (DLL)。 Win32 DLL 是用 C 编写的二进制文件或C++，使用调用 Win32 API，而不是 MFC 类，以及作为共享库的多个应用程序可同时使用的函数中。<br /><br /> 无法将 MFC 或 ATL 支持添加到使用此向导中，创建一个 DLL 应用程序，但您可以创建非 MFC DLL 通过选择**新建 > 项目 > MFC DLL**。|
-|**静态库**|创建静态库。 静态库是一个包含对象及其函数和生成可执行文件时链接到你的程序的数据文件。 本主题说明如何创建的初学者文件和[项目属性](../build/reference/property-pages-visual-cpp.md)静态库。 静态库文件提供以下优势：<br /><br />-A Win32 静态库是如果您正在使用的应用程序执行调用 Win32 API，而不是 MFC 类很有用。<br />-链接的过程是相同的以 C 编写的 Windows 应用程序其余部分还是在C++。<br />-你可以将静态库链接到一个基于 MFC 的程序或非 MFC 程序。|
+|**控制台应用程序**|创建控制台应用程序。 Visual C++ [运行库](../c-runtime-library/c-run-time-library-reference.md)还通过标准 i/o 函数（如 `printf_s()` 和 `scanf_s()`）提供控制台窗口的输出和输入。 控制台应用程序没有图形用户界面。 它编译到 .exe 文件中，并可从命令行作为独立的应用程序运行。<br /><br /> 您可以向控制台应用程序添加 MFC 和 ATL 支持。|
+|**Windows 应用程序**|创建 Win32 程序。 Win32 程序是用 C 或C++编写的可执行应用程序（EXE），使用对 Win32 API 的调用来创建图形用户界面。<br /><br /> 不能将 MFC 或 ATL 支持添加到 Windows 应用程序。|
+|**动态链接库**|创建 Win32 动态链接库（DLL）。 Win32 DLL 是用 C 或C++编写的二进制文件，它使用对 Win32 API 而不是 MFC 类的调用，并充当可由多个应用程序同时使用的共享函数库。<br /><br /> 不能将 MFC 或 ATL 支持添加到使用此向导创建的 DLL 应用程序，但可以通过选择 "新建" " **> 项目" > MFC dll**创建 mfc dll。|
+|**静态库**|创建静态库。 静态库是一个文件，其中包含在生成可执行文件时链接到程序的对象及其函数和数据。 本主题说明如何创建静态库的 starter 文件和[项目属性](../build/reference/property-pages-visual-cpp.md)。 静态库文件具有以下优点：<br /><br />-如果正在处理的应用程序调用 Win32 API 而不是 MFC 类，则 Win32 静态库很有用。<br />-无论 Windows 应用程序的其余部分是用 C 还是编写的，链接过程都是相同C++的。<br />-可以将静态库链接到基于 MFC 的程序或非 MFC 程序。|
 
 ## <a name="additional-options"></a>附加选项
 
-定义支持和应用程序，具体取决于其类型的选项。
+根据应用程序的类型定义该应用程序的支持和选项。
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
-|**空项目**|指定项目文件为空。 如果你有一组源代码文件 （如.cpp 文件、 头文件、 图标、 工具栏、 对话框等） 并想要在视觉对象中创建一个项目C++开发环境中，您必须首先创建一个空白项目，然后将文件添加到项目。<br /><br /> 选择此选项将不可用的静态库项目。|
-|**导出符号**|指定 DLL 项目导出的符号。|
+|**空项目**|指定项目文件为空白。 如果你有一组源代码文件（如 .cpp 文件、头文件、图标、工具栏、对话框等），并且想要在视觉C++开发环境中创建一个项目，则必须先创建一个空项目，然后将这些文件添加到项目。<br /><br /> 此选择不适用于静态库项目。|
+|**导出符号**|指定 DLL 项目导出符号。|
 |**预编译头**|指定静态库项目使用预编译标头。|
-|**安全开发生命周期 (SDL) 检查**|有关 SDL 的详细信息，请参阅[Microsoft 安全开发生命周期 (SDL) 过程指南](../build/reference/sdl-enable-additional-security-checks.md)|
+|**安全开发生命周期（SDL）检查**|有关 SDL 的详细信息，请参阅[Microsoft 安全开发生命周期 (SDL) 过程指南](../build/reference/sdl-enable-additional-security-checks.md)|
 
-## <a name="add-common-headers-for"></a>添加常用标头为：
+## <a name="add-common-headers-for"></a>为以下内容添加常用标头：
 
-添加一个视觉对象中提供的库支持C++。
+添加对视觉对象C++中提供的某个库的支持。
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
-|**ATL**|将嵌入到类中活动模板库 (ATL) 中的项目支持。 Win32 控制台仅限于应用程序。<br /><br /> **请注意**此选项并不表示对使用 ATL 的 ATL 对象代码向导添加的支持。 可以仅向 ATL 项目添加 ATL 对象或 MFC 与 ATL 项目支持。|
-|**MFC**|构建到 Microsoft 基础类 (MFC) 库的项目支持。 Win32 控制台应用程序和仅限静态库。|
+|**ATL**|为活动模板库（ATL）中的类生成项目支持。 仅适用于 Win32 控制台应用程序。<br /><br /> **注意**此选项不指示支持使用 ATL 代码向导添加 ATL 对象。 只能将 ATL 对象添加到 atl 项目或具有 ATL 支持的 MFC 项目。|
+|**MFC**|为 Microsoft 基础类（MFC）库提供项目支持。 仅适用于 Win32 控制台应用程序和静态库。|
 
 ## <a name="remarks"></a>备注
 
@@ -83,8 +83,8 @@ Windows 桌面向导取代 Win32 应用程序向导中，在 Visual Studio 2017 
 > [!NOTE]
 > 不能添加 ATL 类，只能向支持 MFC 的 Windows 桌面应用程序类型添加 MFC 类（请参阅上表）。
 
-可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 向导将创建为你的项目文件的详细信息，请参阅项目生成的文件， `ReadMe.txt`。 有关详细信息的文件类型，[用于 Visual Studio 创建的文件类型C++项目](../build/reference/file-types-created-for-visual-cpp-projects.md)。
+可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 有关向导为项目创建的文件的详细信息，请参阅项目生成的文件 `ReadMe.txt`。 有关文件类型的详细信息，请查看[为 Visual Studio C++项目创建的文件类型](../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Visual Studio 中的 C++ 项目类型](../build/reference/visual-cpp-project-types.md)

@@ -4,15 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0d3bd03fb352f2466f0ae48ec0ca99cf66fbb416
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707754"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079721"
 ---
 # <a name="consumer-wizard-generated-classes"></a>使用者向导生成的类
-
 
 ::: moniker range="vs-2019"
 
@@ -28,7 +27,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 - 如果选择属性化使用者，则用户记录类将具有“_*类名*Accessor”格式的名称，并将插入。 也就是说，只能在文本编辑器中查看命令类，并只能以插入代码的形式查看用户记录类。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
 
-下面的示例使用对 `Northwind` 数据库的 `Products` 表创建的命令类，展示了用于命令类和用户记录类的向导生成的使用者代码。
+下面的示例使用对 `Products` 数据库的 `Northwind` 表创建的命令类，展示了用于命令类和用户记录类的向导生成的使用者代码。
 
 ## <a name="templated-user-record-classes"></a>模板化用户记录类
 
@@ -89,7 +88,7 @@ public:
 
 ### <a name="rowset-properties"></a>行集属性
 
-接下来，向导将设置行集属性。 如果在 ATL OLE DB 使用者向导中选择了“更改” 、“插入” 或“删除”  ，则此时将设置相应的属性（将始终设置 DBPROP_IRowsetChange，然后将分别设置 DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT 和/或 DBPROPVAL_UP_DELETE 中的一个或多个）。
+接下来，向导将设置行集属性。 如果在 ATL OLE DB 使用者向导中选择了“更改”、“插入”或“删除” ，则此时将设置相应的属性（将始终设置 DBPROP_IRowsetChange，然后将分别设置 DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT 和/或 DBPROPVAL_UP_DELETE 中的一个或多个）。
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -189,6 +188,6 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

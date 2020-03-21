@@ -4,12 +4,12 @@ description: 针对 x64 的 MASM 的 BNF 说明。
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322822"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075463"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Microsoft 宏汇编程序 BNF 语法
 
@@ -142,7 +142,7 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 &nbsp;&nbsp;&nbsp;&nbsp;**POPCONTEXT** *contextItemList* ;;
 
 *contextItem*\
-&nbsp;&nbsp;&nbsp;&nbsp;**假设** |  ** | **  |  ** | **
+&nbsp;&nbsp;&nbsp;&nbsp;**假设** |  ** | **  |  ** | ** **CPU** **ALL**
 
 *contextItemList*\
 &nbsp;&nbsp;&nbsp;&nbsp;*contextItem* | *contextItemList* 、 *contextItem*
@@ -650,7 +650,7 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 &nbsp;&nbsp;&nbsp;&nbsp;**所有** | **无** | **NOTPUBLIC**
 
 *memOption*\
-&nbsp;&nbsp; **&nbsp;&nbsp;小 | ** **中型** ** | ** **精简** | **大规模** | 大规模 ** | **
+&nbsp;&nbsp; **&nbsp;&nbsp;小 | ** **中型** ** | ** **精简** | **大规模** | 大规模**HUGE** ** | **  | 
 
 *助记键*\
 &nbsp;&nbsp;&nbsp;&nbsp;指令名称。
@@ -676,7 +676,7 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 &nbsp;&nbsp;&nbsp;&nbsp;*id* ; \
 
 *nearfar*\
-&nbsp;&nbsp;&nbsp;&nbsp;**接近** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**接近** | **FAR**
 
 *nestedStruct*\
 &nbsp;&nbsp;&nbsp;&nbsp;*structHdr* ⟦ *id* ⟧;; \
@@ -690,7 +690,7 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 &nbsp;&nbsp;&nbsp;&nbsp;**甚至** | **ORG** *immExpr* | **ALIGN** ⟦ *constExpr* ⟧
 
 *offsetType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**组** | **段** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**组** | **段** | **FLAT**
 
 *oldRecordFieldList*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ |*oldRecordFieldList* 、⟦ *constExpr* ⟧
@@ -875,7 +875,7 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 &nbsp;&nbsp;&nbsp;&nbsp;**字节** | **WORD** | **DWORD** | **段落** | "**页**
 
 *segAttrib*\
-&nbsp;&nbsp;&nbsp;&nbsp;**公共** | **堆栈** | *ConstExpr* **上的** **公共** | **内存** | **PRIVATE**
+&nbsp;&nbsp;&nbsp;&nbsp;**公共** | **堆栈** | *ConstExpr* **上的** **公共** | **内存** | **PRIVATE** | 
 
 *segDir*\
 &nbsp;&nbsp;&nbsp;&nbsp; **。代码**\
@@ -895,13 +895,13 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 &nbsp;&nbsp;&nbsp;&nbsp;| *segIdList* ， *segId*
 
 *segmentDef*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segmentDir* ⟦ *inSegDirList* ⟧ | endsDir *simpleSegDir ⟦ inSegDirList* *⟧* ⟦ endsDir *⟧*
+&nbsp;&nbsp;&nbsp;&nbsp;*segmentDir* ⟦ *inSegDirList* ⟧ *endsDir* | endsDir *simpleSegDir ⟦ inSegDirList* *⟧* ⟦ endsDir *⟧*
 
 *segmentDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;*segId* **SEGMENT** ⟦ *segOptionList* ⟧;;
 
 *segmentRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;**CS** | **DS** |  |  **GS** | **SS**
+&nbsp;&nbsp;&nbsp;&nbsp;**CS** | **DS** | **ES** | **FS** **GS** | **SS** | 
 
 *segOption*\
 &nbsp;&nbsp;&nbsp;&nbsp;*segAlign*\
@@ -942,7 +942,7 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 
 *specialChars*\
  : | . |⟦ |⟧ |( | )|< |> |{ | }\
-&nbsp;&nbsp;&nbsp;&nbsp;|+ |- |/ |* |& |% | !\
+&nbsp;&nbsp;&nbsp;&nbsp;|+ |- |/ |* |&AMP; |% | !\
 &nbsp;&nbsp;&nbsp;&nbsp;|' |\ |= | ; |, |"\
 &nbsp;&nbsp;&nbsp;&nbsp;| *whiteSpaceCharacter*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *endOfLine*
@@ -1034,7 +1034,7 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 &nbsp;&nbsp;&nbsp;&nbsp;*titleType* *arbitraryText* ;;
 
 *titleType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**标题** | 标题 | **SUBTTL**
+&nbsp;&nbsp;&nbsp;&nbsp;**标题** | **SUBTITLE**标题 | **SUBTTL**
 
 *type*\
 &nbsp;&nbsp;&nbsp;&nbsp;*structTag*\
@@ -1071,4 +1071,3 @@ BNF 语法允许递归定义。 例如，语法使用 qualifiedType 作为 quali
 
 *xmmRegister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 |XMM1 |XMM2 |XMM3 |XMM4 |XMM5 |XMM6 |XMM7 |XMM8 |XMM9 |XMM10 |XMM11 |XMM12 |XMM13 |XMM14 |XMM15\
-

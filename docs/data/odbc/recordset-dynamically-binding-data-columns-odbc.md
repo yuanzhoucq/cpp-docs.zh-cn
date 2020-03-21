@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: bde61348bbfb33eef42e36bd75830c23e5b2a5f5
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 5647d0fec4c2add57329ad09a2374953dcd118fe
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707937"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079849"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>记录集：动态绑定数据列 (ODBC)
 
@@ -26,11 +26,11 @@ ms.locfileid: "65707937"
 - [如何在运行时动态绑定列](#_core_how_to_bind_columns_dynamically)。
 
 > [!NOTE]
->  本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用的是批量提取行，则通常不建议使用所述的技术。 有关批量提取行的详细信息，请参阅[记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用的是批量提取行，则通常不建议使用所述的技术。 有关批量行提取的详细信息，请参阅[记录集：批量提取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-##  <a name="_core_when_you_might_bind_columns_dynamically"></a> 当可能动态绑定列时
+##  <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> 当可能动态绑定列时
 
-> [!NOTE] 
+> [!NOTE]
 > MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建使用者。
 
 在设计时，MFC 应用程序向导或 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)（来自“添加类”）将根据数据源上的已知表和列创建记录集类。 你可以在设计数据库时更改数据库，也可以稍后当你的应用程序在运行时使用这些表和列时进行更改。 你或其他用户可能会添加或删除表，或者从应用程序的记录集所依赖的表中添加或删除列。 尽管这可能不是所有数据访问应用程序的问题，但如果是你的问题，除了重新设计和重新编译之外，你会如何处理数据库架构的更改？ 本主题的目的是回答此问题。
@@ -47,13 +47,13 @@ ms.locfileid: "65707937"
 
 本主题不涵盖其他动态绑定情况，例如删除的表或列。 对于这些情况，需要更直接地使用 ODBC API 调用。 有关信息，请参阅 MSDN 库 CD 上的 ODBC SDK 程序员参考。
 
-##  <a name="_core_how_to_bind_columns_dynamically"></a> 如何动态绑定列
+##  <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> 如何动态绑定列
 
 若要动态绑定列，必须知道（或能够确定）附加列的名称。 还必须为附加的字段数据成员分配存储、指定其名称及其类型，并指定要添加的列数。
 
 以下讨论提到了两种不同的记录集。 首先是从目标表中选择记录的主记录集。 其次是特殊的列记录集，用于获取有关目标表中列的信息。
 
-###  <a name="_core_the_general_process"></a> 常规过程
+###  <a name="general-process"></a><a name="_core_the_general_process"></a> 常规过程
 
 从最普遍的意义上讲，请遵循以下步骤：
 
@@ -69,7 +69,7 @@ ms.locfileid: "65707937"
 
    记录集将选择记录并使用记录字段交换 (RFX) 来绑定静态列（映射到记录集字段数据成员的列）和动态列（映射到你所分配的额外存储）。
 
-###  <a name="_core_adding_the_columns"></a> 添加列
+###  <a name="adding-the-columns"></a><a name="_core_adding_the_columns"></a> 添加列
 
 在运行时动态绑定添加的列需要以下步骤：
 
@@ -81,14 +81,14 @@ ms.locfileid: "65707937"
 
    一种方法是生成一个或多个动态列表，一个列表用于存储新列的名称，另一个列表用于存储其结果值，第三个列表用于存储其数据类型（如有必要）。 这些列表（特别是值列表）提供了用于绑定的信息和必要的存储空间。 下图阐述了如何生成列表。
 
-   ![生成要动态绑定的列的列表](../../data/odbc/media/vc37w61.gif "Building lists of columns to bind dynamically")<br/>
+   ![生成要动态绑定的列的列表](../../data/odbc/media/vc37w61.gif "生成要动态绑定的列列表")<br/>
    生成要动态绑定的列列表
 
 1. 在主记录集的 `DoFieldExchange` 函数中为每个添加的列添加 RFX 函数调用。 这些 RFX 调用执行提取记录（包括附加列）的工作，并将这些列绑定到记录集数据成员或动态提供的存储中。
 
    一种方法是在主记录集的 `DoFieldExchange` 函数中添加一个循环，用于循环遍历新列的列表，从而为列表中的每列调用相应的 RFX 函数。 在每次 RFX 调用时，从列名称列表中传递一个列名称，并在结果值列表的对应成员中传递存储位置。
 
-###  <a name="_core_lists_of_columns"></a> 列的列表
+###  <a name="lists-of-columns"></a><a name="_core_lists_of_columns"></a> 列的列表
 
 需要使用的四个列表如下表所示。
 
@@ -99,7 +99,7 @@ ms.locfileid: "65707937"
 |**Columns-To-Bind-Dynamically**| （图中的列表 3）位于表中但不在记录集中的列的列表。 这些列表是你想要动态绑定的列表。|
 |**Dynamic-Column-Values**| （图中的列表 4）包含从动态绑定的列中检索到的值的存储空间的列表。 此列表的元素与“Columns-to-Bind-Dynamically”中的元素一一对应。|
 
-###  <a name="_core_building_your_lists"></a> 生成你的列表
+###  <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> 生成你的列表
 
 对于一般策略而言，你可以查看相关的详细信息。 本主题其余部分中的过程展示了如何生成[列的列表](#_core_lists_of_columns)中显示的列表。 这些过程将指导你完成：
 
@@ -109,7 +109,7 @@ ms.locfileid: "65707937"
 
 - [动态添加新列的 RFX 调用](#_core_adding_rfx_calls_to_bind_the_columns)。
 
-###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> 确定哪些表列没有在记录集中
+###  <a name="determining-which-table-columns-are-not-in-your-recordset"></a><a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> 确定哪些表列没有在记录集中
 
 生成一个列表（Bound-Recordset-Columns，如图中的列表 2 所示），其中包含已在主记录集中绑定的列的列表。 然后生成一个列表（Columns-to-Bind-Dynamically，派生自 Current-Table-Columns 和 Bound-Recordset-Columns），其中包含在数据源上的表中但不在主记录集中的列名称。
 
@@ -131,7 +131,7 @@ ms.locfileid: "65707937"
 
    此列表的元素扮演新记录集字段数据成员的角色。 它们是动态列绑定到的存储位置。 有关列表的说明，请参阅[列的列表](#_core_lists_of_columns)。
 
-###  <a name="_core_providing_storage_for_the_new_columns"></a> 为新列提供存储
+###  <a name="providing-storage-for-the-new-columns"></a><a name="_core_providing_storage_for_the_new_columns"></a> 为新列提供存储
 
 接下来，为要动态绑定的列设置存储位置。 目的是提供一个列表元素，用于存储每列的值。 这些存储位置与记录集成员变量并行，后者存储正常绑定的列。
 
@@ -139,16 +139,16 @@ ms.locfileid: "65707937"
 
 1. 生成 Dynamic-Column-Values（与 Columns-to-Bind-Dynamically 并行）以包含每列中数据的值。
 
-   例如，图中显示了带有一个元素的 Dynamic-Column-Values（列表 4）：包含当前记录的实际电话号码的 `CString` 对象：“555-1212”。
+   例如，该图显示了包含一个元素的动态列值（列表4）：一个 `CString` 对象，该对象包含当前记录的实际电话号码： "555-1212"。
 
    在最常见的情况下，Dynamic-Column-Values 具有 `CString` 类型的元素。 如果要处理不同数据类型的列，则需要可以包含各种类型元素的列表。
 
-上述过程的结果将生成两个主要列表：Columns-to-Bind-Dynamically，包含列的名称；Dynamic-Column-Values，包含当前记录的列中的值。
+上述过程的结果是两个主要列表：列到绑定-动态包含列的名称和包含当前记录的列中的值的动态列值。
 
 > [!TIP]
-> 如果新列不全是相同的数据类型，则可能需要一个额外的并行列表，其中包含以某种方式定义列列表中每个对应元素的类型的项。 （为此，如有需要，可以使用值 AFX_RFX_BOOL、AFX_RFX_BYTE 等。 这些常量是在 AFXDB.H 中定义的。）基于你表示列数据类型的方式选择列表类型。
+> 如果新列不全是相同的数据类型，则可能需要一个额外的并行列表，其中包含以某种方式定义列列表中每个对应元素的类型的项。 （为此，如有需要，可以使用值 AFX_RFX_BOOL、AFX_RFX_BYTE 等。 这些常量在 AFXDB 中定义。H.）选择列表类型，具体取决于列数据类型的表示方式。
 
-###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 添加 RFX 调用以绑定列
+###  <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 添加 RFX 调用以绑定列
 
 最后，通过在 `DoFieldExchange` 函数中为新列放置 RFX 调用来安排进行动态绑定。
 
@@ -169,9 +169,9 @@ RFX_Text( pFX,
 > [!TIP]
 > 如果新列是不同的数据类型，请在循环中使用 switch 语句为每种类型调用相应的 RFX 函数。
 
-当框架在 `Open` 过程中调用 `DoFieldExchange` 将列绑定到记录集时，RFX 将调用静态列绑定这些列。 然后循环将反复调用动态列的 RFX 函数。
+当框架在 `DoFieldExchange` 过程中调用 `Open` 将列绑定到记录集时，RFX 将调用静态列绑定这些列。 然后循环将反复调用动态列的 RFX 函数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：处理大数据项 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

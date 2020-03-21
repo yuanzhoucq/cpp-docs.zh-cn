@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: ca923933ac7a401f6a3ef14f821ceb04b844797b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d0de2e56e1f6b8e68e5989f21ecd89b9646caa1b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451016"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076464"
 ---
-# <a name="integersequence-class"></a>integer_sequence 类
+# <a name="integer_sequence-class"></a>integer_sequence 类
 
 表示整数序列。 可以用于推导并展开可变参数类型中作为自变量传递给函数的参数包（如 std::tuple\<T...>）。
 
@@ -32,9 +32,9 @@ template <class T, T... Vals>
 struct integer_sequence
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关心*\
+*T*\
 值的类型；必须是整数类型：bool、char、char16_t、char32_t、wchar_t或是带符号或无符号整数类型。
 
 *Vals*\
@@ -53,11 +53,11 @@ struct integer_sequence
 
 ## <a name="example"></a>示例
 
-如下示例基于原始方案 [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html)。 它演示如何使用 `integer_sequence` 从 `std::array<T,N>` 创建 `std::tuple`，以及如何使用 `integer_sequence` 访问元组成员。
+如下示例基于原始方案 [N3658](https://wg21.link/n3658)。 它演示如何使用 `integer_sequence` 从 `std::tuple` 创建 `std::array<T,N>`，以及如何使用 `integer_sequence` 访问元组成员。
 
-在 `a2t` 函数中，`index_sequence` 是基于 `size_t` 整数类型的 `integer_sequence` 的别名。 `make_index_sequence` 是一个别名，会在编译时使用与调用方传入的数组相同数量的元素创建一个从零开始的 `index_sequence`。 `a2t` 通过值将 `index_sequence` 传递到 `a2t_`（其中表达式 `a[I]...` 对 `I` 进行解压缩），随后将元素提供给使用它们作为单独参数的 `make_tuple`。 例如，如果序列包含三个元素，则 `make_tuple` 称为 make_tuple(a[0], a[1], a[2])。 当然，数组元素本身可以是任何类型。
+在 `a2t` 函数中，`index_sequence` 是基于 `integer_sequence` 整数类型的 `size_t` 的别名。 `make_index_sequence` 是一个别名，会在编译时使用与调用方传入的数组相同数量的元素创建一个从零开始的 `index_sequence`。 `a2t` 通过值将 `index_sequence` 传递到 `a2t_`（其中表达式 `a[I]...` 对 `I` 进行解压缩），随后将元素提供给使用它们作为单独参数的 `make_tuple`。 例如，如果序列包含三个元素，则 `make_tuple` 称为 make_tuple(a[0], a[1], a[2])。 当然，数组元素本身可以是任何类型。
 
-Apply 函数接受[std:: 元组](../standard-library/tuple-class.md), 并使用`tuple_size` helper 类`integer_sequence`生成。 请注意, [std::d ecay_t](../standard-library/decay-class.md)是必需的, 因为[tuple_size](../standard-library/tuple-size-class-tuple.md)不能用于引用类型。 `apply_` 函数对元组成员进行解压缩，并将它们作为单独参数转发到函数调用。 在此示例中，该函数是一个打印出值的简单 lambda 表达式。
+Apply 函数接受[std：：元组](../standard-library/tuple-class.md)，并通过使用 `tuple_size` 帮助器类生成 `integer_sequence`。 请注意， [std：:d ecay_t](../standard-library/decay-class.md)是必需的，因为[tuple_size](../standard-library/tuple-size-class-tuple.md)不适用于引用类型。 `apply_` 函数对元组成员进行解压缩，并将它们作为单独参数转发到函数调用。 在此示例中，该函数是一个打印出值的简单 lambda 表达式。
 
 ```cpp
 #include <stddef.h>
@@ -119,10 +119,10 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-标头\<: type_traits\>
+标头： \<type_traits\>
 
 命名空间：std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)

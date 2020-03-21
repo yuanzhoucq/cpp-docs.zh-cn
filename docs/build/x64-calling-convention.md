@@ -3,12 +3,12 @@ title: x64 调用约定
 description: 默认 x64 ABI 调用约定的详细信息。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422702"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078085"
 ---
 # <a name="x64-calling-convention"></a>x64 调用约定
 
@@ -147,7 +147,7 @@ Struct2 func4(int a, double b, int c, float d);
 注册 RBX、RBP、RDI.TPL、RSI、RSP、R12、R13、R14、R15 和 XMM6-15 被视为非易失性，且必须通过使用它们的函数进行保存和还原。
 
 ## <a name="function-pointers"></a>函数指针
- 
+
 函数指针只是指向各自函数的标签的指针。 函数指针没有目录（TOC）要求。
 
 ## <a name="floating-point-support-for-older-code"></a>针对旧代码的浮点支持

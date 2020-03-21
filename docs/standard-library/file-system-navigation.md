@@ -2,16 +2,16 @@
 title: 文件系统导航
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518499"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076532"
 ---
 # <a name="file-system-navigation"></a>文件系统导航
 
-\<filesystem> 标头实现 C++ 文件系统技术规范 ISO/IEC TS 18822:2015（最终稿：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)），并具有可用以编写独立于平台的代码从而实现文件系统导航的类型和函数。 因为它是跨平台的，所以包含与 Windows 系统不相关的 API。 例如，这意味着 `is_fifo(const path&)` 在 Windows 上始终返回**false** 。
+\<filesystem> 标头实现 C++ 文件系统技术规范 ISO/IEC TS 18822:2015（最终稿：[ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)），并具有可用以编写独立于平台的代码从而实现文件系统导航的类型和函数。 因为它是跨平台的，所以包含与 Windows 系统不相关的 API。 例如，这意味着 `is_fifo(const path&)` 在 Windows 上始终返回**false** 。
 
 ## <a name="overview"></a>概述
 
@@ -41,7 +41,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-若要连接两个路径，可使用重载的 `/` 和 `/=` 运算符，它们类似于 `+` 和 `+=` 上的 `std::string` 和 `std::wstring`运算符。 `path` 对象方便提供分隔符（如果你不提供的话）。
+若要连接两个路径，可使用重载的 `/` 和 `/=` 运算符，它们类似于 `+` 和 `+=` 上的 `std::string` 和 `std::wstring`运算符。 如果不是，则 `path` 对象可以方便地提供分隔符。
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!

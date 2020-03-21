@@ -4,12 +4,12 @@ description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438161"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077849"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中编辑和重构 C++ 代码
 
@@ -70,15 +70,15 @@ IntelliCode 是 AI 辅助的 IntelliSense。 它将最有可能的候选项置�
 
 ## <a name="template-intellisense"></a>模板 IntelliSense
 
-当脱字号位于模板定义中时，系统会显示“模板栏”，让你能够为 IntelliSense 提供示例模板参数。 
+当脱字号位于模板定义中时，系统会显示“模板栏”，让你能够为 IntelliSense 提供示例模板参数。
 
 ![C&#43; &#43;模板 IntelliSense 显示现有的实例化](../ide/media/template-intellisense-cpp-1.png "模板 IntelliSense 显示现有的实例化")
 
-单击 " **\<t >** " 图标以展开/折叠**模板栏**。 单击铅笔图标或双击“模板栏”，打开“编辑”窗口。 
+单击 " **\<t >** " 图标以展开/折叠**模板栏**。 单击铅笔图标或双击“模板栏”，打开“编辑”窗口。
 
 ![C&#43; &#43;模板 IntelliSense](../ide/media/template-intellisense-cpp-3.png "模板 IntelliSense")
 
-在窗口中进行的编辑将直接应用于源代码，以便可以实时查看效果。 
+在窗口中进行的编辑将直接应用于源代码，以便可以实时查看效果。
 
 模板栏可以根据代码中的实例化自动填充候选项。 单击“添加所有现有实例化”，查看已用于在整个代码库中实例化模板的所有实际参数的列表。
 
@@ -94,13 +94,13 @@ IntelliCode 是 AI 辅助的 IntelliSense。 它将最有可能的候选项置�
 
 如果编辑器检测到代码出现问题，它将在问题下方添加彩色波浪线。 红色波浪线表示无法编译的代码。 绿色波浪线表示仍可能很严重的其他类型的问题。 可以打开“错误列表”窗口，获取有关问题的详细信息。
 
-对于某些类型的错误以及常见的编码模式，编辑器将以灯泡（在将鼠标悬停在波浪线上时出现）的形式提供“快速修复”。 单击向下箭头查看建议。 
+对于某些类型的错误以及常见的编码模式，编辑器将以灯泡（在将鼠标悬停在波浪线上时出现）的形式提供“快速修复”。 单击向下箭头查看建议。
 
 以下示例中声明了 `vector` 但未找到定义，因此编辑器会包含必需的头文件：
 
 ![C&#43; &#43;快速修复](../ide/media/quick-fix-for-header-cpp.png "C++快速修复")
 
-编辑器还提供了快速修复，以获得一些重构机会。 例如，如果在头文件中声明一个类，Visual Studio 将会在单独的 .cpp 文件中为其创建定义。 
+编辑器还提供了快速修复，以获得一些重构机会。 例如，如果在头文件中声明一个类，Visual Studio 将会在单独的 .cpp 文件中为其创建定义。
 
 ![C&#43; &#43;快速修复](../ide/media/quick-fix.png "C++快速修复")
 

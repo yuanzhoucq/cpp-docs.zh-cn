@@ -3,30 +3,30 @@ title: 在 Visual Studio 中自定义 CMake 生成设置
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: ecd2964e035cbf3d48a737164b0067720e9b6b9a
-ms.sourcegitcommit: 0df462d79ad617296095c3012badc2fe669bab2f
+ms.openlocfilehash: f93997e498502e0e326edfc2b023af9808f86357
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887050"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078655"
 ---
 # <a name="customize-cmake-build-settings"></a>自定义 CMake 生成设置
 
 ::: moniker range="vs-2019"
 
-在 Visual Studio 2019 及更高版本中，可以使用“CMake 设置编辑器”添加配置并自定义其设置。 编辑器旨在作为手动编辑*CMakeSettings*文件的替代方法, 但如果你希望直接编辑该文件, 则可以单击编辑器右上角的 "**编辑 json** " 链接。 
+在 Visual Studio 2019 及更高版本中，可以使用“CMake 设置编辑器”添加配置并自定义其设置。 编辑器旨在作为手动编辑*CMakeSettings*文件的替代方法，但如果你希望直接编辑该文件，则可以单击编辑器右上角的 "**编辑 json** " 链接。
 
 若要添加编辑器，请单击主工具栏的“配置”下拉列表，然后选择“管理配置”。
 
 ![CMake 配置下拉列表](media/vs2019-cmake-manage-configurations.png)
 
-现在可以看到“设置编辑器”左侧显示了已安装的配置。 
+现在可以看到“设置编辑器”左侧显示了已安装的配置。
 
 ![CMake 设置编辑器](media/cmake-settings-editor.png)
 
-默认情况下, `x64-Debug` Visual Studio 提供一项配置。 可以通过单击绿色加号来添加其他配置。 根据所选的配置, 编辑器中显示的设置可能会有所不同。
+默认情况下，Visual Studio 提供一个 `x64-Debug` 配置。 可以通过单击绿色加号来添加其他配置。 根据所选的配置，编辑器中显示的设置可能会有所不同。
 
-您在编辑器中选择的选项将写入到名为*CMakeSettings*的文件中。 此文件提供生成项目时传递到 CMake 的命令行参数和环境变量。 Visual Studio 不会自动修改*cmakelists.txt* ;通过使用*CMakeSettings* , 你可以通过 Visual Studio 自定义生成, 同时使 CMake 项目文件保持不变, 使你的团队中的其他用户可以使用他们所使用的工具。
+您在编辑器中选择的选项将写入到名为*CMakeSettings*的文件中。 此文件提供生成项目时传递到 CMake 的命令行参数和环境变量。 Visual Studio 不会自动修改*cmakelists.txt* ;通过使用*CMakeSettings* ，你可以通过 Visual Studio 自定义生成，同时使 CMake 项目文件保持不变，使你的团队中的其他用户可以使用他们所使用的工具。
 
 ## <a name="cmake-general-settings"></a>CMake 常规设置
 
@@ -36,22 +36,21 @@ ms.locfileid: "69887050"
 
 对应于“名称”设置。 此名称将出现在C++ "配置" 下拉列表中。 可以使用 `${name}` 宏编写其他属性值（如路径）。
 
-
 ### <a name="configuration-type"></a>配置类型
 
 对应于“configurationType”设置。 定义所选生成器的生成配置类型。 当前支持的值为“Debug”、“MinSizeRel”、“Release”和“RelWithDebInfo”。 它映射到[CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)。
 
 ### <a name="toolset"></a>工具集
 
-对应于“inheritedEnvironments”设置。 定义用于生成所选配置的编译器环境。 支持的值取决于配置类型。 若要创建自定义环境, 请选择 "设置" 编辑器右上角的 "**编辑 JSON** " 链接, 并直接编辑*CMakeSettings*文件。
+对应于“inheritedEnvironments”设置。 定义用于生成所选配置的编译器环境。 支持的值取决于配置类型。 若要创建自定义环境，请选择 "设置" 编辑器右上角的 "**编辑 JSON** " 链接，并直接编辑*CMakeSettings*文件。
 
 ### <a name="cmake-toolchain-file"></a>CMake 工具链文件
 
-[CMake 工具链文件](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html)的路径。 此路径将作为 "-DCMAKE_TOOLCHAIN_FILE = \<filepath >" 传递给 CMake。 工具链 files 指定编译器和工具链实用工具的位置以及其他目标平台和编译器相关信息。 默认情况下, 如果未指定此设置, 则 Visual Studio 将使用[vcpkg 工具链文件](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake)。 
+[CMake 工具链文件](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html)的路径。 此路径将作为 "-DCMAKE_TOOLCHAIN_FILE = \<filepath >" 传递给 CMake。 工具链 files 指定编译器和工具链实用工具的位置以及其他目标平台和编译器相关信息。 默认情况下，如果未指定此设置，则 Visual Studio 将使用[vcpkg 工具链文件](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake)。
 
 ### <a name="build-root"></a>生成根目录
 
-对应于“buildRoot”。 映射到[CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html), 并指定要在何处创建 CMAKE 缓存。 如果指定的文件夹不存在, 则创建该文件夹。
+对应于“buildRoot”。 映射到[CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)，并指定创建 CMAKE 缓存的位置。 如果指定的文件夹不存在，则创建该文件夹。
 
 ## <a name="command-arguments"></a>命令参数
 
@@ -63,8 +62,7 @@ ms.locfileid: "69887050"
 
 ### <a name="build-command-arguments"></a>生成命令参数
 
-对应于**buildCommandArgs**。 指定要传递到基础生成系统的其他开关。 例如, 使用专家`-v`生成器时传递会强制专家输出命令行。
-
+对应于**buildCommandArgs**。 指定要传递到基础生成系统的其他开关。 例如，在使用专家生成器时，传递 `-v` 会强制专家输出命令行。
 
 ### <a name="ctest-command-arguments"></a>CTest 命令参数
 
@@ -76,19 +74,19 @@ ms.locfileid: "69887050"
 
 ### <a name="rsync-command-arguments"></a>rsync 命令参数
 
-传递给[rsync](https://download.samba.org/pub/rsync/rsync.html)的其他命令行选项, 这是一种快速而通用的文件复制工具。 
+传递给[rsync](https://download.samba.org/pub/rsync/rsync.html)的其他命令行选项，这是一种快速而通用的文件复制工具。
 
 ## <a name="cmake-variables-and-cache"></a>CMake 变量和缓存
 
-这些设置使你能够设置 CMake 变量并将其保存在*CMakeSettings*中。 它们在生成时传递到 CMake, 并覆盖*cmakelists.txt*文件中的任何值。 你可以按照此部分所述使用 CMakeGUI 来查看可编辑的所有 CMake 变量列表相同。 单击“保存并生成缓存”按钮以查看所有可编辑的 CMake 变量列表，包括高级变量（根据 CMakeGUI）。 可以按变量名称筛选列表。 
+这些设置使你能够设置 CMake 变量并将其保存在*CMakeSettings*中。 它们在生成时传递到 CMake，并覆盖*cmakelists.txt*文件中的任何值。 你可以按照此部分所述使用 CMakeGUI 来查看可编辑的所有 CMake 变量列表相同。 单击“保存并生成缓存”按钮以查看所有可编辑的 CMake 变量列表，包括高级变量（根据 CMakeGUI）。 可以按变量名称筛选列表。
 
-对应于**变量**。 包含 CMake 变量的名称-值对, 这些变量将为 **-D**  *_name_=_值_* 传递到 CMake。 如果你的 CMake 项目生成指令将任何变量直接指定给 CMake 缓存文件, 我们建议你将其添加到此处。
+对应于**变量**。 包含 CMake 变量的名称-值对，将这些变量作为 **-D** *_名称_传递=_值_* 为 CMake。 如果你的 CMake 项目生成指令将任何变量直接指定给 CMake 缓存文件，我们建议你将其添加到此处。
 
 ## <a name="advanced-settings"></a>高级设置
 
 ### <a name="cmake-generator"></a>CMake 生成器
 
-对应于**生成器**。 映射到 CMake **-G**开关, 并指定要使用的[CMake 生成器](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html)。 编写其他属性时，此属性也可用作宏 `${generator}`。 Visual Studio 当前支持下列 CMake 生成器：
+对应于**生成器**。 映射到 CMake **-G**开关，并指定要使用的[CMake 生成器](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html)。 编写其他属性时，此属性也可用作宏 `${generator}`。 Visual Studio 当前支持下列 CMake 生成器：
 
   - "Ninja"
   - “Unix 生成文件”
@@ -102,19 +100,19 @@ ms.locfileid: "69887050"
   - "Visual Studio 14 2015 Win64"
   - "Visual Studio 14 2015 ARM"
   
-由于专家是为快速生成速度而不是灵活性和功能而设计的, 因此将其设置为默认值。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果出现这种情况, 则可以指示 CMake 改为生成 Visual Studio 项目。
+由于专家是为快速生成速度而不是灵活性和功能而设计的，因此将其设置为默认值。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果出现这种情况，则可以指示 CMake 改为生成 Visual Studio 项目。
 
 ### <a name="intellisense-mode"></a>IntelliSense 模式
 
-IntelliSense 引擎使用的 IntelliSense 模式。 如果未选择任何模式, 则 Visual Studio 将从指定的工具集中继承。  
+IntelliSense 引擎使用的 IntelliSense 模式。 如果未选择任何模式，则 Visual Studio 将从指定的工具集中继承。  
 
 ### <a name="install-directory"></a>安装目录
 
-CMake 在其中安装目标的目录。 映射到[CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html)。 
+CMake 在其中安装目标的目录。 映射到[CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html)。
 
 ### <a name="cmake-executable"></a>CMake 可执行文件
 
-CMake 程序可执行文件的完整路径, 包括文件名和扩展名。 它允许你将自定义版本的 CMake 与 Visual Studio 配合使用。 对于远程生成，请在远程计算机上指定 CMake 位置。
+CMake 程序可执行文件的完整路径，包括文件名和扩展名。 它允许你将自定义版本的 CMake 与 Visual Studio 配合使用。 对于远程生成，请在远程计算机上指定 CMake 位置。
 
 对于使用远程生成的配置（如 Linux），还提供以下设置：
 
@@ -124,15 +122,15 @@ CMake 程序可执行文件的完整路径, 包括文件名和扩展名。 它�
 
 ### <a name="remote-install-root"></a>远程安装根目录
 
-远程计算机上 CMake 在其中安装目标的目录。 映射到[CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html)。 
+远程计算机上 CMake 在其中安装目标的目录。 映射到[CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html)。
 
 ### <a name="remote-copy-sources"></a>远程复制源
 
-指定是否将源文件复制到远程计算机, 并允许指定是使用 rsync 还是 sftp。 
+指定是否将源文件复制到远程计算机，并允许指定是使用 rsync 还是 sftp。
 
 ## <a name="directly-edit-cmakesettingsjson"></a>直接编辑 CMakeSettings.json
 
-还可以直接编辑*CMakeSettings*以创建自定义配置。 “设置编辑器”的右上角有一个“编辑 JSON”按钮，单击该按钮可打开文件进行编辑。 
+还可以直接编辑*CMakeSettings*以创建自定义配置。 “设置编辑器”的右上角有一个“编辑 JSON”按钮，单击该按钮可打开文件进行编辑。
 
 下面的示例演示了一个示例配置，可将该配置用作起点：
 
@@ -150,11 +148,11 @@ CMake 程序可执行文件的完整路径, 包括文件名和扩展名。 它�
     },
 ```
 
-JSON IntelliSense 可帮助你编辑*CMakeSettings*文件:
+JSON IntelliSense 可帮助你编辑*CMakeSettings*文件：
 
    ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
-当你选择不兼容的设置时, JSON 编辑器还会通知你。
+当你选择不兼容的设置时，JSON 编辑器还会通知你。
 
 有关文件中每个属性的详细信息，请参阅 [CMakeSettings.json 架构引用](cmakesettings-reference.md)。
 
@@ -170,13 +168,13 @@ Visual Studio 2017 提供多个 CMake 配置，这些配置定义如何调用 CM
 
    ![CMake 预定义配置](media/cmake-configurations.png)
 
-首次选择配置时, Visual Studio 将在项目的根文件夹中创建*CMakeSettings*文件。 此文件用于重新创建 CMake 缓存文件，例如，在“清除”操作后重新创建。 
+首次选择配置时，Visual Studio 将在项目的根文件夹中创建*CMakeSettings*文件。 此文件用于重新创建 CMake 缓存文件，例如，在“清除”操作后重新创建。
 
-若要添加其他配置, 请右键单击*CMakeSettings* , 然后选择 "**添加配置**"。 
+若要添加其他配置，请右键单击*CMakeSettings* ，然后选择 "**添加配置**"。
 
-   ![CMake 添加配置](media/cmake-add-configuration.png "CMake Add Configuration")
+   ![CMake 添加配置](media/cmake-add-configuration.png "CMake 添加配置")
 
-也可使用“CMake 设置编辑器”来编辑文件。 在**解决方案资源管理器**中右键单击 " *CMakeSettings* ", 然后选择 "**编辑 CMake 设置**"。 或者，从顶部的编辑器窗口的配置下拉列表中选择“管理配置”。 
+也可使用“CMake 设置编辑器”来编辑文件。 在**解决方案资源管理器**中右键单击 " *CMakeSettings* "，然后选择 "**编辑 CMake 设置**"。 或者，从顶部的编辑器窗口的配置下拉列表中选择“管理配置”。
 
 还可以直接编辑*CMakeSettings*以创建自定义配置。 下面的示例演示了一个示例配置，可将该配置用作起点：
 
@@ -194,7 +192,7 @@ Visual Studio 2017 提供多个 CMake 配置，这些配置定义如何调用 CM
     },
 ```
 
-JSON IntelliSense 可帮助你编辑*CMakeSettings*文件:
+JSON IntelliSense 可帮助你编辑*CMakeSettings*文件：
 
    ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
@@ -202,7 +200,7 @@ JSON IntelliSense 可帮助你编辑*CMakeSettings*文件:
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>

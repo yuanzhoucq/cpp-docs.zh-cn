@@ -2,18 +2,18 @@
 title: 演练：矩阵乘法
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518486"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075705"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>演练：矩阵乘法
 
 此分步演练演示如何使用C++ AMP 加速矩阵相乘的执行。 将显示两个算法，一个不平铺，另一个用于平铺。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 开始之前：
 
@@ -33,7 +33,7 @@ ms.locfileid: "76518486"
 
 1. 在菜单栏上，选择 "**文件**" ">**新建**>**项目**" 打开 "新建**项目**" 对话框。
 
-1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。 
+1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。
 
 1. 从筛选的项目类型列表中，选择 "**空项目**"，然后选择 "**下一步**"。 在下一页中，在 "**名称**" 框中输入*MatrixMultiply*以指定项目的名称，并指定项目位置（如果需要）。
 

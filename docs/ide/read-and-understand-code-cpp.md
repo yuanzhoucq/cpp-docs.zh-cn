@@ -2,12 +2,12 @@
 title: 阅读并理解 Visual Studio 中的 C++ 代码
 description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格式以及理解代码。
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416130"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079047"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>阅读并理解 Visual Studio 中的 C++ 代码
 
@@ -61,7 +61,7 @@ Visual Studio 对语法元素进行着色，以区分语言关键字、类型名
 
 ![C 中的快速信息&#43;&#43;](../ide/media/quick-info-vs2019.png "快速信息")
 
-“快速信息”工具提示具有“联机搜索”链接。 转到“工具” **“选项”** “文本编辑器” > “C++” **“视图”，以指定搜索提供程序** >  >  > 。 
+“快速信息”工具提示具有“联机搜索”链接。 转到“工具” **“选项”** “文本编辑器” > “C++” **“视图”，以指定搜索提供程序** >  >  > 。
 
 如果代码中存在错误，可以将鼠标悬停在该代码上，“快速信息”将随即显示错误消息。 还可以在“错误列表”窗口中找到该错误消息。
 

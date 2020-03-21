@@ -33,12 +33,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: 9c2e5923fe35287a7586cd4b52bc60e4a5b27b2d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 956648babf987d156cac753f8373518a83362013
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545569"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079679"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 类
 
@@ -55,7 +55,7 @@ template <
    class RowClass = CSimpleRow,
    class RowsetInterface = IRowsetImpl <T, IRowset>
 >
-class CRowsetImpl : 
+class CRowsetImpl :
    public CComObjectRootEx<CreatorClass::_ThreadModel>,
    public CRowsetBaseImpl<T, Storage, ArrayType, RowsetInterface>,
    public IRowsetInfoImpl<T, CreatorClass::_PropClass>

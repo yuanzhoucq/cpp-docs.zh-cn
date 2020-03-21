@@ -5,18 +5,18 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 25fffd018c45200571f99dc87ab8ffe29bb6667f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142045"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080009"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>演练：创建基于代理的应用程序
 
 本主题介绍如何创建基于代理的基本应用程序。 在本演练中，可以创建一个代理，用于以异步方式从文本文件读取数据。 应用程序使用 Adler-32 校验和算法来计算该文件的内容的校验和。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 若要完成本演练，必须了解以下主题：
 
@@ -28,7 +28,7 @@ ms.locfileid: "77142045"
 
 - [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a> 部分
+## <a name="sections"></a><a name="top"></a> 部分
 
 本演练演示如何执行以下任务：
 
@@ -38,7 +38,7 @@ ms.locfileid: "77142045"
 
 - [在应用程序中使用 file_reader 类](#useagentclass)
 
-## <a name="createapplication"></a>创建控制台应用程序
+## <a name="creating-the-console-application"></a><a name="createapplication"></a>创建控制台应用程序
 
 本部分演示如何创建一个C++控制台应用程序，该应用程序引用程序将使用的头文件。 初始步骤因您使用的 Visual Studio 的版本而异。 请确保在此页的左上角正确设置了版本选择器。
 
@@ -48,7 +48,7 @@ ms.locfileid: "77142045"
 
 1. 从主菜单中，选择 "**文件**" ">**新建**>**项目**" 打开 "新建**项目**" 对话框。
 
-1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。 
+1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。
 
 1. 从筛选的项目类型列表中，选择“控制台应用”，然后选择“下一步”。 在下一页中，输入 `BasicAgent` 作为项目的名称，并指定项目位置（如果需要）。
 
@@ -80,7 +80,7 @@ ms.locfileid: "77142045"
 
 [[返回页首](#top)]
 
-## <a name="createagentclass"></a>创建 file_reader 类
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>创建 file_reader 类
 
 本部分演示如何创建 `file_reader` 类。 运行时计划每个代理在其自身的上下文中执行工作。 因此，你可以创建一个以同步方式执行工作但与其他组件异步交互的代理。 `file_reader` 类从给定的输入文件中读取数据，并将数据从该文件发送到给定的目标组件。
 
@@ -128,7 +128,7 @@ ms.locfileid: "77142045"
 
 [[返回页首](#top)]
 
-## <a name="useagentclass"></a>在应用程序中使用 file_reader 类
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>在应用程序中使用 file_reader 类
 
 本部分演示如何使用 `file_reader` 类读取文本文件的内容。 它还演示了如何创建[concurrency：： call](../../parallel/concrt/reference/call-class.md)对象，该对象接收此文件数据并计算其 Adler-32 校验和。
 

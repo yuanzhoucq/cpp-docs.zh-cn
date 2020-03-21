@@ -8,16 +8,16 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525254"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079007"
 ---
 # <a name="user-record"></a>用户记录
 
-> [!NOTE] 
+> [!NOTE]
 > ATL OLE DB 提供程序向导不适用于 Visual Studio 2019 及更高版本。
 
 用户记录提供表示行集的列数据的代码和数据结构。 可以在编译时或运行时创建用户记录。 当你使用 ATL OLE DB 提供程序向导创建提供程序时，向导会创建如下所示的默认用户记录（假设指定了提供程序名称 [短名称] MyProvider）：
@@ -43,7 +43,7 @@ OLE DB 提供程序模板处理与客户端交互方面的所有 OLE DB 详细�
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 这相当于：
@@ -69,6 +69,6 @@ PROVIDER_COLUMN_MAP 宏有助于创建 `GetColumnInfo` 函数：
 
 有关如何重写用户记录中 `GetColumnInfo` 的更详细示例，请参阅[动态确定返回给使用者的列](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

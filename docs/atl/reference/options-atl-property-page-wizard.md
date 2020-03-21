@@ -6,15 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707007"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076212"
 ---
 # <a name="options-atl-property-page-wizard"></a>选项，ATL 属性页向导
-
 
 ::: moniker range="vs-2019"
 
@@ -34,7 +33,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
    |选项|说明|
    |------------|-----------------|
-   |**单精度**|属性页仅在主 COM 线程中运行。|
+   |**Single**|属性页仅在主 COM 线程中运行。|
    |**单元**|可以在任意一个单线程单元中创建属性页。 默认值。|
 
 - **聚合**
@@ -44,12 +43,12 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
    |选项|说明|
    |------------|-----------------|
    |**是**|创建可聚合的属性页。|
-   |**否**|创建不可聚合的属性页。|
+   |**是**|创建不可聚合的属性页。|
    |**仅限**|创建只能通过聚合来实例化的属性页。|
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ATL 属性页向导](../../atl/reference/atl-property-page-wizard.md)<br/>
 [ATL 属性页向导的“字符串”](../../atl/reference/strings-atl-property-page-wizard.md)

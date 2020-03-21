@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423752"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076155"
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -261,7 +261,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 在 C++ 中，局部变量可以声明为静态。 变量仅在函数体中可见，但是对于函数的所有实例，存在变量的单个副本。 局部静态对象将在 `atexit` 指定的终止期间销毁。 如果某个静态对象由于程序的控制流跳过了其声明而未构造，则不会尝试销毁该对象。
 
-##  <a name="type_deduction"></a>返回类型中的类型推导（c + + 14）
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>返回类型中的类型推导（c + + 14）
 
 在 c + + 14 中，可以使用**auto**指示编译器从函数体推断返回类型，而不必提供尾随返回类型。 请注意， **auto**始终推导为返回值。 使用 `auto&&` 可指示编译器推导引用。
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 请注意， **auto**不会保留它推导的类型的常量类型。 对于其返回值需要保留其自变量的常量性或引用性的转发函数，可以使用**decltype （auto）** 关键字，该关键字使用**decltype**类型推理规则并保留所有类型信息。 **decltype （auto）** 可用作左侧的普通返回值或作为尾随返回值。
 
-下面的示例（基于[N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)中的代码）显示了用于在实例化模板之前，允许在返回类型中完美转发函数参数的**decltype （auto）** 。
+下面的示例（基于[N3493](https://wg21.link/n3493)中的代码）显示了用于在实例化模板之前，允许在返回类型中完美转发函数参数的**decltype （auto）** 。
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>从函数返回多个值
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>从函数返回多个值
 
 有多种方法可从函数返回多个值：
 

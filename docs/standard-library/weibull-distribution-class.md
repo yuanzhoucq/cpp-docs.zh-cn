@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688516"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075528"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution 类
 
@@ -68,9 +68,9 @@ class weibull_distribution
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*RealType* \
+*RealType*\
 浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
@@ -94,7 +94,7 @@ class weibull_distribution
 
 有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
-有关韦伯分布的详细信息，请参阅 Wolfram MathWorld 文章[韦伯分布](http://mathworld.wolfram.com/WeibullDistribution.html)。
+有关韦伯分布的详细信息，请参阅 Wolfram MathWorld 文章[韦伯分布](https://mathworld.wolfram.com/WeibullDistribution.html)。
 
 ## <a name="example"></a>示例
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 首次运行：
 
@@ -209,26 +209,26 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：** \<随机 >
 
-**命名空间:** std
+**命名空间：** std
 
-## <a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
 explicit weibull_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *一个*\
 `a` 分布参数。
 
-*b* \
+*b*\
 `b` 分布参数。
 
-*parm* \
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -239,7 +239,7 @@ explicit weibull_distribution(const param_type& parm);
 
 第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::param_type
 
 存储分布的参数。
 
@@ -255,15 +255,15 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *一个*\
 `a` 分布参数。
 
-*b* \
+*b*\
 `b` 分布参数。
 
-*right* \
+*right*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
@@ -272,6 +272,6 @@ struct param_type {
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<random>](../standard-library/random.md)

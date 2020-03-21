@@ -4,12 +4,12 @@ description: 如何在中使用原始指针C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250684"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077147"
 ---
 # <a name="raw-pointers-c"></a>原始指针（C++）
 
@@ -45,7 +45,7 @@ ms.locfileid: "74250684"
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 可对非常量指针执行某些算术运算，使其指向新的内存位置。 可以使用 **++** 、 **+=** 、 **-=** 和 **--** 运算符来递增和递减指针。 此方法可用于数组中，在非类型化数据的缓冲区中尤其有用。 **Void\*** 按**字符**大小（1字节）递增。 类型化的指针按其所指向的类型的大小递增。
 
-下面的示例演示如何使用指针算法访问 Windows 上位图中的单个像素。 请注意**new**和**delete**以及取消引用运算符的使用。 
+下面的示例演示如何使用指针算法访问 Windows 上位图中的单个像素。 请注意**new**和**delete**以及取消引用运算符的使用。
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>void * 指针
 
-指向**void**的指针只指向原始内存位置。 有时，有必要使用**void\*** 指针，例如，在代码和 C C++函数之间传递时。 
+指向**void**的指针只指向原始内存位置。 有时，有必要使用**void\*** 指针，例如，在代码和 C C++函数之间传递时。
 
 当类型化指针强制转换为 void 指针时，内存位置的内容将不会更改，但类型信息会丢失，因此不能执行递增或递减运算。 内存位置可以强制转换，例如从 MyClass * 转换为 void * 并再次返回到 MyClass *。 此类操作本质上容易出错，并需要非常小心来避免错误。 新式C++不鼓励使用 void 指针，除非绝对必要。
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>指向函数的指针
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>指向函数的指针
 
 在 C 样式编程中，函数指针主要用于将函数传递到其他函数。 在这种情况下，调用方可以自定义函数的行为而无需修改它。 在现代C++上， [lambda 表达式](lambda-expressions-in-cpp.md)提供相同的功能以及更高的类型安全性和其他优点。
 

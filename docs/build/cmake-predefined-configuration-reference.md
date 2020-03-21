@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 296977a08a869b1da2ed8ca292fc39e0df6324b4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509427"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078756"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 预定义生成配置
 
@@ -34,7 +34,6 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 - MinGW Release
 
 选择配置时，会将其添加到项目根文件夹中的*CMakeSettings*文件。 然后可以使用该配置生成项目。 有关配置属性的信息，请参阅[CMakeSettings reference](cmakesettings-reference.md)。
-
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 预定义生成配置：
 
@@ -381,7 +380,6 @@ You can use these optional settings for more control:
 - Clang
 
 选择某些配置时，该配置将添加到项目根文件夹中的 CMakeSettings.json 文件中。 然后可以使用该配置生成项目。
-
 
 ```json
 {

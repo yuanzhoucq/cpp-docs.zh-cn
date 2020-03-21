@@ -2,18 +2,18 @@
 title: 移植到通用 Windows 平台 (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 0013d85ad8c27c06560c9f9e541691f4335252d1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627204"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076862"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
 在本主题中，可以找到有关如何将现有的 C++ 代码移植到 Windows 10 应用平台（通用 Windows 平台）的信息。 术语 "*通用*" 的意思是代码可以在运行 Windows 10 的任何设备上运行。 可以创建单个项目和单个基于 XAML 的用户界面，可在运行 Windows 10 的任何设备上正常工作。 可以在 XAML 中使用动态布局功能，以允许应用的 UI 适应不同的显示大小。
 
-Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅[从 Windows 运行时 8 移动到 UWP](/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。 另请参阅[从桌面应用程序移动到 UWP](/windows/uwp/porting/desktop-to-uwp-migrate)。
+Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅 [从 Windows Runtime 8 移动到 UWP](/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。 另请参阅[从桌面应用程序移动到 UWP](/windows/uwp/porting/desktop-to-uwp-migrate)。
 
 本主题包含以下用于将代码移植到 UWP 的过程。
 
@@ -21,9 +21,9 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 - [将 Windows 8.1 运行时组件移植到 UWP](#BK_81Component)
 
-如果具有经典的桌面 Win32 DLL，并且想要从 UWP 应用程序调用它，也可以执行此操作。 使用此类过程，可以为现有经典 Windows 桌面 C++ 应用程序或跨平台标准 C++ 代码创建 UWP 用户界面层。 请参阅[如何在通用 Windows 平台应用中使用现有 C++ 代码](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。 
+如果具有经典的桌面 Win32 DLL，并且想要从 UWP 应用程序调用它，也可以执行此操作。 使用此类过程，可以为现有经典 Windows 桌面 C++ 应用程序或跨平台标准 C++ 代码创建 UWP 用户界面层。 请参阅[如何在通用 Windows 平台应用中使用现有 C++ 代码](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。
 
-## <a name="BK_81StoreApp"></a> 将 Windows 8.1 应用商店应用移植到 UWP
+## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> 将 Windows 8.1 应用商店应用移植到 UWP
 
 如果拥有 Windows 8.1 应用商店应用，则可以使用此过程使其在 UWP 和运行 Windows 10 的任何设备上正常工作。  最好首先使用 Visual Studio 2019 作为 Windows 8.1 项目生成项目，以首先消除编译器和库中的更改所引发的任何问题。 完成后，有两种方法可以将其转换为 Windows 10 UWP 项目。 最简单的方法（如下面的过程所述）是创建通用 Windows 项目，并将现有的代码复制到其中。 如果对 Windows 8.1 桌面和 Windows 8.1 手机使用通用项目，则你的项目开始时在 XAML 中有两个不同的布局，但最终只有一个调整至显示大小的动态布局。
 
@@ -33,7 +33,7 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
    需要在 Visual Studio 安装程序中安装 Windows 8.1 工具。 如果没有安装这些工具，请从“程序和功能”窗口启动 Visual Studio 安装程序，选择 Visual Studio 2017，再在安装程序窗口中选择“修改”。 找到 Windows 8.1 工具，确保已将其选中，然后选择“确定”。
 
-1. 打开“项目属性”窗口，在“C++” > “常规”下将平台工具集设置为 Visual Studio 2017 的工具集 v141。
+1. 打开“项目属性”窗口，在“C++” **“常规”下将平台工具集设置为 Visual Studio 2017 的工具集 v141** > 。
 
 1. 将该项目生成为 Windows 8.1 项目，并解决任何生成错误。 在此阶段的任何错误可能是由于生成工具和库中的重大更改所引起的。 有关可能会影响代码的更改的详细说明，请参阅 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)。
 
@@ -43,13 +43,13 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 1. 关闭解决方案，然后使用 Windows 资源管理器或命令行将 Windows 8.1 项目中的代码文件（具有扩展名 .cpp、.h 和 .xaml）复制到在步骤 1 中为该项目创建的项目文件 (.vcxproj) 所在的文件夹中。 请不要复制 Package.appxmanifest 文件，并且如果拥有 Windows 8.1 桌面和手机的单独代码，则选择其中一个代码首先进行移植（之后需要执行一些工作以适应另一个代码）。 请确保复制子文件夹及其内容。 如出现系统提示，请选择替换具有相同名称的所有文件。
 
-1. 重新打开该解决方案，并从项目节点的快捷菜单中选择“添加” > “现有项”。 选择所有复制的文件，任何已存在于项目中的文件除外。
+1. 重新打开该解决方案，并从项目节点的快捷菜单中选择“添加” **“现有项”**  > 。 选择所有复制的文件，任何已存在于项目中的文件除外。
 
    检查所有子文件夹，并确保也在其中添加这些文件。
 
-1. 如果使用与旧项目不同的项目名称，则打开 Package.appxmanifest 文件并更新入口点，以反映 `App` 类的命名空间名称。
+1. 如果使用与旧项目不同的项目名称，则打开 Package.appxmanifest 文件并更新入口点，以反映  **类的命名空间名称**`App`。
 
-   Package.appxmanifest 文件中的“入口点”字段包含 `App` 类的范围名称，其中的命名空间包含 `App` 类。 当创建通用 Windows 项目时，命名空间设置为该项目的名称。 如果这不同于从旧项目中复制的文件的内容，则必须更新一个或另一个以使它们能够匹配。
+   Package.appxmanifest 文件中的“入口点”字段包含 **类的范围名称，其中的命名空间包含** 类`App``App`。 当创建通用 Windows 项目时，命名空间设置为该项目的名称。 如果这不同于从旧项目中复制的文件的内容，则必须更新一个或另一个以使它们能够匹配。
 
 1. 生成项目并解决由不同版本的 Windows SDK 之间的重大更改所引发的任何生成错误。
 
@@ -68,7 +68,7 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 1. 对应用支持的每种类型的设备，在仿真器或物理设备运行和调试应用。 若要运行仿真程序，则需在物理计算机上（而不是虚拟机上）运行 Visual Studio。
 
-## <a name="BK_81Component"></a> 将 Windows 8.1 运行时组件移植到 UWP
+## <a name="porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> 将 Windows 8.1 运行时组件移植到 UWP
 
 如果有一个 DLL 或一个已使用 Windows 8.1 应用商店应用的 Windows 运行时组件，则可以使用此过程来获取使用 UWP 和 Windows 10 的组件或 DLL。 基本过程是创建新项目，然后将代码复制到其中。
 
@@ -82,7 +82,7 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 1. 生成，然后解决由不同版本的 Windows SDK 之间的重大更改所引发的任何错误。
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
 
 在将代码移植到 UWP 的过程中，可能会遇到各种错误。 以下是一些可能遇到的问题。
 
@@ -106,7 +106,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 
 如果使用 Visual Studio 创建新的 UWP 项目，则不应看到此错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Visual C++ 迁移指南](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [开发通用 Windows 平台 (UWP) 的应用](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

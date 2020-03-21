@@ -4,18 +4,18 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 24b4698ebc8dd4f61dfd88ad14e64d4f70b2ef35
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707037"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075284"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 组件向导
 
 ::: moniker range="vs-2019"
 
-此向导不适用于 Visual Studio 2019 及更高版本。
+此向导在 Visual Studio 2019 及更高版本中不可用。
 
 ::: moniker-end
 
@@ -74,20 +74,20 @@ ms.locfileid: "65707037"
 > [!NOTE]
 >  如果使用特性创建项目，或在此向导页上指明 COM+ 1.0 组件使用特性，便无法更改这一选项，因为 ATL 不包括 `coclass` 特性。
 
-- **Type**
+- 类型
 
    设置注册表中显示的对象说明
 
-- **Interface**
+- **接口**
 
    设置为对象创建的接口。 此接口包含自定义方法。
 
 - **编程 ID**
 
    设置容器可用来代替对象 CLSID 的名称。
-   
+
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ATL COM+ 1.0 组件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

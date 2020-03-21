@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 103a1ce5568c6137994056e574ce8eec04511d8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182907"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079748"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-向导将创建具有一个行的数据; 的类在这种情况下，名为`CCustomWindowsFile`。 下面的代码用于`CCustomWindowsFile`是向导生成和使用列出的目录中的所有文件`WIN32_FIND_DATA`结构。 `CCustomWindowsFile` 继承自`WIN32_FIND_DATA`结构：
+向导将创建一个具有一行数据的类;在这种情况下，它被称为 `CCustomWindowsFile`。 以下 `CCustomWindowsFile` 为向导生成的代码，并通过使用 `WIN32_FIND_DATA` 结构列出目录中的所有文件。 `CCustomWindowsFile` 继承自 `WIN32_FIND_DATA` 结构：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
@@ -38,9 +38,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` 称为[用户记录类](../../data/oledb/user-record.md)因为它也具有描述提供程序的行集中的列的映射。 提供程序列映射包含每个字段使用 PROVIDER_COLUMN_ENTRY 宏的行集中的一个条目。 宏指定列名称，序号，和结构项的偏移量。 在上述代码中的提供程序列条目包含的偏移量`WIN32_FIND_DATA`结构。 当使用者调用`IRowset::GetData`，在一个连续的缓冲区中传输数据。 而不是让您执行指针算法，该映射，可指定数据成员。
+`CCustomWindowsFile` 称为[用户记录类](../../data/oledb/user-record.md)，因为它还有描述提供程序的行集中的列的映射。 对于使用 PROVIDER_COLUMN_ENTRY 宏的行集中的每个字段，提供程序列映射包含一个条目。 宏指定结构条目的列名称、序号和偏移量。 以上代码中的 provider 列项包含 `WIN32_FIND_DATA` 结构的偏移量。 当使用者调用 `IRowset::GetData`时，数据将在一个连续的缓冲区中传输。 您可以使用地图来指定数据成员，而不是让您执行指针算法。
 
-`CCustomRowset`类还包含`Execute`方法。 `Execute` 是什么实际从本机源读取中的数据。 下面的代码显示了由向导生成`Execute`方法。 该函数使用 Win32`FindFirstFile`并`FindNextFile`Api 来检索有关目录中的文件的信息并将其放置在实例的`CCustomWindowsFile`类。
+`CCustomRowset` 类还包含 `Execute` 方法。 `Execute` 实际上是从本机源读取数据。 下面的代码演示向导生成的 `Execute` 方法。 函数使用 Win32 `FindFirstFile` 和 `FindNextFile` Api 来检索有关目录中的文件的信息，并将这些文件放在 `CCustomWindowsFile` 类的实例中。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -73,10 +73,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-要搜索的目录所示`m_strCommandText`; 其中包含所表示的文本`ICommandText`中命令对象接口。 如果未不指定任何目录，则使用当前目录。
+要搜索的目录由 `m_strCommandText`显示;这包含命令对象中 `ICommandText` 接口表示的文本。 如果未指定目录，则使用当前目录。
 
-此方法创建一个条目 （对应于一行） 每个文件，并将其放入`m_rgRowData`数据成员。 `CRowsetImpl`类定义`m_rgRowData`数据成员。 此数组中的数据显示整个表，并在整个模板。
+方法为每个文件创建一个项（对应于行）并将其放在 `m_rgRowData` 数据成员中。 `CRowsetImpl` 类定义 `m_rgRowData` 数据成员。 此数组中的数据显示整个表，并在整个模板中使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)<br/>

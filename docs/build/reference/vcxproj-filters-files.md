@@ -1,18 +1,18 @@
 ---
-title: .vcxproj 文件
+title: .Vcxproj 文件
 ms.date: 09/25/2019
 description: 使用 Visual Studio C++项目中的筛选器文件为中的文件定义自定义逻辑文件夹解决方案资源管理器
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686922"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078277"
 ---
-# <a name="vcxprojfilters-files"></a>.vcxproj 文件
+# <a name="vcxprojfilters-files"></a>.Vcxproj 文件
 
 *筛选器*文件（\*.vcxproj）是一个采用 MSBuild 格式的 XML 文件，位于根项目文件夹中。 它指定哪些文件类型将进入**解决方案资源管理器**的逻辑文件夹。 在下图中， *.cpp*文件位于 "**源文件**" 节点下。 *.h*文件位于 "**头文件**" 节点下， *.ico*和 *.rc*文件位于 "**资源文件**" 下。 此位置由筛选器文件控制。
 
@@ -26,7 +26,7 @@ Visual Studio 会自动创建此文件。 对于桌面应用程序，预定义�
 
 下面的示例演示前面的示例显示的筛选器文件。 它具有平面层次结构;换句话说，没有嵌套的逻辑文件夹。 `UniqueIdentifier` 节点是可选的。 它使 Visual Studio 自动化接口能够查找筛选器。 `Extensions` 也是可选的。 将新文件添加到项目时，会将其添加到具有匹配文件扩展名的最顶层筛选器中。 若要将文件添加到特定筛选器，请右键单击该筛选器，然后选择 "**添加新项**"。
 
-首次启动项目时，将创建包含 `ClInclude` 节点的 `ItemGroup`。 如果要生成自己的 .vcxproj 文件，请确保所有项目项在筛选器文件中也有一个条目。 `ClInclude` 节点中的值将基于文件扩展名覆盖默认筛选。 使用 Visual Studio 向项目添加新项时，IDE 将在筛选器文件中添加单个文件项。 如果更改文件扩展名，则不会自动重新分配筛选器。 
+首次启动项目时，将创建包含 `ClInclude` 节点的 `ItemGroup`。 如果要生成自己的 .vcxproj 文件，请确保所有项目项在筛选器文件中也有一个条目。 `ClInclude` 节点中的值将基于文件扩展名覆盖默认筛选。 使用 Visual Studio 向项目添加新项时，IDE 将在筛选器文件中添加单个文件项。 如果更改文件扩展名，则不会自动重新分配筛选器。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ Visual Studio 会自动创建此文件。 对于桌面应用程序，预定义�
     </Filter>
   </ItemGroup>
 ```
-

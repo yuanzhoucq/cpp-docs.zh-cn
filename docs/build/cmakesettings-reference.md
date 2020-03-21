@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac92d9dfa5266227fb3bd4a3749ab50f425a2d90
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422858"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078711"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 
@@ -21,13 +21,13 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 
 ::: moniker range=">=vs-2017"
 
-**CMakeSettings**文件包含 Visual Studio 为 IntelliSense 使用的信息，并为指定的*配置*和编译器*环境*构造传递到 cmake 的命令行参数。 配置指定适用于特定平台和生成类型的属性，例如 `x86-Debug` 或 `Linux-Release`。 每个配置都指定一个环境，该环境封装有关编译器工具集的信息，例如 MSVC、GCC 或 Clang。 CMake 使用命令行参数为项目重新生成根*cmakecache.txt*文件和其他项目文件。 可以在*cmakelists.txt*文件中重写这些值。 
+**CMakeSettings**文件包含 Visual Studio 为 IntelliSense 使用的信息，并为指定的*配置*和编译器*环境*构造传递到 cmake 的命令行参数。 配置指定适用于特定平台和生成类型的属性，例如 `x86-Debug` 或 `Linux-Release`。 每个配置都指定一个环境，该环境封装有关编译器工具集的信息，例如 MSVC、GCC 或 Clang。 CMake 使用命令行参数为项目重新生成根*cmakecache.txt*文件和其他项目文件。 可以在*cmakelists.txt*文件中重写这些值。
 
 可以在 IDE 中添加或删除配置，然后在 JSON 文件中直接编辑它们，或使用**CMake 设置编辑器**（Visual Studio 2019 及更高版本）。 可以在 IDE 中轻松地在配置之间进行切换，以生成各种项目文件。 有关详细信息，请参阅[在 Visual Studio 中自定义 CMake 生成设置](customize-cmake-settings.md)。
 
 ## <a name="configurations"></a>配置
 
-`configurations` 数组包含 CMake 项目的所有配置。 有关预定义配置的详细信息，请参阅[CMake 预定义配置参考](cmake-predefined-configuration-reference.md)。 可以将任意数量的预定义或自定义配置添加到该文件。 
+`configurations` 数组包含 CMake 项目的所有配置。 有关预定义配置的详细信息，请参阅[CMake 预定义配置参考](cmake-predefined-configuration-reference.md)。 可以将任意数量的预定义或自定义配置添加到该文件。
 
 `configuration` 具有以下属性：
 
@@ -148,7 +148,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 请注意，如果未定义 `"type"`，则默认情况下将采用 `"STRING"` 类型。
 - `remoteCopyOptimizations`： **Visual Studio 2019 版本16.5 或更高版本**的属性，用于控制到远程目标的源复制。 默认情况下启用优化。 包括 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs` 和 `remoteCopySourcesMaxSmallChange`。
 
-## <a name="environments"></a>情形
+## <a name="environments"></a><a name="environments"></a>情形
 
 *环境*封装在 Visual Studio 用来调用 cmake 的进程中设置的环境变量。 对于 MSVC 项目，这些变量是在特定平台的[开发人员命令提示](building-on-the-command-line.md)中设置的变量。 例如，`msvc_x64_x64` 环境与运行**vs 2017 的开发人员命令提示**或**针对 vs 2019 的开发人员命令提示**，并具有 **-拱 = amd64-host_arch = amd64**参数相同。 您可以使用*CMakeSettings*中的 `env.{<variable_name>}` 语法来引用单个环境变量，例如构造到文件夹的路径。  提供以下预定义环境：
 
@@ -175,7 +175,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 - `namespace`：为环境命令，以便可从窗体 `namespace.variable` 中的配置中引用其变量。 默认环境对象 `env` 调用，并用某些系统环境变量（包括 `%USERPROFILE%`）进行填充。
 - `environment`：唯一标识此组变量。 允许稍后在 `inheritEnvironments` 输入中继承该组。
 - `groupPriority`：一个整数，指定这些变量在计算时的优先级。 优先评估数字较大的项。
-- `inheritEnvironments`：值的数组，这些值指定此组继承的一组环境。 使用该功能可以继承默认环境，以及创建在运行时传递给 CMake.exe 的自定义环境变量。 
+- `inheritEnvironments`：值的数组，这些值指定此组继承的一组环境。 使用该功能可以继承默认环境，以及创建在运行时传递给 CMake.exe 的自定义环境变量。
 
 **Visual Studio 2019 版本16.4 及更高版本：** 调试目标会自动启动，并在*CMakeSettings*中指定的环境中。 在[启动](launch-vs-schema-reference-cpp.md)[时，可以](tasks-vs-json-schema-reference-cpp.md)基于每个目标或每个任务来重写或添加环境变量。
 
@@ -269,7 +269,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 
 在将*CMakeSettings*中的宏和环境变量传递到 cmake 命令行之前，将展开对这些宏和环境变量的所有引用。
 
-## <a name="ninja"></a> Ninja 命令行参数
+## <a name="ninja-command-line-arguments"></a><a name="ninja"></a> Ninja 命令行参数
 
 如果未指定目标，则生成“默认”目标。
 

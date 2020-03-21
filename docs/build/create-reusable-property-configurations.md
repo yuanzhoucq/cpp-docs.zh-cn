@@ -3,16 +3,16 @@ title: 共享或重复使用 Visual Studio 项目设置-C++
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303214"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078703"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>共享或重用 Visual Studio 项目设置
 
-若要创建可与他人共享或在多个项目中重复使用的自定义设置组，请使用**属性管理器**来创建*属性表*（属性文件），以存储希望能够重复使用或与他人共享的每种项目的设置。 与其他创建 "全局" 设置的方法相比，使用属性表并不容易出错。 
+若要创建可与他人共享或在多个项目中重复使用的自定义设置组，请使用**属性管理器**来创建*属性表*（属性文件），以存储希望能够重复使用或与他人共享的每种项目的设置。 与其他创建 "全局" 设置的方法相比，使用属性表并不容易出错。
 
 > [!IMPORTANT]
 > **.user 文件以及它们存在问题的原因**

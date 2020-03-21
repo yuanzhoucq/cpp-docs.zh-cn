@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2881d25434291aebff6a2d3a542044e58e0e81f2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423650"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077879"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 
@@ -151,7 +151,7 @@ friend class ComPtr;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="tilde-comptr"></a>ComPtr：： ~ ComPtr
+## <a name="comptrcomptr"></a><a name="tilde-comptr"></a>ComPtr：： ~ ComPtr
 
 取消初始化 `ComPtr`的实例。
 
@@ -159,7 +159,7 @@ friend class ComPtr;
 WRL_NOTHROW ~ComPtr();
 ```
 
-## <a name="as"></a>ComPtr：： As
+## <a name="comptras"></a><a name="as"></a>ComPtr：： As
 
 返回表示由指定模板参数标识的接口的 `ComPtr` 对象。
 
@@ -191,7 +191,7 @@ HRESULT As(
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="asiid"></a>ComPtr：： AsIID
+## <a name="comptrasiid"></a><a name="asiid"></a>ComPtr：： AsIID
 
 返回一个 `ComPtr` 对象，该对象表示由指定接口 ID 标识的接口。
 
@@ -214,7 +214,7 @@ WRL_NOTHROW HRESULT AsIID(
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="asweak"></a>ComPtr：： AsWeak
+## <a name="comptrasweak"></a><a name="asweak"></a>ComPtr：： AsWeak
 
 检索对当前对象的弱引用。
 
@@ -233,7 +233,7 @@ HRESULT AsWeak(
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="attach"></a>ComPtr：： Attach
+## <a name="comptrattach"></a><a name="attach"></a>ComPtr：： Attach
 
 将此 `ComPtr` 与当前模板类型参数指定的接口类型相关联。
 
@@ -248,7 +248,7 @@ void Attach(
 *other*<br/>
 接口类型。
 
-## <a name="comptr"></a>ComPtr：： ComPtr
+## <a name="comptrcomptr"></a><a name="comptr"></a>ComPtr：： ComPtr
 
 初始化 `ComPtr` 类的新实例。 重载提供默认、复制、移动和转换构造函数。
 
@@ -304,7 +304,7 @@ WRL_NOTHROW ComPtr(
 
 第六个和第七个构造函数是移动构造函数。 如果对象可转换为当前类型，则第七个构造函数将移动该对象。
 
-## <a name="copyto"></a>ComPtr：： CopyTo
+## <a name="comptrcopyto"></a><a name="copyto"></a>ComPtr：： CopyTo
 
 将与此 `ComPtr` 关联的当前或指定接口复制到指定指针。
 
@@ -347,7 +347,7 @@ HRESULT CopyTo(
 
 第三个函数在与此 `ComPtr` 相关联的接口上对*U*参数的基础接口执行 `QueryInterface` 操作。
 
-## <a name="detach"></a>ComPtr：:D etach
+## <a name="comptrdetach"></a><a name="detach"></a>ComPtr：:D etach
 
 将此 `ComPtr` 对象与它所表示的接口解除。
 
@@ -359,7 +359,7 @@ T* Detach();
 
 指向由此 `ComPtr` 对象表示的接口的指针。
 
-## <a name="get"></a>ComPtr：： Get
+## <a name="comptrget"></a><a name="get"></a>ComPtr：： Get
 
 检索指向与此 `ComPtr`相关联的接口的指针。
 
@@ -371,7 +371,7 @@ T* Get() const;
 
 指向与此 `ComPtr`相关联的接口的指针。
 
-## <a name="getaddressof"></a>ComPtr：： GetAddressOf
+## <a name="comptrgetaddressof"></a><a name="getaddressof"></a>ComPtr：： GetAddressOf
 
 检索[ptr_](#ptr)数据成员的地址，其中包含指向此 `ComPtr`所表示的接口的指针。
 
@@ -384,7 +384,7 @@ T** GetAddressOf();
 
 变量的地址。
 
-## <a name="internaladdref"></a>ComPtr：： InternalAddRef
+## <a name="comptrinternaladdref"></a><a name="internaladdref"></a>ComPtr：： InternalAddRef
 
 递增与此 `ComPtr`相关联的接口的引用计数。
 
@@ -396,7 +396,7 @@ void InternalAddRef() const;
 
 此方法是受保护的。
 
-## <a name="internalrelease"></a>ComPtr：： InternalRelease
+## <a name="comptrinternalrelease"></a><a name="internalrelease"></a>ComPtr：： InternalRelease
 
 对与此 `ComPtr`关联的接口执行 COM 释放操作。
 
@@ -408,7 +408,7 @@ void InternalRelease();
 
 此方法是受保护的。
 
-## <a name="operator-ampersand"></a>ComPtr：： operator&amp;
+## <a name="comptroperatoramp"></a><a name="operator-ampersand"></a>ComPtr：： operator&amp;
 
 释放与此 `ComPtr` 对象关联的接口，然后检索 `ComPtr` 对象的地址。
 
@@ -426,7 +426,7 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 
 此方法与[ComPtr：： GetAddressOf](#getaddressof)的不同之处在于，此方法释放了对接口指针的引用。 如果需要接口指针的地址，但不希望释放该接口，请使用 `ComPtr::GetAddressOf`。
 
-## <a name="operator-arrow"></a>ComPtr：： operator-&gt;
+## <a name="comptroperator-gt"></a><a name="operator-arrow"></a>ComPtr：： operator-&gt;
 
 检索指向当前模板参数所指定类型的指针。
 
@@ -442,7 +442,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 此 helper 函数消除了使用 STDMETHOD 宏引起的不必要的开销。 此函数使 `IUnknown` 类型 `private` 而不是 `virtual`。
 
-## <a name="operator-assign"></a>ComPtr：： operator =
+## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr：： operator =
 
 为当前 `ComPtr`分配值。
 
@@ -501,7 +501,7 @@ WRL_NOTHROW ComPtr& operator=(
 
 第七个版本是使用移动语义的 copy 运算符;对类型*U*的 `ComPtr` 的右值引用是静态强制转换，并分配给当前 `ComPtr`。
 
-## <a name="operator-equality"></a>ComPtr：： operator = =
+## <a name="comptroperator"></a><a name="operator-equality"></a>ComPtr：： operator = =
 
 指示两个 `ComPtr` 对象是否相等。
 
@@ -536,7 +536,7 @@ bool operator==(
 
 如果对象*a*等于 `nullptr`，则第二个和第三个运算符将产生 `true`;否则，`false`。
 
-## <a name="operator-inequality"></a>ComPtr：： operator！ =
+## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr：： operator！ =
 
 指示两个 `ComPtr` 对象是否不相等。
 
@@ -571,7 +571,7 @@ bool operator!=(
 
 如果对象*a*不等于 `nullptr`，则第二个和第三个运算符将产生 `true`;否则，`false`。
 
-## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType
+## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType
 
 指示 `ComPtr` 是否正在管理接口的对象生存期。
 
@@ -583,7 +583,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 如果接口与此 `ComPtr`相关联，则为[BoolStruct：： member](boolstruct-structure.md#member)数据成员的地址;否则，`nullptr`。
 
-## <a name="ptr"></a>ComPtr：:p tr_
+## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr：:p tr_
 
 包含指向与此 `ComPtr`相关联的接口的指针。
 
@@ -595,7 +595,7 @@ InterfaceType *ptr_;
 
 `ptr_` 是内部受保护的数据成员。
 
-## <a name="releaseandgetaddressof"></a>ComPtr：： ReleaseAndGetAddressOf
+## <a name="comptrreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtr：： ReleaseAndGetAddressOf
 
 释放与此 `ComPtr` 关联的接口，然后检索[ptr_](#ptr)数据成员的地址，其中包含指向已释放接口的指针。
 
@@ -607,7 +607,7 @@ T** ReleaseAndGetAddressOf();
 
 此 `ComPtr`的[ptr_](#ptr)数据成员的地址。
 
-## <a name="reset"></a>ComPtr：： Reset
+## <a name="comptrreset"></a><a name="reset"></a>ComPtr：： Reset
 
 释放指向与此 `ComPtr`相关联的接口的指针的所有引用。
 
@@ -619,7 +619,7 @@ unsigned long Reset();
 
 已释放的引用的数量（如果存在）。
 
-## <a name="swap"></a>ComPtr：： Swap
+## <a name="comptrswap"></a><a name="swap"></a>ComPtr：： Swap
 
 将当前 `ComPtr` 管理的接口与由指定 `ComPtr`管理的接口交换。
 
@@ -637,4 +637,3 @@ void Swap(
 
 *r*<br/>
 一个 `ComPtr`。
-

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685865"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076371"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution 类
 
@@ -62,9 +62,9 @@ public:
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*RealType* \
+*RealType*\
 浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
@@ -80,7 +80,7 @@ public:
 
 有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
-有关学生的 *t* 分布的详细信息，请参阅 Wolfram MathWorld 文章[学生的 t-分布](http://mathworld.wolfram.com/Studentst-Distribution.html)。
+有关学生的 *t* 分布的详细信息，请参阅 Wolfram MathWorld 文章[学生的 t-分布](https://mathworld.wolfram.com/Studentst-Distribution.html)。
 
 ## <a name="example"></a>示例
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：** \<随机 >
 
-**命名空间:** std
+**命名空间：** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 构造分布。
 
@@ -172,23 +172,23 @@ explicit student_t_distribution(RealType n = 1.0);
 explicit student_t_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *n*\
 `n` 分布参数。
 
-*parm* \
+*parm*\
 用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < n`
+**前提条件：** `0.0 < n`
 
 第一个构造函数将构造一个对象，该对象存储的 `n` 值保留值 *n*。
 
 第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 存储分布的所有参数。
 
@@ -203,20 +203,20 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *n*\
 `n` 分布参数。
 
-*right* \
+*right*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < n`
+**前提条件：** `0.0 < n`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<random>](../standard-library/random.md)

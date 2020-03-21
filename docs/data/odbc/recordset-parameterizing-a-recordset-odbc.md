@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaf95312b73b5165d64de7f9ded95db29d8909d0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707791"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075817"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>记录集：参数化记录集 (ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "65707791"
 
 - [如何在运行时将参数信息传递给记录集对象](#_core_passing_parameter_values_at_run_time)。
 
-##  <a name="_core_parameterized_recordsets"></a> 参数化记录集
+##  <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> 参数化记录集
 
 参数化记录集使你能够在运行时传递参数信息。 此操作将产生两个重要的影响：
 
@@ -40,13 +40,13 @@ ms.locfileid: "65707791"
 
 当你调用 `Open` 运行查询时，记录集将使用参数信息来完成其 SQL SELECT 语句。 你可以参数化任何记录集。
 
-##  <a name="_core_when_to_use_parameters"></a> 何时使用参数
+##  <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> 何时使用参数
 
 参数的典型用途包括：
 
 - 将运行时参数传递给预定义的查询。
 
-   若要将参数传递给存储过程，必须在调用 `Open` 时使用参数占位符指定完整的自定义 ODBC CALL 语句，从而替代记录集的默认 SQL 语句。 有关详细信息，请参阅类库参考中的 [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) 和 [SQL：自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) 以及 [记录集：声明预定义查询的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
+   若要将参数传递给存储过程，必须在调用  **时使用参数占位符指定完整的自定义 ODBC CALL 语句，从而替代记录集的默认 SQL 语句**`Open`。 有关详细信息，请参阅*类库参考*中的[CRecordset：： Open](../../mfc/reference/crecordset-class.md#open)和[SQL：自定义记录集的 SQL 语句（odbc）](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)和[记录集：为预定义查询声明一个类（odbc）](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
 
 - 使用不同的参数信息有效地执行大量再次查询。
 
@@ -75,25 +75,25 @@ ms.locfileid: "65707791"
                                        // for some drivers
     ```
 
-   有关如何正确针对筛选器字符串使用引号的讨论，请参阅[记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+   有关如何为筛选器字符串正确使用引号的讨论，请参阅[记录集：筛选记录（ODBC）](../../data/odbc/recordset-filtering-records-odbc.md)。
 
    每当再次查询新学生 ID 的记录集时，参数值都是不同的。
 
    > [!TIP]
-   > 使用参数比使用简单的筛选器更高效。 对于参数化记录集，数据库必须只处理一次 SQL SELECT 语句。 对于没有参数的已筛选的记录集，每次当你使用新筛选器值进行 `Requery` 时，SELECT 语句都必须被处理。
+   > 使用参数比使用简单的筛选器更高效。 对于参数化记录集，数据库必须只处理一次 SQL SELECT 语句。 对于没有参数的已筛选的记录集，每次当你使用新筛选器值进行  **时，SELECT 语句都必须被处理**`Requery`。
 
-有关筛选器的详细信息，请参阅[记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。
+有关筛选器的详细信息，请参阅[记录集：筛选记录（ODBC）](../../data/odbc/recordset-filtering-records-odbc.md)。
 
-##  <a name="_core_parameterizing_your_recordset_class"></a> 参数化记录集类
+##  <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> 参数化记录集类
 
 > [!NOTE]
-> 本部分适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用的是批量行提取，实现参数则是一个类似的过程。 有关详细信息，请参阅[记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本部分适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用的是批量行提取，实现参数则是一个类似的过程。 有关详细信息，请参阅[记录集：批量获取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 创建记录集类之前，请确定所需的参数、其数据类型以及记录集如何使用它们。
 
 #### <a name="to-parameterize-a-recordset-class"></a>参数化记录集类
 
-> [!NOTE] 
+> [!NOTE]
 > MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建此功能。
 
 1. 从“添加类”运行 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)以创建类。
@@ -117,7 +117,7 @@ ms.locfileid: "65707791"
 
    在向导生成的字段数据成员后面添加参数数据成员。 约定是将“Param”一词追加到每个用户定义的参数名称。
 
-1. 修改 .cpp 文件中的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成员函数定义。 为添加到类中的每个参数数据成员添加 RFX 函数调用。 有关编写 RFX 函数的信息，请参阅[记录字段交换：RFX 工作原理](../../data/odbc/record-field-exchange-how-rfx-works.md)。 通过单个调用将针对参数的 RFX 调用置于前面：
+1. 修改 .cpp 文件中的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成员函数定义。 为添加到类中的每个参数数据成员添加 RFX 函数调用。 有关编写 RFX 函数的信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 通过单个调用将针对参数的 RFX 调用置于前面：
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -138,7 +138,7 @@ ms.locfileid: "65707791"
 > [!TIP]
 > 最可能使用的字符串是为类的 [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) 数据成员指定的字符串（如果有），但某些 ODBC 驱动程序可能允许其他 SQL 子句中的参数。
 
-##  <a name="_core_passing_parameter_values_at_run_time"></a> 在运行时传递参数值
+##  <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> 在运行时传递参数值
 
 在调用 `Open`（针对新记录集对象）或 `Requery`（针对现有记录集对象）之前必须指定参数值。
 
@@ -176,7 +176,7 @@ if( !rsStudents.Requery( ) )
 > [!NOTE]
 >  如果需要，可以使用 [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull) 将参数数据成员的值设置为 Null。 同样可以使用 [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) 检查参数数据成员是否为 Null。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>

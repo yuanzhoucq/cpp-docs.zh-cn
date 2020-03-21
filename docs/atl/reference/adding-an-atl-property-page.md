@@ -6,21 +6,21 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 3e27d276e5500c1e32ca7b576b355f14f18a47f6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524617"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075263"
 ---
 # <a name="adding-an-atl-property-page"></a>添加 ATL 属性页
 
-> [!NOTE] 
+> [!NOTE]
 > ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
 若要将活动模板库 (ATL) 属性页添加到项目中，项目必须已创建为 ATL 应用程序或支持 ATL 的 MFC 应用程序。 可使用 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，也可以按照[将 ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)中的说明操作，为 MFC 应用程序实现 ATL 支持。
 
-若要为控件添加属性页，控件必须支持 [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) 接口。 默认情况下，在你使用 [ATL 控件向导](../../atl/reference/atl-control-wizard.md)[创建 ATL 控件](../../atl/reference/adding-an-atl-control.md)时，此接口位于控件类的派生列表中。
+若要为控件添加属性页，控件必须支持 [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) 接口。 默认情况下，在你使用 [ATL 控件向导](../../atl/reference/adding-an-atl-control.md)[创建 ATL 控件](../../atl/reference/atl-control-wizard.md)时，此接口位于控件类的派生列表中。
 
 > [!NOTE]
 > 如果控件类的派生列表中没有 [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)，你必须手动添加它。
@@ -35,7 +35,7 @@ ms.locfileid: "65524617"
 
 为控件创建属性页后，必须在属性映射中为控件提供 [PROP_PAGE](property-map-macros.md#prop_page) 条目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [属性页](../../atl/atl-com-property-pages.md)<br/>
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>

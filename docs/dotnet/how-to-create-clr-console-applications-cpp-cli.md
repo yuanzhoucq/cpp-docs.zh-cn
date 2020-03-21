@@ -5,12 +5,12 @@ helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 610efc8b0780422fc89e3bf9708ba488fe7d1f47
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387469"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080054"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>如何：创建 CLR 控制台应用程序 (C++/CLI)
 
@@ -22,7 +22,7 @@ ms.locfileid: "62387469"
 
 - 以下 .NET Framework 命名空间的参考信息：
 
-   - <xref:System.AppDomainManager>-包含基本类和基类，这些类定义常用的值和引用数据类型、 事件和事件处理程序、 接口、 属性和处理异常。
+   - <xref:System.AppDomainManager>-包含基本类和基类，这些类定义常用值和引用数据类型、事件和事件处理程序、接口、特性和处理异常。
 
    - mscorlib - 支持 .NET Framework 开发的程序集 DLL。
 
@@ -50,17 +50,16 @@ ms.locfileid: "62387469"
 
 ## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>创建公共语言运行时 (CLR) 控制台应用程序项目
 
-1. 在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。
+1. 在菜单栏上，选择“文件”、“新建”、“项目”。
 
 1. 在 **“新建项目”** 对话框中的 **“已安装的模块”** 窗口下，依次选择 **“Visual C++”** 节点、 **“CLR”** 节点和“控制台应用程序”模板。
 
-1. 在“名称”  框中，输入你的应用程序的唯一名称。
+1. 在“名称” 框中，输入你的应用程序的唯一名称。
 
    你可以指定其他项目和解决方案设置，但它们都不是必需的。
 
-1. 选择“确定”  按钮。
+1. 选择“确定”按钮。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CLR 项目](../build/reference/files-created-for-clr-projects.md)
-

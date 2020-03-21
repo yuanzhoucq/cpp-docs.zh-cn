@@ -2,12 +2,12 @@
 title: 在 Android 和 iOS 上生成 OpenGL ES 应用程序
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470075"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079660"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>在 Android 和 iOS 上生成 OpenGL ES 应用程序
 
@@ -109,7 +109,7 @@ ms.locfileid: "79470075"
 
    生成的 Android 本机活动应用和库项目将C++共享代码放入动态库中。 它包含与 Android 平台交互的 "胶水" 代码。 大多数应用代码位于库中。 清单、资源和生成说明位于打包项目中。 共享代码从 NativeActivity 项目中的 main.cpp 调用。 有关如何对 Android 本机活动进行编程的详细信息，请参阅 Android 开发人员 NDK [概念](https://developer.android.com/ndk/guides/concepts.html) 页。
 
-   Visual Studio 使用 Android NDK 生成 Android 本机活动项目。 它使用 Clang 作为平台工具集。 Visual Studio 会将该项目的属性映射到目标平台上的编译、链接和调试命令。 有关详细信息，打开 MyOpenGLESApp.Android.NativeActivity 项目的“属性页” 对话框。 有关命令行开关的详细信息，请参阅 [Clang 编译器用户手册](http://clang.llvm.org/docs/UsersManual.html)。
+   Visual Studio 使用 Android NDK 生成 Android 本机活动项目。 它使用 Clang 作为平台工具集。 Visual Studio 会将该项目的属性映射到目标平台上的编译、链接和调试命令。 有关详细信息，打开 MyOpenGLESApp.Android.NativeActivity 项目的“属性页” 对话框。 有关命令行开关的详细信息，请参阅 [Clang 编译器用户手册](https://clang.llvm.org/docs/UsersManual.html)。
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>在 iOS 设备上生成并运行 iOS 应用
 

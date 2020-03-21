@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3223543dfa6c1b5b45fef2780cd11b558eab84
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209225"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078966"
 ---
 # <a name="comptr-class"></a>com::ptr 类
 
@@ -34,7 +34,7 @@ template<class _interface_type>
 ref class ptr;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_interface_type*<br/>
 COM 接口。
@@ -43,9 +43,9 @@ COM 接口。
 
 `com::ptr` 还可用作局部函数变量，用来简化各种 COM 任务和自动执行生成期管理。
 
-一个`com::ptr`不能直接用作函数参数; 使用[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)或[对象句柄运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)相反。
+不能将 `com::ptr` 作为函数参数直接使用;请改用[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)或[对象运算符（^）的句柄](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
 
-一个`com::ptr`不能直接从函数返回; 请改用句柄。
+不能直接从函数返回 `com::ptr`;请改用句柄。
 
 ## <a name="example"></a>示例
 
@@ -167,40 +167,38 @@ int main() {
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述| 
-|---------|-----------| 
-|[ptr::ptr](#ptr)|构造`com::ptr`要包装的 COM 对象。| 
-|[ptr::~ptr](#tilde-ptr)|因`com::ptr`。| 
+|名称|说明|
+|---------|-----------|
+|[ptr::ptr](#ptr)|构造用于包装 COM 对象的 `com::ptr`。|
+|[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
-|---------|-----------| 
-|[ptr::Attach](#attach)|将附加到的 COM 对象`com::ptr`。| 
-|[ptr::CreateInstance](#createInstance)|创建中的 COM 对象的实例`com::ptr`。| 
-|[ptr::Detach](#detach)|放弃 COM 对象，返回一个指向该对象的所有权。| 
-|[ptr::GetInterface](#getInterface)|创建中的 COM 对象的实例`com::ptr`。| 
-|[ptr::QueryInterface](#queryInterface)|查询接口拥有的 COM 对象，并将该结果附加到另一个`com::ptr`。| 
-|[ptr::Release](#release)|释放 COM 对象上所有拥有的引用。|
+|名称|说明|
+|---------|-----------|
+|[ptr::Attach](#attach)|将 COM 对象附加到 `com::ptr`。|
+|[ptr::CreateInstance](#createInstance)|在 `com::ptr`中创建 COM 对象的实例。|
+|[ptr::Detach](#detach)|提供 COM 对象的所有权，并返回指向对象的指针。|
+|[ptr::GetInterface](#getInterface)|在 `com::ptr`中创建 COM 对象的实例。|
+|[ptr::QueryInterface](#queryInterface)|查询接口的所有 COM 对象并将结果附加到另一个 `com::ptr`。|
+|[ptr::Release](#release)|释放对 COM 对象的所有拥有的引用。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
-|---------|-----------| 
-|[ptr::operator-&gt;](#operator-arrow)|成员访问运算符，用于在拥有的 COM 对象上调用方法。| 
-|[ptr::operator=](#operator-assign)|将附加到的 COM 对象`com::ptr`。| 
-|[ptr::operator&nbsp;bool](#operator-bool)|使用运算符`com::ptr`条件表达式中。| 
-|[ptr::operator!](#operator-logical-not)|若要确定是否拥有的 COM 对象无效的运算符。| 
+|名称|说明|
+|---------|-----------|
+|[ptr：： operator-&gt;](#operator-arrow)|成员访问运算符，用于对拥有的 COM 对象调用方法。|
+|[ptr::operator=](#operator-assign)|将 COM 对象附加到 `com::ptr`。|
+|[ptr：： operator&nbsp;bool](#operator-bool)|用于在条件表达式中使用 `com::ptr` 的运算符。|
+|[ptr::operator!](#operator-logical-not)|运算符来确定拥有的 COM 对象是否无效。|
 
 ## <a name="requirements"></a>要求
 
-**标头文件** \<msclr\com\ptr.h >
+**标头文件**\<msclr\com\ptr.h >
 
-**Namespace** msclr:: com
+**命名空间**msclr：： com
 
- 
-
-## <a name="ptr"></a>ptr::ptr
+## <a name="ptrptr"></a><a name="ptr"></a>ptr：:p tr
 
 返回指向拥有的 COM 对象的指针。
 
@@ -211,22 +209,22 @@ ptr(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *P*<br/>
 COM 接口指针。
 
 ### <a name="remarks"></a>备注
 
-无参数构造函数分配`nullptr`对基础对象句柄。 以后调用`com::ptr`将验证内部对象，并以静默方式失败，直到创建或附加对象。
+无参数构造函数将 `nullptr` 分配给基础对象句柄。 以后调用 `com::ptr` 将验证内部对象，并在创建或附加对象之前以无提示方式失败。
 
-单参数构造函数中添加对 COM 对象的引用，但不会释放调用方的引用，以便调用方必须调用`Release`上要真正实现控件的 COM 对象。 当`com::ptr`的调用析构函数，它将自动释放 COM 对象上的引用。
+单自变量构造函数会添加对 COM 对象的引用，但不会释放调用方的引用，因此调用方必须对 COM 对象调用 `Release` 才能真正放弃控制权。 调用 `com::ptr`的析构函数时，它会自动释放其对 COM 对象的引用。
 
-传递`NULL`给此构造函数是与调用无参数版本相同。
+将 `NULL` 传递到此构造函数与调用无参数版本相同。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 它演示了这两个版本的构造函数的使用情况。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 它演示了这两种版本的构造函数的使用。
 
 ```cpp
 // comptr_ptr.cpp
@@ -287,9 +285,9 @@ int main() {
 }
 ```
 
-## <a name="tilde-ptr"></a>ptr::~ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr：： ~ ptr
 
-因`com::ptr`。
+Destructs `com::ptr`。
 
 ```cpp
 ~ptr();
@@ -297,11 +295,11 @@ int main() {
 
 ### <a name="remarks"></a>备注
 
-析构，`com::ptr`释放它拥有其 COM 对象的所有引用。 假定没有其他一直保持到 COM 对象的引用，将删除的 COM 对象并释放其内存。
+销毁时，`com::ptr` 会释放它所拥有的对其 COM 对象的所有引用。 假设 COM 对象没有其他引用，COM 对象将被删除并释放其内存。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  在`main`函数，这两个`XmlDocument`它们超出范围时，将调用对象的析构函数`try`块中，从而导致基础`com::ptr`正在调用析构函数释放 COM 到所有拥有的引用对象。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  在 `main` 函数中，当两个 `XmlDocument` 对象的析构函数超出了 `try` 块的范围时，将调用这两个对象的析构函数，从而导致调用基础 `com::ptr` 析构函数，同时释放对 COM 对象的所有引用。
 
 ```cpp
 // comptr_dtor.cpp
@@ -362,9 +360,9 @@ int main() {
 }
 ```
 
-## <a name="attach"></a>ptr::Attach
+## <a name="ptrattach"></a><a name="attach"></a>ptr：： Attach
 
-将附加到的 COM 对象`com::ptr`。
+将 COM 对象附加到 `com::ptr`。
 
 ```cpp
 void Attach(
@@ -372,24 +370,24 @@ void Attach(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 要附加的 COM 接口指针。
 
-### <a name="exceptions"></a>Exceptions
+### <a name="exceptions"></a>例外
 
-如果`com::ptr`已拥有对 COM 对象的引用`Attach`引发<xref:System.InvalidOperationException>。
+如果 `com::ptr` 已拥有对 COM 对象的引用，`Attach` 将 <xref:System.InvalidOperationException>引发。
 
 ### <a name="remarks"></a>备注
 
-调用`Attach`引用 COM 对象，但不会释放对它的调用方的引用。
+对 `Attach` 的调用引用 COM 对象，但不释放调用方对它的引用。
 
-传递`NULL`到`Attach`不导致正在采取任何操作。
+将 `NULL` 传递给 `Attach` 会导致不执行任何操作。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `ReplaceDocument`成员函数的第一个调用`Release`任何以前拥有对象，然后调用`Attach`要附加新的文档对象。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `ReplaceDocument` 成员函数首先调用任何之前拥有的对象上的 `Release`，然后调用 `Attach` 以附加新的文档对象。
 
 ```cpp
 // comptr_attach.cpp
@@ -463,9 +461,9 @@ int main() {
 }
 ```
 
-## <a name="createInstance"></a>ptr::CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr：： CreateInstance
 
-创建中的 COM 对象的实例`com::ptr`。
+在 `com::ptr`中创建 COM 对象的实例。
 
 ```cpp
 void CreateInstance(
@@ -506,33 +504,33 @@ void CreateInstance(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *progid*<br/>
 `ProgID` 字符串。
 
 *pouter*<br/>
-指向聚合对象的 IUnknown 接口 (控制 IUnknown)。 如果`pouter`未指定，`NULL`使用。
+指向聚合对象的 IUnknown 接口的指针（控制 IUnknown）。 如果未指定 `pouter`，则使用 `NULL`。
 
 *cls_context*<br/>
-管理新创建的对象的代码将在其中运行的上下文。 值取自`CLSCTX`枚举。 如果`cls_context`未指定，使用 CLSCTX_ALL 的值。
+用于管理新创建的对象的代码将运行的上下文。 值取自 `CLSCTX` 枚举。 如果未指定 `cls_context`，则使用 CLSCTX_ALL 值。
 
 *rclsid*<br/>
-`CLSID` 关联的数据和将用于创建对象的代码。
+与将用于创建对象的数据和代码关联的 `CLSID`。
 
-### <a name="exceptions"></a>Exceptions
+### <a name="exceptions"></a>例外
 
-如果`com::ptr`已拥有对 COM 对象的引用`CreateInstance`引发<xref:System.InvalidOperationException>。
+如果 `com::ptr` 已拥有对 COM 对象的引用，`CreateInstance` 将 <xref:System.InvalidOperationException>引发。
 
-此函数将调用`CoCreateInstance`，并使用<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>要转换的任何错误`HRESULT`到相应的异常。
+此函数调用 `CoCreateInstance`，并使用 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> 将任何错误 `HRESULT` 转换为相应的异常。
 
 ### <a name="remarks"></a>备注
 
-`CreateInstance` 使用`CoCreateInstance`创建标识从 ProgID 或 CLSID 的指定对象的新实例。 `com::ptr`引用新创建的对象并将自动释放在析构时所有拥有的引用。
+`CreateInstance` 使用 `CoCreateInstance` 来创建指定对象的新实例，该实例由 ProgID 或 CLSID 标识。 `com::ptr` 引用新创建的对象，并将在销毁时自动释放所有拥有的引用。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 类构造函数使用两种不同形式的`CreateInstance`可以根据 ProgID 或 CLSID 加上 CLSCTX 创建文档对象。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 类构造函数使用两种不同形式的 `CreateInstance` 从 ProgID 或 CLSID 以及 CLSCTX 创建文档对象。
 
 ```cpp
 // comptr_createinstance.cpp
@@ -581,9 +579,9 @@ int main() {
 }
 ```
 
-## <a name="detach"></a>ptr::Detach
+## <a name="ptrdetach"></a><a name="detach"></a>ptr：:D etach
 
-放弃 COM 对象，返回一个指向该对象的所有权。
+提供 COM 对象的所有权，并返回指向对象的指针。
 
 ```cpp
 _interface_type * Detach();
@@ -593,19 +591,19 @@ _interface_type * Detach();
 
 指向 COM 对象的指针。
 
-如果没有对象为所拥有，则返回 NULL。
+如果没有对象拥有，则返回 NULL。
 
-### <a name="exceptions"></a>Exceptions
+### <a name="exceptions"></a>例外
 
-在内部，`QueryInterface`拥有的 COM 对象和任何错误上调用`HRESULT`转换为通过异常<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+在内部，将在拥有的 COM 对象上调用 `QueryInterface`，并通过 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>将任何错误 `HRESULT` 转换为异常。
 
 ### <a name="remarks"></a>备注
 
-`Detach` 首先添加对代表调用方的 COM 对象的引用，然后释放所拥有的所有引用`com::ptr`。  最终，调用方必须释放返回的对象，以将其销毁。
+`Detach` 首先代表调用方添加对 COM 对象的引用，然后释放 `com::ptr`拥有的所有引用。  调用方必须最终释放返回的对象以销毁它。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `DetachDocument`成员函数调用`Detach`干脆放弃清理 COM 对象的所有权并返回一个指针，调用方。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `DetachDocument` 成员函数调用 `Detach` 以放弃 COM 对象的所有权，并返回指向调用方的指针。
 
 ```cpp
 // comptr_detach.cpp
@@ -686,7 +684,7 @@ int main() {
 }
 ```
 
-## <a name="getInterface"></a>ptr::GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr：： GetInterface
 
 返回指向拥有的 COM 对象的指针。
 
@@ -698,17 +696,17 @@ _interface_type * GetInterface();
 
 指向拥有的 COM 对象的指针。
 
-### <a name="exceptions"></a>Exceptions
+### <a name="exceptions"></a>例外
 
-在内部，`QueryInterface`拥有的 COM 对象和任何错误上调用`HRESULT`转换为通过异常<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+在内部，将在拥有的 COM 对象上调用 `QueryInterface`，并通过 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>将任何错误 `HRESULT` 转换为异常。
 
 ### <a name="remarks"></a>备注
 
-`com::ptr`代表调用方的添加对 COM 对象的引用，并同样将它自己的引用保持对 COM 对象。 最终，调用方必须释放对返回的对象的引用，或将永远不会被销毁。
+`com::ptr` 代表调用方添加对 COM 对象的引用，并在 COM 对象中保留其自己的引用。 调用方必须最终释放返回的对象上的引用，否则它将不会被销毁。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `GetDocument`成员函数使用`GetInterface`以返回指向 COM 对象的指针。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `GetDocument` 成员函数使用 `GetInterface` 返回指向 COM 对象的指针。
 
 ```cpp
 // comptr_getinterface.cpp
@@ -828,9 +826,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="queryInterface"></a>ptr::QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr：： QueryInterface
 
-查询接口拥有的 COM 对象，并将该结果附加到另一个`com::ptr`。
+查询接口的所有 COM 对象并将结果附加到另一个 `com::ptr`。
 
 ```cpp
 template<class _other_type>
@@ -839,22 +837,22 @@ void QueryInterface(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *other*<br/>
-`com::ptr` ，将获取接口。
+将获取接口的 `com::ptr`。
 
-### <a name="exceptions"></a>Exceptions
+### <a name="exceptions"></a>例外
 
-在内部，`QueryInterface`拥有的 COM 对象和任何错误上调用`HRESULT`转换为通过异常<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+在内部，将在拥有的 COM 对象上调用 `QueryInterface`，并通过 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>将任何错误 `HRESULT` 转换为异常。
 
 ### <a name="remarks"></a>备注
 
-使用此方法创建归当前包装的 COM 对象的不同接口的 COM 包装器。 此方法调用`QueryInterface`通过拥有的 COM 对象，以请求指向特定的 COM 接口的对象，并将返回的接口指针附加到传入的`com::ptr`。
+使用此方法为当前包装所拥有的 COM 对象的另一个接口创建 COM 包装。 此方法通过拥有的 COM 对象调用 `QueryInterface`，以请求指向 COM 对象的特定接口的指针，并将返回的接口指针附加到传入的 `com::ptr`中。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `WriteTopLevelNode`成员函数使用`QueryInterface`以填充本地`com::ptr`与`IXMLDOMNode`，然后将传递`com::ptr`（通过跟踪引用） 的私有成员函数向控制台写入节点的名称和文本属性。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `WriteTopLevelNode` 成员函数使用 `QueryInterface` 来使用 `IXMLDOMNode` 填充本地 `com::ptr`，然后将 `com::ptr` （通过跟踪引用）传递给向控制台写入节点的 "名称" 和 "文本" 属性的私有成员函数。
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -959,9 +957,9 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="release"></a>ptr::Release
+## <a name="ptrrelease"></a><a name="release"></a>ptr：： Release
 
-释放 COM 对象上所有拥有的引用。
+释放对 COM 对象的所有拥有的引用。
 
 ```cpp
 void Release();
@@ -969,11 +967,11 @@ void Release();
 
 ### <a name="remarks"></a>备注
 
-调用此函数释放 COM 对象上所有拥有的引用和设置的内部句柄的 COM 对象`nullptr`。  如果不存在任何其他引用 COM 对象，它将被销毁。
+调用此函数将释放对 COM 对象的所有拥有的引用并将该 COM 对象的内部句柄设置为 `nullptr`。  如果 COM 对象上不存在任何其他引用，则它将被销毁。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `ReplaceDocument`成员函数使用`Release`附加新文档之前释放任何以前的文档对象。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `ReplaceDocument` 成员函数使用 `Release` 在附加新文档之前释放任何以前的文档对象。
 
 ```cpp
 // comptr_release.cpp
@@ -1047,9 +1045,9 @@ int main() {
 }
 ```
 
-## <a name="operator-arrow"></a>ptr::operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr：： operator-&gt;
 
-成员访问运算符，用于在拥有的 COM 对象上调用方法。
+成员访问运算符，用于对拥有的 COM 对象调用方法。
 
 ```cpp
 _detail::smart_com_ptr<_interface_type> operator->();
@@ -1057,19 +1055,19 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 ### <a name="return-value"></a>返回值
 
-一个`smart_com_ptr`对 COM 对象。
+COM 对象的 `smart_com_ptr`。
 
-### <a name="exceptions"></a>Exceptions
+### <a name="exceptions"></a>例外
 
-在内部，`QueryInterface`拥有的 COM 对象和任何错误上调用`HRESULT`转换为通过异常<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。
+在内部，将在拥有的 COM 对象上调用 `QueryInterface`，并通过 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>将任何错误 `HRESULT` 转换为异常。
 
 ### <a name="remarks"></a>备注
 
-此运算符，可调用拥有的 COM 对象的方法。 它将返回一个临时`smart_com_ptr`用于自动处理其自身`AddRef`和`Release`。
+此运算符允许调用拥有的 COM 对象的方法。 它将返回一个自动处理其自身 `AddRef` 和 `Release`的临时 `smart_com_ptr`。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `WriteDocument`函数使用`operator->`调用`get_firstChild`文档对象的成员。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `WriteDocument` 函数使用 `operator->` 来调用文档对象的 `get_firstChild` 成员。
 
 ```cpp
 // comptr_op_member.cpp
@@ -1189,9 +1187,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="operator-assign"></a>ptr::operator=
+## <a name="ptroperator"></a><a name="operator-assign"></a>ptr：： operator =
 
-将附加到的 COM 对象`com::ptr`。
+将 COM 对象附加到 `com::ptr`。
 
 ```cpp
 ptr<_interface_type> % operator=(
@@ -1199,28 +1197,28 @@ ptr<_interface_type> % operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 要附加的 COM 接口指针。
 
 ### <a name="return-value"></a>返回值
 
-跟踪引用上的`com::ptr`。
+`com::ptr`上的跟踪引用。
 
-### <a name="exceptions"></a>Exceptions
+### <a name="exceptions"></a>例外
 
-如果`com::ptr`已拥有对 COM 对象的引用`operator=`引发<xref:System.InvalidOperationException>。
+如果 `com::ptr` 已拥有对 COM 对象的引用，`operator=` 将 <xref:System.InvalidOperationException>引发。
 
 ### <a name="remarks"></a>备注
 
-分配到的 COM 对象`com::ptr`引用 COM 对象，但不会释放对它的调用方的引用。
+将 COM 对象分配到 `com::ptr` 引用 COM 对象，但不释放调用方对它的引用。
 
-此运算符具有相同的效果`Attach`。
+此运算符与 `Attach`具有相同的效果。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `ReplaceDocument`成员函数的第一个调用`Release`任何以前拥有对象，然后使用`operator=`要附加新的文档对象。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `ReplaceDocument` 成员函数首先调用任何以前拥有的对象上的 `Release`，然后使用 `operator=` 附加新的文档对象。
 
 ```cpp
 // comptr_op_assign.cpp
@@ -1294,9 +1292,9 @@ int main() {
 }
 ```
 
-## <a name="operator-bool"></a> ptr::operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr：： operator bool
 
-使用运算符`com::ptr`条件表达式中。
+用于在条件表达式中使用 `com::ptr` 的运算符。
 
 ```cpp
 operator bool();
@@ -1304,17 +1302,17 @@ operator bool();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果拥有的 COM 对象有效，则为`false`否则为。
+`true` 如果拥有的 COM 对象有效，则为; 否则为。否则 `false`。
 
 ### <a name="remarks"></a>备注
 
-拥有的 COM 对象是如果它不是有效`nullptr`。
+如果未 `nullptr`，则拥有的 COM 对象是有效的。
 
-此运算符将转换为`_detail_class::_safe_bool`这是比更安全`bool`因为不能将它转换为整型类型。
+此运算符转换为 `_detail_class::_safe_bool` 比 `bool` 安全，因为它不能转换为整型类型。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `CreateInstance`成员函数使用`operator bool`后创建新的文档对象，以确定它是否有效以及它是否将写入控制台。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `CreateInstance` 成员函数在创建新文档对象后使用 `operator bool` 来确定它是否有效并写入控制台（如果是）。
 
 ```cpp
 // comptr_op_bool.cpp
@@ -1365,9 +1363,9 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="operator-logical-not"></a>ptr::operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr：： operator！
 
-若要确定是否拥有的 COM 对象无效的运算符。
+运算符来确定拥有的 COM 对象是否无效。
 
 ```cpp
 bool operator!();
@@ -1375,15 +1373,15 @@ bool operator!();
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果拥有的 COM 对象无效;`false`否则为。
+如果拥有的 COM 对象无效，则 `true`;否则 `false`。
 
 ### <a name="remarks"></a>备注
 
-拥有的 COM 对象是如果它不是有效`nullptr`。
+如果未 `nullptr`，则拥有的 COM 对象是有效的。
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `CreateInstance`成员函数使用`operator!`以确定文档对象已有所有者，以及无效的对象是否仅创建一个新实例。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `CreateInstance` 成员函数使用 `operator!` 来确定是否已拥有文档对象，如果对象无效，则仅创建一个新的实例。
 
 ```cpp
 // comptr_op_not.cpp

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446764"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076405"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 运算符
 
-使用这些运算符来比较两个 string_view 对象或 string_view 以及为其提供了隐式转换的其他某个字符串对象（例如[std：： string](basic-string-class.md)或**char\*** ）。 
+使用这些运算符来比较两个 string_view 对象或 string_view 以及为其提供了隐式转换的其他某个字符串对象（例如[std：： string](basic-string-class.md)或**char\*** ）。
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ ms.locfileid: "79446764"
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|[运算符 "" sv](#op_sv)|
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试运算符左侧的对象是否不等于右侧的对象。
 
@@ -55,7 +55,7 @@ bool operator!=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -69,11 +69,11 @@ bool operator!=(
 
 ### <a name="remarks"></a>备注
 
-从*convertible_string_type*到另一侧的 string_view 必须存在隐式转换。 
+从*convertible_string_type*到另一侧的 string_view 必须存在隐式转换。
 
 比较基于对字符序列进行成对字典比较。 如果它们具有相同数量的元素，并且元素都相等，则这两个对象相等。 否则，它们不相等。
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的对象是否等于右侧的对象。
 
@@ -94,7 +94,7 @@ bool operator==(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -108,12 +108,11 @@ bool operator==(
 
 ### <a name="remarks"></a>备注
 
-从*convertible_string_type*到另一侧的 string_view 必须存在隐式转换。 
+从*convertible_string_type*到另一侧的 string_view 必须存在隐式转换。
 
 比较基于对字符序列进行成对字典比较。 如果它们具有相同数量的元素，并且元素都相等，则这两个对象相等。
 
-
-## <a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 运算符&lt;
 
 测试运算符左侧的对象是否小于右端的对象 sidestring_view
 
@@ -134,7 +133,7 @@ bool operator<(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -148,7 +147,7 @@ bool operator<(
 
 ### <a name="remarks"></a>备注
 
-从*convertible_string_type*到另一侧的 string_view 必须存在隐式转换。 
+从*convertible_string_type*到另一侧的 string_view 必须存在隐式转换。
 
 比较基于对字符序列进行成对字典比较。 当遇到第一对不相等的字符时，将返回该比较的结果。 如果未找到不相等的字符，但一个序列较短，则较短的序列小于较长的序列。 换句话说，"cat" 小于 "猫"。
 
@@ -174,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的对象是否小于或等于右侧的对象。
 
@@ -195,7 +194,7 @@ bool operator<=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -211,7 +210,7 @@ bool operator<=(
 
 请参阅[操作员&lt;](#op_lt)。
 
-## <a name="op_lt_lt"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
 
 将 string_view 写入到输出流中。
 
@@ -221,7 +220,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& Ostr, const basic_string_view<CharType, Traits> Str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ostr*\
 要写入的输出流。
@@ -237,7 +236,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 使用此运算符将 string_view 的内容插入到输出流中，例如使用[std：： cout](iostream.md#cout)。
 
-## <a name="op_gt"></a> 运算符&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 运算符&gt;
 
 测试运算符左侧的对象是否大于右侧的对象。
 
@@ -258,7 +257,7 @@ bool operator>(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -274,7 +273,7 @@ bool operator>(
 
 请参阅[操作员&lt;](#op_lt)。
 
-## <a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的对象是否大于或等于右侧的对象。
 
@@ -295,7 +294,7 @@ bool operator>=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -311,9 +310,9 @@ bool operator>=(
 
 请参阅[操作员&lt;](#op_lt)。
 
-## <a name="op_sv"></a>运算符 "" sv （string_view 文本）
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>运算符 "" sv （string_view 文本）
 
-从字符串文本构造 string_view。 需要命名空间 `std::literals::string_view_literals`。 
+从字符串文本构造 string_view。 需要命名空间 `std::literals::string_view_literals`。
 
 ### <a name="example"></a>示例
 

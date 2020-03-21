@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051529"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078245"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>演练：在命令行上编译 C 程序
 
@@ -21,7 +21,7 @@ Visual C++包含一个 C 编译器，可用于创建从基本控制台程序到�
 
 本演练演示如何使用文本编辑器创建一个基本的 "Hello，World" C 程序，然后在命令行上对其进行编译。 如果要在命令行C++上操作，请参阅[演练：在命令行上编译C++本机程序](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。 如果你想要尝试使用 visual studio ide 而不是使用命令行，请参阅[演练：使用项目和解决方案（C++）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 Visual Studio ide 进行C++桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必备条件
 
 若要完成本演练，你必须已安装 Visual Studio 和 visual Studio 的C++可选可视组件或生成工具。
 
@@ -63,9 +63,8 @@ Visual studio 版本的 visual studio 生成工具仅安装了生成 C 和C++程
 如果在 Windows 10 上安装C++了 Microsoft Visual build Tools 2015，请打开 "**开始**" 菜单，然后向下滚动并打开 "  **C++可视化生成工具**" 文件夹。 选择 **" C++ Visual 2015 x86 本机工具命令提示**打开" 命令提示符 "窗口。
 
 如果运行的是其他版本的 Windows，请在 "开始" 菜单或 "开始" 页中查找包含 "开发人员命令提示" 快捷方式的 "Visual Studio tools" 文件夹。 你还可以使用 Windows search 函数搜索 "开发人员命令提示"，并选择与已安装的 Visual Studio 版本相匹配的工具。 使用快捷方式打开 "命令提示符" 窗口。
-   
-::: moniker-end
 
+::: moniker-end
 
 接下来，验证是否正确C++设置了 Visual developer 命令提示符。 在 "命令提示符" 窗口中，输入 `cl`，并验证输出如下所示：
 
@@ -183,9 +182,9 @@ C 和语言C++类似，但并不相同。 Microsoft C/C++编译器（MSVC）使�
 
 MSVC 兼容 ISO C99 标准，但不严格相容。 在大多数情况下，可移植的 C 代码将按预期方式进行编译和运行。 视觉C++对象不支持 ISO C11 中的大多数更改。 某些库函数和 POSIX 函数名称被 MSVC 弃用。 支持函数，但首选名称已更改。 有关详细信息，请参阅[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)和[编译器警告（等级3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [演练：创建标准 C++ 程序 (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
-[C# 语言参考](../c-language/c-language-reference.md)<br/>
+[C 语言参考](../c-language/c-language-reference.md)<br/>
 [项目和生成系统](projects-and-build-systems-cpp.md)<br/>
 [兼容性](../c-runtime-library/compatibility.md)

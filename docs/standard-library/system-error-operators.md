@@ -5,16 +5,16 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8631cae146a311f1890583900b564471d5a80958
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426173"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076263"
 ---
 # <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt; 运算符
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的对象是否等于右侧的对象。
 
@@ -45,7 +45,7 @@ bool operator==(const error_condition& left,
 
 该函数返回 `left.category() == right.category() && left.value() == right.value()`。
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试运算符左侧的对象是否不等于右侧的对象。
 
@@ -72,7 +72,7 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 该函数返回 `!(left == right)`。
 
-## <a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 运算符&lt;
 
 测试一个对象是否小于要比较的传入对象。
 
@@ -116,9 +116,9 @@ inline bool operator<(
 
 该函数测试错误顺序。
 
-## <a name="op_ostream"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_ostream"></a>操作员&lt;&lt;
 
 ```cpp
-template <class charT, class traits> 
+template <class charT, class traits>
     basic_ostream<charT, traits>& operator<<(basic_ostream<charT, traits>& os, const error_code& ec);
 ```

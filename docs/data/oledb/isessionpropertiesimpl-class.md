@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545701"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077715"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 类
 
@@ -28,7 +28,7 @@ ms.locfileid: "79545701"
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 

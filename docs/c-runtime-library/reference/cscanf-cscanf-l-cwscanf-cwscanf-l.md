@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778314"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079985"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 从控制台读取格式数据。 提供这些函数的更安全版本。请参阅 [_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)。
 
-> [!NOTE] 
+> [!NOTE]
 > 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列函数被声明为**内联**，并移到 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现*LNK2019* 。 有关详细信息，请[参阅C++ Visual change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 > [!IMPORTANT]
@@ -88,12 +88,12 @@ int _cwscanf_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*格式*<br/>
+format<br/>
 窗体控件字符串。
 
-*实际*<br/>
+argument<br/>
 可选参数。
 
 *locale*<br/>
@@ -109,7 +109,7 @@ int _cwscanf_l(
 
 此函数验证其参数。 如果 format 为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**EOF**。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -120,10 +120,10 @@ int _cwscanf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**_cscanf**、 **_cscanf_l**|\<conio.h>|
-|**_cwscanf**、 **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
+|**_cscanf**， **_cscanf_l**|\<conio.h>|
+|**_cwscanf**， **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
 
 有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

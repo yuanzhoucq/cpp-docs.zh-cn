@@ -47,14 +47,14 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927697"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076133"
 ---
-# <a name="midl-property-pages"></a>“MIDL”属性页
+# <a name="midl-property-pages"></a>MIDL 属性页
 
 MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL 文件。 使用它们来配置[MIDL 编译器](/windows/win32/midl/using-the-midl-compiler-2)。 有关如何以编程方式访问 C++ 项目的 MIDL 选项的信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> 对象。 另请参阅[常规 MIDL 命令行语法](/windows/win32/midl/general-midl-command-line-syntax)。
 
@@ -62,15 +62,15 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 ### <a name="preprocessor-definitions"></a>预处理器定义
 
-指定一个或多个定义, 包括 MIDL 宏 ([/D](/windows/win32/midl/-d))\[macros\]).
+指定一个或多个定义，包括 MIDL 宏（[/d](/windows/win32/midl/-d)）\[宏\]）。
 
 ### <a name="additional-include-directories"></a>附加包含目录
 
-指定要添加到包含路径（[/i](/windows/win32/midl/-i)\[路径\]）中的一个或多个目录。
+指定一个或多个要添加到包含路径中的目录（[/i](/windows/win32/midl/-i)\[路径\]）。
 
 ### <a name="additional-metadata-directories"></a>其他元数据目录
 
-指定包含 Windows Foundation 文件（[/metadata_dir](/windows/win32/midl/-metadata-dir) \[路径\]）的目录。
+指定包含 Windows Foundation WinMD 文件（[/metadata_dir](/windows/win32/midl/-metadata-dir) \[路径\]）的目录。
 
 ### <a name="enable-windows-runtime"></a>启用 Windows 运行时
 
@@ -88,7 +88,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 选择 MIDL 代码错误（[/w](/windows/win32/midl/-w)）的严格性。
 
-**方案**
+**选项**
 
 - **1**
 - **1**
@@ -108,7 +108,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 指定将用于编译所生成代码的 C 编译器的默认字符类型。 （[/char](/windows/win32/midl/-char)已签名 | 未签名 | ascii7）。
 
-**方案**
+**选项**
 
 - **签名**签名
 - **无**符号无符号
@@ -118,7 +118,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 指定目标环境（[/env](/windows/win32/midl/-env) arm32 | win32 | ia64 | x64）。
 
-**方案**
+**选项**
 
 - **未设置**-Win32
 - **Microsoft Windows 32 位**-Win32
@@ -137,7 +137,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 ### <a name="application-configuration-mode"></a>应用程序配置模式
 
-允许在 IDL 文件中选择 ACF 属性（[/app_config](/windows/win32/midl/-app-config)）。
+允许 IDL 文件中选定的 ACF 属性（[/app_config](/windows/win32/midl/-app-config)）。
 
 ### <a name="locale-id"></a>区域设置 ID
 
@@ -185,7 +185,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 仅生成客户端存根（stub）文件（[/client](/windows/win32/midl/-client) [stub | none]）。
 
-**方案**
+**选项**
 
 - **存根**-存根
 - **无**-无
@@ -194,7 +194,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 仅生成服务器存根（stub）文件（[/server](/windows/win32/midl/-server) [stub | none]）。
 
-**方案**
+**选项**
 
 - **存根**-存根
 - **无**-无
@@ -211,7 +211,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 指定类型库文件格式（[/oldtlb |/newtlb]）。
 
-**方案**
+**选项**
 
 - **NewFormat** -新格式
 - **OldFormat** -旧格式
@@ -220,7 +220,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 ### <a name="c-preprocess-options"></a>C 预处理选项
 
-指定要传递给 C 编译器预处理器（[/cpp_opt](/windows/win32/midl/-cpp-opt)开关）的开关。
+指定要传递给 C 编译器预处理器的开关（[/cpp_opt](/windows/win32/midl/-cpp-opt)交换机）。
 
 ### <a name="undefine-preprocessor-definitions"></a>取消定义预处理器定义
 
@@ -230,7 +230,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 选择错误检查选项（[/error all | none]）。
 
-**方案**
+**选项**
 
 - **EnableCustom** -所有
 - **全部**-所有
@@ -268,7 +268,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 指定目标系统中的结构的封装级别（/ZpN）。
 
-**方案**
+**选项**
 
 - **未设置**-未设置
 - **1 字节**-Zp1
@@ -283,6 +283,3 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 ### <a name="minimum-target-system"></a>最低目标系统
 
 设置最低目标系统（[/Target](/windows/win32/midl/-target) STRING）。
-
-
-

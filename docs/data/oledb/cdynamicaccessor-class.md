@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 08e36606ae5d8dc34b9e25dd7d8dbc6d606520da
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a2dcb946b4161c03fe34f02608cfb3dbbca21695
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546079"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075844"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 
@@ -674,7 +674,7 @@ bool SetValue(
    DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const CHAR * pColumnName,
    const ctype& data) throw( );

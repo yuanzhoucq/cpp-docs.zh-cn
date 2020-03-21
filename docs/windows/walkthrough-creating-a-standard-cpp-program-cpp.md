@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 9b2d1f3bf1a229a0590553369e37bc07f35ada33
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 381fa347a4ca2872ef0697d76a1e788c97e8a014
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627133"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075444"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>演练：创建标准C++程序（）C++
 
@@ -22,7 +22,7 @@ ms.locfileid: "73627133"
 > [!NOTE]
 > 如果需要符合C++语言标准的特定版本（例如 c + + 14 或 c + + 17），请使用 `/std:c++14` 或 `/std:c++17` 编译器选项。 （Visual Studio 2017 及更高版本。）
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必备条件
 
 若要完成本演练，你必须了解 C++ 语言的基础知识。
 
@@ -34,9 +34,9 @@ ms.locfileid: "73627133"
 
 ### <a name="to-create-a-c-project-in-visual-studio-2019"></a>在 Visual Studio C++ 2019 中创建项目
 
-1. 在主菜单中，选择“文件”>“新建”>“项目”，打开“创建新项目”对话框。
+1. 从主菜单中，选择 "**文件**" ">**新建**>**项目**" 打开 "新建**项目**" 对话框。
 
-1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。 
+1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。
 
 1. 从筛选的项目类型列表中，选择“控制台应用”，然后选择“下一步”。 在下一页中，输入项目的名称，并指定项目位置（如果需要）。
 
@@ -54,7 +54,7 @@ ms.locfileid: "73627133"
 
 1. 键入项目的名称。 默认情况下，包含项目的解决方案具有与项目相同的名称，但您可以键入不同的名称。 你还可以为项目键入不同的位置。
 
-1. 单击“确定”，创建项目。
+1. 单击“确定”以创建该项目 。
 
 ::: moniker-end
 
@@ -70,13 +70,13 @@ ms.locfileid: "73627133"
 
 1. 键入项目的名称。 默认情况下，包含项目的解决方案具有与项目相同的名称，但您可以键入不同的名称。 你还可以为项目键入不同的位置。
 
-1. 单击“确定”，创建项目。
+1. 单击“确定”以创建该项目 。
 
-1. 完成 " **Win32 应用程序向导**"。 
+1. 完成 " **Win32 应用程序向导**"。
 
-1. 单击 "**下一步**"，确保选中 "**控制台应用程序**"，并取消选中 "**预编译标头**" 框。 
+1. 单击 "**下一步**"，确保选中 "**控制台应用程序**"，并取消选中 "**预编译标头**" 框。
 
-1. 单击 **“完成”** 。
+1. 单击“完成”。
 
 ::: moniker-end
 
@@ -94,9 +94,9 @@ ms.locfileid: "73627133"
 
 1. 在编辑器中的文件中，键入使用C++ C++标准库的有效程序，或复制其中一个示例程序，然后将其粘贴到文件中。
 
-1. 保存该文件。
+1. 保存文件。
 
-1. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+1. 在“生成”菜单中，单击“生成解决方案”。
 
    "**输出**" 窗口显示有关编译进度的信息，例如，生成日志的位置和指示生成状态的消息。
 
@@ -109,7 +109,7 @@ ms.locfileid: "73627133"
 **Previous：** [视觉对象C++中的控制台应用程序](../windows/console-applications-in-visual-cpp.md)<br/>
 **下一步：** [演练：在C++命令行上编译本机程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e7aa4c0fc2a0acfe7b8df2f50f99bf44eb1ef456
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707987"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075925"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>记录集：创建和关闭记录集 (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建使用者。
 
 本主题适用于 MFC ODBC 类。
@@ -33,7 +33,7 @@ ms.locfileid: "65707987"
 
 - [何时以及如何关闭记录集对象](#_core_closing_a_recordset)。
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> 在运行时创建记录集
+##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> 在运行时创建记录集
 
 在程序中创建记录集对象之前，通常需要首先编写特定于应用程序的记录集类。 有关此预备步骤的详细信息，请参阅[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-调用 `Open` 后，使用对象的成员函数和数据成员来处理记录。 在某些情况下，你可能需要再次查询或刷新记录集来包含数据源上发生的更改。 有关详细信息，请参阅[记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
+调用 `Open` 后，使用对象的成员函数和数据成员来处理记录。 在某些情况下，你可能需要再次查询或刷新记录集来包含数据源上发生的更改。 有关详细信息，请参阅[记录集：重新查询记录集（ODBC）](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
 
 > [!TIP]
->  你在开发期间使用的连接字符串可能与最终用户所需的连接字符串不同。 有关在这方面对应用程序进行通用化的想法，请参阅[数据源：管理连接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)。
+>  你在开发期间使用的连接字符串可能与最终用户所需的连接字符串不同。 有关在这方面通用化应用程序的建议，请参阅[数据源：管理连接（ODBC）](../../data/odbc/data-source-managing-connections-odbc.md)。
 
-##  <a name="_core_setting_recordset_options"></a> 设置记录集选项
+##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> 设置记录集选项
 
 在你构造记录集对象之后但在调用 `Open` 来选择记录之前，你可能需要设置一些选项来控制记录集的行为。 对于所有记录集，你可以：
 
@@ -96,7 +96,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  若要影响记录选择，必须在调用 `Open` 成员函数之前设置这些选项。
 
-##  <a name="_core_closing_a_recordset"></a> 关闭记录集
+##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> 关闭记录集
 
 结束使用记录集后，必须对它进行处理，并解除它的内存分配。
 
@@ -110,7 +110,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 `Close` 释放记录集的 `HSTMT` 句柄。 它不会销毁 C++ 对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>

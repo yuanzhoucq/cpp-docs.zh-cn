@@ -11,16 +11,16 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706851"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075314"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
 
-> [!NOTE] 
+> [!NOTE]
 > ATL COM+ 1.0 组件向导、ATL OLE DB 使用者向导和 ATL Active Server Page 组件向导在 Visual Studio 2019 及更高版本中不可用。
 
 可以使用一个 ATL 代码向导将对象或控件添加到基于 ATL 或 MFC 的项目中。 对于添加的每个 COM 对象或控件，向导会生成 .cpp 和 .h 文件，以及基于脚本的注册表支持的 .rgs 文件。 Visual Studio 中提供了以下 ATL 代码向导：
@@ -40,14 +40,14 @@ ms.locfileid: "65706851"
 
    随即将显示[“添加类”](../../ide/add-class-dialog-box.md)对话框。
 
-1. 在“类别”窗格中选择 ATL 文件夹后，从“模板”窗格中选择要插入的对象。 单击“打开”。 随即将显示所选对象的代码向导。
+1. 在“类别”窗格中选择 ATL 文件夹后，从“模板”窗格中选择要插入的对象。 单击 **“打开”** 。 随即将显示所选对象的代码向导。
 
    > [!NOTE]
    > 如果要将 ATL 对象添加到 MFC 项目，则必须向现有项目添加 ATL 支持。 可以按照[向 MFC 项目添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)中的说明来执行此操作。
 
    或者，如果尝试在未事先添加 ATL 支持的情况下将 ATL 对象添加到 MFC 项目，Visual Studio 会提示你指定是否要向项目添加 ATL 支持。 单击“是”向项目添加 ATL 支持并打开所选的 ATL 向导。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
 [Visual Studio 中的 C++ 项目类型](../../build/reference/visual-cpp-project-types.md)<br/>

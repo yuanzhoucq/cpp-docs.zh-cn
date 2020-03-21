@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422708"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078048"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
-各种 `printf` 和 `wprintf` 函数采用格式字符串和可选参数，并生成用于输出的格式化字符序列。 格式字符串包含零个或多个指令，这些指令是用于输出的文本字符或描述如何在输出中设置参数格式的已编码的转换规范。 本文介绍用于对格式字符串中的转换规范进行编码的语法。 有关这些函数的列表，请参阅[流 I/O](../c-runtime-library/stream-i-o.md)。 
+各种 `printf` 和 `wprintf` 函数采用格式字符串和可选参数，并生成用于输出的格式化字符序列。 格式字符串包含零个或多个指令，这些指令是用于输出的文本字符或描述如何在输出中设置参数格式的已编码的转换规范。 本文介绍用于对格式字符串中的转换规范进行编码的语法。 有关这些函数的列表，请参阅[流 I/O](../c-runtime-library/stream-i-o.md)。
 
 一个转换规范由以下形式的可选和必需字段组成：
 
@@ -39,7 +39,7 @@ ms.locfileid: "79422708"
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列函数被声明为**内联**，并移到 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现*LNK2019* 。 有关详细信息，请[参阅C++ Visual change history 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 ## <a name="type-conversion-specifier"></a>类型转换说明符

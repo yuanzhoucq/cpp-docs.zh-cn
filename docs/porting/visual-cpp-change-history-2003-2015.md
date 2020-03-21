@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422678"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076850"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -36,9 +36,9 @@ ms.locfileid: "79422678"
 
 - [并发运行时重大更改](#BK_ConcRT)
 
-## <a name="VC_2015"></a>Visual Studio 2015 符合性更改
+## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a>Visual Studio 2015 符合性更改
 
-###  <a name="BK_CRT"></a>C 运行时库 (CRT)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>C 运行时库 (CRT)
 
 #### <a name="general-changes"></a>常规更改
 
@@ -78,7 +78,7 @@ ms.locfileid: "79422678"
 
 - 浮点一致性
 
-   对数学库所做的许多更改都用以使特例输入（如 NaN 和无穷大）更符合 IEEE-754 和 C11 附录 F 规范。 例如，在早期版本的库中通常被视为错误的 quiet NaN 输入已不再被视为错误。 请参阅 [IEEE 754 标准](https://standards.ieee.org/standard/754-2008.html) 和 [C11 标准](http://www.iso-9899.info/wiki/The_Standard)的附录 F。
+   对数学库所做的许多更改都用以使特例输入（如 NaN 和无穷大）更符合 IEEE-754 和 C11 附录 F 规范。 例如，在早期版本的库中通常被视为错误的 quiet NaN 输入已不再被视为错误。 请参阅 [IEEE 754 标准](https://standards.ieee.org/standard/754-2008.html) 和 [C11 标准](https://www.iso.org/standard/57853.html)的附录 F。
 
    这些更改不会导致编译时错误，但可能会根据标准使程序以不同的方式更准确地运行。
 
@@ -106,7 +106,7 @@ ms.locfileid: "79422678"
 
    编译 C++ 代码时，[va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 现在会在编译时验证传递给它的参数是否为引用类型。 C++ 标准禁止引用类型的参数。
 
-#### <a name="stdio_and_conio"></a>\<stdio.h > 和 \<conio.h> >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio.h > 和 \<conio.h> >
 
 - **Printf 和 scanf 系列函数现在采用内联方式进行定义。**
 
@@ -303,7 +303,7 @@ ms.locfileid: "79422678"
 
    现在，CLOCKS_PER_SEC 宏根据 C 语言要求扩展为整数类型 `clock_t`。
 
-####  <a name="BK_STL"></a>C++ 标准库
+####  <a name="c-standard-library"></a><a name="BK_STL"></a>C++ 标准库
 
 为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 的 1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或早期版本的混合。
 
@@ -385,7 +385,7 @@ ms.locfileid: "79422678"
 
    删除了非标准的 `launch::any` 和 `launch::sync` 策略。 相反，对于 `launch::any`，使用 `launch:async | launch:deferred`。 对于 `launch::sync`，使用 `launch::deferred`。 请参阅 [launch 枚举](../standard-library/future-enums.md#launch)。
 
-####  <a name="BK_MFC"></a>MFC 和 ATL
+####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a>MFC 和 ATL
 
 - **Microsoft 基础类 (MFC)**
 
@@ -393,7 +393,7 @@ ms.locfileid: "79422678"
 
    Visual C++ 可再发行组件包仍包含此库。
 
-####  <a name="BK_ConcRT"></a>并发运行时
+####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>并发运行时
 
 - 与 concurrency::Context::Yield 冲突的 Windows.h 中的 Yield 宏
 
@@ -421,7 +421,7 @@ ms.locfileid: "79422678"
 
 - [更新 3 中的符合性改进](#VS_Update3)
 
-###  <a name="VS_RTM"></a>Visual Studio 2015 的符合性改进
+###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Visual Studio 2015 的符合性改进
 
 - /Zc:forScope- 选项
 
@@ -658,11 +658,11 @@ ms.locfileid: "79422678"
     enum class my_type : size_t {};
     ```
 
-   然后，更改对 placement new 和 placement delete 的定义，以使用此类型作为第二个参数（而不是 `size_t`）。 你还需要更新对 placement new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新 new 和 delete 的定义以强制转换回整数类型。 你无需为此使用枚举；具有 `size_t` 成员的类类型也将起作用。
+   然后，更改对 placement new 和 placement delete 的定义，以使用此类型作为第二个参数（而不是 `size_t`）。 还需要更新对位置 new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新**new**和**delete**的定义以强制转换回整数类型。 无需为此使用**枚举**;具有 `size_t` 成员的类类型也将起作用。
 
    你还可以将 placement new 全部消除作为备选解决方案。 如果你的代码使用 placement new 实现内存池，其中位置参数是分配或删除的对象的大小，则调整了大小的释放功能可能适合替换你自定义的内存池代码，且你可以去掉位置函数，仅使用自己两个参数的 delete 运算符（而不是位置函数）。
 
-   如果你不想立即更新代码，可通过编译器选项 `/Zc:sizedDealloc-` 还原到之前的行为。 如果使用此选项，则不存在两个参数的 delete 函数，并且也不会导致与 placement delete 运算符发生冲突。
+   如果你不想立即更新代码，可通过编译器选项 `/Zc:sizedDealloc-` 还原到之前的行为。 如果使用此选项，则这两个参数的 delete 函数不存在，因此不会导致与您的**放置 delete**运算符发生冲突。
 
 - **联合数据成员**
 
@@ -1697,7 +1697,7 @@ ms.locfileid: "79422678"
     C c;
     ```
 
-###  <a name="VS_Update1"></a>更新 1 中的符合性改进
+###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>更新 1 中的符合性改进
 
 - **私有虚拟基类和间接继承**
 
@@ -2201,7 +2201,7 @@ ms.locfileid: "79422678"
     }
     ```
 
-###  <a name="VS_Update2"></a>更新 2 中的符合性改进
+###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a>更新 2 中的符合性改进
 
 - **可能会因对表达式 SFINAE 的部分支持而发出其他警告和错误**
 
@@ -2463,7 +2463,7 @@ ms.locfileid: "79422678"
 
    修复以这种方式编写的代码可能需要将运算符定义从头文件移动到相应的源文件中。
 
-###  <a name="VS_Update3"></a>更新 3 中的符合性改进
+###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>更新 3 中的符合性改进
 
 - **现在，std::is_convertable 可以检测自我赋值**（标准库）
 
@@ -2854,7 +2854,7 @@ ms.locfileid: "79422678"
 
    在 Visual Studio 2012 中，表达式 `E1::b` 中的 `E1` 在全局范围内解析为 `::E1`。 在 Visual Studio 2013 中，表达式 `E1::b` 中的 `E1` 在 `main()` 中解析为 `typedef E2` 定义且具有 `::E2` 类型。
 
-- 对象布局已发生更改。 在 x64 上，类的对象布局可能在早期版本基础上发生了更改。 如果它具有一个虚拟函数，但它不具有拥有虚拟函数的基类，则编译器的对象模型会将一个指针插入到数据成员布局之后的虚拟函数表。 这意味着布局可能不会在所有情况下都达到最优。 在以前版本中，x64 优化会尝试改善布局，但由于它在复杂代码情况下不能正常运行，因此 Visual Studio 2013 中已将其删除。 例如，考虑此代码：
+- 对象布局已发生更改。 在 x64 上，类的对象布局可能在早期版本基础上发生了更改。 如果它具有一个**虚拟**函数，但它没有**虚拟**函数的基类，则编译器的对象模型会将一个指针插入到数据成员布局之后的**虚拟**函数表。 这意味着布局可能不会在所有情况下都达到最优。 在以前版本中，x64 优化会尝试改善布局，但由于它在复杂代码情况下不能正常运行，因此 Visual Studio 2013 中已将其删除。 例如，考虑此代码：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2932,7 +2932,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 调用 `#include <algorithm>` 或 `std::min()` 时，必须使用 `std::max()`。
 
-- 如果现有的代码使用之前版本的模拟范围枚举（包装在命名空间中的传统的非范围枚举），则需对其进行更改。 例如，如果引用了 `std::future_status::future_status` 类型，则现在必须使用 `std::future_status`。 但是，大多数代码不受影响 - 例如，`std::future_status::ready` 仍将编译。
+- 如果现有代码使用以前版本的模拟范围枚举（包装在命名空间中的传统未区分范围的枚举），则必须对其进行更改。 例如，如果引用了 `std::future_status::future_status` 类型，则现在必须使用 `std::future_status`。 但是，大多数代码不受影响 - 例如，`std::future_status::ready` 仍将编译。
 
 - `explicit operator bool()` 比运算符 unspecified-bool-type() 更严格。 `explicit operator bool()` 允许到 bool 的显式转换 - 例如，在给定 `shared_ptr<X> sp` 的情况下，`bool b(sp)` 和 `static_cast<bool>(sp)` 都有效 - 允许对 bool 进行布尔值可测试的“上下文转换”- 例如，`if (sp)`、`!sp`、`sp &&` 等。 但是，`explicit operator bool()` 禁止隐式转换为 bool，因此不能使用 `bool b = sp;`，对于给定的 bool 返回类型，不能使用 `return sp`。
 
@@ -3058,7 +3058,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="crt"></a>CRT
 
-- 用于 new 和 malloc() 的 C 运行时 (CRT) 堆，不再是私有的。 现在，CRT 使用进程堆。 这意味着卸载 DLL 时，不会销毁堆，因此静态链接到 CRT 的 DLL 必须确保 DLL 代码分配的内存在卸载之前被清除。
+- 用于 new 和 malloc() 的 C 运行时 (CRT) 堆，不再是私有的。 现在，CRT 使用进程堆。 这意味着在卸载 DLL 时不会销毁堆，因此，静态链接到 CRT 的 Dll 必须确保 DLL 代码分配的内存在卸载之前已被清除。
 
 - `iscsymf()` 函数使用负值断言。
 

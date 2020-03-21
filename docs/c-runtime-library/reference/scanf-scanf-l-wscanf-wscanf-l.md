@@ -43,18 +43,18 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778321"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079213"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 读取标准输入流中的格式化数据。 提供这些函数的更多安全版本；请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
 
-> [!NOTE] 
+> [!NOTE]
 > 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列函数被声明为**内联**，并移到 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现*LNK2019* 。 有关详细信息，请[参阅C++ Visual change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 ## <a name="syntax"></a>语法
@@ -80,12 +80,12 @@ int _wscanf_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*格式*<br/>
+format<br/>
 格式控制字符串。
 
-*实际*<br/>
+argument<br/>
 可选参数。
 
 *locale*<br/>
@@ -108,7 +108,7 @@ int _wscanf_l(
 
 **wscanf**是**scanf**的宽字符版本;**wscanf**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**wscanf**和**scanf**的行为相同。 **scanf**当前不支持 UNICODE 流的输入。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -121,12 +121,12 @@ int _wscanf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**scanf**、 **_scanf_l**|\<stdio.h>|
 |**wscanf**、 **_wscanf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -166,7 +166,7 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
