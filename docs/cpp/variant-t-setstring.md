@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
-ms.openlocfilehash: d07e995be0ecd99974356a7516e7c4deee677637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd300a09c29668c496d93109d1bc862947e948c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403264"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187552"
 ---
-# <a name="varianttsetstring"></a>_variant_t::SetString
+# <a name="_variant_tsetstring"></a>_variant_t::SetString
 
 **Microsoft 专用**
 
@@ -25,9 +25,9 @@ ms.locfileid: "62403264"
 void SetString(const char* pSrc);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*pSrc*<br/>
+*.Psrc*<br/>
 指向字符串的指针。
 
 ## <a name="remarks"></a>备注
@@ -36,6 +36,6 @@ void SetString(const char* pSrc);
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_variant_t 类](../cpp/variant-t-class.md)

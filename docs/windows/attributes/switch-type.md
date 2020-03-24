@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214521"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -25,9 +25,9 @@ type
 }]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*type*<br/>
+type<br/>
 开关类型可以是整数、字符、布尔值或枚举类型。
 
 ## <a name="remarks"></a>备注
@@ -55,7 +55,7 @@ struct SizedValue2 {
 
 ## <a name="example"></a>示例
 
-请参阅示例使用**switch_type**[的示例。](case-cpp.md)
+有关**switch_type**的示例用法，请参阅[事例](case-cpp.md)示例。
 
 ## <a name="requirements"></a>要求
 
@@ -63,14 +63,14 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**适用于**|**typedef**|
-|**可重复**|No|
+|**适用对象**|**typedef**|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

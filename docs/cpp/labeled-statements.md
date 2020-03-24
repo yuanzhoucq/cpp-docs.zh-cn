@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179687"
 ---
 # <a name="labeled-statements"></a>标记语句
 
@@ -56,7 +56,7 @@ int main() {
 
 **Goto 语句**
 
-外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：
+源程序中*标识符*标签的外观声明一个标签。 只有[goto](../cpp/goto-statement-cpp.md)语句才能将控件传输到*标识符*标签。 下面的代码段说明如何使用**goto**语句和*标识符*标签：
 
 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。
 
@@ -81,7 +81,7 @@ int main() {
 
 **Case 语句**
 
-后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：
+**Case**关键字后出现的标签也不能出现在**switch**语句的外部。 （此限制还适用于**default**关键字。）下面的代码片段演示了**case**标签的正确用法：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>case 语句中的标签
 
-后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：
+**Case**关键字后出现的标签也不能出现在**switch**语句的外部。 （此限制还适用于**default**关键字。）下面的代码片段演示了**case**标签的正确用法：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>goto 语句中的标签
 
-外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：
+源程序中*标识符*标签的外观声明一个标签。 只有[goto](../cpp/goto-statement-cpp.md)语句才能将控件传输到*标识符*标签。 下面的代码段说明如何使用**goto**语句和*标识符*标签：
 
 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。
 
@@ -178,7 +178,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ 语句概述](../cpp/overview-of-cpp-statements.md)<br/>
 [switch 语句 (C++)](../cpp/switch-statement-cpp.md)

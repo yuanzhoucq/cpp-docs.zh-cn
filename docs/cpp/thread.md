@@ -1,5 +1,5 @@
 ---
-title: thread
+title: 线程 (thread)
 ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 30972b5668d3eab9ec2118f3d90d7ced1e087275
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301283"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160692"
 ---
-# <a name="thread"></a>thread
+# <a name="thread"></a>线程 (thread)
 
 **Microsoft 专用**
 
-**线程**扩展存储类修饰符用于声明线程局部变量。 对于可移植等效的 C++ 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows **thread_local**上通过 **__declspec （thread）** 来实现。
+**线程**扩展存储类修饰符用于声明线程局部变量。 对于 c + + 11 和更高版本中的可移植性，请使用适用于可移植代码的[thread_local](../cpp/storage-classes-cpp.md#thread_local)存储类说明符。 在 Windows **thread_local**上通过 **__declspec （thread）** 来实现。
 
 ## <a name="syntax"></a>语法
 

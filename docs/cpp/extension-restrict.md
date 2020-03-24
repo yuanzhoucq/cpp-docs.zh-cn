@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb340554bc20516175400c4d14a5d0dba934a313
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183747"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188956"
 ---
-# <a name="restrict"></a>__restrict
+# <a name="__restrict"></a>__restrict
 
-像 **__declspec ([限制](../cpp/restrict.md))** 修饰符 **__restrict**关键字指示某个符号未在当前作用域中的指定。 **__Restrict**关键字不同于`__declspec ( restrict )`修饰符在以下方面：
+与 **__declspec （ [restrict](../cpp/restrict.md) ）** 修饰符一样， **__restrict**关键字指示符号在当前范围中未使用别名。 **__Restrict**关键字不同于 `__declspec ( restrict )` 修饰符，如下所示：
 
-- **__Restrict**关键字是仅在变量上有效和`__declspec ( restrict )`仅适用于函数声明和定义。
+- **__Restrict**关键字仅对变量有效，`__declspec ( restrict )` 只对函数声明和定义有效。
 
-- **__restrict**类似于**限制**于 C99 规范中，但 **__restrict**可在C++或 C 程序。
+- **__restrict**类似于 C99 规范的**限制**，但可以在或 C 程序中C++使用 **__restrict** 。
 
-- 当 **__restrict**是使用，编译器将不会传播变量的非别名属性。 也就是说，如果将分配 **__restrict**变量为非 **__restrict**变量时，编译器仍允许非 __restrict 变量使用别名。 这是不同的行为**限制**C99 规范中的关键字。
+- 使用 **__restrict**时，编译器不会传播变量的非别名属性。 也就是说，如果将 **__restrict**变量分配给非 **__restrict**变量，则编译器仍将允许非 __restrict 变量使用别名。 这不同于 C99 规范中**restrict**关键字的行为。
 
 通常，如果你影响整个函数的行为，则使用 `__declspec ( restrict )` 要好过使用关键字。
 
-与以前版本的兼容性 **_restrict**是的同义词 **__restrict**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
+为了与早期版本兼容， **_restrict**是 **__restrict**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
 
-在 Visual Studio 2015 及更高版本， **__restrict**可应用于C++的引用。
+在 Visual Studio 2015 和更高 **__restrict**版本中，可以对C++引用使用 __restrict。
 
 > [!NOTE]
->  此外具有变量上使用时[可变](../cpp/volatile-cpp.md)关键字**易失性**将优先。
+>  在同时具有[volatile](../cpp/volatile-cpp.md)关键字的变量上使用时，将优先使用**volatile** 。
 
 ## <a name="example"></a>示例
 
@@ -58,6 +58,6 @@ union z {
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)

@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-ms.openlocfilehash: 4d8c8467b7aeb9c21bf5f4ee19c60e6e60880688
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d130fffa9fad9ae327d03eaa01d84742094cc67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398389"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213962"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase 函数
 
-检索[ModuleBase](modulebase-class.md)允许递增和递减引用数的指针[RuntimeClass](runtimeclass-class.md)对象。
+检索一个[ModuleBase](modulebase-class.md)指针，该指针允许递增和递减[RuntimeClass](runtimeclass-class.md)对象的引用计数。
 
 ## <a name="syntax"></a>语法
 
@@ -24,20 +24,20 @@ inline Details::ModuleBase* GetModuleBase() throw()
 
 ## <a name="return-value"></a>返回值
 
-指向 `ModuleBase` 对象的指针。
+一个指向 `ModuleBase` 对象的指针。
 
 ## <a name="remarks"></a>备注
 
-在内部使用此函数进行递增和递减对象的引用计数。
+此函数在内部用于递增和递减对象引用计数。
 
-可以使用此函数通过调用控制引用计数[modulebase:: Incrementobjectcount](modulebase-class.md#incrementobjectcount)并[modulebase:: Decrementobjectcount](modulebase-class.md#decrementobjectcount)。
+可以使用此函数通过调用[ModuleBase：： IncrementObjectCount](modulebase-class.md#incrementobjectcount)和[ModuleBase：:D ecrementobjectcount](modulebase-class.md#decrementobjectcount)来控制引用计数。
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

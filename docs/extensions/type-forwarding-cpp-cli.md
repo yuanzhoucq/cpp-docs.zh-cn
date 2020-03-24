@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171926"
 ---
 # <a name="type-forwarding-ccli"></a>类型转发 (C++/CLI)
 
@@ -31,12 +31,12 @@ Windows 运行时不支持此功能。
 [assembly:TypeForwardedTo(type::typeid)];
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*new*<br/>
+*全新*<br/>
 要将类型定义移到其中的程序集。
 
-*type*<br/>
+type<br/>
 要将其定义移到另一个程序集的类型。
 
 ### <a name="remarks"></a>备注

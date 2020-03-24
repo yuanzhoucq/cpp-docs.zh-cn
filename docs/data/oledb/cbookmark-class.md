@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212233"
 ---
 # <a name="cbookmark-class"></a>CBookmark 类
 

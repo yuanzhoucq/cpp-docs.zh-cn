@@ -1,21 +1,21 @@
 ---
-title: 隐藏 (C++ COM 特性)
+title: 隐藏（C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168091"
 ---
-# <a name="hidden"></a>隐藏
+# <a name="hidden"></a>hidden
 
-指示该项存在, 但不应在面向用户的浏览器中显示。
+指示该项存在，但不应在面向用户的浏览器中显示。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ ms.locfileid: "69501452"
 
 ## <a name="example"></a>示例
 
-有关如何使用**hidden**的示例, 请参阅可[绑定](bindable.md)的示例。
+有关如何使用**hidden**的示例，请参阅可[绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,14 +37,14 @@ ms.locfileid: "69501452"
 
 |||
 |-|-|
-|**适用于**|**接口**、**类**、**结构**、方法、属性|
-|**可重复**|No|
-|**必需的特性**|**coclass**(应用于**类**或**结构**时)|
+|**适用对象**|**接口**、**类**、**结构**、方法、属性|
+|**可重复**|否|
+|**必需的特性**|**coclass** （应用于**类**或**结构**时）|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>

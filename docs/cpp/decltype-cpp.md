@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1ed07b8987df7b621ea2809409069cc1121fa24f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180207"
 ---
 # <a name="decltype--c"></a>decltype （C++）
 
-**Decltype**类型说明符生成指定表达式的类型。 **Decltype**类型说明符一起使用[auto 关键字](../cpp/auto-cpp.md)，主要的开发人员编写模板库非常有用。 使用**自动**并**decltype**声明模板函数的返回类型取决于其模板自变量的类型。 或者，使用**自动**并**decltype**声明包装对其他函数的调用，然后返回所包装的函数的返回类型的模板函数。
+**Decltype**类型说明符生成指定表达式的类型。 **Decltype**类型说明符与[auto 关键字](../cpp/auto-cpp.md)一起主要用于编写模板库的开发人员。 使用**auto**和**decltype**声明其返回类型依赖于其模板参数类型的模板函数。 或者，使用**auto**和**decltype**声明一个模板函数，该函数包装对其他函数的调用，然后返回包装函数的返回类型。
 
 ## <a name="syntax"></a>语法
 
@@ -26,29 +26,29 @@ ms.locfileid: "65222453"
 decltype( expression )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*expression*|一个表达式。 有关详细信息，请参阅[表达式](../cpp/expressions-cpp.md)。|
 
 ## <a name="return-value"></a>返回值
 
-类型*表达式*参数。
+*表达式*参数的类型。
 
 ## <a name="remarks"></a>备注
 
-**Decltype**类型说明符在 Visual Studio 2010 或更高版本中支持和可与本机或托管代码。 Visual Studio 2015 及更高版本支持 `decltype(auto)` (C++14)。
+在 Visual Studio 2010 或更高版本中支持**decltype**类型说明符，并可与本机或托管代码一起使用。 Visual Studio 2015 及更高版本支持 `decltype(auto)` (C++14)。
 
-编译器使用以下规则来确定的类型*表达式*参数。
+编译器使用以下规则来确定*expression*参数的类型。
 
-- 如果*表达式*参数是标识符或[类成员访问](../cpp/member-access-operators-dot-and.md)，`decltype(expression)`是命名的实体的类型*表达式*。 如果没有此类实体或*表达式*参数命名一组重载函数，则编译器将生成一条错误消息。
+- 如果*expression*参数是标识符或[类成员访问](../cpp/member-access-operators-dot-and.md)，`decltype(expression)` 是按*expression*命名的实体的类型。 如果没有此类实体或*表达式*参数命名一组重载函数，则编译器将生成错误消息。
 
-- 如果*表达式*参数是对函数或重载的运算符函数的调用`decltype(expression)`是该函数的返回类型。 将忽略重载运算符两边的括号。
+- 如果*expression*参数是对函数或重载运算符函数的调用，则 `decltype(expression)` 是函数的返回类型。 将忽略重载运算符两边的括号。
 
-- 如果*表达式*参数是[rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)，`decltype(expression)`是一种*表达式*。 如果*表达式*参数是[左值](../cpp/lvalues-and-rvalues-visual-cpp.md)，`decltype(expression)`是[左值引用](../cpp/lvalue-reference-declarator-amp.md)为的类型*表达式*。
+- 如果*expression*参数是[右](../cpp/lvalues-and-rvalues-visual-cpp.md)值，则 `decltype(expression)` 为*表达式*的类型。 如果*expression*参数是[左](../cpp/lvalues-and-rvalues-visual-cpp.md)值，则 `decltype(expression)` 是对该*表达式*类型的[左值引用](../cpp/lvalue-reference-declarator-amp.md)。
 
-下面的代码示例演示的一些用途**decltype**类型说明符。 首先，假定已编码下列语句。
+下面的代码示例演示了**decltype**类型说明符的一些用途。 首先，假定已编码下列语句。
 
 ```cpp
 int var;
@@ -57,33 +57,33 @@ struct A { double x; }
 const A* a = new A();
 ```
 
-接下来，检查类型，返回的四个**decltype**下表中的语句。
+接下来，检查下表中的四个**decltype**语句返回的类型。
 
 |语句|类型|说明|
 |---------------|----------|-----------|
-|`decltype(fx());`|`const int&&`|[右值引用](../cpp/rvalue-reference-declarator-amp-amp.md)到**const int**。|
+|`decltype(fx());`|`const int&&`|对**const int**的[右值引用](../cpp/rvalue-reference-declarator-amp-amp.md)。|
 |`decltype(var);`|**int**|变量 `var` 的类型。|
 |`decltype(a->x);`|**double**|成员访问的类型。|
-|`decltype((a->x));`|`const double&`|内部括号导致语句作为表达式而不是成员访问计算。 而且由于`a`被声明为`const`指针，该类型是指**const 双**。|
+|`decltype((a->x));`|`const double&`|内部括号导致语句作为表达式而不是成员访问计算。 由于 `a` 声明为 `const` 指针，因此该类型是对**const double**的引用。|
 
 ## <a name="decltype-and-auto"></a>Decltype 和 Auto
 
-在 C++ 14 中，你可以使用`decltype(auto)`不带尾随返回类型来声明其返回类型的模板函数取决于其模板自变量的类型。
+在 c + + 14 中，可以使用不带尾随返回类型的 `decltype(auto)` 来声明其返回类型依赖于其模板参数类型的模板函数。
 
-在 C + + 11 中，可以使用**decltype**类型一起使用的尾随返回类型上的说明符**自动**关键字来声明其返回类型的模板函数取决于其模板的类型自变量。 例如，考虑下面的代码示例，其中模板函数的返回类型取决于模板参数类型。 在代码示例中，*未知*占位符指示不能指定返回类型。
+在 c + + 11 中，可以对尾随返回类型使用**decltype**类型说明符，并使用**auto**关键字来声明其返回类型依赖于其模板参数类型的模板函数。 例如，考虑下面的代码示例，其中模板函数的返回类型取决于模板参数类型。 在代码示例中，*未知*占位符指示无法指定返回类型。
 
 ```cpp
 template<typename T, typename U>
 UNKNOWN func(T&& t, U&& u){ return t + u; };
 ```
 
-引入**decltype**类型说明符使开发人员若要获取模板函数返回的表达式类型。 使用*替代函数声明语法*更高版本，显示**自动**关键字，并且**decltype**类型说明符来声明*后指定*返回类型。 后指定返回类型是在对声明进行编译而不是编码时确定的。
+引入**decltype**类型说明符使开发人员能够获取模板函数返回的表达式的类型。 使用以后显示的*替代函数声明语法*、 **auto**关键字和**decltype**类型说明符来声明*后期指定*的返回类型。 后指定返回类型是在对声明进行编译而不是编码时确定的。
 
-以下原型阐述一个替代函数声明的语法。 请注意， **const**并**易失性**限定符，并且**引发**[异常规范](../cpp/exception-specifications-throw-cpp.md)都是可选的。 *Function_body*占位符表示指定函数作用的复合语句。 作为最佳编码做法，*表达式*中的占位符**decltype**语句与指定的表达式应匹配**返回**语句，如果有，在*function_body*。
+以下原型阐述一个替代函数声明的语法。 请注意， **const**和**volatile**限定符以及**throw** [异常规范](../cpp/exception-specifications-throw-cpp.md)是可选的。 *Function_body*占位符表示指定函数作用的复合语句。 作为最佳编码做法， **decltype**语句中的*表达式*占位符应与*function_body*中的**return**语句指定的表达式（如果有）匹配。
 
-**自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>opt</sub> **易失性**<sub>opt</sub> **->** **decltype (** *表达式* **)** **引发**<sub>选择</sub> **{** *function_body* **};**
+**auto** *function_name* **（** *参数*<sub>opt</sub> **）** **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype （** *expression* **）** **throw**<sub>opt</sub> **{** *function_body* **};**
 
-在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，此代码示例还使用右值引用和`forward`函数模板来支持*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，该代码示例还使用右值引用和支持*完美转发*的 `forward` 函数模板。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ```cpp
 //C++11
@@ -101,11 +101,11 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 转发函数包装对其他函数的调用。 请考虑将其参数或包含这些参数的表达式的结果转发到其他函数的函数模板。 此外，转发函数返回调用其他函数的结果。 在此方案中，转发函数的返回类型应与包装函数的返回类型相同。
 
-在此方案中，您无法编写适当的类型表达式而无需**decltype**类型说明符。 **Decltype**类型说明符将启用泛型转发函数，因为它不会丢失有关函数是否返回引用类型所需的信息。 有关转发函数的代码示例，请参阅上面的 `myFunc` 模板函数示例。
+在这种情况下，不能编写没有**decltype**类型说明符的合适类型表达式。 **Decltype**类型说明符启用通用转发函数，因为它不会丢失有关函数是否返回引用类型所需的信息。 有关转发函数的代码示例，请参阅上面的 `myFunc` 模板函数示例。
 
 ## <a name="example"></a>示例
 
-下面的代码示例声明模板函数 `Plus()` 的后指定返回类型。 `Plus`函数将处理与两个操作数**operator +** 重载。 因此，对 `Plus` 函数的加运算符 (+) 和返回类型的解释取决于函数参数的类型。
+下面的代码示例声明模板函数 `Plus()` 的后指定返回类型。 `Plus` 函数用**运算符 +** 重载来处理两个操作数。 因此，对 `Plus` 函数的加运算符 (+) 和返回类型的解释取决于函数参数的类型。
 
 ```cpp
 // decltype_1.cpp
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>示例
 
-**Visual Studio 2017 和更高版本：** 模板是声明而不是实例化时，编译器将分析 decltype 参数。 因此，如果在 decltype 参数中找到非依赖专用化，则它不会被推迟到实例化时间，而会被立即处理，并且将在此时诊断产生的所有错误。
+**Visual Studio 2017 及更高版本：** 声明模板而不是实例化模板时，编译器会分析 decltype 参数。 因此，如果在 decltype 参数中找到非依赖专用化，则它不会被推迟到实例化时间，而会被立即处理，并且将在此时诊断产生的所有错误。
 
 以下示例显示了在声明时引发的这类编译器错误：
 
