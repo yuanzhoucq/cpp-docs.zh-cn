@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
-ms.openlocfilehash: 876ae7a368d2d1a1ee94a04fc9ecf50d0f4b8d78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a7c3ccab716a9281d4520f4c5fce2afff60187
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364228"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204433"
 ---
 # <a name="fatal-error-c1060"></a>错误 C1060
 
@@ -21,13 +21,13 @@ ms.locfileid: "62364228"
 
 ### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>若要修复此错误，请尝试以下可能的解决方案
 
-1. 如果编译器还发出错误[C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)并[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)，使用[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)编译器选项减少内存分配限制。 如果减少剩余内存分配，更多堆空间可用于应用程序。
+1. 如果编译器还发出错误[C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)和[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)，请使用[/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)编译器选项来降低内存分配限制。 如果减少剩余内存分配，更多堆空间可用于应用程序。
 
-   如果[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项已设置，请尝试将其删除。 堆空间可能已用完，因为选项中指定的内存分配限制太高。 编译器使用的默认限制，如果删除[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项。
+   如果已设置了[/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项，请尝试删除它。 堆空间可能已用完，因为选项中指定的内存分配限制太高。 如果删除[/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项，编译器将使用默认限制。
 
-1. 如果你正在 64 位平台上进行编译，请使用 64 位编译器工具集。 有关详细信息，请参阅[如何：启用 64 位视觉对象C++命令行上的工具集](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
+1. 如果你正在 64 位平台上进行编译，请使用 64 位编译器工具集。 有关信息，请参阅[如何：在命令行上启用 64 C++位可视化工具集](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
 
-1. 在 32 位 Windows，请尝试使用[3GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot.ini 开关。
+1. 在32位 Windows 上，尝试使用[/3gb](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot.ini 开关。
 
 1. 增加 Windows 交换文件的大小。
 

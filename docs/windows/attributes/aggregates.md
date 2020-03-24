@@ -1,5 +1,5 @@
 ---
-title: 聚合 (C++ COM 特性)
+title: 聚合（C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168494"
 ---
-# <a name="aggregates"></a>aggregates
+# <a name="aggregates"></a>聚合
 
 指示对象聚合由 CLSID 指定的对象。
 
@@ -26,19 +26,19 @@ ms.locfileid: "69501882"
 [ aggregates(clsid, variable_name) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 指定可聚合对象的 CLSID。
 
 *variable_name*<br/>
-要插入的变量的名称。 此变量包含`IUnknown`所聚合的对象的。
+要插入的变量的名称。 此变量包含所聚合的对象的 `IUnknown`。
 
 ## <a name="remarks"></a>备注
 
 应用于对象时， **aggregates** C++ 属性会为所聚合的对象（由 `clsid`指定）实现外部包装器。
 
-此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如, 如果`progid`应用了`coclass` , `vi_progid`则还会应用。
+此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果应用 `progid`，则还会应用 `vi_progid` 和 `coclass`。
 
 ### <a name="atl-projects"></a>ATL 项目
 
@@ -83,14 +83,14 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**适用于**|**class**、 **struct**|
+|**适用对象**|**class**、 **struct**|
 |**可重复**|是|
-|**必需的特性**|以下一项或多项操作`coclass`: `progid`、或`vi_progid`。|
+|**必需的特性**|以下一项或多项操作： `coclass`、`progid`或 `vi_progid`。|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

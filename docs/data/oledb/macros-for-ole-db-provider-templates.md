@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: b11455c1de13321bce52fbc3be906014b2844aee
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2fda4d9f003e84247527d964685e631532d4c366
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545647"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210140"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供程序模板宏
 

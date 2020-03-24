@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4219
 ms.assetid: 363fedf4-b10c-4985-811a-55a9fba688d6
-ms.openlocfilehash: 7407537b55525bf622fc11cdbdb8e00244e51c18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4488539a4f7282180048f1e3530e62e35c3b339e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410247"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183093"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>链接器工具警告 LNK4219
 
-链接地址信息名称的链接地址信息溢出。 目标目标 symbol name 不在范围内，正在插入 thunk
+修正名称修正溢出。 目标 "目标符号名称" 超出范围，正在插入 thunk
 
-链接器的地址或偏移量不能使在给定的指令中，因为目标符号太远而从指令的位置的情况下插入一个 thunk。
+由于目标符号与指令的位置距离太远，因此，链接器在地址或偏移量无法满足给定指令的情况下插入了 thunk。
 
-你可能想要对图像进行重新排序 (使用[/O](../../build/reference/order-put-functions-in-order.md)选项，例如) 以避免额外级别的间接寻址。
+您可能想要对图像重新排序（例如，使用[/order](../../build/reference/order-put-functions-in-order.md)选项），以避免额外的间接级别。

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944074"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170353"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -57,19 +57,19 @@ float acosh( float x );  // C++ only
 long double acosh( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Acosh**函数返回*x*的反双曲余弦（反双曲余弦）。 这些函数在域*x* ≥1上是有效的。 如果*x*小于1， `errno`则将设置为`EDOM` ，并且结果为 quiet NaN。 如果*x*为静默 NaN、不定或无穷大，则返回相同的值。
+**Acosh**函数返回*x*的反双曲余弦（反双曲余弦）。 这些函数在域*x* ≥1上是有效的。 如果*x*小于1，则 `errno` 设置为 `EDOM`，结果为 quiet NaN。 如果*x*为静默 NaN、不定或无穷大，则返回相同的值。
 
 |输入|SEH 异常|`_matherr` 异常|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|无|无|
-|*x* < 1|无|无|
+|± QNAN、IND、INF|none|none|
+|*x* < 1|none|none|
 
 ## <a name="remarks"></a>备注
 
@@ -81,7 +81,7 @@ long double acosh( long double x );  // C++ only
 |--------------|--------------|------------------|
 |**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -111,7 +111,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>

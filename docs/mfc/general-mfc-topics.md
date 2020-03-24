@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 571be8300f46ceecdc65df92d35c731bec96a92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169980"
 ---
 # <a name="general-mfc-topics"></a>常规 MFC 主题
 
@@ -23,7 +23,7 @@ MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发�
 
 ## <a name="in-this-section"></a>本节内容
 
-`MFC Samples`，在[Visual C++ Samples](../overview/visual-cpp-samples.md)中提供
+[MFC 示例](../overview/visual-cpp-samples.md#mfc-samples)
 
 [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)
 
@@ -55,6 +55,6 @@ MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发�
 
 有关 ATL 的信息，请参阅[活动模板库引用](../atl/atl-class-overview.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用窗口对象](../mfc/working-with-window-objects.md)
