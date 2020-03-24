@@ -89,12 +89,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: fd23b26b910a8cc8767b4f456cc3bde9f9a40199
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a5e98a9fe32c71e87f80c2cfc2e733a5d0fe5c94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208333"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 

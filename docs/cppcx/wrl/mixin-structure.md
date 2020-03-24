@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325347"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213689"
 ---
 # <a name="mixin-structure"></a>MixIn 结构
 
@@ -29,20 +29,20 @@ template<
 struct MixIn;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *派生*<br/>
-一个类型派生自[实现](implements-structure.md)结构。
+从[实现](implements-structure.md)结构派生的类型。
 
 *MixInType*<br/>
 基类型。
 
 *hasImplements*<br/>
-**true**如果*MixInType*是派生自当前实现基类型;**false**否则为。
+如果*MixInType*派生自当前实现的基类型，**则为 true** ;否则**为 false** 。
 
 ## <a name="remarks"></a>备注
 
-如果从 Windows 运行时和 COM 接口派生的类，类声明列表必须先列出任何 Windows 运行时接口，然后任何经典 COM 接口。 **MixIn**可确保按正确的顺序指定接口。
+如果类派生自 Windows 运行时和类 COM 接口，则类声明列表必须首先列出任何 Windows 运行时接口，然后列出任何经典 COM 接口。 **MixIn**确保按正确的顺序指定接口。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -50,10 +50,10 @@ struct MixIn;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

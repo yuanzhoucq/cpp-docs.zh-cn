@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - BK4504
 ms.assetid: b56ee2d4-ad44-40f4-98c0-75934ea44a6c
-ms.openlocfilehash: 7ffcb7c2e6ae512006ccd29c87b05c53fdfcaef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57858827439ac8cc11e3718d7a484124ae8a6d74
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279283"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197439"
 ---
 # <a name="bscmake-warning-bk4504"></a>BSCMAKE 警告 BK4504
 
-文件包含引用太多;正在忽略来自此源的更多参考
+文件包含的引用太多;忽略来自此源的进一步引用
 
 .cpp 文件包含 64,000 个以上的符号引用。 当 BSCMAKE 在某个文件中遇到 64,000 个引用之后，它将会忽略所有后续的引用。
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-ms.openlocfilehash: 35e21ce2db086506d06bb3ea40781d1c68c7a75f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4a642c712f9973b8d7c696dd981a00777c8641
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279770"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197725"
 ---
 # <a name="bscmake-error-bk1507"></a>BSCMAKE 错误 BK1507
 
-无法打开临时文件 filename [: 原因]
+无法打开临时文件 "filename" [： reason]
 
 BSCMAKE 无法打开临时文件。
 
@@ -23,4 +23,4 @@ BSCMAKE 无法打开临时文件。
 
 1. **TMP**环境变量未设置为有效的驱动器和目录。
 
-1. 磁盘已满。
+1. 完整磁盘。

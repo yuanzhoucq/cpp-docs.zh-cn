@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361855"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211297"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 
-泛型类，可用于指定架构行集的限制。
+允许你指定架构行集的限制的泛型类。
 
 ## <a name="syntax"></a>语法
 
@@ -32,10 +32,10 @@ class CRestrictions :
    public CSchemaRowset <T, nRestrictions>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-取值函数使用的类。
+用于访问器的类。
 
 *nRestrictions*<br/>
 架构行集的限制列数。
@@ -45,7 +45,7 @@ class CRestrictions :
 
 ## <a name="requirements"></a>要求
 
-**标头：** atldbsch.h
+**标头：** atldbsch。h
 
 ## <a name="members"></a>成员
 
@@ -53,11 +53,11 @@ class CRestrictions :
 
 |||
 |-|-|
-|[打开](#open)|返回一个结果集，根据用户提供的限制。|
+|[打开](#open)|根据用户提供的限制返回结果集。|
 
-## <a name="open"></a> CRestrictions::Open
+## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions：： Open
 
-返回一个结果集，根据用户提供的限制。
+根据用户提供的限制返回结果集。
 
 ### <a name="syntax"></a>语法
 
@@ -73,28 +73,28 @@ HRESULT Open(const CSession& session,
    bool bBind = true);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*session*<br/>
-[in]指定用于连接到数据源的现有会话对象。
+*会议*<br/>
+中指定用于连接到数据源的现有会话对象。
 
 *lpszParam*<br/>
-[in]架构行集上指定的限制。
+中指定架构行集的限制。
 
 *bBind*<br/>
-[in]指定是否自动绑定列映射。 默认值是 **，则返回 true**，这将导致自动绑定的列映射。 设置*bBind*到**false**可防止自动绑定列映射，以便您可以手动绑定。 （手动绑定是 OLAP 用户特别关注。）
+中指定是否自动绑定列映射。 默认值为**true**，这将导致自动绑定列映射。 将*bBind*设置为**false**可阻止自动绑定列映射，以便可以手动绑定。 （手动绑定对 OLAP 用户特别感兴趣。）
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-架构行集上，可以指定最多七个限制。
+最多可在架构行集中指定7个限制。
 
-请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))有关每个架构行集上定义的限制信息。
+有关每个架构行集的定义限制的信息，请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e67e385a8ce0eb9a6b041d4a4f0d43e2db551c79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545575"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211284"
 ---
 # <a name="crowset-class"></a>CRowset 类
 

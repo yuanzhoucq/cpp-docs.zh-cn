@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214183"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 类
 
@@ -29,7 +29,7 @@ class AgileEventSource :
         TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 *TDelegateInterface*<br/>
 表示事件处理程序的委托的接口。
@@ -53,7 +53,7 @@ Windows 运行时中的绝大部分组件都是 agile 组件。 有关详细信�
 
 **命名空间：** Microsoft::WRL
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -61,7 +61,7 @@ Windows 运行时中的绝大部分组件都是 agile 组件。 有关详细信�
 |----------|-----------------|
 |[AgileEventSource：： Add 方法](#add)|将指定委托接口表示的敏捷事件处理程序追加到当前**AgileEventSource**对象的事件处理程序集。|
 
-## <a name="add"></a>AgileEventSource：： Add 方法
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource：： Add 方法
 
 将指定委托接口表示的事件处理程序追加到当前[EventSource](eventsource-class.md)对象的事件处理程序集。
 
@@ -74,7 +74,7 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *delegateInterface*<br/>
 委托对象的接口，它表示事件处理程序。

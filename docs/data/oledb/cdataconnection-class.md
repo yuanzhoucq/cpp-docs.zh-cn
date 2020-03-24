@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: e966ce8d0f8b277c0edde2b0b9b345a11c6a964c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 385445081f84f65ff7030466a238a5a96abd63be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212053"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 类
 

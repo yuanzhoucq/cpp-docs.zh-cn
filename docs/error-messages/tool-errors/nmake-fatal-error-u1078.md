@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193649"
 ---
 # <a name="nmake-fatal-error-u1078"></a>NMAKE 错误 U1078
 
-在 expression 的常量溢出
+"expression" 处的常量溢出
 
-给定的表达式中包含一个常量，它超出了范围-2,147,483,648 到 2,147,483,647。 该常数出现在以下情况之一：
+给定表达式包含超出范围-2147483648 到2147483647的常数。 常数出现在下列情况之一：
 
 - 使用预处理指令指定的表达式
 
-- 用短划线指定的错误级别 (**-**) 命令修饰符
+- 使用短划线（ **-** ）命令修饰符指定的错误级别
