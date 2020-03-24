@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b52661097ca1feab4c8045be240e4138a0c0f21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385058"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190621"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
 **Microsoft 专用**
 
@@ -27,7 +27,7 @@ void Attach(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *s*<br/>
 要与之关联或分配到的 `BSTR`，即 `_bstr_t` 变量。
@@ -38,10 +38,10 @@ void Attach(
 
 ## <a name="example"></a>示例
 
-请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)示例使用**附加**。
+有关使用**Attach**的示例，请参阅[_Bstr_t：： Assign](../cpp/bstr-t-assign.md) 。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_bstr_t 类](../cpp/bstr-t-class.md)

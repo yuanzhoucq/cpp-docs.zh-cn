@@ -5,18 +5,18 @@ helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: 1fc487628f26dcac097109bc71fa960e501d0797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a46ccb1cf519080c5105855e41ecd3ebc23f77
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266811"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188046"
 ---
 # <a name="transfers-of-control"></a>控制的转移
 
-可以使用**goto**语句或**用例**中的标签**切换**语句来指定分支超出初始值设定项的程序。 此类代码是非法的，除非包含初始值设定项的声明在跳转语句发生的块所封闭的块中。
+可以在**switch**语句中使用**goto**语句或**case**标签来指定分支到初始值设定项之前的程序。 此类代码是非法的，除非包含初始值设定项的声明在跳转语句发生的块所封闭的块中。
 
-下面的示例显示了声明和初始化对象 `total`、`ch` 和 `i` 的循环。 此外，还有的错误**goto**语句将控制权传递过初始值设定项。
+下面的示例显示了声明和初始化对象 `total`、`ch` 和 `i` 的循环。 还有一个错误**goto**语句，该语句将控制转移到初始值设定项之后。
 
 ```cpp
 // transfers_of_control.cpp
@@ -48,6 +48,6 @@ int main()
 }
 ```
 
-在前面的示例中， **goto**语句尝试将控制权传递过的初始化`i`。 但是，如果已声明但未初始化 `i`，则该传递是合法的。
+在前面的示例中， **goto**语句尝试将控制转移到 `i`的初始化之后。 但是，如果已声明但未初始化 `i`，则该传递是合法的。
 
-对象`total`并`ch`用作的块中声明*语句*的**而**语句，使用退出该块时销毁**中断**语句。
+当使用**break**语句退出该块时，将销毁在块中声明的对象 `total` 和 `ch`，这些对象用作**while**语句的*语句*。

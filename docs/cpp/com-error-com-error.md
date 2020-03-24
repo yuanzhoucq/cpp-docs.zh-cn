@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error method [C++]
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
-ms.openlocfilehash: 8856289605cce430fdab36d6e3e8b743190e02ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ac902f0fda90f77526ef53139ef0d523d8c22e7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155119"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180779"
 ---
-# <a name="comerrorcomerror"></a>_com_error::_com_error
+# <a name="_com_error_com_error"></a>_com_error::_com_error
 
 **Microsoft 专用**
 
-构造 **_com_error**对象。
+构造一个 **_com_error**对象。
 
 ## <a name="syntax"></a>语法
 
@@ -30,36 +30,36 @@ _com_error(
 _com_error( const _com_error& that ) throw( );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*hr*<br/>
-HRESULT 的信息。
+*人事*<br/>
+HRESULT 信息。
 
 *perrinfo*<br/>
 `IErrorInfo` 对象。
 
 *fAddRef*<br/>
-默认值会导致构造函数非 null 值调用 AddRef`IErrorInfo`接口。 这提供了正确的引用计数的常见的情况下，其中在接口的所有权传递给 **_com_error**对象，例如：
+默认情况下，构造函数对非 null `IErrorInfo` 接口调用 AddRef。 这会在将接口所有权传递到 **_com_error**对象的常见情况下提供正确的引用计数，例如：
 
 ```cpp
 throw _com_error(hr, perrinfo);
 ```
 
-如果不希望您的代码以将所有权转移给 **_com_error**对象，并`AddRef`偏移需要`Release`中 **_com_error**析构函数中，构造对象作为如下所示：
+如果你不想让代码将所有权转移到 **_com_error**对象，而 `AddRef` 需要在 **_com_error**析构函数中偏移 `Release`，则按如下方式构造对象：
 
 ```cpp
 _com_error err(hr, perrinfo, true);
 ```
 
-*that*<br/>
-将现有 **_com_error**对象。
+*就*<br/>
+现有的 **_com_error**对象。
 
 ## <a name="remarks"></a>备注
 
-第一个构造函数创建新的对象在给定的 HRESULT 和可选`IErrorInfo`对象。 第二个创建的现有副本 **_com_error**对象。
+第一个构造函数将创建一个新的对象，给定 HRESULT 和可选的 `IErrorInfo` 对象。 第二个创建现有 **_com_error**对象的副本。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_com_error 类](../cpp/com-error-class.md)

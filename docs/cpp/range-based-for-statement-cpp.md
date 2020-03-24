@@ -2,12 +2,12 @@
 title: 基于范围的 for 语句 (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: af9811fd707d4dbc28158dba3b6b3fbfcc43e4fe
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077182"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188345"
 ---
 # <a name="range-based-for-statement-c"></a>基于范围的 for 语句 (C++)
 
@@ -111,6 +111,6 @@ end of vector test
 [auto](../cpp/auto-cpp.md)<br/>
 [迭代语句](../cpp/iteration-statements-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
-[while 语句 (C++)](../cpp/while-statement-cpp.md)<br/>
+[While 语句 (C++)](../cpp/while-statement-cpp.md)<br/>
 [do-while 语句 (C++)](../cpp/do-while-statement-cpp.md)<br/>
 [for 语句 (C++)](../cpp/for-statement-cpp.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1264
 ms.assetid: 23b1aad7-d382-42c1-bae8-db68575c57a8
-ms.openlocfilehash: ca17b6946b9e988507af2786825223e042356d0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00041e677ac7b69df9981551ee3b6cc18f9eb33d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160583"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183756"
 ---
 # <a name="linker-tools-error-lnk1264"></a>链接器工具错误 LNK1264
 
-指定 /ltcg: pginstrument 但没有所需; 的代码生成检测失败
+/LTCG：已指定 PGINSTRUMENT，但不需要生成代码;检测失败
 
-**/Ltcg: pginstrument**已指定，但找到了文件是使用编译任何.obj [/GL](../../build/reference/gl-whole-program-optimization.md)。 检测不能采用的位置，以及失败的链接。 必须在命令行上至少一个使用编译的.obj 文件 **/GL**以便进行检测。
+**/Ltcg：** 已指定 PGINSTRUMENT，但找不到用[/gl](../../build/reference/gl-whole-program-optimization.md)编译的 .obj 文件。 检测无法发生，链接失败。 在用 **/gl**编译的命令行上必须至少有一个 .obj 文件，以便进行检测。
 
-按配置优化 (PGO) 是仅在 64 位编译器中可用。
+按配置优化（PGO）仅适用于64位编译器。

@@ -2,12 +2,12 @@
 title: 更改签名
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
-ms.translationtype: HT
+ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281943"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171900"
 ---
 # <a name="change-signature"></a>更改签名
 
@@ -17,7 +17,7 @@ ms.locfileid: "52281943"
 
 原因：可自行手动更改这些参数，然后查找对该函数的所有调用并逐个更改它们，但这可能会导致错误。  此重构工具可自动执行此任务。
 
-方法：
+**方式：**
 
 1. 将文本或鼠标光标置于要修改的方法名称内，或它的某个使用中：
 
@@ -35,11 +35,11 @@ ms.locfileid: "52281943"
 
    ![“更改签名”对话框](images/changesignature_dialog.png)
 
-   | Button | 描述
+   | 按钮 | 说明
    | ------ | ---
    | 上移/下移    | 在列表中向上和向下移动所选的参数
    | **添加**        | 将新参数添加到列表
-   | **移除**     | 从列表删除所选的参数
+   | **删除**     | 从列表删除所选的参数
    | **修改**     | 通过更改选定参数的类型、名称、是否为可选参数以及注入的值来修改所选参数
    | **还原**     | 还原所选参数的原始状态
    | **还原全部** | 将所有参数还原到其原始状态
@@ -53,9 +53,9 @@ ms.locfileid: "52281943"
 
    可在此处执行以下操作：
 
-   | 条目 | 描述
+   | 条目 | 说明
    | ----- | ---
-   | **Type**               | 参数的类型（int、double、float 等）
+   | 类型               | 参数的类型（int、double、float 等）
    | **名称**               | 参数的名称
    | **可选参数** | 选择性地指定参数
    | **注入值**     | 插入任何未指定参数的函数调用中的值（仅对“添加”有效）

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0d6d3570662cba36a606002263559246e22da57
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180051"
 ---
-# <a name="event"></a>__event
+# <a name="__event"></a>__event
 
 声明事件。
 
@@ -29,26 +29,26 @@ __event member-declarator;
 
 ## <a name="remarks"></a>备注
 
-关键字 **__event**可以应用于方法声明、 接口声明或数据成员声明。 但是，不能使用 **__event**关键字限定嵌套类的成员。
+关键字 **__event**可应用于方法声明、接口声明或数据成员声明。 但是，不能使用 **__event**关键字限定嵌套类的成员。
 
 根据您的事件源和接收器是本机 C++、COM 还是托管 (.NET Framework)，您可使用下列构造作为事件：
 
 |本机 C++|COM|托管 (.NET Framework)|
 |------------------|---------|--------------------------------|
-|方法|—|方法|
-|—|interface|—|
-|—|—|数据成员|
+|方法|—|method|
+|—|接口|—|
+|—|—|数据成员 (data member)|
 
-使用[__hook](../cpp/hook.md)事件接收器与事件方法关联的处理程序方法中。 请注意，在创建的事件后 **__event**关键字，后来挂钩到该事件的所有事件处理程序时，将都调用此事件时都调用。
+在事件接收器中使用[__hook](../cpp/hook.md)将处理程序方法与事件方法相关联。 请注意，在使用 **__event**关键字创建事件后，当调用该事件时，随后将调用与该事件挂钩的所有事件处理程序。
 
-**__Event**方法声明不能具有定义; 定义在隐式生成的因此可以调用事件方法，就像任何普通方法。
+**__Event**方法声明不能有定义;定义是隐式生成的，因此可以像调用任何普通方法一样调用事件方法。
 
 > [!NOTE]
 >  模板类或结构不能包含事件。
 
 ## <a name="native-events"></a>本机事件
 
-本机事件是方法。 返回类型通常是 HRESULT 或**void**，但可以是任何整型类型，包括**枚举**。 当事件使用整数返回类型时，如果事件处理程序返回非零值，则会定义错误条件，在这种情况下，引发的事件将调用其他委托。
+本机事件是方法。 返回类型通常为 HRESULT 或**void**，但可以是任何整型类型，包括**枚举**。 当事件使用整数返回类型时，如果事件处理程序返回非零值，则会定义错误条件，在这种情况下，引发的事件将调用其他委托。
 
 ```cpp
 // Examples of native C++ events:
@@ -56,28 +56,28 @@ __event void OnDblClick();
 __event HRESULT OnClick(int* b, char* s);
 ```
 
-请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)有关示例代码。
+有关示例代码，请参阅[本机C++中的事件处理](../cpp/event-handling-in-native-cpp.md)。
 
 ## <a name="com-events"></a>COM 事件
 
-COM 事件是接口。 事件源接口中的方法的参数应为*中*参数 （但不是强制这一点严格），因为*出*参数不是多播时无用。 如果您使用，将发出 1 级警告*出*参数。
+COM 事件是接口。 事件源接口中的方法的参数应*在参数中*（但这不是严格强制的），因为*out*参数在多播时不起作用。 如果使用*out*参数，将发出1级警告。
 
-返回类型通常是 HRESULT 或**void**，但可以是任何整型类型，包括**枚举**。 当事件使用整数返回类型并且事件处理程序返回非零值时，这是错误情况，此时引发的事件将中止对其他委托的调用。 请注意，编译器会自动将标记作为事件源接口[源](../windows/attributes/source-cpp.md)为生成的 IDL 中。
+返回类型通常为 HRESULT 或**void**，但可以是任何整型类型，包括**enum**。 当事件使用整数返回类型并且事件处理程序返回非零值时，这是错误情况，此时引发的事件将中止对其他委托的调用。 请注意，编译器会将事件源接口自动标记为生成的 IDL 中的[源](../windows/attributes/source-cpp.md)。
 
-[__Interface](../cpp/interface.md)关键字始终是后需要 **__event** COM 事件源。
+在 COM 事件源 **__event**之后始终需要[__interface](../cpp/interface.md)关键字。
 
 ```cpp
 // Example of a COM event:
 __event __interface IEvent1;
 ```
 
-请参阅[COM 中的事件处理](../cpp/event-handling-in-com.md)有关的示例代码。
+有关代码示例，请参阅[COM 中的事件处理](../cpp/event-handling-in-com.md)。
 
 ## <a name="managed-events"></a>托管事件
 
-有关新语法中的编码事件的信息，请参阅[事件](../extensions/event-cpp-component-extensions.md)。
+有关新语法中的事件编码的信息，请参阅[事件](../extensions/event-cpp-component-extensions.md)。
 
-托管事件是数据成员或方法。 与事件使用时，委托的返回类型必须符合[公共语言规范](/dotnet/standard/language-independence-and-language-independent-components)。 事件处理程序的返回类型必须与委托的返回类型匹配。 有关委托的详细信息，请参阅[委托和事件](../dotnet/delegates-and-events.md)。 如果托管事件是数据成员，则其类型必须是指向委托的指针。
+托管事件是数据成员或方法。 当与事件一起使用时，委托的返回类型必须符合[公共语言规范](/dotnet/standard/language-independence-and-language-independent-components)。 事件处理程序的返回类型必须与委托的返回类型匹配。 有关委托的详细信息，请参阅[委托和事件](../dotnet/delegates-and-events.md)。 如果托管事件是数据成员，则其类型必须是指向委托的指针。
 
 在 .NET Framework 中，您可以将数据成员视为方法本身（即，其对应委托的 `Invoke` 方法）。 您必须预定义用于声明托管事件数据成员的委托类型。 相反，如果尚未定义对应的托管委托，则托管事件方法将隐式定义它。 例如，您可以将事件值（如 `OnClick`）声明为下面所示的事件：
 
@@ -89,7 +89,7 @@ __event void OnClick(String* s);  // method as event
 
 隐式声明托管事件时，你可以指定添加或移除添加或移除事件处理程序时将调用的 add 和 remove 访问器。 您还可以定义从类外部调用（引发）事件的方法。
 
-## <a name="example-native-events"></a>示例:本机事件
+## <a name="example-native-events"></a>示例：本机事件
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>示例:COM 事件
+## <a name="example-com-events"></a>示例：COM 事件
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -127,7 +127,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [事件处理](../cpp/event-handling.md)<br/>
