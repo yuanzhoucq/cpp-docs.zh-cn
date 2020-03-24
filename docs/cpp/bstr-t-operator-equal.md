@@ -7,14 +7,14 @@ helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 97f0100d8a34253f3a1375d34b887d3d31a77f43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b7f499dd84a67020232aab84966647378daadad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350866"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181065"
 ---
-# <a name="bstrtoperator-"></a>_bstr_t::operator =
+# <a name="_bstr_toperator-"></a>_bstr_t::operator =
 
 **Microsoft 专用**
 
@@ -29,12 +29,12 @@ _bstr_t& operator=(const wchar_t* s3);
 _bstr_t& operator=(const _variant_t& var);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*s1*<br/>
+s1<br/>
 将分配给现有 `_bstr_t` 对象的 `_bstr_t` 对象。
 
-*s2*<br/>
+s2<br/>
 将分配给现有 `_bstr_t` 对象的多字节字符串。
 
 *s3*<br/>
@@ -47,8 +47,8 @@ _bstr_t& operator=(const _variant_t& var);
 
 ## <a name="example"></a>示例
 
-请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)有关的使用示例**运算符 =**。
+有关使用**operator =** 的示例，请参阅[_Bstr_t：： Assign](../cpp/bstr-t-assign.md) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_bstr_t 类](../cpp/bstr-t-class.md)

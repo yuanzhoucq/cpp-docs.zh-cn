@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aa3b936b9f06153170dac013f9dcd03485c8bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213221"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>有关 MFC ODBC 类的其他阅读材料
 
-进一步的以下主题介绍的概念和本主题中介绍的技术：
+以下主题进一步说明了本主题中引入的概念和技术：
 
 - [MFC 应用程序向导的数据库支持](../../mfc/reference/database-support-mfc-application-wizard.md)
 
@@ -25,9 +25,9 @@ ms.locfileid: "62395893"
 
 - [异常：数据库异常](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC：结合使用数据库类与文档和视图](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC：结合文档和视图使用数据库类](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [MFC：使用数据库类（而不使用文档和视图）](../../data/mfc-using-database-classes-without-documents-and-views.md)
+- [MFC：不结合文档和视图使用数据库类](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
 - [ODBC](../../data/odbc/odbc-basics.md)
 
@@ -47,11 +47,11 @@ ms.locfileid: "62395893"
 
 - [事务 (ODBC)](../../data/odbc/transaction-odbc.md)
 
-开始在读取的好时机是使用[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)。
+开始阅读的好地方是[记录集（ODBC）](../../data/odbc/recordset-odbc.md)。
 
-在中*MFC 参考*，请参阅[CDatabase](../../mfc/reference/cdatabase-class.md)， [CRecordset](../../mfc/reference/crecordset-class.md)， [CRecordView](../../mfc/reference/crecordview-class.md)， [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)，并[CDBException](../../mfc/reference/cdbexception-class.md)。
+在*MFC 参考*中，请[参阅 CDatabase](../../mfc/reference/cdatabase-class.md)、 [CRecordset](../../mfc/reference/crecordset-class.md)、 [CRecordView](../../mfc/reference/crecordview-class.md)、 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)和[CDBException](../../mfc/reference/cdbexception-class.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)<br/>
 [数据访问编程 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

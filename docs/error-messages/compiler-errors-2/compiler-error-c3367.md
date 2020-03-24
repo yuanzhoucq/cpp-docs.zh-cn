@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
-ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bedc94039f8621a93672c0dfa0cad5a54aad796e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201157"
 ---
 # <a name="compiler-error-c3367"></a>编译器错误 C3367
 
@@ -19,7 +19,7 @@ ms.locfileid: "62300526"
 
 当你调用未绑定的委托时，必须传递对象的实例。 由于通过类名称调用静态成员函数，因此仅能通过实例成员函数实例化未绑定的委托。
 
-有关未绑定的委托的详细信息，请参阅[如何：定义和使用委托 (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)。
+有关未绑定委托的详细信息，请参阅[如何：定义和使用委托C++（/cli）](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

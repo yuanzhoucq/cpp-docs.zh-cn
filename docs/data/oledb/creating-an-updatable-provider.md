@@ -6,81 +6,81 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2811cd56bdc87282b9d4395a9a79ba9b333dadee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361852"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211388"
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 
-VisualC++支持可更新的提供程序或可更新的提供程序 （写入） 数据存储区。 本主题讨论如何创建可更新的提供程序使用 OLE DB 模板。
+视觉C++对象支持可更新的提供程序或可更新数据存储的提供程序。 本主题讨论如何使用 OLE DB 模板创建可更新的提供程序。
 
-本主题假定你着手工作提供程序。 有两个步骤创建可更新的提供程序。 您必须首先确定如何提供程序将对数据存储区; 进行的更改具体而言，是否更改会立即完成或者延迟，直到发出 update 命令。 部分"[使提供程序可更新](#vchowmakingprovidersupdatable)"的更改和的设置，需要在提供程序代码中执行操作。
+本主题假定你开始使用的是可使用的提供程序。 创建可更新的提供程序有两个步骤。 您必须首先确定提供程序将如何对数据存储进行更改;具体而言，是立即执行更改还是推迟更改，直到发出 update 命令。 "[使提供程序可更新](#vchowmakingprovidersupdatable)" 一节描述了在提供程序代码中需要执行的更改和设置。
 
-接下来，必须确保您的提供程序包含所有功能，以支持使用者可能会请求它的任何内容。 如果使用者想要更新的数据存储区，则提供程序必须包含的数据保存到数据存储区的代码。 例如，可能会使用 MFC 的 C 运行时库来执行此类操作对数据源。 部分"[写入到数据源](#vchowwritingtothedatasource)"介绍如何将写入到数据源，处理 NULL 和默认值，并设置列标志。
+接下来，必须确保提供程序包含支持使用者可能请求的任何内容的所有功能。 如果使用者想要更新数据存储区，则提供程序必须包含将数据保存到数据存储的代码。 例如，您可以使用 C 运行时库或 MFC 对您的数据源执行此类操作。 "[写入数据源](#vchowwritingtothedatasource)" 一节介绍如何向数据源写入数据，如何处理 NULL 值和默认值，以及如何设置列标志。
 
 > [!NOTE]
-> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)是可更新的提供程序的示例。 UpdatePV 是相同的作为 MyProv 但对可更新的支持。
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)是可更新的提供程序的一个示例。 UpdatePV 与 MyProv 相同，但具有可更新的支持。
 
-##  <a name="vchowmakingprovidersupdatable"></a> 使提供程序可更新
+##  <a name="making-providers-updatable"></a><a name="vchowmakingprovidersupdatable"></a>使提供程序可更新
 
-使提供程序可更新的关键了解您希望在提供程序对数据存储区和想要执行这些操作的提供程序如何执行哪些的操作。 具体而言，主要问题是数据存储区的更新是否要立即完成或延迟 （批处理） 发出更新命令之前。
+使提供程序可更新的关键是了解你希望提供程序在数据存储中执行哪些操作，以及你希望提供程序如何执行这些操作。 具体而言，主要问题是是否立即或延迟（批处理）对数据存储进行更新，直至发出 update 命令。
 
-您必须首先决定是否继承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`行集类中。 具体取决于这些所选内容来实现，三种方法的功能将会受到影响： `SetData`， `InsertRows`，和`DeleteRows`。
+首先，必须确定是否从行集类中的 `IRowsetChangeImpl` 或 `IRowsetUpdateImpl` 继承。 这三种方法的功能会受到影响，具体取决于所选的实现方式： `SetData`、`InsertRows`和 `DeleteRows`。
 
-- 如果继承自[IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)，立即调用这三种方法更改数据存储区。
+- 如果从[IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)继承，则调用这三个方法会立即更改数据存储区。
 
-- 如果继承自[IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)，方法延迟到数据存储区的更改，直到你调用`Update`， `GetOriginalData`，或`Undo`。 如果更新涉及多项更改，它们在批处理模式下 （请注意，批处理更改可以添加相当大的内存开销） 执行。
+- 如果从[IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)继承，则方法将更改保存到数据存储区，直到你调用 `Update`、`GetOriginalData`或 `Undo`。 如果更新涉及多个更改，则在批处理模式下执行（请注意，批处理更改可能会增加相当多的内存开销）。
 
-请注意，`IRowsetUpdateImpl`派生自`IRowsetChangeImpl`。 因此，`IRowsetUpdateImpl`提供更改功能以及批处理功能。
+请注意，`IRowsetUpdateImpl` 派生自 `IRowsetChangeImpl`。 因此，`IRowsetUpdateImpl` 提供了更改功能和批处理功能。
 
-### <a name="to-support-updatability-in-your-provider"></a>若要在您的提供程序中支持可更新性
+### <a name="to-support-updatability-in-your-provider"></a>支持提供程序中的可更新性
 
-1. 在行集类中，继承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`。 这些类用于更改数据存储区提供相应的接口：
+1. 在行集类中，继承自 `IRowsetChangeImpl` 或 `IRowsetUpdateImpl`。 这些类提供了用于更改数据存储的相应接口：
 
-   **Adding IRowsetChange**
+   **添加 IRowsetChange**
 
-   添加`IRowsetChangeImpl`到使用此窗体继承链：
+   使用以下格式将 `IRowsetChangeImpl` 添加到继承链：
 
     ```cpp
     IRowsetChangeImpl< rowset-name, storage-name >
     ```
 
-   此外将添加`COM_INTERFACE_ENTRY(IRowsetChange)`到`BEGIN_COM_MAP`行集类中的部分。
+   同时，将 `COM_INTERFACE_ENTRY(IRowsetChange)` 添加到行集类中的 `BEGIN_COM_MAP` 部分。
 
    **添加 IRowsetUpdate**
 
-   添加`IRowsetUpdate`到使用此窗体继承链：
+   使用以下格式将 `IRowsetUpdate` 添加到继承链：
 
     ```cpp
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
    > [!NOTE]
-   > 应删除`IRowsetChangeImpl`继承链中的行。 如前面所述的指令的此例外必须包含的代码`IRowsetChangeImpl`。
+   > 你应从继承链中删除 `IRowsetChangeImpl` 行。 前面提到的指令的这一例外必须包含用于 `IRowsetChangeImpl`的代码。
 
-1. 将以下代码添加到 COM 映射 (`BEGIN_COM_MAP ... END_COM_MAP`):
+1. 将以下内容添加到 COM 映射（`BEGIN_COM_MAP ... END_COM_MAP`）：
 
-   |  如果你实现   |           将添加到 COM 映射             |
+   |  如果实现   |           添加到 COM 映射             |
    |---------------------|--------------------------------------|
    | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
    | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
 
-   | 如果你实现 | 将添加到属性组映射 |
+   | 如果实现 | 添加到属性集映射 |
    |----------------------|-----------------------------|
    | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. 在命令中，将以下代码添加到属性集映射中 (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
+1. 在命令中，将以下内容添加到属性集映射（`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`）：
 
-   |  如果你实现   |                                             将添加到属性组映射                                              |
+   |  如果实现   |                                             添加到属性集映射                                              |
    |---------------------|------------------------------------------------------------------------------------------------------------------|
    | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. 在属性集映射中，您还应包括以下设置的所有按照如下所示：
+1. 在属性集映射中，还应包括下面显示的所有设置：
 
     ```cpp
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |
@@ -100,95 +100,95 @@ VisualC++支持可更新的提供程序或可更新的提供程序 （写入） 
       DBPROPFLAGS_READ, VARIANT_FALSE, 0)
     ```
 
-   您可以找到这些宏调用中，由在 Atldb.h 中查找的属性 Id 和值的值 （如果 Atldb.h 不同于联机文档，Atldb.h 取代文档）。
+   通过在为 atldb.h 中查找属性 Id 和值（如果为 atldb.h 与联机文档不同，为 atldb.h 将取代文档），可以查找这些宏调用中使用的值。
 
    > [!NOTE]
-   > 许多`VARIANT_FALSE`和`VARIANT_TRUE`设置所需的 OLE DB 模板; OLE DB 规范指出，它们可以是读/写，但 OLE DB 模板仅支持一个值。
+   > OLE DB 模板需要许多 `VARIANT_FALSE` 和 `VARIANT_TRUE` 设置;OLE DB 规范指示它们可以是可读/写的，但 OLE DB 模板只能支持一个值。
 
    **如果实现 IRowsetChangeImpl**
 
-   如果你实现`IRowsetChangeImpl`，必须在您的提供程序上设置以下属性。 这些属性主要用于请求通过接口`ICommandProperties::SetProperties`。
+   如果实现 `IRowsetChangeImpl`，则必须在提供程序上设置以下属性。 这些属性主要用于通过 `ICommandProperties::SetProperties`来请求接口。
 
-   - `DBPROP_IRowsetChange`：这会自动设置集`DBPROP_IRowsetChange`。
+   - `DBPROP_IRowsetChange`：设置此操作会自动设置 `DBPROP_IRowsetChange`。
 
-   - `DBPROP_UPDATABILITY`：指定受支持的方法上的位掩码`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。
+   - `DBPROP_UPDATABILITY`：指定 `IRowsetChange`上支持的方法的位掩码： `SetData`、`DeleteRows`或 `InsertRow`。
 
-   - `DBPROP_CHANGEINSERTEDROWS`：使用者可以调用`IRowsetChange::DeleteRows`或`SetData`为新插入的行。
+   - `DBPROP_CHANGEINSERTEDROWS`：使用者可以为新插入的行调用 `IRowsetChange::DeleteRows` 或 `SetData`。
 
-   - `DBPROP_IMMOBILEROWS`：行集不会对插入或更新的行重新排序。
+   - `DBPROP_IMMOBILEROWS`：行集不会对插入行或更新的行重新排序。
 
    **如果实现 IRowsetUpdateImpl**
 
-   如果你实现了`IRowsetUpdateImpl`，必须设置以下属性上您的提供商，除了为的所有属性都设置`IRowsetChangeImpl`以前列出：
+   如果实现 `IRowsetUpdateImpl`，则除了设置前面列出的 `IRowsetChangeImpl` 的所有属性外，还必须在提供程序上设置以下属性：
 
-   - `DBPROP_IRowsetUpdate`。
+   - `DBPROP_IRowsetUpdate` 列中的一个值匹配。
 
-   - `DBPROP_OWNINSERT`：必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OWNINSERT`：必须 READ_ONLY 并 VARIANT_TRUE。
 
-   - `DBPROP_OWNUPDATEDELETE`：必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OWNUPDATEDELETE`：必须 READ_ONLY 并 VARIANT_TRUE。
 
-   - `DBPROP_OTHERINSERT`：必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OTHERINSERT`：必须 READ_ONLY 并 VARIANT_TRUE。
 
-   - `DBPROP_OTHERUPDATEDELETE`：必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OTHERUPDATEDELETE`：必须 READ_ONLY 并 VARIANT_TRUE。
 
-   - `DBPROP_REMOVEDELETED`：必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_REMOVEDELETED`：必须 READ_ONLY 并 VARIANT_TRUE。
 
-   - `DBPROP_MAXPENDINGROWS`。
+   - `DBPROP_MAXPENDINGROWS` 列中的一个值匹配。
 
    > [!NOTE]
-   > 如果支持通知，您可能还有一些其他属性;请参阅部分`IRowsetNotifyCP`为此列表。
+   > 如果支持通知，还可以使用其他一些属性;请参阅此列表 `IRowsetNotifyCP` 的部分。
 
-##  <a name="vchowwritingtothedatasource"></a> 写入到数据源
+##  <a name="writing-to-the-data-source"></a><a name="vchowwritingtothedatasource"></a>写入数据源
 
-若要从数据源中读取，调用`Execute`函数。 若要写入的数据源，请调用`FlushData`函数。 （在常规的意义上，刷新表示以保存对表或索引到磁盘进行的修改。）
+若要从数据源读取数据，请调用 `Execute` 函数。 若要写入数据源，请调用 `FlushData` 函数。 （一般意义上，flush 是指将对表或索引所做的修改保存到磁盘。）
 
 ```cpp
 FlushData(HROW, HACCESSOR);
 ```
 
-行句柄 (HROW) 和访问器句柄 (HACCESSOR) 参数，可以指定要写入的区域。 通常情况下，一次写入的单个数据字段。
+行句柄（HROW）和取值函数句柄（HACCESSOR）参数允许指定要写入的区域。 通常，一次写入一个数据字段。
 
-`FlushData`方法中最初存储的格式写入数据。 如果不重写此函数，您的提供程序将正常工作，但不是会进行更改刷新到数据存储。
+`FlushData` 方法以最初存储数据的格式写入数据。 如果不重写此函数，则提供程序将正常工作，但不会将更改刷新到数据存储区。
 
 ### <a name="when-to-flush"></a>何时刷新
 
-提供程序模板调用 FlushData，每当数据需要写入到数据存储区;这通常 （但并非总是如此），将发生以下函数调用：
+每当需要将数据写入数据存储时，提供程序模板就会调用 FlushData;这通常（但不总是）会由于调用以下函数而发生：
 
 - `IRowsetChange::DeleteRows`
 
 - `IRowsetChange::SetData`
 
-- `IRowsetChange::InsertRows` （如果没有要插入的行中的新数据）
+- `IRowsetChange::InsertRows` （如果有新的数据要插入到行中）
 
 - `IRowsetUpdate::Update`
 
-### <a name="how-it-works"></a>其工作原理
+### <a name="how-it-works"></a>工作原理
 
-使用者发出要求 （如更新） 刷新的调用而此调用传递给提供程序，始终将执行以下操作：
+使用者发出要求刷新（例如更新）的调用，并将此调用传递到提供程序，这将始终执行以下操作：
 
-- 调用`SetDBStatus`每当有绑定的状态值。
+- 只要有一个状态值，就 `SetDBStatus` 调用。
 
 - 检查列标志。
 
 - 调用 `IsUpdateAllowed`。
 
-这三个步骤帮助提供安全。 然后在提供程序调用`FlushData`。
+这三个步骤有助于提供安全性。 然后，提供程序调用 `FlushData`。
 
 ### <a name="how-to-implement-flushdata"></a>如何实现 FlushData
 
-若要实现`FlushData`，您需要考虑的几个问题：
+若要实现 `FlushData`，需要考虑几个问题：
 
-确保数据存储区可以处理的更改。
+确保数据存储可以处理更改。
 
 处理 NULL 值。
 
 ### <a name="handling-default-values"></a>处理默认值。
 
-若要实现您自己`FlushData`方法中，你需要：
+若要实现您自己的 `FlushData` 方法，您需要：
 
-- 请转到行集类。
+- 中转到行集类。
 
-- 在行集类中，放置的声明：
+- 在行集类中放置的声明：
 
    ```cpp
    HRESULT FlushData(HROW, HACCESSOR)
@@ -197,21 +197,21 @@ FlushData(HROW, HACCESSOR);
    }
    ```
 
-- 提供的实现`FlushData`。
+- 提供 `FlushData`的实现。
 
-好实现的`FlushData`存储的行和列的实际更新。 HROW 和 HACCESSOR 参数可用于确定当前行和列存储的优化。
+`FlushData` 的良好实现仅存储实际更新的行和列。 您可以使用 HROW 和 HACCESSOR 参数来确定当前要存储以进行优化的行和列。
 
-通常，最大的挑战如何使用你自己的本机数据存储。 如果可能，请尝试：
+通常，最大的挑战是使用自己的本机数据存储。 如果可能，请尝试执行以下操作：
 
-- 保留写入到数据存储区一样简单的方法。
+- 使写入数据存储区的方法尽可能简单。
 
-- 处理 NULL 值 （可选但建议）。
+- 处理 NULL 值（可选，但建议这样做）。
 
-- 处理默认值 （可选但建议）。
+- 处理默认值（可选，但建议这样做）。
 
-最佳办法就是能够实际指定的值为 NULL 和默认值在数据存储区中。 最好可以运用此数据。 如果没有，则建议不允许空值和默认值。
+最好的做法是将数据存储中的实际指定值指定为 NULL 值和默认值。 最好是将此数据外推。 如果不允许，则建议您不要允许空值和默认值。
 
-下面的示例演示如何`FlushData`中实现`RUpdateRowset`类中`UpdatePV`示例 （在示例代码，请参阅 Rowset.h）：
+下面的示例演示如何在 `UpdatePV` 示例的 `RUpdateRowset` 类中实现 `FlushData` （请参阅示例代码中的 Rowset）：
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////
@@ -295,25 +295,25 @@ HRESULT FlushData(HROW, HACCESSOR)
 
 ### <a name="handling-changes"></a>处理更改
 
-为提供者来处理更改，首先需要确保数据存储区 （如文本文件或视频文件中） 具有使您能够对它进行更改的功能。 如果不是，应从提供程序项目单独创建该代码。
+为了使提供程序能够处理更改，您首先需要确保您的数据存储区（例如文本文件或视频文件）的功能使您能够对其进行更改。 如果不是，则应将该代码与提供程序项目分开创建。
 
 ### <a name="handling-null-data"></a>处理 NULL 数据
 
-有可能，最终用户将会发送 NULL 数据。 当数据源中的字段中写入 NULL 值时，可能会有潜在问题。 假设接受表示城市和邮政编码; 值的顺序进行应用程序它能接受一个或两个值，但不是既不，因为在这种情况下传递就不可能。 因此需要限制对你的应用程序有意义的字段中的 NULL 值的某些组合。
+最终用户可能会发送 NULL 数据。 向数据源中的字段写入空值时，可能会出现潜在问题。 假设有一个按顺序排列的应用程序，接受城市和邮政编码的值;它可以接受或同时接受两个值，但不能同时接受这两个值，因为在这种情况下不可能进行传递。 因此，必须在对应用程序有意义的字段中限制某些 NULL 值组合。
 
-作为提供程序开发人员，您必须考虑如何将存储此数据、 如何将数据存储中读取该数据和如何为用户指定的。 具体而言，必须考虑如何更改数据源中的行集数据的数据状态 (例如，DataStatus = NULL)。 您决定要使用者访问包含 NULL 值的字段时返回的值。
+作为提供者开发人员，您必须考虑如何存储该数据，如何从数据存储中读取数据，以及如何将该数据指定给用户。 具体来说，您必须考虑如何更改数据源中行集数据的数据状态（例如，DataStatus = NULL）。 当使用者访问包含 NULL 值的字段时，可以决定返回什么值。
 
-看一下 UpdatePV 示例; 中的代码它演示了一个提供程序如何处理 NULL 的数据。 在 UpdatePV，提供程序数据存储中存储通过编写在字符串"NULL"NULL 数据。 当它从数据存储区中读取 NULL 数据时，它将会看到该字符串，然后清空缓冲区，以创建空字符串。 它还具有的重写`IRowsetImpl::GetDBStatus`在它返回 DBSTATUS_S_ISNULL 该数据值是否为空。
+查看 UpdatePV 示例中的代码;它说明了提供程序如何处理 NULL 数据。 在 UpdatePV 中，提供程序通过将字符串 "NULL" 写入数据存储区来存储空数据。 在从数据存储区中读取 NULL 数据时，它会看到该字符串，然后清空缓冲区，从而创建一个 NULL 字符串。 它还覆盖了 `IRowsetImpl::GetDBStatus`，如果该数据值为空，则它会在其中返回 DBSTATUS_S_ISNULL。
 
-### <a name="marking-nullable-columns"></a>将标记为 Null 的列
+### <a name="marking-nullable-columns"></a>标记可为空的列
 
-如果还实现架构行集 (请参阅`IDBSchemaRowsetImpl`)，您的实现应指定 DBSCHEMA_COLUMNS 行集 （通常标记提供程序中通过 CxxxSchemaColSchemaRowset） 中的列可以为 null。
+如果还实现架构行集（请参阅 `IDBSchemaRowsetImpl`），则实现应在 DBSCHEMA_COLUMNS 行集中指定（通常由 CxxxSchemaColSchemaRowset 在提供程序中标记），该列可为 null。
 
-此外需要指定可以为 null 的所有列都包含你的版本中的 DBCOLUMNFLAGS_ISNULLABLE 值`GetColumnInfo`。
+还需要指定所有可为 null 的列都包含您的 `GetColumnInfo`版本中的 DBCOLUMNFLAGS_ISNULLABLE 值。
 
-在 OLE DB 模板实现中，如果您不能将标记为可为 null，列提供程序将假定它们必须包含一个值，并且将不允许使用者将其发送 null 值。
+在 OLE DB 模板实现中，如果无法将列标记为可以为 null，则提供程序会假定它们必须包含一个值，并且不允许使用者向其发送 null 值。
 
-下面的示例演示如何将`CommonGetColInfo`在 CUpdateCommand 中实现函数 （请参阅 UpProvRS.cpp） UpdatePV 中。 请注意如何列具有此 DBCOLUMNFLAGS_ISNULLABLE 为 null 的列。
+下面的示例演示如何在 CUpdateCommand 中实现 `CommonGetColInfo` 函数（请参阅 UpProvRS）。 请注意，这些列对可以为 null 的列提供此 DBCOLUMNFLAGS_ISNULLABLE 的方式。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////////
@@ -370,11 +370,11 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
 
 ### <a name="default-values"></a>默认值
 
-与 NULL 数据一样，您有责任处理如何更改默认值。
+与 NULL 数据一样，你有责任处理更改默认值。
 
-默认值为`FlushData`和`Execute`将返回 S_OK。 因此，如果不重写此函数，所做的更改看起来是成功 （返回 S_OK），但它们不能传输到数据存储。
+`FlushData` 和 `Execute` 的默认值是返回 S_OK。 因此，如果不重写此函数，则更改看起来是成功的（将返回 S_OK），但不会将这些更改传输到数据存储区。
 
-在中`UpdatePV`示例 （在 Rowset.h)，`SetDBStatus`方法处理默认值，如下所示：
+在 `UpdatePV` 示例（位于 Rowset）中，`SetDBStatus` 方法处理默认值，如下所示：
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
@@ -413,11 +413,11 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>列标志
 
-如果在列上支持默认值，则需要将其使用中的元数据设置\<提供程序类\>SchemaRowset 类。 设置 `m_bColumnHasDefault = VARIANT_TRUE`。
+如果支持列的默认值，则需要使用 \<提供程序类\>t 类中的元数据对其进行设置。 设置 `m_bColumnHasDefault = VARIANT_TRUE`。
 
-您也有责任设置指定使用 DBCOLUMNFLAGS 枚举类型的列标志。 列标志描述列特征。
+您还有责任设置列标志，这些列标志是使用 DBCOLUMNFLAGS 枚举类型指定的。 列标志说明列特性。
 
-例如，在`CUpdateSessionColSchemaRowset`类中`UpdatePV`（在 Session.h)，第一列将设置这种方式：
+例如，在 `UpdatePV` （位于 `CUpdateSessionColSchemaRowset` 类中）中，第一列按以下方式设置：
 
 ```cpp
 // Set up column 1
@@ -432,8 +432,8 @@ lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
 m_rgRowData.Add(trData[0]);
 ```
 
-此代码指定，除此之外，列支持默认值为 0，它是可写，并且列中的所有数据都具有相同的长度。 如果你想要具有可变长度的列中的数据，则不要设置此标志。
+此代码指定列是否支持默认值0、可写且列中的所有数据都具有相同的长度。 如果希望列中的数据具有可变长度，则不会设置此标志。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [创建 OLE DB 提供程序](creating-an-ole-db-provider.md)

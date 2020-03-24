@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0031
 - CXX0031
 ms.assetid: adafbcb7-982f-495f-a34d-72e95d7e54c7
-ms.openlocfilehash: 29bd4959c7bdd20b25279ca5d0e18814d1b23039
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd4b0d744f9fc101ec4a7bc3a2a01f1d14cfbf7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397089"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195586"
 ---
 # <a name="expression-evaluator-error-cxx0031"></a>表达式计算器错误 CXX0031
 
-不可扩展的表达式
+表达式不可扩展
 
 表达式计算器遇到内部错误。
 
-您可能能够编写可以正确地计算的等效表达式。
+您可以编写可正确计算的等效表达式。
 
-此错误是与 CAN0031 相同。
+此错误与 CAN0031 相同。
