@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: MT
+ms.openlocfilehash: 459e46f6aa144c591173a159c282658b120b1af3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425111"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150598"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函数
 
@@ -44,7 +44,7 @@ ms.locfileid: "79425111"
 |[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
 |[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a>  getline
+## <a name="getline"></a><a name="getline"></a>  getline
 
 将字符串从输入流中一行一行地提取出来。
 
@@ -156,7 +156,7 @@ int main()
 }
 ```
 
-## <a name="stod"></a>  stod
+## <a name="stod"></a><a name="stod"></a>  stod
 
 将字符序列转换为**双精度型**。
 
@@ -184,9 +184,9 @@ double stod(
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为**double**类型的值 `val`，就像调用 `strtod( str.c_str(), _Eptr)`一样，其中 `_Eptr` 是函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
+函数将*str*中的元素序列转换为**double**类型的值 `val`，就像调用 `strtod( str.c_str(), _Eptr)`一样，其中 `_Eptr` 是函数的内部对象。 如果 `str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
 
-## <a name="stof"></a>  stof
+## <a name="stof"></a><a name="stof"></a>  stof
 
 将字符序列转换为浮动的。
 
@@ -213,9 +213,9 @@ float stof(
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为**float**类型的值 `val`，就像通过调用 `strtof( str.c_str(), _Eptr)`（其中 `_Eptr` 是函数的内部对象）。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
+函数将*str*中的元素序列转换为**float**类型的值 `val`，就像通过调用 `strtof( str.c_str(), _Eptr)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
 
-## <a name="stoi"></a>  stoi
+## <a name="stoi"></a><a name="stoi"></a>  stoi
 
 将字符序列转换为整数。
 
@@ -251,7 +251,7 @@ int stoi(
 
 如果 `str.c_str() == *_Eptr`，`stoi` 将引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，或者如果返回值无法表示为**int**类型的对象，则它将引发 `out_of_range`类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr - str.c_str()` 存储在 `*idx`中。
 
-## <a name="stol"></a>  stol
+## <a name="stol"></a><a name="stol"></a>  stol
 
 将字符序列转换为**long 类型**。
 
@@ -281,9 +281,9 @@ long stol(
 
 ### <a name="remarks"></a>备注
 
-函数通过调用 `strtol( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**long**类型的值 `val`。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
+函数通过调用 `strtol( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**long**类型的值 `val`。 如果 `str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
 
-## <a name="stold"></a>  stold
+## <a name="stold"></a><a name="stold"></a>  stold
 
 将字符序列转换为**长双精度值**。
 
@@ -310,9 +310,9 @@ double stold(
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为**long double**类型的值 `val`，就像通过调用 `strtold( str.c_str(), _Eptr)`（其中 `_Eptr` 是函数的内部对象）。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
+函数将*str*中的元素序列转换为**long double**类型的值 `val`，就像通过调用 `strtold( str.c_str(), _Eptr)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
 
-## <a name="stoll"></a>  stoll
+## <a name="stoll"></a><a name="stoll"></a>  stoll
 
 将字符序列转换为**长**整型。
 
@@ -342,9 +342,9 @@ long long stoll(
 
 ### <a name="remarks"></a>备注
 
-函数通过调用 `strtoll( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**long**类型的值 `val`。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
+函数通过调用 `strtoll( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**long**类型的值 `val`。 如果 `str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
 
-## <a name="stoul"></a>  stoul
+## <a name="stoul"></a><a name="stoul"></a>  stoul
 
 将字符序列转换为无符号长整数。
 
@@ -374,9 +374,9 @@ unsigned long stoul(
 
 ### <a name="remarks"></a>备注
 
-函数通过调用 `strtoul( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**无符号 long**类型的值 `val`。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
+函数通过调用 `strtoul( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**无符号 long**类型的值 `val`。 如果 `str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
 
-## <a name="stoull"></a>  stoull
+## <a name="stoull"></a><a name="stoull"></a>  stoull
 
 将字符序列转换为**无符号长**整数。
 
@@ -406,9 +406,9 @@ unsigned long long stoull(
 
 ### <a name="remarks"></a>备注
 
-函数通过调用 `strtoull( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**无符号长**整型值 `val`。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
+函数通过调用 `strtoull( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象），将*str*中的元素序列转换为**无符号长**整型值 `val`。 如果 `str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数将 `*_Eptr -  str.c_str()` 存储在 `*idx` 并返回 `val`。
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a> swap
 
 交换两个字符串的字符数组。
 
@@ -464,7 +464,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a>  to_string
+## <a name="to_string"></a><a name="to_string"></a>  to_string
 
 将一个值转换为 `string`。
 
@@ -512,7 +512,7 @@ string to_string(long double Val);
 
 该函数返回 `string(Buf)`。
 
-## <a name="to_wstring"></a>  to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>  to_wstring
 
 将一个值转换为宽字符串。
 

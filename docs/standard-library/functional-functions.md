@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150675"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函数
 
@@ -51,7 +51,7 @@ C + + 17 中弃用了这些函数：
 |-|-|
 |[not1](#not1)|[not2](#not2)|
 
-## <a name="bind"></a>绑定
+## <a name="bind"></a><a name="bind"></a>绑定
 
 将自变量绑定到可调用对象。
 
@@ -81,7 +81,7 @@ template <class RTy, class FT, class T1, class T2, ..., class TN>
 
 `FT, T1, T2, ..., TN` 的类型必须是可构造的，并且 `INVOKE(fn, t1, ..., tN)` 必须是 `w1, w2, ..., wN`的某些值的有效表达式。
 
-第一个模板函数返回具有弱结果类型的转发调用包装器 `g`。 `g(u1, u2, ..., uM)` 的效果 `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`，其中 `cv` 是 `g` 的 cv 限定符，绑定参数的值和类型按以下指定确定 `v1, v2, ..., vN`。 你可以使用它将参数绑定到可调用的对象，从而使可调用对象具有定制的参数列表。
+第一个模板函数返回具有弱结果类型的转发调用包装器 `g`。 `g(u1, u2, ..., uM)` 的效果 `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`，其中 `cv` 是 `g` 的 cv 限定符，绑定参数的值和类型按以下指定确定 `v1, v2, ..., vN`。 你可以使用它将参数绑定到可调用的对象，从而使可调用对象具有定制的参数列表。
 
 第二个模板函数返回转移调用包装器 `g`，该包装器具有作为 `result_type` 的同义词的嵌套类型 `RTy`。 `g(u1, u2, ..., uM)` 产生的作用是 `INVOKE(f, v1, v2, ..., vN, RTy)`，其中 `cv` 是 `g` 的 cv 限定符，绑定参数 `v1, v2, ..., vN` 的值和类型按以下指定内容确定。 你可以使用它将参数绑定到可调用的对象，从而使可调用对象具有定制的参数列表和指定的返回类型。
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st
 
 一个帮助器模板函数，该函数创建一个适配器，以将二元函数对象转换为一元函数对象。 它将二元函数的第一个自变量绑定到指定的值。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
 
 一个帮助器模板函数，该函数创建一个适配器，以将二元函数对象转换为一元函数对象。 它将二元函数的第二个参数绑定到指定的值。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 一个预定义函数对象，该对象对其参数执行按位 "与" 运算（二进制 `operator&`）。
 
@@ -381,7 +381,7 @@ struct bit_and<void>
 
 `bit_and` 函子被限制为基本数据类型的整型类型，或限制为实现二元 `operator&` 的用户定义的类型。
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 对其参数执行按位求补运算（NOT）运算（一元 `operator~`）的预定义函数对象。 在 c + + 14 中添加。
 
@@ -417,7 +417,7 @@ struct bit_not<void>
 
 `bit_not` 函子被限制为基本数据类型的整型类型，或限制为实现二元 `operator~` 的用户定义的类型。
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 对其参数执行按位 "或" 运算（`operator|`）的预定义函数对象。
 
@@ -458,7 +458,7 @@ struct bit_or<void>
 
 `bit_or` 函子被限制为基本数据类型的整型类型，或限制为实现 `operator|` 的用户定义的类型。
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 对其参数执行按位 XOR 运算（二进制 `operator^`）的预定义函数对象。
 
@@ -499,7 +499,7 @@ struct bit_xor<void>
 
 `bit_xor` 函子被限制为基本数据类型的整型类型，或限制为实现二元 `operator^` 的用户定义的类型。
 
-## <a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a>cref
 
 从变量构造常量 `reference_wrapper`。
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>唤醒
+## <a name="invoke"></a><a name="invoke"></a>唤醒
 
 调用具有给定参数的任何可调用对象。 在 c + + 17 中添加。
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 生成一个简单的调用包装器。
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 帮助程序模板函数，在使用指针自变量进行初始化的情况下，用来构造成员函数的函数对象适配器。 在 c + + 11 中已弃用，用于[mem_fn](#mem_fn)和[绑定](#bind)，并在 c + + 17 中删除。
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 帮助程序模板函数，在使用引用参数进行初始化的情况下，用来构造成员函数的函数对象适配器。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a>not1
 
 返回一元谓词的补集。 为 c + + 17 中的[not_fn](#not_fn)弃用。
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a>not2
 
 返回二元谓词的补集。 为 c + + 17 中的[not_fn](#not_fn)弃用。
 
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 `not_fn` 函数模板采用可调用对象，并返回一个可调用对象。 以后用一些参数调用返回的可调用对象时，它会将这些对象传递给原始的可调用对象，并以逻辑方式否定结果。 它保留包装的可调用对象的 const 限定和值类别行为。 `not_fn` 在 c + + 17 中是新增的，并替换弃用的 `std::not1`、`std::not2`、`std::unary_negate`和 `std::binary_negate`。
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 帮助程序模板函数，用于将一元和二元函数指针分别转换为一元和二元自适应函数。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
@@ -1210,7 +1210,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>ref
+## <a name="ref"></a><a name="ref"></a>ref
 
 从变量构造常量 `reference_wrapper` 。
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a>购
 
 交换两个 `function` 对象。
 

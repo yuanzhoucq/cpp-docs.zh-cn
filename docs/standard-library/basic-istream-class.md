@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d614e00657de82b014af94df161775790ae417d3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150768"
 ---
 # <a name="basic_istream-class"></a>basic_istream 类
 
@@ -167,9 +167,9 @@ setstate(state);
 
 **标头：** \<istream >
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>  basic_istream::basic_istream
 
 构造 `basic_istream` 类型的对象。
 
@@ -202,7 +202,7 @@ basic_istream(basic_istream&& right);
 
 请参阅 [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) 的示例，了解输入流的详细信息。
 
-## <a name="gcount"></a>  basic_istream::gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>  basic_istream::gcount
 
 返回在最后一个未格式化输入期间读取的字符数。
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="get"></a>  basic_istream::get
+## <a name="basic_istreamget"></a><a name="get"></a>  basic_istream::get
 
 从输入流中读取一个或多个字符。
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="getline"></a>  basic_istream::getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>  basic_istream::getline
 
 从输入流中获取一行。
 
@@ -397,7 +397,7 @@ int main( )
 121
 ```
 
-## <a name="ignore"></a>  basic_istream::ignore
+## <a name="basic_istreamignore"></a><a name="ignore"></a>  basic_istream::ignore
 
 导致从当前读取位置跳过大量元素。
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>基本\_istream：： operator > >
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>基本\_istream：： operator > >
 
 调用输入流上的函数或从输入流中读取格式化数据。
 
@@ -574,7 +574,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  basic_istream::operator=
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>  basic_istream::operator=
 
 将运算符右侧上的 `basic_istream` 分配给此对象。 这是一种移动赋值，涉及不会留下副本的 `rvalue` 引用。
 
@@ -595,7 +595,7 @@ basic_istream& operator=(basic_istream&& right);
 
 成员运算符调用 `swap(right)`。
 
-## <a name="peek"></a>  basic_istream::peek
+## <a name="basic_istreampeek"></a><a name="peek"></a>  basic_istream::peek
 
 返回要读取的下一字符。
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="putback"></a>  basic_istream::putback
+## <a name="basic_istreamputback"></a><a name="putback"></a>  basic_istream::putback
 
 将指定的字符放入流。
 
@@ -686,7 +686,7 @@ int main( )
 qwq
 ```
 
-## <a name="read"></a>  basic_istream::read
+## <a name="basic_istreamread"></a><a name="read"></a>  basic_istream::read
 
 从流中读取指定数目的字符，并将其存储到数组中。
 
@@ -747,7 +747,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="readsome"></a>  basic_istream::readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>  basic_istream::readsome
 
 读取指定数量的字符值。
 
@@ -806,7 +806,7 @@ int main( )
 }
 ```
 
-## <a name="seekg"></a>  basic_istream::seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>  basic_istream::seekg
 
 在流中移动读取位置。
 
@@ -838,7 +838,7 @@ basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 > [!NOTE]
 > 不要对文本文件使用第二个成员函数，因为标准 C++ 不支持在文本文件中进行相对查找。
 
-如果[`fail`](../standard-library/basic-ios-class.md#fail)为 false，则第一个成员函数将 `newpos = `的[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)``pos_type`。`newpos` 如果 `fail` 为 false，则第二个函数 `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`调用。 在任一情况下，如果 `(off_type)newpos == (off_type)(-1)` （定位操作失败），该函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)``istr.`。 这两个函数都返回 __* this__。
+如果[`fail`](../standard-library/basic-ios-class.md#fail)为 false，则第一个成员函数将 `newpos =` 的[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)``pos_type`。`newpos` 如果 `fail` 为 false，则第二个函数 `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`调用。 在任一情况下，如果 `(off_type)newpos == (off_type)(-1)` （定位操作失败），该函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)``istr.`。 这两个函数都返回 __* this__。
 
 如果[`fail`](../standard-library/basic-ios-class.md#fail)为 true，则成员函数不执行任何操作。
 
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>  basic_istream::sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>  basic_istream::sentry
 
 嵌套类描述一个对象，其声明构造了格式化和未格式化的输入函数。
 
@@ -883,11 +883,11 @@ class sentry {
 
 - 如果 `_Istr.tie` 不是 null 指针，则调用 `_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush) 。
 
-- 如果 `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags)` & `[`skipws`](../standard-library/ios-functions.md#skipws)为非零，则有效调用[`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`。
+- 如果 `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags) `&` [`skipws`](../standard-library/ios-functions.md#skipws)为非零，则有效调用[`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`。
 
 如果在进行此类准备后 `_Istr.good` 为 false，则构造函数 `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`调用。 在任何情况下，构造函数都将 `_Istr.good` 返回的值存储在 `status`中。 稍后对 `operator bool` 的调用会传递此存储的值。
 
-## <a name="swap"></a>  basic_istream::swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>  basic_istream::swap
 
 交换两个 `basic_istream` 对象的内容。
 
@@ -904,7 +904,7 @@ void swap(basic_istream& right);
 
 成员函数`(right)`调用[`basic_ios::swap`](../standard-library/basic-ios-class.md#swap) 。 它还会将提取计数与*右*提取计数进行交换。
 
-## <a name="sync"></a>  basic_istream::sync
+## <a name="basic_istreamsync"></a><a name="sync"></a>  basic_istream::sync
 
 将流的关联输入设备与流的缓冲区进行同步。
 
@@ -916,7 +916,7 @@ int sync();
 
 如果[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)为 null 指针，则该函数将返回-1。 否则，它会调用 `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync)。 如果该调用返回-1，则该函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` 并返回-1。 否则，该函数返回零。
 
-## <a name="tellg"></a>  basic_istream::tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>  basic_istream::tellg
 
 报告流中的当前读取位置。
 
@@ -958,7 +958,7 @@ int main()
 }
 ```
 
-## <a name="unget"></a>  basic_istream::unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>  basic_istream::unget
 
 将最近读取的字符放回流中。
 

@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076850"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150753"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -3040,7 +3040,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="standard-library"></a>标准库
 
-- 根据 C++98/03 和 C++11 标准之间的重大更改，在 Visual Studio 2012 的 Visual C++ 中，使用显式模板参数调用 `make_pair()`（正如在 `make_pair<int, int>(x, y)` 中那样）通常不编译。 相关解决方案是始终调用没有显式模板参数的 `make_pair() `，正如在 `make_pair(x, y)` 中那样。 提供显式模板参数会破坏函数的作用。 如果需要精确控制结果类型，请使用 `pair` 而不是 `make_pair` - 正如在 `pair<short, short>(int1, int2)` 中那样。
+- 根据 C++98/03 和 C++11 标准之间的重大更改，在 Visual Studio 2012 的 Visual C++ 中，使用显式模板参数调用 `make_pair()`（正如在 `make_pair<int, int>(x, y)` 中那样）通常不编译。 解决方法是始终不 `make_pair()` 显式模板参数调用，如 `make_pair(x, y)`中所示。 提供显式模板参数会破坏函数的作用。 如果需要精确控制结果类型，请使用 `pair` 而不是 `make_pair` - 正如在 `pair<short, short>(int1, int2)` 中那样。
 
 - C++98/03 和 C++11 标准之间的另一重大更改：如果 A 可隐式转换为 B，B 可隐式转换为 C，但 A 不能隐式转换为 C，则 C++98/03 和 Visual Studio 2010 允许 `pair<A, X>`（隐式或显式）转换为 `pair<C, X>`。 （此处不关注另一种类型 X，并且不特定于该对中的第一种类型。）Visual Studio 2012 中的 C++ 编译器检测到 A 不能隐式转换为 C，并且从重载解析中删除对转换。 此更改对许多方案来说是有益的。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
 

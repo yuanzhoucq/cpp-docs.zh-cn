@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 50a6c2784b4c861f7cf3bbb4d1e1c8ebd0eea72d
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424727"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150740"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 运算符
 
@@ -19,7 +19,7 @@ ms.locfileid: "79424727"
 |[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
 |[operator==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>  operator!=
 
 > [!NOTE]
 > 此 API 已过时。 替代项为 [unordered_map 类](unordered-map-class.md)。
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operator==
 
 > [!NOTE]
 > 此 API 已过时。 替代项为 [unordered_map 类](unordered-map-class.md)。
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>operator！ = （hash_multimap）
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator！ = （hash_multimap）
 
 > [!NOTE]
 > 此 API 已过时。 替代项为 [unordered_multimap 类](unordered-multimap-class.md)。
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>operator = = （hash_multimap）
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operator = = （hash_multimap）
 
 > [!NOTE]
 > 此 API 已过时。 替代项为 [unordered_multimap 类](unordered-multimap-class.md)。
