@@ -3,12 +3,12 @@ title: 在 Visual Studio 中创建和配置 Linux CMake 项目
 description: 如何在 Visual Studio 中创建、配置、编辑和编译 Linux CMake 项目
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79429186"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077667"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>创建和配置 Linux CMake 项目
 
@@ -37,14 +37,14 @@ Visual Studio 不会修改 CMakeLists.txt 文件，因此处理同一个项目�
 
 ## <a name="before-you-begin"></a>在开始之前
 
-首先，请确保已安装“使用 C++ 的 Linux 开发”工作负载，包括 CMake 组件  。 请参阅[在 Visual Studio 中安装 C++ Linux 工作负载](download-install-and-setup-the-linux-development-workload.md)。 
+首先，请确保已安装“使用 C++ 的 Linux 开发”工作负载，包括 CMake 组件  。 请参阅[在 Visual Studio 中安装 C++ Linux 工作负载](download-install-and-setup-the-linux-development-workload.md)。
 
-在 Linux 系统上，请确保已安装以下项： 
+在 Linux 系统上，请确保已安装以下项：
 
 - gcc
 - gdb
 - rsync
-- zip 
+- zip
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ add_executable(hello-cmake hello.cpp)
 
 ::: moniker range="vs-2019"
 
-若要以适用于 Linux 的 Windows 子系统为目标，请单击主工具栏配置下拉列表中的“管理配置”  。 如果使用 GCC，请按“添加配置”  按钮，选择“WSL 调试”  或“WSL 发布”  ；如果使用 Clang/LLVM 工具集，则选择 Clang 变体。 
+若要以适用于 Linux 的 Windows 子系统为目标，请单击主工具栏配置下拉列表中的“管理配置”  。 如果使用 GCC，请按“添加配置”  按钮，选择“WSL 调试”  或“WSL 发布”  ；如果使用 Clang/LLVM 工具集，则选择 Clang 变体。
 
 Visual Studio 2019 版本 16.1：在以 WSL 为目标时，无需复制源或标头，因为 Linux 上的编译器可以直接访问源文件所在的 Windows 文件系统  。 （在 Windows 版本 1903 或更高版本中，Windows 应用程序同样可以直接访问 Linux 头文件，但 Visual Studio 还不能利用此功能）。
 
@@ -102,13 +102,13 @@ Visual Studio 2019 版本 16.1：在以 WSL 为目标时，无需复制源或标
 
 如果指定远程 Linux 目标，则会将源复制到远程系统。
 
-选择目标后，CMake 会在 Linux 系统上自动运行，以便为项目生成 CMake 缓存。 
+选择目标后，CMake 会在 Linux 系统上自动运行，以便为项目生成 CMake 缓存。
 
 ![在 Linux 上生成 CMake 缓存](media/cmake-linux-1.png "在 Linux 上生成 CMake 缓存")
 
 为了向远程 Linux 系统上的标头提供 IntelliSense 支持，Visual Studio 会自动将这些标头从 Linux 计算机复制到本地 Windows 计算机上的目录中。 有关详细信息，请参阅[远程标头的 IntelliSense](configure-a-linux-project.md#remote_intellisense)。
 
-## <a name="debug_cmake_project"></a> 调试 CMake 项目
+## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> 调试 CMake 项目
 
 若要在指定调试目标系统上调试代码，请设置断点，并在项目设置旁边的工具栏菜单中选择“CMake 目标”作为启动项，再选择工具栏中的“&#x23f5; 开始”，或按 F5  。
 
@@ -125,13 +125,13 @@ Visual Studio 2019 版本 16.1：在以 WSL 为目标时，无需复制源或标
 
 若要指定其他参数，请以 `args` JSON 数组形式添加它们。 有关详细信息，请参阅 [C++ 的“打开文件夹”项目](../build/configure-cmake-debugging-sessions.md)和[配置 CMake 调试会话](../build/open-folder-projects-cpp.md)。
 
-## <a name="configure_cmake_linux"></a> 配置适用于 Linux 的 CMake 设置
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a> 配置适用于 Linux 的 CMake 设置
 
-CMake Linux 项目中的 CMakeSettings.json 文件可指定在[自定义 CMake 设置](../build/customize-cmake-settings.md)中列出的所有属性，以及控制远程 Linux 计算机上的生成设置的其他属性。 
+CMake Linux 项目中的 CMakeSettings.json 文件可指定在[自定义 CMake 设置](../build/customize-cmake-settings.md)中列出的所有属性，以及控制远程 Linux 计算机上的生成设置的其他属性。
 
 ::: moniker range="vs-2019"
 
-若要在 Visual Studio 2019 中更改默认 CMake 设置，请在主工具栏中打开“配置”下拉列表，然后选择“管理配置”   。 
+若要在 Visual Studio 2019 中更改默认 CMake 设置，请在主工具栏中打开“配置”下拉列表，然后选择“管理配置”   。
 
 ![CMake 管理配置](../build/media/vs2019-cmake-manage-configurations.png "CMake 配置下拉列表")
 
@@ -202,10 +202,10 @@ Visual Studio 2019 版本 16.1 中的默认 Linux 调试配置如下所示：
   ]
 }
 ```
+
 ::: moniker-end
 
 有关这些设置的详细信息，请参阅 [CMakeSettings.json 引用](../build/cmakesettings-reference.md)。
-
 
 ## <a name="optional-settings"></a>可选设置
 
@@ -220,8 +220,6 @@ Visual Studio 2019 版本 16.1 中的默认 Linux 调试配置如下所示：
 ```
 
 这些选项可用于生成前后以及 CMake 生成前在 Linux 系统中运行命令。 值可以是远程系统上的任何有效命令。 输出通过管道传递回 Visual Studio。
-
-
 
 ## <a name="see-also"></a>请参阅
 

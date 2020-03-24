@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安装 C++ Linux 工作负载
 description: 介绍如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负荷。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966214"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077643"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
@@ -20,11 +20,11 @@ Visual Studio 2017 及更高版本支持 Linux 项目。
 
 ::: moniker range=">=vs-2017"
 
-可以使用 Windows 中的 Visual Studio IDE 来创建、编辑和调试在远程 Linux 系统、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about)上执行的 C++ 项目。 
+可以使用 Windows 中的 Visual Studio IDE 来创建、编辑和调试在远程 Linux 系统、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about)上执行的 C++ 项目。
 
-可处理使用 CMake 的现有基本代码，无需将其转换为 Visual Studio 项目。 如果基本代码为跨平台代码，则从 Visual Studio 中可同时面向 Windows 和 Linux。 例如，可在 Windows 上使用 Visual Studio 编辑、构建和调试代码，然后快速重定向要在 Linux 环境中构建和调试的 Linux 项目。 Linux 头文件将自动复制到本地计算机上，Visual Studio 会在该位置使用这些头文件提供完全 IntelliSense 支持（“语句完成”、“转到定义”等）。 
- 
-对于任何这些方案，都必须拥有“使用 C++ 的 Linux 开发”工作负载  。 
+可处理使用 CMake 的现有基本代码，无需将其转换为 Visual Studio 项目。 如果基本代码为跨平台代码，则从 Visual Studio 中可同时面向 Windows 和 Linux。 例如，可在 Windows 上使用 Visual Studio 编辑、构建和调试代码，然后快速重定向要在 Linux 环境中构建和调试的 Linux 项目。 Linux 头文件将自动复制到本地计算机上，Visual Studio 会在该位置使用这些头文件提供完全 IntelliSense 支持（“语句完成”、“转到定义”等）。
+
+对于任何这些方案，都必须拥有“使用 C++ 的 Linux 开发”工作负载  。
 
 ::: moniker-end
 
