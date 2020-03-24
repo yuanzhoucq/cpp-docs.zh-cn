@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 045d2bf5617c81bcc4d7a202f36b112d5f0142a6
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: a463b807d39addfdaa64b829720266bf0502fa7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246294"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188072"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 
@@ -45,7 +45,7 @@ ms.locfileid: "74246294"
 ## <a name="grammar"></a>语法
 
 try-finally-statement:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_** \_**finally**复合*语句*\_
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_** *compound-statement*\_**finally**复合*语句*\_
 
 **Try-catch**语句是 C 和C++语言的 Microsoft 扩展，使目标应用程序能够在代码块的执行被中断时保证清理代码的执行。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 对于有多个位置的例程，使用**try finally**语句对于可能导致例程提前返回的错误，特别有用。
 
@@ -95,6 +95,6 @@ Control 通过简单的顺序执行（贯穿）到达 **__try**语句。 当控�
 ## <a name="see-also"></a>另请参阅
 
 [编写终止处理程序](../cpp/writing-a-termination-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
 [终止处理程序语法](/windows/win32/Debug/termination-handler-syntax)

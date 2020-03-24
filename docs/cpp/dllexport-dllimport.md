@@ -10,18 +10,18 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-ms.openlocfilehash: 2ae284172828ed63b6499475df108c28aecb32ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a8d90770552b8b9ab9169378289108d91811216
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398922"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189450"
 ---
 # <a name="dllexport-dllimport"></a>dllexport、dllimport
 
 **Microsoft 专用**
 
-**Dllexport**并**dllimport**存储类特性是 C 的 Microsoft 专用扩展和C++语言。 可以使用它们从 DLL 中导出或向其中导入函数、数据和对象。
+**Dllexport**和**dllimport**存储类特性是特定于 Microsoft 的 C C++语言扩展。 可以使用它们从 DLL 中导出或向其中导入函数、数据和对象。
 
 ## <a name="syntax"></a>语法
 
@@ -32,15 +32,15 @@ ms.locfileid: "62398922"
 
 ## <a name="remarks"></a>备注
 
-这些特性显式定义 DLL 到其客户端的接口，可以是可执行文件或另一个 DLL。 函数声明为**dllexport**就不必进行一个模块定义 (.def) 文件，至少对于导出的函数的规范。 **Dllexport**特性可替换 **__export**关键字。
+这些特性显式定义 DLL 到其客户端的接口，可以是可执行文件或另一个 DLL。 将函数声明为**dllexport**可消除对模块定义（.def）文件的需要，至少与导出函数的规范有关。 **Dllexport**属性替换 **__export**关键字。
 
 如果将类标记为 declspec(dllexport)，则类层次结构中类模板的任何专用化都将隐式标记为 declspec(dllexport)。 这意味着类模板将进行显式实例化，且必须定义类的成员。
 
-**dllexport**公开具有其修饰名称的函数。 对于 C++ 函数，这包括名称重整。 对于 C 函数或声明为 `extern "C"` 的函数，这包括基于调用约定的平台特定修饰。 有关 C/C++ 代码中名称修饰的信息，请参阅[修饰名](../build/reference/decorated-names.md)。 名称修饰不适用于导出的 C 函数或使用 `__cdecl` 调用约定的 C++ `extern "C"` 函数。
+函数的**dllexport**使用其修饰名称公开函数。 对于 C++ 函数，这包括名称重整。 对于 C 函数或声明为 `extern "C"` 的函数，这包括基于调用约定的平台特定修饰。 有关 C/C++代码中的名称修饰的信息，请参阅[修饰名](../build/reference/decorated-names.md)。 名称修饰不适用于导出的 C 函数或使用 `extern "C"` 调用约定的 C++ `__cdecl` 函数。
 
-若要导出未修饰名，可以通过使用模块定义 (.def) 文件进行链接，该文件在 EXPORTS 部分定义未修饰名。 有关详细信息，请参阅[导出](../build/reference/exports.md)。 若要导出未修饰的名的另一种方法是使用`#pragma comment(linker, "/export:alias=decorated_name")`指令中的源代码。
+若要导出未修饰名，可以通过使用模块定义 (.def) 文件进行链接，该文件在 EXPORTS 部分定义未修饰名。 有关详细信息，请参阅[导出](../build/reference/exports.md)。 导出未修饰名称的另一种方法是在源代码中使用 `#pragma comment(linker, "/export:alias=decorated_name")` 指令。
 
-当你声明**dllexport**或**dllimport**，则必须使用[扩展特性语法](../cpp/declspec.md)并 **__declspec**关键字。
+声明**dllexport**或**dllimport**时，必须使用扩展的[特性语法](../cpp/declspec.md)和 **__declspec**关键字。
 
 ## <a name="example"></a>示例
 
@@ -62,7 +62,7 @@ DllImport int j;
 DllExport int n;
 ```
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [定义和声明](../cpp/definitions-and-declarations-cpp.md)
 
@@ -74,7 +74,7 @@ DllExport int n;
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [__declspec](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

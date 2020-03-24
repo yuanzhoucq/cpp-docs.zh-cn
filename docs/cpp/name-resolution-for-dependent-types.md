@@ -2,16 +2,16 @@
 title: 依赖类型的名称解析
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161147"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依赖类型的名称解析
 
-使用**typename**为模板定义，以告知编译器给定的限定的名称标识的类型中的限定名。 有关详细信息，请参阅[typename](../cpp/typename.md)。
+将**typename**用于模板定义中的限定名称，告诉编译器给定的限定名称标识类型。 有关详细信息，请参阅[类型名称](../cpp/typename.md)。
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-针对依赖名称的名称查找将检查模板定义的上下文中的名称，在以下示例中，此上下文将查找`myFunction(char)`— 和模板实例化的上下文。在以下示例中，模板实例化在 main 中;因此，`MyNamespace::myFunction`从实例化的点可见，并且将选取它作为更好的匹配。 如果重命名 `MyNamespace::myFunction`，则将调用 `myFunction(char)`。
+相关名称的名称查找从模板定义的上下文中检查名称-在下面的示例中，此上下文将查找 `myFunction(char)`以及模板实例化的上下文。在下面的示例中，模板在 main 中实例化;因此，`MyNamespace::myFunction` 从实例化的点可见，并被选取为更好的匹配。 如果重命名 `MyNamespace::myFunction`，则将调用 `myFunction(char)`。
 
 所有名称都会得到解析，就如同它们是依赖名称一样。 尽管如此，如果存在任何可能的冲突，建议您使用完全限定名。
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Int MyNamespace::myFunction
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>模板消除歧义
 
-Visual Studio 2012 对强制执行 C + + 98/03/11 标准规则使用"template"关键字消除歧义。 在以下示例中，Visual Studio 2010 将接受不一致性行和一致性行。  Visual Studio 2012 接受仅一致性行。
+Visual Studio 2012 强制执行 c + + 98/03/11 标准规则，消除了 "template" 关键字的歧义。 在下面的示例中，Visual Studio 2010 将接受不符合要求的行和一致的行。  Visual Studio 2012 只接受符合要求的行。
 
 ```cpp
 #include <iostream>
@@ -121,6 +121,6 @@ int main() {
 
 需要符合消除歧义规则，因为默认情况下，C++ 假定 `AY::Rebind` 不是模板，因此编译器会将后面的“`<`”解释为小于。 它必须知道 `Rebind` 是模板，这样才能正确地将“`<`”分析为尖括号。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [名称解析](../cpp/templates-and-name-resolution.md)
