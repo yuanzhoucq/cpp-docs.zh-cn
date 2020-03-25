@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515702"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172160"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class（C++/CLI 和 C++/CX）
 
@@ -29,12 +29,12 @@ interface class
 name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 interface_access<br/>
 程序集外部接口的可访问性。  可取值为 public 和 private。  private 是默认值。 嵌套接口不得包含 interface_access 说明符。
 
-*name*<br/>
+name<br/>
 接口的名称。
 
 inherit_access<br/>
@@ -53,7 +53,7 @@ interface struct 相当于 interface class。
 
 派生自接口的类或结构必须实现接口的所有成员。 实现接口 name 时，还必须实现 `base_interface` 列表中的接口。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [接口静态构造函数](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

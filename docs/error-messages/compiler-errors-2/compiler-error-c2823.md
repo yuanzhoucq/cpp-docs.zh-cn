@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-ms.openlocfilehash: 5f9b60499fd3c3bd5f06834e3c4f6482031066d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef07e1b542c4c3977f35de7ed9cd0f0a5358cedb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201950"
 ---
 # <a name="compiler-error-c2823"></a>编译器错误 C2823
 
 > typedef 模板是非法的
 
-中不允许使用模板`typedef`定义。
+`typedef` 定义中不允许使用模板。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2823，并演示一种方法修复此错误：
+下面的示例生成 C2823，并显示修复此问题的一种方法：
 
 ```cpp
 // C2823.cpp

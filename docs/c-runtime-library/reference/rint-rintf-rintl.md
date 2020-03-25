@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170886"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -54,7 +54,7 @@ float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 要舍入的浮点值。
@@ -65,8 +65,8 @@ long double rint( long double x );  // C++ only
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|±∞、QNAN、IND|无|无|
-|非规格化数|EXCEPTION_FLT_UNDERFLOW|无|
+|±∞、QNAN、IND|none|none|
+|非规格化数|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>备注
 
@@ -78,7 +78,7 @@ long double rint( long double x );  // C++ only
 |--------------|--------------|------------------|
 |**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -116,7 +116,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>

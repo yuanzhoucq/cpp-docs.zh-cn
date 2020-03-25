@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 61fc825e333b8d839d15752ce737dfc6d3980809
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 6f41b56995e1a5a7d7f4267cb1def5370f953d5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163485"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171666"
 ---
 # <a name="compiler-intrinsics"></a>编译器内部函数
 
@@ -46,7 +46,7 @@ ms.locfileid: "74163485"
 
 - [按字母顺序列出的内部函数](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ARM 汇编程序参考](../assembler/arm/arm-assembler-reference.md)<br/>
 [Microsoft 宏汇编程序参考](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>

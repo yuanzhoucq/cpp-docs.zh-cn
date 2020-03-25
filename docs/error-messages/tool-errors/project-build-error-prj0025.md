@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30445a3abc2a6ad05c983448f57ed5b93df6e61f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383940"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192349"
 ---
 # <a name="project-build-error-prj0025"></a>项目生成错误 PRJ0025
 
-> 批处理文件*文件*包含未能翻译成用户的 ANSI 代码页的 Unicode 内容。
+> 批处理文件 "*file*" 包含无法翻译成用户的 ANSI 代码页的 Unicode 内容。
 >
-> *UNICODE 文件的内容*
+> *文件的 UNICODE 内容*
 
-项目系统找到在自定义的 Unicode 内容生成规则或生成事件不能正确翻译成用户的当前 ANSI 代码页。
+项目系统在无法正确转换为用户的当前 ANSI 代码页的自定义生成规则或生成事件中找到了 Unicode 内容。
 
-此错误的解决方法是更新生成规则的内容或生成事件以使用 ANSI 或在计算机上安装的代码页，并将其设置为系统默认值。
+此错误的解决方法是更新生成规则或生成事件的内容以使用 ANSI 或在计算机上安装代码页，并将其设置为系统默认值。
 
-有关详细信息自定义生成步骤和生成事件，请参阅[了解自定义生成步骤和生成事件](../../build/understanding-custom-build-steps-and-build-events.md)。
+有关自定义生成步骤和生成事件的详细信息，请参阅[了解自定义生成步骤和生成事件](../../build/understanding-custom-build-steps-and-build-events.md)。

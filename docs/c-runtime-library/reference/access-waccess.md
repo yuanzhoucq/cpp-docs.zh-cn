@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170379"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -58,17 +58,17 @@ int _waccess(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*path*<br/>
+*路径*<br/>
 文件或目录路径。
 
-*模式*<br/>
+模式<br/>
 读取/写入属性。
 
 ## <a name="return-value"></a>返回值
 
-如果该文件具有给定的模式，则每个函数将返回 0。 如果命名文件不存在或没有给定模式，则函数返回-1;在这种情况`errno`下，设置如下表所示。
+如果该文件具有给定的模式，则每个函数将返回 0。 如果命名文件不存在或没有给定模式，则函数返回-1;在这种情况下，将按下表所示设置 `errno`。
 
 |||
 |-|-|
@@ -76,7 +76,7 @@ int _waccess(
 `ENOENT`|未找到文件名或路径。
 `EINVAL`|参数无效。
 
-有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+有关这些代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -91,7 +91,7 @@ int _waccess(
 
 此函数仅检查文件和目录是否为只读，不检查文件系统安全设置。 因此，你需要访问令牌。 有关文件系统安全性的详细信息，请参阅[访问令牌](/windows/win32/SecAuthZ/access-tokens)。 存在 ATL 类以提供此功能；请参阅 [CAccessToken 类](../../atl/reference/caccesstoken-class.md)。
 
-**_waccess**是 **_access**的宽字符版本; **_waccess**的*path*参数是宽字符字符串。 否则， **_waccess**和 **_access**的行为相同。
+**_waccess**是 **_access**的宽字符版本; **_waccess**的*path*参数是宽字符字符串。 否则 **_waccess**和 **_access**的行为相同。
 
 此函数验证其参数。 如果*path*为 NULL 或*模式*未指定有效模式，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。
 
@@ -103,14 +103,14 @@ int _waccess(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> 或 \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>示例
 
-下面的示例使用 **_access**检查名为 crt_ACCESS 的文件。C，查看其是否存在以及是否允许写入。
+下面的示例使用 **_access**来检查名为 crt_ACCESS 的文件。C，查看其是否存在以及是否允许写入。
 
 ```C
 // crt_access.c
@@ -142,7 +142,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>

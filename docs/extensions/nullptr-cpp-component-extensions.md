@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515632"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172109"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr（C++/CLI 和 C++/CX）
 
@@ -23,7 +23,7 @@ __nullptr 是 Microsoft 专用关键字，虽然与 nullptr 的含义相同，�
 
 nullptr 关键字相当于 Visual Basic 中的“无”和 C# 中的“null”。
 
-## <a name="usage"></a>用法
+## <a name="usage"></a>使用情况
 
 nullptr 关键字可用于任何能使用句柄、本机指针或函数参数的位置。
 
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了在使用 `/clr` 编译时，可以将 nullptr 赋给本机指针。
+下面的代码示例展示了在使用  **编译时，可以将 nullptr**`/clr` 赋给本机指针。
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -221,9 +221,9 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-编译器选项：（非必需；受所有代码生成选项支持，包括 `/ZW` 和 `/clr`）
+编译器选项：（不是必需的; 由所有代码生成选项支持，包括 `/ZW` 和 `/clr`）
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

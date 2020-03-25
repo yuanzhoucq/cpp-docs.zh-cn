@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 6eefb6a7d888a031f6ff7f88d08da4d67a4dc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172473"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 
@@ -27,7 +27,7 @@ ms.locfileid: "65516202"
 where type-parameter: constraint list
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 type-parameter<br/>
 要约束的其中一个类型参数。
@@ -80,7 +80,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-对于多个类型参数，请对每个类型参数使用一个 where 子句。 例如:
+对于多个类型参数，请对每个类型参数使用一个 where 子句。 例如：
 
 ```cpp
 // generics_constraints_3.cpp
@@ -100,7 +100,7 @@ ref class Dictionary {};
 
 - 约束也可以是类类型，例如抽象基类。 但是，约束不能是值类型或封装的类。
 
-- 约束自身不能是类型参数，但它们涉及开放构造类型中的类型参数。 例如:
+- 约束自身不能是类型参数，但它们涉及开放构造类型中的类型参数。 例如：
 
     ```cpp
     // generics_constraints_4.cpp
@@ -198,6 +198,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [泛型](generics-cpp-component-extensions.md)

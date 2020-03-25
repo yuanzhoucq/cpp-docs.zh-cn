@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4952
 ms.assetid: 593324f0-5cfe-42fb-b221-2f71308765dd
-ms.openlocfilehash: c2e9b88125655d9ea0abe3e65500b149289ba83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560705edeb0bbdd6be760736a8d4a19d914133d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393280"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174565"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>编译器警告（等级 1）C4952
 
-> '*函数*： 在程序数据库中找到的任何配置文件数据'*pgd_file*
+> "*function*"：在程序数据库 "*pgd_file*" 中找不到配置文件数据
 
 当使用 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)时，编译器检测到一个在 `/LTCG:PGINSTRUMENT` 后被重新编译且具有一个新的函数 (*function*) 存在的输入模块。
 

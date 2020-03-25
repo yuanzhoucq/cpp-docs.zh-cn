@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166940"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169366"
 ---
 # <a name="inline-assembler"></a>内联汇编程序
 
@@ -24,7 +24,7 @@ ms.locfileid: "62166940"
 > [!NOTE]
 >  具有内联汇编代码的程序不能完全移植到其他硬件平台。 如果要针对可移植性进行设计，请避免使用内联汇编程序。
 
-内联程序集不支持在 ARM 和 x64 处理器。  以下主题解释如何使用具有 x86 处理器的可视 Visual C/C++ 内联汇编：
+ARM 和 x64 处理器不支持内联程序集。  以下主题解释如何使用具有 x86 处理器的可视 Visual C/C++ 内联汇编：
 
 - [内联汇编概述](../../assembler/inline/inline-assembler-overview.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "62166940"
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器内部函数和程序集语言](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
 [C++ 语言参考](../../cpp/cpp-language-reference.md)<br/>

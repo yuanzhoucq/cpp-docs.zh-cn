@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: cf4cea35386d1f781d6d2946c1730ba2e18dacea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f455e855e782a939e79898ee46e445f65d25d37a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399221"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170587"
 ---
-# <a name="comptrtrelease"></a>_com_ptr_t::Release
+# <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
 **Microsoft 专用**
 
-调用**发行**成员函数的`IUnknown`上封装的接口指针。
+在封装的接口指针上调用 `IUnknown` 的**Release**成员函数。
 
 ## <a name="syntax"></a>语法
 
@@ -28,10 +28,10 @@ void Release( );
 
 ## <a name="remarks"></a>备注
 
-调用`IUnknown::Release`封装的接口指针上引发`E_POINTER`错误如果此接口指针为 NULL。
+调用封装的接口指针上 `IUnknown::Release`，如果此接口指针为 NULL，则引发 `E_POINTER` 错误。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

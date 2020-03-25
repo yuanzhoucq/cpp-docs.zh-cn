@@ -2,12 +2,12 @@
 title: 转换为原始字符串文本
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 5636e00bfe8655d84fb2e4b64e0391324ab35d7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692585"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171809"
 ---
 # <a name="convert-to-raw-string-literal"></a>转换为原始字符串文本
 
@@ -17,7 +17,7 @@ ms.locfileid: "51692585"
 
 原因：可对字符进行双转义，这通常会导致混淆和不可读的字符串。  使用原始字符串文本会使字符串更易读取。
 
-方法：
+**方式：**
 
 1. 将文本或鼠标光标置于要转移的转义字符串上。
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 922c29849361d3a116df32671a2c49ac3b4988fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396127"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190637"
 ---
-# <a name="bstrtassign"></a>_bstr_t::Assign
+# <a name="_bstr_tassign"></a>_bstr_t::Assign
 
 **Microsoft 专用**
 
-副本`BSTR`成`BSTR`由包装 **_**`bstr_t`。
+将 `BSTR` 复制到由 **_** `bstr_t`包装的 `BSTR` 中。
 
 ## <a name="syntax"></a>语法
 
@@ -27,14 +27,14 @@ void Assign(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *s*<br/>
 要复制到 `BSTR` 包装的 `BSTR` 中的 `_bstr_t`。
 
 ## <a name="remarks"></a>备注
 
-**将分配**执行二进制副本，这意味着的整个长度`BSTR`复制，而不管内容如何。
+**Assign**执行二进制复制，这意味着将复制整个 `BSTR` 长度，而不考虑内容。
 
 ## <a name="example"></a>示例
 
@@ -111,6 +111,6 @@ bstrWrapper2 = some text
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_bstr_t 类](../cpp/bstr-t-class.md)

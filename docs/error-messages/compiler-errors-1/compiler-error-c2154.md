@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2154
 ms.assetid: 98d6b044-5a3a-43ad-95fa-9b916b22468a
-ms.openlocfilehash: 74335a35b23f0e5c4f1ee22f01e4f9887c4a3c85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1404f8f2e7f9ab00146b39adf1cd3d375fbde9b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175532"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207176"
 ---
 # <a name="compiler-error-c2154"></a>编译器错误 C2154
 
@@ -19,4 +19,4 @@ ms.locfileid: "62175532"
 
 你只能获取枚举类型的基础类型。
 
-有关详细信息，请参阅[编译器支持类型特征](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
+有关详细信息，请参阅[编译器对类型特征的支持](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。

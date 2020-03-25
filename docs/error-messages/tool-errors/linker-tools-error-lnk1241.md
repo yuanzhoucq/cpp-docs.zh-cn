@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1241
 ms.assetid: 7b8b52eb-0231-4521-b52a-2bce8d3e8956
-ms.openlocfilehash: 87f73680d7ed40b9b2db9f40f9140976d552ab6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e2b955787166c94be4ca35e1c58df5becd243f2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160648"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183808"
 ---
 # <a name="linker-tools-error-lnk1241"></a>链接器工具错误 LNK1241
 
-资源文件资源文件已指定
+已指定资源文件 "resource file"
 
-如果您运行，则会生成此错误**cvtres**手动从命令行，如果您然后将传递生成的.obj 文件链接器此外到其他.res 文件。
+如果从命令行手动运行**cvtres** ，然后将生成的 .obj 文件传递给链接器以及其他 res 文件，则会生成此错误。
 
-若要指定多个.res 文件，将其传递所有为.res 文件作为链接器不在.obj 文件创建由**cvtres**。
+若要指定多个 .res 文件，请将它们全部作为 .res 文件传递给链接器，而不是从**cvtres**创建的 .obj 文件中传递。

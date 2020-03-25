@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3505
 ms.assetid: ed73c99e-93a1-4f3a-bac7-ba7ed5d836e4
-ms.openlocfilehash: 5730102371d00ebaf3ae05fdefb70184b58d7c18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c67eb46208c35c1b11a74898107ad3c0e6e570d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400326"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200843"
 ---
 # <a name="compiler-error-c3505"></a>编译器错误 C3505
 
-> 无法加载类型库*guid*
+> 无法加载类型库 "*guid*"
 
-如果运行 32 位、 x86 承载交叉编译器针对 64 位，可能会导致 C3505，x64 上 64 位目标计算机，因为编译器在 WOW64 下运行，并且只能读取 32 位注册表配置单元。
+如果对64位计算机上的64位、x64 目标运行32位的 x86 托管交叉编译器，则可能会导致 C3505，这是因为编译器在 WOW64 下运行，并且只能从32位注册表配置单元中读取。
 
-您可以通过构建你尝试导入的类型库的 32 位和 64 位版本中解决此错误，然后再注册这两个。  也可以使用本机 64 位编译器，因此你需要更改你**VC + + 目录**IDE 以指向 64 位编译器中的属性。
+您可以通过构建您尝试导入的类型库的32位和64位版本来解决此错误，然后将它们都注册。  或者，你可以使用本机64位编译器，该编译器要求你将 IDE 中的 " **VC + + 目录**" 属性更改为指向64位编译器。
 
 有关详细信息，请参阅
 

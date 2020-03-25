@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 39b936acc43243973c2f66ef6fc7306026cc3259
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171042"
 ---
 # <a name="compatibility"></a>兼容性
 
@@ -28,7 +28,7 @@ C++ 标准将全局命名空间中以下划线开头的名称保留到实现中�
 
 ## <a name="related-articles"></a>相关文章
 
-|职务|说明|
+|标题|说明|
 |-----------|-----------------|
 |[UWP 应用、Windows 运行时和 C 运行时](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|说明 UCRT 例程何时与通用 Windows 应用或 Microsoft Store 应用不兼容。|
 |[ANSI C 遵从性](../c-runtime-library/ansi-c-compliance.md)|说明 UCRT 中符合标准的命名。|

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - U1099
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
-ms.openlocfilehash: 395f25d8d27bc5e9b6132c87390c8c3bc19b6cc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c963180059a48d9aa0b09103df1ed54f82b8a2f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298238"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193389"
 ---
 # <a name="nmake-fatal-error-u1099"></a>NMAKE 错误 U1099
 
 堆栈溢出
 
-正在处理的生成文件已过于复杂，NMAKE 中的当前的堆栈分配。 NMAKE 具有 0x3000 (12 K) 的分配。
+正在处理的生成文件对于 NMAKE 中当前堆栈分配过于复杂。 NMAKE 分配了0x3000 （12K）。
 
-若要增加 NMAKE 的堆栈分配，请运行[editbin /stack](../../build/reference/stack.md)实用工具使用更大的堆栈选项：
+若要增加 NMAKE 的堆栈分配，请使用更大的堆栈选项运行[editbin/stack](../../build/reference/stack.md)实用工具：
 
-**editbin /STACK:reserve NMAKE。EXE**
+**editbin/STACK：保留 NMAKE.EXE**
 
-其中*保留*是一个数字大于 NMAKE 中的当前的堆栈分配。
+其中， *reserve*是大于 NMAKE 中当前堆栈分配的数字。

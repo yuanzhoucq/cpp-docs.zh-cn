@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0066
 - CAN0066
 ms.assetid: 1321e4e1-b441-424b-9e76-c208d4a6f6ea
-ms.openlocfilehash: 108f9f7e957c69140da1cda9dcc2ffafe1830ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be4e81b96150b2c0ab3211dbba6a14fe13332a96
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299213"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184393"
 ---
 # <a name="expression-evaluator-error-cxx0066"></a>表达式计算器错误 CXX0066
 
 静态成员不存在
 
-类的静态成员未找到或未定义。 此错误可能是由于从静态类而不声明的成员定义，或仅定义，并引用不包含调试信息的模块中。
+找不到或未定义类的静态成员。 此错误可能是由声明但未定义的静态类成员导致的，或者仅在不包含调试信息的模块中定义或引用。
 
-此错误是与 CAN0066 相同。
+此错误与 CAN0066 相同。

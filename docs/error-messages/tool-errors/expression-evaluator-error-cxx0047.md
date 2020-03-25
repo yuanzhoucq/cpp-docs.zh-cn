@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0047
 - CXX0047
 ms.assetid: db23d0db-fce2-4d86-b391-6e1d6ad13fd4
-ms.openlocfilehash: ecc2ca4061f01cfa3ef868ed2916ceaeb5513116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b5a8ebaaac351833970b10336f4f71940082114
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160791"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184900"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>表达式计算器错误 CXX0047
 
-参数列表不匹配函数
+参数列表与函数不匹配
 
-一个表达式，它调用具有未与任何函数的形参列表不匹配在程序中定义了一个同名的实际参数列表的函数。
+表达式调用了一个函数，该函数的实参列表与程序中定义的任何同名函数的形参列表不匹配。
 
-仅当没有参数完全匹配或不需要构造对象的匹配项，可以调用重载的函数。
+仅当存在精确的参数匹配项或不需要构造对象的匹配项时，才可以调用重载函数。
 
-此错误是与 CAN0047 相同。
+此错误与 CAN0047 相同。

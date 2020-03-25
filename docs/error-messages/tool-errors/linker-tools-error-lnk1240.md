@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1240
 ms.assetid: 7d0e065d-1015-4df0-8370-79c3cf045e1c
-ms.openlocfilehash: 58d4a75f35da5ea9c842921ab60532a970db9ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02452146c1f9fc6b23cf3483711ff440ecc7d014
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242807"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183899"
 ---
 # <a name="linker-tools-error-lnk1240"></a>链接器工具错误 LNK1240
 
 未能编译 IDL 内容
 
-链接器生成 MIDL 编译嵌入的 IDL 但时出现问题。 检查指定的 MIDL 的错误。
+链接器生成了 MIDL 来编译 embedded IDL，但出现问题。 检查 MIDL 指定的错误。

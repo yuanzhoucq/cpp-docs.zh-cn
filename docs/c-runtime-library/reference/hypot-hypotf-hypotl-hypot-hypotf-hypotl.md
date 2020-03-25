@@ -40,12 +40,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954793"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168741"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -80,30 +80,30 @@ long double _hypotl(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*、 *y*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **hypot**将返回斜边的长度;在溢出时， **hypot**返回 INF （无限大）， **errno**变量设置为**ERANGE**。 您可以使用 **_matherr**来修改错误处理。
+如果成功， **hypot**将返回斜边的长度;在溢出时， **hypot**返回 INF （无限大）， **errno**变量设置为**ERANGE**。 您可以使用 **_matherr**修改错误处理。
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Hypot**函数计算直角三角形的斜边的长度（给定两个边*x*和*y*的长度（即， *x*<sup>2</sup> + *y*<sup>2</sup>的平方根）。
+**Hypot**函数计算直角三角形的斜边的长度（给定两个边*x*和*y*的长度（即， *x*<sup>2</sup>的平方根 + *y*<sup>2</sup>）。
 
 提供的带有前导下划线的函数版本便于与早期的标准兼容。 它们的行为与没有前导下划线的版本相同。 我们建议将不带前导下划线的版本用于新代码。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
+|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf** **_hypotl**|\<math.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -127,7 +127,7 @@ int main( void )
 If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>

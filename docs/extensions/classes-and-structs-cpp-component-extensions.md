@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172563"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class 和 ref struct（C++/CLI 和 C++/CX）
 

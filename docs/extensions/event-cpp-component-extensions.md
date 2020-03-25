@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544656"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172381"
 ---
 # <a name="event--ccli-and-ccx"></a>event（C++/CLI 和 C++/CX）
 

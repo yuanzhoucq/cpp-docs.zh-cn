@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级1） C4733
+title: 编译器警告（等级 1）C4733
 ms.date: 11/04/2016
 f1_keywords:
 - C4733
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: fbecdda481748aa77eefdab8d61e50350804e09f
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 39674c32deb506725aa5f7c1f5f875e771519938
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051323"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185667"
 ---
-# <a name="compiler-warning-level-1-c4733"></a>编译器警告（等级1） C4733
+# <a name="compiler-warning-level-1-c4733"></a>编译器警告（等级 1）C4733
 
 内联 asm 分配到 "FS： 0"：处理程序未注册为安全处理程序
 

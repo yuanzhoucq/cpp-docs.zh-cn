@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0053
 - CXX0053
 ms.assetid: fe74ed9e-9241-4df1-881f-104348e296c6
-ms.openlocfilehash: 4ba55e7e8f684ed0b0332be4a8f3ae9d52e9150d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba42e0279cd7c73b575e842cada4fbf569051d19
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299564"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184783"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>表达式计算器错误 CXX0053
 
-无函数符号匹配绑定断点时
+绑定断点时的 nonfunction 符号匹配
 
-用作一个断点的符号不是一个函数。 为断点指定的数据成员可能导致此错误。
+用作断点的符号不是函数。 将数据成员指定为断点会导致此错误。
 
-此错误是与 CAN0053 相同。
+此错误与 CAN0053 相同。

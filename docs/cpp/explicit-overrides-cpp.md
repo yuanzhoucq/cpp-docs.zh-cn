@@ -8,20 +8,20 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184249"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189021"
 ---
 # <a name="explicit-overrides-c"></a>显式重写 (C++)
 
 **Microsoft 专用**
 
-如果在两个或多个声明了同一虚函数[接口](../cpp/interface.md)并且如果一个类派生自这些接口，可显式重写每个虚函数。
+如果在两个或更多个[接口](../cpp/interface.md)中声明了同一虚函数，并且如果类派生自这些接口，则可以显式重写每个虚函数。
 
-有关在托管的代码中使用显式重写的信息C++/CLI，请参阅[显式重写](../extensions/explicit-overrides-cpp-component-extensions.md)。
+有关使用C++/cli 在托管代码中显式替代的信息，请参阅[显式重写](../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 **结束 Microsoft 专用**
 
@@ -119,6 +119,6 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [继承](../cpp/inheritance-cpp.md)

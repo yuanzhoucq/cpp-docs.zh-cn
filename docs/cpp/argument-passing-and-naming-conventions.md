@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e621db339102f1f40030bc7826d383d306a39be8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222264"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190763"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>参数传递和命名约定
 
@@ -35,23 +35,23 @@ Microsoft C++编译器，你可以指定传递自变量的约定和返回值的�
 
 有关如何定义自己的函数 prolog 和 epilog 代码的信息，请参阅[裸函数调用](../cpp/naked-function-calls.md)。
 
-默认值有关的信息面向 x64 平台，请参阅代码中调用约定[x64 调用约定](../build/x64-calling-convention.md)。 有关在面向 ARM 平台的代码中调用约定问题的信息，请参阅[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。
+有关面向 x64 平台的代码中的默认调用约定的信息，请参阅[X64 调用约定](../build/x64-calling-convention.md)。 有关面向 ARM 平台的代码中的调用约定问题的信息，请参阅[常见的视觉C++ arm 迁移问题](../build/common-visual-cpp-arm-migration-issues.md)。
 
 Visual C/C++ 编译器支持下列调用约定。
 
 |关键字|堆栈清理|参数传递|
 |-------------|-------------------|-----------------------|
 |[__cdecl](../cpp/cdecl.md)|调用方|在堆栈上按相反顺序推送参数（从右到左）|
-|[__clrcall](../cpp/clrcall.md)|n/a|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|
+|[__clrcall](../cpp/clrcall.md)|不适用|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|
 |[__stdcall](../cpp/stdcall.md)|被调用方|在堆栈上按相反顺序推送参数（从右到左）|
 |[__fastcall](../cpp/fastcall.md)|被调用方|存储在寄存器中，然后在堆栈上推送|
-|[__thiscall](../cpp/thiscall.md)|被调用方|推入堆栈;**this**指针存储在 ECX 中|
+|[__thiscall](../cpp/thiscall.md)|被调用方|已推送到堆栈上;**此**指针存储在 ECX 中|
 |[__vectorcall](../cpp/vectorcall.md)|被调用方|存储在寄存器中，然后按相反顺序在堆栈上推送（从右到左）|
 
-有关相关信息，请参阅[过时的调用约定](../cpp/obsolete-calling-conventions.md)。
+有关相关信息，请参阅[过时调用约定](../cpp/obsolete-calling-conventions.md)。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [调用约定](../cpp/calling-conventions.md)

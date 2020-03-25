@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: fb657719c69445ce23d36ccf04ac4a14db0955e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b75cff4f03370951245bde1b485d538ffdb4007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352730"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182937"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>链接器工具警告 LNK4227
 
-> 元数据操作警告 (*HRESULT*): *warning_message*
+> 元数据操作警告（*HRESULT*）： *warning_message*
 
-合并时，链接器检测到元数据的差异：
+合并时，链接器检测到元数据差异：
 
-- 一个或多个引用的程序集与当前正在生成的程序集。
+- 具有当前正在生成的程序集的一个或多个引用的程序集。
 
-- 一个或多个源代码文件编译中。
+- 编译中的一个或多个源代码文件。
 
-如果具有相同名称但以不同的方式声明的参数信息的两个全局函数例如，可能会导致 LNK4227 （即，声明不是所有编译单位中保持一致）。 使用 ildasm.exe /TEXT /METADATA *object_file*上每个.obj 文件中以查看类型有何不同。
+例如，如果有两个名称相同但参数信息声明不同的全局函数（即，声明在所有 compiland 中都不一致），则可能导致 LNK4227。 在每个 .obj 文件上使用/TEXT/METADATA *object_file* ，以查看类型的不同之处。
 
-LNK4227 还可由其他工具的报告问题。 搜索的详细信息的警告消息。
+LNK4227 还用于报告与其他工具有关的问题。 搜索警告消息以获取详细信息。
 
-必须修复的元数据问题要解决此警告。
+要解决此警告，必须修复元数据问题。
 
 ## <a name="example"></a>示例
 
-引用的程序集进行签名以不同的方式与引用它的程序集时，将生成 LNK4227。
+当被引用的程序集的签名不同于引用它的程序集时，将生成 LNK4227。
 
-下面的示例生成 LNK4227:
+下面的示例生成 LNK4227：
 
 ```cpp
 // LNK4227.cpp
@@ -64,9 +64,9 @@ ref class MyClass
 
 ## <a name="example"></a>示例
 
-格式不正确的版本号传递到程序集特性时，还可以生成 LNK4227。  * 表示法是特定于`AssemblyVersionAttribute`。  若要解决此警告，请使用仅统计中的行版本特性而不`AssemblyVersionAttribute`。
+如果将格式不正确的版本传递给程序集特性，也可以生成 LNK4227。  "*" 表示法特定于 `AssemblyVersionAttribute`。  若要解决此警告，请仅在 `AssemblyVersionAttribute`以外的版本属性中使用数字。
 
-下面的示例生成 LNK4227:
+下面的示例生成 LNK4227：
 
 ```cpp
 // LNK4227e.cpp

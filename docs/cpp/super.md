@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160822"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
 **Microsoft 专用**
 
@@ -29,11 +29,11 @@ __super::member_function();
 
 在重载决策阶段将考虑所有可访问的基类方法，可提供最佳匹配项的函数就是调用的函数。
 
-**__super**只能出现在成员函数体内。
+**__super**只能出现在成员函数体中。
 
-**__super**不能一起使用声明。 请参阅[using 声明](../cpp/using-declaration.md)有关详细信息。
+**__super**不能与 using 声明一起使用。 有关详细信息，请参阅[Using 声明](../cpp/using-declaration.md)。
 
-通过引入[属性](../windows/attributes/attributes-alphabetical-reference.md)注入代码中，你的代码可能包含一个或多个基类，但可能不知道其名称中包含你想要调用的方法。
+引入用于注入代码的[特性](../windows/attributes/attributes-alphabetical-reference.md)后，你的代码可能包含一个或多个基类，这些基类的名称可能不知道，但包含你希望调用的方法。
 
 ## <a name="example"></a>示例
 
@@ -60,6 +60,6 @@ struct D : B1, B2 {
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)

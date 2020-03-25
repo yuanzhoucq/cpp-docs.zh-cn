@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级1） C4905
+title: 编译器警告（等级 1）C4905
 ms.date: 11/04/2016
 f1_keywords:
 - C4905
 helpviewer_keywords:
 - C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-ms.openlocfilehash: 0086a3b312895d86f2e76bdbbd348f90654ba8e2
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 76f4786f808618b02ad93054d31992bbe710613e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051220"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199337"
 ---
-# <a name="compiler-warning-level-1-c4905"></a>编译器警告（等级1） C4905
+# <a name="compiler-warning-level-1-c4905"></a>编译器警告（等级 1）C4905
 
 宽字符串强制转换为“LPSTR”
 

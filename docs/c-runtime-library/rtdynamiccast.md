@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957341"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170067"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -43,7 +43,7 @@ PVOID __RTDynamicCast (
    ) throw(...)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *inptr*<br/>
 指向多态对象的指针。
@@ -58,22 +58,22 @@ PVOID __RTDynamicCast (
 转换的预期结果。
 
 *isReference*<br/>
-如果输入是引用，则为“true”；如果输入是指针，则为“false”   。
+如果输入是引用，则为“true”；如果输入是指针，则为“false”。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为指向适当的子对象的指针；否则为 NULL  。
+如果成功，则为指向适当的子对象的指针；否则为 NULL。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>例外
 
 如果 `bad_cast()` 的输入为引用并且转换失败，则为 `dynamic_cast<>`。
 
 ## <a name="remarks"></a>备注
 
-将 `inptr` 转换为 `TargetType` 类型的对象。 如果 `TargetType` 是指针，则 `inptr` 类型必须为指针，或者如果 `TargetType` 是引用，则为左值。 `TargetType` 必须是针对以前定义的类类型的指针或引用，或者是指向 void 的指针。
+将 `inptr` 转换为 `TargetType` 类型的对象。 如果 `inptr` 是指针，则 `TargetType` 类型必须为指针，或者如果 `TargetType` 是引用，则为左值。 `TargetType` 必须是针对以前定义的类类型的指针或引用，或者是指向 void 的指针。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |__RTDynamicCast|rtti.h|

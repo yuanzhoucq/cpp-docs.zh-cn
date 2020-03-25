@@ -6,12 +6,12 @@ helpviewer_keywords:
 - overriding, override keyword [C++]
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-ms.openlocfilehash: 8dc7a0a0e6cf759d956fd701d033bd773e572af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 32c825539efe670528eab7416afefe07d4cb1b6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172095"
 ---
 # <a name="override--ccli-and-ccx"></a>override（C++/CLI 和 C++/CX）
 
@@ -19,7 +19,7 @@ override 上下文相关关键字指明，类型成员重写基类或基接口�
 
 ## <a name="remarks"></a>备注
 
-在为本机目标（默认编译器选项）、Windows 运行时目标（`/ZW` 编译器选项）或公共语言运行时目标（`/clr` 编译器选项）编译时，override 关键字有效。
+在为本机目标（默认编译器选项）、Windows 运行时目标（ **编译器选项）或公共语言运行时目标（** 编译器选项）编译时，override`/ZW``/clr` 关键字有效。
 
 若要详细了解重写说明符，请参阅[重写说明符](../cpp/override-specifier.md)和[重写说明符和本机编译](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
 
@@ -81,7 +81,7 @@ ref struct X : public I1 {
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [override 说明符](../cpp/override-specifier.md)<br/>
 [重写说明符](override-specifiers-cpp-component-extensions.md)

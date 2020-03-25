@@ -5,20 +5,20 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857159"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173616"
 ---
 # <a name="missing-function-body-or-variable"></a>缺少函数体或变量
 
-只有函数原型，编译器可以继续未生成错误，但链接器无法解析为地址的调用，因为没有函数代码或保留的变量空间。 创建链接器必须解析的函数调用之前，不会看到此错误。
+除了函数原型外，编译器可以继续而不会出错，但链接器无法解析对地址的调用，因为没有保留函数代码或变量空间。 在创建对链接器必须解析的函数的调用之前，您将看不到此错误。
 
 ## <a name="example"></a>示例
 
-原型使编译器认为存在的函数，所以，在 main 中的函数调用将会导致 LNK2019。  链接器查找它不会。
+Main 中的函数调用将导致 LNK2019，因为原型允许编译器认为函数存在。  链接器将发现它不会。
 
 ```cpp
 // LNK2019_MFBV.cpp
@@ -31,7 +31,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-在C++，请确保在类定义中包括的一个类，而不只是原型的特定函数的实现。 如果你正在定义的标头文件的外部类，请务必包括前该函数的类名 (`Classname::memberfunction`)。
+在C++中，请确保在类定义中包括类的特定函数实现，而不仅仅是类定义中的原型。 如果要在标头文件之外定义类，请确保在函数之前包含类名（`Classname::memberfunction`）。
 
 ```cpp
 // LNK2019_MFBV_2.cpp
@@ -49,6 +49,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

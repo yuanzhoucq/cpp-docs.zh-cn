@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4044
 ms.assetid: f3a67a15-98c0-42ed-afcb-f5f9540e2671
-ms.openlocfilehash: c295b0936f5f38cc668f70c95e7bbbd1c5142d5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed82176f96633d8915016f9b1ad6656a2aecda75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410273"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194156"
 ---
 # <a name="linker-tools-warning-lnk4044"></a>链接器工具警告 LNK4044
 
-无法识别的选项 option;忽略
+无法识别的选项 "option";掉
 
-给定的选项不是此工具的有效选项。 该工具将忽略该选项。
+给定选项不是此工具的有效选项。 此工具忽略了选项。
 
-若要查看有效的选项列表，请不带任何参数或选项运行该工具。
+若要查看有效选项的列表，请运行不带参数或选项的工具。

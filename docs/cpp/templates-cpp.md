@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 36ada3cc3b933e99e9b29b3b58463f6bc526fc7d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: 5f8322d850084ca53e946dcff1b67dc81b493fe3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160770"
 ---
 # <a name="templates-c"></a>模板 (C++)
 
@@ -57,7 +57,7 @@ int minimum(const int& lhs, const int& rhs)
 
 编译器在函数模板中执行类型推导的规则基于普通函数的规则。 有关详细信息，请参阅[函数模板调用的重载解析](../cpp/overload-resolution-of-function-template-calls.md)。
 
-## <a id="type_parameters"></a>类型参数
+## <a name="type-parameters"></a><a id="type_parameters"></a>类型参数
 
 请注意，在上面的 `minimum` 模板中，类型参数*t*在函数调用参数中使用时是不以任何方式限定的，在该参数中添加了 const 和 reference 限定符。
 
@@ -131,7 +131,7 @@ public:
 };
 ```
 
-请注意模板声明中的语法。 在编译时，`size_t` 值作为模板参数传入，并且它必须是**常量**或**constexpr**表达式。 你可以按如下方式使用：
+请注意模板声明中的语法。 在编译时，`size_t` 值作为模板参数传入，并且它必须是**常量**或**constexpr**表达式。 如下所示：
 
 ```cpp
 MyArray<MyClass*, 10> arr;
@@ -151,7 +151,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a id="template_parameters"></a>模板作为模板参数
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>模板作为模板参数
 
 模板可以是模板参数。 在此示例中，MyClass2 具有两个模板参数： typename 参数*T*和模板参数*Arr*：
 

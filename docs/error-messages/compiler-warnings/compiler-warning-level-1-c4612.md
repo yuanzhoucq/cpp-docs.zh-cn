@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4612
 ms.assetid: 21ac02b2-51cd-4aff-9b70-d543511d5962
-ms.openlocfilehash: ed5458fc52c1c9c9f12187095e4658204613d1a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9478caef9eaba9c72dc282179100daf2d94c6d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185979"
 ---
 # <a name="compiler-warning-level-1-c4612"></a>编译器警告（等级 1）C4612
 
@@ -21,7 +21,7 @@ ms.locfileid: "62406361"
 
 当文件名不正确或缺失时，此警告与 **#pragma include_alias** 一起出现。
 
-参数 **#pragma include_alias**语句可以使用引号形式 ("*filename*") 或尖括号形式 (\<*filename*>)，但两者必须使用相同的形式。
+**#Pragma include_alias**语句的参数可使用引号形式（"*文件名*"）或尖括号形式（\<*filename*>），但两者必须使用相同的形式。
 
 ## <a name="example"></a>示例
 

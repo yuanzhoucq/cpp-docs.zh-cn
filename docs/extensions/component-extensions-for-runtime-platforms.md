@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "79544759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172460"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>适用于 .NET 和 UWP 的组件扩展
 

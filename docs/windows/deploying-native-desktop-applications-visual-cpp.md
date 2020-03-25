@@ -10,12 +10,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: af3141a8fd626a909de93b219bf3b6d8186f0623
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274749"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160185"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>部署本机桌面应用程序 (Visual C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "71274749"
 
 Visual Studio 提供用于部署 Windows 应用程序的不同技术。 其中包括 ClickOnce 部署和 Windows Installer 部署。
 
-- ClickOnce 可用于部署面向公共语言运行时 (CLR) 的 C++ 应用程序 - 可以是混合程序集、纯程序集和可验证的程序集。 尽管可以使用 Windows Installer 部署托管的应用程序，但仍建议使用 ClickOnce，因为它利用 .NET Framework 安全功能（如清单签名）。 ClickOnce 不支持本机 C++ 应用程序的部署。 有关详细信息，请参阅[Visual c + + 应用程序的 ClickOnce 部署](clickonce-deployment-for-visual-cpp-applications.md)。
+- ClickOnce 可用于部署面向公共语言运行时 (CLR) 的 C++ 应用程序 - 可以是混合程序集、纯程序集和可验证的程序集。 尽管可以使用 Windows Installer 部署托管的应用程序，但仍建议使用 ClickOnce，因为它利用 .NET Framework 安全功能（如清单签名）。 ClickOnce 不支持本机 C++ 应用程序的部署。 有关详细信息，请参阅 [ClickOnce Deployment for Visual C++ Applications](clickonce-deployment-for-visual-cpp-applications.md)。
 
 - Windows Installer 技术可以用于部署本机 C++ 应用程序或面向 CLR 的 C++ 应用程序。
 
@@ -49,7 +49,7 @@ Visual Studio 提供用于部署 Windows 应用程序的不同技术。 其中�
 
 - [重新分发 Web 客户端应用程序](redistributing-web-client-applications.md)
 
-- [Visual C++ 应用程序的 ClickOnce 部署](clickonce-deployment-for-visual-cpp-applications.md)
+- [ClickOnce Deployment for Visual C++ Applications](clickonce-deployment-for-visual-cpp-applications.md)
 
 - [在以前版本的运行时上运行 C++ /clr 应用程序](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 

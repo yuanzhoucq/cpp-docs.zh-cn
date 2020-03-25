@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6b09c0eac939f7ca6a12b68ce5deb3fb83ad27c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221935"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160809"
 ---
 # <a name="switch-statement-c"></a>switch 语句 (C++)
 
@@ -31,21 +31,21 @@ ms.locfileid: "65221935"
 
 ## <a name="remarks"></a>备注
 
-*expression* 必须是一种整型类型或明确转换为整型类型的类类型。 整型提升的情况见[标准转换](standard-conversions.md)中的描述。
+*表达式*必须是整型类型，或者是对整型具有明确转换的类类型。 整数提升的执行方式如[标准转换](standard-conversions.md)中所述。
 
-**switch** 语句体由一系列 **case** 标签和一个可选的 **default** 标签组成。 **case** 语句的中任何两个常量表达式的值都不能相同。 **default** 标签仅可以出现一次。 标签语句不是语法要求，但如果没有它们，**switch** 语句是无意义的。   default 语句不必必须位于末尾；它可以出现在 switch 语句中的任何位置。 case 或 default 标签只能出现在 switch 语句内。
+**Switch**语句体包含一系列的**case**标签和一个可选的**默认**标签。 **Case**语句中的两个常量表达式的计算结果不能为相同的值。 **默认**标签只能出现一次。 标记语句不是语法要求，但没有它们， **switch**语句毫无意义。   默认语句无需显示在末尾；它可以显示在 switch 语句体的任何位置。 case 或 default 标签只能显示在 switch 语句内。
 
-每个 **case** 标签中的 *constant-expression* 会被转换为 *expression* 的类型并与 *expression* 比较是否相等。 控制将传递给 **case** *constant-expression* 与 *expression* 的值相匹配的语句。 下表中显示了生成的行为。
+每个**case**标签中的*常量表达式*都转换为*表达式*的类型，并与*表达式*进行比较以确定相等性。 Control 传递到**case** *常量表达式*与*expression*的值匹配的语句。 下表中显示了生成的行为。
 
 ### <a name="switch-statement-behavior"></a>switch 语句行为
 
 |条件|操作|
 |---------------|------------|
 |转换后的值与提升的控制表达式的值匹配。|控制将转移到跟在该标签后面的语句。|
-|没有任何常量匹配 **case** 标签中的常量；**default** 标签已存在。|控制权转至**default**标签。|
-|没有任何常量匹配 **case** 标签中的常量；**default** 标签已存在。|控制权转交给之后的语句**切换**语句。|
+|没有常量与**case**标签中的常量匹配;存在**默认**标签。|控件将被传输到**默认**标签。|
+|没有常量与**case**标签中的常量匹配;**默认**标签不存在。|在**switch**语句后将控制转移到语句。|
 
-如果找到匹配的表达式，则控制权不会被后续的 **case** 或 **default** 标签阻断。 [break](../cpp/break-statement-cpp.md) 语句用于停止执行并将控制权转移到 **switch** 语句之后的语句。 如果没有 **break** 语句，从匹配的 **case** 标签到 **switch** 的末尾（包括 **default**）的每个语句都会执行。 例如：
+如果找到匹配的表达式，则不会妨碍按后续**case**或**默认**标签进行控制。 [Break](../cpp/break-statement-cpp.md)语句用于停止执行并将控制转移到**switch**语句之后的语句。 如果没有**break**语句，则将执行从匹配的**case**标签到**开关**末尾的每个语句（包括**默认值**）。 例如：
 
 ```cpp
 // switch_statement1.cpp
@@ -76,9 +76,9 @@ int main() {
 }
 ```
 
-在上面的示例中，如果 `capa` 是大写 `c`，则 `A` 将递增。 **中断**之后的语句`capa++`终止执行**切换**语句体并将控制转移到**虽然**循环。 无需**中断**语句中，执行将"贯穿"到下一步的标记语句，以便`lettera`和`nota`也将递增。 由提供相似的用途**中断**语句`case 'a'`。 如果`c`是一个小写`a`，`lettera`会递增并**中断**语句将终止**切换**语句体。 如果`c`不是`a`或`A`，则**默认**执行语句。
+在上面的示例中，如果 `capa` 是大写 `c`，则 `A` 将递增。 `capa++` 终止**switch**语句体的执行，并将控制权传递给**while**循环后的**break**语句。 如果没有**break**语句，执行将 "贯穿" 到下一个标记语句，以便 `lettera` 和 `nota` 也将递增。 `case 'a'`的**break**语句提供了类似的目的。 如果 `c` 是小写 `a`，则 `lettera` 递增， **break**语句将终止**switch**语句体。 如果 `c` 不是 `a` 或 `A`，则将执行**默认**语句。
 
-**2017 及更高版本的 visual Studio:** (适用于 [/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` 属性已在 C++ 17 标准中指定。 可在 **switch** 语句中使用该属性以作为对编译器 （或任何读代码的人）的提醒：这里的 fall-through 行为是目的行为。 Microsoft C++ 编译器当前不会警告 fallthrough 行为，因此，此属性对编译器行为没有影响。 请注意，该属性应用于标记语句中的一个空语句；换而言之，分号是必需的。
+**Visual Studio 2017 及更高版本：** （适用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)） `[[fallthrough]]` 属性是在 c + + 17 标准中指定的。 它可用作**switch**语句中的提示，作为对编译器（或读取代码的任何人）的提示。 Microsoft C++ 编译器当前不会警告 fallthrough 行为，因此，此属性对编译器行为没有影响。 请注意，该属性应用于标记语句中的一个空语句；换而言之，分号是必需的。
 
 ```cpp
 int main()
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Switch 语句可能会引入并初始化一个变量，其作用域被限制在 switch 语句的块：
+**Visual Studio 2017 版本15.3 及更高版本**（可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： switch 语句可能会引入和初始化一个变量，该变量的作用域限制为 switch 语句的块：
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +119,7 @@ int main()
     };
 ```
 
-**switch** 语句中的内部块可以包含带有初始化的定义，只要它们可访问 — 即，不会被所有可能的执行路径绕过。 使用这些声明引入的名称具有局部范围。 例如：
+**Switch**语句的内部块可以包含具有初始化的定义，只要这些定义可访问，即不会被所有可能的执行路径跳过。 使用这些声明引入的名称具有局部范围。 例如：
 
 ```cpp
 // switch_statement2.cpp
@@ -154,17 +154,17 @@ int main(int argc, char *argv[])
 }
 ```
 
-**switch** 语句可以嵌套。 在这种情况下，**case** 或 **default** 标签与封装它们的最近 **switch** 语句相关联。
+**Switch**语句可以嵌套。 在这种情况下， **case**或**default**标签与包含它们的最近的**switch**语句相关联。
 
 **Microsoft 专用**
 
-Microsoft C 不限制 **switch** 语句中的 case 值的数量。 该数量仅受可用内存的限制。 ANSI C 要求 **switch** 语句中至少允许 257 个 case 标签。
+Microsoft C 未限制**switch**语句中的 case 值数。 该数量仅受可用内存的限制。 ANSI C 要求在**switch**语句中至少允许使用257的 case 标签。
 
-Microsoft C 的默认设置是启用 Microsoft 扩展。 使用[/Za](../build/reference/za-ze-disable-language-extensions.md)编译器选项来禁用这些扩展。
+Microsoft C 的默认设置是启用 Microsoft 扩展。 使用[/za](../build/reference/za-ze-disable-language-extensions.md)编译器选项禁用这些扩展。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [选择语句](../cpp/selection-statements-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

@@ -12,34 +12,34 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168768"
 ---
 # <a name="c-bitwise-operators"></a>C 按位运算符
 
-按位运算符执行按位“与”(&)、按位“异或”(^) 和按位“与或”(&#124;) 运算。
+按位运算符执行按位“与”( **&** )、按位“异或”( **^** ) 和按位“与或”(&#124;) 运算。
 
 ## <a name="syntax"></a>语法
 
-*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*和-expression*： &nbsp;&nbsp;*相等性表达式*&nbsp;&nbsp;*和-表达式* **&** *相等性表达式*
 
-*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*异或表达式*： &nbsp;&nbsp;*和-expression* &nbsp;&nbsp;*异或表达式* **^** *和-expression*
 
-*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*包含或表达式*： &nbsp;&nbsp;*异或*表达式 &nbsp;&nbsp;*包含* &#124;或表达式的*异*或表达式
 
 按位运算符的操作数必须具有整数类型，但其类型会不同。 这些运算符执行常用算术转换；结果的类型是转换后操作数的类型。
 
 C 按位运算符如下所述：
 
-|运算符|描述|
+|操作员|说明|
 |--------------|-----------------|
-|**&**|按位“与”运算符将其第一操作数的每个位与其第二操作数的相应位进行比较。 如果两个位均为 1，则对应的结果位将设置为 1。 否则，将对应的结果位设置为 0。|
-|**^**|按位“异或”运算符将其第一操作数的每个位与其第二操作数的相应位进行比较。 如果一个位是 0，另一个位是 1，则相应的结果位将设置为 1。 否则，将对应的结果位设置为 0。|
-|**&#124;**|按位“与或”运算符将其第一操作数的每个位与第二操作数的相应位进行比较。 如果其中一个位是 1，则将对应的结果位设置为 1。 否则，将对应的结果位设置为 0。|
+|**&**|按位“与”运算符将其第一操作数的每个位与其第二操作数的相应位进行比较。 如果两位都是 1，则相应的结果位设置为 1。 否则，相应的结果位设置为 0。|
+|**^**|按位“异或”运算符将其第一操作数的每个位与其第二操作数的相应位进行比较。 如果一位是 0，另一对应位是 1，则相应结果位设置为 1。 否则，相应的结果位设置为 0。|
+|**&#124;**|按位“与或”运算符将其第一操作数的每个位与第二操作数的相应位进行比较。 如果任一位为 1，则对应结果位设置为 1。 否则，相应的结果位设置为 0。|
 
 ## <a name="examples"></a>示例
 
@@ -78,7 +78,7 @@ n = i ^ j;
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按位 AND 运算符：(&)](../cpp/bitwise-and-operator-amp.md)<br/>
 [按位异或运算符：^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>

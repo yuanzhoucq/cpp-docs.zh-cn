@@ -15,18 +15,18 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2948564b9008f9a89c89d58e3249b20b3dc2ffd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168637"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多文档类型、视图和框架窗口
 
 [文档/视图创建](../mfc/document-view-creation.md)中介绍了文档及其视图和架构窗口之间的标准关系。 许多应用程序都支持单文档类型，但可以出现该类型的多个打开的文档，单文档类型指在文档上具有单个视图，而且每个文档只有一个框架窗口的文档类型。 但某些应用程序可能需要改变一个或多个这些默认值。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [Multiple document types](#_core_multiple_document_types)
 
@@ -36,7 +36,7 @@ ms.locfileid: "62238584"
 
 - [拆分窗口](#_core_splitter_windows)
 
-##  <a name="_core_multiple_document_types"></a> Multiple Document Types
+##  <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a> Multiple Document Types
 
 “MFC 应用程序”向导可为你创建单个文档类。 但在某些情况下，可能需要支持一个以上的文档类型 例如，你的应用程序可能需要工作表文档和图表文档。 每种文档类型由各自的文档类表示，可能的话还由各自的视图类表示。 当用户选择“新建文件”命令时，框架将显示出一个对话框，其中列出了受支持的文档类型。 然后，框架会创建用户所选类型的文档。 每个文档由各自的文档模板对象进行管理。
 
@@ -44,7 +44,7 @@ ms.locfileid: "62238584"
 
 若要使框架知道其他文档类，必须在应用程序类的 [InitInstance](../mfc/reference/cwinapp-class.md#adddoctemplate) 再添加一个对 [AddDocTemplate](../mfc/reference/cwinapp-class.md#initinstance) 的的调用。 有关信息信息，请参阅 [文档模板](../mfc/document-templates-and-the-document-view-creation-process.md)。
 
-##  <a name="_core_multiple_views"></a> Multiple Views
+##  <a name="multiple-views"></a><a name="_core_multiple_views"></a> Multiple Views
 
 许多文档只要求单个视图，但可能支持每个文档有一个以上的视图。 为了帮助实现多个视图，文档对象会保留其视图的列表，提供用于添加和删除视图的成员函数，以及提供 [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) 成员函数来通知各个视图关于文档数据发生更改的时间。
 
@@ -64,27 +64,27 @@ MFC 支持在同一文档上要求多个视图的三个通用用户界面。 这
 
 下图被分成 a、b、c 三部分，按上面介绍的顺序显示三个用户界面模型。
 
-![多个&#45;查看用户界面](../mfc/media/vc37a71.gif "多&#45;查看用户界面") <br/>
+![多&#45;视图用户界面](../mfc/media/vc37a71.gif "多&#45;视图用户界面") <br/>
 多视图用户界面
 
-框架通过实现“新建窗口”命令和提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)类来提供这些模型，请参见 [拆分窗口](#_core_splitter_windows)中的讨论。 可以用这些作为起点实现其他模型。 有关阐释视图、框架窗口和拆分条的不同配置的示例程序，请参阅 [MFC 示例](../overview/visual-cpp-samples.md)。
+框架通过实现“新建窗口”命令和提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)类来提供这些模型，请参见 [拆分窗口](#_core_splitter_windows)中的讨论。 可以用这些作为起点实现其他模型。 有关阐释视图、框架窗口和拆分条的不同配置的示例程序，请参阅 [MFC 示例](../overview/visual-cpp-samples.md#mfc-samples)。
 
 有关 `UpdateAllViews`的详细信息，请参阅 [MFC 参考](../mfc/reference/cview-class.md) 中的 *CView* 类和 [Scribble 示例](../overview/visual-cpp-samples.md)。
 
-##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
+##  <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
 
-可以使用 MDI 应用程序“窗口”菜单上的“新建窗口”命令创建同一文档的第二个框架窗口。 有关详细信息，请参阅图多视图用户界面中的第一个模型。
+可以使用 MDI 应用程序“窗口”菜单上的“新建窗口”命令创建同一文档的第二个框架窗口。 有关详细信息，请参阅多视图用户界面图中的第一个模型。
 
-##  <a name="_core_splitter_windows"></a> Splitter Windows
+##  <a name="splitter-windows"></a><a name="_core_splitter_windows"></a> Splitter Windows
 
-在拆分窗口中，窗口被（或可以）拆分为两个或更多的可滚动窗格。 窗口框架中滚动条旁边的拆分条控件（或“拆分框”）使用户得以调整窗格的相对大小。 每个窗格是同一文档的一个视图。 "动态"拆分条中，在中，视图是属于同一个类，如图多视图用户界面的 b 部分中所示。 在“静态”拆分条中，视图可以属于不同类。 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)类支持这两种拆分窗口。
+在拆分窗口中，窗口被（或可以）拆分为两个或更多的可滚动窗格。 窗口框架中滚动条旁边的拆分条控件（或“拆分框”）使用户得以调整窗格的相对大小。 每个窗格是同一文档的一个视图。 在“动态”拆分条中，视图属于同一类，如图多视图用户界面中的 b 部分所示。 在“静态”拆分条中，视图可以属于不同类。 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)类支持这两种拆分窗口。
 
-动态拆分窗口具有同一类的视图，使用户得以随意将窗口拆分为多个窗格，然后滚动不同的窗格以查看文档的不同部分。 用户还可以撤销拆分窗口以删除其他视图。 添加到 [Scribble 示例](../overview/visual-cpp-samples.md) 的拆分窗口即属此例。 那个主题介绍了用于创建动态拆分窗口的方法。 动态拆分窗口如图多视图用户界面的 b 部分所示。
+动态拆分窗口具有同一类的视图，使用户得以随意将窗口拆分为多个窗格，然后滚动不同的窗格以查看文档的不同部分。 用户还可以撤销拆分窗口以删除其他视图。 添加到 [Scribble 示例](../overview/visual-cpp-samples.md) 的拆分窗口即属此例。 那个主题介绍了用于创建动态拆分窗口的方法。 该主题描述创建动态拆分窗口的技术。动态拆分窗口如图多视图用户界面的 b 部分所示。
 
 静态拆分窗口具有不同类的视图，从被拆分为多个窗格的窗口开始，每个窗格都具有不同的用途。 例如，在 Visual C++ 位图编辑器中，图像窗口并排显示两个窗格。 左窗格显示位图实物原样大小的图像。 右窗格显示同一位图的缩小或放大的图像。 窗格由“拆分条”分隔，用户可以拖动该“拆分条”更改窗格的相对大小。 静态拆分窗口如图多视图用户界面的 c 部分所示。
 
-有关详细信息，请参阅 [MFC 参考](../mfc/reference/csplitterwnd-class.md) 中的 *CSplitterWnd* 类和 [MFC 示例](../overview/visual-cpp-samples.md)。
+有关详细信息，请参阅 [MFC 参考](../mfc/reference/csplitterwnd-class.md) 中的 *CSplitterWnd* 类和 [MFC 示例](../overview/visual-cpp-samples.md#mfc-samples)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文档/视图体系结构](../mfc/document-view-architecture.md)

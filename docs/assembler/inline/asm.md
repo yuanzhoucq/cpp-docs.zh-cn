@@ -9,14 +9,14 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169626"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Microsoft 专用**
 
@@ -27,13 +27,13 @@ ms.locfileid: "65445902"
 
 ## <a name="grammar"></a>语法
 
-*asm 块*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
+*asm-块*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *程序集指令* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *assembly* **}**  **;** <sub>opt</sub>
 
-*程序集指令列表*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+*程序集指令列表*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*程序集指令* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*程序集指令* **;** *程序集指令列表* **;** <sub>opt</sub>
 
 ## <a name="remarks"></a>备注
 
@@ -41,17 +41,17 @@ ms.locfileid: "65445902"
 
 由于 `__asm` 关键字是语句分隔符，因此您可以将程序集指令放在同一行中。
 
-Visual Studio 2005 中，该指令之前
+在 Visual Studio 2005 之前，说明
 
 ```cpp
 __asm int 3
 ```
 
-不会导致编译时使用生成本机代码 **/clr**; 编译器转换为 CLR 中断指令指令。
+在用 **/clr**编译时不会生成本机代码;编译器将指令转换为 CLR 中断指令。
 
-`__asm int 3` 现在将导致为函数生成本机代码。 如果你想中断点导致你的代码，如果您希望将函数编译为 MSIL，使用的函数[__debugbreak](../../intrinsics/debugbreak.md)。
+`__asm int 3` 现在将导致为函数生成本机代码。 如果希望函数在代码中引发断点，并要将该函数编译为 MSIL，请使用[__debugbreak](../../intrinsics/debugbreak.md)。
 
-与以前版本的兼容性 **_asm**是的同义词 **__asm**除非编译器选项[/Za\(禁用语言扩展)](../../build/reference/za-ze-disable-language-extensions.md)指定。
+为了与早期版本兼容， **_asm**是 **__asm**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 
@@ -85,7 +85,7 @@ __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../../cpp/keywords-cpp.md)<br/>
 [内联汇编程序](../../assembler/inline/inline-assembler.md)<br/>

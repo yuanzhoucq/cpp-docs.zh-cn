@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189762"
 ---
 # <a name="comma-operator-"></a>逗号运算符：,
 
@@ -29,7 +29,7 @@ expression , expression
 
 在某些上下文（如函数自变量列表）中，逗号可用作分隔符。 不要将该逗号用作分隔符与将其用作运算符的情况混淆；这两种用法完全不同。
 
-请考虑表达式 `e1, e2`。 类型和表达式的值是类型和值*e2*; 的计算结果*e1*将被丢弃。 如果右操作数是左值，则结果为左值。
+请考虑表达式 `e1, e2`。 表达式的类型和值是*e2*的类型和值;计算*e1*的结果被丢弃。 如果右操作数是左值，则结果为左值。
 
 在通常将逗号用作分隔符的方案中（例如，在函数或聚合初始值设定项的自变量中），逗号运算符及其操作数必须包含在括号中。 例如：
 
@@ -60,7 +60,7 @@ int main () {
 30
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

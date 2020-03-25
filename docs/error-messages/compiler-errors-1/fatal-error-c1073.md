@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1073
 ms.assetid: a946fcf1-674e-4a7a-a28c-b1effacbabe1
-ms.openlocfilehash: 61cc076ff88b04facd730792fe404bdecd0503ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33cf5fefc4aea5b284d2e67c02a9cb310cd5433
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166979"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204316"
 ---
 # <a name="fatal-error-c1073"></a>错误 C1073
 
-涉及增量编译 （编译器文件 filename、 行号） 的内部错误
+涉及增量编译的内部错误（编译器文件 "filename"，行号）
 
-重新编译而无需使用增量编译的文件。
+不使用增量编译来重新编译文件。

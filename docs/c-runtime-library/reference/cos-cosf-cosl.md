@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942823"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170250"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -58,7 +58,7 @@ float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 角度（以弧度为单位）。
@@ -69,7 +69,7 @@ long double cos( long double x );  // C++ only
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|无|**_DOMAIN**|
+|± QNAN，IND|none|**_DOMAIN**|
 |± INF|**无效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
@@ -78,17 +78,17 @@ long double cos( long double x );  // C++ only
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
+|例程|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
 |**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅[sin、sinf、sinl](sin-sinf-sinl.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>

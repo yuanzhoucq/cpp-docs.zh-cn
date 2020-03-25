@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 8ebd8d48b68581bf00215b4ca14f5ac0a543a3c0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e782788832063e210356864e074c15e9ba3555f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443900"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160315"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>如何：定义控件访问和值（C++）
 
@@ -63,9 +63,9 @@ Tab 键顺序是**tab**键在对话框中将输入焦点从一个控件移动到
 
 1. 选择对话框上的控件。
 
-1. 在 "[属性" 窗口](/visualstudio/ide/reference/properties-window)的 "**标题**" 属性中，为该控件键入一个新名称，并在所需的字母前键入与该控件的访问键相同的 "&" 符（`&`）。 例如 `&Radio1`。
+1. 在 "[属性" 窗口](/visualstudio/ide/reference/properties-window)的 "**标题**" 属性中，为该控件键入一个新名称，并在所需的字母前键入与该控件的访问键相同的 "&" 符（`&`）。 例如，`&Radio1` 。
 
-1. 按 Enter。
+1. 按 **Enter**。
 
    显示的标题中会出现一个下划线，指示访问密钥，例如**R**adio1。
 

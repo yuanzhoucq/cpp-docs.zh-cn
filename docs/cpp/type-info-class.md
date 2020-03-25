@@ -7,18 +7,18 @@ helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-ms.openlocfilehash: b0cddd2c5cc09e77e8733ca88177c3b2223fc8ce
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7a016fe8fee4e5765e6172184bfa9c90eecbc687
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242088"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160666"
 ---
-# <a name="typeinfo-class"></a>type_info 类
+# <a name="type_info-class"></a>type_info 类
 
-**Type_info**类描述在程序中由编译器生成的类型信息。 此类的对象可以有效存储指向类型的名称的指针。 **Type_info**类还可存储适合比较是否相等的两个类型或比较其排列顺序的编码的值。 类型的编码规则和排列顺序是未指定的，并且可能因程序而异。
+**Type_info**类描述编译器在程序内生成的类型信息。 此类的对象可以有效存储指向类型的名称的指针。 **Type_info**类还存储了一个适合用于比较两个类型是否相等或排序的编码值。 类型的编码规则和排列顺序是未指定的，并且可能因程序而异。
 
-`<typeinfo>`标头文件必须包含要使用**type_info**类。 接口**type_info**类是：
+必须包含 `<typeinfo>` 头文件才能使用**type_info**类。 **Type_info**类的接口是：
 
 ```cpp
 class type_info {
@@ -36,20 +36,20 @@ public:
 };
 ```
 
-无法实例化的对象**type_info**类直接，因为该类只有一个私有复制构造函数。 构造 （临时） 的唯一办法**type_info**对象是使用[typeid](../cpp/typeid-operator.md)运算符。 由于赋值运算符也是私有的不能复制或分配类的对象**type_info**。
+不能直接实例化**type_info**类的对象，因为该类只有一个私有复制构造函数。 构造（临时） **type_info**对象的唯一方法是使用[typeid](../cpp/typeid-operator.md)运算符。 由于赋值运算符也是私有的，因此不能复制或分配**type_info**类的对象。
 
-`type_info::hash_code` 定义适用于类型的值映射的哈希函数**typeinfo**到索引值的分布。
+`type_info::hash_code` 定义适用于将类型**typeinfo**的值映射到索引值分布的哈希函数。
 
-运算符`==`并`!=`可用于与其他比较是否相等**type_info**对象，分别。
+运算符 `==` 和 `!=` 可用于分别比较是否与其他**type_info**对象比较是否相等。
 
-类型的排列顺序与继承关系之间没有关联。 使用`type_info::before`成员函数以确定类型的排序规则顺序。 不能保证的`type_info::before`将产生不同的程序或甚至运行在同一程序中相同的结果。 以这种方式`type_info::before`类似于 address-of`(&)`运算符。
+类型的排列顺序与继承关系之间没有关联。 使用 `type_info::before` 成员函数确定类型的排序顺序。 不保证 `type_info::before` 在同一程序的不同程序或不同的运行中产生相同的结果。 通过这种方式，`type_info::before` 类似于 `(&)` 运算符的地址。
 
-`type_info::name`成员函数返回`const char*`为以 null 结尾的字符串表示的用户可读名称的类型。 将缓存所指向的内存，应该从不直接释放它。
+`type_info::name` 成员函数返回一个表示类型的用户可读名称的以 null 结尾的字符串的 `const char*`。 将缓存所指向的内存，应该从不直接释放它。
 
-`type_info::raw_name`成员函数返回`const char*`为以 null 结尾的字符串表示的对象类型的修饰的名。 该名称实际上以其修饰的形式存储以节省空间。 因此，此函数是比要快`type_info::name`因为它不需要取消修饰名称。 返回的字符串`type_info::raw_name`函数在比较操作很有用，但不可读。 如果你需要的可读的字符串，使用`type_info::name`函数。
+`type_info::raw_name` 成员函数返回一个表示对象类型的修饰名称的以 null 结尾的字符串的 `const char*`。 该名称实际上以其修饰的形式存储以节省空间。 因此，此函数比 `type_info::name` 更快，因为它不需要取消修饰名称。 `type_info::raw_name` 函数返回的字符串在比较运算中非常有用，但不可读。 如果需要用户可读的字符串，请改用 `type_info::name` 函数。
 
-为多态类才生成类型信息[/GR （启用运行时类型信息）](../build/reference/gr-enable-run-time-type-information.md)指定编译器选项。
+仅当指定了[/GR （启用运行时类型信息）](../build/reference/gr-enable-run-time-type-information.md)编译器选项时，才会为多态类生成类型信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [运行时类型信息](../cpp/run-time-type-information.md)

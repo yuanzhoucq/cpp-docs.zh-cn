@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1169
 ms.assetid: e079d518-f184-48cd-8b38-969bf137af54
-ms.openlocfilehash: f167c82c28834d1de82578735e5557d0e9d6b5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ac8bb8bd28f42b28fb86e64e72f4ea01f01ab1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242716"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183990"
 ---
 # <a name="linker-tools-error-lnk1169"></a>链接器工具错误 LNK1169
 
-一个或多个多重定义的符号找到
+找到一个或多个多次定义的符号
 
-生成失败，因为多个定义的一个或多个符号。 此错误之前错误[LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md)。
+生成因一个或多个符号的多个定义而失败。 此错误之前是错误[LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md)。
 
-[/Force](../../build/reference/force-force-file-output.md)或 **/FORCE:MULTIPLE**选项可重写此错误。
+[/Force](../../build/reference/force-force-file-output.md)或 **/FORCE：多个**选项将覆盖此错误。

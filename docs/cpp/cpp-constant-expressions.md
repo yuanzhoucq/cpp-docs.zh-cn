@@ -6,16 +6,16 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: 97059066adadc3a7897cbd2c4c747e2a673e7201
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154667"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170574"
 ---
 # <a name="c-constant-expressions"></a>C++ 常量表达式
 
-一个*常量*值是一种不会更改。 C + + 提供了两个关键字，它们使你能够表达不打算修改对象的意图，还可让你实现该意图。
+*常*数值是指不会更改的值。 C + + 提供了两个关键字，它们使你能够表达不打算修改对象的意图，还可让你实现该意图。
 
 C++ 需要常量表达式（计算结果为常量的表达式）以便声明：
 
@@ -29,7 +29,7 @@ C++ 需要常量表达式（计算结果为常量的表达式）以便声明：
 
 常量表达式中合法的唯一操作数是：
 
-- 文本
+- 文字
 
 - 枚举常量
 
@@ -44,10 +44,10 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-到整型的显式转换在是合法的常量表达式;所有其他类型和派生的类型是非法使用作为操作数时除外**sizeof**运算符。
+到整型的显式转换在常量表达式中是合法的;除用作**sizeof**运算符的操作数时，所有其他类型和派生类型都是非法的。
 
 逗号运算符和赋值运算符不能用于常量表达式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [表达式类型](../cpp/types-of-expressions.md)

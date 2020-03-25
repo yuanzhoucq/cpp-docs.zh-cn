@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194832"
 ---
 # <a name="linker-tools-error-lnk2004"></a>链接器工具错误 LNK2004
 
-gp 相对链接地址信息溢出以便 target;太大或超出范围，较短的节部分。
+"target" 的 gp 相对链接地址信息溢出;short 部分 "部分" 太大或超出范围。
 
-部分是太大。
+部分太大。
 
-若要解决此错误，请减小的简短的部分中，通过显式将数据放在较长部分通过 #pragma 部分 （".sectionname"，以读取、 写入、 长时间），并使用大小`__declspec(allocate(".sectionname"))`上数据定义和声明。  例如，应用于对象的
+若要解决此错误，请减小 short 部分的大小，方法是将数据通过 #pragma 部分（"sectionname"、"读取"、"写入"、"long"）和 "对数据定义和声明使用 `__declspec(allocate(".sectionname"))`" 显式放置。  例如，
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-此外可移动到其自身会是一组数据大于 8 个字节，该编译器将长数据部分中分配的结构以逻辑方式组合数据。  例如，应用于对象的
+您还可以将逻辑分组的数据移到其自身的结构中，该结构将是大于8字节的数据集合，编译器将在长数据部分中分配。  例如，
 
 ```
 // from this...
@@ -50,4 +50,4 @@ struct X {
 } x  = { 23, 23*2, 23*3, 23*4 };
 ```
 
-此错误后跟错误`LNK1165`。
+此错误后跟严重错误 `LNK1165`。

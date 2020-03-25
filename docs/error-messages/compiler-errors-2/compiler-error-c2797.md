@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202069"
 ---
 # <a name="compiler-error-c2797"></a>编译器错误 C2797
 
-（已过时）未实现成员初始值设定项列表或非静态数据成员初始值设定项内部的列表初始化。
+弃用未实现成员初始值设定项列表或非静态数据成员初始值设定项内的列表初始化。
 
-此警告是 Visual Studio 2015 中已过时。 在 Visual Studio 2013 和早期版本中，MicrosoftC++编译器未实现成员初始值设定项列表或非静态数据成员初始值设定项内部的列表初始化。 在 Visual Studio 2013 Update 3 之前，这已在无提示的情况下转换为函数调用，从而将导致代码生成错误。 Visual Studio 2013 Update 3 将其报告为错误。
+此警告在 Visual Studio 2015 中已过时。 在 Visual Studio 2013 及更早版本中， C++ Microsoft 编译器不会在成员初始值设定项列表或非静态数据成员初始值设定项中实现列表初始化。 在 Visual Studio 2013 Update 3 之前，这已在无提示的情况下转换为函数调用，从而将导致代码生成错误。 Visual Studio 2013 Update 3 将其报告为错误。
 
 此示例生成 C2797：
 

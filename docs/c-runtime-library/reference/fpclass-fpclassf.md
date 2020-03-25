@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857835"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170210"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -56,7 +56,7 @@ int _fpclassf(
 ); /* x64 only */
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 要测试的浮点值。
@@ -65,7 +65,7 @@ int _fpclassf(
 
 **_Fpclass**和 **_fpclassf**函数返回一个整数值，该值指示参数*x*的浮点分类。 分类可能具有 \<float.h> 中定义的下列值之一。
 
-|{2&gt;值&lt;2}|描述|
+|值|说明|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|信令 NaN|
 |**_FPCLASS_QNAN**|静默 NaN|
@@ -82,7 +82,7 @@ int _fpclassf(
 
 **_Fpclass**和 **_Fpclassf**函数是 Microsoft 特定的。 它们类似于 [fpclassify](fpclassify.md)，但返回有关参数的更多详情信息。 仅当为 x64 平台编译时， **_fpclassf**函数才可用。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|

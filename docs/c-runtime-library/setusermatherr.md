@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
-ms.openlocfilehash: 1dc20be40614aaeda72040496a61a6ea9df99383
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 842a6899f37db7a479bf5f1212f0ef6bd6c4edf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957739"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170847"
 ---
 # <a name="__setusermatherr"></a>__setusermatherr
 
@@ -40,7 +40,7 @@ void __setusermatherr(
    )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pf*<br/>
 指向用户提供的 `_matherr` 的实现的指针。
@@ -51,6 +51,6 @@ void __setusermatherr(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |__setusermatherr|matherr.c|

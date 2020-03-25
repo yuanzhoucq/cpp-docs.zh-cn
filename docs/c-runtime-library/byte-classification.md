@@ -8,12 +8,12 @@ helpviewer_keywords:
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-ms.openlocfilehash: 9c00d0c0165bdae15ba5fc413d00a99bf4601b21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 7272170bd3a1e765e728451afc245947111ee947
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171562"
 ---
 # <a name="byte-classification"></a>字节分类
 
@@ -34,7 +34,7 @@ ms.locfileid: "50632396"
 |[_ismbbgraph、_ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|与 _ismbbprint 相同，但是 _ismbbgraph 不包含空格字符 (0x20)。|
 |[_ismbbkalnum、_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|标点以外的非 ASCII 文本符号。 例如，仅在代码页 932 中，_ismbbkalnum 测试片假名字母数字。|
 |[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|片假名 (0xA1 - 0xDF)，仅代码页 932|
-|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文本或非 ASCII 标点符号。 例如，仅在代码页 932 中，_ismbbkprint 测试片假名字母数字或片假名标点（范围：0xA1 - 0xDF）。|
+|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文本或非 ASCII 标点符号。 例如，仅在代码页932中， **_ismbbkprint**为片假名字母数字或片假名标点（范围：0xA1 - 0xDF）。|
 |[_ismbbkpunct、_ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|非 ASCII 标点。 例如，仅在代码页 932 中，_ismbbkpunct 测试片假名标点。|
 |[_ismbblead、_ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|多字节字符的第一个字节。 例如，仅在代码页 932 中，有效范围为 0x81 - 0x9F 以及 0xE0 - 0xFC。|
 |[_ismbbprint、_ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|isprint &#124; &#124; _ismbbkprint。 ismbbprint 包含空白字符 (0x20)|

@@ -6,44 +6,44 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8e4416eafd47f584de4ab1c83aa7303cab0440a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410234"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194130"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>链接器工具警告 LNK4049
 
-> 符号*符号*中定义*filename.obj*导入
+> 导入 "*filename .obj*" 中定义的符号 "*symbol*"
 
-[__declspec （dllimport)](../../cpp/dllexport-dllimport.md)为指定*符号*即使对象文件中定义了符号*filename.obj*中相同的映像。 删除`__declspec(dllimport)`修饰符来解决此警告。
+已为*符号*指定[__declspec （dllimport）](../../cpp/dllexport-dllimport.md) ，即使符号是在同一映像的对象文件*文件名 .obj*中定义的。 删除 `__declspec(dllimport)` 修饰符以解决此警告。
 
 ## <a name="remarks"></a>备注
 
-一个对象文件中定义符号，并使用引用时，链接器会生成此警告`__declspec(dllimport)`中另一个声明修饰符。
+当你在一个对象文件中定义符号，并使用另一个对象中的 `__declspec(dllimport)` 声明修饰符来引用该符号时，链接器将生成此警告。
 
-警告 LNK4049 是更一般的版本[链接器工具警告 LNK4217](linker-tools-warning-lnk4217.md)。 链接器生成警告 LNK4049 时它不能确定哪些函数或对象的文件引用的导入的符号。
+警告 LNK4049 是更通用的[链接器工具警告 LNK4217](linker-tools-warning-lnk4217.md)版本。 链接器无法确定引用导入的符号的函数或对象文件时，会生成警告 LNK4049。
 
-其中 LNK4049 生成而不是 LNK4217 的常见情形是：
+生成 LNK4049 而不是 LNK4217 的常见情况是：
 
-- 使用时[/incremental](../../build/reference/incremental-link-incrementally.md)选项。
+- 使用[/INCREMENTAL](../../build/reference/incremental-link-incrementally.md)选项时。
 
-- 使用时[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)选项。
+- 当使用[/ltcg](../../build/reference/ltcg-link-time-code-generation.md)选项时。
 
-若要解决 LNK4049，请尝试以下过程之一：
+若要解析 LNK4049，请尝试执行以下过程之一：
 
-- 删除`__declspec(dllimport)`从触发 LNK4049 的符号的前向声明修饰符。 可以使用的二进制映像中的符号搜索**DUMPBIN**实用程序。 **DUMPBIN /SYMBOLS**开关显示的图像的 COFF 符号表。 有关详细信息**DUMPBIN**实用程序，请参阅[DUMPBIN 参考](../../build/reference/dumpbin-reference.md)。
+- 从触发 LNK4049 的符号的前向声明中删除 `__declspec(dllimport)` 修饰符。 可以使用**DUMPBIN**实用工具在二进制映像中搜索符号。 **DUMPBIN/SYMBOLS**开关显示映像的 COFF 符号表。 有关**DUMPBIN**实用工具的详细信息，请参阅[DUMPBIN 参考](../../build/reference/dumpbin-reference.md)。
 
-- 临时禁用增量链接和全程序优化。 重新编译时，应用程序将生成警告 LNK4217，其中包括引用的导入的符号的函数的名称。 删除`__declspec(dllimport)`从导入的符号和重新启用增量链接或全程序优化所需的声明修饰符。
+- 暂时禁用增量链接和全程序优化。 重新编译时，应用程序将生成警告 LNK4217，其中包括引用导入的符号的函数的名称。 从导入的符号中删除 `__declspec(dllimport)` 声明修饰符，并根据需要重新启用增量链接或完全程序优化。
 
-虽然最终生成的代码的行为正确，但生成调用导入的函数的代码是效率低于直接调用该函数。 通过使用编译时不会出现此警告[/clr](../../build/reference/clr-common-language-runtime-compilation.md)选项。
+尽管最终生成的代码的行为正确，但生成的用于调用导入函数的代码不如直接调用函数有效。 使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)选项编译时不会出现此警告。
 
-有关导入和导出数据声明上的详细信息，请参阅[dllexport、 dllimport](../../cpp/dllexport-dllimport.md)。
+有关导入和导出数据声明的详细信息，请参阅[dllexport、dllimport](../../cpp/dllexport-dllimport.md)。
 
 ## <a name="example"></a>示例
 
-链接以下两个模块将生成 LNK4049。 第一个模块将生成一个包含单个导出的函数对象文件。
+链接以下两个模块将生成 LNK4049。 第一个模块生成包含单个导出函数的对象文件。
 
 ```cpp
 // LNK4049a.cpp
@@ -55,7 +55,7 @@ __declspec(dllexport) int func()
 }
 ```
 
-第二个模块将生成一个包含第一个模块，以及对在此函数的调用中导出的函数的前向声明的对象文件`main`函数。 链接的第一个模块使用此模块将生成 LNK4049。 删除`__declspec(dllimport)`从声明要解决此警告的修饰符。
+第二个模块生成一个对象文件，其中包含对第一个模块中导出的函数的前向声明，并在 `main` 函数内调用此函数。 将此模块与第一个模块链接将生成 LNK4049。 从声明中删除 `__declspec(dllimport)` 修饰符，以解决此警告。
 
 ```cpp
 // LNK4049b.cpp
@@ -72,7 +72,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [链接器工具警告 LNK4217](linker-tools-warning-lnk4217.md) \
 [链接器工具警告 LNK4286](linker-tools-warning-lnk4286.md) \

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: bac1f9a139d2fb0092ef0869587ae8b54342fe82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399325"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190022"
 ---
-# <a name="comptrt-extractors"></a>_com_ptr_t 提取器
+# <a name="_com_ptr_t-extractors"></a>_com_ptr_t 提取器
 
 **Microsoft 专用**
 
@@ -46,20 +46,20 @@ operator bool( ) const throw( );
 
 ## <a name="remarks"></a>备注
 
-- **运算符接口**<strong>\*</strong>返回封装的接口指针，这可能为 NULL。
+- **Operator interface** <strong>\*</strong>返回封装的接口指针，该指针可能为 NULL。
 
-- **运算符接口 &** 返回对封装的接口指针的引用，并发出错误，如果指针为 NULL。
+- **操作员界面 &** 返回对封装的接口指针的引用，如果指针为 NULL，则会发出错误。
 
-- **运算符**<strong>\*</strong>允许智能指针对象在执行操作，就好像它是实际封装的接口取消引用时。
+- **运算符**<strong>\*</strong>允许智能指针对象在取消引用时充当实际封装的接口。
 
-- **运算符->** 允许智能指针对象在执行操作，就好像它是实际封装的接口取消引用时。
+- **operator->** 允许智能指针对象在取消引用时充当实际封装的接口。
 
-- **运算符 &** 释放所有封装的接口指针，将它替换为 NULL，并返回封装的指针的地址。 这允许智能指针通过寻址传递到具有的函数*出*参数通过它会返回一个接口指针。
+- **运算符 &** 释放所有封装的接口指针，并将其替换为 NULL，并返回封装的指针的地址。 这允许将智能指针按地址传递到具有*out*参数的函数，该函数通过该函数返回接口指针。
 
-- **运算符 bool**允许智能指针对象在条件表达式中使用。 如果指针不为 NULL，则此运算符返回 TRUE。
+- **operator bool**允许将智能指针对象用于条件表达式。 如果指针不为 NULL，则此运算符返回 TRUE。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

@@ -7,56 +7,56 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4191704da2fdac849ac1ce97692c2421ba7cda41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148362"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168378"
 ---
 # <a name="attribute-programming-faq"></a>特性编程常见问题
 
-本主题回答下列常见问题：
+本主题回答以下常见问题：
 
-- [HRESULT 是什么？](#vcconattributeprogrammmingfaqanchor1)
+- [什么是 HRESULT？](#vcconattributeprogrammmingfaqanchor1)
 
-- [何时已指定属性的参数名称](#vcconattributeprogrammmingfaqanchor2)
+- [何时需要指定属性的参数名称？](#vcconattributeprogrammmingfaqanchor2)
 
-- [可以在特性块中使用注释？](#vcconattributeprogrammmingfaqanchor3)
+- [能否在属性块中使用注释？](#vcconattributeprogrammmingfaqanchor3)
 
-- [属性与继承？](#vcconattributeprogrammmingfaqanchor4)
+- [特性如何与继承进行交互？](#vcconattributeprogrammmingfaqanchor4)
 
-- [如何在非属性化 ATL 项目中使用特性？](#vcconattributeprogrammmingfaqanchor5)
+- [如何使用非特性化 ATL 项目中的属性？](#vcconattributeprogrammmingfaqanchor5)
 
-- [如何使用特性化项目中的.idl 文件？](#vcconattributeprogrammmingfaqanchor6)
+- [如何在特性化项目中使用 .idl 文件？](#vcconattributeprogrammmingfaqanchor6)
 
-- [可以修改由属性插入的代码？](#vcconattributeprogrammmingfaqanchor7)
+- [能否修改由属性注入的代码？](#vcconattributeprogrammmingfaqanchor7)
 
-- [如何向前声明特性化的接口？](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
+- [如何转发声明属性化接口？](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
 
-- [可以从还使用特性的类派生的类上使用属性？](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
+- [能否对从也使用特性的类派生的类使用特性？](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
 
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT 是什么？
+##  <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a>什么是 HRESULT？
 
-HRESULT 为通常用作返回值属性和 ATL 的一般情况下的简单数据类型。 下表介绍各种值。 更多的值包含在标头文件 winerror.h 中。
+HRESULT 是一种简单的数据类型，通常由特性和 ATL 通常用作返回值。 下表描述了各种值。 标头文件 winerror.h 中包含的值越多。
 
-|名称|描述|“值”|
+|名称|描述|值|
 |----------|-----------------|-----------|
 |S_OK|操作成功|0x00000000|
-|E_UNEXPECTED|意外的失败|0x8000FFFF|
+|E_UNEXPECTED|意外故障|0x8000FFFF|
 |E_NOTIMPL|未实现|0x80004001|
-|E_OUTOFMEMORY|无法分配必要的内存|0x8007000E|
-|E_INVALIDARG|一个或多个参数均无效|0x80070057|
+|E_OUTOFMEMORY|未能分配所需的内存|0x8007000E|
+|E_INVALIDARG|一个或多个参数无效|0x80070057|
 |E_NOINTERFACE|不支持此类接口|0x80004002|
-|E_POINTER|无效的指针|0x80004003|
-|E_HANDLE|无效的句柄|0x80070006|
-|E_ABORT|操作已中止|0x80004004|
-|E_FAIL|未知的故障|0x80004005|
+|E_POINTER|无效指针|0x80004003|
+|E_HANDLE|句柄无效|0x80070006|
+|E_ABORT|操作中止|0x80004004|
+|E_FAIL|未指定的失败|0x80004005|
 |E_ACCESSDENIED|常规拒绝访问错误|0x80070005|
 
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 何时已指定属性的参数名称
+##  <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a>何时需要指定属性的参数名称？
 
-在大多数情况下，如果属性具有一个参数，该参数是命名为。 在代码中插入属性时，不需要此名称。 例如，下面的用法[聚合](aggregatable.md)属性：
+在大多数情况下，如果特性只有一个参数，则该参数名为。 在代码中插入属性时不需要此名称。 例如，以下可[聚合](aggregatable.md)属性的用法：
 
 ```cpp
 [coclass, aggregatable(value=allowed)]
@@ -66,7 +66,7 @@ class CMyClass
 };
 ```
 
-正是与相同：
+完全相同：
 
 ```cpp
 [coclass, aggregatable(allowed)]
@@ -76,7 +76,7 @@ class CMyClass
 };
 ```
 
-但是，以下属性具有单一的未命名参数：
+但是，以下属性有一个未命名的参数：
 
 ||||
 |-|-|-|
@@ -92,11 +92,11 @@ class CMyClass
 |[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 可以在特性块中使用注释？
+##  <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a>能否在属性块中使用注释？
 
-您可以使用在属性块中的单行和多行注释。 但是，不能使用注释保存属性的参数的括号中的这两种样式。
+您可以在特性块中同时使用单行注释和多行注释。 但是，不能在保存属性参数的括号内使用任意样式的注释。
 
-以下被允许使用：
+允许以下操作：
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1"), /* Multiple-line
@@ -105,30 +105,30 @@ class CMyClass
 ]
 ```
 
-以下是不允许：
+不允许以下操作：
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 属性与继承？
+##  <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a>特性如何与继承进行交互？
 
-特性化和非特性化类可以继承其他类，它们可能本身由于与否。 从特性化类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性不会传输到派生类通过C++继承。 特性提供程序仅转换代码附近，其属性。
+可以从其他类继承特性化和无归属类，这些类本身可能是特性化的。 从特性化类派生的结果与属性提供程序转换其代码后从该类派生的结果相同。 属性不通过C++继承传输到派生类。 特性提供程序仅在其特性的邻近范围内转换代码。
 
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 如何在非属性化 ATL 项目中使用特性？
+##  <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a>如何使用非特性化 ATL 项目中的属性？
 
-您可能具有.idl 文件中，非属性化的 ATL 项目，你可能想要开始添加特性化的对象。 在这种情况下，使用**添加类向导**提供代码。
+您可能有一个包含 .idl 文件的非特性化 ATL 项目，您可能希望开始添加特性化对象。 在这种情况下，请使用 "**添加类向导**" 提供代码。
 
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 如何使用特性化项目中的.idl 文件？
+##  <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a>如何在特性化项目中使用 .idl 文件？
 
-您可能想要使用它在特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](importidl.md)属性中，编译到的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../../build/reference/midl-property-pages.md)在项目的**属性页**对话框)，并然后在项目中包含的.h 文件。
+您可能有一个要在 ATL 特性化项目中使用的 .idl 文件。 在这种情况下，您将使用[importidl](importidl.md)属性，将 .idl 文件编译为 .h 文件（在项目的 "**属性页**" 对话框中，请参阅[MIDL 属性页](../../build/reference/midl-property-pages.md)），然后在您的项目中包含 .h 文件。
 
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 可以修改由属性插入的代码？
+##  <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a>能否修改由属性注入的代码？
 
-某些属性将代码注入到你的项目。 可以使用查看插入的代码[/Fx](../../build/reference/fx-merge-injected-code.md)编译器选项。 还有可能要插入的文件中复制代码并将其粘贴到你的源代码。 这样，您可以修改该属性的行为。 但是，您可能需要修改代码的其他部分。
+某些属性将代码注入到你的项目中。 您可以使用[/fx](../../build/reference/fx-merge-injected-code.md)编译器选项查看注入的代码。 还可以从插入的文件复制代码并将其粘贴到源代码中。 这允许您修改属性的行为。 但是，您可能还需要修改代码的其他部分。
 
-下面的示例是将插入的代码复制到源的代码文件的结果：
+下面的示例是将注入的代码复制到源代码文件中的结果：
 
 ```cpp
 // attr_injected.cpp
@@ -234,13 +234,13 @@ public:
 int main() {}
 ```
 
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 如何向前声明特性化的接口？
+##  <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>如何转发声明属性化接口？
 
-如果要进行特性化接口的前向声明，则必须为前向声明适用于实际接口声明的应用相同的属性。 此外必须应用[导出](export.md)属性为前向声明。
+如果要对属性化接口进行前向声明，则必须将相同的属性应用于应用于实际接口声明的前向声明。 还必须将[导出](export.md)特性应用到前向声明。
 
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 可以从还使用特性的类派生的类上使用属性？
+##  <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>能否对从也使用特性的类派生的类使用特性？
 
-否，不支持从还使用特性的类派生的类上使用属性。
+不可以。不支持对从也使用特性的类派生的类使用特性。
 
 ## <a name="see-also"></a>请参阅
 
