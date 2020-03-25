@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级1） C4288
+title: 编译器警告（等级 1）C4288
 ms.date: 11/04/2016
 f1_keywords:
 - C4288
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: e706a448f4264eceedbb4fa8932c0fc30e88d532
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175735"
 ---
-# <a name="compiler-warning-level-1-c4288"></a>编译器警告（等级1） C4288
+# <a name="compiler-warning-level-1-c4288"></a>编译器警告（等级 1）C4288
 
 使用了非标准扩展： "var"：在 for 循环中声明的循环控制变量用在了 for 循环范围外;它与外部范围内的声明冲突
 

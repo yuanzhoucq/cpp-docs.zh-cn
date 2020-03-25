@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
-ms.openlocfilehash: a221aa98f5d4011bb310e056f4c2c8b04d847af6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0e084b5f25d713424217af5a2f4517ca73a27b39
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707596"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211440"
 ---
 # <a name="creating-an-ole-db-consumer"></a>创建 OLE DB 使用者
 
@@ -23,7 +23,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 可以使用或不使用 ATL OLE DB 使用者向导来创建 OLE DB 模板使用者，但建议使用此向导。 使用者可以运行支持 ATL 的任何应用程序。
 
-此节涵盖以下主题：
+本部分涵盖了以下主题：
 
 - [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
 
@@ -31,6 +31,6 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 330932f53627f8ba09e9e089cec7809eeeb6ab1c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206071"
 ---
 # <a name="compiler-error-c2362"></a>编译器错误 C2362
 
-> 初始化*标识符*通过跳过 goto*标签*
+> "goto *label*" 跳过了 "*identifier*" 的初始化
 
-通过使用在编译时[/Za](../../build/reference/za-ze-disable-language-extensions.md)，跳转到标签会无法标识符初始化。
+使用[/za](../../build/reference/za-ze-disable-language-extensions.md)进行编译时，跳转到标签可防止初始化该标识符。
 
-如果不输入的块中括在声明或变量已初始化，仅可以跳过具有初始值设定项的声明。
+如果声明包含在未输入的块中，或者如果该变量已初始化，则只能跳过带有初始值设定项的声明。
 
-下面的示例生成 C2362:
+下面的示例生成 C2362：
 
 ```cpp
 // C2362.cpp

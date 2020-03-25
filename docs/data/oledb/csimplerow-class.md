@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545563"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211115"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 

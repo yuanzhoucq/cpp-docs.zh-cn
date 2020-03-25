@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366454"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211128"
 ---
 # <a name="csession-class"></a>CSession 类
 
@@ -69,18 +69,18 @@ class CSession
 |-|-|
 |[Abort](#abort)|取消（终止）事务。|
 |[关闭](#close)|关闭会话。|
-|[Commit](#commit)|提交事务。|
+|[提交](#commit)|提交事务。|
 |[GetTransactionInfo](#gettransactioninfo)|返回有关事务的信息。|
 |[打开](#open)|为数据源对象打开新会话。|
 |[StartTransaction](#starttransaction)|开始此会话的新事务。|
 
 ## <a name="remarks"></a>备注
 
-一个或多个会话可以与每个提供程序连接 （数据源），由表示相关联[CDataSource](../../data/oledb/cdatasource-class.md)对象。 若要创建一个新`CSession`有关`CDataSource`，调用[csession:: Open](../../data/oledb/csession-open.md)。 为了开始数据库事务，`CSession` 提供了 `StartTransaction` 方法。 事务启动后，您可以提交使用与其`Commit`方法，或取消它使用`Abort`方法。
+一个或多个会话可以与每个提供程序连接（数据源）关联，该连接由[CDataSource](../../data/oledb/cdatasource-class.md)对象表示。 若要为 `CDataSource`创建新 `CSession`，请调用[CSession：： Open](../../data/oledb/csession-open.md)。 为了开始数据库事务，`CSession` 提供了 `StartTransaction` 方法。 事务启动后，可以使用 `Commit` 方法提交它，或使用 `Abort` 方法取消它。
 
-## <a name="abort"></a> Csession:: Abort
+## <a name="csessionabort"></a><a name="abort"></a>CSession：： Abort
 
-将终止该事务。
+终止事务。
 
 ### <a name="syntax"></a>语法
 
@@ -90,17 +90,17 @@ HRESULT Abort(BOID* pboidReason = NULL,
    BOOL bAsync = FALSE) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[itransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[ITransaction：： Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-## <a name="close"></a> Csession:: Close
+## <a name="csessionclose"></a><a name="close"></a>CSession：： Close
 
-关闭该会话，打开[csession:: Open](../../data/oledb/csession-open.md)。
+关闭已通过[CSession：： Open](../../data/oledb/csession-open.md)打开的会话。
 
 ### <a name="syntax"></a>语法
 
@@ -110,9 +110,9 @@ void Close() throw();
 
 ### <a name="remarks"></a>备注
 
-版本`m_spOpenRowset`指针。
+释放 `m_spOpenRowset` 指针。
 
-## <a name="commit"></a> CSession::Commit
+## <a name="csessioncommit"></a><a name="commit"></a>CSession：： Commit
 
 提交事务。
 
@@ -124,9 +124,9 @@ HRESULT Commit(BOOL bRetaining = FALSE,
    DWORD grfRM = 0) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[itransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -134,9 +134,9 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[itransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
+有关详细信息，请参阅[ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
 
-## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession：： GetTransactionInfo
 
 返回有关事务的信息。
 
@@ -146,9 +146,9 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -156,9 +156,9 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))中*OLE DB 程序员参考*。
+有关详细信息，请参阅*OLE DB 程序员参考*中的[ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
 
-## <a name="open"></a> Csession:: Open
+## <a name="csessionopen"></a><a name="open"></a>CSession：： Open
 
 为数据源对象打开新会话。
 
@@ -170,16 +170,16 @@ HRESULT Open(const CDataSource& ds,
    ULONG ulPropSets = 0) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ds*<br/>
-[in]该会话将打开数据源。
+中要为其打开会话的数据源。
 
-*pPropSet*<br/>
-[in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。
+*传入 ppropset*<br/>
+中指向包含要设置的属性和值的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构传入*pPropSet*参数。
+中在*传入 ppropset*参数中传递的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -187,9 +187,9 @@ HRESULT Open(const CDataSource& ds,
 
 ### <a name="remarks"></a>备注
 
-必须打开数据源对象使用[cdatasource:: Open](../../data/oledb/cdatasource-open.md)之前将其传递给`CSession::Open`。
+必须先使用[CDataSource：： open](../../data/oledb/cdatasource-open.md)打开数据源对象，然后再将其传递给 `CSession::Open`。
 
-## <a name="starttransaction"></a> CSession::StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession：： StartTransaction
 
 开始此会话的新事务。
 
@@ -202,9 +202,9 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
    ULONG* pulTransactionLevel = NULL) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -212,9 +212,9 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))中*OLE DB 程序员参考*。
+有关详细信息，请参阅*OLE DB 程序员参考*中的[ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-ms.openlocfilehash: c6400c8060664713fdd004a5aa9536e0617bc0c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e8d9b0b445d1120ec15911eb763ae1d7d2d359
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154771"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188647"
 ---
 # <a name="final-specifier"></a>final 说明符
 
-可以使用**最终**关键字来指定不能在派生类中重写的虚函数。 您还可以使用它指定无法继承的类。
+您可以使用**final**关键字来指定不能在派生类中重写的虚函数。 您还可以使用它指定无法继承的类。
 
 ## <a name="syntax"></a>语法
 
@@ -26,13 +26,13 @@ class class-name final base-classes
 
 ## <a name="remarks"></a>备注
 
-**最终**是上下文相关和具有特殊含义，仅当用于函数声明后或类名称; 否则为而不是保留的关键字。
+**final**是上下文相关的，只有在函数声明或类名后使用时才具有特殊意义;否则，它不是保留的关键字。
 
-当**最终**在类声明中使用`base-classes`是声明的可选部分。
+当在类声明中使用**final**时，`base-classes` 是声明的可选部分。
 
 ## <a name="example"></a>示例
 
-下面的示例使用**最终**关键字来指定，不能重写虚函数。
+下面的示例使用**final**关键字指定无法重写虚函数。
 
 ```cpp
 class BaseClass
@@ -47,9 +47,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-有关如何指定可以重写成员函数的信息，请参阅[重写说明符](../cpp/override-specifier.md)。
+有关如何指定可以重写成员函数的信息，请参阅[Override 说明符](../cpp/override-specifier.md)。
 
-下面的示例使用**最终**关键字指定无法继承类。
+下一个示例使用**final**关键字指定无法继承类。
 
 ```cpp
 class BaseClass final
@@ -62,7 +62,7 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [override 说明符](../cpp/override-specifier.md)

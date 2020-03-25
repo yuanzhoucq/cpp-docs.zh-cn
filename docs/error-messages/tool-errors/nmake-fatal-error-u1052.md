@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-ms.openlocfilehash: 58b4a7f8a87658db72048902230e6b4ec3e2eb18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34e047bf02c51cf226b29bf291aa8fe0e08f5ee4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395048"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193545"
 ---
 # <a name="nmake-fatal-error-u1052"></a>NMAKE 错误 U1052
 
-> 文件*文件名*找不到
+> 找不到文件 "*filename*"
 
-NMAKE 找不到具有以下值之一指定的文件：
+NMAKE 找不到通过下列方式之一指定的文件：
 
 - **/F**选项
 
-- **!包括**预处理指令
+- **!INCLUDE**预处理指令
 
-- At 符号 (**\@**) 的响应文件说明符
+- 响应文件的 At 符号（ **\@** ）说明符
 
-检查存在该文件，文件名的拼写正确。
+请检查该文件是否存在以及文件名是否拼写正确。

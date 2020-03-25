@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2155
 ms.assetid: 54d408af-fc48-4121-9011-5e75c7072e01
-ms.openlocfilehash: bee0b6707df6f559412917eb32d9471c9c7842dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7a2041c5b65973eaa398f05010cfe4f0a76ff2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207163"
 ---
 # <a name="compiler-error-c2155"></a>编译器错误 C2155
 
-？： 无效的左侧操作数，预期算术或指针类型
+"？"：左操作数无效，应为算术类型或指针类型
 
-一个表达式的左侧`?`不能比较为零。 必须使用可以比较为零的算术或指针表达式。
+不能将 `?` 左侧的表达式与零进行比较。 必须使用可以与零进行比较的算术或指针表达式。

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK1504
 ms.assetid: e6d1a171-1472-4b7e-a04b-1a68a561675f
-ms.openlocfilehash: b213944f26932ec3b3934e82953573c1b8050532
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38cbc3173cbb9436a9b2e7f0d0c38af0b2caf4e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197829"
 ---
 # <a name="bscmake-error-bk1504"></a>BSCMAKE 错误 BK1504
 
-在文件 filename 中不能定位 [: 原因]
+无法在文件 "filename" 中定位 [： reason]
 
-BSCMAKE 无法移动到文件中的位置。
+BSCMAKE 无法移至文件中的位置。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 磁盘已满。
+1. 完整磁盘。
 
 1. 硬件错误。
 
-1. 由于没有足够的磁盘空间或中断的编译器创建.sbr 文件时文件截断。
+1. 文件截断是由于磁盘空间不足或在创建 .sbr 文件时编译器中断引起的。

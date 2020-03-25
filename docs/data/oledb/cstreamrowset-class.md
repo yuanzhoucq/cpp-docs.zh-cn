@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 300933fd6d10f5da39d9276db746ab789851a9a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211167"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 类
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-ms.openlocfilehash: e3dc5b9319a8745ddb446ae7dbe895bfcd446c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 742e95d896d107fb89b3d65f0eeb6d418f1b2057
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209061"
 ---
 # <a name="transactions--mfc-data-access"></a>事务（MFC 数据访问）
 
@@ -23,18 +23,18 @@ ms.locfileid: "62152652"
 
 事务必须具有 ACID 属性，代表以下涵义：
 
-- **原子性**; 事务是原子工作单元和一次执行所有工作都都完成或都不都是。
+- **原子**性事务是一个原子工作单元，只执行一次。所有工作都已完成，或者没有任何工作。
 
-- **一致性**事务保持数据，将数据的一个一致性状态转换为另一个一致状态的数据的一致性。 必须在语义上保留事务绑定的数据。
+- **一致性**事务保留数据的一致性，将数据的一种一致状态转换为另一种一致的数据状态。 必须在语义上保留事务绑定的数据。
 
-- **隔离**事务的隔离单元，每个单独发生，独立于并发事务。 一个事务绝不可能看到另一个事务的中间阶段。
+- **隔离**事务是一个隔离单元，每个都单独进行并独立于并发事务。 一个事务绝不可能看到另一个事务的中间阶段。
 
-- **持续性**事务是一个恢复单元。 如果一个事务成功，它就会持续更新，即使该系统崩溃或已关闭。 如果事务失败，系统仍然处于之前提交事务的状态。
+- **持久性**事务是恢复单元。 如果一个事务成功，它就会持续更新，即使该系统崩溃或已关闭。 如果事务失败，系统仍然处于之前提交事务的状态。
 
-可以在 OLE DB 中支持事务 (请参阅[支持 OLE DB 中的事务](../data/oledb/supporting-transactions-in-ole-db.md)) 或 ODBC (请参阅[事务 (ODBC)](../data/odbc/transaction-odbc.md))。
+您可以在 OLE DB 中支持事务（请参阅[在 OLE DB 中支持事务](../data/oledb/supporting-transactions-in-ole-db.md)）或 ODBC （请参阅[Transaction （ODBC）](../data/odbc/transaction-odbc.md)）。
 
-分布式事务是指更新分布式数据的事务，即多个连网计算机系统上的数据。 如果你想要在分布式系统中支持事务，则应使用 ADO.NET 而不是 OLE DB 事务支持。
+分布式事务是指更新分布式数据的事务，即多个连网计算机系统上的数据。 如果希望通过分布式系统支持事务，则应使用 ADO.NET，而不是 OLE DB 事务支持。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据访问编程 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283918"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209854"
 ---
 # <a name="output-parameters"></a>输出参数
 
-调用存储的过程是类似于运行 SQL 命令。 主要区别是存储的过程使用输出参数 （或"输出"） 和返回值。
+调用存储过程类似于运行 SQL 命令。 主要区别在于，存储过程使用输出参数（或 "outparameters"）并返回值。
 
-在以下存储过程中，第一个？ 是返回值 （电话），第二个？ 是输入的参数 （名称）：
+在下面的存储过程中，第一个 "？" 是返回值（phone），第二个 "？" 是输入参数（name）：
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
 ```
 
-参数映射中指定 in 和 out 参数：
+在参数映射中指定 in 和 out 参数：
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -36,13 +36,13 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-应用程序必须处理从存储过程返回的输出。 不同的 OLE DB 访问接口返回输出参数和返回结果处理期间的不同时间的值。 例如，Microsoft OLE DB 访问接口的 SQL Server (SQLOLEDB) 不提供输出参数和返回之前的代码后使用者检索或取消存储过程返回的结果集。 从服务器中的最后一个的 TDS 数据包返回输出。
+应用程序必须处理从存储过程返回的输出。 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 例如，在使用者检索或取消了存储过程返回的结果集之前，适用于 SQL Server 的 Microsoft OLE DB 提供程序（SQLOLEDB）不会提供输出参数和返回代码。 输出将从服务器的最后一个 TDS 数据包中返回。
 
 ## <a name="row-count"></a>行计数
 
-如果使用 OLE DB 使用者模板来执行具有输出的存储的过程，直到关闭的行集不是设置行计数。
+如果使用 OLE DB 使用者模板执行具有 outparameters 的存储过程，则在关闭行集之前，不会设置行计数。
 
-例如，请考虑使用带有行集和输出参数为存储的过程：
+例如，假设有一个包含行集和 outparameter 的存储过程：
 
 ```sql
 create procedure sp_test
@@ -53,8 +53,8 @@ as
 return 0
 ```
 
-`@_rowcount`带有报告从测试表返回行数。 但是，此存储的过程限制为 50 的行数。 例如，如果在测试中有 100 行，行计数将是 50 （因为此代码检索只显示前 50 行）。 如果表中仅 30 行，行计数将为 30。 请务必调用`Close`或`CloseAll`来填充带有之前提取其值。
+`@_rowcount` outparameter 报告从测试表中返回的行数。 但是，此存储过程将行数限制为50。 例如，如果测试中有100行，则行计数将为50（因为此代码仅检索最上面的50行）。 如果表中只有30行，则行计数将为30。 在提取 outparameter 值之前，请务必调用 `Close` 或 `CloseAll` 来填充。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用存储过程](../../data/oledb/using-stored-procedures.md)

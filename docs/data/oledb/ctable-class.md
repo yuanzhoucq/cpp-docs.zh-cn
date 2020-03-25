@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368430"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211141"
 ---
 # <a name="ctable-class"></a>CTable 类
 
-提供了一种方法直接访问简单行集合 （一个不带任何参数）。
+提供直接访问简单行集的方法（没有参数的行集）。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +33,7 @@ class CTable :
    public CAccessorRowset <TAccessor, TRowset>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 一个访问器类。
@@ -55,9 +55,9 @@ class CTable :
 
 ## <a name="remarks"></a>备注
 
-请参阅[CCommand](../../data/oledb/ccommand-class.md)有关如何执行命令来访问行集的信息。
+有关如何执行命令以访问行集的信息，请参阅[CCommand](../../data/oledb/ccommand-class.md) 。
 
-## <a name="open"></a> Ctable:: Open
+## <a name="ctableopen"></a><a name="open"></a>CTable：： Open
 
 打开表。
 
@@ -80,25 +80,25 @@ HRESULT Open(const CSession& session,
    ULONG ulPropSets = 0) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*session*<br/>
-[in]为其打开的表的会话。
+*会议*<br/>
+中打开表的会话。
 
 *wszTableName*<br/>
-[in]若要打开，表的名称传递为 Unicode 字符串。
+中要打开的表的名称，以 Unicode 字符串形式传递。
 
 *szTableName*<br/>
-[in]若要打开，表的名称传递为 ANSI 字符串。
+中要打开的表的名称，以 ANSI 字符串形式传递。
 
 *dbid*<br/>
-[in]`DBID`要打开的表。
+中要打开的表的 `DBID`。
 
-*pPropSet*<br/>
-[in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。 默认值为 NULL 指定任何属性。
+*传入 ppropset*<br/>
+中指向包含要设置的属性和值的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。 默认值为 NULL，则不指定任何属性。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构传入*pPropSet*参数。
+中在*传入 ppropset*参数中传递的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -106,9 +106,9 @@ HRESULT Open(const CSession& session,
 
 ### <a name="remarks"></a>备注
 
-有关更多详细信息，请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考*。
+有关更多详细信息，请参阅*OLE DB 程序员参考*中的[IOpenRowset：： OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88811e8070fdfe398bc12734221dee772515d8bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190530"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>针对函数的依赖于自变量的名称 (Koenig) 查找
 
-编译器可以使用依赖于自变量的名称查找来查找非限定函数调用的定义。 依赖于自变量的名称查找也称为 Koenig 查找。 在命名空间、类、结构、联合或模板的层次结构中定义函数调用中每个自变量的类型。 指定未限定[后缀](../cpp/postfix-expressions.md)函数调用中，编译器将搜索与每个自变量类型关联的层次结构中的函数定义的。
+编译器可以使用依赖于自变量的名称查找来查找非限定函数调用的定义。 依赖于自变量的名称查找也称为 Koenig 查找。 在命名空间、类、结构、联合或模板的层次结构中定义函数调用中每个自变量的类型。 当指定非限定[后缀](../cpp/postfix-expressions.md)函数调用时，编译器将在与每个参数类型关联的层次结构中搜索函数定义。
 
 ## <a name="example"></a>示例
 

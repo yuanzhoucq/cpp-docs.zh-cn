@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
-ms.openlocfilehash: d6dc742a181d8aebc041d9ffadd6256d3b7c9348
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5984573074b07ae4cbd961ad7d8821173e0b04b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406855"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201864"
 ---
 # <a name="compiler-error-c2828"></a>编译器错误 C2828
 
-operator operator 不能全局重写以二进制格式
+不能用 binary 形式全局重写 "operator operator"
 
-运算符不能具有外部对象二进制格式。
+运算符不能在对象的外部具有二进制形式。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复
 
-1. 对对象进行本地重载的运算符。
+1. 使重载运算符成为对象的局部变量。
 
-1. 选择适当的一元运算符重载。
+1. 选择要重载的适当一元运算符。

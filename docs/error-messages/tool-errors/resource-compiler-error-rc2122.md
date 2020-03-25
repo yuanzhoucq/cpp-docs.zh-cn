@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2122
 ms.assetid: c2f02ec1-1ce8-4a13-b35e-7cd416fa9f41
-ms.openlocfilehash: 75793efd4f10711890b2d456a56c85ad45ea58ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b90bad82853c07c508ad48263c3a08c522c1176c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191543"
 ---
 # <a name="resource-compiler-error-rc2122"></a>资源编译器错误 RC2122
 
-未知的菜单的子类型
+未知的菜单子类型
 
-*项定义*字段**菜单**语句只能包含**MENUITEM**并**弹出**语句。
+**MENU**语句的*项定义*字段只能包含**MENUITEM**和**POPUP**语句。

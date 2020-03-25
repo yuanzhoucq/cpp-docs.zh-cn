@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
-ms.openlocfilehash: 7f1f19b91580bffa1133ae11ab91f2243153a389
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8da60b895ad5dab0713d736142225053d14301c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406868"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201937"
 ---
 # <a name="compiler-error-c2827"></a>编译器错误 C2827
 
-operator operator 不能全局重写一元格式
+不能用一元形式全局重写 "operator operator"
 
-运算符不能具有一元窗体外部对象。
+运算符不能在对象的外部具有一元形式。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复
 
-1. 对对象进行本地重载的运算符。
+1. 使重载运算符成为对象的局部变量。
 
-1. 选择适当的一元运算符重载。
+1. 选择要重载的适当一元运算符。

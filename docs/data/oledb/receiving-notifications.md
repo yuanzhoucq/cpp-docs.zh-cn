@@ -10,22 +10,22 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-ms.openlocfilehash: b35c1d3d6ff7d5d74493e843575f7448c4df8d8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b630a9728770a5e35e6d6300cf465b90238350c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283782"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209760"
 ---
 # <a name="receiving-notifications"></a>接收通知
 
-OLE DB 提供用于在事件发生时接收通知的接口。 中介绍了这些[OLE DB 对象通知](/previous-versions/windows/desktop/ms725406(v=vs.85))中**OLE DB 程序员参考**。 这些事件的安装程序将使用标准的 COM 连接点机制。 例如，想要检索事件通过的 ATL 对象`IRowsetNotify`实现`IRowsetNotify`接口通过添加`IRowsetNotify`到派生类的列表并将其公开通过 COM_INTERFACE_ENTRY 宏。
+OLE DB 提供在发生事件时接收通知的接口。 这些在**OLE DB 程序员参考**中的[OLE DB 对象通知](/previous-versions/windows/desktop/ms725406(v=vs.85))中进行了介绍。 这些事件的设置使用标准 COM 连接点机制。 例如，想要通过 `IRowsetNotify` 检索事件的 ATL 对象通过将 `IRowsetNotify` 添加到类派生列表并通过 COM_INTERFACE_ENTRY 宏进行公开来实现 `IRowsetNotify` 接口。
 
-`IRowsetNotify` 有三个方法，可以在不同时间调用。 如果你想要响应的下列方法之一，则可以使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)类，该类不感兴趣的方法返回 E_NOTIMPL。
+`IRowsetNotify` 具有三种方法，可在不同时间调用这些方法。 如果你只想对其中一种方法做出响应，则可以使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)类，它为你不感兴趣的方法返回 E_NOTIMPL。
 
-在创建行集时，你必须告知提供程序希望返回的行集对象以支持`IConnectionPointContainer`，需要设置通知。
+创建行集时，必须告知提供程序您希望返回的行集对象支持 `IConnectionPointContainer`，这是设置通知所必需的。
 
-下面的代码演示如何从 ATL 对象打开行集，并使用`AtlAdvise`函数来通知接收器设置。 `AtlAdvise` 返回在调用时使用的 cookie `AtlUnadvise`。
+下面的代码演示如何从 ATL 对象打开行集，并使用 `AtlAdvise` 函数设置通知接收器。 `AtlAdvise` 返回调用 `AtlUnadvise`时使用的 cookie。
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -40,6 +40,6 @@ product.Open(session, _T("Products"), &propset);
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用访问器](../../data/oledb/using-accessors.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "79544734"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208795"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>将项目从混合模式转换为纯中间语言项目
 
@@ -77,7 +77,7 @@ ms.locfileid: "79544734"
 
    |结构|说明|
    |---------------|-----------------|
-   |[布尔值](/dotnet/api/system.boolean)|表示布尔值。|
+   |[布尔值](/dotnet/api/system.boolean)|表示一个布尔值。|
    |[Byte](/dotnet/api/system.byte)|表示一个 8 位无符号整数。|
    |[Char](/dotnet/api/system.char)|表示一个 Unicode 字符。|
    |[DateTime](/dotnet/api/system.datetime)|表示时间上的一刻，通常以日期和当天的时间表示。|
@@ -85,14 +85,14 @@ ms.locfileid: "79544734"
    |[双精度](/dotnet/api/system.double)|表示一个双精度浮点数。|
    |[Guid](/dotnet/api/system.guid)|表示全局唯一标识符 (GUID)。|
    |[Int16](/dotnet/api/system.int16)|表示 16 位有符号整数。|
-   |[Int32](/dotnet/api/system.int32)|表示 32 位带符号整数。|
+   |[Int32](/dotnet/api/system.int32)|表示 32 位有符号整数。|
    |[Int64](/dotnet/api/system.int64)|表示 64 位有符号整数。|
-   |[IntPtr](/dotnet/api/system.intptr)|用于表示指针或句柄的平台特定类型。|
+   |[IntPtr](/dotnet/api/system.intptr)|用于表示指针或句柄的特定于平台的类型。|
    |[SByte](/dotnet/api/system.byte)|表示 8 位有符号整数。|
-   |[Single](/dotnet/api/system.single)|表示一个单精度浮点数。|
+   |[Single](/dotnet/api/system.single)|表示单精度浮点数。|
    |[TimeSpan](/dotnet/api/system.timespan)|表示一个时间间隔。|
    |[UInt16](/dotnet/api/system.uint16)|表示 16 位无符号整数。|
    |[UInt32](/dotnet/api/system.uint32)|表示 32 位无符号整数。|
    |[UInt64](/dotnet/api/system.uint64)|表示 64 位无符号整数。|
-   |[UIntPtr](/dotnet/api/system.uintptr)|用于表示指针或句柄的平台特定类型。|
+   |[UIntPtr](/dotnet/api/system.uintptr)|用于表示指针或句柄的特定于平台的类型。|
    |[导致](/dotnet/api/system.void)|表示不返回值的方法;也就是说，该方法具有 void 返回类型。|

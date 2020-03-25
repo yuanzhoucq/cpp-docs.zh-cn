@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-ms.openlocfilehash: 7a627ce28e60f42dabcf0a257464a8bfbd58b9a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20b08c0d2cd89224ed3d3b8b34915deb947b0b4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205109"
 ---
 # <a name="compiler-error-c2483"></a>编译器错误 C2483
 
->'*标识符*： 用构造函数或析构函数的对象不能声明为线程
+>"*identifier*"：包含构造函数或析构函数的对象不能声明为 "thread"
 
-此错误消息是在 Visual Studio 2015 及更高版本中已过时。 在早期版本中，变量声明与`thread`属性不能使用构造函数或其他需要运行时计算的表达式进行初始化。 初始化所需的静态表达式`thread`数据。
+在 Visual Studio 2015 及更高版本中，此错误消息已过时。 在以前的版本中，无法使用构造函数或需要运行时计算的其他表达式初始化使用 `thread` 特性声明的变量。 初始化 `thread` 数据需要静态表达式。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2483 Visual Studio 2013 和早期版本中。
+下面的示例在 Visual Studio 2013 及更早版本中生成 C2483。
 
 ```cpp
 // C2483.cpp
@@ -34,6 +34,6 @@ __declspec(thread) struct A {
 __declspec(thread) struct B {} b;   // OK
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [thread](../../cpp/thread.md)

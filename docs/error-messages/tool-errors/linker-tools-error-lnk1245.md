@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1245
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
-ms.openlocfilehash: 4cf9a6c4356872b727a10a360396e51e38928b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19e3f820b5bd7fdd8eac2f7b5a96fb5923ae0b92
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183795"
 ---
 # <a name="linker-tools-error-lnk1245"></a>链接器工具错误 LNK1245
 
-无效的子系统子系统指定任何引用;/SUBSYSTEM 必须是 WINDOWS、 WINDOWSCE 或 CONSOLE
+指定的子系统 "子系统" 无效;/SUBSYSTEM 必须是 WINDOWS、WINDOWSCE 或 CONSOLE
 
-[/clr](../../build/reference/clr-common-language-runtime-compilation.md)用于编译对象和以下条件之一为 true:
+使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)编译对象，并满足以下条件之一：
 
-- 定义自定义入口点 ([/ENTRY](../../build/reference/entry-entry-point-symbol.md))，以便链接器无法推导出子系统。
+- 定义了自定义入口点（[/ENTRY](../../build/reference/entry-entry-point-symbol.md)），以便链接器无法推断子系统。
 
-- 一个值传递给[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)不能用于 /clr 对象的链接器选项。
+- 向[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)链接器选项传递的值对于/clr 对象无效。
 
-对于这两种情况，解决方法是指定于 /SUBSYSTEM 链接器选项的有效值。
+对于这两种情况，解决方法是为/SUBSYSTEM 链接器选项指定有效值。

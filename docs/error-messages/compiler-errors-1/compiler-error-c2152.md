@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2152
 ms.assetid: a9ea2b0c-d55d-41c7-ba9f-dd75592ffc8a
-ms.openlocfilehash: 072b5f13a639b1bd3d8e028fcd6c811012bfa2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10178d2cd40af60603b908a9351b8e14d12c5570
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175223"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207189"
 ---
 # <a name="compiler-error-c2152"></a>编译器错误 C2152
 
-identifier： 指向具有不同的属性的函数的指针
+"identifier"：指向具有不同特性的函数的指针
 
-指向具有一个调用约定的函数的指针 (`__cdecl`， `__stdcall`，或`__fastcall`) 分配给到具有另一个调用约定的函数指针。
+指向函数的指针（`__cdecl`、`__stdcall`或 `__fastcall`）被分配给一个指针，该指针指向具有其他调用约定的函数。

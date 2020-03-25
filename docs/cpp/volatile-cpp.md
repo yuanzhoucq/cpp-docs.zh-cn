@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6d193c530cbe0258d8713883b769fe4828a248c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857198"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187422"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Visual Studio 会根据目标体系结构，以不同的方式解释**volatile**
 
 ## <a name="iso-compliant"></a>符合 ISO
 
-如果C#你熟悉 volatile 关键字，或熟悉早期版本的 Microsoft C++编译器（MSVC）中的**volatile**行为，请注意，当指定[/Volatile： ISO](../build/reference/volatile-volatile-keyword-interpretation.md)编译器选项时，c + + 11 ISO 标准**volatile**关键字是不同的，并且在 MSVC 中受支持。 （对于 ARM，默认情况下将指定它。） C + + 11 ISO 标准代码中的**volatile**关键字仅用于硬件访问;不要将其用于线程间通信。 对于线程间通信使用机制例如[std::atomic\<T >](../standard-library/atomic.md)从[C++ 标准库](../standard-library/cpp-standard-library-reference.md)。
+如果C#你熟悉 volatile 关键字，或熟悉早期版本的 Microsoft C++编译器（MSVC）中的**volatile**行为，请注意，当指定[/Volatile： ISO](../build/reference/volatile-volatile-keyword-interpretation.md)编译器选项时，c + + 11 ISO 标准**volatile**关键字是不同的，并且在 MSVC 中受支持。 （对于 ARM，默认情况下将指定它。） C + + 11 ISO 标准代码中的**volatile**关键字仅用于硬件访问;不要将其用于线程间通信。 对于线程间的通信，请使用[ C++标准库](../standard-library/cpp-standard-library-reference.md)中的 " [std：：原子\<t" >](../standard-library/atomic.md)机制。
 
 ## <a name="end-of-iso-compliant"></a>符合 ISO 的末尾
 

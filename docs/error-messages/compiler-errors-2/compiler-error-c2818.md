@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2818
 ms.assetid: 715fc7c9-0c6d-452b-b7f5-1682cea5e907
-ms.openlocfilehash: f6e33d0e0ee139138df7d8e11357100b3ec3a1a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00952e55f1b732bd9af3733f5c0ec575a39116fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202100"
 ---
 # <a name="compiler-error-c2818"></a>编译器错误 C2818
 
-应用程序的重载 operator-> 是 type 的递归通过类型
+重载 "operator->" 的应用程序是通过类型 "type" 递归的
 
-类成员访问运算符重新定义包含递归`return`语句。 若要重新定义`->`递归运算符，必须移动到单独的函数调用运算符从的递归例程来重写函数。
+类成员访问运算符的重定义包含递归 `return` 语句。 若要使用递归重定义 `->` 运算符，必须将递归例程移到从运算符 override 函数调用的单独函数。

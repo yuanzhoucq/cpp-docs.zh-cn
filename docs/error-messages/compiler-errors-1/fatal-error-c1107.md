@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1107
 ms.assetid: 541a4d9f-10bc-4dd8-b68e-15e548f3dc0a
-ms.openlocfilehash: 135e8da1b49eb1d86f6186e8683ced2f5152a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e8df232b4d3f3b18eb7c37bcc418ca030a93aef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203783"
 ---
 # <a name="fatal-error-c1107"></a>错误 C1107
 
-找不到程序集 file： 请指定在程序集搜索路径中使用 /AI 或通过设置 LIBPATH 环境变量
+找不到程序集 "file"：请使用/AI 或通过设置 LIBPATH 环境变量指定程序集搜索路径
 
-元数据文件传递给[#using](../../preprocessor/hash-using-directive-cpp.md)编译器找不到的指令。
+一个元数据文件被传递到编译器无法找到的[#using](../../preprocessor/hash-using-directive-cpp.md)指令中。
 
-中的主题所述的 LIBPATH `#using`，并[/AI](../../build/reference/ai-specify-metadata-directories.md)编译器选项，可以指定在其中编译器将查找引用元数据文件的目录。
+LIBPATH （在 `#using`的主题中介绍）和[/AI](../../build/reference/ai-specify-metadata-directories.md)编译器选项允许你指定编译器将在其中查找引用的元数据文件的目录。

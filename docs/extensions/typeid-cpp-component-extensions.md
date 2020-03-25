@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181741"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid（C++/CLI 和 C++/CX）
 
@@ -27,7 +27,7 @@ ms.locfileid: "65515982"
 T::typeid
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 类型名称。
@@ -40,7 +40,7 @@ T::typeid
 Platform::Type^ type = T::typeid;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 类型名称。
@@ -61,9 +61,9 @@ Platform::Type^ type = T::typeid;
 type::typeid
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*type*<br/>
+type<br/>
 要为其获取 `System::Type` 对象的类型（抽象声明符）的名称。
 
 ### <a name="remarks"></a>备注
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

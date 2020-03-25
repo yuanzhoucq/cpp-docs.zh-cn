@@ -5,26 +5,26 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b855e0917ba9cdbdaa38a92473d7bddb4279101
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361910"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210062"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 编程概述
 
-OLE DB 是一种高性能的基于 COM 的数据库技术。 它提供了访问数据独立于在其中存储的表单的常用方法。 在典型的业务的情况下，大量信息不存储在企业数据库。 索引顺序文件、 个人数据库 （如访问）、 （如 Excel) 的电子表格、 项目规划应用程序 （例如项目） 和电子邮件 （如 Outlook)，将在文件系统 （如 FAT 或 NTFS） 中找到此信息。 OLE DB，可访问任何类型的数据存储方式相同，前提是数据存储区具有 OLE DB 访问接口。
+OLE DB 是一种基于 COM 的高性能数据库技术。 它提供了一种独立于存储数据的窗体访问数据的常用方法。 在典型的业务情形中，公司数据库中不存储大量的信息。 此信息可在文件系统（如 FAT 或 NTFS）、索引顺序文件、个人数据库（如访问）、电子表格（如 Excel）、项目规划应用程序（如项目）和电子邮件（如 Outlook）中找到。 OLE DB 使你能够以相同的方式访问任何类型的数据存储，前提是该数据存储具有 OLE DB 提供程序。
 
-OLE DB，可开发的应用程序访问各种数据源，无论他们是 DBMS。 OLE DB 通用访问可能使用建立适当的 DBMS 功能支持为给定的数据源的 COM 接口。 COM 可减少不必要的重复服务，并最大化不仅在数据源，还在其他应用程序之间的互操作性。
+OLE DB 允许开发可访问不同数据源的应用程序，无论这些数据源是否为 DBMS。 OLE DB 使用支持给定数据源的适当 DBMS 功能的 COM 接口，可以实现通用访问。 COM 可减少不必要的服务重复，并可最大程度地提高互操作性。
 
 ## <a name="benefits-of-com"></a>COM 的优点
 
-这是 COM 的作用所在。 OLE DB 是一组 COM 接口。 通过一组统一的接口访问数据，可以将数据库组织到协作组件的矩阵。
+COM 就在这里。 OLE DB 是一组 COM 接口。 通过一组统一的接口访问数据，您可以将数据库组织成一个协作组件矩阵。
 
-基于 COM 规范，OLE DB 定义接口的因素和封装的 DBMS 功能的一致、 可重用部分的可扩展和可维护的集合。 这些接口定义的 DBMS 组件，如行容器中，查询处理器和事务处理协调器，启用对各种信息源的统一事务性访问的边界。
+基于 COM 规范，OLE DB 定义了可扩展的、可维护的、用于确定和封装 DBMS 功能的一致的可重用部分的接口集合。 这些接口定义了 DBMS 组件（例如行容器、查询处理器和事务协调员）的边界，这将实现对各种信息源的统一事务访问。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 编程](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

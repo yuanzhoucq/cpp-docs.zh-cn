@@ -5,20 +5,20 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cabe5e92a496181d60536d7274eca388aba5c068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856110"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195469"
 ---
 # <a name="global-constants-in-c"></a>C++ 中的全局常量
 
-C++全局常量具有静态链接。 这是与 C 不同。如果尝试使用中的全局常量C++多个文件中获取无法解析的外部错误。 编译器优化了全局常量，留出的变量保留任何空间。
+C++全局常量具有静态链接。 这不同于 C。如果尝试在多个文件C++中使用全局常量，则会获得无法解析的外部错误。 编译器会优化全局常量，而不会为变量保留空间。
 
-若要解决此错误的一种方法是 const 初始化包括标头文件中，并在 CPP 文件，如有必要，就像它是函数原型中包括该标头。 另一种可能性是使变量成为非常量并评估它时使用的常量引用。
+解决此错误的一种方法是将 const 初始化包含在头文件中，并在必要时将该标头包括在 CPP 文件中，就像它是函数原型。 另一种可行方法是在对变量进行评估时将其设置为非常量并使用常量引用。
 
-下面的示例生成 C2019:
+下面的示例生成 C2019：
 
 ```cpp
 // global_constants.cpp
@@ -43,6 +43,6 @@ void test() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
