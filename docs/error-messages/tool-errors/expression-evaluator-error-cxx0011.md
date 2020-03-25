@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397193"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196152"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>表达式计算器错误 CXX0011
 
-缺少右括号
+缺少右方括号
 
-表达式包含不平衡的方括号。 重新键入与平衡方括号括起来的表达式。
+表达式包含不对称的方括号。 重新键入带对称方括号的表达式。
 
-此错误是与 CAN0011 相同。
+此错误与 CAN0011 相同。

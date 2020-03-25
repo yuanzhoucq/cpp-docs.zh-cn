@@ -8,16 +8,16 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8ea949653c7e62f39ab9d1b181c419cf51fe3cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209828"
 ---
 # <a name="provider-support-for-bookmarks"></a>用于书签的提供程序支持
 
-本主题中的示例将添加`IRowsetLocate`接口`CCustomRowset`类。 在几乎所有情况下，您首先将接口添加到现有的 COM 对象。 然后可以通过从使用者模板添加更多调用来测试它。 示例演示了如何：
+本主题中的示例将 `IRowsetLocate` 接口添加到 `CCustomRowset` 类。 几乎在所有情况下，首先将接口添加到现有的 COM 对象。 然后，你可以通过从使用者模板中添加更多调用来对其进行测试。 此示例演示如何执行以下操作：
 
 - 将接口添加到提供程序。
 
@@ -25,9 +25,9 @@ ms.locfileid: "62283777"
 
 - 添加书签支持。
 
-`IRowsetLocate` 接口继承自 `IRowset` 接口。 若要添加`IRowsetLocate`接口中，继承`CCustomRowset`从[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)。
+`IRowsetLocate` 接口继承自 `IRowset` 接口。 若要添加 `IRowsetLocate` 接口，请从[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)继承 `CCustomRowset`。
 
-添加`IRowsetLocate`接口是从大多数界面稍有不同。 若要使 Vtable 对齐，OLE DB 提供程序模板具有模板参数，以处理派生的接口。 下面的代码显示了新的继承列表：
+添加 `IRowsetLocate` 接口与大多数接口有点不同。 为了使 VTABLEs 联机，OLE DB 提供程序模板具有一个用于处理派生接口的模板参数。 下面的代码演示了新的继承列表：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -40,9 +40,9 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-第四个、 第五个和第六个参数都已添加。 此示例使用默认值为第四和第五个参数但指定`IRowsetLocateImpl`作为第六个参数。 `IRowsetLocateImpl` 是一个 OLE DB 模板类，采用两个模板参数： 这些挂钩`IRowsetLocate`接口`CCustomRowset`类。 若要添加大多数接口，可以跳过此步骤并移动到下一个。 仅`IRowsetLocate`和`IRowsetScroll`接口需要以这种方式进行处理。
+第四个、第五个和第六个参数都是添加的。 此示例使用第四个和第五个参数的默认值，但将 `IRowsetLocateImpl` 指定为第六个参数。 `IRowsetLocateImpl` 是一个 OLE DB 模板类，它采用两个模板参数：它们挂钩到 `CCustomRowset` 类的 `IRowsetLocate` 接口。 若要添加大多数接口，可以跳过此步骤并移至下一个。 只需以这种方式处理 `IRowsetLocate` 和 `IRowsetScroll` 接口。
 
-然后，你需要告诉`CCustomRowset`来调用`QueryInterface`为`IRowsetLocate`接口。 将行添加`COM_INTERFACE_ENTRY(IRowsetLocate)`到映射。 接口映射`CCustomRowset`应显示下面的代码所示：
+然后，需要告知 `CCustomRowset` 为 `IRowsetLocate` 接口调用 `QueryInterface`。 向映射添加行 `COM_INTERFACE_ENTRY(IRowsetLocate)`。 `CCustomRowset` 的接口映射应出现，如以下代码所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -56,11 +56,11 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-此外需要将挂钩到您的映射`CRowsetImpl`类。 添加在 COM_INTERFACE_ENTRY_CHAIN 宏挂接`CRowsetImpl`映射。 此外，创建名为的 typedef `RowsetBaseClass` ，它包含继承信息。 Typedef 是任意参数并被忽略。
+还需要将映射挂钩到 `CRowsetImpl` 类。 在 COM_INTERFACE_ENTRY_CHAIN 宏中添加以在 `CRowsetImpl` 映射中挂钩。 此外，还会创建一个名为 `RowsetBaseClass` 的 typedef，其中包含继承信息。 此 typedef 是任意的，可以忽略。
 
-最后，处理`IColumnsInfo::GetColumnsInfo`调用。 PROVIDER_COLUMN_ENTRY 宏通常将用于执行此操作。 但是，使用者可能想要使用的书签。 您必须能够更改具体取决于是否使用者要求书签的提供程序返回的列。
+最后，处理 `IColumnsInfo::GetColumnsInfo` 调用。 通常使用 PROVIDER_COLUMN_ENTRY 宏来完成此操作。 但是，使用者可能希望使用书签。 你必须能够更改提供程序返回的列，具体取决于使用者是否请求书签。
 
-若要处理`IColumnsInfo::GetColumnsInfo`调用，请删除中的 PROVIDER_COLUMN 映射`CTextData`类。 PROVIDER_COLUMN_MAP 宏可定义一个函数`GetColumnInfo`。 定义你自己`GetColumnInfo`函数。 函数声明应如下所示：
+若要处理 `IColumnsInfo::GetColumnsInfo` 调用，请在 `CTextData` 类中删除 PROVIDER_COLUMN 映射。 PROVIDER_COLUMN_MAP 宏定义函数 `GetColumnInfo`。 定义自己的 `GetColumnInfo` 函数。 函数声明应如下所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-然后，实现`GetColumnInfo`函数，在*自定义*RS.cpp 文件，如下所示：
+然后，在*自定义*RS .cpp 文件中实现 `GetColumnInfo` 函数，如下所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,11 +148,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo` 首先会查看是否某个属性调用`DBPROP_IRowsetLocate`设置。 OLE DB 已关闭的行集对象的可选接口的每个属性。 如果使用者想要使用这些可选接口之一，但它会将属性设置为 true。 提供程序随后可以检查此属性，并执行基于它的特殊操作。
+`GetColumnInfo` 首先检查是否设置了名为 `DBPROP_IRowsetLocate` 的属性。 OLE DB 包含行集对象的每个可选接口的属性。 如果使用者想要使用这些可选接口中的一个，则将属性设置为 true。 然后，提供程序可以选中此属性，并基于它执行特殊操作。
 
-在实现中，通过使用命令对象的指针获取的属性。 `pThis`指针表示的行集或命令的类。 因为你在此处使用模板，你必须将此作为传入**void**的指针或代码无法编译。
+在您的实现中，您可以使用指向命令对象的指针获取属性。 `pThis` 指针表示行集或 command 类。 由于使用的是模板，因此必须以**void**指针的形式传递此代码，否则不会编译代码。
 
-指定静态数组来保存列信息。 如果使用者不想要书签列，数组中的一项被多余。 您可以动态地分配此数组，但需要确保正确地销毁该。 此示例定义，并使用宏 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 将信息插入到数组。 您可以添加到宏*自定义*RS。H 文件中的以下代码所示：
+指定一个静态数组来保存列信息。 如果使用者不需要书签列，则会浪费数组中的条目。 你可以动态分配此数组，但需要确保正确销毁它。 此示例定义并使用宏 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 将信息插入到数组中。 可以将宏添加到*自定义*RS。H 文件，如以下代码所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -183,7 +183,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;
 ```
 
-若要测试此代码中使用者，需要进行一些更改到`OnRun`处理程序。 对函数的第一个更改是添加代码以将属性添加到属性集。 代码集`DBPROP_IRowsetLocate`属性设为 true，从而告知提供程序所需的书签列。 `OnRun`处理程序代码应如下显示：
+若要测试使用者中的代码，需要对 `OnRun` 处理程序进行一些更改。 对函数的第一次更改是添加用于向属性集添加属性的代码。 此代码会将 `DBPROP_IRowsetLocate` 属性设置为 true，从而指示您需要书签列的提供程序。 `OnRun` 处理程序代码应如下所示：
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -235,9 +235,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-**虽然**循环包含调用代码`Compare`中的方法`IRowsetLocate`接口。 您拥有的代码应始终传递，因为比较完全相同的书签。 此外，在临时变量中存储一个书签，以便您可以使用它后**虽然**循环完成调用`MoveToBookmark`使用者模板中的函数。 `MoveToBookmark`函数调用`GetRowsAt`中的方法`IRowsetLocate`。
+**While**循环包含用于调用 `IRowsetLocate` 接口中的 `Compare` 方法的代码。 由于要比较完全相同的书签，因此应始终传递您的代码。 此外，在临时变量中存储一个书签，以便在**while**循环完成后，可以使用它来调用使用者模板中的 `MoveToBookmark` 函数。 `MoveToBookmark` 函数在 `IRowsetLocate`调用 `GetRowsAt` 方法。
 
-此外需要更新使用者中的用户记录。 要处理一个书签和 COLUMN_MAP 中的条目的类中添加一个条目：
+还需要更新使用者中的用户记录。 在类中添加一个条目以处理书签和 COLUMN_MAP 中的条目：
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -262,8 +262,8 @@ END_ACCESSOR_MAP()
 };
 ```
 
-当更新了代码后时，您应该能够生成并执行与提供程序`IRowsetLocate`接口。
+更新代码后，应该能够用 `IRowsetLocate` 接口生成并执行提供程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

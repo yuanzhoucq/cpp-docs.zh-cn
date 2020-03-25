@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172433"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate（C++/CLI 和 C++/CX）
 
@@ -45,9 +45,9 @@ delegate-type-identifier
 )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*access*<br/>
+*访问*<br/>
 （可选）委托的可访问性，可取值为 public（默认值）或 private。 此外，还可以使用 const 或 volatile 关键字对函数原型进行限定。
 
 return-type<br/>
@@ -56,7 +56,7 @@ return-type<br/>
 delegate-type-identifier<br/>
 声明的委托类型的名称。
 
-parameters<br/>
+*参数*<br/>
 （可选）函数原型的类型和标识符。
 
 ### <a name="remarks"></a>备注
@@ -79,9 +79,9 @@ delegate
 function_declaration
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*access*<br/>
+*访问*<br/>
 （可选）程序集外部委托的可访问性可以是 public 或 private。  默认值为 private。  在类中，委托可具有任意可访问性。
 
 function_declaration<br/>
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

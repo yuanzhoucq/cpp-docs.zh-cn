@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: 854f998e31cfec577fb6ff0fb3d82dc1499f88bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f437f87861293cb6048ed6acb05428c466b3f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303830"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214196"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory 类
 
-表示实现的单元友好激活工厂[FtmBase](ftmbase-class.md)。
+表示实现[FtmBase](ftmbase-class.md)的单元友好激活工厂。
 
 ## <a name="syntax"></a>语法
 
@@ -36,11 +36,11 @@ class AgileActivationFactory :
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标头：** 模块。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)<br/>
 [ActivationFactory 类](activationfactory-class.md)

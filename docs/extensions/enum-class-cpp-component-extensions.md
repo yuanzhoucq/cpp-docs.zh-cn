@@ -3,12 +3,12 @@ title: enum class（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516592"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182131"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class（C++/CLI 和 C++/CX）
 
@@ -32,9 +32,9 @@ C++/CX 和 C++/CLI 支持 public enum class 和 private enum class，它们与�
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*access*<br/>
+*访问*<br/>
 枚举的可访问性的可取值为 public 或 private。
 
 *enumeration-identifier*<br/>
@@ -57,7 +57,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 有关详细信息和示例，请参阅 [枚举](../cppcx/enums-c-cx.md)。
 
-请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type*表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如:
+请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type*表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如：
 
 - 如果 *underlying-type* 是数字，并且枚举器指定了该类型的最大值，则不会显示下一个隐式定义的枚举值。
 
@@ -80,18 +80,18 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 accessenum structname [:type] { enumerator-list } var;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*access*<br/>
+*访问*<br/>
 枚举的可访问性。 可取值为 public 或 private。
 
 *enumerator-list*<br/>
 枚举中以逗号分隔的标识符（枚举器）列表。
 
-*name*<br/>
+name<br/>
 枚举的名称。 不允许匿名托管枚举。
 
-*type*<br/>
+type<br/>
 （可选）identifiers 的基础类型。 可以是任意标量类型，如 int、short 或 long 的有符号或无符号版本。  还允许使用 bool 或 char。
 
 *var*<br/>
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

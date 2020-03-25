@@ -1,5 +1,5 @@
 ---
-title: 主要表达式
+title: 主表达式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - primary expressions
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312305"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177620"
 ---
-# <a name="primary-expressions"></a>主要表达式
+# <a name="primary-expressions"></a>主表达式
 
 主表达式是更复杂的表达式的构造块。 它们是文本、名称以及范围解析运算符 (`::`) 限定的名称。  主表达式可以具有以下任一形式：
 
@@ -26,11 +26,11 @@ name
 ::name ( expression )
 ```
 
-一个*文字*是常量主表达式。 其类型取决于其规范的形式。 请参阅[文字](../cpp/numeric-boolean-and-pointer-literals-cpp.md)有关指定文本的完整信息。
+*文本*是常量主表达式。 其类型取决于其规范的形式。 有关指定文本的完整信息，请参阅[文本](../cpp/numeric-boolean-and-pointer-literals-cpp.md)。
 
-**这**关键字是指向类对象的指针。 它在非静态成员函数中可用，并指向为其调用函数的类的实例。 **这**关键字不能使用外部类成员函数的主体。
+**This**关键字是指向类对象的指针。 它在非静态成员函数中可用，并指向为其调用函数的类的实例。 不能在类成员函数的主体外使用**this**关键字。
 
-类型**这**指针位于`type`  **\*const** (其中`type`是类名称) 中未特别修改函数**此**指针。 下面的示例演示成员函数声明和类型的**这**:
+**此**指针的类型在未专门修改**this**指针的函数中 `type` **\*const** （其中 `type` 是类名）。 下面的示例显示了成员函数声明以及**此**的类型：
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,9 +44,9 @@ public:
 };
 ```
 
-请参阅[此指针](this-pointer.md)有关修改的类型的详细信息**这**指针。
+有关修改**this**指针的类型的详细信息，请参阅[此指针](this-pointer.md)。
 
-范围解析运算符 (`::`) 后跟名称构成了主表达式。  此类名称必须是全局范围内的名称，而不是成员名称。  此表达式的类型由名称的声明决定。 如果声明的名称是左值，则该类型是左值（即，它可以出现在赋值运算符表达式的左侧）。 范围解析运算符允许引用全局名称，即使该名称隐藏在当前范围中也如此。 请参阅[作用域](../cpp/scope-visual-cpp.md)有关如何使用范围解析运算符的示例。
+范围解析运算符 (`::`) 后跟名称构成了主表达式。  此类名称必须是全局范围内的名称，而不是成员名称。  此表达式的类型由名称的声明决定。 如果声明的名称是左值，则该类型是左值（即，它可以出现在赋值运算符表达式的左侧）。 范围解析运算符允许引用全局名称，即使该名称隐藏在当前范围中也如此。 有关如何使用范围解析运算符的示例，请参阅[范围](../cpp/scope-visual-cpp.md)。
 
 用括号括起的表达式是与不带括号的表达式具有相同的类型和值的主表达式。 如果不带括号的表达式是左值，则用括号括起的表达式也是左值。
 
@@ -62,7 +62,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression
 ```
 
-下面的示例均被视为*名称*，并以各种形式的主表达式：
+下面的示例是所有考虑的*名称*，因此在各种形式下都是主表达式：
 
 ```cpp
 MyClass // a identifier
@@ -74,6 +74,6 @@ A::B   // a qualified name
 A<int> // a template id
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [表达式类型](../cpp/types-of-expressions.md)

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25fb3635f70ee9a0e38ddcdbcf373fe6b1b84c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176065"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211037"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
 
-可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。
+当您不知道数据存储的架构（基础结构）时，允许您以字符串数据的形式访问数据源。
 
 ## <a name="syntax"></a>语法
 
@@ -48,23 +48,23 @@ class CXMLAccessor : public CDynamicStringAccessorW
 |||
 |-|-|
 |[GetXMLColumnData](#getxmlcolumndata)|检索列信息。|
-|[GetXMLRowData](#getxmlrowdata)|按行中检索表的全部内容。|
+|[GetXMLRowData](#getxmlrowdata)|按行检索表的全部内容。|
 
 ## <a name="remarks"></a>备注
 
-但是，`CXMLAccessor`不同于`CDynamicStringAccessorW`，因为它会将转换从数据存储为 XML 格式 （标记） 的数据访问的所有数据。 这是非常适合 XML 感知的 Web 页面的输出。 XML 标记名称将尽可能接近地匹配数据存储区的列名称。
+但 `CXMLAccessor` 与 `CDynamicStringAccessorW` 不同，因为它会将从数据存储访问的所有数据转换为 XML 格式（标记）的数据。 这对于输出到 XML 感知网页尤为有用。 XML 标记名称将与数据存储区的列名尽可能匹配。
 
-使用`CDynamicAccessor`方法可获取列信息。 此列信息用于在运行时动态创建取值函数。
+使用 `CDynamicAccessor` 方法来获取列信息。 使用此列信息可在运行时动态创建访问器。
 
-创建和管理此类缓冲区中存储的列信息。 获取列信息使用[GetXMLColumnData](#getxmlcolumndata)或按行使用获取列数据[GetXMLRowData](#getxmlrowdata)。
+列信息存储在由此类创建和管理的缓冲区中。 使用[GetXMLColumnData](#getxmlcolumndata)获取列信息，或使用[GetXMLRowData](#getxmlrowdata)按行获取列数据。
 
 ## <a name="example"></a>示例
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
+## <a name="cxmlaccessorgetxmlcolumndata"></a><a name="getxmlcolumndata"></a>CXMLAccessor：： GetXMLColumnData
 
-按列检索为 XML 格式的字符串数据的列类型信息的表。
+按列将表的列类型信息检索为 XML 格式的字符串数据。
 
 ### <a name="syntax"></a>语法
 
@@ -72,18 +72,18 @@ class CXMLAccessor : public CDynamicStringAccessorW
 HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *strOutput*<br/>
-[out]对包含要检索的列类型信息的字符串缓冲区的引用。 使用与数据存储区的列名称匹配的 XML 标记名称格式化的字符串。
+弄对包含要检索的列类型信息的字符串缓冲区的引用。 此字符串的格式为与数据存储区的列名称匹配的 XML 标记名称。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-下面显示了如何在 XML 中设置列类型信息的格式。 `type` 指定列的数据类型。 请注意，将数据类型基于 OLE DB 数据类型，不是那些正在访问的数据库。
+下面说明如何在 XML 中设置列类型信息的格式。 `type` 指定列的数据类型。 请注意，数据类型基于 OLE DB 数据类型，而不是所访问的数据库的类型。
 
 `<columninfo>`
 
@@ -91,9 +91,9 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
+## <a name="cxmlaccessorgetxmlrowdata"></a><a name="getxmlrowdata"></a>CXMLAccessor：： GetXMLRowData
 
-检索表的整个内容为 XML 格式的字符串数据，按行。
+按行以 XML 格式的字符串数据的形式检索表的全部内容。
 
 ### <a name="syntax"></a>语法
 
@@ -102,21 +102,21 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
    bool bAppend = false) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *strOutput*<br/>
-[out]对包含要检索的表数据的缓冲区的引用。 数据格式化为使用与数据存储区的列名称匹配的 XML 标记名称的字符串数据。
+弄对包含要检索的表数据的缓冲区的引用。 数据的格式为字符串数据，XML 标记名称与数据存储区的列名称相匹配。
 
 *bAppend*<br/>
-[in]一个布尔值，指定是否要将字符串追加到输出数据的末尾。
+中一个布尔值，指定是否将字符串追加到输出数据的末尾。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-下面显示了如何在 XML 中设置行数据的格式。 `DATA` 下面表示行数据。 使用 move 方法移动到所需的一行。
+下面说明如何在 XML 中设置行数据的格式。 以下 `DATA` 表示行数据。 使用 move 方法可移到所需的行。
 
 `<row>`
 
@@ -124,7 +124,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 `</row>`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

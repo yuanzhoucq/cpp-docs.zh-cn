@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 71505f8b9b4dc2800e80a78a64f0ca6984af1349
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188475"
 ---
 # <a name="override-specifier"></a>override 说明符
 
-可以使用**重写**关键字来指定重写基类中的虚函数的函数的成员。
+您可以使用**override**关键字来指定在基类中重写虚函数的成员函数。
 
 ## <a name="syntax"></a>语法
 
@@ -23,11 +23,11 @@ function-declaration override;
 
 ## <a name="remarks"></a>备注
 
-**重写**是上下文相关和具有特殊含义仅当成员函数声明后使用它; 否则，而不是保留的关键字。
+**重写**是上下文相关的，只有在成员函数声明后使用时才具有特殊意义;否则，它不是保留的关键字。
 
 ## <a name="example"></a>示例
 
-使用**重写**以帮助防止在代码中的意外的继承行为。 下面的示例演示的位置，而无需使用**重写**，派生类的成员函数的行为可能不适用。 编译器不会发出此代码的任何错误。
+使用**override**有助于防止代码中出现意外的继承行为。 下面的示例演示在不使用**重写**的情况下，可能尚未设计派生类的成员函数行为。 编译器不会发出此代码的任何错误。
 
 ```cpp
 class BaseClass
@@ -51,7 +51,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-当你使用**重写**，编译器将生成错误而不是以无提示方式创建新的成员函数。
+使用**override**时，编译器会生成错误，而不是以无提示方式创建新的成员函数。
 
 ```cpp
 class BaseClass
@@ -78,9 +78,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-若要指定函数不能重写和不能继承的类，请使用[最终](../cpp/final-specifier.md)关键字。
+若要指定不能重写函数以及无法继承类，请使用[final](../cpp/final-specifier.md)关键字。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [final 说明符](../cpp/final-specifier.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

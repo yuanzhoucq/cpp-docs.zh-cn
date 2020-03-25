@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetBSTR method [C++]
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
-ms.openlocfilehash: cea3404e0732cb0e16b3fa9199ce95e3dfcc23f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da438c65256d9a7e5bf5b02e108fee1385171d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386143"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181208"
 ---
-# <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
+# <a name="_bstr_tgetbstr"></a>_bstr_t::GetBSTR
 
 **Microsoft 专用**
 
@@ -31,14 +31,14 @@ BSTR& GetBSTR( );
 
 ## <a name="remarks"></a>备注
 
-**GetBSTR**影响所有`_bstr_t`对象的共享`BSTR`。 多个`_bstr_t`可以共享`BSTR`通过使用复制构造函数和**运算符 =**。
+**GetBSTR**影响所有共享 `BSTR`的 `_bstr_t` 对象。 多个 `_bstr_t` 可以通过使用复制构造函数和**运算符 =** 来共享 `BSTR`。
 
 ## <a name="example"></a>示例
 
-请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)示例使用**GetBSTR**。
+有关使用**GetBSTR**的示例，请参阅[_Bstr_t：： Assign](../cpp/bstr-t-assign.md) 。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_bstr_t 类](../cpp/bstr-t-class.md)

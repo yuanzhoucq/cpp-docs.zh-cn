@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 88acba8d6e2541b3c9f7707b4dd9c03b13067dda
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a68cc85062f9ca711c453ef98f69a7c5ea114d94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445351"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214352"
 ---
 # <a name="containers-advanced-features"></a>容器：高级功能
 
@@ -27,7 +27,7 @@ ms.locfileid: "79445351"
 
 - [指向嵌入对象的 OLE 链接](#_core_links_to_embedded_objects)
 
-##  <a name="_core_creating_a_container_server_application"></a>创建容器/服务器应用程序
+##  <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>创建容器/服务器应用程序
 
 容器/服务器应用程序是既充当容器又充当服务器的应用程序。 Microsoft Word for Windows 是此应用程序的一个示例。 您可将 Word for Windows 文档嵌入其他应用程序，也可将项目嵌入 Word for Windows 文档。 修改既是容器也是完全服务器的容器应用程序的过程（您无法创建组合容器/袖珍服务器应用程序）类似于创建完全服务器的过程。
 
@@ -41,11 +41,11 @@ ms.locfileid: "79445351"
 
    例如，MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)已嵌入由容器/服务器应用程序创建的项目。 打开 OCLIENT 应用程序并就地编辑由容器/服务器应用程序创建的项目。 编辑应用程序项时，您决定要嵌入由 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)创建的项。 为此，您无法使用就地激活。 您必须完全打开 HIERSVR 才能激活此项目。 由于 Microsoft 基础类库不支持此 OLE 功能，因此重写 `COleClientItem::CanActivate` 使您可检查此情况并防止应用程序中出现可能的运行时错误。
 
-如果要创建新的应用程序并希望它充当容器/服务器应用程序，请在应用程序向导的“OLE 选项”对话框中选择此选项，将自动创建此支持。 有关详细信息，请参阅文章[概述：创建 ActiveX 控件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 有关 MFC 示例的信息，请参阅 MFC 示例。
+如果要创建新的应用程序并希望它充当容器/服务器应用程序，请在应用程序向导的“OLE 选项”对话框中选择此选项，将自动创建此支持。 有关详细信息，请参阅文章[概述：创建 ActiveX 控件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 有关 MFC 示例的信息，请参阅[Mfc 示例](../overview/visual-cpp-samples.md#mfc-samples)。
 
 请注意，您无法将 MDI 应用程序插入其本身。 为容器/服务器的应用程序不能插入其本身，除非它是 SDI 应用程序。
 
-##  <a name="_core_links_to_embedded_objects"></a>指向嵌入对象的链接
+##  <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>指向嵌入对象的链接
 
 利用“链接到嵌入对象”功能，用户可在您的容器应用程序中创建包含指向嵌入对象的 OLE 链接的文档。 例如，在字处理器中创建一个包含嵌入电子表格的文档。 如果应用程序支持链接到嵌入对象，则可将链接粘贴到字处理器的文档中包含的电子表格。 利用此功能，您的应用程序可使用电子表格中包含的信息，而不必知道字处理器最初从何处获得此信息。
 

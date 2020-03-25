@@ -1,19 +1,19 @@
 ---
-title: control (C++ COM 特性)
+title: control （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9cdcca6fac2a92bf28f0f655489e61dcb08213e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501779"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214937"
 ---
-# <a name="control"></a>控件
+# <a name="control"></a>控制
 
 指定用户定义类型为控件。
 
@@ -50,14 +50,14 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**适用于**|**class**、 **struct**|
-|**可重复**|No|
+|**适用对象**|**class**、 **struct**|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

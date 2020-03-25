@@ -1,21 +1,21 @@
 ---
-title: requires_category (C++ COM 属性)
+title: requires_category （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407362"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214547"
 ---
-# <a name="requirescategory"></a>requires_category
+# <a name="requires_category"></a>requires_category
 
-指定目标类的所需的组件类别。
+指定目标类的必需组件类别。
 
 ## <a name="syntax"></a>语法
 
@@ -24,10 +24,10 @@ ms.locfileid: "62407362"
   requires_category) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *requires_category*<br/>
-所需的类别的 ID。
+所需类别的 ID。
 
 ## <a name="remarks"></a>备注
 
@@ -37,7 +37,7 @@ ms.locfileid: "62407362"
 
 ## <a name="example"></a>示例
 
-下面的代码要求该对象实现的控制类别。
+下面的代码要求对象实现控件类别。
 
 ```cpp
 // cpp_attr_ref_requires_category.cpp
@@ -59,14 +59,14 @@ class CMyClass {};
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**|
+|**适用对象**|**class**、 **struct**|
 |**可重复**|否|
-|**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|None|
+|**必需的特性**|以下一项或多项操作： `coclass`、`progid`或 `vi_progid`。|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [implements_category](implements-category.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214534"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -29,7 +29,7 @@ ms.locfileid: "69513977"
 
 ## <a name="example"></a>示例
 
-请参阅示例使用**switch_is**[的示例。](case-cpp.md)
+有关**switch_is**的示例用法，请参阅[事例](case-cpp.md)示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,14 +37,14 @@ ms.locfileid: "69513977"
 
 |||
 |-|-|
-|**适用于**|**typedef**|
-|**可重复**|No|
+|**适用对象**|**typedef**|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

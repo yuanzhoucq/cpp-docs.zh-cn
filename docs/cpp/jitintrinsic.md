@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], jitintrinsic
 - jitintrinsic __declspec modifier
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
-ms.openlocfilehash: 9e726413f0bbfbd9d6affa348777c995c51283a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626ba82d1d24582951bbffd8e6be687007d390f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245505"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178169"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 
@@ -27,11 +27,11 @@ __declspec(jitintrinsic)
 
 ## <a name="remarks"></a>备注
 
-**jitintrinsic**添加 MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) 到函数签名。
+**jitintrinsic**将 MODOPT （<xref:System.Runtime.CompilerServices.IsJitIntrinsic>）添加到函数签名。
 
-禁止用户使用此 **__declspec**修饰符，意外的结果作为可以发生。
+不鼓励用户使用此 **__declspec**修饰符，因为可能会发生意外的结果。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [__declspec](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

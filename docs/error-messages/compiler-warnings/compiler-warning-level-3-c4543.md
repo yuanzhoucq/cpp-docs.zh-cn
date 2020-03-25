@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4543
 ms.assetid: a09b39a7-d3b8-435c-86a3-2233c512f24b
-ms.openlocfilehash: dcbaf0931be9f1e056e881fb3b75da7d000f6562
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4deaeb1e1443723ed7dd3357552696eacf61fed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401847"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198648"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>编译器警告（等级 3）C4543
 
-特性 no_injected_text 禁止注入的文本
+特性 "no_injected_text" 取消的注入文本
 
-[No_injected_text](../../windows/no-injected-text.md)属性出现在源代码中，这意味着编译器将阻止属性注入代码。
+[No_injected_text](../../windows/no-injected-text.md)属性出现在源代码中，这意味着编译器会阻止属性注入代码。
 
-此警告是提醒您属性将无法再将代码注入。
+此警告将提醒你属性将无法注入代码。

@@ -9,18 +9,18 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178531"
 ---
 # <a name="storage-classes"></a>存储类
 
 变量声明上下文中的*存储类*是一种类型说明符，用于控制对象的生存期、链接和内存位置。 C++ 给定对象只能有一个存储类。 除非使用**extern**、 **static**或**thread_local**说明符指定，否则在块中定义的变量将具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。 当执行进入块并在退出块时取消分配时，将自动为其分配内存。
 
-**注意**
+**说明**
 
 1. [可变](../cpp/mutable-data-members-cpp.md)关键字可视为存储类说明符。 但是，它只存在于类定义的成员列表中。
 
@@ -30,7 +30,7 @@ ms.locfileid: "79447315"
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>静止
+## <a name="static"></a><a name="static"></a>静止
 
 **Static**关键字可用于声明全局范围、命名空间范围和类范围内的变量和函数。 静态变量还可在本地范围声明。
 
@@ -155,11 +155,11 @@ var == value
 
 从 C++11 开始，可以保证静态本地变量初始化是线程安全的。 此功能有时称为 "*幻静态*"。 但是，在多线程应用程序中，必须同步所有后续分配。 可以通过使用[/zc： threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)标志来禁用线程安全静态初始化功能，以避免依赖 CRT。
 
-## <a name="extern"></a>部
+## <a name="extern"></a><a name="extern"></a>部
 
 声明为**extern**的对象和变量声明一个对象，该对象是在另一个翻译单元中定义的，或是在包含外部链接的封闭范围中定义的。 有关详细信息，请参阅[extern](extern-cpp.md) and[翻译单元和链接](program-and-linkage-cpp.md)。
 
-## <a name="thread_local"></a>thread_local （c + + 11）
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local （c + + 11）
 
 使用**thread_local**说明符声明的变量只能在创建它的线程上访问。 变量在创建线程时创建，并在销毁线程时销毁。 每个线程都有其自己的变量副本。 在 Windows 上， **thread_local**在功能上与特定于 Microsoft 的[__declspec （thread）](../cpp/thread.md)特性等效。
 
@@ -194,7 +194,7 @@ void DoSomething()
 
 在 Windows 上， **thread_local**在功能上等效于[__declspec （线程）](../cpp/thread.md) ，不同之处在于 **__declspec （thread）** 可应用于类型定义并且在 C 代码中有效。 请尽可能使用**thread_local** ，因为它是C++标准的一部分，因此更易于移植。
 
-##  <a name="register"></a>注册
+##  <a name="register"></a><a name="register"></a>注册
 
 **Visual Studio 2017 版本15.3 及更高版本**（可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **register**关键字不再是受支持的存储类。 关键字仍保留在标准中，供将来使用。
 

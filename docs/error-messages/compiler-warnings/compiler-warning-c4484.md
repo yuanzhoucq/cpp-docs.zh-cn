@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c168c91f8259b744ed10dd72701d34fd60b98681
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623630"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165153"
 ---
 # <a name="compiler-warning-c4484"></a>编译器警告 C4484
 
@@ -19,7 +19,7 @@ ms.locfileid: "73623630"
 
 使用 **/clr**进行编译时，编译器不会隐式重写基类函数，这意味着该函数将获取 vtable 中的新槽。 若要解决此问题，请显式指定函数是否为重写。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)
 

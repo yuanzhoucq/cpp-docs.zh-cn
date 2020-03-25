@@ -1,17 +1,17 @@
 ---
-title: 可选 (C++ COM 特性)
+title: 可选（C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514343"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214642"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514343"
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**可选**:
+下面的代码演示如何使用**可选**：
 
 ```cpp
 // cpp_attr_ref_optional.cpp
@@ -50,14 +50,14 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**适用于**|接口参数|
-|**可重复**|No|
+|**适用对象**|接口参数|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [参数特性](parameter-attributes.md)

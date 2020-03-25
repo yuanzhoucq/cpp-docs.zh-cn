@@ -19,12 +19,12 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a53cd653258980d21e9dd297ae61c458732b7250
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544578"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210543"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 类
 

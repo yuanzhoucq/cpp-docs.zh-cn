@@ -35,12 +35,12 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: 43eb5f34bc587e3ce86532c56d393da3e07c1b03
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 8b4031eccccb432342790fef4da809542e77d669
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180259"
 ---
 # <a name="data-type-ranges"></a>数据类型范围
 
@@ -78,21 +78,21 @@ Microsoft C++ 32 位和64位编译器可识别本文后面的表中的类型。
 |**未签名 __int32**|4|**无符号**无**符号整数**|0 到 4,294,967,295|
 |**__int64**|8|**长**长，**有符号长**长|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|
 |unsigned __int64|8|**无符号长长**|0 到 18,446,744,073,709,551,615|
-|**bool**|1|无|**false**或**true**|
-|**char**|1|无|-默认为-128 到127<br /><br /> 0 到 255（当使用 [/J](../build/reference/j-default-char-type-is-unsigned.md)编译时）|
-|**带符号字符**|1|无|-128 到 127|
-|**unsigned char**|1|无|0 到 255|
+|**bool**|1|none|**false**或**true**|
+|**char**|1|none|-默认为-128 到127<br /><br /> 0 到 255（当使用 [/J](../build/reference/j-default-char-type-is-unsigned.md) 编译时）|
+|**带符号字符**|1|none|-128 到 127|
+|**unsigned char**|1|none|0 到 255|
 |**short**|2|**short int**，**有符号短整型**|-32,768 到 32,767|
 |**unsigned short**|2|**unsigned short int**|0 到 65,535|
 |**long**|4|**long int**，**带符号长整型**|-2,147,483,648 到 2,147,483,647|
 |**unsigned long**|4|**unsigned long int**|0 到 4,294,967,295|
 |**long long**|8|无（但等效于 **__int64**）|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|
 |**无符号长长**|8|无（但等效于**未签名的 __int64**）|0 到 18,446,744,073,709,551,615|
-|**enum**|varies|无| |
-|**float**|4|无|3.4E +/- 38（7 位数）|
-|**双精度**|8|无|1.7E +/- 308（15 位数）|
-|**long double**|与**双精度**相同|无|与**双精度**相同|
-|**wchar_t**|2|**__wchar_t**|0 到 65,535|
+|**enum**|多种多样|none| |
+|**float**|4|none|3.4E +/- 38（7 位数）|
+|**double**|8|none|1.7E +/- 308（15 位数）|
+|**long double**|与**双精度**相同|none|与**双精度**相同|
+|wchar_t|2|**__wchar_t**|0 到 65,535|
 
 根据使用方式， **__wchar_t**的变量指定宽字符类型或多字节字符类型。 在字符或字符串常量前使用 `L` 前缀以指定宽字符类型常量。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0013
 ms.assetid: 95e7bafd-63c8-4b2d-b778-f19cdf9ba36c
-ms.openlocfilehash: c78f029a3fb0e89913ce9b5ce221569e67d8faf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d769899faa940f2754db4d2428a4d7c416b49fa4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192726"
 ---
 # <a name="project-build-error-prj0013"></a>项目生成错误 PRJ0013
 
@@ -19,4 +19,4 @@ ms.locfileid: "69509928"
 
 该错误指示系统资源不足。 若要解决该错误，请减少其他进程/应用程序使用的系统资源。
 
-如果没有足够的安全级别来创建管道, 也会发生此错误 (请参阅[CreatePipe](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe))。
+如果没有足够的安全级别来创建管道，也会发生此错误（请参阅[CreatePipe](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe)）。

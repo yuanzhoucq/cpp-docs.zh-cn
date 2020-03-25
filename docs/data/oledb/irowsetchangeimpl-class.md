@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b069cd08814855a0528806ac6d19ed8f5beb6f37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210452"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
 

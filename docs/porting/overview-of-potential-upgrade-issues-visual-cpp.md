@@ -2,12 +2,12 @@
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef088f4881dfbd9967f90a009e4a8e397a70b134
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214976"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -182,7 +182,7 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 
 在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 要为解决方案中的所有项目禁用警告，请打开“视图” **“属性管理器”，选择要禁用警告的所有项目，然后右键单击所选项，并选择“属性”**  > 。 在“属性页”对话框中，选择“配置属性” **“C/C++”** “高级” >  > 。 在“禁用特定警告”属性中展开下拉箭头，然后选择“编辑”。 在文本框中输入 4996。 （请勿包含 "C" 前缀。）选择 **"确定"** 保存属性，然后选择 **"确定"** 保存更改。
 
-有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 与 Unicode 的常规信息，请参阅 [Visual C++ 中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)，以及[国际化](../c-runtime-library/internationalization.md)。
+有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 与 Unicode 的一般信息，请参阅[视觉对象C++和国际化中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)。 [Internationalization](../c-runtime-library/internationalization.md)
 
 ## <a name="see-also"></a>另请参阅
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210803"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 类
 

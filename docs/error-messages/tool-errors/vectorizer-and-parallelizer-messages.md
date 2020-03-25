@@ -8,24 +8,24 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182196"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>矢量化程序和并行化程序消息
 
-您可以使用 MicrosoftC++编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)并[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)设置[自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md)输出的原因代码和有关其活动的信息性消息。 本文说明原因代码和消息。
+你C++可以使用 Microsoft 编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)设置[自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md)，以便输出原因代码以及有关其活动的信息性消息。 本文说明原因代码和消息。
 
-## <a name="BKMK_InformationalMessages"></a> 信息性消息
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>信息性消息
 
 根据你指定的报告级别，将为每个循环显示下列信息性消息之一。
 
 有关原因代码的信息，请参见本文的下一部分。
 
-|信息性消息|描述|
+|信息性消息|说明|
 |---------------------------|-----------------|
 |5001|`Loop vectorized.`|
 |5002|`Loop not vectorized due to reason '*description*'.`|
@@ -33,15 +33,15 @@ ms.locfileid: "64857452"
 |5012|`Loop not parallelized due to reason '*description*'.`|
 |5021|`Unable to associate loop with pragma.`|
 
-以下各节列出的并行化程序和矢量化程序的可能原因代码。
+以下部分列出了并行和向量化的可能原因代码。
 
-## <a name="BKMK_ReasonCode50x"></a> 5xx 原因代码
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>5xx 原因代码
 
-5*xx*原因代码应用于并行化程序和矢量化程序。
+5*xx*原因代码适用于并行和向量化。
 
 |原因代码|说明|
 |-----------------|-----------------|
-|500|一条包含多个用例的常规消息 — 例如，该循环包含多个退出，或通过增加归纳变量不会结束循环标头。|
+|500|一条涵盖几个事例的一般消息，例如，循环包含多个退出，或者循环标头不会通过递增感应变量来结束。|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
 |502|`Induction variable is stepped in some manner other than a simple +1.`|
 |503|`Loop includes exception-handling or switch statements.`|
@@ -198,9 +198,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="BKMK_ReasonCode100x"></a> 10xx 原因代码
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>10xx 原因代码
 
-在 10*xx*原因代码应用于并行化程序。
+10*xx*原因代码应用于并行。
 
 |原因代码|说明|
 |-----------------|-----------------|
@@ -407,9 +407,9 @@ void code_1010()
 }
 ```
 
-## <a name="BKMK_ReasonCode110x"></a> 11xx 原因代码
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>11xx 原因代码
 
-11*xx*原因代码应用到向量化。
+11*xx*原因代码应用于向量化。
 
 |原因代码|说明|
 |-----------------|-----------------|
@@ -555,9 +555,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode120x"></a> 12xx 原因代码
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>12xx 原因代码
 
-12*xx*原因代码应用到向量化。
+12*xx*原因代码应用于向量化。
 
 |原因代码|说明|
 |-----------------|-----------------|
@@ -630,9 +630,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode130x"></a> 13xx 原因代码
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>13xx 原因代码
 
-13*xx*原因代码应用到向量化。
+13*xx*原因代码应用于向量化。
 
 |原因代码|说明|
 |-----------------|-----------------|
@@ -762,9 +762,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="BKMK_ReasonCode140x"></a> 14xx 原因代码
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>14xx 原因代码
 
-14*xx*指定与向量化不兼容的选项，则会发生的代码的原因。
+指定与矢量化不兼容的某个选项时，会出现 14*xx*原因代码。
 
 |原因代码|说明|
 |-----------------|-----------------|
@@ -834,7 +834,7 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode150x"></a> 15xx 原因代码
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>15xx 原因代码
 
 15*xx*原因代码应用于别名。 当内存中的位置可由两个不同名称访问时，将出现别名。
 
@@ -962,12 +962,12 @@ void code_1505(int *A, int *B)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
 [自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[在 Visual Studio 2012 – 概述中的自动向量化](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma loop()](../../preprocessor/loop.md) \
-[/Q 选项 （低级别操作）](../../build/reference/q-options-low-level-operations.md) \
-[/Qpar-report （自动并行化程序报告等级）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
+[Visual Studio 2012 中的自动向量化–概述](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop （）](../../preprocessor/loop.md) \
+[/Q 选项（低级别操作）](../../build/reference/q-options-low-level-operations.md) \
+[/Qpar-report （自动并行报告级别）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report（自动矢量化程序报告等级）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

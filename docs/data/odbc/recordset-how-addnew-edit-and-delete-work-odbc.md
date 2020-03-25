@@ -1,5 +1,5 @@
 ---
-title: 记录集：如何 AddNew，编辑和删除工作 (ODBC)
+title: 记录集：AddNew、Edit 和 Delete 的工作方式 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,148 +17,148 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8799ac36c443898f1e32b539f017e682bbf3e033
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397830"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212897"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>记录集：如何 AddNew，编辑和删除工作 (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>记录集：AddNew、Edit 和 Delete 的工作方式 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
-本主题介绍如何`AddNew`， `Edit`，并`Delete`类的成员函数`CRecordset`工作。 涵盖的主题包括：
+本主题说明类 `CRecordset` `AddNew`、`Edit`和 `Delete` 成员函数的工作方式。 涵盖的主题包括：
 
-- [如何添加记录的工作原理](#_core_adding_a_record)
+- [添加记录的工作方式](#_core_adding_a_record)
 
-- [添加的记录的可见性](#_core_visibility_of_added_records)
+- [已添加记录的可见性](#_core_visibility_of_added_records)
 
 - [编辑记录的工作原理](#_core_editing_an_existing_record)
 
-- [如何删除记录的工作原理](#_core_deleting_a_record)
+- [删除记录的工作原理](#_core_deleting_a_record)
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用批量取行，请参阅[记录集：批量提取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-作为补充，你可能想要读取[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)，其中介绍了更新操作中的 RFX 相应角色。
+作为补充，你可能需要读取[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)，其中描述了 rfx 在更新操作中的相应角色。
 
-##  <a name="_core_adding_a_record"></a> 添加一条记录
+##  <a name="adding-a-record"></a><a name="_core_adding_a_record"></a>添加记录
 
-将新记录添加到记录集涉及调用记录集的[AddNew](../../mfc/reference/crecordset-class.md#addnew)成员函数，设置的值的新记录的字段数据成员，以及调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数以写入与数据源记录。
+将新记录添加到记录集包括调用记录集的[AddNew](../../mfc/reference/crecordset-class.md#addnew)成员函数、设置新记录的字段数据成员的值，以及调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数将记录写入数据源。
 
-作为调用的前提条件`AddNew`，记录集必须不能打开为只读的。 `CanUpdate`和`CanAppend`成员函数可用于确定这些条件。
+作为调用 `AddNew`的前提条件，记录集不得以只读方式打开。 `CanUpdate` 和 `CanAppend` 成员函数可让你确定这些条件。
 
-当您调用`AddNew`:
+调用 `AddNew`时：
 
-- 存储编辑缓冲区中的记录，以便可以还原其内容，如果将取消该操作。
+- 将存储编辑缓冲区中的记录，因此，如果取消该操作，则可以还原其内容。
 
-- 因此可以更高版本中检测更改，将标记的字段数据成员。 字段数据成员也被标记为清除 （未更改） 并将设置为 Null。
+- 已对字段数据成员进行标记，以便以后可以检测它们中的更改。 字段数据成员也标记为 clean （未更改）并设置为 Null。
 
-调用后`AddNew`、 编辑缓冲区表示新，准备好空记录，若要使用的值填充。 若要执行此操作，你手动设置的值通过将分配给它们。 而不是指定字段的实际数据值，可以调用`SetFieldNull`指定的值为 Null。
+调用 `AddNew`后，编辑缓冲区表示一个新的空记录，准备好使用值填充。 若要执行此操作，请手动设置值，方法是将其分配给它们。 您可以调用 `SetFieldNull` 来指定 Null 值，而不是为字段指定实际数据值。
 
-若要提交所做的更改，请调用`Update`。 当您调用`Update`提供新的记录：
+若要提交更改，请调用 `Update`。 为新记录调用 `Update` 时：
 
-- 如果您的 ODBC 驱动程序支持`::SQLSetPos`ODBC API 函数时，MFC 使用函数将记录添加数据源。 使用`::SQLSetPos`，MFC 可以更有效地地添加一条记录，因为它不包括构造和处理 SQL 语句。
+- 如果 ODBC 驱动程序支持 `::SQLSetPos` ODBC API 函数，则 MFC 将使用函数在数据源上添加记录。 使用 `::SQLSetPos`，MFC 可以更有效地添加记录，因为它不需要构造和处理 SQL 语句。
 
-- 如果`::SQLSetPos`不能使用，MFC 将执行以下操作：
+- 如果 `::SQLSetPos` 不能使用，MFC 会执行以下操作：
 
-   1. 如果检测不到任何更改，`Update`不执行任何操作，并返回 0。
+   1. 如果未检测到任何更改，`Update` 不执行任何操作并返回0。
 
-   1. 如果有更改，`Update`构造 SQL**插入**语句。 中列出所有已更新字段数据成员所表示的列**插入**语句。 若要强制包含的列，请调用[SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty)成员函数：
+   1. 如果有更改，`Update` 将构造 SQL **INSERT**语句。 所有已更新字段数据成员所表示的列都列在**INSERT**语句中。 若要强制包含列，请调用[SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty)成员函数：
 
         ```cpp
         SetFieldDirty( &m_dataMember, TRUE );
         ```
 
-   1. `Update` 提交新记录 —**插入**执行语句并且该记录是提交到数据源 （如果不是快照，该记录集） 上的表，除非某个事务处于正在进行中。
+   1. `Update` 提交新记录-将执行**INSERT**语句，并将记录提交到数据源（和记录集，如果不是快照）上的表，除非正在进行事务。
 
-   1. 已存储的记录将还原到编辑缓冲区。 记录之前的当前`AddNew`调用是当前再次无论**插入**成功执行语句。
-
-   > [!TIP]
-   > 新记录的完全控制，采用以下方法： 设置的任何字段，将具有值，然后显式设置将保持为 Null，通过调用任何字段的值`SetFieldNull`用一个指针指向字段并使用参数 TRUE （默认值）。 如果你想要确保字段不写入到数据源，调用`SetFieldDirty`用一个指针指向的字段和参数 FALSE，并且不要修改字段的值。 若要确定是否允许某个字段为 Null，请调用`IsFieldNullable`。
+   1. 存储的记录将还原到编辑缓冲区。 无论**INSERT**语句是否已成功执行，当前 `AddNew` 调用之前的记录都是最新的。
 
    > [!TIP]
-   > 若要检测记录集数据成员更改值时，MFC，请使用适合于可以存储在记录集中每种数据类型的 PSEUDO_NULL 值。 如果您必须显式设置为 PSEUDO_NULL 值的字段和字段恰好已标记为 Null，则还必须调用`SetFieldNull`，第二个参数中的第一个参数和 FALSE 传入字段的地址。
+   > 若要完全控制新记录，请采用以下方法：设置包含值的任何字段的值，然后通过使用指向字段的指针和参数 TRUE （默认值），通过调用 `SetFieldNull` 来显式设置将保留 Null 的任何字段。 如果要确保字段未写入数据源，请使用指向字段的指针和参数 FALSE 调用 `SetFieldDirty`，而不会修改字段的值。 若要确定是否允许字段为 Null，请调用 `IsFieldNullable`。
 
-##  <a name="_core_visibility_of_added_records"></a> 添加的记录的可见性
+   > [!TIP]
+   > 为了在记录集数据成员更改值时进行检测，MFC 使用适用于你可以存储在记录集中的每个数据类型的 PSEUDO_NULL 值。 如果必须将字段显式设置为 PSEUDO_NULL 值并且该字段已标记为 Null，则还必须调用 `SetFieldNull`，同时在第一个参数中传递字段的地址，并在第二个参数中传递 FALSE。
 
-可见到记录集时添加的记录？ 已添加的记录有时显示，有时是不可见的具体取决于两件事：
+##  <a name="visibility-of-added-records"></a><a name="_core_visibility_of_added_records"></a>已添加记录的可见性
 
-- 支持的驱动程序。
+添加记录对记录集可见的时间 添加的记录有时会显示，有时不会显示，具体取决于两个因素：
 
-- 哪些框架可以充分利用。
+- 驱动程序的功能。
 
-如果您的 ODBC 驱动程序支持`::SQLSetPos`ODBC API 函数时，MFC 使用函数以添加记录。 使用`::SQLSetPos`，添加记录会向任何可更新的 MFC 记录集。 不支持该函数，会增加记录不可见，则必须调用`Requery`才能看到它们。 使用`::SQLSetPos`更有效。
+- 框架可以利用的功能。
 
-##  <a name="_core_editing_an_existing_record"></a> 编辑现有记录
+如果 ODBC 驱动程序支持 `::SQLSetPos` ODBC API 函数，MFC 将使用函数来添加记录。 对于 `::SQLSetPos`，已添加的记录对任何可更新的 MFC 记录集都可见。 如果不支持该函数，则已添加的记录将不可见，因此必须调用 `Requery` 才能看到它们。 使用 `::SQLSetPos` 也更有效。
 
-编辑现有记录集中的记录涉及到该记录，调用记录集的滚动[编辑](../../mfc/reference/crecordset-class.md#edit)成员函数，设置的值的新记录的字段数据成员，以及调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数以将更改的记录写入到数据源。
+##  <a name="editing-an-existing-record"></a><a name="_core_editing_an_existing_record"></a>编辑现有记录
 
-作为调用的前提条件`Edit`，记录集必须是可更新和上一条记录。 `CanUpdate`和`IsDeleted`成员函数可用于确定这些条件。 当前记录还必须已具有被删除，并且在记录集中必须记录 (同时`IsBOF`和`IsEOF`返回 0)。
+编辑记录集中的现有记录包括滚动到记录、调用记录集的[编辑](../../mfc/reference/crecordset-class.md#edit)成员函数、设置新记录的字段数据成员的值，以及调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数以将更改的记录写入数据源。
 
-当您调用`Edit`，编辑缓冲区 （当前记录） 中的记录存储。 存储的记录的值更高版本用于检测是否已更改的任何字段。
+作为调用 `Edit`的前提条件，记录集必须可更新和记录。 `CanUpdate` 和 `IsDeleted` 成员函数可让你确定这些条件。 当前记录也不能已被删除，并且记录集中必须有记录（`IsBOF` 和 `IsEOF` 返回0）。
 
-调用后`Edit`，编辑缓冲区仍表示当前记录，但现在已准备好接受对字段数据成员的更改。 若要更改的记录，手动设置任何你想要编辑的字段数据成员的值。 而不是指定字段的实际数据值，可以调用`SetFieldNull`指定的值为 Null。 若要提交所做的更改，请调用`Update`。
+调用 `Edit`时，将存储编辑缓冲区（当前记录）中的记录。 稍后将使用存储记录的值来检测是否有任何字段发生了更改。
+
+调用 `Edit`后，编辑缓冲区仍表示当前记录，但现在可以接受对字段数据成员所做的更改。 若要更改记录，请手动设置要编辑的任何字段数据成员的值。 您可以调用 `SetFieldNull` 来指定 Null 值，而不是为字段指定实际数据值。 若要提交更改，请调用 `Update`。
 
 > [!TIP]
-> 若要获取带`AddNew`或`Edit`模式，请调用`Move`与参数*AFX_MOVE_REFRESH*。
+> 若要退出 `AddNew` 或 `Edit` 模式，请调用 `Move` 参数*AFX_MOVE_REFRESH*。
 
-作为调用的前提条件`Update`、 记录集不能为空，并且必须尚未删除当前记录。 `IsBOF``IsEOF`，和`IsDeleted`都应返回 0。
+作为调用 `Update`的前提条件，记录集不能为空，也不能删除当前记录。 `IsBOF`、`IsEOF`和 `IsDeleted` 都应返回0。
 
-当您调用`Update`的已编辑的记录：
+对已编辑记录调用 `Update` 时：
 
-- 如果您的 ODBC 驱动程序支持`::SQLSetPos`ODBC API 函数时，MFC 使用函数来更新数据源上的记录。 使用`::SQLSetPos`，驱动程序与在服务器上，如果两个不同更新服务器上的记录相应的记录将编辑缓冲区进行比较。 使用`::SQLSetPos`，MFC 可以更有效地更新的记录，因为它不包括构造和处理 SQL 语句。
+- 如果 ODBC 驱动程序支持 `::SQLSetPos` ODBC API 函数，MFC 将使用函数来更新数据源中的记录。 在 `::SQLSetPos`中，驱动程序将编辑缓冲区与服务器上的相应记录进行比较，如果这两个记录不同，则在服务器上更新记录。 使用 `::SQLSetPos`，MFC 可以更有效地更新记录，因为它不需要构造和处理 SQL 语句。
 
    \- 或 -
 
-- 如果`::SQLSetPos`不能使用，MFC 将执行以下操作：
+- 如果 `::SQLSetPos` 不能使用，MFC 会执行以下操作：
 
-   1. 如果进行不了任何更改，`Update`不执行任何操作，并返回 0。
+   1. 如果没有任何更改，`Update` 不执行任何操作并返回0。
 
-   1. 如果有更改，`Update`构造 SQL**更新**语句。 中列出的列**更新**语句基于已更改的字段数据成员。
+   1. 如果有更改，`Update` 将构造一个 SQL **UPDATE**语句。 **UPDATE**语句中列出的列是基于已更改的字段数据成员的。
 
-   1. `Update` 提交所做的更改 — 执行**更新**语句，并记录更改数据源，但时未提交的事务正在进行中 (请参阅[事务：执行在记录集 (ODBC) 的事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)了解事务如何影响更新)。 ODBC 保留一份记录，这样也会更改。
+   1. `Update` 提交更改（执行**UPDATE**语句），并且记录在数据源上发生更改，但如果事务正在进行，则不提交该记录（请参阅[事务：在记录集中执行事务（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) ，了解有关事务如何影响更新的信息）。 ODBC 保存记录的副本，这也会发生更改。
 
-   1. 与不同的过程`AddNew`，则`Edit`过程不会还原已存储的记录。 已编辑的记录将为当前记录保留在原位。
+   1. 与 `AddNew`的过程不同，`Edit` 进程不会还原存储的记录。 编辑后的记录将保留为当前记录。
 
    > [!CAUTION]
-   > 当你准备更新记录集通过调用`Update`，负责记录集，包含所有列的主键的表 （或所有表，任何唯一索引或足够多的列来唯一地标识行的列） 组成。 在某些情况下，框架可以使用仅选定为记录集中的列来标识表中要更新的记录。 不包含所有必要的列，可能会在表中更新多个记录。 在这种情况下，框架会引发异常时调用`Update`。
+   > 当您准备通过调用 `Update`来更新记录集时，请注意您的记录集包括构成表的主键的所有列（或表中的所有唯一索引的所有列，或用于唯一标识该行的足够列）。 在某些情况下，框架只能使用记录集中所选的列来标识要更新的表中的记录。 如果没有所有必需的列，表中的多个记录可能会更新。 在这种情况下，在调用 `Update`时，框架会引发异常。
 
    > [!TIP]
-   > 如果您调用`AddNew`或`Edit`以前，但之前您在调用这两种函数后调用`Update`，编辑缓冲区刷新与存储记录，替换为正在进行中的新建或编辑记录。 此行为，可以中止`AddNew`或`Edit`，并开始一个新： 如果你确定记录正在进行了故障，只需调用`Edit`或`AddNew`试。
+   > 如果调用 `AddNew` 或 `Edit` 之后但在调用 `Update`之前调用了这两个函数，则会用存储的记录刷新编辑缓冲区，替换正在进行的新记录或编辑的记录。 此行为使你可以中止 `AddNew` 或 `Edit` 并开始一个新的操作：如果你确定正在进行的记录发生故障，只需再次调用 `Edit` 或 `AddNew`。
 
-##  <a name="_core_deleting_a_record"></a> 删除记录
+##  <a name="deleting-a-record"></a><a name="_core_deleting_a_record"></a>删除记录
 
-滚动到该记录和记录集的调用从记录集删除记录涉及[删除](../../mfc/reference/crecordset-class.md#delete)成员函数。 与不同`AddNew`并`Edit`，`Delete`不需要匹配调用`Update`。
+从记录集中删除记录涉及到滚动到记录，以及调用记录集的[删除](../../mfc/reference/crecordset-class.md#delete)成员函数。 与 `AddNew` 和 `Edit`不同，`Delete` 不需要对 `Update`的匹配调用。
 
-作为调用的前提条件`Delete`、 记录集必须可更新，并且它必须位于上一条记录。 `CanUpdate`， `IsBOF`， `IsEOF`，和`IsDeleted`成员函数可用于确定这些条件。
+作为调用 `Delete`的前提条件，记录集必须可更新，并且它必须位于记录中。 `CanUpdate`、`IsBOF`、`IsEOF`和 `IsDeleted` 成员函数可让你确定这些条件。
 
-当您调用`Delete`:
+调用 `Delete`时：
 
-- 如果您的 ODBC 驱动程序支持`::SQLSetPos`ODBC API 函数时，MFC 使用函数来删除数据源上的记录。 使用`::SQLSetPos`通常比使用 SQL 效率更高。
+- 如果 ODBC 驱动程序支持 `::SQLSetPos` ODBC API 函数，MFC 将使用函数来删除数据源中的记录。 使用 `::SQLSetPos` 通常比使用 SQL 更有效。
 
    \- 或 -
 
-- 如果`::SQLSetPos`不能使用，MFC 将执行以下操作：
+- 如果 `::SQLSetPos` 不能使用，MFC 会执行以下操作：
 
-   1. 编辑缓冲区中的当前记录不会备份作为 in`AddNew`和`Edit`。
+   1. 不会像在 `AddNew` 和 `Edit`中那样备份编辑缓冲区中的当前记录。
 
-   1. `Delete` 构造 SQL**删除**中删除记录的语句。
+   1. `Delete` 构造删除记录的 SQL **DELETE**语句。
 
-      编辑缓冲区中的当前记录不会存储为在`AddNew`和`Edit`。
+      编辑缓冲区中的当前记录不作为 `AddNew` 和 `Edit`存储。
 
-   1. `Delete` 提交删除 — 执行**删除**语句。 该记录标记为已删除数据源和记录是快照，在 ODBC 中的。
+   1. `Delete` 提交删除-执行**DELETE**语句。 记录在数据源上标记为已删除，并且在 ODBC 中标记为快照。
 
-   1. 已删除的记录的值仍在字段数据成员的记录集，但为 Null 和记录集的标记的字段数据成员`IsDeleted`成员函数返回一个非零值。
+   1. 已删除记录的值仍位于记录集的字段数据成员中，但字段数据成员标记为 Null，记录集的 `IsDeleted` 成员函数返回一个非零值。
 
    > [!NOTE]
-   > 删除一条记录后, 应该滚动到另一条记录来重新填充编辑缓冲区和新记录的数据。 它是调用错误`Delete`再次或调用`Edit`。
+   > 删除记录后，应滚动到其他记录，用新记录的数据重新填充编辑缓冲区。 再次调用 `Delete` 或调用 `Edit`是错误的。
 
-有关更新操作中使用的 SQL 语句的信息，请参阅[SQL](../../data/odbc/sql.md)。
+有关更新操作中使用的 SQL 语句的详细信息，请参阅[sql](../../data/odbc/sql.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：详细了解更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[记录集：有关更新的更多信息 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

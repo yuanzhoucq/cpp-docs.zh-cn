@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 03bfed00147daef22fe91e6f061ea6720834090f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213845"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 结构
 
@@ -39,49 +39,49 @@ template <typename T0>
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T0*<br/>
-模板参数 0，这是必需的。
+模板参数0，这是必需的。
 
 T1<br/>
-模板参数 1，即默认情况下未指定。
+模板参数1，默认情况下未指定。
 
 T2<br/>
-模板参数 2，即默认情况下未指定。第三个模板参数。
+模板参数2，默认情况下未指定。第三个模板参数。
 
 *T3*<br/>
-模板参数 3，即默认情况下未指定。
+模板参数3，默认情况下未指定。
 
 *T4*<br/>
-模板参数 4，即默认情况下未指定。
+模板参数4，默认情况下未指定。
 
 *T5*<br/>
-模板参数 5，即默认情况下未指定。
+模板参数5，默认情况下未指定。
 
 *T6*<br/>
-模板参数，6，即默认情况下未指定。
+模板参数6，默认情况下未指定。
 
 *T7*<br/>
-模板参数，7，即默认情况下未指定。
+模板参数7，默认情况下未指定。
 
 *T8*<br/>
-模板参数，8，即默认情况下未指定。
+模板参数8，默认情况下未指定。
 
 *T9*<br/>
-模板参数，9，即默认情况下未指定。
+模板参数9，默认情况下未指定。
 
 ## <a name="remarks"></a>备注
 
-生成`InterfaceList`通过以递归方式应用指定的模板参数自变量的类型。
+通过递归应用指定的模板参数自变量来生成 `InterfaceList` 类型。
 
-**InterfaceListHelper**模板使用模板参数*T0*定义中的第一个数据成员`InterfaceList`结构，然后以递归方式应用**InterfaceListHelper**任何剩余的模板参数的模板。 **InterfaceListHelper**没有剩余的模板参数时，会停止。
+**InterfaceListHelper**模板使用模板参数*T0*来定义 `InterfaceList` 结构中的第一个数据成员，然后以递归方式将**InterfaceListHelper**模板应用到任何剩余的模板参数。 当没有剩余的模板参数时， **InterfaceListHelper**将停止。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`TypeT`|InterfaceList 类型的同义词。|
 
@@ -91,10 +91,10 @@ T2<br/>
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)

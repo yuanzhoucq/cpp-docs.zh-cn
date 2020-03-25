@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
-ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b0750fe50e18214e0841eff6b3459438e9a6aec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359951"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197946"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>编译器警告（等级 2 和等级 4）C4200
 
-使用了非标准扩展： 结构/联合中大小为零的数组
+使用了非标准扩展：结构/联合中的零大小数组
 
 指示结构或联合包含大小为零的数组。
 
-大小为零数组的声明为 Microsoft 扩展。 编译 C++ 文件时，这会造成等级 2 警告，而在编译 c 文件时会造成等级 4 警告。 C++ 编译也发出以下警告：“当 UDT 包含大小为零的数组时，无法生成复制构造函数或副本赋值运算符。” 此示例生成警告 C4200：
+大小为零数组的声明为 Microsoft 扩展。 编译 C++ 文件时，这会造成等级 2 警告，而在编译 c 文件时会造成等级 4 警告。 C++如果 UDT 包含大小为零的数组，则编译还将发出此警告： "无法生成复制-ctor 或复制赋值运算符"。 此示例生成警告 C4200：
 
 ```cpp
 // C4200.cpp

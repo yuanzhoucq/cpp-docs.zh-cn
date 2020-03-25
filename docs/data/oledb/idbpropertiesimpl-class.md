@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77f70c8b0bc602da6840bec38565c4441644c6d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f873ec4f4eca434d0eb76df86c0891f1a99c2e2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545671"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210699"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 类
 

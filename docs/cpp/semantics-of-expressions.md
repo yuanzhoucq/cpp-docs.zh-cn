@@ -7,18 +7,18 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178844"
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 
-表达式根据其运算符的优先级和分组来计算。 ([运算符优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[词法约定](../cpp/lexical-conventions.md)，显示的关系 C++ 运算符对表达式实施。)
+表达式根据其运算符的优先级和分组来计算。 （[词法约定](../cpp/lexical-conventions.md)中的C++ [运算符优先级和结合](../cpp/cpp-built-in-operators-precedence-and-associativity.md)性，显示运算符对表达式施加的关系。）
 
-## <a name="order-of-evaluation"></a>计算顺序
+## <a name="order-of-evaluation"></a>评估顺序
 
 请看以下示例：
 
@@ -69,16 +69,16 @@ int main()
 
 |应为类型|允许的类型|
 |-------------------|-------------------|
-|*type*|`const`*类型*<br /> `volatile`*类型*<br /> *type*&<br /> `const`*类型*&<br /> `volatile`*类型*&<br /> `volatile const`*类型*<br /> `volatile const`*类型*&|
-|*type* \*|*type* \*<br /> `const` type \*<br /> `volatile` type \*<br /> `volatile const` type \*|
-|`const`*类型*|*type*<br /> `const`*类型*<br />`const`*类型*&|
-|`volatile`*类型*|*type*<br /> `volatile`*类型*<br /> `volatile`*类型*&|
+|type|`const`*类型*<br /> `volatile`*类型*<br /> *type*&<br /> `const`*类型*&<br /> `volatile`*类型*&<br /> `volatile const`*类型*<br /> `volatile const`*类型*&|
+|*类型*\*|*类型*\*<br /> `const`*类型*\*<br /> `volatile`*类型*\*<br /> `volatile const`*类型*\*|
+|`const`*类型*|type<br /> `const`*类型*<br />`const`*类型*&|
+|`volatile`*类型*|type<br /> `volatile`*类型*<br /> `volatile`*类型*&|
 
 由于上述规则始终可以组合使用，因此，可以在指针所需的位置提供指向可变对象的 const 指针。
 
 ## <a name="ambiguous-expressions"></a>不明确的表达式
 
-某些表达式的意义不明确。 当在同一表达式中多次修改对象的值时，这些表达式最常见。 当语言没有定义表达式的计算顺序时，这些表达式依赖于特定的顺序计算。 请看下面的示例：
+某些表达式的意义不明确。 当在同一表达式中多次修改对象的值时，这些表达式最常见。 当语言没有定义表达式的计算顺序时，这些表达式依赖于特定的顺序计算。 请考虑以下示例：
 
 ```
 int i = 7;

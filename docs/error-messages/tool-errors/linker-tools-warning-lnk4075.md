@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4a385b9559e2f54e81bda76e6dd13505e978a74
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186900"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183483"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>链接器工具警告 LNK4075
 
-忽略由于"option2"规范"选项 1"
+由于 "选项 2" 规范，忽略 "选项 1"
 
-第二个选项可重写第一个。
+第二个选项重写第一个选项。
 
-指定互相排斥的链接器选项。  检查链接器选项。  指定链接器选项的位置取决于如何构建您的项目。
+正在指定互斥链接器选项。  检查链接器选项。  链接器选项的指定位置取决于生成项目的方式。
 
-- 如果您正在构建开发环境中，查看你的项目，链接器属性页并了解这两个链接器选项的指定位置。  请参阅[设置编译器和生成属性](../../build/working-with-project-properties.md)有关详细信息。
+- 如果在开发环境中生成，请查看项目的链接器属性页，并查看两个链接器选项的指定位置。  有关详细信息，请参阅[设置编译器和生成属性](../../build/working-with-project-properties.md)。
 
-- 如果在命令行生成时，查看此处指定的链接器选项。
+- 如果在命令行中生成，请查看此处指定的链接器选项。
 
-- 如果生成使用生成脚本，仔细查看您的脚本，请参阅这些链接器选项指定的位置。
+- 如果使用生成脚本进行生成，请查看脚本，以查看在何处指定这些链接器选项。
 
-找到指定互斥链接器选项的位置后，删除其中一个链接器选项。
+如果找到指定了互斥链接器选项的位置，请删除其中一个链接器选项。
 
-一些特定的示例：
+一些具体的示例：
 
-- 如果使用编译时将模块链接 **/ZI**，这意味着内部链接器选项调用意味着没有 /EDITANDCONTINUE /EDITANDCONTINUE，并使用 /opt: ref，/opt: icf 或 /incremental: no，已编译的模块，将获取 LNK4075。  请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)有关详细信息。
+- 如果链接使用 **/zi**编译的模块（这表示名为/EDITANDCONTINUE 的内部链接器选项）和使用/OPT： REF、/OPT： ICF 或/INCREMENTAL： no 编译的模块，则会收到 LNK4075。  有关详细信息，请参阅[/Z7、/zi、/zi （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md) 。

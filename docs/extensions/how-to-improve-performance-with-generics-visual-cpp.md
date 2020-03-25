@@ -1,5 +1,5 @@
 ---
-title: 如何：使用泛型提升性能 (C++/CLI)
+title: 如何：通过泛型提高性能（C++/cli）
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181936"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>如何：使用泛型提升性能 (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>如何：通过泛型提高性能（C++/cli）
 
 采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅 [Generics](generics-cpp-component-extensions.md)。
 
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [泛型](generics-cpp-component-extensions.md)

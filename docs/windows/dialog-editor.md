@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215249"
 ---
 # <a name="dialog-editor-c"></a>对话框编辑器（C++）
 
@@ -63,7 +63,7 @@ ms.locfileid: "72445027"
 |![顶部对齐按钮](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|顶部对齐|![设为相同高度按钮](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|使高度相同|
 |!["底端对齐" 按钮](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|底部对齐|!["设置相同大小" 按钮](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|使大小相同|
 |!["垂直居中" 按钮](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|垂直|![切换网格按钮](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|切换网格|
-|![居中水平按钮](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|水平|![切换辅助线按钮](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|切换参考线|
+|![居中水平按钮](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|横向|![切换辅助线按钮](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|切换参考线|
 
 - 若要显示或隐藏 **"对话框编辑器**" 工具栏，请 > **工具栏** > "**对话框编辑器**" 中的 "菜单"**视图**。
 
@@ -92,7 +92,7 @@ ms.locfileid: "72445027"
 
 下面是**对话框编辑器**命令的默认快捷键。  
 
-|Command|键|说明|
+|Command|密钥|说明|
 |-------------|----------|-----------------|
 |格式.底部对齐|**Ctrl** + **Shift** + **向下键**|将所选控件的下边缘与主导控件对齐。|
 |格式.居中对齐|**Shift** + **F9**|将所选控件的垂直中心与主导控件对齐。|

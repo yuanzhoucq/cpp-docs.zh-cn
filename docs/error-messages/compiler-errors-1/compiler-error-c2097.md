@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C2097
 ms.assetid: 7e5b2fd4-f61c-4b8a-b265-93e987a04bd3
-ms.openlocfilehash: 8b50221997dcf2fb60ee2b82ed630dd325a38145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdb14aeef61d136a6992a05a72f382e589e88770
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207489"
 ---
 # <a name="compiler-error-c2097"></a>编译器错误 C2097
 
-初始化非法
+非法初始化
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 使用非常量值的变量的初始化。
+1. 使用非常量值初始化变量。
 
-1. 具有一长串地址的短地址的初始化。
+1. 使用长地址初始化短地址。
 
-1. 初始化的局部结构、 联合或数组时，用非常量表达式进行编译 **/Za**。
+1. 使用 **/za**进行编译时，使用非常量表达式初始化本地结构、联合或数组。
 
 1. 使用包含逗号运算符的表达式进行初始化。
 
-1. 使用一个表达式，不是常量或符号的初始化。
+1. 使用既不是常量也不是符号的表达式进行初始化。

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304132"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214254"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 宏
 
-填充内部缓存，其中包含一个工厂，它可以创建指定类的实例。
+填充内部缓存，其中包含可创建指定类的实例的工厂。
 
 ## <a name="syntax"></a>语法
 
@@ -41,27 +41,27 @@ ActivatableClassWithFactoryEx(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 要创建的类的名称。
 
-*factory*<br/>
+*集*<br/>
 将创建指定类的实例的工厂。
 
 *serverName*<br/>
-一个模块中指定的工厂的子集的名称。
+指定模块中工厂子集的名称。
 
 ## <a name="remarks"></a>备注
 
-执行不使用经典 COM 使用这些宏，除非使用`#undef`指令以确保`__WRL_WINRT_STRICT__`移除宏定义。
+不要将这些宏与经典 COM 一起使用，除非使用 `#undef` 指令来确保删除 `__WRL_WINRT_STRICT__` 宏定义。
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标头：** 模块。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Module 类](module-class.md)

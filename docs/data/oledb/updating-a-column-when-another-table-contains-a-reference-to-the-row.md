@@ -1,20 +1,20 @@
 ---
-title: 另一个表包含行引用时更新列
+title: 当另一个表包含对该行的引用时更新列
 ms.date: 10/24/2018
 helpviewer_keywords:
 - rowsets, column updates
 ms.assetid: abb5db69-055d-431f-b12d-ad2940a661ba
-ms.openlocfilehash: 46de5f54a3ec6525f779a6b55a700429a2a84fef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95cddfd5f030c7bd8d1220cf040de4bc5a883226
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389068"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209477"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>当另一个表包含行引用时更新列
 
-某些提供程序可以检测哪些列的行更改，但很多提供程序不能。 结果是，更新列可能导致错误时对想要更新的行的引用。 若要解决此问题，请创建单独的访问器包含你想要更改的列。 传递到该访问器数`SetData`。
+某些提供程序可以检测行中哪些列发生更改，但许多提供程序都不能。 因此，当存在对尝试更新的行的引用时，更新列可能导致错误。 若要解决此问题，请创建单独的取值函数，只保存要更改的列。 将该访问器的数量传递到 `SetData`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用访问器](../../data/oledb/using-accessors.md)

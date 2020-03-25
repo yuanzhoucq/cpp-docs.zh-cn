@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: efaaacc46f63ac1a702ab2110d35fe80727ead1d
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b13007211857d84e4f3b33c80ed6b5beaf6f0bcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178232"
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 
@@ -78,7 +78,7 @@ int main()
 
 编译器将内联扩展选项和关键字视为建议。 不保证会对函数进行内联。 即使使用 **__forceinline**关键字，也不能强制编译器内联特定函数。 使用 **/clr**进行编译时，如果存在应用于函数的安全属性，则编译器不会内联函数。
 
-**内联**关键字是仅在 C++ 中可用。 **__Inline**和 **__Forceinline**关键字在 C 和C++中都可用。 为了与早期版本兼容， **_inline**和 **_forceinline**是 **__inline**和 **__forceinline**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
+**内联**关键字仅在中C++可用。 **__Inline**和 **__Forceinline**关键字在 C 和C++中都可用。 为了与早期版本兼容， **_inline**和 **_forceinline**是 **__inline**和 **__forceinline**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
 
 **内联**关键字告诉编译器首选内联扩展。 但是，编译器可以创建函数的单独实例（实例化），并创建标准调用链接而不是内联插入代码。 可能会出现这种行为的两种情况是：
 

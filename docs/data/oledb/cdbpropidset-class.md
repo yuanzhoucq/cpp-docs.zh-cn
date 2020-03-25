@@ -31,12 +31,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546121"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212004"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 类
 

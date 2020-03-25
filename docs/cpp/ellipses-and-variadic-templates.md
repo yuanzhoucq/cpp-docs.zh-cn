@@ -2,24 +2,24 @@
 title: 省略号和可变参数模板
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 387cf4478192cb9470804c219eee8046f8e47abe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9294089b9f0a144946b7f6b81da2a71ca710bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189255"
 ---
 # <a name="ellipses-and-variadic-templates"></a>省略号和可变参数模板
 
-这篇文章演示如何使用省略号 (`...`) 与 C++ 可变参数模板。 省略号具有 C 和 C++ 中的许多用途。 其中包括函数的变量参数列表。 `printf()` C 运行时库中的函数是最常见的示例之一。
+本文介绍如何将省略号（`...`）用于C++可变参数模板。 省略号具有 C 和 C++ 中的许多用途。 其中包括函数的变量参数列表。 C 运行时库中的 `printf()` 函数是一个最常见的示例。
 
-一个*可变参数模板*是支持任意数量的参数的类或函数模板。 此机制是对 C++ 库开发人员尤其有用，因为您可以将其应用于类模板和函数模板，从而提供了各种各样的功能类型安全和重要的功能和灵活性。
+*可变参数模板*是支持任意数量的参数的类或函数模板。 此机制是对 C++ 库开发人员尤其有用，因为您可以将其应用于类模板和函数模板，从而提供了各种各样的功能类型安全和重要的功能和灵活性。
 
 ## <a name="syntax"></a>语法
 
-可变参数模板以两种方式使用省略号。 参数名称的左侧，它表示*参数包*，参数名称的右侧，参数包扩展为单独的名称。
+可变参数模板通过两种方式使用省略号。 参数名称的左侧表示*参数包*，参数名称的右侧将参数包扩展为多个单独的名称。
 
-下面是一个基本的示例*可变参数模板类*定义语法：
+下面是*可变参数模板类*定义语法的基本示例：
 
 ```cpp
 template<typename... Arguments> class classname;
@@ -31,7 +31,7 @@ template<typename... Arguments> class classname;
 template<typename ...Arguments> class classname;
 ```
 
-或此操作：
+或者这个：
 
 ```cpp
 template<typename ... Arguments> class classname;
@@ -39,7 +39,7 @@ template<typename ... Arguments> class classname;
 
 请注意，本文使用第一个示例中显示的约定（省略号已附加到 `typename`）。
 
-在上述示例中，*自变量*是参数包。 类`classname`可以接受数目可变的自变量，如以下示例所示：
+在前面的示例中，*参数*是参数包。 类 `classname` 可以接受可变数量的参数，如以下示例中所示：
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -50,21 +50,21 @@ vtclass<float, bool> vtinstance3;
 vtclass<long, std::vector<int>, std::string> vtinstance4;
 ```
 
-通过使用可变参数模板类定义，你可能还需要至少一个参数：
+使用可变参数模板类定义时，还可以至少要求一个参数：
 
 ```cpp
 template <typename First, typename... Rest> class classname;
 ```
 
-下面是一个基本的示例*可变参数模板函数*语法：
+下面是*可变参数模板函数*语法的基本示例：
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments... args);
 ```
 
-*自变量*参数包展开使用，在下一节中所示**了解可变参数模板**。
+然后，将*扩展参数包*以供使用，如下一节 "**了解可变参数模板**" 中所示。
 
-可使用其他形式的可变参数模板函数的语法，其中包括但不是限于这些示例：
+可以采用其他形式的可变参数模板函数语法，包括但不限于以下示例：
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments&... args);
@@ -72,19 +72,19 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);
 ```
 
-说明符喜欢**const**还允许：
+还允许使用**const**等说明符：
 
 ```cpp
 template <typename... Arguments> returntype functionname(const Arguments&... args);
 ```
 
-作为使用可变参数模板类的定义，可以进行要求至少一个参数的函数：
+与可变参数模板类定义一样，您可以创建需要至少一个参数的函数：
 
 ```cpp
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);
 ```
 
-可变参数模板使用`sizeof...()`运算符 (不相关的更早`sizeof()`运算符):
+可变参数模板使用 `sizeof...()` 运算符（与较旧的 `sizeof()` 运算符无关）：
 
 ```cpp
 template<typename... Arguments>
@@ -100,11 +100,11 @@ void tfunc(const Arguments&... args)
 
 ## <a name="more-about-ellipsis-placement"></a>有关省略号位置的更多信息
 
-之前，本文介绍了省略号位置，此位置将参数包和扩展定义为“参数名称的左侧表示参数包，参数名称的右侧将参数包扩展为单独的名称”。 这从技术上讲的确如此，但在转换为代码的过程中可能会造成混淆。 以此为例：
+之前，本文介绍了省略号位置，此位置将参数包和扩展定义为“参数名称的左侧表示参数包，参数名称的右侧将参数包扩展为单独的名称”。 这从技术上讲的确如此，但在转换为代码的过程中可能会造成混淆。 请考虑：
 
-- 在模板参数列表中 (`template <parameter-list>`)，`typename...`引入了模板参数包。
+- 在模板参数列表（`template <parameter-list>`）中，`typename...` 引入模板参数包。
 
-- 在参数声明子句 (`func(parameter-list)`)、"顶级"省略号引入了函数参数包，并且省略号定位很重要：
+- 在参数声明子句（`func(parameter-list)`）中，"顶级" 省略号引入函数参数包，并且省略号定位非常重要：
 
     ```cpp
     // v1 is NOT a function parameter pack:
@@ -118,7 +118,7 @@ void tfunc(const Arguments&... args)
 
 ## <a name="example"></a>示例
 
-演示了可变参数模板函数机制的好办法是重新编写的部分的功能中使用`printf`:
+说明可变参数模板函数机制的一个好方法是在 `printf`的某些功能的重新编写时使用它：
 
 ```cpp
 #include <iostream>
@@ -151,7 +151,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 1
@@ -161,4 +161,4 @@ first, 2, third, 3.14159
 ```
 
 > [!NOTE]
->  合并可变参数模板函数的大多数实现使用某种形式的递归，但与传统递归稍有不同。  传统递归涉及函数调用其自身使用相同的签名。 （可以重载或模板化，但每次选择相同的签名。）可变递归涉及使用不同 （几乎总是减少） 数目的参数，并抹去不同的签名每次调用可变参数函数模板。 "基用例"仍是必需的但有不同的递归性质。
+>  大多数包含可变参数模板函数的实现使用某种形式的递归，但与传统递归略有不同。  传统递归涉及使用同一签名调用自身的函数。 （它可以是重载的或模板化的，但每次都选择相同的签名。）可变参数递归涉及到使用不同的（几乎始终减少）参数调用可变参数函数模板，从而每次都能标记出不同的签名。 仍需要 "基本情况"，但递归的性质是不同的。

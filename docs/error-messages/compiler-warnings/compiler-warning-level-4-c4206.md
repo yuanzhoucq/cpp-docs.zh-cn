@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4206
 ms.assetid: 3df97812-3ed7-4003-9769-057acf97ce3c
-ms.openlocfilehash: b4125e598aa7df946b16b3d41af1c6eabab00531
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae1e4d814d38409f362efd27cecae983eb86479a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173980"
 ---
 # <a name="compiler-warning-level-4-c4206"></a>编译器警告（等级 4）C4206
 
-**使用了非标准扩展： 翻译单元为空**
+**使用了非标准扩展：翻译单元为空**
 
-在预处理后，该文件为空。
+预处理后，该文件为空。
 
-此扩展可以防止您的代码移植到其他编译器。 生成 ANSI 兼容性错误 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 和仅适用于 C 源代码。
+此扩展会阻止你的代码移植到其他编译器。 它在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下生成错误，并且仅适用于 C 源代码。

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0002
 - CAN0002
 ms.assetid: 5f136470-505f-4224-a29a-2d34e896d78b
-ms.openlocfilehash: 802d6478e0b0242acd50010b98ff3a8b1dc265b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aeae67f0425bb45d3d15a8690b582063af1eb3d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406088"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196373"
 ---
 # <a name="expression-evaluator-error-cxx0002"></a>表达式计算器错误 CXX0002
 
-访问用户内存的错误
+访问用户内存时出错
 
-表达式尝试引用不分配给正在调试的程序的内存。
+表达式尝试引用未分配给正在调试的程序的内存。
 
-此错误是与 CAN0002 相同。
+此错误与 CAN0002 相同。

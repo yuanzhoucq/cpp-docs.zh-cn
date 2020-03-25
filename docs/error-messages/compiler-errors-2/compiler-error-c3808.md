@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e854764dc3f8d3ede79965302b62055b91df0a4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165621"
 ---
 # <a name="compiler-error-c3808"></a>编译器错误 C3808
 
-> '*类型*： 具有 ComImport 特性的类不能定义成员*成员*、 仅抽象或允许使用 dllimport 函数
+> "*type*"：具有 ComImport 特性的类不能定义成员 "*member*"，只允许使用 abstract 或 dllimport 函数
 
 ## <a name="remarks"></a>备注
 
-派生自类型<xref:System.Runtime.InteropServices.ComImportAttribute>不能定义*成员*。
+派生自 <xref:System.Runtime.InteropServices.ComImportAttribute> 的类型不能定义*成员*。
 
-**/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
+**/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
 ## <a name="example"></a>示例
 

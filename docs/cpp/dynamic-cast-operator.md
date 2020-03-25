@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 0073aaa886bba33a0ec6c07fb89d6eee032765c8
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972224"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189489"
 ---
 # <a name="dynamic_cast-operator"></a>dynamic_cast 运算符
 
@@ -26,7 +26,7 @@ dynamic_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>备注
 
-`type-id` 必须是指向以前定义的类类型或 "指向 void 的指针" 的指针或引用。 如果 `type-id` 是指针，则 `expression` 类型必须为指针，或者如果 `type-id` 是引用，则为左值。
+`type-id` 必须是指向以前定义的类类型或 "指向 void 的指针" 的指针或引用。 如果 `expression` 是指针，则 `type-id` 类型必须为指针，或者如果 `type-id` 是引用，则为左值。
 
 请参阅[static_cast](../cpp/static-cast-operator.md) ，了解静态和动态强制转换之间的差异，以及何时使用它们。
 

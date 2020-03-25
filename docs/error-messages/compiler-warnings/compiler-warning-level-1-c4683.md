@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-ms.openlocfilehash: 264753ece6cbabded21df8e6b9dbb463f811e8a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86cf8f6d894d6efaa1b49977634956dc1979a98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175424"
 ---
 # <a name="compiler-warning-level-1-c4683"></a>编译器警告（等级 1）C4683
 
-> '*函数*： 事件源有输出的参数; 遇到警告时挂接多个事件处理程序
+> "*function*"：事件源有 "输出" 参数;挂钩多个事件处理程序时的注意事项
 
 ## <a name="remarks"></a>备注
 
-如果多个事件接收器侦听 COM 事件源，可能会忽略输出参数的值。
+如果有多个事件接收器正在侦听 COM 事件源，则可能会忽略 out 参数的值。
 
-请注意以下情况下会发生内存泄漏：
+请注意，在下列情况下会发生内存泄漏：
 
-1. 如果方法具有输出参数在内部分配的例如 BSTR *。
+1. 如果方法具有内部分配的 out 参数（例如 BSTR *），则为。
 
-2. 如果事件的多个处理程序 （是多路广播的事件）。
+2. 如果事件具有多个处理程序（是多路广播事件），则为。
 
-泄漏的原因是输出参数，将设置的多个处理程序，但只能由最后一个处理程序返回到调用站点。
+泄漏的原因是，out 参数将由多个处理程序设置，但仅由上一个处理程序返回到调用站点。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4683 并演示如何修复此错误：
+下面的示例生成 C4683，并演示如何修复此问题：
 
 ```cpp
 // C4683.cpp

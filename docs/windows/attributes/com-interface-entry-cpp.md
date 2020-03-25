@@ -1,21 +1,21 @@
 ---
-title: com_interface_entry (C++ COM 属性)
+title: com_interface_entry （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168299"
 ---
-# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+# <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
-接口将项添加到目标类的 COM 映射。
+将接口条目添加到目标类的 COM 映射。
 
 ## <a name="syntax"></a>语法
 
@@ -24,18 +24,18 @@ ms.locfileid: "62148258"
   com_interface_entry) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *com_interface_entry*<br/>
-包含的项的实际文本的字符串。 有关可能的值的列表，请参阅[COM_INTERFACE_ENTRY 宏](../../atl/reference/com-interface-entry-macros.md)。
+一个字符串，其中包含该项的实际文本。 有关可能值的列表，请参阅[COM_INTERFACE_ENTRY 宏](../../atl/reference/com-interface-entry-macros.md)。
 
 ## <a name="remarks"></a>备注
 
-**Com_interface_entry** C++属性将 unabridged 的字符字符串的内容插入到目标对象的 COM 接口映射。 如果该属性一次应用于目标对象，该条目插入到现有的接口映射的开头。 如果该特性重复应用于相同的目标对象，会将条目插入按接收的顺序中的接口映射的开头。
+**Com_interface_entry** C++特性将字符串的 unabridged 内容插入目标对象的 com 接口映射。 如果将特性应用于目标对象一次，则会将该项插入到现有接口映射的开头。 如果该属性重复应用到同一个目标对象，则这些条目将按接收顺序插入到接口映射的开头。
 
-此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
+此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果应用 `progid`，则还会应用 `vi_progid` 和 `coclass`。
 
-因为第一个**com_interface_entry**导致新的接口的接口映射开头插入它必须是以下 COM_INTERFACE_ENTRY 类型之一：
+由于**com_interface_entry**的第一次使用导致新接口插入到接口映射的开头，因此它必须是下列 COM_INTERFACE_ENTRY 类型之一：
 
 - COM_INTERFACE_ENTRY
 
@@ -45,9 +45,9 @@ ms.locfileid: "62148258"
 
 - COM_INTERFACE_ENTRY2_IID
 
-其他用法**com_interface_entry**属性可以使用所有受支持的 COM_INTERFACE_ENTRY 类型。
+**Com_interface_entry**特性的其他用法可以使用所有支持的 COM_INTERFACE_ENTRY 类型。
 
-此限制是必要的因为 ATL 作为标识接口映射中使用的第一个条目`IUnknown`; 因此，输入项必须是有效的接口。 例如，下面的代码示例无效，因为接口映射中的第一个条目不指定实际的 COM 接口。
+此限制是必需的，因为 ATL 使用接口映射中的第一项作为标识 `IUnknown`;因此，该项必须是有效的接口。 例如，下面的代码示例是无效的，因为接口映射中的第一个条目未指定实际的 COM 接口。
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ ms.locfileid: "62148258"
 
 ## <a name="example"></a>示例
 
-下面的代码将两个条目添加到现有的 COM 接口映射的`CMyBaseClass`。 第一个是一个标准接口，并第二个隐藏`IDebugTest`接口。
+下面的代码将两个条目添加到 `CMyBaseClass`的现有 COM 接口映射。 第一个是标准接口，第二个是隐藏 `IDebugTest` 接口。
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-为生成的 COM 对象映射`CMyBaseClass`如下所示：
+`CMyBaseClass` 生成的 COM 对象映射如下所示：
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -109,14 +109,14 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**|
+|**适用对象**|**class**、 **struct**|
 |**可重复**|是|
-|**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|None|
+|**必需的特性**|以下一项或多项操作： `coclass`、`progid`或 `vi_progid`。|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

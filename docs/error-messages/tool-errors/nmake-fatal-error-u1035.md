@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - U1035
 ms.assetid: 68f0cc59-007e-4109-ac30-7ac4ac447e6d
-ms.openlocfilehash: 9c4055bb99243f7d20c1da90aef7b916c46c2749
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eda424574dfa48901cf4dc6aea3b28beb739dc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324332"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193714"
 ---
 # <a name="nmake-fatal-error-u1035"></a>NMAKE 错误 U1035
 
-语法错误： 预期: 或 = 分隔符
+语法错误：应输入 "：" 或 "=" 分隔符
 
-冒号 (**:**) 或等号 (**=**) 应。
+应为冒号（ **：** ）或等号（ **=** ）。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 冒号不遵循目标。
+1. 冒号不在目标之后。
 
-1. 冒号和没有空格 （例如 a:） 后接单个字母目标。 NMAKE 解释它为驱动器规格。
+1. 冒号和无空格（如：）后跟单字母目标。 NMAKE 将它解释为驱动器规格。
 
 1. 冒号不遵循推理规则。
 
-1. 通过等号后面不是宏定义。
+1. 宏定义后面没有等号。
 
-1. 字符跟一个反斜杠 (**\\**) 用于将命令继续到新行。
+1. 一个字符，后面跟一个用于将命令继续到新行的反斜杠（ **\\** ）。
 
-1. 一个字符串出现的不遵循任何 NMAKE 语法规则。
+1. 出现的字符串不遵循任何 NMAKE 语法规则。
 
-1. 生成文件格式化的字处理器。
+1. 生成文件由字处理器进行了格式设置。

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946904"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168702"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -59,7 +59,7 @@ float tan( float x );  // C++ only
 long double tan( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 角度（以弧度为单位）。
@@ -70,7 +70,7 @@ long double tan( long double x );  // C++ only
 
 |输入|SEH 异常|**Matherr**异常|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|无|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
 |± INF|**无效**|_DOMAIN|
 
 ## <a name="remarks"></a>备注
@@ -79,11 +79,11 @@ long double tan( long double x );  // C++ only
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
+|例程|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -109,7 +109,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>

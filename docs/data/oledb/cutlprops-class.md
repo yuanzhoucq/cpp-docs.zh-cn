@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211102"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 类
 

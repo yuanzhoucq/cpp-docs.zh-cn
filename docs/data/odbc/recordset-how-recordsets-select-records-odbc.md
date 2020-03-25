@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 4b446d69651cb3cf52bd6c15899d85ed76b319da
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 252d17fc56c13415f1068d6b16ed8b1ee663b5f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079810"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212883"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>记录集：记录集如何选择记录 (ODBC)
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 40a2828ce6b21384ec49c371f23e506d816f1284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273562"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204784"
 ---
 # <a name="fatal-error-c1010"></a>错误 C1010
 
@@ -37,16 +37,16 @@ ms.locfileid: "70273562"
 
 1. 在 "**配置**" 下拉 "配置" 中，选择 "**所有配置**"。
 
-1. 选择 "**配置属性** > " " > **C/C++** **预编译标头**" 属性页。
+1. 选择 "**配置属性**" > " **C/C++**  > **预编译标头**" 属性页。
 
 1. 在 "属性" 列表中，选择 "**预编译标头**" 属性的下拉列表，然后选择 "**不使用预编译标头**"。 选择“确定”以保存更改。
 
 1. 在 "**解决方案资源管理器**" 窗口中，右键单击项目中的 " *pch* " 源文件。 （在较早的项目中，该文件可以命名为*stdafx.h*。）选择 "**从项目中排除**" 可将其从生成中删除。
 
-1. 对于生成的每个配置，请使用 "**生成** > **清理解决方案**" 菜单命令，以便删除中间生成目录中的所有*project_name*文件。
+1. 对于生成的每个配置，请使用 "**生成** > **清理解决方案**" 菜单命令删除中间生成目录中的任何*project_name .pch*文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[预编译标头文件](../../build/creating-precompiled-header-files.md)\
+[预编译的头文件](../../build/creating-precompiled-header-files.md)\
 [/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)\
 [/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)

@@ -1,5 +1,5 @@
 ---
-title: '一个&#39;s 二进制求补运算符: ~'
+title: 一个&#39;补码运算符： ~
 ms.date: 11/04/2016
 f1_keywords:
 - "~"
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 777f253925caf38647863bdaa93fde8d5a03e3f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177711"
 ---
-# <a name="one39s-complement-operator-"></a>一个&#39;s 二进制求补运算符: ~
+# <a name="one39s-complement-operator-"></a>一个&#39;补码运算符： ~
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +31,7 @@ ms.locfileid: "62245010"
 
 ## <a name="operator-keyword-for-"></a>~ 的运算符关键字
 
-**Compl**运算符是文本等效项`~`。 有两种方法来访问**compl**您的程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md)。
+**Compl**运算符是 `~`的文本等效项。 可以通过两种方式访问程序中的**compl**运算符：包含头文件 `iso646.h`或使用[/za](../build/reference/za-ze-disable-language-extensions.md)进行编译。
 
 ## <a name="example"></a>示例
 
@@ -52,9 +52,9 @@ int main () {
 
 在此示例中，分配给 `y` 的新值是无符号值 0xFFFF 或 0x0000 的二进制反码。
 
-将对整型操作数执行整型提升，并且结果类型将是操作数将提升到的类型。 请参阅[标准转换](standard-conversions.md)有关如何完成提升的详细信息。
+将对整型操作数执行整型提升，并且结果类型将是操作数将提升到的类型。 有关如何完成升级的详细信息，请参阅[标准转换](standard-conversions.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

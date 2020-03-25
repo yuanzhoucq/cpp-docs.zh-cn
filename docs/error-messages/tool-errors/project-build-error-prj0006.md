@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-ms.openlocfilehash: d62c774411fda80a3e94044b3272567177328ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 816355276a203adba1401841ce02eb94a18085b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359645"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192778"
 ---
 # <a name="project-build-error-prj0006"></a>项目生成错误 PRJ0006
 
-无法打开临时文件 file。 请确保该文件存在并且，目录未被写保护。
+无法打开临时文件 "file"。 请确保该文件存在，并且该目录不是写保护的。
 
-VisualC++无法在生成过程中创建临时文件。 其中的原因包括：
+视觉C++对象无法在生成过程中创建临时文件。 此问题的原因包括：
 
-- 没有临时目录。
+- 无临时目录。
 
-- 只读的临时目录。
+- 只读临时目录。
 
 - 磁盘空间不足。
 
-- $ （intdir） 文件夹是只读的或包含临时文件的都是只读的。
+- $ （IntDir）文件夹是只读的，或者包含只读的临时文件。
 
-以下错误 PRJ0007 也将出现此错误：无法创建输出目录 directory。 错误 PRJ0007 意味着无法创建 $ （intdir） 目录，这意味着临时文件的创建也将失败。
+错误 PRJ0007：无法创建输出目录 "directory" 时，也会发生此错误。 错误 PRJ0007 表示无法创建 $ （IntDir）目录，这意味着临时文件的创建也会失败。
 
-在指定时，会创建临时文件：
+每次指定时都会创建临时文件：
 
 - 响应文件。
 
-- 一个自定义生成步骤。
+- 自定义生成步骤。
 
 - 生成事件。

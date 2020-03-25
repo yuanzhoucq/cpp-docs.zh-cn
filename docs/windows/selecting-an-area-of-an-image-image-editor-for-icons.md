@@ -39,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 6d973ad444f719b905af5a33e47ef28f4895111f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9324e3dc5c6691a7b50f137da1fad446b416e968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447300"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167844"
 ---
 # <a name="how-to-edit-an-image"></a>如何：编辑图像
 
@@ -55,7 +55,7 @@ ms.locfileid: "79447300"
 
 您还可以从所选内容创建自定义画笔。 有关详细信息，请参阅[创建自定义画笔](../windows/creating-a-custom-brush-image-editor-for-icons.md)。
 
-## <a name="how-to"></a>操作说明
+## <a name="how-to"></a>如何
 
 若要编辑图像，请参阅如何：
 
@@ -204,15 +204,15 @@ ms.locfileid: "79447300"
 
 1. 在 "**属性**" 窗口中，更改图像的任意或全部属性。
 
-   |属性|说明|
+   |properties|说明|
    |--------------|-----------------|
    |**颜色**|指定图像的配色方案。 选择 "**单色**"、" **16**" 或 " **256**" 或 "**真彩色**"。<br/><br/>如果已绘制带有16色调色板的图像，则选择 "**单色**" 会导致图像中的颜色的黑色和白色的替换。 对比度并非始终保持不变：例如，红色和绿色的相邻区域都转换为黑色。|
-   |**文件名**|指定图像文件的名称。<br/><br/>默认情况下，Visual Studio 会通过删除默认资源标识符（IDB_BITMAP1）中的前四个字符（"IDB_"）并添加适当的扩展，来分配创建的基本文件名。 在此示例中，图像的文件名为*BITMAP1*。 可以将其重命名为*MYBITMAP1*。|
-   |**Height**|设置图像的高度（以像素为单位）。 默认值为48。<br/><br/>裁剪图像或将空白区域添加到现有图像下方。|
+   |**Filename**|指定图像文件的名称。<br/><br/>默认情况下，Visual Studio 会通过删除默认资源标识符（IDB_BITMAP1）中的前四个字符（"IDB_"）并添加适当的扩展，来分配创建的基本文件名。 在此示例中，图像的文件名为*BITMAP1*。 可以将其重命名为*MYBITMAP1*。|
+   |高度|设置图像的高度（以像素为单位）。 默认值为48。<br/><br/>裁剪图像或将空白区域添加到现有图像下方。|
    |**ID**|设置资源的标识符。<br/><br/>对于图像，Microsoft Visual Studio 默认情况下会在序列中分配下一个可用标识符： IDB_BITMAP1、IDB_BITMAP2 等。 类似名称用于图标和光标。|
    |**调板**|更改颜色属性。<br/><br/>双击以选择颜色并显示 "[自定义颜色选择器" 对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)。 通过在相应的文本框中键入 RGB 或 HSL 值来定义颜色。|
-   |**SaveCompressed**|指示图像是否为压缩格式。 此属性是只读的。<br/><br/>Visual Studio 不允许以压缩格式保存图像，因此对于在 Visual Studio 中创建的任何图像，此属性将为**False**。 如果在 Visual Studio 中打开压缩的映像（在另一个程序中创建），则此属性将为**True**。 如果使用 Visual Studio 保存压缩的映像，则会将其解压缩，并且此属性将恢复为**False**。|
-   |**Width**|设置图像的宽度（以像素为单位）。 位图的默认值为48。<br/><br/>裁剪图像或将空白区域添加到现有图像的右侧。|
+   |**SaveCompressed**|指示图像是否为压缩格式。 此属性为只读。<br/><br/>Visual Studio 不允许以压缩格式保存图像，因此对于在 Visual Studio 中创建的任何图像，此属性将为**False**。 如果在 Visual Studio 中打开压缩的映像（在另一个程序中创建），则此属性将为**True**。 如果使用 Visual Studio 保存压缩的映像，则会将其解压缩，并且此属性将恢复为**False**。|
+   |宽度|设置图像的宽度（以像素为单位）。 位图的默认值为48。<br/><br/>裁剪图像或将空白区域添加到现有图像的右侧。|
 
 ## <a name="requirements"></a>要求
 

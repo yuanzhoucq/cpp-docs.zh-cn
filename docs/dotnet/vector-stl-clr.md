@@ -91,12 +91,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 5b16319c17b5f5681f6417d8732931da1974b66b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bbd4d7b6e7e7668100b2694fdcf3b785d7681ca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545779"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208268"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 6753545b711ff45f79b3140b30a2edbcea81c39c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: beb4e878138da3dc2905c86e18fedc658d7ceecf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215145"
 ---
 # <a name="accelerator-keys-c"></a>快捷键（C++）
 
@@ -21,7 +21,7 @@ ms.locfileid: "79445411"
 
 有多个预定义快捷键，它们可能是 Windows 应用程序项目的一部分。 部分虚拟键适用于 Windows 环境。 其他支持浏览器或 Unicode 应用程序。 你可以在任何快捷键中使用这些键。
 
-|Key|说明|
+|密钥|说明|
 |---------|-----------------|
 |VK_ACCEPT|（IME） accept|
 |VK_BROWSER_BACK|Windows浏览器，**后退**键|

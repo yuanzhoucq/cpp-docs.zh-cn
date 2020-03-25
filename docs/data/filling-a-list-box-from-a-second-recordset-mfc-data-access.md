@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213403"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>从另一个记录集填充列表框（MFC 数据访问）
 
@@ -28,13 +28,13 @@ ms.locfileid: "62397921"
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>要从另一个记录集填充组合框或列表框
 
-1. 创建记录集对象 ([CRecordset](../mfc/reference/crecordset-class.md)。
+1. 创建记录集对象（[CRecordset](../mfc/reference/crecordset-class.md)）。
 
-1. 获取一个指向[CComboBox](../mfc/reference/ccombobox-class.md)组合框控件的对象。
+1. 获取指向组合框控件的[CComboBox](../mfc/reference/ccombobox-class.md)对象的指针。
 
 1. 清空组合框以前的所有内容。
 
-1. 浏览所有记录集中的记录，调用[ccombobox:: Addstring](../mfc/reference/ccombobox-class.md#addstring)为从你想要添加到组合框的当前记录每个字符串。
+1. 在记录集中的所有记录之间移动，从要添加到组合框中的当前记录的每个字符串调用[CComboBox：： AddString](../mfc/reference/ccombobox-class.md#addstring) 。
 
 1. 初始化组合框中的选择。
 
@@ -68,7 +68,7 @@ void CSectionForm::OnInitialUpdate()
 
 此函数可从文档获取 `m_courseSet` 并将其打开。 然后清空 `m_ctlCourseList` 并浏览 `m_courseSet`。 对于每一条记录，函数都会调用组合框的 `AddString` 成员函数来添加记录的课程 ID 值。 最后，代码设置组合框选择。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录视图（MFC 数据访问）](../data/record-views-mfc-data-access.md)<br/>
 [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

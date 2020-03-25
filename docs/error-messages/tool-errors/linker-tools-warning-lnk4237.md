@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaa26393f1ce76d3e1bc40e5ba4978d1bcdb4fc9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193753"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>链接器工具警告 LNK4237
 
-已指定时从 dll; 导入使用 /subsystem: console 或者 /subsystem: windows。
+/SUBSYSTEM：从 "dll" 导入时指定了 NATIVE;使用/SUBSYSTEM： CONSOLE 或/SUBSYSTEM： WINDOWS。
 
-[已](../../build/reference/subsystem-specify-subsystem.md)时生成的 windows (Win32) 应用程序直接使用的一个或多个以下指定：
+[/SUBSYSTEM：](../../build/reference/subsystem-specify-subsystem.md)生成直接使用以下一项或多项的 Windows （Win32）应用程序时指定了 NATIVE：
 
 - Kernel32.dll
 
@@ -25,6 +25,6 @@ ms.locfileid: "62352653"
 
 - user32.dll
 
-- 一个 msvcrt\* dll。
+- msvcrt.lib\* dll 之一。
 
-通过不指定解决此警告**已**。
+不指定 **/SUBSYSTEM： NATIVE**来解决此警告。

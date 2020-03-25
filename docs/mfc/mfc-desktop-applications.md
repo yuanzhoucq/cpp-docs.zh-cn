@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178452"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面应用程序
 
@@ -78,7 +78,7 @@ Visual Studio 中用于创建 MFC 应用程序的功能的指南。
 [ATL/MFC 共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 提供 MFC 与 ATL 共享的类的链接。
 
-[MFC 示例](../overview/visual-cpp-samples.md)<br/>
+[MFC 示例](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 提供演示如何使用 MFC 的示例的链接。
 
 [Visual C++ 库参考](../standard-library/cpp-standard-library-reference.md)<br/>

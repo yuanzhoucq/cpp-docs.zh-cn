@@ -1,21 +1,21 @@
 ---
-title: db_column (C++ COM 属性)
+title: db_column （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ce57443480e35e7a4c7b9e872e41777662ddc20
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148169"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167285"
 ---
-# <a name="dbcolumn"></a>db_column
+# <a name="db_column"></a>db_column
 
-将指定的列绑定到行集中的变量。
+将指定的列绑定到行集中的某个变量。
 
 ## <a name="syntax"></a>语法
 
@@ -23,10 +23,10 @@ ms.locfileid: "62148169"
 [ db_column(ordinal, dbtype, precision, scale, status, length) ]
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ordinal*<br/>
-列序号 (`DBCOLUMNINFO`序号) 或列名称 （ANSI 或 Unicode 字符串） 要将数据绑定到行集中的字段相对应。 如果使用数字，则可以跳过连续序号 (例如：1, 2, 3, 5). 如果您使用的 OLE DB 访问接口支持的名称包含空格。 例如，可以使用以下格式：
+*序号*<br/>
+与行集中要将数据绑定到的字段相对应的序号列号（`DBCOLUMNINFO` 序号）或列名（ANSI 或 Unicode 字符串）。 如果使用数字，则可以跳过连续序号（例如：1、2、3、5）。 如果你使用的 OLE DB 提供程序支持，则该名称可以包含空格。 例如，可以使用以下格式之一：
 
 ```cpp
 [db_column("2")] TCHAR szCity[30];
@@ -34,33 +34,33 @@ ms.locfileid: "62148169"
 ```
 
 *dbtype*<br/>
-（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251(v=vs.85))列条目。
+可有可无列项的 OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251(v=vs.85))。
 
-*precision*<br/>
-（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
+*精度*<br/>
+可有可无要用于列项的精度。 有关详细信息，请参阅[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))的 `bPrecision` 元素的说明
 
 *scale*<br/>
-（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
+可有可无要用于列项的刻度。 有关详细信息，请参阅[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))`bScale` 元素的说明
 
 *status*<br/>
-（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*。
+可有可无用于保存此列的状态的成员变量。 状态指示列值是否为数据值或其他值（如 NULL）。 有关可能的值，请参阅*OLE DB 程序员参考*中的[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))。
 
 *length*<br/>
-（可选）成员变量，用来保存的列的大小以字节为单位。
+可有可无一个成员变量，用于保存列的大小（以字节为单位）。
 
 ## <a name="remarks"></a>备注
 
-**db_column**将指定的表列绑定到行集中的变量。 分隔可以参与在 OLE DB 中的成员数据`IAccessor`-基于绑定。 此属性设置了通常使用 OLE DB 使用者宏定义的列映射[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)， [END_COLUMN_MAP](../../data/oledb/end-column-map.md)，并[COLUMN_ENTRY](../../data/oledb/column-entry.md)。 这些操作 OLE DB [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))绑定指定的列。 您会使用标记每个成员**db_column**属性将占用列项的窗体中的列映射中的一个条目。 因此，调用此属性，可使列映射，即，命令或表类中。
+**db_column**将指定表列绑定到行集中的某个变量。 它分隔可参与 OLE DB 基于 `IAccessor`的绑定的成员数据。 此属性设置通常使用 OLE DB 使用者宏[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../../data/oledb/end-column-map.md)和[COLUMN_ENTRY](../../data/oledb/column-entry.md)来定义的列映射。 这些操作将操作 OLE DB [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))以绑定指定的列。 使用**db_column**特性标记的每个成员都将在列映射中以列项的形式占用一个条目。 因此，您可以调用此特性，以便在命令或表类中放置列映射。
 
-使用**db_column**结合使用[db_table](db-table.md)或[db_command](db-command.md)属性。
+将**db_column**与[db_table](db-table.md)或[db_command](db-command.md)特性结合使用。
 
-编译器时使用者特性提供程序适用于类，此属性，将重命名为类\_ *YourClassName*访问器，其中*名为 YourClassName*是您为指定的名称类和编译器还将创建一个名为类*名为 YourClassName*，它派生\_*名为 YourClassName*访问器。  将在类视图中看到这两个类。
+当使用者特性提供程序将此特性应用于类时，编译器会将类重命名为 \_*YourClassName*访问器，其中*YourClassName*是你为类提供的名称，并且编译器还将创建一个名为*YourClassName*的类，该类派生自 \_*YourClassName*访问器。  将在类视图中看到这两个类。
 
-有关应用程序中使用此属性的示例，请参阅示例[AtlAgent](https://github.com/Microsoft/VCSamples)，并[MultiRead](https://github.com/Microsoft/VCSamples)。
+有关应用程序中使用的此属性的示例，请参阅[MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)。
 
 ## <a name="example"></a>示例
 
-此示例将列绑定到表中**长**数据成员和指定状态和长度的字段。
+此示例将表中的列绑定到**long**数据成员，并指定 "状态" 和 "长度" 字段。
 
 ```cpp
 // db_column_1.cpp
@@ -80,7 +80,7 @@ class CProducts {
 
 ## <a name="example"></a>示例
 
-此示例将绑定到四个列**长**，字符字符串、 一个时间戳，和一个`DB_NUMERIC`以该顺序的整数。
+此示例按顺序将四列绑定到**长**、字符串、时间戳和 `DB_NUMERIC` 整数。
 
 ```cpp
 // db_column_2.cpp
@@ -104,14 +104,14 @@ class CProducts {
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**，成员、 方法|
+|**适用对象**|**类**、**结构**、成员、方法|
 |**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者特性](ole-db-consumer-attributes.md)<br/>
 [类特性](class-attributes.md)

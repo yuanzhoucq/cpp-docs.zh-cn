@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ad8faa08a2c85e777cbc8721e5842e708b9e6cb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "79544398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181845"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial（C++/CLI 和 C++/CX）
 

@@ -5,21 +5,21 @@ helpviewer_keywords:
 - cursor library [ODBC], disabling
 - ODBC cursor library [ODBC], disabling
 ms.assetid: e89e41c4-78fd-4cb6-821f-4fb090f4b08b
-ms.openlocfilehash: 2bd762e64d9f742ade789e3c9571eb02d6f0ef2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84f3233bf6e12b4820a5b356d1c103307ccb7342
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212571"
 ---
 # <a name="use-the-odbc-cursor-library"></a>使用 ODBC 游标库
 
-ODBC 管理滚动游标库通过记录集。 这些主题说明如何使用游标库。
+ODBC 通过游标库管理整个记录集的滚动。 这些主题说明了如何使用游标库。
 
 ## <a name="in-this-section"></a>本节内容
 
 - [使用 ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

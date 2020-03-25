@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212157"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 类
 

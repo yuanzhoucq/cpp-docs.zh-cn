@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1218
 ms.assetid: bf599350-be03-4344-be43-91e29c4f1556
-ms.openlocfilehash: 8a2a92f642759d654530d4979262b01a5a581088
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1aefc92e9fc6223d1d9ecd5f7dc60d4dfc65d7d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242794"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195053"
 ---
 # <a name="linker-tools-error-lnk1218"></a>链接器工具错误 LNK1218
 
-警告视为错误;未生成输出文件
+视为错误的警告;未生成输出文件
 
-与链接 **/WX**，任何链接器警告会视为错误，并将创建任何输出文件。
+链接到 **/wx**后，所有链接器警告将被视为错误，并且不会创建任何输出文件。
 
-请参阅[/WX （将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md)有关详细信息。
+有关详细信息，请参阅[/wx （将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md) 。

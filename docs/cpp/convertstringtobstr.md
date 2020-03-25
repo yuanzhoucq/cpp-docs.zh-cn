@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-ms.openlocfilehash: 5e7d8abd29033fc88dae1e83fcc6467fb0ace46f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2065011ee6bbf98ce2c83be494f1e6631af9f7cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154615"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170704"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 
 **Microsoft 专用**
 
-将转换`char *`值设为`BSTR`。
+将 `char *` 值转换为 `BSTR`。
 
 ## <a name="syntax"></a>语法
 
@@ -25,10 +25,10 @@ ms.locfileid: "62154615"
 BSTR __stdcall ConvertStringToBSTR(const char* pSrc)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*pSrc*<br/>
-一个`char *`变量。
+*.Psrc*<br/>
+一个 `char *` 变量。
 
 ## <a name="example"></a>示例
 
@@ -62,8 +62,8 @@ BSTR text: Test
 
 **标头：** \<comutil.h >
 
-**Lib:** comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)
+**Lib：** comsuppw.lib 或 comsuppwd.lib （有关详细信息，请参阅[/zc： Wchar_t （Wchar_t 为本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: dbf186fa699e8faf85385fd322482a4373b3fd60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 01658c6146706d8ea7bfd70d002efcfff88031b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940350"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171588"
 ---
 # <a name="__getmainargs-__wgetmainargs"></a>__getmainargs、__wgetmainargs
 
@@ -52,16 +52,16 @@ int __wgetmainargs (
    _startupinfo * _StartInfo)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 `_Argc`<br/>
 包含 `argv` 后面的参数数的整数。 `argc` 参数始终大于或等于 1。
 
 `_Argv`<br/>
-表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定，`argv[0]` 是用于调用程序的命令，argv[1] 是第一个命令行参数，依此类推，直到 argv[argc]（其始终为 NULL）  。 第一个命令行参数始终是 `argv[1]`，而最后一个命令行参数是 `argv[argc - 1]`。
+表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定，`argv[0]` 是用于调用程序的命令，argv[1] 是第一个命令行参数，依此类推，直到 argv[argc]（其始终为 NULL）。 第一个命令行参数始终是 `argv[1]`，而最后一个命令行参数是 `argv[argc - 1]`。
 
 `_Env`<br/>
-表示用户环境中的变量集的字符串数组。 该数组由 NULL 项终止  。
+表示用户环境中的变量集的字符串数组。 该数组由 NULL 项终止。
 
 `_DoWildCard`<br/>
 一个整数，如果将其设置为 1，则扩展命令行自变量中的通配符；如果设置为 0，则不执行任何操作。
@@ -79,7 +79,7 @@ int __wgetmainargs (
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |__getmainargs|internal.h|
 |__wgetmainargs|internal.h|

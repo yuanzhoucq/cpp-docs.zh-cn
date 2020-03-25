@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-ms.openlocfilehash: bbb69cccbf93be6e97d13db5008780f57e63f9da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6d54cf8b6704eec2a9e6af890c5c80c67106995
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280849"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164997"
 ---
 # <a name="compiler-warning-c4936"></a>编译器警告 C4936
 
@@ -19,7 +19,7 @@ ms.locfileid: "62280849"
 
 ## <a name="remarks"></a>备注
 
-**/Clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
+**/Clr： pure**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
 使用了 `__declspec` 修饰符，但只有在编译时使用 `__declspec` /clr [选项之一的情况下](../../build/reference/clr-common-language-runtime-compilation.md) 修饰符方才有效。
 

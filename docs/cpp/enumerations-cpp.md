@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180181"
 ---
 # <a name="enumerations-c"></a>枚举 (C++)
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 注意，`hand = account_num;` 行仍会导致对未区分范围的枚举发生的错误，如前面所示。 它可以与显式强制转换一起使用。 但是，借助区分范围的枚举，不再允许在没有显式强制转换的情况下在下一条语句 `account_num = Suit::Hearts;` 中尝试转换。
 
-## <a name="no_enumerators"></a>没有枚举器的枚举
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>没有枚举器的枚举
 
 **Visual Studio 2017 版本15.3 及更高版本**（可与[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)一起使用）：通过使用显式基础类型定义枚举（常规或范围），而不使用枚举器，实际上可以引入不包含任何其他类型的隐式转换的新整型类型。 通过使用此类型（而不是其内置基础类型），可以消除无意中的隐式转换导致的细微错误的可能性。
 

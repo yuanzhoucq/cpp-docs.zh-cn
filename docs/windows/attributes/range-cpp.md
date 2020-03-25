@@ -1,17 +1,17 @@
 ---
-title: range (C++ COM 特性)
+title: range （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214612"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514142"
 [ range(low, high) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *low*<br/>
 低范围值。
@@ -57,14 +57,14 @@ __interface ICustom {
 
 |||
 |-|-|
-|**适用于**|接口方法, 接口参数|
-|**可重复**|No|
+|**适用对象**|接口方法，接口参数|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>

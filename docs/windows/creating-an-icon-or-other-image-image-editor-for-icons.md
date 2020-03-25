@@ -79,12 +79,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 046b7e0070d95f5d17b3240884db76533f1c6ccd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 931d84f16b46ea8fe21ecc0a63d20dac958ce960
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443911"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160433"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：创建图标或其他图像
 
@@ -98,7 +98,7 @@ ms.locfileid: "79443911"
 
 默认情况下，**图像编辑器**支持为下表中所示的设备创建附加图像。 可以通过在 "**自定义图像**" 对话框中键入宽度、高度和颜色计数参数，为其他设备创建图像。
 
-|颜色|宽度（像素）|高度（像素）|
+|Color|宽度（像素）|高度（像素）|
 |-----------|----------------------|-----------------------|
 |单色|16|16|
 |单色|32|32|
@@ -145,15 +145,15 @@ ms.locfileid: "79443911"
 
 使用 "**自定义图像**" 对话框，您可以创建具有自定义大小和颜色数的新图像。 包括以下属性：
 
-|属性|说明|
+|properties|说明|
 |---|---|
-|**Width**|提供空间以输入自定义图像的宽度（以像素为单位（1-512，2048）。|
-|**Height**|提供空间以输入自定义图像的高度（以像素为单位（1-512，2048）。|
+|宽度|提供空间以输入自定义图像的宽度（以像素为单位（1-512，2048）。|
+|高度|提供空间以输入自定义图像的高度（以像素为单位（1-512，2048）。|
 |**颜色**|提供空间以选择自定义图像的颜色数：2、16或256。|
 
 使用 "**打开 &lt;设备&gt; 图像**" 对话框打开项目中的C++设备映像。 它列出当前资源（当前资源中的映像）中的现有设备映像。 包含以下属性：
 
-|属性|说明|
+|properties|说明|
 |---|---|
 |**当前映像**|列出资源中包含的映像。 选择要打开的图像类型。|
 

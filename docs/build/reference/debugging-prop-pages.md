@@ -35,20 +35,20 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169703"
 ---
 # <a name="c-debugging-property-pages"></a>C++调试属性页
 
-这些属性页位于 "**项目** > **属性** > " "**配置属性** > " "**调试**" 下。 在下拉控件中选择 "调试器类型"。 有关调试C++代码的详细信息，请[参阅教程：了解如何使用C++ Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp)调试代码和[调试本机代码](/visualstudio/debugger/debugging-native-code)。
+这些属性页在 "**项目** > **属性**" 下找到， > **配置属性** > **调试**。 在下拉控件中选择 "调试器类型"。 有关调试C++代码的详细信息，请参阅[教程：学习使用C++ Visual Studio 调试代码](/visualstudio/debugger/getting-started-with-the-debugger-cpp)和[调试本机代码](/visualstudio/debugger/debugging-native-code)。
 
 ## <a name="local-windows-debugger-property-page"></a>"本地 Windows 调试器" 属性页
 
-### <a name="command"></a>命令
+### <a name="command"></a>Command
 
 要执行的调试命令。
 
@@ -60,7 +60,7 @@ ms.locfileid: "70927738"
 
 应用程序的工作目录。 默认情况下，包含项目文件的目录。
 
-### <a name="attach"></a>Attach
+### <a name="attach"></a>附加
 
 指定调试器是否应尝试在启动调试时附加到现有进程。
 
@@ -68,7 +68,7 @@ ms.locfileid: "70927738"
 
 指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
-**方案**
+**选项**
 
 - **仅限本机**-仅限本机
 - **仅限托管**
@@ -89,7 +89,7 @@ ms.locfileid: "70927738"
 
 设置 GPU 调试器中断的频率。
 
-**方案**
+**选项**
 
 - **每**个弯曲一次中断一次
 - 为每个线程**中断（例如 cpu 行为）** -每个线程中断（如 cpu 行为）
@@ -122,7 +122,7 @@ ms.locfileid: "70927738"
 
 应用程序的工作目录。 默认情况下，包含项目文件的目录。
 
-### <a name="remote-server-name"></a>远程服务器名称
+### <a name="remote-server-name"></a>“远程服务器名称”
 
 指定远程服务器名称。
 
@@ -130,7 +130,7 @@ ms.locfileid: "70927738"
 
 指定连接类型。
 
-**方案**
+**选项**
 
 - **带 windows 身份验证的远程**-远程和[windows 身份验证](/windows-server/security/windows-authentication/windows-authentication-overview)。
 - **不带身份验证的远程远程**身份验证（无身份验证）。
@@ -139,7 +139,7 @@ ms.locfileid: "70927738"
 
 指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
-**方案**
+**选项**
 
 - **仅限本机**-仅限本机
 - **仅限托管**
@@ -160,12 +160,12 @@ ms.locfileid: "70927738"
 
 设置 GPU 调试器中断的频率。
 
-**方案**
+**选项**
 
 - **每**个弯曲一次中断一次
 - 为每个线程**中断（例如 cpu 行为）** -每个线程中断（如 cpu 行为）
 
-### <a name="attach"></a>Attach
+### <a name="attach"></a>附加
 
 指定调试器是否应尝试在启动调试时附加到现有进程。
 
@@ -199,7 +199,7 @@ ms.locfileid: "70927738"
 
 指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
-**方案**
+**选项**
 
 - **仅限本机**-仅限本机
 - **仅限托管**
@@ -217,7 +217,7 @@ ms.locfileid: "70927738"
 
 指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
-**方案**
+**选项**
 
 - **仅限本机**-仅限本机
 - **仅限托管**

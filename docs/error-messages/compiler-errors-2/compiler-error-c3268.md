@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201456"
 ---
 # <a name="compiler-error-c3268"></a>编译器错误 C3268
 
-> '*函数*： 泛型函数或泛型类的成员函数不能具有变量参数列表
+> "*function*"：泛型函数或泛型类的成员函数不能有变量参数列表
 
 ## <a name="remarks"></a>备注
 
-**/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
+**/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)有关详细信息。
+有关详细信息，请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

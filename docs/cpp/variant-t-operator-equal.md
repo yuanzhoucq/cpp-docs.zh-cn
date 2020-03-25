@@ -8,14 +8,14 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 6a8f31e8db6f5ca5a680dd47b5d5391c84ce5025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402251592a87b723d75fd1b2cd0786be7b17dbfc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403305"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187617"
 ---
-# <a name="varianttoperator-"></a>_variant_t::operator =
+# <a name="_variant_toperator-"></a>_variant_t::operator =
 
 **Microsoft 专用**
 
@@ -119,40 +119,40 @@ _variant_t& operator=(
 
 此运算符将向 `_variant_t` 对象赋予新值：
 
-- **运算符 = (***varSrc***)** 将现有`VARIANT`到`_variant_t`对象。
+- **operator = （** *varSrc* **）** 向 `_variant_t` 对象分配现有 `VARIANT`。
 
-- **运算符 = (***pVarSrc***)** 将现有`VARIANT`到`_variant_t`对象。
+- **operator = （** *pVarSrc* **）** 向 `_variant_t` 对象分配现有 `VARIANT`。
 
-- **运算符 = (***var_t_Src***)** 将现有`_variant_t`对象传递给`_variant_t`对象。    
+- **operator = （** *var_t_Src* **）** 向 `_variant_t` 对象分配现有的 `_variant_t` 对象。
 
-- **运算符 = (***sSrc***)** 分配**短**整数值到`_variant_t`对象。
+- **operator = （** *sSrc* **）** 向 `_variant_t` 对象分配一个**短**整型值。
 
-- **运算符 = (**`lSrc`**)** 分配**长**整数值到`_variant_t`对象。
+- **operator = （** `lSrc` **）** 向 `_variant_t` 对象分配一个**长**整型值。
 
-- **operator=(**  *fltSrc*  **)** Assigns a **float** numerical value to a `_variant_t` object.
+- **operator = （** *fltSrc* **）** 向 `_variant_t` 对象分配一个**浮点**数字值。
 
-- **运算符 = (***dblSrc***)** 分配**double**数字值赋给`_variant_t`对象。
+- **operator = （** *dblSrc* **）** 向 `_variant_t` 对象分配一个**双精度**数字值。
 
-- **operator=(**  *cySrc*  **)** Assigns a `CY` object to a `_variant_t` object.
+- **operator = （**  *cySrc*  **）** 将 `CY` 对象分配到 `_variant_t` 对象。
 
-- **运算符 = (***bstrSrc***)** 分配`BSTR`对象传递给`_variant_t`对象。
+- **operator = （**  *bstrSrc*  **）** 将 `BSTR` 对象分配到 `_variant_t` 对象。
 
-- **运算符 = (***wstrSrc***)** 分配给一个 Unicode 字符串`_variant_t`对象。
+- **operator = （**  *wstrSrc*  **）** 向 `_variant_t` 对象分配一个 Unicode 字符串。
 
-- **运算符 = (**`strSrc`**)** 分配到一个多字节字符串`_variant_t`对象。
+- **operator = （** `strSrc` **）** 将多字节字符串分配给 `_variant_t` 的对象。
 
-- **运算符 = (** `bSrc` **)** 分配**bool**值设为`_variant_t`对象。
+- **operator = （** `bSrc` **）** 向 `_variant_t` 对象分配一个**bool**值。
 
-- **运算符 = (***pDispSrc***)** 分配`VT_DISPATCH`对象传递给`_variant_t`对象。
+- **operator = （**  *pDispSrc*  **）** 将 `VT_DISPATCH` 对象分配到 `_variant_t` 对象。
 
-- **运算符 = (***pIUnknownSrc***)** 分配`VT_UNKNOWN`对象传递给`_variant_t`对象。
+- **operator = （**  *pIUnknownSrc*  **）** 将 `VT_UNKNOWN` 对象分配到 `_variant_t` 对象。
 
-- **运算符 = (***decSrc***)** 分配`DECIMAL`值设为`_variant_t`对象。
+- **operator = （** *decSrc* **）** 向 `_variant_t` 对象分配 `DECIMAL` 值。
 
-- **运算符 = (** `bSrc` **)** 分配`BYTE`值设为`_variant_t`对象。
+- **operator = （** `bSrc` **）** 向 `_variant_t` 对象分配 `BYTE` 值。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_variant_t 类](../cpp/variant-t-class.md)

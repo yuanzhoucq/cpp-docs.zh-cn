@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212118"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 

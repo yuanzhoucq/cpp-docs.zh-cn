@@ -108,12 +108,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 6c8fdab696960b0f3bfbe26ab91b1e1493204e9b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7a07f0cc66492c5e0c10c82a7a6971313e13d77b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545863"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208553"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 

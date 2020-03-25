@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 66fce9d2ffe63798738be1658a5328e907395a54
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8ecbcd46e534baa73574f0930e1cbac4dbc49dfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210530"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl 类
 

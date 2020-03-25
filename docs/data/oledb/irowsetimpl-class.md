@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 2fbe461bfc812c5ac9b9a09aa3ed31c0a2a638e1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: db12af1aecc094e6c04ab37b5a70a0acd97e39e9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546043"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210410"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 类
 

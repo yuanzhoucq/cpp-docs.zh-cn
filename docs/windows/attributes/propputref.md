@@ -1,17 +1,17 @@
 ---
-title: propputref (C++ COM 特性)
+title: propputref （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514183"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166427"
 ---
 # <a name="propputref"></a>propputref
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514183"
 
 ## <a name="example"></a>示例
 
-有关**propputref**的示例用法, 请参阅可[绑定](bindable.md)的示例。
+有关**propputref**的示例用法，请参阅可[绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514183"
 
 |||
 |-|-|
-|**适用于**|方法|
-|**可重复**|No|
+|**适用对象**|方法|
+|**可重复**|否|
 |**必需的特性**|无|
-|**无效的特性**|`propget`， `propput`|
+|**无效的特性**|`propget`、`propput`|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>

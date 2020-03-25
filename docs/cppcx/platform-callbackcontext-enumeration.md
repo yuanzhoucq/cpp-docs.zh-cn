@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214251"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 枚举
 
@@ -26,9 +26,9 @@ enum class CallbackContext {};
 
 ### <a name="members"></a>成员
 
-|类型代码|描述|
+|类型代码|说明|
 |---------------|-----------------|
-|任意|回调函数可以在任何线程上下文上执行。|
+|Any|回调函数可以在任何线程上下文上执行。|
 |相同|回调函数只能在启动了异步操作的线程上下文上执行。|
 
 ### <a name="requirements"></a>要求

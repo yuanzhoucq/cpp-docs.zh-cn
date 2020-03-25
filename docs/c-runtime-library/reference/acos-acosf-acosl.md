@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939994"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171289"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -58,7 +58,7 @@ float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 介于-1 和1之间的值，用于计算反余弦值（反余弦值）。
@@ -71,9 +71,9 @@ long double acos( long double x );   // C++ only
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± ∞|INVALID|_DOMAIN|
-|± QNAN，IND|无|_DOMAIN|
-|&#124;x&#124;>1|INVALID|_DOMAIN|
+|± ∞|无效|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
+|&#124;x&#124;>1|无效|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
@@ -81,7 +81,7 @@ long double acos( long double x );   // C++ only
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
@@ -135,7 +135,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [asin、asinf、asinl](asin-asinf-asinl.md)<br/>

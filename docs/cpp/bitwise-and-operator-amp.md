@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-ms.openlocfilehash: ba17c9a633b7b18cad2881dfef90fde7c2074319
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b5c99d19be3461b10a1126dea3a45d308c0fc558
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446141"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181286"
 ---
 # <a name="bitwise-and-operator-amp"></a>按位与运算符： &amp;
 
@@ -25,7 +25,7 @@ expression & expression
 
 表达式可以是其他“与”表达式，或（遵循下面所述的类型限制）相等表达式、关系表达式、加法表达式、乘法表达式、指向成员的指针表达式、强制转换表达式、一元表达式、后缀表达式或主表达式。
 
-按位 "与" 运算符（ **&** ）将第一个操作数的每个位与第二操作数的相应位进行比较。 如果两个位均为 1，则对应的结果位将设置为 1。 否则，将对应的结果位设置为 0。
+按位 "与" 运算符（ **&** ）将第一个操作数的每个位与第二操作数的相应位进行比较。 如果两位都是 1，则相应的结果位设置为 1。 否则，相应的结果位设置为 0。
 
 按位“与”运算符的两个操作数必须为整型。 [标准转换](standard-conversions.md)中涵盖的常用算术转换将应用于操作数。
 

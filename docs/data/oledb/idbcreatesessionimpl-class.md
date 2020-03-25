@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210777"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 类
 
-提供一个实现[IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85))接口。
+提供[IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85))接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -31,13 +31,13 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
    : public IDBCreateSession
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自
+你的类，派生自
 
 *SessionClass*<br/>
-会话对象中。
+Session 对象。
 
 ## <a name="requirements"></a>要求
 
@@ -49,15 +49,15 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 
 |||
 |-|-|
-|[CreateSession](#createsession)|从数据源对象创建一个新的会话并返回所请求的接口上新创建的会话。|
+|[CreateSession](#createsession)|从数据源对象创建新的会话，并返回新创建的会话上所请求的接口。|
 
 ## <a name="remarks"></a>备注
 
 数据源对象上的必需接口。
 
-## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>IDBCreateSessionImpl：： CreateSession
 
-从数据源对象创建一个新的会话并返回所请求的接口上新创建的会话。
+从数据源对象创建新的会话，并返回新创建的会话上所请求的接口。
 
 ### <a name="syntax"></a>语法
 
@@ -67,11 +67,11 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
    IUnknown ** ppDBSession);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IDBCreateSession：： CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::FactoryCacheFlags
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-ms.openlocfilehash: 8cf4af2ac0b4557fc6b175b84c47f83dd8a6e4ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 250c8c8e7ade72bd1a9cd63f0b515774058f0723
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398454"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214001"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 枚举
 
@@ -24,7 +24,7 @@ enum FactoryCacheFlags;
 
 ## <a name="remarks"></a>备注
 
-默认情况下，工厂缓存策略指定为[ModuleType](moduletype-enumeration.md)时创建的模板参数[模块](module-class.md)对象。 若要重写此策略，指定**FactoryCacheFlags**时创建一个工厂对象的值。
+默认情况下，创建[Module](module-class.md)对象时，出厂缓存策略指定为[ModuleType](moduletype-enumeration.md)模板参数。 若要重写此策略，请在创建工厂对象时指定**FactoryCacheFlags**值。
 
 |||
 |-|-|
@@ -34,10 +34,10 @@ enum FactoryCacheFlags;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

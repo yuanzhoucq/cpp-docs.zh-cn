@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
-ms.openlocfilehash: b97819a6f1b95f083eb594d3b9b2e68cbf30d19a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f74c115a3cabb421ba5a9cf4c34696a0c223512e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623695"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165270"
 ---
 # <a name="compiler-warning-c4394"></a>编译器警告 C4394
 
-"function"：不应将每个 appdomain 符号标记为 __declspec （dllexport）
+"function"：不应将每个 appdomain 符号标记 __declspec （dllexport）
 
 使用[appdomain](../../cpp/appdomain.md)`__declspec` 修饰符标记的函数编译为 MSIL （而不是本机），并且托管函数不支持导出表（[export](../../windows/export.md)`__declspec` 修饰符）。
 

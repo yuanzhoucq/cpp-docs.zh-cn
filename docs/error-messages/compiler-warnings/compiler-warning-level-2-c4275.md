@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad12c1c27006a57c8339e9dad82e4d8e1a239a6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161992"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>编译器警告（等级 2）C4275
 
-> 非 DLL 接口类*class_1*用作基 DLL 接口类*class_2*
+> 非 DLL 接口类 "*class_1*" 用作 DLL 接口类 "*class_2*" 的基
 
-将导出的类被派生自不导出的类。
+导出的类派生自未导出的类。
 
-若要导出具有的类时，数据损坏的可能性降至最低[__declspec （dllexport)](../../cpp/dllexport-dllimport.md)，请确保：
+若要最大程度地减少在使用[__declspec （dllexport）](../../cpp/dllexport-dllimport.md)导出类时数据损坏的可能性，请确保：
 
-- 通过从 DLL 导出的函数访问所有静态数据。
+- 所有静态数据都可以通过从 DLL 导出的函数进行访问。
 
-- 您的类没有内联的方法可以修改静态数据。
+- 类的任何内联方法都不能修改静态数据。
 
-- 您的类没有内联的方法使用的 CRT 函数或使用静态数据的其他库函数。
+- 类的任何内联方法都不使用 CRT 函数或其他使用静态数据的库函数。
 
-- 没有内联的类函数使用的 CRT 函数或其他库函数访问静态数据的位置。
+- 任何内联类函数都不使用 CRT 函数或其他可访问静态数据的库函数。
 
-- 您的类没有方法 (而不考虑内联) 可以使用类型其中 EXE 和 DLL 中的实例化具有静态数据的差异。
+- 类的任何方法（无论内联如何）都可以使用 EXE 和 DLL 中的实例化具有静态数据差异的类型。
 
-您可以避免通过定义一个 DLL，它定义了具有虚函数的类和函数，可以调用来实例化并删除对象类型的导出类。  然后，可以只需调用虚函数的类型。
+可以通过定义用于定义具有虚函数的类的 DLL，以及可以调用来实例化和删除类型的对象的函数，来避免导出类。  然后，就可以对类型调用虚函数。
 
-C4275 可以忽略视觉对象中C++如果派生的类型C++标准库，编译调试版本 (**/MTd**)，其中编译器错误消息是指`_Container_base`。
+如果是从C++标准库中C++的类型派生，编译调试版本（ **/MTd**），并且编译器错误消息引用 `_Container_base`，则可以在视觉对象中忽略 C4275。
 
 ```cpp
 // C4275.cpp

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76279b24002460b51bc2f67d4395ff271752d964
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215171"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 预定义的符号
 
-MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些`#include`中的语句`StdAfx.h`文件：
+MFC 项目始终包含多个支持 windows 的头文件。 这些操作通过 `StdAfx.h` 文件中 `#include` 语句添加：
 
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
@@ -28,7 +28,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-标头文件包括 MFC 常见值的符号 ID 值。 MFC 项目中工作时，这些符号才可用。 `AFX_`前缀后面跟标准符号名前缀。
+标头文件包含 MFC 公用值的符号 ID 值。 这些符号仅在你使用 MFC 项目时可用。 `AFX_` 前缀后跟标准符号名称前缀。
 
 |||
 |-|-|
@@ -152,7 +152,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|
-|AFX_IDS_CHECKLISTBOX_MIXED|取消选中 AFX_IDS_CHECKLISTBOX_|
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ 取消选中|
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|
@@ -213,7 +213,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 
 ## <a name="mfc-database-programming"></a>MFC 数据库编程
 
-添加了数据库的支持，此表中的符号只能出现在 MFC 项目中。 它们支持与 SQL 服务器和数据库编程的 MFC 连接。
+此表中的符号仅在添加数据库支持时出现在 MFC 项目中。 它们支持 MFC 连接到 SQL server 和数据库编程。
 
 |||
 |-|-|
@@ -221,7 +221,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 |AFX_IDP_SQL_BOOKMARKS_ NOT_SUPPORTED|AFX_IDP_SQL_CONNECT_FAIL|
 |AFX_IDP_SQL_DATA_TRUNCATED|AFX_IDP_SQL_DYNAMIC_CURSOR_ NOT_SUPPORTED|
 |AFX_IDP_SQL_DYNASET_ NOT_SUPPORTED|AFX_IDP_SQL_EMPTY_COLUMN_LIST|
-|AFX_IDP_SQL_FIELD_NOT_FOUND|AFX_IDP_SQL_FILED_SCHEMA_ MISMATCH|
+|AFX_IDP_SQL_FIELD_NOT_FOUND|AFX_IDP_SQL_FILED_SCHEMA_ 不匹配|
 |AFX_IDP_SQL_ILLEGAL_MODE|AFX_IDP_SQL_INCORRECT_ODBC|
 |AFX_IDP_SQL_LOCK_MODE_ NOT_SUPPORTED|AFX_IDP_SQL_MULTIPLE_ ROWS_AFFECTED|
 |AFX_IDP_SQL_NO_CURRENT_RECORD|AFX_IDP_SQL_NO_DATA_FOUND|
@@ -236,7 +236,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 
 这些符号也是 MFC 支持文件的一部分，但它们支持标准的 Windows 应用程序功能和操作。 这些符号用于菜单。
 
-当您正在使用中的菜单**菜单编辑器**，这些符号将出现在**属性**与常见的菜单命令相关联的窗口。 例如，如果你的应用程序具有**文件**菜单，其中包含**退出**命令，命令将与相关联的符号 ID_APP_EXIT 中[属性窗口](/visualstudio/ide/reference/properties-window)。
+在**菜单编辑器**中处理菜单时，这些符号将出现在与常见菜单命令相关联的 "**属性**" 窗口中。 例如，如果应用程序具有带**Exit**命令的 "**文件**" 菜单，则该命令将与[属性窗口](/visualstudio/ide/reference/properties-window)中的符号 ID_APP_EXIT 相关联。
 
 ||||
 |-|-|-|
@@ -258,7 +258,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 |ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|
 |ID_FILE_SEND_MAIL|ID_FILE_UPDATE|ID_FORMAT_FONT|
 |ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|
-|ID_HELP+USING|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
+|使用 ID_HELP +|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
 |ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|
@@ -280,7 +280,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 
 MFC
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [预定义的符号 ID](../windows/predefined-symbol-ids.md)<br/>
 [ATL 预定义的符号](../windows/atl-predefined-symbols.md)<br/>

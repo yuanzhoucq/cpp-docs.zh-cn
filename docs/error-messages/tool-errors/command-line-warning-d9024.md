@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214150"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196755"
 ---
 # <a name="command-line-warning-d9024"></a>命令行警告 D9024
 
-无法识别的源文件类型 filename 中，对象文件假定
+无法识别的源文件类型 "filename"，假定为对象文件
 
-无法识别指定的文件的扩展名。 该文件都假定为对象文件，并传递给链接器。
+无法识别指定文件的扩展名。 该文件被认为是对象文件，并被传递到链接器。
 
-识别下列扩展名：
+识别以下扩展：
 
-- .c （C 源代码文件）
+- .c （C 源文件）
 
-- .cxx (C++源文件)
+- . .cxx （C++源文件）
 
-- .cpp (C++源文件)
+- .cpp （C++源文件）
 
 - .obj （对象文件）
 
@@ -33,4 +33,4 @@ ms.locfileid: "62214150"
 
 - .def （模块定义文件）
 
-- .exp （链接器将导出链接 /LIB 所创建的文件）
+- exp （链接器导出文件，由链接/LIB 创建）

@@ -6,29 +6,29 @@ helpviewer_keywords:
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-ms.openlocfilehash: 0aff645ce9b0edd3976abf8dd77fff8a79d3c545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c792f94e675ba3f83b4aad8c180ede46770c6856
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362642"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215002"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ 中的 OpenMP
 
-OpenMP C 和C++应用程序接口可用于编写有效地使用多个处理器的应用程序。 VisualC++支持 OpenMP 2.0 标准。
+通过 OpenMP C 和C++应用程序界面，你可以编写有效地使用多个处理器的应用程序。 Visual C++支持 OpenMP 2.0 标准。
 
 ## <a name="in-this-section"></a>本节内容
 
 [库参考](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
-提供指向 OpenMP API 中使用的构造。
+提供 OpenMP API 中使用的构造的链接。
 
 [C 和C++应用程序接口](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
-讨论 OpenMP C 和C++API，从 OpenMP 体系结构评审委员会的版本 2.0 规范中所述。
+讨论 OpenMP C 和C++ API，如 Openmp 体系结构审查委员会版本2.0 中所述。
 
 ## <a name="related-sections"></a>相关章节
 
 [/openmp（启用 OpenMP 2.0 支持）](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
-使编译器处理`#pragma omp`。
+导致编译器处理 `#pragma omp`。
 
 [预定义宏](../../preprocessor/predefined-macros.md)<br/>
-为预定义的 ANSI C 和 MicrosoftC++实现宏。 请参阅 _OPENMP 宏。
+命名预定义的 ANSI C 和C++ Microsoft 实现宏。 请参阅 _OPENMP 宏。

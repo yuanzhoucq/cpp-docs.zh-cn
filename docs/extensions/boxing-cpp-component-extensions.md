@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172602"
 ---
 # <a name="boxing--ccli-and-ccx"></a>装箱（C++/CLI 和 C++/CX）
 

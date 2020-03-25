@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213650"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 运算符 (Microsoft::WRL)
 
-不等运算符[ComPtr](comptr-class.md)并[ComPtrRef](comptrref-class.md)对象。
+[ComPtr](comptr-class.md)和[ComPtrRef](comptrref-class.md)对象的不等运算符。
 
 ## <a name="syntax"></a>语法
 
@@ -53,7 +53,7 @@ WRL_NOTHROW bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *a*<br/>
 左对象。
@@ -63,14 +63,14 @@ WRL_NOTHROW bool operator!=(
 
 ## <a name="return-value"></a>返回值
 
-**true**如果对象不相等; 否则为**false**。
+如果对象不相等，则为**true** ;否则**为 false**。
 
 ## <a name="requirements"></a>要求
 
 **标头：** client.h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
