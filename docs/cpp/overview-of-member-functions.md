@@ -7,18 +7,18 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-ms.openlocfilehash: faa7d016c8f48e9a5ee57c8efa4ce3dfd3f3eb01
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d1c3e069325363276e58a617d6ba21cb0b6e4ff0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345857"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188462"
 ---
 # <a name="overview-of-member-functions"></a>成员函数概述
 
-成员函数是静态或非静态的。 静态成员函数的行为不同于其他成员函数，因为静态成员函数不具有隐式**这**参数。 非静态成员函数具有**这**指针。 可以在类声明的内部或外部定义成员函数（无论是静态的还是非静态的）。
+成员函数是静态或非静态的。 静态成员函数的行为与其他成员函数的行为不同，因为静态成员函数不具有隐式**此**参数。 非静态成员函数具有**this**指针。 可以在类声明的内部或外部定义成员函数（无论是静态的还是非静态的）。
 
-如果在类声明的内部定义一个成员函数，则该函数会被视为内联函数，并且不需要用其类名来限定函数名称。 尽管类声明中定义的函数已被视为内联函数，您可以使用**内联**关键字来记录代码。
+如果在类声明的内部定义一个成员函数，则该函数会被视为内联函数，并且不需要用其类名来限定函数名称。 尽管在类声明中定义的函数已被视为内联函数，但您可以使用**inline**关键字来记录代码。
 
 在类声明中声明函数的示例如下所示：
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-如果类声明的外部成员函数的定义，它被视为内联函数仅当显式声明为**内联**。 此外，必须通过范围解析运算符 (`::`) 用类名称限定定义中的函数名称。
+如果成员函数的定义在类声明的外部，则仅当它显式声明为**内联**函数时，才会将其视为内联函数。 此外，必须通过范围解析运算符 (`::`) 用类名称限定定义中的函数名称。
 
 以下示例与类 `Account` 的以前的声明等效，只不过 `Deposit` 函数是在类声明的外部定义的：
 

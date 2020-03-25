@@ -5,16 +5,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-ms.openlocfilehash: 4cb4dc9b718e0e6b183df62ddd056da1e0ed398f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59eb1ef2cbb9046a8ed9ea134a0c37aba6c37ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267188"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178608"
 ---
 # <a name="statements-c"></a>语句 (C++)
 
-C++ 语句是控制操作对象的方式和顺序的程序元素。 本节包括：
+C++ 语句是控制操作对象的方式和顺序的程序元素。 本部分包括：
 
 - [概述](../cpp/overview-of-cpp-statements.md)
 
@@ -38,6 +38,6 @@ C++ 语句是控制操作对象的方式和顺序的程序元素。 本节包括
 
 有关异常处理语句的信息，请参阅[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)

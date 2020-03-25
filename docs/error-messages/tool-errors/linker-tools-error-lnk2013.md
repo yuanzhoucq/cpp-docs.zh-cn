@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194741"
 ---
 # <a name="linker-tools-error-lnk2013"></a>链接器工具错误 LNK2013
 
-链接地址信息类型的链接地址信息溢出。 目标 symbol name 不在范围内
+修正类型修正溢出。 目标 "symbol name" 超出范围
 
-链接器不能使必需的地址或偏移量为给定的指令，因为目标符号太远距离指令的位置。
+由于目标符号与指令的位置相差太远，链接器无法将所需的地址或偏移量调整到给定指令中。
 
-您可以通过创建多个映像，或解决此问题[/O](../../build/reference/order-put-functions-in-order.md)选项使指令和目标靠近。
+您可以通过创建多个映像或使用[/order](../../build/reference/order-put-functions-in-order.md)选项来解决此问题，以便说明和目标更接近。
 
-用户定义的符号 （而不是编译器生成的符号） 的符号名称时，您还可以尝试以下操作来解决此错误：
+如果符号名称是用户定义的符号（而不是编译器生成的符号），则还可以尝试以下操作来解决该错误：
 
-- 更改为非静态的静态函数。
+- 将静态函数更改为非静态。
 
-- 重命名包含静态函数以调用方相同的代码段。
+- 重命名包含静态函数的代码节，使其与调用方相同。
 
-使用`DUMPBIN /SYMBOLS`，以查看函数是静态。
+使用 `DUMPBIN /SYMBOLS`查看函数是否是静态的。

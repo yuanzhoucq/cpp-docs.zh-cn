@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: 481c2c0ec28972e9cef8d1103e49afa2037c2393
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fa85bc7947b3b446ec7c6d3fdb0d7b62d308fb53
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544566"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210322"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 类
 

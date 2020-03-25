@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C++], expression
 - expression statements
 ms.assetid: 547d7f7a-58be-4ffc-a4b3-d64c7ae7538c
-ms.openlocfilehash: 2973c3e0a1cd59edfc7ef1e771454b780da23cf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f12bbbafd9be50f851e36f472098431f9ac0d5d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400599"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188995"
 ---
 # <a name="expression-statement"></a>表达式语句
 
@@ -26,8 +26,8 @@ ms.locfileid: "62400599"
 
 ## <a name="remarks"></a>备注
 
-在执行下一个语句前，将计算表达式语句中的所有表达式并完成所有副作用。 最常用的表达式语句是赋值和函数调用。  由于表达式是可选的因此单独的分号被视为空表达式语句，称为[null](../cpp/null-statement.md)语句。
+在执行下一个语句前，将计算表达式语句中的所有表达式并完成所有副作用。 最常用的表达式语句是赋值和函数调用。  由于表达式是可选的，因此分号单独被视为空的表达式语句，称为[null](../cpp/null-statement.md)语句。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ 语句概述](../cpp/overview-of-cpp-statements.md)

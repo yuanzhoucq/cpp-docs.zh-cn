@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301547"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161155"
 ---
 # <a name="nested-class-declarations"></a>嵌套类声明
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` 并`BufferedIO::BufferedOutput`中声明`BufferedIO`。 这些类名称在类 `BufferedIO` 的范围外不可见。 但是，`BufferedIO` 类型的对象不包含 `BufferedInput` 或 `BufferedOutput` 类型的任何对象。
+`BufferedIO::BufferedInput` 和 `BufferedIO::BufferedOutput` 在 `BufferedIO`中声明。 这些类名称在类 `BufferedIO` 的范围外不可见。 但是，`BufferedIO` 类型的对象不包含 `BufferedInput` 或 `BufferedOutput` 类型的任何对象。
 
 嵌套类只能从封闭类中直接使用名称、类型名称，静态成员的名称和枚举数。 若要使用其他类成员的名称，您必须使用指针、引用或对象名。
 
@@ -140,7 +140,7 @@ int main()
 BufferedIO::BufferedInput::read()
 ```
 
-表示“作为 `read` 类（位于 `BufferedInput` 类的范围中）的成员的 `BufferedIO` 函数。” 因为此声明使用*限定类型名称*语法中，以下形式的构造是可能：
+表示“作为 `read` 类（位于 `BufferedInput` 类的范围中）的成员的 `BufferedIO` 函数。” 由于此声明使用了*限定类型名称*语法，因此可以使用以下形式的构造：
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-前面的声明等效于前一个，但它使用**typedef**名称来代替类名称。
+前面的声明与前一个声明等效，但它使用**typedef**名称代替类名称。
 
 ## <a name="friend-functions-in-nested-classes"></a>嵌套类中的友元函数
 
@@ -206,6 +206,6 @@ int GetExtendedErrorStatus( char *message )
 
 利用前面的接口，许多类可以通过传递要复制错误消息的内存位置来使用此函数的服务。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../cpp/classes-and-structs-cpp.md)

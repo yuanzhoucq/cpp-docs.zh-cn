@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f25f15148621d7092858577825dbdd6caa1ae0be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514603"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166791"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514603"
 
 |||
 |-|-|
-|**适用于**|Interface 参数，interface 方法|
-|**可重复**|No|
+|**适用对象**|Interface 参数，interface 方法|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|**retval**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [参数特性](parameter-attributes.md)<br/>

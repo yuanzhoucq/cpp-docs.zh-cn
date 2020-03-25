@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b043b08e13611b87bbffbe9dfb3255d5520e3359
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 011191b99170b8a8338b5ca1a440a32404c4d793
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707835"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212818"
 ---
 # <a name="recordset-odbc"></a>记录集 (ODBC)
 
@@ -37,7 +37,7 @@ ms.locfileid: "65707835"
 > [!NOTE]
 >  某些 ODBC 驱动程序支持数据库的视图。 这种意义上的视图是最初使用 SQL `CREATE VIEW` 语句创建的查询。
 
-##  <a name="_core_recordset_capabilities"></a> 记录集功能
+##  <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> 记录集功能
 
 所有记录集对象共享以下功能：
 
@@ -51,7 +51,7 @@ ms.locfileid: "65707835"
 
 - 可以[参数化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)记录集以在运行时限定记录集选择。
 
-##  <a name="_core_snapshots_and_dynasets"></a> 快照和动态集
+##  <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> 快照和动态集
 
 记录集有两种主体类型：[快照](../../data/odbc/snapshot.md)和[动态集](../../data/odbc/dynaset.md)。 两者都受到 `CRecordset` 类的支持。 尽管每种类型共享所有记录集的共同特征，但每种类型也以其自身的专用方式扩展了常用功能。 快照提供数据的静态视图，对于报告和其他需要查看特定时间的数据视图的情况非常有用。 当你想使其他用户所进行的更新在记录集中可见而无需再次查询或刷新记录集时，动态集则非常有用。 快照和动态集可以是可更新的或只读的。 若要反映其他用户添加或删除的记录，请调用 [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)。
 
@@ -64,7 +64,7 @@ ms.locfileid: "65707835"
     > [!NOTE]
     >  有关动态集支持的 ODBC 驱动程序要求的信息，请参阅 [ODBC](../../data/odbc/odbc-basics.md)。 有关此版本的 Visual C++ 中包含的 ODBC 驱动程序列表以及有关获取其他驱动程序的信息，请参阅 [ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
 
-##  <a name="_core_your_recordsets"></a> 记录集
+##  <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> 记录集
 
 对于要访问的每个不同的表、视图或存储过程，通常需要定义派生自 `CRecordset` 的类。 （数据库联接是一个例外情况，其中一个记录集表示来自两个或多个表的列。）在派生记录集类时，启用记录字段交换 (RFX) 机制或批量记录字段交换（批量 RFX）机制，这类似于对话框数据交换 (DDX) 机制。 RFX 和批量 RFX 简化了从数据源到记录集的数据传输；RFX 还将数据从记录集传输到数据源。 有关详细信息，请参阅[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md) 和[记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 

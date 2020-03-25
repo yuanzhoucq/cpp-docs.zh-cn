@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetAddress method [C++]
 ms.assetid: 09bc9180-867e-4ee5-b22a-8339dc663142
-ms.openlocfilehash: 4d51539d2afbb2fbcc860b6c4d821df119aca418
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca78bd1b607ba4a86bbc824887a7ec767cd5476e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393891"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181247"
 ---
-# <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
+# <a name="_bstr_tgetaddress"></a>_bstr_t::GetAddress
 
 **Microsoft 专用**
 
@@ -31,14 +31,14 @@ BSTR* GetAddress( );
 
 ## <a name="remarks"></a>备注
 
-**GetAddress**影响所有`_bstr_t`对象的共享`BSTR`。 多个`_bstr_t`可以共享`BSTR`通过使用复制构造函数和**运算符 =**。
+**GetAddress**影响所有共享 `BSTR`的 `_bstr_t` 对象。 多个 `_bstr_t` 可以通过使用复制构造函数和**运算符 =** 来共享 `BSTR`。
 
 ## <a name="example"></a>示例
 
-请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)示例使用**GetAddress**。
+有关使用**GetAddress**的示例，请参阅[_Bstr_t：： Assign](../cpp/bstr-t-assign.md) 。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_bstr_t 类](../cpp/bstr-t-class.md)

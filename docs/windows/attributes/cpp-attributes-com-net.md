@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426677"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214924"
 ---
 # <a name="c-attributes-for-com-and-net"></a>适用于 COM 和 .NET 的 C++ 属性
 
@@ -78,7 +78,7 @@ class CMyReceiver
 
 此外，可视C++链接器还会将所有与 IDL 相关的属性信息输出到单个 MIDL 文件中。 无法从单个项目生成两个类型库。
 
-## <a name="contexts"></a>特性上下文
+## <a name="attribute-contexts"></a><a name="contexts"></a>特性上下文
 
 C++可以使用以下四个基本字段来描述属性：可以将其应用于（**适用**于），如果它们是可重复的或不是（可**重复**的），则需要存在其他属性（**必需的属性**），并与其他属性（**无效属性**）不兼容。 这些字段在每个属性的参考主题的随附表中列出。 下面介绍了其中的每个字段。
 

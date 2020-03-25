@@ -1,17 +1,17 @@
 ---
-title: oleautomation (C++ COM 特性)
+title: oleautomation （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.oleautomation
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 56970d8b1067e1ac38230b6995074210ddc5549b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514360"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214644"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514360"
 
 ## <a name="example"></a>示例
 
-若要使用**oleautomation**的示例, 请参阅[defaultvalue](defaultvalue.md)和[nonextensible](nonextensible.md)的示例。
+若要使用**oleautomation**的示例，请参阅[defaultvalue](defaultvalue.md)和[nonextensible](nonextensible.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514360"
 
 |||
 |-|-|
-|**适用于**|**interface**|
-|**可重复**|No|
+|**适用对象**|**接口**|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|**dispinterface**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)

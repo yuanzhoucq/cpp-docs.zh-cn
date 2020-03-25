@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2616
 ms.assetid: 8d0c02d6-a0b0-4135-b10f-438d67da68c6
-ms.openlocfilehash: bc0afc67985a71b2e7a48c3af323a00df1ed89c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83b9031b0e11052235d03bdd9ba8013a3848d9b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177256"
 ---
 # <a name="compiler-error-c2616"></a>编译器错误 C2616
 
-conversion： 不能隐式转换不是 lvalue 的类型 type1 到 type2 不是常量
+"转换"：无法将非 lvalue "type1" 隐式转换为不是常量的 "type2"
 
-不能从非左值初始化引用。
+无法从非 lvalue 初始化引用。
 
-这是 ANSI 兼容性错误 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 和 Microsoft 扩展下的一条警告 (**/Ze**)。
+这是在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下的错误和 Microsoft 扩展（ **/ze**）下的警告。

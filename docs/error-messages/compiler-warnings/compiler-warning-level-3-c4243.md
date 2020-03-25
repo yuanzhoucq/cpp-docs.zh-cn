@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级3） C4243
+title: 编译器警告（等级 3）C4243
 ms.date: 11/04/2016
 f1_keywords:
 - C4243
 helpviewer_keywords:
 - C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-ms.openlocfilehash: ed5cc87f1bc376526f5129aa157c38a3f034b20b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 5900202a88eb7dc0575c5e97a58b20b0ef290a49
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161550"
 ---
-# <a name="compiler-warning-level-3-c4243"></a>编译器警告（等级3） C4243
+# <a name="compiler-warning-level-3-c4243"></a>编译器警告（等级 3）C4243
 
 "转换类型" 转换已从 "type1" 转换为 "type2"，但不可访问
 

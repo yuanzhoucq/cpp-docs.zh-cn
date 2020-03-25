@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
-ms.openlocfilehash: da4c03c681f95efaa5edb159869315b41d027e99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9747b1edadc76ceeb502b2c6fd03496b91769f5a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208060"
 ---
 # <a name="compiler-error-c2026"></a>编译器错误 C2026
 
 字符串太大，已截断尾部字符
 
-字符串的长度超出 16380 单字节字符的限制。
+字符串的长度超过16380个单字节字符的限制。
 
-之前在连接的相邻字符串，不能大于 16380 单字节字符字符串。
+在连接相邻的字符串之前，字符串长度不能超过16380个单字节字符。
 
-此长度大约一半的 Unicode 字符串还会生成此错误。
+此长度约为一半的 Unicode 字符串也会生成此错误。
 
-如果必须按如下所示定义的字符串，则会生成 C2026:
+如果有一个定义如下的字符串，则会生成 C2026：
 
 ```
 char sz[] =
@@ -33,7 +33,7 @@ long string here\
 ";
 ```
 
-您可以将其分解，如下所示：
+您可以按如下所示对其进行分解：
 
 ```
 char sz[] =
@@ -43,4 +43,4 @@ imagine a really, really "
 ";
 ```
 
-您可能想要存储特别大的字符串文本 （32k 个或多个） 自定义资源或外部文件中。 请参阅[创建新的自定义资源或数据资源](../../windows/creating-a-new-custom-or-data-resource.md)有关详细信息。
+您可能想要在自定义资源或外部文件中存储非常大的字符串文本（32K 或更多）。 有关详细信息，请参阅[创建新的自定义资源或数据资源](../../windows/creating-a-new-custom-or-data-resource.md)。

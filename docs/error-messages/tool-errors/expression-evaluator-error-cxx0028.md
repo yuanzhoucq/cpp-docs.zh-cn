@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0028
 - CXX0028
 ms.assetid: 172eb81f-c0b0-43b1-b418-766f35f1a561
-ms.openlocfilehash: 33440c0b594bfd710156ab4a77afd59575f7b6fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed79867b2793fbaf7fe6edec35c82a224a2582c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195638"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>表达式计算器错误 CXX0028
 
-不结构/联合元素
+not struct/union 元素
 
-指定窗体 Struct.Member 或 pStruct-> 成员的表达式，但\<成员 > 不是元素的结构。
+指定了 "Struct. Member" 或 "> pStruct" 成员的表达式，但 \<成员 > 不是该结构的元素。
 
-表达式可能不正确是用圆括号括起来。
+表达式的表达式可能不正确。
 
-此错误是与 CAN0028 相同。
+此错误与 CAN0028 相同。

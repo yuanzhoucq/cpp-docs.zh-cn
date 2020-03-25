@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516012"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181780"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>跟踪引用运算符（C++/CLI 和 C++/CX）
 
@@ -29,7 +29,7 @@ ms.locfileid: "65516012"
 
 - 点 (`.`) 成员访问运算符用于访问对象的成员。
 
-- 跟踪引用对值类型和句柄（例如 `String^`）有效。
+- 跟踪引用对值类型和句柄 (`String^`) 有效。
 
 - 不得将 NULL 或 nullptr 值赋给跟踪引用。 根据需要，可以将一个跟踪引用重新分配给另一个有效对象，没有次数限制。
 

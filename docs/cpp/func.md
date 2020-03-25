@@ -1,19 +1,19 @@
 ---
-title: __func__
+title: func
 ms.date: 10/19/2017
 f1_keywords:
 - __func__
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e94caffe120c325478d8b4f24c1915a516d69f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154290"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179817"
 ---
-# <a name="func"></a>__func__
+# <a name="__func__"></a>func
 
-**(C++ 11)** 的预定义的标识符 &#95;&#95;func&#95;&#95; 隐式定义为包含封闭函数的未限定和未修饰名称的字符串。 &#95;&#95;func&#95;&#95;由 C++ 标准规定，且不是一个 Microsoft 扩展。
+**（C + + 11）** 预定义的&#95; &#95;标识符&#95; &#95; func 隐式定义为包含封闭函数的非限定和未修饰名称的字符串。 & #95; & #95; func & #95; & #95;由 C++ 标准规定，且不是一个 Microsoft 扩展。
 
 ## <a name="syntax"></a>语法
 
@@ -23,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>返回值
 
-返回以 null 结尾 const char 字符数组，其中包含函数名称。
+返回一个以 null 结尾的 const char 字符数组，其中包含函数名称。
 
 ## <a name="example"></a>示例
 

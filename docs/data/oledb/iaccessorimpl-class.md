@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210856"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 类
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: a42a64f93d334c0b5c63b0eca1567e6964d0a3ae
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447217"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167519"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：添加、编辑或删除控件（C++）
 
@@ -189,10 +189,10 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 使用 "**插入 Activex 控件**" 对话框，可以在使用[对话框编辑器](../windows/dialog-editor.md)时将 ActiveX 控件插入对话框中。 此对话框包含以下属性：
 
-|属性|说明|
+|properties|说明|
 |---|---|
 |**ActiveX 控件**|显示 ActiveX 控件的列表。<br/><br/>从此对话框插入控件不会生成包装类。 如果需要包装类，请使用[类视图](/visualstudio/ide/viewing-the-structure-of-code)来创建一个，请参阅[添加类](../ide/adding-a-class-visual-cpp.md)。<br/><br/>如果 ActiveX 控件未出现在此对话框中，请尝试根据供应商的说明安装控件。|
-|**Path**|显示在其中找到 ActiveX 控件的文件。|
+|**路径**|显示在其中找到 ActiveX 控件的文件。|
 
 > [!CAUTION]
 > 分发系统上的每个 ActiveX 控件可能并非都是合法的。 请参阅安装了控件的软件的许可协议，或与软件公司联系。

@@ -99,26 +99,26 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
-ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d87444fe5a62bac30d62cd7e44dfba7934083ef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208736"
 ---
-# <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
+# <a name="hash_map-stlclr"></a>hash_map (STL/CLR)
 
-此模板类描述一个对象，用于控制不同长度序列元素的双向访问。 使用容器`hash_map`若要管理的元素序列作为哈希表，每个表条目存储双向链接的节点，并存储一个元素，每个节点的列表。 元素包含的键，对序列和映射的值，会赶上排序。
+此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 使用容器 `hash_map` 将一系列元素作为哈希表进行管理，每个表项存储一个双向链接的节点列表，每个节点存储一个元素。 元素包含一个键，用于对序列进行排序，并包含一个映射值，此值将随之进行。
 
-在下面的说明`GValue`相同：
+在下面的说明中，`GValue` 与相同：
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
 其中：
 
-`GKey` 等同于`Key`除非后一种是 ref 类型，在这种情况下它是 `Key^`
+`GKey` 与 `Key` 相同，除非后者为 ref 类型，在这种情况下，它是 `Key^`
 
-`GMapped` 等同于`Mapped`除非后一种是 ref 类型，在这种情况下它是 `Mapped^`
+`GMapped` 与 `Mapped` 相同，除非后者为 ref 类型，在这种情况下，它是 `Mapped^`
 
 ## <a name="syntax"></a>语法
 
@@ -138,47 +138,47 @@ template<typename Key,
     { ..... };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Key*<br/>
-受控序列中元素的关键组件的类型。
+受控序列中元素的键组件的类型。
 
-*映射*<br/>
-受控序列中元素的其他组件的类型。
+*贴*<br/>
+受控序列中元素的附加组件的类型。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<cliext/hash_map >
 
-**Namespace:** cliext
+**命名空间：** cliext
 
 ## <a name="declarations"></a>声明
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |[hash_map::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|
 |[hash_map::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
 |[hash_map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
-|[hash_map::difference_type (STL/CLR)](#difference_type)|两个元素之间的 （可能是带符号） 距离的类型。|
-|[hash_map::generic_container (STL/CLR)](#generic_container)|泛型接口的容器的类型。|
-|[hash_map::generic_iterator (STL/CLR)](#generic_iterator)|泛型接口的容器的迭代器的类型。|
+|[hash_map::difference_type (STL/CLR)](#difference_type)|两个元素之间的（可能有符号）距离的类型。|
+|[hash_map::generic_container (STL/CLR)](#generic_container)|容器的泛型接口的类型。|
+|[hash_map::generic_iterator (STL/CLR)](#generic_iterator)|容器的泛型接口的迭代器的类型。|
 |[hash_map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型接口的反向迭代器的类型。|
-|[hash_map::generic_value (STL/CLR)](#generic_value)|容器的泛型接口的元素的类型。|
-|[hash_map::hasher (STL/CLR)](#hasher)|密钥哈希的委托。|
+|[hash_map::generic_value (STL/CLR)](#generic_value)|容器的泛型接口的元素类型。|
+|[hash_map::hasher (STL/CLR)](#hasher)|键的哈希委托。|
 |[hash_map::iterator (STL/CLR)](#iterator)|受控序列的迭代器的类型。|
-|[hash_map::key_compare (STL/CLR)](#key_compare)|两个键排序委托。|
+|[hash_map::key_compare (STL/CLR)](#key_compare)|两个键的排序委托。|
 |[hash_map::key_type (STL/CLR)](#key_type)|排序键的类型。|
 |[hash_map::mapped_type (STL/CLR)](#mapped_type)|与每个键关联的映射值的类型。|
 |[hash_map::reference (STL/CLR)](#reference)|元素的引用的类型。|
 |[hash_map::reverse_iterator (STL/CLR)](#reverse_iterator)|受控序列的反向迭代器的类型。|
-|[hash_map::size_type (STL/CLR)](#size_type)|两个元素之间的 （非负值） 距离的类型。|
-|[hash_map::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|
+|[hash_map::size_type (STL/CLR)](#size_type)|两个元素之间的（非负）距离的类型。|
+|[hash_map::value_compare (STL/CLR)](#value_compare)|两个元素值的排序委托。|
 |[hash_map::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |---------------------|-----------------|
 |[hash_map::begin (STL/CLR)](#begin)|指定受控序列的开头。|
-|[hash_map::bucket_count (STL/CLR)](#bucket_count)|计算存储桶的数目。|
+|[hash_map::bucket_count (STL/CLR)](#bucket_count)|计算 bucket 的数目。|
 |[hash_map::clear (STL/CLR)](#clear)|删除所有元素。|
 |[hash_map::count (STL/CLR)](#count)|对与指定的键匹配的元素进行计数。|
 |[hash_map::empty (STL/CLR)](#empty)|测试元素是否存在。|
@@ -186,12 +186,12 @@ template<typename Key,
 |[hash_map::equal_range (STL/CLR)](#equal_range)|查找与指定键匹配的范围。|
 |[hash_map::erase (STL/CLR)](#erase)|移除指定位置处的元素。|
 |[hash_map::find (STL/CLR)](#find)|查找与指定键匹配的元素。|
-|[hash_map::hash_delegate (STL/CLR)](#hash_delegate)|将复制的键的哈希委托。|
+|[hash_map::hash_delegate (STL/CLR)](#hash_delegate)|复制密钥的哈希委托。|
 |[hash_map::hash_map (STL/CLR)](#hash_map)|构造容器对象。|
 |[hash_map::insert (STL/CLR)](#insert)|添加元素。|
-|[hash_map::key_comp (STL/CLR)](#key_comp)|将复制两个键的排序委托。|
+|[hash_map::key_comp (STL/CLR)](#key_comp)|复制两个键的排序委托。|
 |[hash_map::load_factor (STL/CLR)](#load_factor)|对每个存储桶的平均元素数进行计数。|
-|[hash_map::lower_bound (STL/CLR)](#lower_bound)|查找与指定的键匹配的范围的起始处。|
+|[hash_map::lower_bound (STL/CLR)](#lower_bound)|查找与指定键匹配的范围的开头。|
 |[hash_map::make_value (STL/CLR)](#make_value)|构造一个值对象。|
 |[hash_map::max_load_factor (STL/CLR)](#max_load_factor)|获取或设置每个存储桶的最多元素数。|
 |[hash_map::rbegin (STL/CLR)](#rbegin)|指定反向受控序列的开头。|
@@ -199,64 +199,64 @@ template<typename Key,
 |[hash_map::rend (STL/CLR)](#rend)|指定反向受控序列的末尾。|
 |[hash_map::size (STL/CLR)](#size)|对元素数进行计数。|
 |[hash_map::swap (STL/CLR)](#swap)|交换两个容器的内容。|
-|[hash_map::to_array (STL/CLR)](#to_array)|将受控的序列复制到新数组。|
-|[hash_map::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|
-|[hash_map::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|
+|[hash_map::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
+|[hash_map::upper_bound (STL/CLR)](#upper_bound)|查找与指定键匹配的范围的末尾。|
+|[hash_map::value_comp (STL/CLR)](#value_comp)|复制两个元素值的排序委托。|
 
-|运算符|描述|
+|操作员|说明|
 |--------------|-----------------|
 |[hash_map::operator= (STL/CLR)](#op_as)|替换受控序列。|
 |[hash_map::operator(STL/CLR)](#op)|将键映射到其关联的映射值。|
 
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>界面
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
-|<xref:System.ICloneable>|重复的对象。|
-|<xref:System.Collections.IEnumerable>|通过元素的序列。|
-|<xref:System.Collections.ICollection>|维护组元素。|
-|<xref:System.Collections.Generic.IEnumerable%601>|通过类型化的元素进行排序。|
-|<xref:System.Collections.Generic.ICollection%601>|维护的组类型化的元素。|
-|<xref:System.Collections.Generic.IDictionary%602>|维护组 {key，值} 对。|
-|IHash < 键、 值 >|维护泛型容器。|
+|<xref:System.ICloneable>|复制对象。|
+|<xref:System.Collections.IEnumerable>|通过元素进行排序。|
+|<xref:System.Collections.ICollection>|维护元素组。|
+|<xref:System.Collections.Generic.IEnumerable%601>|通过类型化元素进行排序。|
+|<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
+|<xref:System.Collections.Generic.IDictionary%602>|维护 {key，value} 对组。|
+|IHash < 项，值 >|维护泛型容器。|
 
 ## <a name="remarks"></a>备注
 
-该对象分配并释放存储为双向链接列表中的单个节点其控制的序列。 若要加快访问速度，该对象还维护有效地管理为一系列子列表时，整个列表变长数组的指针到列表 （哈希表），或存储桶。 它会将元素插入到通过更改节点永远不会通过将一个节点的内容复制到另一个之间的链接保持有序的存储桶中。 这意味着您可以插入和删除自由地不影响剩余元素的元素。
+对象为其控制的序列分配并释放存储，并将其控制为双向链接列表中的单个节点。 为了加快访问速度，对象还会在列表中保留一个长度可变的指针数组（哈希表），并有效地将整个列表作为子列表或存储桶序列进行管理。 它通过更改节点之间的链接，将元素插入到存储桶中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
 
-该对象进行排序它通过调用类型的存储的委托对象控制每个存储桶[hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)。 在构造 hash_set; 时，可以指定存储的委托对象如果指定没有委托对象，默认值是比较`operator<=(key_type, key_type)`。
+对象通过调用[hash_set：： key_compare （STL/CLR）](../dotnet/hash-set-key-compare-stl-clr.md)类型的存储委托对象，对其控制的每个 bucket 进行排序。 构造 hash_set 时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为比较 `operator<=(key_type, key_type)`。
 
-通过调用成员函数来访问存储的委托对象[hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`。 此类委托对象必须定义类型的键之间的等效顺序[hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)。 这意味着，任何两个密钥`X`和`Y`:
+可以通过调用成员函数[hash_set：： key_comp （STL/CLR）](../dotnet/hash-set-key-comp-stl-clr.md)`()`来访问存储的委托对象。 此类委托对象必须在类型[hash_set：： key_type （STL/CLR）](../dotnet/hash-set-key-type-stl-clr.md)的键之间定义等效顺序。 这意味着，对于任意两个密钥 `X` 和 `Y`：
 
-`key_comp()(X, Y)` 返回相同的布尔值导致在每次调用。
+`key_comp()(X, Y)` 将在每次调用时返回相同的布尔值结果。
 
-如果`key_comp()(X, Y) && key_comp()(Y, X)`为 true，然后`X`和`Y`被视为具有等效顺序。
+如果 `key_comp()(X, Y) && key_comp()(Y, X)` 为 true，则认为 `X` 和 `Y` 具有等效的顺序。
 
-行为类似于任何排序规则`operator<=(key_type, key_type)`，`operator>=(key_type, key_type)`或`operator==(key_type, key_type)`定义 eqivalent 顺序。
+行为类似于 `operator<=(key_type, key_type)`、`operator>=(key_type, key_type)` 或 `operator==(key_type, key_type)` 的任何排序规则定义 eqivalent 排序。
 
-请注意，容器可确保仅元素键具有等效排序 （和的哈希处理至同一个整数值） 存储桶中相邻。 与模板类不同[hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)，模板类的对象`hash_map`可以确保所有元素的键的唯一性。 （没有两个键有等效的顺序。）
+请注意，容器仅确保其键具有等效排序的元素（以及到相同整数值的哈希）在存储桶中相邻。 与模板类[hash_multimap （STL/CLR）](../dotnet/hash-multimap-stl-clr.md)不同，模板类的对象 `hash_map` 确保所有元素的键都是唯一的。 （没有两个键具有等效的顺序。）
 
-该对象确定哪个存储桶应包含通过调用存储的委托对象的类型的给定排序键[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)。 通过调用成员函数来访问此存储的对象[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()`获取一个整数值，取决于密钥值。 在构造 hash_set; 时，可以指定存储的委托对象如果指定没有委托对象，默认值是函数`System::Object::hash_value(key_type)`。 这意味着，为所有键`X`和`Y`:
+对象通过调用[hash_set：： hasher （STL/CLR）](../dotnet/hash-set-hasher-stl-clr.md)类型的存储委托对象来确定哪个 bucket 应包含给定的排序关键字。 可以通过调用成员函数[hash_set：： hash_delegate （STL/CLR）](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` 来访问此存储对象，以获取依赖于键值的整数值。 构造 hash_set 时，可以指定存储的委托对象;如果未指定任何委托对象，则默认为函数 `System::Object::hash_value(key_type)`。 这意味着，对于 `X` 和 `Y`的任何密钥：
 
-`hash_delegate()(X)` 在每次调用将返回相同的整数结果。
+`hash_delegate()(X)` 将在每次调用时返回相同的整数结果。
 
-如果`X`并`Y`具有等效排序，然后`hash_delegate()(X)`应返回相同的整数结果`hash_delegate()(Y)`。
+如果 `X` 和 `Y` 具有等效的排序，则 `hash_delegate()(X)` 应返回与 `hash_delegate()(Y)`相同的整数结果。
 
-每个元素包含单独的密钥和映射的值。 允许查找、 插入和删除具有大量操作无关的序列 （常量时间）--中的元素数至少在最佳情况下的任意元素的方式表示序列。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
+每个元素都包含一个单独的键和一个映射值。 序列以允许查找、插入和移除任意元素的方式表示，该元素具有与序列中的元素数无关的多个操作（常量时间），至少最适用于事例。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
-如果哈希的值并不均匀分布，但是，可以退化哈希表。 在极端的情况下-对于哈希函数始终返回相同的值--查找、 插入和移除是序列 （线性时间） 中的元素数量成正比。 选择一个合理的哈希函数，mean 存储桶大小，努力使容器和哈希表大小 （存储桶中的总数量），但您可以重写任何或所有这些选择。 例如，查看函数[hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)并[hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md)。
+但是，如果哈希值不是均匀分布的，则哈希表可能会退化。 对于始终返回相同值的哈希函数，查找、插入和移除与序列中的元素数成正比（线性时间）。 容器可用于选择合理的哈希函数、平均存储桶大小和哈希表大小（bucket 的总数），但你可以覆盖这些选项中的任何一个或全部。 例如，函数[hash_set：： max_load_factor （stl/clr）](../dotnet/hash-set-max-load-factor-stl-clr.md)和[hash_set：： rehash （stl/clr）](../dotnet/hash-set-rehash-stl-clr.md)。
 
-Hash_map 支持双向迭代器，这意味着您可以转到给定迭代器，指定受控序列中的元素的相邻元素步骤。 特殊的头节点对应于返回的迭代器[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`。 如果存在，可以递减此迭代器，用于访问受控序列中的最后一个元素。 可以递增 hash_map 迭代器来访问头节点，并将然后比较等于`end()`。 但不能取消引用返回的迭代器`end()`。
+Hash_map 支持双向迭代器，这意味着，可以在给定指定了受控序列元素的迭代器的情况下单步执行相邻元素。 特殊头节点对应于[hash_map：： end （STL/CLR）](../dotnet/hash-map-end-stl-clr.md)`()`返回的迭代器。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增 hash_map 迭代器来访问头节点，然后将其与 `end()`相等。 但不能取消引用 `end()`返回的迭代器。
 
-请注意，不能指直接给定其数字位置-所需的随机访问迭代器的 hash_map 元素。
+请注意，不能直接引用 hash_map 元素，因为它的数字位置需要随机访问迭代器。
 
-Hash_map 迭代器，用于存储其关联的 hash_map 节点，后者又将存储的句柄关联的容器的句柄。 迭代器只能用于其关联的容器对象。 Hash_map 迭代器保持有效，只要其关联的 hash_map 节点是与某些 hash_map 相关联。 此外，有效的迭代器是现在--可以使用它来访问或更改，只要不等于此元素的值指定- `end()`。
+Hash_map 迭代器将句柄存储到其关联的 hash_map 节点，后者又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要 hash_map 迭代器的关联 hash_map 节点与某些 hash_map 相关联，就会保持有效。 而且，有效的迭代器是 dereferencable 的，可以使用它来访问或更改它指定的元素值，只要它不等于 `end()`。
 
-擦除或删除元素调用析构函数为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是 ref 类的容器可确保任何元素的生存期长于容器。 但请注意，容器的句柄 does*不*销毁它的元素。
+清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器*不*会销毁其元素。
 
 ## <a name="members"></a>成员
 
-## <a name="begin"></a> hash_map::begin (STL/CLR)
+## <a name="hash_mapbegin-stlclr"></a><a name="begin"></a>hash_map：： begin （STL/CLR）
 
 指定受控序列的开头。
 
@@ -268,7 +268,7 @@ iterator begin();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回指定受控序列，或刚超出空序列末尾的第一个元素的双向迭代器。 用于获取迭代器，指定`current`如果受控序列的长度发生更改，可以更改受控制的序列，但其状态的开头。
+成员函数返回一个双向迭代器，该迭代器指定受控序列的第一个元素，或刚超出空序列的末尾。 用于获取一个迭代器，该迭代器指定受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
 
 ### <a name="example"></a>示例
 
@@ -307,9 +307,9 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="bucket_count"></a> hash_map::bucket_count (STL/CLR)
+## <a name="hash_mapbucket_count-stlclr"></a><a name="bucket_count"></a>hash_map：： bucket_count （STL/CLR）
 
-计算存储桶的数目。
+计算 bucket 的数目。
 
 ### <a name="syntax"></a>语法
 
@@ -319,7 +319,7 @@ int bucket_count();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回当前存储桶数。 用于确定哈希表的大小。
+成员函数返回当前的存储桶数。 您可以使用它来确定哈希表的大小。
 
 ### <a name="example"></a>示例
 
@@ -381,7 +381,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_map:: clear (STL/CLR)
+## <a name="hash_mapclear-stlclr"></a><a name="clear"></a>hash_map：： clear （STL/CLR）
 
 删除所有元素。
 
@@ -393,7 +393,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[hash_map:: erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md) `(` [hash_map:: begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md) `(),` [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`())`. 用于确保受控的序列为空。
+成员函数有效地调用[hash_map：： erase （stl](../dotnet/hash-map-erase-stl-clr.md) /clr）`(` [hash_map：： begin](../dotnet/hash-map-begin-stl-clr.md) （stl/clr）`(),` [HASH_MAP：： end （stl/clr）](../dotnet/hash-map-end-stl-clr.md)`())`。 用于确保受控序列为空。
 
 ### <a name="example"></a>示例
 
@@ -439,7 +439,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_map:: const_iterator (STL/CLR)
+## <a name="hash_mapconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_map：： const_iterator （STL/CLR）
 
 受控序列的常量迭代器的类型。
 
@@ -451,7 +451,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>备注
 
-此类型描述未指定类型的对象`T2`可充当受控序列的常量双向迭代器。
+该类型描述可用作受控序列的常量双向迭代器的未指定类型 `T2` 的对象。
 
 ### <a name="example"></a>示例
 
@@ -481,7 +481,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> hash_map:: const_reference (STL/CLR)
+## <a name="hash_mapconst_reference-stlclr"></a><a name="const_reference"></a>hash_map：： const_reference （STL/CLR）
 
 元素的常量引用的类型。
 
@@ -493,7 +493,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>备注
 
-此类型描述的元素的常量引用。
+类型描述对元素的常量引用。
 
 ### <a name="example"></a>示例
 
@@ -526,9 +526,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> hash_map:: const_reverse_iterator (STL/CLR)
+## <a name="hash_mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_map：： const_reverse_iterator （STL/CLR）
 
-受控序列的常量反向迭代器的类型...
+受控序列的常量反向迭代器的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -538,7 +538,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>备注
 
-此类型描述未指定类型的对象`T4`可充当受控序列的常量反向迭代器。
+该类型描述可用作受控序列的常量反向迭代器的未指定类型 `T4` 的对象。
 
 ### <a name="example"></a>示例
 
@@ -568,7 +568,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> hash_map:: count (STL/CLR)
+## <a name="hash_mapcount-stlclr"></a><a name="count"></a>hash_map：： count （STL/CLR）
 
 查找与指定键匹配的元素数。
 
@@ -578,14 +578,14 @@ int main()
 size_type count(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回具有等效顺序的受控序列中的元素数目*密钥*。 用于确定受控序列中当前与指定的键匹配的元素数。
+该成员函数将返回受控序列中与*键*具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
 
 ### <a name="example"></a>示例
 
@@ -621,9 +621,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_map:: difference_type (STL/CLR)
+## <a name="hash_mapdifference_type-stlclr"></a><a name="difference_type"></a>hash_map：:d ifference_type （STL/CLR）
 
-两个元素之间的带符号距离的类型。
+两个元素间的带符号距离的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -633,7 +633,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述可能是负值元素计数。
+该类型描述了可能的负元素计数。
 
 ### <a name="example"></a>示例
 
@@ -676,7 +676,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_map:: empty (STL/CLR)
+## <a name="hash_mapempty-stlclr"></a><a name="empty"></a>hash_map：： empty （STL/CLR）
 
 测试元素是否存在。
 
@@ -688,7 +688,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[hash_map:: size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`。 您可以使用它来测试是否 hash_map 为空。
+对于空受控序列，该成员函数返回 true。 它等效于[hash_map：： size （STL/CLR）](../dotnet/hash-map-size-stl-clr.md)`() == 0`。 用于测试 hash_map 是否为空。
 
 ### <a name="example"></a>示例
 
@@ -728,7 +728,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_map:: end (STL/CLR)
+## <a name="hash_mapend-stlclr"></a><a name="end"></a>hash_map：： end （STL/CLR）
 
 指定受控序列的末尾。
 
@@ -740,7 +740,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回的双向迭代器指向刚超出受控序列的末尾。 用于获取指定受控序列; 的末尾的迭代器其状态不会更改如果受控序列的长度发生更改。
+成员函数返回一个双向迭代器，它指向刚超出受控序列末尾的位置。 用于获取一个迭代器，该迭代器指定受控序列的末尾;如果受控序列的长度发生更改，则其状态不会更改。
 
 ### <a name="example"></a>示例
 
@@ -781,7 +781,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> hash_map:: equal_range (STL/CLR)
+## <a name="hash_mapequal_range-stlclr"></a><a name="equal_range"></a>hash_map：： equal_range （STL/CLR）
 
 查找与指定键匹配的范围。
 
@@ -791,14 +791,14 @@ int main()
 cliext::pair<iterator, iterator> equal_range(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回一对迭代器`cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`。 用于确定受控序列中当前与指定的键匹配的元素的范围。
+此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`。 用于确定受控序列中当前与指定键匹配的元素范围。
 
 ### <a name="example"></a>示例
 
@@ -842,7 +842,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> hash_map:: erase (STL/CLR)
+## <a name="hash_maperase-stlclr"></a><a name="erase"></a>hash_map：： erase （STL/CLR）
 
 移除指定位置处的元素。
 
@@ -854,29 +854,29 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
-要清除范围的起始处。
+要清除的范围的开头。
 
-*key*<br/>
-若要清除的键值。
+*键*<br/>
+要清除的键值。
 
 *last*<br/>
-要清除范围的末尾。
+要清除的范围的结束。
 
 *where*<br/>
 要清除的元素。
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数删除由指向受控序列的元素*其中*，并返回一个迭代器，指定已移除，元素之外保留的第一个元素或[hash_map:: end (STL /CLR)](../dotnet/hash-map-end-stl-clr.md) `()`如果此类元素不存在。 用于删除单个元素。
+第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定删除的元素之外的第一个元素; 如果此类元素不存在，则为[hash_map：： end （STL/CLR）](../dotnet/hash-map-end-stl-clr.md)`()`。 使用它可以删除单个元素。
 
-第二个成员函数的范围内移除受控序列的元素 [`first`， `last`)，并返回一个迭代器，指定已删除的任何元素之外保留的第一个元素或`end()`如果没有此类元素存在... 用于删除零个或多个连续的元素。
+第二个成员函数删除范围 [`first`，`last`）中的受控序列的元素，并返回一个迭代器，该迭代器指定删除的任何元素之外的第一个元素，如果此类元素不存在，则为 `end()`。 使用它可以删除零个或多个连续元素。
 
-第三个成员函数将移除其键具有等效顺序的受控任何的序列元素到*密钥*，并返回已移除的元素数的计数。 使用要删除用来计数与指定的键匹配的所有元素。
+第三个成员函数删除受控序列中其键与*键*具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
 
-每个元素擦除需要受控序列中的元素数的对数成正比的时间。
+每个元素擦除与受控序列中的元素数的对数成正比。
 
 ### <a name="example"></a>示例
 
@@ -935,7 +935,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> hash_map:: find (STL/CLR)
+## <a name="hash_mapfind-stlclr"></a><a name="find"></a>hash_map：： find （STL/CLR）
 
 查找与指定键匹配的元素。
 
@@ -945,14 +945,14 @@ erase(L'e') = 1
 iterator find(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-如果受控序列中的至少一个元素具有等效排序*键*，此成员函数返回迭代器，指定其中一个元素; 否则返回[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`. 用于当前与指定的键匹配的受控序列中定位的元素。
+如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[hash_map：： end （STL/CLR）](../dotnet/hash-map-end-stl-clr.md)`()`。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
 
 ### <a name="example"></a>示例
 
@@ -994,9 +994,9 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="generic_container"></a> hash_map::generic_container (STL/CLR)
+## <a name="hash_mapgeneric_container-stlclr"></a><a name="generic_container"></a>hash_map：： generic_container （STL/CLR）
 
-泛型接口的容器的类型。
+容器的泛型接口的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -1008,7 +1008,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>备注
 
-此类型描述该类模板容器的泛型接口。
+类型描述此模板容器类的泛型接口。
 
 ### <a name="example"></a>示例
 
@@ -1058,9 +1058,9 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="generic_iterator"></a> hash_map::generic_iterator (STL/CLR)
+## <a name="hash_mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_map：： generic_iterator （STL/CLR）
 
-用于容器的泛型接口具有的迭代器的类型。
+与容器的泛型接口一起使用的迭代器的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -1072,7 +1072,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>备注
 
-此类型描述可用于泛型接口为该类模板容器的泛型迭代器。
+该类型描述了可与此模板容器类的泛型接口一起使用的泛型迭代器。
 
 ### <a name="example"></a>示例
 
@@ -1115,9 +1115,9 @@ int main()
 [a 1]
 ```
 
-## <a name="generic_reverse_iterator"></a> hash_map::generic_reverse_iterator (STL/CLR)
+## <a name="hash_mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_map：： generic_reverse_iterator （STL/CLR）
 
-一个反向迭代器用于与容器的泛型接口的类型。
+用于容器的泛型接口的反向迭代器的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -1129,7 +1129,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>备注
 
-此类型描述可用于泛型接口为该类模板容器的泛型反向迭代器。
+该类型描述了可与此模板容器类的泛型接口一起使用的一般反向迭代器。
 
 ### <a name="example"></a>示例
 
@@ -1171,9 +1171,9 @@ int main()
 [c 3]
 ```
 
-## <a name="generic_value"></a> hash_map::generic_value (STL/CLR)
+## <a name="hash_mapgeneric_value-stlclr"></a><a name="generic_value"></a>hash_map：： generic_value （STL/CLR）
 
-用于容器的泛型接口具有的元素的类型。
+用于容器的泛型接口的元素类型。
 
 ### <a name="syntax"></a>语法
 
@@ -1183,7 +1183,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>备注
 
-此类型描述类型的对象`GValue`描述使用的存储的元素值与此模板容器类的泛型接口。
+该类型描述了一个 `GValue` 类型的对象，该对象描述用于此模板容器类的泛型接口的存储元素值。
 
 ### <a name="example"></a>示例
 
@@ -1225,7 +1225,7 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_delegate"></a> hash_map::hash_delegate (STL/CLR)
+## <a name="hash_maphash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_map：： hash_delegate （STL/CLR）
 
 查找与指定键匹配的元素。
 
@@ -1237,7 +1237,7 @@ hasher^ hash_delegate();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回用于将键值转换为整数的委托。 用于哈希键。
+该成员函数将返回用于将键值转换为整数的委托。 用于对密钥进行哈希处理。
 
 ### <a name="example"></a>示例
 
@@ -1263,7 +1263,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_map"></a> hash_map::hash_map (STL/CLR)
+## <a name="hash_maphash_map-stlclr"></a><a name="hash_map"></a>hash_map：： hash_map （STL/CLR）
 
 构造容器对象。
 
@@ -1290,21 +1290,21 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
-要插入范围的起始处。
+要插入的范围的开头。
 
 *hashfn*<br/>
-哈希函数映射到存储桶的密钥。
+用于将密钥映射到存储桶的哈希函数。
 
 *last*<br/>
-要插入的范围的下限。
+要插入的范围的末尾。
 
 *pred*<br/>
-排序谓词对受控序列。
+受控序列的排序谓词。
 
-*right*<br/>
+right<br/>
 要插入的对象或范围。
 
 ### <a name="remarks"></a>备注
@@ -1313,67 +1313,67 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `hash_map();`
 
-使用默认排序谓词初始化受控的序列不含任何元素， `key_compare()`，并使用默认哈希函数。 用于指定一个空的初始受控的序列，使用默认排序谓词和哈希函数。
+用默认的排序谓词 `key_compare()`和默认的哈希函数初始化受控序列，该序列不包含任何元素。 使用它可以指定一个空的初始受控序列，其中包含默认的排序谓词和哈希函数。
 
 构造函数：
 
 `explicit hash_map(key_compare^ pred);`
 
-初始化受控的序列不含任何元素，与排序谓词*pred*，并使用默认哈希函数。 用于指定一个空的初始受控的序列，使用指定的排序谓词和默认哈希函数。
+用*pred*和默认哈希函数初始化不带元素的受控序列。 使用指定的排序谓词和默认哈希函数，可以使用它指定一个空的初始受控序列。
 
 构造函数：
 
 `hash_map(key_compare^ pred, hasher^ hashfn);`
 
-初始化受控的序列不含任何元素，与排序谓词*pred*，并使用哈希函数*hashfn*。 用于指定一个空的初始受控的序列，使用指定的排序谓词和哈希函数。
+用*pred*和哈希函数*hashfn*初始化没有元素的受控序列。 使用指定的排序谓词和哈希函数，可以使用它指定一个空的初始受控序列。
 
 构造函数：
 
 `hash_map(hash_map<Key, Mapped>% right);`
 
-初始化受控的序列与序列 [`right.begin()`， `right.end()`)、 排序谓词中，默认值和默认哈希函数。 用于指定副本的 hash_map 对象控制的序列的初始受控的序列*右*、 使用的默认排序谓词和哈希函数。
+用序列 [`right.begin()`、`right.end()`）和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_map 对象*权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
 
 构造函数：
 
 `hash_map(hash_map<Key, Mapped>^ right);`
 
-初始化受控的序列与序列 [`right->begin()`， `right->end()`)、 排序谓词中，默认值和默认哈希函数。 用于指定副本的 hash_map 对象控制的序列的初始受控的序列*右*、 使用的默认排序谓词和哈希函数。
+用序列 [`right->begin()`、`right->end()`）和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_map 对象*权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
 
 构造函数：
 
 `template<typename InIter> hash_map(InIter first, InIter last);`
 
-初始化受控的序列与序列 [`first`， `last`)、 排序谓词中，默认值和默认哈希函数。 用于使用默认排序谓词和哈希函数使受控的序列的另一个序列副本。
+用序列 [`first`、`last`）和默认的哈希函数初始化受控序列。 使用它可以通过默认的排序谓词和哈希函数使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred);`
 
-初始化受控的序列与序列 [`first`， `last`)，使用排序谓词*pred*，并使用默认哈希函数。 您可以使用它来使受控的序列的具有指定的排序谓词和默认哈希函数的另一个序列副本。
+用序列谓词*pred*和默认哈希函数初始化受控序列，序列为 [`first`，`last`）。 使用指定的排序谓词和默认哈希函数，可以使用它来使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-初始化受控的序列与序列 [`first`， `last`)，使用排序谓词*pred*，并使用哈希函数*hashfn*。 您可以使用它来使受控的序列的具有指定的排序谓词和哈希函数的另一个序列副本。
+用序列 [`first`，`last`）、排序谓词*pred*和哈希函数*hashfn*初始化受控序列。 使用指定的排序谓词和哈希函数可将其用于使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `hash_map(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-初始化具有指定枚举器的序列的受控的序列*右*、 排序谓词中，默认值和默认哈希函数。 您可以使用它来使受控的序列描述将枚举器，使用默认排序谓词和哈希函数的另一个序列的副本。
+使用枚举器*右端*指定的序列、默认的排序谓词和默认哈希函数初始化受控序列。 使用它可以通过默认的排序谓词和哈希函数使受控序列成为枚举器描述的另一序列的副本。
 
 构造函数：
 
 `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-初始化具有指定枚举器的序列的受控的序列*右*，使用排序谓词*pred*，并使用默认哈希函数。 您可以使用它来使受控的序列的枚举器，指定排序谓词和默认哈希函数所描述的另一个序列的副本。
+使用由枚举器*右端*指定的序列、排序谓词*pred*和默认哈希函数初始化受控序列。 使用它可以通过指定的排序谓词和默认哈希函数，使受控序列成为枚举器描述的另一序列的副本。
 
 构造函数：
 
 `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-初始化具有指定枚举器的序列的受控的序列*右*，使用排序谓词*pred*，并使用哈希函数*hashfn*。 您可以使用它来使受控的序列的枚举器，使用指定的排序谓词和哈希函数所描述的另一个序列的副本。
+使用由枚举器*右端*指定的序列、排序谓词*pred*和哈希函数*hashfn*初始化受控序列。 使用此方法可以通过指定的排序谓词和哈希函数，使受控序列成为枚举器描述的另一序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1506,9 +1506,9 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hasher"></a> hash_map::hasher (STL/CLR)
+## <a name="hash_maphasher-stlclr"></a><a name="hasher"></a>hash_map：： hasher （STL/CLR）
 
-密钥哈希的委托。
+键的哈希委托。
 
 ### <a name="syntax"></a>语法
 
@@ -1519,7 +1519,7 @@ Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>
 
 ### <a name="remarks"></a>备注
 
-此类型描述一个委托，它将密钥值转换为整数。
+该类型描述了将键值转换为整数的委托。
 
 ### <a name="example"></a>示例
 
@@ -1545,7 +1545,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_map:: insert (STL/CLR)
+## <a name="hash_mapinsert-stlclr"></a><a name="insert"></a>hash_map：： insert （STL/CLR）
 
 添加元素。
 
@@ -1559,36 +1559,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
-要插入范围的起始处。
+要插入的范围的开头。
 
 *last*<br/>
-要插入的范围的下限。
+要插入的范围的末尾。
 
-*right*<br/>
+right<br/>
 要插入的枚举。
 
 *val*<br/>
-要插入的密钥值。
+要插入的项值。
 
 *where*<br/>
-要插入 （仅提示） 的容器中的位置。
+容器中要插入的位置（仅提示）。
 
 ### <a name="remarks"></a>备注
 
-每个成员函数插入由剩余操作数指定的序列。
+每个成员函数都插入由剩余操作数指定的序列。
 
-第一个成员函数尝试插入具有值的元素`val`，并返回一对值`X`。 如果`X.second`为 true，`X.first`指定新插入的元素; 否则为`X.first`指定具有等效的元素顺序的现有和任何新元素插入。 用于插入单个元素。
+第一个成员函数将使用值 `val`来插入元素，并 `X`返回一对值。 如果 `X.second` 为 true，`X.first` 将指定新插入的元素;否则 `X.first` 指定一个具有等效排序的元素，该元素已存在并且不插入新元素。 用于插入单个元素。
 
-第二个成员函数将具有值的元素插入*val*，并使用*其中*作为提示 （若要提高性能），并返回一个迭代器，指定新插入的元素。 用于插入单个元素，这可能是您知道的元素相邻。
+第二个成员函数插入具有值*val*的元素，并使用*where*作为提示（以提高性能），并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
 
-第三个成员函数将序列 [`first`， `last`)。 用于插入另一个序列中复制的零个或多个元素。
+第三个成员函数插入序列 [`first`，`last`）。 用于插入从另一个序列复制的零个或多个元素。
 
-第四个成员函数将指定的序列插入*右*。 用于插入序列描述将枚举器。
+第四个成员函数插入由*权限*指定的序列。 使用它可以插入枚举器描述的序列。
 
-每个元素插入到受控序列中需要的元素数的对数成正比的时间。 插入可发生在分期常量时间内，但是，给出一个提示，指示某个元素旁边插入点。
+每个元素插入时间与受控序列中的元素数的对数成正比。 但是，如果指定一个在插入点附近指定元素的提示，则可能会在分期常量时间内进行插入。
 
 ### <a name="example"></a>示例
 
@@ -1665,7 +1665,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> hash_map:: iterator (STL/CLR)
+## <a name="hash_mapiterator-stlclr"></a><a name="iterator"></a>hash_map：： iterator （STL/CLR）
 
 受控序列的迭代器的类型。
 
@@ -1677,7 +1677,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>备注
 
-此类型描述未指定类型的对象`T1`可充当受控序列的双向迭代器。
+该类型描述可用作受控序列的双向迭代器的未指定类型 `T1` 的对象。
 
 ### <a name="example"></a>示例
 
@@ -1707,9 +1707,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> hash_map::key_comp (STL/CLR)
+## <a name="hash_mapkey_comp-stlclr"></a><a name="key_comp"></a>hash_map：： key_comp （STL/CLR）
 
-将复制两个键的排序委托。
+复制两个键的排序委托。
 
 ### <a name="syntax"></a>语法
 
@@ -1719,7 +1719,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回用于受控的序列进行排序的排序委托。 用于比较两个键。
+此成员函数返回用于对受控序列进行排序的排序委托。 用于对两个键进行比较。
 
 ### <a name="example"></a>示例
 
@@ -1766,9 +1766,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_map::key_compare (STL/CLR)
+## <a name="hash_mapkey_compare-stlclr"></a><a name="key_compare"></a>hash_map：： key_compare （STL/CLR）
 
-两个键排序委托。
+两个键的排序委托。
 
 ### <a name="syntax"></a>语法
 
@@ -1779,7 +1779,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>备注
 
-类型为委托，它确定其密钥的自变量的顺序的同义词。
+类型是委托的同义词，它确定其密钥参数的顺序。
 
 ### <a name="example"></a>示例
 
@@ -1826,7 +1826,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_map:: key_type (STL/CLR)
+## <a name="hash_mapkey_type-stlclr"></a><a name="key_type"></a>hash_map：： key_type （STL/CLR）
 
 排序键的类型。
 
@@ -1838,7 +1838,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数的同义词*密钥*。
+该类型是模板参数*键*的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1871,7 +1871,7 @@ int main()
 a b c
 ```
 
-## <a name="load_factor"></a> hash_map::load_factor (STL/CLR)
+## <a name="hash_mapload_factor-stlclr"></a><a name="load_factor"></a>hash_map：： load_factor （STL/CLR）
 
 对每个存储桶的平均元素数进行计数。
 
@@ -1883,7 +1883,7 @@ float load_factor();
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回`(float)` [hash_map:: size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md) `() /` [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)`()`。 用于确定平均存储桶大小。
+此成员函数返回 `(float)`[hash_map：： size （stl/clr）](../dotnet/hash-map-size-stl-clr.md)`() /` [hash_map：： bucket_count （stl/clr）](../dotnet/hash-map-bucket-count-stl-clr.md)`()`。 使用它来确定平均存储桶大小。
 
 ### <a name="example"></a>示例
 
@@ -1945,9 +1945,9 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_map:: lower_bound (STL/CLR)
+## <a name="hash_maplower_bound-stlclr"></a><a name="lower_bound"></a>hash_map：： lower_bound （STL/CLR）
 
-查找与指定的键匹配的范围的起始处。
+查找与指定键匹配的范围的开头。
 
 ### <a name="syntax"></a>语法
 
@@ -1955,14 +1955,14 @@ max_load_factor() = 0.25
 iterator lower_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数将确定第一个元素`X`中为相同的存储桶进行哈希处理的受控序列*密钥*并且具有相同的排序*密钥*。 如果此类元素不存在，它将返回[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; 否则它将返回一个迭代器，指定`X`。 使用要在与指定的键匹配的受控序列中当前定位的元素序列的开头。
+成员函数确定受控序列中 `X` 的第一个元素，该元素将哈希处理为与*键*相同的存储桶并具有与*键*等效的顺序。 如果此类元素不存在，它将返回[hash_map：： end （STL/CLR）](../dotnet/hash-map-end-stl-clr.md)`()`;否则，它会返回指定 `X`的迭代器。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
 
 ### <a name="example"></a>示例
 
@@ -2004,7 +2004,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="make_value"></a> hash_map::make_value (STL/CLR)
+## <a name="hash_mapmake_value-stlclr"></a><a name="make_value"></a>hash_map：： make_value （STL/CLR）
 
 构造一个值对象。
 
@@ -2014,17 +2014,17 @@ lower_bound(L'x')==end() = True
 static value_type make_value(key_type key, mapped_type mapped);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*key*<br/>
-若要使用的密钥值。
+*键*<br/>
+要使用的密钥值。
 
-*mapped*<br/>
-要搜索的映射的值。
+*贴*<br/>
+要搜索的映射值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回`value_type`对象，其键是*密钥*并且其映射的值为*映射*。 您可以用它来组合使用适合与几个其他成员函数的对象。
+该成员函数将返回一个 `value_type` 对象，其键为*key* ，其映射值已*映射*。 使用它来编写适用于多个其他成员函数的对象。
 
 ### <a name="example"></a>示例
 
@@ -2053,7 +2053,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> hash_map::mapped_type (STL/CLR)
+## <a name="hash_mapmapped_type-stlclr"></a><a name="mapped_type"></a>hash_map：： mapped_type （STL/CLR）
 
 与每个键关联的映射值的类型。
 
@@ -2065,7 +2065,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Mapped` 的同义词。
+该类型是模板参数 `Mapped`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2098,7 +2098,7 @@ int main()
 1 2 3
 ```
 
-## <a name="max_load_factor"></a> hash_map::max_load_factor (STL/CLR)
+## <a name="hash_mapmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_map：： max_load_factor （STL/CLR）
 
 获取或设置每个存储桶的最多元素数。
 
@@ -2109,16 +2109,16 @@ float max_load_factor();
 void max_load_factor(float new_factor);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *new_factor*<br/>
-新的最大加载因子来存储。
+要存储的新的最大加载因子。
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回当前存储的最大加载因子。 用于确定最大的平均存储桶大小。
+第一个成员函数将返回当前存储的最大加载因子。 使用它来确定最大平均存储桶大小。
 
-第二个成员函数将与存储最大加载因子*new_factor*。 没有自动重复讨论这个后续插入之前发生。
+第二个成员函数将存储最大加载因子替换*new_factor*。 在后续插入之前，不会自动 rehashing。
 
 ### <a name="example"></a>示例
 
@@ -2180,7 +2180,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op_as"></a> hash_map::operator= (STL/CLR)
+## <a name="hash_mapoperator-stlclr"></a><a name="op_as"></a>hash_map：： operator = （STL/CLR）
 
 替换受控序列。
 
@@ -2190,14 +2190,14 @@ max_load_factor() = 0.25
 hash_map<Key, Mapped>% operator=(hash_map<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*right*<br/>
+right<br/>
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符副本*右*对象，然后返回`*this`。 用于替换受控的序列中的受控序列的副本*右*。
+成员运算符*直接*复制到对象，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2235,7 +2235,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op"></a> hash_map::operator(STL/CLR)
+## <a name="hash_mapoperatorstlclr"></a><a name="op"></a>hash_map：： operator （STL/CLR）
 
 将键映射到其关联的映射值。
 
@@ -2245,14 +2245,14 @@ int main()
 mapped_type operator[](key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数来查找具有相同的排序的元素的工作*密钥*。 如果找到，则返回关联的映射的值;否则，它插入`value_type(key, mapped_type())`，并返回关联 （默认值） 映射值。 使用它来查找给定与其关联的键的映射值，或以确保条目存在键，如果找不到。
+成员函数致力于查找具有等效*排序的元素。* 如果找到一个，则返回关联的映射值;否则，它将插入 `value_type(key, mapped_type())` 并返回关联的（默认）映射值。 使用它可以查找给定了其关联键的映射值，或者，如果未找到键，则可确保该项存在。
 
 ### <a name="example"></a>示例
 
@@ -2302,7 +2302,7 @@ c1[b] = 2
 [a 1] [A 10] [b 2] [c 13]
 ```
 
-## <a name="rbegin"></a> hash_map::rbegin (STL/CLR)
+## <a name="hash_maprbegin-stlclr"></a><a name="rbegin"></a>hash_map：： rbegin （STL/CLR）
 
 指定反向受控序列的开头。
 
@@ -2314,7 +2314,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个反向迭代器，指定受控序列，或刚超出空序列的开头的最后一个元素。 因此，它指定`beginning`反向序列。 用于获取迭代器，指定`current`如果受控序列的长度发生更改，可以更改的相反顺序的受控的序列，但其状态开始。
+成员函数返回一个反向迭代器，该迭代器指定受控序列的最后一个元素，或刚超出空序列的开头。 因此，它指定反向序列的 `beginning`。 用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
 
 ### <a name="example"></a>示例
 
@@ -2353,7 +2353,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> hash_map:: reference (STL/CLR)
+## <a name="hash_mapreference-stlclr"></a><a name="reference"></a>hash_map：： reference （STL/CLR）
 
 元素的引用的类型。
 
@@ -2365,7 +2365,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>备注
 
-此类型描述的元素的引用。
+类型描述对元素的引用。
 
 ### <a name="example"></a>示例
 
@@ -2398,7 +2398,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rehash"></a> hash_map::rehash (STL/CLR)
+## <a name="hash_maprehash-stlclr"></a><a name="rehash"></a>hash_map：： rehash （STL/CLR）
 
 重新生成哈希表。
 
@@ -2410,7 +2410,7 @@ void rehash();
 
 ### <a name="remarks"></a>备注
 
-成员函数重新生成哈希表，确保[hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)。 否则，哈希表的大小增加，仅在需要时插入后。 （它永远不会自动减小大小。）您可以使用它来调整哈希表的大小。
+此成员函数重新生成哈希表，确保[hash_map：： load_factor （stl/clr）](../dotnet/hash-map-load-factor-stl-clr.md)`() <=` [hash_map：： max_load_factor （stl/clr）](../dotnet/hash-map-max-load-factor-stl-clr.md)。 否则，只有在插入后才需要哈希表的大小。 （大小永远不会自动减小。）您可以使用它来调整哈希表的大小。
 
 ### <a name="example"></a>示例
 
@@ -2472,7 +2472,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_map:: rend (STL/CLR)
+## <a name="hash_maprend-stlclr"></a><a name="rend"></a>hash_map：： rend （STL/CLR）
 
 指定反向受控序列的末尾。
 
@@ -2484,7 +2484,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个反向迭代器指向刚超出开头的受控序列。 因此，它指定`end`反向序列。 用于获取迭代器，指定`current`如果受控序列的长度发生更改，可以更改的相反顺序的受控的序列，但其状态结束。
+成员函数返回一个反向迭代器，该迭代器指向刚刚超出受控序列的开头。 因此，它指定反向序列的 `end`。 用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 末尾，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
 
 ### <a name="example"></a>示例
 
@@ -2525,7 +2525,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> hash_map::reverse_iterator (STL/CLR)
+## <a name="hash_mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_map：： reverse_iterator （STL/CLR）
 
 受控序列的反向迭代器的类型。
 
@@ -2567,7 +2567,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> hash_map:: size (STL/CLR)
+## <a name="hash_mapsize-stlclr"></a><a name="size"></a>hash_map：： size （STL/CLR）
 
 对元素数进行计数。
 
@@ -2579,7 +2579,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前元素的数目。 如果您关心的只是该序列是否具有非零大小，请参阅[hash_map:: empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[hash_map：： empty （STL/CLR）](../dotnet/hash-map-empty-stl-clr.md)`()`。
 
 ### <a name="example"></a>示例
 
@@ -2619,7 +2619,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_map::size_type (STL/CLR)
+## <a name="hash_mapsize_type-stlclr"></a><a name="size_type"></a>hash_map：： size_type （STL/CLR）
 
 两个元素间的带符号距离的类型。
 
@@ -2631,7 +2631,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述非负元素计数。
+该类型描述了一个非负元素计数。
 
 ### <a name="example"></a>示例
 
@@ -2667,7 +2667,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_map::swap (STL/CLR)
+## <a name="hash_mapswap-stlclr"></a><a name="swap"></a>hash_map：： swap （STL/CLR）
 
 交换两个容器的内容。
 
@@ -2677,14 +2677,14 @@ end()-begin() = 3
 void swap(hash_map<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*right*<br/>
+right<br/>
 要与其交换内容的容器。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换之间的受控的序列`this`并*右*。 它是在常量时间内，则会引发任何异常。 您将其用作一种来交换两个容器的内容的快速方法。
+成员函数在 `this` 和*右*之间交换受控序列。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2735,9 +2735,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="to_array"></a> hash_map::to_array (STL/CLR)
+## <a name="hash_mapto_array-stlclr"></a><a name="to_array"></a>hash_map：： to_array （STL/CLR）
 
-将受控的序列复制到新数组。
+将受控序列复制到新数组。
 
 ### <a name="syntax"></a>语法
 
@@ -2747,7 +2747,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个数组，包含对受控的序列。 用于获取数组形式的受控序列的副本。
+此成员函数返回包含受控序列的数组。 可以使用它以数组形式获取受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2785,9 +2785,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> hash_map:: upper_bound (STL/CLR)
+## <a name="hash_mapupper_bound-stlclr"></a><a name="upper_bound"></a>hash_map：： upper_bound （STL/CLR）
 
-查找与指定的键匹配的范围末尾。
+查找与指定键匹配的范围的末尾。
 
 ### <a name="syntax"></a>语法
 
@@ -2795,14 +2795,14 @@ int main()
 iterator upper_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数将确定最后一个元素`X`中为相同的存储桶进行哈希处理的受控序列*密钥*并且具有相同的排序*密钥*。 如果此类元素不存在，或者如果`X`是受控序列中的最后一个元素，它将返回[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; 否则它将返回一个迭代器，指定第一个超出元素`X`. 使用要在与指定的键匹配的受控序列中当前定位的元素序列的末尾。
+成员函数确定受控序列中 `X` 的最后一个元素，该元素哈希处理为与*键*相同的存储桶并具有*等效的顺序。* 如果此类元素不存在，或者 `X` 为受控序列中的最后一个元素，则它将返回[hash_map：： end （STL/CLR）](../dotnet/hash-map-end-stl-clr.md)`()`;否则，它将返回一个迭代器，该迭代器指定 `X`以外的第一个元素。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
 
 ### <a name="example"></a>示例
 
@@ -2844,9 +2844,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> hash_map::value_comp (STL/CLR)
+## <a name="hash_mapvalue_comp-stlclr"></a><a name="value_comp"></a>hash_map：： value_comp （STL/CLR）
 
-将复制两个元素值的排序委托。
+复制两个元素值的排序委托。
 
 ### <a name="syntax"></a>语法
 
@@ -2856,7 +2856,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回用于受控的序列进行排序的排序委托。 用于比较两个元素值。
+此成员函数返回用于对受控序列进行排序的排序委托。 用于比较两个元素值。
 
 ### <a name="example"></a>示例
 
@@ -2891,9 +2891,9 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_compare"></a> hash_map::value_compare (STL/CLR)
+## <a name="hash_mapvalue_compare-stlclr"></a><a name="value_compare"></a>hash_map：： value_compare （STL/CLR）
 
-两个元素值排序委托。
+两个元素值的排序委托。
 
 ### <a name="syntax"></a>语法
 
@@ -2904,7 +2904,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>备注
 
-类型为委托，它确定其值参数的顺序的同义词。
+类型是委托的同义词，用于确定其值参数的顺序。
 
 ### <a name="example"></a>示例
 
@@ -2939,7 +2939,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> hash_map::value_type (STL/CLR)
+## <a name="hash_mapvalue_type-stlclr"></a><a name="value_type"></a>hash_map：： value_type （STL/CLR）
 
 元素的类型。
 

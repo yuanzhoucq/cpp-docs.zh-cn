@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545611"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212259"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 

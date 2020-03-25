@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-ms.openlocfilehash: 657e78ece2ce4039eb8dc8561abd455c60aaff75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2b28af52a2ca2263a7bad77c8c69242396ff2b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254908"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195248"
 ---
 # <a name="linker-tools-error-lnk1181"></a>链接器工具错误 LNK1181
 
-无法打开输入的文件 filename
+无法打开输入文件 "filename"
 
-找不到链接器`filename`因为它不存在或找不到路径。
+链接器找不到 `filename`，因为它不存在或找不到该路径。
 
-错误 lnk1181 一些常见原因：
+错误 LNK1181 的一些常见原因包括：
 
-- `filename` 附加依赖项上链接器行中，但该文件不存在，因此引用。
+- `filename` 作为链接行的附加依赖项进行引用，但该文件不存在。
 
-- 一个 **/LIBPATH**语句，用于指定目录包含`filename`缺少。
+- 一个 **/LIBPATH**语句，该语句指定包含 `filename` 的目录。
 
-若要解决上述问题，请确保链接器行上引用的任何文件都存在于系统。  此外请确保没有 **/LIBPATH**语句为每个目录，其中包含依赖于链接器的文件。
+若要解决上述问题，请确保在链接器行上引用的任何文件都存在于系统上。  此外，请确保每个包含链接器相关文件的目录都有 **/LIBPATH**语句。
 
-有关详细信息，请参阅[用作链接器输入的.lib 文件](../../build/reference/dot-lib-files-as-linker-input.md)。
+有关详细信息，请参阅[用作链接器输入的 .Lib 文件](../../build/reference/dot-lib-files-as-linker-input.md)。
 
-Lnk1181 另一个可能的原因是没有具有嵌入的空格的长文件名括在引号中。  在这种情况下，链接器将仅识别第一个空格，文件名，然后假定的文件的扩展名。 目标这种情况下的解决方案是将括起来的长文件名 （路径和文件名） 引起来。
+导致 LNK1181 的另一个可能原因是，带有嵌入空格的长文件名没有用引号引起来。  在这种情况下，链接器将仅识别最大为第一个空格的文件名，然后假定文件扩展名为 .obj。 这种情况的解决方法是将长文件名（路径加上文件名）括在引号中。
 
-使用编译[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)选项可能导致 LNK1181，因为该选项将取消创建的.obj 文件。
+使用[/p （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)选项进行编译会导致 LNK1181，因为该选项会禁止创建 .obj 文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [/LIBPATH（附加的 Libpath）](../../build/reference/libpath-additional-libpath.md)

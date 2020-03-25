@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 9edd6420193fbc1ff6013c545b294851ce105848
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc1165cf1df3933575013906d1b24673467f0b36
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178712"
 ---
 # <a name="sizeof-operator"></a>sizeof 运算符
 
-生成其操作数的类型大小的大小**char**。
+根据**char**类型的大小生成操作数的大小。
 
 > [!NOTE]
->  璝惠`sizeof ...`运算符，请参阅[省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)。
+>  有关 `sizeof ...` 运算符的信息，请参阅[省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -29,15 +29,15 @@ sizeof  ( type-name )
 
 ## <a name="remarks"></a>备注
 
-结果**sizeof**运算符的类型是`size_t`，在包含文件中定义的整数类型\<stddef.h >。 利用此运算符，你可以避免在程序中指定依赖于计算机的数据大小。
+**Sizeof**运算符的结果为类型 `size_t`，在包含文件 \<stddef.h > 中定义的整数类型。 利用此运算符，你可以避免在程序中指定依赖于计算机的数据大小。
 
-到操作数**sizeof**可以是以下之一：
+**Sizeof**的操作数可以是下列项之一：
 
-- 类型名称。 若要使用**sizeof**使用类型名称，名称必须括在括号中。
+- 类型名称。 若要将**sizeof**用于类型名称，则必须将该名称括在括号中。
 
-- 一个表达式。 与表达式一起使用时**sizeof**可以使用或不带括号指定。 不计算表达式。
+- 一个表达式。 与表达式一起使用时，可以使用或不使用括号来指定**sizeof** 。 不计算表达式。
 
-当**sizeof**运算符应用于类型的对象**char**，它将生成 1。 当**sizeof**运算符应用到一个数组，它将产生不是由数组标识符表示的指针的大小、 该数组中的字节总数。 若要获取由数组标识符表示的指针的大小，它将作为参数传递到使用的函数**sizeof**。 例如：
+当**sizeof**运算符应用于**char**类型的对象时，它将生成1。 当**sizeof**运算符应用于数组时，它将生成该数组中的总字节数，而不是由数组标识符表示的指针的大小。 若要获取由数组标识符表示的指针的大小，请将其作为参数传递给使用**sizeof**的函数。 例如：
 
 ## <a name="example"></a>示例
 
@@ -71,13 +71,13 @@ The length of Hello, world! is: 14
 The size of the pointer is 4
 ```
 
-当**sizeof**运算符应用于**类**，**结构**，或者**联合**类型，结果是该对象中的字节数类型和添加以单词边界上对齐成员的任何填充。 结果不一定对应于通过将各个成员的存储需求相加计算出的大小。 [/Zp](../build/reference/zp-struct-member-alignment.md)编译器选项和[pack](../preprocessor/pack.md)杂注影响成员的对齐边界。
+当**sizeof**运算符应用于**类**、**结构**或**联合**类型时，结果为该类型的对象中的字节数，加上为对齐 word 边界上的成员而添加的任何填充。 结果不一定对应于通过将各个成员的存储需求相加计算出的大小。 [/Zp](../build/reference/zp-struct-member-alignment.md)编译器选项和[pack](../preprocessor/pack.md)杂注影响成员的对齐边界。
 
-**Sizeof**运算符永远不会产生 0，即使对于空类。
+**Sizeof**运算符从不产生0，即使对于空类也是如此。
 
 **Sizeof**运算符不能与以下操作数一起使用：
 
-- 函数。 (但是， **sizeof**可以应用于指向函数的指针。)
+- 函数。 （但是，可以将**sizeof**应用到指向函数的指针。）
 
 - 位域。
 
@@ -93,17 +93,17 @@ The size of the pointer is 4
 
 - 带括号的不完整类型的名称。
 
-当**sizeof**运算符应用于引用，则结果为相同像**sizeof**应用到对象本身。
+当**sizeof**运算符应用于引用时，结果将与将**sizeof**应用于对象本身相同。
 
-如果未确定大小的数组是一个结构，最后一个元素**sizeof**运算符将返回不带数组结构的大小。
+如果成员列表数组数组是结构的最后一个元素，则**sizeof**运算符将返回不带数组的结构的大小。
 
-**Sizeof**运算符通常用于计算数组中使用形式的表达式中的元素数：
+**Sizeof**运算符通常用于计算数组中使用以下形式的表达式的元素数：
 
 ```cpp
 sizeof array / sizeof array[0]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

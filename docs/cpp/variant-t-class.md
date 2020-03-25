@@ -10,42 +10,42 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e11d31904fd8e54049f69ee4f6530d511c8c7f4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165940"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187747"
 ---
-# <a name="variantt-class"></a>_variant_t 类
+# <a name="_variant_t-class"></a>_variant_t 类
 
 **Microsoft 专用**
 
-一个 **_variant_t**对象将封装`VARIANT`数据类型。 类管理资源分配和解除分配，并使对函数调用`VariantInit`和`VariantClear`根据需要。
+**_Variant_t**对象封装 `VARIANT` 数据类型。 类管理资源分配和释放，并根据需要对 `VariantInit` 和 `VariantClear` 执行函数调用。
 
-### <a name="construction"></a>构造
+### <a name="construction"></a>建筑
 
 |||
 |-|-|
-|[_variant_t](../cpp/variant-t-variant-t.md)|构造 **_variant_t**对象。|
+|[_variant_t](../cpp/variant-t-variant-t.md)|构造一个 **_variant_t**对象。|
 
 ### <a name="operations"></a>操作
 
 |||
 |-|-|
-|[附加](../cpp/variant-t-attach.md)|将附加`VARIANT`对象插入 **_variant_t**对象。|
-|[清除](../cpp/variant-t-clear.md)|清除封装`VARIANT`对象。|
-|[ChangeType](../cpp/variant-t-changetype.md)|更改的类型 **_variant_t**所指示的对象`VARTYPE`。|
-|[分离](../cpp/variant-t-detach.md)|分离封装`VARIANT`从此对象 **_variant_t**对象。|
-|[SetString](../cpp/variant-t-setstring.md)|将字符串分配给此 **_variant_t**对象。|
+|[附加](../cpp/variant-t-attach.md)|将 `VARIANT` 对象附加到 **_variant_t**对象中。|
+|[Clear](../cpp/variant-t-clear.md)|清除封装的 `VARIANT` 对象。|
+|[ChangeType](../cpp/variant-t-changetype.md)|将 **_variant_t**对象的类型更改为指示的 `VARTYPE`。|
+|[分离](../cpp/variant-t-detach.md)|从此 **_variant_t**对象分离封装的 `VARIANT` 对象。|
+|[SetString](../cpp/variant-t-setstring.md)|为此 **_variant_t**对象分配一个字符串。|
 
 ### <a name="operators"></a>运算符
 
 |||
 |-|-|
-|[Operator =](../cpp/variant-t-operator-equal.md)|将新值分配到现有 **_variant_t**对象。|
-|[operator ==, !=](../cpp/variant-t-relational-operators.md)|比较两个 **_variant_t**对象是否相等。|
-|[提取器](../cpp/variant-t-extractors.md)|从封装中提取数据`VARIANT`对象。|
+|[Operator =](../cpp/variant-t-operator-equal.md)|将新值分配给现有的 **_variant_t**对象。|
+|[operator = =，！ =](../cpp/variant-t-relational-operators.md)|比较两个 **_variant_t**对象是否相等或不相等。|
+|[提取器](../cpp/variant-t-extractors.md)|从封装的 `VARIANT` 对象中提取数据。|
 
 **结束 Microsoft 专用**
 
@@ -53,8 +53,8 @@ ms.locfileid: "62165940"
 
 **标头：** \<comutil.h >
 
-**Lib:** comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)
+**Lib：** comsuppw.lib 或 comsuppwd.lib （有关详细信息，请参阅[/zc： Wchar_t （Wchar_t 为本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)

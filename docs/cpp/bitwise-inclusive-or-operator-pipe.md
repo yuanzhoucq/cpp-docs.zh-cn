@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-ms.openlocfilehash: 0df3493930206d655c0d9bca8a2468151aa3c2c6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 38def2b1ac585c751699227d2a065b45145d290d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445507"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190750"
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>按位与或运算符：|
 
@@ -24,7 +24,7 @@ ms.locfileid: "79445507"
 
 ## <a name="remarks"></a>备注
 
-按位 "或" 运算符 **&#124;** （）将其第一个操作数的每个位与其第二操作数的相应位进行比较。 如果其中一个位是 1，则将对应的结果位设置为 1。 否则，将对应的结果位设置为 0。
+按位 "或" 运算符 **&#124;** （）将其第一个操作数的每个位与其第二操作数的相应位进行比较。 如果任一位为 1，则对应结果位设置为 1。 否则，相应的结果位设置为 0。
 
 按位“与或”运算符的两个操作数必须为整型。 [标准转换](standard-conversions.md)中涵盖的常用算术转换将应用于操作数。
 

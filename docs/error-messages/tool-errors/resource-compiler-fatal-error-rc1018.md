@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1018
 ms.assetid: bb1d2efd-6898-412f-bb03-9ff94c54e4dc
-ms.openlocfilehash: 02e37ae2f48a6d87da128078d0e18a76f400817f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50fcd8130d1737180e5c1b7972b78e1298084618
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173070"
 ---
 # <a name="resource-compiler-fatal-error-rc1018"></a>资源编译器错误 RC1018
 
-意外的 #elif
+意外的 "#elif"
 
-`#elif`中不显示指令`#if`， **#ifdef**，或 **#ifndef**构造。
+`#elif` 指令未出现在 `#if`、 **#ifdef**或 **#ifndef**结构内。
 
-请确保是否有`#if`， **#ifdef**，或 **#ifndef**实际上此语句前的语句。
+请确保在此语句之前有 `#if`、 **#ifdef**或 **#ifndef**语句生效。

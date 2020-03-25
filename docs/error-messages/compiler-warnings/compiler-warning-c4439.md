@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-ms.openlocfilehash: 7cab2e55fca640438051fbb79ac933e83d5f3cbb
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c125fa84119c62e3090611c9a841f46eee759711
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623656"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165205"
 ---
 # <a name="compiler-warning-c4439"></a>编译器警告 C4439
 
 "function"：签名中具有托管类型的函数定义必须具有 __clrcall 调用约定
 
-编译器隐式地使用[__clrcall](../../cpp/clrcall.md)替换调用约定。 若要解决此警告，请删除 `__cdecl` 或 `__stdcall` 调用约定。
+编译器隐式地将调用约定替换[__clrcall](../../cpp/clrcall.md)。 若要解决此警告，请删除 `__cdecl` 或 `__stdcall` 调用约定。
 
 C4439 始终作为错误发出。 你可以通过 `#pragma warning` 或 **/wd**关闭此警告;有关详细信息，请参阅[警告](../../preprocessor/warning.md)或[/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/we、/wo、/Wv、/Wx （警告等级）](../../build/reference/compiler-option-warning-level.md) 。
 

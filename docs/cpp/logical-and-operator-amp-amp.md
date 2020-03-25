@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179427"
 ---
 # <a name="logical-and-operator-ampamp"></a>逻辑 AND 运算符： &amp;&amp;
 
@@ -25,7 +25,7 @@ expression && expression
 
 ## <a name="remarks"></a>备注
 
-逻辑 AND 运算符 (**&&**) 返回布尔值为 TRUE，如果两个操作数都为 TRUE，否则返回 FALSE。 操作数隐式转换为类型**bool**之前的评估，并将该结果属于类型**bool**。 逻辑“与”具有从左到右的关联性。
+如果两个操作数都为 TRUE，则逻辑 "与" 运算符（ **&&** ）返回布尔值 true，否则返回 FALSE。 操作数在计算前隐式转换为**bool**类型，结果为**bool**类型。 逻辑“与”具有从左到右的关联性。
 
 逻辑“与”运算符的操作数不需要具有相同的类型，但它们必须是整数或指针类型。 操作数通常为关系或相等表达式。
 
@@ -41,9 +41,9 @@ char *pch = 0;
 
 如果 `pch` 为 null (0)，则从不计算表达式的右侧。 因此，无法通过 null 指针进行赋值。
 
-## <a name="operator-keyword-for-"></a>运算符关键字 （& a) （& a)
+## <a name="operator-keyword-for-"></a>& & 的运算符关键字
 
-**并**运算符是的文本等效**&&**。 有两种方法来访问**并**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。
+**和**运算符是 **&&** 的文本等效项。 可以通过两种方式在程序中访问**和**运算符：包含头文件 `iso646.h`或使用[/za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展）编译器选项进行编译。
 
 ## <a name="example"></a>示例
 
@@ -67,7 +67,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++内置运算符优先级和结合性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

@@ -1,25 +1,25 @@
 ---
-title: 编译器警告 （等级 1） C4067
+title: 编译器警告（等级1） C4067
 ms.date: 11/04/2016
 f1_keywords:
 - C4067
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bdd16f5c3182e4217e195475bdb4a9a0f60fa6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386507"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164113"
 ---
-# <a name="compiler-warning-level-1-c4067"></a>编译器警告 （等级 1） C4067
+# <a name="compiler-warning-level-1-c4067"></a>编译器警告（等级1） C4067
 
-> 意外的令牌以下预处理器指令-应输入换行符
+> 预处理器指令后有意外标记-应输入换行符
 
 ## <a name="remarks"></a>备注
 
-编译器找到并忽略额外预处理器指令后的字符。 原因可能是由任何意外的字符，尽管该指令之后的常见原因是孤立的分号。 注释不会导致此警告。 **/Za**编译器选项让多个预处理器指令的默认设置比此警告。
+编译器发现并忽略了预处理器指令后面的额外字符。 这可能是由任何意外的字符引起的，但常见的原因是指令后面的分号不受使用。 注释不会导致此警告。 对于比默认设置更多的预处理器指令， **/za**编译器选项启用此警告。
 
 ## <a name="example"></a>示例
 
@@ -39,7 +39,7 @@ int main()
 }
 ```
 
-若要解决此警告，请删除孤立的字符，或将其移动到注释块。 通过删除可能会禁用某些 C4067 警告 **/Za**编译器选项。
+若要解决此警告，请删除游离字符，或将其移到注释块中。 可以通过删除 **/za**编译器选项来禁用某些 C4067 警告。
 
 ```cpp
 // C4067b.cpp

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 08f90ef6be7a5eeb560add9c60a6578057fbb310
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546157"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208359"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 

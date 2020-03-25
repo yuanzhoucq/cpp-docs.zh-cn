@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546115"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212005"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 类
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516362"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182014"
 ---
 # <a name="generic-interfaces-ccli"></a>泛型接口 (C++/CLI)
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516362"
 
 ## <a name="remarks"></a>备注
 
-*特性*<br/>
+*attributes*<br/>
 （可选）其他声明性信息。 若要详细了解特性和特性类，请参阅“attribute”。
 
 class-key<br/>
@@ -238,7 +238,7 @@ List2
 
 ## <a name="example"></a>示例
 
-下面的示例声明一个泛型接口 `IMyGenIface`，以及两个专用化 `IMyGenIface` 的非泛型接口（`IMySpecializedInt` 和 `ImySpecializedString`）。 然后，两个专用化接口由两个类（`MyIntClass` 和 `MyStringClass`）实现。 此示例展示了如何专用化泛型接口、如何实例化泛型接口和非泛型接口，以及如何调用接口中已显式实现的成员。
+下面的示例声明一个泛型接口 `IMyGenIface`，以及两个专用化 `IMySpecializedInt` 的非泛型接口（`ImySpecializedString` 和 `IMyGenIface`）。 然后，两个专用化接口由两个类（`MyIntClass` 和 `MyStringClass`）实现。 此示例展示了如何专用化泛型接口、如何实例化泛型接口和非泛型接口，以及如何调用接口中已显式实现的成员。
 
 ```cpp
 // generic_interface2.cpp
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [泛型](generics-cpp-component-extensions.md)

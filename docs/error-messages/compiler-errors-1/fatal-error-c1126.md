@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1126
 ms.assetid: f22b26a6-8ad7-47cf-a237-196c8ea60aca
-ms.openlocfilehash: 3f4d152163d3b21ddf99644c34e63f35ca15e6e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6c9d06cd087eb4462ae475cc1f6d64ba451887f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230007"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203619"
 ---
 # <a name="fatal-error-c1126"></a>错误 C1126
 
-identifier： 自动分配超过大小
+"identifier"：自动分配超出大小
 
-为本地变量的函数 （加上使用的编译器，例如可交换函数的额外 20 字节的空间有限） 分配的空间超过了限制。
+为函数的局部变量分配的空间（加上编译器使用的有限空间量，如用于交换函数的额外20个字节）超过限制。
 
-若要更正此错误，请使用`malloc`或`new`分配大量的数据。
+若要更正此错误，请使用 `malloc` 或 `new` 分配大量的数据。

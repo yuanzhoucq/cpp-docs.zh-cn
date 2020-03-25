@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 8c00db06ed5c0347cb9c720e35bd3e517df2a13c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276805"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189568"
 ---
 # <a name="conditional-operator-quest-"></a>条件运算符： &quest;：
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [条件表达式运算符](../c-language/conditional-expression-operator.md)

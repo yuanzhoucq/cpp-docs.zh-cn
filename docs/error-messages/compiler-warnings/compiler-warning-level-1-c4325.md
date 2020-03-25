@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408532"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163019"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>编译器警告（等级 1）C4325
 
-> 忽略标准节*部分*被忽略
+> 已忽略标准节 "*section*" 的属性
 
 ## <a name="remarks"></a>备注
 
-您不能更改标准节的特性。 例如：
+不能更改标准节的属性。 例如：
 
 ```cpp
 #pragma section(".sdata", long)
 ```
 
-这会覆盖`.sdata`使用标准节**短**数据类型为**长**数据类型。
+这会覆盖使用**long**数据类型的**short**数据类型 `.sdata` 标准部分。
 
-标准节您不能更改其属性包括：
+不能更改其属性的标准部分包括、
 
-- .data
+- 。数据
 
 - .sdata
 
@@ -43,12 +43,12 @@ ms.locfileid: "62408532"
 
 - .sconst
 
-- .rdata
+- 。 rdata
 
 - .srdata
 
-可能在以后添加其他部分。
+稍后可能会添加其他部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[section](../../preprocessor/section.md)
+[部分](../../preprocessor/section.md)

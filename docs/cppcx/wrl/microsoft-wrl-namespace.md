@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213767"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空间
 
-定义构成了 Windows 运行时的基础类型C++模板库。
+定义组成 Windows 运行时C++模板库的基本类型。
 
 ## <a name="syntax"></a>语法
 
@@ -35,13 +35,13 @@ namespace Microsoft::WRL;
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt | InhibitWeakReference>`|
 
 ### <a name="classes"></a>类
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[ActivationFactory 类](activationfactory-class.md)|启用 Windows 运行时将激活的一个或多个类。|
 |[AsyncBase 类](asyncbase-class.md)|实现 Windows 运行时异步状态机。|
@@ -58,25 +58,25 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>结构
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[ChainInterfaces 结构](chaininterfaces-structure.md)|指定可应用于一组接口 ID 的验证和初始化函数。|
-|[CloakedIid 结构](cloakediid-structure.md)|指示对`RuntimeClass`，`Implements`和`ChainInterfaces`： 指定的接口是无法访问 IID 列表中的模板。|
-|[Implements 结构](implements-structure.md)|实现`QueryInterface`和`GetIid`指定接口。|
+|[CloakedIid 结构](cloakediid-structure.md)|向 `RuntimeClass`、`Implements` 和 `ChainInterfaces` 模板指示指定接口在 IID 列表中不可访问。|
+|[Implements 结构](implements-structure.md)|为指定的接口实现 `QueryInterface` 和 `GetIid`。|
 |[MixIn 结构](mixin-structure.md)|确保运行时类先后派生自 Windows 运行时接口（如果有）和经典 COM 接口。|
-|[RuntimeClassFlags 结构](runtimeclassflags-structure.md)|包含的类型的实例[RuntimeClass](runtimeclass-class.md)。|
+|[RuntimeClassFlags 结构](runtimeclassflags-structure.md)|包含[RuntimeClass](runtimeclass-class.md)的实例的类型。|
 
 ### <a name="enumerations"></a>枚举
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[AsyncResultType 枚举](asyncresulttype-enumeration.md)|指定返回的结果类型`GetResults()`方法。|
+|[AsyncResultType 枚举](asyncresulttype-enumeration.md)|指定 `GetResults()` 方法返回的结果的类型。|
 |[ModuleType 枚举](moduletype-enumeration.md)|指定模块是否应支持进程内服务器或进程外服务器。|
-|[RuntimeClassType 枚举](runtimeclasstype-enumeration.md)|指定的类型[RuntimeClass](runtimeclass-class.md)支持实例。|
+|[RuntimeClassType 枚举](runtimeclasstype-enumeration.md)|指定受支持的[RuntimeClass](runtimeclass-class.md)实例的类型。|
 
 ### <a name="functions"></a>函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[AsWeak 函数](asweak-function.md)|检索对指定实例的弱引用。|
 |[回调函数 (WRL)](callback-function-wrl.md)|创建一个对象，该对象的成员函数是一个回调方法。|
@@ -86,10 +86,10 @@ namespace Microsoft::WRL;
 
 ## <a name="requirements"></a>要求
 
-**标头：** async.h、 client.h、 corewrappers.h、 event.h、 ftm.h、 implements.h、 internal.h、 module.h
+**标头：** async .h，corewrappers.h，internal.h，实现 .h，内 .h，模块. h，模块。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL::Wrappers 命名空间](microsoft-wrl-wrappers-namespace.md)

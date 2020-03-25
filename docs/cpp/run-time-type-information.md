@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: 1d11ee3ea472f935120c59f0faefee905361ee97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195274d7bcef0ff4d82383a8ec828ca9267573b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178933"
 ---
 # <a name="run-time-type-information"></a>运行时类型信息
 
@@ -34,8 +34,8 @@ ms.locfileid: "62267361"
 
 - [Type_info](../cpp/type-info-class.md)类。
 
-   用于保存返回的类型信息**typeid**运算符。
+   用于保存由**typeid**运算符返回的类型信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [强制转换](../cpp/casting.md)

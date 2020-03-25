@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-ms.openlocfilehash: c121ad99dfbe0021a263f324ccdb9a95441bba33
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 09e40d38382bea0f902fda03d15d24e0cf1a627d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187799"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 
@@ -28,20 +28,20 @@ __declspec( uuid("ComObjectGUID") ) declarator
 
 ## <a name="remarks"></a>备注
 
-**Uuid**特性采用字符串作为其参数。 此字符串以带有或不带 **{}** 分隔符的普通注册表格式命名 GUID。 例如:
+**Uuid**特性采用字符串作为其参数。 此字符串以带有或不带 **{}** 分隔符的普通注册表格式命名 GUID。 例如：
 
 ```cpp
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
 ```
 
-此特性可应用于重新声明。 这允许系统标头提供接口`IUnknown`（如）的定义，并允许在其他标头（ \<如 comdef.h >）中重新声明来提供 GUID。
+此特性可应用于重新声明。 这允许系统标头提供接口（如 `IUnknown`）的定义，并允许在其他某个标头中重新声明（如 \<comdef.h >）来提供 GUID。
 
-关键字[__uuidof](../cpp/uuidof-operator.md)可用于检索附加到用户定义类型的常量 GUID。
+可以应用关键字[__uuidof](../cpp/uuidof-operator.md)来检索附加到用户定义类型的常量 GUID。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [__declspec](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

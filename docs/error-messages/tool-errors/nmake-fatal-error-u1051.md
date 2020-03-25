@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1051
 ms.assetid: fede5cd5-dac3-47b7-b86d-e1acfb78699f
-ms.openlocfilehash: ddf1d262fb8dfc6e63b0bf5cc098b7b140539310
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6b939c97f993e42049677292374377d825d474
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367195"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193675"
 ---
 # <a name="nmake-fatal-error-u1051"></a>NMAKE 错误 U1051
 
 内存不足
 
-NMAKE 用尽了内存中，由于生成文件太大或太复杂，包括虚拟内存。
+由于 makefile 太大或太复杂，NMAKE 内存用尽，包括虚拟内存。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复
 
-1. 释放一些磁盘空间。
+1. 在磁盘上释放一些空间。
 
-1. 增加 Windows NT 分页文件或 Windows 交换文件的大小。
+1. 增加 Windows NT 页面文件或 Windows 交换文件的大小。
 
-1. 如果仅使用生成文件的一部分，则将生成文件划分为单独的文件或使用 **！如果**预处理指令以限制 NMAKE 必须处理量。 **！如果**指令包含 **！如果**， `!IFDEF`， **！IFNDEF**， **！ELSE IF**， **！其他** `IFDEF`，和 **！其他** `IFNDEF`。
+1. 如果只使用部分生成文件，请将生成文件分成单独的文件或使用 **！如果**预处理指令限制 NMAKE 必须处理的量，则为。 **！IF**指令包括 **！如果**为，`!IFDEF`， **！IFNDEF**、 **！否则，IF**， **！ELSE** `IFDEF`和 **！否则**`IFNDEF`。

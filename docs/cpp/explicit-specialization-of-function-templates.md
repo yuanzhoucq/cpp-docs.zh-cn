@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: 3d91383f895f1a8be983efe42f685419ca988823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184262"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179986"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>函数模板的显式专用化
 
@@ -23,7 +23,7 @@ ms.locfileid: "62184262"
 template<> void MySwap(double a, double b);
 ```
 
-此声明使您能够定义不同的函数**double**变量。 与标准类型转换的非模板函数类似 (如类型的变量提升**float**到**double**) 应用。
+通过此声明，您可以为**双重**变量定义不同的函数。 与非模板函数一样，应用标准类型转换（例如，将**float**类型的变量升级为**double**类型）。
 
 ## <a name="example"></a>示例
 
@@ -51,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [函数模板](../cpp/function-templates.md)

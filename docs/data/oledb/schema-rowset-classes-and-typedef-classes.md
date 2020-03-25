@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545737"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209698"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>架构行集类和 Typedef 类
 

@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级1） C4291
+title: 编译器警告（等级 1）C4291
 ms.date: 11/04/2016
 f1_keywords:
 - C4291
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cd161a37683703fd67b4c682558a51121c130816
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626643"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175709"
 ---
-# <a name="compiler-warning-level-1-c4291"></a>编译器警告（等级1） C4291
+# <a name="compiler-warning-level-1-c4291"></a>编译器警告（等级 1）C4291
 
 "声明"：未找到匹配的运算符删除;如果初始化引发异常，则不会释放内存
 
@@ -23,7 +23,7 @@ ms.locfileid: "73626643"
 
 如果使用不带任何额外参数的**new**运算符，并使用[/gx](../../build/reference/gx-enable-exception-handling.md)、 [/ehs](../../build/reference/eh-exception-handling-model.md)或/eha 选项进行编译以启用异常处理，则编译器将在构造函数引发异常时生成代码来调用运算符**delete** 。
 
-如果使用**new**运算符的放置窗体（除了分配的大小外，具有参数的窗体），并且对象的构造函数引发异常，则编译器仍会生成代码来调用运算符**delete**;但如果运算符**删除**的放置形式与分配了内存的运算符**new**的放置形式匹配，则它将仅执行此操作。 例如:
+如果使用**new**运算符的放置窗体（除了分配的大小外，具有参数的窗体），并且对象的构造函数引发异常，则编译器仍会生成代码来调用运算符**delete**;但如果运算符**删除**的放置形式与分配了内存的运算符**new**的放置形式匹配，则它将仅执行此操作。 例如：
 
 ```cpp
 // C4291.cpp

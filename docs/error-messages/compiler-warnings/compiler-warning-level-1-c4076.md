@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4076
 ms.assetid: 04581066-313a-4a11-bb60-721e6d038d75
-ms.openlocfilehash: 3a56e58d9bec1034a55f4e588dbddd0dba03f348
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77efeae27a67ea844759fd9980801d3daf788e89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208015"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200249"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>编译器警告（等级 1）C4076
 
-> '*的类型修饰符*： 不能使用类型*typename*
+> "*type 修饰符*"：不能与 "*typename*" 类型一起使用
 
 ## <a name="remarks"></a>备注
 
-类型修饰符，它是否**签名**或**无符号**，不能用于非整数类型。 *类型修饰符*将被忽略。
+类型修饰符（无论是**有符号**还是**无符号**）不能用于非整数类型。 已忽略*type 修饰符*。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4076;若要修复此错误，请删除**无符号**类型修饰符：
+下面的示例生成 C4076;若要修复此问题，请删除**无符号**类型修饰符：
 
 ```cpp
 // C4076.cpp

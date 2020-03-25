@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212246"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 

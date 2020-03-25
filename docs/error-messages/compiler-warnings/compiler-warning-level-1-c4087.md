@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4087
 ms.assetid: 546e4d57-5c8e-422c-8ef1-92657336dad5
-ms.openlocfilehash: fe2b4fadfb87726e81178a3530299dbb8620aec9
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d939edfdf00b81837a167ab326ab5a7791e3e374
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626842"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164009"
 ---
 # <a name="compiler-warning-level-1-c4087"></a>编译器警告（等级 1）C4087
 

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244499"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179167"
 ---
-# <a name="raise"></a>__raise
+# <a name="__raise"></a>__raise
 
 强调一个事件的调用站点。
 
@@ -26,9 +26,9 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>备注
 
-在托管代码中，事件只能从定义它的类中引发。 请参阅[事件](../extensions/event-cpp-component-extensions.md)有关详细信息。
+在托管代码中，事件只能从定义它的类中引发。 有关详细信息，请参阅[事件](../extensions/event-cpp-component-extensions.md)。
 
-关键字 **__raise**导致调用非事件会发出的错误。
+如果调用非事件，关键字 **__raise**会导致发出错误。
 
 > [!NOTE]
 >  模板类或结构不能包含事件。
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [事件处理](../cpp/event-handling.md)<br/>

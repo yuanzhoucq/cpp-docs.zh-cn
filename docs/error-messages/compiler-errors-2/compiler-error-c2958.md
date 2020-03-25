@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2958
 ms.assetid: 332bf6d3-7cd1-4b1a-8ddb-d4a8cbf01115
-ms.openlocfilehash: 3c287a1f4c7b52fb4c6e498822276bf5956aa2d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22e94fbd6ab44b13f16213979eebaec3f23b4a2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256823"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176827"
 ---
 # <a name="compiler-error-c2958"></a>编译器错误 C2958
 
-在位置中找到的左侧的分隔符未能正确匹配
+在 "location" 处找到的左侧分隔符未正确匹配
 
-未正确匹配分隔符。
+分隔符未正确匹配。
 
-函数模板声明中不匹配的括号可以导致此错误。
+函数模板声明中的括号不匹配可能会导致此错误。

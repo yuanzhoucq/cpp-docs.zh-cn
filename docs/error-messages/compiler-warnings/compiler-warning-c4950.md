@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 784179af68ff55ba70c61255c88688105ecb1738
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164984"
 ---
 # <a name="compiler-warning-c4950"></a>编译器警告 C4950
 
 “type_or_member”：标记为过时
 
-将成员或类型标记为过时与<xref:System.ObsoleteAttribute>属性。
+使用 <xref:System.ObsoleteAttribute> 特性将成员或类型标记为过时。
 
-始终发出 C4950 错误。 可以通过使用来关闭此警告[警告](../../preprocessor/warning.md)杂注指令或[/wd](../../build/reference/compiler-option-warning-level.md)编译器选项。
+始终发出 C4950 错误。 您可以通过使用[warning](../../preprocessor/warning.md) pragma 指令或[/wd](../../build/reference/compiler-option-warning-level.md)编译器选项来关闭此警告。
 
 ## <a name="example"></a>示例
 

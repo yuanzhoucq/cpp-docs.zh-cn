@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178532"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -21,7 +21,7 @@ ms.locfileid: "74857276"
 
 ## <a name="syntax"></a>语法
 
-> *return-type* **\_\_stdcall** *function-name*[ **(** *argument-list* **)** ]
+> *返回类型* **\_\_stdcall** *[* **（** *参数列表* **）** ]
 
 ## <a name="remarks"></a>备注
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+此
 
 ```cpp
 void CMyClass::mymethod() { return; }

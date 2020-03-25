@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, accessors
 - rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-ms.openlocfilehash: 4eaedfca0c93aca89cbfd985c1de0f57306e470c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e35318fd1b5a245eaed982674d69484e34f9dac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389133"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209334"
 ---
 # <a name="using-accessors"></a>使用访问器
 
-以下主题说明如何确定哪种类型的取值函数为最适合你的数据应用程序以及如何使用不同类型的访问器可用：
+以下主题介绍如何确定最适合您的数据应用程序的访问器类型，并说明如何使用不同类型的访问器：
 
-- [确定使用的访问器](../../data/oledb/determining-which-type-of-accessor-to-use.md)
+- [确定要使用的访问器](../../data/oledb/determining-which-type-of-accessor-to-use.md)
 
 - [在一个行集合上使用多个访问器](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
 
@@ -27,6 +27,6 @@ ms.locfileid: "62389133"
 
 - [访问 XML 数据](../../data/oledb/accessing-xml-data.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

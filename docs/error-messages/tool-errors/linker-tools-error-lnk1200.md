@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1200
 ms.assetid: 55771145-915e-4006-ac6c-ac702041eb2f
-ms.openlocfilehash: c99b25a83836f1ee0bc6ba622e42ea382c377172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dcc37bd74a25e29726529346b1578bb8b18ac3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213545"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195131"
 ---
 # <a name="linker-tools-error-lnk1200"></a>链接器工具错误 LNK1200
 
-读取程序数据库 filename 时出错
+读取程序数据库 "filename" 时出错
 
-无法读取程序数据库 (PDB)。
+无法读取程序数据库（PDB）。
 
-可以通过文件损坏导致此错误。
+此错误可能是由文件损坏引起的。
 
-如果`filename`是在 PDB 有关对象文件，重新编译对象文件使用[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。
+如果 `filename` 是对象文件的 PDB，请使用[/zi](../../build/reference/z7-zi-zi-debug-information-format.md)重新编译对象文件。
 
-如果`filename`是主输出文件的 PDB 和增量链接期间出现此错误，删除 PDB 并重新链接。
+如果 `filename` 是主输出文件的 PDB，而在增量链接期间发生此错误，请删除 PDB 并重新链接。

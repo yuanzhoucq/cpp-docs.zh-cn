@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408935"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210608"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 类
 
-提供的实现[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))对象。
+提供[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))对象的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -32,10 +32,10 @@ template <class T>
 class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自`IGetDataSourceImpl`。
+派生自 `IGetDataSourceImpl`的类。
 
 ## <a name="requirements"></a>要求
 
@@ -47,15 +47,15 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 |||
 |-|-|
-|[GetDataSource](#getdatasource)|在创建会话的数据源对象上返回的接口指针。|
+|[GetDataSource](#getdatasource)|返回创建会话的数据源对象上的接口指针。|
 
 ## <a name="remarks"></a>备注
 
-用于获取数据源对象的接口指针的会话，这是必需的接口。
+这是会话的必需接口，用于获取指向数据源对象的接口指针。
 
-## <a name="getdatasource"></a> Igetdatasourceimpl:: Getdatasource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>IGetDataSourceImpl：： GetDataSource
 
-在创建会话的数据源对象上返回的接口指针。
+返回创建会话的数据源对象上的接口指针。
 
 ### <a name="syntax"></a>语法
 
@@ -64,15 +64,15 @@ STDMETHOD(GetDataSource)(REFIID riid,
    IUnknown ** ppDataSource);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IGetDataSource：： GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) 。
 
 ### <a name="remarks"></a>备注
 
-如果你需要访问数据源对象中的属性，这很有用。
+如果需要访问数据源对象中的属性，则此方法很有用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

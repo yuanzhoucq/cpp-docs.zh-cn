@@ -3,12 +3,12 @@ title: 如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: bceb4aff22f6ebba9c8705b3b5a55d0478f244c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213533"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件
 
@@ -42,7 +42,7 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 在控制台输出中显示总执行时间。
 
 **/outdir：** <em>dir</em><br/>
-指定输出目录。 如果路径包含空格，请使用引号。 默认输出目录是 *\<驱动器 >* : \Users\\ *\<用户名 >* \AppData\Local\VirtualStore\Program 文件 (x86) \Microsoft VisualStudio 12.0\\。
+指定输出目录。 如果路径包含空格，请使用引号。 默认的输出目录是 *\<驱动器 >* ： \Users\\ *\<用户名 >* \AppData\Local\VirtualStore\Program Files （X86） \Microsoft Visual Studio 12.0\\。
 
 **/banner：** <em>文件</em><br/>
 指定一个文件，其中包含要在生成的 .idl 文件顶部追加到默认版权消息和 winmdidl 版本号前面的自定义文本。 如果路径包含空格，请使用引号。

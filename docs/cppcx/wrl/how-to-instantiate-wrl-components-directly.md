@@ -3,50 +3,50 @@ title: 如何：直接实例化 WRL 组件
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f291e982d7f77c63821e5943a5867662ccd1b4fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398298"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213897"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接实例化 WRL 组件
 
-了解如何使用 Windows 运行时C++模板库 (WRL)[Microsoft::WRL::Make](make-function.md)并[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)函数来实例化的模块中的组件它定义它。
+了解如何使用 Windows 运行时C++模板库（WRL）[MICROSOFT：： WRL：： Make](make-function.md)和[Microsoft：： WRL：:D etails：： MakeAndInitialize](makeandinitialize-function.md)函数从定义组件的模块实例化组件。
 
-通过直接实例化组件，您可以减少开销时，不需要类工厂或其他机制。 您可以实例化组件直接在这两个通用 Windows 平台应用和桌面应用中。
+通过直接实例化组件，可以在不需要类工厂或其他机制时降低开销。 可以直接在通用 Windows 平台应用和桌面应用中实例化组件。
 
-若要了解如何使用 Windows 运行时C++模板库创建传统型 COM 组件并将其实例从外部桌面应用程序，请参阅[如何：创建经典的 COM 组件](how-to-create-a-classic-com-component-using-wrl.md)。
+若要了解如何使用 Windows 运行时C++模板库创建经典 com 组件并从外部桌面应用对其进行实例化，请参阅[如何：创建经典 com 组件](how-to-create-a-classic-com-component-using-wrl.md)。
 
-本文档演示两个示例。 第一个示例使用`Make`函数来实例化组件。 第二个示例使用`MakeAndInitialize`函数来实例化一个组件，它在构造期间可能会失败。 （由于 COM 通常使用而不是异常的 HRESULT 值，以指示错误，COM 类型通常不会引发从其构造函数。 `MakeAndInitialize` 使组件可以验证通过其构造参数`RuntimeClassInitialize`方法。)这两个示例定义基本记录器接口，并通过定义向控制台写入消息的类中实现该接口。
+本文档显示了两个示例。 第一个示例使用 `Make` 函数实例化组件。 第二个示例使用 `MakeAndInitialize` 函数实例化在构造过程中可能会失败的组件。 （因为 COM 通常使用 HRESULT 值而不是异常来指示错误，COM 类型通常不会从其构造函数引发。 `MakeAndInitialize` 使组件能够通过 `RuntimeClassInitialize` 方法验证其构造参数。）这两个示例都定义了一个基本的记录器接口，并通过定义将消息写入控制台的类来实现该接口。
 
 > [!IMPORTANT]
-> 不能使用`new`运算符来实例化 Windows 运行时C++模板库组件。 因此，我们建议始终使用`Make`或`MakeAndInitialize`直接实例化组件。
+> 不能使用 `new` 运算符实例化 Windows 运行时C++模板库组件。 因此，建议你始终使用 `Make` 或 `MakeAndInitialize` 来直接实例化组件。
 
-### <a name="to-create-and-instantiate-a-basic-logger-component"></a>若要创建并实例化一个基本的记录器组件
+### <a name="to-create-and-instantiate-a-basic-logger-component"></a>创建并实例化基本记录器组件
 
-1. 在 Visual Studio 中创建**Win32 控制台应用程序**项目。 该项目命名，例如， *WRLLogger*。
+1. 在 Visual Studio 中，创建一个**Win32 控制台应用程序**项目。 为该项目命名，例如， *WRLLogger*。
 
-2. 添加**Midl 文件 (.idl)** 到项目文件中，将文件命名`ILogger.idl`，然后添加以下代码：
+2. 将**Midl 文件（.idl）** 文件添加到项目，将该文件命名为 `ILogger.idl`，然后添加以下代码：
 
    [!code-cpp[wrl-logger-make#1](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]
 
-3. 使用下面的代码的内容替换为`WRLLogger.cpp`。
+3. 使用以下代码替换 `WRLLogger.cpp`的内容。
 
    [!code-cpp[wrl-logger-make#2](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]
 
-### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>若要处理的基本记录器组件的构造故障
+### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>处理基本记录器组件的构造失败
 
-1. 使用以下代码替换的定义`CConsoleWriter`类。 此版本包含私有字符串成员变量和重写`RuntimeClass::RuntimeClassInitialize`方法。 `RuntimeClassInitialize` 如果失败的调用`SHStrDup`失败。
+1. 使用以下代码替换 `CConsoleWriter` 类的定义。 此版本包含私有字符串成员变量，并重写 `RuntimeClass::RuntimeClassInitialize` 方法。 如果对 `SHStrDup` 的调用失败，`RuntimeClassInitialize` 会失败。
 
    [!code-cpp[wrl-logger-makeandinitialize#1](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]
 
-2. 使用以下代码替换的定义`wmain`。 此版本使用`MakeAndInitialize`若要实例化`CConsoleWriter`对象，并检查 HRESULT 结果。
+2. 使用以下代码替换 `wmain`的定义。 此版本使用 `MakeAndInitialize` 来实例化 `CConsoleWriter` 对象并检查 HRESULT 结果。
 
    [!code-cpp[wrl-logger-makeandinitialize#2](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Windows 运行时 C++ 模板库 (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
-[Microsoft::WRL::Make](make-function.md)<br/>
-[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)
+[Microsoft：： WRL：： Make](make-function.md)<br/>
+[Microsoft：： WRL：:D etails：： MakeAndInitialize](makeandinitialize-function.md)

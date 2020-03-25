@@ -53,12 +53,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545623"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208320"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
