@@ -1,6 +1,6 @@
 ---
-title: StopAndRelogTracingSessionA
-description: C++ BUILD Insights SDK StopAndRelogTracingSessionA 函数引用。
+title: 停止和重新登录跟踪会话A
+description: C++生成见解 SDK 停止和重新log跟踪会话A函数引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c9fe2ea47b378565d3ce9785b6f4cc3e541ebe80
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: fa70d50ba79a7829adb985ab4d884b5773b5d40f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323672"
 ---
-# <a name="stopandrelogtracingsessiona"></a>StopAndRelogTracingSessionA
+# <a name="stopandrelogtracingsessiona"></a>停止和重新登录跟踪会话A
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`StopAndRelogTracingSessionA` 函数将停止正在进行的跟踪会话，并将生成的跟踪保存在临时文件中。 然后，relogging 会话立即开始使用临时文件作为输入。 Relogging 会话生成的最终 relogged 跟踪保存在由调用方指定的文件中。 调用此函数的可执行文件必须具有管理员权限。
+该`StopAndRelogTracingSessionA`函数停止正在进行的跟踪会话，并将生成的跟踪保存在临时文件中。 然后，使用临时文件作为输入立即启动重新日志记录会话。 重新日志记录会话生成的最终重新记录跟踪将保存在调用方指定的文件中。 调用此函数的可执行文件必须具有管理员权限。
 
 ## <a name="syntax"></a>语法
 
@@ -39,20 +39,20 @@ enum RESULT_CODE StopAndRelogTracingSessionA(
 
 ### <a name="parameters"></a>参数
 
-*sessionName*\
-要停止的跟踪会话的名称。 使用与传递到[StartTracingSession](start-tracing-session.md)、 [StartTracingSessionA](start-tracing-session-a.md)或[StartTracingSessionW](start-tracing-session-w.md)的会话相同的会话名称。
+*会话名称*\
+要停止的跟踪会话的名称。 使用与传递给["开始跟踪会话](start-tracing-session.md)"、[开始跟踪会话A](start-tracing-session-a.md)或["开始跟踪会话W"](start-tracing-session-w.md)的会话名称相同的会话名称。
 
-*outputLogFile*\
-要在其中写入 relogging 会话生成的 relogged 跟踪的文件。
+*输出日志文件*\
+用于写入重新记录会话生成的重新记录跟踪的文件。
 
-*统计信息*\
-指向[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md)对象的指针。 在返回之前，`StopAndRelogTracingSessionA` 将跟踪集合统计信息写入此对象中。
+*统计*\
+指向[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md)对象的指针。 `StopAndRelogTracingSessionA`返回之前，在此对象中写入跟踪集合统计信息。
 
-*analysisDescriptor*\
-指向[RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)对象的指针。 使用此对象配置 `StopAndRelogTracingSessionA`启动的 relogging 会话。
+*分析描述符*\
+指向[RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)对象的指针。 使用此对象可以配置 由`StopAndRelogTracingSessionA`启动的重新日志记录会话。
 
 ### <a name="return-value"></a>返回值
 
-[RESULT_CODE](../other-types/result-code-enum.md)枚举中的结果代码。
+来自[RESULT_CODE](../other-types/result-code-enum.md)枚举的结果代码。
 
 ::: moniker-end

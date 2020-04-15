@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6eee7585bc3c5587e106ab6b0cefb4b7129df59f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503127"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329651"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 类
 
-此类提供的默认实现`IObjectSafety`接口，以允许客户端来检索和设置对象的安全级别。
+此类提供接口的默认实现，`IObjectSafety`以允许客户端检索和设置对象的安全级别。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -39,35 +39,35 @@ class IObjectSafetyImpl
 *T*<br/>
 您的类，派生自`IObjectSafetyImpl`。
 
-*dwSupportedSafety*<br/>
-指定控件的受支持的安全选项。 可以是以下值之一：
+*dw支持安全*<br/>
+指定控件的支持安全选项。 可以是以下值之一：
 
-- 由标识的接口 INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterfaceSafetyOptions](#setinterfacesafetyoptions)参数`riid`应对安全执行脚本。
+- INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterface 安全选项](#setinterfacesafetyoptions)参数`riid`标识的接口应使脚本编写安全。
 
-- 由标识的接口 INTERFACESAFE_FOR_UNTRUSTED_DATA`SetInterfaceSafetyOptions`参数`riid`应对安全不受信任数据的初始化过程。
+- INTERFACESAFE_FOR_UNTRUSTED_DATA 参数标识的`SetInterfaceSafetyOptions`接口`riid`应在初始化期间对不受信任的数据提供安全。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|检索该对象支持的安全选项，以及当前为该对象设置安全选项。|
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|使对象安全的初始化或脚本。|
+|[IObjectSafetyimpl：：获取接口安全选项](#getinterfacesafetyoptions)|检索对象支持的安全选项以及当前为对象设置的安全选项。|
+|[IObjectSafetyimpl：：设置接口安全选项](#setinterfacesafetyoptions)|使对象安全进行初始化或脚本化。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|存储对象的当前安全级别。|
+|[IObjectSafetyimpl：：m_dwCurrentSafety](#m_dwcurrentsafety)|存储对象的当前安全级别。|
 
 ## <a name="remarks"></a>备注
 
-类`IObjectSafetyImpl`提供的默认实现`IObjectSafety`。 `IObjectSafety`接口允许客户端检索和设置对象的安全级别。 例如，web 浏览器可以调用`IObjectSafety::SetInterfaceSafetyOptions`控件设为可安全执行初始化或可安全执行脚本。
+类`IObjectSafetyImpl`提供`IObjectSafety`的默认实现。 该`IObjectSafety`接口允许客户端检索和设置对象的安全级别。 例如，Web 浏览器可以调用`IObjectSafety::SetInterfaceSafetyOptions`以使控件安全用于初始化或脚本编写安全。
 
-请注意，使用[IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)宏 CATID_SafeForScripting 和 CATID_SafeForInitializing 组件类别与提供的指定组件的安全的替代方法。
+请注意，将[IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)宏与CATID_SafeForScripting和CATID_SafeForInitializing组件类别一起使用提供了指定组件安全的替代方法。
 
-**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)， 创建[ATL 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -77,11 +77,11 @@ class IObjectSafetyImpl
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlctl.h
+**标题：** atlctl.h
 
-##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplgetinterfacesafetyoptions"></a><a name="getinterfacesafetyoptions"></a>IObjectSafetyimpl：：获取接口安全选项
 
-检索该对象支持的安全选项，以及当前为该对象设置安全选项。
+检索对象支持的安全选项以及当前为对象设置的安全选项。
 
 ```
 HRESULT GetInterfaceSafetyOptions(
@@ -92,14 +92,14 @@ HRESULT GetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>备注
 
-实现返回的对象的实现所支持的任何接口的相应值`IUnknown::QueryInterface`。
+实现返回对象实现 支持的任何接口的适当`IUnknown::QueryInterface`值。
 
 > [!IMPORTANT]
->  支持的任何对象`IObjectSafety`负责其自身的安全，并且它将委托的任何对象。 程序员必须考虑到帐户中用户的上下文中运行代码出现的问题、 跨站点脚本和执行适合区域检查。
+> 支持`IObjectSafety`的任何对象都负责其自身的安全性及其委托的任何对象的安全性。 程序员必须考虑在用户上下文中运行代码、跨站点脚本和执行适当的区域检查所产生的问题。
 
-请参阅[IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) Windows SDK 中。
+请参阅[IObject 安全：获取](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\))Windows SDK 中的接口安全选项。
 
-##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
+## <a name="iobjectsafetyimplm_dwcurrentsafety"></a><a name="m_dwcurrentsafety"></a>IObjectSafetyimpl：：m_dwCurrentSafety
 
 存储对象的当前安全级别。
 
@@ -107,9 +107,9 @@ HRESULT GetInterfaceSafetyOptions(
 DWORD m_dwCurrentSafety;
 ```
 
-##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplsetinterfacesafetyoptions"></a><a name="setinterfacesafetyoptions"></a>IObjectSafetyimpl：：设置接口安全选项
 
-使对象安全的初始化或通过设置脚本编写[m_dwCurrentSafety](#m_dwcurrentsafety)成员添加到适当的值。
+通过将[m_dwCurrentSafety](#m_dwcurrentsafety)成员设置为适当的值，使对象在初始化或脚本化方面安全。
 
 ```
 HRESULT SetInterfaceSafetyOptions(
@@ -120,14 +120,14 @@ HRESULT SetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>备注
 
-实现不支持的对象的实现任何接口将返回 E_NOINTERFACE `IUnknown::QueryInterface`。
+对于对象实现 不支持的任何接口，实现返回`IUnknown::QueryInterface`E_NOINTERFACE。
 
 > [!IMPORTANT]
->  支持的任何对象`IObjectSafety`负责其自身的安全，并且它将委托的任何对象。 程序员必须考虑到帐户中用户的上下文中运行代码出现的问题、 跨站点脚本和执行适合区域检查。
+> 支持`IObjectSafety`的任何对象都负责其自身的安全性及其委托的任何对象的安全性。 程序员必须考虑在用户上下文中运行代码、跨站点脚本和执行适当的区域检查所产生的问题。
 
-请参阅[IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) Windows SDK 中。
+请参阅[IObject 安全：在](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\))Windows SDK 中设置接口安全选项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[IObjectSafety 接口](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
+[IObject安全接口](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
 [类概述](../../atl/atl-class-overview.md)

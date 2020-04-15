@@ -1,9 +1,11 @@
 ---
 title: memcpy_s、wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952803"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333337"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
@@ -58,10 +61,10 @@ errno_t wmemcpy_s(
 
 ### <a name="parameters"></a>参数
 
-dest<br/>
+dest**<br/>
 新缓冲区。
 
-*destSize*<br/>
+*放大缩小字体功能 放大缩小字体功能*<br/>
 目标缓冲区的大小，memcpy_s 以字节为单位），wmemcpy_s 以宽字符 (wchar_t) 为单位。
 
 *src*<br/>
@@ -76,27 +79,29 @@ dest<br/>
 
 ### <a name="error-conditions"></a>错误条件
 
-|dest|*destSize*|*src*|*count*|返回值|*Dest*的内容|
+|dest**|*放大缩小字体功能 放大缩小字体功能*|*src*|*count*|返回值|*dest*的内容|
 |------------|----------------|-----------|---|------------------|------------------------|
-|任何|任何|任何|0|0|未修改|
-|**NULL**|任何|任何|非零|**EINVAL**|未修改|
-|任何|任何|**NULL**|非零|**EINVAL**|*dest*已归零|
-|任何|< *计*|任何|非零|**ERANGE**|*dest*已归零|
+|any|any|any|0|0|未修改|
+|**空**|any|any|非零|**埃因瓦尔**|未修改|
+|any|any|**空**|非零|**埃因瓦尔**|*dest*被归零|
+|any|< *计数*|any|非零|**ERANGE**|*dest*被归零|
 
 ## <a name="remarks"></a>备注
 
-**memcpy_s**将*计数*字节从*src*复制到*目标*;**wmemcpy_s**复制*计数*宽字符（两个字节）。 如果源和目标重叠，则**memcpy_s**的行为是不确定的。 使用**memmove_s**处理重叠区域。
+**memcpy_s**副本*计数*字节从*src*到*dest*;**wmemcpy_s**副本*计数*宽字符（两个字节）。 如果源和目标重叠，则**memcpy_s**的行为未定义。 使用**memmove_s**来处理重叠区域。
 
-这些函数验证其参数。 如果*count*为非零，且*dest*或*src*为空指针，或*destSize*小于*count*，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL**或**ERANGE** ，并将**errno**设置为返回值。
+这些函数验证其参数。 如果*计数*是非零，并且*dest*或*src*是空指针，或者*destSize*小于*计数*，则这些函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将返回**EINVAL**或**ERANGE，** 并将**errno**设置为返回值。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**memcpy_s**|\<memory.h> 或 \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -138,7 +143,7 @@ int main()
 0 1 4 9 16 25 36 49 64 81
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

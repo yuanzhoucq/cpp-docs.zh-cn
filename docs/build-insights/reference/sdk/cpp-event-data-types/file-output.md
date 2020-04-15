@@ -1,6 +1,6 @@
 ---
-title: FileOutput 类
-description: C++ BUILD Insights SDK FileOutput 类引用。
+title: 文件输出类
+description: C++生成见解 SDK 文件输出类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1c4053d0378ddb9d5dd061bbc9889c454dc9b52c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 37823da8a4aaac0ce4094583b8aee8ac1eb04aaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324802"
 ---
-# <a name="fileoutput-class"></a>FileOutput 类
+# <a name="fileoutput-class"></a>文件输出类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FileOutput` 类用于[MatchEvent](../functions/match-event.md)、 [MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、 [MatchEventStack](../functions/match-event-stack.md)和[MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md)函数。 用于匹配[EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)、 [EXP_OUTPUT](../event-table.md#exp-output)、 [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)、 [LIB_OUTPUT](../event-table.md#lib-output)或[OBJ_OUTPUT](../event-table.md#obj-output)事件。
+该`FileOutput`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配[EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)EXECUTABLE_IMAGE_OUTPUT、EXP_OUTPUT、IMP_LIB_OUTPUT、LIB_OUTPUT[IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)或[LIB_OUTPUT](../event-table.md#lib-output)[OBJ_OUTPUT](../event-table.md#obj-output)事件。 [EXP_OUTPUT](../event-table.md#exp-output)
 
 ## <a name="syntax"></a>语法
 
@@ -50,20 +50,20 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-除了其[SimpleEvent](simple-event.md)基类的继承成员以外，`FileOutput` 类包含以下成员：
+除了其[SimpleEvent](simple-event.md)基类中继承的成员外，`FileOutput`该类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
-[FileOutput](#file-output)
+[文件输出](#file-output)
 
 ### <a name="functions"></a>函数
 
 [路径](#path)
 [类型](#type)
 
-## <a name="file-output"></a>FileOutput
+## <a name="fileoutput"></a><a name="file-output"></a>文件输出
 
 ```cpp
 FileOutput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*event*\
-[EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)、 [EXP_OUTPUT](../event-table.md#exp-output)、 [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)、 [LIB_OUTPUT](../event-table.md#lib-output)或[OBJ_OUTPUT](../event-table.md#obj-output)事件。
+*事件*\
+[EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)EXECUTABLE_IMAGE_OUTPUT、EXP_OUTPUT、IMP_LIB_OUTPUT、LIB_OUTPUT[LIB_OUTPUT](../event-table.md#lib-output)或[OBJ_OUTPUT](../event-table.md#obj-output)事件。 [EXP_OUTPUT](../event-table.md#exp-output) [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)
 
-## <a name="path"></a> Path
+## <a name="path"></a><a name="path"></a>路径
 
 ```cpp
 const wchar_t Path() const;
@@ -84,7 +84,7 @@ const wchar_t Path() const;
 
 输出文件的绝对路径。
 
-## <a name="type"></a>类别
+## <a name="type"></a><a name="type"></a> 类型
 
 ```cpp
 Type Type() const;

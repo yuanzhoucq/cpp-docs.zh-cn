@@ -1,10 +1,11 @@
 ---
 title: strcpy、wcscpy、_mbscpy
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strcpy
 - wcscpy
 - _mbscpy
+- _o_wcscpy
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 166d44c32a593ad9f32fcd19c56747bfaf4b5d0f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359193"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
 复制字符串。 这些函数更安全的版本已发布，请参阅 [strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
 > [!IMPORTANT]
-> **_mbscpy**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscpy**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -89,7 +91,7 @@ unsigned char *_mbscpy(
 
 ### <a name="parameters"></a>参数
 
-*strDestination*<br/>
+*斯特雷特*<br/>
 目标字符串。
 
 *strSource*<br/>
@@ -101,14 +103,16 @@ null 终止的源字符串。
 
 ## <a name="remarks"></a>备注
 
-**Strcpy**函数将*strSource*（包括终止 null 字符）复制到*strDestination*指定的位置。 如果源和目标字符串重叠，则**strcpy**的行为是不确定的。
+**strcpy**函数将*strSource（* 包括终止空字符）复制到*strDestination*指定的位置。 如果源字符串和目标字符串重叠，**则 strcpy**的行为未定义。
 
 > [!IMPORTANT]
-> 由于**strcpy**在复制*strSource*之前不检查*strDestination*中是否有足够的空间，因此它可能会导致缓冲区溢出。 因此，我们建议你使用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
+> 由于**strcpy**在复制*strSource*之前不会检查*strDestination*中是否有足够的空间，因此这是缓冲区溢出的潜在原因。 因此，我们建议你使用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
-**wcscpy**和 **_mbscpy**分别为**strcpy**的宽字符和多字节字符版本。 **Wcscpy**的参数和返回值是宽字符字符串; **_mbscpy**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_mbscpy**分别是宽字符 **_mbscpy**和多字节字符版本的**strcpy。** **wcscpy**的参数和返回值是宽字符字符串;**_mbscpy**字符串是多字节字符串。 否则这三个函数否则具有相同行为。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -118,13 +122,13 @@ null 终止的源字符串。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**strcpy**|\<string.h>|
 |**wcscpy**|\<string.h> 或 \<wchar.h>|
 |**_mbscpy**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -161,7 +165,7 @@ int main( void )
 String = Hello world from strcpy and strcat!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>

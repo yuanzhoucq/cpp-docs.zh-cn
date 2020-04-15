@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: a57ca6f36546a17b9a35ebea875ff01b43de1332
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6a03c46c972f7746f39a3c5c65ca9b5509983d59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445710"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356979"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 接口
 
@@ -30,44 +30,44 @@ ms.locfileid: "79445710"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 interface class ICommandSource
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[ICommandSource：： AddCommandHandler](#addcommandhandler)|将命令处理程序添加到命令源对象。|
-|[ICommandSource：： AddCommandRangeHandler](#addcommandrangehandler)|向命令源对象添加一组命令处理程序。|
-|[ICommandSource：： AddCommandRangeUIHandler](#addcommandrangeuihandler)|向命令源对象添加一组用户界面命令消息处理程序。|
-|[ICommandSource：： AddCommandUIHandler](#addcommandrangeuihandler)|向命令源对象添加用户界面命令消息处理程序。|
-|[ICommandSource：:P ostCommand](#postcommand)|在不等待消息处理的情况下发布消息。|
-|[ICommandSource：： RemoveCommandHandler](#removecommandhandler)|从命令源对象中删除命令处理程序。|
-|[ICommandSource：： RemoveCommandRangeHandler](#removecommandrangehandler)|从命令源对象中移除一组命令处理程序。|
-|[ICommandSource：： RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|从命令源对象中移除一组用户界面命令消息处理程序。|
-|[ICommandSource：： RemoveCommandUIHandler](#removecommandrangeuihandler)|从命令源对象中删除用户界面命令消息处理程序。|
-|[ICommandSource：： SendCommand](#sendcommand)|发送消息，并在返回前等待处理。|
+|[ICommand 来源：添加命令处理程序](#addcommandhandler)|将命令处理程序添加到命令源对象。|
+|[ICommand 来源：添加命令源处理程序](#addcommandrangehandler)|将一组命令处理程序添加到命令源对象。|
+|[ICommand 来源：添加命令RangeUIHandler](#addcommandrangeuihandler)|将一组用户界面命令消息处理程序添加到命令源对象。|
+|[ICommand 来源：添加命令UIHandler](#addcommandrangeuihandler)|将用户界面命令消息处理程序添加到命令源对象。|
+|[ICommand 来源：:PostCommand](#postcommand)|发布消息，无需等待处理。|
+|[ICommand 来源：删除命令处理程序](#removecommandhandler)|从命令源对象中删除命令处理程序。|
+|[ICommand 来源：删除命令源处理程序](#removecommandrangehandler)|从命令源对象中删除一组命令处理程序。|
+|[ICommand 来源：删除命令RangeUIHandler](#removecommandrangeuihandler)|从命令源对象中删除一组用户界面命令消息处理程序。|
+|[ICommand 来源：删除命令UIHandler](#removecommandrangeuihandler)|从命令源对象中删除用户界面命令消息处理程序。|
+|[ICommand 来源：发送命令](#sendcommand)|发送消息并等待处理它，然后再返回。|
 
 ### <a name="remarks"></a>备注
 
-在 MFC 视图中承载用户控件时， [CWinFormsView 类](../../mfc/reference/cwinformsview-class.md)将命令和更新命令 UI 消息路由到用户控件，以允许它处理 MFC 命令（例如，框架菜单项和工具栏按钮）。 通过实现[ICommandTarget 接口](../../mfc/reference/icommandtarget-interface.md)，可为用户控件指定对 `ICommandSource` 对象的引用。
+当您在 MFC 视图中托管用户控件时[，CWinFormsView 类](../../mfc/reference/cwinformsview-class.md)会将命令和命令 UI 消息更新到用户控件，以允许它处理 MFC 命令（例如，框架菜单项和工具栏按钮）。 通过实现[ICommandTarget 接口](../../mfc/reference/icommandtarget-interface.md)，您可以为用户提供对`ICommandSource`对象的引用。
 
-有关如何使用 `ICommandTarget`的示例，请参阅[如何：将命令路由添加到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+有关如何使用，请参阅[：将命令路由添加到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)`ICommandTarget`。
 
 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxwinforms （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）
+**标题**：afxwinforms.h（在程序集 atlmfc_lib_mfcmc80.dll 中定义）
 
-## <a name="addcommandhandler"></a>ICommandSource：： AddCommandHandler
+## <a name="icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommand 来源：添加命令处理程序
 
 将命令处理程序添加到命令源对象。
 
-```
+```cpp
 void AddCommandHandler(
     unsigned int cmdID,
     CommandHandler^ cmdHandler);
@@ -82,14 +82,14 @@ void AddCommandHandler(
 
 ### <a name="remarks"></a>备注
 
-此方法将命令处理程序 cmdHandler 添加到命令源对象，并将该处理程序映射到 cmdID。
-有关如何使用 AddCommandHandler 的示例，请参阅[如何：将命令路由添加到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+此方法将命令处理程序 cmdHandler 添加到命令源对象，并将处理程序映射到 cmdID。
+有关如何使用 AddCommandHandler 的示例，请参阅[：将命令路由添加到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
-## <a name="addcommandrangehandler"></a>ICommandSource：： AddCommandRangeHandler
+## <a name="icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommand 来源：添加命令源处理程序
 
-向命令源对象添加一组命令处理程序。
+将一组命令处理程序添加到命令源对象。
 
-```
+```cpp
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -98,21 +98,22 @@ void AddCommandRangeHandler(
 
 ### <a name="parameters"></a>参数
 
-*cmdIDMin*<br/>
-命令 ID 范围的起始索引。
+*厘米德明*<br/>
+命令 ID 范围的开头索引。
 *cmdIDMax*<br/>
 命令 ID 范围的结束索引。
 *cmdHandler*<br/>
 命令映射到的消息处理程序方法的句柄。
+
 ### <a name="remarks"></a>备注
 
-此方法将一系列连续的命令 Id 映射到单个消息处理程序，并将其添加到命令源对象。 这用于处理一组具有一种方法的相关按钮。
+此方法将连续范围的命令指示映射到单个消息处理程序，并将其添加到命令源对象。 这用于使用一种方法处理一组相关按钮。
 
-## <a name="addcommandrangeuihandler"></a>ICommandSource：： AddCommandRangeUIHandler
+## <a name="icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommand 来源：添加命令RangeUIHandler
 
-向命令源对象添加一组用户界面命令消息处理程序。
+将一组用户界面命令消息处理程序添加到命令源对象。
 
-```
+```cpp
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -121,8 +122,8 @@ void AddCommandRangeUIHandler(
 
 ### <a name="parameters"></a>参数
 
-*cmdIDMin*<br/>
-命令 ID 范围的起始索引。
+*厘米德明*<br/>
+命令 ID 范围的开头索引。
 *cmdIDMax*<br/>
 命令 ID 范围的结束索引。
 *cmdHandler*<br/>
@@ -130,13 +131,13 @@ void AddCommandRangeUIHandler(
 
 ### <a name="remarks"></a>备注
 
-此方法将一系列连续的命令 Id 映射到一个用户界面命令消息处理程序，并将其添加到命令源对象。 这用于处理一组具有一种方法的相关按钮。
+此方法将连续范围的命令指示映射到单个用户界面命令消息处理程序，并将其添加到命令源对象。 这用于使用一种方法处理一组相关按钮。
 
-## <a name="addcommanduihandler"></a>ICommandSource：： AddCommandUIHandler
+## <a name="icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommand 来源：添加命令UIHandler
 
-向命令源对象添加用户界面命令消息处理程序。
+将用户界面命令消息处理程序添加到命令源对象。
 
-```
+```cpp
 void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
@@ -151,29 +152,30 @@ void AddCommandUIHandler(
 
 ### <a name="remarks"></a>备注
 
-此方法将用户界面命令消息处理程序 cmdHandler 添加到命令源对象，并将该处理程序映射到 cmdID。
+此方法将用户界面命令消息处理程序 cmdHandler 添加到命令源对象，并将处理程序映射到 cmdID。
 
-## <a name="postcommand"></a>ICommandSource：:P ostCommand
+## <a name="icommandsourcepostcommand"></a><a name="postcommand"></a>ICommand 来源：:PostCommand
 
-在不等待消息处理的情况下发布消息。
+发布消息，无需等待处理。
 
-```
+```cpp
 void PostCommand(unsigned int command);
 ```
 
 ### <a name="parameters"></a>参数
 
-*command*<br/>
-要发布的消息的命令 ID。
+*命令*<br/>
+要过帐的消息的命令 ID。
+
 ### <a name="remarks"></a>备注
 
-此方法以异步方式发布映射到由命令指定的 ID 的消息。 它调用 CWnd：:P ostMessage 将消息放入窗口的消息队列中，然后返回而不等待相应的窗口处理该消息。
+此方法异步发布映射到命令指定的 ID 的消息。 它调用 CWnd：:PostMessage 将消息放在窗口的消息队列中，然后返回而不等待相应的窗口来处理消息。
 
-## <a name="removecommandhandler"></a>ICommandSource：： RemoveCommandHandler
+## <a name="icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommand 来源：删除命令处理程序
 
 从命令源对象中删除命令处理程序。
 
-```
+```cpp
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 
@@ -181,15 +183,16 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 *cmdID*<br/>
 命令 ID。
+
 ### <a name="remarks"></a>备注
 
 此方法从命令源对象中删除映射到 cmdID 的命令处理程序。
 
-## <a name="removecommandrangehandler"></a>ICommandSource：： RemoveCommandRangeHandler
+## <a name="icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommand 来源：删除命令源处理程序
 
-从命令源对象中移除一组命令处理程序。
+从命令源对象中删除一组命令处理程序。
 
-```
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -197,19 +200,20 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="parameters"></a>参数
 
-*cmdIDMin*<br/>
-命令 ID 范围的起始索引。
+*厘米德明*<br/>
+命令 ID 范围的开头索引。
 *cmdIDMax*<br/>
 命令 ID 范围的结束索引。
+
 ### <a name="remarks"></a>备注
 
-此方法从命令源对象中删除一组消息处理程序，这些消息处理程序映射到由 cmdIDMin 和 cmdIDMax 指定的命令 Id。
+此方法从命令源对象中删除一组消息处理程序，这些处理程序映射到 cmdIDMin 和 cmdIDMax 指定的命令 ID。
 
-## <a name="removecommandrangeuihandler"></a>ICommandSource：： RemoveCommandRangeUIHandler
+## <a name="icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommand 来源：删除命令RangeUIHandler
 
-从命令源对象中移除一组用户界面命令消息处理程序。
+从命令源对象中删除一组用户界面命令消息处理程序。
 
-```
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -217,19 +221,20 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="parameters"></a>参数
 
-*cmdIDMin*<br/>
-命令 ID 范围的起始索引。
+*厘米德明*<br/>
+命令 ID 范围的开头索引。
 *cmdIDMax*<br/>
 命令 ID 范围的结束索引。
+
 ### <a name="remarks"></a>备注
 
-此方法从命令源对象中移除一组用户界面命令消息处理程序，并映射到由 cmdIDMin 和 cmdIDMax 指定的命令 Id。
+此方法从命令源对象中删除一组用户界面命令消息处理程序，这些处理程序映射到 cmdIDMin 和 cmdIDMax 指定的命令 ID。
 
-## <a name="removecommanduihandler"></a>ICommandSource：： RemoveCommandUIHandler
+## <a name="icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommand 来源：删除命令UIHandler
 
 从命令源对象中删除用户界面命令消息处理程序。
 
-```
+```cpp
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 
@@ -237,25 +242,28 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 
 *cmdID*<br/>
 命令 ID。
+
 ### <a name="remarks"></a>备注
 
 此方法从命令源对象中删除映射到 cmdID 的用户界面命令消息处理程序。
 
-## <a name="sendcommand"></a>ICommandSource：： SendCommand
+## <a name="icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommand 来源：发送命令
 
-发送消息，并在返回前等待处理。
+发送消息并等待处理它，然后再返回。
 
-```
+```cpp
 void SendCommand(unsigned int command);
 ```
 
 ### <a name="parameters"></a>参数
 
-*command*<br/>
+*命令*<br/>
 要发送的消息的命令 ID。
+
 ### <a name="remarks"></a>备注
 
-此方法同步发送映射到由命令指定的 ID 的消息。 它调用 CWnd：： SendMessage 将消息放入窗口的消息队列中，并等待该窗口过程在返回前处理该消息。
+此方法同步发送映射到命令指定的 ID 的消息。 它调用 CWnd：：SendMessage 将消息放在窗口的消息队列中，并等待该窗口过程处理该消息后再返回。
+
 ## <a name="see-also"></a>另请参阅
 
 [如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>

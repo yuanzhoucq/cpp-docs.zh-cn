@@ -1,9 +1,11 @@
 ---
 title: _memicmp、_memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951843"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333228"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
@@ -59,16 +62,16 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>参数
 
-*buffer1*<br/>
+*缓冲区1*<br/>
 第一个缓冲区。
 
-*buffer2*<br/>
+*缓冲区2*<br/>
 第二个缓冲区。
 
 *count*<br/>
 字符数。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -77,27 +80,29 @@ int _memicmp_l(
 
 |返回值|buf1 和 buf2 的第一个计数字节的关系|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*小于*buffer2*。|
-|0|*buffer1*与*buffer2*相同。|
-|> 0|*buffer1*大于*buffer2*。|
+|< 0|*缓冲区1*小于*缓冲区2*。|
+|0|*缓冲区1*与*缓冲区2*相同。|
+|> 0|*缓冲区1*大于*缓冲区2*。|
 |**_NLSCMPERROR**|出现了错误。|
 
 ## <a name="remarks"></a>备注
 
-**_Memicmp**函数比较两个缓冲区*buffer1*和*buffer2* byte 的第一个*计数*字符。 该比较不区分大小写。
+**_memicmp**函数比较两个缓冲区*缓冲区1*和*缓冲区2*字节字节的第一*个计数*字符。 该比较不区分大小写。
 
-如果*buffer1*或*buffer2*为 null 指针，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
+如果*buffer1*或*buffer2*是空指针，则此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将**返回_NLSCMPERROR**并将**errno**设置到**EINVAL**。
 
-**_memicmp**对与区域设置相关的行为使用当前区域设置; **_memicmp_l**是相同的，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**使用当前区域设置进行与区域设置相关的行为;**_memicmp_l**是相同的，只是它使用传入区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> 或 \<string.h>|
 |**_memicmp_l**|\<memory.h> 或 \<string.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -134,7 +139,7 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
