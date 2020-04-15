@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
-ms.openlocfilehash: fcd103283738ce7d573faa2fb1025ee2af642021
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90056e648a53218ac06083d43ca34870e1ca72fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258489"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326712"
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 类
 
-使用此类的自变量作为`MonitorClass`到你想要禁用动态缓存维护的缓存类模板参数。
+如果要禁用动态缓存维护，`MonitorClass`请使用此类作为模板参数的参数来缓存类。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -38,29 +38,29 @@ class CNoWorkerThread
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CNoWorkerThread::AddHandle](#addhandle)|非功能上的等同于[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)。|
-|[CNoWorkerThread::AddTimer](#addtimer)|非功能上的等同于[CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer)。|
-|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|非功能上的等同于[CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle)。|
-|[CNoWorkerThread::GetThreadId](#getthreadid)|非功能上的等同于[CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid)。|
-|[CNoWorkerThread::Initialize](#initialize)|非功能上的等同于[CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize)。|
-|[CNoWorkerThread::RemoveHandle](#removehandle)|非功能上的等同于[CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle)。|
-|[CNoWorkerThread::Shutdown](#shutdown)|非功能上的等同于[CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown)。|
+|[CNoWorker 线程：：添加句柄](#addhandle)|CWorkerThread 的非功能等效项[：addHandle](../../atl/reference/cworkerthread-class.md#addhandle)。|
+|[CNoWorkerThread：：添加计时器](#addtimer)|CWorkerThread 的非功能等效项[：addTimer](../../atl/reference/cworkerthread-class.md#addtimer)。|
+|[CNoWorker线程：获取线程句柄](#getthreadhandle)|CWorkerThread 的非功能等效项[：获取线程句柄](../../atl/reference/cworkerthread-class.md#getthreadhandle)。|
+|[CNoWorker 线程：获取线程 Id](#getthreadid)|CWorkerThread 的非功能等效项[：getThreadId](../../atl/reference/cworkerthread-class.md#getthreadid)。|
+|[CNoWorkerThread：初始化](#initialize)|CWorkerThread 的非功能等效项[：：初始化](../../atl/reference/cworkerthread-class.md#initialize)。|
+|[CNoWorker 线程：：删除句柄](#removehandle)|CWorkerThread 的非功能等效项[：：删除句柄](../../atl/reference/cworkerthread-class.md#removehandle)。|
+|[CNoWorker 线程：：关闭](#shutdown)|CWorkerThread 的非功能等效项[：：关机](../../atl/reference/cworkerthread-class.md#shutdown)。|
 
 ## <a name="remarks"></a>备注
 
-此类提供相同的公共接口[CWorkerThread](../../atl/reference/cworkerthread-class.md)。 此接口应由提供`MonitorClass`缓存类模板参数。
+此类提供与[CWorkerThread](../../atl/reference/cworkerthread-class.md)相同的公共接口。 此接口预期由`MonitorClass`模板参数提供给缓存类。
 
-此类中的方法的实现不执行任何操作。 始终返回一个 HRESULT，方法返回 S_OK，并始终返回的句柄或线程 ID 的方法返回 0。
+类中的方法实现不执行任何操作。 返回 HRESULT 的方法始终返回S_OK，返回 HANDLE 或线程 ID 的方法始终返回 0。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlutil.h
+**标题：** atlutil.h
 
-##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle
+## <a name="cnoworkerthreadaddhandle"></a><a name="addhandle"></a>CNoWorker 线程：：添加句柄
 
-非功能上的等同于[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)。
+CWorkerThread 的非功能等效项[：addHandle](../../atl/reference/cworkerthread-class.md#addhandle)。
 
 ```
 HRESULT AddHandle(HANDLE /* hObject */,
@@ -70,15 +70,15 @@ HRESULT AddHandle(HANDLE /* hObject */,
 
 ### <a name="return-value"></a>返回值
 
-始终返回 S_OK。
+始终返回S_OK。
 
 ### <a name="remarks"></a>备注
 
-提供此类的实现没有任何影响。
+此类提供的实现不执行任何操作。
 
-##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer
+## <a name="cnoworkerthreadaddtimer"></a><a name="addtimer"></a>CNoWorkerThread：：添加计时器
 
-非功能上的等同于[CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer)。
+CWorkerThread 的非功能等效项[：addTimer](../../atl/reference/cworkerthread-class.md#addtimer)。
 
 ```
 HRESULT AddTimer(DWORD /* dwInterval */,
@@ -89,15 +89,15 @@ HRESULT AddTimer(DWORD /* dwInterval */,
 
 ### <a name="return-value"></a>返回值
 
-始终返回 S_OK。
+始终返回S_OK。
 
 ### <a name="remarks"></a>备注
 
-提供此类的实现没有任何影响。
+此类提供的实现不执行任何操作。
 
-##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle
+## <a name="cnoworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CNoWorker线程：获取线程句柄
 
-非功能上的等同于[CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle)。
+CWorkerThread 的非功能等效项[：获取线程句柄](../../atl/reference/cworkerthread-class.md#getthreadhandle)。
 
 ```
 HANDLE GetThreadHandle() throw();
@@ -109,11 +109,11 @@ HANDLE GetThreadHandle() throw();
 
 ### <a name="remarks"></a>备注
 
-提供此类的实现没有任何影响。
+此类提供的实现不执行任何操作。
 
-##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId
+## <a name="cnoworkerthreadgetthreadid"></a><a name="getthreadid"></a>CNoWorker 线程：获取线程 Id
 
-非功能上的等同于[CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid)。
+CWorkerThread 的非功能等效项[：getThreadId](../../atl/reference/cworkerthread-class.md#getthreadid)。
 
 ```
 DWORD GetThreadId() throw();
@@ -125,11 +125,11 @@ DWORD GetThreadId() throw();
 
 ### <a name="remarks"></a>备注
 
-提供此类的实现没有任何影响。
+此类提供的实现不执行任何操作。
 
-##  <a name="initialize"></a>  CNoWorkerThread::Initialize
+## <a name="cnoworkerthreadinitialize"></a><a name="initialize"></a>CNoWorkerThread：初始化
 
-非功能上的等同于[CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize)。
+CWorkerThread 的非功能等效项[：：初始化](../../atl/reference/cworkerthread-class.md#initialize)。
 
 ```
 HRESULT Initialize() throw();
@@ -137,15 +137,15 @@ HRESULT Initialize() throw();
 
 ### <a name="return-value"></a>返回值
 
-始终返回 S_OK。
+始终返回S_OK。
 
 ### <a name="remarks"></a>备注
 
-提供此类的实现没有任何影响。
+此类提供的实现不执行任何操作。
 
-##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle
+## <a name="cnoworkerthreadremovehandle"></a><a name="removehandle"></a>CNoWorker 线程：：删除句柄
 
-非功能上的等同于[CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle)。
+CWorkerThread 的非功能等效项[：：删除句柄](../../atl/reference/cworkerthread-class.md#removehandle)。
 
 ```
 HRESULT RemoveHandle(HANDLE /* hObject */) throw();
@@ -153,15 +153,15 @@ HRESULT RemoveHandle(HANDLE /* hObject */) throw();
 
 ### <a name="return-value"></a>返回值
 
-始终返回 S_OK。
+始终返回S_OK。
 
 ### <a name="remarks"></a>备注
 
-提供此类的实现没有任何影响。
+此类提供的实现不执行任何操作。
 
-##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown
+## <a name="cnoworkerthreadshutdown"></a><a name="shutdown"></a>CNoWorker 线程：：关闭
 
-非功能上的等同于[CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown)。
+CWorkerThread 的非功能等效项[：：关机](../../atl/reference/cworkerthread-class.md#shutdown)。
 
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
@@ -169,8 +169,8 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="return-value"></a>返回值
 
-始终返回 S_OK。
+始终返回S_OK。
 
 ### <a name="remarks"></a>备注
 
-提供此类的实现没有任何影响。
+此类提供的实现不执行任何操作。

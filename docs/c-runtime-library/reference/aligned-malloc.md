@@ -1,8 +1,9 @@
 ---
 title: _aligned_malloc
-ms.date: 12/11/2019
+ms.date: 4/2/2020
 api_name:
 - _aligned_malloc
+- _o__aligned_malloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350605"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -48,29 +50,31 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>参数
 
-*size*<br/>
+*大小*<br/>
 请求的内存分配的大小。
 
-*alignment*<br/>
+*对齐 (alignment)*<br/>
 对齐值，必须是 2 的整数次幂。
 
 ## <a name="return-value"></a>返回值
 
-指向分配的内存块的指针; 如果操作失败，则为 NULL。 指针是*对齐*的倍数。
+如果操作失败，指向已分配的内存块的指针或 NULL。 指针是对齐的倍*数*。
 
 ## <a name="remarks"></a>备注
 
-**_aligned_malloc**基于[malloc](malloc.md)。
+**_aligned_malloc**是基于[马洛克](malloc.md)。
 
-**_aligned_malloc**标记为 `__declspec(noalias)` 和 `__declspec(restrict)`，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**_aligned_malloc**标记为`__declspec(noalias)`，`__declspec(restrict)`表示保证函数不修改全局变量，并且返回的指针不会别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
-如果内存分配失败或请求的大小大于 `errno`，则此函数会将 `ENOMEM` 设置为 `_HEAP_MAXREQ`。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc**验证其参数。 如果*对齐*不是2的幂或*大小*为零，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 NULL，并将 `errno` 设置为 `EINVAL`。
+如果内存分配失败或请求的大小大于 `errno`，则此函数会将 `ENOMEM` 设置为 `_HEAP_MAXREQ`。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外 **，_aligned_malloc**验证其参数。 如果*对齐*不是 2 的功率或*大小*为零，则此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 NULL`errno`并`EINVAL`设置到 。
 
-使用[_aligned_free](aligned-free.md)释放由 **_aligned_malloc**和 `_aligned_offset_malloc`获取的内存。 不要使用 `free`，这不会正确回收对齐的内存，并可能导致难以诊断 bug。
+使用[_aligned_free](aligned-free.md)来解分配 **_aligned_malloc**和`_aligned_offset_malloc`获得的内存。 不要使用`free`，这不能正确回收对齐的内存，并可能导致难以诊断的错误。
 
-## <a name="requirements"></a>需求
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
-|例程所返回的值|必需的标头|
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
 |-------------|---------------------|
 |**_aligned_malloc**|\<malloc.h>|
 

@@ -1,5 +1,5 @@
 ---
-title: 事件类 (WRL)
+title: 事件类 （WRL）
 ms.date: 09/24/2018
 ms.topic: reference
 f1_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 2d36b4fa3d1824f43e0cfafe55c439a6bdeccb6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85b4c2d1f1a27e90a65e47aa749e079f4aa08739
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398545"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371524"
 ---
-# <a name="event-class-wrl"></a>事件类 (WRL)
+# <a name="event-class-wrl"></a>事件类 （WRL）
 
 表示一个事件。
 
@@ -32,15 +32,15 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                   | 描述
+名称                   | 说明
 ---------------------- | ------------------------------------------------
-[Event::Event](#event) | 初始化 `Event` 类的新实例。
+[事件：事件](#event) | 初始化 `Event` 类的新实例。
 
 ### <a name="public-operators"></a>公共运算符
 
-名称                                 | 描述
+名称                                 | 说明
 ------------------------------------ | ------------------------------------------------------------------------
-[Event::operator=](#operator-assign) | 指定将分配`Event`对当前引用`Event`实例。
+[事件：：操作员*](#operator-assign) | 将指定的`Event`引用分配给当前`Event`实例。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -50,11 +50,11 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** corewrappers.h
+**标题：** 核心包装.h
 
-**命名空间：** Microsoft::WRL::Wrappers
+**命名空间：** 微软：：WRL：包装
 
-## <a name="event"></a>Event::Event
+## <a name="eventevent"></a><a name="event"></a>事件：事件
 
 初始化 `Event` 类的新实例。
 
@@ -69,12 +69,12 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-事件的句柄。 默认情况下*h*初始化为`nullptr`。
+*H*<br/>
+事件的句柄。 默认情况下 *，h*初始化到`nullptr`。
 
-## <a name="operator-assign"></a>Event::operator=
+## <a name="eventoperator"></a><a name="operator-assign"></a>事件：：操作员*
 
-指定将分配`Event`对当前引用`Event`实例。
+将指定的`Event`引用分配给当前`Event`实例。
 
 ```cpp
 WRL_NOTHROW Event& operator=(
@@ -84,9 +84,9 @@ WRL_NOTHROW Event& operator=(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-对的右值引用`Event`实例。
+*H*<br/>
+实例的`Event`rvalue 引用。
 
 ### <a name="return-value"></a>返回值
 
-指向当前`Event`实例。
+指向当前`Event`实例的指针。

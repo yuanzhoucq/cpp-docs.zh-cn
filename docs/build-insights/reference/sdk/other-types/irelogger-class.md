@@ -1,6 +1,6 @@
 ---
 title: IRelogger 类
-description: C++ BUILD Insights SDK IRelogger 类引用。
+description: C++生成见解 SDK IRelogger 类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 146377b2b44df43ed4b2f749efd9fb614a2a09c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422894"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329146"
 ---
 # <a name="irelogger-class"></a>IRelogger 类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`IRelogger` 类提供一个接口，用于 relogging Windows 事件跟踪（ETW）跟踪。 它与[MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md)和[MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md)函数结合使用。 使用 `IRelogger` 作为基类来创建自己的 relogger，可以是 relogger 组的一部分。
+该`IRelogger`类提供了一个接口，用于重新记录 Windows （ETW） 跟踪的事件跟踪。 它与[MakeDynamic ReloggerGroup](../functions/make-dynamic-relogger-group.md)和[使静态重新记录组](../functions/make-static-analyzer-group.md)功能一起使用。 用作`IRelogger`基类，创建自己的重新记录器，该重新记录器可以是重新记录组的一部分。
 
 ## <a name="syntax"></a>语法
 
@@ -54,26 +54,26 @@ public:
 
 ## <a name="remarks"></a>备注
 
-所有未重写的函数的默认返回值都是 `AnalysisControl::CONTINUE`。 有关详细信息，请参阅[AnalysisControl](analysis-control-enum-class.md)。
+未重写的所有函数的默认返回值为`AnalysisControl::CONTINUE`。 有关详细信息，请参阅[分析控制](analysis-control-enum-class.md)。
 
 ## <a name="members"></a>成员
 
 ### <a name="destructor"></a>析构函数
 
-[~ IRelogger](#irelogger-destructor)
+[*IRelogger](#irelogger-destructor)
 
 ### <a name="functions"></a>函数
 
-[OnBeginRelogging](#on-begin-relogging)\
-[OnBeginReloggingPass](#on-begin-relogging-pass)\
-[OnEndRelogging](#on-end-relogging)\
-[OnEndReloggingPass](#on-end-relogging-pass)\
-[OnSimpleEvent](#on-simple-event)\
-[OnStartActivity](#on-start-activity)\
-[OnStopActivity](#on-stop-activity)\
+[在开始重新记录](#on-begin-relogging)\
+[在"开始记录"Pass](#on-begin-relogging-pass)\
+[结束重新记录](#on-end-relogging)\
+[结束重新记录通道](#on-end-relogging-pass)\
+[在Simple事件上](#on-simple-event)\
+[启动活动](#on-start-activity)\
+[停止活动](#on-stop-activity)\
 [OnTraceInfo](#on-trace-info)
 
-## <a name="irelogger-destructor"></a>~ IRelogger
+## <a name="irelogger"></a><a name="irelogger-destructor"></a>*IRelogger
 
 销毁 IRelogger 类。
 
@@ -81,9 +81,9 @@ public:
 virtual ~IRelogger();
 ```
 
-## <a name="on-begin-relogging"></a>OnBeginRelogging
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>在开始重新记录
 
-在 relogging 传递开始之前调用此函数。
+在重新日志记录传递开始之前调用此功能。
 
 ```cpp
 virtual AnalysisControl OnBeginRelogging();
@@ -91,11 +91,11 @@ virtual AnalysisControl OnBeginRelogging();
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
-## <a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>在"开始记录"Pass
 
-此函数在 relogging pass 开始时调用。
+此函数在重新记录通道的开头调用。
 
 ```cpp
 virtual AnalysisControl OnBeginReloggingPass();
@@ -103,11 +103,11 @@ virtual AnalysisControl OnBeginReloggingPass();
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
-## <a name="on-end-relogging"></a>OnEndRelogging
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a>结束重新记录
 
-Relogging pass 结束后，调用此函数。
+重新记录传递结束后调用此功能。
 
 ```cpp
 virtual AnalysisControl OnEndRelogging();
@@ -115,11 +115,11 @@ virtual AnalysisControl OnEndRelogging();
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
-## <a name="on-end-relogging-pass"></a>OnEndReloggingPass
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>结束重新记录通道
 
-此函数在 relogging pass 结束时调用。
+此函数在重新记录通道结束时调用。
 
 ```cpp
 virtual AnalysisControl OnEndReloggingPass();
@@ -127,74 +127,74 @@ virtual AnalysisControl OnEndReloggingPass();
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
-## <a name="on-simple-event"></a>OnSimpleEvent
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a>在Simple事件上
 
 ```cpp
 virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 ```
 
-处理简单事件时将调用此函数。
+正在处理简单事件时调用此函数。
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*eventStack*\
+*事件堆栈*\
 此简单事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
-## <a name="on-start-activity"></a>OnStartActivity
+## <a name="onstartactivity"></a><a name="on-start-activity"></a>启动活动
 
 ```cpp
 virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 ```
 
-处理活动开始事件时将调用此函数。
+正在处理活动启动事件时调用此函数。
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*eventStack*\
-此活动开始事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
+*事件堆栈*\
+此活动启动事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
-## <a name="on-stop-activity"></a>OnStopActivity
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a>停止活动
 
-处理活动停止事件时将调用此函数。
+正在处理活动停止事件时调用此函数。
 
 ```cpp
 virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*eventStack*\
+*事件堆栈*\
 此活动停止事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
-## <a name="on-trace-info"></a>OnTraceInfo
+## <a name="ontraceinfo"></a><a name="on-trace-info"></a>OnTraceInfo
 
 ```cpp
 virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 ```
 
-每次分析或 relogging 通过时调用此函数一次。
+此函数在每个分析或重新记录传递开始时调用一次。
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*traceInfo*\
-一个[TraceInfo](../cpp-event-data-types/trace-info.md)对象，它包含有关所使用的跟踪的有用属性。
+*跟踪信息*\
+包含有关要消耗的跟踪的有用属性的[TraceInfo](../cpp-event-data-types/trace-info.md)对象。
 
 ### <a name="return-value"></a>返回值
 
-描述接下来应执行的操作的[AnalysisControl](analysis-control-enum-class.md)代码。
+分析[控制](analysis-control-enum-class.md)代码，描述接下来会发生什么。
 
 ::: moniker-end
