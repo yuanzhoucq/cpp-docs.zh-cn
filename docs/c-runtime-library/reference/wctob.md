@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944933"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320444"
 ---
 # <a name="wctob"></a>wctob
 
@@ -52,25 +54,27 @@ int wctob(
 
 ## <a name="return-value"></a>返回值
 
-如果**wctob**成功地转换宽字符，则它仅在多字节字符正好为一个字节时返回其多字节字符表示形式。 如果**wctob**遇到不能转换为多字节字符的宽字符，或者多字节字符的长度不能正好为一个字节，则返回-1。
+如果**wctob**成功转换宽字符，则仅当多字节字符正好是一个字节长时，它才会返回其多字节字符表示形式。 如果**wctob**遇到宽字符，它不能转换为多字节字符，或者多字节字符不完全是一个字节长，它将返回 -1。
 
 ## <a name="remarks"></a>备注
 
-如果多字节字符的长度正好为一个字节，则**wctob**函数会将*wchar*中包含的宽字符转换为返回**int**值传递的相应多字节字符。
+如果多字节字符正好是一个字节长，**则 wctob**函数将*wchar*中包含的宽字符转换为返回**int**值传递的相应多字节字符。
 
-如果**wctob**不成功且未找到相应的多字节字符，则该函数将**Errno**设置为**eilseq 且**并返回-1。
+如果**wctob**不成功，并且未找到相应的多字节字符，则函数将**errno**设置到**EILSEQ**并返回 -1。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-此程序演示**wcstombs**函数的行为。
+此程序说明了**wcstombs**函数的行为。
 
 ```C
 // crt_wctob.c
@@ -102,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

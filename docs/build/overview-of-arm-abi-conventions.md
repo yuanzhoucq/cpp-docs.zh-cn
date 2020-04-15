@@ -2,18 +2,18 @@
 title: ARM ABI 约定概述
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303188"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320721"
 ---
-# <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 约定概述
+# <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 公约概述
 
-针对 ARM 上 Windows 处理器编译的代码的应用程序二进制接口 (ABI) 基于标准 ARM EABI。 本文突出显示了 ARM 上的 Windows 与标准之间的主要差异。 本文档介绍了 ARM32 ABI。 有关 ARM64 ABI 的信息，请参阅[ARM64 abi 约定概述](arm64-windows-abi-conventions.md)。 有关标准 ARM EABI 的详细信息，请参阅[ARM 体系结构的应用程序二进制接口（ABI）](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) （外部链接）。
+针对 ARM 上 Windows 处理器编译的代码的应用程序二进制接口 (ABI) 基于标准 ARM EABI。 本文突出显示了 ARM 上的 Windows 与标准之间的主要差异。 本文档介绍 ARM32 ABI。 有关 ARM64 ABI 的信息，请参阅[ARM64 ABI 约定概述](arm64-windows-abi-conventions.md)。 有关标准 ARM EABI 的详细信息，请参阅 ARM 体系结构（外部链接[）的应用程序二进制接口 （ABI）。](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)
 
-## <a name="base-requirements"></a>基本需求
+## <a name="base-requirements"></a>基本要求
 
 ARM 上的 Windows 假定始终都在 ARMv7 体系结构上运行。 VFPv3-D32 或更高版本的形式的浮点支持必须存在于硬件中。 VFP 必须同时支持硬件中的单精度和双精度浮点。 Windows 运行时不支持要在非 VFP 硬件上运行的浮点的模拟。
 
@@ -23,9 +23,9 @@ ARM 上的 Windows 假定始终都在 ARMv7 体系结构上运行。 VFPv3-D32 �
 
 ## <a name="endianness"></a>字节排序方式
 
-在 Little-endian 模式下执行 ARM 上的 Windows。 MSVC 编译器和 Windows 运行时始终都需要少量字节序数据。 尽管 ARM 指令集体系结构 (ISA) 中的 SETEND 指令甚至允许用户模式代码更改当前字节排序方式，但不鼓励执行此操作，因为这对于应用程序很危险。 如果在 Big-endian 模式下生成某个异常，则该行为将不可预测，并且可能会导致用户模式中出现应用程序错误或者内核模式中出现 bugcheck。
+在 Little-endian 模式下执行 ARM 上的 Windows。 MSVC 编译器和 Windows 运行时都期望随时提供很少的终端数据。 尽管 ARM 指令集体系结构 (ISA) 中的 SETEND 指令甚至允许用户模式代码更改当前字节排序方式，但不鼓励执行此操作，因为这对于应用程序很危险。 如果在 Big-endian 模式下生成某个异常，则该行为将不可预测，并且可能会导致用户模式中出现应用程序错误或者内核模式中出现 bugcheck。
 
-## <a name="alignment"></a>对齐
+## <a name="alignment"></a>Alignment
 
 尽管 Windows 使 ARM 硬件可以透明地处理未对齐的整数访问，但在某些情况下，可能仍然会生成对齐错误。 遵循下列对齐规则：
 
@@ -53,14 +53,14 @@ ARM 上的 Windows 假定始终都在 ARMv7 体系结构上运行。 VFPv3-D32 �
 
 - 该目标指令必须为以下项之一：
 
-   |16 位操作代码|实例|限制|
+   |16 位操作代码|类|限制|
    |---------------------|-----------|------------------|
    |MOV、MVN|移动|Rm != PC、Rd != PC|
    |LDR、LDR[S]B、LDR[S]H|从内存中加载|但不是 LDR 文本格式|
    |STR、STRB、STRH|存储到内存||
    |ADD、ADC、RSB、SBC、SUB|加法或减法|但不是 ADD/SUB SP、SP 和 imm7 形式<br /><br /> Rm != PC、Rdn != PC、Rdm != PC|
    |CMP、CMN|比较|Rm != PC、Rn != PC|
-   |MUL|相乘||
+   |MUL|乘||
    |ASR、LSL、LSR、ROR|移位||
    |AND、BIC、EOR、ORR、TST|按位算术运算||
    |BX|寄存器的分支|Rm != PC|
@@ -77,10 +77,10 @@ ARM 处理器支持 16 个整数寄存器：
 
 |注册|是否易失？|角色|
 |--------------|---------------|----------|
-|r0|Volatile|参数寄存器、结果寄存器、临时寄存器 1|
-|r1|Volatile|参数寄存器、结果寄存器、临时寄存器 2|
-|r2|Volatile|参数寄存器、临时寄存器 3|
-|r3|Volatile|参数寄存器、临时寄存器 4|
+|r0|易失的|参数寄存器、结果寄存器、临时寄存器 1|
+|r1|易失的|参数寄存器、结果寄存器、临时寄存器 2|
+|r2|易失的|参数寄存器、临时寄存器 3|
+|r3|易失的|参数寄存器、临时寄存器 4|
 |r4|非易失性的||
 |r5|非易失性的||
 |r6|非易失性的||
@@ -89,7 +89,7 @@ ARM 处理器支持 16 个整数寄存器：
 |r9|非易失性的||
 |r10|非易失性的||
 |r11|非易失性的|帧指针|
-|r12|Volatile|过程内部调用临时寄存器|
+|r12|易失的|过程内部调用临时寄存器|
 |r13 (SP)|非易失性的|堆栈指针|
 |r14 (LR)|非易失性的|链接寄存器|
 |r15 (PC)|非易失性的|程序计数器|
@@ -104,22 +104,22 @@ Windows 仅支持 ARM 变量，它们支持 VFPv3-D32 协处理器。 这意味�
 
 |单精度值|双精度值|Quads|是否易失？|角色|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volatile|参数寄存器、结果寄存器、临时寄存器|
-|s4-s7|d2-d3|q1|Volatile|参数寄存器、临时寄存器|
-|s8-s11|d4-d5|q2|Volatile|参数寄存器、临时寄存器|
-|s12-s15|d6-d7|q3|Volatile|参数寄存器、临时寄存器|
+|s0-s3|d0-d1|q0|易失的|参数寄存器、结果寄存器、临时寄存器|
+|s4-s7|d2-d3|q1|易失的|参数寄存器、临时寄存器|
+|s8-s11|d4-d5|q2|易失的|参数寄存器、临时寄存器|
+|s12-s15|d6-d7|q3|易失的|参数寄存器、临时寄存器|
 |s16-s19|d8-d9|q4|非易失性的||
 |s20-s23|d10-d11|q5|非易失性的||
 |s24-s27|d12-d13|q6|非易失性的||
 |s28-s31|d14-d15|q7|非易失性的||
-||d16-d31|q8-q15|Volatile||
+||d16-d31|q8-q15|易失的||
 
 下一个表阐释了浮点状态和控制寄存器 (FPSCR) 位域：
 
 |Bits|含义|是否易失？|角色|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volatile|状态标志|
-|27|QC|Volatile|累计饱和度|
+|31-28|NZCV|易失的|状态标志|
+|27|QC|易失的|累计饱和度|
 |26|AHP|非易失性的|备选半精度控制|
 |25|DN|非易失性的|默认 NaN 模式控制|
 |24|FZ|非易失性的|清零模式控制|
@@ -127,7 +127,7 @@ Windows 仅支持 ARM 变量，它们支持 VFPv3-D32 协处理器。 这意味�
 |21-20|跨距|非易失性的|矢量跨距必须始终为 0|
 |18-16|Len|非易失性的|矢量长度必须始终为 0|
 |15, 12-8|IDE、IXE 等|非易失性的|异常捕获启用位，必须始终为 0|
-|7, 4-0|IDC、IXC 等|Volatile|累计异常标志|
+|7, 4-0|IDC、IXC 等|易失的|累计异常标志|
 
 ## <a name="floating-point-exceptions"></a>浮点异常
 
@@ -135,7 +135,7 @@ Windows 仅支持 ARM 变量，它们支持 VFPv3-D32 协处理器。 这意味�
 
 ## <a name="parameter-passing"></a>参数传递
 
-对于不可变参数函数，ARM 上的 Windows ABI 将遵循参数传递的 ARM 规则，该规则包括 VFP 和高级 SIMD 扩展。 这些规则遵循[适用于 ARM 体系结构的过程调用标准](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)，并与 VFP 扩展合并。 默认情况下，寄存器中可以传递前四个整数参数以及最多八个浮点参数或矢量参数，而其他参数在堆栈上传递。 使用此过程将自变量分配给寄存器或堆栈：
+对于不可变参数函数，ARM 上的 Windows ABI 将遵循参数传递的 ARM 规则，该规则包括 VFP 和高级 SIMD 扩展。 这些规则遵循[ARM 体系结构的过程调用标准](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)，与 VFP 扩展合并。 默认情况下，寄存器中可以传递前四个整数参数以及最多八个浮点参数或矢量参数，而其他参数在堆栈上传递。 使用此过程将自变量分配给寄存器或堆栈：
 
 ### <a name="stage-a-initialization"></a>阶段 A：初始化
 
@@ -149,7 +149,7 @@ Windows 仅支持 ARM 变量，它们支持 VFPv3-D32 协处理器。 这意味�
 
 1. 如果调用在内存中返回结果的函数，则该结果的地址将被置于 r0 中并且 NCRN 将设置为 r1。
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>阶段 B：自变量的预填充和扩展
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>阶段 B：参数的预填充和扩展
 
 对于列表中的每个自变量，将从以下列表中应用第一个匹配规则：
 
@@ -187,7 +187,7 @@ VFP 寄存器不用于可变参数函数，并且忽略阶段 C 规则 1 和 2�
 
 一些必须使用帧指针的函数（例如，调用 `alloca` 的函数或动态更改堆栈指针的函数）必须在函数序言中的 r11 中设置该帧指针，并且在函数尾声之前都必须使其保持不变。 对于不需要使用帧指针的函数，必须在序言中对所有堆栈执行更新操作，并且在函数尾声之前必须使堆栈指针保持不变。
 
-在堆栈上分配 4 KB 或更大容量的函数必须确保在最后一页之前每页都需要按顺序进行处理。 这可确保任何代码都不能 "超越" Windows 用于展开堆栈的防护页。 通常，这是通过 `__chkstk` 帮助器完成的，后者将 r4 中已传递的总堆栈分配量（以字节为单位）除以 4，并且将最终堆栈分配量（以字节为单位）返回至 r4 中。
+在堆栈上分配 4 KB 或更大容量的函数必须确保在最后一页之前每页都需要按顺序进行处理。 这可确保任何代码都无法"跳过"Windows 用于扩展堆栈的防护页面。 通常，这是通过 `__chkstk` 帮助器完成的，后者将 r4 中已传递的总堆栈分配量（以字节为单位）除以 4，并且将最终堆栈分配量（以字节为单位）返回至 r4 中。
 
 ### <a name="red-zone"></a>红色区域
 
@@ -197,21 +197,21 @@ VFP 寄存器不用于可变参数函数，并且忽略阶段 C 规则 1 和 2�
 
 Windows 中的内核模式堆栈默认为 3 个页面 (12 KB)。 请注意，不要在内核模式下创建具有大堆栈缓冲区的函数。 中断会随着非常小的堆栈空余空间一起出现，并且会导致堆栈应急 bugcheck。
 
-## <a name="cc-specifics"></a>C/C++详细信息
+## <a name="cc-specifics"></a>C/C++细节
 
 枚举为 32 位整数类型，除非枚举中至少有一个值需要 64 位双字存储。 在这种情况下，枚举将提升为 64 位整数类型。
 
 `wchar_t` 定义为等效于 `unsigned short`，以保留与其他平台的兼容性。
 
-## <a name="stack-walking"></a>堆栈遍历
+## <a name="stack-walking"></a>堆栈行走
 
-Windows 代码在启用帧指针的情况（[/oy （框架指针省略）](reference/oy-frame-pointer-omission.md)）中进行编译，以实现快速堆栈遍历。 通常，r11 寄存器指向链中的下一个链接，它是指定指向堆栈上前一个帧的指针和返回地址的 {r11, lr} 对。 建议你的代码也启用帧指针以改进分析和跟踪。
+Windows 代码编译时启用帧指针[（/Oy （帧指针省略），](reference/oy-frame-pointer-omission.md)以启用快速堆栈行走。 通常，r11 寄存器指向链中的下一个链接，它是指定指向堆栈上前一个帧的指针和返回地址的 {r11, lr} 对。 建议你的代码也启用帧指针以改进分析和跟踪。
 
 ## <a name="exception-unwinding"></a>异常展开
 
-在异常处理期间，通过使用展开代码堆栈可以启用堆栈展开。 展开代码是存储在可执行映像的 .xdata 部分中的字节的序列。 它们以抽象的方式描述了函数序言和尾声代码的操作，以便可以撤消函数序言的效果，从而准备展开调用方的堆栈帧。
+在异常处理期间，通过使用展开代码堆栈可以启用堆栈展开。 展开代码是存储在可执行映像的 .xdata 部分中的字节的序列。 它们以抽象的方式描述函数序言和尾声代码的操作，以便可以撤消函数序言的效果，为展开到调用方的堆栈帧做准备。
 
-ARM EABI 指定了使用展开代码的异常展开模式。 但是，在 Windows 中进行展开时此规范是不够的，此时必须处理处理器在函数序言或尾声中间的情况。 有关 ARM 异常数据和展开的详细信息，请参阅[Arm 异常处理](arm-exception-handling.md)。
+ARM EABI 指定了使用展开代码的异常展开模式。 但是，在 Windows 中进行展开时此规范是不够的，此时必须处理处理器在函数序言或尾声中间的情况。 有关有关 ARM 异常数据和展开的 Windows 的详细信息，请参阅[ARM 异常处理](arm-exception-handling.md)。
 
 建议使用对 `RtlAddFunctionTable` 以及关联函数的调用中指定的动态函数表来描述动态生成的代码，以便生成的代码可以参与异常处理。
 

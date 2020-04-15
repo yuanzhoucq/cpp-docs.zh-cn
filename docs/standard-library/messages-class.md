@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: deb9eaedba3c99bb2fcb8399ac412ccedb11545f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425429"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375913"
 ---
 # <a name="messages-class"></a>messages 类
 
-类模板描述可用作区域设置 facet 的对象，以便从给定区域设置的国际化消息目录中检索本地化消息。
+类模板描述一个对象，该对象可用作区域设置，用于从给定区域设置的国际化消息目录中检索本地化的消息。
 
 目前，虽然已实现消息类，但没有任何消息。
 
@@ -42,9 +42,9 @@ template <class CharType>
 class messages : public messages_base;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*CharType*\
+*字符类型*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -57,7 +57,7 @@ class messages : public messages_base;
 
 |构造函数|说明|
 |-|-|
-|[messages](#messages)|消息 facet 构造函数。|
+|[消息](#messages)|消息 facet 构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -66,11 +66,11 @@ class messages : public messages_base;
 |[char_type](#char_type)|一种用于显示消息的字符类型。|
 |[string_type](#string_type)|一种类型，此类型描述包含 `basic_string` 类型字符的 `CharType` 类型字符串。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
 |成员函数|说明|
 |-|-|
-|[close](#close)|关闭消息目录。|
+|[关闭](#close)|关闭消息目录。|
 |[do_close](#do_close)|一种为失去消息目录而调用的虚拟函数。|
 |[do_get](#do_get)|一种为检索消息目录而调用的虚拟函数。|
 |[do_open](#do_open)|一种为打开消息目录而调用的虚拟函数。|
@@ -79,11 +79,11 @@ class messages : public messages_base;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<区域设置 >
+**标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="char_type"></a>messages::char_type
+## <a name="messageschar_type"></a><a name="char_type"></a>消息：：char_type
 
 一种用于显示消息的字符类型。
 
@@ -95,7 +95,7 @@ typedef CharType char_type;
 
 该类型是模板参数 **CharType** 的同义词。
 
-## <a name="close"></a>messages::close
+## <a name="messagesclose"></a><a name="close"></a>消息：关闭
 
 关闭消息目录。
 
@@ -103,7 +103,7 @@ typedef CharType char_type;
 void close(catalog _Catval) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Catval*\
 要关闭的目录。
@@ -112,7 +112,7 @@ void close(catalog _Catval) const;
 
 此成员函数调用 [do_close](#do_close)(_ *Catval*)。
 
-## <a name="do_close"></a>messages::do_close
+## <a name="messagesdo_close"></a><a name="do_close"></a>消息：:d_close
 
 一种为失去消息目录而调用的虚拟函数。
 
@@ -120,14 +120,14 @@ void close(catalog _Catval) const;
 virtual void do_close(catalog _Catval) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Catval*\
 要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数关闭 *_Catval*的消息目录，该目录必须已由之前对[do_open](#do_open)的调用打开。
+受保护的成员函数关闭消息目录 *_Catval*，该目录必须通过之前对[do_open](#do_open)调用打开。
 
 必须从以前打开的且未关闭的目录获取 *_Catval*。
 
@@ -135,7 +135,7 @@ virtual void do_close(catalog _Catval) const;
 
 请参阅 [close](#close) 的示例，它调用 `do_close`。
 
-## <a name="do_get"></a>messages::do_get
+## <a name="messagesdo_get"></a><a name="do_get"></a>消息：:do_get
 
 一种为检索消息目录而调用的虚拟函数。
 
@@ -147,7 +147,7 @@ virtual string_type do_get(
     const string_type& _Dfault) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Catval*\
 指定要搜索的消息目录的标识值。
@@ -163,17 +163,17 @@ virtual string_type do_get(
 
 ### <a name="return-value"></a>返回值
 
-它在失败时返回 *_Dfault*的副本。 否则，它返回指定的消息序列的副本。
+它在发生故障时返回 *_Dfault*的副本。 否则，它返回指定的消息序列的副本。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数尝试从消息目录 *_Catval*获取消息序列。 在此过程中，它可以使用 *_Set*、 *_Message*和 *_Dfault* 。
+受保护的成员函数尝试从消息目录 *_Catval*获取消息序列。 在这样做时，它可能会 *_Set*利用 *_Set、_Message*和 *_Dfault。*
 
 ### <a name="example"></a>示例
 
 请参阅 [get](#get) 的示例，它调用 `do_get`。
 
-## <a name="do_open"></a>messages::do_open
+## <a name="messagesdo_open"></a><a name="do_open"></a>消息：:do_打开
 
 一种为打开消息目录而调用的虚拟函数。
 
@@ -183,7 +183,7 @@ virtual catalog do_open(
     const locale& _Loc) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Catname*\
 要搜索的目录的名称。
@@ -197,7 +197,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数尝试打开名称为 *_Catname*的消息目录。 在此过程中，它可能会使用区域设置 *_Loc*
+受保护的成员函数尝试打开名称*为_Catname*的消息目录。 在这样做时，它可以利用区域设置 *_Loc*
 
 返回值应用作稍后对 [close](#close) 调用时的自变量。
 
@@ -205,7 +205,7 @@ virtual catalog do_open(
 
 请参阅 [open](#open) 的示例，它调用 `do_open`。
 
-## <a name="get"></a>messages::get
+## <a name="messagesget"></a><a name="get"></a>消息：获取
 
 检索消息目录。
 
@@ -217,7 +217,7 @@ string_type get(
     const string_type& _Dfault) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Catval*\
 指定要搜索的消息目录的标识值。
@@ -233,13 +233,13 @@ string_type get(
 
 ### <a name="return-value"></a>返回值
 
-它在失败时返回 *_Dfault*的副本。 否则，它返回指定的消息序列的副本。
+它在发生故障时返回 *_Dfault*的副本。 否则，它返回指定的消息序列的副本。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`)。
+成员函数返回[do_get](#do_get) `_Catval`（、 `_Set` `_Message`、 `_Dfault`。 。 。 。 。
 
-## <a name="messages"></a>messages::messages
+## <a name="messagesmessages"></a><a name="messages"></a>消息：消息
 
 消息 facet 构造函数。
 
@@ -252,7 +252,7 @@ protected: messages(
     size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。
@@ -262,19 +262,19 @@ protected: messages(
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为：
+*_Refs*参数的可能值及其显著性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \> 1：未定义这些值。
+- \>1： 未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。
+构造函数用区域设置初始化其基本对象 **：：**[分面](../standard-library/locale-class.md#facet_class)（ `_Refs`。
 
-## <a name="open"></a>messages::open
+## <a name="messagesopen"></a><a name="open"></a>消息：：打开
 
 打开消息目录。
 
@@ -284,7 +284,7 @@ catalog open(
     const locale& _Loc) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Catname*\
 要搜索的目录的名称。
@@ -298,9 +298,9 @@ catalog open(
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 [do_open](#do_open)( `_Catname`, `_Loc`)。
+成员函数返回[do_open](#do_open) `_Catname`（。 `_Loc`
 
-## <a name="string_type"></a>messages::string_type
+## <a name="messagesstring_type"></a><a name="string_type"></a>消息：：string_type
 
 一种类型，此类型描述包含 `basic_string` 类型字符的 `CharType` 类型字符串。
 
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储消息序列的副本。
+该类型描述了类模板的专门化[basic_string](../standard-library/basic-string-class.md)其对象可以存储消息序列的副本。
 
 ## <a name="see-also"></a>另请参阅
 
 [\<区域设置>](../standard-library/locale.md)\
-[messages_base 类](../standard-library/messages-base-class.md)\
+[messages_base类](../standard-library/messages-base-class.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

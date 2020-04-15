@@ -43,22 +43,22 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99fce804ad30e01bdbaa99b1636a5238ff535f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371775"
 ---
 # <a name="windows-operations-ccli"></a>Windows 操作 (C++/CLI)
 
-演示如何使用 Windows SDK 的各种特定于 Windows 的任务。
+使用 Windows SDK 演示各种特定于 Windows 的任务。
 
-以下主题演示如何使用 Windows SDK 使用视觉对象执行的各种 Windows 操作C++。
+以下主题演示了使用可视化C++使用 Windows SDK 执行的各种 Windows 操作。
 
-## <a name="determine_shutdown"></a> 确定关闭是否已启动
+## <a name="determine-if-shutdown-has-started"></a><a name="determine_shutdown"></a>确定关机是否已启动
 
-下面的代码示例演示如何确定是否正要终止该应用程序或.NET Framework。 这可用于访问.NET Framework 中的静态元素，因为在关闭期间，这些构造系统完成，并且不能可靠地使用。 通过检查<xref:System.Environment.HasShutdownStarted%2A>属性前，无法访问这些元素可以避免潜在故障。
+以下代码示例演示如何确定应用程序或 .NET 框架当前是否正在终止。 这对于访问 .NET Framework 中的静态元素非常有用，因为在关机期间，这些构造由系统最终确定，无法可靠地使用。 通过首先检查<xref:System.Environment.HasShutdownStarted%2A>属性，可以通过不访问这些元素来避免潜在的故障。
 
 ### <a name="example"></a>示例
 
@@ -76,9 +76,9 @@ int main()
 }
 ```
 
-## <a name="determine_user"></a> 确定用户交互状态
+## <a name="determine-the-user-interactive-state"></a><a name="determine_user"></a>确定用户交互状态
 
-下面的代码示例演示如何确定是否在用户交互式上下文中运行代码。 如果<xref:System.Environment.UserInteractive%2A>为 false，则代码正在作为服务进程或从 Web 应用程序，这种情况下，不应尝试与用户交互。
+以下代码示例演示如何确定代码是否在用户交互上下文中运行。 如果<xref:System.Environment.UserInteractive%2A>为 false，则代码作为服务进程或 Web 应用程序内部运行，在这种情况下，不应尝试与用户交互。
 
 ### <a name="example"></a>示例
 
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-## <a name="read_registry"></a> 从 Windows 注册表中读取数据
+## <a name="read-data-from-the-windows-registry"></a><a name="read_registry"></a>从 Windows 注册表读取数据
 
-下面的代码示例使用<xref:Microsoft.Win32.Registry.CurrentUser>密钥从 Windows 注册表读取数据。 首先，使用枚举子项<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>方法，然后标识子项打开使用<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>方法。 与根键，每个子项都由<xref:Microsoft.Win32.RegistryKey>类。 最后，新<xref:Microsoft.Win32.RegistryKey>对象用于枚举键/值对。
+以下代码示例使用<xref:Microsoft.Win32.Registry.CurrentUser>密钥从 Windows 注册表读取数据。 首先，使用<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>方法枚举子键，然后使用 方法<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>打开标识子键。 与根键一样，每个子键由<xref:Microsoft.Win32.RegistryKey>类表示。 最后，新<xref:Microsoft.Win32.RegistryKey>对象用于枚举键/值对。
 
 ### <a name="example"></a>示例
 
@@ -142,20 +142,20 @@ int main( )
 
 ### <a name="remarks"></a>备注
 
-<xref:Microsoft.Win32.Registry>类是只是静态的实例的容器<xref:Microsoft.Win32.RegistryKey>。 每个实例表示的根注册表节点。 两个实例<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
+类<xref:Microsoft.Win32.Registry>只是 的静态实例的<xref:Microsoft.Win32.RegistryKey>容器。 每个实例表示一个根注册表节点。 实例是<xref:Microsoft.Win32.Registry.ClassesRoot> <xref:Microsoft.Win32.Registry.CurrentConfig>、、、<xref:Microsoft.Win32.Registry.CurrentUser>和<xref:Microsoft.Win32.Registry.LocalMachine><xref:Microsoft.Win32.Registry.Users>。
 
-除了为静态的中的对象<xref:Microsoft.Win32.Registry>类是只读的。 此外，实例的<xref:Microsoft.Win32.RegistryKey>创建注册表的内容进行访问的类对象也是只读的。 有关如何重写此行为的示例，请参阅[如何：将数据写入到 Windows 注册表 (C++/CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。
+除了静态之外，类中的对象也是只读<xref:Microsoft.Win32.Registry>的。 此外，<xref:Microsoft.Win32.RegistryKey>为访问注册表对象的内容而创建的类的实例也是只读的。 有关如何重写此行为的示例，请参阅[如何：将数据写入 Windows 注册表 （C++/CLI）。](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)
 
-有两个其他对象中的<xref:Microsoft.Win32.Registry>类：<xref:Microsoft.Win32.Registry.DynData>和<xref:Microsoft.Win32.Registry.PerformanceData>。 二者都为实例的<xref:Microsoft.Win32.RegistryKey>类。 <xref:Microsoft.Win32.Registry.DynData>对象包含动态注册表信息，仅支持在 Windows 98 和 Windows me 一起提供。 <xref:Microsoft.Win32.Registry.PerformanceData>对象可以用于访问使用 Windows 性能监视系统的应用程序的性能计数器信息。 <xref:Microsoft.Win32.Registry.PerformanceData>节点表示信息实际上并不存储在注册表中，因此不能使用查看 Regedit.exe。
+<xref:Microsoft.Win32.Registry>类中还有两个其他对象：<xref:Microsoft.Win32.Registry.DynData>和<xref:Microsoft.Win32.Registry.PerformanceData>。 两者都是类的<xref:Microsoft.Win32.RegistryKey>实例。 该<xref:Microsoft.Win32.Registry.DynData>对象包含动态注册表信息，仅在 Windows 98 和 Windows Me 中支持这些信息。 该<xref:Microsoft.Win32.Registry.PerformanceData>对象可用于访问使用 Windows 性能监视系统的应用程序的性能计数器信息。 节点<xref:Microsoft.Win32.Registry.PerformanceData>表示未实际存储在注册表中的信息，因此无法使用 Regedit.exe 查看这些信息。
 
-## <a name="read_performance"></a> 读取 Windows 性能计数器
+## <a name="read-windows-performance-counters"></a><a name="read_performance"></a>读取 Windows 性能计数器
 
-某些应用程序和 Windows 子系统公开通过 Windows 性能系统的性能数据。 可以使用访问这些计数器<xref:System.Diagnostics.PerformanceCounterCategory>并<xref:System.Diagnostics.PerformanceCounter>类，它们位于<xref:System.Diagnostics?displayProperty=fullName>命名空间。
+某些应用程序和 Windows 子系统通过 Windows 性能系统公开性能数据。 可以使用 驻留在<xref:System.Diagnostics.PerformanceCounterCategory><xref:System.Diagnostics.PerformanceCounter><xref:System.Diagnostics?displayProperty=fullName>命名空间中的 和 类访问这些计数器。
 
-下面的代码示例使用这些类来检索并显示更新的 Windows 以表示处理器处于繁忙状态的时间的百分比的计数器。
+以下代码示例使用这些类来检索和显示由 Windows 更新的计数器，以指示处理器忙的时间百分比。
 
 > [!NOTE]
->  此示例需要在 Windows Vista 上运行的管理员特权。
+> 此示例需要在 Windows Vista 上运行的管理员特权。
 
 ### <a name="example"></a>示例
 
@@ -246,9 +246,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_text"></a> 从剪贴板中检索文本
+## <a name="retrieve-text-from-the-clipboard"></a><a name="retrieve_text"></a>从剪贴板检索文本
 
-下面的代码示例使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成员函数返回一个指向<xref:System.Windows.Forms.IDataObject>接口。 此接口可查询的数据的格式和用来检索实际数据。
+以下代码示例使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成员函数返回指向接口的<xref:System.Windows.Forms.IDataObject>指针。 然后，可以查询此接口的数据格式，并用于检索实际数据。
 
 ### <a name="example"></a>示例
 
@@ -286,9 +286,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="retrieve_current"></a> 检索当前用户名
+## <a name="retrieve-the-current-username"></a><a name="retrieve_current"></a>检索当前用户名
 
-下面的代码示例演示如何检索当前用户名 （登录到 Windows 的用户的名称）。 名称存储在<xref:System.Environment.UserName%2A>中定义的字符串<xref:System.Environment>命名空间。
+以下代码示例演示了检索当前用户名（登录到 Windows 的用户的名称）。 名称存储在字符串中<xref:System.Environment.UserName%2A>，该字符串在命名空间中<xref:System.Environment>定义。
 
 ### <a name="example"></a>示例
 
@@ -304,9 +304,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_dotnet"></a> 检索.NET Framework 的版本
+## <a name="retrieve-the-net-framework-version"></a><a name="retrieve_dotnet"></a>检索 .NET 框架版本
 
-下面的代码示例演示如何确定与当前安装的.NET Framework 版本<xref:System.Environment.Version%2A>属性，它是一个指针，到<xref:System.Version>对象，其中包含版本信息。
+以下代码示例演示如何使用<xref:System.Environment.Version%2A>属性确定当前安装的 .NET Framework 的版本，该属性是指向包含版本信息<xref:System.Version>的对象的指针。
 
 ### <a name="example"></a>示例
 
@@ -331,9 +331,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_local"></a> 检索本地计算机名称
+## <a name="retrieve-the-local-machine-name"></a><a name="retrieve_local"></a>检索本地计算机名称
 
-下面的代码示例演示如何检索本地计算机名称 （因为它的计算机的名称显示在网络上）。 您可以完成此操作通过获取<xref:System.Environment.MachineName%2A>中定义的字符串<xref:System.Environment>命名空间。
+以下代码示例演示了本地计算机名称（在网络上显示的计算机名称）的检索。 可以通过获取<xref:System.Environment.MachineName%2A>在<xref:System.Environment>命名空间中定义的字符串来实现此目的。
 
 ### <a name="example"></a>示例
 
@@ -349,9 +349,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_version"></a> 检索 Windows 版本
+## <a name="retrieve-the-windows-version"></a><a name="retrieve_version"></a>检索 Windows 版本
 
-下面的代码示例演示如何检索当前操作系统的平台和版本信息。 此信息存储在<xref:System.Environment.OSVersion%2A?displayProperty=fullName>属性和包含在广义上说介绍的 Windows 版本的枚举和一个<xref:System.Environment.Version%2A>对象，其中包含操作系统的确切版本。
+以下代码示例演示如何检索当前操作系统的平台和版本信息。 此信息存储在 属性中，<xref:System.Environment.OSVersion%2A?displayProperty=fullName>由描述 Windows 广泛版本的枚举和包含操作系统精确构建<xref:System.Environment.Version%2A>的对象组成。
 
 ### <a name="example"></a>示例
 
@@ -391,9 +391,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_time"></a> 自启动以来经过的检索时间
+## <a name="retrieve-time-elapsed-since-startup"></a><a name="retrieve_time"></a>检索自启动以来已过的时间
 
-下面的代码示例演示如何确定计时周期计数，或启动 Windows 后经过的毫秒数。 此值存储在<xref:System.Environment.TickCount%2A?displayProperty=fullName>成员和，因为它是一个 32 位值，将重置为零大约每隔 24.9 天。
+以下代码示例演示如何确定刻度计数或自 Windows 启动以来经过的毫秒数。 此值存储在成员中<xref:System.Environment.TickCount%2A?displayProperty=fullName>，并且由于它是 32 位值，大约每 24.9 天重置为零。
 
 ### <a name="example"></a>示例
 
@@ -420,9 +420,9 @@ int main( )
 }
 ```
 
-## <a name="store_text"></a> 将文本存储在剪贴板
+## <a name="store-text-in-the-clipboard"></a><a name="store_text"></a>在剪贴板中存储文本
 
-下面的代码示例使用<xref:System.Windows.Forms.Clipboard>对象中定义<xref:System.Windows.Forms>命名空间来存储字符串。 此对象提供了两个成员函数：<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>和<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>。 通过发送来自派生的任何对象将数据存储在剪贴板<xref:System.Object>到<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>。
+以下代码示例使用<xref:System.Windows.Forms.Clipboard><xref:System.Windows.Forms>命名空间中定义的对象来存储字符串。 此对象提供两个成员函数： <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>和 。 通过发送派生自<xref:System.Object>的任何对象，<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>数据存储在剪贴板中。
 
 ### <a name="example"></a>示例
 
@@ -451,9 +451,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="write_data"></a> 将数据写入到 Windows 注册表
+## <a name="write-data-to-the-windows-registry"></a><a name="write_data"></a>将数据写入 Windows 注册表
 
-下面的代码示例使用<xref:Microsoft.Win32.Registry.CurrentUser>密钥，以创建的可写实例<xref:Microsoft.Win32.RegistryKey>类对应于**软件**密钥。 <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>方法然后用于创建新密钥，并添加键/值对。
+以下代码示例使用<xref:Microsoft.Win32.Registry.CurrentUser>键创建与<xref:Microsoft.Win32.RegistryKey>**软件**密钥对应的类的可写实例。 然后<xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>，该方法用于创建新键并添加到键/值对。
 
 ### <a name="example"></a>示例
 
@@ -503,12 +503,12 @@ int main()
 
 ### <a name="remarks"></a>备注
 
-可以使用.NET Framework 访问与注册表<xref:Microsoft.Win32.Registry>并<xref:Microsoft.Win32.RegistryKey>中定义的类，它们都是<xref:Microsoft.Win32>命名空间。 **注册表**类是静态的实例的容器<xref:Microsoft.Win32.RegistryKey>类。 每个实例表示的根注册表节点。 两个实例<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。
+可以使用 .NET 框架使用<xref:Microsoft.Win32.Registry>和<xref:Microsoft.Win32.RegistryKey>类访问注册表，这两个类都在命名空间中<xref:Microsoft.Win32>定义。 **注册表**类是类的静态实例的<xref:Microsoft.Win32.RegistryKey>容器。 每个实例表示一个根注册表节点。 实例是<xref:Microsoft.Win32.Registry.ClassesRoot> <xref:Microsoft.Win32.Registry.CurrentConfig>、、、<xref:Microsoft.Win32.Registry.CurrentUser>和<xref:Microsoft.Win32.Registry.LocalMachine><xref:Microsoft.Win32.Registry.Users>。
 
 ## <a name="related-sections"></a>相关章节
 
 <xref:System.Environment>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[.NET 编程，带C++/CLI（视觉C++）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

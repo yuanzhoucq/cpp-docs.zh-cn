@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 65f7f4db9489de1c9a380d760ed5cab41bfdc2ec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2d6f637ab4828b3e70df205ebf359ae45a940d60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504517"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363282"
 ---
 # <a name="cmutex-class"></a>CMutex 类
 
-表示一个 "互斥体"-一种同步对象, 允许一个线程互相排斥地访问资源。
+表示"互斥"-允许一个线程相互独占的资源的同步对象。
 
 ## <a name="syntax"></a>语法
 
@@ -29,21 +29,21 @@ class CMutex : public CSyncObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMutex::CMutex](#cmutex)|构造 `CMutex` 对象。|
+|[CMutex：CMutex](#cmutex)|构造 `CMutex` 对象。|
 
 ## <a name="remarks"></a>备注
 
-如果一次只能有一个线程可以修改数据或某些其他受控资源, 互斥体非常有用。 例如, 将节点添加到链接列表是一次只允许一个线程的进程。 通过使用`CMutex`对象控制链接列表, 一次只能有一个线程可以访问该列表。
+当一次只允许一个线程修改数据或其他受控资源时，Mutexs 非常有用。 例如，将节点添加到链接列表是一个一次只能由一个线程允许的过程。 通过使用`CMutex`对象来控制链接列表，一次只能访问一个线程。
 
-若要使用`CMutex`对象, 请在`CMutex`需要时构造对象。 指定要等待的 mutex 的名称, 应用程序最初应拥有该名称。 然后, 你可以在构造函数返回时访问 mutex。 完成访问受控资源后, 调用[CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock) 。
+要使用`CMutex`对象，`CMutex`在需要对象时构造该对象。 指定要等待的互斥体的名称，并且应用程序最初应拥有它。 然后，当构造函数返回时，可以访问互斥体。 调用[CSyncObject：：访问](../../mfc/reference/csyncobject-class.md#unlock)受控资源后解锁。
 
-使用`CMutex`对象的一种替代方法是将类型`CMutex`的变量作为数据成员添加到要控制的类。 在构造受控对象的过程中, 调用`CMutex`数据成员的构造函数, 该构造函数指定互斥体最初是否拥有, 互斥体的名称 (如果将跨进程边界使用) 和所需的安全特性。
+使用`CMutex`对象的替代方法是将类型的`CMutex`变量作为数据成员添加到要控制的类中。 在构造受控对象期间，调用`CMutex`数据成员的构造函数，指定互斥体最初是否拥有、互斥体的名称（如果它将跨进程边界使用）以及所需的安全属性。
 
-若要以这种`CMutex`方式访问由对象控制的资源, 请首先在资源的访问成员函数中创建类型为[CSingleLock](../../mfc/reference/csinglelock-class.md)或[CMultiLock](../../mfc/reference/cmultilock-class.md)的变量。 然后调用锁对象的`Lock`成员函数 (例如, [CSingleLock:: lock](../../mfc/reference/csinglelock-class.md#lock))。 此时, 你的线程将获取对资源的访问权限, 等待资源释放并获取访问权限, 或者等待资源释放并超时, 无法获取对资源的访问权限。 在任何情况下, 都已以线程安全的方式访问了资源。 若要释放资源, 请使用锁定对象的`Unlock`成员函数 (例如, [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)), 或允许锁定对象超出范围。
+要以这种方式访问受`CMutex`对象控制的资源，请首先在资源的访问成员函数中创建[CSingleLock](../../mfc/reference/csinglelock-class.md)类型或[CMultiLock](../../mfc/reference/cmultilock-class.md)类型的变量。 然后调用锁对象`Lock`的成员函数（例如[，CSingleLock：：锁定](../../mfc/reference/csinglelock-class.md#lock)）。 此时，线程将获取对资源的访问，等待资源被释放并获取访问权限，或者等待资源释放和超时，无法访问资源。 在任何情况下，您的资源都以线程安全的方式访问。 要释放资源，请使用锁定对象`Unlock`的成员函数（例如[，CSingleLock：：解锁](../../mfc/reference/csinglelock-class.md#unlock)），或允许锁定对象退出范围。
 
-有关使用`CMutex`对象的详细信息, 请参阅[多线程处理:如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有关使用`CMutex`对象的详细信息，请参阅"[多线程：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)"一文。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -55,11 +55,11 @@ class CMutex : public CSyncObject
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxmt
+**标题：** afxmt.h
 
-##  <a name="cmutex"></a>CMutex::CMutex
+## <a name="cmutexcmutex"></a><a name="cmutex"></a>CMutex：CMutex
 
-构造已命名或未`CMutex`命名的对象。
+构造命名或未命名`CMutex`的对象。
 
 ```
 CMutex(
@@ -70,23 +70,23 @@ CMutex(
 
 ### <a name="parameters"></a>参数
 
-*bInitiallyOwn*<br/>
-指定创建`CMutex`对象的线程最初是否可以访问由 mutex 控制的资源。
+*b 初始拥有*<br/>
+指定创建`CMutex`对象的线程最初是否有权访问由互斥体控制的资源。
 
-*lpszName*<br/>
-`CMutex` 对象的名称。 如果存在另一个具有相同名称的 mutex, 则必须提供*lpszName* , 前提是该对象将跨进程边界使用。 如果**为 NULL**, 则 mutex 将为未命名。 如果该名称与现有互斥体匹配, 则构造函数将`CMutex`生成一个引用该名称互斥体的新对象。 如果该名称与不是 mutex 的现有同步对象匹配, 则构造将失败。
+*lpsz名称*<br/>
+`CMutex` 对象的名称。 如果存在另一个同名的互斥体，则必须提供*lpszName，* 如果对象将跨进程边界使用。 如果**NULL**，则互斥体将未命名。 如果名称与现有互斥体匹配，则构造函数将生成一`CMutex`个新对象，该对象引用该名称的互斥体。 如果名称与现有不是互斥体的同步对象匹配，则构造将失败。
 
-*lpsaAttribute*<br/>
-Mutex 对象的安全特性。 有关此结构的完整说明, 请参阅 Windows SDK 中的[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 。
+*lpsa属性*<br/>
+互斥体的安全属性。 有关此结构的完整说明，请参阅 Windows SDK 中的[SECURITY_ATTRIBUTES。](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))
 
 ### <a name="remarks"></a>备注
 
-若要访问或释放`CMutex`对象, 请创建[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象, 并调用其[锁定](../../mfc/reference/csinglelock-class.md#lock)和[取消锁定](../../mfc/reference/csinglelock-class.md#unlock)成员函数。 如果该`CMutex`对象是独立使用的, 请调用其`Unlock`成员函数将其释放。
+要访问或`CMutex`释放对象，请创建[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象，并调用其[锁定](../../mfc/reference/csinglelock-class.md#lock)和[解锁](../../mfc/reference/csinglelock-class.md#unlock)成员函数。 如果对象`CMutex`是独立使用的，请调用其成员`Unlock`函数以释放它。
 
 > [!IMPORTANT]
->  创建`CMutex`对象后, 使用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)确保互斥体不存在。 如果互斥体确实存在, 则可能表示未强占恶意进程, 并可能会有意使用该互斥体。 在这种情况下, 建议的安全意识过程是关闭句柄, 然后继续操作, 就像创建对象时出错一样。
+> 创建对象后`CMutex`，请使用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)确保互斥体不存在。 如果互斥体确实意外存在，则可能表示恶意进程正在蹲下，并且可能打算恶意使用互斥体。 在这种情况下，建议的安全意识过程是关闭句柄并继续，就像创建对象时失败一样。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[CSyncObject 类](../../mfc/reference/csyncobject-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)
+[CSync对象类](../../mfc/reference/csyncobject-class.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)

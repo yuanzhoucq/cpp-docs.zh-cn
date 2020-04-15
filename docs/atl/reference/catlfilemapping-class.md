@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca46ccdacf5ea24f1de26cdc75bf808c4ecfaa40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247162"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318962"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping 类
 
-此类表示一个内存映射文件，将强制转换运算符添加到的方法[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。
+此类表示内存映射文件，将强制转换运算符添加到[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -31,33 +31,33 @@ class CAtlFileMapping : public CAtlFileMappingBase
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-使用强制转换运算符的数据类型。
+用于强制转换运算符的数据类型。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlFileMapping::operator T *](#operator_t_star)|允许隐式转换`CAtlFileMapping`对象添加到`T*`。|
+|[CAtlFile映射：：运算符 T*](#operator_t_star)|允许将`CAtlFileMapping`对象隐式转换为`T*`。|
 
 ## <a name="remarks"></a>备注
 
-此类会添加一个单一的强制转换运算符，以允许隐式转换`CAtlFileMapping`对象添加到`T*`。 由基类，提供其他成员[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。
+此类添加单个强制转换运算符，以允许`CAtlFileMapping`将对象隐式转换为`T*`。 其他成员由基类[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)提供。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)
+[CAtlFile映射库](../../atl/reference/catlfilemappingbase-class.md)
 
 `CAtlFileMapping`
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlfile.h
+**标题：** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T*
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFile映射：：运算符 T*
 
-允许隐式转换`CAtlFileMapping`对象添加到`T*`。
+允许将`CAtlFileMapping`对象隐式转换为`T*`。
 
 ```
 operator T*() const throw();
@@ -65,13 +65,13 @@ operator T*() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`T*`到内存映射文件的起始位置的指针。
+返回指向`T*`内存映射文件的开头的指针。
 
 ### <a name="remarks"></a>备注
 
-调用[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)和重新解释为返回的指针`T*`其中*T*是用作模板参数的此类的类型。
+调用[CAtlFileMappingBase：getData](../../atl/reference/catlfilemappingbase-class.md#getdata)并将返回的指针重新解释为`T*` *T*是用作此类模板参数的类型的类型。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CAtlFileMappingBase 类](../../atl/reference/catlfilemappingbase-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

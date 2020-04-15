@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66c0a19c04e0a900b91c0c28c45bb9c766d25c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375204"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog 类
 
-显示在功能区**自定义**页。
+显示功能区 **"自定义**"页。
 
 ## <a name="syntax"></a>语法
 
@@ -29,24 +29,24 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|构造 `CMFCRibbonCustomizeDialog` 对象。|
+|[CMFC 功能定制对话：：CMFC 功能定制对话](#cmfcribboncustomizedialog)|构造 `CMFCRibbonCustomizeDialog` 对象。|
 |`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|`CMFCRibbonCustomizeDialog::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
+|`CMFCRibbonCustomizeDialog::GetThisClass`|框架用于获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
 
 ## <a name="remarks"></a>备注
 
-如果不处理 AFX_WM_ON_RIBBON_CUSTOMIZE 消息，或从消息处理程序返回 0，MFC 自动实例化此类。
+如果您不处理AFX_WM_ON_RIBBON_CUSTOMIZE消息，或者从消息处理程序返回 0，MFC 会自动实例化此类。
 
-如果你想要使用此类应用程序中显示功能区**自定义**对话框框中，只是它进行实例化并调用`DoModal`方法。
+如果要在应用程序中使用此类来显示功能区**自定义**对话框，只需实例化它并调用`DoModal`方法。
 
-因为此类派生自[CMFCPropertySheet 类](../../mfc/reference/cmfcpropertysheet-class.md)，可以使用添加自定义页`CMFCPropertySheet`API。
+由于此类派生自[CMFC属性表类](../../mfc/reference/cmfcpropertysheet-class.md)，因此可以使用`CMFCPropertySheet`API 添加自定义页面。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -60,13 +60,13 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-[CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
+[CMFC 功能定制对话](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxribboncustomizedialog.h
+**标题：** afxribbon自定义对话框.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CMFC 功能定制对话：：CMFC 功能定制对话
 
 构造 `CMFCRibbonCustomizeDialog` 对象。
 
@@ -78,11 +78,11 @@ CMFCRibbonCustomizeDialog(
 
 ### <a name="parameters"></a>参数
 
-*pWndParent*<br/>
-[in]指向父窗口 （通常主框架） 的指针。
+*pwnd 父级*<br/>
+[在]指向父窗口（通常是主框架）的指针。
 
 *pRibbon*<br/>
-[in]一个指向`CMFCRibbonBar`要进行自定义。
+[在]要自定义的`CMFCRibbonBar`指针。
 
 ### <a name="example"></a>示例
 
@@ -92,9 +92,9 @@ CMFCRibbonCustomizeDialog(
 
 ### <a name="remarks"></a>备注
 
-构造函数实例化[CMFCRibbonCustomizePropertyPage 类](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)对象，并将其添加到属性表页的集合。
+构造函数实例化[了 CMFCRibbon 自定义属性页类](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)对象，并将其添加到属性工作表页的集合中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

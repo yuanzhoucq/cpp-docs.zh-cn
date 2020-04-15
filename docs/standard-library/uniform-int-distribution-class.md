@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684512"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367286"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution 类
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType* \
-整数结果类型，默认为**int**。有关可能的类型，请参阅[\<random >](../standard-library/random.md)。
+*IntType*\
+整数结果类型，默认值为**int**。有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述了包含指定的分布，该分布使用一个分布产生用户指定的整型值，以便每个值都可能相同。 下表链接到有关各个成员的文章。
+类模板描述一个包含的分布，该分布使用分布生成用户指定的积分类型的值，以便每个值都同样可能。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="example"></a>示例
 
@@ -179,7 +179,7 @@ Distribution for 200 samples:
 
 **命名空间:** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution：uniform_int_distribution
 
 构造分布。
 
@@ -191,24 +191,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*a*\
 随机值的下限（包含下限）。
 
-*b* \
+*B*\
 随机值的上限（包含上限）。
 
-*parm* \
+*帕尔姆*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `a ≤ b`
+**先决条件：**`a ≤ b`
 
-第一个构造函数将构造一个对象，其存储*的*值保留值*a* ，并且存储的*b*值保留值*b*。
+第一个构造函数构造一*个对象，* 其存储的值包含值*a，* 其存储*的 b*值包含值*b*。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>uniform_int_distribution::param_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution：:param_类型
 
 存储分布的参数。
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*a*\
 随机值的下限（包含下限）。
 
-*b* \
+*B*\
 随机值的上限（包含上限）。
 
-*right* \
+*对*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `a ≤ b`
+**先决条件：**`a ≤ b`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

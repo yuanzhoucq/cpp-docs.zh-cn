@@ -1,6 +1,6 @@
 ---
-title: ANALYSIS_DESCRIPTOR 结构
-description: C++生成见解 SDK ANALYSIS_DESCRIPTOR 结构参考。
+title: ANALYSIS_DESCRIPTOR结构
+description: C++生成见解 SDK ANALYSIS_DESCRIPTOR结构参考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fc11ce11e1faaae02edb36aac447c18ea8107e35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1de7f2a5bc3f02a327daaecf8c2cebc44687ba43
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323610"
 ---
-# <a name="analysis_descriptor-structure"></a>ANALYSIS_DESCRIPTOR 结构
+# <a name="analysis_descriptor-structure"></a>ANALYSIS_DESCRIPTOR结构
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`ANALYSIS_DESCRIPTOR` 结构与[AnalyzeA](../functions/analyze-a.md)和[AnalyzeW](../functions/analyze-w.md)函数结合使用。 本文介绍如何分析 Windows 事件跟踪（ETW）跟踪。
+该`ANALYSIS_DESCRIPTOR`结构与[分析A](../functions/analyze-a.md)[和分析W](../functions/analyze-w.md)函数一起使用。 它描述了如何分析 Windows （ETW） 跟踪的事件跟踪。
 
 ## <a name="syntax"></a>语法
 
@@ -38,16 +38,16 @@ typedef struct ANALYSIS_DESCRIPTOR_TAG
 } ANALYSIS_DESCRIPTOR;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 |  |  |
 |--|--|
-| `NumberOfPasses` | 应通过 ETW 跟踪完成的分析传递的数量。 |
-| `Callbacks` | 一个[ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)对象，该对象指定分析会话期间要调用的函数。 |
-| `Context` | 用户提供的上下文，作为参数传递给在中指定的所有回调函数 `Callbacks` |
+| `NumberOfPasses` | 应通过 ETW 跟踪执行的分析次数。 |
+| `Callbacks` | 指定[在](analysis-callbacks-struct.md)分析会话期间调用哪些函数ANALYSIS_CALLBACKS对象。 |
+| `Context` | 以参数传递给在`Callbacks` |
 
 ## <a name="remarks"></a>备注
 
-`Callbacks` 结构仅接受指向非成员函数的指针。 可以通过将 `Context` 设置为对象指针来绕过此限制。 此对象指针将作为参数传递给所有非成员回调函数。 使用此指针从非成员回调函数内调用成员函数。
+结构`Callbacks`仅接受指向非成员函数的指针。 您可以通过设置`Context`到对象指针来绕过此限制。 此对象指针将作为参数传递给所有非成员回调函数。 使用此指针可以从非成员回调函数中调用成员函数。
 
 ::: moniker-end

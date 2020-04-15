@@ -1,5 +1,5 @@
 ---
-title: COleDropSource 类
+title: COleDrop源类
 ms.date: 11/04/2016
 f1_keywords:
 - COleDropSource
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: d93eb3de87b50f337f0d3edad65f5dc3013e8327
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 324c4b7273f021b43c319fb0a494ac843856c78a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127452"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375028"
 ---
-# <a name="coledropsource-class"></a>COleDropSource 类
+# <a name="coledropsource-class"></a>COleDrop源类
 
 允许将数据拖动到放置目标。
 
@@ -31,31 +31,31 @@ ms.locfileid: "77127452"
 class COleDropSource : public CCmdTarget
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
 |名称|说明|
 |----------|-----------------|
-|[COleDropSource::COleDropSource](#coledropsource)|构造 `COleDropSource` 对象。|
+|[COleDrop 来源：COleDrop 来源](#coledropsource)|构造 `COleDropSource` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[COleDropSource：： System.windows.dragdrop.givefeedback>](#givefeedback)|在拖放操作过程中更改光标。|
-|[COleDropSource::OnBeginDrag](#onbegindrag)|在拖放操作过程中处理鼠标捕获。|
-|[COleDropSource：： System.windows.dragdrop.querycontinuedrag>](#querycontinuedrag)|检查以确定是否应继续拖动。|
+|[COleDrop 来源：给反馈](#givefeedback)|在拖放操作期间更改光标。|
+|[COleDrop 来源：：在BeginDrag](#onbegindrag)|在拖放操作期间处理鼠标捕获。|
+|[COleDrop 来源：：查询继续拖动](#querycontinuedrag)|检查拖动是否应继续。|
 
 ## <a name="remarks"></a>备注
 
-[COleDropTarget](../../mfc/reference/coledroptarget-class.md)类处理拖放操作的接收部分。 `COleDropSource` 对象负责确定拖动操作的开始时间，在拖动操作过程中提供反馈，并确定拖动操作的结束时间。
+[COleDropTarget](../../mfc/reference/coledroptarget-class.md)类处理拖放操作的接收部分。 对象`COleDropSource`负责确定拖动操作何时开始，在拖动操作期间提供反馈，并确定拖动操作何时结束。
 
-若要使用 `COleDropSource` 对象，只需调用构造函数。 这可以简化确定哪些事件（例如鼠标单击）开始使用 COleDataSource 的拖动操作的过程[：:D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop)、 [COleClientItem：:D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)或[COleServerItem：:D odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop)函数。 这些函数将为您创建一个 `COleDropSource` 对象。 你可能想要修改 `COleDropSource` 可重写函数的默认行为。 框架将在适当的时间调用这些成员函数。
+要使用`COleDropSource`对象，只需调用构造函数。 这简化了确定哪些事件（如鼠标单击）使用[COleDataSource：:DoDragDrop、COleClientItem：:DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop)[COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)或[COleServerItem：:DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop)函数开始拖动操作的过程。 这些函数将为您创建`COleDropSource`一个对象。 您可能希望修改可重写函数的`COleDropSource`默认行为。 框架将在适当时间调用这些成员函数。
 
-有关使用 OLE 拖放操作的详细信息，请参阅[ole 拖放](../../mfc/drag-and-drop-ole.md)文章。
+有关使用 OLE 拖放操作的详细信息，请参阅文章[OLE 拖放](../../mfc/drag-and-drop-ole.md)。
 
-有关详细信息，请参阅 Windows SDK 中的[IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) 。
+有关详细信息，请参阅 Windows SDK 中的[IDropSource。](/windows/win32/api/oleidl/nn-oleidl-idropsource)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -67,9 +67,9 @@ class COleDropSource : public CCmdTarget
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole
+**标题：** afxole.h
 
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource
+## <a name="coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDrop 来源：COleDrop 来源
 
 构造 `COleDropSource` 对象。
 
@@ -77,9 +77,9 @@ class COleDropSource : public CCmdTarget
 COleDropSource();
 ```
 
-##  <a name="givefeedback"></a>COleDropSource：： System.windows.dragdrop.givefeedback>
+## <a name="coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDrop 来源：给反馈
 
-在调用[COleDropTarget：： system.windows.uielement.ondragover](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget:D： ragenter](../../mfc/reference/coledroptarget-class.md#ondragenter)后，由框架调用。
+调用 COleDropTarget 后由框架调用[：：onDragover](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget：:D拉格Enter](../../mfc/reference/coledroptarget-class.md#ondragenter)。
 
 ```
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
@@ -87,32 +87,32 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 
 ### <a name="parameters"></a>参数
 
-*dropEffect*<br/>
-希望向用户显示的效果，通常指示在此点处发生了选定数据时将发生的情况。 通常，这是最新调用[CView：： system.windows.uielement.ondragenter](../../mfc/reference/cview-class.md#ondragenter)或[Cview：： system.windows.uielement.ondragover](../../mfc/reference/cview-class.md#ondragover)的值。 它可以是下列一项或多项：
+*滴效果*<br/>
+要向用户显示的效果，通常指示如果此时与所选数据发生丢弃会发生什么情况。 通常，这是最近调用[CView 返回的值：OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)或[CView：onDragOver。](../../mfc/reference/cview-class.md#ondragover) 它可以是以下一个或多个：
 
-- DROPEFFECT_NONE 不允许删除。
+- DROPEFFECT_NONE不允许掉下。
 
-- DROPEFFECT_COPY 将执行复制操作。
+- DROPEFFECT_COPY将执行复制操作。
 
-- DROPEFFECT_MOVE 执行移动操作。
+- DROPEFFECT_MOVE将执行移动操作。
 
-- DROPEFFECT_LINK 将建立从已删除数据到原始数据的链接。
+- DROPEFFECT_LINK将建立从删除数据到原始数据的链接。
 
-- DROPEFFECT_SCROLL 将要发生或在目标中发生拖动滚动操作。
+- DROPEFFECT_SCROLL拖动滚动操作即将发生或发生在目标中。
 
 ### <a name="return-value"></a>返回值
 
-如果正在进行拖动，则返回 DRAGDROP_S_USEDEFAULTCURSORS，如果不是，则返回 NOERROR。
+如果拖动正在进行，则返回DRAGDROP_S_USEDEFAULTCURSORS;如果没有，则返回 NOERROR。
 
 ### <a name="remarks"></a>备注
 
-重写此函数以向用户提供有关在此时发生的情况下会发生什么情况的反馈。 默认实现使用 OLE 默认游标。 有关使用 OLE 拖放操作的详细信息，请参阅[ole 拖放](../../mfc/drag-and-drop-ole.md)文章。
+重写此函数，向用户提供有关此时发生丢弃时将会发生什么情况的反馈。 默认实现使用 OLE 默认游标。 有关使用 OLE 拖放操作的详细信息，请参阅文章[OLE 拖放](../../mfc/drag-and-drop-ole.md)。
 
-有关详细信息，请参阅 Windows SDK 中的[IDropSource：： system.windows.dragdrop.givefeedback>](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback)、 [IDropTarget：:D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)和[IDropTarget：:D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) 。
+有关详细信息，请参阅[IDropSource：：给反馈](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback)[，IDropTarget：:DragOver，](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)和[IDropTarget：:D拉格Enter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter)在 Windows SDK 中。
 
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag
+## <a name="coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDrop 来源：：在BeginDrag
 
-当发生可能开始拖动操作的事件时（如按鼠标左键），由框架调用。
+当可能发生可能开始拖动操作的事件（如按下鼠标左键）时，由框架调用。
 
 ```
 virtual BOOL OnBeginDrag(CWnd* pWnd);
@@ -120,20 +120,20 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 
 ### <a name="parameters"></a>参数
 
-*pWnd*<br/>
+*pwnd*<br/>
 指向包含所选数据的窗口。
 
 ### <a name="return-value"></a>返回值
 
-如果允许拖动，则为非零; 否则为0。
+如果允许拖动，则不为零，否则为 0。
 
 ### <a name="remarks"></a>备注
 
-如果要修改拖动过程的启动方式，请重写此函数。 默认实现将捕获鼠标并一直处于拖动模式，直到用户按下鼠标左键或按 ESC 键（此时它释放鼠标）。
+如果要修改拖动过程的启动方式，请重写此函数。 默认实现捕获鼠标并保持拖动模式，直到用户单击鼠标左键或右键或单击 ESC，此时它会释放鼠标。
 
-##  <a name="querycontinuedrag"></a>COleDropSource：： System.windows.dragdrop.querycontinuedrag>
+## <a name="coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDrop 来源：：查询继续拖动
 
-开始拖动后，框架将重复调用此函数，直到取消或完成拖动操作。
+拖动开始后，框架会反复调用此函数，直到拖动操作被取消或完成。
 
 ```
 virtual SCODE QueryContinueDrag(
@@ -143,27 +143,27 @@ virtual SCODE QueryContinueDrag(
 
 ### <a name="parameters"></a>参数
 
-*bEscapePressed*<br/>
-指示自上次调用 `COleDropSource::QueryContinueDrag`后是否已按下了 ESC 键。
+*bEscape压榨*<br/>
+指出自上次调用`COleDropSource::QueryContinueDrag`以来是否按下了 ESC 密钥。
 
-*dwKeyState*<br/>
-包含键盘上的修改键的状态。 这是以下任意数量的组合： "MK_CONTROL"、"MK_SHIFT"、"MK_ALT"、"MK_LBUTTON"、"MK_MBUTTON" 和 "MK_RBUTTON"。
+*德基州*<br/>
+包含键盘上修改器键的状态。 这是以下任意数量的组合：MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON和MK_RBUTTON。
 
 ### <a name="return-value"></a>返回值
 
-DRAGDROP_S_CANCEL 如果按下了 ESC 键或右键，则在拖动开始之前引发。 DRAGDROP_S_DROP 是否应执行删除操作。 否则 S_OK。
+DRAGDROP_S_CANCEL是否按下 ESC 键或右键，或者在拖动开始之前引发左键。 如果应执行放置操作，DRAGDROP_S_DROP。 否则S_OK。
 
 ### <a name="remarks"></a>备注
 
-如果要更改取消拖动或发生放置的点，请重写此函数。
+如果要更改取消拖动或放置的点，请覆盖此函数。
 
-默认实现启动删除或取消拖动，如下所示。 当按下 ESC 键或鼠标右键时，它将取消拖动操作。 在开始拖动后引发鼠标左键时，它将启动一个删除操作。 否则，它将返回 S_OK，且不执行进一步的操作。
+默认实现启动拖放或取消拖动，如下所示。 按下 ESC 键或鼠标右键时，它取消拖动操作。 当鼠标左键在拖动开始后启动时，它将启动放置操作。 否则，它将返回S_OK，并且不执行进一步的操作。
 
-由于此函数经常被调用，因此应尽可能优化。
+由于此函数是频繁调用的，因此应尽可能对其进行优化。
 
 ## <a name="see-also"></a>另请参阅
 
-[MFC 示例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[MFC 示例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)
+[层次结构图表](../../mfc/hierarchy-chart.md)

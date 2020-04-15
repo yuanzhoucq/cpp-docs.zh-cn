@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::Release method
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-ms.openlocfilehash: 5fc1b8965bf8bf2f86dd30f2195fa825f85f6d7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f314d09c443d0d284e3a821b5c879bfb74baf812
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423626"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371278"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 类
 
@@ -38,15 +38,15 @@ class ReleaseNotifier;
 
 名称                                                                                | 说明
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------
-[Module：： ReleaseNotifier：： ~ ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | 取消初始化 `Module::ReleaseNotifier` 类的当前实例。
-[Module：： ReleaseNotifier：： ReleaseNotifier](#releasenotifier-releasenotifier)        | 初始化 `Module::ReleaseNotifier` 类的新实例。
+[模块：：释放器：：*释放器](#releasenotifier-tilde-releasenotifier) | 取消初始化类的`Module::ReleaseNotifier`当前实例。
+[模块：：释放程序：：释放器](#releasenotifier-releasenotifier)        | 初始化 `Module::ReleaseNotifier` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
 名称                                                         | 说明
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
-[Module：： ReleaseNotifier：： Invoke](#releasenotifier-invoke)   | 实现后，在释放模块中的最后一个对象时调用事件处理程序。
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | 如果对象是用**true**的参数构造的，则删除当前的 `Module::ReleaseNotifier` 对象。
+[模块：：释放程序：：调用](#releasenotifier-invoke)   | 实现后，在释放模块中的最后一个对象时调用事件处理程序。
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | 如果对象构造的`Module::ReleaseNotifier`参数为**true**，则删除当前对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -54,19 +54,19 @@ class ReleaseNotifier;
 
 ## <a name="requirements"></a>要求
 
-**标头：** 模块。h
+**标题：** 模块.h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="releasenotifier-tilde-releasenotifier"></a>Module：： ReleaseNotifier：： ~ ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>模块：：释放器：：*释放器
 
-取消初始化 `Module::ReleaseNotifier` 类的当前实例。
+取消初始化类的`Module::ReleaseNotifier`当前实例。
 
 ```cpp
 WRL_NOTHROW virtual ~ReleaseNotifier();
 ```
 
-## <a name="releasenotifier-invoke"></a>Module：： ReleaseNotifier：： Invoke
+## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>模块：：释放程序：：调用
 
 实现后，在释放模块中的最后一个对象时调用事件处理程序。
 
@@ -74,15 +74,15 @@ WRL_NOTHROW virtual ~ReleaseNotifier();
 virtual void Invoke() = 0;
 ```
 
-## <a name="releasenotifier-release"></a>Module：： ReleaseNotifier：： Release
+## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>模块：：发布程序：：发布
 
-如果对象是用**true**的参数构造的，则删除当前的 `Module::ReleaseNotifier` 对象。
+如果对象构造的`Module::ReleaseNotifier`参数为**true**，则删除当前对象。
 
 ```cpp
 void Release() throw();
 ```
 
-## <a name="releasenotifier-releasenotifier"></a>Module：： ReleaseNotifier：： ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>模块：：释放程序：：释放器
 
 初始化 `Module::ReleaseNotifier` 类的新实例。
 
@@ -90,7 +90,7 @@ void Release() throw();
 ReleaseNotifier(bool release) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*release*<br/>
-`true` 在调用 `Release` 方法时删除此实例;`false` 不删除此实例。
+*释放*<br/>
+`true`在调用`Release`方法时删除此实例;`false`不删除此实例。

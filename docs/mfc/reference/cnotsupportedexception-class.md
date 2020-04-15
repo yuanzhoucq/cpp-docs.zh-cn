@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b859b939baef018e69b245e597eea90e608253ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407921"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363198"
 ---
 # <a name="cnotsupportedexception-class"></a>CNotSupportedException 类
 
@@ -29,21 +29,21 @@ class CNotSupportedException : public CSimpleException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|构造 `CNotSupportedException` 对象。|
+|[不支持的例外：：不支持例外](#cnotsupportedexception)|构造 `CNotSupportedException` 对象。|
 
 ## <a name="remarks"></a>备注
 
-没有进一步限定是需要或不能。
+没有必要或可能进一步的资格。
 
-有关使用的详细信息`CNotSupportedException`，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+有关 使用`CNotSupportedException`的详细信息，请参阅[异常处理 （MFC） 一](../../mfc/exception-handling-in-mfc.md)文。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[C 例外](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -51,9 +51,9 @@ class CNotSupportedException : public CSimpleException
 
 ## <a name="requirements"></a>要求
 
-**标头：** afx.h
+**标题：** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>不支持的例外：：不支持例外
 
 构造 `CNotSupportedException` 对象。
 
@@ -63,9 +63,9 @@ CNotSupportedException();
 
 ### <a name="remarks"></a>备注
 
-请勿直接，使用此构造函数而不是调用全局函数[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)。 有关异常处理的详细信息，请参阅文章[MFC 中的异常处理](../exception-handling-in-mfc.md)。
+不要直接使用此构造函数，而是调用全局函数[AfxThrowNot 支持异常](exception-processing.md#afxthrownotsupportedexception)。 有关异常处理的详细信息，请参阅[MFC 中的异常处理](../exception-handling-in-mfc.md)一文。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CException 类](cexception-class.md)<br/>
-[层次结构图](../hierarchy-chart.md)
+[层次结构图表](../hierarchy-chart.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ff6ea37208aef19431bf7aefe612dccd589c638b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425195"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374545"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函数
 
@@ -27,9 +27,9 @@ ms.locfileid: "79425195"
 |[regex_match](#regex_match)|测试正则表达式是否与整个目标字符串相匹配。|
 |[regex_replace](#regex_replace)|替换匹配正则表达式。|
 |[regex_search](#regex_search)|搜索正则表达式匹配项。|
-|[swap](#swap)|交换两个 `basic_regex` 或 `match_results` 的对象。|
+|[交换](#swap)|交换两`basic_regex`个或`match_results`对象。|
 
-## <a name="regex_match"></a>regex_match
+## <a name="regex_match"></a><a name="regex_match"></a>regex_match
 
 测试正则表达式是否与整个目标字符串相匹配。
 
@@ -82,16 +82,16 @@ bool regex_match(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*BidIt*\
-子匹配项的迭代器类型。 对于常见情况，这 `string::const_iterator`，`wstring::const_iterator`、`const char*` 或 `const wchar_t*`。
+*比比*\
+子匹配项的迭代器类型。 对于常见情况，此为`string::const_iterator``wstring::const_iterator`或`const char*` `const wchar_t*`。
 
-*分配*\
+*Alloc*\
 匹配结果分配器类。
 
-*Elem*\
-要匹配的元素的类型。 对于常见情况，这是 `string`、`wstring`、`char*` 或 `wchar_t*`。
+*埃莱姆*\
+要匹配的元素的类型。 对于常见情况，这是`string` `wstring`， `char*` `wchar_t*`或 。
 
 *RXtraits*\
 元素的特征类。
@@ -102,33 +102,33 @@ bool regex_match(
 *IOtraits*\
 字符串特征类。
 
-*IOalloc*\
+*伊奥洛克*\
 字符串分配器类。
 
-*flags*\
+*标志*\
 匹配标志。
 
-*第一个*\
+*第一*\
 要匹配的序列的开头。
 
 *最后*\
 要匹配的序列的结尾。
 
 *匹配*\
-匹配结果。 对应于 "Elem" 类型：用于 "`string`" 的 " [smatch](../standard-library/regex-typedefs.md#smatch) "、"用于 `wstring`的[wsmatch](../standard-library/regex-typedefs.md#wsmatch) " 或 " [wcmatch](../standard-library/regex-typedefs.md#wcmatch) "[作为 "`wchar_t*`](../standard-library/regex-typedefs.md#cmatch) `char*`"。
+匹配结果。 对应于 Elem 类型[smatch](../standard-library/regex-typedefs.md#smatch)：的`string`匹配，[的](../standard-library/regex-typedefs.md#wsmatch)`wstring`匹配，的匹配，cmatch 的`char*``wchar_t*`或[的 wcmatch。](../standard-library/regex-typedefs.md#wcmatch) [cmatch](../standard-library/regex-typedefs.md#cmatch)
 
-*ptr*\
-指向要匹配的序列开头的指针。 如果 `char*`*ptr* ，则使用 `cmatch` 和 `regex`。 如果 `wchar_t*` *ptr* ，则使用 `wcmatch` 和 `wregex`。
+*Ptr*\
+指向要匹配的序列开头的指针。 如果*ptr*是`char*` `cmatch` ，`regex`则使用 和 。 如果*使用 ptr，*`wchar_t*``wcmatch`则`wregex`使用 和 。
 
-*重新*\
-要匹配的正则表达式。 键入 `string` 和 `char*`的 `regex`，或键入 `wstring` 和 `wchar_t*`的 `wregex`。
+*re*\
+要匹配的正则表达式。 键入`regex``string`和`char*`或`wregex` `wstring` 。 `wchar_t*`
 
-*str*\
+*Str*\
 要匹配的字符串。 对应于*Elem*的类型。
 
 ### <a name="remarks"></a>备注
 
-仅当整个操作数序列*str*与正则表达式参数*re*完全匹配时，每个模板函数才返回 true。 使用[regex_search](../standard-library/regex-functions.md#regex_search)匹配目标序列中的子字符串，并 `regex_iterator` 查找多个匹配项。 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
+仅当整个操作符序列*str*与正则表达式参数*re*完全匹配时，每个模板函数才返回 true。 使用[regex_search](../standard-library/regex-functions.md#regex_search)匹配目标序列中的子字符串并`regex_iterator`查找多个匹配项。 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
 
 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
 
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>regex_replace
+## <a name="regex_replace"></a><a name="regex_replace"></a>regex_replace
 
 替换匹配正则表达式。
 
@@ -218,49 +218,49 @@ basic_string<Elem> regex_replace(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*OutIt*\
+*出它*\
 替换内容的迭代器类型。
 
-*BidIt*\
+*比比*\
 子匹配项的迭代器类型。
 
 *RXtraits*\
 元素的特征类。
 
-*分配*\
+*Alloc*\
 正则表达式分配器类。
 
-*Elem*\
+*埃莱姆*\
 要匹配的元素的类型。
 
-*flags*\
+*标志*\
 匹配标志。
 
-*第一个*\
+*第一*\
 要匹配的序列的开头。
 
-*bcp.fmt*\
+*Fmt*\
 替换内容的格式。
 
 *最后*\
 要匹配的序列的结尾。
 
-*out*\
+*出*\
 输出迭代器。
 
-*重新*\
+*re*\
 要匹配的正则表达式。
 
-*str*\
+*Str*\
 要匹配的字符串。
 
 ### <a name="remarks"></a>备注
 
-第一个函数 `iter(first, last, re, flags)` 构造[Regex_iterator 类](../standard-library/regex-iterator-class.md)对象，并使用它将其输入 `[first, last)` 范围拆分为一系列个子序列 `T0 M0 T1 M1...TN-1 MN-1 TN`，其中 `Mn` 是迭代器检测到的第 n 个匹配项。 如果找不到任何匹配项，`T0` 则为整个输入范围且 `N` 为零。 如果 `(flags & format_first_only) != 0`，则仅使用第一个匹配项，`T1` 是匹配项后跟的全部输入文本，且 `N` 为 1。 对于范围 `[0, N)`中的每个 `i`，如果 `(flags & format_no_copy) == 0` 它将 `Ti` 范围内的文本复制到迭代器*外*。然后调用 `m.format(out, fmt, flags)`，其中 `m` 是子序列 `Mi`的 iterator 对象 `iter` 返回的 `match_results` 对象。 最后，如果 `(flags & format_no_copy) == 0` 它将范围 `TN` 中的文本复制到迭代器*外*。函数*返回。*
+第一个函数构造[regex_iterator类](../standard-library/regex-iterator-class.md)`iter(first, last, re, flags)`对象，并用它来将其输入`[first, last)`范围拆分为一系列子序列`T0 M0 T1 M1...TN-1 MN-1 TN`，其中`Mn`迭代器检测到的第 n 个匹配项。 如果找不到任何匹配项，`T0` 则为整个输入范围且 `N` 为零。 如果 `(flags & format_first_only) != 0`，则仅使用第一个匹配项，`T1` 是匹配项后跟的全部输入文本，且 `N` 为 1。 对于范围内`i``[0, N)`的每个 ，如果`(flags & format_no_copy) == 0`将范围内`Ti`的文本复制到迭代器*出*。`m.format(out, fmt, flags)`然后调用 ，其中`m`是子`match_results`序列`iter``Mi`的迭代器对象返回的对象。 最后，如果它`(flags & format_no_copy) == 0`将范围内`TN`的文本复制到迭代器*出*。函数返回 *。*
 
-第二个函数构造 `result` 类型的本地变量 `basic_string<charT>` 并调用 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`。 它将返回 `result`。
+第二个函数构造 `basic_string<charT>` 类型的本地变量 `result` 并调用 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`。 它将返回 `result`。
 
 ### <a name="example"></a>示例
 
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>regex_search
+## <a name="regex_search"></a><a name="regex_search"></a>regex_search
 
 搜索正则表达式匹配项。
 
@@ -351,15 +351,15 @@ bool regex_search(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*BidIt*\
+*比比*\
 子匹配项的迭代器类型。
 
-*分配*\
+*Alloc*\
 匹配结果分配器类。
 
-*Elem*\
+*埃莱姆*\
 要匹配的元素的类型。
 
 *RXtraits*\
@@ -371,13 +371,13 @@ bool regex_search(
 *IOtraits*\
 字符串特征类。
 
-*IOalloc*\
+*伊奥洛克*\
 字符串分配器类。
 
-*flags*\
+*标志*\
 匹配标志。
 
-*第一个*\
+*第一*\
 要匹配的序列的开头。
 
 *最后*\
@@ -386,18 +386,18 @@ bool regex_search(
 *匹配*\
 匹配结果。
 
-*ptr*\
+*Ptr*\
 指向要匹配的序列开头的指针。
 
-*重新*\
+*re*\
 要匹配的正则表达式。
 
-*str*\
+*Str*\
 要匹配的字符串。
 
 ### <a name="remarks"></a>备注
 
-仅当对其操作数序列中的正则表达式*参数的搜索*成功时，每个模板函数才返回 true。 采用 `match_results` 对象的函数将其成员设置为反映搜索是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
+仅当搜索其正则表达式参数*在其*操作顺序中成功时，每个模板函数才返回 true。 采用 `match_results` 对象的函数将其成员设置为反映搜索是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
 
 ### <a name="example"></a>示例
 
@@ -455,9 +455,9 @@ search(string, "abc") == true
   matched: "abc"
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>交换
 
-交换两个 `basic_regex` 或 `match_results` 的对象。
+交换两`basic_regex`个或`match_results`对象。
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -471,9 +471,9 @@ void swap(
     match_results<BidIt, Alloc>& right) noexcept;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*Elem*\
+*埃莱姆*\
 要匹配的元素的类型。
 
 *RXtraits*\
@@ -520,11 +520,11 @@ string == aaa
 
 ## <a name="see-also"></a>另请参阅
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_constants 类](../standard-library/regex-constants-class.md)\
-[Regex_error 类](../standard-library/regex-error-class.md)\
-[Regex_iterator 类](../standard-library/regex-iterator-class.md)\
-[\<regex > 运算符](../standard-library/regex-operators.md)\
-[Regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
-[Regex_traits 类](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<正则>](../standard-library/regex.md)\
+[regex_constants类](../standard-library/regex-constants-class.md)\
+[regex_error类](../standard-library/regex-error-class.md)\
+[regex_iterator类](../standard-library/regex-iterator-class.md)\
+[\<正则>运算符](../standard-library/regex-operators.md)\
+[regex_token_iterator类](../standard-library/regex-token-iterator-class.md)\
+[regex_traits类](../standard-library/regex-traits-class.md)\
+[\<正则>类型](../standard-library/regex-typedefs.md)

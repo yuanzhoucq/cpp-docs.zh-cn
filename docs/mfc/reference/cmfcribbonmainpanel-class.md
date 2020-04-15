@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonMainPanel 类
+title: CMFC功能主面板类
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonMainPanel
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403589"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375095"
 ---
-# <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 类
+# <a name="cmfcribbonmainpanel-class"></a>CMFC功能主面板类
 
-实现在单击时显示的功能区面板[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。
+实现一个功能区面板，当您单击[CMFC 功能应用程序按钮](../../mfc/reference/cmfcribbonapplicationbutton-class.md)时显示。
 
 ## <a name="syntax"></a>语法
 
@@ -37,32 +37,32 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|默认构造函数。|
 |`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonMainPanel::Add](#add)|将功能区元素添加到应用程序按钮面板的左窗格中。 (重写[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。)|
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|将文本字符串添加到新的文件列表菜单。|
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|将功能区元素添加到功能区应用程序面板的底部窗格中。|
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|将功能区元素添加到应用程序按钮面板的右窗格中。|
+|[CMFC功能中心面板：添加](#add)|将功能区元素添加到应用程序按钮面板的左侧窗格中。 （覆盖[CMFC 功能面板：：添加](../../mfc/reference/cmfcribbonpanel-class.md#add).）|
+|[CMFC 功能中心面板：：添加最新文件列表](#addrecentfileslist)|将文本字符串添加到最近的文件列表菜单。|
+|[CMFC 剪彩主面板：：添加](#addtobottom)|将功能区元素添加到功能区应用程序面板的底部窗格中。|
+|[CMFC 功能主面板：：添加右侧](#addtoright)|将功能区元素添加到应用程序按钮面板的右侧窗格中。|
 |`CMFCRibbonMainPanel::CreateObject`|由框架用于创建此类类型的动态实例。|
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|返回一个表示功能区的主面板的区域的矩形。|
-|`CMFCRibbonMainPanel::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
+|[CMFC 功能主机面板：：获取命令框架](#getcommandsframe)|返回表示功能区主面板区域的矩形。|
+|`CMFCRibbonMainPanel::GetThisClass`|框架用于获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
 
 ## <a name="remarks"></a>备注
 
-框架显示`CMFCRibbonMainPanel`打开应用程序面板时。 它包含三个窗格：
+框架显示打开应用程序`CMFCRibbonMainPanel`面板时的 。 它包含三个窗格：
 
-- 左窗格中包含的文件，如关联的命令**开放**，**保存**，**打印**，以及**关闭**。 若要将命令添加到此窗格中，调用[CMFCRibbonMainPanel::Add](#add)。
+- 左侧窗格包含与文件关联的命令，如 **"打开**"、**保存**、**打印**和**关闭**。 要向此窗格添加命令，请致电[CMFCRibbonMainPanel：：：添加](#add)。
 
-- 在右窗格包含修改的左窗格中单击该命令的选项。 例如，如果您单击**另存为**从左窗格中，右窗格中可以显示可用的文件类型。 若要将项添加到此窗格中，调用[CMFCRibbonMainPanel::AddToRight](#addtoright)。
+- 右侧窗格包含修改在左侧窗格中单击的命令的选项。 例如，如果从左侧窗格单击 **"保存为"，** 则右侧窗格可以显示可用的文件类型。 要将项目添加到此窗格，请致电[CMFC 功能区主面板：：添加右](#addtoright)。
 
-- 在底部窗格包含允许您更改应用程序的设置并退出程序的按钮。 若要将项添加到此窗格中，调用[CMFCRibbonMainPanel::AddToBottom](#addtobottom)。
+- 底部窗格包含允许您更改应用程序设置并退出程序的按钮。 要将项目添加到此窗格，请致电[CMFC 功能区主面板：：添加到底部](#addtobottom)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -74,11 +74,11 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxRibbonMainPanel.h
+**标题：** afxRibbonMainPanel.h
 
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFC功能中心面板：添加
 
-将功能区元素添加到应用程序按钮面板的左窗格中。
+将功能区元素添加到应用程序按钮面板的左侧窗格中。
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -86,16 +86,16 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>参数
 
-*pElem*<br/>
-[in、 out]指向要添加到主面板的功能区元素的指针。
+*佩莱姆*<br/>
+[进出]指向要添加到主面板的功能区元素的指针。
 
 ### <a name="remarks"></a>备注
 
-将功能区元素添加到面板。 使用此方法添加的元素将位于左侧列的主面板中。
+向面板添加功能区元素。 使用此方法添加的元素将位于主面板的左列中。
 
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFC 功能中心面板：：添加最新文件列表
 
-将文本字符串添加到新的文件列表菜单。
+将文本字符串添加到最近的文件列表菜单。
 
 ```
 void AddRecentFilesList(
@@ -106,14 +106,14 @@ void AddRecentFilesList(
 ### <a name="parameters"></a>参数
 
 *lpszLabel*<br/>
-指定要添加到最近的文件列表的字符串。
+指定要添加到最近文件列表的字符串。
 
-*nWidth*<br/>
-指定宽度，以像素为单位的最新的文件列表面板。
+*n 宽度*<br/>
+指定最近文件列表面板的宽度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFC 剪彩主面板：：添加
 
 将功能区元素添加到功能区应用程序面板的底部窗格中。
 
@@ -123,14 +123,14 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>参数
 
-*pElem*<br/>
-[in、 out]指向要添加到主面板底部的功能区元素的指针。
+*佩莱姆*<br/>
+[进出]指向功能区元素的指针，用于添加到主面板的底部。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFC 功能主面板：：添加右侧
 
-将功能区元素添加到应用程序按钮面板的右窗格中。
+将功能区元素添加到应用程序按钮面板的右侧窗格中。
 
 ```
 void AddToRight(
@@ -140,19 +140,19 @@ void AddToRight(
 
 ### <a name="parameters"></a>参数
 
-*pElem*<br/>
+*佩莱姆*<br/>
 指向要添加到主面板右侧的功能区元素的指针。
 
-*nWidth*<br/>
-指定宽度，以像素为单位的右侧面板。
+*n 宽度*<br/>
+指定右侧面板的宽度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-使用此函数将功能区元素添加到右侧面板。 在右侧面板通常会显示最近的文件列表，但您可以添加以下任何其他功能区元素。
+使用此函数向右侧面板添加功能区元素。 右侧面板通常显示最近的文件列表，但您可以在此处添加任何其他功能区元素。
 
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFC 功能主机面板：：获取命令框架
 
-返回一个表示功能区的主面板的区域的矩形。
+返回表示功能区主面板区域的矩形。
 
 ```
 CRect GetCommandsFrame() const;
@@ -160,10 +160,10 @@ CRect GetCommandsFrame() const;
 
 ### <a name="return-value"></a>返回值
 
-一个表示功能区的主面板的区域的矩形。
+表示功能区主面板区域的矩形。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonPanel 类](../../mfc/reference/cmfcribbonpanel-class.md)

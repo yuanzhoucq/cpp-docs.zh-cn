@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363771"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 
-表示在应用程序执行过程中发生的错误。 自定义异常类不能从 `Platform::Exception`派生。 如果需要自定义异常，可以使用 `Platform::COMException` 并指定应用程序特定的 HRESULT。
+表示在应用程序执行期间出现的错误。 自定义异常类不能从 `Platform::Exception`派生。 如果需要自定义异常，可以使用 `Platform::COMException` 并指定应用程序特定的 HRESULT。
 
 ## <a name="syntax"></a>语法
 
@@ -35,38 +35,38 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 ### <a name="constructors"></a>构造函数
 
-|成员|描述|
+|成员|说明|
 |------------|-----------------|
-|[Exception::Exception](#ctor)|初始化 `Exception` 类的新实例。|
+|[例外：例外](#ctor)|初始化 `Exception` 类的新实例。|
 
 ### <a name="methods"></a>方法
 
-`Exception`类继承`Equals()`， `Finalize()`，`GetHashCode()`，`GetType()`，`MemberwiseClose()`，以及`ToString()`方法从[platform:: object 类](../cppcx/platform-object-class.md)。 `Exception` 类还具有以下方法。
+类`Exception``Equals()`从[Platform：对象类](../cppcx/platform-object-class.md)继承`GetType()``MemberwiseClose()``ToString()``Finalize()`、`GetHashCode()`、 、 、 、 `Exception` 类还具有以下方法。
 
-|成员|描述|
+|成员|说明|
 |------------|-----------------|
-|[Exception::CreateException](#createexception)|创建表示指定 HRESULT 值的异常。|
+|[异常：：创建异常](#createexception)|创建表示指定 HRESULT 值的异常。|
 
 ### <a name="properties"></a>属性
 
 此异常类还具有以下属性。
 
-|成员|描述|
+|成员|说明|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|与异常相对应的 HRESULT。|
-|[Exception::Message](#message)|描述异常的消息。 此值是只读的，在构造 `Exception` 后不能修改。|
+|[异常：：H 结果](#hresult)|与异常相对应的 HRESULT。|
+|[例外：消息](#message)|描述异常的消息。 此值是只读的，在构造 `Exception` 后不能修改。|
 
 ### <a name="requirements"></a>要求
 
-**支持的最低客户端：** Windows 8
+**受支持的最小客户端：** 视窗 8
 
-**支持的最低服务器：** Windows Server 2012
+**受支持的服务器最少：** 视窗服务器 2012
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**元数据：** 平台.winmd
 
-## <a name="createexception"></a> Exception:: createexception 方法
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>异常：：创建异常方法
 
 基于指定的 HRESULT 值创建 Platform::Exception^。
 
@@ -79,10 +79,10 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>参数
 
-*hr*<br/>
-调用 COM 方法时通常获取的 HRESULT 值。 如果值为 0，这等同于 S_OK，则此方法将引发[platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md)因为成功的 COM 方法不应引发异常。
+*人力资源*<br/>
+调用 COM 方法时通常获取的 HRESULT 值。 如果值为 0（等于S_OK，则此方法将引发[Platform：：无效参数异常](../cppcx/platform-invalidargumentexception-class.md)，因为成功的 COM 方法不应引发异常。
 
-*message*<br/>
+*消息*<br/>
 描述错误的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -93,9 +93,9 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 使用此方法可基于返回的 HRESULT（例如，调用 COM 接口方法时返回的 HRESULT）创建异常。 您可以使用带 String^ 参数的重载提供自定义消息。
 
-强烈建议使用 CreateException 创建强类型化的异常而不创建[platform:: comexception](../cppcx/platform-comexception-class.md)仅包含 HRESULT。
+强烈建议使用 CreateException 创建强类型异常，而不是创建仅包含 HRESULT[的平台：：COMexception。](../cppcx/platform-comexception-class.md)
 
-## <a name="ctor"></a>  Exception:: exception 构造函数
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a>例外：异常构造函数
 
 初始化 Exception 类的新实例。
 
@@ -108,13 +108,13 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>参数
 
-*hresult*<br/>
+*h结果*<br/>
 由异常表示的错误 HRESULT。
 
-*message*<br/>
+*消息*<br/>
 用户指定的与异常相关联的消息，例如指导性文本。 一般情况下，您应该会希望使用第二个重载，以便就错误的发生方式和原因提供尽可能具体的描述性消息。
 
-## <a name="hresult"></a>  Exception:: hresult 属性
+## <a name="exceptionhresult-property"></a><a name="hresult"></a>异常：hResult 属性
 
 与异常相对应的 HRESULT。
 
@@ -133,7 +133,7 @@ HRESULT 值。
 
 大多数异常都以 COM 错误形式出现，这类错误会返回为 HRESULT 值。 C++/CX 会将这些值转换为 Platform::Exception^ 对象，此属性则存储原始错误代码的值。
 
-## <a name="message"></a> Exception:: message 属性
+## <a name="exceptionmessage-property"></a><a name="message"></a>异常：消息属性
 
 描述错误的消息。
 
@@ -149,8 +149,8 @@ public:property String^ Message;
 
 ### <a name="remarks"></a>备注
 
-在 Windows 8 中，此属性是只读的因为 abi 仅作为 HRESULTS 传输该版本的 Windows 运行时中的异常。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅[异常 (C++/CX)](../cppcx/exceptions-c-cx.md)。
+在 Windows 8 中，此属性是只读的，因为该版本的 Windows 运行时中的异常仅作为 H结果跨 ABI 传输。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅异常[（C++/CX）。](../cppcx/exceptions-c-cx.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

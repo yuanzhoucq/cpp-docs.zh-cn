@@ -32,17 +32,17 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 12a83e45176f7fc6020da1f0d0ee5923ef0f466c
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 5d00c17b2ede654b9bdd214a8649f1237b9d9fdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375116"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 类
 
 实现位于功能区上的超链接。 当单击此超链接时，可以打开网页。
-有关更多详细信息, 请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -54,22 +54,22 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl](#cmfcribbonlinkctrl)|构造并初始化一个 `CMFCRibbonLinkCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|（重写 `CMFCRibbonButton::CopyFrom`。）|
-|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(重写[CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)。)|
-|[CMFCRibbonLinkCtrl::GetLink](#getlink)|返回超链接的值。|
-|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(重写[CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize)。)|
-|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(重写[CMFCRibbonButton:: GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext)。)|
+|[CMFC 功能链接Ctrl：获取压缩尺寸](#getcompactsize)|（覆盖[CMFC 功能按钮：获取压缩大小](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).）|
+|[CMFC剪链接Ctrl：获取链接](#getlink)|返回超链接的值。|
+|[CMFC 功能链接Ctrl：获取常规大小](#getregularsize)|（覆盖[CMFC 功能按钮：获取常规大小](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).）|
+|[CMFC 功能链接Ctrl：获取工具提示文本](#gettooltiptext)|（覆盖[CMFC 功能化按钮：获取工具提示文本](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).）|
 |[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|（重写 `CMFCRibbonButton::IsDrawTooltipImage`。）|
-|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(重写[CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw)。)|
-|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(重写[CMFCRibbonBaseElement:: OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)。)|
+|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|（覆盖[CMFC 功能按钮：onDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).）|
+|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|（覆盖[CMFC 功能基础元素：在DrawMenuImage.）](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)|
 |[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|（重写 `CMFCRibbonButton::OnMouseMove`。）|
 |[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||
 |[CMFCRibbonLinkCtrl::OpenLink](#openlink)|将打开超链接中指定的 Web 页。|
@@ -77,20 +77,20 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 ## <a name="remarks"></a>备注
 
-创建超链接后, 可通过调用[CMFCRibbonPanel:: add](../../mfc/reference/cmfcribbonpanel-class.md#add)将其添加到面板。
+创建超链接后，请通过调用[CMFC 功能程序：：：添加](../../mfc/reference/cmfcribbonpanel-class.md#add)将其添加到面板中。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
+•&nbsp;[CMFC功能基础元素](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CMFC功能按钮](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CMFC剪链接Ctrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxRibbonLinkCtrl
+**标题：** afxRibbonLinkCtrl.h
 
-##  <a name="cmfcribbonlinkctrl"></a>CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
+## <a name="cmfcribbonlinkctrlcmfcribbonlinkctrl"></a><a name="cmfcribbonlinkctrl"></a>CMFC 剪线链接Ctrl：：CMFC 剪线链接Ctrl
 
 构造并初始化[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)对象。
 
@@ -104,21 +104,21 @@ CMFCRibbonLinkCtrl(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-中指定单击链接控件时执行的命令的命令 ID。
+[在]指定单击链接控件时执行的命令的命令 ID。
 
 *lpszText*<br/>
-中指定要在链接控件上显示的标签。
+[在]指定要显示在链接控件上的标签。
 
 *lpszLink*<br/>
-中指定与链接控件关联的超链接。
+[在]指定与链接控件关联的超链接。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`CMFCRibbonLinkCtrl`类的构造函数。 此代码片段是[功能区小工具示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何使用`CMFCRibbonLinkCtrl`类的构造函数。 此代码段是[功能区小工具示例的一](../../overview/visual-cpp-samples.md)部分。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 
-##  <a name="copyfrom"></a>CMFCRibbonLinkCtrl:: CopyFrom
+## <a name="cmfcribbonlinkctrlcopyfrom"></a><a name="copyfrom"></a>CMFC剪发链接Ctrl：：从复制
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -126,11 +126,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>参数
 
-[in] *src*<br/>
+[在]*斯尔克*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getcompactsize"></a>CMFCRibbonLinkCtrl:: GetCompactSize
+## <a name="cmfcribbonlinkctrlgetcompactsize"></a><a name="getcompactsize"></a>CMFC 功能链接Ctrl：获取压缩尺寸
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -138,13 +138,13 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getlink"></a>CMFCRibbonLinkCtrl::GetLink
+## <a name="cmfcribbonlinkctrlgetlink"></a><a name="getlink"></a>CMFC剪链接Ctrl：获取链接
 
 返回超链接的值。
 
@@ -158,7 +158,7 @@ LPCTSTR GetLink() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getregularsize"></a>CMFCRibbonLinkCtrl:: GetRegularSize
+## <a name="cmfcribbonlinkctrlgetregularsize"></a><a name="getregularsize"></a>CMFC 功能链接Ctrl：获取常规大小
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -166,13 +166,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettooltiptext"></a>CMFCRibbonLinkCtrl:: GetToolTipText
+## <a name="cmfcribbonlinkctrlgettooltiptext"></a><a name="gettooltiptext"></a>CMFC 功能链接Ctrl：获取工具提示文本
 
 ```
 virtual CString GetToolTipText() const;
@@ -182,7 +182,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl:: OnDrawMenuImage
+## <a name="cmfcribbonlinkctrlondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFC功能链接Ctrl：在DrawMenu图像
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -190,14 +190,14 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>参数
 
-中*CDC&#42;*<br/>
-中*CRect*<br/>
+[在]*CDC&#42;*<br/>
+[在]*CRect*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage
+## <a name="cmfcribbonlinkctrlisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFC 剪贴链接Ctrl：：正在绘制工具提示图像
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -207,7 +207,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw
+## <a name="cmfcribbonlinkctrlondraw"></a><a name="ondraw"></a>CMFC里赛林Ctrl：在画上
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -215,11 +215,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
+[在]*pDC*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onmousemove"></a>CMFCRibbonLinkCtrl:: OnMouseMove
+## <a name="cmfcribbonlinkctrlonmousemove"></a><a name="onmousemove"></a>CMFC里塞林克Ctrl：在鼠标移动
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -227,11 +227,11 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>参数
 
-中*点*<br/>
+[在]*点*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon
+## <a name="cmfcribbonlinkctrlonseticon"></a><a name="onseticon"></a>CMFC剪链接Ctrl：onSeticon
 
 ```
 virtual void OnSetIcon();
@@ -239,7 +239,7 @@ virtual void OnSetIcon();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="openlink"></a>CMFCRibbonLinkCtrl::OpenLink
+## <a name="cmfcribbonlinkctrlopenlink"></a><a name="openlink"></a>CMFC剪链接Ctrl：：打开链接
 
 将打开超链接中指定的 Web 页。
 
@@ -249,13 +249,13 @@ BOOL OpenLink();
 
 ### <a name="return-value"></a>返回值
 
-如果成功打开关联的网页, 则为 TRUE;否则为 FALSE。
+如果关联的网页已成功打开，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
 使用与`CMFCRibbonLinkCtrl`对象关联的超链接打开网页。
 
-##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink
+## <a name="cmfcribbonlinkctrlsetlink"></a><a name="setlink"></a>CMFC 剪线链接：：设置链接
 
 设置超链接的值。
 
@@ -266,10 +266,10 @@ void SetLink(LPCTSTR lpszLink);
 ### <a name="parameters"></a>参数
 
 *lpszLink*<br/>
-中指定超链接文本。
+[在]指定超链接文本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFC 功能按钮类](../../mfc/reference/cmfcribbonbutton-class.md)

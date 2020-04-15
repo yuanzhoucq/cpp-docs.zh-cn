@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: e9ad7c363f2580200af20baeb0acd7a93c1f603b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7818b15e502bb32640d6b9dbfe1a6e4927c70650
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426401"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363969"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 类
 
@@ -45,30 +45,30 @@ class AFX_NOVTABLE CPropExchange
 
 |名称|说明|
 |----------|-----------------|
-|[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|交换二进制大型对象（BLOB）属性。|
-|[CPropExchange::ExchangeFontProp](#exchangefontprop)|交换字体属性。|
-|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|交换控件和文件之间的属性。|
-|[CPropExchange::ExchangeProp](#exchangeprop)|交换任何内置类型的属性。|
-|[CPropExchange::ExchangeVersion](#exchangeversion)|交换 OLE 控件的版本号。|
-|[CPropExchange：： GetVersion](#getversion)|检索 OLE 控件的版本号。|
-|[CPropExchange：： IsAsynchronous](#isasynchronous)|确定是否异步完成属性交换。|
-|[CPropExchange：： IsLoading](#isloading)|指示属性是加载到控件中还是从其保存。|
+|[CPropExchange：：交换BlobProp](#exchangeblobprop)|交换二进制大型对象 （BLOB） 属性。|
+|[CPropExchange：：交换方普罗普](#exchangefontprop)|交换字体属性。|
+|[CPropExchange：：交换持久](#exchangepersistentprop)|在控件和文件之间交换属性。|
+|[CPropExchange：交换](#exchangeprop)|交换任何内置类型的属性。|
+|[CPropExchange：交换版本](#exchangeversion)|交换 OLE 控件的版本号。|
+|[CPropExchange：获取版本](#getversion)|检索 OLE 控件的版本号。|
+|[CPropExchange：是同步的](#isasynchronous)|确定属换是否异步完成。|
+|[CPropExchange：正在加载](#isloading)|指示属性是加载到控件中还是从控件中保存。|
 
 ## <a name="remarks"></a>备注
 
-`CPropExchange` 没有基类。
+`CPropExchange`没有基类。
 
-建立属性交换的上下文和方向。
+建立财产交换的上下文和方向。
 
-持久性是控件的状态信息的交换，通常由其属性在控件本身和介质之间表示。
+持久性是控件本身和介质之间的状态信息（通常由其属性表示）的交换。
 
-当通知要从持久性存储区加载 OLE 控件的属性或将其存储到永久性存储时，框架将构造从 `CPropExchange` 派生的对象。
+框架构造从`CPropExchange`通知 OLE 控件的属性将从持久存储加载或存储到持久存储时派生的对象。
 
-框架将指向此 `CPropExchange` 对象的指针传递到控件的 `DoPropExchange` 函数。 如果使用向导创建控件的起始文件，则控件的 `DoPropExchange` 函数将调用 `COleControl::DoPropExchange`。 基类版本交换控件的常用属性;将派生类的版本修改为已添加到控件的 exchange 属性。
+框架将指向此`CPropExchange`对象的指针传递给控件的`DoPropExchange`函数。 如果使用向导为控件创建启动文件，则控件的`DoPropExchange`函数将调用`COleControl::DoPropExchange`。 基类版本交换控件的股票属性;修改派生类的版本以交换已添加到控件的属性。
 
-`CPropExchange` 可用于在控件的加载或创建时序列化控件的属性或初始化控件的属性。 `CPropExchange` 的 `ExchangeProp` 和 `ExchangeFontProp` 成员函数可以将属性存储到不同的媒体并从中加载它们。
+`CPropExchange`可用于在加载或创建控件时序列化控件的属性或初始化控件的属性。 和`ExchangeProp``ExchangeFontProp`成员函数`CPropExchange`能够将属性存储到并从不同的媒体加载它们。
 
-有关使用 `CPropExchange`的详细信息，请参阅[MFC ActiveX 控件：属性页](../../mfc/mfc-activex-controls-property-pages.md)一文。
+有关 使用`CPropExchange`的详细信息，请参阅文章[MFC ActiveX 控件：属性页](../../mfc/mfc-activex-controls-property-pages.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -76,11 +76,11 @@ class AFX_NOVTABLE CPropExchange
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxctl。h
+**标题：** afxctl.h
 
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp
+## <a name="cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a>CPropExchange：：交换BlobProp
 
-序列化存储二进制大型对象（BLOB）数据的属性。
+序列化存储二进制大型对象 （BLOB） 数据的属性。
 
 ```
 virtual BOOL ExchangeBlobProp(
@@ -89,28 +89,28 @@ virtual BOOL ExchangeBlobProp(
     HGLOBAL hBlobDefault = NULL) = 0;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*pszPropName*<br/>
+*pszProp名称*<br/>
 要交换的属性的名称。
 
 *phBlob*<br/>
-指向一个变量的指针，该变量指向属性的存储位置（变量通常是类的成员）。
+指向指向属性存储位置的变量的指针（变量通常是类的成员）。
 
 *hBlobDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则为非零值;如果不成功，则为0。
+如果交换成功，则非零;0，如果不成功。
 
 ### <a name="remarks"></a>备注
 
-此属性的值将在适当的情况下读取或写入*phBlob*引用的变量。 如果指定了*hBlobDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化失败，则使用此值。
+属性的值从*phBlob*引用的变量读取或写入（视情况而定）。 如果指定*了 hBlobDefault，* 它将用作属性的默认值。 如果由于任何原因，控件的序列化失败，则使用此值。
 
-函数 `CArchivePropExchange::ExchangeBlobProp`、`CResetPropExchange::ExchangeBlobProp`和 `CPropsetPropExchange::ExchangeBlobProp` 重写此纯虚函数。
+函数`CArchivePropExchange::ExchangeBlobProp`，`CResetPropExchange::ExchangeBlobProp`并`CPropsetPropExchange::ExchangeBlobProp`重写此纯虚拟函数。
 
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp
+## <a name="cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a>CPropExchange：：交换方普罗普
 
 在存储介质和控件之间交换字体属性。
 
@@ -122,33 +122,33 @@ virtual BOOL ExchangeFontProp(
     LPFONTDISP pFontDispAmbient) = 0;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*pszPropName*<br/>
+*pszProp名称*<br/>
 要交换的属性的名称。
 
-*文字*<br/>
-对包含 font 属性的[CFontHolder](../../mfc/reference/cfontholder-class.md)对象的引用。
+*字体*<br/>
+对包含字体属性的[CFontHolder](../../mfc/reference/cfontholder-class.md)对象的引用。
 
-*pFontDesc*<br/>
-指向[FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)结构的指针，该结构包含用于在*pFontDispAmbient*为 NULL 时初始化 font 属性的默认状态的值。
+*普丰德斯茨*<br/>
+指向[FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)结构的指针，其中包含用于在*pFontDispAmbient*为 NULL 时初始化字体属性的默认状态的值。
 
-*pFontDispAmbient*<br/>
-一个指针，指向要用于初始化 font 属性的默认状态的字体的 `IFontDisp` 接口。
+*pFontDisp环境*<br/>
+指向用于初始化`IFontDisp`字体属性的默认状态的字体接口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则为非零值;如果不成功，则为0。
+如果交换成功，则非零;0，如果不成功。
 
 ### <a name="remarks"></a>备注
 
-如果字体属性是从介质加载到控件的，则将从介质中检索字体的特征，并使用它们对*字体*所引用的 `CFontHolder` 对象进行初始化。 如果正在存储字体属性，则会将 font 对象中的特征写入介质。
+如果字体属性从介质加载到控件，则从介质中检索字体的特征，并且`CFontHolder`*使用字体*引用的对象进行初始化。 如果正在存储字体属性，则字体对象中的特征将写入介质。
 
-函数 `CArchivePropExchange::ExchangeFontProp`、`CResetPropExchange::ExchangeFontProp`和 `CPropsetPropExchange::ExchangeFontProp` 重写此纯虚函数。
+函数`CArchivePropExchange::ExchangeFontProp`，`CResetPropExchange::ExchangeFontProp`并`CPropsetPropExchange::ExchangeFontProp`重写此纯虚拟函数。
 
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp
+## <a name="cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a>CPropExchange：：交换持久
 
-交换控件和文件之间的属性。
+在控件和文件之间交换属性。
 
 ```
 virtual BOOL ExchangePersistentProp(
@@ -158,33 +158,33 @@ virtual BOOL ExchangePersistentProp(
     LPUNKNOWN pUnkDefault) = 0;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*pszPropName*<br/>
+*pszProp名称*<br/>
 要交换的属性的名称。
 
-*ppUnk*<br/>
-指向一个变量的指针，该变量包含指向属性的 `IUnknown` 接口的指针（此变量通常为类的成员）。
+*普恩克*<br/>
+指向包含指向属性接口的指针的`IUnknown`变量的指针（此变量通常是类的成员）。
 
-*iid*<br/>
-控件将使用的属性的接口 ID。
+*Iid*<br/>
+控件将使用的属性上的接口的接口的接口 ID。
 
 *pUnkDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则为非零值;如果不成功，则为0。
+如果交换成功，则非零;0，如果不成功。
 
 ### <a name="remarks"></a>备注
 
-如果该属性是从文件加载到控件的，则将从该文件创建并初始化属性。 如果属性正在存储，则将其值写入文件。
+如果属性从文件加载到控件，则从文件创建和初始化该属性。 如果正在存储该属性，则其值将写入文件。
 
-函数 `CArchivePropExchange::ExchangePersistentProp`、`CResetPropExchange::ExchangePersistentProp`和 `CPropsetPropExchange::ExchangePersistentProp` 重写此纯虚函数。
+函数`CArchivePropExchange::ExchangePersistentProp`，`CResetPropExchange::ExchangePersistentProp`并`CPropsetPropExchange::ExchangePersistentProp`重写此纯虚拟函数。
 
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp
+## <a name="cpropexchangeexchangeprop"></a><a name="exchangeprop"></a>CPropExchange：交换
 
-在存储介质和控件之间交换属性。
+在存储介质和控制之间交换属性。
 
 ```
 virtual BOOL ExchangeProp(
@@ -194,22 +194,22 @@ virtual BOOL ExchangeProp(
     const void* pvDefault = NULL) = 0 ;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*pszPropName*<br/>
+*pszProp名称*<br/>
 要交换的属性的名称。
 
 *vtProp*<br/>
-指定正在交换的属性的类型的符号。 可能的值包括：
+指定要交换的属性类型的符号。 可能的值包括：
 
 |符号|属性类型|
 |------------|-------------------|
 |VT_I2|**short**|
-|VT_I4|**long**|
-|VT_BOOL|**BOOL**|
+|VT_I4|**长**|
+|VT_BOOL|**Bool**|
 |VT_BSTR|`CString`|
 |VT_CY|**CY**|
-|VT_R4|**float**|
+|VT_R4|**浮动**|
 |VT_R8|**double**|
 
 *pvProp*<br/>
@@ -220,17 +220,17 @@ virtual BOOL ExchangeProp(
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则为非零值;如果不成功，则为0。
+如果交换成功，则非零;0，如果不成功。
 
 ### <a name="remarks"></a>备注
 
-如果该属性是从介质加载到控件的，则将从中检索该属性的值，并将其存储在*pvProp*所指向的对象中。 如果将属性存储在介质上，则*pvProp*指向的对象的值将写入介质。
+如果属性从介质加载到控件，则从介质检索该属性的值并存储在*pvProp*指向的对象中。 如果属性被存储到介质，*则 pvProp*指向的对象的值将写入介质。
 
-函数 `CArchivePropExchange::ExchangeProp`、`CResetPropExchange::ExchangeProp`和 `CPropsetPropExchange::ExchangeProp` 重写此纯虚函数。
+函数`CArchivePropExchange::ExchangeProp`，`CResetPropExchange::ExchangeProp`并`CPropsetPropExchange::ExchangeProp`重写此纯虚拟函数。
 
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion
+## <a name="cpropexchangeexchangeversion"></a><a name="exchangeversion"></a>CPropExchange：交换版本
 
-由框架调用，用于处理版本号的持久性。
+由框架调用来处理版本号的持久性。
 
 ```
 virtual BOOL ExchangeVersion(
@@ -239,24 +239,24 @@ virtual BOOL ExchangeVersion(
     BOOL bConvert);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwVersionLoaded*<br/>
-对变量的引用，将在其中存储正在加载的永久性数据的版本号。
+引用将存储要加载的持久数据的版本号的变量。
 
 *dwVersionDefault*<br/>
 控件的当前版本号。
 
-*bConvert*<br/>
-指示是否将永久性数据转换为当前版本，或将其保留为加载的同一版本。
+*b转换*<br/>
+指示是将持久性数据转换为当前版本，还是将其保留在加载的相同版本。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则为非零值;否则为0。
+如果函数成功，则非零;0 否则。
 
-##  <a name="getversion"></a>CPropExchange：： GetVersion
+## <a name="cpropexchangegetversion"></a><a name="getversion"></a>CPropExchange：获取版本
 
-调用此函数可检索控件的版本号。
+调用此函数以检索控件的版本号。
 
 ```
 DWORD GetVersion();
@@ -266,9 +266,9 @@ DWORD GetVersion();
 
 控件的版本号。
 
-##  <a name="isasynchronous"></a>CPropExchange：： IsAsynchronous
+## <a name="cpropexchangeisasynchronous"></a><a name="isasynchronous"></a>CPropExchange：是同步的
 
-确定是否异步完成属性交换。
+确定属换是否异步完成。
 
 ```
 BOOL IsAsynchronous();
@@ -276,11 +276,11 @@ BOOL IsAsynchronous();
 
 ### <a name="return-value"></a>返回值
 
-如果异步交换属性，则返回 TRUE; 否则返回 FALSE。
+如果以异步方式交换属性，则返回 TRUE，否则为 FALSE。
 
-##  <a name="isloading"></a>CPropExchange：： IsLoading
+## <a name="cpropexchangeisloading"></a><a name="isloading"></a>CPropExchange：正在加载
 
-调用此函数可确定是否将属性加载到控件或将其保存。
+调用此函数以确定属性是加载到控件还是从控件中保存。
 
 ```
 BOOL IsLoading();
@@ -288,9 +288,9 @@ BOOL IsLoading();
 
 ### <a name="return-value"></a>返回值
 
-如果正在加载属性，则为非零值;否则为0。
+如果正在加载属性，则非零;否则 0。
 
 ## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[COleControl：:D oPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[COleControl：:DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)

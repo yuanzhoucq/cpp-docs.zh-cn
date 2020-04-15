@@ -1,5 +1,5 @@
 ---
-title: CMFCTasksPaneTask 类
+title: CMFC任务窗格任务类
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTask
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49fccdf161da7deb1fd88a12a107df40bafdae92
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218689"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375870"
 ---
-# <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 类
+# <a name="cmfctaskspanetask-class"></a>CMFC任务窗格任务类
 
-`CMFCTasksPaneTask`类是表示任务的任务窗格控件的帮助器类 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 任务对象表示任务组中的项 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每个任务可具有在用户单击任务和显示在任务名称左侧的图标时框架所执行的命令。
+类`CMFCTasksPaneTask`是一个帮助器类，表示任务窗格控件的任务 （ [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)）。 任务对象表示任务组中的项[（CMFC任务窗格任务组](../../mfc/reference/cmfctaskspanetaskgroup-class.md)）。 每个任务可具有在用户单击任务和显示在任务名称左侧的图标时框架所执行的命令。
 
 ## <a name="syntax"></a>语法
 
@@ -51,40 +51,40 @@ class CMFCTasksPaneTask : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|创建并初始化`CMFCTasksPaneTask`对象。|
+|[CMFC任务窗格任务：：CMFC任务窗格任务](#cmfctaskspanetask)|创建并初始化一个 `CMFCTasksPaneTask` 对象。|
 |`CMFCTasksPaneTask::~CMFCTasksPaneTask`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCTasksPaneTask::SetACCData](#setaccdata)|确定当前任务的可访问性数据。|
+|[CMFC任务窗格任务：：设置ACC数据](#setaccdata)|确定当前任务的辅助功能数据。|
 
 ### <a name="data-members"></a>数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|确定是否自动销毁任务窗口。|
-|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|确定是否该框架在绘制任务标签显示为粗体文本。|
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|包含 framework 将与任务相关联的用户定义数据。 如果该任务有没有关联的数据，设置为零。|
-|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|任务窗口的句柄。|
-|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|框架的任务旁显示的图像的图像列表中的索引。|
-|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|任务窗口的高度。 如果该任务有没有任务窗口，此值为零。|
-|[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|一个指向`CMFCTasksPaneTaskGroup`属于此任务。|
-|[CMFCTasksPaneTask::m_rect](#m_rect)|指定该任务的边界矩形。|
-|[CMFCTasksPaneTask::m_strName](#m_strname)|任务的名称。|
-|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|指定在用户单击该任务时框架所执行的命令的命令 ID。 如果此值不是有效的命令 ID，该任务视为一个简单的标签。|
+|[CMFC任务窗格任务：：m_bAutoDestroyWindow](#m_bautodestroywindow)|确定任务窗口是否自动销毁。|
+|[CMFC任务窗格任务：：m_bIsBold](#m_bisbold)|确定框架是否以粗体文本绘制任务标签。|
+|[CMFC任务窗格任务：：m_dwUserData](#m_dwuserdata)|包含框架与任务关联的用户定义数据。 如果任务没有关联的数据，则设置为零。|
+|[CMFC任务窗格任务：：m_hwndTask](#m_hwndtask)|任务窗口的句柄。|
+|[CMFC任务窗格任务：：m_nIcon](#m_nicon)|框架显示在任务旁边的图像图像列表中的索引。|
+|[CMFC任务窗格任务：：m_nWindowHeight](#m_nwindowheight)|任务窗口的高度。 如果任务没有任务窗口，则此值为零。|
+|[CMFC任务窗格任务：：m_pGroup](#m_pgroup)|指向此任务所属`CMFCTasksPaneTaskGroup`的 的指针。|
+|[CMFC任务窗格任务：：m_rect](#m_rect)|指定任务的边界矩形。|
+|[CMFC任务窗格任务：：m_strName](#m_strname)|任务的名称。|
+|[CMFC任务窗格任务：：m_uiCommandID](#m_uicommandid)|指定框架在用户单击任务时执行的命令的命令 ID。 如果此值不是有效的命令 ID，则任务将被视为简单标签。|
 
 ## <a name="remarks"></a>备注
 
 下图显示了包含三个任务的任务组：
 
-![任务组中，展开](../../mfc/reference/media/nexttaskgrpexpand.png "展开任务组")
+![已展开的任务组](../../mfc/reference/media/nexttaskgrpexpand.png "已展开的任务组")
 
 > [!NOTE]
-> 如果任务不具有有效的命令 ID，则将它视为一个简单的标签。
+> 如果任务没有有效的命令 ID，则将其视为简单标签。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -94,11 +94,11 @@ class CMFCTasksPaneTask : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxTasksPane.h
+**标题：** afxTasksPane.h
 
-##  <a name="cmfctaskspanetask"></a>  CMFCTasksPaneTask::CMFCTasksPaneTask
+## <a name="cmfctaskspanetaskcmfctaskspanetask"></a><a name="cmfctaskspanetask"></a>CMFC任务窗格任务：：CMFC任务窗格任务
 
-创建并初始化`CMFCTasksPaneTask`对象。
+创建并初始化一个 `CMFCTasksPaneTask` 对象。
 
 ```
 CMFCTasksPaneTask(
@@ -114,17 +114,17 @@ CMFCTasksPaneTask(
 
 ### <a name="parameters"></a>参数
 
-*pGroup*<br/>
-指定[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)所属的任务。
+*p组*<br/>
+指定任务所属的[CMFC 任务窗格任务组](../../mfc/reference/cmfctaskspanetaskgroup-class.md)。
 
-*lpszName*<br/>
+*lpsz名称*<br/>
 指定任务的名称。
 
 *nIcon*<br/>
-图像列表中指定任务的图像的索引。
+在图像列表中指定任务图像的索引。
 
 *uiCommandID*<br/>
-指定单击该任务时执行的命令的命令 ID。
+指定单击任务时执行的命令的命令 ID。
 
 *dwUserData*<br/>
 用户定义的数据。
@@ -132,17 +132,17 @@ CMFCTasksPaneTask(
 *hwndTask*<br/>
 指定任务窗口的句柄。
 
-*bAutoDestroyWindow*<br/>
-如果为 TRUE，任务窗口将自动销毁。
+*b 自动销毁窗口*<br/>
+如果为 TRUE，则任务窗口将自动销毁。
 
-*nWindowHeight*<br/>
-指定的任务窗口的高度。
+*n 窗口高度*<br/>
+指定任务窗口的高度。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow
+## <a name="cmfctaskspanetaskm_bautodestroywindow"></a><a name="m_bautodestroywindow"></a>CMFC任务窗格任务：：m_bAutoDestroyWindow
 
-确定是否自动销毁任务窗口。
+确定任务窗口是否自动销毁。
 
 ```
 BOOL m_bAutoDestroyWindow;
@@ -150,11 +150,11 @@ BOOL m_bAutoDestroyWindow;
 
 ### <a name="remarks"></a>备注
 
-设置为 TRUE，以指定的任务窗口 ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) 自动; 否则为 FALSE 时被销毁。
+设置为 TRUE 以指定应自动销毁任务窗口[（CMFC任务窗格任务：：：m_hwndTask](#m_hwndtask)）;否则，FALSE。
 
-##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold
+## <a name="cmfctaskspanetaskm_bisbold"></a><a name="m_bisbold"></a>CMFC任务窗格任务：：m_bIsBold
 
-确定是否显示为粗体文本绘制任务标签。
+确定是否以粗体文本绘制任务标签。
 
 ```
 BOOL m_bIsBold;
@@ -162,11 +162,11 @@ BOOL m_bIsBold;
 
 ### <a name="remarks"></a>备注
 
-设置此成员为 true，则显示为加粗任务标签的文本。
+将此成员设置为 TRUE 以显示任务标签的粗体文本。
 
-##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData
+## <a name="cmfctaskspanetaskm_dwuserdata"></a><a name="m_dwuserdata"></a>CMFC任务窗格任务：：m_dwUserData
 
-包含与任务相关联的用户定义数据。 如果没有任何数据与任务关联，则设置为零。
+包含与任务关联的用户定义的数据。 如果没有数据与任务关联，则设置为零。
 
 ```
 DWORD m_dwUserData;
@@ -174,7 +174,7 @@ DWORD m_dwUserData;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="m_hwndtask"></a>  CMFCTasksPaneTask::m_hwndTask
+## <a name="cmfctaskspanetaskm_hwndtask"></a><a name="m_hwndtask"></a>CMFC任务窗格任务：：m_hwndTask
 
 任务窗口的句柄。
 
@@ -184,11 +184,11 @@ HWND m_hwndTask;
 
 ### <a name="remarks"></a>备注
 
-若要添加的任务窗口，请调用[CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)。
+要添加任务窗口，请致电[CMFC任务窗格：：添加窗口](../../mfc/reference/cmfctaskspane-class.md#addwindow)。
 
-##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon
+## <a name="cmfctaskspanetaskm_nicon"></a><a name="m_nicon"></a>CMFC任务窗格任务：：m_nIcon
 
-标识指定的任务的旁边显示的图像的图像列表中的索引位置。
+图像列表中的索引位置，用于标识显示在指定任务旁边的图像。
 
 ```
 int m_nIcon;
@@ -196,13 +196,13 @@ int m_nIcon;
 
 ### <a name="remarks"></a>备注
 
-设置图像列表[CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist)。
+映像列表由[CMFC 任务窗格设置：：设置图标列表](../../mfc/reference/cmfctaskspane-class.md#seticonslist)。
 
-设置`m_nIcon`为-1，如果你想要显示图像的任务。
+如果要`m_nIcon`在没有图像的情况下显示任务，则设置为 -1。
 
-##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight
+## <a name="cmfctaskspanetaskm_nwindowheight"></a><a name="m_nwindowheight"></a>CMFC任务窗格任务：：m_nWindowHeight
 
-任务窗口的高度。 如果该任务有没有任务窗口，此值为零。
+任务窗口的高度。 如果任务没有任务窗口，则此值为零。
 
 ```
 int m_nWindowHeight;
@@ -210,9 +210,9 @@ int m_nWindowHeight;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="m_pgroup"></a>  CMFCTasksPaneTask::m_pGroup
+## <a name="cmfctaskspanetaskm_pgroup"></a><a name="m_pgroup"></a>CMFC任务窗格任务：：m_pGroup
 
-指向[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)所属此任务。
+指向此任务所属的[CMFC 任务PaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)的指针。
 
 ```
 CMFCTasksPaneTaskGroup* m_pGroup;
@@ -220,11 +220,11 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 
 ### <a name="remarks"></a>备注
 
-每个任务必须具有父组。 您将组添加到任务窗格的通过调用[cmfctaskspane:: Addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。
+每个任务都必须有一个父组。 通过调用[CMFC任务窗格：：添加组](../../mfc/reference/cmfctaskspane-class.md#addgroup)，将组添加到任务窗格中。
 
-##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect
+## <a name="cmfctaskspanetaskm_rect"></a><a name="m_rect"></a>CMFC任务窗格任务：：m_rect
 
-指定该任务的边界矩形。
+指定任务的边界矩形。
 
 ```
 CRect m_rect;
@@ -234,7 +234,7 @@ CRect m_rect;
 
 绘制任务时，由框架计算此值。
 
-##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName
+## <a name="cmfctaskspanetaskm_strname"></a><a name="m_strname"></a>CMFC任务窗格任务：：m_strName
 
 任务的名称。
 
@@ -244,9 +244,9 @@ CString m_strName;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID
+## <a name="cmfctaskspanetaskm_uicommandid"></a><a name="m_uicommandid"></a>CMFC任务窗格任务：：m_uiCommandID
 
-指定当用户单击该任务执行的命令的命令 ID。 如果此值不是有效的命令 ID，该任务视为一个简单的标签。
+指定用户单击任务时执行的命令的命令 ID。 如果此值不是有效的命令 ID，则任务将被视为简单标签。
 
 ```
 UINT m_uiCommandID;
@@ -254,9 +254,9 @@ UINT m_uiCommandID;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setaccdata"></a>  CMFCTasksPaneTask::SetACCData
+## <a name="cmfctaskspanetasksetaccdata"></a><a name="setaccdata"></a>CMFC任务窗格任务：：设置ACC数据
 
-确定当前任务的可访问性数据。
+确定当前任务的辅助功能数据。
 
 ```
 virtual BOOL SetACCData(
@@ -266,18 +266,18 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>参数
 
-*pParent*<br/>
-[in]表示当前任务的父窗口。
+*p 父级*<br/>
+[在]表示当前任务的父窗口。
 
-*data*<br/>
-[out]类型的对象`CAccessibilityData`填入当前任务的可访问性数据。
+*数据*<br/>
+[出]使用当前任务的辅助`CAccessibilityData`数据填充的类型对象。
 
 ### <a name="return-value"></a>返回值
 
-则为 TRUE*数据*参数已成功使用当前任务的可访问性数据填充; 否则为 FALSE。
+如果*数据*参数已成功填充当前任务的辅助功能数据，则为 TRUE;否则，FALSE。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)

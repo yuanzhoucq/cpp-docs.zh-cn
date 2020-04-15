@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41416c8223ac94364e8f83028ea93189e9f3f60c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323565"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373255"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 
@@ -35,38 +35,38 @@ class CTypedPtrMap : public BASE_CLASS
 #### <a name="parameters"></a>参数
 
 *BASE_CLASS*<br/>
-类型化的指针映射类; 基类的必须是指针映射类 ( `CMapPtrToPtr`， `CMapPtrToWord`， `CMapWordToPtr`，或`CMapStringToPtr`)。
+类型化指针映射类的基类;必须是指针`CMapPtrToPtr`映射类 （、、、`CMapWordToPtr``CMapStringToPtr``CMapPtrToWord`或 ）。
 
-*KEY*<br/>
-用作映射的键的对象的类。
+*关键*<br/>
+用作映射键的对象的类。
 
-*VALUE*<br/>
-在映射中存储的对象的类。
+*价值*<br/>
+存储在地图中的对象的类。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|获取用于循环的下一个元素。|
-|[CTypedPtrMap::Lookup](#lookup)|返回`KEY`基于`VALUE`。|
-|[CTypedPtrMap::RemoveKey](#removekey)|移除由键指定的元素。|
-|[CTypedPtrMap::SetAt](#setat)|将元素插入到映射;如果找到匹配项，将替换现有元素。|
+|[CTypedPtrMap：：获取NextAssoc](#getnextassoc)|获取下一个迭代元素。|
+|[CTypedPtrMap：：查找](#lookup)|返回`KEY`基于 的`VALUE`。|
+|[CTypedPtrMap：：删除键](#removekey)|删除由键指定的元素。|
+|[CTypedPtrMap：：SetAt](#setat)|将元素插入到地图中;如果找到匹配的键，则替换现有元素。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CTypedPtrMap::operator \[ \]](#operator_at)|将元素插入到映射。|
+|[CTypedPtrMap：：运算符\[\]](#operator_at)|将元素插入到地图中。|
 
 ## <a name="remarks"></a>备注
 
-当你使用`CTypedPtrMap`、C++类型检查的工具可帮助消除错误引起的不匹配的指针类型。
+使用`CTypedPtrMap`时，C++类型检查工具有助于消除由不匹配的指针类型引起的错误。
 
-因为所有`CTypedPtrMap`函数是内联的使用此模板不会严重影响的大小或代码的速度。
+由于所有`CTypedPtrMap`函数都是内联的，因此使用此模板不会显著影响代码的大小或速度。
 
-有关使用的详细信息`CTypedPtrMap`，请参阅文章[集合](../../mfc/collections.md)并[基于模板的类](../../mfc/template-based-classes.md)。
+有关 使用`CTypedPtrMap`的详细信息，请参阅文章[集合](../../mfc/collections.md)和[基于模板的类](../../mfc/template-based-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -78,9 +78,9 @@ class CTypedPtrMap : public BASE_CLASS
 
 **标头：** afxtempl.h
 
-##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc
+## <a name="ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap：：获取NextAssoc
 
-检索处的地图元素`rNextPosition`，然后更新`rNextPosition`来指代在映射中的下一个元素。
+在 中检索地图元素`rNextPosition`，然后更新`rNextPosition`以引用地图中的下一个元素。
 
 ```
 void GetNextAssoc(
@@ -91,32 +91,32 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>参数
 
-*rPosition*<br/>
-指定对先前返回的位置值的引用`GetNextAssoc`或`BASE_CLASS` **:: GetStartPosition**调用。
+*r定位*<br/>
+指定对上一个`GetNextAssoc`或`BASE_CLASS` **：： GetStart位置**调用返回的定位值的引用。
 
-*KEY*<br/>
-指定地图的键的类型的模板参数。
+*关键*<br/>
+指定地图键类型的模板参数。
 
 *rKey*<br/>
-指定返回检索到的元素的键。
+指定检索到的元素的返回键。
 
-*VALUE*<br/>
-指定地图的值的类型的模板参数。
+*价值*<br/>
+指定地图值类型的模板参数。
 
 *rValue*<br/>
-指定检索的元素的返回的值。
+指定检索到的元素的返回值。
 
 ### <a name="remarks"></a>备注
 
-此函数是最适用于通过映射中的所有元素。 请注意，位置序列不一定与密钥值序列相同。
+此函数对于迭代地图中的所有元素最有用。 请注意，位置序列不一定与键值序列相同。
 
-如果检索的元素在映射中上, 一次然后的新值`rNextPosition`设置为 NULL。
+如果检索到的元素是地图中的最后一个元素，则 的新`rNextPosition`值将设置为 NULL。
 
-此内联函数将调用`BASE_CLASS` **:: GetNextAssoc**。
+此内联函数调用`BASE_CLASS` **：：GetNextAssoc**。
 
-##  <a name="lookup"></a>  CTypedPtrMap::Lookup
+## <a name="ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap：：查找
 
-`Lookup` 使用哈希算法来快速查找完全匹配的密钥的地图元素。
+`Lookup`使用哈希算法快速查找具有完全匹配的键的映射元素。
 
 ```
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
@@ -125,28 +125,28 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="parameters"></a>参数
 
 *BASE_CLASS*<br/>
-指定此地图的类的基类的模板参数。
+指定此映射类的基类的模板参数。
 
-*key*<br/>
-要查找的元素的键。
+*关键*<br/>
+要抬起来的元素的键。
 
-*VALUE*<br/>
-指定的值存储在此映射中的类型的模板参数。
+*价值*<br/>
+指定此映射中存储的值类型的模板参数。
 
 *rValue*<br/>
-指定检索的元素的返回的值。
+指定检索到的元素的返回值。
 
 ### <a name="return-value"></a>返回值
 
-如果找到该元素; 非零值否则为 0。
+如果找到元素，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-此内联函数将调用`BASE_CLASS` **:: 查找**。
+此内联函数调用`BASE_CLASS` **：：查找**。
 
-##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
+## <a name="ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrMap：：运算符 |
 
-仅在左侧和右侧的赋值语句 （左值） 上，可以使用此运算符。
+此运算符只能在赋值语句（l 值）的左侧使用。
 
 ```
 VALUE& operator[ ](base_class ::base_arg_key key);
@@ -154,22 +154,22 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>参数
 
-*VALUE*<br/>
-指定的值存储在此映射中的类型的模板参数。
+*价值*<br/>
+指定此映射中存储的值类型的模板参数。
 
 *BASE_CLASS*<br/>
-指定此地图的类的基类的模板参数。
+指定此映射类的基类的模板参数。
 
-*key*<br/>
-要查找或创建在映射中的元素的键。
+*关键*<br/>
+要在地图中备份或创建的元素的键。
 
 ### <a name="remarks"></a>备注
 
-如果不存在具有指定键映射元素，则会创建一个新的元素。 没有等效于此运算符的任何"右侧"（右值），因为可能可能映射中找到密钥。 使用`Lookup`元素检索的成员函数。
+如果没有具有指定键的地图元素，则创建新元素。 没有等效于此运算符的"右侧"（r 值），因为在地图中可能找不到键。 使用`Lookup`成员函数进行元素检索。
 
-##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey
+## <a name="ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap：：删除键
 
-此成员函数将调用`BASE_CLASS` **:: RemoveKey**。
+此成员函数调用`BASE_CLASS` **：：删除键**。
 
 ```
 BOOL RemoveKey(KEY key);
@@ -177,23 +177,23 @@ BOOL RemoveKey(KEY key);
 
 ### <a name="parameters"></a>参数
 
-*KEY*<br/>
-指定地图的键的类型的模板参数。
+*关键*<br/>
+指定地图键类型的模板参数。
 
-*key*<br/>
-要移除的元素键。
+*关键*<br/>
+要删除的元素的键。
 
 ### <a name="return-value"></a>返回值
 
-如果找到该条目并将其成功移除，则非零值否则为 0。
+如果发现并成功删除条目，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-有关更多详细说明，请参阅[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)。
+有关更详细的注释，请参阅[CMapStringToOb：：：删除键](../../mfc/reference/cmapstringtoob-class.md#removekey)。
 
-##  <a name="setat"></a>  CTypedPtrMap::SetAt
+## <a name="ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap：：SetAt
 
-此成员函数将调用`BASE_CLASS` **:: SetAt**。
+此成员函数调用`BASE_CLASS` **：：SetAt**。
 
 ```
 void SetAt(KEY key, VALUE newValue);
@@ -201,24 +201,24 @@ void SetAt(KEY key, VALUE newValue);
 
 ### <a name="parameters"></a>参数
 
-*KEY*<br/>
-指定地图的键的类型的模板参数。
+*关键*<br/>
+指定地图键类型的模板参数。
 
-*key*<br/>
-指定 newValue 的键值。
+*关键*<br/>
+指定新值的键值。
 
-*newValue*<br/>
-指定是将新元素的值的对象指针。
+*新值*<br/>
+指定作为新元素值的对象指针。
 
 ### <a name="remarks"></a>备注
 
-有关更多详细说明，请参阅[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)。
+有关更详细的注释，请参阅[CMapStringToOb：：setat](../../mfc/reference/cmapstringtoob-class.md#setat)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[CMapPtrToPtr 类](../../mfc/reference/cmapptrtoptr-class.md)<br/>
+[MFC 样品收集](../../overview/visual-cpp-samples.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[CMapPtrPtr 类](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [CMapPtrToWord 类](../../mfc/reference/cmapptrtoword-class.md)<br/>
 [CMapWordToPtr 类](../../mfc/reference/cmapwordtoptr-class.md)<br/>
 [CMapStringToPtr 类](../../mfc/reference/cmapstringtoptr-class.md)

@@ -1,6 +1,6 @@
 ---
 title: OptRef 类
-description: C++ BUILD Insights SDK OptRef 类引用。
+description: C++生成见解 SDK OptRef 类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c2abad6489012250862bc0721663572d03261bd4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: dca8cc62eed4b7136f88ed5ba6a1a168b2de56c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324449"
 ---
 # <a name="optref-class"></a>OptRef 类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OptRef` 类用于[MatchEvent](../functions/match-event.md)、 [MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、 [MatchEventStack](../functions/match-event-stack.md)和[MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md)函数。 使用它来匹配[OPT_REF](../event-table.md#opt-ref)事件。
+该`OptRef`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配[OPT_REF](../event-table.md#opt-ref)事件。
 
 ## <a name="syntax"></a>语法
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-除了其[活动](activity.md)基类的继承成员以外，`OptRef` 类包含以下成员：
+除了从[其活动](activity.md)基类继承的成员外，`OptRef`该类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
 [OptRef](#opt-ref)
 
-## <a name="opt-ref"></a>OptRef
+## <a name="optref"></a><a name="opt-ref"></a>OptRef
 
 ```cpp
 OptRef(const RawEvent& event);
@@ -53,7 +53,7 @@ OptRef(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*event*\
+*事件*\
 [OPT_REF](../event-table.md#opt-ref)事件。
 
 ::: moniker-end

@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: c8056146998443f4e24169a4464b834d8eff29b0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea09dd3d4a2eaf4cf7708d09509cfecfa4a6c6d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208506"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373068"
 ---
 # <a name="lock-class"></a>lock 类
 
-此类自动执行锁定，以便从多个线程同步对对象的访问。  构造后，它会获取锁，销毁后会释放锁。
+此类自动获取锁以同步对来自多个线程的对象的访问。  构造时，它获取锁，销毁时释放锁。
 
 ## <a name="syntax"></a>语法
 
@@ -33,9 +33,9 @@ ref class lock;
 
 ## <a name="remarks"></a>备注
 
-`lock` 仅适用于 CLR 对象，并且只能在 CLR 代码中使用。
+`lock`仅适用于 CLR 对象，只能在 CLR 代码中使用。
 
-在内部，lock 类使用 <xref:System.Threading.Monitor> 来同步访问。 有关详细信息，请参阅参考文章。
+在内部，锁类用于<xref:System.Threading.Monitor>同步访问。 有关详细信息，请参阅引用的文章。
 
 ## <a name="members"></a>成员
 
@@ -43,35 +43,35 @@ ref class lock;
 
 |名称|说明|
 |---------|-----------|
-|[lock::lock](#lock)|构造一个 `lock` 对象，还可以选择等待在指定的时间段内永久获取锁定，或根本不获取锁。|
-|[lock::~lock](#tilde-lock)|Destructs `lock` 的对象。|
+|[lock::lock](#lock)|构造一个`lock`对象，可以选择等待永久获取锁，在指定的时间内，或者根本不。|
+|[锁：：=锁](#tilde-lock)|破坏`lock`对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |---------|-----------|
-|[lock::acquire](#acquire)|获取对象上的锁，还可以选择在指定的时间段内等待锁定，而不是始终获取锁。|
+|[lock::acquire](#acquire)|获取对象的锁，可以选择等待永久获取锁，在指定的时间内，或者根本不。|
 |[lock::is_locked](#is-locked)|指示是否持有锁。|
 |[lock::release](#release)|释放锁。|
-|[lock::try_acquire](#try-acquire)|获取对象上的锁，等待指定的时间量并返回 `bool` 报告获取是否成功，而不是引发异常。|
+|[lock::try_acquire](#try-acquire)|获取对象的锁，等待指定的时间量，并返回`bool`报告获取成功，而不是引发异常。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公共运营商
 
 |名称|说明|
 |---------|-----------|
-|[lock：： operator&nbsp;bool](#operator-bool)|用于在条件表达式中使用 `lock` 的运算符。|
-|[lock::operator==](#operator-equality)|相等运算符。|
-|[lock::operator!=](#operator-inequality)|不等运算符。|
+|[锁：：操作员&nbsp;布尔](#operator-bool)|用于`lock`条件表达式的运算符。|
+|[锁：：操作员*](#operator-equality)|相等运算符。|
+|[lock::operator!=](#operator-inequality)|不等式运算符。|
 
 ## <a name="requirements"></a>要求
 
-**标头文件**\<msclr\lock.h >
+**标题文件**\<msclr_lock.h>
 
 **命名空间**msclr
 
-## <a name="locklock"></a><a name="lock"></a>lock：： lock
+## <a name="locklock"></a><a name="lock"></a>锁：：锁
 
-构造一个 `lock` 对象，还可以选择等待在指定的时间段内永久获取锁定，或根本不获取锁。
+构造一个`lock`对象，可以选择等待永久获取锁，在指定的时间内，或者根本不。
 
 ```cpp
 template<class T> lock(
@@ -91,31 +91,31 @@ template<class T> lock(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_object*<br/>
 要锁定的对象。
 
 *_timeout*<br/>
-超时值（以毫秒为单位）或 <xref:System.TimeSpan>。
+超时值（以毫秒为单位或为<xref:System.TimeSpan>）。
 
 ### <a name="exceptions"></a>例外
 
-如果在超时之前不发生锁获取，则会引发 <xref:System.ApplicationException>。
+如果在<xref:System.ApplicationException>超时之前未进行锁采集，则引发。
 
 ### <a name="remarks"></a>备注
 
-构造函数的前三种形式尝试在指定的超时期限内（如果未指定，则为 <xref:System.Threading.Timeout.Infinite>）获取 `_object` 锁定。
+构造函数的前三种形式尝试`_object`在指定的超时期间（或者如果<xref:System.Threading.Timeout.Infinite>未指定任何锁定）内获取锁定。
 
-构造函数的第四种形式不获取 `_object`上的锁。 `lock_later` 是[lock_when 枚举](../dotnet/lock-when-enum.md)的成员。 在这种情况下，使用[lock：：获取](../dotnet/lock-acquire.md)或[锁定：： try_acquire](../dotnet/lock-try-acquire.md)获取锁定。
+构造函数的第四种形式未获取 上的`_object`锁。 `lock_later`是[lock_when枚举的成员](../dotnet/lock-when-enum.md)。 在这种情况下，使用[锁：获取](../dotnet/lock-acquire.md)或[锁定：try_acquire](../dotnet/lock-try-acquire.md)获取锁。
 
-调用析构函数时，将自动释放该锁。
+调用析构函数时，锁将自动释放。
 
-无法 <xref:System.Threading.ReaderWriterLock>`_object`。  如果是，则会产生编译器错误。
+`_object`不能是<xref:System.Threading.ReaderWriterLock>。  如果是，则会导致编译器错误。
 
 ### <a name="example"></a>示例
 
-此示例在多个线程中使用类的单个实例。 类自行使用锁定，以确保对每个线程的内部数据的访问都是一致的。 主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍然存在。 然后，主应用程序等待退出，直到所有工作线程都完成了其任务。
+此示例在多个线程上使用类的单个实例。 类使用自身锁来确保对其内部数据的访问对于每个线程是一致的。 主应用程序线程使用类的同一实例上的锁定期检查是否存在任何辅助线程。 然后，主应用程序等待退出，直到所有工作线程完成其任务。
 
 ```cpp
 // msl_lock_lock.cpp
@@ -203,9 +203,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>lock：： ~ lock
+## <a name="locklock"></a><a name="tilde-lock"></a>锁：：=锁
 
-Destructs `lock` 的对象。
+破坏`lock`对象。
 
 ```cpp
 ~lock();
@@ -213,11 +213,11 @@ Destructs `lock` 的对象。
 
 ### <a name="remarks"></a>备注
 
-析构函数调用[lock：： release](../dotnet/lock-release.md)。
+析构函数调用[锁：：释放](../dotnet/lock-release.md)。
 
 ### <a name="example"></a>示例
 
-此示例在多个线程中使用类的单个实例。  类自行使用锁定，以确保对每个线程的内部数据的访问都是一致的。  主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍然存在。 然后，主应用程序等待退出，直到所有工作线程都完成了其任务。
+此示例在多个线程上使用类的单个实例。  类使用自身锁来确保对其内部数据的访问对于每个线程是一致的。  主应用程序线程使用类的同一实例上的锁定期检查是否存在任何辅助线程。 然后，主应用程序等待退出，直到所有工作线程完成其任务。
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -305,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>lock：：获取
+## <a name="lockacquire"></a><a name="acquire"></a>锁：：获取
 
-获取对象上的锁，还可以选择在指定的时间段内等待锁定，而不是始终获取锁。
+获取对象的锁，可以选择等待永久获取锁，在指定的时间内，或者根本不。
 
 ```cpp
 void acquire();
@@ -319,24 +319,24 @@ void acquire(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_timeout*<br/>
-超时值（以毫秒为单位）或 <xref:System.TimeSpan>。
+超时值（以毫秒为单位或为<xref:System.TimeSpan>）。
 
 ### <a name="exceptions"></a>例外
 
-如果在超时之前不发生锁获取，则会引发 <xref:System.ApplicationException>。
+如果在<xref:System.ApplicationException>超时之前未进行锁采集，则引发。
 
 ### <a name="remarks"></a>备注
 
-如果未提供超时值，则默认超时值为 <xref:System.Threading.Timeout.Infinite>。
+如果未提供超时值，则默认超时为<xref:System.Threading.Timeout.Infinite>。
 
 如果已获取锁，则此函数不执行任何操作。
 
 ### <a name="example"></a>示例
 
-此示例在多个线程中使用类的单个实例。  类自行使用锁定，以确保对每个线程的内部数据的访问都是一致的。 主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍然存在。 然后，主应用程序等待退出，直到所有工作线程都完成了其任务。
+此示例在多个线程上使用类的单个实例。  类使用自身锁来确保对其内部数据的访问对于每个线程是一致的。 主应用程序线程使用类的同一实例上的锁定期检查是否存在任何辅助线程。 然后，主应用程序等待退出，直到所有工作线程完成其任务。
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>lock：： is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>锁：：is_locked
 
 指示是否持有锁。
 
@@ -434,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>返回值
 
-`true` 是否持有锁，请 `false` 否则为。
+`true`如果锁被持有，`false`否则。
 
 ### <a name="example"></a>示例
 
-此示例在多个线程中使用类的单个实例。  类自行使用锁定，以确保对每个线程的内部数据的访问都是一致的。  主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍存在，并等待退出，直到所有工作线程都完成了其任务。
+此示例在多个线程上使用类的单个实例。  类使用自身锁来确保对其内部数据的访问对于每个线程是一致的。  主应用程序线程使用类同一实例上的锁定期检查是否存在任何工作线程，并等待退出，直到所有工作线程完成其任务。
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -527,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>lock：： operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>锁：：操作员布尔
 
-用于在条件表达式中使用 `lock` 的运算符。
+用于`lock`条件表达式的运算符。
 
 ```cpp
 operator bool();
@@ -537,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>返回值
 
-`true` 是否持有锁，请 `false` 否则为。
+`true`如果锁被持有，`false`否则。
 
 ### <a name="remarks"></a>备注
 
-此运算符实际上转换为 `_detail_class::_safe_bool` 比 `bool` 安全，因为它不能转换为整型类型。
+此运算符实际上转换为`_detail_class::_safe_bool`比`bool`无法转换为积分类型更安全。
 
 ### <a name="example"></a>示例
 
-此示例在多个线程中使用类的单个实例。  类自行使用锁定，以确保对每个线程的内部数据的访问都是一致的。 主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍然存在。 主应用程序等待退出，直到所有工作线程都完成了其任务。
+此示例在多个线程上使用类的单个实例。  类使用自身锁来确保对其内部数据的访问对于每个线程是一致的。 主应用程序线程使用类的同一实例上的锁定期检查是否存在任何辅助线程。 主应用程序等待退出，直到所有工作线程完成其任务。
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>lock：： release
+## <a name="lockrelease"></a><a name="release"></a>锁：：释放
 
 释放锁。
 
@@ -644,13 +644,13 @@ void release();
 
 ### <a name="remarks"></a>备注
 
-如果未持有锁，`release` 不执行任何操作。
+如果没有锁定，`release`则不执行任何操作。
 
-无需显式调用此函数。 当 `lock` 对象超出范围时，其析构函数会调用 `release`。
+您不必显式调用此函数。 当`lock`对象超出范围时，其析构函数将调用`release`。
 
 ### <a name="example"></a>示例
 
-此示例在多个线程中使用类的单个实例。 类自行使用锁定，以确保对每个线程的内部数据的访问都是一致的。 主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍然存在。 然后，主应用程序等待退出，直到所有工作线程都完成了其任务。
+此示例在多个线程上使用类的单个实例。 类使用自身锁来确保对其内部数据的访问对于每个线程是一致的。 主应用程序线程使用类的同一实例上的锁定期检查是否存在任何辅助线程。 然后，主应用程序等待退出，直到所有工作线程完成其任务。
 
 ```cpp
 // msl_lock_release.cpp
@@ -738,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>lock：： try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>锁：：try_acquire
 
-获取对象上的锁，等待指定的时间量并返回 `bool` 报告获取是否成功，而不是引发异常。
+获取对象的锁，等待指定的时间量，并返回`bool`报告获取成功，而不是引发异常。
 
 ```cpp
 bool try_acquire(
@@ -751,14 +751,14 @@ bool try_acquire(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_timeout*<br/>
-超时值（以毫秒为单位）或 <xref:System.TimeSpan>。
+超时值（以毫秒为单位或为<xref:System.TimeSpan>）。
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果已获取锁，则为 `false` 否则为。
+`true`如果获得锁，`false`否则。
 
 ### <a name="remarks"></a>备注
 
@@ -766,7 +766,7 @@ bool try_acquire(
 
 ### <a name="example"></a>示例
 
-此示例在多个线程中使用类的单个实例。 类自行使用锁定，以确保对每个线程的内部数据的访问都是一致的。 主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍然存在。 然后，主应用程序等待退出，直到所有工作线程都完成了其任务。
+此示例在多个线程上使用类的单个实例。 类使用自身锁来确保对其内部数据的访问对于每个线程是一致的。 主应用程序线程使用类的同一实例上的锁定期检查是否存在任何辅助线程。 然后，主应用程序等待退出，直到所有工作线程完成其任务。
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>lock：： operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a>锁：：操作员*
 
 相等运算符。
 
@@ -864,14 +864,14 @@ template<class T> bool operator==(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *t*<br/>
 要比较是否相等的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `t` 与锁的对象相同，则返回 `true`; 否则返回 `false`。
+返回`true`（`t`如果与锁的对象相同，`false`否则）。
 
 ### <a name="example"></a>示例
 
@@ -897,9 +897,9 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>lock：： operator！ =
+## <a name="lockoperator"></a><a name="operator-inequality"></a>锁：：操作员！
 
-不等运算符。
+不等式运算符。
 
 ```cpp
 template<class T> bool operator!=(
@@ -907,14 +907,14 @@ template<class T> bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *t*<br/>
-要比较是否不相等的对象。
+要比较不等式的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `t` 不同于锁的对象 `false`，则返回 `true`; 否则返回。
+如果`true``t`返回与锁的对象不同，则返回，`false`否则。
 
 ### <a name="example"></a>示例
 

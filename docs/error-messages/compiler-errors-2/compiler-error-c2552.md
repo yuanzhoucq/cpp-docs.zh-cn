@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: 7f3e4cfc46655c5201e7a79a9333f532a8fcab9c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b15ee67e39631926b7061826369e855bc3714a96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374195"
 ---
 # <a name="compiler-error-c2552"></a>编译器错误 C2552
 
@@ -21,17 +21,17 @@ ms.locfileid: "74740801"
 
 [聚合](../../c-language/initializing-aggregate-types.md)定义为：
 
-- 阵列
+- 数组
 
 - 不具有以下项的类、结构和联合：
 
-   - 构造函数
+  - 构造函数
 
-   - 私有成员或受保护成员
+  - 私有成员或受保护成员
 
-   - 基类
+  - 基类
 
-   - 虚函数
+  - 虚函数
 
 此外，Visual C++ 不允许在包含构造函数的聚合中使用数据类型。
 

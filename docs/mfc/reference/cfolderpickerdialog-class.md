@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: 435c91082fa901f0bc9726316f0358fc5a669b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396192"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373851"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 类
 
-CFolderPickerDialog 类实现文件夹选取器模式下的 CFileDialog。
+CFolderPickerDialog 类在文件夹选取器模式下实现 CFileDialog。
 
 ## <a name="syntax"></a>语法
 
@@ -29,10 +29,10 @@ class CFolderPickerDialog : public CFileDialog;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CFolderPickerDialog::~CFolderPickerDialog](#_dtorcfolderpickerdialog)|析构函数。|
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|构造函数。|
+|[夹子拾取者对话：：~CFOLDERPicker对话](#_dtorcfolderpickerdialog)|析构函数。|
+|[夹子选取器对话框：：CfolderPicker对话](#cfolderpickerdialog)|构造函数。|
 
 ## <a name="remarks"></a>备注
 
@@ -54,9 +54,9 @@ class CFolderPickerDialog : public CFileDialog;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdlgs.h
+**标题：** afxdlgs.h
 
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>夹子选取器对话框：：CfolderPicker对话
 
 构造函数。
 
@@ -73,18 +73,18 @@ explicit CFolderPickerDialog(
 *lpszFolder*<br/>
 初始文件夹。
 
-*dwFlags*<br/>
-可用于自定义对话框中的一个或多个标志的组合。
+dwFlags**<br/>
+允许您自定义对话框的一个或多个标志的组合。
 
-*pParentWnd*<br/>
-指向对话框对象的父级或所有者窗口的指针。
+*pparentwnd*<br/>
+指向对话框对象的父窗口或所有者窗口的指针。
 
 *dwSize*<br/>
 OPENFILENAME 结构的大小。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>夹子拾取者对话：：~CFOLDERPicker对话
 
 析构函数。
 
@@ -94,6 +94,6 @@ virtual ~CFolderPickerDialog();
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

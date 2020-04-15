@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386013"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371355"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 结构
 
@@ -32,25 +32,25 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="parameters"></a>参数
 
-*基本*<br/>
+*基地*<br/>
 基类型。
 
 *派生*<br/>
-派生的类型。
+派生类型。
 
 ## <a name="remarks"></a>备注
 
 测试一种类型是否是另一种类型的基类。
 
-第一个模板测试是否从可能产生的基类型派生的类型 **，则返回 true**或**false**。 第二个模板测试是否派生的类型是从其自身，这将始终产生**false**。
+第一个模板测试类型是否派生自基类型，该基类型可能产生**真**或**假**。 第二个模板测试类型是否派生自自身，后者始终生成**false**。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constants"></a>公共常量
 
-名称                            | 描述
+名称                            | 说明
 ------------------------------- | --------------------------------------------------
-[IsBaseOfStrict::value](#value) | 指示是否是一个类型的另一个基类。
+[是严格的基础：：值](#value) | 指示一种类型是否是另一种类型的基础。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,11 +58,11 @@ struct IsBaseOfStrict<Base, Base>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** internal.h
+**标题：** 内部.h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** 微软：：WRL：:D
 
-## <a name="value"></a>IsBaseOfStrict::value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>是严格的基础：：值
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -72,6 +72,6 @@ static const bool value = __is_base_of(Base, Derived);
 
 ### <a name="remarks"></a>备注
 
-指示是否是一个类型的另一个基类。
+指示一种类型是否是另一种类型的基础。
 
-`value` 是 **，则返回 true**如果类型`Base`是类型的基类`Derived`，否则是**false**。
+`value`如果类型`Base`是类型的`Derived`基类，则为**true，** 否则为**false**。

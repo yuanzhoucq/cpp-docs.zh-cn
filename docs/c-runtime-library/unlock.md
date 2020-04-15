@@ -23,19 +23,19 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 185cb1e5f582fd5eeb1dbcb337c402319ab78f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365687"
 ---
 # <a name="_unlock"></a>_unlock
 
 释放多线程锁定。
 
 > [!IMPORTANT]
->  此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
+> 此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
 
 ## <a name="syntax"></a>语法
 
@@ -54,7 +54,7 @@ void __cdecl _unlock(
 
 **源：** mlock.c
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_lock](../c-runtime-library/lock.md)

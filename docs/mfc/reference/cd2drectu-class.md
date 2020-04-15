@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 26e647ae01a498a6ad8ca2d7c866f33b01910881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244390"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369110"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 类
 
@@ -31,21 +31,21 @@ class CD2DRectU : public D2D1_RECT_U;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DRectU::CD2DRectU](#cd2drectu)|已重载。 构造`CD2DRectU`对象从`D2D1_RECT_U`对象。|
+|[CD2DRectU：：CD2DRectU](#cd2drectu)|已重载。 从`CD2DRectU``D2D1_RECT_U`对象构造对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DRectU::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 (NULL)。|
+|[CD2DRectU：：IsNull](#isnull)|返回**一个布尔值**，指示表达式是否不包含有效数据 （NULL）。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DRectU::operator CRect](#operator_crect)|将转换`CD2DRectU`到`CRect`对象。|
+|[CD2DRectU：：操作员CRect](#operator_crect)|转换为`CD2DRectU``CRect`对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -55,11 +55,11 @@ class CD2DRectU : public D2D1_RECT_U;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrendertarget.h
+**标题：** afxrendertarget.h
 
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+## <a name="cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU：：CD2DRectU
 
-构造 CRect 对象从一个 CD2DRectU 对象。
+从 CRect 对象构造 CD2DRectU 对象。
 
 ```
 CD2DRectU(const CRect& rect);
@@ -75,24 +75,24 @@ CD2DRectU(
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
+*矩形*<br/>
 源矩形
 
-*uLeft*<br/>
-源左边缘坐标
+*u 左*<br/>
+源左坐标
 
 *uTop*<br/>
-源上边缘坐标
+源顶部坐标
 
 *uRight*<br/>
-源角坐标
+源右坐标
 
-*uBottom*<br/>
-源下边缘坐标
+*u巴斯特*<br/>
+源底部坐标
 
-##  <a name="isnull"></a>  CD2DRectU::IsNull
+## <a name="cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU：：IsNull
 
-返回一个布尔值，该值指示表达式是否包含任何有效的数据 (Null)。
+返回一个布尔值，指示表达式是否不包含有效数据 （Null）。
 
 ```
 BOOL IsNull() const;
@@ -100,9 +100,9 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>返回值
 
-矩形的上、 左、 下、 和正确的值均相等，则为 0; 如果为 TRUE否则为 FALSE。
+如果矩形的顶部、左侧、底部和右侧值都等于 0，则为 TRUE;否则 FALSE。
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+## <a name="cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU：：操作员CRect
 
 将 CD2DRectU 转换为 CRect 对象。
 
@@ -114,6 +114,6 @@ operator CRect();
 
 D2D 矩形的当前值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

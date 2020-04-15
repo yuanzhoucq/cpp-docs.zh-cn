@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
-ms.openlocfilehash: 51913a0d261a0bc91aef8f8504547a10c3e1cf36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5189f3d824c008845570eac6eead4a35be1e483d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369076"
 ---
 # <a name="cd2droundedrect-class"></a>CD2DRoundedRect 类
 
@@ -29,23 +29,23 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|已重载。 构造`CD2DRoundedRect`对象从`D2D1_ROUNDED_RECT`对象。|
+|[CD2D 四舍五入：CD2D 四舍五入](#cd2droundedrect)|已重载。 从`CD2DRoundedRect``D2D1_ROUNDED_RECT`对象构造对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `D2D1_ROUNDED_RECT`
 
-[CD2DRoundedRect](../../mfc/reference/cd2droundedrect-class.md)
+[CD2D 四舍五入](../../mfc/reference/cd2droundedrect-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrendertarget.h
+**标题：** afxrendertarget.h
 
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect
+## <a name="cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2D 四舍五入：CD2D 四舍五入
 
-构造 CD2DRectF 对象从一个 CD2DRoundedRect 对象。
+从 CD2DRectF 对象构造 CD2D 四舍五入重新对象。
 
 ```
 CD2DRoundedRect(
@@ -58,12 +58,12 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 
 ### <a name="parameters"></a>参数
 
-*rectIn*<br/>
+*雷金*<br/>
 源矩形
 
-*sizeRadius*<br/>
+*大小半径*<br/>
 半径大小
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

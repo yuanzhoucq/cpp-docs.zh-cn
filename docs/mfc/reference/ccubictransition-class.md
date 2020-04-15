@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-ms.openlocfilehash: b6bb626f944ce87748809a5eb03a6f06f92c3de5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: de376503111dab157ca34744863fb1d35a58785e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507142"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369336"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 类
 
@@ -37,33 +37,33 @@ class CCubicTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CCubicTransition::CCubicTransition](#ccubictransition)|构造转换对象并初始化其参数。|
+|[立方转换：C立方转换](#ccubictransition)|构造过渡对象并初始化其参数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CCubicTransition::Create](#create)|调用转换库以创建封装的转换 COM 对象。 (重写[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CCubic 转换：创建](#create)|调用过渡库以创建封装的过渡 COM 对象。 （覆盖[CBase 转换：创建](../../mfc/reference/cbasetransition-class.md#create).）|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时动画变量的值。|
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|变量在转换结束时的速度。|
-|[CCubicTransition::m_duration](#m_duration)|转换的持续时间。|
+|[CCubic 转换：m_dblFinalValue](#m_dblfinalvalue)|过渡结束时动画变量的值。|
+|[CCubic 转换：m_dblFinalVelocity](#m_dblfinalvelocity)|转换结束时变量的速度。|
+|[CCubic 转换：m_duration](#m_duration)|转换的持续时间。|
 
 ## <a name="remarks"></a>备注
 
-在三次转换期间, 动画变量的值在转换期间从其初始值更改为指定的最终值, 以指定速度结束。 由于所有转换都将自动清除, 因此建议使用 operator new 将其分配给它们。 封装的 IUIAnimationTransition COM 对象由 CAnimationController:: AnimateGroup 创建, 直到它为 NULL。 在创建此 COM 对象之后更改成员变量不起作用。
+在立方过渡期间，动画变量的值在过渡期间从初始值更改为指定的最终值，以指定速度结束。 由于所有转换都将自动清除，因此建议使用运算符 new 分配。 封装的 IUI动画转换 COM 对象由 C动画控制器：：AnimateGroup 创建，直到此为止，它才为 NULL。 创建此 COM 对象后更改成员变量不起作用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 转换](../../mfc/reference/cbasetransition-class.md)
 
 `CCubicTransition`
 
@@ -71,9 +71,9 @@ class CCubicTransition : public CBaseTransition;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="ccubictransition"></a>CCubicTransition:: CCubicTransition
+## <a name="ccubictransitionccubictransition"></a><a name="ccubictransition"></a>立方转换：C立方转换
 
-构造转换对象并初始化其参数。
+构造过渡对象并初始化其参数。
 
 ```
 CCubicTransition(
@@ -84,18 +84,18 @@ CCubicTransition(
 
 ### <a name="parameters"></a>参数
 
-*duration*<br/>
+*时间*<br/>
 转换的持续时间。
 
-*finalValue*<br/>
-转换结束时动画变量的值。
+*最终价值*<br/>
+过渡结束时动画变量的值。
 
-*finalVelocity*<br/>
-变量在转换结束时的速度。
+*最终速度*<br/>
+转换结束时变量的速度。
 
-##  <a name="create"></a>CCubicTransition:: Create
+## <a name="ccubictransitioncreate"></a><a name="create"></a>CCubic 转换：创建
 
-调用转换库以创建封装的转换 COM 对象。
+调用过渡库以创建封装的过渡 COM 对象。
 
 ```
 virtual BOOL Create(
@@ -105,30 +105,30 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*pLibrary*<br/>
-指向[IUIAnimationTransitionLibrary 接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针, 该接口定义标准转换库。
+*p库*<br/>
+指向[IUIAnimation 转换库接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针，该接口定义标准转换库。
 
 ### <a name="return-value"></a>返回值
 
-如果成功创建转换, 则为 TRUE;否则为 FALSE。
+如果成功创建转换，则为 TRUE;如果成功创建转换，则为 TRUE。否则 FALSE。
 
-##  <a name="m_dblfinalvalue"></a>CCubicTransition:: m_dblFinalValue
+## <a name="ccubictransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CCubic 转换：m_dblFinalValue
 
-转换结束时动画变量的值。
+过渡结束时动画变量的值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblfinalvelocity"></a>CCubicTransition:: m_dblFinalVelocity
+## <a name="ccubictransitionm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>CCubic 转换：m_dblFinalVelocity
 
-变量在转换结束时的速度。
+转换结束时变量的速度。
 
 ```
 DOUBLE m_dblFinalVelocity;
 ```
 
-##  <a name="m_duration"></a>CCubicTransition:: m_duration
+## <a name="ccubictransitionm_duration"></a><a name="m_duration"></a>CCubic 转换：m_duration
 
 转换的持续时间。
 
@@ -136,6 +136,6 @@ DOUBLE m_dblFinalVelocity;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

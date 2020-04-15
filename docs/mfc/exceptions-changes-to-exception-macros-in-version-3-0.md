@@ -1,5 +1,5 @@
 ---
-title: 异常:对异常宏的修改版本 3.0 中的更改
+title: 异常：3.0 版本中对异常宏的修改
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,59 +7,59 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82320b0c7ccd6766e016f0437633339f8f8f61d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365496"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常:对异常宏的修改版本 3.0 中的更改
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常：3.0 版本中对异常宏的修改
 
-这是一个高级的主题。
+这是一个高级主题。
 
-在 MFC 3.0 版及更高版本中，已更改了异常处理宏以使用C++异常。 本文介绍这些更改如何影响使用宏的现有代码的行为。
+在 MFC 版本 3.0 及更高版本中，异常处理宏已更改为使用C++异常。 本文介绍这些更改如何影响使用宏的现有代码的行为。
 
-本文介绍了以下主题：
+本文涵盖以下主题：
 
 - [异常类型和 CATCH 宏](#_core_exception_types_and_the_catch_macro)
 
 - [重新引发异常](#_core_re.2d.throwing_exceptions)
 
-##  <a name="_core_exception_types_and_the_catch_macro"></a> 异常类型和 CATCH 宏
+## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>异常类型和 CATCH 宏
 
-在早期版本的 MFC 中，**捕获**宏使用 MFC 运行时类型信息以确定异常的类型; 异常的类型确定，换而言之，在 catch 站点。 使用C++异常，但是，异常的类型始终由 throw 站点上引发的异常对象的类型。 这将导致不兼容性的情况很少而引发的对象的指针的类型不同于引发的对象的类型。
+在早期版本的 MFC 中 **，CATCH**宏使用 MFC 运行时类型信息来确定异常的类型;异常的类型在捕获站点确定，换句话说。 但是，对于C++异常，异常的类型始终由引发的异常对象的类型在引发站点中确定。 在极少数情况下，指向引发对象的指针类型与引发对象的类型不同，这将导致不兼容。
 
-下面的示例演示了 MFC 3.0 版及更早版本之间的这种差异的结果：
+下面的示例说明了 MFC 版本 3.0 和早期版本之间的这种差异的后果：
 
 [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-此代码在版本 3.0 上行为不同，因为始终将控制传递给第一个**捕获**具有匹配的异常声明块。 Throw 表达式的结果
+此代码在版本 3.0 中的行为不同，因为控件始终通过匹配的异常声明传递到第一个**catch**块。 引发表达式的结果
 
 [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
-作为引发`CException*`，即使它被构造为`CCustomException`。 **捕获**MFC 版本 2.5 和早期版本使用中的宏`CObject::IsKindOf`来测试在运行时类型。 因为表达式
+被抛出为`CException*`，即使它构造为 。 `CCustomException` MFC 版本 2.5 和更早版本的`CObject::IsKindOf`**CATCH**宏用于在运行时测试类型。 因为表达式
 
 [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
-为 true，第一个 catch 块捕获异常。 在版本 3.0 中，使用C++异常来实现异常处理宏，第二个 catch 块的许多匹配引发`CException`。
+为 true，第一个 catch 块捕获异常。 在版本 3.0 中，使用C++个异常来实现许多异常处理宏，第二个 catch 块与引发`CException`的操作匹配 。
 
-此类代码并不常见。 它通常会显示在异常对象传递给另一个函数接受泛型`CException*`、 执行"预 throw"处理，并最后引发异常。
+像这样的代码并不常见。 当异常对象传递给接受泛型`CException*`的另一个函数，执行"预引发"处理，最后引发异常时，通常会出现异常。
 
-若要解决此问题，将从该函数的引发表达式移动到调用代码，并引发异常时生成异常编译器已知的实际类型。
+要解决此问题，请将 throw 表达式从函数移动到调用代码，并引发编译器在生成异常时已知的实际类型的异常。
 
-##  <a name="_core_re.2d.throwing_exceptions"></a> 重新引发异常
+## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>重新引发异常
 
-Catch 块不能引发它捕获到的异常相同的指针。
+catch 块无法引发捕获的异常指针。
 
-此代码，如在上一版本中，有效，但将具有版本 3.0 的意外的结果：
+例如，此代码在以前的版本中有效，但在版本 3.0 中会有意外的结果：
 
 [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
 
-使用**引发**catch 块会导致该指针`e`要删除，以便在外部 catch 站点将接收了无效的指针。 使用**THROW_LAST**以重新引发`e`。
+在 catch 块中使用**THROW** `e`会导致删除指针，以便外部捕获站点将接收无效的指针。 使用**THROW_LAST**重新引发`e`。
 
-有关详细信息，请参阅[异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+有关详细信息，请参阅[异常：捕获和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理](../mfc/exception-handling-in-mfc.md)

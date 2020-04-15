@@ -1,11 +1,13 @@
 ---
 title: strstr、wcsstr、_mbsstr、_mbsstr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
+- _o__mbsstr
+- _o__mbsstr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 8c113e02f308b634b6bcb8aea6e46fc14b9abd92
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 06fb79ac050f4e1c357a76a782730cd72cbdadec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946589"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316926"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -119,29 +122,31 @@ const unsigned char *_mbsstr_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*Str*<br/>
 要搜索的 null 终止的字符串。
 
 *strSearch*<br/>
 要搜索的以 null 结尾的字符串。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-返回指向*str*中第一次出现的*strSearch*的指针; 如果*strSearch*未出现在*str*中，则返回 NULL。 如果*strSearch*指向长度为零的字符串，则函数将返回*str*。
+返回指向*str*中第一次出现的*strSearch*的指针，如果*strSearch*未出现在 str 中，则返回指向 NULL 的*指针*。 如果*strSearch*指向长度为零的字符串，则函数将返回*str*。
 
 ## <a name="remarks"></a>备注
 
-函数返回一个指针，该指针指向 str 中*strSearch*的第一个匹配项。 `strstr` 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果*str*或*strSearch*为 NULL，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `_mbsstr`则将设置`errno`为 EINVAL，并返回0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。
+函数`strstr`返回指向 str*搜索*第一次出现的*指针*。 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果*str*或*strSearch*为 NULL，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则`_mbsstr`设置`errno`为 EINVAL 并返回 0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
 > [!IMPORTANT]
 > 这些函数可能从缓冲区溢出问题引发威胁。 缓冲区溢出问题可用来攻击系统，因为它们可能允许执行任意代码，这可能导致没有保证的权限提升。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些函数的**常量**和非常**量**版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS。 如果这两个重载都 C++需要非常量行为，请定义符号 _CONST_RETURN。
+在 C 中，这些函数为第一个参数采用**const**指针。 在 C++ 中，有两个重载可用。 将指针指向**const**的重载返回指向**const 的**指针。将指针指向非**const**的版本返回指向非**const 的**指针。 如果这些函数的**const**版本和非**const**版本都可用，则定义宏_CRT_CONST_CORRECT_OVERLOADS。 如果两C++重载都需要非**const**行为，请定义符号_CONST_RETURN。
 
-输出值受 LC_CTYPE 的区域设置类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 没有 **_l**后缀的这些函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受LC_CTYPE区域设置的影响;有关详细信息，请参阅[设置区域设置，_wsetlocale](setlocale-wsetlocale.md)。 这些函数的版本没有 **_l**后缀使用此与区域设置相关的行为的当前区域设置;具有 **_l**后缀的版本是相同的，只是它们使用传入区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -152,13 +157,13 @@ const unsigned char *_mbsstr_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`strstr`|\<string.h>|
 |`wcsstr`|\<string.h> 或 \<wchar.h>|
-|`_mbsstr`， `_mbsstr_l`|\<mbstring.h>|
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
-有关兼容性的更多信息，请参见 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -197,10 +202,10 @@ String to be searched:
 lazy found at position 36
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
