@@ -1,8 +1,9 @@
 ---
 title: raise
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - raise
+- _o_raise
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: bed377bb46abac252381344f0b1cf4339815a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b38a3430274b2324e345be30ce9e38f0c2749fa3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949686"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338264"
 ---
 # <a name="raise"></a>raise
 
 将信号发送到正在执行的程序。
 
 > [!NOTE]
-> 不要使用此方法关闭 Microsoft Store 的应用程序，除非在测试或调试方案中。 根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)，不允许以编程方式或 UI 方式关闭应用商店应用。 有关详细信息，请参阅[UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
+> 不要使用此方法关闭 Microsoft 应用商店应用，除非在测试或调试方案中。 根据[Microsoft 应用商店策略](/legal/windows/agreements/store-policies)，不允许以编程或 UI 方式关闭应用商店应用。 有关详细信息，请参阅[UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>语法
 
@@ -61,7 +63,7 @@ int raise(
 
 **raise** 函数将 *sig* 发送到正在执行的程序。 如果对 **signal** 的之前调用已经为 *sig* 安装了信号处理函数，则 **raise** 将执行该函数。 如果未安装处理程序函数，则执行与信号值 *sig* 相关联的默认操作，如下所示：
 
-|Signal|含义|默认|
+|信号|含义|默认|
 |------------|-------------|-------------|
 |**SIGABRT**|异常终止|使用退出代码 3 终止调用程序|
 |**SIGFPE**|浮点错误|终止调用程序|
@@ -70,18 +72,20 @@ int raise(
 |**SIGSEGV**|非法存储区访问|终止调用程序|
 |**SIGTERM**|发送到程序的终止请求|忽略信号|
 
-如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，函数会将**errno**设置为**EINVAL** ，并返回一个非零值。
+如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，函数将**errno**设置到**EINVAL**并返回一个非零值。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**raise**|\<signal.h>|
+|**提高**|\<signal.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
-[signal](signal.md)<br/>
+[中止](abort.md)<br/>
+[信号](signal.md)<br/>

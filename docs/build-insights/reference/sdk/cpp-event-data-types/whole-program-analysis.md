@@ -1,6 +1,6 @@
 ---
-title: WholeProgramAnalysis 类
-description: C++ BUILD Insights SDK WholeProgramAnalysis 类引用。
+title: 整个程序分析类
+description: C++生成见解 SDK 整个程序分析类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6b8e41242acb9e902b250bab960b1c2042dd981a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c68441b7da09f9880bbb2f97544b1ad8da2f631f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334492"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324120"
 ---
-# <a name="wholeprogramanalysis-class"></a>WholeProgramAnalysis 类
+# <a name="wholeprogramanalysis-class"></a>整个程序分析类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`WholeProgramAnalysis` 类用于[MatchEvent](../functions/match-event.md)、 [MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、 [MatchEventStack](../functions/match-event-stack.md)和[MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md)函数。 使用它来匹配[WHOLE_PROGRAM_ANALYSIS](../event-table.md#whole-program-analysis)事件。
+该`WholeProgramAnalysis`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配[WHOLE_PROGRAM_ANALYSIS](../event-table.md#whole-program-analysis)事件。
 
 ## <a name="syntax"></a>语法
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-除了其[活动](activity.md)基类的继承成员以外，`WholeProgramAnalysis` 类包含以下成员：
+除了从[其活动](activity.md)基类继承的成员外，`WholeProgramAnalysis`该类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
-[WholeProgramAnalysis](#whole-program-analysis)
+[整个程序分析](#whole-program-analysis)
 
-## <a name="whole-program-analysis"></a>WholeProgramAnalysis
+## <a name="wholeprogramanalysis"></a><a name="whole-program-analysis"></a>整个程序分析
 
 ```cpp
 WholeProgramAnalysis(const RawEvent& event);
@@ -53,7 +53,7 @@ WholeProgramAnalysis(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*event*\
+*事件*\
 [WHOLE_PROGRAM_ANALYSIS](../event-table.md#whole-program-analysis)事件。
 
 ::: moniker-end

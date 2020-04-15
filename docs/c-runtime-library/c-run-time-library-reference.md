@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589457"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334431"
 ---
 # <a name="c-run-time-library-reference"></a>C 运行时库参考
 
@@ -34,6 +34,9 @@ Microsoft 运行库为 Microsoft Windows 操作系统的编程提供了例程。
 
 [全局常量](../c-runtime-library/global-constants.md)<br/>
 提供指向运行库定义的全局常量的链接。
+
+[全球状态](../c-runtime-library/global-state.md)<br/>
+描述 C 运行时库中的全局状态范围。
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 提供进入所有 C 运行库函数的按字母顺序的列表的目录入口点。

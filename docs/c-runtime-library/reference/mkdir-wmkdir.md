@@ -1,9 +1,11 @@
 ---
 title: _mkdir、_wmkdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmkdir
 - _mkdir
+- _o__mkdir
+- _o__wmkdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951722"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338788"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir、_wmkdir
 
@@ -66,19 +69,21 @@ int _wmkdir(
 
 ## <a name="return-value"></a>返回值
 
-如果创建新目录，这些函数都将返回值 0。 出现错误时，函数将返回-1，并按如下所示设置**errno** 。
+如果创建新目录，这些函数都将返回值 0。 在错误时，函数返回 -1 并设置**errno，** 如下所示。
 
-**EEXIST**未创建目录，因为*dirname*是现有文件、目录或设备的名称。
+**E对内**未创建目录，因为*dirname*是现有文件、目录或设备的名称。
 
-**ENOENT**找不到路径。
+**埃诺恩特**未找到路径。
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Mkdir**函数创建具有指定 dirname 的新目录 *。* **_mkdir**每次调用只能创建一个新目录，因此只有*dirname*的最后一个组件可以命名新目录。 **_mkdir**不会转换路径分隔符。 在 Windows NT 中，反斜杠 (\\) 和正斜杠 (/) 在运行时例程中都是字符串的有效路径分隔符。
+**_mkdir**函数创建具有指定*dirname*的新目录。 **_mkdir**每个调用只能创建一个新目录，因此只有*dirname*的最后一个组件才能命名新目录。 **_mkdir**不转换路径分隔符。 在 Windows NT 中，反斜杠 (\\) 和正斜杠 (/) 在运行时例程中都是字符串的有效路径分隔符。
 
-**_wmkdir**是 **_mkdir**的宽字符版本; **_wmkdir**的*dirname*参数是宽字符字符串。 否则， **_wmkdir**和 **_mkdir**的行为相同。
+**_wmkdir**是 **_mkdir**的宽字符版本;**_wmkdir***的 dirname*参数是宽字符字符串。 **_wmkdir****和_mkdir**行为相同。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -88,12 +93,12 @@ int _wmkdir(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -140,7 +145,7 @@ Directory of C:\testtmp
 Directory '\testtmp' was successfully removed
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [目录控制](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>

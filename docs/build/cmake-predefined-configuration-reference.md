@@ -4,24 +4,25 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169833"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323018"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 预定义生成配置
 
 ::: moniker range="vs-2015"
 
-Visual Studio 2017 及更高版本支持 CMake 项目。
+2017 年及以后的 Visual Studio 支持 CMake 项目。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框：
+在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框****：
+
 - x86 Debug
 - x86 Release
 - x64 Debug
@@ -33,7 +34,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 - MinGW Debug
 - MinGW Release
 
-选择配置时，会将其添加到项目根文件夹中的*CMakeSettings*文件。 然后可以使用该配置生成项目。 有关配置属性的信息，请参阅[CMakeSettings reference](cmakesettings-reference.md)。
+选择配置时，该配置将添加到项目的根文件夹中的*CMakeSettings.json*文件中。 然后可以使用该配置生成项目。 有关配置属性的信息，请参阅[CMakeSettings 参考](cmakesettings-reference.md)。
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 预定义生成配置：
 
@@ -355,7 +356,7 @@ You can use these optional settings for more control:
 
 ::: moniker range="vs-2019"
 
-在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框：
+在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框****：
 
 - x86 Debug
 - x86 Clang 调试
@@ -367,8 +368,8 @@ You can use these optional settings for more control:
 - x64 Clang 版本
 - Linux-Debug
 - Linux-Release
-- Clang-调试
-- Clang-发布
+- Linux-Clang-调试
+- Linux-Clang-发布
 - 现有缓存（远程）
 - 现有缓存
 - MinGW Debug
@@ -376,8 +377,8 @@ You can use these optional settings for more control:
 - WSL 调试
 - WSL 版本
 - WSL Clang 调试
-- WSL Clang Release
-- Clang
+- WSL Clang 版本
+- 铛
 
 选择某些配置时，该配置将添加到项目根文件夹中的 CMakeSettings.json 文件中。 然后可以使用该配置生成项目。
 
@@ -694,6 +695,7 @@ You can use these optional settings for more control:
 ```
 
 ::: moniker-end
+
 ## <a name="see-also"></a>另请参阅
 
 [Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>

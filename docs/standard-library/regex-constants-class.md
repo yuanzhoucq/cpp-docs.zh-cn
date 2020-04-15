@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331960"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 命名空间
 
@@ -115,11 +115,11 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<regex >
+**标头：** \<regex 1>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="error_type"></a>regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants：error_type
 
 用于报告正则表达式语法错误的标志。
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` - 表达式中包含无效的向后引用
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants：：match_flag_type
 
 正则表达式匹配选项的标志。
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` - 不搜索第一个匹配项之后的匹配项
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants：syntax_option_type
 
 用于选择语法选项的标志。
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>另请参阅
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_error 类](../standard-library/regex-error-class.md)\
-[\<regex > 函数](../standard-library/regex-functions.md)\
-[Regex_iterator 类](../standard-library/regex-iterator-class.md)\
-[\<regex > 运算符](../standard-library/regex-operators.md)\
-[Regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
-[Regex_traits 类](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<正则>](../standard-library/regex.md)\
+[regex_error类](../standard-library/regex-error-class.md)\
+[\<正则表达式>函数](../standard-library/regex-functions.md)\
+[regex_iterator类](../standard-library/regex-iterator-class.md)\
+[\<正则>运算符](../standard-library/regex-operators.md)\
+[regex_token_iterator类](../standard-library/regex-token-iterator-class.md)\
+[regex_traits类](../standard-library/regex-traits-class.md)\
+[\<正则>类型](../standard-library/regex-typedefs.md)

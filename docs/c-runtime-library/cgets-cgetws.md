@@ -1,9 +1,11 @@
 ---
 title: _cgets、_cgetws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cgetws
 - _cgets
+- _o__cgets
+- _o__cgetws
 api_location:
 - msvcr100.dll
 - msvcr110.dll
@@ -14,6 +16,7 @@ api_location:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,22 +33,22 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: afffb691ca8bf8d180cac11ac5f16a84d871b1b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298995"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334415"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets、_cgetws
 
 从控制台获取字符串。 已提供这些函数的更多安全版本；请参阅 [_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
 > [!IMPORTANT]
->  这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。 这些函数（_cgets_s 和 _cgetws_s）的安全版本仍然可用。 有关这些备用函数的信息，请参阅 [_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
+> 这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。 这些函数（_cgets_s 和 _cgetws_s）的安全版本仍然可用。 有关这些备用函数的信息，请参阅 [_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -68,12 +71,12 @@ wchar_t *_cgetws(
 
 #### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*缓冲区*<br/>
 数据的存储位置。
 
 ## <a name="return-value"></a>返回值
 
-在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 NULL，并将 `errno` 设置为 `EINVAL`。
+在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果`buffer`为**NULL，** 则这些函数将调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 NULL，并将 `errno` 设置为 `EINVAL`****。
 
 ## <a name="remarks"></a>备注
 
@@ -83,20 +86,22 @@ wchar_t *_cgetws(
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../c-runtime-library/secure-template-overloads.md)。
 
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> 或 \<wchar.h>|
 
-有关兼容性的详细信息，请参阅 [Compatibility](../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraitsI 类
+title: 弦元素特性I类
 ms.date: 11/04/2016
 f1_keywords:
 - CStringElementTraitsI
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-ms.openlocfilehash: 77357aa2be326ebebaaf5a8614faaf88a0c3c06b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32980e19443cb17a3a688c85ff21195c60ed2124
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277430"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330587"
 ---
-# <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI 类
+# <a name="cstringelementtraitsi-class"></a>弦元素特性I类
 
-此类提供与集合类对象中存储的字符串相关的静态函数。 它是类似于[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)，但执行不区分大小写的比较。
+此类提供与集合类对象中存储的字符串相关的静态函数。 它类似于[CStringElementTraits，](../../atl/reference/cstringelementtraits-class.md)但执行不区分大小写的比较。
 
 ## <a name="syntax"></a>语法
 
@@ -39,38 +39,38 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CStringElementTraitsI::INARGTYPE](#inargtype)|要用于将元素添加到集合类对象的数据类型。|
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|要用于从集合类对象中检索元素的数据类型。|
+|[弦元素特征I：：INARGTYPE](#inargtype)|用于向集合类对象添加元素的数据类型。|
+|[弦元素特征I：OUTARGTYPE](#outargtype)|用于从集合类对象检索元素的数据类型。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CStringElementTraitsI::CompareElements](#compareelements)|调用此静态函数以比较两个字符串元素相等性，忽略大小写不同的。|
-|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|调用此静态函数以比较两个字符串元素，忽略大小写不同的。|
-|[CStringElementTraitsI::Hash](#hash)|调用此静态函数以计算给定的字符串元素的哈希值。|
+|[弦元素特征I：比较元素](#compareelements)|调用此静态函数以比较两个字符串元素以实现相等性，忽略情况下的差异。|
+|[弦元素特征I：：比较元素排序](#compareelementsordered)|调用此静态函数以比较两个字符串元素，忽略情况下的差异。|
+|[弦乐元素：哈希](#hash)|调用此静态函数以计算给定字符串元素的哈希值。|
 
 ## <a name="remarks"></a>备注
 
-此类提供静态函数对字符串进行比较和用于创建哈希值。 使用集合类来存储基于字符串的数据时，这些函数很有用。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)字符串对象时要与处理作为引用。
+此类提供用于比较字符串和创建哈希值的静态函数。 当使用集合类存储基于字符串的数据时，这些函数非常有用。 当要处理字符串对象作为引用处理时，请使用[CStringRefElementTraits。](../../atl/reference/cstringrefelementtraits-class.md)
 
-有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅[ATL 收集类](../../atl/atl-collection-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[元素库](../../atl/reference/celementtraitsbase-class.md)
 
 `CStringElementTraitsI`
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标题：** atlcoll.h
 
-##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements
+## <a name="cstringelementtraitsicompareelements"></a><a name="compareelements"></a>弦元素特征I：比较元素
 
-调用此静态函数以比较两个字符串元素相等性，忽略大小写不同的。
+调用此静态函数以比较两个字符串元素以实现相等性，忽略情况下的差异。
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
@@ -86,15 +86,15 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="return-value"></a>返回值
 
-如果元素均相等，则返回 false，则返回 true。
+如果元素相等，则返回 true，否则为 false。
 
 ### <a name="remarks"></a>备注
 
 比较不区分大小写。
 
-##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered
+## <a name="cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>弦元素特征I：：比较元素排序
 
-调用此静态函数以比较两个字符串元素，忽略大小写不同的。
+调用此静态函数以比较两个字符串元素，忽略情况下的差异。
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -110,15 +110,15 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="return-value"></a>返回值
 
-如果字符串相等则为零，< 0 如果*str1*是小于*str2*，或 > 0 如果*str1*大于*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。
+如果字符串相同，则为零，如果*str1*小于*str2，* 则< 0;如果*str1*大于*str2，* 则> 0。 [CStringT：：比较](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。
 
 ### <a name="remarks"></a>备注
 
 比较不区分大小写。
 
-##  <a name="hash"></a>  CStringElementTraitsI::Hash
+## <a name="cstringelementtraitsihash"></a><a name="hash"></a>弦乐元素：哈希
 
-调用此静态函数以计算给定的字符串元素的哈希值。
+调用此静态函数以计算给定字符串元素的哈希值。
 
 ```
 static ULONG Hash(INARGTYPE str) throw();
@@ -126,30 +126,30 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
-字符串元素中。
+*Str*<br/>
+字符串元素。
 
 ### <a name="return-value"></a>返回值
 
-返回使用字符串的内容计算的哈希值。
+返回使用字符串内容计算的哈希值。
 
-##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE
+## <a name="cstringelementtraitsiinargtype"></a><a name="inargtype"></a>弦元素特征I：：INARGTYPE
 
-要用于将元素添加到集合类对象的数据类型。
+用于向集合类对象添加元素的数据类型。
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE
+## <a name="cstringelementtraitsioutargtype"></a><a name="outargtype"></a>弦元素特征I：OUTARGTYPE
 
-要用于从集合类对象中检索元素的数据类型。
+用于从集合类对象检索元素的数据类型。
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CElementTraitsBase 类](../../atl/reference/celementtraitsbase-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

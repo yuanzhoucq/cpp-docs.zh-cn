@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: cb340554bc20516175400c4d14a5d0dba934a313
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27ac76251456d9a0bf5908ad6d1fc2bee7534e9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188956"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360814"
 ---
 # <a name="__restrict"></a>__restrict
 
-与 **__declspec （ [restrict](../cpp/restrict.md) ）** 修饰符一样， **__restrict**关键字指示符号在当前范围中未使用别名。 **__Restrict**关键字不同于 `__declspec ( restrict )` 修饰符，如下所示：
+与 **__declspec （[限制](../cpp/restrict.md)）** 修饰符一样 **，__restrict**关键字表示符号在当前作用域中未进行别名。 **__restrict**关键字与`__declspec ( restrict )`修饰符在以下方面有所不同：
 
-- **__Restrict**关键字仅对变量有效，`__declspec ( restrict )` 只对函数声明和定义有效。
+- **__restrict**关键字仅在变量上有效，`__declspec ( restrict )`并且仅在函数声明和定义上有效。
 
-- **__restrict**类似于 C99 规范的**限制**，但可以在或 C 程序中C++使用 **__restrict** 。
+- **__restrict**类似于 C99 规范**的限制**，但 **__restrict**可用于C++或 C 程序。
 
-- 使用 **__restrict**时，编译器不会传播变量的非别名属性。 也就是说，如果将 **__restrict**变量分配给非 **__restrict**变量，则编译器仍将允许非 __restrict 变量使用别名。 这不同于 C99 规范中**restrict**关键字的行为。
+- 使用 **__restrict**时，编译器不会传播变量的无别名属性。 也就是说，如果将 **__restrict**变量分配给非 **__restrict**变量，编译器仍将允许对非__restrict变量进行别名化。 这与 C99 规范中**限制**关键字的行为不同。
 
 通常，如果你影响整个函数的行为，则使用 `__declspec ( restrict )` 要好过使用关键字。
 
-为了与早期版本兼容， **_restrict**是 **__restrict**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
+为了与早期版本兼容，**除非**指定编译器选项[/Za\(禁用语言扩展，](../build/reference/za-ze-disable-language-extensions.md)否则_restrict是 **__restrict**的同义词。
 
-在 Visual Studio 2015 和更高 **__restrict**版本中，可以对C++引用使用 __restrict。
+在 Visual Studio 2015 及更高版本中 **，__restrict**可用于C++引用。
 
 > [!NOTE]
->  在同时具有[volatile](../cpp/volatile-cpp.md)关键字的变量上使用时，将优先使用**volatile** 。
+> 当在也有[易失性](../cpp/volatile-cpp.md)关键字的变量上使用时，**挥发性**将优先。
 
 ## <a name="example"></a>示例
 
@@ -60,4 +60,4 @@ union z {
 
 ## <a name="see-also"></a>另请参阅
 
-[关键字](../cpp/keywords-cpp.md)
+[Keywords](../cpp/keywords-cpp.md)

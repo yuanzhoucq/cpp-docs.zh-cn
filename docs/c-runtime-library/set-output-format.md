@@ -25,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957311"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360922"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
 自定义格式化 I/O 函数使用的输出格式。
 
 > [!IMPORTANT]
->  此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
+> 此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
 
 ## <a name="syntax"></a>语法
 
@@ -49,7 +49,7 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>参数
 
-*format*<br/>
+*格式*<br/>
 [in] 表示要使用的格式的值。
 
 ## <a name="return-value"></a>返回值
@@ -58,7 +58,7 @@ unsigned int _set_output_format(
 
 ## <a name="remarks"></a>备注
 
-`_set_output_format` 用于配置格式化 I/O 函数的输出，如 [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)。 目前，此函数可以更改的唯一格式设置约定是输出浮点数时在指数中显示的位数。
+`_set_output_format` 用于配置格式化 I/O 函数的输出，例如 [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)。 目前，此函数可以更改的唯一格式设置约定是输出浮点数时在指数中显示的位数。
 
 默认情况下，即使不需要使用三位数来表示指数的值，由函数（例如 `printf_s`、 `wprintf_s`等）和 Visual C++ 标准 C 库中的相关函数输出浮点数也会打印表示指数值的三位数。 用零来填充此值，使其成为三位数。 利用`_set_output_format` 可以更改此行为，这样就可以只打印指数中的两位数，除非指数的大小必需具有第三个数字。
 
@@ -66,11 +66,11 @@ unsigned int _set_output_format(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-有关更多兼容性信息，请参见“简介”中的 [兼容性](../c-runtime-library/compatibility.md) 。
+有关兼容性的详细信息，请参阅“简介”中的[兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -122,7 +122,7 @@ int main()
 1.211E-005  2.306E-112
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_get_output_format](../c-runtime-library/get-output-format.md)
