@@ -1,6 +1,6 @@
 ---
 title: lround、lroundf、lroundl、llround、llroundf、llroundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - llround
 - llroundf
@@ -8,6 +8,12 @@ api_name:
 - lroundf
 - lround
 - lroundl
+- _o_llround
+- _o_llroundf
+- _o_llroundl
+- _o_lround
+- _o_lroundf
+- _o_lroundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953003"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341623"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -87,28 +94,30 @@ long long llroundl(
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 要舍入的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Lround**和**llround**函数将最接近的**长** **整数或** **长**整数返回到*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
+**lround**和**lround**函数将最接近**的长**或**长****long**整*数返回*x 。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|无|**_DOMAIN**|
+|• **QNAN**， **IND**|无|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**lround**或**llround**的重载，该重载采用并返回**浮点**和**长** **双精度**值。 在 C 程序中， **lround**和**llround**始终采用并返回**双精度型**。
+由于C++允许重载，因此可以调用带和返回**浮点**值和**长****双**值的**lround**或**lround**的重载。 在C程序中 **，lround**和**lround**总是采取并返回**一个双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
+|**lround，** **lroundf，** **lroundl，** **lround， lround，** **lroundf，** **lroundl， lroundl**|\<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -146,7 +155,7 @@ lroundl(3.500000) is 4
 lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
@@ -155,4 +164,4 @@ lroundl(-3.500000) is -4
 [lrint、lrintf、lrintl、llrint、llrintf、llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [round、roundf、roundl](round-roundf-roundl.md)<br/>
 [nearbyint、nearbyintf、nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
-[rint、rintf、rintl](rint-rintf-rintl.md)<br/>
+[rint, rintf, rintl](rint-rintf-rintl.md)<br/>

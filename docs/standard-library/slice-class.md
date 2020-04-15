@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 05f87cbb6061e205f9731d2a903ce52a2482b214
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79094860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336719"
 ---
 # <a name="slice-class"></a>slice 类
 
@@ -25,7 +25,7 @@ valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如
 
 ## <a name="remarks"></a>备注
 
-该类存储了将 [slice_array](../standard-library/slice-array-class.md) 类型的对象特征化的参数。当类切片显示为 [valarray](../standard-library/valarray-class.md#op_at) **\<Type** 类的对象的自变量时，会间接构造 valarray 的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：
+该类存储了将 [slice_array](../standard-library/slice-array-class.md) 类型的对象特征化的参数。当类切片显示为 [valarray](../standard-library/valarray-class.md#op_at)**\<Type** 类的对象的自变量时，会间接构造 valarray 的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：
 
 - valarray 中的起始索引。
 
@@ -33,7 +33,7 @@ valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如
 
 - 跨距，或 valarray 中元素的后续索引之间的距离。
 
-如果由切片定义的集为常量 valarray 的子集，则该切片将是新的 valarray。 如果由切片定义的集为非常量 valarray 的子集，则该切片将具有对原始 valarray 的引用语义。 非常量 valarray 的评估机制节省了时间和内存。
+如果由切片定义的集为常量 valarray 的子集，则该切片将是新的 valarray。 如果由切片定义的集为非常量 valarray 的子集，则该切片将具有对原始 valarray 的引用语义。 常数的计算 valarrays 机制保存时间和内存。
 
 仅当由切片定义的源和目标子集都是不重复的并且所有索引都是有效的，才可以保证对 valarray 的操作。
 
@@ -41,23 +41,23 @@ valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如
 
 |构造函数|说明|
 |-|-|
-|[slice](#slice)|定义 `valarray` 的一个子集，该 valarray 包含一些等距分隔的元素，并且在指定的元素开始。|
+|[片](#slice)|定义 `valarray` 的一个子集，该 valarray 包含一些等距分隔的元素，并且在指定的元素开始。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
 |成员函数|说明|
 |-|-|
-|[size](#size)|查找 `valarray` 的切片中的元素数目。|
-|[start](#start)|查找 `valarray` 的切片的起始索引。|
+|[大小](#size)|查找 `valarray` 的切片中的元素数目。|
+|[开始](#start)|查找 `valarray` 的切片的起始索引。|
 |[stride](#stride)|查找 `valarray` 的切片中元素之间的距离。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<valarray >
+**标头：** \<valarray>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="size"></a>  slice::size
+## <a name="slicesize"></a><a name="size"></a>切片：：大小
 
 查找 valarray 切片中的元素数。
 
@@ -121,7 +121,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.
 ```
 
-## <a name="slice"></a>  slice::slice
+## <a name="sliceslice"></a><a name="slice"></a>切片：：切片
 
 定义 valarray 的一个子集，该 valarray 包含许多等距分隔的元素，并且从指定的元素开始。
 
@@ -142,12 +142,12 @@ slice(
 *_Len*\
 子集中的元素数。
 
-*步幅*\
+*大步*\
 子集中元素间的距离。
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数存储起始索引的 *_StartIndex* ， *_Len*的总*长度和跨距*。
+默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数存储*起始索引的_StartIndex、* 总长度 *_Len*和步*长步长*。
 
 ### <a name="remarks"></a>备注
 
@@ -194,7 +194,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```
 
-## <a name="start"></a>  slice::start
+## <a name="slicestart"></a><a name="start"></a>切片：：开始
 
 查找 valarray 切片的起始索引。
 
@@ -252,7 +252,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.
 ```
 
-## <a name="stride"></a>  slice::stride
+## <a name="slicestride"></a><a name="stride"></a>切片：：步幅
 
 查找 valarray 切片中元素之间的距离。
 

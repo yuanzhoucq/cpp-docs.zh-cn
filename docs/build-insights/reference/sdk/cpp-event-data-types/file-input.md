@@ -1,6 +1,6 @@
 ---
-title: FileInput 类
-description: C++ BUILD Insights SDK FileInput 类引用。
+title: 文件输入类
+description: C++生成见解 SDK 文件输入类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: bea2cf72ca2a83a9cd630f8a9ccefb87dd4b7ff1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 642236d3e67465ed38508cb24c8cd698ae880065
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334846"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324794"
 ---
-# <a name="fileinput-class"></a>FileInput 类
+# <a name="fileinput-class"></a>文件输入类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FileInput` 类用于[MatchEvent](../functions/match-event.md)、 [MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、 [MatchEventStack](../functions/match-event-stack.md)和[MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md)函数。 使用它来匹配[FILE_INPUT](../event-table.md#file-input)事件。
+该`FileInput`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配[FILE_INPUT](../event-table.md#file-input)事件。
 
 ## <a name="syntax"></a>语法
 
@@ -50,20 +50,20 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-除了其[SimpleEvent](simple-event.md)基类的继承成员以外，`FileInput` 类包含以下成员：
+除了其[SimpleEvent](simple-event.md)基类中继承的成员外，`FileInput`该类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
-[FileInput](#file-input)
+[文件输入](#file-input)
 
 ### <a name="functions"></a>函数
 
 [路径](#path)
 [类型](#type)
 
-## <a name="file-input"></a>FileInput
+## <a name="fileinput"></a><a name="file-input"></a>文件输入
 
 ```cpp
 FileInput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileInput(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*event*\
+*事件*\
 [FILE_INPUT](../event-table.md#file-input)事件。
 
-## <a name="path"></a> Path
+## <a name="path"></a><a name="path"></a>路径
 
 ```cpp
 const wchar_t Path() const;
@@ -84,7 +84,7 @@ const wchar_t Path() const;
 
 输入文件的绝对路径。
 
-## <a name="type"></a>类别
+## <a name="type"></a><a name="type"></a> 类型
 
 ```cpp
 Type Type() const;

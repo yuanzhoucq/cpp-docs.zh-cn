@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 44d8956313053ca6c7a55994f241c00bd71092b4
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 3984fe84e1761c785f3b3c4d7c5ef3c43d2528a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340977"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334625"
 ---
 # <a name="c-tokens"></a>C 标记
 
@@ -20,21 +20,21 @@ ms.locfileid: "68340977"
 
 *token*: *keyword*
 
-*identifier*
+*标识符*
 
-*constant*
+*不断*
 
-*string-literal*
+*字符串文本*
 
-*operator*
+*算子*
 
-punctuator 
+punctuator**
 
 > [!NOTE]
->  有关 ANSI 语法约定的说明，请参阅 [C 语言语法摘要](../c-language/c-language-syntax-summary.md)的简介。
+> 有关 ANSI 语法约定的说明，请参阅 [C 语言语法摘要](../c-language/c-language-syntax-summary.md)的简介。
 
-本节描述的关键字、标识符、常量、字符串文本和运算符是标记的示例。 标点符号（如方括号 ([ ]  )、大括号 ({ }  )、圆括号 ( ( )  ) 和逗号 (,  ) 也是标记。
+本节描述的关键字、标识符、常量、字符串文本和运算符是标记的示例。 标点符号（如方括号 ([ ]****)、大括号 ({ }****)、圆括号 ( ( )**** ) 和逗号 (,****) 也是标记。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C 的元素](../c-language/elements-of-c.md)

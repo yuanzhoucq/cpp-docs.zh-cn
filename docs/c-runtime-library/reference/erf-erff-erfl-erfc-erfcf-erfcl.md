@@ -1,6 +1,6 @@
 ---
 title: erf、erff、erfl、erfc、erfcf、erfcl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - erff
 - erfl
@@ -8,6 +8,12 @@ api_name:
 - erfc
 - erfcf
 - erfcl
+- _o_erf
+- _o_erfc
+- _o_erfcf
+- _o_erfcl
+- _o_erff
+- _o_erfl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: ad7ad279d3686e4f33a6f5f901c60348c131b89a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70937620"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347913"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -87,31 +94,33 @@ long double erfcl(
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Erf**函数返回*x*的高斯错误函数。 **Erfc**函数返回*x*的互补高斯错误函数。
+**erf**函数返回*x*的高斯错误函数 。 **erfc**函数返回*x*的互补高斯误差函数。
 
 ## <a name="remarks"></a>备注
 
-**Erf**函数计算*x*的高斯错误函数，该函数定义为：
+**erf**函数计算*x*的高斯误差函数，该函数定义为：
 
-![X 的 error 函数](media/crt_erf_formula.PNG "x 的错误函数")
+![x 的错误函数](media/crt_erf_formula.PNG "x 的错误函数")
 
-互补高斯错误函数定义为 erf （x）。 **Erf**函数返回的值范围为-1.0 到1.0。 无错误返回。 **Erfc**函数返回0到2范围内的值。 如果*x*对于**erfc**太大，则将**errno**变量设置为**ERANGE**。
+互补高斯误差函数定义为 1 - erf（x）。 **erf**函数返回范围 -1.0 到 1.0 中的值。 无错误返回。 **erfc**函数返回范围 0 到 2 中的值。 如果*x*对于**erfc**来说太大，则**errno**变量设置为**ERANGE**。
 
-由于C++允许重载，因此可以调用**erf**和**erfc**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **erf**和**erfc**始终采用并返回**双精度型**。
+由于C++允许重载，因此可以调用获取和返回**浮点**和**长****双**类型的**erf**和**erfc**的重载。 在C程序中 **，erf**和**erfc**总是采取并返回**一个双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**erf**、 **erff**、 **erfl**、 **erfc**、 **erfcf**、 **erfcl**|\<math.h>|
+|**埃尔夫**，**埃尔夫**，**埃尔弗尔**，**埃尔夫夫**，**埃尔夫夫**，**埃尔夫**|\<math.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _kbhit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _kbhit
+- _o__kbhit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342250"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -55,11 +57,13 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>返回值
 
-如果已按下某个键， **_kbhit**将返回一个非零值。 否则返回 0。
+如果按下了键 **，_kbhit**返回非零值。 否则，返回 0。
 
 ## <a name="remarks"></a>备注
 
-**_Kbhit**函数检查控制台中最近的击键。 如果函数返回一个非零值，则键击将在缓冲区中等待。 然后，程序可以调用 **_getch**或 **_getche**以获取击键。
+**_kbhit**功能检查控制台中最近的击键。 如果函数返回一个非零值，则键击将在缓冲区中等待。 然后，程序可以呼叫 **_getch**或 **_getche**以获得击键。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -67,7 +71,7 @@ int _kbhit( void );
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

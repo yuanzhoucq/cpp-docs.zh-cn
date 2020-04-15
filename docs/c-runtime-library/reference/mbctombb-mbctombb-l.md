@@ -1,9 +1,11 @@
 ---
 title: _mbctombb、_mbctombb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctombb_l
 - _mbctombb
+- _o__mbctombb
+- _o__mbctombb_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: b449dfae04f875c819f34422b9a0ae92e2b8a7c2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4afd1c92930fe622eb03569913b264d6c285dcda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952530"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341017"
 ---
 # <a name="_mbctombb-_mbctombb_l"></a>_mbctombb、_mbctombb_l
 
@@ -59,34 +62,36 @@ unsigned int _mbctombb_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*C*<br/>
 要转换的多字节字符。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则 **_mbctombb**和 **_mbctombb_l**返回与*c*对应的单字节字符;否则，它将返回*c*。
+如果成功 **，_mbctombb**和 **_mbctombb_l**返回对应于*c*的单字节字符。否则它返回*c*。
 
 ## <a name="remarks"></a>备注
 
-**_Mbctombb**和 **_mbctombb_l**函数将给定的多字节字符转换为相应的单字节的多字节字符。 字符必须对应于要转换的0x7E 或0xA1 范围内的单字节字符。
+**_mbctombb**和 **_mbctombb_l**函数将给定的多字节字符转换为相应的单字节多字节字符。 字符必须对应于要转换的范围 0x20 - 0x7E 或 0xA1 - 0xDF 内的单字节字符。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 没有 **_l**后缀的函数版本使用此与区域设置相关的行为的当前区域设置;具有 **_l**后缀的版本是相同的，只不过它使用传入区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在以前的版本中， **_mbctombb**称为**zentohan**。 改用 **_mbctombb** 。
+在以前的版本中 **，_mbctombb**称为**禅宗。** 改用 **_mbctombb。**
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbctombb**|\<mbstring.h>|
 |**_mbctombb_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc、_mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

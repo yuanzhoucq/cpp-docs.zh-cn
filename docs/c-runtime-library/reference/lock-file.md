@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953305"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342111"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-锁定**文件**对象，以确保线程同时访问**文件**对象的一致性。
+锁定**FILE**对象，以确保同时访问**FILE**对象的线程的一致性。
 
 ## <a name="syntax"></a>语法
 
@@ -46,20 +48,22 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>参数
 
-文件<br/>
+*文件*<br/>
 文件句柄。
 
 ## <a name="remarks"></a>备注
 
-**_Lock_file**函数锁定*文件*指定的**文件**对象。 **_Lock_file**未锁定基础文件。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 在线程中，对 **_lock_file**和 **_unlock_file**的调用必须匹配。
+**_lock_file**函数锁定*文件*指定的**FILE**对象。 基础文件未被 **_lock_file**锁定。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 对 **_lock_file**和 **_unlock_file**的调用必须在线程中匹配。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>

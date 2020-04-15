@@ -1,8 +1,9 @@
 ---
 title: _getdrive
-ms.date: 09/19/2019
+ms.date: 4/2/2020
 api_name:
 - _getdrive
+- _o__getdrive
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
-ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
+ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71158766"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344336"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,15 +52,19 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>返回值
 
-返回当前（默认）驱动器（1=A，2=B，依此类推）。 如果返回值为零，则表示当前路径不是以字母驱动器名称开头，如 UNC 路径。 或，这意味着内部缓冲区分配失败。 如果内部分配失败， `errno`则将设置为 ENOMEM。
+返回当前（默认）驱动器（1=A，2=B，依此类推）。 返回值为零表示当前路径不以字母驱动器名称（如 UNC 路径）开头。 或者，这意味着内部缓冲区分配失败。 如果内部分配失败，`errno`则设置为 ENOMEM。
+
+## <a name="remarks"></a>备注
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -110,7 +116,7 @@ F: (Current directory is F:\)
 G: (Current directory is G:\)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [目录控制](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>

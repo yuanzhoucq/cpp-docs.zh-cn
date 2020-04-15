@@ -1,9 +1,11 @@
 ---
 title: _mbccpy_s、_mbccpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy_s
 - _mbccpy_s_l
+- _o__mbccpy_s
+- _o__mbccpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 08df395c6978c84b3f53ed0b07ce988afd0249f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341236"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
@@ -82,45 +85,47 @@ errno_t _mbccpy_s_l(
 
 ### <a name="parameters"></a>参数
 
-dest<br/>
+dest**<br/>
 复制目标。
 
-*buffSizeInBytes*<br/>
+*福西斯字节*<br/>
 目标缓冲区的大小。
 
-*pCopied*<br/>
-填充复制的字节数（如果成功则为 1 或 2）。 如果对数字不感兴趣，则传递**NULL** 。
+*p复制*<br/>
+填充复制的字节数（如果成功则为 1 或 2）。 如果您不关心该号码，则通过**NULL。**
 
 *src*<br/>
 要复制的多字节字符。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零；如果失败，则为错误代码。 如果*src*或*dest*为**NULL**，或者如果要将超过**buffSizeinBytes**字节复制到*dest*，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL** ， **Errno**设置为**EINVAL**。
+如果成功，则为零；如果失败，则为错误代码。 如果*src*或*dest*为**NULL，** 或者如果将多个**buffSizein字节**字节复制到*dest，* 则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数返回**EINVAL，errno**设置为**EINVAL**。 **errno**
 
 ## <a name="remarks"></a>备注
 
-**_Mbccpy_s**函数将一个多字节字符从*src*复制到*目标*。 如果*src*不指向由对[_ismbblead](ismbblead-ismbblead-l.md)的隐式调用确定的多字节字符的前导字节，则会复制*src*指向的单个字节。 如果*src*指向前导字节，但以下字节是0，因而无效，则将0复制到*dest*， **errno**设置为**eilseq 且**，并且函数返回**eilseq 且**。
+**_mbccpy_s**函数将一个多字节字符从*src*复制到*dest*。 如果*src*不指向由对[_ismbblead](ismbblead-ismbblead-l.md)的隐式调用确定的多字节字符的引线字节，则复制*src*指向的单个字节。 如果*src*指向一个引线字节，但下面的字节是 0，因此无效，则 0 被复制到*dest* **，errno**设置为**EILSEQ**，并且函数返回**EILSEQ**。
 
-**_mbccpy_s**不追加空终止符;但是，如果*src*指向 null 字符，则会将该 null 复制到*dest* （这只是一个常规的单字节副本）。
+**_mbccpy_s**不追加空终止符;否则，_mbccpy_s将附加空终止符。但是，如果*src*指向空字符，则该空将复制到*dest（* 这只是常规的单字节副本）。
 
-*PCopied*中的值由复制的字节数填充。 如果操作成功，则可能的值为 1 和 2。 如果传入**NULL** ，则忽略此参数。
+*pCopied*中的值用复制的字节数填充。 如果操作成功，则可能的值为 1 和 2。 如果传入**NULL，** 则忽略此参数。
 
-|*src*|已复制到*目标*|*pCopied*|返回值|
+|*src*|复制到*dest*|*p复制*|返回值|
 |-----------|----------------------|---------------|------------------|
 |非前导字节|非前导字节|1|0|
 |0|0|1|0|
 |前导字节，后跟非零值|前导字节，后跟非零值|2|0|
 |前导字节，后跟 0|0|1|**EILSEQ**|
 
-请注意，第二行只是第一行的特殊情况。 另请注意，表假设*buffSizeInBytes* >= *pCopied*。
+请注意，第二行只是第一行的特殊情况。 另请注意，该表假定*为 buffsizeInBYpb* >= *pcopied*。
 
-**_mbccpy_s**为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_s_l**与 **_mbccpy_s**相同，不同之处在于 **_mbccpy_s_l**使用传入的区域设置用于任何依赖于区域设置的行为。
+**_mbccpy_s**对任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_s_l**与 **_mbccpy_s**相同，只是 **_mbccpy_s_l**使用传入的任何区域设置相关的行为。
 
-在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -130,15 +135,15 @@ dest<br/>
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

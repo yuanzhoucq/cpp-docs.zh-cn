@@ -1,9 +1,10 @@
 ---
 title: _fpclass、_fpclassf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fpclass
 - _fpclassf
+- _o__fpclass
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346276"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -56,23 +58,23 @@ int _fpclassf(
 ); /* x64 only */
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 要测试的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**_Fpclass**和 **_fpclassf**函数返回一个整数值，该值指示参数*x*的浮点分类。 分类可能具有 \<float.h> 中定义的下列值之一。
+**_fpclass**和 **_fpclassf**函数返回一个整数值，指示参数*x*的浮点分类。 分类可能具有 \<float.h> 中定义的下列值之一。
 
-|值|说明|
+|“值”|说明|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|信令 NaN|
 |**_FPCLASS_QNAN**|静默 NaN|
-|**_FPCLASS_NINF**|负无穷大（-INF）|
+|**_FPCLASS_NINF**|负无穷大 （-INF）|
 |**_FPCLASS_NN**|标准化的非零负值|
 |**_FPCLASS_ND**|非标准化的负值|
-|**_FPCLASS_NZ**|负零（-0）|
+|**_FPCLASS_NZ**|负零 （- 0）|
 |**_FPCLASS_PZ**|正零 (+0)|
 |**_FPCLASS_PD**|非标准化的正值|
 |**_FPCLASS_PN**|标准化的非零正值|
@@ -80,7 +82,9 @@ int _fpclassf(
 
 ## <a name="remarks"></a>备注
 
-**_Fpclass**和 **_Fpclassf**函数是 Microsoft 特定的。 它们类似于 [fpclassify](fpclassify.md)，但返回有关参数的更多详情信息。 仅当为 x64 平台编译时， **_fpclassf**函数才可用。
+**_fpclass**和 **_fpclassf**功能特定于 Microsoft。 它们类似于 [fpclassify](fpclassify.md)，但返回有关参数的更多详情信息。 仅当为 x64 平台编译时 **，_fpclassf**功能才可用。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

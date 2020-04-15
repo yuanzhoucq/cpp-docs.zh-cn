@@ -1,8 +1,9 @@
 ---
 title: fread_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fread_s
+- _o_fread_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97f7ca80d4b458b952393a5b1f72bebe0bdb0d9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956837"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346123"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -48,32 +50,34 @@ size_t fread_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*缓冲区*<br/>
 数据的存储位置。
 
-*bufferSize*<br/>
+*缓冲区大小*<br/>
 目标缓冲区的大小（以字节为单位）。
 
-*elementSize*<br/>
+*元素大小*<br/>
 要读取的项的大小（以字节为单位）。
 
 *count*<br/>
 要读取的项的最大数量。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-**fread_s**返回读取到缓冲区中的（所有）项的数目，*如果在达到此值之前遇到*读取错误或文件结尾，则可能小于*计数*。 使用**feof**或**ferror**函数将错误与文件结尾条件区分开来。 如果*大小*或*计数*为0，则**fread_s**将返回0，并且缓冲区内容将保持不变。 如果*流*或*缓冲区*是 null 指针， **fread_s**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则此函数会将**errno**设置为**EINVAL** , 并返回0。
+**fread_s**返回读取到缓冲区中的（完整）项数，如果达到*计数*之前遇到读取错误或文件结尾，则该项可能小于*计数*。 使用**feof**或**ferror**函数来区分错误和文件结尾条件。 如果*大小*或*计数*为 0，**则fread_s**返回 0，缓冲区内容保持不变。 如果*流*或*缓冲区*是空指针 **，fread_s**调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，此函数将**errno**设置到**EINVAL**并返回 0。
 
 有关错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fread_s**函数从输入*流*中读取最多*elementSize*个字节*的项，并将其*存储在*缓冲区*中。  与*流*关联的文件指针 (如果有) 以实际读取的字节数为增量增加。 如果在文本模式下打开给定的流, 则会将回车换行符对替换为单换行符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
+**fread_s**函数最多读取从输入*流**中计算**元素大小*字节项并将其存储在*缓冲区*中。  与*流*关联的文件指针（如果有）由实际读取的字节数增加。 如果在文本模式下打开给定流，则将回车返回行馈送对替换为单行馈送字符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
 
 此函数将锁定其他线程。 如果需要非锁定版本，请使用 **_fread_nolock**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -81,7 +85,7 @@ size_t fread_s(
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -150,7 +154,7 @@ Contents of buffer after write/read:
         zyxwvutsrqponmlkjihgfe
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

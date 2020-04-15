@@ -1,6 +1,6 @@
 ---
 title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lrint
 - lrintl
@@ -8,6 +8,12 @@ api_name:
 - llrint
 - llrintf
 - llrintl
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857744"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341669"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -102,32 +109,34 @@ long long int llrintl(
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 要舍入的值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回*x*的舍入整数值。
+如果成功，则返回*x*的舍入积分值。
 
 |问题|返回|
 |-----------|------------|
-|*x*超出了返回类型的范围<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|引发**FE_INVALID**并返回零（0）。|
+|*x*超出返回类型的范围<br /><br /> *x* = |<br /><br /> *x* = NaN|FE_INVALID**并**返回零 （0）。|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**lrint**和**llrint**的重载，该重载采用**float**和**long** **double**类型。 在 C 程序中， **lrint**和**llrint**始终采用**double**。
+由于C++允许重载，因此可以调用采用**浮点**和**长****双**类型来调用**lrint**和**llrint**的重载。 在C程序中 **，rint**和**llrint**总是采取**双**。
 
-如果*x*不表示整数值的浮点等效项，则这些函数将引发**FE_INEXACT**。
+如果*x*不表示积分值等效的浮点，则这些函数**将FE_INEXACT**。
 
-**Microsoft 专用**：当结果在返回类型范围之外时，或者参数为 NaN 或无穷大时，返回值为 "已定义实现"。 Microsoft 编译器返回零 (0) 值。
+**特定于 Microsoft：** 当结果超出返回类型的范围，或者当参数为 NaN 或无穷大时，则定义返回值。 Microsoft 编译器返回零 (0) 值。
 
-## <a name="requirements"></a>需求
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+
+## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
+|**鲁因特**，**鲁因特**，**林特尔**，**林特**， **llrintf，** **llrintl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 

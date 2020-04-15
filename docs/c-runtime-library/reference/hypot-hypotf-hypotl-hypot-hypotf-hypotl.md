@@ -1,6 +1,6 @@
 ---
 title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _hypotf
 - hypot
@@ -8,6 +8,9 @@ api_name:
 - _hypot
 - _hypotl
 - hypotl
+- _o__hypot
+- _o__hypotf
+- _o_hypot
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168741"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343956"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -80,30 +84,32 @@ long double _hypotl(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*x*、 *y*<br/>
+*x*， *y*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **hypot**将返回斜边的长度;在溢出时， **hypot**返回 INF （无限大）， **errno**变量设置为**ERANGE**。 您可以使用 **_matherr**修改错误处理。
+如果成功，**假设**返回伪善的长度;在溢出时，**假设**返回INF（无穷大 **），errno**变量设置为**ERANGE**。 您可以使用 **_matherr**修改错误处理。
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Hypot**函数计算直角三角形的斜边的长度（给定两个边*x*和*y*的长度（即， *x*<sup>2</sup>的平方根 + *y*<sup>2</sup>）。
+**假设函数**计算直角三角形的斜用长度，给定两侧*x*和*y*的长度（换句话说 *，x*<sup>2</sup> + *y*<sup>2</sup>的平方根）。
 
 提供的带有前导下划线的函数版本便于与早期的标准兼容。 它们的行为与没有前导下划线的版本相同。 我们建议将不带前导下划线的版本用于新代码。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf** **_hypotl**|\<math.h>|
+|**下部**，**下，****低， 低，** **_hypot，** **_hypotf，** **_hypotl**|\<math.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

@@ -1,9 +1,11 @@
 ---
 title: ungetc、ungetwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ungetwc
 - ungetc
+- _o_ungetc
+- _o_ungetwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: f3b6c6ed3fe8ff5976afa1da2ed437e25c923b99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 484af7b72f860a8a9d12cf0b62444871caad4675
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957420"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361295"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
 
@@ -57,29 +60,31 @@ wint_t ungetwc(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*C*<br/>
 要推送的字符。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则每个函数将返回字符参数*c*。 如果无法向后推送*c* ，或者未读取任何字符，则输入流将保持不变，并且**ungetc**返回**EOF**;**ungetwc**返回**WEOF**。 如果*stream*为**NULL**，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回**EOF**或**WEOF** ，并将**errno**设置为**EINVAL**。
+如果成功，这些函数中的每一个都返回字符参数*c*。 如果*c*无法推回或未读取任何字符，则输入流保持不变 **，ungetc**将返回**EOF;****ungetwc**返回**WEOF。** 如果*流*为**NULL，** 则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则返回**EOF**或**WEOF，** 并将**errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Ungetc**函数将字符*c*推送到*stream*上，并清除文件尾指示符。 流必须打开以供读取。 *对流*的后续读取操作以*c*开头。 将忽略使用**ungetc**将**EOF**推送到流的尝试。
+**ungetc**函数将字符*c*推回*流*并清除文件结尾指示器。 流必须打开以供读取。 流*上的后续*读取操作从*c*开始。 忽略使用**ungetc**将**EOF**推送到流的尝试。
 
-如果在从流中读取字符之前调用了**fflush**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或[倒带](rewind.md)，则可能会清除**ungetc**上放置的字符。 文件位置指示符将拥有将字符推送回之前的值。 对应流的外部存储未改变。 对文本流进行成功的**ungetc**调用时，将不指定文件位置指示符，直到读取或丢弃所有推回的字符。 对于二进制流，每个成功的**ungetc**调用都将减少文件位置指示器;如果调用前其值为0，则调用后不定义该值。
+如果从流中读取字符之前调用 fflush、fseek、fsetpos**fsetpos**或[倒带](rewind.md)，则通过**ungetc**放置在流上的字符可能会被删除。 **fflush** [fseek](fseek-fseeki64.md) 文件位置指示符将拥有将字符推送回之前的值。 对应流的外部存储未改变。 在对文本流成功进行**ungetc**调用时，文件位置指示器未指定，直到读取或丢弃所有推回字符。 在针对二进制流的每个成功**ungetc**调用中，文件位置指示器都会递减;如果调用前的值为 0，则该值在调用后未定义。
 
-如果两次调用之间没有读取或文件定位操作 **，则结果**是不可预知的。 调用**fscanf**后，对**ungetc**的调用可能会失败，除非已执行其他读取操作（例如**getc**）。 这是因为， **fscanf**本身调用了**ungetc**。
+如果两次调用**ungetc**时在两个调用之间没有读取或文件定位操作，则结果是不可预测的。 调用**fscanf**后，除非执行了另一个读取操作（如**getc），** 否则对**ungetc**的调用可能会失败。 这是因为**fscanf**本身调用**ungetc。**
 
-**ungetwc**是**ungetc**的宽字符版本。 但是，在每个针对文本或二进制流的成功**ungetwc**调用中，文件位置指示器的值是未指定的，直到读取或丢弃所有推送后的字符。
+**ungetwc**是一个宽字符版本的**ungetc。** 但是，在针对文本或二进制流的每个成功**ungetwc**调用中，文件位置指示器的值未指定，直到读取或丢弃所有推回字符。
 
 这些函数线程安全并会在执行期间锁定敏感数据。 有关非锁定版本，请参阅 [_ungetc_nolock、_ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -89,12 +94,12 @@ wint_t ungetwc(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**ungetc**|\<stdio.h>|
 |**ungetwc**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 （UWP） 应用中不支持该控制台。 在与控制台 **、stdin、stdout**和**stder**关联的标准流句柄必须重定向，C 运行时函数才能在 UWP 应用中使用它们。 **stdout** 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -130,7 +135,7 @@ int main( void )
 Next character in stream = 'a'
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [getc、getwc](getc-getwc.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _gcvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt
+- _o__gcvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956105"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345323"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -57,10 +59,10 @@ char *_gcvt(
 *value*<br/>
 要转换的值。
 
-*digits*<br/>
+*位数*<br/>
 存储的有效位数。
 
-*buffer*<br/>
+*缓冲区*<br/>
 结果的存储位置。
 
 ## <a name="return-value"></a>返回值
@@ -69,19 +71,21 @@ char *_gcvt(
 
 ## <a name="remarks"></a>备注
 
-**_Gcvt**函数将浮点*值*转换为字符串（包含一个小数点和一个可能的符号字节），并将该字符串存储在*buffer*中。 *缓冲区*应足够大以容纳转换后的值加上自动追加的终止 null 字符。 如果使用了*数字*+ 1 的缓冲区大小，则函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt**尝试以十进制格式生成*数字*位数。 如果不能，则它将以指数格式生成*位数*。 在转换过程中，可以取消零结尾。
+**_gcvt**函数将浮点*值*转换为字符串（包括小数点和可能符号字节），并将字符串存储在*缓冲区*中。 *缓冲区*应足够大，以容纳转换的值加上自动附加的终止空字符。 如果使用*数字*= 1 的缓冲区大小，则函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt**尝试以小数进制格式生成*数字*。 如果不能，它将以指数格式生成*数字*数字。 在转换过程中，可以取消零结尾。
 
-长度为 **_CVTBUFSIZE**的*缓冲区*足以满足任何浮点值。
+长度 **_CVTBUFSIZE***缓冲区*足以用于任何浮点值。
 
-此函数验证其参数。 如果*buffer*为**NULL**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回**NULL**。
+此函数验证其参数。 如果*缓冲区*为**NULL，** 则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，此函数将**errno**设置到**EINVAL**并返回**NULL**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -139,7 +143,7 @@ buffer: '-0.123456789012' (15 chars)
 buffer: '-1.23456789012e-002' (19 chars)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>

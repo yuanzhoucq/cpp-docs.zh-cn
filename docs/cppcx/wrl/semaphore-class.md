@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Semaphore::operator= operator
 - Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-ms.openlocfilehash: 10357bb1cd46a33a8d4090c1ccc30050584d1816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e017b1b6316c4b6d49563d9a543950ab28961d90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403122"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359360"
 ---
 # <a name="semaphore-class"></a>Semaphore 类
 
@@ -34,27 +34,27 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称       | 描述
+名称       | 说明
 ---------- | ------------------------------------------------------
-`SyncLock` | 类支持同步锁的同义词。
+`SyncLock` | 支持同步锁的类的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                               | 描述
+名称                               | 说明
 ---------------------------------- | ----------------------------------------------------
-[Semaphore::Semaphore](#semaphore) | 初始化 `Semaphore` 类的新实例。
+[信号量：信号量：信号量](#semaphore) | 初始化 `Semaphore` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                     | 描述
+名称                     | 说明
 ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Semaphore::Lock](#lock) | 将等待，直到当前的对象或与指定句柄关联的对象处于已发出信号状态或指定的超时间隔已过。
+[信号量：锁](#lock) | 等待，直到当前对象或与指定句柄关联的对象处于信号状态或指定的超时间隔已过。
 
 ### <a name="public-operators"></a>公共运算符
 
-名称                                     | 描述
+名称                                     | 说明
 ---------------------------------------- | ---------------------------------------------------------------------------------------
-[Semaphore::operator=](#operator-assign) | 将从指定句柄`Semaphore`对象与当前`Semaphore`对象。
+[信号量：：运算符*](#operator-assign) | 将指定的句柄从`Semaphore`对象移动到当前`Semaphore`对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,13 +62,13 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** corewrappers.h
+**标题：** 核心包装.h
 
-**命名空间：** Microsoft::WRL::Wrappers
+**命名空间：** 微软：：WRL：包装
 
-## <a name="lock"></a>Semaphore:: lock
+## <a name="semaphorelock"></a><a name="lock"></a>信号量：锁
 
-等到当前对象，或`Semaphore`对象与指定句柄处于已发出信号状态或指定的超时间隔已过。
+等待，直到当前对象或与指定句柄关联的`Semaphore`对象处于信号状态或指定的超时间隔已过。
 
 ```cpp
 SyncLock Lock(
@@ -83,19 +83,19 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>参数
 
-*milliseconds*<br/>
+*毫秒*<br/>
 超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。
 
-*h*<br/>
-句柄`Semaphore`对象。
+*H*<br/>
+`Semaphore`对象的句柄。
 
 ### <a name="return-value"></a>返回值
 
-一个 `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
+一个 `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>` 类型的值
 
-## <a name="operator-assign"></a>Semaphore:: operator =
+## <a name="semaphoreoperator"></a><a name="operator-assign"></a>信号量：：运算符*
 
-将从指定句柄`Semaphore`对象与当前`Semaphore`对象。
+将指定的句柄从`Semaphore`对象移动到当前`Semaphore`对象。
 
 ```cpp
 Semaphore& operator=(
@@ -105,14 +105,14 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-对右值引用`Semaphore`对象。
+*H*<br/>
+对`Semaphore`对象的 Rvalue 引用。
 
 ### <a name="return-value"></a>返回值
 
-对当前的引用`Semaphore`对象。
+对当前`Semaphore`对象的引用。
 
-## <a name="semaphore"></a>Semaphore:: semaphore
+## <a name="semaphoresemaphore"></a><a name="semaphore"></a>信号量：信号量：信号量
 
 初始化 `Semaphore` 类的新实例。
 
@@ -128,5 +128,5 @@ WRL_NOTHROW Semaphore(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-句柄或对右值引用`Semaphore`对象。
+*H*<br/>
+`Semaphore`对象的句柄或 rvalue 引用。
