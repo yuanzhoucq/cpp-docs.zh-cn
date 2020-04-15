@@ -1,11 +1,15 @@
 ---
 title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
+- _o__ungetch
+- _o__ungetch_nolock
+- _o__ungetwch
+- _o__ungetwch_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443745"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361325"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -79,18 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*C*<br/>
 要推送的字符。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，两个函数都将返回字符*c* 。 如果出现错误， **_ungetch**将返回值**EOF** ， **_ungetwch**返回**WEOF**。
+如果成功，这两个函数都会返回字符*c。* 如果出现错误 **，_ungetch**返回**EOF**的值 **，_ungetwch**返回**WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符*c*推送回控制台，导致*c*成为 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**）读取的下一个字符。 如果在下一次读取之前调用多次，则 **_ungetch**和 **_ungetwch**失败。 *C*参数不能为**EOF** （或**WEOF**）。
+这些函数将字符*c*推回控制台，导致*c*是 **_getch**或 **_getche（** 或 **_getwch**或 **_getwche）** 读取的下一个字符。 如果在下一次读取之前多次调用它们，**则_ungetch****和_ungetwch**将失败。 *c*参数可能不是**EOF** （或**WEOF）。**
 
 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

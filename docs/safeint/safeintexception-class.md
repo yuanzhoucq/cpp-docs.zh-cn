@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 2998bbb83fd568d7ff627d6598c32fb5b17c1e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515562"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349942"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 类
 
 `SafeInt` 类使用 `SafeIntException` 来确定数学运算为什么无法完成。
 
 > [!NOTE]
-> 有关此库的最新版本，请访问 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)。
+> 此库的最新版本位于[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)。
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +35,7 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-name                                                    | 说明
+名称                                                    | 说明
 ------------------------------------------------------- | ------------------------------------
 [SafeIntException::SafeIntException](#safeintexception) | 创建一个 `SafeIntException` 对象。
 
@@ -53,7 +53,7 @@ name                                                    | 说明
 
 **命名空间：** msl:: utilities
 
-## <a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>安全例外：安全例外
 
 创建一个 `SafeIntException` 对象。
 
@@ -72,7 +72,7 @@ SafeIntException(
 
 ### <a name="remarks"></a>备注
 
-文件 Safeint.h 中定义了 code 的可取值。 为了方便起见，此处还列出了可取值。
+文件 Safeint.h 中定义了 code** 的可取值。 为了方便起见，此处还列出了可取值。
 
 - `SafeIntNoError`
 - `SafeIntArithmeticOverflow`

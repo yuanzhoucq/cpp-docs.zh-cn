@@ -28,23 +28,23 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: dbcc4a86731bba092d8358a046fd3f9eb949f91f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3f1dca71a6bb9d5461150378191b9373f907ecd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214963"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376662"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函数
 
 ||||
 |-|-|-|
-|[getline](#getline)|[stod](#stod)|[stof](#stof)|
-|[stoi](#stoi)|[stol](#stol)|[stold](#stold)|
-|[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
-|[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
+|[getline](#getline)|[斯托德](#stod)|[stof](#stof)|
+|[斯托伊](#stoi)|[stol](#stol)|[stold](#stold)|
+|[stoll](#stoll)|[stoul](#stoul)|[斯图尔](#stoull)|
+|[交换](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a><a name="getline"></a>  getline
+## <a name="getline"></a><a name="getline"></a>getline
 
 将字符串从输入流中一行一行地提取出来。
 
@@ -74,12 +74,12 @@ basic_istream<Allocator, Traits>& getline(
     basic_string<Allocator, Traits, Allocator>& str);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *in_stream*\
 要从其中提取字符串的输入流。
 
-*str*\
+*Str*\
 从输入流读取的字符将放入的字符串。
 
 *分隔符*\
@@ -91,31 +91,31 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="remarks"></a>备注
 
-标记的函数签名对 `(1)` 从*in_stream*中提取字符，直到找到*分隔符*，并将它们存储在*str*中。
+标记`(1)`从*in_stream*中提取字符的函数签名对，直到找到*分隔符*，将它们存储在*str*中。
 
-标记的函数签名对 `(2)` 使用换行符作为默认行分隔符，并表现为 `getline(in_stream, str, in_stream. widen('\n'))`。
+标记`(2)`的函数签名对使用 newline 作为默认行分隔符，并且行为为`getline(in_stream, str, in_stream. widen('\n'))`。
 
 每对函数中的第二个函数是第一个的模拟，它的作用是支持 [rvalue 引用](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 发生下列情况之一时，提取将停止：
 
-- 在文件末尾，在这种情况下， *in_stream*的内部状态标志设置为 `ios_base::eofbit`。
+- 在文件末尾，在这种情况下 *，in_stream*的内部状态标志设置为`ios_base::eofbit`。
 
-- 函数提取了比较等于*分隔符*的元素后。 元素不会返回或追加到受控序列。
+- 函数提取一个与*分隔符*相等的元素。 元素不会放回或追加到受控序列中。
 
-- 函数提取 `str.`[max_size](../standard-library/basic-string-class.md#max_size)元素。 *In_stream*的内部状态标志设置为 `ios_base::failbit`。
+- 函数提取`str.`[max_size](../standard-library/basic-string-class.md#max_size)元素后。 *in_stream*的内部状态标志设置为`ios_base::failbit`。
 
-- 除前面列出的其他错误外，*in_stream*的内部状态标志设置为 `ios_base::badbit`。
+- 除了之前列出的错误之外，其他一些错误;*in_stream*的内部状态标志设置为`ios_base::badbit`。
 
 有关内部状态标志的信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。
 
-如果该函数未提取任何元素，则*in_stream*的内部状态标志设置为 `ios_base::failbit`。 在任何情况下，`getline` 都将返回*in_stream*。
+如果函数不提取任何元素，则*in_stream*的内部状态标志设置为`ios_base::failbit`。 在任何情况下，`getline`返回*in_stream*。
 
-如果引发异常，则*in_stream*和*str*处于有效状态。
+如果引发异常，*则in_stream*和*str*处于有效状态。
 
 ### <a name="example"></a>示例
 
-以下代码演示两种模式下的 `getline()`：第一种使用默认分隔符（换行），第二种使用空格作为分隔符。 文件尾字符（键盘上的 CTRL-Z）用于控制 while 循环的终止。 此值将 `cin` 的内部状态标志设置为 `eofbit`，必须使用[basic_ios：： clear （）](../standard-library/basic-ios-class.md#clear)将其清除，然后循环才能正常工作。
+以下代码演示两种模式下的 `getline()`：第一种使用默认分隔符（换行），第二种使用空格作为分隔符。 文件尾字符（键盘上的 CTRL-Z）用于控制 while 循环的终止。 此值设置 到`cin``eofbit`的内部状态标志，在第二个循环正常工作之前，必须用[basic_ios：：clear（）](../standard-library/basic-ios-class.md#clear)清除该标志。
 
 ```cpp
 // compile with: /EHsc /W4
@@ -156,9 +156,9 @@ int main()
 }
 ```
 
-## <a name="stod"></a><a name="stod"></a>  stod
+## <a name="stod"></a><a name="stod"></a>斯托德
 
-将字符序列转换为 **`double`** 。
+将字符序列转换为 。 **`double`**
 
 ```cpp
 double stod(
@@ -171,9 +171,9 @@ double stod(
 ;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
@@ -181,13 +181,13 @@ double stod(
 
 ### <a name="return-value"></a>返回值
 
-**`double`** 值。
+值**`double`**。
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为类型 **`double`** 的值，就像通过调用 `strtod( str.c_str(), _Eptr)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，则会引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中，并返回值。
+函数将*str*中的元素序列转换为类型**`double`** 值，就像通过调用`strtod( str.c_str(), _Eptr)`，其中`_Eptr`是函数内部的对象。 如果`str.c_str() == *_Eptr`，它将引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是空指针，则函数将存储`*_Eptr -  str.c_str()`并`*idx`返回该值。
 
-## <a name="stof"></a><a name="stof"></a>  stof
+## <a name="stof"></a><a name="stof"></a>斯特下
 
 将字符序列转换为浮动的。
 
@@ -201,9 +201,9 @@ float stof(
     size_t* idx = 0);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
@@ -211,13 +211,13 @@ float stof(
 
 ### <a name="return-value"></a>返回值
 
-**`float`** 值。
+值**`float`**。
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为类型 **`float`** 的值，就像通过调用 `strtof( str.c_str(), _Eptr)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，则会引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中，并返回值。
+函数将*str*中的元素序列转换为类型**`float`** 值，就像通过调用`strtof( str.c_str(), _Eptr)`，其中`_Eptr`是函数内部的对象。 如果`str.c_str() == *_Eptr`，它将引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是空指针，则函数将存储`*_Eptr -  str.c_str()`并`*idx`返回该值。
 
-## <a name="stoi"></a><a name="stoi"></a>  stoi
+## <a name="stoi"></a><a name="stoi"></a>斯托伊
 
 将字符序列转换为整数。
 
@@ -237,28 +237,28 @@ int stoi(
 
 整数值。
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
 首个未转换字符的索引值。
 
-*base*\
+*基地*\
 要使用的号码基。
 
 ### <a name="remarks"></a>备注
 
-函数 `stoi` 将*str*中的字符序列转换为 **`int`** 类型的值，并返回值。 例如，在传递字符序列“10”时，`stoi` 返回的值为整数 10.
+函数`stoi`将*str*中的字符序列转换为类型的**`int`** 值并返回该值。 例如，在传递字符序列“10”时，`stoi` 返回的值为整数 10.
 
-当以 `strtol( str.c_str(), _Eptr, idx)`方式调用时，`stoi` 的行为类似于单字节字符的函数 `strtol`，其中 `_Eptr` 是函数的内部对象;对于宽字符，或 `wcstol` 以类似的方式调用时，`wcstol(Str.c_str(), _Eptr, idx)`。 有关详细信息，请参阅 [strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)。
+`stoi`当以单字节字符的方式调用`strtol`时`strtol( str.c_str(), _Eptr, idx)`，其行为类似于该函数，其中`_Eptr`是函数内部的对象;或`wcstol`对于宽字符，当它以类似的方式调用时， `wcstol(Str.c_str(), _Eptr, idx)`。 有关详细信息，请参阅 [strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)。
 
-如果 `str.c_str() == *_Eptr`，`stoi` 将引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，或者如果返回值无法表示为类型 **`int`** 的对象，则它将引发类型 `out_of_range`的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr - str.c_str()` 存储在 `*idx`中。
+如果`str.c_str() == *_Eptr``stoi`引发类型`invalid_argument`的对象 。 如果这样的调用将设置`errno`，或者如果返回的值不能表示为类型**`int`** 的对象，则它将引发类型`out_of_range`的对象。 否则，如果*idx*不是空指针，则函数将存储在`*_Eptr - str.c_str()``*idx`中。
 
-## <a name="stol"></a><a name="stol"></a>  stol
+## <a name="stol"></a><a name="stol"></a>斯托尔
 
-将字符序列转换为 **`long`** 。
+将字符序列转换为 。 **`long`**
 
 ```cpp
 long stol(
@@ -272,15 +272,15 @@ long stol(
     int base = 10);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
 首个未转换字符的索引值。
 
-*base*\
+*基地*\
 要使用的号码基。
 
 ### <a name="return-value"></a>返回值
@@ -289,11 +289,11 @@ long stol(
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为类型 **`long`** 的值，就像通过调用 `strtol( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，则会引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中，并返回值。
+函数将*str*中的元素序列转换为类型**`long`** 值，就像通过调用`strtol( str.c_str(), _Eptr, idx)`，其中`_Eptr`是函数内部的对象。 如果`str.c_str() == *_Eptr`，它将引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是空指针，则函数将存储`*_Eptr -  str.c_str()`并`*idx`返回该值。
 
-## <a name="stold"></a><a name="stold"></a>  stold
+## <a name="stold"></a><a name="stold"></a>斯代
 
-将字符序列转换为 **`long double`** 。
+将字符序列转换为 。 **`long double`**
 
 ```cpp
 double stold(
@@ -305,9 +305,9 @@ double stold(
     size_t* idx = 0);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
@@ -315,15 +315,15 @@ double stold(
 
 ### <a name="return-value"></a>返回值
 
-**`long double`** 值。
+值**`long double`**。
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为类型 **`long double`** 的值，就像通过调用 `strtold( str.c_str(), _Eptr)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，则会引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中，并返回值。
+函数将*str*中的元素序列转换为类型**`long double`** 值，就像通过调用`strtold( str.c_str(), _Eptr)`，其中`_Eptr`是函数内部的对象。 如果`str.c_str() == *_Eptr`，它将引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是空指针，则函数将存储`*_Eptr -  str.c_str()`并`*idx`返回该值。
 
-## <a name="stoll"></a><a name="stoll"></a>  stoll
+## <a name="stoll"></a><a name="stoll"></a>斯托尔
 
-将字符序列转换为 **`long long`** 。
+将字符序列转换为 。 **`long long`**
 
 ```cpp
 long long stoll(
@@ -337,26 +337,26 @@ long long stoll(
     int base = 10);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
 首个未转换字符的索引值。
 
-*base*\
+*基地*\
 要使用的号码基。
 
 ### <a name="return-value"></a>返回值
 
-**`long long`** 值。
+值**`long long`**。
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为类型 **`long long`** 的值，就像通过调用 `strtoll( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，则会引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中，并返回值。
+函数将*str*中的元素序列转换为类型**`long long`** 值，就像通过调用`strtoll( str.c_str(), _Eptr, idx)`，其中`_Eptr`是函数内部的对象。 如果`str.c_str() == *_Eptr`，它将引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是空指针，则函数将存储`*_Eptr -  str.c_str()`并`*idx`返回该值。
 
-## <a name="stoul"></a><a name="stoul"></a>  stoul
+## <a name="stoul"></a><a name="stoul"></a>斯图尔
 
 将字符序列转换为无符号长整数。
 
@@ -372,15 +372,15 @@ unsigned long stoul(
     int base = 10);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
 首个未转换字符的索引值。
 
-*base*\
+*基地*\
 要使用的号码基。
 
 ### <a name="return-value"></a>返回值
@@ -389,11 +389,11 @@ unsigned long stoul(
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为类型 **`unsigned long`** 的值，就像通过调用 `strtoul( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，则会引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中，并返回值。
+函数将*str*中的元素序列转换为类型**`unsigned long`** 值，就像通过调用`strtoul( str.c_str(), _Eptr, idx)`，其中`_Eptr`是函数内部的对象。 如果`str.c_str() == *_Eptr`，它将引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是空指针，则函数将存储`*_Eptr -  str.c_str()`并`*idx`返回该值。
 
-## <a name="stoull"></a><a name="stoull"></a>  stoull
+## <a name="stoull"></a><a name="stoull"></a>斯图尔
 
-将字符序列转换为 **`unsigned long long`** 。
+将字符序列转换为**`unsigned long long`**。
 
 ```cpp
 unsigned long long stoull(
@@ -407,26 +407,26 @@ unsigned long long stoull(
     int base = 10);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*str*\
+*Str*\
 要转换的字符序列。
 
 *idx*\
 首个未转换字符的索引值。
 
-*base*\
+*基地*\
 要使用的号码基。
 
 ### <a name="return-value"></a>返回值
 
-**`unsigned long long`** 值。
+值**`unsigned long long`**。
 
 ### <a name="remarks"></a>备注
 
-函数将*str*中的元素序列转换为类型 **`unsigned long long`** 的值，就像通过调用 `strtoull( str.c_str(), _Eptr, idx)`（其中 `_Eptr` 是函数的内部对象）。 如果 `str.c_str() == *_Eptr`，则会引发 `invalid_argument`类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中，并返回值。
+函数将*str*中的元素序列转换为类型**`unsigned long long`** 值，就像通过调用`strtoull( str.c_str(), _Eptr, idx)`，其中`_Eptr`是函数内部的对象。 如果`str.c_str() == *_Eptr`，它将引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果*idx*不是空指针，则函数将存储`*_Eptr -  str.c_str()`并`*idx`返回该值。
 
-## <a name="swap"></a><a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>交换
 
 交换两个字符串的字符数组。
 
@@ -435,17 +435,17 @@ template <class Traits, class Allocator>
 void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-一个字符串，其元素将与另一个字符串的元素交换。
+*离开*\
+其元素要与另一个字符串的元素交换的字符串。
 
-*right*\
+*对*\
 要与第一个字符串交换元素的另一个字符串。
 
 ### <a name="remarks"></a>备注
 
-此模板函数会执行*左侧*专用成员函数。对于保证恒定复杂性的字符串，请[交换](../standard-library/basic-string-class.md#swap)（*右*）。
+模板函数执行*左侧*的专用成员函数。[交换](../standard-library/basic-string-class.md#swap)字符串 （*右*）， 保证恒定的复杂性.
 
 ### <a name="example"></a>示例
 
@@ -482,7 +482,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a><a name="to_string"></a>  to_string
+## <a name="to_string"></a><a name="to_string"></a>to_string
 
 将一个值转换为 `string`。
 
@@ -498,9 +498,9 @@ string to_string(double value);
 string to_string(long double value);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*value*\
+*价值*\
 要转换的值。
 
 ### <a name="return-value"></a>返回值
@@ -509,27 +509,27 @@ string to_string(long double value);
 
 ### <a name="remarks"></a>备注
 
-函数将*值*转换为存储在函数内部 `Buf` 数组对象中的元素序列，就像调用 `sprintf(Buf, Fmt, value)`（其中 `Fmt` 是
+函数将*值*转换为存储在函数内部数组对象`Buf`中的元素序列，就像通过调用`sprintf(Buf, Fmt, value)``Fmt`
 
-- 如果*值*的类型为 **`int`** `"%d"`
+- `"%d"`如果*值*为类型**`int`**
 
-- 如果*值*的类型为 **`unsigned int`** `"%u"`
+- `"%u"`如果*值*为类型**`unsigned int`**
 
-- 如果*值*的类型为 **`long`** `"%ld"`
+- `"%ld"`如果*值*为类型**`long`**
 
-- 如果*值*的类型为 **`unsigned long`** `"%lu"`
+- `"%lu"`如果*值*为类型**`unsigned long`**
 
-- 如果*值*的类型为 **`long long`** `"%lld"`
+- `"%lld"`如果*值*为类型**`long long`**
 
-- 如果*值*的类型为 **`unsigned long long`** `"%llu"`
+- `"%llu"`如果*值*为类型**`unsigned long long`**
 
-- 如果*值*的类型为 **`float`** 或 **`double`** ，则为 `"%f"`
+- `"%f"`如果*值*为类型**`float`** 或**`double`**
 
-- 如果*值*的类型为 **`long double`** `"%Lf"`
+- `"%Lf"`如果*值*为类型**`long double`**
 
 该函数返回 `string(Buf)`。
 
-## <a name="to_wstring"></a><a name="to_wstring"></a>  to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>to_wstring
 
 将一个值转换为宽字符串。
 
@@ -545,9 +545,9 @@ wstring to_wstring(double value);
 wstring to_wstring(long double value);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*value*\
+*价值*\
 要转换的值。
 
 ### <a name="return-value"></a>返回值
@@ -556,26 +556,26 @@ wstring to_wstring(long double value);
 
 ### <a name="remarks"></a>备注
 
-函数将*值*转换为存储在函数内部 `Buf` 数组对象中的元素序列，就像调用 `swprintf(Buf, Len, Fmt, value)`（其中 `Fmt` 是
+函数将*值*转换为存储在函数内部数组对象`Buf`中的元素序列，就像通过调用`swprintf(Buf, Len, Fmt, value)``Fmt`
 
-- 如果*值*的类型为 **`int`** `L"%d"`
+- `L"%d"`如果*值*为类型**`int`**
 
-- 如果*值*的类型为 **`unsigned int`** `L"%u"`
+- `L"%u"`如果*值*为类型**`unsigned int`**
 
-- 如果*值*的类型为 **`long`** `L"%ld"`
+- `L"%ld"`如果*值*为类型**`long`**
 
-- 如果*值*的类型为 **`unsigned long`** `L"%lu"`
+- `L"%lu"`如果*值*为类型**`unsigned long`**
 
-- 如果*值*的类型为 **`long long`** `L"%lld"`
+- `L"%lld"`如果*值*为类型**`long long`**
 
-- 如果*值*的类型为 **`unsigned long long`** `L"%llu"`
+- `L"%llu"`如果*值*为类型**`unsigned long long`**
 
-- 如果*值*的类型为 **`float`** 或 **`double`** ，则为 `L"%f"`
+- `L"%f"`如果*值*为类型**`float`** 或**`double`**
 
-- 如果*值*的类型为 **`long double`** `L"%Lf"`
+- `L"%Lf"`如果*值*为类型**`long double`**
 
 该函数返回 `wstring(Buf)`。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<string>](../standard-library/string.md)
+[\<字符串>](../standard-library/string.md)

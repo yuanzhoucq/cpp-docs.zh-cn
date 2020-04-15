@@ -1,8 +1,9 @@
 ---
 title: ___lc_locale_name_func
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___lc_locale_name_func
+- _o____lc_locale_name_func
 api_location:
 - msvcrt.dll
 - msvcr110.dll
@@ -11,6 +12,7 @@ api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -20,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: abc1ade393538586ad07f57e6838591833c9948b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: f38d4d9b11189a8313b26dd3313a5def800c2410
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351117"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -47,13 +49,15 @@ wchar_t** ___lc_locale_name_func(void);
 
 内部 CRT 函数特定于实现且会根据每个发行版本发生更改。 不建议在代码中使用它们。
 
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`___lc_locale_name_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

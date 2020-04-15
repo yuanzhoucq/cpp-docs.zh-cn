@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CDWordArray [MFC], SetAtGrow
 - CDWordArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-ms.openlocfilehash: f17caafd01bb5ddfa49afe378bfd79652149ebd8
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e009ca3e3612d10d9cdf62d4bea32224f7b7522c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447350"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373999"
 ---
 # <a name="cdwordarray-class"></a>CDWordArray 类
 
@@ -59,9 +59,9 @@ ms.locfileid: "79447350"
 class CDWordArray : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-`CDWordArray` 的成员函数类似于类[CObArray](../../mfc/reference/cobarray-class.md)的成员函数。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论你在何处看到作为函数参数或返回值的 `CObject` 指针，都将替换为 `DWORD`。
+的成员`CDWordArray`函数类似于类[CObarray](../../mfc/reference/cobarray-class.md)的成员函数。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 在将`CObject`指针视为函数参数或返回值的位置，请替换 。 `DWORD`
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -73,53 +73,53 @@ class CDWordArray : public CObject
 
 |名称|说明|
 |----------|-----------------|
-|[CDWordArray::CDWordArray](../../mfc/reference/cobarray-class.md#cobarray)|构造一个空数组。|
+|[CDWordArray：CDWordArray](../../mfc/reference/cobarray-class.md#cobarray)|构造一个空数组。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[CDWordArray：： Add](../../mfc/reference/cobarray-class.md#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|
-|[CDWordArray：： Append](../../mfc/reference/cobarray-class.md#append)|将另一个数组追加到该数组中；根据需要扩展该数组。|
-|[CDWordArray：： Copy](../../mfc/reference/cobarray-class.md#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|
-|[CDWordArray：： .Value.elementat](../../mfc/reference/cobarray-class.md#elementat)|返回对数组中的字节的临时引用。|
-|[CDWordArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|
-|[CDWordArray：： GetAt](../../mfc/reference/cobarray-class.md#getat)|返回给定索引位置处的值。|
-|[CDWordArray：： GetCount](../../mfc/reference/cobarray-class.md#getcount)|获取此数组中的元素数。|
-|[CDWordArray：：](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以为 NULL。|
-|[CDWordArray：： GetSize](../../mfc/reference/cobarray-class.md#getsize)|获取此数组中的元素数。|
-|[CDWordArray：： System.array.getupperbound](../../mfc/reference/cobarray-class.md#getupperbound)|返回最大的有效索引。|
-|[CDWordArray：： InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|
-|[CDWordArray：： IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|确定数组是否为空。|
-|[CDWordArray：： RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|从此数组中移除所有元素。|
-|[CDWordArray：： RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引处的元素。|
-|[CDWordArray：： SetAt](../../mfc/reference/cobarray-class.md#setat)|设置给定索引的值；不允许对该数组进行扩展。|
-|[CDWordArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|设置给定索引的值；根据需要扩展该数组。|
-|[CDWordArray：： SetSize](../../mfc/reference/cobarray-class.md#setsize)|设置要在该数组中包含的元素数。|
+|[CDWordArray：：添加](../../mfc/reference/cobarray-class.md#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|
+|[CDWordArray：：附加](../../mfc/reference/cobarray-class.md#append)|将另一个数组追加到该数组中；根据需要扩展该数组。|
+|[CDWordArray：复制](../../mfc/reference/cobarray-class.md#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|
+|[CDWordArray：：元素](../../mfc/reference/cobarray-class.md#elementat)|返回对数组中的字节的临时引用。|
+|[CDWordArray：：免费额外](../../mfc/reference/cobarray-class.md#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|
+|[CDWordArray：获取At](../../mfc/reference/cobarray-class.md#getat)|返回给定索引位置处的值。|
+|[CDWordArray：获取计数](../../mfc/reference/cobarray-class.md#getcount)|获取此数组中的元素数。|
+|[CDWordArray：获取数据](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以为 NULL。|
+|[CDWordArray：获取Size](../../mfc/reference/cobarray-class.md#getsize)|获取此数组中的元素数。|
+|[CDWordArray：获取上部](../../mfc/reference/cobarray-class.md#getupperbound)|返回最大的有效索引。|
+|[CDWordArray：：插入At](../../mfc/reference/cobarray-class.md#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|
+|[CDWordArray：：是空的](../../mfc/reference/cobarray-class.md#isempty)|确定数组是否为空。|
+|[CDWordArray：：删除所有](../../mfc/reference/cobarray-class.md#removeall)|从此数组中移除所有元素。|
+|[CDWordArray：：删除At](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引处的元素。|
+|[CDWordArray：：Setat](../../mfc/reference/cobarray-class.md#setat)|设置给定索引的值；不允许对该数组进行扩展。|
+|[CDWordArray：：Setat增长](../../mfc/reference/cobarray-class.md#setatgrow)|设置给定索引的值；根据需要扩展该数组。|
+|[CDWordArray：：设置大小](../../mfc/reference/cobarray-class.md#setsize)|设置要在该数组中包含的元素数。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |----------|-----------------|
-|[CDWordArray：： operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
+|[CDWordArray：：运算符\[\]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
 
 ## <a name="remarks"></a>备注
 
-`CDWordArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果使用重载的插入（ **<<** ）运算符或使用 `Serialize` 成员函数将双字数组存储到存档中，则每个元素依次序列化。
+`CDWordArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果将双字数组存储在存档中，则使用重载插入 （ **<<**） 运算符或`Serialize`成员函数，则每个元素依次序列化。
 
 > [!NOTE]
->  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。
+> 在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。
 
-如果需要从数组中的单个元素调试输出，则必须将 `CDumpContext` 对象的深度设置为1或更大。
+如果需要从数组中的各个元素调试输出，则必须将`CDumpContext`对象的深度设置为 1 或更大。
 
-有关使用 `CDWordArray`的详细信息，请参阅文章[集合](../../mfc/collections.md)。
+有关使用`CDWordArray`的详细信息，请参阅文章[集合](../../mfc/collections.md)。
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxcoll。h
+**标题：** afxcoll.h
 
 ## <a name="see-also"></a>另请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CObArray 类](../../mfc/reference/cobarray-class.md)

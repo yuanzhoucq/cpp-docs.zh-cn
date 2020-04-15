@@ -1,8 +1,9 @@
 ---
 title: _CItan
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - _CItan
+- _o__CItan
 api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-ms.openlocfilehash: e509d785648148e51004950076147b69c2db18ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8c6cc0a51d6ef2132172164306b84f73799da729
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940468"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349367"
 ---
 # <a name="_citan"></a>_CItan
 
@@ -46,11 +48,13 @@ void __cdecl _CItan();
 
 生成的值被将被推送到浮点堆栈顶部。
 
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
+
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)<br/>

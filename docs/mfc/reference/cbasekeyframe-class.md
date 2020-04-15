@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcd55f6a157f4b837090a3608fb509b870aae5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218396"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352989"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame 类
 
@@ -43,30 +43,30 @@ class CBaseKeyFrame : public CObject;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|构造一个关键帧对象。|
+|[CBaseKey框架：C基键框架](#cbasekeyframe)|构造关键帧对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|添加关键帧的情节提要。|
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|返回基础的关键帧值。|
-|[CBaseKeyFrame::IsAdded](#isadded)|指示是否已添加关键帧的情节提要。|
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|指定是否应添加关键帧偏移量，或转换后的情节提要。|
+|[CBaseKeyFrame：：添加故事板](#addtostoryboard)|将关键帧添加到情节提要。|
+|[CBase键框：获取动画关键帧](#getanimationkeyframe)|返回基础关键帧值。|
+|[CBaseKey框架：已添加](#isadded)|告诉是否已将关键帧添加到情节提要中。|
+|[CBaseKey框架：是关键帧帧偏移](#iskeyframeatoffset)|指定关键帧是否应在偏移时或过渡后添加到情节提要。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBaseKeyFrame::m_bAdded](#m_badded)|指定此关键帧是否已添加到情节提要。|
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|指定是否应将此关键帧添加到情节提要另一个现有关键帧偏移量位置处或末尾的某些转换。|
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|表示 Windows 动画 API 关键帧。 关键帧未初始化时将它设置为预定义值 UI_ANIMATION_KEYFRAME_STORYBOARD_START。|
+|[CBaseKey框架：：m_bAdded](#m_badded)|指定此关键帧是否已添加到情节提要。|
+|[CBaseKeyFrame：m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|指定是否应将此关键帧添加到与另一个现有关键帧偏移量或某些转换结束时的情节提要。|
+|[CBaseKeyFrame：m_keyframe](#m_keyframe)|表示 Windows 动画 API 关键帧。 未初始化关键帧时，它将设置为预定义值UI_ANIMATION_KEYFRAME_STORYBOARD_START。|
 
 ## <a name="remarks"></a>备注
 
-封装 UI_ANIMATION_KEYFRAME 变量。 用作任何关键帧实现的基类。 关键帧表示情节提要中的某个时刻，并可用于指定转换的开始和结束时间。 有两种类型的关键帧的关键帧添加到情节提要按指定的偏移量 （以时间表示） 或指定转换后添加关键帧。 不能在动画开始之前已知的某些转换的持续时间，因为某些关键帧的实际值是在仅限运行时确定。 关键帧可能取决于过渡，这反过来依赖于关键帧，因为很重要，可生成关键帧链时防止无限递归。
+封装UI_ANIMATION_KEYFRAME变量。 用作任何关键帧实现的基类。 关键帧表示情节提要中的一个时刻，可用于指定过渡的开始和结束时间。 有两种类型的关键帧 - 在指定的偏移量（时间）添加到情节提要的关键帧，或指定转换后添加的关键帧。 由于某些转换的持续时间在动画启动之前无法知道，因此某些关键帧的实际值仅在运行时确定。 由于关键帧可能依赖于过渡（而过渡又取决于关键帧，因此在构建关键帧链时防止无限递归非常重要。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -78,9 +78,9 @@ class CBaseKeyFrame : public CObject;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard
+## <a name="cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame：：添加故事板
 
-添加关键帧的情节提要。
+将关键帧添加到情节提要。
 
 ```
 virtual BOOL AddToStoryboard(
@@ -90,31 +90,31 @@ virtual BOOL AddToStoryboard(
 
 ### <a name="parameters"></a>参数
 
-*pStoryboard*<br/>
+*板*<br/>
 指向情节提要的指针。
 
 *bDeepAdd*<br/>
-如果此参数为 TRUE，并且要添加的关键帧取决于一些其他关键帧或转换，此方法将尝试添加此关键帧或转换到情节提要第一次。
+如果此参数为 TRUE，并且要添加的关键帧取决于其他关键帧或转换，则此方法将尝试先添加此关键帧或转换为情节提要。
 
 ### <a name="return-value"></a>返回值
 
-如果关键帧已添加到情节提要成功，则为 TRUE否则为 FALSE。
+如果关键帧已成功添加到情节提要，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以添加关键帧的情节提要。
+调用此方法是为了向情节提要添加关键帧。
 
-##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame
+## <a name="cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKey框架：C基键框架
 
-构造一个关键帧对象。
+构造关键帧对象。
 
 ```
 CBaseKeyFrame();
 ```
 
-##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe
+## <a name="cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBase键框：获取动画关键帧
 
-返回基础的关键帧值。
+返回基础关键帧值。
 
 ```
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
@@ -122,15 +122,15 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 
 ### <a name="return-value"></a>返回值
 
-当前关键帧。 默认值为 UI_ANIMATION_KEYFRAME_STORYBOARD_START。
+当前关键帧。 默认值为UI_ANIMATION_KEYFRAME_STORYBOARD_START。
 
 ### <a name="remarks"></a>备注
 
-这是对基础的关键帧值的访问器。
+这是对基础关键帧值的访问器。
 
-##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded
+## <a name="cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKey框架：已添加
 
-指示是否已添加关键帧的情节提要。
+告诉是否已将关键帧添加到情节提要中。
 
 ```
 BOOL IsAdded() const;
@@ -138,15 +138,15 @@ BOOL IsAdded() const;
 
 ### <a name="return-value"></a>返回值
 
-如果关键帧添加到情节提要; 则为 TRUE则 FALSE。
+如果关键帧已添加到情节提要，则为 TRUE;奥特威斯·法尔。
 
 ### <a name="remarks"></a>备注
 
-基类中 IsAdded 始终返回 TRUE，但在派生类中重写。
+在基类 Is添加中始终返回 TRUE，但在派生类中重写 TRUE。
 
-##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset
+## <a name="cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKey框架：是关键帧帧偏移
 
-指定是否应添加关键帧偏移量，或转换后的情节提要。
+指定关键帧是否应在偏移时或过渡后添加到情节提要。
 
 ```
 BOOL IsKeyframeAtOffset() const;
@@ -154,13 +154,13 @@ BOOL IsKeyframeAtOffset() const;
 
 ### <a name="return-value"></a>返回值
 
-如果该关键帧应添加到情节提要按某些指定的偏移量，则为 TRUE。 如果该关键帧应添加一些转换后的情节提要，则为 FALSE。
+如果关键帧应添加到情节提要，在某些指定的偏移量。 如果关键帧应在一些转换后添加到情节提要中，则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-指定是否应添加关键帧偏移量位置处的情节提要。 必须在派生类中指定的偏移量或转换。
+指定是否应在偏移量下将关键帧添加到情节提要。 偏移量或过渡必须在派生类中指定。
 
-##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded
+## <a name="cbasekeyframem_badded"></a><a name="m_badded"></a>CBaseKey框架：：m_bAdded
 
 指定此关键帧是否已添加到情节提要。
 
@@ -168,22 +168,22 @@ BOOL IsKeyframeAtOffset() const;
 BOOL m_bAdded;
 ```
 
-##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset
+## <a name="cbasekeyframem_biskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame：m_bIsKeyframeAtOffset
 
-指定是否应将此关键帧添加到情节提要另一个现有关键帧偏移量位置处或末尾的某些转换。
+指定是否应将此关键帧添加到与另一个现有关键帧偏移量或某些转换结束时的情节提要。
 
 ```
 BOOL m_bIsKeyframeAtOffset;
 ```
 
-##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe
+## <a name="cbasekeyframem_keyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame：m_keyframe
 
-表示 Windows 动画 API 关键帧。 关键帧未初始化时将它设置为预定义值 UI_ANIMATION_KEYFRAME_STORYBOARD_START。
+表示 Windows 动画 API 关键帧。 未初始化关键帧时，它将设置为预定义值UI_ANIMATION_KEYFRAME_STORYBOARD_START。
 
 ```
 UI_ANIMATION_KEYFRAME m_keyframe;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

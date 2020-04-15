@@ -1,10 +1,13 @@
 ---
 title: atanh、atanhf、atanhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atanhl
 - atanhf
 - atanh
+- _o_atanh
+- _o_atanhf
+- _o_atanhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939588"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350124"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -56,29 +60,31 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Atanh**函数返回*x*的反双曲正切值（反双曲正切值）。 如果*x*大于1或小于-1，则将**Errno**设置为**EDOM** ，并将结果设置为 quiet NaN。 如果*x*等于1或-1，则分别返回正无穷或负无穷，并将**Errno**设置为**ERANGE**。
+**atanh**函数返回*x*的反向子宫切线（弧形双曲切线）。 如果*x*大于 1 或小于 -1，**则 errno**设置为**EDOM，** 结果是一个安静的 NaN。 如果*x*等于 1 或 -1，则分别返回正无穷大或负无穷大，并将**errno**设置为**ERANGE**。
 
-|输入|SEH 异常|**Matherr**异常|
+|输入|SEH 异常|**马瑟尔**例外|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|无|无|
-|*X* ≥ 1; *x* ≤ -1|无|无|
+|• QNAN，IND|无|无|
+|*X* = 1;*x* = -1|无|无|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用**atanh**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **atanh**始终采用并返回**double**。
+由于C++允许重载，因此可以调用采用并返回**浮点**值或**长****双**精度值的**atanh**重载。 在 C 程序中 **，atanh**始终获取并返回**双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**阿坦，****阿坦霍夫**，**阿坦赫**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -108,7 +114,7 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>

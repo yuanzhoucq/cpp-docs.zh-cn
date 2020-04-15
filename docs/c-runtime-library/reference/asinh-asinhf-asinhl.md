@@ -1,10 +1,13 @@
 ---
 title: asinh、asinhf、asinhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinh
 - asinhf
 - asinhl
+- _o_asinh
+- _o_asinhf
+- _o_asinhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939645"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350462"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -56,28 +60,30 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Asinh**函数返回*x*的反双曲正弦值（反双曲正弦）。 此函数在浮点域上有效。 如果*x*为静默 NaN、不定或无穷大，则返回相同的值。
+**asinh**函数返回*x*的反向催眠正则（弧形双曲正子）。 此函数在浮点域上有效。 如果*x*是安静的 NaN、无限期或无穷大，则返回相同的值。
 
-|输入|SEH 异常|**_matherr**异常|
+|输入|SEH 异常|**_matherr**例外|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|无|无|
+|• QNAN，IND，INF|无|无|
 
 ## <a name="remarks"></a>备注
 
-使用C++时，可以调用**asinh**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **asinh**始终采用并返回**double**。
+使用 C++ 时，可以调用采用并返回**浮点**值或**长****双精度**值的**asinh**重载。 在 C 程序中 **，asinh**始终获取并返回**双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的 C 标头|必需的 C++ 标头|
 |--------------|--------------|------------------|
-|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<h > 或\<math <|
+|**阿辛**，**阿辛夫**，**阿辛赫尔**|\<math.h>|\<数学>或\<数学<|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -107,7 +113,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>

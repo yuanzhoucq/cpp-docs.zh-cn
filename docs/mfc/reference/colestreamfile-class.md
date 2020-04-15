@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 96e8fee71f02ea750fd8b33f41fd2fd517e9081e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f53d3bd55fbff45257c06af2ab11f066d421a54
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503689"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376100"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 类
 
@@ -41,30 +41,30 @@ class COleStreamFile : public CFile
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleStreamFile:: COleStreamFile](#colestreamfile)|构造 `COleStreamFile` 对象。|
+|[COleStream文件：COleStream文件](#colestreamfile)|构造 `COleStreamFile` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleStreamFile::Attach](#attach)|将流与对象相关联。|
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|从全局内存创建流并将其与对象关联。|
-|[COleStreamFile::CreateStream](#createstream)|创建流并将其与对象关联。|
-|[COleStreamFile::Detach](#detach)|解除流与对象的的阻止。|
-|[COleStreamFile::GetStream](#getstream)|返回当前流。|
-|[COleStreamFile::OpenStream](#openstream)|安全打开流并将其与对象关联。|
+|[COleStream 文件：附加](#attach)|将流与对象关联。|
+|[COleStream 文件：创建内存流](#creatememorystream)|从全局内存创建流并将其与对象关联。|
+|[COleStream 文件：创建流](#createstream)|创建流并将其与对象关联。|
+|[COleStream文件：:D](#detach)|断开流与对象分离。|
+|[COleStream 文件：获取流](#getstream)|返回当前流。|
+|[COleStream 文件：：打开流](#openstream)|安全地打开流并将其与对象关联。|
 
 ## <a name="remarks"></a>备注
 
-`IStorage`对象必须存在, 然后才能打开或创建流, 除非它是内存流。
+必须先`IStorage`存在一个对象，然后才能打开或创建流，除非它是内存流。
 
-`COleStreamFile`对象的操作方式与[CFile](../../mfc/reference/cfile-class.md)对象完全相同。
+`COleStreamFile`对象的操作与[CFile](../../mfc/reference/cfile-class.md)对象完全一样。
 
-有关操作流和存储的详细信息, 请参阅文章[容器:复合文件](../../mfc/containers-compound-files.md)。
+有关操作流和存储的详细信息，请参阅文章["容器：复合文件](../../mfc/containers-compound-files.md)"。
 
-有关详细信息, 请参阅 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream)和[IStorage](/windows/win32/api/objidl/nn-objidl-istorage) 。
+有关详细信息，请参阅 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream)和[IStorage。](/windows/win32/api/objidl/nn-objidl-istorage)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -76,11 +76,11 @@ class COleStreamFile : public CFile
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxole
+**标题：** afxole.h
 
-##  <a name="attach"></a>COleStreamFile:: Attach
+## <a name="colestreamfileattach"></a><a name="attach"></a>COleStream 文件：附加
 
-将提供的 OLE 流与`COleStreamFile`对象相关联。
+将提供的 OLE 流与`COleStreamFile`对象关联。
 
 ```
 void Attach(LPSTREAM lpStream);
@@ -89,15 +89,15 @@ void Attach(LPSTREAM lpStream);
 ### <a name="parameters"></a>参数
 
 *lpStream*<br/>
-指向要与对象关联的`IStream`OLE 流 ()。 不能为 NULL。
+指向要与对象关联的`IStream`OLE 流 （ ）。 不能为 NULL。
 
 ### <a name="remarks"></a>备注
 
-对象不得与 OLE 流相关联。
+对象必须尚未与 OLE 流关联。
 
-有关详细信息, 请参阅 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream) 。
+有关详细信息，请参阅 Windows SDK 中的[IStream。](/windows/win32/api/objidl/nn-objidl-istream)
 
-##  <a name="colestreamfile"></a>COleStreamFile:: COleStreamFile
+## <a name="colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStream文件：COleStream文件
 
 创建一个 `COleStreamFile` 对象。
 
@@ -112,13 +112,13 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 
 ### <a name="remarks"></a>备注
 
-如果*lpStream*为 NULL, 则对象不与 OLE 流关联, 否则, 对象与提供的 ole 流相关联。
+如果*lpStream*为 NULL，则该对象不与 OLE 流关联，否则，该对象与提供的 OLE 流相关联。
 
-有关详细信息, 请参阅 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream) 。
+有关详细信息，请参阅 Windows SDK 中的[IStream。](/windows/win32/api/objidl/nn-objidl-istream)
 
-##  <a name="creatememorystream"></a>COleStreamFile:: CreateMemoryStream
+## <a name="colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStream 文件：创建内存流
 
-安全地从全局共享内存中创建新流, 其中失败是正常的、预期的情况。
+安全地从全局共享内存中创建新流，其中故障是正常的预期条件。
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -127,21 +127,21 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="parameters"></a>参数
 
 *pError*<br/>
-指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或指示创建操作的完成状态的 NULL。 如果要监视尝试创建流时生成的可能的异常, 请提供此参数。
+指向指示创建操作的完成状态的[CFileException](../../mfc/reference/cfileexception-class.md)对象或 NULL。 如果要监视尝试创建流生成的可能异常，请提供此参数。
 
 ### <a name="return-value"></a>返回值
 
-如果成功创建流, 则为非零值;否则为0。
+如果成功创建流，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
 内存由 OLE 子系统分配。
 
-有关详细信息, 请参阅 Windows SDK 中的[CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) 。
+有关详细信息，请参阅在 Windows SDK 中[创建StreamOnHGlobal。](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal)
 
-##  <a name="createstream"></a>COleStreamFile:: CreateStream
+## <a name="colestreamfilecreatestream"></a><a name="createstream"></a>COleStream 文件：创建流
 
-在提供的存储对象中安全地创建一个新流, 其中失败是正常的预期条件。
+在提供的存储对象中安全地创建新流，其中故障是正常的预期条件。
 
 ```
 BOOL CreateStream(
@@ -153,31 +153,31 @@ BOOL CreateStream(
 
 ### <a name="parameters"></a>参数
 
-*lpStorage*<br/>
+*lp 存储*<br/>
 指向包含要创建的流的 OLE 存储对象。 不能为 NULL。
 
-*lpszStreamName*<br/>
+*lpszStream名称*<br/>
 要创建的流的名称。 不能为 NULL。
 
 *nOpenFlags*<br/>
-打开流时要使用的访问模式。 默认情况下使用 "独占"、"读/写" 和 "创建" 模式。 有关可用模式的完整列表, 请参阅[CFile:: CFile](../../mfc/reference/cfile-class.md#cfile)。
+打开流时要使用的访问模式。 默认情况下使用独占模式、读/写模式和创建模式。 有关可用模式的完整列表，请参阅[CFile：：CFile](../../mfc/reference/cfile-class.md#cfile)。
 
 *pError*<br/>
-指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或 NULL。 如果要监视尝试创建流时生成的可能的异常, 请提供此参数。
+指向[文件文件异常](../../mfc/reference/cfileexception-class.md)对象或 NULL。 如果要监视尝试创建流生成的可能异常，请提供此参数。
 
 ### <a name="return-value"></a>返回值
 
-如果成功创建流, 则为非零值;否则为0。
+如果成功创建流，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果打开失败并且*pError*不为 NULL, 则会引发文件异常。
+如果打开失败，并且*pError*不是 NULL，则将引发文件异常。
 
-有关详细信息, 请参阅 Windows SDK 中的[IStorage:: CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) 。
+有关详细信息，请参阅[IStorage：：](/windows/win32/api/objidl/nf-objidl-istorage-createstream)在 Windows SDK 中创建流。
 
-##  <a name="detach"></a>COleStreamFile::D etach
+## <a name="colestreamfiledetach"></a><a name="detach"></a>COleStream文件：:D
 
-解除流与对象的阻止, 而不关闭流。
+在不关闭流的情况下，断开流与对象分离。
 
 ```
 LPSTREAM Detach();
@@ -185,17 +185,17 @@ LPSTREAM Detach();
 
 ### <a name="return-value"></a>返回值
 
-指向与对象关联的流`IStream`() 的指针。
+指向与对象关联的流的指针`IStream`。
 
 ### <a name="remarks"></a>备注
 
-在程序终止之前, 必须以其他某种方式关闭流。
+在程序终止之前，必须以其他方式关闭流。
 
-有关详细信息, 请参阅 Windows SDK 中的[IStream](/windows/win32/api/objidl/nn-objidl-istream) 。
+有关详细信息，请参阅 Windows SDK 中的[IStream。](/windows/win32/api/objidl/nn-objidl-istream)
 
-##  <a name="getstream"></a>COleStreamFile:: System.resources.resourcemanager.getstream
+## <a name="colestreamfilegetstream"></a><a name="getstream"></a>COleStream 文件：获取流
 
-调用此函数可返回指向当前流的指针。
+调用此函数以返回指向当前流的指针。
 
 ```
 IStream* GetStream() const;
@@ -203,9 +203,9 @@ IStream* GetStream() const;
 
 ### <a name="return-value"></a>返回值
 
-指向当前流接口的指针 ( [IStream](/windows/win32/api/objidl/nn-objidl-istream))。
+指向当前流接口[（IStream）](/windows/win32/api/objidl/nn-objidl-istream)的指针。
 
-##  <a name="openstream"></a>COleStreamFile:: OpenStream
+## <a name="colestreamfileopenstream"></a><a name="openstream"></a>COleStream 文件：：打开流
 
 打开现有流。
 
@@ -219,29 +219,29 @@ BOOL OpenStream(
 
 ### <a name="parameters"></a>参数
 
-*lpStorage*<br/>
+*lp 存储*<br/>
 指向包含要打开的流的 OLE 存储对象。 不能为 NULL。
 
-*lpszStreamName*<br/>
+*lpszStream名称*<br/>
 要打开的流的名称。 不能为 NULL。
 
 *nOpenFlags*<br/>
-打开流时要使用的访问模式。 默认情况下, 使用独占模式和读/写模式。 有关可用模式的完整列表, 请参阅[CFile:: CFile](../../mfc/reference/cfile-class.md#cfile)。
+打开流时要使用的访问模式。 默认情况下使用独占和读/写模式。 有关可用模式的完整列表，请参阅[CFile：：CFile](../../mfc/reference/cfile-class.md#cfile)。
 
 *pError*<br/>
-指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或 NULL。 如果要监视尝试打开流时生成的可能异常, 请提供此参数。
+指向[文件文件异常](../../mfc/reference/cfileexception-class.md)对象或 NULL。 如果要监视尝试打开流生成的可能异常，则提供此参数。
 
 ### <a name="return-value"></a>返回值
 
-如果成功打开流, 则为非零;否则为0。
+如果已成功打开流，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果打开失败并且*pError*不为 NULL, 则会引发文件异常。
+如果打开失败，并且*pError*不是 NULL，则将引发文件异常。
 
-有关详细信息, 请参阅 Windows SDK 中的[IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) 。
+有关详细信息，请参阅[IStorage：：在](/windows/win32/api/objidl/nf-objidl-istorage-openstream)Windows SDK 中打开流。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CFile 类](../../mfc/reference/cfile-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)
+[层次结构图表](../../mfc/hierarchy-chart.md)

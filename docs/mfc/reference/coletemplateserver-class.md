@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: 4a1997497f3bddb405b712b5534f76e577dabfa8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ddd7a8ce70fe49e66e1175e413418fd59a89c917
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374857"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 类
 
@@ -35,25 +35,25 @@ class COleTemplateServer : public COleObjectFactory
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleTemplateServer::COleTemplateServer](#coletemplateserver)|构造 `COleTemplateServer` 对象。|
+|[COle模板服务器：COleTemplate服务器](#coletemplateserver)|构造 `COleTemplateServer` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleTemplateServer::ConnectTemplate](#connecttemplate)|将文档模板连接到基础`COleObjectFactory`对象。|
-|[COleTemplateServer::Unregister](#unregister)|注销关联的文档模板。|
-|[COleTemplateServer::UpdateRegistry](#updateregistry)|向 OLE 系统注册表注册文档类型。|
+|[COleTemplate服务器：连接模板](#connecttemplate)|将文档模板连接到基础`COleObjectFactory`对象。|
+|[COleTemplate服务器：取消注册](#unregister)|取消注册关联的文档模板。|
+|[COleTemplate服务器：更新注册](#updateregistry)|将文档类型注册到 OLE 系统注册表。|
 
 ## <a name="remarks"></a>备注
 
-此类派生自类[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md);通常, 你可以直接`COleTemplateServer`使用, 而不是派生你自己的类。 `COleTemplateServer`使用[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)对象管理服务器文档。 实现`COleTemplateServer`完整服务器时使用, 即可以作为独立应用程序运行的服务器。 尽管支持单文档界面 (SDI) 应用程序, 但完整服务器通常是多文档界面 (MDI) 应用程序。 应用`COleTemplateServer`程序支持的每种服务器文档都需要一个对象; 也就是说, 如果你的服务器应用程序同时支持工作表和图表, 则必须具有`COleTemplateServer`两个对象。
+此类派生自类[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md);通常，您可以直接使用`COleTemplateServer`，而不是派生您自己的类。 `COleTemplateServer`使用[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)对象管理服务器文档。 在实现`COleTemplateServer`完整服务器时使用，即可作为独立应用程序运行的服务器。 尽管支持单一文档接口 （SDI） 应用程序，但完整服务器通常是多个文档接口 （MDI） 应用程序。 对于`COleTemplateServer`应用程序支持的每种类型的服务器文档，需要一个对象;也就是说，如果服务器应用程序同时支持工作表和图表，则必须有两`COleTemplateServer`个对象。
 
-`COleTemplateServer`重写`OnCreateInstance`由`COleObjectFactory`定义的成员函数。 框架调用此成员函数以创建适当类型的C++对象。
+`COleTemplateServer`覆盖 由`OnCreateInstance``COleObjectFactory`定义的成员函数。 框架调用此成员函数以创建正确类型的C++对象。
 
-有关服务器的详细信息, 请参阅文章[服务器:实现服务器](../../mfc/servers-implementing-a-server.md)。
+有关服务器的详细信息，请参阅文章["服务器：实现服务器](../../mfc/servers-implementing-a-server.md)"。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -61,7 +61,7 @@ class COleTemplateServer : public COleObjectFactory
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)
+[COleObject工厂](../../mfc/reference/coleobjectfactory-class.md)
 
 `COleTemplateServer`
 
@@ -69,7 +69,7 @@ class COleTemplateServer : public COleObjectFactory
 
 **标头：** afxdisp.h
 
-##  <a name="coletemplateserver"></a>COleTemplateServer:: COleTemplateServer
+## <a name="coletemplateservercoletemplateserver"></a><a name="coletemplateserver"></a>COle模板服务器：COleTemplate服务器
 
 构造 `COleTemplateServer` 对象。
 
@@ -79,11 +79,11 @@ COleTemplateServer();
 
 ### <a name="remarks"></a>备注
 
-有关`COleTemplateServer`类使用的简短说明, 请参阅[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)类概述。
+有关类使用情况的简要说明，`COleTemplateServer`请参阅[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)类概述。
 
-##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate
+## <a name="coletemplateserverconnecttemplate"></a><a name="connecttemplate"></a>COleTemplate服务器：连接模板
 
-将*pDocTemplate*指向的文档模板连接到基础[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)对象。
+将*pDocTemplate*指向的文档模板连接到基础的[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)对象。
 
 ```
 void ConnectTemplate(
@@ -94,22 +94,22 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>参数
 
-*clsid*<br/>
-对模板所请求的 OLE 类 ID 的引用。
+*Clsid*<br/>
+引用模板请求的 OLE 类 ID。
 
 *pDocTemplate*<br/>
 指向文档模板的指针。
 
-*bMultiInstance*<br/>
-指示应用程序的单个实例是否可以支持多个实例化。 如果为 TRUE, 则为每个请求启动应用程序的多个实例, 以创建对象。
+*b 多实例*<br/>
+指示应用程序的单个实例是否可以支持多个实例。 如果为 TRUE，则为每个请求启动应用程序的多个实例以创建对象。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[CLSID 关键字](/windows/win32/com/clsid-key-hklm)。
+有关详细信息，请参阅 Windows SDK 中的[CLSID 密钥](/windows/win32/com/clsid-key-hklm)。
 
-##  <a name="unregister"></a>  COleTemplateServer::Unregister
+## <a name="coletemplateserverunregister"></a><a name="unregister"></a>COleTemplate服务器：取消注册
 
-注销关联的文档模板。
+取消注册关联的文档模板。
 
 ```
 BOOL Unregister();
@@ -121,11 +121,11 @@ BOOL Unregister();
 
 ### <a name="remarks"></a>备注
 
-EnterRemarks
+输入注释
 
-##  <a name="updateregistry"></a>COleTemplateServer:: UpdateRegistry
+## <a name="coletemplateserverupdateregistry"></a><a name="updateregistry"></a>COleTemplate服务器：更新注册
 
-从文档模板字符串加载文件类型信息, 并将该信息放在 OLE 系统注册表中。
+从文档模板字符串加载文件类型信息，并将该信息放在 OLE 系统注册表中。
 
 ```
 void UpdateRegistry(
@@ -138,41 +138,41 @@ void UpdateRegistry(
 ### <a name="parameters"></a>参数
 
 *nAppType*<br/>
-OLE_APPTYPE 枚举中的一个值, 该值在 AFXDISP.H&AMP;GT 中定义。高. 它可以具有下列值之一:
+OLE_APPTYPE枚举中的值，在 AFXDISP 中定义。H。 它可以具有以下任一值：
 
-- OAT_INPLACE_SERVER 服务器具有完全服务器用户界面。
+- OAT_INPLACE_SERVER服务器具有完整的服务器用户界面。
 
-- OAT_SERVER 服务器仅支持嵌入。
+- OAT_SERVER服务器仅支持嵌入。
 
-- OAT_CONTAINER 容器支持指向嵌入对象的链接。
+- OAT_CONTAINER容器支持指向嵌入对象的链接。
 
-- OAT_DISPATCH_OBJECT 对象`IDispatch`支持。
+- OAT_DISPATCH_OBJECT 对象`IDispatch`是 - 支持。
 
-- OAT_DOC_OBJECT_SERVER Server 支持嵌入和文档对象组件模型。
+- OAT_DOC_OBJECT_SERVER服务器支持嵌入和文档对象组件模型。
 
-*rglpszRegister*<br/>
-仅当不存在任何项时才写入注册表的项的列表。
+*rglpsz注册*<br/>
+仅当不存在条目时，才写入注册表的条目的列表。
 
-*rglpszOverwrite*<br/>
-写入注册表中的项的列表, 不管前面的任何项是否存在。
+*rglpsz 覆盖*<br/>
+写入注册表的条目列表，而不考虑是否存在任何前面的条目。
 
-*bRegister*<br/>
-确定是否要注册该类。 如果*bRegister*为 TRUE, 则向系统注册表注册该类。 否则, 将取消注册类。
+*b 注册*<br/>
+确定是否应注册类。 如果*b寄存器*为 TRUE，则类将注册到系统注册表。 否则，它将取消注册类。
 
 ### <a name="remarks"></a>备注
 
-注册信息通过调用[CDocTemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)来加载。 检索到的子字符串由`regFileTypeId`索引、 `regFileTypeName`和`fileNewName`标识, 如`GetDocString`参考页中所述。
+注册信息通过调用[CDocTemplate 加载：GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 检索的子字符串是索引标识的子字符串`regFileTypeId`，`regFileTypeName`和`fileNewName`，如`GetDocString`参考页中所述。
 
-如果子字符串为空或由于任何其他原因`GetDocString`而导致对的调用失败, 则此函数将失败, 并且不会在注册表中输入文件信息。 `regFileTypeId`
+如果`regFileTypeId`子字符串为空，或者调用`GetDocString`失败的原因为任何其他原因，则此函数将失败，并且未在注册表中输入文件信息。
 
-参数*rglpszRegister*和*rglpszOverwrite*中的信息通过调用[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)写入注册表。 在两个参数为 NULL 时注册的默认信息适用于大多数应用程序。 有关这些参数中信息的结构的信息, 请参阅`AfxOleRegisterServerClass`。
+参数*rglpsz 注册*和*rglpszOverwrite*中的信息通过调用[AfxOleRegisterServerServerClass](application-control.md#afxoleregisterserverclass)写入注册表。 默认信息在两个参数为 NULL 时注册，适用于大多数应用程序。 有关这些参数中信息的结构的信息，请参阅`AfxOleRegisterServerClass`。
 
-有关更多信息，请参见 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+有关详细信息，请参阅 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC 示例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleObjectFactory 类](../../mfc/reference/coleobjectfactory-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc 类](../../mfc/reference/coleserverdoc-class.md)<br/>
-[COleServerItem 类](../../mfc/reference/coleserveritem-class.md)
+[COleServer 项目类](../../mfc/reference/coleserveritem-class.md)

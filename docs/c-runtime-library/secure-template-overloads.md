@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: dfb13d5a48376efb72a845e2f5e2380407937f5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744564"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361128"
 ---
 # <a name="secure-template-overloads"></a>安全模板重载
 
@@ -50,7 +50,7 @@ strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 宏 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 不会影响需要使用计数的函数，如 `strncpy`。 若要为计数函数启用模板重载，请将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定义为 1。 但是，在这样做之前，请确保您的代码将传递字符的计数，而不是传递缓冲区的大小（常见错误）。 此外，如果调用安全变体，则不再需要用来在函数调用之后在缓冲区末尾显式写入一个 null 终止符的代码。 如果需要截断行为，请参阅 [_TRUNCATE](../c-runtime-library/truncate.md)。
 
 > [!NOTE]
->  宏 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 要求 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 也定义为 1。 如果将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定义为 1 并且将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定义为 0，则应用程序将不会执行任何模板重载。
+> 宏 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 要求 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 也定义为 1。 如果将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定义为 1 并且将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定义为 0，则应用程序将不会执行任何模板重载。
 
 将 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 定义为 1 后，可启用安全变体（名称以“_s”结尾）的模板重载。 在这种情况下，如果 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 为 1，则必须对原始代码进行一个小更改：
 
@@ -91,7 +91,7 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
                          // strcpy_s(szBuf, 10, "test");
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)<br/>
 [CRT 库功能](../c-runtime-library/crt-library-features.md)

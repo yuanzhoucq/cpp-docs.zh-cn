@@ -66,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359332"
 ---
 # <a name="cbookmark-class"></a>CBookmark 类
 
-保存其缓冲区中的书签值。
+在其缓冲区中保存书签值。
 
 ## <a name="syntax"></a>语法
 
@@ -87,7 +87,7 @@ template <>
 class CBookmark< 0 > : public CBookmarkBase
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nSize*<br/>
 书签缓冲区的大小（以字节为单位）。 当*nSize*为零时，将在运行时动态创建书签缓冲区。
@@ -102,22 +102,22 @@ class CBookmark< 0 > : public CBookmarkBase
 
 |||
 |-|-|
-|[CBookmark](#cbookmark)|构造函数|
+|[CBook标志](#cbookmark)|构造函数|
 |[GetBuffer](#getbuffer)|检索指向缓冲区的指针。|
-|[GetSize](#getsize)|检索缓冲区的大小（以字节为单位）。|
-|[SetBookmark](#setbookmark)|设置书签值。|
+|[GetSize](#getsize)|检索以字节为单位的缓冲区大小。|
+|[设置书签](#setbookmark)|设置书签值。|
 
 ### <a name="operators"></a>运算符
 
 |||
 |-|-|
-|[operator =](#operator)|将一个 `CBookmark` 类分配给另一个类。|
+|[运算符 |](#operator)|将一个`CBookmark`类分配给另一个类。|
 
 ## <a name="remarks"></a>备注
 
-`CBookmark<0>` 是 `CBookmark`的模板专用化;在运行时动态创建其缓冲区。
+`CBookmark<0>`是 模板专业化的`CBookmark`。其缓冲区在运行时动态创建。
 
-## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark：： CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBook标志：：CBookmark
 
 构造函数。
 
@@ -128,19 +128,19 @@ CBookmark();
 CBookmark(DBLENGTH nSize);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nSize*<br/>
 [in] 书签缓冲区的大小（以字节为单位）。
 
 ### <a name="remarks"></a>备注
 
-第一个函数将缓冲区设置为 NULL 并将缓冲区大小设置为 0。 第二个函数将缓冲区大小设置为*nSize*，将缓冲区设置为*nSize*字节的字节数组。
+第一个函数将缓冲区设置为 NULL 并将缓冲区大小设置为 0。 第二个函数将缓冲区大小设置为*nSize，* 将缓冲区设置为*nSize*字节的字节数组。
 
 > [!NOTE]
->  此函数仅在 `CBookmark<0>`中可用。
+> 此功能仅在 中`CBookmark<0>`可用。
 
-## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark：： GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBook标志：获取缓冲区
 
 检索指向书签缓冲区的指针。
 
@@ -154,7 +154,7 @@ virtual BYTE* GetBuffer() const throw();
 
 指向书签缓冲区的指针。
 
-## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark：： GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBook标志：获取 Size
 
 检索书签缓冲区的大小。
 
@@ -168,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 缓冲区的大小（以字节为单位）。
 
-## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark：： SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBook标志：：设置书签
 
-将*pBuffer*引用的书签值复制到 `CBookmark` 缓冲区，并将缓冲区大小设置为*nSize*。
+将*pBuffer*引用的书签值复制到缓冲区`CBookmark`，并将缓冲区大小设置为*nSize*。
 
 ### <a name="syntax"></a>语法
 
@@ -178,23 +178,23 @@ virtual DBLENGTH GetSize() const throw();
 HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nSize*<br/>
-中书签缓冲区的大小。
+[在]书签缓冲区的大小。
 
 *pBuffer*<br/>
-中指向包含书签值的字节数组的指针。
+[在]指向包含书签值的字节数组的指针。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT。
+标准 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-此函数仅在 `CBookmark<0>`中可用。
+此功能仅在 中`CBookmark<0>`可用。
 
-## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark：： operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBook标志：：运算符 |
 
 将一个 `CBookmark` 对象分配给其他对象。
 
@@ -206,7 +206,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>备注
 
-仅 `CBookmark<0>`中需要此运算符。
+此运算符仅在 中`CBookmark<0>`才需要。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonComboBox 类
+title: CMFC 功能通信盒类
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonComboBox
@@ -40,20 +40,20 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5846b1c5590a756f0a0820583af3d0b159968ea2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237311"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375231"
 ---
-# <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 类
+# <a name="cmfcribboncombobox-class"></a>CMFC 功能通信盒类
 
-`CMFCRibbonComboBox`类实现可添加到功能区栏、 功能区面板或功能区弹出菜单的组合框控件。
+类`CMFCRibbonComboBox`实现组合框控件，您可以将该控件添加到功能区栏、功能区面板或功能区弹出菜单中。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class CMFCRibbonComboBox : public CMFCRibbonEdit
 ```
 
@@ -61,38 +61,38 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 
 ### <a name="constructors"></a>构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|构造一个 CMFCRibbonComboBox 对象。|
+|[CMFC 剪彩组合盒：CMFC 剪彩组合盒](#cmfcribboncombobox)|构造 CMFC 功能组合博博盒对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonComboBox::AddItem](#additem)|将唯一的项追加到列表框。|
-|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|从列表框中删除指定的项。|
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|指定时它会下拉列表框是否可以更改大小。|
-|[CMFCRibbonComboBox::FindItem](#finditem)|返回与指定的字符串匹配在列表框中的第一项的索引。|
-|[CMFCRibbonComboBox::GetCount](#getcount)|在列表框中返回的项数。|
-|[CMFCRibbonComboBox::GetCurSel](#getcursel)|获取列表框中当前选定项的索引。|
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|列表框删除时，请获取列表框的高度。|
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|返回在中间的模式下显示的组合框的大小。|
-|[CMFCRibbonComboBox::GetItem](#getitem)|返回与列表框中指定索引处的项关联的字符串。|
-|[CMFCRibbonComboBox::GetItemData](#getitemdata)|返回与列表框中指定索引处的项关联的数据。|
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|指示控件是否包含一个编辑框。|
-|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|指示可以调整大小的列表框。|
-|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|当用户选择某个项的列表框中，由框架调用。|
-|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|从列表框中删除所有项，并清除编辑框。|
-|[CMFCRibbonComboBox::SelectItem](#selectitem)|在列表框中选择一项。|
-|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|向下拖放，请设置列表框的高度。|
+|[CMFC 功能组合Box：添加项目](#additem)|将唯一项目追加到列表框。|
+|[CMFC功能中心盒：:Delete项目](#deleteitem)|从列表框中删除指定的项目。|
+|[CMFC 功能组合Box：：启用下拉列表重新调整大小](#enabledropdownlistresize)|指定列表框在下垂时是否可以更改大小。|
+|[CMFC 功能通信包：：查找项目](#finditem)|返回列表框中与指定字符串匹配的第一项的索引。|
+|[CMFC功能放大缩小字体功能 放大缩小字体功能](#getcount)|返回列表框中的项目数。|
+|[CMFC功能放大缩小字体功能 放大缩小字体功能](#getcursel)|在列表框中获取当前选定项的索引。|
+|[CMFC 功能通信框：：获取下降高度](#getdropdownheight)|下下列表框时获取列表框的高度。|
+|[CMFC 功能组合Box：获取中间尺寸](#getintermediatesize)|返回在中间模式下显示的组合框的大小。|
+|[CMFC 功能通信包：获取项目](#getitem)|返回与列表框中指定索引处的项关联的字符串。|
+|[CMFC 功能通信包：获取项目数据](#getitemdata)|返回与列表框中指定索引处的项关联的数据。|
+|[CMFC功能组合框：：已编辑盒](#haseditbox)|指示控件是否包含编辑框。|
+|[CMFC 功能通信框：：重新调整下拉列表](#isresizedropdownlist)|指示列表框是否可以调整大小。|
+|[CMFC 功能组合框：：在选择项目上](#onselectitem)|当用户在列表框中选择项时，由框架调用。|
+|[CMFC 功能组合框：：删除所有项目](#removeallitems)|从列表框中删除所有项目并清除编辑框。|
+|[CMFC 功能组合框：：选择项目](#selectitem)|在列表框中选择项目。|
+|[CMFC 功能组合Box：：设置下拉高度](#setdropdownheight)|下下列表框时设置其高度。|
 
 ## <a name="remarks"></a>备注
 
-功能区组合框包含一个列表框，与静态标签或用户可以编辑的标签结合使用。 必须指定时创建功能区组合框中，你需要的类型。
+功能区组合框由列表框与用户可以编辑的静态标签或标签组合而成。 创建功能区组合框时，必须指定所需的类型。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCRibbonComboBox`类，将项添加到组合框、 组合框中选择一个项并将组合框添加到面板。
+下面的示例演示如何构造`CMFCRibbonComboBox`类的对象、将项添加到组合框中、在组合框中选择项以及向面板添加组合框。
 
 [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]
 
@@ -110,13 +110,13 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxribboncombobox.h
+**标题：** afxribboncombox.h
 
-##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem
+## <a name="cmfcribboncomboboxadditem"></a><a name="additem"></a>CMFC 功能组合Box：添加项目
 
-将唯一的项追加到列表框。
+将唯一项目追加到列表框。
 
-```
+```cpp
 virtual INT_PTR AddItem(
     LPCTSTR lpszItem,
     DWORD_PTR dwData=0);
@@ -125,20 +125,20 @@ virtual INT_PTR AddItem(
 ### <a name="parameters"></a>参数
 
 *lpszItem*<br/>
-[in]要添加的项的字符串。
+[在]要添加的项的字符串。
 
 *dwData*<br/>
-[in]与要添加的项关联的数据。
+[在]与要添加的项关联的数据。
 
 ### <a name="return-value"></a>返回值
 
-追加的项的从零开始索引。
+附加项的零基索引。
 
-##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox
+## <a name="cmfcribboncomboboxcmfcribboncombobox"></a><a name="cmfcribboncombobox"></a>CMFC 剪彩组合盒：CMFC 剪彩组合盒
 
 构造 `CMFCRibbonComboBox` 对象。
 
-```
+```cpp
 public:
 CMFCRibbonComboBox(
     UINT nID,
@@ -154,29 +154,29 @@ CMFCRibbonComboBox();
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[in]组合框的 ID。
+[在]组合框的 ID。
 
 *bHasEditBox*<br/>
-[in]如果你想在控件; 内的编辑框，则返回 TRUEFALSE 否则为。
+[在]如果希望在控件中使用编辑框，则为 TRUE;否则。
 
-*nWidth*<br/>
-[in]以像素为单位; 组合框的宽度或-1 表示默认宽度。
+*n 宽度*<br/>
+[在]组合框的宽度（以像素为单位）;或 -1 表示默认宽度。
 
 *lpszLabel*<br/>
-[in]组合框显示标签。
+[在]组合框的显示标签。
 
-*nImage*<br/>
-[in]组合框的小图像索引。
+*n图像*<br/>
+[在]组合框的小图像索引。
 
 ### <a name="remarks"></a>备注
 
 默认宽度为 108 像素。
 
-##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem
+## <a name="cmfcribboncomboboxdeleteitem"></a><a name="deleteitem"></a>CMFC功能中心盒：:Delete项目
 
-从列表框中删除指定的项。
+从列表框中删除指定的项目。
 
-```
+```cpp
 BOOL DeleteItem(int iIndex);
 BOOL DeleteItem(DWORD_PTR dwData);
 
@@ -186,108 +186,108 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]要删除的项的从零开始的索引。
+[在]要删除的项的零基索引。
 
 *dwData*<br/>
-[in]与要删除的项关联的数据。
+[在]与要删除的项关联的数据。
 
 *lpszText*<br/>
-[in]要删除的项的字符串。 如果有多个具有相同的字符串项，则删除的第一项。
+[在]要删除的项的字符串。 如果有多个具有相同字符串的项，则删除第一个项。
 
 ### <a name="return-value"></a>返回值
 
-如果已删除指定的项，则为 TRUE否则为 FALSE。
+如果指定的项已被删除，则为 TRUE;如果指定项目已被删除，则为 TRUE。否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize
+## <a name="cmfcribboncomboboxenabledropdownlistresize"></a><a name="enabledropdownlistresize"></a>CMFC 功能组合Box：：启用下拉列表重新调整大小
 
-指定时它会下拉列表框是否可以更改大小。
+指定列表框在下垂时是否可以更改大小。
 
-```
+```cpp
 void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```
 
 ### <a name="parameters"></a>参数
 
-*bEnable*<br/>
-[in]为 true，则启用调整大小;如果为 FALSE 禁用重设大小。
+*b 启用*<br/>
+[在]TRUE 以启用大小调整;FALSE 以禁用调整大小。
 
 ### <a name="remarks"></a>备注
 
-启用重设大小后，列表框将更改大小以适合其显示的项。
+启用调整大小后，列表框将更改大小以适合其显示的项目。
 
-##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem
+## <a name="cmfcribboncomboboxfinditem"></a><a name="finditem"></a>CMFC 功能通信包：：查找项目
 
-返回与指定的字符串匹配在列表框中的第一项的索引。
+返回列表框中与指定字符串匹配的第一项的索引。
 
-```
+```cpp
 int FindItem(LPCTSTR lpszText) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *lpszText*<br/>
-[in]列表框中的项的字符串。
+[在]列表框中项的字符串。
 
 ### <a name="return-value"></a>返回值
 
-项的从零开始的索引或如果未找到该项，则为-1。
+项的零基索引;或 -1，如果找不到该项目。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount
+## <a name="cmfcribboncomboboxgetcount"></a><a name="getcount"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
-在列表框中返回的项数。
+返回列表框中的项目数。
 
-```
+```cpp
 INT_PTR GetCount() const;
 ```
 
 ### <a name="return-value"></a>返回值
 
-在列表框中或如果在列表框不包含任何项，则为 0 的项目数。
+如果列表框不包含任何项，则列表框中的项目数为 0。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel
+## <a name="cmfcribboncomboboxgetcursel"></a><a name="getcursel"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
-获取列表框中当前选定项的索引。
+在列表框中获取当前选定项的索引。
 
-```
+```cpp
 int GetCurSel() const;
 ```
 
 ### <a name="return-value"></a>返回值
 
-在列表框中; 当前选定项的从零开始的索引或如果未不选择任何项为-1。
+列表框中当前选定项的零基索引;或 -1，如果未选择项目。
 
-##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight
+## <a name="cmfcribboncomboboxgetdropdownheight"></a><a name="getdropdownheight"></a>CMFC 功能通信框：：获取下降高度
 
-列表框删除时，请获取列表框的高度。
+下下列表框时获取列表框的高度。
 
-```
+```cpp
 int GetDropDownHeight();
 ```
 
 ### <a name="return-value"></a>返回值
 
-以像素为单位，列表框的高度。
+列表框的高度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize
+## <a name="cmfcribboncomboboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFC 功能组合Box：获取中间尺寸
 
-返回在中间的模式下显示的组合框的大小。
+返回在中间模式下显示的组合框的大小。
 
-```
+```cpp
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]组合框的设备上下文的指针。
+[在]指向组合框的设备上下文。
 
 ### <a name="return-value"></a>返回值
 
@@ -295,106 +295,106 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="remarks"></a>备注
 
-显示小图像时，返回的大小取决于组合框的大小。
+返回的大小基于组合框显示小图像时的大小。
 
-##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem
+## <a name="cmfcribboncomboboxgetitem"></a><a name="getitem"></a>CMFC 功能通信包：获取项目
 
 返回与列表框中指定索引处的项关联的字符串。
 
-```
+```cpp
 LPCTSTR GetItem(int iIndex) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]列表框中的项的从零开始的索引。
+[在]列表框中项的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-指向与项; 关联的字符串的指针如果索引参数无效，或者如果索引参数为-1，并且没有组合框中选定项，否则为 NULL。
+指向与项关联的字符串的指针;否则，如果索引参数无效，或者索引参数为 -1，并且组合框中未选择任何项，则 NULL。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData
+## <a name="cmfcribboncomboboxgetitemdata"></a><a name="getitemdata"></a>CMFC 功能通信包：获取项目数据
 
 返回与列表框中指定索引处的项关联的数据。
 
-```
+```cpp
 DWORD_PTR GetItemData(int iIndex) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]列表框中的项的从零开始的索引。
+[在]列表框中项的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-与项关联的数据0 或如果该项不存在，或者索引参数为-1，在列表框中不存在选定的项。
+与项关联的数据;如果项不存在，或者索引参数为 -1，并且列表框中没有选定项，则为 0。
 
-##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox
+## <a name="cmfcribboncomboboxhaseditbox"></a><a name="haseditbox"></a>CMFC功能组合框：：已编辑盒
 
-指示控件是否包含一个编辑框。
+指示控件是否包含编辑框。
 
-```
+```cpp
 BOOL HasEditBox() const;
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果控件包含一个编辑框中; 则为 TRUE否则为 FALSE。
+如果控件包含编辑框，则为 TRUE;如果控件包含编辑框。"否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList
+## <a name="cmfcribboncomboboxisresizedropdownlist"></a><a name="isresizedropdownlist"></a>CMFC 功能通信框：：重新调整下拉列表
 
-指示可以调整大小的列表框。
+指示列表框是否可以调整大小。
 
-```
+```cpp
 BOOL IsResizeDropDownList() const;
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果可以调整大小的列表框; 则为 TRUE否则为 FALSE。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)
+如果列表框可以调整大小，则为 TRUE;否则 FALSE。 [CMFC 功能组合Box：：启用下拉列表重新调整大小](#enabledropdownlistresize)
 
 ### <a name="remarks"></a>备注
 
-可以让使用列表框大小调整[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)方法。
+您可以使用[CMFC 功能区ComboBox：：启用下拉列表重新调整大小](#enabledropdownlistresize)的方法启用列表框调整大小。
 
-##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem
+## <a name="cmfcribboncomboboxonselectitem"></a><a name="onselectitem"></a>CMFC 功能组合框：：在选择项目上
 
-当用户选择某个项的列表框中，由框架调用。
+当用户在列表框中选择项时，由框架调用。
 
-```
+```cpp
 virtual void OnSelectItem(int nItem);
 ```
 
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-[in]选定的项的索引。
+[在]所选项的索引。
 
 ### <a name="remarks"></a>备注
 
-如果你想要处理用户输入的选择重写此方法。
+如果要处理用户输入选择，则重写此方法。
 
-##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems
+## <a name="cmfcribboncomboboxremoveallitems"></a><a name="removeallitems"></a>CMFC 功能组合框：：删除所有项目
 
-从列表框中删除所有项，并清除编辑框。
+从列表框中删除所有项目并清除编辑框。
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
 ### <a name="remarks"></a>备注
 
-##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem
+## <a name="cmfcribboncomboboxselectitem"></a><a name="selectitem"></a>CMFC 功能组合框：：选择项目
 
-在列表框中选择一项。
+在列表框中选择项目。
 
-```
+```cpp
 BOOL SelectItem(int iIndex);
 BOOL SelectItem(DWORD_PTR dwData);
 
@@ -404,39 +404,39 @@ BOOL SelectItem(LPCTSTR lpszText);
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]列表框中的项的从零开始的索引。
+[在]列表框中项的零基索引。
 
 *dwData*<br/>
-[in]与列表框中的项关联的数据。
+[在]与列表框中的项目关联的数据。
 
 *lpszText*<br/>
-[in]列表框中的项的字符串。
+[在]列表框中项的字符串。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则为 TRUE否则为 FALSE。
+如果方法成功，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight
+## <a name="cmfcribboncomboboxsetdropdownheight"></a><a name="setdropdownheight"></a>CMFC 功能组合Box：：设置下拉高度
 
-向下拖放，请设置列表框的高度。
+下下列表框时设置其高度。
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
 ### <a name="parameters"></a>参数
 
 *nHeight*<br/>
-[in]以像素为单位，列表框的高度。
+[在]列表框的高度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
 默认高度为 150 像素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonEdit 类](../../mfc/reference/cmfcribbonedit-class.md)

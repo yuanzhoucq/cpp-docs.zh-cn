@@ -1,10 +1,11 @@
 ---
 title: sqrt、sqrtf、sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958098"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355584"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -67,20 +69,22 @@ long double sqrtl(
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 非负浮点值
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用**浮点**或**长** **双精度**类型的**sqrt**的重载。 在 C 程序中， **sqrt**始终采用并返回**double**。
+由于C++允许重载，因此可以调用采用**浮点**或**长****双**类型平方**的**重载。 在 C 程序中 **，sqrt**始终采用并返回**双**精度 值。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="return-value"></a>返回值
 
-**Sqrt**函数返回*x*的平方根。 默认情况下，如果*x*为负数， **sqrt**将返回一个无限的 NaN。
+**平方函数**返回*x*的平方根。 默认情况下，如果*x*为负数 **，sqrt**将返回不确定的 NaN。
 
-|输入|SEH 异常|**_matherr**异常|
+|输入|SEH 异常|**_matherr**例外|
 |-----------|-------------------|--------------------------|
-|± QNAN，IND|无|_DOMAIN|
+|• QNAN，IND|无|_DOMAIN|
 |- ∞|无|_DOMAIN|
 |x<0|无|_DOMAIN|
 
@@ -88,9 +92,9 @@ long double sqrtl(
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**sqrt**、 **sqrtf**、 **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**， **sqrtf**， **sqrtl**|\<math.h>|\<cmath>|
 
-有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -117,7 +121,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [exp、expf、expl](exp-expf.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: __p__fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__fmode
+- _o___p__fmode
 api_location:
 - msvcr80.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 2364a22d52c5bc418e4499a4a639c8e06559063a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aecba640099719f90db8bbd5dbe386ea99aae45d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171445"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349247"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
@@ -47,7 +49,9 @@ int* __p__fmode(
 
 `__p__fmode` 函数仅供内部使用，且不应从用户代码调用它。
 
-文件转换模式为 `binary`_open`text` 和 [_pipe](../c-runtime-library/reference/open-wopen.md) I/O 操作指定 [ 或 ](../c-runtime-library/reference/pipe.md) 转换。 有关详细信息，请参阅 [_fmode](../c-runtime-library/fmode.md)。
+文件转换模式为 [_open](../c-runtime-library/reference/open-wopen.md) 和 [_pipe](../c-runtime-library/reference/pipe.md) I/O 操作指定 `binary` 或 `text` 转换。 有关详细信息，请参阅 [_fmode](../c-runtime-library/fmode.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 

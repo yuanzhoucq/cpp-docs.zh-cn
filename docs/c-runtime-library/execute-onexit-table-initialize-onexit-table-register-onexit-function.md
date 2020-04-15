@@ -1,12 +1,16 @@
 ---
 title: _execute_onexit_table、_initialize_onexit_table、_register_onexit_function
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
+- _o__execute_onexit_table
+- _o__initialize_onexit_table
+- _o__register_onexit_function
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +27,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 573be497bafbe5372186f31b3ea60d9a5ef7fac1
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a1e35d9e86a43e48849373a1cf1aa07febcd0e33
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856977"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351644"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
@@ -53,10 +57,10 @@ int _execute_onexit_table(
 
 #### <a name="parameters"></a>参数
 
-*table*<br/>
+*表*<br/>
 [in, out] 指向 onexit 函数表的指针。
 
-*函数*<br/>
+*功能*<br/>
 [in] 指向一个函数以添加到 onexit 函数表的指针。
 
 ## <a name="return-value"></a>返回值
@@ -65,7 +69,7 @@ int _execute_onexit_table(
 
 ## <a name="remarks"></a>备注
 
-这些函数是用来支持 C 运行时的基础结构实现详细信息，不应在代码中直接调用。 C 运行时使用 *onexit 函数表*来表示通过调用 `atexit`、`at_quick_exit`，和 `_onexit` 注册的函数序列。 onexit 函数表数据结构是 C 运行时的非跳转实现详细信息；可以更改此数据成员的顺序和含义。 它们不应由外部代码进行检查。
+这些函数是用来支持 C 运行时的基础结构实现详细信息，不应在代码中直接调用。 C 运行时使用*onexit 函数表*来表示由 调用 注册`atexit``at_quick_exit`的函数序列 。 `_onexit` onexit 函数表数据结构是 C 运行时的非跳转实现详细信息；可以更改此数据成员的顺序和含义。 它们不应由外部代码进行检查。
 
 `_initialize_onexit_table` 函数将 onexit 函数表初始化为其初始值。  将 onexit 函数表传递给 `_register_onexit_function` 或 `_execute_onexit_table` 前，必须调用此函数。
 
@@ -73,13 +77,15 @@ int _execute_onexit_table(
 
 `_execute_onexit_table` 函数执行 onexit 函数表中的所有函数，并清除表，然后返回。 在调用 `_execute_onexit_table` 后，表处于无效状态；必须通过调用 `_initialize_onexit_table` 以对其重新初始化后才能再次使用。
 
-## <a name="requirements"></a>需求
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
 
-|例程所返回的值|必需的标头|
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
 |-------------|---------------------|
-|`_initialize_onexit_table function`中， `_register_onexit_function`中， `_execute_onexit_table`|C, C++: \<process.h>|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-`_initialize_onexit_table`、`_register_onexit_function`和 `_execute_onexit_table` 函数是 Microsoft 特定的。 有关兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
+`_register_onexit_function``_execute_onexit_table`和`_initialize_onexit_table`函数特定于 Microsoft。 有关兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 
