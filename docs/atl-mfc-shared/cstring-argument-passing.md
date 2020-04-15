@@ -11,37 +11,37 @@ helpviewer_keywords:
 - CString objects, passing arguments
 - string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-ms.openlocfilehash: 1729167786d71c107fe6a4369d5a0c7e7c8594f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53977eb47520a20571a2d5ba8aa105c567ff40d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236380"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317936"
 ---
 # <a name="cstring-argument-passing"></a>CString 自变量传递
 
-此文章介绍了如何将传递[CString](../atl-mfc-shared/reference/cstringt-class.md)对象的功能和如何返回`CString`函数中的对象。
+本文介绍如何将[CString](../atl-mfc-shared/reference/cstringt-class.md)对象传递到函数以及如何从函数返回`CString`对象。
 
-##  <a name="_core_cstring_argument.2d.passing_conventions"></a> CString 参数传递约定
+## <a name="cstring-argument-passing-conventions"></a><a name="_core_cstring_argument.2d.passing_conventions"></a>CString 参数传递约定
 
-在定义类接口时，必须确定成员函数的参数传递约定。 有一些标准规则对传递和返回`CString`对象。 如果您按照中所述的规则[作为函数的输入字符串](#_core_strings_as_function_inputs)并[为函数的输出字符串](#_core_strings_as_function_outputs)，将具有有效的正确代码。
+定义类接口时，必须确定成员函数的参数传递约定。 有一些标准规则用于传递和返回`CString`对象。 如果按照字符串中描述的规则[为函数输入](#_core_strings_as_function_inputs)，[字符串作为函数输出](#_core_strings_as_function_outputs)，您将具有高效、正确的代码。
 
-##  <a name="_core_strings_as_function_inputs"></a> 作为函数的输入字符串
+## <a name="strings-as-function-inputs"></a><a name="_core_strings_as_function_inputs"></a>字符串作为函数输入
 
-最高效和安全的方法使用`CString`中调用的函数对象是传递`CString`函数的对象。 不管名称如何，`CString`对象不会存储一个字符串在内部作为具有 null 终止符的 C 样式字符串。 相反，`CString`对象需要仔细跟踪它具有的字符数。 具有`CString`提供指向以 null 结尾的字符串的 LPCTSTR 是少量的工作可能会较长，如果你的代码必须不断地执行。 结果是临时的因为任何更改为`CString`内容使 LPCTSTR 指针的旧副本。
+在调用的函数中使用`CString`对象的最有效和最安全的方法是将`CString`对象传递给函数。 尽管名称相同，`CString`但对象不会在内部存储字符串为具有空终止符的 C 样式字符串。 相反，`CString`对象会仔细跟踪其具有的字符数。 提供`CString`指向 null 终止字符串的 LPCTSTR 指针是少量工作，如果代码必须不断这样做，这些工作可能会变得重要。 结果是暂时的，`CString`因为对内容的任何更改会使 LPCTSTR 指针的旧副本无效。
 
-在某些情况下提供的 C 样式字符串，它确实使有意义。 例如，可以是被调用的函数的以 C 编写的且不支持对象。 在这种情况下，强制`CString`给 LPCTSTR 和函数的参数将获取以 C 样式 null 结尾的字符串。 此外可以转到另一个方向，并创建`CString`对象使用`CString`接受 C 样式字符串参数的构造函数。
+在某些情况下，提供 C 样式字符串确实有意义。 例如，在 C 中写入被调用函数并且不支持对象的情况。 在这种情况下，强制参数`CString`到LPCTSTR，并且函数将获得一个 C 样式的 null 终止字符串。 还可以采用另一个方向，并使用接受 C`CString`样式字符串参数`CString`的构造函数创建对象。
 
-如果要更改函数字符串内容，将参数声明为非常数`CString`引用 (`CString&`)。
+如果要由函数更改字符串内容，则将参数声明为非常量`CString`引用 （`CString&`。
 
-##  <a name="_core_strings_as_function_outputs"></a> 为函数的输出的字符串
+## <a name="strings-as-function-outputs"></a><a name="_core_strings_as_function_outputs"></a>字符串作为函数输出
 
-通常可以返回`CString`对象从函数，因为`CString`对象遵循等基元类型的值语义。 若要返回只读的字符串，使用的常量`CString`引用 (`const CString&`)。 下面的示例演示如何使用`CString`参数和返回类型：
+通常，可以从函数`CString`返回对象，因为`CString`对象遵循基元类型等值语义。 要返回只读字符串，请使用常量`CString`引用 （`const CString&`。 以下示例说明了`CString`参数和返回类型的使用：
 
 [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_1.cpp)]
 
 [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_2.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+[字符串（ATL/MFC）](../atl-mfc-shared/strings-atl-mfc.md)
