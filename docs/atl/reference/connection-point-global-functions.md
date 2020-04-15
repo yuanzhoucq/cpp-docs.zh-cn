@@ -8,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6474297f8b9adf04541f7d232fb88d5e52d4e88c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331532"
 ---
 # <a name="connection-point-global-functions"></a>连接点全局函数
 
-这些函数提供对连接点和接收器映射的支持。
+这些功能支持连接点和接收器贴图。
 
 > [!IMPORTANT]
->  下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
+> 下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。
 
 |||
 |-|-|
 |[AtlAdvise](#atladvise)|在对象的连接点和客户端的接收器间创建连接。|
-|[AtlUnadvise](#atlunadvise)|通过 `AtlAdvise`终止建立的连接。|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|事件接收器映射中的建议或 unadvises 条目。|
+|[AtlUnadvise](#atlunadvise)|终止通过`AtlAdvise`建立的连接。|
+|[AtlAdviseSinkMap](#atladvisesinkmap)|建议或不建议事件接收器地图中的条目。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase。h
+**标题：** atlbase.h
 
-##  <a name="atladvise"></a>AtlAdvise
+## <a name="atladvise"></a><a name="atladvise"></a>Atl建议
 
 在对象的连接点和客户端的接收器间创建连接。
 
 > [!IMPORTANT]
->  此函数不能用于在 Windows 运行时中执行的应用程序。
+> 此函数不能在 Windows 运行时中执行的应用程序中使用。
 
 ```
 HRESULT    AtlAdvise(
@@ -47,38 +47,38 @@ HRESULT    AtlAdvise(
     LPDWORD pdw);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pUnkCP*<br/>
-中指向客户端要连接到的对象的 `IUnknown` 的指针。
+[在]指向客户端要连接`IUnknown`的对象的指针。
 
-*pUnk*<br/>
-中指向客户端的 `IUnknown`的指针。
+*朋 克*<br/>
+[在]指向客户端的`IUnknown`指针。
 
-*iid*<br/>
-中连接点的 GUID。 通常，这与连接点管理的输出接口相同。
+*Iid*<br/>
+[在]连接点的 GUID。 通常，这与连接点管理的传出接口相同。
 
 *pdw*<br/>
-弄一个指针，指向用于唯一标识连接的 cookie。
+[出]指向唯一标识连接的 Cookie 的指针。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-接收器实现连接点支持的输出接口。 客户端使用*pdw* cookie 来删除连接，方法是将连接传递给[AtlUnadvise](#atlunadvise)。
+接收器实现连接点支持的传出接口。 客户端使用*pdw* Cookie 将其传递给[AtlUn 建议](#atlunadvise)来删除连接。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]
 
-##  <a name="atlunadvise"></a>AtlUnadvise
+## <a name="atlunadvise"></a><a name="atlunadvise"></a>AtlUn建议
 
 终止通过[AtlAdvise](#atladvise)建立的连接。
 
 > [!IMPORTANT]
->  此函数不能用于在 Windows 运行时中执行的应用程序。
+> 此函数不能在 Windows 运行时中执行的应用程序中使用。
 
 ```
 HRESULT    AtlUnadvise(
@@ -87,47 +87,47 @@ HRESULT    AtlUnadvise(
     DWORD dw);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pUnkCP*<br/>
-中指向客户端连接到的对象的 `IUnknown` 的指针。
+[在]指向客户端所连接`IUnknown`的对象的指针。
 
-*iid*<br/>
-中连接点的 GUID。 通常，这与连接点管理的输出接口相同。
+*Iid*<br/>
+[在]连接点的 GUID。 通常，这与连接点管理的传出接口相同。
 
 *dw*<br/>
-中用于唯一标识连接的 cookie。
+[在]唯一标识连接的 Cookie。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]
 
-##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap
+## <a name="atladvisesinkmap"></a><a name="atladvisesinkmap"></a>AtlAdviseSinkMap
 
 调用此函数可在对象的接收器事件映射中建议或不建议所有条目。
 
 > [!IMPORTANT]
->  此函数不能用于在 Windows 运行时中执行的应用程序。
+> 此函数不能在 Windows 运行时中执行的应用程序中使用。
 
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*五*<br/>
-中指向包含接收器映射的对象的指针。
+*铂*<br/>
+[在]指向包含接收器贴图的对象的指针。
 
-*bAdvise*<br/>
-中如果建议所有接收项，则为 TRUE;如果所有接收器条目都是 unadvised，则为 FALSE。
+*b 建议*<br/>
+[在]如果建议所有接收器条目，则为 TRUE;如果所有接收器条目均未通知，则 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="example"></a>示例
 

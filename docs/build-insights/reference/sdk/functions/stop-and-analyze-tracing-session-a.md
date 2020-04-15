@@ -1,6 +1,6 @@
 ---
-title: StopAndAnalyzeTracingSessionA
-description: C++ BUILD Insights SDK StopAndAnalyzeTracingSessionA 函数引用。
+title: 停止和分析跟踪会话A
+description: C++生成见解 SDK 停止和分析跟踪会话A 函数引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 076cb96935c8734d6a00d0c389238236de1560ec
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 51a979b68cd87c5e7fd07b28acec80c2d7b81cf6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323723"
 ---
-# <a name="stopandanalyzetracingsessiona"></a>StopAndAnalyzeTracingSessionA
+# <a name="stopandanalyzetracingsessiona"></a>停止和分析跟踪会话A
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`StopAndAnalyzeTracingSessionA` 函数将停止正在进行的跟踪会话，并将生成的跟踪保存在临时文件中。 然后，将使用临时文件作为输入立即开始分析会话。 调用此函数的可执行文件必须具有管理员权限。
+该`StopAndAnalyzeTracingSessionA`函数停止正在进行的跟踪会话，并将生成的跟踪保存在临时文件中。 然后，使用临时文件作为输入立即启动分析会话。 调用此函数的可执行文件必须具有管理员权限。
 
 ## <a name="syntax"></a>语法
 
@@ -38,17 +38,17 @@ enum RESULT_CODE StopAndAnalyzeTracingSessionA(
 
 ### <a name="parameters"></a>参数
 
-*sessionName*\
-要停止的跟踪会话的名称。 使用与传递到[StartTracingSession](start-tracing-session.md)、 [StartTracingSessionA](start-tracing-session-a.md)或[StartTracingSessionW](start-tracing-session-w.md)的会话相同的会话名称。
+*会话名称*\
+要停止的跟踪会话的名称。 使用与传递给["开始跟踪会话](start-tracing-session.md)"、[开始跟踪会话A](start-tracing-session-a.md)或["开始跟踪会话W"](start-tracing-session-w.md)的会话名称相同的会话名称。
 
-*统计信息*\
-指向[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md)对象的指针。 在返回之前，`StopAndAnalyzeTracingSessionA` 将跟踪集合统计信息写入此对象中。
+*统计*\
+指向[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md)对象的指针。 `StopAndAnalyzeTracingSessionA`返回之前，在此对象中写入跟踪集合统计信息。
 
-*analysisDescriptor*\
-指向[ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)对象的指针。 使用此对象配置 `StopAndAnalyzeTracingSessionA`启动的分析会话。
+*分析描述符*\
+指向[ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)对象的指针。 使用此对象可以配置 由`StopAndAnalyzeTracingSessionA`启动的分析会话。
 
 ### <a name="return-value"></a>返回值
 
-[RESULT_CODE](../other-types/result-code-enum.md)枚举中的结果代码。
+来自[RESULT_CODE](../other-types/result-code-enum.md)枚举的结果代码。
 
 ::: moniker-end

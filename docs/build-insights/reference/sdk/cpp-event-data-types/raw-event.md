@@ -1,6 +1,6 @@
 ---
 title: RawEvent 类
-description: C++ BUILD Insights SDK RawEvent 类引用。
+description: C++生成见解 SDK RawEvent 类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4088920d6070e14d64ccd046238c1c49b2556ea1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 83629457ac3a0d1f991f6b084af2f3400612b2ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334600"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324374"
 ---
 # <a name="rawevent-class"></a>RawEvent 类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`RawEvent` 类用于表示[EventStack](event-stack.md)中的常规事件。
+该`RawEvent`类用于表示[事件堆栈](event-stack.md)中的常规事件。
 
 ## <a name="syntax"></a>语法
 
@@ -63,42 +63,42 @@ public:
 
 ## <a name="remarks"></a>备注
 
-`RawEvent` 类中的几个成员函数返回一个滴答计数。 C++Build Insights 使用 Windows 性能计数器作为刻度的源。 滴答计数必须与计时周期一起使用，以将其转换为时间单位（如秒）。 可以调用 `TickFrequency` 成员函数以获取滴答频率。 请参阅[EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example)页面，以获取有关如何将刻度转换为时间单位的示例。
+`RawEvent`类中的多个成员函数返回刻度计数。 C++生成见解使用 Windows 的性能计数器作为报价源。 刻度计数必须与刻度频率一起使用，才能将其转换为时间单位（如秒）。 可以`TickFrequency`调用成员函数以获取滴答频率。 有关如何将刻度转换为时间单位的示例，请参阅[EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example)页。
 
-如果不想自行转换刻度，则 `RawEvent` 类将提供按毫微秒返回时间值的成员函数。 使用标准C++ `chrono` 库将毫微秒转换为其他时间单位。
+如果不想自己转换刻度，`RawEvent`类提供以纳秒为单位返回时间值的成员函数。 使用标准C++`chrono`库将纳秒转换为其他时间单位。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="constructor"></a>构造函数
 
-[RawEvent](#raw-event)
+[原始事件](#raw-event)
 
 ### <a name="functions"></a>函数
 
 [CPUTicks](#cpu-ticks)\
-[CPUTime](#cpu-time)\
+[CPU时间](#cpu-time)\
 [数据](#data)\
-[持续时间](#duration)\
-[EventId](#event-id)
-[EventInstanceId](#event-instance-id)
+[时间](#duration)\
+[事件 Id](#event-id)
+[事件实例 Id](#event-instance-id)
 [事件名称](#event-name)\
-[EventWideName](#event-wide-name)\
-[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
-[ExclusiveCPUTime](#exclusive-cpu-time)\
-[ExclusiveDuration](#exclusive-duration)\
-[ExclusiveDurationTicks](#exclusive-duration-ticks)\
-[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
-[ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
-[ProcessId](#process-id)\
-[ProcessorIndex](#processor-index)\
-[StartTimestamp](#start-timestamp)\
-[StopTimestamp](#stop-timestamp)\
-[ThreadId](#thread-id)\
-[TickFrequency](#tick-frequency)\
-[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
-[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
+[事件宽名称](#event-wide-name)\
+[独家CPUTicks](#exclusive-cpu-ticks)\
+[独家CPU时间](#exclusive-cpu-time)\
+[独家持续时间](#exclusive-duration)\
+[独家持续时间提示](#exclusive-duration-ticks)\
+[独家华尔街时间责任](#exclusive-wall-clock-time-responsibility)\
+[独家华尔街时间责任提示](#exclusive-wall-clock-time-responsibility-ticks)\
+[进程 Id](#process-id)\
+[处理器索引](#processor-index)\
+[开始时间戳](#start-timestamp)\
+[停止时间戳](#stop-timestamp)\
+[线程 Id](#thread-id)\
+[滴答频率](#tick-frequency)\
+[墙钟时间责任](#wall-clock-time-responsibility)\
+[墙钟时间责任提示](#wall-clock-time-responsibility-ticks)
 
-## <a name="raw-event"></a>RawEvent
+## <a name="rawevent"></a><a name="raw-event"></a>原始事件
 
 ```cpp
 RawEvent(const EVENT_DATA& data);
@@ -106,10 +106,10 @@ RawEvent(const EVENT_DATA& data);
 
 ### <a name="parameters"></a>参数
 
-*event*\
+*事件*\
 事件数据。
 
-## <a name="cpu-ticks"></a>CPUTicks
+## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -117,9 +117,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>返回值
 
-此活动期间发生的 CPU 计时周期数。 CPU 滴答与常规计时周期不同。 仅当 CPU 执行活动中的代码时，才对 CPU 计时周期计数。 与活动关联的线程处于睡眠状态时，不会对 CPU 计时周期计数。
+在此活动期间发生的 CPU 刻度数。 CPU 刻度不同于常规刻度。 仅当 CPU 在活动中执行代码时，才会计算 CPU 刻度。 当与活动关联的线程处于睡眠状态时，不会计算 CPU 刻度。
 
-## <a name="cpu-time"></a>CPUTime
+## <a name="cputime"></a><a name="cpu-time"></a>CPU时间
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -127,9 +127,9 @@ std::chrono::nanoseconds CPUTime()() const;
 
 ### <a name="return-value"></a>返回值
 
-CPU 在此活动内执行代码的时间长度。 如果子活动在单独的线程上执行，则此值可能高于活动的持续时间。 该值以毫微秒为单位返回。
+CPU 在此活动中执行代码的时间量。 如果在单独的线程上执行子活动，则此值可能高于活动的持续时间。 该值以纳秒为单位返回。
 
-## <a name="data"></a>数据
+## <a name="data"></a><a name="data"></a>数据
 
 ```cpp
 const void* Data() const;
@@ -139,7 +139,7 @@ const void* Data() const;
 
 指向此事件中包含的额外数据的指针。 有关如何解释此字段的详细信息，请参阅[EVENT_DATA](../c-event-data-types/event-data-struct.md)。
 
-## <a name="duration"></a>持续时间
+## <a name="duration"></a><a name="duration"></a>时间
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -147,9 +147,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>返回值
 
-活动的持续时间，以纳秒为单位。
+活动持续时间（以纳秒为单位）。
 
-## <a name="event-id"></a>EventId
+## <a name="eventid"></a><a name="event-id"></a>事件 Id
 
 ```cpp
 const unsigned short& EventId() const;
@@ -159,7 +159,7 @@ const unsigned short& EventId() const;
 
 标识事件类型的数字。 有关事件标识符的列表，请参阅[EVENT_ID](../c-event-data-types/event-id-enum.md)。
 
-## <a name="event-instance-id"></a>EventInstanceId
+## <a name="eventinstanceid"></a><a name="event-instance-id"></a>事件实例 Id
 
 ```cpp
 const unsigned long long& EventInstanceId() const;
@@ -167,9 +167,9 @@ const unsigned long long& EventInstanceId() const;
 
 ### <a name="return-value"></a>返回值
 
-一个数字，用于唯一标识跟踪内的事件。 多次分析或 relogging 同一跟踪时，此值不会发生更改。 此值用于标识多个分析中的同一事件，或 relogging 在同一跟踪上传递的事件。
+唯一标识跟踪内事件的数字。 多次分析或重新记录同一跟踪时，此值不会更改。 使用此值可识别多个分析或重新记录通过同一跟踪中的同一事件。
 
-## <a name="event-name"></a>名
+## <a name="eventname"></a><a name="event-name"></a>事件名称
 
 ```cpp
 const char* EventName() const;
@@ -177,9 +177,9 @@ const char* EventName() const;
 
 ### <a name="return-value"></a>返回值
 
-包含[EventId](#event-id)标识的事件类型名称的 ANSI 字符串。
+包含[事件 Id](#event-id)标识的事件类型名称的 ANSI 字符串。
 
-## <a name="event-wide-name"></a>EventWideName
+## <a name="eventwidename"></a><a name="event-wide-name"></a>事件宽名称
 
 ```cpp
 const wchar_t* EventWideName() const;
@@ -187,9 +187,9 @@ const wchar_t* EventWideName() const;
 
 ### <a name="return-value"></a>返回值
 
-宽字符串，其中包含[EventId](#event-id)标识的事件类型的名称。
+包含[事件 Id](#event-id)标识的事件类型名称的宽字符串。
 
-## <a name="exclusive-cpu-ticks"></a>ExclusiveCPUTicks
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>独家CPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -197,9 +197,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>返回值
 
-与[CPUTicks](#cpu-ticks)相同，但不包括子活动中发生的 CPU 时间刻度。
+与[CPUTick 相同](#cpu-ticks)，但不包括子活动中发生的 CPU 刻度。
 
-## <a name="exclusive-cpu-time"></a>ExclusiveCPUTime
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>独家CPU时间
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -207,9 +207,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>返回值
 
-与[CPUTime](#cpu-time)相同，不同之处在于子活动的 CPU 时间不包括在内。
+与[CPUTime](#cpu-time)相同，但不包括子活动的 CPU 时间。
 
-## <a name="exclusive-duration"></a>ExclusiveDuration
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>独家持续时间
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -217,9 +217,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>返回值
 
-活动的持续时间，以纳秒为单位，不包括子活动中所用的时间量。
+活动持续时间（以纳秒为单位），不包括在子活动中花费的时间量。
 
-## <a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>独家持续时间提示
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -227,9 +227,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>返回值
 
-此活动中发生的计时周期数，不包括子活动中发生的计时周期数。
+在此活动中发生的刻度数，不包括子活动中发生的刻度数。
 
-## <a name="exclusive-wall-clock-time-responsibility"></a>ExclusiveWallClockTimeResponsibility
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>独家华尔街时间责任
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -237,9 +237,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>返回值
 
-与[WallClockTimeResponsibility](#wall-clock-time-responsibility)相同，但不包括子活动的时钟时间责任。
+与["墙钟时间责任"](#wall-clock-time-responsibility)相同，但不包括儿童活动的挂钟时间责任。
 
-## <a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeResponsibilityTicks
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>独家华尔街时间责任提示
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -247,9 +247,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>返回值
 
-与[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)相同，但不包括子活动的时钟时间责任时间刻度。
+与["墙钟时间责任"相同](#wall-clock-time-responsibility-ticks)，但不包括儿童活动的挂钟时间责任。
 
-## <a name="process-id"></a>ProcessId
+## <a name="processid"></a><a name="process-id"></a>进程 Id
 
 ```cpp
 const unsigned long& ProcessId() const;
@@ -257,9 +257,9 @@ const unsigned long& ProcessId() const;
 
 ### <a name="return-value"></a>返回值
 
-发生事件的进程的标识符。
+事件发生的进程的标识符。
 
-## <a name="processor-index"></a>ProcessorIndex
+## <a name="processorindex"></a><a name="processor-index"></a>处理器索引
 
 ```cpp
 const unsigned short& ProcessorIndex() const;
@@ -267,9 +267,9 @@ const unsigned short& ProcessorIndex() const;
 
 ### <a name="return-value"></a>返回值
 
-发生事件的逻辑处理器的从零开始的索引。
+事件发生的逻辑处理器的零基索引。
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>开始时间戳
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -277,9 +277,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>返回值
 
-活动开始时捕获的滴答值。
+活动开始时捕获的刻度值。
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>停止时间戳
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -287,9 +287,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>返回值
 
-活动停止时捕获的滴答值。
+活动停止时捕获的刻度值。
 
-## <a name="thread-id"></a>ThreadId
+## <a name="threadid"></a><a name="thread-id"></a>线程 Id
 
 ```cpp
 const unsigned long& ThreadId() const;
@@ -299,7 +299,7 @@ const unsigned long& ThreadId() const;
 
 发生事件的线程的标识符。
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>滴答频率
 
 ```cpp
 const long long& TickFrequency() const;
@@ -307,9 +307,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>返回值
 
-计算此事件的持续时间时，每秒要使用的计时周期数。
+评估以此事件的刻度为单位的持续时间时，每秒使用的刻度数。
 
-## <a name="wall-clock-time-responsibility"></a>WallClockTimeResponsibility
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>墙钟时间责任
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -317,9 +317,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>返回值
 
-此活动的时钟时间责任（以纳秒为单位）。 有关时钟时间责任的具体工作方式的详细信息，请参阅[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)。
+此活动的挂钟时间责任，以纳秒为单位。 有关挂钟时间责任的含义的详细信息，请参阅["挂时钟时间责任提示](#wall-clock-time-responsibility-ticks)"。
 
-## <a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>墙钟时间责任提示
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -327,6 +327,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>返回值
 
-表示此活动对总时钟时间的贡献的滴答计数。 时钟周期时间责任周期不同于常规时钟周期。 时钟周期时间责任刻度考虑活动之间的并行度。 两个并行活动的持续时间可能为50，并且具有相同的开始时间和停止时间。 在这种情况下，这两种情况均分配有25个时钟周期的时钟时间。
+表示此活动对总挂钟时间的贡献的刻度计数。 挂钟时间责任刻度不同于常规刻度。 钟点时间责任滴答声考虑了活动之间的并行性。 两个并行活动的持续时间可能为 50 个刻度，并且相同的开始和停止时间相同。 在这种情况下，两者都被分配了 25 个刻度的挂钟时间责任。
 
 ::: moniker-end

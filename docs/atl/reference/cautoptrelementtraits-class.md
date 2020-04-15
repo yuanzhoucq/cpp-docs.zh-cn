@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-ms.openlocfilehash: d217441048403b0ff5361f8049b76367174812f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac29116dc9beedf587c42cc0e52f8c9dbaf3d782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246731"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318874"
 ---
 # <a name="cautoptrelementtraits-class"></a>CAutoPtrElementTraits 类
 
-在创建集合的智能指针时，此类提供方法、 静态函数和有用的 typedef。
+此类提供创建智能指针集合时有用的方法、静态函数和 typedef。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -40,48 +40,48 @@ class CAutoPtrElementTraits
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|要用于将元素添加到集合类对象的数据类型。|
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|要用于从集合类对象中检索元素的数据类型。|
+|[CAutoPtr元素：：INARGTYPE](#inargtype)|用于向集合类对象添加元素的数据类型。|
+|[CAutoPtr元素：：OUTARGTYPE](#outargtype)|用于从集合类对象检索元素的数据类型。|
 
 ## <a name="remarks"></a>备注
 
-此类提供帮助包含智能指针集合类对象的创建方法，静态函数和 typedef。 类[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)并[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)派生`CAutoPtrElementTraits`。 如果构建的智能指针集合需要新的向量和 delete 运算符，使用[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)相反。
+此类提供用于帮助创建包含智能指针的集合类对象的方法、静态函数和 typedef。 类[CAutoPtrarray](../../atl/reference/cautoptrarray-class.md)和[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)派生自`CAutoPtrElementTraits`。 如果构建需要矢量新运算符和删除运算符的智能指针集合，请使用[CAutoVectorPtrElementTraits。](../../atl/reference/cautovectorptrelementtraits-class.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+[C默认比较特征](../../atl/reference/cdefaultcomparetraits-class.md)
 
 [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[元素库](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefault元素](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoPtrElementTraits`
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标题：** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE
+## <a name="cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtr元素：：INARGTYPE
 
-要用于将元素添加到集合类对象的数据类型。
+用于向集合类对象添加元素的数据类型。
 
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE
+## <a name="cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtr元素：：OUTARGTYPE
 
-要用于从集合类对象中检索元素的数据类型。
+用于从集合类对象检索元素的数据类型。
 
 ```
 typedef T *& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

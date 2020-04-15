@@ -1,6 +1,6 @@
 ---
-title: StopAndRelogTracingSession
-description: C++ BUILD Insights SDK StopAndRelogTracingSession 函数引用。
+title: 停止和重新记录跟踪会话
+description: C++生成见解 SDK 停止和重新记录跟踪会话函数引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e99568f9b509b89ccd0f0711433dec9d96d904bc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1f6f5af63d25504226707d977791430463374328
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334198"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323666"
 ---
-# <a name="stopandrelogtracingsession"></a>StopAndRelogTracingSession
+# <a name="stopandrelogtracingsession"></a>停止和重新记录跟踪会话
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`StopAndRelogTracingSession` 函数将停止正在进行的跟踪会话，并将生成的跟踪保存在临时文件中。 然后，relogging 会话立即开始使用临时文件作为输入。 Relogging 会话生成的最终 relogged 跟踪保存在由调用方指定的文件中。 调用此函数的可执行文件必须具有管理员权限。
+该`StopAndRelogTracingSession`函数停止正在进行的跟踪会话，并将生成的跟踪保存在临时文件中。 然后，使用临时文件作为输入立即启动重新日志记录会话。 重新日志记录会话生成的最终重新记录跟踪将保存在调用方指定的文件中。 调用此函数的可执行文件必须具有管理员权限。
 
 ## <a name="syntax"></a>语法
 
@@ -57,35 +57,35 @@ RESULT_CODE StopAndRelogTracingSession(
 
 ### <a name="parameters"></a>参数
 
-*sessionName*\
-要停止的跟踪会话的名称。 使用与传递到[StartTracingSession](start-tracing-session.md)、 [StartTracingSessionA](start-tracing-session-a.md)或[StartTracingSessionW](start-tracing-session-w.md)的会话相同的会话名称。
+*会话名称*\
+要停止的跟踪会话的名称。 使用与传递给["开始跟踪会话](start-tracing-session.md)"、[开始跟踪会话A](start-tracing-session-a.md)或["开始跟踪会话W"](start-tracing-session-w.md)的会话名称相同的会话名称。
 
-*outputLogFile*\
-要在其中写入 relogging 会话生成的 relogged 跟踪的文件。
+*输出日志文件*\
+用于写入重新记录会话生成的重新记录跟踪的文件。
 
-*统计信息*\
-指向[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md)对象的指针。 在返回之前，`StopAndRelogTracingSession` 将跟踪集合统计信息写入此对象中。
+*统计*\
+指向[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md)对象的指针。 `StopAndRelogTracingSession`返回之前，在此对象中写入跟踪集合统计信息。
 
-*numberOfAnalysisPasses*\
-要在跟踪上运行的分析传递的数目。 跟踪在每个分析传递后通过提供的分析器组传递。
+*分析通道数*\
+要在跟踪上运行的分析数。 跟踪通过每个分析传递一次通过提供的分析器组。
 
-*systemEventsRetentionFlags*\
-一个[RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md)位掩码，它指定要在 relogged 跟踪中保留的系统 ETW 事件。
+*系统事件保留标志*\
+指定要在重新记录的跟踪中保留哪些系统 ETW 事件的[RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md)位掩码。
 
-*analyzerGroup*\
-用于 relogging 会话分析阶段的分析器组。 调用[MakeStaticAnalyzerGroup](make-static-analyzer-group.md)创建分析器组。 如果要使用从[MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md)获取的动态分析器组，请先将其地址传递到 `MakeStaticAnalyzerGroup`，然后将其封装在静态分析器组内。
+*分析仪组*\
+用于重新记录会话分析阶段的分析器组。 调用[MakeStatic 分析器组](make-static-analyzer-group.md)以创建分析器组。 如果要使用从[MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md)获得的动态分析器组，首先通过将地址传递给`MakeStaticAnalyzerGroup`将其封装在静态分析器组中。
 
-*reloggerGroup*\
-Relogger 组将事件 relogs 到*outputLogFile*中指定的跟踪文件中。 调用[MakeStaticReloggerGroup](make-static-relogger-group.md)创建 relogger 组。 如果要使用从[MakeDynamicReloggerGroup](make-dynamic-relogger-group.md)获取的动态 relogger 组，请先将其地址传递到 `MakeStaticReloggerGroup`，并将其封装在静态 relogger 组内。
+*重新记录组*\
+重新记录组，将事件重新记录到*输出日志文件中*指定的跟踪文件中。 调用[使静态重新记录组](make-static-relogger-group.md)创建重新记录组。 如果你想使用从[MakeDynamicReloggerGroup](make-dynamic-relogger-group.md)获得的动态重新记录器组，首先通过将其地址传递给`MakeStaticReloggerGroup`将其封装在静态重新记录器组中。
 
 ### <a name="return-value"></a>返回值
 
-[RESULT_CODE](../other-types/result-code-enum.md)枚举中的结果代码。
+来自[RESULT_CODE](../other-types/result-code-enum.md)枚举的结果代码。
 
 ### <a name="remarks"></a>备注
 
-输入跟踪通过分析器组*numberOfAnalysisPasses*时间传递。 Relogging pass 没有类似的选项。 所有分析传递完成后，只会在 relogger 组通过传递一次跟踪。
+输入跟踪通过分析器组*编号分析传递次数分析。* 没有类似的重新记录通行证选项。 跟踪在完成所有分析过程后，仅通过一次重新记录组槽。
 
-系统事件的 relogging （如 relogger 类中的 CPU 示例）不受支持。 使用*systemEventsRetentionFlags*参数来决定要在输出跟踪中保留的系统事件。
+不支持重新记录类中的系统事件（如 CPU 样本）的重新记录。 使用*系统事件保留标志*参数决定要在输出跟踪中保留哪些系统事件。
 
 ::: moniker-end

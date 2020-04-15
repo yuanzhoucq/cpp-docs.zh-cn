@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindowLic 接口
+title: IAxwinHost窗口接口
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindowLic
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: aca3970d13db53ffa04fe9582bbe9b8db78e820d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 561a65702f1d4f57b4db1afc75769ce4cc523c1c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329913"
 ---
-# <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 接口
+# <a name="iaxwinhostwindowlic-interface"></a>IAxwinHost窗口接口
 
-此接口提供用于操作授权控件及其宿主对象的方法。
+此接口提供操作许可控件及其主机对象的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -32,27 +32,27 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 |||
 |-|-|
-|[CreateControlLic](#createcontrollic)|创建授权控件，并将其附加到主机对象。|
-|[CreateControlLicEx](#createcontrollicex)|创建授权控件，将其附加到主机对象，并选择性地设置事件处理程序。|
+|[创建控制](#createcontrollic)|创建许可控件并将其附加到主机对象。|
+|[创建控制](#createcontrollicex)|创建许可控件，将其附加到主机对象，并可以选择设置事件处理程序。|
 
 ## <a name="remarks"></a>备注
 
-`IAxWinHostWindowLic` 继承自[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)并添加支持创建授权控件的方法。
+`IAxWinHostWindowLic`从[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)继承，并添加支持创建许可控件的方法。
 
-有关使用此接口的成员的示例，请参阅[使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有关使用此接口的成员的示例，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。
 
 ## <a name="requirements"></a>要求
 
-此接口的定义以 IDL 或C++的形式提供，如下所示。
+此接口的定义可作为 IDL 或C++，如下所示。
 
 |定义类型|文件|
 |---------------------|----------|
-|.IDL|ATLIFace.idl|
-|C++|ATLIFace （也包含在 Atlbase.h 中）|
+|Idl|ATLIFace.idl|
+|C++|ATLIFace.h （也包含在 ATLBase.h 中）|
 
-##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic
+## <a name="iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a>IAxWinHostwindowlic：：创建控制
 
-创建授权控件，对其进行初始化，并将其托管在由 `hWnd`标识的窗口中。
+创建许可控件，初始化它，并将其托管在 标识的`hWnd`窗口中。
 
 ```
 STDMETHOD(CreateControlLic)(
@@ -62,24 +62,24 @@ STDMETHOD(CreateControlLic)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*bstrLic*<br/>
-中包含控件的许可证密钥的 BSTR。
+*bstrLIC*<br/>
+[在]包含控件的许可证密钥的 BSTR。
 
 ### <a name="remarks"></a>备注
 
-有关剩余参数和返回值的说明，请参阅[IAxWinHostWindow：： CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) 。
+有关剩余参数和返回值的说明，请参阅[IAxWinHostWindow：创建控制](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。
 
-调用此方法等效于调用[IAxWinHostWindowLic：： CreateControlLicEx](#createcontrollicex)
+调用此方法等效于调用[IAxWinHostWindowlic：：创建控制](#createcontrollicex)
 
 ### <a name="example"></a>示例
 
-有关使用 `IAxWinHostWindowLic::CreateControlLic`的示例，请参阅[使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有关 使用`IAxWinHostWindowLic::CreateControlLic`的样本，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。
 
-##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx
+## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a>IAxWinHost窗口：：创建控制
 
-创建许可的 ActiveX 控件，对其进行初始化，并将其托管在指定窗口中，类似于[IAxWinHostWindow：： CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。
+创建许可的 ActiveX 控件，初始化它，并将其托管在指定的窗口中，类似于[IAxWinHostWindow：：创建控制](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -92,15 +92,15 @@ STDMETHOD(CreateControlLicEx)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*bstrLic*<br/>
-中包含控件的许可证密钥的 BSTR。
+*bstrLIC*<br/>
+[在]包含控件的许可证密钥的 BSTR。
 
 ### <a name="remarks"></a>备注
 
-有关剩余参数和返回值的说明，请参阅[IAxWinHostWindow：： CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) 。
+有关剩余参数和返回值的说明，请参阅[IAxWinHostWindow：创建ControlEx。](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex)
 
 ### <a name="example"></a>示例
 
-有关使用 `IAxWinHostWindowLic::CreateControlLicEx`的示例，请参阅[使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有关 使用`IAxWinHostWindowLic::CreateControlLicEx`的样本，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。

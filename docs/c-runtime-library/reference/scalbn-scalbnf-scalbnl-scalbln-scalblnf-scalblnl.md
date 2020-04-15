@@ -1,6 +1,6 @@
 ---
 title: scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -8,6 +8,12 @@ api_name:
 - scalblnf
 - scalbn
 - scalbln
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d0c7f6db7ad6970be85203eef76e5ccb152e2200
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948904"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332590"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -97,7 +104,7 @@ long double scalblnl(
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 浮点值。
 
 *exp*<br/>
@@ -105,23 +112,25 @@ long double scalblnl(
 
 ## <a name="return-value"></a>返回值
 
-**Scalbn**函数在成功时返回*x* \* **FLT_RADIX**<sup>exp</sup>的值。 溢出时（取决于*x*的符号）， **scalbn**返回 +/- **HUGE_VAL**;**errno**值设置为**ERANGE**。
+**scalbn**函数在成功时返回*x* \* **FLT_RADIX**<sup>exp</sup>的值。 在溢出（取决于*x*的符号 **），scalbn**返回 +/- **HUGE_VAL**;**errno**值设置为**ERANGE**。
 
-有关**errno**和可能的错误返回值的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+有关**errno**和可能的错误返回值的详细信息，请参阅[errno、_doserrno、_sys_errlist 和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**FLT_RADIX**在 float > \<中定义为本机浮点基数; 在二进制系统上，它的值为2， **scalbn**等效于[ldexp](ldexp.md)。
+**FLT_RADIX**在\<float.h>定义为本机浮点半径;在二进制系统上，它的值为 2，**而 scalbn**等效于[ldexp](ldexp.md)。
 
-由于C++允许重载，因此可以调用**scalbn**和**scalbln**的重载，该重载采用和返回**float**或**long** **double**类型。 在 C 程序中， **scalbn**始终采用**double**和**int**并返回**double**， **scalbln**始终使用**double**和**long** ，并返回**double**。
+由于C++允许重载，因此可以调用带和返回**浮点**或**长****双**类型的**scalbn**和**scalbln**的重载。 在C程序中 **，scalbn**总是需要**一个双**和一**个int，** 并返回一**个双**，和**scalbln**总是需要**一个双**和**长**，并返回一**个双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**scalbn**、 **scalbnf**、 **scalbnl**、 **scalbln**、 **scalblnf**、 **scalblnl**|\<math.h>|\<cmath>|
+|**斯卡尔本**，**斯卡尔布夫**，**斯卡尔布恩**，**斯卡尔布恩**，**斯卡尔布恩，****斯卡尔布恩**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -141,13 +150,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 6.4 times FLT_RADIX to the power of 3 is 51.2
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

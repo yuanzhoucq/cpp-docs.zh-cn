@@ -7,20 +7,20 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: dffdd111d33d6fbd845e1534cdef1d5c8e1749d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bcdb7076982e2f0bd08f4fd82bb45f21e61ef20
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275407"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329328"
 ---
 # <a name="registry-scripting-examples"></a>注册表脚本示例
 
-本主题中的脚本示例演示如何将密钥添加到系统注册表，注册注册机构 COM 服务器，并指定多个分析树。
+本主题中的脚本示例演示如何向系统注册表添加密钥、注册注册商 COM 服务器以及指定多个解析树。
 
-## <a name="add-a-key-to-hkeycurrentuser"></a>将密钥添加到 HKEY_CURRENT_USER
+## <a name="add-a-key-to-hkey_current_user"></a>添加密钥以HKEY_CURRENT_USER
 
-以下的分析树说明了一个简单的脚本，将单个密钥添加到系统注册表。 具体而言，该脚本会添加密钥，`MyVeryOwnKey`到`HKEY_CURRENT_USER`。 它还将分配的默认字符串值`HowGoesIt`为使用新密钥：
+以下分析树说明了向系统注册表添加单个密钥的简单脚本。 特别是，脚本将键`MyVeryOwnKey`添加到`HKEY_CURRENT_USER`。 它还将 的`HowGoesIt`默认字符串值分配给新键：
 
 ```
 HKEY_CURRENT_USER
@@ -29,7 +29,7 @@ HKEY_CURRENT_USER
 }
 ```
 
-此脚本可以轻松地扩展来定义多个子项，如下所示：
+此脚本可以轻松扩展以定义多个子键，如下所示：
 
 ```
 HKCU
@@ -45,11 +45,11 @@ HKCU
 }
 ```
 
-现在，该脚本会添加一个子项`HasASubkey`到`MyVeryOwnKey`。 此子项，它将添加到这两`PrettyCool`子项 (默认值`DWORD`值为 55) 和`ANameValue`命名的值 (字符串值为`WithANamedValue`)。
+现在，脚本将子键`HasASubkey`添加到`MyVeryOwnKey`。 到此子键，它同时`PrettyCool`添加子键（默认值`DWORD`为 55）和`ANameValue`命名值（字符串值为`WithANamedValue`）。
 
-##  <a name="_atl_register_the_registrar_com_server"></a> 注册注册机构 COM 服务器
+## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>注册注册商 COM 服务器
 
-以下脚本注册注册机构 COM 服务器本身。
+以下脚本注册注册商 COM 服务器本身。
 
 ```
 HKCR
@@ -72,29 +72,29 @@ HKCR
 }
 ```
 
-在运行时，此分析树添加`ATL.Registrar`关键`HKEY_CLASSES_ROOT`。 此新注册表项，然后 it:
+在运行时，此解析树将`ATL.Registrar`键添加到`HKEY_CLASSES_ROOT`。 到此新密钥，它然后：
 
-- 指定`ATL Registrar Class`作为键的默认字符串值。
+- 指定`ATL Registrar Class`为键的默认字符串值。
 
-- 添加`CLSID`作为子项。
+- 添加`CLSID`为子键。
 
-- 指定`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`为`CLSID`。 (此值是注册机构的用于 CLSID `CoCreateInstance`。)
+- 为`{44EC053A-400F-11D0-9DCD-00A0C90391D3}``CLSID`指定 。 （此值是注册器的 CLSID，用于`CoCreateInstance`.
 
-由于`CLSID`是共享的它不应删除中取消注册模式。 该语句中， `NoRemove CLSID`，指示为此目的`CLSID`应在注册模式下打开并在注销模式被忽略。
+由于`CLSID`是共享的，因此不应在取消注册模式下将其删除。 `NoRemove CLSID`语句 ， 通过指示`CLSID`应在注册模式下打开并在取消注册模式下忽略来这样做。
 
-`ForceRemove`语句提供了一个内部管理功能，通过删除然后重新创建该密钥的密钥及其所有子项。 这可以是子项的名称已更改的情况下很有用。 在此脚本示例中，`ForceRemove`检查是否`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`已存在。 如果是这样， `ForceRemove`:
+语句`ForceRemove`通过在重新创建密钥之前删除键及其所有子键来提供内务管理功能。 如果子键的名称已更改，这非常有用。 在此脚本示例中，`ForceRemove`检查是否存在。 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` 如果是， `ForceRemove`
 
-- 以递归方式删除`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`和所有子项。
+- 递归删除`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`及其所有子键。
 
 - 重新创建`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。
 
-- 将添加`ATL Registrar Class`的默认字符串值作为`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。
+- 添加`ATL Registrar Class`为 的默认字符串值`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。
 
-分析树现在将添加到两个新子项`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。 第一个键， `ProgID`，获取该 progid 的默认字符串值。 第二个密钥， `InprocServer32`，获取默认字符串值， `%MODULE%`，即预处理器值部分所述，[使用可替换参数 （注册机构的预处理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)，这篇文章。 `InprocServer32` 此外可获取已命名的值`ThreadingModel`，使用的字符串值`Apartment`。
+解析树现在向`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`中添加了两个新的子键。 第一个键`ProgID`获取默认字符串值，该值是 ProgID。 第二个键`InprocServer32`获取默认字符串值`%MODULE%`，这是本文"[使用可替换参数（注册器的预处理器"）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)部分中解释的预处理器值。 `InprocServer32`还获取命名值 ，`ThreadingModel`字符串值 为`Apartment`。
 
 ## <a name="specify-multiple-parse-trees"></a>指定多个分析树
 
-若要在脚本中指定多个分析树，只需将一个树放在另一端。 例如，以下脚本添加密钥， `MyVeryOwnKey`，为两个分析树`HKEY_CLASSES_ROOT`和`HKEY_CURRENT_USER`:
+要在脚本中指定多个解析树，只需将一个树放在另一个树的末尾即可。 例如，以下脚本将键`MyVeryOwnKey`、 添加到 和`HKEY_CLASSES_ROOT``HKEY_CURRENT_USER`的解析树中：
 
 ```
 HKCR
@@ -108,8 +108,8 @@ HKEY_CURRENT_USER
 ```
 
 > [!NOTE]
-> 在注册器脚本中，4 K 是令牌的最大大小。 （令牌是在语法中任何可识别的元素。）在前面的脚本示例`HKCR`， `HKEY_CURRENT_USER`， `'MyVeryOwnKey'`，和`'HowGoesIt'`是所有令牌。
+> 在注册器脚本中，4K 是最大令牌大小。 （令牌是语法中的任何可识别元素。在前面的脚本`HKCR`示例中，`HKEY_CURRENT_USER`和`'MyVeryOwnKey'``'HowGoesIt'`都是令牌。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[创建注册器脚本](../atl/creating-registrar-scripts.md)
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)

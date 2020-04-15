@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelper Class
+title: CSimpleMapEqualHelper 类
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d137a35a517ea93139f036f6e9a7a8de06d518a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330744"
 ---
-# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper Class
+# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper 类
 
-此类是一个帮助程序对于[CSimpleMap](../../atl/reference/csimplemap-class.md)类。
+此类是[CSimpleMap](../../atl/reference/csimplemap-class.md)类的帮助程序。
 
 ## <a name="syntax"></a>语法
 
@@ -30,31 +30,31 @@ class CSimpleMapEqualHelper
 #### <a name="parameters"></a>参数
 
 *TKey*<br/>
-键的元素。
+关键元素。
 
 *TVal*<br/>
-Value 元素中。
+值元素。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|（静态）测试两个键相等。|
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|（静态）测试两个值相等。|
+|[CSimpleMap平等帮助者：：是平等密钥](#isequalkey)|（静态）测试两个键的相等性。|
+|[CSimpleMap 等值帮助者：：等于值](#isequalvalue)|（静态）测试两个值的相等性。|
 
 ## <a name="remarks"></a>备注
 
-此特征类是对的补充`CSimpleMap`类。 它提供用于比较两个方法`CSimpleMap`对象是否相等的元素 （具体而言，键和值的组件）。 默认情况下的键和值使用比较**operator==()**，但如果映射包含缺少其自己的相等运算符的复杂数据类型，此类可以重写以提供需要更多的功能。
+此特征类是对`CSimpleMap`类的补充。 它提供了比较两`CSimpleMap`个对象元素（特别是键和值组件）的相等性的方法。 默认情况下，使用**运算符 _（）** 比较键和值，但如果地图包含缺少其自身相等运算符的复杂数据类型，则可以重写此类以提供所需的额外功能。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlsimpcoll.h
+**标题：** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMap平等帮助者：：是平等密钥
 
-测试两个键相等。
+测试两个键的相等性。
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -66,15 +66,15 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 第一个键。
 
 *k2*<br/>
-第二个密钥。
+第二个键。
 
 ### <a name="return-value"></a>返回值
 
-如果键相等，则返回 false 否则，则返回 true。
+如果键相等，则返回 true，否则为 false。
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMap 等值帮助者：：等于值
 
-测试两个值相等。
+测试两个值的相等性。
 
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -90,9 +90,9 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="return-value"></a>返回值
 
-如果值均相等，则返回 false，则返回 true。
+如果值相等，则返回 true，否则为 false。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CSimpleMapEqualHelperFalse 类](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

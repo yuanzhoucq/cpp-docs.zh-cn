@@ -1,6 +1,6 @@
 ---
-title: Value 类
-description: C++ BUILD Insights SDK value 类引用。
+title: 环境变量类
+description: C++生成见解 SDK 环境变量类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 19e9278e76fb2116dac30a0e790fba86c6c56484
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 963c52e0ea9e048448c6f2b3ac62d9938817467e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325021"
 ---
-# <a name="environmentvariable-class"></a>Value 类
+# <a name="environmentvariable-class"></a>环境变量类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`EnvironmentVariable` 类用于[MatchEvent](../functions/match-event.md)、 [MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、 [MatchEventStack](../functions/match-event-stack.md)和[MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md)函数。 使用它来匹配[ENVIRONMENT_VARIABLE](../event-table.md#environment-variable)事件。
+该`EnvironmentVariable`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配[ENVIRONMENT_VARIABLE](../event-table.md#environment-variable)事件。
 
 ## <a name="syntax"></a>语法
 
@@ -40,20 +40,20 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-除了其[SimpleEvent](simple-event.md)基类的继承成员以外，`EnvironmentVariable` 类包含以下成员：
+除了其[SimpleEvent](simple-event.md)基类中继承的成员外，`EnvironmentVariable`该类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
-[Value](#environment-variable)
+[EnvironmentVariable](#environment-variable)
 
 ### <a name="functions"></a>函数
 
-[Name](#name)
-[Value](#value)
+[名称](#name)
+[值](#value)
 
-## <a name="environment-variable"></a>Value
+## <a name="environmentvariable"></a><a name="environment-variable"></a>环境变量
 
 ```cpp
 EnvironmentVariable(const RawEvent& event);
@@ -61,10 +61,10 @@ EnvironmentVariable(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*event*\
+*事件*\
 [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable)事件。
 
-## <a name="name"></a> 名称
+## <a name="name"></a><a name="name"></a>名字
 
 ```cpp
 const wchar_t Name() const;
@@ -74,7 +74,7 @@ const wchar_t Name() const;
 
 环境变量的名称。
 
-## <a name="value"></a>负值
+## <a name="value"></a><a name="value"></a> 值
 
 ```cpp
 const wchar_t Value() const;

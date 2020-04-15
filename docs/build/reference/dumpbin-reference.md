@@ -10,26 +10,26 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad421b0c90ad55126f69a899503d6a73184979f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320531"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN 参考
 
-Microsoft COFF 二进制文件转储器 (DUMPBIN。EXE) 显示有关通用对象文件格式 (COFF) 的二进制文件的信息。 可以使用 DUMPBIN 检查 COFF 对象文件、 COFF 对象、 可执行文件和动态链接库 (Dll) 的标准库。
+微软 COFF 二进制文件转储程序 （DUMPBIN。EXE） 显示有关常见对象文件格式 （COFF） 二进制文件的信息。 您可以使用 DUMPBIN 检查 COFF 对象文件、COFF 对象的标准库、可执行文件和动态链接库 （DLL）。
 
 > [!NOTE]
->  可以仅从 Visual Studio 命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。
+> 只能从可视化工作室命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。
 
-仅[/HEADERS](headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](gl-whole-program-optimization.md)编译器选项。
+只有 [/HEADERS](headers.md) DUMPBIN 选项可用于由 [/GL](gl-whole-program-optimization.md) 编译器选项产生的文件。
 
 - [DUMPBIN 命令行](dumpbin-command-line.md)
 
 - [DUMPBIN 选项](dumpbin-options.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[其他 MSVC 生成工具](c-cpp-build-tools.md)
+[其他 MSVC 构建工具](c-cpp-build-tools.md)

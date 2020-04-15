@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d6e12a1003ea125b0da4bfef580d8096e97553a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319273"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336104"
 ---
-# <a name="qifist-suppress-ftol"></a>/QIfist（取消 _ftol）
+# <a name="qifist-suppress-_ftol"></a>/QIfist（取消 _ftol）
 
-已否决。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。
+已弃用。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。
 
 ## <a name="syntax"></a>语法
 
@@ -28,34 +28,34 @@ ms.locfileid: "62319273"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
->  **/Qifist**选项仅适用于编译器面向 x86; 此编译器选项不是在面向 x64 编译器中可用 orARM。
+> **/QIfist**仅在针对 x86 的编译器中可用;针对 x64 或 ARM 的编译器中不提供此编译器选项。
 
-从浮点类型转换为整型类型，除了`_ftol`函数确保浮点单元 (FPU) 的舍入模式为向零方向 （截断），通过设置的控制字位 10 和 11 位。 这可确保从浮点类型转换为整型类型发生所描述的 ANSI C 标准 （数字的小数部分将被丢弃）。 使用时 **/QIfist**，这一保证不再适用。 舍入模式将一个四个 Intel 参考手册中所述：
+除了从浮点类型转换为积分类型外，`_ftol`该函数还通过设置控制字位 10 和 11 来确保浮点单元 （FPU） 的舍入模式朝零（截断） 方向发展。 这保证了从浮点类型转换为积分类型发生，如 ANSI C 标准所述（放弃数字的小数部分）。 使用 **/QIfist 时**，此保证不再适用。 舍入模式将是英特尔参考手册中记录的四种模式之一：
 
-- 舍入为最接近 （如果等距为偶数）
+- 向最近旋转（偶数，如果等距）
 
-- 向负无穷方向舍入
+- 向负无穷大圆
 
-- 向正无穷大方向舍入
+- 向正无穷大圆
 
-- 向零舍入
+- 向零旋转
 
-可以使用[_control87、 _controlfp， \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C 运行时函数来修改 FPU 的舍入行为。 舍入模式 FPU 默认值为"舍入为最接近。" 使用 **/QIfist**可以提高性能的应用程序，但并不是没有风险。 您应该全面测试你的代码对之前使用依赖于代码生成舍入模式不敏感的部分 **/QIfist**在生产环境中。
+您可以使用[_control87、_controlfp、_control87_2 \_](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C 运行时函数来修改 FPU 的舍入行为。 FPU 的默认舍入模式为"向最近旋转"。 使用 **/QIfist**可以提高应用程序的性能，但不能没有风险。 在依赖生产环境中使用 **/QIfist**构建的代码之前，应彻底测试代码对舍入模式敏感的部分。
 
-[/arch (x86)](arch-x86.md)并 **/QIfist**不能使用同一编译。
+[/arch （x86）](arch-x86.md)和 **/QIfist**不能用于同一编译和。
 
 > [!NOTE]
->  **/Qifist**是不有效默认情况下由于舍入位数也会影响浮点到浮动点舍入 （这发生在每次计算后），因此，当设置为 C 样式 （接近零） 舍入的标志，浮点计算可能会不同。 **/Qifist**不应在你的代码依赖于截断的浮点数的小数部分的预期行为。 如果您不确定，请不要使用 **/QIfist**。
+> **/QIfist**在默认情况下无效，因为舍入位也会影响浮点到浮点舍入（每次计算后发生），因此，当您为 C 样式（向零）舍入设置标志时，浮动点计算可能会有所不同。 如果代码依赖于截断浮点数的分几部分的预期行为，则不应使用 **/QIfist。** 如果您不确定，请勿使用 **/QIfist**。
 
-**/QIfist**选项已弃用 Visual Studio 2005 中启动。 编译器对进行了重大改进在 float int 转换速度。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](compiler-options-listed-by-category.md)。
+**/QIfist**选项从 Visual Studio 2005 开始被弃用。 编译器在浮点到 int 转换速度方面进行了显著改进。 有关弃用编译器选项的列表，请参阅[按类别列出的编译器选项](compiler-options-listed-by-category.md)中的**弃用和删除编译器选项**。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
-1. 点击“命令行”  属性页。
+1. 点击“命令行” **** 属性页。
 
 1. 在 **“附加选项”** 框中键入编译器选项。
 
@@ -63,7 +63,7 @@ ms.locfileid: "62319273"
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [/Q 选项（低级别操作）](q-options-low-level-operations.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>

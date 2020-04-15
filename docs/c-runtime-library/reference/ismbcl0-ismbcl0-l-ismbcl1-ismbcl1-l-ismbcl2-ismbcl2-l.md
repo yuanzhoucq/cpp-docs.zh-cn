@@ -1,6 +1,6 @@
 ---
 title: _ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbcl2
 - _ismbcl1
@@ -8,6 +8,12 @@ api_name:
 - _ismbcl2_l
 - _ismbcl1_l
 - _ismbcl0_l
+- _o__ismbcl0
+- _o__ismbcl0_l
+- _o__ismbcl1
+- _o__ismbcl1_l
+- _o__ismbcl2
+- _o__ismbcl2_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 04560b7dd3a7188531e247499bc2ffd18bc23ca5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953852"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343220"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
@@ -93,38 +100,40 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*C*<br/>
 要测试的字符。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* < = 255 且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* <= 255 并且存在相应的 **_ismbb**例程（例如 **，_ismbcalnum**对应于 **_ismbbalnum），** 则结果是相应的 **_ismbb**例程的返回值。
 
 ## <a name="remarks"></a>备注
 
 其中每个函数都针对给定的条件测试给定的多字节字符。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-|例程所返回的值|测试条件（仅代码页 932）|
+|例程|测试条件（仅代码页 932）|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS 非日本汉字：0x8140<=*c*<=0x889E.|
-|**_ismbcl0_l**|JIS 非日本汉字：0x8140<=*c*<=0x889E.|
-|**_ismbcl1**|JIS 1 级：0x889F < =*c*< = 0x9872。|
-|**_ismbcl1_l**|JIS 1 级：0x889F < =*c*< = 0x9872。|
-|**_ismbcl2**|0JIS 2 级：0X989f< < =*c*< = 0xEAA4。|
-|**_ismbcl2_l**|0JIS 2 级：0X989f< < =*c*< = 0xEAA4。|
+|**_ismbcl0**|JIS 非汉字： 0x8140<=*c*<±0x889E。|
+|**_ismbcl0_l**|JIS 非汉字： 0x8140<=*c*<±0x889E。|
+|**_ismbcl1**|JIS 级别 1：0x889F<=*c*<±0x9872。|
+|**_ismbcl1_l**|JIS 级别 1：0x889F<=*c*<±0x9872。|
+|**_ismbcl2**|JIS 级别 2：0x989F<=*c*<±0xEAA4。|
+|**_ismbcl2_l**|JIS 级别 2：0x989F<=*c*<±0xEAA4。|
 
-函数检查指定的值*c*是否与上述测试条件匹配，但不检查*c*是否为有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。
+函数检查指定的值*c*是否与上述测试条件匹配，但不检查*c*是否有效多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。
 
-**END 特定于代码页 932**
+**结束代码页 932 特定**
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_ismbcl0**|\<mbstring.h>|
 |**_ismbcl0_l**|\<mbstring.h>|
@@ -133,9 +142,9 @@ int _ismbcl2_l(
 |**_ismbcl2**|\<mbstring.h>|
 |**_ismbcl2_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)<br/>

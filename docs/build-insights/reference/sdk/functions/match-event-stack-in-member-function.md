@@ -1,6 +1,6 @@
 ---
-title: MatchEventStackInMemberFunction
-description: C++ BUILD Insights SDK MatchEventStackInMemberFunction 函数引用。
+title: 匹配事件堆栈成员函数
+description: C++生成见解 SDK 匹配事件Stackin成员函数函数引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323884"
 ---
-# <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
+# <a name="matcheventstackinmemberfunction"></a>匹配事件堆栈成员函数
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`MatchEventStackInMemberFunction` 函数用于将事件堆栈与特定事件层次结构匹配，该事件层次结构由成员函数的参数列表描述。 匹配的层次结构将转发到成员函数以便进一步处理。 若要了解有关事件、事件堆栈和层次结构的详细信息，请参阅[事件表](../event-table.md)。
+该`MatchEventStackInMemberFunction`函数用于将事件堆栈与特定事件层次结构匹配，由成员函数的参数列表描述。 匹配的层次结构将转发到成员函数以进行进一步处理。 要了解有关事件、事件堆栈和层次结构的更多信息，请参阅[事件表](../event-table.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>参数
 
-*TInterface*\
+*T接口*\
 包含成员函数的类型。
 
-*TReturn*\
+*T返回*\
 成员函数的返回类型。
 
-*T1*，...， *T10*\
+*T1*， ...， *T10*\
 描述要匹配的事件层次结构的类型。
 
-*TExtraParams*\
-成员函数接受的额外参数的类型，以及事件层次结构类型。
+*特特帕姆斯*\
+成员函数接受的额外参数的类型和事件层次结构类型。
 
 *TExtraArgs*\
-传递给 `MatchEventStackInMemberFunction`的额外参数的类型。
+传递给 的额外参数的类型`MatchEventStackInMemberFunction`。
 
-*eventStack*\
-要与*T1*到*T10*描述的事件类型层次结构匹配的事件堆栈。
+*事件堆栈*\
+要与 T1 到*T10*描述的事件类型*T10*层次结构匹配的事件堆栈。
 
-*objectPtr*\
-指向在其上调用*memberFunc*的对象的指针。
+*对象Ptr*\
+指向调用*成员Func*的对象的指针。
 
-*memberFunc*\
+*成员丰奇*\
 描述要匹配的事件类型层次结构的成员函数。
 
-*extraArgs*\
-与事件类型层次结构参数一起完美转发到*memberFunc*的参数。
+*额外阿格*\
+与事件类型层次结构参数一起完美转发到*成员Func*的参数。
 
 ### <a name="return-value"></a>返回值
 
-一个**布尔**值，如果匹配成功，则为**true** ; 否则为**false** 。
+如果匹配成功，则**为 true**的**bool**值，否则为**false。**
 
 ## <a name="remarks"></a>备注
 
-*EventStack*中的最后一个事件始终与事件类型层次结构中要匹配的最后一项匹配。 事件类型层次结构中的所有其他类型可以匹配*eventStack*中的任何位置（最后一种情况除外），前提是它们的顺序相同。
+*事件堆栈*中的最后一个事件始终与要匹配的事件类型层次结构中的最后一个条目匹配。 事件类型层次结构中的所有其他类型的都可以匹配*事件堆栈*中的任何位置，但最后一个位置除外，前提是它们的顺序相同。
 
-将从*捕获类*的列表中选择用于*T1*到*T10*参数的事件类型。 有关可以用来匹配事件的事件列表和捕获类，请参阅[事件表](../event-table.md)。
+用于 T1 到*T10*参数的事件类型是从*T10**捕获类*列表中选择的。 有关可用于匹配的事件和捕获类的列表，请参阅[事件表](../event-table.md)。
 
 ## <a name="example"></a>示例
 

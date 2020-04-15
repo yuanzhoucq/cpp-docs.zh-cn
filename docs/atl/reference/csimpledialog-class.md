@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 345372d71ad96a74bb0ae6dd7e89bdf0724cd822
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278043"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330822"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 类
 
-此类实现基本的模式对话框。
+此类实现基本模式对话框。
 
 ## <a name="syntax"></a>语法
 
@@ -36,23 +36,23 @@ class CSimpleDialog : public CDialogImplBase
 对话框模板资源的资源 ID。
 
 *t_bCenter*<br/>
-如果对话框对象是要在所有者窗口; 上居中否则为 FALSE。
+如果对话框对象要居于所有者窗口，则为 TRUE;如果对话框对象要位于所有者窗口上，则为 TRUE。否则 FALSE。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CSimpleDialog::DoModal](#domodal)|创建模式对话框。|
+|[C简单对话：:Do模态](#domodal)|创建模式对话框。|
 
 ## <a name="remarks"></a>备注
 
-具有基本功能实现的模式对话框。 `CSimpleDialog` 提供 Windows 公共控件仅支持。 若要创建和显示模式对话框，创建此类，在对话框中提供现有的资源模板的名称的实例。 当用户单击与预定义的值 （如 IDOK 或 IDCANCEL） 的任何控件将关闭对话框对象。
+实现具有基本功能的模式对话框。 `CSimpleDialog`仅支持 Windows 公共控件。 要创建和显示模态对话框，请创建此类的实例，为对话框提供现有资源模板的名称。 当用户单击具有预定义值（如 IDOK 或 IDCANCEL）的任何控件时，对话框对象将关闭。
 
-`CSimpleDialog` 可以创建仅模式对话框。 `CSimpleDialog` 提供的对话框过程，使用默认消息映射来将消息定向到相应的处理程序。
+`CSimpleDialog`允许您仅创建模式对话框。 `CSimpleDialog`提供对话框过程，该过程使用默认消息映射将消息定向到相应的处理程序。
 
-请参阅[实现对话框](../../atl/implementing-a-dialog-box.md)有关详细信息。
+有关详细信息[，请参阅实现对话框](../../atl/implementing-a-dialog-box.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,11 +62,11 @@ class CSimpleDialog : public CDialogImplBase
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlwin.h
+**标题：** atlwin.h
 
-##  <a name="domodal"></a>  CSimpleDialog::DoModal
+## <a name="csimpledialogdomodal"></a><a name="domodal"></a>C简单对话：:Do模态
 
-调用模式对话框并返回完成的对话框结果。
+调用模态对话框，并在完成后返回对话框结果。
 
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
@@ -74,19 +74,19 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*<br/>
-对话框中的父句柄。 如果未不提供任何值，父级设置为当前的活动窗口。
+*hWnd 父母*<br/>
+对话框父级的句柄。 如果未提供任何值，则父级设置为当前活动窗口。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，返回值是控件的关闭对话框中的资源 ID。
+如果成功，返回值是取消对话框的控件的资源 ID。
 
-如果函数失败，返回值为-1。 若要获得扩展的错误信息，请调用 `GetLastError`。
+如果函数失败，返回值为 -1。 若要获得扩展的错误信息，请调用 `GetLastError`。
 
 ### <a name="remarks"></a>备注
 
-在对话框处于活动状态时，此方法将处理与用户的所有交互。 这是什么工作使得对话框成为模式;也就是说，用户不能前进行交互与其他窗口对话框的已关闭。
+此方法处理与用户的所有交互，当对话框处于活动状态时。 这就是使对话框模态的原因;也就是说，在关闭对话框之前，用户无法与其他窗互。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../../atl/atl-class-overview.md)

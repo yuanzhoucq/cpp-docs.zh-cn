@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a74eb130bd3f8be949fef0c19d545f61a72f3934
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 397083c63f451b2d3fb8dad529adf73855af8644
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334516"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324196"
 ---
 # <a name="thread-class"></a>Thread 类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`Thread` 类用于[MatchEvent](../functions/match-event.md)、 [MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、 [MatchEventStack](../functions/match-event-stack.md)和[MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md)函数。 使用它来匹配[线程](../event-table.md#thread)事件。
+该`Thread`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配[THREAD](../event-table.md#thread)事件。
 
 ## <a name="syntax"></a>语法
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-除了其[活动](activity.md)基类的继承成员以外，`Thread` 类包含以下成员：
+除了从[其活动](activity.md)基类继承的成员外，`Thread`该类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
 [线程](#thread)
 
-## <a name="thread"></a>Thread
+## <a name="thread"></a><a name="thread"></a>线程
 
 ```cpp
 Thread(const RawEvent& event);
@@ -53,7 +53,7 @@ Thread(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*event*\
+*事件*\
 [线程](../event-table.md#thread)事件。
 
 ::: moniker-end

@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d382d1fe7d50a2fdeefc9b477625580792de7d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55412eff18fd04ac4e41c0f001991c1cf725b9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321513"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule 类
 
-每个 ATL 项目中实例化此类。
+此类在每个 ATL 项目中都实例化。
 
 ## <a name="syntax"></a>语法
 
@@ -36,32 +36,32 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlBaseModule::CAtlBaseModule](#catlbasemodule)|构造函数。|
+|[CAtlBase模块：CAtlBase模块](#catlbasemodule)|构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|将资源实例添加到存储句柄的列表。|
-|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|返回的句柄指定的资源实例。|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|返回从模块实例`CAtlBaseModule`对象。|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|返回从资源实例`CAtlBaseModule`对象。|
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|从存储句柄的列表中删除的资源实例。|
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|设置的资源实例`CAtlBaseModule`对象。|
+|[CAtlBase模块：：添加资源实例](#addresourceinstance)|将资源实例添加到存储句柄列表中。|
+|[CAtlBase模块：：获取实例](#gethinstanceat)|将句柄返回到指定的资源实例。|
+|[CAtlBase模块：获取模块实例](#getmoduleinstance)|从`CAtlBaseModule`对象返回模块实例。|
+|[CAtlBase 模块：获取资源实例](#getresourceinstance)|从`CAtlBaseModule`对象返回资源实例。|
+|[CAtlBase 模块：：删除资源实例](#removeresourceinstance)|从存储句柄列表中删除资源实例。|
+|[CAtlBase 模块：：设置资源实例](#setresourceinstance)|设置`CAtlBaseModule`对象的资源实例。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|指示是否出现故障的模块初始化的变量。|
+|[CAtlBase模块：：m_bInitFailed](#m_binitfailed)|指示模块初始化是否失败的变量。|
 
 ## <a name="remarks"></a>备注
 
-实例`CAtlBaseModule`命名的 _AtlBaseModule 是存在于每个包含模块实例的句柄、 包含的资源 （默认情况下，同一个），该模块并为模块提供主要的句柄数组的句柄的 ATL 项目资源。 `CAtlBaseModule` 可以安全地从多个线程访问。
+每个 ATL 项目中都存在命名_AtlBaseModule的`CAtlBaseModule`实例，其中包含模块实例的句柄、包含资源（默认情况下为相同）的模块句柄以及提供主资源的模块的句柄数组。 `CAtlBaseModule`可以从多个线程安全地访问。
 
-此类替换已过时[CComModule](../../atl/reference/ccommodule-class.md)的 atl。 早期版本中使用的类
+此类将替换早期版本的 ATL 中使用的过时的[CComModule](../../atl/reference/ccommodule-class.md)类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -71,11 +71,11 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcore.h
+**标题：** atlcore.h
 
-##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBase模块：：添加资源实例
 
-将资源实例添加到存储句柄的列表。
+将资源实例添加到存储句柄列表中。
 
 ```
 bool AddResourceInstance(HINSTANCE hInst) throw();
@@ -88,9 +88,9 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="return-value"></a>返回值
 
-如果资源已成功，则返回 true，添加 false 否则。
+如果资源已成功添加，则返回 true，否则为 false。
 
-##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBase模块：CAtlBase模块
 
 构造函数。
 
@@ -102,9 +102,9 @@ CAtlBaseModule() throw();
 
 创建 `CAtlBaseModule`。
 
-##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBase模块：：获取实例
 
-返回的句柄指定的资源实例。
+将句柄返回到指定的资源实例。
 
 ```
 HINSTANCE GetHInstanceAt(int i) throw();
@@ -112,16 +112,16 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>参数
 
-*i*<br/>
-资源实例数。
+*Ⅰ*<br/>
+资源实例的编号。
 
 ### <a name="return-value"></a>返回值
 
-如果没有对应的资源实例存在，则返回的句柄的资源实例或为 NULL。
+如果不存在相应的资源实例，则将句柄返回给资源实例，或返回 NULL。
 
-##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBase模块：获取模块实例
 
-返回从模块实例`CAtlBaseModule`对象。
+从`CAtlBaseModule`对象返回模块实例。
 
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -129,11 +129,11 @@ HINSTANCE GetModuleInstance() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回的模块实例。
+返回模块实例。
 
-##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBase 模块：获取资源实例
 
-返回的资源实例。
+返回资源实例。
 
 ```
 HINSTANCE GetResourceInstance() throw();
@@ -141,11 +141,11 @@ HINSTANCE GetResourceInstance() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回的资源实例。
+返回资源实例。
 
-##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBase模块：：m_bInitFailed
 
-指示是否出现故障的模块初始化的变量。
+指示模块初始化是否失败的变量。
 
 ```
 static bool m_bInitFailed;
@@ -153,11 +153,11 @@ static bool m_bInitFailed;
 
 ### <a name="remarks"></a>备注
 
-如果该模块初始化，false 如果它无法初始化，则为 true。
+如果模块初始化为 True，则为 false，如果模块未能初始化。"
 
-##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBase 模块：：删除资源实例
 
-从存储句柄的列表中删除的资源实例。
+从存储句柄列表中删除资源实例。
 
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -170,11 +170,11 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="return-value"></a>返回值
 
-如果资源否则是已成功删除，则为 false，则返回 true。
+如果资源已成功删除，则返回 true，否则为 false。
 
-##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBase 模块：：设置资源实例
 
-设置的资源实例`CAtlBaseModule`对象。
+设置`CAtlBaseModule`对象的资源实例。
 
 ```
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
@@ -183,13 +183,13 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ### <a name="parameters"></a>参数
 
 *hInst*<br/>
-新的资源实例。
+新资源实例。
 
 ### <a name="return-value"></a>返回值
 
-返回已更新的资源实例。
+返回更新的资源实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../../atl/atl-class-overview.md)<br/>
-[Module 类](../../atl/atl-module-classes.md)
+[模块类](../../atl/atl-module-classes.md)

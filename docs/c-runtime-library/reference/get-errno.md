@@ -1,8 +1,9 @@
 ---
 title: _get_errno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_errno
+- _o__get_errno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: 4d60f7ea7a36b4a8c4be678d26c0b0c59e5ec534
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f693655ecd1eb0122577446e39d4188703674419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955974"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345177"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -48,15 +50,17 @@ errno_t _get_errno(
 ### <a name="parameters"></a>参数
 
 *pValue*<br/>
-指向要使用**errno**变量的当前值填充的整数的指针。
+指向要用**errno**变量的当前值填充的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*为**NULL，** 则无效参数处理程序将调用[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**设置到**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Errno**的可能值在 errno 中定义。 此外，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
+errno**errno**的可能值在 Errno.h 中定义。 此外，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 
@@ -86,13 +90,13 @@ fyi, ENOENT = 2
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_get_errno**|\<stdlib.h>|\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_set_errno](set-errno.md)<br/>
 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

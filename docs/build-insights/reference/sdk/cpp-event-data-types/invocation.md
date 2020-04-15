@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c4698300a3eeaf77210ad74f84b0c0cd219b457
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: fcb087d46ea445251b0108f811545a44c26f421e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334744"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324641"
 ---
 # <a name="invocation-class"></a>调用类
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`Invocation` 类用于[MatchEvent](../functions/match-event.md)、 [MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、 [MatchEventStack](../functions/match-event-stack.md)和[MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md)函数。 用于匹配[编译器](../event-table.md#compiler)或[链接器](../event-table.md#linker)事件。
+该`Invocation`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配["编译器](../event-table.md#compiler)"或["链接"](../event-table.md#linker)事件。
 
 ## <a name="syntax"></a>语法
 
@@ -52,9 +52,9 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-除了其[活动](activity.md)基类的继承成员以外，`Invocation` 类包含以下成员：
+除了从[其活动](activity.md)基类继承的成员外，`Invocation`该类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
@@ -62,13 +62,13 @@ public:
 
 ### <a name="functions"></a>函数
 
-[刀具路径](#tool-path)
-[ToolVersion](#tool-version)
-[ToolVersionString](#tool-version-string)
-[类型](#type)
-[WorkingDirectory](#working-directory)
+[工具路径](#tool-path)
+[工具版本](#tool-version)
+[版本字符串](#tool-version-string)
+[类型工作](#type)
+[目录](#working-directory)
 
-## <a name="invocation"></a>调用
+## <a name="invocation"></a><a name="invocation"></a>调用
 
 ```cpp
 Invocation(const RawEvent& event);
@@ -76,10 +76,10 @@ Invocation(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*event*\
-[编译器](../event-table.md#compiler)或[链接器](../event-table.md#linker)事件。
+*事件*\
+[一个编译器](../event-table.md#compiler)或[链接器](../event-table.md#linker)事件。
 
-## <a name="tool-path"></a>ToolPath
+## <a name="toolpath"></a><a name="tool-path"></a>工具路径
 
 ```cpp
 const wchar_t* ToolPath() const;
@@ -89,7 +89,7 @@ const wchar_t* ToolPath() const;
 
 调用的工具的绝对路径。
 
-## <a name="tool-version"></a>ToolVersion
+## <a name="toolversion"></a><a name="tool-version"></a>工具版本
 
 ```cpp
 const INVOCATION_VERSION_DATA& ToolVersion() const;
@@ -97,9 +97,9 @@ const INVOCATION_VERSION_DATA& ToolVersion() const;
 
 ### <a name="return-value"></a>返回值
 
-作为[INVOCATION_VERSION_DATA](../c-event-data-types/invocation-version-data-struct.md)引用被调用的工具的版本。
+作为[INVOCATION_VERSION_DATA引用](../c-event-data-types/invocation-version-data-struct.md)而调用的工具的版本。
 
-## <a name="tool-version-string"></a>ToolVersionString
+## <a name="toolversionstring"></a><a name="tool-version-string"></a>工具版本字符串
 
 ```cpp
 const char* ToolVersionString() const;
@@ -109,7 +109,7 @@ const char* ToolVersionString() const;
 
 作为 ANSI 字符串调用的工具的版本。
 
-## <a name="type"></a>类别
+## <a name="type"></a><a name="type"></a> 类型
 
 ```cpp
 Type Type() const;
@@ -117,9 +117,9 @@ Type Type() const;
 
 ### <a name="return-value"></a>返回值
 
-指示已调用的工具的代码。
+指示被调用工具的代码。
 
-## <a name="working-directory"></a>WorkingDirectory
+## <a name="workingdirectory"></a><a name="working-directory"></a>工作目录
 
 ```cpp
 const wchar_t* WorkingDirectory() const;
@@ -127,6 +127,6 @@ const wchar_t* WorkingDirectory() const;
 
 ### <a name="return-value"></a>返回值
 
-调用此工具的目录的绝对路径。
+调用工具的目录的绝对路径。
 
 ::: moniker-end

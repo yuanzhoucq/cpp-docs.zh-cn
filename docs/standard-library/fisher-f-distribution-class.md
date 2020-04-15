@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: eb72c3abbe87bc975dbc3c99ffab9e77635c9df5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2c6a976f3874d563f5bba600b9894ae0103625b0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319598"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution 类
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType* \
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
-*URNG* \
-统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*乌尔格*\
+统一的随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述产生用户指定的浮点类型的值的分布，或者，如果未提供任何值 **，则根据**费舍尔的 F-分布来分发。 下表链接到有关各个成员的文章。
+类模板描述生成用户指定的浮点类型的值的分布，或者如果没有提供，则键入**双精度值**，该分布根据 Fisher 的 F 分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -94,7 +94,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 有关 F-分布的详细信息，请参阅 Wolfram MathWorld 文章 [F-分布](https://go.microsoft.com/fwlink/p/?linkid=400899)。
 
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 首次运行：
 
@@ -237,7 +237,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution：fisher_f_distribution
 
 构造分布。
 
@@ -248,24 +248,24 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*m* \
+*米*\
 `m` 分布参数。
 
 *n*\
 `n` 分布参数。
 
-*parm* \
+*帕尔姆*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前提条件：** `0.0 < m` 和 `0.0 < n`
+**前置条件：** `0.0 < m` 和 `0.0 < n`
 
 第一个构造函数将构造一个其存储的 `m` 值保留值 *m*，而其存储的 `n` 值保留值 *n* 的对象。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>  fisher_f_distribution::param_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution：:p阿拉姆型
 
 存储分布的参数。
 
@@ -283,21 +283,21 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*m* \
+*米*\
 `m` 分布参数。
 
 *n*\
 `n` 分布参数。
 
-*right* \
+*对*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前提条件：** `0.0 < m` 和 `0.0 < n`
+**前置条件：** `0.0 < m` 和 `0.0 < n`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

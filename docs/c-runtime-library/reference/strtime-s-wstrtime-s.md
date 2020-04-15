@@ -1,9 +1,11 @@
 ---
 title: _strtime_s、_wstrtime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime_s
 - _strtime_s
+- _o__strtime_s
+- _o__wstrtime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 771dfdb6bd8035fe8683d62d52b3b4980ecda215
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625920"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316945"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s、_wstrtime_s
 
@@ -67,10 +70,10 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*缓冲区*<br/>
 至少为 10 个字节长的缓冲区，将在其中写入时间。
 
-*numberOfElements*<br/>
+*元素数*<br/>
 缓冲区的大小。
 
 ## <a name="return-value"></a>返回值
@@ -81,28 +84,30 @@ errno_t _wstrtime_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*numberOfElements*|返回|*缓冲区*内容|
+|*缓冲区*|*元素数*|返回|*缓冲区*的内容|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|（任意数值）|**EINVAL**|未修改|
-|Not **NULL** （指向有效的缓冲区）|0|**EINVAL**|未修改|
-|Not **NULL** （指向有效的缓冲区）|0 < 大小 < 9|**EINVAL**|空字符串|
-|Not **NULL** （指向有效的缓冲区）|大小 > 9|0|注解中指定的当前时间格式|
+|**空**|（任意数值）|**埃因瓦尔**|未修改|
+|非**NULL（** 指向有效缓冲区）|0|**埃因瓦尔**|未修改|
+|非**NULL（** 指向有效缓冲区）|0 < 大小 < 9|**埃因瓦尔**|空字符串|
+|非**NULL（** 指向有效缓冲区）|大小 > 9|0|注解中指定的当前时间格式|
 
-## <a name="security-issues"></a>安全性问题
+## <a name="security-issues"></a>安全问题
 
-如果*numberOfElements*参数大于9，则为缓冲区传入无效的非**NULL**值将导致访问冲突。
+如果*数量OfElements*参数大于 9，则传入缓冲区无效的非**NULL**值将导致访问冲突。
 
-传递*numberOfElements*的值大于缓冲区的实际大小将导致缓冲区溢出。
+传递大于缓冲区实际大小的*数量元素的值*将导致缓冲区溢出。
 
 ## <a name="remarks"></a>备注
 
-这些函数提供更安全的[_strtime](strtime-wstrtime.md)和[_wstrtime](strtime-wstrtime.md)版本。 **_Strtime_s**函数将当前的本地时间复制到*timestr*指向的缓冲区中。 此时间的格式为**hh： mm： ss** ，其中， **hh**是表示小时的两位数字，以24小时表示法表示， **mm**是表示分钟后的分钟数的两位数， **ss**是表示秒的两位数。 例如，字符串**18:23:44**表示23分钟到 6 p.m 之前的44秒。 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
+这些函数提供了更安全的[_strtime](strtime-wstrtime.md)版本，_wstrtime。 [_wstrtime](strtime-wstrtime.md) **_strtime_s**函数将当前本地时间复制到*时间点*指向的缓冲区中。 时间格式为**hh：mm：ss，** 其中**hh**是两位数字，以 24 小时表示法表示小时 **，mm**是两位数字，表示超过小时数的分钟数 **，ss**是表示秒的两位数字。 例如，字符串**18：23：44**表示下午 6 点经过 23 分钟 44 秒。 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
 
-**_wstrtime**是 **_strtime**的宽字符版本; **_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
+**_wstrtime**是 **_strtime**的宽字符版本;**_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射：
 
@@ -112,12 +117,12 @@ errno_t _wstrtime_s(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -162,13 +167,13 @@ OS time:            14:37:49
 OS date:            04/25/03
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>
 [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
 [mktime、_mktime32、_mktime64](mktime-mktime32-mktime64.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>
 [_tzset](tzset.md)<br/>

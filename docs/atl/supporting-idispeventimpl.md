@@ -10,18 +10,18 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-ms.openlocfilehash: 3652aae2a6c84833ed32e52599d3834d6e66a5ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31beff30a067416f71029c18051f214c8d4429de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329314"
 ---
 # <a name="supporting-idispeventimpl"></a>支持 IDispEventImpl
 
-此模板类[IDispEventImpl](../atl/reference/idispeventimpl-class.md)可用于为 ATL 类中的连接点接收器提供支持。 连接点接收器使您的类来处理从外部 COM 对象触发的事件。 这些连接点接收器使用事件接收器映射，你的类所提供的映射。
+模板类[IDispEventImpl](../atl/reference/idispeventimpl-class.md)可用于为 ATL 类中的连接点接收器提供支持。 连接点接收器允许类处理从外部 COM 对象触发的事件。 这些连接点接收器使用事件接收器映射映射，由类提供。
 
-若要正确实现连接点接收器类，必须完成以下步骤：
+要正确实现类的连接点接收器，必须完成以下步骤：
 
 - 导入每个外部对象的类型库
 
@@ -29,34 +29,34 @@ ms.locfileid: "62274282"
 
 - 声明事件接收器映射
 
-- 通知和取消通知的连接点
+- 建议并取消建议连接点
 
-实现连接点接收器所涉及的步骤所有通过修改仅标头文件 (.h) 类的完成。
+实现连接点接收器所涉及的步骤都通过仅修改类的标头文件 （.h） 来完成。
 
 ## <a name="importing-the-type-libraries"></a>导入类型库
 
-对于每个外部对象想要处理的事件，必须导入类型库。 此步骤中定义了可以处理的事件，并提供声明事件接收器映射时使用的信息。 [#Import](../preprocessor/hash-import-directive-cpp.md)指令可以用于实现此目的。 添加必需`#import`指令行的每个调度接口将向您的类的标头文件 (.h) 支持。
+对于要处理的事件的每个外部对象，必须导入类型库。 此步骤定义可处理的事件，并提供声明事件接收器映射时使用的信息。 [#import](../preprocessor/hash-import-directive-cpp.md)指令可用于实现此目的。 为将支持的`#import`每个调度接口添加所需的指令行到类的标头文件 （.h）。
 
-下面的示例将外部 COM 服务器的类型库导入 (`MSCAL.Calendar.7`):
+以下示例导入外部 COM 服务器的类型库 （`MSCAL.Calendar.7`）：
 
 [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]
 
 > [!NOTE]
->  必须有一个单独`#import`将支持每个外部类型库的语句。
+> 对于将支持的每个外部`#import`类型库，必须具有单独的语句。
 
 ## <a name="declaring-the-idispeventimpl-interfaces"></a>声明 IDispEventImpl 接口
 
-现在，已导入的每个调度接口的类型库，需要声明单独`IDispEventImpl`为每个外部调度接口的接口。 通过添加修改您的类的声明`IDispEventImpl`接口对于每个外部对象的声明。 有关参数的详细信息，请参阅[IDispEventImpl](../atl/reference/idispeventimpl-class.md)。
+现在，您已经导入了每个调度接口的类型库，您需要为每个外部调度接口声明单独的`IDispEventImpl`接口。 通过为每个外部对象添加`IDispEventImpl`接口声明来修改类的声明。 有关参数的详细信息，请参阅[IDispEventImpl](../atl/reference/idispeventimpl-class.md)。
 
-下面的代码声明两个连接点接收器`DCalendarEvents`COM 对象由类实现的接口， `CMyCompositCtrl2`:
+以下代码声明两个连接点接收器，对于`DCalendarEvents`接口，对于由类`CMyCompositCtrl2`实现的 COM 对象：
 
 [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]
 
 ## <a name="declaring-an-event-sink-map"></a>声明事件接收器映射
 
-为了使事件通知，以处理由正确的函数，您的类必须将每个事件路由到其正确处理程序。 这是通过声明事件接收器映射来实现。
+为了使事件通知由正确的函数处理，类必须将每个事件路由到其正确的处理程序。 这是通过声明事件接收器映射来实现的。
 
-ATL 提供了几个宏[BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map)， [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map)，并[SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex)，这使此映射更容易。 标准的格式如下所示：
+ATL 提供了多个宏[，BEGIN_SINK_MAP、END_SINK_MAP](reference/composite-control-macros.md#begin_sink_map)[END_SINK_MAP](reference/composite-control-macros.md#end_sink_map)和[SINK_ENTRY_EX，](reference/composite-control-macros.md#sink_entry_ex)使此映射更容易。 标准格式如下：
 
 ```cpp
 BEGIN_SINK_MAP(comClass)
@@ -65,20 +65,20 @@ BEGIN_SINK_MAP(comClass)
 END_SINK_MAP()
 ```
 
-下面的示例声明事件接收器映射使用两个事件处理程序：
+以下示例声明具有两个事件处理程序的事件接收器映射：
 
 [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]
 
-实现已接近完成。 最后一步涉及通知和外部接口的取消通知。
+实现已接近完成。 最后一步是建议和取消通知外部接口。
 
-## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>通知和取消通知 IDispEventImpl 接口
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>为 IDispEventImpl 接口提供咨询和取消建议
 
-最后一步是在适当时间实现的方法，将建议 （或不建议） 的所有连接点。 外部客户端与您的对象之间的通信发生之前，必须完成这种通知。 在对象变得可见之前，支持您的对象的每个外部调度接口被查询输出接口。 建立的连接并对输出接口的引用用于处理从对象的事件。 此过程称为"通知"。
+最后一步是实现一种方法，该方法将在适当的时候通知（或不建议）所有连接点。 在外部客户端和对象之间发生通信之前，必须执行此建议。 在对象变得可见之前，对象支持的每个外部调度接口都会查询出发接口。 建立连接，并使用对传出接口的引用来处理来自对象的事件。 此过程称为"建议"。
 
-与外部接口完成您的对象后，应通知传出接口，它们将不再由您的类。 此过程称为"取消通知"。
+在对象完成外部接口后，应通知传出接口它们不再被类使用。 此过程称为"不建议"。
 
-由于 COM 对象的唯一特性，此过程会有所不同，在详细信息和执行，实现之间。 这些详细信息超出了本主题的范围并且未解决。
+由于 COM 对象的独特性质，此过程在细节和执行之间因实现而异。 这些详细信息超出了本主题的范围，并且未涉及。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)
+[ATL COM 对象的基础知识](../atl/fundamentals-of-atl-com-objects.md)
