@@ -1,11 +1,15 @@
 ---
 title: _mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
+- _o__mbctohira
+- _o__mbctohira_l
+- _o__mbctokata
+- _o__mbctokata_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341096"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 
@@ -76,41 +81,43 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*C*<br/>
 要转换的多字节字符。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果可能，这些函数将返回转换后的字符*c*。 否则，它返回的字符*c*不变。
+如果可能，每个函数都返回转换后的字符*c*。a。 否则，它将返回字符*c*不变。
 
 ## <a name="remarks"></a>备注
 
-**_Mbctohira**和 **_mbctokata**函数测试字符*c* ，如有可能，应用以下转换之一。
+**_mbctohira**和 **_mbctokata**函数测试字符*c，* 如果可能，请应用以下转换之一。
 
 |例程|转换|
 |--------------|--------------|
-|**_mbctohira**、 **_mbctohira_l**|多字节片假名与多字节平假名。|
-|**_mbctokata**、 **_mbctokata_l**|多字节平假名与多字节片假名。|
+|**_mbctohira**， **_mbctohira_l**|多字节片假名与多字节平假名。|
+|**_mbctokata**， **_mbctokata_l**|多字节平假名与多字节片假名。|
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数会将当前区域设置用于与区域设置相关的行为，并使用**传入的区域**设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些函数的版本相同，只不过没有 **_l**后缀的版本使用此区域设置来执行与区域设置相关的行为，而具有 **_l**后缀的函数则使用传入区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在早期版本中， **_mbctohira**名为**jtohira** ， **_mbctokata**名为**jtokata**。 对于新代码，请使用新名称。
+在早期版本中 **，_mbctohira**被命名为**jtohira，_mbctokata**被命名为 **_mbctokata****jtokata。** 对于新代码，请使用新名称。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbctohira**|\<mbstring.h>|
 |**_mbctohira_l**|\<mbstring.h>|
 |**_mbctokata**|\<mbstring.h>|
 |**_mbctokata_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>

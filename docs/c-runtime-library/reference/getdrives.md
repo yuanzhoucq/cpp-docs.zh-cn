@@ -1,8 +1,9 @@
 ---
 title: _getdrives
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdrives
+- _o__getdrives
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 0733cc00523bb3a7bb019453cc94183a5c2b87e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955080"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344294"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -49,15 +51,19 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，则返回值是一个表示当前可用的磁盘驱动器的位掩码。 位位置 0（最低有效位）是驱动器 A，位位置 1 是驱动器 B，位位置 2 是驱动器 C，依此类推。 如果函数失败，则返回值为零。 若要获取扩展的错误信息，请调用**GetLastError**。
+如果函数成功，则返回值是一个表示当前可用的磁盘驱动器的位掩码。 位位置 0（最低有效位）是驱动器 A，位位置 1 是驱动器 B，位位置 2 是驱动器 C，依此类推。 如果函数失败，则返回值为零。 要获取扩展的错误信息，请致电**GetLastError**。
+
+## <a name="remarks"></a>备注
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -105,6 +111,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [目录控制](../../c-runtime-library/directory-control.md)<br/>

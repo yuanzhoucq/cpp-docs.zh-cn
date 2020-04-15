@@ -1,11 +1,15 @@
 ---
 title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
+- _o__ismbslead
+- _o__ismbslead_l
+- _o__ismbstrail
+- _o__ismbstrail_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +48,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953769"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342919"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
@@ -82,28 +87,30 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*Str*<br/>
 指向字符串开头或之前已知的前导字节的指针。
 
-*current*<br/>
+*当前*<br/>
 指向要测试的字符串中位置的指针。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果字符是前导字节，则 **_ismbslead**返回-1; 如果字符为尾字节，**则返回-** 1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任何一个参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数将返回**NULL** , 并将**Errno**设置为**EINVAL**。
+如果字符是潜在顾客字节，**则_ismbslead**返回 -1;如果字符是跟踪字节，**则_ismbstrail**返回 -1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任一参数为**NULL，** 则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将返回**NULL**并将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_ismbslead**和 **_ismbstrail**的速度比 **_ismbblead**和 **_ismbbtrail**版本慢，因为它们会将字符串上下文纳入考虑范围。
+**_ismbslead**和 **_ismbstrail**比 **_ismbblead**和 **_ismbbtrail**版本慢，因为它们会考虑字符串上下文。
 
-这些具有 **_l**后缀的函数的版本相同，不同之处在于，对于其与区域设置相关的行为，它们使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的这些函数的版本是相同的，只不过对于它们与区域设置相关的行为，它们使用传入区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_ismbslead**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
 |**_ismbstrail**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
@@ -112,9 +119,9 @@ int _ismbstrail_l(
 
 \* 适用于测试条件的清单常量。
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _atoldbl
 - _atoldbl_l
@@ -8,6 +8,12 @@ api_name:
 - _atoflt
 - _atoflt_l
 - _atodbl_l
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348953"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-将字符串转换为双精度（ **_atodbl**）、long double （ **_atoldbl**）或 float （ **_atoflt**）。
+将字符串转换为双 **（_atodbl）、** 长双 **（_atoldbl）** 或浮动 **（_atoflt**）。
 
 ## <a name="syntax"></a>语法
 
@@ -79,29 +86,31 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 通过将字符串转换为浮点值生成的双精度型、长双精度型或浮点型值。 这些值都包装在一个结构中。
 
-*str*<br/>
+*Str*<br/>
 要解析的字符串将转换为浮点值。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 可能的错误代码是标头文件\<_UNDERFLOW 中定义的或 _OVERFLOW >。
+如果成功，则返回 0。 可能的错误**代码_UNDERFLOW或****_OVERFLOW**，这些代码在标头文件\<math.h>中定义。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为浮点值。 这些函数与**atof**系列函数之间的区别是：这些函数不生成浮点代码，也不会导致硬件异常。 改为将错误条件报告为错误代码。
+这些函数将字符串转换为浮点值。 这些函数和**atof**函数系列之间的区别是，这些函数不生成浮点代码，也不会导致硬件异常。 改为将错误条件报告为错误代码。
 
-如果字符串不具有作为浮点值的有效解释，则*value*设置为零，返回值为零。
+如果字符串没有有效的解释作为浮点值，*则值*设置为零，返回值为零。
 
-这些具有 **_l**后缀的函数的版本与没有后缀的版本相同，只不过它们使用传入的*区域设置*参数而不是当前线程区域设置。
+具有 **_l**后缀的这些函数的版本与没有后缀的版本相同，只不过它们使用传入*区域设置*参数而不是当前线程区域设置。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |--------------|---------------------|
-|**_atodbl**、 **_atoldbl**、 **_atoflt**<br /><br /> **_atodbl_l**、 **_atoldbl_l**、 **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**， **_atoldbl**， **_atoflt**<br /><br /> **_atodbl_l**， **_atoldbl_l**， **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>示例
 
@@ -159,9 +168,9 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

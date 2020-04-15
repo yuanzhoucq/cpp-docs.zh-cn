@@ -1,8 +1,9 @@
 ---
 title: fwrite
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fwrite
+- _o_fwrite
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5bd6da3c8d16189f7ff0db744901e03513acc21
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345395"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -49,29 +51,31 @@ size_t fwrite(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*缓冲区*<br/>
 指向要写入的数据的指针。
 
-*size*<br/>
+*大小*<br/>
 项大小（以字节为单位）。
 
 *count*<br/>
 要写入的项的最大数量。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-**fwrite**返回实际写入的完整项的数量, 如果发生错误, 则可能小于*计数*。 此外，如果发生错误，则无法确定文件位置指示器。 如果*流*或*缓冲区*为空指针, 或者如果在 Unicode 模式下指定了要写入的奇数个字节, 则函数将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则此函数会将**errno**设置为**EINVAL** , 并返回0。
+**fwrite**返回实际写入的完整项数，如果发生错误，该项可能小于*计数*。 此外，如果发生错误，则无法确定文件位置指示器。 如果*流*或*缓冲区*是空指针，或者如果在 Unicode 模式下指定了奇数的字节，则函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，此函数将**errno**设置到**EINVAL**并返回 0。
 
 ## <a name="remarks"></a>备注
 
-**Fwrite**函数将每个项的*大小*从*缓冲区*写入到输出*流*, 并对其进行*计算*。 与*流*关联的文件指针 (如果有) 以实际写入的字节数为增量递增。 如果在文本模式下打开*流*, 则会将每个换行符替换为回车换行符对。 该替换不会影响返回值。
+**fwrite**函数写入*以计算*从*缓冲区*到输出*流*的项，每个*项的大小*长度。 与*流*关联的文件指针（如果有）将递增为实际写入的字节数。 如果在文本模式下打开*流*，则每个换行符将替换为回车换行对。 该替换不会影响返回值。
 
-在 Unicode 转换模式下打开*流*时（例如，如果通过调用**fopen**打开*流*，并使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式参数），或者如果模式为，则为通过使用 **_setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式参数更改为 Unicode 转换模式，*缓冲区*被解释为指向包含UTF-16 数据。 尝试在此模式下写入奇数个字节会导致参数验证错误。
+在 Unicode 转换模式下打开*流*时（例如，如果通过调用**fopen**并使用包含 ccs_UNICODE、ccs_UTF-16LE**ccs=UNICODE**或**ccs_UTF-8**的模式参数）打开*流*，或者通过使用 **_setmode**和**ccs=UTF-16LE**包含 **_O_WTEXT、_O_U16TEXT**或 **_O_U8TEXT***缓冲区*的模式参数将模式更改为包含 UTF-16 的**wchar_t**数组的指针。 **_O_U16TEXT** 尝试在此模式下写入奇数个字节会导致参数验证错误。
 
 因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本，请参阅 **_fwrite_nolock**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -79,13 +83,13 @@ size_t fwrite(
 |--------------|---------------------|
 |**fwrite**|\<stdio.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [fread](fread.md) 示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_setmode](setmode.md)<br/>

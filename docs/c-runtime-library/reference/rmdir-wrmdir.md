@@ -1,9 +1,11 @@
 ---
 title: _rmdir、_wrmdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wrmdir
 - _rmdir
+- _o__rmdir
+- _o__wrmdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338070"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir、_wrmdir
 
@@ -65,21 +68,23 @@ int _wrmdir(
 
 ## <a name="return-value"></a>返回值
 
-如果成功删除目录，则这些函数将返回 0。 返回值-1 表示错误， **errno**设置为以下值之一：
+如果成功删除目录，则这些函数将返回 0。 返回值 -1 表示错误 **，errno**设置为以下值之一：
 
 |errno 值|条件|
 |-|-|
 | **ENOTEMPTY** | 给定路径不是目录、路径不为空，或目录为当前工作目录或根目录。 |
-| **ENOENT** | 路径无效。 |
+| **埃诺恩特** | 路径无效。 |
 | **EACCES** | 程序有一个打开的目录句柄。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Rmdir**函数删除*dirname*指定的目录。 该目录必须为空，且不能为当前工作目录或根目录。
+**_rmdir**函数删除*dirname*指定的目录。 该目录必须为空，且不能为当前工作目录或根目录。
 
-**_wrmdir**是 **_rmdir**的宽字符版本; **_wrmdir**的*dirname*参数是宽字符字符串。 否则， **_wrmdir**和 **_rmdir**的行为相同。
+**_wrmdir**是 **_rmdir**的宽字符版本;**_wrmdir***的 dirname*参数是宽字符字符串。 **_wrmdir**和 **_rmdir**行为相同。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -89,12 +94,12 @@ int _wrmdir(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -104,7 +109,7 @@ int _wrmdir(
 
 请参阅 [_mkdir](mkdir-wmkdir.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [目录控制](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>

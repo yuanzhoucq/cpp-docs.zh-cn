@@ -1,10 +1,12 @@
 ---
 title: _popen, _wpopen
-description: Microsoft C 运行时（CRT）库函数的引用 _popen 和 _wpopen。
-ms.date: 01/28/2020
+description: 对 Microsoft C 运行时 （CRT） 库_popen函数_wpopen和 的引用。
+ms.date: 4/2/2020
 api_name:
 - _popen
 - _wpopen
+- _o__popen
+- _o__wpopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894315"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338505"
 ---
 # <a name="_popen-_wpopen"></a>_popen、_wpopen
 
@@ -83,25 +86,27 @@ FILE *_wpopen(
 
 ## <a name="return-value"></a>返回值
 
-返回一个与创建的管道一端相关联的流。 管道的另一端与生成的命令的标准输入或标准输出相关联。 函数针对错误返回 **NULL**。 如果错误是由无效参数引起的，则**errno**设置为**EINVAL**。 有关有效模式的信息，请参阅“备注”部分。
+返回一个与创建的管道一端相关联的流。 管道的另一端与生成的命令的标准输入或标准输出相关联。 函数针对错误返回 **NULL**。 如果错误是由无效参数引起的，**则 errno**设置为**EINVAL**。 有关有效模式的信息，请参阅“备注”部分。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Popen**函数创建管道。 然后，它以异步方式执行命令处理器的生成副本，并使用*命令*作为命令行。 字符串 *mode* 指定请求的访问类型，如下所示。
+**_popen**函数创建管道。 然后，它异步执行命令处理器的生成副本，并使用*命令*作为命令行。 字符串 *mode* 指定请求的访问类型，如下所示。
 
-|访问模式|描述|
+|访问模式|说明|
 |-|-|
-|**“r”**|调用进程可使用返回的流读取生成的命令的标准输出。|
-|**“w”**|调用进程可使用返回的流写入生成的命令的标准输入。|
-|**“b”**|在二进制模式下打开。|
-|**“t”**|在文本模式下打开。|
+|**"r"**|调用进程可使用返回的流读取生成的命令的标准输出。|
+|**"w"**|调用进程可使用返回的流写入生成的命令的标准输入。|
+|**"b"**|在二进制模式下打开。|
+|**"t"**|在文本模式下打开。|
 
 > [!NOTE]
-> 如果在 Windows 程序中使用，则 **_popen**函数将返回一个无效的文件指针，导致程序无限期地停止响应。 **_popen**可在控制台应用程序中正常工作。 若要创建重定向输入和输出的 Windows 应用程序，请参阅在 Windows SDK 中[创建具有重定向输入和输出的子进程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
+> 如果在 Windows 程序中使用 **，_popen**函数将返回一个无效的文件指针，导致该程序无限期停止响应。 **_popen**在控制台应用程序中正常工作。 要创建重定向输入和输出的 Windows 应用程序，请参阅在 Windows SDK 中[使用重定向输入和输出创建子进程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
 
-**_wpopen**是 **_popen**的宽字符版本; **_wpopen**的*path*参数是宽字符字符串。 否则 **_wpopen**和 **_popen**的行为相同。
+**_wpopen**是 **_popen**的宽字符版本;**_wpopen**的*路径*参数是宽字符字符串。 **_wpopen**和 **_popen**行为相同。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,14 +114,14 @@ FILE *_wpopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> 或 \<wchar.h>|
 
-有关兼容性的详细信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -166,7 +171,7 @@ int main( void )
 }
 ```
 
-此输出假设当前目录中只有一个具有 `.c` 文件扩展名的文件。
+此输出假定当前目录中只有一个`.c`文件具有文件名扩展名。
 
 ```Output
 Volume in drive C is CDRIVE
@@ -183,6 +188,6 @@ Process returned 0
 
 ## <a name="see-also"></a>另请参阅
 
-[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)\
+[过程和环境控制](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

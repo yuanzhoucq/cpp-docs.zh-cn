@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338331"
 ---
 # <a name="_putw"></a>_putw
 
@@ -57,13 +59,15 @@ int _putw(
 
 ## <a name="return-value"></a>返回值
 
-返回写入的值。 返回值**EOF**可能指示错误。 由于**EOF**也是合法的整数值，请使用**ferror**来验证错误。 如果*stream*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EOF**。
+返回写入的值。 **EOF**的返回值可能表示错误。 由于**EOF**也是一个合法的整数值，请使用**ferror**验证错误。 如果*流*是空指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，此函数将**errno**设置到**EINVAL**并返回**EOF**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Putw**函数将**int**类型的二进制值写入流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库兼容。 **_Putw**上可能会出现可移植性**问题，因为 int 和** **int**中的字节顺序的大小在不同系统之间不同。
+**_putw**函数将**int**的二进制值写入流的当前位置 *。* **_putw**不影响流中项的对齐，也不假定任何特殊对齐方式。 **_putw**主要是为了与以前的库兼容。 **_putw**可能会出现可移植性问题，因为**int**的大小和**int**中的字节顺序因系统而异。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -71,7 +75,7 @@ int _putw(
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -109,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Wrote ten words

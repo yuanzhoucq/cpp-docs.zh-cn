@@ -1,11 +1,15 @@
 ---
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49915a4017040200afca950cee5e1ac31184c589
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952543"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341050"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -80,48 +85,50 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*C*<br/>
 要转换的多字节字符。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果可能，这些函数将返回转换后的字符*c*。 否则，它返回的字符*c*不变。
+如果可能，每个函数都返回转换后的字符*c*。a。 否则，它将返回字符*c*不变。
 
 ## <a name="remarks"></a>备注
 
-函数会测试字符*c* ，如果可能，还会应用以下转换之一。
+函数测试字符*c，* 如果可能，请应用以下转换之一。
 
 |例程|转换|
 |--------------|--------------|
-|**_mbctolower**、 **_mbctolower_l**|大写字符到小写字符。|
-|**_mbctoupper**、 **_mbctoupper_l**|小写字符到大写字符。|
+|**_mbctolower**， **_mbctolower_l**|大写字符到小写字符。|
+|**_mbctoupper**， **_mbctoupper_l**|小写字符到大写字符。|
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 没有 **_l**后缀的函数版本使用此与区域设置相关的行为的当前区域设置;具有 **_l**后缀的版本是相同的，只不过它使用传入区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在以前的版本中， **_mbctolower**称为 " **jtolower**"， **_mbctoupper**称为 " **jtoupper**"。 对于新代码，请改用新名称。
+在以前的版本中 **，_mbctolower**称为 **"jtolower"，_mbctoupper**称为**jtoupper。** **_mbctoupper** 对于新代码，请改用新名称。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**降**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**到上**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |--------------|---------------------|
-|**_mbctolower**、 **_mbctolower_l**|\<mbstring.h>|
-|**_mbctoupper**、 **_mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower**， **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**， **_mbctoupper_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc、_mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _lfind_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lfind_s
+- _o__lfind_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8f2983bee93c623eb936ed12422134281418076b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953451"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342190"
 ---
 # <a name="_lfind_s"></a>_lfind_s
 
@@ -56,7 +58,7 @@ void *_lfind_s(
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
+*关键*<br/>
 要搜索的对象。
 
 *base*<br/>
@@ -65,43 +67,45 @@ void *_lfind_s(
 *number*<br/>
 数组元素的数目。
 
-*size*<br/>
+*大小*<br/>
 以字节为单位的数组元素的大小。
 
-*compare*<br/>
+*比较*<br/>
 指向比较例程的指针。 第一个参数是*上下文*指针。 第二个参数是指向要搜索的键的指针。 第三个参数是指向要与该键进行比较的数组元素的指针。
 
-*context*<br/>
-指向可能在比较函数中访问的对象的指针。
+*上下文*<br/>
+指向可在比较函数中访问的对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果找到该键，则 **_lfind_s**将返回一个指针，该指针指向与*键*匹配的*基*中的数组元素。 如果找不到该密钥， **_lfind_s**将返回**NULL**。
+如果找到该键 **，_lfind_s**返回指向*基上*与*键*匹配的数组元素的指针。 如果未找到该键 **，_lfind_s**返回**NULL**。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。
+如果将无效参数传递给函数，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行 **，errno**将设置为**EINVAL，** 并且函数返回**NULL**。
 
 ### <a name="error-conditions"></a>错误条件
 
-|密钥|base|compare|num|size|errno|
+|key|base|compare|num|大小|errno|
 |---------|----------|-------------|---------|----------|-----------|
-|**NULL**|任何|任何|任何|任何|**EINVAL**|
-|任何|**NULL**|任何|!= 0|任何|**EINVAL**|
-|任何|任何|任何|任何|零|**EINVAL**|
-|任何|任何|**NULL**|一个|任何|**EINVAL**|
+|**空**|any|any|any|any|**埃因瓦尔**|
+|any|**空**|any|!= 0|any|**埃因瓦尔**|
+|any|any|any|any|零|**埃因瓦尔**|
+|any|any|**空**|一个|any|**埃因瓦尔**|
 
 ## <a name="remarks"></a>备注
 
-**_Lfind_s**函数对*数字*元素数组中的值*键*执行线性搜索，其中每个*宽度*字节。 与**bsearch_s**不同， **_lfind_s**不需要对数组进行排序。 *Base*参数是指向要搜索的数组的基的指针。 *Compare*参数是指向用户提供的例程的指针，它比较两个数组元素，然后返回指定其关系的值。 **_lfind_s**在搜索过程中一次或多次调用*比较*例程，并将*上下文*指针和指针传递给每个调用上的两个数组元素。 *比较*例程必须比较这些元素，然后返回非零值（表示元素不同）或0（表示元素相同）。
+**_lfind_s**函数对*数字*元素数组中的值*键*执行线性搜索，每个数组都是*宽度*字节。 与**bsearch_s**不同 **，_lfind_s**不需要对数组进行排序。 *基*参数是指向要搜索的数组基础的指针。 *比较*参数是指向用户提供的例程的指针，该例程比较两个数组元素，然后返回指定其关系的值。 **_lfind_s**在搜索期间调用*比较*例程一次或多次，将*上下文*指针和指针传递给每个调用上的两个数组元素。 *比较*例程必须比较元素，然后返回非零（表示元素不同）或 0（表示元素相同）。
 
-除了将*上下文*指针添加到比较函数的自变量和函数的参数列表外， **_lfind_s**与 **_lfind**类似。 如果搜索的数据结构是对象的一部分，并且*compare*函数需要访问该对象的成员，则*上下文*指针会很有用。 *Compare*函数可以将 void 指针转换为适当的对象类型并访问该对象的成员。 添加*上下文*参数会使 **_lfind_s**更安全，因为其他上下文可用于避免与使用静态变量关联的重入 bug，以使数据可供*compare*函数使用。
+**_lfind_s**与 **_lfind**类似，除了添加指向比较函数的参数和函数的参数列表的*上下文*指针。 如果搜索的数据结构是对象的一部分，并且*比较*函数需要访问对象的成员，则*上下文*指针非常有用。 *比较*函数可以将 void 指针转换为相应的对象类型并访问该对象的成员。 添加*上下文*参数使 **_lfind_s更安全，** 因为可以使用其他上下文来避免与使用静态变量使数据可用于*比较*函数相关的重入错误。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_lfind_s**|\<search.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -183,7 +187,7 @@ int main( )
 weit found
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: log、logf、logl、log10、log10f、log10l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341878"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -74,32 +77,34 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 要查找的值的对数。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则**日志**函数返回*x*的自然对数（以*e*为底）。 **Log10**函数返回以10为底的对数。 如果*x*为负数，则默认情况下，这些函数返回无限（IND）。 如果*x*为0，则返回无穷（INF）。
+如果成功，**日志**函数返回*x*的自然对数 （基*e*）。 **log10**函数返回基-10对数m。 如果*x*为负数，则默认情况下，这些函数将返回不确定 （IND）。 如果*x*为 0，它们返回无穷大 （INF）。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|无|_DOMAIN|
+|• QNAN，IND|无|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**日志**和**Log10**具有使用流式处理 SIMD 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**日志**和**log10**具有使用流式 SIMD 扩展 2 （SSE2） 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-C++允许重载，因此你可以调用采用并返回**浮点**或**长双精度**值的**log**和**log10**的重载。 在 C 程序中， **log**和**log10**始终采用并返回**double**。
+C++允许重载，因此您可以调用获取和返回**浮点**值或**长双精度值**的**日志**和**log10**的重载。 在 C 程序中，**日志**和**log10**始终获取并返回**双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**log**、 **logf**、 **logl**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
+|**日志**，**日志**，**日志**，**日志10**， **log10f**， **log10l**|\<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -156,7 +161,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md) <br/>
 [exp、expf、expl](exp-expf.md) <br/>

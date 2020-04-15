@@ -1,8 +1,9 @@
 ---
 title: _commit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _commit
+- _o__commit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: b5a417deef48c89751f56feec480e90444728687
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f8e13e7fc197c66395556d518ecbd1cd20ac1f77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939051"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348616"
 ---
 # <a name="_commit"></a>_commit
 
@@ -50,30 +52,32 @@ int _commit(
 
 ### <a name="parameters"></a>参数
 
-*fd*<br/>
+*Fd*<br/>
 引用打开的文件的文件说明符。
 
 ## <a name="return-value"></a>返回值
 
-如果已成功将文件刷新到磁盘，则 **_commit**返回0。 返回值-1 表示错误。
+如果文件成功刷新到磁盘 **，_commit**返回 0。 返回值 -1 表示错误。
 
 ## <a name="remarks"></a>备注
 
-**_Commit**函数强制操作系统将与*fd*关联的文件写入磁盘。 此调用可确保立即刷新特定文件，而无需等待操作系统的决定。
+**_commit**功能强制操作系统写入与*fd*到磁盘关联的文件。 此调用可确保立即刷新特定文件，而无需等待操作系统的决定。
 
-如果*fd*是无效的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并且**errno**设置为**ebadf (** 。
+如果*fd*无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回 **-1，errno**设置为**EBADF**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_commit**|\<io.h>|\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低电平 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

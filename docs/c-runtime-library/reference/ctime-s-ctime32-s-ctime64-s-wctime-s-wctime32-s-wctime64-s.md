@@ -1,6 +1,6 @@
 ---
 title: ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ctime64_s
 - _wctime32_s
@@ -8,6 +8,10 @@ api_name:
 - _wctime64_s
 - _ctime32_s
 - _wctime_s
+- _o__ctime32_s
+- _o__ctime64_s
+- _o__wctime32_s
+- _o__wctime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -54,12 +59,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d5121c795ed27c22d20087868f798a4b7f5f5b02
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624410"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348169"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
@@ -125,54 +130,56 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
-必须足以容纳 26 个字符。 指向字符串结果的指针; 如果为，则为**NULL** 。
+*缓冲区*<br/>
+必须足以容纳 26 个字符。 指向字符串结果的指针，或**NULL，** 如果：
 
-- *sourceTime*表示1970年1月1日午夜之前的日期。
+- *sourceTime*表示 1970 年 1 月 1 日午夜之前的日期，UTC。
 
-- 如果使用 **_ctime32_s**或 **_Wctime32_s** ，而*SourceTime*表示23:59:59 年1月 2038 18 日之后的日期（UTC）。
+- 如果您使用 **_ctime32_s**或 **_wctime32_s，** 并且*sourceTime*表示 2038 年 1 月 18 日 23：59：59 之后的日期，UTC。
 
-- 如果使用 **_ctime64_s**或 **_Wctime64_s** ，而*SourceTime*表示23:59:59 年12月 3000 31 日之后的日期（UTC）。
+- 如果您使用 **_ctime64_s**或 **_wctime64_s，** 并且*sourceTime*表示 23：59：59，3000 年 12 月 31 日 UTC 之后的日期。
 
-- 如果使用 **_ctime_s**或 **_wctime_s**，则这些函数是以前函数的包装器。 请参见“备注”部分。
+- 如果使用 **_ctime_s**或 **_wctime_s，** 则这些函数是以前函数的包装。 请参阅“备注”部分。
 
-*numberOfElements*<br/>
+*元素数*<br/>
 缓冲区的大小。
 
-*sourceTime*<br/>
+*源时间*<br/>
 指向存储时间的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 如果由于无效参数导致失败，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回错误代码。 在 ERRNO.H 中定义了错误代码；有关这些错误的列表，请参阅 [errno](../../c-runtime-library/errno-constants.md)。 针对每个错误条件而引发的实际错误代码如下表所示。
+如果成功，则返回 0。 如果由于无效参数导致失败，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回错误代码。 错误代码在 ERRNO 中定义。H;有关这些错误的列表，请参阅[errno](../../c-runtime-library/errno-constants.md)。 针对每个错误条件而引发的实际错误代码如下表所示。
 
 ## <a name="error-conditions"></a>错误条件
 
-|*buffer*|*numberOfElements*|*sourceTime*|返回|*缓冲区*中的值|
+|*缓冲区*|*元素数*|*源时间*|返回|*缓冲区*中的值|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|any|any|**EINVAL**|未修改|
-|Not **NULL** （指向有效内存）|0|any|**EINVAL**|未修改|
-|Not **NULL**|0< 大小 < 26|any|**EINVAL**|空字符串|
-|Not **NULL**|>= 26|NULL|**EINVAL**|空字符串|
-|Not **NULL**|>= 26|< 0|**EINVAL**|空字符串|
+|**空**|any|any|**埃因瓦尔**|未修改|
+|**非 NULL（** 指向有效内存）|0|any|**埃因瓦尔**|未修改|
+|非**NULL**|0< 大小 < 26|any|**埃因瓦尔**|空字符串|
+|非**NULL**|>= 26|Null|**埃因瓦尔**|空字符串|
+|非**NULL**|>= 26|< 0|**埃因瓦尔**|空字符串|
 
 ## <a name="remarks"></a>备注
 
-**Ctime_s**函数将存储为[time_t](../../c-runtime-library/standard-types.md)结构的时间值转换为字符串。 *SourceTime*值通常是从对[time](time-time32-time64.md)的调用中获取的，它返回自午夜（00:00:00）起，年1月 1970 1 日（协调世界时（UTC））开始经过的秒数。 返回值字符串正好包含 26 个字符，且格式为：
+**ctime_s**函数将存储为[time_t](../../c-runtime-library/standard-types.md)结构的时间值转换为字符串。 *sourceTime*值通常从调用[时间](time-time32-time64.md)获得，该调用返回自 1970 年 1 月 1 日午夜 （00：00：00：00） 起经过的秒数，协调通用时间 （UTC）。 返回值字符串正好包含 26 个字符，且格式为：
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 使用 24 小时制。 所有字段都具有固定宽度。 新换行符 ('\n') 和空字符 ('\0') 占据字符串的最后两个位置。
 
-转换的字符串同时根据本地时区设置进行调整。 有关定义时区环境和全局变量的信息，请参阅[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函数，了解有关配置本地时间和[_tzset](tzset.md)函数的信息。
+转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间和[_tzset](tzset.md)函数的信息，请参阅[时间](time-time32-time64.md)[、_ftime](ftime-ftime32-ftime64.md)和[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函数，了解有关定义时区环境和全局变量的信息。
 
-**_wctime32_s**和 **_wctime64_s**是 **_ctime32_s**和 **_ctime64_s**的宽字符版本;返回指向宽字符字符串的指针。 否则， **_ctime64_s**、 **_wctime32_s**和 **_wctime64_s**的行为与 **_ctime32_s**完全相同。
+**_wctime32_s**和 **_wctime64_s**是 **_ctime32_s**和 **_ctime64_s**的宽字符版本;返回指向宽字符字符串的指针。 否则 **，_ctime64_s、_wctime32_s**和 **_wctime64_s**行为与 **_ctime32_s**相同。 **_wctime32_s**
 
-**ctime_s**是计算结果为 **_ctime64_s**且**time_t**等效于 **__time64_t**的内联函数。 如果需要强制编译器将**time_t**解释为旧的32位**time_t**，可定义 **_USE_32BIT_TIME_T**。 这样做会导致**ctime_s**计算为 **_ctime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许此操作。
+**ctime_s**是一个内联函数，用于计算到 **_ctime64_s，time_t**等效于 **__time64_t。** **time_t** 如果需要强制编译器将**time_t**解释为旧的 32 位**time_t**，则可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**ctime_s**评估 **_ctime32_s。** 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -184,12 +191,12 @@ errno_t _wctime64_s(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**ctime_s**、 **_ctime32_s**、 **_ctime64_s**|\<time.h>|
-|**_wctime_s**、 **_wctime32_s**、 **_wctime64_s**|\<time.h> 或 \<wchar.h>|
+|**ctime_s**， **_ctime32_s**， **_ctime64_s**|\<time.h>|
+|**_wctime_s**， **_wctime32_s**， **_wctime64_s**|\<time.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -229,12 +236,12 @@ int main( void )
 The time is Fri Apr 25 13:03:39 2003
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>
 [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
-[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
+[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>

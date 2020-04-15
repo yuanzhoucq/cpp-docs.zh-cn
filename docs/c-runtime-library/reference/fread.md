@@ -1,8 +1,9 @@
 ---
 title: fread
-ms.date: 11/28/2018
+ms.date: 4/2/2020
 api_name:
 - fread
+- _o_fread
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 7cf4542a656798f7e2431b2f939df1b5d6396144
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 26ffd56072f1a5fddc3131a42cd47c145e437b60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346055"
 ---
 # <a name="fread"></a>fread
 
@@ -51,31 +53,33 @@ size_t fread(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*缓冲区*<br/>
 数据的存储位置。
 
-*size*<br/>
+*大小*<br/>
 项目大小（以字节为单位）。
 
 *count*<br/>
 要读取的项的最大数量。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-**fread**返回实际读取的完整项的数量, 如果发生错误, 或者在到达*计数*之前遇到文件末尾, 则此值可能小于*计数*。 使用**feof**或**ferror**函数将读取错误与文件结尾条件区分开来。 如果*大小*或*计数*为 0, 则**fread**将返回 0, 并且缓冲区内容将保持不变。 如果*流*或*缓冲区*是 null 指针, **fread**将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则此函数会将**errno**设置为**EINVAL** , 并返回0。
+**fread**返回实际读取的完整项数，如果发生错误或在达到*计数*之前遇到文件结尾，则可能小于*计数*。 使用**feof**或**ferror**函数来区分读取错误和文件结尾条件。 如果*大小*或*计数*为 0，**则 fread**返回 0，缓冲区内容保持不变。 如果*流*或*缓冲区*是空指针，**则 fread**将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，此函数将**errno**设置到**EINVAL**并返回 0。
 
-有关这些错误代码的详细信息, 请参阅[ \_doserrno、errno、 \_sys\_errlist \_和\_sys nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
+有关这些错误代码的详细信息[\_，请参阅剂量\_诺\_、errno、sys errlist 和\_sys\_nerr。](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>备注
 
-**Fread**函数从输入*流*中读取的*大小*为字节*的项,* 并将其存储在*缓冲区*中。 与*流*关联的文件指针 (如果有) 以实际读取的字节数为增量增加。 如果在[文本模式下](../../c-runtime-library/text-and-binary-mode-file-i-o.md)打开给定的流, 则会将 Windows 样式的换行符转换为 Unix 样式的换行符。 也就是说, 回车换行符 (CRLF) 对替换为单行换行符 (LF) 字符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
+**fread**函数最多读取*以从输入流中计数**大小*字节项，*stream*并将其存储在*缓冲区*中。 与*流*关联的文件指针（如果有）由实际读取的字节数增加。 如果在[文本模式下](../../c-runtime-library/text-and-binary-mode-file-i-o.md)打开给定的流，Windows 样式的换行将转换为 Unix 样式的换行。 也就是说，滑车回线馈送 （CRLF） 对由单行馈送 （LF） 字符替换。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
 
-在文本模式流上使用时, 如果所请求的数据量 (即,*大小* \* *计数*) 大于或等于内部**文件** \*缓冲区大小 (默认为4096字节, 则可使用[setvbuf](../../c-runtime-library/reference/setvbuf.md)), 流数据直接复制到用户提供的缓冲区中, 并在该缓冲区中完成行转换。 由于转换后的数据可能比复制到缓冲区中的流数据短，因此，数据的*缓冲区*\[*return_value* \* *大小*] （其中*return_value*是**fread**中的返回值）可能包含文件中未转换的数据。 出于此原因，如果缓冲区的意图是要充当 C 样式字符串，则建议以 null 终止字符数据\[的形式为*return_value* \* 。 有关文本模式和二进制模式效果的详细信息, 请参阅[fopen](fopen-wfopen.md) 。
+在文本模式流上使用时，如果请求的数据量（即*大小*\**计数*）大于或等于内部**FILE**\*缓冲区大小（默认情况下为 4096 字节，使用[setvbuf](../../c-runtime-library/reference/setvbuf.md)可配置），则流数据将直接复制到用户提供的缓冲区中，并在该缓冲区中完成换行。 由于转换后的数据可能比复制到缓冲区中的流数据短，因此超过*缓冲区*\[*的数据return_value*\**大小** （其中*return_value*是从**sread**返回值）可能包含文件中未转换的数据。 因此，如果缓冲区的意图用作 C 样式字符串，我们建议您在*缓冲区*\[*return_value*\**大小*下终止字符数据。 有关文本模式和二进制模式效果的详细信息，请参阅[fopen。](fopen-wfopen.md)
 
 此函数将锁定其他线程。 如果需要非锁定版本，请使用 **_fread_nolock**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -83,7 +87,7 @@ size_t fread(
 |--------------|---------------------|
 |**fread**|\<stdio.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -135,10 +139,10 @@ Number of items read = 25
 Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[文本和二进制文件 i/o](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[文本和二进制文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
 [fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0500ab8f76049aeaf1c89355ea5450a93243b734
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245642"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326863"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList 类
 
-构造的堆指针的列表时，此类提供了有用的方法。
+此类提供构造堆指针列表时有用的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -34,22 +34,22 @@ class CHeapPtrList
 #### <a name="parameters"></a>参数
 
 *E*<br/>
-要存储在集合类的对象类型。
+要存储在集合类中的对象类型。
 
-*Allocator*<br/>
-要使用的内存分配类。 默认值是[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)。
+*分配器*<br/>
+要使用的内存分配类。 默认值为[CCRT分配器](../../atl/reference/ccrtallocator-class.md)。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHeapPtrList::CHeapPtrList](#cheapptrlist)|构造函数。|
+|[CHeapPtr 列表：CHeapPtrList](#cheapptrlist)|构造函数。|
 
 ## <a name="remarks"></a>备注
 
-此类提供构造函数，并派生方法从[CAtlList](../../atl/reference/catllist-class.md)并[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)来帮助存储堆指针集合类对象的创建。
+此类提供一个构造函数，并从[CAtlList](../../atl/reference/catllist-class.md)和[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)派生方法，以帮助创建存储堆指针的集合类对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -59,9 +59,9 @@ class CHeapPtrList
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标题：** atlcoll.h
 
-##  <a name="cheapptrlist"></a>  CHeapPtrList::CHeapPtrList
+## <a name="cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtr 列表：CHeapPtrList
 
 构造函数。
 
@@ -76,9 +76,9 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>备注
 
-块大小为分配的新元素时所需的内存量的度量值。 更大的块大小降低对内存分配例程的调用，但使用更多的资源。
+块大小是需要新元素时分配的内存量的度量。 较大的块大小减少了对内存分配例程的调用，但使用的资源更多。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CAtlList 类](../../atl/reference/catllist-class.md)<br/>
 [CHeapPtr 类](../../atl/reference/cheapptr-class.md)<br/>

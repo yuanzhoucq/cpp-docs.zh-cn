@@ -1,8 +1,9 @@
 ---
 title: rand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand
+- _o_rand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949551"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338162"
 ---
 # <a name="rand"></a>rand
 
-使用众所周知且完全可重复的算法生成一个伪随机数。 提供此函数的更具编程的安全版本;请参阅[rand_s](rand-s.md)。 **Rand**生成的数字不是加密安全的。 若要进行更安全的安全随机数生成，请使用[rand_s](rand-s.md)或在C++标准库中[ \<](../../standard-library/random.md)声明的函数 > 随机声明。
+使用众所周知且完全可重现的算法生成伪随机数。 此函数的编程安全性版本可用;见[rand_s](rand-s.md)。 **兰特**生成的数字在加密上并不安全。 要生成更加密安全的随机数，请使用[rand_s](rand-s.md)或C++标准库中声明的函数，以[\<随机>](../../standard-library/random.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -48,21 +50,23 @@ int rand( void );
 
 ## <a name="return-value"></a>返回值
 
-**rand**返回伪随机数，如上所述。 无错误返回。
+**如**上文所述，兰特返回伪随机数。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**Rand**函数返回0到**RAND_MAX** （32767）范围内的一个随机整数。 在调用**rand**之前，使用[srand](srand.md)函数对伪随机数生成器进行种子设定。
+**兰特**函数返回范围 0 到**RAND_MAX** （32767） 中的伪随机整数。 在调用**rand**之前，使用[srand](srand.md)函数来播种伪随机数生成器。
 
-**Rand**函数生成一个众所周知的序列，它不适合用作加密函数。 若要进行更安全的安全随机数生成，请使用[rand_s](rand-s.md)或在C++标准库中[ \<](../../standard-library/random.md)声明的函数 > 随机声明。 有关**rand**错误以及随机 > 如何\<处理这些缺点的信息，请参阅此带标题的[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的视频。
+**兰特**函数生成一个众所周知的序列，不适合用作加密函数。 要生成更加密安全的随机数，请使用[rand_s](rand-s.md)或C++标准库中声明的函数，以[\<随机>](../../standard-library/random.md)。 有关**兰特**出了什么问题以及随机>如何解决\<这些缺点的信息，请参阅此名为[rand 被视为有害的](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)视频。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**rand**|\<stdlib.h>|
+|**兰德**|\<stdlib.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -134,7 +138,7 @@ int main( void )
    66
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>

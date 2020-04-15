@@ -1,9 +1,11 @@
 ---
 title: _fputc_nolock、_fputwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fputwc_nolock
 - _fputc_nolock
+- _o__fputc_nolock
+- _o__fputwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: e49191dfd6e4d360a8dd3123d6a84320b4de8a08
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f1ad79a1517783a48de887ccf2294d7a8018f70e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956941"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346258"
 ---
 # <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock、_fputwc_nolock
 
@@ -62,10 +65,10 @@ wint_t _fputwc_nolock(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*C*<br/>
 要写入的字符。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -74,9 +77,11 @@ wint_t _fputwc_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_fputc_nolock**和 **_fputwc_nolock**分别与**fputc**和**fputwc**相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_fputc_nolock**和 **_fputwc_nolock**分别与**fputc**和**fputwc**相同，只是它们不受其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
-如果在 ANSI 模式下打开流，则这两个函数行为相同。 **_fputc_nolock**当前不支持输出到 UNICODE 流中。
+如果在 ANSI 模式下打开流，则这两个函数行为相同。 **_fputc_nolock**当前不支持将输出到 UNICODE 流中。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -91,7 +96,7 @@ wint_t _fputwc_nolock(
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台（**stdin**、 **stdout**和**stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 （UWP） 应用中不支持该控制台。 在与控制台关联的标准流句柄 （**stdin、** **stdout**和**stder**） 必须重定向，C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -118,7 +123,7 @@ int main( void )
 This is a test of _fputc_nolock!!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc、fgetwc](fgetc-fgetwc.md)<br/>
