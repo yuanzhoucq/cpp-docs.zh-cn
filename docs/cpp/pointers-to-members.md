@@ -8,30 +8,30 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 3238cd801763c72e96ccd93eee9640e672a5fbf5
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: adffacc3ddc08679d7db4e17e027d8a7dbe8a92b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320317"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 
-指向成员的指针的声明是指针声明的特例。  它们使用以下顺序进行声明：
+指向成员的指针的声明是指针声明的特例。  它们使用以下顺序声明：
 
-> *存储类说明符*<sub>可选</sub> *cv 限定符*<sub>opt</sub> *类型说明符* *可选*<sub>opt</sub> *限定名称* **`::*`** *cv 限定符*<sub>opt</sub> *标识符* *pm-初始值设定项*<sub>opt</sub> **`;`**
+> *存储类指定程序*<sub>选择</sub> *cv 限定符*<sub>选择</sub>*类型-规范器**ms-修饰符*<sub>选择</sub>*限定名称***`::*`** *cv 限定符*<sub>选择</sub>*标识符*pm*初始化程序*<sub>选择</sub>**`;`**
 
 1. 声明说明符：
 
    - 可选存储类说明符。
 
-   - 可选**const**和**volatile**说明符。
+   - 可选**的针和****挥发**性规格。
 
-   - 类型说明符：类型的名称。 这是要指向的成员的类型，而不是类。
+   - 类型说明符：类型的名称。 它是要指向的成员的类型，而不是类。
 
 1. 声明符：
 
-   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 特定的修饰符](../cpp/microsoft-specific-modifiers.md)。
+   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅特定于[Microsoft 的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
    - 包含要指向的成员的类的限定名。
 
@@ -39,11 +39,11 @@ ms.locfileid: "80150770"
 
    - __`*`__ 运算符。
 
-   - 可选**const**和**volatile**说明符。
+   - 可选**的针和****挥发**性规格。
 
    - 命名指向成员的指针的标识符。
 
-1. 指向成员的可选指针初始值设定项：
+1. 可选的指针到成员初始化器：
 
    - **`=`** 运算符。
 
@@ -53,11 +53,11 @@ ms.locfileid: "80150770"
 
    - __`::`__ 运算符。
 
-   - 适当类型的类的非静态成员的名称。
+   - 相应类型的类的非静态成员的名称。
 
-像往常一样，允许在单个声明中使用多个声明符（以及任何关联的初始值设定项）。 指向成员的指针可能不指向类的静态成员、引用类型的成员或 **`void`** 。
+像往常一样，允许在单个声明中使用多个声明符（以及任何关联的初始值设定项）。 指向成员的指针不能指向类的静态成员、引用类型的成员或**`void`**。
 
-指向类的成员的指针与普通指针不同：它同时包含成员类型的类型信息和该成员所属类的类型信息。 常规指针只标识内存中的一个对象或只具有其地址。 指向类的某个成员的指针标识类的所有实例中的该成员。 以下示例声明类、`Window` 和一些指向成员数据的指针。
+指向类成员的指针与普通指针不同：它同时具有成员类型和成员所属的类的类型信息。 常规指针只标识内存中的一个对象或只具有其地址。 指向类的某个成员的指针标识类的所有实例中的该成员。 以下示例声明类、`Window` 和一些指向成员数据的指针。
 
 ```cpp
 // pointers_to_members1.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-在前面的示例中，`pwCaption` 是指向 `Window` 类型的类的任何成员的指针 `char*`。 类型 `pwCaption` 不是 `char * Window::* `。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。
+在前面的示例中，`pwCaption`是指向 类`Window``char*`的任何类型的成员的指针。 类型 `pwCaption` 不是 `char * Window::*`。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -101,9 +101,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-**`.*`** 和 **`->*`** 运算符（指向成员的指针运算符）之间的差异在于， **`.*`** 运算符选择给定对象或对象引用的成员，而 **`->*`** 运算符则通过指针选择成员。 有关这些运算符的详细信息，请参阅[具有指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。
+**`.*`** 和**`->*`** 运算符（指针到成员运算符）之间的区别是**`.*`**，运算符选择给定对象或对象引用的成员，而**`->*`** 运算符通过指针选择成员。 有关这些运算符的详细信息，请参阅[具有指针到成员运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。
 
-指向成员的指针运算符的结果是成员的类型。 在本例中，该值为 `char *`。
+指针到成员运算符的结果是成员的类型。 在本例中，该值为 `char *`。
 
 以下代码片段使用指向成员的指针调用成员函数 `GetCaption` 和 `SetCaption`：
 
@@ -124,13 +124,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>针对指向成员的指针的限制
 
-静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 给定类的所有对象只存在一个静态成员实例。 这意味着，可以使用普通地址（ **&** ）和取消引用（<strong>\*</strong>）运算符。
+静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 给定类的所有对象仅存在一个静态成员的实例。 这意味着您可以使用 （**&**） 和取消引用<strong>\*</strong>运算符的普通地址。
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>指向成员和虚函数的指针
 
-通过指向成员函数的指针调用虚函数的工作方式与直接调用函数相同。 在 v 表中查找并调用了正确的函数。
+通过指针到成员函数调用虚拟函数的工作方式就像该函数被直接调用一样。 在 v 表中抬起并调用了正确的函数。
 
-一直以来，虚函数工作的关键是通过指向基类的指针来调用它们。 （有关虚函数的详细信息，请参阅[虚函数](../cpp/virtual-functions.md)。）
+一直以来，虚函数工作的关键是通过指向基类的指针来调用它们。 （有关虚拟函数的详细信息，请参阅[虚拟函数](../cpp/virtual-functions.md)。
 
 以下代码演示如何通过指向成员函数的指针调用虚函数：
 

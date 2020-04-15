@@ -1,6 +1,6 @@
 ---
 title: CFileTimeSpan 类
-description: 活动模板库（ATL）和 Microsoft 基础类（MFC） CFileTimeSpan 类以 FILETIME 单位管理时间间隔。
+description: 活动模板库 （ATL） 和 Microsoft 基础类 （MFC） CFileTimeSpan 类以 FILETIME 单位为单位管理时间间隔。
 ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
-ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
+ms.openlocfilehash: 87737ea1c778660a68510b484bcdfa3a4670e8ab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75914383"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317852"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 类
 
@@ -29,50 +29,50 @@ ms.locfileid: "75914383"
 class CFileTimeSpan
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CFileTimeSpan::CFileTimeSpan](#cfiletimespan)|构造函数。|
+|[文件时间跨度：：文件时间跨度](#cfiletimespan)|构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CFileTimeSpan::GetTimeSpan](#gettimespan)|调用此方法可从 `CFileTimeSpan` 对象检索时间跨度。|
-|[CFileTimeSpan::SetTimeSpan](#settimespan)|调用此方法可设置 `CFileTimeSpan` 对象的时间跨度。|
+|[文件时间跨度：获取时间跨度](#gettimespan)|调用此方法以从`CFileTimeSpan`对象检索时间跨度。|
+|[文件时间跨度：：设置时间跨度](#settimespan)|调用此方法以设置`CFileTimeSpan`对象的时间跨度。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公共运营商
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CFileTimeSpan：： operator-](#operator_-)|对 `CFileTimeSpan` 对象执行减法运算。|
-|[CFileTimeSpan::operator !=](#operator_neq)|比较两个 `CFileTimeSpan` 对象是否相等。|
-|[CFileTimeSpan：： operator +](#operator_add)|对 `CFileTimeSpan` 对象执行加法。|
-|[CFileTimeSpan：： operator + =](#operator_add_eq)|对 `CFileTimeSpan` 对象执行加法，并将结果分配给当前的对象。|
-|[CFileTimeSpan：： operator &lt;](#operator_lt)|比较两个 `CFileTimeSpan` 对象以确定较小的对象。|
-|[CFileTimeSpan：： operator &lt;=](#operator_lt_eq)|比较两个 `CFileTimeSpan` 对象以确定相等还是较小。|
-|[CFileTimeSpan::operator =](#operator_eq)|赋值运算符。|
-|[CFileTimeSpan::operator -=](#operator_-_eq)|对 `CFileTimeSpan` 对象执行减法运算，并将结果赋给当前的对象。|
-|[CFileTimeSpan：： operator = =](#operator_eq_eq)|比较两个 `CFileTimeSpan` 对象是否相等。|
-|[CFileTimeSpan：： operator &gt;](#operator_gt)|比较两个 `CFileTimeSpan` 对象以确定更大的对象。|
-|[CFileTimeSpan：： operator &gt;=](#operator_gt_eq)|比较两个 `CFileTimeSpan` 对象以确定相等还是较大。|
+|[文件时间跨度：：运算符 -](#operator_-)|对`CFileTimeSpan`对象执行减法。|
+|[文件时间跨度：：操作员！*](#operator_neq)|比较两个 `CFileTimeSpan` 对象是否相等。|
+|[文件时间跨度：：操作员 |](#operator_add)|对`CFileTimeSpan`对象执行添加。|
+|[文件时间跨度：：操作员 |](#operator_add_eq)|对`CFileTimeSpan`对象执行添加，并将结果分配给当前对象。|
+|[文件时间跨度：：运算符&lt;](#operator_lt)|比较两`CFileTimeSpan`个对象以确定较小的对象。|
+|[文件时间跨度：：运算符&lt;=](#operator_lt_eq)|比较两`CFileTimeSpan`个对象以确定相等性或较小的对象。|
+|[文件时间跨度：：运算符 |](#operator_eq)|分配运算符。|
+|[文件时间跨度：：运算符 -*](#operator_-_eq)|对`CFileTimeSpan`对象执行减法，并将结果分配给当前对象。|
+|[文件时间跨度：：运算符 |](#operator_eq_eq)|比较两个 `CFileTimeSpan` 对象是否相等。|
+|[文件时间跨度：：运算符&gt;](#operator_gt)|比较两`CFileTimeSpan`个对象以确定较大的对象。|
+|[文件时间跨度：：运算符&gt;=](#operator_gt_eq)|比较两`CFileTimeSpan`个对象以确定相等性或较大。|
 
 ## <a name="remarks"></a>备注
 
-`CFileTimeSpan` 类提供方法来处理文件系统使用的单元中的相对时间段。 通常在文件操作中使用这些单位，例如，在创建、上次访问文件或最后修改文件时。 此类的方法经常与[CFileTime 类](../../atl-mfc-shared/reference/cfiletime-class.md)对象结合使用。
+该`CFileTimeSpan`类提供了处理文件系统使用单位中相对时间段的方法。 这些单元通常用于文件操作，例如创建文件、上次访问或上次修改文件的时间。 此类的方法经常与[CFileTime 类](../../atl-mfc-shared/reference/cfiletime-class.md)对象结合使用。
 
 ## <a name="example"></a>示例
 
-请参阅[CFileTime：：毫秒](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond)的示例。
+请参阅[CFileTime：：毫秒的示例](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**标头：** atltime
+**标题：** atltime.h
 
-## <a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan
+## <a name="cfiletimespancfiletimespan"></a><a name="cfiletimespan"></a>文件时间跨度：：文件时间跨度
 
 构造函数。
 
@@ -85,18 +85,18 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>参数
 
 *跨度*\
-现有的 `CFileTimeSpan` 对象。
+一个现有的 `CFileTimeSpan` 对象。
 
-*nSpan*\
-以 FILETIME 单位表示的时间段。
+*恩斯潘*\
+以 FILETIME 单位为单位的时间段。
 
 ### <a name="remarks"></a>备注
 
-可以使用现有的 `CFileTimeSpan` 对象创建 `CFileTimeSpan` 对象，或用100毫微秒的 FILETIME 单元表示为64位值。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。 默认构造函数将时间跨度设置为0。
+可以使用`CFileTimeSpan`现有`CFileTimeSpan`对象创建对象，或以 100 纳秒的 FILETIME 单位表示为 64 位值。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。 默认构造函数将时间跨度设置为 0。
 
-## <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan
+## <a name="cfiletimespangettimespan"></a><a name="gettimespan"></a>文件时间跨度：获取时间跨度
 
-调用此方法可从 `CFileTimeSpan` 对象检索时间跨度。
+调用此方法以从`CFileTimeSpan`对象检索时间跨度。
 
 ```cpp
 LONGLONG GetTimeSpan() const throw();
@@ -104,11 +104,11 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回以100毫微秒为单位的时间跨度。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。
+返回以 100 纳秒 FILETIME 单位为单位的时间跨度。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。
 
-## <a name="operator_-"></a>CFileTimeSpan：： operator-
+## <a name="cfiletimespanoperator--"></a><a name="operator_-"></a>文件时间跨度：：运算符 -
 
-对 `CFileTimeSpan` 对象执行减法运算。
+对`CFileTimeSpan`对象执行减法。
 
 ```cpp
 CFileTimeSpan operator-(CFileTimeSpan span) const throw();
@@ -117,13 +117,13 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 ### <a name="parameters"></a>参数
 
 *跨度*\
-一个 `CFileTimeSpan` 对象。
+`CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
 
-返回表示两个时间范围之间差异结果的 `CFileTimeSpan` 对象。
+返回表示`CFileTimeSpan`两个时间跨度之间差值结果的对象。
 
-## <a name="operator_neq"></a>CFileTimeSpan：： operator！ =
+## <a name="cfiletimespanoperator-"></a><a name="operator_neq"></a>文件时间跨度：：操作员！*
 
 比较两个 `CFileTimeSpan` 对象是否相等。
 
@@ -138,11 +138,11 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果要比较的项不等于 `CFileTimeSpan` 对象，则返回 TRUE; 否则返回。否则为 FALSE。
+如果要比较的项不等于对象，`CFileTimeSpan`则返回 TRUE;否则 FALSE。
 
-## <a name="operator_add"></a>CFileTimeSpan：： operator +
+## <a name="cfiletimespanoperator-"></a><a name="operator_add"></a>文件时间跨度：：操作员 |
 
-对 `CFileTimeSpan` 对象执行加法。
+对`CFileTimeSpan`对象执行添加。
 
 ```cpp
 CFileTimeSpan operator+(CFileTimeSpan span) const throw();
@@ -151,15 +151,15 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 ### <a name="parameters"></a>参数
 
 *跨度*\
-一个 `CFileTimeSpan` 对象。
+`CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
 
-返回一个 `CFileTimeSpan` 对象，该对象包含两个时间范围之和。
+返回包含`CFileTimeSpan`两个时间跨度总和的对象。
 
-## <a name="operator_add_eq"></a>CFileTimeSpan：： operator + =
+## <a name="cfiletimespanoperator-"></a><a name="operator_add_eq"></a>文件时间跨度：：操作员 |
 
-对 `CFileTimeSpan` 对象执行加法，并将结果赋给当前的对象。
+对`CFileTimeSpan`对象执行添加，并将结果分配给当前对象。
 
 ```cpp
 CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
@@ -168,15 +168,15 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 ### <a name="parameters"></a>参数
 
 *跨度*\
-一个 `CFileTimeSpan` 对象。
+`CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
 
-返回更新的 `CFileTimeSpan` 对象，该对象包含两个时间范围之和。
+返回包含两`CFileTimeSpan`个时间跨度总和的更新对象。
 
-## <a name="operator_lt"></a>CFileTimeSpan：： operator &lt;
+## <a name="cfiletimespanoperator-lt"></a><a name="operator_lt"></a>文件时间跨度：：运算符&lt;
 
-比较两个 `CFileTimeSpan` 对象以确定较小的对象。
+比较两`CFileTimeSpan`个对象以确定较小的对象。
 
 ```cpp
 bool operator<(CFileTimeSpan span) const throw();
@@ -189,11 +189,11 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果第一个对象小于第二个对象（即表示较短的时间段），则返回 TRUE，否则返回 FALSE。
+如果第一个对象小于第二个对象（即表示较短的时间段），则返回 TRUE，否则为 FALSE。
 
-## <a name="operator_lt_eq"></a>CFileTimeSpan：： operator &lt;=
+## <a name="cfiletimespanoperator-lt"></a><a name="operator_lt_eq"></a>文件时间跨度：：运算符&lt;=
 
-比较两个 `CFileTimeSpan` 对象以确定相等还是较小。
+比较两`CFileTimeSpan`个对象以确定相等性或较小的对象。
 
 ```cpp
 bool operator<=(CFileTimeSpan span) const throw();
@@ -206,11 +206,11 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果第一个对象小于（即表示较短的时间段）或等于第二个对象，则返回 TRUE; 否则返回 FALSE。
+如果第一个对象小于（即表示较短的时间段）或等于第二个对象，否则为 FALSE，则返回 TRUE。
 
-## <a name="operator_eq"></a>CFileTimeSpan：： operator =
+## <a name="cfiletimespanoperator-"></a><a name="operator_eq"></a>文件时间跨度：：运算符 |
 
-赋值运算符。
+分配运算符。
 
 ```cpp
 CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
@@ -219,15 +219,15 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 ### <a name="parameters"></a>参数
 
 *跨度*\
-一个 `CFileTimeSpan` 对象。
+`CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
 
-返回更新的 `CFileTimeSpan` 对象。
+返回更新`CFileTimeSpan`的对象。
 
-## <a name="operator_-_eq"></a>CFileTimeSpan：： operator-=
+## <a name="cfiletimespanoperator--"></a><a name="operator_-_eq"></a>文件时间跨度：：运算符 -*
 
-对 `CFileTimeSpan` 对象执行减法运算，并将结果赋给当前的对象。
+对`CFileTimeSpan`对象执行减法，并将结果分配给当前对象。
 
 ```cpp
 CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
@@ -236,13 +236,13 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 ### <a name="parameters"></a>参数
 
 *跨度*\
-一个 `CFileTimeSpan` 对象。
+`CFileTimeSpan` 对象。
 
 ### <a name="return-value"></a>返回值
 
-返回更新的 `CFileTimeSpan` 对象。
+返回更新`CFileTimeSpan`的对象。
 
-## <a name="operator_eq_eq"></a>CFileTimeSpan：： operator = =
+## <a name="cfiletimespanoperator-"></a><a name="operator_eq_eq"></a>文件时间跨度：：运算符 |
 
 比较两个 `CFileTimeSpan` 对象是否相等。
 
@@ -257,11 +257,11 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果对象相等，则返回 TRUE; 否则返回 FALSE。
+如果对象相等，则返回 TRUE，否则为 FALSE。
 
-## <a name="operator_gt"></a>CFileTimeSpan：： operator &gt;
+## <a name="cfiletimespanoperator-gt"></a><a name="operator_gt"></a>文件时间跨度：：运算符&gt;
 
-比较两个 `CFileTimeSpan` 对象以确定更大的对象。
+比较两`CFileTimeSpan`个对象以确定较大的对象。
 
 ```cpp
 bool operator>(CFileTimeSpan span) const throw();
@@ -274,11 +274,11 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果第一个对象大于（即表示较长的时间段）而不是第二个对象，则返回 TRUE; 否则返回 FALSE。
+如果第一个对象大于（即表示较长的时间段）大于第二个对象（否则 FALSE），则返回 TRUE。
 
-## <a name="operator_gt_eq"></a>CFileTimeSpan：： operator &gt;=
+## <a name="cfiletimespanoperator-gt"></a><a name="operator_gt_eq"></a>文件时间跨度：：运算符&gt;=
 
-比较两个 `CFileTimeSpan` 对象以确定相等还是较大。
+比较两`CFileTimeSpan`个对象以确定相等性或较大。
 
 ```cpp
 bool operator>=(CFileTimeSpan span) const throw();
@@ -291,11 +291,11 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果第一个对象大于（即表示较长的时间段）或等于第二个对象，则返回 TRUE; 否则返回 FALSE。
+如果第一个对象大于（即表示较长的时间段）或等于第二个对象，否则为 FALSE，则返回 TRUE。
 
-## <a name="settimespan"></a>CFileTimeSpan::SetTimeSpan
+## <a name="cfiletimespansettimespan"></a><a name="settimespan"></a>文件时间跨度：：设置时间跨度
 
-调用此方法可设置 `CFileTimeSpan` 对象的时间跨度。
+调用此方法以设置`CFileTimeSpan`对象的时间跨度。
 
 ```cpp
 void SetTimeSpan(LONGLONG nSpan) throw();
@@ -303,12 +303,12 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>参数
 
-*nSpan*\
-以100毫微秒为单位的时间跨度的新值。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。
+*恩斯潘*\
+时间跨度的新值（以 100 纳秒的 FILETIME 单位为单位）。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)\
-[CFileTime 类](cfiletime-class.md)\
-[层次结构图](../../mfc/hierarchy-chart.md)\
+[文件时间](/windows/win32/api/minwinbase/ns-minwinbase-filetime)\
+[文件时间类](cfiletime-class.md)\
+[层次结构图表](../../mfc/hierarchy-chart.md)\
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

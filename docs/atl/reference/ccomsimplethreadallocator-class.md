@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CComSimpleThreadAllocator class
 - ATL threads, allocating
 ms.assetid: 66b2166a-8c50-49fd-b8e4-7f293470327d
-ms.openlocfilehash: ef1f86ca832674ba5710083b08b67f0a775a7a33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a3cce492db4db9f46aeb4efe738ee6a594ddcfc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327349"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 类
 
-此类管理类的线程选择`CComAutoThreadModule`。
+此类管理类`CComAutoThreadModule`的线程选择。
 
 ## <a name="syntax"></a>语法
 
@@ -32,21 +32,21 @@ class CComSimpleThreadAllocator
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComSimpleThreadAllocator::GetThread](#getthread)|选择一个线程。|
+|[CCom简单线程定位器：获取线程](#getthread)|选择线程。|
 
 ## <a name="remarks"></a>备注
 
-`CComSimpleThreadAllocator` 管理的线程选择[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread` 只需循环访问每个线程，并返回序列中的下一个。
+`CComSimpleThreadAllocator`管理[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)的线程选择。 `CComSimpleThreadAllocator::GetThread`只需循环遍过每个线程，然后返回序列中的下一个线程。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标题：** atlbase.h
 
-##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread
+## <a name="ccomsimplethreadallocatorgetthread"></a><a name="getthread"></a>CCom简单线程定位器：获取线程
 
-选择一个线程通过指定序列中的下一个线程。
+通过指定序列中的下一个线程来选择线程。
 
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
@@ -55,22 +55,22 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ### <a name="parameters"></a>参数
 
 *pApt*<br/>
-不使用 ATL 的默认实现中。
+未用于 ATL 的默认实现。
 
 *nThreads*<br/>
-最大 EXE 模块中的线程数。
+EXE 模块中的最大线程数。
 
 ### <a name="return-value"></a>返回值
 
-一个整数，介于零和 (*nThreads* -1)。 标识一个 EXE 模块中的线程。
+零和 *（nThreads* - 1） 之间的整数。 标识 EXE 模块中的一个线程。
 
 ### <a name="remarks"></a>备注
 
-您可以重写`GetThread`可以提供所选内容的不同方法，或使利用*pApt*参数。
+您可以重写`GetThread`以提供不同的选择方法或使用*pApt*参数。
 
-`GetThread` 调用[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)。
+`GetThread`由[CComAutoThreadModule 调用：：创建实例](../../atl/reference/ccomautothreadmodule-class.md#createinstance)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CComApartment 类](../../atl/reference/ccomapartment-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

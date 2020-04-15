@@ -1,5 +1,5 @@
 ---
-title: 指向成员的指针运算符：. * 和-&gt;*
+title: 指针到成员运算符：.* 和 -&gt;*
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2100933bf525f0717978528301049085eaecd4f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188332"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320337"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>指向成员的指针运算符：. * 和-&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>指针到成员运算符：.* 和 -&gt;*
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ expression ->* expression
 
 ## <a name="remarks"></a>备注
 
-指向成员的指针运算符（. * 和->\*）返回表达式左侧指定的对象的特定类成员的值。  右侧必须指定该类的成员。  下面的示例演示如何使用这些运算符：
+指针到成员运算符 .* 和 ->\*返回表达式左侧指定对象的特定类成员的值。  右侧必须指定该类的成员。  下面的示例演示如何使用这些运算符：
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -82,11 +82,11 @@ m_func1
 
 二元运算符 .* 将其第一操作数（必须是类类型的对象）与其第二操作数（必须是指向成员的指针类型）组合在一起。
 
-二元运算符 > * 将其第一个操作数（必须是指向类类型的对象的指针）与其第二个操作数（必须是指向成员的指针类型）组合在一起。
+二进制运算符 ->+ 将其第一个操作数（必须是指向类类型对象的指针）与其第二个操作数（必须是指向成员的指针类型）合并。
 
 在包含 .* 运算符的表达式中，第一操作数必须是类类型且可访问，而指向第二操作数中指定的成员的指针或可访问类型的成员的指针明确从该类派生并且可供该类访问。
 
-在包含-> * 运算符的表达式中，第一个操作数必须为第二个操作数中指定的类型的 "指向类类型的指针" 类型，或者必须是从该类明确派生的类型。
+在包含 ->+ 运算符的表达式中，第一个操作数必须是第二个操作数中指定的类型的"指向类类型的指针"类型，或者它必须是明确派生自该类的类型。
 
 ## <a name="example"></a>示例
 
@@ -128,10 +128,10 @@ int main() {
 }
 ```
 
-指向成员的指针的声明中所指定类型的. * 或->\* 指向成员运算符的结果。 因此，在前面的示例中，表达式 `ADerived.*pmfnFunc1()` 的结果是指向返回 void 的函数的指针。 如果第二操作数是左值，则此结果为左值。
+.* 或 ->\*指向成员的指针运算符的结果是指向成员的指针声明中指定的类型的对象或函数。 因此，在前面的示例中，表达式 `ADerived.*pmfnFunc1()` 的结果是指向返回 void 的函数的指针。 如果第二操作数是左值，则此结果为左值。
 
 > [!NOTE]
->  如果某个指向成员的指针运算符的结果是函数，则该结果只能用作函数调用运算符的操作数。
+> 如果某个指向成员的指针运算符的结果是函数，则该结果只能用作函数调用运算符的操作数。
 
 ## <a name="see-also"></a>另请参阅
 
