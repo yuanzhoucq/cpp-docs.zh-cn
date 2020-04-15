@@ -4,10 +4,10 @@ ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "75791688"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 帮助和社区
@@ -33,7 +33,7 @@ ms.locfileid: "75791688"
 
 你还可以在脱机帮助查看器中本地下载和查看内容。 脱机文档通过相关内容的书籍进行组织，这些书籍还会定期更新。 你可在书籍可用时下载你感兴趣的书籍。 有关详细信息，请参阅 [Microsoft Help Viewer](/visualstudio/ide/microsoft-help-viewer)。
 
-该文档的很多部分还提供 PDF 形式。 这些部分在 docs.microsoft.com 的内附页面上具有一个“下载 PDF”链接。
+该文档的很多部分还提供 PDF 形式。 这些部分在 docs.microsoft.com 的内附页面上具有一个“下载 PDF”链接  。
 
 ## <a name="related-articles"></a>相关文章
 

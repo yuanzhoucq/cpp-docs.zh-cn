@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e2b88bb1c60c97c9f63caacfb98ba87e0443e799
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b15a09fa450995c55cc6e7313c51db4a3ba3f48a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509439"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316620"
 ---
 # <a name="contributing"></a>参与
 
@@ -14,11 +14,11 @@ ms.locfileid: "79509439"
 
 本主题将介绍：
 
-* [参与流程](#process-for-contributing)
-* [注意事项](#dos-and-donts)
-* [生成文档](#building-the-docs)
-* [提供示例](#contributing-to-samples)
-* [贡献者许可协议](#contributor-license-agreement)
+- [参与流程](#process-for-contributing)
+- [注意事项](#dos-and-donts)
+- [生成文档](#building-the-docs)
+- [提供示例](#contributing-to-samples)
+- [贡献者许可协议](#contributor-license-agreement)
 
 ## <a name="process-for-contributing"></a>参与流程
 

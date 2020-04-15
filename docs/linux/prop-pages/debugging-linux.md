@@ -3,10 +3,10 @@ title: 调试程序属性 (Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
 ms.openlocfilehash: bebee7a2b3bcfd880a538acae35c9616b3b1bd46
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79446174"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++ 调试属性 (Linux C++)
@@ -29,7 +29,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 | 其他调试程序命令 | 启动调试前要运行的调试程序的其他 `gdb` 命令。 |
 | 调试程序端口号 | 调试程序与远程调试程序通信的端口号。 该端口不得是本地正在使用的端口。 该值必须是介于 1 到 65535 之间的正数。 如果未提供，则会使用空闲端口号。 |
 | 远程调试程序端口号 | 远程系统上远程调试程序服务器 `gdbserver` 正在侦听的端口号。 该端口不得是远程系统上正在使用的端口。 该值必须是介于 1 到 65535 之间的正数。 如果未提供，则将使用从 4444 开始的空闲端口号。 |
-| 调试模式 | 指定调试程序如何与 `gdb` 交互。 在 gdb 模式下，调试程序在远程系统上通过 shell 驱动 `gdb`  。 在 gdbserver 模式下，`gdb` 在本地运行并连接到远程运行的 `gdbserver`  。 | **gdbserver**<br/>**gdb** |
+| 调试模式 | 指定调试程序如何与 `gdb` 交互。 在 gdb 模式下，调试程序在远程系统上通过 shell 驱动 `gdb` 。 在 gdbserver 模式下，`gdb` 在本地运行并连接到远程运行的 `gdbserver` 。 | **gdbserver**<br/>**gdb** |
 | 其他符号搜索路径 | 调试符号的其他搜索路径 (solib-search-path)。 |
 | 调试子进程 | 指定是否启用子进程调试。 |
 | 启用 Python 优质打印 | 启用优质打印公式值。 仅支持在 gdb 调试模式下受支持。 |

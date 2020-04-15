@@ -3,10 +3,10 @@ title: 远程生成事件 (Linux c + +)
 ms.date: 06/07/2019
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
 ms.openlocfilehash: 4a3e9019d4dacc3d494feb5d6de8f5c2247e4d12
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79441499"
 ---
 # <a name="build-event-properties-linux-c"></a>生成事件属性 (Linux C++)
