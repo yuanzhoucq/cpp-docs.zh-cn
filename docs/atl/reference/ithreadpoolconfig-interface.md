@@ -1,5 +1,5 @@
 ---
-title: IThreadPoolConfig Interface
+title: IThreadPoolConfig 接口
 ms.date: 11/04/2016
 f1_keywords:
 - IThreadPoolConfig
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-ms.openlocfilehash: b3757f0e90479962273a8295e055c91fb02260f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4b90534fa89ef2aeffe4cd682d92efc16452487
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326355"
 ---
-# <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig Interface
+# <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig 接口
 
-此接口提供用于配置的线程池的方法。
+此接口提供了配置线程池的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -38,22 +38,22 @@ __interface
 
 |||
 |-|-|
-|[GetSize](#getsize)|调用此方法以获取池中的线程数。|
-|[GetTimeout](#gettimeout)|调用此方法以获取最长时间以毫秒为单位，线程池将等待一个线程来关闭的情况下。|
-|[SetSize](#setsize)|调用此方法以设置在池中的线程数。|
-|[SetTimeout](#settimeout)|调用此方法，以毫秒为单位，线程池将等待一个线程来关闭的情况下设置最长的时间。|
+|[GetSize](#getsize)|调用此方法获取池中的线程数。|
+|[获取超时](#gettimeout)|调用此方法，获取线程池将等待线程关闭的最大时间（以毫秒为单位）。|
+|[设置大小](#setsize)|调用此方法以设置池中的线程数。|
+|[设置超时](#settimeout)|调用此方法以设置线程池将等待线程关闭的最大时间（以毫秒为单位）。|
 
 ## <a name="remarks"></a>备注
 
-此接口由实现[CThreadPool](../../atl/reference/cthreadpool-class.md)。
+此接口由[CThreadPool](../../atl/reference/cthreadpool-class.md)实现。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlutil.h
+**标题：** atlutil.h
 
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
+## <a name="ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPool 配置：：获取 Size
 
-调用此方法以获取池中的线程数。
+调用此方法获取池中的线程数。
 
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
@@ -62,19 +62,19 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="parameters"></a>参数
 
 *pnNumThreads*<br/>
-[out]，如果成功，接收变量的线程数在池中的地址。
+[出]变量的地址，在成功时，接收池中的线程数。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]
 
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
+## <a name="ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPool 配置：：获取超时
 
-调用此方法以获取最长时间以毫秒为单位，线程池将等待一个线程来关闭的情况下。
+调用此方法，获取线程池将等待线程关闭的最大时间（以毫秒为单位）。
 
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
@@ -83,19 +83,19 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="parameters"></a>参数
 
 *pdwMaxWait*<br/>
-[out]成功后，接收的最长时间以毫秒为单位，线程池将等待一个线程来关闭的情况下的变量的地址。
+[出]变量的地址，在成功时，接收线程池将等待线程关闭的最大时间（以毫秒为单位）。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="example"></a>示例
 
-请参阅[IThreadPoolConfig::GetSize](#getsize)。
+请参阅[IThreadPool 配置：：获取 Size](#getsize)。
 
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
+## <a name="ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPool 配置：：设置大小
 
-调用此方法以设置在池中的线程数。
+调用此方法以设置池中的线程数。
 
 ```
 STDMETHOD(SetSize)int nNumThreads);
@@ -104,23 +104,23 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="parameters"></a>参数
 
 *nNumThreads*<br/>
-请求的池中的线程数。
+池中请求的线程数。
 
-如果*nNumThreads*是负数，其绝对值的数值将乘以中要获取的线程总数的计算机的处理器数。
+如果*nNumThreads*为负值，则其绝对值将乘以计算机中的处理器数，以获得线程总数。
 
-如果*nNumThreads*为零，ATLS_DEFAULT_THREADSPERPROC 将乘以中要获取的线程总数的计算机的处理器数。
+如果*nNumThreads*为零，ATLS_DEFAULT_THREADSPERPROC将乘以计算机中的处理器数，以获得线程总数。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="example"></a>示例
 
-请参阅[IThreadPoolConfig::GetSize](#getsize)。
+请参阅[IThreadPool 配置：：获取 Size](#getsize)。
 
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
+## <a name="ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPool 配置：：设置超时
 
-调用此方法，以毫秒为单位，线程池将等待一个线程来关闭的情况下设置最长的时间。
+调用此方法以设置线程池将等待线程关闭的最大时间（以毫秒为单位）。
 
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
@@ -129,17 +129,17 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ### <a name="parameters"></a>参数
 
 *dwMaxWait*<br/>
-以毫秒为单位，线程池将等待一个线程来关闭请求的最大时间。
+请求的最大时间（以毫秒为单位）用于线程池将等待线程关闭。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="example"></a>示例
 
-请参阅[IThreadPoolConfig::GetSize](#getsize)。
+请参阅[IThreadPool 配置：：获取 Size](#getsize)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../atl/reference/atl-classes.md)<br/>
 [CThreadPool 类](../../atl/reference/cthreadpool-class.md)

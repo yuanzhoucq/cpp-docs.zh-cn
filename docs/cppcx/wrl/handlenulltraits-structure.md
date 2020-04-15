@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371474"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 结构
 
-定义未初始化句柄的共同特征。
+定义未初始化句柄的常见特征。
 
 ## <a name="syntax"></a>语法
 
@@ -32,16 +32,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称   | 描述
+名称   | 说明
 ------ | ---------------------
-`Type` | 句柄的同义词。
+`Type` | HANDLE 的同义词。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                  | 描述
+名称                                                  | 说明
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Close](#close)                     | 关闭指定的句柄。
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | 表示无效句柄。
+[操作无效：关闭](#close)                     | 关闭指定的句柄。
+[操作无效：获取无效值](#getinvalidvalue) | 表示无效的句柄。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,11 +49,11 @@ struct HANDLENullTraits;
 
 ## <a name="requirements"></a>要求
 
-**标头：** corewrappers.h
+**标题：** 核心包装.h
 
-**命名空间：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空间：** 微软：：WRL：包装：：处理特征
 
-## <a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>操作无效：关闭
 
 关闭指定的句柄。
 
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
+*H*<br/>
 要关闭的句柄。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果处理*h*关闭成功; 否则为**false**。
+如果句柄*h*成功关闭，**则为 true;** 否则，**假**。
 
-## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>操作无效：获取无效值
 
-表示无效句柄。
+表示无效的句柄。
 
 ```cpp
 inline static Type GetInvalidValue();

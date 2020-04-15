@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 16c44d861ebbbc98fa1bffb62a00d1989c0c803c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377162"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 结构
 
@@ -129,76 +129,76 @@ struct ArgTraits<
 
 ### <a name="parameters"></a>参数
 
-*TMemberFunction*<br/>
-不能与任何 `Invoke` 方法签名匹配的 ArgTraits 结构的 Typename 参数。
+*T成员功能*<br/>
+ArgTraits 结构的类型名称参数，该结构无法与任何`Invoke`方法签名匹配。
 
-*TDelegateInterface*<br/>
+*T委托接口*<br/>
 委托接口。
 
 *TArg1*<br/>
-`Invoke` 方法的第一个参数的类型。
+`Invoke`方法的第一个参数的类型。
 
 *TArg2*<br/>
-`Invoke` 方法的第二个参数的类型。
+`Invoke`方法的第二个参数的类型。
 
 *TArg3*<br/>
-`Invoke` 方法的第三个参数的类型。
+`Invoke`方法的第三个参数的类型。
 
 *TArg4*<br/>
-`Invoke` 方法的第四个参数的类型。
+`Invoke`方法的第四个参数的类型。
 
 *TArg5*<br/>
-`Invoke` 方法的第五个参数的类型。
+`Invoke`方法的第五个参数的类型。
 
 *TArg6*<br/>
-`Invoke` 方法的第六个参数的类型。
+`Invoke`方法的第六个参数的类型。
 
 *TArg7*<br/>
-`Invoke` 方法的第七个参数的类型。
+`Invoke`方法的第七个参数的类型。
 
 *TArg8*<br/>
-`Invoke` 方法的第八个参数的类型。
+`Invoke`方法的第八个参数的类型。
 
 *TArg9*<br/>
-`Invoke` 方法的第九个参数的类型。
+`Invoke`方法的第九个参数的类型。
 
 ## <a name="remarks"></a>备注
 
-`ArgTraits` 结构声明指定的委托接口和具有指定数量的参数的匿名成员函数。
+结构`ArgTraits`声明指定的委托接口和具有指定数量的参数的匿名成员函数。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-Name       | 描述
+名称       | 说明
 ---------- | ----------------------
-`Arg1Type` | TArg1 的 typedef。
-`Arg2Type` | TArg2 的 typedef。
-`Arg3Type` | TArg3 的 typedef。
-`Arg4Type` | TArg4 的 typedef。
-`Arg5Type` | TArg5 的 typedef。
-`Arg6Type` | TArg6 的 typedef。
-`Arg7Type` | TArg7 的 typedef。
-`Arg8Type` | TArg8 的 typedef。
-`Arg9Type` | TArg9 的 typedef。
+`Arg1Type` | TArg1 的类型def。
+`Arg2Type` | TArg2 的类型def。
+`Arg3Type` | TArg3 的类型def。
+`Arg4Type` | TArg4 的类型def。
+`Arg5Type` | TArg5 的类型def。
+`Arg6Type` | TArg6 的类型def。
+`Arg7Type` | TArg7 的类型def。
+`Arg8Type` | TArg8 的类型def。
+`Arg9Type` | TArg9 的类型def。
 
 ### <a name="public-constants"></a>公共常量
 
-Name                     | 描述
+名称                     | 说明
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | 保留委托接口的 `Invoke` 方法的参数数量。
+[阿格格茨：阿格茨](#args) | 在委托接口`Invoke`的方法上保留参数数。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `ArgTraits`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**标头：** 事件。h
+**标题：** 事件.h
 
-**命名空间：** Microsoft：： WRL：:D etails
+**命名空间：** 微软：：WRL：:D
 
-## <a name="args"></a>ArgTraits::args
+## <a name="argtraitsargs"></a><a name="args"></a>阿格格茨：阿格茨
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>备注
 
-保留委托接口的 `Invoke` 方法的参数数量。 如果 `args` 等于-1，则不能与 `Invoke` 方法签名匹配。
+在委托接口`Invoke`的方法上保留参数数。 当`args`等于 -1 时，`Invoke`方法签名不能匹配。

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371388"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 结构
 
@@ -103,44 +103,44 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 
 ### <a name="parameters"></a>参数
 
-*TDelegateInterface*<br/>
+*T委托接口*<br/>
 委托接口类型。
 
-*TCallback*<br/>
+*回拨*<br/>
 事件处理程序函数的类型。
 
 *argCount*<br/>
-中的参数数目`InvokeHelper`专用化。
+`InvokeHelper`专门化中的参数数。
 
 ## <a name="remarks"></a>备注
 
-提供的实现`Invoke()`方法基于指定的数目和参数的类型。
+根据指定的参数数和`Invoke()`类型提供方法的实现。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称     | 描述
+名称     | 说明
 -------- | -----------------------------------------------------------------------------
-`Traits` | 类定义的每个事件处理程序自变量的类型的同义词。
+`Traits` | 定义每个事件处理程序参数类型的类的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                        | 描述
+名称                                        | 说明
 ------------------------------------------- | -------------------------------------------------------
-[InvokeHelper::InvokeHelper](#invokehelper) | 初始化 `InvokeHelper` 类的新实例。
+[调用帮助者：：调用帮助程序](#invokehelper) | 初始化 `InvokeHelper` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                            | 描述
+名称                            | 说明
 ------------------------------- | -----------------------------------------------------------------------------------
-[InvokeHelper::Invoke](#invoke) | 调用其签名包含指定的数量的参数的事件处理程序。
+[调用帮助器：：调用](#invoke) | 调用其签名包含指定参数数的事件处理程序。
 
 ### <a name="public-data-members"></a>公共数据成员
 
-名称                                 | 描述
+名称                                 | 说明
 ------------------------------------ | ----------------------------------------------------------
-[InvokeHelper::callback_](#callback) | 表示事件发生时要调用的事件处理程序。
+[调用帮助者：：callback_](#callback) | 表示事件发生时要调用的事件处理程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -148,11 +148,11 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 
 ## <a name="requirements"></a>要求
 
-**标头：** event.h
+**标题：** 事件.h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** 微软：：WRL：:D
 
-## <a name="callback"></a>Invokehelper:: Callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a>调用帮助者：：callback_
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -164,9 +164,9 @@ TCallback callback_;
 
 表示事件发生时要调用的事件处理程序。
 
-`TCallback`模板参数指定的事件处理程序的类型。
+模板`TCallback`参数指定事件处理程序的类型。
 
-## <a name="invoke"></a>InvokeHelper::Invoke
+## <a name="invokehelperinvoke"></a><a name="invoke"></a>调用帮助器：：调用
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -206,41 +206,41 @@ STDMETHOD(
 ### <a name="parameters"></a>参数
 
 *arg1*<br/>
-参数 1。
+参数 1.
 
 *arg2*<br/>
-参数 2。
+参数 2.
 
 *arg3*<br/>
-参数 3。
+参数 3.
 
 *arg4*<br/>
-参数 4。
+参数 4.
 
 *arg5*<br/>
-参数 5。
+参数 5.
 
 *arg6*<br/>
-自变量 6。
+参数 6.
 
 *arg7*<br/>
-参数 7。
+参数 7.
 
 *arg8*<br/>
-参数 8。
+参数 8.
 
 *arg9*<br/>
-参数 9。
+参数 9.
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为描述错误的 HRESULT。
+S_OK如果成功;否则，描述错误的 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-调用其签名包含指定的数量的参数的事件处理程序。
+调用其签名包含指定参数数的事件处理程序。
 
-## <a name="invokehelper"></a>InvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>调用帮助者：：调用帮助程序
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -252,11 +252,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>参数
 
-*callback*<br/>
+*回调 (callback)*<br/>
 事件处理程序。
 
 ### <a name="remarks"></a>备注
 
 初始化 `InvokeHelper` 类的新实例。
 
-`TCallback`模板参数指定的事件处理程序的类型。
+模板`TCallback`参数指定事件处理程序的类型。

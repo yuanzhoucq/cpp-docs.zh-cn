@@ -6,97 +6,97 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50548202483c4d9d4471ad2c600270c4df4503e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371066"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows 套接字：字节排序
 
-本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文介绍如何字节顺序。 其他问题的文章中介绍：[Windows 套接字：阻塞](../mfc/windows-sockets-blocking.md)和[Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)。
+本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文介绍字节排序。 其他问题在文章中介绍[：Windows套接字：阻止](../mfc/windows-sockets-blocking.md)和[Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)。
 
-如果使用或派生自类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，将需要自行管理这些问题。 如果使用或派生自类[CSocket](../mfc/reference/csocket-class.md)，MFC 将为您管理它们。
+如果您使用或派生自类[CAsyncSocket，](../mfc/reference/casyncsocket-class.md)则需要自己管理这些问题。 如果您使用或派生自[CSocket](../mfc/reference/csocket-class.md)类，MFC 会为您管理它们。
 
-## <a name="byte-ordering"></a>字节排序
+## <a name="byte-ordering"></a>字节订购
 
-有时，不同的计算机体系结构将存储数据使用不同的字节顺序。 例如，基于 Intel 的计算机将数据存储的 Macintosh (Motorola) 机相反的顺序。 Intel 字节顺序，称为"Little-endian"也是网络标准"big Endian"顺序的相反。 下表说明了这些术语。
+不同的机器体系结构有时使用不同的字节顺序存储数据。 例如，基于英特尔的机器以 Macintosh （摩托罗拉） 机器的相反顺序存储数据。 英特尔字节顺序称为"小 Endian"，也是网络标准"大Endian"订单的反面。 下表解释了这些术语。
 
-### <a name="big--and-little-endian-byte-ordering"></a>大-和 Little-endian 字节顺序
+### <a name="big--and-little-endian-byte-ordering"></a>大和小恩地字节订购
 
 |字节排序|含义|
 |-------------------|-------------|
-|Big Endian|最高有效字节位于某个词的左端。|
-|小字节序|最高有效字节位于某个词的右端。|
+|大恩迪安|最重要的字节位于单词的左端。|
+|小恩迪安|最重要的字节位于单词的右端。|
 
-通常情况下，无需担心如何发送和接收通过网络数据的字节顺序转换，但在有些情况下，必须将字节顺序转换在其中。
+通常，您不必担心通过网络发送和接收的数据的字节顺序转换，但在某些情况下必须转换字节订单。
 
-## <a name="when-you-must-convert-byte-orders"></a>当必须将字节顺序转换
+## <a name="when-you-must-convert-byte-orders"></a>当您必须转换字节订单时
 
-需要进行转换的字节顺序在以下情况下：
+您需要在以下情况下转换字节订单：
 
-- 要传递的需要解释的网络，而不是您正在向另一台计算机发送的数据的信息。 例如，您可能会将端口和地址，必须了解网络。
+- 您传递的信息需要由网络解释，而不是您发送到另一台计算机的数据。 例如，您可以传递端口和地址，而网络必须了解这些端口和地址。
 
-- 服务器应用程序与其进行通信的 MFC 应用程序 （并不为其没有源代码）。 这将调用的字节顺序转换如果在两台计算机不会共享相同的字节顺序。
+- 与您通信的服务器应用程序不是 MFC 应用程序（并且您没有它的源代码）。 如果两台计算机不共享相同的字节顺序，则这将调用字节订单转换。
 
-## <a name="when-you-do-not-have-to-convert-byte-orders"></a>不需要转换字节顺序
+## <a name="when-you-do-not-have-to-convert-byte-orders"></a>当您不必转换字节订单时
 
-你可以避免转换在以下情况下的字节顺序的工作：
+在以下情况下，可以避免转换字节订单的工作：
 
-- 在这两个端点上的计算机可以同意不交换字节，并且这两台计算机使用相同的字节顺序。
+- 两端的计算机可以同意不交换字节，并且两台计算机使用相同的字节顺序。
 
-- 与通信的服务器是一个 MFC 应用程序。
+- 您要通信的服务器是 MFC 应用程序。
 
-- 必须与通信的服务器的源代码以便您可以知道明确您是否必须转换字节顺序。
+- 您拥有要通信的服务器的源代码，因此您可以显式判断是否必须转换字节订单。
 
-- 您可以移植到 MFC 的服务器。 这是相当轻松地完成，并且结果通常是更小、 更快的代码。
+- 您可以将服务器移植到 MFC。 这是相当容易做到的，结果通常是更小，更快的代码。
 
-使用[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，必须自行管理任何必要的字节顺序转换。 Windows 套接字标准化"big Endian"字节顺序模型，并提供此顺序和其他人之间进行转换的函数。 [CArchive](../mfc/reference/carchive-class.md)，但是，与使用该[CSocket](../mfc/reference/csocket-class.md)，使用相反 ("Little-endian") 的顺序，但`CArchive`负责为您的字节顺序转换的详细信息。 通过使用此应用程序中的标准排序或使用 Windows 套接字字节顺序转换函数，可以使更易于移植您的代码。
+使用[CAsyncSocket，](../mfc/reference/casyncsocket-class.md)您必须自己管理任何必要的字节顺序转换。 Windows 套接字可标准化"大 Endian"字节顺序模型，并提供在此顺序和其他订单之间转换的功能。 [但是，CArchive，](../mfc/reference/carchive-class.md)你与[CSocket](../mfc/reference/csocket-class.md)一起使用，使用相反（"小Endian"）顺序，但`CArchive`会为您处理字节顺序转换的详细信息。 通过在应用程序中使用此标准排序或使用 Windows 套接字字节顺序转换功能，可以使代码更加便携。
 
-理想情况下使用 MFC 套接字是编写两个通信端时： 在两端都使用 MFC。 如果你正在编写的应用程序将通信与非 MFC 应用程序，如 FTP 服务器，您可能需要管理字节交换自己之前将数据传递给存档对象中，使用 Windows 套接字转换例程**ntohs**， **ntohl**， **htons**，和**htonl**。 在本文后面部分会显示与非 MFC 应用程序的通信中使用这些函数的示例。
+使用 MFC 套接字的理想情况是，当您写入通信的两端时：在两端使用 MFC。 如果您正在编写一个将与非 MFC 应用程序（如 FTP 服务器）通信的应用程序，则可能需要在将数据传递到存档对象之前，使用 Windows Sockets 转换例程**ntohs、ntohl、htons**和**htonl**来管理**htons**字节交换。 **ntohs** 本文后面会介绍与非 MFC 应用程序通信中使用的这些函数的示例。
 
 > [!NOTE]
->  如果另一端的通信不是一个 MFC 应用程序，您还必须避免流式处理C++对象，派生自`CObject`到您的存档因为接收方将无法再来处理它们。 请参阅中的说明[Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)。
+> 当通信的另一端不是 MFC 应用程序时，还必须避免将派生C++`CObject`对象流式传输到存档中，因为接收方将无法处理它们。 请参阅 Windows[套接字中的注释：使用带存档的套接字](../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-有关字节顺序的详细信息，请参阅 Windows SDK 中提供的 Windows 套接字规范。
+有关字节订单的详细信息，请参阅 Windows SDK 中可用的 Windows 套接字规范。
 
 ## <a name="a-byte-order-conversion-example"></a>字节顺序转换示例
 
-下面的示例演示的序列化函数`CSocket`使用存档的对象。 它还阐释了使用 Windows 套接字 API 中的字节顺序转换函数。
+下面的示例显示了使用存档`CSocket`的对象的序列化函数。 它还说明了在 Windows 套接字 API 中使用字节顺序转换功能。
 
-此示例显示了要在其中编写与非 MFC 服务器应用程序可以对源代码没有访问权限进行通信的客户端的方案。 在此方案中，您必须假定非 MFC 服务器使用标准网络字节顺序。 与此相反，MFC 客户端应用程序使用`CArchive`对象使用`CSocket`对象，和`CArchive`使用"Little-endian"字节顺序，标准网络相反。
+此示例介绍一个方案，其中您编写的客户端与无法访问源代码的非 MFC 服务器应用程序进行通信。 在这种情况下，您必须假定非 MFC 服务器使用标准网络字节顺序。 相反，MFC 客户端应用程序使用`CArchive`对象与`CSocket`对象，并使用`CArchive`"小 Endian"字节顺序，这与网络标准相反。
 
-假设您计划与其进行通信的非 MFC 服务器具有如下所示的消息包的已建立的协议：
+假设您计划与其通信的非 MFC 服务器具有消息数据包的已建立协议，如下所示：
 
 [!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_1.cpp)]
 
-在 MFC 术语中，这就表示，如下所示：
+用MFC的术语，这将表达如下：
 
 [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]
 
-在C++、 一个**struct**是作为类实质上是相同的操作。 `Message`结构可以具有成员函数，例如`Serialize`成员函数声明上方。 `Serialize`成员函数可能如下所示：
+在C++中，**结构**本质上与类是一回事。 结构`Message`可以具有成员函数，如上面声明`Serialize`的成员函数。 成员`Serialize`函数可能如下所示：
 
 [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]
 
-因为字节顺序的另一端上的非 MFC 服务器应用程序之间没有明显不匹配，此示例将调用的数据的字节顺序转换和`CArchive`用于 MFC 客户端应用程序的另一端。 该示例演示了几个 Windows 套接字提供的字节顺序转换函数。 下表描述了这些函数。
+此示例要求数据字节顺序转换，因为一端的非 MFC 服务器应用程序的字节排序与另一端 MFC 客户端应用程序`CArchive`中使用的字节排序之间存在明显的不匹配。 该示例说明了 Windows 套接字提供的几个字节顺序转换功能。 下表描述了这些功能。
 
-### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows 套接字字节顺序转换函数
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows 套接字字节顺序转换功能
 
-|函数|用途|
+|函数|目标|
 |--------------|-------------|
-|**ntohs**|将 16 位数量由网络字节顺序转换为主机字节顺序 (big Endian 到小 Endian)。|
-|**ntohl**|将 32 位数量由网络字节顺序转换为主机字节顺序 (big Endian 到小 Endian)。|
-|**Htons**|将 16 位数量由主机字节顺序转换为网络字节顺序 (小 Endian 对 big Endian)。|
-|**Htonl**|将 32 位数量由主机字节顺序转换为网络字节顺序 (小 Endian 对 big Endian)。|
+|**ntohs**|将 16 位数量从网络字节顺序转换为主机字节顺序（大 Endian 到小 Endian）。|
+|**ntohl**|将 32 位数量从网络字节顺序转换为主机字节顺序（大 Endian 到小 Endian）。|
+|**霍顿斯**|将 16 位数量从主机字节顺序转换为网络字节顺序（小 Endian 到大 Endian）。|
+|**赫托恩**|将 32 位数量从主机字节顺序转换为网络字节顺序（小 Endian 到大 Endian）。|
 
-在此示例中的另一点是，非 MFC 应用程序通信的另一端上的套接字应用程序时，您必须避免出现如下所示：
+此示例的另一点是，当通信另一端的套接字应用程序是非 MFC 应用程序时，必须避免执行以下操作：
 
 `ar << pMsg;`
 
-其中`pMsg`是指向的C++从类派生的对象`CObject`。 这将发送与对象和服务器相关联的额外 MFC 信息不能理解它，就像它是一样的 MFC 应用程序。
+其中`pMsg`是指向从类`CObject`派生C++对象的指针。 这将发送与对象关联的额外 MFC 信息，服务器将无法理解它，就像它是 MFC 应用程序一样。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
@@ -106,6 +106,6 @@ ms.locfileid: "62217566"
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)

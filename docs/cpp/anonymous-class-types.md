@@ -5,16 +5,16 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 815cc4a81addc673349a3133b24ed73cfe0207e2
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 611c1ed9853fc7e6e0788a7276890b14ec84a523
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857666"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373341"
 ---
 # <a name="anonymous-class-types"></a>匿名类类型
 
-类可以是匿名的，也就是说，可以在不使用*标识符*的情况下声明它们。 将类名替换为**typedef**名称时，这会很有用，如下所示：
+类可以是匿名的，也就是说，可以在没有*标识符*的情况下声明它们。 当您将类名称替换为**typedef**名称时，这非常有用，如下所示：
 
 ```cpp
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 ```
 
 > [!NOTE]
->  上面示例中显示的匿名类的用法对于保留与现有 C 代码的兼容性很有用。 在某些 C 代码中，与匿名结构一起使用**typedef**是普遍的。
+> 上面示例中显示的匿名类的用法对于保留与现有 C 代码的兼容性很有用。 在某些 C 代码中，与匿名结构结合使用**typedef**是普遍存在的。
 
 如果您希望对类成员的引用就像它未包含在独立类中的情况一样出现，则匿名类也很有用，如下所示：
 
@@ -43,13 +43,13 @@ struct PTValue
 PTValue ptv;
 ```
 
-在前面的代码中，可以使用对象成员选择运算符（ **.** ）访问 `iValue`，如下所示：
+在前面的代码中，`iValue`可以使用对象成员选择运算符 **（.**） 访问，如下所示：
 
 ```cpp
 int i = ptv.iValue;
 ```
 
-匿名类受某些限制的约束。 （有关匿名联合的详细信息，请参阅[联合](../cpp/unions.md)。）匿名类：
+匿名类受某些限制的约束。 （有关匿名联合的详细信息，请参阅[联合](../cpp/unions.md)。匿名类：
 
 - 不能具有构造函数或析构函数。
 
@@ -59,7 +59,7 @@ int i = ptv.iValue;
 
 ## <a name="anonymous-structs"></a>匿名结构
 
-**Microsoft 专用**
+**微软特定**
 
 利用 Microsoft C 扩展，您可以在另一个结构中声明结构变量，而无需为其指定名称。 这些嵌套结构称为匿名结构。 C++ 不允许匿名结构。
 
@@ -92,4 +92,4 @@ int main()
 //Output: 1234567
 ```
 
-**结束 Microsoft 专用**
+**结束微软特定**

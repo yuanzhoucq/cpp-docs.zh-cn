@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a80c0ec14da2a955a95ac84dd3975212ef20ae04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374216"
 ---
 # <a name="weakreference-class"></a>WeakReference 类
 
@@ -38,31 +38,31 @@ class WeakReference;
 
 ## <a name="remarks"></a>备注
 
-表示*弱引用*可以用于 Windows 运行时或经典 com。 弱引用表示可能可访问或可能不可访问的对象。
+表示可与 Windows 运行时或经典 COM 一起使用*的弱引用*。 弱引用表示可能可访问或可能不可访问的对象。
 
-一个`WeakReference`对象维护*强引用*，这是指向对象的指针和一个*强引用计数*，这是已通过分发的强引用的副本数`Resolve()`方法。 非零值的强引用计数时，强引用有效且该对象是可访问。 当强引用计数变为零时，强引用无效，该对象是不可访问。
+对象维护*强引用*，它是指向对象的指针和*强引用计数*，即该方法`Resolve()`分发的强引用的副本数。 `WeakReference` 虽然强引用计数是非零的，但强引用是有效的，并且对象是可访问的。 当强引用计数变为零时，强引用无效，并且对象不可访问。
 
-一个`WeakReference`对象通常用于表示由外部线程或应用程序控制其存在性的对象。 例如，构造`WeakReference`中对文件对象的引用的对象。 文件打开时，强引用有效。 但文件关闭时，强引用无效。
+对象`WeakReference`通常用于表示其存在由外部线程或应用程序控制的对象。 例如，从对文件`WeakReference`对象的引用构造对象。 文件打开时，强引用有效。 但文件关闭时，强引用无效。
 
-`WeakReference`是线程安全的方法。
+这些方法`WeakReference`是线程安全的。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                                  | 描述
+名称                                                  | 说明
 ----------------------------------------------------- | ---------------------------------------------------------------------------
-[Weakreference:: Weakreference](#weakreference)        | 初始化 `WeakReference` 类的新实例。
-[WeakReference:: ~ WeakReference](#tilde-weakreference) | 取消初始化 （销毁） 的当前实例`WeakReference`类。
+[弱参考：：弱参考](#weakreference)        | 初始化 `WeakReference` 类的新实例。
+[弱参考：*弱参考](#tilde-weakreference) | 取消初始化（销毁）`WeakReference`类的当前实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                                 | 描述
+名称                                                                 | 说明
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[WeakReference::DecrementStrongReference](#decrementstrongreference) | 强引用计数当前`WeakReference`对象。
-[WeakReference::IncrementStrongReference](#incrementstrongreference) | 当前的强引用计数递增`WeakReference`对象。
-[WeakReference::Resolve](#resolve)                                   | 将指定的指针设置为当前的强引用值，如果强引用计数不为零。
-[WeakReference::SetUnknown](#setunknown)                             | 设置当前的强引用`WeakReference`对象与指定的接口指针。
+[弱参考：:D强参考](#decrementstrongreference) | 声明当前`WeakReference`对象的强引用计数。
+[弱参考：：增量强参考](#incrementstrongreference) | 增加当前`WeakReference`对象的强引用计数。
+[弱参考：：解决](#resolve)                                   | 如果强引用计数为非零，则设置指向当前强引用值的指定指针。
+[弱参考：：设置未知](#setunknown)                             | 将当前`WeakReference`对象的强引用设置到指定的接口指针。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -70,11 +70,11 @@ class WeakReference;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标题：** 实现.h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** 微软：：WRL：:D
 
-## <a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>弱参考：*弱参考
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -86,9 +86,9 @@ virtual ~WeakReference();
 
 ### <a name="remarks"></a>备注
 
-取消初始化的当前实例`WeakReference`类。
+取消初始化类的`WeakReference`当前实例。
 
-## <a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>弱参考：:D强参考
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -98,7 +98,7 @@ ULONG DecrementStrongReference();
 
 ### <a name="remarks"></a>备注
 
-强引用计数当前`WeakReference`对象。
+声明当前`WeakReference`对象的强引用计数。
 
 当强引用计数变为零时，强引用设置为`nullptr`。
 
@@ -106,7 +106,7 @@ ULONG DecrementStrongReference();
 
 递减的强引用计数。
 
-## <a name="incrementstrongreference"></a>WeakReference::IncrementStrongReference
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>弱参考：：增量强参考
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -120,9 +120,9 @@ ULONG IncrementStrongReference();
 
 ### <a name="remarks"></a>备注
 
-当前的强引用计数递增`WeakReference`对象。
+增加当前`WeakReference`对象的强引用计数。
 
-## <a name="resolve"></a>WeakReference::Resolve
+## <a name="weakreferenceresolve"></a><a name="resolve"></a>弱参考：：解决
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -139,21 +139,21 @@ STDMETHOD(Resolve)
 接口 ID。
 
 *ppvObject*<br/>
-此操作完成后，当前的强引用，如果强引用计数不为零的副本。
+此操作完成后，如果强引用计数为非零，则当前强引用的副本。
 
 ### <a name="return-value"></a>返回值
 
-- 如果此操作是成功的强引用计数为零，则为 S_OK。 *PpvObject*参数设置为`nullptr`。
+- 如果此操作成功且强引用计数为零，S_OK。 *ppvObject*参数设置为`nullptr`。
 
-- 如果此操作成功，则为 S_OK 和强引用计数为非零值。 *PpvObject*参数设置为强引用。
+- 如果此操作成功且强引用计数为非零，则S_OK。 *ppvObject*参数设置为强引用。
 
-- 否则，一个 HRESULT，指示的原因，此操作失败。
+- 否则，指示此操作失败原因的 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-将指定的指针设置为当前的强引用值，如果强引用计数不为零。
+如果强引用计数为非零，则设置指向当前强引用值的指定指针。
 
-## <a name="setunknown"></a>Weakreference:: Setunknown
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>弱参考：：设置未知
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -166,13 +166,13 @@ void SetUnknown(
 ### <a name="parameters"></a>参数
 
 *unk*<br/>
-一个指向`IUnknown`接口的对象。
+指向对象`IUnknown`接口的指针。
 
 ### <a name="remarks"></a>备注
 
-设置当前的强引用`WeakReference`对象与指定的接口指针。
+将当前`WeakReference`对象的强引用设置到指定的接口指针。
 
-## <a name="weakreference"></a>Weakreference:: Weakreference
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>弱参考：：弱参考
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -184,4 +184,4 @@ WeakReference();
 
 初始化 `WeakReference` 类的新实例。
 
-中的强引用指针`WeakReference`对象初始化为`nullptr`，并且强引用计数初始化为 1。
+`WeakReference`对象的强引用指针初始化到`nullptr`，强引用计数初始化为 1。

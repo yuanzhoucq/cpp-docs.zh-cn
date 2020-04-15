@@ -1,5 +1,5 @@
 ---
-title: '&lt;可选&gt; 运算符'
+title: '&lt;可选&gt;运算符'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9bdef0669f90da7865f7652ff4528e51e584e1a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425285"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373635"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;可选&gt; 运算符
+# <a name="ltoptionalgt-operators"></a>&lt;可选&gt;运算符
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>运算符*
 
 测试运算符左侧的 `optional` 对象是否等于右侧的 `optional` 对象。
 
@@ -37,15 +37,15 @@ template <class T, class U> constexpr bool operator==(const optional<T>&, const 
 template <class T, class U> constexpr bool operator==(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*离开*\
+类型`optional`的对象`nullopt_t``T`。
 
-*right*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*对*\
+类型`optional`的对象`nullopt_t``T`。
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>操作员！
 
 测试运算符左侧的 `optional` 对象是否不等于右侧的 `optional` 对象。
 
@@ -57,19 +57,19 @@ template <class T, class U> constexpr bool operator!=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator!=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*离开*\
+类型`optional`的对象`nullopt_t``T`。
 
-*right*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*对*\
+类型`optional`的对象`nullopt_t``T`。
 
 ### <a name="remarks"></a>备注
 
 此模板函数返回 `!(left == right)`。
 
-## <a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
 
 测试运算符左侧的 `optional` 对象是否小于右侧的 `optional` 对象。
 
@@ -81,19 +81,19 @@ template <class T, class U> constexpr bool operator<(const optional<T>&, const U
 template <class T, class U> constexpr bool operator<(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*离开*\
+类型`optional`的对象`nullopt_t``T`。
 
-*right*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*对*\
+类型`optional`的对象`nullopt_t``T`。
 
 ### <a name="return-value"></a>返回值
 
 如果运算符左侧的列表小于但不等于运算符右侧的列表，则为 **true**，否则为 **false**。
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
 
 测试运算符左侧的 `optional` 对象是否小于或等于右侧的 `optional` 对象。
 
@@ -105,13 +105,13 @@ template <class T, class U> constexpr bool operator<=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator<=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*离开*\
+类型`optional`的对象`nullopt_t``T`。
 
-*right*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*对*\
+类型`optional`的对象`nullopt_t``T`。
 
 ### <a name="return-value"></a>返回值
 
@@ -121,7 +121,7 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 此模板函数返回 `!(right < left)`。
 
-## <a name="op_gt"></a> 运算符&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
 
 测试运算符左侧的 `optional` 对象是否大于右侧的 `optional` 对象。
 
@@ -133,13 +133,13 @@ template <class T, class U> constexpr bool operator>(const optional<T>&, const U
 template <class T, class U> constexpr bool operator>(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*离开*\
+类型`optional`的对象`nullopt_t``T`。
 
-*right*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*对*\
+类型`optional`的对象`nullopt_t``T`。
 
 ### <a name="return-value"></a>返回值
 
@@ -149,7 +149,7 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 此模板函数返回 `right < left`。
 
-## <a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
 
 测试运算符左侧的 `optional` 对象是否大于或等于右侧的 `optional` 对象。
 
@@ -161,17 +161,17 @@ template <class T, class U> constexpr bool operator>=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator>=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*离开*\
+类型`optional`的对象`nullopt_t``T`。
 
-*right*\
-`optional`、`nullopt_t`或 `T`类型的对象。
+*对*\
+类型`optional`的对象`nullopt_t``T`。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的 **大于或等于右侧的**，则为 `optional`true`optional`；否则为 **false**。
+如果运算符左侧的 `optional` 大于或等于右侧的 `optional`，则为 **true**；否则为 **false**。
 
 ### <a name="remarks"></a>备注
 

@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-ms.openlocfilehash: 80efd4dbc4ff0541e083ed61bed872d5e69c7a74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 078cfd5ff93bfcd8acc747904ea05e6a2e762bc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330622"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits 类
 
-此类提供了使用的存储的集合类的静态函数`CString`对象。
+此类提供存储`CString`对象的集合类使用的静态函数。
 
 ## <a name="syntax"></a>语法
 
@@ -41,34 +41,34 @@ class CStringElementTraits
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CStringElementTraits::INARGTYPE](#inargtype)|要用于将元素添加到集合类对象的数据类型。|
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|要用于从集合类对象中检索元素的数据类型。|
+|[弦元素：：INARGTYPE](#inargtype)|用于向集合类对象添加元素的数据类型。|
+|[弦元素：：OUTARGTYPE](#outargtype)|用于从集合类对象检索元素的数据类型。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CStringElementTraits::CompareElements](#compareelements)|（静态）调用此函数用于比较相等的两个字符串元素。|
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|（静态）调用此函数用于比较两个字符串元素。|
-|[CStringElementTraits::CopyElements](#copyelements)|（静态）调用此函数可将复制`CString`集合类对象中存储的元素。|
-|[CStringElementTraits::Hash](#hash)|（静态）调用此函数来计算给定的字符串元素的哈希值。|
-|[CStringElementTraits::RelocateElements](#relocateelements)|（静态）调用此函数可重新定位`CString`集合类对象中存储的元素。|
+|[弦元素：：比较元素](#compareelements)|（静态）调用此函数以比较两个字符串元素以表示相等。|
+|[弦元素：：比较元素排序](#compareelementsordered)|（静态）调用此函数以比较两个字符串元素。|
+|[弦元素：：复制元素](#copyelements)|（静态）调用此函数以复制`CString`存储在集合类对象中的元素。|
+|[弦乐元素：哈希](#hash)|（静态）调用此函数以计算给定字符串元素的哈希值。|
+|[弦元素：：重新定位元素](#relocateelements)|（静态）调用此函数以重新定位`CString`存储在集合类对象中的元素。|
 
 ## <a name="remarks"></a>备注
 
-此类提供静态函数进行复制、 移动和比较字符串和用于创建哈希值。 使用集合类来存储基于字符串的数据时，这些函数很有用。 使用[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)需要不区分大小写比较时。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)字符串对象的引用作为在处理时。
+此类提供用于复制、移动和比较字符串以及创建哈希值的静态函数。 当使用集合类存储基于字符串的数据时，这些函数非常有用。 当需要不区分大小写的比较时，请使用[CStringElementTraitsI。](../../atl/reference/cstringelementtraitsi-class.md) 当字符串对象要作为引用处理时，请使用[CStringRefElementTraits。](../../atl/reference/cstringrefelementtraits-class.md)
 
-有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅[ATL 收集类](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>要求
 
-**标头：** cstringt.h
+**标题：** cstringt.h
 
-##  <a name="compareelements"></a>  CStringElementTraits::CompareElements
+## <a name="cstringelementtraitscompareelements"></a><a name="compareelements"></a>弦元素：：比较元素
 
-调用此静态函数以比较相等的两个字符串元素。
+调用此静态函数以比较两个字符串元素以获得相等性。
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
@@ -84,9 +84,9 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="return-value"></a>返回值
 
-如果元素均相等，则返回 false，则返回 true。
+如果元素相等，则返回 true，否则为 false。
 
-##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered
+## <a name="cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>弦元素：：比较元素排序
 
 调用此静态函数以比较两个字符串元素。
 
@@ -104,11 +104,11 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="return-value"></a>返回值
 
-如果字符串相等则为零，< 0 如果*str1*是小于*str2*，或 > 0 如果*str1*大于*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。
+如果字符串相同，则为零，如果*str1*小于*str2，* 则< 0;如果*str1*大于*str2，* 则> 0。 [CStringT：：比较](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用于执行比较。
 
-##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
+## <a name="cstringelementtraitscopyelements"></a><a name="copyelements"></a>弦元素：：复制元素
 
-调用此静态函数以将复制`CString`集合类对象中存储的元素。
+调用此静态函数以复制`CString`存储在集合类对象中的元素。
 
 ```
 static void CopyElements(
@@ -120,21 +120,21 @@ static void CopyElements(
 ### <a name="parameters"></a>参数
 
 *pDest*<br/>
-指向将接收复制的数据的第一个元素的指针。
+指向将接收复制数据的第一个元素的指针。
 
 *pSrc*<br/>
 指向要复制的第一个元素的指针。
 
-*nElements*<br/>
+*n元素*<br/>
 要复制的元素数。
 
 ### <a name="remarks"></a>备注
 
-不应重叠的源和目标元素。
+源元素和目标元素不应重叠。
 
-##  <a name="hash"></a>  CStringElementTraits::Hash
+## <a name="cstringelementtraitshash"></a><a name="hash"></a>弦乐元素：哈希
 
-调用此静态函数以计算给定的字符串元素的哈希值。
+调用此静态函数以计算给定字符串元素的哈希值。
 
 ```
 static ULONG Hash(INARGTYPE str);
@@ -142,32 +142,32 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
-字符串元素中。
+*Str*<br/>
+字符串元素。
 
 ### <a name="return-value"></a>返回值
 
-返回使用字符串的内容计算的哈希值。
+返回使用字符串内容计算的哈希值。
 
-##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE
+## <a name="cstringelementtraitsinargtype"></a><a name="inargtype"></a>弦元素：：INARGTYPE
 
-要用于将元素添加到集合类对象的数据类型。
+用于向集合类对象添加元素的数据类型。
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE
+## <a name="cstringelementtraitsoutargtype"></a><a name="outargtype"></a>弦元素：：OUTARGTYPE
 
-要用于从集合类对象中检索元素的数据类型。
+用于从集合类对象检索元素的数据类型。
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements
+## <a name="cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>弦元素：：重新定位元素
 
-调用此静态函数以重新定位`CString`集合类对象中存储的元素。
+调用此静态函数以重新定位`CString`存储在集合类对象中的元素。
 
 ```
 static void RelocateElements(
@@ -179,20 +179,20 @@ static void RelocateElements(
 ### <a name="parameters"></a>参数
 
 *pDest*<br/>
-指向将接收重新定位的数据的第一个元素的指针。
+指向将接收重新定位数据的第一个元素的指针。
 
 *pSrc*<br/>
 指向要重新定位的第一个元素的指针。
 
-*nElements*<br/>
+*n元素*<br/>
 要重新定位的元素数。
 
 ### <a name="remarks"></a>备注
 
-此静态函数将调用[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，足以满足大多数数据类型。 如果要移动的对象包含指向其自己的成员的指针，将需要重写此静态函数。
+此静态函数称为[memmove，](../../c-runtime-library/reference/memmove-wmemmove.md)对于大多数数据类型来说，这就足够了。 如果要移动的对象包含指向其自己的成员的指针，则需要重写此静态函数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CElementTraitsBase 类](../../atl/reference/celementtraitsbase-class.md)<br/>
-[CStringElementTraitsI 类](../../atl/reference/cstringelementtraitsi-class.md)<br/>
+[弦元素特性I类](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

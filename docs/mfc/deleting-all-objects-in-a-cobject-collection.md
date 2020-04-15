@@ -10,35 +10,35 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 303b8a566a730c5abd06d51fb7977174e19a6435
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370536"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>删除 CObject 集合中的所有对象
 
 本文介绍如何删除集合中的所有对象（而不删除集合对象本身）。
 
-若要删除的集合中的所有对象`CObject`s (或派生自`CObject`)，使用本文所述的迭代方法之一[访问的集合的所有成员](../mfc/accessing-all-members-of-a-collection.md)删除中的每个对象打开。
+要删除`CObject`s 集合中的所有对象（或派生自`CObject`的对象），请使用"[访问集合的所有成员](../mfc/accessing-all-members-of-a-collection.md)"一文中描述的迭代技术之一依次删除每个对象。
 
 > [!CAUTION]
->  集合中的对象可以共享。 也就是说，集合将保留指向对象的指针，但程序的其他部分也可能具有指向同一对象的指针。 在使用共享对象删除所有部分之前，您必须小心以免删除此对象。
+> 集合中的对象可以共享。 也就是说，集合将保留指向对象的指针，但程序的其他部分也可能具有指向同一对象的指针。 在使用共享对象删除所有部分之前，您必须小心以免删除此对象。
 
 本文演示如何在下列内容中删除对象：
 
 - [列表](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)
 
-- [一个数组](#_core_to_delete_all_elements_in_an_array)
+- [数组](#_core_to_delete_all_elements_in_an_array)
 
 - [映射](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  若要删除指向 CObject 的指针的列表中的所有对象
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>删除指向 CObject 的指针列表中的所有对象
 
 1. 使用 `GetHeadPosition` 和 `GetNext` 循环访问该列表。
 
-1. 使用**删除**运算符删除迭代中遇到的每个对象。
+1. 使用**delete**运算符删除迭代中遇到的每个对象。
 
 1. 在删除与列表中所有元素关联的对象之后，调用 `RemoveAll` 函数删除这些元素。
 
@@ -50,11 +50,11 @@ ms.locfileid: "62153498"
 
 请注意删除元素的对象和删除元素本身之间的区别。 删除列表中的元素将仅删除列表对对象的引用。 对象仍存在于内存中。 删除对象后，它将停止存在，并且将回收其内存。 因此，在删除元素的对象后立即删除元素很重要，这样一来列表才不会尝试访问不再存在的对象。
 
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>  若要删除数组中的所有元素
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>删除数组中的所有元素
 
 1. 使用 `GetSize` 和整数索引值循环访问数组。
 
-1. 使用**删除**运算符删除迭代中遇到的每个元素。
+1. 使用**delete**运算符删除迭代中遇到的每个元素。
 
 1. 在删除数组中的所有元素后，调用 `RemoveAll` 函数从数组中移除这些元素。
 
@@ -64,11 +64,11 @@ ms.locfileid: "62153498"
 
 与上述列表示例一样，您可调用 `RemoveAll` 删除数组中的所有元素或调用 `RemoveAt` 删除独立元素。
 
-#### <a name="_core_to_delete_all_elements_in_a_map"></a> 若要删除映射中的所有元素
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>删除地图中的所有元素
 
 1. 使用 `GetStartPosition` 和 `GetNextAssoc` 循环访问数组。
 
-1. 使用**删除**运算符删除迭代中遇到的密钥和/或每个地图元素的值。
+1. 使用**delete**运算符删除迭代中遇到的每个映射元素的键和/或值。
 
 1. 在删除映射中的所有元素后，调用 `RemoveAll` 函数从映射中移除这些元素。
 
@@ -78,6 +78,6 @@ ms.locfileid: "62153498"
 
 您可以调用 `RemoveAll` 删除映射中的所有元素或调用 `RemoveKey` 删除具有指定键的独立元素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [访问集合的所有成员](../mfc/accessing-all-members-of-a-collection.md)

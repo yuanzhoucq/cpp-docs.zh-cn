@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs
+- _o_wcsrtombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af22a7d55c5f4958db6962e98f212fb5bb89e61e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328061"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -57,10 +59,10 @@ size_t wcsrtombs(
 
 ### <a name="parameters"></a>参数
 
-*mbstr*<br/>
+*姆布斯特*<br/>
 生成的已转换多字节字符字符串的地址位置。
 
-*wcstr*<br/>
+*wc斯特*<br/>
 间接指向要转换的宽字符字符串的位置。
 
 *count*<br/>
@@ -75,19 +77,21 @@ size_t wcsrtombs(
 
 ## <a name="remarks"></a>备注
 
-**Wcsrtombs**函数将从*mbstate*中包含的指定转换状态（从*wcstr*中的间接指向的值）转换为*mbstr*的地址。 在以下情况下，转换将继续对每个字符进行：在遇到 null 终止宽字符之后、遇到非相应字符时或者当下一个字符超出*计数*中包含的限制时。 如果**wcsrtombs**在*count 或 count*发生前后遇到宽字符 null 字符（L ' \ 0 '），则它会将其转换为8位0并停止。
+**wcsrtombs**函数将一串宽字符（从*mbstate*中包含的指定转换状态开始）从间接指向*wcstr*的值转换为*mbstr*的地址。 每个字符的转换将继续，直到：遇到空终止宽字符后，遇到非对应字符或下一个字符将超过*计数*中包含的限制。 如果**wcsrtombs**在*计数*发生之前或发生计数时遇到宽字符 null 字符 （L'_0'），它将转换为 8 位 0 并停止。
 
-因此，仅当**wcsrtombs**在转换期间遇到宽字符 null 字符时， *mbstr*处的多字节字符串才以 null 结尾。 如果由*wcstr*和*mbstr*指向的序列重叠，则**wcsrtombs**的行为不确定。 **wcsrtombs**受当前区域设置的 LC_TYPE 类别影响。
+因此 *，mbstr*处的多字节字符串仅在**wcsrtombs**在转换期间遇到宽字符 null 字符时才为 null 终止。 如果*wcstr*和*mbstr*指向的序列重叠，则**wcsrtombs**的行为未定义。 **wcsrtombs**受当前区域设置LC_TYPE类别的影响。
 
-**Wcsrtombs**函数的可重启性不同于[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用了对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序将使用**wcsrlen**而不是**wcsnlen**。
+**wcsrtombs**函数不同于[wcstombs，_wcstombs_l](wcstombs-wcstombs-l.md)它的可重新启动性。 转换状态以*mbstate*存储，用于后续对相同或其他可重新启动函数的调用。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用随后对**wcsrtombs**的调用而不是**wcstombs，** 则应用程序将使用**wcsrlen**而不是**wcsnlen。**
 
-如果*mbstr*参数为**NULL**，则**wcsrtombs**返回目标字符串所需的大小（以字节为单位）。 如果*mbstate*为 null，则使用内部**mbstate_t**转换状态。 如果字符序列*wchar*没有对应的多字节字符表示形式，则返回-1，并将**Errno**设置为**eilseq 且**。
+如果*mbstr*参数为**NULL，****则 wcsrtombs**返回目标字符串的所需大小（以字节为单位）。 如果*mbstate*为 null，则使用内部**mbstate_t**转换状态。 如果字符序列*wchar*没有相应的多字节字符表示形式，则返回 -1 并将**errno**设置为**EILSEQ**。
 
-在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-## <a name="exceptions"></a>Exceptions
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
-只要当前线程中的函数都不调用**setlocale** ，而此函数正在执行且*mbstate*不为 null 时， **wcsrtombs**函数就是多线程安全的。
+## <a name="exceptions"></a>例外
+
+**wcsrtombs**函数是多线程安全的，只要当前线程调用中没有函数在执行任务时**设置局部性**，*并且 mbstate*不为 null。
 
 ## <a name="example"></a>示例
 
@@ -137,14 +141,14 @@ The string was successfuly converted.
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**wcsrtombs**|\<wchar.h>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

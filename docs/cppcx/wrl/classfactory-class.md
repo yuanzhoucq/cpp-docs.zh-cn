@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372669"
 ---
 # <a name="classfactory-class"></a>ClassFactory 类
 
@@ -53,7 +53,7 @@ class ClassFactory :
 ### <a name="parameters"></a>参数
 
 *I0*<br/>
-第零个接口中。
+第零个接口。
 
 *I1*<br/>
 第一个接口。
@@ -63,9 +63,9 @@ class ClassFactory :
 
 ## <a name="remarks"></a>备注
 
-利用`ClassFactory`能够提供的用户定义的工厂实现。
+利用`ClassFactory`来提供用户定义的工厂实现。
 
-下面的编程模式演示如何使用[实现](implements-structure.md)结构，以在一个类工厂上指定三个以上的接口。
+以下编程模式演示如何使用[实现器](implements-structure.md)结构在类工厂上指定三个多个接口。
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -73,18 +73,18 @@ class ClassFactory :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                        | 描述
+名称                                        | 说明
 ------------------------------------------- | -----------
-[ClassFactory::ClassFactory](#classfactory) |
+[类工厂：：类工厂](#classfactory) |
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                            | 描述
+名称                                            | 说明
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | 递增当前引用计数`ClassFactory`对象。
-[ClassFactory::LockServer](#lockserver)         | 增加或减少基础对象数量跟踪的当前`ClassFactory`对象。
-[ClassFactory::QueryInterface](#queryinterface) | 检索指向指定参数的接口的指针。
-[ClassFactory::Release](#release)               | 递减引用计数当前`ClassFactory`对象。
+[类工厂：：添加参考](#addref)                 | 增加当前`ClassFactory`对象的引用计数。
+[类工厂：：锁服务器](#lockserver)         | 增加或递减当前`ClassFactory`对象跟踪的基础对象数。
+[类工厂：：查询接口](#queryinterface) | 检索指向参数指定的接口的指针。
+[类工厂：：发布](#release)               | 取消当前`ClassFactory`对象的引用计数。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -110,13 +110,13 @@ class ClassFactory :
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标题：** 模块.h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>类工厂：：添加参考
 
-递增当前引用计数`ClassFactory`对象。
+增加当前`ClassFactory`对象的引用计数。
 
 ```cpp
 STDMETHOD_(
@@ -129,15 +129,15 @@ STDMETHOD_(
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>类工厂：：类工厂
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>类工厂：：锁服务器
 
-增加或减少基础对象数量跟踪的当前`ClassFactory`对象。
+增加或递减当前`ClassFactory`对象跟踪的基础对象数。
 
 ```cpp
 STDMETHOD(
@@ -147,8 +147,8 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*fLock*<br/>
-**true**要递增跟踪对象的数量。 **false**要递减跟踪对象的数量。
+*羊群*<br/>
+**true**以增加跟踪对象的数量。 **false**以减少被跟踪对象的数量。
 
 ### <a name="return-value"></a>返回值
 
@@ -156,11 +156,11 @@ STDMETHOD(
 
 ### <a name="remarks"></a>备注
 
-`ClassFactory` 跟踪的基础实例中的对象[模块](module-class.md)类。
+`ClassFactory`跟踪[模块](module-class.md)类的基础实例中的对象。
 
-## <a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>类工厂：：查询接口
 
-检索指向指定参数的接口的指针。
+检索指向参数指定的接口的指针。
 
 ```cpp
 STDMETHOD(
@@ -174,15 +174,15 @@ STDMETHOD(
 接口 ID。
 
 *ppvObject*<br/>
-此操作完成后，指向由参数指定的接口的指针*riid*。
+此操作完成后，指向参数*riid*指定的接口的指针。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="release"></a>ClassFactory::Release
+## <a name="classfactoryrelease"></a><a name="release"></a>类工厂：：发布
 
-递减引用计数当前`ClassFactory`对象。
+取消当前`ClassFactory`对象的引用计数。
 
 ```cpp
 STDMETHOD_(

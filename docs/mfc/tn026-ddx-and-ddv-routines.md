@@ -1,5 +1,5 @@
 ---
-title: TN026:DDX 和 DDV 例程
+title: TN026：DDX 和 DDV 例程
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 711d433b51ca09836f372d09a11f86c28b82cce6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370338"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>TN026:DDX 和 DDV 例程
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 例程
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-此说明描述的对话框数据交换 (DDX) 和对话框数据验证 (DDV) 体系结构。 它还介绍了如何编写一个 DDX_ 或 DDV_ 过程以及如何扩展类向导以使用你的例程。
+本说明描述了对话框数据交换 （DDX） 和对话框数据验证 （DDV） 体系结构。 它还描述了如何编写DDX_或DDV_过程，以及如何扩展 ClassWizard 来使用例程。
 
-## <a name="overview-of-dialog-data-exchange"></a>对话框数据交换的概述
+## <a name="overview-of-dialog-data-exchange"></a>对话数据交换概述
 
-完成所有对话框数据函数C++代码。 没有任何特殊资源或神奇的宏。 该机制的核心是虚拟函数，它是类中重写每个对话框中，没有对话框数据交换和验证。 它始终位于此窗体中：
+所有对话框数据函数都使用C++代码完成。 没有特殊的资源或神奇的宏。 机制的核心是一个虚拟函数，该函数在每个执行数据交换和验证的对话框类中都会被覆盖。 它始终以此形式找到：
 
 ```cpp
 void CMyDialog::DoDataExchange(CDataExchange* pDX)
@@ -39,75 +39,75 @@ void CMyDialog::DoDataExchange(CDataExchange* pDX)
 }
 ```
 
-特殊格式 AFX 评论功能允许 ClassWizard 定位和编辑此函数中的代码。 与 ClassWizard 不兼容的代码应放置在特殊格式注释之外。
+特殊格式的 AFX 注释允许 ClassWizard 在此函数中查找和编辑代码。 与 ClassWizard 不兼容的代码应放置在特殊格式注释之外。
 
-在上述示例中， \<data_exchange_function_call > 的格式：
+在上面的示例中，data_exchange_function_call>\<的形式是：
 
 ```cpp
 DDX_Custom(pDX, nIDC, field);
 ```
 
-和\<data_validation_function_call > 是可选的在窗体：
+并且\<data_validation_function_call>是可选的，并且的形式是：
 
 ```cpp
 DDV_Custom(pDX, field, ...);
 ```
 
-中每个可能包含多个 DDX_/DDV_ 对`DoDataExchange`函数。
+每个`DoDataExchange`函数中可能包含多个DDX_/DDV_对。
 
-所有对话框数据交换例程和 MFC 提供的对话框数据验证例程的列表，请参阅 afxdd_.h。
+有关 MFC 提供的所有对话数据交换例程和对话框数据验证例程的列表，请参阅"afxdd_.h"。
 
-对话框数据只是： 中的成员数据`CMyDialog`类。 它不存储在结构或类似内容。
+对话框数据就是：`CMyDialog`类中的成员数据。 它不存储在结构或类似的东西中。
 
 ## <a name="notes"></a>说明
 
-虽然我们调用此"对话框数据"，但所有功能都都可在派生自任何类中`CWnd`并都不限于只是对话框。
+尽管我们称之为"对话框数据"，但所有功能都可用于派生自`CWnd`的任何类，并且不仅限于对话框。
 
-初始数据值设置在标准C++构造函数中包含的块通常`//{{AFX_DATA_INIT`并`//}}AFX_DATA_INIT`注释。
+数据的初始值设置在标准C++构造函数中，通常位于 带`//{{AFX_DATA_INIT`和`//}}AFX_DATA_INIT`注释的块中。
 
-`CWnd::UpdateData` 是操作执行的初始化和错误处理围绕对调用`DoDataExchange`。
+`CWnd::UpdateData`是在 调用 周围执行初始化和错误处理的操作`DoDataExchange`。
 
-您可以调用`CWnd::UpdateData`在任何时间执行数据交换和验证。 默认情况下`UpdateData`(TRUE) 调用中的默认`CDialog::OnOK`处理程序和`UpdateData`在默认的调用 (FALSE) `CDialog::OnInitDialog`。
+您可以随时调用`CWnd::UpdateData`以执行数据交换和验证。 默认情况下`UpdateData`，在默认`CDialog::OnOK`处理程序中调用 （TRUE），`UpdateData`并在默认值`CDialog::OnInitDialog`中调用 （FALSE）。
 
-DDV_ 例程应立即为此，遵循 DDX_ 例程*字段*。
+DDV_例程应立即遵循该*字段*的DDX_例程。
 
 ## <a name="how-does-it-work"></a>它是如何工作的
 
-不需要了解以下以使用对话框数据。 但是，了解这在后台的工作原理将帮助您编写自己的 exchange 或验证过程。
+使用对话框数据不需要了解以下内容。 但是，了解此操作方式将有助于确保您编写自己的交换或验证过程。
 
-`DoDataExchange`成员函数是非常类似于`Serialize`成员函数-它是负责外部窗体中获取或设置数据/（控件在对话框中，在这种情况下） 从/向类中的成员数据。 *PDX*参数是执行数据交换的上下文，它是类似于`CArchive`参数`CObject::Serialize`。 *PDX* (`CDataExchange`对象) 都有方向标志非常类似`CArchive`方向标志：
+`DoDataExchange`成员函数与`Serialize`成员函数非常类似 - 它负责从类中的成员数据获取或设置数据到/从外部窗体（在本例中为对话框中的控件）。 *pDX*参数是执行数据交换的上下文，`CArchive`与 的`CObject::Serialize`参数类似 。 *pDX（* 对象`CDataExchange`）具有非常类似于`CArchive`具有方向标志的方向标志：
 
-- 如果`!m_bSaveAndValidate`，然后加载到控件的数据状态。
+- 如果`!m_bSaveAndValidate`，则将数据状态加载到控件中。
 
-- 如果`m_bSaveAndValidate`，然后从控件中设置的数据状态。
+- 如果`m_bSaveAndValidate`，则从控件设置数据状态。
 
-仅发生验证时`m_bSaveAndValidate`设置。 值`m_bSaveAndValidate`由对的 BOOL 参数`CWnd::UpdateData`。
+仅在设置验证时`m_bSaveAndValidate`进行验证。 的值`m_bSaveAndValidate`由 BOOL 参数确定到`CWnd::UpdateData`。
 
-有三个其他有趣的`CDataExchange`成员：
+还有其他三个有趣的`CDataExchange`成员：
 
-- `m_pDlgWnd`：包含控件的窗口 （通常的对话）。 这是为了防止 DDX_ 和 DDV_ 全局函数的调用方无需将 this 传递到每个 DDX/DDV 例程。
+- `m_pDlgWnd`：包含控件的窗口（通常是对话框）。 这是为了防止DDX_的调用方，DDV_全局函数必须将"此"传递给每个 DDX/DDV 例程。
 
-- `PrepareCtrl`和`PrepareEditCtrl`:准备用于数据交换的对话框控件。 存储该控件的句柄将焦点设置在验证失败。 `PrepareCtrl` 用于非编辑控件和`PrepareEditCtrl`用于编辑控件。
+- `PrepareCtrl`和`PrepareEditCtrl`：为数据交换准备对话框控件。 存储控件的句柄，用于在验证失败时设置焦点。 `PrepareCtrl`用于非编辑控件，`PrepareEditCtrl`用于编辑控件。
 
-- `Fail`：将一个消息框，提醒用户输入错误后调用。 此例程会将焦点还原到最后一个控件 (上次调用`PrepareCtrl`或`PrepareEditCtrl`)，并引发异常。 可以从 DDX_ 和 DDV_ 例程调用此成员函数。
+- `Fail`：在启动一个消息框以提醒用户输入错误后调用。 此例程将焦点还原到最后一个控件（最后一个调用`PrepareCtrl``PrepareEditCtrl`或 ），并引发异常。 可以从DDX_和DDV_例程调用此成员函数。
 
 ## <a name="user-extensions"></a>用户扩展
 
-有几种方法来扩展默认的 DDX/DDV 机制。 你可以：
+有几种方法可以扩展默认的 DDX/DDV 机制。 可以：
 
-- 添加新的数据类型。
+- 添加新数据类型。
 
     ```cpp
     CTime
     ```
 
-- 添加新的 exchange 过程 (DDX_)。
+- 添加新的交换过程（DDX_）。
 
     ```cpp
     void PASCAL DDX_Time(CDataExchange* pDX, int nIDC, CTime& tm);
     ```
 
-- 添加新的验证过程 (DDV_)。
+- 添加新的验证过程（DDV_）。
 
     ```cpp
     void PASCAL DDV_TimeFuture(CDataExchange* pDX, CTime tm, BOOL bFuture);
@@ -121,9 +121,9 @@ DDV_ 例程应立即为此，遵循 DDX_ 例程*字段*。
     ```
 
     > [!NOTE]
-    > 此类的任意表达式的类向导无法编辑，因此应移动之外的特殊格式注释 (/ / {{AFX_DATA_MAP(CMyClass))。
+    > 此类任意表达式不能由 ClassWizard 编辑，因此应移至特殊格式注释之外（//{AFX_DATA_MAP（CMyClass））。
 
-具有`DoDialogExchange`成员函数包括条件语句或任何其他有效C++语句与混合的交换和验证函数调用。
+让`DoDialogExchange`成员函数包括条件或任何其他有效的C++语句与混合交换和验证函数调用。
 
 ```cpp
 //{{AFX_DATA_MAP(CMyClass)
@@ -137,100 +137,100 @@ else
 ```
 
 > [!NOTE]
-> 如上所示，此类代码的类向导无法编辑，因此应仅之外的特殊格式的注释。
+> 如上所述，ClassWizard 不能编辑此类代码，并且只能在特殊格式注释之外使用。
 
 ## <a name="classwizard-support"></a>类向导支持
 
-类向导允许您将自己 DDX_ 和 DDV_ 例程集成到类向导用户界面，从而支持 DDX/DDV 自定义项的子集。 执行此操作是有益的唯一成本，如果你打算重复使用在项目中或在许多项目中的特定 DDX 和 DDV 例程。
+ClassWizard 允许您将自己的DDX_和DDV_例程集成到 ClassWizard 用户界面中，从而支持 DDX/DDV 自定义的子集。 只有当您计划在项目或许多项目中重用特定的 DDX 和 DDV 例程时，这样做才具有成本效益。
 
-若要执行此操作，DDX 中进行特殊的输入。CLW (以前版本的视觉对象C++APSTUDIO 中存储此信息。INI) 或在项目中。CLW 文件。 可以是特殊的条目，输入你的项目的 [常规信息] 部分中。CLW 文件或 [ExtraDDX] 节的 DDX。在 \Program Files\Microsoft Visual Studio\Visual CLW 文件C++\bin 目录。 您可能需要创建 DDX。CLW 文件，如果它尚不存在。 如果你计划仅在某个项目中使用自定义 DDX_/DDV_ 例程，将条目添加到你的项目 [常规信息] 节。CLW 改为文件。 如果您计划在多个项目使用的例程，将条目添加到 DDX [ExtraDDX] 部分。CLW。
+为此，在 DDX 中制作特殊条目。CLW（早期版本的视觉C++将此信息存储在 APSTUDIO 中。INI）或您的项目的 。CLW 文件。 特殊条目可以在项目的 [常规信息] 部分中输入。CLW 文件或 DDX 的 [额外DDX] 部分。CLW 文件在 [程序文件]微软可视化工作室\视觉C++\bin 目录中。 您可能需要创建 DDX。CLW 文件（如果不存在）。 如果计划仅在特定项目中使用自定义DDX_/DDV_例程，请将条目添加到项目的 [常规信息] 部分。而是 CLW 文件。 如果计划在多个项目上使用例程，则将条目添加到 DDX 的 [ExtraDDX] 部分。CLW.
 
-这些特殊的项的常规格式为：
+这些特殊条目的一般格式是：
 
-> ExtraDDXCount=*n*
+> 额外DDXCount**n*
 
-其中*n*是 ExtraDDX 数目？ 行要遵循的窗体
+*n*是额外 DDX 的数量？行遵循，形式
 
-> ExtraDDX?=*keys*; *vb-keys*; *prompt*; *type*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
+> 额外DDX？**键*;*vb 键*;*提示*;*类型*;*initValue*;*DDX_Proc**DDV_Proc;**提示1;**arg1* *;*提示2;**fmt2*[]
 
-其中？ 是一个数字 1- *n* ，该值指示正在定义的列表中的 DDX 类型。
+哪里？ 是数字 1 - *n，* 指示正在定义的列表中键入哪个 DDX 类型。
 
-由; 字符分隔每个字段。 字段和它们的用途如下所述。
+每个字段都由";"字符分隔。 下面将介绍字段及其用途。
 
-- *keys*
+- *钥匙*
 
-  单个字符，该值指示哪个对话框控件的允许使用此变量的类型的列表。
+  允许单个字符列表，指示此变量类型的对话框控件。
 
-  |字符|允许的控件|
+  |字符|允许的控制|
   |-|-|
   E | 编辑
-  C | 两个状态的复选框
-  c | 三态复选框
-  R | 在组中的第一个单选按钮
-  L | 非排序的列表框
-  l | 已排序的列表框
-  M | 组合框 （具有编辑项）
-  N | 排序的下拉列表中
-  n | 排序的下拉列表中
-  1 | DDX 插入是否应添加到列表的开头 （默认值添加到结尾） 这通常用于传输的控制属性的 DDX 例程。
+  C | 双状态复选框
+  c | 三州复选框
+  R | 组中的第一个单选按钮
+  L | 未排序的列表框
+  l | 排序列表框
+  M | 组合框（带编辑项目）
+  N | 非排序的放置列表
+  n | 排序放置列表
+  1 | 如果 DDX 插入应添加到列表头（默认添加到尾），这通常用于传输"控制"属性的 DDX 例程。
 
-- *vb-keys*
+- *vb 键*
 
-  此字段用于仅在 16 位产品 VBX 控件 （VBX 控件不支持在 32 位产品）
+  此字段仅用于 VBX 控件的 16 位产品（32 位产品不支持 VBX 控件）
 
 - *提示*
 
-  要将放置在属性组合框 （无引号） 的字符串
+  字符串放在属性组合框中（无引号）
 
 - *type*
 
-  类型在标头文件中发出的单个标识符。 在上述示例使用 DDX_Time 中，必须先将此设置为 CTime。
+  用于在标头文件中发出的类型的单个标识符。 在上面的DDX_Time示例中，这将设置为 CTime。
 
-- *vb-keys*
+- *vb 键*
 
-  不使用此版本中，应始终为空
+  此版本中未使用，应始终为空
 
 - *initValue*
 
-  初始价值-0 或空。 如果它为空，将 //{{AFX_DATA_INIT 部分的实现文件中不写入任何初始化行。 空白条目应使用的C++对象 (如`CString`， `CTime`，依此类推) 的有保证正确初始化的构造函数。
+  初始值 = 0 或空白。 如果为空，则在实现文件的 //_AFX_DATA_INIT 部分不会写入初始化行。 空白条目应用于具有保证正确初始化的构造函数`CString`C++`CTime`对象（如 、等）。
 
 - *DDX_Proc*
 
-  DDX_ 过程的单个标识符。 C++函数名称必须以"DDX_，"开头，但不包含"DDX_"中\<DDX_Proc > 标识符。 在上述示例中， \<DDX_Proc > 标识符将时间。 当 ClassWizard 将写入到实现文件中的函数调用 {{AFX_DATA_MAP 部分中，它将追加此名称到 DDX_，因此到达 DDX_Time。
+  DDX_过程的单个标识符。 C++函数名称必须以"DDX_"开头，但不要在\<DDX_Proc>标识符中包含"DDX_"。 在上面的示例中，DDX_Proc>\<标识符将是时间。 当 ClassWizard 将函数调用写入 {AFX_DATA_MAP 节中的实现文件时，它将此名称追加到DDX_，从而到达DDX_Time。
 
-- *comment*
+- *评论*
 
-  若要在具有此 DDX 变量的对话框中显示的注释。 将你想在这里，并且通常提供一些内容描述由 DDX/DDV 对执行的操作的任何文本。
+  注释以在此 DDX 的变量对话框中显示。 放置任何您喜欢的文本，通常提供描述 DDX/DDV 对执行的操作的内容。
 
 - *DDV_Proc*
 
-  该条目的 DDV 部分是可选的。 并非所有的 DDX 例程具有相应 DDV 例程。 通常情况下，它是更方便地传输的过程中不可或缺包括验证阶段。 这通常是当 DDV 例程不需要任何参数，因为 ClassWizard 不支持不带任何参数的 DDV 例程。
+  条目的 DDV 部分是可选的。 并非所有 DDX 例程都有相应的 DDV 例程。 通常，将验证阶段作为传输的组成部分变得更加方便。 当 DDV 例程不需要任何参数时，通常会出现这种情况，因为 ClassWizard 不支持没有任何参数的 DDV 例程。
 
-- *arg*
+- *精 氨 酸*
 
-  DDV_ 过程的单个标识符。 C++函数名称必须以"DDV_"开头，但不是包括"DDX_"中\<DDX_Proc > 标识符。
+  DDV_过程的单个标识符。 C++函数名称必须以"DDV_"开头，但在\<DDX_Proc>标识符中不包括"DDX_"。
 
-  *arg*后跟 1 或 2 个 DDV 参数：
+  *arg*后跟 1 或 2 DDV args：
 
-   - *promptN*
+  - *提示N*
 
-      若要编辑的项目 (& 加速器) 之上放置的字符串。
+      要放置在编辑项上方的字符串（&用于加速器）。
 
-   - *fmtN*
+  - *fmtN*
 
-      Arg 类型之一的格式字符：
+      arg 类型的格式字符，其中之一：
 
       |字符|类型|
       |-|-|
       |d | int|
       |u | unsigned int|
-      |D | long int （即，长时间）|
-      |U | 无符号长时间 (即，DWORD)|
-      |f | float|
+      |D | 长因（即长）|
+      |U | 长无符号（即DWORD）|
+      |f | FLOAT|
       |F | double|
-      |秒 | string|
+      |s | 字符串|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+[技术说明（按编号）](../mfc/technical-notes-by-number.md)<br/>
+[按类别分类的技术说明](../mfc/technical-notes-by-category.md)

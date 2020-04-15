@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 93de43ac7e5314501d0391e2cde862ba32be0b4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371238"
 ---
 # <a name="mutex-class"></a>Mutex 类
 
@@ -34,27 +34,27 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称       | 描述
+名称       | 说明
 ---------- | ------------------------------------------------------
-`SyncLock` | 类支持同步锁的同义词。
+`SyncLock` | 支持同步锁的类的同义词。
 
 ### <a name="public-constructor"></a>公共构造函数
 
-名称                   | 描述
+名称                   | 说明
 ---------------------- | ------------------------------------------------
-[Mutex::Mutex](#mutex) | 初始化 `Mutex` 类的新实例。
+[穆顶：：Mutex](#mutex) | 初始化 `Mutex` 类的新实例。
 
 ### <a name="public-members"></a>公共成员
 
-名称                 | 描述
+名称                 | 说明
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Mutex::Lock](#lock) | 等到当前对象，或`Mutex`与指定句柄，互斥体或指定的超时间隔已过的版本关联的对象。
+[静音：：锁定](#lock) | 等待，直到当前对象或与指定句柄关联的`Mutex`对象释放互斥体或指定的超时间隔已过。
 
-### <a name="public-operator"></a>公共运算符
+### <a name="public-operator"></a>公共运营商
 
-名称                                 | 描述
+名称                                 | 说明
 ------------------------------------ | ---------------------------------------------------------------------------
-[Mutex::operator=](#operator-assign) | 分配 （移动） 指定`Mutex`对象与当前`Mutex`对象。
+[互斥：：运算符*](#operator-assign) | 将指定`Mutex`对象分配给（移动）到当前`Mutex`对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,13 +62,13 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** corewrappers.h
+**标题：** 核心包装.h
 
-**命名空间：** Microsoft::WRL::Wrappers
+**命名空间：** 微软：：WRL：包装
 
-## <a name="lock"></a>Mutex::Lock
+## <a name="mutexlock"></a><a name="lock"></a>静音：：锁定
 
-等到当前对象，或`Mutex`与指定句柄，互斥体或指定的超时间隔已过的版本关联的对象。
+等待，直到当前对象或与指定句柄关联的`Mutex`对象释放互斥体或指定的超时间隔已过。
 
 ```cpp
 SyncLock Lock(
@@ -83,15 +83,15 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>参数
 
-*milliseconds*<br/>
+*毫秒*<br/>
 超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。
 
-*h*<br/>
-句柄`Mutex`对象。
+*H*<br/>
+`Mutex`对象的句柄。
 
 ### <a name="return-value"></a>返回值
 
-## <a name="mutex"></a>Mutex::Mutex
+## <a name="mutexmutex"></a><a name="mutex"></a>穆顶：：Mutex
 
 初始化 `Mutex` 类的新实例。
 
@@ -107,16 +107,16 @@ Mutex(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-句柄或对句柄的右值引用到`Mutex`对象。
+*H*<br/>
+对`Mutex`对象的句柄或句柄的 rvalue 引用。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化`Mutex`从指定句柄的对象。 第二个构造函数初始化`Mutex`从指定句柄，然后将 mutex 的所有权的对象与当前`Mutex`对象。
+第一个构造函数从指定的句柄`Mutex`初始化对象。 第二个构造函数从指定的句柄`Mutex`初始化对象，然后将互斥体的所有权移动到当前`Mutex`对象。
 
-## <a name="operator-assign"></a>Mutex:: operator =
+## <a name="mutexoperator"></a><a name="operator-assign"></a>互斥：：运算符*
 
-分配 （移动） 指定`Mutex`对象与当前`Mutex`对象。
+将指定`Mutex`对象分配给（移动）到当前`Mutex`对象。
 
 ```cpp
 Mutex& operator=(
@@ -126,13 +126,13 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-对的右值引用`Mutex`对象。
+*H*<br/>
+对`Mutex`对象的 rvalue 引用。
 
 ### <a name="return-value"></a>返回值
 
-对当前的引用`Mutex`对象。
+对当前`Mutex`对象的引用。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅**移动语义**一部分[右值引用声明符： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)。
+有关详细信息，请参阅[Rvalue 参考声明器： &&](../../cpp/rvalue-reference-declarator-amp-amp.md)的**移动语义**部分。

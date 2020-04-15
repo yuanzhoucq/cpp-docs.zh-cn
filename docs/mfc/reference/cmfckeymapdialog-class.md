@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22aa006ce214ca720192bb761e2ff2b35a64fce3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374411"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 类
 
-`CMFCKeyMapDialog`类支持将命令映射到键盘上的键的控件。
+类`CMFCKeyMapDialog`支持将命令映射到键盘上的键的控件。
 
 ## <a name="syntax"></a>语法
 
@@ -47,34 +47,34 @@ class CMFCKeyMapDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|构造 `CMFCKeyMapDialog` 对象。|
+|[CMFC键映射对话：：CMFC键映射对话](#cmfckeymapdialog)|构造 `CMFCKeyMapDialog` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCKeyMapDialog::DoModal](#domodal)|显示键盘映射对话框。|
+|[CMFC键映射对话：:Do模态](#domodal)|显示键盘映射对话框。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|由框架调用以生成描述键映射的字符串。 默认情况下，该字符串包含命令名称、 使用的键盘快捷方式和快捷方式的关键说明。|
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|检索一个字符串，包含与指定的命令关联的键盘快捷方式的列表。|
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|在新项插入到支持键盘映射控件的内部列表控件之前由框架调用。|
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|由框架调用以在新页上打印的键盘映射的标头。|
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|由框架调用以打印键盘映射项。|
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|由框架调用以在支持键盘映射控件的内部列表控件中设置列标题。|
-|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|在用户单击时由框架调用**打印**按钮。|
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|由框架调用以在支持键盘映射控件的内部列表控件中设置列的宽度。|
+|[CMFC键映射对话：：格式项目](#formatitem)|由框架调用以生成描述密钥映射的字符串。 默认情况下，字符串包含命令名称、使用的快捷键和快捷键说明。|
+|[CMFC键映射对话：：获取命令密钥](#getcommandkeys)|检索包含与指定命令关联的快捷键列表的字符串。|
+|[CMFC键映射对话：：插入项目](#oninsertitem)|在将新项目插入支持键盘映射控件的内部列表控件之前，由框架调用。|
+|[CMFC键映射对话：：在打印标题上](#onprintheader)|由框架调用在新页面上打印键盘映射的标头。|
+|[CMFC键映射对话：：在打印项目](#onprintitem)|由框架调用以打印键盘映射项。|
+|[CMFC键映射对话：：打开列](#onsetcolumns)|框架调用，为支持键盘映射控件的内部列表控件中的列设置标题。|
+|[CMFC键映射对话：:PrintKeyMap](#printkeymap)|当用户单击 **"打印"** 按钮时，由框架调用。|
+|[CMFC键映射对话：：设置列宽度](#setcolumnswidth)|由框架调用，以设置支持键盘映射控件的内部列表控件中的列的宽度。|
 
 ## <a name="remarks"></a>备注
 
-使用`CMFCKeyMapDialog`类，以实现可调整大小的键盘映射对话框。 对话框中使用列表视图控件来显示键盘快捷方式和其关联的命令。
+使用`CMFCKeyMapDialog`类实现可调整大小的键盘映射对话框。 该对话框使用列表视图控件来显示键盘快捷键及其关联的命令。
 
-若要使用`CMFCKeyMapDialog`类在应用程序中，指针到主框架窗口作为参数传递到`CMFCKeyMapDialog`构造函数。 然后，调用`DoModal`方法以启动模式对话框。
+要在应用程序中`CMFCKeyMapDialog`使用 类，请将指向主框架窗口的指针作为参数传递给`CMFCKeyMapDialog`构造函数。 然后调用`DoModal`方法以启动模态对话框。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -92,9 +92,9 @@ class CMFCKeyMapDialog : public CDialogEx
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxkeymapdialog.h
+**标题：** afxkeymapdialog.h
 
-##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog
+## <a name="cmfckeymapdialogcmfckeymapdialog"></a><a name="cmfckeymapdialog"></a>CMFC键映射对话：：CMFC键映射对话
 
 构造 `CMFCKeyMapDialog` 对象。
 
@@ -106,21 +106,21 @@ CMFCKeyMapDialog(
 
 ### <a name="parameters"></a>参数
 
-*pWndParentFrame*<br/>
-[in]向父窗口的指针`CMFCKeyMapDialog`对象。
+*pwnd 父框架*<br/>
+[在]指向对象的父窗口的`CMFCKeyMapDialog`指针。
 
 *bEnablePrint*<br/>
-[in]可以打印快捷键的列表; 如果为 TRUE否则为 FALSE。 默认值为 FALSE。
+[在]如果可以打印快捷键列表，则为 TRUE;否则，FALSE。 默认值为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCKeyMapDialog`类。 此示例摘自[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何构造`CMFCKeyMapDialog`类的对象。 此示例是[可视化工作室演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]
 
-##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal
+## <a name="cmfckeymapdialogdomodal"></a><a name="domodal"></a>CMFC键映射对话：:Do模态
 
 显示键盘映射对话框。
 
@@ -130,15 +130,15 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>返回值
 
-有符号的整数，例如 IDOK 或 IDCANCEL，传递给[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)方法。 该方法，反过来，关闭对话框。 有关详细信息，请参阅[CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)。
+传递给[CDialog：：结束对话](../../mfc/reference/cdialog-class.md#enddialog)方法的已签名整数，如 IDOK 或 IDCANCEL。 该方法依次关闭对话框。 有关详细信息，请参阅[CDialog：:Do 模态](../../mfc/reference/cdialog-class.md#domodal)。
 
 ### <a name="remarks"></a>备注
 
-键盘映射对话框中，可选择并为各种类别的命令分配快捷键。 此外，您可以将所选的快捷键和及其说明复制到剪贴板。
+键盘映射对话框允许您选择和分配快捷键到各种类别的命令。 此外，您可以将选定的快捷键及其说明复制到剪贴板。
 
-##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem
+## <a name="cmfckeymapdialogformatitem"></a><a name="formatitem"></a>CMFC键映射对话：：格式项目
 
-由框架调用以生成描述键映射的字符串。 默认情况下，该字符串包含命令名称、 使用的键盘快捷方式和快捷方式的关键说明。
+由框架调用以生成描述密钥映射的字符串。 默认情况下，字符串包含命令名称、使用的快捷键和快捷键说明。
 
 ```
 virtual CString FormatItem(int nItem) const;
@@ -147,17 +147,17 @@ virtual CString FormatItem(int nItem) const;
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-[in]键映射的内部列表中项的从零开始的索引。
+[在]键映射内部列表中项的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-一个`CString`对象，其中包含带格式的项文本。
+包含`CString`格式化项文本的对象。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys
+## <a name="cmfckeymapdialoggetcommandkeys"></a><a name="getcommandkeys"></a>CMFC键映射对话：：获取命令密钥
 
-检索一个字符串值。 该字符串包含与指定的命令相关联的快捷键的列表。
+检索字符串值。 该字符串包含与指定命令关联的快捷键列表。
 
 ```
 virtual CString GetCommandKeys(UINT uiCmdID) const;
@@ -165,18 +165,18 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 
 ### <a name="parameters"></a>参数
 
-*uiCmdID*<br/>
-[in]命令 id。
+*乌伊CmdID*<br/>
+[在]命令 ID。
 
 ### <a name="return-value"></a>返回值
 
-以分号分隔 （;） 的键盘快捷方式的列表与指定的命令相关联。
+与指定命令关联的快捷键的分号分隔 （';'' 列表）。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem
+## <a name="cmfckeymapdialogoninsertitem"></a><a name="oninsertitem"></a>CMFC键映射对话：：插入项目
 
-在新项插入到支持的键盘映射控件的内部列表控件之前由框架调用。
+在将新项目插入支持键盘映射控件的内部列表控件之前，由框架调用。
 
 ```
 virtual void OnInsertItem(
@@ -187,16 +187,16 @@ virtual void OnInsertItem(
 ### <a name="parameters"></a>参数
 
 *pButton*<br/>
-[in]一个指向用于将键盘键组合映射到的命令名称和说明的工具栏按钮。 键映射项存储在一个内部列表控件中。
+[在]指向工具栏按钮的指针，用于将键盘键组合映射到命令名称和说明。 键映射项存储在内部列表控件中。
 
 *nItem*<br/>
-[in]一个指定内部列表控件中插入新的键映射项的位置的从零开始索引。
+[在]一个基于零的索引，用于指定在内部列表控件中插入新键映射项的位置。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader
+## <a name="cmfckeymapdialogonprintheader"></a><a name="onprintheader"></a>CMFC键映射对话：：在打印标题上
 
-由框架调用以在新页上打印的键盘映射的标头。
+由框架调用在新页面上打印键盘映射的标头。
 
 ```
 virtual int OnPrintHeader(
@@ -207,24 +207,24 @@ virtual int OnPrintHeader(
 
 ### <a name="parameters"></a>参数
 
-*dc*<br/>
-[in]打印机设备上下文。
+*直流*<br/>
+[在]打印机的设备上下文。
 
 *nPage*<br/>
-[in]要打印的页码。
+[在]要打印的页码。
 
-*cx*<br/>
-[in]标头，以像素为单位的水平偏移量。
+*残雪*<br/>
+[在]标题的水平偏移（以像素为单位）。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则打印文本的高度。 有关详细信息，请参阅的返回值部分[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)。
+如果成功，则打印文本的高度。 有关详细信息，请参阅[CDC：:DrawText](../../mfc/reference/cdc-class.md#drawtext)的返回值部分。
 
 ### <a name="remarks"></a>备注
 
-该框架使用此方法要打印的键盘映射。 默认情况下，此方法将打印的页码，应用程序名称和对话框标题。
+框架使用此方法打印键盘映射。 默认情况下，此方法打印页码、应用程序名称和对话框标题。
 
-##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem
+## <a name="cmfckeymapdialogonprintitem"></a><a name="onprintitem"></a>CMFC键映射对话：：在打印项目
 
 由框架调用以打印键盘映射项。
 
@@ -239,32 +239,32 @@ virtual int OnPrintItem(
 
 ### <a name="parameters"></a>参数
 
-*dc*<br/>
-[in]打印机设备上下文。
+*直流*<br/>
+[在]打印机的设备上下文。
 
 *nItem*<br/>
-[in]要打印的项的从零开始的索引。
+[在]要打印的项的零基索引。
 
-*y*<br/>
-[in]页面顶部和项的位置之间的垂直偏移量。
+*Y*<br/>
+[在]页面顶部和项目位置之间的垂直偏移。
 
-*cx*<br/>
-[in]在页面左侧和项的位置之间的水平偏移量。
+*残雪*<br/>
+[在]页面左侧和项目位置之间的水平偏移。
 
 *bCalcHeight*<br/>
-[in]若要计算的打印项; 最佳高度，则返回 TRUE如果为 FALSE，使其适应默认空间截断打印的项。
+[在]TRUE 以计算打印项目的最佳高度;FALSE 可截截打印项，使其适合默认空间。
 
 ### <a name="return-value"></a>返回值
 
-打印的项的高度。
+打印项目的高度。
 
 ### <a name="remarks"></a>备注
 
-框架调用此方法以打印键映射对话框项目。 默认情况下，此方法将输出项的命令名称、 键盘快捷方式和命令说明。
+框架调用此方法来打印键映射对话框项。 默认情况下，此方法打印项的命令名称、快捷键和命令说明。
 
-##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns
+## <a name="cmfckeymapdialogonsetcolumns"></a><a name="onsetcolumns"></a>CMFC键映射对话：：打开列
 
-由框架调用以在支持键盘映射控件的内部列表控件中设置列标题。
+框架调用，为支持键盘映射控件的内部列表控件中的列设置标题。
 
 ```
 virtual void OnSetColumns();
@@ -272,11 +272,11 @@ virtual void OnSetColumns();
 
 ### <a name="remarks"></a>备注
 
-默认情况下，此方法从三个资源获取的列的标题。 命令列标题是从 IDS_AFXBARRES_COMMAND，键列标题是从 IDS_AFXBARRES_KEYS，说明列标题是从 IDS_AFXBARRES_DESCRIPTION。
+默认情况下，此方法从三个资源获取列的标题。 命令列标题来自IDS_AFXBARRES_COMMAND，键列标题来自IDS_AFXBARRES_KEYS，描述列标题来自IDS_AFXBARRES_DESCRIPTION。
 
-##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap
+## <a name="cmfckeymapdialogprintkeymap"></a><a name="printkeymap"></a>CMFC键映射对话：:PrintKeyMap
 
-在用户单击时由框架调用**打印**按钮。
+当用户单击 **"打印"** 按钮时，由框架调用。
 
 ```
 virtual void PrintKeyMap();
@@ -284,11 +284,11 @@ virtual void PrintKeyMap();
 
 ### <a name="remarks"></a>备注
 
-`PrintKeyMap`方法打印键映射。 它将启动新的打印作业，然后重复调用[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)并[CMFCKeyMapDialog::OnPrintItem](#onprintitem)方法直到打印所有键的映射。
+该方法`PrintKeyMap`打印键映射。 它启动新的打印作业，然后反复调用[CMFCKeyMapDialog：：在打印标题](#onprintheader)和[CMFCKeyMapDialog：：在打印项目](#onprintitem)方法，直到打印所有键映射。
 
-##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth
+## <a name="cmfckeymapdialogsetcolumnswidth"></a><a name="setcolumnswidth"></a>CMFC键映射对话：：设置列宽度
 
-由框架调用以在支持键盘映射控件的内部列表控件中设置列的宽度。
+由框架调用，以设置支持键盘映射控件的内部列表控件中的列的宽度。
 
 ```
 virtual void SetColumnsWidth();
@@ -296,10 +296,10 @@ virtual void SetColumnsWidth();
 
 ### <a name="remarks"></a>备注
 
-此方法将内部列表控件的列设置为默认宽度。 首先，将计算的快捷方式键列的宽度。 然后的其余部分的三分之一分配给命令列，剩余的三分之二分配给说明列。
+此方法将内部列表控件的列设置为默认宽度。 首先，计算快捷键列的宽度。 然后，剩余宽度的三分之一分配给命令列，其余三分之二分配给描述列。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)

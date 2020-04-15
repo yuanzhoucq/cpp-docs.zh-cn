@@ -1,60 +1,60 @@
 ---
-title: 工作原型
+title: Worker Archetype
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 2e57c575ed778184cf319bb84e61f585fcfa2111
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509336"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329351"
 ---
-# <a name="worker-archetype"></a>工作原型
+# <a name="worker-archetype"></a>Worker Archetype
 
-符合*辅助*原型的类提供用于处理线程池上排队的工作项的代码。
+符合*辅助角色*原型的类提供处理线程池上排队的工作项的代码。
 
 **实现**
 
-若要实现符合此原型的类，类必须提供以下功能：
+要实现符合此原型的类，类必须提供以下功能：
 
 |方法|说明|
 |------------|-----------------|
-|[Initialize](#initialize)|调用以初始化辅助对象，然后将请求传递给[执行](#execute)。|
+|[Initialize](#initialize)|调用 以在将任何请求传递到[执行](#execute)之前初始化辅助角色对象。|
 |[执行](#execute)|调用以处理工作项。|
-|[Terminate](#terminate)|调用以在所有请求都传递到[执行](#execute)之后对工作对象进行初始化。|
+|[终止](#terminate)|调用 以在将所有请求传递到[执行](#execute)后取消初始化辅助角色对象。|
 
 |Typedef|说明|
 |-------------|-----------------|
-|[RequestType](#requesttype)|可由 worker 类处理的工作项类型的 typedef。|
+|[RequestType](#requesttype)|工兵类可以处理的工作项类型的类型类型。|
 
-典型的*辅助角色*类如下所示：
+典型的*工人*类如下所示：
 
 [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]
 
 **现有实现**
 
-这些类符合以下原型：
+这些类符合此原型：
 
 |类|说明|
 |-----------|-----------------|
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|接收来自线程池的请求，并将其传递给为每个请求创建并销毁的辅助角色对象。|
+|[无状态工人](../../atl/reference/cnonstatelessworker-class.md)|从线程池接收请求，并将它们传递到为每个请求创建和销毁的工作对象。|
 
 **使用**
 
-这些模板参数需要类符合以下原型：
+这些模板参数期望类符合此原型：
 
 |参数名称|使用者|
 |--------------------|-------------|
 |*工人*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*工人*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
+|*工人*|[无状态工人](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlutil
+**标题：** atlutil.h
 
-## <a name="workerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype：： Execute
+## <a name="workerarchetypeexecute"></a><a name="execute"></a>辅助类型：执行
 
 调用以处理工作项。
 
@@ -65,37 +65,37 @@ void Execute(
     OVERLAPPED* pOverlapped);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *请求*<br/>
-要处理的工作项。 工作项与 `RequestType`的类型相同。
+要处理的工作项。 工作项的类型与`RequestType`相同。
 
 *pvWorkerParam*<br/>
-辅助类理解的自定义参数。 还传递到 `WorkerArchetype::Initialize` 和 `Terminate`。
+辅助角色类理解的自定义参数。 也传递到`WorkerArchetype::Initialize`和`Terminate`。
 
-*pOverlapped*<br/>
-指向用于创建在其上排队工作项的队列的[重叠](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)结构的指针。
+*p重叠*<br/>
+指向[OVERLAPPED 结构](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)的指针，用于创建工作项排队的队列。
 
-## <a name="workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype：： Initialize
+## <a name="workerarchetypeinitialize"></a><a name="initialize"></a>工人Arche类型：：初始化
 
-调用以在将任何请求传递到 `WorkerArchetype::Execute`之前初始化该工作对象。
+调用 以在将任何请求传递到`WorkerArchetype::Execute`之前初始化辅助角色对象。
 
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *pvParam*<br/>
-辅助类理解的自定义参数。 还传递到 `WorkerArchetype::Terminate` 和 `WorkerArchetype::Execute`。
+辅助角色类理解的自定义参数。 也传递到`WorkerArchetype::Terminate`和`WorkerArchetype::Execute`。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
-## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype：： RequestType
+## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a>辅助类型：请求类型
 
-可由 worker 类处理的工作项类型的 typedef。
+工兵类可以处理的工作项类型的类型类型。
 
 ```
 typedef MyRequestType RequestType;
@@ -103,20 +103,20 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>备注
 
-此类型必须用作 `WorkerArchetype::Execute` 的第一个参数，并且必须能够在 ULONG_PTR 之间进行转换。
+此类型必须用作 的第一个参数，`WorkerArchetype::Execute`并且必须能够强制转换到和从ULONG_PTR。
 
-## <a name="workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype：： Terminate
+## <a name="workerarchetypeterminate"></a><a name="terminate"></a>工人类：终止
 
-调用以在所有请求都传递到 `WorkerArchetype::Execute`后对辅助对象进行初始化。
+调用 以在将所有请求传递到`WorkerArchetype::Execute`后取消初始化辅助角色对象。
 
 ```
 void Terminate(void* pvParam) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *pvParam*<br/>
-辅助类理解的自定义参数。 还传递到 `WorkerArchetype::Initialize` 和 `WorkerArchetype::Execute`。
+辅助角色类理解的自定义参数。 也传递到`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。
 
 ## <a name="see-also"></a>另请参阅
 

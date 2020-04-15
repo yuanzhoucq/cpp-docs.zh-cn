@@ -9,30 +9,30 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: 8f2b2b0cea8ff30cc450aae534fbff0d7b77f457
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b4a86c49880b0c40d402c7cec863f79e24bc4dc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190088"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371569"
 ---
 # <a name="__cdecl"></a>__cdecl
 
-**__cdecl**是 C 和C++程序的默认调用约定。 由于堆栈由调用方清理，因此它可以执行 `vararg` 的函数。 **__Cdecl**调用约定创建的可执行文件比[__stdcall](../cpp/stdcall.md)大，因为它要求每个函数调用包括堆栈清理代码。 以下列表显示此调用约定的实现。 **__Cdecl**修饰符是 Microsoft 特定的。
+**__cdecl**是 C 和C++程序的默认调用约定。 由于堆栈由调用方清理，因此它可以执行`vararg`函数。 **__cdecl**调用约定创建比[__stdcall](../cpp/stdcall.md)更大的可执行文件，因为它需要每个函数调用来包含堆栈清理代码。 以下列表显示此调用约定的实现。 **__cdecl**修改器特定于 Microsoft。
 
 |元素|实现|
 |-------------|--------------------|
 |参数传递顺序|从右到左。|
 |堆栈维护职责|调用函数从堆栈中弹出自变量。|
-|名称修饰约定|下划线字符（_）作为名称的前缀，但 \_导出使用 C 链接 _cdecl 函数时除外。|
+|名称修饰约定|下划线字符 （*） 预指名称，\_但导出使用 C 链接的_cdecl函数除外。|
 |大小写转换约定|不执行任何大小写转换。|
 
 > [!NOTE]
->  有关相关信息，请参阅[修饰名](../build/reference/decorated-names.md)。
+> 有关相关信息，请参阅[修饰名称](../build/reference/decorated-names.md)。
 
-将 **__cdecl**修饰符放在变量或函数名称之前。 由于 C 命名和调用约定为默认值，因此只有在指定了 `/Gv` （vectorcall）、`/Gz` （stdcall）或 `/Gr` （fastcall）编译器选项时，才能在 x86 代码中使用 **__cdecl** 。 [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项强制实施 **__cdecl**调用约定。
+将 **__cdecl**修改器放在变量或函数名称之前。 由于 C 命名和调用约定是默认值，因此在 x86 代码中必须使用 **__cdecl**的唯一时间是指定`/Gv`（矢量调用）、（stdcall）`/Gz`或`/Gr`（快速调用）编译器选项。 [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项强制 **__cdecl**调用约定。
 
-在 ARM 和 x64 处理器上，将接受 **__cdecl** ，但编译器通常会将其忽略。 按照 ARM 和 x64 上的约定，自变量将尽可能传入寄存器，后续自变量传递到堆栈中。 在 x64 代码中，使用 **__cdecl**重写 **/Gv**编译器选项，并使用默认的 x64 调用约定。
+在 ARM 和 x64 处理器上 **，__cdecl**被编译器接受，但通常忽略。 按照 ARM 和 x64 上的约定，自变量将尽可能传入寄存器，后续自变量传递到堆栈中。 在 x64 代码中，使用 **__cdecl**来重写 **/Gv**编译器选项并使用默认 x64 调用约定。
 
 对于非静态类函数，如果函数是超行定义的，则调用约定修饰符不必在超行定义中指定。 也就是说，对于类非静态成员方法，在定义时假定声明期间指定的调用约定。 给定此类定义：
 
@@ -54,7 +54,7 @@ void CMyClass::mymethod() { return; }
 void __cdecl CMyClass::mymethod() { return; }
 ```
 
-为了与早期版本兼容， **cdecl**和 **_cdecl**是 **__cdecl**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
+为了与早期版本兼容 **，cdecl**和 **_cdecl**是 **__cdecl**的同义词，除非指定编译器选项[/Za\(禁用语言扩展）。](../build/reference/za-ze-disable-language-extensions.md)
 
 ## <a name="example"></a>示例
 
@@ -70,4 +70,4 @@ typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags
 ## <a name="see-also"></a>另请参阅
 
 [自变量传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)<br/>
-[关键字](../cpp/keywords-cpp.md)
+[Keywords](../cpp/keywords-cpp.md)

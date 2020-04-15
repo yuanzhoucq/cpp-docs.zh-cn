@@ -44,16 +44,16 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1f14657350c08679868299ce4878cca2ae10eec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373225"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager 类
 
-维护的集合[CUserTool 类](../../mfc/reference/cusertool-class.md)应用程序中的对象。 用户工具是运行外部应用程序的菜单项。 `CUserToolsManager` 对象使用户或开发人员能够将新的用户工具添加到应用程序中。 它支持与用户工具关联的命令的执行，并将与用户工具相关的信息保存到 Windows 注册表中。
+维护应用程序中[CUserTool 类](../../mfc/reference/cusertool-class.md)对象的集合。 用户工具是运行外部应用程序的菜单项。 `CUserToolsManager` 对象使用户或开发人员能够将新的用户工具添加到应用程序中。 它支持与用户工具关联的命令的执行，并将与用户工具相关的信息保存到 Windows 注册表中。
 
 ## <a name="syntax"></a>语法
 
@@ -65,50 +65,50 @@ class CUserToolsManager : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|构造一个 `CUserToolsManager`。|
+|[用户工具管理器：：用户工具管理器](#cusertoolsmanager)|构造一个 `CUserToolsManager`。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CUserToolsManager::CreateNewTool](#createnewtool)|创建一个新的用户工具。|
-|[CUserToolsManager::FindTool](#findtool)|返回指向`CMFCUserTool`与指定的命令 ID 相关联的对象|
-|[CUserToolsManager::GetArgumentsMenuID](#getargumentsmenuid)|返回与之关联的资源 ID**自变量**菜单上的**工具**选项卡**自定义**对话框。|
-|[CUserToolsManager::GetDefExt](#getdefext)|返回默认扩展插件**文件打开**对话框的 ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) 中使用**命令**字段**工具**选项卡**自定义**对话框。|
-|[CUserToolsManager::GetFilter](#getfilter)|返回的文件筛选器**文件打开**对话框的 ( [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)) 中使用**命令**字段**工具**选项卡**自定义**对话框。|
-|[CUserToolsManager::GetInitialDirMenuID](#getinitialdirmenuid)|返回与之关联的资源 ID**初始目录**菜单上的**工具**选项卡**自定义**对话框。|
-|[CUserToolsManager::GetMaxTools](#getmaxtools)|在应用程序中返回可以分配的用户工具的最大数目。|
-|[CUserToolsManager::GetToolsEntryCmd](#gettoolsentrycmd)|返回用户工具的菜单项占位符的命令 ID。|
-|[CUserToolsManager::GetUserTools](#getusertools)|返回到用户工具列表的引用。|
-|[CUserToolsManager::InvokeTool](#invoketool)|执行与具有指定的命令 id。 该用户工具相关联的应用程序|
-|[CUserToolsManager::IsUserToolCmd](#isusertoolcmd)|确定是否与用户工具相关联的命令 ID。|
-|[CUserToolsManager::LoadState](#loadstate)|从 Windows 注册表加载用户工具相关的信息。|
-|[CUserToolsManager::MoveToolDown](#movetooldown)|用户工具列表中向下移动指定的用户工具。|
-|[CUserToolsManager::MoveToolUp](#movetoolup)|在用户工具列表中向上移动指定的用户工具。|
-|[CUserToolsManager::RemoveTool](#removetool)|从应用程序中删除指定的用户工具。|
-|[CUserToolsManager::SaveState](#savestate)|在 Windows 注册表中存储有关用户工具的信息。|
-|[CUserToolsManager::SetDefExt](#setdefext)|指定默认扩展插件的**文件打开**对话框的 ( [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)) 中使用**命令**字段**工具**选项卡**自定义**对话框。|
-|[CUserToolsManager::SetFilter](#setfilter)|指定文件的筛选器**文件打开**对话框的 ( [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)) 中使用**命令**字段**工具**选项卡**自定义**对话框。|
+|[用户工具管理器：：创建新工具](#createnewtool)|创建新的用户工具。|
+|[用户工具管理器：：查找工具](#findtool)|返回指向与指定命令`CMFCUserTool`ID 关联的对象的指针。|
+|[配置工具管理器：：获取参数菜单ID](#getargumentsmenuid)|返回与 **"自定义"** 对话框"**工具**"选项卡上的 **"参数"** 菜单关联的资源 ID。|
+|[用户工具管理器：：获取DefExt](#getdefext)|返回 **"文件打开**"对话框 （ [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)） 在 **"自定义**"对话框"**工具**"选项卡上的 **"命令**"字段中使用的默认扩展名。|
+|[用户工具管理器：：获取过滤器](#getfilter)|返回**文件打开**对话框 （ [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)） 在 **"自定义**"对话框"**工具"** 选项卡上的 **"命令**"字段中使用的文件筛选器。|
+|[配置工具管理器：：获取初始DirMenuID](#getinitialdirmenuid)|返回与 **"自定义"** 对话框"**工具**"选项卡上 **"初始目录"** 菜单关联的资源 ID。|
+|[用户工具管理器：：获取MaxTools](#getmaxtools)|返回可在应用程序中分配的最大用户工具数。|
+|[用户工具管理器：：获取工具入口 Cmd](#gettoolsentrycmd)|返回用户工具的菜单项占位符的命令 ID。|
+|[用户工具管理器：获取用户工具](#getusertools)|返回对用户工具列表的引用。|
+|[用户工具管理器：：调用工具](#invoketool)|执行与具有指定命令 ID 的用户工具关联的应用程序。|
+|[用户工具管理器：：用户工具Cmd](#isusertoolcmd)|确定命令 ID 是否与用户工具关联。|
+|[用户工具管理器：：加载状态](#loadstate)|从 Windows 注册表加载有关用户工具的信息。|
+|[用户工具管理器：移动工具向下](#movetooldown)|在用户工具列表中向下移动指定的用户工具。|
+|[用户工具管理器：移动工具](#movetoolup)|在用户工具列表中向上移动指定的用户工具。|
+|[用户工具管理器：：删除工具](#removetool)|从应用程序中删除指定的用户工具。|
+|[CUserTools 管理器：：保存状态](#savestate)|在 Windows 注册表中存储有关用户工具的信息。|
+|[用户工具管理器：：SetDefExt](#setdefext)|指定 **"文件打开**"对话框[（CFileDialog 类](../../mfc/reference/cfiledialog-class.md)） 在 **"自定义**"对话框"**工具**"选项卡上的 **"命令**"字段中使用的默认扩展名。|
+|[用户工具管理器：：设置筛选器](#setfilter)|指定**文件**打开对话框 （ [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)） 在 **"自定义**"对话框"**工具"** 选项卡上的 **"命令**"字段中使用的文件筛选器。|
 
 ## <a name="remarks"></a>备注
 
-若要将用户工具合并到你的应用程序，必须：
+要将用户工具合并到应用程序中，您必须：
 
-1. 保留的菜单项和用户工具菜单项关联的命令 ID。
+1. 为用户工具菜单条目保留菜单项和关联的命令 ID。
 
-2. 保留每个用户工具，用户可以在你的应用程序中定义的顺序的命令 ID。
+2. 为用户可以在应用程序中定义的每个用户工具保留顺序命令 ID。
 
-3. 调用[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)方法并提供以下参数： 菜单命令 ID、 第一个用户工具命令 ID 和最后一个用户工具的命令 id。
+3. 调用[CWinAppEx：启用UserTools](../../mfc/reference/cwinappex-class.md#enableusertools)方法并提供以下参数：菜单命令 ID、第一个用户工具命令 ID 和最后一个用户工具命令 ID。
 
-应该只有一个全局`CUserToolsManager`每个应用程序的对象。
+每个应用程序应只有一个`CUserToolsManager`全局对象。
 
-用户工具的示例，请参阅 VisualStudioDemo 示例项目。
+有关用户工具的示例，请参阅 VisualStudioDemo 示例项目。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何检索到的引用`CUserToolsManager`对象以及如何创建新的用户工具。 此代码片段属于[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何检索对`CUserToolsManager`对象的引用以及如何创建新的用户工具。 此代码段是[可视化工作室演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]
 
@@ -120,11 +120,11 @@ class CUserToolsManager : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxusertoolsmanager.h
+**标题：** afxuser工具管理器.h
 
-##  <a name="createnewtool"></a>  CUserToolsManager::CreateNewTool
+## <a name="cusertoolsmanagercreatenewtool"></a><a name="createnewtool"></a>用户工具管理器：：创建新工具
 
-创建一个新的用户工具。
+创建新的用户工具。
 
 ```
 CUserTool* CreateNewTool();
@@ -132,17 +132,17 @@ CUserTool* CreateNewTool();
 
 ### <a name="return-value"></a>返回值
 
-一个指向新创建的用户工具或如果用户工具数已超过最大值为 NULL。 返回的类型是传递到的类型相同`CWinAppEx::EnableUserTools`作为*pToolRTC*参数。
+指向新创建的用户工具的指针，如果用户工具数超过最大值，则指向 NULL。 返回的类型与传递给`CWinAppEx::EnableUserTools` *pToolRTC*参数的类型相同。
 
 ### <a name="remarks"></a>备注
 
-此方法调用中提供的范围内找到第一个可用的菜单命令 ID [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) ，并将用户工具分配此 id。
+此方法查找[CWinAppEx：：启用UserTools](../../mfc/reference/cwinappex-class.md#enableusertools)并在调用中提供的范围中提供的第一个可用菜单命令 ID，并分配此 ID 的用户工具。
 
-如果工具数已达到最大值，此方法失败。 当范围内的所有命令 Id 将都分配给用户工具时，将发生这种情况。 可以通过调用检索工具的最大数目[CUserToolsManager::GetMaxTools](#getmaxtools)。 可以通过调用获取到工具列表访问权限[CUserToolsManager::GetUserTools](#getusertools)方法。
+如果工具数已达到最大值，则该方法将失败。 当将范围内的所有命令指示指定给用户工具时，将发生这种情况。 您可以通过调用[CUserToolsManager 检索工具的最大数量：：GetMaxTools](#getmaxtools)。 您可以通过调用[CUserToolsManager：：：getUserTools](#getusertools)方法访问工具列表。
 
-##  <a name="cusertoolsmanager"></a>  CUserToolsManager::CUserToolsManager
+## <a name="cusertoolsmanagercusertoolsmanager"></a><a name="cusertoolsmanager"></a>用户工具管理器：：用户工具管理器
 
-构造一个 `CUserToolsManager`。 每个应用程序必须具有最多个用户工具管理器。
+构造一个 `CUserToolsManager`。 每个应用程序必须最多有一个用户工具管理器。
 
 ```
 CUserToolsManager();
@@ -159,30 +159,30 @@ CUserToolsManager(
 ### <a name="parameters"></a>参数
 
 *uiCmdToolsDummy*<br/>
-[in]无符号的整数，该框架作为占位符用于用户工具菜单的命令 ID。
+[在]框架用作用户工具菜单的命令 ID 的占位符的无符号整数。
 
 *uiCmdFirst*<br/>
-[in]第一个用户工具命令的命令 ID。
+[在]第一个用户工具命令的命令 ID。
 
 *uiCmdLast*<br/>
-[in]最后一个用户工具命令的命令 ID。
+[在]最后一个用户工具命令的命令 ID。
 
 *pToolRTC*<br/>
-[in]类的[CUserToolsManager::CreateNewTool](#createnewtool)创建。 通过使用此类，您可以使用的派生的类型[CUserTool 类](../../mfc/reference/cusertool-class.md)而不是默认实现。
+[在][CUserToolsManager：创建新工具](#createnewtool)创建的类。 通过使用此类，可以使用派生类型的[CUserTool 类](../../mfc/reference/cusertool-class.md)而不是默认实现。
 
 *uArgMenuID*<br/>
-[in]参数弹出菜单的菜单资源 ID。
+[在]参数弹出菜单的菜单资源 ID。
 
-*uInitDirMenuID*<br/>
-[in]初始目录弹出菜单的菜单资源 ID。
+*乌伊尼特迪尔梅尼*<br/>
+[在]初始目录弹出菜单的菜单资源 ID。
 
 ### <a name="remarks"></a>备注
 
-请勿调用此构造函数。 改为调用[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)启用的用户工具，并调用[CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager)若要获取的指针`CUserToolsManager`。 有关详细信息，请参阅[用户定义的工具](../../mfc/user-defined-tools.md)。
+不要调用此构造函数。 相反，调用[CWinAppEx：：启用用户工具](../../mfc/reference/cwinappex-class.md#enableusertools)以启用用户工具，并调用[CWinAppEx：：getUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager)以获取指向`CUserToolsManager`的指针。 有关详细信息，请参阅[用户定义的工具](../../mfc/user-defined-tools.md)。
 
-##  <a name="findtool"></a>  CUserToolsManager::FindTool
+## <a name="cusertoolsmanagerfindtool"></a><a name="findtool"></a>用户工具管理器：：查找工具
 
-返回指向[CUserTool 类](../../mfc/reference/cusertool-class.md)与指定的命令 ID 相关联的对象
+返回指向与指定命令 ID 关联的[CUserTool 类](../../mfc/reference/cusertool-class.md)对象的指针。
 
 ```
 CUserTool* FindTool(UINT uiCmdId) const;
@@ -190,20 +190,20 @@ CUserTool* FindTool(UINT uiCmdId) const;
 
 ### <a name="parameters"></a>参数
 
-*uiCmdId*<br/>
-[in]菜单命令标识符。
+*乌伊CmDId*<br/>
+[在]菜单命令标识符。
 
 ### <a name="return-value"></a>返回值
 
-一个指向[CUserTool 类](../../mfc/reference/cusertool-class.md)或`CUserTool`-如果派生的对象成功; 否则为 NULL。
+指向[CUserTool 类](../../mfc/reference/cusertool-class.md)或`CUserTool`派生对象的指针（如果成功）;否则 NULL。
 
 ### <a name="remarks"></a>备注
 
-当`FindTool`是成功，则返回的类型为的类型相同*pToolRTC*参数[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。
+成功`FindTool`后，返回的类型与 CWinAppEx*的 pToolRTC*参数类型相同[：：启用用户工具](../../mfc/reference/cwinappex-class.md#enableusertools)。
 
-##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID
+## <a name="cusertoolsmanagergetargumentsmenuid"></a><a name="getargumentsmenuid"></a>配置工具管理器：：获取参数菜单ID
 
-返回与之关联的资源 ID**自变量**菜单上的**工具**选项卡**自定义**对话框。
+返回与 **"自定义"** 对话框"**工具**"选项卡上的 **"参数"** 菜单关联的资源 ID。
 
 ```
 UINT GetArgumentsMenuID() const;
@@ -215,11 +215,11 @@ UINT GetArgumentsMenuID() const;
 
 ### <a name="remarks"></a>备注
 
-*UArgMenuID*的参数[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)指定的资源 ID。
+[CWinAppEx 的](../../mfc/reference/cwinappex-class.md#enableusertools) *uArgMenuID*参数：启用用户工具指定资源的 ID。
 
-##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt
+## <a name="cusertoolsmanagergetdefext"></a><a name="getdefext"></a>用户工具管理器：：获取DefExt
 
-返回默认扩展插件**文件打开**对话框的 ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) 中使用**命令**字段**工具**选项卡**自定义**对话框。
+返回 **"文件打开**"对话框 （ [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)） 在 **"自定义**"对话框"**工具**"选项卡上的 **"命令**"字段中使用的默认扩展名。
 
 ```
 const CString& GetDefExt() const;
@@ -227,11 +227,11 @@ const CString& GetDefExt() const;
 
 ### <a name="return-value"></a>返回值
 
-对引用`CString`包含扩展的对象。
+对包含扩展`CString`的对象的引用。
 
-##  <a name="getfilter"></a>  CUserToolsManager::GetFilter
+## <a name="cusertoolsmanagergetfilter"></a><a name="getfilter"></a>用户工具管理器：：获取过滤器
 
-返回的文件筛选器**文件打开**对话框的 ( [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)) 中使用**命令**字段**工具**选项卡**自定义**对话框。
+返回**文件打开**对话框 （ [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)） 在 **"自定义**"对话框"**工具"** 选项卡上的 **"命令**"字段中使用的文件筛选器。
 
 ```
 const CString& GetFilter() const;
@@ -239,11 +239,11 @@ const CString& GetFilter() const;
 
 ### <a name="return-value"></a>返回值
 
-对引用`CString`对象，其中包含筛选器。
+对包含筛选器`CString`的对象的引用。
 
-##  <a name="getinitialdirmenuid"></a>  CUserToolsManager::GetInitialDirMenuID
+## <a name="cusertoolsmanagergetinitialdirmenuid"></a><a name="getinitialdirmenuid"></a>配置工具管理器：：获取初始DirMenuID
 
-返回与之关联的资源 ID**初始目录**菜单上的**工具**选项卡**自定义**对话框。
+返回与 **"自定义"** 对话框"**工具**"选项卡上 **"初始目录"** 菜单关联的资源 ID。
 
 ```
 UINT GetInitialDirMenuID() const;
@@ -255,11 +255,11 @@ UINT GetInitialDirMenuID() const;
 
 ### <a name="remarks"></a>备注
 
-中指定返回的 ID *uInitDirMenuID*的参数[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。
+返回的 ID 在 CWinAppEx 的*uInitDirMenuID*参数中指定[：启用用户工具](../../mfc/reference/cwinappex-class.md#enableusertools)。
 
-##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools
+## <a name="cusertoolsmanagergetmaxtools"></a><a name="getmaxtools"></a>用户工具管理器：：获取MaxTools
 
-在应用程序中返回可以分配的用户工具的最大数目。
+返回可在应用程序中分配的最大用户工具数。
 
 ```
 int GetMaxTools() const;
@@ -267,13 +267,13 @@ int GetMaxTools() const;
 
 ### <a name="return-value"></a>返回值
 
-用户工具可分配最大数目。
+可分配的最大用户工具数。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以检索工具，可以在应用程序中分配的最大数目。 此数字是从范围中的 Id 号*uiCmdFirst*通过*uiCmdLast*参数传递给[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。
+调用此方法以检索可在应用程序中分配的最大工具数。 此数字是从*uiCmdFirst*到您传递给[CWinAppEx](../../mfc/reference/cwinappex-class.md#enableusertools)的*uiCmdLast*参数范围内的 ID 数：启用用户工具 。
 
-##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd
+## <a name="cusertoolsmanagergettoolsentrycmd"></a><a name="gettoolsentrycmd"></a>用户工具管理器：：获取工具入口 Cmd
 
 返回用户工具的菜单项占位符的命令 ID。
 
@@ -287,11 +287,11 @@ UINT GetToolsEntryCmd() const;
 
 ### <a name="remarks"></a>备注
 
-若要启用用户工具，请调用[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。 *UiCmdToolsDummy*参数指定工具条目命令的命令 ID。 此方法返回工具项的命令 id。 在菜单中将使用该 ID，无论它时被替换的用户工具列表会显示的菜单。
+要启用用户工具，请致电[CWinAppEx：：启用用户工具](../../mfc/reference/cwinappex-class.md#enableusertools)。 *uiCmdToolsDummy*参数指定工具输入命令的命令 ID。 此方法返回工具条目命令 ID。 无论该 ID 在菜单中使用何处，当菜单出现时，该 ID 将被用户工具列表替换。
 
-##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools
+## <a name="cusertoolsmanagergetusertools"></a><a name="getusertools"></a>用户工具管理器：获取用户工具
 
-返回到用户工具列表的引用。
+返回对用户工具列表的引用。
 
 ```
 const CObList& GetUserTools() const;
@@ -299,15 +299,15 @@ const CObList& GetUserTools() const;
 
 ### <a name="return-value"></a>返回值
 
-常量引用[CObList 类](../../mfc/reference/coblist-class.md)对象，其中包含的用户工具列表。
+对包含用户工具列表的[CObList 类](../../mfc/reference/coblist-class.md)对象的引用。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以检索用户的列表工具[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)对象维护。 每个用户工具由类型的对象表示[CUserTool 类](../../mfc/reference/cusertool-class.md)派生的类型或`CUserTool`。 指定的类型*pToolRTC*参数调用时[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)若要启用用户工具。
+调用此方法以检索[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)对象维护的用户工具列表。 每个用户工具由[CUserTool 类](../../mfc/reference/cusertool-class.md)类型的对象或派生自`CUserTool`的类型表示。 当您调用[CWinAppEx：：启用用户工具启用用户工具](../../mfc/reference/cwinappex-class.md#enableusertools)时，该类型由*pToolRTC*参数指定。
 
-##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool
+## <a name="cusertoolsmanagerinvoketool"></a><a name="invoketool"></a>用户工具管理器：：调用工具
 
-执行与具有指定的命令 id。 该用户工具相关联的应用程序
+执行与具有指定命令 ID 的用户工具关联的应用程序。
 
 ```
 BOOL InvokeTool(UINT uiCmdId);
@@ -315,20 +315,20 @@ BOOL InvokeTool(UINT uiCmdId);
 
 ### <a name="parameters"></a>参数
 
-*uiCmdId*<br/>
-[in]与用户工具关联的菜单命令 ID。
+*乌伊CmDId*<br/>
+[在]与用户工具关联的菜单命令 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果与用户工具关联的命令执行成功，则非零值否则为 0。
+如果成功执行与用户工具关联的命令，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以执行与用户关联的应用程序工具，它具有由指定的命令 ID *uiCmdId*。
+调用此方法以执行与具有*uiCmdId*指定的命令 ID 的用户工具关联的应用程序。
 
-##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd
+## <a name="cusertoolsmanagerisusertoolcmd"></a><a name="isusertoolcmd"></a>用户工具管理器：：用户工具Cmd
 
-确定是否与用户工具相关联的命令 ID。
+确定命令 ID 是否与用户工具关联。
 
 ```
 BOOL IsUserToolCmd(UINT uiCmdId) const;
@@ -336,20 +336,20 @@ BOOL IsUserToolCmd(UINT uiCmdId) const;
 
 ### <a name="parameters"></a>参数
 
-*uiCmdId*<br/>
-[in]菜单项的命令 ID。
+*乌伊CmDId*<br/>
+[在]菜单项的命令 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果给定的命令 ID 的用户工具; 与相关联，非零值否则为 0。
+如果给定的命令 ID 与用户工具关联，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-此方法检查中的命令 ID 范围是否为给定的命令 ID。 在调用时指定的范围[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)若要启用用户工具。
+此方法检查给定的命令 ID 是否位于命令 ID 范围内。 当您调用[CWinAppEx 时，您可以指定范围：启用用户工具](../../mfc/reference/cwinappex-class.md#enableusertools)以启用用户工具。
 
-##  <a name="loadstate"></a>  CUserToolsManager::LoadState
+## <a name="cusertoolsmanagerloadstate"></a><a name="loadstate"></a>用户工具管理器：：加载状态
 
-从 Windows 注册表加载用户工具相关的信息。
+从 Windows 注册表加载有关用户工具的信息。
 
 ```
 BOOL LoadState(LPCTSTR lpszProfileName=NULL);
@@ -357,22 +357,22 @@ BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 
 ### <a name="parameters"></a>参数
 
-*lpszProfileName*<br/>
-[in]Windows 注册表项的路径。
+*lpsz配置文件名称*<br/>
+[在]Windows 注册表项的路径。
 
 ### <a name="return-value"></a>返回值
 
-如果状态加载成功，则非零值否则为 0。
+如果状态已成功加载，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-此方法加载的状态`CUserToolsManager`Windows 注册表中的对象。
+此方法从 Windows 注册表加载`CUserToolsManager`对象的状态。
 
-通常情况下，你不执行操作直接调用此方法。 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)会调用该工作区初始化过程的一部分。
+通常，您不会直接调用此方法。 [CWinAppEx：LoadState](../../mfc/reference/cwinappex-class.md#loadstate)将其称为工作区初始化过程的一部分。
 
-##  <a name="movetooldown"></a>  CUserToolsManager::MoveToolDown
+## <a name="cusertoolsmanagermovetooldown"></a><a name="movetooldown"></a>用户工具管理器：移动工具向下
 
-用户工具列表中向下移动指定的用户工具。
+在用户工具列表中向下移动指定的用户工具。
 
 ```
 BOOL MoveToolDown(CUserTool* pTool);
@@ -381,17 +381,17 @@ BOOL MoveToolDown(CUserTool* pTool);
 ### <a name="parameters"></a>参数
 
 *pTool*<br/>
-[in]指定要移动的用户工具。
+[在]指定要移动的用户工具。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则向下移动用户工具，非零值否则为 0。
+如果用户工具已成功向下移动，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果此方法失败该工具的*pTool*指定不在内部列表或如果该工具是在列表中的最后。
+如果*pTool*指定的工具不在内部列表中，或者该工具在列表中是最后一个，则该方法将失败。
 
-##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp
+## <a name="cusertoolsmanagermovetoolup"></a><a name="movetoolup"></a>用户工具管理器：移动工具
 
 在用户工具列表中向上移动指定的用户工具。
 
@@ -402,17 +402,17 @@ BOOL MoveToolUp(CUserTool* pTool);
 ### <a name="parameters"></a>参数
 
 *pTool*<br/>
-[in]指定要移动的用户工具。
+[在]指定要移动的用户工具。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则向上移动用户工具，非零值否则为 0。
+如果用户工具成功向上移动，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果此方法失败该工具的*pTool*参数指定的内部列表中不是或者如果该工具是第一个工具中的项列表。
+如果*pTool*参数指定的工具不在内部列表中，或者该工具是列表中的第一个工具项，则该方法将失败。
 
-##  <a name="removetool"></a>  CUserToolsManager::RemoveTool
+## <a name="cusertoolsmanagerremovetool"></a><a name="removetool"></a>用户工具管理器：：删除工具
 
 从应用程序中删除指定的用户工具。
 
@@ -423,17 +423,17 @@ BOOL RemoveTool(CUserTool* pTool);
 ### <a name="parameters"></a>参数
 
 *pTool*<br/>
-[in、 out]一个指向要删除的用户工具。
+[进出]指向要删除的用户工具的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功移除了该工具，则为 TRUE。 否则为 FALSE。
+如果工具已成功删除，则为 TRUE。 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-如果成功移除了该工具，则此方法删除*pTool*。
+如果该工具已成功删除，则此方法将删除*pTool*。
 
-##  <a name="savestate"></a>  CUserToolsManager::SaveState
+## <a name="cusertoolsmanagersavestate"></a><a name="savestate"></a>CUserTools 管理器：：保存状态
 
 在 Windows 注册表中存储有关用户工具的信息。
 
@@ -443,22 +443,22 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 
 ### <a name="parameters"></a>参数
 
-*lpszProfileName*<br/>
-[in]对 Windows 注册表项路径。
+*lpsz配置文件名称*<br/>
+[在]Windows 注册表项的路径。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则保存状态的非零值否则为 0。
+如果成功保存状态，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-该方法将存储的当前状态`CUserToolsManager`Windows 注册表中的对象。
+该方法在 Windows 注册表中存储`CUserToolsManager`对象的当前状态。
 
-通常情况下，不需要直接调用此方法[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)自动作为应用程序的工作区序列化过程的一部分调用。
+通常，您不需要直接调用此方法[CWinAppEx：：SaveState](../../mfc/reference/cwinappex-class.md#savestate)自动调用它作为应用程序的工作区序列化过程的一部分。
 
-##  <a name="setdefext"></a>  CUserToolsManager::SetDefExt
+## <a name="cusertoolsmanagersetdefext"></a><a name="setdefext"></a>用户工具管理器：：SetDefExt
 
-指定默认扩展插件的**文件打开**对话框的 ( [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)) 中使用**命令**字段**工具**选项卡**自定义**对话框。
+指定 **"文件打开**"对话框[（CFileDialog 类](../../mfc/reference/cfiledialog-class.md)） 在 **"自定义**"对话框"**工具**"选项卡上的 **"命令**"字段中使用的默认扩展名。
 
 ```
 void SetDefExt(const CString& strDefExt);
@@ -466,16 +466,16 @@ void SetDefExt(const CString& strDefExt);
 
 ### <a name="parameters"></a>参数
 
-*strDefExt*<br/>
-[in]包含默认文件扩展名的文本字符串。
+*斯特德夫克斯*<br/>
+[在]包含默认文件名扩展名的文本字符串。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以指定在默认文件扩展名**文件打开**对话框中，当用户选择要与用户工具相关联的应用程序时显示。 默认值为"exe"。
+调用此方法以在 **"文件打开"** 对话框中指定默认文件名扩展名，当用户选择要与用户工具关联的应用程序时将显示该对话框。 默认值为"exe"。
 
-##  <a name="setfilter"></a>  CUserToolsManager::SetFilter
+## <a name="cusertoolsmanagersetfilter"></a><a name="setfilter"></a>用户工具管理器：：设置筛选器
 
-指定文件的筛选器**文件打开**对话框的 ( [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)) 中使用**命令**字段**工具**选项卡**自定义**对话框。
+指定**文件**打开对话框 （ [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)） 在 **"自定义**"对话框"**工具"** 选项卡上的 **"命令**"字段中使用的文件筛选器。
 
 ```
 void SetFilter(const CString& strFilter);
@@ -483,12 +483,12 @@ void SetFilter(const CString& strFilter);
 
 ### <a name="parameters"></a>参数
 
-*strFilter*<br/>
-[in]指定的筛选器。
+*斯特过滤器*<br/>
+[在]指定筛选器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)<br/>
-[CUserTool 类](../../mfc/reference/cusertool-class.md)
+[用户工具类](../../mfc/reference/cusertool-class.md)

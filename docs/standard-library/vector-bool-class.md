@@ -11,16 +11,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 4043b46bf2f93b362de029577fe9ac3c11dbcaa2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6c67e3d9ba1b33cb99a7d3afb2522f443003fa38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376086"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 类
 
-对于**bool**类型的元素，`vector<bool>` 类是[向量](../standard-library/vector-class.md)的部分专用化。 它具有用于专用化的基础类型的分配器，此分配器通过每个位存储一个**布尔**值来提供空间优化。
+该`vector<bool>`类是**bool**类型元素[矢量](../standard-library/vector-class.md)的部分专业化化。 它具有专门化使用的基础类型的分配器，通过每位存储一个**bool**值来提供空间优化。
 
 ## <a name="syntax"></a>语法
 
@@ -33,22 +33,22 @@ class vector<bool, Allocator>
 
 除了本文中说明的差异以外，此类模板专用化的行为类似于矢量。
 
-处理**bool**类型的操作与容器存储中的值相对应。 `allocator_traits::construct` 不用于构造这些值。
+处理**布尔**类型的操作对应于容器存储中的值。 `allocator_traits::construct` 不用于构造这些值。
 
 ### <a name="typedefs"></a>Typedef
 
 |类型名称|说明|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的常量指针。|
-|[const_reference](#const_reference)|**布尔**值的 typedef。 初始化之后，它不观察对原始值的更新。|
-|[指针](#pointer)|`iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的指针。|
+|[const_reference](#const_reference)|**布尔**的 typedef。 初始化之后，它不观察对原始值的更新。|
+|[指针 (pointer)](#pointer)|`iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的指针。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
 |成员函数|说明|
 |-|-|
 |[flip](#flip)|反转 `vector<bool>` 中的所有位。|
-|[swap](#swap)|交换两个 `vector<bool>` 的元素。|
+|[交换](#swap)|交换两个 `vector<bool>` 的元素。|
 |[operator&#91;&#93;](#op_at)|返回对指定位置的 `vector<bool>` 元素的模拟引用。|
 |`at`|与非专用的 [vector](../standard-library/vector-class.md)::at 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#reference_class)。 另请参阅 [operator[]](#op_at)。|
 |`front`|与非专用的 [vector](../standard-library/vector-class.md)::front 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#reference_class)。 另请参阅 [operator[]](#op_at)。|
@@ -62,11 +62,11 @@ class vector<bool, Allocator>
 
 ## <a name="requirements"></a>要求
 
-**标头**：\<vector>
+**标题** \<： 矢量>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="const_pointer"></a>vector\<bool>::const_pointer
+## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a>矢\<量布尔>：：const_pointer
 
 该类型描述可作为常量指针的对象，该指针指向 `vector<bool>` 对象所包含序列中的布尔元素。
 
@@ -74,7 +74,7 @@ class vector<bool, Allocator>
 typedef const_iterator const_pointer;
 ```
 
-## <a name="const_reference"></a>vector\<bool>::const_reference
+## <a name="vectorboolconst_reference"></a><a name="const_reference"></a>矢\<量布尔>：：const_reference
 
 该类型描述可作为常量引用的对象，它引用 `vector<bool>` 对象所包含序列中的布尔元素。
 
@@ -86,7 +86,7 @@ typedef bool const_reference;
 
 有关详细信息和代码示例，请参阅 [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)。
 
-## <a name="flip"></a>vector\<bool>::flip
+## <a name="vectorboolflip"></a><a name="flip"></a>矢\<量布尔>：翻转
 
 反转 `vector<bool>` 中的所有位。
 
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-## <a name="op_at"></a>vector\<bool>::operator[]
+## <a name="vectorbooloperator"></a><a name="op_at"></a>矢\<量布尔>：：运算符*
 
 返回对指定位置的 `vector<bool>` 元素的模拟引用。
 
@@ -138,7 +138,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |参数|说明|
 |-|-|
-|Pos|`vector<bool>` 元素的位置。|
+|*Pos*|`vector<bool>` 元素的位置。|
 
 ### <a name="return-value"></a>返回值
 
@@ -148,11 +148,11 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>备注
 
-如果使用 _ITERATOR_DEBUG_LEVEL 集进行编译，则当你尝试访问矢量边界之外的元素时，将发生运行时错误。  有关更多信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+如果使用_ITERATOR_DEBUG_LEVEL集进行编译，则如果尝试访问向量边界外的元素，则会发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>示例
 
-此代码示例演示如何正确使用 `vector<bool>::operator[]` 和两个常见编码错误（注释掉）。这些错误会导致错误，因为无法获取 `vector<bool>::operator[]` 返回 `vector<bool>::reference` 对象的地址。
+此代码示例显示了 正确使用`vector<bool>::operator[]`和两个常见的编码错误，这些错误被注释掉。这些错误会导致错误，因为无法获取`vector<bool>::reference``vector<bool>::operator[]`返回的对象的地址。
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="pointer"></a>vector\<bool>::pointer
+## <a name="vectorboolpointer"></a><a name="pointer"></a>矢\<量布尔>：:pointer
 
 一种类型，用于描述一个对象来充当指针，以便指向 `vector<bool>` 对象所包含序列的布尔元素。
 
@@ -189,7 +189,7 @@ int main()
 typedef iterator pointer;
 ```
 
-## <a name="reference_class"></a>vector\<bool>::reference Class
+## <a name="vectorboolreference-class"></a><a name="reference_class"></a>矢\<量布尔>：参考类
 
 `vector<bool>::reference` 类是 [vector\<bool> 类](../standard-library/vector-bool-class.md) 为模拟 `bool&` 而提供的一种代理类。
 
@@ -204,7 +204,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use
 ```
 
-###  <a name="reference_flip"></a>vector\<bool>::reference::flip
+### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a>矢\<量布尔>：：参考：：翻转
 
 反转引用的 [vector\<bool>](../standard-library/vector-bool-class.md) 元素的布尔值。
 
@@ -251,9 +251,9 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-###  <a name="reference_operator_bool"></a>vector\<bool>::reference::operator bool
+### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a>矢\<量布尔>：：参考：：运算符布尔
 
-提供从 `vector<bool>::reference` 到**布尔**值的隐式转换。
+提供从`vector<bool>::reference` **bool**的隐式转换。
 
 ```cpp
 operator bool() const;
@@ -267,7 +267,7 @@ vector\<bool> 对象元素的布尔值。
 
 `vector<bool>` 对象无法通过此运算符修改。
 
-###  <a name="reference_operator_eq"></a>vector\<bool>::reference::operator=
+### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a>矢\<量布尔>：：参考：：运算符*
 
 将布尔值赋给一个位，或将引用的元素所保存的值赋给一个位。
 
@@ -278,10 +278,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>参数
 
-*Right*\
+*对*\
 要将值赋给位的元素引用。
 
-*Val*\
+*瓦尔*\
 要赋给位的布尔值。
 
 #### <a name="example"></a>示例
@@ -355,9 +355,9 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="swap"></a>vector\<bool>::swap
+## <a name="vectorboolswap"></a><a name="swap"></a>矢\<量布尔>：交换
 
-通过使用代理类 `vector<bool>`vector[bool>::reference\< 交换布尔矢量 ( ](#reference_class)) 的两个元素的静态成员函数。
+通过使用代理类 [vector\<bool>::reference](#reference_class) 交换布尔矢量 ( `vector<bool>`) 的两个元素的静态成员函数。
 
 ```cpp
 static void swap(
@@ -367,11 +367,11 @@ static void swap(
 
 ### <a name="parameters"></a>参数
 
-*左*\
-要与*右侧*元素交换的元素。
+*离开*\
+要与*右*元素交换的元素。
 
-*Right*\
-要与*左侧*元素交换的元素。
+*对*\
+要与*左*元素交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -379,5 +379,5 @@ static void swap(
 
 ## <a name="see-also"></a>另请参阅
 
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

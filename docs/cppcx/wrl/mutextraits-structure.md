@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock method
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
-ms.openlocfilehash: 9bc4071e5699610a664cbf01ca3e7d36d7effc5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d4ba08ab1884e8584b0e98e931d2d63cdac5aec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371255"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 结构
 
-定义常见特征[互斥体](mutex-class.md)类。
+定义[Mutex](mutex-class.md)类的常见特征。
 
 ## <a name="syntax"></a>语法
 
@@ -30,9 +30,9 @@ struct MutexTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>公共方法
 
-名称                           | 描述
+名称                           | 说明
 ------------------------------ | ------------------------------------------------
-[MutexTraits::Unlock](#unlock) | 释放全权控制共享资源。
+[突变：：解锁](#unlock) | 释放共享资源的独占控制。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -42,13 +42,13 @@ struct MutexTraits : HANDLENullTraits;
 
 ## <a name="requirements"></a>要求
 
-**标头：** corewrappers.h
+**标题：** 核心包装.h
 
-**命名空间：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空间：** 微软：：WRL：包装：：处理特征
 
-## <a name="unlock"></a>Mutextraits:: Unlock 方法
+## <a name="mutextraitsunlock-method"></a><a name="unlock"></a>突变：：解锁方法
 
-释放全权控制共享资源。
+释放共享资源的独占控制。
 
 ```cpp
 inline static void Unlock(
@@ -58,5 +58,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-互斥体对象的句柄。
+*H*<br/>
+处理互斥体。

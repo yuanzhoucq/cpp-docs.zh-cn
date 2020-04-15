@@ -1,9 +1,11 @@
 ---
 title: _access_s、_waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171315"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349128"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
@@ -57,12 +60,12 @@ errno_t _waccess_s(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *路径*<br/>
 文件或目录路径。
 
-模式<br/>
+*模式*<br/>
 权限设置。
 
 ## <a name="return-value"></a>返回值
@@ -79,7 +82,7 @@ errno_t _waccess_s(
 
 ## <a name="remarks"></a>备注
 
-与文件一起使用时， **_access_s**函数确定指定的文件是否存在，并可按*mode*值的指定进行访问。 与目录一起使用时 **_access_s**仅确定指定的目录是否存在。 在 Windows 2000 和更高版本的操作系统中，所有目录都具有读取和写入访问权限。
+当与文件一起使用时 **，_access_s**函数确定指定的文件是否存在，并且可以按*模式*的值指定进行访问。 当与目录一起使用时 **，_access_s**仅确定指定的目录是否存在。 在 Windows 2000 和更高版本的操作系统中，所有目录都具有读取和写入访问权限。
 
 |模式值|文件检查内容|
 |----------------|---------------------|
@@ -88,11 +91,13 @@ errno_t _waccess_s(
 |04|读取权限。|
 |06|读取和写入权限。|
 
-读取或写入文件的权限不足以确保文件的打开功能。 例如，如果某个文件被另一个进程锁定，则它可能无法访问，即使 **_access_s**返回0。
+读取或写入文件的权限不足以确保文件的打开功能。 例如，如果文件被另一个进程锁定，即使 **_access_s**返回 0，它也可能无法访问。
 
-**_waccess_s**是 **_access_s**的宽字符版本，其中 **_waccess_s**的*path*参数是宽字符字符串。 否则， **_waccess_s**和 **_access_s**的行为相同。
+**_waccess_s**是 **_access_s**的宽字符版本 **，_waccess_s**的*路径*参数是宽字符字符串。 否则 **，_waccess_s**和 **_access_s**行为相同。
 
-这些函数验证其参数。 如果*path*为 NULL 或*模式*未指定有效模式，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。
+这些函数验证其参数。 如果*路径*为 NULL 或*模式*未指定有效模式，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,7 +114,7 @@ errno_t _waccess_s(
 
 ## <a name="example"></a>示例
 
-此示例使用 **_access_s**来检查名为 crt_access_s 的文件，以查看其是否存在以及是否允许写入。
+此示例使用 **_access_s**检查名为 crt_access_s.c 的文件以查看是否存在，以及是否允许写入。
 
 ```C
 // crt_access_s.c

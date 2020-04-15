@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e96106dcd6f496c6cc99c9d72d86052547b6d06b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424451"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376470"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 类
 
@@ -43,30 +43,30 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 |名称|说明|
 |----------|-----------------|
-|[CDataPathProperty：： CDataPathProperty](#cdatapathproperty)|构造 `CDataPathProperty` 对象。|
+|[CDataPath 属性：CDataPath 属性](#cdatapathproperty)|构造 `CDataPathProperty` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[CDataPathProperty：： GetControl](#getcontrol)|检索与 `CDataPathProperty` 对象关联的异步 OLE 控件。|
-|[CDataPathProperty：： GetPath](#getpath)|检索属性的路径名。|
-|[CDataPathProperty：： Open](#open)|开始加载关联的 ActiveX （OLE）控件的异步属性。|
-|[CDataPathProperty：： ResetData](#resetdata)|调用 `CAsyncMonikerFile::OnDataAvailable`，通知容器控件属性已更改。|
-|[CDataPathProperty：： SetControl](#setcontrol)|设置与属性关联的异步 ActiveX （OLE）控件。|
-|[CDataPathProperty：： SetPath](#setpath)|设置属性的路径名。|
+|[CDataPath 属性：获取控制](#getcontrol)|检索与`CDataPathProperty`对象关联的异步 OLE 控件。|
+|[CDataPath 属性：获取路径](#getpath)|检索属性的路径名称。|
+|[CDataPath 属性：：打开](#open)|启动关联 ActiveX （OLE） 控件的异步属性加载。|
+|[CDataPath 属性：：重置数据](#resetdata)|调用`CAsyncMonikerFile::OnDataAvailable`以通知容器控件属性已更改。|
+|[CDataPath 属性：设置控制](#setcontrol)|设置与属性关联的异步活动X （OLE） 控件。|
+|[CDataPath 属性：设置路径](#setpath)|设置属性的路径名称。|
 
 ## <a name="remarks"></a>备注
 
 可以在同步启动之后加载异步属性。
 
-类 `CDataPathProperty` 派生自 `CAysncMonikerFile`。 若要在 OLE 控件中实现异步属性，请从 `CDataPathProperty`中派生一个类，然后重写[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)。
+类`CDataPathProperty`派生自`CAysncMonikerFile`。 要在 OLE 控件中实现异步属性，请从`CDataPathProperty`派生类并重写[OnData可用](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)。
 
-有关如何在 Internet 应用程序中使用异步名字对象和 ActiveX 控件的详细信息，请参阅以下文章：
+有关如何在 Internet 应用程序中使用异步名字器和 ActiveX 控件的详细信息，请参阅以下文章：
 
-- [Internet 优先步骤： ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)
+- [互联网第一步：主动X控制](../../mfc/activex-controls-on-the-internet.md)
 
-- [Internet 优先步骤：异步名字对象](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [互联网第一步：异步月友](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -74,7 +74,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 [CFile](../../mfc/reference/cfile-class.md)
 
-[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
+[COleStream文件](../../mfc/reference/colestreamfile-class.md)
 
 [CMonikerFile](../../mfc/reference/cmonikerfile-class.md)
 
@@ -84,9 +84,9 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxctl。h
+**标题：** afxctl.h
 
-##  <a name="cdatapathproperty"></a>CDataPathProperty：： CDataPathProperty
+## <a name="cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a>CDataPath 属性：CDataPath 属性
 
 构造 `CDataPathProperty` 对象。
 
@@ -95,21 +95,21 @@ CDataPathProperty(COleControl* pControl = NULL);
 CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pControl*<br/>
-一个指针，指向要与此 `CDataPathProperty` 对象相关联的 OLE 控件对象。
+指向要与此`CDataPathProperty`对象关联的 OLE 控件对象的指针。
 
 *lpszPath*<br/>
-路径（可以是绝对的或相对的）用于创建引用属性的实际绝对位置的异步名字对象。 `CDataPathProperty` 使用 Url，而不是文件名。 如果需要文件的 `CDataPathProperty` 对象，请在路径前面添加 `file://`。
+路径可以是绝对的或相对的，用于创建引用属性的实际绝对位置的异步名字对象。 `CDataPathProperty`使用 URL，而不是文件名。 如果需要文件`CDataPathProperty`的对象，则准备`file://`路径。
 
 ### <a name="remarks"></a>备注
 
-*PControl*所指向的 `COleControl` 对象由派生类 `Open` 和检索使用。 如果*pControl*为 NULL，则应使用 `SetControl`设置与 `Open` 一起使用的控件。 如果*lpszPath*为 NULL，则可以通过 `Open` 传递路径，或使用 `SetPath`设置该路径。
+`COleControl` *pControl*指向的对象由`Open`派生类使用并检索。 如果*pControl*为 NULL，则应`Open`使用`SetControl`设置 与 使用的控件。 如果*lpszPath*为 NULL，则可以在路径中`Open`通过或设置它`SetPath`。
 
-##  <a name="getcontrol"></a>CDataPathProperty：： GetControl
+## <a name="cdatapathpropertygetcontrol"></a><a name="getcontrol"></a>CDataPath 属性：获取控制
 
-调用此成员函数以检索与 `CDataPathProperty` 对象关联的 `COleControl` 对象。
+调用此成员函数以检索与`COleControl``CDataPathProperty`对象关联的对象。
 
 ```
 COleControl* GetControl();
@@ -117,11 +117,11 @@ COleControl* GetControl();
 
 ### <a name="return-value"></a>返回值
 
-返回一个指针，该指针指向与 `CDataPathProperty` 对象关联的 OLE 控件。 如果未关联控件，则为 NULL。
+返回指向与对象关联的 OLE 控件的`CDataPathProperty`指针。 NULL（如果不是控件）是关联的。
 
-##  <a name="getpath"></a>CDataPathProperty：： GetPath
+## <a name="cdatapathpropertygetpath"></a><a name="getpath"></a>CDataPath 属性：获取路径
 
-调用此成员函数以检索路径，在构造 `CDataPathProperty` 对象时或在 `Open`中指定，或者在对 `SetPath` 成员函数的之前调用中指定时设置。
+调用此成员函数以检索路径、在构造`CDataPathProperty`对象时设置或在 中`Open`指定，或在 上一次对`SetPath`成员函数的调用中指定。
 
 ```
 CString GetPath() const;
@@ -129,11 +129,11 @@ CString GetPath() const;
 
 ### <a name="return-value"></a>返回值
 
-返回属性本身的路径名。 如果未指定路径，则可以为空。
+将路径名称返回到属性本身。 如果未指定路径，则可以为空。
 
-##  <a name="open"></a>CDataPathProperty：： Open
+## <a name="cdatapathpropertyopen"></a><a name="open"></a>CDataPath 属性：：打开
 
-调用此成员函数以启动加载关联控件的异步属性。
+调用此成员函数以启动关联控件的异步属性加载。
 
 ```
 virtual BOOL Open(
@@ -152,16 +152,16 @@ virtual BOOL Open(
 virtual BOOL Open(CFileException* pError = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pControl*<br/>
-一个指针，指向要与此 `CDataPathProperty` 对象相关联的 OLE 控件对象。
+指向要与此`CDataPathProperty`对象关联的 OLE 控件对象的指针。
 
 *pError*<br/>
-指向文件异常的指针。 出现错误时，将设置为原因。
+指向文件异常的指针。 如果出现错误，将设置为原因。
 
 *lpszPath*<br/>
-路径（可以是绝对的或相对的）用于创建引用属性的实际绝对位置的异步名字对象。 `CDataPathProperty` 使用 Url，而不是文件名。 如果需要文件的 `CDataPathProperty` 对象，请在路径前面添加 `file://`。
+路径可以是绝对的或相对的，用于创建引用属性的实际绝对位置的异步名字对象。 `CDataPathProperty`使用 URL，而不是文件名。 如果需要文件`CDataPathProperty`的对象，则准备`file://`路径。
 
 ### <a name="return-value"></a>返回值
 
@@ -169,17 +169,17 @@ virtual BOOL Open(CFileException* pError = NULL);
 
 ### <a name="remarks"></a>备注
 
-函数尝试从控件获取 `IBindHost` 接口。
+函数尝试从控件获取`IBindHost`接口。
 
-在不使用路径调用 `Open` 之前，必须设置该属性的路径的值。 这可以在构造对象时完成，也可以通过调用 `SetPath` 成员函数完成。
+在调用`Open`没有路径之前，必须设置属性路径的值。 这在构造对象时或调用`SetPath`成员函数可以完成。
 
-在不使用控件调用 `Open` 之前，ActiveX 控件（以前称为 OLE 控件）可以与对象相关联。 这可以在构造对象时完成，也可以通过调用 `SetControl`来完成。
+在没有控件`Open`的情况下调用之前，可以与对象关联 ActiveX 控件（以前称为 OLE 控件）。 这可以在构造对象时完成，也可以调用`SetControl`。
 
-`CDataPathProperty`中也提供了[CAsyncMonikerFile：： Open](../../mfc/reference/casyncmonikerfile-class.md#open)的所有重载。
+[CAsyncMonikerFile 的所有过载功能：：打开](../../mfc/reference/casyncmonikerfile-class.md#open)也可从`CDataPathProperty`获得。
 
-##  <a name="resetdata"></a>CDataPathProperty：： ResetData
+## <a name="cdatapathpropertyresetdata"></a><a name="resetdata"></a>CDataPath 属性：：重置数据
 
-调用此函数可获取 `CAsyncMonikerFile::OnDataAvailable` 以通知容器控件属性已更改，并且异步加载的所有信息将不再有用。
+调用此函数以通知`CAsyncMonikerFile::OnDataAvailable`容器控件属性已更改，并且以异步方式加载的所有信息不再有用。
 
 ```
 virtual void ResetData();
@@ -187,37 +187,37 @@ virtual void ResetData();
 
 ### <a name="remarks"></a>备注
 
-应重新启动打开。 对于不同默认值，派生类可以重写此函数。
+应重新启动打开。 派生类可以针对不同的默认值重写此函数。
 
-##  <a name="setcontrol"></a>CDataPathProperty：： SetControl
+## <a name="cdatapathpropertysetcontrol"></a><a name="setcontrol"></a>CDataPath 属性：设置控制
 
-调用此成员函数可将异步 OLE 控件与 `CDataPathProperty` 对象相关联。
+调用此成员函数将异步 OLE 控件与`CDataPathProperty`对象关联。
 
 ```
 void SetControl(COleControl* pControl);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pControl*<br/>
-一个指针，指向要与属性关联的异步 OLE 控件。
+指向要与属性关联的异步 OLE 控件的指针。
 
-##  <a name="setpath"></a>CDataPathProperty：： SetPath
+## <a name="cdatapathpropertysetpath"></a><a name="setpath"></a>CDataPath 属性：设置路径
 
-调用此成员函数以设置属性的路径名。
+调用此成员函数以设置属性的路径名称。
 
 ```
 void SetPath(LPCTSTR lpszPath);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpszPath*<br/>
-路径（可以是绝对的或相对的）到异步加载的属性。 `CDataPathProperty` 使用 Url，而不是文件名。 如果需要文件的 `CDataPathProperty` 对象，请在路径前面添加 `file://`。
+路径（可以是绝对的或相对的）与异步加载的属性。 `CDataPathProperty`使用 URL，而不是文件名。 如果需要文件`CDataPathProperty`的对象，则准备`file://`路径。
 
 ## <a name="see-also"></a>另请参阅
 
-[MFC 示例图像](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样本图像](../../overview/visual-cpp-samples.md)<br/>
 [CAsyncMonikerFile 类](../../mfc/reference/casyncmonikerfile-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CAsyncMonikerFile 类](../../mfc/reference/casyncmonikerfile-class.md)

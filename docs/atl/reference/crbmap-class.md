@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e367ccc875eedf63e4f47018598662af2dfcf7d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278119"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331394"
 ---
 # <a name="crbmap-class"></a>CRBMap 类
 
@@ -35,13 +35,13 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 #### <a name="parameters"></a>参数
 
 *K*<br/>
-Key 元素类型。
+键元素类型。
 
-*V*<br/>
+*五*<br/>
 值元素类型。
 
-*KTraits*<br/>
-用于复制或移动关键元素的代码。 请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)的更多详细信息。
+*克瓦次克*<br/>
+用于复制或移动关键元素的代码。 有关详细信息[，请参阅 CElementTraits 类](../../atl/reference/celementtraits-class.md)。
 
 *VTraits*<br/>
 用于复制或移动值元素的代码。
@@ -50,32 +50,32 @@ Key 元素类型。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CRBMap::CRBMap](#crbmap)|构造函数。|
-|[CRBMap::~CRBMap](#dtor)|析构函数。|
+|[CRBMap：CRBMap](#crbmap)|构造函数。|
+|[CRBMap：*CRBMap](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CRBMap::Lookup](#lookup)|调用此方法来查找键或值中的`CRBMap`对象。|
-|[CRBMap::RemoveKey](#removekey)|调用此方法来删除从元素`CRBMap`给定键的对象。|
-|[CRBMap::SetAt](#setat)|调用此方法要插入到映射的元素对。|
+|[CRBMap：：查找](#lookup)|调用此方法以查找对象中的`CRBMap`键或值。|
+|[CRBMap：：删除键](#removekey)|调用此方法以在给定键的情况下从`CRBMap`对象中删除元素。|
+|[CRBMap：setat](#setat)|调用此方法以将元素对插入到地图中。|
 
 ## <a name="remarks"></a>备注
 
-`CRBMap` 为管理键的元素和相关联的值的有序的数组任意给定类型的映射数组提供支持。 每个密钥可以有一个关联的值。 存储二进制树 （由一个键和值组成） 的元素的结构，使用[CRBMap::SetAt](#setat)方法。 可以使用删除元素[CRBMap::RemoveKey](#removekey)方法，删除具有给定密钥值的元素。
+`CRBMap`支持任何给定类型的映射数组，管理按顺序排列的关键元素数组及其关联值。 每个键只能有一个关联的值。 元素（由键和值组成）使用[CRBMap：setAt](#setat)方法存储在二进制树结构中。 可以使用[CRBMap：：removeKey](#removekey)方法删除元素，该方法使用给定的键值删除元素。
 
-遍历树伤害与方法如[CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition)， [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)，并[CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue)。
+使用[CRBTree：：获取头位置](../../atl/reference/crbtree-class.md#getheadposition)[、CRBTree：getNext](../../atl/reference/crbtree-class.md#getnext)和[CRBTree：getNextValue](../../atl/reference/crbtree-class.md#getnextvalue)等方法可以遍历树。
 
-*KTraits*并*VTraits*参数是包含要复制或移动元素所需的任何补充代码的特征类。
+*KTraits*和*VTraits*参数是包含复制或移动元素所需的任何补充代码的特征类。
 
-`CRBMap` 派生自[CRBTree](../../atl/reference/crbtree-class.md)，它可实现使用红黑算法的二进制树。 [CRBMultiMap](../../atl/reference/crbmultimap-class.md)允许多个值，每个键的变体。 它也派生自`CRBTree`，并因此共享许多功能与`CRBMap`。
+`CRBMap`派生自[CRBTree](../../atl/reference/crbtree-class.md)，它使用红黑算法实现二进制树。 [CRBMultiMap](../../atl/reference/crbmultimap-class.md)是一种变体，它允许每个键有多个值。 它也是从`CRBTree`派生的，因此与`CRBMap`共享许多功能。
 
-替代这两`CRBMap`并`CRBMultiMap`提供了[CAtlMap](../../atl/reference/catlmap-class.md)类。 如果只有少量的元素需要存储，请考虑使用[CSimpleMap](../../atl/reference/csimplemap-class.md)类。
+和 由`CRBMap``CRBMultiMap`[CAtlMap](../../atl/reference/catlmap-class.md)类提供的替代方法。 当只需要存储少量元素时，请考虑改用[CSimpleMap](../../atl/reference/csimplemap-class.md)类。
 
-有关更完整的各种集合类及其功能和性能特征的讨论，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+有关各种集合类及其特性和性能特征的更完整的讨论，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -85,9 +85,9 @@ Key 元素类型。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标题：** atlcoll.h
 
-##  <a name="crbmap"></a>  CRBMap::CRBMap
+## <a name="crbmapcrbmap"></a><a name="crbmap"></a>CRBMap：CRBMap
 
 构造函数。
 
@@ -102,15 +102,15 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>备注
 
-*NBlockSize*参数是分配新元素时所需的内存量的度量值。 更大的块大小降低对内存分配例程的调用，但使用更多的资源。 一次，默认值将为 10 个元素分配空间。
+*nBlockSize*参数是需要新元素时分配的内存量的度量。 较大的块大小减少了对内存分配例程的调用，但使用的资源更多。 默认值将一次为 10 个元素分配空间。
 
-请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。
+有关其他可用方法的信息，请参阅基类[CRBTree](../../atl/reference/crbtree-class.md)的文档。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMap::~CRBMap
+## <a name="crbmapcrbmap"></a><a name="dtor"></a>CRBMap：*CRBMap
 
 析构函数。
 
@@ -120,13 +120,13 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>备注
 
-释放任何已分配的资源。
+释放任何分配的资源。
 
-请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。
+有关其他可用方法的信息，请参阅基类[CRBTree](../../atl/reference/crbtree-class.md)的文档。
 
-##  <a name="lookup"></a>  CRBMap::Lookup
+## <a name="crbmaplookup"></a><a name="lookup"></a>CRBMap：：查找
 
-调用此方法来查找键或值中的`CRBMap`对象。
+调用此方法以查找对象中的`CRBMap`键或值。
 
 ```
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const throw(...);
@@ -136,27 +136,27 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
-指定用于标识要查找的元素的键。
+*关键*<br/>
+指定标识要备份的元素的键。
 
-*值*<br/>
-未接收到查找值的变量。
+*value*<br/>
+接收上值的变量。
 
 ### <a name="return-value"></a>返回值
 
-第一种形式的方法返回 true，如果找到键，否则为 false。 第二个和第三个窗体返回一个指向[CPair](crbtree-class.md#cpair_class)。
+如果找到键，则方法的第一种形式返回 true，否则为 false。 第二个和第三个窗体返回指向[CPair](crbtree-class.md#cpair_class)的指针。
 
 ### <a name="remarks"></a>备注
 
-请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。
+有关其他可用方法的信息，请参阅基类[CRBTree](../../atl/reference/crbtree-class.md)的文档。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]
 
-##  <a name="removekey"></a>  CRBMap::RemoveKey
+## <a name="crbmapremovekey"></a><a name="removekey"></a>CRBMap：：删除键
 
-调用此方法来删除从元素`CRBMap`给定键的对象。
+调用此方法以在给定键的情况下从`CRBMap`对象中删除元素。
 
 ```
 bool RemoveKey(KINARGTYPE key) throw();
@@ -164,24 +164,24 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
-你想要删除键相对应的元素对。
+*关键*<br/>
+与要删除的元素对对应的键。
 
 ### <a name="return-value"></a>返回值
 
-如果键是找到并移除，false 失败，则返回 true。
+如果找到并删除该键，则返回 true，在失败时为 false。
 
 ### <a name="remarks"></a>备注
 
-请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。
+有关其他可用方法的信息，请参阅基类[CRBTree](../../atl/reference/crbtree-class.md)的文档。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]
 
-##  <a name="setat"></a>  CRBMap::SetAt
+## <a name="crbmapsetat"></a><a name="setat"></a>CRBMap：setat
 
-调用此方法要插入到映射的元素对。
+调用此方法以将元素对插入到地图中。
 
 ```
 POSITION SetAt(
@@ -191,27 +191,27 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
-要添加到密钥值`CRBMap`对象。
+*关键*<br/>
+要添加到`CRBMap`对象的键值。
 
-*值*<br/>
-要添加到值`CRBMap`对象。
+*value*<br/>
+要添加到对象的值`CRBMap`。
 
 ### <a name="return-value"></a>返回值
 
-返回的位置中的键/值元素对`CRBMap`对象。
+返回键/值元素对在对象中`CRBMap`的位置。
 
 ### <a name="remarks"></a>备注
 
-`SetAt` 如果找到匹配项，将替换现有元素。 如果未找到该键，则创建新的键/值对。
+`SetAt`如果找到匹配的键，则替换现有元素。 如果未找到该键，则创建新的键/值对。
 
-请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。
+有关其他可用方法的信息，请参阅基类[CRBTree](../../atl/reference/crbtree-class.md)的文档。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRBTree 类](../../atl/reference/crbtree-class.md)<br/>
 [CAtlMap 类](../../atl/reference/catlmap-class.md)<br/>

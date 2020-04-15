@@ -1,10 +1,12 @@
 ---
 title: cbrt、cbrtf、cbrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cbrt
 - cbrtf
 - cbrtl
+- _o_cbrt
+- _o_cbrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939289"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333566"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -63,28 +66,30 @@ long double cbrtl(
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 浮点值
 
 ## <a name="return-value"></a>返回值
 
-**Cbrt**函数返回*x*的立方根。
+**cbrt**函数返回*x*的多维数据集根。
 
-|输入|SEH 异常|**_matherr**异常|
+|输入|SEH 异常|**_matherr**例外|
 |-----------|-------------------|--------------------------|
-|±∞、QNAN、IND|无|无|
+|• 、 QNAN、 IND|无|无|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用**float**或**long** **双精度**类型的**cbrt**的重载。 在 C 程序中， **cbrt**始终采用并返回**double**。
+由于C++允许重载，因此可以调用采用**浮点**或**长****双**类型进行过载的**cbrt。** 在 C 程序中 **，cbrt**始终获取并返回**双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**cbrt**、 **cbrtf**、 **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**， **cbrtf**， **cbrtl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -110,7 +115,7 @@ int main( void )
 The cube root of -64.64 is -4.013289
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [exp、expf、expl](exp-expf.md)<br/>

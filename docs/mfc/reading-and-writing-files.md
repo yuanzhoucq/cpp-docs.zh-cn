@@ -12,32 +12,32 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c4b2b21bbfa19fb73997f8475cfa9a4047dc0ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324254"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371802"
 ---
 # <a name="reading-and-writing-files"></a>读取和写入文件
 
-如果已经使用 C 运行时库文件处理函数，MFC 读取和写入操作将看起来很熟悉。 本指南介绍了直接从读取和写入直接向`CFile`对象。 您缓冲的可以也不要使用文件 I/O [CArchive](../mfc/reference/carchive-class.md)类。
+如果您已使用 C 运行时库文件处理函数，则 MFC 读取和写入操作将显得熟悉。 本文介绍直接从`CFile`对象读取和写入对象。 您还可以使用[CArchive](../mfc/reference/carchive-class.md)类执行缓冲文件 I/O。
 
-#### <a name="to-read-from-and-write-to-the-file"></a>若要从读取和写入文件
+#### <a name="to-read-from-and-write-to-the-file"></a>从中读取和写入文件
 
-1. 使用`Read`和`Write`成员函数来读取和写入数据文件中。
+1. 使用`Read`和`Write`成员函数读取和写入文件中的数据。
 
-     或
+     -或-
 
-1. `Seek`成员函数也是可用于移动到文件中的特定偏移量。
+1. 成员`Seek`函数还可用于移动到文件中的特定偏移量。
 
-`Read` 采用缓冲区和要读取的字节数的指针，并返回实际读取的字节数。 如果所需的字节数无法读取，因为文件尾 (EOF) 达到，则返回实际读取的字节数。 如果发生任何读取的错误时，将引发异常。 `Write` 类似于`Read`，而不是返回写入的字节数。 如果出现写入错误，包括不能写入指定的所有字节是引发异常。 如果您具有有效`CFile`对象，可以从其读取或写入到它，如下面的示例中所示：
+`Read`获取指向缓冲区的指针和要读取的字节数，并返回读取的字节的实际数。 如果由于达到文件结尾 （EOF） 而无法读取所需的字节数，则返回实际读取的字节数。 如果发生任何读取错误，将引发异常。 `Write`与 类似`Read`，但不会返回写入的字节数。 如果发生写入错误（包括未写入指定的所有字节），则引发异常。 如果您有一个有效的`CFile`对象，则可以从对象读取或写入它，如以下示例所示：
 
 [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]
 
 > [!NOTE]
->  您通常应执行中的输入/输出操作数**尝试**/**捕获**异常处理块。 有关详细信息，请参阅[异常处理 (MFC)](../mfc/exception-handling-in-mfc.md)。
+> 通常应在**尝试**/**捕获**异常处理块内执行输入/输出操作。 有关详细信息，请参阅[异常处理 （MFC）。](../mfc/exception-handling-in-mfc.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件](../mfc/files-in-mfc.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cd7dc8467d07f53b0c741f98743a471df6f6c944
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446196"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372101"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 类
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="example"></a>示例
 
@@ -214,11 +214,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<随机 >
+**标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution：:p常数_分布
 
 构造分布。
 
@@ -248,13 +248,13 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*firstI*\
+*第一I*\
 分布范围中第一个元素的输入迭代器。
 
 *lastI*\
 分布范围中最后一个元素的输入迭代器。
 
-*firstW*\
+*第一W*\
 权重范围中第一个元素的输入迭代器。
 
 *间隔*\
@@ -263,16 +263,16 @@ explicit piecewise_constant_distribution(const param_type& parm);
 *计数*\
 分布范围中的元素数。
 
-xmin\
+*xmin*\
 分布范围中的最低值。
 
-xmax\
+*xmax*\
 分布范围中的最高值。 必须大于 *xmin*。
 
-*weightfunc*\
-表示分布的概率函数的对象。 参数和返回值都必须可转换为**double**。
+*重量丰茨*\
+表示分布的概率函数的对象。 参数和返回值都必须转换为**双精度**值。
 
-*parm*\
+*帕尔姆*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -298,7 +298,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-使用从函数*weightfunc*生成的初始值设定项列表*间隔*和权重的间隔构造分布对象。
+构造一个分布对象，其间隔来自初始化器列表*间隔*和从函数*权重func*生成的权重。
 
 定义为以下内容的构造函数
 
@@ -308,7 +308,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-构造一个在 [`xmin,xmax`] 上均匀分布的*计数*间隔的分布对象，根据函数*weightfunc*分配每个间隔权重，而*weightfunc*必须接受一个参数并具有一个返回值，这两个参数都可转换为 `double`。 **前提条件：** `xmin < xmax`
+构造*计数间隔*均匀`xmin,xmax`分布在 * 上的分布对象，根据函数*权重func*分配每个间隔权重，*并且 weightfunc*必须接受一个参数并具有返回值，这两个参数都可转换为 。 `double` **先决条件：**`xmin < xmax`
 
 定义为以下内容的构造函数
 
@@ -316,9 +316,9 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-使用*parm*作为存储的参数结构，构造分布对象。
+使用*parm*作为存储的参数结构构造分布对象。
 
-## <a name="param_type"></a>  piecewise_constant_distribution::param_type
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution：:p阿拉姆型
 
 存储分布的所有参数。
 
@@ -344,11 +344,11 @@ struct param_type {
 
 ### <a name="remarks"></a>备注
 
-**前提条件：** `xmin < xmax`
+**先决条件：**`xmin < xmax`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)\
+[\<随机>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

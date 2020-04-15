@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373141"
 ---
 # <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 函数
 
@@ -21,7 +21,7 @@ ms.locfileid: "79427727"
 |-|-|
 |[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
 
-## <a name="swap"></a>  swap (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a>交换 （unordered_map）
 
 交换两个容器的内容。
 
@@ -32,32 +32,32 @@ void swap(
     unordered_map <Key, Ty, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*密钥*\
-密钥类型。
+*关键*\
+键类型。
 
-*Ty*\
+*泰*\
 映射类型。
 
-*哈希*\
+*散 列*\
 哈希函数对象类型。
 
 *Pred*\
 相等比较函数对象类型。
 
-*分配*\
+*Alloc*\
 allocator 类。
 
-*左*\
+*离开*\
 第一个要交换的容器。
 
-*right*\
+*对*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 
-该模板函数执行 `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`。
+模板函数执行`left.`[unordered_map：：交换](../standard-library/unordered-map-class.md#swap)`(right)`。
 
 ### <a name="example"></a>示例
 
@@ -114,7 +114,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap_function_multimap"></a>  swap (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>交换 （unordered_multimap）
 
 交换两个容器的内容。
 
@@ -125,32 +125,32 @@ void swap(
     unordered_multimap <Key, Ty, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*密钥*\
-密钥类型。
+*关键*\
+键类型。
 
-*Ty*\
+*泰*\
 映射类型。
 
-*哈希*\
+*散 列*\
 哈希函数对象类型。
 
 *Pred*\
 相等比较函数对象类型。
 
-*分配*\
+*Alloc*\
 allocator 类。
 
-*左*\
+*离开*\
 第一个要交换的容器。
 
-*right*\
+*对*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 
-该模板函数执行 `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`。
+模板函数执行`left.`[unordered_multimap：：交换](../standard-library/unordered-multimap-class.md#swap)`(right)`。
 
 ### <a name="example"></a>示例
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: dd34206741ba8fee8b283e22b6e8eefb3b3efb0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5deb89e795d1886ca316886ae1ea260ce1f36fd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398584"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372590"
 ---
 # <a name="criticalsection-class"></a>CriticalSection 类
 
@@ -40,24 +40,24 @@ class CriticalSection;
 
 ### <a name="constructor"></a>构造函数
 
-名称                                                        | 描述
+名称                                                        | 说明
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::CriticalSection](#criticalsection)        | 初始化类似 mutex 对象、但只能由单一进程的线程使用的同步对象。
-[CriticalSection::~CriticalSection](#tilde-criticalsection) | 取消初始化和销毁当前`CriticalSection`对象。
+[关键部分：：关键部分](#criticalsection)        | 初始化类似 mutex 对象、但只能由单一进程的线程使用的同步对象。
+[关键部分：：*关键部分](#tilde-criticalsection) | 取消初始化和销毁当前`CriticalSection`对象。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                 | 描述
+名称                                 | 说明
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::IsValid](#isvalid) | 指示当前的临界部分是否有效。
-[CriticalSection::Lock](#lock)       | 等待指定关键部分对象的所有权。 此函数将在授予调用线程所有权时返回。
-[CriticalSection::TryLock](#trylock) | 尝试进入关键节而不会阻塞。 如果调用成功，调用线程将取得所有权的关键部分。
+[关键部分：：有效](#isvalid) | 指示当前的临界部分是否有效。
+[关键部分：锁定](#lock)       | 等待指定关键部分对象的所有权。 此函数将在授予调用线程所有权时返回。
+[关键部分：：尝试锁定](#trylock) | 尝试在不阻塞的情况下进入关键部分。 如果调用成功，则调用线程将接管关键部分的所有权。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-name                        | 描述
+名称                        | 说明
 --------------------------- | ----------------------------------------
-[CriticalSection::cs_](#cs) | 声明关键部分数据成员。
+[关键部分：：cs_](#cs) | 声明关键部分数据成员。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,11 +65,11 @@ name                        | 描述
 
 ## <a name="requirements"></a>要求
 
-**标头：** corewrappers.h
+**标题：** 核心包装.h
 
-**命名空间：** Microsoft::WRL::Wrappers
+**命名空间：** 微软：：WRL：包装
 
-## <a name="tilde-criticalsection"></a>CriticalSection::~CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>关键部分：：*关键部分
 
 取消初始化和销毁当前`CriticalSection`对象。
 
@@ -77,7 +77,7 @@ name                        | 描述
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsection"></a>CriticalSection::CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>关键部分：：关键部分
 
 初始化类似 mutex 对象、但只能由单一进程的线程使用的同步对象。
 
@@ -89,14 +89,14 @@ explicit CriticalSection(
 
 ### <a name="parameters"></a>参数
 
-*spincount*<br/>
+*旋转计数*<br/>
 关键部分对象的旋转计数。 默认值为 0。
 
 ### <a name="remarks"></a>备注
 
-有关关键部分和旋转计数的详细信息，请参阅`InitializeCriticalSectionAndSpinCount`函数，在`Synchronization`部分 Windows API 文档。
+有关关键部分和自旋计数的详细信息，请参阅 Windows `InitializeCriticalSectionAndSpinCount` API`Synchronization`操作版部分中的函数。
 
-## <a name="cs"></a>CriticalSection::cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a>关键部分：：cs_
 
 声明关键部分数据成员。
 
@@ -108,7 +108,7 @@ CRITICAL_SECTION cs_;
 
 此数据成员受保护。
 
-## <a name="isvalid"></a>CriticalSection::IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>关键部分：：有效
 
 指示当前的临界部分是否有效。
 
@@ -118,9 +118,9 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>返回值
 
-默认情况下始终返回 **，则返回 true**。
+默认情况下，始终返回**true**。
 
-## <a name="lock"></a>CriticalSection::Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a>关键部分：锁定
 
 等待指定关键部分对象的所有权。 此函数将在授予调用线程所有权时返回。
 
@@ -145,9 +145,9 @@ SyncLock Lock();
 
 第一个 `Lock` 函数影响当前关键部分对象。 第二个 `Lock` 函数影响用户指定的关键部分。
 
-## <a name="trylock"></a>CriticalSection::TryLock
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a>关键部分：：尝试锁定
 
-尝试进入关键节而不会阻塞。 如果调用成功，调用线程将取得所有权的关键部分。
+尝试在不阻塞的情况下进入关键部分。 如果调用成功，则调用线程将接管关键部分的所有权。
 
 ```cpp
 SyncLock TryLock();
@@ -164,7 +164,7 @@ static SyncLock TryLock(
 
 ### <a name="return-value"></a>返回值
 
-如果成功进入关键节一个非零值或当前线程已拥有关键部分。 如果另一个线程已拥有关键部分，则为零。
+如果成功输入关键节或当前线程已拥有关键节，则为非零值。 如果另一个线程已拥有关键部分，则为零。
 
 ### <a name="remarks"></a>备注
 

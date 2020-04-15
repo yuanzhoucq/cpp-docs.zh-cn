@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277989"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330874"
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 类
 
-此类是一个帮助程序对于[CSimpleArray](../../atl/reference/csimplearray-class.md)类。
+此类是[CSimpleArray](../../atl/reference/csimplearray-class.md)类的帮助程序。
 
 ## <a name="syntax"></a>语法
 
@@ -29,27 +29,27 @@ class CSimpleArrayEqualHelper
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-在派生的类。
+派生类。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CSimpleArrayEqualHelper::IsEqual](#isequal)|（静态）测试两个`CSimpleArray`对象是否相等的元素。|
+|[CSimplearray 平等帮助者：：是相等的](#isequal)|（静态）测试两`CSimpleArray`个对象元素的相等性。|
 
 ## <a name="remarks"></a>备注
 
-此特征类是对的补充`CSimpleArray`类。 它提供一种方法比较两个元素会存储在`CSimpleArray`对象。 默认情况下，使用比较元素**operator=()**，但如果数组包含缺少其自己的相等运算符的复杂数据类型，您将需要重写此类。
+此特征类是对`CSimpleArray`类的补充。 它提供了一种比较存储在对象中的两个`CSimpleArray`元素的方法。 默认情况下，使用**运算符 _（）** 比较元素，但如果数组包含缺少其自身相等运算符的复杂数据类型，则需要重写此类。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlsimpcoll.h
+**标题：** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimplearray 平等帮助者：：是相等的
 
-测试两个`CSimpleArray`对象是否相等的元素。
+测试两`CSimpleArray`个对象元素的相等性。
 
 ```
 static bool IsEqual(
@@ -60,16 +60,16 @@ static bool IsEqual(
 ### <a name="parameters"></a>参数
 
 *t1*<br/>
-一个对象类型为 t。
+一个 T 类型的对象。
 
 *t2*<br/>
-一个对象类型为 t。
+一个 T 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果元素均相等，则返回 false，则返回 true。
+如果元素相等，则返回 true，否则为 false。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CSimpleArray 类](../../atl/reference/csimplearray-class.md)<br/>
 [CSimpleArrayEqualHelperFalse 类](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _CIpow
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIpow
+- _o__CIpow
 api_location:
 - msvcr100.dll
 - msvcr110.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: b32d7c550d465052f7c1dcd4a81baab803ec28f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 1b0c900fbd9cb3070f7666a3b032ee7e44f9f881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940520"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349415"
 ---
 # <a name="_cipow"></a>_CIpow
 
@@ -46,11 +48,13 @@ void __cdecl _CIpow();
 
 生成的值被将被推送到堆栈顶部。
 
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
+
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)

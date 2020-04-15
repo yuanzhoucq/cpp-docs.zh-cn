@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325060"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371290"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier 类
 
-在释放当前模块中的最后一个对象时调用事件处理程序。 对象并将其指针到方法成员由指定的事件处理程序。
+在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由对象及其指向方法的成员指定。
 
 ## <a name="syntax"></a>语法
 
@@ -36,28 +36,28 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-其成员函数是事件处理程序的对象的类型。
+其成员函数为事件处理程序的对象的类型。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                                                                                 | 描述
+名称                                                                                                 | 说明
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | 初始化 `Module::MethodReleaseNotifier` 类的新实例。
+[模块：：方法释放程序：：方法释放器](#methodreleasenotifier-methodreleasenotifier) | 初始化 `Module::MethodReleaseNotifier` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                                   | 描述
+名称                                                                   | 说明
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | 调用与当前关联的事件处理程序`Module::MethodReleaseNotifier`对象。
+[模块：：方法释放程序：：调用](#methodreleasenotifier-invoke) | 调用与当前`Module::MethodReleaseNotifier`对象关联的事件处理程序。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-name                                                                    | 描述
+名称                                                                    | 说明
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | 包含当前的事件处理程序指向`Module::MethodReleaseNotifier`对象。
-[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | 包含指向对象的成员函数是当前的事件处理程序`Module::MethodReleaseNotifier`对象。
+[模块：：方法释放程序：：method_](#methodreleasenotifier-method) | 为当前`Module::MethodReleaseNotifier`对象保留指向事件处理程序的指针。
+[模块：：方法释放程序：：object_](#methodreleasenotifier-object) | 保存指向其成员函数是当前`Module::MethodReleaseNotifier`对象的事件处理程序的对象的指针。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -67,27 +67,27 @@ name                                                                    | 描述
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标题：** 模块.h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module:: methodreleasenotifier:: 调用
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>模块：：方法释放程序：：调用
 
-调用与当前关联的事件处理程序`Module::MethodReleaseNotifier`对象。
+调用与当前`Module::MethodReleaseNotifier`对象关联的事件处理程序。
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>模块：：方法释放程序：：method_
 
-包含当前的事件处理程序指向`Module::MethodReleaseNotifier`对象。
+为当前`Module::MethodReleaseNotifier`对象保留指向事件处理程序的指针。
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>模块：：方法释放程序：：方法释放器
 
 初始化 `Module::MethodReleaseNotifier` 类的新实例。
 
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>参数
 
-*object*<br/>
-一个对象，其成员函数为事件处理程序。
+*对象*<br/>
+其成员函数为事件处理程序的对象。
 
-*方法*<br/>
-成员函数的参数*对象*，它是事件处理程序。
+*method*<br/>
+参数*对象*的成员函数，即事件处理程序。
 
-*release*<br/>
-指定`true`若要启用调用基础[模块:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release)方法; 否则，请指定`false`。
+*释放*<br/>
+指定`true`以启用调用基础[模块：：释放说明器：：：释放（）](module-releasenotifier-class.md#releasenotifier-release)方法;否则，指定`false`。
 
-## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>模块：：方法释放程序：：object_
 
-包含指向对象的成员函数是当前的事件处理程序`Module::MethodReleaseNotifier`对象。
+保存指向其成员函数是当前`Module::MethodReleaseNotifier`对象的事件处理程序的对象的指针。
 
 ```cpp
 T* object_;

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 6812f3f425186484ef892d7f5c626c0dfce0f863
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33d4bc0c72718d028031ac11bc67da6aec5e4907
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378097"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374423"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 类
 
-提供图像编辑器对话框中的调色板栏的功能。
+为图像编辑器对话框提供调色板栏功能。
 
 ## <a name="syntax"></a>语法
 
@@ -33,15 +33,15 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 |||
 |-|-|
-|名称|描述|
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|返回的工具栏按钮的高度。 (重写[CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight)。)|
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|确定工具栏是否可以显示已扩展边框的按钮。 (重写[CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)。)|
+|名称|说明|
+|[CMFC图像编辑器调色板栏：：获取罗高](#getrowheight)|返回工具栏按钮的高度。 （覆盖[CMFC 工具栏：获取罗高](../../mfc/reference/cmfctoolbar-class.md#getrowheight).）|
+|[CMFC图像编辑器调色板栏：是按钮超尺寸可用](#isbuttonextrasizeavailable)|确定工具栏是否可以显示具有扩展边框的按钮。 （覆盖[CMFC 工具栏：是按钮外大尺寸](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).）|
 
 ### <a name="remarks"></a>备注
 
-此类不适于在代码中直接使用。
+此类不适于在您的代码中直接使用。
 
-该框架使用此类在图像编辑器对话框中显示调色板条。 有关图像编辑器对话框的详细信息，请参阅[CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)。
+框架使用此类在图像编辑器对话框中显示调色板栏。 有关图像编辑器对话框的详细信息，请参阅[CMFCImage 编辑器对话类](../../mfc/reference/cmfcimageeditordialog-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -59,15 +59,15 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
+[CMFC图像编辑器栏](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头：** afximageeditordialog.h
+**标题：** afx 图像编辑器.h
 
-##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight
+## <a name="cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFC图像编辑器调色板栏：：获取罗高
 
-返回的工具栏按钮的高度。
+返回工具栏按钮的高度。
 
 ```
 virtual int GetRowHeight() const;
@@ -75,11 +75,11 @@ virtual int GetRowHeight() const;
 
 ### <a name="return-value"></a>返回值
 
-在工具栏上的每个按钮的高度。
+工具栏上每个按钮的高度。
 
-##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
+## <a name="cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFC图像编辑器调色板栏：是按钮超尺寸可用
 
-确定工具栏是否可以显示已扩展边框的按钮。
+确定工具栏是否可以显示具有扩展边框的按钮。
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -89,8 +89,8 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 此方法返回 FALSE。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)

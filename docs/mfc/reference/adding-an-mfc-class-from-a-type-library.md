@@ -6,35 +6,35 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf9c763a215a4880d5b0ad206f6a347341fea9eb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296743"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371724"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>从类型库添加 MFC 类
 
-使用此向导创建 MFC 类从可用的类型库中的接口。 可以将 MFC 类添加到 [MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控件](../../mfc/reference/creating-an-mfc-activex-control.md)。
+使用此向导可以从可用类型库中的接口创建 MFC 类。 可以将 MFC 类添加到 [MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控件](../../mfc/reference/creating-an-mfc-activex-control.md)。
 
 > [!NOTE]
->  不需要使用自动化已启用从类型库添加类创建 MFC 项目。
+> 无需在启用自动化功能后创建 MFC 项目，即从类型库中添加类。
 
-类型库包含一个组件，定义方法以及其参数和返回类型公开的接口的二进制描述。 必须注册类型库，它才会显示在**可用的类型库**中从类型库向导添加类的列表。 请参阅"内部分布式 COM:类型库和语言集成"的详细信息的 MSDN library 中。
+类型库包含组件公开的接口的二进制描述，定义方法及其参数和返回类型。 必须注册类型库才能显示在"从 Typelib 向导添加类"中的 **"可用类型库**"列表中。 有关详细信息，请参阅 MSDN 库中的"内部分布式 COM：类型库和语言集成"。
 
-### <a name="to-add-an-mfc-class-from-a-type-library"></a>若要从类型库添加 MFC 类
+### <a name="to-add-an-mfc-class-from-a-type-library"></a>从类型库中添加 MFC 类
 
-1. 在上述**解决方案资源管理器**或[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击你想要将类添加的项目的名称。
+1. 在**解决方案资源管理器**或[类视图中](/visualstudio/ide/viewing-the-structure-of-code)，右键单击要向其添加类的项目的名称。
 
-1. 从快捷菜单中，单击“添加”，然后单击“添加类”。
+1. 在快捷菜单中，单击"**添加**"，然后单击"**添加类**"。
 
-1. 在中[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**类型库中的 MFC 类**，然后单击**打开**以显示[从类型库向导添加类](../../mfc/reference/add-class-from-typelib-wizard.md).
+1. 在["添加类"](../../ide/add-class-dialog-box.md)对话框中，在"模板"窗格中，单击**Typelib 中的 MFC 类**，然后单击 **"打开"** 以显示["从 Typelib 向导添加类](../../mfc/reference/add-class-from-typelib-wizard.md)"。
 
-在向导中，可以添加类型库中的多个类。 同样，您可以将类多个类型库添加单个向导会话中。
+在向导中，可以在类型库中添加多个类。 同样，您可以在单个向导会话中从多个类型库中添加类。
 
-该向导创建 MFC 类派生自[COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)，为从选定的类型库中添加每个接口。 `COleDispatchDriver` 实现 OLE 自动化的客户端。
+该向导为从所选类型库添加的每个接口创建一个 MFC 类，该类派生自[COleDispatchDriver。](../../mfc/reference/coledispatchdriver-class.md) `COleDispatchDriver`实现 OLE 自动化的客户端。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [自动化客户端](../../mfc/automation-clients.md)<br/>
 [自动化客户端：使用类型库](../../mfc/automation-clients-using-type-libraries.md)

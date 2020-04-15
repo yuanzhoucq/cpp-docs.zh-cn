@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 5ca791af658ee719b2e6d6ea78f82e23a66edc98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf6399d2a245addb7e2e65100d33643fcd54e893
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253712"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369291"
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties 类
 
@@ -31,15 +31,15 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|已重载。 创建`CD2D_BRUSH_PROPERTIES`结构|
+|[CD2DBrush 属性：CD2DBrush 属性](#cd2dbrushproperties)|已重载。 创建`CD2D_BRUSH_PROPERTIES`结构|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DBrushProperties::CommonInit](#commoninit)|初始化对象|
+|[CD2DBrush 属性：：通用](#commoninit)|初始化对象|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,11 +49,11 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrendertarget.h
+**标题：** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>CD2DBrush 属性：CD2DBrush 属性
 
-创建 CD2D_BRUSH_PROPERTIES 结构
+创建CD2D_BRUSH_PROPERTIES结构
 
 ```
 CD2DBrushProperties();
@@ -67,12 +67,12 @@ CD2DBrushProperties(
 ### <a name="parameters"></a>参数
 
 *_opacity*<br/>
-基不透明度的画笔。 默认值为 1.0。
+画笔的基本不一性。 默认值为 1.0。
 
 *_transform*<br/>
-要应用到画笔的转换
+应用于画笔的转换
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>CD2DBrush 属性：：通用
 
 初始化对象
 
@@ -80,6 +80,6 @@ CD2DBrushProperties(
 void CommonInit();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

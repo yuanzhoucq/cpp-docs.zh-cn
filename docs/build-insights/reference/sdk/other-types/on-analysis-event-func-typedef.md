@@ -1,6 +1,6 @@
 ---
-title: OnAnalysisEventFunc typedef
-description: C++生成见解 SDK OnAnalysisEventFunc typedef 引用。
+title: 上分析事件丰型
+description: C++在分析事件丰体引用上构建见解 SDK。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d260f6060e759f315589abda82e31c2c2b95a65e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: eacd174279caff0db22586d5e40d3a866afc4459
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334060"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329125"
 ---
-# <a name="onanalysiseventfunc-typedef"></a>OnAnalysisEventFunc typedef
+# <a name="onanalysiseventfunc-typedef"></a>上分析事件丰型
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio 版本选择器控件设置为 "Visual studio 2017 或 Visual Studio 2019"。
+C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OnAnalysisEventFunc` typedef 是[ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)结构中使用的函数签名之一。
+typedef`OnAnalysisEventFunc`是[ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)结构中使用的函数签名之一。
 
 ## <a name="syntax"></a>语法
 
@@ -37,14 +37,14 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnAnalysisEventFunc)(
 
 ### <a name="parameters"></a>参数
 
-*eventStack*\
+*事件堆栈*\
 当前事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
 
-*callbackContext*\
-在[ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md)或[RELOG_DESCRIPTOR](relog-descriptor-struct.md)中为此回调设置的上下文值。
+*回调上下文*\
+ANALYSIS_DESCRIPTOR[或](analysis-descriptor-struct.md)[RELOG_DESCRIPTOR](relog-descriptor-struct.md)中为此回调设置的上下文值。
 
 ### <a name="return-value"></a>返回值
 
-一个[CALLBACK_CODE](callback-code-enum.md)值，该值控制接下来应执行的操作。
+控制接下来会发生什么[CALLBACK_CODE](callback-code-enum.md)值。
 
 ::: moniker-end

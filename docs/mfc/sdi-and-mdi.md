@@ -8,24 +8,24 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9730e7baf9589c4b05a60703c619aae2e941bdec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308521"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372759"
 ---
 # <a name="sdi-and-mdi"></a>SDI 和 MDI
 
-MFC 轻松处理单文档界面 (SDI) 和多文档界面 (MDI) 应用程序。
+MFC 便于使用单文档接口 （SDI） 和多文档接口 （MDI） 应用程序。
 
-SDI 应用程序允许一次只有一个打开的文档框架窗口。 MDI 应用程序允许多个文档框架窗口，以在应用程序的同一实例中打开。 MDI 应用程序具有一个内的多个 MDI 子窗口，这是框架窗口，可以打开，每个包含一个单独的文档的窗口。 在某些应用程序，可以是不同的类型，如图表和电子表格 windows 子窗口。 在这种情况下，根据不同类型的 MDI 子窗口被激活，可以更改菜单栏。
+SDI 应用程序一次只允许一个打开的文档框架窗口。 MDI 应用程序允许在应用程序的同一实例中打开多个文档框架窗口。 MDI 应用程序有一个窗口，其中可以打开多个 MDI 子窗口（即框架窗口本身），每个窗口包含单独的文档。 在某些应用程序中，子窗口可以是不同类型的，例如图表窗口和电子表格窗口。 在这种情况下，菜单栏可以随着不同类型的 MDI 子窗口的激活而更改。
 
 > [!NOTE]
->  在 Windows 95 和更高版本，应用程序通常是 SDI 因为操作系统已采用"文档为中心"视图。
+> 在 Windows 95 及更高版本下，应用程序通常是 SDI，因为操作系统采用了"以文档为中心的"视图。
 
-有关详细信息，请参阅[文档、 视图和框架](../mfc/documents-views-and-the-framework.md)。
+有关详细信息，请参阅[文档、视图和框架](../mfc/documents-views-and-the-framework.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用类编写 Windows 应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[使用类为 Windows 编写应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - relationships, MFC objects
 - MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
-ms.openlocfilehash: bb8d1fcd9737b33d52038746a26f4e1bd1043e95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7e40e25b405d3f8ec50a518889cc2b89bc8c725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309039"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372815"
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 对象之间的关系
 
@@ -30,25 +30,25 @@ ms.locfileid: "62309039"
 
 - 窗口用于跟踪所有打开的窗口以便能将消息发送到这些窗口。
 
-这些关系在文档/视图创建期间建立。 下表显示了正在运行的程序中的对象如何访问其他对象。 任何对象可以通过调用全局函数来获取应用程序对象的指针[AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp)。
+这些关系在文档/视图创建期间建立。 下表显示了正在运行的程序中的对象如何访问其他对象。 任何对象都可以通过调用全局函数[AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp)获得指向应用程序对象的指针。
 
 ### <a name="gaining-access-to-other-objects-in-your-application"></a>获取对应用程序中的其他对象的访问权限
 
 |起始对象|如何访问其他对象|
 |-----------------|---------------------------------|
-|Document|使用[GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition)并[GetNextView](../mfc/reference/cdocument-class.md#getnextview)访问文档的视图列表。<br /><br /> 调用[GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate)以获取文档模板。|
-|视图|调用[GetDocument](../mfc/reference/cview-class.md#getdocument)获取文档。<br /><br /> 调用[GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe)获取框架窗口。|
-|文档框架窗口|调用[GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview)以获取当前视图。<br /><br /> 调用[GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument)若要获取附加到当前视图的文档。|
-|MDI 框架窗口|调用[MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive)若要获取当前处于活动状态[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)。|
+|Document|使用[GetFirst 查看位置](../mfc/reference/cdocument-class.md#getfirstviewposition)和[GetNextView](../mfc/reference/cdocument-class.md#getnextview)访问文档的视图列表。<br /><br /> 致电[GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate)获取文档模板。|
+|查看|致电[GetDocument](../mfc/reference/cview-class.md#getdocument)获取文档。<br /><br /> 调用[获取父框架](../mfc/reference/cwnd-class.md#getparentframe)以获取帧窗口。|
+|文档框架窗口|致电[获取活动视图](../mfc/reference/cframewnd-class.md#getactiveview)以获取当前视图。<br /><br /> 调用[GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument)获取文档附加到当前视图。|
+|MDI 框架窗口|致电[MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive)获取当前处于活动状态的[CMDIChildwnd](../mfc/reference/cmdichildwnd-class.md)。|
 
 通常，框架窗口包含一个视图，但在某些情况下（例如在拆分窗口中），同一框架窗口包含多个视图。 框架窗口保留指向当前处于活动状态的视图的指针；该指针在其他视图激活时更新。
 
 > [!NOTE]
->  指向主框架窗口的指针存储在[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)应用程序对象的成员变量。 调用`OnFileNew`中的重写`InitInstance`成员函数`CWinApp`设置*m_pMainWnd*为您。 如果您未调用 `OnFileNew`，则必须自行在 `InitInstance` 中设置变量的值。 （如果 /Embedding 在命令行上，SDI COM 组件（服务器）应用程序就无法设置变量。）请注意， *m_pMainWnd*现在是类的成员`CWinThread`而非`CWinApp`。
+> 指向主框架窗口的指针存储在应用程序对象的[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)成员变量中。 在`OnFileNew``InitInstance``CWinApp`*重写集的成员*函数时，m_pMainWnd调用。 如果您未调用 `OnFileNew`，则必须自行在 `InitInstance` 中设置变量的值。 （如果 /嵌入位于命令行上，则 SDI COM 组件（服务器）应用程序可能无法设置变量。请注意 *，m_pMainWnd*现在是类`CWinThread`的成员，而不是`CWinApp`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [文档模板创建](../mfc/document-template-creation.md)<br/>
 [文档/视图创建](../mfc/document-view-creation.md)<br/>
-[创建新文档、窗口和视图](../mfc/creating-new-documents-windows-and-views.md)
+[创建新文档、Windows 和视图](../mfc/creating-new-documents-windows-and-views.md)

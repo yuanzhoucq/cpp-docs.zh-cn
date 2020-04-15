@@ -8,26 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f7636b1f4e13340b223edd8c63c39bbeb21c8bd0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423134"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330207"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>调试和错误报告全局函数
 
-这些函数提供有用的调试和跟踪功能。
+这些功能提供有用的调试和跟踪功能。
 
 |||
 |-|-|
-|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|以 HRESULT 形式返回 `GetLastError` 错误代码。|
+|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|返回`GetLastError`HRESULT 形式的错误代码。|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|将 Win32 错误代码转换为 HRESULT。|
-|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|设置 `IErrorInfo` 以向客户端提供错误详细信息。|
+|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|设置`IErrorInfo`以向客户端提供错误详细信息。|
 |[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|引发 `CAtlException`。|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|调用此函数可根据 Windows 函数 `GetLastError` 的结果发出错误。|
 
-##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError
+## <a name="atlhresultfromlasterror"></a><a name="atlhresultfromlasterror"></a>从上次错误中得出
 
 以 HRESULT 的形式返回调用线程的上一个错误代码值。
 
@@ -37,13 +37,13 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>备注
 
-`AtlHresultFromLastError` 调用 `GetLastError` 获取最后一个错误，并使用 HRESULT_FROM_WIN32 宏将错误转换为 HRESULT 后返回该错误。
+`AtlHresultFromLastError`调用`GetLastError`以获取最后一个错误，并在使用HRESULT_FROM_WIN32宏将其转换为 HRESULT 后返回该错误。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlcomcli。h
+**标题：** atlcomcli.h
 
-##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32
+## <a name="atlhresultfromwin32"></a><a name="atlhresultfromwin32"></a>AtlHresult从Win32
 
 将 Win32 错误代码转换为 HRESULT。
 
@@ -51,25 +51,25 @@ HRESULT AtlHresultFromLastError();
 AtlHresultFromWin32(DWORD error);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*error*<br/>
+*错误*<br/>
 要转换的错误值。
 
 ### <a name="remarks"></a>备注
 
-使用宏 HRESULT_FROM_WIN32 将 Win32 错误代码转换为 HRESULT。
+使用宏HRESULT_FROM_WIN32将 Win32 错误代码转换为 HRESULT。
 
 > [!NOTE]
->  使用[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)函数，而不是使用 `HRESULT_FROM_WIN32(GetLastError())`。
+> 而不是使用`HRESULT_FROM_WIN32(GetLastError())`， 使用 函数[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlcomcli。h
+**标题：** atlcomcli.h
 
-##  <a name="atlreporterror"></a>AtlReportError
+## <a name="atlreporterror"></a><a name="atlreporterror"></a>AtlReport错误
 
-设置 `IErrorInfo` 接口，为对象的客户端提供错误信息。
+设置`IErrorInfo`接口以向对象的客户端提供错误信息。
 
 ```
 HRESULT WINAPI AtlReportError(
@@ -117,79 +117,79 @@ HRESULT WINAPI AtlReportError(
     HINSTANCE hInst = _AtlBaseModule.GetResourceInstance());
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*clsid*<br/>
-中报告错误的对象的 CLSID。
+*Clsid*<br/>
+[在]报告错误的对象的 CLSID。
 
 *lpszDesc*<br/>
-中描述错误的字符串。 Unicode 版本指定*lpszDesc*的类型为 LPCOLESTR;ANSI 版本指定 LPCSTR 的类型。
+[在]描述错误的字符串。 Unicode 版本指定*lpszDesc*的类型为 LPCOLESTR;ANSI 版本指定 LPCSTR 的类型。
 
-*iid*<br/>
-中定义错误的接口的 IID，如果错误是由操作系统定义的，则为 GUID_NULL。
+*Iid*<br/>
+[在]定义错误的接口的 IID，或者如果错误是由操作系统定义的，则GUID_NULL。
 
 *hRes*<br/>
-中要返回给调用方的 HRESULT。
+[在]要返回给调用方的 HRESULT。
 
 *nID*<br/>
-中存储错误说明字符串的资源标识符。 此值应介于0x0200 和0xFFFF 之间，包括在内。 在调试版本中，如果*nID*未为有效字符串编制索引，则会产生**断言**。 在发布版本中，错误描述字符串将设置为 "未知错误"。
+[在]存储错误描述字符串的资源标识符。 此值应介于 0x0200 和 0xFF 之间（包括）。 在调试生成中，如果*nID*不索引有效字符串，则会产生**ASSERT。** 在发布版本中，错误描述字符串将设置为"未知错误"。
 
 *dwHelpID*<br/>
-中错误的帮助上下文标识符。
+[在]错误的帮助上下文标识符。
 
-*lpszHelpFile*<br/>
-中描述错误的帮助文件的路径和名称。
+*lpszHelp文件*<br/>
+[在]描述错误的帮助文件的路径和名称。
 
 *hInst*<br/>
-中资源的句柄。 默认情况下，此参数为 `__AtlBaseModuleModule::GetResourceInstance`，其中 `__AtlBaseModuleModule` 是[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)的全局实例或从其派生的类。
+[在]资源的句柄。 默认情况下，此参数是`__AtlBaseModuleModule::GetResourceInstance` `__AtlBaseModuleModule` [，CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)的全局实例或派生自它的类位于此地。
 
 ### <a name="return-value"></a>返回值
 
-如果*hRes*参数为非零，则返回*hRes*的值。 如果*hRes*为零，则 `AtlReportError` 的前四个版本返回 DISP_E_EXCEPTION。 最后两个版本返回宏的结果**MAKE_HRESULT （1、FACILITY_ITF** `nID` **）** 。
+如果*hRes*参数是非零，则返回*hRes*的值。 如果*hRes*为零，则`AtlReportError`返回的前四个版本DISP_E_EXCEPTION。 最后两个版本返回宏**MAKE_HRESULT的结果（1，FACILITY_ITF。** `nID` **)**
 
 ### <a name="remarks"></a>备注
 
-字符串*lpszDesc*用作错误的文本说明。 当客户端收到 `AtlReportError`返回的*hRes*时，客户端可以访问 `IErrorInfo` 结构以获取有关错误的详细信息。
+字符串*lpszDesc*用作错误的文本说明。 当客户端收到您从`AtlReportError`返回*的 hRe 时*，客户端可以访问结构以`IErrorInfo`了解有关错误的详细信息。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  请勿在 catch 处理程序C++中使用 `AtlReportError`。 这些函数的一些替代在内部使用 ATL 字符串转换宏，这反过来又在内部使用 `_alloca` 函数。 在C++ catch 处理程序中使用 `AtlReportError` 会导致 catch C++处理程序中出现异常。
+> 请勿在`AtlReportError`C++捕获处理程序中使用。 这些函数的某些重写在内部使用 ATL 字符串转换宏，而后者又在内部使用`_alloca`该函数。 `AtlReportError`在C++捕获处理程序中使用可能会导致C++捕获处理程序中的异常。
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlcom。h
+**标题：** atlcom.h
 
-##  <a name="atlthrow"></a>AtlThrow
+## <a name="atlthrow"></a><a name="atlthrow"></a>AtlThrow
 
-调用此函数可根据 HRESULT 状态代码指示错误。
+调用此函数以根据 HRESULT 状态代码发出错误信号。
 
 ```
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*人事*<br/>
+*人力资源*<br/>
 标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-此函数由 ATL 和 MFC 代码在出现错误情况时使用。 还可以从自己的代码中调用它。 此函数的默认实现取决于符号 _ATL_NO_EXCEPTIONS 和项目类型（MFC 或 ATL）的定义。
+在出现错误情况时，ATL 和 MFC 代码会使用此功能。 也可以从您自己的代码调用它。 此函数的默认实现取决于符号_ATL_NO_EXCEPTIONS的定义以及项目类型 MFC 或 ATL。
 
-在所有情况下，此函数都将 HRESULT 跟踪到调试器。
+在所有情况下，此函数将 HRESULT 跟踪到调试器。
 
-在 Visual Studio 2015 Update 3 和更高版本中，此函数的属性 __declspec （noreturn），以避免出现虚假的 SAL 警告。
+在 Visual Studio 2015 更新 3 及更高版本中，此功能被归因于__declspec（不返回），以避免虚假的 SAL 警告。
 
-如果 MFC 项目中未定义 _ATL_NO_EXCEPTIONS，则此函数将根据 HRESULT 的值引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md) 。
+如果未在 MFC 项目中定义_ATL_NO_EXCEPTIONS，则此函数将基于 HRESULT 的值引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException。](../../mfc/reference/coleexception-class.md)
 
-如果在 ATL 项目中未定义 _ATL_NO_EXCEPTIONS，该函数将引发[CAtlException](../../atl/reference/catlexception-class.md)。
+如果在 ATL 项目中未定义_ATL_NO_EXCEPTIONS，则函数将引发[CAtlException](../../atl/reference/catlexception-class.md)。
 
-如果定义 _ATL_NO_EXCEPTIONS，该函数将导致断言失败，而不引发异常。
+如果定义了_ATL_NO_EXCEPTIONS，则函数会导致断言失败，而不是引发异常。
 
-对于 ATL 项目，可以提供此函数的实现，以便在发生故障时 ATL 使用该函数。 为此，请用与 `AtlThrow` 相同的签名定义自己的函数，并 #define `AtlThrow` 作为函数的名称。 必须在包含 atlexcept 之前完成此操作（这意味着必须在包含任何 ATL 标头之前完成此操作），因为 atlbase.h 包含 atlexcept。 将函数 `__declspec(noreturn)` 特性，以避免出现虚假的 SAL 警告。
+对于 ATL 项目，可以提供您自己的实现，以便 ATL 在发生故障时使用此功能。 为此，使用与`AtlThrow`函数的名称相同的签名和#define`AtlThrow`定义您自己的函数。 这必须在包括 atlexcept.h 之前完成（这意味着在包括任何 ATL 标头之前必须完成，因为 atlbase.h 包含 atlexcept.h）。 属性函数`__declspec(noreturn)`以避免虚假的 SAL 警告。
 
 ### <a name="example"></a>示例
 
@@ -197,9 +197,9 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ## <a name="requirements"></a>要求
 
-**标头：** atldef
+**标题：** atldef.h
 
-##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32
+## <a name="atlthrowlastwin32"></a><a name="atlthrowlastwin32"></a>AtlThrowLastWin32
 
 调用此函数可根据 Windows 函数 `GetLastError` 的结果发出错误。
 
@@ -209,17 +209,17 @@ inline void AtlThrowLastWin32();
 
 ### <a name="remarks"></a>备注
 
-此函数跟踪 `GetLastError` 到调试器的结果。
+此函数跟踪调试器的结果`GetLastError`。
 
-如果 MFC 项目中未定义 _ATL_NO_EXCEPTIONS，则此函数将基于 `GetLastError`返回的值引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md) 。
+如果未在 MFC 项目中定义_ATL_NO_EXCEPTIONS，则此函数将基于 返回`GetLastError`的值引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException。](../../mfc/reference/coleexception-class.md)
 
-如果在 ATL 项目中未定义 _ATL_NO_EXCEPTIONS，该函数将引发[CAtlException](../../atl/reference/catlexception-class.md)。
+如果在 ATL 项目中未定义_ATL_NO_EXCEPTIONS，则函数将引发[CAtlException](../../atl/reference/catlexception-class.md)。
 
-如果定义 _ATL_NO_EXCEPTIONS，该函数将导致断言失败，而不引发异常。
+如果定义了_ATL_NO_EXCEPTIONS，则函数会导致断言失败，而不是引发异常。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atldef
+**标题：** atldef.h
 
 ## <a name="see-also"></a>另请参阅
 

@@ -98,16 +98,16 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7e30583a185a46e5e0f0544ac2b00848dc989f26
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425615"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377325"
 ---
 # <a name="list-class"></a>list 类
 
-C++标准库列表类是序列容器的类模板，用于在线性排列中维护其元素，并允许在序列内的任何位置高效插入和删除。 序列存储为双向链接的元素列表，每个包含一些 *Type* 类型的成员。
+C++标准库列表类是序列容器的类模板，用于在线性排列中维护其元素，并允许在序列中的任何位置进行有效的插入和删除。 序列存储为双向链接的元素列表，每个包含一些 *Type* 类型的成员。
 
 ## <a name="syntax"></a>语法
 
@@ -121,8 +121,8 @@ class list
 *类型*\
 要存储在列表中的元素数据类型。
 
-*分配*器\
-表示所存储分配器对象的类型，该分配器对象封装有关列表的内存分配和解除分配的详细信息。 此参数是可选的，默认值为**分配**器\<*类型*>。
+*分配器*\
+表示所存储分配器对象的类型，该分配器对象封装有关列表的内存分配和解除分配的详细信息。 此参数是可选的，默认值为**分配器**\<*类型*>。
 
 ## <a name="remarks"></a>备注
 
@@ -132,9 +132,9 @@ class list
 
 当成员函数必须插入或删除列表中的元素时，将发生列表的重新分配。 在所有这类情况下，仅指向受控制序列被消除部分的迭代器或引用将变为无效。
 
-包括C++标准库标准标头 \<列表 > 来定义[容器](../standard-library/stl-containers.md)类模板列表和多个支持模板。
+包括C++标准库标准标头\<列表>定义[容器](../standard-library/stl-containers.md)类模板列表和几个支持模板。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="constructors"></a>构造函数
 
@@ -148,13 +148,13 @@ class list
 |-|-|
 |[allocator_type](#allocator_type)|表示列表对象的 `allocator` 类的类型。|
 |[const_iterator](#const_iterator)|提供可读取列表中 **const** 元素的双向迭代器的类型。|
-|[const_pointer](#const_pointer)|一种类型，它提供指向列表中**const**元素的指针。|
+|[const_pointer](#const_pointer)|提供指向列表中**const**元素的指针的类型。|
 |[const_reference](#const_reference)|提供对存储于列表中供读取和执行 **const** 操作的 **const** 元素的引用的类型。|
 |[const_reverse_iterator](#const_reverse_iterator)|提供可读取列表中任何 **const** 元素的双向迭代器的类型。|
 |[difference_type](#difference_type)|提供引用同一列表中的元素的两个迭代器之间的差异的类型。|
-|[Iterator](#iterator)|提供可读取或修改列表中任何元素的双向迭代器的类型。|
-|[pointer](#pointer)|提供指向列表中元素的指针的类型。|
-|[reference](#reference)|提供对存储于列表中供读取和执行 **const** 操作的 **const** 元素的引用的类型。|
+|[迭 代](#iterator)|提供可读取或修改列表中任何元素的双向迭代器的类型。|
+|[指针 (pointer)](#pointer)|提供指向列表中元素的指针的类型。|
+|[参考](#reference)|提供对存储于列表中供读取和执行 **const** 操作的 **const** 元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|提供可读取或修改反向列表中的元素的双向迭代器的类型。|
 |[size_type](#size_type)|计算列表中元素的数目的类型。|
 |[value_type](#value_type)|表示列表中存储的数据类型的类型。|
@@ -163,52 +163,52 @@ class list
 
 |||
 |-|-|
-|[assign](#assign)|将元素从列表中擦除并将一组新的元素复制到目标列表。|
-|[back](#back)|返回对列表中最后一个元素的引用。|
-|[begin](#begin)|返回发现列表中第一个元素的位置的迭代器。|
+|[分配](#assign)|将元素从列表中擦除并将一组新的元素复制到目标列表。|
+|[返回](#back)|返回对列表中最后一个元素的引用。|
+|[开始](#begin)|返回发现列表中第一个元素的位置的迭代器。|
 |[cbegin](#cbegin)|返回发现列表中第一个元素的位置的常量迭代器。|
 |[cend](#cend)|返回发现一个列表中最后一个元素之后的位置的敞亮表达式。|
-|[clear](#clear)|消除列表中的全部元素。|
+|[清楚](#clear)|消除列表中的全部元素。|
 |[crbegin](#crbegin)|返回发现反向列表中第一个元素的位置的常量迭代器。|
 |[crend](#crend)|返回用于发现反向列表中最后一个元素之后的位置的常量迭代器。|
 |[emplace](#emplace)|将构造的元素插入到列表中的指定位置。|
 |[emplace_back](#emplace_back)|在列表的结尾处添加一个就地构造的元素。|
 |[emplace_front](#emplace_front)|在列表的起始位置添加一个就地构造的元素。|
-|[empty](#empty)|测试列表是否为空。|
-|[end](#end)|返回用于发现列表中最后一个元素之后的位置的迭代器。|
+|[空](#empty)|测试列表是否为空。|
+|[结束](#end)|返回用于发现列表中最后一个元素之后的位置的迭代器。|
 |[erase](#erase)|从列表中的指定位置移除一个或一系列元素。|
-|[front](#front)|返回对列表中第一个元素的引用。|
+|[前面](#front)|返回对列表中第一个元素的引用。|
 |[get_allocator](#get_allocator)|返回用于构造列表的 `allocator` 对象的一个副本。|
 |[insert](#insert)|将一个、几个或一系列元素插入列表中的指定位置。|
 |[max_size](#max_size)|返回列表的最大长度。|
-|[merge](#merge)|将元素从参数列表移除，将它们插入目标列表，将新的组合元素集以升序或其他指定顺序排序。|
+|[合并](#merge)|将元素从参数列表移除，将它们插入目标列表，将新的组合元素集以升序或其他指定顺序排序。|
 |[pop_back](#pop_back)|删除列表末尾的元素。|
 |[pop_front](#pop_front)|删除列表起始处的一个元素。|
 |[push_back](#push_back)|在列表的末尾添加元素。|
 |[push_front](#push_front)|在列表的开头添加元素。|
 |[rbegin](#rbegin)|返回发现反向列表中第一个元素的位置的迭代器。|
-|[remove](#remove)|清除列表中与指定值匹配的元素。|
+|[删除](#remove)|清除列表中与指定值匹配的元素。|
 |[remove_if](#remove_if)|将满足指定谓词的元素从列表中消除。|
 |[rend](#rend)|返回发现反向列表中最后一个元素之后的位置的迭代器。|
-|[resize](#resize)|为列表指定新的大小。|
-|[reverse](#reverse)|反转列表中元素的顺序。|
-|[size](#size)|返回列表中元素的数目。|
-|[sort](#sort)|按升序或其他顺序关系排列列表中的元素。|
+|[调整](#resize)|为列表指定新的大小。|
+|[反向](#reverse)|反转列表中元素的顺序。|
+|[大小](#size)|返回列表中元素的数目。|
+|[排序](#sort)|按升序或其他顺序关系排列列表中的元素。|
 |[splice](#splice)|将元素从自变量列表中删除或将它们插入目标列表。|
-|[swap](#swap)|交换两个列表的元素。|
-|[unique](#unique)|从列表中删除满足某些其他二元谓词的相邻重复元素或相邻元素。|
+|[交换](#swap)|交换两个列表的元素。|
+|[独特](#unique)|从列表中删除满足某些其他二元谓词的相邻重复元素或相邻元素。|
 
 ### <a name="operators"></a>运算符
 
 |||
 |-|-|
-|[operator=](#op_eq)|用另一个列表的副本替换列表中的元素。|
+|[运算符*](#op_eq)|用另一个列表的副本替换列表中的元素。|
 
 ## <a name="requirements"></a>要求
 
-**标头**：\<list>
+**标题** \<： 列表>
 
-## <a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
 表示列表对象的分配器类的类型。
 
@@ -218,13 +218,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>备注
 
-`allocator_type` 是模板参数*分配*器的同义词。
+`allocator_type`是模板参数*分配器*的同义词。
 
 ### <a name="example"></a>示例
 
 请参阅 [get_allocator](#get_allocator) 的示例。
 
-## <a name="assign"></a>将
+## <a name="assign"></a><a name="assign"></a>分配
 
 清除列表中的元素，并将一组新元素复制到目标列表。
 
@@ -244,7 +244,7 @@ void assign(
 
 ### <a name="parameters"></a>参数
 
-*第一个*\
+*第一*\
 要从自变量列表中复制的一系列元素中的第一个元素的位置。
 
 *最后*\
@@ -253,7 +253,7 @@ void assign(
 *计数*\
 要插入列表中的元素副本的数目。
 
-*Val*\
+*瓦尔*\
 要插入到列表中的元素的值。
 
 *IList*\
@@ -313,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a>返回
+## <a name="back"></a><a name="back"></a>返回
 
 返回对列表中最后一个元素的引用。
 
@@ -363,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a>准备
+## <a name="begin"></a><a name="begin"></a>开始
 
 返回发现列表中第一个元素的位置的迭代器。
 
@@ -379,7 +379,7 @@ iterator begin();
 
 ### <a name="remarks"></a>备注
 
-如果 `begin` 的返回值分配给某个 `const_iterator`，则不能修改列表对象中的元素。 如果 `begin` 的返回值分配给某个 `iterator`，则可以修改列表对象中的元素。
+如果将 返回`begin`值分配给 ，`const_iterator`无法修改列表对象中的元素。 如果将 返回`begin`值分配给 ，`iterator`则可以修改列表对象中的元素。
 
 ### <a name="example"></a>示例
 
@@ -416,9 +416,9 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
-返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
+返回一个**协调**迭代器，该迭代器可解决范围内的第一个元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -426,13 +426,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-一个**常量**双向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，则为 `cbegin() == cend()`）。
+指向范围的第一个元素或略高于空范围末尾的位置（对于空范围）`cbegin() == cend()`的**const**双向访问迭代器。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，考虑`Container`为`begin()`支持 和`cbegin()`的任何类型的可修改（非**const）** 容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -442,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
 返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。
 
@@ -458,7 +458,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，考虑`Container`为`end()`支持 和`cend()`的任何类型的可修改（非**const）** 容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -470,7 +470,7 @@ auto i2 = Container.cend();
 
 不应对 `cend` 返回的值取消引用。
 
-## <a name="clear"></a>清除
+## <a name="clear"></a><a name="clear"></a>清楚
 
 消除列表中的全部元素。
 
@@ -505,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
 
 提供可读取列表中 **const** 元素的双向迭代器的类型。
 
@@ -521,7 +521,7 @@ typedef implementation-defined const_iterator;
 
 请参阅 [back](#back) 的示例。
 
-## <a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
 提供指向列表中**const**元素的指针。
 
@@ -535,7 +535,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 在大多数情况下，应使用 [iterator](#iterator) 访问列表对象中的元素。
 
-## <a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
 提供对存储于列表中供读取和执行 **const** 操作的 **const** 元素的引用的类型。
 
@@ -579,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
 
 提供可读取列表中任何 **const** 元素的双向迭代器的类型。
 
@@ -593,9 +593,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="example"></a>示例
 
-请参阅 [rbegin](#rbegin) 的示例。
+请参阅[rbegin 的示例](#rbegin)。
 
-## <a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a>克雷贝京
 
 返回发现反向列表中第一个元素的位置的常量迭代器。
 
@@ -639,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a>克伦德
 
 返回用于发现反向列表中最后一个元素之后的位置的常量迭代器。
 
@@ -690,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 可用于表示列表中迭代器所指向元素之间元素数目的有符号整数类型。
 
@@ -747,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a>埃姆位
 
 将构造的元素插入到列表中的指定位置。
 
@@ -757,10 +757,10 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>参数
 
-*Where*\
-目标 [list](../standard-library/list-class.md) 中插入第一个元素的位置。
+*哪里*\
+插入第一个元素的目标[列表中](../standard-library/list-class.md)的位置。
 
-*val*\
+*瓦尔*\
 添加到 `list` 末尾的元素。
 
 ### <a name="remarks"></a>备注
@@ -791,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
 
 在列表的结尾处添加一个就地构造的元素。
 
@@ -801,8 +801,8 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>参数
 
-*val*\
-添加到 [list](../standard-library/list-class.md) 末尾的元素。
+*瓦尔*\
+添加到[列表](../standard-library/list-class.md)末尾的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -832,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
 
 在列表的起始位置添加一个就地构造的元素。
 
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>参数
 
-*val*\
+*瓦尔*\
 要添加到 [list](../standard-library/list-class.md) 开头的元素。
 
 ### <a name="remarks"></a>备注
@@ -873,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a>空白处
+## <a name="empty"></a><a name="empty"></a>空
 
 测试列表是否为空。
 
@@ -910,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a>端面
+## <a name="end"></a><a name="end"></a>结束
 
 返回用于发现列表中最后一个元素之后的位置的迭代器。
 
@@ -925,7 +925,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-`end` 用于测试迭代器是否已到达其列表的末尾。
+`end`用于测试迭代器是否已到达其列表的末尾。
 
 ### <a name="example"></a>示例
 
@@ -970,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a>擦除
+## <a name="erase"></a><a name="erase"></a>擦 除
 
 从列表中的指定位置移除一个或一系列元素。
 
@@ -981,10 +981,10 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>参数
 
-*Where*\
+*哪里*\
 要从列表中移除的元素的位置。
 
-*第一个*\
+*第一*\
 要从列表中移除的第一个元素的位置。
 
 *最后*\
@@ -1045,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a>主
+## <a name="front"></a><a name="front"></a>前面
 
 返回对列表中第一个元素的引用。
 
@@ -1092,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 返回用于构造列表的分配器对象的一个副本。
 
@@ -1132,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>&
+## <a name="insert"></a><a name="insert"></a>插入
 
 将一个、几个或一系列元素插入列表中的指定位置。
 
@@ -1149,16 +1149,16 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>参数
 
-*Where*\
+*哪里*\
 目标列表中插入第一个元素的位置。
 
-*Val*\
+*瓦尔*\
 要插入到列表中的元素的值。
 
 *计数*\
 要插入列表中的元素数目。
 
-*第一个*\
+*第一*\
 要从参数列表中复制的一系列元素中第一个元素的位置。
 
 *最后*\
@@ -1238,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a>器
+## <a name="iterator"></a><a name="iterator"></a>迭 代
 
 提供可读取或修改列表中任何元素的双向迭代器的类型。
 
@@ -1248,13 +1248,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>备注
 
-类型 `iterator` 可用于修改元素的值。
+类型`iterator`可用于修改元素的值。
 
 ### <a name="example"></a>示例
 
 请参阅 [begin](#begin) 的示例。
 
-## <a name="list"></a>成员列表
+## <a name="list"></a><a name="list"></a>列表
 
 构造一个列表，它具有特定大小或它的元素具有特定值，或具有特定分配器或作为其他列表的全部或部分副本。
 
@@ -1278,19 +1278,19 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>参数
 
-*Al*\
+*铝*\
 要用于此对象的分配器类。
 
 *计数*\
 所构造列表中元素的数目。
 
-*Val*\
+*瓦尔*\
 列表中元素的值。
 
-*Right*\
+*对*\
 所构造列表要作为其副本的列表。
 
-*第一个*\
+*第一*\
 要复制的范围元素中的第一个元素的位置。
 
 *最后*\
@@ -1301,19 +1301,19 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="remarks"></a>备注
 
-所有构造函数都存储一个分配器对象（*Al*）并初始化列表。
+所有构造函数存储分配器对象 （*Al*） 并初始化列表。
 
 [get_allocator](#get_allocator) 返回用于构造列表的分配器对象的副本。
 
-前两个构造函数指定一个空的初始列表，第二个构造函数指定要使用的分配器类型（*al.exe*）。
+前两个构造函数指定一个空的初始列表，第二个构造函数指定要使用的分配器类型 （*Al*）。
 
-第三个构造函数指定类 `Type`的默认值的元素的指定数目（*计数*）重复。
+第三个构造函数指定类`Type`的默认值元素的指定数字 *（Count）* 的重复。
 
-第四个和第五个构造函数指定值*Val*的（*Count*）元素的重复。
+第四个和第五个构造函数指定值*Val*的重复（*计数*） 元素。
 
-第六个构造函数指定列表*权限*的副本。
+第六个构造函数指定列表*右侧*的副本。
 
-第七个构造函数*向右*移动列表。
+第七个构造函数向右移动*列表。*
 
 第八个构造函数使用 initializer_list 指定元素。
 
@@ -1412,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 返回列表的最大长度。
 
@@ -1443,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a>merge
+## <a name="merge"></a><a name="merge"></a>合并
 
 将元素从参数列表移除，将它们插入目标列表，将新的组合元素集以升序或其他指定顺序排序。
 
@@ -1456,17 +1456,17 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*对*\
 要与目标列表合并的自变量列表。
 
-*comp*\
+*Comp*\
 用于排列目标列表元素的比较运算符。
 
 ### <a name="remarks"></a>备注
 
-自变量列表*权限*与目标列表合并。
+参数列表*右侧*与目标列表合并。
 
-参数列表和目标列表必须用相同的比较关系进行排序，生成的序列将以这种关系进行排序。 第一个成员函数的默认排列顺序是升序。 第二个成员函数强制实施类 `Traits`的用户*指定的比较运算。*
+参数列表和目标列表必须用相同的比较关系进行排序，生成的序列将以这种关系进行排序。 第一个成员函数的默认排列顺序是升序。 第二个成员函数强制类`Traits`的用户指定的比较操作*复合。*
 
 ### <a name="example"></a>示例
 
@@ -1527,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>运算符*
 
 用另一个列表的副本替换列表中的元素。
 
@@ -1538,12 +1538,12 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*对*\
 要复制到 `list` 中的 [list](../standard-library/list-class.md)。
 
 ### <a name="remarks"></a>备注
 
-擦除 `list`中的任何现有元素后，运算符会将*右侧*的内容复制或移动到 `list`中。
+在上用 中的任何现有元素后`list`，运算符将*右侧*的内容复制或移动到 中`list`。
 
 ### <a name="example"></a>示例
 
@@ -1586,7 +1586,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>变为
+## <a name="pointer"></a><a name="pointer"></a> 指针
 
 提供指向列表元素的指针。
 
@@ -1596,11 +1596,11 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-类型 `pointer` 可用于修改元素的值。
+类型`pointer`可用于修改元素的值。
 
 在大多数情况下，应使用 [iterator](#iterator) 访问列表对象中的元素。
 
-## <a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a>pop_back
 
 删除列表末尾的元素。
 
@@ -1642,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a>pop_front
 
 删除列表起始处的一个元素。
 
@@ -1684,17 +1684,18 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a>push_back
 
 在列表的末尾添加元素。
 
 ```cpp
-void push_back(void push_back(Type&& val);
+void push_back(const Type& val);
+void push_back(Type&& val);
 ```
 
 ### <a name="parameters"></a>参数
 
-*val*\
+*瓦尔*\
 添加到列表末尾的元素。
 
 ### <a name="remarks"></a>备注
@@ -1738,7 +1739,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a>push_front
 
 在列表的开头添加元素。
 
@@ -1749,7 +1750,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>参数
 
-*val*\
+*瓦尔*\
 要添加到列表开头的元素。
 
 ### <a name="remarks"></a>备注
@@ -1793,7 +1794,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a>rbegin
 
 返回一个迭代器，此迭代器用于发现反向列表中的第一个元素。
 
@@ -1864,7 +1865,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a>对
+## <a name="reference"></a><a name="reference"></a>参考
 
 提供对存储在列表中的元素的引用的类型。
 
@@ -1900,7 +1901,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a>取消
+## <a name="remove"></a><a name="remove"></a>删除
 
 清除列表中与指定值匹配的元素。
 
@@ -1910,7 +1911,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*\
+*瓦尔*\
 一个值，如果某个元素包含该值，则会导致从列表中删除该元素。
 
 ### <a name="remarks"></a>备注
@@ -1957,7 +1958,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 将满足指定谓词的元素从列表中消除。
 
@@ -1968,7 +1969,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>参数
 
-*pred*\
+*Pred*\
 一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。
 
 ### <a name="example"></a>示例
@@ -2022,7 +2023,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a>撕裂
 
 返回发现反向列表中最后一个元素之后的位置的迭代器。
 
@@ -2108,7 +2109,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a>调节
+## <a name="resize"></a><a name="resize"></a>调整
 
 为列表指定新的大小。
 
@@ -2122,14 +2123,14 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*\
 列表的新大小。
 
-*val*\
-新的大小大于原始大小时要添加至列表的新元素的值。 如果省略此值，则会赋给新元素此类的默认值。
+*瓦尔*\
+新的大小大于原始大小时要添加至列表的新元素的值。 如果省略此值，则会赋给新元素该类的默认值。
 
 ### <a name="remarks"></a>备注
 
-如果列表的大小小于请求的大小， *_Newsize*会将元素添加到列表中，直到它达到请求的大小。
+如果列表的大小小于请求的大小 *，_Newsize*的元素将添加到列表中，直到达到请求的大小。
 
-如果列表的大小大于请求的大小，则删除与列表末尾最近的元素，直到列表达到 *_Newsize*的大小。
+如果列表的大小大于请求的大小，则最接近列表末尾的元素将被删除，直到列表达到 *_Newsize*的大小。
 
 如果列表的当前大小与请求的大小相同，则不采取任何操作。
 
@@ -2175,7 +2176,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a>反向
+## <a name="reverse"></a><a name="reverse"></a>反向
 
 反转列表中元素的顺序。
 
@@ -2219,7 +2220,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
 
 提供可读取或修改反向列表中的元素的双向迭代器的类型。
 
@@ -2233,9 +2234,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="example"></a>示例
 
-请参阅 [rbegin](#rbegin) 的示例。
+请参阅[rbegin 的示例](#rbegin)。
 
-## <a name="size"></a>规格
+## <a name="size"></a><a name="size"></a>大小
 
 返回列表中元素的数目。
 
@@ -2276,7 +2277,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 计算列表中元素的数目的类型。
 
@@ -2288,7 +2289,7 @@ typedef typename Allocator::size_type size_type;
 
 请参阅 [size](#size) 的示例。
 
-## <a name="sort"></a>进行
+## <a name="sort"></a><a name="sort"></a>排序
 
 按升序或用户指定的其他顺序排列列表元素。
 
@@ -2301,14 +2302,14 @@ template <class Traits>
 
 ### <a name="parameters"></a>参数
 
-*comp*\
+*Comp*\
 用于排列连续元素的比较运算符。
 
 ### <a name="remarks"></a>备注
 
 默认情况下，第一个成员函数将按升序排列元素。
 
-成员模板函数将根据类 `Traits`的用户*指定的比较运算。*
+成员模板函数根据类`Traits`的用户指定的比较操作*比较比较对*元素进行排序。
 
 ### <a name="example"></a>示例
 
@@ -2353,7 +2354,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a>接头
+## <a name="splice"></a><a name="splice"></a>拼接
 
 从源列表中删除元素并将其插入到目标列表中。
 
@@ -2373,16 +2374,16 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>参数
 
-*Where*\
+*哪里*\
 目标列表中要在其前面进行插入的位置。
 
-*Source*\
+*源*\
 要插入目标列表中的源列表。
 
 *Iter*\
 要从源列表中进行插入的元素。
 
-*第一个*\
+*第一*\
 要从源列表中进行插入的范围中的第一个元素。
 
 *最后*\
@@ -2390,11 +2391,11 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="remarks"></a>备注
 
-第一对成员函数将源列表中的所有元素插入到目标列表中的位置之前的位置，*并从源列表中移除*所有元素。 （`&Source` 不得等于 `this`。）
+第一对成员函数将源列表中的所有元素插入到目标列表中，然后*将 Where*引用的位置插入目标列表，并从源列表中删除所有元素。 （`&Source`不能等于`this`.
 
-第二对成员函数在目标列表中的位置*之前，插入*由*Iter*引用的元素，并从源列表中删除*Iter* 。 （如果 `Where == Iter || Where == ++Iter`，则不会发生更改。）
+第二对成员函数将*Iter*引用的元素插入*Where*引用的目标列表中的位置之前，并从源列表中删除*Iter。* （如果 `Where == Iter || Where == ++Iter`，则不会发生更改。）
 
-第三对成员函数将 [`First`，`Last`）指定的范围插入到由引用的目标列表中的元素之前，*并从*源列表中删除该范围的元素。 （如果 `&Source == this`，范围 `[First, Last)` 一定不能包含*指向的元素。）*
+第三对成员函数在*Where*引用的目标列表中的元素`First`之前`Last`插入 * 指定的范围，并从源列表中删除该范围的元素。 （如果`&Source == this`，范围`[First, Last)`不能包括*Where*. 指向的元素。
 
 如果范围接合插入 `N` 个元素和 `&Source != this`，则类 [iterator](../standard-library/forward-list-class.md#iterator) 的对象会递增 `N` 次。
 
@@ -2476,7 +2477,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a>交换
 
 交换两个列表的元素。
 
@@ -2487,11 +2488,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>参数
 
-*right*\
-提供要交换的元素的列表，或其元素要与*左侧*列表中的元素进行交换的列表。
+*对*\
+提供要交换的元素的列表，或要与*剩余*列表中的元素交换的列表。
 
-*左*\
-一个列表，其元素将与列表*右侧*的元素进行交换。
+*离开*\
+要与列表*右侧*的元素交换的列表。
 
 ### <a name="example"></a>示例
 
@@ -2541,7 +2542,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a>针对
+## <a name="unique"></a><a name="unique"></a>独特
 
 从列表中删除满足某些其他二元谓词的相邻重复元素或相邻元素。
 
@@ -2554,7 +2555,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>参数
 
-*pred*\
+*Pred*\
 用于比较连续元素的二元谓词。
 
 ### <a name="remarks"></a>备注
@@ -2563,7 +2564,7 @@ void unique(BinaryPredicate pred);
 
 第一个成员函数删除比较等于其前一个元素的每个元素。
 
-第二个成员函数在与前面的元素进行比较时删除满足谓词函数*pred*的每个元素。 您可以使用参数*pred*的 \<功能 > 标头中声明的任何二元函数对象，也可以创建自己的函数对象。
+第二个成员函数删除与其前面的元素相比，满足*预置*谓词函数的每个元素。 可以使用\<函数>标头中声明的任何二进制函数对象进行*参数预置*，也可以创建自己的函数对象。
 
 ### <a name="example"></a>示例
 
@@ -2614,7 +2615,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 表示列表中存储的数据类型的类型。
 

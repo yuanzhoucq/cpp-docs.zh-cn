@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideBar 类
+title: CMFCAutoHidebar 类
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCAutoHideBar
@@ -38,18 +38,18 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62750f4fb1261f4f30286297c3a240ab67e6df1c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403904"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369904"
 ---
-# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 类
+# <a name="cmfcautohidebar-class"></a>CMFCAutoHidebar 类
 
 `CMFCAutoHideBar` 类是实现自动隐藏功能的特殊工具栏类。
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -61,38 +61,38 @@ class CMFCAutoHideBar : public CPane
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|（重写 `CPane::AllowShowOnPaneMenu`。）|
-|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(重写[cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|
-|[CMFCAutoHideBar::Create](#create)|创建控件条，并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。 (重写[cpane:: Create](../../mfc/reference/cpane-class.md#create)。)|
-|[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||
-|[CMFCAutoHideBar::GetVisibleCount](#getvisiblecount)||
-|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|当即将显示特殊窗格菜单时由框架调用。 (重写[cpane:: Onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu)。)|
+|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|（覆盖[CBasePane：：CalcFixed 布局](../../mfc/reference/cbasepane-class.md#calcfixedlayout).）|
+|[CMFCAutoHideBar::Create](#create)|创建控制栏并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。 （覆盖[CPane：创建](../../mfc/reference/cpane-class.md#create).）|
+|[CMFCAutoHidebar：获取第一AH窗口](#getfirstahwindow)||
+|[CMFCAutoHidebar：获取可见计数](#getvisiblecount)||
+|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|当即将显示特殊窗格菜单时由框架调用。 （覆盖[CPane：在显示控制栏菜单](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).）|
 |[CMFCAutoHideBar::RemoveAutoHideWindow](#removeautohidewindow)||
-|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|(重写[cpane:: Setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup)。)|
+|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|（覆盖[CPane：设置活动组](../../mfc/reference/cpane-class.md#setactiveingroup)。）|
 |[CMFCAutoHideBar::SetRecentVisibleState](#setrecentvisiblestate)||
 |[CMFCAutoHideBar::ShowAutoHideWindow](#showautohidewindow)||
-|[CMFCAutoHideBar::StretchPane](#stretchpane)|垂直或水平拉伸窗格。 (重写[cbasepane:: Stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane)。)|
+|[CMFCAutoHideBar::StretchPane](#stretchpane)|垂直或水平拉伸窗格。 （覆盖[CBasePane：拉伸窗格](../../mfc/reference/cbasepane-class.md#stretchpane).）|
 |[CMFCAutoHideBar::UnSetAutoHideMode](#unsetautohidemode)||
 |[CMFCAutoHideBar::UpdateVisibleState](#updatevisiblestate)||
 
 ### <a name="data-members"></a>数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|当用户将鼠标光标放在上方的时刻之间的时间延迟[CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)的时刻与框架显示关联的窗口。|
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|用户将鼠标光标放在[CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)上的时间延迟与框架显示关联窗口的瞬间之间的时间延迟。|
 
 ## <a name="remarks"></a>备注
 
-当用户将停靠窗格切换为自动隐藏模式时，框架会自动创建 `CMFCAutoHideBar` 对象。 它还将创建所需[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)并[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)对象。 每个 `CAutoHideDockSite` 对象都与单个 `CMFCAutoHideButton` 关联。
+当用户将停靠窗格切换为自动隐藏模式时，框架会自动创建 `CMFCAutoHideBar` 对象。 它还创建必要的[CAutoHideDockSiteSite](../../mfc/reference/cautohidedocksite-class.md)和[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)对象。 每个 `CAutoHideDockSite` 对象都与单个 `CMFCAutoHideButton` 关联。
 
 `CMFCAutoHideBar` 类在用户鼠标悬停在 `CMFCAutoHideButton` 上方时实现 `CAutoHideDockSite` 的显示。 当工具栏收到 WM_MOUSEMOVE 消息时，`CMFCAutoHideBar` 会启动计时器。 当计时器完成时，它会向工具栏发送 WM_TIMER 事件通知。 工具栏通过检查鼠标指针是否位于它在计时器启动时所处的相同自动隐藏按钮上，来处理此事件。 如果是，则显示附加的 `CAutoHideDockSite`。
 
@@ -122,7 +122,7 @@ class CMFCAutoHideBar : public CPane
 
 **标头：** afxautohidebar.h
 
-## <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
+## <a name="cmfcautohidebaraddautohidewindow"></a><a name="addautohidewindow"></a>CMFC自动隐藏栏：：添加自动隐藏窗口
 
 向 `CDockablePane` 窗口添加让它能够自动隐藏的功能。
 
@@ -134,17 +134,17 @@ CMFCAutoHideButton* AddAutoHideWindow(
 
 ### <a name="parameters"></a>参数
 
-*pAutoHideWnd*<br/>
-[in]在你想要隐藏的窗口。
+*pAutoHidewnd*<br/>
+[在]要隐藏的窗口。
 
-*dwAlignment*<br/>
-[in]一个值，指定与应用程序窗口自动隐藏按钮的对齐方式。
+*dwalignment*<br/>
+[在]指定自动隐藏按钮与应用程序窗口对齐的值。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-*DwAlignment*参数指示应用程序中的自动隐藏按钮所在的位置。 该参数可为下列任一值：
+*dwAlignment*参数指示自动隐藏按钮驻留在应用程序中的位置。 该参数可为下列任一值：
 
 - CBRS_ALIGN_LEFT
 
@@ -154,7 +154,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
 
 - CBRS_ALIGN_BOTTOM
 
-## <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
+## <a name="cmfcautohidebarallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CMFC自动隐藏栏：：允许显示帕内菜单
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -164,7 +164,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
+## <a name="cmfcautohidebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCAutoHidebar：：CalcFixed布局
 
 ```
 virtual CSize CalcFixedLayout(
@@ -174,15 +174,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>参数
 
-[in] *bStretch*<br/>
+[在]*b 拉伸*<br/>
 
-[in] *bHorz*<br/>
+[在]*布霍兹*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
+## <a name="cmfcautohidebarcmfcautohidebar"></a><a name="cmfcautohidebar"></a>CMFC自动隐藏栏：CMFC自动隐藏栏
 
 构造 CMFCAutoHideBar 对象。
 
@@ -192,7 +192,7 @@ CMFCAutoHideBar();
 
 ### <a name="remarks"></a>备注
 
-## <a name="create"></a>  CMFCAutoHideBar::Create
+## <a name="cmfcautohidebarcreate"></a><a name="create"></a>CMFCAutoHidebar：创建
 
 ```
 virtual BOOL Create(
@@ -207,17 +207,17 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*lpszClassName*<br/>
+*lpszClass名称*<br/>
 
 *dwStyle*<br/>
 
-*rect*<br/>
+*矩形*<br/>
 
-*pParentWnd*<br/>
+*pparentwnd*<br/>
 
 *nID*<br/>
 
-*dwControlBarStyle*<br/>
+*dwControlBar样式*<br/>
 
 *pContext*<br/>
 
@@ -225,7 +225,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-## <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
+## <a name="cmfcautohidebargetfirstahwindow"></a><a name="getfirstahwindow"></a>CMFCAutoHidebar：获取第一AH窗口
 
 返回指向应用程序中的第一个自动隐藏窗口的指针。
 
@@ -239,7 +239,7 @@ CDockablePane* GetFirstAHWindow();
 
 ### <a name="remarks"></a>备注
 
-## <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
+## <a name="cmfcautohidebargetvisiblecount"></a><a name="getvisiblecount"></a>CMFCAutoHidebar：获取可见计数
 
 获取可见自动隐藏按钮的数目。
 
@@ -253,9 +253,9 @@ int GetVisibleCount();
 
 ### <a name="remarks"></a>备注
 
-## <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
+## <a name="cmfcautohidebarm_nshowahwnddelay"></a><a name="m_nshowahwnddelay"></a>CMFCAutoHidebar：m_nShowAHWndDelay
 
-当用户将鼠标光标放在上方的时刻之间的时间延迟[CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)的时刻与框架显示关联的窗口。
+用户将鼠标光标放在[CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)上的时间延迟与框架显示关联窗口的瞬间之间的时间延迟。
 
 ```
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
@@ -263,9 +263,9 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 
 ### <a name="remarks"></a>备注
 
-当用户将鼠标光标放在上方`CMFCAutoHideButton`，框架显示关联的窗口之前会有轻微延迟。 此参数确定该延迟以毫秒为单位的长度。
+当用户将鼠标光标放在 上 时`CMFCAutoHideButton`，框架显示关联的窗口之前会有轻微的延迟。 此参数确定该延迟的长度（以毫秒为单位）。
 
-## <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
+## <a name="cmfcautohidebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFC自动隐藏栏：在显示控制栏菜单
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -273,13 +273,13 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>参数
 
-[in]*CPoint*<br/>
+[在]*CPoint*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
+## <a name="cmfcautohidebarremoveautohidewindow"></a><a name="removeautohidewindow"></a>CMFC自动隐藏栏：删除自动隐藏窗口
 
 删除并销毁自动隐藏窗口。
 
@@ -289,7 +289,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>参数
 
-CDockablePane * *pAutoHideWnd*若要删除的自动隐藏窗口。
+CdockPane® *pAutohided*自动隐藏窗口要删除。
 
 ### <a name="return-value"></a>返回值
 
@@ -297,7 +297,7 @@ CDockablePane * *pAutoHideWnd*若要删除的自动隐藏窗口。
 
 ### <a name="remarks"></a>备注
 
-## <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
+## <a name="cmfcautohidebarsetactiveingroup"></a><a name="setactiveingroup"></a>CMFCAutohidebar：：设置活动组
 
 将自动隐藏栏标记为活动。
 
@@ -307,13 +307,13 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 ### <a name="parameters"></a>参数
 
-[in]BOOL *bActive*为 true，则设置为活动状态; 否则为 FALSE。
+[在]BOOL *bActive* TRUE 设置为活动状态;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
 请参阅 [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup)。
 
-## <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
+## <a name="cmfcautohidebarsetrecentvisiblestate"></a><a name="setrecentvisiblestate"></a>CMFCAutoHidebar：：设置最近可见状态
 
 ```
 void SetRecentVisibleState(BOOL bState);
@@ -321,12 +321,12 @@ void SetRecentVisibleState(BOOL bState);
 
 ### <a name="parameters"></a>参数
 
-*bState*<br/>
-[in]若要设置的状态。
+bState**<br/>
+[在]要设置的状态。
 
 ### <a name="remarks"></a>备注
 
-## <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
+## <a name="cmfcautohidebarshowautohidewindow"></a><a name="showautohidewindow"></a>CMFC自动隐藏栏：显示自动隐藏窗口
 
 显示自动隐藏窗口。
 
@@ -339,14 +339,14 @@ BOOL ShowAutoHideWindow(
 
 ### <a name="parameters"></a>参数
 
-*pAutoHideWnd*<br/>
-[in]若要显示的窗口。
+*pAutoHidewnd*<br/>
+[在]要显示的窗口。
 
-*bShow*<br/>
-[in]若要显示窗口，则为 TRUE。
+*b显示*<br/>
+[在]TRUE 以显示窗口。
 
 *bDelay*<br/>
-[in]忽略此参数。
+[在]忽略此参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -354,7 +354,7 @@ BOOL ShowAutoHideWindow(
 
 ### <a name="remarks"></a>备注
 
-## <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
+## <a name="cmfcautohidebarstretchpane"></a><a name="stretchpane"></a>CMFC自动隐藏栏：拉伸窗格
 
 调整自动隐藏栏在其折叠状态下的大小，以适应 `CMFCAutoHideButton` 对象。
 
@@ -366,11 +366,11 @@ virtual CSize StretchPane(
 
 ### <a name="parameters"></a>参数
 
-*nLength*<br/>
-[in]在基实现中未使用该值。 在派生的实现中，使用此值可指示已调整大小的窗格的长度。
+*n 长度*<br/>
+[在]该值在基本实现中未使用。 在派生的实现中，使用此值可指示已调整大小的窗格的长度。
 
 *bVert*<br/>
-[in]在基实现中未使用该值。 在派生实现中，使用 true 可自动隐藏栏垂直，折叠其中这种情况的句柄和 FALSE 的情况下，自动隐藏栏水平折叠的。
+[在]该值在基本实现中未使用。 在派生实现中，使用 TRUE 处理自动隐藏栏垂直折叠的情况，对于自动隐藏栏水平折叠的情况，请使用 FALSE。
 
 ### <a name="return-value"></a>返回值
 
@@ -380,7 +380,7 @@ virtual CSize StretchPane(
 
 派生的类可以替代此方法以自定义该行为。
 
-## <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
+## <a name="cmfcautohidebarunsetautohidemode"></a><a name="unsetautohidemode"></a>CMFC自动隐藏栏：：取消设置自动隐藏模式
 
 对一组自动隐藏栏禁用自动隐藏模式。
 
@@ -390,11 +390,11 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 
 ### <a name="parameters"></a>参数
 
-[in] pFirstBarInGroup 指向组中的第一个自动隐藏栏的指针。
+[in] pFirstBarInGroup A 指针指向组中的第一个自动隐藏栏。
 
 ### <a name="remarks"></a>备注
 
-## <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
+## <a name="cmfcautohidebarupdatevisiblestate"></a><a name="updatevisiblestate"></a>CMFCAutoHidebar：：更新可见状态
 
 由框架在需要重绘自动隐藏栏时调用。
 
@@ -404,10 +404,10 @@ void UpdateVisibleState();
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CPane 类](../../mfc/reference/cpane-class.md)<br/>
+[CPane Class](../../mfc/reference/cpane-class.md)<br/>
 [CAutoHideDockSite 类](../../mfc/reference/cautohidedocksite-class.md)<br/>
-[CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)
+[CMFC自动隐藏按钮类](../../mfc/reference/cmfcautohidebutton-class.md)

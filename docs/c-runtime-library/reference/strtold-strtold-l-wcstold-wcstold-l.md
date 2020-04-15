@@ -1,11 +1,15 @@
 ---
 title: strtold、_strtold_l、 wcstold、_wcstold_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - wcstold
 - strtold
 - _strtold_l
 - _wcstold_l
+- _o__strtold_l
+- _o__wcstold_l
+- _o_strtold
+- _o_wcstold
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: f1a8bc385072f110832788447bfa248bc12b3663
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9acc98296651f549ceffb1e1deab350a71747ea5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957702"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365362"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold、_strtold_l、 wcstold、_wcstold_l
 
@@ -69,23 +74,25 @@ long double wcstold_l(
 *strSource*<br/>
 要转换的 null 终止的字符串。
 
-*endptr*<br/>
+*端点*<br/>
 指向停止扫描的字符的指针。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-**strtold**以**长** **双精度**形式返回浮点数的值，但当表示形式导致溢出时除外，在这种情况下，函数返回 +/-**HUGE_VALL**。 **HUGE_VALL**的符号与无法表示的值的符号匹配。 如果无法执行任何转换或发生下溢，则**strtold**将返回0。
+**strdd**将浮点数的值返回为**长****双**精度值，除非表示形式将导致溢出 - 在这种情况下，函数返回 +/-**HUGE_VALL**。 **HUGE_VALL**的符号与无法表示的值的符号匹配。 如果无法执行转换或发生，**则串划**返回 0 。
 
-**wcstold**将类似值返回到**strtold**。 对于这两个函数，如果出现溢出或下溢，则**errno**设置为**ERANGE** ，并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+**wcstold**返回的值类似于**串联**。 对于这两个函数，如果发生溢出或下溢并调用无效的参数处理程序 **，errno**设置为**ERANGE，** 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个函数将输入字符串*strSource*转换为**长** **双精度**值。 **Strtold**函数在其无法识别为数字一部分的第一个字符处停止读取字符串*strSource* 。 这可能是终止 null 字符。 **Strtold**的宽字符版本为**wcstold**;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+每个函数将输入字符串*strSource*转换为**长****双**。 **串字**函数停止读取字符串*strSource*的第一个字符，它不能识别为数字的一部分。 这可能是终止 null 字符。 串**字**的宽字符版本是**wcstold;** 其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -94,24 +101,24 @@ long double wcstold_l(
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-当前区域设置的**LC_NUMERIC**类别设置决定了*strSource*中的基数字符的识别。 有关详细信息，请参阅 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 不带 **_l**后缀的函数使用当前区域设置; **_strtold_l**和 **_wcstold_l**与 **_strtold**和 **_wcstold**相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+当前区域设置的**LC_NUMERIC**类别设置决定了*strSource*中半径字符的识别。 有关详细信息，请参阅 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 没有 **_l**后缀的函数使用当前区域设置;**_strtold_l**和 **_wcstold_l**与 **_strtold**和 **_wcstold**相同，只是它们使用传入区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不为**NULL**，则指向停止扫描的字符的指针将存储在*endptr*指向的位置。 如果无法执行任何转换（未找到任何有效的数字或指定了无效的基数），则*strSource*的值将存储在*endptr*指向的位置。
+如果*端点*不是**NULL，** 则指向停止扫描的字符的指针存储在*端点指向*的位置。 如果无法执行转换（未找到有效数字或指定了无效的基），*则 strSource*的值存储在*endptr*指向的位置。
 
-**strtold**要求*strSource*指向以下格式的字符串：
+**strtold**期望*strSource*指向以下形式的字符串：
 
-[*空格*][*sign*][*数字*][.*数字*][{**d** &#124; **d** &#124; **e** &#124; **e**} [*sign*]*数字*]
+[*空白 ]*[*符号*][*数字*][.*数字*|[**d** &#124; **d** &#124; **e** &#124; **e**=*符号*=*数字*|
 
-*空格*可能包含被忽略的空格和制表符;*sign*可以是加号（ **+** ）或减号（ **-** ）; 并且*数字*是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字可以后跟一个指数，其中包含介绍性字母（**d**、**D**、**e** 或 **E**）和可选的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
+*空格*可以由忽略的空格和制表符组成;*符号*是加 （**+**） 或**-** 减 （ ）;*数字*是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字可以后跟一个指数，其中包含介绍性字母（**d**、**D**、**e** 或 **E**）和可选的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**strtold**、 **_strtold_l**|\<stdlib.h>|
-|**wcstold**、 **_wcstold_l**|\<stdlib.h> 或 \<wchar.h>|
+|**串 ，** **_strtold_l**|\<stdlib.h>|
+|**wcstold**， **_wcstold_l**|\<stdlib.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -144,12 +151,12 @@ string = 3.1415926535898This stopped it
    Stopped scan at: This stopped it
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [字符串到数值函数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

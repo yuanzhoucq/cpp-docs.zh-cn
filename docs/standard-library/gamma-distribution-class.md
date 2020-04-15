@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: ab71ada5b1fb8b604b94ed098a46820b86a65c63
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370674"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution 类
 
@@ -70,22 +70,22 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType* \
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
-*URNG* \
-统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*乌尔格*\
+统一的随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述产生用户指定的浮点类型的值的分布，或者 **，如果未提供，则根据**伽玛分布进行分布。 下表链接到有关各个成员的文章。
+类模板描述生成用户指定的浮点类型的值的分布，或者如果没有提供，则表示**双精度值**，该分布根据 Gamma 分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
 |`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
 
-属性函数 `alpha()` 和 `beta()` 返回存储的分布参数 alpha 和 beta 的各自值。
+属性函数 `alpha()` 和 `beta()` 返回存储的分布参数 alpha** 和 beta** 的各自值。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -95,7 +95,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 有关 gamma 分布的详细信息，请参阅 Wolfram MathWorld 文章 [Gamma 分布](https://go.microsoft.com/fwlink/p/?linkid=401111)。
 
@@ -188,7 +188,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution：：gamma_distribution
 
 构造分布。
 
@@ -199,24 +199,24 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*alpha* \
+*阿 尔 法*\
 `alpha` 分布参数。
 
-*beta* \
+*试用版*\
 `beta` 分布参数。
 
-*parm* \
+*帕尔姆*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
-**前提条件：** `0.0 < alpha` 和 `0.0 < beta`
+**前置条件：** `0.0 < alpha` 和 `0.0 < beta`
 
-第一个构造函数构造的对象的存储的 `alpha` 值保留值 alpha，存储的 `beta` 值保留值 beta。
+第一个构造函数构造的对象的存储的 `alpha` 值保留值 alpha**，存储的 `beta` 值保留值 beta**。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>gamma_distribution::param_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution：:p阿拉姆型
 
 存储分布的参数。
 
@@ -234,21 +234,21 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*alpha* \
+*阿 尔 法*\
 `alpha` 分布参数。
 
-*beta* \
+*试用版*\
 `beta` 分布参数。
 
-*right* \
+*对*\
 与此比较的 `param_type` 实例。
 
 ### <a name="remarks"></a>备注
 
-**前提条件：** `0.0 < alpha` 和 `0.0 < beta`
+**前置条件：** `0.0 < alpha` 和 `0.0 < beta`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

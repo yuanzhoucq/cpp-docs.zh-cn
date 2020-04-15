@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: efad391eb2512cfa59cc3597430a84727676f27e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811097"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333806"
 ---
 # <a name="bsearch"></a>bsearch
 
-执行排序数组的二进制搜索。 此函数有一个更安全的版本；请参阅 [bsearch_s](bsearch-s.md)。
+执行排序数组的二进制搜索。 提供此函数的一个更安全的版本，请参阅 [bsearch_s](bsearch-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -51,44 +53,46 @@ void *bsearch(
 
 ### <a name="parameters"></a>参数
 
-*密钥*\
+*关键*\
 指向要搜索的键的指针。
 
-*base*\
-指向搜索数据的基的指针。
+*基地*\
+指向搜索数据的基础。
 
-*数字*\
+*数量*\
 元素数量。
 
-*width*\
+*宽度*\
 元素的宽度。
 
 *比较*\
-比较两个元素的回调函数。 第一个是指向用于搜索的键的指针，第二个参数是指向要与该键进行比较的数组元素的指针。
+比较两个元素的回调函数。 第一个是指向搜索键的指针，第二个是指向要与键进行比较的数组元素的指针。
 
 ## <a name="return-value"></a>返回值
 
-**bsearch**返回一个指针，该指针指向由*base*指向的数组中的*键*的匹配项。 如果未找到*键*，则该函数返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
+**bsearch**返回指向*基*指向的数组中*键*事件的指针。 如果未找到*键*，则函数将返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
 ## <a name="remarks"></a>备注
 
-**Bsearch**函数对*数字*元素的已排序数组执行二进制搜索，其中每个大小均为大小的*宽度*字节。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较。 它将返回以下值之一，用于指定其关系：
+**bsearch**函数对*数字*元素的已排序数组执行二进制搜索，每个数组的大小都是*宽度*字节。 *基*值是指向要搜索的数组基础的指针，*键*是要查找的值。 *比较*参数是指向用户提供的例程的指针，该例程将请求的键与数组元素进行比较。 它返回指定其关系的以下值之一：
 
-|*比较*例程返回的值|描述|
+|*比较*例程返回的值|说明|
 |-----------------------------------------|-----------------|
 |\< 0|键小于数组元素。|
 |0|键等于数组元素。|
 |> 0|键大于数组元素。|
 
-此函数验证其参数。 如果为*compare*、 *key*或*number*为**null**，或者*base*为**null**且*number*为非零，或者*width*为零，则函数将调用无效参数处理程序，如参数中所述。 [验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则将**errno**设置为 `EINVAL`，该函数将返回**NULL**。
+此函数验证其参数。 如果*比较*，*键*或*数字*为**NULL**，或者如果*基*为**NULL**且*数字*为非零，或者如果*宽度*为零，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则**将 errno**设置为`EINVAL`，函数返回**NULL**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> 和 \<search.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -135,7 +139,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\
