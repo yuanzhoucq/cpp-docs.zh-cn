@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3a277b2f97fd53c52b705051c30eb18faf6364d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425423"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366253"
 ---
 # <a name="moneypunct-class"></a>moneypunct 类
 
-类模板描述可用作区域设置 facet 的对象，用于描述用于表示货币输入字段或货币输出字段的*CharType*类型的序列。 如果模板参数*国际*为*true*，则遵守国际约定。
+类模板描述一个对象，该对象可用作区域设置面，用于描述用于表示货币输入字段或货币输出字段的*CharType 类型的*序列。 如果模板参数*Intl* *为 true，* 则遵守国际惯例。
 
 ## <a name="syntax"></a>语法
 
@@ -64,9 +64,9 @@ template <class CharType, bool Intl>
 class moneypunct;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*CharType*\
+*字符类型*\
 在程序中用于对字符进行编码的类型。
 
 *国际*\
@@ -91,7 +91,7 @@ class moneypunct;
 |[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|
 |[string_type](#string_type)|一种类型，此类型描述包含 `CharType` 类型字符的字符串。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
 |成员函数|说明|
 |-|-|
@@ -107,7 +107,7 @@ class moneypunct;
 |[do_positive_sign](#do_positive_sign)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作正号符号的区域设置特定元素序列。|
 |[do_thousands_sep](#do_thousands_sep)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作千位分隔符号的区域设置特定元素序列。|
 |[frac_digits](#frac_digits)|可返回一个在任何小数点右侧显示的位数计数。|
-|[grouping](#grouping)|返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
+|[分组](#grouping)|返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
 |[neg_format](#neg_format)|返回一个区域设置特定规则，用于对包含负数的输出结果进行格式化。|
 |[negative_sign](#negative_sign)|返回要用作负号符号的区域设置特定元素序列。|
 |[pos_format](#pos_format)|返回一个区域设置特定规则，用于对包含正数的输出结果进行格式化。|
@@ -116,11 +116,11 @@ class moneypunct;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<区域设置 >
+**标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="char_type"></a>moneypunct::char_type
+## <a name="moneypunctchar_type"></a><a name="char_type"></a>钱币：：char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -132,7 +132,7 @@ typedef CharType char_type;
 
 该类型是模板参数 **CharType** 的同义词。
 
-## <a name="curr_symbol"></a>moneypunct::curr_symbol
+## <a name="moneypunctcurr_symbol"></a><a name="curr_symbol"></a>钱币：：curr_symbol
 
 返回要用作货币符号的区域设置特定元素序列。
 
@@ -169,7 +169,7 @@ int main( )
 };
 ```
 
-## <a name="decimal_point"></a>moneypunct::decimal_point
+## <a name="moneypunctdecimal_point"></a><a name="decimal_point"></a>金钱：:decimal_point
 
 返回要用作小数点符号的区域设置特定元素序列。
 
@@ -215,7 +215,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,
 ```
 
-## <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol
+## <a name="moneypunctdo_curr_symbol"></a><a name="do_curr_symbol"></a>货币插语：:do_curr_符号
 
 一种受保护的虚拟成员函数，可返回要用作货币符号的区域设置特定元素序列。
 
@@ -231,7 +231,7 @@ virtual string_type do_curr_symbol() const;
 
 请参阅 [curr_symbol](#curr_symbol) 的示例，其中虚拟成员函数由 `curr_symbol` 调用。
 
-## <a name="do_decimal_point"></a>  moneypunct::do_decimal_point
+## <a name="moneypunctdo_decimal_point"></a><a name="do_decimal_point"></a>货币尖：:d奥多数点
 
 一种受保护的虚拟成员函数，可返回要用作小数点符号的区域设置特定元素序列。
 
@@ -247,7 +247,7 @@ virtual CharType do_decimal_point() const;
 
 请参阅 [decimal_point](#decimal_point) 的示例，其中虚拟成员函数由 `decimal_point` 调用。
 
-## <a name="do_frac_digits"></a>  moneypunct::do_frac_digits
+## <a name="moneypunctdo_frac_digits"></a><a name="do_frac_digits"></a>货币：:do_frac_数字
 
 一种受保护的虚拟成员函数，可返回一个在任何小数点右侧显示的位数计数。
 
@@ -263,7 +263,7 @@ virtual int do_frac_digits() const;
 
 请参阅 [frac_digits](#frac_digits) 的示例，其中虚拟成员函数由 `frac_digits` 调用。
 
-## <a name="do_grouping"></a>  moneypunct::do_grouping
+## <a name="moneypunctdo_grouping"></a><a name="do_grouping"></a>金钱：:do_分组
 
 一种受保护的虚拟成员函数，可返回用于确定如何对任何小数点左侧的数字进行分组的区域设置特定规则。
 
@@ -277,9 +277,9 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping`调用。
+请参阅[分组的示例](#grouping)，其中虚拟成员函数由`grouping`调用。
 
-## <a name="do_neg_format"></a>  moneypunct::do_neg_format
+## <a name="moneypunctdo_neg_format"></a><a name="do_neg_format"></a>货币插语：:do_neg_格式
 
 一种受保护的虚拟成员函数，通过调用此函数可返回一个区域设置特定规则，用于对包含负数的输出结果进行格式化。
 
@@ -289,27 +289,27 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 `pattern::field` 的四个元素中的每一个都可以具有以下值：
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 的四个元素中的每一`pattern::field`个都可以具有以下值：
 
-- `none` 匹配零个或多个空格，或不生成任何空格。
+- `none`匹配零个或多个空格或生成任何空格。
 
-- `sign` 匹配或生成正号或负号。
+- `sign`匹配或生成正或负符号。
 
-- `space` 匹配零个或多个空格或生成空格。
+- `space`以匹配零个或多个空格或生成空格。
 
-- `symbol` 匹配或生成货币符号。
+- `symbol`匹配或生成货币符号。
 
-- `value` 匹配或生成货币值。
+- `value`匹配或生成货币价值。
 
-生成货币输出字段的组件，并按这些元素在 `pattern::field`中的显示顺序来匹配货币输入字段的组成部分。 `sign`、`symbol`、`value`和 `none` 或 `space` 的每个值必须只出现一次。 值 `none` 不得首先显示。 值 **space** 不能第一个或最后一个出现。 如果 `Intl` 为 true，则顺序为 `symbol`、`sign`、`none`，然后 `value`。
+生成货币输出字段的组件，货币输入字段的组件按这些元素在 中的`pattern::field`显示顺序匹配。 每个值`sign`、、`symbol``value`和 必须`none``space`正好显示一次。 该值`none`不能首先显示。 值 **space** 不能第一个或最后一个出现。 如果`Intl`为 true，则顺序`symbol`为`sign` `none`，，`value`然后 。
 
-`moneypunct`的模板版本 \< **CharType**，**国际**> 返回 `{`**money_base：： symbol**， **money_base：： sign**， **money_base：： value**， **money_base：： none**`}`。
+`moneypunct`\< **CharType**, **Intl**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
 ### <a name="example"></a>示例
 
 请参阅 [neg_format](#neg_format) 的示例，其中虚拟成员函数由 `neg_format` 调用。
 
-## <a name="do_negative_sign"></a>  moneypunct::do_negative_sign
+## <a name="moneypunctdo_negative_sign"></a><a name="do_negative_sign"></a>金钱：:do_负_符号
 
 一种受保护的虚拟成员函数，通过调用此函数可返回要用作负号符号的区域设置特定元素序列。
 
@@ -325,7 +325,7 @@ virtual string_type do_negative_sign() const;
 
 请参阅 [negative_sign](#negative_sign) 的示例，其中虚拟成员函数由 `negative_sign` 调用。
 
-## <a name="do_pos_format"></a>  moneypunct::do_pos_format
+## <a name="moneypunctdo_pos_format"></a><a name="do_pos_format"></a>货币插语：:do_pos_格式
 
 一种受保护的虚拟成员函数，通过调用此函数可返回一个区域设置特定规则，用于对包含正数的输出结果进行格式化。
 
@@ -335,15 +335,15 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成正金额的货币输出字段的方式。 （它还确定如何匹配货币输入字段的组件。）编码与[do_neg_format](#do_neg_format)的编码相同。
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成正金额的货币输出字段的方式。 （它还确定如何匹配货币输入字段的组件。编码与[do_neg_format](#do_neg_format)相同。
 
-模板版本的 moneypunct\< **CharType**， **Inputlterator**> 返回 `{`**money_base：： symbol**， **money_base：： sign**， **money_base：： value**， **money_base：： none**`}`。
+moneypunct\< **CharType**, **Inputlterator**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
 ### <a name="example"></a>示例
 
 请参阅 [pos_format](#pos_format) 的示例，其中虚拟成员函数由 `pos_format` 调用。
 
-## <a name="do_positive_sign"></a>  moneypunct::do_positive_sign
+## <a name="moneypunctdo_positive_sign"></a><a name="do_positive_sign"></a>金钱：:do_正\符号
 
 一种受保护的虚拟成员函数，可返回要用作正号的区域设置特定元素序列。
 
@@ -359,7 +359,7 @@ virtual string_type do_positive_sign() const;
 
 请参阅 [positive_sign](#positive_sign) 的示例，其中虚拟成员函数由 `positive_sign` 调用。
 
-## <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep
+## <a name="moneypunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>钱币：:do_千_sep
 
 一种受保护的虚拟成员函数，可返回要用作任何小数点左侧的组分隔符的区域设置特定元素。
 
@@ -375,7 +375,7 @@ virtual CharType do_thousands_sep() const;
 
 请参阅 [thousands_sep](#thousands_sep) 的示例，其中虚拟成员函数由 `thousands_sep` 调用。
 
-## <a name="frac_digits"></a>  moneypunct::frac_digits
+## <a name="moneypunctfrac_digits"></a><a name="frac_digits"></a>钱币：：frac_digits
 
 可返回一个在任何小数点右侧显示的位数计数。
 
@@ -444,7 +444,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="grouping"></a>  moneypunct::grouping
+## <a name="moneypunctgrouping"></a><a name="grouping"></a>金钱：：分组
 
 返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。
 
@@ -513,7 +513,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunct"></a>  moneypunct::moneypunct
+## <a name="moneypunctmoneypunct"></a><a name="moneypunct"></a>金钱：：金钱
 
 `moneypunct` 类型对象的构造函数。
 
@@ -521,26 +521,26 @@ to the right of the radix character: 2
 explicit moneypunct(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为：
+*_Refs*参数的可能值及其显著性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \> 1：未定义这些值。
+- \>1： 未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过 [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*) 初始化其基对象。
+构造函数使用[区域设置：：面](../standard-library/locale-class.md#facet_class)（= *Refs）* 初始化其基本对象。
 
-## <a name="neg_format"></a>  moneypunct::neg_format
+## <a name="moneypunctneg_format"></a><a name="neg_format"></a>钱币：：neg_format
 
 返回一个区域设置特定规则，用于对包含负数的输出结果进行格式化。
 
@@ -588,7 +588,7 @@ int main( ) {
 }
 ```
 
-## <a name="negative_sign"></a>  moneypunct::negative_sign
+## <a name="moneypunctnegative_sign"></a><a name="negative_sign"></a>钱币：：negative_sign
 
 返回要用作负号符号的区域设置特定元素序列。
 
@@ -650,7 +650,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -
 ```
 
-## <a name="pos_format"></a>  moneypunct::pos_format
+## <a name="moneypunctpos_format"></a><a name="pos_format"></a>金钱：:pos_格式
 
 返回一个区域设置特定规则，用于对包含正数的输出结果进行格式化。
 
@@ -698,7 +698,7 @@ int main() {
 }
 ```
 
-## <a name="positive_sign"></a>  moneypunct::positive_sign
+## <a name="moneypunctpositive_sign"></a><a name="positive_sign"></a>金钱：:p的_sign
 
 返回要用作正号符号的区域设置特定元素序列。
 
@@ -760,7 +760,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="string_type"></a>  moneypunct::string_type
+## <a name="moneypunctstring_type"></a><a name="string_type"></a>钱币：：string_type
 
 一种类型，此类型描述包含 **CharType** 类型字符的字符串。
 
@@ -770,9 +770,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储标点符号序列的副本。
+该类型描述了类模板的专门化[basic_string](../standard-library/basic-string-class.md)其对象可以存储标点序列的副本。
 
-## <a name="thousands_sep"></a>  moneypunct::thousands_sep
+## <a name="moneypunctthousands_sep"></a><a name="thousands_sep"></a>钱币：：thousands_sep
 
 返回要用作千位分隔符号的区域设置特定元素序列。
 

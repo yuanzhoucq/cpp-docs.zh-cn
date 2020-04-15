@@ -22,33 +22,33 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35633449c4c01f5c103dcd54b81c0d6aa7c08cdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209087"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364411"
 ---
 # <a name="data-access-using-adonet-ccli"></a>使用 ADO.NET 的数据访问 (C++/CLI)
 
-ADO.NET 是用于数据访问的.NET Framework API，并提供电源和易于使用的以前的数据访问解决方案。 本部分介绍的一些问题涉及 ADO.NET 独有 VisualC++用户，例如封送处理本机类型。
+ADO.NET是用于数据访问的 .NET 框架 API，提供前所未有的数据访问解决方案所无法比拟的电源和易用性。 本节介绍一些涉及 Visual C++ 用户独有的ADO.NET的问题，例如封送本机类型。
 
-ADO.NET 在公共语言运行时 (CLR) 下运行。 因此，任何使用 ADO.NET 进行交互的应用程序还必须针对 CLR。 但是，这并不意味着本机应用程序不能使用 ADO.NET。 这些示例将演示如何使用 ADO.NET 数据库从本机代码进行交互。
+ADO.NET在通用语言运行时 （CLR） 下运行。 因此，任何与ADO.NET交互的应用程序也必须针对 CLR。 但是，这并不意味着本机应用程序不能使用ADO.NET。 这些示例将演示如何与来自本机代码的ADO.NET数据库进行交互。
 
-## <a name="marshal_ansi"></a> ADO.NET 的封送 ANSI 字符串
+## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a>为ADO.NET的封送 ANSI 字符串
 
-演示如何添加本机字符串 (`char *`) 到数据库，以及如何封送<xref:System.String?displayProperty=fullName>从数据库到本机的字符串。
+演示如何向数据库添加本机字符串 （`char *`） 以及如何将 从<xref:System.String?displayProperty=fullName>数据库封送到本机字符串。
 
 ### <a name="example"></a>示例
 
-在此示例中，创建的类 DatabaseClass 是与 ADO.NET 交互<xref:System.Data.DataTable>对象。 请注意，此类是一个本机C++ `class` (相比`ref class`或`value class`)。 这是必需的因为我们想要使用此类从本机代码，并且不能在本机代码中使用托管的类型。 此类将编译为面向 CLR，是由`#pragma managed`类声明前面的指令。 此指令的详细信息，请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此示例中，创建类 DatabaseClass 是为了与ADO.NET<xref:System.Data.DataTable>对象进行交互。 请注意，此类是本机C++（`class`与 或`ref class``value class`相比）。 这是必需的，因为我们希望从本机代码使用此类，并且不能在本机代码中使用托管类型。 此类将编译为针对 CLR，如类声明前面的`#pragma managed`指令所示。 有关此指令的详细信息，请参阅[托管、非托管](../preprocessor/managed-unmanaged.md)。
 
-请注意 DatabaseClass 类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管的类型`gcroot`关键字是必要。 有关详细信息`gcroot`，请参阅[如何：本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
+请注意数据库类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管类型，`gcroot`因此关键字是必需的。 有关 的详细信息`gcroot`，请参阅[：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-此示例中的代码的其余部分是本机C++代码，是由`#pragma unmanaged`指令前面`main`。 在此示例中，我们已创建 DatabaseClass 的新实例并调用其方法来创建一个表并填充表中的某些行。 请注意该本机C++值的数据库列 StringCol 形式传递字符串。 在 DatabaseClass，这些字符串封送到使用中的封送处理功能的托管字符串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>用于封送`char *`到<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>用于封送<xref:System.String>到`char *`。
+此示例中的代码的其余部分是本机C++代码，如 前面的`#pragma unmanaged``main`指令所示。 在此示例中，我们正在创建一个新的 DatabaseClass 实例，并调用其方法来创建表并填充表中的某些行。 请注意，本机C++字符串作为数据库列 StringCol 的值传递。 在 DatabaseClass 中，这些字符串使用<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间中的封送功能将封送到托管字符串。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>用于将 a`char *`封送<xref:System.String>到 ，<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>并且该方法用于将<xref:System.String>a`char *`封送到 。
 
 > [!NOTE]
->  分配的内存<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>必须通过调用释放<xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A>或`GlobalFree`。
+> 分配的<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>内存必须通过调用 或<xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A>`GlobalFree`进行分配。
 
 ```cpp
 // adonet_marshal_string_native.cpp
@@ -155,26 +155,26 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>编译代码
 
-- 通过命令行编译代码，将代码示例保存在一个名为 adonet_marshal_string_native.cpp 文件并输入以下语句：
+- 要从命令行编译代码，请在名为 adonet_marshal_string_native.cpp 的文件中保存代码示例，并输入以下语句：
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal_bstr"></a> ADO.NET 的封送 BSTR 字符串
+## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a>ADO.NET的 BSTR 字符串
 
-演示如何添加 COM 字符串 (`BSTR`) 到数据库，以及如何封送<xref:System.String?displayProperty=fullName>从数据库到`BSTR`。
+演示如何向数据库添加 COM 字符串`BSTR`（ ， 以及如何将 从<xref:System.String?displayProperty=fullName>数据库封送 到`BSTR`。
 
 ### <a name="example"></a>示例
 
-在此示例中，创建的类 DatabaseClass 是与 ADO.NET 交互<xref:System.Data.DataTable>对象。 请注意，此类是一个本机C++ `class` (相比`ref class`或`value class`)。 这是必需的因为我们想要使用此类从本机代码，并且不能在本机代码中使用托管的类型。 此类将编译为面向 CLR，是由`#pragma managed`类声明前面的指令。 此指令的详细信息，请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此示例中，创建类 DatabaseClass 是为了与ADO.NET<xref:System.Data.DataTable>对象进行交互。 请注意，此类是本机C++（`class`与 或`ref class``value class`相比）。 这是必需的，因为我们希望从本机代码使用此类，并且不能在本机代码中使用托管类型。 此类将编译为针对 CLR，如类声明前面的`#pragma managed`指令所示。 有关此指令的详细信息，请参阅[托管、非托管](../preprocessor/managed-unmanaged.md)。
 
-请注意 DatabaseClass 类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管的类型`gcroot`关键字是必要。 有关详细信息`gcroot`，请参阅[如何：本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
+请注意数据库类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管类型，`gcroot`因此关键字是必需的。 有关 的详细信息`gcroot`，请参阅[：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-此示例中的代码的其余部分是本机C++代码，是由`#pragma unmanaged`指令前面`main`。 在此示例中，我们已创建 DatabaseClass 的新实例并调用其方法来创建一个表并填充表中的某些行。 请注意，COM 字符串传递作为 StringCol 的数据库列的值。 在 DatabaseClass，这些字符串封送到使用中的封送处理功能的托管字符串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>用于封送`BSTR`到<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>用于封送<xref:System.String>到`BSTR`。
+此示例中的代码的其余部分是本机C++代码，如 前面的`#pragma unmanaged``main`指令所示。 在此示例中，我们正在创建一个新的 DatabaseClass 实例，并调用其方法来创建表并填充表中的某些行。 请注意，COM 字符串作为数据库列 StringCol 的值传递。 在 DatabaseClass 中，这些字符串使用<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间中的封送功能将封送到托管字符串。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>用于将 a`BSTR`封送<xref:System.String>到 ，<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>并且该方法用于将<xref:System.String>a`BSTR`封送到 。
 
 > [!NOTE]
->  分配的内存<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>必须通过调用释放<xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A>或`SysFreeString`。
+> 分配的<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>内存必须通过调用 或<xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A>`SysFreeString`进行分配。
 
 ``` cpp
 // adonet_marshal_string_bstr.cpp
@@ -289,26 +289,26 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>编译代码
 
-- 通过命令行编译代码，将代码示例保存在一个名为 adonet_marshal_string_native.cpp 文件并输入以下语句：
+- 要从命令行编译代码，请在名为 adonet_marshal_string_native.cpp 的文件中保存代码示例，并输入以下语句：
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal_unicode"></a> ADO.NET 的封送 Unicode 字符串
+## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a>为ADO.NET而封送 Unicode 字符串
 
-演示如何添加本机 Unicode 字符串 (`wchar_t *`) 到数据库，以及如何封送<xref:System.String?displayProperty=fullName>从数据库到本机的 Unicode 字符串。
+演示如何将本机 Unicode 字符串 （`wchar_t *`） 添加到数据库以及如何将 从<xref:System.String?displayProperty=fullName>数据库封送到本机 Unicode 字符串。
 
 ### <a name="example"></a>示例
 
-在此示例中，创建的类 DatabaseClass 是与 ADO.NET 交互<xref:System.Data.DataTable>对象。 请注意，此类是一个本机C++ `class` (相比`ref class`或`value class`)。 这是必需的因为我们想要使用此类从本机代码，并且不能在本机代码中使用托管的类型。 此类将编译为面向 CLR，是由`#pragma managed`类声明前面的指令。 此指令的详细信息，请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此示例中，创建类 DatabaseClass 是为了与ADO.NET<xref:System.Data.DataTable>对象进行交互。 请注意，此类是本机C++（`class`与 或`ref class``value class`相比）。 这是必需的，因为我们希望从本机代码使用此类，并且不能在本机代码中使用托管类型。 此类将编译为针对 CLR，如类声明前面的`#pragma managed`指令所示。 有关此指令的详细信息，请参阅[托管、非托管](../preprocessor/managed-unmanaged.md)。
 
-请注意 DatabaseClass 类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管的类型`gcroot`关键字是必要。 有关详细信息`gcroot`，请参阅[如何：本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
+请注意数据库类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管类型，`gcroot`因此关键字是必需的。 有关 的详细信息`gcroot`，请参阅[：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-此示例中的代码的其余部分是本机C++代码，是由`#pragma unmanaged`指令前面`main`。 在此示例中，我们已创建 DatabaseClass 的新实例并调用其方法来创建一个表并填充表中的某些行。 请注意该 UnicodeC++值的数据库列 StringCol 形式传递字符串。 在 DatabaseClass，这些字符串封送到使用中的封送处理功能的托管字符串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>用于封送`wchar_t *`到<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>用于封送<xref:System.String>到`wchar_t *`。
+此示例中的代码的其余部分是本机C++代码，如 前面的`#pragma unmanaged``main`指令所示。 在此示例中，我们正在创建一个新的 DatabaseClass 实例，并调用其方法来创建表并填充表中的某些行。 请注意，Unicode C++字符串作为数据库列 StringCol 的值传递。 在 DatabaseClass 中，这些字符串使用<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间中的封送功能将封送到托管字符串。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>用于将 a`wchar_t *`封送<xref:System.String>到 ，<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>并且该方法用于将<xref:System.String>a`wchar_t *`封送到 。
 
 > [!NOTE]
->  分配的内存<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>必须通过调用释放<xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A>或`GlobalFree`。
+> 分配的<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>内存必须通过调用 或<xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A>`GlobalFree`进行分配。
 
 ```cpp
 // adonet_marshal_string_wide.cpp
@@ -415,23 +415,23 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>编译代码
 
-- 通过命令行编译代码，将代码示例保存在一个名为 adonet_marshal_string_wide.cpp 文件并输入以下语句：
+- 要从命令行编译代码，请在名为 adonet_marshal_string_wide.cpp 的文件中保存代码示例，并输入以下语句：
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_wide.cpp
     ```
 
-## <a name="marshal_variant"></a> 为 ADO.NET 封送变体
+## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a>为ADO.NET编送一个 VARIANT
 
-演示如何将添加一个本机`VARIANT`到数据库，以及如何封送<xref:System.Object?displayProperty=fullName>从数据库到本机`VARIANT`。
+演示如何将本机`VARIANT`添加到数据库以及如何将 从<xref:System.Object?displayProperty=fullName>数据库封送到本机`VARIANT`。
 
 ### <a name="example"></a>示例
 
-在此示例中，创建的类 DatabaseClass 是与 ADO.NET 交互<xref:System.Data.DataTable>对象。 请注意，此类是一个本机C++ `class` (相比`ref class`或`value class`)。 这是必需的因为我们想要使用此类从本机代码，并且不能在本机代码中使用托管的类型。 此类将编译为面向 CLR，是由`#pragma managed`类声明前面的指令。 此指令的详细信息，请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此示例中，创建类 DatabaseClass 是为了与ADO.NET<xref:System.Data.DataTable>对象进行交互。 请注意，此类是本机C++（`class`与 或`ref class``value class`相比）。 这是必需的，因为我们希望从本机代码使用此类，并且不能在本机代码中使用托管类型。 此类将编译为针对 CLR，如类声明前面的`#pragma managed`指令所示。 有关此指令的详细信息，请参阅[托管、非托管](../preprocessor/managed-unmanaged.md)。
 
-请注意 DatabaseClass 类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管的类型`gcroot`关键字是必要。 有关详细信息`gcroot`，请参阅[如何：本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
+请注意数据库类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管类型，`gcroot`因此关键字是必需的。 有关 的详细信息`gcroot`，请参阅[：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-此示例中的代码的其余部分是本机C++代码，是由`#pragma unmanaged`指令前面`main`。 在此示例中，我们已创建 DatabaseClass 的新实例并调用其方法来创建一个表并填充表中的某些行。 请注意该本机`VARIANT`ObjectCol 的数据库列的值作为传递类型。 内部 DatabaseClass，这些`VARIANT`类型封送到托管对象使用的封送处理功能<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A>用于封送`VARIANT`到<xref:System.Object>，和方法<xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A>用于封送<xref:System.Object>到`VARIANT`。
+此示例中的代码的其余部分是本机C++代码，如 前面的`#pragma unmanaged``main`指令所示。 在此示例中，我们正在创建一个新的 DatabaseClass 实例，并调用其方法来创建表并填充表中的某些行。 请注意，本机`VARIANT`类型作为数据库列 ObjectCol 的值传递。 在 DatabaseClass`VARIANT`中，使用<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间中的封送功能将这些类型的封送到托管对象。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A>用于将 a`VARIANT`封送<xref:System.Object>到 ，<xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A>并且该方法用于将<xref:System.Object>. `VARIANT`
 
 ```cpp
 // adonet_marshal_variant.cpp
@@ -556,23 +556,23 @@ ObjectCol: 42
 
 ### <a name="compiling-the-code"></a>编译代码
 
-- 通过命令行编译代码，将代码示例保存在一个名为 adonet_marshal_variant.cpp 文件并输入以下语句：
+- 要从命令行编译代码，请在名为 adonet_marshal_variant.cpp 的文件中保存代码示例，并输入以下语句：
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp
     ```
 
-## <a name="marshal_safearray"></a> 为 ADO.NET 封送 SAFEARRAY
+## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a>为ADO.NET封送 SAFEARRAY
 
-演示如何将添加一个本机`SAFEARRAY`到数据库，以及如何封送托管的数组从数据库到本机`SAFEARRAY`。
+演示如何将本机`SAFEARRAY`添加到数据库以及如何将托管数组从数据库封送到本机`SAFEARRAY`。
 
 ### <a name="example"></a>示例
 
-在此示例中，创建的类 DatabaseClass 是与 ADO.NET 交互<xref:System.Data.DataTable>对象。 请注意，此类是一个本机C++ `class` (相比`ref class`或`value class`)。 这是必需的因为我们想要使用此类从本机代码，并且不能在本机代码中使用托管的类型。 此类将编译为面向 CLR，是由`#pragma managed`类声明前面的指令。 此指令的详细信息，请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此示例中，创建类 DatabaseClass 是为了与ADO.NET<xref:System.Data.DataTable>对象进行交互。 请注意，此类是本机C++（`class`与 或`ref class``value class`相比）。 这是必需的，因为我们希望从本机代码使用此类，并且不能在本机代码中使用托管类型。 此类将编译为针对 CLR，如类声明前面的`#pragma managed`指令所示。 有关此指令的详细信息，请参阅[托管、非托管](../preprocessor/managed-unmanaged.md)。
 
-请注意 DatabaseClass 类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管的类型`gcroot`关键字是必要。 有关详细信息`gcroot`，请参阅[如何：本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
+请注意数据库类的私有成员： `gcroot<DataTable ^> table`。 由于本机类型不能包含托管类型，`gcroot`因此关键字是必需的。 有关 的详细信息`gcroot`，请参阅[：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-此示例中的代码的其余部分是本机C++代码，是由`#pragma unmanaged`指令前面`main`。 在此示例中，我们已创建 DatabaseClass 的新实例并调用其方法来创建一个表并填充表中的某些行。 请注意该本机`SAFEARRAY`ArrayIntsCol 的数据库列的值作为传递类型。 内部 DatabaseClass，这些`SAFEARRAY`类型封送到托管对象使用的封送处理功能<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用于封送`SAFEARRAY`到托管数组的整数和方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用于封送托管的数组的整数到`SAFEARRAY`。
+此示例中的代码的其余部分是本机C++代码，如 前面的`#pragma unmanaged``main`指令所示。 在此示例中，我们正在创建一个新的 DatabaseClass 实例，并调用其方法来创建表并填充表中的某些行。 请注意，本机`SAFEARRAY`类型作为数据库列 ArrayIntsCol 的值传递。 在 DatabaseClass`SAFEARRAY`中，使用<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间中的封送功能将这些类型的封送到托管对象。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用于将 a`SAFEARRAY`整理到由整数组成的托管数组，该方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用于将管理整数数组封送到 。 `SAFEARRAY`
 
 ```cpp
 // adonet_marshal_safearray.cpp
@@ -709,7 +709,7 @@ int main()
 
 ### <a name="compiling-the-code"></a>编译代码
 
-- 通过命令行编译代码，将代码示例保存在一个名为 adonet_marshal_safearray.cpp 文件并输入以下语句：
+- 要从命令行编译代码，请在名为 adonet_marshal_safearray.cpp 的文件中保存代码示例，并输入以下语句：
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp
@@ -717,17 +717,17 @@ int main()
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
 
-有关涉及 ADO.NET 的安全问题的信息，请参阅[保护 ADO.NET 应用程序](/dotnet/framework/data/adonet/securing-ado-net-applications)。
+有关涉及ADO.NET的安全问题的信息，请参阅[保护ADO.NET应用程序](/dotnet/framework/data/adonet/securing-ado-net-applications)。
 
 ## <a name="related-sections"></a>相关章节
 
-|节|描述|
+|部分|说明|
 |-------------|-----------------|
-|[ADO.NET](/dotnet/framework/data/adonet/index)|概述 ADO.NET 中，一组公开数据访问服务向.NET 程序员的类。|
+|[ADO.NET](/dotnet/framework/data/adonet/index)|提供ADO.NET的概述，这是一组向 .NET 程序员公开数据访问服务的类。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[.NET 编程，带C++/CLI（视觉C++）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
 [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)
 

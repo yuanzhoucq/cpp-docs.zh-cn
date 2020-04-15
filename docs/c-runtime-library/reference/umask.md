@@ -1,8 +1,9 @@
 ---
 title: _umask
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask
+- _o__umask
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b451f979f2925a31f5baaac52351c5d2c0a76da0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362021"
 ---
 # <a name="_umask"></a>_umask
 
@@ -53,31 +55,33 @@ int _umask( int pmode );
 
 ## <a name="return-value"></a>返回值
 
-**_umask**返回*pmode*的以前值。 无错误返回。
+**_umask**返回*pmode*的上一个值 。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**_Umask**函数将当前进程的文件权限掩码设置为*pmode*指定的模式。 文件权限掩码修改 **_creat**、 **_open**或 **_sopen**创建的新文件的权限设置。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
+**_umask**函数将当前进程的文件权限掩码设置为*pmode*指定的模式。 文件权限掩码修改由 **_creat、_open**或 **_sopen**创建的新文件的权限 **_open**设置。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
 
-整数表达式*pmode*包含在 SYS\STAT. 中定义的以下一个或两个清单常量。高
+整数表达式*pmode*包含以下一个或两个清单常量，在 SYS_STAT 中定义。H：
 
 |*pmode*| |
 |-|-|
 | **_S_IWRITE** | 允许写入。 |
 | **_S_IREAD** | 允许读取。 |
-| **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
+| **_S_IREAD&#124;_S_IWRITE** **_S_IWRITE** | 允许读取和写入。 |
 
-当提供两个常量时，它们将与按位 "或" 运算符 **&#124;** （）联接。 如果*pmode*参数为 **_S_IREAD**，则不允许读取（文件是只写的）。 如果*pmode*参数为 **_S_IWRITE**，则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置为 **_umask**不会影响文件的模式。
+当两个常量都给出时，它们与位-OR 运算符 **（&#124;** ） 联接。 如果*pmode*参数**为 _S_IREAD，** 则不允许读取（该文件仅写入）。 如果*pmode*参数**为 _S_IWRITE，** 则不允许写入（该文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，使用 **_umask**设置读取位对文件模式没有影响。
 
-如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数将直接忽略这些常量。
+如果*pmode*不是清单常量之一的组合，或者合并了一组备用常量，则函数将忽略这些常量。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_umask**|\<io.h>、\<sys/stat.h>、\<sys/types.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -112,10 +116,10 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低电平 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>

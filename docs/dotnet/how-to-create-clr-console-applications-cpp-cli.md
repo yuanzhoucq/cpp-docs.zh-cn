@@ -5,12 +5,12 @@ helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: 610efc8b0780422fc89e3bf9708ba488fe7d1f47
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 86e5abe330b0edc514fed74a12188ab73e8bfdd8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368537"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>如何：创建 CLR 控制台应用程序 (C++/CLI)
 
@@ -22,43 +22,43 @@ ms.locfileid: "80080054"
 
 - 以下 .NET Framework 命名空间的参考信息：
 
-   - <xref:System.AppDomainManager>-包含基本类和基类，这些类定义常用值和引用数据类型、事件和事件处理程序、接口、特性和处理异常。
+  - <xref:System.AppDomainManager>*包含定义常用值和引用数据类型、事件和事件处理程序、接口、属性和处理异常的基本类和基类。
 
-   - mscorlib - 支持 .NET Framework 开发的程序集 DLL。
+  - mscorlib - 支持 .NET Framework 开发的程序集 DLL。
 
 - 源文件：
 
-   - 控制台（.cpp 文件）- 主源文件和进入你刚才创建的应用程序的入口点。 它标识项目的 .dll 文件和项目命名空间。 在此文件中提供你自己的代码。
+  - 控制台（.cpp 文件）- 主源文件和进入你刚才创建的应用程序的入口点。 它标识项目的 .dll 文件和项目命名空间。 在此文件中提供你自己的代码。
 
-   - AssemblyInfo.cpp - 包含可用于修改项目的程序集元数据的特性、文件、资源、类型、版本信息、签名信息等。 有关详细信息，请参阅[程序集内容](/dotnet/framework/app-domains/assembly-contents)。
+  - AssemblyInfo.cpp - 包含可用于修改项目的程序集元数据的特性、文件、资源、类型、版本信息、签名信息等。 有关详细信息，请参阅[程序集内容](/dotnet/framework/app-domains/assembly-contents)。
 
-   - Stdafx.cpp - 用于生成名为 Win32.pch 的预编译标头文件和名为 StdAfx.obj 的预编译类型文件。
+  - Stdafx.cpp - 用于生成名为 Win32.pch 的预编译标头文件和名为 StdAfx.obj 的预编译类型文件。
 
 - 头文件：
 
-   - Stdafx.h - 用于生成名为 Win32.pch 的预编译标头文件和名为 StdAfx.obj 的预编译类型文件。
+  - Stdafx.h - 用于生成名为 Win32.pch 的预编译标头文件和名为 StdAfx.obj 的预编译类型文件。
 
-   - resource.h - app.rc 的生成的包含文件。
+  - resource.h - app.rc 的生成的包含文件。
 
 - 资源文件：
 
-   - app.rc - 程序的资源脚本文件。
+  - app.rc - 程序的资源脚本文件。
 
-   - app.ico - 程序的图标文件。
+  - app.ico - 程序的图标文件。
 
 - ReadMe.txt - 描述项目中的文件。
 
 ## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>创建公共语言运行时 (CLR) 控制台应用程序项目
 
-1. 在菜单栏上，选择“文件”、“新建”、“项目”。
+1. 在菜单栏上，依次选择 **“文件”**-&gt;**“新建”**-&gt;**“项目”**。
 
 1. 在 **“新建项目”** 对话框中的 **“已安装的模块”** 窗口下，依次选择 **“Visual C++”** 节点、 **“CLR”** 节点和“控制台应用程序”模板。
 
-1. 在“名称” 框中，输入你的应用程序的唯一名称。
+1. 在“名称” **** 框中，输入你的应用程序的唯一名称。
 
    你可以指定其他项目和解决方案设置，但它们都不是必需的。
 
-1. 选择“确定”按钮。
+1. 选择“确定”按钮。****
 
 ## <a name="see-also"></a>另请参阅
 

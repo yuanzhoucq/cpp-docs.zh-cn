@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-ms.openlocfilehash: b29112b4901a1fecac37aa7ae61496e874959370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 557bfe1cc41c3dda65bd95d7d687820c0b9862b7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372187"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368333"
 ---
 # <a name="cresourceexception-class"></a>CResourceException 类
 
@@ -29,21 +29,21 @@ class CResourceException : public CSimpleException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CResourceException::CResourceException](#cresourceexception)|构造 `CResourceException` 对象。|
+|[资源异常：C 资源异常](#cresourceexception)|构造 `CResourceException` 对象。|
 
 ## <a name="remarks"></a>备注
 
-没有进一步限定是需要或不能。
+没有必要或可能进一步的资格。
 
-有关使用的详细信息`CResourceException`，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)。
+有关 使用`CResourceException`的详细信息，请参阅[异常处理 （MFC） 一](../../mfc/exception-handling-in-mfc.md)文。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[C 例外](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -53,7 +53,7 @@ class CResourceException : public CSimpleException
 
 **标头:** afxwin.h
 
-##  <a name="cresourceexception"></a>  CResourceException::CResourceException
+## <a name="cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>资源异常：C 资源异常
 
 构造 `CResourceException` 对象。
 
@@ -63,9 +63,9 @@ CResourceException();
 
 ### <a name="remarks"></a>备注
 
-请勿直接，使用此构造函数而不是调用全局函数[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 有关异常的详细信息，请参阅文章[MFC 中的异常处理](../exception-handling-in-mfc.md)。
+不要直接使用此构造函数，而应调用全局函数[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 有关异常的详细信息，请参阅[MFC 中的异常处理](../exception-handling-in-mfc.md)一文。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CException 类](cexception-class.md)<br/>
-[层次结构图](../hierarchy-chart.md)
+[层次结构图表](../hierarchy-chart.md)

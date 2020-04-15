@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ea75395c14c0babf5a047e7ae8f937e2a237b445
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688339"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317125"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution 类
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType* \
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
-*URNG* \
-统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*乌尔格*\
+统一的随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述产生用户指定的浮点类型的值的分布，或者，如果未提供任何值 **，则根据**柯西分布进行分布。 下表链接到有关各个成员的文章。
+类模板描述生成用户指定的浮点类型的值的分布，或者如果没有提供，则键入**双精度值**，该分布根据 Cauchy 分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 有关柯西分布的详细信息，请参阅 Wolfram MathWorld 文章[柯西分布](https://go.microsoft.com/fwlink/p/?linkid=400523)。
 
@@ -240,7 +240,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution：cauchy_distribution
 
 构造分布。
 
@@ -251,24 +251,24 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*a*\
 `a` 分布参数。
 
-*b* \
+*B*\
 `b` 分布参数。
 
-*parm* \
+*帕尔姆*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < b`
+**先决条件：**`0.0 < b`
 
-第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。
+第一个构造函数构造一个对象的存储`a`值包含值*a，* 其存储`b`值包含值*b*。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>  cauchy_distribution::param_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution：:p阿拉姆型
 
 存储分布的所有参数。
 
@@ -286,21 +286,21 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*a*\
 `a` 分布参数。
 
-*b* \
+*B*\
 `b` 分布参数。
 
-*right* \
+*对*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < b`
+**先决条件：**`0.0 < b`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

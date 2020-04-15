@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: fbff6123c810251109dd48d74a5bd4632793be6f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 540daa5bafa28b1d56c55daf33f0b5f5461c8ed6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689095"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320237"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,16 +19,16 @@ ms.locfileid: "72689095"
 
 ## <a name="requirements"></a>要求
 
-**标头**： \<random >
+**标题** \<： 随机>
 
 **命名空间:** std
 
 > [!NOTE]
-> @No__t_0random > 库使用 "#include < initializer_list >" 语句。
+> \<随机>库使用"#include<initializer_list>"语句。
 
 ## <a name="summary"></a>总结
 
-*随机数生成器*是指可产生伪随机值序列的对象。 可产生在指定范围内均匀分布的值的生成器称为*均匀随机数生成器* (URNG)。 如果类具有某些常见特征，则设计为 URNG 的类模板称为*引擎*，本文稍后将对此进行介绍。 通过将 URNG 作为自变量传递到分布的 `operator()`，URNG 可以（通常也会）和*分布*一起使用，从而产生以该分布定义的方式分布的值。
+*随机数生成器*是指可产生伪随机值序列的对象。 可产生在指定范围内均匀分布的值的生成器称为*均匀随机数生成器* (URNG)。 如果该类具有某些共同特征，则设计为 URNG 的类模板称为*引擎*，本文稍后将对此进行讨论。 通过将 URNG 作为自变量传递到分布的 `operator()`，URNG 可以（通常也会）和*分布*一起使用，从而产生以该分布定义的方式分布的值。
 
 这些链接将跳转到本文的主要部分：
 
@@ -42,7 +42,7 @@ ms.locfileid: "72689095"
 
 ### <a name="quick-tips"></a>快速提示
 
-下面是在使用 \<random > 时要记住的一些提示：
+以下是使用\<随机>时需要记住的一些提示：
 
 - 在大多数情况下，URNG 将产生必须由分布形成的原始位。 （一个值得注意的例外是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，因为它直接使用 URNG。）
 
@@ -52,9 +52,9 @@ ms.locfileid: "72689095"
 
 - 对于大多数应用程序而言，最有用的配对是 `mt19937` 引擎和 `uniform_int_distribution`，如本文后面的[代码示例](#code)中所示。
 
-可以从 \<random > 标头中选择多种选项，其中的任何选项都优于过时的 C 运行时函数 `rand()`。 有关 `rand()` 错误以及 \<random > 如何解决这些缺点的信息，请参阅[此视频](https://go.microsoft.com/fwlink/p/?linkid=397615)。
+在\<随机>标头中有许多选项可供选择，其中任何一个选项都优于过时的 C 运行时函数`rand()`。 有关哪些问题`rand()`以及如何\<随机>如何解决这些缺点的信息，请参阅[此视频](https://go.microsoft.com/fwlink/p/?linkid=397615)。
 
-## <a name="code"></a>示例
+## <a name="examples"></a><a name="code"></a>例子
 
 以下代码示例显示如何生成一些随机数字，本例中有 5 个是使用生成器用非确定性种子生成的。
 
@@ -209,9 +209,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 此代码使用测试模板函数演示了两种不同的随机化过程（随机化整数矢量和随机排列索引数据的数组）。 首次调用测试函数时，使用安全加密的、非确定性的、不可设定种子的、不可重复的 URNG `random_device`。 第二次测试运行将 `mersenne_twister_engine` 用作 URNG，以及确定性的 32 位常量种子，这意味着结果是可重复的。 第三次测试运行使用来自 `mersenne_twister_engine` 的 32 位非确定性结果设定 `random_device` 的种子。 第四次测试运行通过使用以 `random_device` 结果填充的[种子序列](../standard-library/seed-seq-class.md)对此进行扩展，这可有效地提供超过 32 位的非确定性随机性（但仍非安全加密的）。 有关详细信息，请继续阅读。
 
-## <a name="listing"></a>分类列表
+## <a name="categorized-listing"></a><a name="listing"></a>分类列表
 
-###  <a name="urngs"></a>均匀随机数生成器
+### <a name="uniform-random-number-generators"></a><a name="urngs"></a>均匀随机数生成器
 
 通常根据这些属性来描述 URNG：
 
@@ -221,15 +221,15 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 3. **质量**：生成的序列与真正的随机数的接近程度。 这通常称为“*随机性*”。
 
-以下部分列出了 \<random > 标头中提供的均匀随机数生成器（Urng）。
+以下各节列出了随机>标头中提供的统一\<随机数生成器 （URNGs）。
 
-####  <a name="rd"></a>非确定性生成器
+#### <a name="non-deterministic-generator"></a><a name="rd"></a>非确定性生成器
 
 |||
 |-|-|
-|[random_device 类](../standard-library/random-device-class.md)|通过使用外部设备，生成非确定性的、安全加密的随机序列。 通常用于为引擎设定种子。 低性能，高质量。 有关更多信息，请参见[备注](#comments)。|
+|[random_device 类](../standard-library/random-device-class.md)|通过使用外部设备，生成非确定性的、安全加密的随机序列。 通常用于为引擎设定种子。 低性能，高质量。 有关详细信息，请参阅[备注](#comments)。|
 
-####  <a name="typedefs"></a>具有预定义参数的引擎 Typedef
+#### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a>具有预定义参数的引擎 Typedef
 
 适用于实例化引擎和引擎适配器。 有关详细信息，请参阅[引擎和分布](#engdist)。
 
@@ -281,7 +281,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24` 24 位 RANLUX 引擎（圣马丁 Lüscher 和 Fred James，1994）。
+- `ranlux24`24 位 RANLUX 发动机（马丁·吕舍尔和弗雷德·詹姆斯，1994 年）。
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +293,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48` 48 位 RANLUX 引擎（圣马丁 Lüscher 和 Fred James，1994）。
+- `ranlux48`48 位 RANLUX 发动机（马丁·吕舍尔和弗雷德·詹姆斯，1994 年）。
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -305,7 +305,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
     typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
     ```
 
-####  <a name="eng"></a>引擎模板
+#### <a name="engine-templates"></a><a name="eng"></a>引擎模板
 
 引擎模板将用作独立的 URNG 或传递给[引擎适配器](#engadapt)的基引擎。 通常，使用[预定义引擎 typedef](#typedefs) 实例化这些模板引擎并将其传递给[分布](#distributions)。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
 
@@ -315,7 +315,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[mersenne_twister_engine 类](../standard-library/mersenne-twister-engine-class.md)|通过使用梅森旋转算法生成随机序列。 最复杂且质量最高（random_device 类除外）。 性能非常快。|
 |[subtract_with_carry_engine 类](../standard-library/subtract-with-carry-engine-class.md)|通过使用带进位减法算法生成随机序列。 `linear_congruential_engine` 的改进，但是质量和性能都比 `mersenne_twister_engine` 低得多。|
 
-####  <a name="engadapt"></a>引擎适配器模板
+#### <a name="engine-adaptor-templates"></a><a name="engadapt"></a>引擎适配器模板
 
 引擎适配器是适应其他（基）引擎的模板。 通常，使用[预定义引擎 typedef](#typedefs) 实例化这些模板引擎并将其传递给[分布](#distributions)。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
 
@@ -327,9 +327,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 [[引擎模板](#eng)]
 
-###  <a name="distributions"></a>随机数分布
+### <a name="random-number-distributions"></a><a name="distributions"></a>随机数分布
 
-以下部分列出了 \<random > 标头中提供的分布。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
+以下各节列出了随机>标头中\<提供的分布。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
 
 #### <a name="uniform-distributions"></a>均匀分布
 
@@ -339,31 +339,31 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[uniform_real_distribution 类](../standard-library/uniform-real-distribution-class.md)|在半开区间 [a，b)（包含起始值，不包含结束值）范围内产生均匀真（浮点）值分布。|
 |[generate_canonical](../standard-library/random-functions.md#generate_canonical)|产生 [0，1)（包含起始值，不包含结束值）上给定精度的真（浮点）值的均匀分布。|
 
-[[随机数分布](#distributions)]
+[[随机数字分布](#distributions)]
 
 #### <a name="bernoulli-distributions"></a>伯努利分布
 
 |||
 |-|-|
-|[bernoulli_distribution 类](../standard-library/bernoulli-distribution-class.md)|生成**布尔**值的伯努利分布。|
-|[binomial_distribution 类](../standard-library/binomial-distribution-class.md)|产生整数值的二项式分布。|
+|[bernoulli_distribution类](../standard-library/bernoulli-distribution-class.md)|生成**布尔**值的伯努利分布。|
+|[binomial_distribution类](../standard-library/binomial-distribution-class.md)|产生整数值的二项式分布。|
 |[geometric_distribution 类](../standard-library/geometric-distribution-class.md)|产生整数值的几何分布。|
 |[negative_binomial_distribution 类](../standard-library/negative-binomial-distribution-class.md)|产生整数值的负二项式分布。|
 
-[[随机数分布](#distributions)]
+[[随机数字分布](#distributions)]
 
 #### <a name="normal-distributions"></a>正态分布
 
 |||
 |-|-|
-|[cauchy_distribution 类](../standard-library/cauchy-distribution-class.md)|产生真（浮点）值的柯西分布。|
+|[cauchy_distribution类](../standard-library/cauchy-distribution-class.md)|产生真（浮点）值的柯西分布。|
 |[chi_squared_distribution 类](../standard-library/chi-squared-distribution-class.md)|产生真（浮点）值的卡方分布。|
-|[fisher_f_distribution 类](../standard-library/fisher-f-distribution-class.md)|生成实（浮点）值的 F-分布（也称为 Snedecor 的 F 分布或费舍尔-Snedecor 分布）。|
+|[fisher_f_distribution 类](../standard-library/fisher-f-distribution-class.md)|生成实际（浮点）值的 F 分布（也称为 Snedecor F 分布或 Fisher-Snedecor 分布）。|
 |[lognormal_distribution 类](../standard-library/lognormal-distribution-class.md)|产生真（浮点）值的对数正态分布。|
 |[normal_distribution 类](../standard-library/normal-distribution-class.md)|产生真（浮点）值的正态（高斯）分布。|
 |[student_t_distribution 类](../standard-library/student-t-distribution-class.md)|产生真（浮点）值的学生 *t*-分布。|
 
-[[随机数分布](#distributions)]
+[[随机数字分布](#distributions)]
 
 #### <a name="poisson-distributions"></a>泊松分布
 
@@ -371,11 +371,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|
 |[exponential_distribution 类](../standard-library/exponential-distribution-class.md)|产生真（浮点）值的指数分布。|
 |[extreme_value_distribution 类](../standard-library/extreme-value-distribution-class.md)|产生真（浮点）值的极值分布。|
-|[gamma_distribution 类](../standard-library/gamma-distribution-class.md)|产生真（浮点）值的 gamma 分布。|
+|[gamma_distribution类](../standard-library/gamma-distribution-class.md)|产生真（浮点）值的 gamma 分布。|
 |[poisson_distribution 类](../standard-library/poisson-distribution-class.md)|产生整数值的泊松分布。|
 |[weibull_distribution 类](../standard-library/weibull-distribution-class.md)|产生真（浮点）值的韦伯分布。|
 
-[[随机数分布](#distributions)]
+[[随机数字分布](#distributions)]
 
 #### <a name="sampling-distributions"></a>示例分布
 
@@ -385,11 +385,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[piecewise_constant_distribution 类](../standard-library/piecewise-constant-distribution-class.md)|产生真（浮点）值的分段常数分布。|
 |[piecewise_linear_distribution 类](../standard-library/piecewise-linear-distribution-class.md)|产生真（浮点）值的分段线性分布。|
 
-[[随机数分布](#distributions)]
+[[随机数字分布](#distributions)]
 
 ### <a name="utility-functions"></a>实用函数
 
-本部分列出了 \<random > 标头中提供的常规实用工具函数。
+本节列出了随机>标头中\<提供的一般实用程序函数。
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="operators"></a>运算符
 
-本部分列出了 \<random > 标头中提供的运算符。
+本节列出了随机>标头中\<提供的运算符。
 
 |||
 |-|-|
@@ -406,25 +406,25 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |`operator<<`|将状态信息写入流。|
 |`operator>>`|从流中提取状态信息。|
 
-## <a name="engdist"></a>引擎和分布
+## <a name="engines-and-distributions"></a><a name="engdist"></a>发动机和分销
 
-请参阅以下部分，了解 \<random > 中定义的每个类模板类别的相关信息。 这两个类模板类别都采用类型作为参数，并使用共享模板参数名称来描述允许作为实际参数类型的类型的属性，如下所示：
+有关在随机>中\<定义的每个类模板类别的信息，请参阅以下各节。 这两个类模板类别都将类型视为参数，并使用共享模板参数名称来描述允许为实际参数类型的类型的属性，如下所示：
 
-- `IntType` 指示**short**、 **int**、 **long**、 **long**、无符号**短**、无符号**整数**、**无**符号长或**无符号长**长。
+- `IntType`表示**短****，int，****长**，**长**，**未签名短**，**无符号的int，****无符号长**，或**未签名长**。
 
-- `UIntType` 表示**无符号的短**、无符号**整数**、**无**符号长或**无符号长**长。
+- `UIntType`表示**无符号短**、**无符号的 int、****未签名长**或**未签名长**。
 
-- `RealType` 指示**float**、 **double**或**long double**。
+- `RealType`表示**浮动**、**双**或**长双**。
 
 ### <a name="engines"></a>引擎
 
 [引擎模板](#eng)和[引擎适配器模板](#engadapt)是模板，其参数可自定义创建的生成器。
 
-*引擎*是类或类模板，其实例（生成器）可充当在最小值和最大值之间均匀分布的随机数的源。 通过采用由一些其他的随机数引擎产生的值并对这些值应用某种算法，*引擎适配器*可提供具有不同随机性属性的值的序列。
+*引擎*是一个类或类模板，其实例（生成器）充当最小值和最大值之间均匀分布的随机数源。 通过采用由一些其他的随机数引擎产生的值并对这些值应用某种算法，*引擎适配器*可提供具有不同随机性属性的值的序列。
 
 每个引擎和引擎适配器都具有以下成员：
 
-- `typedef``numeric-type``result_type` 是由生成器的 `operator()` 返回的类型。 在实例化时，`numeric-type` 将作为模板参数传递。
+- `typedef`是生成器返回的类型`operator()` `numeric-type` `result_type` 在实例化时，`numeric-type` 将作为模板参数传递。
 
 - `result_type operator()` 将返回在 `min()` 和 `max()` 之间均匀分布的值。
 
@@ -434,7 +434,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 - `void seed(result_type s)` 使用种子值 `s` 为生成器设定种子。 对于引擎，默认参数支持的签名为 `void seed(result_type s = default_seed)`（引擎适配器定义单独的 `void seed()`，请参阅下一小节）。
 
-- `template <class Seq> void seed(Seq& q)` 使用 [seed_seq](../standard-library/seed-seq-class.md)`Seq` 为生成器设定种子。
+- `template <class Seq> void seed(Seq& q)`使用[seed_seq](../standard-library/seed-seq-class.md)`Seq`播种发电机。
 
 - 具有类似通过调用 `result_type x` 创建设定了种子的生成器的参数 `seed(x)` 的显式构造函数。
 
@@ -456,17 +456,17 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 每个引擎都会保留*状态*，该状态可确定通过对 `operator()` 的后续调用将生成的值的序列。 通过使用 `operator==` 和 `operator!=`，可比较从同一类型的引擎中实例化的两个生成器的状态。 如果两个状态的比较结果相等，则它们将生成同一序列的值。 通过使用生成器的 `operator<<`，可将对象的状态作为 32 位无符号的值的序列保存到流中。 保存状态并不会更改状态。 通过使用 `operator>>`，可将保存的状态读取到从同一类型的引擎实例化的生成器中。
 
-### <a name="distributions"></a>分布
+### <a name="distributions"></a>分发
 
-[随机数量分布](#distributions)是类或类模板，其实例可将从引擎中获得的均匀分布的随机数的流转换为具有特殊分布的随机数的流。 每个分布都具有以下成员：
+[随机数分布](#distributions)是一个类或类模板，其实例将从引擎获得的均匀分布随机数流转换为具有特定分布的随机数流。 每个分布都具有以下成员：
 
-- `typedef``numeric-type``result_type` 是由分布的 `operator()` 返回的类型。 在实例化时，`numeric-type` 将作为模板参数传递。
+- `typedef``numeric-type`返回`operator()``result_type`的类型。 在实例化时，`numeric-type` 将作为模板参数传递。
 
 - 通过将 `gen` 用作均匀分布的随机值的源和存储的*分布参数*，`template <class URNG> result_type operator()(URNG& gen)` 可返回根据分布的定义分布的值。
 
 - 通过将 `template <class URNG> result_type operator()(URNG& gen, param_type p)` 用作均匀分布的随机值的源和参数结构 `gen`，`p` 可返回根据分布的定义分布的值。
 
-- `typedef``unspecified-type``param_type` 是选择性地传递给 `operator()` 的参数包，用于代替存储的参数来生成其返回值。
+- `typedef``unspecified-type`传递给`operator()`的参数包，用于代替存储的参数来生成其返回`param_type`值。
 
 - `const param&` 构造函数从其参数中初始化存储的参数。
 
@@ -480,9 +480,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 - `void reset()` 将丢弃所有缓存的值，以便下一个对 `operator()` 的调用的结果不取决于在调用之前从引擎获得的任何值。
 
-参数结构是指存储分布所需的所有参数的对象。 它包括：
+参数结构是指存储分布所需的所有参数的对象。 该结构包含：
 
-- `typedef``distribution-type``distribution_type`，是其分布的类型。
+- `typedef``distribution-type` ，这是其分布`distribution_type`的类型。
 
 - 一个或多个采用与分布构造函数所采用的参数列表相同的构造函数。
 
@@ -492,21 +492,21 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 有关详细信息，请参阅本文之前链接的此子主题下面的参考子主题。
 
-## <a name="comments"></a>备注
+## <a name="remarks"></a><a name="comments"></a> 备注
 
 Visual Studio 中存在两个非常有用的 URNG（`mt19937` 和 `random_device`），如此比较表中所示：
 
-|URNG|快速|安全加密|可设定种子|Deterministic|
+|URNG|快速|安全加密|可设定种子|具有确定性|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|是|No|是|是<sup>*</sup>|
-|`random_device`|No|是|No|No|
+|`mt19937`|是|否|是|是的<sup>*</sup>|
+|`random_device`|否|是|否|否|
 
 <sup>* 在提供了已知种子的情况下。</sup>
 
-虽然 ISO C++ 标准不需要对 `random_device` 进行安全加密，但是在 Visual Studio 中，会对其实现安全加密。 （术语“安全加密”并不暗示保证，但是表示给定随机化算法提供的熵的最低级别，因此也是可预测级别。 有关详细信息，请参阅维基百科文章[加密安全伪伪随机数生成器](https://go.microsoft.com/fwlink/p/?linkid=398017)。）因为 ISO C++标准不需要这样做，所以其他平台可能会将 `random_device` 实现为简单的伪随机数生成器（非加密安全），并且可能仅适合用作另一个生成器的种子源。 在跨平台代码中使用 `random_device` 时，请查看适用于这些平台的文档。
+虽然 ISO C++ 标准不需要对 `random_device` 进行安全加密，但是在 Visual Studio 中，会对其实现安全加密。 （术语“安全加密”并不暗示保证，但是表示给定随机化算法提供的熵的最低级别，因此也是可预测级别。 有关详细信息，请参阅维基百科文章[，加密安全伪随机数生成器](https://go.microsoft.com/fwlink/p/?linkid=398017)。由于 ISO C++ 标准不需要这样做，因此其他平台可能实现`random_device`为简单的伪随机数生成器（非加密安全），并且可能仅适合作为另一个生成器的种子源。 在跨平台代码中使用 `random_device` 时，请查看适用于这些平台的文档。
 
 根据定义，`random_device` 结果是不可复制的，而且副作用是，它的运行速度可能会显著慢于其他 URNG。 虽然你可能希望通过对 `random_device` 的调用来为应用程序设定种子，但大多数不需要进行安全加密的应用程序都使用 `mt19937` 或类似引擎，如[代码示例](#code)中所示。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

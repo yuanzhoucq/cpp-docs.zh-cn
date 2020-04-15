@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5ada2ad69cbcac15e09968045e54095dfb2623d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689061"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366403"
 ---
 # <a name="regex_token_iterator-class"></a>regex_token_iterator 类
 
@@ -45,22 +45,22 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>参数
 
-*BidIt* \
+*比比*\
 子匹配项的迭代器类型。
 
-*Elem* \
+*埃莱姆*\
 要匹配的元素的类型。
 
-*RXtraits* \
+*RXtraits*\
 元素的特征类。
 
 ## <a name="remarks"></a>备注
 
-类模板描述常量向前迭代器对象。 从概念上讲，它承载 `regex_iterator` 对象，并用于搜索字符序列中正则表达式的匹配项。 它提取 `sub_match<BidIt>` 类型的对象，这些对象表示由每个正则表达式匹配项的存储向量 `subs` 中的索引值标识的子匹配项。
+类模板描述恒定转发迭代器对象。 从概念上讲，它承载 `regex_iterator` 对象，并用于搜索字符序列中正则表达式的匹配项。 它提取 `sub_match<BidIt>` 类型的对象，这些对象表示由每个正则表达式匹配项的存储向量 `subs` 中的索引值标识的子匹配项。
 
 -1 索引值指定在上一个正则表达式匹配项末尾后立即开始（如果不存在上一个正则表达式匹配项，则为从字符序列的起始处开始）的字符序列，并扩展到但不包含当前正则表达式匹配项的第一个字符（如果不存在当前匹配项，则扩展到字符序列末尾）。 任何其他索引值 `idx` 指定承载于 `it.match[idx]`中捕获组的内容。
 
-### <a name="members"></a>Members
+### <a name="members"></a>成员
 
 |成员|默认值|
 |-|-|
@@ -70,30 +70,30 @@ class regex_token_iterator
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|构造迭代器。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[difference_type](#difference_type)|迭代器差异的类型。|
 |[iterator_category](#iterator_category)|迭代器类别的类型。|
-|[指针](#pointer)|指向一个匹配的指针的类型。|
-|[reference](#reference)|对子匹配项的引用的类型。|
+|[指针 (pointer)](#pointer)|指向一个匹配的指针的类型。|
+|[参考](#reference)|对子匹配项的引用的类型。|
 |[regex_type](#regex_type)|要匹配的正则表达式类型。|
 |[value_type](#value_type)|子匹配项的类型。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|操作员|说明|
 |-|-|
-|[operator!=](#op_neq)|比较不相等的迭代器。|
-|[operator*](#op_star)|访问指定的子匹配项。|
-|[operator++](#op_add_add)|递增迭代器。|
-|[operator==](#op_eq_eq)|比较迭代器是否相等。|
-|[operator->](#op_arrow)|访问指定的子匹配项。|
+|[操作员！](#op_neq)|比较不相等的迭代器。|
+|[运算符*](#op_star)|访问指定的子匹配项。|
+|[运算符*](#op_add_add)|递增迭代器。|
+|[运算符*](#op_eq_eq)|比较迭代器是否相等。|
+|[运算符>](#op_arrow)|访问指定的子匹配项。|
 
 ## <a name="requirements"></a>要求
 
@@ -197,7 +197,7 @@ match == aa
 match == z
 ```
 
-## <a name="difference_type"></a>  regex_token_iterator::difference_type
+## <a name="regex_token_iteratordifference_type"></a><a name="difference_type"></a>regex_token_iterator：:d）类型
 
 迭代器差异的类型。
 
@@ -207,9 +207,9 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::ptrdiff_t`的同义词。
+该类型是 `std::ptrdiff_t` 的同义词。
 
-## <a name="iterator_category"></a>  regex_token_iterator::iterator_category
+## <a name="regex_token_iteratoriterator_category"></a><a name="iterator_category"></a>regex_token_iterator：：iterator_category
 
 迭代器类别的类型。
 
@@ -219,9 +219,9 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::forward_iterator_tag`的同义词。
+该类型是 `std::forward_iterator_tag` 的同义词。
 
-## <a name="op_neq"></a>regex_token_iterator::operator!=
+## <a name="regex_token_iteratoroperator"></a><a name="op_neq"></a>regex_token_iterator：：操作员！
 
 比较不相等的迭代器。
 
@@ -231,14 +231,14 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*对*\
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回 `!(*this == right)`。
+成员函数返回 `!(*this == right)`。
 
-## <a name="op_star"></a>regex_token_iterator::operator*
+## <a name="regex_token_iteratoroperator"></a><a name="op_star"></a>regex_token_iterator：：操作员*
 
 访问指定的子匹配项。
 
@@ -250,7 +250,7 @@ const sub_match<BidIt>& operator*();
 
 成员函数返回一个 `sub_match<BidIt>` 对象，该对象表示由索引值 `subs[pos]`标识的捕获组。
 
-## <a name="op_add_add"></a>regex_token_iterator::operator++
+## <a name="regex_token_iteratoroperator"></a><a name="op_add_add"></a>regex_token_iterator：：操作员*
 
 递增迭代器。
 
@@ -266,7 +266,7 @@ regex_token_iterator& operator++(int);
 
 第二个运算符生成对象的副本，递增对象，然后返回副本。
 
-## <a name="op_eq_eq"></a>regex_token_iterator::operator==
+## <a name="regex_token_iteratoroperator"></a><a name="op_eq_eq"></a>regex_token_iterator：：操作员*
 
 比较迭代器是否相等。
 
@@ -276,14 +276,14 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*对*\
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回 `it == right.it && subs == right.subs && pos == right.pos`。
+成员函数返回 `it == right.it && subs == right.subs && pos == right.pos`。
 
-## <a name="op_arrow"></a>regex_token_iterator::operator-&gt;
+## <a name="regex_token_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_token_iterator：操作员-&gt;
 
 访问指定的子匹配项。
 
@@ -295,7 +295,7 @@ const sub_match<BidIt> * operator->();
 
 成员函数返回一个指向 `sub_match<BidIt>` 对象的指针，该对象表示由索引值 `subs[pos]`标识的捕获组。
 
-## <a name="pointer"></a>  regex_token_iterator::pointer
+## <a name="regex_token_iteratorpointer"></a><a name="pointer"></a>regex_token_iterator：:p奥米特
 
 指向一个匹配的指针的类型。
 
@@ -305,9 +305,9 @@ typedef sub_match<BidIt> *pointer;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `sub_match<BidIt>*`的同义词，其中 `BidIt` 是模板参数。
+类型是 `sub_match<BidIt>*` 的同义词，其中 `BidIt` 是模板参数。
 
-## <a name="reference"></a>  regex_token_iterator::reference
+## <a name="regex_token_iteratorreference"></a><a name="reference"></a>regex_token_iterator：参考
 
 对子匹配项的引用的类型。
 
@@ -317,9 +317,9 @@ typedef sub_match<BidIt>& reference;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `sub_match<BidIt>&`的同义词，其中 `BidIt` 是模板参数。
+类型是 `sub_match<BidIt>&` 的同义词，其中 `BidIt` 是模板参数。
 
-## <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator
+## <a name="regex_token_iteratorregex_token_iterator"></a><a name="regex_token_iterator"></a>regex_token_iterator：regex_token_iterator
 
 构造迭代器。
 
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>参数
 
-*第一个*\
+*第一*\
 要匹配的序列的开头。
 
 *最后*\
 要匹配的序列的结尾。
 
-*重新*\
+*re*\
 匹配项正则表达式。
 
-*f* \
+*F*\
 匹配标志。
 
 ### <a name="remarks"></a>备注
@@ -364,7 +364,7 @@ regex_token_iterator(BidIt first, BidIt last,
 
 第四个构造函数将构造一个对象，其存储的迭代器 `it` 初始化为 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`，其存储的向量 `subs` 承载构造函数参数 `N` 指向的 `submatches`值，并且其存储的值 `pos` 为零。
 
-## <a name="regex_type"></a>regex_token_iterator::regex_type
+## <a name="regex_token_iteratorregex_type"></a><a name="regex_type"></a>regex_token_iterator：regex_type
 
 要匹配的正则表达式类型。
 
@@ -374,9 +374,9 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `basic_regex<Elem, RXtraits>` 的同义词。
+typedef 是 `basic_regex<Elem, RXtraits>`的同义词。
 
-## <a name="value_type"></a>  regex_token_iterator::value_type
+## <a name="regex_token_iteratorvalue_type"></a><a name="value_type"></a>regex_token_iterator：：value_type
 
 子匹配项的类型。
 
@@ -386,15 +386,15 @@ typedef sub_match<BidIt> value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `sub_match<BidIt>`的同义词，其中 `BidIt` 是模板参数。
+类型是 `sub_match<BidIt>` 的同义词，其中 `BidIt` 是模板参数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_constants 类](../standard-library/regex-constants-class.md)\
-[Regex_error 类](../standard-library/regex-error-class.md)\
-[\<regex > 函数](../standard-library/regex-functions.md)\
-[Regex_iterator 类](../standard-library/regex-iterator-class.md)\
-[\<regex > 运算符](../standard-library/regex-operators.md)\
-[Regex_traits 类](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<正则>](../standard-library/regex.md)\
+[regex_constants类](../standard-library/regex-constants-class.md)\
+[regex_error类](../standard-library/regex-error-class.md)\
+[\<正则表达式>函数](../standard-library/regex-functions.md)\
+[regex_iterator类](../standard-library/regex-iterator-class.md)\
+[\<正则>运算符](../standard-library/regex-operators.md)\
+[regex_traits类](../standard-library/regex-traits-class.md)\
+[\<正则>类型](../standard-library/regex-typedefs.md)

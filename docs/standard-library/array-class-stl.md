@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 90c68d00475a622ec89b81cc86639f63b1190d02
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364947"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 
@@ -116,57 +116,57 @@ class array;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |`Ty`|元素的类型。|
 |`N`|元素数量。|
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-|类型定义|描述|
+|类型定义|说明|
 |-|-|
 |[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|
 |[const_pointer](#const_pointer)|元素的常量指针的类型。|
 |[const_reference](#const_reference)|元素的常量引用的类型。|
 |[const_reverse_iterator](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
-|[Iterator](#iterator)|受控序列的迭代器的类型。|
-|[pointer](#pointer)|指向元素的指针的类型。|
-|[reference](#reference)|元素的引用的类型。|
+|[迭 代](#iterator)|受控序列的迭代器的类型。|
+|[指针 (pointer)](#pointer)|指向元素的指针的类型。|
+|[参考](#reference)|元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|受控序列的反向迭代器的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
-|[array](#array)|构造一个数组对象。|
-|[assign](#assign)|弃用. 使用 `fill`。）替换所有元素。|
-|[at](#at)|访问指定位置处的元素。|
-|[back](#back)|访问最后一个元素。|
-|[begin](#begin)|指定受控序列的开头。|
+|[阵 列](#array)|构造一个数组对象。|
+|[分配](#assign)|（已过时。 使用`fill`.）替换所有元素。|
+|[在](#at)|访问指定位置处的元素。|
+|[返回](#back)|访问最后一个元素。|
+|[开始](#begin)|指定受控序列的开头。|
 |[cbegin](#cbegin)|返回一个随机访问常量迭代器，它指向数组中的第一个元素。|
 |[cend](#cend)|返回一个随机访问常量迭代器，它指向刚超过数组末尾的位置。|
 |[crbegin](#crbegin)|返回一个指向反向数据中第一个元素的常量迭代器。|
 |[crend](#crend)|返回一个指向反向数组末尾的常量迭代器。|
-|[data](#data)|获取第一个元素的地址。|
-|[empty](#empty)|测试元素是否存在。|
-|[end](#end)|指定受控序列的末尾。|
-|[fill](#fill)|将所有元素替换为指定值。|
-|[front](#front)|访问第一个元素。|
+|[数据](#data)|获取第一个元素的地址。|
+|[空](#empty)|测试元素是否存在。|
+|[结束](#end)|指定受控序列的末尾。|
+|[填补](#fill)|将所有元素替换为指定值。|
+|[前面](#front)|访问第一个元素。|
 |[max_size](#max_size)|对元素数进行计数。|
 |[rbegin](#rbegin)|指定反向受控序列的开头。|
 |[rend](#rend)|指定反向受控序列的末尾。|
-|[size](#size)|对元素数进行计数。|
-|[swap](#swap)|交换两个容器的内容。|
+|[大小](#size)|对元素数进行计数。|
+|[交换](#swap)|交换两个容器的内容。|
 
-|Operator|描述|
+|操作员|说明|
 |-|-|
-|[array::operator=](#op_eq)|替换受控序列。|
-|[array：： operator\[\]](#op_at)|访问指定位置处的元素。|
+|[数组：：运算符*](#op_eq)|替换受控序列。|
+|[数组：：运算符\[\]](#op_at)|访问指定位置处的元素。|
 
 ## <a name="remarks"></a>备注
 
-此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，应用于对象的
+此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,11 +176,11 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<数组 >
+**Header:** \<array>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="array"></a>  array::array
+## <a name="arrayarray"></a><a name="array"></a>数组：：数组
 
 构造一个数组对象。
 
@@ -192,14 +192,14 @@ array(const array& right);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*对*\
 要插入的对象或范围。
 
 ### <a name="remarks"></a>备注
 
 默认构造函数 `array()` 将受控序列保留为未初始化（或默认已初始化）。 使用它来指定未初始化的控制序列。
 
-复制构造函数 `array(const array& right)` 使用序列 [*right*`.begin()`, *right*`.end()`) 来初始化受控序列。 使用它来指定初始受控序列，该序列是由数组对象 *right* 控制的序列副本。
+`array(const array& right)`复制构造函数使用序列 [*右*`.begin()`，*右*`.end()`） 初始化受控序列。 使用它来指定初始受控序列，该序列是由数组对象 *right* 控制的序列副本。
 
 ### <a name="example"></a>示例
 
@@ -239,11 +239,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="assign"></a>  array::assign
+## <a name="arrayassign"></a><a name="assign"></a>数组：：分配
 
 Obsolete in C++11，由 [fill](#fill) 替代。 替换所有元素。
 
-## <a name="at"></a>  array::at
+## <a name="arrayat"></a><a name="at"></a>数组：：at
 
 访问指定位置处的元素。
 
@@ -260,7 +260,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="remarks"></a>备注
 
-成员*函数将返回*对受控序列中的元素的引用。 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
+成员函数返回对位置关闭处受控序列元素*的*引用。 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
 
 ### <a name="example"></a>示例
 
@@ -289,7 +289,7 @@ int main()
 }
 ```
 
-## <a name="back"></a>  array::back
+## <a name="arrayback"></a><a name="back"></a>数组：：返回
 
 访问最后一个元素。
 
@@ -334,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="begin"></a>  array::begin
+## <a name="arraybegin"></a><a name="begin"></a>数组：：开始
 
 指定受控序列的开头。
 
@@ -379,9 +379,9 @@ int main()
 0
 ```
 
-## <a name="cbegin"></a>  array::cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a>数组：：cbegin
 
-返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
+返回一个**协调**迭代器，该迭代器可解决范围内的第一个元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，则为 `cbegin() == cend()`）。
+指向范围的第一个元素或略高于空范围末尾的位置（对于空范围，）`cbegin() == cend()`的**const**随机访问迭代器。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，考虑`Container`为`begin()`支持 和`cbegin()`的任何类型的可修改（非**const）** 容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -405,9 +405,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  array::cend
+## <a name="arraycend"></a><a name="cend"></a>数组：：cend
 
-返回一个**常量**迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
+返回一个**const**迭代器，该迭代器地址仅超出范围中的最后一个元素的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，考虑`Container`为`end()`支持 和`cend()`的任何类型的可修改（非**const）** 容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -433,7 +433,7 @@ auto i2 = Container.cend();
 
 不应对 `cend` 返回的值取消引用。
 
-## <a name="const_iterator"></a>  array::const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>数组：：const_iterator
 
 受控序列的常量迭代器的类型。
 
@@ -481,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="const_pointer"></a>  array::const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>数组：：const_pointer
 
 元素的常量指针的类型。
 
@@ -525,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="const_reference"></a>  array::const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a>数组：：const_reference
 
 元素的常量引用的类型。
 
@@ -569,7 +569,7 @@ int main()
 0
 ```
 
-## <a name="const_reverse_iterator"></a>  array::const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>数组：：const_reverse_iterator
 
 受控序列的常量反向迭代器的类型。
 
@@ -613,7 +613,7 @@ int main()
 3
 ```
 
-## <a name="crbegin"></a>  array::crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a>数组：：crbegin
 
 返回一个指向反向数据中第一个元素的常量迭代器。
 
@@ -657,7 +657,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="crend"></a>  array::crend
+## <a name="arraycrend"></a><a name="crend"></a>数组：：crend
 
 返回用于寻址反向数组中最后一个元素之后的位置的常量迭代器。
 
@@ -701,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="data"></a>  array::data
+## <a name="arraydata"></a><a name="data"></a>数组：:d
 
 获取第一个元素的地址。
 
@@ -747,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="difference_type"></a>  array::difference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a>数组：:d）类型
 
 两个元素间的带符号距离的类型。
 
@@ -791,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="empty"></a>  array::empty
+## <a name="arrayempty"></a><a name="empty"></a>数组：：空
 
 测试元素是否存在。
 
@@ -841,7 +841,7 @@ false
 true
 ```
 
-## <a name="end"></a>  array::end
+## <a name="arrayend"></a><a name="end"></a>数组：：结束
 
 指定受控序列的末尾。
 
@@ -887,7 +887,7 @@ int main()
 3
 ```
 
-## <a name="fill"></a>  array::fill
+## <a name="arrayfill"></a><a name="fill"></a>数组：：填充
 
 清除数组并将指定的元素复制到该空数组。
 
@@ -897,9 +897,9 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
-|*val*|要插入到数组中的元素的值。|
+|*瓦尔*|要插入到数组中的元素的值。|
 
 ### <a name="remarks"></a>备注
 
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="front"></a>  array::front
+## <a name="arrayfront"></a><a name="front"></a>数组：：前
 
 访问第一个元素。
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="iterator"></a>  array::iterator
+## <a name="arrayiterator"></a><a name="iterator"></a>数组：：迭代器
 
 受控序列的迭代器的类型。
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="max_size"></a>  array::max_size
+## <a name="arraymax_size"></a><a name="max_size"></a>数组：：max_size
 
 对元素数进行计数。
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="op_at"></a>  array::operator[]
+## <a name="arrayoperator"></a><a name="op_at"></a>数组：：运算符*
 
 访问指定位置处的元素。
 
@@ -1087,9 +1087,9 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="remarks"></a>备注
 
-成员*函数将返回*对受控序列中的元素的引用。 如果该位置无效，则该行为未定义。
+成员函数返回对位置关闭处受控序列元素*的*引用。 如果该位置无效，则该行为未定义。
 
-还有一个非成员[get](array-functions.md#get)函数可用来获取对**数组**元素的引用。
+还有一个非成员[获取](array-functions.md#get)函数可用于获取对**数组**元素的引用。
 
 ### <a name="example"></a>示例
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="op_eq"></a>  array::operator=
+## <a name="arrayoperator"></a><a name="op_eq"></a>数组：：运算符*
 
 替换受控序列。
 
@@ -1133,12 +1133,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*对*\
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将*右*的每个元素分配给受控序列的相应元素，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符将*每个权利*元素分配给受控序列的相应元素，然后返回`*this`。 使用它将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="pointer"></a>  array::pointer
+## <a name="arraypointer"></a><a name="pointer"></a>数组：:p奥米特
 
 指向元素的指针的类型。
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="rbegin"></a>  array::rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a>数组：：rbegin
 
 指定反向受控序列的开头。
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="reference"></a>  array::reference
+## <a name="arrayreference"></a><a name="reference"></a>数组：参考
 
 元素的引用的类型。
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="rend"></a>  array::rend
+## <a name="arrayrend"></a><a name="rend"></a>数组：：rend
 
 指定反向受控序列的末尾。
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="reverse_iterator"></a>  array::reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>数组：：reverse_iterator
 
 受控序列的反向迭代器的类型。
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="size"></a>  array::size
+## <a name="arraysize"></a><a name="size"></a>数组：：大小
 
 对元素数进行计数。
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="size_type"></a>  array::size_type
+## <a name="arraysize_type"></a><a name="size_type"></a>数组：：size_type
 
 两个元素间的无符号距离的类型。
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="swap"></a>  array::swap
+## <a name="arrayswap"></a><a name="swap"></a>数组：：交换
 
 将此数组的内容交换到另一个数组。
 
@@ -1497,12 +1497,12 @@ void swap(array& right);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*对*\
 要与其交换内容的数组。
 
 ### <a name="remarks"></a>备注
 
-成员函数在 `*this` 和*右*之间交换受控序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
+成员函数交换*和*之间的`*this`受控序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
 
 还有一个非成员[交换](array-functions.md#swap)函数可用于交换两个**数组**实例。
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="value_type"></a>  array::value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a>数组：：value_type
 
 元素的类型。
 
@@ -1563,7 +1563,7 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Ty` 的同义词。
+类型是模板参数 `Ty` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<array>](../standard-library/array.md)
+[\<数组>](../standard-library/array.md)

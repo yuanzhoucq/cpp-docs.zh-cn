@@ -1,10 +1,11 @@
 ---
 title: tan、tanf、tanl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tan
 - tanf
 - tanl
+- _o_tan
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168702"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362633"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
-计算正切值。
+计算切线。
 
 ## <a name="syntax"></a>语法
 
@@ -59,31 +61,33 @@ float tan( float x );  // C++ only
 long double tan( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*x*<br/>
+** x <br/>
 角度（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**Tan**函数返回*x*的正切值。 如果*x*大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
+**棕褐色**函数返回*x*的切线。 如果*x*大于或等于 263，或小于或等于 -263，则结果中会发生显著性损失。
 
-|输入|SEH 异常|**Matherr**异常|
+|输入|SEH 异常|**马瑟尔**例外|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|none|_DOMAIN|
-|± INF|**无效**|_DOMAIN|
+|• QNAN，IND|无|_DOMAIN|
+|• INF|**无效**|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用具有**tan**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **tan**始终采用并返回**double**。
+由于C++允许重载，因此可以调用带和返回**浮点**值或**长****双精度值**的**tan**重载。 在C程序中，**晒黑**总是采取和返回**双**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**谭**，**坦夫**，**坦格尔**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 01640cd700f54facba06f65f63e172abc668a5be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366379"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution 类
 
@@ -68,21 +68,21 @@ class weibull_distribution
    };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述产生用户指定的浮点类型的值的分布，或者，如果未提供任何值 **，则根据**韦伯分布来分发。 下表链接到有关各个成员的文章。
+类模板描述生成用户指定的浮点类型的值的分布，或者如果没有提供，则键入**双精度值**，该分布根据 Weibull 分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|
 |`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|
 
-属性函数 `a()` 和 `b()` 分别返回存储的分布参数 a 和 b 的值。
+属性函数 `a()` 和 `b()` 分别返回存储的分布参数 a** 和 b** 的值。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -92,7 +92,7 @@ class weibull_distribution
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 有关韦伯分布的详细信息，请参阅 Wolfram MathWorld 文章[韦伯分布](https://mathworld.wolfram.com/WeibullDistribution.html)。
 
@@ -209,37 +209,37 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<随机 >
+**标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution：weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
 explicit weibull_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*一个*\
+*a*\
 `a` 分布参数。
 
-*b*\
+*B*\
 `b` 分布参数。
 
-*parm*\
+*帕尔姆*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前提条件：** `0.0 < a` 和 `0.0 < b`
+**前置条件：** `0.0 < a` 和 `0.0 < b`
 
-第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。
+第一个构造函数构造一个对象的存储`a`值包含值*a，* 其存储`b`值包含值*b*。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution：:p阿拉姆型
 
 存储分布的参数。
 
@@ -255,23 +255,23 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*一个*\
+*a*\
 `a` 分布参数。
 
-*b*\
+*B*\
 `b` 分布参数。
 
-*right*\
+*对*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前提条件：** `0.0 < a` 和 `0.0 < b`
+**前置条件：** `0.0 < a` 和 `0.0 < b`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

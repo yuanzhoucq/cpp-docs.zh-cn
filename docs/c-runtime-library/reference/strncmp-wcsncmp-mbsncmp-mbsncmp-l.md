@@ -1,11 +1,13 @@
 ---
 title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
+- _o__mbsncmp
+- _o__mbsncmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,19 +55,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fa253bbf7b0ea2ae9993edb12843245b2a1065ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947346"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364189"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 
 比较高达两个字符串指定数量的字符。
 
 > [!IMPORTANT]
-> **_mbsncmp**和 **_mbsncmp_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncmp**和 **_mbsncmp_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -98,36 +101,38 @@ int _mbsncmp_l(
 
 ### <a name="parameters"></a>参数
 
-*string1*、 *string2*<br/>
+*字符串1*，*字符串2*<br/>
 要比较的字符串。
 
 *count*<br/>
 要比较的字符数。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
 返回值指示*string1*和*string2*的子字符串的关系，如下所示。
 
-|返回值|描述|
+|返回值|说明|
 |------------------|-----------------|
-|< 0|*string1*子字符串小于*string2*子字符串|
-|0|*string1* substring 等于*string2*子字符串|
-|> 0|大于*string2*子字符串的*string1*子字符串|
+|< 0|*字符串1*子字符串小于*string2*子字符串|
+|0|*字符串1*子字符串与*string2*子字符串相同|
+|> 0|*字符串1*子字符串大于*string2*子字符串|
 
-参数验证错误时， **_mbsncmp**和 **_mbsncmp_l**返回 **_NLSCMPERROR**，后者在 string .h > \<和\<mbstring.h > 中定义。
+在参数验证错误时 **，_mbsncmp****和_mbsncmp_l**返回 **_NLSCMPERROR**，该返回_NLSCMPERROR \<，该返回在\<string.h> 和 mbstring.h>中定义。
 
 ## <a name="remarks"></a>备注
 
-**Strncmp**函数最多对*string1*和*string2*中的第一个*count*个字符执行序号比较，并返回一个指示子字符串之间关系的值。 **strncmp**是 **_strnicmp**的区分大小写的版本。 **wcsncmp**和 **_mbsncmp**是区分大小写的 **_wcsnicmp**和 **_mbsnicmp**版本。
+**strncmp**函数最多执行*string1*和*string2*中第一个*计数*字符的表位比较，并返回指示子字符串之间关系的值。 **strncmp**是 **_strnicmp**的区分大小写的版本。 **wcsncmp**和 **_mbsncmp**是 **_wcsnicmp**和 **_mbsnicmp**的区分大小写的版本。
 
-**wcsncmp**和 **_mbsncmp**是**strncmp**的宽字符和多字节字符版本。 **Wcsncmp**的参数是宽字符字符串; **_mbsncmp**的这些字符串是多字节字符字符串。 **_mbsncmp**根据多字节代码页识别多字节字符序列，并在发生错误时返回 **_NLSCMPERROR** 。
+**wcsncmp**和 **_mbsncmp**是宽字符和多字节字符版本的**strncmp**. **wcsncmp**的参数是宽字符字符串;**_mbsncmp**的字符串是多字节字符串。 **_mbsncmp**根据多字节代码页识别多字节字符序列，并在错误时返回 **_NLSCMPERROR。**
 
-此外， **_mbsncmp**和 **_mbsncmp_l**验证参数。 如果*string1*或*string2*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **_mbsncmp**和 **_mbsncmp_l**返回 **_NLSCMPERROR** ，并将**errno**设置为**EINVAL**。 **strncmp**和**wcsncmp**不会验证其参数。 否则这些函数具有相同行为。
+此外 **，_mbsncmp****和验证参数_mbsncmp_l。** 如果*string1*或*string2*是空指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行 **，_mbsncmp**和 **_mbsncmp_l**返回 **_NLSCMPERROR**并将**errno**设置为**EINVAL**。 **strncmp**和**wcsncmp**不验证其参数。 否则这些函数具有相同行为。
 
-**_Mbsncmp**和 **_mbsncmp_l**的比较行为受到区域设置的**LC_CTYPE**类别设置的设置影响。 这会控制对多字节字符的前导和尾随字节的检测。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsncmp**函数对与区域设置相关的行为使用当前区域设置。 **_Mbsncmp_l**函数相同，只不过它使用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。 如果区域设置是单字节区域设置，则这些函数的行为与**strncmp**相同。
+**_mbsncmp**和 **_mbsncmp_l**的比较行为受区域设置**LC_CTYPE**类别设置的影响。 这会控制对多字节字符的前导和尾随字节的检测。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_mbsncmp**函数使用此与区域设置相关的行为的当前区域设置。 **_mbsncmp_l**函数是相同的，只是它改用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。 如果区域设置是单字节区域设置，则这些函数的行为与**strncmp**相同。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -140,13 +145,13 @@ int _mbsncmp_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**strncmp**|\<string.h>|
 |**wcsncmp**|\<string.h> 或 \<wchar.h>|
-|**_mbsncmp**、 **_mbsncmp_l**|\<mbstring.h>|
+|**_mbsncmp**， **_mbsncmp_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -197,10 +202,10 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp、_mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp、_mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>

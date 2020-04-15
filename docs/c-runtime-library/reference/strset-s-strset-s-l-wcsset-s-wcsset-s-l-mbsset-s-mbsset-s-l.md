@@ -1,6 +1,6 @@
 ---
 title: _strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsset_s
 - _wcsset_s_l
@@ -8,6 +8,10 @@ api_name:
 - _mbsset_s_l
 - _strset_s_l
 - _mbsset_s
+- _o__mbsset_s
+- _o__mbsset_s_l
+- _o__strset_s
+- _o__wcsset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -61,19 +66,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: a962a333af2a7f5c75d1ce2eb3fb5ce797a5d7f2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 599c991e2e9b4cee1515decdaf1050311d844a68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626120"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317240"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
 
 将字符串的字符设置为一个字符。 这些版本的 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) 具有安全性增强功能，如 [CRT 的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsset_s**和 **_mbsset_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsset_s****和_mbsset_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -115,31 +120,33 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*Str*<br/>
 要设置的 null 终止字符串。
 
-*numberOfElements*<br/>
-*Str*缓冲区的大小。
+*元素数*<br/>
+*str*缓冲区的大小。
 
-*c*<br/>
+*C*<br/>
 字符设置。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
 如果成功，则为零；否则为错误代码。
 
-这些函数将验证其参数。 如果*str*为空指针，或*numberOfElements*参数小于或等于0，或者传入的块不是以 null 结尾的，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
+这些函数将验证其参数。 如果*str*是空指针，或者*numberOfElements*参数小于或等于 0，或者传入的块不是 null 终止的，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回**EINVAL**并将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-除终止 null 字符之外， **_strset_s**函数将*str*的所有字符都设置为*c* （转换为**char**）。 **_wcsset_s**和 **_mbsset_s**是 **_strset_s**的宽字符和多字节字符版本。 参数和返回值的数据类型会相应地变化。 否则这些函数具有相同行为。
+**_strset_s**函数设置*str*到*c*的所有字符（转换为**字符**），但终止空字符除外。 **_wcsset_s****和_mbsset_s**是宽字符和多字节字符版本的 **_strset_s**。 参数和返回值的数据类型会相应地变化。 否则这些函数具有相同行为。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -150,15 +157,15 @@ errno_t _mbsset_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_strset_s**|\<string.h>|
 |**_strset_s_l**|\<tchar.h>|
 |**_wcsset_s**|\<string.h> 或 \<wchar.h>|
 |**_wcsset_s_l**|\<tchar.h>|
-|**_mbsset_s**、 **_mbsset_s_l**|\<mbstring.h>|
+|**_mbsset_s**， **_mbsset_s_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -182,10 +189,10 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>

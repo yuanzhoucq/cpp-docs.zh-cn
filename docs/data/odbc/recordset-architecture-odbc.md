@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: bb4b67a4c534598a8e26eb9ab5f297b108b67b6d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3ed6a862cda769769cd07d2dcd72007292068dc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212987"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367087"
 ---
 # <a name="recordset-architecture-odbc"></a>记录集：体系结构 (ODBC)
 
@@ -33,14 +33,14 @@ ms.locfileid: "80212987"
 - [使用 m_nFields 和 m_nParams 数据成员](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果实现批量提取行，体系结构则类似。 若要了解不同之处，请参阅[记录集：批量提取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果实现批量提取行，体系结构则类似。 要了解差异，请参阅[记录集：批量提取记录 （ODBC）。](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="sample-class"></a><a name="_core_a_sample_class"></a> 示例类
+## <a name="sample-class"></a><a name="_core_a_sample_class"></a> 示例类
 
 > [!NOTE]
 > MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建使用者。
 
-当你使用“添加类”向导中的 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)来声明从  **派生的记录集类时，生成的类具有以下简单类中所示的常规结构**`CRecordset`：
+当你使用“添加类”向导中的 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)来声明从 `CRecordset` 派生的记录集类时，生成的类具有以下简单类中所示的常规结构****：
 
 ```cpp
 class CCourse : public CRecordset
@@ -56,7 +56,7 @@ public:
 
 在类的开头，向导将编写一组[字段数据成员](#_core_field_data_members)。 创建类时，必须指定一个或多个字段数据成员。 如果像示例类一样类已参数化（带有数据成员 `m_strIDParam`），必须手动添加[参数数据成员](#_core_parameter_data_members)。 向导不支持向类添加参数。
 
-##  <a name="field-data-members"></a><a name="_core_field_data_members"></a> 字段数据成员
+## <a name="field-data-members"></a><a name="_core_field_data_members"></a>字段数据成员
 
 记录集类最重要的成员是字段数据成员。 对于从数据源中选择的每个列，类将包含此列的相应数据类型的数据成员。 例如，本主题开头显示的[示例类](#_core_a_sample_class)有两个字段数据成员，类型为 `CString`，称为 `m_strCourseID` 和 `m_strCourseTitle`。
 
@@ -64,7 +64,7 @@ public:
 
 当用户滚动到新记录时，框架将使用字段数据成员来表示当前记录。 框架将刷新字段数据成员，从而替换先前记录的值。 字段数据成员还用于更新当前记录和添加新记录。 作为更新记录过程的一部分，你可以通过将值直接分配给相应的字段数据成员来指定更新值。
 
-##  <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a> 参数数据成员
+## <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a>参数数据成员
 
 如果类已参数化，它则有一个或多个参数数据成员。 参数化类使你能够将在运行时获取或计算的信息作为记录集查询的依据。
 
@@ -83,12 +83,12 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 通过定义参数数据成员，你可以告知框架有关 SQL 字符串中参数的信息。 框架将绑定参数，使 ODBC 知道从何处获取值来替换占位符。 在此示例中，生成的记录集仅包含 Course 表中的记录，其中 CourseID 列的值为 MATH101。 此记录的所有指定列已被选中。 你可以根据需要指定任意数量的参数（以及占位符）。
 
 > [!NOTE]
->  MFC 本身不处理参数，尤其是不执行文本替换。 相反，MFC 将告知 ODBC 从何处获取参数；ODBC 将检索数据并执行必要的参数化。
+> MFC 本身不处理参数，尤其是不执行文本替换。 相反，MFC 将告知 ODBC 从何处获取参数；ODBC 将检索数据并执行必要的参数化。
 
 > [!NOTE]
->  参数的顺序很重要。 有关参数的信息和有关参数的详细信息，请参阅[记录集：参数化记录集（ODBC）](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+> 参数的顺序很重要。 有关此项的信息和有关参数的详细信息，请参阅[记录集：参数化记录集 （ODBC）。](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-##  <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a> 使用 m_nFields 和 m_nParams
+## <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a> 使用 m_nFields 和 m_nParams
 
 当向导为类编写构造函数时，它还会初始化 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) 数据成员，此成员指定类中[字段数据成员](#_core_field_data_members)的数量。 如果你向类中添加任何[参数](#_core_parameter_data_members)，还必须为 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) 数据成员添加初始化，此成员指定参数数据成员的数量。 框架将使用这些值来处理数据成员。
 

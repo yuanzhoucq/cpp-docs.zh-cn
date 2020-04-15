@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 55860a65fc77f834ed699f3a5114768b7efdde6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688349"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366722"
 ---
 # <a name="cache_suballoc-class"></a>cache_suballoc 类
 
@@ -30,28 +30,28 @@ class cache_suballoc
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*Sz*|数组中要分配的元素数目。|
+|*深圳*|数组中要分配的元素数目。|
 
 ## <a name="remarks"></a>备注
 
-当可用列表为空时，cache_suballoc 类模板会将**释放的内存**块存储在自由列表中，该列表的长度不受限制，使用 `freelist<sizeof(Type), max_unbounded>` 和 suballocates 内存块。
+cache_suballoc类模板将处理位置的内存块存储在具有无界长度的可用列表中，使用`freelist<sizeof(Type), max_unbounded>`，并在空闲列表为空时从与**运算符新**分配的较大块中分配内存块。
 
-每个区块都包含 `Sz * Nelts` 字节的可用内存和**运算符 new**和**operator delete**需要的数据。 不会释放已分配的区块。
+每个区块`Sz * Nelts`都保存可用内存的字节以及**运算符新**和**运算符删除**所需的数据。 不会释放已分配的区块。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[cache_suballoc](#cache_suballoc)|构造 `cache_suballoc` 类型的对象。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
-|[allocate](#allocate)|分配内存块。|
-|[deallocate](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|
+|[分配](#allocate)|分配内存块。|
+|[去分配](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|
 
 ## <a name="requirements"></a>要求
 
@@ -59,7 +59,7 @@ class cache_suballoc
 
 **命名空间：** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="cache_suballocallocate"></a><a name="allocate"></a>cache_suballoc：：分配
 
 分配内存块。
 
@@ -69,7 +69,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*count*|数组中要分配的元素数目。|
 
@@ -79,7 +79,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>备注
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a>cache_suballoc：cache_suballoc
 
 构造 `cache_suballoc` 类型的对象。
 
@@ -89,7 +89,7 @@ cache_suballoc();
 
 ### <a name="remarks"></a>备注
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a>cache_suballoc：:d分配
 
 从指定位置开始从存储中释放指定数量的的对象。
 
@@ -99,13 +99,13 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*Ptr*|指向要从存储中释放的第一个对象的指针。|
 |*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<分配器>](../standard-library/allocators-header.md)

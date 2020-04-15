@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d7952e3082bf68cff7ad9ba218073081ee522320
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265140"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363922"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 类
 
@@ -29,22 +29,22 @@ class CSplitterWndEx : public CSplitterWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`CSplitterWndEx::CSplitterWndEx`|默认构造函数。|
 |`CSplitterWndEx::~CSplitterWndEx`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|由框架调用以绘制拆分器窗口。 (重写[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter)。)|
+|[CSplitterwndEx：：在牵引器上](#ondrawsplitter)|由框架调用以绘制拆分窗口。 （覆盖[CSplitterwnd：onDrawSplitter](csplitterwnd-class.md#ondrawsplitter).）|
 
 ## <a name="remarks"></a>备注
 
-重写`OnDrawSplitter`方法以自定义拆分窗口的图形组件的外观。
+重写方法`OnDrawSplitter`以自定义拆分器窗口的图形组件的外观。
 
-`CSplitterWndEx`类使用连同[OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)， [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)，并且[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)方法，它是由视觉管理器实现。 若要使视觉管理器中，若要绘制应用程序中的拆分器窗口，声明替换为`CSplitterWnd`类的`CSplitterWndEx`类。 对于框架窗口应用程序，在 mainfrm.h 中位于 CMainFrame 类中声明拆分器窗口类。 有关示例，请参阅`OutlookDemo`示例在示例目录中。
+该`CSplitterWndEx`类与[OnDrawSplitter 边界](cmfcvisualmanager-class.md#ondrawsplitterborder)[、OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)和[OnFillSplitter 背景](cmfcvisualmanager-class.md#onfillsplitterbackground)方法一起使用，这些方法由可视化管理器实现。 要使可视化管理器在应用程序中绘制拆分器窗口，请将`CSplitterWnd`类的声明替换为`CSplitterWndEx`类。 对于帧窗口应用程序，拆分器窗口类在位于 mainfrm.h 中的 CMainFrame 类中声明。 例如，请参阅示例目录中`OutlookDemo`的示例。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,11 +58,11 @@ class CSplitterWndEx : public CSplitterWnd
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxsplitterwndex.h
+**标题：** afxsplitterwndex.h
 
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterwndEx：：在牵引器上
 
-由框架调用以绘制拆分器窗口。
+由框架调用以绘制拆分窗口。
 
 ```
 virtual void OnDrawSplitter(
@@ -75,19 +75,19 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文指针。 如果此参数为 NULL，该框架重绘活动窗口。
+[在]指向设备上下文的指针。 如果此参数为 NULL，则框架将重绘活动窗口。
 
-*nType*<br/>
-[in]其中一个`CSplitterWnd::ESplitType`枚举值，该值指定要绘制的拆分器窗口元素。 有效值为 `splitBox`、`splitBar`、`splitIntersection` 和 `splitBorder`。
+nType**<br/>
+[在]`CSplitterWnd::ESplitType`指定要绘制的拆分窗口元素的枚举值之一。 有效的值为 `splitBox`、`splitBar`、`splitIntersection` 和 `splitBorder`。
 
-*rect*<br/>
-[in]指定的维数和位置绘制指定的拆分器窗口元素边框。
+*矩形*<br/>
+[在]指定用于绘制指定拆分窗口元素的尺寸和位置的边界矩形。
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../hierarchy-chart.md)<br/>
+[层次结构图表](../hierarchy-chart.md)<br/>
 [类](mfc-classes.md)<br/>
 [CSplitterWnd 类](csplitterwnd-class.md)<br/>
 [CMFCVisualManager 类](cmfcvisualmanager-class.md)

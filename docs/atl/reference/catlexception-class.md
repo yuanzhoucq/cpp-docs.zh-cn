@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: a6ed6062be02fddc111e4eda4d26226b7a7a0c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6da56e4d6c443520eb6f857624a5923e71a1e580
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260670"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318997"
 ---
 # <a name="catlexception-class"></a>CAtlException 类
 
@@ -30,33 +30,33 @@ class CAtlException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlException::CAtlException](#catlexception)|构造函数。|
+|[例外：CAtlException](#catlexception)|构造函数。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlException::operator HRESULT](#operator_hresult)|将强制转换为 HRESULT 值的当前对象。|
+|[CAtlException：：操作员 HRESULT](#operator_hresult)|将当前对象强制转换为 HRESULT 值。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlException::m_hr](#m_hr)|创建的对象的 HRESULT 以及用来存储错误条件的类型的变量。|
+|[CAtlException：m_hr](#m_hr)|由对象创建并用于存储错误条件的 HRESULT 类型的变量。|
 
 ## <a name="remarks"></a>备注
 
-一个`CAtlException`对象都表示对 ATL 操作相关的异常条件。 `CAtlException`类包括存储，该值指示该异常并使您可以将该异常，就好像 HRESULT 的强制转换运算符的原因的状态代码的公共数据成员。
+`CAtlException`对象表示与 ATL 操作相关的异常条件。 类`CAtlException`包括存储指示异常原因的状态代码的公共数据成员，以及允许您将异常视为 HRESULT 的强制转换运算符。
 
-一般情况下，将调用`AtlThrow`而不是创建`CAtlException`直接对象。
+通常，您将调用`AtlThrow`而不是直接创建`CAtlException`对象。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlexcept.h
+**标题：** atlexcept.h
 
-##  <a name="catlexception"></a>  CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>例外：CAtlException
 
 构造函数。
 
@@ -67,18 +67,18 @@ CAtlException() throw();
 
 ### <a name="parameters"></a>参数
 
-*hr*<br/>
+*人力资源*<br/>
 HRESULT 错误代码。
 
-##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException：：操作员 HRESULT
 
-将强制转换为 HRESULT 值的当前对象。
+将当前对象强制转换为 HRESULT 值。
 
 ```
 operator HRESULT() const throw ();
 ```
 
-##  <a name="m_hr"></a>  CAtlException::m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException：m_hr
 
 HRESULT 数据成员。
 
@@ -88,9 +88,9 @@ HRESULT m_hr;
 
 ### <a name="remarks"></a>备注
 
-将存储的错误条件的数据成员。 HRESULT 值由构造函数中，设置[CAtlException::CAtlException](#catlexception)。
+存储错误条件的数据成员。 HRESULT 值由构造函数[CAtlException 设置：：CAtlexception](#catlexception)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)<br/>
 [类概述](../../atl/atl-class-overview.md)

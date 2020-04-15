@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427121"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368417"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 
@@ -24,11 +24,11 @@ ms.locfileid: "79427121"
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<试验/filesystem >
+**标头：** \<experimental/filesystem>
 
 **命名空间：** std::experimental::filesystem
 
-## <a name="copy_options"></a>  copy_options
+## <a name="copy_options"></a><a name="copy_options"></a>copy_options
 
 和 [copy](filesystem-functions.md#copy) 和 [copy_file](filesystem-functions.md#copy_file) 函数一起用于指定行为的位掩码值的枚举。
 
@@ -64,7 +64,7 @@ enum class copy_options {
 |`create_symlinks`|生成符号链接，而非复制文件。 必须将绝对路径用作源路径，除非目标是当前目录。|
 |`create_hard_links`|生成硬链接，而非复制文件。|
 
-## <a name="directory_options"></a> directory_options
+## <a name="directory_options"></a><a name="directory_options"></a> directory_options
 
 指定是跟踪指向目录的符号链接还是忽略它们。
 
@@ -84,9 +84,9 @@ enum class directory_options {
 |`none`|默认行为：忽略指向目录的符号链接。 拒绝权限是错误。|
 |`follow_directory_symlink`|将指向目录的符号链接视为实际目录。|
 
-## <a name="file_type"></a>  file_type
+## <a name="file_type"></a><a name="file_type"></a>file_type
 
-文件类型的枚举。 支持的值为 regular、directory、not_found 和 unknown。
+文件类型的枚举。 支持的值是常规的、目录的、not_found和未知的。
 
 ### <a name="syntax"></a>语法
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|名称|值|说明|
+|“属性”|“值”|描述|
 |----------|-----------|-----------------|
 |`not_found`|-1|表示一个不存在的文件。|
 |`none`|0|表示一个不具有类型特性的文件。 （不支持。）|
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|表示基于 UNIX 的系统上的套接字。 （不支持。）|
 |`unknown`|8|表示状态无法确定的文件。|
 
-## <a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a>perm_options
 
-包括值 `replace`、`add`、`remove`和 `nofollow`。
+包括值`replace` `add`、`remove`和`nofollow`。
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a>  perms
+## <a name="perms"></a><a name="perms"></a>佩尔姆斯
 
-文件权限的标志。 支持的值实质上是 "readonly" 和 all。 对于只读文件，未设置任何 *_write 位。 其他文件设置了 `all` 位 (0x0777)。
+文件权限的标志。 支持的值本质上是"只读"和所有值。 对于只读文件，未设置任何 *_write 位。 其他文件设置了 `all` 位 (0x0777)。
 
 ### <a name="syntax"></a>语法
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>另请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[\<filesystem>](../standard-library/filesystem.md)
+[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<文件系统>](../standard-library/filesystem.md)

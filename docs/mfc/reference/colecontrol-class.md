@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366197"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -357,206 +357,206 @@ class COleControl : public CWnd
 
 |名称|说明|
 |----------|-----------------|
-|[COleControl：： COleControl](#colecontrol)|创建一个 `COleControl` 对象。|
+|[COle 控制：COle 控制](#colecontrol)|创建一个 `COleControl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[COleControl：： AmbientAppearance](#ambientappearance)|检索控件当前的外观。|
-|[COleControl：： AmbientBackColor](#ambientbackcolor)|返回环境背景值属性的值。|
-|[COleControl：： AmbientDisplayName](#ambientdisplayname)|返回由容器指定的控件的名称。|
-|[COleControl：： AmbientFont](#ambientfont)|返回环境字体属性的值。|
-|[COleControl：： AmbientForeColor](#ambientforecolor)|返回环境前景色属性的值。|
-|[COleControl：： AmbientLocaleID](#ambientlocaleid)|返回容器的区域设置 ID。|
-|[COleControl：： AmbientScaleUnits](#ambientscaleunits)|返回容器使用的单位类型。|
-|[COleControl：： AmbientShowGrabHandles](#ambientshowgrabhandles)|确定是否应显示抓取柄。|
-|[COleControl：： AmbientShowHatching](#ambientshowhatching)|确定是否应显示阴影。|
-|[COleControl：： AmbientTextAlign](#ambienttextalign)|返回由容器指定的文本对齐方式的类型。|
-|[COleControl：： AmbientUIDead](#ambientuidead)|确定控件是否应响应用户界面操作。|
-|[COleControl：： AmbientUserMode](#ambientusermode)|确定容器的模式。|
-|[COleControl：： BoundPropertyChanged](#boundpropertychanged)|通知容器绑定属性已更改。|
-|[COleControl：： BoundPropertyRequestEdit](#boundpropertyrequestedit)|请求权限以编辑属性值。|
-|[COleControl：： ClientToParent](#clienttoparent)|将相对于控件原点的点转换为相对于其容器原点的点。|
-|[COleControl：： ClipCaretRect](#clipcaretrect)|如果插入符号矩形与控件重叠，则调整它。|
-|[COleControl：： ControlInfoChanged](#controlinfochanged)|在控件处理的助记键集更改后调用此函数。|
-|[COleControl：:D isplayError](#displayerror)|向控件的用户显示 stock 错误事件。|
-|[COleControl：:D oClick](#doclick)|Stock `DoClick` 方法的实现。|
-|[COleControl：:D oPropExchange](#dopropexchange)|序列化 `COleControl` 对象的属性。|
-|[COleControl：:D oSuperclassPaint](#dosuperclasspaint)|重绘已从 Windows 控件中产生子类的 OLE 控件。|
-|[COleControl：： EnableSimpleFrame](#enablesimpleframe)|启用控件的简单帧支持。|
-|[COleControl：： ExchangeExtent](#exchangeextent)|序列化控件的宽度和高度。|
-|[COleControl：： ExchangeStockProps](#exchangestockprops)|序列化控件的常用属性。|
-|[COleControl：： ExchangeVersion](#exchangeversion)|序列化控件的版本号。|
-|[COleControl：： FireClick](#fireclick)|激发股票 `Click` 事件。|
-|[COleControl：： FireDblClick](#firedblclick)|激发股票 `DblClick` 事件。|
-|[COleControl：： FireError](#fireerror)|激发股票 `Error` 事件。|
-|[COleControl：： FireEvent](#fireevent)|引发自定义事件。|
-|[COleControl：： FireKeyDown](#firekeydown)|激发股票 `KeyDown` 事件。|
-|[COleControl：： FireKeyPress](#firekeypress)|激发股票 `KeyPress` 事件。|
-|[COleControl：： FireKeyUp](#firekeyup)|激发股票 `KeyUp` 事件。|
-|[COleControl：： FireMouseDown](#firemousedown)|激发股票 `MouseDown` 事件。|
-|[COleControl：： FireMouseMove](#firemousemove)|激发股票 `MouseMove` 事件。|
-|[COleControl：： FireMouseUp](#firemouseup)|激发股票 `MouseUp` 事件。|
-|[COleControl：： FireReadyStateChange](#firereadystatechange)|当控件的就绪状态发生更改时，引发事件。|
-|[COleControl：： GetActivationPolicy](#getactivationpolicy)|更改支持 `IPointerInactive` 接口的控件的默认激活行为。|
-|[COleControl：： GetAmbientProperty](#getambientproperty)|返回指定环境属性的值。|
-|[COleControl：： GetAppearance](#getappearance)|返回 stock 外观属性的值。|
-|[COleControl：： GetBackColor](#getbackcolor)|返回 stock 背景色属性的值。|
-|[COleControl：： GetBorderStyle](#getborderstyle)|返回 stock BorderStyle 属性的值。|
-|[COleControl：： GetCapture](#getcapture)|确定无窗口、已激活的控件对象是否具有鼠标捕获。|
-|[COleControl：： GetClassID](#getclassid)|检索控件的 OLE 类 ID。|
-|[COleControl：： GetClientOffset](#getclientoffset)|检索控件的矩形区域的左上角与其工作区左上角之间的差异。|
-|[COleControl：： GetClientRect](#getclientrect)|检索控件的工作区的大小。|
-|[COleControl：： GetClientSite](#getclientsite)|查询对象，以便指针指向其容器中的当前客户端站点。|
-|[COleControl：： GetControlFlags](#getcontrolflags)|检索控件标志设置。|
-|[COleControl：： GetControlSize](#getcontrolsize)|返回 OLE 控件的位置和大小。|
-|[COleControl：： GetDC](#getdc)|为无窗口控件提供从其容器获取设备上下文的方法。|
-|[COleControl：： GetEnabled](#getenabled)|返回启用了库存的属性的值。|
-|[COleControl：： GetExtendedControl](#getextendedcontrol)|检索指向属于容器的扩展控件对象的指针。|
-|[COleControl：： GetFocus](#getfocus)|确定控件是否有焦点。|
-|[COleControl：： Ivsfontandcolorstorage.getfont 错误](#getfont)|返回常用字体属性的值。|
-|[COleControl：： GetFontTextMetrics](#getfonttextmetrics)|返回 `CFontHolder` 对象的指标。|
-|[COleControl：： GetForeColor](#getforecolor)|返回 "股票前景色" 属性的值。|
-|[COleControl：： GetHwnd](#gethwnd)|返回 stock hWnd 属性的值。|
-|[COleControl：： GetMessageString](#getmessagestring)|提供菜单项的状态栏文本。|
-|[COleControl：： GetNotSupported](#getnotsupported)|禁止用户访问控件的属性值。|
-|[COleControl：： GetReadyState](#getreadystate)|返回控件的就绪状态。|
-|[COleControl：： GetRectInContainer](#getrectincontainer)|返回控件的相对于其容器的矩形。|
-|[COleControl：： GetStockTextMetrics](#getstocktextmetrics)|返回常用字体属性的度量值。|
-|[COleControl：： GetText](#gettext)|返回 stock 文本或 Caption 属性的值。|
-|[COleControl：： GetWindowlessDropTarget](#getwindowlessdroptarget)|重写以允许无窗口控件作为拖放操作的目标。|
-|[COleControl：： InitializeIIDs](#initializeiids)|通知控件将使用的 Iid 的基类。|
-|[COleControl：： InternalGetFont](#internalgetfont)|返回常用字体属性的 `CFontHolder` 对象。|
-|[COleControl：： InternalGetText](#internalgettext)|检索股票代码标题或文本属性。|
-|[COleControl：： InternalSetReadyState](#internalsetreadystate)|设置控件的就绪状态，并激发就绪状态更改事件。|
-|[COleControl：： Microsoft.office.core.iribbonui.invalidatecontrol](#invalidatecontrol)|使显示的控件的区域无效，从而导致重绘该控件。|
-|[COleControl：： InvalidateRgn](#invalidatergn)|使给定区域内的容器窗口的工作区失效。 可用于在区域中重绘无窗口控件。|
-|[COleControl：： IsConvertingVBX](#isconvertingvbx)|允许专用加载 OLE 控件。|
-|[COleControl：： IsModified](#ismodified)|确定控件状态是否已更改。|
-|[COleControl：： IsOptimizedDraw](#isoptimizeddraw)|指示容器是否支持当前绘制操作的优化绘图。|
-|[COleControl：： IsSubclassedControl](#issubclassedcontrol)|调用以确定控件是否为 Windows 控件的子类。|
-|[COleControl：： Load](#load)|重置任何以前的异步数据并启动控件的异步属性的新加载。|
-|[COleControl：： LockInPlaceActive](#lockinplaceactive)|确定容器是否可以停用控件。|
-|[COleControl：： OnAmbientPropertyChange](#onambientpropertychange)|在环境属性更改时调用。|
-|[COleControl：： OnAppearanceChanged](#onappearancechanged)|当 "股票外观" 属性更改时调用。|
-|[COleControl：： OnBackColorChanged](#onbackcolorchanged)|当更改了 stock 背景色属性时调用。|
-|[COleControl：： OnBorderStyleChanged](#onborderstylechanged)|当 "股票 BorderStyle" 属性更改时调用。|
-|[COleControl：： OnClick](#onclick)|调用以激发 stock Click 事件。|
-|[COleControl：： OnClose](#onclose)|通知控件 `IOleControl::Close` 已被调用。|
-|[COleControl：： OnDoVerb](#ondoverb)|在执行控制谓词后调用。|
-|[COleControl：： OnDraw](#ondraw)|当请求控件重绘自身时调用。|
-|[COleControl：： OnDrawMetafile](#ondrawmetafile)|当请求控件使用图元文件设备上下文重绘自身时，由容器调用。|
-|[COleControl：： OnEdit](#onedit)|由容器调用以 UI 激活 OLE 控件。|
-|[COleControl：： OnEnabledChanged](#onenabledchanged)|当 "已启用库存" 属性更改时调用。|
-|[COleControl：： OnEnumVerbs](#onenumverbs)|由容器调用以枚举控件的谓词。|
-|[COleControl：： OnEventAdvise](#oneventadvise)|当事件处理程序连接或与控件断开连接时调用。|
-|[COleControl：： OnFontChanged](#onfontchanged)|当 "常用字体" 属性更改时调用。|
-|[COleControl：： OnForeColorChanged](#onforecolorchanged)|当 "股票前景" 属性更改时调用。|
-|[COleControl：： OnFreezeEvents](#onfreezeevents)|当控件的事件被冻结或解冻时调用。|
-|[COleControl：： OnGetColorSet](#ongetcolorset)|通知控件 `IOleObject::GetColorSet` 已被调用。|
-|[COleControl：： OnGetControlInfo](#ongetcontrolinfo)|向容器提供助记键信息。|
-|[COleControl：： OnGetDisplayString](#ongetdisplaystring)|调用以获取表示属性值的字符串。|
-|[COleControl：： OnGetInPlaceMenu](#ongetinplacemenu)|请求将与容器菜单合并的控件菜单的句柄。|
-|[COleControl：： OnGetNaturalExtent](#ongetnaturalextent)|重写以检索最接近建议大小和区模式的控件的显示大小。|
-|[COleControl：： OnGetPredefinedStrings](#ongetpredefinedstrings)|返回表示属性的可能值的字符串。|
-|[COleControl：： OnGetPredefinedValue](#ongetpredefinedvalue)|返回与预定义字符串相对应的值。|
-|[COleControl：： OnGetViewExtent](#ongetviewextent)|重写以检索控件的显示区域的大小（可用于启用两遍绘制）。|
-|[COleControl：： OnGetViewRect](#ongetviewrect)|重写以将控件的大小转换为从特定位置开始的矩形。|
-|[COleControl：： OnGetViewStatus](#ongetviewstatus)|重写以检索控件的视图状态。|
-|[COleControl：： OnHideToolBars](#onhidetoolbars)|当控件处于 UI 禁用状态时由容器调用。|
-|[COleControl：： OnInactiveMouseMove](#oninactivemousemove)|重写以使鼠标指针下的非活动控件的容器 WM_MOUSEMOVE 发送到控件的消息。|
-|[COleControl：： OnInactiveSetCursor](#oninactivesetcursor)|重写以使鼠标指针下的非活动控件的容器 WM_SETCURSOR 发送到控件的消息。|
-|[COleControl：： OnKeyDownEvent](#onkeydownevent)|在激发股票 KeyDown 事件之后调用。|
-|[COleControl：： OnKeyPressEvent](#onkeypressevent)|在激发 stock 按键事件之后调用。|
-|[COleControl：： OnKeyUpEvent](#onkeyupevent)|在激发 stock KeyUp 事件之后调用。|
-|[COleControl：： OnMapPropertyToPage](#onmappropertytopage)|指示用于编辑属性的属性页。|
-|[COleControl：： OnMnemonic](#onmnemonic)|当已按下控件的助记键时调用。|
-|[COleControl：： OnProperties](#onproperties)|在调用控件的 "Properties" 谓词时调用。|
-|[COleControl：： OnQueryHitPoint](#onqueryhitpoint)|重写以查询控件的显示是否与给定点重叠。|
-|[COleControl：： OnQueryHitRect](#onqueryhitrect)|重写以查询控件的显示是否与给定矩形中的任何点重叠。|
-|[COleControl：： OnRenderData](#onrenderdata)|由框架调用以检索指定格式的数据。|
-|[COleControl：： OnRenderFileData](#onrenderfiledata)|由框架调用以从文件中检索指定格式的数据。|
-|[COleControl：： OnRenderGlobalData](#onrenderglobaldata)|由框架调用以检索指定格式的全局内存中的数据。|
-|[COleControl：： OnResetState](#onresetstate)|将控件的属性重置为默认值。|
-|[COleControl：： OnSetClientSite](#onsetclientsite)|通知控件 `IOleControl::SetClientSite` 已被调用。|
-|[COleControl：： OnSetData](#onsetdata)|将控件的数据替换为另一个值。|
-|[COleControl：： OnSetExtent](#onsetextent)|在控件的范围发生更改后调用。|
-|[COleControl：： OnSetObjectRects](#onsetobjectrects)|在控件的维度更改后调用。|
-|[COleControl：： OnShowToolBars](#onshowtoolbars)|当控件已激活 UI 时调用。|
-|[COleControl：： OnTextChanged](#ontextchanged)|当更改了 stock 文本或标题属性时调用。|
-|[COleControl：： OnWindowlessMessage](#onwindowlessmessage)|处理无窗口控件的窗口消息（鼠标和键盘消息除外）。|
-|[COleControl：:P arentToClient](#parenttoclient)|将相对于容器原点的点转换为相对于控件原点的点。|
-|[COleControl：:P ostModalDialog](#postmodaldialog)|通知容器模式对话框已关闭。|
-|[COleControl：:P reModalDialog](#premodaldialog)|通知容器将要显示的模式对话框。|
-|[COleControl：： RecreateControlWindow](#recreatecontrolwindow)|销毁并重新创建控件的窗口。|
-|[COleControl：： Refresh](#refresh)|强制重新绘制控件的外观。|
-|[COleControl：： ReleaseCapture](#releasecapture)|释放鼠标捕获。|
-|[COleControl：： ReleaseDC](#releasedc)|释放无窗口控件的容器的显示设备上下文。|
-|[COleControl：： ReparentControlWindow](#reparentcontrolwindow)|重置控件窗口的父级。|
-|[COleControl：： ResetStockProps](#resetstockprops)|将 `COleControl` stock 属性初始化为其默认值。|
-|[COleControl：： ResetVersion](#resetversion)|将版本号初始化为给定的值。|
-|[COleControl：： ScrollWindow](#scrollwindow)|允许无窗口控件在其就地活动图像中滚动显示的区域。|
-|[COleControl：： SelectFontObject](#selectfontobject)|选择自定义字体属性到设备上下文。|
-|[COleControl：： SelectStockFont](#selectstockfont)|选择 "常用字体" 属性到设备上下文。|
-|[COleControl：： SerializeExtent](#serializeextent)|序列化或初始化控件的显示空间。|
-|[COleControl：： SerializeStockProps](#serializestockprops)|序列化或初始化 `COleControl` 常用属性。|
-|[COleControl：： SerializeVersion](#serializeversion)|序列化或初始化控件的版本信息。|
-|[COleControl：： SetAppearance](#setappearance)|设置 "股票外观" 属性的值。|
-|[COleControl：： SetBackColor](#setbackcolor)|设置 "股票背景色" 属性的值。|
-|[COleControl：： SetBorderStyle](#setborderstyle)|设置 "stock BorderStyle" 属性的值。|
-|[COleControl：： SetCapture](#setcapture)|导致控件的容器窗口代表控件占据鼠标捕获。|
-|[COleControl：： SetControlSize](#setcontrolsize)|设置 OLE 控件的位置和大小。|
-|[COleControl：： SetEnabled](#setenabled)|设置 "启用股票" 属性的值。|
-|[COleControl：： SetFocus](#setfocus)|导致控件的容器窗口代表控件拥有输入焦点。|
-|[COleControl：： SetFont](#setfont)|设置 "常用字体" 属性的值。|
-|[COleControl：： SetForeColor](#setforecolor)|设置 "股票前景色" 属性的值。|
-|[COleControl：： SetInitialSize](#setinitialsize)|设置 OLE 控件第一次在容器中显示时的大小。|
-|[COleControl：： SetModifiedFlag](#setmodifiedflag)|更改控件的修改状态。|
-|[COleControl：： SetNotPermitted](#setnotpermitted)|指示编辑请求失败。|
-|[COleControl：： SetNotSupported](#setnotsupported)|防止用户修改控件的属性值。|
-|[COleControl：： SetRectInContainer](#setrectincontainer)|设置控件相对于其容器的矩形。|
-|[COleControl：： SetText](#settext)|设置 stock 文本或标题属性的值。|
-|[COleControl：： ThrowError](#throwerror)|指示 OLE 控件中发生了错误。|
-|[COleControl：： TransformCoords](#transformcoords)|转换容器和控件之间的坐标值。|
-|[COleControl：： TranslateColor](#translatecolor)|将 OLE_COLOR 值转换为 COLORREF 值。|
-|[COleControl：： WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|确定在下一次加载控件时环境属性是否可用。|
-|[COleControl：： WindowProc](#windowproc)|为 `COleControl` 对象提供 Windows 过程。|
+|[COleControl：环境外观](#ambientappearance)|检索控件的当前外观。|
+|[COle 控制：环境背面颜色](#ambientbackcolor)|返回环境 BackColor 属性的值。|
+|[COleControl：环境显示名称](#ambientdisplayname)|返回容器指定的控件的名称。|
+|[COleControl：环境字体](#ambientfont)|返回环境字体属性的值。|
+|[COleControl：环境福彩](#ambientforecolor)|返回环境 ForeColor 属性的值。|
+|[COleControl：环境区域ID](#ambientlocaleid)|返回容器的区域设置 ID。|
+|[COle 控制：：环境尺度单位](#ambientscaleunits)|返回容器使用的单位类型。|
+|[COle 控制：：环境显示抓手](#ambientshowgrabhandles)|确定是否应显示抓取控点。|
+|[COle 控制：环境显示填充](#ambientshowhatching)|确定是否应显示剖面线。|
+|[COle 控制：环境文本对齐](#ambienttextalign)|返回容器指定的文本对齐类型。|
+|[COleControl：环境UIDead](#ambientuidead)|确定控件是否应响应用户界面操作。|
+|[COle 控制：环境用户模式](#ambientusermode)|确定容器的模式。|
+|[COle 控制：绑定属性已更改](#boundpropertychanged)|通知容器绑定属性已更改。|
+|[COle 控制：：绑定属性请求编辑](#boundpropertyrequestedit)|请求编辑属性值的权限。|
+|[COle 控制：：客户端到父级](#clienttoparent)|将相对于控件原点的点转换为相对于其容器源的点。|
+|[COle 控制：：ClipCaretrect](#clipcaretrect)|如果倾斜矩形与控件重叠，则调整其矩形。|
+|[COle 控制：：控制信息已更改](#controlinfochanged)|在控件处理的助记符集已更改后调用此函数。|
+|[COleControl：:D播放错误](#displayerror)|向控件的用户显示库存错误事件。|
+|[COleControl：:DoClick](#doclick)|实现库存`DoClick`方法。|
+|[COleControl：:DoPropExchange](#dopropexchange)|序列化`COleControl`对象的属性。|
+|[COleControl：:D超类绘画](#dosuperclasspaint)|重绘从 Windows 控件中子分类的 OLE 控件。|
+|[COle 控制：启用简单帧](#enablesimpleframe)|支持控件的简单帧支持。|
+|[COleControl：：交换范围](#exchangeextent)|序列化控件的宽度和高度。|
+|[COleControl：：交易所股票供应商](#exchangestockprops)|序列化控件的库存属性。|
+|[COleControl：交换版本](#exchangeversion)|序列化控件的版本号。|
+|[COle 控制：火击](#fireclick)|触发库存`Click`事件。|
+|[COleControl：：火点点击](#firedblclick)|触发库存`DblClick`事件。|
+|[COle控制：火错误](#fireerror)|触发库存`Error`事件。|
+|[COle 控制：火事件](#fireevent)|触发自定义事件。|
+|[COle 控制：：火键向下](#firekeydown)|触发库存`KeyDown`事件。|
+|[COleControl：：FireKeyPress](#firekeypress)|触发库存`KeyPress`事件。|
+|[COle 控制：火键向上](#firekeyup)|触发库存`KeyUp`事件。|
+|[COleControl：火鼠向下](#firemousedown)|触发库存`MouseDown`事件。|
+|[COleControl：火鼠移动](#firemousemove)|触发库存`MouseMove`事件。|
+|[COleControl：火鼠](#firemouseup)|触发库存`MouseUp`事件。|
+|[COle 控制：：火就绪状态更改](#firereadystatechange)|当控件的就绪状态发生更改时，触发事件。|
+|[COleControl：获取激活策略](#getactivationpolicy)|更改支持接口的控件的`IPointerInactive`默认激活行为。|
+|[COleControl：获取环境属性](#getambientproperty)|返回指定环境属性的值。|
+|[COleControl：获取外观](#getappearance)|返回股票外观属性的值。|
+|[COleControl：获取回归颜色](#getbackcolor)|返回股票 BackColor 属性的值。|
+|[COle 控制：获取边框样式](#getborderstyle)|返回股票 BorderStyle 属性的值。|
+|[COle 控制：获取捕获](#getcapture)|确定无窗口、激活的控件对象是否具有鼠标捕获。|
+|[COle 控制：获取类 ID](#getclassid)|检索控件的 OLE 类 ID。|
+|[COle 控制：获取客户端偏移](#getclientoffset)|检索控件矩形区域的左上角与其工作区的左上角之间的差异。|
+|[COleControl：获取客户端](#getclientrect)|检索控件工作区的大小。|
+|[COleControl：获取客户网站](#getclientsite)|查询指向其容器中当前客户端站点的指针的对象。|
+|[COle 控制：获取控制标志](#getcontrolflags)|检索控件标志设置。|
+|[COle 控制：获取控制大小](#getcontrolsize)|返回 OLE 控件的位置和大小。|
+|[COle 控制：GetDC](#getdc)|提供一种无窗口控件从其容器获取设备上下文的方法。|
+|[COle 控制：启用](#getenabled)|返回股票启用属性的值。|
+|[COle 控制：获取扩展控制](#getextendedcontrol)|检索指向属于容器的扩展控件对象的指针。|
+|[COleControl：获取焦点](#getfocus)|确定控件是否具有焦点。|
+|[COleControl：获取字体](#getfont)|返回股票字体属性的值。|
+|[COleControl：获取字体文本指标](#getfonttextmetrics)|返回`CFontHolder`对象的指标。|
+|[COleControl：获取福彩](#getforecolor)|返回股票 ForeColor 属性的值。|
+|[COleControl：GetHwnd](#gethwnd)|返回股票 hWnd 属性的值。|
+|[COle 控制：获取消息字符串](#getmessagestring)|提供菜单项的状态栏文本。|
+|[COle 控制：不受支持](#getnotsupported)|防止用户访问控件的属性值。|
+|[COleControl：准备状态](#getreadystate)|返回控件的就绪状态。|
+|[COle 控制：获取 rectin 容器](#getrectincontainer)|返回控件相对于其容器的矩形。|
+|[COleControl：获取股票文本指标](#getstocktextmetrics)|返回股票字体属性的指标。|
+|[COleControl：获取文本](#gettext)|返回股票文本或标题属性的值。|
+|[COle 控制：获取无窗口丢弃目标](#getwindowlessdroptarget)|覆盖以允许无窗口控件成为拖放操作的目标。|
+|[COle 控制：初始化 IID](#initializeiids)|通知控件将使用的 IID 的基类。|
+|[COleControl：内部获取字体](#internalgetfont)|返回股票`CFontHolder`字体属性的对象。|
+|[COleControl：内部获取文本](#internalgettext)|检索库存标题或文本属性。|
+|[COleControl：：内部就绪状态](#internalsetreadystate)|设置控件的就绪状态并触发就绪状态更改事件。|
+|[COle 控制：无效控制](#invalidatecontrol)|使显示的控件的区域无效，从而导致重新绘制该控件。|
+|[COleControl：无效](#invalidatergn)|使给定区域内的容器窗口的工作区无效。 可用于重绘区域中的无窗口控件。|
+|[COleControl：正在转换VBX](#isconvertingvbx)|允许专门加载 OLE 控件。|
+|[COle 控制：已修改](#ismodified)|确定控件状态是否已更改。|
+|[COleControl：优化绘制](#isoptimizeddraw)|指示容器是否支持当前绘图操作的优化绘图。|
+|[COle 控制：是子类控制](#issubclassedcontrol)|调用 以确定控件是否对 Windows 控件进行子类。|
+|[COle 控制：加载](#load)|重置任何以前的异步数据，并启动控件的异步属性的新负载。|
+|[COle 控制：锁定位置活动](#lockinplaceactive)|确定控件是否可以由容器停用。|
+|[COleControl：关于环境属性更改](#onambientpropertychange)|更改环境属性时调用。|
+|[COle 控制：在外观上已更改](#onappearancechanged)|更改股票外观属性时调用。|
+|[COle 控制：onbackColor 已更改](#onbackcolorchanged)|更改股票 BackColor 属性时调用。|
+|[COle 控制：在边框样式上已更改](#onborderstylechanged)|更改股票边框样式属性时调用。|
+|[COleControl：点击](#onclick)|已调用以触发库存单击事件。|
+|[COle 控制：关闭](#onclose)|通知已调用的`IOleControl::Close`控件。|
+|[COleControl：OnDoVerb](#ondoverb)|执行控制谓词后调用。|
+|[COleControl：在画上](#ondraw)|当请求控件重新绘制自身时调用。|
+|[COleControl：在画元文件](#ondrawmetafile)|当请求控件使用元文件设备上下文重绘自身时，容器调用该容器。|
+|[COleControl：：编辑](#onedit)|容器调用 UI 激活 OLE 控件。|
+|[COle 控制：启用](#onenabledchanged)|更改股票启用属性时调用。|
+|[COleControl：onEnumVerbs](#onenumverbs)|容器调用以枚举控件的谓词。|
+|[COleControl：在事件建议](#oneventadvise)|当事件处理程序连接或与控件断开连接时调用。|
+|[COleControl：：放大缩小字体功能 放大缩小字体功能](#onfontchanged)|更改股票字体属性时调用。|
+|[COleControl：OnforeColor 已更改](#onforecolorchanged)|更改股票前颜色属性时调用。|
+|[COleControl：在冻结事件](#onfreezeevents)|当控件的事件被冻结或解冻时调用。|
+|[COleControl：onGetColorSet](#ongetcolorset)|通知已调用的`IOleObject::GetColorSet`控件。|
+|[COleControl：OnGetControlInfo](#ongetcontrolinfo)|向容器提供助记符信息。|
+|[COle 控制：：在GetDisplayString上](#ongetdisplaystring)|调用以获取表示属性值的字符串。|
+|[COleControl：ongetinplacemenu](#ongetinplacemenu)|请求将与容器菜单合并的控件菜单的句柄。|
+|[COleControl：OnGet自然范围](#ongetnaturalextent)|覆盖以检索控件的显示大小，最接近建议的大小和范围模式。|
+|[COle 控制：：打开预定义字符串](#ongetpredefinedstrings)|返回表示属性的可能值的字符串。|
+|[COle 控制：：获取预定义值](#ongetpredefinedvalue)|返回与预定义字符串对应的值。|
+|[COleControl：OngetView 范围](#ongetviewextent)|覆盖以检索控件的显示区域的大小（可用于启用双通道绘图）。|
+|[COleControl：OngetViewrect](#ongetviewrect)|覆盖以将控件的大小转换为从特定位置开始的矩形。|
+|[COleControl：Onget查看状态](#ongetviewstatus)|覆盖以检索控件的视图状态。|
+|[COle 控制：在隐藏工具栏上](#onhidetoolbars)|当控件被 UI 停用时，容器调用。|
+|[COle 控制：在活动鼠标移动](#oninactivemousemove)|覆盖以将鼠标指针下的非活动控件的容器调度WM_MOUSEMOVE消息发送到该控件。|
+|[COle 控制：oninactiveSetCursor](#oninactivesetcursor)|覆盖以将鼠标指针下的非活动控件的容器调度WM_SETCURSOR消息发送到该控件。|
+|[COleControl：在键下事件](#onkeydownevent)|在股票密钥关闭事件已触发后调用。|
+|[COleControl：：在KeyPress事件](#onkeypressevent)|股票 KeyPress 事件已触发后调用。|
+|[COleControl：在KeyUpevent上](#onkeyupevent)|在股票 KeyUp 事件已触发后调用。|
+|[COleControl：在地图属性页](#onmappropertytopage)|指示用于编辑属性的属性页。|
+|[COleControl：onMnemonic](#onmnemonic)|按下控件的助记符键时调用。|
+|[COle 控制：：属性](#onproperties)|调用控件的"属性"谓词时调用。|
+|[COle 控制：在查询命中点](#onqueryhitpoint)|覆盖以查询控件的显示是否与给定点重叠。|
+|[COleControl：在查询中](#onqueryhitrect)|覆盖以查询控件的显示是否与给定矩形中的任何点重叠。|
+|[COle 控制：在渲染数据上](#onrenderdata)|框架调用以检索指定格式的数据。|
+|[COle 控制：在渲染文件数据上](#onrenderfiledata)|框架调用以以指定格式从文件检索数据。|
+|[COle 控制：在渲染全局数据](#onrenderglobaldata)|框架调用以以指定格式从全局内存检索数据。|
+|[COle 控制：在重置状态](#onresetstate)|将控件的属性重置为默认值。|
+|[COleControl：在设置客户端站点](#onsetclientsite)|通知已调用的`IOleControl::SetClientSite`控件。|
+|[COleControl：OnSetData](#onsetdata)|将控件的数据替换为另一个值。|
+|[COle 控制：在设置范围](#onsetextent)|在控件的范围已更改后调用。|
+|[COle 控制：OnSetObjectrects](#onsetobjectrects)|更改控件的尺寸后调用。|
+|[COleControl：：在显示工具栏上](#onshowtoolbars)|在激活控件时调用。|
+|[COle 控制：在文本上更改](#ontextchanged)|更改股票文本或标题属性时调用。|
+|[COleControl：无窗口消息](#onwindowlessmessage)|处理无窗口控件的窗口消息（鼠标和键盘消息以外的）。|
+|[COleControl：:P客户](#parenttoclient)|将相对于容器原点的点转换为相对于控件原点的点。|
+|[COleControl：:P模式对话](#postmodaldialog)|通知容器模式对话框已关闭。|
+|[COleControl：:P重新模式对话](#premodaldialog)|通知容器即将显示模式对话框。|
+|[COle 控制：：重新创建控制窗口](#recreatecontrolwindow)|销毁并重新创建控件的窗口。|
+|[COle 控制：刷新](#refresh)|强制重新绘制控件的外观。|
+|[COle 控制：：发布捕获](#releasecapture)|释放鼠标捕获。|
+|[COle 控制：释放DC](#releasedc)|释放无窗口控件容器的显示设备上下文。|
+|[COle 控制：：重父控制窗口](#reparentcontrolwindow)|重置控件窗口的父级。|
+|[COle 控制：：重置库存](#resetstockprops)|将`COleControl`股票属性初始化到其默认值。|
+|[COle 控制：重置版本](#resetversion)|将版本号初始化为给定值。|
+|[COle 控制：滚动窗口](#scrollwindow)|允许无窗口控件滚动其就地活动图像中的区域。|
+|[COle 控制：选择字体对象](#selectfontobject)|在设备上下文中选择自定义字体属性。|
+|[COleControl：选择库存字体](#selectstockfont)|在设备上下文中选择"库存字体"属性。|
+|[COle 控制：序列化范围](#serializeextent)|序列化或初始化控件的显示空间。|
+|[COle 控制：：序列化库存](#serializestockprops)|序列化或初始化`COleControl`股票属性。|
+|[COle 控制：序列化版本](#serializeversion)|序列化或初始化控件的版本信息。|
+|[COle 控制：：设置外观](#setappearance)|设置股票外观属性的值。|
+|[COle 控制：：设置回颜色](#setbackcolor)|设置股票 BackColor 属性的值。|
+|[COle 控制：设置边框样式](#setborderstyle)|设置股票边界样式属性的值。|
+|[COle 控制：设置捕获](#setcapture)|使控件的容器窗口代表控件获取鼠标捕获。|
+|[COle 控制：设置控制大小](#setcontrolsize)|设置 OLE 控件的位置和大小。|
+|[COle 控制：已启用](#setenabled)|设置股票启用属性的值。|
+|[COle 控制：设置焦点](#setfocus)|使控件的容器窗口以控件的名义占用输入焦点。|
+|[COle 控制：：设置字体](#setfont)|设置股票字体属性的值。|
+|[COleControl：设置福彩](#setforecolor)|设置股票 ForeColor 属性的值。|
+|[COle 控制：设置初始大小](#setinitialsize)|设置首次显示在容器中的 OLE 控件的大小。|
+|[COle 控制：设置已修改的标记](#setmodifiedflag)|更改控件的已修改状态。|
+|[COle 控制：设置不允许](#setnotpermitted)|指示编辑请求失败。|
+|[COle 控制：设置不支持](#setnotsupported)|防止用户修改控件的属性值。|
+|[COle 控制：setrectin 容器](#setrectincontainer)|设置控件相对于其容器的矩形。|
+|[COle 控制：设置文本](#settext)|设置股票文本或标题属性的值。|
+|[COle 控制：：投掷错误](#throwerror)|指示 OLE 控件中发生错误。|
+|[COle 控制：转换库德](#transformcoords)|转换容器和控件之间的坐标值。|
+|[COleControl：翻译颜色](#translatecolor)|将OLE_COLOR值转换为 COLORREF 值。|
+|[COle 控制：在加载期间，环境将有效](#willambientsbevalidduringload)|确定下次加载控件时环境属性是否可用。|
+|[COle 控制：：窗口 Proc](#windowproc)|为`COleControl`对象提供 Windows 过程。|
 
-### <a name="protected-methods"></a>受保护方法
+### <a name="protected-methods"></a>受保护的方法
 
 |名称|说明|
 |----------|-----------------|
-|[COleControl：:D rawContent](#drawcontent)|当需要更新控件的外观时由框架调用。|
-|[COleControl：:D rawMetafile](#drawmetafile)|当使用图元文件设备上下文时由框架调用。|
-|[COleControl：： IsInvokeAllowed](#isinvokeallowed)|启用自动化方法调用。|
-|[COleControl：： SetInitialDataFormats](#setinitialdataformats)|由框架调用以初始化控件支持的数据格式列表。|
+|[COleControl：:D原始内容](#drawcontent)|当需要更新控件的外观时，由框架调用。|
+|[COleControl：:D原始元文件](#drawmetafile)|使用元文件设备上下文时由框架调用。|
+|[COle 控制：被调用允许](#isinvokeallowed)|启用自动化方法调用。|
+|[COleControl：设置初始数据格式](#setinitialdataformats)|由框架调用以初始化控件支持的数据格式列表。|
 
 ## <a name="remarks"></a>备注
 
-派生自 `CWnd`，此类继承 Windows 窗口对象的所有功能以及特定于 OLE 的附加功能，如事件激发和支持方法和属性的功能。
+派生自`CWnd`的类继承 Windows 窗口对象的所有功能以及特定于 OLE 的其他功能，如事件触发和支持方法和属性的功能。
 
-可以将 OLE 控件插入 OLE 容器应用程序中，并使用双向系统事件激发并向容器公开方法和属性，与容器进行通信。 请注意，标准 OLE 容器只支持 OLE 控件的基本功能。 它们不支持 OLE 控件的扩展功能。 如果在控件中发生特定操作，将事件发送到容器，则会发生事件激发。 反过来，容器通过使用一组公开的方法和属性（类似于C++类的成员函数和数据成员）与控件进行通信。 此方法允许开发人员控制控件的外观并在发生特定操作时通知容器。
+OLE 控件可以插入到 OLE 容器应用程序中，并使用事件触发的双向系统与容器通信，并将方法和属性公开到容器中。 请注意，标准 OLE 容器仅支持 OLE 控件的基本功能。 它们无法支持 OLE 控件的扩展功能。 当由于控件中发生的某些操作而将事件发送到容器时，将发生事件触发。 反过来，容器通过使用与C++类的成员函数和数据成员类似的一组公开方法和属性与控件通信。 此方法允许开发人员控制控件的外观，并在发生某些操作时通知容器。
 
 ## <a name="windowless-controls"></a>无窗口控件
 
-OLE 控件可以在不使用窗口的情况下就地激活。 无窗口控件具有明显优势：
+OLE 控件可以在没有窗口的情况下就地活动使用。 无窗口控件具有显著优势：
 
-- 无窗口控件可以是透明的，也可以是非矩形
+- 无窗口控件可以是透明的和非矩形的
 
-- 无窗口控件减少对象的实例大小和创建时间
+- 无窗口控件可减少对象的实例大小和创建时间
 
-控件不需要窗口。 Windows 提供的服务可以通过单个共享窗口（通常是容器）和一个调度代码轻松地提供。 在此对象上，有一个窗口通常是不必要的。
+控件不需要窗口。 窗口提供的服务可通过单个共享窗口（通常是容器的窗口）和一些调度代码轻松提供。 拥有窗口在对象上大多是不必要的复杂因素。
 
-当使用无窗口激活时，容器（有窗口）负责提供其他已由控件自己的窗口提供的服务。 例如，如果您的控件需要查询键盘焦点、查询鼠标捕获或获取设备上下文，则这些操作由容器管理。 `COleControl` 无窗口操作成员函数在容器上调用这些操作。
+使用无窗口激活时，容器（其中确实有一个窗口）负责提供否则由控件自己的窗口提供的服务。 例如，如果控件需要查询键盘焦点、查询鼠标捕获或获取设备上下文，则这些操作由容器管理。 无`COleControl`窗口操作成员函数在容器上调用这些操作。
 
-启用无窗口激活时，容器会将输入消息委托给控件的 `IOleInPlaceObjectWindowless` 接口（ [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)的扩展可实现无窗口支持）。 当调整鼠标坐标后，此接口 `COleControl`的实现将通过控件的消息映射调度这些消息。 您可以通过将相应条目添加到消息映射来处理这些消息，如普通窗口消息。
+启用无窗口激活后，容器会将输入消息委托给控件的`IOleInPlaceObjectWindowless`接口（用于无窗口支持的[IOleInPlace 对象的](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)扩展）。 `COleControl`此接口的实现将在适当调整鼠标坐标后通过控件的消息映射调度这些消息。 通过将相应的条目添加到消息映射，可以像普通窗口消息一样处理这些消息。
 
-在无窗口控件中，应始终使用 `COleControl` 成员函数，而不是相应的 `CWnd` 成员函数或其相关的 Windows API 函数。
+在无窗口控件中`COleControl`，应始终使用成员函数，而不是相应的`CWnd`成员函数或其相关的 Windows API 函数。
 
-OLE 控件对象也可以仅在活动状态下创建窗口，但非活动活动转换所需的工作量会下降，并且过渡速度会下降。 在某些情况下，出现这种问题：作为示例，请考虑使用文本框网格。 当 cursoring 列时，必须将每个控件就地激活，然后将其停用。 非活动/活动转换的速度将直接影响滚动速度。
+OLE 控制对象也可以创建窗口，只有当它们变为活动状态时，但非活动-主动过渡所需的工作量会上升，转换的速度也会降低。 在某些情况下，这是一个问题：例如，考虑文本框的网格。 在列上下游标时，每个控件都必须就地激活，然后停用。 非活动/主动过渡的速度将直接影响滚动速度。
 
-有关开发 OLE 控件框架的详细信息，请参阅文章[Mfc Activex 控件](../../mfc/mfc-activex-controls.md)和[概述：创建 mfc activex 控制程序](../../mfc/reference/mfc-activex-control-wizard.md)。 有关优化 OLE 控件（包括无窗口和无闪烁控件）的信息，请参阅[MFC ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
+有关开发 OLE 控制框架的详细信息，请参阅[文章 MFC ActiveX](../../mfc/mfc-activex-controls.md)控制和[概述：创建 MFC ActiveX 控制程序](../../mfc/reference/mfc-activex-control-wizard.md)。 有关优化 OLE 控件（包括无窗口和无闪烁控件）的信息，请参阅[MFC ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -570,11 +570,11 @@ OLE 控件对象也可以仅在活动状态下创建窗口，但非活动活动�
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxctl。h
+**标题：** afxctl.h
 
-##  <a name="ambientbackcolor"></a>COleControl：： AmbientBackColor
+## <a name="colecontrolambientbackcolor"></a><a name="ambientbackcolor"></a>COle 控制：环境背面颜色
 
-返回环境背景值属性的值。
+返回环境 BackColor 属性的值。
 
 ```
 OLE_COLOR AmbientBackColor();
@@ -582,13 +582,13 @@ OLE_COLOR AmbientBackColor();
 
 ### <a name="return-value"></a>返回值
 
-容器的环境背景色属性的当前值（如果有）。 如果该属性不受支持，则此函数将返回系统定义的 Windows 背景色。
+容器的环境 BackColor 属性（如果有）的当前值。 如果不支持该属性，则此函数将返回系统定义的 Windows 背景颜色。
 
 ### <a name="remarks"></a>备注
 
-环境背景色属性可供所有控件使用，由容器定义。 请注意，支持此属性不需要容器。
+环境 BackColor 属性可用于所有控件，由容器定义。 请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientdisplayname"></a>COleControl：： AmbientDisplayName
+## <a name="colecontrolambientdisplayname"></a><a name="ambientdisplayname"></a>COleControl：环境显示名称
 
 容器分配给控件的名称可用于向用户显示的错误消息。
 
@@ -602,9 +602,9 @@ OLE 控件的名称。 默认值为零长度字符串。
 
 ### <a name="remarks"></a>备注
 
-请注意，支持此属性不需要容器。
+请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientfont"></a>COleControl：： AmbientFont
+## <a name="colecontrolambientfont"></a><a name="ambientfont"></a>COleControl：环境字体
 
 返回环境字体属性的值。
 
@@ -614,15 +614,15 @@ LPFONTDISP AmbientFont();
 
 ### <a name="return-value"></a>返回值
 
-指向容器环境字体调度接口的指针。 默认值为 NULL。 如果返回的不等于 NULL，则需要通过调用其[IUnknown：： Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)成员函数来释放字体。
+指向容器的环境字体调度界面的指针。 默认值为 NULL。 如果返回不等于 NULL，则负责通过调用其[INotnot：：：释放](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)成员功能来释放字体。
 
 ### <a name="remarks"></a>备注
 
-环境字体属性由容器定义，可用于所有控件。请注意，支持此属性不需要容器。
+环境字体属性由容器定义，可供所有控件使用。请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientforecolor"></a>COleControl：： AmbientForeColor
+## <a name="colecontrolambientforecolor"></a><a name="ambientforecolor"></a>COleControl：环境福彩
 
-返回环境前景色属性的值。
+返回环境 ForeColor 属性的值。
 
 ```
 OLE_COLOR AmbientForeColor();
@@ -630,13 +630,13 @@ OLE_COLOR AmbientForeColor();
 
 ### <a name="return-value"></a>返回值
 
-容器的环境前景色属性的当前值（如果有）。 如果不支持，则此函数将返回系统定义的 Windows 文本颜色。
+容器的环境 ForeColor 属性（如果有）的当前值。 如果不支持，此函数将返回系统定义的 Windows 文本颜色。
 
 ### <a name="remarks"></a>备注
 
-环境前景色属性可供所有控件使用，由容器定义。 请注意，支持此属性不需要容器。
+环境 ForeColor 属性可用于所有控件，由容器定义。 请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientlocaleid"></a>COleControl：： AmbientLocaleID
+## <a name="colecontrolambientlocaleid"></a><a name="ambientlocaleid"></a>COleControl：环境区域ID
 
 返回容器的区域设置 ID。
 
@@ -646,13 +646,13 @@ LCID AmbientLocaleID();
 
 ### <a name="return-value"></a>返回值
 
-容器的 LocaleID 属性的值（如果有）。 如果此属性不受支持，则此函数返回0。
+容器的 LocaleID 属性的值（如果有）。 如果不支持此属性，则此函数返回 0。
 
 ### <a name="remarks"></a>备注
 
-控件可以使用 LocaleID 来调整其用户界面的特定区域设置。 请注意，支持此属性不需要容器。
+控件可以使用区域设置ID调整其用户界面以进行特定区域设置。 请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientappearance"></a>COleControl：： AmbientAppearance
+## <a name="colecontrolambientappearance"></a><a name="ambientappearance"></a>COleControl：环境外观
 
 检索控件对象的当前外观设置。
 
@@ -666,13 +666,13 @@ short AmbientAppearance();
 
 - **0**平面外观
 
-- **1**三维外观
+- **1** 3D 外观
 
 ### <a name="remarks"></a>备注
 
-调用此函数可检索控件的 DISPID_AMBIENT_APPEARANCE 属性的当前值。
+调用此函数以检索控件的DISPID_AMBIENT_APPEARANCE属性的当前值。
 
-##  <a name="ambientscaleunits"></a>COleControl：： AmbientScaleUnits
+## <a name="colecontrolambientscaleunits"></a><a name="ambientscaleunits"></a>COle 控制：：环境尺度单位
 
 返回容器使用的单位类型。
 
@@ -682,15 +682,15 @@ CString AmbientScaleUnits();
 
 ### <a name="return-value"></a>返回值
 
-一个字符串，其中包含容器的环境 ScaleUnits。 如果此属性不受支持，则此函数返回一个长度为零的字符串。
+包含容器的环境缩放单位的字符串。 如果不支持此属性，则此函数返回一个零长度字符串。
 
 ### <a name="remarks"></a>备注
 
-容器的环境 ScaleUnits 属性可用于显示位置或维度，其中标有所选单位，例如缇或厘米。 请注意，支持此属性不需要容器。
+容器的环境 ScaleUnits 属性可用于显示位置或尺寸，这些位置或尺寸标有所选单位，如 twips 或厘米。 请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientshowgrabhandles"></a>COleControl：： AmbientShowGrabHandles
+## <a name="colecontrolambientshowgrabhandles"></a><a name="ambientshowgrabhandles"></a>COle 控制：：环境显示抓手
 
-确定容器是否允许控件在活动时显示其自身的抓取柄。
+确定容器是否允许控件在激活时显示自身的抓取控点。
 
 ```
 BOOL AmbientShowGrabHandles();
@@ -698,15 +698,15 @@ BOOL AmbientShowGrabHandles();
 
 ### <a name="return-value"></a>返回值
 
-如果应显示抓取柄，则为非零值;否则为0。 如果此属性不受支持，则此函数将返回非零值。
+如果应显示抓取手柄，则非零;否则 0。 如果不支持此属性，则此函数返回非零。
 
 ### <a name="remarks"></a>备注
 
-请注意，支持此属性不需要容器。
+请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientshowhatching"></a>COleControl：： AmbientShowHatching
+## <a name="colecontrolambientshowhatching"></a><a name="ambientshowhatching"></a>COle 控制：环境显示填充
 
-确定容器是否允许控件在激活 UI 时以阴影模式显示自身。
+确定容器是否允许控件在 UI 处于活动状态时使用阴影模式显示自身。
 
 ```
 BOOL AmbientShowHatching();
@@ -714,13 +714,13 @@ BOOL AmbientShowHatching();
 
 ### <a name="return-value"></a>返回值
 
-如果应显示阴影模式，则为非零值;否则为0。 如果此属性不受支持，则此函数将返回非零值。
+如果应显示阴影图案，则非零;否则 0。 如果不支持此属性，则此函数返回非零。
 
 ### <a name="remarks"></a>备注
 
-请注意，支持此属性不需要容器。
+请注意，不支持此属性不需要该容器。
 
-##  <a name="ambienttextalign"></a>COleControl：： AmbientTextAlign
+## <a name="colecontrolambienttextalign"></a><a name="ambienttextalign"></a>COle 控制：环境文本对齐
 
 确定控件容器首选的环境文本对齐方式。
 
@@ -730,22 +730,22 @@ short AmbientTextAlign();
 
 ### <a name="return-value"></a>返回值
 
-容器的环境文本对齐属性的状态。 如果此属性不受支持，则此函数返回0。
+容器的环境文本对齐属性的状态。 如果不支持此属性，则此函数返回 0。
 
-下面列出了有效的返回值：
+以下是有效返回值的列表：
 
 |返回值|含义|
 |------------------|-------------|
-|0|常规对齐方式（从右到左的数字）。|
+|0|一般对齐（右侧的数字，左侧的文本）。|
 |1|左对齐|
 |2|中心|
-|3|右对齐|
+|3|正确证明|
 
 ### <a name="remarks"></a>备注
 
-此属性可用于所有嵌入的控件，并且由容器定义。 请注意，支持此属性不需要容器。
+此属性可用于所有嵌入的控件，并由容器定义。 请注意，不支持此属性不需要该容器。
 
-##  <a name="ambientuidead"></a>COleControl：： AmbientUIDead
+## <a name="colecontrolambientuidead"></a><a name="ambientuidead"></a>COleControl：环境UIDead
 
 确定容器是否希望控件响应用户界面操作。
 
@@ -755,15 +755,15 @@ BOOL AmbientUIDead();
 
 ### <a name="return-value"></a>返回值
 
-如果控件应响应用户界面操作，则为非零值;否则为0。 如果此属性不受支持，则此函数返回0。
+如果控件应响应用户界面操作，则非零;否则 0。 如果不支持此属性，则此函数返回 0。
 
 ### <a name="remarks"></a>备注
 
-例如，在设计模式下，容器可能将此项设置为 TRUE。
+例如，容器可能在设计模式下将 TRUE 设置为 TRUE。
 
-##  <a name="ambientusermode"></a>COleControl：： AmbientUserMode
+## <a name="colecontrolambientusermode"></a><a name="ambientusermode"></a>COle 控制：环境用户模式
 
-确定容器是处于设计模式还是处于用户模式。
+确定容器是处于设计模式还是用户模式。
 
 ```
 BOOL AmbientUserMode();
@@ -771,51 +771,51 @@ BOOL AmbientUserMode();
 
 ### <a name="return-value"></a>返回值
 
-如果容器处于用户模式，则为非零值;否则为0（处于设计模式）。 如果此属性不受支持，则此函数返回 TRUE。
+如果容器处于用户模式，则非零;否则 0（在设计模式下）。 如果不支持此属性，则此函数将返回 TRUE。
 
 ### <a name="remarks"></a>备注
 
-例如，容器可能在设计模式下将此项设置为 FALSE。
+例如，容器可能会在设计模式下将此设置为 FALSE。
 
-##  <a name="boundpropertychanged"></a>COleControl：： BoundPropertyChanged
+## <a name="colecontrolboundpropertychanged"></a><a name="boundpropertychanged"></a>COle 控制：绑定属性已更改
 
-发出信号表示绑定属性值已更改。
+表示绑定属性值已更改。
 
 ```
 void BoundPropertyChanged(DISPID dispid);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispid*<br/>
+*不一部分*<br/>
 控件的绑定属性的调度 ID。
 
 ### <a name="remarks"></a>备注
 
-每次属性的值发生更改时都必须调用此方法，即使在未通过属性集方法进行更改的情况下也是如此。 请特别注意映射到成员变量的绑定属性。 任何时候此类成员变量发生更改，都必须调用 `BoundPropertyChanged`。
+每次属性的值发生更改时，都必须调用此值，即使在未通过属性 Set 方法进行更改的情况下也是如此。 特别要注意映射到成员变量的绑定属性。 任何时候，必须调用此类成员变量`BoundPropertyChanged`。
 
-##  <a name="boundpropertyrequestedit"></a>COleControl：： BoundPropertyRequestEdit
+## <a name="colecontrolboundpropertyrequestedit"></a><a name="boundpropertyrequestedit"></a>COle 控制：：绑定属性请求编辑
 
-向 `IPropertyNotifySink` 接口请求权限，以更改控件提供的绑定属性值。
+请求`IPropertyNotifySink`接口的权限以更改控件提供的绑定属性值。
 
 ```
 BOOL BoundPropertyRequestEdit(DISPID dispid);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispid*<br/>
+*不一部分*<br/>
 控件的绑定属性的调度 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果允许更改，则为非零值;否则为0。 默认值为非零值。
+如果允许更改，则非零;否则 0。 默认值为非零。
 
 ### <a name="remarks"></a>备注
 
-如果权限被拒绝，则控件不能让属性的值发生更改。 这可以通过忽略或失败尝试更改属性值的操作来完成。
+如果权限被拒绝，控件不得让属性的值更改。 这可以通过忽略或失败试图更改属性值的操作来实现。
 
-##  <a name="clienttoparent"></a>COleControl：： ClientToParent
+## <a name="colecontrolclienttoparent"></a><a name="clienttoparent"></a>COle 控制：：客户端到父级
 
 将*pPoint*的坐标转换为父坐标。
 
@@ -825,30 +825,30 @@ virtual void ClientToParent(
     LPPOINT pPoint) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lprcBounds*<br/>
-一个指针，指向容器中 OLE 控件的边界。 不是工作区，而是整个控件的区域（包括边框和滚动条）。
+指向容器内 OLE 控件的边界。 不是工作区，而是整个控件的区域，包括边框和滚动条。
 
 *pPoint*<br/>
-指向要转换为父（容器）坐标的 OLE 工作区点的指针。
+指向 OLE 工作区点的指针要转换为父（容器）的坐标。
 
 ### <a name="remarks"></a>备注
 
-在 input *pPoint*上，相对于 OLE 控件（控件工作区左上角）的工作区的原点。 On output *pPoint*是相对于父级（容器左上角）的原点。
+在输入*pPoint*上与 OLE 控件的工作区的原点（控件的工作区的左上角）相关。 在输出*pPoint*上相对于父级（容器的左上角）的原点。
 
-##  <a name="clipcaretrect"></a>COleControl：： ClipCaretRect
+## <a name="colecontrolclipcaretrect"></a><a name="clipcaretrect"></a>COle 控制：：ClipCaretrect
 
-如果插入符号矩形完全或部分覆盖了重叠的不透明对象，则调整它。
+如果倾斜矩形完全或部分被重叠的不透明对象覆盖，则调整其矩形。
 
 ```
 BOOL ClipCaretRect(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-输入时，指向包含要调整的插入符号区域的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针。 输出时，调整后的插入符号区域; 如果完全覆盖了插入符号矩形，则为 NULL。
+在输入时，指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，其中包含要调整的插入区域。 在输出时，如果已完全覆盖的倾斜矩形，则调整的护理区域或 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -856,13 +856,13 @@ BOOL ClipCaretRect(LPRECT lpRect);
 
 ### <a name="remarks"></a>备注
 
-脱字号是闪烁线条、块或位图，通常指示文本或图形的插入位置。
+插入器是闪烁的线、块或位图，通常指示文本或图形的插入位置。
 
-无窗口对象在不事先检查插入符号是否部分或完全隐藏了重叠对象的情况下，不能安全地显示插入符号。 为了实现此目的，对象可以使用 `ClipCaretRect` 来使插入符号调整（减少）以确保它适合于剪辑区域。
+如果不首先检查隐器是否部分隐藏或完全被重叠对象隐藏，则无窗口对象无法安全地显示隐匿。 为了使这一点成为可能，对象可以使用`ClipCaretRect`来调整（减少）贴图，以确保其适合剪切区域。
 
-创建插入符号的对象应将脱字号矩形提交给 `ClipCaretRect`，并将调整后的矩形用于插入符号。 如果完全隐藏插入符号，则此方法将返回 FALSE，并且在这种情况下，不应显示插入符号。
+创建 care 器的对象应将加斯特矩形提交`ClipCaretRect`到 caret 并使用调整的矩形进行 caret。 如果 care 完全隐藏，则此方法将返回 FALSE，在这种情况下根本不应显示该 care。
 
-##  <a name="colecontrol"></a>COleControl：： COleControl
+## <a name="colecontrolcolecontrol"></a><a name="colecontrol"></a>COle 控制：COle 控制
 
 构造 `COleControl` 对象。
 
@@ -872,11 +872,11 @@ COleControl();
 
 ### <a name="remarks"></a>备注
 
-通常不直接调用此函数。 相反，OLE 控件通常由其类工厂创建。
+通常不直接调用此功能。 相反，OLE 控件通常由其类工厂创建。
 
-##  <a name="controlinfochanged"></a>COleControl：： ControlInfoChanged
+## <a name="colecontrolcontrolinfochanged"></a><a name="controlinfochanged"></a>COle 控制：：控制信息已更改
 
-如果控件支持的助记键集已更改，则调用此函数。
+当控件支持的助记符集已更改时，调用此功能。
 
 ```
 void ControlInfoChanged();
@@ -884,11 +884,11 @@ void ControlInfoChanged();
 
 ### <a name="remarks"></a>备注
 
-收到此通知后，控件的容器通过调用[IOleControl：： GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo)获取新的助记键集。 请注意，该容器不需要响应此通知。
+收到此通知后，控件的容器通过调用 IOleControl 获得一组新的助记符[：：getControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo)。 请注意，不需要容器响应此通知。
 
-##  <a name="displayerror"></a>COleControl：:D isplayError
+## <a name="colecontroldisplayerror"></a><a name="displayerror"></a>COleControl：:D播放错误
 
-在处理 stock 错误事件之后，由框架调用（除非事件处理程序已取消显示错误）。
+处理股票错误事件后由框架调用（除非事件处理程序已禁止显示错误）。
 
 ```
 virtual void DisplayError(
@@ -899,30 +899,30 @@ virtual void DisplayError(
     UINT nHelpID);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *scode*<br/>
-要报告的状态代码值。 有关可能代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
+要报告的状态代码值。 有关可能代码的完整列表，请参阅["ActiveX 控件：高级主题"一](../../mfc/mfc-activex-controls-advanced-topics.md)文。
 
-*lpszDescription*<br/>
-所报告错误的说明。
+*lpsz描述*<br/>
+报告的错误的说明。
 
-*lpszSource*<br/>
-生成错误的模块的名称（通常是 OLE 控件模块的名称）。
+*lpsz来源*<br/>
+生成错误的模块的名称（通常为 OLE 控制模块的名称）。
 
-*lpszHelpFile*<br/>
+*lpszHelp文件*<br/>
 包含错误说明的帮助文件的名称。
 
 *nHelpID*<br/>
-所报告错误的帮助上下文 ID。
+报告错误的帮助上下文 ID。
 
 ### <a name="remarks"></a>备注
 
-默认行为将显示一个消息框，其中包含包含在*lpszDescription*中的错误说明。
+默认行为显示一个消息框，其中包含错误描述，包含在*lpsz描述 中*。
 
-重写此函数以自定义显示错误的方式。
+重写此函数以自定义错误显示方式。
 
-##  <a name="doclick"></a>COleControl：:D oClick
+## <a name="colecontroldoclick"></a><a name="doclick"></a>COleControl：:DoClick
 
 模拟控件上的鼠标单击操作。
 
@@ -932,32 +932,32 @@ void DoClick();
 
 ### <a name="remarks"></a>备注
 
-如果控件支持，则将调用可重写的 `COleControl::OnClick` 成员函数，并激发 stock Click 事件。
+将调用可`COleControl::OnClick`重写的成员函数，如果控件支持，将触发库存单击事件。
 
-此函数作为常用方法（称为 DoClick）由 `COleControl` 基类支持。 有关详细信息，请参阅[ActiveX 控件：方法](../../mfc/mfc-activex-controls-methods.md)一文。
+`COleControl`基类支持此功能作为股票方法（称为 DoClick）。 有关详细信息，请参阅文章[ActiveX 控件：方法](../../mfc/mfc-activex-controls-methods.md)。
 
-##  <a name="dopropexchange"></a>COleControl：:D oPropExchange
+## <a name="colecontroldopropexchange"></a><a name="dopropexchange"></a>COleControl：:DoPropExchange
 
-在从持久存储表示形式（如流或属性集）加载或存储控件时由框架调用。
+从持久存储表示（如流或属性集）加载或存储控件时由框架调用。
 
 ```
 virtual void DoPropExchange(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pPX*<br/>
-一个指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
+一个指向 `CPropExchange` 对象的指针。 框架提供此对象以建立属换的上下文，包括其方向。
 
 ### <a name="remarks"></a>备注
 
-此函数通常会调用**PX_** 系列函数来加载或存储 OLE 控件的特定用户定义属性。
+此函数通常调用**PX_** 函数系列以加载或存储 OLE 控件的特定用户定义属性。
 
-如果已使用 "控件向导" 创建 OLE 控件项目，则此函数的重写版本将通过调用基类函数来序列化 `COleControl` 支持的常用属性，`COleControl::DoPropExchange`。 将用户定义属性添加到 OLE 控件时，需要修改此函数以序列化新属性。 有关序列化的详细信息，请参阅[ActiveX 控件：序列化](../../mfc/mfc-activex-controls-serializing.md)一文。
+如果控件向导已用于创建 OLE 控制项目，则此函数的重写版本将序列化基类函数 调用 支持`COleControl`的股票属性`COleControl::DoPropExchange`。 将用户定义的属性添加到 OLE 控件时，需要修改此函数以序列化新属性。 有关序列化的详细信息，请参阅[ActiveX 控件：序列化](../../mfc/mfc-activex-controls-serializing.md)。
 
-##  <a name="dosuperclasspaint"></a>COleControl：:D oSuperclassPaint
+## <a name="colecontroldosuperclasspaint"></a><a name="dosuperclasspaint"></a>COleControl：:D超类绘画
 
-重绘已从 Windows 控件中产生子类的 OLE 控件。
+重绘从 Windows 控件中子分类的 OLE 控件。
 
 ```
 void DoSuperclassPaint(
@@ -965,23 +965,23 @@ void DoSuperclassPaint(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
 指向控件容器的设备上下文的指针。
 
-*rcBounds*<br/>
-要在其中绘制控件的区域。
+*rcBunds*<br/>
+要绘制控件的区域。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可正确处理非活动 OLE 控件的绘制。 仅当 OLE 控件将 Windows 控件子类，并应在控件的 `OnDraw` 函数中调用此函数时，才应使用此函数。
+调用此函数以正确处理非活动 OLE 控件的绘制。 仅当 OLE 控件子类 Windows 控件时才应使用此函数，`OnDraw`并且应在控件的函数中调用。
 
-有关此函数和 Windows 控件的子类的详细信息，请参阅[ActiveX 控件：为 Windows 控件提供子类一](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)文。
+有关此功能和子类 Windows 控件的详细信息，请参阅["ActiveX 控件：对 Windows 控件进行子类化](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)"一文。
 
-##  <a name="drawcontent"></a>COleControl：:D rawContent
+## <a name="colecontroldrawcontent"></a><a name="drawcontent"></a>COleControl：:D原始内容
 
-当需要更新控件的外观时由框架调用。
+当需要更新控件的外观时，由框架调用。
 
 ```
 void DrawContent(
@@ -989,21 +989,21 @@ void DrawContent(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
 指向设备上下文的指针。
 
-*.rc*<br/>
-要在其中绘制的矩形区域。
+*钢筋混凝土*<br/>
+要绘制的矩形区域。
 
 ### <a name="remarks"></a>备注
 
-此函数直接调用可重写的 `OnDraw` 函数。
+此函数直接调用可`OnDraw`重写函数。
 
-##  <a name="drawmetafile"></a>COleControl：:D rawMetafile
+## <a name="colecontroldrawmetafile"></a><a name="drawmetafile"></a>COleControl：:D原始元文件
 
-当使用图元文件设备上下文时由框架调用。
+使用元文件设备上下文时由框架调用。
 
 ```
 void DrawMetafile(
@@ -1011,17 +1011,17 @@ void DrawMetafile(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
-指向图元文件设备上下文的指针。
+指向元文件设备上下文的指针。
 
-*.rc*<br/>
-要在其中绘制的矩形区域。
+*钢筋混凝土*<br/>
+要绘制的矩形区域。
 
-##  <a name="enablesimpleframe"></a>COleControl：： EnableSimpleFrame
+## <a name="colecontrolenablesimpleframe"></a><a name="enablesimpleframe"></a>COle 控制：启用简单帧
 
-启用 OLE 控件的简单框架特性。
+启用 OLE 控件的简单帧特性。
 
 ```
 void EnableSimpleFrame();
@@ -1029,47 +1029,47 @@ void EnableSimpleFrame();
 
 ### <a name="remarks"></a>备注
 
-此特性允许控件支持其他控件的可视包含，但不支持真正的 OLE 包容。 例如，包含多个控件的分组框。 这些控件不包含 OLE，但它们位于同一个组框中。
+此特性允许控件支持其他控件的可视包含，但不支持真正的 OLE 遏制。 例如，一个组框，其中有多个控件。 这些控件不是 OLE 包含的，但它们位于同一组框中。
 
-##  <a name="exchangeextent"></a>COleControl：： ExchangeExtent
+## <a name="colecontrolexchangeextent"></a><a name="exchangeextent"></a>COleControl：：交换范围
 
-序列化或初始化控件的范围（其在 HIMETRIC 单元中的维度）的状态。
+序列化或初始化控件范围的状态（其尺寸以 HIMETRIC 单位为单位）。
 
 ```
 BOOL ExchangeExtent(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针。 框架提供此对象以建立属换的上下文，包括其方向。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则为非零值;否则为0。
+如果函数成功，则非零;0 否则。
 
 ### <a name="remarks"></a>备注
 
-此函数通常由 `COleControl::DoPropExchange`的默认实现调用。
+此函数通常由`COleControl::DoPropExchange`的默认实现调用。
 
-##  <a name="exchangestockprops"></a>COleControl：： ExchangeStockProps
+## <a name="colecontrolexchangestockprops"></a><a name="exchangestockprops"></a>COleControl：：交易所股票供应商
 
-序列化或初始化控件的常用属性的状态。
+序列化或初始化控件的库存属性的状态。
 
 ```
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针。 框架提供此对象以建立属换的上下文，包括其方向。
 
 ### <a name="remarks"></a>备注
 
-此函数通常由 `COleControl::DoPropExchange`的默认实现调用。
+此函数通常由`COleControl::DoPropExchange`的默认实现调用。
 
-##  <a name="exchangeversion"></a>COleControl：： ExchangeVersion
+## <a name="colecontrolexchangeversion"></a><a name="exchangeversion"></a>COleControl：交换版本
 
 序列化或初始化控件的版本信息的状态。
 
@@ -1080,30 +1080,30 @@ BOOL ExchangeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pPX*<br/>
-一个指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
+一个指向 `CPropExchange` 对象的指针。 框架提供此对象以建立属换的上下文，包括其方向。
 
 *dwVersionDefault*<br/>
 控件的当前版本号。
 
-*bConvert*<br/>
-指示永久数据在保存时是否应转换为最新格式，或保持为与加载的格式相同的格式。
+*b转换*<br/>
+指示在保存时是否应将持久性数据转换为最新格式，还是以加载的相同格式进行维护。
 
 ### <a name="return-value"></a>返回值
 
-函数的非零成功;否则为0。
+函数的非零成功;0 否则。
 
 ### <a name="remarks"></a>备注
 
-通常，这将是由控件的 `COleControl::DoPropExchange`的重写调用的第一个函数。 加载时，此函数将读取永久性数据的版本号，并相应地设置[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的 version 特性。 保存时，此函数将写入永久性数据的版本号。
+通常，这将是控件对 调用 的第一个函数`COleControl::DoPropExchange`。 加载时，此函数读取持久数据的版本号，并相应地设置[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的版本属性。 保存时，此函数写入持久数据的版本号。
 
-有关持久性和版本控制的详细信息，请参阅[ActiveX 控件：序列化](../../mfc/mfc-activex-controls-serializing.md)一文。
+有关持久性和版本控制的详细信息，请参阅[ActiveX 控件：序列化](../../mfc/mfc-activex-controls-serializing.md)。
 
-##  <a name="fireclick"></a>COleControl：： FireClick
+## <a name="colecontrolfireclick"></a><a name="fireclick"></a>COle 控制：火击
 
-当鼠标单击活动控件上时由框架调用。
+当鼠标单击活动控件时，由框架调用。
 
 ```
 void FireClick();
@@ -1111,13 +1111,13 @@ void FireClick();
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-若要发生 Click 事件的自动触发，控件的事件映射必须定义了 stock Click 事件。
+要自动触发"单击"事件，控件的事件映射必须定义库存单击事件。
 
-##  <a name="firedblclick"></a>COleControl：： FireDblClick
+## <a name="colecontrolfiredblclick"></a><a name="firedblclick"></a>COleControl：：火点点击
 
-当鼠标在活动控件上双击时由框架调用。
+当鼠标在活动控件上双击时，由框架调用。
 
 ```
 void FireDblClick();
@@ -1125,13 +1125,13 @@ void FireDblClick();
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-若要发生 DblClick 事件的自动触发，控件的事件映射必须定义一个 stock DblClick 事件。
+要自动触发 DblClick 事件，控件的事件映射必须定义库存 DblClick 事件。
 
-##  <a name="fireerror"></a>COleControl：： FireError
+## <a name="colecontrolfireerror"></a><a name="fireerror"></a>COle控制：火错误
 
-激发 stock 错误事件。
+触发库存错误事件。
 
 ```
 void FireError(
@@ -1140,30 +1140,30 @@ void FireError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *scode*<br/>
-要报告的状态代码值。 有关可能代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
+要报告的状态代码值。 有关可能代码的完整列表，请参阅["ActiveX 控件：高级主题"一](../../mfc/mfc-activex-controls-advanced-topics.md)文。
 
-*lpszDescription*<br/>
-所报告错误的说明。
+*lpsz描述*<br/>
+报告的错误的说明。
 
 *nHelpID*<br/>
-所报告错误的帮助 ID。
+报告错误的帮助 ID。
 
 ### <a name="remarks"></a>备注
 
-此事件提供一种在代码中的适当位置，在控件内发生错误的方式。 与其他常用事件（如 Click 或 MouseMove）不同，框架永远不会引发错误。
+此事件提供了一种在代码中适当位置发出错误信号的方式。 与其他股票事件（如单击或鼠标移动）不同，框架永远不会触发错误。
 
-若要报告在属性获取函数、属性集函数或自动化方法期间发生的错误，请调用[COleControl：： ThrowError](#throwerror)。
+要报告在属性获取函数、属性集函数或自动化方法期间发生的错误，请调用[COleControl：：：throwError](#throwerror)。
 
-OLE 控件的 Stock 错误事件的实现使用 SCODE 值。 如果控件使用此事件，并且要在 Visual Basic 4.0 中使用，则将收到错误，因为 Visual Basic 不支持 SCODE 值。
+OLE 控件的"库存错误"事件的实现使用 SCODE 值。 如果您的控件使用此事件，并且打算在 Visual Basic 4.0 中使用，您将收到错误，因为 Visual Basic 中不支持 SCODE 值。
 
-若要解决此问题，请手动更改控件的中的 SCODE 参数。ODL**文件。** 此外，使用 SCODE 参数的任何自定义事件、方法或属性也会导致相同的问题。
+要解决此问题，请手动更改控件 中的 SCODE 参数。ODL 文件长 **。** 此外，使用 SCODE 参数的任何自定义事件、方法或属性也会导致同样的问题。
 
-##  <a name="fireevent"></a>COleControl：： FireEvent
+## <a name="colecontrolfireevent"></a><a name="fireevent"></a>COle 控制：火事件
 
-使用任意数量的可选参数从控件中触发用户定义的事件。
+使用任意数量的可选参数从控件触发用户定义的事件。
 
 ```
 void AFX_CDECL FireEvent(
@@ -1172,19 +1172,19 @@ void AFX_CDECL FireEvent(
 ...);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispid*<br/>
-要激发的事件的调度 ID。
+*不一部分*<br/>
+要触发的事件的调度 ID。
 
 *pbParams*<br/>
-事件的参数类型的描述符。
+事件参数类型的描述符。
 
 ### <a name="remarks"></a>备注
 
-通常不应直接调用此函数。 相反，你将在控件的类声明的事件映射节中调用事件触发函数。
+通常不应直接调用此函数。 相反，您将在控件类声明的事件映射部分调用事件触发函数。
 
-*PbParams*参数是以空格分隔的**VTS_** 列表。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能的值如下所示：
+*pbParams*参数是**空间**分隔VTS_列表。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能的值如下所示：
 
 |符号|参数类型|
 |------------|--------------------|
@@ -1204,11 +1204,11 @@ void AFX_CDECL FireEvent(
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
->  已为所有变体类型定义了其他变体常量（VTS_FONT 和 VTS_PICTURE 除外），它们提供指向变量数据常量的指针。 使用**VTS_P**`constantname` 约定来命名这些常量。 例如，VTS_PCOLOR 是指向 VTS_COLOR 常量的指针。
+> 已为所有变体类型定义了其他变体常量，但提供指向变体数据常量的VTS_FONT和VTS_PICTURE除外。 这些常量使用**VTS_P**`constantname`约定命名。 例如，VTS_PCOLOR是指向VTS_COLOR常量的指针。
 
-##  <a name="firekeydown"></a>COleControl：： FireKeyDown
+## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COle 控制：：火键向下
 
-当控件处于活动状态时，当按下某个键时由框架调用。
+当控件处于活动状态时按下键时，由框架调用。
 
 ```
 void FireKeyDown(
@@ -1216,50 +1216,50 @@ void FireKeyDown(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pnChar*<br/>
-指向按下键的虚拟键代码值的指针。 有关标准虚拟键代码的列表，请参阅 Winuser。h
+指向按下密钥的虚拟密钥代码值。 有关标准虚拟密钥代码的列表，请参阅 Winuser.h
 
 *nShiftState*<br/>
 包含以下标志的组合：
 
-- 在操作过程中，SHIFT_MASK 按下 SHIFT 键。
+- SHIFT_MASK在操作过程中按下 SHIFT 键。
 
-- CTRL_MASK 在操作过程中按下了 CTRL 键。
+- CTRL_MASK在操作期间按下了 CTRL 键。
 
-- ALT_MASK 在操作过程中按下了 ALT 键。
+- ALT_MASK在操作过程中按下 ALT 键。
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-若要发生 KeyDown 事件的自动触发，控件的事件映射必须定义有股票 KeyDown 事件。
+要自动触发 KeyDown 事件，控件的事件映射必须定义库存 KeyDown 事件。
 
-##  <a name="firekeypress"></a>COleControl：： FireKeyPress
+## <a name="colecontrolfirekeypress"></a><a name="firekeypress"></a>COleControl：：FireKeyPress
 
-当按下某个键时由框架调用，当自定义控件在容器中处于活动状态时，将释放该控件。
+当自定义控件在容器中为 UI 活动时，框架调用该键并释放该键。
 
 ```
 void FireKeyPress(USHORT* pnChar);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pnChar*<br/>
-一个指针，指向按下的键的字符值。
+指向按下的键的字符值的指针。
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-例如，事件的接收方可以修改*pnChar*，例如，将所有小写字符都转换为大写。 如果要检查修改后的字符，请覆盖 `OnKeyPressEvent`。
+事件的接收者可以修改*pnChar，* 例如，将所有小写字符转换为大写。 如果要检查修改后的字符，将重写`OnKeyPressEvent`。
 
-若要发生按键事件的自动触发，控件的事件映射必须定义了一个 "stock 按键" 事件。
+要自动触发 KeyPress 事件，控件的事件映射必须定义库存 KeyPress 事件。
 
-##  <a name="firekeyup"></a>COleControl：： FireKeyUp
+## <a name="colecontrolfirekeyup"></a><a name="firekeyup"></a>COle 控制：火键向上
 
-当自定义控件在容器中处于活动状态时，当释放某个键时由框架调用。
+当自定义控件在容器中为 UI 活动时释放密钥时，由框架调用。
 
 ```
 void FireKeyUp(
@@ -1267,29 +1267,29 @@ void FireKeyUp(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pnChar*<br/>
-指向已释放密钥的虚拟键代码值的指针。 有关标准虚拟键代码的列表，请参阅 Winuser。h
+指向已释放密钥的虚拟密钥代码值。 有关标准虚拟密钥代码的列表，请参阅 Winuser.h
 
 *nShiftState*<br/>
 包含以下标志的组合：
 
-- 在操作过程中，SHIFT_MASK 按下 SHIFT 键。
+- SHIFT_MASK在操作过程中按下 SHIFT 键。
 
-- CTRL_MASK 在操作过程中按下了 CTRL 键。
+- CTRL_MASK在操作期间按下了 CTRL 键。
 
-- ALT_MASK 在操作过程中按下了 ALT 键。
+- ALT_MASK在操作过程中按下 ALT 键。
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-若要发生 KeyUp 事件的自动激发，控件的事件映射必须定义一个 stock KeyUp 事件。
+要自动触发 KeyUp 事件，控件的事件映射必须定义库存 KeyUp 事件。
 
-##  <a name="firemousedown"></a>COleControl：： FireMouseDown
+## <a name="colecontrolfiremousedown"></a><a name="firemousedown"></a>COleControl：火鼠向下
 
-当在活动自定义控件上按下鼠标按钮时，由框架调用。
+当鼠标按钮按在活动自定义控件上时，由框架调用。
 
 ```
 void FireMouseDown(
@@ -1299,41 +1299,41 @@ void FireMouseDown(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nButton*<br/>
 按下鼠标按钮的数值。 它可以包含以下值之一：
 
-- LEFT_BUTTON 按下鼠标左键。
+- LEFT_BUTTON鼠标左键按下。
 
-- MIDDLE_BUTTON 按下鼠标中键。
+- MIDDLE_BUTTON按下鼠标中间键。
 
-- RIGHT_BUTTON 按下鼠标右键。
+- RIGHT_BUTTON按下鼠标右键。
 
 *nShiftState*<br/>
 包含以下标志的组合：
 
-- 在操作过程中，SHIFT_MASK 按下 SHIFT 键。
+- SHIFT_MASK在操作过程中按下 SHIFT 键。
 
-- CTRL_MASK 在操作过程中按下了 CTRL 键。
+- CTRL_MASK在操作期间按下了 CTRL 键。
 
-- ALT_MASK 在操作过程中按下了 ALT 键。
+- ALT_MASK在操作过程中按下 ALT 键。
 
-*x*<br/>
-按下鼠标按钮时光标的 x 坐标。 该坐标相对于控件窗口的左上角。
+** x <br/>
+按下鼠标按钮时光标的 x 坐标。 坐标相对于控制窗口的左上角。
 
-*y*<br/>
-按下鼠标按钮时光标的 y 坐标。 该坐标相对于控件窗口的左上角。
+*Y*<br/>
+按下鼠标按钮时光标的 y 坐标。 坐标相对于控制窗口的左上角。
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-若要使 MouseDown 事件自动触发发生，控件的事件映射必须已定义了一个 stock MouseDown 事件。
+要自动触发鼠标下部事件，控件的事件映射必须定义库存鼠标向下事件。
 
-##  <a name="firemousemove"></a>COleControl：： FireMouseMove
+## <a name="colecontrolfiremousemove"></a><a name="firemousemove"></a>COleControl：火鼠移动
 
-当光标移到活动的自定义控件上时由框架调用。
+当游标移动到活动自定义控件时，由框架调用。
 
 ```
 void FireMouseMove(
@@ -1343,41 +1343,41 @@ void FireMouseMove(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nButton*<br/>
-按下鼠标按钮的数值。 包含以下值的组合：
+按下的鼠标按钮的数值。 包含以下值的组合：
 
-- LEFT_BUTTON 在操作过程中按下鼠标左键。
+- LEFT_BUTTON操作期间按下鼠标左键。
 
-- MIDDLE_BUTTON 操作期间，按下鼠标中键。
+- MIDDLE_BUTTON操作期间按下鼠标中间按钮。
 
-- 在操作过程中，RIGHT_BUTTON 按下鼠标右键。
+- RIGHT_BUTTON操作期间按下了鼠标右键。
 
 *nShiftState*<br/>
 包含以下标志的组合：
 
-- 在操作过程中，SHIFT_MASK 按下 SHIFT 键。
+- SHIFT_MASK在操作过程中按下 SHIFT 键。
 
-- CTRL_MASK 在操作过程中按下了 CTRL 键。
+- CTRL_MASK在操作期间按下了 CTRL 键。
 
-- ALT_MASK 在操作过程中按下了 ALT 键。
+- ALT_MASK在操作过程中按下 ALT 键。
 
-*x*<br/>
-光标的 x 坐标。 该坐标相对于控件窗口的左上角。
+** x <br/>
+光标的 x 坐标。 坐标相对于控制窗口的左上角。
 
-*y*<br/>
-光标的 y 坐标。 该坐标相对于控件窗口的左上角。
+*Y*<br/>
+光标的 y 坐标。 坐标相对于控制窗口的左上角。
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-若要发生 MouseMove 事件的自动触发，控件的事件映射必须定义一个 stock MouseMove 事件。
+要自动触发 MouseMove 事件，控件的事件映射必须定义库存 MouseMove 事件。
 
-##  <a name="firemouseup"></a>COleControl：： FireMouseUp
+## <a name="colecontrolfiremouseup"></a><a name="firemouseup"></a>COleControl：火鼠
 
-当通过活动自定义控件释放鼠标按钮时，由框架调用。
+当鼠标按钮释放到活动自定义控件上时，由框架调用。
 
 ```
 void FireMouseUp(
@@ -1387,41 +1387,41 @@ void FireMouseUp(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nButton*<br/>
-已释放的鼠标按钮的数值。 它可以具有下列值之一：
+释放的鼠标按钮的数值。 可以具有以下一个值：
 
-- LEFT_BUTTON 释放鼠标左键。
+- LEFT_BUTTON鼠标左键已释放。
 
-- MIDDLE_BUTTON 放开鼠标中键。
+- MIDDLE_BUTTON鼠标中间键已释放。
 
-- 已释放鼠标右键 RIGHT_BUTTON。
+- RIGHT_BUTTON鼠标右键已释放。
 
 *nShiftState*<br/>
 包含以下标志的组合：
 
-- 在操作过程中，SHIFT_MASK 按下 SHIFT 键。
+- SHIFT_MASK在操作过程中按下 SHIFT 键。
 
-- CTRL_MASK 在操作过程中按下了 CTRL 键。
+- CTRL_MASK在操作期间按下了 CTRL 键。
 
-- ALT_MASK 在操作过程中按下了 ALT 键。
+- ALT_MASK在操作过程中按下 ALT 键。
 
-*x*<br/>
-释放鼠标按钮时光标的 x 坐标。 该坐标相对于控件窗口的左上角。
+** x <br/>
+释放鼠标按钮时光标的 x 坐标。 坐标相对于控制窗口的左上角。
 
-*y*<br/>
-释放鼠标按钮时光标的 y 坐标。 该坐标相对于控件窗口的左上角。
+*Y*<br/>
+释放鼠标按钮时光标的 y 坐标。 坐标相对于控制窗口的左上角。
 
 ### <a name="remarks"></a>备注
 
-如果将此事件定义为自定义事件，则需要确定事件的激发时间。
+如果此事件定义为自定义事件，则确定何时触发该事件。
 
-若要发生 MouseUp 事件的自动激发，控件的事件映射必须已定义了 stock MouseUp 事件。
+要自动触发 MouseUp 事件，控件的事件映射必须定义库存 MouseUp 事件。
 
-##  <a name="firereadystatechange"></a>COleControl：： FireReadyStateChange
+## <a name="colecontrolfirereadystatechange"></a><a name="firereadystatechange"></a>COle 控制：：火就绪状态更改
 
-使用控件的 "就绪" 状态的当前值激发一个事件。
+使用就绪控制状态的当前值触发事件。
 
 ```
 void FireReadyStateChange();
@@ -1429,23 +1429,23 @@ void FireReadyStateChange();
 
 ### <a name="remarks"></a>备注
 
-就绪状态可以为下列值之一：
+就绪状态可以是以下值之一：
 
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|默认初始化状态|
 |READYSTATE_LOADING|控件当前正在加载其属性|
 |READYSTATE_LOADED|控件已初始化|
-|READYSTATE_INTERACTIVE|控件具有足够的数据以进行交互，但并不是所有的异步数据都已加载|
-|READYSTATE_COMPLETE|控件的所有数据|
+|READYSTATE_INTERACTIVE|控件有足够的数据是交互式的，但并非所有异步数据都已加载|
+|READYSTATE_COMPLETE|控件具有所有数据|
 
-使用[GetReadyState](#getreadystate)确定控件当前的准备情况。
+使用[GetReadyState](#getreadystate)确定控件的当前就绪状态。
 
-[InternalSetReadyState](#internalsetreadystate)将 "就绪" 状态更改为提供的值，然后调用 `FireReadyStateChange`。
+[内部集就绪状态](#internalsetreadystate)将就绪状态更改为提供的值，然后调用`FireReadyStateChange`。
 
-##  <a name="getactivationpolicy"></a>COleControl：： GetActivationPolicy
+## <a name="colecontrolgetactivationpolicy"></a><a name="getactivationpolicy"></a>COleControl：获取激活策略
 
-更改支持 `IPointerInactive` 接口的控件的默认激活行为。
+更改支持接口的控件的`IPointerInactive`默认激活行为。
 
 ```
 virtual DWORD GetActivationPolicy();
@@ -1457,35 +1457,35 @@ POINTERINACTIVE 枚举中的标志的组合。 可能的标志包括：
 
 |||
 |-|-|
-|POINTERINACTIVE_ACTIVATEONENTRY|当鼠标在鼠标移动操作过程中输入对象时，该对象应就地激活。|
-|POINTERINACTIVE_DEACTIVATEONLEAVE|当鼠标移动操作过程中鼠标离开对象时，应停用对象。|
-|POINTERINACTIVE_ACTIVATEONDRAG|当在拖放操作过程中将鼠标拖动到对象上时，应就地激活对象。|
+|POINTERINACTIVE_ACTIVATEONENTRY|当鼠标在鼠标移动操作期间进入对象时，对象应就地激活。|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|当鼠标在鼠标移动操作期间离开对象时，应停用该对象。|
+|POINTERINACTIVE_ACTIVATEONDRAG|在拖放操作期间，当鼠标拖动到对象上时，该对象应就地激活。|
 
 ### <a name="remarks"></a>备注
 
-启用 `IPointerInactive` 接口时，容器会将 WM_SETCURSOR 和 WM_MOUSEMOVE 消息委托给它。 当调整鼠标坐标后，此接口 `COleControl`的实现将通过控件的消息映射调度这些消息。
+启用`IPointerInactive`接口后，容器将委托WM_SETCURSOR并将消息WM_MOUSEMOVE。 `COleControl`此接口的实现将在适当调整鼠标坐标后通过控件的消息映射调度这些消息。
 
-每当容器接收到 WM_SETCURSOR 或 WM_MOUSEMOVE 消息，并将鼠标指针悬停在支持 `IPointerInactive`的非活动对象上时，它应调用接口上的 `GetActivationPolicy`，并从 POINTERINACTIVE 枚举返回标志。
+每当容器收到带有鼠标指针的WM_SETCURSOR或WM_MOUSEMOVE消息，该消息位于支持`IPointerInactive`非活动对象上时，它应`GetActivationPolicy`调用接口并从 POINTERINACTIVE 枚举返回标志。
 
-您可以通过将相应条目添加到消息映射来处理这些消息，就像普通的窗口消息一样。 在处理程序中，避免在不事先检查其值是否为非 NULL 的情况下使用 `m_hWnd` 成员变量（或使用该变量的任何成员函数）。
+通过将相应的条目添加到消息映射，可以像普通窗口消息一样处理这些消息。 在处理程序中，避免使用`m_hWnd`成员变量（或使用它的任何成员函数），而不首先检查其值是否为非 NULL。
 
-除设置鼠标光标和/或激发鼠标移动事件（例如提供特殊的视觉反馈）以外的任何对象都应返回 POINTERINACTIVE_ACTIVATEONENTRY 标志并仅在活动时才绘制反馈。 如果对象返回此标志，则容器应立即将其激活，然后将其转发到触发调用 `GetActivationPolicy`的同一消息。
+任何旨在执行比设置鼠标光标和/或触发鼠标移动事件（如提供特殊视觉反馈）的目标都应返回POINTERINACTIVE_ACTIVATEONENTRY标志，并且仅在激活时绘制反馈。 如果对象返回此标志，容器应立即就地激活它，然后转发它触发调用`GetActivationPolicy`的相同消息。
 
-如果同时返回 POINTERINACTIVE_ACTIVATEONENTRY 和 POINTERINACTIVE_DEACTIVATEONLEAVE 标志，则只有当鼠标位于对象上时，才会激活对象。 如果只返回 POINTERINACTIVE_ACTIVATEONENTRY 标志，则仅当鼠标第一次进入对象时，才会激活该对象一次。
+如果同时返回POINTERINACTIVE_ACTIVATEONENTRY标志和POINTERINACTIVE_DEACTIVATEONLEAVE标志，则仅当鼠标位于对象上时才会激活该对象。 如果只返回POINTERINACTIVE_ACTIVATEONENTRY标志，则仅在鼠标首次进入对象时激活对象一次。
 
-您还可能希望将非活动控件作为 OLE 拖放操作的目标。 这需要在用户将对象拖到控件上时激活控件，使控件的窗口可以注册为拖放目标。 若要导致在拖动过程中发生激活，请返回 POINTERINACTIVE_ACTIVATEONDRAG 标志：
+您可能还希望非活动控件成为 OLE 拖放操作的目标。 这需要在用户将对象拖动到控件时激活控件，以便可以将控件的窗口注册为放置目标。 要在拖动过程中导致激活，请返回POINTERINACTIVE_ACTIVATEONDRAG标志：
 
 [!code-cpp[NVC_MFCAxCtl#1](../../mfc/reference/codesnippet/cpp/colecontrol-class_1.cpp)]
 
-`GetActivationPolicy` 通信的信息不应由容器缓存。 相反，每次鼠标进入非活动对象时，都应调用此方法。
+由 来`GetActivationPolicy`传递的信息不应由容器缓存。 相反，每次鼠标进入非活动对象时，都应调用此方法。
 
-如果非活动对象在鼠标进入该对象时未请求就地激活，则只要鼠标指针停留在该对象上，它的容器就会通过调用[OnInactiveSetCursor](#oninactivesetcursor)将后续 WM_SETCURSOR 消息调度到此对象。
+如果非活动对象在鼠标进入时未请求就地激活，则只要鼠标指针停留在该对象上，其容器应通过调用[OnInactiveSetCursor](#oninactivesetcursor)向此对象发送后续WM_SETCURSOR消息。
 
-启用 `IPointerInactive` 接口通常意味着希望控件始终能够处理鼠标消息。 若要在不支持 `IPointerInactive` 接口的容器中获取此行为，你将需要在可见时始终激活控件，这意味着控件应在其杂项标志中具有 OLEMISC_ACTIVATEWHENVISIBLE 标志。 但是，若要防止此标志在支持 `IPointerInactive`的容器中生效，还可以指定 OLEMISC_IGNOREACTIVATEWHENVISIBLE 标志：
+启用接口`IPointerInactive`通常意味着您希望控件能够随时处理鼠标消息。 要在不支持`IPointerInactive`接口的容器中获取此行为，需要在可见时始终激活控件，这意味着控件在其杂项标志中应具有OLEMISC_ACTIVATEWHENVISIBLE标志。 但是，为了防止此标志在支持`IPointerInactive`的容器中生效，还可以指定OLEMISC_IGNOREACTIVATEWHENVISIBLE标志：
 
 [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]
 
-##  <a name="getambientproperty"></a>COleControl：： GetAmbientProperty
+## <a name="colecontrolgetambientproperty"></a><a name="getambientproperty"></a>COleControl：获取环境属性
 
 获取容器的环境属性的值。
 
@@ -1496,18 +1496,18 @@ BOOL GetAmbientProperty(
     void* pvProp);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dwDispid*<br/>
+*德迪皮德*<br/>
 所需环境属性的调度 ID。
 
 *vtProp*<br/>
-一个变量类型标记，它指定要在*pvProp*中返回的值的类型。
+一种变体类型标记，用于指定要在*pvProp*中返回的值的类型。
 
 *pvProp*<br/>
-一个指针，指向将接收属性值或返回值的变量的地址。 此指针的实际类型必须与*vtProp*指定的类型匹配。
+指向将接收属性值或返回值的变量地址的指针。 此指针的实际类型必须与*vtProp*指定的类型匹配。
 
-|vtProp|PvProp 的类型|
+|vtProp|pvProp 的类型|
 |------------|--------------------|
 |VT_BOOL|`BOOL*`|
 |VT_BSTR|`CString*`|
@@ -1522,17 +1522,17 @@ BOOL GetAmbientProperty(
 
 ### <a name="return-value"></a>返回值
 
-如果支持环境属性，则为非零值;否则为0。
+如果环境属性受支持，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果使用 `GetAmbientProperty` 检索环境 DisplayName 和 ScaleUnits 属性，请将*vtProp*设置为 "`CString*`" VT_BSTR 和 " *pvProp* "。 如果要检索环境字体属性，请将*vtProp*设置为 VT_FONT，并将*PVPROP*设置为 LPFONTDISP *。
+如果用于`GetAmbientProperty`检索环境显示名称和缩放单位属性，则将*vtProp*设置为VT_BSTR，并将*pvProp*设置为`CString*`。 如果要检索环境字体属性，则将*vtProp*设置为VT_FONT，将*pvProp*设置为 LPFONTDISP*。
 
-请注意，已为常见环境属性（如[AmbientBackColor](#ambientbackcolor)和[AmbientFont](#ambientfont)）提供函数。
+请注意，已经为常见的环境属性（如[环境返回颜色](#ambientbackcolor)和环境[字体](#ambientfont)）提供了函数。
 
-##  <a name="getappearance"></a>COleControl：： GetAppearance
+## <a name="colecontrolgetappearance"></a><a name="getappearance"></a>COleControl：获取外观
 
-实现控件的 stock 外观属性的 Get 函数。
+实现控件的库存外观属性的 Get 函数。
 
 ```
 short GetAppearance ();
@@ -1540,11 +1540,11 @@ short GetAppearance ();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回值将当前外观设置指定为**short** （VT_I2）值。 如果控件的外观为平面，则此值为零; 如果控件的外观为三维，则为1。
+返回值将当前外观设置指定为**短**（VT_I2）值（如果成功）。 如果控件的外观为平面，则此值为零;如果控件的外观为 3D，则此值为 1。
 
-##  <a name="getbackcolor"></a>COleControl：： GetBackColor
+## <a name="colecontrolgetbackcolor"></a><a name="getbackcolor"></a>COleControl：获取回归颜色
 
-实现控件的常用背景色属性的 Get 函数。
+实现控件的库存 BackColor 属性的获取功能。
 
 ```
 OLE_COLOR GetBackColor();
@@ -1552,11 +1552,11 @@ OLE_COLOR GetBackColor();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回值指定当前背景色作为 OLE_COLOR 值。 可以通过调用 `TranslateColor`将此值转换为 COLORREF 值。
+返回值将当前背景颜色指定为OLE_COLOR值（如果成功）。 此值可以转换为与 调用`TranslateColor`的 COLORREF 值。
 
-##  <a name="getborderstyle"></a>COleControl：： GetBorderStyle
+## <a name="colecontrolgetborderstyle"></a><a name="getborderstyle"></a>COle 控制：获取边框样式
 
-实现控件的 stock BorderStyle 属性的 Get 函数。
+实现控件的库存 BorderStyle 属性的获取函数。
 
 ```
 short GetBorderStyle();
@@ -1564,11 +1564,11 @@ short GetBorderStyle();
 
 ### <a name="return-value"></a>返回值
 
-如果控件具有普通边框，则为 1; 否则为。如果控件没有边框，则为0。
+如果控件具有正常边框，则为 1;如果控件没有边框，则为 0。
 
-##  <a name="getcapture"></a>COleControl：： GetCapture
+## <a name="colecontrolgetcapture"></a><a name="getcapture"></a>COle 控制：获取捕获
 
-确定 `COleControl` 对象是否具有鼠标捕获。
+确定`COleControl`对象是否具有鼠标捕获。
 
 ```
 CWnd* GetCapture();
@@ -1576,15 +1576,15 @@ CWnd* GetCapture();
 
 ### <a name="return-value"></a>返回值
 
-如果控件已激活且无窗口，则在控件当前具有鼠标捕获（由控件的容器确定）**时返回，** 如果该控件没有捕获，则返回 NULL。
+如果控件已激活且无窗口，则如果控件当前具有鼠标捕获（由控件的容器确定），则返回**该**控件;如果控件没有捕获，则返回 NULL。
 
-否则，将返回具有鼠标捕获的 `CWnd` 对象（等同于 `CWnd::GetCapture`）。
+否则，返回具有`CWnd`鼠标捕获的对象（与`CWnd::GetCapture`相同）。
 
 ### <a name="remarks"></a>备注
 
-调用[SetCapture](#setcapture)时，激活的无窗口控件接收鼠标捕获。
+调用[SetCapture](#setcapture)时，激活的无窗口控件将接收鼠标捕获。
 
-##  <a name="getclassid"></a>COleControl：： GetClassID
+## <a name="colecontrolgetclassid"></a><a name="getclassid"></a>COle 控制：获取类 ID
 
 由框架调用以检索控件的 OLE 类 ID。
 
@@ -1592,55 +1592,55 @@ CWnd* GetCapture();
 virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pclsid*<br/>
-指向类 ID 位置的指针。
+指向类 ID 的位置。
 
 ### <a name="return-value"></a>返回值
 
-如果调用不成功，则为非零值;否则为0。
+如果调用不成功，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
 通常由[IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex)实现。
 
-##  <a name="getclientoffset"></a>COleControl：： GetClientOffset
+## <a name="colecontrolgetclientoffset"></a><a name="getclientoffset"></a>COle 控制：获取客户端偏移
 
-检索控件的矩形区域的左上角与其工作区左上角之间的差异。
+检索控件矩形区域的左上角与其工作区的左上角之间的差异。
 
 ```
 virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*pdxOffset*<br/>
-指向 OLE 控件的工作区的水平偏移量的指针。
+*pdx偏移*<br/>
+指向 OLE 控件工作区的水平偏移。
 
-*pdyOffset*<br/>
-指向 OLE 控件的工作区的垂直偏移量的指针。
+*pdy偏移*<br/>
+指向 OLE 控件工作区的垂直偏移。
 
 ### <a name="remarks"></a>备注
 
-OLE 控件的容器内有一个矩形区域。 控件的工作区是不包括边框和滚动条的控件区域。 `GetClientOffset` 检索的偏移量是控件的矩形区域的左上角和其工作区左上角之间的差异。 如果控件具有标准边框和滚动条以外的非客户端元素，请重写此成员函数以指定偏移量。
+OLE 控件的容器内有一个矩形区域。 控件的工作区是控制区域，不包括边框和滚动条。 检索的偏移`GetClientOffset`量是控件矩形区域的左上角与其工作区的左上角之间的差异。 如果控件具有标准边框和滚动条以外的非客户端元素，请覆盖此成员函数以指定偏移量。
 
-##  <a name="getclientrect"></a>COleControl：： GetClientRect
+## <a name="colecontrolgetclientrect"></a><a name="getclientrect"></a>COleControl：获取客户端
 
-检索控件的工作区的大小。
+检索控件工作区的大小。
 
 ```
 virtual void GetClientRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向 `RECT` 结构的指针，该结构包含无窗口控件的工作区的尺寸;也就是说，控件的大小减去窗口边框、框架、滚动条等。 *LpRect*参数指示控件的客户端矩形的大小，而不是其位置。
+指向包含无`RECT`窗口控件工作区的维度的结构的指针;即控件的大小减去窗口边框、框架、滚动条等。 *lpRect*参数指示控件的客户端矩形的大小，而不是其位置。
 
-##  <a name="getclientsite"></a>COleControl：： GetClientSite
+## <a name="colecontrolgetclientsite"></a><a name="getclientsite"></a>COleControl：获取客户网站
 
-查询对象，以便指针指向其容器中的当前客户端站点。
+查询指向其容器中当前客户端站点的指针的对象。
 
 ```
 LPOLECLIENTSITE GetClientSite();
@@ -1648,13 +1648,13 @@ LPOLECLIENTSITE GetClientSite();
 
 ### <a name="return-value"></a>返回值
 
-指向控件的容器中的当前客户端站点的指针。
+指向控件的当前客户端站点的容器中的指针。
 
 ### <a name="remarks"></a>备注
 
-返回的指针指向 `IOleClientSite`的实例。 `IOleClientSite` 接口由容器实现，它是对象上下文的视图：它在文档中的定位位置，其中获取其存储、用户界面和其他资源。
+返回的指针指向 的`IOleClientSite`实例。 由`IOleClientSite`容器实现的接口是对象对其上下文的视图：它锚定在文档中的位置，在文档中获取其存储、用户界面和其他资源。
 
-##  <a name="getcontrolflags"></a>COleControl：： GetControlFlags
+## <a name="colecontrolgetcontrolflags"></a><a name="getcontrolflags"></a>COle 控制：获取控制标志
 
 检索控件标志设置。
 
@@ -1664,7 +1664,7 @@ virtual DWORD GetControlFlags();
 
 ### <a name="return-value"></a>返回值
 
-ControlFlags 枚举中标志的运算组合：
+控件标志枚举中标志的 ORed 组合：
 
 ```
 enum ControlFlags {
@@ -1683,18 +1683,18 @@ enum ControlFlags {
 
 |||
 |-|-|
-|`fastBeginPaint`|如果设置，则使用为 OLE 控件而不是[BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) API 定制的 begin 画图函数（默认设置）。|
-|`clipPaintDC`|如果未设置，则禁用对 `COleControl` 所做 `IntersectClipRect` 的调用，并获得较小的速度优势。 如果使用无窗口激活，标志将不起作用。|
-|`pointerInactive`|如果设置，则通过启用 `COleControl`的 `IPointerInactive` 接口实现（默认情况下已禁用），提供鼠标交互，同时控件处于非活动状态。|
-|`noFlickerActivate`|如果设置，则消除额外的绘图操作和伴随的视觉闪烁。 当控件在非活动状态和活动状态中以相同方式绘制自身时使用。 如果使用无窗口激活，标志将不起作用。|
-|`windowlessActivate`|如果设置，则指示控件使用无窗口激活。|
-|`canOptimizeDraw`|如果设置，则指示控件将执行优化的绘图（如果容器支持）。|
+|`fastBeginPaint`|如果设置，则使用为 OLE 控件定制的开始绘制函数，而不是[BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) API（默认情况下设置）。|
+|`clipPaintDC`|如果未设置，则禁用对`IntersectClipRect`的`COleControl`调用，并获得较小的速度优势。 如果使用无窗口激活，则标志不起作用。|
+|`pointerInactive`|如果设置，则通过启用`COleControl`接口的实现（默认情况下禁用该`IPointerInactive`接口）在控件处于非活动状态时提供鼠标交互。|
+|`noFlickerActivate`|如果设置，则消除额外的绘图操作和随附的视觉闪烁。 当控件在非活动状态和活动状态下绘制自身时，请使用。 如果使用无窗口激活，则标志不起作用。|
+|`windowlessActivate`|如果设置，指示控件使用无窗口激活。|
+|`canOptimizeDraw`|如果设置，则指示如果容器支持该控件，则控件将执行优化的绘图。|
 
-有关 `GetControlFlags` 和 OLE 控件的其他优化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
+有关 OLE`GetControlFlags`控件和其他优化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
-##  <a name="getcontrolsize"></a>COleControl：： GetControlSize
+## <a name="colecontrolgetcontrolsize"></a><a name="getcontrolsize"></a>COle 控制：获取控制大小
 
-检索 OLE 控件窗口的大小。
+检索 OLE 控制窗口的大小。
 
 ```
 void GetControlSize(
@@ -1702,21 +1702,21 @@ void GetControlSize(
     int* pcy);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pcx*<br/>
 指定控件的宽度（以像素为单位）。
 
-*pcy*<br/>
+*普西*<br/>
 指定控件的高度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-请注意，控件窗口的所有坐标都是相对于控件的左上角的。
+请注意，控件窗口的所有坐标都相对于控件的左上角。
 
-##  <a name="getdc"></a>COleControl：： GetDC
+## <a name="colecontrolgetdc"></a><a name="getdc"></a>COle 控制：GetDC
 
-为无窗口对象提供从其容器获取屏幕（或兼容）的设备上下文。
+提供无窗口对象，以便从容器获取屏幕（或兼容）设备上下文。
 
 ```
 CDC* GetDC(
@@ -1724,31 +1724,31 @@ CDC* GetDC(
     DWORD dwFlags = OLEDC_PAINTBKGND);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lprcRect*<br/>
-一个指针，指向无窗口控件要在控件的工作区坐标中重绘的矩形。 NULL 表示完全对象的范围。
+指向无窗口控件要重绘的矩形的指针，位于控件的客户端坐标中。 NULL 表示完整对象的范围。
 
-dwFlags<br/>
-设备上下文的绘制属性。 选项包括：
+dwFlags**<br/>
+绘制设备上下文的属性。 选项包括：
 
-- OLEDC_NODRAW 指示对象不使用设备上下文来执行任何绘制，而只是获取有关显示设备的信息。 容器应该只传递窗口的 DC，无需进一步处理。
+- OLEDC_NODRAW 指示对象不会使用设备上下文执行任何图形，而只是获取有关显示设备的信息。 容器应简单地通过窗口的DC，而无需进一步处理。
 
-- OLEDC_PAINTBKGND 请求容器在返回 DC 之前绘制背景。 如果对象正在请求 DC 来重绘带有透明背景的区域，则应使用此标志。
+- OLEDC_PAINTBKGND 请求容器在返回 DC 之前绘制背景。 如果对象请求 DC 重新绘制具有透明背景的区域，则应使用此标志。
 
-- OLEDC_OFFSCREEN 通知容器：对象要呈现到屏幕外位图，随后应将该位图复制到屏幕上。 当对象要执行的绘图操作生成很多闪烁时，对象应使用此标志。 容器可随意接受此请求。 但是，如果未设置此标志，则容器必须手动取回屏幕 DC。 这允许对象执行直接屏幕操作，例如显示选定内容（通过**XOR**操作）。
+- OLEDC_OFFSCREEN 通知容器对象希望呈现到屏幕外位图中，然后应复制到屏幕。 当要执行的绘图操作生成大量闪烁时，对象应使用此标志。 容器可以自由地遵守此请求。 但是，如果未设置此标志，容器必须将屏幕上的 DC 交回。 这允许对象执行直接屏幕操作，例如显示选择（通过**XOR**操作）。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为指向容器 `CWnd` 客户端区域的显示设备上下文的指针;否则，返回值为 NULL。 显示设备上下文可以在后续的 GDI 函数中用于在容器的窗口的工作区中进行绘制。
+如果成功，指向容器`CWnd`工作区的显示设备上下文;否则，返回值为 NULL。 显示设备上下文可用于后续 GDI 函数，以在容器窗口的工作区中绘制。
 
 ### <a name="remarks"></a>备注
 
-必须调用[ReleaseDC](#releasedc)成员函数，以便在绘制后释放上下文。 调用 `GetDC`时，对象会将其要绘制的矩形传递到自己的客户端坐标中。 `GetDC` 将它们转换为容器工作区的坐标。 对象不应请求大于其自己的工作区矩形的所需绘制矩形，其大小可以使用[GetClientRect](#getclientrect)检索。 这可防止对象无意中绘制不应出现的位置。
+必须调用[ReleaseDC](#releasedc)成员函数才能在绘制后释放上下文。 调用`GetDC`时，对象传递他们希望在自己的客户端坐标中绘制的矩形。 `GetDC`将这些转换为容器工作区的坐标。 对象不应请求大于其自身工作区矩形的所需绘图矩形，其大小可以使用[GetClientRect](#getclientrect)检索。 这样可以防止对象无意中绘制不应绘制的位置。
 
-##  <a name="getenabled"></a>COleControl：： GetEnabled
+## <a name="colecontrolgetenabled"></a><a name="getenabled"></a>COle 控制：启用
 
-实现控件的启用了库存的属性的 Get 函数。
+实现控件的"已启用"属性的获取函数。
 
 ```
 BOOL GetEnabled();
@@ -1756,11 +1756,11 @@ BOOL GetEnabled();
 
 ### <a name="return-value"></a>返回值
 
-如果启用控件，则为非零值;否则为0。
+如果启用了控件，则非零;否则 0。
 
-##  <a name="getextendedcontrol"></a>COleControl：： GetExtendedControl
+## <a name="colecontrolgetextendedcontrol"></a><a name="getextendedcontrol"></a>COle 控制：获取扩展控制
 
-获取一个指针，该指针指向由表示具有一组扩展属性的控件的容器维护的对象。
+获取指向由容器维护的对象的指针，该对象表示具有一组扩展属性的控件。
 
 ```
 LPDISPATCH GetExtendedControl();
@@ -1768,17 +1768,17 @@ LPDISPATCH GetExtendedControl();
 
 ### <a name="return-value"></a>返回值
 
-指向容器的扩展控件对象的指针。 如果没有可用的对象，则该值为 NULL。
+指向容器扩展控件对象的指针。 如果没有可用的对象，则值为 NULL。
 
-此对象可通过其 `IDispatch` 接口进行操作。 你还可以使用 `QueryInterface` 获取由对象提供的其他可用接口。 但是，该对象不是支持一组特定接口所必需的。 请注意，依赖容器扩展控件对象的特定功能可将控件的可移植性限制为其他任意容器。
+此对象可以通过其`IDispatch`接口进行操作。 您还可以使用`QueryInterface`来获取对象提供的其他可用接口。 但是，不支持一组特定的接口不需要该对象。 请注意，依赖容器扩展控制对象的特定功能会将控件的可移植性限制为其他任意容器。
 
 ### <a name="remarks"></a>备注
 
-调用此函数的函数负责在对象结束时释放指针。 请注意，容器不需要支持此对象。
+调用此函数的函数负责在完成对象后释放指针。 请注意，不支持此对象不需要该容器。
 
-##  <a name="getfocus"></a>COleControl：： GetFocus
+## <a name="colecontrolgetfocus"></a><a name="getfocus"></a>COleControl：获取焦点
 
-确定 `COleControl` 对象是否具有焦点。
+确定`COleControl`对象是否具有焦点。
 
 ```
 CWnd* GetFocus();
@@ -1786,17 +1786,17 @@ CWnd* GetFocus();
 
 ### <a name="return-value"></a>返回值
 
-如果控件已激活且无窗口，则在控件当前具有键盘焦点时（由控件的容器确定 **）返回，** 如果该控件没有焦点，则返回 NULL。
+如果控件已激活且无窗口，则如果控件当前具有键盘焦点（由控件的容器确定），则返回**该**控件;如果控件没有焦点，则返回 NULL。
 
-否则，将返回具有焦点的 `CWnd` 对象（等同于 `CWnd::GetFocus`）。
+否则，返回`CWnd`具有焦点的对象（与`CWnd::GetFocus`相同）。
 
 ### <a name="remarks"></a>备注
 
 调用[SetFocus](#setfocus)时，激活的无窗口控件接收焦点。
 
-##  <a name="getfont"></a>COleControl：： Ivsfontandcolorstorage.getfont 错误
+## <a name="colecontrolgetfont"></a><a name="getfont"></a>COleControl：获取字体
 
-实现常用字体属性的 Get 函数。
+实现股票字体属性的获取函数。
 
 ```
 LPFONTDISP GetFont();
@@ -1804,15 +1804,15 @@ LPFONTDISP GetFont();
 
 ### <a name="return-value"></a>返回值
 
-指向控件的常用字体属性的字体调度接口的指针。
+指向控件的库存字体属性的字体调度界面的指针。
 
 ### <a name="remarks"></a>备注
 
-请注意，在完成后，调用方必须释放对象。 在控件的实现中，使用 `InternalGetFont` 访问控件的常用字体对象。 有关在控件中使用字体的详细信息，请参阅[Activex 控件：在 Activex 控件中使用字体一](../../mfc/mfc-activex-controls-using-fonts.md)文。
+请注意，调用方在完成时必须释放对象。 在控件的实现中，使用`InternalGetFont`访问控件的库存字体对象。 有关在控件中使用字体的详细信息，请参阅[ActiveX 控件：在 ActiveX 控件中使用字体](../../mfc/mfc-activex-controls-using-fonts.md)的文章。
 
-##  <a name="getfonttextmetrics"></a>COleControl：： GetFontTextMetrics
+## <a name="colecontrolgetfonttextmetrics"></a><a name="getfonttextmetrics"></a>COleControl：获取字体文本指标
 
-度量控件所拥有的任何 `CFontHolder` 对象的文本指标。
+测量控件拥有的任何`CFontHolder`对象的文本指标。
 
 ```
 void GetFontTextMetrics(
@@ -1820,23 +1820,23 @@ void GetFontTextMetrics(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lptm*<br/>
 指向[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构的指针。
 
-*fontHolder*<br/>
+*字体持有人*<br/>
 对[CFontHolder](../../mfc/reference/cfontholder-class.md)对象的引用。
 
 ### <a name="remarks"></a>备注
 
-可以使用[COleControl：： SelectFontObject](#selectfontobject)函数选择此类字体。 如果成功，`GetFontTextMetrics` 会将*lptm*所指向的 `TEXTMETRIC` 结构初始化为包含 `fontHolder`字体的有效指标信息; 如果不成功，则用零填充结构。 绘制控件时，应使用此函数，而不是[GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) ，因为控件（如任何嵌入的 OLE 对象）可能需要将其呈现到图元文件中。
+可以使用[COleControl：：选择字体对象](#selectfontobject)功能选择此类字体。 `GetFontTextMetrics`将初始化`TEXTMETRIC`*lptm*指向的结构，并包含有关`fontHolder`"字体"的有效指标信息（如果成功）;如果成功，则用零填充结构。 在绘制控件时，应使用此函数而不是[GetTextMetrics，](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics)因为控件（与任何嵌入的 OLE 对象）一样，可能需要将自己呈现为元文件。
 
-调用[SelectFontObject](#selectfontobject)函数时，将刷新默认字体的 `TEXTMETRIC` 结构。 只应在选择 "常用字体" 属性后调用 `GetFontTextMetrics`，以确保它提供的信息有效。
+调用`TEXTMETRIC` [SelectFontObject](#selectfontobject)函数时，将刷新默认字体的结构。 只有在选择股票`GetFontTextMetrics`字体属性后才能调用，以确保其提供的信息有效。
 
-##  <a name="getforecolor"></a>COleControl：： GetForeColor
+## <a name="colecontrolgetforecolor"></a><a name="getforecolor"></a>COleControl：获取福彩
 
-实现 stock 前景色属性的 Get 函数。
+实现股票前颜色属性的获取函数。
 
 ```
 OLE_COLOR GetForeColor();
@@ -1844,11 +1844,11 @@ OLE_COLOR GetForeColor();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回值指定当前前景色作为 OLE_COLOR 值。 可以通过调用 `TranslateColor`将此值转换为[COLORREF](/windows/win32/gdi/colorref)值。
+返回值将当前前景颜色指定为OLE_COLOR值（如果成功）。 此值可以转换为与 调用`TranslateColor`的[COLORREF](/windows/win32/gdi/colorref)值。
 
-##  <a name="gethwnd"></a>COleControl：： GetHwnd
+## <a name="colecontrolgethwnd"></a><a name="gethwnd"></a>COleControl：GetHwnd
 
-实现 stock hWnd 属性的 Get 函数。
+实现股票 hWnd 属性的获取函数。
 
 ```
 OLE_HANDLE GetHwnd();
@@ -1856,11 +1856,11 @@ OLE_HANDLE GetHwnd();
 
 ### <a name="return-value"></a>返回值
 
-OLE 控件的窗口句柄（如果有）;否则为 NULL。
+OLE 控件的窗口句柄（如果有）;否则 NULL。
 
-##  <a name="getmessagestring"></a>COleControl：： GetMessageString
+## <a name="colecontrolgetmessagestring"></a><a name="getmessagestring"></a>COle 控制：获取消息字符串
 
-由框架调用，以获取描述*nID*标识的菜单项的用途的简短字符串。
+由框架调用以获取描述*nID*标识的菜单项的用途的短字符串。
 
 ```
 virtual void GetMessageString(
@@ -1868,21 +1868,21 @@ virtual void GetMessageString(
     CString& rMessage) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nID*<br/>
 菜单项 ID。
 
 *rMessage*<br/>
-对[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的引用，通过该对象，将返回一个字符串。
+对[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的引用，通过该对象将返回字符串。
 
 ### <a name="remarks"></a>备注
 
-这可用于在突出显示菜单项时，获取显示在状态栏中的消息。 默认实现尝试加载*nID*标识的字符串资源。
+这可用于获取在突出显示菜单项时在状态栏中显示的消息。 默认实现尝试加载*由 nID*标识的字符串资源。
 
-##  <a name="getnotsupported"></a>COleControl：： GetNotSupported
+## <a name="colecontrolgetnotsupported"></a><a name="getnotsupported"></a>COle 控制：不受支持
 
-禁止用户访问控件的属性值。
+防止用户访问控件的属性值。
 
 ```
 void GetNotSupported();
@@ -1890,9 +1890,9 @@ void GetNotSupported();
 
 ### <a name="remarks"></a>备注
 
-调用此函数代替任何属性的 Get 函数，而控件的用户不支持对其进行属性检索。 一个示例是只写的属性。
+调用此函数以代替不支持控件用户检索该属性的任何属性的 Get 函数。 例如，仅写入的属性。
 
-##  <a name="getreadystate"></a>COleControl：： GetReadyState
+## <a name="colecontrolgetreadystate"></a><a name="getreadystate"></a>COleControl：准备状态
 
 返回控件的就绪状态。
 
@@ -1902,63 +1902,63 @@ long GetReadyState();
 
 ### <a name="return-value"></a>返回值
 
-控件的就绪状态，为以下值之一：
+控件的就绪状态，以下值之一：
 
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|默认初始化状态|
 |READYSTATE_LOADING|控件当前正在加载其属性|
 |READYSTATE_LOADED|控件已初始化|
-|READYSTATE_INTERACTIVE|控件具有足够的数据以进行交互，但并不是所有的异步数据都已加载|
-|READYSTATE_COMPLETE|控件的所有数据|
+|READYSTATE_INTERACTIVE|控件有足够的数据是交互式的，但并非所有异步数据都已加载|
+|READYSTATE_COMPLETE|控件具有所有数据|
 
 ### <a name="remarks"></a>备注
 
-大多数简单控件都不需要区分已加载和交互式。 但是，在至少异步接收某些数据之前，支持数据路径属性的控件可能尚未准备好进行交互。 控件会尝试尽快成为交互控件。
+最简单的控件不需要区分 LOADED 和交互式。 但是，在至少以异步方式接收某些数据之前，支持数据路径属性的控件可能还没有准备好进行交互式访问。 控件应尝试尽快成为交互式控件。
 
-##  <a name="getrectincontainer"></a>COleControl：： GetRectInContainer
+## <a name="colecontrolgetrectincontainer"></a><a name="getrectincontainer"></a>COle 控制：获取 rectin 容器
 
-获取控件的矩形相对于容器的坐标，以设备单位表示。
+获取控件矩形相对于容器的坐标，以设备单位表示。
 
 ```
 BOOL GetRectInContainer(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-一个指针，指向将向其中复制控件坐标的矩形结构。
+指向将控件的坐标复制到的矩形结构的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果控件处于就地活动状态，则为非零值;否则为0。
+如果控件处于活动位置，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-仅当控件处于就地活动状态时，矩形才有效。
+仅当控件处于活动位置时，矩形才有效。
 
-##  <a name="getstocktextmetrics"></a>COleControl：： GetStockTextMetrics
+## <a name="colecontrolgetstocktextmetrics"></a><a name="getstocktextmetrics"></a>COleControl：获取股票文本指标
 
-度量控件的常用字体属性的文本度量值，可通过[SelectStockFont](#selectstockfont)函数进行选择。
+测量控件的股票字体属性的文本指标，可以使用[SelectStockFont](#selectstockfont)函数选择该参数。
 
 ```
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lptm*<br/>
 指向[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构的指针。
 
 ### <a name="remarks"></a>备注
 
-如果成功，则 `GetStockTextMetrics` 函数将初始化*lptm*所指向的 `TEXTMETRIC` 结构，如果成功，则用零填充结构; 如果不成功，则用零填充结构。 在绘制控件时使用此函数，而不是[GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) ，因为控件（如任何嵌入的 OLE 对象）可能需要将其呈现到图元文件中。
+如果`GetStockTextMetrics`成功，`TEXTMETRIC`该函数将初始化*lptm*指向的结构，并包含有效的指标信息，如果成功，则用零填充结构。 在绘制控件时，请使用此函数而不是[GetTextMetrics，](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics)因为控件（与任何嵌入的 OLE 对象）一样，可能需要将自己呈现为元文件。
 
-调用 `SelectStockFont` 函数时，将刷新默认字体的 `TEXTMETRIC` 结构。 仅在选择了常用字体后，才应调用此函数，以确保它提供的信息有效。
+调用`TEXTMETRIC``SelectStockFont`函数时刷新默认字体的结构。 只有在选择股票字体以确保它提供的信息有效后，才能调用此功能。
 
-##  <a name="gettext"></a>COleControl：： GetText
+## <a name="colecontrolgettext"></a><a name="gettext"></a>COleControl：获取文本
 
-实现 stock 文本或 Caption 属性的 Get 函数。
+实现库存文本或标题属性的获取函数。
 
 ```
 BSTR GetText();
@@ -1966,18 +1966,18 @@ BSTR GetText();
 
 ### <a name="return-value"></a>返回值
 
-如果不存在字符串，则为控件文本字符串的当前值或长度为零的字符串。
+如果不存在字符串，则控件文本字符串或零长度字符串的当前值。
 
 > [!NOTE]
->  有关 BSTR 数据类型的详细信息，请参阅宏和全局部分中的[数据类型](../../mfc/reference/data-types-mfc.md)。
+> 有关 BSTR 数据类型的详细信息，请参阅宏和全局部分中的[数据类型](../../mfc/reference/data-types-mfc.md)。
 
 ### <a name="remarks"></a>备注
 
-请注意，此函数的调用方必须对返回的字符串调用 `SysFreeString`，以便释放资源。 在控件的实现中，使用 `InternalGetText` 访问控件的 stock 文本或标题属性。
+请注意，此函数的调用方必须调用`SysFreeString`返回的字符串才能释放资源。 在控件的实现中，用于`InternalGetText`访问控件的库存文本或标题属性。
 
-##  <a name="getwindowlessdroptarget"></a>COleControl：： GetWindowlessDropTarget
+## <a name="colecontrolgetwindowlessdroptarget"></a><a name="getwindowlessdroptarget"></a>COle 控制：获取无窗口丢弃目标
 
-如果希望将无窗口控件作为 OLE 拖放操作的目标，请覆盖 `GetWindowlessDropTarget`。
+当`GetWindowlessDropTarget`希望无窗口控件成为 OLE 拖放操作的目标时，请进行覆盖。
 
 ```
 virtual IDropTarget* GetWindowlessDropTarget();
@@ -1985,17 +1985,17 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 ### <a name="return-value"></a>返回值
 
-指向对象的 `IDropTarget` 接口的指针。 由于它没有窗口，因此无窗口对象无法注册 `IDropTarget` 接口。 但是，若要参与拖放，无窗口对象仍可以实现该接口，并 `GetWindowlessDropTarget`中将其返回。
+指向对象的接口的`IDropTarget`指针。 由于它没有窗口，无窗口对象无法注册`IDropTarget`接口。 但是，要参与拖放，无窗口对象仍然可以实现接口并将其返回。 `GetWindowlessDropTarget`
 
 ### <a name="remarks"></a>备注
 
-通常，这需要将该控件的窗口注册为放置目标。 但由于控件没有自己的窗口，容器将使用其自己的窗口作为放置目标。 控件只需提供 `IDropTarget` 接口的实现，容器可以在适当的时间委托调用。 例如：
+通常，这需要将该控件的窗口注册为放置目标。 但是，由于控件没有自己的窗口，容器将使用自己的窗口作为放置目标。 该控件只需要提供接口的实现，`IDropTarget`容器可以在适当的时间委派调用。 例如：
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
-##  <a name="initializeiids"></a>COleControl：： InitializeIIDs
+## <a name="colecontrolinitializeiids"></a><a name="initializeiids"></a>COle 控制：初始化 IID
 
-通知控件将使用的 Iid 的基类。
+通知控件将使用的 IID 的基类。
 
 ```
 void InitializeIIDs(
@@ -2003,21 +2003,21 @@ void InitializeIIDs(
     const IID* piidEvents);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*piidPrimary*<br/>
-指向控件的主调度接口的接口 ID 的指针。
+*皮迪小学*<br/>
+指向控件主调度接口的接口 ID 的指针。
 
-*piidEvents*<br/>
-指向控件的事件接口的接口 ID 的指针。
+*皮迪活动*<br/>
+指向控件事件接口的接口 ID 的指针。
 
 ### <a name="remarks"></a>备注
 
-在控件的构造函数中调用此函数，以通知控件将使用的接口 Id 的基类。
+在控件的构造函数中调用此函数，以通知控件将使用的接口 I 的基类。
 
-##  <a name="internalgetfont"></a>COleControl：： InternalGetFont
+## <a name="colecontrolinternalgetfont"></a><a name="internalgetfont"></a>COleControl：内部获取字体
 
-访问控件的常用字体属性
+访问控件的库存字体属性
 
 ```
 CFontHolder& InternalGetFont();
@@ -2025,11 +2025,11 @@ CFontHolder& InternalGetFont();
 
 ### <a name="return-value"></a>返回值
 
-对包含 stock 字体对象的[CFontHolder](../../mfc/reference/cfontholder-class.md)对象的引用。
+对包含库存字体对象的[CFontHolder](../../mfc/reference/cfontholder-class.md)对象的引用。
 
-##  <a name="internalgettext"></a>COleControl：： InternalGetText
+## <a name="colecontrolinternalgettext"></a><a name="internalgettext"></a>COleControl：内部获取文本
 
-访问控件的 stock 文本或 Caption 属性。
+访问控件的库存文本或标题属性。
 
 ```
 const CString& InternalGetText();
@@ -2039,7 +2039,7 @@ const CString& InternalGetText();
 
 对控件文本字符串的引用。
 
-##  <a name="internalsetreadystate"></a>COleControl：： InternalSetReadyState
+## <a name="colecontrolinternalsetreadystate"></a><a name="internalsetreadystate"></a>COleControl：：内部就绪状态
 
 设置控件的就绪状态。
 
@@ -2047,26 +2047,26 @@ const CString& InternalGetText();
 void InternalSetReadyState(long lNewReadyState);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*lNewReadyState*<br/>
-为控件设置的就绪状态为以下值之一：
+*l NewReadyState*<br/>
+要为控件设置的准备状态，以下值之一：
 
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|默认初始化状态|
 |READYSTATE_LOADING|控件当前正在加载其属性|
 |READYSTATE_LOADED|控件已初始化|
-|READYSTATE_INTERACTIVE|控件具有足够的数据以进行交互，但并不是所有的异步数据都已加载|
-|READYSTATE_COMPLETE|控件的所有数据|
+|READYSTATE_INTERACTIVE|控件有足够的数据是交互式的，但并非所有异步数据都已加载|
+|READYSTATE_COMPLETE|控件具有所有数据|
 
 ### <a name="remarks"></a>备注
 
-大多数简单控件都不需要区分已加载和交互式。 但是，在至少异步接收某些数据之前，支持数据路径属性的控件可能尚未准备好进行交互。 控件会尝试尽快成为交互控件。
+最简单的控件不需要区分 LOADED 和交互式。 但是，在至少以异步方式接收某些数据之前，支持数据路径属性的控件可能还没有准备好进行交互式访问。 控件应尝试尽快成为交互式控件。
 
-##  <a name="invalidatecontrol"></a>COleControl：： Microsoft.office.core.iribbonui.invalidatecontrol
+## <a name="colecontrolinvalidatecontrol"></a><a name="invalidatecontrol"></a>COle 控制：无效控制
 
-强制控件重绘自身。
+强制控件重新绘制自身。
 
 ```
 void InvalidateControl(
@@ -2074,43 +2074,43 @@ void InvalidateControl(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向要使其无效的控件的区域的指针。
+指向要失效的控件区域的指针。
 
 *bErase*<br/>
-指定在处理更新区域时是否清除更新区域中的背景。
+指定在处理更新区域时是否擦除更新区域中的背景。
 
 ### <a name="remarks"></a>备注
 
-如果*lpRect*具有 NULL 值，则将重新绘制整个控件。 如果*lpRect*不为 NULL，则表示要使其无效的控件矩形部分。 如果控件没有窗口，或者当前不处于活动状态，则忽略该矩形，并对客户端站点的[IAdviseSink：： OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange)成员函数进行调用。 使用此函数，而不是 `CWnd::InvalidateRect` 或 `InvalidateRect`。
+如果*lpRect*具有 NULL 值，则将重绘整个控件。 如果*lpRect*不是 NULL，则表示控件矩形中要失效的部分。 如果控件没有窗口或当前未处于活动状态，则忽略矩形，并调用客户端站点的[IAdviseSink：：OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange)成员函数。 使用此函数而不是`CWnd::InvalidateRect`或`InvalidateRect`。
 
-##  <a name="invalidatergn"></a>COleControl：： InvalidateRgn
+## <a name="colecontrolinvalidatergn"></a><a name="invalidatergn"></a>COleControl：无效
 
-使给定区域内的容器窗口的工作区失效。
+使给定区域内的容器窗口的工作区无效。
 
 ```
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pRgn*<br/>
-指向[CRgn](../../mfc/reference/crgn-class.md)对象的指针，该对象标识要使其在包含窗口的工作区坐标中无效的 OLE 对象的显示区域。 如果此参数为 NULL，则范围为整个对象。
+指向[CRgn](../../mfc/reference/crgn-class.md)对象的指针，用于标识 OLE 对象的显示区域以在包含窗口的客户端坐标中失效。 如果此参数为 NULL，则范围为整个对象。
 
 *bErase*<br/>
-指定是否要清除无效区域中的背景。 如果为 TRUE，则清除背景。 如果为 FALSE，则后台保持不变。
+指定是否要擦除无效区域中的背景。 如果为 TRUE，则背景将被删除。 如果 FALSE，则背景保持不变。
 
 ### <a name="remarks"></a>备注
 
-这可用于在容器中重绘无窗口控件。 在发送下一[WM_PAINT](/windows/win32/gdi/wm-paint)消息时，无效区域与更新区域中的所有其他区域一起标记为要进行绘制。
+这可用于重绘容器中的无窗口控件。 在发送下一[WM_PAINT](/windows/win32/gdi/wm-paint)消息时，将标记无效区域以及更新区域中的所有其他区域进行绘制。
 
-如果*bErase*在更新区域的任何部分都为 TRUE，则将清除整个区域中的背景，而不只是给定部件的背景。
+如果*bErase*对于更新区域的任何部分都为 TRUE，则整个区域（而不仅仅是给定部分）的背景将被删除。
 
-##  <a name="isconvertingvbx"></a>COleControl：： IsConvertingVBX
+## <a name="colecontrolisconvertingvbx"></a><a name="isconvertingvbx"></a>COleControl：正在转换VBX
 
-允许专用加载 OLE 控件。
+允许专门加载 OLE 控件。
 
 ```
 BOOL IsConvertingVBX();
@@ -2118,23 +2118,23 @@ BOOL IsConvertingVBX();
 
 ### <a name="return-value"></a>返回值
 
-如果正在转换控件，则为非零值;否则为0。
+如果要转换控件，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-将使用 VBX 控件的窗体转换为使用 OLE 控件的窗体时，可能需要 OLE 控件的特殊加载代码。 例如，如果要加载 OLE 控件的实例，则可能会调用 `DoPropExchange`中的[PX_Font](persistence-of-ole-controls.md#px_font) ：
+将使用 VBX 控件的窗体转换为使用 OLE 控件的窗体时，可能需要 OLE 控件的特殊加载代码。 例如，如果要加载 OLE 控件的实例，则可能会调用 中的`DoPropExchange`[PX_Font：](persistence-of-ole-controls.md#px_font)
 
 [!code-cpp[NVC_MFCAxCtl#3](../../mfc/reference/codesnippet/cpp/colecontrol-class_4.cpp)]
 
-但是，VBX 控件没有 Font 对象;每个字体属性都单独保存。 在这种情况下，可以使用 `IsConvertingVBX` 来区分这两种情况：
+但是，VBX 控件没有 Font 对象，因此，该控件没有"字体"对象。每个字体属性都单独保存。 在这种情况下，您将使用`IsConvertingVBX`来区分这两种情况：
 
 [!code-cpp[NVC_MFCAxCtl#4](../../mfc/reference/codesnippet/cpp/colecontrol-class_5.cpp)]
 
-另一种情况是，如果您的 VBX 控件保存了专有的二进制数据（在其 VBM_SAVEPROPERTY 的消息处理程序中），并且您的 OLE 控件以不同的格式保存其二进制数据。 如果希望您的 OLE 控件与 VBX 控件向后兼容，则可以通过区分 VBX 控件或 OLE 控件是否正在加载来使用 `IsConvertingVBX` 函数读取旧格式和新格式。
+另一种情况是，如果您的 VBX 控件保存了专有二进制数据（在其VBM_SAVEPROPERTY消息处理程序中），并且 OLE 控件以不同的格式保存其二进制数据。 如果希望 OLE 控件与 VBX 控件向后兼容，则可以通过区分是否加载 VBX 控件或 OLE`IsConvertingVBX`控件来读取使用函数读取新旧格式。
 
-在控件的 `DoPropExchange` 函数中，可以检查此条件，如果为 true，则执行特定于此转换的加载代码（如前面的示例）。 如果控件未进行转换，则可以执行正常加载代码。 此功能仅适用于从 VBX 对应项转换的控件。
+在控件的函数中`DoPropExchange`，可以检查此条件，如果为 true，则执行特定于此转换的负载代码（如前面的示例）。 如果未转换控件，则可以执行正常的加载代码。 此功能仅适用于从 VBX 对应控件转换的控件。
 
-##  <a name="isinvokeallowed"></a>COleControl：： IsInvokeAllowed
+## <a name="colecontrolisinvokeallowed"></a><a name="isinvokeallowed"></a>COle 控制：被调用允许
 
 启用自动化方法调用。
 
@@ -2144,15 +2144,15 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="return-value"></a>返回值
 
-如果已初始化控件，则为非零值;否则为0。
+如果控件已初始化，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-框架对 `IDispatch::Invoke` 调用 `IsInvokeAllowed` 来确定是否可以调用给定函数（由 `dispid`标识）。 OLE 控件的默认行为是仅当控件已初始化时才允许调用自动化方法;但 `IsInvokeAllowed` 是一个虚函数，如有必要，可能会被重写（例如，将控件用作自动化服务器时）。
+框架的调用`IDispatch::Invoke``IsInvokeAllowed`的实现，以确定是否可以调用给定函数（由`dispid`标识）。 OLE 控件的默认行为是仅在已初始化该控件时才允许调用自动化方法;但是，`IsInvokeAllowed`它是一个虚拟函数，如有必要可能会重写（例如，当控件用作自动化服务器时）。
 
-##  <a name="ismodified"></a>COleControl：： IsModified
+## <a name="colecontrolismodified"></a><a name="ismodified"></a>COle 控制：已修改
 
-确定是否已修改控件的状态。
+确定控件的状态是否已被修改。
 
 ```
 BOOL IsModified();
@@ -2160,15 +2160,15 @@ BOOL IsModified();
 
 ### <a name="return-value"></a>返回值
 
-如果控件自上次保存后已修改，则为非零值;否则为0。
+自上次保存控件状态以来已修改，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
 当属性更改值时，将修改控件的状态。
 
-##  <a name="isoptimizeddraw"></a>COleControl：： IsOptimizedDraw
+## <a name="colecontrolisoptimizeddraw"></a><a name="isoptimizeddraw"></a>COleControl：优化绘制
 
-确定容器是否支持当前绘制操作的优化绘图。
+确定容器是否支持当前绘图操作的优化绘图。
 
 ```
 BOOL IsOptimizedDraw();
@@ -2176,15 +2176,15 @@ BOOL IsOptimizedDraw();
 
 ### <a name="return-value"></a>返回值
 
-如果容器支持当前绘制操作的优化绘图，则为 TRUE;否则为 FALSE。
+如果容器支持针对当前绘图操作优化绘图，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-如果支持优化的绘图，则绘制完成后，控件不需要选择旧对象（笔、画笔、字体等）到设备上下文。
+如果支持优化的绘图，则控件在绘制完成后不必在设备上下文中选择旧对象（笔、画笔、字体等）。
 
-##  <a name="issubclassedcontrol"></a>COleControl：： IsSubclassedControl
+## <a name="colecontrolissubclassedcontrol"></a><a name="issubclassedcontrol"></a>COle 控制：是子类控制
 
-由框架调用，以确定控件是否为 Windows 控件的子类。
+由框架调用以确定控件是否对 Windows 控件进行子类。
 
 ```
 virtual BOOL IsSubclassedControl();
@@ -2192,65 +2192,65 @@ virtual BOOL IsSubclassedControl();
 
 ### <a name="return-value"></a>返回值
 
-如果控件为子类，则为非零值;否则为0。
+如果控件被子类化，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-必须重写此函数，如果 OLE 控件将 Windows 控件子类，则返回 TRUE。
+如果 OLE 控件子类为 Windows 控件，则必须重写此函数并返回 TRUE。
 
-##  <a name="load"></a>COleControl：： Load
+## <a name="colecontrolload"></a><a name="load"></a>COle 控制：加载
 
-重置所有先前加载的数据，并启动控件异步属性的新加载。
+以异步方式重置以前加载的任何数据，并启动控件的异步属性的新加载。
 
 ```
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*strNewPath*<br/>
-指向字符串的指针，该字符串包含引用异步控件属性绝对位置的路径。
+*斯特纽路径*<br/>
+指向引用异步控件属性的绝对位置的路径的字符串的指针。
 
-*片*<br/>
-实现异步控件属性的[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)对象。
+*支柱*<br/>
+实现异步控件属性的[CDataPath 属性](../../mfc/reference/cdatapathproperty-class.md)对象。
 
-##  <a name="lockinplaceactive"></a>COleControl：： LockInPlaceActive
+## <a name="colecontrollockinplaceactive"></a><a name="lockinplaceactive"></a>COle 控制：锁定位置活动
 
-阻止容器停用控件。
+防止容器停用控件。
 
 ```
 BOOL LockInPlaceActive(BOOL bLock);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*模块*<br/>
-如果要锁定控件的就地活动状态，则为 TRUE;如果要解除锁定，则为 FALSE。
+*块*<br/>
+如果要锁定控件的就地活动状态，则为 TRUE;如果要解锁，则 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-如果锁定成功，则为非零值;否则为0。
+如果锁成功，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-请注意，在完成后，控件的每个锁定必须与控件解除锁定。 只应将控件锁定一小段时间，如触发事件时。
+请注意，每次控制锁定都必须与完成控件的解锁配对。 应仅在短时间内锁定控件，例如触发事件时。
 
-##  <a name="onambientpropertychange"></a>COleControl：： OnAmbientPropertyChange
+## <a name="colecontrolonambientpropertychange"></a><a name="onambientpropertychange"></a>COleControl：关于环境属性更改
 
-当容器的某个环境属性更改了值时由框架调用。
+当容器的环境属性已更改值时，由框架调用。
 
 ```
 virtual void OnAmbientPropertyChange(DISPID dispid);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispID*<br/>
-已更改的环境属性的调度 ID，或在多个属性已更改的情况下 DISPID_UNKNOWN。
+*脱从ID*<br/>
+已更改的环境属性的调度 ID，或者如果多个属性已更改，则DISPID_UNKNOWN。
 
-##  <a name="onappearancechanged"></a>COleControl：： OnAppearanceChanged
+## <a name="colecontrolonappearancechanged"></a><a name="onappearancechanged"></a>COle 控制：在外观上已更改
 
-当 stock 外观属性值已更改时由框架调用。
+当股票外观属性值已更改时，由框架调用。
 
 ```
 virtual void OnAppearanceChanged ();
@@ -2258,11 +2258,11 @@ virtual void OnAppearanceChanged ();
 
 ### <a name="remarks"></a>备注
 
-如果希望在此属性更改后发出通知，请重写此函数。 默认实现将调用 `InvalidateControl`。
+如果要在此属性更改后通知，则重写此函数。 默认实现调用`InvalidateControl`。
 
-##  <a name="onbackcolorchanged"></a>COleControl：： OnBackColorChanged
+## <a name="colecontrolonbackcolorchanged"></a><a name="onbackcolorchanged"></a>COle 控制：onbackColor 已更改
 
-当 stock 背景色属性值已更改时由框架调用。
+当股票 BackColor 属性值已更改时，由框架调用。
 
 ```
 virtual void OnBackColorChanged();
@@ -2270,11 +2270,11 @@ virtual void OnBackColorChanged();
 
 ### <a name="remarks"></a>备注
 
-如果希望在此属性更改后发出通知，请重写此函数。 默认实现将调用 `InvalidateControl`。
+如果要在此属性更改后通知，则重写此函数。 默认实现调用`InvalidateControl`。
 
-##  <a name="onborderstylechanged"></a>COleControl：： OnBorderStyleChanged
+## <a name="colecontrolonborderstylechanged"></a><a name="onborderstylechanged"></a>COle 控制：在边框样式上已更改
 
-当 stock BorderStyle 属性值已更改时由框架调用。
+当股票 BorderStyle 属性值已更改时，由框架调用。
 
 ```
 virtual void OnBorderStyleChanged();
@@ -2282,47 +2282,47 @@ virtual void OnBorderStyleChanged();
 
 ### <a name="remarks"></a>备注
 
-默认实现将调用 `InvalidateControl`。
+默认实现调用`InvalidateControl`。
 
-如果希望在此属性更改后发出通知，请重写此函数。
+如果要在此属性更改后通知，则重写此函数。
 
-##  <a name="onclick"></a>COleControl：： OnClick
+## <a name="colecontrolonclick"></a><a name="onclick"></a>COleControl：点击
 
-当单击鼠标按钮或调用 DoClick stock 方法时由框架调用。
+当单击鼠标按钮或调用 DoClick 库存方法时，由框架调用。
 
 ```
 virtual void OnClick(USHORT iButton);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iButton*<br/>
 鼠标按钮的索引。 可以是下列值之一：
 
-- LEFT_BUTTON 单击了鼠标左键。
+- LEFT_BUTTON单击鼠标左键。
 
-- MIDDLE_BUTTON 单击了鼠标中键。
+- MIDDLE_BUTTON单击鼠标中间键。
 
-- 单击鼠标右键 RIGHT_BUTTON。
+- RIGHT_BUTTON单击了鼠标右键。
 
 ### <a name="remarks"></a>备注
 
-默认实现将调用 `COleControl::FireClick`。
+默认实现调用`COleControl::FireClick`。
 
 重写此成员函数以修改或扩展默认处理。
 
-##  <a name="onclose"></a>COleControl：： OnClose
+## <a name="colecontrolonclose"></a><a name="onclose"></a>COle 控制：关闭
 
-当容器调用控件的 `IOleControl::Close` 函数时由框架调用。
+当容器调用控件的`IOleControl::Close`函数时，由框架调用。
 
 ```
 virtual void OnClose(DWORD dwSaveOption);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwSaveOption*<br/>
-指示是否应在加载前保存对象的标志。 有效值是：
+指示是否应在加载之前保存对象的标志。 有效值是：
 
 - OLECLOSE_SAVEIFDIRTY
 
@@ -2332,11 +2332,11 @@ virtual void OnClose(DWORD dwSaveOption);
 
 ### <a name="remarks"></a>备注
 
-默认情况下，如果控件对象已修改并且*dwSaveOption*为 OLECLOSE_SAVEIFDIRTY 或 OLECLOSE_PROMPTSAVE，则 `OnClose` 将保存控件对象。
+默认情况下，`OnClose`如果控件对象已被修改，*并且 dwSaveOption* OLECLOSE_SAVEIFDIRTY或OLECLOSE_PROMPTSAVE，则保存该控件对象。
 
-##  <a name="ondoverb"></a>COleControl：： OnDoVerb
+## <a name="colecontrolondoverb"></a><a name="ondoverb"></a>COleControl：OnDoVerb
 
-当容器调用 `IOleObject::DoVerb` 成员函数时由框架调用。
+当容器调用`IOleObject::DoVerb`成员函数时由框架调用。
 
 ```
 virtual BOOL OnDoVerb(
@@ -2346,33 +2346,33 @@ virtual BOOL OnDoVerb(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iVerb*<br/>
-要调用的控制谓词的索引。
+要调用的控件谓词的索引。
 
 *lpMsg*<br/>
 指向导致调用谓词的 Windows 消息的指针。
 
-*hWndParent*<br/>
-控件的父窗口的句柄。 如果执行谓词时创建了窗口（或窗口），则应将*hWndParent*用作父项。
+*hWnd 父母*<br/>
+控件父窗口的句柄。 如果动词的执行创建了一个窗口（或窗口），则应将*hWndParent*用作父项。
 
 *lpRect*<br/>
-一个指针，它指向将复制控件的坐标（相对于容器）的 RECT 结构。
+指向 RECT 结构的指针，将控件的坐标（相对于容器）复制到该结构中。
 
 ### <a name="return-value"></a>返回值
 
-如果调用成功，则为非零值;否则为0。
+如果调用成功，则为非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-默认实现使用 ON_OLEVERB 和 ON_STDOLEVERB 消息映射项来确定要调用的正确函数。
+默认实现使用ON_OLEVERB和ON_STDOLEVERB消息映射条目来确定要调用的正确函数。
 
-重写此函数可以更改谓词的默认处理。
+重写此函数以更改动词的默认处理。
 
-##  <a name="ondraw"></a>COleControl：： OnDraw
+## <a name="colecontrolondraw"></a><a name="ondraw"></a>COleControl：在画上
 
-由框架调用，以使用指定的设备上下文在指定的边框中绘制 OLE 控件。
+由框架调用，使用指定的设备上下文在指定的边界矩形中绘制 OLE 控件。
 
 ```
 virtual void OnDraw(
@@ -2381,24 +2381,24 @@ virtual void OnDraw(
     const CRect& rcInvalid);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
-在其中进行绘制的设备上下文。
+发生绘图的设备上下文。
 
-*rcBounds*<br/>
+*rcBunds*<br/>
 控件的矩形区域，包括边框。
 
-*rcInvalid*<br/>
-无效的控件的矩形区域。
+*rc 无效*<br/>
+控件无效的矩形区域。
 
 ### <a name="remarks"></a>备注
 
-`OnDraw` 通常称为屏幕显示，将屏幕设备上下文作为*pDC*传递。 *RcBounds*参数标识目标设备上下文中的矩形（相对于其当前映射模式）。 *RcInvalid*参数是无效的实际矩形。 在某些情况下，这将是比*rcBounds*更小的区域。
+`OnDraw`通常要求屏幕显示，传递屏幕设备上下文为*pDC。* *rcBounds*参数标识目标设备上下文中的矩形（相对于其当前映射模式）。 *rcInvalid*参数是无效的实际矩形。 在某些情况下，这将是一个比*rcBounds*更小的区域。
 
-##  <a name="ondrawmetafile"></a>COleControl：： OnDrawMetafile
+## <a name="colecontrolondrawmetafile"></a><a name="ondrawmetafile"></a>COleControl：在画元文件
 
-由框架调用，以使用指定的图元文件设备上下文在指定的边框内绘制 OLE 控件。
+由框架调用，使用指定的元文件设备上下文在指定的边界矩形中绘制 OLE 控件。
 
 ```
 virtual void OnDrawMetafile(
@@ -2406,21 +2406,21 @@ virtual void OnDrawMetafile(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
-在其中进行绘制的设备上下文。
+发生绘图的设备上下文。
 
-*rcBounds*<br/>
+*rcBunds*<br/>
 控件的矩形区域，包括边框。
 
 ### <a name="remarks"></a>备注
 
 默认实现调用[OnDraw](#ondraw)函数。
 
-##  <a name="onedit"></a>COleControl：： OnEdit
+## <a name="colecontrolonedit"></a><a name="onedit"></a>COleControl：：编辑
 
-导致控件激活 UI。
+使控件被激活。
 
 ```
 virtual BOOL OnEdit(
@@ -2429,32 +2429,32 @@ virtual BOOL OnEdit(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpMsg*<br/>
 指向调用谓词的 Windows 消息的指针。
 
-*hWndParent*<br/>
+*hWnd 父母*<br/>
 控件的父窗口的句柄。
 
 *lpRect*<br/>
-指向容器中的控件使用的矩形的指针。
+指向容器中控件使用的矩形的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果调用成功，则为非零值;否则为0。
+如果调用成功，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-这等效于调用控件的 OLEIVERB_UIACTIVATE 谓词。
+这与调用控件的OLEIVERB_UIACTIVATE谓词的效果相同。
 
-此函数通常用作 ON_OLEVERB 消息映射项的处理程序函数。 这会使 "编辑" 谓词可用于控件的 "对象" 菜单。 例如：
+此函数通常用作ON_OLEVERB消息映射条目的处理程序函数。 这使控件的"对象"菜单上有"编辑"谓词可用。 例如：
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 
-##  <a name="onenabledchanged"></a>COleControl：： OnEnabledChanged
+## <a name="colecontrolonenabledchanged"></a><a name="onenabledchanged"></a>COle 控制：启用
 
-当启用了 stock 的属性值更改时由框架调用。
+当股票启用属性值已更改时，由框架调用。
 
 ```
 virtual void OnEnabledChanged();
@@ -2462,47 +2462,47 @@ virtual void OnEnabledChanged();
 
 ### <a name="remarks"></a>备注
 
-如果希望在此属性更改后发出通知，请重写此函数。 默认实现将调用[microsoft.office.core.iribbonui.invalidatecontrol](#invalidatecontrol)。
+如果要在此属性更改后通知，则重写此函数。 默认实现调用[无效控制](#invalidatecontrol)。
 
-##  <a name="onenumverbs"></a>COleControl：： OnEnumVerbs
+## <a name="colecontrolonenumverbs"></a><a name="onenumverbs"></a>COleControl：onEnumVerbs
 
-当容器调用 `IOleObject::EnumVerbs` 成员函数时由框架调用。
+当容器调用`IOleObject::EnumVerbs`成员函数时由框架调用。
 
 ```
 virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*ppenumOleVerb*<br/>
-指向枚举控件的谓词的 `IEnumOLEVERB` 对象的指针。
+*佩纳姆奥勒Verb*<br/>
+指向枚举控件`IEnumOLEVERB`谓词的对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果谓词可用，则为非零值;否则为0。
+如果动词可用，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-默认实现枚举消息映射中的 ON_OLEVERB 项。
+默认实现枚举消息映射中ON_OLEVERB项。
 
-重写此函数可以更改枚举谓词的默认方式。
+重写此函数以更改枚举谓词的默认方式。
 
-##  <a name="oneventadvise"></a>COleControl：： OnEventAdvise
+## <a name="colecontroloneventadvise"></a><a name="oneventadvise"></a>COleControl：在事件建议
 
-当事件处理程序连接到 OLE 控件或与该控件断开连接时由框架调用。
+当事件处理程序连接到 OLE 控件或与 OLE 控件断开连接时，由框架调用。
 
 ```
 virtual void OnEventAdvise(BOOL bAdvise);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*bAdvise*<br/>
-如果为 TRUE，则表示事件处理程序已连接到控件。 FALSE 指示事件处理程序已与控件断开连接。
+*b 建议*<br/>
+TRUE 表示事件处理程序已连接到控件。 FALSE 表示事件处理程序已断开与控件的连接。
 
-##  <a name="onfontchanged"></a>COleControl：： OnFontChanged
+## <a name="colecontrolonfontchanged"></a><a name="onfontchanged"></a>COleControl：：放大缩小字体功能 放大缩小字体功能
 
-当常用字体属性值已更改时由框架调用。
+当股票字体属性值已更改时，由框架调用。
 
 ```
 virtual void OnFontChanged();
@@ -2510,17 +2510,17 @@ virtual void OnFontChanged();
 
 ### <a name="remarks"></a>备注
 
-默认实现将调用 `COleControl::InvalidateControl`。 如果控件是对 Windows 控件进行子类化，则默认实现还会向控件的窗口发送 WM_SETFONT 消息。
+默认实现调用`COleControl::InvalidateControl`。 如果控件正在对 Windows 控件进行子类化，则默认实现还会向控件的窗口发送WM_SETFONT消息。
 
-如果希望在此属性更改后发出通知，请重写此函数。
+如果要在此属性更改后通知，则重写此函数。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCAxCtl#6](../../mfc/reference/codesnippet/cpp/colecontrol-class_7.cpp)]
 
-##  <a name="onforecolorchanged"></a>COleControl：： OnForeColorChanged
+## <a name="colecontrolonforecolorchanged"></a><a name="onforecolorchanged"></a>COleControl：OnforeColor 已更改
 
-当股票前景属性值已更改时由框架调用。
+当股票 ForeColor 属性值已更改时，由框架调用。
 
 ```
 virtual void OnForeColorChanged();
@@ -2528,32 +2528,32 @@ virtual void OnForeColorChanged();
 
 ### <a name="remarks"></a>备注
 
-默认实现将调用 `InvalidateControl`。
+默认实现调用`InvalidateControl`。
 
-如果希望在此属性更改后发出通知，请重写此函数。
+如果要在此属性更改后通知，则重写此函数。
 
-##  <a name="onfreezeevents"></a>COleControl：： OnFreezeEvents
+## <a name="colecontrolonfreezeevents"></a><a name="onfreezeevents"></a>COleControl：在冻结事件
 
-在容器调用 `IOleControl::FreezeEvents`之后，由框架调用。
+在容器调用 后由框架调用`IOleControl::FreezeEvents`。
 
 ```
 virtual void OnFreezeEvents(BOOL bFreeze);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *bFreeze*<br/>
-如果控件的事件处理被冻结，则为 TRUE;否则为 FALSE。
+如果控件的事件处理被冻结，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
 默认实现不执行任何操作。
 
-如果在事件处理被冻结或解冻时需要其他行为，请重写此函数。
+如果要在冻结或解冻事件处理时执行其他行为，则重写此函数。
 
-##  <a name="ongetcolorset"></a>COleControl：： OnGetColorSet
+## <a name="colecontrolongetcolorset"></a><a name="ongetcolorset"></a>COleControl：onGetColorSet
 
-当容器调用 `IViewObject::GetColorSet` 成员函数时由框架调用。
+当容器调用`IViewObject::GetColorSet`成员函数时由框架调用。
 
 ```
 virtual BOOL OnGetColorSet(
@@ -2562,49 +2562,49 @@ virtual BOOL OnGetColorSet(
     LPLOGPALETTE* ppColorSet);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptd*<br/>
-指向应呈现图片的目标设备。 如果此值为 NULL，则应该为默认目标设备（通常为显示设备）呈现图片。
+指向应为其呈现图片的目标设备。 如果此值为 NULL，则应为默认目标设备（通常是显示设备）呈现图片。
 
-*hicTargetDev*<br/>
-指定*ptd*所指示的目标设备上的信息上下文。 此参数可以是设备上下文，但这不是必需的。 如果*ptd*为 null，则*hicTargetDev*还应为 null。
+*希塔吉特德夫*<br/>
+指定*ptd*指示的目标设备上的信息上下文。 此参数可以是设备上下文，但不一定是设备上下文。 如果*ptd*为 NULL，*则 hicTargetDev*也应为 NULL。
 
 *ppColorSet*<br/>
-一个指针，指向应将使用的颜色集复制到其中的位置。 如果该函数未返回颜色集，则返回 NULL。
+指向应使用颜色集的位置的指针。 如果函数不返回颜色集，则返回 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果返回有效的颜色集，则为非零值;否则为0。
+如果返回有效颜色集，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-容器调用此函数以获取绘制 OLE 控件所需的所有颜色。 容器可以使用与设置总体调色板所需的颜色一起获得的颜色集。 默认实现返回 FALSE。
+容器调用此函数以获取绘制 OLE 控件所需的所有颜色。 容器可以使用与设置整体调色板所需的颜色一起获取的颜色集。 默认实现返回 FALSE。
 
-重写此函数以对此请求进行任何特殊处理。
+重写此函数以执行此请求的任何特殊处理。
 
-##  <a name="ongetcontrolinfo"></a>COleControl：： OnGetControlInfo
+## <a name="colecontrolongetcontrolinfo"></a><a name="ongetcontrolinfo"></a>COleControl：OnGetControlInfo
 
-当控件的容器请求有关控件的信息时由框架调用。
+当控件的容器请求有关控件的信息时，由框架调用。
 
 ```
 virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pControlInfo*<br/>
-指向要填充的[CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo)结构的指针。
+指向要填充[的 CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo)结构的指针。
 
 ### <a name="remarks"></a>备注
 
-此信息主要包含控件的助记键的说明。 默认实现用默认信息填充*pControlInfo* 。
+此信息主要包括控件的助记符键的说明。 默认实现使用默认信息填充*pControlInfo。*
 
-如果控件需要处理助记键，请重写此函数。
+如果控件需要处理助记符键，请覆盖此函数。
 
-##  <a name="ongetdisplaystring"></a>COleControl：： OnGetDisplayString
+## <a name="colecontrolongetdisplaystring"></a><a name="ongetdisplaystring"></a>COle 控制：：在GetDisplayString上
 
-由框架调用以获取一个字符串，该字符串表示*dispid*标识的属性的当前值。
+由框架调用以获取表示由*dispid*标识的属性的当前值的字符串。
 
 ```
 virtual BOOL OnGetDisplayString(
@@ -2612,25 +2612,25 @@ virtual BOOL OnGetDisplayString(
     CString& strValue);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispid*<br/>
+*不一部分*<br/>
 该控件的属性的调度 ID。
 
 *strValue*<br/>
-对[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的引用，通过该对象，将返回一个字符串。
+对[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的引用，通过该对象将返回字符串。
 
 ### <a name="return-value"></a>返回值
 
-如果已在 StrValue 中返回一个字符串 *，则为*非零; 否则为0。
+如果字符串在*strValue*中返回，则非零;否则为 0。
 
 ### <a name="remarks"></a>备注
 
-如果控件的属性的值无法直接转换为字符串，并且您希望在容器提供的属性浏览器中显示该属性的值，则重写此函数。
+如果控件具有其值不能直接转换为字符串的属性，并且希望该属性的值显示在容器提供的属性浏览器中，请覆盖此函数。
 
-##  <a name="ongetinplacemenu"></a>COleControl：： OnGetInPlaceMenu
+## <a name="colecontrolongetinplacemenu"></a><a name="ongetinplacemenu"></a>COleControl：ongetinplacemenu
 
-当控件激活 UI 时由框架调用，以获取要合并到容器的现有菜单中的菜单。
+当控件被 UI 激活以获取要合并到容器的现有菜单中的菜单时，由框架调用。
 
 ```
 virtual HMENU OnGetInPlaceMenu();
@@ -2638,15 +2638,15 @@ virtual HMENU OnGetInPlaceMenu();
 
 ### <a name="return-value"></a>返回值
 
-控件的菜单的句柄; 如果控件没有，则为 NULL。 默认实现返回 NULL。
+控件菜单的句柄，如果控件没有，则为 NULL。 默认实现返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-有关合并 OLE 资源的详细信息，请参阅文章[菜单和资源（OLE）](../../mfc/menus-and-resources-ole.md)一文。
+有关合并 OLE 资源的详细信息，请参阅文章["菜单和资源 "（OLE）](../../mfc/menus-and-resources-ole.md)"。
 
-##  <a name="ongetnaturalextent"></a>COleControl：： OnGetNaturalExtent
+## <a name="colecontrolongetnaturalextent"></a><a name="ongetnaturalextent"></a>COleControl：OnGet自然范围
 
-由框架调用，以响应容器的 `IViewObjectEx::GetNaturalExtent` 请求。
+框架响应容器`IViewObjectEx::GetNaturalExtent`请求调用。
 
 ```
 virtual BOOL OnGetNaturalExtent(
@@ -2658,22 +2658,22 @@ virtual BOOL OnGetNaturalExtent(
     LPSIZEL psizel);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwAspect*<br/>
 指定要如何表示该对象。 表示形式包括内容、图标、缩略图或打印文档。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
 
-*lindex*<br/>
-对象中感兴趣的部分。 目前只有-1 是有效的。
+*利索引*<br/>
+感兴趣的对象的部分。 目前只有 -1 有效。
 
 *ptd*<br/>
-指向[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)结构，定义应为其返回对象大小的目标设备。
+指向定义应为其返回对象大小的目标设备的[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)结构。
 
-*hicTargetDev*<br/>
-指定*ptd*参数指示的目标设备的信息上下文，对象可从该参数提取设备度量值并测试设备的功能。 如果*ptd*为 NULL，则对象应忽略*hicTargetDev*参数中的值。
+*希塔吉特德夫*<br/>
+指定*由 ptd*参数指示的目标设备的信息上下文，对象可以从中提取设备指标并测试设备的功能。 如果*ptd*为 NULL，则对象应忽略*hicTargetDev*参数中的值。
 
-*pExtentInfo*<br/>
-指向指定大小调整数据的 `DVEXTENTINFO` 结构。 `DVEXTENTINFO` 结构为：
+*p 范围信息*<br/>
+指向`DVEXTENTINFO`指定大小调整的数据的结构。 结构`DVEXTENTINFO`为：
 
 ```cpp
 typedef struct tagExtentInfo
@@ -2684,26 +2684,26 @@ typedef struct tagExtentInfo
 }   DVEXTENTINFO;
 ```
 
-结构成员 `dwExtentMode` 可以采用以下两个值之一：
+结构成员`dwExtentMode`可以采用两个值之一：
 
-- DVEXTENT_CONTENT 查询控件精确适应内容的大小（靠齐到大小）
+- DVEXTENT_CONTENT查询控件应有多大以完全适合内容（对齐大小）
 
-- 调整大小时，请 DVEXTENT_INTEGRAL 传递建议大小以进行控制
+- DVEXTENT_INTEGRAL调整大小时，将建议的大小传递给控件
 
-*psizel*<br/>
-指向由控件返回的大小调整数据的点。 对于未调整的任何维度，返回的大小调整数据将设置为-1。
+*普西斯尔*<br/>
+点以调整控件返回的数据大小。 对于任何未调整的维度，返回的尺寸调整数据设置为 -1。
 
 ### <a name="return-value"></a>返回值
 
-如果成功返回或调整大小，则为非零值;否则为0。
+如果成功返回或调整大小，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-重写此函数以返回对象的显示大小，该大小与 `DVEXTENTINFO` 结构中的建议大小和区模式最接近。 默认实现返回 FALSE，并且不对大小进行调整。
+重写此函数以返回对象的显示大小，最接近`DVEXTENTINFO`结构中建议的大小和范围模式。 默认实现返回 FALSE，不调整大小。
 
-##  <a name="ongetpredefinedstrings"></a>COleControl：： OnGetPredefinedStrings
+## <a name="colecontrolongetpredefinedstrings"></a><a name="ongetpredefinedstrings"></a>COle 控制：：打开预定义字符串
 
-由框架调用以获取一组预定义的字符串，这些字符串表示属性的可能值。
+由框架调用以获取一组预定义字符串，表示属性的可能值。
 
 ```
 virtual BOOL OnGetPredefinedStrings(
@@ -2712,28 +2712,28 @@ virtual BOOL OnGetPredefinedStrings(
     CDWordArray* pCookieArray);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispid*<br/>
+*不一部分*<br/>
 该控件的属性的调度 ID。
 
-*pStringArray*<br/>
+*pStringarray*<br/>
 要用返回值填充的字符串数组。
 
-*pCookieArray*<br/>
+*pCookiearray*<br/>
 要用返回值填充的 DWORD 数组。
 
 ### <a name="return-value"></a>返回值
 
-如果已将元素添加到*pStringArray*和*pCookieArray*，则为非零值。
+如果元素已添加到*pStringarray*和*pCookiearray*，则非零。
 
 ### <a name="remarks"></a>备注
 
-如果控件有一个属性，其中包含一组可由字符串表示的可能值，请重写此函数。 对于添加到*pStringArray*的每个元素，应将相应的 "cookie" 元素添加到*pCookieArray 中。* 此框架稍后可能会将这些 "cookie" 值传递到 `COleControl::OnGetPredefinedValue` 函数。
+如果控件具有一组可以由字符串表示的可能值的属性，请覆盖此函数。 对于添加到*pStringArray*的每个元素，应向*pCookiearray*添加相应的"cookie"元素。 这些"cookie"值稍后可能会由框架传递给函数`COleControl::OnGetPredefinedValue`。
 
-##  <a name="ongetpredefinedvalue"></a>COleControl：： OnGetPredefinedValue
+## <a name="colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a>COle 控制：：获取预定义值
 
-由框架调用，以获取与先前由 `COleControl::OnGetPredefinedStrings`重写返回的预定义字符串之一相对应的值。
+由 框架调用以获取与以前由 重写返回的预定义字符串之一对应的值`COleControl::OnGetPredefinedStrings`。
 
 ```
 virtual BOOL OnGetPredefinedValue(
@@ -2742,24 +2742,24 @@ virtual BOOL OnGetPredefinedValue(
     VARIANT* lpvarOut);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispid*<br/>
+*不一部分*<br/>
 该控件的属性的调度 ID。
 
 *dwCookie*<br/>
-先前由 `COleControl::OnGetPredefinedStrings`重写返回的 cookie 值。
+以前由 重写返回的`COleControl::OnGetPredefinedStrings`Cookie 值。
 
 *lpvarOut*<br/>
-指向 `VARIANT` 结构的指针，通过该结构将返回属性值。
+指向将返回`VARIANT`属性值的结构的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果已在*lpvarOut*中返回值，则为非零值;否则为0。
+如果以*lpvarOut*中返回值，则非零。否则 0。
 
-##  <a name="ongetviewextent"></a>COleControl：： OnGetViewExtent
+## <a name="colecontrolongetviewextent"></a><a name="ongetviewextent"></a>COleControl：OngetView 范围
 
-由框架调用，以响应容器的[IViewObject2：： GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent)请求。
+由框架调用以响应容器的[IViewObject2：：：get 范围](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent)请求。
 
 ```
 virtual BOOL OnGetViewExtent(
@@ -2769,61 +2769,61 @@ virtual BOOL OnGetViewExtent(
     LPSIZEL lpsizel);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwDrawAspect*<br/>
-用于描述要显示对象的哪一窗体或方面的 DWORD。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
+DWORD 描述要显示对象的窗体或方面。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
 
-*lindex*<br/>
-对象中感兴趣的部分。 目前只有-1 是有效的。
+*利索引*<br/>
+感兴趣的对象的部分。 目前只有 -1 有效。
 
 *ptd*<br/>
-指向[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)结构，定义应为其返回对象大小的目标设备。
+指向定义应为其返回对象大小的目标设备的[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)结构。
 
 *lpsizel*<br/>
 指向返回对象大小的位置。
 
 ### <a name="return-value"></a>返回值
 
-如果成功返回了区信息，则为非零值;否则为0。
+如果成功返回范围信息，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果控件使用两遍绘图，并且它的透明和透明部分具有不同的尺寸，则重写此函数。
+如果控件使用双通道绘图，并且其不透明和透明零件具有不同的尺寸，则覆盖此函数。
 
-##  <a name="ongetviewrect"></a>COleControl：： OnGetViewRect
+## <a name="colecontrolongetviewrect"></a><a name="ongetviewrect"></a>COleControl：OngetViewrect
 
-由框架调用，以响应容器的 `IViewObjectEx::GetRect` 请求。
+框架响应容器`IViewObjectEx::GetRect`请求调用。
 
 ```
 virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwAspect*<br/>
-用于描述要显示对象的哪一窗体或方面的 DWORD。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2：
+DWORD 描述要显示对象的窗体或方面。 有效值取自枚举[DVASPECT 或](/windows/win32/api/wtypes/ne-wtypes-dvaspect)DVASPECT2：
 
-- 整个对象的 DVASPECT_CONTENT 边框。 对象原点的左上角，大小等于 `GetViewExtent`返回的范围 *。*
+- DVASPECT_CONTENT整个对象的边界矩形。 对象原点和大小处的左上角等于 返回的范围`GetViewExtent`*。*
 
-- 具有矩形不透明区域的 DVASPECT_OPAQUE 对象将返回该矩形。 其他失败。
+- DVASPECT_OPAQUE具有矩形不透明区域的对象返回该矩形。 其他人失败了。
 
-- 覆盖所有透明或不规则部分的 DVASPECT_TRANSPARENT 矩形。
+- DVASPECT_TRANSPARENT矩形，覆盖所有透明或不规则零件。
 
-*pRect*<br/>
-指向[RECTL](/previous-versions/dd162907\(v=vs.85\))结构，指定应在其中绘制对象的矩形。 此参数控制对象的定位和拉伸。
+*普雷克*<br/>
+指向指定在其中绘制对象的矩形的[RECTL](/previous-versions/dd162907\(v=vs.85\))结构。 此参数控制对象的定位和拉伸。
 
 ### <a name="return-value"></a>返回值
 
-如果成功返回大小为对象的矩形，则为非零值;否则为0。
+如果成功返回到对象的矩形大小，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-对象的大小由 `OnGetViewRect` 转换为从特定位置（默认为显示的左上角）开始的矩形。 如果控件使用两遍绘图，并且它的透明和透明部分具有不同的尺寸，则重写此函数。
+对象的大小由`OnGetViewRect`从特定位置开始的矩形转换为矩形（默认值为显示的左上角）。 如果控件使用双通道绘图，并且其不透明和透明零件具有不同的尺寸，则覆盖此函数。
 
-##  <a name="ongetviewstatus"></a>COleControl：： OnGetViewStatus
+## <a name="colecontrolongetviewstatus"></a><a name="ongetviewstatus"></a>COleControl：Onget查看状态
 
-由框架调用，以响应容器的 `IViewObjectEx::GetViewStatus` 请求。
+框架响应容器`IViewObjectEx::GetViewStatus`请求调用。
 
 ```
 virtual DWORD OnGetViewStatus();
@@ -2831,22 +2831,22 @@ virtual DWORD OnGetViewStatus();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 VIEWSTATUS 枚举的值之一;否则为0。 可能的值包括以下各项的任意组合：
+如果成功，则视图状态枚举的值之一;否则 0。 可能的值是以下任意组合：
 
 |||
 |-|-|
-|VIEWSTATUS_OPAQUE|对象完全不透明。 如果未设置此位，则对象将包含透明部分。 此位仅适用于内容相关的方面，而不是 DVASPECT_ICON 或 DVASPECT_DOCPRINT。|
-|VIEWSTATUS_SOLIDBKGND|对象具有纯色背景（由纯色而非画笔图案组成）。 只有在设置 VIEWSTATUS_OPAQUE 并仅适用于与内容相关的方面，而不是 DVASPECT_ICON 或 DVASPECT_DOCPRINT 时，此位才有意义。|
-|VIEWSTATUS_DVASPECTOPAQUE|对象支持 DVASPECT_OPAQUE。 将绘图方位作为参数的所有 IViewObjectEx 方法均可通过此方面调用。|
-|VIEWSTATUS_DVASPECTTRANSPARENT|对象支持 DVASPECT_TRANSPARENT。 将绘图方面作为参数的所有 `IViewObjectEx` 方法都可以使用此特性来调用。|
+|VIEWSTATUS_OPAQUE|对象是完全不透明的。 如果未设置此位，则对象包含透明部分。 此位仅适用于与内容相关的方面，不适用于DVASPECT_ICON或DVASPECT_DOCPRINT。|
+|VIEWSTATUS_SOLIDBKGND|对象具有纯背景（以纯色而不是画笔图案组成）。 仅当设置VIEWSTATUS_OPAQUE且仅适用于内容相关方面，而不是应用于DVASPECT_ICON或DVASPECT_DOCPRINT时，此位才有意义。|
+|VIEWSTATUS_DVASPECTOPAQUE|对象支持DVASPECT_OPAQUE。 使用此方面可以调用所有以绘图方面作为参数的 IViewObjectEx 方法。|
+|VIEWSTATUS_DVASPECTTRANSPARENT|对象支持DVASPECT_TRANSPARENT。 可以`IViewObjectEx`使用此方面调用所有以绘图方面为参数的方法。|
 
 ### <a name="remarks"></a>备注
 
-如果控件使用两遍绘图，则重写此函数。 默认实现返回 VIEWSTATUS_OPAQUE。
+如果控件使用双通道绘图，请覆盖此函数。 默认实现返回VIEWSTATUS_OPAQUE。
 
-##  <a name="onhidetoolbars"></a>COleControl：： OnHideToolBars
+## <a name="colecontrolonhidetoolbars"></a><a name="onhidetoolbars"></a>COle 控制：在隐藏工具栏上
 
-当控件为 UI 停用时由框架调用。
+当控件被 UI 停用时，由框架调用。
 
 ```
 virtual void OnHideToolBars();
@@ -2854,11 +2854,11 @@ virtual void OnHideToolBars();
 
 ### <a name="remarks"></a>备注
 
-实现应隐藏 `OnShowToolbars`显示的所有工具栏。
+实现应隐藏 显示`OnShowToolbars`的所有工具栏。
 
-##  <a name="oninactivemousemove"></a>COleControl：： OnInactiveMouseMove
+## <a name="colecontroloninactivemousemove"></a><a name="oninactivemousemove"></a>COle 控制：在活动鼠标移动
 
-由鼠标指针下的非活动对象的容器调用，接收到 WM_MOUSEMOVE 消息。
+收到WM_MOUSEMOVE消息时，容器为鼠标指针下的非活动对象调用。
 
 ```
 virtual void OnInactiveMouseMove(
@@ -2868,27 +2868,27 @@ virtual void OnInactiveMouseMove(
     DWORD dwKeyState);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lprcBounds*<br/>
-包含窗口的工作区坐标中的对象边框。 接收到 WM_MOUSEMOVE 消息时，通知对象在屏幕上的准确位置和大小。
+包含窗口的客户端坐标中的对象边界矩形。 收到WM_MOUSEMOVE消息时，告诉对象其在屏幕上的确切位置和大小。
 
-*x*<br/>
-鼠标位置在所包含窗口的工作区坐标中的 x 坐标。
+** x <br/>
+包含窗口的客户端坐标中的鼠标位置的 x 坐标。
 
-*y*<br/>
-鼠标位置在所包含窗口的工作区坐标中的 y 坐标。
+*Y*<br/>
+包含窗口的客户端坐标中的鼠标位置的 y 坐标。
 
-*dwKeyState*<br/>
-标识键盘上的键盘修改键的当前状态。 有效值可以是任何标志的组合 MK_CONTROL、MK_SHIFT、MK_ALT、MK_BUTTON、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
+*德基州*<br/>
+标识键盘上键盘修改器键的当前状态。 有效值可以是任何标志MK_CONTROL、MK_SHIFT、MK_ALT、MK_BUTTON、MK_LBUTTON、MK_MBUTTON和MK_RBUTTON的组合。
 
 ### <a name="remarks"></a>备注
 
-请注意，窗口客户端坐标（像素）用于传递鼠标光标的位置。 这是通过同时传递同一坐标系统中的对象的边框来实现的。
+请注意，窗口客户端坐标（像素）用于传递鼠标光标位置。 这可以通过在同一坐标系中传递对象的边界矩形来实现。
 
-##  <a name="oninactivesetcursor"></a>COleControl：： OnInactiveSetCursor
+## <a name="colecontroloninactivesetcursor"></a><a name="oninactivesetcursor"></a>COle 控制：oninactiveSetCursor
 
-由鼠标指针下的非活动对象的容器调用，接收到 WM_SETCURSOR 消息。
+收到WM_SETCURSOR消息时，容器在鼠标指针下为非活动对象调用。
 
 ```
 virtual BOOL OnInactiveSetCursor(
@@ -2899,22 +2899,22 @@ virtual BOOL OnInactiveSetCursor(
     BOOL bSetAlways);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lprcBounds*<br/>
-包含窗口的工作区坐标中的对象边框。 接收到 WM_SETCURSOR 消息时，通知对象在屏幕上的准确位置和大小。
+包含窗口的客户端坐标中的对象边界矩形。 收到WM_SETCURSOR消息时，告诉对象其在屏幕上的确切位置和大小。
 
-*x*<br/>
-鼠标位置在所包含窗口的工作区坐标中的 x 坐标。
+** x <br/>
+包含窗口的客户端坐标中的鼠标位置的 x 坐标。
 
-*y*<br/>
-鼠标位置在所包含窗口的工作区坐标中的 y 坐标。
+*Y*<br/>
+包含窗口的客户端坐标中的鼠标位置的 y 坐标。
 
 *dwMouseMsg*<br/>
-发生 WM_SETCURSOR 的鼠标消息的标识符。
+发生WM_SETCURSOR的鼠标消息的标识符。
 
 *bSetAlways*<br/>
-指定对象是否必须设置光标。 如果为 TRUE，则对象必须设置光标;如果为 FALSE，则游标无需设置游标，并且应在这种情况下返回 S_FALSE。
+指定对象是否必须设置游标。 如果为 TRUE，则对象必须设置游标;如果为 TRUE，则对象必须设置光标。如果 FALSE，游标没有义务设置游标，在这种情况下应返回S_FALSE。
 
 ### <a name="return-value"></a>返回值
 
@@ -2922,11 +2922,11 @@ virtual BOOL OnInactiveSetCursor(
 
 ### <a name="remarks"></a>备注
 
-请注意，窗口客户端坐标（像素）用于传递鼠标光标的位置。 这是通过同时传递同一坐标系统中的对象的边框来实现的。
+请注意，窗口客户端坐标（像素）用于传递鼠标光标位置。 这可以通过在同一坐标系中传递对象的边界矩形来实现。
 
-##  <a name="onkeydownevent"></a>COleControl：： OnKeyDownEvent
+## <a name="colecontrolonkeydownevent"></a><a name="onkeydownevent"></a>COleControl：在键下事件
 
-在处理了股票 KeyDown 事件之后，由框架调用。
+处理股票密钥下事件后由框架调用。
 
 ```
 virtual void OnKeyDownEvent(
@@ -2934,46 +2934,46 @@ virtual void OnKeyDownEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*nChar*<br/>
-按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
+*n查尔*<br/>
+按下密钥的虚拟密钥代码值。 有关标准虚拟密钥代码的列表，请参阅 Winuser.h
 
 *nShiftState*<br/>
 包含以下标志的组合：
 
-- 在操作过程中，SHIFT_MASK 按下 SHIFT 键。
+- SHIFT_MASK在操作过程中按下 SHIFT 键。
 
-- CTRL_MASK 在操作过程中按下了 CTRL 键。
+- CTRL_MASK在操作期间按下了 CTRL 键。
 
-- ALT_MASK 在操作过程中按下了 ALT 键。
+- ALT_MASK在操作过程中按下 ALT 键。
 
 ### <a name="remarks"></a>备注
 
-如果在触发事件后，控件需要访问密钥信息，请重写此函数。
+如果控件需要在触发事件后访问密钥信息，请覆盖此函数。
 
-##  <a name="onkeypressevent"></a>COleControl：： OnKeyPressEvent
+## <a name="colecontrolonkeypressevent"></a><a name="onkeypressevent"></a>COleControl：：在KeyPress事件
 
-在激发了 stock 按键事件之后，由框架调用。
+在股票 KeyPress 事件已触发后，由框架调用。
 
 ```
 virtual void OnKeyPressEvent(USHORT nChar);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*nChar*<br/>
-包含按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
+*n查尔*<br/>
+包含按下的密钥的虚拟密钥代码值。 有关标准虚拟密钥代码的列表，请参阅 Winuser.h
 
 ### <a name="remarks"></a>备注
 
-请注意，此*nChar*值可能已由容器进行了修改。
+请注意，容器可能已修改*nChar*值。
 
-如果希望在此事件发生后发出通知，请重写此函数。
+如果要在此事件发生后发出通知，请覆盖此函数。
 
-##  <a name="onkeyupevent"></a>COleControl：： OnKeyUpEvent
+## <a name="colecontrolonkeyupevent"></a><a name="onkeyupevent"></a>COleControl：在KeyUpevent上
 
-在处理了股票 KeyDown 事件之后，由框架调用。
+处理股票密钥下事件后由框架调用。
 
 ```
 virtual void OnKeyUpEvent(
@@ -2981,27 +2981,27 @@ virtual void OnKeyUpEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*nChar*<br/>
-按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
+*n查尔*<br/>
+按下密钥的虚拟密钥代码值。 有关标准虚拟密钥代码的列表，请参阅 Winuser.h
 
 *nShiftState*<br/>
 包含以下标志的组合：
 
-- 在操作过程中，SHIFT_MASK 按下 SHIFT 键。
+- SHIFT_MASK在操作过程中按下 SHIFT 键。
 
-- CTRL_MASK 在操作过程中按下了 CTRL 键。
+- CTRL_MASK在操作期间按下了 CTRL 键。
 
-- ALT_MASK 在操作过程中按下了 ALT 键。
+- ALT_MASK在操作过程中按下 ALT 键。
 
 ### <a name="remarks"></a>备注
 
-如果在触发事件后，控件需要访问密钥信息，请重写此函数。
+如果控件需要在触发事件后访问密钥信息，请覆盖此函数。
 
-##  <a name="onmappropertytopage"></a>COleControl：： OnMapPropertyToPage
+## <a name="colecontrolonmappropertytopage"></a><a name="onmappropertytopage"></a>COleControl：在地图属性页
 
-由框架调用，以获取实现了指定属性的编辑的属性页的类 ID。
+由框架调用以获取实现编辑指定属性的属性页的类 ID。
 
 ```
 virtual BOOL OnMapPropertyToPage(
@@ -3010,41 +3010,41 @@ virtual BOOL OnMapPropertyToPage(
     BOOL* pbPageOptional);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*dispid*<br/>
+*不一部分*<br/>
 该控件的属性的调度 ID。
 
 *lpclsid*<br/>
-指向 `CLSID` 结构的指针，通过该结构将返回类 ID。
+指向将返回`CLSID`类 ID 的结构的指针。
 
-*pbPageOptional*<br/>
-返回一个指示符，指示是否使用指定的属性页。
+*pbPage 可选*<br/>
+返回指定属性页的使用是否可选的指示器。
 
 ### <a name="return-value"></a>返回值
 
-如果已在*lpclsid*中返回类 ID，则为非零值;否则为0。
+如果以*lpclsid*中返回类 ID，则非零。否则 0。
 
 ### <a name="remarks"></a>备注
 
-重写此函数以提供一种方法，用于从容器的属性浏览器调用控件的属性页。
+重写此函数，提供从容器的属性浏览器调用控件的属性页的方法。
 
-##  <a name="onmnemonic"></a>COleControl：： OnMnemonic
+## <a name="colecontrolonmnemonic"></a><a name="onmnemonic"></a>COleControl：onMnemonic
 
-当容器已检测到 OLE 控件的助记键已按下时由框架调用。
+当容器检测到已按下 OLE 控件的助记符键时，由框架调用。
 
 ```
 virtual void OnMnemonic(LPMSG pMsg);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pMsg*<br/>
 一个指针，指向由助记键按键操作生成的 Windows 消息。
 
-##  <a name="onproperties"></a>COleControl：： OnProperties
+## <a name="colecontrolonproperties"></a><a name="onproperties"></a>COle 控制：：属性
 
-当容器调用控件的属性谓词时由框架调用。
+当容器调用控件的属性谓词时，由框架调用。
 
 ```
 virtual BOOL OnProperties(
@@ -3053,30 +3053,30 @@ virtual BOOL OnProperties(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpMsg*<br/>
 指向调用谓词的 Windows 消息的指针。
 
-*hWndParent*<br/>
+*hWnd 父母*<br/>
 控件的父窗口的句柄。
 
 *lpRect*<br/>
-指向容器中的控件使用的矩形的指针。
+指向容器中控件使用的矩形的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果调用成功，则为非零值;否则为0。
+如果调用成功，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-默认实现显示 "模式属性" 对话框。
+默认实现显示一个模态属性对话框。
 
-你还可以使用此函数来导致控件的属性页的显示。 调用 `OnProperties` 函数，将控件的父级的句柄传递到*hWndParent*参数。 在这种情况下，将忽略*lpMsg*和*lpRect*参数的值。
+您还可以使用此功能来显示控件的属性页。 调用函数，`OnProperties`在*hWndParent*参数中传递控件父项的句柄。 在这种情况下 *，lpMsg*和*lpRect*参数的值将被忽略。
 
-##  <a name="onqueryhitpoint"></a>COleControl：： OnQueryHitPoint
+## <a name="colecontrolonqueryhitpoint"></a><a name="onqueryhitpoint"></a>COle 控制：在查询命中点
 
-由框架调用，以响应容器的 `IViewObjectEx::QueryHitPoint` 请求。
+框架响应容器`IViewObjectEx::QueryHitPoint`请求调用。
 
 ```
 virtual BOOL OnQueryHitPoint(
@@ -3087,42 +3087,42 @@ virtual BOOL OnQueryHitPoint(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwAspect*<br/>
-指定表示对象的方式。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
+指定对象的表示方式。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
 
 *pRectBounds*<br/>
-指向 `RECT` 结构的指针，该结构指定 OLE 控件客户端区域的边框。
+指向指定`RECT`OLE 控制工作区边界矩形的结构的指针。
 
-*ptlLoc*<br/>
-指向 `POINT` 结构的指针，该结构指定要检查是否命中的点。 在 OLE 工作区坐标中指定该点。
+*普特洛克*<br/>
+指向结构的`POINT`指针，指定要检查的点进行命中。 该点在 OLE 工作区坐标中指定。
 
-*lCloseHint*<br/>
-为检查命中的点定义 "收盘" 的距离。
+*l 关闭提示*<br/>
+定义"接近"到已检查命中点的距离。
 
 *pHitResult*<br/>
 指向命中查询结果的指针。 以下值之一：
 
-- HITRESULT_OUTSIDE *ptlLoc*位于 OLE 对象之外，但未关闭。
+- HITRESULT_OUTSIDE *ptlLoc*位于 OLE 对象外部，不关闭。
 
-- HITRESULT_TRANSPARENT *ptlLoc*位于 OLE 对象的边界内，但不接近图像。 例如，透明圆的中间点可以 HITRESULT_TRANSPARENT。
+- HITRESULT_TRANSPARENT *ptlLoc*在 OLE 对象的边界内，但不靠近图像。 例如，可以HITRESULT_TRANSPARENT透明圆中间的点。
 
-- HITRESULT_CLOSE *ptlLoc*位于 OLE 对象内部或外部，但接近于要在其中被视为的对象。 小型、瘦或详细对象可能会使用此值。 即使某个点位于对象的边框外，它仍可能会关闭（这对于命中小对象是必需的）。
+- HITRESULT_CLOSE *ptlLoc*位于 OLE 对象内部或外部，但足够靠近对象，可考虑内部。 小对象、细对象或详细对象可能会使用此值。 即使某个点位于对象的边界矩形之外，它也可能仍然接近（这是命中小对象所必需的）。
 
-- HITRESULT_HIT *ptlLoc*位于对象的图像内。
+- HITRESULT_HIT *ptlLoc*位于对象的图像中。
 
 ### <a name="return-value"></a>返回值
 
-如果成功返回命中结果，则为非零值;否则为0。 命中与 OLE 控件显示区域重叠。
+成功返回命中结果时非零;否则 0。 命中与 OLE 控制显示区域重叠。
 
 ### <a name="remarks"></a>备注
 
-查询对象的显示矩形是否与给定点重叠（点击点）。 可对 `QueryHitPoint` 进行重写，以对非矩形对象进行命中测试。
+查询对象的显示矩形是否与给定点重叠（点击点）。 `QueryHitPoint`可以重写以测试非矩形对象的命中。
 
-##  <a name="onqueryhitrect"></a>COleControl：： OnQueryHitRect
+## <a name="colecontrolonqueryhitrect"></a><a name="onqueryhitrect"></a>COleControl：在查询中
 
-由框架调用，以响应容器的 `IViewObjectEx::QueryHitRect` 请求。
+框架响应容器`IViewObjectEx::QueryHitRect`请求调用。
 
 ```
 virtual BOOL OnQueryHitRect(
@@ -3133,38 +3133,38 @@ virtual BOOL OnQueryHitRect(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwAspect*<br/>
 指定要如何表示该对象。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
 
 *pRectBounds*<br/>
-指向 `RECT` 结构的指针，该结构指定 OLE 控件客户端区域的边框。
+指向指定`RECT`OLE 控制工作区边界矩形的结构的指针。
 
 *prcLoc*<br/>
-指向 `RECT` 结构的指针，该结构指定要检查是否存在命中的矩形（与对象矩形重叠），相对于对象的左上角。
+指向`RECT`指定要检查的矩形以进行命中（与对象矩形重叠）相对于对象的左上角的指针。
 
-*lCloseHint*<br/>
+*l 关闭提示*<br/>
 未使用。
 
 *pHitResult*<br/>
 指向命中查询结果的指针。 以下值之一：
 
-- OLE 对象不会遇到矩形中的任何点 HITRESULT_OUTSIDE。
+- HITRESULT_OUTSIDE OLE 对象不会命中矩形中的点。
 
-- HITRESULT_HIT 矩形中的至少一个点是对象上的一个点。
+- HITRESULT_HIT矩形中至少有一个点是对象的命中。
 
 ### <a name="return-value"></a>返回值
 
-如果成功返回命中结果，则为非零值;否则为0。
+成功返回命中结果时非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-查询对象的显示矩形是否与给定矩形中的任何点重叠（到达矩形）。 可对 `QueryHitRect` 进行重写，以对非矩形对象进行命中测试。
+查询对象的显示矩形是否与给定矩形中的任何点重叠（点击矩形）。 `QueryHitRect`可以重写以测试非矩形对象的命中。
 
-##  <a name="onrenderdata"></a>COleControl：： OnRenderData
+## <a name="colecontrolonrenderdata"></a><a name="onrenderdata"></a>COle 控制：在渲染数据上
 
-由框架调用以检索指定格式的数据。
+框架调用以检索指定格式的数据。
 
 ```
 virtual BOOL OnRenderData(
@@ -3172,12 +3172,12 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpFormatEtc*<br/>
-指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
+指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息的格式。
 
-*lpStgMedium*<br/>
+*lpStg 中*<br/>
 指向要返回数据的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)结构。
 
 ### <a name="return-value"></a>返回值
@@ -3186,17 +3186,17 @@ virtual BOOL OnRenderData(
 
 ### <a name="remarks"></a>备注
 
-指定的格式是以前使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)成员函数放置在控件对象中用于延迟呈现的格式。 此函数的默认实现分别调用 `OnRenderFileData` 或 `OnRenderGlobalData`（如果提供的存储介质是文件或内存）。 如果请求的格式为 CF_METAFILEPICT 或持久属性集格式，则默认实现将呈现相应的数据并返回非零值。 否则，它将返回0并不执行任何操作。
+指定的格式是以前使用[延迟渲染数据](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[延迟渲染文件](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)成员函数放置在控件对象中的格式，用于延迟渲染。 如果提供的存储介质是文件或`OnRenderFileData`内存`OnRenderGlobalData`，则此函数的默认实现将调用 或 。。" 如果请求的格式CF_METAFILEPICT或持久属性集格式，则默认实现呈现适当的数据并返回非零。 否则，它将返回 0，并且不执行任何操作。
 
-如果 TYMED_NULL *lpStgMedium > tymed* ，则应按*lpFormatEtc-> tymed*指定的方式分配和填充 STGMEDIUM。 如果未 TYMED_NULL，则应将 STGMEDIUM 与数据一起填充。
+如果*lpStg中>tymedTYMED_NULL，* 则STGMEDIUM应按*lpFormatEtc->tymed*指定分配和填充。 如果不TYMED_NULL，则 STGMEDIUM 应随数据一起填充。
 
-重写此函数以按请求的格式和媒体提供数据。 根据您的数据，您可能需要替代此函数的其他版本之一。 如果数据大小较小且固定，请覆盖 `OnRenderGlobalData`。 如果数据位于文件中或大小可变，请覆盖 `OnRenderFileData`。
+重写此函数以请求的格式和介质提供数据。 根据数据的不同，您可能希望重写此函数的其他版本之一。 如果数据较小且大小固定，请重写`OnRenderGlobalData`。 如果数据位于文件中，或者大小可变，请重写`OnRenderFileData`。
 
-有关详细信息，请参阅 Windows SDK 中的 `FORMATETC` 和 `STGMEDIUM` 结构。
+有关详细信息，请参阅 Windows `FORMATETC` SDK`STGMEDIUM`中的 和 结构。
 
-##  <a name="onrenderfiledata"></a>COleControl：： OnRenderFileData
+## <a name="colecontrolonrenderfiledata"></a><a name="onrenderfiledata"></a>COle 控制：在渲染文件数据上
 
-当存储介质为文件时，由框架调用以检索指定格式的数据。
+当存储介质是文件时，框架调用以指定格式检索数据。
 
 ```
 virtual BOOL OnRenderFileData(
@@ -3204,13 +3204,13 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpFormatEtc*<br/>
-指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
+指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息的格式。
 
-*.Pfile*<br/>
-指向要在其中呈现数据的[CFile](../../mfc/reference/cfile-class.md)对象。
+*pFile*<br/>
+指向要呈现数据的[CFile](../../mfc/reference/cfile-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -3218,15 +3218,15 @@ virtual BOOL OnRenderFileData(
 
 ### <a name="remarks"></a>备注
 
-指定的格式是以前在控件对象中放置的格式，它使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成员函数进行延迟渲染。 此函数的默认实现只返回 FALSE。
+指定的格式是以前使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成员函数放置在控件对象中的格式，用于延迟渲染。 此函数的默认实现仅返回 FALSE。
 
-重写此函数以按请求的格式和媒体提供数据。 根据您的数据，您可能希望改为重写此函数的其他版本之一。 如果要处理多个存储媒体，请覆盖 `OnRenderData`。 如果数据位于文件中或大小可变，请覆盖 `OnRenderFileData`。
+重写此函数以请求的格式和介质提供数据。 根据数据的不同，您可能希望重写此函数的其他版本之一。 如果要处理多个存储介质，则重写`OnRenderData`。 如果数据位于文件中，或者大小可变，请重写`OnRenderFileData`。
 
-有关详细信息，请参阅 Windows SDK 中的 `FORMATETC` 结构。
+有关详细信息，请参阅 Windows `FORMATETC` SDK 中的结构。
 
-##  <a name="onrenderglobaldata"></a>COleControl：： OnRenderGlobalData
+## <a name="colecontrolonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COle 控制：在渲染全局数据
 
-当指定的存储介质为全局内存时，由框架调用以检索指定格式的数据。
+当指定的存储介质是全局内存时，框架调用以指定格式检索数据。
 
 ```
 virtual BOOL OnRenderGlobalData(
@@ -3234,13 +3234,13 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpFormatEtc*<br/>
-指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
+指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息的格式。
 
 *phGlobal*<br/>
-指向全局内存的句柄，其中的数据将被返回。 如果未分配内存，则此参数可以为 NULL。
+指向要返回数据的全局内存的句柄。 如果未分配内存，则此参数可以是 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -3248,15 +3248,15 @@ virtual BOOL OnRenderGlobalData(
 
 ### <a name="remarks"></a>备注
 
-指定的格式是以前在控件对象中放置的格式，它使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成员函数进行延迟渲染。 此函数的默认实现只返回 FALSE。
+指定的格式是以前使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)成员函数放置在控件对象中的格式，用于延迟渲染。 此函数的默认实现仅返回 FALSE。
 
-如果*phGlobal*为 NULL，则应在*phGlobal*中分配并返回新的 HGLOBAL。 否则，由*phGlobal*指定的 HGLOBAL 应使用数据进行填充。 放置在 HGLOBAL 中的数据量不能超过内存块的当前大小。 此外，不能将块重新分配到更大的大小。
+如果*phGlobal*为 NULL，则应在 phGLOBAL 中分配并返回新的*HGLOBAL。* 否则 *，phGLOBAL*指定的 HGLOBAL 应填充数据。 放置在 HGLOBAL 中的数据量不得超过内存块的当前大小。 此外，块无法重新分配到更大的大小。
 
-重写此函数以按请求的格式和媒体提供数据。 根据您的数据，您可能需要替代此函数的其他版本之一。 如果要处理多个存储媒体，请覆盖 `OnRenderData`。 如果数据位于文件中或大小可变，请覆盖 `OnRenderFileData`。
+重写此函数以请求的格式和介质提供数据。 根据数据的不同，您可能希望重写此函数的其他版本之一。 如果要处理多个存储介质，则重写`OnRenderData`。 如果数据位于文件中，或者大小可变，请重写`OnRenderFileData`。
 
-有关详细信息，请参阅 Windows SDK 中的 `FORMATETC` 结构。
+有关详细信息，请参阅 Windows `FORMATETC` SDK 中的结构。
 
-##  <a name="onresetstate"></a>COleControl：： OnResetState
+## <a name="colecontrolonresetstate"></a><a name="onresetstate"></a>COle 控制：在重置状态
 
 当控件的属性应设置为其默认值时，由框架调用。
 
@@ -3266,13 +3266,13 @@ virtual void OnResetState();
 
 ### <a name="remarks"></a>备注
 
-默认实现将调用[DoPropExchange](#dopropexchange)，同时传递导致属性设置为其默认值的 `CPropExchange` 对象。
+默认实现称为[DoPropExchange，](#dopropexchange)传递导致`CPropExchange`属性设置为其默认值的对象。
 
-控件编写器可以在此可重写的中插入 OLE 控件的初始化代码。 如果调用了[IPersistStream：： Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load)或[IPersistStorage：： load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load)失败，或者调用[IPersistStreamInit：： InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew)或[IPersistStorage：： InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) ，而无需先调用 `IPersistStream::Load` 或 `IPersistStorage::Load`，则将调用此函数。
+控件编写器可以在此可重写中插入 OLE 控件的初始化代码。 当[IPersistStream：：加载](/windows/win32/api/objidl/nf-objidl-ipersiststream-load)或[I持久存储：加载](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load)失败，或[IPersistStreaminit：：Ininnew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew)或[IpersistStorage：：InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew)调用时，调用此函数`IPersistStream::Load`，`IPersistStorage::Load`无需首先调用或 调用 。
 
-##  <a name="onsetclientsite"></a>COleControl：： OnSetClientSite
+## <a name="colecontrolonsetclientsite"></a><a name="onsetclientsite"></a>COleControl：在设置客户端站点
 
-当容器调用控件的 `IOleControl::SetClientSite` 函数时由框架调用。
+当容器调用控件的`IOleControl::SetClientSite`函数时，由框架调用。
 
 ```
 virtual void OnSetClientSite();
@@ -3280,13 +3280,13 @@ virtual void OnSetClientSite();
 
 ### <a name="remarks"></a>备注
 
-默认情况下，`OnSetClientSite` 会检查是否加载数据路径属性，如果是，则调用 `DoDataPathPropExchange`。
+默认情况下，`OnSetClientSite`检查是否加载数据路径属性，如果是否加载，则调用`DoDataPathPropExchange`。
 
-重写此函数以对此通知执行任何特殊处理。 特别是，此函数的重写应调用基类。
+重写此函数以执行此通知的任何特殊处理。 特别是，此函数的重写应调用基类。
 
-##  <a name="onsetdata"></a>COleControl：： OnSetData
+## <a name="colecontrolonsetdata"></a><a name="onsetdata"></a>COleControl：OnSetData
 
-由框架调用以将控件的数据替换为指定的数据。
+由框架调用以将控件的数据替换为指定数据。
 
 ```
 virtual BOOL OnSetData(
@@ -3295,16 +3295,16 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpFormatEtc*<br/>
-指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构的指针，该结构指定数据的格式。
+指向指定数据格式的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构的指针。
 
-*lpStgMedium*<br/>
+*lpStg 中*<br/>
 指向数据所在的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)结构的指针。
 
-*bRelease*<br/>
-如果控件应释放存储介质，则为 TRUE;如果控件不应释放存储介质，则为 FALSE。
+*b释放*<br/>
+如果控件应释放存储介质，则为 TRUE;如果控件不应释放存储介质，则 FALSE。
 
 ### <a name="return-value"></a>返回值
 
@@ -3312,38 +3312,38 @@ virtual BOOL OnSetData(
 
 ### <a name="remarks"></a>备注
 
-如果数据采用持久性属性集格式，则默认实现会相应地修改控件的状态。 否则，默认实现不执行任何操作。 如果*bRelease*为 TRUE，则对 `ReleaseStgMedium` 调用。否则为。
+如果数据采用持久属性集格式，则默认实现将相应地修改控件的状态。 否则，默认实现不执行任何操作。 如果*bRelease*为 TRUE，则`ReleaseStgMedium`调用 ;否则，不。
 
 重写此函数以将控件的数据替换为指定的数据。
 
-有关详细信息，请参阅 Windows SDK 中的 `FORMATETC` 和 `STGMEDIUM` 结构。
+有关详细信息，请参阅 Windows `FORMATETC` SDK`STGMEDIUM`中的 和 结构。
 
-##  <a name="onsetextent"></a>COleControl：： OnSetExtent
+## <a name="colecontrolonsetextent"></a><a name="onsetextent"></a>COle 控制：在设置范围
 
-当需要更改控件的范围时由框架调用，这是对[IOleObject：： SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent)的调用的结果。
+当需要更改控件的范围时，由于调用[IOleObject：：：set 范围](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent)，则由框架调用。
 
 ```
 virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpSizeL*<br/>
-指向 `SIZEL` 结构的指针，该结构使用长整数表示控件的宽度和高度，以 HIMETRIC 单位表示。
+指向使用长整`SIZEL`数表示控件的宽度和高度的结构的指针，以 HIMETRIC 单位表示。
 
 ### <a name="return-value"></a>返回值
 
-如果接受大小更改，则为非零值;否则为0。
+如果接受大小更改，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-默认实现处理控件范围的大小调整。 如果控件处于就地活动状态，则会对容器的 `OnPosRectChanged` 进行调用。
+默认实现处理控件范围的调整大小。 如果控件处于就地活动状态，则对容器的`OnPosRectChanged`调用。
 
 重写此函数以更改控件的默认大小调整。
 
-##  <a name="onsetobjectrects"></a>COleControl：： OnSetObjectRects
+## <a name="colecontrolonsetobjectrects"></a><a name="onsetobjectrects"></a>COle 控制：OnSetObjectrects
 
-由框架调用以实现对[IOleInPlaceObject：： SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects)的调用。
+由框架调用以实现对[IOleInPlace 对象的调用：：设置对象重新对象](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects)。
 
 ```
 virtual BOOL OnSetObjectRects(
@@ -3351,27 +3351,27 @@ virtual BOOL OnSetObjectRects(
     LPCRECT lpRectClip);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpRectPos*<br/>
-指向 `RECT` 结构的指针，该结构指示控件相对于容器的新位置和大小。
+指向指示控件相对于`RECT`容器的新位置和大小的结构的指针。
 
-*lpRectClip*<br/>
-一个指向 `RECT` 结构的指针，该指针指示控件要剪裁到的矩形区域。
+*lprectClip*<br/>
+指向指示要剪切`RECT`控件的矩形区域的结构的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果已接受重定位，则为非零;否则为0。
+接受重新定位时非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-默认实现会自动处理控件窗口的重定位和调整大小，并返回 TRUE。
+默认实现自动处理控件窗口的重新定位和调整大小，并返回 TRUE。
 
 重写此函数以更改此函数的默认行为。
 
-##  <a name="onshowtoolbars"></a>COleControl：： OnShowToolBars
+## <a name="colecontrolonshowtoolbars"></a><a name="onshowtoolbars"></a>COleControl：：在显示工具栏上
 
-当控件已激活 UI 时由框架调用。
+当控件已激活 UI 时，由框架调用。
 
 ```
 virtual void OnShowToolBars();
@@ -3381,9 +3381,9 @@ virtual void OnShowToolBars();
 
 默认实现不执行任何操作。
 
-##  <a name="ontextchanged"></a>COleControl：： OnTextChanged
+## <a name="colecontrolontextchanged"></a><a name="ontextchanged"></a>COle 控制：在文本上更改
 
-当 stock 标题或文本属性值已更改时由框架调用。
+当股票标题或文本属性值发生更改时，由框架调用。
 
 ```
 virtual void OnTextChanged();
@@ -3391,13 +3391,13 @@ virtual void OnTextChanged();
 
 ### <a name="remarks"></a>备注
 
-默认实现将调用 `InvalidateControl`。
+默认实现调用`InvalidateControl`。
 
-如果希望在此属性更改后发出通知，请重写此函数。
+如果要在此属性更改后通知，则重写此函数。
 
-##  <a name="onwindowlessmessage"></a>COleControl：： OnWindowlessMessage
+## <a name="colecontrolonwindowlessmessage"></a><a name="onwindowlessmessage"></a>COleControl：无窗口消息
 
-由框架调用，以响应容器的 `IOleInPlaceObjectWindowless::OnWindowMessage` 请求。
+框架响应容器`IOleInPlaceObjectWindowless::OnWindowMessage`请求调用。
 
 ```
 virtual BOOL OnWindowlessMessage(
@@ -3407,19 +3407,19 @@ virtual BOOL OnWindowlessMessage(
     LRESULT* plResult);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*缺少*<br/>
-Windows 传递的消息标识符。
+*味精*<br/>
+由 Windows 传递的消息标识符。
 
 *wParam*<br/>
-由 Windows 传递。 指定其他特定于消息的信息。 此参数的内容取决于*msg*参数的值。
+通过 Windows。 指定其他特定于消息的信息。 此参数的内容取决于*msg*参数的值。
 
 *lParam*<br/>
-由 Windows 传递。 指定其他特定于消息的信息。 此参数的内容取决于*msg*参数的值。
+通过 Windows。 指定其他特定于消息的信息。 此参数的内容取决于*msg*参数的值。
 
 *plResult*<br/>
-Windows 结果代码。 指定消息处理的结果，并取决于所发送的消息。
+窗口结果代码。 指定消息处理的结果，并取决于发送的消息。
 
 ### <a name="return-value"></a>返回值
 
@@ -3427,11 +3427,11 @@ Windows 结果代码。 指定消息处理的结果，并取决于所发送的�
 
 ### <a name="remarks"></a>备注
 
-处理无窗口控件的窗口消息。 `COleControl`的 `OnWindowlessMessage` 应用于除鼠标消息和键盘消息以外的窗口消息。 `COleControl` 提供了[SetCapture](#setcapture)和[SetFocus](#setfocus) ，专用于为无窗口 OLE 对象获取鼠标捕获和键盘焦点。
+处理无窗口控件的窗口消息。 `COleControl`应`OnWindowlessMessage`用于鼠标消息和键盘消息以外的窗口消息。 `COleControl`提供[SetCapture](#setcapture)和[SetFocus，](#setfocus)专门用于获取无窗口 OLE 对象的鼠标捕获和键盘焦点。
 
-由于无窗口对象没有窗口，因此它们需要一个机制让容器向它们分派消息。 无窗口 OLE 对象 `OnWindowMessage` 通过 `IOleInPlaceObjectWindowless` 接口（ [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)的扩展支持的扩展）从其容器中获取消息。 `OnWindowMessage` 不采用 `HWND` 参数。
+由于无窗口对象没有窗口，因此它们需要一种机制来让容器向它们发送消息。 无窗口 OLE 对象通过`OnWindowMessage``IOleInPlaceObjectWindowless`接口上的方法（用于无窗口支持的[IOleInPlace 对象的](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)扩展），从其容器获取消息。 `OnWindowMessage`不采用参数`HWND`。
 
-##  <a name="parenttoclient"></a>COleControl：:P arentToClient
+## <a name="colecontrolparenttoclient"></a><a name="parenttoclient"></a>COleControl：:P客户
 
 将*pPoint*的坐标转换为客户端坐标。
 
@@ -3442,74 +3442,74 @@ virtual UINT ParentToClient(
     BOOL bHitTest = FALSE) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lprcBounds*<br/>
-一个指针，指向容器中 OLE 控件的边界。 不是工作区，而是整个控件的区域（包括边框和滚动条）。
+指向容器内 OLE 控件的边界。 不是工作区，而是整个控件的区域，包括边框和滚动条。
 
 *pPoint*<br/>
-指向要转换为控件的工作区坐标的父级（容器）点的指针。
+指向父（容器）点的指针要转换为控件的工作区的坐标。
 
 *bHitTest*<br/>
-指定是否在点上完成命中测试。
+指定是否在点上执行命中测试。
 
 ### <a name="return-value"></a>返回值
 
-如果*bHitTest*为 FALSE，则返回 HTNOWHERE。 如果*bHitTest*为 TRUE，则返回父（容器）点在 OLE 控件的工作区中着陆的位置，它是以下鼠标命中测试值之一：
+如果*bHitTest*是 FALSE，则返回 HTNOWHERE。 如果*bHitTest*为 TRUE，则返回父（容器）点降落在 OLE 控件的工作区的位置，并且是以下鼠标命中测试值之一：
 
-- 不具有大小调整边框的窗口边框中的 HTBORDER。
+- HTBORDER 在没有大小调整边框的窗口的边框中。
 
-- 窗口的下水平边框中的 HTBOTTOM。
+- HTBOTTOM 在窗口的下水平边框中。
 
-- 窗口边框左上角的 HTBOTTOMLEFT。
+- 在窗口边框的左下角。
 
-- 窗口边框右下角的 HTBOTTOMRIGHT。
+- 在窗口边框的右下角。
 
-- 标题栏区域中的 HTCAPTION。
+- 在标题栏区域中。
 
-- 工作区中的 HTCLIENT。
+- 在客户端区域中。
 
-- HTERROR 在屏幕背景上或在窗口之间的分隔线上（与 HTNOWHERE 相同，不同之处在于 `DefWndProc` Windows 函数发出系统提示音，指示错误）。
+- HTERROR 在屏幕背景或窗口之间的分界线上（与 HTNOWHERE 相同，只不过`DefWndProc`Windows 功能发出系统蜂鸣音以指示错误）。
 
-- HTGROWBOX 在 "大小" 框中。
+- 在大小框中。
 
-- 水平滚动条中的 HTHSCROLL。
+- HTHSCROLL 在水平滚动条中。
 
-- 窗口左边框中的 HTLEFT。
+- 在窗口的左侧边框中。
 
-- "最大化" 按钮中的 HTMAXBUTTON。
+- HTMAXBUTTON 在最大化按钮中。
 
-- 菜单区域中的 HTMENU。
+- 在菜单区域中。
 
-- "最小化" 按钮中的 HTMINBUTTON。
+- 在最小化按钮中。
 
-- HTNOWHERE 在屏幕背景上或在窗口之间的分隔线上显示。
+- 在屏幕背景或窗口之间的分界线上。
 
-- "最小化" 按钮中的 HTREDUCE。
+- 在最小化按钮中。
 
-- 窗口右边框中的 HTRIGHT。
+- 在窗口的右侧边框中。
 
-- HTSIZE 在大小框中（与 HTGROWBOX 相同）。
+- 在大小框中（与 HTGROWBOX 相同）。
 
-- HTSYSMENU 在控件菜单或子窗口的 "关闭" 按钮中。
+- 在"控制"菜单中或在子窗口中的"关闭"按钮中。
 
-- 窗口的上水平边框中的 HTTOP。
+- HTTOP 在窗口的上水平边框中。
 
-- 窗口边框左上角的 HTTOPLEFT。
+- 在窗口边框的左上角。
 
-- 窗口边框右上角的 HTTOPRIGHT。
+- 在窗口边框的右上角。
 
-- 当前由另一个窗口覆盖的窗口中的 HTTRANSPARENT。
+- HTOPAQUE 当前由另一个窗口覆盖的窗口。
 
-- 垂直滚动条中的 HTVSCROLL。
+- 垂直滚动栏中的 HTVSCROLL。
 
-- "最大化" 按钮中的 HTZOOM。
+- 在最大化按钮中使用 HTZOOM。
 
 ### <a name="remarks"></a>备注
 
-On input *pPoint*是相对于父级（容器左上角）的原点。 在 output *pPoint*上，相对于 OLE 控件（控件工作区左上角）的工作区的原点。
+在输入*pPoint*上相对于父端的原点（容器的左上角）。 在输出*pPoint*上相对于 OLE 控件的工作区的原点（控件的工作区的左上角）。
 
-##  <a name="postmodaldialog"></a>COleControl：:P ostModalDialog
+## <a name="colecontrolpostmodaldialog"></a><a name="postmodaldialog"></a>COleControl：:P模式对话
 
 通知容器模式对话框已关闭。
 
@@ -3517,33 +3517,33 @@ On input *pPoint*是相对于父级（容器左上角）的原点。 在 output 
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*hWndParent*<br/>
-模式对话框的父窗口的句柄。
+*hWnd 父母*<br/>
+处理模式对话框的父窗口。
 
 ### <a name="remarks"></a>备注
 
-在显示任何模式对话框后调用此函数。 您必须调用此函数，以便容器可以 `PreModalDialog`禁用任何顶级窗口。 应将此函数与对 `PreModalDialog`的调用配对。
+显示任何模式对话框后调用此函数。 必须调用此函数，以便容器可以启用 由`PreModalDialog`禁用的任何顶级窗口。 此函数应与 调用`PreModalDialog`配对。
 
-##  <a name="premodaldialog"></a>COleControl：:P reModalDialog
+## <a name="colecontrolpremodaldialog"></a><a name="premodaldialog"></a>COleControl：:P重新模式对话
 
-通知容器将要显示的模式对话框。
+通知容器即将显示模式对话框。
 
 ```
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*hWndParent*<br/>
-模式对话框的父窗口的句柄。
+*hWnd 父母*<br/>
+处理模式对话框的父窗口。
 
 ### <a name="remarks"></a>备注
 
-在显示任何模式对话框之前调用此函数。 必须调用此函数，使容器能够禁用其所有顶级窗口。 显示模式对话框之后，必须调用 `PostModalDialog`。
+在显示任何模式对话框之前调用此函数。 您必须调用此函数，以便容器可以禁用其所有顶级窗口。 显示模式对话框后，必须调用`PostModalDialog`。
 
-##  <a name="recreatecontrolwindow"></a>COleControl：： RecreateControlWindow
+## <a name="colecontrolrecreatecontrolwindow"></a><a name="recreatecontrolwindow"></a>COle 控制：：重新创建控制窗口
 
 销毁并重新创建控件的窗口。
 
@@ -3553,9 +3553,9 @@ void RecreateControlWindow();
 
 ### <a name="remarks"></a>备注
 
-如果需要更改窗口的样式位，则这可能是必需的。
+如果需要更改窗口的样式位，则可能需要这样做。
 
-##  <a name="refresh"></a>COleControl：： Refresh
+## <a name="colecontrolrefresh"></a><a name="refresh"></a>COle 控制：刷新
 
 强制重新绘制 OLE 控件。
 
@@ -3565,9 +3565,9 @@ void Refresh();
 
 ### <a name="remarks"></a>备注
 
-此函数作为常用方法（称为 Refresh） `COleControl` 基类支持。 这允许 OLE 控件的用户在特定时间重绘控件。 有关此方法的详细信息，请参阅文章[ActiveX 控件：方法](../../mfc/mfc-activex-controls-methods.md)。
+`COleControl`基类支持此功能作为股票方法（称为刷新）。 这允许 OLE 控件的用户在特定时间重新绘制控件。 有关此方法的详细信息，请参阅文章[ActiveX 控件：方法](../../mfc/mfc-activex-controls-methods.md)。
 
-##  <a name="releasecapture"></a>COleControl：： ReleaseCapture
+## <a name="colecontrolreleasecapture"></a><a name="releasecapture"></a>COle 控制：：发布捕获
 
 释放鼠标捕获。
 
@@ -3581,20 +3581,20 @@ BOOL ReleaseCapture();
 
 ### <a name="remarks"></a>备注
 
-如果控件当前具有鼠标捕获，则释放捕获。 否则，此函数将不起作用。
+如果控件当前具有鼠标捕获，则释放捕获。 否则，此函数不起作用。
 
-##  <a name="releasedc"></a>COleControl：： ReleaseDC
+## <a name="colecontrolreleasedc"></a><a name="releasedc"></a>COle 控制：释放DC
 
-释放无窗口控件的容器的显示设备上下文，释放设备上下文以供其他应用程序使用。
+释放无窗口控件容器的显示设备上下文，释放设备上下文供其他应用程序使用。
 
 ```
 int ReleaseDC(CDC* pDC);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
-标识要释放的容器设备上下文。
+标识要发布的容器设备上下文。
 
 ### <a name="return-value"></a>返回值
 
@@ -3602,9 +3602,9 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="remarks"></a>备注
 
-应用程序必须调用[GetDC](#getdc)的每个调用的 `ReleaseDC`。
+应用程序必须调用`ReleaseDC` [GetDC](#getdc)的每个调用。
 
-##  <a name="reparentcontrolwindow"></a>COleControl：： ReparentControlWindow
+## <a name="colecontrolreparentcontrolwindow"></a><a name="reparentcontrolwindow"></a>COle 控制：：重父控制窗口
 
 设置控件的父级。
 
@@ -3614,21 +3614,21 @@ virtual void ReparentControlWindow(
     HWND hWndParent);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*hWndOuter*<br/>
-控件窗口的句柄。
+*hWndouter*<br/>
+控制窗口的句柄。
 
-*hWndParent*<br/>
-新的父窗口的句柄。
+*hWnd 父母*<br/>
+新父窗口的句柄。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可重置控件窗口的父级。
+调用此函数以重置控件窗口的父级。
 
-##  <a name="resetstockprops"></a>COleControl：： ResetStockProps
+## <a name="colecontrolresetstockprops"></a><a name="resetstockprops"></a>COle 控制：：重置库存
 
-将 `COleControl` 股票属性的状态初始化为其默认值。
+将`COleControl`股票属性的状态初始化到其默认值。
 
 ```
 void ResetStockProps();
@@ -3636,15 +3636,15 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>备注
 
-属性包括：外观、背景色、样式栏、标题、已启用、字体、前景色、hWnd 和文本。 有关常用属性的说明，请参阅[ActiveX 控件：添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
+属性包括：外观、背面颜色、边框样式、标题、启用、字体、前颜色、hwnd 和文本。 有关股票属性的说明，请参阅[ActiveX 控件：添加股票属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
 
-您可以通过使用 `ResetStockProps` 和 `ResetVersion` 来覆盖 `COleControl::OnResetState`，提高控件的二进制初始化性能。 请参阅以下示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以使用`ResetStockProps`和`ResetVersion`可以提高控件的二进制初始化性能。 `COleControl::OnResetState` 请参阅以下示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCAxCtl#7](../../mfc/reference/codesnippet/cpp/colecontrol-class_8.cpp)]
 
-##  <a name="resetversion"></a>COleControl：： ResetVersion
+## <a name="colecontrolresetversion"></a><a name="resetversion"></a>COle 控制：重置版本
 
 将版本号初始化为指定值。
 
@@ -3652,18 +3652,18 @@ void ResetStockProps();
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwVersionDefault*<br/>
 要分配给控件的版本号。
 
 ### <a name="remarks"></a>备注
 
-您可以通过使用 `ResetVersion` 和 `ResetStockProps` 来覆盖 `COleControl::OnResetState`，提高控件的二进制初始化性能。 请参阅[ResetStockProps](#resetstockprops)上的示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以使用`ResetVersion`和`ResetStockProps`可以提高控件的二进制初始化性能。 `COleControl::OnResetState` 请参阅[ResetStockProps](#resetstockprops)上的示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
-##  <a name="scrollwindow"></a>COleControl：： ScrollWindow
+## <a name="colecontrolscrollwindow"></a><a name="scrollwindow"></a>COle 控制：滚动窗口
 
-允许无窗口 OLE 对象在屏幕上的就地活动图像中滚动区域。
+允许无窗口 OLE 对象在屏幕上滚动其就地活动图像中的区域。
 
 ```
 void ScrollWindow(
@@ -3673,21 +3673,21 @@ void ScrollWindow(
     LPCRECT lpClipRect = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*xAmount*<br/>
-指定水平滚动的量（以设备单位为单位）。 此参数必须是负值才能滚动到左侧。
+*x数量*<br/>
+指定水平滚动的数量（以设备单位为单位）。 此参数必须是向左滚动的负值。
 
-*yAmount*<br/>
-指定垂直滚动的量（以设备单位为单位）。 此参数必须为负值才能向上滚动。
+*y 数量*<br/>
+指定垂直滚动的数量（以设备单位为单位）。 此参数必须是负值才能向上滚动。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或 RECT 结构，它指定要滚动的 OLE 对象的工作区部分（在包含窗口的工作区坐标中）。 如果*lpRect*为 NULL，则滚动整个 OLE 对象的工作区。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或 RECT 结构，该结构指定 OLE 对象要滚动的工作区部分，位于包含窗口的客户端坐标中。 如果*lpRect*为 NULL，则滚动整个 OLE 对象的工作区。
 
 *lpClipRect*<br/>
-指向一个 `CRect` 对象或 `RECT` 结构，该对象指定要剪裁到的矩形。 仅滚动矩形内的像素。 即使在*lpRect*矩形中，它也不会受到影响。 如果*lpClipRect*为 NULL，则不会对滚动矩形执行任何剪切。
+指向指定`CRect`要剪辑到`RECT`的矩形的对象或结构。 仅滚动矩形内的像素。 矩形外部的位不受影响，即使它们位于*lpRect*矩形中也是如此。 如果*lpClipRect*为 NULL，则滚动矩形上不执行任何剪辑。
 
-##  <a name="selectfontobject"></a>COleControl：： SelectFontObject
+## <a name="colecontrolselectfontobject"></a><a name="selectfontobject"></a>COle 控制：选择字体对象
 
 在设备上下文中选择字体。
 
@@ -3697,36 +3697,36 @@ CFont* SelectFontObject(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
 指向设备上下文对象的指针。
 
-*fontHolder*<br/>
-对[CFontHolder](../../mfc/reference/cfontholder-class.md)对象的引用，该对象表示要选择的字体。
+*字体持有人*<br/>
+引用表示要选择的字体的[CFontHolder](../../mfc/reference/cfontholder-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
-指向先前选定字体的指针。 当调用方完成使用 FontHolder 的所有绘制操作时 *，* 它应通过将以前选择的字体作为参数传递给[CDC：： SelectObject](../../mfc/reference/cdc-class.md#selectobject)来重新选择它。
+指向以前选定的字体的指针。 当调用方完成使用*fontHolder*的所有绘图操作后，应重新选择以前选择的字体，将其作为参数传递给[CDC：：选择对象](../../mfc/reference/cdc-class.md#selectobject)。
 
-##  <a name="selectstockfont"></a>COleControl：： SelectStockFont
+## <a name="colecontrolselectstockfont"></a><a name="selectstockfont"></a>COleControl：选择库存字体
 
-选择 "常用字体" 属性到设备上下文。
+在设备上下文中选择"库存字体"属性。
 
 ```
 CFont* SelectStockFont(CDC* pDC);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
-将选择字体的设备上下文。
+将在其中选择字体的设备上下文。
 
 ### <a name="return-value"></a>返回值
 
-指向前面选定的 `CFont` 对象的指针。 完成后，应使用[CDC：： SelectObject](../../mfc/reference/cdc-class.md#selectobject)将此字体选择回设备上下文。
+指向以前选定的`CFont`对象的指针。 您应该使用[CDC：：选择Object，](../../mfc/reference/cdc-class.md#selectobject)在完成后选择此字体回设备上下文中。
 
-##  <a name="serializeextent"></a>COleControl：： SerializeExtent
+## <a name="colecontrolserializeextent"></a><a name="serializeextent"></a>COle 控制：序列化范围
 
 序列化或初始化分配给控件的显示空间的状态。
 
@@ -3734,39 +3734,39 @@ CFont* SelectStockFont(CDC* pDC);
 void SerializeExtent(CArchive& ar);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ar*<br/>
-要序列化到或从其进行序列化的 `CArchive` 对象。
+要`CArchive`序列化到或从中序列化的对象。
 
 ### <a name="remarks"></a>备注
 
-您可以使用 `SerializeExtent`、`SerializeStockProps`和 `SerializeVersion` 重写 `COleControl::Serialize`来改善控件的二进制持久性性能。 请参阅以下示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以使用`SerializeExtent`和`SerializeStockProps``SerializeVersion`可以提高控件的二进制持久性性能`COleControl::Serialize`， 请参阅以下示例。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCAxCtl#8](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]
 
-##  <a name="serializestockprops"></a>COleControl：： SerializeStockProps
+## <a name="colecontrolserializestockprops"></a><a name="serializestockprops"></a>COle 控制：：序列化库存
 
-序列化或初始化 `COleControl` 股票属性的状态：外观、背景色、样式栏、标题、已启用、字体、前景色和文本。
+序列化或初始化`COleControl`股票属性的状态：外观、背面颜色、边框样式、标题、已启用、字体、前颜色和文本。
 
 ```
 void SerializeStockProps(CArchive& ar);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ar*<br/>
-要序列化到或从其进行序列化的 `CArchive` 对象。
+要`CArchive`序列化到或从中序列化的对象。
 
 ### <a name="remarks"></a>备注
 
-有关常用属性的说明，请参阅[ActiveX 控件：添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
+有关股票属性的说明，请参阅[ActiveX 控件：添加股票属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
 
-您可以使用 `SerializeStockProps`、`SerializeExtent`和 `SerializeVersion` 重写 `COleControl::Serialize`来改善控件的二进制持久性性能。 有关示例，请参阅[SerializeExtent](#serializeextent)中的代码。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以使用`SerializeStockProps`和`SerializeExtent``SerializeVersion`可以提高控件的二进制持久性性能`COleControl::Serialize`， 例如，请参阅[序列化范围](#serializeextent)中的代码。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
-##  <a name="serializeversion"></a>COleControl：： SerializeVersion
+## <a name="colecontrolserializeversion"></a><a name="serializeversion"></a>COle 控制：序列化版本
 
 序列化或初始化控件的版本信息的状态。
 
@@ -3777,79 +3777,79 @@ DWORD SerializeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ar*<br/>
-要序列化到或从其进行序列化的 `CArchive` 对象。
+要`CArchive`序列化到或从中序列化的对象。
 
 *dwVersionDefault*<br/>
 控件的当前版本号。
 
-*bConvert*<br/>
-指示是否应在保存持久性数据时将其转换为最新格式，或以加载时的相同格式进行维护。
+*b转换*<br/>
+指示在保存持久性数据时是否应转换为最新格式，还是以加载时的相同格式进行维护。
 
 ### <a name="return-value"></a>返回值
 
-控件的版本号。 如果正在加载指定的存档，`SerializeVersion` 将返回从该存档加载的版本。 否则，它将返回当前加载的版本。
+控件的版本号。 如果正在加载指定的存档，则`SerializeVersion`返回从该存档加载的版本。 否则，它将返回当前加载的版本。
 
 ### <a name="remarks"></a>备注
 
-您可以使用 `SerializeVersion`、`SerializeExtent`和 `SerializeStockProps` 重写 `COleControl::Serialize`来改善控件的二进制持久性性能。 有关示例，请参阅[SerializeExtent](#serializeextent)中的代码。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
+可以使用`SerializeVersion`和`SerializeExtent``SerializeStockProps`可以提高控件的二进制持久性性能`COleControl::Serialize`， 例如，请参阅[序列化范围](#serializeextent)中的代码。 有关优化初始化的详细信息，请参阅[ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
-##  <a name="setappearance"></a>COleControl：： SetAppearance
+## <a name="colecontrolsetappearance"></a><a name="setappearance"></a>COle 控制：：设置外观
 
-设置控件的 stock 外观属性值。
+设置控件的库存外观属性值。
 
 ```
 void SetAppearance (short sAppearance);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*sAppearance*<br/>
-用于控件外观的**短**（VT_I2）值。 如果值为零，则将控件的外观设置为平面，值为1时，将控件的外观设置为三维。
+*s外观*<br/>
+用于**short**控件外观的简短（VT_I2）值。 值为零将控件的外观设置为平面，值 1 将控件的外观设置为 3D。
 
 ### <a name="remarks"></a>备注
 
-有关常用属性的详细信息，请参阅[ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
+有关股票属性的更多，请参阅[ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
 
-##  <a name="setbackcolor"></a>COleControl：： SetBackColor
+## <a name="colecontrolsetbackcolor"></a><a name="setbackcolor"></a>COle 控制：：设置回颜色
 
-设置控件的常用背景色属性值。
+设置控件的库存回颜色属性值。
 
 ```
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwBackColor*<br/>
-用于控件的背景绘制的 OLE_COLOR 值。
+用于控件的背景绘制的OLE_COLOR值。
 
 ### <a name="remarks"></a>备注
 
-有关使用此属性和其他相关属性的详细信息，请参阅[ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)一文。
+有关使用此属性和其他相关属性的详细信息，请参阅[文章 ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
 
-##  <a name="setborderstyle"></a>COleControl：： SetBorderStyle
+## <a name="colecontrolsetborderstyle"></a><a name="setborderstyle"></a>COle 控制：设置边框样式
 
-设置控件的 stock 样式属性值。
+设置控件的库存 BorderStyle 属性值。
 
 ```
 void SetBorderStyle(short sBorderStyle);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*sBorderStyle*<br/>
-控件的新边框样式;0指示没有边框，1表示普通边框。
+*s边框样式*<br/>
+控件的新边框样式;0 表示没有边框，1 表示正常边框。
 
 ### <a name="remarks"></a>备注
 
-然后，将重新创建并 `OnBorderStyleChanged` 调用控件窗口。
+然后，将重新创建和`OnBorderStyleChanged`调用控制窗口。
 
-##  <a name="setcapture"></a>COleControl：： SetCapture
+## <a name="colecontrolsetcapture"></a><a name="setcapture"></a>COle 控制：设置捕获
 
-导致控件的容器窗口代表控件占据鼠标捕获。
+使控件的容器窗口代表控件获取鼠标捕获。
 
 ```
 CWnd* SetCapture();
@@ -3857,23 +3857,23 @@ CWnd* SetCapture();
 
 ### <a name="return-value"></a>返回值
 
-一个指针，指向先前接收到的鼠标输入 `CWnd` 窗口对象。
+指向以前接收鼠标`CWnd`输入的窗口对象的指针。
 
 ### <a name="remarks"></a>备注
 
-如果控件已激活且无窗口，此函数会导致控件的容器窗口代表鼠标捕获。 否则，此函数会使控件本身占有鼠标捕获（与 `CWnd::SetCapture`相同）。
+如果控件被激活且无窗口，则此函数会导致控件的容器窗口代表控件获取鼠标捕获。 否则，此函数会导致控件本身获取鼠标捕获（与`CWnd::SetCapture`相同）。
 
-##  <a name="setcontrolsize"></a>COleControl：： SetControlSize
+## <a name="colecontrolsetcontrolsize"></a><a name="setcontrolsize"></a>COle 控制：设置控制大小
 
-设置 OLE 控件窗口的大小，并通知容器控件网站正在更改。
+设置 OLE 控制窗口的大小，并通知容器控件站点正在更改。
 
 ```
 BOOL SetControlSize(int cx, int cy);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*cx*<br/>
+*残雪*<br/>
 指定控件的新宽度（以像素为单位）。
 
 *cy*<br/>
@@ -3881,34 +3881,34 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="return-value"></a>返回值
 
-如果调用成功，则为非零值;否则为0。
+如果调用成功，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-不应在控件的构造函数中使用此函数。
+此函数不应在控件的构造函数中使用。
 
-请注意，控件窗口的所有坐标都是相对于控件的左上角的。
+请注意，控件窗口的所有坐标都相对于控件的左上角。
 
-##  <a name="setenabled"></a>COleControl：： SetEnabled
+## <a name="colecontrolsetenabled"></a><a name="setenabled"></a>COle 控制：已启用
 
-设置控件的 "启用了股票" 的属性值。
+设置控件的"已启用"属性值。
 
 ```
 void SetEnabled(BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*bEnabled*<br/>
-如果要启用该控件，则为 TRUE;否则为 FALSE。
+*b 启用*<br/>
+如果要启用控件，则为 TRUE;如果要启用该控件，则为 TRUE。否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-设置此属性后，将调用 `OnEnabledChange`。
+设置此属性后，`OnEnabledChange`将调用。
 
-##  <a name="setfocus"></a>COleControl：： SetFocus
+## <a name="colecontrolsetfocus"></a><a name="setfocus"></a>COle 控制：设置焦点
 
-导致控件的容器窗口代表控件拥有输入焦点。
+使控件的容器窗口以控件的名义占用输入焦点。
 
 ```
 CWnd* SetFocus();
@@ -3916,45 +3916,45 @@ CWnd* SetFocus();
 
 ### <a name="return-value"></a>返回值
 
-指向之前具有输入焦点的 `CWnd` 窗口对象的指针; 如果没有此类窗口，则为 NULL。
+指向以前具有输入`CWnd`焦点的窗口对象的指针，如果没有这样的窗口，则指向 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果控件已激活且无窗口，此函数会使控件的容器窗口代表控件上的输入焦点。 输入焦点会将键盘输入定向到容器的窗口，容器会将所有后续键盘消息调度到调用 `SetFocus`的 OLE 对象。 之前有输入焦点的任何窗口都将丢失它。
+如果控件被激活且无窗口，则此函数会导致控件的容器窗口以控件的名义获取输入焦点。 输入焦点将键盘输入定向到容器的窗口，容器将所有后续的键盘消息调度到调用`SetFocus`的 OLE 对象。 以前具有输入焦点的任何窗口都丢失它。
 
-如果控件不是无窗口的，则此函数会使控件本身拥有输入焦点（与 `CWnd::SetFocus`相同）。
+如果控件不是无窗口的，则此函数会导致控件本身占用输入焦点（与`CWnd::SetFocus`相同）。
 
-##  <a name="setfont"></a>COleControl：： SetFont
+## <a name="colecontrolsetfont"></a><a name="setfont"></a>COle 控制：：设置字体
 
-设置控件的常用字体属性。
+设置控件的库存字体属性。
 
 ```
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pFontDisp*<br/>
-指向字体调度接口的指针。
+指向字体调度界面的指针。
 
-##  <a name="setforecolor"></a>COleControl：： SetForeColor
+## <a name="colecontrolsetforecolor"></a><a name="setforecolor"></a>COleControl：设置福彩
 
-设置控件的 "股票前景色" 属性值。
+设置控件的库存 ForeColor 属性值。
 
 ```
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwForeColor*<br/>
-用于控件的前景绘图的 OLE_COLOR 值。
+用于控件的前景绘图的OLE_COLOR值。
 
 ### <a name="remarks"></a>备注
 
-有关使用此属性和其他相关属性的详细信息，请参阅[ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)一文。
+有关使用此属性和其他相关属性的详细信息，请参阅[文章 ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
 
-##  <a name="setinitialdataformats"></a>COleControl：： SetInitialDataFormats
+## <a name="colecontrolsetinitialdataformats"></a><a name="setinitialdataformats"></a>COleControl：设置初始数据格式
 
 由框架调用以初始化控件支持的数据格式列表。
 
@@ -3964,11 +3964,11 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>备注
 
-默认实现指定两种格式： CF_METAFILEPICT 和持久性属性集。
+默认实现指定两种格式：CF_METAFILEPICT 和持久属性集。
 
-##  <a name="setinitialsize"></a>COleControl：： SetInitialSize
+## <a name="colecontrolsetinitialsize"></a><a name="setinitialsize"></a>COle 控制：设置初始大小
 
-设置 OLE 控件第一次在容器中显示时的大小。
+设置首次显示在容器中的 OLE 控件的大小。
 
 ```
 void SetInitialSize(
@@ -3976,9 +3976,9 @@ void SetInitialSize(
     int cy);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*cx*<br/>
+*残雪*<br/>
 OLE 控件的初始宽度（以像素为单位）。
 
 *cy*<br/>
@@ -3986,26 +3986,26 @@ OLE 控件的初始高度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-在构造函数中调用此函数可设置控件的初始大小。 初始大小以设备单位或像素为单位。 建议在控件的构造函数中进行此调用。
+在构造函数中调用此函数以设置控件的初始大小。 初始大小以设备单位或像素为单位进行测量。 建议在控件的构造函数中进行此调用。
 
-##  <a name="setmodifiedflag"></a>COleControl：： SetModifiedFlag
+## <a name="colecontrolsetmodifiedflag"></a><a name="setmodifiedflag"></a>COle 控制：设置已修改的标记
 
-更改控件的修改状态。
+更改控件的已修改状态。
 
 ```
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*bModified*<br/>
-控件的已修改标志的新值。 如果为 TRUE，则表示已修改控件的状态;FALSE 指示控件的状态刚刚保存。
+*b 修改*<br/>
+控件已修改标志的新值。 TRUE 表示控件的状态已被修改;FALSE 表示控件的状态刚刚保存。
 
 ### <a name="remarks"></a>备注
 
-每当发生会影响控件持久状态的更改时调用此函数。 例如，如果永久性属性的值发生更改，则使用*bModified* **TRUE**调用此函数。
+每当发生会影响控件的持久状态的更改时，请调用此函数。 例如，如果持久属性的值发生更改，请用 b 修改*bModified***TRUE**调用此函数。
 
-##  <a name="setnotpermitted"></a>COleControl：： SetNotPermitted
+## <a name="colecontrolsetnotpermitted"></a><a name="setnotpermitted"></a>COle 控制：设置不允许
 
 指示编辑请求失败。
 
@@ -4015,9 +4015,9 @@ void SetNotPermitted();
 
 ### <a name="remarks"></a>备注
 
-如果 `BoundPropertyRequestEdit` 失败，请调用此函数。 此函数引发类型 `COleDispScodeException` 的异常，以指示不允许设置操作。
+发生故障时`BoundPropertyRequestEdit`调用此函数。 此函数将引发类型`COleDispScodeException`异常，以指示不允许设置操作。
 
-##  <a name="setnotsupported"></a>COleControl：： SetNotSupported
+## <a name="colecontrolsetnotsupported"></a><a name="setnotsupported"></a>COle 控制：设置不支持
 
 防止用户修改控件的属性值。
 
@@ -4027,9 +4027,9 @@ void SetNotSupported();
 
 ### <a name="remarks"></a>备注
 
-调用此函数以代替任何属性的 Set 函数，但不支持对控件的用户修改属性值。 一个示例是只读属性。
+调用此函数以代替不支持控件用户修改属性值的任何属性的 Set 函数。 例如，一个属性是只读的。
 
-##  <a name="setrectincontainer"></a>COleControl：： SetRectInContainer
+## <a name="colecontrolsetrectincontainer"></a><a name="setrectincontainer"></a>COle 控制：setrectin 容器
 
 设置控件矩形相对于容器的坐标，以设备单位表示。
 
@@ -4037,37 +4037,37 @@ void SetNotSupported();
 BOOL SetRectInContainer(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向一个矩形的指针，该矩形包含控件的新坐标（相对于容器）。
+指向包含控件相对于容器的新坐标的矩形的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果调用成功，则为非零值;否则为0。
+如果调用成功，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果控件处于打开状态，则调整其大小;否则，将调用容器的 `OnPosRectChanged` 函数。
+如果控件处于打开状态，则调整控件的大小;如果控件处于打开状态，则调整控件的大小。否则将调用容器的功能`OnPosRectChanged`。
 
-##  <a name="settext"></a>COleControl：： SetText
+## <a name="colecontrolsettext"></a><a name="settext"></a>COle 控制：设置文本
 
-设置控件的常用标题或文本属性的值。
+设置控件的库存标题或文本属性的值。
 
 ```
 void SetText(LPCTSTR pszText);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pszText*<br/>
 指向字符串的指针。
 
 ### <a name="remarks"></a>备注
 
-请注意，stock 标题和文本属性都映射到相同的值。 这意味着对任一属性所做的任何更改都将自动更改这两种属性。 通常，控件应支持 stock 标题或文本属性，但不能同时支持两者。
+请注意，股票标题和文本属性都映射到相同的值。 这意味着对任一属性所做的任何更改都将自动更改这两个属性。 通常，控件应支持股票标题或文本属性，但不能同时支持这两者。
 
-##  <a name="throwerror"></a>COleControl：： ThrowError
+## <a name="colecontrolthrowerror"></a><a name="throwerror"></a>COle 控制：：投掷错误
 
 指示控件中出现错误。
 
@@ -4083,27 +4083,27 @@ void ThrowError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*sc*<br/>
-要报告的状态代码值。 有关可能代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
+*Sc*<br/>
+要报告的状态代码值。 有关可能代码的完整列表，请参阅["ActiveX 控件：高级主题"一](../../mfc/mfc-activex-controls-advanced-topics.md)文。
 
-*nDescriptionID*<br/>
+*n 描述ID*<br/>
 要报告的异常的字符串资源 ID。
 
 *nHelpID*<br/>
 要报告的主题的帮助 ID。
 
-*pszDescription*<br/>
-一个字符串，其中包含要报告的异常的说明。
+*psz描述*<br/>
+包含要报告的异常的解释的字符串。
 
 ### <a name="remarks"></a>备注
 
-只应从 OLE 属性的 Get 或 Set 函数中调用此函数，或者从 OLE 自动化方法的实现中调用此函数。 如果需要发出其他时间发生的信号错误，应激发 stock 错误事件。
+此函数应仅从 OLE 属性的 Get 或 Set 函数中调用，或实现 OLE 自动化方法。 如果需要发出其他时间发生的错误信号，则应触发库存错误事件。
 
-##  <a name="transformcoords"></a>COleControl：： TransformCoords
+## <a name="colecontroltransformcoords"></a><a name="transformcoords"></a>COle 控制：转换库德
 
-转换 HIMETRIC 单元与容器的本机单位之间的坐标值。
+变换 HIMETRIC 单位和容器的本机单位之间的坐标值。
 
 ```
 void TransformCoords(
@@ -4112,32 +4112,32 @@ void TransformCoords(
     DWORD flags);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpptlHimetric*<br/>
-指向 `POINTL` 结构的指针，该结构包含 HIMETRIC 单位中的坐标。
+指向包含`POINTL`HIMETRIC 单位坐标的结构的指针。
 
-*lpptfContainer*<br/>
-指向 `POINTF` 结构的指针，该结构包含容器的单元大小的坐标。
+*lpptf 容器*<br/>
+指向`POINTF`容器单位大小中包含坐标的结构的指针。
 
-*flag*<br/>
+*标志*<br/>
 以下值的组合：
 
-- XFORMCOORDS_POSITION 容器中的位置。
+- XFORMCOORDS_POSITION容器中的位置。
 
 - XFORMCOORDS_SIZE 容器中的大小。
 
-- XFORMCOORDS_HIMETRICTOCONTAINER 将 HIMETRIC 单位转换为容器的单位。
+- XFORMCOORDS_HIMETRICTOCONTAINER将 HIMETRIC 单元转换为容器的单位。
 
-- XFORMCOORDS_CONTAINERTOHIMETRIC 将容器的单位转换为 HIMETRIC 单元。
+- XFORMCOORDS_CONTAINERTOHIMETRIC将容器的单位转换为 HIMETRIC 单位。
 
 ### <a name="remarks"></a>备注
 
-前两个标志 "XFORMCOORDS_POSITION" 和 "XFORMCOORDS_SIZE" 指示是否应将坐标视为位置或大小。 其余两个标志指示转换的方向。
+前两个标志（XFORMCOORDS_POSITION和XFORMCOORDS_SIZE）指示坐标是否应被视为位置或大小。 其余两个标志指示转换方向。
 
-##  <a name="translatecolor"></a>COleControl：： TranslateColor
+## <a name="colecontroltranslatecolor"></a><a name="translatecolor"></a>COleControl：翻译颜色
 
-将 OLE_COLOR 数据类型的颜色值转换为[COLORREF](/windows/win32/gdi/colorref)数据类型。
+将颜色值从OLE_COLOR数据类型转换为[COLORREF](/windows/win32/gdi/colorref)数据类型。
 
 ```
 COLORREF TranslateColor(
@@ -4145,25 +4145,25 @@ COLORREF TranslateColor(
     HPALETTE hpal = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *clrColor*<br/>
-一个 OLE_COLOR 数据类型。 有关详细信息，请参阅 Windows [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor)函数。
+OLE_COLOR数据类型。 有关详细信息，请参阅 Windows [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor)功能。
 
-*hpal*<br/>
-可选调色板的句柄;可以为 NULL。
+*赫帕尔*<br/>
+可选调色板的句柄;可以是 NULL。
 
 ### <a name="return-value"></a>返回值
 
-RGB （红、绿、蓝）32位颜色值，用于定义与设备可表示的*clrColor*值最接近的纯色。
+RGB（红色、绿色、蓝色）32 位颜色值，用于定义最接近设备可以表示的*clrColor*值的纯色。
 
 ### <a name="remarks"></a>备注
 
-此函数可用于将库存前景色和背景色属性转换为[CDC](../../mfc/reference/cdc-class.md)成员函数使用的 COLORREF 类型。
+此功能可用于将库存 ForeColor 和 BackColor 属性转换为[CDC](../../mfc/reference/cdc-class.md)成员函数使用的 COLORREF 类型。
 
-##  <a name="willambientsbevalidduringload"></a>COleControl：： WillAmbientsBeValidDuringLoad
+## <a name="colecontrolwillambientsbevalidduringload"></a><a name="willambientsbevalidduringload"></a>COle 控制：在加载期间，环境将有效
 
-确定控件是否应使用环境属性的值作为默认值（当它随后从其持久性状态加载时）。
+确定控件是否应使用环境属性的值作为默认值，当它随后从其持久状态加载时。
 
 ```
 BOOL WillAmbientsBeValidDuringLoad();
@@ -4171,15 +4171,15 @@ BOOL WillAmbientsBeValidDuringLoad();
 
 ### <a name="return-value"></a>返回值
 
-非零表示环境属性将有效;否则，环境属性将无效。
+非零表示环境属性将有效;因此，表示环境属性将有效。否则环境属性将无效。
 
 ### <a name="remarks"></a>备注
 
-在某些容器中，在首次调用 `COleControl::DoPropExchange`的重写过程中，控件可能无法访问其环境属性。 如果容器在调用[IOleObject：： SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite)之前调用[IPersistStreamInit：： load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load)或[IPersistStorage：： load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) ，就会出现这种情况（即，如果它不服从 OLEMISC_SETCLIENTSITEFIRST 状态位）。
+在某些容器中，控件在初始调用`COleControl::DoPropExchange`重写 期间可能无法访问其环境属性。 如果容器调用[IPersistStreamInit：：加载](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load)或[IPersistStorage：：在](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load)调用[IOleObject：：setClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite)之前加载（即，如果它不符合OLEMISC_SETCLIENTSITEFIRST状态位），则属于这种情况。
 
-##  <a name="windowproc"></a>COleControl：： WindowProc
+## <a name="colecontrolwindowproc"></a><a name="windowproc"></a>COle 控制：：窗口 Proc
 
-为 `COleControl` 对象提供 Windows 过程。
+为`COleControl`对象提供 Windows 过程。
 
 ```
 virtual LRESULT WindowProc(
@@ -4188,31 +4188,31 @@ virtual LRESULT WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-message<br/>
+*消息*<br/>
 指定要处理的 Windows 消息。
 
 *wParam*<br/>
-提供处理消息时使用的其他信息。 参数值取决于消息。
+提供用于处理消息的其他信息。 参数值取决于消息。
 
 *lParam*<br/>
-提供处理消息时使用的其他信息。 参数值取决于消息。
+提供用于处理消息的其他信息。 参数值取决于消息。
 
 ### <a name="return-value"></a>返回值
 
-已调度消息的返回值。
+调度消息的返回值。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可通过控件的消息映射调度特定消息。
+调用此函数通过控件的消息映射调度特定消息。
 
 ## <a name="see-also"></a>另请参阅
 
-[MFC 示例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
-[MFC 示例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>
-[COlePropertyPage 类](../../mfc/reference/colepropertypage-class.md)<br/>
+[MFC 样品 CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品测试](../../overview/visual-cpp-samples.md)<br/>
+[COle属性页类](../../mfc/reference/colepropertypage-class.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CFontHolder 类](../../mfc/reference/cfontholder-class.md)<br/>
 [CPictureHolder 类](../../mfc/reference/cpictureholder-class.md)<br/>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365680"
 ---
 # <a name="vprintf-functions"></a>vprintf 函数
 
@@ -46,50 +46,50 @@ ms.locfileid: "70957239"
 
 |函数|对应函数|输出目标|参数验证|位置参数支持|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|控制台|检查是否为 NULL。|否|
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|控制台|检查是否为 NULL。|否|
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|检查是否为 NULL。|否|
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|检查是否为 NULL。|否|
 |`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*流*|检查是否为 NULL。|否|
-|vfprintf_p |[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|是|
+|vfprintf_p****|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|是|
 |`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|否|
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|流 |检查是否为 NULL。|否|
-|vfwprintf_p |[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|是|
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*流*|检查是否为 NULL。|否|
+|vfwprintf_p****|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|是|
 |`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|否|
 |`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|检查是否为 NULL。|否|
-|vprintf_p |[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|检查是否为 NULL 以及格式是否有效。|是|
+|**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|检查是否为 NULL 以及格式是否有效。|是|
 |`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|检查是否为 NULL 以及格式是否有效。|否|
-|`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|检查是否为 NULL。|no|
-|vwprintf_p |[wprintf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|检查是否为 NULL 以及格式是否有效。|是|
+|`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|检查是否为 NULL。|否|
+|vwprintf_p****|[wprintf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|检查是否为 NULL 以及格式是否有效。|是|
 |`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|检查是否为 NULL 以及格式是否有效。|否|
-|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|buffer  指向的内存|检查是否为 NULL。|否|
-|vsprintf_p |[sprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|buffer  指向的内存|检查是否为 NULL 以及格式是否有效。|是|
-|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|buffer  指向的内存|检查是否为 NULL 以及格式是否有效。|否|
-|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|buffer  指向的内存|检查是否为 NULL。|否|
-|vswprintf_p |[swprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|buffer  指向的内存|检查是否为 NULL 以及格式是否有效。|是|
-|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|buffer  指向的内存|检查是否为 NULL 以及格式是否有效。|否|
-|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|buffer  指向的内存|检查是否为 NULL。|否|
-|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|buffer  指向的内存|检查是否为 NULL。|否|
-|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|buffer  指向的内存|检查是否为 NULL。|否|
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|buffer  指向的内存|检查是否为 NULL。|否|
+|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|buffer ** 指向的内存|检查是否为 NULL。|否|
+|**vsprintf_p**|[sprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|buffer ** 指向的内存|检查是否为 NULL 以及格式是否有效。|是|
+|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|buffer ** 指向的内存|检查是否为 NULL 以及格式是否有效。|否|
+|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|buffer ** 指向的内存|检查是否为 NULL。|否|
+|**vswprintf_p**|[swprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|buffer ** 指向的内存|检查是否为 NULL 以及格式是否有效。|是|
+|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|buffer ** 指向的内存|检查是否为 NULL 以及格式是否有效。|否|
+|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|buffer ** 指向的内存|检查是否为 NULL。|否|
+|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|buffer ** 指向的内存|检查是否为 NULL。|否|
+|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|buffer ** 指向的内存|检查是否为 NULL。|否|
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|buffer ** 指向的内存|检查是否为 NULL。|否|
 
-`argptr` 参数的类型为 `va_list`，它在 VARARGS.H 和 STDARG.H 中定义。 `argptr` 变量必须由 va_start  初始化，并可由后续的 `va_arg` 调用重新初始化；然后 `argptr` 指向根据 format  参数中的相应规范转换和传输以用于输出的参数列表的开头。 format  具有与 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 的 format  参数相同的形式和函数。 这些函数均不会调用 `va_end`。 有关每个 `vprintf` 函数的更完整的说明，请参阅前面表中列出的其对应函数的说明。
+`argptr` 参数的类型为 `va_list`，它在 VARARGS.H 和 STDARG.H 中定义。 `argptr` 变量必须由 va_start**** 初始化，并可由后续的 `va_arg` 调用重新初始化；然后 `argptr` 指向根据 format ** 参数中的相应规范转换和传输以用于输出的参数列表的开头。 format ** 具有与 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 的 format ** 参数相同的形式和函数。 这些函数均不会调用 `va_end`。 有关每个 `vprintf` 函数的更完整的说明，请参阅前面表中列出的其对应函数的说明。
 
-`_vsnprintf` 与 vsprintf  的不同之处在于，前者写入 buffer  的内容不超过 count  字节。
+`_vsnprintf` 与 vsprintf **** 的不同之处在于，前者写入 buffer ** 的内容不超过 count ** 字节。
 
-名称中带有 w  中缀的这些函数的版本是不带 w  中缀的相应函数的宽字符版本；在其中每个宽字符函数中，buffer  和 format  是宽字符字符串。 否则，每个宽字符函数的行为会与其 SBCS 对应函数相同。
+名称中带有 w **** 中缀的这些函数的版本是不带 w **** 中缀的相应函数的宽字符版本；在其中每个宽字符函数中，buffer ** 和 format ** 是宽字符字符串。 否则，每个宽字符函数的行为会与其 SBCS 对应函数相同。
 
-具有 _s  和 _p  后缀的这些函数的版本是更安全的版本。 这些版本验证格式字符串，如果格式字符串格式不正确（例如，使用无效的格式化字符的情况），这些版本会生成异常。
+具有 _s **** 和 _p **** 后缀的这些函数的版本是更安全的版本。 这些版本验证格式字符串，如果格式字符串格式不正确（例如，使用无效的格式化字符的情况），这些版本会生成异常。
 
-具有 _p  后缀的这些函数的版本提供指定所提供的参数在格式字符串中替换的顺序的功能。 有关详细信息，请参阅 [printf_p 位置参数](../c-runtime-library/printf-p-positional-parameters.md)。
+具有 _p **** 后缀的这些函数的版本提供指定所提供的参数在格式字符串中替换的顺序的功能。 有关详细信息，请参阅 [printf_p 位置参数](../c-runtime-library/printf-p-positional-parameters.md)。
 
-对于 vsprintf  、`vswprintf`、`_vsnprintf` 和 `_vsnwprintf`，如果在重叠的字符串之间发生复制，则此行为不确定。
+对于**vsprintf** `_vsnprintf` ，`_vsnwprintf``vswprintf`和 ， 如果在重叠的字符串之间发生复制， 行为未定义。
 
 > [!IMPORTANT]
->  确保 format  不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。 如果使用这些函数的安全版本（_s  或 _p  后缀），如果用户提供的字符串包含无效的格式化字符，则用户提供的格式字符串可能会触发无效参数异常。
+> 确保 format ** 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。 如果使用这些函数的安全版本（_s **** 或 _p **** 后缀），如果用户提供的字符串包含无效的格式化字符，则用户提供的格式字符串可能会触发无效参数异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../c-runtime-library/stream-i-o.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[冲刺， _sprintf_l， 瑞典， _swprintf_l， \__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

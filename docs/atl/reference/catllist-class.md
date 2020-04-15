@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318930"
 ---
 # <a name="catllist-class"></a>CAtlList 类
 
@@ -60,72 +60,72 @@ class CAtlList
 *E*<br/>
 元素类型。
 
-*ETraits*<br/>
-用于复制或移动元素的代码。 请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)的更多详细信息。
+*埃特格*<br/>
+用于复制或移动元素的代码。 有关详细信息[，请参阅 CElementTraits 类](../../atl/reference/celementtraits-class.md)。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlList::INARGTYPE](#inargtype)||
+|[列表：：INARGTYPE](#inargtype)||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlList::CAtlList](#catllist)|构造函数。|
-|[CAtlList::~CAtlList](#dtor)|析构函数。|
+|[CAtlList：CAtlList](#catllist)|构造函数。|
+|[CAtlList：_CAtlList](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlList::AddHead](#addhead)|调用此方法以将元素添加到了列表的开头。|
-|[CAtlList::AddHeadList](#addheadlist)|调用此方法将现有的列表添加到了列表的开头。|
-|[CAtlList::AddTail](#addtail)|调用此方法以将元素添加到此列表的末尾。|
-|[CAtlList::AddTailList](#addtaillist)|调用此方法将现有的列表添加到此列表的结尾。|
-|[CAtlList::AssertValid](#assertvalid)|调用此方法以确认该列表有效。|
-|[CAtlList::Find](#find)|调用此方法搜索指定的元素的列表。|
-|[CAtlList::FindIndex](#findindex)|调用此方法以获取给定的索引值的元素的位置。|
-|[CAtlList::GetAt](#getat)|调用此方法以返回列表中指定位置处的元素。|
-|[CAtlList::GetCount](#getcount)|调用此方法以在列表中返回的对象数。|
-|[CAtlList::GetHead](#gethead)|调用此方法以返回了列表的开头处的元素。|
-|[CAtlList::GetHeadPosition](#getheadposition)|调用此方法来获得了列表的开头的位置。|
-|[CAtlList::GetNext](#getnext)|调用此方法以从列表中返回的下一个元素。|
-|[CAtlList::GetPrev](#getprev)|调用此方法以从列表中返回上一个元素。|
-|[CAtlList::GetTail](#gettail)|调用此方法以返回列表的结尾处的元素。|
-|[CAtlList::GetTailPosition](#gettailposition)|调用此方法以获取列表的尾数据的位置。|
-|[CAtlList::InsertAfter](#insertafter)|调用此方法来指定位置之后的新元素插入到列表。|
-|[CAtlList::InsertBefore](#insertbefore)|调用此方法以将新元素插入到前面的指定位置的列表。|
-|[CAtlList::IsEmpty](#isempty)|调用此方法以确定列表是否为空。|
-|[CAtlList::MoveToHead](#movetohead)|调用此方法将指定的元素移动到了列表的开头。|
-|[CAtlList::MoveToTail](#movetotail)|调用此方法将指定的元素移动到列表的结尾。|
-|[CAtlList::RemoveAll](#removeall)|调用此方法以从列表中删除的所有元素。|
-|[CAtlList::RemoveAt](#removeat)|调用此方法以从列表中删除单个元素。|
-|[CAtlList::RemoveHead](#removehead)|调用此方法来删除了列表的开头处的元素。|
-|[CAtlList::RemoveHeadNoReturn](#removeheadnoreturn)|调用此方法不返回值中删除了列表的开头处的元素。|
-|[CAtlList::RemoveTail](#removetail)|调用此方法来删除列表的结尾处的元素。|
-|[CAtlList::RemoveTailNoReturn](#removetailnoreturn)|调用此方法来删除而不返回值的列表的结尾处的元素。|
-|[CAtlList::SetAt](#setat)|调用此方法以在列表中的给定位置设置元素的值。|
-|[CAtlList::SwapElements](#swapelements)|调用此方法来交换列表中的元素。|
+|[CAtlList：：添加头](#addhead)|调用此方法以向列表的头部添加元素。|
+|[CAtlList：：添加头列表](#addheadlist)|调用此方法以将现有列表添加到列表的头部。|
+|[CAtlList：：添加尾](#addtail)|调用此方法以将元素添加到此列表的尾部。|
+|[CAtlList：：添加尾号](#addtaillist)|调用此方法以将现有列表添加到此列表的尾部。|
+|[CAtlList：：断言有效](#assertvalid)|调用此方法以确认列表有效。|
+|[CAtlList：查找](#find)|调用此方法以搜索指定元素的列表。|
+|[CAtlList：查找索引](#findindex)|调用此方法以获取元素的位置，给定索引值。|
+|[CAtlList：GetAt](#getat)|调用此方法以返回列表中指定位置的元素。|
+|[CAtlList：获取计数](#getcount)|调用此方法以返回列表中的对象数。|
+|[CAtlList：获取头](#gethead)|调用此方法以返回列表头的元素。|
+|[CAtlList：获取头位置](#getheadposition)|调用此方法以获取列表头的位置。|
+|[CAtlList：获取下一个](#getnext)|调用此方法以从列表中返回下一个元素。|
+|[CAtlList：GetPrev](#getprev)|调用此方法以从列表中返回以前的元素。|
+|[CAtlList：GetTail](#gettail)|调用此方法以返回列表尾部的元素。|
+|[CAtlList：获取尾部位置](#gettailposition)|调用此方法以获取列表尾部的位置。|
+|[CAtlList：插入后](#insertafter)|调用此方法以在指定位置后将新元素插入列表中。|
+|[CAtlList：：插入之前](#insertbefore)|调用此方法在指定位置之前将新元素插入列表中。|
+|[CAtlList：：空](#isempty)|调用此方法以确定列表是否为空。|
+|[Catllist：：移动头](#movetohead)|调用此方法将指定元素移动到列表的头部。|
+|[Catllist：：移动到尾](#movetotail)|调用此方法将指定元素移动到列表的尾部。|
+|[CAtlList：：删除所有](#removeall)|调用此方法以从列表中删除所有元素。|
+|[CAtlList：：删除At](#removeat)|调用此方法从列表中删除单个元素。|
+|[CAtlList：：删除头](#removehead)|调用此方法以删除列表头的元素。|
+|[CAtlList：：删除头无返回](#removeheadnoreturn)|调用此方法以删除列表头的元素，而不返回值。|
+|[CAtlList：：删除尾](#removetail)|调用此方法以删除列表尾部的元素。|
+|[CAtllist：：删除尾号不返回](#removetailnoreturn)|调用此方法以删除列表尾部的元素，而不返回值。|
+|[CAtlList：：Setat](#setat)|调用此方法以在列表中的给定位置设置元素的值。|
+|[CAtlList：：交换元素](#swapelements)|调用此方法以交换列表中的元素。|
 
 ## <a name="remarks"></a>备注
 
-`CAtlList`类有序列表的唯一，则对象可访问，按顺序或值的支持。 `CAtlList` 列表类似于双向链接列表。 每个列表具有头和尾，并可以添加到列表中，任一端或之前或之后的特定元素插入新元素 （或在某些情况下的列表）。
+该`CAtlList`类支持按顺序或按值访问的非唯一对象的有序列表。 `CAtlList`列表类似于双重链接列表。 每个列表都有一个头和一个尾，新元素（或在某些情况下的列表）可以添加到列表的任一端，或插入特定元素之前或之后。
 
-大多数的`CAtlList`方法进行使用的位置值。 此值的方法用于引用其中元素存储，并且不应计算或直接预测的实际内存位置。 如有必要访问*n*个元素，以在列表中，该方法[CAtlList::FindIndex](#findindex)将返回给定索引的相应位置值。 方法[CAtlList::GetNext](#getnext)并[CAtlList::GetPrev](#getprev)可用于循环访问列表中的对象。
+大多数`CAtlList`方法都使用仓位值。 方法使用此值来引用存储元素的实际内存位置，不应直接计算或预测此值。 如果需要访问列表中的第*n*个元素，方法[CAtlList：findIndex](#findindex)将返回给定索引的相应位置值。 方法[CAtlList：GetNext](#getnext)和[CAtlList：GetPrev](#getprev)可用于迭代列表中的对象。
 
-有关可使用 ATL 的集合类的详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+有关 ATL 提供的收集类的详细信息，请参阅[ATL 收集类](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标题：** atlcoll.h
 
-##  <a name="addhead"></a>  CAtlList::AddHead
+## <a name="catllistaddhead"></a><a name="addhead"></a>CAtlList：：添加头
 
-调用此方法以将元素添加到了列表的开头。
+调用此方法以向列表的头部添加元素。
 
 ```
 POSITION AddHead();
@@ -134,7 +134,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*element*<br/>
+*元素*<br/>
 新元素。
 
 ### <a name="return-value"></a>返回值
@@ -143,15 +143,15 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="remarks"></a>备注
 
-如果使用的第一个版本，则使用其默认构造函数，而不是其复制构造函数创建一个空元素。
+如果使用第一个版本，则使用其默认构造函数而不是其复制构造函数创建空元素。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]
 
-##  <a name="addheadlist"></a>  CAtlList::AddHeadList
+## <a name="catllistaddheadlist"></a><a name="addheadlist"></a>CAtlList：：添加头列表
 
-调用此方法将现有的列表添加到了列表的开头。
+调用此方法以将现有列表添加到列表的头部。
 
 ```
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
@@ -164,15 +164,15 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="remarks"></a>备注
 
-指向列表*plNew*插入现有列表的开头。 在调试版本中，如果出现断言失败*plNew*等于 NULL。
+*plNew*指向的列表将插入到现有列表的开头。 在调试生成中，如果*plNew*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]
 
-##  <a name="addtail"></a>  CAtlList::AddTail
+## <a name="catllistaddtail"></a><a name="addtail"></a>CAtlList：：添加尾
 
-调用此方法以将元素添加到此列表的末尾。
+调用此方法以将元素添加到此列表的尾部。
 
 ```
 POSITION AddTail();
@@ -181,7 +181,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*element*<br/>
+*元素*<br/>
 要添加的元素。
 
 ### <a name="return-value"></a>返回值
@@ -190,15 +190,15 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="remarks"></a>备注
 
-如果使用的第一个版本，则使用其默认构造函数，而不是其复制构造函数创建一个空元素。 该元素添加到列表的末尾，因此它现在成为尾部。 此方法可以用于空列表。
+如果使用第一个版本，则使用其默认构造函数而不是其复制构造函数创建空元素。 元素将添加到列表的末尾，因此它现在成为尾部。 此方法可与空列表一起使用。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]
 
-##  <a name="addtaillist"></a>  CAtlList::AddTailList
+## <a name="catllistaddtaillist"></a><a name="addtaillist"></a>CAtlList：：添加尾号
 
-调用此方法将现有的列表添加到此列表的结尾。
+调用此方法以将现有列表添加到此列表的尾部。
 
 ```
 void AddTailList(const CAtlList<E, ETraits>* plNew);
@@ -211,15 +211,15 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="remarks"></a>备注
 
-指向列表*plNew*之后插入的最后一个元素 （如果有） 的列表对象中。 中的最后一个元素*plNew*列表因此变得尾部。 在调试版本中，如果出现断言失败*plNew*等于 NULL。
+*plNew*指向的列表在列表对象中的最后一个元素（如果有）之后插入。 因此 *，plNew*列表中的最后一个元素成为尾部。 在调试生成中，如果*plNew*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]
 
-##  <a name="assertvalid"></a>  CAtlList::AssertValid
+## <a name="catllistassertvalid"></a><a name="assertvalid"></a>CAtlList：：断言有效
 
-调用此方法以确认该列表有效。
+调用此方法以确认列表有效。
 
 ```
 void AssertValid() const;
@@ -227,13 +227,13 @@ void AssertValid() const;
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果列表对象不是有效，将发生断言失败。 若要使之有效，一个空列表必须具有头和尾部指向 NULL，并且不为空列表必须具有头和尾部指向有效的地址。
+在调试生成中，如果列表对象无效，将发生断言失败。 要有效，空列表必须同时显示头部和尾部指向 NULL，并且不为空的列表必须同时显示头部和尾部指向有效地址。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]
 
-##  <a name="catllist"></a>  CAtlList::CAtlList
+## <a name="catllistcatllist"></a><a name="catllist"></a>CAtlList：CAtlList
 
 构造函数。
 
@@ -248,13 +248,13 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>备注
 
-构造函数`CAtlList`对象。 块大小为分配的新元素时所需的内存量的度量值。 更大的块大小降低对内存分配例程的调用，但使用更多的资源。
+`CAtlList`对象的构造函数。 块大小是需要新元素时分配的内存量的度量。 较大的块大小减少了对内存分配例程的调用，但使用的资源更多。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-##  <a name="dtor"></a>  CAtlList::~CAtlList
+## <a name="catllistcatllist"></a><a name="dtor"></a>CAtlList：_CAtlList
 
 析构函数。
 
@@ -264,13 +264,13 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>备注
 
-释放所有已分配的资源，包括调用[CAtlList::RemoveAll](#removeall)若要从列表中删除所有元素。
+释放所有已分配的资源，包括调用[CAtlList：：删除所有](#removeall)内容以从列表中删除所有元素。
 
-在调试版本中，如果列表仍在调用后不包含某些元素发生断言失败`RemoveAll`。
+在调试生成中，如果列表在调用`RemoveAll`后仍包含某些元素，则将发生断言失败。
 
-##  <a name="find"></a>  CAtlList::Find
+## <a name="catllistfind"></a><a name="find"></a>CAtlList：查找
 
-调用此方法搜索指定的元素的列表。
+调用此方法以搜索指定元素的列表。
 
 ```
 POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
@@ -278,27 +278,27 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>参数
 
-*element*<br/>
+*元素*<br/>
 要在列表中找到的元素。
 
-*posStartAfter*<br/>
-搜索起始位置。 如果未不指定任何值，搜索开始与头元素。
+*位置启动后*<br/>
+搜索的开始位置。 如果未指定值，则搜索从头元素开始。
 
 ### <a name="return-value"></a>返回值
 
-返回元素的位置值，如果找到，否则为返回 NULL。
+如果找到元素，则返回元素的"位置"值，否则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果列表对象不是有效的或者出现断言失败*posStartAfter*值超出了范围。
+在调试生成中，如果列表对象无效，或者*posStartAfter*值不在范围范围内，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]
 
-##  <a name="findindex"></a>  CAtlList::FindIndex
+## <a name="catllistfindindex"></a><a name="findindex"></a>CAtlList：查找索引
 
-调用此方法以获取给定的索引值的元素的位置。
+调用此方法以获取元素的位置，给定索引值。
 
 ```
 POSITION FindIndex(size_t iElement) const throw();
@@ -306,26 +306,26 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>参数
 
-*iElement*<br/>
-所需的列表元素的从零开始的索引。
+*i元素*<br/>
+所需列表元素的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-如果返回的相应位置的值或为 NULL *iElement*不在范围。
+返回相应的位置值，如果*iElement*不在范围范围内，则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-此方法返回对应于一个给定的索引值，允许访问的位置*n*个元素，以在列表中的。
+此方法返回与给定索引值对应的"位置"，允许访问列表中的第*n*个元素。
 
-在调试版本中，如果列表对象不是有效，将发生断言失败。
+在调试生成中，如果列表对象无效，将发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]
 
-##  <a name="getat"></a>  CAtlList::GetAt
+## <a name="catllistgetat"></a><a name="getat"></a>CAtlList：GetAt
 
-调用此方法以返回列表中指定位置处的元素。
+调用此方法以返回列表中指定位置的元素。
 
 ```
 E& GetAt(POSITION pos) throw();
@@ -334,28 +334,28 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-指定特定元素的位置值。
+*Pos*<br/>
+指定特定元素的定位值。
 
 ### <a name="return-value"></a>返回值
 
-引用或元素的副本。
+对元素的引用或副本。
 
 ### <a name="remarks"></a>备注
 
-如果列表为**const**，`GetAt`返回元素的副本。 这允许使用仅在赋值语句右侧的方法，并从修改保护列表。
+如果列表是**const** `GetAt` ，则返回元素的副本。 这允许仅在赋值语句的右侧使用该方法，并保护列表免受修改。
 
-如果该列表不是**const**，`GetAt`返回元素的引用。 这允许使用赋值语句的任何一侧的方法，并因此允许列表条目，以进行修改。
+如果列表不是**const**，`GetAt`则返回对元素的引用。 这允许在赋值语句的任意一侧使用该方法，从而允许修改列表条目。
 
-在调试版本中，如果出现断言失败*pos*等于 NULL。
+在调试生成中，如果*pos*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::FindIndex](#findindex)。
+请参阅[CAtlList 的示例：：查找索引](#findindex)。
 
-##  <a name="getcount"></a>  CAtlList::GetCount
+## <a name="catllistgetcount"></a><a name="getcount"></a>CAtlList：获取计数
 
-调用此方法以在列表中返回的对象数。
+调用此方法以返回列表中的对象数。
 
 ```
 size_t GetCount() const throw();
@@ -367,11 +367,11 @@ size_t GetCount() const throw();
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::Find](#find)。
+请参阅[CAtlList 的示例：：查找](#find)。
 
-##  <a name="gethead"></a>  CAtlList::GetHead
+## <a name="catllistgethead"></a><a name="gethead"></a>CAtlList：获取头
 
-调用此方法以返回了列表的开头处的元素。
+调用此方法以返回列表头的元素。
 
 ```
 E& GetHead() throw();
@@ -380,23 +380,23 @@ const E& GetHead() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回的引用或位于列表的头元素的副本。
+返回对列表头的元素的引用或副本。
 
 ### <a name="remarks"></a>备注
 
-如果列表为**const**，`GetHead`返回了列表的开头处的元素的副本。 这允许使用仅在赋值语句右侧的方法，并从修改保护列表。
+如果列表是**const，**`GetHead`则返回列表头的元素的副本。 这允许仅在赋值语句的右侧使用该方法，并保护列表免受修改。
 
-如果该列表不是**const**，`GetHead`返回对列表的开头处的元素的引用。 这允许使用赋值语句的任何一侧的方法，并因此允许列表条目，以进行修改。
+如果列表不是**const，**`GetHead`则返回对列表头的元素的引用。 这允许在赋值语句的任意一侧使用该方法，从而允许修改列表条目。
 
-在调试版本中，如果列表的开头点为 NULL，将出现断言失败。
+在调试生成中，如果列表的主管指向 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::AddHead](#addhead)。
+请参阅[CAtlList 的示例：：addHead](#addhead)。
 
-##  <a name="getheadposition"></a>  CAtlList::GetHeadPosition
+## <a name="catllistgetheadposition"></a><a name="getheadposition"></a>CAtlList：获取头位置
 
-调用此方法来获得了列表的开头的位置。
+调用此方法以获取列表头的位置。
 
 ```
 POSITION GetHeadPosition() const throw();
@@ -404,7 +404,7 @@ POSITION GetHeadPosition() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回对应于列表的开头处的元素的位置值。
+返回与列表头的元素对应的"位置"值。
 
 ### <a name="remarks"></a>备注
 
@@ -414,9 +414,9 @@ POSITION GetHeadPosition() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]
 
-##  <a name="getnext"></a>  CAtlList::GetNext
+## <a name="catllistgetnext"></a><a name="getnext"></a>CAtlList：获取下一个
 
-调用此方法以从列表中返回的下一个元素。
+调用此方法以从列表中返回下一个元素。
 
 ```
 E& GetNext(POSITION& pos) throw();
@@ -425,26 +425,26 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-返回上次调用的位置值`GetNext`， [CAtlList::GetHeadPosition](#getheadposition)，或其他`CAtlList`方法。
+*Pos*<br/>
+由上一个调用返回的"位置"`GetNext`值[，CAtlList：：getHeadposition](#getheadposition)或其他`CAtlList`方法。
 
 ### <a name="return-value"></a>返回值
 
-如果列表为**const**，`GetNext`返回列表的下一个元素的副本。 这允许使用仅在赋值语句右侧的方法，并从修改保护列表。
+如果列表是**const** `GetNext` ，则返回列表的下一个元素的副本。 这允许仅在赋值语句的右侧使用该方法，并保护列表免受修改。
 
-如果该列表不是**const**，`GetNext`返回列表的下一个元素的引用。 这允许使用赋值语句的任何一侧的方法，并因此允许列表条目，以进行修改。
+如果列表不是**const**，`GetNext`则返回对列表下一个元素的引用。 这允许在赋值语句的任意一侧使用该方法，从而允许修改列表条目。
 
 ### <a name="remarks"></a>备注
 
-位置计数器*pos*，会更新以指向下一个元素在列表中，或如果没有更多元素，则为 NULL。 在调试版本中，如果出现断言失败*pos*等于 NULL。
+位置计数器*将更新*以指向列表中的下一个元素，如果不再有元素，则为 NULL。 在调试生成中，如果*pos*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::GetHeadPosition](#getheadposition)。
+请参阅[CAtlList 的示例：获取头位置](#getheadposition)。
 
-##  <a name="getprev"></a>  CAtlList::GetPrev
+## <a name="catllistgetprev"></a><a name="getprev"></a>CAtlList：GetPrev
 
-调用此方法以从列表中返回上一个元素。
+调用此方法以从列表中返回以前的元素。
 
 ```
 E& GetPrev(POSITION& pos) throw();
@@ -453,26 +453,26 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-返回上次调用的位置值`GetPrev`， [CAtlList::GetTailPosition](#gettailposition)，或其他`CAtlList`方法。
+*Pos*<br/>
+由上一个调用返回的"位置"`GetPrev`值[，CAtlList：：GetTailposition](#gettailposition)或其他`CAtlList`方法。
 
 ### <a name="return-value"></a>返回值
 
-如果列表为**const**，`GetPrev`返回列表的元素的副本。 这允许使用仅在赋值语句右侧的方法，并从修改保护列表。
+如果列表是**const** `GetPrev` ，则返回列表元素的副本。 这允许仅在赋值语句的右侧使用该方法，并保护列表免受修改。
 
-如果该列表不是**const**，`GetPrev`返回对列表的元素的引用。 这允许使用赋值语句的任何一侧的方法，并因此允许列表条目，以进行修改。
+如果列表不是**const**，`GetPrev`则返回对列表元素的引用。 这允许在赋值语句的任意一侧使用该方法，从而允许修改列表条目。
 
 ### <a name="remarks"></a>备注
 
-位置计数器*pos*，会更新以指向上一个元素在列表中，或如果没有更多元素，则为 NULL。 在调试版本中，如果出现断言失败*pos*等于 NULL。
+位置计数器*将更新*以指向列表中的前一个元素，如果没有更多元素，则为 NULL。 在调试生成中，如果*pos*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::GetTailPosition](#gettailposition)。
+请参阅[CAtlList 的示例：获取尾部位置](#gettailposition)。
 
-##  <a name="gettail"></a>  CAtlList::GetTail
+## <a name="catllistgettail"></a><a name="gettail"></a>CAtlList：GetTail
 
-调用此方法以返回列表的结尾处的元素。
+调用此方法以返回列表尾部的元素。
 
 ```
 E& GetTail() throw();
@@ -481,23 +481,23 @@ const E& GetTail() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回的引用或位于列表的结尾的元素的副本。
+返回对列表末尾的元素的引用或副本。
 
 ### <a name="remarks"></a>备注
 
-如果列表为**const**，`GetTail`返回了列表的开头处的元素的副本。 这允许使用仅在赋值语句右侧的方法，并从修改保护列表。
+如果列表是**const，**`GetTail`则返回列表头的元素的副本。 这允许仅在赋值语句的右侧使用该方法，并保护列表免受修改。
 
-如果该列表不是**const**，`GetTail`返回对列表的开头处的元素的引用。 这允许使用赋值语句的任何一侧的方法，并因此允许列表条目，以进行修改。
+如果列表不是**const，**`GetTail`则返回对列表头的元素的引用。 这允许在赋值语句的任意一侧使用该方法，从而允许修改列表条目。
 
-在调试版本中，如果列表的尾点为 NULL，将出现断言失败。
+在调试生成中，如果列表的尾部指向 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::AddTail](#addtail)。
+请参阅[CAtlList 的示例：：添加尾数](#addtail)。
 
-##  <a name="gettailposition"></a>  CAtlList::GetTailPosition
+## <a name="catllistgettailposition"></a><a name="gettailposition"></a>CAtlList：获取尾部位置
 
-调用此方法以获取列表的尾数据的位置。
+调用此方法以获取列表尾部的位置。
 
 ```
 POSITION GetTailPosition() const throw();
@@ -505,7 +505,7 @@ POSITION GetTailPosition() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回对应于列表的结尾处的元素的位置值。
+返回与列表尾部的元素对应的"位置"值。
 
 ### <a name="remarks"></a>备注
 
@@ -515,17 +515,17 @@ POSITION GetTailPosition() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]
 
-##  <a name="inargtype"></a>  CAtlList::INARGTYPE
+## <a name="catllistinargtype"></a><a name="inargtype"></a>列表：：INARGTYPE
 
-作为输入参数传递一个元素时所使用的类型。
+当元素作为输入参数传递时使用的类型。
 
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-##  <a name="insertafter"></a>  CAtlList::InsertAfter
+## <a name="catllistinsertafter"></a><a name="insertafter"></a>CAtlList：插入后
 
-调用此方法来指定位置之后的新元素插入到列表。
+调用此方法以在指定位置后将新元素插入列表中。
 
 ```
 POSITION InsertAfter(POSITION pos, INARGTYPE element);
@@ -533,27 +533,27 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-将在其后插入新元素的位置值。
+*Pos*<br/>
+将插入新元素的"位置"值。
 
-*element*<br/>
+*元素*<br/>
 要插入的元素。
 
 ### <a name="return-value"></a>返回值
 
-返回新元素的位置值。
+返回新元素的"位置"值。
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果列表不是有效的如果插入失败，或尝试之后尾部插入该元素，将出现断言失败。
+在调试生成中，如果列表无效、插入失败或尝试在尾部后插入元素，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]
 
-##  <a name="insertbefore"></a>  CAtlList::InsertBefore
+## <a name="catllistinsertbefore"></a><a name="insertbefore"></a>CAtlList：：插入之前
 
-调用此方法以将新元素插入到前面的指定位置的列表。
+调用此方法在指定位置之前将新元素插入列表中。
 
 ```
 POSITION InsertBefore(POSITION pos, INARGTYPE element);
@@ -561,25 +561,25 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-新元素将插入到此位置的值前面的列表。
+*Pos*<br/>
+新元素将插入到列表中，然后在此位置值之前。
 
-*element*<br/>
+*元素*<br/>
 要插入的元素。
 
 ### <a name="return-value"></a>返回值
 
-返回新元素的位置值。
+返回新元素的"位置"值。
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果列表不是有效的如果插入失败，或尝试头之前插入该元素，将出现断言失败。
+在调试生成中，如果列表无效、插入失败或尝试将元素插入到头之前，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]
 
-##  <a name="isempty"></a>  CAtlList::IsEmpty
+## <a name="catllistisempty"></a><a name="isempty"></a>CAtlList：：空
 
 调用此方法以确定列表是否为空。
 
@@ -589,15 +589,15 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果列表不包含的对象，否则为 false，则返回 true。
+如果列表不包含任何对象，则返回 true，否则为 false。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]
 
-##  <a name="movetohead"></a>  CAtlList::MoveToHead
+## <a name="catllistmovetohead"></a><a name="movetohead"></a>Catllist：：移动头
 
-调用此方法将指定的元素移动到了列表的开头。
+调用此方法将指定元素移动到列表的头部。
 
 ```
 void MoveToHead(POSITION pos) throw();
@@ -605,20 +605,20 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-要移动的元素的位置值。
+*Pos*<br/>
+要移动的元素的定位值。
 
 ### <a name="remarks"></a>备注
 
-指定的元素从其当前位置移动到了列表的开头。 在调试版本中，如果出现断言失败*pos*等于 NULL。
+指定元素从其当前位置移动到列表的头部。 在调试生成中，如果*pos*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]
 
-##  <a name="movetotail"></a>  CAtlList::MoveToTail
+## <a name="catllistmovetotail"></a><a name="movetotail"></a>Catllist：：移动到尾
 
-调用此方法将指定的元素移动到列表的结尾。
+调用此方法将指定元素移动到列表的尾部。
 
 ```
 void MoveToTail(POSITION pos) throw();
@@ -626,20 +626,20 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-要移动的元素的位置值。
+*Pos*<br/>
+要移动的元素的定位值。
 
 ### <a name="remarks"></a>备注
 
-指定的元素从其当前位置移动到列表的结尾。 在调试版本中，如果出现断言失败*pos*等于 NULL。
+指定元素从其当前位置移动到列表的尾部。 在调试生成中，如果*pos*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::MoveToHead](#movetohead)。
+请参阅[CAtlList 的示例：：移动头](#movetohead)。
 
-##  <a name="removeall"></a>  CAtlList::RemoveAll
+## <a name="catllistremoveall"></a><a name="removeall"></a>CAtlList：：删除所有
 
-调用此方法以从列表中删除的所有元素。
+调用此方法以从列表中删除所有元素。
 
 ```
 void RemoveAll() throw();
@@ -647,15 +647,15 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>备注
 
-此方法从列表中移除所有元素，并释放已分配的内存。 在调试版本中将引发 ATLASSERT 如果所有元素不会都删除或已损坏列表结构。
+此方法从列表中删除所有元素并释放分配的内存。 在调试生成中，如果未删除所有元素或列表结构已损坏，则将引发 ATLASSERT。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::IsEmpty](#isempty)。
+请参阅[CAtlList 的示例：：是空的](#isempty)。
 
-##  <a name="removeat"></a>  CAtlList::RemoveAt
+## <a name="catllistremoveat"></a><a name="removeat"></a>CAtlList：：删除At
 
-调用此方法以从列表中删除单个元素。
+调用此方法从列表中删除单个元素。
 
 ```
 void RemoveAt(POSITION pos) throw();
@@ -663,22 +663,22 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-要移除的元素位置的值。
+*Pos*<br/>
+要删除的元素的定位值。
 
 ### <a name="remarks"></a>备注
 
-引用的元素*pos*被删除，并且将释放内存。 它是可接受使用`RemoveAt`若要删除的头部或尾部的列表。
+*删除 pos*引用的元素，并释放内存。 可以使用`RemoveAt`来移除列表的头部或尾部。
 
-在调试版本中，如果该列表不是有效或删除该元素会导致访问内存，这并不是列表结构的一部分的列表，将发生断言失败。
+在调试生成中，如果列表无效，或者删除该元素导致列表访问不属于列表结构的内存，则将发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]
 
-##  <a name="removehead"></a>  CAtlList::RemoveHead
+## <a name="catllistremovehead"></a><a name="removehead"></a>CAtlList：：删除头
 
-调用此方法来删除了列表的开头处的元素。
+调用此方法以删除列表头的元素。
 
 ```
 E RemoveHead();
@@ -686,19 +686,19 @@ E RemoveHead();
 
 ### <a name="return-value"></a>返回值
 
-返回列表的开头处的元素。
+返回列表头的元素。
 
 ### <a name="remarks"></a>备注
 
-从列表中，删除该头元素和释放内存。 返回元素的副本。 在调试版本中，如果列表为空，将发生断言失败。
+头元素将从列表中删除，并释放内存。 返回元素的副本。 在调试生成中，如果列表为空，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]
 
-##  <a name="removeheadnoreturn"></a>  CAtlList::RemoveHeadNoReturn
+## <a name="catllistremoveheadnoreturn"></a><a name="removeheadnoreturn"></a>CAtlList：：删除头无返回
 
-调用此方法不返回值中删除了列表的开头处的元素。
+调用此方法以删除列表头的元素，而不返回值。
 
 ```
 void RemoveHeadNoReturn() throw();
@@ -706,15 +706,15 @@ void RemoveHeadNoReturn() throw();
 
 ### <a name="remarks"></a>备注
 
-从列表中，删除该头元素和释放内存。 在调试版本中，如果列表为空，将发生断言失败。
+头元素将从列表中删除，并释放内存。 在调试生成中，如果列表为空，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::IsEmpty](#isempty)。
+请参阅[CAtlList 的示例：：是空的](#isempty)。
 
-##  <a name="removetail"></a>  CAtlList::RemoveTail
+## <a name="catllistremovetail"></a><a name="removetail"></a>CAtlList：：删除尾
 
-调用此方法来删除列表的结尾处的元素。
+调用此方法以删除列表尾部的元素。
 
 ```
 E RemoveTail();
@@ -722,19 +722,19 @@ E RemoveTail();
 
 ### <a name="return-value"></a>返回值
 
-返回列表的结尾处的元素。
+返回列表尾部的元素。
 
 ### <a name="remarks"></a>备注
 
-从列表中，删除结尾元素，并且将释放内存。 返回元素的副本。 在调试版本中，如果列表为空，将发生断言失败。
+尾元素将从列表中删除，并释放内存。 返回元素的副本。 在调试生成中，如果列表为空，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]
 
-##  <a name="removetailnoreturn"></a>  CAtlList::RemoveTailNoReturn
+## <a name="catllistremovetailnoreturn"></a><a name="removetailnoreturn"></a>CAtllist：：删除尾号不返回
 
-调用此方法来删除而不返回值的列表的结尾处的元素。
+调用此方法以删除列表尾部的元素，而不返回值。
 
 ```
 void RemoveTailNoReturn() throw();
@@ -742,13 +742,13 @@ void RemoveTailNoReturn() throw();
 
 ### <a name="remarks"></a>备注
 
-从列表中，删除结尾元素，并且将释放内存。 在调试版本中，如果列表为空，将发生断言失败。
+尾元素将从列表中删除，并释放内存。 在调试生成中，如果列表为空，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[CAtlList::IsEmpty](#isempty)。
+请参阅[CAtlList 的示例：：是空的](#isempty)。
 
-##  <a name="setat"></a>  CAtlList::SetAt
+## <a name="catllistsetat"></a><a name="setat"></a>CAtlList：：Setat
 
 调用此方法以在列表中的给定位置设置元素的值。
 
@@ -758,23 +758,23 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-对应于要更改的元素的位置值。
+*Pos*<br/>
+与要更改的元素对应的位置值。
 
-*element*<br/>
-新的元素值。
+*元素*<br/>
+新元素值。
 
 ### <a name="remarks"></a>备注
 
-替换现有值与*元素*。 在调试版本中，如果出现断言失败*pos*等于 NULL。
+将现有值替换为*元素*。 在调试生成中，如果*pos*等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]
 
-##  <a name="swapelements"></a>  CAtlList::SwapElements
+## <a name="catllistswapelements"></a><a name="swapelements"></a>CAtlList：：交换元素
 
-调用此方法来交换列表中的元素。
+调用此方法以交换列表中的元素。
 
 ```
 void SwapElements(POSITION pos1, POSITION pos2) throw();
@@ -782,7 +782,7 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos1*<br/>
+*位置1*<br/>
 第一个位置值。
 
 *pos2*<br/>
@@ -790,13 +790,13 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="remarks"></a>备注
 
-交换在指定的两个位置的元素。 在调试版本中，如果任一位置的值等于 NULL，将发生断言失败。
+交换指定两个位置的元素。 在调试生成中，如果任一位置值等于 NULL，则会发生断言失败。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CList 类](../../mfc/reference/clist-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7ce5b07f5eb4272db1b00b7f0105b790ddbb28fe
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 15e27a586fc039791255c01a053f6a1109183f90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368184"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 结构
 
@@ -31,28 +31,28 @@ ms.locfileid: "77142988"
 struct IResourceManager;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-enumerations"></a>公共枚举
 
 |名称|说明|
 |----------|-----------------|
-|[IResourceManager：： OSVersion](#osversion)|表示操作系统版本的枚举类型。|
+|[I 资源管理器：OSVersion](#osversion)|表示操作系统版本的枚举类型。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[IResourceManager：： CreateNodeTopology](#createnodetopology)|仅存在于运行时的调试版本中，此方法是一个测试挂钩，旨在简化不同硬件拓扑的资源管理器测试，而无需与配置匹配的实际硬件。 对于运行时的零售版本，此方法将返回，而不执行任何操作。|
-|[IResourceManager：： GetAvailableNodeCount](#getavailablenodecount)|返回可供资源管理器使用的节点数。|
-|[IResourceManager：： GetFirstNode](#getfirstnode)|按照资源管理器的定义，返回枚举顺序中的第一个节点。|
-|[IResourceManager：： Reference](#reference)|递增资源管理器实例的引用计数。|
-|[IResourceManager：： RegisterScheduler](#registerscheduler)|将计划程序注册到资源管理器。 注册计划程序后，它应使用返回的 `ISchedulerProxy` 接口与资源管理器进行通信。|
-|[IResourceManager：： Release](#release)|递减资源管理器实例的引用计数。 资源管理器在其引用计数变为 `0`时被销毁。|
+|[I 资源管理器：：创建节点拓扑](#createnodetopology)|此方法仅在运行时的调试版本中存在，它是一个测试挂钩，旨在方便在不同硬件拓扑上测试资源管理器，而无需实际硬件匹配配置。 使用运行时的零售生成时，此方法将返回而不执行任何操作。|
+|[I 资源管理器：：获取可用节点计数](#getavailablenodecount)|返回可供资源管理器使用的节点数。|
+|[I 资源管理器：：获取第一节点](#getfirstnode)|按照资源管理器的定义，返回枚举顺序中的第一个节点。|
+|[I资源管理器：参考](#reference)|增加资源管理器实例上的引用计数。|
+|[I资源管理器：：注册时间表](#registerscheduler)|向资源管理器注册计划程序。 注册计划程序后，它应使用返回的`ISchedulerProxy`接口与资源管理器通信。|
+|[I 资源管理器：：发布](#release)|在资源管理器实例上取消引用计数。 当资源管理器的引用计数转到`0`时，它将被销毁。|
 
 ## <a name="remarks"></a>备注
 
-使用[CreateResourceManager](concurrency-namespace-functions.md)函数可获取单一实例资源管理器实例的接口。 方法会递增资源管理器上的引用计数，并且应在完成资源管理器时调用[IResourceManager：： release](#release)方法来释放引用。 通常，创建的每个计划程序都将在创建过程中调用此方法，并在关闭后释放对资源管理器的引用。
+使用[CreateResourceManager](concurrency-namespace-functions.md)函数获取与单一资源管理器实例的接口。 该方法将引用计数递增到资源管理器上，您应该调用[IResourceManager：：：释放](#release)方法，在使用资源管理器时释放引用。 通常，您创建的每个计划程序将在创建期间调用此方法，并在资源管理器关闭后释放对资源管理器的引用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -60,13 +60,13 @@ struct IResourceManager;
 
 ## <a name="requirements"></a>要求
 
-**标头：** concrtrm。h
+**标题：** concrtrm.h
 
 **命名空间：** 并发
 
-## <a name="createnodetopology"></a>IResourceManager：： CreateNodeTopology 方法
+## <a name="iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>I资源管理器：：创建节点拓扑方法
 
-仅存在于运行时的调试版本中，此方法是一个测试挂钩，旨在简化不同硬件拓扑的资源管理器测试，而无需与配置匹配的实际硬件。 对于运行时的零售版本，此方法将返回，而不执行任何操作。
+此方法仅在运行时的调试版本中存在，它是一个测试挂钩，旨在方便在不同硬件拓扑上测试资源管理器，而无需实际硬件匹配配置。 使用运行时的零售生成时，此方法将返回而不执行任何操作。
 
 ```cpp
 virtual void CreateNodeTopology(
@@ -78,25 +78,25 @@ virtual void CreateNodeTopology(
 
 ### <a name="parameters"></a>参数
 
-*nodeCount*<br/>
+*节点计数*<br/>
 正在模拟的处理器节点数。
 
 *pCoreCount*<br/>
-一个数组，该数组指定每个节点上的内核数。
+指定每个节点上的内核数的数组。
 
-*pNodeDistance*<br/>
-一个矩阵，指定任意两个节点之间的节点距离。 此参数可以具有值 `NULL`。
+*pNode 距离*<br/>
+指定任意两个节点之间的节点距离的矩阵。 此参数可以具有 值`NULL`。
 
-*pProcessorGroups*<br/>
-一个数组，该数组指定每个节点所属的处理器组。
+*p处理器组*<br/>
+指定每个节点所属的处理器组的数组。
 
 ### <a name="remarks"></a>备注
 
-如果参数 `nodeCount` 具有传入 `0` 值，或者参数 `pCoreCount` 的值为 `NULL`，则会引发[invalid_argument](../../../standard-library/invalid-argument-class.md) 。
+如果`nodeCount`参数已`0`传入值，或者参数`pCoreCount`具有 值`NULL`，则引发[invalid_argument。](../../../standard-library/invalid-argument-class.md)
 
-如果在进程中存在其他计划程序时调用此方法，则会引发[invalid_operation](invalid-operation-class.md) 。
+如果调用此方法，而进程中存在其他计划程序，则引发[invalid_operation。](invalid-operation-class.md)
 
-## <a name="getavailablenodecount"></a>IResourceManager：： GetAvailableNodeCount 方法
+## <a name="iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>I 资源管理器：：获取可用节点计数方法
 
 返回可供资源管理器使用的节点数。
 
@@ -106,9 +106,9 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 
 ### <a name="return-value"></a>返回值
 
-可用于资源管理器的节点数。
+资源管理器可用的节点数。
 
-## <a name="getfirstnode"></a>IResourceManager：： GetFirstNode 方法
+## <a name="iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>I资源管理器：获取第一节点方法
 
 按照资源管理器的定义，返回枚举顺序中的第一个节点。
 
@@ -118,9 +118,9 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 
 ### <a name="return-value"></a>返回值
 
-由资源管理器定义的枚举顺序中的第一个节点。
+资源管理器定义的枚举顺序中的第一个节点。
 
-## <a name="osversion"></a>IResourceManager：： OSVersion 枚举
+## <a name="iresourcemanagerosversion-enumeration"></a><a name="osversion"></a>I 资源管理器：：OSversion 枚举
 
 表示操作系统版本的枚举类型。
 
@@ -128,9 +128,9 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 enum OSVersion;
 ```
 
-## <a name="reference"></a>IResourceManager：： Reference 方法
+## <a name="iresourcemanagerreference-method"></a><a name="reference"></a>I资源管理器：参考方法
 
-递增资源管理器实例的引用计数。
+增加资源管理器实例上的引用计数。
 
 ```cpp
 virtual unsigned int Reference() = 0;
@@ -140,9 +140,9 @@ virtual unsigned int Reference() = 0;
 
 生成的引用计数。
 
-## <a name="registerscheduler"></a>IResourceManager：： RegisterScheduler 方法
+## <a name="iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>I资源管理器：：注册调度器方法
 
-将计划程序注册到资源管理器。 注册计划程序后，它应使用返回的 `ISchedulerProxy` 接口与资源管理器进行通信。
+向资源管理器注册计划程序。 注册计划程序后，它应使用返回的`ISchedulerProxy`接口与资源管理器通信。
 
 ```cpp
 virtual ISchedulerProxy *RegisterScheduler(
@@ -152,25 +152,25 @@ virtual ISchedulerProxy *RegisterScheduler(
 
 ### <a name="parameters"></a>参数
 
-*pScheduler*<br/>
-要注册的计划程序的 `IScheduler` 接口。
+*p时间*<br/>
+要`IScheduler`注册的计划程序的接口。
 
 *version*<br/>
-计划程序用来与资源管理器通信的通信接口版本。 使用版本允许资源管理器演化通信接口，同时允许计划程序获取对较旧功能的访问权限。 希望使用 Visual Studio 2010 中提供资源管理器功能的计划程序应使用 `CONCRT_RM_VERSION_1`版本。
+计划程序用于与资源管理器通信的通信接口的版本。 使用版本允许资源管理器发展通信接口，同时允许计划程序访问较旧的功能。 希望使用 Visual Studio 2010 中存在的资源管理器功能的计划程序应使用版本`CONCRT_RM_VERSION_1`。
 
 ### <a name="return-value"></a>返回值
 
-资源管理器与计划程序关联的 `ISchedulerProxy` 接口。 计划程序应使用此接口从此点与资源管理器进行通信。
+资源管理器`ISchedulerProxy`与您的计划程序关联的接口。 此时，您的计划程序应使用此接口与资源管理器进行通信。
 
 ### <a name="remarks"></a>备注
 
-使用此方法启动与资源管理器的通信。 方法将计划程序的 `IScheduler` 接口与 `ISchedulerProxy` 接口相关联，并将其返回给你。 您可以使用返回的接口请求执行资源以供您的计划程序使用，或者使用资源管理器订阅线程。 资源管理器将使用[IScheduler：： GetPolicy](ischeduler-structure.md#getpolicy)方法返回的计划程序策略中的策略元素来确定计划程序执行工作所需的线程类型。 如果 `SchedulerKind` 策略密钥的值 `UmsThreadDefault` 并且值被读回策略的值 `UmsThreadDefault`，则传递给该方法的 `IScheduler` 接口必须是 `IUMSScheduler` 接口。
+使用此方法启动与资源管理器的通信。 该方法将计划程序`IScheduler`的接口与接口关联`ISchedulerProxy`，并将其交还给您。 您可以使用返回的接口请求执行资源供计划程序使用，或者与资源管理器订阅线程。 资源管理器将使用[I-计划器返回](ischeduler-structure.md#getpolicy)的计划程序策略的策略元素来确定计划程序执行工作所需的线程类型。 `SchedulerKind`如果策略`UmsThreadDefault`键具有该值，并且该值作为值`UmsThreadDefault`从策略中读出，则传递给 方法`IScheduler`的接口必须是接口`IUMSScheduler`。
 
-如果参数 `pScheduler` 具有值 `NULL`，则方法会引发 `invalid_argument` 异常; 如果参数 `version` 不是通信接口的有效版本，则引发异常。
+`invalid_argument`如果参数`pScheduler`具有值`NULL`或参数`version`不是通信接口的有效版本，则该方法将引发异常。
 
-## <a name="release"></a>IResourceManager：： Release 方法
+## <a name="iresourcemanagerrelease-method"></a><a name="release"></a>I资源管理器：：发布方法
 
-递减资源管理器实例的引用计数。 资源管理器在其引用计数变为 `0`时被销毁。
+在资源管理器实例上取消引用计数。 当资源管理器的引用计数转到`0`时，它将被销毁。
 
 ```cpp
 virtual unsigned int Release() = 0;
@@ -182,6 +182,6 @@ virtual unsigned int Release() = 0;
 
 ## <a name="see-also"></a>另请参阅
 
-[并发命名空间](concurrency-namespace.md)<br/>
+[concurrency 命名空间](concurrency-namespace.md)<br/>
 [ISchedulerProxy 结构](ischedulerproxy-structure.md)<br/>
 [IScheduler 结构](ischeduler-structure.md)

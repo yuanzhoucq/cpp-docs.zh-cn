@@ -1,6 +1,6 @@
 ---
 title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -8,6 +8,10 @@ api_name:
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +58,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bfd339a38dd5df30ece72059525860603ee10748
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947302"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364181"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
 返回指定计数内的字符数或字节数。
 
 > [!IMPORTANT]
-> 无法在 Windows 运行时中执行的应用程序中使用 **_mbsnbcnt**、 **_mbsnbcnt_l**、 **_mbsnccnt**和 **_mbsnccnt_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnbcnt**_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt 和 **_mbsnccnt_l**不能在 Windows 运行时中执行的应用程序中使用。 **_mbsnbcnt_l** **_mbsnccnt** 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -100,44 +105,46 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*Str*<br/>
 要检查的字符串。
 
 *count*<br/>
-*字符串*中要检查的字符数或字节数。
+要在*str*中检查的字符或字节数。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**返回*str*的多字节字符的第一个*计数*中找到的字节数。 **_mbsnccnt**和 **_mbsnccnt_l**返回*str*的第一个字节*计数*中找到的字符数。 如果在*str*的检查完成之前遇到 null 字符，则它们返回在空字符之前找到的字节数或字符数。 如果*str*包含的字符数或字节数少于*计数*，则它们将返回字符串中的字符数或字节数。 如果*count*小于零，则它们将返回0。 在以前的版本中，这些函数具有**int**类型的返回值，而不是**size_t**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**返回在*str*的多字节字符的第一*个计数*中找到的字节数。 **_mbsnccnt****和_mbsnccnt_l**返回在第一*个计数* *str*中找到的字符数。 如果在检查*str*完成之前遇到空字符，则返回在空字符之前找到的字节或字符数。 如果*str*由少于*计数*字符或字节组成，它们将返回字符串中的字符数或字节数。 如果*计数*小于零，则返回 0。 在以前的版本中，这些函数的返回值为**int，** 而不是**size_t**。
 
-**_strncnt**返回单字节字符串*str*的第一个*计数*字节中的字符数。 **_wcsncnt**返回宽字符字符串*str* *的前几*个字符的字符数。
+**_strncnt**返回单字节字符串*的第*一*个计数*字节中的字符数。 **_wcsncnt**返回宽字符字符串*str*的第一*个计数*宽字符中的字符数。
 
 ## <a name="remarks"></a>备注
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**对*str*的多字节字符的第一个*计数*中找到的字节数进行计数。 **_mbsnbcnt**和 **_mbsnbcnt_l**替换**mtob** ，应用于替代**mtob**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**计算*str*的多字节字符的第一*个计数*中找到的字节数。 **_mbsnbcnt**和 **_mbsnbcnt_l**替换**mtob，** 应代替**mtob。**
 
-**_mbsnccnt**和 **_mbsnccnt_l**对*str*的第一个字节*计数*中找到的字符数进行计数。 如果 **_mbsnccnt**和 **_mbsnccnt_l**在双字节字符的第二个字节内遇到 null 字符，则第一个字节也被视为 null，并且不包含在返回的计数值中。 **_mbsnccnt**和 **_mbsnccnt_l**替换**btom** ，应用于替代**btom**。
+**_mbsnccnt****和_mbsnccnt_l**计算*在 str*字节的第一*个计数*中找到的字符数。 如果 **_mbsnccnt**和 **_mbsnccnt_l**双字节字符的第二个字节中遇到空字符，则第一个字节也被视为 null，并且不包括在返回的计数值中。 **_mbsnccnt****和_mbsnccnt_l**取代**btom，** 应该用代替**btom。**
 
-如果*str*为**空**指针，或者*count*为0，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述， **errno**设置为**EINVAL**，并且该函数返回0。
+如果*str*是**NULL**指针或*计数*为 0，则这些函数将调用参数[验证](../../c-runtime-library/parameter-validation.md)中所述的无效参数处理程序 **，errno**设置为**EINVAL，** 函数返回 0。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
-|例程所返回的值|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
-|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|n/a|
-|**_wcsncnt**|n/a|n/a|**_mbsnbcnt**|
-|**_wcsncnt**|n/a|n/a|**_mbsnccnt**|
-|n/a|n/a|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|不适用|
+|**_wcsncnt**|不适用|不适用|**_mbsnbcnt**|
+|**_wcsncnt**|不适用|不适用|**_mbsnccnt**|
+|不适用|不适用|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcnt**|\<mbstring.h>|
 |**_mbsnbcnt_l**|\<mbstring.h>|
@@ -146,7 +153,7 @@ size_t _mbsnccnt_l(
 |**_strncnt**|\<tchar.h>|
 |**_wcsncnt**|\<tchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -169,15 +176,15 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 The first 10 characters are single-byte.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

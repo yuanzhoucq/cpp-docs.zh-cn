@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 8c33aa4d77eeeeca69e50dc63982ff4d7e8bd505
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426353"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366021"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 类
 
@@ -67,38 +67,38 @@ class CStatusBarCtrl : public CWnd
 
 |名称|说明|
 |----------|-----------------|
-|[CStatusBarCtrl：： CStatusBarCtrl](#cstatusbarctrl)|构造 `CStatusBarCtrl` 对象。|
+|[CStatusBarCtrl：CStatusBarCtrl](#cstatusbarctrl)|构造 `CStatusBarCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[CStatusBarCtrl：： Create](#create)|创建一个状态栏控件，并将其附加到 `CStatusBarCtrl` 的对象。|
-|[CStatusBarCtrl：： CreateEx](#createex)|使用指定的 Windows 扩展样式创建一个状态栏控件，并将其附加到 `CStatusBarCtrl` 对象上。|
-|[CStatusBarCtrl：:D rawItem](#drawitem)|当所有者描述的状态栏控件的可视方位更改时调用。|
-|[CStatusBarCtrl：： GetBorders](#getborders)|检索状态栏控件的水平和垂直边框的当前宽度。|
-|[CStatusBarCtrl：： GetIcon](#geticon)|检索当前状态栏控件中部分（也称为窗格）的图标。|
-|[CStatusBarCtrl：： GetParts](#getparts)|检索状态栏控件中部分的计数。|
-|[CStatusBarCtrl：： GetRect](#getrect)|检索状态栏控件中部件的边框。|
-|[CStatusBarCtrl：： GetText](#gettext)|检索来自状态栏控件给定部分的文本。|
-|[CStatusBarCtrl：： GetTextLength](#gettextlength)|检索状态栏控件给定部分中文本的长度（以字符为字符）。|
-|[CStatusBarCtrl：： GetTipText](#gettiptext)|检索状态栏中窗格的工具提示文本。|
-|[CStatusBarCtrl：： IsSimple](#issimple)|检查状态窗口控件以确定其是否处于简单模式。|
-|[CStatusBarCtrl：： SetBkColor](#setbkcolor)|设置状态栏中的背景色。|
-|[CStatusBarCtrl：： SetIcon](#seticon)|设置状态栏中窗格的图标。|
-|[CStatusBarCtrl：： SetMinHeight](#setminheight)|设置状态栏控件的绘图区域的最小高度。|
-|[CStatusBarCtrl：： SetParts](#setparts)|设置状态栏控件中的部件数以及每个部件的右边缘的坐标。|
-|[CStatusBarCtrl：： SetSimple](#setsimple)|指定状态栏控件是显示简单文本还是显示通过先前对 `SetParts`的调用设置的所有控件部件。|
-|[CStatusBarCtrl：： SetText](#settext)|设置状态栏控件给定部分中的文本。|
-|[CStatusBarCtrl：： SetTipText](#settiptext)|设置状态栏中窗格的工具提示文本。|
+|[CStatusBarCtrl：创建](#create)|创建状态栏控件并将其附加到`CStatusBarCtrl`对象。|
+|[CStatusBarCtrl：：创建Ex](#createex)|使用指定的 Windows 扩展样式创建状态栏控件，并将其附加到`CStatusBarCtrl`对象。|
+|[CStatusBarCtrl：:D原始项目](#drawitem)|当所有者绘制状态栏控件的可视方面发生更改时调用。|
+|[CStatusBarctrl：获取Borders](#getborders)|检索状态栏控件的水平和垂直边框的当前宽度。|
+|[CStatusBarctrl：：GetIcon](#geticon)|检索当前状态栏控件中部件（也称为窗格）的图标。|
+|[CStatusBarctrl：获取部件](#getparts)|检索状态栏控件中的零件计数。|
+|[CStatusBarctrl：：获取 Rect](#getrect)|检索状态栏控件中零件的边界矩形。|
+|[CStatusBarctrl：获取文本](#gettext)|从状态栏控件的给定部分检索文本。|
+|[CStatusBarctrl：获取文本长度](#gettextlength)|从状态栏控件的给定部分检索文本的长度（以字符表示）。|
+|[CStatusBarctrl：：获取提示文本](#gettiptext)|检索状态栏中窗格的工具提示文本。|
+|[CStatusBarctrl：：简单](#issimple)|检查状态窗口控件以确定它是否处于简单模式。|
+|[CStatusBarctrl：SetBkColor](#setbkcolor)|在状态栏中设置背景颜色。|
+|[CStatusBarctrl：：SetIcon](#seticon)|设置状态栏中窗格的图标。|
+|[CStatusBarctrl：setMinHeight](#setminheight)|设置状态条控件的绘图区域的最小高度。|
+|[CStatusBarctrl：：设置部件](#setparts)|设置状态条控件中的零件数和每个零件右边缘的坐标。|
+|[CStatusBarctrl：设置简单](#setsimple)|指定状态栏控件是显示简单文本还是显示以前调用`SetParts`设置的所有控件部件。|
+|[CStatusBarctrl：：设置文本](#settext)|设置状态栏控件给定部分中的文本。|
+|[CStatusBarctrl：：SetTipText](#settiptext)|设置状态栏中窗格的工具提示文本。|
 
 ## <a name="remarks"></a>备注
 
-"状态栏控件" 是通常显示在父窗口底部的水平窗口，应用程序可在其中显示各种类型的状态信息。 状态栏控件可以分为多个部分，以显示多种类型的信息。
+"状态栏控件"是一个水平窗口，通常显示在父窗口的底部，应用程序可以在其中显示各种状态信息。 状态栏控件可以划分为多个部分以显示多种类型的信息。
 
-此控件（因此 `CStatusBarCtrl` 类）仅适用于在 Windows 95/98 和 Windows NT 版本3.51 及更高版本下运行的程序。
+此控件（因此该`CStatusBarCtrl`类）仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 及更高版本下运行的程序。
 
-有关使用 `CStatusBarCtrl`的详细信息，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md)。
+有关 使用`CStatusBarCtrl`的详细信息，请参阅[控件](../../mfc/controls-mfc.md)[和使用 CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -114,9 +114,9 @@ class CStatusBarCtrl : public CWnd
 
 **标头：** afxcmn.h
 
-##  <a name="create"></a>CStatusBarCtrl：： Create
+## <a name="cstatusbarctrlcreate"></a><a name="create"></a>CStatusBarCtrl：创建
 
-创建一个状态栏控件，并将其附加到 `CStatusBarCtrl` 的对象。
+创建状态栏控件并将其附加到`CStatusBarCtrl`对象。
 
 ```
 virtual BOOL Create(
@@ -126,16 +126,16 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
-指定状态栏控件的样式。 应用 Windows SDK 中[常见控件样式](/windows/win32/Controls/common-control-styles)中列出的任何状态栏控件样式组合。 此参数必须包括 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。
+指定状态栏控件的样式。 应用 Windows SDK 中["通用控制样式](/windows/win32/Controls/common-control-styles)"中列出的状态栏控件样式的任意组合。 此参数必须包括WS_CHILD样式。 它还应包括WS_VISIBLE样式。
 
-*rect*<br/>
+*矩形*<br/>
 指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
-*pParentWnd*<br/>
-指定状态栏控件的父窗口，通常为 `CDialog`。 值不得为 NULL。
+*pparentwnd*<br/>
+指定状态栏控件的父窗口，通常为`CDialog`。 值不得为 NULL。
 
 *nID*<br/>
 指定状态栏控件的 ID。
@@ -146,19 +146,19 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-可以通过两个步骤构造 `CStatusBarCtrl`。 首先，调用构造函数，然后调用 `Create`，这将创建状态栏控件，并将其附加到 `CStatusBarCtrl` 对象。
+在两个步骤`CStatusBarCtrl`中构造 一个。 首先调用构造函数，然后调用`Create`，这将创建状态栏控件并将其附加到`CStatusBarCtrl`对象。
 
-状态窗口的默认位置沿父窗口的底部，但您可以指定 CCS_TOP 样式，使其显示在父窗口的工作区顶部。 可以指定 SBARS_SIZEGRIP 样式，以在状态窗口的右端包含大小调整手柄。 不建议结合使用 CCS_TOP 和 SBARS_SIZEGRIP 样式，因为即使系统在状态窗口中进行绘制，生成的大小调整手柄也不起作用。
+状态窗口的默认位置位于父窗口的底部，但您可以指定CCS_TOP样式，使其显示在父窗口的工作区的顶部。 您可以指定SBARS_SIZEGRIP样式，以在状态窗口的右端包括大小调整夹。 不建议组合CCS_TOP和SBARS_SIZEGRIP样式，因为即使系统在状态窗口中绘制了大小调整夹点，也不起作用。
 
-若要创建具有扩展窗口样式的状态栏，请调用[CStatusBarCtrl：： CreateEx](#createex)而不是 `Create`。
+要创建具有扩展窗口样式的状态栏，请调用[CStatusBarCtrl：：createEx](#createex) `Create`而不是 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]
 
-##  <a name="createex"></a>CStatusBarCtrl：： CreateEx
+## <a name="cstatusbarctrlcreateex"></a><a name="createex"></a>CStatusBarCtrl：：创建Ex
 
-创建一个控件（子窗口）并将其与 `CStatusBarCtrl` 对象相关联。
+创建控件（子窗口），并将其与`CStatusBarCtrl`对象关联。
 
 ```
 virtual BOOL CreateEx(
@@ -169,19 +169,19 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwExStyle*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
+指定要创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[创建 WindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
 
 *dwStyle*<br/>
-指定状态栏控件的样式。 应用 Windows SDK 中[常见控件样式](/windows/win32/Controls/common-control-styles)中列出的任何状态栏控件样式组合。 此参数必须包括 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。
+指定状态栏控件的样式。 应用 Windows SDK 中["通用控制样式](/windows/win32/Controls/common-control-styles)"中列出的状态栏控件样式的任意组合。 此参数必须包括WS_CHILD样式。 它还应包括WS_VISIBLE样式。
 
-*rect*<br/>
-对[矩形](/previous-versions/dd162897\(v=vs.85\))结构的引用，该结构描述要创建的窗口的大小和位置（以*pParentWnd*的工作区坐标表示）。
+*矩形*<br/>
+对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
-*pParentWnd*<br/>
-指向作为控件的父级的窗口的指针。
+*pparentwnd*<br/>
+指向控件的父窗口的指针。
 
 *nID*<br/>
 控件的子窗口 ID。
@@ -192,9 +192,9 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用 `CreateEx` 而不是[Create](#create)来应用扩展的 windows 样式，该样式由 Windows 扩展样式指定的前言**WS_EX_** 开头。
+使用`CreateEx`而不是["创建](#create)"来应用扩展的 Windows 样式，该样式由 Windows 扩展样式前言**WS_EX_** 指定。
 
-##  <a name="cstatusbarctrl"></a>CStatusBarCtrl：： CStatusBarCtrl
+## <a name="cstatusbarctrlcstatusbarctrl"></a><a name="cstatusbarctrl"></a>CStatusBarCtrl：CStatusBarCtrl
 
 构造 `CStatusBarCtrl` 对象。
 
@@ -202,30 +202,30 @@ virtual BOOL CreateEx(
 CStatusBarCtrl();
 ```
 
-##  <a name="drawitem"></a>CStatusBarCtrl：:D rawItem
+## <a name="cstatusbarctrldrawitem"></a><a name="drawitem"></a>CStatusBarCtrl：:D原始项目
 
-当所有者描述的状态栏控件的可视方位发生更改时由框架调用。
+当所有者绘制状态栏控件的可视方面发生更改时，由框架调用。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*lpDrawItemStruct*<br/>
-指向[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的长指针，该指针包含所需绘图类型的相关信息。
+*lpDraw 项目已结*<br/>
+指向[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的长指针，其中包含有关所需绘图类型的信息。
 
 ### <a name="remarks"></a>备注
 
-`DRAWITEMSTRUCT` 结构的 `itemAction` 成员定义要执行的绘图操作。
+`DRAWITEMSTRUCT`结构`itemAction`的成员定义要执行的绘图操作。
 
-默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现 `CStatusBarCtrl` 对象的所有者描述的绘图。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现所有者绘制对象的绘图`CStatusBarCtrl`。
 
-此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
+应用程序应还原在此成员函数终止之前为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口 （GDI） 对象。
 
-##  <a name="getborders"></a>CStatusBarCtrl：： GetBorders
+## <a name="cstatusbarctrlgetborders"></a><a name="getborders"></a>CStatusBarctrl：获取Borders
 
-检索状态栏控件的当前宽度和矩形之间的空白宽度。
+检索状态栏控件的水平和垂直边框以及矩形之间的空间的当前宽度。
 
 ```
 BOOL GetBorders(int* pBorders) const;
@@ -236,19 +236,19 @@ BOOL GetBorders(
     int& nSpacing) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pBorders*<br/>
 包含三个元素的整数数组的地址。 第一个元素接收水平边框的宽度，第二个元素接收垂直边框的宽度，第三个元素接收矩形之间的边框宽度。
 
-*nHorz*<br/>
-对接收水平边框宽度的整数的引用。
+*恩霍兹*<br/>
+引用接收水平边框宽度的整数。
 
-*N）*<br/>
-对接收垂直边框宽度的整数的引用。
+*nVert*<br/>
+引用接收垂直边框宽度的整数。
 
-*nSpacing*<br/>
-引用一个整数，该整数接收矩形之间的边框宽度。
+*n间距*<br/>
+引用接收矩形之间边框宽度的整数。
 
 ### <a name="return-value"></a>返回值
 
@@ -256,51 +256,51 @@ BOOL GetBorders(
 
 ### <a name="remarks"></a>备注
 
-这些边框确定控件外边缘与包含文本的控件中的矩形之间的间距。
+这些边框确定控件外边缘与控件中包含文本的矩形之间的间距。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]
 
-##  <a name="geticon"></a>CStatusBarCtrl：： GetIcon
+## <a name="cstatusbarctrlgeticon"></a><a name="geticon"></a>CStatusBarctrl：：GetIcon
 
-检索当前状态栏控件中部分（也称为窗格）的图标。
+检索当前状态栏控件中部件（也称为窗格）的图标。
 
 ```
 HICON GetIcon(int iPart) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
-|*iPart*|中部分的从零开始的索引，它包含要检索的图标。 如果此参数为-1，则将状态栏视为简单模式状态栏。|
+|*iPart*|[在]包含要检索的图标的零点索引。 如果此参数为 -1，则假定状态栏为简单模式状态栏。|
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为图标的句柄;否则为 NULL。
+如果方法成功，则图标的句柄;否则，NULL。
 
 ### <a name="remarks"></a>备注
 
-此方法发送 Windows SDK 中描述的[SB_GETICON](/windows/win32/Controls/sb-geticon)消息。
+此方法发送[SB_GETICON](/windows/win32/Controls/sb-geticon)消息，这在 Windows SDK 中介绍。
 
-状态栏控件由一行文本输出窗格（也称为部件）组成。 有关状态栏的详细信息，请参阅[MFC 中的状态栏实现](../../mfc/status-bar-implementation-in-mfc.md)和[设置 CStatusBarCtrl 对象的模式](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。
+状态栏控件由一行文本输出窗格组成，这些窗格也称为部件。 有关状态栏的详细信息，请参阅[MFC 中的状态栏实现](../../mfc/status-bar-implementation-in-mfc.md)和[设置 CStatusBarCtrl 对象的模式](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于访问当前状态栏控件的变量 `m_statusBar`。 此变量将在下一个示例中使用。
+以下代码示例定义用于访问当前状态栏`m_statusBar`控件的变量 。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例将一个图标复制到当前状态栏控件的两个窗格中。 在代码示例的前面部分中，我们创建了包含三个窗格的状态栏控件，然后将一个图标添加到第一个窗格。 此示例检索第一个窗格中的图标，然后将其添加到第二个和第三个窗格。
+以下代码示例将图标复制到当前状态栏控件的两个窗格中。 在代码示例的早期版本中，我们创建了一个包含三个窗格的状态栏控件，然后将图标添加到第一个窗格中。 本示例从第一个窗格中检索图标，然后将其添加到第二个和第三个窗格中。
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]
 
-##  <a name="getparts"></a>CStatusBarCtrl：： GetParts
+## <a name="cstatusbarctrlgetparts"></a><a name="getparts"></a>CStatusBarctrl：获取部件
 
-检索状态栏控件中部分的计数。
+检索状态栏控件中的零件计数。
 
 ```
 int GetParts(
@@ -308,29 +308,29 @@ int GetParts(
     int* pParts) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*nParts*<br/>
-要为其检索坐标的部分数。 如果此参数大于控件中的部分数，则消息仅检索现有部分的坐标。
+*n部件*<br/>
+要为其检索坐标的零件数。 如果此参数大于控件中的零件数，则消息仅检索现有零件的坐标。
 
-*pParts*<br/>
-整数数组的地址，其元素数与*nParts*指定的部分数相同。 数组中的每个元素都接收相应部件右边缘的工作区坐标。 如果元素设置为-1，则该部件的右边缘的位置将扩展到状态栏的右边缘。
+*p部件*<br/>
+整数数组的地址具有与*nParts*指定的零件数相同的元素数。 数组中的每个元素都接收相应零件右边缘的客户端坐标。 如果元素设置为 - 1，则该零件的右边缘位置将延伸到状态栏的右边缘。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为控件中的部件数; 否则为零。
+控件中的零件数（如果成功）或零。
 
 ### <a name="remarks"></a>备注
 
-此成员函数还检索给定数量的部分右边缘的坐标。
+此成员函数还检索给定零件数右边缘的坐标。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]
 
-##  <a name="getrect"></a>CStatusBarCtrl：： GetRect
+## <a name="cstatusbarctrlgetrect"></a><a name="getrect"></a>CStatusBarctrl：：获取 Rect
 
-检索状态栏控件中部件的边框。
+检索状态栏控件中零件的边界矩形。
 
 ```
 BOOL GetRect(
@@ -338,13 +338,13 @@ BOOL GetRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nPane*<br/>
-要检索其边框的部分的从零开始的索引。
+要检索其边界矩形的零点的零索引。
 
 *lpRect*<br/>
-接收边框的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的地址。
+接收边界矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的地址。
 
 ### <a name="return-value"></a>返回值
 
@@ -354,9 +354,9 @@ BOOL GetRect(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>CStatusBarCtrl：： GetText
+## <a name="cstatusbarctrlgettext"></a><a name="gettext"></a>CStatusBarctrl：获取文本
 
-检索来自状态栏控件给定部分的文本。
+从状态栏控件的给定部分检索文本。
 
 ```
 CString GetText(
@@ -369,36 +369,36 @@ int GetText(
     int* pType = NULL) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpszText*<br/>
-接收文本的缓冲区的地址。 此参数为以 null 值结束的字符串。
+接收文本的缓冲区的地址。 此参数是一个 null 端接字符串。
 
 *nPane*<br/>
-要从中检索文本的部分的从零开始的索引。
+从中检索文本的零索引。
 
-*pType*<br/>
+*p类型*<br/>
 指向接收类型信息的整数的指针。 类型可以是以下值之一：
 
-- **0**用边框绘制文本，使其显示在状态栏的底部。
+- **0**用边框绘制文本以显示低于状态栏的平面。
 
-- SBT_NOBORDERS 绘制不带边框的文本。
+- SBT_NOBORDERS文本绘制时没有边框。
 
-- SBT_POPOUT 使用边框绘制文本，使其显示在状态栏上方。
+- SBT_POPOUT使用边框绘制文本以显示高于状态栏的平面。
 
-- SBT_OWNERDRAW 如果文本具有 SBT_OWNERDRAW 绘制类型，则*pType*将接收此消息，并返回与文本关联的32位值，而不是长度和操作类型。
+- SBT_OWNERDRAW如果文本具有SBT_OWNERDRAW绘图类型 *，pType*将收到此消息并返回与文本关联的 32 位值，而不是长度和操作类型。
 
 ### <a name="return-value"></a>返回值
 
-文本或包含当前文本的[CString](../../atl-mfc-shared/reference/cstringt-class.md)的长度（以字符为字符）。
+包含当前文本的文本或[CString](../../atl-mfc-shared/reference/cstringt-class.md)的长度（以字符表示）。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>CStatusBarCtrl：： GetTextLength
+## <a name="cstatusbarctrlgettextlength"></a><a name="gettextlength"></a>CStatusBarctrl：获取文本长度
 
-检索状态栏控件给定部分文本的长度（以字符为字符）。
+从状态栏控件的给定部分检索文本的长度（以字符表示）。
 
 ```
 int GetTextLength(
@@ -406,31 +406,31 @@ int GetTextLength(
     int* pType = NULL) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nPane*<br/>
-要从中检索文本的部分的从零开始的索引。
+从中检索文本的零索引。
 
-*pType*<br/>
+*p类型*<br/>
 指向接收类型信息的整数的指针。 类型可以是以下值之一：
 
-- **0**用边框绘制文本，使其显示在状态栏的底部。
+- **0**用边框绘制文本以显示低于状态栏的平面。
 
-- SBT_NOBORDERS 绘制不带边框的文本。
+- SBT_NOBORDERS文本绘制时没有边框。
 
-- SBT_OWNERDRAW 父窗口绘制的文本。
+- SBT_OWNERDRAW文本由父窗口绘制。
 
-- SBT_POPOUT 使用边框绘制文本，使其显示在状态栏上方。
+- SBT_POPOUT使用边框绘制文本以显示高于状态栏的平面。
 
 ### <a name="return-value"></a>返回值
 
-文本的长度（以字符为字符）。
+文本的长度（以字符表示）。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
-##  <a name="gettiptext"></a>CStatusBarCtrl：： GetTipText
+## <a name="cstatusbarctrlgettiptext"></a><a name="gettiptext"></a>CStatusBarctrl：：获取提示文本
 
 检索状态栏中窗格的工具提示文本。
 
@@ -438,26 +438,26 @@ int GetTextLength(
 CString GetTipText(int nPane) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nPane*<br/>
-用于接收工具提示文本的状态栏窗格的从零开始的索引。
+用于接收工具提示文本的状态栏窗格的零索引。
 
 ### <a name="return-value"></a>返回值
 
-一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含要在工具提示中使用的文本。
+包含要在工具提示中使用的文本的[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext)的行为，如 Windows SDK 中所述。
+此成员函数实现 win32 消息[SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext)的行为，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]
 
-##  <a name="issimple"></a>CStatusBarCtrl：： IsSimple
+## <a name="cstatusbarctrlissimple"></a><a name="issimple"></a>CStatusBarctrl：：简单
 
-检查状态窗口控件以确定其是否处于简单模式。
+检查状态窗口控件以确定它是否处于简单模式。
 
 ```
 BOOL IsSimple() const;
@@ -465,28 +465,28 @@ BOOL IsSimple() const;
 
 ### <a name="return-value"></a>返回值
 
-如果状态窗口控件处于简单模式，则为非零值;否则为零。
+如果状态窗口控件处于简单模式，则非零;否则为零。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[SB_ISSIMPLE](/windows/win32/Controls/sb-issimple)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[的行为SB_ISSIMPLE](/windows/win32/Controls/sb-issimple)，如 Windows SDK 中所述。
 
-##  <a name="setbkcolor"></a>CStatusBarCtrl：： SetBkColor
+## <a name="cstatusbarctrlsetbkcolor"></a><a name="setbkcolor"></a>CStatusBarctrl：SetBkColor
 
-设置状态栏中的背景色。
+在状态栏中设置背景颜色。
 
 ```
 COLORREF SetBkColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*回车*<br/>
-指定新背景色的 COLORREF 值。 指定 CLR_DEFAULT 值以使状态栏使用其默认背景色。
+*铬*<br/>
+指定新背景颜色的 COLORREF 值。 指定CLR_DEFAULT值，使状态栏使用其默认背景颜色。
 
 ### <a name="return-value"></a>返回值
 
-一个[COLORREF](/windows/win32/gdi/colorref)值，该值表示以前的默认背景色。
+表示上一个默认背景颜色的[COLORREF](/windows/win32/gdi/colorref)值。
 
 ### <a name="remarks"></a>备注
 
@@ -496,7 +496,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]
 
-##  <a name="seticon"></a>CStatusBarCtrl：： SetIcon
+## <a name="cstatusbarctrlseticon"></a><a name="seticon"></a>CStatusBarctrl：：SetIcon
 
 设置状态栏中窗格的图标。
 
@@ -506,13 +506,13 @@ BOOL SetIcon(
     HICON hIcon);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nPane*<br/>
-将接收图标的窗格的从零开始的索引。 如果此参数为-1，则将状态栏视为一个简单的状态栏。
+将接收图标的窗格的零基索引。 如果此参数为 -1，则假定状态栏为简单状态栏。
 
 *hIcon*<br/>
-要设置的图标的句柄。 如果此值为 NULL，则从该部分中删除该图标。
+句柄到要设置的图标。 如果此值为 NULL，则图标将从零件中删除。
 
 ### <a name="return-value"></a>返回值
 
@@ -524,32 +524,32 @@ BOOL SetIcon(
 
 ### <a name="example"></a>示例
 
-  请参阅[CStatusBarCtrl：： SetBkColor](#setbkcolor)的示例。
+  请参阅[CStatusBarCtrl 的示例：setBkColor](#setbkcolor)。
 
-##  <a name="setminheight"></a>CStatusBarCtrl：： SetMinHeight
+## <a name="cstatusbarctrlsetminheight"></a><a name="setminheight"></a>CStatusBarctrl：setMinHeight
 
-设置状态栏控件的绘图区域的最小高度。
+设置状态条控件的绘图区域的最小高度。
 
 ```
 void SetMinHeight(int nMin);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nMin*<br/>
 控件的最小高度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-最小高度是*nMin*与状态栏控件的垂直边框宽度（以像素为单位）的总和。
+最小高度是*nMin*和两倍的宽度（以像素为单位）的状态栏控件的垂直边框的总和。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]
 
-##  <a name="setparts"></a>CStatusBarCtrl：： SetParts
+## <a name="cstatusbarctrlsetparts"></a><a name="setparts"></a>CStatusBarctrl：：设置部件
 
-设置状态栏控件中的部件数以及每个部件的右边缘的坐标。
+设置状态条控件中的零件数和每个零件右边缘的坐标。
 
 ```
 BOOL SetParts(
@@ -557,13 +557,13 @@ BOOL SetParts(
     int* pWidths);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*nParts*<br/>
-要设置的部分数。 部分数不能大于255。
+*n部件*<br/>
+要设置的零件数。 零件数不能大于 255。
 
 *pWidths*<br/>
-整数数组的地址，其元素数与*nParts*指定的部分的元素数相同。 数组中的每个元素指定相应部件右边缘的位置（以工作区坐标表示）。 如果元素为-1，则该部件的右边缘的位置将扩展到控件的右边缘。
+整数数组的地址具有与*nParts*指定的零件相同的元素数。 数组中的每个元素指定相应零件右边缘的位置（在客户端坐标中）。 如果元素为 - 1，则该零件的右边缘位置将延伸到控件的右边缘。
 
 ### <a name="return-value"></a>返回值
 
@@ -573,18 +573,18 @@ BOOL SetParts(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]
 
-##  <a name="setsimple"></a>CStatusBarCtrl：： SetSimple
+## <a name="cstatusbarctrlsetsimple"></a><a name="setsimple"></a>CStatusBarctrl：设置简单
 
-指定状态栏控件是显示简单文本还是显示通过之前对[SetParts](#setparts)的调用设置的所有控件部件。
+指定状态栏控件是显示简单文本还是显示以前调用[SetParts](#setparts)设置的所有控件部件。
 
 ```
 BOOL SetSimple(BOOL bSimple = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*bSimple*<br/>
-中显示类型标志。 如果此参数为 TRUE，则控件显示简单文本;如果它为 FALSE，则显示多个部件。
+*b 简单*<br/>
+[在]显示类型标志。 如果此参数为 TRUE，则控件将显示简单文本;如果此参数为 TRUE，则控件将显示简单文本。如果是 FALSE，则显示多个部件。
 
 ### <a name="return-value"></a>返回值
 
@@ -592,9 +592,9 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 
 ### <a name="remarks"></a>备注
 
-如果你的应用程序将状态栏控件从 "非简单" 更改为 "简单"，反之亦然，系统会立即重绘控件。
+如果应用程序将状态栏控件从非简单更改为简单，反之亦然，系统将立即重绘该控件。
 
-##  <a name="settext"></a>CStatusBarCtrl：： SetText
+## <a name="cstatusbarctrlsettext"></a><a name="settext"></a>CStatusBarctrl：：设置文本
 
 设置状态栏控件给定部分中的文本。
 
@@ -605,16 +605,16 @@ BOOL SetText(
     int nType);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpszText*<br/>
-用于指定要设置的文本且以 Null 结尾的字符串的地址。 如果 SBT_OWNERDRAW *n* ，则*lpszText*表示32位数据。
+用于指定要设置的文本且以 Null 结尾的字符串的地址。 如果*nType*是SBT_OWNERDRAW，*则 lpszText*表示 32 位数据。
 
 *nPane*<br/>
 要设置部件的从零开始的索引。 如果此值为 255，则假定状态栏控件是仅具有一个部件的简单控件。
 
-nType<br/>
-绘制操作的类型。 有关可能值的列表，请参阅[SB_SETTEXT 消息](/windows/win32/Controls/sb-settext)。
+nType**<br/>
+绘制操作的类型。 有关可能值的列表，请参阅[SB_SETTEXT消息](/windows/win32/Controls/sb-settext)。
 
 ### <a name="return-value"></a>返回值
 
@@ -622,13 +622,13 @@ nType<br/>
 
 ### <a name="remarks"></a>备注
 
-此消息会使控件中已更改的部分无效，导致控件下一次接收到 WM_PAINT 消息时显示新文本。
+该消息使控件部分已更改无效，从而导致在控件下次收到WM_PAINT消息时显示新文本。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
-##  <a name="settiptext"></a>CStatusBarCtrl：： SetTipText
+## <a name="cstatusbarctrlsettiptext"></a><a name="settiptext"></a>CStatusBarctrl：：SetTipText
 
 设置状态栏中窗格的工具提示文本。
 
@@ -638,12 +638,12 @@ void SetTipText(
     LPCTSTR pszTipText);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nPane*<br/>
-用于接收工具提示文本的状态栏窗格的从零开始的索引。
+用于接收工具提示文本的状态栏窗格的零索引。
 
-*pszTipText*<br/>
+*pssTip文本*<br/>
 指向包含工具提示文本的字符串的指针。
 
 ### <a name="remarks"></a>备注
@@ -657,5 +657,5 @@ void SetTipText(
 ## <a name="see-also"></a>另请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CToolBarCtrl 类](../../mfc/reference/ctoolbarctrl-class.md)

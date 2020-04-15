@@ -1,6 +1,6 @@
 ---
 title: _strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsnicmp
 - _strnicmp_l
@@ -8,6 +8,12 @@ api_name:
 - _strnicmp
 - _mbsnicmp
 - _mbsnicmp_l
+- _o__mbsnicmp
+- _o__mbsnicmp_l
+- _o__strnicmp
+- _o__strnicmp_l
+- _o__wcsnicmp
+- _o__wcsnicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -69,19 +76,19 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 6d1645c33684f5a0fbabc2119592c39a7df97ca3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0bde60a230f1fd428716073471cd85b2728a614
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364831"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l
 
 比较两个字符串中指定数目的字符（不考虑大小写）。
 
 > [!IMPORTANT]
-> **_mbsnicmp**和 **_mbsnicmp_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnicmp**和 **_mbsnicmp_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -123,36 +130,38 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>参数
 
-*string1*、 *string2*<br/>
+*字符串1*，*字符串2*<br/>
 要比较的 null 终止的字符串。
 
 *count*<br/>
 要比较的字符数。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
 指示子字符串之间的关系，如下所示。
 
-|返回值|描述|
+|返回值|说明|
 |------------------|-----------------|
-|< 0|*string1*子串小于*string2*子字符串。|
-|0|*string1* substring 与*string2*子串完全相同。|
-|> 0|*string1*子串大于*string2*子字符串。|
+|< 0|*字符串 1*子字符串小于*string2*子字符串。|
+|0|*字符串1*子字符串与*string2*子字符串相同。|
+|> 0|*字符串 1*子字符串大于*string2*子字符串。|
 
-在参数验证错误中，这些函数返回 **_NLSCMPERROR**，它在 string .h \<> 和\<mbstring.h > 中定义。
+在参数验证错误时，这些函数返回 **_NLSCMPERROR**，该函数在\<string.h \<> 和 mbstring.h>中定义。
 
 ## <a name="remarks"></a>备注
 
-**_Strnicmp**函数按序号最多比较*string1*和*string2*的第一个*计数*字符。 通过将每个字符转换为小写进行不区分大小写的比较。 **_strnicmp**是**strncmp**的不区分大小写的版本。 如果在比较*计数*字符之前的任一字符串中达到终止 null 字符，则比较结束。 如果在比较*计数*字符之前的任一字符串中达到终止 null 字符时字符串相等，则较短的字符串较小。
+**_strnicmp**函数最多比较*string1*和*string2*的第一*个计数*字符。 通过将每个字符转换为小写进行不区分大小写的比较。 **_strnicmp**是一个不区分大小写的**Strncmp**版本。 如果在比较*计数*字符之前在任一字符串中到达终止空字符，则比较结束。 如果在比较*计数*字符之前在任一字符串中到达终止空字符时，字符串相等，则较短的字符串较小。
 
-ASCII 表中从 91 到 96 的字符（“[”、“\\”、“]”、“^”、“_”和“\`”）的计算结果小于任意字母字符。 此顺序与**stricmp**的顺序相同。
+ASCII 表中从 91 到 96 的字符（“[”、“\\”、“]”、“^”、“_”和“\`”）的计算结果小于任意字母字符。 这种排序与**stricmp**相同。
 
-**_wcsnicmp**和 **_mbsnicmp**是 **_strnicmp**的宽字符和多字节字符版本。 **_Wcsnicmp**的参数是宽字符字符串; **_mbsnicmp**的这些字符串是多字节字符字符串。 **_mbsnicmp**根据当前的多字节代码页识别多字节字符序列，并在发生错误时返回 **_NLSCMPERROR** 。 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 否则这三个函数否则具有相同行为。 这些函数受到区域设置的影响：没有 **_l**后缀的版本对其与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本改为使用传入的*区域设置*。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_wcsnicmp**和 **_mbsnicmp**是宽字符和多字节字符版本的 **_strnicmp**。 **_wcsnicmp**的参数是宽字符字符串;**_mbsnicmp**的字符串是多字节字符串。 **_mbsnicmp**根据当前多字节代码页识别多字节字符序列，并在错误时**返回_NLSCMPERROR。** 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 否则这三个函数否则具有相同行为。 这些函数受区域设置的影响 - 没有 **_l**后缀的版本使用当前区域设置来执行与区域设置相关的行为;具有 **_l**后缀的版本，而是使用传入*区域设置*。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-所有这些函数都验证其参数。 如果*string1*或*string2*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
+所有这些函数都验证其参数。 如果*string1*或*string2*是空指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将**返回_NLSCMPERROR**并将**errno**设置为**EINVAL**。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -164,19 +173,19 @@ ASCII 表中从 91 到 96 的字符（“[”、“\\”、“]”、“^”、�
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**_strnicmp**、 **_strnicmp_l**|\<string.h>|
-|**_wcsnicmp**、 **_wcsnicmp_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsnicmp**、 **_mbsnicmp_l**|\<mbstring.h>|
+|**_strnicmp**， **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**， **_wcsnicmp_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsnicmp**， **_mbsnicmp_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [strncme](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>

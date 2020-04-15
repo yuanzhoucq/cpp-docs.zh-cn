@@ -1,8 +1,9 @@
 ---
 title: terminate (CRT)
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - terminate
+- _o_terminate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1aa95daeab424c933f10060fb4f87cb317aa188c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946200"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362546"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-调用[abort](abort.md)或使用**set_terminate**指定的函数。
+调用[中止](abort.md)或使用**set_terminate**指定的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -44,7 +46,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>备注
 
-**Terminate**函数与C++异常处理一起使用，并在以下情况下调用：
+**终止**函数用于C++异常处理，并在以下情况下调用：
 
 - 无法为引发的 C++ 异常找到匹配的 catch 处理程序。
 
@@ -52,15 +54,17 @@ void terminate( void );
 
 - 在引发异常后，堆栈已损坏。
 
-默认情况下，**终止**调用[中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用**set_terminate** ，并将函数名称作为其参数。 **terminate**调用作为**set_terminate**的参数提供的最后一个函数。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
+默认情况下**终止**呼叫[中止](abort.md)。 您可以通过编写自己的终止函数并将函数**的名称称为参数**set_terminate来更改此默认值。 **终止**调用作为参数给出的最后一个函数**set_terminate**。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**terminate**|\<eh.h>|
+|**终止**|\<eh.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -108,11 +112,11 @@ void term_func()
 term_func() was called by terminate().
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[中止](abort.md)<br/>
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[意外](unexpected-crt.md)<br/>

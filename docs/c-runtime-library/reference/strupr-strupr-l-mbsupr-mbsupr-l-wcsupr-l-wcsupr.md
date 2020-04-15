@@ -1,6 +1,6 @@
 ---
 title: _strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsupr_l
 - _mbsupr
@@ -8,6 +8,12 @@ api_name:
 - _wcsupr
 - _wcsupr_l
 - _strupr
+- _o__mbsupr
+- _o__mbsupr_l
+- _o__strupr
+- _o__strupr_l
+- _o__wcsupr
+- _o__wcsupr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +70,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: 8078bddd022032196c0e10cd54b0ad68d9c71419
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5127c6f0be6375585be3b321788ba04a91364e57
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957571"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362895"
 ---
 # <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 
-将字符串转换成大写形式。 提供这些函数的更多安全版本，请参阅 [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)。
+将字符串转换为大写。 提供这些函数的更多安全版本，请参阅 [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsupr**和 **_mbsupr_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsupr****和_mbsupr_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -132,10 +139,10 @@ unsigned char *_mbsupr_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*Str*<br/>
 大写字符串。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -144,13 +151,15 @@ unsigned char *_mbsupr_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strupr**函数将*字符串*中的每个小写字母就地转换为大写形式。 该转换由区域设置的**LC_CTYPE**类别设置确定。 其他字符不受影响。 有关**LC_CTYPE**的详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l**后缀的函数的版本使用当前区域设置;带有 **_l**后缀的版本相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_strupr**函数将每个小写字母以*str*转换为大写。 转换由区域设置**LC_CTYPE**类别设置确定。 其他字符不受影响。 有关**LC_CTYPE**的详细信息，请参阅[设置区域设置](setlocale-wsetlocale.md)。 没有 **_l**后缀的这些函数的版本使用当前区域设置;具有 **_l**后缀的版本是相同的，只是它们使用传入区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**_wcsupr**和 **_mbsupr**是 **_strupr**的宽字符和多字节字符版本。 **_Wcsupr**的参数和返回值是宽字符字符串; **_mbsupr**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_wcsupr**和 **_mbsupr**是宽字符和多字节字符版本的 **_strupr。** **_wcsupr**的参数和返回值是宽字符字符串;**_mbsupr**的字符串是多字节字符串。 否则这三个函数否则具有相同行为。
 
-如果*str*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回原始字符串，并将**errno**设置为**EINVAL**。
+如果*str*是空指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将返回原始字符串并将**errno**设置为**EINVAL**。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -161,20 +170,20 @@ unsigned char *_mbsupr_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**_strupr**、 **_strupr_l**|\<string.h>|
-|**_wcsupr**、 **_wcsupr_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsupr**、 **_mbsupr_l**|\<mbstring.h>|
+|**_strupr**， **_strupr_l**|\<string.h>|
+|**_wcsupr**， **_wcsupr_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsupr**， **_mbsupr_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)<br/>

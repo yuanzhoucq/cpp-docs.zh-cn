@@ -1,6 +1,6 @@
 ---
 title: _strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strlwr_l
 - _strlwr
@@ -8,6 +8,12 @@ api_name:
 - _mbslwr_l
 - _wcslwr
 - _mbslwr
+- _o__mbslwr
+- _o__mbslwr_l
+- _o__strlwr
+- _o__strlwr_l
+- _o__wcslwr
+- _o__wcslwr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -60,19 +67,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 7393f634aeb7de0e8e65866dc11c6d41cc9de6b8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 40bf64af8284d84c6e58bcb3e8591a1ef6fc9f48
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947432"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363818"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
 
-将字符串转换成小写形式。 这些函数的更安全版本已经发布，请参阅 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l ](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。
+将字符串转换为小写。 这些函数的更安全版本已经发布，请参阅 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l ](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbslwr**和 **_mbslwr_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbslwr**和 **_mbslwr_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -129,10 +136,10 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*Str*<br/>
 null 终止的字符串转换为小写。
 
-*locale*<br/>
+*现场*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -141,13 +148,15 @@ null 终止的字符串转换为小写。
 
 ## <a name="remarks"></a>备注
 
-**_Strlwr**函数将*str*中的所有大写字母转换为小写字母，由区域设置的**LC_CTYPE**类别设置确定。 其他字符不受影响。 有关**LC_CTYPE**的详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_strlwr**函数将*str*中的任何大写字母转换为小写字母，由区域设置**的LC_CTYPE**类别设置确定。 其他字符不受影响。 有关**LC_CTYPE**的详细信息，请参阅[设置区域设置](setlocale-wsetlocale.md)。 没有 **_l**后缀的这些函数的版本使用当前区域设置来执行与区域设置相关的行为;具有 **_l**后缀的版本是相同的，只是它们使用传入区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**_Wcslwr**和 **_mbslwr**函数为 **_strlwr**的宽字符和多字节字符版本。 **_Wcslwr**的参数和返回值是宽字符字符串; **_mbslwr**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_wcslwr**和 **_mbslwr**函数是宽字符和多字节字符版本的 **_strlwr。** **_wcslwr**的参数和返回值是宽字符字符串;**_mbslwr**是多字节字符串。 否则这三个函数否则具有相同行为。
 
-如果*str*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回原始字符串，并将**errno**设置为**EINVAL**。
+如果*str*是**NULL**指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将返回原始字符串并将**errno**设置为**EINVAL**。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -158,13 +167,13 @@ null 终止的字符串转换为小写。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**_strlwr**、 **_strlwr_l**|\<string.h>|
-|**_wcslwr**、 **_wcslwr_l**|\<string.h> 或 \<wchar.h>|
-|**_mbslwr**、 **_mbslwr_l**|\<mbstring.h>|
+|**_strlwr**， **_strlwr_l**|\<string.h>|
+|**_wcslwr**， **_wcslwr_l**|\<string.h> 或 \<wchar.h>|
+|**_mbslwr**， **_mbslwr_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -202,8 +211,8 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[现场](../../c-runtime-library/locale.md)<br/>
 [_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

@@ -80,18 +80,18 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db5f0b3c6b48a3704803d77242904e25e053b7ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363383"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 类
 
-`CMultiPaneFrameWnd`类用于扩展[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄`CMultiPaneFrameWnd`包含[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象，它使用户能够将一个停靠`CMultiPaneFrameWnd`到另一个并动态创建多个浮动、 选项卡式windows。
+该`CMultiPaneFrameWnd`类扩展[了 CPaneFramewnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 包含一个[CPaneContainerManager Class](../../mfc/reference/cpanecontainermanager-class.md) `CMultiPaneFrameWnd`对象，该对象允许用户将一个句柄停靠到另一个`CMultiPaneFrameWnd`，并动态创建多个浮动的选项卡式窗口，而不是控件栏的单个嵌入句柄。
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -103,59 +103,59 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMultiPaneFrameWnd::AddPane](#addpane)|添加窗格。 (重写[CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane)。)|
-|[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||
-|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|调整微型框架窗口的布局。 (重写[CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout)。)|
-|[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(重写[CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes)。)|
-|[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|计算停靠窗口的预期的矩形。 (重写[CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect)。)|
-|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|确定是否当前窗格可以停靠到另一个窗格或框架窗口。 (重写[CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached)。)|
-|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|确定微型框架窗口是否可以停靠窗格。 (重写[CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane)。)|
-|[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(重写[CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility)。)|
-|[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|（重写 `CPaneFrameWnd::CloseMiniFrame`。）|
-|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|将窗格转换为选项卡式文档。 (重写[CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument)。)|
-|[CMultiPaneFrameWnd::DockFrame](#dockframe)||
-|[CMultiPaneFrameWnd::DockPane](#dockpane)|停靠窗格。 (重写[CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane)。)|
-|[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||
-|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|返回标题文本。 (重写[CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext)。)|
-|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|返回对内部容器管理器对象的引用。|
-|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|返回包含在微型框架窗口中的第一个可见窗格。 (重写[CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane)。)|
-|[CMultiPaneFrameWnd::GetPane](#getpane)|返回包含在微型框架窗口中的窗格。 (重写[CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane)。)|
-|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|返回包含在微型框架窗口中的窗格数。 (重写[CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount)。)|
-|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|返回包含在微型框架窗口中的可见窗格数。 (重写[CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount)。)|
-|[CMultiPaneFrameWnd::InsertPane](#insertpane)||
-|[CMultiPaneFrameWnd::LoadState](#loadstate)|从注册表加载窗格的状态。 (重写[CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate)。)|
-|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|将微型框架窗口停靠在其最新的位置。 (重写[CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos)。)|
-|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|停止汇总计时器。 (重写[CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer)。)|
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|调整微型框架窗口中窗格的布局。 (重写[CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout)。)|
-|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|设置汇总计时器。 (重写[CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer)。)|
-|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|隐藏或显示微型框架窗口的窗格时，由框架进行调用。 (重写[CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane)。)|
-|[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|如果窗格在微型框架窗口内包含用户提供的点，则返回窗格。 (重写[CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint)。)|
-|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|由框架调用以删除非有效窗格。 (重写[CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes)。)|
-|[CMultiPaneFrameWnd::RemovePane](#removepane)|从微型框架窗口删除窗格。 (重写[CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane)。)|
-|[CMultiPaneFrameWnd::ReplacePane](#replacepane)|用一个窗格替换另一个窗格。 (重写[CPaneFrameWnd::ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane)。)|
-|[CMultiPaneFrameWnd::SaveState](#savestate)|将窗格的状态保存到注册表。 (重写[CPaneFrameWnd::SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate)。)|
-|[CMultiPaneFrameWnd::Serialize](#serialize)|（重写 `CPaneFrameWnd::Serialize`。）|
-|[CMultiPaneFrameWnd::SetDockState](#setdockstate)|设置停靠状态。 (重写[CPaneFrameWnd::SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate)。)|
-|[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||
-|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|设置预停靠状态。 (重写[CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate)。)|
-|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(重写[CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo)。)|
-|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(重写[CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo)。)|
+|[C 多窗格框架：：添加窗格](#addpane)|添加窗格。 （覆盖[CPaneFramewnd：：添加窗格](../../mfc/reference/cpaneframewnd-class.md#addpane).）|
+|[C 多窗格框架：：添加最新窗格](#addrecentpane)||
+|[C 多窗格框架：：调整布局](#adjustlayout)|调整微型框架窗口的布局。 （覆盖[CPaneFramewnd：：调整布局](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).）|
+|[C 多窗格框架：：调整窗格框架](#adjustpaneframes)|（覆盖[CPaneFramewnd：调整窗格帧](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes)。|
+|[C 多窗格框架：：钙化物多克](#calcexpecteddockedrect)|计算停靠窗口的预期矩形。 （覆盖[CPaneFramewnd：：Calc预期多克已重新](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect)使用 .）|
+|[C 多窗格框架：：可附加](#canbeattached)|确定当前窗格是否可以停靠到另一个窗格或框架窗口。 （覆盖[CPaneFramewnd：：可以附加](../../mfc/reference/cpaneframewnd-class.md#canbeattached).）|
+|[C 多窗格框架：：可多克托帕](#canbedockedtopane)|确定微型框架窗口是否可以停靠到窗格。 （覆盖[CPaneframewnd：：可以装对窗格](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).）|
+|[C 多窗格框架：：检查夹持可见性](#checkgrippervisibility)|（覆盖[CPaneFramewnd：：检查夹持可见度](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).）|
+|[C 多窗格框架：：关闭迷你框架](#closeminiframe)|（重写 `CPaneFrameWnd::CloseMiniFrame`。）|
+|[C 多窗格框架：：转换到选项卡文档](#converttotabbeddocument)|将窗格转换为选项卡式文档。 （覆盖[CPaneframewnd：：转换到 Tabbed 文档](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).）|
+|[C 多窗格框架：:DockFrame](#dockframe)||
+|[C 多窗格框架：:Dockpane](#dockpane)|停靠窗格。 （覆盖[CPaneFramewnd：:Dockpane](../../mfc/reference/cpaneframewnd-class.md#dockpane).）|
+|[C 多窗格框架：:D最近窗格到大型框架](#dockrecentpanetomainframe)||
+|[C 多窗格框架：：获取字幕文本](#getcaptiontext)|返回标题文本。 （覆盖[CPaneFramewnd：获取字幕文本](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).）|
+|[C 多窗格框架：：获取窗格容器管理器](#getpanecontainermanager)|返回对内部容器管理器对象的引用。|
+|[C 多窗格框架：：获取第一个可见窗格](#getfirstvisiblepane)|返回包含在微型框架窗口中的第一个可见窗格。 （覆盖[CPaneFramewnd：获取第一个可见窗格](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane)。）|
+|[C 多窗格框架：：获取窗格](#getpane)|返回包含在微型框架窗口中的窗格。 （覆盖[CPaneFramewnd：getPane](../../mfc/reference/cpaneframewnd-class.md#getpane).）|
+|[C 多窗格框架：：获取窗格计数](#getpanecount)|返回包含在微型框架窗口中的窗格数。 （覆盖[CPaneFramewnd：获取窗格计数](../../mfc/reference/cpaneframewnd-class.md#getpanecount).）|
+|[C 多窗格框架：：获取可见窗格计数](#getvisiblepanecount)|返回包含在微型框架窗口中的可见窗格数。 （覆盖[CPaneFramewnd：获取可见窗格计数](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount)。|
+|[C 多窗格框架：：插入窗格](#insertpane)||
+|[C 多窗格框架：：加载状态](#loadstate)|从注册表加载窗格的状态。 （覆盖[CPaneFramewnd：：加载状态](../../mfc/reference/cpaneframewnd-class.md#loadstate).）|
+|[C 多窗格框架：：在多克到最新Pos](#ondocktorecentpos)|将微型框架窗口停靠在其最新的位置。 （覆盖[CPaneframewnd：ondock 到最新Pos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos). ）|
+|[C 多窗格框架：：在基基尔罗普普计时器上](#onkillrolluptimer)|停止汇总计时器。 （覆盖[CPaneframewnd：：在 KillrollupTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer)上。|
+|[C 多窗格框架：：在窗格Recalc布局上](#onpanerecalclayout)|调整小型框架窗口中窗格的布局。 （覆盖[CPaneFramewnd：onPaneRecalclayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).）|
+|[C 多窗格框架：：打开滚动计时器](#onsetrolluptimer)|设置汇总计时器。 （覆盖[CPaneframewnd：onSetrolluptimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).）|
+|[C 多窗格框架：：在显示窗格上](#onshowpane)|隐藏或显示微型框架窗口的窗格时，由框架进行调用。 （覆盖[CPaneFramewnd：上显示窗格](../../mfc/reference/cpaneframewnd-class.md#onshowpane).）|
+|[C 多窗格框架：:P从点](#panefrompoint)|如果窗格在微型框架窗口内包含用户提供的点，则返回窗格。 （覆盖[CPaneFramewnd：:P从点](../../mfc/reference/cpaneframewnd-class.md#panefrompoint). ）|
+|[C 多窗格框架：：删除非有效窗格](#removenonvalidpanes)|由框架调用以删除非有效窗格。 （覆盖[CPaneFramewnd：：删除 NonValidPane.）](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes)|
+|[C 多窗格框架：：删除窗格](#removepane)|从微型框架窗口删除窗格。 （覆盖[CPaneFramewnd：：删除窗格](../../mfc/reference/cpaneframewnd-class.md#removepane).）|
+|[C 多窗格框架：：替换窗格](#replacepane)|用一个窗格替换另一个窗格。 （覆盖[CPaneFramewnd：：替换窗格](../../mfc/reference/cpaneframewnd-class.md#replacepane).）|
+|[C 多窗格框架：：保存状态](#savestate)|将窗格的状态保存到注册表。 （覆盖[CPaneFramewnd：：保存状态](../../mfc/reference/cpaneframewnd-class.md#savestate).）|
+|[C 多窗格框架：：序列化](#serialize)|（重写 `CPaneFrameWnd::Serialize`。）|
+|[C 多窗格框架：：SetDockstate](#setdockstate)|设置停靠状态。 （覆盖[CPaneFramewnd：setDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate).）|
+|[C 多窗格框架：：设置最后聚焦窗格](#setlastfocusedpane)||
+|[C 多窗格框架：：设置前坞州](#setpredockstate)|设置预停靠状态。 （覆盖[CPaneFramewnd：设置 PreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).）|
+|[C 多窗格框架：：存储最新网站信息](#storerecentdocksiteinfo)|（覆盖[CPaneFramewnd：：存储最近网站网站信息](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).）|
+|[C 多窗格框架：：存储最新标签相关信息](#storerecenttabrelatedinfo)|（覆盖[CPaneFramewnd：：存储最近标签相关信息](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).）|
 
 ## <a name="remarks"></a>备注
 
-大多数此类中的方法中重写方法[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)类。
+此类中的大多数方法重写[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)中的方法。
 
-如果窗格使用 AFX_CBRS_AUTO_ROLLUP 样式，并且用户将该窗格停靠到窗格中多框架窗口，用户可以汇总而不考虑其他停靠窗格的样式设置窗口。
+如果窗格使用AFX_CBRS_AUTO_ROLLUP样式，并且用户将该窗格停靠到多窗格框架窗口，则无论其他停靠窗格的样式设置如何，用户都可以向上滚动窗口。
 
-框架会自动创建`CMultiPaneFrameWnd`时用户中时浮动窗格使用 CBRS_FLOAT_MULTI 样式的对象。
+当用户浮动使用CBRS_FLOAT_MULTI样式`CMultiPaneFrameWnd`的窗格时，框架会自动创建一个对象。
 
-有关派生的类从信息`CPaneFrameWnd`类，并动态创建，请参见[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。
+有关从`CPaneFrameWnd`类派生类并动态创建类的信息，请参阅[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何检索一个指向`CMultiPaneFrameWnd`对象。 此代码片段属于[设置窗格大小示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何检索指向`CMultiPaneFrameWnd`对象的指针。 此代码段是["设置窗格大小"示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]
 
@@ -173,9 +173,9 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxMultiPaneFrameWnd.h
+**标题：** afx 多窗格框架.h
 
-##  <a name="addpane"></a>  CMultiPaneFrameWnd::AddPane
+## <a name="cmultipaneframewndaddpane"></a><a name="addpane"></a>C 多窗格框架：：添加窗格
 
 ```
 virtual void AddPane(CBasePane* pWnd);
@@ -183,11 +183,11 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>参数
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="addrecentpane"></a>  CMultiPaneFrameWnd::AddRecentPane
+## <a name="cmultipaneframewndaddrecentpane"></a><a name="addrecentpane"></a>C 多窗格框架：：添加最新窗格
 
 ```
 virtual BOOL AddRecentPane(CDockablePane* pBar);
@@ -195,13 +195,13 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>参数
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="adjustlayout"></a>  CMultiPaneFrameWnd::AdjustLayout
+## <a name="cmultipaneframewndadjustlayout"></a><a name="adjustlayout"></a>C 多窗格框架：：调整布局
 
 ```
 virtual void AdjustLayout();
@@ -209,7 +209,7 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="adjustpaneframes"></a>  CMultiPaneFrameWnd::AdjustPaneFrames
+## <a name="cmultipaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>C 多窗格框架：：调整窗格框架
 
 ```
 virtual void AdjustPaneFrames();
@@ -217,7 +217,7 @@ virtual void AdjustPaneFrames();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="calcexpecteddockedrect"></a>  CMultiPaneFrameWnd::CalcExpectedDockedRect
+## <a name="cmultipaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>C 多窗格框架：：钙化物多克
 
 ```
 virtual void CalcExpectedDockedRect(
@@ -230,15 +230,15 @@ virtual void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>参数
 
-[in] *pWndToDock*<br/>
-[in] *ptMouse*<br/>
-[in] *rectResult*<br/>
-[in] *bDrawTab*<br/>
-[in] *ppTargetBar*<br/>
+[在]*普恩德托多克*<br/>
+[在]*ptMouse*<br/>
+[在]*rectResult*<br/>
+[在]*bDrawTab*<br/>
+[在]*ppTargetBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="canbeattached"></a>  CMultiPaneFrameWnd::CanBeAttached
+## <a name="cmultipaneframewndcanbeattached"></a><a name="canbeattached"></a>C 多窗格框架：：可附加
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -248,7 +248,7 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="canbedockedtopane"></a>  CMultiPaneFrameWnd::CanBeDockedToPane
+## <a name="cmultipaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>C 多窗格框架：：可多克托帕
 
 ```
 virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
@@ -256,13 +256,13 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ### <a name="parameters"></a>参数
 
-[in] *pDockingBar*<br/>
+[在]*pDockingBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="checkgrippervisibility"></a>  CMultiPaneFrameWnd::CheckGripperVisibility
+## <a name="cmultipaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>C 多窗格框架：：检查夹持可见性
 
 ```
 virtual void CheckGripperVisibility();
@@ -270,7 +270,7 @@ virtual void CheckGripperVisibility();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="closeminiframe"></a>  CMultiPaneFrameWnd::CloseMiniFrame
+## <a name="cmultipaneframewndcloseminiframe"></a><a name="closeminiframe"></a>C 多窗格框架：：关闭迷你框架
 
 ```
 virtual void CloseMiniFrame();
@@ -278,7 +278,7 @@ virtual void CloseMiniFrame();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="converttotabbeddocument"></a>  CMultiPaneFrameWnd::ConvertToTabbedDocument
+## <a name="cmultipaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>C 多窗格框架：：转换到选项卡文档
 
 ```
 virtual void ConvertToTabbedDocument();
@@ -286,7 +286,7 @@ virtual void ConvertToTabbedDocument();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="dockframe"></a>  CMultiPaneFrameWnd::DockFrame
+## <a name="cmultipaneframewnddockframe"></a><a name="dockframe"></a>C 多窗格框架：:DockFrame
 
 ```
 virtual BOOL DockFrame(
@@ -296,14 +296,14 @@ virtual BOOL DockFrame(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDockedFrame*<br/>
-[in]*dockMethod*<br/>
+[在]*pDocked 框架*<br/>
+[在]*基方法*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="dockpane"></a>  CMultiPaneFrameWnd::DockPane
+## <a name="cmultipaneframewnddockpane"></a><a name="dockpane"></a>C 多窗格框架：:Dockpane
 
 ```
 virtual BOOL DockPane(CDockablePane* pDockedBar);
@@ -311,13 +311,13 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 
 ### <a name="parameters"></a>参数
 
-[in] *pDockedBar*<br/>
+[在]*pDockedBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="dockrecentpanetomainframe"></a>  CMultiPaneFrameWnd::DockRecentPaneToMainFrame
+## <a name="cmultipaneframewnddockrecentpanetomainframe"></a><a name="dockrecentpanetomainframe"></a>C 多窗格框架：:D最近窗格到大型框架
 
 ```
 virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
@@ -325,11 +325,11 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 
 ### <a name="parameters"></a>参数
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getcaptiontext"></a>  CMultiPaneFrameWnd::GetCaptionText
+## <a name="cmultipaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>C 多窗格框架：：获取字幕文本
 
 ```
 virtual CString GetCaptionText();
@@ -339,7 +339,7 @@ virtual CString GetCaptionText();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getfirstvisiblepane"></a>  CMultiPaneFrameWnd::GetFirstVisiblePane
+## <a name="cmultipaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>C 多窗格框架：：获取第一个可见窗格
 
 ```
 virtual CWnd* GetFirstVisiblePane() const;
@@ -349,7 +349,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getpane"></a>  CMultiPaneFrameWnd::GetPane
+## <a name="cmultipaneframewndgetpane"></a><a name="getpane"></a>C 多窗格框架：：获取窗格
 
 ```
 virtual CWnd* GetPane() const;
@@ -359,7 +359,7 @@ virtual CWnd* GetPane() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getpanecontainermanager"></a>  CMultiPaneFrameWnd::GetPaneContainerManager
+## <a name="cmultipaneframewndgetpanecontainermanager"></a><a name="getpanecontainermanager"></a>C 多窗格框架：：获取窗格容器管理器
 
 返回对内部容器管理器对象的引用。
 
@@ -373,9 +373,9 @@ CPaneContainerManager& GetPaneContainerManager();
 
 ### <a name="remarks"></a>备注
 
-此方法可用于访问内部[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象。
+此方法可用于访问内部[CPane 容器管理器类](../../mfc/reference/cpanecontainermanager-class.md)对象。
 
-##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount
+## <a name="cmultipaneframewndgetpanecount"></a><a name="getpanecount"></a>C 多窗格框架：：获取窗格计数
 
 ```
 virtual int GetPaneCount() const;
@@ -385,7 +385,7 @@ virtual int GetPaneCount() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getvisiblepanecount"></a>  CMultiPaneFrameWnd::GetVisiblePaneCount
+## <a name="cmultipaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>C 多窗格框架：：获取可见窗格计数
 
 ```
 virtual int GetVisiblePaneCount() const;
@@ -395,7 +395,7 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="insertpane"></a>  CMultiPaneFrameWnd::InsertPane
+## <a name="cmultipaneframewndinsertpane"></a><a name="insertpane"></a>C 多窗格框架：：插入窗格
 
 ```
 virtual BOOL InsertPane(
@@ -406,15 +406,15 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>参数
 
-[in] *pControlBar*<br/>
-[in] *pTarget*<br/>
-[in] *bAfter*<br/>
+[在]*p控制栏*<br/>
+[在]*p目标*<br/>
+[在]*b 后*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="loadstate"></a>  CMultiPaneFrameWnd::LoadState
+## <a name="cmultipaneframewndloadstate"></a><a name="loadstate"></a>C 多窗格框架：：加载状态
 
 ```
 virtual BOOL LoadState(
@@ -424,14 +424,14 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>参数
 
-[in] *lpszProfileName*<br/>
-[in] *uiID*<br/>
+[在]*lpsz配置文件名称*<br/>
+[在]*uiID*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondocktorecentpos"></a>  CMultiPaneFrameWnd::OnDockToRecentPos
+## <a name="cmultipaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>C 多窗格框架：：在多克到最新Pos
 
 ```
 virtual void OnDockToRecentPos();
@@ -439,7 +439,7 @@ virtual void OnDockToRecentPos();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onkillrolluptimer"></a>  CMultiPaneFrameWnd::OnKillRollUpTimer
+## <a name="cmultipaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>C 多窗格框架：：在基基尔罗普普计时器上
 
 ```
 virtual void OnKillRollUpTimer();
@@ -447,7 +447,7 @@ virtual void OnKillRollUpTimer();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onpanerecalclayout"></a>  CMultiPaneFrameWnd::OnPaneRecalcLayout
+## <a name="cmultipaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>C 多窗格框架：：在窗格Recalc布局上
 
 ```
 virtual void OnPaneRecalcLayout();
@@ -455,7 +455,7 @@ virtual void OnPaneRecalcLayout();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onsetrolluptimer"></a>  CMultiPaneFrameWnd::OnSetRollUpTimer
+## <a name="cmultipaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>C 多窗格框架：：打开滚动计时器
 
 ```
 virtual void OnSetRollUpTimer();
@@ -463,7 +463,7 @@ virtual void OnSetRollUpTimer();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onshowpane"></a>  CMultiPaneFrameWnd::OnShowPane
+## <a name="cmultipaneframewndonshowpane"></a><a name="onshowpane"></a>C 多窗格框架：：在显示窗格上
 
 ```
 virtual void OnShowPane(
@@ -473,12 +473,12 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>参数
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
+[在]*pBar*<br/>
+[在]*b显示*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="panefrompoint"></a>  CMultiPaneFrameWnd::PaneFromPoint
+## <a name="cmultipaneframewndpanefrompoint"></a><a name="panefrompoint"></a>C 多窗格框架：:P从点
 
 ```
 virtual CBasePane* PaneFromPoint(
@@ -489,15 +489,15 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>参数
 
-[in] *point*<br/>
-[in] *nSensitivity*<br/>
-[in] *bCheckVisibility*<br/>
+[在]*点*<br/>
+[在]*nSensitivity*<br/>
+[在]*b 检查可见性*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="removenonvalidpanes"></a>  CMultiPaneFrameWnd::RemoveNonValidPanes
+## <a name="cmultipaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>C 多窗格框架：：删除非有效窗格
 
 ```
 virtual void RemoveNonValidPanes();
@@ -505,7 +505,7 @@ virtual void RemoveNonValidPanes();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="removepane"></a>  CMultiPaneFrameWnd::RemovePane
+## <a name="cmultipaneframewndremovepane"></a><a name="removepane"></a>C 多窗格框架：：删除窗格
 
 ```
 virtual void RemovePane(
@@ -516,13 +516,13 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>参数
 
-[in] *pBar*<br/>
-[in] *bDestroy*<br/>
-[in] *bNoDelayedDestroy*<br/>
+[在]*pBar*<br/>
+[在]*b破坏*<br/>
+[在]*b 无延迟销毁*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="replacepane"></a>  CMultiPaneFrameWnd::ReplacePane
+## <a name="cmultipaneframewndreplacepane"></a><a name="replacepane"></a>C 多窗格框架：：替换窗格
 
 ```
 virtual void ReplacePane(
@@ -532,12 +532,12 @@ virtual void ReplacePane(
 
 ### <a name="parameters"></a>参数
 
-[in] *pBarOrg*<br/>
-[in] *pBarReplaceWith*<br/>
+[在]*pBarOrg*<br/>
+[在]*pbar 替换与*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="savestate"></a>  CMultiPaneFrameWnd::SaveState
+## <a name="cmultipaneframewndsavestate"></a><a name="savestate"></a>C 多窗格框架：：保存状态
 
 ```
 virtual BOOL SaveState(
@@ -547,14 +547,14 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>参数
 
-[in] *lpszProfileName*<br/>
-[in] *uiID*<br/>
+[在]*lpsz配置文件名称*<br/>
+[在]*uiID*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="serialize"></a>  CMultiPaneFrameWnd::Serialize
+## <a name="cmultipaneframewndserialize"></a><a name="serialize"></a>C 多窗格框架：：序列化
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -562,11 +562,11 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>参数
 
-[in] *ar*<br/>
+[在]*阿尔*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setdockstate"></a>  CMultiPaneFrameWnd::SetDockState
+## <a name="cmultipaneframewndsetdockstate"></a><a name="setdockstate"></a>C 多窗格框架：：SetDockstate
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
@@ -574,11 +574,11 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ### <a name="parameters"></a>参数
 
-[in] *pDockManager*<br/>
+[在]*pDock管理器*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setlastfocusedpane"></a>  CMultiPaneFrameWnd::SetLastFocusedPane
+## <a name="cmultipaneframewndsetlastfocusedpane"></a><a name="setlastfocusedpane"></a>C 多窗格框架：：设置最后聚焦窗格
 
 ```
 void SetLastFocusedPane(HWND hwnd);
@@ -586,11 +586,11 @@ void SetLastFocusedPane(HWND hwnd);
 
 ### <a name="parameters"></a>参数
 
-[in] *hwnd*<br/>
+[在]*霍恩德*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setpredockstate"></a>  CMultiPaneFrameWnd::SetPreDockState
+## <a name="cmultipaneframewndsetpredockstate"></a><a name="setpredockstate"></a>C 多窗格框架：：设置前坞州
 
 ```
 virtual BOOL SetPreDockState(
@@ -601,15 +601,15 @@ virtual BOOL SetPreDockState(
 
 ### <a name="parameters"></a>参数
 
-[in] *preDockState*<br/>
-[in] *pBarToDock*<br/>
-[in]*dockMethod*<br/>
+[在]*前DockState*<br/>
+[在]*pBartodock*<br/>
+[在]*基方法*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="storerecentdocksiteinfo"></a>  CMultiPaneFrameWnd::StoreRecentDockSiteInfo
+## <a name="cmultipaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>C 多窗格框架：：存储最新网站信息
 
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
@@ -617,11 +617,11 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>参数
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="storerecenttabrelatedinfo"></a>  CMultiPaneFrameWnd::StoreRecentTabRelatedInfo
+## <a name="cmultipaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>C 多窗格框架：：存储最新标签相关信息
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -631,13 +631,13 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDockingBar*<br/>
-[in] *pTabbedBar*<br/>
+[在]*pDockingBar*<br/>
+[在]*pTabbedBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)
+[CPaneFramewnd 类](../../mfc/reference/cpaneframewnd-class.md)

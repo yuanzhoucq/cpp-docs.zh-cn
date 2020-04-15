@@ -1,8 +1,9 @@
 ---
 title: _umask_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask_s
+- _o__umask_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: 21d9ba194f85e40c3c5a4d67d16ebca9721f68f8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d590910d5f5092a78ad64c8f9ef0aa259211e226
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945987"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362183"
 ---
 # <a name="_umask_s"></a>_umask_s
 
@@ -60,40 +62,42 @@ errno_t _umask_s(
 
 ## <a name="return-value"></a>返回值
 
-如果*mode*未指定有效模式或*POldMode*指针为**NULL**，则返回错误代码。
+如果*模式*未指定有效模式或*pOldMode*指针为**NULL，** 则返回错误代码。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*模式*|*pOldMode*|返回值|*POldMode*的内容|
+|*模式*|*pOldMode*|返回值|*pOldMode*的内容|
 |------------|----------------|----------------------|--------------------------------|
-|任何|**NULL**|**EINVAL**|未修改|
-|无效模式|任何|**EINVAL**|未修改|
+|any|**空**|**埃因瓦尔**|未修改|
+|无效模式|any|**埃因瓦尔**|未修改|
 
-发生上述情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **_umask_s**将返回**EINVAL** ，并将**errno**设置为**EINVAL**。
+发生上述情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行 **，_umask_s**返回**EINVAL**并将**errno**设置到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Umask_s**函数将当前进程的文件权限掩码设置为*mode*指定的模式。 文件权限掩码修改 **_creat**、 **_open**或 **_sopen**创建的新文件的权限设置。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
+**_umask_s**函数将当前进程的文件权限掩码设置为*模式*指定的模式。 文件权限掩码修改由 **_creat、_open**或 **_sopen**创建的新文件的权限 **_open**设置。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
 
-整数表达式*pmode*包含在 SYS\STAT. 中定义的以下一个或两个清单常量。高
+整数表达式*pmode*包含以下一个或两个清单常量，在 SYS_STAT 中定义。H：
 
 |*pmode*||
 |-|-|
 |**_S_IWRITE**|允许写入。|
 |**_S_IREAD**|允许读取。|
-|**_S_IREAD** \| **_S_IWRITE**|允许读取和写入。|
+|**_S_IREAD_S_IWRITE** \| **_S_IWRITE**|允许读取和写入。|
 
-当提供两个常量时，它们将与按位 "或" 运算符 **|** （）联接。 如果*mode*参数为 **_S_IREAD**，则不允许读取（文件是只写的）。 如果*mode*参数为 **_S_IWRITE**，则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置为 **_umask_s**不会影响文件的模式。
+当两个常量都给出时，它们与位-OR 运算符 （）**|** 联接。 如果*模式*参数**为_S_IREAD，** 则不允许读取（该文件仅写入）。 如果*模式*参数**是_S_IWRITE，** 则不允许写入（该文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，使用 **_umask_s**设置读取位对文件模式没有影响。
 
-如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数将直接忽略这些常量。
+如果*pmode*不是清单常量之一的组合，或者合并了一组备用常量，则函数将忽略这些常量。
+
+默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_umask_s**|\<io.h> 和 \<sys/stat.h> 和 \<sys/types.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -129,10 +133,10 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低电平 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>

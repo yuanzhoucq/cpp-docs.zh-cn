@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688071"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368450"
 ---
 # <a name="extreme_value_distribution-class"></a>extreme_value_distribution 类
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType* \
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
-*URNG* \
-随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*乌尔格*\
+随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述产生用户指定的浮点类型的值的分布，或者，如果未提供任何值 **，则根据**极端值分布来分布该类型。 下表链接到有关各个成员的文章。
+类模板描述生成用户指定的浮点类型的值的分布，或者如果没有提供，则键入**双精度**值，根据"极值分布"进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 属性函数 `a()` 和 `b()` 返回存储的分布参数 `a` 和 `b` 的各自值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 有关极值分布的详细信息，请参阅 Wolfram MathWorld 文章[极值分布](https://go.microsoft.com/fwlink/p/?linkid=401110)。
 
@@ -181,7 +181,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution：extreme_value_distribution
 
 构造分布。
 
@@ -192,24 +192,24 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a_value* \
+*a_value*\
 `a` 分布参数。
 
-*b_value* \
+*b_value*\
 `b` 分布参数。
 
-*parm* \
+*帕尔姆*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < b`
+**先决条件：**`0.0 < b`
 
 第一个构造函数将构造一个其存储的 `a` 值保留值 *a_value*，并且其存储的 `b` 值保留值 *b_value* 的对象。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>  extreme_value_distribution::param_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution：:p阿拉姆型
 
 存储分布的参数。
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a_value* \
+*a_value*\
 `a` 分布参数。
 
-*b_value* \
+*b_value*\
 `b` 分布参数。
 
-*right* \
+*对*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < b`
+**先决条件：**`0.0 < b`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 1a8abc8b73ee878ac2feefa210268e87c608e938
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368657"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>记录集：获取 SUM 及其他聚合结果 (ODBC)
 
@@ -36,10 +36,10 @@ ms.locfileid: "80212831"
 
 - **COUNT** 计算任何数据类型列中的记录数。
 
-可以使用这些 SQL 函数来获取有关数据源中记录的统计信息，而不是用于从数据源中提取记录。 创建的记录集通常由包含值的单个记录（如果所有列为聚合）组成。 （如果使用了**GROUP by**子句，则可能有多个记录。）此值是由 SQL 函数执行的计算或提取的结果。
+可以使用这些 SQL 函数来获取有关数据源中记录的统计信息，而不是用于从数据源中提取记录。 创建的记录集通常由包含值的单个记录（如果所有列为聚合）组成。 （如果使用**GROUP BY**子句，则可能有多个记录。此值是 SQL 函数执行的计算或提取的结果。
 
 > [!TIP]
->  若要在 SQL 语句中添加 SQL GROUP BY 子句（可能还有“HAVING”子句），请将其附加到  **的末尾**`m_strFilter`。 例如：
+> 若要在 SQL 语句中添加 SQL GROUP BY 子句（可能还有“HAVING”子句），请将其附加到 `m_strFilter` 的末尾********。 例如：
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -48,15 +48,15 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 可以通过对列进行筛选和排序来限制用于获取聚合结果的记录数。
 
 > [!CAUTION]
->  某些聚合运算符将从其聚合的列返回不同的数据类型。
+> 某些聚合运算符将从其聚合的列返回不同的数据类型。
 
-- “SUM”和“AVG”可能会返回下一个更大的数据类型（例如，使用  **进行调用会返回“LONG”或“double”）** `int`。
+- “SUM”和“AVG”可能会返回下一个更大的数据类型（例如，使用 `int` 进行调用会返回“LONG”或“double”）****************。
 
-- 不管目标列的类型是什么，“COUNT”通常会返回“LONG”。
+- 不管目标列的类型是什么，“COUNT”通常会返回“LONG”********。
 
-- “MAX”和“MIN”返回与其计算列相同的数据类型。
+- “MAX”和“MIN”返回与其计算列相同的数据类型********。
 
-     例如，**添加类**向导创建 `long` `m_lSales` 以容纳销售列，但需要将其替换为 `double m_dblSumSales` 数据成员以容纳聚合结果。 请参阅以下示例。
+     例如，“添加类”向导会创建 `long` `m_lSales` 以容纳 Sales 列，但需要将此替换为 `double m_dblSumSales` 数据成员以容纳聚合结果****。 请参阅以下示例。
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>获取记录集的聚合结果
 
@@ -77,7 +77,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 1. 打开记录集。 聚合操作的结果保留在 `m_dblSumSales` 中。
 
 > [!NOTE]
->  向导实际将分配没有匈牙利语前缀的数据成员名称。 例如，向导将为“Sales”列生成 `m_Sales`，而不是之前用于图中的 `m_lSales` 名称。
+> 向导实际将分配没有匈牙利语前缀的数据成员名称。 例如，向导将为“Sales”列生成 `m_Sales`，而不是之前用于图中的 `m_lSales` 名称。
 
 如果使用 [CRecordView](../../mfc/reference/crecordview-class.md) 类来查看数据，则必须更改 DDX 函数调用以显示新的数据成员值；在这种情况下，更改：
 
