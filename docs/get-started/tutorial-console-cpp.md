@@ -7,10 +7,10 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "80079292"
 ---
 # <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
@@ -306,7 +306,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 继续使用 F10 “单步跳过”每一行，直到返回到另一个文件中的 `main()` 函数，然后停在 `cout` 行   。
 
-   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result`  。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
+   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result` 。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
 
    ![除以零的结果](./media/calc-vs2019-divide-by-zero-fail.png "除以零的结果")
 
@@ -676,7 +676,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
    ![退出 Calculate 并检查结果](./media/calculator-undefined-zero.gif "退出 Calculate 并检查结果")
 
-   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result`  。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
+   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result` 。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
 
    ![除以零的结果](./media/calculator-divide-by-zero-fail.png "除以零的结果")
 

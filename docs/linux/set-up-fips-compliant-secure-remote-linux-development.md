@@ -3,10 +3,10 @@ title: 设置符合 FIPS 标准的安全远程 Linux 开发
 description: 如何设置 Visual Studio 和 Linux 计算机之间符合 FIPS 的加密连接以用于远程开发。
 ms.date: 01/17/2020
 ms.openlocfilehash: 9a0e87f4ddf69bf489b52d4f83934d3279f2d085
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "76520461"
 ---
 # <a name="set-up-fips-compliant-secure-remote-linux-development"></a>设置符合 FIPS 标准的安全远程 Linux 开发
