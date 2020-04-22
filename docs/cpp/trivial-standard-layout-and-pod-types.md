@@ -2,24 +2,24 @@
 title: 普通、标准布局、POD 和文本类型
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: b31fefd31b32a5fc4aa3f655b90d39f60a524ca4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fe237386e63fcdd96621edabf2b0b66ce72e4f8
+ms.sourcegitcommit: 435133128b18cdd02d33d929b16c33e7ec40e9eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188059"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81664139"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>普通、标准布局、POD 和文本类型
 
-术语“布局”是指类、结构或联合类型的对象的成员在内存中的排列方式。 在某些情况下，布局由语言规范明确定义。 但是，当类或结构包含某些 C++ 语言功能（如虚拟基类、虚拟函数、具有不同访问控制的成员）时，编译器可以自由选择布局。 该布局可能会基于正在执行的优化而有所不同，并且在许多情况下，该对象甚至可能不会占用连续内存区域。 例如，如果某个类具有虚拟函数，则该类的所有实例可能会共享单个虚拟函数表。 此类型非常有用，但它们也有限制。 由于布局未定义，因此无法将其传递到使用其他语言（例如 C）编写的程序，并且由于它们可能是非连续的，因此无法使用快速低级函数（例如 `memcopy`）对其进行可靠复制，或者通过网络对其进行序列化。
+术语“布局”是指类、结构或联合类型的对象的成员在内存中的排列方式**。 在某些情况下，布局由语言规范明确定义。 但是，当类或结构包含某些 C++ 语言功能（如虚拟基类、虚拟函数、具有不同访问控制的成员）时，编译器可以自由选择布局。 该布局可能会基于正在执行的优化而有所不同，并且在许多情况下，该对象甚至可能不会占用连续内存区域。 例如，如果某个类具有虚拟函数，则该类的所有实例可能会共享单个虚拟函数表。 此类型非常有用，但它们也有限制。 由于布局未定义，因此无法将其传递到使用其他语言（例如 C）编写的程序，并且由于它们可能是非连续的，因此无法使用快速低级函数（例如 `memcopy`）对其进行可靠复制，或者通过网络对其进行序列化。
 
-为使编译器以及 C++ 程序和元程序能够推断出任何给定类型对于依赖于特定内存布局的操作的适用性，C++14 引入了三种类别的简单类和结构：普通、标准布局和 POD（或简单旧数据）。 标准库具有函数模板 `is_trivial<T>`、`is_standard_layout<T>` 和 `is_pod<T>`，这些模板可以确定某一给定类型是否属于某一给定类别。
+为使编译器以及 C++ 程序和元程序能够推断出任何给定类型对于依赖于特定内存布局的操作的适用性，C++14 引入了三种类别的简单类和结构：普通、标准布局和 POD（或简单旧数据）******。 标准库具有函数模板 `is_trivial<T>`、`is_standard_layout<T>` 和 `is_pod<T>`，这些模板可以确定某一给定类型是否属于某一给定类别。
 
 ## <a name="trivial-types"></a>普通类型
 
 当 C++ 中的类或结构具有编译器提供的或显式默认设置的特殊成员函数时，该类或结构为普通类型。 它占用连续内存区域。 它可以具有含不同访问说明符的成员。 在 C++ 中，编译器可以自由选择在此情况下对成员排序的方式。 因此，你可以在内存中复制此类对象，但不能从 C 程序中可靠地使用它们。 可以将普通类型 T 复制到 char 或无符号 char 数组，并安全地复制回 T 变量。 请注意，由于对齐要求，类型成员之间可能存在填充字节。
 
-普通类型具有普通默认构造函数、普通复制构造函数、普通复制赋值运算符和普通析构函数。 在各种情况下，“普通”意味着构造函数/运算符/析构函数并非用户提供，并且属于存在以下情况的类
+普通类型具有普通默认构造函数、普通复制构造函数、普通复制赋值运算符和普通析构函数。 在各种情况下，“普通”意味着构造函数/运算符/析构函数并非用户提供，并且属于存在以下情况的类**
 
 - 没有虚拟函数或虚拟基类，
 
@@ -32,17 +32,17 @@ ms.locfileid: "80188059"
 ```cpp
 struct Trivial
 {
-      int i;
+   int i;
 private:
    int j;
-   };
+};
 
 struct Trivial2
 {
    int i;
    Trivial2(int a, int b) : i(a), j(b) {}
    Trivial2() = default;
-   private:
+private:
    int j;   // Different access control
 };
 ```
@@ -137,15 +137,15 @@ protected:
 // Neither trivial nor standard-layout
 struct A : B
 {
-      int a;
+   int a;
    int b;
    void Foo() override {} // Virtual function
 };
 
 // Trivial but not standard-layout
 struct C
-   {
-      int a;
+{
+   int a;
 private:
    int b;   // Different access control
 };
