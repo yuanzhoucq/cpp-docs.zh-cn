@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321445"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748665"
 ---
 # <a name="catlmap-class"></a>CAtlMap 类
 
@@ -159,7 +159,7 @@ class CAtlMap
 
 如果对象无效，`CAtlMap`调用此方法以导致 ASSERT。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ class CPair : public __POSITION
 
 调用此方法以禁用`CAtlMap`对象的自动重新哈希。
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ void DisableAutoRehash() throw();
 
 调用此方法以启用`CAtlMap`对象的自动重新哈希。
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ void EnableAutoRehash() throw();
 
 调用此方法以在地图中指定位置返回元素。
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -291,7 +291,7 @@ CPair* GetAt(POSITION& pos) throw();
 *Pos*<br/>
 位置计数器，由之前调用[CAtlMap 返回：：获取NextAssoc](#getnextassoc)或[CAtlMap：：获取起始位置](#getstartposition)。
 
-*关键*<br/>
+*键*<br/>
 指定地图键类型的模板参数。
 
 *value*<br/>
@@ -376,7 +376,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 获取下一个迭代元素。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -388,7 +388,7 @@ void GetNextAssoc(
 *Pos*<br/>
 位置计数器，由之前调用[CAtlMap 返回：：获取NextAssoc](#getnextassoc)或[CAtlMap：：获取起始位置](#getstartposition)。
 
-*关键*<br/>
+*键*<br/>
 指定地图键类型的模板参数。
 
 *value*<br/>
@@ -558,7 +558,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 指定标识要备份的元素的键。
 
 *value*<br/>
@@ -582,7 +582,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 要添加或替换的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -597,7 +597,7 @@ V& operator[](kinargtype key) throw();
 
 调用此方法以重新哈希`CAtlMap`对象。
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ void Rehash(UINT nBins = 0);
 
 调用此方法从`CAtlMap`对象中删除所有元素。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ void RemoveAll() throw();
 
 调用此方法以删除对象中给定位置的元素`CAtlMap`。
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -649,7 +649,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 与要删除的元素对对应的键。
 
 ### <a name="return-value"></a>返回值
@@ -672,7 +672,7 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 要添加到`CAtlMap`对象的键值。
 
 *value*<br/>
@@ -690,7 +690,7 @@ POSITION SetAt(
 
 调用此方法以设置`CAtlMap`对象的最佳负载。
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ void SetOptimalLoad(
 
 调用此方法以更改存储在对象中给定位置的值`CAtlMap`。
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);
@@ -780,7 +780,7 @@ V  m_value;
 *五*<br/>
 值元素类型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [选框示例](../../overview/visual-cpp-samples.md)<br/>
 [更新PV示例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>

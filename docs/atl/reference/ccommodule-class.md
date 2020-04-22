@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 652c5f078ddbaf8d3e333f7003d6515a94dd8f83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e30f847ff99a80ab19b880728472a339fd4cbe5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327764"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747925"
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 
@@ -465,7 +465,7 @@ HRESULT RevokeClassObjects() throw();
 
 从 ATL 7.0`CComModule`起，已过时：有关详细信息，请参阅[ATL 模块类](../../atl/atl-module-classes.md)。
 
-```
+```cpp
 void Term() throw();
 ```
 
@@ -688,6 +688,6 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 有关可替换参数和脚本的详细信息，请参阅[ATL 注册表组件 （注册） 一](../../atl/atl-registry-component-registrar.md)文。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

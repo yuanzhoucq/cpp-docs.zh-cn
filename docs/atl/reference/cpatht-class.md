@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331477"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746593"
 ---
 # <a name="cpatht-class"></a>CPathT 类
 
@@ -72,7 +72,7 @@ class CPathT
 
 #### <a name="parameters"></a>参数
 
-*字符串类型*<br/>
+*StringType*<br/>
 用于路径的 ATL/MFC 字符串类（请参阅[CStringT）。](../../atl-mfc-shared/reference/cstringt-class.md)
 
 ## <a name="members"></a>成员
@@ -166,7 +166,7 @@ class CPathT
 
 调用此方法向字符串的末尾添加反斜杠，以创建路径的正确语法。 如果路径已具有尾随反斜杠，则不会添加反斜杠。
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ BOOL Append(PCXSTR pszMore);
 
 调用此方法从给定驱动器号创建根路径。
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ void BuildRoot(int iDrive);
 
 调用此方法将路径转换为规范形式。
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ void Canonicalize();
 
 调用此方法将表示目录名称的字符串和表示文件路径名称的字符串串联到一个路径中。
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 如果路径包含任何空格，则调用此方法以引号括上路径。
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ BOOL RelativePathTo(
 
 调用此方法从路径中删除任何命令行参数。
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ void RemoveArgs();
 
 调用此方法以从路径中删除尾随反斜杠。
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ void RemoveBackslash();
 
 调用此方法从路径中删除所有前导空格和尾随空格。
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ void RemoveBlanks();
 
 调用此方法以从路径中删除文件扩展名（如果有）。
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ int SkipRoot() const;
 
 调用此方法以删除完全限定的路径和文件名的路径部分。
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ BOOL StripToRoot();
 
 调用此方法以从路径的开头和结尾删除引号。
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 
@@ -907,7 +907,7 @@ typedef StringType::XCHAR XCHAR;
 
 `StringType`是 的`CPathT`模板参数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../atl/reference/atl-classes.md)<br/>
 [CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)

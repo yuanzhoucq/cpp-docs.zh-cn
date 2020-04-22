@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: cb8e3d6b71db6ab60b3b246bd8c5bf4f2c9aaa34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2fa6eb26c2e2cd569d74c02d8303768b1aeb4f1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321260"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748270"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 类
 
@@ -93,7 +93,7 @@ class CAutoPtr
 
 调用此方法以获取现有指针的所有权。
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -179,7 +179,7 @@ T* Detach() throw();
 
 调用此方法以删除 指向 的对象`CAutoPtr`。
 
-```
+```cpp
 void Free() throw();
 ```
 
@@ -267,7 +267,7 @@ operator T* () const throw();
 
 请参阅[CAutoPtr 概述](../../atl/reference/cautoptr-class.md)中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CHeapPtr 类](../../atl/reference/cheapptr-class.md)<br/>
 [CAutoVectorPtr 类](../../atl/reference/cautovectorptr-class.md)<br/>

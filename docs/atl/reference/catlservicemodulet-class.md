@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321341"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748591"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 类
 
@@ -147,7 +147,7 @@ CAtlServiceModuleT() throw();
 
 服务的处理程序例程。
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ BOOL IsInstalled() throw();
 
 写入事件日志。
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ TCHAR [256] m_szServiceName;
 
 重写此方法以继续服务。
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 重写此方法以询问服务。
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 重写此方法以暂停服务。
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 重写此方法以关闭服务。
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 重写此方法以停止服务。
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 重写此方法以处理对服务的未知请求。
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 此方法由服务控制管理器调用。
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ SCM 调用`ServiceMain`后，服务必须为 SCM 提供处理程序功能。 此
 
 此方法更新服务状态。
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 
@@ -563,7 +563,7 @@ int WinMain(int nShowCmd) throw();
 
 此方法处理命令行（使用[CAtlServiceModuleT：:Parse命令线](#parsecommandline)），然后启动服务（使用[CAtlServiceModuleT：：开始](#start)）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CAtlExeModuleT 类](../../atl/reference/catlexemodulet-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

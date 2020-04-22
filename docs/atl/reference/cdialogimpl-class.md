@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 900a312c97d7b83eac93a372be39a006b3c4344d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5ab7293f73429a93c3fcab243c2e34d3c78f28a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327055"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747704"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 
@@ -119,7 +119,7 @@ HWND Create(
 *hWnd 父母*<br/>
 [在]所有者窗口的句柄。
 
-**RECT&** *rect* [in] 指定对话框大小和位置的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+**RECT&** *rect* [in] 指定对话框大小和位置的[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 *德维尼帕拉姆*<br/>
 [在]指定要传递给WM_INITDIALOG消息的*lParam*参数中的对话框的值。
@@ -324,7 +324,7 @@ static LRESULT CALLBACK StartDialogProc(
 
 初始调用 后，`StartDialogProc``DialogProc`设置为对话框过程，并进一步调用转到那里。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [类概述](../../atl/atl-class-overview.md)

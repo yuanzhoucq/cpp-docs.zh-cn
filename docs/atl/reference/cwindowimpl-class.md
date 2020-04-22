@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330295"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745997"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 类
 
@@ -147,7 +147,7 @@ HWND Create(
 [在]父窗口或所有者窗口的句柄。
 
 *矩形*<br/>
-[在]指定窗口位置的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 `RECT`可以通过指针或引用传递 。
+[在]指定窗口位置的[RECT](/windows/win32/api/windef/ns-windef-rect)结构。 `RECT`可以通过指针或引用传递 。
 
 *szWindow名称*<br/>
 [在]指定窗口的名称。 默认值为 NULL。
@@ -375,7 +375,7 @@ static LRESULT CALLBACK WindowProc(
 
 您可以重写`WindowProc`以提供用于处理消息的不同机制。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>

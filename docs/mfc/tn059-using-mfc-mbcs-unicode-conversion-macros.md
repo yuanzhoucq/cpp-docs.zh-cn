@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366581"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749445"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 转换宏
 
@@ -114,7 +114,7 @@ OLE2T   (LPCOLESTR) -> (LPCSTR)
 
 请勿在紧凑循环中使用宏。 例如，你不想编写以下类型的代码：
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 上述代码可能导致在堆栈上分配内存（以 MB 为单位），取决于字符串 `lpsz` 的内容！ 它还花时间转换循环的每个迭代的字符串。 相反，请将此类常量转换移出循环：
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 如果字符串不是常量，则将方法调用封装到函数中。 这将允许每次都释放转换缓冲区。 例如：
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -192,7 +192,7 @@ return lpszT; // CString makes copy
 
 虽然宏易于使用和插入到代码中，但从上面的警告可看出，你在使用宏时要特别谨慎。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [技术说明（按编号）](../mfc/technical-notes-by-number.md)<br/>
 [按类别分类的技术说明](../mfc/technical-notes-by-category.md)

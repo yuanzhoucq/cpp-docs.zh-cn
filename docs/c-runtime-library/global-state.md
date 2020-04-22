@@ -3,12 +3,12 @@ title: CRT 中的全球状态
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377598"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745360"
 ---
 # <a name="global-state-in-the-crt"></a>CRT 中的全球状态
 
@@ -20,8 +20,8 @@ UCRT 的全局状态不会在应用程序和操作系统之间共享。 例如�
 
 在 UCRT 中，与全局状态交互的函数具有"双"函数，以`_o_`预缀于 。 例如：
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`影响特定于应用的全局状态。
+- `_o_setlocale()`影响所有操作系统组件共享的全局状态，但不会影响应用。
 
 这些"孪生"函数的唯一区别是，当他们读取/写入全局 CRT 状态时，特定于操作系统的版本（即以`_o_`开头的版本）使用全局状态的 OS 副本，而不是应用的全局状态副本。
 
@@ -53,6 +53,6 @@ UCRT 的全局状态不会在应用程序和操作系统之间共享。 例如�
 - [fmode]（text-and-binary-mode-file-i-o.md）
 - [时区信息](time-management.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C 运行时库引用](c-run-time-library-reference.md)

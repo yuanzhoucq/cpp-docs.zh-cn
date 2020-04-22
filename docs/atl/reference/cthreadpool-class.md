@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 0b970915aa07fe2d1af2b3a07345d5b19826be69
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e52868f23883836919b96be9aec1815bc1c17b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330570"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747445"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 类
 
@@ -333,7 +333,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 调用此方法以关闭线程池。
 
-```
+```cpp
 void Shutdown(DWORD dwMaxWait = 0) throw();
 ```
 
@@ -346,7 +346,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 此方法将关机请求发布到池中的所有线程。 如果超时过期，此方法将在未退出的任何线程上调用[TerminateThread。](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) 此方法从类的析构函数自动调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IThreadPoolConfig 接口](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
 [默认线程特征](atl-typedefs.md#defaultthreadtraits)<br/>

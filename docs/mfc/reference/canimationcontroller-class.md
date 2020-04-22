@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369758"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750176"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 类
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 由框架调用，以在计划动画时清理组。
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -716,10 +716,10 @@ virtual void OnAnimationIntegerValueChanged(
 *pObject*<br/>
 指向动画对象的指针，该对象包含其值已更改的动画变量。
 
-*可变*<br/>
+*变量*<br/>
 指向动画变量的指针。
 
-*新值*<br/>
+*newValue*<br/>
 指定新值。
 
 *前置值*<br/>
@@ -813,10 +813,10 @@ virtual void OnAnimationValueChanged(
 *pObject*<br/>
 指向动画对象的指针，该对象包含其值已更改的动画变量。
 
-*可变*<br/>
+*变量*<br/>
 指向动画变量的指针。
 
-*新值*<br/>
+*newValue*<br/>
 指定新值。
 
 *前置值*<br/>
@@ -1010,7 +1010,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 
 从动画控制器中删除所有动画组。
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ void RemoveAllAnimationGroups();
 
 从动画控制器中删除具有指定 ID 的动画组。
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 
 从动画控制器中删除动画对象。
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ void RemoveAnimationObject(
 
 从属于指定组的动画对象中删除过渡。
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ BOOL ScheduleGroup(
 
 在动画控制器和窗口之间建立关系。
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 
@@ -1129,6 +1129,6 @@ virtual void UpdateAnimationManager();
 
 调用此方法会将动画管理器提升为当前时间，根据需要更改情节提要的状态，并将任何动画变量更新为适当的插值。 在内部，此方法调用 IUI动画计时器：：获取时间（现在）和 IUI动画管理器：更新（现在）。 重写派生类中的此方法以自定义此行为。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

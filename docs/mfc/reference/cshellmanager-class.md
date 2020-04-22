@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: cc8aa9216fd0d4dcc169830fb745134ceb5c65fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c2f9ac1658f50f0ec5bd9e2f53d270c09bfcb6a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318418"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750320"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 类
 
@@ -212,7 +212,7 @@ CShellManager();
 
 删除项目列表。
 
-```
+```cpp
 void FreeItem(LPITEMIDLIST pidl);
 ```
 
@@ -324,7 +324,7 @@ HRESULT ItemFromPath(
 
 如果成功，返回 NOERROR;OLE 定义的错误值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

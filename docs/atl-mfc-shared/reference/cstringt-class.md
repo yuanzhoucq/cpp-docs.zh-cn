@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317592"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746708"
 ---
 # <a name="cstringt-class"></a>CStringT 类
 
@@ -306,7 +306,7 @@ BSTR AllocSysString() const;
 
 将此`CStringT`对象中的所有字符从 ANSI 字符集转换为 OEM 字符集。
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ void AnsiToOem();
 
 将格式化的数据追加到现有`CStringT`对象。
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -335,7 +335,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 *nFormatID*<br/>
 包含格式控制字符串的字符串资源标识符。
 
-argument**<br/>
+argument <br/>
 可选参数。
 
 ### <a name="remarks"></a>备注
@@ -696,7 +696,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 以sprintf_s将数据格式转换为`CStringT`C 样式字符数组[sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)的方式将格式化数据写入 。
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -709,7 +709,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 *psz格式*<br/>
 格式控制字符串。
 
-argument**<br/>
+argument <br/>
 可选参数。
 
 ### <a name="remarks"></a>备注
@@ -730,7 +730,7 @@ argument**<br/>
 
 设置消息字符串的格式。
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -743,7 +743,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 *psz格式*<br/>
 指向格式控制字符串。 它将被扫描为插入和相应的格式。 格式字符串类似于运行时函数*printf-style*格式字符串，只不过它允许以任意顺序插入参数。
 
-argument**<br/>
+argument <br/>
 可选参数。
 
 ### <a name="remarks"></a>备注
@@ -763,7 +763,7 @@ argument**<br/>
 
 使用变量参数列表设置消息字符串的格式。
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 使用变量参数列表设置消息字符串的格式。
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -1012,7 +1012,7 @@ CStringT Mid(int iFirst) const;
 
 将此`CStringT`对象中的所有字符从 OEM 字符集转换为 ANSI 字符集。
 
-```
+```cpp
 void OemToAnsi();
 ```
 

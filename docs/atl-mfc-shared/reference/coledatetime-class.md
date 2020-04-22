@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 610cbec6cb65d4e9616c5e0e0d64e729f39febcc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ba09430427b6ece8ae5956912cbcc40fb33fcf2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317751"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747170"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -155,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>参数
 
-*日期*<br/>
+*date*<br/>
 要比较的 `COleDateTime` 对象。
 
 ### <a name="remarks"></a>备注
@@ -296,7 +296,7 @@ dwFlags**<br/>
 
 - VAR_DATEVALUEONLY在分析过程中忽略时间部分。
 
-*Lcid*<br/>
+*lcid*<br/>
 指示用于转换区域设置 ID。 有关语言标识符的详细信息，请参阅[语言标识符](/windows/win32/Intl/language-identifiers)。
 
 *lpsz格式*<br/>
@@ -940,7 +940,7 @@ dwFlags**<br/>
 
 - VAR_DATEVALUEONLY在分析过程中忽略时间部分。
 
-*Lcid*<br/>
+*lcid*<br/>
 指示用于转换区域设置 ID。
 
 ### <a name="return-value"></a>返回值
@@ -1135,13 +1135,13 @@ int SetDateTime(
 
 设置此`COleDateTime`对象的状态。
 
-```
+```cpp
 void SetStatus(DateTimeStatus status) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+*status*<br/>
 此`COleDateTime`对象的新状态值。
 
 ### <a name="remarks"></a>备注
@@ -1224,7 +1224,7 @@ int SetTime(
 
 请参阅[SetDate](#setdate)的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [COleVariant 类](../../mfc/reference/colevariant-class.md)<br/>
 [CTime 类](../../atl-mfc-shared/reference/ctime-class.md)<br/>

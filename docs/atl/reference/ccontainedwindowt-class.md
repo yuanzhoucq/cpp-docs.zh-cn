@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: cde9c73a195303e57758cb4f27184b5136bdaf14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327218"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747747"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 
@@ -214,7 +214,7 @@ HWND Create(
 [在]父窗口或所有者窗口的句柄。
 
 *矩形*<br/>
-[在]指定窗口位置的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 `RECT`可以通过指针或引用传递 。
+[在]指定窗口位置的[RECT](/windows/win32/api/windef/ns-windef-rect)结构。 `RECT`可以通过指针或引用传递 。
 
 *szWindow名称*<br/>
 [在]指定窗口的名称。 默认值为 NULL。
@@ -390,7 +390,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 更改将用于处理包含的窗口的消息的消息。
 
-```
+```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
 ```
 
@@ -460,7 +460,7 @@ static LRESULT CALLBACK WindowProc(
 
 `WindowProc`将消息定向到[m_dwMsgMapID](#m_dwmsgmapid)标识的消息映射。 如有必要，`WindowProc`请调用[DefWindowProc](#defwindowproc)进行其他消息处理。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWindow 类](../../atl/reference/cwindow-class.md)<br/>
 [CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)<br/>

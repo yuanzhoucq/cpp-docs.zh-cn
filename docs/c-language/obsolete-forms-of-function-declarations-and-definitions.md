@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: ed6ee67194aa208f77a8d43dcc17ac43b0d74278
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148005"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745872"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>函数声明和定义的过时形式
 
@@ -28,9 +28,9 @@ double alt_style( a , real )  /* Obsolete function definition */
 
 返回与 `int` 的大小相同的整数或指针的函数不需要具有声明，但建议具有声明。
 
-为了遵循 ANSI C 标准，使用省略号的旧式函数声明现在会在使用 /Za 选项进行编译是生成错误，并在使用 /Ze 进行编译时生成 4 级别警告。 例如:
+为了遵循 ANSI C 标准，使用省略号的旧式函数声明现在会在使用 /Za 选项进行编译是生成错误，并在使用 /Ze 进行编译时生成 4 级别警告。 例如：
 
-```
+```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */
 int a;                 /* an error when compiling with /Za */
 {
@@ -39,7 +39,7 @@ int a;                 /* an error when compiling with /Za */
 
 您应将此声明重写为原型：
 
-```
+```cpp
 void funct1( int a, ... )
 {
 }
@@ -47,7 +47,7 @@ void funct1( int a, ... )
 
 旧式函数声明也会生成警告（如果您随后声明或定义具有省略号或具有与其提升的类型不同的类型的参数的相同函数）。
 
-下一节（[C 函数定义](../c-language/c-function-definitions.md)）显示函数定义的语法（包括旧式语法）。 旧式语法中的参数列表的非终止符是 identifier-list。
+下一节（[C 函数定义](../c-language/c-function-definitions.md)）显示函数定义的语法（包括旧式语法）。 旧式语法中的参数列表的非终止符是 identifier-list**。
 
 ## <a name="see-also"></a>请参阅
 

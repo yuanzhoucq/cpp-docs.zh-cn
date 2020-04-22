@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 6d1b82e3f60428e3a778709dc69de983a7f886bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc876781cca568a332072938bec2cda0afb2ac8b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317677"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746968"
 ---
 # <a name="csize-class"></a>CSize 类
 
@@ -139,7 +139,7 @@ BOOL operator!=(SIZE size) const throw();
 
 为此添加大小`CSize`。
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 ```
 
@@ -151,7 +151,7 @@ void operator+=(SIZE size) throw();
 
 从中`CSize`减去大小。
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 ```
 
@@ -179,11 +179,11 @@ CRect operator+(const RECT* lpRect) const throw();
 
 - **运算符 +（***点***）**
 
-  此操作按此值`CSize`偏移（移动[）POINT（](/previous-versions/dd162805\(v=vs.85\))或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)） 值。 此值`cx``CSize`的`cy`和 成员将添加到 值`x``y`和 数据成员`POINT`中。 它类似于[CPoint：：运算符 *](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)的版本，它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+  此操作按此值`CSize`偏移（移动[）POINT（](/windows/win32/api/windef/ns-windef-point)或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)） 值。 此值`cx``CSize`的`cy`和 成员将添加到 值`x``y`和 数据成员`POINT`中。 它类似于[CPoint：：运算符 *](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)的版本，它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
 
 - **运算符 +（** *lpRect* **）**
 
-   此操作按此值`CSize`偏移（移动[）RECT（](/previous-versions/dd162897\(v=vs.85\))或[CRect](../../atl-mfc-shared/reference/crect-class.md)） 值。 此值`cx``CSize`的`cy`和 成员将添加到`RECT`值`left``top`的`right`、`bottom`和 数据成员中。 它类似于[CRect：：运算符 *](../../atl-mfc-shared/reference/crect-class.md#operator_add)的版本，它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+   此操作按此值`CSize`偏移（移动[）RECT（](/windows/win32/api/windef/ns-windef-rect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)） 值。 此值`cx``CSize`的`cy`和 成员将添加到`RECT`值`left``top`的`right`、`bottom`和 数据成员中。 它类似于[CRect：：运算符 *](../../atl-mfc-shared/reference/crect-class.md#operator_add)的版本，它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
 
 ### <a name="example"></a>示例
 
@@ -210,11 +210,11 @@ CSize operator-() const throw();
 
 - **运算符 -（***点***）**
 
-  此操作按此值`CSize`的累加反反偏移（移动[）POINT](/previous-versions/dd162805\(v=vs.85\))或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)值。 此值`cx`的`cy``CSize`和 将从`x``y``POINT`值 和 数据成员中减去。 它类似于[CPoint：：运算符](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)的版本 - 它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+  此操作按此值`CSize`的累加反反偏移（移动[）POINT](/windows/win32/api/windef/ns-windef-point)或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)值。 此值`cx`的`cy``CSize`和 将从`x``y``POINT`值 和 数据成员中减去。 它类似于[CPoint：：运算符](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)的版本 - 它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
 
 - 运算符 *-（lpRect）* **)** **operator -(**
 
-  此操作通过此值`CSize`的累加反反偏移（移动[）RECT](/previous-versions/dd162897\(v=vs.85\))或[CRect](../../atl-mfc-shared/reference/crect-class.md)值。 此值`cx``CSize`的`cy`和 成员将从`bottom``RECT`值的`left`、`top`和`right`数据成员中减去。 它类似于[CRect：：：运算符](../../atl-mfc-shared/reference/crect-class.md#operator_-)的版本 - 它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+  此操作通过此值`CSize`的累加反反偏移（移动[）RECT](/windows/win32/api/windef/ns-windef-rect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)值。 此值`cx``CSize`的`cy`和 成员将从`bottom``RECT`值的`left`、`top`和`right`数据成员中减去。 它类似于[CRect：：：运算符](../../atl-mfc-shared/reference/crect-class.md#operator_-)的版本 - 它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
 
 - **运算符 -（）**
 

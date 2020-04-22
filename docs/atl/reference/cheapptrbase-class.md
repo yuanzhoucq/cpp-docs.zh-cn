@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e247b4f488411ffdcde5d1d9016436c9c36fe793
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326906"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747682"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 类
 
@@ -107,7 +107,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 调用此方法以获取现有指针的所有权。
 
-```
+```cpp
 void Attach(T* pData) throw();
 ```
 
@@ -154,7 +154,7 @@ T* Detach() throw();
 
 调用此方法以删除 指向 的对象`CHeapPtrBase`。
 
-```
+```cpp
 void Free() throw();
 ```
 
@@ -231,7 +231,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 如果已成功分配内存，则返回 true，否则为 false。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CHeapPtr 类](../../atl/reference/cheapptr-class.md)<br/>
 [CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)<br/>

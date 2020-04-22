@@ -18,12 +18,12 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: 57383823897a434f649c6c4af78e71fe6ff66a6a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51b1d7e81c98bd5dbcf957b1705e7a717bfb9ab0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327898"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747987"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkarray 类
 
@@ -113,7 +113,7 @@ IUnknown**
 
 清空数组。
 
-```
+```cpp
 void clear();
 ```
 
@@ -238,7 +238,7 @@ BOOL Remove(DWORD dwCookie);
 
 如果删除指针，则返回 TRUE;如果删除指针，则返回 TRUE。否则 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComUnkArray 类](../../atl/reference/ccomunkarray-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

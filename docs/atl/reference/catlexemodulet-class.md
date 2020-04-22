@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: a20a02a467d74a89e3cda176a6a15961be4ffd61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33edd8f2483bc21ea6cf8b68f80a2501c37d1a40
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318986"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748746"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT 类
 
@@ -298,7 +298,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 此方法执行消息循环。
 
-```
+```cpp
 void RunMessageLoop() throw();
 ```
 
@@ -351,7 +351,7 @@ int WinMain(int nShowCmd) throw();
 
 可以重写此方法。 如果重写[CAtlExeModuleT：:PreMessageLoop、CAtlExeModuleT：:PostMessageLoop）](#premessageloop)或[CAtlExeModuleT：：RunMessageLoop](#runmessageloop)不能提供足够的灵活性，则可以使用此方法重写`WinMain`函数。 [CAtlExeModuleT::PostMessageLoop](#postmessageloop)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATLDuck 样品](../../overview/visual-cpp-samples.md)<br/>
 [CAtlModuleT 类](../../atl/reference/catlmodulet-class.md)<br/>

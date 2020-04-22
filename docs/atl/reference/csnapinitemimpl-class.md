@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330718"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746429"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 类
 
@@ -131,7 +131,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW项可以插入工具栏视图菜单或结果窗格上下文菜单的"查看子菜单"。
 
-*type*<br/>
+type <br/>
 [在]指定对象的类型。 可以具有以下一个值：
 
 - CCT_SCOPE范围窗格上下文的数据对象。
@@ -155,7 +155,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 *lCommandID*<br/>
 [在]指定菜单项的命令标识符。
 
-*type*<br/>
+type <br/>
 [在]指定对象的类型。 可以具有以下一个值：
 
 - CCT_SCOPE范围窗格上下文的数据对象。
@@ -189,7 +189,7 @@ CreatePropertyPages(
 *朋 克*<br/>
 [在]指向对象上的`IExtendPropertySheet`接口的指针，该接口包含有关节点的上下文信息。
 
-*type*<br/>
+type <br/>
 [在]指定对象的类型。 可以具有以下一个值：
 
 - CCT_SCOPE范围窗格上下文的数据对象。
@@ -359,7 +359,7 @@ STDMETHOD(Notify)(
 *p组件*<br/>
 [出]指向实现`IComponent`的对象的指针。 如果未从`IComponent::Notify`转发通知，则此参数为 NULL。
 
-*type*<br/>
+type <br/>
 [在]指定对象的类型。 可以具有以下一个值：
 
 - CCT_SCOPE范围窗格上下文的数据对象。
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 调用此函数以修改插入对象（由*p插入允许*）指定的菜单插入标志。
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ void SetMenuInsertionFlags(
 
 调用此函数以在创建工具栏之前修改卡入对象的任何工具栏按钮样式。
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 调用此函数以在菜单项插入到卡入对象的上下文菜单之前对其进行修改。
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
@@ -473,7 +473,7 @@ void UpdateMenuState(
 *普布夫*<br/>
 [在]要更新的菜单项的字符串的指针。
 
-*标志*<br/>
+*flag*<br/>
 [在]指定新的状态标志。 这可以是以下标志的组合：
 
 - MF_POPUP指定这是上下文菜单中的子菜单。 菜单项、插入点和进一步子菜单可以使用其`lCommandID`作为`IInsertionPointID`添加到此子菜单。
@@ -530,6 +530,6 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 - 按钮按下按钮。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

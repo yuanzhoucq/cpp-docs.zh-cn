@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 5b5ef833a3755b07e42a60b24464b1f260062d16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6d20e1bf12f5fe7d1e9b41d88b088ca9fad35ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317815"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747176"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -258,7 +258,7 @@ BOOL AlphaBlend(
 源位图和目标位图的 alpha 混合函数、要应用于整个源位图的全局 alpha 值以及源位图的格式信息。 源和目标混合函数目前仅限于AC_SRC_OVER。
 
 *点 Dest*<br/>
-对[POINT](/previous-versions/dd162805\(v=vs.85\))结构的引用，该结构以逻辑单位标识目标矩形的左上角。
+对[POINT](/windows/win32/api/windef/ns-windef-point)结构的引用，该结构以逻辑单位标识目标矩形的左上角。
 
 *nD最大宽度*<br/>
 目标矩形的宽度（以逻辑单位为单位）。
@@ -279,7 +279,7 @@ BOOL AlphaBlend(
 源矩形的高度（以逻辑单位为单位）。
 
 *整流*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，标识目标。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，标识目标。
 
 *雷克斯尔*<br/>
 对结构的`RECT`引用，标识源。
@@ -298,7 +298,7 @@ Alpha 混合位图支持按像素进行颜色混合。
 
 将*hBitmap* `CImage`附加到对象。
 
-```
+```cpp
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
 ```
 
@@ -368,7 +368,7 @@ BOOL BitBlt(
 要执行的栅格操作。 栅格操作代码精确定义如何组合源、目标和模式（由当前选择的画笔定义）以形成目标。 有关其他栅格操作代码及其说明的列表，请参阅 Windows SDK 中的[BitBlt。](/windows/win32/api/wingdi/nf-wingdi-bitblt)
 
 *点 Dest*<br/>
-指示目标矩形左上角的[POINT](/previous-versions/dd162805\(v=vs.85\))结构。
+指示目标矩形左上角的[POINT](/windows/win32/api/windef/ns-windef-point)结构。
 
 *nD最大宽度*<br/>
 目标矩形的宽度（以逻辑单位为单位）。
@@ -383,7 +383,7 @@ BOOL BitBlt(
 源矩形左上角的逻辑 y 坐标。
 
 *整流*<br/>
-指示目标矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+指示目标矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 *点Src*<br/>
 指示`POINT`源矩形左上角的结构。
@@ -480,7 +480,7 @@ BOOL CreateEx(
 - BI_BITFIELDS 格式未压缩，颜色表由三个 DWORD 颜色蒙版组成，分别指定每个像素的红色、绿色和蓝色分量。 当与 16 和 32 bpp 位图一起使用时，这一点有效。
 
 *pdwBitfields*<br/>
-仅当*e 压缩*设置为BI_BITFIELDS时才使用，否则必须为 NULL。 指向三个 DWORD 位掩码数组的指针，分别指定每个像素的哪些位分别用于颜色的红色、绿色和蓝色分量。 有关位字段限制的信息，请参阅 Windows SDK 中的[BITMAPINFOHEADER。](/previous-versions//dd183376\(v=vs.85\))
+仅当*e 压缩*设置为BI_BITFIELDS时才使用，否则必须为 NULL。 指向三个 DWORD 位掩码数组的指针，分别指定每个像素的哪些位分别用于颜色的红色、绿色和蓝色分量。 有关位字段限制的信息，请参阅 Windows SDK 中的[BITMAPINFOHEADER。](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader)
 
 dwFlags**<br/>
 指定位图对象是否具有 alpha 通道。 可以是以下零个或多个值的组合：
@@ -507,7 +507,7 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 
 从`CImage`对象分离位图并销毁位图。
 
-```
+```cpp
 void Destroy() throw();
 ```
 
@@ -595,13 +595,13 @@ BOOL Draw(
 源矩形的高度（以逻辑单位为单位）。
 
 *整流*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，标识目标。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，标识目标。
 
 *雷克斯尔*<br/>
 对结构的`RECT`引用，标识源。
 
 *点 Dest*<br/>
-对[POINT](/previous-versions/dd162805\(v=vs.85\))结构的引用，该结构以逻辑单位标识目标矩形的左上角。
+对[POINT](/windows/win32/api/windef/ns-windef-point)结构的引用，该结构以逻辑单位标识目标矩形的左上角。
 
 ### <a name="return-value"></a>返回值
 
@@ -617,7 +617,7 @@ BOOL Draw(
 
 检索指向位图中给定像素的实际位值的指针。
 
-```
+```cpp
 void* GetBits() throw();
 ```
 
@@ -648,13 +648,13 @@ int GetBPP() const throw();
 
 此值确定定义每个像素的位数和位图中的最大颜色数。
 
-每像素的位数通常为 1、4、8、16、24 或 32。 有关此值`biBitCount`的详细信息，请参阅 Windows SDK 中的[BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\))成员。
+每像素的位数通常为 1、4、8、16、24 或 32。 有关此值`biBitCount`的详细信息，请参阅 Windows SDK 中的[BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader)成员。
 
 ## <a name="cimagegetcolortable"></a><a name="getcolortable"></a>CImage：获取颜色表
 
 从 DIB 部分的调色板中的一系列条目中检索红色、绿色、蓝色 （RGB） 颜色值。
 
-```
+```cpp
 void GetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -909,7 +909,7 @@ COLORREF GetPixel(int x, int y) const throw();
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 像素的 x 坐标。
 
 *Y*<br/>
@@ -923,13 +923,13 @@ COLORREF GetPixel(int x, int y) const throw();
 
 检索像素的确切地址。
 
-```
+```cpp
 void* GetPixelAddress(int x, int y) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 像素的 x 坐标。
 
 *Y*<br/>
@@ -1076,7 +1076,7 @@ HRESULT Load(IStream* pStream) throw();
 
 从 BITMAP 资源加载映像。
 
-```
+```cpp
 void LoadFromResource(
     HINSTANCE hInstance,
     LPCTSTR pszResourceName) throw();
@@ -1259,10 +1259,10 @@ BOOL PlgBlt(
 单色位图左上角的 y 坐标。
 
 *雷克斯尔*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，指定源矩形的坐标。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，指定源矩形的坐标。
 
 *点掩码*<br/>
-指示蒙版位图左上角的[POINT](/previous-versions/dd162805\(v=vs.85\))结构。
+指示蒙版位图左上角的[POINT](/windows/win32/api/windef/ns-windef-point)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -1278,7 +1278,7 @@ BOOL PlgBlt(
 
 释放设备上下文。
 
-```
+```cpp
 void ReleaseDC() const throw();
 ```
 
@@ -1290,7 +1290,7 @@ void ReleaseDC() const throw();
 
 释放 GDI+ 使用的资源。
 
-```
+```cpp
 void ReleaseGDIPlus() throw();
 ```
 
@@ -1346,7 +1346,7 @@ HRESULT Save(
 
 为 DIB 部分的调色板中一系列条目设置红色、绿色、蓝色 （RGB） 颜色值。
 
-```
+```cpp
 void SetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -1372,13 +1372,13 @@ void SetColorTable(
 
 在位图中给定位置设置像素的颜色。
 
-```
+```cpp
 void SetPixel(int x, int y, COLORREF color) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 要设置的像素的水平位置。
 
 *Y*<br/>
@@ -1395,13 +1395,13 @@ void SetPixel(int x, int y, COLORREF color) throw();
 
 将像素颜色设置到调色板中*iIndex*处的颜色。
 
-```
+```cpp
 void SetPixelIndexed(int x, int y, int iIndex) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 要设置的像素的水平位置。
 
 *Y*<br/>
@@ -1414,7 +1414,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 将*x*和*y*指定位置的像素设置为红色、绿色、蓝色 （RGB） 图像中由*r、g*和*b*表示的颜色。 *g*
 
-```
+```cpp
 void SetPixelRGB(
     int x,
     int y,
@@ -1425,13 +1425,13 @@ void SetPixelRGB(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 要设置的像素的水平位置。
 
 *Y*<br/>
 要设置的像素的垂直位置。
 
-*R*<br/>
+*r*<br/>
 红色的强度。
 
 *G*<br/>
@@ -1519,7 +1519,7 @@ BOOL StretchBlt(
 要执行的栅格操作。 栅格操作代码精确定义如何组合源、目标和模式（由当前选择的画笔定义）以形成目标。 有关其他栅格操作代码及其说明的列表，请参阅 Windows SDK 中的[BitBlt。](/windows/win32/api/wingdi/nf-wingdi-bitblt)
 
 *整流*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，标识目标。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，标识目标。
 
 *xSrc*<br/>
 源矩形左上角的 x 坐标（以逻辑单位为单位）。
@@ -1602,7 +1602,7 @@ BOOL TransparentBlt(
 要视为透明源位图中的颜色。 默认情况下，CLR_INVALID，指示应使用当前设置为图像透明颜色的颜色。
 
 *整流*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，标识目标。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，标识目标。
 
 *xSrc*<br/>
 源矩形左上角的 x 坐标（以逻辑单位为单位）。

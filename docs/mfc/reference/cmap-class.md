@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbb34d4db41ef11cd01a6a8a7f20cafa0e737268
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370098"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749073"
 ---
 # <a name="cmap-class"></a>CMap 类
 
@@ -211,7 +211,7 @@ UINT GetHashTableSize() const;
 
 在 中检索地图元素`rNextPosition`，然后更新`rNextPosition`以引用地图中的下一个元素。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     KEY& rKey,
@@ -289,7 +289,7 @@ POSITION GetStartPosition() const;
 
 初始化哈希表。
 
-```
+```cpp
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```
 
@@ -338,7 +338,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *ARG_KEY*<br/>
 指定*键*值类型的模板参数。
 
-*关键*<br/>
+*键*<br/>
 指定标识要备份的元素的键。
 
 *价值*<br/>
@@ -375,7 +375,7 @@ VALUE& operator[](arg_key key);
 *ARG_KEY*<br/>
 指定键值类型的模板参数。
 
-*关键*<br/>
+*键*<br/>
 用于从映射检索值的键。
 
 ### <a name="remarks"></a>备注
@@ -447,7 +447,7 @@ CPair* PLookup(ARG_KEY key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 要搜索的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -466,7 +466,7 @@ CPair* PLookup(ARG_KEY key);
 
 通过调用全局帮助器函数`DestructElements`从此映射中删除所有值。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -491,7 +491,7 @@ BOOL RemoveKey(ARG_KEY key);
 *ARG_KEY*<br/>
 指定键类型的模板参数。
 
-*关键*<br/>
+*键*<br/>
 要删除的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -510,7 +510,7 @@ BOOL RemoveKey(ARG_KEY key);
 
 主要是指在地图中插入元素。
 
-```
+```cpp
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```
 
@@ -519,13 +519,13 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 *ARG_KEY*<br/>
 指定*键*参数类型的模板参数。
 
-*关键*<br/>
+*键*<br/>
 指定新元素的键。
 
 *ARG_VALUE*<br/>
 指定*newValue*参数类型的模板参数。
 
-*新值*<br/>
+*newValue*<br/>
 指定新元素的值。
 
 ### <a name="remarks"></a>备注

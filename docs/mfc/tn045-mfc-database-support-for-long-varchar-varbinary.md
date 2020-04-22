@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: f67d159fb600dcacd8eedd40e672edf18bddee9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55a68ba970d0a26163f426d51818c701c13ed051
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365506"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750279"
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045：针对长型 Varchar/Varbinary 的 MFC/数据库支持
 
@@ -45,7 +45,7 @@ ODBC **SQL_LONG_VARCHAR**和**SQL_LONGBINARY**数据类型（此处称为长数�
 
 RFX 函数`CString`，并且`CByteArray`具有一个附加参数，允许您覆盖已分配内存的默认大小，以保存数据列的检索值。 请注意以下函数声明中的 nMaxLength 参数：
 
-```
+```cpp
 void AFXAPI RFX_Text(CFieldExchange* pFX,
     const char *szName,
     CString& value,
@@ -116,7 +116,7 @@ ClassWizard 会`CLongBinary`为您绑定**SQL_LONGVARCHAR**或**SQL_LONGVARBINAR
 > [!NOTE]
 > 由于长数据列不受框架的约束，因此不会通过`CRecordset::Update`调用处理对它的更改。 您必须自己创建并发送所需的 SQL **INSERT**和**更新**语句。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [技术说明（按编号）](../mfc/technical-notes-by-number.md)<br/>
 [按类别分类的技术说明](../mfc/technical-notes-by-category.md)

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: ac8fcb3b8b2bd0f876cf28d58e195000112373f4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 154bfb5beb258ff26649f44f0bd4c23fb8708977
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329578"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745864"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 类
 
@@ -295,7 +295,7 @@ HRESULT Move(LPCRECT pRect);
 
 根据*bDirty*的值，将属性页的状态标记为已更改或未更改。
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 
@@ -356,7 +356,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 请参阅[IPropertyPage：在](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator)Windows SDK 中翻译加速器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IPropertyPage2Impl 类](../../atl/reference/ipropertypage2impl-class.md)<br/>
 [IPerPropertyBrowsingImpl 类](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>

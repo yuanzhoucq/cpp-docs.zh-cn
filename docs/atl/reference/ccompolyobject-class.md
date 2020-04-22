@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: e30afef455db5f83afca8ff9e515f39f015c3b8a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c880d170a03196d0e15ea8741c786e560d90ddc4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327561"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747781"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 类
 
@@ -179,7 +179,7 @@ HRESULT FinalConstruct();
 
 在对象销毁期间调用此方法释放[m_contained](#m_contained)数据成员。
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -212,7 +212,7 @@ HRESULT QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>参数
 
-*Q*<br/>
+*问*<br/>
 COM 接口。
 
 *Iid*<br/>
@@ -244,7 +244,7 @@ STDMETHOD_(ULONG, Release)();
 
 在调试生成中`Release`，返回可用于诊断或测试的值。 在非调试生成中`Release`，始终返回 0。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>

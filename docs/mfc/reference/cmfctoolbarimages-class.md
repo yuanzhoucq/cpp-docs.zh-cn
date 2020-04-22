@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 90a12badc90bfcb74e873180b5f887e37cd47fd5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 474e2707ba1936082bb6abc1be2109a27924f1d5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376210"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745162"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBar图像类
 
@@ -270,7 +270,7 @@ class CMFCToolBarImages : public CObject
 
 ## <a name="cmfctoolbarimagesadaptcolors"></a><a name="adaptcolors"></a>CMFC工具栏图片：：改编颜色
 
-```
+```cpp
 void AdaptColors(
     COLORREF clrBase,
     COLORREF clrTone);
@@ -349,7 +349,7 @@ static void __stdcall CleanUp();
 
 释放[CMFCToolbar 图像](../../mfc/reference/cmfctoolbarimages-class.md)对象分配的系统资源。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -471,7 +471,7 @@ BOOL Draw(
 *pDC*<br/>
 [在]指向设备上下文的指针。
 
-** x <br/>
+*x*<br/>
 [在]要绘制图像的矩形左侧的 X 坐标。
 
 *Y*<br/>
@@ -545,7 +545,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 释放[系统资源，CMFCToolBarImages：:P重新拍摄的DrawImage](#preparedrawimage)在绘制工具栏图像后，通过调用[CMFCToolBarImages：:Draw](#draw)。
 
-```
+```cpp
 void EndDrawImage(CAfxDrawState& ds);
 ```
 
@@ -1068,7 +1068,7 @@ BOOL MirrorVert();
 
 ## <a name="cmfctoolbarimagesonsyscolorchange"></a><a name="onsyscolorchange"></a>CMFCToolbar图像：Onsys颜色转换
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1161,7 +1161,7 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 
 ## <a name="cmfctoolbarimagessetalwayslight"></a><a name="setalwayslight"></a>CMFC工具栏图片：：SetAlwaysLight
 
-```
+```cpp
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```
 
@@ -1204,7 +1204,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 设置每个工具栏图像的大小（源大小）。
 
-```
+```cpp
 void SetImageSize(
     SIZE sizeImage,
     BOOL bUpdateCount=FALSE);
@@ -1221,7 +1221,7 @@ void SetImageSize(
 
 ## <a name="cmfctoolbarimagessetlightpercentage"></a><a name="setlightpercentage"></a>CMFC工具栏图像：：设置光百分比
 
-```
+```cpp
 void SetLightPercentage(int nValue);
 ```
 
@@ -1233,7 +1233,7 @@ void SetLightPercentage(int nValue);
 
 ## <a name="cmfctoolbarimagessetmapto3dcolors"></a><a name="setmapto3dcolors"></a>CMFCToolbar图像：设置Mapto3DColors
 
-```
+```cpp
 void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```
 
@@ -1245,7 +1245,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ## <a name="cmfctoolbarimagessetpremultiplyautocheck"></a><a name="setpremultiplyautocheck"></a>CMFCToolbar图像：设置预乘自动检查
 
-```
+```cpp
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```
 
@@ -1257,7 +1257,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ## <a name="cmfctoolbarimagessetsingleimage"></a><a name="setsingleimage"></a>CMFC工具栏图像：：设置单一图像
 
-```
+```cpp
 void SetSingleImage();
 ```
 
@@ -1382,7 +1382,7 @@ BOOL SmoothResize(double dblImageScale);
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

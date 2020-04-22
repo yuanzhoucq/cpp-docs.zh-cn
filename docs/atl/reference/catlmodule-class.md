@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 378c8634e00935c622f0bf5d06a4f6c50cc60cb6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfc11a95a8d5d9354279f4c71698a6bc35c7aca7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321429"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748620"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 类
 
@@ -222,7 +222,7 @@ IGlobalInterfaceTable* m_pGIT;
 
 释放所有数据成员。
 
-```
+```cpp
 void Term() throw();
 ```
 
@@ -352,7 +352,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 类似于[CAtlModule：：更新注册注册从资源D，](#updateregistryfromresourced)除了`CAtlModule::UpdateRegistryFromResourceS`创建一个静态链接到 ATL 注册表组件 （注册）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

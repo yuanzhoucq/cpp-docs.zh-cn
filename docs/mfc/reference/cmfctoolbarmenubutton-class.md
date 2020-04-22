@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376161"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745145"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenu按钮类
 
@@ -328,7 +328,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 在菜单按钮上绘制文档图标。
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ void DrawDocumentIcon(
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenu按钮：：启用快速定制
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ const CObList& GetCommands() const;
 
 检索按钮图像的边界矩形。
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ virtual BOOL SetACCData(
 
 指定当按钮同时具有有效的命令 ID 和子菜单时，该按钮是作为菜单按钮还是拆分按钮绘制。
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ void SetMenuOnly(BOOL bMenuOnly);
 
 指定下拉菜单是否处于调色板模式。
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ void SetMenuPaletteMode(
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenu按钮：：设置消息
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 
@@ -874,7 +874,7 @@ virtual void SetTearOff(UINT uiBarID);
 
 致电[CWinAppEx：启用TearOffMenus，](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)以便在应用程序中启用分接菜单功能。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

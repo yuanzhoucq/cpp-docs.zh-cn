@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: 573446256aa89423837ebf73176a73f72054911b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc4bd4ba7a2f41a25679f1da718671f525519708
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318763"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748215"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 类
 
@@ -105,7 +105,7 @@ bool Allocate(size_t nElements) throw();
 
 调用此方法以获取现有指针的所有权。
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -171,7 +171,7 @@ T* Detach() throw();
 
 调用此方法以删除 指向 的对象`CAutoVectorPtr`。
 
-```
+```cpp
 void Free() throw();
 ```
 
@@ -224,7 +224,7 @@ operator T*() const throw();
 
 返回指向类模板中定义的对象数据类型的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CAutoPtr 类](../../atl/reference/cautoptr-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

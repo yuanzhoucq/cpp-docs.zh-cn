@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330703"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747580"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 类
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 对模态属性表页面中的数据进行了不可恢复的更改后，请调用此函数。
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ BOOL OnApply();
 
 当用户单击属性页的 **"帮助**"按钮时，将调用此成员函数。
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ BOOL OnQueryCancel();
 
 当用户单击 **"取消"** 按钮时，将调用此成员函数。
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 调用此成员函数以启用或禁用 **"立即应用"** 按钮，具体取决于属性页中的设置是否应应用于相应的外部对象。
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 
@@ -347,6 +347,6 @@ void SetModified(BOOL bChanged = TRUE);
 
 属性表跟踪哪些页面是"脏"的，即您为其调用`SetModified( TRUE )`的属性页。 如果调用`SetModified( TRUE )`其中一个页面，则始终启用"**立即应用"** 按钮。 当您调用`SetModified( FALSE )`其中一个页面时，将禁用"**立即应用"** 按钮，但前提是其他页面均未"脏"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

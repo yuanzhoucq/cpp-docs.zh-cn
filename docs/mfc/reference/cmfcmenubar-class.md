@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 50dd488d1f59c99b8fee1eb96acf6d0041547df9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f25bff9564eb7a4290f958f0b7810cac8ef7e238
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369689"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749620"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 类
 
@@ -430,7 +430,7 @@ virtual void CreateFromMenu(
 
 启用位于菜单栏右侧**的帮助**组合框。
 
-```
+```cpp
 void EnableHelpCombobox(
     UINT uiID,
     LPCTSTR lpszPrompt = NULL,
@@ -954,7 +954,7 @@ virtual BOOL SaveState (
 
 根据资源 ID 设置[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)对象的默认菜单。
 
-```
+```cpp
 void SetDefaultMenuResId(UINT uiResId);
 ```
 
@@ -971,7 +971,7 @@ void SetDefaultMenuResId(UINT uiResId);
 
 ## <a name="cmfcmenubarsetforcedownarrows"></a><a name="setforcedownarrows"></a>CMFC菜单栏：设置强制向下箭头
 
-```
+```cpp
 void SetForceDownArrows(BOOL bValue);
 ```
 
@@ -985,7 +985,7 @@ void SetForceDownArrows(BOOL bValue);
 
 当 MDI 更改其显示模式且菜单栏必须更新时，框架将调用此方法。
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL,
@@ -1011,7 +1011,7 @@ void SetMaximizeMode(
 
 设置用户创建菜单按钮时框架使用的运行时类信息。
 
-```
+```cpp
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```
 
@@ -1082,7 +1082,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 
 如果菜单不显示所有菜单命令，它将隐藏很少使用的命令。 有关显示菜单命令的详细信息，请参阅[CMFCMenuBar 类](../../mfc/reference/cmfcmenubar-class.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

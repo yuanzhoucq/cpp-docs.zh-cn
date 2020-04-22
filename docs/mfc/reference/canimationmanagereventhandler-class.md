@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: a4e97c2a1188071b5bde0781630d0dfe52e8a72f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58bb37e9de40f4bc711b417eab107aa55b8ff0e8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369724"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750115"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 类
 
@@ -127,7 +127,7 @@ IFACEMETHOD(OnManagerStatusChanged)(
 
 存储指向动画控制器的指针以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -136,6 +136,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *动画控制器*<br/>
 指向动画控制器的指针，该控制器将接收事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

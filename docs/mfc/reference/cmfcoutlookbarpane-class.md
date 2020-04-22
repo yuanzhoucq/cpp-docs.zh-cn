@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369642"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749604"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 类
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 释放 Outlook 栏窗格上图像使用的资源。
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ virtual BOOL EnableContextMenuItems(
 
 指定 Outlook 栏窗格上的滚动箭头是逐页前进按钮列表，还是按按钮前进。
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ BOOL RemoveButton(UINT iIdCommand);
 
 设置 Outlook 栏的背景颜色。
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ void SetBackColor(COLORREF color);
 
 设置背景图像。
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ void SetBackImage(UINT uiImageID);
 
 将 Outlook 栏窗格重置为原始按钮集。
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ void SetDefaultState();
 
 设置 Outlook 栏窗格中按钮周围使用的填充像素数。
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 在 Outlook 栏窗格中设置常规文本和突出显示文本的颜色。
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 设置 Outlook 栏窗格的透明颜色。
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 
@@ -480,7 +480,7 @@ void SetTransparentColor(COLORREF color);
 
 显示透明图像需要透明颜色。 图像中此颜色的任何出现都用背景颜色绘制。  背景图像和前景图像没有混合。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

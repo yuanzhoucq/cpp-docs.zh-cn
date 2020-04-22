@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331238"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746577"
 ---
 # <a name="crbtree-class"></a>CRBTree 类
 
@@ -159,7 +159,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 键值。
 
 ### <a name="return-value"></a>返回值
@@ -185,7 +185,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *Pos*<br/>
 位置值。
 
-*关键*<br/>
+*键*<br/>
 接收密钥的变量。
 
 *value*<br/>
@@ -276,7 +276,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 调用此方法获取存储在地图中的元素的键和值，并将位置推进到下一个元素。
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -288,7 +288,7 @@ void GetNextAssoc(
 *Pos*<br/>
 位置计数器，由以前对[CRBTree 方法的调用返回：获取头位置](#getheadposition)或[CRBTree：：查找第一键后](#findfirstkeyafter)。
 
-*关键*<br/>
+*键*<br/>
 指定树键类型的模板参数。
 
 *value*<br/>
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 调用此方法从`CRBTree`对象中删除所有元素。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ void RemoveAll() throw();
 
 调用此方法以删除对象中给定位置的元素`CRBTree`。
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ void RemoveAt(POSITION pos) throw();
 
 调用此方法以更改存储在对象中给定位置的值`CRBTree`。
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 
@@ -490,6 +490,6 @@ typedef VTraits::INARGTYPE VINARGTYPE;
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

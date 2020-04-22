@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321573"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748788"
 ---
 # <a name="catlarray-class"></a>CAtlarray 类
 
@@ -69,7 +69,7 @@ class CAtlArray
 |[GetData](#getdata)|调用此方法以返回指向数组中第一个元素的指针。|
 |[插入Arrayat](#insertarrayat)|调用此方法将一个数组插入到另一个数组中。|
 |[插入At](#insertat)|调用此方法以将新元素（或元素的多个副本）插入数组对象。|
-|[IsEmpty](#isempty)|调用此方法以测试数组是否为空。|
+|[是空的](#isempty)|调用此方法以测试数组是否为空。|
 |[全部删除](#removeall)|调用此方法从数组对象中删除所有元素。|
 |[RemoveAt](#removeat)|调用此方法从数组中删除一个或多个元素。|
 |[Setat](#setat)|调用此方法以设置数组对象中元素的值。|
@@ -162,7 +162,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 调用此方法以确认数组对象是否有效。
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ CAtlArray() throw();
 
 调用此方法将一个数组的元素复制到另一个数组。
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 调用此方法从数组中删除任何空元素。
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 调用此方法将一个数组插入到另一个数组中。
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 调用此方法以将新元素（或元素的多个副本）插入数组对象。
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 调用此方法从数组对象中删除所有元素。
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ void RemoveAll() throw();
 
 调用此方法从数组中删除一个或多个元素。
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 调用此方法以设置数组对象中元素的值。
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 调用此方法以设置数组对象中元素的值，根据需要展开数组。
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 

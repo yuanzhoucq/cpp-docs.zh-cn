@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: c296c9de79c305d0f7d2f135f250d181d3cd667a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcecf716e9d865b1b8590a733216576e0da4c2fb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330056"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746013"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 类
 
@@ -60,7 +60,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 调用此方法来分配内存块。
 
-```
+```cpp
 void* Allocate(size_t nBytes) throw();
 ```
 
@@ -85,7 +85,7 @@ void* Allocate(size_t nBytes) throw();
 
 调用此方法以释放内存块。
 
-```
+```cpp
 void Free(void* p) throw();
 ```
 
@@ -127,7 +127,7 @@ size_t GetSize(void* p) throw();
 
 调用此方法以重新分配由该内存管理器分配的内存。
 
-```
+```cpp
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 
@@ -967,6 +967,6 @@ STDMETHOD(CreateControlLicEx)(
 
 有关 使用`IAxWinHostWindowLic::CreateControlLicEx`的样本，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 09811b14ed805b1965015a32a25c0b67c947ff4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358310"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745324"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 类
 
@@ -99,7 +99,7 @@ int GetTwipSize() const;
 
 使用给定字体的所有有效大小填充字体大小组合框。
 
-```
+```cpp
 void RebuildFontSizes(const CString& strFontName);
 ```
 
@@ -116,7 +116,7 @@ void RebuildFontSizes(const CString& strFontName);
 
 将指定大小（以 twips 为单位）舍入到最近的大小（以磅为单位），然后将组合框中的选定大小设置为该值。
 
-```
+```cpp
 void SetTwipSize(int nSize);
 ```
 
@@ -129,7 +129,7 @@ void SetTwipSize(int nSize);
 
 稍后，您可以通过调用[CMFCToolBarFontSizeComboBox：：GetTwipSize](#gettwipsize)方法来检索以前的有效字体大小。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

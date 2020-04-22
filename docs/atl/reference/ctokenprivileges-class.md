@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: ceb9aeca6b99e7fc9d08625e11cbdb182fb3dc9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330546"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747360"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 类
 
@@ -166,7 +166,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 从`CTokenPrivileges`访问令牌对象中删除所有权限。
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -178,7 +178,7 @@ void DeleteAll() throw();
 
 检索访问令牌对象中包含的特权的`CTokenPrivileges`显示名称。
 
-```
+```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
@@ -221,7 +221,7 @@ UINT GetLength() const throw();
 
 从`CTokenPrivileges`对象检索本地唯一标识符 （LUID） 和属性标志。
 
-```
+```cpp
 void GetLuidsAndAttributes(
     CLUIDArray* pPrivileges,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -243,7 +243,7 @@ void GetLuidsAndAttributes(
 
 从`CTokenPrivileges`对象检索名称和属性标志。
 
-```
+```cpp
 void GetNamesAndAttributes(
     CNames* pNames,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -330,7 +330,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 将值投射到指向[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>

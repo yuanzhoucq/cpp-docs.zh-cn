@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 2420e1643444e6cbbf8edff90bbd3ecb1eac8534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cfa205337248181f02e6a1218d49e75bda58e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320773"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748112"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 类
 
@@ -548,7 +548,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>参数
 
-*Lcid*<br/>
+*lcid*<br/>
 该物业DISPID_AMBIENT_LOCALEID。
 
 ### <a name="return-value"></a>返回值
@@ -794,7 +794,7 @@ BOOL GetDirty();
 
 检索为就地编辑而激活的控件的缩放因子的分子和分母的 x 和 y 值。
 
-```
+```cpp
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```
 
@@ -1553,7 +1553,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 将数据成员`m_bRequiresSave`设置为*bDirty*中的值。
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 
@@ -1566,7 +1566,7 @@ void SetDirty(BOOL bDirty);
 
 `SetDirty(TRUE)`应调用 以标记控件自上次保存以来已更改。 的值`m_bRequiresSave`使用[CComControlBase 检索：：获取脏。](#getdirty)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

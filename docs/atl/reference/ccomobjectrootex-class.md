@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327608"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747903"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 
@@ -155,7 +155,7 @@ HRESULT FinalConstruct();
 
 可以在派生类中重写此方法，以执行对象所需的任何清理。
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ ULONG InternalRelease();
 
 如果线程模型是多线程的，此方法将调用 Win32 API 函数[EnterDataSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection)，它等待线程可以取得通过私有数据成员获得的关键部分对象的所有权。
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ ULONG OuterRelease();
 
 如果线程模型是多线程的，此方法调用 Win32 API 函数[Leave临界节](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection)，它释放通过私有数据成员获取的关键部分对象的所有权。
 
-```
+```cpp
 void Unlock();
 ```
 
@@ -369,7 +369,7 @@ void Unlock();
 
 如果线程模型是单线程的，则此方法不执行任何操作。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject 类](../../atl/reference/ccomobject-class.md)<br/>

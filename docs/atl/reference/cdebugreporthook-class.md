@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327113"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747719"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 类
 
@@ -107,7 +107,7 @@ static int __cdecl CDebugReportHookProc(
 *报表类型*<br/>
 报表的类型（_CRT_WARN、_CRT_ERROR 或_CRT_ASSERT）。
 
-*消息*<br/>
+*message*<br/>
 message 字符串。
 
 *返回值*<br/>
@@ -127,7 +127,7 @@ message 字符串。
 
 调用此方法停止向命名管道发送调试报告并还原上一个报表挂钩。
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ void RemoveHook() throw();
 
 调用此方法开始向命名管道发送调试报告。
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ BOOL SetPipeName(
 
 调用此方法以设置此类将等待命名管道变为可用的时间（以毫秒为单位）。
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 
@@ -182,6 +182,6 @@ void SetTimeout(DWORD dwTimeout);
 *dwTimeout*<br/>
 此类将等待命名管道变为可用的时间（以毫秒为单位）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../atl/reference/atl-classes.md)

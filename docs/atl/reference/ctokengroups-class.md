@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 1e9d21c59eb5efabf036fbc938a40de2c4b7a0b7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccfa628f4a099f7e13eb09d272c72c2bdd846f37
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330554"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746389"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 类
 
@@ -81,7 +81,7 @@ class CTokenGroups
 
 将`CSid`或现有`TOKEN_GROUPS`结构添加到`CTokenGroups`对象。
 
-```
+```cpp
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
@@ -153,7 +153,7 @@ bool Delete(const CSid& rSid) throw();
 
 从`CTokenGroups`对象中删除`CSid`所有对象及其关联属性。
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -197,7 +197,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 检索`CSid`对象和（可选）属于`CTokenGroups`该对象的属性。
 
-```
+```cpp
 void GetSidsAndAttributes(
     CSid::CSidArray* pSids,
     CAtlArray<DWORD>* pAttributes = NULL) const throw(...);
@@ -271,7 +271,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 将值投射到指向[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)结构的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [CSid 类](../../atl/reference/csid-class.md)<br/>

@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375264"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749537"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 类
 
@@ -260,7 +260,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 将指定的功能区元素添加到自定义对话框中显示的功能区元素数组中。
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ CMFCRibbonBaseElement* GetDroppedDown();
 
 检索功能区类别中的所有功能区元素。
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ void GetElements(
 
 检索与指定命令 ID 关联的所有功能区元素。
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 
 检索功能区类别中包含的功能区元素的命令 ID。
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ int GetTextTopLine() const;
 
 检索属于功能区类别的所有可见元素。
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 定义功能区类别的功能区面板折叠的顺序。
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 
 将用户定义的数据设置为与功能区类别关联的数据。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 为功能区类别分配一个键尖。
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ void SetKeys(LPCTSTR lpszKeys);
 
 为功能区类别分配名称和键尖。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ void SetName(LPCTSTR lpszName);
 
 设置功能区类别的颜色。
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 
@@ -1439,7 +1439,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 - AFX_CategoryColor_Violet
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

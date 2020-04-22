@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368365"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750501"
 ---
 # <a name="crecordset-class"></a>CRecordset 类
 
@@ -331,7 +331,7 @@ BOOL CanBookmark() const;
 
 请求数据源取消正在进行的异步操作或从第二个线程取消进程。
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ void Cancel();
 
 在调用[更新](#update)之前，取消由[编辑](#edit)或[AddNew](#addnew)操作引起的任何挂起更新。
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ BOOL FlushResultSet();
 
 获取当前记录的书签值。
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ virtual CString GetDefaultSQL();
 
 检索当前记录中的字段数据。
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ short GetODBCFieldCount() const;
 
 获取有关记录集中的字段的信息。
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ WORD GetRowStatus(WORD wRow) const;
 
 确定记录集中当前记录的索引以及是否看到最后一条记录。
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ nRows**<br/>
 
 使第一行中的第一个记录成为当前记录。
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ void MoveFirst();
 
 使最后一个完整行中的第一个记录成为当前记录。
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ void MoveLast();
 
 使下一行中的第一个记录成为当前记录。
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ void MoveNext();
 
 使上一行中的第一个记录成为当前记录。
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ virtual BOOL Open(
 
 更新当前行集中行的数据和状态。
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ virtual BOOL Requery();
 
 将记录集放在与指定记录编号对应的记录上。
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ nRows**<br/>
 
 在包含指定书签的记录上定位记录集。
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ void SetBookmark(const CDBVariant& varBookmark);
 
 将记录集的字段数据成员标记为已更改或未更改。
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 
 将记录集的字段数据成员标记为 Null（具体没有值）或非 Null。
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 
 将锁定模式设置为"乐观"锁定（默认）或"悲观"锁定。 确定如何锁定记录以进行更新。
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ void SetLockingMode(UINT nMode);
 
 将参数标记为 Null（具体没有值）或非 Null。
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ void SetParamNull(
 
 将光标移动到当前行集中的行。
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
@@ -1957,7 +1957,7 @@ virtual BOOL Update();
 
 请参阅文章["事务：在记录集 （ODBC） 中执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

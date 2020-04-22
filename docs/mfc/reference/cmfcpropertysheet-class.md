@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 6cdb2e966ca1878377fd26a6d4b9075090d32c3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361807"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750060"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFC属性表类
 
@@ -142,7 +142,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 向属性表添加页面。
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -161,7 +161,7 @@ void AddPage(CPropertyPage* pPage);
 
 向树控件添加新的属性页。
 
-```
+```cpp
 void AddPageToTree(
     CMFCPropertySheetCategoryInfo* pCategory,
     CMFCPropertyPage* pPage,
@@ -261,7 +261,7 @@ CMFCPropertySheet(
 
 在每个页面顶部保留一定空间，用于绘制自定义页眉。
 
-```
+```cpp
 void EnablePageHeader(int nHeaderHeight);
 ```
 
@@ -414,7 +414,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 从树控件中删除节点。
 
-```
+```cpp
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```
 
@@ -431,7 +431,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 
 从属性表中删除属性页。
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -488,7 +488,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 指定属性表的外观。
 
-```
+```cpp
 void SetLook(
     PropSheetLook look,
     int nNavControlWidth=100);
@@ -516,7 +516,7 @@ void SetLook(
 |`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|为每个属性页显示一个选项卡，以 Microsoft OneNote 的样式显示。 如果选项卡数多于单行中容纳的选项卡数，则框架在属性表顶部显示选项卡，并滚动箭头。|
 |`CMFCPropertySheet::PropSheetLook_List`|在属性表的左侧显示一个列表。 每个列表项对应于属性页。 如果列表项数多于列表的可见区域，则框架将显示滚动箭头。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

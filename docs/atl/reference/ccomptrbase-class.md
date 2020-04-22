@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 7d450f7762b39d7fa8fae07230690eecb8edbb4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c62cc912b3fea3ea68390882bdda37cbfb25a7e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327465"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747757"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 
@@ -122,7 +122,7 @@ HRESULT Advise(
 
 调用此方法以获取现有指针的所有权。
 
-```
+```cpp
 void Attach(T* p2) throw();
 ```
 
@@ -366,7 +366,7 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>参数
 
-*Q*<br/>
+*问*<br/>
 需要接口指针的对象类型。
 
 *Pp*<br/>
@@ -386,7 +386,7 @@ template <class Q> HRESULT QueryInterface(Q
 
 调用此方法以释放接口。
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -415,6 +415,6 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 此方法调用[AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

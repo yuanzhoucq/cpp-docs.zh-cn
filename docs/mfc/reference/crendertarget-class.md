@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368343"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747206"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 类
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 将现有渲染目标接口附加到对象
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 
 在此渲染目标上启动绘图。
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 将绘图区域清除为指定颜色。
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -362,7 +362,7 @@ ID2D1RenderTarget* Detach ();
 
 绘制指定的 IDWriteTextLayout 对象描述的格式化文本。
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ void DrawBitmap(
 
 使用指定的描边样式绘制指定椭圆的轮廓。
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ void DrawEllipse(
 
 使用指定的描边样式绘制指定几何体的轮廓。
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ void DrawGeometry(
 
 绘制指定的字形。
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ void DrawGlyphRun(
 
 使用指定的描边样式在指定点之间绘制一条线。
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ void DrawLine(
 
 绘制具有指定尺寸和描边样式的矩形的轮廓。
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ void DrawRectangle(
 
 使用指定的描边样式绘制指定圆角矩形的轮廓。
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ void DrawRoundedRectangle(
 
 使用 IDWriteTextFormat 对象提供的格式信息绘制指定的文本。
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -586,7 +586,7 @@ void DrawText(
 
 绘制指定的 IDWriteTextLayout 对象描述的格式化文本。
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -624,7 +624,7 @@ HRESULT EndDraw();
 
 绘制指定椭圆的内部。
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ void FillEllipse(
 
 绘制指定几何体的内部。
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ void FillGeometry(
 
 绘制指定网格的内部。
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ void FillMesh(
 
 将指定位图描述的不平性蒙版应用于画笔，并使用该画笔绘制渲染目标的区域。
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -712,7 +712,7 @@ void FillOpacityMask(
 
 绘制指定矩形的内部。
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ void FillRectangle(
 
 绘制指定圆角矩形的内部。
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ void FillRoundedRectangle(
 
 执行所有挂起的图形命令。
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ CD2DSizeF GetSize() const;
 
 获取后续绘图操作的标签。
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 
 检索渲染目标的当前文本呈现选项。
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 
 获取渲染目标的当前变换。
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ operator ID2D1RenderTarget*();
 
 从渲染目标中删除最后一个轴对齐的剪辑。 调用此方法后，剪辑不再应用于后续绘图操作。
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 停止将绘图操作重定向到上次 PushLayer 调用指定的图层。
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 从渲染目标中删除最后一个轴对齐的剪辑。 调用此方法后，剪辑不再应用于后续绘图操作。
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ void PushAxisAlignedClip(
 
 将指定的图层添加到渲染目标，以便它接收所有后续绘图操作，直到调用 PopLayer。
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ void PushLayer(
 
 将渲染目标的绘制状态设置为指定的 ID2D1 绘图StateBlock 的绘图状态。
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 
 将当前绘图状态保存到指定的 ID2D1 绘图状态块。
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 
 设置渲染目标的防锯齿模式。 防锯齿模式适用于所有后续绘图操作，不包括文本和字形绘图操作。
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 
 设置渲染目标每英寸 （DPI） 的点数。
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 
 指定后续绘图操作的标签。
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ void SetTags(
 
 指定用于后续文本和字形绘图操作的防锯齿模式。
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 
 指定要应用于所有后续文本和字形绘图操作的文本呈现选项。
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 
 将指定的转换应用于渲染目标，替换现有变换。 所有后续绘图操作都发生在转换的空间中。
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```
@@ -1146,6 +1146,6 @@ BOOL VerifyResource(CD2DResource* pResource);
 
 TRUE 是有效的对象;如果有效，则为对象。否则 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

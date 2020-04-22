@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330324"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746016"
 ---
 # <a name="cwindow-class"></a>CWindow 类
 
@@ -394,7 +394,7 @@ UINT ArrangeIconicWindows() throw();
 
 将*hWndNew*标识的窗口附加到`CWindow`对象。
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 请参阅 Windows SDK 中的[客户端屏幕](/windows/win32/api/winuser/nf-winuser-clienttoscreen)。
 
-此方法的第二个版本允许您转换[RECT](/previous-versions/dd162897\(v=vs.85\))结构的坐标。
+此方法的第二个版本允许您转换[RECT](/windows/win32/api/windef/ns-windef-rect)结构的坐标。
 
 ## <a name="cwindowcreate"></a><a name="create"></a>CWindow：：创建
 
@@ -771,7 +771,7 @@ BOOL DlgDirSelectComboBox(
 
 注册窗口是否接受拖动的文件。
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 标记绘制的末尾。
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ WORD GetWindowWord(int nIndex) const throw();
 
 将键盘焦点设置到对话框中的控件。
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 
 使指定区域内的工作区无效。
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 请参阅 Windows SDK 中的[地图窗口点](/windows/win32/api/winuser/nf-winuser-mapwindowpoints)。
 
-此方法的第二个版本允许您转换[RECT](/previous-versions/dd162897\(v=vs.85\))结构的坐标。
+此方法的第二个版本允许您转换[RECT](/windows/win32/api/windef/ns-windef-rect)结构的坐标。
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>CWindow：：消息框
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 对于顶级窗口对象，x 和 y 参数相对于屏幕的左上角。 对于子窗口对象，它们相对于父窗口工作区的左上角。
 
-此方法的第二个版本使用[RECT](/previous-versions/dd162897\(v=vs.85\))结构来确定窗口的新位置、宽度和高度。
+此方法的第二个版本使用[RECT](/windows/win32/api/windef/ns-windef-rect)结构来确定窗口的新位置、宽度和高度。
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow：：下一个DlgCtrl
 
 将键盘焦点设置到对话框中的下一个控件。
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ BOOL PostMessage(
 
 将键盘焦点设置到对话框中的上一个控件。
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ void PrevDlgCtrl() const throw();
 
 向窗口发送[WM_PRINT](/windows/win32/gdi/wm-print)消息，请求它在指定的设备上下文中绘制自身。
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ dwFlags**<br/>
 
 向窗口发送[WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)消息，请求它在指定的设备上下文中绘制其工作区。
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 请参阅 Windows SDK 中的[屏幕客户端](/windows/win32/api/winuser/nf-winuser-screentoclient)。
 
-此方法的第二个版本允许您转换[RECT](/previous-versions/dd162897\(v=vs.85\))结构的坐标。
+此方法的第二个版本允许您转换[RECT](/windows/win32/api/windef/ns-windef-rect)结构的坐标。
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>CWindow：：滚动窗口
 
@@ -2216,7 +2216,7 @@ static LRESULT SendMessage(
 
 将指定的消息发送到`CWindow`对象的所有直接子级。
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2226,7 +2226,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 [在]要发送的消息。
 
 *wParam*<br/>
@@ -2363,7 +2363,7 @@ HWND SetFocus() throw();
 
 通过向窗口发送[WM_SETFONT](/windows/win32/winmsg/wm-setfont)消息来更改窗口的当前字体。
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 通过向窗口发送[WM_SETREDRAW](/windows/win32/gdi/wm-setredraw)消息来设置或清除重绘标志。
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 请参阅在 Windows SDK 中[设置窗口Pos。](/windows/win32/api/winuser/nf-winuser-setwindowpos)
 
-此方法的第二个版本使用[RECT](/previous-versions/dd162897\(v=vs.85\))结构来设置窗口的新位置、宽度和高度。
+此方法的第二个版本使用[RECT](/windows/win32/api/windef/ns-windef-rect)结构来设置窗口的新位置、宽度和高度。
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow：：设置窗口Rgn
 
@@ -2770,6 +2770,6 @@ BOOL WinHelp(
 
 请参阅 Windows SDK 中的[WinHelp。](/windows/win32/api/winuser/nf-winuser-winhelpw)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

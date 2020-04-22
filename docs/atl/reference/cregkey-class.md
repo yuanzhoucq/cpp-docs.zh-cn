@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3bdb2e7c3ab0ef56ef7f6fba5d43f1ba0bb7fc6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331030"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746520"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 
@@ -137,7 +137,7 @@ class CRegKey
 
 调用此方法通过将`CRegKey`[m_hKey](#m_hkey)成员句柄设置为*hKey*将 HKEY 附加到对象。
 
-```
+```cpp
 void Attach(HKEY hKey) throw();
 ```
 
@@ -221,7 +221,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 对 `CRegKey` 对象的引用。
 
 *h键*<br/>
@@ -488,7 +488,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 要复制的键。
 
 ### <a name="return-value"></a>返回值
@@ -1056,7 +1056,7 @@ ATL_DEPRECATED LONG SetValue(
 
 第三种方法称为[RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [DCOM 样品](../../overview/visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

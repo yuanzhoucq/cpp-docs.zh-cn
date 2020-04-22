@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 1540c90e3538d763708e161ba6c1a5e459bb2bdf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 713e78635fe261615a82ab518cdb2c68ac0eeed4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327154"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747737"
 ---
 # <a name="cdacl-class"></a>CDacl 类
 
@@ -235,7 +235,7 @@ rhs**<br/>
 
 从`CDacl`对象中删除特定的 ACE（访问控制条目）。
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -252,7 +252,7 @@ void RemoveAce(UINT nIndex) throw();
 
 删除`CDacl`对象中包含的所有 ACE（访问控制条目）。
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 
@@ -260,7 +260,7 @@ void RemoveAllAces() throw();
 
 删除`CDacl`对象`ACE`中的每个（访问控制条目）结构（如果有）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [CAcl 类](../../atl/reference/cacl-class.md)<br/>

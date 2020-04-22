@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 9ae63946dfa6244e97c376f9eccd9bab93586990
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7a2ee2f9d633c1ed743621eec5b2f7cc04c0e0b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319041"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748825"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -144,7 +144,7 @@ class CAccessToken
 
 调用此方法以取得给定访问令牌句柄的所有权。
 
-```
+```cpp
 void Attach(HANDLE hToken) throw();
 ```
 
@@ -1179,7 +1179,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 主组是此访问令牌生效时创建的新对象的默认组。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATL 安全示例](../../overview/visual-cpp-samples.md)<br/>
 [访问令牌](/windows/win32/SecAuthZ/access-tokens)<br/>

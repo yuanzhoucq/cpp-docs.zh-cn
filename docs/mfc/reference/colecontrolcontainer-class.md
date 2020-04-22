@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: b1737b2ac114181a4245fff027b756ca30b64129
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366185"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749024"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 类
 
@@ -359,7 +359,7 @@ BOOL CreateControl(
 
 创建 OLE 字体。
 
-```
+```cpp
 void CreateOleFont(CFont* pFont);
 ```
 
@@ -389,7 +389,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 
 确定容器是忽略来自附加控制站点的事件还是接受这些事件。
 
-```
+```cpp
 void FreezeAllEvents(BOOL bFreeze);
 ```
 
@@ -543,7 +543,7 @@ virtual BOOL HandleWindowlessMessage(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 窗口消息的标识符，由 Windows 提供。
 
 *wParam*<br/>
@@ -760,7 +760,7 @@ virtual LRESULT SendDlgItemMessage(
 *nID*<br/>
 指定接收消息的控件的标识符。
 
-*消息*<br/>
+*message*<br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -809,7 +809,7 @@ virtual void SetDlgItemText(
 *lpszString*<br/>
 指向控件文本的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

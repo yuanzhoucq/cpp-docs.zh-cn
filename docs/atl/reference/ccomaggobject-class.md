@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 9f05e83c8d0a1fd68fce3228dea9cfeab6183c96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9200c9c396fc16b6df3f4c2f4c66fb7976316d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321171"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748167"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 类
 
@@ -171,7 +171,7 @@ HRESULT FinalConstruct();
 
 在对象销毁期间调用此方法释放[m_contained](#m_contained)成员。
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -233,7 +233,7 @@ STDMETHOD_(ULONG, Release)();
 
 在调试生成中`Release`，返回可用于诊断或测试的值。 在非调试生成中，`Release`始终返回 0。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComObject 类](../../atl/reference/ccomobject-class.md)<br/>
 [CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)<br/>
