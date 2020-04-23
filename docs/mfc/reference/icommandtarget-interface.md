@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: 865a8a27d96f84f536e40ec5a7bbbbdd9837dfcd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be64f4e0367b9ecc1b24fa96f067f4acd45a9978
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356915"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751453"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 接口
 
@@ -49,7 +49,7 @@ interface class ICommandTarget
 
 初始化命令目标对象。
 
-```
+```cpp
 void Initialize(ICommandSource^ cmdSource);
 ```
 
@@ -64,7 +64,7 @@ void Initialize(ICommandSource^ cmdSource);
 
 此方法初始化命令目标对象并将其与指定的命令源对象 cmdSource 关联。 应在用户控件类实现中调用它。 在初始化时，应通过在初始化实现中调用 ICommandSource：：addCommandHandler，将命令处理程序与命令源对象注册。 有关如何将命令路由添加到 Windows 窗体控件，请参阅如何使用初始化执行此操作的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandSource 接口](../../mfc/reference/icommandsource-interface.md)

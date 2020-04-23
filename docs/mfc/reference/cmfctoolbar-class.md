@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375077"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754042"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 
@@ -652,7 +652,7 @@ virtual void AdjustLayout();
 
 重新计算工具栏的大小。
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ static void CMFCToolBar::CleanUpImages();
 
 释放为锁定工具栏图像分配的系统资源。
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ virtual void DrawSeparator(
 
 启用或禁用工具栏上显示的"自定义"按钮。
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 
 启用或禁用工具栏按钮上的大型图标。
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 启用或禁用命令反射。
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 启用或禁用工具栏按钮图像下的文本标签。
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 
 在指定索引处返回按钮的命令 ID、样式和图像索引。
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -2169,7 +2169,7 @@ virtual int InsertButton(
 
 ### <a name="parameters"></a>参数
 
-*按钮*<br/>
+*button*<br/>
 [在]指定要插入的按钮。
 
 *iInsertAt*<br/>
@@ -3063,7 +3063,7 @@ int ReplaceButton(
 *乌伊Cmd*<br/>
 [在]要替换的按钮的命令 ID。
 
-*按钮*<br/>
+*button*<br/>
 [在]要插入的`CMFCToolBarButton`引用。
 
 *球*<br/>
@@ -3211,7 +3211,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 
 设置工具栏按钮的命令 ID、样式和图像 ID。
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 
 指定工具栏上的不可用按钮是否变暗，或者是否使用了按钮不可用的图像。
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 
 设置工具栏的高度。
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 指定工具栏按钮是否热跟踪。
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ static void SetHotTextColor(COLORREF clrText);
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFC工具栏：设置忽略集文本
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 
 设置工具栏上锁定按钮和锁定图像的大小。
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ void SetLockedSizes(
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFC工具栏：设置蒙版模式
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 
 将工具栏及其同级放在同一行上。
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ void SetOneRowWithSibling();
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar：：设置OrigButtons
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 指定用户是否可以关闭工具栏。
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ void SetPermament(BOOL bPermament=TRUE);
 
 指定父框架或所有者是向工具栏发送命令。
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ static void SetShowTooltips(BOOL bValue);
 
 指定工具栏的同级。
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ static void __stdcall SetSizes(
 
 指定工具栏上按钮的属性。
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ void SetToolBarBtnText(
 
 将工具栏及其同级放在单独的行上。
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 更新指定按钮的状态。
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 
@@ -3898,7 +3898,7 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

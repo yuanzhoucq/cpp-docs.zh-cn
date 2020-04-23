@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: 72b6e5d8d9d4823795a1fb053c5f2374cb80fba4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1653e50fef03deb8eb23dd9a989d1ca2a529dd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320015"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755092"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 类
 
@@ -126,7 +126,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 
 存储指向动画控制器的指针以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -135,6 +135,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *动画控制器*<br/>
 指向动画控制器的指针，该控制器将接收事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

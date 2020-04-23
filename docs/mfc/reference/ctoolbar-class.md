@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364281"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752211"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 类
 
@@ -292,7 +292,7 @@ CToolBar();
 
 此成员函数检索 nIndex 指定位置工具栏按钮或分隔符的控制 ID、样式和图像*索引。*
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 
 调用此成员函数以设置按钮的命令 ID、样式和图像编号。
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ BOOL SetButtons(
 
 调用此成员函数以设置按钮或分隔符的样式，或对按钮进行分组。
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ BOOL SetButtonText(
 
 此成员函数将工具栏的高度设置为*在 cyHeight*中指定的值（以像素为单位）。
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ void SetHeight(int cyHeight);
 
 调用此成员函数将工具栏的按钮设置为大小按钮指定的*大小*（以像素为单位）。
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);

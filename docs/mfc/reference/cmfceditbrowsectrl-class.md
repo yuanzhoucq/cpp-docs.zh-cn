@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367539"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752378"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 
@@ -133,7 +133,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 显示或不在当前编辑浏览控件上显示浏览按钮。
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ TRUE 显示浏览按钮;FALSE 不显示浏览按钮。 默认值为 TRUE。
 
 在当前编辑浏览控件上显示浏览按钮，并将控件置于*文件浏览*模式。
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ dwFlags**<br/>
 
 在当前编辑浏览控件上显示浏览按钮，并将该控件置于*文件夹浏览*模式。
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ virtual void OnDrawBrowseButton(
 
 在编辑浏览控件的浏览按钮上设置自定义图像。
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);
@@ -337,7 +337,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

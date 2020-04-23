@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 1f438d3344e90a16def2bd4c0f9cedcd47a64203
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363560"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752855"
 ---
 # <a name="application-control"></a>应用程序控件
 
@@ -104,7 +104,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 
 设置或清除用户控制标志，这在 引用中`AfxOleGetUserCtrl`解释。
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
@@ -127,7 +127,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 
 增加框架在应用程序中活动对象数的全局计数。
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
@@ -151,7 +151,7 @@ void AFXAPI AfxOleLockApp();
 
 声明框架在应用程序中的活动对象的计数。
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
@@ -284,7 +284,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 
 实现*类型名称*对象命令的用户界面。
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,
@@ -365,6 +365,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **标头:** afxwin.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>

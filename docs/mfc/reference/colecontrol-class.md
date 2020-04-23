@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366197"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753936"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -781,7 +781,7 @@ BOOL AmbientUserMode();
 
 表示绑定属性值已更改。
 
-```
+```cpp
 void BoundPropertyChanged(DISPID dispid);
 ```
 
@@ -878,7 +878,7 @@ COleControl();
 
 当控件支持的助记符集已更改时，调用此功能。
 
-```
+```cpp
 void ControlInfoChanged();
 ```
 
@@ -926,7 +926,7 @@ virtual void DisplayError(
 
 模拟控件上的鼠标单击操作。
 
-```
+```cpp
 void DoClick();
 ```
 
@@ -959,7 +959,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 重绘从 Windows 控件中子分类的 OLE 控件。
 
-```
+```cpp
 void DoSuperclassPaint(
     CDC* pDC,
     const CRect& rcBounds);
@@ -983,7 +983,7 @@ void DoSuperclassPaint(
 
 当需要更新控件的外观时，由框架调用。
 
-```
+```cpp
 void DrawContent(
     CDC* pDC,
     CRect& rc);
@@ -1005,7 +1005,7 @@ void DrawContent(
 
 使用元文件设备上下文时由框架调用。
 
-```
+```cpp
 void DrawMetafile(
     CDC* pDC,
     CRect& rc);
@@ -1023,7 +1023,7 @@ void DrawMetafile(
 
 启用 OLE 控件的简单帧特性。
 
-```
+```cpp
 void EnableSimpleFrame();
 ```
 
@@ -1056,7 +1056,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 
 序列化或初始化控件的库存属性的状态。
 
-```
+```cpp
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
@@ -1105,7 +1105,7 @@ BOOL ExchangeVersion(
 
 当鼠标单击活动控件时，由框架调用。
 
-```
+```cpp
 void FireClick();
 ```
 
@@ -1119,7 +1119,7 @@ void FireClick();
 
 当鼠标在活动控件上双击时，由框架调用。
 
-```
+```cpp
 void FireDblClick();
 ```
 
@@ -1133,7 +1133,7 @@ void FireDblClick();
 
 触发库存错误事件。
 
-```
+```cpp
 void FireError(
     SCODE scode,
     LPCTSTR lpszDescription,
@@ -1165,7 +1165,7 @@ OLE 控件的"库存错误"事件的实现使用 SCODE 值。 如果您的控件
 
 使用任意数量的可选参数从控件触发用户定义的事件。
 
-```
+```cpp
 void AFX_CDECL FireEvent(
     DISPID dispid,
     BYTE* pbParams,
@@ -1210,7 +1210,7 @@ void AFX_CDECL FireEvent(
 
 当控件处于活动状态时按下键时，由框架调用。
 
-```
+```cpp
 void FireKeyDown(
     USHORT* pnChar,
     short nShiftState);
@@ -1240,7 +1240,7 @@ void FireKeyDown(
 
 当自定义控件在容器中为 UI 活动时，框架调用该键并释放该键。
 
-```
+```cpp
 void FireKeyPress(USHORT* pnChar);
 ```
 
@@ -1261,7 +1261,7 @@ void FireKeyPress(USHORT* pnChar);
 
 当自定义控件在容器中为 UI 活动时释放密钥时，由框架调用。
 
-```
+```cpp
 void FireKeyUp(
     USHORT* pnChar,
     short nShiftState);
@@ -1291,7 +1291,7 @@ void FireKeyUp(
 
 当鼠标按钮按在活动自定义控件上时，由框架调用。
 
-```
+```cpp
 void FireMouseDown(
     short nButton,
     short nShiftState,
@@ -1319,7 +1319,7 @@ void FireMouseDown(
 
 - ALT_MASK在操作过程中按下 ALT 键。
 
-** x <br/>
+*x*<br/>
 按下鼠标按钮时光标的 x 坐标。 坐标相对于控制窗口的左上角。
 
 *Y*<br/>
@@ -1335,7 +1335,7 @@ void FireMouseDown(
 
 当游标移动到活动自定义控件时，由框架调用。
 
-```
+```cpp
 void FireMouseMove(
     short nButton,
     short nShiftState,
@@ -1363,7 +1363,7 @@ void FireMouseMove(
 
 - ALT_MASK在操作过程中按下 ALT 键。
 
-** x <br/>
+*x*<br/>
 光标的 x 坐标。 坐标相对于控制窗口的左上角。
 
 *Y*<br/>
@@ -1379,7 +1379,7 @@ void FireMouseMove(
 
 当鼠标按钮释放到活动自定义控件上时，由框架调用。
 
-```
+```cpp
 void FireMouseUp(
     short nButton,
     short nShiftState,
@@ -1407,7 +1407,7 @@ void FireMouseUp(
 
 - ALT_MASK在操作过程中按下 ALT 键。
 
-** x <br/>
+*x*<br/>
 释放鼠标按钮时光标的 x 坐标。 坐标相对于控制窗口的左上角。
 
 *Y*<br/>
@@ -1423,7 +1423,7 @@ void FireMouseUp(
 
 使用就绪控制状态的当前值触发事件。
 
-```
+```cpp
 void FireReadyStateChange();
 ```
 
@@ -1696,7 +1696,7 @@ enum ControlFlags {
 
 检索 OLE 控制窗口的大小。
 
-```
+```cpp
 void GetControlSize(
     int* pcx,
     int* pcy);
@@ -1814,7 +1814,7 @@ LPFONTDISP GetFont();
 
 测量控件拥有的任何`CFontHolder`对象的文本指标。
 
-```
+```cpp
 void GetFontTextMetrics(
     LPTEXTMETRIC lptm,
     CFontHolder& fontHolder);
@@ -1884,7 +1884,7 @@ virtual void GetMessageString(
 
 防止用户访问控件的属性值。
 
-```
+```cpp
 void GetNotSupported();
 ```
 
@@ -1941,7 +1941,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 测量控件的股票字体属性的文本指标，可以使用[SelectStockFont](#selectstockfont)函数选择该参数。
 
-```
+```cpp
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -1997,7 +1997,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 通知控件将使用的 IID 的基类。
 
-```
+```cpp
 void InitializeIIDs(
     const IID* piidPrimary,
     const IID* piidEvents);
@@ -2043,7 +2043,7 @@ const CString& InternalGetText();
 
 设置控件的就绪状态。
 
-```
+```cpp
 void InternalSetReadyState(long lNewReadyState);
 ```
 
@@ -2068,7 +2068,7 @@ void InternalSetReadyState(long lNewReadyState);
 
 强制控件重新绘制自身。
 
-```
+```cpp
 void InvalidateControl(
     LPCRECT lpRect = NULL,
     BOOL bErase = TRUE);
@@ -2090,7 +2090,7 @@ void InvalidateControl(
 
 使给定区域内的容器窗口的工作区无效。
 
-```
+```cpp
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
@@ -2202,7 +2202,7 @@ virtual BOOL IsSubclassedControl();
 
 以异步方式重置以前加载的任何数据，并启动控件的异步属性的新加载。
 
-```
+```cpp
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
@@ -2811,7 +2811,7 @@ DWORD 描述要显示对象的窗体或方面。 有效值取自枚举[DVASPECT 
 - DVASPECT_TRANSPARENT矩形，覆盖所有透明或不规则零件。
 
 *普雷克*<br/>
-指向指定在其中绘制对象的矩形的[RECTL](/previous-versions/dd162907\(v=vs.85\))结构。 此参数控制对象的定位和拉伸。
+指向指定在其中绘制对象的矩形的[RECTL](/windows/win32/api/windef/ns-windef-rectl)结构。 此参数控制对象的定位和拉伸。
 
 ### <a name="return-value"></a>返回值
 
@@ -2873,7 +2873,7 @@ virtual void OnInactiveMouseMove(
 *lprcBounds*<br/>
 包含窗口的客户端坐标中的对象边界矩形。 收到WM_MOUSEMOVE消息时，告诉对象其在屏幕上的确切位置和大小。
 
-** x <br/>
+*x*<br/>
 包含窗口的客户端坐标中的鼠标位置的 x 坐标。
 
 *Y*<br/>
@@ -2904,7 +2904,7 @@ virtual BOOL OnInactiveSetCursor(
 *lprcBounds*<br/>
 包含窗口的客户端坐标中的对象边界矩形。 收到WM_SETCURSOR消息时，告诉对象其在屏幕上的确切位置和大小。
 
-** x <br/>
+*x*<br/>
 包含窗口的客户端坐标中的鼠标位置的 x 坐标。
 
 *Y*<br/>
@@ -3513,7 +3513,7 @@ virtual UINT ParentToClient(
 
 通知容器模式对话框已关闭。
 
-```
+```cpp
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3530,7 +3530,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 
 通知容器即将显示模式对话框。
 
-```
+```cpp
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3547,7 +3547,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 
 销毁并重新创建控件的窗口。
 
-```
+```cpp
 void RecreateControlWindow();
 ```
 
@@ -3559,7 +3559,7 @@ void RecreateControlWindow();
 
 强制重新绘制 OLE 控件。
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -3630,7 +3630,7 @@ virtual void ReparentControlWindow(
 
 将`COleControl`股票属性的状态初始化到其默认值。
 
-```
+```cpp
 void ResetStockProps();
 ```
 
@@ -3648,7 +3648,7 @@ void ResetStockProps();
 
 将版本号初始化为指定值。
 
-```
+```cpp
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
@@ -3665,7 +3665,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 允许无窗口 OLE 对象在屏幕上滚动其就地活动图像中的区域。
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -3730,7 +3730,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 序列化或初始化分配给控件的显示空间的状态。
 
-```
+```cpp
 void SerializeExtent(CArchive& ar);
 ```
 
@@ -3751,7 +3751,7 @@ void SerializeExtent(CArchive& ar);
 
 序列化或初始化`COleControl`股票属性的状态：外观、背面颜色、边框样式、标题、已启用、字体、前颜色和文本。
 
-```
+```cpp
 void SerializeStockProps(CArchive& ar);
 ```
 
@@ -3800,7 +3800,7 @@ DWORD SerializeVersion(
 
 设置控件的库存外观属性值。
 
-```
+```cpp
 void SetAppearance (short sAppearance);
 ```
 
@@ -3817,7 +3817,7 @@ void SetAppearance (short sAppearance);
 
 设置控件的库存回颜色属性值。
 
-```
+```cpp
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
@@ -3834,7 +3834,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 设置控件的库存 BorderStyle 属性值。
 
-```
+```cpp
 void SetBorderStyle(short sBorderStyle);
 ```
 
@@ -3893,7 +3893,7 @@ BOOL SetControlSize(int cx, int cy);
 
 设置控件的"已启用"属性值。
 
-```
+```cpp
 void SetEnabled(BOOL bEnabled);
 ```
 
@@ -3928,7 +3928,7 @@ CWnd* SetFocus();
 
 设置控件的库存字体属性。
 
-```
+```cpp
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
@@ -3941,7 +3941,7 @@ void SetFont(LPFONTDISP pFontDisp);
 
 设置控件的库存 ForeColor 属性值。
 
-```
+```cpp
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
@@ -3970,7 +3970,7 @@ virtual void SetInitialDataFormats();
 
 设置首次显示在容器中的 OLE 控件的大小。
 
-```
+```cpp
 void SetInitialSize(
     int cx,
     int cy);
@@ -3992,7 +3992,7 @@ OLE 控件的初始高度（以像素为单位）。
 
 更改控件的已修改状态。
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -4009,7 +4009,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 指示编辑请求失败。
 
-```
+```cpp
 void SetNotPermitted();
 ```
 
@@ -4021,7 +4021,7 @@ void SetNotPermitted();
 
 防止用户修改控件的属性值。
 
-```
+```cpp
 void SetNotSupported();
 ```
 
@@ -4054,7 +4054,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 设置控件的库存标题或文本属性的值。
 
-```
+```cpp
 void SetText(LPCTSTR pszText);
 ```
 
@@ -4071,7 +4071,7 @@ void SetText(LPCTSTR pszText);
 
 指示控件中出现错误。
 
-```
+```cpp
 void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
@@ -4105,7 +4105,7 @@ void ThrowError(
 
 变换 HIMETRIC 单位和容器的本机单位之间的坐标值。
 
-```
+```cpp
 void TransformCoords(
     POINTL* lpptlHimetric,
     POINTF* lpptfContainer,
@@ -4120,7 +4120,7 @@ void TransformCoords(
 *lpptf 容器*<br/>
 指向`POINTF`容器单位大小中包含坐标的结构的指针。
 
-*标志*<br/>
+*flag*<br/>
 以下值的组合：
 
 - XFORMCOORDS_POSITION容器中的位置。
@@ -4190,7 +4190,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要处理的 Windows 消息。
 
 *wParam*<br/>
@@ -4207,7 +4207,7 @@ virtual LRESULT WindowProc(
 
 调用此函数通过控件的消息映射调度特定消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 样品测试](../../overview/visual-cpp-samples.md)<br/>

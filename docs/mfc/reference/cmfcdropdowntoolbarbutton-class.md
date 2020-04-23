@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: d62d5ecb0962f74a5dac1658c207cfb08cf12588
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09a2f3fe66abb86a8f220dbdf6744813ad9db0d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367613"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752406"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 
@@ -420,7 +420,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 
 - **映像**
 
-- **文本**
+- **Text**
 
 - **图像和文本**
 
@@ -525,7 +525,7 @@ virtual void Serialize(CArchive& ar);
 
 设置框架在用户单击按钮时使用的默认命令。
 
-```
+```cpp
 void SetDefaultCommand(UINT uiCmd);
 ```
 
@@ -538,7 +538,7 @@ void SetDefaultCommand(UINT uiCmd);
 
 调用此方法以指定框架在用户单击按钮时执行的默认命令。 具有*uiCmd*指定的命令 ID 的项必须位于父下拉工具栏中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

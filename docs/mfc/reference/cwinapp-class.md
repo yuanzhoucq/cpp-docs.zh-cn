@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366833"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750670"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -377,7 +377,7 @@ class CWinApp : public CWinThread
 
 调用此成员函数将文档模板添加到应用程序维护的可用文档模板列表中。
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 在退出之前调用此成员函数关闭所有打开的文档。
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ D2D 工厂的线程模型及其创建的资源。
 
 从`CWinApp`派生类的构造函数中调用此成员函数，以便使用 HTMLHelp 来帮助应用程序。
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 调用此函数（通常从`InitInstance`重写）以使应用程序的用户在从 Windows 文件管理器中双击文件时打开数据文件。
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ HKEY GetSectionKey(
 
 在关闭打开的文档之前调用此成员函数以隐藏应用程序。
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 从[InitA 成员](#initinstance)函数中调用此成员函数，以启用和加载最近使用 （MRU） 文件和上次预览状态的列表。
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ virtual CDocument* OpenDocumentFile(
 
 调用此成员函数来分析命令行，并将参数（一次一个）发送到[CCommandLineInfo：:ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)。
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>参数
 
-*代码*<br/>
+*code*<br/>
 指定挂钩代码。 此成员函数使用代码来确定如何处理*lpMsg。*
 
 *lpMsg*<br/>
@@ -1920,7 +1920,7 @@ virtual BOOL Register();
 
 调用此成员函数向 Windows 文件管理器注册应用程序的所有文档类型。
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ virtual BOOL SaveAllModified();
 
 调用此成员功能以选择特定打印机，并释放以前在"打印对话框"中选择的打印机。
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ void SelectPrinter(
 
 设置应用程序的帮助类型。
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 导致应用程序设置存储在注册表中，而不是 INI 文件中。
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ virtual BOOL Unregister();
 
 调用此成员函数，以在 Windows 文件管理器中取消注册应用程序的所有文档类型。
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ BOOL WriteProfileString(
 
 显式设置应用程序的应用程序用户模型 ID。 在向用户显示任何用户界面之前，应调用此方法（最佳位置是应用程序构造函数）。
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 
@@ -2391,7 +2391,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWinThread 类](../../mfc/reference/cwinthread-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

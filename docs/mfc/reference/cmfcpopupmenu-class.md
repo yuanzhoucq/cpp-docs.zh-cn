@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 4749b043271518a40024d1da4f97b593ad882a78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74f161d68c3c58574d75ab64a1360fc7f571920d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375376"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751940"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 类
 
@@ -375,7 +375,7 @@ MENUAREA_TYPE参数可以具有以下任意值之一。
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFC弹出菜单：：关闭菜单
 
-```
+```cpp
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *pwnd 父级*<br/>
 [在]的`CMFCPopupMenu`父窗口。
 
-** x <br/>
+*x*<br/>
 [在]弹出菜单位置的水平屏幕坐标
 
 *Y*<br/>
@@ -488,7 +488,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 初始化弹出菜单的徽标。
 
-```
+```cpp
 void EnableMenuLogo(
     int iLogoSize,
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
@@ -527,7 +527,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ## <a name="cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFC弹出菜单：：启用调整
 
-```
+```cpp
 void EnableResize(CSize sizeMinResize);
 ```
 
@@ -539,7 +539,7 @@ void EnableResize(CSize sizeMinResize);
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFC弹出菜单：：启用滚动
 
-```
+```cpp
 void EnableScrolling(BOOL = TRUE);
 ```
 
@@ -551,7 +551,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFC弹出菜单：：启用反转调整
 
-```
+```cpp
 void EnableVertResize(int nMinResize);
 ```
 
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>参数
 
-*按钮*<br/>
+*button*<br/>
 [在]要添加的菜单项的引用。
 
 *iInsertAt*<br/>
@@ -1089,7 +1089,7 @@ BOOL IsShown() const;
 
 ## <a name="cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopup菜单：：移动到
 
-```
+```cpp
 void MoveTo(const CPoint& pt);
 ```
 
@@ -1188,7 +1188,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 清除弹出菜单中的所有项目。
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1250,7 +1250,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+type <br/>
 [在]指定动画类型的枚举数据类型。
 
 ### <a name="remarks"></a>备注
@@ -1259,7 +1259,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFC弹出菜单：：设置自动销毁
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -1273,7 +1273,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 设置弹出式菜单的默认命令。
 
-```
+```cpp
 void SetDefaultItem(UINT uiCmd);
 ```
 
@@ -1324,7 +1324,7 @@ static void SetForceShadow(BOOL bValue);
 
 设置弹出式菜单的最大宽度。
 
-```
+```cpp
 void SetMaxWidth(int iMaxWidth);
 ```
 
@@ -1339,7 +1339,7 @@ void SetMaxWidth(int iMaxWidth);
 
 ## <a name="cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopup菜单：：设置消息
 
-```
+```cpp
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
@@ -1351,7 +1351,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopup菜单：：设置父功能区元素
 
-```
+```cpp
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -1363,7 +1363,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFC弹出菜单：：设置快速自定义类型
 
-```
+```cpp
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
@@ -1375,7 +1375,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFC弹出菜单：：设置快速模式
 
-```
+```cpp
 void SetQuickMode();
 ```
 
@@ -1385,7 +1385,7 @@ void SetQuickMode();
 
 设置弹出式菜单的菜单对齐方式。
 
-```
+```cpp
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
@@ -1419,7 +1419,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 
 强制弹出菜单显示所有命令。
 
-```
+```cpp
 void ShowAllCommands();
 ```
 
@@ -1429,7 +1429,7 @@ void ShowAllCommands();
 
 ## <a name="cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFC弹出菜单：：触发调整
 
-```
+```cpp
 void TriggerResize();
 ```
 
@@ -1456,7 +1456,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 
 更新弹出式菜单的影子。
 
-```
+```cpp
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 
@@ -1469,7 +1469,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 
 当具有阴影的弹出式菜单与动画图像重叠时，调用此方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

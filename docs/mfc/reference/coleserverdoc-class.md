@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376133"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753785"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
 
@@ -192,7 +192,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 激活关联的文档对象文档。
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ COleServerItem* GetEmbeddedItem();
 
 调用`GetItemClipRect`成员函数，获取正在编辑的项目的裁剪矩形坐标。
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 
 调用`GetItemPosition`成员函数，获取正在编辑的项目的坐标。
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ BOOL IsInPlaceActive() const;
 
 调用此函数以通知连接到文档的所有链接项的文档已更改。
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ void NotifyChanged();
 
 调用此函数以通知容器文档已关闭。
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ void NotifyClosed();
 
 在用户重命名服务器文档后调用此功能。
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 
 在用户保存服务器文档后调用此功能。
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ virtual BOOL OnUpdateDocument();
 
 调用此成员函数，让容器应用程序更改项目的位置。
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 
 调用此函数以告诉容器应用程序保存嵌入的对象。
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 
 调用此函数以通知连接到文档的所有链接项的文档已更改。
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,
@@ -941,7 +941,7 @@ void UpdateAllItems(
 
 此函数调用除`OnUpdate`发送项、传递*pHint、lHint*和*nDrawAspect*之外的每个*lHint*文档项的成员函数。 使用这些参数将有关文档修改的信息传递给项。 您可以使用*lHint*对信息进行编码，`CObject`也可以定义派生类以存储有关修改的信息，并使用*pHint*传递该类的对象。 覆盖`COleServerItem`派生`OnUpdate`类中的成员函数，以根据项目的表示是否已更改来优化每个项目的更新。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COle链接文档类](../../mfc/reference/colelinkingdoc-class.md)<br/>

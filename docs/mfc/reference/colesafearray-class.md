@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374867"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753772"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 类
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 检索指向数组数据的指针。
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ void AccessData(void** ppvData);
 
 为安全数组分配内存。
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ void AllocData();
 
 为安全数组的描述符分配内存。
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ void AllocDescriptor(DWORD dwDims);
 
 将现有`VARIANT`数组中的数据控制权授予`COleSafeArray`对象。
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ void Attach(VARIANT& varSrc);
 
 清除安全数组。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ COleSafeArray(const COleVariant& varSrc);
 
 创建现有安全数组的副本。
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ void Copy(LPSAFEARRAY* ppsa);
 
 分配和初始化数组的数据。
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ void Create(
 
 创建新的一维`COleSafeArray`对象。
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ void CreateOneDim(
 
 销毁现有数组描述符和数组中的所有数据。
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ void Destroy();
 
 销毁安全数组中的所有数据。
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ void DestroyData();
 
 销毁安全数组的描述符。
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ VARIANT Detach();
 
 将安全数组的内容复制到 中`CByteArray`。
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ DWORD GetDim();
 
 检索安全数组的单个元素。
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ DWORD GetElemSize();
 
 返回`COleSafeArray`对象任何维度的下限。
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ DWORD GetOneDimSize();
 
 返回安全数组的任何维度的上限。
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ void GetUBound(
 
 增加数组的锁计数，并在数组描述符中放置指向数组数据的指针。
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 返回指向索引值指定的元素的指针。
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ void PtrOfIndex(
 
 将单个元素分配到数组。
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ void PutElement(
 
 更改安全数组的最小显著（最右）绑定。
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ void Redim(SAFEARRAYBOUND* psaboundNew);
 
 更改一维`COleSafeArray`对象中的元素数。
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ void ResizeOneDim(DWORD dwElements);
 
 删除数组的锁计数，使 检索到`AccessData`的指针无效。
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ void UnaccessData();
 
 对数组的锁计数进行缩减，以便可以释放或调整大小。
 
-```
+```cpp
 void Unlock();
 ```
 
@@ -750,7 +750,7 @@ void Unlock();
 
 完成对数组中数据的访问后，将调用此函数。 错误时，它抛出一个[COleException](../../mfc/reference/coleexception-class.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [COleVariant 类](../../mfc/reference/colevariant-class.md)<br/>

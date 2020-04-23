@@ -46,12 +46,12 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 5b44a1b4e96d92d9ddd150a5b5f68cf83863f8db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372855"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754388"
 ---
 # <a name="reflected-window-message-ids"></a>反射窗口消息 ID
 
@@ -78,13 +78,13 @@ ms.locfileid: "81372855"
 |[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
 |[WM_HSCROLL](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
-|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
+|[WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
 > 如果控件在 Win32 系统上运行，则可能会收到多种类型的WM_CTLCOLOR\*消息。 有关详细信息，请参阅 WM_CTLCOLORBTN、WM_CTLCOLORDLG、WM_CTLCOLOREDIT、WM_CTLCOLORLISTBOX、WM_CTLCOLORMSGBOX、WM_CTLCOLORSCROLLBAR 和 WM_CTLCOLORSTATIC。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件：创建 Windows 控件的子类](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
 [TN062：Windows 控件的消息反射](../mfc/tn062-message-reflection-for-windows-controls.md)

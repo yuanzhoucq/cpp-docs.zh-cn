@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365798"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751654"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 
@@ -124,7 +124,7 @@ pRichEdit->GetSelText(sz);
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ MFC 用于在调试时转储对象状态的内部函数。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 此函数将测试传递的 SCODE 以查看它是否是错误。
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ BOOL  AfxCheckMemory();
 
 在调试器中调用此函数，以在调试时转储对象的状态。
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ void AfxDump(const CObject* pOb);
 
 此全局函数可用于生成当前堆栈的映像。
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ Microsoft 基础类库调试内存分配器可以调用用户定义的挂钩函�
 
 调用应用程序内存空间中所有可`CObject`序列化派生类的指定迭代函数。
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ AFXAPI AfxDoForAllClasses(
 
 为派生自`CObject`已使用**new**分配的所有对象执行指定的迭代函数。
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);

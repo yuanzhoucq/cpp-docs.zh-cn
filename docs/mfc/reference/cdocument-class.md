@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: 2f8ba8d0b35bd72efa8f8d63dbefd689e645d768
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d356ba6b6134221c2fc9595fc6d78f91961c5b7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374053"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753245"
 ---
 # <a name="cdocument-class"></a>CDocument 类
 
@@ -260,7 +260,7 @@ class CDocument : public CCmdTarget
 
 调用此函数以将视图附加到文档。
 
-```
+```cpp
 void AddView(CView* pView);
 ```
 
@@ -372,7 +372,7 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>参数
 
-*Guid*<br/>
+*guid*<br/>
 指定要查找的块的 GUID。
 
 *Pid*<br/>
@@ -765,7 +765,7 @@ virtual void OnDrawThumbnail(
 
 通过驻留邮件主机（如果有）发送邮件，并将文档作为附件。
 
-```
+```cpp
 void OnFileSendMail();
 ```
 
@@ -979,7 +979,7 @@ virtual void OnUnloadHandler();
 
 如果存在邮件支持 （MAPI），则启用ID_FILE_SEND_MAIL命令。
 
-```
+```cpp
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
@@ -1082,7 +1082,7 @@ virtual void RemoveChunk(
 
 调用此函数以从文档分离视图。
 
-```
+```cpp
 void RemoveView(CView* pView);
 ```
 
@@ -1224,7 +1224,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 
 修改文档后调用此函数。
 
-```
+```cpp
 void UpdateAllViews(
     CView* pSender,
     LPARAM lHint = 0L,

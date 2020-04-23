@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377127"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754685"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 类
 
@@ -300,7 +300,7 @@ virtual void Create(
 
 调用此成员函数以向表添加字段。
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ nType**<br/>
 
 调用此函数以向表添加索引。
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 
 调用此成员函数以删除字段并使它无法访问。
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ void DeleteField(int nIndex);
 
 调用此成员函数以删除基础表中的索引。
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ short GetFieldCount();
 
 调用此成员函数以获取有关表def中定义的字段的各种信息。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ short GetIndexCount();
 
 调用此成员函数以获取有关表def中定义的索引的各种信息。
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ virtual void Open(LPCTSTR lpszName);
 
 调用此成员函数以更新附加表的连接信息。
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ void RefreshLink();
 
 设置指示`CDaoTableDef`对象的一个或多个特征的值。
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ void SetAttributes(long lAttributes);
 
 对于表示`CDaoTableDef`附加表的对象，字符串对象由一个或两个部分组成（数据库类型指定器和数据库路径）。
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -875,8 +875,8 @@ void SetConnect(LPCTSTR lpszConnect);
 |Excel 97|"Excel 8.0;"|\ \ *filename**path*： `drive`路径文件名\\。XLS"|
 |HTML 导入|"HTML 导入;"|： `drive`\\\ *path*路径\ *文件名*"|
 |HTML 导出|"HTML 导出;"|" `drive`\\\ ：*路径*"|
-|Text|"文本;"|"驱动器：\path"\\|
-|ODBC|"ODBC;数据库* `database`;UID+*用户*;PWD=*密码*;DSN=*数据源名称;* 登录时间+*秒数;*"（这可能不是所有服务器的完整连接字符串;它只是一个示例。 参数之间不要有空格是非常重要的。|None|
+|文本|"文本;"|"驱动器：\path"\\|
+|ODBC|"ODBC;数据库* `database`;UID+*用户*;PWD=*密码*;DSN=*数据源名称;* 登录时间+*秒数;*"（这可能不是所有服务器的完整连接字符串;它只是一个示例。 参数之间不要有空格是非常重要的。|无|
 |Exchange|"交换;<br /><br /> MAPILEVEL=*文件夹路径*;<br /><br /> [表类型] 0 &#124; 1 {;}<br /><br /> [*配置文件;]*<br /><br /> [PWD]*密码*;]<br /><br /> [数据库];" `database`|*"驱动器*\\\ *路径*\\\ *文件名*。MDB"|
 
 > [!NOTE]
@@ -894,7 +894,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 调用此成员函数以设置表的用户定义的名称。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ void SetName(LPCTSTR lpszName);
 
 调用此成员函数以指定附加表的名称或`CDaoTableDef`对象所基于的基表的名称，因为它存在于数据的原始源中。
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 
 调用此成员函数以设置表def的验证规则。
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 
 调用此成员函数为具有 Microsoft Jet 数据库引擎支持的基础`CDaoTableDef`基表的对象设置验证规则的异常文本。
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 
@@ -972,7 +972,7 @@ void SetValidationText(LPCTSTR lpszValidationText);
 
 有关相关信息，请参阅 DAO 帮助中的主题"验证文本属性"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

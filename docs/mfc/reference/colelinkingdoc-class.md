@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: f9f184542aaceb206d3eae110d3a088d5fbc95cf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374943"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753848"
 ---
 # <a name="colelinkingdoc-class"></a>COle链接文档类
 
@@ -181,7 +181,7 @@ BOOL Register(
 
 通知 OLE 系统 DLL 文档不再打开。
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -191,7 +191,7 @@ void Revoke();
 
 关闭命名文件时应调用此函数，但通常不需要直接调用它。 `Revoke`是`COleLinkingDoc`按 的`OnCloseDocument`实现来调用 的`OnNewDocument`，`OnOpenDocument`和`OnSaveDocument`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument 类](../../mfc/reference/coledocument-class.md)<br/>

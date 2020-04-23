@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: e96106dcd6f496c6cc99c9d72d86052547b6d06b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 479f5d47d9cff72d36dbd25e434182af1ba01ef4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376470"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754653"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 类
 
@@ -193,7 +193,7 @@ virtual void ResetData();
 
 调用此成员函数将异步 OLE 控件与`CDataPathProperty`对象关联。
 
-```
+```cpp
 void SetControl(COleControl* pControl);
 ```
 
@@ -206,7 +206,7 @@ void SetControl(COleControl* pControl);
 
 调用此成员函数以设置属性的路径名称。
 
-```
+```cpp
 void SetPath(LPCTSTR lpszPath);
 ```
 
@@ -215,7 +215,7 @@ void SetPath(LPCTSTR lpszPath);
 *lpszPath*<br/>
 路径（可以是绝对的或相对的）与异步加载的属性。 `CDataPathProperty`使用 URL，而不是文件名。 如果需要文件`CDataPathProperty`的对象，则准备`file://`路径。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样本图像](../../overview/visual-cpp-samples.md)<br/>
 [CAsyncMonikerFile 类](../../mfc/reference/casyncmonikerfile-class.md)<br/>

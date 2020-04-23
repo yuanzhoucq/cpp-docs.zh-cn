@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: fcf9505a7792aea6807e37f05cd1cb1aaad55830
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8746be43e3f2a31558904323392983b183d4f198
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366118"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753895"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 类
 
@@ -104,7 +104,7 @@ class COleDataSource : public CCmdTarget
 
 调用此函数以指定在数据传输操作期间提供数据的格式。
 
-```
+```cpp
 void CacheData(
     CLIPFORMAT cfFormat,
     LPSTGMEDIUM lpStgMedium,
@@ -140,7 +140,7 @@ void CacheData(
 
 调用此函数以指定在数据传输操作期间提供数据的格式。
 
-```
+```cpp
 void CacheGlobalData(
     CLIPFORMAT cfFormat,
     HGLOBAL hGlobal,
@@ -180,7 +180,7 @@ COleDataSource();
 
 调用此函数以指定在数据传输操作期间提供数据的格式。
 
-```
+```cpp
 void DelayRenderData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -210,7 +210,7 @@ void DelayRenderData(
 
 调用此函数以指定在数据传输操作期间提供数据的格式。
 
-```
+```cpp
 void DelayRenderFileData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -240,7 +240,7 @@ void DelayRenderFileData(
 
 调用此函数以支持更改数据源的内容。
 
-```
+```cpp
 void DelaySetData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -316,7 +316,7 @@ DROPEFFECT DoDragDrop(
 
 调用此函数以清空数据`COleDataSource`对象。
 
-```
+```cpp
 void Empty();
 ```
 
@@ -482,11 +482,11 @@ virtual BOOL OnSetData(
 
 调用以下函数之一后`COleDataSource`，将对象中包含的数据放在剪贴板上：[缓存数据](#cachedata)、[缓存全局数据](#cacheglobaldata)、[延迟呈现数据](#delayrenderdata)或[延迟呈现文件数据](#delayrenderfiledata)。
 
-```
+```cpp
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [MFC 样品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>

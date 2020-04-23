@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372447"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752688"
 ---
 # <a name="cimagelist-class"></a>CImageList 类
 
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 要绘制的图像的零基索引。
 
 *pt*<br/>
-包含绘制图像的 x 和 y 坐标的[POINT](/previous-versions/dd162805\(v=vs.85\))结构。
+包含绘制图像的 x 和 y 坐标的[POINT](/windows/win32/api/windef/ns-windef-point)结构。
 
 *深圳*<br/>
 指示要绘制的图像大小的[SIZE](/windows/win32/api/windef/ns-windef-size)结构。
 
 *ptOrigin*<br/>
-包含 x 坐标和 y 坐标的[POINT](/previous-versions/dd162805\(v=vs.85\))结构，用于指定绘图操作相对于图像本身的左上角。 不绘制 x 坐标左侧和 y 坐标上方图像的像素。
+包含 x 坐标和 y 坐标的[POINT](/windows/win32/api/windef/ns-windef-point)结构，用于指定绘图操作相对于图像本身的左上角。 不绘制 x 坐标左侧和 y 坐标上方图像的像素。
 
 *fStyle*<br/>
 指定绘图样式的标志，以及（可选）叠加图像。 有关叠加图像的信息，请参阅备注部分。 MFC 默认实现ILD_NORMAL使用图像列表的背景颜色绘制图像。 如果背景色为CLR_NONE值，则使用蒙版以透明方式绘制图像。
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>参数
 
 *lpPoint*<br/>
-接收当前拖动位置的[POINT](/previous-versions/dd162805\(v=vs.85\))结构的地址。
+接收当前拖动位置的[POINT](/windows/win32/api/windef/ns-windef-point)结构的地址。
 
 *lpPointHotSpot*<br/>
 `POINT`相对于拖动位置接收拖动图像偏移的结构的地址。

@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365094"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752227"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 
@@ -523,7 +523,7 @@ int AddStrings(LPCTSTR lpszStrings);
 
 调整整个工具栏控件的大小。
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 指定工具栏控件的样式。 工具栏必须始终具有WS_CHILD样式。 此外，还可以指定工具栏样式和窗口样式的任意组合，如**备注**项下所述。
 
 *矩形*<br/>
-可选地指定工具栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+可选地指定工具栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 *pparentwnd*<br/>
 指定工具栏控件的父窗口。 值不得为 NULL。
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 指定工具栏控件的样式。 工具栏必须始终具有WS_CHILD样式。 此外，还可以指定工具栏样式和窗口样式的任意组合，如["创建](#create)**"的备注**部分所述。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -713,7 +713,7 @@ CToolBarCtrl();
 
 显示"自定义工具栏"对话框。
 
-```
+```cpp
 void Customize();
 ```
 
@@ -1040,7 +1040,7 @@ CImageList* GetImageList() const;
 
 检索工具栏的当前插入标记。
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 用于检索信息的按钮的零索引。
 
 *lpRect*<br/>
-接收边界矩形坐标的[RECT](/previous-versions/dd162897\(v=vs.85\))结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的地址。
+接收边界矩形坐标的[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的地址。
 
 ### <a name="return-value"></a>返回值
 
@@ -1132,7 +1132,7 @@ int GetMaxTextRows() const;
 
 检索`CToolBarCtrl`对象的指标。
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 按钮标识符。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，用于接收边界矩形信息。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，用于接收边界矩形信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>参数
 
 *Ppt*<br/>
-指向[POINT](/previous-versions/dd162805\(v=vs.85\))结构的指针，该结构包含`x`成员中命中测试的 x 坐标和`y`成员中命中测试的 y 坐标。 坐标相对于工具栏的工作区。
+指向[POINT](/windows/win32/api/windef/ns-windef-point)结构的指针，该结构包含`x`成员中命中测试的 x 坐标和`y`成员中命中测试的 y 坐标。 坐标相对于工具栏的工作区。
 
 ### <a name="return-value"></a>返回值
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>参数
 
 *Ppt*<br/>
-指向 POINT[结构的](/previous-versions/dd162805\(v=vs.85\))指针，该结构包含命中测试坐标，相对于工具栏的工作区区域。
+指向 POINT[结构的](/windows/win32/api/windef/ns-windef-point)指针，该结构包含命中测试坐标，相对于工具栏的工作区区域。
 
 *普比姆*<br/>
 指向接收插入标记信息的[TB INSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark)结构的指针。
@@ -1567,7 +1567,7 @@ BOOL IsButtonPressed(int nID) const;
 
 将位图加载到工具栏控件的图像列表中。
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1730,7 +1730,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 从参数指定的注册表中的位置还原工具栏控件的状态。
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ void RestoreState(
 
 将工具栏控件的状态保存在参数指定的注册表中的位置。
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 位映射图像的宽度和高度（以像素为单位）。
 
 ### <a name="return-value"></a>返回值
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 按钮的宽度和高度（以像素为单位）。
 
 ### <a name="return-value"></a>返回值
@@ -1883,7 +1883,7 @@ BOOL SetButtonSize(CSize size);
 
 指定结构的大小`TBBUTTON`。
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,7 +1950,7 @@ BOOL SetCmdID(
 
 设置当前工具栏控件的配色方案。
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -2128,7 +2128,7 @@ BOOL SetIndent(int iIndent);
 
 设置工具栏的当前插入标记。
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 
 设置`CToolBarCtrl`对象的指标。
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 
 设置工具栏控件的所有者窗口。
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2279,7 +2279,7 @@ CImagelist* SetPressedImageList(
 
 要求工具栏控件调整自身大小以调整为请求的行数。
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ nRows**<br/>
 如果工具栏无法调整为请求的行数，则说明是使用更多行还是减少行。
 
 *lpRect*<br/>
-指向将接收工具栏的新边界矩形的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+指向将接收工具栏的新边界矩形的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 ### <a name="remarks"></a>备注
 
@@ -2341,7 +2341,7 @@ BOOL SetState(
 
 设置工具栏控件的样式。
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ void SetStyle(DWORD dwStyle);
 
 将工具尖端控件与工具栏控件关联。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 
@@ -2384,7 +2384,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 此成员函数模拟[TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme)消息的功能，如 Windows SDK 中所述。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC 示例 MFCIE](../../overview/visual-cpp-samples.md)<br/>

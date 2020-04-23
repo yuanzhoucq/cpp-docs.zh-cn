@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 12ba4cc28d94cbc2961475944c62d2e942b20c05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365934"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751712"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1576,7 +1576,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 
 将调用对象的默认简单绑定属性（如类型库中标记的编辑控件）绑定到数据源控件的 DataSource、用户名、密码和 SQL 属性定义的基础游标。
 
-```
+```cpp
 void BindDefaultProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -1612,7 +1612,7 @@ void BindDefaultProperty(
 
 将数据绑定控件（如网格控件）上的游标绑定属性绑定到数据源控件，并注册与 MFC 绑定管理器的关系。
 
-```
+```cpp
 void BindProperty(
     DISPID dwDispId,
     CWnd* pWndDSC);
@@ -1640,7 +1640,7 @@ void BindProperty(
 
 将 `CWnd` 置于一堆重叠窗口的顶部。
 
-```
+```cpp
 void BringWindowToTop();
 ```
 
@@ -1708,7 +1708,7 @@ TRUE 在按下键时取消工具提示，并将状态栏文本设置为默认值
 
 使窗口相对于其父级居中。
 
-```
+```cpp
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
@@ -1746,7 +1746,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 
 选择（将复选标记放在旁边）或清除（从中删除复选标记），或者更改三状态按钮的状态。
 
-```
+```cpp
 void CheckDlgButton(
     int nIDButton,
     UINT nCheck);
@@ -1772,7 +1772,7 @@ void CheckDlgButton(
 
 在组中选择（向）给定的单选按钮，并清除（从中删除）组中的所有其他单选按钮。
 
-```
+```cpp
 void CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
@@ -1843,7 +1843,7 @@ CWnd* ChildWindowFromPoint(
 
 将显示中的给定点或矩形的客户端坐标转换为屏幕坐标。
 
-```
+```cpp
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
@@ -1869,7 +1869,7 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 最小化窗口。
 
-```
+```cpp
 void CloseWindow();
 ```
 
@@ -1984,7 +1984,7 @@ virtual HRESULT CreateAccessibleProxy(
 
 为系统加斯特创建新形状，并声称对该 care 的置置体的所有权。
 
-```
+```cpp
 void CreateCaret(CBitmap* pBitmap);
 ```
 
@@ -2150,7 +2150,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [窗口样式](styles-used-by-mfc.md#window-styles)的位组合 （OR）;否则默认窗口样式为 NULL。
 
-** x <br/>
+*x*<br/>
 窗口与屏幕左侧或父窗口的初始水平距离。
 
 *Y*<br/>
@@ -2207,7 +2207,7 @@ virtual BOOL CreateEx(
 
 为系统加斯特创建灰色矩形，并声称对图特的所有权。
 
-```
+```cpp
 void CreateGrayCaret(
     int nWidth,
     int nHeight);
@@ -2241,7 +2241,7 @@ void CreateGrayCaret(
 
 为系统加斯特创建一个实体矩形，并声称对图特的所有权。
 
-```
+```cpp
 void CreateSolidCaret(
     int nWidth,
     int nHeight);
@@ -2316,7 +2316,7 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要处理的 Windows 消息。
 
 *wParam*<br/>
@@ -2373,7 +2373,7 @@ virtual BOOL DestroyWindow();
 
 成员`DestroyWindow`函数还销毁由[CDialog：：：create](../../mfc/reference/cdialog-class.md#create)创建的无模式对话框。
 
-如果正在`CWnd`销毁的是子窗口，并且没有[设置WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)样式，则[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)消息将发送到父级。
+如果正在`CWnd`销毁的是子窗口，并且没有[设置WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)样式，则[WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify)消息将发送到父级。
 
 ### <a name="example"></a>示例
 
@@ -2626,7 +2626,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 在应用程序的`CWnd`[CWinApp：：initA 函数](../../mfc/reference/cwinapp-class.md#initinstance)中使用指针从窗口内调用此成员函数，以指示窗口接受从 Windows 文件管理器或文件资源管理器中删除的文件。
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -2681,10 +2681,10 @@ BOOL DrawAnimatedRects(
 指定动画类型。 如果指定IDANI_CAPTION，窗口标题将从*lprcFrom*指定的位置到*lprcTo*指定的位置进行动画处理。 效果类似于最小化或最大化窗口。
 
 *lprc 从*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，指定图标的位置和大小或最小化的窗口。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，指定图标的位置和大小或最小化的窗口。
 
 *利浦帕托*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，指定还原窗口的位置和大小
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，指定还原窗口的位置和大小
 
 ### <a name="return-value"></a>返回值
 
@@ -2728,7 +2728,7 @@ BOOL DrawCaption(
 
 重绘菜单栏。
 
-```
+```cpp
 void DrawMenuBar();
 ```
 
@@ -2744,7 +2744,7 @@ void DrawMenuBar();
 
 启用用户定义的活动辅助功能。
 
-```
+```cpp
 void EnableActiveAccessibility();
 ```
 
@@ -2756,7 +2756,7 @@ MFC 的默认活动辅助功能支持足以用于标准窗口和控制，包括 
 
 启用或禁用动态布局管理器。 启用动态布局时，子窗口的位置和大小可以在用户调整窗口大小时动态调整。
 
-```
+```cpp
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
@@ -2773,7 +2773,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 启用或禁用窗口 D2D 支持。 在初始化主窗口之前调用此方法。
 
-```
+```cpp
 void EnableD2DSupport(
     BOOL bEnable = TRUE,
     BOOL bUseDCRenderTarget = FALSE);
@@ -2827,7 +2827,7 @@ BOOL EnableScrollBar(
 
 启用或禁用此窗口的滚动条。
 
-```
+```cpp
 void EnableScrollBarCtrl(
     int nBar,
     BOOL bEnable = TRUE);
@@ -2966,7 +2966,7 @@ virtual void EndModalState();
 
 标记给定窗口中绘画的结束。
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
@@ -3014,7 +3014,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 
 由框架调用以显示工具提示消息。
 
-```
+```cpp
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
@@ -3699,7 +3699,7 @@ int GetCheckedRadioButton(
 
 将客户端区域的`CWnd`客户端坐标复制到*lpRect*指向的结构中。
 
-```
+```cpp
 void GetClientRect(LPRECT lpRect) const;
 ```
 
@@ -3821,7 +3821,7 @@ CDC* GetDCEx(
 *prgnClip*<br/>
 标识可能与客户端窗口的可见区域组合的裁剪区域。
 
-*标志*<br/>
+*flag*<br/>
 可以具有以下预设值之一：
 
 - DCX_CACHE从缓存返回设备上下文，而不是从 OWNDC 或 CLASSDC 窗口返回设备上下文。 覆盖CS_OWNDC和CS_CLASSDC。
@@ -4460,7 +4460,7 @@ CWnd* GetParentOwner() const;
 
 调用此成员函数获取*dwDispID*指定的 ActiveX 控件属性。
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -4685,7 +4685,7 @@ int GetScrollPos(int nBar) const;
 
 将给定滚动条的当前最小和最大滚动条位置复制到*lpMinPos*和*lpMaxPos*指定的位置。
 
-```
+```cpp
 void GetScrollRange(
     int nBar,
     LPINT lpMinPos,
@@ -5050,7 +5050,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 将`CWnd`对象边界矩形的尺寸复制到*lpRect*指向的结构。
 
-```
+```cpp
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
@@ -5160,7 +5160,7 @@ int GetWindowTextLength() const;
 
 通过从显示屏幕中移除来隐藏插入符号。
 
-```
+```cpp
 void HideCaret();
 ```
 
@@ -5234,7 +5234,7 @@ virtual void HtmlHelp(
 
 由框架调用以初始化窗口的动态布局。
 
-```
+```cpp
 void InitDynamicLayout();
 ```
 
@@ -5246,7 +5246,7 @@ void InitDynamicLayout();
 
 使 的整个工作区无效`CWnd`。
 
-```
+```cpp
 void Invalidate(BOOL bErase = TRUE);
 ```
 
@@ -5271,7 +5271,7 @@ void Invalidate(BOOL bErase = TRUE);
 
 通过将该矩形添加到`CWnd`更新区域，使给定矩形中的工作区失效。
 
-```
+```cpp
 void InvalidateRect(
     LPCRECT lpRect,
     BOOL bErase = TRUE);
@@ -5297,7 +5297,7 @@ void InvalidateRect(
 
 通过将给定区域中的工作区添加到`CWnd`的当前更新区域，使该工作区无效。
 
-```
+```cpp
 void InvalidateRgn(
     CRgn* pRgn,
     BOOL bErase = TRUE);
@@ -5325,7 +5325,7 @@ void InvalidateRgn(
 
 调用此成员函数以调用*dwDispID*指定的 ActiveX 控制方法或属性，该上下文中由*wFlags*指定。
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -5623,7 +5623,7 @@ HWND m_hWnd;
 
 将一组点从 `CWnd` 的坐标空间转换（映射）到另一个窗口的坐标空间。
 
-```
+```cpp
 void MapWindowPoints(
     CWnd* pwndTo,
     LPRECT lpRect) const;
@@ -5790,7 +5790,7 @@ BOOL ModifyStyleEx(
 
 更改位置和尺寸。
 
-```
+```cpp
 void MoveWindow(
     int x,
     int y,
@@ -5805,7 +5805,7 @@ void MoveWindow(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定 左侧的新位置`CWnd`。
 
 *Y*<br/>
@@ -5837,7 +5837,7 @@ void MoveWindow(
 
 向系统发出信号，指出发生了预定义事件。 如果任何客户端应用程序已注册事件的挂钩函数，系统将调用客户端的挂钩函数。
 
-```
+```cpp
 void NotifyWinEvent(
     DWORD event,
     LONG idObjectType,
@@ -6195,7 +6195,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 发送到父窗口的 Windows 消息编号。
 
 *wParam*<br/>
@@ -7915,7 +7915,7 @@ afx_msg int OnMouseActivate(
 *nHitTest*<br/>
 指定[命中测试](#onnchittest)区域代码。 命中测试是确定光标位置的测试。
 
-*消息*<br/>
+*message*<br/>
 指定鼠标消息编号。
 
 ### <a name="return-value"></a>返回值
@@ -8116,7 +8116,7 @@ afx_msg void OnMove(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定工作区左上角的新 x 坐标位置。 此新位置在重叠窗口和弹出窗口的屏幕坐标中提供，以及子窗口的父客户端坐标。
 
 *Y*<br/>
@@ -8579,7 +8579,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 当用户双击 XBUTTON1 或 XBUTTON2 时，当用户双击 XBUTTON1 或 XBUTTON2 时，当用户在窗口的非工作区中时，框架将调用此成员函数。
 
-```
+```cpp
 void OnNcXButtonDblClk(
     short nHitTest,
     UINT nButton,
@@ -8849,7 +8849,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定通知父级的事件以及子窗口的标识符。 该事件是低阶*消息*词。 如果事件是WM_CREATE或WM_DESTROY，则高阶*消息*词是子窗口的标识符;如果事件是WM_DESTROY，则消息的显示值是子窗口的标识符。否则，高阶单词未定义。 事件（低阶*消息*字）可以是以下任一值：
 
 - WM_CREATE正在创建子窗口。
@@ -9219,7 +9219,7 @@ afx_msg BOOL OnSetCursor(
 *nHitTest*<br/>
 指定[命中测试](#onnchittest)区域代码。 命中测试确定光标的位置。
 
-*消息*<br/>
+*message*<br/>
 指定鼠标消息编号。
 
 ### <a name="return-value"></a>返回值
@@ -10267,7 +10267,7 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -10497,7 +10497,7 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要过帐的消息。
 
 *wParam*<br/>
@@ -10601,7 +10601,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 调用此成员函数以在指定的设备上下文中绘制当前窗口，这在打印机设备上下文中很常见。
 
-```
+```cpp
 void Print(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10647,7 +10647,7 @@ dwFlags**<br/>
 
 调用此成员函数以在指定的设备上下文中（通常是打印机设备上下文）中绘制任何窗口。
 
-```
+```cpp
 void PrintClient(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10718,7 +10718,7 @@ BOOL RedrawWindow(
 *prgnUpdate*<br/>
 标识更新区域。 如果*prgnUpdate*和*lpRectUpdate*均为 NULL，则整个工作区将添加到更新区域。
 
-*标志*<br/>
+*flag*<br/>
 以下标志用于使窗口无效：
 
 - RDW_ERASE 使窗口在重新绘制窗口时接收[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)消息。 还必须指定RDW_INVALIDATE标志;否则RDW_ERASE无效。
@@ -10773,7 +10773,7 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要反射的消息。
 
 *wParam*<br/>
@@ -10852,7 +10852,7 @@ int ReleaseDC(CDC* pDC);
 
 调用以重新定位和调整窗口工作区中的控制栏的大小。
 
-```
+```cpp
 void RepositionBars(UINT nIDFirst,
     UINT nIDLast,
     UINT nIDLeftOver,
@@ -10926,7 +10926,7 @@ dwFlags**<br/>
 
 将显示中的给定点或矩形的屏幕坐标转换为客户端坐标。
 
-```
+```cpp
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
@@ -10950,7 +10950,7 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 滚动当前`CWnd`对象的工作区的内容。
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -11017,7 +11017,7 @@ int ScrollWindowEx(
 *lprect更新*<br/>
 指向将接收`RECT`通过滚动而失效的矩形边界的结构。 此参数可能为 NULL。
 
-*标志*<br/>
+*flag*<br/>
 可以是下列值之一：
 
 - SW_ERASE 使用SW_INVALIDATE指定时，通过向窗口发送[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)消息来擦除新失效的区域。
@@ -11082,7 +11082,7 @@ LRESULT SendDlgItemMessage(
 *nID*<br/>
 指定将接收消息的对话框控件的标识符。
 
-*消息*<br/>
+*message*<br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -11118,7 +11118,7 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -11143,7 +11143,7 @@ LRESULT SendMessage(
 
 调用此成员函数将指定的 Windows 消息发送到所有后代窗口。
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -11154,7 +11154,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -11192,7 +11192,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -11313,7 +11313,7 @@ int SetDlgCtrlID(int nID);
 
 在对话框中设置给定控件的文本到指定整数值的字符串表示形式。
 
-```
+```cpp
 void SetDlgItemInt(
     int nID,
     UINT nValue,
@@ -11343,7 +11343,7 @@ void SetDlgItemInt(
 
 设置窗口或对话框拥有的控件的标题或文本。
 
-```
+```cpp
 void SetDlgItemText(
     int nID,
     LPCTSTR lpszString);
@@ -11409,7 +11409,7 @@ CWnd* SetFocus();
 
 将WM_SETFONT消息发送到窗口以使用指定的字体。
 
-```
+```cpp
 void SetFont(
     CFont* pFont,
     BOOL bRedraw = TRUE);
@@ -11518,7 +11518,7 @@ BOOL SetMenu(CMenu* pMenu);
 
 将当前窗口的所有者设置到指定的窗口对象。
 
-```
+```cpp
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
@@ -11560,7 +11560,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 
 调用此成员函数以设置*dwDispID*指定的 OLE 控件属性。
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -11588,7 +11588,7 @@ void AFX_CDECL SetProperty(
 
 应用程序调用`SetRedraw`以允许重绘更改或防止重绘更改。
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
@@ -11684,7 +11684,7 @@ int SetScrollPos(
 
 设置给定滚动条的最小和最大位置值。
 
-```
+```cpp
 void SetScrollRange(
     int nBar,
     int nMinPos,
@@ -11755,7 +11755,7 @@ UINT_PTR SetTimer(
 
 *lpfnTimer*回调函数不需要命名`TimerProc`，但必须声明为静态函数，并定义如下。
 
-```
+```cpp
 void CALLBACK TimerProc(
     HWND hWnd,   // handle of CWnd that called SetTimer
     UINT nMsg,   // WM_TIMER
@@ -11840,7 +11840,7 @@ BOOL SetWindowPos(
 
 有关如何使用此参数的规则，请参阅本主题的"备注"部分。
 
-** x <br/>
+*x*<br/>
 指定窗口左侧的新位置。
 
 *Y*<br/>
@@ -11949,7 +11949,7 @@ int SetWindowRgn(
 
 将窗口的标题设置为指定的文本。
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -11972,7 +11972,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 在护台的当前位置显示屏幕上的护台。
 
-```
+```cpp
 void ShowCaret();
 ```
 
@@ -11994,7 +11994,7 @@ care 是共享资源。 仅当具有输入焦点或处于活动状态时，窗�
 
 显示或隐藏此窗口拥有的所有弹出窗口。
 
-```
+```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
@@ -12011,7 +12011,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
 显示或隐藏滚动条。
 
-```
+```cpp
 void ShowScrollBar(
     UINT nBar,
     BOOL bShow = TRUE);
@@ -12146,7 +12146,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 调用此成员函数以解锁与`CWnd::LockWindowUpdate`锁定的窗口。
 
-```
+```cpp
 void UnlockWindowUpdate();
 ```
 
@@ -12195,7 +12195,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 
 调用此成员函数以更新对话框或窗口中使用[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)回调机制的对话框或窗口中的对话框或其他控件的状态。
 
-```
+```cpp
 void UpdateDialogControls(
     CCmdTarget* pTarget,
     BOOL bDisableIfNoHndler);
@@ -12275,7 +12275,7 @@ dwFlags**<br/>
 
 如果更新区域不为空，则通过发送[WM_PAINT](/windows/win32/gdi/wm-paint)消息更新工作区。
 
-```
+```cpp
 void UpdateWindow();
 ```
 
@@ -12291,7 +12291,7 @@ void UpdateWindow();
 
 通过从窗口的更新区域中删除矩形，验证给定矩形中的工作区。
 
-```
+```cpp
 void ValidateRect(LPCRECT lpRect);
 ```
 
@@ -12310,7 +12310,7 @@ Windows 将继续生成WM_PAINT消息，直到验证当前更新区域。
 
 通过从窗口的当前更新区域中删除区域来验证给定区域内的工作区。
 
-```
+```cpp
 void ValidateRgn(CRgn* pRgn);
 ```
 
@@ -12359,7 +12359,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>参数
 
-*消息*<br/>
+*message*<br/>
 指定要处理的 Windows 消息。
 
 *wParam*<br/>
@@ -12432,7 +12432,7 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

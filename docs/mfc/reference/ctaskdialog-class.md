@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366638"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752283"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -255,7 +255,7 @@ C任务对话示例
 
 向 添加新的命令按钮控件。 `CTaskDialog`
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ void AddCommandControl(
 
 向 添加单选按钮`CTaskDialog`。
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ static BOOL IsSupported();
 
 使用字符串表中的数据添加命令按钮控件。
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ void LoadCommandControls(
 
 使用字符串表中的数据添加单选按钮控件。
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 从 中删除 的所有命令按钮控件`CTaskDialog`。
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 从 中删除 的所有单选按钮`CTaskDialog`。
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 更新 上的命令按钮控件`CTaskDialog`。
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ void SetCommandControlOptions(
 
 更新要启用的常用按钮的子集，并要求 UAC 提升。
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ void SetCommonButtonOptions(
 
 将通用按钮添加到 。 `CTaskDialog`
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ void SetCommonButtons(
 
 更新 的内容`CTaskDialog`。
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ void SetContent(const CString& strContent);
 
 指定默认命令按钮控件。
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 指定默认单选按钮。
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 调整 的`CTaskDialog`宽度。
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ void SetDialogWidth(int nWidth = 0);
 
 更新 的`CTaskDialog`扩展区域。
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ void SetExpansionArea(
 
 更新 页`CTaskDialog`脚图标。
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 更新 脚上的文本`CTaskDialog`。
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ void SetFooterText(const CString& strFooterText);
 
 更新 的主`CTaskDialog`图标。
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 更新 的主要`CTaskDialog`指令。
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ void SetMainInstruction(const CString& strInstructions);
 
 配置 的选项`CTaskDialog`。
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ void SetOptions(int nOptionFlag);
 
 为 配置 选`CTaskDialog`框栏并将其添加到对话框中。
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ void SetProgressBarMarquee(
 
 调整进度条的位置。
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 调整进度条的范围。
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ void SetProgressBarRange(
 
 设置进度条的状态并将其显示在 上`CTaskDialog`。
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 启用或禁用单选按钮。
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ void SetRadioButtonOptions(
 
 设置验证复选框的选中状态。
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 设置显示在验证复选框右侧的文本。
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 设置 的标题`CTaskDialog`。
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 
@@ -1618,7 +1618,7 @@ HRESULT TaskDialogCallback(
 |TDN_HELP|未使用。|未使用。|
 |TDN_EXPANDO_BUTTON_CLICKED|如果扩展区域折叠，0;如果显示扩展文本，则非零。|未使用。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>

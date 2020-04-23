@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366021"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753044"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 类
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 指定状态栏控件的样式。 应用 Windows SDK 中["通用控制样式](/windows/win32/Controls/common-control-styles)"中列出的状态栏控件样式的任意组合。 此参数必须包括WS_CHILD样式。 它还应包括WS_VISIBLE样式。
 
 *矩形*<br/>
-指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 *pparentwnd*<br/>
 指定状态栏控件的父窗口，通常为`CDialog`。 值不得为 NULL。
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 指定状态栏控件的样式。 应用 Windows SDK 中["通用控制样式](/windows/win32/Controls/common-control-styles)"中列出的状态栏控件样式的任意组合。 此参数必须包括WS_CHILD样式。 它还应包括WS_VISIBLE样式。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -344,7 +344,7 @@ BOOL GetRect(
 要检索其边界矩形的零点的零索引。
 
 *lpRect*<br/>
-接收边界矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的地址。
+接收边界矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的地址。
 
 ### <a name="return-value"></a>返回值
 
@@ -530,7 +530,7 @@ BOOL SetIcon(
 
 设置状态条控件的绘图区域的最小高度。
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ nType**<br/>
 
 设置状态栏中窗格的工具提示文本。
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);

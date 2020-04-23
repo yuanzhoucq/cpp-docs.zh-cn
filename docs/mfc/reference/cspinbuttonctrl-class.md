@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318130"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753107"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 指定旋转按钮控件的样式。 将旋转按钮控制样式的任意组合应用于控件。 这些样式在 Windows SDK 中的["向上向下控制样式"](/windows/win32/Controls/up-down-control-styles)中描述。
 
 *矩形*<br/>
-指定旋转按钮控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构
+指定旋转按钮控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构
 
 *pparentwnd*<br/>
 指向旋转按钮控件的父窗口（通常为 的指针`CDialog`） 的指针。 值不得为 NULL。
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 指定旋转按钮控件的样式。 将旋转按钮控制样式的任意组合应用于控件。 这些样式在 Windows SDK 中的["向上向下控制样式"](/windows/win32/Controls/up-down-control-styles)中描述。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -375,7 +375,7 @@ int SetPos32(int nPos);
 
 设置旋转按钮控件的上限和下限（范围）。
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);
@@ -397,7 +397,7 @@ void SetRange32(
 > [!NOTE]
 > 旋转按钮的默认范围的最大设置为零 （0），最小设置为 100。 由于最大值小于最小值，单击向上箭头将减小位置，单击向下箭头将增加该位置。 用于`CSpinButtonCtrl::SetRange`调整这些值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

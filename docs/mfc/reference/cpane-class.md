@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364167"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753665"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -340,7 +340,7 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 
 计算窗格的内部矩形，包括边框和夹持器。
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ void CalcInsideRect(
 
 计算最近停靠的矩形。
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -864,7 +864,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 [出]以`CSize`最小允许大小填充的对象。
 
 ### <a name="remarks"></a>备注
@@ -890,7 +890,7 @@ virtual void GetPaneName(CString& strName) const;
 
 检索窗格的*虚拟矩形*。
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -1381,7 +1381,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 设置窗格的边框值。
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ void SetBorders(LPCRECT lpRect);
 
 *设置窗格*的热点。
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,13 +1471,13 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 
 设置窗格的最小允许大小。
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 [在]包含`CSize`窗格允许的最小大小的对象。
 
 ### <a name="remarks"></a>备注
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 设置窗格的*虚拟矩形*。
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ void SetVirtualRect(
 
 设置默认小型框架窗口的运行时类信息。
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 更新虚拟矩形。
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);
@@ -1604,7 +1604,7 @@ void UpdateVirtualRect(CSize sizeNew);
 
 第三个重载使用窗格的当前位置和*由 sizeNew*指定的大小设置虚拟矩形。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

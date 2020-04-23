@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368881"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753544"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 类
 
@@ -432,7 +432,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 
 检索功能区面板中包含的所有功能区元素。
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 将具有指定命令 ID 的功能区元素添加到指定的数组中。
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 检索功能区面板中所有功能区元素的命令指示。
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ BOOL bDelete = TRUE);
 
 从功能区面板中删除所有功能区元素。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ CMFCRibbonBaseElement* pElem);
 
 启用或禁用功能区元素在其显示矩形中的垂直位置的中心。
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 将用户定义的数据与功能区面板关联。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 启用或禁用同一列中功能区元素宽度的调整。
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 
 设置功能区面板的默认按钮的键尖。
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 
 将焦点设置到指定的功能区元素。
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 
 滚动库以使指定的功能区元素可见。
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ BOOL IsWindows7Look() const;
 
 检索可见元素的数组。
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
@@ -1248,7 +1248,7 @@ CMFCRibbonBaseElement* GetFocused() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

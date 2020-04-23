@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354430"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750615"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 
@@ -108,7 +108,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位 MapView 元素的键。 *键*的类型是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -127,7 +127,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位 MapView 中的元素的键。 的类型`key`是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -197,7 +197,7 @@ virtual property unsigned int Size;
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,
@@ -217,6 +217,6 @@ void Split(
 
 此方法为非操作性的，它不执行任何操作。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373986"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753217"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -299,7 +299,7 @@ int CharFromPos(CPoint pt) const;
 
 调用此函数以删除（清除）编辑控件中的当前选择（如果有）。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ void Clear();
 
 调用此函数以CF_TEXT格式将编辑控件中的当前选择（如果有）与剪贴板进行配合。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ virtual BOOL Create(
 
 调用此函数以删除（剪切）编辑控件中的当前选择（如果有），并将删除的文本以CF_TEXT格式复制到剪贴板。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ void Cut();
 
 调用此函数以重置（清除）编辑控件的撤消标志。
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ TCHAR GetPasswordChar() const;
 
 调用此函数以获取编辑控件的格式矩形。
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,14 +793,14 @@ BOOL HideBalloonTip();
 
 调用此函数以限制用户可以输入到编辑控件的文本长度。
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
 ### <a name="parameters"></a>参数
 
 *n查尔斯*<br/>
-指定用户可以输入的文本的长度（在 TCHA 中）。 如果此参数为 0，则文本长度设置为UINT_MAX字节。 这是默认行为。
+指定用户可以输入的文本的长度（在 TCHA 中）。 如果此参数为 0，则文本长度设置为UINT_MAX字节。 此选项为默认行为。
 
 ### <a name="remarks"></a>备注
 
@@ -910,7 +910,7 @@ int LineLength(int nLine = -1) const;
 
 调用此函数滚动多行编辑控件的文本。
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ void LineScroll(
 
 调用此功能以将数据从剪贴板插入到插入`CEdit`点。
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 调用此函数以将编辑控件中的当前选择替换为*lpszNewText*指定的文本。
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(
 
 调用此函数以将句柄设置为多行编辑控件将使用的本地内存。
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ void SetHandle(HLOCAL hBuffer);
 
 突出显示当前编辑控件中显示的文本范围。
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ void SetHighlight(
 
 调用此成员函数以设置此`CEdit`对象的文本限制。
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ void SetLimitText(UINT nMax);
 
 调用此方法以设置此编辑控件的左右边距。
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ void SetMargins(
 
 调用此函数以设置或清除编辑控件的修改标志。
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ TRUE 的值表示文本已被修改，FALSE 值表示未修改。 默认情况�
 
 调用此函数以设置或删除用户键入文本时在编辑控件中显示的密码字符。
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 调用此函数以使用指定的坐标设置矩形的尺寸。
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ void SetRect(LPCRECT lpRect);
 
 调用此函数以设置多行编辑控件的格式矩形。
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ void SetRectNP(LPCRECT lpRect);
 
 调用此函数以选择编辑控件中的字符范围。
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ void SetSel(
 
 调用此函数以在多行编辑控件中设置制表位。
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

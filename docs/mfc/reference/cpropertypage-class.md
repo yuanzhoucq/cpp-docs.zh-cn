@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364003"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751100"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 类
 
@@ -119,7 +119,7 @@ class CPropertyPage : public CDialog
 
 对模态属性表页面中的数据进行了不可恢复的更改后，请调用此函数。
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ void CancelToClose();
 
 调用此成员函数以构造对象`CPropertyPage`。
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ LRESULT QuerySiblings(
 
 调用此成员函数以启用或禁用"立即应用"按钮，具体取决于属性页中的设置是否应应用于相应的外部对象。
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

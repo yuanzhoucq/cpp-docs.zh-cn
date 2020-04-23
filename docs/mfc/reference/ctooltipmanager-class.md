@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365077"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752166"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager 类
 
@@ -128,7 +128,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 自定义指定 Windows 控件类型的工具提示控件的外观。
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -198,13 +198,13 @@ nType**<br/>
 
 有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
-```
+```cpp
 void UpdateTooltips();
 ```
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

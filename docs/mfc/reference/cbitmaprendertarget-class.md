@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: 6249c121f7bcca0675a8138baef0e2cdc9e632d8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ba8c8819b47185315d67d732fc90ab2ffc0ad0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352601"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752931"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 类
 
@@ -80,7 +80,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 将现有渲染目标接口附加到对象
 
-```
+```cpp
 void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```
 
@@ -158,6 +158,6 @@ operator ID2D1BitmapRenderTarget*();
 
 如果对象尚未初始化，则指向 ID2D1BitmapRenderTarget 接口或 NULL 的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

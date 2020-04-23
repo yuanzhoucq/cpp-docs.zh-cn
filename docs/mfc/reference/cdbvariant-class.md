@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 3c13c1a965014af271ce2911505742d9a50eedd7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9bb70acb43f2e73ade86b753ebbb7949759ce88d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376449"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754598"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 类
 
@@ -119,7 +119,7 @@ CDBVariant();
 
 调用此成员函数以清除`CDBVariant`对象。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -242,7 +242,7 @@ void Clear();
 
 数据`m_pstringW`成员属于联合。 在访问`m_pstringW`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_WSTRING，则`m_pstringW`包含有效的指针;否则，访问`m_pstringW`将产生不可靠的结果。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)

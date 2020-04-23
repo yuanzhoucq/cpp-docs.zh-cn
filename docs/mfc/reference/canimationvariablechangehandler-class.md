@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2dc8f2c03f9df34012fb9db1ed5e5b0bb448b17f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377083"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755039"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 类
 
@@ -76,10 +76,10 @@ IFACEMETHOD(OnValueChanged) (
 *脚本*<br/>
 为变量设置动画的情节提要。
 
-*可变*<br/>
+*变量*<br/>
 已更新的动画变量。
 
-*新值*<br/>
+*newValue*<br/>
 新值。
 
 *上一个值*<br/>
@@ -93,7 +93,7 @@ IFACEMETHOD(OnValueChanged) (
 
 存储指向动画控制器的指针以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -102,6 +102,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *动画控制器*<br/>
 指向动画控制器的指针，该控制器将接收事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352290"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752712"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 
@@ -121,7 +121,7 @@ class CCmdTarget : public CObject
 
 调用此函数，当希望命令需要一个明显的时间间隔执行时，将光标显示为沙漏。
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ BOOL DoOleVerb(
 包含该对象的文档窗口的句柄。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构以像素为单位定义对象的边界矩形，以*hwndParent*。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构以像素为单位定义对象的边界矩形，以*hwndParent*。
 
 ### <a name="return-value"></a>返回值
 
@@ -183,7 +183,7 @@ BOOL DoOleVerb(
 
 调用此函数以启用对象的 OLE 自动化。
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ void EnableAutomation();
 
 启用在连接点上触发事件。
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ void EnableConnections();
 
 启用对象的类型库。
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ void EnableTypeLib();
 
 调用`BeginWaitCursor`成员函数后调用此函数，以便从沙漏光标返回到上一个游标。
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>参数
 
 *pIID*<br/>
-指向接口 ID [（GUID](/previous-versions/cc317743(v%3dmsdn.10))） 的指针。
+指向接口 ID 的指针（[GUID]（/窗口/win32/api/guiddef/ns-guiddef-guid）。
 
 ### <a name="return-value"></a>返回值
 
@@ -346,11 +346,11 @@ HRESULT GetTypeInfoOfGuid(
 
 ### <a name="parameters"></a>参数
 
-*Lcid*<br/>
+*lcid*<br/>
 区域设置标识符 （ `LCID`。
 
-*Guid*<br/>
-类型描述的[GUID。](/previous-versions/cc317743(v%3dmsdn.10))
+*guid*<br/>
+类型描述的 [GUID]（/窗口/win32/api/guiddef/ns-guiddef-guid。
 
 *ppTypeInfo*<br/>
 指向接口的`ITypeInfo`指针。
@@ -371,7 +371,7 @@ virtual HRESULT GetTypeLib(
 
 ### <a name="parameters"></a>参数
 
-*Lcid*<br/>
+*lcid*<br/>
 区域设置标识符 (LCID)。
 
 *ppTypeLib*<br/>
@@ -514,7 +514,7 @@ virtual void OnFinalRelease();
 
 调用此函数以在系统光标更改后（例如，在长时间操作期间打开消息框然后关闭后）还原相应的沙漏光标。
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

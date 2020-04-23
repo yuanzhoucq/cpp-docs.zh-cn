@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 0b54324c3c5503182add15a3dd0a9ecd07c24b18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38fceed1cc42ca0aac2e6ddaf145db273c95771d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318118"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753127"
 ---
 # <a name="csplitbutton-class"></a>C拆分按钮类
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |参数|说明|
 |---------------|-----------------|
 |*dwStyle*|[在]要应用于控件的样式的位组合 （OR）。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|
-|*矩形*|[在]对包含控件位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用。|
+|*矩形*|[在]对包含控件位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用。|
 |*pparentwnd*|[在]指向作为控件的父窗口的[CWnd](../../mfc/reference/cwnd-class.md)对象的非空指针。|
 |*nID*|[在]控件的 ID。|
 
@@ -166,7 +166,7 @@ END_MESSAGE_MAP()
 
 设置用户单击当前拆分按钮控件的下拉箭头时显示的下拉菜单。
 
-```
+```cpp
 void SetDropDownMenu(
     UINT nMenuId,
     UINT nSubMenuId);
@@ -196,7 +196,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C拆分按钮类](../../mfc/reference/csplitbutton-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

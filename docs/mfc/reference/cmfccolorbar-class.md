@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367769"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752570"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 类
 
@@ -380,7 +380,7 @@ CMFCColorBar(
 
 计算包含颜色条控件上的按钮所需的垂直和水平边距，并调整这些按钮的位置。
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ static BOOL CreatePalette(
 
 显示或隐藏自动按钮。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ void EnableAutomaticButton(
 
 启用或禁用允许用户选择更多颜色的对话框的显示。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 设置当前选择的颜色。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ static void SetColorName(
 
 为颜色条控件设置新的命令 ID。
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ void SetCommandID(UINT nCommandID);
 
 设置当前文档中使用的颜色列表。
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 设置水平边距，即左侧或右侧颜色单元格与工作区边界之间的空间。
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ void SetHorzMargin(int nHorzMargin);
 
 将`m_pWndPropList`受保护的数据成员设置到指向属性网格控件的指定指针。
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 设置垂直边距，即顶部或底部颜色单元格和工作区边界之间的空间。
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 
@@ -941,7 +941,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 此方法将WM_SETMESSAGESTRING消息发送到颜色栏控件的所有者。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

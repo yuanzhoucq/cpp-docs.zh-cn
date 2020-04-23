@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365702"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751600"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>用于管理 DLL 的宏和函数
 
@@ -91,7 +91,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ MFC OLE DLL 是 MFC 扩展 DLL;为了使 MFC 扩展 DLL 连接到`CDynLinkLibrar
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -193,7 +193,7 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+State <br/>
 对[AFX_EXTENSION_MODULE结构结构](afx-extension-module-structure.md)的引用，该结构将在初始化后包含 MFC 扩展 DLL 模块的状态。 状态包括 MFC 扩展 DLL 已初始化的运行时类对象的副本，作为输入之前`DllMain`执行的正常静态对象构造的一部分。
 
 *hModule*<br/>
@@ -244,7 +244,7 @@ MFC 扩展 DLL 需要在其`DllMain`功能中执行两项操作：
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,13 +279,13 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+State <br/>
 对包含 MFC 扩展 DLL 模块状态[AFX_EXTENSION_MODULE结构的](afx-extension-module-structure.md)引用。
 
 *球*<br/>
@@ -333,7 +333,7 @@ MFC 扩展 DLL 需要在其`DllMain`中调用[AfxInit 扩展模块](#afxinitexte
 
 **标题：** afxdll_.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>
 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370046"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754535"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 
@@ -296,7 +296,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 重新计算活动项的布局。
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 
 将指定的窗格停靠到框架窗口。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 在全屏模式下显示或隐藏主菜单。
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 为框架窗口启用全屏模式。
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 启用或禁用停靠状态的加载。
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 启用或禁用框架窗口的 MDI 选项卡式组功能。
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ void EnableMDITabbedGroups(
 
 启用或禁用 MDI 框架窗口的 MDI 选项卡功能。 启用后，框架窗口将显示每个 MDI 子窗口的选项卡。
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *bTab关闭按钮*<br/>
 指定是否显示选项卡关闭按钮。
 
-*风格*<br/>
+style <br/>
 指定选项卡的样式。 对常规选项卡或 STYLE_3D_ONENOTE对 Microsoft OneNote 选项卡使用STYLE_3D_SCROLLED。
 
 *bTab自定义工具提示*<br/>
@@ -746,7 +746,7 @@ void EnableMDITabs(
 
 指定在用户关闭当前选项卡时是否应打开最后一个活动选项卡。
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 启用或禁用自动创建和管理弹出式窗格菜单，该菜单显示应用程序窗格的列表。
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ void EnablePaneMenu(
 
 插入其命令 ID 调用[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)对话框的菜单项。
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 将活动选项卡从当前活动的选项卡式窗口移动到下一个或上一个选项卡式选项卡组。
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 创建具有单个窗口的新选项卡式组。
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 取消注册窗格并从停靠管理器中删除它。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 设置打印预览框架窗口。
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 通过将虚拟项目替换为用户定义的项来修改工具栏对象。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 将主帧从常规模式切换到全屏模式。
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 显示或隐藏指定的窗格。
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ void ShowPane(
 
 创建一个[CMFCWindowsManager对话框](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)并打开它。
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 由框架调用以更新窗口框架标题。
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 设置每个 MDI 选项卡式窗格的图标。
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 
@@ -2024,7 +2024,7 @@ virtual void WinHelp(
 
 此方法重写 [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

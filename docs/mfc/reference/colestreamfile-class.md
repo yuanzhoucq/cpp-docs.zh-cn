@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 1f53d3bd55fbff45257c06af2ab11f066d421a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 202f8381361881ce3b8b62f81da5bfb81a1f952d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376100"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753754"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 类
 
@@ -82,7 +82,7 @@ class COleStreamFile : public CFile
 
 将提供的 OLE 流与`COleStreamFile`对象关联。
 
-```
+```cpp
 void Attach(LPSTREAM lpStream);
 ```
 
@@ -241,7 +241,7 @@ BOOL OpenStream(
 
 有关详细信息，请参阅[IStorage：：在](/windows/win32/api/objidl/nf-objidl-istorage-openstream)Windows SDK 中打开流。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CFile 类](../../mfc/reference/cfile-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)

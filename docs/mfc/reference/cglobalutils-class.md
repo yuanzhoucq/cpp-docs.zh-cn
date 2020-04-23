@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: 66c1663774076fcc4b62b766b1781efc8cc33c93
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dbac56ea7efca98218133b23657f8508ea6bac28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373726"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752916"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 类
 
@@ -90,7 +90,7 @@ class CGlobalUtils
 
 ## <a name="cglobalutilsadjustrecttoworkarea"></a><a name="adjustrecttoworkarea"></a>CGlobalUtils：：调整RecttoWork区域
 
-```
+```cpp
 void AdjustRectToworkArea(
     CRect& rect,
     CRect* pRectDelta = NULL);
@@ -105,7 +105,7 @@ void AdjustRectToworkArea(
 
 ## <a name="cglobalutilscalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CGlobalUtils：：钙化物多克
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CPaneContainerManager& barContainerManager,
     CWnd* pWndTodock,
@@ -233,7 +233,7 @@ BOOL DecimalFromString(
 
 ## <a name="cglobalutilsfliprect"></a><a name="fliprect"></a>CGlobalUtils：：翻转
 
-```
+```cpp
 void FlipRect(
     CRect& rect,
     int nDegrees);
@@ -248,7 +248,7 @@ void FlipRect(
 
 ## <a name="cglobalutilsforceadjustlayout"></a><a name="forceadjustlayout"></a>CGlobalUtils：：强制调整布局
 
-```
+```cpp
 void ForceAdjustLayout(
     CDockingManager* pDockManager,
     BOOL bForce = FALSE,
@@ -339,7 +339,7 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ## <a name="cglobalutilssetnewparent"></a><a name="setnewparent"></a>CGlobalUtils：：设置新家长
 
-```
+```cpp
 void SetNewParent(
     CObList& lstControlBars,
     CWnd* pNewParent,
@@ -392,7 +392,7 @@ BOOL StringFromDecimal(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

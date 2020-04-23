@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368954"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754710"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 类
 
@@ -410,7 +410,7 @@ short GetFieldCount();
 
 调用此成员函数以获取有关查询def中定义的字段的各种信息。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ short GetParameterCount();
 
 调用此成员函数以获取有关查询def中定义的参数的信息。
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 调用此成员函数以设置查询def对象的连接字符串。
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 如果要更改不临时的查询def的名称，请调用此成员函数。
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ void SetName(LPCTSTR lpszName);
 
 调用此成员函数以在对 ODBC 数据源的查询超时之前设置时间限制。
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ virtual void SetParamValue(
 
 调用此成员函数，作为将 SQL 传递查询设置为外部数据库的过程的一部分。
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 
 调用此成员函数以设置查询def执行的 SQL 语句。
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 
@@ -835,7 +835,7 @@ void SetSQL(LPCTSTR lpszSQL);
 
 的典型用途`SetSQL`是设置查询def对象以用于 SQL 传递查询。 （有关目标 DBMS 上的 SQL 传递查询的语法，请参阅 DBMS 的文档。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

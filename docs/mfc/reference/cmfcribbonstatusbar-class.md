@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368817"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754055"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFC 功能状态栏类
 
@@ -140,7 +140,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 向功能区状态栏添加动态元素。
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 
 向功能区状态栏添加新功能区元素。
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 将功能区元素添加到功能区状态栏的扩展区域。
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ void AddExtendedElement(
 
 向功能区状态栏添加分隔符。
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 从功能区状态栏中删除所有元素。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ BOOL RemoveElement(UINT uiID);
 
 启用或禁用功能区状态栏的信息模式。
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 
@@ -517,7 +517,7 @@ void SetInformation(LPCTSTR lpszInfo);
 
 当 lpszInfo 为 NULL 时，状态栏将恢复为常规模式。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

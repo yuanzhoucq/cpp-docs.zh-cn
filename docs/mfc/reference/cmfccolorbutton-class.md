@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367723"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752559"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 类
 
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 启用或禁用颜色选取器控件的"自动"按钮，并设置自动（默认）颜色。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 启用或禁用"其他"按钮，该按钮显示在常规颜色按钮下方。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,7 +335,7 @@ virtual void OnShowColorPopup();
 
 将`m_pPalette`受保护的数据成员初始化到指定的调色板或默认系统调色板。
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
@@ -349,7 +349,7 @@ void RebuildPalette(CPalette* pPal);
 
 指定按钮的颜色。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -386,7 +386,7 @@ static void SetColorName(
 
 定义在用户颜色选择过程中向用户显示的颜色表中显示的列数。
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ void SetColumnsNumber(int nColumns);
 
 指定一组颜色和集的名称。 使用[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)对象显示颜色集。
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ void SetDocumentColors(
 
 指定要在弹出颜色栏上显示的标准颜色。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -472,7 +472,7 @@ virtual void UpdateColor(COLORREF color);
 
 该`UpdateColor`函数更改当前选定的按钮的颜色，并通过发送带有BN_CLICKED标准通知的WM_COMMAND消息通知其父按钮。 使用[CMFCColorButton：getColor](#getcolor)方法检索所选颜色。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

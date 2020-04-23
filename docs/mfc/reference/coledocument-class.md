@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 51169de521997890190aab52e4afd02ed383af3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1500035cb8be3036678090918154829aace48d2f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375034"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753873"
 ---
 # <a name="coledocument-class"></a>COleDocument 类
 
@@ -195,7 +195,7 @@ COleDocument();
 
 如果要使用复合文件格式存储文档，请调用此函数。
 
-```
+```cpp
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```
 
@@ -542,7 +542,7 @@ virtual void UpdateModifiedFlag();
 
 这允许框架提示用户在关闭之前保存文档，即使文档中的本机数据尚未修改也是如此。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品容器](../../overview/visual-cpp-samples.md)<br/>
 [MFC 样品 MFCBIND](../../overview/visual-cpp-samples.md)<br/>

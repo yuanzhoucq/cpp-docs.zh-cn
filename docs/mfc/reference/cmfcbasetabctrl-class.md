@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367820"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754899"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -425,7 +425,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 向受保护`CMap m_mapAddedIcons`成员中的图标列表添加图标。
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -494,7 +494,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFCBaseTabCtrl：：自动销毁窗口
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -598,7 +598,7 @@ virtual BOOL DetachTab(
 
 ## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFCBaseTabCtrl：：启用激活上次活动
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
@@ -612,7 +612,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 控制框架在绘制选项卡时是否使用自动背景颜色。
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
@@ -695,7 +695,7 @@ virtual BOOL EnableTabDetach(
 
 允许用户使用鼠标更改选项卡顺序。
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
@@ -733,7 +733,7 @@ virtual BOOL EnsureVisible(int iTab);
 
 ## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFCBaseTabCtrl：：进入拖动模式
 
-```
+```cpp
 void EnterDragMode();
 ```
 
@@ -1409,7 +1409,7 @@ virtual void InsertTab(
 
 ## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabctrl：：无效选项卡
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
@@ -1944,7 +1944,7 @@ virtual BOOL RenameTab();
 
 重置[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)实例的图像列表。
 
-```
+```cpp
 void ResetImageList();
 ```
 
@@ -2019,7 +2019,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 设置框架在自动颜色模式下使用的选项卡控件的颜色。
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
@@ -2038,7 +2038,7 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 
 设置用于非派生自 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)的任意对象的包装类。
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
@@ -2055,7 +2055,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 
 启用并禁用选项卡标签中前缀字符的处理。
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);
@@ -2375,7 +2375,7 @@ virtual void SwapTabs(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

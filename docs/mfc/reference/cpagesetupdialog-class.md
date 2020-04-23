@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 218ed24ccf56854622e20936299fcc2e8a3d0fa9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3664149ef0d7476b460ef06cddaf2b8145ade701
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374788"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753686"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 类
 
@@ -253,7 +253,7 @@ CString GetDriverName() const;
 
 调用后调用此功能以`DoModal`检索打印机设备驱动程序的边距。
 
-```
+```cpp
 void GetMargins(
     LPRECT lpRectMargins,
     LPRECT lpRectMinMargins) const;
@@ -403,7 +403,7 @@ virtual UINT PreDrawPage(
 
 重写此函数以自定义图像的图形。 如果重写此函数并返回 TRUE，则必须绘制整个图像。 如果重写此函数并返回 FALSE，则整个默认图像由框架绘制。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)<br/>

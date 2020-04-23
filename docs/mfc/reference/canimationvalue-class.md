@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e020e3e123bb5dc96a623e7a41896d75c611b81e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321977"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755086"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 类
 
@@ -94,7 +94,7 @@ CAnimationValue 类封装单个 CAnimationvariable 对象，可以在应用程�
 
 添加要应用于值的过渡。
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -239,7 +239,7 @@ operator INT32();
 
 将 DOUBLE 值分配给 CAnimationValue。
 
-```
+```cpp
 void operator=(DOUBLE dblVal);
 void operator=(INT32 nVal);
 ```
@@ -260,7 +260,7 @@ void operator=(INT32 nVal);
 
 设置默认值。
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -273,6 +273,6 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 
 使用此方法设置默认值。 尚未启动动画和/或尚未创建基础 COM 对象时，默认值将返回到应用程序。 如果已在 CAnimationVarible 中封装的基础 COM 对象已创建，此方法将重新创建它，因此您可能需要再次调用启用Value更改/启用 IntegerValue 更改方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

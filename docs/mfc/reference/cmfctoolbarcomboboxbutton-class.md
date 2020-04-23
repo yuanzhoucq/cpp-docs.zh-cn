@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372189"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754011"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 类
 
@@ -1116,7 +1116,7 @@ virtual BOOL OnUpdateToolTip(
 
 从列表和编辑框中删除所有项目。
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1255,7 +1255,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 
 设置组合框按钮的快捷菜单资源 ID。
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 下下列表框时设置其高度。
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ virtual void SetStyle(UINT nStyle);
 
 在组合框按钮的编辑框中设置文本。
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 
@@ -1328,7 +1328,7 @@ void SetText(LPCTSTR lpszText);
 *lpszText*<br/>
 [在]指向包含编辑框文本的字符串的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

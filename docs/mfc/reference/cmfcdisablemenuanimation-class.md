@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: 990f41d2dfa6491d246797322ee275c9648d52a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367574"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752415"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 类
 
@@ -75,7 +75,7 @@ class CMFCDisableMenuAnimation
 
 还原框架用于显示弹出式菜单的上一个动画。
 
-```
+```cpp
 void Restore ();
 ```
 
@@ -83,7 +83,7 @@ void Restore ();
 
 `CMFCDisableMenuAnimation`析构函数调用此方法以还原框架用于显示弹出式菜单的上一个动画。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

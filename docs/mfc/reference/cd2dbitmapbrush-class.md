@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369300"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754287"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 类
 
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 将现有资源接口附加到对象
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ CD2DBitmapBrush(
 
 初始化对象
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ operator ID2D1BitmapBrush*();
 
 指定此画笔用于绘制的位图源
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 
 指定画笔如何水平放置那些延伸到其位图的区域
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 
 指定画笔如何垂直绘制超出其位图的区域的切片
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 
 指定缩放或旋转画笔位贴图时使用的插值模式
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 
@@ -394,6 +394,6 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 *插值模式*<br/>
 缩放或旋转画笔位图时使用的插值模式
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

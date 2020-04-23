@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: c77e2fed1067091c139eee664fb291b83742eb54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57fbd1e1f574beebff8baab014e7ab615f56333f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375188"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754171"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFC 功能定制属性页类
 
@@ -83,7 +83,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 将自定义类别添加到 **"命令**"组合框。
 
-```
+```cpp
 void AddCustomCategory(
     LPCTSTR lpszName,
     const CList<UINT, UINT>& lstIDS);
@@ -126,7 +126,7 @@ virtual void OnOK();
 
 默认实现将 **"自定义"** 对话框中选择的选项应用于"快速访问工具栏"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

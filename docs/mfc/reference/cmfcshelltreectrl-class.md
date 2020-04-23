@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 41d9a14e379c566f001eda8b10b2669b95beb171
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f5856e92c2aca1d23ee6a37b99ea9700ea6db0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376140"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753440"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 类
 
@@ -96,7 +96,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 启用快捷菜单。
 
-```
+```cpp
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```
 
@@ -221,7 +221,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 
 刷新并重新绘制[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)。
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -254,7 +254,7 @@ S_OK如果成功;否则E_FAIL。
 
 设置标志以筛选树上下文。
 
-```
+```cpp
 void SetFlags(
     DWORD dwFlags,
     BOOL bRefresh = TRUE);
@@ -276,7 +276,7 @@ dwFlags**<br/>
 
 将[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象与[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象关联。
 
-```
+```cpp
 void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```
 
@@ -291,7 +291,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 
 使用方法[CMFCShellTreeCtrl：获取相关列表](#getrelatedlist)来检索与`CMFCShellListCtrl`关联的`CMFCShellTreeCtrl`方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

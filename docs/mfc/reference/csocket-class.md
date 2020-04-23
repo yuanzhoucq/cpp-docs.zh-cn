@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-ms.openlocfilehash: 3f0a7a9a90250ede7b112cfbd9bc1ca14d583356
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 730bea34354b008d641ecc28e7368f79efad12a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318197"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751150"
 ---
 # <a name="csocket-class"></a>CSocket 类
 
@@ -129,7 +129,7 @@ SOCKET 句柄存储在对象的[m_hSocket](../../mfc/reference/casyncsocket-clas
 
 调用此成员函数以取消当前正在进行的阻塞呼叫。
 
-```
+```cpp
 void CancelBlockingCall();
 ```
 
@@ -255,7 +255,7 @@ virtual BOOL OnMessagePending();
 
 有关详细信息，请参阅[Windows 套接字：使用带存档的套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CAsyncSocket 类](../../mfc/reference/casyncsocket-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

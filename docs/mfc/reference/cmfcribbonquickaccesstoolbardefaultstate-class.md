@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: 56219e8ed1833f4b448ec6ffd3c16e9db3c66ada
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eb6b36066f34036ae599a94f4d1c07b2c633e730
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368876"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753520"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 类
 
@@ -69,7 +69,7 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 
 将命令添加到快速访问工具栏的默认状态。
 
-```
+```cpp
 void AddCommand(
     UINT uiCmd,
     BOOL bIsVisible=TRUE);
@@ -91,7 +91,7 @@ void AddCommand(
 
 将一个快速访问工具栏的属性复制到另一个工具栏。
 
-```
+```cpp
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```
 
@@ -120,7 +120,7 @@ CMFCRibbonQuickAccessToolBarDefaultState();
 
 清除"快速访问工具栏"中的默认命令列表。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -128,7 +128,7 @@ void RemoveAll();
 
 此函数从此实例中删除以前调用[CMFC 功能障碍快速访问工具栏默认状态的所有命令：添加 AddCommand。](#addcommand)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f391966ef6657363e8f23e5666a57a935b08e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363311"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752786"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |参数|说明|
 |---------------|-----------------|
 |*dwStyle*|[在]要应用于控件的样式的位组合。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|
-|*矩形*|[在]对包含控件位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用。|
+|*矩形*|[在]对包含控件位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用。|
 |*pparentwnd*|[在]指向作为控件的父窗口的[CWnd](../../mfc/reference/cwnd-class.md)对象的非空指针。|
 |*nID*|[在]控件的 ID。|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[在]要应用于控件的扩展样式的位组合 （OR）。 有关详细信息，请参阅[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函数的*dwExStyle*参数。|
 |*dwStyle*|[在]要应用于控件的样式的位组合 （OR）。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|
-|*矩形*|[在]对包含控件位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用。|
+|*矩形*|[在]对包含控件位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用。|
 |*pparentwnd*|[在]指向作为控件的父窗口的[CWnd](../../mfc/reference/cwnd-class.md)对象的非空指针。|
 |*nID*|[在]控件的 ID。|
 
@@ -245,7 +245,7 @@ S_OK此方法是否成功;如果此方法成功，则否则，COM 错误代码�
 
 此消息调用[NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype)宏，这在 Windows SDK 中介绍。 该宏发送NCM_SETALLOWTYPE消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CNetAddressCtrl 类](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

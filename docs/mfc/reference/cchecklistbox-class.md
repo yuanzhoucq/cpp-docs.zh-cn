@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 8ca8d3b2cb4ce3c5b070d883e0a418ebec3665b1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0e80e80d61104a4d8cb5f1cfd4e26a64c42249
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352372"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752742"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 类
 
@@ -209,7 +209,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 调用此函数以启用或禁用检查表框项。
 
-```
+```cpp
 void Enable(
     int nIndex,
     BOOL bEnabled = TRUE);
@@ -326,7 +326,7 @@ virtual CRect OnGetCheckPosition(
 
 设置指定复选框的状态。
 
-```
+```cpp
 void SetCheck(
     int nIndex,
     int nCheck);
@@ -354,7 +354,7 @@ void SetCheck(
 
 调用此函数以在检查表框中设置复选框的样式。
 
-```
+```cpp
 void SetCheckStyle(UINT nStyle);
 ```
 
@@ -377,7 +377,7 @@ void SetCheckStyle(UINT nStyle);
 
 有关这些样式的信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox 类](../../mfc/reference/clistbox-class.md)<br/>

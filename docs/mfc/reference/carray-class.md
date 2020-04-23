@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3355e72c58365e97f8f3f8ce09754285f671915a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377024"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753977"
 ---
 # <a name="carray-class"></a>CArray 类
 
@@ -209,7 +209,7 @@ CArray();
 
 使用此成员函数将一个数组的元素复制到另一个数组。
 
-```
+```cpp
 void Copy(const CArray& src);
 ```
 
@@ -258,7 +258,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 
 释放在阵列增长时分配的任何额外内存。
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -385,7 +385,7 @@ INT_PTR GetUpperBound() const;
 
 第一个版本在`InsertAt`数组中的指定索引中插入一个元素（或元素的多个副本）。
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     ARG_TYPE newElement,
@@ -502,7 +502,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 
 从此数组中移除所有元素。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -518,7 +518,7 @@ void RemoveAll();
 
 删除从数组中指定索引开始的一个或多个元素。
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -546,7 +546,7 @@ void RemoveAt(
 
 在指定的索引处设置数组元素。
 
-```
+```cpp
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -575,7 +575,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 
 在指定的索引处设置数组元素。
 
-```
+```cpp
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -602,7 +602,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 
 建立空数组或现有数组的大小;如有必要，分配内存。
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);
@@ -628,7 +628,7 @@ void SetSize(
 
   请参阅[GetData](#getdata)的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品收集](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>

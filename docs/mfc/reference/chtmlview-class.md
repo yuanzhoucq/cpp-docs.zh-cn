@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 14f92e51ecf776aad5312335dade7dfcd154c3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9956537dbbbc34c69f6f6a6da8174ab594418386
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352039"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752659"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 类
 
@@ -390,7 +390,7 @@ virtual BOOL Create(
 指定窗口样式属性。 默认情况下，将设置WS_VISIBLE和WS_CHILD Windows 样式。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，指定窗口的大小和位置。 *rectDefault*值允许 Windows 指定新窗口的大小和位置。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，指定窗口的大小和位置。 *rectDefault*值允许 Windows 指定新窗口的大小和位置。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -469,7 +469,7 @@ HRESULT ExecFormsCommand(
 
 调用此成员函数以在 Web 浏览器或 Internet 资源管理器中执行命令。
 
-```
+```cpp
 void ExecWB(
     OLECMDID cmdID,
     OLECMDEXECOPT cmdexecopt,
@@ -960,7 +960,7 @@ long GetWidth() const;
 
 在历史记录列表中向后导航一个项目。
 
-```
+```cpp
 void GoBack();
 ```
 
@@ -972,7 +972,7 @@ void GoBack();
 
 向前导航历史记录列表中的一个项目。
 
-```
+```cpp
 void GoForward();
 ```
 
@@ -980,7 +980,7 @@ void GoForward();
 
 导航到当前主页，或者启动“Internet Explorer Internet 选项”对话框或“Internet 属性”对话框（可从“控制面板”访问）中指定的网页。
 
-```
+```cpp
 void GoHome();
 ```
 
@@ -992,7 +992,7 @@ void GoHome();
 
 导航到当前搜索页，如"Internet Explorer Internet 选项"对话框或"Internet 属性"对话框中指定的"Internet 属性"对话框中从"控制面板"访问。
 
-```
+```cpp
 void GoSearch();
 ```
 
@@ -1029,7 +1029,7 @@ BOOL LoadFromResource(UINT nRes);
 
 调用此成员函数以导航到 URL 标识的资源。
 
-```
+```cpp
 void Navigate(
     LPCTSTR URL,
     DWORD dwFlags = 0,
@@ -1067,7 +1067,7 @@ dwFlags**<br/>
 
 调用此成员函数以导航到 URL 标识的资源或完整路径标识的文件。
 
-```
+```cpp
 void Navigate2(
     LPITEMIDLIST pIDL,
     DWORD dwFlags = 0,
@@ -1825,7 +1825,7 @@ virtual void OnVisible(BOOL bVisible);
 
 调用此成员函数以设置与给定对象关联的属性。
 
-```
+```cpp
 void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
@@ -1935,7 +1935,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 
 重新加载 Web 浏览器当前显示的 URL 或文件。
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -1949,7 +1949,7 @@ void Refresh();
 
 重新加载 Internet 资源管理器当前显示的文件。
 
-```
+```cpp
 void Refresh2(int nLevel);
 ```
 
@@ -1968,7 +1968,7 @@ void Refresh2(int nLevel);
 
 调用此成员函数以显示或隐藏 Internet Explorer 对象的地址栏。
 
-```
+```cpp
 void SetAddressBar(BOOL bNewValue);
 ```
 
@@ -1985,7 +1985,7 @@ void SetAddressBar(BOOL bNewValue);
 
 调用此成员函数将 Internet 资源管理器设置为全屏或正常窗口模式。
 
-```
+```cpp
 void SetFullScreen(BOOL bNewValue);
 ```
 
@@ -2004,7 +2004,7 @@ void SetFullScreen(BOOL bNewValue);
 
 调用此成员函数以设置 Internet 资源管理器主窗口的高度。
 
-```
+```cpp
 void SetHeight(long nNewValue);
 ```
 
@@ -2021,7 +2021,7 @@ void SetHeight(long nNewValue);
 
 设置 Internet Explorer 主窗口的水平位置。
 
-```
+```cpp
 void SetLeft(long nNewValue);
 ```
 
@@ -2034,7 +2034,7 @@ void SetLeft(long nNewValue);
 
 调用此成员函数以显示或隐藏 Internet Explorer 菜单栏。
 
-```
+```cpp
 void SetMenuBar(BOOL bNewValue);
 ```
 
@@ -2051,7 +2051,7 @@ void SetMenuBar(BOOL bNewValue);
 
 调用此成员函数以设置指示 WebBrowser 控件当前是否处于脱机模式的值。
 
-```
+```cpp
 void SetOffline(BOOL bNewValue);
 ```
 
@@ -2070,7 +2070,7 @@ void SetOffline(BOOL bNewValue);
 
 调用此成员函数以设置一个值，指示 WebBrowser 控件是否已注册为目标名称解析的顶级浏览器。
 
-```
+```cpp
 void SetRegisterAsBrowser(BOOL bNewValue);
 ```
 
@@ -2089,7 +2089,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 
 调用此成员函数以设置一个值，指示 WebBrowser 控件是否已注册为导航放置目标。
 
-```
+```cpp
 void SetRegisterAsDropTarget(BOOL bNewValue);
 ```
 
@@ -2106,7 +2106,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 
 调用此成员函数以设置指示是否可以显示任何对话框的值。
 
-```
+```cpp
 void SetSilent(BOOL bNewValue);
 ```
 
@@ -2123,7 +2123,7 @@ void SetSilent(BOOL bNewValue);
 
 调用此成员函数以显示状态栏。
 
-```
+```cpp
 void SetStatusBar(BOOL bNewValue);
 ```
 
@@ -2140,7 +2140,7 @@ void SetStatusBar(BOOL bNewValue);
 
 调用此成员函数以设置指示 Web 浏览器控件是否处于影院模式的值。
 
-```
+```cpp
 void SetTheaterMode(BOOL bNewValue);
 ```
 
@@ -2159,7 +2159,7 @@ void SetTheaterMode(BOOL bNewValue);
 
 调用此成员函数以显示或隐藏 Internet Explorer 工具栏。
 
-```
+```cpp
 void SetToolBar(int nNewValue);
 ```
 
@@ -2176,7 +2176,7 @@ void SetToolBar(int nNewValue);
 
 调用此成员函数以设置 Web 浏览器控件的内部上边缘与其容器顶部边缘之间的距离
 
-```
+```cpp
 void SetTop(long nNewValue);
 ```
 
@@ -2193,7 +2193,7 @@ void SetTop(long nNewValue);
 
 调用此成员函数以设置 Web 浏览器控件的可见性状态。
 
-```
+```cpp
 void SetVisible(BOOL bNewValue);
 ```
 
@@ -2210,7 +2210,7 @@ void SetVisible(BOOL bNewValue);
 
 设置 Internet Explorer 主窗口的宽度。
 
-```
+```cpp
 void SetWidth(long nNewValue);
 ```
 
@@ -2223,7 +2223,7 @@ Internet 资源管理器主窗口的宽度（以像素为单位）。
 
 调用此成员函数以取消任何挂起的导航或下载操作，并停止任何动态页面元素，如背景声音和动画。
 
-```
+```cpp
 void Stop();
 ```
 
@@ -2231,7 +2231,7 @@ void Stop();
 
 适用于 Internet Explorer 和 WebBrowser。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CFormView 类](../../mfc/reference/cformview-class.md)<br/>

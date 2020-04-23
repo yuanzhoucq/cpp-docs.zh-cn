@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 59ef82151983720b654502ccf3ca647e55366268
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 91460e3435130530ecc57bdcc09d1c7301333a3b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369168"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753076"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 类
 
@@ -88,7 +88,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 将现有资源接口附加到对象
 
-```
+```cpp
 void Attach(ID2D1PathGeometry* pResource);
 ```
 
@@ -213,6 +213,6 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 
 如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

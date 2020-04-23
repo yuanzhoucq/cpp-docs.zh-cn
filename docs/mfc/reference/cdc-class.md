@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375717"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753426"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -835,7 +835,7 @@ BOOL AngleArc(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定圆中心的逻辑 x 坐标。
 
 *Y*<br/>
@@ -1059,7 +1059,7 @@ BOOL BitBlt(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定目标矩形左上角的逻辑 x 坐标。
 
 *Y*<br/>
@@ -1354,7 +1354,7 @@ Windows 设备上下文。
 
 将 HIMETRIC 大小转换为 OLE 时，请使用此功能，将像素转换为 HIMETRIC。
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 
 将设备单元转换为逻辑单位。
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ void DPtoLP(LPSIZE lpSize) const;
 
 调用此成员函数以绘制三维矩形。
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1428,7 +1428,7 @@ void Draw3dRect(
 *clrBottomRight*<br/>
 指定三维矩形底部和右侧的颜色。
 
-** x <br/>
+*x*<br/>
 指定三维矩形左上角的逻辑 x 坐标。
 
 *Y*<br/>
@@ -1452,7 +1452,7 @@ void Draw3dRect(
 
 重复调用此成员函数以重绘拖动矩形。
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1467,7 +1467,7 @@ void DrawDragRect(
 *lpRect*<br/>
 指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，该对象指定矩形的逻辑坐标 - 在这种情况下，要重绘的矩形的结束位置。
 
-*大小*<br/>
+size <br/>
 指定从外部边框的左上角到矩形内边框的左上角（即边框的粗细）的位移。
 
 *lpRectLast*<br/>
@@ -1548,7 +1548,7 @@ int DrawEscape(
 
 在样式中绘制矩形，用于指示矩形具有焦点。
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -1665,7 +1665,7 @@ BOOL DrawIcon(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定图标左上角的逻辑 x 坐标。
 
 *Y*<br/>
@@ -1767,7 +1767,7 @@ BOOL DrawState(
 *pt*<br/>
 指定图像的位置。
 
-*大小*<br/>
+size <br/>
 指定图像的大小。
 
 *hBitmap*<br/>
@@ -2232,7 +2232,7 @@ BOOL ExtFloodFill(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定填充开始点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -2287,7 +2287,7 @@ BOOL ExtTextOut(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定指定字符串中第一个字符的字符单元格的逻辑 x 坐标。
 
 *Y*<br/>
@@ -2345,7 +2345,7 @@ BOOL FillPath();
 
 调用此成员函数以使用指定的画笔填充给定的矩形。
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ BOOL FillRgn(
 
 调用此成员函数以使用指定的纯色填充给定的矩形。
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2423,7 +2423,7 @@ void FillSolidRect(
 
 *clr*指定用于填充矩形的颜色。
 
-** x <br/>
+*x*<br/>
 指定矩形左上角的逻辑 x 坐标。
 
 *Y*<br/>
@@ -2467,7 +2467,7 @@ BOOL FloodFill(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定填充开始点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -2492,7 +2492,7 @@ BOOL FloodFill(
 
 在*lpRect*指定的矩形周围绘制边框。
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2658,7 +2658,7 @@ UINT GetBoundsRect(
 *lpRectBounds*<br/>
 指向将接收当前边界矩形的缓冲区。 矩形以逻辑坐标返回。
 
-*标志*<br/>
+*flag*<br/>
 指定在返回边界矩形后是否清除边界矩形。 此参数应为零或设置为以下值：
 
 - DCB_RESET 强制返回边界矩形后清除该矩形。
@@ -3559,7 +3559,7 @@ COLORREF GetPixel(POINT point) const;
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定要检查的点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -4089,7 +4089,7 @@ virtual BOOL GrayString(
 *nCount*<br/>
 指定要输出的字符数。 如果此参数为 0，`GrayString`则计算字符串的长度（假设*lpData*是指向字符串的指针）。 如果*nCount*为 1，并且*lpfnOutput*指向的功能返回 0，则显示图像但不变暗。
 
-** x <br/>
+*x*<br/>
 指定包含字符串的矩形起始位置的逻辑 x 坐标。
 
 *Y*<br/>
@@ -4123,7 +4123,7 @@ virtual BOOL GrayString(
 
 将 HIMETRIC 大小从 OLE 转换为像素时，请使用此功能。
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 
 调用此函数可将 HIMETRIC 单元转换为逻辑单位。
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI 夹夹所有后续输出以适合新边界。 宽度和高度不得超过 32
 
 反转给定矩形的内容。
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4272,7 +4272,7 @@ BOOL LineTo(POINT point);
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定行的终结点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -4297,7 +4297,7 @@ BOOL LineTo(POINT point);
 
 将逻辑单位转换为设备单元。
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ void LPtoDP(LPSIZE lpSize) const;
 
 调用此函数可将逻辑单位转换为 HIMETRIC 单位。
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -4390,7 +4390,7 @@ BOOL MaskBlt(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定目标矩形左上角的逻辑 x 坐标。
 
 *Y*<br/>
@@ -4479,7 +4479,7 @@ CPoint MoveTo(POINT point);
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定新位置的逻辑 x 坐标。
 
 *Y*<br/>
@@ -4510,13 +4510,13 @@ int OffsetClipRgn(SIZE size);
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定要向左或向右移动的逻辑单位数。
 
 *Y*<br/>
 指定要向上或向下移动的逻辑单位数。
 
-*大小*<br/>
+size <br/>
 指定要偏移的金额。
 
 ### <a name="return-value"></a>返回值
@@ -4627,7 +4627,7 @@ BOOL PatBlt(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定要接收图案的矩形左上角的逻辑 x 坐标。
 
 *Y*<br/>
@@ -5109,7 +5109,7 @@ BOOL PtVisible(POINT point) const;
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -5865,7 +5865,7 @@ UINT SetBoundsRect(
 *lpRectBounds*<br/>
 指向用于设置`RECT`边界矩形`CRect`的结构或对象。 矩形尺寸以逻辑坐标给出。 此参数可以是 NULL。
 
-*标志*<br/>
+*flag*<br/>
 指定新矩形与累积矩形的组合方式。 此参数可以是以下值的组合：
 
 - DCB_ACCUMULATE 将*lpRectBounds*指定的矩形添加到边界矩形（使用矩形联合操作）。
@@ -5902,7 +5902,7 @@ CPoint SetBrushOrg(POINT point);
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定新原点的 x 坐标（以设备单位为单位）。 此值必须位于 0-7 范围内。
 
 *Y*<br/>
@@ -6170,7 +6170,7 @@ COLORREF SetPixel(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定要设置的点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -6209,7 +6209,7 @@ BOOL SetPixelV(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定要设置的点的 x 坐标（以逻辑单位表示）。
 
 *Y*<br/>
@@ -6493,7 +6493,7 @@ CSize SetViewportExt(SIZE size);
 *cy*<br/>
 指定视口的 y 范围（以设备单位为单位）。
 
-*大小*<br/>
+size <br/>
 指定视口的 x 和 y 范围（以设备单位为单位）。
 
 ### <a name="return-value"></a>返回值
@@ -6531,7 +6531,7 @@ CPoint SetViewportOrg(POINT point);
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定视口原点的 x 坐标（以设备单位为单位）。 该值必须在设备坐标系的范围内。
 
 *Y*<br/>
@@ -6574,7 +6574,7 @@ CSize SetWindowExt(SIZE size);
 *cy*<br/>
 指定窗口的 y 范围（以逻辑单位为单位）。
 
-*大小*<br/>
+size <br/>
 指定窗口的 x 和 y 范围（以逻辑单位表示）。
 
 ### <a name="return-value"></a>返回值
@@ -6619,7 +6619,7 @@ CPoint SetWindowOrg(POINT point);
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定窗口新源的逻辑 x 坐标。
 
 *Y*<br/>
@@ -6744,7 +6744,7 @@ BOOL StretchBlt(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定目标矩形左上角的 x 坐标（使用逻辑单位）。
 
 *Y*<br/>
@@ -6881,7 +6881,7 @@ CSize TabbedTextOut(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定字符串起始点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -6936,7 +6936,7 @@ BOOL TextOut(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定文本起点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -7029,7 +7029,7 @@ BOOL TransparentBlt(
 
 通过将工作区中的当前颜色逐像素匹配到系统调色板，更新设备上下文的工作区。
 
-```
+```cpp
 void UpdateColors();
 ```
 
@@ -7057,7 +7057,7 @@ BOOL WidenPath();
 
 仅当当前笔是`CreatePen`成员函数的第二个版本创建的几何笔，或者笔是使用 的第`CreatePen`一个版本创建的，并且宽度（以设备单位为单位）大于 1 时，此功能才成功。 设备上下文必须包含闭合路径。 路径中的任何 Bzier 曲线都将转换为接近加宽曲线的直线序列。 因此，调用后`WidenPath`路径中没有 Bzier 曲线。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

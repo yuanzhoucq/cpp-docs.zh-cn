@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373790"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754975"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 
@@ -384,7 +384,7 @@ CWnd* CreateView(
 
 导致控制栏停靠到框架窗口。
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ void DockControlBar(
 
 调用此函数以在框架窗口中启用可停靠的控制栏。
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 调用此函数可使控制栏不停靠到框架窗口。
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,13 +570,13 @@ CControlBar* GetControlBar(UINT nID);
 
 调用此成员函数以在`CDockState`对象中存储有关帧窗口控制栏的状态信息。
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+State <br/>
 在返回时包含帧窗口控制栏的当前状态。
 
 ### <a name="remarks"></a>备注
@@ -675,7 +675,7 @@ CString GetTitle() const;
 
 使用`IntitialUpdateFrame``Create`创建新帧后调用 。
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 
 调用此函数以还原帧窗口拥有的每个控制栏的设置。
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 调用此函数以存储有关帧窗口拥有的每个控制栏的信息。
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 
 将指定的视图指定为"富预览"的活动视图。
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ void SetActivePreviewView(CView* pViewNew);
 
 调用此成员函数以设置活动视图。
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,13 +1068,13 @@ void SetActiveView(
 
 调用此成员函数将存储在对象中`CDockState`的状态信息应用于帧窗口的控制栏。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+State <br/>
 将存储的状态应用于框架窗口的控制栏。
 
 ### <a name="remarks"></a>备注
@@ -1127,7 +1127,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 调用此函数以在 ID 为 0 的状态栏窗格中放置字符串。
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ void SetMessageText(UINT nID);
 
 设置任务栏上显示的 Windows 7 进度栏的当前位置。
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 设置任务栏上显示的 Windows 7 进度栏的范围。
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ void SetProgressBarRange(
 
 设置任务栏按钮上显示的进度指示器的类型和状态。
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ BOOL SetTaskbarOverlayIcon(
 
 设置窗口对象的标题。
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ void SetTitle(LPCTSTR lpszTitle);
 
 调用此成员函数以显示或隐藏控制栏。
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ void ShowControlBar(
 
 调用此成员函数以显示`CFrameWnd`对象后代的所有窗口。
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 
@@ -1273,7 +1273,7 @@ void ShowOwnedWindows(BOOL bShow);
 *b显示*<br/>
 指定是显示还是隐藏拥有的窗口。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

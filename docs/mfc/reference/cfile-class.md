@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373918"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754999"
 ---
 # <a name="cfile-class"></a>CFile 类
 
@@ -751,7 +751,7 @@ UINT nFrom);
 
 将文件指针的值设置到文件的开头。
 
-```
+```cpp
 void SeekToBegin();
 ```
 
@@ -843,7 +843,7 @@ static void PASCAL SetStatus(
 *lpszFile名称*<br/>
 是所需文件的路径的字符串。 路径可以是相对的，也可以是绝对的，并且可以包含网络名称。
 
-*状态*<br/>
+*status*<br/>
 包含新状态信息的缓冲区。 调用`GetStatus`成员函数以用当前值预`CFileStatus`填结构，然后根据需要进行更改。 如果值为 0，则相应的状态项不会更新。 有关`CFileStatus`结构的说明，请参阅[GetStatus](#getstatus)成员函数。
 
 *pTM*<br/>
@@ -916,7 +916,7 @@ virtual void Write(
 
 另请参阅[CFile 的示例：：CFile](#cfile)和[CFile：：打开](#open)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>

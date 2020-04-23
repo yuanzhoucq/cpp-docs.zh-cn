@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: f2a05ca1433ca3a44b0459360e3f09fe7a274c68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 304581371c68817c6031153c3cec227137771c5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368837"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754073"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFC 剪杆级
 
@@ -212,7 +212,7 @@ virtual void OnDraw(CDC* pDC);
 
 设置滑块控件的当前位置。
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw=TRUE);
@@ -230,7 +230,7 @@ void SetPos(
 
 设置滑块控件的值范围。
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);
@@ -252,7 +252,7 @@ void SetRange(
 
 显示或隐藏缩放按钮。
 
-```
+```cpp
 void SetZoomButtons(BOOL bSet=TRUE);
 ```
 
@@ -264,7 +264,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 
 设置滑块控件的缩放增量。
 
-```
+```cpp
 void SetZoomIncrement(int nZoomIncrement);
 ```
 
@@ -273,7 +273,7 @@ void SetZoomIncrement(int nZoomIncrement);
 *nZoom 增量*<br/>
 [在]指定滑块控件的缩放增量。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

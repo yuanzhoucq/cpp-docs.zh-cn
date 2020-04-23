@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375688"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753384"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtml对话类
 
@@ -348,7 +348,7 @@ virtual BOOL CreateControlSite(
 
 在 HTML 页上的成员变量和 ActiveX 控件的属性值之间交换数据。
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -387,7 +387,7 @@ ActiveX 控件的 HTML 源中对象标记的 ID 参数的值。
 
 在 HTML 页上的成员变量和复选框之间交换数据。
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -413,7 +413,7 @@ void DDX_DHtml_CheckBox(
 
 在成员变量和 HTML 页上的任何 HTML 元素属性之间交换数据。
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -475,7 +475,7 @@ void DDX_DHtml_ElementText(
 
 在 HTML 页上的成员变量和单选按钮之间交换数据。
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -497,7 +497,7 @@ void DDX_DHtml_Radio(
 
 获取或设置 HTML 页上的列表框的索引。
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -519,7 +519,7 @@ void DDX_DHtml_SelectIndex(
 
 获取或设置 HTML 页上列表框条目的显示文本（基于当前索引）。
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -541,7 +541,7 @@ void DDX_DHtml_SelectString(
 
 获取或设置 HTML 页上的列表框条目的值（基于当前索引）。
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -567,7 +567,7 @@ void DDX_DHtml_SelectValue(
 
 从`CDHtmlDialog`对象分离无模式对话框并销毁该对象。
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ ActiveX 控件的`IDispatch`指针。
 
 检索与当前文档关联的统一资源定位器 （URL）。
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 导航到由*lpszURL*指定的 URL 标识的资源。
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ STDMETHOD(ResizeBorder)(
 
 将 ActiveX 控件的属性设置为新值。
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ ActiveX 控件的 HTML ID。
 
 设置`innerHTML`HTML 元素的属性。
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ HTML`IUnknown`元素的指针。
 
 设置 HTML 元素的属性。
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ HTML 元素的 ID。
 
 设置`innerText`HTML 元素的属性。
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ HTML`IUnknown`元素的指针。
 
 设置主机的`IDispatch`接口。
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 
 设置主机 UI 标志。
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 
@@ -1522,7 +1522,7 @@ STDMETHOD(UpdateUI)(void);
 
 此成员函数是 CDHtmlDialog 的[IDocHostUIHandler：：updateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))的实现，如 Windows SDK 中所述。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 DHtml 探索](../../overview/visual-cpp-samples.md)<br/>
 [DDX_DHtml帮助宏](#ddx_dhtml_helper_macros)<br/>

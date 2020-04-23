@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369238"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754775"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 类
 
@@ -115,7 +115,7 @@ virtual ~CD2DGeometrySink();
 
 向路径几何体添加单个圆弧
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
@@ -128,7 +128,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 在当前点和指定的终点之间创建三次贝塞尔曲线。
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
@@ -141,7 +141,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 创建立方贝塞尔曲线序列，并将它们添加到几何接收器。
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -156,7 +156,7 @@ void AddBeziers(
 
 在当前点和指定端点之间创建线段，并将其添加到几何接收器。
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
@@ -169,7 +169,7 @@ void AddLine(CD2DPointF point);
 
 使用指定的点创建一系列线，并将它们添加到几何接收器。
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -184,7 +184,7 @@ void AddLines(
 
 在当前点和指定的终点之间创建二次贝塞尔曲线。
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
@@ -197,7 +197,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 在单个调用中添加二次贝塞尔段序列作为数组。
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -212,7 +212,7 @@ void AddQuadraticBeziers(
 
 在指定点启动新图形。
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -255,7 +255,7 @@ BOOL Close();
 
 结束当前数字;可以选择关闭它。
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
@@ -312,7 +312,7 @@ operator ID2D1GeometrySink*();
 
 指定用于确定哪些点位于此几何接收器描述的几何体内部以及外部点的方法。
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
@@ -325,7 +325,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 
 指定要应用于添加到几何接收器的新线段的描边和联接选项。
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 
@@ -334,6 +334,6 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 *顶点标志*<br/>
 要应用于添加到几何接收器的新线段的描边和联接选项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

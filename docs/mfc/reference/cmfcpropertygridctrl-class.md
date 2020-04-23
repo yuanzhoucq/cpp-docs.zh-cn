@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361931"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754141"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFC财产网格Ctrl类
 
@@ -380,7 +380,7 @@ virtual void AdjustLayout();
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFC属性网格Ctrl：：始终显示用户工具提示
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ virtual BOOL EditItem(
 
 启用或禁用属性网格控件中属性列表下方显示的描述区域。
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 启用或禁用属性网格控件顶部的标头控件。
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 
 滚动属性网格控件并展开属性项，直到指定的属性可见。
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 展开或折叠所有属性网格控制节点。
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
 
 检索当前为属性网格控件元素定义的自定义颜色。
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1225,7 +1225,7 @@ BOOL IsVSDotNetLook() const;
 
 指定如何显示修改的属性。
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 
 选择包含组合框控件的属性时，由框架调用。
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 从属性网格控件中删除所有属性对象。
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 还原所有属性的原始值。
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 设置或重置字母模式。
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 
 指定布尔标签的文本。
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 在属性网格控件中选择属性。
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ void SetCurSel(
 
 为属性网格控件的各种元素指定自定义颜色。
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ void SetCustomColors(
 
 指定要在当前属性网格控件的描述部分中显示的行数。
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 指定是否在当前属性网格控件中显示一组属性的类别名称的完整宽度。
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ void SetGroupNameFullWidth(
 
 定义在属性值列表中用作分隔符的字符。
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ void SetListDelimiter(TCHAR c);
 
 指定当用户调整列大小时，框架是否重绘当前属性网格控件的名称和值列。
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 
 将属性网格控件的外观设置为 Visual Studio .NET 中使用的样式。
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 
@@ -1639,7 +1639,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 如果重写此方法，则返回 TRUE，如果指定的属性数据有效。 否则，返回 FALSE，在这种情况下，框架不会更新属性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375886"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753419"
 ---
 # <a name="cmfctaskspane-class"></a>CMFC任务窗格类
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFC任务窗格：：折叠所有组
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ HMENU CreateMenu() const;
 
 启用或禁用任务组展开或折叠时发生的动画。
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 指定用户是否可以折叠任务组。
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ void EnableGroupCollapse(BOOL bEnable);
 
 在"**下一个**"和 **"上一个**"导航按钮上启用下拉菜单。
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 
 启用或禁用导航工具栏。
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ void EnableNavigationToolbar(
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFC任务窗格：：启用偏移自定义控制
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 启用滚动按钮而不是滚动条。
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 
 启用或禁用标签中文本的换行符。
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 
 启用或禁用任务中文本的换行符。
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ int GetHorzMargin() const;
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFC任务窗格：获取下一页
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ int GetPagesCount() const;
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFC任务窗格：获取上一页
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFC任务窗格：recalclayout
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 删除指定页上的所有组。
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ void RemoveAllGroups(int nPageIdx = 0);
 
 从任务窗格中删除所有页，除默认（第一）页除外。
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 从指定的组中删除所有任务。
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 删除组。
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ void RemoveGroup(int nGroup);
 
 从任务窗格删除指定页。
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 使任务窗格中的指定页面处于活动状态。
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ void SetActivePage(int nPageIdx);
 
 设置任务窗格的标题名称。
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,7 +1643,7 @@ void SetCaption(LPCTSTR lpszName);
 
 设置组标题的高度。
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
@@ -1662,7 +1662,7 @@ void SetGroupCaptionHeight(int n = -1);
 
 设置组标题的水平偏移量。
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
@@ -1675,7 +1675,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 设置组标题的垂直偏移量。
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
@@ -1736,7 +1736,7 @@ BOOL SetGroupTextColor(
 
 设置组的垂直偏移量。
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
@@ -1755,7 +1755,7 @@ void SetGroupVertOffset(int n = -1);
 
 设置水平边距。
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
@@ -1807,7 +1807,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 设置任务窗格页的标题文本。
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,7 +1855,7 @@ BOOL SetTaskName(
 
 设置任务的水平偏移量。
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
@@ -1874,7 +1874,7 @@ void SetTasksHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFC任务窗格：：设置任务图标霍尔兹偏移
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFC任务窗格：：设置任务图标Vert偏移
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,7 +1930,7 @@ BOOL SetTaskTextColor(
 
 设置垂直边距。
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 
@@ -2069,7 +2069,7 @@ virtual void Update();
 
 在派生类中重写此方法，在框架刷新任务窗格时执行自定义代码。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370062"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754544"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
 
@@ -242,7 +242,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 
 激活其他 MDI 子窗口。
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ void MDIActivate(CWnd* pWndActivate);
 
 以级联格式排列所有 MDI 子窗口。
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 
 排列所有最小化的文档子窗口。
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ void MDIIconArrange();
 
 最大化指定的 MDI 子窗口。
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ void MDIMaximize(CWnd* pWnd);
 
 立即激活当前活动子窗口后面的子窗口，并将当前处于活动状态的子窗口放在所有其他子窗口后面。
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ void MDINext();
 
 激活以前的子窗口，并将当前处于活动状态的子窗口立即放在窗口后面。
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ void MDIPrev();
 
 从最大大小或最小化大小还原 MDI 子窗口。
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ CMenu* MDISetMenu(
 
 以平铺格式排列所有子窗口。
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```
@@ -457,7 +457,7 @@ nType**<br/>
 
 请参阅[CMDIFrameWnd 的示例：：MDICascade](#mdicascade)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 MDI](../../overview/visual-cpp-samples.md)<br/>
 [MFC 样品 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 62015f384fa5f72ceeceed2605cbf9a6b646a1eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375320"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751830"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 类
 
@@ -119,7 +119,7 @@ CMFCPropertyGridColorProperty(
 
 启用颜色选择对话框上的*自动*按钮。 （标准自动按钮标记为**自动**.）
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -143,7 +143,7 @@ void EnableAutomaticButton(
 
 启用颜色选择对话框上*的另一个*按钮。 （标准其他按钮标记为**更多颜色**。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -181,7 +181,7 @@ RGB 颜色值。
 
 设置属性的新颜色。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -196,7 +196,7 @@ void SetColor(COLORREF color);
 
 指定当前颜色属性网格中的列数。
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 
@@ -226,7 +226,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 
 使用[CMFC 属性网格属性：重置原始值](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)方法重置已编辑属性的原始值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

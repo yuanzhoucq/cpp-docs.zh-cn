@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377155"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754680"
 ---
 # <a name="cdaorecordset-class"></a>CDao记录组类
 
@@ -626,7 +626,7 @@ virtual void Edit();
 
 调用此成员函数以缓存记录集中的指定数量的记录。
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ short GetFieldCount();
 
 调用此成员函数以获取有关记录集中的字段的信息。
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ short GetIndexCount();
 
 调用此成员函数以获取有关在记录集基础基表中定义的索引的各种信息。
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ virtual void Move(long lRows);
 
 调用此成员函数以使记录集中的第一个记录（如果有）成为当前记录。
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ void MoveFirst();
 
 调用此成员函数，使记录中的最后一条记录（如果有）成为当前记录。
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ void MoveLast();
 
 调用此成员函数以使记录集中的下一条记录成为当前记录。
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ void MoveNext();
 
 调用此成员函数以使记录中以前的记录成为当前记录。
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ BOOL Seek(
 
 设置记录集对象当前记录的相对记录编号。
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ void SetAbsolutePosition(long lPosition);
 
 调用此成员函数将记录集放置在包含指定书签的记录上。
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ void SetBookmark(COleVariant varBookmark);
 
 调用此成员函数以设置要缓存的记录数。
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ void SetCacheSize(long lSize);
 
 调用此成员函数以指定要缓存的记录集中第一个记录的书签。
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Microsoft Jet 数据库引擎从缓存请求缓存范围内的记录，并且请
 
 调用此成员函数以在表类型记录集上设置索引。
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 
 调用此成员函数将记录集的字段数据成员标记为已更改或未更改。
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ void SetFieldDirty(
 
 调用此成员函数将记录集的字段数据成员标记为 Null（具体没有值）或非 Null。
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ void SetFieldValue(
 
 调用此成员函数将字段设置为 Null 值。
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ C++ NULL 与 Null 不同，在数据库术语中，Null 表示"没有值"。
 
 调用此成员函数以设置记录集的锁定类型。
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2458,7 +2458,7 @@ virtual void SetParamValue(
 
 调用此成员函数将参数设置为 Null 值。
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL 与 Null 不同，在数据库术语中，Null 表示"没有值"。
 
 调用此成员函数可设置一个值，该值根据记录集中记录中的记录的百分比更改记录集对象中当前记录的大致位置。
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 
@@ -2525,7 +2525,7 @@ virtual void Update();
 
 有关相关信息，请参阅 DAO 帮助中的"添加新方法"、"取消更新方法"、"删除方法"、"上次修改属性"、"更新方法"和"编辑模式属性"的主题。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

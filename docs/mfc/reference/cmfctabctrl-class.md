@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367364"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753462"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 显示当前选项卡控件的指定选项卡，并设置该选项卡上的焦点。
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 指定框架是否在选项卡控件的用户界面元素发生更改时调整所有选项卡控件窗口的工作区大小。
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*风格*<br/>
+style <br/>
 [在]选项卡控件的样式。 有关详细信息，请参阅“备注”。
 
 *矩形*<br/>
@@ -381,7 +381,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 在活动选项卡上显示或隐藏"关闭"按钮 （ **X**）。
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 在使用两个按钮滚动窗口选项卡的用户界面和显示选项卡式窗口的弹出式菜单的界面之间切换。
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ CScrollBar* GetScrollBar();
 
 检索选项卡控件顶部或底部选项卡标签区域的边界矩形。
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 检索当前选项卡控件的工作区的边界。
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 在活动窗口中隐藏水平滚动条（如果有）。
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ void HideActiveWindowHorzScrollBar();
 
 指定框架是否显示非活动选项卡控件窗口。
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 如果没有可见的选项卡，请启用或禁用选项卡区域的绘图。
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>参数
 
-*风格*<br/>
+style <br/>
 [在]指定选项卡控件外观的枚举值之一。 有关详细信息，请参阅备注中的表。
 
 ### <a name="return-value"></a>返回值
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 将选项卡控件的当前选项卡集为多个文档界面选项卡组中的活动选项卡。
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ virtual BOOL SetActiveTab(int iTab);
 
 启用或禁用在活动选项卡上使用粗体字体。
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 指定是否围绕嵌入的条形绘制框架矩形。
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 指定在选项卡区域周围绘制平面框架还是 3D 框架。
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 指定如何调整当前选项卡控件的大小，然后重新显示控件。
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 指定选项卡式窗口中的最大选项卡宽度。
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 
 终止选项卡控件上的当前调整大小操作。
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 
@@ -1135,7 +1135,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 此方法仅影响显示平面选项卡的选项卡控件。 滚动条同时影响所有选项卡。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

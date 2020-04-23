@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372229"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753591"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -717,7 +717,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 检索与指定列表框项关联的应用程序提供的 32 位值作为指针 **（void）。** <strong>\*</strong>
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 从列表框中删除所有项目。
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ int SelItemRange(
 
 在多选列表框中设置锚点以开始扩展选择。
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ int SetCaretIndex(
 
 在多列列表框中设置所有列的宽度（使用[LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建）。
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ int SetCurSel(int nSelect);
 
 设置宽度（以像素为单位），通过该宽度可以水平滚动列表框。
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ int SetSel(
 
 在列表框中设置制表位。
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

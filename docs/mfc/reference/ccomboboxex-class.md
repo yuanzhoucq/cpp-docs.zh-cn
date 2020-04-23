@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369475"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754820"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 类
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 指定应用于组合框的组合框样式的组合。 有关样式的详细信息，请参阅下面的**备注**。
 
 *矩形*<br/>
-对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，即组合框的位置和大小。
+对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，即组合框的位置和大小。
 
 *pparentwnd*<br/>
 指向作为组合框的父窗口（通常为 ）`CDialog`的[CWnd](../../mfc/reference/cwnd-class.md)对象的指针。 值不得为 NULL。
@@ -210,7 +210,7 @@ virtual BOOL CreateEx(
 组合框控件的样式。 请参阅[创建](#create)样式列表。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -468,7 +468,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 此成员函数模拟[CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme)消息的功能，如 Windows SDK 中所述。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CComboBox 类](../../mfc/reference/ccombobox-class.md)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: a5e95efe1880f1177490d55988ca1fe42c606b15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367544"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752428"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFC下线框架类
 
@@ -104,7 +104,7 @@ virtual BOOL Create(
 |-|-|
 |参数|说明|
 |*pwnd 父级*|[在]下拉框架的父窗口。|
-|** x |[在]下下帧位置的水平屏幕坐标。|
+|*x*|[在]下下帧位置的水平屏幕坐标。|
 |*Y*|[在]向下帧位置的垂直屏幕坐标。|
 |*pWndOrigin工具栏*|[在]具有此方法用于填充新下拉框架对象的下拉按钮的工具栏。|
 
@@ -173,7 +173,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 设置子下拉工具栏窗口是否自动销毁。
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -186,7 +186,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 如果*bAuto销毁*为 TRUE，`CMFCDropDownFrame`则析构函数将销毁关联的下拉工具栏窗口。 默认值为 TRUE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

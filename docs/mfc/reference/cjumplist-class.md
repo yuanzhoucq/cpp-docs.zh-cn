@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372337"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754936"
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 
@@ -99,7 +99,7 @@ class CJumpList;
 
 在不提交的情况下中止列表生成事务。
 
-```
+```cpp
 void AbortList();
 ```
 
@@ -158,7 +158,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 
 ### <a name="parameters"></a>参数
 
-*类别*<br/>
+*category*<br/>
 指定已知的类别类型。 可以是KDC_RECENT，也可以是KDC_KNOWN。
 
 ### <a name="return-value"></a>返回值
@@ -256,7 +256,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 
 删除到目前为止已添加到当前实例`CJumpList`的所有任务和目标。
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -268,7 +268,7 @@ void ClearAll();
 
 删除到目前为止已添加到 CJumpList 当前实例的所有目标。
 
-```
+```cpp
 void ClearAllDestinations();
 ```
 
@@ -350,7 +350,7 @@ BOOL InitializeList();
 
 为要生成的列表设置应用程序用户模型 ID。
 
-```
+```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 
@@ -359,6 +359,6 @@ void SetAppID(LPCTSTR strAppID);
 *斯特雷帕维德*<br/>
 指定应用程序用户模型 ID 的字符串。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

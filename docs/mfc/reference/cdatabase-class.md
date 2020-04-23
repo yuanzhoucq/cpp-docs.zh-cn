@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376483"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754644"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 
@@ -186,7 +186,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 调用此成员函数请求数据源取消正在进行的异步操作或从第二个线程取消进程。
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ BOOL CommitTrans();
 
 当您需要直接执行 SQL 命令时，请调用此成员函数。
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ BOOL Rollback();
 
 调用此成员函数 （在调用`OpenEx`之前`Open`或 — 以覆盖数据源尝试连接超时之前允许的默认秒数）。
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ void SetLoginTimeout(DWORD dwSeconds);
 
 调用此成员函数以覆盖默认秒数，以便在后续对连接的数据源超时的操作之前允许。
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 
@@ -640,7 +640,7 @@ void SetQueryTimeout(DWORD dwSeconds);
 
 查询超时的默认值为 15 秒。 并非所有数据源都支持设置查询超时值的能力。 如果将查询超时值设置为 0，则不执行超时;如果将超时设置为 0，则不执行超时。与数据源的通信可能会停止响应。 此行为在开发期间可能很有用。 如果数据源不支持超时，您将获得跟踪输出，但不会提供异常。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373761"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752925"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 
@@ -316,7 +316,7 @@ class CFrameWndEx : public CFrameWnd
 
 调整 OLE 客户端项的布局和帧的工作区。
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 将指定的窗格停靠到框架窗口。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 在全屏模式下显示或隐藏主菜单。
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 启用框架窗口的全屏模式。
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 启用或禁用停靠状态的加载。
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 启用或禁用窗格菜单的自动处理。
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 当系统颜色发生变化时由框架调用。
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 取消注册窗格并从停靠管理器中删除它。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,20 +1999,20 @@ void RemovePaneFromDockManager(
 
 将停靠布局还原到存储在注册表中的停靠状态。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+State <br/>
 停靠状态。 该参数将被忽略。
 
 ## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CFramewndEx：：设置打印预览框架
 
 设置打印预览框架窗口。
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 将用户定义的命令插入工具栏菜单。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ void SetupToolbarMenu(
 
 在全屏模式和常规模式之间切换主框架。
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 显示或隐藏指定的窗格。
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 由框架调用以更新窗口框架标题。
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -2113,7 +2113,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

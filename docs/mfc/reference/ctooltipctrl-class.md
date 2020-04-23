@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365106"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752194"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ class CToolTipCtrl : public CWnd
 
 调用此函数以激活或停用工具尖端控件。
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ BOOL AddTool(
 包含工具文本的字符串资源的 ID。
 
 *lpRectTool*<br/>
-指向包含工具边界矩形坐标的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。 坐标相对于*pWnd*标识的窗口的工作区的左上角。
+指向包含工具边界矩形坐标的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针。 坐标相对于*pWnd*标识的窗口的工作区的左上角。
 
 *nIDTool*<br/>
 工具的 ID。
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>参数
 
 *利赫浦*<br/>
-指向保存工具提示窗口矩形或文本显示矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。
+指向保存工具提示窗口矩形或文本显示矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针。
 
 *b 更大*<br/>
 如果为 TRUE，*则 lprc*用于指定文本显示矩形，并接收相应的窗口矩形。 如果 FALSE，*则 lprc*用于指定窗口矩形，并且它接收相应的文本显示矩形。
@@ -352,7 +352,7 @@ CToolTipCtrl();
 
 从工具尖端控件支持的工具集合中删除*pWnd*和*nIDTool*指定的工具。
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ int GetDelayTime(DWORD dwDuration) const;
 
 检索为工具提示窗口设置的上边、左、下和右边距。
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *利赫浦*<br/>
-将接收保证金`RECT`信息的结构的地址。 [RECT](/previous-versions/dd162897\(v=vs.85\))结构的成员不定义边界矩形。 对于此消息，结构成员的解释如下：
+将接收保证金`RECT`信息的结构的地址。 [RECT](/windows/win32/api/windef/ns-windef-rect)结构的成员不定义边界矩形。 对于此消息，结构成员的解释如下：
 
 |成员|表示|
 |------------|--------------------|
@@ -486,7 +486,7 @@ int GetMaxTipWidth() const;
 
 检索工具尖端控件为工具维护的文本。
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ COLORREF GetTipTextColor() const;
 
 检索当前工具提示控件的标题。
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 从视图中删除显示的工具提示窗口。
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ void Pop();
 
 使当前工具提示控件显示在最后一个鼠标消息的坐标处。
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ void Popup();
 
 将鼠标消息传递到工具提示控件进行处理。
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ void RelayEvent(LPMSG lpMsg);
 
 设置工具尖端控件的延迟时间。
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ void SetDelayTime(
 
 设置工具尖端窗口的上边、左边、下和右边距。
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ int SetMaxTipWidth(int iWidth);
 
 在工具提示窗口中设置背景颜色。
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ void SetTipBkColor(COLORREF clr);
 
 在工具提示窗口中设置文本颜色。
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ BOOL SetTitle(
 
 设置工具提示为工具维护的信息。
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 
 为工具设置新的边界矩形。
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ void SetToolRect(
 工具的 ID。
 
 *lpRect*<br/>
-指向指定新边界矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。
+指向指定新边界矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针。
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipctrl：：设置窗口主题
 
@@ -894,7 +894,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 强制重绘当前工具。
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 更新此控件工具的工具提示文本。
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,
@@ -928,7 +928,7 @@ void UpdateTipText(
 *nIDText*<br/>
 包含工具文本的字符串资源的 ID。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

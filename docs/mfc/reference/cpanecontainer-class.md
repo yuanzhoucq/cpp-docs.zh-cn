@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: 316a144cf043c9732b5f3ab943aa120100d9ee32
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65a37230b4889b32c42d48525f10a3164da33b63
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364135"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753645"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 类
 
@@ -245,7 +245,7 @@ CDockablePane* AddPane(CDockablePane* pBar);
 
 ## <a name="cpanecontaineraddref"></a><a name="addref"></a>CPane 容器：：添加参考
 
-```
+```cpp
 void AddRef();
 ```
 
@@ -308,7 +308,7 @@ virtual CSize CalcAvailableSpace(
 
 ## <a name="cpanecontainercalculaterecentsize"></a><a name="calculaterecentsize"></a>CPane 容器：：计算最近大小
 
-```
+```cpp
 void CalculateRecentSize();
 ```
 
@@ -316,7 +316,7 @@ void CalculateRecentSize();
 
 ## <a name="cpanecontainercheckpanedividervisibility"></a><a name="checkpanedividervisibility"></a>CPane 容器：：检查窗格差异可见性
 
-```
+```cpp
 void CheckPaneDividerVisibility();
 ```
 
@@ -692,7 +692,7 @@ virtual void Move(CPoint ptNewLeftTop);
 
 ## <a name="cpanecontainerondeletehidepane"></a><a name="ondeletehidepane"></a>CPane 容器：：打开隐藏窗格
 
-```
+```cpp
 void OnDeleteHidePane(
     CDockablePane* pBar,
     BOOL bHide);
@@ -749,7 +749,7 @@ DWORD Release();
 
 ## <a name="cpanecontainerreleaseemptypanecontainer"></a><a name="releaseemptypanecontainer"></a>CPane 容器：：释放空窗格容器
 
-```
+```cpp
 void ReleaseEmptyPaneContainer();
 ```
 
@@ -757,7 +757,7 @@ void ReleaseEmptyPaneContainer();
 
 ## <a name="cpanecontainerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPane 容器：：删除非有效窗格
 
-```
+```cpp
 void RemoveNonValidPanes();
 ```
 
@@ -834,7 +834,7 @@ virtual void ResizePartOfPaneContainer(
 
 ## <a name="cpanecontainerserialize"></a><a name="serialize"></a>CPane 容器：序列化
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -846,7 +846,7 @@ void Serialize(CArchive& ar);
 
 ## <a name="cpanecontainersetpane"></a><a name="setpane"></a>CPane 容器：：设置窗格
 
-```
+```cpp
 void SetPane(
     CDockablePane* pBar,
     BOOL bLeft);
@@ -861,7 +861,7 @@ void SetPane(
 
 ## <a name="cpanecontainersetpanecontainer"></a><a name="setpanecontainer"></a>CPane 容器：设置窗格容器
 
-```
+```cpp
 void SetPaneContainer(
     CPaneContainer* pContainer,
     BOOL bLeft);
@@ -876,7 +876,7 @@ void SetPaneContainer(
 
 ## <a name="cpanecontainersetpanedivider"></a><a name="setpanedivider"></a>CPane 容器：：设置窗格转换器
 
-```
+```cpp
 void SetPaneDivider(CPaneDivider* pSlider);
 ```
 
@@ -888,7 +888,7 @@ void SetPaneDivider(CPaneDivider* pSlider);
 
 ## <a name="cpanecontainersetparentpanecontainer"></a><a name="setparentpanecontainer"></a>CPane 容器：：设置父窗格容器
 
-```
+```cpp
 void SetParentPaneContainer(CPaneContainer* p);
 ```
 
@@ -900,7 +900,7 @@ void SetParentPaneContainer(CPaneContainer* p);
 
 ## <a name="cpanecontainersetrecentpercent"></a><a name="setrecentpercent"></a>CPane 容器：：设置最近百分比
 
-```
+```cpp
 void SetRecentPercent(int nRecentPercent);
 ```
 
@@ -962,7 +962,7 @@ virtual int StretchPaneContainer(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

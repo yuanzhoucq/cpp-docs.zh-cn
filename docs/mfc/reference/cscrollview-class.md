@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318491"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754419"
 ---
 # <a name="cscrollview-class"></a>CScrollView 类
 
@@ -124,7 +124,7 @@ class CScrollView : public CView
 
 调用此成员函数以确定滚动视图是否具有水平和垂直条。
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ CScrollView();
 
 调用`FillOutsideRect`以填充显示在滚动区域外部的视图区域。
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ CPoint GetDeviceScrollPosition() const;
 
 `GetDeviceScrollSizes`获取可滚动视图的当前映射模式、总大小以及行和页面大小。
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ CSize GetTotalSize() const;
 
 调用`ResizeParentToFit`以让视图的大小决定其框架窗口的大小。
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 
 调用`ScrollToPosition`以滚动到视图中的给定点。
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ void ScrollToPosition(POINT pt);
 
 如果要`SetScaleToFitSize`自动将视口大小缩放到当前窗口大小，请进行调用。
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 
 当`SetScrollSizes`视图即将更新时调用。
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

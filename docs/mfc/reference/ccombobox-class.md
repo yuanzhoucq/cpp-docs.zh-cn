@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369513"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754830"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -200,7 +200,7 @@ class CComboBox : public CWnd
 |-----------|-------------------------------|-----------------------------|
 |简单|始终|编辑|
 |Drop-down|下落时|编辑|
-|下拉列表|下落时|Static|
+|下拉列表|下落时|静态|
 
 可以从对话框模板或`CComboBox`直接在代码中创建对象。 在这两种情况下，首先调用构造函数`CComboBox`来构造`CComboBox`对象;否则，请先调用构造函数来构造该对象。然后调用[Create](#create)成员函数以创建控件并将其附加到`CComboBox`对象。
 
@@ -308,7 +308,7 @@ CComboBox();
 
 删除（清除）组合框的编辑控件中的当前选择（如果有）。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 以CF_TEXT格式将组合框的编辑控件中的当前选择（如果有）复制到剪贴板。
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 
 删除（剪切）组合框编辑控件中的当前选择（如果有），以CF_TEXT格式将删除的文本复制到剪贴板中。
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ int GetCurSel() const;
 
 调用`GetDroppedControlRect`成员函数以检索下拉组合框的可见（下拉）列表框的屏幕坐标。
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 检索与指定组合框项关联的应用程序提供的 32 位值作为指针（**空**<strong>\*</strong>）。
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 将剪贴板中的数据插入到当前光标位置组合框的编辑控件中。
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ void Paste();
 
 从列表框中删除所有项目，并编辑组合框控件。
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 设置以像素为单位的宽度，通过该宽度可以水平滚动组合框的列表框部分。
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ int SetTopIndex(int nIndex);
 
 显示或隐藏具有[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式的组合框的列表框。
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 
@@ -1555,7 +1555,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
   请参阅[CComboBox 的示例：获取放弃状态](#getdroppedstate)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366133"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753905"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 类
 
@@ -92,7 +92,7 @@ class COleDataObject
 
 调用此函数将`COleDataObject`对象与 OLE 数据对象相关联。
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ BOOL AttachClipboard();
 
 调用此函数以准备后续调用，`GetNextFormat`以便从项检索数据格式的列表。
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 要检查给定格式的可用性，请致电[COleDataObject：：IsData 可用](#isdataavailable)。
 
-有关详细信息，请参阅[IEnumXXXX：：下一个](/previous-versions//ms695273\(v=vs.85\))在 Windows SDK 中。
+有关详细信息，请参阅[IEnumXXXX：：下一个](/previous-versions/ms695273\(v=vs.85\))在 Windows SDK 中。
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleData对象：数据可用
 
@@ -328,7 +328,7 @@ BOOL IsDataAvailable(
 
 调用此函数以释放以前与`COleDataObject`该对象关联的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)对象的所有权。
 
-```
+```cpp
 void Release();
 ```
 
@@ -336,7 +336,7 @@ void Release();
 
 通过调用`Attach`或`AttachClipboard`显式或由框架与 关联。 `IDataObject` `COleDataObject` 如果 的`Attach` *bAutoRelease*参数为`IDataObject`FALSE，则不会释放对象。 在这种情况下，调用方负责`IDataObject`通过调用[IUnknown：：：：释放](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)来释放 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [MFC 样品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>

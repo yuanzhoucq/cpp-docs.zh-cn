@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e5294aabc42301e2f874d5b8328d648f4deeb3c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372358"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754956"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 类
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>参数
 
-*时间*<br/>
+*duration*<br/>
 输出。 转换的持续时间，以秒为单位。
 
 ### <a name="return-value"></a>返回值
@@ -217,7 +217,7 @@ IFACEMETHOD(InterpolateVelocity)(
 
 存储指向自定义插值器的指针，该指针将处理事件。
 
-```
+```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>参数
 
-*时间*<br/>
+*duration*<br/>
 转换的持续时间。
 
 ### <a name="return-value"></a>返回值
@@ -265,6 +265,6 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，则返回E_FAIL，或者自定义实现从 Set初始值和Velocity 方法返回 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

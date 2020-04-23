@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363951"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750968"
 ---
 # <a name="cpropertysheet-class"></a>C属性表类
 
@@ -165,7 +165,7 @@ class CPropertySheet : public CWnd
 
 在属性表中添加提供的最右侧选项卡的页面。
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ void AddPage(CPropertyPage* pPage);
 
 构造 `CPropertySheet` 对象。
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ IDOK 或 IDCANCEL（如果函数成功）;否则为 0 或 -1。 如果属性表�
 
 指示是否将选项卡行堆叠在属性工作表中。
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 终止属性表。
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ CTabCtrl* GetTabControl() const;
 
 将矩形的对话框单位转换为屏幕单位。
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向包含要转换的对话框坐标的[RECT](/previous-versions/dd162897\(v=vs.85\))结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
+指向包含要转换的对话框坐标的[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -641,7 +641,7 @@ virtual BOOL OnInitDialog();
 
 模拟属性表中指定按钮的选择。
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ nButton ：标识要按下的按钮。 此参数可以是以下值之一：
 
 从属性工作表中删除页面并销毁关联的窗口。
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 在"完成"命令按钮中设置文本。
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 指定属性表的标题（框架窗口的标题栏中显示的文本）。
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ void SetTitle(
 
 启用或禁用向导属性表中的"后退"、"下一步"或"完成"按钮。
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ A`CPropertySheet`有三个向导属性`CStylePage`页`CColorPage`：`CShapePage`
 
 将属性页建立为向导。
 
-```
+```cpp
 void SetWizardMode();
 ```
 

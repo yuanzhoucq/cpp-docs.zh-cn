@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377049"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755070"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 类
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 添加转换。
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ void AddTransition(CBaseTransition* pTransition);
 
 将从内部列表转换为情节提要。
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 
 清除转换。
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ BOOL CreateTransitions(
 
 启用或禁用整数值更改事件。
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ TRUE - 启用事件，FALSE - 禁用事件。
 
 启用或禁用"值更改"事件。
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 设置默认值并释放 IUI动画可变 COM 对象。
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 
 设置动画变量和动画对象之间的关系。
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 
@@ -444,6 +444,6 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 
 此方法在内部调用，以建立动画变量和封装它的动画对象之间的一对一关系。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

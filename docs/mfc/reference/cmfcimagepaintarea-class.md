@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 4e73bd7bc1a28317dbfc452df1f45541dfcbfd21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd74d2418bb874553fbbafa637f527a7b84b73bf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374436"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754278"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 类
 
@@ -112,7 +112,7 @@ IMAGE_EDIT_MODE GetMode() const;
 
 设置图片区域的位图图像。
 
-```
+```cpp
 void SetBitmap(CBitmap* pBitmap);
 ```
 
@@ -131,7 +131,7 @@ void SetBitmap(CBitmap* pBitmap);
 
 设置当前绘图颜色。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -152,7 +152,7 @@ void SetColor(COLORREF color);
 
 设置当前绘图模式。
 
-```
+```cpp
 void SetMode(IMAGE_EDIT_MODE mode);
 ```
 
@@ -163,7 +163,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |参数|说明|
 |*模式*|[在]指定当前绘图模式[的IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

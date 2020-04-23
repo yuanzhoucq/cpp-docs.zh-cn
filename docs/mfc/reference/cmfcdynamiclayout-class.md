@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367516"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752386"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 类
 
@@ -123,7 +123,7 @@ BOOL AddItem(
 
 将子窗口（通常是控件）添加到由动态布局管理器控制的窗口的列表。
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ CSize GetMinSize();
 
 检索窗口的当前工作区的矩形。
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ static MoveSettings MoveVertical(int nRatio);
 
 设置窗口大小，低于此大小则不调整布局。
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 所需大小，低于此大小则不调整布局。
 
 ### <a name="remarks"></a>备注
@@ -518,7 +518,7 @@ static SizeSettings SizeVertical(int nRatio);
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

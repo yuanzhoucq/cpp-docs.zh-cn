@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366156"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753954"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 
@@ -454,7 +454,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 指定控制站点是处理还是忽略从控件触发的事件。
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ void FreezeEvents(BOOL bFreeze);
 
 检索有关控件的键盘助记符和键盘行为的信息。
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -953,7 +953,7 @@ virtual void MoveWindow(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 窗口左侧的新位置。
 
 *Y*<br/>
@@ -1017,7 +1017,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 
 将控件设置为默认按钮。
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
@@ -1142,7 +1142,7 @@ virtual BOOL SetWindowPos(
 *pWndInsert 后*<br/>
 指向窗口的指针。
 
-** x <br/>
+*x*<br/>
 窗口左侧的新位置。
 
 *Y*<br/>
@@ -1215,7 +1215,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 
 如果窗口以前可见，则非零;如果窗口以前已隐藏，则为 0。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

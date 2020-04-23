@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365719"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751611"
 ---
 # <a name="exception-processing"></a>异常处理
 
@@ -307,7 +307,7 @@ THROW_LAST()
 
 引发存档异常。
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 引发文件异常。
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ void AfxThrowFileException(
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ void AfxThrowInvalidArgException( );
 
 引发内存异常。
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ void AfxThrowMemoryException();
 
 引发由请求不支持的功能的结果的异常。
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 引发资源异常。
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ void  AfxThrowResourceException();
 
 引发异常以停止最终用户操作。
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ void AfxThrowUserException();
 
 使用此函数将在 OLE 自动化函数中引发异常。
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 创建类型`COleException`对象并引发异常。
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 调用此函数从您自己的代码中引发[CDaoException](../../mfc/reference/cdaoexception-class.md)类型的异常。
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ void AFXAPI AfxThrowDaoException(
 
 调用此函数从您自己的代码中引发类型`CDBException`异常。
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ void AfxThrowDBException(
 
 MFC 提供的默认终止功能。
 
-```
+```cpp
 void  AfxAbort();
 ```
 
@@ -578,7 +578,7 @@ void  AfxAbort();
 
   **标题**afx.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>
 [CException 类](cexception-class.md)<br/>

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b72daac576411b45908d1e91bd86bbd9aeacf738
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318628"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754454"
 ---
 # <a name="cricheditview-class"></a>克里希编辑视图类
 
@@ -218,7 +218,7 @@ class CRichEditView : public CCtrlView
 
 调用此函数以移动给定的对话框，以便它不会遮盖当前选择。
 
-```
+```cpp
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
@@ -251,7 +251,7 @@ CRichEditView();
 
 调用此函数以将*dataobj*中的 OLE 项粘贴到此丰富的编辑文档/视图中。
 
-```
+```cpp
 void DoPaste(
     COleDataObject& dataobj,
     CLIPFORMAT cf,
@@ -643,7 +643,7 @@ dwFlags**<br/>
 
 调用此函数以将指定的文件（作为[CRichEditCntrItem 对象](../../mfc/reference/cricheditcntritem-class.md)）插入到丰富的编辑视图中。
 
-```
+```cpp
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
@@ -745,7 +745,7 @@ int m_nWordWrap;
 
 调用此函数以切换当前选择的字符格式效果。
 
-```
+```cpp
 void OnCharEffect(
     DWORD dwMask,
     DWORD dwEffect);
@@ -844,7 +844,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 
 调用此函数以更改所选段落的段落对齐方式。
 
-```
+```cpp
 void OnParaAlign(WORD wAlign);
 ```
 
@@ -975,7 +975,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 框架调用此函数以更新字符效果命令的命令 UI。
 
-```
+```cpp
 void OnUpdateCharEffect(
     CCmdUI* pCmdUI,
     DWORD dwMask,
@@ -1007,7 +1007,7 @@ void OnUpdateCharEffect(
 
 框架调用此函数以更新段落效果命令的命令 UI。
 
-```
+```cpp
 void OnUpdateParaAlign(
     CCmdUI* pCmdUI,
     WORD wAlign);
@@ -1153,7 +1153,7 @@ virtual HRESULT QueryAcceptData(
 
 调用此函数可为此`CRichEditView`对象中的新文本设置字符格式属性。
 
-```
+```cpp
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
@@ -1176,7 +1176,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 调用此函数可设置此富编辑视图的打印边距。
 
-```
+```cpp
 void SetMargins(const CRect& rectMargin);
 ```
 
@@ -1199,7 +1199,7 @@ void SetMargins(const CRect& rectMargin);
 
 调用此函数以设置纸张大小以打印此丰富的编辑视图。
 
-```
+```cpp
 void SetPaperSize(CSize sizePaper);
 ```
 
@@ -1247,7 +1247,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 调用此函数以重置对[FindText](#findtext)的呼叫失败后[CRichEditView](../../mfc/reference/cricheditview-class.md)控件的内部搜索状态。
 
-```
+```cpp
 void TextNotFound(LPCTSTR lpszFind);
 ```
 

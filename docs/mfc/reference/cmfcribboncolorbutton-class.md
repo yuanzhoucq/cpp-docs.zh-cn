@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: 8cf92d8d4b1b113f751bee85ac2a7df6eb06afea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 528b883d75889589c7021f462324dd9dcb71be25
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375239"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754844"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton 类
 
@@ -116,7 +116,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 将一组颜色添加到常规颜色区域。
 
-```
+```cpp
 void AddColorsGroup(
     LPCTSTR lpszName,
     const CList<COLORREF,COLORREF>& lstColors,
@@ -188,7 +188,7 @@ CMFCRibbonColorButton(
 
 指定是否启用 **** “自动”按钮。
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -222,7 +222,7 @@ void EnableAutomaticButton(
 
 启用“其他” **** 按钮。
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     LPCTSTR lpszToolTip=NULL);
@@ -310,7 +310,7 @@ COLORREF GetHighlightedColor() const;
 
 删除常规颜色区域中所有颜色组。
 
-```
+```cpp
 void RemoveAllColorGroups();
 ```
 
@@ -318,7 +318,7 @@ void RemoveAllColorGroups();
 
 选择常规颜色区域中的某种颜色。
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -331,7 +331,7 @@ void SetColor(COLORREF color);
 
 设置在颜色条上显示的所有颜色元素的大小。
 
-```
+```cpp
 void SetColorBoxSize(CSize sizeBox);
 ```
 
@@ -366,7 +366,7 @@ static void __stdcall SetColorName(
 
 设置在用户颜色选择过程中向用户显示的颜色表中显示的列数。
 
-```
+```cpp
 void SetColumns(int nColumns);
 ```
 
@@ -381,7 +381,7 @@ void SetColumns(int nColumns);
 
 指定要在文档颜色区域中显示的 RGB 值列表。
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -399,7 +399,7 @@ void SetDocumentColors(
 
 指定要在颜色按钮显示的颜色表中显示的标准颜色。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -414,7 +414,7 @@ void SetPalette(CPalette* pPalette);
 
 当用户从用户单击颜色按钮时显示的颜色表中选择颜色时，由框架调用。
 
-```
+```cpp
 void UpdateColor(COLORREF color);
 ```
 
@@ -427,7 +427,7 @@ void UpdateColor(COLORREF color);
 
 该方法`CMFCRibbonColorButton::UpdateColor`更改当前所选按钮的颜色，并通过发送带有BN_CLICKED标准通知的WM_COMMAND消息通知其父按钮。 使用[CMFC 功能色按钮：获取颜色](#getcolor)方法检索所选颜色。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

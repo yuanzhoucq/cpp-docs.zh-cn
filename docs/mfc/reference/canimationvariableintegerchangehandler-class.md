@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: 261f8eb17953c047fcc8ec05ae48dc369de4614c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dec940d2f5e68f0531fc917df447b5a1a5cb8189
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377038"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755060"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler 类
 
@@ -111,10 +111,10 @@ IFACEMETHOD(OnIntegerValueChanged) (
 *脚本*<br/>
 为变量设置动画的情节提要。
 
-*可变*<br/>
+*变量*<br/>
 已更新的动画变量。
 
-*新值*<br/>
+*newValue*<br/>
 新的舍入值。
 
 *上一个值*<br/>
@@ -128,7 +128,7 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 存储指向动画控制器的指针以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -137,6 +137,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *动画控制器*<br/>
 指向动画控制器的指针，该控制器将接收事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

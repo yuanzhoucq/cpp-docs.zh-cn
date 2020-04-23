@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: 24cf4127c2f429f66143af3a0f49625f23a4e6ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1669d89183cd971e1afe0f05a1bad040f6b07df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372463"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752698"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 类
 
@@ -92,7 +92,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 将现有渲染目标接口附加到对象
 
-```
+```cpp
 void Attach(ID2D1HwndRenderTarget* pTarget);
 ```
 
@@ -226,13 +226,13 @@ BOOL Resize(const CD2DSizeU& size);
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 以设备像素为单位的渲染目标的新大小
 
 ### <a name="return-value"></a>返回值
 
 如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

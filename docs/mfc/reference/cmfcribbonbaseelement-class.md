@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375311"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752481"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
 
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [在]指向设备上下文的指针。
 
-*type*<br/>
+type <br/>
 [在]枚举的图像类型。 有关可能值的列表，请参阅备注部分。
 
 *rectImage*<br/>
@@ -1893,7 +1893,7 @@ virtual void OnShowPopupMenu();
 
 关闭功能区元素的弹出菜单，并向父菜单发送一条近消息。
 
-```
+```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
@@ -1972,7 +1972,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 
 将数据项与功能区元素关联。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1985,7 +1985,7 @@ void SetData(DWORD_PTR dwData);
 
 将功能区元素设为弹出命令。
 
-```
+```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
@@ -2129,7 +2129,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 设置功能区元素的显示矩形的尺寸。
 
-```
+```cpp
 void SetRect(CRect rect);
 ```
 
@@ -2200,7 +2200,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 
 设置功能区元素的可见性。
 
-```
+```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 
@@ -2273,7 +2273,7 @@ virtual BOOL HasFocus() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

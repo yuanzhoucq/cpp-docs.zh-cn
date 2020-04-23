@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352970"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752997"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 类
 
@@ -151,7 +151,7 @@ virtual void DockPane(
 
 在屏幕坐标中检索停靠站点的大小。
 
-```
+```cpp
 void GetAlignRect(CRect& rect) const;
 ```
 
@@ -182,7 +182,7 @@ static int m_nExtraSpace;
 
 设置停靠栏左侧的边距。
 
-```
+```cpp
 void SetOffsetLeft(int nOffset);
 ```
 
@@ -199,7 +199,7 @@ void SetOffsetLeft(int nOffset);
 
 设置停靠栏右侧的边距。
 
-```
+```cpp
 void SetOffsetRight(int nOffset);
 ```
 
@@ -235,7 +235,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 调用[CMFCAutoHideBar：：取消设置停靠站点上的对象的自动隐藏模式](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode)。
 
-```
+```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 ```
 
@@ -250,7 +250,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 
 此方法搜索包含*pAutoHideToolbar*的行。 它调用`CMFCAutoHideBar.UnSetAutoHideMode`该行上`CMFCAutoHideBar`的所有对象。 如果未找到*pAutoHideToolbar*或它是 NULL，则此方法将`CMFCAutoHideBar.UnSetAutoHideMode`调用 上`CMFCAutoHideBar``CAutoHideDockSite`的所有对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

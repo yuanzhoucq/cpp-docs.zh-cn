@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: a5ac8fec691a3bf8ba3725aa5be0ac9da5ef34b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08fd7f1ba11053358391e7f120eb5db80d764c87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361817"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754098"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 
@@ -400,7 +400,7 @@ virtual void AdjustInPlaceEditRect(
 
 使属性可编辑或只读。
 
-```
+```cpp
 void AllowEdit(BOOL bAllow=TRUE);
 ```
 
@@ -539,7 +539,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 
 启用或禁用属性。
 
-```
+```cpp
 void Enable(BOOL bEnable=TRUE);
 ```
 
@@ -554,7 +554,7 @@ void Enable(BOOL bEnable=TRUE);
 
 启用或禁用用于修改属性值的旋转按钮控件。
 
-```
+```cpp
 void EnableSpinControl(
     BOOL bEnable=TRUE,
     int nMin=0,
@@ -582,7 +582,7 @@ void EnableSpinControl(
 
 展开或折叠包含子属性的属性。
 
-```
+```cpp
 void Expand(BOOL bExpand=TRUE);
 ```
 
@@ -912,7 +912,7 @@ CMFCPropertyGridProperty* HitTest(
 
 由框架调用以初始化属性对象。
 
-```
+```cpp
 void Init();
 ```
 
@@ -1556,7 +1556,7 @@ virtual BOOL PushChar(UINT nChar);
 
 重绘属性。
 
-```
+```cpp
 void Redraw();
 ```
 
@@ -1566,7 +1566,7 @@ void Redraw();
 
 从属性中删除所有选项（项目）。
 
-```
+```cpp
 void RemoveAllOptions();
 ```
 
@@ -1612,7 +1612,7 @@ virtual void ResetOriginalValue();
 
 将 DWORD 值与属性关联。
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1629,7 +1629,7 @@ void SetData(DWORD_PTR dwData);
 
 指定描述当前属性的文本。
 
-```
+```cpp
 void SetDescription(const CString& strDescr);
 ```
 
@@ -1644,7 +1644,7 @@ void SetDescription(const CString& strDescr);
 
 设置属性的名称。
 
-```
+```cpp
 void SetName(
     LPCTSTR lpszName,
     BOOL bRedraw=TRUE);
@@ -1696,7 +1696,7 @@ virtual void SetValue(const _variant_t& varValue);
 
 显示或隐藏属性。
 
-```
+```cpp
 void Show(
     BOOL bShow=TRUE,
     BOOL bAdjustLayout=TRUE);
@@ -1710,7 +1710,7 @@ void Show(
 *b 调整布局*<br/>
 [在]TRUE 以重新计算如何绘制属性的标签和值，然后绘制属性;FALSE 用于使用现有计算绘制属性。 默认值为 TRUE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

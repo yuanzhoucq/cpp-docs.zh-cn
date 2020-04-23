@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: 64f5dd7b40853a86dc7f964ecd3701f132a94e16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eaecdb6ba6f1382f16177e0567b31c9fd09da6ff
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369186"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753093"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 类
 
@@ -98,7 +98,7 @@ virtual ~CD2DMesh();
 
 将现有资源接口附加到对象
 
-```
+```cpp
 void Attach(ID2D1Mesh* pResource);
 ```
 
@@ -218,6 +218,6 @@ operator ID2D1Mesh*();
 
 如果对象尚未初始化，则指向 ID2D1Mesh 接口或 NULL 的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

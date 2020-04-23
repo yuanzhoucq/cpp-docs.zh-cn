@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 7ab02dba4bf10b04dddac4e2e954623223af42d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e384be534bdbb355554c28383e9e214e9084f217
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353023"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753028"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 类
 
@@ -815,26 +815,26 @@ BOOL GetSockOpt(
 |SO_DEBUG|BOOL|已启用调试。|
 |SO_DONTLINGER|BOOL|如果为 true，则禁用SO_LINGER选项。|
 |SO_DONTROUTE|BOOL|路由已禁用。|
-|SO_ERROR|**Int**|检索错误状态并清除。|
+|SO_ERROR|**int**|检索错误状态并清除。|
 |SO_KEEPALIVE|BOOL|正在发送保持生命。|
 |SO_LINGER|`struct LINGER`|返回当前留日选项。|
 |SO_OOBINLINE|BOOL|在正常数据流中接收带外数据。|
 |SO_RCVBUF|int|接收的缓冲区大小。|
 |SO_REUSEADDR|BOOL|套接字可以绑定到已在使用的地址。|
-|SO_SNDBUF|**Int**|发送的缓冲区大小。|
-|SO_TYPE|**Int**|套接字的类型（例如，SOCK_STREAM）。|
+|SO_SNDBUF|**int**|发送的缓冲区大小。|
+|SO_TYPE|**int**|套接字的类型（例如，SOCK_STREAM）。|
 |TCP_NODELAY|BOOL|为发送合并禁用 Nagle 算法。|
 
 伯克利软件分发 （BSD） 选项不支持`GetSockOpt`：
 
 |“值”|类型|含义|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**Int**|接收低水位线。|
-|SO_RCVTIMEO|**Int**|接收超时。|
-|SO_SNDLOWAT|**Int**|发送低水位线。|
-|SO_SNDTIMEO|**Int**|发送超时。|
+|SO_RCVLOWAT|**int**|接收低水位线。|
+|SO_RCVTIMEO|**int**|接收超时。|
+|SO_SNDLOWAT|**int**|发送低水位线。|
+|SO_SNDTIMEO|**int**|发送超时。|
 |IP_OPTIONS||获取 IP 标头中的选项。|
-|TCP_MAXSEG|**Int**|获取 TCP 最大段大小。|
+|TCP_MAXSEG|**int**|获取 TCP 最大段大小。|
 
 使用`GetSockOpt`不支持的选项调用将导致从`GetLastError`返回 WSAENOPROTOOPT 的错误代码。
 
@@ -1112,7 +1112,7 @@ virtual void OnSend(int nErrorCode);
 
 为`CAsyncSocket`对象分配新值。
 
-```
+```cpp
 void operator=(const CAsyncSocket& rSrc);
 ```
 
@@ -1724,9 +1724,9 @@ TCP_NODELAY选项禁用 Nagle 算法。 Nagle 算法用于通过缓冲未确认�
 |SO_KEEPALIVE|BOOL|发送保持生命。|
 |SO_LINGER|`struct LINGER`|`Close`如果存在未发送的数据。|
 |SO_OOBINLINE|BOOL|在正常数据流中接收带外数据。|
-|SO_RCVBUF|**Int**|指定接收的缓冲区大小。|
+|SO_RCVBUF|**int**|指定接收的缓冲区大小。|
 |SO_REUSEADDR|BOOL|允许将套接字绑定到已使用的地址。 （请参阅[绑定](#bind)。）|
-|SO_SNDBUF|**Int**|为发送指定缓冲区大小。|
+|SO_SNDBUF|**int**|为发送指定缓冲区大小。|
 |TCP_NODELAY|BOOL|为发送合并禁用 Nagle 算法。|
 
 伯克利软件分发 （BSD） 选项不支持`SetSockOpt`：
@@ -1734,12 +1734,12 @@ TCP_NODELAY选项禁用 Nagle 算法。 Nagle 算法用于通过缓冲未确认�
 |“值”|类型|含义|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|套接字正在侦听|
-|SO_ERROR|**Int**|获取错误状态并清除。|
-|SO_RCVLOWAT|**Int**|接收低水位线。|
-|SO_RCVTIMEO|**Int**|接收超时|
-|SO_SNDLOWAT|**Int**|发送低水位线。|
-|SO_SNDTIMEO|**Int**|发送超时。|
-|SO_TYPE|**Int**|套接字的类型。|
+|SO_ERROR|**int**|获取错误状态并清除。|
+|SO_RCVLOWAT|**int**|接收低水位线。|
+|SO_RCVTIMEO|**int**|接收超时|
+|SO_SNDLOWAT|**int**|发送低水位线。|
+|SO_SNDTIMEO|**int**|发送超时。|
+|SO_TYPE|**int**|套接字的类型。|
 |IP_OPTIONS||在 IP 标头中设置选项字段。|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>同步套接：：关闭
@@ -1835,7 +1835,7 @@ BOOL Socket(
 
 此方法分配套接字句柄。 它不调用[CAsyncSocket：：绑定](#bind)以将套接字绑定到指定的地址，因此您需要稍后调用`Bind`以将套接字绑定到指定的地址。 您可以使用[CAsyncSocket：setSockOpt](#setsockopt)在绑定之前设置套接字选项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4ffd1254efd3283a4c5641092aefec8eec0ac22a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 273ea2b548d35722ebf937d2db2b589fef5e69fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373326"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755134"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 类
 
@@ -125,7 +125,7 @@ CAnimationRect 类封装了四个 CAnimationvariable 对象，可以在应用程
 
 添加左、上、右和下坐标的过渡。
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pLeftTransition,
     CBaseTransition* pTopTransition,
@@ -405,7 +405,7 @@ operator RECT();
 
 将矩形分配给 CAnimationRect。
 
-```
+```cpp
 void operator=(const RECT& rect);
 ```
 
@@ -422,7 +422,7 @@ void operator=(const RECT& rect);
 
 设置默认值。
 
-```
+```cpp
 void SetDefaultValue(const CRect& rect);
 ```
 
@@ -435,6 +435,6 @@ void SetDefaultValue(const CRect& rect);
 
 使用此函数可为动画对象设置默认值。 此方法将默认值分配给矩形的边界。 它还会重新创建基础 COM 对象（如果已创建）。 如果将此动画对象订阅到事件（Value已更改或整数值更改），则需要重新启用这些事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

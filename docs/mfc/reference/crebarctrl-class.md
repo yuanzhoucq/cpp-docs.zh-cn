@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367448"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750635"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 
@@ -223,7 +223,7 @@ class CReBarCtrl : public CWnd
 
 实现 Win32 消息[RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag)的行为，如 Windows SDK 中所述。
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 指定应用于控件的钢筋控件样式的组合。 有关支持的样式列表，请参阅 Windows SDK 中的[钢筋控制样式](/windows/win32/Controls/rebar-control-styles)。
 
 *矩形*<br/>
-对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，即钢筋控件的位置和大小。
+对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，即钢筋控件的位置和大小。
 
 *pparentwnd*<br/>
 指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针，该对象是钢筋控件的父窗口。 值不得为 NULL。
@@ -303,7 +303,7 @@ virtual BOOL CreateEx(
 指定应用于控件的钢筋控件样式的组合。 有关支持的样式列表，请参阅 Windows SDK 中的[钢筋控制样式](/windows/win32/Controls/rebar-control-styles)。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -356,7 +356,7 @@ BOOL DeleteBand(UINT uBand);
 
 实现 Win32 消息[的行为RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove)，如 Windows SDK 中所述。
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 
 实现 Win32 消息[RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)的行为，如 Windows SDK 中所述。
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 实现 Win32 消息[RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders)的行为，如 Windows SDK 中所述。
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 将为其检索边框的带的零基索引。
 
 *中国*<br/>
-指向将接收波段边框的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。 如果钢筋控件具有RBS_BANDBORDERS样式，则此结构的每个成员将收到构成边框的带子侧的像素数。 如果钢筋控件没有RBS_BANDBORDERS样式，则只有此结构的左侧成员才会接收有效信息。 有关钢筋控件样式的说明，请参阅 Windows SDK 中的[钢筋控件样式](/windows/win32/Controls/rebar-control-styles)。
+指向将接收波段边框的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针。 如果钢筋控件具有RBS_BANDBORDERS样式，则此结构的每个成员将收到构成边框的带子侧的像素数。 如果钢筋控件没有RBS_BANDBORDERS样式，则只有此结构的左侧成员才会接收有效信息。 有关钢筋控件样式的说明，请参阅 Windows SDK 中的[钢筋控件样式](/windows/win32/Controls/rebar-control-styles)。
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl：：GetBandCount
 
@@ -429,7 +429,7 @@ BOOL GetBandInfo(
 
 检索波段的边距。
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 钢筋控件中带的零基索引。
 
 *中国*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构将接收钢筋带的边界。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构将接收钢筋带的边界。
 
 ### <a name="return-value"></a>返回值
 
@@ -723,7 +723,7 @@ BOOL InsertBand(
 
 将钢筋控件中的频带调整到其最大大小。
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ void MaximizeBand(UINT uBand);
 
 将钢筋控件中的频带调整到其最小大小。
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ BOOL MoveBand(
 
 实现 Win32 消息[RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)的行为，如 Windows SDK 中所述。
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ void PushChevron(
 
 将钢筋控件中的频带调整到其理想大小。
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 设置钢筋控件上的按钮的配色方案。
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 将工具尖端控件与钢筋控件关联。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 
@@ -1133,7 +1133,7 @@ BOOL SizeToRect(CRect& rect);
 
 请注意，此成员函数使用`CRect`对象作为参数，而不是`RECT`结构。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)

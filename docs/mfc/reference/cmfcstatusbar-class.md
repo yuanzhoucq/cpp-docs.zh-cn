@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 8f262d0139b6dffe54e16748ffda4938ba43fc08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 024fbad44af2fb11e967141fc8e7ccc0aad0ccbe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366058"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753468"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFC状态栏类
 
@@ -269,7 +269,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 启用或禁用状态栏上鼠标双击的处理。
 
-```
+```cpp
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```
 
@@ -286,7 +286,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 在指定的窗格上显示进度栏。
 
-```
+```cpp
 void EnablePaneProgressBar(
     int nIndex,
     long nTotal=100,
@@ -376,7 +376,7 @@ UINT GetItemID(int nIndex) const;
 
 ## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a>CMFC状态栏：获取项目已重新完成
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -391,7 +391,7 @@ void GetItemRect(
 
 ## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CMFC状态栏：获取PaneInfo
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -438,7 +438,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a>CMFC状态栏：获取窗格文本
 
-```
+```cpp
 void GetPaneText(
     int nIndex,
     CString& s) const;
@@ -493,7 +493,7 @@ CString GetTipText(int nIndex) const;
 
 使状态栏窗格无效并重绘其内容。
 
-```
+```cpp
 void InvalidatePaneContent(int nIndex);
 ```
 
@@ -546,7 +546,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a>CMFC状态栏：：设置 Draw 扩展区域
 
-```
+```cpp
 void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```
 
@@ -577,7 +577,7 @@ BOOL SetIndicators(
 
 将动画分配给指定的窗格。
 
-```
+```cpp
 void SetPaneAnimation(
     int nIndex,
     HIMAGELIST hImageList,
@@ -607,7 +607,7 @@ void SetPaneAnimation(
 
 设置状态栏窗格的背景颜色。
 
-```
+```cpp
 void SetPaneBackgroundColor(
     int nIndex,
     COLORREF clrBackground=(COLORREF)-1,
@@ -629,7 +629,7 @@ void SetPaneBackgroundColor(
 
 设置状态栏窗格的图标。
 
-```
+```cpp
 void SetPaneIcon(
     int nIndex,
     HICON hIcon,
@@ -667,7 +667,7 @@ void SetPaneIcon(
 
 ## <a name="cmfcstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a>CMFC状态栏：设置窗格信息
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -688,7 +688,7 @@ void SetPaneInfo(
 
 为指定的窗格设置进度栏的当前进度指示器。
 
-```
+```cpp
 void SetPaneProgress(
     int nIndex,
     long nCurr,
@@ -714,7 +714,7 @@ void SetPaneProgress(
 
 ## <a name="cmfcstatusbarsetpanestyle"></a><a name="setpanestyle"></a>CMFC状态栏：设置窗格样式
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);
@@ -750,7 +750,7 @@ virtual BOOL SetPaneText(
 
 设置指定窗格的文本颜色。
 
-```
+```cpp
 void SetPaneTextColor(
     int nIndex,
     COLORREF clrText=(COLORREF)-1,
@@ -772,7 +772,7 @@ void SetPaneTextColor(
 
 设置状态栏窗格的宽度。
 
-```
+```cpp
 void SetPaneWidth(
     int nIndex,
     int cx);
@@ -790,7 +790,7 @@ void SetPaneWidth(
 
 设置状态栏窗格的工具提示文本。
 
-```
+```cpp
 void SetTipText(
     int nIndex,
     LPCTSTR pszTipText);
@@ -804,7 +804,7 @@ void SetTipText(
 *pssTip文本*<br/>
 [在]新的工具提示文本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

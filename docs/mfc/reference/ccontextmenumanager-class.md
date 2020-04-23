@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369413"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754803"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 类
 
@@ -187,7 +187,7 @@ HMENU GetMenuByName(
 
 返回添加到[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)的菜单名称列表。
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 控制[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)在显示新的弹出式菜单时是否关闭活动弹出式菜单。
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
@@ -303,7 +303,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 *uiMenuResId*<br/>
 [在]此方法将显示的菜单的资源 ID。
 
-** x <br/>
+*x*<br/>
 [在]客户端坐标中快捷菜单的水平偏移。
 
 *Y*<br/>
@@ -352,7 +352,7 @@ virtual UINT TrackPopupMenu(
 *赫梅努普*<br/>
 [在]此方法显示的快捷菜单的句柄。
 
-** x <br/>
+*x*<br/>
 [在]客户端坐标中快捷菜单的水平偏移。
 
 *Y*<br/>
@@ -372,7 +372,7 @@ virtual UINT TrackPopupMenu(
 
 此方法用作显示快捷菜单的模态调用。 在用户关闭快捷菜单或选择命令之前，应用程序不会继续到代码中的下一行。 可用于显示快捷菜单的替代方法是[CContextMenuManager：：ShowPopupMenu](#showpopupmenu)。 该方法不是模态调用，不会返回所选命令的 ID。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

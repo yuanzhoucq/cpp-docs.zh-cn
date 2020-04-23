@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372344"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754962"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 类
 
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 清除 IP 地址控件的内容。
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 IP 地址控件的样式。 应用窗口样式的组合。 您必须包括WS_CHILD样式，因为控件必须是子窗口。 有关窗口样式的列表，请参阅 Windows SDK 中[创建窗口](/windows/win32/api/winuser/nf-winuser-createwindoww)。
 
 *矩形*<br/>
-对 IP 地址控件的大小和位置的引用。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+对 IP 地址控件的大小和位置的引用。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 *pparentwnd*<br/>
 指向 IP 地址控件的父窗口的指针。 值不得为 NULL。
@@ -166,7 +166,7 @@ virtual BOOL CreateEx(
 IP 地址控件的样式。 应用窗口样式的组合。 您必须包括WS_CHILD样式，因为控件必须是子窗口。 有关窗口样式的列表，请参阅 Windows SDK 中[创建窗口](/windows/win32/api/winuser/nf-winuser-createwindoww)。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -248,7 +248,7 @@ BOOL IsBlank() const;
 
 设置 IP 地址控件中所有四个字段的地址值。
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ void SetAddress(DWORD dwAddress);
 
 将键盘焦点设置到 IP 地址控件中的指定字段。
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ void SetFieldFocus(WORD nField);
 
 设置 IP 地址控件中指定字段中的范围。
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,
@@ -329,7 +329,7 @@ void SetFieldRange(
 
 此成员函数实现 Win32 消息[IPM_SETRANGE](/windows/win32/Controls/ipm-setrange)的行为，如 Windows SDK 中所述。 使用两个参数*nLower*和*nUpper*来指示字段的下限和上限，而不是与 Win32 消息一起使用的*wRange*参数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374823"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753720"
 ---
 # <a name="colevariant-class"></a>COleVariant 类
 
@@ -93,7 +93,7 @@ class COleVariant : public tagVARIANT
 
 调用此函数以将给定[的 VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)对象附加到`COleVariant`当前对象。
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ COleVariant(LPCITEMIDLIST pidl);
 
 转换此`COleVariant`对象中的变体值的类型。
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 清除 `VARIANT`。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ VARIANT Detach();
 
 从现有变体数组检索字节数组
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ friend CArchive& AFXAPI operator>>(
 
 将字符串设置为特定类型。
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 
@@ -399,6 +399,6 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 
 非 UNICODE 生成中的 DAO 记录集希望字符串为 ANSI。 因此，`COleVariant`对于使用对象的 DAO 函数，如果不创建 UNICODE 记录集，则必须使用**COleVariant：：COleVariant（lpszSrc、vtSrc）***lpszSrc***,***vtSrc***)** 形式的构造函数 *，vtSrc*设置为VT_BSTRT （ANSI），或者与设置为`SetString`VT_BSTRT的*vtSrc*一起生成 ANSI 字符串。 例如，`CDaoRecordset`函数[CDaoRecordset：：seek](../../mfc/reference/cdaorecordset-class.md#seek)和[CDaoRecordset：setFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) `COleVariant`使用对象作为参数。 如果 DAO 记录集不是 UNICODE，则这些对象必须是 ANSI。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

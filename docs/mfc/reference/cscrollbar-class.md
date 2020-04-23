@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 761d7e9db650c6d95e916c85bd7456d9b1c647c5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318524"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754401"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 类
 
@@ -287,7 +287,7 @@ int GetScrollPos() const;
 
 将给定滚动条的当前最小和最大滚动条位置复制到*lpMinPos*和*lpMaxPos*指定的位置。
 
-```
+```cpp
 void GetScrollRange(
     LPINT lpMinPos,
     LPINT lpMaxPos) const;
@@ -375,7 +375,7 @@ int SetScrollPos(
 
 设置给定滚动条的最小和最大位置值。
 
-```
+```cpp
 void SetScrollRange(
     int nMinPos,
     int nMaxPos,
@@ -411,7 +411,7 @@ void SetScrollRange(
 
 显示或隐藏滚动条。
 
-```
+```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
 ```
 
@@ -428,7 +428,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 
   请参阅[CScrollBar 的示例：：创建](#create)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

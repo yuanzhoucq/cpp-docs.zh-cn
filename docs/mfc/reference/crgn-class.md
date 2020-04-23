@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 72ab4027880285a3c4cd24d586e163e1e01b98f2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84526eec8f4fd4b1935fa39bc7f4ed3c4d5dd71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368297"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754486"
 ---
 # <a name="crgn-class"></a>CRgn 类
 
@@ -699,7 +699,7 @@ int OffsetRgn(POINT point);
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定向左或向右移动的单位数。
 
 *Y*<br/>
@@ -762,7 +762,7 @@ BOOL PtInRegion(POINT point) const;
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 指定要测试的点的逻辑 x 坐标。
 
 *Y*<br/>
@@ -805,7 +805,7 @@ typedef struct tagRECT {
 
 创建矩形区域。
 
-```
+```cpp
 void SetRectRgn(
     int x1,
     int y1,
@@ -838,7 +838,7 @@ void SetRectRgn(LPCRECT lpRect);
 
 使用此函数而不是`CreateRectRgn`成员函数以避免调用本地内存管理器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)

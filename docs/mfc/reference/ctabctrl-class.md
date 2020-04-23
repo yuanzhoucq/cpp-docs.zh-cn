@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365955"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752311"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 
@@ -160,7 +160,7 @@ class CTabCtrl : public CWnd
 
 计算给定窗口矩形的制表符控件的显示区域，或计算对应于给定显示区域的窗口矩形。
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 指示要执行的操作。 如果此参数为*TRUE，lpRect*指定显示矩形并接收相应的窗口矩形。 如果此参数为*FALSE，lpRect*指定一个窗口矩形并接收相应的显示矩形。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构指定给定的矩形并接收计算的矩形。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构指定给定的矩形并接收计算的矩形。
 
 ### <a name="example"></a>示例
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 指定选项卡控件的样式。 应用 Windows SDK 中描述的[选项卡控件样式](/windows/win32/Controls/tab-control-styles)的任意组合。 有关也可以应用于控件的窗口样式的列表，请参阅**备注**。
 
 *矩形*<br/>
-指定选项卡控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+指定选项卡控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 *pparentwnd*<br/>
 指定选项卡控件的父窗口，通常为`CDialog`。 值不得为 NULL。
@@ -250,7 +250,7 @@ virtual BOOL CreateEx(
 指定选项卡控件的样式。 应用 Windows SDK 中描述的[选项卡控件样式](/windows/win32/Controls/tab-control-styles)的任意组合。 请参阅["创建"](#create)中**注释**中查看也可以应用于控件的窗口样式列表。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -313,7 +313,7 @@ BOOL DeleteItem(int nItem);
 
 重置选项卡控件中的项，清除任何按下的项目。
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 选项卡项的零索引。
 
 *lpRect*<br/>
-指向接收选项卡边界矩形的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。这些坐标使用视口的当前映射模式。
+指向接收选项卡边界矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针。这些坐标使用视口的当前映射模式。
 
 ### <a name="return-value"></a>返回值
 
@@ -682,7 +682,7 @@ LONG InsertItem(
 
 从选项卡控件的图像列表中删除指定的图像。
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ void RemoveImage(int nImage);
 
 将焦点设置到选项卡控件中的指定选项卡。
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -829,7 +829,7 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 选项卡控件项的新宽度和高度（以像素为单位）。
 
 ### <a name="return-value"></a>返回值
@@ -892,20 +892,20 @@ int SetMinTabWidth(int cx);
 
 设置选项卡控件中每个选项卡图标和标签周围的空间量（填充）。
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 设置选项卡控件中每个选项卡图标和标签周围的空间量（填充）。
 
 ## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl：：设置工具提示
 
 将工具提示控件分配给选项卡控件。
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
@@ -922,7 +922,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
   请参阅[CPropertySheet 的示例：getTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

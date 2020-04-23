@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: 46937795499fd9f697f9778c263a1ee011777c0d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1bd88ad17bdb047de4c344ab96f3d9aecbe23c31
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370011"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752636"
 ---
 # <a name="cmemfile-class"></a>CMemFile 类
 
@@ -121,7 +121,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 
 调用此函数以将内存块附加到`CMemFile`。
 
-```
+```cpp
 void Attach(
     BYTE* lpBuffer,
     UINT nBufferSize,
@@ -288,7 +288,7 @@ virtual BYTE* Realloc(
 
 重写此函数以实现自定义内存重新分配。 如果重写此函数，您可能还希望重写[Alloc](#alloc)和[Free。](#free)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CFile 类](../../mfc/reference/cfile-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)

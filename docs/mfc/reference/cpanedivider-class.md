@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 41fa3204712749a3b1123a20d31b01ba8b5fbaa4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ebac4e18f65d789d5196266d57184744ad5ad28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364119"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753626"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider 类
 
@@ -194,7 +194,7 @@ class CPaneDivider : public CBasePane
 
 ## <a name="cpanedividersetautohidemode"></a><a name="setautohidemode"></a>CPaneDivider：：设置自动隐藏模式
 
-```
+```cpp
 void SetAutoHideMode(BOOL bMode);
 ```
 
@@ -206,7 +206,7 @@ void SetAutoHideMode(BOOL bMode);
 
 ## <a name="cpanedividersetpanecontainermanager"></a><a name="setpanecontainermanager"></a>CPaneDivider：：设置窗格容器管理器
 
-```
+```cpp
 void SetPaneContainerManager(CPaneContainerManager* p);
 ```
 
@@ -433,7 +433,7 @@ const CBasePane* GetFirstPane() const;
 
 返回驻留在[CPane 容器类](../../mfc/reference/cpanecontainer-class.md)中的窗格分隔符的列表。 此方法应仅针对默认窗格分隔符调用。
 
-```
+```cpp
 void GetPaneDividers(CObList& lstSliders);
 ```
 
@@ -460,7 +460,7 @@ DWORD GetPaneDividerStyle() const;
 
 返回驻留在[CPane 容器类](../../mfc/reference/cpanecontainer-class.md)中的窗格的列表。 应仅调用此方法来检索默认窗格分隔符。
 
-```
+```cpp
 void GetPanes(CObList& lstBars);
 ```
 
@@ -495,7 +495,7 @@ int GetWidth() const;
 
 ## <a name="cpanedividerinit"></a><a name="init"></a>CPaneDivider：：Init
 
-```
+```cpp
 void Init(
     BOOL bDefaultSlider = FALSE,
     CWnd* pParent = NULL);
@@ -632,7 +632,7 @@ virtual void OnShowPane(
 
 ## <a name="cpanedividerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CPaneDivider：：释放空窗格容器
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -684,7 +684,7 @@ virtual void RepositionPanes(
 
 ## <a name="cpanedividerserialize"></a><a name="serialize"></a>CPaneDivider：序列化
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -696,7 +696,7 @@ void Serialize(CArchive& ar);
 
 ## <a name="cpanedividershowwindow"></a><a name="showwindow"></a>CPaneDivider：：显示窗口
 
-```
+```cpp
 void ShowWindow(int nCmdShow);
 ```
 
@@ -708,7 +708,7 @@ void ShowWindow(int nCmdShow);
 
 ## <a name="cpanedividerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPaneDivider：：存储最新网站信息
 
-```
+```cpp
 void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```
 
@@ -720,7 +720,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ## <a name="cpanedividerstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPaneDivider：：存储最新标签相关信息
 
-```
+```cpp
 void StoreRecentTabRelatedInfo(
     CDockablePane* pDockingBar,
     CDockablePane* pTabbedBar);
@@ -733,7 +733,7 @@ void StoreRecentTabRelatedInfo(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 95de66a66d9c1a6f3abf992c5a9cd64ee1fe91ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cb5d69ea6052b500ab7e92d2520ee70de597a83
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352211"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752333"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 类
 
@@ -2088,7 +2088,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM FONTNAME 命令 ID](/previous-versions/aa769880\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_FONTNAME命令 ID](/previous-versions/aa769880\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetfontsize"></a><a name="setfontsize"></a>CHtmlEditCtrlBase：设置字体
 
@@ -2100,7 +2100,7 @@ HRESULT SetFontSize(unsigned short size) const;
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 HTML 字体大小 （1-7）。 值 0 将字体大小设置为 1。
 
 ### <a name="return-value"></a>返回值
@@ -2109,7 +2109,7 @@ HTML 字体大小 （1-7）。 值 0 将字体大小设置为 1。
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM FONTSIZE 命令 ID](/previous-versions/aa769881\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_FONTSIZE命令 ID](/previous-versions/aa769881\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetforecolor"></a><a name="setforecolor"></a>CHtmlEditCtrlBase：设置福彩
 
@@ -2134,7 +2134,7 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM FORECOLOR 命令 ID](/previous-versions/aa769882\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_FORECOLOR命令 ID](/previous-versions/aa769882\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetie5pastemode"></a><a name="setie5pastemode"></a>CHtmleditctrlBase：setIE5粘贴模式
 
@@ -2155,7 +2155,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM IE50_PASTE_MODE命令 ID](/previous-versions/aa769923\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_IE50_PASTE_MODE命令 ID](/previous-versions/aa769923\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetliveresize"></a><a name="setliveresize"></a>CHtmlEditCtrlBase：设置实时调整
 
@@ -2176,7 +2176,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM LIVERESIZE 命令 ID](/previous-versions/aa769928\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_LIVERESIZE命令 ID](/previous-versions/aa769928\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetmultiselect"></a><a name="setmultiselect"></a>CHtmlEditCtrlBase：设置多选
 
@@ -2197,7 +2197,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM 多选命令 ID](/previous-versions/aa769929\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_MULTIPLESELECTION命令 ID](/previous-versions/aa769929\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetoverridecursor"></a><a name="setoverridecursor"></a>CHtmlEditCtrlBase：：设置覆盖光标
 
@@ -2218,7 +2218,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM OVERRIDE_CURSOR命令 ID](/previous-versions/aa769932\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_OVERRIDE_CURSOR命令 ID](/previous-versions/aa769932\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetoverwritemode"></a><a name="setoverwritemode"></a>CHtmlEditCtrlBase：：设置覆盖模式
 
@@ -2239,7 +2239,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM OVERWRITE 命令 ID](/previous-versions/aa770016\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_OVERWRITE命令 ID](/previous-versions/aa770016\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetrespectvisindesign"></a><a name="setrespectvisindesign"></a>CHtmleditctrlBase：设置尊重维辛设计
 
@@ -2260,7 +2260,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM RESPECTVISIBILITY_INDESIGN命令 ID](/previous-versions/aa770023\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_RESPECTVISIBILITY_INDESIGN命令 ID](/previous-versions/aa770023\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowalignedsitetags"></a><a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase：：设置显示对齐的网站标记
 
@@ -2281,7 +2281,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOW_THETAG 命令 ID](/previous-versions/aa769947\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWALIGNEDSITETAGS命令 ID](/previous-versions/aa769947\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowalltags"></a><a name="setshowalltags"></a>CHtmlEditCtrlBase：：设置显示所有标记
 
@@ -2302,7 +2302,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWALLTAGS 命令 ID](/previous-versions/aa769948\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWALLTAGS命令 ID](/previous-versions/aa769948\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowareatags"></a><a name="setshowareatags"></a>CHtmlEditCtrlBase：设置显示区域标记
 
@@ -2323,7 +2323,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWAREATAGS 命令 ID](/previous-versions/aa769949\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWAREATAGS命令 ID](/previous-versions/aa769949\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowbrtags"></a><a name="setshowbrtags"></a>CHtmlEditCtrlBase：设置显示BRTags
 
@@ -2344,7 +2344,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWWBRTAGS 命令 ID](/previous-versions/aa769956\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWWBRTAGS命令 ID](/previous-versions/aa769956\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowcommenttags"></a><a name="setshowcommenttags"></a>CHtmlEditCtrlBase：设置显示评论标签
 
@@ -2365,7 +2365,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWCOMMENTTAGS 命令 ID](/previous-versions/aa769950\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWCOMMENTTAGS命令 ID](/previous-versions/aa769950\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowmisctags"></a><a name="setshowmisctags"></a>CHtmlEditCtrlBase：设置显示米查标记
 
@@ -2386,7 +2386,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWMISCTAGS 命令 ID](/previous-versions/aa769952\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWMISCTAGS命令 ID](/previous-versions/aa769952\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowscripttags"></a><a name="setshowscripttags"></a>CHtmlEditCtrlBase：设置显示脚本标记
 
@@ -2407,7 +2407,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWSCRIPTTAGS 命令 ID](/previous-versions/aa769953\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWSCRIPTTAGS命令 ID](/previous-versions/aa769953\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowstyletags"></a><a name="setshowstyletags"></a>CHtmlEditCtrlBase：设置显示样式标记
 
@@ -2428,7 +2428,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWSTYLETAGS 命令 ID](/previous-versions/aa769954\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWSTYLETAGS命令 ID](/previous-versions/aa769954\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasesetshowunknowntags"></a><a name="setshowunknowntags"></a>CHtmlEditCtrlBase：设置显示未知标记
 
@@ -2449,7 +2449,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM SHOWUNKNOWNTAGS 命令 ID](/previous-versions/aa769955\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_SHOWUNKNOWNTAGS命令 ID](/previous-versions/aa769955\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasetextarea"></a><a name="textarea"></a>CHtmlEditCtrlBase：文本区域
 
@@ -2470,7 +2470,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM TEXTAREA 命令 ID](/previous-versions/aa769986\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_TEXTAREA命令 ID](/previous-versions/aa769986\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbasetextbox"></a><a name="textbox"></a>CHtmlEditCtrlBase：文本框
 
@@ -2491,7 +2491,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM TEXTBOX 命令 ID](/previous-versions/aa769980\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_TEXTBOX命令 ID](/previous-versions/aa769980\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbaseunbookmark"></a><a name="unbookmark"></a>CHtmlEditCtrlBase：取消书签
 
@@ -2507,7 +2507,7 @@ HRESULT UnBookmark() const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM UNBOOKMARK 命令 ID](/previous-versions/aa770034\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_UNBOOKMARK命令 ID](/previous-versions/aa770034\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbaseunderline"></a><a name="underline"></a>CHtmlEditCtrlBase：：下划线
 
@@ -2523,7 +2523,7 @@ HRESULT Underline() const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM 下划线命令 ID](/previous-versions/aa770035\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_UNDERLINE命令 ID](/previous-versions/aa770035\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbaseunlink"></a><a name="unlink"></a>CHtmlEditCtrlBase：取消链接
 
@@ -2539,7 +2539,7 @@ HRESULT Unlink() const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM UNLINK 命令 ID](/previous-versions/aa770037\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_UNLINK命令 ID](/previous-versions/aa770037\(v=vs.85\))发送到 Web 浏览器控件。
 
 ## <a name="chtmleditctrlbaseunorderlist"></a><a name="unorderlist"></a>CHtmlEditCtrlBase：取消订单列表
 
@@ -2560,9 +2560,9 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>备注
 
-此方法将[IDM UNORDERLIST 命令 ID](/previous-versions/aa769987\(v=vs.85\))发送到 Web 浏览器控件。
+此方法将[IDM_UNORDERLIST命令 ID](/previous-versions/aa769987\(v=vs.85\))发送到 Web 浏览器控件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [HTML编辑示例](../../overview/visual-cpp-samples.md)

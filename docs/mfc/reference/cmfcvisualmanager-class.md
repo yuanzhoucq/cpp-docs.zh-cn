@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320001"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752847"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 类
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFC视觉管理器：:DoDrawHeader排序箭头
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFC视觉管理器：：启用工具栏按钮填充
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 *pButton*<br/>
 [在]指向工具栏按钮的指针。
 
-*状态*<br/>
+State <br/>
 [在]工具栏按钮的状态。
 
 ### <a name="return-value"></a>返回值
@@ -1822,7 +1822,7 @@ virtual BOOL OnDrawBrowseButton(
 *pEdit*<br/>
 [在]指向编辑控件的指针。 可视化管理器绘制此编辑控件的浏览按钮。
 
-*状态*<br/>
+State <br/>
 [在]指定按钮状态的枚举值。
 
 *clrText*<br/>
@@ -1859,7 +1859,7 @@ virtual void OnDrawButtonBorder(
 *矩形*<br/>
 [在]指定工具栏按钮边界的矩形。
 
-*状态*<br/>
+State <br/>
 [在]指定工具栏按钮的当前状态的枚举数据类型。
 
 ### <a name="remarks"></a>备注
@@ -4358,7 +4358,7 @@ virtual void OnFillButtonInterior(
 *矩形*<br/>
 [在]指定工具栏按钮边界的矩形。
 
-*状态*<br/>
+State <br/>
 [在]工具栏按钮的状态。
 
 ### <a name="remarks"></a>备注
@@ -5011,7 +5011,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 
 启用或禁用禁用工具栏图像的浮雕模式。
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 
 启用或禁用菜单或工具栏上非活动图像的照明效果。
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 
 设置指示菜单按钮是否显示为平面的标志。 否则，它们将显示为三维。
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 
 设置菜单阴影的宽度和高度。
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ void SetMenuShadowDepth(int nDepth);
 
 设置一个标志，指示[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)是否显示突出显示的图像的阴影。
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 
@@ -5092,7 +5092,7 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 
 默认情况下，此功能被禁用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

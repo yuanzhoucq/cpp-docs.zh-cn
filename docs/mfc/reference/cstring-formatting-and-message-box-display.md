@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: d30d26ecf0e72ee33affe3df5b88c438ff83bb6b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fa1fe8826543834872de5257a0f5d56b2ad9fc1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365995"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752681"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 格式设置和消息框显示
 
@@ -78,7 +78,7 @@ BOOL AFXAPI AfxExtractSubString (
 
 将*lpsz1*指向的字符串替换为*nIDS*标识的模板字符串资源中字符"%1"的任何实例。
 
-```
+```cpp
 void  AfxFormatString1(
     CString& rString,
     UINT nIDS,
@@ -114,7 +114,7 @@ void  AfxFormatString1(
 
 将*lpsz1*指向的字符串替换为字符"%1"的任何实例，以及*lpsz2*指向字符"%2"的任何实例的字符串，该字符串位于*nIDS*标识的模板字符串资源中。
 
-```
+```cpp
 void AfxFormatString2(
     CString& rString,
     UINT nIDS,

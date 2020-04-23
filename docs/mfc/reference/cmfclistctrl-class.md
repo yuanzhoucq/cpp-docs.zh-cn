@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 099ec086bd95a1180af4cf5a8f6a9fa7f1d099ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370772"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754242"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 类
 
@@ -94,7 +94,7 @@ class CMFCListCtrl : public CListCtrl
 
 用不同的背景颜色标记已排序的列。
 
-```
+```cpp
 void EnableMarkSortedColumn(
     BOOL bMark = TRUE,
     BOOL bRedraw = TRUE);
@@ -116,7 +116,7 @@ void EnableMarkSortedColumn(
 
 启用按多个列对列表控件中的数据行进行排序。
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
@@ -277,7 +277,7 @@ virtual COLORREF OnGetCellTextColor(
 
 从排序列列表中删除排序列。
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -294,7 +294,7 @@ void RemoveSortColumn(int iColumn);
 
 设置当前排序列和排序顺序。
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending = TRUE,
@@ -338,7 +338,7 @@ virtual void Sort(
 *bAdd*<br/>
 [在]指定此方法是否将*iColumn*指示的列添加到排序列列表中的布尔。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

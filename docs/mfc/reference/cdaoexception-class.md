@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: a8a789f4dba06ffe376d8a8e955b026bb23af924
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 935d7870d68554d702e2ad762e83343cb518b2b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368997"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754730"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 类
 
@@ -138,7 +138,7 @@ short GetErrorCount();
 
 返回错误集合中有关特定错误对象的错误信息。
 
-```
+```cpp
 void GetErrorInfo(int nIndex);
 ```
 
@@ -211,7 +211,7 @@ void GetErrorInfo(int nIndex);
 
 有关 SCODE 的信息，请参阅 Windows SDK 中[有关 OLE 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)的主题。 SCODE 数据类型映射到 HRESULT 数据类型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

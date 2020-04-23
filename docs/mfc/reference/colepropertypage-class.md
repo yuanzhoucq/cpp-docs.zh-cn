@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374878"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753793"
 ---
 # <a name="colepropertypage-class"></a>COle属性页类
 
@@ -187,7 +187,7 @@ LPPROPERTYPAGESITE GetPageSite();
 
 确定哪些控件不启用"应用"按钮。
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
@@ -326,7 +326,7 @@ BOOL SetControlStatus(
 
 设置属性页的对话框资源。
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
@@ -339,7 +339,7 @@ void SetDialogResource(HGLOBAL hDialog);
 
 指定工具提示信息、帮助文件名和属性页的帮助上下文。
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -361,7 +361,7 @@ void SetHelpInfo(
 
 指示用户是否已修改属性页。
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -374,7 +374,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 设置属性页的名称，属性框架通常会显示在页面的选项卡上。
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 
@@ -383,7 +383,7 @@ void SetPageName(LPCTSTR lpszPageName);
 *lpszPage名称*<br/>
 指向包含属性页名称的字符串的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 样品测试](../../overview/visual-cpp-samples.md)<br/>

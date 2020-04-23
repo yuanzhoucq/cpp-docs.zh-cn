@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: 80a90dfa37bc1d2c3c84e6451ae23af7ded767c2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f4a5b8b52d8bd37d1ed83618e7451dd85f84c32
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369704"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755114"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 类
 
@@ -102,7 +102,7 @@ CAnimationSize 类封装了两个 CAnimationvariable 对象，可以在应用程
 
 添加宽度和高度的过渡。
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pCXTransition,
     CBaseTransition* pCYTransition);
@@ -272,7 +272,7 @@ operator CSize();
 
 将 szSrc 分配给 CAnimationSize。
 
-```
+```cpp
 void operator=(const CSize& szSrc);
 ```
 
@@ -289,7 +289,7 @@ void operator=(const CSize& szSrc);
 
 设置默认值。
 
-```
+```cpp
 void SetDefaultValue(const CSize& szDefault);
 ```
 
@@ -302,6 +302,6 @@ void SetDefaultValue(const CSize& szDefault);
 
 使用此函数可为动画对象设置默认值。 此方法将默认值分配给动画大小的宽度和高度。 它还会重新创建基础 COM 对象（如果已创建）。 如果将此动画对象订阅到事件（Value已更改或整数值更改），则需要重新启用这些事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

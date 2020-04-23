@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319745"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752815"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 指定应用于月历控件的 Windows 样式的组合。 有关样式的详细信息，请参阅 Windows SDK 中的[月日历控件样式](/windows/win32/Controls/month-calendar-control-styles)。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用。 包含月历控件的位置和大小。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用。 包含月历控件的位置和大小。
 
 *pt*<br/>
-对标识月历控件位置的[POINT](/previous-versions/dd162805\(v=vs.85\))结构的引用。
+对标识月历控件位置的[POINT](/windows/win32/api/windef/ns-windef-point)结构的引用。
 
 *pparentwnd*<br/>
 指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针，该对象是月历控件的父窗口。 值不得为 NULL。
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>参数
 
 *普雷克*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构将接收边界矩形信息。 此参数必须是有效地址，不能为 NULL。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构将接收边界矩形信息。 此参数必须是有效地址，不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -808,7 +808,7 @@ BOOL IsYearView() const;
 
 设置当前月日历控件的边框的宽度。
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ void SetCalendarBorder(int cxyBorder);
 
 设置当前月日历控件边框的默认宽度。
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -1219,7 +1219,7 @@ BOOL SetSelRange(
 
 设置当天的日历控件。
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |参数|说明|
 |---------------|-----------------|
-|*lpRect*|[在]指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构定义包含所需日历数的矩形。|
+|*lpRect*|[在]指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构定义包含所需日历数的矩形。|
 
 ### <a name="return-value"></a>返回值
 
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构定义大小小于或等于*lpRect*参数定义的矩形的矩形。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构定义大小小于或等于*lpRect*参数定义的矩形的矩形。
 
 ### <a name="remarks"></a>备注
 
@@ -1302,7 +1302,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 此方法发送[MCM_SIZERECTTOMIN](/windows/win32/Controls/mcm-sizerecttomin)消息，这在 Windows SDK 中介绍。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

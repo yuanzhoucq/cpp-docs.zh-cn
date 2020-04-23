@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc5d6d99c326fba7020e8c5040c3bf28d09f8f0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361793"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754117"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 类
 
@@ -115,7 +115,7 @@ BOOL Create(CWnd* pWndParent);
 
 停用并隐藏工具提示控件。
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -127,7 +127,7 @@ void Deactivate();
 
 返回工具提示控件最后一个位置的坐标。
 
-```
+```cpp
 void GetLastRect(CRect& rect) const;
 ```
 
@@ -140,7 +140,7 @@ void GetLastRect(CRect& rect) const;
 
 隐藏工具提示控件。
 
-```
+```cpp
 void Hide();
 ```
 
@@ -148,7 +148,7 @@ void Hide();
 
 设置工具提示文本与工具提示窗口边框之间的间距。
 
-```
+```cpp
 void SetTextMargin(int nTextMargin);
 ```
 
@@ -161,7 +161,7 @@ void SetTextMargin(int nTextMargin);
 
 显示工具提示控件。
 
-```
+```cpp
 void Track(
     CRect rect,
     const CString& strText);
@@ -179,7 +179,7 @@ void Track(
 
 此方法在*rect*指定的位置和大小处显示工具提示控件。 如果自上次调用此方法以来位置、大小和文本未更改，则此方法没有效果。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

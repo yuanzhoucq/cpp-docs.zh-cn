@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369021"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754737"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 类
 
@@ -315,7 +315,7 @@ virtual void Create(
 
 调用此成员函数以建立数据库中主表中的一个或多个字段与外表中的一个或多个字段（数据库中的另一个表）之间的关系。
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 
 调用此成员函数从`CDaoDatabase`对象的 QueryDefs 集合中删除指定的查询def - 保存的查询。
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 
 调用此成员函数从数据库对象的"关系"集合中删除现有关系。
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ void DeleteRelation(LPCTSTR lpszName);
 
 调用此成员函数从`CDaoDatabase`对象的 TableDefs 集合中删除指定的表及其所有数据。
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ void DeleteTableDef(LPCTSTR lpszName);
 
 调用此成员函数以在数据库上运行操作查询或执行 SQL 语句。
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ short GetQueryDefCount();
 
 调用此成员函数以获取有关数据库中定义的查询的各种信息。
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ short GetRelationCount();
 
 调用此成员函数以获取有关数据库关系集合中指定关系的信息。
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ short GetTableDefCount();
 
 调用此成员函数以获取有关数据库中定义的表的各种信息。
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ virtual void Open(
 
 调用此成员函数以覆盖默认秒数，以便在后续对连接的数据库超时执行操作之前允许。
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 
@@ -890,7 +890,7 @@ void SetQueryTimeout(short nSeconds);
 
 有关相关信息，请参阅 DAO 帮助中的"查询超时属性"主题。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

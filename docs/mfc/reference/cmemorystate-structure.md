@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369986"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752610"
 ---
 # <a name="cmemorystate-structure"></a>内存状态结构
 
@@ -79,7 +79,7 @@ struct CMemoryState
 
 获取内存的快照摘要并将其存储在此`CMemoryState`对象中。
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ BOOL Difference(
 
 调用自`Dump`上次[检查点](#checkpoint)调用此`CMemoryState`对象以来从类`CObject`派生（并且仍已分配）的类型的所有对象的函数。
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ void DumpAllObjectsSince() const;
 
 从由`CMemoryState`[差异](#difference)成员函数填充的对象打印简明的内存统计信息报表。
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 
@@ -195,6 +195,6 @@ void DumpStatistics() const;
 
 您现在可以在调试模式下运行该程序以查看`DumpStatistics`函数的输出。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)

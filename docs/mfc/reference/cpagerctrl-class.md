@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376966"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753699"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 类
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |参数|说明|
 |---------------|-----------------|
 |*dwStyle*|[在]要应用于控件[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[寻呼器控件样式](/windows/win32/Controls/pager-control-styles)的位组合 （OR）。|
-|*矩形*|[在]对包含客户端坐标中控件的位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用。|
+|*矩形*|[在]对包含客户端坐标中控件的位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用。|
 |*pparentwnd*|[在]指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针，该对象是控件的父窗口。 此参数不能为 NULL。|
 |*nID*|[在]控件的 ID。|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[在]要应用于控件的扩展样式的位组合。 有关详细信息，请参阅[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函数的*dwExStyle*参数。|
 |*dwStyle*|[在]要应用于控件[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[寻呼器控件样式](/windows/win32/Controls/pager-control-styles)的位组合 （OR）。|
-|*矩形*|[在]对包含客户端坐标中控件的位置和大小的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用。|
+|*矩形*|[在]对包含客户端坐标中控件的位置和大小的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用。|
 |*pparentwnd*|[在]指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针，该对象是控件的父窗口。 此参数不能为 NULL。|
 |*nID*|[在]控件的 ID。|
 
@@ -202,7 +202,7 @@ virtual BOOL CreateEx(
 
 启用或禁用将[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)消息转发到当前寻呼器控件中包含的窗口。
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
@@ -462,7 +462,7 @@ BOOL IsButtonNormal(int iButton) const;
 
 使当前寻呼机控件重新计算包含的窗口的大小。
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -572,7 +572,7 @@ int SetButtonSize(int iButtonSize);
 
 设置当前寻呼机控件的包含窗口。
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
@@ -598,7 +598,7 @@ void SetChild(HWND hwndChild);
 
 设置当前寻呼器控件的滚动位置。
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 
@@ -612,7 +612,7 @@ void SetScrollPos(int iPos);
 
 此方法发送[PGM_SETPOS](/windows/win32/Controls/pgm-setpos)消息，这在 Windows SDK 中介绍。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

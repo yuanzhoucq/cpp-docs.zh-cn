@@ -86,12 +86,12 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: a95ee024d9df835102eeffc8443ae6225775aff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 471d68ead1bc5a11ace29f572647c4a7f2406b4e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375543"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753269"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -212,7 +212,7 @@ virtual void AdjustLayout();
 
 ## <a name="cdocksitealigndocksite"></a><a name="aligndocksite"></a>CDock网站：对齐Dock网站
 
-```
+```cpp
 void AlignDockSite(
     const CRect& rectToAlignBy,
     CRect& rectResult,
@@ -681,7 +681,7 @@ virtual void RemovePane(
 
 ## <a name="cdocksiteremoverow"></a><a name="removerow"></a>CDock 网站：删除行
 
-```
+```cpp
 void RemoveRow(CDockingPanesRow* pRow);
 ```
 
@@ -723,7 +723,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ## <a name="cdocksiteresizedocksite"></a><a name="resizedocksite"></a>CDock网站：调整Dock网站
 
-```
+```cpp
 void ResizeDockSite(
     int nNewWidth,
     int nNewHeight);
@@ -794,7 +794,7 @@ virtual BOOL ShowPane(
 
 ## <a name="cdocksiteshowrow"></a><a name="showrow"></a>CDock网站：显示行
 
-```
+```cpp
 void ShowRow(
     CDockingPanesRow* pRow,
     BOOL bShow,
@@ -813,7 +813,7 @@ void ShowRow(
 
 ## <a name="cdocksiteswaprows"></a><a name="swaprows"></a>CDock网站：：交换
 
-```
+```cpp
 void SwapRows(
     CDockingPanesRow* pFirstRow,
     CDockingPanesRow* pSecondRow);
@@ -827,7 +827,7 @@ void SwapRows(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

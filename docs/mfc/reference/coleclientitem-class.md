@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: c880b1fb724b533bb049666460948c6df661a03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce321c9709b752602a664142f283884f4d17b50b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376286"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753960"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 类
 
@@ -310,7 +310,7 @@ OLE 项可以嵌入或链接。 如果它被嵌入，则其数据将作为复合
 
 调用此函数以执行指定的谓词而不是[DoVerb，](#doverb)以便在引发异常时执行自己的处理。
 
-```
+```cpp
 void Activate(
     LONG nVerb,
     CView* pView,
@@ -380,7 +380,7 @@ virtual BOOL ActivateAs(
 
 调用此函数以初始化[COleDataObject](../../mfc/reference/coledataobject-class.md)以访问 OLE 项目中的数据。
 
-```
+```cpp
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
@@ -493,7 +493,7 @@ static BOOL PASCAL CanPasteLink();
 
 调用此函数可将 OLE 项的状态从运行状态更改为加载状态，即在其内存中加载其处理程序，但服务器未运行。
 
-```
+```cpp
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
@@ -578,7 +578,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 
 调用此函数以将 OLE 项复制到剪贴板。
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -936,7 +936,7 @@ BOOL CreateStaticFromData(
 
 调用此函数以停用 OLE 项并释放任何关联的资源。
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -952,7 +952,7 @@ void Deactivate();
 
 当用户停用已激活的项时，调用此功能。
 
-```
+```cpp
 void DeactivateUI();
 ```
 
@@ -968,7 +968,7 @@ void DeactivateUI();
 
 调用此函数从容器文档中删除 OLE 项。
 
-```
+```cpp
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
@@ -1153,7 +1153,7 @@ BOOL GetCachedExtent(
 
 将项的类 ID 返回到*pClassID*指向的内存中。
 
-```
+```cpp
 void GetClassID(CLSID* pClassID) const;
 ```
 
@@ -1172,7 +1172,7 @@ void GetClassID(CLSID* pClassID) const;
 
 调用此函数获取包含`COleDataSource`通过调用[CopyToClipboard](#copytoclipboard)成员函数在剪贴板上放置的所有数据的对象。
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -1400,7 +1400,7 @@ OLE_OBJTYPE GetType() const;
 
 调用此函数以获取描述 OLE 项类型的用户可见字符串，例如"Word 文档"。
 
-```
+```cpp
 void GetUserType(
     USERCLASSTYPE nUserClassType,
     CString& rString);
@@ -1977,7 +1977,7 @@ BOOL Reload();
 
 运行与此项关联的应用程序。
 
-```
+```cpp
 void Run();
 ```
 
@@ -2016,7 +2016,7 @@ DVASPECT 枚举中的值。 此参数可以具有下列值之一：
 
 调用此函数以指定 OLE 项可用的空间量。
 
-```
+```cpp
 void SetExtent(
     const CSize& size,
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 包含大小信息的[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 *nDrawAspect*<br/>
@@ -2040,7 +2040,7 @@ void SetExtent(
 
 调用此函数以指定容器应用程序的名称和嵌入 OLE 项的容器名称。
 
-```
+```cpp
 void SetHostNames(
     LPCTSTR lpszHost,
     LPCTSTR lpszHostObj);
@@ -2117,7 +2117,7 @@ BOOL SetItemRects(
 
 调用此函数以设置链接更新选项以表示指定的链接项。
 
-```
+```cpp
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 
@@ -2185,7 +2185,7 @@ BOOL UpdateLink();
 
 有关详细信息，请参阅[IOleLink：：在](/windows/win32/api/oleidl/nf-oleidl-iolelink-update)Windows SDK 中更新。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [MFC 样品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>

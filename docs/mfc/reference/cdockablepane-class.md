@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375608"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753338"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -881,7 +881,7 @@ virtual void DrawCaption(
 
 启用或禁用此窗格和容器中其他窗格的自动隐藏模式。
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 当取消停靠窗格时，框架调用此方法。
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ BOOL ReplacePane(
 
 当窗格反序列化时，框架调用此方法来还原默认窗格分隔符。
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 
 设置窗格的自动隐藏按钮和自动隐藏工具栏。
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 设置窗格在其容器中占用的空间百分比。
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ void SetLastPercentInPaneContainer(int n);
 
 设置还原的默认窗格分隔符。
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 设置两个窗格停靠在一起时创建的选项卡式窗口的运行时类信息。
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 
@@ -1682,7 +1682,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 框架在销毁窗格之前会自动取消停靠窗格。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

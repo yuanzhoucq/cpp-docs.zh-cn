@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: ccd8ddc9f4981b3d9f7f4e1decdf6790cd05b98b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f415df35b13e50eee092f87eca0627e5cf143720
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375495"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753292"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 类
 
@@ -81,7 +81,7 @@ DocObject 服务器文档可以包含[CDocObjectServerItem 对象](../../mfc/ref
 
 调用此函数以激活（但不显示）文档对象服务器。
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -167,7 +167,7 @@ virtual void OnSaveViewState(CArchive& ar);
 
 可以使用`OnSaveViewState`来存储特定于视图状态的持久信息。 如果重写`OnSaveViewState`以存储信息，则需要重写`OnApplyViewState`以读取该信息，并在视图新激活时将其应用于视图。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

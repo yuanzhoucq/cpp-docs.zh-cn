@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 3376b8febe8ae4586ce649f3f83386875acb678f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 69b94a4188804f47c950ca31fb5cba80d85176e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375513"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753297"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 类
 
@@ -511,7 +511,7 @@ virtual BOOL SaveAllModified();
 
 在编辑就地 OLE 项时确定 OLE 容器的资源。
 
-```
+```cpp
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```
 
@@ -547,7 +547,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 
 确定服务器文档在就地嵌入或编辑时的资源和类。
 
-```
+```cpp
 void SetServerInfo(
     UINT nIDOleEmbedding,
     UINT nIDOleInPlaceServer = 0,
@@ -603,7 +603,7 @@ CFrameWnd* CreatePreviewFrame(
 
 设置进程外预览处理程序。
 
-```
+```cpp
 void SetPreviewInfo(
     UINT nIDPreviewFrame,
     CRuntimeClass* pPreviewFrameClass = NULL,
@@ -623,7 +623,7 @@ void SetPreviewInfo(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

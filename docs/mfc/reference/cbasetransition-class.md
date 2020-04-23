@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 8339785fd10fa3dcef1c0fb573310762dc2d2405
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9abe4ae55d9d84ea435cd5d82925ff8b8a544480
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352834"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752957"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 类
 
@@ -180,7 +180,7 @@ CBaseTransition();
 
 释放封装的 IUI 动画转换 COM 对象。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -374,7 +374,7 @@ TRANSITION_TYPE m_type;
 
 为过渡设置关键帧。
 
-```
+```cpp
 void SetKeyframes(
     CBaseKeyFrame* pStart = NULL,
     CBaseKeyFrame* pEnd = NULL);
@@ -396,7 +396,7 @@ void SetKeyframes(
 
 在动画变量和转换之间建立关系。
 
-```
+```cpp
 void SetRelatedVariable(CAnimationVariable* pVariable);
 ```
 
@@ -421,6 +421,6 @@ enum TRANSITION_TYPE;
 
 在特定过渡的构造函数中设置过渡类型。 例如，CSinusoid转换FromRange将其类型设置为SINUSOIDAL_FROM_RANGE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

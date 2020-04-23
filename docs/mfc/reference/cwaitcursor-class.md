@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 48ef8f9c965f54deafcc62451639f8c31021e900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aaa60e26d0a9bf99076f29124097b0629ce6f5d0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373181"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754327"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 类
 
@@ -100,7 +100,7 @@ CWaitCursor();
 
 要还原等待游标，请在执行操作（如显示消息框或对话框）后调用此函数，这可能会将等待光标更改为另一个游标。
 
-```
+```cpp
 void Restore();
 ```
 

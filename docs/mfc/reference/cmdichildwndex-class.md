@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370069"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754556"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 类
 
@@ -249,7 +249,7 @@ BOOL AddPane(
 
 添加选项卡式窗格。
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ virtual BOOL CanShowOnWindowsList();
 
 停靠窗格。
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 从停靠管理器中删除窗格。
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildwndEx：：设置相关标签组
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildwndEx：：显示窗格
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 
 从 Windows 7 任务栏选项卡中删除 MDI 子项。
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 设置 Windows 7 任务栏选项卡的属性。
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ STPFLAG 值的组合。 有关详细信息，请参阅[ITaskbarList4：：setTab
 
 在 Windows 7 任务栏选项卡上的指定窗口之前插入 MDI 子项。
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 
 激活相应的 Windows 7 任务栏选项卡。
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *nHitTest*<br/>
 指定命中测试区域代码。 命中测试是确定光标位置的测试。
 
-*消息*<br/>
+*message*<br/>
 指定鼠标消息编号。
 
 ### <a name="remarks"></a>备注
@@ -1146,7 +1146,7 @@ CMDITabProxyWnd* GetTabProxyWnd();
 
 启用或禁用窗口工作区的一部分的自动选择，以在任务栏中显示为该窗口的缩略图。
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 
@@ -1183,7 +1183,7 @@ virtual void ActivateTopLevelFrame();
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

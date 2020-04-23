@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377365"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753398"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 类
 
@@ -120,7 +120,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 将工具栏按钮插入到 **"命令"** 页上的命令列表中。
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -137,7 +137,7 @@ void AddButton(
 *ui 分类 Id*<br/>
 [在]指定要插入按钮的类别 ID。
 
-*按钮*<br/>
+*button*<br/>
 [在]指定要插入的按钮。
 
 *iInsert 之前*<br/>
@@ -187,7 +187,7 @@ BOOL AddMenu(UINT uiMenuResId);
 
 将项添加到 **"命令"** 页中的命令列表中，以表示指定菜单中的所有项。
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ virtual BOOL Create();
 
 使用 **"自定义"** 对话框启用或禁用创建新工具栏。
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 
 使用`CComboBox`**"自定义"** 对话框中每个命令类别的名称填充提供的对象。
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ void FillCategoriesComboBox(
 
 使用`CListBox`**"自定义"** 对话框中每个命令类别的名称填充提供的对象。
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ BOOL RenameCategory(
 
 在 **"命令"** 页上的命令列表框中替换工具栏按钮。
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);
@@ -716,7 +716,7 @@ void ReplaceButton(
 *乌伊Cmd*<br/>
 [在]指定要替换的按钮的命令。
 
-*按钮*<br/>
+*button*<br/>
 [在]对替换旧按钮的工具栏按钮对象的**const**引用。
 
 ### <a name="remarks"></a>备注
@@ -750,7 +750,7 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 
 框架当前不使用用户类别设置。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

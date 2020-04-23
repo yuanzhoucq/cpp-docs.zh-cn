@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: d4b99a4992075072253d4f9b3182a926673bdfd0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de9db2713a25b232bbd7f936958d1c10e96c511a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373933"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753166"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 课程
 
@@ -90,7 +90,7 @@ BOOL IsFieldType(UINT* pnField);
 
 您需要`SetFieldType`在记录集类的[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)覆盖中调用。
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 
@@ -132,7 +132,7 @@ void SetFieldType(UINT nFieldType);
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)

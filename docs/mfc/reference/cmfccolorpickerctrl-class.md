@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367689"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752534"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFC颜色拾取器课程
 
@@ -184,7 +184,7 @@ COLORREF GetColor() const;
 
 检索用户选择的颜色的色调、亮度和饱和度值。
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ double GetSaturation() const;
 
 将当前颜色设置为指定 RGB 颜色分量或指定单元格六边形定义的颜色。
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -272,7 +272,7 @@ BOOL SelectCellHexagon(
 *B*<br/>
 [在]蓝色组件。
 
-** x <br/>
+*x*<br/>
 [在]光标的 x 坐标，它指向单元格六边形。
 
 *Y*<br/>
@@ -292,7 +292,7 @@ BOOL SelectCellHexagon(
 
 将当前颜色设置为指定的 RGB 颜色值。
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 将当前颜色设置为指定的 HLS 颜色值。
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 更改当前所选颜色的色调。
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 更改当前所选颜色的亮度。
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,7 +365,7 @@ void SetLuminance(double Luminance);
 
 设置颜色选取器控件中亮度条的宽度。
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
@@ -382,7 +382,7 @@ void SetLuminanceBarWidth(int w);
 
 设置初始所选颜色。
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ void SetOriginalColor(COLORREF ref);
 
 设置当前调色板。
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ void SetPalette(CPalette* pPalette);
 
 更改当前所选颜色的饱和度。
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 设置要显示的颜色选取器控件的类型。
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 
@@ -446,7 +446,7 @@ void SetType(COLORTYPE colorType);
 
 要指定颜色选取器控件类型，请在创建 Windows 控件之前调用此方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

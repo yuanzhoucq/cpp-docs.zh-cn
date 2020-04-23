@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374020"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753235"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 类
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |参数|说明|
-|*大小*|[在]指示位图大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)参数。|
+|size |[在]指示位图大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)参数。|
 |*pBits*|[出]指向接收 DIB 位值位置的数据指针的指针。|
 |*位图*|原始位图的句柄|
 |*clr透明*|指定原始位图的透明颜色的 RGB 值。|
@@ -174,7 +174,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 显示具有透明或半透明像素的位图。
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ void DrawAlpha(
 
 使用提供的填充和边框颜色绘制椭圆。
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ BOOL DrawGradientRing(
 
 画一条线。
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ void DrawLineA(
 
 使用提供的填充和边框颜色绘制矩形。
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ BOOL DrawShadow(
 
 用两个颜色渐变填充矩形区域。
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ void Fill4ColorsGradient(
 
 使用指定的颜色渐变填充矩形区域。
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ void FillGradient(
 
 使用指定的颜色渐变填充矩形区域。
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -605,7 +605,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 *H*<br/>
 [在]表示颜色色调的 0 和 1 之间的数字。
 
-*L*<br/>
+*我*<br/>
 [在]0 和 1 之间的数字，指示颜色的亮度。
 
 *S*<br/>
@@ -637,7 +637,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 *H*<br/>
 [在]表示颜色色调的 0 和 360 之间的数字。
 
-*L*<br/>
+*我*<br/>
 [在]0 和 1 之间的数字，指示颜色的亮度。
 
 *S*<br/>
@@ -737,7 +737,7 @@ static BYTE __stdcall HueToRGB(
 
 翻转矩形区域。
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -860,7 +860,7 @@ static void __stdcall RGBtoHSL(
 |*Rgb*|[在]RGB 值中的颜色。|
 |*H*|[出]指向双精度值的指针，该方法在其中存储颜色的色调。|
 |*S*|[出]指向双精度值的指针，该方法在其中存储颜色的饱和度。|
-|*L*|[出]指向双精度值的指针，该方法在其中存储颜色的轻盈度。|
+|*我*|[出]指向双精度值的指针，该方法在其中存储颜色的轻盈度。|
 
 ### <a name="remarks"></a>备注
 
@@ -924,7 +924,7 @@ static void __stdcall SetAlphaPixel(
 *矩形*<br/>
 [在]应用程序中的矩形区域。 绘图管理器在此区域的下方和右侧绘制阴影。
 
-** x <br/>
+*x*<br/>
 [在]像素到颜色的水平坐标。
 
 *Y*<br/>
@@ -970,7 +970,7 @@ static void __stdcall SetPixel(
 |*pBits*|[在]指向位图的位值的指针。|
 |*残雪*|[在]位图的总宽度。|
 |*cy*|[在]位图的总高度。|
-|** x |[在]要更改的位图中像素的 x 坐标。|
+|*x*|[在]要更改的位图中像素的 x 坐标。|
 |*Y*|[在]要更改的位图中像素的 y 坐标。|
 |*颜色*|[在]由提供的坐标标识的像素的新颜色。|
 
@@ -1012,7 +1012,7 @@ static COLORREF __stdcall SmartMixColors(
 
 将给定矩形内的源 DC 内容旋转 90 度。
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,
@@ -1032,7 +1032,7 @@ TRUE 表示旋转 +90 度;TRUE 表示旋转 90 度;FALSE 表示旋转 -90 度。
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

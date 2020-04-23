@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366884"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750800"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 类
 
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
 指定热键控件的样式。 应用控件样式的任意组合。 有关详细信息，请参阅 Windows SDK 中的[通用控件样式](/windows/win32/Controls/common-control-styles)。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -254,7 +254,7 @@ static CString GetKeyName(
 
 设置热键控件的键盘快捷方式。
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ void SetHotKey(
 
 调用此函数以定义热键控件的无效组合和默认修改器组合。
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);
@@ -319,7 +319,7 @@ void SetRules(
 
 当用户输入无效的键组合（由*wInvalidComb*中指定的标志定义）时，系统使用 OR 运算符将用户输入的键与*w 修改器*中指定的标志合并。 生成的键组合将转换为字符串，然后显示在热键控件中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)

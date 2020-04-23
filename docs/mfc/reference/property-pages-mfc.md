@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372995"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751139"
 ---
 # <a name="property-pages-mfc"></a>属性页 (MFC)
 
@@ -49,7 +49,7 @@ ms.locfileid: "81372995"
 
 在属性页的 `DoDataExchange` 函数中调用此函数可将整数属性与属性页的组合框中的当前选定项的索引同步。
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ void AFXAPI DDP_CBIndex(
 
 在属性页的`DoDataExchange`函数中调用此函数，以将字符串属性的值与属性页上的组合框中的当前选择同步。
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ void AFXAPI DDP_CBString(
 
 在属性页的`DoDataExchange`函数中调用此函数以同步与属性页上组合框中的当前选择完全匹配的字符串属性的值。
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ void AFXAPI DDP_CBStringExact(
 
 在属性页的`DoDataExchange`函数中调用此函数，以将属性的值与关联的属性页复选框控件同步。
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ void AFXAPI DDP_Check(
 
 在属性页的`DoDataExchange`函数中调用此函数，以在属性页上的列表框中将整数属性的值与当前选择的索引同步。
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ void AFXAPI DDP_LBIndex(
 
 在属性页的`DoDataExchange`函数中调用此函数，以将字符串属性的值与属性页上的列表框中的当前选择同步。
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ void AFXAPI DDP_LBString(
 
 在属性页的`DoDataExchange`函数中调用此函数以同步与属性页上列表框中的当前选择完全匹配的字符串属性的值。
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ void AFXAPI DDP_LBStringExact(
 
 在属性页的`DoDataExchange`函数中调用此函数，以在保存属性值时完成属性值从属性页传输到控件。
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 在控件的`DoPropExchange`函数中调用此函数，以将属性的值与关联的属性页单选按钮控件同步。
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ void AFXAPI DDP_Radio(
 
 在控件的`DoDataExchange`函数中调用此函数以将属性的值与关联的属性页控件同步。
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,
@@ -429,7 +429,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 *class_name*<br/>
 为其指定属性页的属性类的名称。
 
-*count*<br/>
+*计数*<br/>
 控件类使用的属性页数。
 
 ### <a name="remarks"></a>备注
@@ -480,6 +480,6 @@ PROPPAGEID(clsid)
 
   **头**afxctl.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

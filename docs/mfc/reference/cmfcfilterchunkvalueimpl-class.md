@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367507"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752358"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 类
 
@@ -111,7 +111,7 @@ CMFC过滤器块值块;
 
 hr = 块。SetBoolValue（PKEY_IsAttachment，真实）;
 
-or
+或
 
 hr = 块。设置文件时间值（PKEY_ItemDate，英尺已修改）;
 
@@ -129,7 +129,7 @@ hr = 块。设置文件时间值（PKEY_ItemDate，英尺已修改）;
 
 清除块值。
 
-```
+```cpp
 void Clear();
 ```
 
@@ -178,7 +178,7 @@ S_OK如果成功;否则是错误代码。
 
 从其他值初始化此块值。
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -327,7 +327,7 @@ HRESULT SetBoolValue(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -367,7 +367,7 @@ HRESULT SetChunk(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -411,7 +411,7 @@ HRESULT SetDwordValue(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -455,7 +455,7 @@ HRESULT SetFileTimeValue(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -499,7 +499,7 @@ HRESULT SetInt64Value(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -543,7 +543,7 @@ HRESULT SetIntValue(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -587,7 +587,7 @@ HRESULT SetLongValue(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -631,7 +631,7 @@ HRESULT SetSystemTimeValue(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -675,7 +675,7 @@ HRESULT SetTextValue(
 *块类型*<br/>
 标志指示此块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。
 
-*现场*<br/>
+*locale*<br/>
 与文本块关联的语言和子语言。 块区域设置由文档索引器用于执行正确的文本断字。 如果块既不是文本类型，也不是数据类型为VT_LPWSTR、VT_LPSTR 或VT_BSTR的值类型，则此字段将被忽略。
 
 *cwcLen来源*<br/>
@@ -693,6 +693,6 @@ S_OK如果成功;否则是错误代码。
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

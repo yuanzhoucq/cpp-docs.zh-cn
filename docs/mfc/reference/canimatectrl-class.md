@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: fcee569659d732c26e274c8ca189042a16f13557
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e570681c899d58e8659635d55da843c23d1e95ee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371076"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752883"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 类
 
@@ -206,7 +206,7 @@ virtual BOOL CreateEx(
 指定动画控件的样式。 应用 Windows SDK 中的[动画控件样式](/windows/win32/Controls/animation-control-styles)中描述的窗口和动画控件样式的任意组合。
 
 *矩形*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，描述要创建的窗口的大小和位置，在*pParentWnd*的客户端坐标中。
 
 *pparentwnd*<br/>
 指向控件的父窗口的指针。
@@ -350,7 +350,7 @@ BOOL Stop();
 
   请参阅[CAnimateCtrl 的示例：：CAnimateCtrl](#canimatectrl)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>

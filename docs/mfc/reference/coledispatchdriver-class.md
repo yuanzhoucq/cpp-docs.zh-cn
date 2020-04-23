@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366079"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753891"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 
@@ -103,7 +103,7 @@ OLE 调度接口提供对对象方法和属性的访问。 `COleDispatchDriver`�
 
 调用 `AttachDispatch` 成员函数以将 `IDispatch` 指针附加到 `COleDispatchDriver` 对象。 有关详细信息，请参阅 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ LPDISPATCH DetachDispatch();
 
 获取*dwDispID*指定的对象属性。
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ void GetProperty(
 
 在*wFlags*指定的上下文中调用*dwDispID*指定的对象方法或属性。
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -282,8 +282,8 @@ void AFX_CDECL InvokeHelper(
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
-|VT_I4|**长**|
-|VT_R4|**浮动**|
+|VT_I4|**long**|
+|VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
 |VT_DATE|**日期**|
@@ -291,7 +291,7 @@ void AFX_CDECL InvokeHelper(
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|**Bool**|
-|VT_VARIANT|**VARIANT**|
+|VT_VARIANT|**变异**|
 |VT_UNKNOWN|LPUNKNOWN|
 
 *pbParamInfo*参数是**VTS_** 常量的空间分隔列表。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能值使用 [EVENT_CUSTOM](event-maps.md#event_custom) 宏来列出。
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 释放`IDispatch`连接。 有关详细信息，请参阅实现[IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ void ReleaseDispatch();
 
 设置*dwDispID*指定的 OLE 对象属性。
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);

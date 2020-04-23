@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 4c5f4aa9a34e8cc8f30c0ef49f2f56c2bc2e0c3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374983"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753856"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 类
 
@@ -194,7 +194,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>COleIPFramewndEx：：添加网站
 
-```
+```cpp
 void AddDockSite();
 ```
 
@@ -231,7 +231,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>COleIPFramewndEx：:Dockpane
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -302,7 +302,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>COleIPFramewndEx：：启用PaneMenu
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -471,7 +471,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 指定框架分配给用户定义的工具栏的控件标识范围。
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -877,7 +877,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFramewndEx：：从Dock管理器中删除Pane
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -900,13 +900,13 @@ void RemovePaneFromDockManager(
 
 将指定的停靠状态应用于属于框架窗口的窗格。
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+State <br/>
 [在]指定停靠状态。
 
 ### <a name="remarks"></a>备注
@@ -917,7 +917,7 @@ void SetDockState(const CDockState& state);
 
 通过搜索虚拟项并将其替换为指定的用户定义项修改工具栏对象。
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -939,7 +939,7 @@ void SetupToolbarMenu(
 
 ## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>COleIPFramewndEx：：显示窗格
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -975,7 +975,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: b8158105d09d5cfc7c25512567a98121b194a82a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b566fe7f1c0667dbcdb4976f79cd2e1597f48f6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368292"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752770"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 类
 
@@ -95,7 +95,7 @@ CRichEditCntrItem(
 
 调用此函数以将设备`CRichEditCntrltem`方面[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)与*reo*指定的设备方面同步。
 
-```
+```cpp
 void SyncToRichEditObject(REOBJECT& reo);
 ```
 
@@ -108,7 +108,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 有关详细信息，请参阅 Windows SDK 中的[DVASPECT。](/windows/win32/api/wtypes/ne-wtypes-dvaspect)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem 类](../../mfc/reference/coleclientitem-class.md)<br/>

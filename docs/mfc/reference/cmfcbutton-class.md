@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367776"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754870"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 指定是在大型工具提示窗口中显示工具提示的全文，还是在小型工具提示窗口中显示文本的截断版本。
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 指定按钮文本字体是否与应用程序菜单字体相同。
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 将按钮设置为自动重复模式。
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 
 设置选中按钮的图像。
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 设置按钮文本的背景颜色。
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ void SetFaceColor(
 
 设置按钮的图像。
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ void SetImage(
 
 设置光标图像。
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 将光标设置到手的图像。
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ void SetMouseCursorHand();
 
 使用对象`CMenuImages`设置按钮图像。
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -924,7 +924,7 @@ void SetStdImage(
 *id*<br/>
 [在]枚举中定义的按钮图像标识符之一`CMenuImage::IMAGES_IDS`。 图像值指定图像，如箭头、引脚和单选按钮。
 
-*状态*<br/>
+State <br/>
 [在]枚举中定义的按钮图像状态标识符之一`CMenuImages::IMAGE_STATE`。 图像状态指定按钮颜色，如黑色、灰色、浅灰色、白色和深灰色。 默认值为 `CMenuImages::ImageBlack`。
 
 *ID 已禁用*<br/>
@@ -936,7 +936,7 @@ void SetStdImage(
 
 设置未选择的按钮的按钮文本的颜色。
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 设置所选按钮的按钮文本的颜色。
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 将工具提示与按钮关联。
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 
@@ -998,7 +998,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 
 默认情况下，此方法计算一个新大小，该大小包括 10 像素的水平边距和 5 像素的垂直边距。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

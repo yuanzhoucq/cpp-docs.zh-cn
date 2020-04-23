@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: 52989f7b523bf0ba9a00da350242a968ca0db153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 064ebe1c8fe377064d410d09e5ef60ed628df2f3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360471"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754007"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 类
 
@@ -638,7 +638,7 @@ static BOOL SetContentsAll(
 
 指定与按钮关联的快捷菜单的资源 ID。
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -685,7 +685,7 @@ virtual void SetStyle(UINT nStyle);
 
 此方法将[CMFCToolBarButton：：m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)设置为*nStyle*当应用程序处于自定义模式时，它还禁用文本框，并在应用程序未处于自定义模式时启用它（请参阅[CMFCToolBar：set自定义模式](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)和[CMFCToolBar：：是自定义模式](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)）。 有关有效样式标志的列表，请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

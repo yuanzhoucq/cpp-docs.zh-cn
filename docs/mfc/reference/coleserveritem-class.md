@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376119"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753742"
 ---
 # <a name="coleserveritem-class"></a>COleServer 项目类
 
@@ -175,7 +175,7 @@ class COleServerItem : public CDocItem
 
 调用此函数将 OLE 项的表示格式和转换格式放在指定`COleDataSource`对象中。
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ COleServerItem(
 
 调用此函数以将 OLE 项复制到剪贴板。
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ DROPVALUE 枚举中的值。 如果DROPEFFECT_MOVE，则应删除原始数据。
 
 调用此函数以填充指定的[COleDataSource](../../mfc/reference/coledatasource-class.md)对象，其中包含将复制到剪贴板的所有数据（如果您调用[CopyToClipboard](#copytoclipboard)[DoDragDrop，](#dodragdrop)也会传输相同的数据）。
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ COleServerDoc* GetDocument() const;
 
 调用此函数以获取 OLE 项CF_EMBEDSOURCE数据。
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 
 调用此函数以获取 OLE 项CF_OBJECTDESCRIPTOR数据。
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ CSize m_sizeExtent;
 
 更改链接项后调用此函数。
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -903,7 +903,7 @@ virtual BOOL OnSetExtent(
 
 - DVASPECT_DOCPRINT项表示，就好像它是使用"文件"菜单中的"打印"命令一样。
 
-*大小*<br/>
+size <br/>
 指定 OLE 项新大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)结构。
 
 ### <a name="return-value"></a>返回值
@@ -982,7 +982,7 @@ virtual void OnUpdateItems();
 
 创建链接项以设置其名称时调用此函数。
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 
@@ -995,7 +995,7 @@ void SetItemName(LPCTSTR lpszItemName);
 
 名称在文档中必须是唯一的。 当调用服务器应用程序编辑链接项时，应用程序使用此名称来查找该项目。 不需要为嵌入项调用此函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 样品 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem 类](../../mfc/reference/cdocitem-class.md)<br/>

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 3cb3217e02323f8a0afcd1639e6e24ee7b0f136e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc69143101c5d00d4f9a689bd02abdd9596e5b53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366142"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753922"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 类
 
@@ -159,7 +159,7 @@ dwFlags**<br/>
 
 - LOCALE_NOUSEROVERRIDE 使用系统默认区域设置，而不是自定义用户设置。
 
-*Lcid*<br/>
+*lcid*<br/>
 指示用于转换区域设置 ID。
 
 ### <a name="return-value"></a>返回值
@@ -469,7 +469,7 @@ dwFlags**<br/>
 
 - LOCALE_NOUSEROVERRIDE 使用系统默认区域设置，而不是自定义用户设置。
 
-*Lcid*<br/>
+*lcid*<br/>
 指示用于转换区域设置 ID。
 
 ### <a name="return-value"></a>返回值
@@ -518,7 +518,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 调用此成员函数以设置此`COleCurrency`对象的单位和小数部分。
 
-```
+```cpp
 void SetCurrency(
     long nUnits,
     long nFractionalUnits);
@@ -542,13 +542,13 @@ void SetCurrency(
 
 调用此成员函数以设置此`COleCurrency`对象的状态（有效性）。
 
-```
+```cpp
 void SetStatus(CurrencyStatus  status  );
 ```
 
 ### <a name="parameters"></a>参数
 
-*状态*<br/>
+*status*<br/>
 此`COleCurrency`对象的新状态。
 
 ### <a name="remarks"></a>备注
@@ -574,7 +574,7 @@ enum CurrencyStatus {
 > [!CAUTION]
 > 此功能适用于高级编程情况。 此函数不会更改此对象中的数据。 它最常用于将状态设置为 null 或无效。 请注意，赋值运算符 （[运算符 =](#operator_eq)） 和[SetCurrency](#setcurrency)会根据源值将对象的状态设置为 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [COleVariant 类](../../mfc/reference/colevariant-class.md)
