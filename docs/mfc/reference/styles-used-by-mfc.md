@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372919"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032390"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式
 
@@ -418,7 +418,7 @@ ms.locfileid: "81372919"
 |SS_BLACKRECT|指定一个矩形，该矩形填充用于绘制窗口框架的颜色。 默认为黑色。|
 |SS_CENTER|指定一个简单的矩形，并显示以矩形为中心的给定文本。 文本在显示之前已设置格式。 延伸到行尾的单词将自动换行到下一个中心行的开头。|
 |SS_CENTERIMAGE|指定如果位图或图标小于静态控件的工作区，则工作区的其余部分将填充位图或图标左上角的像素颜色。 如果静态控件包含一行文本，则文本在控件的工作区中垂直居中。|
-|SS_ENDELLIPSIS|或SS_PATHELLIPSIS如有必要，将给定字符串的一部分替换为椭圆，以便结果适合指定的矩形。 <br /><br />可以指定SS_END_ELLIPSIS替换字符串末尾的字符，也可以SS_PATHELLIPSIS替换字符串中间的字符。 如果字符串包含反斜杠 （\\） 字符，SS_PATHELLIPSIS保留最后一个反斜杠后尽可能多的文本。|
+|SS_ENDELLIPSIS|或SS_PATHELLIPSIS如有必要，将给定字符串的一部分替换为省略号，以便结果适合指定的矩形。 <br /><br />可以指定SS_END_ELLIPSIS替换字符串末尾的字符，也可以SS_PATHELLIPSIS替换字符串中间的字符。 如果字符串包含反斜杠 （\\） 字符，SS_PATHELLIPSIS保留最后一个反斜杠后尽可能多的文本。|
 |SS_ENHMETAFILE|指定增强的元文件将显示在静态控件中。 给定的文本是元文件的名称。 增强的元文件静态控件具有固定大小;元文件被缩放以适合静态控件的工作区。|
 |SS_ETCHEDFRAME|使用EDGE_ETCHED边样式绘制静态控件的框架。|
 |SS_ETCHEDHORZ|使用EDGE_ETCHED边样式绘制静态控件的顶部和底部边缘。|
@@ -439,7 +439,7 @@ ms.locfileid: "81372919"
 |SS_USERITEM|指定用户定义的项。|
 |SS_WHITEFRAME|指定绘制框架的框与窗口背景的颜色相同。 默认值为白色。|
 |SS_WHITERECT|指定一个矩形，该矩形填充用于填充窗口背景的颜色。 默认值为白色。|
-|SS_WORDELLIPSIS|截紧不适合的文本并添加椭圆。|
+|SS_WORDELLIPSIS|截紧不适合的文本并添加省略号。|
 
 ## <a name="window-styles"></a><a name="window-styles"></a>窗口样式
 
@@ -504,7 +504,7 @@ ms.locfileid: "81372919"
 |WS_EX_TRANSPARENT|指定使用此样式创建的窗口是透明的。 也就是说，该窗口下的任何窗口都不能被窗口遮盖。 使用此样式创建的窗口仅在更新其下的所有同级窗口后才会接收WM_PAINT消息。|
 |WS_EX_WINDOWEDGE|指定窗口具有具有凸起边的边框。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 类概述](../../mfc/class-library-overview.md)<br/>
 [CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>

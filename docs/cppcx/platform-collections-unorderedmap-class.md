@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354419"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031493"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -52,7 +52,7 @@ ref class Map sealed;
 
 - 公共枚举类
 
-**无序映射**基本上是用于支持存储 Windows 运行时类型的[unordered_map](../standard-library/unordered-map-class.md)的包装。 它是[Windows：：基础：集合：：IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)和[I 可观察映射](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)类型的具体实现，它们通过公共 Windows 运行时接口传递。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::UnorderedMap` 类型，则将引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)可修复该错误。
+**无序映射**基本上是用于支持存储 Windows 运行时类型的[unordered_map](../standard-library/unordered-map-class.md)的包装。 它是[Windows：：基础：集合：：IMap](/uwp/api/windows.foundation.collections.imap-2)和[I 可观察映射](/uwp/api/windows.foundation.collections.iobservablemap-2)类型的具体实现，它们通过公共 Windows 运行时接口传递。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::UnorderedMap` 类型，则将引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)可修复该错误。
 
 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>无序映射：：第一种方法
 
-返回指定第一个[Windows：：基础：集合：：iKeyValuePair\<K，V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)无序映射中的元素的迭代器。
+返回指定第一个[Windows：：基础：集合：：iKeyValuePair\<K，V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)无序映射中的元素的迭代器。
 
 ### <a name="syntax"></a>语法
 
@@ -126,7 +126,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>无序映射：：获取查看方法
 
-返回当前无序地图的只读视图;即[，平台：集合：：：](../cppcx/platform-collections-unorderedmapview-class.md)实现 [Windows：：基础：集合：集合：iMapView：：iMapView]/uwp/api/Windows.Foundation.集合.IMapView_K_V_）接口的无序 MapView 类。
+返回当前无序地图的只读视图;即[：平台：集合：：实现](../cppcx/platform-collections-unorderedmapview-class.md) [Windows：基础：集合：iMapView](/uwp/api/windows.foundation.collections.imapview-2)接口的无序 MapView 类。
 
 ### <a name="syntax"></a>语法
 
@@ -152,7 +152,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位 UnorderedMap 元素的键。 *键*的类型是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -174,7 +174,7 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 键值对中的键部分。 *键*的类型是类型名称*K*。
 
 *value*<br/>
@@ -198,7 +198,7 @@ V Lookup(
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位 UnorderedMap 中的元素的键。 *键*的类型是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>属性值/返回值
 
-[MapChangeEventHandler\<K，V>，](/uwp/api/windows.foundation.collections.mapchangedeventhandler)其中包含有关引发事件的对象以及发生的更改类型的信息。 另请参阅[IMapChangeEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)和[集合更改枚举](/uwp/api/windows.foundation.collections.collectionchange)。
+[MapChangeEventHandler\<K，V>，](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2)其中包含有关引发事件的对象以及发生的更改类型的信息。 另请参阅[IMapChangeEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1)和[集合更改枚举](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
@@ -236,12 +236,12 @@ virtual void Remove(
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 键值对中的键部分。 *键*的类型是类型名称*K*。
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>无序映射：：大小方法
 
-返回"无序地图"中[的窗口：：：基础：集合：：IKeyValuePair\<K，V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素。
+返回"无序地图"中[的窗口：：：基础：集合：：IKeyValuePair\<K，V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
 ### <a name="syntax"></a>语法
 
@@ -361,7 +361,7 @@ UnorderedMap(
 *最后*<br/>
 用于初始化当前 UnorderedMap 的一系列元素之后的第一个元素的输入迭代器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)<br/>
 [Platform::Collections 命名空间](../cppcx/platform-collections-namespace.md)<br/>

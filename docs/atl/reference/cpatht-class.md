@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746593"
+ms.locfileid: "82032129"
 ---
 # <a name="cpatht-class"></a>CPathT 类
 
@@ -102,8 +102,8 @@ class CPathT
 |[CPathT：规范化](#canonicalize)|调用此方法将路径转换为规范形式。|
 |[CPathT：：合并](#combine)|调用此方法将表示目录名称的字符串和表示文件路径名称的字符串串联到一个路径中。|
 |[CPathT：：通用前缀](#commonprefix)|调用此方法以确定指定的路径是否与当前路径共享公共前缀。|
-|[CPathT：：紧凑路径](#compactpath)|调用此方法可截取文件路径，方法是将路径组件替换为椭圆，以适合给定像素宽度。|
-|[CPathT：：压缩路径](#compactpathex)|调用此方法，通过将路径组件替换为椭圆来截取文件路径以适合给定数量的字符。|
+|[CPathT：：紧凑路径](#compactpath)|调用此方法可截取文件路径，方法是将路径组件替换为省略号，以适合给定像素宽度。|
+|[CPathT：：压缩路径](#compactpathex)|调用此方法，通过将路径组件替换为省略号来截取文件路径以适合给定数量的字符。|
 |[CPathT：文件存在](#fileexists)|调用此方法以检查此路径名称下的文件是否存在。|
 |[CPathT：：查找扩展](#findextension)|调用此方法以查找路径中文件扩展名的位置。|
 |[CPathT：：查找文件名](#findfilename)|调用此方法以查找文件名在路径中的位置。|
@@ -288,7 +288,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT：：紧凑路径
 
-调用此方法可截取文件路径，方法是将路径组件替换为椭圆，以适合给定像素宽度。
+调用此方法可截取文件路径，方法是将路径组件替换为省略号，以适合给定像素宽度。
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT：：压缩路径
 
-调用此方法，通过将路径组件替换为椭圆来截取文件路径以适合给定数量的字符。
+调用此方法，通过将路径组件替换为省略号来截取文件路径以适合给定数量的字符。
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

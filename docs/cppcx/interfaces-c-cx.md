@@ -2,12 +2,12 @@
 title: 接口 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366042"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032351"
 ---
 # <a name="interfaces-ccx"></a>接口 (C++/CX)
 
@@ -63,7 +63,7 @@ ms.locfileid: "81366042"
 
 ## <a name="generic-interfaces"></a>泛型接口
 
-在C++/CX 中`generic`，关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义了一些通用接口，例如[Windows：：基础：：集合：：iVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_)-但它不支持在C++/CX 中创建公共用户定义的泛型接口。 但可以创建私有泛型接口。
+在C++/CX 中`generic`，关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义了一些通用接口，例如[Windows：：基础：：集合：：iVector\<T>](/uwp/api/windows.foundation.collections.ivector-1)-但它不支持在C++/CX 中创建公共用户定义的泛型接口。 但可以创建私有泛型接口。
 
 以下是如何使用 Windows 运行时类型来创作通用界面：
 
@@ -95,7 +95,7 @@ ms.locfileid: "81366042"
 
 - 模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并将模板参数*T*传递给泛型参数*T*。模板化 ref 类的每个实例化本身就是一个 ref 类。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>

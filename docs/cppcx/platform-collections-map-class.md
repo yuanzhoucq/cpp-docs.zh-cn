@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354450"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032442"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
-表示一个 *映射*，它是键值对的集合。 实现[Windows：基础：集合：：I 可观察映射](/uwp/api/windows.foundation.collections.iobservablemap_k_v_)以帮助进行 XAML[数据绑定](/windows/uwp/data-binding/data-binding-in-depth)。
+表示一个 *映射*，它是键值对的集合。 实现[Windows：基础：集合：：I 可观察映射](/uwp/api/windows.foundation.collections.iobservablemap-2)以帮助进行 XAML[数据绑定](/windows/uwp/data-binding/data-binding-in-depth)。
 
 ## <a name="syntax"></a>语法
 
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - 公共枚举类
 
-映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 C++ 它是[Windows：：基础：集合：：iMap<Windows：基础：集合：：iKeyValuePair\<K，V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)和 I[可观察映射](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)类型，这些类型通过公共 Windows 运行时接口传递。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 您可以通过更改参数的类型或将值返回到[Windows：：基础：集合：：IMap\<K，V>来](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)修复错误。
+映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 C++ 它是[Windows：：基础：集合：：iMap<Windows：基础：集合：：iKeyValuePair\<K，V>>](/uwp/api/windows.foundation.collections.imap-2)和 I[可观察映射](/uwp/api/windows.foundation.collections.iobservablemap-2)类型，这些类型通过公共 Windows 运行时接口传递。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 您可以通过更改参数的类型或将值返回到[Windows：：基础：集合：：IMap\<K，V>来](/uwp/api/windows.foundation.collections.imap-2)修复错误。
 
 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
 
@@ -136,7 +136,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>映射：：获取视图方法
 
-返回当前地图的只读视图;即[，平台：集合：：mapView 类](../cppcx/platform-collections-mapview-class.md)，实现 [Windows：：基础：集合：集合：：IMapView\<K，V>]/uwp/api/Windows.Foundation.集合.IMapView_K_V_）接口。
+返回当前地图的只读视图;即[：平台：集合：mapView 类](../cppcx/platform-collections-mapview-class.md)，实现[Windows：：基础：集合\<：：IMapView K，V>](/uwp/api/windows.foundation.collections.imapview-2)接口。
 
 ### <a name="syntax"></a>语法
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位 Map 元素的键。 *键*的类型是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -179,7 +179,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 键值对中的键部分。 *键*的类型是类型名称*K*。
 
 *value*<br/>
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位映射中的元素的键。 *键*的类型是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>属性值/返回值
 
-[MapChangeEventHandler\<K，V>，](/uwp/api/windows.foundation.collections.mapchangedeventhandler)其中包含有关引发事件的对象以及发生的更改类型的信息。 另请参阅[IMapChangeEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)和[集合更改枚举](/uwp/api/windows.foundation.collections.collectionchange)。
+[MapChangeEventHandler\<K，V>，](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2)其中包含有关引发事件的对象以及发生的更改类型的信息。 另请参阅[IMapChangeEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1)和[集合更改枚举](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 键值对中的键部分。 *键*的类型是类型名称*K*。
 
 ## <a name="mapsize-method"></a><a name="size"></a>映射：大小方法
 
-返回地图中的[Windows：：基础：集合：：IKeyValuePair\<K，V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素。
+返回地图中的[Windows：：基础：集合：：IKeyValuePair\<K，V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
 ### <a name="syntax"></a>语法
 
@@ -293,7 +293,7 @@ virtual property unsigned int Size;
 
 Map 中的元素数目。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [集合 (C++/CX)](collections-c-cx.md)<br/>
 [平台命名空间](platform-namespace-c-cx.md)<br/>

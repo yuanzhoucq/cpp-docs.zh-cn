@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354397"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031480"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 
@@ -39,7 +39,7 @@ ref class UnorderedMapView sealed;
 
 ### <a name="remarks"></a>备注
 
-无序的 MapView 是[Windows：：基础：集合：：iMapView\<K，V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)接口 C++的具体实现，这些接口通过应用程序二进制接口 （ABI） 传递。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+无序的 MapView 是[Windows：：基础：集合：：iMapView\<K，V>](/uwp/api/windows.foundation.collections.imapview-2)接口 C++的具体实现，这些接口通过应用程序二进制接口 （ABI） 传递。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>无序的 MapView：第一种方法
 
-返回指定第一个[Windows：：基础：集合：：iKeyValuePair\<K，V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)无序映射中的元素的迭代器。
+返回指定第一个[Windows：：基础：集合：：iKeyValuePair\<K，V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)无序映射中的元素的迭代器。
 
 ### <a name="syntax"></a>语法
 
@@ -101,7 +101,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位元素的键。 的类型`key`是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -120,7 +120,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>参数
 
-*关键*<br/>
+*键*<br/>
 用于定位 UnorderedMapView 中的元素的键。 的类型`key`是类型名称*K*。
 
 ### <a name="return-value"></a>返回值
@@ -129,7 +129,7 @@ V Lookup(K key);
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>无序映射视图：大小方法
 
-返回"无序地图视图"中的窗口数[：：基础：集合：：iKeyValuePair\<K，V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素。
+返回"无序地图视图"中的窗口数[：：基础：集合：：iKeyValuePair\<K，V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
 ### <a name="syntax"></a>语法
 
@@ -239,7 +239,7 @@ UnorderedMapView 的类型名称。
 *最后*<br/>
 用于初始化 UnorderedMapView 的一系列元素之后的第一个元素的输入迭代器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Platform::Collections 命名空间](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

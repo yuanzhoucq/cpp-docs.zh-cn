@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363807"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032221"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 
@@ -40,7 +40,7 @@ template <typename T, typename E>
 
 ### <a name="remarks"></a>备注
 
-该`VectorView`类实现[Windows：基础：：集合：：iVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)接口，并支持标准模板库迭代器。
+该`VectorView`类实现[Windows：基础：：集合：：iVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1)接口，并支持标准模板库迭代器。
 
 ### <a name="members"></a>成员
 
@@ -250,13 +250,13 @@ VectorView(
 *N*<br/>
 用于初始化当前 VectorView 的对象集合中元素的数量。
 
-*大小*<br/>
+size <br/>
 VectorView 中元素的数量。
 
 *value*<br/>
 用于初始化当前 VectorView 中每个元素的值。
 
-*v*<br/>
+*五*<br/>
 用于初始化当前 VectorView 的 l[值和 R 值](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std：：矢量](../standard-library/vector-class.md)。
 
 *Ptr*<br/>
@@ -274,7 +274,7 @@ VectorView 中元素的数量。
 *最后*<br/>
 用于初始化当前 VectorView 的对象序列中的最后一个元素。 的类型`last`是通过*完美的转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)<br/>
 [用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

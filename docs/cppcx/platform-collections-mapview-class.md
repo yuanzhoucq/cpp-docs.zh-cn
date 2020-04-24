@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 98c146cec2febefee9c16528bee8f6be83f2a026
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750615"
+ms.locfileid: "82032429"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 
@@ -46,7 +46,7 @@ ref class MapView sealed;
 
 ### <a name="remarks"></a>备注
 
-MapView 是[Windows：：基础：集合：：IMapView \<K，V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)接口的具体 C++实现，该接口通过应用程序二进制接口 （ABI） 传递。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+MapView 是[Windows：：基础：集合：：IMapView \<K，V>](/uwp/api/windows.foundation.collections.imapview-2)接口的具体 C++实现，该接口通过应用程序二进制接口 （ABI） 传递。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 

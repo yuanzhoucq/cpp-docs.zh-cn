@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: bae2472a75ab77f138fcee0951a6b869cc7c8e82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 066918bf2c76b17f06871ee08be674be9b36c161
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372563"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032455"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 类
 
@@ -41,10 +41,10 @@ class DeferrableEventArgs : public TEventArgsInterface;
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                         | 说明
------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------
-[可推断事件：：获取递延](#getdeferral)             | 获取对表示延迟事件的[延迟](/uwp/api/windows.foundation.deferral)对象的引用。
-[可推断事件阿格：：调用全部完成](#invokeallfinished) | 调用以指示处理延迟事件的全部过程都已完成。
+| 名称 | 说明 |
+|--|--|
+| [可推断事件：：获取递延](#getdeferral) | 获取对表示延迟事件的[延迟](/uwp/api/windows.foundation.deferral)对象的引用。 |
+| [可推断事件阿格：：调用全部完成](#invokeallfinished) | 调用以指示处理延迟事件的全部过程都已完成。 |
 
 ## <a name="remarks"></a>备注
 

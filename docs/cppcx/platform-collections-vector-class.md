@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354375"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032117"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
-表示可按照索引单独访问的对象的有序集合。 实现[Windows：基础：集合：：I 可观察Vector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)以帮助进行 XAML[数据绑定](/windows/uwp/data-binding/data-binding-in-depth)。
+表示可按照索引单独访问的对象的有序集合。 实现[Windows：基础：集合：：I 可观察Vector](/uwp/api/windows.foundation.collections.iobservablevector-1)以帮助进行 XAML[数据绑定](/windows/uwp/data-binding/data-binding-in-depth)。
 
 ## <a name="syntax"></a>语法
 
@@ -61,9 +61,9 @@ template <typename T, typename E>
 
 1. 公共枚举类
 
-**Vector**类是[Windows：：基础：集合：：iVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)接口C++具体实现。
+**Vector**类是[Windows：：基础：集合：：iVector](/uwp/api/windows.foundation.collections.ivector-1)接口C++具体实现。
 
-如果尝试在公共返回值或参数中使用**Vector**类型，则引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+如果尝试在公共返回值或参数中使用**Vector**类型，则引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 
@@ -96,7 +96,7 @@ template <typename T, typename E>
 |||
 |-|-|
 |名称|说明|
-|事件[窗口：：基础：集合：：：矢量更改事件\<处理程序 T>= 矢量更改](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|当向量更改时发生。|
+|事件[窗口：：基础：集合：：：矢量更改事件\<处理程序 T>= 矢量更改](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|当向量更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -372,13 +372,13 @@ Vector(std::initializer_list<T> il);
 *N*<br/>
 用于初始化当前向量的对象集合中的元素数。
 
-*大小*<br/>
+size <br/>
 向量中元素的数目。
 
 *value*<br/>
 用于初始化当前向量中每个元素的值。
 
-*v*<br/>
+*五*<br/>
 用于初始化当前矢量的 l[值和 r 值](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std：：矢量](../standard-library/vector-class.md)。
 
 *Ptr*<br/>
@@ -390,7 +390,7 @@ Vector(std::initializer_list<T> il);
 *最后*<br/>
 用于初始化当前向量的对象序列中的最后一个元素。 *最后*一种是通过*完美的转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [集合 (C++/CX)](collections-c-cx.md)<br/>
 [平台命名空间](platform-namespace-c-cx.md)<br/>

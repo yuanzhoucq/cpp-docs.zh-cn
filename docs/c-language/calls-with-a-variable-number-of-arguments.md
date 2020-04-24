@@ -5,22 +5,22 @@ helpviewer_keywords:
 - arguments [C++], function
 - arguments [C++], variable number of
 - VARARGS.H
-- ellipses (...), variable number of arguments
+- ellipsis (...), variable number of arguments
 - STDARGS.H
 - function calls, arguments
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: f358d0a6d9369aed27dc7e3efa1ce88fbacee343
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150111"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032104"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>使用数目可变的自变量调用
 
-部分参数列表可由省略号表示法（一个逗号后跟三个句点 (, ...) 终止，以指示可能有多个自变量传递给函数，但没有有关这些自变量的详细信息。 对此类自变量不执行类型检查。 省略号表示法前面必须至少有一个参数，并且省略号表示法必须是参数列表中的最后一个标记。 如果没有省略号表示法，当函数收到除参数列表中声明的参数以外的参数时，该函数的行为是不确定的。
+部分参数列表可由省略号表示法（一个逗号后跟三个句点 (, ...****) 终止，以指示可能有多个自变量传递给函数，但没有有关这些自变量的详细信息。 对此类自变量不执行类型检查。 省略号表示法前面必须至少有一个参数，并且省略号表示法必须是参数列表中的最后一个标记。 如果没有省略号表示法，当函数收到除参数列表中声明的参数以外的参数时，该函数的行为是不确定的。
 
 若要调用具有可变数量的参数的函数，只需在函数调用中指定任意数量的参数即可。 一个示例是 C 运行库中的 `printf` 函数。 函数调用必须包含参数列表或参数类型列表中声明的每个类型名称的一个参数。
 

@@ -1,19 +1,26 @@
 ---
 title: 原始指针 （C++）
 description: 如何使用原始指针C++
-ms.date: 11/19/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+no-loc:
+- void
+- nullptr
+- const
+- char
+- new
+- delete
+ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374665"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032091"
 ---
 # <a name="raw-pointers-c"></a>原始指针 （C++）
 
-指针是一种变量类型，用于将对象的地址存储在内存中，并用于访问该对象。 *原始指针*是一个指针，其生存期不受封装对象（如[智能指针](smart-pointers-modern-cpp.md)）控制的控制。 可以为原始指针分配另一个非指针变量的地址，也可以为其分配[nullptr](nullptr.md)的值。 尚未分配值的指针包含随机数据。
+*指针*是变量的类型。 它将对象的地址存储在内存中，并用于访问该对象。 *原始指针*是一个指针，其生存期不受封装对象（如[智能指针](smart-pointers-modern-cpp.md)）控制的控制。 可以为原始指针分配另一个非指针变量的地址，也可以为其分配值[nullptr](nullptr.md)。 尚未分配值的指针包含随机数据。
 
 也可以*取消引用*指针以检索它指向的对象的值。 *成员访问运算符*提供对对象成员的访问。
 
@@ -23,19 +30,17 @@ ms.locfileid: "81374665"
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
-
 ```
 
-指针可以指向类型化对象或**void**。 当程序在内存中的[堆](https://wikipedia.org/wiki/Heap)上分配新对象时，它将以指针的形式接收该对象的地址。 此类指针称为*拥有指针*;必须使用拥有指针（或其副本）在不再需要堆分配的对象时显式删除它。 未能删除内存会导致*内存泄漏*，并使该内存位置对计算机上的任何其他程序不可用。 有关详细信息，请参阅[新的运算符和删除运算符](new-and-delete-operators.md)。
+指针可以指向类型化对象或**void**。 当程序在内存中的[堆](https://wikipedia.org/wiki/Heap)上分配对象时，它将以指针的形式接收该对象的地址。 此类指针称为*拥有指针*。 必须使用拥有指针（或其副本）在不再需要堆分配的对象时显式释放它。 无法释放内存会导致*内存泄漏*，并使该内存位置对计算机上的任何其他程序不可用。 使用**new** 分配的内存必须使用**delete**（或**delete\[]** 释放）。 有关详细信息，请参阅[new和delete运算符](new-and-delete-operators.md)。
 
 ```cpp
-
     MyClass* mc = new MyClass(); // allocate object on the heap
     mc->print(); // access class member
     delete mc; // delete object (please don't forget!)
 ```
 
-指针（如果未声明为**const）** 可以递增或递减，以便指向内存中的新位置。 这称为*指针算术*，用于 C 样式编程，用于迭代数组或其他数据结构中的元素。 不能用**const**指针指向不同的内存位置，因此与[引用](references-cpp.md)非常相似。 有关详细信息，请参阅[const 和易失性指针](const-and-volatile-pointers.md)。
+指针（如果未声明为**const**）可以递增或递减以指向内存中的另一个位置。 此操作称为*指针算术*。 它用于 C 样式编程，用于迭代数组或其他数据结构中的元素。 不能**const** 用指针指向不同的内存位置，因此与[引用](references-cpp.md)类似 。 有关详细信息，请参阅[const和易失性指针](const-and-volatile-pointers.md)。
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +54,13 @@ ms.locfileid: "81374665"
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-在 64 位操作系统上，指针的大小为 64 位;系统的指针大小决定了它可以具有多少可寻址内存。 指针的所有副本都指向同一内存位置。 指针（以及引用）在C++中广泛使用，用于将较大的对象传递到函数，因为复制对象的 64 位地址通常比复制整个对象更有效。 定义函数时，将指针参数指定为**const，** 除非您打算让函数修改对象。 通常 **，const**引用是将对象传递给函数的首选方法，除非对象的值可能是**nullptr。**
+在 64 位操作系统上，指针的大小为 64 位。 系统的指针大小决定了它可以具有多少可寻址内存。 指针的所有副本都指向同一内存位置。 指针（以及引用）在C++中广泛使用，以传递较大的对象和从函数传递。 这是因为复制对象的地址通常比复制整个对象更有效。 定义函数时，将指针参数指定为，**const** 除非您打算修改该函数。 通常，**const** 引用是将对象传递给函数的首选方法，除非对象的值可能是**nullptr**。
 
 [函数的指针](#pointers_to_functions)允许函数传递到其他函数，并用于 C 样式编程中的"回调"。 现代C++为此使用[lambda 表达式](lambda-expressions-in-cpp.md)。
 
 ## <a name="initialization-and-member-access"></a>初始化和成员访问
 
-下面的示例演示如何声明原始指针并使用在堆上分配的对象初始化它，以及如何使用它。 它还显示了与原始指针相关的一些危险。 （请记住，这是 C 样式编程，而不是现代C++！
+下面的示例演示如何声明、初始化和使用原始指针。 它的初始化用于**new** 指向在堆上分配的对象，您必须显式使用**delete**。 该示例还显示了与原始指针相关的一些危险。 （请记住，此示例是 C 样式编程，而不是现代C++！
 
 ```cpp
 #include <iostream>
@@ -119,13 +124,13 @@ int main()
     pmc2->print(); // "Erika, 108"
 
     // Pass the pointer to a function.
-    func_A(mc);
+    func_A(pmc);
     pmc->print(); // "Erika, 3"
     pmc2->print(); // "Erika, 3"
 
     // Dereference the pointer and pass a copy
     // of the pointed-to object to a function
-    func_B(*mc);
+    func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
     delete(pmc); // don't forget to give memory back to operating system!
@@ -166,9 +171,9 @@ int main()
 }
 ```
 
-可以对非 const 指针执行某些算术运算，使它们指向新的内存位置。 可以使用**++**、**+=****-=** 和**--** 运算符递增和递减指针。 此技术可用于数组，在未键入数据的缓冲区中特别有用。 **空隙\*** 以**字符**（1 字节）的大小递增。 类型化指针按其指向的类型的大小递增。
+某些算术运算可用于非const指针，使它们指向另一个内存位置。 **++** 指针使用**+=**、**-=** 和 运算符递增和**--** 递减。 此技术可用于数组，在未键入数据的缓冲区中特别有用。 获取**void** 以**char**（1 字节） 的大小递增。 键入的指针会按它指向的类型的大小递增。
 
-下面的示例演示如何使用指针算术访问 Windows 上的位图中的单个像素。 请注意**使用 new**和**delete**， 以及取消引用运算符。
+下面的示例演示如何使用指针算术访问 Windows 上的位图中的单个像素。 请注意 和**delete****new** 和 和 的 引用运算符的使用。
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>空* 指针
+## <a name="opno-locvoid-pointers"></a>void• 指针
 
-指向**void**的指针仅指向原始内存位置。 有时需要使用**void\*** 指针，例如，在C++代码和 C 函数之间传递时。
+指向**void** 原始内存位置的指针。 有时有必要使用**void** 指针，例如，在C++代码和 C 函数之间传递时。
 
-当类型化指针被强制转换为 void 指针时，内存位置的内容不会更改，但类型信息将丢失，因此无法执行增量或递减操作。 例如，可以将内存位置强制转换，例如，从 MyClass® 到 void*，然后再次转换回 MyClass*。 此类操作本质上是容易出错的，需要非常小心以避免错误。 除非绝对必要，否则现代C++禁止使用无效指针。
+当类型化指针被投射到指针时void，内存位置的内容将保持不变。 但是，类型信息将丢失，因此无法执行增量或递减操作。 例如，可以将内存位置强制转换为 ，从`MyClass*`到`void*`和 返回`MyClass*`到 。 此类操作本质上是容易出错的，需要非常小心以避免错误。 现代C++阻止在几乎所有情况下使用void指针。
 
 ```cpp
 
@@ -293,7 +298,7 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>指向函数的指针
 
-在 C 样式编程中，函数指针主要用于将函数传递给其他函数。 在这种情况下，调用方可以自定义函数的行为，而无需对其进行修改。 在现代C++中[，lambda 表达式](lambda-expressions-in-cpp.md)提供了相同的功能，具有更大的类型安全性和其他优势。
+在 C 样式编程中，函数指针主要用于将函数传递给其他函数。 此技术允许调用方自定义函数的行为，而无需对其进行修改。 在现代C++中[，lambda 表达式](lambda-expressions-in-cpp.md)提供了相同的功能，具有更大的类型安全性和其他优势。
 
 函数指针声明指定指向函数必须具有的签名：
 
@@ -311,7 +316,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-下面的示例显示一个函数`combine`，该函数将接受`std::string`和 返回 的任何函数作为`std::string`参数。 根据传递给`combine`它的函数，将预置或追加字符串。
+下面的示例显示一个函数`combine`，该函数将接受`std::string`和 返回 的任何函数作为`std::string`参数。 根据传递给`combine`的函数，它要么准备或追加字符串。
 
 ```cpp
 #include <iostream>
@@ -343,7 +348,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [智能指针](smart-pointers-modern-cpp.md)
 [方向运算符： |](indirection-operator-star.md)<br/>

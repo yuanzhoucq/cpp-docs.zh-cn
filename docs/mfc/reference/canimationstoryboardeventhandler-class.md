@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: 36b8b524591693775403d66fdc1f0754aaf67778
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 986555ca91d19dfa838f807665f2cbf9a003bcef
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365002"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755106"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler 类
 
@@ -142,7 +142,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 存储指向动画控制器的指针以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -151,6 +151,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *动画控制器*<br/>
 指向动画控制器的指针，该控制器将接收事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

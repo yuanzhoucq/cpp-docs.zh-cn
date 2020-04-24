@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369736"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755152"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 类
 
@@ -102,7 +102,7 @@ CAnimationPoint 类封装了两个 CAnimationvariable 对象，可以在应用�
 
 添加 X 和 Y 坐标的过渡。
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -270,7 +270,7 @@ CAnimationPoint 作为 CPoint 的当前值。
 
 将 ptSrc 分配给 C 动画点。
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
@@ -287,7 +287,7 @@ void operator=(const CPoint& ptSrc);
 
 设置默认值。
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 
@@ -300,6 +300,6 @@ void SetDefaultValue(const POINT& ptDefault);
 
 使用此函数可为动画对象设置默认值。 此方法将默认值分配给动画点的 X 和 Y 坐标。 它还会重新创建基础 COM 对象（如果已创建）。 如果将此动画对象订阅到事件（Value已更改或整数值更改），则需要重新启用这些事件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

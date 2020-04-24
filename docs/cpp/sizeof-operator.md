@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ae581b1b3bea522f2c1557b8be44ee1f32eef1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365572"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032286"
 ---
 # <a name="sizeof-operator"></a>sizeof 运算符
 
 相对于**字符**类型的大小，生成其操作数的大小。
 
 > [!NOTE]
-> 有关运算符的信息，`sizeof ...`请参阅[椭圆和瓦里亚迪奇模板](../cpp/ellipses-and-variadic-templates.md)。
+> 有关运算符的信息，`sizeof ...`请参阅[椭圆和可变模板](../cpp/ellipses-and-variadic-templates.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -103,7 +103,7 @@ The size of the pointer is 4
 sizeof array / sizeof array[0]
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [具有一元运算符的表达式](../cpp/expressions-with-unary-operators.md)<br/>
 [Keywords](../cpp/keywords-cpp.md)

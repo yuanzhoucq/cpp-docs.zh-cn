@@ -1,15 +1,15 @@
 ---
-title: 省略号和可变参数模板
+title: 椭圆和瓦里亚迪奇模板
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366340"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031519"
 ---
-# <a name="ellipses-and-variadic-templates"></a>省略号和可变参数模板
+# <a name="ellipsis-and-variadic-templates"></a>椭圆和瓦里亚迪奇模板
 
 本文演示如何将省略号 （）`...`与C++可变模板一起使用. 椭圆在C和C++中有许多用途。 其中包括函数的变量参数列表。 C`printf()`运行时库中的函数是最广为人知的示例之一。
 
