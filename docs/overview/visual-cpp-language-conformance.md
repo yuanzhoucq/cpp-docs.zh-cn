@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 8a5ffb5b3ab4bc80cb200b41752b19d1c958ece6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 18f8db28fab83f795baced82a346f07d73256716
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079362"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365228"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 语言一致性表
 
@@ -385,33 +385,34 @@ ms.locfileid: "80079362"
 
 ### <a name="notes"></a>说明
 
-<a name="note_A"></a>__A__：在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 模式下，动态异常规范一直处于未实现状态，且 `throw()` 仍被视为 `__declspec(nothrow)` 的同义词。 在 C++17 中，动态异常规范大部分已被 P0003R5 删除，只有一个残留部分：`throw()` 已遭弃用，并被要求起到 `noexcept` 的同义词作用。 在 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 模式下，MSVC 现通过赋予 `throw()` 与 `noexcept` 相同的行为（即通过终止强制执行）来符合标准。
+<a name="note_A"></a> __A__ 在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 模式下，动态异常规范一直处于未实现状态，且 `throw()` 仍被视为 `__declspec(nothrow)` 的同义词。 在 C++17 中，动态异常规范大部分已被 P0003R5 删除，只有一个残留部分：`throw()` 已遭弃用，并被要求起到 `noexcept` 的同义词作用。 在 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 模式下，MSVC 现通过赋予 `throw()` 与 `noexcept` 相同的行为（即通过终止强制执行）来符合标准。
 
 编译器选项 [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) 请求 `__declspec(nothrow)` 的旧行为。 很可能 `throw()` 会从 C++20 中删除。 为帮助迁移代码，以响应标准和实现中的这些更改，在 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 和 [/permissive-](../build/reference/permissive-standards-conformance.md) 下添加了异常规范问题的新编译器警告。
 
-<a name="note_B"></a>__B__：受 Visual Studio 2017 版本 15.7 中的 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式支持。 有关详细信息，请参阅 [MSVC 引入两阶段名称查找支持](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)。
+<a name="note_B"></a> __B__ 受 Visual Studio 2017 版本 15.7 中的 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式支持。 有关详细信息，请参阅 [MSVC 引入两阶段名称查找支持](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)。
 
-<a name="note_C"></a>__C__：编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 我们正在修改预处理器，已开始在 Visual Studio 2017 版本 15.8 中交付这些更改，并提供 [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 编译器开关。
+<a name="note_C"></a> __C__ 编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 我们正在修改预处理器，已开始在 Visual Studio 2017 版本 15.8 中交付这些更改，并提供 [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 编译器开关。
 
-<a name="note_D"></a>__D__：在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可取消的警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
+<a name="note_D"></a> __D__ 在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 下受支持，并且出现警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)，可禁止该警告。
 
-<a name="note_E"></a>__E__：此为全新实现，与之前的 `std::experimental` 版本不兼容，这对符号链接支持、bug 修复以及更改必须符合标准的行为而言是必不可少的。 目前，添加 \<filesystem> 可提供新 `std::filesystem` 和旧 `std::experimental::filesystem`，而添加 \<experimental/filesystem> 则仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。
+<a name="note_E"></a> __E__ 此为全新实现，与之前的 `std::experimental` 版本不兼容，这对符号链接支持、bug 修复以及更改必须符合标准的行为而言是必不可少的。 目前，添加 \<filesystem> 可提供新 `std::filesystem` 和旧 `std::experimental::filesystem`，而添加 \<experimental/filesystem> 则仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。
 
-<a name="note_G"></a>__G__：受编译器内部函数支持。
+<a name="note_G"></a> __G__ 受编译器内部函数支持。
 
-<a name="note_14"></a>__14__ 即使指定了 [/std:c++14](../build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17/20 功能也始终处于启用状态。 这是因为在引入 /std  选项之前实现了该功能，或者因为条件实现异常复杂。
+<a name="note_14"></a> __14__ 即使指定了 [/std:c++14](../build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17/20 功能也始终处于启用状态。 这是因为在引入 /std  选项之前实现了该功能，或者因为条件实现异常复杂。
 
-<a name="note_17"></a>__17__ 这些功能由 [/std:c++17](../build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)）编译器选项启用。
+<a name="note_17"></a> __17__ 这些功能由 [/std:c++17](../build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)）编译器选项启用。
 
-<a name="note_20"></a>__20__：这些功能由 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项启用。 C++20 实现完成后，将添加新的 **/std:c++20** 编译器选项，在该选项下，这些功能也将可用。
+<a name="note_20"></a> __20__ 这些功能由 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项启用。 C++20 实现完成后，将添加新的 **/std:c++20** 编译器选项，在该选项下，这些功能也将可用。
 
-<a name="note_byte"></a>__byte__`std::byte` 由 [/std:c++17](../build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)）启用，但由于它在某些情况下可能会与 Windows SDK 标头冲突，因此它具有细化的选择退出宏。 可以通过将 `_HAS_STD_BYTE` 定义为 `0` 将其禁用。
+<a name="note_byte"></a> __byte__`std::byte` 由 [/std:c++17](../build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)）启用，但由于它在某些情况下可能会与 Windows SDK 标头冲突，因此它具有细化的选择退出宏。 可以通过将 `_HAS_STD_BYTE` 定义为 `0` 将其禁用。
 
-<a name="note_C11"></a>__C11__ 通用 CRT 实现了 C++17 所需的部分 C11 标准库，不包括 C99 `strftime()` E/O 备用转换说明符、C11 `fopen()` 独占模式和 C11 `aligned_alloc()`。 后者不太可能实现，因为 C11 以与 `free()` 的 Microsoft 实现不兼容的方式指定了 `aligned_alloc()`，即 `free()` 必须能够处理高度一致的分配。
+<a name="note_C11"></a> __C11__ 通用 CRT 实现了 C++17 所需的部分 C11 标准库，不包括 C99 `strftime()` E/O 备用转换说明符、C11 `fopen()` 独占模式和 C11 `aligned_alloc()`。 后者不太可能实现，因为 C11 以与 `free()` 的 Microsoft 实现不兼容的方式指定了 `aligned_alloc()`，即 `free()` 必须能够处理高度一致的分配。
 
-指定 [/std:c++17](../build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)）编译器选项后会删除 <a name="note_rem"></a>__rem__ 功能。 可以重新启用这些功能，以使用下面这些宏轻松转换为较新的语言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。
+<a name="note_rem"></a> __rem__ 指定 [/std:c++17](../build/reference/std-specify-language-standard-version.md) (or [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) 编译器选项后，会删除功能。 可以重新启用这些功能，以使用下面这些宏轻松转换为较新的语言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。
 
-<a name="note_charconv"></a>__charconv__ `from_chars()`和 `to_chars()` 适用于整数。 浮点 `from_chars()` 和浮点 `to_chars()` 的时间线如下所示：
+<a name="note_charconv"></a> __charconv__ `from_chars()`和 `to_chars()` 适用于整数。 浮点 `from_chars()` 和浮点 `to_chars()` 的时间线如下所示：
+
 - VS 2017 15.7：整数 `from_chars()` 和 `to_chars()`。
 - VS 2017 15.8：浮点 `from_chars()`。
 - VS 2017 15.9：浮点 `to_chars()` 重载，以实现最短十进制。

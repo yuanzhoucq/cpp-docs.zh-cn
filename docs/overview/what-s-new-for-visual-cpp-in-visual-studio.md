@@ -3,12 +3,12 @@ title: Visual Studio 中的 C++ 新变化
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 9b656d4e13fe241c22a9c555d1c597016c5353d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415726"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366823"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -368,7 +368,7 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 
 - 已经实现了几个其他的 C++17 功能。 有关详细信息，请参阅 [Microsoft C++ 语言一致性表](cpp-conformance-improvements.md#improvements_153)。
 - 实现了 P0602R0“变体和可选项应传播副本/移动琐碎事项”。
-- 现在，标准库正式允许通过 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 选项禁用动态 RTTI。 `dynamic_pointer_cast()` 和 `rethrow_if_nested()` 必定需要 `dynamic_cast`，因此标准库现在 /GR- 下将其标记为 `=delete`  。
+- 现在，标准库正式允许通过 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 选项禁用动态 RTTI。 `dynamic_pointer_cast()` 和 `rethrow_if_nested()` 必定需要 `dynamic_cast`，因此标准库现在 /GR- 下将其标记为 `=delete` 。
 - 即使已通过 /GR- 禁用了动态 RTTI，“静态 RTTI”（采用 `typeid(SomeType)` 形式）仍可用，并为多个标准库组件提供支持  。 现在，标准库也支持通过 /D\_HAS\_STATIC\_RTTI=0 禁用此功能  。 此标志还将禁用 `std::any`、`std::function` 的 `target()` 和 `target_type()` 成员函数，以及 `std::shared_ptr` 和 `std::weak_ptr` 的 `get_deleter()` 友元成员函数。
 - 标准库现在无条件地使用 C++14 `constexpr`，而不是有条件定义的宏。
 - 标准库现在内部使用别名模板。
@@ -377,7 +377,7 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 - 将 `static_assert(false, "message")` 更改为了 `#error message`。 此更改提高了编译器诊断，因为 `#error` 立即停止编译。
 - 标准库不再将函数标记为 `__declspec(dllimport)`。 新式链接器技术不再需要此操作。
 - 已将 SFINAE 提取到默认模板参数，与返回类型和函数参数类型相比，这可以减少混乱。
-- \<random\> 中的调试检查现在使用标准库的常用机制，而不是使用将 `fputs()` 调用到 stderr 的内部函数 `_Rng_abort()`  。 保留此函数的实现以实现二进制兼容性，但在标准库的下一个二进制不兼容版本中已删除。
+- \<random\> 中的调试检查现在使用标准库的常用机制，而不是使用将 `fputs()` 调用到 stderr 的内部函数 `_Rng_abort()` 。 保留此函数的实现以实现二进制兼容性，但在标准库的下一个二进制不兼容版本中已删除。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 版本 15.5
 

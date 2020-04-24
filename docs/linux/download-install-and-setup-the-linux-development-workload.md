@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安装 C++ Linux 工作负载
 description: 介绍如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负荷。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077643"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364331"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
@@ -36,7 +36,7 @@ Visual Studio 2017 及更高版本支持 Linux 项目。
 
    ![Windows 搜索框](media/visual-studio-installer-search.png)
 
-2. 在“应用”结果下寻找安装程序并双击它  。 打开该安装程序后，选择“修改”  ，然后单击“工作负荷”  选项卡。向下滚动到“其他工具集”  ，然后选择  “使用 C++ 的 Linux 开发”工作负荷。
+1. 在“应用”结果下寻找安装程序并双击它  。 打开该安装程序后，选择“修改”  ，然后单击“工作负荷”  选项卡。向下滚动到“其他工具集”  ，然后选择  “使用 C++ 的 Linux 开发”工作负荷。
 
    ![适用于 Linux 开发的 Visual C++ 工作负荷](media/linuxworkload.png)
 
@@ -62,6 +62,7 @@ Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装�
 - **make**
 - openssh-server  （仅适用于远程 Linux 系统）- Visual Studio 通过安全 SSH 连接以连接到远程 Linux 系统。
 - **CMake**（仅 CMake 项目）- 可以[为 Linux 安装 Microsoft 的静态链接的 CMake 二进制文件](https://github.com/microsoft/CMake/releases)。
+- **ninja-build**（仅限 CMake 项目）- [Ninja](https://ninja-build.org/) 是 Visual Studio 2019 版本 16.6 或更高版本中 Linux 和 WSL 配置的默认生成器。
 
 以下命令假设你使用的是 g++ 而非 clang。
 
@@ -84,10 +85,10 @@ Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装�
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 安装程序：WSL 上的 Ubuntu
 
-以 WSL 为目标时，无需添加远程连接或配置 SSH 即可进行生成和调试。 使用 Visual Studio for Intellisense 支持自动同步 Linux 标头需要 zip 和 rsync   。 如果所需应用程序尚不存在，则可以按如下所述进行安装：
+以 WSL 为目标时，无需添加远程连接或配置 SSH 即可进行生成和调试。 使用 Visual Studio for Intellisense 支持自动同步 Linux 标头需要 zip 和 rsync   。 如果所需应用程序尚不存在，则可以按如下所述进行安装。 仅 CMake 项目需要 ninja-build  。
 
 ```bash
-sudo apt-get install g++ gdb make rsync zip
+sudo apt-get install g++ gdb make ninja-build rsync zip
 ```
 
 ::: moniker-end
@@ -96,12 +97,12 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>远程 Linux 系统上的 Ubuntu
 
-目标 Linux 系统必须安装 openssh-server、g++、gdb 和 make，并且必须运行 ssh 守护程序     。 需要 zip  和 rsync  才能自动将远程标头与本地计算机同步以获得 Intellisense 支持。 如果这些应用程序尚不存在，则可以按如下所述进行安装：
+目标 Linux 系统必须安装 openssh-server、g++、gdb、ninja-build（仅限 CMake 项目）和 make，并且必须运行 ssh 守护程序      。 需要 zip  和 rsync  才能自动将远程标头与本地计算机同步以获得 Intellisense 支持。 如果这些应用程序尚不存在，则可以按如下所述进行安装：
 
 1. 在 Linux 计算机上的 shell 提示符下，运行：
 
    ```bash
-   sudo apt-get install openssh-server g++ gdb make rsync zip
+   sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
    由于 sudo 命令，可能会提示你输入 root 密码。  如果是这样，输入密码然后继续。 完成后，可安装所需服务和工具。
@@ -120,13 +121,13 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="fedora-on-wsl"></a>WSL 上的 Fedora
 
-Fedora 使用 dnf 包安装程序  。 要下载 g++、gdb、make、rsync 和 zip，请运行      ：
+Fedora 使用 dnf 包安装程序  。 要下载 g++、gdb、make、rsync、ninja-build 和 zip，请运行       ：
 
    ```bash
-   sudo dnf install gcc-g++ gdb rsync make zip
+   sudo dnf install gcc-g++ gdb rsync ninja-build make zip
    ```
 
-使用 Visual Studio for Intellisense 支持自动同步 Linux 标头需要 zip 和 rsync   。
+使用 Visual Studio for Intellisense 支持自动同步 Linux 标头需要 zip 和 rsync   。 仅 CMake 项目需要 ninja-build  。
 
 ::: moniker-end
 
@@ -134,12 +135,12 @@ Fedora 使用 dnf 包安装程序  。 要下载 g++、gdb、make、rsync 和 zi
 
 ## <a name="fedora-on-remote-linux-systems"></a>远程 Linux 系统上的 Fedora
 
-运行 Fedora 的目标计算机使用 dnf 包安装程序  。 要下载 openssh-server、g++、gdb、gdbserver 和 zip 并重启 ssh 守护程序，请遵循以下说明       ：
+运行 Fedora 的目标计算机使用 dnf 包安装程序  。 要下载 openssh-server、g++、gdb、make、ninja-build、rsync 和 zip 并重启 ssh 守护程序，请遵循以下说明        。 仅 CMake 项目需要 ninja-build  。
 
 1. 在 Linux 计算机上的 shell 提示符下，运行：
 
    ```bash
-   sudo dnf install openssh-server gcc-g++ gdb make rsync zip
+   sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
    由于 sudo 命令，可能会提示你输入 root 密码。  如果是这样，输入密码然后继续。 完成后，可安装所需服务和工具。

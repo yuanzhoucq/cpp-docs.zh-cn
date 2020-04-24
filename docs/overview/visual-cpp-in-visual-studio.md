@@ -5,17 +5,17 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365210"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
 > [!NOTE]
-> 此开发人员文档适用于 Visual Studio 2015 及更高版本。 请使用页面左上角的版本选择器来匹配你的 Visual Studio 版本。
+> 此开发人员文档适用于 Visual Studio 2015 及更高版本。 若要查看 Visual Studio 首选项的文档，请使用“版本”选择器控件  。 它位于此页面上目录表的顶部。
 >
 > 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”  。
 
@@ -65,7 +65,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 [学习 Visual C++](../build/vscpp-step-1-create.md)<br/>
 开始学习 C++。
 
-[Visual C++ 示例](visual-cpp-samples.md)<br/>
+[Visual Studio C++ 示例](visual-cpp-samples.md)<br/>
 有关示例的信息。
 
 ## <a name="c-development-tools"></a>C++ 开发工具

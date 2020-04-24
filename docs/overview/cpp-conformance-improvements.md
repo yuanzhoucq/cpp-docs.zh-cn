@@ -3,12 +3,12 @@ title: C++ 的符合性改进
 ms.date: 03/16/2020
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
-ms.openlocfilehash: d76a6dc4c5ad9cbf83befccfdd470ce755d0603c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 2309e79acb4784cd2e79b4f3f6fffb29e8d5dea8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077431"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353541"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -164,7 +164,7 @@ int main()
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6)。 C++20 增加了新的字符类型，可用于表示 UTF-8 代码单元。 C++20 中的 `u8` 字符串文本具有 `const char8_t[N]` 类型而不是 `const char[N]` 类型，这是之前的情况。 在 [N2231](https://wg14.link/n2231) 中已针对 C 标准提出了类似的更改。 在 [P1423r0](https://wg21.link/p1423r0) 中给出了有关 `char8_t` 后向兼容性修正的建议。 如果指定 **/Zc:char8_t** 编译器选项，Microsoft C++ 编译器会在 Visual Studio 2019 版本 16.1 中添加对 `char8_t` 的支持。 将来，[/std:c++latest](../build/reference/std-specify-language-standard-version.md) 将支持它，其可通过 **/Zc:char8_t-** 还原为 C++17 行为。 为 IntelliSense 提供支持的 EDG 编译器尚不支持它，因此将看到虚假的仅限于 IntelliSense 的错误，这些错误不会影响实际编译。
+[P0482r6](https://wg21.link/p0482r6)。 C++20 增加了新的字符类型，可用于表示 UTF-8 代码单元。 C++20 中的 `u8` 字符串文本具有 `const char8_t[N]` 类型而不是 `const char[N]` 类型，这是之前的情况。 在 [N2231](https://wg14.link/n2231) 中已针对 C 标准提出了类似的更改。 在 [P1423r3](https://wg21.link/p1423r3) 中给出了有关 `char8_t` 后向兼容性修正的建议。 如果指定 **/Zc:char8_t** 编译器选项，Microsoft C++ 编译器会在 Visual Studio 2019 版本 16.1 中添加对 `char8_t` 的支持。 将来，[/std:c++latest](../build/reference/std-specify-language-standard-version.md) 将支持它，其可通过 **/Zc:char8_t-** 还原为 C++17 行为。 为 IntelliSense 提供支持的 EDG 编译器尚不支持它，因此将看到虚假的仅限于 IntelliSense 的错误，这些错误不会影响实际编译。
 
 #### <a name="example"></a>示例
 
@@ -1038,7 +1038,7 @@ int main()
 }
 ```
 
-要避免该错误，请将 typename 关键字添加到 `a` 的声明中：`typename T::Type a;`  。
+要避免该错误，请将 typename 关键字添加到 `a` 的声明中：`typename T::Type a;` 。
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>lambda 表达式不支持内联程序集代码
 
@@ -1295,7 +1295,7 @@ if 语句可以包括在该语句本身所含块范围中引入变量的初始�
 
 Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在并行和异步操作中实现调用 lambda 的情况，特别是在较新的计算机体系结构中。 有关详细信息，请参阅[通过值执行的 \*this 的 Lambda 捕获为 \[=,\*this\]](https://wg21.link/p0018r3)。
 
-### <a name="removing-operator-for-bool"></a>为 bool 删除 `operator++` 
+### <a name="removing-operator-for-bool"></a>为 bool 删除 `operator++`
 
 `operator++` 在 bool 类型上不再受支持  。 有关详细信息，请参阅[删除弃用的 operator++(bool)](https://wg21.link/p0002r1)。
 
@@ -2514,7 +2514,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
    #pragma warning (pop)
    ```
 
-### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a>extern constexpr 链接
+### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a> Extern constexpr 链接
 
 在早期版本的 Visual Studio 中，编译器常常提供 constexpr 变量内部链接，甚至是在变量标记为 extern 时   。 在 Visual Studio 2017 版本 15.5 中，新编译器开关 (/Zc:externConstexpr) 启用符合标准的正确行为  。 此行为最终将成为默认设置。
 
@@ -2698,7 +2698,7 @@ int main()
 }
 ```
 
-以下代码在 /std:c++17 下成功，因为编译器选择新的部分专用化 `A<void (*)() noexcept>`  ：
+以下代码在 /std:c++17 下成功，因为编译器选择新的部分专用化 `A<void (*)() noexcept>` ：
 
 ```cpp
 template <typename T> struct A;
@@ -3113,7 +3113,7 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-在这两种情况下编译器均引发 C5050。警告 C5050：导入模块“m”时可能不兼容的环境：C++ 版本不匹配。当前版本为“201402”，模块版本为“201703”。
+在这两种情况下编译器均引发 C5050。警告 C5050：导入模块“m”时可能不兼容的环境：C++ 版本不匹配。当前版本为“201402”，模块版本为“201703”  。
 
 每当篡改 .ifc 文件时，编译器还会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 在导入时，.ifc 文件以相同方式进行哈希处理，然后检查标头中提供的哈希。 如果这些不匹配，将引发错误 C7536：ifc 未通过完整性检查。预期为 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”。
 
