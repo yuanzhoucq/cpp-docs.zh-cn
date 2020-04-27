@@ -8,39 +8,39 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: e7b7a327d7c47c4472b43ed58fbe9ad0556a7620
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7308e3a51c531fbe942e2df326c03273eeb326e2
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321546"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168717"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 类
 
-此类提供了实现线程池、单元模型 COM 服务器的方法。
+此类提供用于实现线程池单元模型 COM 服务器的方法。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
          DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *T*<br/>
 将实现 COM 服务器的类。
 
-*线程定位器*<br/>
-管理线程选择的类。 默认值为[CcomSimpleThreadallocator](../../atl/reference/ccomsimplethreadallocator-class.md)。
+*ThreadAllocator*<br/>
+管理线程选择的类。 默认值为[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。
 
 *dwWait*<br/>
-指定超时间隔（以毫秒为单位）。 默认值为"INFINITE"，这意味着该方法的超时间隔永远不会过去。
+指定超时间隔（以毫秒为单位）。 默认值为 "无限"，这意味着方法的超时间隔永远不会过期。
 
 ## <a name="members"></a>成员
 
@@ -48,14 +48,14 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 
 |名称|说明|
 |----------|-----------------|
-|[CAtlAutoThreadModuleT：：获取默认线程](#getdefaultthreads)|此静态函数根据处理器数动态计算并返回 EXE 模块的最大线程数。|
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|此静态函数根据处理器的数量，动态计算并返回 EXE 模块的最大线程数。|
 
 ## <a name="remarks"></a>备注
 
-[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)源自`CAtlAutoThreadModuleT`，以便实现线程池、单元模型 COM 服务器。 它取代了过时的类[CComAutoThreadModule。](../../atl/reference/ccomautothreadmodule-class.md)
+类[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)派生自`CAtlAutoThreadModuleT` ，以便实现线程池的单元模型 COM 服务器。 它取代了已过时的类[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。
 
 > [!NOTE]
-> 此类不应在 DLL 中使用，因为卸载 DLL 时，INFINITE 的默认*dwWait*值将导致死锁。
+> 此类不应在 DLL 中使用，因为在卸载 DLL 时，的默认*dwWait*值将导致死锁。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,13 +65,13 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlbase.h
+**标头：** atlbase。h
 
-## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT：：获取默认线程
+## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads
 
-此静态函数根据处理器数动态计算并返回 EXE 模块的最大线程数。
+此静态函数根据处理器的数量，动态计算并返回 EXE 模块的最大线程数。
 
-```
+```cpp
 static int GetDefaultThreads();
 ```
 
@@ -81,11 +81,11 @@ static int GetDefaultThreads();
 
 ### <a name="remarks"></a>备注
 
-如果要使用其他方法来计算线程数，则重写此方法。 默认情况下，线程数基于处理器数。
+如果要使用不同的方法计算线程数，请重写此方法。 默认情况下，线程数取决于处理器数。
 
 ## <a name="see-also"></a>另请参阅
 
 [IAtlAutoThreadModule 类](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [IAtlAutoThreadModule 类](../../atl/reference/iatlautothreadmodule-class.md)<br/>
-[模块类](../../atl/atl-module-classes.md)
+[Module 类](../../atl/atl-module-classes.md)

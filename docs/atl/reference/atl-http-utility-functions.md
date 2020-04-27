@@ -1,15 +1,15 @@
 ---
-title: ATL HTTP 实用工具函数
+title: ATL HTTP 效用函数
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c95681503da0d661382e6da33bd33e8f2004838b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423536"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168600"
 ---
-# <a name="atl-http-utility-functions"></a>ATL HTTP 实用工具函数
+# <a name="atl-http-utility-functions"></a>ATL HTTP 效用函数
 
 这些函数支持处理 Url。
 
@@ -28,7 +28,7 @@ ms.locfileid: "79423536"
 
 **标头：** atlutil
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 调用此函数可对 URL 进行规范化，包括将不安全的字符和空格转换为转义序列。
 
@@ -40,7 +40,7 @@ inline BOOL AtlCanonicalizeUrl(
    DWORD dwFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *szUrl*<br/>
 要规范化的 URL。
@@ -51,7 +51,7 @@ inline BOOL AtlCanonicalizeUrl(
 *pdwMaxLength*<br/>
 指向一个变量的指针，该变量包含*szCanonicalized*的字符长度。 如果该函数成功，则该变量将接收写入缓冲区的字符数，包括终止 null 字符。 如果函数失败，则该变量将接收缓冲区的所需长度（以字节为单位），其中包括用于终止 null 字符的空间。
 
-dwFlags<br/>
+dwFlags**<br/>
 控制此函数行为的 ATL_URL 标志。
 
 - ATL_URL_BROWSER_MODE 不会对 "#" 或 "？" 后面的字符进行编码或解码，也不会删除 "？" 后面的尾随空格。 如果未指定此值，则会对整个 URL 进行编码，并删除尾随空格。
@@ -76,7 +76,7 @@ dwFlags<br/>
 
 的行为类似于当前版本的[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) ，但不需要安装 WinInet 或 Internet Explorer。
 
-## <a name="atlcombineurl"></a>AtlCombineUrl
+## <a name="atlcombineurl"></a><a name="atlcombineurl"></a>AtlCombineUrl
 
 调用此函数可将基 URL 和相对 URL 合并为单个规范 URL。
 
@@ -89,7 +89,7 @@ inline BOOL AtlCombineUrl(
    DWORD dwFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *szBaseUrl*<br/>
 基本 URL。
@@ -103,7 +103,7 @@ inline BOOL AtlCombineUrl(
 *pdwMaxLength*<br/>
 指向一个变量的指针，该变量包含*szBuffer*的字符长度。 如果该函数成功，则该变量将接收写入缓冲区的字符数，包括终止 null 字符。 如果函数失败，则该变量将接收缓冲区的所需长度（以字节为单位），其中包括用于终止 null 字符的空间。
 
-dwFlags<br/>
+dwFlags**<br/>
 控制此函数的行为的标志。 请参阅[AtlCanonicalizeUrl](#atlcanonicalizeurl)。
 
 ### <a name="return-value"></a>返回值
@@ -114,7 +114,7 @@ dwFlags<br/>
 
 的行为类似于当前版本的[InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) ，但不需要安装 WinInet 或 Internet Explorer。
 
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
 
 调用此函数可将所有不安全字符转换为转义序列。
 
@@ -134,7 +134,7 @@ inline BOOL AtlEscapeUrl(
    DWORD dwFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpszStringIn*<br/>
 要转换的 URL。
@@ -148,22 +148,22 @@ inline BOOL AtlEscapeUrl(
 *dwMaxLength*<br/>
 缓冲区*lpszStringOut*的大小。
 
-dwFlags<br/>
+dwFlags**<br/>
 控制此函数行为的 ATL_URL 标志。 有关可能的值，请参阅[ATLCanonicalizeUrl](#atlcanonicalizeurl) 。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 TRUE，否则返回 FALSE。
 
-## <a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
 
 调用此函数可获取与特定 Internet 协议或方案关联的默认端口号。
 
-```
+```cpp
 inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *m_nScheme*<br/>
 标识要为其获取端口号的方案的[ATL_URL_SCHEME](atl-url-scheme-enum.md)值。
@@ -172,15 +172,15 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 
 与指定方案或 ATL_URL_INVALID_PORT_NUMBER 关联的[ATL_URL_PORT](atl-typedefs.md#atl_url_port) （如果无法识别方案）。
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 调用此函数可了解字符在 URL 中能否安全使用。
 
-```
+```cpp
 inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *下巴向上看*<br/>
 要进行安全测试的字符。
@@ -193,7 +193,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 可以使用此函数测试不应在 Url 中使用的字符，并使用[AtlCanonicalizeUrl](#atlcanonicalizeurl)进行转换。
 
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
 
 调用此函数可将转义字符转换为其原始值。
 
@@ -211,7 +211,7 @@ inline BOOL AtlUnescapeUrl(
    DWORD dwMaxLength) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpszStringIn*<br/>
 要转换的 URL。
@@ -233,7 +233,7 @@ inline BOOL AtlUnescapeUrl(
 
 反转[AtlEscapeUrl](#atlescapeurl)应用的转换过程。
 
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
 
 将[COLORREF](/windows/win32/gdi/colorref)值转换为与该颜色值相对应的 HTML 文本。
 
@@ -244,9 +244,9 @@ bool inline RGBToHtml(
    long nBuffer);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*颜色*<br/>
+*color*<br/>
 RGB 颜色值。
 
 *pbOut*<br/>
@@ -263,7 +263,7 @@ RGB 颜色值。
 
 HTML 颜色值是一个井号，后跟一个6位数的十六进制值，它对颜色的每个红色、绿色和蓝色分量使用2个数字（例如，#FFFFFF 为白色）。
 
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 调用此函数可将系统时间转换为采用适合在 HTTP 标头中使用的格式的字符串。
 
@@ -273,13 +273,13 @@ inline void SystemTimeToHttpDate(
    CStringA& strTime);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *停止*<br/>
 要作为 HTTP 格式字符串获取的系统时间。
 
 *strTime*<br/>
-对字符串变量的引用，该变量用于接收 RFC 2616 （[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)）和 rfc 1123 （[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)）中定义的 HTTP 日期时间。
+对字符串变量的引用，用于接收 RFC 2616 （[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)）和 rfc 1123 （[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)）中定义的 HTTP 日期时间。
 
 ## <a name="see-also"></a>另请参阅
 

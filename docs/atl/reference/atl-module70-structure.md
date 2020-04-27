@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ATL_MODULE70 structure
 - _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
-ms.openlocfilehash: d05683383fab64f027f198d49bfbf42aa593d582
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d39cdd281e09cdfe09546627aa630a11d12464e
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260917"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168561"
 ---
-# <a name="atlmodule70-structure"></a>_ATL_MODULE70 结构
+# <a name="_atl_module70-structure"></a>_ATL_MODULE70 结构
 
-包含使用 ATL 的每个模块的数据。
+包含每个 ATL 模块使用的数据。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 struct _ATL_MODULE70 {
     UINT cbSize;
     LONG m_nLockCnt;
@@ -37,22 +37,22 @@ struct _ATL_MODULE70 {
 用于版本控制的结构的大小。
 
 `m_nLockCnt`<br/>
-引用计数以确定多长时间，该模块应始终处于活动状态。
+用于确定模块应保持活动状态的引用计数。
 
 `m_pTermFuncs`<br/>
-跟踪已注册 ATL 关闭时要调用的函数。
+跟踪 ATL 关闭时已注册要调用的函数。
 
 `m_csStaticDataInitAndTypeInfo`<br/>
-用于协调对在多线程情况下的内部数据的访问。
+用于协调对多线程情况下内部数据的访问。
 
 ## <a name="remarks"></a>备注
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)定义的 typedef 为`_ATL_MODULE70`。
+[_ATL_MODULE](atl-typedefs.md#_atl_module)定义为的`_ATL_MODULE70`typedef。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标头：** atlbase。h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../../atl/reference/atl-classes.md)
