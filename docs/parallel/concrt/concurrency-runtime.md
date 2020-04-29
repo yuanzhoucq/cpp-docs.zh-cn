@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: a17b4439baaec9caacfeca08983d0255b5a145de
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 84a52b8a509edad86f64c28df843e92f1441f2f0
+ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141623"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538655"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 
@@ -20,7 +20,7 @@ ms.locfileid: "77141623"
 有关参考文档，请参阅[参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
 
 > [!TIP]
-> 并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 若要了解详细信息，请参阅[欢迎回到C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
+> 并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 若要了解详细信息，请阅读[欢迎返回 c + +](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
 
 ## <a name="choosing-concurrency-runtime-features"></a>选择并发运行时功能
 
@@ -37,7 +37,7 @@ ms.locfileid: "77141623"
 
 |||
 |-|-|
-|[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [如何：使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [如何：创建在延迟一段时间后完成的任务](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|介绍任务和任务组，它们可帮助你编写异步代码并将并行工作分解为较小的部分。|
+|[任务并行度](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [如何：使用 parallel_invoke 执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [如何：创建在延迟一段时间后完成的任务](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|介绍任务和任务组，它们可帮助你编写异步代码并将并行工作分解为较小的部分。|
 |[演练：实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)|演示如何组合使用并发运行时功能来完成更多任务。|
 |[演练：从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|演示如何将由 MFC 应用程序中的 UI 线程执行的工作移到工作线程中。|
 |[并行模式库中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [并发运行时中的常规最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|提供使用 PPL 的提示和最佳做法。|
@@ -55,14 +55,14 @@ ms.locfileid: "77141623"
 |||
 |-|-|
 |[PPL 中的取消操作](cancellation-in-the-ppl.md)|介绍 PPL 中取消操作的角色，包括如何启动和相应取消请求。|
-|[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：使用异常处理来中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示取消数据并行工作的两种方法。|
+|[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示取消数据并行工作的两种方法。|
 
 ## <a name="universal-windows-platform-apps"></a>通用 Windows 平台应用
 
 |||
 |-|-|
 |[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述在使用并发运行时在 UWP 应用中生成异步操作时要记住的一些要点。|
-|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何将 PPL 任务与 `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 接口结合使用，以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
+|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何将 PPL 任务与`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口结合使用，以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
 |[Windows 运行时应用示例](https://code.msdn.microsoft.com/windowsapps)|包含适用于 Windows 3.x 的可下载代码示例和演示应用。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>异步代理库中的数据流编程
@@ -98,11 +98,11 @@ ms.locfileid: "77141623"
 
 |||
 |-|-|
-|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](/previous-versions/windows/apps/jj160321(v=win.10))|了解如何使用并发运行时在 Hilo 中实现异步操作，使用C++和 XAML 的 Windows 运行时应用。|
-|[本机代码中的并行编程博客](https://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
+|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](/previous-versions/windows/apps/jj160321(v=win.10))|了解如何使用并发运行时在 Hilo （使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|
+|[本机代码中的并行编程博客](/archive/blogs/nativeconcurrency)|提供有关并发运行时中的并行编程的其他深度博客文章。|
 |[C++ 和本机代码中的并行计算论坛](https://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
 |[并行编程](/dotnet/standard/parallel-programming/index)|讲授 .NET Framework 中可用的并行编程模型。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)
