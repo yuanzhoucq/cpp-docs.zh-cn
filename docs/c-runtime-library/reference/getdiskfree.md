@@ -1,8 +1,9 @@
 ---
 title: _getdiskfree
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdiskfree
+- _o__getdiskfree
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 095a272e1dd85c1b61e1970a1b881737acbb739d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344308"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
-使用有关磁盘驱动器的信息填充 **_diskfree_t**结构。
+使用有关磁盘驱动器的信息来填充 **_diskfree_t**结构。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -54,11 +56,11 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>参数
 
-*drive*<br/>
+*光驱*<br/>
 您需要了解其信息的磁盘驱动器。
 
-*driveinfo*<br/>
-将使用有关驱动器的信息填充的 **_diskfree_t**结构。
+*system.io.driveinfo*<br/>
+将使用有关驱动器的信息进行填充的 **_diskfree_t**结构。
 
 ## <a name="return-value"></a>返回值
 
@@ -66,7 +68,7 @@ unsigned _getdiskfree(
 
 ## <a name="remarks"></a>备注
 
-**_Diskfree_t**结构是在 Direct .h 中定义的。
+在 Direct .h 中定义 **_diskfree_t**结构。
 
 ```C
 struct _diskfree_t {
@@ -79,13 +81,15 @@ struct _diskfree_t {
 
 此函数验证其参数。 如果*system.io.driveinfo*指针为**NULL**或*drive*指定了无效的驱动器，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。 有效驱动器值范围为 0 到 26。 *驱动器*值0指定当前驱动器;之后，数字映射到英语字母表中的字母，例如1表示驱动器 A，3表示驱动器 C，依此类推。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
