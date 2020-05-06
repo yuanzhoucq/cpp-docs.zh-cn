@@ -5,15 +5,15 @@ helpviewer_keywords:
 - strerror function
 ms.assetid: 9fb9366e-d9a8-47d4-ad51-d98774a0617f
 ms.openlocfilehash: e2bcfef0ad7c2c432b84efdff76c88a87f6f84c9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157833"
 ---
 # <a name="strerror-function"></a>strerror 函数
 
-**ANSI 4.11.6.2** `strerror` 函数返回的错误消息字符串的内容
+**ANSI 4.11.6.2**`strerror` 函数返回的错误消息字符串的内容
 
 `strerror` 函数生成了以下消息：
 

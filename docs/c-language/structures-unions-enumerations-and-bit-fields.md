@@ -3,11 +3,11 @@ title: 结构、联合、枚举和位域
 ms.date: 11/04/2016
 ms.assetid: 53f72553-c716-41fb-8384-89dc6712ee2a
 ms.openlocfilehash: 27f5d919fbbbd96ba87e2ea41b5dcc05cfa80c6a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157768"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>结构、联合、枚举和位域
 

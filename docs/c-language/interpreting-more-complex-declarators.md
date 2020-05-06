@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
 ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232860"
 ---
 # <a name="interpreting-more-complex-declarators"></a>解释复杂声明符
 
@@ -70,13 +70,13 @@ int (*var)[5]; /* Pointer to array of int values */
 long *var( long, long ); /* Function returning pointer to long */
 ```
 
-函数修饰符的优先级也高于指针修饰符，因此对 `var` 的此声明将 `var` 声明为返回指向 long 值的指针的函数。 该函数被声明为采用两个 long 值作为参数。
+函数修饰符的优先级也高于指针修饰符，因此对 `var` 的此声明将 `var` 声明为返回指向 long  值的指针的函数。 该函数被声明为采用两个 long  值作为参数。
 
 ```
 long (*var)( long, long ); /* Pointer to function returning long */
 ```
 
-此示例与前一个示例类似。 圆括号为指针修饰符赋予了高于函数修饰符的优先级，`var` 被声明为指向返回 long 值的函数的指针。 同样，该函数采用两个 long 参数。
+此示例与前一个示例类似。 圆括号为指针修饰符赋予了高于函数修饰符的优先级，`var` 被声明为指向返回 long  值的函数的指针。 同样，该函数采用两个 long  参数。
 
 ```
 struct both       /* Array of pointers to functions */
@@ -101,13 +101,13 @@ unsigned int *(* const *name[5][10] ) ( void );
 
 `name` 数组具有组织在一个多维数组中的 50 个元素。 这些元素是指向常量指针的指针。 此常量指针指向没有参数并返回指向无符号类型的指针的函数。
 
-下一个示例是函数，该函数返回指向包含三个 double 值的数组的指针。
+下一个示例是函数，该函数返回指向包含三个 double  值的数组的指针。
 
 ```
 double ( *var( double (*)[3] ) )[3];
 ```
 
-在此声明中，函数将返回指向数组的指针，因为返回数组的函数是非法的。 在此处，`var` 被声明为一个函数，该函数返回了指向包含三个 double 值的数组的指针。 函数 `var` 将采用一个参数。 参数（如返回值）是指向包含三个 double 值的数组的指针。 参数类型由一个复杂 abstract-declarator 给定。 参数类型中的星号两边需要圆括号；如果没有圆括号，参数类型将是一个包含三个指向 double 值的指针的数组。 有关抽象声明符的讨论和示例，请参阅[抽象声明符](../c-language/c-abstract-declarators.md)。
+在此声明中，函数将返回指向数组的指针，因为返回数组的函数是非法的。 在此处，`var` 被声明为一个函数，该函数返回了指向包含三个 double  值的数组的指针。 函数 `var` 将采用一个参数。 参数（如返回值）是指向包含三个 double  值的数组的指针。 参数类型由一个复杂 abstract-declarator  给定。 参数类型中的星号两边需要圆括号；如果没有圆括号，参数类型将是一个包含三个指向 double  值的指针的数组。 有关抽象声明符的讨论和示例，请参阅[抽象声明符](../c-language/c-abstract-declarators.md)。
 
 ```
 union sign         /* Array of arrays of pointers */

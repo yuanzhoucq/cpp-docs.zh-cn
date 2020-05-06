@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
 ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81745872"
@@ -47,7 +47,7 @@ void funct1( int a, ... )
 
 旧式函数声明也会生成警告（如果您随后声明或定义具有省略号或具有与其提升的类型不同的类型的参数的相同函数）。
 
-下一节（[C 函数定义](../c-language/c-function-definitions.md)）显示函数定义的语法（包括旧式语法）。 旧式语法中的参数列表的非终止符是 identifier-list**。
+下一节（[C 函数定义](../c-language/c-function-definitions.md)）显示函数定义的语法（包括旧式语法）。 旧式语法中的参数列表的非终止符是 identifier-list  。
 
 ## <a name="see-also"></a>请参阅
 

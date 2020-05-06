@@ -6,15 +6,15 @@ helpviewer_keywords:
 - subtraction operator, syntax
 ms.assetid: 9cacba7d-20b3-4372-8a63-ba5d8ee64177
 ms.openlocfilehash: 5c9510cf3708ef049b5dac213fa3de894fcd4a07
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157755"
 ---
 # <a name="subtraction--"></a>减法 (–)
 
-减法运算符 (**-**) 从第一个操作数中减去第二个操作数。 两个操作数可同时为整型或浮点型，或者一个操作数为指针，另一个操作数为整数。
+减法运算符 ( **-** ) 从第一个操作数中减去第二个操作数。 两个操作数可同时为整型或浮点型，或者一个操作数为指针，另一个操作数为整数。
 
 在将两个指针相减时，会通过将差值除以指针寻址的类型值的大小来将该差值转换为带符号的整数值。 整数值的大小由标准包含文件 STDDEF.H 中的类型 **ptrdiff_t** 定义。 结果表示两个地址间的类型的内存位置数。 只能保证结果对于同一数组的两个元素有意义，如[指针算法](../c-language/pointer-arithmetic.md)中讨论的那样。
 

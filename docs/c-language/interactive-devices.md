@@ -3,11 +3,11 @@ title: 交互式设备
 ms.date: 11/04/2016
 ms.assetid: a15ac95d-faf8-4fcf-80ab-0e346d1a5b5a
 ms.openlocfilehash: b6c4b13f352e86217177dfa4b9cfed760462c124
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232756"
 ---
 # <a name="interactive-devices"></a>交互式设备
 

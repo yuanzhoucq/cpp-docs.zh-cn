@@ -193,6 +193,6 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 ======================================================================
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [目录控制](../../c-runtime-library/directory-control.md)<br/>
