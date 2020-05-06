@@ -10,11 +10,11 @@ helpviewer_keywords:
 - floating-point numbers, floating limits
 ms.assetid: 2d975868-2af6-45d7-a8af-db79f2c6b67b
 ms.openlocfilehash: df39ee719a4474f6dfd55d31a2848169a1168390
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325567"
 ---
 # <a name="limits-on-floating-point-constants"></a>对浮点常量的限制
 
@@ -24,10 +24,10 @@ ms.locfileid: "56148746"
 
 ### <a name="limits-on-floating-point-constants"></a>对浮点常量的限制
 
-|返回的常量|含义|值|
+|返回的常量|含义|“值”|
 |--------------|-------------|-----------|
-|**FLT_DIG**<br />**DBL_DIG**<br />**LDBL_DIG**|位数 q，以便 q 十进制数的浮点数可以被舍入到浮点表示形式并返回，而不会丢失精度。|6<br />15<br />15|
-|**FLT_EPSILON**<br />**DBL_EPSILON**<br />**LDBL_EPSILON**|最小正数 x，以便 x + 1.0 不等于 1.0|1.192092896e-07F<br />2.2204460492503131e-016<br />2.2204460492503131e-016|
+|**FLT_DIG**<br />**DBL_DIG**<br />**LDBL_DIG**|位数 q  ，以便 q  十进制数的浮点数可以被舍入到浮点表示形式并返回，而不会丢失精度。|6<br />15<br />15|
+|**FLT_EPSILON**<br />**DBL_EPSILON**<br />**LDBL_EPSILON**|最小正数 x  ，以便 x  + 1.0 不等于 1.0|1.192092896e-07F<br />2.2204460492503131e-016<br />2.2204460492503131e-016|
 |**FLT_GUARD**||0|
 |**FLT_MANT_DIG**<br />**DBL_MANT_DIG**<br />**LDBL_MANT_DIG**|由浮点有效位数中的 **FLT_RADIX** 指定的基数中的位数。 基数为 2；因此这些值指定位。|24<br />53<br />53|
 |**FLT_MAX**<br />**DBL_MAX**<br />**LDBL_MAX**|可表示的最大浮点数。|3.402823466e+38F<br />1.7976931348623158e+308<br />1.7976931348623158e+308|

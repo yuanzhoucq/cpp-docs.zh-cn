@@ -7,15 +7,15 @@ helpviewer_keywords:
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325996"
 ---
 # <a name="initializing-strings"></a>初始化字符串
 
-您可以使用字符串文本（或宽字符串文本）初始化字符（或宽字符）的数组。 例如:
+您可以使用字符串文本（或宽字符串文本）初始化字符（或宽字符）的数组。 例如：
 
 ```
 char code[ ] = "abc";

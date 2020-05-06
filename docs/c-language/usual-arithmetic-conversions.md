@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
 ms.openlocfilehash: 729e173c695db3b4970490e84bedfd441e6ff6d3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344832"
 ---
 # <a name="usual-arithmetic-conversions"></a>常用算术转换
 
@@ -24,17 +24,17 @@ ms.locfileid: "56150267"
 
 1. 如果任一操作数是 `long double` 类型，则将另一个操作数转换为 `long double` 类型。
 
-1. 如果未满足上述条件，并且任一操作数是 double 类型，则将另一个操作数转换为 double 类型。
+1. 如果未满足上述条件，并且任一操作数是 double  类型，则将另一个操作数转换为 double  类型。
 
-1. 如果未满足上述两个条件，并且任一操作数是 float 类型，则将另一个操作数转换为 float 类型。
+1. 如果未满足上述两个条件，并且任一操作数是 float  类型，则将另一个操作数转换为 float  类型。
 
 1. 如果未满足上述三个条件（所有操作数都不是浮点型），则对操作数执行整型转换，如下所示：
 
    - 如果任一操作数是 `unsigned long` 类型，则将另一个操作数转换为 `unsigned long` 类型。
 
-   - 如果未满足上述条件，并且任一操作数是 long 类型且另一个操作数是 `unsigned int` 类型，则将两个操作数都转换为 `unsigned long` 类型。
+   - 如果未满足上述条件，并且任一操作数是 long  类型且另一个操作数是 `unsigned int` 类型，则将两个操作数都转换为 `unsigned long` 类型。
 
-   - 如果未满足上述两个条件，并且任一操作数是 long 类型，则将另一个操作数转换为 long 类型。
+   - 如果未满足上述两个条件，并且任一操作数是 long  类型，则将另一个操作数转换为 long  类型。
 
    - 如果未满足上述三个条件，并且任一操作数是 `unsigned int`类型，则将另一个操作数转换为 `unsigned int` 类型。
 

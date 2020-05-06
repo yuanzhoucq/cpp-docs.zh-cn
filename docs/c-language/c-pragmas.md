@@ -5,17 +5,17 @@ helpviewer_keywords:
 - pragmas, C/C++
 ms.assetid: 3d6d36b4-d565-4632-a4cd-e39aeaded5ad
 ms.openlocfilehash: f0517e83c36f97af35dab7d4be85be5aee1b01af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326191"
 ---
 # <a name="c-pragmas"></a>C 杂注
 
 **Microsoft 专用**
 
-“杂注”指示编译器在编译时执行特定操作。 杂注随编译器的不同而不同。 例如，可以使用 optimize 杂注来设置要在程序中执行的优化。 Microsoft C 杂注为：
+“杂注”指示编译器在编译时执行特定操作  。 杂注随编译器的不同而不同。 例如，可以使用 optimize  杂注来设置要在程序中执行的优化。 Microsoft C 杂注为：
 
 |||||
 |-|-|-|-|
