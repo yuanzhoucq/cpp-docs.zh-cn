@@ -9,11 +9,11 @@ helpviewer_keywords:
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
 ms.openlocfilehash: 3594ca0f2dfcc294fa7a3d44268150ac5507e547
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232268"
 ---
 # <a name="punctuation-and-special-characters"></a>标点和特殊字符
 
@@ -23,7 +23,7 @@ C 字符集中的标点和特殊字符各有其用途，从组织程序文本到
 
 `punctuator`: one of **( )   [ ]   { }   \*   ,   :   =   ;   ... #**
 
-这些字符在 C 中具有特殊含义。本书中将介绍其用途。 井号 (**#**) 只能出现在[预处理指令](../preprocessor/preprocessor-directives.md)中。
+这些字符在 C 中具有特殊含义。本书中将介绍其用途。 井号 ( **#** ) 只能出现在[预处理指令](../preprocessor/preprocessor-directives.md)中。
 
 ## <a name="see-also"></a>请参阅
 

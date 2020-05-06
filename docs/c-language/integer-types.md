@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232840"
 ---
 # <a name="integer-types"></a>整型
 
@@ -36,7 +36,7 @@ ms.locfileid: "56146874"
 778866LU
 ```
 
-您分配给常量的类型取决于常量表示的值。 常量的值必须在其类型的可表示值的范围内。 常量的类型用于确定在表达式中使用常量或在应用减号 (**-**) 时执行的转换类型。 此列表汇总了整数常量的转换规则。
+您分配给常量的类型取决于常量表示的值。 常量的值必须在其类型的可表示值的范围内。 常量的类型用于确定在表达式中使用常量或在应用减号 ( **-** ) 时执行的转换类型。 此列表汇总了整数常量的转换规则。
 
 - 不带后缀的十进制常量的类型是 `int`、**long int** 或 **unsigned long int**。可用来表示常量值的三种类型中的第一个类型是分配给常量的类型。
 

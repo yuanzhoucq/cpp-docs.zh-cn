@@ -1,19 +1,19 @@
 ---
-title: db_command (C++ COM 属性)
+title: db_command （c + + COM 特性）
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825425"
 ---
-# <a name="dbcommand"></a>db_command
+# <a name="db_command"></a>db_command
 
 创建 OLE DB 命令。
 
@@ -33,40 +33,45 @@ ms.locfileid: "62148193"
 [ db_command ( command = "Select * from Products" ) ]
 ```
 
- 命令语法如下：
+** 命令语法如下：
 
-> 绑定参数块 1 &nbsp; &nbsp;OLE DB 命令绑定参数块 2 &nbsp;&nbsp;的 OLE DB 命令绑定参数块 3 延续...
+> 绑定参数块 1 \
+> &nbsp;&nbsp;OLE DB 命令 \
+> 绑定参数块 2 \
+> &nbsp;&nbsp;OLE DB 命令的继续
+> 绑定参数块 3 \
+> ...
 
- 绑定参数块的定义如下：
+** 绑定参数块的定义如下：
 
-> **(\[** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
+> **（\[ ** *bindtype* **]** *szVar1* szVar1 \[， *szVar2* szVar2 \[， *nVar3* nVar3 \[，...]]]**)**
 
 其中：
 
 - **(** 标记数据绑定块的开始位置。
 
-- **\[** *bindtype* **]** 是以下不区分大小写的字符串之一：
+- **\[***bindtype* **]** 是以下不区分大小写的字符串之一：
 
-  - **\[db_column]** 将每个成员变量绑定到行集中的列。
+  - ** \[db_column]** 将每个成员变量绑定到行集中的列。
 
-  - **\[bindto]** (与相同 **\[db_column]**)。
+  - ** \[bindto]**（与** \[db_column]** 相同。
 
-  - **\[在]** 将作为输入参数的成员变量绑定。
+  - ** \[in]** 将成员变量绑定为输入参数。
 
-  - **\[out] 一个**将作为输出参数的成员变量绑定。
+  - ** \[out]** 将成员变量绑定为输出参数。
 
-  - **\[in，out]** 成员将变量绑定为输入/输出参数。
+  - in、out] ** \[** 将成员变量绑定为输入/输出参数。
 
-- *szVarX*， *nVarX*解析为当前作用域内的成员变量。
+- *szVarX*， *nVarX*解析为当前范围内的成员变量。
 
 - **)** 标记数据绑定块的结束位置。
 
-如果命令字符串包含一个或多个说明符，如\[在]， \[out]，或\[in/out]， **db_command**生成参数映射。
+如果命令字符串包含一个或多个说明符（例如\[in]、 \[out] 或\[in/out]）， **db_command**会生成参数映射。
 
-如果命令字符串包含一个或多个参数，如\[db_column] 或\[bindto]， **db_command**生成行集和取值函数映射以服务这些绑定的变量。 有关详细信息，请参阅 [db_accessor](db-accessor.md) 。
+如果命令字符串包含一个或多个参数（如\[db_column] 或\[bindto]）， **db_command**会生成一个行集和一个访问器映射以服务这些绑定变量。 有关详细信息，请参阅 [db_accessor](db-accessor.md) 。
 
 > [!NOTE]
-> \[*bindtype*] 语法和*绑定*使用时，可能不是有效参数**db_command**在类级别。
+> \[*bindtype*]在类级别使用**db_command**时，句法和*bindings*参数无效。
 
 下面是一些绑定参数块的示例。 下面的示例分别将 `m_au_fname` 和 `m_au_lname` 数据成员绑定到 pubs 数据库中作者表的 `au_fname` 和 `au_lname` 列：
 
@@ -82,25 +87,25 @@ TCHAR m_state[3] = 'CA';
 ```
 
 *name*<br/>
-（可选）用于处理行集的句柄的名称。 如果指定名称 ， **db_command** 会生成具有指定名称 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 ，则无法向用户返回多个行的结果。
+可有可无用于处理行集的句柄名称。 如果指定名称 **， **db_command** 会生成具有指定名称 ** 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 **，则无法向用户返回多个行的结果。
 
 *source_name*<br/>
-（可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅 [db_source](db-source.md)。
+可有可无对`CSession`其应用了`db_source`属性的类的变量或实例。 请参阅 [db_source](db-source.md)。
 
 执行**db_command** 检查，确认用于 *source_name* 的变量有效，使指定的变量位于函数或全局范围内。
 
 *hresult*<br/>
-（可选）标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
+可有可无标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
-*bindings*<br/>
-（可选）可以从 OLE DB 命令分离绑定参数。
+*绑定*<br/>
+可有可无允许你将绑定参数与 OLE DB 命令分离。
 
-如果指定的值*绑定*， **db_command**将分析相关联的值，但不会分析\[ *bindtype*] 参数。 这种用法允许使用 OLE DB 提供程序语法。 若要禁用分析，但不绑定参数，请指定`Bindings=""`。
+如果为*绑定*指定一个值， **db_command**将分析关联的值，而不会分析\[ *bindtype*] 参数。 这种用法允许使用 OLE DB 提供程序语法。 若要禁用分析，但不绑定参数`Bindings=""`，请指定。
 
-如果未指定的值*绑定*， **db_command**将分析绑定参数块，查找 **(** 后, 跟 **\[** _bindtype_**]** 在方括号内后, 跟一个或多以前声明过对C++成员变量后, 跟 **)**。 将从生成的命令中去除括号间的所有文本，并且这些参数将用于为此命令构造列和参数绑定。
+如果未指定*绑定*的值， **db_command**将分析绑定参数块，查找 "**（**"，后面跟**\[** 有一个或多个前面_声明的 c_**]** + + 成员变量，后跟一个或多个以前声明的 c + + 成员变量，后跟 "**）**"。 将从生成的命令中去除括号间的所有文本，并且这些参数将用于为此命令构造列和参数绑定。
 
 *bulk_fetch*<br/>
-（可选）一个整数值，指定要提取的行数。
+可有可无一个整数值，该值指定要提取的行数。
 
 默认值为 1，指定单行提取（行集将为 [CRowset](../../data/oledb/crowset-class.md)类型）。
 
@@ -112,17 +117,17 @@ TCHAR m_state[3] = 'CA';
 
 **db_command** 创建 [CCommand](../../data/oledb/ccommand-class.md) 对象，OLE DB 使用者使用该对象来执行命令。
 
-可以将 **db_command** 与类或函数范围一起使用，主要差异在于 `CCommand` 对象的范围。 使用函数范围，绑定等数据终止于函数末端。 类和函数范围的用法涉及到 OLE DB 使用者模板类`CCommand<>`，但函数和类的情况下，模板参数不同。 在函数事例中，将对进行绑定`Accessor`包含本地变量，而类用法将推断`CAccessor`-派生的类作为参数。 用作类属性时， **db_command** 和 **db_column**配合使用。
+可以将 **db_command** 与类或函数范围一起使用，主要差异在于 `CCommand` 对象的范围。 使用函数范围，绑定等数据终止于函数末端。 类和函数范围用法都涉及到 OLE DB 使用者模板`CCommand<>`类，但对于函数和类事例，模板参数有所不同。 在函数情况下，将对包含局部变量`Accessor`的进行绑定，而类用法将推断派生的`CAccessor`类作为参数。 用作类属性时， **db_command** 和 **db_column**配合使用。
 
 **db_command** 可用于执行不返回结果集的命令。
 
-编译器时使用者特性提供程序适用于类，此属性，将重命名为类\_ *YourClassName*访问器，其中*名为 YourClassName*是您为指定的名称类和编译器还将创建一个名为类*名为 YourClassName*，它派生\_*名为 YourClassName*访问器。  将在类视图中看到这两个类。
+当使用者特性提供程序将此特性应用于类时，编译器会将类重\_命名为*YourClassName*访问器，其中*YourClassName*是您赋予类的名称，并且编译器还将创建一个名为*YourClassName*的类， \_该类派生自*YourClassName*访问器。  将在类视图中看到这两个类。
 
 ## <a name="example"></a>示例
 
 本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command** 创建并读取行集，在行集上可以调用向导生成的函数（例如 [OpenAll 和 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)）和 `CRowset` 成员函数（例如 [MoveNext](../../data/oledb/crowset-movenext.md)）。
 
-请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何执行此操作在开发环境中的信息，请参阅[如何：连接到数据库并浏览现有对象](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)并[添加新连接](/visualstudio/data-tools/add-new-connections)。
+请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何在开发环境中执行此操作的信息，请参阅[如何：连接到数据库和浏览现有对象](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)和[添加新连接](/visualstudio/data-tools/add-new-connections)。
 
 ```cpp
 // db_command.h
@@ -237,14 +242,14 @@ int main() {
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**，成员、 方法、 本地|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**类**、**结构**、成员、方法、本地|
+|**且**|否|
+|**必需属性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[OLE DB 使用者特性](ole-db-consumer-attributes.md)<br/>
+[OLE DB 使用者属性](ole-db-consumer-attributes.md)<br/>
 [独立特性](stand-alone-attributes.md)

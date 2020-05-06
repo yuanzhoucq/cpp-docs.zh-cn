@@ -506,7 +506,7 @@ BOOL PrintSelection() const;
 
   请参阅[CPrintDialog：： m_pd](#m_pd)的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例 DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)<br/>
