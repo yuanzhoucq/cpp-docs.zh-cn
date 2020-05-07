@@ -15,58 +15,58 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a05df3adc74edfd814bb6dc15121e4a343dc4d
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316699"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825751"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc（创建预编译标头文件）
 
-指示编译器创建表示某一时刻的编译状态的预编译标头 (.pch) 文件。
+指示编译器创建一个预编译标头（.pch）文件，该文件表示某个时间点的编译状态。
 
 ## <a name="syntax"></a>语法
 
-> __/Yc__<br/>
+> __/Yc__\
 > __/Yc__*filename*
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-*filename*<br/>
-指定的标头 (.h) 文件。 使用此参数时，编译器将编译所有代码，包括.h 文件。
+*名字*<br/>
+指定标头（.h）文件。 使用此参数时，编译器将编译所有代码，直到包含 .h 文件。
 
 ## <a name="remarks"></a>备注
 
-当 **/Yc**指定不带参数，则编译器将编译所有代码，直到结束的基的源文件，或在基本文件中的点位置[hdrstop](../../preprocessor/hdrstop.md)指令时发生。 生成的.pch 文件作为基本源文件具有相同的基名称，除非您指定不同的文件名称中使用**hdrstop**杂注或 **/Fp**选项。
+如果在不使用参数的情况下指定 **/yc** ，则编译器会将所有代码编译到基源文件的末尾，或者编译到基文件中出现[hdrstop](../../preprocessor/hdrstop.md)指令的点。 生成的 .pch 文件具有与基源文件相同的基名称，除非你使用**hdrstop**杂注或 **/fp**选项指定其他文件名。
 
-预编译的代码与创建用指定的文件的基名称的名称一起保存在文件中 **/Yc**选项且扩展名为.pch。 此外可以使用[/Fp （名称。Pch 文件）](fp-name-dot-pch-file.md)选项可以指定预编译标头文件的名称。
+预编译代码保存在一个文件中，该文件的名称是通过使用 **/yc**选项指定的文件的基名称和一个 .pch 扩展名创建的。 还可以使用[/fp （Name）。Pch 文件）](fp-name-dot-pch-file.md)选项指定预编译头文件的名称。
 
-如果您使用 __/Yc__*filename*，则编译器将编译所有代码，供后续使用与指定的文件包括[/Yu （使用预编译标头文件）](yu-use-precompiled-header-file.md)选项。
+如果使用 __/yc__*filename*，则编译器会将所有代码编译为并包含指定的文件，以便以后用于[/Yu （使用预编译标头文件）](yu-use-precompiled-header-file.md)选项。
 
-如果选项 __/Yc__*filename*并 __/Yu__*文件名*出现在相同的命令行和两个引用，或表示相同的文件名，__/Yc__*filename*优先。 此功能简化了生成文件的写入。
+如果选项 __/yc__*filename*和 __/yu__*filename*出现在相同的命令行上，同时引用相同的文件名，则将优先使用 __/yc__*filename* 。 此功能简化了生成生成的编写。
 
-预编译标头的详细信息，请参阅：
+有关预编译标头的详细信息，请参阅：
 
 - [/Y（预编译标头）](y-precompiled-headers.md)
 
-- [预编译的头文件](../creating-precompiled-header-files.md)
+- [预编译标头文件](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 选择的.cpp 文件。 .Cpp 文件必须 #include 包含预编译标头信息的.h 文件。 项目的 **/Yc**设置可以在文件级别重写。
+1. 选择 .cpp 文件。 .Cpp 文件必须 #include 包含预编译标头信息的 .h 文件。 项目的 **/yc**设置可以在文件级别重写。
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 打开**配置属性**， **C /C++**，**预编译标头**属性页。
+1. 打开**配置属性**" **c/c + +**" "**预编译头**" 属性页。
 
 1. 修改**预编译标头**属性。
 
-1. 若要设置文件名，修改**预编译头文件**属性。
+1. 若要设置文件名，请修改**预编译标头文件**属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>。
+- 参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>。
 
 ## <a name="example"></a>示例
 
@@ -81,10 +81,10 @@ ms.locfileid: "62316699"
 // ...
 ```
 
-此代码使用命令的编译时`CL /YcMYAPP.H PROG.CPP`，则编译器将保存所有的预处理 AFXWIN.h，RESOURCE.h，和 MYAPP.h 预编译标头文件中的名为 MYAPP.pch。
+使用命令`CL /YcMYAPP.H PROG.CPP`编译此代码时，编译器会在名为 "MYAPP" 的预编译头文件中保存 AFXWIN.H、RESOURCE .H 和 MYAPP 的所有预处理。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
-[预编译的头文件](../creating-precompiled-header-files.md)
+[预编译标头文件](../creating-precompiled-header-files.md)

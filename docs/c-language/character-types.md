@@ -6,17 +6,17 @@ helpviewer_keywords:
 - types [C], character
 ms.assetid: d3ca8cda-c0d7-43af-9472-697e8ef015ce
 ms.openlocfilehash: f894114d4e980b11edf55c4d4b7c4e60af396fb1
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312630"
 ---
 # <a name="character-types"></a>字符类型
 
-前面没有字母 L 的整数字符常量具有类型 `int`。 包含单个字符的整数字符常量的值是解释为整数的字符的数字值。 例如，字符 `a` 的数字值在十进制和十六进制下分别为 97 和 61。
+前面没有字母 L  的整数字符常量具有类型 `int`。 包含单个字符的整数字符常量的值是解释为整数的字符的数字值。 例如，字符 `a` 的数字值在十进制和十六进制下分别为 97 和 61。
 
-从语法上来说，“宽字符常量”是带有字母 L 前缀的字符常量。宽字符常量具有类型 `wchar_t`（在 STDDEF.H 头文件中定义的整型）。 例如:
+从语法上来说，“宽字符常量”是带有字母 L  前缀的字符常量。宽字符常量具有类型 `wchar_t`（在 STDDEF.H 头文件中定义的整型）。 例如：
 
 ```
 char    schar =  'x';   /* A character constant          */
