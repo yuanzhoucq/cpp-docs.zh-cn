@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350124"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920055"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -60,29 +60,29 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**atanh**函数返回*x*的反向子宫切线（弧形双曲切线）。 如果*x*大于 1 或小于 -1，**则 errno**设置为**EDOM，** 结果是一个安静的 NaN。 如果*x*等于 1 或 -1，则分别返回正无穷大或负无穷大，并将**errno**设置为**ERANGE**。
+**Atanh**函数返回*x*的反双曲正切值（反双曲正切值）。 如果*x*大于1或小于-1，则将**Errno**设置为**EDOM** ，并将结果设置为 quiet NaN。 如果*x*等于1或-1，则分别返回正无穷或负无穷，并将**Errno**设置为**ERANGE**。
 
-|输入|SEH 异常|**马瑟尔**例外|
+|输入|SEH 异常|**Matherr**异常|
 |-----------|-------------------|-------------------------|
-|• QNAN，IND|无|无|
-|*X* = 1;*x* = -1|无|无|
+|± QNAN，IND|无|无|
+|*X* ≥ 1;*x* ≤-1|无|无|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用并返回**浮点**值或**长****双**精度值的**atanh**重载。 在 C 程序中 **，atanh**始终获取并返回**双**。
+由于 c + + 允许重载，因此你可以调用**atanh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **atanh**始终采用并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**阿坦，****阿坦霍夫**，**阿坦赫**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

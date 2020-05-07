@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362618"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912301"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
 
-计算双曲切线。
+计算双曲正切值。
 
 ## <a name="syntax"></a>语法
 
@@ -61,28 +61,28 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 角度（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**tanh**函数返回*x*的双曲切线。 无错误返回。
+**Tanh**函数返回*x*的双曲正切值。 无错误返回。
 
-|输入|SEH 异常|**马瑟尔**例外|
+|输入|SEH 异常|**Matherr**异常|
 |-----------|-------------------|-------------------------|
-|• QNAN，IND|无|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用带和返回**浮点**值或**长****双**精度值的**tanh**重载。 在 C 程序中 **，tanh**始终采取并返回**双**。
+由于 c + + 允许重载，因此你可以调用**tanh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **tanh**始终采用并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头 (C)|必需的标头 (C)|
 |-------------|---------------------|-|
-|**坦赫**，**坦夫**，**坦赫尔**|\<math.h>|\<cmath> 或 \<math.h>|
+|**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

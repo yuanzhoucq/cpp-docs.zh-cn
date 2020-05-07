@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338094"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917759"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,25 +55,25 @@ void rewind(
 
 ## <a name="remarks"></a>备注
 
-**倒带**函数将与*流*关联的文件指针重新定位到文件的开头。 对 **rewind** 的调用类似于
+**倒带**函数将与*stream*关联的文件指针重新定位到文件的开头。 对 **rewind** 的调用类似于
 
-**（虚空） fseek （**_流_**， 0L， SEEK_SET ）;**
+**（void） fseek （** _stream_**，0L，SEEK_SET）;**
 
-但是，与[fseek](fseek-fseeki64.md)不同，**倒带**清除流的误差指示器以及文件结尾指示器。 此外，与[fseek](fseek-fseeki64.md)不同，**倒带**不会返回值以指示指针是否已成功移动。
+但是，与[fseek](fseek-fseeki64.md)不同，**倒带**会清除流的错误指示符和文件尾指示符。 另外，与[fseek](fseek-fseeki64.md)不同的是，**倒带**不会返回一个值以指示是否已成功移动指针。
 
-要清除键盘缓冲区，请使用与默认情况下与键盘关联的流**stdin**的**倒带**。
+若要清除键盘缓冲区，请在默认情况下，使用与键盘关联的流**stdin**来**倒带**。
 
-如果流是**NULL**指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 **，errno**设置为**EINVAL**。
+如果 stream 为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数返回并将**errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**倒**|\<stdio.h>|
+|**后退**|\<stdio.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -114,13 +114,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>

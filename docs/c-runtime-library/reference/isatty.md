@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: c9611c2bd55ebc1602a73e4c71518716ea100420
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343905"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919772"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -48,20 +48,20 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>参数
 
-*Fd*<br/>
+*fd*<br/>
 引用设备以进行测试的文件说明符。
 
 ## <a name="return-value"></a>返回值
 
-如果描述符与字符设备关联 **，_isatty**返回非零值。 否则 **，_isatty**返回 0。
+如果描述符与字符设备相关联， **_isatty**将返回一个非零值。 否则， **_isatty**返回0。
 
 ## <a name="remarks"></a>备注
 
-**_isatty**功能确定*fd*是否与字符设备（终端、控制台、打印机或串行端口）相关联。
+**_Isatty**函数确定*fd*是否与字符设备（终端、控制台、打印机或串行端口）相关联。
 
-此函数验证*fd*参数。 如果*fd*是错误的文件指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回 0 并将**errno**设置到**EBADF**。
+此函数验证*fd*参数。 如果*fd*是错误的文件指针，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回0并将**errno**设置为**ebadf (**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

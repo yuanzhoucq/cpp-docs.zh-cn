@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338162"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919531"
 ---
 # <a name="rand"></a>rand
 
-使用众所周知且完全可重现的算法生成伪随机数。 此函数的编程安全性版本可用;见[rand_s](rand-s.md)。 **兰特**生成的数字在加密上并不安全。 要生成更加密安全的随机数，请使用[rand_s](rand-s.md)或C++标准库中声明的函数，以[\<随机>](../../standard-library/random.md)。
+使用众所周知且完全可重复的算法生成一个伪随机数。 提供此函数的更具编程的安全版本;请参阅[rand_s](rand-s.md)。 **Rand**生成的数字不是加密安全的。 对于更安全的安全随机数生成，请在[ \<随机>](../../standard-library/random.md)中使用[rand_s](rand-s.md)或 c + + 标准库中声明的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -50,21 +50,21 @@ int rand( void );
 
 ## <a name="return-value"></a>返回值
 
-**如**上文所述，兰特返回伪随机数。 无错误返回。
+**rand**返回伪随机数，如上所述。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**兰特**函数返回范围 0 到**RAND_MAX** （32767） 中的伪随机整数。 在调用**rand**之前，使用[srand](srand.md)函数来播种伪随机数生成器。
+**Rand**函数返回0到**RAND_MAX** （32767）范围内的一个随机整数。 在调用**rand**之前，使用[srand](srand.md)函数对伪随机数生成器进行种子设定。
 
-**兰特**函数生成一个众所周知的序列，不适合用作加密函数。 要生成更加密安全的随机数，请使用[rand_s](rand-s.md)或C++标准库中声明的函数，以[\<随机>](../../standard-library/random.md)。 有关**兰特**出了什么问题以及随机>如何解决\<这些缺点的信息，请参阅此名为[rand 被视为有害的](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)视频。
+**Rand**函数生成一个众所周知的序列，它不适合用作加密函数。 对于更安全的安全随机数生成，请在[ \<随机>](../../standard-library/random.md)中使用[rand_s](rand-s.md)或 c + + 标准库中声明的函数。 有关**rand**错误以及随机> 如何\<处理这些缺点的信息，请参阅此带标题的[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的视频。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**兰德**|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

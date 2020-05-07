@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332760"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917724"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -60,29 +60,29 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 要舍入的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**rint**函数返回一个浮点值，该值表示最接近的整数到*x*。 半向值根据浮点舍入模式的当前设置进行舍入，与**附近的函数**相同。 与**附近的函数**不同，如果结果与参数的值不同 **，rint**函数可能会引发**FE_INEXACT**浮点异常。 无错误返回。
+**Rint**函数将返回表示最接近*x*的整数的浮点值。 根据浮点舍入模式的当前设置对中间值进行舍入，这与**nearbyint**函数相同。 与**nearbyint**函数不同，如果结果不同于参数中的值， **rint**函数可能会引发**FE_INEXACT**浮点异常。 无错误返回。
 
-|输入|SEH 异常|**_matherr**例外|
+|输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|• 、 QNAN、 IND|无|无|
+|±∞、QNAN、IND|无|无|
 |非规格化数|EXCEPTION_FLT_UNDERFLOW|无|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用获取和返回**浮点**值**和长****双**值的**rint**重载。 在 C 程序中 **，rint**始终获取并返回**一个双**。
+由于 c + + 允许重载，因此你可以调用**rint**的重载，该重载采用并返回**浮点**和**长****双精度**值。 在 C 程序中， **rint**始终采用并返回**双精度型**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**林特**，**林特**，**林特尔**|\<math.h>|\<cmath>|
+|**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

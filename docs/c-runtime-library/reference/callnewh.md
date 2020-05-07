@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-ms.openlocfilehash: d93de7f963a370810ed3b30af04d6d602abf6313
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3990d4b15c25cfd6c753c2b1d44c112971ff59af
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333664"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918801"
 ---
 # <a name="_callnewh"></a>_callnewh
 
@@ -47,12 +47,12 @@ int _callnewh(
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 [新运算符](../../cpp/new-operator-cpp.md)尝试进行分配的内存量。
 
 ## <a name="return-value"></a>返回值
 
-|“值”|说明|
+|值|说明|
 |-----------|-----------------|
 |0|失败：未安装任何新处理程序，或者无任何新处理程序处于活动状态。|
 |1|成功：新的处理程序已安装并处于活动状态。 可以重试内存分配。|
@@ -65,7 +65,7 @@ int _callnewh(
 
 如果[新运算符](../../cpp/new-operator-cpp.md)未能成功分配内存，则会调用*新处理程序*。 新处理程序随后会启动一些适当的操作，如释放内存，以便成功进行后续分配。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

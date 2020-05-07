@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 3b8411f9839022477dff3100792e271e2f0b572b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334122"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920078"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-计算**x（****阿坦**、**阿坦夫**和**阿坦尔**）的弧形或**y**/**x（****阿坦2、****阿坦2f**和**atan2l）** 的弧形。
+计算**x**的反正切值（**atan**、 **atanf**和**atanl**）或**y**/**x**的反正切值（**atan2**、 **atan2f**和**atan2l**）。
 
 ## <a name="syntax"></a>语法
 
@@ -77,34 +77,34 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*， *y*<br/>
+*x*、 *y*<br/>
 任意数字。
 
 ## <a name="return-value"></a>返回值
 
-**atan**返回范围 -*/2 到 +/2 弧度中的*x*弧形。 **atan2**返回范围 -α 中*y*/*x*的弧线 - = 弧度。 如果*x*为 0，**则 atan**返回 0。 如果**atan2**的两个参数均为 0，则函数返回 0。 所有结果都都以弧度为单位。
+**atan**返回*x*的反正切值，范围为-π/2 到π/2 弧度。 **atan2**返回范围-π到π弧度的*y*/*x*的反正切值。 如果*x*为0，则**atan**将返回0。 如果**atan2**的两个参数均为0，则该函数返回0。 所有结果都都以弧度为单位。
 
 **atan2**使用两个参数的符号来确定返回值的象限。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• **QNAN**， **IND**|无|**_DOMAIN**|
+|± **QNAN**， **IND**|无|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-**atan**函数计算*x*的弧切（逆切线函数）。 **atan2**计算*y*/*x*的弧形（如果*x*等于**0，atan2**返回 +/2，如果*y*为正，则 -+/2 如果*y*为负，则为 0，如果*y*为 0，则为 0。
+**Atan**函数计算*x*的反正切值（反切线函数）。 **atan2**计算*y*/*x*的反正切值（如果*x*等于 0 *，如果 y 为正值*，则**atan2**返回π/2; 如果 y*为负数*，则返回-π/2; 如果*y*为0，则返回0。）
 
-**atan**具有使用流式 SIMD 扩展 2 （SSE2） 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**atan**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-由于C++允许重载，因此可以调用采用**浮点**或**长****双**参数的**atan**和**atan2**的重载。 在 C 程序中 **，atan**和**atan2**总是采用**双重**参数并返回**一个双**。
+由于 c + + 允许重载，因此可以调用**atan**和**atan2**的重载，该重载采用**float**或**long** **双**参数。 在 C 程序中， **atan**和**atan2**始终采用**双重**参数并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**阿坦**，**阿坦2**，**阿坦夫**，**阿坦2f**，**阿坦，****阿坦2l**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="example"></a>示例
 

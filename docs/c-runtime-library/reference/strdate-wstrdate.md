@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 9b4b6d3b81dd1dda968cc42448ab2e53bdd44433
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361285"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911854"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -71,26 +71,26 @@ wchar_t *_wstrdate(
 
 ### <a name="parameters"></a>参数
 
-*日期斯特*<br/>
+*datestr*<br/>
 指向包含格式化日期字符串的缓冲区的指针。
 
 ## <a name="return-value"></a>返回值
 
-每个函数都返回指向生成的字符串*datestr 的*指针。
+其中每个函数均返回一个指向生成的字符串*datestr*的指针。
 
 ## <a name="remarks"></a>备注
 
 这些函数的更安全版本已发布，请参阅 [_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)。 建议尽可能使用更为安全的函数。
 
-**_strdate**函数将当前系统日期复制到按*datestr（* 格式化**mm**/**dd**/**yy）** 指向的缓冲区，其中**mm**是表示月份的两位数字 **，dd**是表示当天的两位数字 **，yy**是该年的最后两位数字。 例如，字符串**12/05/99**表示 1999 年 12 月 5 日。 缓冲区长度必须至少为 9 个字节。
+**_Strdate**函数将当前系统日期复制到*datestr*所指向的缓冲区，格式为**mm**/**dd**/**yy**，其中**mm**是表示月份的两位数字， **dd**是表示天的两位数字， **yy**是年份的最后两位数字。 例如，字符串**12/05/99**表示1999年12月5日。 缓冲区长度必须至少为 9 个字节。
 
-如果*datestr*是**NULL**指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回 -1 并将**errno**设置为**EINVAL**。
+如果*datestr*为**NULL**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 **_wstrdate**是 **_strdate**的宽字符版本;**_wstrdate**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

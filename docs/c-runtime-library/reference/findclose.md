@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: ed17963dc7331962c3ac0d522db2843822ec5f79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346782"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911800"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -49,16 +49,16 @@ int _findclose(
 
 ### <a name="parameters"></a>参数
 
-*处理*<br/>
-以前调用 **_findfirst**返回的搜索句柄。
+*柄*<br/>
+之前对 **_findfirst**的调用返回的搜索句柄。
 
 ## <a name="return-value"></a>返回值
 
-如果成功 **，_findclose**返回 0。 否则，它将返回 -1 并将**errno**设置到**ENOENT，** 指示找不到更多的匹配文件。
+如果成功， **_findclose**将返回0。 否则，它将返回-1，并将**errno**设置为**ENOENT**，指示找不到更多匹配的文件。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 187031adc0b22aff2c5418cd7e0f3e64075f1745
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343933"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919802"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 
@@ -76,19 +76,19 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的非当前区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果*c*是字母字符的特定表示形式，则每个例程都返回非零。 如果*c*在范围 A - Z 或 a - z 内 **，isalpha**返回非零值。 **iswalpha**仅返回非零值，该宽字符的[正面](isupper-isupper-l-iswupper-iswupper-l.md)或正**惠者**为非零;也就是说，对于任何宽字符，它是实现定义的集之一，其中没有 iswcntrl、iswdigit、iswpunct**iswpunct**或**iswspace**是非零。 **iswcntrl** **iswdigit** 如果*c*不符合测试条件，则每个例程返回 0。
+如果*c*是字母字符的特定表示形式，则每个例程将返回非零值。 如果*c*范围在 a-z 或 a-z 范围内，则**isalpha**将返回一个非零值。 **iswalpha**仅对宽字符返回非零值， [iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或**iswlower**为非零值;也就是说，对于**iswcntrl**、 **iswdigit**、 **iswpunct**或**iswspace**均不为零的任何一个实现定义集的宽字符。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-具有 **_l**后缀的这些函数的版本使用传入区域设置参数，而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*c*不是 EOF 或范围 0 到 0xFF（包括）时 **，isalpha**和 **_isalpha_l**的行为未定义。 当使用调试 CRT 库，*并且 c*不是这些值之一时，这些函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isalpha**和 **_isalpha_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -99,7 +99,7 @@ int _iswalpha_l(
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -115,5 +115,5 @@ int _iswalpha_l(
 ## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

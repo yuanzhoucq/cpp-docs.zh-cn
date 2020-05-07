@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-ms.openlocfilehash: 2d5d4e224b39e9fa597e12975d27fa5720fbfbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b889bccc0b1f1fd99a9a0526bbfb42a2e520970
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345257"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919386"
 ---
 # <a name="_get_doserrno"></a>_get_doserrno
 
-获取操作系统返回的错误值，然后再将其转换为**errno**值。
+获取由操作系统返回的错误值，在将其转换为**errno**值之前。
 
 ## <a name="syntax"></a>语法
 
@@ -50,21 +50,21 @@ errno_t _get_doserrno(
 ### <a name="parameters"></a>参数
 
 *pValue*<br/>
-指向要填充 **_doserrno**全局宏的当前值的整数的指针。
+指向要使用 **_doserrno**全局宏的当前值填充的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果 **_get_doserrno**成功，它将返回零;如果成功，则返回零。如果失败，它将返回一个错误代码。 如果*pValue*为**NULL，** 则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**设置到**EINVAL**并返回**EINVAL**。
+如果 **_get_doserrno**成功，则返回零;如果失败，则返回错误代码。 如果*pValue*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-在 CRT 初始化期间，在进程执行开始之前 **，_doserrno**全局宏设置为零。 将它设置为由返回操作系统错误的任一系统级函数调用返回的操作系统错误值，而且在执行过程中永远不会将其重置为零。 编写代码以检查函数返回的错误值时，始终使用函数调用前的[_set_doserrno](set-doserrno.md)清除 **_doserrno。** 因为另一个函数调用可能会覆盖 **_doserrno，** 因此在函数调用后立即使用 **_get_doserrno**检查值。
+在开始执行进程之前，在 CRT 初始化过程中 **_doserrno**全局宏设置为零。 将它设置为由返回操作系统错误的任一系统级函数调用返回的操作系统错误值，而且在执行过程中永远不会将其重置为零。 当你编写代码来检查函数返回的错误值时，请始终通过在函数调用之前使用[_set_doserrno](set-doserrno.md)来清除 **_doserrno** 。 由于另一个函数调用可能会覆盖 **_doserrno**，因此请在函数调用之后立即使用 **_get_doserrno**检查值。
 
-我们建议[_get_errno](get-errno.md)而不是 **_get_doserrno**便携式错误代码。
+对于可移植错误代码，我们建议[_get_errno](get-errno.md)而不是 **_get_doserrno** 。
 
-**_doserrno**的可能值在 errno.h>中\<定义。
+**_Doserrno**的可能值在 errno> \<中定义。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -72,7 +72,7 @@ errno_t _get_doserrno(
 |-------------|---------------------|---------------------|
 |**_get_doserrno**|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 
-**_get_doserrno**是微软的扩展。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+**_get_doserrno**是 Microsoft 扩展。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 
