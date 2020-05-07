@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
 ms.openlocfilehash: 7a45b449dc9c3c4c81add37bbac0813c81133203
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62315243"
@@ -27,9 +27,9 @@ ms.locfileid: "62315243"
 
 - 若要显示自定义生成步骤实际执行的操作，请将 `@echo on` 添加为第一个命令。 生成事件和生成步骤均放置在临时 .bat 文件中并在生成项目时运行。 因此，可以将错误检查添加到生成事件或生成步骤命令中。
 
-- 在中间文件目录中检查生成日志，查看自动执行的操作。 MSBuild 宏表达式、$(IntDir)\\$(MSBuildProjectName).log 分别表示日志的路径和名称。
+- 在中间文件目录中检查生成日志，查看自动执行的操作。 MSBuild 宏表达式、$(IntDir)\\$(MSBuildProjectName).log 分别表示日志的路径和名称   。
 
-- 修改项目设置，以便在生成日志中收集超过默认数量的信息。 在 **“工具”** 菜单上，单击 **“选项”**。 在“选项”对话框框中，单击“项目和解决方案”节点，然后单击“生成和运行”节点。 然后，在“MSBuild 项目生成日志文件详细信息”对话框中，单击“详细信息”。
+- 修改项目设置，以便在生成日志中收集超过默认数量的信息。 在 **“工具”** 菜单上，单击 **“选项”** 。 在“选项”对话框框中，单击“项目和解决方案”节点，然后单击“生成和运行”节点    。 然后，在“MSBuild 项目生成日志文件详细信息”对话框中，单击“详细信息”   。
 
 - 验证任何文件名或正在使用的目录宏的值。 可以单独回显宏，也可以将 `copy %0 command.bat` 添加到自定义生成步骤的开始处，这会将自定义生成步骤的命令复制到已展开所有宏的 command.bat。
 
