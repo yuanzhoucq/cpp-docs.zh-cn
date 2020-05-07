@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bda14f3b6046378ad23148371f354bb910163d3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350475"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909429"
 ---
 # <a name="asctime-_wasctime"></a>asctime、_wasctime
 
@@ -71,29 +71,29 @@ wchar_t *_wasctime(
 
 提供这些函数的更多安全版本；请参阅 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)。
 
-**asctime**函数将存储为结构的时间转换为字符串。 *时间点*值通常从对**gmtime**或**本地时间的**调用中获得，这两个调用都会返回指向 TM**结构的**指针，该指针在"时代"中定义。H。
+**Asctime**函数将存储为结构的时间转换为字符串。 *Timeptr*值通常是通过调用**gmtime**或**localtime**获取的，这两种方法都返回指向**TM**结构的指针，并在时间中定义。高.
 
-|timeptr 成员|“值”|
+|timeptr 成员|值|
 |--------------------|-----------|
-|**tm_hour**|午夜起（0-23）以来的营业时间|
+|**tm_hour**|午夜后的小时数（0-23）|
 |**tm_isdst**|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|
-|**tm_mday**|月日 （1-31）|
-|**tm_min**|一小时后几分钟 （0-59）|
-|**tm_mon**|月（0-11;1 月 = 0）|
-|**tm_sec**|一秒后秒 （0-59）|
-|**tm_wday**|星期一（0-6;周日 = 0）|
-|**tm_yday**|一年日（0-365;1 月 1 日 = 0）|
+|**tm_mday**|每月的某一日（1-31）|
+|**tm_min**|每小时后的分钟数（0-59）|
+|**tm_mon**|Month （0-11;1月 = 0）|
+|**tm_sec**|分钟后的秒数（0-59）|
+|**tm_wday**|一周中的某一日（0-6;星期日 = 0）|
+|**tm_yday**|一年的某一日（0-365;1月1日 = 0）|
 |**tm_year**|年（当前年份减去 1900）|
 
 转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间的信息，请参阅 [time](time-time32-time64.md)、[_ftime](ftime-ftime32-ftime64.md) 和 [localtime](localtime-localtime32-localtime64.md) 函数，有关定义时区环境和全局变量的信息，请参阅 [_tzset](tzset.md)。
 
-**asctime**生成的字符串结果正好包含 26 个字符，并且具有窗体`Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 **asctime**使用单个静态分配的缓冲区来保存返回字符串。 每次调用此函数都会破坏上一次调用的结果。
+**Asctime**生成的字符串结果正好包含26个字符，其形式`Wed Jan 02 02:03:55 1980\n\0`为。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 **asctime**使用一个静态分配的缓冲区来保存返回字符串。 每次调用此函数都会破坏上一次调用的结果。
 
-**_wasctime**是一个宽字符版本的**asctime。** **_wasctime**和**asctime**行为相同。
+**_wasctime**是**asctime**的宽字符版本。 否则， **_wasctime**和**asctime**的行为相同。
 
-这些函数验证其参数。 如果*timeptr*是空指针，或者如果它包含范围外的值，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回**NULL**并将**errno**设置到**EINVAL**。
+这些函数验证其参数。 如果*timeptr*是 null 指针，或者如果它包含超出范围的值，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射
 
@@ -110,7 +110,7 @@ wchar_t *_wasctime(
 
 ## <a name="example"></a>示例
 
-此程序将系统时间置于长整数**aclock**中，将其转换为结构**新时间**，然后将其转换为字符串形式以进行输出，使用**asctime**函数。
+此程序将系统时间置于长整型**aclock**中，将其转换为结构**newtime** ，然后使用**asctime**函数将其转换为字符串形式的输出。
 
 ```C
 // crt_asctime.c
