@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3c5d194da85eb5d008dfc9cf19f222ebb575747d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342124"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911585"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -71,7 +71,7 @@ errno_t _localtime64_s(
 *tmDest*<br/>
 指向要填充的时间结构的指针。
 
-*源时间*<br/>
+*sourceTime*<br/>
 指向存储时间的指针。
 
 ## <a name="return-value"></a>返回值
@@ -80,50 +80,50 @@ errno_t _localtime64_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*tmDest*|*源时间*|返回值|以*tmD 最大值*|调用无效参数处理程序|
+|*tmDest*|*sourceTime*|返回值|*TmDest*中的值|调用无效参数处理程序|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**空**|any|**埃因瓦尔**|未修改|是|
-|**非 NULL（** 指向有效内存）|**空**|**埃因瓦尔**|所有字段都设置为 -1|是|
-|**非 NULL（** 指向有效内存）|小于 0 或大于 **_MAX__TIME64_T**|**埃因瓦尔**|所有字段都设置为 -1|否|
+|**Null**|any|**EINVAL**|未修改|是|
+|Not **NULL** （指向有效内存）|**Null**|**EINVAL**|所有字段都设置为 -1|是|
+|Not **NULL** （指向有效内存）|小于0或大于 **_MAX__TIME64_T**|**EINVAL**|所有字段都设置为 -1|否|
 
-对于前两种错误条件，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将**errno**设置为**EINVAL**并返回**EINVAL**。
+对于前两种错误条件，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**localtime_s**函数转换存储为[time_t](../../c-runtime-library/standard-types.md)值的时间，并将结果存储在[tm](../../c-runtime-library/standard-types.md)类型的结构中。 **time_t**值*源时间*表示自 1970 年 1 月 1 日（UTC）午夜 （00：00：00）起经过的秒数。 此值通常从[时间](time-time32-time64.md)函数获得。
+**Localtime_s**函数将存储的时间转换为[time_t](../../c-runtime-library/standard-types.md)值，并将结果存储在[tm](../../c-runtime-library/standard-types.md)类型的结构中。 **Time_t**值*sourceTime*表示自00:00:00 年1月 1970 1 日午夜（）开始经过的秒数。 此值通常是从[time](time-time32-time64.md)函数获取的。
 
-**localtime_s**如果用户首先设置全局环境变量**TZ，localtime_s**纠正本地时区。 设置**TZ**时，还会自动设置另外三个环境变量 **（_timezone、_daylight**和 **_tzname）。** **_daylight** 如果未设置**TZ**变量 **，localtime_s**尝试使用控制面板中的日期/时间应用程序中指定的时区信息。 如果无法获取此信息，则它默认使用代表太平洋时区的 PST8PDT。 有关这些变量的说明，请参阅 [_tzset](tzset.md)。 **TZ**是微软的扩展，不是**本地时间的**ANSI 标准定义的一部分。
+如果用户首先设置全局环境变量**TZ**，则**localtime_s**更正本地时区。 设置**TZ**后，还会自动设置另外三个环境变量（**_timezone**、 **_daylight**和 **_tzname**）。 如果未设置**TZ**变量， **localtime_s**将尝试使用 "控制面板" 的 "日期/时间" 应用程序中指定的时区信息。 如果无法获取此信息，则它默认使用代表太平洋时区的 PST8PDT。 有关这些变量的说明，请参阅 [_tzset](tzset.md)。 **TZ**是 Microsoft 扩展，而不是**localtime**的 ANSI 标准定义的一部分。
 
 > [!NOTE]
 > 目标环境应尝试确定夏令时是否生效。
 
-**_localtime64_s**（）使用 **__time64_t**结构，允许日期在 3001 年 1 月 18 日 23：59：59（协调通用时间 （UTC） 之前表示，而 **_localtime32_s**表示日期为 2038 年 1 月 18 日 23：59：59，UTC。
+使用 **__time64_t**结构的 **_localtime64_s**允许日期由23:59:59 年1月 3001 18 日、协调世界时（utc）表示，而 **_localtime32_s**表示日期到23:59:59 年1月18日（2038，utc）。
 
-**localtime_s**是一个内联函数，它计算到 **_localtime64_s，time_t**等效于 **__time64_t。** **time_t** 如果需要强制编译器将**time_t**解释为旧的 32 位**time_t**，则可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**localtime_s**评估 **_localtime32_s。** 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**localtime_s**是计算结果为 **_localtime64_s**的内联函数， **time_t**等效于 **__time64_t**。 如果需要强制编译器将**time_t**解释为旧32位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**localtime_s**计算为 **_localtime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
-结构类型[tm](../../c-runtime-library/standard-types.md)的字段存储以下值，每个值都是**int**。
+结构类型[tm](../../c-runtime-library/standard-types.md)的字段存储以下值，其中每个值都是**int**。
 
 |字段|说明|
 |-|-|
-|**tm_sec**|一分钟后秒 （0 - 59）。|
-|**tm_min**|一小时后几分钟 （0 - 59）。|
-|**tm_hour**|午夜起（0 - 23日）的营业时间。|
-|**tm_mday**|月日（1 - 31）。|
-|**tm_mon**|月 （0 - 11;1 月 = 0）。|
+|**tm_sec**|每分钟的秒数（0-59）。|
+|**tm_min**|每小时后的分钟数（0-59）。|
+|**tm_hour**|午夜（0-23）。|
+|**tm_mday**|每月的某一日（1-31）。|
+|**tm_mon**|Month （0-11;1月 = 0）。|
 |**tm_year**|年（当前年份减去 1900）。|
-|**tm_wday**|星期一（0 - 6;周日 = 0）。|
-|**tm_yday**|一年中的日子（0 - 365;1 月 1 = 0）。|
+|**tm_wday**|一周中的某一日（0-6;星期日 = 0）。|
+|**tm_yday**|一年的某一日（0-365;1月1日 = 0）。|
 |**tm_isdst**|如果夏令时生效，则为正值；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负值。|
 
-如果设置了**TZ**环境变量，C 运行时库将假定适合美国的规则来实现夏令时 （DST） 的计算。
+如果设置了**TZ**环境变量，C 运行时库将假定与用于实现夏令时（DST）的计算的美国适用的规则。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**localtime_s**， **_localtime32_s**， **_localtime64_s**|\<time.h>|\<ctime>\<或时间.h>|
+|**localtime_s**、 **_localtime32_s** **_localtime64_s**|\<time.h>|\<ctime> 或\<time .h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

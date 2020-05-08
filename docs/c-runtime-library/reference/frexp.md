@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345800"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911610"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -70,7 +70,7 @@ long double frexp(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
 *expptr*<br/>
@@ -78,21 +78,21 @@ long double frexp(
 
 ## <a name="return-value"></a>返回值
 
-**弗雷智浦**返回曼蒂萨。 如果*x*为 0，则对于曼蒂萨和指数，函数返回 0。 如果*expptr*为**NULL，** 则无效参数处理程序将调用[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，此函数将**errno**设置到**EINVAL**并返回 0。
+**frexp**返回尾数。 如果*x*为0，则函数对于尾数和指数都返回0。 如果*expptr*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
-**frexp**函数将浮点值 *（x*） 分解为曼蒂萨 *（m*） 和指数 *（n），* 以便*m*的绝对值大于或等于 0.5 和小于 1.0，x *x* = *m* = 2<sup>*n*</sup>。 整数指数*n*存储在*expptr*指向的位置。
+**Frexp**函数将浮点值（*x*）分解为尾数（*m*）和指数（*n*），以使*m*的绝对值大于或等于0.5 且小于1.0， *x* = *m* * 2<sup>*n*</sup>。 整数指数*n*存储在*expptr*所指向的位置。
 
-C++允许重载，所以你可以调用**frexp**的重载。 在 C 程序中 **，frexp**始终采用**双**和**int**指针，并返回**一个双**。
+C + + 允许重载，因此可以调用**frexp**的重载。 在 C 程序中， **frexp**始终采用**double**和**int**指针并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**弗雷浦浦斯**，**弗雷克斯普 ，****弗勒克普尔**|\<math.h>|
+|**frexp**、 **frexpf**、 **frexpl**|\<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

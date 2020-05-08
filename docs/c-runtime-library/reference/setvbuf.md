@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316263"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915754"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -55,36 +55,36 @@ int setvbuf(
 *流*<br/>
 指向**文件**结构的指针。
 
-*缓冲区*<br/>
+*宽限*<br/>
 用户分配的缓冲区。
 
-*模式*<br/>
+*mode*<br/>
 缓冲模式。
 
-*大小*<br/>
-缓冲区大小（以字节为单位）。 允许范围：2 个<=*大小*<= INT_MAX （2147483647）。 在内部，为*大小*提供的值向下舍入到最接近的倍数 2。
+size <br/>
+缓冲区大小（以字节为单位）。 允许的范围： 2 <= *size* <= INT_MAX （2147483647）。 在内部，为*size*提供的值将向下舍入为最接近的2的倍数。
 
 ## <a name="return-value"></a>返回值
 
 如果成功，则返回 0。
 
-如果*流*为**NULL**，或者*模式*或*大小*不在有效的更改范围内，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 -1 并将 errno 设置为 EINVAL********。
+如果*stream*为**NULL**，或者*模式*或*大小*不在有效的更改范围内，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 -1 并将 errno 设置为 EINVAL********。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**setvbuf**函数允许程序控制*流的*缓冲和缓冲区大小。 *流*必须引用自打开以来未经过 I/O 操作的打开文件。 *缓冲区*指向的数组用作缓冲区，除非它是**NULL，** 在这种情况下**setvbuf**使用长度*大小*/2 \* 2 字节的自动分配的缓冲区。
+**Setvbuf**函数允许程序控制*流*的缓冲和缓冲区大小。 *流*必须引用打开的文件，该文件在打开后尚未完成 i/o 操作。 *缓冲区*所指向的数组将用作缓冲区，除非它为**NULL**，在这种情况下， **setvbuf**将使用自动分配的长度为*大小*为/ \* 2 字节的缓冲区。
 
-模式必须 **_IOFBF、_IOLBF****_IOLBF**或 **_IONBF**。 如果*模式***为_IOFBF**或 **_IOLBF**，则*大小*用作缓冲区的大小。 如果 *_IONBF模式***，则**流将取消缓冲，并忽略*大小*和*缓冲区*。 *模式*及其含义的值包括：
+模式必须为 **_IOFBF**、 **_IOLBF**或 **_IONBF**。 如果*模式*为 **_IOFBF**或 **_IOLBF**，则使用*size*作为缓冲区的大小。 如果 **_IONBF***模式*，则流将不缓冲，并忽略*大小*和*缓冲区*。 *模式*的值及其含义如下：
 
 |*模式*值|含义|
 |-|-|
-| **_IOFBF** | 完全缓冲;也就是说，*缓冲区*用作缓冲区，*大小*用作缓冲区的大小。 如果*缓冲区*为**NULL，** 则使用自动分配的缓冲区*大小*字节长。 |
-| **_IOLBF** | 对于某些系统，会提供行缓冲。 但是，对于 Win32，该行为与 **_IOFBF** - 完全缓冲相同。 |
-| **_IONBF** | 无论缓冲区或*大小*如何，都不使用*缓冲区*。 |
+| **_IOFBF** | 完全缓冲;也就是说，将使用*缓冲区*作为缓冲区大小，并将*大小*用作缓冲区的大小。 如果*缓冲区*为**NULL**，则将使用自动分配的缓冲区*大小*（long）。 |
+| **_IOLBF** | 对于某些系统，会提供行缓冲。 但对于 Win32，行为与 **_IOFBF**完全缓冲相同。 |
+| **_IONBF** | 无论*缓冲区*或*大小*如何，都不使用任何缓冲区。 |
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

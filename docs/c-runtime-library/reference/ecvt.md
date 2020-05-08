@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 5e1760d5c68e650f6fbf44866d4e368b9d6233b6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348029"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915096"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-将**双**数转换为字符串。 提供此函数的更安全的版本；请参阅 [_ecvt_s](ecvt-s.md)。
+将**双精度**数字转换为字符串。 提供此函数的更安全的版本；请参阅 [_ecvt_s](ecvt-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -56,34 +56,34 @@ char *_ecvt(
 *value*<br/>
 要转换的数字。
 
-*count*<br/>
+*计数*<br/>
 存储的数字位数。
 
-*12 月*<br/>
+*十进制*<br/>
 存储的十进制点位置。
 
-*标志*<br/>
+*表明*<br/>
 转换后的数字的符号。
 
 ## <a name="return-value"></a>返回值
 
-**_ecvt**返回指向数字字符串的指针;如果发生错误，**则为 NULL。**
+**_ecvt**返回指向数字字符串的指针;如果发生错误，则**为 NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**_ecvt**函数将浮点数转换为字符串。 *值*参数是要转换的浮点数。 此函数将*值*的数字*存储*起来为字符串，并追加空字符 （"\0"）。 如果*值*中的位数超过*计数*，则低阶数字将四舍五入。 如果*数字少于计数*数字，则字符串将用零填充。
+**_Ecvt**函数将浮点数转换为字符串。 *值*参数是要转换的浮点数。 此函数以字符串的形式存储*值*的*计数*位数，并追加一个 null 字符（"\ 0"）。 如果*值*中的数字位数超过*计数*，则会舍入低序位。 如果数字少于*计数*，则用零填充字符串。
 
-**_ecvt**返回的总数不会超过 **_CVTBUFSIZE。**
+**_Ecvt**返回的总位数不会超过 **_CVTBUFSIZE**。
 
-字符串中仅存储位数。 小数点的位置和*值*符号可以从调用后的*dec*和*sign*获得。 *dec*参数指向一个整数值，该值给出相对于字符串开头的小数点的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *符号*参数指向指示转换数字符号的整数。 如果整数值为 0，则数值为正值。 否认，数值为负值。
+字符串中仅存储位数。 在调用后，可以从*dec*和*符号*获取小数点的位置和*值*的符号。 *Dec*参数指向一个整数值，该整数值给定小数点相对于字符串开头的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *Sign*参数指向一个整数，该整数指示转换后的数字的符号。 如果整数值为 0，则数值为正值。 否认，数值为负值。
 
-**_ecvt**和 **_fcvt**的区别在于对*计数*参数的解释。 **_ecvt**将*计数*解释为输出字符串中的总位数，而 **_fcvt**将*计数*解释为小数点之后的位数。
+**_Ecvt**和 **_fcvt**之间的区别在于*count*参数的解释。 **_ecvt**将*计数*解释为输出字符串中的总数字位数，而 **_fcvt**将*count*解释为小数点后的位数。
 
 **_ecvt**和 **_fcvt**使用单个静态分配的缓冲区进行转换。 每次调用这些例程都会破坏上一次调用的结果。
 
-此函数验证其参数。 如果*de*或*符号*为**NULL**，或者*计数*为 0，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则**errno**设置为**EINVAL**并返回**NULL。**
+此函数验证其参数。 如果*dec*或*sign*为**NULL**，或者*count*为0，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并返回**NULL** 。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

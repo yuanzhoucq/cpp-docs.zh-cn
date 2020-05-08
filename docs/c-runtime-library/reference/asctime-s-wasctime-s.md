@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 52391eb1237e4c1d7ef320dacd211b603a21ab8b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334215"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909415"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
@@ -74,14 +74,14 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>参数
 
-*缓冲区*<br/>
-指向缓冲区的指针，用于存储字符串结果。 此函数假定指向具有*由 NumberOfElements*指定的大小的有效内存位置的指针。
+*宽限*<br/>
+指向用于存储字符串结果的缓冲区的指针。 此函数假定指针指向使用*numberOfElements*指定的大小的有效内存位置。
 
-*元素数*<br/>
+*numberOfElements*<br/>
 用于存储结果的缓冲区的大小。
 
-*tm 来源*<br/>
-时间/日期结构。 此函数假定指向有效结构**tm**对象的**指针**。
+*tmSource*<br/>
+时间/日期结构。 此函数假定为指向有效**结构** **tm**对象的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -89,42 +89,42 @@ errno_t _wasctime_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*缓冲区*|*元素数*|*tm 来源*|返回|*缓冲区*中的值|
+|*宽限*|*numberOfElements*|*tmSource*|返回|*缓冲区*中的值|
 |--------------|------------------------|----------|------------|-----------------------|
-|**空**|Any|Any|**埃因瓦尔**|未修改|
-|**非 NULL（** 指向有效内存）|0|Any|**埃因瓦尔**|未修改|
-|非**NULL**|0< 大小 < 26|Any|**埃因瓦尔**|空字符串|
-|非**NULL**|>= 26|**空**|**埃因瓦尔**|空字符串|
-|非**NULL**|>= 26|无效的时间结构或超出时间组件值范围|**埃因瓦尔**|空字符串|
+|**Null**|任意|任意|**EINVAL**|未修改|
+|Not **NULL** （指向有效内存）|0|任意|**EINVAL**|未修改|
+|Not **NULL**|0< 大小 < 26|任意|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|**Null**|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|无效的时间结构或超出时间组件值范围|**EINVAL**|空字符串|
 
 > [!NOTE]
-> **wasctime_s**的错误条件与**asctime_s**类似，但大小限制以文字度量。
+> **Wasctime_s**的错误情况类似于**asctime_s** ，但大小限制以单词度量。
 
 ## <a name="remarks"></a>备注
 
-**asctime**函数将存储为结构的时间转换为字符串。 *tmSource*值通常从对**gmtime**或**本地时间的**调用中获得。 这两个函数都可用于填充**TM**结构，如《时代》中定义的那样。H。
+**Asctime**函数将存储为结构的时间转换为字符串。 *TmSource*值通常是通过调用**gmtime**或**localtime**获取的。 这两个函数可用于填写**tm**结构，如时间中所定义。高.
 
-|timeptr 成员|“值”|
+|timeptr 成员|值|
 |--------------------|-----------|
-|**tm_hour**|午夜起（0-23）以来的营业时间|
+|**tm_hour**|午夜后的小时数（0-23）|
 |**tm_isdst**|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|
-|**tm_mday**|月日 （1-31）|
-|**tm_min**|一小时后几分钟 （0-59）|
-|**tm_mon**|月（0-11;1 月 = 0）|
-|**tm_sec**|一秒后秒 （0-59）|
-|**tm_wday**|星期一（0-6;周日 = 0）|
-|**tm_yday**|一年日（0-365;1 月 1 日 = 0）|
+|**tm_mday**|每月的某一日（1-31）|
+|**tm_min**|每小时后的分钟数（0-59）|
+|**tm_mon**|Month （0-11;1月 = 0）|
+|**tm_sec**|分钟后的秒数（0-59）|
+|**tm_wday**|一周中的某一日（0-6;星期日 = 0）|
+|**tm_yday**|一年的某一日（0-365;1月1日 = 0）|
 |**tm_year**|年（当前年份减去 1900）|
 
 转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间的信息，请参阅 [time、_time32、_time64](time-time32-time64.md) 和 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md) 以及 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 函数，有关定义时区环境和全局变量的信息，请参阅 [_tzset](tzset.md) 函数。
 
-**asctime_s**生成的字符串结果正好包含 26 个字符，并且具有窗体`Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果较少，将返回错误代码**EINVAL。**
+**Asctime_s**生成的字符串结果正好包含26个字符，其形式`Wed Jan 02 02:03:55 1980\n\0`为。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果小于，则返回错误代码**EINVAL**。
 
-**_wasctime_s**是**asctime_s**的宽字符版本。 **_wasctime_s**和**asctime_s**行为相同。
+**_wasctime_s**是**asctime_s**的宽字符版本。 否则 **_wasctime_s**和**asctime_s**的行为相同。
 
-这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射
 
@@ -143,13 +143,13 @@ errno_t _wasctime_s(
 
 ## <a name="security"></a>安全性
 
-如果缓冲区指针不是**NULL，** 并且指针不指向有效的缓冲区，则函数将覆盖位置的任何内容。 该操作还将导致访问冲突。
+如果缓冲区指针不为**NULL** ，并且指针不指向有效的缓冲区，则该函数将覆盖位置上的任何内容。 该操作还将导致访问冲突。
 
 如果传入的大小参数大于缓冲区的实际大小，则可能会发生[缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="example"></a>示例
 
-此程序将系统时间置于长整数**aclock**中，将其转换为结构**新时间**，然后将其转换为字符串形式以进行输出，使用**asctime_s**函数。
+此程序将系统时间置于长整型**aclock**中，将其转换为结构**newtime** ，然后使用**asctime_s**函数将其转换为字符串形式的输出。
 
 ```C
 // crt_asctime_s.c

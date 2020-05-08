@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333337"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915410"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
@@ -64,13 +64,13 @@ errno_t wmemcpy_s(
 dest**<br/>
 新缓冲区。
 
-*放大缩小字体功能 放大缩小字体功能*<br/>
+*destSize*<br/>
 目标缓冲区的大小，memcpy_s 以字节为单位），wmemcpy_s 以宽字符 (wchar_t) 为单位。
 
 *src*<br/>
 从中进行复制操作的缓冲区。
 
-*count*<br/>
+*计数*<br/>
 要复制的字符数。
 
 ## <a name="return-value"></a>返回值
@@ -79,20 +79,20 @@ dest**<br/>
 
 ### <a name="error-conditions"></a>错误条件
 
-|dest**|*放大缩小字体功能 放大缩小字体功能*|*src*|*count*|返回值|*dest*的内容|
+|dest**|*destSize*|*src*|*计数*|返回值|*Dest*的内容|
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|未修改|
-|**空**|any|any|非零|**埃因瓦尔**|未修改|
-|any|any|**空**|非零|**埃因瓦尔**|*dest*被归零|
-|any|< *计数*|any|非零|**ERANGE**|*dest*被归零|
+|**Null**|any|any|非零|**EINVAL**|未修改|
+|any|any|**Null**|非零|**EINVAL**|*dest*已归零|
+|any|< *计*|any|非零|**ERANGE**|*dest*已归零|
 
 ## <a name="remarks"></a>备注
 
-**memcpy_s**副本*计数*字节从*src*到*dest*;**wmemcpy_s**副本*计数*宽字符（两个字节）。 如果源和目标重叠，则**memcpy_s**的行为未定义。 使用**memmove_s**来处理重叠区域。
+**memcpy_s**从*src*到*目标*复制*计数*字节;**wmemcpy_s**复制*计数*宽字符（两个字节）。 如果源和目标重叠，则**memcpy_s**的行为是不确定的。 使用**memmove_s**处理重叠区域。
 
-这些函数验证其参数。 如果*计数*是非零，并且*dest*或*src*是空指针，或者*destSize*小于*计数*，则这些函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将返回**EINVAL**或**ERANGE，** 并将**errno**设置为返回值。
+这些函数验证其参数。 如果*count*为非零，且*dest*或*src*为空指针，或*destSize*小于*count*，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL**或**ERANGE** ，并将**errno**设置为返回值。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

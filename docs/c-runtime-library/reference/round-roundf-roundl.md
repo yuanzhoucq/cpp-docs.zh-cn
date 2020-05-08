@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337993"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916724"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -67,28 +67,28 @@ long double roundl(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 要舍入的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**圆**函数返回一个浮点值，该值表示*最接近的整*数 x 。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
+**Round**函数返回表示最接近*x*的整数的浮点值。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• **QNAN**， **IND**|无|**_DOMAIN**|
+|± **QNAN**， **IND**|无|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用带和返回**浮点**值**和长****双**值的**圆**重载。 在 C 程序中，**圆形**始终采用并返回**一个双**。
+由于 c + + 允许重载，因此你可以调用采用并返回**浮点**型和**长****双精度**值的**轮**数重载。 在 C 程序中， **round**始终采用并返回**双精度型**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**圆形**，**圆，****圆**|\<math.h>|
+|**round**、 **roundf**、 **roundl**|\<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

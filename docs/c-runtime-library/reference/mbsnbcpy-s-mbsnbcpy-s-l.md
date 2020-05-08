@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: d3c4a07ffb5ed4040a4bb99ee354e01f0d62f42a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340684"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911877"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
 
-将字符串的**n**字节复制到目标字符串。 这些版本的 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) 具有安全增强功能，如 [CRT 中的安全增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
+将字符串的**n**个字节复制到目标字符串。 这些版本的 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) 具有安全增强功能，如 [CRT 中的安全增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -85,39 +85,39 @@ errno_t _mbsnbcpy_s_l(
 
 ### <a name="parameters"></a>参数
 
-*斯特德斯特*<br/>
+*strDest*<br/>
 要复制的字符串的目标。
 
-*大小字节*<br/>
+*sizeInBytes*<br/>
 目标缓冲区大小。
 
 *strSource*<br/>
 要复制的字符串。
 
-*count*<br/>
+*计数*<br/>
 要复制的字节数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，为零;如果传入了错误的参数，**则 EINVAL。**
+如果成功，则为零;如果传入的参数不正确，则为**EINVAL** 。
 
 ## <a name="remarks"></a>备注
 
-**_mbsnbcpy_s**函数将*计数*字节从*strSource*到*strD。* 如果*计数*超过*strDest*的大小，则输入字符串中的任何一个都是空指针，或者*sizeInBytes*或*计数*为 0，则函数将调用参数[验证](../../c-runtime-library/parameter-validation.md)中所述的无效参数处理程序。 如果允许执行继续，则函数将返回**EINVAL**。 如果源字符串和目标字符串重叠，则 **_mbsnbcpy_s**的行为未定义。
+**_Mbsnbcpy_s**函数将*计数*字节从*strSource*复制到*strDest*。 如果*count*超过*strDest*的大小，则其中一个输入字符串为 Null 指针，或*sizeInBytes*或*count*为0，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL**。 如果源和目标字符串重叠，则 **_mbsnbcpy_s**的行为是不确定的。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
-> 与此函数的非安全版本不同 **，_mbsnbcpy_s**不执行任何空填充，并且始终为 null 终止字符串。
+> 与此函数的不安全版本不同， **_mbsnbcpy_s**不会进行任何 null 填充，并且始终为 null 会终止字符串。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: ef8a68f0db45e718af6b17fe0d08c33a6fd61d6c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333843"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913395"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-执行排序数组的二进制搜索。 此功能是具有安全增强功能的[bsearch](bsearch.md)版本，如[CRT 中的安全功能中](../../c-runtime-library/security-features-in-the-crt.md)所述。
+执行排序数组的二进制搜索。 此函数是一种具有安全增强功能的[bsearch](bsearch.md)版本，如[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 ## <a name="syntax"></a>语法
 
@@ -54,43 +54,43 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>参数
 
-*关键*\
+*按键*\
 指向要搜索的键的指针。
 
-*基地*\
-指向搜索数据的基础。
+*基座*\
+指向搜索数据的基的指针。
 
-*数量*\
+*多种*\
 元素数量。
 
 *宽度*\
 元素的宽度。
 
-*比较*\
-比较两个元素的回调函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*键*进行比较的数组元素的指针。
+*并排*\
+比较两个元素的回调函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*该键*进行比较的数组元素的指针。
 
-*上下文*\
+*快捷*\
 指向可在比较函数中访问的对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-**bsearch_s**返回指向*基*指向数组中*键*事件的指针。 如果未找到*键*，则函数将返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
+**bsearch_s**返回一个指针，该指针指向由*base*指向的数组中的*键*的匹配项。 如果未找到*键*，则该函数返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
-如果将无效参数传递给函数，它将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行 **，errno**将设置为**EINVAL，** 并且函数返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果向函数传递了无效参数，则它将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
 |||||||
 |-|-|-|-|-|-|
-|*关键*|*base*|*比较*|*number*|*width*|**Errno**|
-|**空**|any|any|any|any|**埃因瓦尔**|
-|any|**空**|any|!= 0|any|**埃因瓦尔**|
-|any|any|any|any|= 0|**埃因瓦尔**|
-|any|any|**空**|一个|any|**埃因瓦尔**|
+|*键*|*base*|*并排*|*数字*|width |**errno**|
+|**Null**|any|any|any|any|**EINVAL**|
+|any|**Null**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|= 0|**EINVAL**|
+|any|any|**Null**|一个|any|**EINVAL**|
 
 ## <a name="remarks"></a>备注
 
-**bsearch_s**函数对*数字*元素的排序数组执行二进制搜索，每个数组的大小都是*宽度*字节。 *基*值是指向要搜索的数组基础的指针，*键*是要查找的值。 *比较*参数是指向用户提供的例程的指针，该例程将请求的键与数组元素进行比较，并返回指定其关系的以下值之一：
+**Bsearch_s**函数对*数字*元素的已排序数组执行二进制搜索，其中每个*宽度*字节大小均为大小。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较，并返回以下指定其关系的值之一：
 
 |*比较*例程返回的值|说明|
 |-----------------------------------------|-----------------|
@@ -98,9 +98,9 @@ void *bsearch_s(
 |0|键等于数组元素。|
 |> 0|键大于数组元素。|
 
-如果搜索的数据结构是对象的一部分，并且比较函数需要访问对象的成员，则*上下文*指针可能很有用。 *比较*函数可能会将 void 指针转换为相应的对象类型并访问该对象的成员。 添加*上下文*参数使**bsearch_s更安全，** 因为可以使用其他上下文来避免与使用静态变量使数据可用于*比较*函数相关的重入错误。
+如果搜索的数据结构是对象的一部分，并且 compare 函数需要访问该对象的成员，则*上下文*指针可能会很有用。 *Compare*函数可以将 void 指针转换为适当的对象类型并访问该对象的成员。 添加*上下文*参数会使**bsearch_s**更安全，因为其他上下文可用于避免与使用静态变量关联的重入 bug，以使数据可供*compare*函数使用。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

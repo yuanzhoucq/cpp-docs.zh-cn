@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 7598b20db4698ff8f95fbcefa00864be1b958447
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25df567525fc190be94529fba3b7de131122e6b5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340804"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915659"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat、_mbsnbcat_l
 
-最多将一个多字节字符串的第一个**n**字节追加到另一个字节。 提供这些函数的更多安全版本；请参阅 [_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)。
+最多将一个多字节字符字符串的前**n**个字节追加到另一个。 提供这些函数的更多安全版本；请参阅 [_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -89,10 +89,10 @@ dest**<br/>
 *src*<br/>
 以 null 终止的多字节字符源字符串。
 
-*count*<br/>
-从*src*到追加到*dest 的*字节数。
+*计数*<br/>
+从*src*追加到*目标*的字节数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -101,17 +101,17 @@ dest**<br/>
 
 ## <a name="remarks"></a>备注
 
-**_mbsnbcat**函数最多附加第一个*计数* *src*字节到*dest。* 如果*dest*中空字符前面的字节是引线字节，则*src*的初始字节将覆盖此引线字节。 否则 *，src*的初始字节将覆盖*dest*的终止 null 字符。 如果在追加*计数*字节之前在*src*中显示 **，_mbsnbcat**将*src*的所有字节追加到 null 字符。 如果*计数*大于*src*的长度，则*使用 src*的长度代替*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**_Mbsnbcat**函数最多将*src*的第一个*计数*字节追加到*dest*。 如果在*dest*中紧跟在 null 字符之前的字节是前导字节，则*src*的初始字节会覆盖此前导字节。 否则， *src*的初始字节将覆盖*dest*的终止 null 字符。 如果在附加*count*个字节之前， *src*中出现 null 字节， **_mbsnbcat**将从*src*中追加到 null 字符之前的所有字节。 如果*count*大于*src*的长度，则使用*src*的长度代替*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 函数**的_mbsnbcat**版本使用此与区域设置相关的行为的当前区域设置;**_mbsnbcat_l**版本相同，只是它们使用传入区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 函数的 **_mbsnbcat**版本对与区域设置相关的行为使用当前区域设置;**_mbsnbcat_l**版本相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 **安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*dest*或*src*为**NULL，** 则函数将生成无效的参数错误，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理了错误，函数将返回**EINVAL**并将**errno**设置到**EINVAL**。
+如果*dest*或*src*为**NULL**，该函数将生成无效的参数错误，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

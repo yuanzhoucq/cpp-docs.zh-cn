@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: ee25b18bfbb86b34e46c8c6776e8ab83157613e8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51985b008565cbe550065b85261b8beb53ed6f89
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328171"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915963"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -61,14 +61,14 @@ errno_t wcrtomb_s(
 
 ### <a name="parameters"></a>参数
 
-*p 返回值*<br/>
+*pReturnValue*<br/>
 返回写入的字节数，如果发生错误，则返回 -1。
 
-*姆布查尔*<br/>
+*mbchar*<br/>
 生成的多字节转换字符。
 
-*大小Ofmbchar*<br/>
-*mbchar*变量的大小（以字节为单位）。
+*sizeOfmbchar*<br/>
+*Mbchar*变量的大小（以字节为单位）。
 
 *wchar*<br/>
 要转换的宽字符。
@@ -82,19 +82,19 @@ errno_t wcrtomb_s(
 
 ## <a name="remarks"></a>备注
 
-**wcrtomb_s**函数将宽字符（从*mbstate*中包含的指定转换状态开始）从*wchar*中包含的值转换为*mbchar*表示的地址。 *pReturnValue*值将是转换的字节数，但如果发生错误，则不超过**MB_CUR_MAX**字节数或 -1。
+**Wcrtomb_s**函数将从*mbstate*中包含的指定转换状态开始，从*wchar*中包含的值转换为*mbchar*表示的地址中的宽字符。 *PReturnValue*值将是已转换的字节数，但不能超过**MB_CUR_MAX**字节，如果出现错误，则为-1。
 
-如果*mbstate*为 null，则使用内部**mbstate_t**转换状态。 如果*wchar*中包含的字符没有相应的多字节字符，*则 pReturnValue*的值将为 -1，并且函数将返回**EILSEQ**的**errno**值 。
+如果*mbstate*为 null，则使用内部**mbstate_t**转换状态。 如果*wchar*中包含的字符没有对应的多字节字符，则*pReturnValue*的值将为-1，并且函数将返回**eilseq 且**的**errno**值。
 
-**wcrtomb_s**功能不同于[wctomb_s，_wctomb_s_l](wctomb-s-wctomb-s-l.md)它的可重新启动性。 转换状态以*mbstate*存储，用于后续对相同或其他可重新启动函数的调用。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用后续对**wcsrtombs_s**的调用而不是**wcstombs_s**，则应用程序将使用**wcsrlen**而不是**wcslen。**
+**Wcrtomb_s**函数不同于可重启性[_wctomb_s_l wctomb_s](wctomb-s-wctomb-s-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用了对**wcsrtombs_s**的后续调用而不是**wcstombs_s**，应用程序将使用**wcsrlen**而不是**wcslen**。
 
 在 C++ 中，模板重载简化了此函数的使用；重载可以自动推导出缓冲区长度（不再需要指定大小自变量），并且它们可以自动用更新、更安全的对应物替换不安全的旧函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="exceptions"></a>例外
 
-只要当前线程调用中没有函数在执行任务时**设置局部性**，*并且 mbstate*为空 **，wcrtomb_s**函数是多线程安全的。
+只要当前线程中的任何函数在执行此函数时都不会调用**setlocale** ，并且*mbstate*为 null， **wcrtomb_s**函数就是多线程安全的。
 
 ## <a name="example"></a>示例
 
@@ -149,6 +149,6 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 ## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

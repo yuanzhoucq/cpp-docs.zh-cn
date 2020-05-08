@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344057"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916217"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -50,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>返回值
 
-**_heapchk**返回在 Malloc.h 中定义的以下整数清单常量之一。
+**_heapchk**返回在 Malloc. h 中定义的以下整数清单常量之一。
 
 |返回值|条件|
 |-|-|
@@ -60,13 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | 尚未初始化堆。 |
 | **_HEAPOK** | 堆看起来一致。 |
 
-此外，如果发生错误 **，_heapchk**将**errno**设置到**ENOSYS**。
+此外，如果发生错误， **_heapchk**会将**Errno**设置为**ENOSYS**。
 
 ## <a name="remarks"></a>备注
 
-**_heapchk**函数通过检查堆的最小一致性，帮助调试与堆相关的问题。 如果操作系统不支持 **_heapchk（** 例如，Windows 98），则函数将返回 **_HEAPOK**并将**errno**设置到**ENOSYS**。
+**_Heapchk**函数通过检查堆的最小一致性来帮助调试堆相关的问题。 如果操作系统不支持 **_heapchk**（例如，Windows 98），该函数将返回 **_HEAPOK**并将**errno**设置为**ENOSYS**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

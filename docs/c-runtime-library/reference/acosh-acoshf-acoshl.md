@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350848"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913031"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -63,29 +63,29 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**acosh**函数返回*x*的反向子宫面结节（弧形双曲子）。 这些函数在域*x* = 1 上有效。 如果*x*小于 1，`errno`则设置为`EDOM`，并且结果是一个安静的 NaN。 如果*x*是安静的 NaN、无限期或无穷大，则返回相同的值。
+**Acosh**函数返回*x*的反双曲余弦（反双曲余弦）。 这些函数在域*x* ≥1上是有效的。 如果*x*小于1， `errno`则将设置为`EDOM` ，并且结果为 quiet NaN。 如果*x*为静默 NaN、不定或无穷大，则返回相同的值。
 
 |输入|SEH 异常|`_matherr` 异常|
 |-----------|-------------------|--------------------------|
-|• QNAN，IND，INF|无|无|
+|± QNAN、IND、INF|无|无|
 |*x* < 1|无|无|
 
 ## <a name="remarks"></a>备注
 
-使用C++时，可以调用获取和返回**浮点**值或**长****双精度**值的**aosh**重载。 在C程序中，**阿科什**总是采取并返回**双**。
+使用 c + + 时，可以调用**acosh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **acosh**始终采用并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**阿科什**，**阿科斯夫**，**阿科斯赫尔**|\<math.h>|\<cmath>|
+|**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

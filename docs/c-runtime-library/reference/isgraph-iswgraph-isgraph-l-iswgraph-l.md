@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: b10038a783f05512f12f25a231dd553a1863c143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29fd8a4d9fcaded1f7750eaf9ba9dfbf28760cf7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343830"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909643"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -74,34 +74,34 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
 ## <a name="return-value"></a>返回值
 
-如果*c*是空格以外的可打印字符的特定表示形式，则每个例程都返回非零。 如果*c*是空格以外的可打印字符，**则 isgraph**返回非零值。 如果*c*是宽字符空格以外的可打印宽字符，**则 iswgraph**返回非零值。 如果*c*不符合测试条件，则每个例程返回 0。
+如果*c*是可打印字符而非空格的特定表示形式，则每个例程将返回非零值。 如果*c*是一个除空格之外的可打印字符，则**isgraph**将返回一个非零值。 如果*c*是一个非宽字符空间的可打印宽字符，则**iswgraph**将返回一个非零值。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-具有 **_l**后缀的这些函数的版本使用传入区域设置，而不是当前区域设置，用于其与区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*c*不是 EOF 或范围 0 到 0xFF（包括），**则 isgraph**和 **_isgraph_l**的行为未定义。 当使用调试 CRT 库，*并且 c*不是这些值之一时，这些函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isgraph**和 **_isgraph_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istgraph**|**正图**|[_ismbcgraph](ismbcgraph-functions.md)|**正图**|
+|**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**正图**|\<ctype.h>|
-|**正图**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**isgraph**|\<ctype.h>|
+|**iswgraph**|\<ctype.h 1> 或 \<wchar.h 1>|
 |**_isgraph_l**|\<ctype.h>|
 |**_iswgraph_l**|\<ctype.h 1> 或 \<wchar.h 1>|
 
@@ -110,5 +110,5 @@ int _iswgraph_l(
 ## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

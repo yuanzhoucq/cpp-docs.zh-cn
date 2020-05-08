@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 21ce04d30da80a40a1162dce06ff378150008766
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362789"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912390"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
@@ -62,17 +62,17 @@ int _wsystem(
 
 ### <a name="parameters"></a>参数
 
-*命令*<br/>
+*command*<br/>
 要执行的命令。
 
 ## <a name="return-value"></a>返回值
 
-如果*命令*为**NULL**并且找到命令解释器，则返回一个非零值。 如果未找到命令解释器，则返回 0 并将**errno**设置到**ENOENT**。 如果*命令*不是**NULL，****则系统**返回命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值 - 1 表示错误 **，errno**设置为以下值之一：
+如果*命令*为**NULL** ，并且找到命令解释器，则返回一个非零值。 如果未找到命令解释器，则返回0，并将**errno**设置为**ENOENT**。 如果*命令*不为**NULL**，则**系统**返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值-1 表示错误， **errno**设置为以下值之一：
 
 |||
 |-|-|
 | **E2BIG** | 自变量列表（与系统相关）太大。 |
-| **埃诺恩特** | 无法找到命令解释器。 |
+| **ENOENT** | 无法找到命令解释器。 |
 | **ENOEXEC** | 由于格式无效，无法执行命令解释器文件。 |
 | **ENOMEM** | 没有足够的内存可用于执行命令；或可用内存已损坏；或存在无效块，这表明进行调用的进程未正确进行分配。 |
 
@@ -80,13 +80,13 @@ int _wsystem(
 
 ## <a name="remarks"></a>备注
 
-**系统**函数将*命令*传递给命令解释器，命令解释器将字符串作为操作系统命令执行。 **系统**使用**COMSPEC**和**PATH**环境变量来定位命令-解释器文件 CMD.exe。 如果*命令*为**NULL，** 则函数将只检查命令解释器是否存在。
+**系统**函数将*命令*传递到命令解释器，后者将字符串作为操作系统命令执行。 **system**使用**COMSPEC**和**PATH**环境变量来定位命令解释器文件 cmd.exe。 如果*command*为**NULL**，则该函数只检查命令解释器是否存在。
 
-您必须使用[fflush](fflush.md)或[_flushall](flushall.md)显式刷新，或在调用**系统**之前关闭任何流。
+你必须通过使用[fflush](fflush.md)或[_flushall](flushall.md)显式刷新，或在调用**system**之前关闭任何流。
 
-**_wsystem**是一个宽字符版本的**系统**;要 **_wsystem***的命令*参数是宽字符字符串。 否则这些函数具有相同行为。
+**_wsystem**是**系统**的宽字符版本;**_wsystem**的*命令*参数是宽字符字符串。 否则这些函数具有相同行为。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -105,7 +105,7 @@ int _wsystem(
 
 ## <a name="example"></a>示例
 
-本示例使用**系统**键入文本文件。
+此示例使用**SYSTEM**键入一个文本文件。
 
 ```C
 // crt_system.c
@@ -125,14 +125,14 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>

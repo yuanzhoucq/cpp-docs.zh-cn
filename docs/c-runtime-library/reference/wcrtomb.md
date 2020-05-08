@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: eda857b80404aebe46b090741e0b56d4fe692f34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328101"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910646"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -58,7 +58,7 @@ size_t wcrtomb(
 
 ### <a name="parameters"></a>参数
 
-*姆布查尔*<br/>
+*mbchar*<br/>
 生成的多字节转换字符。
 
 *wchar*<br/>
@@ -73,19 +73,19 @@ size_t wcrtomb(
 
 ## <a name="remarks"></a>备注
 
-**wcrtomb**函数将宽字符（从*mbstate*中包含的指定转换状态开始）从*wchar*中包含的值转换为*mbchar*表示的地址。 返回值是表示相应多字节字符所需的字节数，但不会返回超过**MB_CUR_MAX**字节。
+**Wcrtomb**函数将从*mbstate**中包含*的指定转换状态开始的宽字符转换为*mbchar*所表示的地址。 返回值是表示相应的多字节字符所需的字节数，但不会返回超过**MB_CUR_MAX**个字节。
 
-如果*mbstate*为 null，则使用包含*mbchar*转换状态的内部**mbstate_t**对象。 如果字符序列*wchar*没有相应的多字节字符表示形式，则返回 -1 并将**errno**设置为**EILSEQ**。
+如果*mbstate*为 null，则使用包含*mbchar*转换状态的内部**mbstate_t**对象。 如果字符序列*wchar*没有对应的多字节字符表示形式，则返回-1，并将**Errno**设置为**eilseq 且**。
 
-**wcrtomb**函数不同于[wctomb，_wctomb_l](wctomb-wctomb-l.md)其可重新启动性。 转换状态以*mbstate*存储，用于后续对相同或其他可重新启动函数的调用。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用随后对**wcsrtombs**的调用而不是**wcstombs，** 则应用程序将使用**wcsrlen**而不是**wcsnlen。**
+**Wcrtomb**函数不同于[wctomb，](wctomb-wctomb-l.md)其可重启性 _wctomb_l。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用了对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序将使用**wcsrlen**而不是**wcsnlen**。
 
 在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="exceptions"></a>例外
 
-**wcrtomb**函数是多线程安全的，只要此函数执行时当前线程调用中没有函数**设置局部性**，并且*mbstate*为 null。
+只要当前线程中的函数都不调用**setlocale** ，而此函数正在执行且*mbstate*为 null， **wcrtomb**函数就是多线程安全的。
 
 ## <a name="example"></a>示例
 
@@ -139,6 +139,6 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 ## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

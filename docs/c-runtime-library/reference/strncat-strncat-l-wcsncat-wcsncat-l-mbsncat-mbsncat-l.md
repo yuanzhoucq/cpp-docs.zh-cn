@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -64,19 +64,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 0e6fbc365d4e127d72df039b1351b1bfe91b1b74
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364201"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918148"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
 向字符串追加字符。 这些函数的更安全版本已经发布，请参阅 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncat**和 **_mbsncat_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsncat**和 **_mbsncat_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -131,16 +131,16 @@ unsigned char *_mbsncat_l(
 
 ### <a name="parameters"></a>参数
 
-*斯特德斯特*<br/>
+*strDest*<br/>
 null 终止的目标字符串。
 
 *strSource*<br/>
 null 终止的源字符串。
 
-*count*<br/>
+*计数*<br/>
 要追加的字符数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -149,18 +149,18 @@ null 终止的源字符串。
 
 ## <a name="remarks"></a>备注
 
-**strncat**函数最多附加*strSource*的第一*个计数*字符以*strD。* *strSource*的初始字符覆盖*strDest*的终止空字符。 如果在追加*计数*字符之前在*strSource*中出现空字符，**则 strncat**会将*strSource*的所有字符追加到 null 字符。 如果*计数*大于*strSource*的长度，则*使用 strSource*的长度代替*计数*。 在所有情况下，结果字符串以 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**Strncat**函数最多将*strSource*的第一个*计数*字符追加到*strDest*。 *StrSource*的初始字符将覆盖*strDest*的终止 null 字符。 如果在追加*count*个字符之前， *strSource*中出现空字符，则**strncat**将从*strSource*中追加到 null 字符之前的所有字符。 如果*count*大于*strSource*的长度，则使用*strSource*的长度来代替*count*。 在所有情况下，结果字符串以 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
-> **strncat**不检查*在斯特迪*的足够空间;因此，它是缓冲区溢出的潜在原因。 请记住，*计数*会限制附加的字符数;它不是对*strDest*的大小的限制。 请参阅以下示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> **strncat**不检查*strDest*中是否有足够的空间;因此，这可能会导致缓冲区溢出。 请记住， *count*限制了追加的字符数;它不是*strDest*的大小限制。 请参阅以下示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-**wcsncat**和 **_mbsncat**是宽字符和多字节字符版本的**strncat。** **wcsncat**的字符串参数和返回值是宽字符字符串;**_mbsncat**字符串是多字节字符串。 否则这三个函数否则具有相同行为。
+**wcsncat**和 **_mbsncat**是**strncat**的宽字符和多字节字符版本。 **Wcsncat**的字符串参数和返回值是宽字符字符串;**_mbsncat**的是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数具有模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -170,7 +170,7 @@ null 终止的源字符串。
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**和 **_wcsncat_l**没有区域依赖性，并且不应直接调用。 它们由 **_tcsncat_l**提供供内部使用。
+> **_strncat_l**和 **_wcsncat_l**没有区域设置依赖关系，因此不应直接调用。 它们由 **_tcsncat_l**供内部使用。
 
 ## <a name="requirements"></a>要求
 
@@ -230,7 +230,7 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-请注意 **，BadAppend**导致缓冲区溢出。
+请注意， **BadAppend**导致缓冲区溢出。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -245,5 +245,5 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

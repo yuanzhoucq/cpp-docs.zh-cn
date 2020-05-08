@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,12 +56,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-ms.openlocfilehash: 828c8b68855197f0c17202739f98a45e0abb929c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e650c15ca2b7d3b448d5480a6b1f09769100171
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343306"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918553"
 ---
 # <a name="_ismbcalnum-_ismbcalnum_l-_ismbcalpha-_ismbcalpha_l-_ismbcdigit-_ismbcdigit_l"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 
@@ -104,29 +104,29 @@ int _ismbcdigit_l
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的字符。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*<= 255 并且存在相应的 **_ismbb**例程（例如 **，_ismbcalnum**对应于 **_ismbbalnum），** 则结果是相应的 **_ismbb**例程的返回值。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*<= 255，并且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
 
 ## <a name="remarks"></a>备注
 
 其中每个例程都针对给定的条件测试给定的多字节字符。
 
-具有 **_l**后缀的这些函数的版本是相同的，只是它们使用传入区域设置，而不是当前区域设置，用于其与区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 |例程|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**， **_ismbcalnum_l**|字母数字|仅当*c*是 ASCII 英文字母的单字节表示名时，才返回非零：请参阅**有关_ismbcdigit**和 **_ismbcalpha**的示例。|
-|**_ismbcalpha**， **_ismbcalpha_l**|字母顺序|仅当*c*是 ASCII 英文字母的单字节表示形式时，才返回非零：0x41<=*c*<=0x5A 或 0x61<=*c*<=0x7A;或卡塔卡纳字母：0xA6<=*c*<=0xDF。|
-|**_ismbcdigit**， **_ismbcdigit**|数字|仅当*c*是 ASCII 数字的单字节表示：0x30<=*c*<=0x39 时，才返回非零。|
+|**_ismbcalnum**， **_ismbcalnum_l**|字母数字|当且仅当*c*是 ASCII 英文字母的单字节表示形式时返回非零值：请参阅 **_ismbcdigit**和 **_ismbcalpha**的示例。|
+|**_ismbcalpha**， **_ismbcalpha_l**|字母顺序|当且仅当*c*是 ASCII 英文字母的单字节表示形式时返回非零值：0x41 向<=*c*<= 0x5A 或 0x61<=*c*<= 0x7A;或片假名字母： 0Xa6<<=*c*<= 0xDF。|
+|**_ismbcdigit**， **_ismbcdigit**|数字|当且仅当*c*是 ASCII 数字的单字节表示形式时返回非零值： 0x30<=*c*<= 0x39。|
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

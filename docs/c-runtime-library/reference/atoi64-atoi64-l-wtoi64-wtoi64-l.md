@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 103b100b293ff183dd89f3e7c2f291f9d49519e6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913566"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -86,19 +86,19 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>参数
 
-*Str*<br/>
+*字符串*<br/>
 要转换的字符串。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-每个函数都返回通过将输入字符解释为数字而生成的 **__int64**值。 如果输入不能转换为该类型的值，**则_atoi64**的返回值为 0。
+每个函数都通过将输入字符解释为数字来返回 **__int64**值。 如果输入不能转换为该类型的值，则 **_atoi64**的返回值为0。
 
-在具有较大正积分值的溢出情况下，如果溢出时 **，_atoi64**返回**I64_MAX，** 并在具有较大负积分值的溢出时**返回I64_MIN。**
+对于具有较大正整数值的溢出， **_atoi64**返回**I64_MAX**和**I64_MIN** ，在溢出时会出现大量的整数值。
 
-在所有范围外的情况下 **，errno**设置为**ERANGE**。 如果传入的参数为**NULL，** 则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将**errno**设置为**EINVAL**并返回 0。
+在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
@@ -106,17 +106,17 @@ __int64 _wtoi64_l(
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的 null 字符（'\0' 或 L'\0'）。
 
-要 **_atoi64***的 str*参数具有以下形式：
+**_Atoi64**的*str*参数具有以下形式：
 
-> [*空白 ]*[*符号*][*数字*]
+> [*空格*][*sign*][*数字*]
 
-*空格*由忽略的空间或选项卡字符组成;*符号*是加（+）或减（-）;*数字*是一个或多个数字。
+*空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个数字。
 
-**_wtoi64**与 **_atoi64**相同，只是它需要宽字符串作为参数。
+**_wtoi64**与 **_atoi64**相同，只不过它采用宽字符字符串作为参数。
 
-这些函数的版本与 **_l**后缀相同，只是它们使用传入区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -134,7 +134,7 @@ __int64 _wtoi64_l(
 
 ## <a name="example"></a>示例
 
-此程序演示如何使用 **_atoi64**函数将存储为字符串的数字转换为数值。
+此程序说明如何使用 **_atoi64**函数将存储为字符串的数字转换为数值。
 
 ```C
 // crt_atoi64.c
@@ -185,7 +185,7 @@ Overflow condition occurred.
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

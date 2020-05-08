@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341682"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911405"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -86,32 +86,32 @@ float _logbf(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**logb**将*x*的无偏指数值作为表示为浮点值的符号整数返回 x。
+**logb**将*x*的无偏差指数值返回为以浮点值形式表示的有符号整数。
 
 ## <a name="remarks"></a>备注
 
-**logb**函数提取浮点参数*x*的指数值，就像*x*以无限范围表示一样。 如果参数*x*非规范化，则将其视为规范化。
+**Logb**函数提取浮点参数*x*的指数值，就好像*x*是用无限范围表示的。 如果参数*x*不规范，则将其视为已规范化。
 
-由于C++允许重载，因此可以调用获取和返回**浮点**值或**长****双精度值**的**logb**重载。 在 C 程序中 **，logb**始终获取并返回**一个双**。
+由于 c + + 允许重载，因此你可以调用**logb**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **logb**始终采用并返回**双精度型**。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• QNAN，IND|None|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|± QNAN，IND|None|_DOMAIN|
+|±0|ZERODIVIDE|_SING|
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
-|**日志**，**日志，****日志**， **_logbf**|\<math.h>|
+|**logb**、 **logbf**、 **logbl**、 **_logbf**|\<math.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

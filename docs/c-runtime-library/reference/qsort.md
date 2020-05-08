@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 09de57e206eb6fd4a75a0a9444332136aeee0e9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338246"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913257"
 ---
 # <a name="qsort"></a>qsort
 
@@ -58,20 +58,20 @@ void qsort(
 *base*<br/>
 目标数组的开头。
 
-*number*<br/>
+*数字*<br/>
 元素中的数组大小。
 
-*width*<br/>
+width <br/>
 元素大小（字节）。
 
-*比较*<br/>
+*并排*<br/>
 指向用户提供的例程的指针比较两个数组元素，并返回指定它们关系的值。
 
 ## <a name="remarks"></a>备注
 
-**qsort**函数实现快速排序算法，以对*数字*元素数组进行排序，每个数组都是*宽度*字节。 参数*库*是指向要排序的数组基础的指针。 **qsort**使用排序的元素覆盖此数组。
+**Qsort**函数实现了一种快速排序算法，用于对*数字*元素数组（每个*宽度*字节）进行排序。 参数*基*是指向要排序的数组基的指针。 **qsort**使用已排序的元素覆盖此数组。
 
-**qsort**在排序期间调用*比较*例程一次或多次，并将指针传递给每个调用上的两个数组元素。
+**qsort**在排序过程中一次或多次调用*比较*例程，并在每次调用时将指针传递给两个数组元素。
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -82,14 +82,14 @@ compare( (void *) & elem1, (void *) & elem2 );
 |比较函数返回值|说明|
 |-----------------------------------|-----------------|
 |< 0|**elem1**小于**elem2**|
-|0|**elem1**等效**于 elem2**|
+|0|**elem1**等效于**elem2**|
 |> 0|**elem1**大于**elem2**|
 
 数组按比较函数中定义的升序进行排序。 若要以降序对数组进行排序，请反转比较函数中的“大于”和“小于”的意义。
 
-此函数验证其参数。 如果*比较*或*数字*为**NULL，** 或者如果*基*为**NULL**且*数字*为非零，或者如果*宽度*小于零，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回 **，errno**设置为**EINVAL**。
+此函数验证其参数。 如果*compare*或*number*为**Null**，或者*base*为**null**且*number*为非零，或者*Width*小于零，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回，并将**errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
