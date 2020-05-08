@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: 46d07a8b3645ae0d68276d96271be0a246716f0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361210"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909205"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -56,9 +56,9 @@ void _unlock_file(
 
 ## <a name="remarks"></a>备注
 
-**_unlock_file**函数解锁*文件*指定的文件。 解锁文件可允许其他进程访问此文件。 除非以前在*文件*指针上调用 **_lock_file**否则不应调用此功能。 在未锁定的文件上调用 **_unlock_file**可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
+**_Unlock_file**函数将取消*文件*指定的文件的锁定。 解锁文件可允许其他进程访问此文件。 除非以前在*文件*指针上调用了 **_lock_file** ，否则不应调用此函数。 对未锁定的文件调用 **_unlock_file**可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

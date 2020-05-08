@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333157"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914096"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -63,14 +63,14 @@ errno_t wmemmove_s(
 dest**<br/>
 目标对象。
 
-*元素数*<br/>
+*numberOfElements*<br/>
 目标缓冲区的大小。
 
 *src*<br/>
 源对象。
 
-*count*<br/>
-要复制的字节数 （**memmove_s**） 或字符 （**wmemmove_s**） 。
+*计数*<br/>
+要复制的字节数（**memmove_s**）或字符数（**wmemmove_s**）。
 
 ## <a name="return-value"></a>返回值
 
@@ -78,19 +78,19 @@ dest**<br/>
 
 ### <a name="error-conditions"></a>错误条件
 
-|dest**|*元素数*|*src*|返回值|*dest*的内容|
+|dest**|*numberOfElements*|*src*|返回值|*Dest*的内容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**空**|any|any|**埃因瓦尔**|未修改|
-|any|any|**空**|**埃因瓦尔**|未修改|
-|any|< *计数*|any|**ERANGE**|未修改|
+|**Null**|any|any|**EINVAL**|未修改|
+|any|any|**Null**|**EINVAL**|未修改|
+|any|< *计*|any|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>备注
 
-副本*计数*从*src*到*dest*的字符字节数。 如果源区域和目标的某些区域重叠 **，memmove_s**可确保在覆盖之前复制重叠区域中的原始源字节。
+将*count*个字符从*src*复制到*目标*。 如果源区域的某些区域和目标重叠，则**memmove_s**确保在覆盖重叠区域中的原始源字节后将其复制。
 
-如果*dest*或*src*是空指针，或者如果目标字符串太小，这些函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回**EINVAL**并将**errno**设置为**EINVAL**。
+如果*dest*或*src*为空指针，或者如果目标字符串过小，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -130,14 +130,14 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

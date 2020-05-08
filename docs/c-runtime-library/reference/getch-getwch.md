@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 3fc90747d336e7b101739c41980332ad0b6b763a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344730"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919634"
 ---
 # <a name="_getch-_getwch"></a>_getch、_getwch
 
@@ -62,11 +62,11 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>备注
 
-**_getch**和 **_getwch**函数从控制台读取单个字符，而不与该字符回显。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。
+**_Getch**和 **_getwch**函数在不回显字符的情况下从控制台读取单个字符。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本的信息，请参阅 [_getch_nolock、_getwch_nolock](getch-nolock-getwch-nolock.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -121,7 +121,7 @@ Type 'Y' when finished typing keys: Y
 
 ## <a name="see-also"></a>另请参阅
 
-[控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche、_getwche](getche-getwche.md)<br/>
 [_cgets、_cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc、getwc](getc-getwc.md)<br/>

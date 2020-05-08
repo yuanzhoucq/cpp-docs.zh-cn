@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343220"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919728"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
@@ -100,15 +100,15 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的字符。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* <= 255 并且存在相应的 **_ismbb**例程（例如 **，_ismbcalnum**对应于 **_ismbbalnum），** 则结果是相应的 **_ismbb**例程的返回值。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* <= 255，并且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
 
 ## <a name="remarks"></a>备注
 
@@ -118,18 +118,18 @@ int _ismbcl2_l(
 
 |例程|测试条件（仅代码页 932）|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS 非汉字： 0x8140<=*c*<±0x889E。|
-|**_ismbcl0_l**|JIS 非汉字： 0x8140<=*c*<±0x889E。|
-|**_ismbcl1**|JIS 级别 1：0x889F<=*c*<±0x9872。|
-|**_ismbcl1_l**|JIS 级别 1：0x889F<=*c*<±0x9872。|
-|**_ismbcl2**|JIS 级别 2：0x989F<=*c*<±0xEAA4。|
-|**_ismbcl2_l**|JIS 级别 2：0x989F<=*c*<±0xEAA4。|
+|**_ismbcl0**|JIS 非日本汉字： 0x8140<=*c*<= 0x889E。|
+|**_ismbcl0_l**|JIS 非日本汉字： 0x8140<=*c*<= 0x889E。|
+|**_ismbcl1**|JIS level-1： 0x889F<=*c*<= 0x9872。|
+|**_ismbcl1_l**|JIS level-1： 0x889F<=*c*<= 0x9872。|
+|**_ismbcl2**|JIS level-2： 0X989f<<=*c*<= 0xEAA4。|
+|**_ismbcl2_l**|JIS level-2： 0X989f<<=*c*<= 0xEAA4。|
 
-函数检查指定的值*c*是否与上述测试条件匹配，但不检查*c*是否有效多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。
+函数检查指定的值*c*是否与上述测试条件匹配，但不检查*c*是否为有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。
 
-**结束代码页 932 特定**
+**特定于结束代码页932**
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
