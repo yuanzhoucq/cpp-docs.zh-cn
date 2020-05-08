@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344336"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913771"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -52,11 +52,11 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>返回值
 
-返回当前（默认）驱动器（1=A，2=B，依此类推）。 返回值为零表示当前路径不以字母驱动器名称（如 UNC 路径）开头。 或者，这意味着内部缓冲区分配失败。 如果内部分配失败，`errno`则设置为 ENOMEM。
+返回当前（默认）驱动器（1=A，2=B，依此类推）。 如果返回值为零，则表示当前路径不是以字母驱动器名称开头，如 UNC 路径。 或，这意味着内部缓冲区分配失败。 如果内部分配失败， `errno`则将设置为 ENOMEM。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

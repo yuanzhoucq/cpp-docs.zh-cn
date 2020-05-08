@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909548"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
@@ -57,22 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
 ## <a name="return-value"></a>返回值
 
-如果参数满足测试条件，**则 isleadbyte**返回一个非零值;如果参数满足测试条件，则返回 0。" 在"C"区域设置和单字节字符集 （SBCS） 区域设置中，**正代字节**始终返回 0。
+如果参数满足测试条件，则**isleadbyte**将返回一个非零值，否则返回0。 在 "C" 区域设置和单字节字符集（SBCS）区域设置中， **isleadbyte**始终返回0。
 
 ## <a name="remarks"></a>备注
 
-**如果 isleadbyte**宏的参数是多字节字符的第一个字节，则该宏将返回非零值。 对于从 -1 **（EOF**） 到**UCHAR_MAX** （0xFF） 的任何整数参数（包括 0xFF），**正数生成**有意义的结果。
+如果**isleadbyte**宏的参数是多字节字符的第一个字节，则它返回非零值。 **isleadbyte**为从-1 （**EOF**）到**UCHAR_MAX** （0xff）（含）的任何整数参数生成有意义的结果。
 
-**isleadbyte**的预期参数类型是**int;** 如果传递了签名字符，编译器可以通过符号扩展将其转换为整数，从而产生不可预知的结果。
+**Isleadbyte**的预期参数类型为**int**;如果传递了带符号的字符，编译器可能会通过符号扩展将其转换为整数，从而产生不可预知的结果。
 
-具有 **_l**后缀的函数版本相同，只不过它使用传入区域设置，而不是当前区域设置，使其与区域设置相关的行为。
+带有 **_l**后缀的此函数的版本是相同的，只不过它使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -92,5 +92,5 @@ int _isleadbyte_l( int c );
 ## <a name="see-also"></a>另请参阅
 
 [字节分类](../../c-runtime-library/byte-classification.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

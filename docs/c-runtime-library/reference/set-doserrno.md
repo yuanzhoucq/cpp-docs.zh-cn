@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: 209fcf7e15ea01f146e3dab09f0c304d29236770
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9de5ff8ccc4673468628275c3c3366681edc3776
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337790"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913070"
 ---
 # <a name="_set_doserrno"></a>_set_doserrno
 
@@ -50,7 +50,7 @@ errno_t _set_doserrno( int error_value );
 ### <a name="parameters"></a>参数
 
 *error_value*<br/>
-**_doserrno**的新值。
+**_Doserrno**的新值。
 
 ## <a name="return-value"></a>返回值
 
@@ -60,7 +60,7 @@ errno_t _set_doserrno( int error_value );
 
 可能的值是在 Errno.h 中定义的。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348976"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916891"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -62,32 +62,32 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
-值介于 -1 和 1 之间，用于计算弧形（反向协成）。
+*x*<br/>
+介于-1 和1之间的值，用于计算反余弦值（反余弦值）。
 
 ## <a name="return-value"></a>返回值
 
-**acos**函数将*0*范围内 x 的弧线返回至 +弧度。
+**Acos**函数返回0到π弧度范围内*x*的反余弦。
 
-默认情况下，如果*x*小于 -1 或大于 1，**则 acos**将返回无限期。
+默认情况下，如果*x*小于-1 或大于1，则**acos**将返回无限值。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|• QNAN，IND|无|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用获取和返回**浮点**和**长****双**型的**aco**的重载。 在 C 程序中 **，acos**总是获取并返回**一个双**。
+由于 c + + 允许重载，因此你可以调用**acos**的重载，该重载采用并返回**浮点**型和**长****双精度**类型。 在 C 程序中， **acos**始终采用并返回**双精度型**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**阿科斯**，**阿科斯夫**，**阿科斯尔**|\<math.h>|\<errno.h>|
+|**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>示例
 

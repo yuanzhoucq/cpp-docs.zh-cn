@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +48,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: c45fc42fb9edce1b82b0910f8aae81d4058d5974
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16c56f95fc89c1bb7b34c82cdf19c406b61c5a7e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317027"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911047"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 
 返回指向给定字符串（不在另一个给定字符串）中的第一个字符的指针。
 
 > [!IMPORTANT]
-> **_mbsspnp**和 **_mbsspnp_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsspnp**和 **_mbsspnp_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -86,26 +86,26 @@ unsigned char *_mbsspnp_l(
 
 ### <a name="parameters"></a>参数
 
-*Str*<br/>
+*字符串*<br/>
 要搜索的 null 终止的字符串。
 
 *charset*<br/>
 null 终止的字符集。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-**_strspnp、_wcsspnp**和 **_mbsspnp**返回指向*str*中不属于*字符集*中的第一个字符的指针。 **_wcsspnp** 如果*str*完全由*字符集*中的字符组成，则每个函数都返回**NULL。** 对于这些例程，都不会保留返回值来指示错误。
+**_strspnp**、 **_wcsspnp**和 **_mbsspnp**返回指向*str*中的第一个字符的指针，该字符不属于*字符集*中的字符集。 如果*str*包含*字符集*中的所有字符，则这些函数将返回**NULL** 。 对于这些例程，都不会保留返回值来指示错误。
 
 ## <a name="remarks"></a>备注
 
-**_mbsspnp**函数返回指向多字节字符的指针，该字符是*str*中不属于*charset*中字符集的第一个字符。 **_mbsspnp**根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。 搜索不包括结尾的 null 字符。
+**_Mbsspnp**函数返回一个指向多字节字符的指针，该字符是*str*中的第一个字符，该字符不属于*字符集*中的字符集。 **_mbsspnp**根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。 搜索不包括结尾的 null 字符。
 
-如果*str*或*charset*是空指针，则此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回**NULL**并将**errno**设置到**EINVAL**。
+如果*str*或*字符集*为空指针，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -113,9 +113,9 @@ null 终止的字符集。
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp****和_wcsspnp**是单字节字符和宽字符版本的 **_mbsspnp**。 **_strspnp**和 **_wcsspnp**行为与 **_mbsspnp**相同;它们仅针对此映射提供，不应出于任何其他原因使用。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
+**_strspnp**和 **_wcsspnp**是 **_mbsspnp**的单字节字符和宽字符版本。 与 **_mbsspnp**的 **_strspnp**和 **_wcsspnp**的行为相同; 否则为。它们仅为此映射提供，不应用于任何其他原因。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsspnp_l**是相同的，只是它使用传入区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbsspnp_l**相同，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -143,16 +143,16 @@ int main( void ) {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 abbage
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>

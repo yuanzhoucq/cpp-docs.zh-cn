@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333681"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913355"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,18 +50,18 @@ double _cabs(
 
 ### <a name="parameters"></a>参数
 
-*Z*<br/>
+*z*<br/>
 复数。
 
 ## <a name="return-value"></a>返回值
 
-**_cabs**返回其参数的绝对值（如果成功）。 在溢出时 **，_cabs**返回**HUGE_VAL**并将**errno**设置到**ERANGE**。 可以使用 [_matherr](matherr.md) 更改错误处理。
+如果成功， **_cabs**返回其参数的绝对值。 溢出时， **_cabs**返回**HUGE_VAL**并将**errno**设置为**ERANGE**。 可以使用 [_matherr](matherr.md) 更改错误处理。
 
 ## <a name="remarks"></a>备注
 
-**_cabs**函数计算复数的绝对值，该值必须是[类型_complex](../../c-runtime-library/standard-types.md)的结构。 结构*z*由实际组件*x*和虚部分量*y*组成。 对 **_cabs**的调用生成一个等效于表达式`sqrt( z.x * z.x + z.y * z.y )`的值。
+**_Cabs**函数计算复数的绝对值，它必须是[_complex](../../c-runtime-library/standard-types.md)类型的结构。 结构*z*由实部分量*x*和虚部*y*组成。 对 **_cabs**的调用会生成一个与表达式`sqrt( z.x * z.x + z.y * z.y )`的值等效的值。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
