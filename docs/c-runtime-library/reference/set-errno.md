@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: acc54e209d1a09e72196d2a7881ebd6c4ff8f6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e889f8e2dabfffbcc69ff796fb21570b66b57fb0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913046"
 ---
 # <a name="_set_errno"></a>_set_errno
 
@@ -49,7 +49,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>参数
 
 *error_value*<br/>
-**errno**的新值。
+**Errno**的新值。
 
 ## <a name="return-value"></a>返回值
 
@@ -59,7 +59,7 @@ errno_t _set_errno( int error_value );
 
 可能的值是在 Errno.h 中定义的。 此外，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 

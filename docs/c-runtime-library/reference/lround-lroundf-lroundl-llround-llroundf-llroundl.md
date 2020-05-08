@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341623"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911366"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -94,28 +94,28 @@ long long llroundl(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 要舍入的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**lround**和**lround**函数将最接近**的长**或**长****long**整*数返回*x 。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
+**Lround**和**llround**函数将最接近的**长****整数或****长**整数返回到*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• **QNAN**， **IND**|无|**_DOMAIN**|
+|± **QNAN**， **IND**|无|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用带和返回**浮点**值和**长****双**值的**lround**或**lround**的重载。 在C程序中 **，lround**和**lround**总是采取并返回**一个双**。
+由于 c + + 允许重载，因此可以调用**lround**或**llround**的重载，该重载采用并返回**浮点**和**长****双精度**值。 在 C 程序中， **lround**和**llround**始终采用并返回**双精度型**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**lround，** **lroundf，** **lroundl，** **lround， lround，** **lroundf，** **lroundl， lroundl**|\<math.h>|
+|**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -66,12 +66,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: 5c530f46877bdb23fc51fb49beab8abfc0c16b2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dbff557cd116eb1df44f015b17716408c8dc54c2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361208"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912133"
 ---
 # <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -108,45 +108,45 @@ int _wutime64(
 
 ### <a name="parameters"></a>参数
 
-*文件名*<br/>
+*名字*<br/>
 指向包含路径或文件名的字符串的指针。
 
-*次*<br/>
+*随时*<br/>
 指向存储时间值的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果更改了文件修改时间，则这些函数均将返回 0。 返回值 -1 表示错误。 如果传递的参数无效，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将返回 **-1，errno**设置为以下值之一：
+如果更改了文件修改时间，则这些函数均将返回 0。 返回值-1 表示错误。 如果传递的参数无效，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为以下值之一：
 
 |errno 值|条件|
 |-|-|
 | **EACCES** | 路径指定目录或只读文件 |
-| **埃因瓦尔** | 无效*时间*参数 |
+| **EINVAL** | 无效的*时间*参数 |
 | **EMFILE** | 打开的文件太多（必须打开文件以更改其修改时间） |
-| **埃诺恩特** | 找不到路径或文件名 |
+| **ENOENT** | 找不到路径或文件名 |
 
-有关这些代码和其他返回代码的详细信息[，请参阅_doserrno、errno、_sys_errlist和_sys_nerr。](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+有关这些和其他返回代码的详细信息，请参阅[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
-如果更改日期在 1970 年 1 月 1 日午夜之后且在所使用的函数的结束日期之前，则可以更改文件的日期。 **_utime**和 **_wutime**使用 64 位时间值，因此结束日期为 23：59：59，12 月 31 日，3000，UTC。 如果定义 **_USE_32BIT_TIME_T**以强制旧行为，则结束日期为 2038 年 1 月 18 日 23：59：59，UTC。 **_utime32**或 **_wutime32**使用 32 位时间类型，无论**是否定义了_USE_32BIT_TIME_T，** 并且始终具有较早的结束日期。 **_utime64**或 **_wutime64**始终使用 64 位时间类型，因此这些函数始终支持较晚的结束日期。
+如果更改日期在 1970 年 1 月 1 日午夜之后且在所使用的函数的结束日期之前，则可以更改文件的日期。 **_utime**和 **_wutime**使用64位时间值，因此结束日期为23:59:59，12月31日3000，UTC。 如果 **_USE_32BIT_TIME_T**定义为强制旧行为，则结束日期为23:59:59 年1月 2038 18 日，UTC。 **_utime32**或 **_wutime32**使用32位时间类型，而不管是否定义 **_USE_32BIT_TIME_T** ，并且始终具有更早的结束日期。 **_utime64**或 **_wutime64**始终使用64位时间类型，因此这些函数始终支持更晚的结束日期。
 
 ## <a name="remarks"></a>备注
 
-**_utime**函数设置*文件名*指定的文件的修改时间。 进程必须拥有文件的写入权限才能更改时间。 在 Windows 操作系统中，您可以更改 **_utimbuf**结构中的访问时间和修改时间。 如果*时间*是**NULL**指针，则修改时间设置为当前本地时间。 否则，*时间*必须指向在 SYS_UTIME 中定义的 **_utimbuf**类型的结构。H。
+**_Utime**函数为*filename*指定的文件设置修改时间。 进程必须拥有文件的写入权限才能更改时间。 在 Windows 操作系统中，可以更改 **_utimbuf**结构中的访问时间和修改时间。 如果 time 为**空**指针 *，则将*修改时间设置为当前的本地时间。 否则，*时间*必须指向在 SYS\UTIME. 中定义的类型 **_utimbuf**的结构。高.
 
-**_utimbuf**结构存储 **_utime**用于更改文件修改日期的文件访问和修改时间。 结构具有以下字段，这些字段都是**time_t**类型：
+**_Utimbuf**结构存储 **_utime**用于更改文件修改日期的文件访问时间和修改时间。 结构具有以下字段，它们均为**time_t**类型：
 
 | 字段 |   |
 |-------|---|
-| **交流时间** | 文件访问时间 |
-| **模制时间** | 文件修改时间 |
+| **actime** | 文件访问时间 |
+| **modtime** | 文件修改时间 |
 
-**_utimbuf**结构的特定版本 **（_utimebuf32**和 **__utimbuf64**）使用时间类型的 32 位和 64 位版本定义。 这些是此函数的 32 位和 64 位特定版本中使用的内容。 **默认情况下，除非**定义了 **_USE_32BIT_TIME_T，** 否则_utimbuf本身使用 64 位时间类型。
+**_Utimbuf**结构的特定版本（**_utimebuf32**和 **__utimbuf64**）使用时间类型的32位和64位版本进行定义。 这些是此函数的 32 位和 64 位特定版本中使用的内容。 默认情况下， **_utimbuf**默认使用64位时间类型，除非已定义 **_USE_32BIT_TIME_T** 。
 
-**_utime**与 **_futime**相同，只是 **_utime***的文件名*参数是文件名或文件的路径，而不是打开文件的文件描述符。
+**_utime**与 **_futime**相同，不同之处在于 **_utime**的*filename*参数是文件的文件名或路径，而不是打开文件的文件描述符。
 
-**_wutime**是 **_utime**的宽字符版本;要 **_wutime***的文件名*参数是宽字符字符串。 否则这些函数具有相同行为。
+**_wutime**是 **_utime**的宽字符版本;**_wutime**的*filename*参数是宽字符字符串。 否则这些函数具有相同行为。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -160,7 +160,7 @@ int _wutime64(
 
 |例程|必需标头|可选标头|
 |-------------|----------------------|----------------------|
-|**_utime**， **_utime32**， **_utime64**|\<sys/utime.h>|\<errno.h>|
+|**_utime**、 **_utime32** **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_wutime**|\<utime.h> 或 \<wchar.h>|\<errno.h>|
 

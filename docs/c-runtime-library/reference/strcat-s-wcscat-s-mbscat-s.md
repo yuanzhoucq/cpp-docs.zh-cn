@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +43,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 458c8ef4c69630b92f39c6ca13a538a1ba7ec72a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7d890a753638112c4a1bb56cf6093a9510dbee2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355430"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910665"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 
 追加字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) 具有安全性增强功能。
 
 > [!IMPORTANT]
-> **_mbscat_s****和_mbscat_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbscat_s**和 **_mbscat_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -106,16 +106,16 @@ errno_t _mbscat_s_l(
 
 ### <a name="parameters"></a>参数
 
-*斯特雷特*<br/>
+*strDestination*<br/>
 Null 终止的目标字符串缓冲区。
 
-*元素数*<br/>
+*numberOfElements*<br/>
 目标字符串缓冲区的大小。
 
 *strSource*<br/>
 以 null 结尾的源字符串缓冲区。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -124,15 +124,15 @@ Null 终止的目标字符串缓冲区。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*斯特雷特*|*元素数*|*strSource*|返回值|*内容*|
+|*strDestination*|*numberOfElements*|*strSource*|返回值|*StrDestination*的内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**或未终止|any|any|**埃因瓦尔**|未修改|
-|any|any|**空**|**埃因瓦尔**|*strDestination*[0] 设置为 0|
-|any|0 或过小|any|**ERANGE**|*strDestination*[0] 设置为 0|
+|**NULL**或未终止|any|any|**EINVAL**|未修改|
+|any|any|**Null**|**EINVAL**|*strDestination*[0] 设置为0|
+|any|0 或过小|any|**ERANGE**|*strDestination*[0] 设置为0|
 
 ## <a name="remarks"></a>备注
 
-**strcat_s**函数将*strSource*追加到*strDestination，* 并且使用空字符终止生成的字符串。 *strSource*的初始字符覆盖*strDestination*的终止空字符。 如果源字符串和目标字符串重叠，则**strcat_s**的行为未定义。
+**Strcat_s**函数将*StrSource*追加到*strDestination* ，并使用空字符终止结果字符串。 *StrSource*的初始字符将覆盖*strDestination*的终止 null 字符。 如果源和目标字符串重叠，则**strcat_s**的行为不确定。
 
 注意，第二个参数是缓冲区的总大小，而不是剩余大小：
 
@@ -143,17 +143,17 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s**和 **_mbscat_s**是**strcat_s**的宽字符和多字节字符版本。 **wcscat_s**的参数和返回值是宽字符字符串;**_mbscat_s**的字符串是多字节字符串。 否则这三个函数否则具有相同行为。
+**wcscat_s**和 **_mbscat_s**是**strcat_s**的宽字符和多字节字符版本。 **Wcscat_s**的参数和返回值都是宽字符字符串;**_mbscat_s**的是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-如果*strDestination*是空指针，或者不是 null 终止，或者*strSource*是**NULL**指针，或者如果目标字符串太小，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回**EINVAL**并将**errno**设置为**EINVAL**。
+如果*strDestination*是 null 指针，或不是以 null 结尾的，或者如果*strSource*为**null**指针，或者如果目标字符串过小，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
-具有 **_l**后缀的函数的版本具有相同的行为，但使用传入区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的函数的版本具有相同的行为，但使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

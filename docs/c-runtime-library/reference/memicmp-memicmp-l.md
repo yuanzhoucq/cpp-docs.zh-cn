@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 365b57dc300da5686895d66fa642e3870612c2ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333228"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915387"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
@@ -62,16 +62,16 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>参数
 
-*缓冲区1*<br/>
+*buffer1*<br/>
 第一个缓冲区。
 
-*缓冲区2*<br/>
+*buffer2*<br/>
 第二个缓冲区。
 
-*count*<br/>
+*计数*<br/>
 字符数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -80,20 +80,20 @@ int _memicmp_l(
 
 |返回值|buf1 和 buf2 的第一个计数字节的关系|
 |------------------|--------------------------------------------------------|
-|< 0|*缓冲区1*小于*缓冲区2*。|
-|0|*缓冲区1*与*缓冲区2*相同。|
-|> 0|*缓冲区1*大于*缓冲区2*。|
+|< 0|*buffer1*小于*buffer2*。|
+|0|*buffer1*与*buffer2*相同。|
+|> 0|*buffer1*大于*buffer2*。|
 |**_NLSCMPERROR**|出现了错误。|
 
 ## <a name="remarks"></a>备注
 
-**_memicmp**函数比较两个缓冲区*缓冲区1*和*缓冲区2*字节字节的第一*个计数*字符。 该比较不区分大小写。
+**_Memicmp**函数将两个缓冲区*buffer1*和*buffer2* byte 的第一个*计数*字符按字节进行比较。 该比较不区分大小写。
 
-如果*buffer1*或*buffer2*是空指针，则此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将**返回_NLSCMPERROR**并将**errno**设置到**EINVAL**。
+如果*buffer1*或*buffer2*为 null 指针，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
 
-**_memicmp**使用当前区域设置进行与区域设置相关的行为;**_memicmp_l**是相同的，只是它使用传入区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**对与区域设置相关的行为使用当前区域设置;**_memicmp_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
