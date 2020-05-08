@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: 9eb856efca054423465aa7d30092edaf83a65eeb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333530"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917149"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit、_c_exit
 
@@ -54,7 +54,7 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>备注
 
-**_cexit**函数按最后一名、先出 （LIFO） 顺序调用由**exit**和 **_onexit**注册的函数。 然后 **_cexit**刷新所有 I/O 缓冲区，并在返回之前关闭所有打开的流。 **_c_exit**与 **_exit**相同，但返回到调用进程，而不处理**exit**或 **_onexit**或刷新流缓冲区。 **退出****、_exit、_cexit**和_c_exit **_cexit**的行为显示在下表 **_c_exit**中。
+**_Cexit**函数按后进先出（LIFO）顺序调用**atexit**注册的函数和 **_onexit**。 然后 **_cexit**刷新所有的 i/o 缓冲区并在返回前关闭所有打开的流。 **_c_exit**与 **_exit**相同，但是返回到调用进程，但不处理**atexit**或 **_onexit**或刷新流缓冲区。 下表显示了**exit**、 **_exit**、 **_cexit**和 **_c_exit**的行为。
 
 |函数|行为|
 |--------------|--------------|
@@ -63,13 +63,13 @@ void _c_exit( void );
 |**_cexit**|执行完整的 C 库终止过程并返回给调用方，但不中止进程。|
 |**_c_exit**|执行快速的 C 库终止过程并返回给调用方，但不中止进程。|
 
-调用 **_cexit**或 **_c_exit**函数时，不会调用调用时存在的任何临时或自动对象的析构函数。 自动对象是在对象未声明为静态的函数中进行定义的对象。 临时对象是由编译器创建的对象。 要在调用 **_cexit**或 **_c_exit**之前销毁自动对象，请显式调用该对象的析构函数，如下所示：
+调用 **_cexit**或 **_c_exit**函数时，不会调用在调用时存在的任何临时或自动对象的析构函数。 自动对象是在对象未声明为静态的函数中进行定义的对象。 临时对象是由编译器创建的对象。 若要在调用 **_cexit**或 **_c_exit**之前销毁自动对象，请显式调用该对象的析构函数，如下所示：
 
 ```cpp
 myObject.myClass::~myClass( );
 ```
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

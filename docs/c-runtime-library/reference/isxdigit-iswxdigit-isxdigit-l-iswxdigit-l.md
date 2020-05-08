@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: c2f6e7956048a30313ba8eb9a11a37fccdc49197
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3aefa39d9fabb2b8a3124955f3ab0787e9e174f3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342744"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916586"
 ---
 # <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l
 
@@ -73,38 +73,38 @@ int _iswxdigit_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果*c*是十六进制数字的特定表示形式，则每个例程都返回非零。 如果*c*是十六进制数字（A - F、a - f 或 0 - 9），**则 isxDigit**返回非零值。 如果*c*是对应于十六进制数字字符的宽字符，**则 iswxDigit**返回非零值。 如果*c*不符合测试条件，则每个例程返回 0。
+如果*c*是十六进制数字的特定表示形式，则每个例程将返回非零值。 如果*c*是十六进制数字（a-f、a-f 或 0-9），则**isxdigit**将返回一个非零值。 如果*c*是对应于十六进制数字字符的宽字符，则**iswxdigit**将返回一个非零值。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-对于"C"区域设置 **，iswxdigit**函数不支持 Unicode 全宽十六进制字符。
+对于 "C" 区域设置， **iswxdigit**函数不支持 Unicode 全角十六进制字符。
 
-具有 **_l**后缀的这些函数的版本使用传入区域设置，而不是当前区域设置，用于其与区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*c*不是 EOF 或范围 0 到 0xFF（包括）时 **，isxdigit**和 **_isxdigit_l**的行为是未定义的。 当使用调试 CRT 库，*并且 c*不是这些值之一时，这些函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isxdigit**和 **_isxdigit_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istxdigit**|**isxdigit**|**isxdigit**|**异克斯数字**|
+|**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
 |**isxdigit**|\<ctype.h>|
-|**异克斯数字**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**iswxdigit**|\<ctype.h 1> 或 \<wchar.h 1>|
 |**_isxdigit_l**|\<ctype.h>|
 |**_iswxdigit_l**|\<ctype.h 1> 或 \<wchar.h 1>|
 
@@ -113,5 +113,5 @@ int _iswxdigit_l(
 ## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

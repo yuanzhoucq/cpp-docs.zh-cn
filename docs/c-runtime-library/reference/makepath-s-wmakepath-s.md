@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 3a44651cb9ff8be806c45c6b6c5f41f810319a85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341607"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914482"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s、_wmakepath_s
 
@@ -86,26 +86,26 @@ errno_t _wmakepath_s(
 
 ### <a name="parameters"></a>参数
 
-*路径*<br/>
+*path*<br/>
 完整路径缓冲区。
 
-*大小字内*<br/>
+*sizeInWords*<br/>
 缓冲区大小（以单词为单位）。
 
-*大小字节*<br/>
+*sizeInBytes*<br/>
 缓冲区的大小（以字节为单位）。
 
-*驱动*<br/>
-包含一个与所需的驱动器对应的字母（A、B 等）和可选的尾随冒号。 如果缺少冒号 **，_makepath_s**会自动在复合路径中插入冒号。 如果*驱动器*为**NULL**或指向空字符串，则复合*路径*字符串中不会显示驱动器号。
+*光驱*<br/>
+包含一个与所需的驱动器对应的字母（A、B 等）和可选的尾随冒号。 如果缺少冒号， **_makepath_s**会自动在复合路径中插入冒号。 如果*驱动器*为**NULL**或指向空字符串，则在复合*路径*字符串中不会出现驱动器号。
 
 *dir*<br/>
-包含目录路径，但不包括驱动器指示符或实际文件名。 尾随斜杠是可选的，在单个*dir*参数中可以使用前斜杠\\（/） 或反斜杠 （） 或两者。 如果未指定尾随斜杠（\ 或 \\），将自动插入。 如果*dir*为**NULL**或指向空字符串，则复合路径字符串中未插入任何目录*路径*。
+包含目录路径，但不包括驱动器指示符或实际文件名。 尾随斜杠是可选的，正斜杠（/）或反斜杠（\\）或两者均可用于单个*dir*参数。 如果未指定尾随斜杠（\ 或 \\），将自动插入。 如果*dir*为**NULL**或指向一个空字符串，则在复合*路径*字符串中不会插入目录路径。
 
 *fname*<br/>
-包含无任何文件扩展名的基文件名。 如果*fname*为**NULL**或指向空字符串，则复合*路径*字符串中未插入任何文件名。
+包含无任何文件扩展名的基文件名。 如果*fname*为**NULL**或指向一个空字符串，则在复合*路径*字符串中不会插入文件名。
 
-*内线*<br/>
-包含实际的文件扩展名（带有或不带前导句点 (.)）。 如果期间未显示在*分机*中 **，_makepath_s**自动插入该期间。如果*分机*为**NULL**或指向空字符串，则复合*路径*字符串中不会插入任何扩展。
+*宋体*<br/>
+包含实际的文件扩展名（带有或不带前导句点 (.)）。 如果句点未出现在*ext*中， **_makepath_s**会自动插入句点。如果*ext*为**NULL**或指向空字符串，则不会在复合*路径*字符串中插入扩展。
 
 ## <a name="return-value"></a>返回值
 
@@ -113,18 +113,18 @@ errno_t _wmakepath_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*路径*|*大小以* / *字节为单位*|返回|*路径*内容|
+|*path*|*sizeInWords* / *sizeInBytes*|返回|*路径*的内容|
 |------------|------------------------------------|------------|------------------------|
-|**空**|any|**埃因瓦尔**|未修改|
-|any|<= 0|**埃因瓦尔**|未修改|
+|**Null**|any|**EINVAL**|未修改|
+|any|<= 0|**EINVAL**|未修改|
 
-如果发生任何以上错误情况，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续 **，errno**设置为**EINVAL，** 函数返回**EINVAL**。 **允许参数***驱动器**、fname*和*ext*的 NULL。有关这些参数为空指针或空字符串时的行为的信息，请参阅备注部分。
+如果发生任何以上错误情况，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且函数将返回**EINVAL**。 参数*drive*、 *fname*和*ext*允许为**NULL** 。有关这些参数是 null 指针或空字符串时的行为的信息，请参阅 "备注" 部分。
 
 ## <a name="remarks"></a>备注
 
-**_makepath_s**函数从单个组件创建复合路径字符串，将结果存储在*路径*中。 *路径*可能包括驱动器号、目录路径、文件名和文件名扩展名。 **_wmakepath_s**是 **_makepath_s**的宽字符版本;要 **_wmakepath_s**的参数是宽字符字符串。 **_wmakepath_s****和_makepath_s**行为相同。
+**_Makepath_s**函数使用单个组件创建复合路径字符串，并将结果存储在*路径*中。 *路径*可能包括驱动器号、目录路径、文件名和文件扩展名。 **_wmakepath_s**是 **_makepath_s**的宽字符版本;**_wmakepath_s**的参数是宽字符字符串。 否则 **_wmakepath_s**和 **_makepath_s**的行为相同。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -132,13 +132,13 @@ errno_t _wmakepath_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-*路径*参数必须指向足够大以容纳完整路径的空缓冲区。 复合*路径*不能大于在 Stdlib.h 中定义的 **_MAX_PATH**常量。
+*路径*参数必须指向足以容纳完整路径的空缓冲区。 复合*路径*不能大于在 stdlib.h 中定义的 **_MAX_PATH**常数。
 
-如果路径为**NULL，** 则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 此外 **，errno**设置为**EINVAL**。 所有其他参数都允许**NULL**值。
+如果 path 为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 此外， **errno**设置为**EINVAL**。 所有其他参数都允许**空**值。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ## <a name="requirements"></a>要求
 

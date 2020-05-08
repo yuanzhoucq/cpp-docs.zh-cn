@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338070"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916927"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir、_wrmdir
 
@@ -68,23 +68,23 @@ int _wrmdir(
 
 ## <a name="return-value"></a>返回值
 
-如果成功删除目录，则这些函数将返回 0。 返回值 -1 表示错误 **，errno**设置为以下值之一：
+如果成功删除目录，则这些函数将返回 0。 返回值-1 表示错误， **errno**设置为以下值之一：
 
 |errno 值|条件|
 |-|-|
 | **ENOTEMPTY** | 给定路径不是目录、路径不为空，或目录为当前工作目录或根目录。 |
-| **埃诺恩特** | 路径无效。 |
+| **ENOENT** | 路径无效。 |
 | **EACCES** | 程序有一个打开的目录句柄。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_rmdir**函数删除*dirname*指定的目录。 该目录必须为空，且不能为当前工作目录或根目录。
+**_Rmdir**函数删除由*dirname*指定的目录。 该目录必须为空，且不能为当前工作目录或根目录。
 
-**_wrmdir**是 **_rmdir**的宽字符版本;**_wrmdir***的 dirname*参数是宽字符字符串。 **_wrmdir**和 **_rmdir**行为相同。
+**_wrmdir**是 **_rmdir**的宽字符版本;**_wrmdir**的*dirname*参数是宽字符字符串。 否则 **_wrmdir**和 **_rmdir**的行为相同。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

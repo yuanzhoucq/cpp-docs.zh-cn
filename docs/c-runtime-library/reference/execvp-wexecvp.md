@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 75b5c0ebe47c8f82ab8ad328dd21505c458a6ac8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 224649abffd836667641f3c83e5f777f8752d7bd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347805"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915924"
 ---
 # <a name="_execvp-_wexecvp"></a>_execvp，_wexecvp
 
@@ -65,20 +65,20 @@ intptr_t _wexecvp(
 *cmdname*<br/>
 要执行的文件的路径。
 
-*Argv*<br/>
+*argv*<br/>
 指向参数的指针的数组。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，这些函数不返回到调用进程。 返回值 -1 表示错误，在这种情况下将设置**errno**全局变量。
+如果成功，这些函数不返回到调用进程。 返回值-1 表示错误，在这种情况下，将设置**errno**全局变量。
 
 |**errno**值|说明|
 |-------------------|-----------------|
 |**E2BIG**|自变量和环境设置所需的空间超过 32 KB。|
 |**EACCES**|指定的文件具有锁定或共享冲突。|
-|**埃因瓦尔**|参数无效。|
+|**EINVAL**|参数无效。|
 |**EMFILE**|打开的文件太多 (必须打开指定的文件以确定它是否是可执行文件)。|
-|**埃诺恩特**|未找到文件或路径。|
+|**ENOENT**|未找到文件或路径。|
 |**ENOEXEC**|指定的文件不是可执行文件或者有无效的可执行文件格式。|
 |**ENOMEM**|没有足够的内存可用于执行更新进程；可用内存损坏；或存在无效的块，指示调用进程未正确分配。|
 
@@ -86,11 +86,11 @@ intptr_t _wexecvp(
 
 ## <a name="remarks"></a>备注
 
-每个函数加载并执行一个新进程，传递指向命令行参数的指针数组，并使用**PATH**环境变量查找要执行的文件。
+其中每个函数都会加载并执行新进程，并将一个指针数组传递给命令行自变量，并使用**PATH**环境变量查找要执行的文件。
 
-**_execvp**函数验证其参数。 如果*cmdname*是空指针，*或者 argv*是空指针，指向空数组，或者如果数组包含空字符串作为第一个参数，则这些函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将**errno**设置为**EINVAL**并返回 -1。 不启动任何进程。
+**_Execvp**函数验证其参数。 如果*cmdname*为 null 指针，或者*argv*为空指针、指向空数组的指针，或者如果数组包含一个空字符串作为第一个参数，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回-1。 不启动任何进程。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

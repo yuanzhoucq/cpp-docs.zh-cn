@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: faceb49c921162da042f863abbebbe2ef0a52153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350085"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917007"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod、_wchmod
 
@@ -55,7 +55,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>参数
 
-*文件名*<br/>
+*名字*<br/>
 现有文件的名称。
 
 *pmode*<br/>
@@ -63,25 +63,25 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="return-value"></a>返回值
 
-如果成功更改权限设置，这些函数将返回 0。 返回值 -1 表示失败。 如果找不到指定的文件，**则 errno**设置为**ENOENT**;如果参数无效，则**errno**设置为**EINVAL**。
+如果成功更改权限设置，这些函数将返回 0。 返回值-1 表示失败。 如果找不到指定的文件，则将**errno**设置为**ENOENT**;如果参数无效，则将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_chmod**函数更改*文件名*指定的文件的权限设置。 权限设置控制对文件的读取和写入访问权限。 整数表达式*pmode*包含以下一个或两个清单常量，在 SYS_Stat.h 中定义。
+**_Chmod**函数更改*filename*指定的文件的权限设置。 权限设置控制对文件的读取和写入访问权限。 整数表达式*pmode*包含在 sys\stat.h 中定义的以下一个或两个清单常量。
 
 | *pmode* | 含义 |
 |-|-|
 | **\_S\_IREAD** | 只允许读取。 |
 | **\_S\_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
-| **\_S\_IREAD** &#124; ** \_\_S IWRITE** | 允许读取和写入。 |
+| **\_S\_IREAD** &#124; ** \_s\_IWRITE** | 允许读取和写入。 |
 
-当两个常量都给出时，它们与位或运算符 （）**\|** 联接。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此 **，_S_IWRITE**模式和\|**_S_IREAD_S_IWRITE**是等效的。 **_S_IREAD**
+当同时提供两个常量时，它们将与按位 or 运算符**\|**（）联接。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** \| **_S_IWRITE**模式是等效的。
 
-**_wchmod**是 **_chmod**的宽字符版本;要 **_wchmod***的文件名*参数是宽字符字符串。 **_wchmod**和 **_chmod**行为相同。
+**_wchmod**是 **_chmod**的宽字符版本;**_wchmod**的*filename*参数是宽字符字符串。 否则 **_wchmod**和 **_chmod**的行为相同。
 
-此函数验证其参数。 如果*pmode*不是清单常量之一的组合，或者合并了一组备用常量，则函数将忽略这些常量。 如果*文件名*为**NULL，** 则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则**errno**设置为**EINVAL，** 函数返回 -1。
+此函数验证其参数。 如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数只会忽略这些常量。 如果*filename*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回-1。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

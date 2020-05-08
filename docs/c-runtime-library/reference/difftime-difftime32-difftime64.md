@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348122"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914781"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -59,27 +59,27 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ### <a name="parameters"></a>参数
 
-*时间结束*<br/>
+*timeEnd*<br/>
 结束时间。
 
-*时间开始*<br/>
+*timeStart*<br/>
 开始时间。
 
 ## <a name="return-value"></a>返回值
 
-**差异时间**返回经过的时间（以秒为单位），从*时间开始*到*时间结束*。 返回值为双精度浮点数字。 返回值可能为 0，表示错误。
+**difftime**返回从*timeStart*到*timeEnd*的运行时间（以秒为单位）。 返回值为双精度浮点数字。 返回值可能为 0，表示错误。
 
 ## <a name="remarks"></a>备注
 
-**差异时间**函数计算两个提供的时间值*时间开始*和*时间结束*之间的差异。
+**Difftime**函数计算两个提供的时间值*timeStart*和*timeEnd*之间的差异。
 
-提供的时间值必须适合**time_t**范围内。 **time_t**是 64 位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 **time_t**的较低范围仍然是1970年1月1日午夜。
+提供的时间值必须在**time_t**范围内。 **time_t**为64位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 **Time_t**的下限仍为1970年1月1日午夜。
 
-**差异时间是**一个内联函数，根据是否定义 **_USE_32BIT_TIME_T，** 可计算为 **_difftime32**或 **_difftime64。** _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
+**difftime**是一种内联函数，其计算结果为 **_difftime32**或 **_difftime64** ，具体取决于是否定义 **_USE_32BIT_TIME_T** 。 _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
 
-这些函数验证其参数。 如果参数为零或负值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回 0 并将**errno**设置为**EINVAL**。
+这些函数验证其参数。 如果参数为零或负值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回0，并将**errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

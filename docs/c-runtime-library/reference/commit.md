@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: f8e13e7fc197c66395556d518ecbd1cd20ac1f77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918521"
 ---
 # <a name="_commit"></a>_commit
 
@@ -52,20 +52,20 @@ int _commit(
 
 ### <a name="parameters"></a>参数
 
-*Fd*<br/>
+*fd*<br/>
 引用打开的文件的文件说明符。
 
 ## <a name="return-value"></a>返回值
 
-如果文件成功刷新到磁盘 **，_commit**返回 0。 返回值 -1 表示错误。
+如果已成功将文件刷新到磁盘， **_commit**将返回0。 返回值-1 表示错误。
 
 ## <a name="remarks"></a>备注
 
-**_commit**功能强制操作系统写入与*fd*到磁盘关联的文件。 此调用可确保立即刷新特定文件，而无需等待操作系统的决定。
+**_Commit**函数强制操作系统将与*fd*关联的文件写入磁盘。 此调用可确保立即刷新特定文件，而无需等待操作系统的决定。
 
-如果*fd*无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回 **-1，errno**设置为**EBADF**。
+如果*fd*是无效的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并且**errno**设置为**ebadf (**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -77,7 +77,7 @@ int _commit(
 
 ## <a name="see-also"></a>另请参阅
 
-[低电平 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

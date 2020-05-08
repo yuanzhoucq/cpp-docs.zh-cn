@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 7567e5758e405235bca13bbae8a18c2d42ccbd3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333560"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917338"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -67,30 +67,30 @@ long double ceill(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**ceil**函数返回一个浮点值，该值表示大于或等于*x*的最小整数。 无错误返回。
+**Ceil**函数返回一个浮点值，该值表示大于或等于*x*的最小整数。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• **QNAN**， **IND**|无|**_DOMAIN**|
+|± **QNAN**， **IND**|无|**_DOMAIN**|
 
-**ceil**具有使用流式 SIMD 扩展 2 （SSE2） 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**ceil**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用**浮点**或**长****双**类型的长**头头的 ceil**重载。 在 C 程序中 **，ceil**始终获取并返回**一个双**。
+由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**ceil**的重载。 在 C 程序中， **ceil**始终采用并返回**双精度型**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**赛尔**，**赛尔** **ceill** ，|\<math.h>|
+|**ceil**、 **ceilf**、 **ceill**|\<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

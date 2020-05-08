@@ -4102,7 +4102,7 @@
                   items:
                     - name: 表达式的类型
                       href: cpp/types-of-expressions.md
-                    - name: 主要表达式
+                    - name: 主表达式
                       href: cpp/primary-expressions.md
                     - name: 省略号和可变参数模板
                       href: cpp/ellipses-and-variadic-templates.md
@@ -4245,7 +4245,7 @@
                   href: cpp/binary-operators.md
                 - name: 赋值
                   href: cpp/assignment.md
-                - name: 函数调用
+                - name: '函数调用 '
                   href: cpp/function-call-cpp.md
                 - name: 下标
                   href: cpp/subscripting.md

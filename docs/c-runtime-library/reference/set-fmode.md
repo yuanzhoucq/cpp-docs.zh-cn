@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: ba8a4b3867eb0a18d4a14cb2f5480bc5800303c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337709"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913044"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -51,20 +51,20 @@ errno_t _set_fmode(
 
 ### <a name="parameters"></a>参数
 
-*模式*<br/>
-所需的文件转换模式 **：_O_TEXT**或 **_O_BINARY**。
+*mode*<br/>
+所需的文件转换模式： **_O_TEXT**或 **_O_BINARY**。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果未 **_O_TEXT**或 **_O_BINARY**或 **_O_WTEXT***模式*，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**设置到**EINVAL**并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果*模式*不 **_O_TEXT**或 **_O_BINARY**或 **_O_WTEXT**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-该函数设置 [_fmode](../../c-runtime-library/fmode.md) 全局变量。 此变量指定文件 I/O 操作 **_open**和 **_pipe**的默认文件转换模式。
+该函数设置 [_fmode](../../c-runtime-library/fmode.md) 全局变量。 此变量为文件 i/o 操作指定默认文件转换模式 **_open**和 **_pipe**。
 
-**_O_TEXT**和 **_O_BINARY**在 Fcntl.h 中定义。 **EINVAL**在 Errno.h 中定义。
+**_O_TEXT**和 **_O_BINARY**是在 fcntl.h> 中定义的。 **EINVAL**是在 Errno 中定义的。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -142,4 +142,4 @@ A   B   C   D   E   F   G   H   I   J   K   L
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[文本和二进制模式文件 i/o](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

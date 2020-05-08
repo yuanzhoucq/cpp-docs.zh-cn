@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,12 +56,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: 6056ad8bac6561c0ce2902928364996b2be9ae92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7dc87f417db93f8ad0d90de1270c19997669fb7c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348238"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914827"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -80,24 +80,24 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 
 ### <a name="parameters"></a>参数
 
-*源时间*<br/>
-指针到存储的时间转换。
+*sourceTime*<br/>
+指向要转换的存储时间的指针。
 
 ## <a name="return-value"></a>返回值
 
-指向字符串结果的指针。 **NULL**如果：
+指向字符串结果的指针。 如果以下情况，将返回**NULL** ：
 
-- *sourceTime*表示 1970 年 1 月 1 日午夜之前的日期，UTC。
+- *sourceTime*表示1970年1月1日午夜之前的日期。
 
-- 如果您使用 **_ctime32**或 **_wctime32，** 并且*sourceTime*表示 2038 年 1 月 18 日 23：59：59 之后的日期，UTC。
+- 如果使用 **_ctime32**或 **_wctime32**并且*SourceTime*表示23:59:59 年1月 2038 18 日之后的日期，则为。
 
-- 如果您使用 **_ctime64**或 **_wctime64，** 并且*sourceTime*表示 23：59：59，3000 年 12 月 31 日 UTC 之后的日期。
+- 如果使用 **_ctime64**或 **_wctime64**并且*SourceTime*表示23:59:59 年12月 3000 31 日之后的日期（UTC）。
 
-**ctime**是一个内联函数，它计算到 **_ctime64，time_t**等效于 **__time64_t。** **_ctime64** 如果需要强制编译器将**time_t**解释为旧的 32 位**time_t**，则可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**ctime**评估**到_ctime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**ctime**是一个内联函数，其计算结果为 **_ctime64** ， **time_t**等效于 **__time64_t**。 如果需要强制编译器将**time_t**解释为旧32位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**ctime**计算为 **_ctime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
 ## <a name="remarks"></a>备注
 
-**ctime**函数将存储为[time_t](../../c-runtime-library/standard-types.md)值的时间值转换为字符串。 *sourceTime*值通常从调用[时间](time-time32-time64.md)获得，该调用返回自 1970 年 1 月 1 日午夜 （00：00：00：00） 起经过的秒数，协调通用时间 （UTC）。 返回值字符串正好包含 26 个字符，且格式为：
+**Ctime**函数将作为[time_t](../../c-runtime-library/standard-types.md)值存储的时间值转换为字符串。 *SourceTime*值通常是从对[time](time-time32-time64.md)的调用中获取的，它返回自午夜（00:00:00）起，年1月 1970 1 日（协调世界时（UTC））开始经过的秒数。 返回值字符串正好包含 26 个字符，且格式为：
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -105,15 +105,15 @@ Wed Jan 02 02:03:55 1980\n\0
 
 使用 24 小时制。 所有字段都具有固定宽度。 换行符 ('\n') 和空字符 ('\0') 占据字符串的最后两个位置。
 
-转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间和[_tzset](tzset.md)函数的详细信息，请参阅[时间](time-time32-time64.md)[、_ftime](ftime-ftime32-ftime64.md)和[本地时间](localtime-localtime32-localtime64.md)函数。
+转换的字符串同时根据本地时区设置进行调整。 有关定义时区环境和全局变量的详细信息，请参阅[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime](localtime-localtime32-localtime64.md)函数，以获取有关配置本地时间和[_tzset](tzset.md)功能的详细信息。
 
-对**ctime**的调用修改了**gmtime**和**本地时间**函数使用的单个静态分配的缓冲区。 每次调用这些例程都会破坏上一次调用的结果。 **ctime**共享具有**asctime**函数的静态缓冲区。 因此，对**ctime**的调用会破坏以前对**asctime、****本地时间**或**gmtime**的任何调用的结果。
+调用**ctime**会修改**gmtime**和**localtime**函数使用的单个静态分配的缓冲区。 每次调用这些例程都会破坏上一次调用的结果。 **ctime**使用**asctime**函数共享静态缓冲区。 因此，调用**ctime**会销毁对**asctime**、 **localtime**或**gmtime**的任何以前调用的结果。
 
-**_wctime**和 **_wctime64**是**ctime**和 **_ctime64**的宽字符版本;返回指向宽字符字符串的指针。 否则 **，_ctime64、_wctime**和 **_wctime64**行为与**ctime**相同。 **_wctime**
+**_wctime**和 **_wctime64**是**ctime**和 **_ctime64**的宽字符版本;返回指向宽字符字符串的指针。 否则， **_ctime64**、 **_wctime**和 **_wctime64**与**ctime**的行为相同。
 
-这些函数验证其参数。 如果*sourceTime*是空指针，或者如果*sourceTime*值为负，则这些函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回**NULL**并将**errno**设置为**EINVAL**。
+这些函数验证其参数。 如果*sourceTime*为 null 指针，或*sourceTime*值为负，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
