@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 8d0fea4a663828eb0997bc5ccc43b800d0d1e513
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2744dc17c79fc1e3e568dd3b7a62602b75603be0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346938"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912772"
 ---
 # <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock、_fgetwc_nolock
 
@@ -74,9 +74,9 @@ wint_t _fgetwc_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_fgetc_nolock**和 **_fgetwc_nolock**分别与**fgetc**和**fgetwc**相同，只是它们不受其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_fgetc_nolock**和 **_fgetwc_nolock**分别与**fgetc**和**fgetwc**相同，只不过它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -136,14 +136,14 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc、fputwc](fputc-fputwc.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316882"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910922"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime、_wstrtime
 
@@ -71,22 +71,22 @@ wchar_t *_wstrtime(
 
 ### <a name="parameters"></a>参数
 
-*时间斯特*<br/>
+*timestr*<br/>
 时间字符串。
 
 ## <a name="return-value"></a>返回值
 
-返回指向生成的字符串*时间斯特的指针*。
+返回一个指向生成的字符串*timestr*的指针。
 
 ## <a name="remarks"></a>备注
 
-**_strtime**函数将当前本地时间复制到*timestr*指向的缓冲区中。 时间格式为**hh：mm：ss，** 其中**hh**是两位数字，以 24 小时表示法表示小时 **，mm**是两位数字，表示超过小时数的分钟数 **，ss**是表示秒的两位数字。 例如，字符串**18：23：44**表示下午 6 点经过 23 分钟 44 秒。 缓冲区长度必须至少为 9 个字节。
+**_Strtime**函数将当前的本地时间复制到*timestr*所指向的缓冲区中。 此时间的格式为**hh： mm： ss** ，其中， **hh**是表示小时的两位数字，以24小时表示法表示， **mm**是表示分钟后的分钟数的两位数， **ss**是表示秒的两位数。 例如，字符串**18:23:44**表示23分钟到 6 p.m 之前的44秒。 缓冲区长度必须至少为 9 个字节。
 
-**_wstrtime**是 **_strtime**的宽字符版本;**_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。 如果*时间时间是* **NULL**指针，或者*时间值*格式不正确，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许异常继续，则如果时间时间为**NULL，** 则这些函数返回**NULL**并将**errno**设置为**EINVAL，** 如果*时间时间串*的格式不正确，则将**errno**设置为**ERANGE。** *timestr*
+**_wstrtime**是 **_strtime**的宽字符版本;**_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*为**NULL**指针或*timestr*的格式不正确，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行此操作，则这些函数将返回**null** ，并**将 Errno**设置为**EINVAL**如果*timestr*为**null** ，则将设置为，如果*ERANGE*的格式不正确，则将**errno**设置为**timestr** 。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: f7fe23cd9c1b2eab52ebe50904d0bb18fe16cea6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362953"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912416"
 ---
 # <a name="_swab"></a>_swab
 
@@ -65,15 +65,15 @@ dest**<br/>
 
 ## <a name="return-value"></a>返回值
 
-**拭子**函数不返回值。 如果*src*或*dest*指针为空或*n*小于零，并且调用无效的参数处理程序，则函数将**errno**设置**到 EINVAL，** 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+**Swab**函数不返回值。 如果*src*或*dest*指针为 null 或*n*小于零，则函数将**errno**设置为**EINVAL** ，并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
-有关此代码和其他退货代码的详细信息[，请参阅_doserrno、errno、_sys_errlist和_sys_nerr。](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+有关此代码及其他返回代码的详细信息，请参阅[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>备注
 
-如果*n*为偶数 **，_swab**函数将*n*字节从*src*复制，交换每对相邻的字节，并将结果存储在*dest*。 如果*n*是奇数 **，_swab**复制并交换*src**的前*n -1 字节，并且不会复制最终字节。 **_swab**函数通常用于准备二进制数据以传输到使用不同的字节顺序的计算机。
+如果*n*为偶数，则 **_swab**函数将从*src*复制*n*个字节，交换每对相邻的字节，并将结果存储在*dest*上。 如果*n*为奇数， **_swab**会复制和交换*src*的前*n*个字节，而不会复制最终字节。 **_Swab**函数通常用于准备要传输到使用不同的字节顺序的计算机的二进制数据。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333566"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912107"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -66,28 +66,28 @@ long double cbrtl(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值
 
 ## <a name="return-value"></a>返回值
 
-**cbrt**函数返回*x*的多维数据集根。
+**Cbrt**函数返回*x*的立方根。
 
-|输入|SEH 异常|**_matherr**例外|
+|输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|• 、 QNAN、 IND|无|无|
+|±∞、QNAN、IND|无|无|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用**浮点**或**长****双**类型进行过载的**cbrt。** 在 C 程序中 **，cbrt**始终获取并返回**双**。
+由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**cbrt**的重载。 在 C 程序中， **cbrt**始终采用并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**cbrt**， **cbrtf**， **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**、 **cbrtf**、 **cbrtl**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
