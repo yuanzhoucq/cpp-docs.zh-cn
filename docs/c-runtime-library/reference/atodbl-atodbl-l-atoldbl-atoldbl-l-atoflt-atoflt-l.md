@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348953"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920051"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-将字符串转换为双 **（_atodbl）、** 长双 **（_atoldbl）** 或浮动 **（_atoflt**）。
+将字符串转换为双精度型（**_atodbl**）、long double （**_atoldbl**）或 float （**_atoflt**）。
 
 ## <a name="syntax"></a>语法
 
@@ -86,31 +86,31 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 通过将字符串转换为浮点值生成的双精度型、长双精度型或浮点型值。 这些值都包装在一个结构中。
 
-*Str*<br/>
+*字符串*<br/>
 要解析的字符串将转换为浮点值。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 可能的错误**代码_UNDERFLOW或****_OVERFLOW**，这些代码在标头文件\<math.h>中定义。
+如果成功，则返回 0。 可能的错误代码为 **_UNDERFLOW**或 **_OVERFLOW**，在标头文件\<的 math> 中进行了定义。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为浮点值。 这些函数和**atof**函数系列之间的区别是，这些函数不生成浮点代码，也不会导致硬件异常。 改为将错误条件报告为错误代码。
+这些函数将字符串转换为浮点值。 这些函数与**atof**系列函数之间的区别是：这些函数不生成浮点代码，也不会导致硬件异常。 改为将错误条件报告为错误代码。
 
-如果字符串没有有效的解释作为浮点值，*则值*设置为零，返回值为零。
+如果字符串不具有作为浮点值的有效解释，则*value*设置为零，返回值为零。
 
-具有 **_l**后缀的这些函数的版本与没有后缀的版本相同，只不过它们使用传入*区域设置*参数而不是当前线程区域设置。
+这些具有 **_l**后缀的函数的版本与没有后缀的版本相同，只不过它们使用传入的*区域设置*参数而不是当前线程区域设置。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |--------------|---------------------|
-|**_atodbl**， **_atoldbl**， **_atoflt**<br /><br /> **_atodbl_l**， **_atoldbl_l**， **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**、 **_atoldbl** **_atoflt**<br /><br /> **_atodbl_l**、 **_atoldbl_l** **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>示例
 
@@ -172,5 +172,5 @@ Return value: 3
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

@@ -34,7 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,12 +70,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: eb76b6ebdbe4b27ce5a7368ad1b8c2dd8f858d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5f2c8b595de323994aa670a8e0fee9e562897e49
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343238"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919763"
 ---
 # <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 
@@ -126,17 +126,17 @@ int _ismbcspace_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要确定的字符。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时返回 0。 如果*c* <= 255 并且存在相应的 **_ismbb**例程（例如 **，_ismbcalnum**对应于 **_ismbbalnum），** 则结果是相应的 **_ismbb**例程的返回值。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时返回 0。 如果*c* <= 255，并且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
 
-这些函数的版本相同，只不过具有 **_l**后缀的版本使用传入区域设置，用于其区域设置相关行为，而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些函数的版本相同，不同之处在于具有 **_l**后缀的函数使用传入的区域设置的区域设置，而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -144,13 +144,13 @@ int _ismbcspace_l(
 
 |例程|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Graphic|仅当*c*是任何 ASCII 或卡塔卡纳可打印字符的单字节表示形式（空格除外）时，才返回非零。|
-|**_ismbcprint**|可打印|仅当*c*是任何 ASCII 或卡塔卡纳可打印字符（包括空格 ）的单字节表示符时，才返回非零。|
-|**_ismbcpunct**|标点|仅当*c*是任何 ASCII 或 katakana 标点符号的单字节表示符时，才返回非零。|
-|**_ismbcblank**|空格或水平制表符|仅当*c*是空格或水平选项卡字符时 *（c*=0x20 或*c*=0x09）时，才返回非零。|
-|**_ismbcspace**|空格|仅当*c*为空格字符 *（c*=0x20 或 0x09<=*c*<=0x0D 时，才返回非零。|
+|**_ismbcgraph**|Graphic|当且仅当*c*是除空格（）之外的任何 ASCII 或片假名可打印字符的单字节表示形式时返回非零值。|
+|**_ismbcprint**|可打印|当且仅当*c*是任何 ASCII 或片假名可打印字符（包括空格（））的单字节表示形式时返回非零值。|
+|**_ismbcpunct**|标点|当且仅当*c*是任何 ASCII 或片假名标点字符的单字节表示形式时返回非零值。|
+|**_ismbcblank**|空格或水平制表符|当且仅当*c*是空格或水平制表符时返回非零值： *c*= 0x20 或*c*= 0x09。|
+|**_ismbcspace**|空格|当且仅当*c*为空白字符时返回非零值： *c*= 0x20 或 0x09<=*c*<= 0x0D。|
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -176,7 +176,7 @@ int _ismbcspace_l(
 ## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)<br/>
 [is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

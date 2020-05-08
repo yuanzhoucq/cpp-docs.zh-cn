@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344618"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920331"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -53,15 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>返回值
 
-返回读取的字符。 要指示读取错误或文件结尾条件 **，getchar**返回 EOF，getwchar**getwchar**返回**EOF****WEOF**。 对于**getchar，** 使用**ferror**或**feof**检查错误或文件结尾。
+返回读取的字符。 若要指示读取错误或文件尾条件， **getchar**将返回**EOF**，并且**getwchar**将返回**WEOF**。 对于**getchar**，请使用**ferror**或**feof**检查是否有错误或文件结束。
 
 ## <a name="remarks"></a>备注
 
-每个例程从**stdin**读取单个字符，并将关联的文件指针增量到指向下一个字符。 **getchar**与[_fgetchar](fgetc-fgetwc.md)相同，但它是作为函数和宏实现的。
+每个例程从**stdin**中读取单个字符，并递增关联的文件指针，使之指向下一个字符。 **getchar**与[_fgetchar](fgetc-fgetwc.md)相同，但它作为函数和宏实现。
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -76,7 +76,7 @@ wint_t getwchar();
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 （UWP） 应用中不支持该控制台。 在与控制台 **、stdin、stdout**和**stder**关联的标准流句柄必须重定向，C 运行时函数才能在 UWP 应用中使用它们。 **stdout** 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

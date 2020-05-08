@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342234"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916532"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
@@ -77,29 +77,29 @@ long double ldexpl(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
-*exp*<br/>
+*.exp*<br/>
 整数指数。
 
 ## <a name="return-value"></a>返回值
 
-**如果成功，ldexp**函数返回*x* \* 2<sup>*exp*</sup>的值。 在溢出时，并根据*x*的**符号返回**+/- **HUGE_VAL**;**errno**值设置为**ERANGE**。
+如果成功， **ldexp**函数将返回*x* \* 2<sup>*exp*</sup>的值。 溢出时，根据*x*的符号， **ldexp**返回 +/- **HUGE_VAL**;**errno**值设置为**ERANGE**。
 
-有关**errno**和可能的错误返回值的详细信息，请参阅[errno、_doserrno、_sys_errlist 和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+有关**errno**和可能的错误返回值的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用**浮点**或**长****双**类型**ldexp**的重载。 在 C 程序中 **，ldexp**始终采用**双****和 int**并返回**一个双**。
+由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**ldexp**的重载。 在 C 程序中， **ldexp**始终采用**double**和**int** ，并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**ldexp**， **ldexpf**， **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
 
 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -121,13 +121,13 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 4.0 times two to the power of 3 is 32.0
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
