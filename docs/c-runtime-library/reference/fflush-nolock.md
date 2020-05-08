@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-ms.openlocfilehash: 0ee61ffe6b9aabb4a8bffb803c492905d45a5374
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63d456288e978c79b4e0f4e67f9a4b2318bf0417
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347229"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920125"
 ---
 # <a name="_fflush_nolock"></a>_fflush_nolock
 
@@ -60,9 +60,9 @@ int _fflush_nolock(
 
 ## <a name="remarks"></a>备注
 
-此函数是**fflush**的非锁定版本。 它与**fflush**相同，只是它不受到其他线程的干扰。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
+此函数是**fflush**的非锁定版本。 它与**fflush**完全相同，只不过它不会受到其他线程的干扰。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

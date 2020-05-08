@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 5f7dacbb131094164c5256171dd54ab3ea94cda4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 295eabdef37a7b8d6bfb8408ba0d3d683a59c42d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342971"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919722"
 ---
 # <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 
@@ -85,28 +85,28 @@ int _ismbcsymbol_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的字符。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*<= 255 并且存在相应的 **_ismbb**例程（例如 **，_ismbcalnum**对应于 **_ismbbalnum），** 则结果是相应的 **_ismbb**例程的返回值。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*<= 255，并且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
 
 ## <a name="remarks"></a>备注
 
 其中每个函数都针对给定的条件测试给定的多字节字符。
 
-具有 **_l**后缀的这些函数的版本是相同的，只是它们使用传入区域设置，而不是当前区域设置，用于其与区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 |例程|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|有效多字节|仅当*c*的第一个字节在范围 0x81 - 0x9F 或 0xE0 - 0xFC 范围内，而第二个字节在范围 0x40 - 0x7E 或 0x80 - FC内时，才返回非零。|
-|**_ismbcsymbol**|多字节字符|仅当 0x8141<=*c*<=0x81AC 时，才返回非零。|
+|**_ismbclegal**|有效多字节|当且仅当*c*的第一个字节在 0X81-0X9F 或 0XE0-0xFC 范围内，而第二个字节在 0X40-0x7E 或 0X80-FC 范围内时返回非零值。|
+|**_ismbcsymbol**|多字节字符|当且仅当 0x8141<=*c*<= 0x81AC 时返回非零值。|
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

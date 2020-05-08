@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: b11a40dd9dc58964df77330767a55aa95a179319
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338194"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919540"
 ---
 # <a name="rand_s"></a>rand_s
 
-生成一个伪随机数。 这是函数[兰特](rand.md)的更安全的版本，具有[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
+生成一个伪随机数。 这是函数[rand](rand.md)的更安全版本，具有[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -51,18 +51,18 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>参数
 
-*随机值*<br/>
-指向整数的指针，用于保存生成的值。
+*randomValue*<br/>
+指向用于保存生成值的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零，否则返回错误代码。 如果输入指针_随机值_是空指针，则函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回**EINVAL**并将**errno**设置到**EINVAL**。 如果函数由于任何其他原因失败，*_随机值_设置为 0。
+如果成功，则返回零，否则返回错误代码。 如果输入指针_randomValue_为空指针，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。 如果函数因任何其他原因而失败，则 *_randomValue_将设置为0。
 
 ## <a name="remarks"></a>备注
 
-**rand_s**函数在范围 0 到**UINT_MAX**到输入指针中写入伪随机整数。 **rand_s**函数使用操作系统生成加密安全的随机数。 它不使用[srand](srand.md)函数生成的种子，也不影响[兰特](rand.md)使用的随机数序列。
+**Rand_s**函数将 0 **UINT_MAX**到1之间的伪随机整数写入到输入指针。 **Rand_s**函数使用操作系统生成加密安全的随机数字。 它不使用由[srand](srand.md)函数生成的种子，也不会影响[rand](rand.md)使用的随机数字序列。
 
-**rand_s**函数要求在要声明函数的包含语句之前定义常量 **_CRT_RAND_S，** 如以下示例所示：
+**Rand_s**函数要求在要声明的函数的包含语句之前定义常量 **_CRT_RAND_S** ，如以下示例中所示：
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,7 +71,7 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s**取决于[RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API，该 API 仅在 Windows XP 和更高版本中可用。
+**rand_s**依赖于[RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API，该 API 仅在 Windows XP 和更高版本中可用。
 
 ## <a name="requirements"></a>要求
 
@@ -160,5 +160,5 @@ int main( void )
 ## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[兰德](rand.md)<br/>
+[rand](rand.md)<br/>
 [srand](srand.md)<br/>

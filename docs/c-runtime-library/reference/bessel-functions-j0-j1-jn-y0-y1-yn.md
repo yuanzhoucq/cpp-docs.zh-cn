@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348663"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913467"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 
@@ -86,7 +86,7 @@ double _yn(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
 *n*<br/>
@@ -94,31 +94,31 @@ Bessel 函数的整数顺序。
 
 ## <a name="return-value"></a>返回值
 
-每个例程返回*x*的贝塞尔函数。 如果*x* **在_y0、_y1**或 **_yn**函数中为负数，则例程将**errno**设置到**EDOM，** 将 **_DOMAIN**错误消息打印到**斯特，** 并**返回_HUGE_VAL**。 **_y1** 您可以使用 **_matherr**修改错误处理。
+其中每个例程都返回*x*的贝赛耳函数。 如果*x*在 **_y0**、 **_y1**或 **_yn**函数中为负，则例程会将**errno**设置为**EDOM**，将 **_DOMAIN**错误消息输出到**stderr**，并返回 **_HUGE_VAL**。 您可以使用 **_matherr**修改错误处理。
 
 ## <a name="remarks"></a>备注
 
-**_j0、_j1**和 **_jn**例程返回第一类贝塞尔函数：顺序分别为 0、1 和 n。 **_j1**
+**_J0**、 **_j1**和 **_jn**例程分别返回第一种类型的贝赛耳函数： orders 0、1和 n。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• **QNAN**， **IND**|**无效**|**_DOMAIN**|
+|± **QNAN**， **IND**|**无效**|**_DOMAIN**|
 
-**_y0、_y1**和 **_yn**例程返回第二类贝塞尔函数：顺序 0、1 和 n。 **_y1**
+**_Y0**、 **_y1**和 **_yn**例程将返回第二种类型的贝赛耳函数：分别为 "orders 0"、"1" 和 "n"。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• **QNAN**， **IND**|**无效**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**无效**|**_DOMAIN**|
+|± **QNAN**， **IND**|**无效**|**_DOMAIN**|
+|±0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0。0|**无效**|**_DOMAIN**|
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**_j0**， **_j1**， **_jn**， **_y0**， **_y1**， **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

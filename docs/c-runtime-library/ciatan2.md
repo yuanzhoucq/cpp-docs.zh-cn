@@ -13,7 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: 585608b4d3dce723c0ea3a82e1c52325a0f6b7e6
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 62baae97cec3c572f14a01f2f5c0ad189cb4dbfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745931"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918104"
 ---
 # <a name="_ciatan2"></a>_CIatan2
 
-计算*x* / *y*的弧形，其中*x*和*y*是堆栈顶部的值。
+计算*x* / *y*的反正切值，其中*x*和*y*是堆栈顶部的值。
 
 ## <a name="syntax"></a>语法
 
@@ -48,13 +48,13 @@ void __cdecl _CIatan2();
 
 生成的值被将被推送到堆栈顶部。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

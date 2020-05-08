@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +59,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d5121c795ed27c22d20087868f798a4b7f5f5b02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348169"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914824"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
@@ -130,56 +130,56 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>参数
 
-*缓冲区*<br/>
-必须足以容纳 26 个字符。 指向字符串结果的指针，或**NULL，** 如果：
+*宽限*<br/>
+必须足以容纳 26 个字符。 指向字符串结果的指针; 如果为，则为**NULL** 。
 
-- *sourceTime*表示 1970 年 1 月 1 日午夜之前的日期，UTC。
+- *sourceTime*表示1970年1月1日午夜之前的日期。
 
-- 如果您使用 **_ctime32_s**或 **_wctime32_s，** 并且*sourceTime*表示 2038 年 1 月 18 日 23：59：59 之后的日期，UTC。
+- 如果使用 **_ctime32_s**或 **_wctime32_s**并且*SourceTime*表示23:59:59 年1月 2038 18 日之后的日期，则为。
 
-- 如果您使用 **_ctime64_s**或 **_wctime64_s，** 并且*sourceTime*表示 23：59：59，3000 年 12 月 31 日 UTC 之后的日期。
+- 如果使用 **_ctime64_s**或 **_wctime64_s**并且*SourceTime*表示23:59:59 年12月 3000 31 日之后的日期（UTC）。
 
-- 如果使用 **_ctime_s**或 **_wctime_s，** 则这些函数是以前函数的包装。 请参阅“备注”部分。
+- 如果使用 **_ctime_s**或 **_wctime_s**，则这些函数是以前函数的包装器。 请参阅“备注”部分。
 
-*元素数*<br/>
+*numberOfElements*<br/>
 缓冲区的大小。
 
-*源时间*<br/>
+*sourceTime*<br/>
 指向存储时间的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 如果由于无效参数导致失败，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回错误代码。 错误代码在 ERRNO 中定义。H;有关这些错误的列表，请参阅[errno](../../c-runtime-library/errno-constants.md)。 针对每个错误条件而引发的实际错误代码如下表所示。
+如果成功，则返回 0。 如果由于无效参数导致失败，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回错误代码。 错误代码是在 ERRNO 中定义的。高有关这些错误的列表，请参阅[errno](../../c-runtime-library/errno-constants.md)。 针对每个错误条件而引发的实际错误代码如下表所示。
 
 ## <a name="error-conditions"></a>错误条件
 
-|*缓冲区*|*元素数*|*源时间*|返回|*缓冲区*中的值|
+|*宽限*|*numberOfElements*|*sourceTime*|返回|*缓冲区*中的值|
 |--------------|------------------------|------------|------------|-----------------------|
-|**空**|any|any|**埃因瓦尔**|未修改|
-|**非 NULL（** 指向有效内存）|0|any|**埃因瓦尔**|未修改|
-|非**NULL**|0< 大小 < 26|any|**埃因瓦尔**|空字符串|
-|非**NULL**|>= 26|Null|**埃因瓦尔**|空字符串|
-|非**NULL**|>= 26|< 0|**埃因瓦尔**|空字符串|
+|**Null**|any|any|**EINVAL**|未修改|
+|Not **NULL** （指向有效内存）|0|any|**EINVAL**|未修改|
+|Not **NULL**|0< 大小 < 26|any|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|Null|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|< 0|**EINVAL**|空字符串|
 
 ## <a name="remarks"></a>备注
 
-**ctime_s**函数将存储为[time_t](../../c-runtime-library/standard-types.md)结构的时间值转换为字符串。 *sourceTime*值通常从调用[时间](time-time32-time64.md)获得，该调用返回自 1970 年 1 月 1 日午夜 （00：00：00：00） 起经过的秒数，协调通用时间 （UTC）。 返回值字符串正好包含 26 个字符，且格式为：
+**Ctime_s**函数将作为[time_t](../../c-runtime-library/standard-types.md)结构存储的时间值转换为字符串。 *SourceTime*值通常是从对[time](time-time32-time64.md)的调用中获取的，它返回自午夜（00:00:00）起，年1月 1970 1 日（协调世界时（UTC））开始经过的秒数。 返回值字符串正好包含 26 个字符，且格式为：
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 使用 24 小时制。 所有字段都具有固定宽度。 新换行符 ('\n') 和空字符 ('\0') 占据字符串的最后两个位置。
 
-转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间和[_tzset](tzset.md)函数的信息，请参阅[时间](time-time32-time64.md)[、_ftime](ftime-ftime32-ftime64.md)和[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函数，了解有关定义时区环境和全局变量的信息。
+转换的字符串同时根据本地时区设置进行调整。 有关定义时区环境和全局变量的信息，请参阅[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函数，了解有关配置本地时间和[_tzset](tzset.md)函数的信息。
 
-**_wctime32_s**和 **_wctime64_s**是 **_ctime32_s**和 **_ctime64_s**的宽字符版本;返回指向宽字符字符串的指针。 否则 **，_ctime64_s、_wctime32_s**和 **_wctime64_s**行为与 **_ctime32_s**相同。 **_wctime32_s**
+**_wctime32_s**和 **_wctime64_s**是 **_ctime32_s**和 **_ctime64_s**的宽字符版本;返回指向宽字符字符串的指针。 否则， **_ctime64_s**、 **_wctime32_s**和 **_wctime64_s**与 **_ctime32_s**的行为相同。
 
-**ctime_s**是一个内联函数，用于计算到 **_ctime64_s，time_t**等效于 **__time64_t。** **time_t** 如果需要强制编译器将**time_t**解释为旧的 32 位**time_t**，则可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**ctime_s**评估 **_ctime32_s。** 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**ctime_s**是计算结果为 **_ctime64_s**并且**time_t**等效于 **__time64_t**的内联函数。 如果需要强制编译器将**time_t**解释为旧32位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**ctime_s**计算为 **_ctime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -193,8 +193,8 @@ errno_t _wctime64_s(
 
 |例程|必需的标头|
 |-------------|---------------------|
-|**ctime_s**， **_ctime32_s**， **_ctime64_s**|\<time.h>|
-|**_wctime_s**， **_wctime32_s**， **_wctime64_s**|\<time.h> 或 \<wchar.h>|
+|**ctime_s**、 **_ctime32_s** **_ctime64_s**|\<time.h>|
+|**_wctime_s**、 **_wctime32_s** **_wctime64_s**|\<time.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

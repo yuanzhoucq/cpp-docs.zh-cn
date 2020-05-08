@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 50f1f6e4320e3ef905b4eda67ba1d458a5b1df08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344876"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919687"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -53,19 +53,19 @@ errno_t _get_tzname(
 
 ### <a name="parameters"></a>参数
 
-*p 返回值*<br/>
-*时区名称*的字符串长度，包括空终止符。
+*pReturnValue*<br/>
+*TimeZoneName*的字符串长度，包括 null 结束符。
 
-*时区名称*<br/>
-表示时区名称或日光标准时区名称 （DST） 的字符串地址，具体取决于*索引*。
+*timeZoneName*<br/>
+用于表示时区名称或夏令时标准时区名称（DST）的字符串的地址，具体取决于*索引*。
 
-*大小字节*<br/>
-以字节为单位*的时区名称*字符串的大小。
+*sizeInBytes*<br/>
+*TimeZoneName*字符串的大小（以字节为单位）。
 
 *index*<br/>
 要检索的两个时区名称之一的索引。
 
-|*index*|*时区名称*的内容|*时区名称*默认值|
+|*index*|*TimeZoneName*的内容|*timeZoneName*默认值|
 |-|-|-|
 |0|时区名称|"PST"|
 |1|夏令时标准时区名称|"PDT"|
@@ -75,29 +75,29 @@ errno_t _get_tzname(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零，否则为**errno**类型值。
+如果成功，则为零; 否则为**errno**类型值。
 
-如果任*一时区名称*为**NULL**，或者*sizeInBytes*为零或小于零（但不是两者），则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**设置到**EINVAL**并返回**EINVAL**。
+如果*timeZoneName*为**NULL**，或者*sizeInBytes*为零或小于零（但不是两者），则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*p 返回值*|*时区名称*|*大小字节*|*index*|返回值|*时区名称*的内容|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|返回值|*TimeZoneName*的内容|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|TZ 名称的大小|**空**|0|0 或 1|0|未修改|
+|TZ 名称的大小|**Null**|0|0 或 1|0|未修改|
 |TZ 名称的大小|any|> 0|0 或 1|0|TZ 名称|
-|未修改|**空**|> 0|any|**埃因瓦尔**|未修改|
-|未修改|any|零|any|**埃因瓦尔**|未修改|
-|未修改|any|> 0|> 1|**埃因瓦尔**|未修改|
+|未修改|**Null**|> 0|any|**EINVAL**|未修改|
+|未修改|any|零|any|**EINVAL**|未修改|
+|未修改|any|> 0|> 1|**EINVAL**|未修改|
 
 ## <a name="remarks"></a>备注
 
-**_get_tzname**函数根据索引值将当前时区名称或日光标准时区名称 （DST） 的字符串表示形式检索到*时区名称*的地址，以及*pReturnValue*中的字符串大小。 如果*timeZoneName*为*NULL，并且大小 InBytes*为零，则在*pReturnValue*中返回保存指定时区和终止 null 的字符串的大小。 **NULL** 对于标准时区，索引值必须为 0，对于日光标准时区，索引值必须为 1;*索引*的任何其他值都有不确定的结果。
+**_Get_tzname**函数根据索引值以及*pReturnValue*中字符串的大小，检索当前时区名称或夏令时标准时区名称（DST）的字符串表示形式，以*timeZoneName*地址。 如果*timeZoneName*为**NULL** ，并且*sizeInBytes*为零，则在*pReturnValue*中返回保留指定时区和终止 NULL 的字符串大小（以字节为单位）。 标准时区的索引值必须为0，对于日光标准时区，索引值必须为 1;*index*的任何其他值都具有不确定的结果。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 
-此示例调用 **_get_tzname**以获取所需的缓冲区大小以显示当前 Daylight 标准时区名称、分配该大小的缓冲区、再次调用 **_get_tzname**以在缓冲区中加载名称并将其打印到控制台。
+此示例调用 **_get_tzname**以获取所需的缓冲区大小，以显示当前的标准时区名称、分配该大小的缓冲区、再次调用 **_get_tzname**以加载缓冲区中的名称，并将其输出到控制台。
 
 ```C
 // crt_get_tzname.c

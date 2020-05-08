@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 364544a9423668494747405e801d59b73de4e6c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355622"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920289"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s、_wsplitpath_s
 
@@ -93,32 +93,32 @@ errno_t _wsplitpath_s(
 
 ### <a name="parameters"></a>参数
 
-*路径*<br/>
+*path*<br/>
 完整路径。
 
-*驱动*<br/>
-驱动器号，后跟冒号 （**。** 如果不需要驱动器号，可以传递此参数的**NULL。**
+*光驱*<br/>
+驱动器号，后跟冒号（**：**）。 如果不需要驱动器号，则可以为此参数传递**NULL** 。
 
-*驱动器数量元素*<br/>
-*驱动器*缓冲区的大小（以单字节或宽字符表示）。 如果*驱动器*为**NULL，** 则此值必须为 0。
+*driveNumberOfElements*<br/>
+*驱动器*缓冲区大小（以单字节或宽字符为单位）。 如果*驱动器*为**空**，则此值必须为0。
 
 *dir*<br/>
-目录路径，包括尾部反斜杠。 可使用向前斜**/** 杠 （）、斜**\\**杠 （） 或两者。 如果不需要目录路径，可以传递此参数的**NULL。**
+目录路径，包括尾部反斜杠。 可以使用正**/** 斜杠（）、 **\\**反斜杠（）或两者。 如果不需要目录路径，则可以为此参数传递**NULL** 。
 
-*元素的底数*<br/>
-以单字节或宽字符表示*的 dir*缓冲区的大小。 如果*dir*为**NULL，** 则此值必须为 0。
+*dirNumberOfElements*<br/>
+*目录*缓冲区的大小（以单字节字符或宽字符为单位）。 如果*dir*为**NULL**，则此值必须为0。
 
 *fname*<br/>
-基文件名（不带扩展名）。 如果不需要文件名，可以传递此参数的**NULL。**
+基文件名（不带扩展名）。 如果不需要文件名，则可以为此参数传递**NULL** 。
 
-*名称 元素数量*<br/>
-以单字节或宽字符表示*fname*缓冲区的大小。 如果*fname*为**NULL，** 则此值必须为 0。
+*nameNumberOfElements*<br/>
+*Fname*缓冲区的大小（以单字节字符或宽字符为单位）。 如果*fname*为**NULL**，则此值必须为0。
 
-*内线*<br/>
-文件名扩展名，包括前导期 **（. 。** 如果不需要文件名扩展名，可以传递此参数的**NULL。**
+*宋体*<br/>
+文件扩展名，包括前导句点（**.**）。如果不需要文件扩展名，则可为此参数传递**NULL** 。
 
-*元素的分量*<br/>
-以单字节或宽字符表示*的 ext*缓冲区的大小。 如果*分机*为**NULL，** 则此值必须为 0。
+*extNumberOfElements*<br/>
+*扩展*缓冲区的大小（以单字节或宽字符为单位）。 如果*ext*为**NULL**，则此值必须为0。
 
 ## <a name="return-value"></a>返回值
 
@@ -128,25 +128,25 @@ errno_t _wsplitpath_s(
 
 |条件|返回值|
 |---------------|------------------|
-|*路径*为**NULL**|**埃因瓦尔**|
-|*驱动器*为**NULL，***驱动器数元素*为非零|**埃因瓦尔**|
-|*驱动器*是非**NULL，***驱动器数元素*数为零|**埃因瓦尔**|
-|*dir*为**NULL，***迪线元素为*非零|**埃因瓦尔**|
-|*dir*是非**NULL，***迪值元素数*为零|**埃因瓦尔**|
-|*fname*为**NULL，***名称为元素编号*为非零|**埃因瓦尔**|
-|*fname*是非**NULL，***名称元素数*为零|**埃因瓦尔**|
-|*ext*为**NULL，***元素的分量*为非零|**埃因瓦尔**|
-|*ext*是非**NULL，***元素的分值数*为零|**埃因瓦尔**|
+|*路径*为**NULL**|**EINVAL**|
+|*驱动器*为**NULL**， *driveNumberOfElements*为非零值|**EINVAL**|
+|*驱动器*为非**NULL**， *driveNumberOfElements*为零|**EINVAL**|
+|*dir*为**NULL**， *dirNumberOfElements*为非零值|**EINVAL**|
+|*dir*为非**NULL**， *dirNumberOfElements*为零|**EINVAL**|
+|*fname*为**NULL**， *nameNumberOfElements*为非零|**EINVAL**|
+|*fname*为非**NULL**， *nameNumberOfElements*为零|**EINVAL**|
+|*ext*为**NULL**， *extNumberOfElements*为非零值|**EINVAL**|
+|*ext*为非**NULL**， *extNumberOfElements*为零|**EINVAL**|
 
-如果发生上述情况之一，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将**errno**设置为**EINVAL**并返回**EINVAL**。
+如果发生上述情况之一，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
-如果任何缓冲区太短而无法保存结果，这些函数将清除所有缓冲区为空字符串，将**errno**设置为**ERANGE，** 并返回**ERANGE**。
+如果任何缓冲区太短而无法保存结果，则这些函数会将所有缓冲区清除为空字符串，将**errno**设置为**ERANGE**，并返回**ERANGE**。
 
 ## <a name="remarks"></a>备注
 
-**_splitpath_s**函数将路径分解为四个组件。 **_splitpath_s**根据需要自动处理多字节字符串参数，根据当前使用的多字节代码页识别多字节字符序列。 **_wsplitpath_s**是 **_splitpath_s**的宽字符版本;要 **_wsplitpath_s**的参数是宽字符字符串。 否则这些函数具有相同行为
+**_Splitpath_s**函数将路径分解为四个组件。 **_splitpath_s**会根据需要自动处理多字节字符串参数，根据当前使用的多字节代码页识别多字节字符序列。 **_wsplitpath_s**是 **_splitpath_s**的宽字符版本;**_wsplitpath_s**的参数是宽字符字符串。 否则这些函数具有相同行为
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -154,22 +154,22 @@ errno_t _wsplitpath_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-完整路径的每个组件都存储在单独的缓冲区中;清单常量 **_MAX_DRIVE、_MAX_DIR、_MAX_FNAME**和 **_MAX_EXT（** 在 STDLIB 中定义）。 **_MAX_DRIVE** **_MAX_FNAME**H） 为每个文件组件指定最大允许大小。 文件组件大于相应清单常量会导致堆损坏。
+完整路径的每个组件均存储在单独的缓冲区中;清单常量 **_MAX_DRIVE**、 **_MAX_DIR**、 **_MAX_FNAME**和 **_MAX_EXT** （在 stdlib.h 中定义。H）指定每个文件组件的最大允许大小。 文件组件大于相应清单常量会导致堆损坏。
 
 下表列出了清单常量的值。
 
-|“属性”|“值”|
+|名称|值|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-如果完整路径不包含组件（例如文件名 **），_splitpath_s**将空字符串分配给相应的缓冲区。
+如果完整路径不包含组件（例如，文件名）， **_splitpath_s**会将空字符串分配给相应的缓冲区。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ## <a name="requirements"></a>要求
 

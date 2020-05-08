@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: e2e48e4acc26c7b8317a2d358d1a426d012ec508
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 895814a1a44910ef65a826cba330a3edd70b85a9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345088"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916302"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
@@ -55,7 +55,7 @@ intptr_t _get_heap_handle( void );
 
 如果想要针对 CRT 堆调用 [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) 并启用低分片堆，请使用此函数。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

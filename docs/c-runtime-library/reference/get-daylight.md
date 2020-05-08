@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 0abab77b1429b263c7e5d84a6d395f0411ebf8a4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 226242c5dd6c3c204d2449bd14ee7dee4f5fe7b5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345301"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919391"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
@@ -50,22 +50,22 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>参数
 
-*小时*<br/>
+*小时数*<br/>
 夏令时偏移量（以小时为单位）。
 
 ## <a name="return-value"></a>返回值
 
-如果成功为零，则为**错误**值（如果发生错误）。
+如果成功，则为零; 如果发生错误，则为**errno**值。
 
 ## <a name="remarks"></a>备注
 
-**_get_daylight**函数以整数检索夏令时的小时数。 如果夏令时有效，则默认偏移量为一小时（但是少数地区遵守两小时的偏移量）。
+**_Get_daylight**函数将夏令时中的小时数作为整数进行检索。 如果夏令时有效，则默认偏移量为一小时（但是少数地区遵守两小时的偏移量）。
 
-如果*小时*数为**NULL，** 则无效参数处理程序将调用[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**设置到**EINVAL**并返回**EINVAL**。
+如果*小时*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
-我们建议您使用此函数而不是宏 **_daylight**或弃用函数 **__daylight**。
+建议使用此函数，而不是宏 **_daylight**或不推荐使用的函数 **__daylight**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

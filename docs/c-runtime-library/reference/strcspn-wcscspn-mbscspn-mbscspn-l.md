@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +45,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 2ba3c2941736d185ad93c7c6e44cb83c82ebb478
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fb3e0fe7590dac9fc3ce107b3c1b2a5800c867b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358877"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915250"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
 
 返回字符串中第一个匹配项的索引，以及属于一个字符集的字符的索引。
 
 > [!IMPORTANT]
-> **_mbschr**和 **_mbschr_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbschr**和 **_mbschr_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -83,30 +83,30 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>参数
 
-*Str*<br/>
+*字符串*<br/>
 null 终止的搜索字符串。
 
-*斯特查塞特*<br/>
+*strCharSet*<br/>
 null 终止的字符集。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-这些函数返回*str*中第一个字符的索引，该字符位于*strCharSet*中。 如果*str*中的字符中没有一个在*strCharSet*中，则返回值是*str*的长度。
+这些函数返回*strCharSet*中的*str*中第一个字符的索引。 如果*str*中的任何字符都不在*strCharSet*中，则返回值为*str*的长度。
 
 没有保留任何返回值以指示错误。
 
 ## <a name="remarks"></a>备注
 
-**wcscspn**和 **_mbscspn**是宽字符和多字节字符版本的**strcspn。** **wcscspn**的参数是宽字符字符串;**_mbscspn**字符串是多字节字符串。
+**wcscspn**和 **_mbscspn**是**strcspn**的宽字符和多字节字符版本。 **Wcscspn**的参数是宽字符字符串;**_mbscspn**的是多字节字符字符串。
 
-**_mbscspn**验证其参数。 如果*str*或*strCharSet*是空指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回 0 并将**errno**设置到**EINVAL**。 **strcspn**和**wcscspn**不验证其参数。 否则这三个函数否则具有相同行为。
+**_mbscspn**验证其参数。 如果*str*或*strCharSet*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回0并将**errno**设置为**EINVAL**。 **strcspn**和**wcscspn**不会验证其参数。 否则这三个函数否则具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -162,7 +162,7 @@ strcspn( "", "" ) = 0
 ## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

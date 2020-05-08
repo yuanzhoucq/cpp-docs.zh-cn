@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347542"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920243"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -70,28 +70,28 @@ long double fabsl(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**fabs**函数返回参数*x*的绝对值。 无错误返回。
+**Fabs**函数返回参数*x*的绝对值。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• QNAN，IND|无|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-C++允许重载，因此，如果包含\<cmath>标头，则可以调用**fab**的重载。 在 C 程序中，**晶圆厂**总是获取并返回**一个双**。
+C + + 允许重载，因此，如果包含**fabs** \<h> 标头，则可以调用 fabs 的重载。 在 C 程序中， **fabs**始终采用并返回**双精度型**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的 C 标头|必需的 C++ 标头|
 |--------------|-----------------------|---------------------------|
-|**工厂**，**晶圆厂**，**法布斯尔**|\<math.h>|\<cmath> 或 \<math.h>|
+|**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

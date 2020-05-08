@@ -13,7 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: e7009272dbbd2b406c6355977514feaaf13ba746
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9b18c2eb0a76885f3c3aad7bb1f03d7dea52c5c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334378"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918075"
 ---
 # <a name="_cicos"></a>_CIcos
 
@@ -48,7 +48,7 @@ void __cdecl _CIcos();
 
 生成的值被将被推送到浮点堆栈顶部。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 

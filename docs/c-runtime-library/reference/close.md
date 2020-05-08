@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: 4d8b702a10624ae80629b4ce4644c428322500cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c642820bf1bc2e2afbd14e17832fb3fdb6f865b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348648"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919853"
 ---
 # <a name="_close"></a>_close
 
@@ -49,22 +49,22 @@ int _close(
 
 ### <a name="parameters"></a>参数
 
-*Fd*<br/>
+*fd*<br/>
 引用打开的文件的文件说明符。
 
 ## <a name="return-value"></a>返回值
 
-如果文件已成功关闭 **，_close**返回 0。 返回值 -1 表示错误。
+如果文件已成功关闭， **_close**将返回0。 返回值-1 表示错误。
 
 ## <a name="remarks"></a>备注
 
-**_close**函数关闭与*fd*关联的文件。
+**_Close**函数将关闭与*fd*关联的文件。
 
-文件描述符和基础 OS 文件句柄已关闭。 因此，如果文件最初使用 Win32 函数**CreateFile**打开并使用 **_open_osfhandle**转换为文件描述符，则无需调用**CloseHandle。**
+文件描述符和基础 OS 文件句柄已关闭。 因此，如果最初使用 Win32 函数**CreateFile**打开该文件并使用 **_open_osfhandle**将其转换为文件描述符，则无需调用**CloseHandle** 。
 
-此函数验证其参数。 如果*fd*是一个坏的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数返回 **-1，errno**设置为**EBADF**。
+此函数验证其参数。 如果*fd*是错误的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并且**errno**设置为**ebadf (**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -80,7 +80,7 @@ int _close(
 
 ## <a name="see-also"></a>另请参阅
 
-[低电平 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_dup、_dup2](dup-dup2.md)<br/>

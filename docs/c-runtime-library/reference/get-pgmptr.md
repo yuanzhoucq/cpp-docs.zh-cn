@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: efcac6a64c01bee38a3753bdec378dae625db35e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a4a9bddfa861727e174325dc639868e3529162cd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345026"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918216"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
@@ -52,17 +52,17 @@ errno_t _get_pgmptr(
 ### <a name="parameters"></a>参数
 
 *pValue*<br/>
-指向要填充 **_pgmptr**变量的当前值的字符串的指针。
+一个指针，指向要使用 **_pgmptr**变量的当前值填充的字符串。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*为**NULL，** 则无效参数处理程序将调用[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**设置到**EINVAL**并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-仅当程序的入口点（如**main（）** 或**WinMain（）））** 时，才呼叫 **_get_pgmptr。** **_pgmptr**全局变量包含与进程关联的可执行文件的完整路径。 有关详细信息，请参阅 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
+仅当程序有一个窄的入口点（如**main （）** 或**WinMain （））** 时，才调用 **_get_pgmptr** 。 **_Pgmptr**全局变量包含与进程关联的可执行文件的完整路径。 有关详细信息，请参阅 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

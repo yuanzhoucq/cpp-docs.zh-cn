@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914381"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 
@@ -81,30 +81,30 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要转换的多字节字符。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果可能，每个函数都返回转换后的字符*c*。a。 否则，它将返回字符*c*不变。
+如果可能，这些函数将返回转换后的字符*c*。 否则，它返回的字符*c*不变。
 
 ## <a name="remarks"></a>备注
 
-**_mbctohira**和 **_mbctokata**函数测试字符*c，* 如果可能，请应用以下转换之一。
+**_Mbctohira**和 **_mbctokata**函数测试字符*c* ，如有可能，将应用以下转换之一。
 
 |例程|转换|
 |--------------|--------------|
 |**_mbctohira**， **_mbctohira_l**|多字节片假名与多字节平假名。|
 |**_mbctokata**， **_mbctokata_l**|多字节平假名与多字节片假名。|
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些函数的版本相同，只不过没有 **_l**后缀的版本使用此区域设置来执行与区域设置相关的行为，而具有 **_l**后缀的函数则使用传入区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数会将当前区域设置用于与区域设置相关的行为，并且使用传入的区域设置参数 **_l**后缀。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在早期版本中 **，_mbctohira**被命名为**jtohira，_mbctokata**被命名为 **_mbctokata****jtokata。** 对于新代码，请使用新名称。
+在早期版本中， **_mbctohira**命名为**jtohira** ， **_mbctokata**命名为**jtokata**。 对于新代码，请使用新名称。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

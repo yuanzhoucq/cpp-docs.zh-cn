@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 45f93e370e11cf38fc17da3557b21c636fcbc623
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a265a37ba4c16dd15e6b50035dcc65bc8afbe7c7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341267"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919584"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy、_mbccpy_l
 
@@ -76,20 +76,20 @@ dest**<br/>
 *src*<br/>
 要复制的多字节字符。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="remarks"></a>备注
 
-**_mbccpy**函数将一个多字节字符从*src*复制到*dest*。
+**_Mbccpy**函数将一个多字节字符从*src*复制到*目标*。
 
-此函数验证其参数。 如果 **_mbccpy**传递了*dest*或*src*的空指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**。
+此函数验证其参数。 如果向 **_mbccpy**传递了用于*dest*或*src*的空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL**。
 
-**_mbccpy**对任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_l**与 **_mbccpy**相同，只不过 **_mbccpy_l**使用传入的任何区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbccpy**为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_l**与 **_mbccpy**相同，不同之处在于 **_mbccpy_l**使用传入的区域设置来实现与区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 **安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,6 +109,6 @@ dest**<br/>
 
 ## <a name="see-also"></a>另请参阅
 
-[现场](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 568e44d731f384a0503420339d716fdfdc81e13a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346045"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920441"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -52,20 +52,20 @@ void _free_locale(
 
 ### <a name="parameters"></a>参数
 
-*现场*<br/>
+*locale*<br/>
 要释放的区域设置对象。
 
 ## <a name="remarks"></a>备注
 
-**_free_locale**函数用于释放从调用 **_get_current_locale**或 **_create_locale**获得区域设置的对象。
+**_Free_locale**函数用于释放通过调用 **_get_current_locale**或 **_create_locale**获取的区域设置对象。
 
-此函数的前一个名称 **__free_locale（** 具有两个前导下划线）已被弃用。
+此函数的先前名称（ **__free_locale** （具有两个前导下划线）已弃用。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|**常规**|必需的标头|
+|**例程**|必需的标头|
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 

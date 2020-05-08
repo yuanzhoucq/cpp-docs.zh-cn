@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: f693655ecd1eb0122577446e39d4188703674419
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f1678628685c74519077fb68ca9c810aebe30fdd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345177"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919339"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -50,17 +50,17 @@ errno_t _get_errno(
 ### <a name="parameters"></a>参数
 
 *pValue*<br/>
-指向要用**errno**变量的当前值填充的整数的指针。
+指向要使用**errno**变量的当前值填充的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*为**NULL，** 则无效参数处理程序将调用[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**设置到**EINVAL**并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-errno**errno**的可能值在 Errno.h 中定义。 此外，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
+**Errno**的可能值在 errno 中定义。 此外，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 

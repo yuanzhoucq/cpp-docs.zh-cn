@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355005"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915774"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
-计算浮点值的子值。
+计算浮点值的正弦值。
 
 ## <a name="syntax"></a>语法
 
@@ -62,31 +62,31 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 角度（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**子项**函数返回*x*的子次。 如果*x*大于或等于 263，或小于或等于 -263，则结果中会发生显著性损失。
+**Sin**函数返回*x*的正弦值。 如果*x*大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|• QNAN，IND|None|_DOMAIN|
-|[ （ 辛， 鼻， 鼻）|INVALID|_DOMAIN|
+|± QNAN，IND|None|_DOMAIN|
+|±∞（sin、sinf、sinl）|INVALID|_DOMAIN|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用带和返回**浮点**值或**长****双**值的**重**载。 在 C 程序中，**辛**总是采取并返回**双**。
+由于 c + + 允许重载，因此你可以调用采用并返回**浮点**或**长****双精度**值的**sin**重载。 在 C 程序中， **sin**始终采用并返回**double**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
-|**辛**，**辛夫**，**鼻**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

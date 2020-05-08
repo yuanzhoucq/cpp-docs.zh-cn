@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338425"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916181"
 ---
 # <a name="_putch-_putwch"></a>_putch、_putwch
 
@@ -63,20 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要输出的字符。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 *c*。 如果 **_putch**失败，它将返回**EOF**;如果 **_putwch**失败，它将返回**WEOF**。
+如果成功，则返回 *c*。 如果 **_putch**失败，则返回**EOF**;如果 **_putwch**失败，则返回**WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数直接将字符*c*写入控制台，无需缓冲。 在 Windows NT 中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
+这些函数将字符*c*直接写入控制台，而不是进行缓冲处理。 在 Windows NT 中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
 
-后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 **_putch_nolock** **，_putwch_nolock**。
+后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请 **_putch_nolock**参阅 _putch_nolock **_putwch_nolock**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -103,6 +103,6 @@ wint_t _putwch(
 
 ## <a name="see-also"></a>另请参阅
 
-[控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch、_getwch](getch-getwch.md)<br/>

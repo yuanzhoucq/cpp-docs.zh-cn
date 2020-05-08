@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 174c94136cdc8b603416ff1dd239703489925bae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350020"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916974"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,13 +54,13 @@ void clearerr(
 
 ## <a name="remarks"></a>备注
 
-**更清晰的**函数重置*流*的错误指示器和文件结尾指示器。 错误指示灯不会自动清除;设置指定流的错误指示器后，该流上的操作将继续返回错误值，直到调用**更清晰**[、fseek、fsetpos](fseek-fseeki64.md)**fsetpos**或[倒带](rewind.md)。
+**Clearerr**函数将重置*流*的错误指示符和文件尾指示符。 错误指示器不会自动清除;设置指定流的错误指示符后，在调用**clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或[倒带](rewind.md)之前，对该流执行的操作将继续返回错误值。
 
-如果*流*为**NULL，** 则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，此函数将**errno**设置到**EINVAL**并返回。 有关**errno**和错误代码的详细信息，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
+如果*stream*为**NULL**，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回。 有关**errno**和错误代码的详细信息，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
 
 提供此函数的一个更安全的版本；请参阅 [clearerr_s](clearerr-s.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -110,7 +110,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Write error: No error
@@ -118,7 +118,7 @@ Will input cause an error? n
 No read error
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [错误处理](../../c-runtime-library/error-handling-crt.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>

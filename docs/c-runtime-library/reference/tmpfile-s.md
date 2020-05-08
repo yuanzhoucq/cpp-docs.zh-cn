@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 8f9dd58abdf1d3225341e40661c14ae3a5013257
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362464"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919931"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -58,21 +58,21 @@ errno_t tmpfile_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*pFilePtr*|**返回值**|**Contents of***pFilePtr*的内容  |
+|*pFilePtr*|**返回值**|*PFilePtr* **的内容**  |
 |----------------|----------------------|---------------------------------|
-|**空**|**埃因瓦尔**|未更改|
+|**Null**|**EINVAL**|未更改|
 
-如果出现以上参数验证错误，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续 **，errno**设置为**EINVAL，** 返回值为**EINVAL**。
+如果出现以上参数验证错误，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且返回值为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**tmpfile_s**函数创建一个临时文件，并在*pFilePtr*参数中放置指向该流的指针。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
+**Tmpfile_s**函数将创建一个临时文件，并在*pFilePtr*参数中放置一个指向该流的指针。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
 
-如果无法打开该文件 **，tmpfile_s**将**NULL**写入*pFilePtr*参数。 当文件关闭、程序正常终止时或调用 **_rmtmp**时，假设当前工作目录未更改，此临时文件将自动删除。 临时文件以**w+b（** 二进制读取/写入）模式打开。
+如果文件无法打开， **tmpfile_s**会将**NULL**写入*pFilePtr*参数。 当文件关闭、程序正常终止时，或在调用 **_rmtmp**时，如果当前工作目录未更改，则会自动删除此临时文件。 临时文件以**w + b** （二进制读取/写入）模式打开。
 
-如果尝试超过**TMP_MAX_S，** 可能会发生故障（请参阅 STDIO）。H） 呼叫**tmpfile_s**。
+如果尝试的**TMP_MAX_S 超过**（请参阅 stdio.h。H）对**tmpfile_s**调用。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: 0c16150a6240068e1453ec90b396c87ab9ece5a4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b57a07dbe5c2c746e8af6b96f1864e4f4534849f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346913"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920352"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -52,18 +52,18 @@ int fgetpos(
 *流*<br/>
 目标流。
 
-*Pos*<br/>
+*位置*<br/>
 位置指示器存储。
 
 ## <a name="return-value"></a>返回值
 
-如果成功 **，fgetpos**返回 0。 发生故障时，它返回一个非零值，并将**errno**设置到以下清单常量之一（在 STDIO 中定义）。H）： **EBADF**， 这意味着指定的流不是有效的文件指针或不可访问， 或**EINVAL**， 这意味着*流*值或*值*的值是无效的， 例如，如果任一是空指针。 如果*流*或*pos*是**NULL**指针，则函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+如果成功， **fgetpos**将返回0。 如果失败，它将返回一个非零值，并将**errno**设置为以下清单常量之一（在 stdio.h 中定义）。H）： **ebadf (**，这意味着指定的流不是有效的文件指针或不可访问，也可能是**EINVAL**，这意味着*流*值或*pos*的值无效，例如，如果这两个值都为 null 指针。 如果*stream*或*pos*为**空**指针，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>备注
 
-**fgetpos**函数获取*流*参数的文件位置指示器的当前值，并将其存储在*pos*指向的对象中。**fsetpos**函数以后可以使用存储在*pos*中的信息来重置*在*调用**fgetpos**时流参数指向其位置的指针。 *pos*值以内部格式存储，仅供**fgetpos**和**fsetpos**使用。
+**Fgetpos**函数获取*流*参数的文件位置指示器的当前值，并将其存储在*pos*所指向的对象中。**Fsetpos**函数稍后可以使用存储在*pos*中的信息来重置*流*参数的指针，使其在调用**fgetpos**时重置为其位置。 *Pos*值以内部格式存储，仅供**fgetpos**和**fsetpos**使用。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

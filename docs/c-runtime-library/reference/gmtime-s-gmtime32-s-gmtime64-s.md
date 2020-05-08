@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: e73d2d3cca852b657631361d8271bec7f9c86ac5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344079"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916218"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
@@ -72,9 +72,9 @@ errno_t _gmtime64_s(
 ### <a name="parameters"></a>参数
 
 *tmDest*<br/>
-指向[tm](../../c-runtime-library/standard-types.md)结构的指针。 返回结构的字段在 UTC 而不是本地时间保存*计时器*参数的计算值。
+指向[tm](../../c-runtime-library/standard-types.md)结构的指针。 返回的结构的字段以 UTC 而不是本地时间保存*计时器*参数的计算值。
 
-*源时间*<br/>
+*sourceTime*<br/>
 指向存储时间的指针。 时间表示为自 1970 年 1 月 1 日午夜 (00:00:00)，协调世界时 (UTC) 以来所经过的秒数。
 
 ## <a name="return-value"></a>返回值
@@ -83,46 +83,46 @@ errno_t _gmtime64_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*tmDest*|*源时间*|返回|以*tmD 最大值*|
+|*tmDest*|*sourceTime*|返回|*TmDest*中的值|
 |-----------|------------|------------|--------------------|
-|**空**|any|**埃因瓦尔**|未修改。|
-|**非 NULL（** 指向有效内存）|**空**|**埃因瓦尔**|所有字段都设置为 -1。|
-|非**NULL**|< 0|**埃因瓦尔**|所有字段都设置为 -1。|
+|**Null**|any|**EINVAL**|未修改。|
+|Not **NULL** （指向有效内存）|**Null**|**EINVAL**|所有字段都设置为 -1。|
+|Not **NULL**|< 0|**EINVAL**|所有字段都设置为 -1。|
 
-对于前两种错误条件，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将**errno**设置为**EINVAL**并返回**EINVAL**。
+对于前两种错误条件，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_gmtime32_s**函数分解*源时间*值并将其存储在在 Time.h 中定义的**tm**类型结构中。 结构的地址以*tmDest*形式传递。 *源时间*的值通常从对[时间](time-time32-time64.md)函数的调用中获得。
+**_Gmtime32_s**函数将分解*sourceTime*值，并将其存储在以 Time h 定义的**tm**类型的结构中。 结构的地址是在*tmDest*中传递的。 *SourceTime*的值通常是通过调用[time](time-time32-time64.md)函数获取的。
 
 > [!NOTE]
 > 目标环境应尝试确定夏令时是否生效。 C 运行时库假设使用美国规则实现夏令时的计算。
 
-每个结构字段的类型**为 int，** 如下表所示。
+每个结构字段的类型均为**int**，如下表所示。
 
 |字段|说明|
 |-|-|
-|**tm_sec**|一分钟后秒 （0 - 59）。|
-|**tm_min**|一小时后几分钟 （0 - 59）。|
-|**tm_hour**|午夜起（0 - 23日）的营业时间。|
-|**tm_mday**|月日（1 - 31）。|
-|**tm_mon**|月 （0 - 11;1 月 = 0）。|
+|**tm_sec**|每分钟的秒数（0-59）。|
+|**tm_min**|每小时后的分钟数（0-59）。|
+|**tm_hour**|午夜（0-23）。|
+|**tm_mday**|每月的某一日（1-31）。|
+|**tm_mon**|Month （0-11;1月 = 0）。|
 |**tm_year**|年（当前年份减去 1900）。|
-|**tm_wday**|星期一（0 - 6;周日 = 0）。|
-|**tm_yday**|一年中的日子（0 - 365;1 月 1 = 0）。|
-|**tm_isdst**|始终为**0**gmtime_s 。|
+|**tm_wday**|一周中的某一日（0-6;星期日 = 0）。|
+|**tm_yday**|一年的某一日（0-365;1月1日 = 0）。|
+|**tm_isdst**|对于**gmtime_s**，始终为0。|
 
-**_gmtime64_s**（） 使用 **__time64_t**结构，允许日期在 23：59：59，3000 年 12 月 31 日（UTC）前表示;而**gmtime32_s**仅表示 2038 年 1 月 18 日 23：59：59，UTC 的日期。 1970 年 1 月 1 日午夜是这两个函数的日期范围下限。
+使用 **__time64_t**结构的 **_gmtime64_s**允许日期最大表示为23:59:59 年12月31日3000，UTC;而**gmtime32_s**仅表示日期为23:59:59 年1月 2038 18 日，UTC。 1970 年 1 月 1 日午夜是这两个函数的日期范围下限。
 
-**gmtime_s**是一个内联函数，它计算到 **_gmtime64_s，time_t**相当于 **__time64_t。** **time_t** 如果需要强制编译器将**time_t**解释为旧的 32 位**time_t**，则可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**gmtime_s_gmtime32_s。** **_gmtime32_s** 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**gmtime_s**是计算结果为 **_gmtime64_s**并且**time_t**等效于 **__time64_t**的内联函数。 如果需要强制编译器将**time_t**解释为旧32位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**gmtime_s**在 **_gmtime32_s**中进行排列。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**gmtime_s**， **_gmtime32_s**， **_gmtime64_s**|\<time.h>|\<ctime>\<或时间.h>|
+|**gmtime_s**、 **_gmtime32_s** **_gmtime64_s**|\<time.h>|\<ctime> 或\<time .h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

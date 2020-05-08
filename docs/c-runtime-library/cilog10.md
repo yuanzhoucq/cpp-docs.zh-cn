@@ -13,7 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: 785b72cd26df85575f9689e5846cce48963084ce
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: ba5868892a352f071774a817e375c1f43505ed02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745428"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918013"
 ---
 # <a name="_cilog10"></a>_CIlog10
 
@@ -48,13 +48,13 @@ void __cdecl _CIlog10();
 
 生成的值被将被推送到堆栈顶部。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [log、logf、log10、log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

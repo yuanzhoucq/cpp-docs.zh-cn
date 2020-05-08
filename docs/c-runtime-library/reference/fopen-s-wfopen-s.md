@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: f18b04cadfa80d7e0be193bbd552efe8486eeeda
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a06191791132784740fa85ca45e23e8aaa56279e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538608"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914917"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s、_wfopen_s
 
@@ -84,9 +84,9 @@ errno_t _wfopen_s(
 
 |*.Pfile*|*名字*|*mode*|返回值|*.Pfile*的内容|
 |-------------|----------------|------------|------------------|------------------------|
-|**无效**|any|any|**EINVAL**|未更改|
-|any|**无效**|any|**EINVAL**|未更改|
-|any|any|**无效**|**EINVAL**|未更改|
+|**Null**|any|any|**EINVAL**|未更改|
+|any|**Null**|any|**EINVAL**|未更改|
+|any|any|**Null**|**EINVAL**|未更改|
 
 ## <a name="remarks"></a>备注
 
@@ -190,8 +190,8 @@ errno_t _wfopen_s(
 |**w +**|**_O_RDWR** （通常 **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**）|
 |**b**|**_O_BINARY**|
 |**关心**|**_O_TEXT**|
-|**ansi-c**|无|
-|**n**|无|
+|**ansi-c**|None|
+|**n**|None|
 |**S**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
@@ -281,9 +281,9 @@ The file 'data2' was opened
 Number of files closed by _fcloseall: 1
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[流 i/o](../../c-runtime-library/stream-i-o.md)<br/>
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose、_fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen，_wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>
