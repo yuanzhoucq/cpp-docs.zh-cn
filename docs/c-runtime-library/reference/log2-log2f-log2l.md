@@ -20,18 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911419"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -63,19 +63,19 @@ long double log2l(
 
 ### <a name="parameters"></a>参数
 
-** x <br/>
+*x*<br/>
 要确定其以 2 为底的对数的值。
 
 ## <a name="return-value"></a>返回值
 
-成功后，返回返回日志 2 *x*。
+如果成功，返回 log2 *x*。
 
 否则，可能返回以下值之一：
 
 |问题|返回|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* = |0|-INFINITY|
+|*x* = ±0|-INFINITY|
 |*x* = 1|+0|
 |+INFINITY|+INFINITY|
 |NaN|NaN|
@@ -86,15 +86,15 @@ long double log2l(
 
 ## <a name="remarks"></a>备注
 
-如果 x 是整数，则此函数实质上返回最重要的 1 位*x*的零基索引。
+如果 x 是整数，则此函数实质上将返回*x*的最大1位的从零开始的索引。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**日志2**，**日志2f**， **log2l**|\<math.h>|\<cmath>|
+|**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

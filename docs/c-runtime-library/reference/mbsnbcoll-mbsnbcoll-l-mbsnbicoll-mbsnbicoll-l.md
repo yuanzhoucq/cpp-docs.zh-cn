@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - _tcsncoll_l function
 - _tcsnicoll_l function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: 0b02a34f9b721e4cfcf07ac3679d0dce166a4ff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 491a652f19e9e1895aa62092c5c890923008f6e1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340747"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911913"
 ---
 # <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l
 
-使用多字节代码页信息比较两个多字节字符串的*n*字节。
+使用多字节代码页信息比较两个多字节字符字符串的*n*个字节。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -89,13 +89,13 @@ int _mbsnbicoll_l(
 
 ### <a name="parameters"></a>参数
 
-*字符串1*，*字符串2*<br/>
+*string1*、 *string2*<br/>
 要比较的字符串。
 
-*count*<br/>
+*计数*<br/>
 要比较的字节数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -104,23 +104,23 @@ int _mbsnbicoll_l(
 
 |返回值|说明|
 |------------------|-----------------|
-|< 0|*字符串 1*子字符串小于*string2*子字符串。|
-|0|*字符串1*子字符串与*string2*子字符串相同。|
-|> 0|*字符串1*子字符串大于*string2*子字符串。|
+|< 0|*string1*子串小于*string2*子串。|
+|0|*string1*子字符串与*string2*子字符串相同。|
+|> 0|大于*string2*子字符串的*string1*子串。|
 
-如果*string1*或*string2*为**NULL**或*计数*大于**INT_MAX，** 则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将**返回_NLSCMPERROR**并将**errno**设置为**EINVAL**。 要使用 **_NLSCMPERROR**，请包括 String.h 或 Mbstring.h。
+如果*string1*或*string2*为**NULL**或*count*大于**INT_MAX**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。 若要使用 **_NLSCMPERROR**，请包含 String .H 或 mbstring.h。
 
 ## <a name="remarks"></a>备注
 
-每个函数最多整理*string1*和*string2*中的第一个*计数*字节，并返回一个值，指示*生成*子字符串 1 和*string2*之间的关系。 如果*string1*或*string2*子字符串中的最后字节是引线字节，则比较中不包括它;这些函数仅比较子字符串中的完整字符。 **_mbsnbicoll**是 **_mbsnbcoll**的区分大小写版本。 与[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)和[_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md)一样 **，_mbsnbcoll****和_mbsnbicoll**根据当前使用的多字节[代码页](../../c-runtime-library/code-pages.md)指定的字典顺序对两个多字节字符串进行整理。
+其中的每个函数最多排*string1*和*string2*中的第一个*计数*字节，并返回一个值，该值指示生成的字符串*string1*和*string2*之间的关系。 如果*string1*或*string2*的子字符串中的最后一个字节是前导字节，则不包含在比较中;这些函数仅比较子字符串中的完整字符。 **_mbsnbicoll**是 **_mbsnbcoll**的不区分大小写的版本。 与[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)和[_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md)一样， **_mbsnbcoll**和 **_mbsnbicoll**根据当前使用的多字节[代码页](../../c-runtime-library/code-pages.md)指定的字典顺序对两个多字节字符字符串进行排序。
 
-对于一些代码页和对应的字符集，字符集中的字符顺序可能与字典的字符顺序不同。 在“C”区域设置中并非如此：ASCII 字符集中的字符顺序与字典的字符顺序相同。 但是，在某些欧洲代码页中，例如，字符“a”（值 0x61）位于字符“ä”（值 0xE4）之前，但在字典顺序中，字符“ä”位于字符“a”之前。 要在这种情况下按字节对字符串进行字典比较，请使用 **_mbsnbcoll**而不是 **_mbsnbcmp;** 要仅检查字符串相等性，请使用 **_mbsnbcmp**。
+对于一些代码页和对应的字符集，字符集中的字符顺序可能与字典的字符顺序不同。 在“C”区域设置中并非如此：ASCII 字符集中的字符顺序与字典的字符顺序相同。 但是，在某些欧洲代码页中，例如，字符“a”（值 0x61）位于字符“ä”（值 0xE4）之前，但在字典顺序中，字符“ä”位于字符“a”之前。 若要在此类实例中以字节为单位执行字符串的字典比较，请使用 **_mbsnbcoll**而不是 **_mbsnbcmp**;若要仅检查字符串是否相等，请使用 **_mbsnbcmp**。
 
-由于**coll**函数按字典方式对字符串进行校用比较，而**cmp**函数只是测试字符串相等性，因此**coll**函数比相应的**cmp**版本慢得多。 因此，仅当当前代码页中的字符设置顺序和词典字符顺序存在差异且此差异值得比较时，才应使用**coll**函数。
+由于**coll**函数将字符串按字典顺序逐份打印，而**cmp**函数只是测试字符串是否相等，因此**coll**函数比相应的**cmp**版本慢得多。 因此，仅当当前代码页中的字符集顺序和字典字符顺序存在差异，并且此差异对于比较很感兴趣时，才应使用**coll**函数。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
