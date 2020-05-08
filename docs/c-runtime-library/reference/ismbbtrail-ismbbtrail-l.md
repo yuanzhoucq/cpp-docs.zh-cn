@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: 5e8615adf5d17986c1a52658fe5d680cc326976a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08229b4a35634193810f7c24a3f8749fba034872
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343391"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918679"
 ---
 # <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail、_ismbbtrail_l
 
@@ -59,21 +59,21 @@ int _ismbbtrail_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果整数*c*是多字节字符的第二个字节，**则_ismbbtrail**返回非零值。 例如，仅在代码页 932 中，有效范围为 0x40 到 0x7E 以及 0x80 到 0xFC。
+如果整数*c*是多字节字符的第二个字节， **_ismbbtrail**将返回一个非零值。 例如，仅在代码页 932 中，有效范围为 0x40 到 0x7E 以及 0x80 到 0xFC。
 
 ## <a name="remarks"></a>备注
 
-**_ismbbtrail**使用当前区域设置进行与区域设置相关的行为。 **_ismbbtrail_l**是相同的，只是它使用传入区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbtrail**将当前区域设置用于与区域设置相关的行为。 **_ismbbtrail_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

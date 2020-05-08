@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: fff90037851b23f3525f514aba0f6f913f9dd776
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344924"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920416"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
-返回要由**终止**调用的终止例程。
+返回**终止**时要调用的终止例程。
 
 ## <a name="syntax"></a>语法
 
@@ -49,11 +49,11 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>返回值
 
-返回指向 [set_terminate](set-terminate-crt.md) 注册的函数的指针。 如果未设置任何函数，则返回值可用于还原默认行为;如果未设置任何函数，则返回值可用于还原默认行为。此值可以是**NULL**。
+返回指向 [set_terminate](set-terminate-crt.md) 注册的函数的指针。 如果尚未设置函数，则返回值可用于还原默认行为;此值可以为**NULL**。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -69,4 +69,4 @@ terminate_function _get_terminate( void );
 [中止](abort.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [终止](terminate-crt.md)<br/>
-[意外](unexpected-crt.md)<br/>
+[之外](unexpected-crt.md)<br/>

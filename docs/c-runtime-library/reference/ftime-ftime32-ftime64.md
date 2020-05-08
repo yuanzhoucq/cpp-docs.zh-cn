@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: 4e06eec975f02744c4b49c1980383c2ab2338ddc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a0d012c89058209832d1e78867e89b4bd87bf226
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345573"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909931"
 ---
 # <a name="_ftime-_ftime32-_ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -63,26 +63,26 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>参数
 
 *timeptr*<br/>
-指向 **_timeb、__timeb32****__timeb32**或 **__timeb64**结构的指针。
+指向 **_timeb**、 **__timeb32**或 **__timeb64**结构的指针。
 
 ## <a name="remarks"></a>备注
 
-**_ftime**函数获取当前本地时间并将其存储在*timeptr*指向的结构中。 **_timeb、__timeb32**和 **__timeb64**结构在 sys \<\\timeb.h>中定义。 **__timeb32** 它们包含下表中列出的四个字段。
+**_Ftime**函数获取当前的本地时间，并将其存储在*timeptr*所指向的结构中。 **_Timeb**、 **__timeb32**和 **__timeb64**结构是在 sys \<\\timeb> 中定义的。 它们包含下表中列出的四个字段。
 
 |字段|说明|
 |-|-|
-|**德斯特弗拉格**|如果本地时区目前正在实行夏令时，则为非零。 （请参阅 [_tzset](tzset.md) 了解有关如何确定夏令时的解释。）|
-|**米里特姆**|秒的分数（以毫秒为单位）。|
+|**dstflag**|如果本地时区目前正在实行夏令时，则为非零。 （请参阅 [_tzset](tzset.md) 了解有关如何确定夏令时的解释。）|
+|**millitm**|秒的分数（以毫秒为单位）。|
 |**time**|自 1970 年 1 月 1 日午夜 (00: 00:00) 以来的时间（以秒为单位），格式为协调世界时 (UTC)。|
-|**时区**|从东向西，UTC 与本地时间之间的差值（以分钟为单位）。 **时区**的值是从全局变量 **_timezone**的值设置的（请参阅 **_tzset**）。|
+|**时区**|从东向西，UTC 与本地时间之间的差值（以分钟为单位）。 **时区**值是从全局变量 **_timezone**的值设置的（请参阅 **_tzset**）。|
 
-使用 **__timeb64**结构 **_ftime64**函数允许将文件创建日期表达到 UTC 12 月 31 日 23：59：59;而 **_ftime32**仅表示 2038 年 1 月 18 日 23：59：59，UTC 的日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
+使用 **__timeb64**结构的 **_ftime64**函数允许文件创建日期在23:59:59 年12月31日3000，UTC;而 **_ftime32**仅表示日期为23:59:59 年1月 2038 18 日，UTC。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
 
-**_ftime**函数等效于 **_ftime64**，并且 **_timeb**包含 64 位时间，除非定义 **_USE_32BIT_TIME_T，** 在这种情况下，旧行为有效;**_ftime**使用 32 位时间 **，_timeb**包含 32 位时间。
+**_Ftime**函数等效于 **_ftime64**， **_timeb**包含64位时间，除非定义了 **_USE_32BIT_TIME_T** ，在这种情况下旧行为有效;**_ftime**使用32位时间， **_timeb**包含32位时间。
 
-**_ftime**验证其参数。 如果将空指针传递为*timeptr，* 则函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将**errno**设置到**EINVAL**。
+**_ftime**验证其参数。 如果将 null 指针传递为*timeptr*，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数会将**errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

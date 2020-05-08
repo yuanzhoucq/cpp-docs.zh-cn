@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 1f13afbab75d2926d1c642c1430a3ffe5ecbac8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a0dca94ec03286c92b3cbf1a51df59a1ca7af0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350579"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919493"
 ---
 # <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
@@ -51,30 +51,30 @@ void * _aligned_offset_malloc(
 
 ### <a name="parameters"></a>参数
 
-*大小*<br/>
+size <br/>
 请求的内存分配的大小。
 
 *对齐 (alignment)*<br/>
 对齐值，必须是 2 的整数次幂。
 
-*偏移量*<br/>
+*offset*<br/>
 用于强制对齐的内存分配中的偏移量。
 
 ## <a name="return-value"></a>返回值
 
-如果操作失败，指向已分配的内存块的指针或**NULL。**
+指向分配的内存块的指针; 如果操作失败，则为**NULL** 。
 
 ## <a name="remarks"></a>备注
 
-在嵌套元素上需要对齐的情况下 **，_aligned_offset_malloc**非常有用;例如，如果嵌套类上需要对齐。
+**_aligned_offset_malloc**在嵌套元素需要对齐的情况下很有用;例如，如果在嵌套类上需要对齐。
 
-**_aligned_offset_malloc**以**马洛克**为基础。有关详细信息，请参阅[malloc](malloc.md)。
+**_aligned_offset_malloc**基于**malloc**;有关详细信息，请参阅[malloc](malloc.md)。
 
-**_aligned_offset_malloc**标记为`__declspec(noalias)`，`__declspec(restrict)`表示保证函数不修改全局变量，并且返回的指针不会别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**_aligned_offset_malloc**标记`__declspec(noalias)`为和`__declspec(restrict)`，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
-如果内存分配失败或请求的大小大于 **_HEAP_MAXREQ，** 此函数将**errno**设置**到 ENOMEM。** 有关**errno**的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外 **，_aligned_offset_malloc**验证其参数。 如果*对齐*不是 2 的功率，或者如果*偏移*量大于或等于*大小*和非零，则此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则此函数将返回**NULL**并将**errno**设置到**EINVAL**。
+如果内存分配失败或请求的大小大于 **_HEAP_MAXREQ**，则此函数会将**Errno**设置为**ENOMEM** 。 有关**errno**的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**验证其参数。 如果*对齐*不是2的幂或如果*offset*大于或等于*大小*且非零，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -18,18 +18,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 819ea45bb9d5775bb59764b587a75e368fa0e80d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343745"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909532"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank、_ismbbblank_l
 
@@ -52,19 +52,19 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>参数
 
-*C*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
-*现场*<br/>
+*locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果*c*表示空格 （0x20） 字符、水平选项卡 （0x09） 字符或用于分隔占**空**的文本行中单词的特定于区域设置的字符 **，_ismbbblank**返回非零值;否则，返回 0。 **_ismbbblank**对任何与区域设置相关的行为使用当前区域设置。 **_ismbbblank_l**是相同的，只是它使用传入区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果*c*表示空格（0x20）字符、水平制表符（0x09）字符或用于在**isspace**为 true 的文本行中分隔单词的特定于区域设置的字符，则 **_ismbbblank**返回非零值;否则，返回0。 **_ismbbblank**为任何与区域设置相关的行为使用当前区域设置。 **_ismbbblank_l**相同，只是它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态范围为应用程序。 要更改此情况，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
