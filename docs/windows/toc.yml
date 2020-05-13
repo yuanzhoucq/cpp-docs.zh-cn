@@ -1,0 +1,426 @@
+- name: “C++ 中的 Windows 编程”概述
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: C++ 中的桌面应用程序
+  href: ../windows/desktop-applications-visual-cpp.md
+- name: 演练：创建标准 C++ 程序
+  href: ../windows/walkthrough-creating-a-standard-cpp-program-cpp.md
+- name: 演练：创建 Windows 桌面应用程序
+  href: ../windows/walkthrough-creating-windows-desktop-applications-cpp.md
+- name: Windows 桌面向导
+  href: ../windows/windows-desktop-wizard.md
+- name: 活动模板库 (ATL)
+  href: ../atl/
+- name: Microsoft 基础类 (MFC)
+  href: ../mfc/
+- name: ATL 和 MFC 共享类
+  href: ../atl-mfc-shared/atl-mfc-shared-classes.md
+- name: 文本和字符串
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: 有关使用 DirectX 创建游戏的资源
+  href: ../windows/resources-for-creating-a-game-using-directx.md
+- name: 如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
+  href: ../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md
+- name: 使用资源文件
+  expanded: false
+  items:
+    - name: 使用资源文件
+      href: ../windows/working-with-resource-files.md
+    - name: 资源文件
+      expanded: false
+      items:
+        - name: 资源文件
+          href: ../windows/resource-files-visual-studio.md
+        - name: 如何：创建资源
+          href: ../windows/how-to-create-a-resource-script-file.md
+        - name: 如何：管理资源
+          href: ../windows/how-to-copy-resources.md
+        - name: 如何：在编译时添加资源
+          href: ../windows/how-to-include-resources-at-compile-time.md
+    - name: 资源标识符（符号）
+      expanded: false
+      items:
+        - name: 资源标识符（符号）
+          href: ../windows/symbols-resource-identifiers.md
+        - name: 如何：创建符号
+          href: ../windows/creating-new-symbols.md
+        - name: 如何：管理符号
+          href: ../windows/changing-a-symbol-or-symbol-name-id.md
+        - name: 预定义的符号 ID
+          expanded: false
+          items:
+            - name: 预定义的符号 ID
+              href: ../windows/predefined-symbol-ids.md
+            - name: ATL 预定义的符号
+              href: ../windows/atl-predefined-symbols.md
+            - name: MFC 预定义的符号
+              href: ../windows/mfc-predefined-symbols.md
+            - name: Win32 预定义符号
+              href: ../windows/win32-predefined-symbols.md
+    - name: 资源编辑器
+      expanded: false
+      items:
+        - name: 资源编辑器
+          href: ../windows/resource-editors.md
+        - name: 快捷键编辑器
+          expanded: false
+          items:
+            - name: 快捷键编辑器
+              href: ../windows/accelerator-editor.md
+            - name: 快捷键
+              href: ../windows/predefined-accelerator-keys.md
+        - name: 二进制编辑器
+          href: ../windows/binary-editor.md
+        - name: 对话框编辑器
+          expanded: false
+          items:
+            - name: 对话框编辑器
+              href: ../windows/dialog-editor.md
+            - name: 如何：创建对话框
+              href: ../windows/creating-a-new-dialog-box.md
+            - name: 对话框控件
+              expanded: false
+              items:
+                - name: 对话框控件
+                  href: ../windows/controls-in-dialog-boxes.md
+                - name: 如何：添加、编辑或删除控件
+                  href: ../windows/adding-editing-or-deleting-controls.md
+                - name: 如何：布局控件
+                  href: ../windows/arrangement-of-controls-on-dialog-boxes.md
+                - name: 如何：定义控件访问权限和值
+                  href: ../windows/defining-mnemonics-access-keys.md
+        - name: 图标的图像编辑器
+          expanded: false
+          items:
+            - name: 图标的图像编辑器
+              href: ../windows/image-editor-for-icons.md
+            - name: 如何：创建图标或其他图像
+              href: ../windows/creating-an-icon-or-other-image-image-editor-for-icons.md
+            - name: 如何：编辑图像
+              href: ../windows/selecting-an-area-of-an-image-image-editor-for-icons.md
+            - name: 如何：使用绘图工具
+              href: ../windows/using-a-drawing-tool-image-editor-for-icons.md
+            - name: 如何：处理颜色
+              href: ../windows/working-with-color-image-editor-for-icons.md
+            - name: 快捷键
+              href: ../windows/accelerator-keys-image-editor-for-icons.md
+        - name: 菜单编辑器
+          expanded: false
+          items:
+            - name: 菜单编辑器
+              href: ../windows/menu-editor.md
+            - name: 菜单命令
+              href: ../windows/menu-command-properties.md
+        - name: 字符串编辑器
+          href: ../windows/string-editor.md
+        - name: 工具栏编辑器
+          href: ../windows/toolbar-editor.md
+        - name: 版本信息编辑器
+          href: ../windows/version-information-editor.md
+- name: 部署本机桌面应用程序
+  expanded: false
+  items:
+    - name: 部署本机桌面应用程序
+      href: ../windows/deploying-native-desktop-applications-visual-cpp.md
+    - name: Visual C++ 中的部署
+      href: ../windows/deployment-in-visual-cpp.md
+    - name: 部署概念
+      href: ../windows/deployment-concepts.md
+    - name: 了解 Visual C++ 应用程序的依赖项
+      href: ../windows/understanding-the-dependencies-of-a-visual-cpp-application.md
+    - name: 确定要重新分发的 DLL
+      href: ../windows/determining-which-dlls-to-redistribute.md
+    - name: 选择部署方法
+      href: ../windows/choosing-a-deployment-method.md
+    - name: 通用 CRT 部署
+      href: ../windows/universal-crt-deployment.md
+    - name: 重新分发 Visual C++ 文件
+      expanded: false
+      items:
+        - name: 重新分发 Visual C++ 文件
+          href: ../windows/redistributing-visual-cpp-files.md
+        - name: 使用合并模块重新分发组件
+          href: ../windows/redistributing-components-by-using-merge-modules.md
+        - name: 重新分发 Visual C++ ActiveX 控件
+          href: ../windows/redistributing-visual-cpp-activex-controls.md
+        - name: 重新分发 MFC 库
+          href: ../windows/redistributing-the-mfc-library.md
+        - name: 重新分发 ATL 应用程序
+          href: ../windows/redistributing-an-atl-application.md
+    - name: 部署示例
+      expanded: false
+      items:
+        - name: 部署示例
+          href: ../windows/deployment-examples.md
+        - name: 演练：使用安装项目部署 Visual C++ 应用程序
+          href: ../windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md
+        - name: 演练：将 Visual C++ 应用程序部署到应用程序本地文件夹
+          href: ../windows/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md
+        - name: 演练：使用 Visual C++ Redistributable 包部署 Visual C++ 应用程序
+          href: ../windows/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md
+        - name: 准备用于运行调试可执行文件的测试计算机
+          href: ../windows/preparing-a-test-machine-to-run-a-debug-executable.md
+    - name: 重新分发 Web 客户端应用程序
+      href: ../windows/redistributing-web-client-applications.md
+    - name: Visual C++ 应用程序的 ClickOnce 部署
+      href: ../windows/clickonce-deployment-for-visual-cpp-applications.md
+    - name: 在以前版本的运行时上运行 C++ -clr 应用程序
+      href: ../windows/running-a-cpp-clr-application-on-a-previous-runtime-version.md
+- name: 适用于 COM 和 .NET 的 C++ 属性
+  href: ../windows/attributes/cpp-attributes-com-net.md
+- name: 特性编程常见问题
+  href: ../windows/attributes/attribute-programming-faq.md
+- name: 按组分的特性
+  expanded: false
+  items:
+    - name: 按组分的特性
+      href: ../windows/attributes/attributes-by-group.md
+    - name: COM 特性
+      href: ../windows/attributes/com-attributes.md
+    - name: IDL 特性
+      href: ../windows/attributes/idl-attributes.md
+    - name: OLE DB 使用者特性
+      href: ../windows/attributes/ole-db-consumer-attributes.md
+    - name: 编译器特性
+      href: ../windows/attributes/compiler-attributes.md
+- name: 按用法分的特性
+  expanded: false
+  items:
+    - name: 按用法分的特性
+      href: ../windows/attributes/attributes-by-usage.md
+    - name: 模块特性
+      href: ../windows/attributes/module-attributes.md
+    - name: 接口特性
+      href: ../windows/attributes/interface-attributes.md
+    - name: 类特性
+      href: ../windows/attributes/class-attributes.md
+    - name: 方法特性
+      href: ../windows/attributes/method-attributes.md
+    - name: 参数特性
+      href: ../windows/attributes/parameter-attributes.md
+    - name: 数据成员特性
+      href: ../windows/attributes/data-member-attributes.md
+    - name: Typedef、Enum、Union 和 Struct 特性
+      href: ../windows/attributes/typedef-enum-union-and-struct-attributes.md
+    - name: 数组特性
+      href: ../windows/attributes/array-attributes.md
+    - name: 独立特性
+      href: ../windows/attributes/stand-alone-attributes.md
+    - name: 自定义特性
+      href: ../windows/attributes/custom-attributes-cpp.md
+- name: 按字母顺序的特性参考
+  expanded: false
+  items:
+    - name: 按字母顺序的特性参考
+      href: ../windows/attributes/attributes-alphabetical-reference.md
+    - name: aggregatable
+      href: ../windows/attributes/aggregatable.md
+    - name: aggregates
+      href: ../windows/attributes/aggregates.md
+    - name: appobject
+      href: ../windows/attributes/appobject.md
+    - name: async_uuid
+      href: ../windows/attributes/async-uuid.md
+    - name: attribute
+      href: ../windows/attributes/attribute.md
+    - name: bindable
+      href: ../windows/attributes/bindable.md
+    - name: call_as
+      href: ../windows/attributes/call-as.md
+    - name: case
+      href: ../windows/attributes/case-cpp.md
+    - name: coclass
+      href: ../windows/attributes/coclass.md
+    - name: com_interface_entry
+      href: ../windows/attributes/com-interface-entry-cpp.md
+    - name: 控件
+      href: ../windows/attributes/control.md
+    - name: cpp_quote
+      href: ../windows/attributes/cpp-quote.md
+    - name: 自定义
+      href: ../windows/attributes/custom-cpp.md
+    - name: db_accessor
+      href: ../windows/attributes/db-accessor.md
+    - name: db_column
+      href: ../windows/attributes/db-column.md
+    - name: db_command
+      href: ../windows/attributes/db-command.md
+    - name: db_param
+      href: ../windows/attributes/db-param.md
+    - name: db_source
+      href: ../windows/attributes/db-source.md
+    - name: db_table
+      href: ../windows/attributes/db-table.md
+    - name: default
+      href: ../windows/attributes/default-cpp.md
+    - name: defaultbind
+      href: ../windows/attributes/defaultbind.md
+    - name: defaultcollelem
+      href: ../windows/attributes/defaultcollelem.md
+    - name: defaultvalue
+      href: ../windows/attributes/defaultvalue.md
+    - name: defaultvtable
+      href: ../windows/attributes/defaultvtable.md
+    - name: dispinterface
+      href: ../windows/attributes/dispinterface.md
+    - name: displaybind
+      href: ../windows/attributes/displaybind.md
+    - name: dual
+      href: ../windows/attributes/dual.md
+    - name: emitidl
+      href: ../windows/attributes/emitidl.md
+    - name: entry
+      href: ../windows/attributes/entry.md
+    - name: event_receiver
+      href: ../windows/attributes/event-receiver.md
+    - name: event_source
+      href: ../windows/attributes/event-source.md
+    - name: export
+      href: ../windows/attributes/export.md
+    - name: first_is
+      href: ../windows/attributes/first-is.md
+    - name: helpcontext
+      href: ../windows/attributes/helpcontext.md
+    - name: helpfile
+      href: ../windows/attributes/helpfile.md
+    - name: helpstring
+      href: ../windows/attributes/helpstring.md
+    - name: helpstringcontext
+      href: ../windows/attributes/helpstringcontext.md
+    - name: helpstringdll
+      href: ../windows/attributes/helpstringdll.md
+    - name: 隐藏
+      href: ../windows/attributes/hidden.md
+    - name: id
+      href: ../windows/attributes/id.md
+    - name: idl_module
+      href: ../windows/attributes/idl-module.md
+    - name: idl_quote
+      href: ../windows/attributes/idl-quote.md
+    - name: iid_is
+      href: ../windows/attributes/iid-is.md
+    - name: immediatebind
+      href: ../windows/attributes/immediatebind.md
+    - name: 实现
+      href: ../windows/attributes/implements-cpp.md
+    - name: implements_category
+      href: ../windows/attributes/implements-category.md
+    - name: import
+      href: ../windows/attributes/import.md
+    - name: importidl
+      href: ../windows/attributes/importidl.md
+    - name: importlib
+      href: ../windows/attributes/importlib.md
+    - name: in
+      href: ../windows/attributes/in-cpp.md
+    - name: include
+      href: ../windows/attributes/include-cpp.md
+    - name: includelib
+      href: ../windows/attributes/includelib-cpp.md
+    - name: last_is
+      href: ../windows/attributes/last-is.md
+    - name: lcid
+      href: ../windows/attributes/lcid.md
+    - name: length_is
+      href: ../windows/attributes/length-is.md
+    - name: library_block
+      href: ../windows/attributes/library-block.md
+    - name: licensed
+      href: ../windows/attributes/licensed.md
+    - name: local
+      href: ../windows/attributes/local-cpp.md
+    - name: max_is
+      href: ../windows/attributes/max-is.md
+    - name: name
+      href: ../windows/attributes/module-cpp.md
+    - name: ms_union
+      href: ../windows/attributes/ms-union.md
+    - name: no_injected_text
+      href: ../windows/attributes/no-injected-text.md
+    - name: nonbrowsable
+      href: ../windows/attributes/nonbrowsable.md
+    - name: noncreatable
+      href: ../windows/attributes/noncreatable.md
+    - name: nonextensible
+      href: ../windows/attributes/nonextensible.md
+    - name: 对象 (object)
+      href: ../windows/attributes/object-cpp.md
+    - name: odl
+      href: ../windows/attributes/odl.md
+    - name: oleautomation
+      href: ../windows/attributes/oleautomation.md
+    - name: 可选
+      href: ../windows/attributes/optional-cpp.md
+    - name: out
+      href: ../windows/attributes/out-cpp.md
+    - name: pointer_default
+      href: ../windows/attributes/pointer-default.md
+    - name: pragma
+      href: ../windows/attributes/pragma.md
+    - name: progid
+      href: ../windows/attributes/progid.md
+    - name: propget
+      href: ../windows/attributes/propget.md
+    - name: propput
+      href: ../windows/attributes/propput.md
+    - name: propputref
+      href: ../windows/attributes/propputref.md
+    - name: ptr
+      href: ../windows/attributes/ptr.md
+    - name: public（C++ 特性）
+      href: ../windows/attributes/public-cpp-attributes.md
+    - name: range
+      href: ../windows/attributes/range-cpp.md
+    - name: rdx
+      href: ../windows/attributes/rdx.md
+    - name: readonly
+      href: ../windows/attributes/readonly-cpp.md
+    - name: ref
+      href: ../windows/attributes/ref-cpp.md
+    - name: registration_script
+      href: ../windows/attributes/registration-script.md
+    - name: requestedit
+      href: ../windows/attributes/requestedit.md
+    - name: requires_category
+      href: ../windows/attributes/requires-category.md
+    - name: restricted
+      href: ../windows/attributes/restricted.md
+    - name: retval
+      href: ../windows/attributes/retval.md
+    - name: satype
+      href: ../windows/attributes/satype.md
+    - name: size_is
+      href: ../windows/attributes/size-is.md
+    - name: 源
+      href: ../windows/attributes/source-cpp.md
+    - name: string
+      href: ../windows/attributes/string-cpp.md
+    - name: support_error_info
+      href: ../windows/attributes/support-error-info.md
+    - name: switch_is
+      href: ../windows/attributes/switch-is.md
+    - name: switch_type
+      href: ../windows/attributes/switch-type.md
+    - name: synchronize
+      href: ../windows/attributes/synchronize.md
+    - name: 线程处理
+      href: ../windows/attributes/threading-cpp.md
+    - name: transmit_as
+      href: ../windows/attributes/transmit-as.md
+    - name: uidefault
+      href: ../windows/attributes/uidefault.md
+    - name: unique
+      href: ../windows/attributes/unique-cpp.md
+    - name: usesgetlasterror
+      href: ../windows/attributes/usesgetlasterror.md
+    - name: uuid（C++ 属性）
+      href: ../windows/attributes/uuid-cpp-attributes.md
+    - name: v1_enum
+      href: ../windows/attributes/v1-enum.md
+    - name: vararg
+      href: ../windows/attributes/vararg.md
+    - name: version
+      href: ../windows/attributes/version-cpp.md
+    - name: vi_progid
+      href: ../windows/attributes/vi-progid.md
+    - name: wire_marshal
+      href: ../windows/attributes/wire-marshal.md

@@ -1,0 +1,204 @@
+- name: C/C++ 预处理器参考
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: 预处理器
+  expanded: false
+  items:
+    - name: 预处理器
+      href: ../preprocessor/preprocessor.md
+    - name: 实验性预处理器概述
+      href: ../preprocessor/preprocessor-experimental-overview.md
+    - name: 转换阶段
+      href: ../preprocessor/phases-of-translation.md
+    - name: 预处理器指令
+      expanded: false
+      items:
+        - name: 预处理器指令
+          href: ../preprocessor/preprocessor-directives.md
+        - name: '#define 指令 (C/C++)'
+          href: ../preprocessor/hash-define-directive-c-cpp.md
+        - name: '#error 指令 (C/C++)'
+          href: ../preprocessor/hash-error-directive-c-cpp.md
+        - name: '#if、#elif、#else 和 #endif 指令 (C/C++)'
+          href: ../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md
+        - name: '#ifdef 和 #ifndef 指令 (C/C++)'
+          href: ../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md
+        - name: '#import 指令 (C++)'
+          href: ../preprocessor/hash-import-directive-cpp.md
+        - name: '#import 特性 (C++)'
+          expanded: false
+          items:
+            - name: '#import 特性 (C++)'
+              href: ../preprocessor/hash-import-attributes-cpp.md
+            - name: auto_rename
+              href: ../preprocessor/auto-rename.md
+            - name: auto_search
+              href: ../preprocessor/auto-search.md
+            - name: embedded_idl
+              href: ../preprocessor/embedded-idl.md
+            - name: 'exclude (#import)'
+              href: ../preprocessor/exclude-hash-import.md
+            - name: high_method_prefix
+              href: ../preprocessor/high-method-prefix.md
+            - name: high_property_prefixes
+              href: ../preprocessor/high-property-prefixes.md
+            - name: implementation_only
+              href: ../preprocessor/implementation-only.md
+            - name: include()
+              href: ../preprocessor/include-parens.md
+            - name: inject_statement
+              href: ../preprocessor/inject-statement.md
+            - name: named_guids
+              href: ../preprocessor/named-guids.md
+            - name: no_auto_exclude
+              href: ../preprocessor/no-auto-exclude.md
+            - name: no_dual_interfaces
+              href: ../preprocessor/no-dual-interfaces.md
+            - name: no_implementation
+              href: ../preprocessor/no-implementation.md
+            - name: no_namespace
+              href: ../preprocessor/no-namespace.md
+            - name: no_registry
+              href: ../preprocessor/no-registry.md
+            - name: no_search_namespace
+              href: ../preprocessor/no-search-namespace.md
+            - name: no_smart_pointers
+              href: ../preprocessor/no-smart-pointers.md
+            - name: raw_dispinterfaces
+              href: ../preprocessor/raw-dispinterfaces.md
+            - name: raw_interfaces_only
+              href: ../preprocessor/raw-interfaces-only.md
+            - name: raw_method_prefix
+              href: ../preprocessor/raw-method-prefix.md
+            - name: raw_native_types
+              href: ../preprocessor/raw-native-types.md
+            - name: raw_property_prefixes
+              href: ../preprocessor/raw-property-prefixes.md
+            - name: '重命名 (#import)'
+              href: ../preprocessor/rename-hash-import.md
+            - name: rename_namespace
+              href: ../preprocessor/rename-namespace.md
+            - name: rename_search_namespace
+              href: ../preprocessor/rename-search-namespace.md
+            - name: tlbid
+              href: ../preprocessor/tlbid.md
+        - name: '#include 指令 (C/C++)'
+          href: ../preprocessor/hash-include-directive-c-cpp.md
+        - name: '#line 指令 (C/C++)'
+          href: ../preprocessor/hash-line-directive-c-cpp.md
+        - name: Null 指令
+          href: ../preprocessor/null-directive.md
+        - name: '#undef 指令 (C/C++)'
+          href: ../preprocessor/hash-undef-directive-c-cpp.md
+        - name: '#using 指令 (C++/CLI)'
+          href: ../preprocessor/hash-using-directive-cpp.md
+    - name: 预处理器运算符
+      expanded: false
+      items:
+        - name: 预处理器运算符
+          href: ../preprocessor/preprocessor-operators.md
+        - name: '字符串化运算符 (#)'
+          href: ../preprocessor/stringizing-operator-hash.md
+        - name: '字符化运算符 (#@)'
+          href: ../preprocessor/charizing-operator-hash-at.md
+        - name: '标记粘贴运算符 (##)'
+          href: ../preprocessor/token-pasting-operator-hash-hash.md
+    - name: 预处理器宏 (C/C++)
+      expanded: false
+      items:
+        - name: 预处理器宏 (C/C++)
+          href: ../preprocessor/macros-c-cpp.md
+        - name: 预处理器宏和 C++
+          href: ../preprocessor/macros-and-cpp.md
+        - name: 可变参数预处理器宏
+          href: ../preprocessor/variadic-macros.md
+        - name: 预定义的预处理器宏
+          href: ../preprocessor/predefined-macros.md
+- name: 预处理器语法摘要 (C/C++)
+  href: ../preprocessor/grammar-summary-c-cpp.md
+- name: Pragma 指令和 __pragma 关键字
+  expanded: false
+  items:
+    - name: Pragma 指令和 __pragma 关键字
+      href: ../preprocessor/pragma-directives-and-the-pragma-keyword.md
+    - name: alloc_text 杂注
+      href: ../preprocessor/alloc-text.md
+    - name: auto_inline 杂注
+      href: ../preprocessor/auto-inline.md
+    - name: bss_seg 杂注
+      href: ../preprocessor/bss-seg.md
+    - name: check_stack 杂注
+      href: ../preprocessor/check-stack.md
+    - name: code_seg 杂注
+      href: ../preprocessor/code-seg.md
+    - name: 注释杂注 (C/C++)
+      href: ../preprocessor/comment-c-cpp.md
+    - name: component 杂注
+      href: ../preprocessor/component.md
+    - name: conform 杂注
+      href: ../preprocessor/conform.md
+    - name: const_seg 杂注
+      href: ../preprocessor/const-seg.md
+    - name: data_seg 杂注
+      href: ../preprocessor/data-seg.md
+    - name: 已弃用的杂注 (C/C++)
+      href: ../preprocessor/deprecated-c-cpp.md
+    - name: detect_mismatch 杂注
+      href: ../preprocessor/detect-mismatch.md
+    - name: execution_character_set 杂注
+      href: ../preprocessor/execution-character-set.md
+    - name: fenv_access 杂注
+      href: ../preprocessor/fenv-access.md
+    - name: float_control 杂注
+      href: ../preprocessor/float-control.md
+    - name: fp_contract 杂注
+      href: ../preprocessor/fp-contract.md
+    - name: 函数杂注 (C/C++)
+      href: ../preprocessor/function-c-cpp.md
+    - name: hdrstop 杂注
+      href: ../preprocessor/hdrstop.md
+    - name: include_alias 杂注
+      href: ../preprocessor/include-alias.md
+    - name: init_seg 杂注
+      href: ../preprocessor/init-seg.md
+    - name: inline_depth 杂注
+      href: ../preprocessor/inline-depth.md
+    - name: inline_recursion 杂注
+      href: ../preprocessor/inline-recursion.md
+    - name: intrinsic 杂注
+      href: ../preprocessor/intrinsic.md
+    - name: loop 杂注
+      href: ../preprocessor/loop.md
+    - name: make_public 杂注
+      href: ../preprocessor/make-public.md
+    - name: managed、unmanaged 杂注
+      href: ../preprocessor/managed-unmanaged.md
+    - name: message 杂注
+      href: ../preprocessor/message.md
+    - name: omp 杂注
+      href: ../preprocessor/omp.md
+    - name: once 杂注
+      href: ../preprocessor/once.md
+    - name: optimize 杂注
+      href: ../preprocessor/optimize.md
+    - name: pack 杂注
+      href: ../preprocessor/pack.md
+    - name: pointers_to_members 杂注
+      href: ../preprocessor/pointers-to-members.md
+    - name: pop_macro 杂注
+      href: ../preprocessor/pop-macro.md
+    - name: push_macro 杂注
+      href: ../preprocessor/push-macro.md
+    - name: region、endregion 杂注
+      href: ../preprocessor/region-endregion.md
+    - name: runtime_checks 杂注
+      href: ../preprocessor/runtime-checks.md
+    - name: section 杂注
+      href: ../preprocessor/section.md
+    - name: setlocale 杂注
+      href: ../preprocessor/setlocale.md
+    - name: strict_gs_check 杂注
+      href: ../preprocessor/strict-gs-check.md
+    - name: vtordisp 杂注
+      href: ../preprocessor/vtordisp.md
+    - name: 警告杂注
+      href: ../preprocessor/warning.md

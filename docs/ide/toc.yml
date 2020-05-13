@@ -1,0 +1,73 @@
+- name: 在 Visual Studio 中读写 C++ 代码
+  expanded: true
+  items:
+    - name: 读取并理解 C++ 代码
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: 编辑和重构 C++ 代码
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: 导航 C++ 代码
+      href: ../ide/navigate-code-cpp.md
+    - name: 设置 C++ 编码首选项
+      href: ../ide/how-to-set-preferences.md
+    - name: 使用用于 C++ 的 Live Share 协作
+      href: ../ide/live-share-cpp.md
+    - name: 更改签名
+      href: ../ide/refactoring/change-signature.md
+    - name: 转换为原始字符串文本
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: 创建声明/定义
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: 提取函数
+      href: ../ide/refactoring/extract-function.md
+    - name: 实现纯虚方法
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: 移动函数定义
+      href: ../ide/refactoring/move-definition-location.md
+    - name: 重命名
+      href: ../ide/refactoring/rename.md
+- name: 使用 Visual Studio IDE 进行 C++ 桌面开发
+  expanded: true
+  items:
+    - name: 使用 Visual Studio IDE 进行 C++ 桌面开发
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: 演练：使用项目和解决方案 (C++)
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: 演练：生成项目 (C++)
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: 演练：测试项目 (C++)
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: 演练：调试项目 (C++)
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: 演练：部署程序 (C++)
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: 用代码向导添加功能
+  expanded: true
+  items:
+    - name: 用代码向导添加功能
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: 添加类
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: 从 ActiveX 控件添加类
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: 添加一般 C++ 类
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: 添加成员函数
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: 添加成员变量
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: 添加方法
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: 添加属性
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: 添加事件
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: 添加事件处理程序
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: 创建 COM 接口
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: 实现连接点
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: 实现接口
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: 替代虚函数
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md

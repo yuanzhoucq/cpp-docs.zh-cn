@@ -1,0 +1,530 @@
+- name: UWP 开发
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: C++/CX 语言参考
+  expanded: false
+  items:
+    - name: C++/CX 语言参考
+      href: ../cppcx/visual-c-language-reference-c-cx.md
+    - name: 快速参考
+      href: ../cppcx/quick-reference-c-cx.md
+    - name: 类型系统
+      expanded: false
+      items:
+        - name: 类型系统
+          href: ../cppcx/type-system-c-cx.md
+        - name: 命名空间和类型可见性 (C++/CX)
+          href: ../cppcx/namespaces-and-type-visibility-c-cx.md
+        - name: 基本类型
+          href: ../cppcx/fundamental-types-c-cx.md
+        - name: 字符串
+          href: ../cppcx/strings-c-cx.md
+        - name: Array 和 WriteOnlyArray
+          href: ../cppcx/array-and-writeonlyarray-c-cx.md
+        - name: Ref 类和结构
+          href: ../cppcx/ref-classes-and-structs-c-cx.md
+        - name: 值类和结构
+          href: ../cppcx/value-classes-and-structs-c-cx.md
+        - name: 分部类
+          href: ../cppcx/partial-classes-c-cx.md
+        - name: 属性
+          href: ../cppcx/properties-c-cx.md
+        - name: 集合
+          href: ../cppcx/collections-c-cx.md
+        - name: 模板 ref 类
+          href: ../cppcx/template-ref-classes-c-cx.md
+        - name: 接口
+          href: ../cppcx/interfaces-c-cx.md
+        - name: 枚举
+          href: ../cppcx/enums-c-cx.md
+        - name: 委托
+          href: ../cppcx/delegates-c-cx.md
+        - name: 异常
+          href: ../cppcx/exceptions-c-cx.md
+        - name: 事件
+          href: ../cppcx/events-c-cx.md
+        - name: 强制转换
+          href: ../cppcx/casting-c-cx.md
+        - name: 装箱
+          href: ../cppcx/boxing-c-cx.md
+        - name: 特性
+          href: ../cppcx/attributes-c-cx.md
+        - name: 弃用的类型和成员
+          href: ../cppcx/deprecating-types-and-members-c-cx.md
+    - name: 生成应用程序和库
+      expanded: false
+      items:
+        - name: 生成应用和库
+          href: ../cppcx/building-apps-and-libraries-c-cx.md
+        - name: 编译器和链接器选项
+          href: ../cppcx/compiler-and-linker-options-c-cx.md
+        - name: 静态库
+          href: ../cppcx/static-libraries-c-cx.md
+        - name: DLL
+          href: ../cppcx/dlls-c-cx.md
+    - name: 与其他语言进行互操作
+      expanded: false
+      items:
+        - name: 与其他语言进行互操作
+          href: ../cppcx/interoperating-with-other-languages-c-cx.md
+        - name: JavaScript 集成
+          href: ../cppcx/javascript-integration-c-cx.md
+        - name: CLR 集成
+          href: ../cppcx/clr-integration-c-cx.md
+        - name: WRL 集成
+          href: ../cppcx/wrl-integration-c-cx.md
+    - name: 获取数据缓冲区的指针
+      href: ../cppcx/obtaining-pointers-to-data-buffers-c-cx.md
+    - name: 线程处理和封送处理
+      href: ../cppcx/threading-and-marshaling-c-cx.md
+    - name: 弱引用和中断循环
+      href: ../cppcx/weak-references-and-breaking-cycles-c-cx.md
+    - name: 命名空间参考
+      expanded: false
+      items:
+        - name: 命名空间参考
+          href: ../cppcx/namespaces-reference-c-cx.md
+        - name: default 命名空间
+          expanded: false
+          items:
+            - name: default 命名空间
+              href: ../cppcx/default-namespace.md
+            - name: 'default::(type_name)::Equals'
+              href: ../cppcx/default-type-name-equals-method.md
+            - name: 'default::(type_name)::GetHashCode'
+              href: ../cppcx/default-type-name-gethashcode-method.md
+            - name: 'default::(type_name)::GetType'
+              href: ../cppcx/default-type-name-gettype-method.md
+            - name: 'default::(type_name)::ToString'
+              href: ../cppcx/default-type-name-tostring-method.md
+        - name: Platform 命名空间
+          expanded: false
+          items:
+            - name: Platform 命名空间
+              href: ../cppcx/platform-namespace-c-cx.md
+            - name: 'Platform::AccessDeniedException 类'
+              href: ../cppcx/platform-accessdeniedexception-class.md
+            - name: 'Platform::Agile 类'
+              href: ../cppcx/platform-agile-class.md
+            - name: 'Platform::Array 类'
+              href: ../cppcx/platform-array-class.md
+            - name: 'Platform::ArrayReference 类'
+              href: ../cppcx/platform-arrayreference-class.md
+            - name: 'Platform::Boolean 值类'
+              href: ../cppcx/platform-boolean-value-class.md
+            - name: 'Platform::Box 类'
+              href: ../cppcx/platform-box-class.md
+            - name: 'Platform::CallbackContext 枚举'
+              href: ../cppcx/platform-callbackcontext-enumeration.md
+            - name: 'Platform::ChangedStateException 类'
+              href: ../cppcx/platform-changedstateexception-class.md
+            - name: 'Platform::ClassNotRegisteredException 类'
+              href: ../cppcx/platform-classnotregisteredexception-class.md
+            - name: 'Platform::COMException 类'
+              href: ../cppcx/platform-comexception-class.md
+            - name: 'Platform::Delegate 类'
+              href: ../cppcx/platform-delegate-class.md
+            - name: 'Platform::DisconnectedException 类'
+              href: ../cppcx/platform-disconnectedexception-class.md
+            - name: 'Platform::Enum 类'
+              href: ../cppcx/platform-enum-class.md
+            - name: 'Platform::Exception 类'
+              href: ../cppcx/platform-exception-class.md
+            - name: 'Platform::FailureException 类'
+              href: ../cppcx/platform-failureexception-class.md
+            - name: 'Platform::Guid 值类'
+              href: ../cppcx/platform-guid-value-class.md
+            - name: 'Platform::IBox 接口'
+              href: ../cppcx/platform-ibox-interface.md
+            - name: 'Platform::IBoxArray 接口'
+              href: ../cppcx/platform-iboxarray-interface.md
+            - name: 'Platform::IDisposable 接口'
+              href: ../cppcx/platform-idisposable-interface.md
+            - name: 'Platform::IntPtr 值类'
+              href: ../cppcx/platform-intptr-value-class.md
+            - name: 'Platform::InvalidArgumentException 类'
+              href: ../cppcx/platform-invalidargumentexception-class.md
+            - name: 'Platform::InvalidCastException 类'
+              href: ../cppcx/platform-invalidcastexception-class.md
+            - name: 'Platform::IValueType 接口'
+              href: ../cppcx/platform-ivaluetype-interface.md
+            - name: 'Platform::MTAThreadAttribute 类'
+              href: ../cppcx/platform-mtathreadattribute-class.md
+            - name: 'Platform::NotImplementedException 类'
+              href: ../cppcx/platform-notimplementedexception-class.md
+            - name: 'Platform::NullReferenceException 类'
+              href: ../cppcx/platform-nullreferenceexception-class.md
+            - name: 'Platform::Object 类'
+              href: ../cppcx/platform-object-class.md
+            - name: 'Platform::ObjectDisposedException 类'
+              href: ../cppcx/platform-objectdisposedexception-class.md
+            - name: 'Platform::OperationCanceledException 类'
+              href: ../cppcx/platform-operationcanceledexception-class.md
+            - name: 'Platform::OutOfBoundsException 类'
+              href: ../cppcx/platform-outofboundsexception-class.md
+            - name: 'Platform::OutOfMemoryException 类'
+              href: ../cppcx/platform-outofmemoryexception-class.md
+            - name: 'Platform::ReCreateException'
+              href: ../cppcx/platform-recreateexception-method.md
+            - name: 'Platform::SizeT 值类'
+              href: ../cppcx/platform-sizet-value-class.md
+            - name: 'Platform::STAThreadAttribute 类'
+              href: ../cppcx/platform-stathreadattribute-class.md
+            - name: 'Platform::String 类'
+              href: ../cppcx/platform-string-class.md
+            - name: 'Platform::StringReference 类'
+              href: ../cppcx/platform-stringreference-class.md
+            - name: 'Platform::Type 类'
+              href: ../cppcx/platform-type-class.md
+            - name: 'Platform::Type^ 运算符'
+              href: ../cppcx/operator-type-hat.md
+            - name: 'Platform::TypeCode 枚举'
+              href: ../cppcx/platform-typecode-enumeration.md
+            - name: 'Platform::UIntPtr 值类'
+              href: ../cppcx/platform-uintptr-value-class.md
+            - name: 'Platform::ValueType 类'
+              href: ../cppcx/platform-valuetype-class.md
+            - name: 'Platform::WeakReference 类'
+              href: ../cppcx/platform-weakreference-class.md
+            - name: 'Platform::WriteOnlyArray 类'
+              href: ../cppcx/platform-writeonlyarray-class.md
+            - name: 'Platform::WrongThreadException 类'
+              href: ../cppcx/platform-wrongthreadexception-class.md
+        - name: 'Platform::Collections 命名空间'
+          expanded: false
+          items:
+            - name: 'Platform::Collections 命名空间'
+              href: ../cppcx/platform-collections-namespace.md
+            - name: 'Platform::Collections::BackInsertIterator 类'
+              href: ../cppcx/platform-collections-backinsertiterator-class.md
+            - name: 'Platform::Collections::InputIterator 类'
+              href: ../cppcx/platform-collections-inputiterator-class.md
+            - name: 'Platform::Collections::Map 类'
+              href: ../cppcx/platform-collections-map-class.md
+            - name: 'Platform::Collections::MapView 类'
+              href: ../cppcx/platform-collections-mapview-class.md
+            - name: 'Platform::Collections::UnorderedMap 类'
+              href: ../cppcx/platform-collections-unorderedmap-class.md
+            - name: 'Platform::Collections::UnorderedMapView 类'
+              href: ../cppcx/platform-collections-unorderedmapview-class.md
+            - name: 'Platform::Collections::Vector 类'
+              href: ../cppcx/platform-collections-vector-class.md
+            - name: 'Platform::Collections::VectorIterator 类'
+              href: ../cppcx/platform-collections-vectoriterator-class.md
+            - name: 'Platform::Collections::VectorView 类'
+              href: ../cppcx/platform-collections-vectorview-class.md
+            - name: 'Platform::Collections::VectorViewIterator 类'
+              href: ../cppcx/platform-collections-vectorviewiterator-class.md
+        - name: 'Platform::Collections::Details 命名空间'
+          href: ../cppcx/platform-collections-details-namespace.md
+        - name: 'Platform::Details 命名空间'
+          expanded: false
+          items:
+            - name: 'Platform::Details 命名空间'
+              href: ../cppcx/platform-details-namespace.md
+            - name: 'Platform::Details::__GUID 结构'
+              href: ../cppcx/platform-details-guid-struct.md
+            - name: 'Platform::Details::Console 类'
+              href: ../cppcx/platform-details-console-class.md
+            - name: 'Platform::Details::Heap 类'
+              href: ../cppcx/platform-details-heap-class.md
+            - name: 'Platform::Details::HeapAllocationTrackingLevel 枚举'
+              href: ../cppcx/platform-details-heapallocationtrackinglevel-enumeration.md
+            - name: 'Platform::Details::HeapEntryHandler 委托'
+              href: ../cppcx/platform-details-heapentryhandler-delegate.md
+            - name: 'Platform::Details::IEquatable 接口'
+              href: ../cppcx/platform-details-iequatable-interface.md
+            - name: 'Platform::Details::IPrintable 接口'
+              href: ../cppcx/platform-details-iprintable-interface.md
+        - name: 'Platform::Metadata 命名空间'
+          expanded: false
+          items:
+            - name: 'Platform::Metadata 命名空间'
+              href: ../cppcx/platform-metadata-namespace.md
+            - name: 'Platform::Metadata::Attribute 特性'
+              href: ../cppcx/platform-metadata-attribute-attribute.md
+            - name: 'Platform::Metadata::DefaultMemberAttribute 特性'
+              href: ../cppcx/platform-metadata-defaultmemberattribute-attribute.md
+            - name: 'Platform::Metadata::FlagsAttribute 特性'
+              href: ../cppcx/platform-metadata-flagsattribute-attribute.md
+            - name: 'Platform::Metadata::RuntimeClassName'
+              href: ../cppcx/platform-metadata-runtimeclassname.md
+        - name: 'Platform::Runtime::CompilerServices 命名空间'
+          href: ../cppcx/platform-runtime-compilerservices-namespace.md
+        - name: 'Platform::Runtime::InteropServices 命名空间'
+          href: ../cppcx/platform-runtime-interopservices-namespace.md
+        - name: 'Windows::Foundation::Collections 命名空间'
+          expanded: false
+          items:
+            - name: 'Windows::Foundation::Collections 命名空间'
+              href: ../cppcx/windows-foundation-collections-namespace-c-cx.md
+            - name: back_inserter 函数
+              href: ../cppcx/back-inserter-function.md
+            - name: begin 函数
+              href: ../cppcx/begin-function.md
+            - name: end 函数
+              href: ../cppcx/end-function.md
+            - name: to_vector 函数
+              href: ../cppcx/to-vector-function.md
+        - name: 'Windows::UI::Xaml::Interop::TypeName 运算符'
+          href: ../cppcx/operator-windows-ui-xaml-interop-typename.md
+    - name: 通用 Windows 平台应用中不支持的 CRT 函数
+      href: ../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md
+- name: Windows 运行时 C++ 模板库 (WRL)
+  expanded: false
+  items:
+    - name: Windows 运行时 C++ 模板库 (WRL)
+      href: ../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
+    - name: 如何：使用 WRL 激活和使用 Windows 运行时组件
+      href: ../cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
+    - name: 如何：使用 WRL 完成异步操作
+      href: ../cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
+    - name: 如何：使用 WRL 处理事件
+      href: ../cppcx/wrl/how-to-handle-events-using-wrl.md
+    - name: 演练：使用 WRL 和媒体基础创建 UWP 应用
+      href: ../cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
+    - name: 如何：使用 WRL 创建典型 COM 组件
+      href: ../cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
+    - name: 如何：直接实例化 WRL 组件
+      href: ../cppcx/wrl/how-to-instantiate-wrl-components-directly.md
+    - name: 如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件
+      href: ../cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
+    - name: 按类别列出的关键 WRL API
+      href: ../cppcx/wrl/key-wrl-apis-by-category.md
+    - name: WRL 引用
+      expanded: false
+      items:
+        - name: WRL 引用
+          href: ../cppcx/wrl/wrl-reference.md
+        - name: 'Microsoft::WRL 命名空间'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL 命名空间'
+              href: ../cppcx/wrl/microsoft-wrl-namespace.md
+            - name: ActivatableClass 宏
+              href: ../cppcx/wrl/activatableclass-macros.md
+            - name: ActivationFactory 类
+              href: ../cppcx/wrl/activationfactory-class.md
+            - name: AgileActivationFactory 类
+              href: ../cppcx/wrl/agileactivationfactory-class.md
+            - name: AgileEventSource class
+              href: ../cppcx/wrl/agileeventsource-class.md
+            - name: AsWeak 函数
+              href: ../cppcx/wrl/asweak-function.md
+            - name: AsyncBase 类
+              href: ../cppcx/wrl/asyncbase-class.md
+            - name: AsyncResultType 枚举
+              href: ../cppcx/wrl/asyncresulttype-enumeration.md
+            - name: 回调函数 (WRL)
+              href: ../cppcx/wrl/callback-function-wrl.md
+            - name: CancelTransitionPolicy 枚举
+              href: ../cppcx/wrl/canceltransitionpolicy-enumeration.md
+            - name: ChainInterfaces 结构
+              href: ../cppcx/wrl/chaininterfaces-structure.md
+            - name: ClassFactory 类
+              href: ../cppcx/wrl/classfactory-class.md
+            - name: CloakedIid 结构
+              href: ../cppcx/wrl/cloakediid-structure.md
+            - name: ComposableBase 类
+              href: ../cppcx/wrl/composablebase-class.md
+            - name: ComPtr 类
+              href: ../cppcx/wrl/comptr-class.md
+            - name: CreateActivationFactory 函数
+              href: ../cppcx/wrl/createactivationfactory-function.md
+            - name: CreateClassFactory 函数
+              href: ../cppcx/wrl/createclassfactory-function.md
+            - name: DeferrableEventArgs 类
+              href: ../cppcx/wrl/deferrableeventargs-class.md
+            - name: EventSource 类
+              href: ../cppcx/wrl/eventsource-class.md
+            - name: FactoryCacheFlags 枚举
+              href: ../cppcx/wrl/factorycacheflags-enumeration.md
+            - name: FtmBase 类
+              href: ../cppcx/wrl/ftmbase-class.md
+            - name: GetModuleBase 函数
+              href: ../cppcx/wrl/getmodulebase-function.md
+            - name: Implements 结构
+              href: ../cppcx/wrl/implements-structure.md
+            - name: InspectableClass 宏
+              href: ../cppcx/wrl/inspectableclass-macro.md
+            - name: InvokeModeOptions 结构
+              href: ../cppcx/wrl/invokemodeoptions-structure.md
+            - name: Make 函数
+              href: ../cppcx/wrl/make-function.md
+            - name: MixIn 结构
+              href: ../cppcx/wrl/mixin-structure.md
+            - name: Module 类
+              expanded: false
+              items:
+                - name: Module 类
+                  href: ../cppcx/wrl/module-class.md
+                - name: 'Module::GenericReleaseNotifier 类'
+                  href: ../cppcx/wrl/module-genericreleasenotifier-class.md
+                - name: 'Module::MethodReleaseNotifier 类'
+                  href: ../cppcx/wrl/module-methodreleasenotifier-class.md
+                - name: 'Module::ReleaseNotifier 类'
+                  href: ../cppcx/wrl/module-releasenotifier-class.md
+            - name: ModuleType 枚举
+              href: ../cppcx/wrl/moduletype-enumeration.md
+            - name: 'operator!= 运算符 (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-inequality-operator-microsoft-wrl.md
+            - name: 'operator== 运算符 (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-equality-operator-microsoft-wrl.md
+            - name: 'operator< 运算符 (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-less-than-operator-microsoft-wrl.md
+            - name: RuntimeClass 类
+              href: ../cppcx/wrl/runtimeclass-class.md
+            - name: RuntimeClassFlags 结构
+              href: ../cppcx/wrl/runtimeclassflags-structure.md
+            - name: RuntimeClassType 枚举
+              href: ../cppcx/wrl/runtimeclasstype-enumeration.md
+            - name: SimpleActivationFactory 类
+              href: ../cppcx/wrl/simpleactivationfactory-class.md
+            - name: SimpleClassFactory 类
+              href: ../cppcx/wrl/simpleclassfactory-class.md
+            - name: WeakRef 类
+              href: ../cppcx/wrl/weakref-class.md
+        - name: 'Microsoft::WRL::Details 命名空间'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Details 命名空间'
+              href: ../cppcx/wrl/microsoft-wrl-details-namespace.md
+            - name: ActivationFactoryCallback 函数
+              href: ../cppcx/wrl/activationfactorycallback-function.md
+            - name: ArgTraits 结构
+              href: ../cppcx/wrl/argtraits-structure.md
+            - name: ArgTraitsHelper 结构
+              href: ../cppcx/wrl/argtraitshelper-structure.md
+            - name: AsyncStatusInternal 枚举
+              href: ../cppcx/wrl/asyncstatusinternal-enumeration.md
+            - name: BoolStruct 结构
+              href: ../cppcx/wrl/boolstruct-structure.md
+            - name: ComPtrRef 类
+              href: ../cppcx/wrl/comptrref-class.md
+            - name: ComPtrRefBase 类
+              href: ../cppcx/wrl/comptrrefbase-class.md
+            - name: CreatorMap 结构
+              href: ../cppcx/wrl/creatormap-structure.md
+            - name: DerefHelper 结构
+              href: ../cppcx/wrl/derefhelper-structure.md
+            - name: DontUseNewUseMake 类
+              href: ../cppcx/wrl/dontusenewusemake-class.md
+            - name: EnableIf 结构
+              href: ../cppcx/wrl/enableif-structure.md
+            - name: EventTargetArray 类
+              href: ../cppcx/wrl/eventtargetarray-class.md
+            - name: FactoryCache 结构
+              href: ../cppcx/wrl/factorycache-structure.md
+            - name: ImplementsBase 结构
+              href: ../cppcx/wrl/implementsbase-structure.md
+            - name: ImplementsHelper 结构
+              href: ../cppcx/wrl/implementshelper-structure.md
+            - name: InterfaceList 结构
+              href: ../cppcx/wrl/interfacelist-structure.md
+            - name: InterfaceListHelper 结构
+              href: ../cppcx/wrl/interfacelisthelper-structure.md
+            - name: InterfaceTraits 结构
+              href: ../cppcx/wrl/interfacetraits-structure.md
+            - name: InvokeHelper 结构
+              href: ../cppcx/wrl/invokehelper-structure.md
+            - name: IsBaseOfStrict 结构
+              href: ../cppcx/wrl/isbaseofstrict-structure.md
+            - name: IsSame 结构
+              href: ../cppcx/wrl/issame-structure.md
+            - name: MakeAllocator 类
+              href: ../cppcx/wrl/makeallocator-class.md
+            - name: MakeAndInitialize 函数
+              href: ../cppcx/wrl/makeandinitialize-function.md
+            - name: ModuleBase 类
+              href: ../cppcx/wrl/modulebase-class.md
+            - name: Move 函数
+              href: ../cppcx/wrl/move-function.md
+            - name: Nil 结构
+              href: ../cppcx/wrl/nil-structure.md
+            - name: RaiseException 函数
+              href: ../cppcx/wrl/raiseexception-function.md
+            - name: RemoveIUnknown 类
+              href: ../cppcx/wrl/removeiunknown-class.md
+            - name: RemoveReference 结构
+              href: ../cppcx/wrl/removereference-structure.md
+            - name: RuntimeClassBase 结构
+              href: ../cppcx/wrl/runtimeclassbase-structure.md
+            - name: RuntimeClassBaseT 结构
+              href: ../cppcx/wrl/runtimeclassbaset-structure.md
+            - name: Swap 函数 (WRL)
+              href: ../cppcx/wrl/swap-function-wrl.md
+            - name: TerminateMap 函数
+              href: ../cppcx/wrl/terminatemap-function.md
+            - name: VerifyInheritanceHelper 结构
+              href: ../cppcx/wrl/verifyinheritancehelper-structure.md
+            - name: VerifyInterfaceHelper 结构
+              href: ../cppcx/wrl/verifyinterfacehelper-structure.md
+            - name: WeakReference 类
+              href: ../cppcx/wrl/weakreference-class.md
+        - name: 'Microsoft::WRL::Wrappers 命名空间'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers 命名空间'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-namespace.md
+            - name: CriticalSection 类
+              href: ../cppcx/wrl/criticalsection-class.md
+            - name: Event 类 (WRL)
+              href: ../cppcx/wrl/event-class-wrl.md
+            - name: HandleT 类
+              href: ../cppcx/wrl/handlet-class.md
+            - name: HString 类
+              href: ../cppcx/wrl/hstring-class.md
+            - name: HStringReference 类
+              href: ../cppcx/wrl/hstringreference-class.md
+            - name: Mutex 类
+              href: ../cppcx/wrl/mutex-class.md
+            - name: RoInitializeWrapper 类
+              href: ../cppcx/wrl/roinitializewrapper-class.md
+            - name: Semaphore 类
+              href: ../cppcx/wrl/semaphore-class.md
+            - name: SRWLock 类
+              href: ../cppcx/wrl/srwlock-class.md
+        - name: 'Microsoft::WRL::Wrappers::Details 命名空间'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers::Details 命名空间'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-details-namespace.md
+            - name: CompareStringOrdinal 方法
+              href: ../cppcx/wrl/comparestringordinal-method.md
+            - name: SyncLockT 类
+              href: ../cppcx/wrl/synclockt-class.md
+            - name: SyncLockWithStatusT 类
+              href: ../cppcx/wrl/synclockwithstatust-class.md
+        - name: 'Microsoft::WRL::Wrappers::HandleTraits 命名空间'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers::HandleTraits 命名空间'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-handletraits-namespace.md
+            - name: CriticalSectionTraits 结构
+              href: ../cppcx/wrl/criticalsectiontraits-structure.md
+            - name: EventTraits 结构
+              href: ../cppcx/wrl/eventtraits-structure.md
+            - name: FileHandleTraits 结构
+              href: ../cppcx/wrl/filehandletraits-structure.md
+            - name: HANDLENullTraits 结构
+              href: ../cppcx/wrl/handlenulltraits-structure.md
+            - name: HANDLETraits 结构
+              href: ../cppcx/wrl/handletraits-structure.md
+            - name: MutexTraits 结构
+              href: ../cppcx/wrl/mutextraits-structure.md
+            - name: SemaphoreTraits 结构
+              href: ../cppcx/wrl/semaphoretraits-structure.md
+            - name: SRWLockExclusiveTraits 结构
+              href: ../cppcx/wrl/srwlockexclusivetraits-structure.md
+            - name: SRWLockSharedTraits 结构
+              href: ../cppcx/wrl/srwlocksharedtraits-structure.md
+        - name: 'Windows::Foundation 命名空间'
+          expanded: false
+          items:
+            - name: 'Windows::Foundation 命名空间'
+              href: ../cppcx/wrl/windows-foundation-namespace.md
+            - name: ActivateInstance 函数
+              href: ../cppcx/wrl/activateinstance-function.md
+            - name: GetActivationFactory 函数
+              href: ../cppcx/wrl/getactivationfactory-function.md
+        - name: IID_PPV_ARGS_Helper 函数
+          href: ../cppcx/wrl/iid-ppv-args-helper-function.md
