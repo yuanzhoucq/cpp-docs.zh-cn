@@ -18,24 +18,24 @@ ms.locfileid: "67400514"
 ## <a name="syntax"></a>语法
 
 *integer-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;decimal-constant  integer-suffix  <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;octal-constant  integer-suffix  <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;hexadecimal-constant  integer-suffix  <sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
 
 *decimal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;nonzero-digit <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;decimal-constant  digit 
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *octal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;0 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;octal-constant  octal-digit 
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
 
 *hexadecimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;hexadecimal-prefix  hexadecimal-digit <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;hexadecimal-constant  hexadecimal-digit 
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 hexadecimal-prefix  : one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;0x   0X 
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
 
 *nonzero-digit*: one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;1 2 3 4 5 6 7 8 9 
@@ -49,11 +49,11 @@ hexadecimal-prefix  : one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;A B C D E F 
 
 *integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;unsigned-suffix  long-suffix  <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;unsigned-suffix  long-long-suffix <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;unsigned-suffix  64-bit-integer-suffix <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;long-suffix  unsigned-suffix  <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;long-long-suffix  unsigned-suffix  <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-long-suffix*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;64-bit-integer-suffix 
 
 *unsigned-suffix*: one of<br/>
@@ -72,7 +72,7 @@ i64  和 I64  后缀为 Microsoft 专用。
 
 整数常量为正数，除非它们的前面有减号 ( **-** )。 减号解释为一元算术求反运算符。 （有关此运算符的信息，请参阅[一元算术运算符](../c-language/unary-arithmetic-operators.md)。）
 
-如果整数常量以 **0x** 或 **0X**  开始，则它是十六进制。 如果它以数字 **0** 开始，则为八进制。 否则，将其假定为十进制。
+如果整数常量以 **0x** 或 **0X** 开始，则它是十六进制。 如果它以数字 **0** 开始，则为八进制。 否则，将其假定为十进制。
 
 以下整数常量是等效的：
 
