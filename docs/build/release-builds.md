@@ -1,5 +1,5 @@
 ---
-title: C++发布版本-Visual Studio
+title: C++ 发布版本 - Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
 ms.openlocfilehash: 46ae5e0f3d545f0e3e004f612314ab416b270fd8
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80168819"
 ---
 # <a name="release-builds"></a>发行版本
 
-发布版本使用优化。 使用优化创建发布版本时，编译器不会生成符号调试信息。 缺少符号调试信息，并且没有为跟踪和断言调用生成代码，这意味着可执行文件的大小会减少，因此速度会更快。
+发布版本使用优化。 使用优化创建发布版本时，编译器将不会生成符号调试信息。 由于缺少符号调试信息并且未为 TRACE 和 ASSERT 调用生成代码，这意味着可执行文件的大小会减小，因此速度会更快。
 
-## <a name="in-this-section"></a>在本节中
+## <a name="in-this-section"></a>本节内容
 
 [创建发行版本时遇到的常见问题](common-problems-when-creating-a-release-build.md)<br/>
 [修复发行版本问题](fixing-release-build-problems.md)<br/>
@@ -27,6 +27,6 @@ ms.locfileid: "80168819"
 [检查内存改写](checking-for-memory-overwrites.md)<br/>
 [优化代码](optimizing-your-code.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C/C++ 生成参考](reference/c-cpp-building-reference.md)

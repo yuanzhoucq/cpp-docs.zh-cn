@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
 ms.openlocfilehash: 2d322cfe7d3bd60d8d702a226e181eb7b4ede963
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493252"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-进程显式链接到 DLL 调用[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) , 以获取 dll 中导出函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress**使用 DLL 模块处理的参数 (由**LoadLibrary**、 `AfxLoadLibrary`或**GetModuleHandle**返回), 并采用要调用的函数的名称或函数的导出序号。
+显式链接到 DLL 的进程会调用 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)，以获取 DLL 中导出函数的地址。 可使用返回的函数指针调用 DLL 函数。 GetProcAddress  采用 DLL 模块句柄（由 LoadLibrary  、`AfxLoadLibrary` 或 GetModuleHandle  返回）作为参数，并采用要调用的函数的名称或函数的导出序号。
 
-因为您通过指针调用 DLL 函数, 并且没有编译时类型检查, 所以请确保函数的参数是正确的, 以便不 overstep 在堆栈上分配的内存并导致访问冲突。 提供类型安全的一种方法是查看导出函数的函数原型, 并为函数指针创建匹配的 typedef。 例如:
+因为通过指针调用 DLL 函数，并且没有编译时类型检查，所以请确保函数的参数正确，以便不会超过在堆栈上分配的内存以及导致访问冲突。 帮助提供类型安全的一种方法是查看导出函数的函数原型，并为函数指针创建匹配的 typedef。 例如：
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -49,9 +49,9 @@ if (hDLL != NULL)
 }
 ```
 
-调用**GetProcAddress**时指定所需函数的方式取决于 DLL 的生成方式。
+如何指定调用 GetProcAddress  时所需的函数取决于 DLL 的生成方式。
 
-如果要链接到的 DLL 是使用模块定义 (.def) 文件生成的, 并且在 DLL 的 .def 文件的 "**导出**" 部分中列出了这些函数, 则只能获取导出序号。 如果 DLL 具有许多导出函数, 则使用导出序号调用**GetProcAddress**会稍微快一些, 因为导出序号充当 DLL 导出表中的索引。 使用导出序号, **GetProcAddress**可以直接查找函数, 而不是将指定的名称与 DLL 的导出表中的函数名进行比较。 但是, 仅当您控制将序号分配给 .def 文件中导出的函数时, 才应使用导出序号调用**GetProcAddress** 。
+仅当要链接到的 DLL 使用模块定义 (.def) 文件生成，并且序号随函数在 DLL .def 文件的 EXPORTS  节中列出时，才能获取导出序号。 如果 DLL 具有许多导出函数，则与使用函数名称相比，使用导出序号调用 GetProcAddress  会稍微快一些，因为导出序号充当 DLL 导出表中的索引。 使用导出序号，GetProcAddress  可以直接查找函数，而不是将指定名称与 DLL 导出表中的函数名进行比较。 但是，仅当可控制将序号分配给 .def 文件中的导出函数时，才应使用导出序号调用 GetProcAddress  。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 

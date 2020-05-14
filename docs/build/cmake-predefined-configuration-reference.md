@@ -6,7 +6,7 @@ helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323018"
@@ -15,13 +15,13 @@ ms.locfileid: "81323018"
 
 ::: moniker range="vs-2015"
 
-2017 年及以后的 Visual Studio 支持 CMake 项目。
+Visual Studio 2017 及更高版本支持 CMake 项目。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框****：
+在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框  ：
 
 - x86 Debug
 - x86 Release
@@ -34,7 +34,7 @@ ms.locfileid: "81323018"
 - MinGW Debug
 - MinGW Release
 
-选择配置时，该配置将添加到项目的根文件夹中的*CMakeSettings.json*文件中。 然后可以使用该配置生成项目。 有关配置属性的信息，请参阅[CMakeSettings 参考](cmakesettings-reference.md)。
+选择某些配置时，该配置将添加到项目根文件夹中的 CMakeSettings.json  文件中。 然后可以使用该配置生成项目。 有关配置属性的信息，请参阅 [CMakeSettings 参考](cmakesettings-reference.md)。
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 预定义生成配置：
 
@@ -356,29 +356,29 @@ You can use these optional settings for more control:
 
 ::: moniker range="vs-2019"
 
-在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框****：
+在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框  ：
 
 - x86 Debug
-- x86 Clang 调试
+- x86 Clang Debug
 - x86 Release
-- x86 Clang 版本
+- x86 Clang Release
 - x64 Debug
-- x64 Clang 调试
+- x64 Clang Debug
 - x64 Release
-- x64 Clang 版本
+- x64 Clang Release
 - Linux-Debug
 - Linux-Release
-- Linux-Clang-调试
-- Linux-Clang-发布
-- 现有缓存（远程）
-- 现有缓存
+- Linux-Clang-Debug
+- Linux-Clang-Release
+- Existing Cache (remote)
+- Existing Cache
 - MinGW Debug
 - MinGW Release
-- WSL 调试
-- WSL 版本
-- WSL Clang 调试
-- WSL Clang 版本
-- 铛
+- WSL Debug
+- WSL Release
+- WSL Clang Debug
+- WSL Clang Release
+- Clang
 
 选择某些配置时，该配置将添加到项目根文件夹中的 CMakeSettings.json 文件中。 然后可以使用该配置生成项目。
 
@@ -696,7 +696,7 @@ You can use these optional settings for more control:
 
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)<br/>
 [配置 Linux CMake 项目](../linux/cmake-linux-project.md)<br/>

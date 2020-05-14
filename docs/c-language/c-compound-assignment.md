@@ -7,11 +7,11 @@ helpviewer_keywords:
 - assignment operators, compound
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
 ms.openlocfilehash: 39a9391e2a62a59c5e7fd7937c1f3d12509b76ad
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327894"
 ---
 # <a name="c-compound-assignment"></a>C 复合赋值
 
@@ -25,7 +25,7 @@ ms.locfileid: "56148759"
 
 但是，复合赋值表达式不等于扩展版本，因为复合赋值表达式只计算 *expression1* 一次，而扩展版本将计算 *expression1* 两次：在加法运算和赋值运算中。
 
-复合赋值运算符的操作数必须为整型或浮点型。 每个复合赋值运算符都将执行对应的二元运算符所执行的转换并相应地限制其操作数的类型。 加法赋值 (`+=`) 和减法赋值 (**-=**) 运算符还可以具有指针类型的左操作数，在此情况下，右操作数必须为整型类型。 复合赋值运算的结果具有左操作数的值和类型。
+复合赋值运算符的操作数必须为整型或浮点型。 每个复合赋值运算符都将执行对应的二元运算符所执行的转换并相应地限制其操作数的类型。 加法赋值 (`+=`) 和减法赋值 ( **-=** ) 运算符还可以具有指针类型的左操作数，在此情况下，右操作数必须为整型类型。 复合赋值运算的结果具有左操作数的值和类型。
 
 ```C
 #define MASK 0xff00

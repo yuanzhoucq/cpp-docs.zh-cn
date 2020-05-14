@@ -4,7 +4,7 @@ ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
 ms.openlocfilehash: e553f4bdfffcd4bba6a39b2d37af6ba25a3d65d9
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80170431"
@@ -12,44 +12,44 @@ ms.locfileid: "80170431"
 # <a name="summary-of-declarations"></a>声明摘要
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*声明-说明符* *属性-seq*<sub>opt</sub> *init-声明符-list*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
 *declaration-specifiers*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*存储类说明符* *声明-说明符*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*类型说明符* *声明-说明符*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*类型限定符* *声明-说明符*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*属性-seq* ：&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*特性* *属性-seq*<sub>opt</sub>
+*attribute-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*attribute* *attribute-seq*<sub>opt</sub>
 
-*属性*：&nbsp;&nbsp;中的一个 &nbsp;&nbsp;/\* \*/<br/>
+*attribute* : one of&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;init-declarator<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-声明符-list* **，** *init-声明符*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
 
 *init-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;declarator<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*声明符* **=** 用于标量*初始化 /\** \*    /
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  **=**  *initializer* /\* For scalar initialization \*/
 
 *storage-class-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;auto<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;__declspec /\* \*/ **（** *decl* **）** &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Microsoft-specific \*/
 
 *type-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;void<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int8 /\*** \*/<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int16 /\*** \*/<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int32 /\*** \*/<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int64 /\*** \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -57,122 +57,122 @@ ms.locfileid: "80170431"
 &nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;typedef-name
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 *type-qualifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;const<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;volatile
+&nbsp;&nbsp;&nbsp;&nbsp;const <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;volatile 
 
 *declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*指针*<sub>可选</sub>*直接声明符*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identifier<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **（** *声明符* **）**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*直接声明符* **[** *常量表达式*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*直接声明符* **（** *参数类型列表* **）**  /\* \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*直接声明符* **（** *标识符列表*<sub>opt</sub> **）**  /\* 过时样式的声明符 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  /\* New-style declarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  /\* Obsolete-style declarator \*/
 
 *pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *类型限定符-列表*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *类型限定符-列表*<sub>opt</sub> *指针*
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
 
-parameter-type-list：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* 参数列表 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;parameter-list<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*参数列表* **，...**
+*parameter-type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\*参数列表 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
 
 *parameter-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;parameter-declaration<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*参数-列表* **、** *参数声明*
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,** *parameter-declaration*
 
 *type-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;type-qualifier<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*类型限定符-列表* *类型-限定符*
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*
 
 *enum-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**枚举***标识符*<sub>opt</sub> **{** *枚举器* **}**<br/>
-&nbsp;**枚举***标识符*&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*<sub>opt</sub> **{** *enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
 
 *enumerator-list*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumerator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*的枚举器列表* **、** *枚举器*
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerator-list* **,** *enumerator*
 
 *enumerator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*枚举常量* **=** *常数表达式*
+&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant* **=** *constant-expression*
 
 *enumeration-constant*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identifier
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
 *struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*结构或联合* *标识符*<sub>opt</sub> **{** *struct-list* **}**<br/>
-&nbsp;*结构或联合* *标识符*&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;struct<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**union**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
-&nbsp;*结构声明列表* *的 &nbsp;* &nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
 
 *struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*说明符--限定符* *列表* **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
 
 *specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*类型说明符* *说明符-限定符-列表*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*类型限定符* *说明符-限定符-列表*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *specifier-qualifier-list*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
 
 *struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*结构声明符* *结构声明符-列表* **，** *struct 声明符*
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator* *struct-declarator-list* **,** *struct-declarator*
 
 *struct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;declarator<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*类型说明符* *declarator*<sub>opt</sub> **：** *常量表达式*
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
 
 *parameter-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*声明-说明符* *声明符* /\* 命名声明符 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*声明说明符* *抽象-声明符*<sub>opt</sub> /\* 匿名声明符 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator* /\* Named declarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *abstract-declarator*<sub>opt</sub> /\* Anonymous declarator \*/
 
-identifier-list：/\*用于旧式声明符\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identifier<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*标识符-列表* **，** *标识符*
+ identifier-list：/\*用于旧式声明符\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier-list* **,** *identifier*
 
-abstract-declarator：/\* 用于匿名声明符 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;pointer<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*指针*<sub>可选</sub>*直接抽象-声明符*
+ abstract-declarator：/\* 用于匿名声明符 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;pointer <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **（** *抽象-声明符* **）**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*直接抽象声明符*<sub>opt</sub> **[** *常量表达式*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*直接抽象声明符*<sub>opt</sub> **（** *参数类型列表*<sub>opt</sub> **）**
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
 
 *initializer*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;assignment-expression<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *初始值设定项列表* **}**  /\* \*聚合初始化/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *初始值设定项列表* **，}**
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **}**  /\* For aggregate initialization \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **, }**
 
 *initializer-list*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;initializer<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*初始值设定项列表* **，** *初始值设定项*
+&nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list* **,** *initializer*
 
 *type-name*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*说明符-列表* *抽象声明符*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
 
 *typedef-name*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identifier
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-*decl*&nbsp;&nbsp;&nbsp;&nbsp;/\* 特定于 Microsoft 的 \*/<br/>
+extended-decl-modifier-seq  ：&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decl* *扩展 decl-* 修饰符
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*decl-修饰符*：&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
+extended-decl-modifier  ：&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [调用约定](../cpp/calling-conventions.md)<br/>
 [短语结构语法](../c-language/phrase-structure-grammar.md)<br/>

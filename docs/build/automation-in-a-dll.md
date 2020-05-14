@@ -14,17 +14,17 @@ ms.locfileid: "65220930"
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的自动化
 
-当在 MFC DLL 向导中选择自动化选项时，向导将为您提供以下：
+当你在 MFC DLL 向导中选择“自动化”选项时，该向导提供以下内容：
 
-- 起始对象描述语言 (。ODL) 文件
+- 一个初学者对象说明语言 (.ODL) 文件
 
-- 在 STDAFX.h 文件中为 Afxole.h include 指令
+- 一个用于 Afxole.h 的 STDAFX.h 文件中的 include 指令
 
-- 实现`DllGetClassObject`函数，调用**AfxDllGetClassObject**函数
+- 一个 `DllGetClassObject` 函数的实现，其调用 AfxDllGetClassObject 函数 
 
-- 实现`DllCanUnloadNow`函数，调用**AfxDllCanUnloadNow**函数
+- 一个 `DllCanUnloadNow` 函数的实现，其调用 AfxDllCanUnloadNow 函数 
 
-- 实现`DllRegisterServer`函数，调用[COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)函数
+- 一个 `DllRegisterServer` 函数的实现，其调用 [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) 函数
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
@@ -32,4 +32,4 @@ ms.locfileid: "65220930"
 
 ## <a name="see-also"></a>请参阅
 
-[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中创建 C/C++ DLL](dlls-in-visual-cpp.md)

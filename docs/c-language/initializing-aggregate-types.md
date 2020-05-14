@@ -22,7 +22,7 @@ ms.locfileid: "62326074"
 ## <a name="syntax"></a>语法
 
 *initializer*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 用于聚合初始化 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* For aggregate initialization \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*：<br/>

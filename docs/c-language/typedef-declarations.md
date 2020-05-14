@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
 ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346101"
 ---
 # <a name="typedef-declarations"></a>Typedef 声明
 
@@ -49,9 +49,9 @@ typedef 声明的解释方式与变量或函数声明的解释方式相同，只
 *typedef-name*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-请注意，typedef 声明不会创建类型， 而是创建现有类型的同义词或可通过其他方式指定的类型的名称。 当使用 typedef 名称作为类型说明符时，可以将其与特定的类型说明符组合，但不可以将其与其他类型说明符组合。 可接受的修饰符包括 const 和 `volatile`。
+请注意，typedef 声明不会创建类型， 而是创建现有类型的同义词或可通过其他方式指定的类型的名称。 当使用 typedef 名称作为类型说明符时，可以将其与特定的类型说明符组合，但不可以将其与其他类型说明符组合。 可接受的修饰符包括 const  和 `volatile`。
 
-Typedef 名称与普通标识符共享命名空间（有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)）。 因此，程序可以有一个 typedef 名称和一个具有相同名称的本地范围标识符。 例如:
+Typedef 名称与普通标识符共享命名空间（有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)）。 因此，程序可以有一个 typedef 名称和一个具有相同名称的本地范围标识符。 例如：
 
 ```C
 typedef char FlagType;

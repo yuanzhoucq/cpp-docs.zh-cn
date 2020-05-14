@@ -12,34 +12,34 @@ helpviewer_keywords:
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
 ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62196737"
 ---
 # <a name="exporting-from-a-dll"></a>从 DLL 导出
 
-DLL 文件具有与.exe 文件，有一个重要的区别非常相似的布局，DLL 文件中包含的导出表。 导出表包含每个函数的 DLL 将导出到其他可执行文件的名称。 这些函数是 dll; 的入口点可以通过其他可执行文件访问仅导出表中的函数。 在 DLL 中的任何其他函数是私有的 DLL。 可以通过查看 DLL 导出表[DUMPBIN](reference/dumpbin-reference.md) /EXPORTS 选项的工具。
+DLL 文件的布局与 .exe 文件非常相似，但有一个重要的区别：DLL 文件包含导出表。 导出表包含 DLL 导出到其他可执行文件的每个函数的名称。 这些函数是进入 DLL 中的入口点；只有导出表中的函数才能被其他可执行文件访问。 DLL 中的任何其他函数都是 DLL 的私有函数。 可通过使用带有 /EXPORTS 选项的 [DUMPBIN](reference/dumpbin-reference.md) 工具来查看 DLL 导出表。
 
-可以使用两种方法从 DLL 导出函数：
+可使用两种方法从 DLL 导出函数：
 
-- 创建模块定义 (.def) 文件并生成 DLL 时使用.def 文件。 如果您要使用此方法[按序号而不是按名称从 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
+- 创建模块定义 (.def) 文件，然后在生成 DLL 时使用 .def 文件。 如果希望[按序号而不是按名称从 DLL 中导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)，请使用此方法。
 
-- 使用关键字 **__declspec （dllexport)** 函数的定义中。
+- 在函数定义中使用关键字 __declspec(dllexport)  。
 
-当使用任何一种方法导出函数，请务必使用[__stdcall](../cpp/stdcall.md)调用约定。
+用任一方法导出函数时，请确保使用 [__stdcall](../cpp/stdcall.md) 调用约定。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [使用.def 文件从 DLL 导出](exporting-from-a-dll-using-def-files.md)
+- [使用 .def 文件从 DLL 导出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec(dllexport) 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [使用 AFX_EXT_CLASS 导出和导入](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出 C++ 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [导出 C 函数以用于 C 或C++-语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [导出 C 函数以用于 C 或 C++ 语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [按序号而不是按名称从 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 
@@ -51,7 +51,7 @@ DLL 文件具有与.exe 文件，有一个重要的区别非常相似的布局�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [导入到应用程序](importing-into-an-application.md)
+- [导入到应用程序中](importing-into-an-application.md)
 
 - [导入和导出内联函数](importing-and-exporting-inline-functions.md)
 

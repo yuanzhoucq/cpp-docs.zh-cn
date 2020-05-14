@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
 ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349742"
 ---
 # <a name="try-except-statement-c"></a>try-except 语句 (C)
 
-**微软特定**
+**Microsoft 专用**
 
 **try-except** 语句是一项 Microsoft C++ 语言扩展，它使应用程序能够在正常终止执行的事件发生时获取对程序的控制权。 此类事件称为异常，处理异常的机制称为结构化异常处理。
 
@@ -29,7 +29,7 @@ ms.locfileid: "81349742"
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except （**  *表达式*  **）**  *复合语句*
+**__except (**  *expression*  **)**  *compound-statement*
 
 `__try` 子句后的复合语句是受保护节。 在 `__except` 子句后的复合语句是异常处理程序。 如果在控制节执行过程中引发了异常，处理程序将指定要采取的一系列措施。 执行过程如下所示：
 
@@ -51,7 +51,7 @@ ms.locfileid: "81349742"
 > 结构化异常处理适用于 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理机制灵活得多，因为它可以处理任何类型的异常。
 
 > [!NOTE]
-> 对于 C++ 程序，应使用 C++ 异常处理，而不是结构化异常处理。 有关详细信息，请参阅《C++ 语言参考》** 中的[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
+> 对于 C++ 程序，应使用 C++ 异常处理，而不是结构化异常处理。 有关详细信息，请参阅《C++ 语言参考》  中的[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
 
 应用程序中的每个例程可以有自己的异常处理程序。 `__except` 表达式在 `__try` 体的范围内执行。 这意味着它可以访问在该处声明的任何局部变量。
 
@@ -94,8 +94,8 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**结束微软特定**
+**结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [try-except 语句](../cpp/try-except-statement.md)

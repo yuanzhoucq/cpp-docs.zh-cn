@@ -4,7 +4,7 @@ ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
 ms.openlocfilehash: 1a230ca7d998316d2ec96e76b54ac60575acd2ee
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74856990"
@@ -18,8 +18,8 @@ ms.locfileid: "74856990"
 &nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp; *&nbsp;&nbsp; /\* \** /<br/>
-&nbsp;&nbsp; *&nbsp;&nbsp; /\* \** /
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* Microsoft-specific \*/
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**<br/>
@@ -27,18 +27,18 @@ ms.locfileid: "74856990"
 &nbsp;&nbsp;&nbsp;&nbsp;**break ;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
-compound-statement：<br/>
-nchen&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+compound-statement  ：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
-declaration-list：<br/>
+declaration-list  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
-statement-list：<br/>
+statement-list  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
 
-expression-statement：<br/>
+expression-statement  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
 
 *iteration-statement*:<br/>
@@ -56,12 +56,12 @@ expression-statement：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
-*try-except-语句*：/\* 特定于 Microsoft 的 \*/<br/>
+*try-except-statement*:   /\* Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
 
-*try-finally-语句*：/\* 特定于 Microsoft 的 \*/<br/>
+*try-finally-statement*:   /\* Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [短语结构语法](../c-language/phrase-structure-grammar.md)

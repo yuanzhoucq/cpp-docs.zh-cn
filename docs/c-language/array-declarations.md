@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313536"
 ---
 # <a name="array-declarations"></a>数组声明
 
@@ -31,18 +31,18 @@ ms.locfileid: "56147771"
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
 
 *declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;pointer<sub>opt</sub> direct-declarator
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-direct-declarator: /\* 函数声明符 \*/<br/>
+direct-declarator  : /\* 函数声明符 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**
 
-由于 constant-expression 是可选的，因此该语法有两种形式：
+由于 constant-expression  是可选的，因此该语法有两种形式：
 
-- 第一种形式定义一个数组变量。 括号内的 constant-expression 参数指定数组中的元素数量。 constant-expression（如果有）必须具有整型类型和大于零的值。 每个元素均具有 type-specifier 给定的类型，可以是除 `void` 之外的任何类型。 数组元素不能是函数类型。
+- 第一种形式定义一个数组变量。 括号内的 constant-expression  参数指定数组中的元素数量。  constant-expression（如果有）必须具有整型类型和大于零的值。 每个元素均具有 type-specifier  给定的类型，可以是除 `void` 之外的任何类型。 数组元素不能是函数类型。
 
-- 第二种形式声明已在其他位置定义了变量。 它省略括号中的 constant-expression 参数而不是括号。 仅在之前已初始化数组、将其声明为参数或声明为对在程序中的其他位置显式定义的某个数组的引用的情况下才能使用此形式。
+- 第二种形式声明已在其他位置定义了变量。 它省略括号中的 constant-expression  参数而不是括号。 仅在之前已初始化数组、将其声明为参数或声明为对在程序中的其他位置显式定义的某个数组的引用的情况下才能使用此形式。
 
-在两种形式中，direct-declarator 都会命名变量并且可以修改变量的类型。 紧跟 direct-declarator 的方括号 ([ ]) 会将声明符修改为数组类型。
+在两种形式中，direct-declarator  都会命名变量并且可以修改变量的类型。 紧跟 direct-declarator  的方括号 ([ ]  ) 会将声明符修改为数组类型。
 
 类型限定符可以出现在数组类型对象的声明中，但限定符应用于元素而不是数组本身。
 
@@ -50,7 +50,7 @@ direct-declarator: /\* 函数声明符 \*/<br/>
 
 > *type-specifier* *declarator* **[** *constant-expression* **]** **[** *constant-expression* **]** ...
 
-方括号中的每个 constant-expression 均定义给定维度中的元素数量：二维数组具有两个带括号的表达式，三维数组具有三个带括号的表达式，依此类推。 如果您已初始化数组、将其声明为参数或声明为对在程序中的其他位置显式定义的某个数组的引用，则可以忽略第一个常量表达式。
+方括号中的每个 constant-expression  均定义给定维度中的元素数量：二维数组具有两个带括号的表达式，三维数组具有三个带括号的表达式，依此类推。 如果您已初始化数组、将其声明为参数或声明为对在程序中的其他位置显式定义的某个数组的引用，则可以忽略第一个常量表达式。
 
 可使用复杂的声明符定义指向各种类型的对象的指针的数组，如[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)中所述。
 
@@ -72,7 +72,7 @@ char A[2][3];
 float matrix[10][15];
 ```
 
-名为 `matrix` 的二维数组具有 150 个元素，其中每个元素都具有 float 类型。
+名为 `matrix` 的二维数组具有 150 个元素，其中每个元素都具有 float  类型。
 
 ```C
 struct {
@@ -90,7 +90,7 @@ extern char *name[];
 
 **Microsoft 专用**
 
-保存数组的最大大小所需的整数类型为 size_t 的大小。 头文件 STDDEF.H 中定义的 size_t 是一个 `unsigned int`，其范围从 0x00000000 到 0x7CFFFFFF。
+保存数组的最大大小所需的整数类型为 size_t  的大小。 头文件 STDDEF.H 中定义的 size_t  是一个 `unsigned int`，其范围从 0x00000000 到 0x7CFFFFFF。
 
 **结束 Microsoft 专用**
 

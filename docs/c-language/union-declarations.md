@@ -7,11 +7,11 @@ helpviewer_keywords:
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
 ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291036"
 ---
 # <a name="union-declarations"></a>联合声明
 
@@ -44,14 +44,14 @@ ms.locfileid: "56149253"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
 
-带 union 类型的变量存储该类型所定义的值之一。 相同的规则可控制结构和联合声明。 联合还可以具有位域。
+带 union  类型的变量存储该类型所定义的值之一。 相同的规则可控制结构和联合声明。 联合还可以具有位域。
 
 联合的成员不能包含不完整类型、类型 `void` 或函数类型。 因此，成员不能是联合的实例，但可以是指向将声明的联合类型的指针。
 
 联合类型声明只是一个模板。 不保留内存，直到声明变量。
 
 > [!NOTE]
-> 如果声明两个类型的联合并存储一个值，但使用其它类型访问该联合，则结果是不可靠的。 例如，声明 float 和 `int` 的联合。 存储一个 float 值，但程序稍后会将该值作为 `int` 进行访问。 在这种情况下，值取决于 float 值的内部存储。 整数值是不可靠的。
+> 如果声明两个类型的联合并存储一个值，但使用其它类型访问该联合，则结果是不可靠的。 例如，声明 float  和 `int` 的联合。 存储一个 float  值，但程序稍后会将该值作为 `int` 进行访问。 在这种情况下，值取决于 float  值的内部存储。 整数值是不可靠的。
 
 ## <a name="examples"></a>示例
 

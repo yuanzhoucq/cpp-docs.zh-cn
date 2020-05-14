@@ -6,11 +6,11 @@ helpviewer_keywords:
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
 ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233704"
 ---
 # <a name="expression-statement-c"></a>表达式语句 (C)
 
@@ -18,7 +18,7 @@ ms.locfileid: "56148785"
 
 ## <a name="syntax"></a>语法
 
-expression-statement：<br/>
+expression-statement  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
 
 在执行下一个语句前，完成表达式计算的所有副作用。 空表达式语句被称为 null 语句。 有关详细信息，请参阅 [Null 语句](../c-language/null-statement-c.md)。

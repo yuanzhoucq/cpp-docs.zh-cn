@@ -8,42 +8,42 @@ helpviewer_keywords:
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81749196"
 ---
 # <a name="conditional-expression-operator"></a>条件表达式运算符
 
-C 具有一个三元运算符：conditional-expression 运算符 (? :****)。
+C 具有一个三元运算符：conditional-expression 运算符 (? :  )。
 
 ## <a name="syntax"></a>语法
 
-*条件表达式*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*逻辑-OR表达式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *表达式*  **：**  *条件表达式*
+*conditional-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
 
-** logical-OR-expression 必须具有整型类型、浮点型或指针类型。 根据其等效性，其计算结果为 0。 序列点紧跟 logical-OR-expression**。 操作数的计算将继续，如下所示：
+ logical-OR-expression 必须具有整型类型、浮点型或指针类型。 根据其等效性，其计算结果为 0。 序列点紧跟 logical-OR-expression  。 操作数的计算将继续，如下所示：
 
-- 如果 logical-OR-expression** 不等于 0，则计算 expression**。 由非终止符 expression** 给定的表达式的计算结果。 （这意味着，仅当 logical-OR-expression** 为 true 时计算 expression**。）
+- 如果 logical-OR-expression  不等于 0，则计算 expression  。 由非终止符 expression  给定的表达式的计算结果。 （这意味着，仅当 logical-OR-expression  为 true 时计算 expression  。）
 
-- 如果 logical-OR-expression** 等于 0，则计算 conditional-expression**。 该表达式的结果是 conditional-expression** 的值。 （这意味着，仅当 logical-OR-expression** 为 false 时计算 conditional-expression**。）
+- 如果 logical-OR-expression  等于 0，则计算 conditional-expression  。 该表达式的结果是 conditional-expression  的值。 （这意味着，仅当 logical-OR-expression  为 false 时计算 conditional-expression  。）
 
-请注意，计算 expression** 或 conditional-expression**，但不同时计算二者。
+请注意，计算 expression  或 conditional-expression  ，但不同时计算二者。
 
-条件运算的结果类型取决于 expression** 或 conditional-expression** 操作数的类型，如下所示：
+条件运算的结果类型取决于 expression  或 conditional-expression  操作数的类型，如下所示：
 
-- 如果 expression** 或 conditional-expression** 具有整型类型或浮点型（其类型可不同），则运算符执行常用算术转换。 结果的类型是转换后操作数的类型。
+- 如果 expression  或 conditional-expression  具有整型类型或浮点型（其类型可不同），则运算符执行常用算术转换。 结果的类型是转换后操作数的类型。
 
-- 如果 expression** 和 conditional-expression** 都具有相同的结构、联合或指针类型，则结果的类型为相同的结构、联合或指针类型。
+- 如果 expression  和 conditional-expression  都具有相同的结构、联合或指针类型，则结果的类型为相同的结构、联合或指针类型。
 
 - 如果两个操作数都具有类型 `void`，则结果具有类型 `void`。
 
 - 如果其中一个操作数是指向任何类型的对象的指针，且另一个操作数是指向 `void` 的指针，则指向对象的指针将转换为指向 `void` 的指针，而结果是指向 `void` 的指针。
 
-- 如果 expression** 或 conditional-expression** 是指针，且另一个操作数是具有值 0 的常量表达式，则结果的类型为指针类型。
+- 如果 expression  或 conditional-expression  是指针，且另一个操作数是具有值 0 的常量表达式，则结果的类型为指针类型。
 
-在指针的类型比较中，指针指向的类型中的任何类型限定符（const**** 或 `volatile`）是无意义的，但结果类型从两个条件组件中继承限定符。
+在指针的类型比较中，指针指向的类型中的任何类型限定符（const  或 `volatile`）是无意义的，但结果类型从两个条件组件中继承限定符。
 
 ## <a name="examples"></a>示例
 

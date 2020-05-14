@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 4ee01013-de32-4aae-b12e-0051d0cde927
 ms.openlocfilehash: f118c4a7fee493793b1410cb26f6a0af571c5fcc
 ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71998703"
@@ -20,13 +20,13 @@ ms.locfileid: "71998703"
 
 - [从无符号整型的转换](../c-language/conversions-from-unsigned-integral-types.md)
 
-- [从浮点类型转换](../c-language/conversions-from-floating-point-types.md)
+- [从浮点类型的转换](../c-language/conversions-from-floating-point-types.md)
 
-- [与指针类型之间的转换](../c-language/conversions-to-and-from-pointer-types.md)
+- [指针类型之间的转换](../c-language/conversions-to-and-from-pointer-types.md)
 
-- [其他类型的转换](../c-language/conversions-from-other-types.md)
+- [从其他类型的转换](../c-language/conversions-from-other-types.md)
 
-虽然 const 左值不能在赋值的左侧使用，但类型限定符不会影响允许的转换。
+虽然 const  左值不能在赋值的左侧使用，但类型限定符不会影响允许的转换。
 
 ## <a name="see-also"></a>请参阅
 

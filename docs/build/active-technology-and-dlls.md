@@ -17,9 +17,9 @@ ms.locfileid: "65220996"
 ---
 # <a name="active-technology-and-dlls"></a>Active 技术和 DLL
 
-Active 技术使对象服务器得以在 DLL 内完全实现。 此类服务器称为进程内服务器。 MFC 不完全支持进程内服务器的可视化编辑的所有功能主要是因为 Active 技术不提供服务器挂接到容器的主消息循环的一种方法。 MFC 需要访问容器应用程序的消息循环来处理加速键和空闲处理。
+Active 技术使对象服务器得以在 DLL 内完全实现。 此类型的服务器称为进程内服务器。 MFC 不完全支持进程内服务器来实现可视编辑的所有功能，这主要是因为 Active 技术不提供使服务器挂钩到容器主消息循环中的方法。 MFC 需要访问容器应用程序的消息循环才能处理快捷键和空闲时间处理。
 
-如果你正在编写自动化服务器和你的服务器具有的用户界面，可以使您的服务器成为进程内服务器并将其完全置于 DLL。
+如果在编写自动化服务器而且该服务器没有用户界面，则可使该服务器成为进程内服务器并将其完全置于 DLL 中。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
@@ -27,4 +27,4 @@ Active 技术使对象服务器得以在 DLL 内完全实现。 此类服务器�
 
 ## <a name="see-also"></a>请参阅
 
-[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中创建 C/C++ DLL](dlls-in-visual-cpp.md)

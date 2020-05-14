@@ -7,14 +7,14 @@ f1_keywords:
 - PogoAutoSweepW
 ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
 ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/03/2019
 ms.locfileid: "67552246"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` 将当前的配置文件计数器信息保存到一个文件，然后将重置计数器。 在培训，以从到正在运行的程序编写所有配置文件数据的按配置优化期间使用函数`.pgc`以便以后用于优化生成的文件。
+`PgoAutoSweep` 将当前配置文件计数器信息保存到文件，然后重置计数器。 在按配置优化训练期间使用函数将所有配置文件数据从正在运行的程序写入到 `.pgc` 文件，以便以后在优化生成中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -26,19 +26,19 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>参数
 
 *name*<br/>
-已保存的标识字符串`.pgc`文件。
+保存的 `.pgc` 文件的标识字符串。
 
 ## <a name="remarks"></a>备注
 
-您可以调用`PgoAutoSweep`从你的应用程序，以保存并在应用程序执行期间重置任何位置的配置文件数据。 中的被检测生成`PgoAutoSweep`捕获当前分析数据、 将其保存在文件中，并将配置文件计数器重置。 它相当于调用[pgosweep](pgosweep.md)命令时可执行文件中的特定点。 在优化的生成，`PgoAutoSweep`不是执行任何操作。
+可以从应用程序调用 `PgoAutoSweep`，以在应用程序执行期间的任何点保存和重置配置文件数据。 在检测生成中，`PgoAutoSweep` 会捕获当前分析数据，将它保存在文件中，然后重置配置文件计数器。 它相当于在可执行文件中的特定点调用 [pgosweep](pgosweep.md) 命令。 在优化生成中，`PgoAutoSweep` 不执行任何操作。
 
-保存的配置文件计数器数据放置在名为的文件中*base_name*-*名称*！*值*.pgc，其中*base_name*是可执行文件的基名称*名称*参数传递给`PgoAutoSweep`，以及*值*是唯一的值，通常单调递增的数字，以避免文件名称冲突。
+保存的配置文件计数器数据会放置在一个名为 base_name-name!value.pgc    的文件中，其中 base_name  是可执行文件的基名称，name  是传递给 `PgoAutoSweep` 的参数，value  是唯一值，通常为单调递增的数字，用于防止文件名冲突。
 
-`.pgc`创建的文件`PgoAutoSweep`必须合并到`.pgd`文件以用于创建优化的可执行文件。 可以使用[pgomgr](pgomgr.md)命令来执行合并。
+`PgoAutoSweep` 创建的 `.pgc` 文件必须合并到用于创建优化可执行文件的 `.pgd` 文件中。 可以使用 [pgomgr](pgomgr.md) 命令执行合并。
 
-可以将传递的合并名称`.pgd`文件到链接器优化生成使用期间**PGD =** _filename_参数[/USEPROFILE](reference/useprofile.md)链接器选项，或通过使用已弃用 **/PGD**链接器选项。 如果你合并`.pgc`到名为的文件的文件*base_name*.pgd，您不必在命令行上指定文件名因为链接器默认情况下选取此文件的名称。
+通过对 [/USEPROFILE](reference/useprofile.md) 链接器选项使用 PGD=  filename  参数，或是使用已弃用的 /PGD  链接器选项，可以在优化生成期间将合并的 `.pgd` 文件的名称传递给链接器。 如果将 `.pgc` 文件合并到名为 base_name  .pgd 的文件中，则无需在命令行上指定文件名，因为默认情况下，链接器会选取此文件名。
 
-`PgoAutoSweep`函数维护创建检测的生成时指定的线程安全设置。 如果使用默认设置或指定了**NOEXACT**自变量[/GENPROFILE 或 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)链接器选项，调用`PgoAutoSweep`不是线程安全。 **EXACT**参数创建一个线程安全、 更准确，但速度较慢且经过检测的可执行文件。
+`PgoAutoSweep` 函数会维护在创建检测生成时指定的线程安全设置。 如果使用默认设置或是对 [/GENPROFILE 或 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) 链接器选项指定 NOEXACT  参数，则对 `PgoAutoSweep` 的调用不是线程安全的。 EXACT  参数可创建线程安全且更精确，但速度较慢的检测可执行文件。
 
 ## <a name="requirements"></a>要求
 
@@ -46,11 +46,11 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 |-------------|---------------------|
 |`PgoAutoSweep`|\<pgobootrun.h>|
 
-可执行文件必须 pgobootrun.lib 文件包含链接的库。 此文件包含在 Visual Studio 安装，每个受支持的体系结构的 VC 库目录中。
+可执行文件必须包含链接库中的 pgobootrun.lib 文件。 此文件包含在 Visual Studio 安装中（位于每个受支持体系结构的 VC 库目录）。
 
 ## <a name="example"></a>示例
 
-下面的示例使用`PgoAutoSweep`以创建两个`.pgc`文件在执行期间不同点。 第一个包含数据，用于描述直到运行时行为`count`等于 3，并且第二个包含之前只是应用程序终止前此点后收集的数据。
+下面的示例使用 `PgoAutoSweep` 在执行过程中的不同点创建两个 `.pgc` 文件。 第一个文件包含描述运行时行为的数据，直到 `count` 等于 3，第二个文件包含此点之后收集的数据，直到应用程序终止之前。
 
 ```cpp
 // pgoautosweep.cpp
@@ -97,15 +97,15 @@ int main()
 }
 ```
 
-在开发人员命令提示符中，使用以下命令编译对象文件的代码：
+在开发人员命令提示处，使用以下命令将代码编译为对象文件：
 
 `cl /c /GL /W4 /EHsc /O2 pgoautosweep.cpp`
 
-然后使用以下命令，生成用于定型的被检测的生成：
+然后使用以下命令生成用于训练的检测生成：
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-运行已检测的可执行文件，以捕获定型数据。 由调用的数据输出`PgoAutoSweep`保存在名为 pgoautosweep func1 文件 ！ 1.pgc 和 pgoautosweep func2 ！ 1.pgc。 程序的输出应如下所示运行：
+运行检测可执行文件以捕获训练数据。 调用 `PgoAutoSweep` 的数据输出保存在名为 pgoautosweep-func1!1.pgc 和 pgoautosweep-func2!1.pgc 的文件中。 程序在运行时的输出应如下所示：
 
 ```Output
 hello from func1 9
@@ -120,7 +120,7 @@ hello from func2 1
 hello from func2 0
 ```
 
-通过运行已保存的数据合并到配置文件训练数据库**pgomgr**命令：
+通过运行 pgomgr  命令将保存的数据合并到配置文件训练数据库中：
 
 `pgoautosweep-func1!1.pgc pgoautosweep-func2!1.pgc`
 
@@ -136,7 +136,7 @@ Merging pgoautosweep-func2!1.pgc
 pgoautosweep-func2!1.pgc: Used  3.8% (22424 / 589824) of total space reserved.  0.0% of the counts were dropped due to overflow.
 ```
 
-现在可以使用此训练数据来生成优化的生成。 使用以下命令来生成优化的可执行文件：
+现在可以使用此训练数据生成优化生成。 使用以下命令生成优化可执行文件：
 
 `link /LTCG /useprofile pgobootrun.lib pgoautosweep.obj`
 
@@ -160,5 +160,5 @@ Finished generating code
 
 ## <a name="see-also"></a>请参阅
 
-[按配置文件优化](profile-guided-optimizations.md)<br/>
+[按配置优化](profile-guided-optimizations.md)<br/>
 [pgosweep](pgosweep.md)<br/>

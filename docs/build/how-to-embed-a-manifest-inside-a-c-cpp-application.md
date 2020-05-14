@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
 ms.openlocfilehash: 2f125ee445d4ee9efdf21c37134d4c5adbca256d
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81322978"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将清单嵌入到 C/C++ 应用程序
 
-我们建议您将应用程序或库的清单嵌入到最终二进制文件中，因为这保证了在大多数情况下正确的运行时行为。 默认情况下，Visual Studio 尝试在生成项目时嵌入清单。 有关详细信息，请参阅[可视化工作室中的"清单生成](manifest-generation-in-visual-studio.md)"。 但是，如果使用 nmake 构建应用程序，则必须对 makefile 进行一些更改。 本节演示如何更改 makefile，以便它自动将清单嵌入到最终二进制文件中。
+建议将应用程序或库的清单嵌入到最终二进制文件中，因为这可在大多数情况下确保正确的运行时行为。 默认情况下，Visual Studio 在生成项目时将尝试嵌入清单。 有关详细信息，请参阅 [Visual Studio 中的清单生成](manifest-generation-in-visual-studio.md)。 但是，如果使用 nmake 生成应用程序，则必须对生成文件进行一些更改。 本节演示如何更改生成文件，使它自动将清单嵌入到最终二进制文件中。
 
 ## <a name="two-approaches"></a>两种方法
 
-有两种方法可以将清单嵌入到应用程序或库中。
+可以通过两种方法在应用程序或库中嵌入清单。
 
-- 如果不执行增量生成，则可以使用类似于以下内容的命令行直接嵌入清单作为生成后步骤：
+- 如果不执行增量生成，则可以通过将类似于以下内容的命令行用作后期生成步骤来直接嵌入清单：
 
    ```cmd
    mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
@@ -33,7 +33,7 @@ ms.locfileid: "81322978"
    mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
    ```
 
-   EXE 使用 1，对 DLL 使用 2。
+   对于 EXE 使用 1，对 DLL 使用 2。
 
 - 如果要执行增量生成，请使用以下步骤：
 
@@ -41,13 +41,13 @@ ms.locfileid: "81322978"
 
   - 将清单转换为资源文件。
 
-  - 重新链接（增量）以将清单资源嵌入到二进制文件中。
+  - 重新链接（以增量方式），以将清单资源嵌入到二进制文件中。
 
-以下示例演示如何更改 makefile 以合并这两种技术。
+以下示例演示如何更改生成文件以结合使用这两种方法。
 
-## <a name="makefiles-before"></a>制作文件（之前）
+## <a name="makefiles-before"></a>生成文件（之前）
 
-请考虑 MyApp.exe 的 nmake 脚本，这是一个从一个文件构建的简单应用程序：
+考虑从一个文件生成的简单应用程序 MyApp.exe 的 nmake 脚本：
 
 ```
 # build MyApp.exe
@@ -67,9 +67,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-如果此脚本在 Visual Studio 下运行不变，则已成功创建 MyApp.exe。 它还创建外部清单文件 MyApp.exe.manifest，供操作系统在运行时加载从属程序集。
+如果在未更改的情况下使用 Visual Studio 运行此脚本，则会成功创建 MyApp.exe。 它还会创建外部清单文件 MyApp.exe.manifest，供操作系统用于在运行时加载依赖程序集。
 
-MyLibrary.dll 的 nmake 脚本看起来非常类似：
+MyLibrary.dll 的 nmake 脚本非常相似于以下内容：
 
 ```
 # build MyLibrary.dll
@@ -92,9 +92,9 @@ clean :
     del MyLibrary.obj MyLibrary.dll
 ```
 
-## <a name="makefiles-after"></a>制作文件（之后）
+## <a name="makefiles-after"></a>生成文件（之后）
 
-要使用嵌入的清单构建，您必须对原始 makefile 进行四个小更改。 对于 MyApp.exe 制作文件：
+若要使用嵌入清单进行生成，必须对原始生成生成进行四个小更改。 对于 MyApp.exe 生成文件：
 
 ```
 # build MyApp.exe
@@ -124,7 +124,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-对于 MyLibrary.dll 制作文件：
+对于 MyLibrary.dll 生成文件：
 
 ```
 # build MyLibrary.dll
@@ -157,9 +157,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-makefile 现在包括两个文件，做真正的工作， 使file.inc 和 makefile.targ.inc.
+生成文件现在包含两个执行实际工作的文件，即 makefile.inc 和 makefile.targ.inc。
 
-创建 makefile.inc 并将其复制到其中：
+创建 makefile.inc，并将以下内容复制到其中：
 
 ```
 # makefile.inc -- Include this file into existing makefile at the very top.
@@ -230,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-现在创建**makefile.targ.inc**并将其复制到其中：
+现在创建 makefile.targ.inc  ，并将以下内容复制到其中：
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile
@@ -257,6 +257,6 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [了解 C/C++ 程序的清单生成](understanding-manifest-generation-for-c-cpp-programs.md)

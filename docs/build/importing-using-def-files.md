@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
 ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273412"
 ---
 # <a name="importing-using-def-files"></a>使用 DEF 文件导入
 
-如果您选择使用 **__declspec （dllimport)** .def 文件，以及应更改.def 文件以使用代替常量的数据来减少不正确编码会引起问题的可能性：
+如果选择将“__declspec(dllimport)”与 .def 文件一起使用，则应将 .def 文件更改为使用 DATA 代替 CONSTANT，以降低错误编码导致问题的可能性  ：
 
 ```
 // project.def
@@ -26,16 +26,16 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-下表显示了原因。
+下表说明了原因。
 
-|关键字|发出中的导入库|导出|
+|关键字|在导入库中发出|导出|
 |-------------|---------------------------------|-------------|
-|`CONSTANT`|`_imp_ulDataInDll`， `_ulDataInDll`|`_ulDataInDll`|
+|`CONSTANT`|`_imp_ulDataInDll`，`_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-使用 **__declspec （dllimport)** 同时列出了常量和`imp`版本和.lib DLL 中的未修饰的名称导入创建以允许在显式链接的库。 使用 **__declspec （dllimport)** 和数据列表只是`imp`版本的名称。
+使用“__declspec(dllimport)”和 CONSTANT 可列出为允许显式链接而创建的 .lib DLL 导入库中的 `imp` 版本和未修饰名  。 使用“__declspec(dllimport)”和 DATA 只能列出名称的 `imp` 版本  。
 
-如果使用常量时，可以使用以下代码构造之一访问`ulDataInDll`:
+如果使用 CONSTANT，则可以使用以下任一代码构造来访问 `ulDataInDll`：
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
@@ -49,7 +49,7 @@ ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-但是，如果在.def 文件中使用数据，仅使用以下定义编译的代码可以访问该变量`ulDataInDll`:
+但如果使用 .def 文件中的 DATA，则只有使用下面的定义编译的代码才能访问变量 `ulDataInDll`：
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,9 +57,9 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-使用常量是更大风险，因为如果你忘记了使用额外级别的间接寻址，可能无法访问导入地址表指向的变量，该变量。 由于导入地址表当前通过只读的编译器和链接器，此类问题可能通常表现为访问冲突。
+使用 CONSTANT 的风险更大，因为如果忘记使用额外级别的间接寻找，则访问的有可能是指向变量的导入地址表的指针，而不是变量本身。 由于导入地址表当前被编译器和链接器设置成了只读，因此这类问题经常表现为访问冲突。
 
-如果它发现的.def 文件中的常量来应对这种情况下，当前 MSVC 链接器会发出警告。 使用常量的唯一的真正原因是如果您不能重新编译的头文件中未列出某些对象文件 **__declspec （dllimport)** 原型上。
+如果当前 MSVC 链接器发现 .def 文件中的 CONSTANT 是导致上述问题的原因，它将发出警告。 使用 CONSTANT 的唯一真正原因是：无法对头文件未在原型上列出“__declspec(dllimport)”的某个对象文件进行重新编译  。
 
 ## <a name="see-also"></a>请参阅
 

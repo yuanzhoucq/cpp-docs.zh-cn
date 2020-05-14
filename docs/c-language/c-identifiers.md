@@ -10,11 +10,11 @@ helpviewer_keywords:
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325658"
 ---
 # <a name="c-identifiers"></a>C 标识符
 
@@ -38,17 +38,17 @@ int main()
 
 ## <a name="syntax"></a>语法
 
-identifier：<br/>
+identifier  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
 *nondigit*：以下之一：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L MN O P Q R S T U V W X Y Z**
 
 *digit*：以下之一：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7 8 9
+&nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7 8 9 
 
 标识符名称的第一个字符必须是 `nondigit`（即，第一个字符必须是下划线、大写字母或小写字母）。 ANSI 允许外部标识符名称包含 6 个有效字符，内部（一个函数中）标识符名称包含 31 个有效字符。 外部标识符（在全局范围内或使用存储类 `extern` 进行声明）可能要受其他命名限制的约束，因为这些标识符必须由其他软件（如链接器）处理。
 

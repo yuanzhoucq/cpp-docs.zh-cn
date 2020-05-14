@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
 ms.openlocfilehash: 88afb41205e63a837d7bc134133c3c36eccf5dc1
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493174"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概述
 
-非 MFC DLL 是不在内部使用 MFC 的 DLL, 并且 DLL 中的导出函数可以由 MFC 或非 MFC 可执行文件调用。 函数通常使用标准 C 接口从非 MFC DLL 导出。
+非 MFC DLL 是不在内部使用 MFC 的 DLL，DLL 中的导出函数可以由 MFC 或非 MFC 可执行文件调用。 通常使用标准 C 接口从非 MFC DLL 导出函数。
 
-有关非 MFC Dll 的详细信息, 请参阅 Windows SDK 中的[动态链接库](/windows/win32/dlls/dynamic-link-libraries)。
+有关非 MFC DLL 的详细信息，请参阅 Windows SDK 中的[动态链接库](/windows/win32/dlls/dynamic-link-libraries)。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
@@ -30,9 +30,9 @@ ms.locfileid: "69493174"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [静态链接到 MFC 的规则 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC DLL](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC 扩展 DLL：概述](extension-dlls-overview.md)
 

@@ -17,32 +17,32 @@ ms.locfileid: "65220639"
 ---
 # <a name="importing-and-exporting"></a>导入和导出
 
-可以将公共符号导入到应用程序，也可以使用两种方法从 DLL 导出函数：
+可以使用两种方法将公共符号导入应用程序或从 DLL 导出函数：
 
-- 当生成 DLL 时使用的模块定义 (.def) 文件
+- 生成 DLL 时使用模块定义 (.def) 文件
 
-- 使用关键字 **__declspec （dllimport)** 或 **__declspec （dllexport)** 主应用程序中函数定义中
+- 在主应用程序的函数定义中使用关键字 __declspec(dllimport)  或 __declspec(dllexport) 
 
-## <a name="using-a-def-file"></a>使用.def 文件
+## <a name="using-a-def-file"></a>使用 .def 文件
 
-模块定义 (.def) 文件是包含一个或多个描述 DLL 各种特性的 module 语句的文本文件。 如果不使用 **__declspec （dllimport)** 或 **__declspec （dllexport)** 若要导出的 DLL 函数，则 DLL 需要.def 文件。
+模块定义 (.def) 文件是文本文件，其中包含一个或多个描述 DLL 的各种特性的模块语句。 如果不使用 __declspec(dllimport)  或 __declspec(dllexport)  导出 DLL 的函数，则 DLL 需要 .def 文件。
 
-可以使用.def 文件复制到[导入应用程序](importing-using-def-files.md)或设置为[从 DLL 导出](exporting-from-a-dll-using-def-files.md)。
+可以使用 .def 文件[导入到应用程序中](importing-using-def-files.md)或[从 DLL 导出](exporting-from-a-dll-using-def-files.md)。
 
-## <a name="using-declspec"></a>使用 __declspec
+## <a name="using-__declspec"></a>使用 __declspec
 
-不需要使用 **__declspec （dllimport)** 为你的代码来正确编译，但执行此操作允许编译器生成更好的代码。 编译器就能够生成更好的代码，因为它可以确定函数中是否存在一个 DLL，它允许编译器以生成将跳过一定程度的间接性通常会出现跨 DLL 边界函数调用中的代码。 但是，必须使用 **__declspec （dllimport)** 导入一个 DLL 中使用的变量。
+无需使用 __declspec(dllimport)  即可正确编译代码，但使用它会使编译器生成更好的代码。 编译器能够生成更好的代码，因为它可以确定某个函数是否存在于 DLL 中，这使编译器生成的代码可以跳过在跨越 DLL 边界的函数调用中通常存在的间接级别。 但是，必须使用 __declspec(dllimport)  导入 DLL 中使用的变量。
 
-使用适当的.def 文件导出部分中， **__declspec （dllexport)** 不是必需的。 **__declspec （dllexport)** 添加了以可以方便地从.exe 或.dll 文件中导出函数，而无需使用.def 文件。
+使用正确的 .def 文件 EXPORTS 节时，不需要 __declspec(dllexport)  。 添加了 __declspec(dllexport)  以提供一种简单方法，用于在不使用 .def 文件的情况下从 .exe 或 .dll 文件导出函数。
 
-Win32 可移植可执行文件格式设计为最大程度减少必须打开，以修复导入的页面数。 若要执行此操作，它将在一个位置调用导入地址表中的任何程序的所有导入地址。 这样，要访问这些导入时修改只能将一个或两个页面的加载程序。
+Win32 可移植可执行文件格式旨在最大程度减少修复导入所必须涉及的页数。 为此，它将任何程序的所有导入地址都放置在一个名为导入地址表的位置。 这使加载程序可以在访问这些导入时仅修改一页或两页。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [导入到应用程序](importing-into-an-application-using-declspec-dllimport.md)
+- [导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
 - [从 DLL 导出](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>请参阅
 
-[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中创建 C/C++ DLL](dlls-in-visual-cpp.md)

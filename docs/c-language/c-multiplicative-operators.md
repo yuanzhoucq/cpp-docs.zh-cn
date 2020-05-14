@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
 ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81334996"
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法运算符
 
-乘法运算符执行乘法 （<strong>\*</strong>）、除法 （**/**） 和**%** 剩余 （ ） 操作。
+乘法运算符执行乘法 (<strong>\*</strong>)、除法 (/) 和余数 (%) 运算   。
 
 ## <a name="syntax"></a>语法
 
-*multiplicative-expression*: &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **%** *cast-expression*
+*multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
 
-其余运算符 （**%**） 的操作符必须为整数。 乘法 （<strong>\*</strong>） 和除**/** 法 （ ） 运算符可以采用积分或浮动类型操作数;操作数的类型可能不同。
+余数操作符 (%) 的操作数必须是整数  。 乘法 (\*) 和除法 (/  ) 运算符可采用整型或浮点类型操作数；操作数的类型可以是不同的。
 
 乘法运算符对操作数执行常用算术转换。 结果的类型是转换后操作数的类型。
 
@@ -35,11 +35,11 @@ ms.locfileid: "81334996"
 
 C 乘法运算符的描述如下：
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |<strong>\*</strong>|乘法运算符使其两个操作数相乘。|
-|**/**|除法运算符使第一个操作数除以第二个操作数。 如果两个整数操作数相除，结果不是整数，则根据下列规则截断它：<br/><br/>- 根据 ANSI C 标准，被 0 除的结果是不确定的。 Microsoft C 编译器将在编译时或运行时生成错误。<br/><br/>- 如果两个操作数都为正或无符号，则结果将截断到 0。<br/><br/>- 如果其中一个操作数为负，则不管操作结果是小于或等于代数商的最大整数还是大于或等于代数商的最小整数，结果均为定义的实现。 （请参阅下面的 Microsoft 特定部分。|
-|**%**|第一个操作数除以第二个操作数时，余数运算符的结果是余数。 如果除法不精确，则结果将由下列规则确定：<br/><br/>- 如果右操作数为零，则结果是不确定的。<br/><br/>- 如果两个操作数均为正或无符号，则结果为正。<br/><br/>- 如果其中一个操作数为负，并且结果不精确，则结果将是定义的实现。 （请参阅下面的 Microsoft 特定部分。|
+|**/**|除法运算符使第一个操作数除以第二个操作数。 如果两个整数操作数相除，结果不是整数，则根据下列规则截断它：<br/><br/>- 根据 ANSI C 标准，被 0 除的结果是不确定的。 Microsoft C 编译器将在编译时或运行时生成错误。<br/><br/>- 如果两个操作数都为正或无符号，则结果将截断到 0。<br/><br/>- 如果其中一个操作数为负，则不管操作结果是小于或等于代数商的最大整数还是大于或等于代数商的最小整数，结果均为定义的实现。 （请参阅下面的 Microsoft 专用部分。）|
+|**%**|第一个操作数除以第二个操作数时，余数运算符的结果是余数。 如果除法不精确，则结果将由下列规则确定：<br/><br/>- 如果右操作数为零，则结果是不确定的。<br/><br/>- 如果两个操作数均为正或无符号，则结果为正。<br/><br/>- 如果其中一个操作数为负，并且结果不精确，则结果将是定义的实现。 （请参阅下面的 Microsoft 专用部分。）|
 
 ### <a name="microsoft-specific"></a>Microsoft 专用
 
@@ -62,7 +62,7 @@ double x = 2.0, y;
 y = x * i;
 ```
 
-在此示例中，`x` 乘以 `i` 将得到值 20.0。 结果为 **** double 类型。
+在此示例中，`x` 乘以 `i` 将得到值 20.0。 结果为  double 类型。
 
 ```
 n = i / j;
@@ -76,7 +76,7 @@ n = i % j;
 
 当 10 除以 3 时，此语句为 `n` 分配整数余数 1。
 
-**微软特定**
+**Microsoft 专用**
 
 余数的符号与被除数的符号相同。 例如：
 
@@ -87,8 +87,8 @@ n = i % j;
 
 在所有情况下，`50` 和 `2` 具有相同的符号。
 
-**结束微软特定**
+**结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [乘法运算符和取模运算符](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -17,17 +17,17 @@ ms.locfileid: "65220577"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>动态链接到 MFC 的规则 MFC DLL 的模块状态
 
-动态链接到 MFC DLL 的正则表达式 MFC DLL 的能力使一些非常复杂的配置。 例如，规则 MFC DLL 并使用它的可执行文件可以同时动态链接到 MFC DLL 和任何 MFC 扩展 Dll。
+通过将规则 MFC DLL 动态链接到 MFC DLL 的功能可以实现一些非常复杂的配置。 例如，规则 MFC DLL 和使用它的可执行文件可以动态链接到 MFC DLL 和任何 MFC 扩展 DLL。
 
-此配置会引起问题方面 MFC 全局数据，例如当前指向`CWinApp`对象和句柄的映射。
+此配置会对 MFC 全局数据（例如指向当前 `CWinApp` 对象的指针和句柄映射）造成问题。
 
-之前 MFC 4.0 版中，此全局数据驻留在 MFC DLL 本身，并且在进程中共享所有模块。 使用 Win32 DLL 的每个进程获取其自己的 DLL 的数据副本，因为此方案提供跟踪每个进程的数据的简单方法。 此外，因为 AFXDLL 模型假定，会有一个`CWinApp`对象和只有一组处理过程中的映射，这些项可以跟踪在 MFC DLL 本身。
+在 MFC 版本 4.0 之前，此全局数据驻留在 MFC DLL 本身中，由进程中的所有模块共享。 因为使用 Win32 DLL 的每个进程都会获取自己的 DLL 数据副本，所以此方案提供了一种简单方法来跟踪每个进程的数据。 此外，由于 AFXDLL 模型假定在进程中只有一个 `CWinApp` 对象和一组句柄映射，因此可以在 MFC DLL 本身中跟踪这些项。
 
-但能够动态链接到 MFC DLL 的规则 MFC DLL，则现在可以有两个或多个`CWinApp`进程中的对象，和的句柄映射还两个或多个集。 如何 does MFC 跟踪的应使用哪些功能？
+但通过将规则 MFC DLL 动态链接到 MFC DLL 的功能，现在一个进程中可以有两个或更多 `CWinApp` 对象，还可以有两组或更多句柄映射。 MFC 如何跟踪应使用的内容？
 
-解决方案是为每个模块 （应用程序或规则 MFC DLL） 提供其自己此全局状态信息的副本。 因此，调用**AfxGetApp**常规 MFC DLL 返回一个指向`CWinApp`在 DLL 中，不是可执行文件中的对象。 MFC 中的全局数据的此每个模块的副本称为模块状态和中所述[MFC 技术说明 58](../mfc/tn058-mfc-module-state-implementation.md)。
+解决方案是为每个模块（应用程序或规则 MFC DLL）提供其自己的这些全局状态信息的副本。 因此，在规则 MFC DLL 中对 AfxGetApp  的调用会返回指向 DLL 中的 `CWinApp` 对象（而不是可执行文件中的对象）的指针。 MFC 全局数据的这一每模块副本称为模块状态，在 [MFC 技术说明 58](../mfc/tn058-mfc-module-state-implementation.md) 中进行了介绍。
 
-MFC 公共窗口过程会自动切换到正确的模块的状态，因此不需要担心在规则 MFC DLL 中实现任何消息处理程序。 但当可执行文件调用到规则 MFC DLL 时，需要显式将当前模块状态设置为 dll。 若要执行此操作，请使用**AFX_MANAGE_STATE**从 DLL 导出的每个函数中的宏。 这是通过将以下代码行添加到从 DLL 导出的函数的开头：
+MFC 公共窗口过程会自动切换到正确的模块状态，因此无需在规则 MFC DLL 中实现的任何消息处理程序中考虑它。 但是，当可执行文件调入规则 MFC DLL 时，需要将当前模块状态显式设置为 DLL 的模块状态。 为此，请在从 DLL 导出的每个函数中使用 AFX_MANAGE_STATE  宏。 这通过将以下代码行添加到从 DLL 导出的函数的开头来实现：
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
@@ -35,12 +35,12 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [管理 MFC 模块状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
+- [管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC 扩展 DLL](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>请参阅
 
-[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中创建 C/C++ DLL](dlls-in-visual-cpp.md)
