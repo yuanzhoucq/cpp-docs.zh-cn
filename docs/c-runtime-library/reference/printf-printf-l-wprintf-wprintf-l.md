@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950196"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759233"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -80,7 +80,7 @@ int _wprintf_l(
 *format*<br/>
 设置控件格式。
 
-*实际*<br/>
+argument <br/>
 可选参数。
 
 *locale*<br/>
@@ -92,13 +92,13 @@ int _wprintf_l(
 
 有关**errno**和错误代码的信息，请参阅[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Printf**函数设置格式并将一系列字符和值输出到标准输出流（ **stdout**）。 如果参数跟在*格式*字符串之后，*格式*字符串必须包含确定自变量的输出格式的规范。 **printf**和[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)的行为相同，只不过**printf**将输出写入到**stdout** ，而不是写入到类型**文件**的目标。
 
 **wprintf**是**printf**的宽字符版本;*格式*是宽字符字符串。 如果在 ANSI 模式下打开流，则**wprintf**和**printf**的行为相同。 **printf**当前不支持输出到 UNICODE 流中。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -122,7 +122,7 @@ Line one
 [格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)始终以百分号（ **%** ）开头，并从左向右读取。 当**printf**遇到第一个格式规范（如果有）时，它会在*格式*后转换第一个参数的值，并对其进行相应的输出。 第二个格式规范致使第二个自变量转换并输出，依此类推。 如果存在比格式规范更多的自变量，则多出的自变量将被忽略。 如果全部格式规范没有足够自变量，则结果不确定。
 
 > [!IMPORTANT]
-> 确保 format不是用户定义的字符串。
+> 确保 format ** 不是用户定义的字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -135,10 +135,10 @@ Line one
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**printf**、 **_printf_l**|\<stdio.h>|
+|**printf**， **_printf_l**|\<stdio.h>|
 |**wprintf**、 **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -226,14 +226,15 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
+[格式规范语法： printf 和 wprintf 函数](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
-[fopen、_wfopen_wfopen](fopen-wfopen.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[fopen、_wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vprintf 函数](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
