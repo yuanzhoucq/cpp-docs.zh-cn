@@ -63,7 +63,7 @@ S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlbase。h
+**标头:** atlbase.h
 
 ##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection
 

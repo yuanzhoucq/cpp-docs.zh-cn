@@ -129,7 +129,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlbase。h
+**标头:** atlbase.h
 
 ##  <a name="catlservicemodulet"></a>CAtlServiceModuleT:: CAtlServiceModuleT
 

@@ -66,7 +66,7 @@ ATL 使用 `CComPtr` 和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)管�
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase。h
+**标头：** atlbase.h
 
 ## <a name="ccomptr"></a>CComPtr：： CComPtr
 

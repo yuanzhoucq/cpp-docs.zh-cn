@@ -100,7 +100,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlbase。h
+**标头:** atlbase.h
 
 ##  <a name="catlexemodulet"></a>Catlexemodulet 用作:: Catlexemodulet 用作
 

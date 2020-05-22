@@ -43,7 +43,7 @@ class CComAllocator
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlbase。h
+**标头:** atlbase.h
 
 ##  <a name="allocate"></a>CComAllocator:: Allocate
 
