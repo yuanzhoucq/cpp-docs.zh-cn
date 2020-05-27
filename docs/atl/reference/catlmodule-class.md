@@ -84,7 +84,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlbase。h
+**标头:** atlbase.h
 
 ##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements
 

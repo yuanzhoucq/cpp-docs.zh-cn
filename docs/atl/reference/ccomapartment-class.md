@@ -67,7 +67,7 @@ class CComApartment
 
 ## <a name="requirements"></a>需求
 
-**标头：** atlbase。h
+**标头：** atlbase.h
 
 ##  <a name="apartment"></a>CComApartment：：公寓
 

@@ -52,7 +52,7 @@ class Win32ThreadTraits
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlbase。h
+**标头:** atlbase.h
 
 ##  <a name="createthread"></a>Win32ThreadTraits:: CreateThread
 
