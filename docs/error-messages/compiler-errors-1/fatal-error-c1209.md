@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1209
 ms.assetid: aa9ee10f-abe3-4683-9792-adca4cbbabb5
-ms.openlocfilehash: 8b23ae3459178937c6af7ccb5c8ee882dd508c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0948debc2573ace269419641ca8facd495792341
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375062"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203432"
 ---
 # <a name="fatal-error-c1209"></a>错误 C1209
 
@@ -23,4 +23,4 @@ ms.locfileid: "62375062"
 
 若要解决 C1209，请安装随正在使用的编译器附带的公共语言运行时。
 
-有关详细信息，请参阅[友元程序集 (C++)](../../dotnet/friend-assemblies-cpp.md)。
+有关详细信息，请参阅[友元C++程序集（）](../../dotnet/friend-assemblies-cpp.md)。

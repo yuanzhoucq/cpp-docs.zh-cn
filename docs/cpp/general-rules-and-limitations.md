@@ -2,12 +2,12 @@
 title: 一般规则和限制
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 3bd8956b08d3e5f2109c5574802a3a8a72fba537
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1adbaf9d9be3a0fc0724603e01b81700554839bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188581"
 ---
 # <a name="general-rules-and-limitations"></a>一般规则和限制
 
@@ -25,7 +25,7 @@ ms.locfileid: "74857523"
                                      // dllexport takes precedence.
     ```
 
-- C++ 中，你可以初始化全局声明或静态局部数据指针或与声明的数据对象的地址**dllimport**属性，会生成错误。 在 c。此外，你可以在其中初始化声明的函数与的地址的静态局部函数指针**dllimport**属性。 在 C 中，此类赋值会将指针设置为指向 DLL 导入形式转换 (thunk)（将控制权转交给函数的代码存根）的地址而不是函数的地址。 在 C++ 中，此类赋值会将指针设置为指向函数的地址。 例如：
+- 在C++中，您可以使用使用**dllimport**特性声明的数据对象的地址初始化全局声明或静态本地数据指针，也可以在 C 中生成错误。此外，还可以使用使用**dllimport**特性声明的函数的地址初始化静态本地函数指针。 在 C 中，此类赋值会将指针设置为指向 DLL 导入形式转换 (thunk)（将控制权转交给函数的代码存根）的地址而不是函数的地址。 在 C++ 中，此类赋值会将指针设置为指向函数的地址。 例如：
 
     ```cpp
     __declspec( dllimport ) void func1( void );

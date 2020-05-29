@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20d4586c1ae45e5f3f56c0adbb1ecb1757084fd7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389562"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752330"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 类
 
@@ -35,17 +35,17 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|构造 `CHtmlEditView` 对象。|
+|[Html编辑视图：CHtmlEditView](#chtmleditview)|构造 `CHtmlEditView` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|创建新的窗口对象。|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|返回`IHTMLDocument2`当前文档上的接口。|
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|检索此视图的默认文档名称。|
+|[CHtmlEditView：创建](#create)|创建新窗口对象。|
+|[CHtml编辑视图：获取Html文档](#getdhtmldocument)|返回`IHTMLDocument2`当前文档上的接口。|
+|[CHtmlEditView：获取开始文件](#getstartdocument)|检索此视图的默认文档的名称。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -71,7 +71,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 **标头：** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>Html编辑视图：CHtmlEditView
 
 构造 `CHtmlEditView` 对象。
 
@@ -79,9 +79,9 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView：创建
 
-创建新的窗口对象。
+创建新窗口对象。
 
 ```
 virtual BOOL Create(
@@ -96,32 +96,32 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*lpszClassName*<br/>
-指向以 null 结尾的字符串命名的 Windows 类。 类名可以是任何名称与注册[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数或`RegisterClass`Windows 函数。 如果为 NULL，将使用预定义的默认[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。
+*lpszClass名称*<br/>
+指向命名 Windows 类的 null 端接字符串。 类名称可以是注册到[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数或`RegisterClass`Windows 函数的任何名称。 如果为 NULL，则使用预定义的默认[CFramewnd](../../mfc/reference/cframewnd-class.md)属性。
 
-*lpszWindowName*<br/>
-指向以 null 结尾的字符串的字符串表示窗口名称。
+*lpsz窗口名称*<br/>
+指向表示窗口名称的 null 端接字符串。
 
 *dwStyle*<br/>
-指定的窗口样式特性。 默认情况下，设置 WS_VISIBLE 和 WS_CHILD Windows 样式。
+指定窗口样式属性。 默认情况下，将设置WS_VISIBLE和WS_CHILD Windows 样式。
 
-*rect*<br/>
-对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定的大小和窗口的位置。 *RectDefault*值，则允许 Windows 指定大小和新窗口的位置。
+*矩形*<br/>
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用，指定窗口的大小和位置。 *rectDefault*值允许 Windows 指定新窗口的大小和位置。
 
-*pParentWnd*<br/>
+*pparentwnd*<br/>
 指向控件的父窗口的指针。
 
 *nID*<br/>
-视图的 ID 号。 默认情况下，设置为 AFX_IDW_PANE_FIRST。
+视图的 ID 号。 默认情况下，设置为AFX_IDW_PANE_FIRST。
 
 *pContext*<br/>
-一个指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 默认情况下为 NULL。
+指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)的指针。 默认情况下为 NULL。
 
 ### <a name="remarks"></a>备注
 
-此方法还将调用包含的 WebBrowser`Navigate`方法以加载默认文档 (请参阅[CHtmlEditView::GetStartDocument](#getstartdocument))。
+此方法还将调用包含的`Navigate`WebBrowser 方法来加载默认文档（请参阅[CHtmlEditView：：getStartDocument）。](#getstartdocument)
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtml编辑视图：获取Html文档
 
 返回`IHTMLDocument2`当前文档上的接口。
 
@@ -134,9 +134,9 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 *ppDocument*<br/>
 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))接口。
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView：获取开始文件
 
-检索此视图的默认文档名称。
+检索此视图的默认文档的名称。
 
 ```
 virtual LPCTSTR GetStartDocument();
@@ -144,5 +144,5 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>请参阅
 
-[HTMLEdit 示例](../../overview/visual-cpp-samples.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)
+[HTML编辑示例](../../overview/visual-cpp-samples.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)

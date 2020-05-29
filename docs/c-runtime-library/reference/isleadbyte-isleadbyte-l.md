@@ -1,9 +1,11 @@
 ---
 title: isleadbyte、_isleadbyte_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isleadbyte_l
 - isleadbyte
+- _o__isleadbyte_l
+- _o_isleadbyte
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954315"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909548"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
@@ -54,7 +57,7 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
 ## <a name="return-value"></a>返回值
@@ -67,7 +70,9 @@ int _isleadbyte_l( int c );
 
 **Isleadbyte**的预期参数类型为**int**;如果传递了带符号的字符，编译器可能会通过符号扩展将其转换为整数，从而产生不可预知的结果。
 
-此函数与 **_l**后缀的版本相同，只不过它使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。
+带有 **_l**后缀的此函数的版本是相同的，只不过它使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -77,15 +82,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字节分类](../../c-runtime-library/byte-classification.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

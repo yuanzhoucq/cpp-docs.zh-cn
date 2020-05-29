@@ -1,39 +1,39 @@
 ---
-title: 使用包含的 Windows
+title: 使用包含的窗口
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 - contained windows in ATL
 ms.assetid: 7b3d79e5-b569-413f-9b98-df4f14efbe2b
-ms.openlocfilehash: 2b9a36c6aac80a7c77cde102d6da93c51788e4e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da765eae28d411c98e79af5b9173f48ea66ef8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198598"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329307"
 ---
-# <a name="using-contained-windows"></a>使用包含的 Windows
+# <a name="using-contained-windows"></a>使用包含的窗口
 
-ATL 实现与包含的 windows [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)。 包含的窗口表示委托给容器对象，而不是在其自己的类中处理这些消息的窗口。
+ATL 实现包含包含具有[C 包含窗口的窗口](../atl/reference/ccontainedwindowt-class.md)。 包含的窗口表示一个窗口，该窗口将其消息委托给容器对象，而不是在自己的类中处理它们。
 
 > [!NOTE]
->  不需要从派生类`CContainedWindowT`若要使用包含的窗口。
+> 不需要派生`CContainedWindowT`类，以便使用包含的窗口。
 
-使用包含的窗口，您可以创建超类现有的 Windows 类或子类现有窗口。 若要创建窗口创建超类现有的 Windows 类中，第一次的构造函数中指定现有的类名`CContainedWindowT`对象。 然后，调用`CContainedWindowT::Create`。 为现有窗口的子类，不需要指定 Windows 类名称 （向构造函数传递 NULL）。 只需调用`CContainedWindowT::SubclassWindow`与正在子类化窗口的句柄的方法。
+使用包含的窗口，可以超类现有 Windows 类或子类现有窗口。 要创建一个将现有 Windows 类类类超级类的窗口，请先在`CContainedWindowT`对象的构造函数中指定现有类名称。 然后调用`CContainedWindowT::Create`。 要对现有窗口进行子类设置，不需要指定 Windows 类名称（将 NULL 传递给构造函数）。 只需调用`CContainedWindowT::SubclassWindow`方法，对正在下类的窗口的句柄进行调用。
 
-您通常用作容器类的数据成员包含的窗口。 容器不需要是窗口;但是，它必须派生自[CMessageMap](../atl/reference/cmessagemap-class.md)。
+通常使用包含的窗口作为容器类的数据成员。 容器不需要是窗口;因此，容器不需要是窗口。但是，它必须派生自[CMessageMap](../atl/reference/cmessagemap-class.md)。
 
-包含的窗口可以使用备用消息映射来处理其消息。 如果有多个包含的窗口，您应声明多个备用消息映射，每个对应于包含单独的窗口。
+包含的窗口可以使用备用消息映射来处理其消息。 如果有多个包含的窗口，则应声明多个备用消息映射，每个映射对应于一个单独的包含窗口。
 
 ## <a name="example"></a>示例
 
-以下是具有两个包含的窗口的容器类的示例：
+下面是包含两个包含窗口的容器类的示例：
 
 [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]
 
 有关包含的窗口的详细信息，请参阅[SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [窗口类](../atl/atl-window-classes.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209347"
 ---
 # <a name="using-an-existing-ado-recordset"></a>使用现有 ADO 记录集
 
-若要混合使用 OLE DB 使用者模板和活动数据对象 (ADO)，使用 ADO 打开记录集 （对应于 OLE DB 使用者模板中的行集）。 在必须记录集，请执行以下操作来连接到 OLE DB 行集：
+若要混合 OLE DB 使用者模板和活动数据对象（ADO），请使用 ADO 打开记录集（对应于 OLE DB 使用者模板中的行集）。 如果有记录集，请执行以下操作来连接到 OLE DB 行集：
 
-1. 调用`QueryInterface`有关`IRowset`和`IAccessor`指针。
+1. 调用 `IRowset` 和 `IAccessor` 指针 `QueryInterface`。
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ ms.locfileid: "62389003"
     ```
 
     > [!NOTE]
-    > *lpUnk*指向`IUnknown`的 ADO 记录集对象。
+    > *lpUnk*指向 ADO 记录集的 `IUnknown` 对象。
 
-1. 附加到其相应的 OLE DB 使用者模板类的访问器和行集。
+1. 将访问器和行集附加到相应的 OLE DB 使用者模板类中。
 
     ```cpp
     CRowset rs;
@@ -40,6 +40,6 @@ ms.locfileid: "62389003"
     rs.SetAccessor(accessor);
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用访问器](../../data/oledb/using-accessors.md)

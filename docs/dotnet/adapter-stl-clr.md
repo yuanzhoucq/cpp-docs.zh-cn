@@ -7,7 +7,6 @@ f1_keywords:
 - cliext::collection_adapter
 - cliext::collection_adapter::base
 - cliext::collection_adapter::begin
-- cliext::collection_adapter
 - cliext::collection_adapter::collection_adapter
 - cliext::collection_adapter::difference_type
 - cliext::collection_adapter::end
@@ -49,16 +48,16 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdaf5e0e8e4d9620e7a55dfff84f271f0059faf3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397674"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545689"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
-STL/CLR 标头`<cliext/adapter>`指定两个模板类 (`collection_adapter`并`range_adapter`)，并且该模板函数`make_collection`。
+STL/CLR 标头 `<cliext/adapter>` 指定两个模板类（`collection_adapter` 和 `range_adapter`）和模板函数 `make_collection`。
 
 ## <a name="syntax"></a>语法
 
@@ -68,26 +67,26 @@ STL/CLR 标头`<cliext/adapter>`指定两个模板类 (`collection_adapter`并`r
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<cliext/适配器 >
+**标头：** \<cliext/adapter >
 
-**Namespace:** cliext
+**命名空间：** cliext
 
 ## <a name="declarations"></a>声明
 
-|类|描述|
+|类|说明|
 |-----------|-----------------|
-|[collection_adapter (STL/CLR)](#collection_adapter)|包装为一个范围的基类库 (BCL) 集合。|
-|[range_adapter (STL/CLR)](#range_adapter)|包装为 BCL 集合的范围。|
+|[collection_adapter (STL/CLR)](#collection_adapter)|将基类库（BCL）集合作为范围进行包装。|
+|[range_adapter (STL/CLR)](#range_adapter)|将范围包装为 BCL 集合。|
 
-|函数|描述|
+|函数|说明|
 |--------------|-----------------|
-|[make_collection (STL/CLR)](#make_collection)|创建范围适配器使用的迭代器对。|
+|[make_collection (STL/CLR)](#make_collection)|使用迭代器对创建范围适配器。|
 
 ## <a name="members"></a>成员
 
-## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
+## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter （STL/CLR）
 
-包装.NET 集合以用作 STL/CLR 容器。 一个`collection_adapter`是一种模板类描述一个简单的 STL/CLR 容器对象。 它包装一个基类库 (BCL) 接口，并返回迭代器对用于处理受控的序列。
+包装 .NET 集合以用作 STL/CLR 容器。 `collection_adapter` 是一种模板类，用于描述简单的 STL/CLR 容器对象。 它包装基类库（BCL）接口，并返回用于操作受控序列的迭代器对。
 
 ### <a name="syntax"></a>语法
 
@@ -122,27 +121,27 @@ template<typename Key,
         System::Collections::Generic::IDictionary<Key, Value>>;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *Coll*<br/>
-已包装的集合的类型。
+包装的集合的类型。
 
 ### <a name="specializations"></a>专用化
 
-|专用化|描述|
+|专用化|说明|
 |--------------------|-----------------|
-|IEnumerable|通过元素的序列。|
-|ICollection|维护一的组元素。|
-|IList|维护元素的有序的组。|
-|IDictionary|维护一组的 {key，值} 对。|
-|IEnumerable\<值 >|通过类型化的元素序列。|
-|ICollection\<Value>|维护一的组类型化的元素。|
-|IList\<值 >|维护类型化元素的有序的组。|
-|IDictionary\<Value>|维护一组的类型化 {key，值} 对。|
+|IEnumerable|通过元素进行排序。|
+|ICollection|维护一组元素。|
+|IList|维护一组有序的元素。|
+|IDictionary|维护一组 {key，value} 对。|
+|IEnumerable\<值 >|通过类型化元素的序列。|
+|ICollection\<值 >|维护一组类型化的元素。|
+|IList\<值 >|维护一组有序的类型化元素。|
+|IDictionary\<值 >|维护一组类型化 {key，value} 对。|
 
 ### <a name="members"></a>成员
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|两个元素间的带符号距离的类型。|
 |[collection_adapter::iterator (STL/CLR)](#iterator)|受控序列的迭代器的类型。|
@@ -152,26 +151,26 @@ template<typename Key,
 |[collection_adapter::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[collection_adapter::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |---------------------|-----------------|
-|[collection_adapter::base (STL/CLR)](#base)|将指定的已包装的 BCL 接口。|
+|[collection_adapter::base (STL/CLR)](#base)|指定包装的 BCL 接口。|
 |[collection_adapter::begin (STL/CLR)](#begin)|指定受控序列的开头。|
-|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|构造的适配器对象。|
+|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|构造适配器对象。|
 |[collection_adapter::end (STL/CLR)](#end)|指定受控序列的末尾。|
 |[collection_adapter::size (STL/CLR)](#size)|对元素数进行计数。|
 |[collection_adapter::swap (STL/CLR)](#swap)|交换两个容器的内容。|
 
-|运算符|描述|
+|操作员|说明|
 |--------------|-----------------|
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|替换存储的 BCL 句柄。|
 
 ### <a name="remarks"></a>备注
 
-使用此模板类来处理作为 STL/CLR 容器的 BCL 容器。 `collection_adapter`存储的句柄 BCL 接口，它反过来控制的元素序列。 一个`collection_adapter`对象`X`返回一对输入迭代器`X.begin()`和`X.end()`用于访问订单中的元素。 一些专用化还允许你编写`X.size()`来确定受控序列的长度。
+使用此模板类可以将 BCL 容器作为 STL/CLR 容器进行操作。 `collection_adapter` 将句柄存储到 BCL 接口，而该接口又控制一系列元素。 `collection_adapter` 对象 `X` 返回一对输入迭代器 `X.begin()` 和用于按顺序访问元素的 `X.end()`。 某些专用化还允许编写 `X.size()` 来确定受控序列的长度。
 
-## <a name="base"></a> collection_adapter::base (STL/CLR)
+## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter：： base （STL/CLR）
 
-将指定的已包装的 BCL 接口。
+指定包装的 BCL 接口。
 
 ### <a name="syntax"></a>语法
 
@@ -181,7 +180,7 @@ Coll^ base();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回存储的 BCL 接口句柄。
+该成员函数将返回存储的 BCL 接口句柄。
 
 ### <a name="example"></a>示例
 
@@ -213,7 +212,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="begin"></a> collection_adapter::begin (STL/CLR)
+## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a>collection_adapter：： begin （STL/CLR）
 
 指定受控序列的开头。
 
@@ -225,7 +224,7 @@ iterator begin();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回输入迭代器，指定受控序列，或刚超出空序列末尾的第一个元素。
+成员函数返回一个输入迭代器，该迭代器指定受控序列的第一个元素，或刚超出空序列的末尾。
 
 ### <a name="example"></a>示例
 
@@ -264,9 +263,9 @@ a b c
 *++begin() = b
 ```
 
-## <a name="collection_adapter_collection_adapter"></a> collection_adapter::collection_adapter (STL/CLR)
+## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a>collection_adapter：： collection_adapter （STL/CLR）
 
-构造的适配器对象。
+构造适配器对象。
 
 ### <a name="syntax"></a>语法
 
@@ -277,12 +276,12 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 collection<br/>
 要包装的 BCL 句柄。
 
-*right*<br/>
+right<br/>
 要复制的对象。
 
 ### <a name="remarks"></a>备注
@@ -291,25 +290,25 @@ collection<br/>
 
 `collection_adapter();`
 
-初始化与存储句柄`nullptr`。
+用 `nullptr`初始化存储句柄。
 
 构造函数：
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-初始化与存储句柄`right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`。
+`()``right.`[collection_adapter：： base （STL/CLR）](../dotnet/collection-adapter-base-stl-clr.md)初始化存储的句柄。
 
 构造函数：
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-初始化与存储句柄`right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`。
+`()``right->`[collection_adapter：： base （STL/CLR）](../dotnet/collection-adapter-base-stl-clr.md)初始化存储的句柄。
 
 构造函数：
 
 `collection_adapter(Coll^ collection);`
 
-初始化与存储句柄`collection`。
+用 `collection`初始化存储句柄。
 
 ### <a name="example"></a>示例
 
@@ -358,9 +357,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> collection_adapter::difference_type (STL/CLR)
+## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a>collection_adapter：:d ifference_type （STL/CLR）
 
-两个元素之间的带符号距离的类型。
+两个元素间的带符号距离的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -370,7 +369,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述已签名的元素计数。
+类型描述有符号的元素计数。
 
 ### <a name="example"></a>示例
 
@@ -410,7 +409,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="end"></a> collection_adapter::end (STL/CLR)
+## <a name="collection_adapterend-stlclr"></a><a name="end"></a>collection_adapter：： end （STL/CLR）
 
 指定受控序列的末尾。
 
@@ -422,7 +421,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个输入迭代器，它指向刚超出受控序列的末尾。
+成员函数返回一个输入迭代器，它指向刚超出受控序列末尾的位置。
 
 ### <a name="example"></a>示例
 
@@ -455,7 +454,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::iterator (STL/CLR)
+## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a>collection_adapter：： iterator （STL/CLR）
 
 受控序列的迭代器的类型。
 
@@ -467,7 +466,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>备注
 
-此类型描述未指定类型的对象`T1`可充当受控序列的输入迭代器。
+该类型描述可用作受控序列输入迭代器的未指定类型 `T1` 的对象。
 
 ### <a name="example"></a>示例
 
@@ -500,7 +499,7 @@ int main()
 a b c
 ```
 
-## <a name="key_type"></a> collection_adapter::key_type (STL/CLR)
+## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a>collection_adapter：： key_type （STL/CLR）
 
 字典键的类型。
 
@@ -512,7 +511,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数的同义词`Key`，为专用化中`IDictionary`或`IDictionary<Value>`; 否则为未定义。
+该类型是模板参数 `Key`的同义词，在 `IDictionary` 或 `IDictionary<Value>`专用化中;否则，不会定义它。
 
 ### <a name="example"></a>示例
 
@@ -550,7 +549,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> collection_adapter::mapped_type (STL/CLR)
+## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a>collection_adapter：： mapped_type （STL/CLR）
 
 字典值的类型。
 
@@ -562,7 +561,7 @@ typedef Value mapped_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数的同义词`Value`，为专用化中`IDictionary`或`IDictionary<Value>`; 否则为未定义。
+该类型是模板参数 `Value`的同义词，在 `IDictionary` 或 `IDictionary<Value>`专用化中;否则，不会定义它。
 
 ### <a name="example"></a>示例
 
@@ -600,7 +599,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
+## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a>collection_adapter：： operator = （STL/CLR）
 
 替换存储的 BCL 句柄。
 
@@ -610,14 +609,14 @@ int main()
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*right*<br/>
-若要复制的适配器。
+right<br/>
+要复制的适配器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符副本*右*对象，然后返回`*this`。 用于存储 BCL 中的句柄的副本替换存储的 BCL 句柄*右*。
+成员运算符*直接*复制到对象，然后返回 `*this`。 使用此方法可以将存储的 BCL 句柄替换为*右侧*存储的 bcl 控点的副本。
 
 ### <a name="example"></a>示例
 
@@ -657,7 +656,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::reference (STL/CLR)
+## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a>collection_adapter：： reference （STL/CLR）
 
 元素的引用的类型。
 
@@ -669,7 +668,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>备注
 
-此类型描述的元素的引用。
+类型描述对元素的引用。
 
 ### <a name="example"></a>示例
 
@@ -705,7 +704,7 @@ int main()
 a b c
 ```
 
-## <a name="size"></a> collection_adapter::size (STL/CLR)
+## <a name="collection_adaptersize-stlclr"></a><a name="size"></a>collection_adapter：： size （STL/CLR）
 
 对元素数进行计数。
 
@@ -717,7 +716,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 中的专用化未定义`IEnumerable`或`IEnumerable<Value>`。
+成员函数将返回受控序列的长度。 未在 `IEnumerable` 或 `IEnumerable<Value>`的专用化中定义它。
 
 ### <a name="example"></a>示例
 
@@ -748,7 +747,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="size_type"></a> collection_adapter::size_type (STL/CLR)
+## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a>collection_adapter：： size_type （STL/CLR）
 
 两个元素间的带符号距离的类型。
 
@@ -760,7 +759,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述非负元素计数。
+该类型描述了一个非负元素计数。
 
 ### <a name="example"></a>示例
 
@@ -793,7 +792,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="swap"></a> collection_adapter::swap (STL/CLR)
+## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a>collection_adapter：： swap （STL/CLR）
 
 交换两个容器的内容。
 
@@ -803,14 +802,14 @@ size() = 6
 void swap(collection_adapter<Coll>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*right*<br/>
+right<br/>
 要与其交换内容的容器。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换存储的 BCL 句柄之间`*this`并*右*。
+该成员函数在 `*this` 和*权限*之间交换存储的 BCL 句柄。
 
 ### <a name="example"></a>示例
 
@@ -862,7 +861,7 @@ x x x x x
 a b c
 ```
 
-## <a name="value_type"></a> collection_adapter::value_type (STL/CLR)
+## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a>collection_adapter：： value_type （STL/CLR）
 
 元素的类型。
 
@@ -874,7 +873,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数的同义词*值*，如果存在在专用化; 否则它是的同义词`System::Object^`。
+该类型是模板参数*值*（如果存在于特殊化中）的同义词;否则，它是 `System::Object^`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -911,9 +910,9 @@ int main()
 a b c
 ```
 
-## <a name="make_collection"></a> make_collection (STL/CLR)
+## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection （STL/CLR）
 
-使`range_adapter`从迭代器对。
+从迭代器对中进行 `range_adapter`。
 
 ### <a name="syntax"></a>语法
 
@@ -922,10 +921,10 @@ template<typename Iter>
     range_adapter<Iter> make_collection(Iter first, Iter last);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *Iter*<br/>
-已包装的迭代器的类型。
+已包装迭代器的类型。
 
 *first*<br/>
 要包装的第一个迭代器。
@@ -935,7 +934,7 @@ template<typename Iter>
 
 ### <a name="remarks"></a>备注
 
-此模板函数返回 `gcnew range_adapter<Iter>(first, last)`。 用于构造`range_adapter<Iter>`从一对迭代器对象。
+此模板函数返回 `gcnew range_adapter<Iter>(first, last)`。 用于从一对迭代器构造 `range_adapter<Iter>` 的对象。
 
 ### <a name="example"></a>示例
 
@@ -989,9 +988,9 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter"></a> range_adapter (STL/CLR)
+## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a>range_adapter （STL/CLR）
 
-一种模板类，用于包装一对迭代器，用于实现多个基类库 (BCL) 接口。 Range_adapter 用于操作 STL/CLR 范围，就好像 BCL 集合。
+一个模板类，用于包装用于实现多个基类库（BCL）接口的一对迭代器。 使用 range_adapter 来操作 STL/CLR 范围，就像它是 BCL 集合一样。
 
 ### <a name="syntax"></a>语法
 
@@ -1006,35 +1005,35 @@ template<typename Iter>
     { ..... };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *Iter*<br/>
 与已包装的迭代器关联的类型。
 
 ### <a name="members"></a>成员
 
-|成员函数|描述|
+|成员函数|说明|
 |---------------------|-----------------|
-|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|构造的适配器对象。|
+|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|构造适配器对象。|
 
-|运算符|描述|
+|操作员|说明|
 |--------------|-----------------|
 |[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|替换存储的迭代器对。|
 
-### <a name="interfaces"></a>接口
+### <a name="interfaces"></a>界面
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
 |<xref:System.Collections.IEnumerable>|循环访问集合中的元素。|
-|<xref:System.Collections.ICollection>|维护一的组元素。|
-|<xref:System.Collections.Generic.IEnumerable%601>|循环访问集合中的类型化元素...|
-|<xref:System.Collections.Generic.ICollection%601>|维护一的组类型化的元素。|
+|<xref:System.Collections.ICollection>|维护一组元素。|
+|<xref:System.Collections.Generic.IEnumerable%601>|循环访问集合中的类型化元素。|
+|<xref:System.Collections.Generic.ICollection%601>|维护一组类型化的元素。|
 
 ### <a name="remarks"></a>备注
 
-Range_adapter 存储一对迭代器，进而分隔的元素序列。 该对象实现四个 BCL 接口，使您循环访问元素的顺序。 使用此模板类来操作 STL/CLR 范围与 BCL 容器非常相似。
+Range_adapter 存储一对迭代器，这两个迭代器进而分隔元素的序列。 对象实现四个 BCL 接口，它们使你能够按顺序循环访问元素。 使用此模板类可以操作 STL/CLR 范围，这与 BCL 容器非常类似。
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
+## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a>range_adapter：： operator = （STL/CLR）
 
 替换存储的迭代器对。
 
@@ -1044,14 +1043,14 @@ Range_adapter 存储一对迭代器，进而分隔的元素序列。 该对象�
 range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*right*<br/>
-若要复制的适配器。
+right<br/>
+要复制的适配器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符副本*右*对象，然后返回`*this`。 用于替换存储的迭代器对中的存储的迭代器对中的副本*右*。
+成员运算符*直接*复制到对象，然后返回 `*this`。 使用此方法可以将存储的迭代器对替换为*右侧*存储的迭代器对的副本。
 
 ### <a name="example"></a>示例
 
@@ -1091,9 +1090,9 @@ a b c
 a b c
 ```
 
-## <a name="range_adapter_range_adapter"></a> range_adapter::range_adapter (STL/CLR)
+## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a>range_adapter：： range_adapter （STL/CLR）
 
-构造的适配器对象。
+构造适配器对象。
 
 ### <a name="syntax"></a>语法
 
@@ -1104,7 +1103,7 @@ range_adapter(range_adapter<Iter>^ right);
 range_adapter(Iter first, Iter last);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要包装的第一个迭代器。
@@ -1112,7 +1111,7 @@ range_adapter(Iter first, Iter last);
 *last*<br/>
 要包装的第二个迭代器。
 
-*right*<br/>
+right<br/>
 要复制的对象。
 
 ### <a name="remarks"></a>备注
@@ -1121,25 +1120,25 @@ range_adapter(Iter first, Iter last);
 
 `range_adapter();`
 
-初始化使用默认构造的迭代器的存储的迭代器对。
+用默认的构造迭代器初始化存储的迭代器对。
 
 构造函数：
 
 `range_adapter(range_adapter<Iter>% right);`
 
-通过将复制的对存储在初始化存储的迭代器对*右*。
+通过复制*右侧*存储的对来初始化存储的迭代器对。
 
 构造函数：
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-通过将复制的对存储在初始化存储的迭代器对`*right`。
+通过复制存储在 `*right`中的对，初始化存储的迭代器对。
 
 构造函数：
 
 `range_adapter(Iter^ first, last);`
 
-初始化具有存储的迭代器对*第一个*并*最后一个*。
+用*first*和*last*初始化存储的迭代器对。
 
 ### <a name="example"></a>示例
 

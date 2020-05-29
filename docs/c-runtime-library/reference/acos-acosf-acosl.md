@@ -1,10 +1,11 @@
 ---
 title: acos、acosf、acosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acosf
 - acos
 - acosl
+- _o_acos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939994"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916891"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -77,11 +79,13 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**acos**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **acos**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用**acos**的重载，该重载采用并返回**浮点**型和**长****双精度**类型。 在 C 程序中， **acos**始终采用并返回**双精度型**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
@@ -135,7 +139,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [asin、asinf、asinl](asin-asinf-asinl.md)<br/>

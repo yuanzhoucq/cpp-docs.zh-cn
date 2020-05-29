@@ -8,27 +8,27 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
 ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232147"
 ---
 # <a name="pointer-declarations"></a>指针声明
 
-“指针声明”可命名指针变量并指定该变量所指向的对象的类型。 声明为指针的变量保留了一个内存地址。
+“指针声明”可命名指针变量并指定该变量所指向的对象的类型。  声明为指针的变量保留了一个内存地址。
 
 ## <a name="syntax"></a>语法
 
 *declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;pointer<sub>opt</sub> direct-declarator
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;( declarator )<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;direct-declarator [ constant-expression<sub>opt</sub> ]<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;direct-declarator ( parameter-type-list )<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;direct-declarator ( identifier-list<sub>opt</sub> )
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**
 
 *pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
@@ -36,11 +36,11 @@ ms.locfileid: "56151996"
 
 *type-qualifier-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;type-qualifier-list type-qualifier
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*
 
 *type-specifier* 用于指定对象的类型，可以是任何基本、结构或联合类型。 指针变量也可以指向函数、数组和其他指针。 （有关声明和解释更复杂的指针类型的信息，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。）
 
-通过将 *type-specifier* 设为 **void**，可以延迟指针引用的类型的规范。 这种项称为“指向 **void** 的指针”，作为 `void *` 写入。 声明为指向 *void* 的指针的变量可用于指向任何类型的对象。 但是，若要对指针或指针指向的对象执行大多数操作，则必须为每个操作显式指定指针指向的类型。 （char <strong>\*</strong> 类型和 void <strong>\*</strong> 类型的变量不用类型强制转换即可赋值兼容。）此类转换可使用类型强制转换完成（有关详细信息，请参阅[类型强制转换](../c-language/type-cast-conversions.md)）。
+通过将 type-specifier 设为 void，可以延迟指针引用的类型的规范   。 这种项称为“指向 **void** 的指针”，作为 `void *` 写入。 声明为指向 *void* 的指针的变量可用于指向任何类型的对象。 但是，若要对指针或指针指向的对象执行大多数操作，则必须为每个操作显式指定指针指向的类型。 （char <strong>\*</strong> 类型和 void <strong>\*</strong> 类型的变量不用类型强制转换即可赋值兼容。   ）此类转换可使用类型强制转换完成（有关详细信息，请参阅[类型强制转换](../c-language/type-cast-conversions.md)）。
 
 *type-qualifier* 可以是 **const** 或 **volatile** 之一，也可以是这两者。 它们分别指定了程序本身无法修改的指针 (**const**)，或程序的控制之外的某些进程可以合理修改的指针 (**volatile**)。 （有关 **const** 和 **volatile** 的详细信息，请参阅[类型限定符](../c-language/type-qualifiers.md)。）
 
@@ -56,19 +56,19 @@ ms.locfileid: "56151996"
 char *message; /* Declares a pointer variable named message */
 ```
 
-message 指针指向具有 **char** 类型的变量。
+message  指针指向具有 **char** 类型的变量。
 
 ```
 int *pointers[10];  /* Declares an array of pointers */
 ```
 
-指针数组有 10 个元素；每个元素都是一个指向具有 **int** 类型的变量的指针。
+指针  数组有 10 个元素；每个元素都是一个指向具有 **int** 类型的变量的指针。
 
 ```
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-指针变量指向具有 10 个元素的数组。 此数组中的每个元素都有 **int** 类型。
+指针  变量指向具有 10 个元素的数组。 此数组中的每个元素都有 **int** 类型。
 
 ```
 int const *x;      /* Declares a pointer variable, x,

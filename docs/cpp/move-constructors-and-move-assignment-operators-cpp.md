@@ -1,19 +1,19 @@
 ---
-title: 如何：定义移动构造函数和移动赋值运算符 (C++)
+title: 如何：定义移动构造函数和移动赋值运算符（c + +）
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345018"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550766"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移动构造函数和移动赋值运算符 (C++)
 
-本主题介绍如何编写*移动构造函数*和移动赋值运算符的 C++ 类。 移动构造函数，而不复制，可将它们移动到左值的右值对象拥有的资源。 有关移动语义的详细信息，请参阅[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+本主题介绍如何为 c + + 类编写*移动构造函数*和移动赋值运算符。 移动构造函数允许将右值对象拥有的资源移到左值，而无需复制。 有关移动语义的详细信息，请参阅[右值引用声明符：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 此主题基于用于管理内存缓冲区的 C++ 类 `MemoryBlock`。
 
@@ -174,7 +174,7 @@ private:
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -193,7 +193,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 
 // Move assignment operator.
-MemoryBlock& operator=(MemoryBlock&& other)
+MemoryBlock& operator=(MemoryBlock&& other) noexcept
 {
    std::cout << "In operator=(MemoryBlock&&). length = "
              << other._length << "." << std::endl;
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>示例
 
-以下示例演示移动语义如何能提高应用程序的性能。 此示例将两个元素添加到一个矢量对象，然后在两个现有元素之间插入一个新元素。 `vector`类使用移动语义，以有效地通过移动 instead of copying them 向量的元素执行插入操作。
+以下示例演示移动语义如何能提高应用程序的性能。 此示例将两个元素添加到一个矢量对象，然后在两个现有元素之间插入一个新元素。 `vector`类使用移动语义，通过移动矢量的元素而不是复制矢量来有效地执行插入操作。
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -248,15 +248,15 @@ In MemoryBlock(size_t). length = 25.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 75.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
-In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 50.
 In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In operator=(MemoryBlock&&). length = 75.
-In operator=(MemoryBlock&&). length = 50.
+In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
+In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 25. Deleting resource.
@@ -264,7 +264,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-在 Visual Studio 2010 中之前, 此示例生成以下输出：
+在 Visual Studio 2010 之前，此示例生成以下输出：
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -299,7 +299,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-[Std:: move](../standard-library/utility-functions.md#move)函数将保留的右值属性*其他*参数。
+[Std：： move](../standard-library/utility-functions.md#move)函数将 lvalue 转换 `other` 为右值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[ 引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[std：： move](../standard-library/utility-functions.md#move)

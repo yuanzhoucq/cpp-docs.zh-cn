@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211857"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 类
 
@@ -45,17 +45,17 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ## <a name="remarks"></a>备注
 
-虽然[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)请求数据以本机格式提供程序，报告`CDynamicStringAccessor`请求提供程序提取从字符串数据作为数据存储区访问的所有数据。 这是对于不需要计算的数据存储，如在显示或输出数据存储区的内容中的值的简单任务特别有用。
+当[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)请求提供程序报告的本机格式的数据时，`CDynamicStringAccessor` 请求提供程序将从数据存储访问的所有数据作为字符串数据获取。 对于不需要在数据存储中计算值的简单任务（如显示或打印数据存储的内容），这尤其有用。
 
-数据存储中列数据的本机类型并不重要；只要提供程序可支持数据转换，它就将提供字符串格式的数据。 如果提供程序不支持从本机数据类型转换为字符串 （这是不常见），请求的调用将返回成功值 DB_S_ERRORSOCCURED，并为相应的列的状态将指示转换问题DBSTATUS_E_CANTCONVERTVALUE。
+数据存储中列数据的本机类型并不重要；只要提供程序可支持数据转换，它就将提供字符串格式的数据。 如果提供程序不支持从本机数据类型转换为字符串（不是公共的），则请求调用将返回成功值 DB_S_ERRORSOCCURED，并且相应列的状态将使用 DBSTATUS_E_CANTCONVERTVALUE 指示转换问题。
 
-使用`CDynamicStringAccessor`方法可获取列信息。 此列信息用于在运行时动态创建取值函数。
+使用 `CDynamicStringAccessor` 方法来获取列信息。 使用此列信息可在运行时动态创建访问器。
 
-创建和管理此类缓冲区中存储的列信息。 从缓冲区使用获取数据[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)，或将其存储到缓冲区使用[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)。
+列信息存储在由此类创建和管理的缓冲区中。 使用[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)从缓冲区获取数据，或使用[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)将数据存储到缓冲区。
 
-有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。
+有关使用动态访问器类的讨论和示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor：： GetString
 
 将指定列数据作为字符串检索。
 
@@ -69,23 +69,23 @@ BaseType* GetString(const CHAR* pColumnName) const throw();
 BaseType* GetString(const WCHAR* pColumnName) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
-[in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。
+[in] 列号。 列号从1开始。 值0表示书签列（如果有）。
 
 *pColumnName*<br/>
-[in]指向包含的列名称的字符串的指针。
+中指向包含列名称的字符串的指针。
 
 ### <a name="return-value"></a>返回值
 
-从指定的列检索到的字符串值的指针。 值为类型`BaseType`，这将是**CHAR**或**WCHAR**具体取决于是否或未定义 _UNICODE。 如果找不到指定的列，返回 NULL。
+指向从指定列检索到的字符串值的指针。 此值的类型为 `BaseType`，这将是**CHAR**或**WCHAR** ，具体取决于是否定义了 _UNICODE。 如果找不到指定的列，则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-第二个重写窗体所需列的名称为 ANSI 字符串。 第三个重写窗体所需列的名称为 Unicode 字符串。
+第二个替代形式采用列名作为 ANSI 字符串。 第三个替代形式采用列名作为 Unicode 字符串。
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor：： SetString
 
 将指定列数据设置为字符串。
 
@@ -102,28 +102,28 @@ HRESULT SetString(const WCHAR* pColumnName,
    BaseType* data) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
-[in] 列号。 列号从 1 开始。 特殊值 0 指书签列，如果有的话。
+[in] 列号。 列号从1开始。 特殊值0表示书签列（如果有）。
 
 *pColumnName*<br/>
-[in]指向包含的列名称的字符串的指针。
+中指向包含列名称的字符串的指针。
 
-*data*<br/>
-[in]指向要写入到指定的列的字符串数据的指针。
+data<br/>
+中指向要写入指定列的字符串数据的指针。
 
 ### <a name="return-value"></a>返回值
 
-指向要设置指定的列的字符串值的指针。 值为类型`BaseType`，这将是**CHAR**或**WCHAR**具体取决于是否或未定义 _UNICODE。
+一个指针，指向要将指定列设置为的字符串值。 此值的类型为 `BaseType`，这将是**CHAR**或**WCHAR** ，具体取决于是否定义了 _UNICODE。
 
 ### <a name="remarks"></a>备注
 
-第二个重写窗体将作为 ANSI 字符串的列名称和第三个重写窗体将作为 Unicode 字符串的列名称。
+第二个替代形式采用列名作为 ANSI 字符串，第三个替代形式采用列名作为 Unicode 字符串。
 
-如果 _SECURE_ATL 定义为具有非零值，如果将生成运行时断言失败输入*数据*字符串的长度超过引用的数据列的最大长度。 否则，如果超过最大允许长度，则将截断输入的字符串。
+如果 _SECURE_ATL 定义为具有非零值，则当输入*数据*字符串的长度超过所引用数据列的最大允许长度时，将生成运行时断言失败。 否则，如果输入字符串的长度超过了允许的最大长度，则将被截断。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178881"
 ---
 # <a name="scope-resolution-operator-"></a>范围解析运算符：::
 
-范围解析运算符 **::** 用于标识和消除在不同的作用域中使用的标识符。 有关作用域的详细信息，请参阅[作用域](../cpp/scope-visual-cpp.md)。
+范围解析运算符 **：：** 用于标识和消除在不同范围内使用的标识符。 有关作用域的详细信息，请参阅[作用域](../cpp/scope-visual-cpp.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-你可以使用范围解析运算符来标识命名空间的成员，还可标识通过 using 指定成员的命名空间的命名空间。 在下面的示例中，你可以使用 `ClassB``NamespaceC` 限定 `NamespaceB``ClassB`（尽管 `NamespaceC``NamespaceB` 已在  中声明），因为已通过 using 指令在  中指定 。
+你可以使用范围解析运算符来标识命名空间的成员，还可标识通过 using 指定成员的命名空间的命名空间。 在下面的示例中，你可以使用 `NamespaceC``ClassB``ClassB` 限定 `NamespaceB``NamespaceB``NamespaceC`（尽管 {7}{8}{9} 已在 {10}{11}{12} 中声明），因为已通过 using 指令在 {13}{14}{15} 中指定 {16}{17}{18}。
 
 ```cpp
 namespace NamespaceB {
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>具有区分范围的枚举
 
-在限定了作用域的解析运算符还用于限定了作用域枚举的值[枚举声明](../cpp/enumerations-cpp.md)，如下面的示例：
+作用域内的解析运算符也与范围枚举[枚举声明](../cpp/enumerations-cpp.md)的值一起使用，如以下示例中所示：
 
 ```cpp
 enum class EnumA{
@@ -164,7 +164,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [命名空间](../cpp/namespaces-cpp.md)

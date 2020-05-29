@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 454a76e8fdf55f43d75abb63d7d98a9fe4926127
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365330"
 ---
 # <a name="controls-mfc"></a>控件 (MFC)
 
@@ -31,7 +31,7 @@ Windows 操作系统一直以来提供了许多 Windows 公共控件。 这些�
 
 ## <a name="activex-controls"></a>ActiveX 控件
 
-ActiveX 控件（以前称为 OLE 控件）可在适用于 Windows 的应用程序的对话框中或在万维网上的 HTML 页面上使用。 有关详细信息，请参阅 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。
+ActiveX 控件（以前称为 OLE 控件）可在适用于 Windows 的应用程序的对话框中或在万维网上的 HTML 页面上使用。 有关详细信息，请参阅[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。
 
 ## <a name="other-mfc-control-classes"></a>其他 MFC 控件类
 
@@ -43,40 +43,40 @@ ActiveX 控件（以前称为 OLE 控件）可在适用于 Windows 的应用程�
 
 - [CDragListBox](../mfc/reference/cdraglistbox-class.md)
 
-##  <a name="_core_finding_information_about_windows_common_controls"></a> 查找有关 Windows 公共控件的信息
+## <a name="finding-information-about-windows-common-controls"></a><a name="_core_finding_information_about_windows_common_controls"></a> 查找有关 Windows 公共控件的信息
 
 下表简要介绍每个 Windows 公共控件，包括控件的 MFC 包装类。
 
-### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Windows 公共控件和 MFC 类
+### <a name="windows-common-controls-and-mfc-classes"></a><a name="_core_windows_common_controls_and_mfc_classes"></a>窗口通用控件和 MFC 类
 
-|控件|MFC 类|描述|Windows 95 中的新增项|
+|控制|MFC 类|说明|Windows 95 中的新增功能|
 |-------------|---------------|-----------------|------------------------|
 |[动画](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|将显示 AVI 视频剪辑的连续帧|是|
-|按钮|[CButton](../mfc/reference/cbutton-class.md)|可导致操作的按键；也用于复选框、单选按钮和分组框。|No|
-|组合框|[CComboBox](../mfc/reference/ccombobox-class.md)|编辑框和列表框的组合|No|
+|button|[CButton](../mfc/reference/cbutton-class.md)|可导致操作的按键；也用于复选框、单选按钮和分组框。|否|
+|组合框|[CComboBox](../mfc/reference/ccombobox-class.md)|编辑框和列表框的组合|否|
 |[日期和时间选择器](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|允许用户选择特定日期或时间值|是|
-|编辑框|[CEdit](../mfc/reference/cedit-class.md)|用于输入文本的框|No|
+|编辑框|[CEdit](../mfc/reference/cedit-class.md)|用于输入文本的框|否|
 |[扩展组合框](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|可显示图像的组合框控件|是|
-|[标题](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|在文本列上显示的按钮；控制显示文本的宽度|是|
+|[头](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|在文本列上显示的按钮；控制显示文本的宽度|是|
 |[热键](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|使用户能够创建“热键”快速执行操作的窗口|是|
 |[图像列表](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|用于管理大型图标集或位图集的图像集合（图像列表不是控件；它支持由其他控件使用的列表）|是|
 |[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|显示带有图标的文本列表的窗口|是|
-|列表框|[CListBox](../mfc/reference/clistbox-class.md)|包含字符串列表的框|No|
+|列表框|[CListBox](../mfc/reference/clistbox-class.md)|包含字符串列表的框|否|
 |[月历](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|显示日期信息的控件|是|
-|[进度](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|指示较长操作进度的窗口|是|
+|[进展](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|指示较长操作进度的窗口|是|
 |[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|包含控件形式的其他子窗口的工具栏|是|
 |[rich edit](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|用户可在其中进行字符和段落格式编辑的窗口（请参阅 [与 Rich Edit 控件相关的类](../mfc/classes-related-to-rich-edit-controls.md)）|是|
-|滚动条|[CScrollBar](../mfc/reference/cscrollbar-class.md)|用作对话框内（而非窗口上）控件的滚动条|No|
-|[滑块](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|包含具有可选刻度线的滑块控件的窗口|是|
+|滚动条|[CScrollBar](../mfc/reference/cscrollbar-class.md)|用作对话框内（而非窗口上）控件的滚动条|否|
+|[滑 块](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|包含具有可选刻度线的滑块控件的窗口|是|
 |[数值调节钮](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|用户可通过单击来增加或减少值的箭头按钮对|是|
-|静态文本|[CStatic](../mfc/reference/cstatic-class.md)|为其他控件加标签的文本|No|
+|静态文本|[CStatic](../mfc/reference/cstatic-class.md)|为其他控件加标签的文本|否|
 |[状态栏](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|显示状态信息的窗口，类似于 MFC 类 `CStatusBar`|是|
-|[选项卡](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|类似于笔记本中的分割线；用在“选项卡对话框”或属性表中|是|
-|[工具栏](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|带有生成命令按钮的窗口，类似于 MFC 类 `CToolBar`|是|
+|[选项 卡](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|类似于笔记本中的分割线；用在“选项卡对话框”或属性表中|是|
+|[工具 栏](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|带有生成命令按钮的窗口，类似于 MFC 类 `CToolBar`|是|
 |[工具提示](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|描述工具栏按钮或其他工具用途的小型弹出窗口|是|
 |[树](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|显示项的分层列表的窗口|是|
 
-### <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
+### <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
 - 单个控件：请参阅本主题中表 [Windows 公共控件与 MFC 类](#_core_windows_common_controls_and_mfc_classes) ，了解所有控件的链接。
 
@@ -102,9 +102,9 @@ ActiveX 控件（以前称为 OLE 控件）可在适用于 Windows 的应用程�
 
 - [示例](../mfc/common-control-sample-list.md)
 
-有关 Windows SDK 中的 Windows 公共控件的信息, 请参阅[公共控件](/windows/win32/Controls/common-controls-intro)。
+有关 Windows SDK 中 Windows 常见控件的信息，请参阅[常见控件](/windows/win32/Controls/common-controls-intro)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [用户界面元素](../mfc/user-interface-elements-mfc.md)<br/>
 [对话框编辑器](../windows/dialog-editor.md)

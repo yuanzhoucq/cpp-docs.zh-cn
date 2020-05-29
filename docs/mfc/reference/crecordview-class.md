@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b706a80f91a3c952d80da13f453a807c775b9405
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372213"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368356"
 ---
 # <a name="crecordview-class"></a>CRecordView 类
 
@@ -38,41 +38,41 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CRecordView::CRecordView](#crecordview)|构造 `CRecordView` 对象。|
+|[CRecordView：CRecordView](#crecordview)|构造 `CRecordView` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CRecordView::IsOnFirstRecord](#isonfirstrecord)|返回非零，如果当前记录相关联的记录集中的第一个记录。|
-|[CRecordView::IsOnLastRecord](#isonlastrecord)|返回非零，如果当前记录相关联的记录集中的最后一个记录。|
-|[CRecordView::OnGetRecordset](#ongetrecordset)|返回指向派生自的类的对象的指针`CRecordset`。 ClassWizard 重写此函数，并创建记录集，如有必要。|
-|[CRecordView::OnMove](#onmove)||
+|[CRecordView：：Ison 第一记录](#isonfirstrecord)|如果当前记录是关联记录集中的第一个记录，则返回非零。|
+|[CRecordView：：IslastRecord](#isonlastrecord)|如果当前记录是关联记录集中的最后一条记录，则返回非零。|
+|[CRecordView：：打开记录集](#ongetrecordset)|返回指向 派生自`CRecordset`的类对象的指针。 ClassWizard 会为您重写此函数，并在必要时创建记录集。|
+|[CRecordView：：移动](#onmove)||
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CRecordView::OnMove](#onmove)|如果当前记录更改之后，更新数据源，则会移到指定的记录 （下一步、 上一个、 第一个或最后一个）。|
+|[CRecordView：：移动](#onmove)|如果当前记录已更改，则在数据源上更新它，然后移动到指定的记录（下一个、上一个、第一个或最后一个）。|
 
 ## <a name="remarks"></a>备注
 
-该视图是直接连接到的窗体视图`CRecordset`对象。 该视图通过对话框模板资源创建和显示字段的`CRecordset`对话框模板的控件中的对象。 `CRecordView`对象使用对话框数据交换 (DDX) 和记录字段交换 (RFX) 自动执行窗体上的控件和记录集的字段之间的数据移动。 `CRecordView` 此外提供了一个默认实现来移动到第一个下, 一步上, 一个，或最后一个记录和更新当前在视图上的记录的接口。
+视图是直接连接到`CRecordset`对象的窗体视图。 视图是从对话框模板资源创建的，并在对话框模板的控件中显示`CRecordset`对象的字段。 对象`CRecordView`使用对话框数据交换 （DDX） 和记录字段交换 （RFX） 来自动在窗体上的控件和记录集的字段之间移动数据。 `CRecordView`还提供用于移动到第一个、下一个、上一个或最后一个记录的默认实现，以及用于更新当前查看的记录的接口。
 
 > [!NOTE]
->  如果您正在使用的数据访问对象 (DAO) 类而不是开放式数据库连接 (ODBC) 类，使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
+> 如果使用数据访问对象 （DAO） 类而不是开放数据库连接 （ODBC） 类，请使用类[CDaoRecordView。](../../mfc/reference/cdaorecordview-class.md) 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
-若要创建记录视图的最常见方法是使用应用程序向导。 Tge 应用程序向导创建记录视图类和其关联的记录集类主干初学者应用程序的一部分。 如果不使用应用程序向导创建记录视图类，您可以创建它更高版本使用类向导。 如果您只需单个窗体，则应用程序向导方法是更容易。 类向导允许您决定更高版本在开发过程中使用记录视图。 使用类向导单独创建记录视图和记录集，并连接它们是最灵活的方法，因为这样可以更好的控制命名记录集类并将其。H /。CPP 文件。 此方法还可以有相同的记录集类上的多个记录视图。
+创建记录视图的最常见方法是使用应用程序向导。 应用程序向导将创建记录视图类及其关联的记录集类，作为骨架初学者应用程序的一部分。 如果不使用应用程序向导创建记录视图类，则可以稍后使用 ClassWizard 创建它。 如果您只需要一个表单，则应用程序向导方法会更容易。 ClassWizard 允许您决定在开发过程的稍后时间使用记录视图。 使用 ClassWizard 分别创建记录视图和记录集，然后连接它们是最灵活的方法，因为它为您提供了命名记录集类及其 的更多控制权。H/.CPP 文件。 此方法还允许您在同一记录集类上具有多个记录视图。
 
-为了方便最终用户在记录视图中移动记录，应用程序向导创建菜单 （而且还可以工具栏） 资源移到第一个下, 一步上, 一个，或最后一个记录。 如果使用类向导创建记录视图类，您需要这些资源自行创建具有菜单和位图编辑器。
+为了使最终用户在记录视图中轻松从记录移动到记录，应用程序向导将创建菜单（和可选工具栏）资源，以便移动到第一、下一个、上一个或最后一个记录。 如果使用 ClassWizard 创建记录视图类，则需要使用菜单和位图编辑器自行创建这些资源。
 
-有关移动记录到记录的默认实现的信息，请参阅`IsOnFirstRecord`并`IsOnLastRecord`与项目[使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
+有关从记录移动到记录的默认实现的信息，请参阅`IsOnFirstRecord`和`IsOnLastRecord`[以及文章"使用记录视图](../../data/using-a-record-view-mfc-data-access.md)"。
 
-`CRecordView` 将跟踪的记录集中的用户的位置，以便记录视图可以更新用户界面。 当用户移动到记录集的任一端时，记录视图禁用用户界面对象 — 例如菜单项或工具栏按钮 — 用于移动中相同的方向进一步。
+`CRecordView`跟踪用户在记录集中的位置，以便记录视图可以更新用户界面。 当用户移动到记录集的任一端时，记录视图将禁用用户界面对象（如菜单项或工具栏按钮）以向同一方向进一步移动。
 
-有关声明和使用记录视图和记录集类的详细信息，请参阅"设计和创建记录视图"一文中[记录视图](../../data/record-views-mfc-data-access.md)。 有关如何记录视图的工作以及如何使用它们的详细信息，请参阅文章[使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
+有关声明和使用记录视图和记录集类的详细信息，请参阅文章["记录视图](../../data/record-views-mfc-data-access.md)"中的"设计和创建记录视图"。 有关记录视图的工作原理以及如何使用它们的详细信息，请参阅[文章"使用记录视图](../../data/using-a-record-view-mfc-data-access.md)"。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -92,11 +92,11 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdb.h
+**标题：** afxdb.h
 
-##  <a name="crecordview"></a>  CRecordView::CRecordView
+## <a name="crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView：CRecordView
 
-当创建类型的对象派生自`CRecordView`，调用任一格式的构造函数，以便初始化视图对象并确定该视图所基于的对话框资源。
+创建派生自`CRecordView`的类型的对象时，调用构造函数的任一形式来初始化视图对象并标识视图所基于的对话框资源。
 
 ```
 explicit CRecordView(LPCTSTR lpszTemplateName);
@@ -105,31 +105,31 @@ explicit CRecordView(UINT nIDTemplate);
 
 ### <a name="parameters"></a>参数
 
-*lpszTemplateName*<br/>
-包含以 null 结尾的字符串，表示对话框模板资源的名称。
+*lpszTemplate 名称*<br/>
+包含一个 null 端接字符串，该字符串是对话框模板资源的名称。
 
 *nIDTemplate*<br/>
 包含对话框模板资源的 ID 号。
 
 ### <a name="remarks"></a>备注
 
-按名称 （向构造函数将字符串作为参数传递） 或由其 ID （将一个无符号整数作为参数传递），也可以标识该资源。 被建议使用资源 ID。
+您可以按名称标识资源（将字符串作为参数传递给构造函数）或通过其 ID（传递未签名的整数作为参数）。 建议使用资源 ID。
 
 > [!NOTE]
->  在派生的类*必须*提供自己的构造函数。 在派生类的构造函数中调用构造函数`CRecordView::CRecordView`与资源名称或 ID 作为参数，如下面的示例中所示。
+> 派生类*必须*提供其自己的构造函数。 在派生类的构造函数中，将资源名称或`CRecordView::CRecordView`ID 的构造函数称为参数，如下例所示。
 
-`CRecordView::OnInitialUpdate` 调用`UpdateData`，它调用`DoDataExchange`。 此首次调用`DoDataExchange`连接`CRecordView`（间接） 为控制`CRecordset`字段数据成员创建的类向导。 之后调用基类这些成员不能使用直到`CFormView::OnInitialUpdate`成员函数。
+`CRecordView::OnInitialUpdate`调用`UpdateData`，调用`DoDataExchange`。 此初始调用将`DoDataExchange`控件`CRecordView`（间接）连接到`CRecordset`ClassWizard 创建的字段数据成员。 在调用基类`CFormView::OnInitialUpdate`成员函数之前，不能使用这些数据成员。
 
 > [!NOTE]
->  如果使用类向导，向导将定义**enum**值`CRecordView::IDD`，指定在类声明中，然后对于构造函数的成员初始化列表中使用它。
+> 如果使用 ClassWizard，向导将定义**枚举**值`CRecordView::IDD`，在类声明中指定它，并在构造函数的成员初始化列表中使用它。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]
 
-##  <a name="isonfirstrecord"></a>  CRecordView::IsOnFirstRecord
+## <a name="crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView：：Ison 第一记录
 
-调用此成员函数可确定当前记录是否与此记录视图关联的记录集对象中的第一个记录。
+调用此成员函数以确定当前记录是否是与此记录视图关联的记录集对象中的第一个记录。
 
 ```
 BOOL IsOnFirstRecord();
@@ -137,17 +137,17 @@ BOOL IsOnFirstRecord();
 
 ### <a name="return-value"></a>返回值
 
-如果当前记录是记录集; 中的第一个记录，非零值否则为 0。
+如果当前记录是记录集中的第一个记录，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-此函数可用于编写自己的实现的默认命令更新处理程序编写的类向导。
+此函数可用于编写由 ClassWizard 编写的默认命令更新处理程序的实现。
 
-如果用户移到第一条记录，框架会禁用已移动到第一个或上一条记录的任何用户界面对象。
+如果用户移动到第一条记录，框架将禁用移动到第一条或上一条记录时具有的任何用户界面对象。
 
-##  <a name="isonlastrecord"></a>  CRecordView::IsOnLastRecord
+## <a name="crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView：：IslastRecord
 
-调用此成员函数可确定当前记录是否与此记录视图关联的记录集对象中的最后一个记录。
+调用此成员函数以确定当前记录是否是与此记录视图关联的记录集对象中的最后一条记录。
 
 ```
 BOOL IsOnLastRecord();
@@ -155,18 +155,18 @@ BOOL IsOnLastRecord();
 
 ### <a name="return-value"></a>返回值
 
-如果当前记录是记录集; 中的最后一个记录，非零值否则为 0。
+如果当前记录是记录集中的最后一条记录，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-此函数可用于编写自己的实现的默认 ClassWizard 写入，从而支持移动记录到记录的用户界面的命令更新处理程序。
+此函数可用于编写 ClassWizard 编写的默认命令更新处理程序的实现，以支持用户界面从记录移动到记录。
 
 > [!CAUTION]
->  此函数的结果是可靠的只不过直到用户已移过它，该视图无法检测到记录集的结尾。 记录视图可以告诉它必须禁用任何用户界面对象将移至下一个或最后一个记录之前，必须将用户移超出了最后一条记录。 如果用户移过最后一条记录，然后将移动回到最后一个记录 （或之前），记录视图可以跟踪中记录集的用户的位置，并正确禁用用户界面对象。 `IsOnLastRecord` 对实现函数的调用后也会不可靠`OnRecordLast`，用于处理 ID_RECORD_LAST 命令，或`CRecordset::MoveLast`。
+> 此功能的结果是可靠的，只不过视图在用户移动过去记录集之前无法检测到记录集的末尾。 用户必须超越最后一条记录，记录视图才能判断它必须禁用任何用户界面对象才能移动到下一条或最后一条记录。 如果用户移动过去最后一条记录，然后移回最后一条记录（或之前），记录视图可以跟踪用户在记录集中的位置并正确禁用用户界面对象。 `IsOnLastRecord`对处理ID_RECORD_LAST命令的`OnRecordLast``CRecordset::MoveLast`实现函数的调用后也不可靠。
 
-##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset
+## <a name="crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView：：打开记录集
 
-返回一个指向`CRecordset`-派生的与记录视图关联的对象。
+返回指向与记录视图`CRecordset`关联的派生对象的指针。
 
 ```
 virtual CRecordset* OnGetRecordset() = 0;
@@ -174,17 +174,17 @@ virtual CRecordset* OnGetRecordset() = 0;
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CRecordset`-派生对象，如果对象已成功创建; 否则为 NULL 指针。
+如果成功创建了对象`CRecordset`，则指向派生对象的指针;否则为 NULL 指针。
 
 ### <a name="remarks"></a>备注
 
-必须重写构造或获取记录集对象并返回一个指向此成员函数。 如果声明 ClassWizard 在记录视图类，该向导为您编写是默认的重写。 类向导的默认实现返回存储在记录视图中，如果存在的记录集指针。 如果不是，它构造类型的记录集对象指定与 ClassWizard 和调用其`Open`成员函数打开的表或运行查询，然后返回一个指向该对象。
+必须重写此成员函数以构造或获取记录集对象，并返回指向它的指针。 如果使用 ClassWizard 声明记录视图类，向导将为您编写默认覆盖。 ClassWizard 的默认实现返回存储在记录视图中的记录集指针（如果存在）。 如果没有，它将构造使用 ClassWizard 指定的类型的记录集对象，并调用其成员`Open`函数打开表或运行查询，然后返回指向该对象的指针。
 
-有关详细信息和示例，请参阅文章[记录视图：使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
+有关详细信息和示例，请参阅[文章记录视图：使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。
 
-##  <a name="onmove"></a>  CRecordView::OnMove
+## <a name="crecordviewonmove"></a><a name="onmove"></a>CRecordView：：移动
 
-调用此成员函数以将移动到另一条记录中记录集和记录视图控件中显示其字段。
+调用此成员函数以移动到记录集中的不同记录，并在记录视图的控件中显示其字段。
 
 ```
 virtual BOOL OnMove(UINT nIDMoveCommand);
@@ -192,37 +192,37 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 
 ### <a name="parameters"></a>参数
 
-*nIDMoveCommand*<br/>
+*nIDMove命令*<br/>
 以下标准命令 ID 值之一：
 
-- ID_RECORD_FIRST 将移动到记录集中的第一个记录。
+- ID_RECORD_FIRST移动到记录集中的第一个记录。
 
-- ID_RECORD_LAST 将移动到记录集中的最后一个记录。
+- ID_RECORD_LAST移动到记录集中的最后一条记录。
 
-- ID_RECORD_NEXT 将移动到记录集的下一个记录。
+- ID_RECORD_NEXT移动到记录集中的下一个记录。
 
-- ID_RECORD_PREV 将移到上一记录中记录集。
+- ID_RECORD_PREV移动到记录集中的上一条记录。
 
 ### <a name="return-value"></a>返回值
 
-如果移动不成功，则非零值否则为 0，如果移动请求被拒绝。
+如果移动成功，则非零;否则 0 如果移动请求被拒绝。
 
 ### <a name="remarks"></a>备注
 
-默认实现调用适当`Move`成员函数的`CRecordset`与记录视图关联的对象。
+默认实现调用与记录视图`Move`关联的`CRecordset`对象的相应成员函数。
 
-默认情况下，`OnMove`更新数据源上的当前记录，如果用户已在记录视图中更改它。
+默认情况下，`OnMove`如果用户在记录视图中更改了数据源上的当前记录，则更新该记录。
 
-应用程序向导会使用第一条记录、 最后一条记录下, 一条记录，以及上一条记录菜单项创建菜单资源。 如果您选择可停靠工具栏选项，应用程序向导还具有对应于这些命令的按钮创建一个工具栏。
+"应用程序向导"创建具有"第一条记录"、"最后一条记录"、"下一个记录"和"上一个记录"菜单项的菜单资源。 如果选择"可停靠工具栏"选项，则"应用程序向导"还会创建一个工具栏，其中按钮对应于这些命令。
 
-如果您跳过在记录集中的最后一个记录，记录视图仍将显示最后一条记录。 如果您在第一条记录向后移动，记录视图仍将显示第一条记录。
+如果移动超过记录集中的最后一条记录，记录视图将继续显示最后一条记录。 如果向后移动超过第一条记录，则记录视图将继续显示第一条记录。
 
 > [!CAUTION]
->  调用`OnMove`将引发异常，如果记录集不具有任何记录。 调用适当的用户界面更新处理程序函数 — `OnUpdateRecordFirst`， `OnUpdateRecordLast`， `OnUpdateRecordNext`，或`OnUpdateRecordPrev`— 之前相对应移动运算来确定记录集是否具有任何记录。
+> 如果`OnMove`记录集没有记录，则调用将引发异常。 在相应的移动操作之前调用相应的用户界面更新`OnUpdateRecordFirst`处理程序`OnUpdateRecordLast`函数`OnUpdateRecordNext`* `OnUpdateRecordPrev` 、 、 、 或 " 以确定记录集是否具有任何记录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CFormView 类](../../mfc/reference/cformview-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)<br/>
 [CFormView 类](../../mfc/reference/cformview-class.md)

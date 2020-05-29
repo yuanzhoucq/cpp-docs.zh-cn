@@ -1,8 +1,9 @@
 ---
 title: set_terminate (CRT)
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - set_terminate
+- _o_set_terminate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948354"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914520"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -54,7 +56,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="remarks"></a>备注
 
-**Set_terminate**函数将*termFunction*安装为**终止**时调用的函数。 **set_terminate**与C++异常处理一起使用，并且在引发异常之前可在程序中的任意位置调用。 默认情况下，**终止**调用[中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用**set_terminate** ，并将函数名称作为其参数。 **terminate**调用作为**set_terminate**的参数提供的最后一个函数。 执行任何所需的清除任务后， *termFunction*应退出程序。 如果不退出（如果它返回到其调用方），则调用[abort](abort.md) 。
+**Set_terminate**函数将*termFunction*安装为**终止**时调用的函数。 **set_terminate**与 c + + 异常处理一起使用，并且在引发异常之前可在程序中的任意位置调用。 默认情况下，**终止**调用[中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用**set_terminate** ，并将函数名称作为其参数。 **terminate**调用作为**set_terminate**的参数提供的最后一个函数。 执行任何所需的清除任务后， *termFunction*应退出程序。 如果不退出（如果它返回到其调用方），则调用[abort](abort.md) 。
 
 在多线程环境中，终止单独为每个线程维护的函数。 每个新线程都需要安装自己的终止函数。 因此，每个线程都负责处理它自己的终止处理。
 
@@ -67,25 +69,27 @@ typedef void ( *terminate_function )( );
 > [!NOTE]
 > **Set_terminate**函数仅在调试器外部运行。
 
-所有动态链接的 Dll 或 Exe 都有一个**set_terminate**的处理程序;即使您调用**set_terminate** ，您的处理程序也可能被另一个 DLL 或 EXE 替换。
+所有动态链接的 Dll 或 Exe 都有单个**set_terminate**处理程序;即使你调用**set_terminate**你的处理程序也可能被另一个 DLL 或 EXE 替换。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**set_terminate**|\<eh.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [terminate](terminate-crt.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[中止](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[终止](terminate-crt.md)<br/>
+[之外](unexpected-crt.md)<br/>

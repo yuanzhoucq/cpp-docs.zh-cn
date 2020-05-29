@@ -4,17 +4,16 @@ description: 引用 Microsoft C/C++编译器/errorReport 命令行选项。
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
-- /errorreport
 helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257645"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075085"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport（报告内部编译器错误）
 
@@ -30,7 +29,6 @@ ms.locfileid: "77257645"
 编译器无法处理源代码文件时出现内部编译器错误（ICE）结果。 当发生 ICE 时，编译器不会生成输出文件或可以用来修复代码的任何有用的诊断。
 
 **/ErrorReport**参数将被 Windows 错误报告服务设置重写。 如果 Windows 错误报告启用报表，则编译器会自动向 Microsoft 发送内部错误报表。 如果 Windows 错误报告禁用了报表，则不发送任何报表。
-
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 

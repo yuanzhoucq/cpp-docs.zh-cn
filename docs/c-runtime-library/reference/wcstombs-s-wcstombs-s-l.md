@@ -1,9 +1,11 @@
 ---
 title: wcstombs_s、_wcstombs_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcstombs_s_l
 - wcstombs_s
+- _o__wcstombs_s_l
+- _o_wcstombs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: 135bcb90e6a82591bf05e56b60575719f4c7d45c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7254df673694bf4d91679f1a41837c10f61d28e2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945032"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910612"
 ---
 # <a name="wcstombs_s-_wcstombs_s_l"></a>wcstombs_s、_wcstombs_s_l
 
@@ -95,7 +98,7 @@ errno_t _wcstombs_s_l(
 *wcstr*<br/>
 指向要转换的宽字符字符串的指针。
 
-*count*<br/>
+*计数*<br/>
 要存储在*mbstr*缓冲区中的最大字节数，不包括终止 null 字符或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
@@ -105,17 +108,17 @@ errno_t _wcstombs_s_l(
 
 如果成功，返回零；如果失败，则返回错误代码。
 
-|错误条件|返回值和**errno**|
+|添加状态|返回值和**errno**|
 |---------------------|------------------------------|
 |*mbstr*为**NULL** ， *sizeInBytes* > 0|**EINVAL**|
 |*wcstr*为**NULL**|**EINVAL**|
-|目标缓冲区太小，无法包含转换后的字符串（除非*计数*为 **_TRUNCATE**; 请参阅下面的备注）|**ERANGE**|
+|目标缓冲区太小，无法包含转换后的字符串（除非 **_TRUNCATE**了*count* ; 请参阅下面的备注）|**ERANGE**|
 
 如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回错误代码并按表中所示设置**errno** 。
 
 ## <a name="remarks"></a>备注
 
-**Wcstombs_s**函数将*wcstr*指向的宽字符字符串转换为存储在*mbstr*所指向的缓冲区中的多字节字符。 在满足以下条件之一前，该转换将一直对每个字符执行：
+**Wcstombs_s**函数将*wcstr*指向的宽字符字符串转换为存储在由*mbstr*指向的缓冲区中的多字节字符。 在满足以下条件之一前，该转换将一直对每个字符执行：
 
 - 遇到 null 宽字符
 
@@ -125,32 +128,34 @@ errno_t _wcstombs_s_l(
 
 目标字符串始终以 null 结尾（即使在出错时）。
 
-如果*count*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，则**wcstombs_s**会将尽可能多的字符串转换为目标缓冲区的大小，同时仍然为 null 终止符留下空间。 如果字符串被截断，则返回值为**STRUNCATE**，转换将视为成功。
+如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)的特殊值，则**wcstombs_s**会将尽可能多的字符串转换为目标缓冲区的大小，同时仍然为 null 终止符留下空间。 如果字符串被截断，则返回值为**STRUNCATE**，转换将视为成功。
 
-如果**wcstombs_s**成功转换了源字符串，它会将转换后的字符串（包括 null 终止符）的大小（以字节为单位）放入 *&#42;pReturnValue* （提供的*pReturnValue*不为**null**）。 即使*mbstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*mbstr*为**NULL**，则忽略*count* 。
+如果**wcstombs_s**成功转换源字符串，则会将转换后的字符串的大小（以字节为单位）放入 *&#42;pReturnValue* （提供的*pReturnValue*不为**null**）。 即使*mbstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*mbstr*为**NULL**，则忽略*count* 。
 
-如果**wcstombs_s**遇到不能转换为多字节字符的宽字符，则它会将0放在 *&#42;pReturnValue*中，将目标缓冲区设置为空字符串，将**errno**设置为**eilseq 且**，并返回**eilseq 且**。
+如果**wcstombs_s**遇到无法转换为多字节字符的宽字符，则它会将0置于 *&#42;pReturnValue*中，将目标缓冲区设置为空字符串，将**errno**设置为**eilseq 且**，并返回**eilseq 且**。
 
-如果由*wcstr*和*mbstr*指向的序列重叠，则**wcstombs_s**的行为不确定。
+如果由*wcstr*和*mbstr*指向的序列重叠，则**wcstombs_s**的行为是不确定的。
 
 > [!IMPORTANT]
 > 确保*wcstr*和*mbstr*不重叠，并且该*计数*正确反映了要转换的宽字符数。
 
-**wcstombs_s**为任何与区域设置相关的行为使用当前区域设置; **_wcstombs_s_l**与**wcstombs**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wcstombs_s**为任何与区域设置相关的行为使用当前区域设置;**_wcstombs_s_l**与**wcstombs**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**wcstombs_s**|\<stdlib.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-此程序演示**wcstombs_s**函数的行为。
+此程序说明**wcstombs_s**函数的行为。
 
 ```C
 // crt_wcstombs_s.c
@@ -193,10 +198,10 @@ Convert wide-character string:
     Multibyte character: Hello, world.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

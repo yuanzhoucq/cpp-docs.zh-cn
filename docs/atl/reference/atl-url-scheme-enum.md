@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATLUTIL/ATL::ATL_URL_SCHEME
 ms.assetid: f4131046-8ba0-4ec1-8209-84203f05d20e
-ms.openlocfilehash: a63e58349d4339389870de46d5b961fd96db535f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d8307d6ea51c5ec7e63735360b8628a4c1ed782
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247705"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168574"
 ---
-# <a name="atlurlscheme"></a>ATL_URL_SCHEME
+# <a name="atl_url_scheme"></a>ATL_URL_SCHEME
 
-此枚举的成员为所理解的方案提供常量[CUrl](curl-class.md)。
+此枚举的成员为[曲线](curl-class.md)理解的方案提供常数。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 enum ATL_URL_SCHEME{
    ATL_URL_SCHEME_UNKNOWN = -1,
    ATL_URL_SCHEME_FTP     = 0,
@@ -33,10 +33,10 @@ enum ATL_URL_SCHEME{
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlutil.h
+**标头：** atlutil
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [概念](../active-template-library-atl-concepts.md)<br/>
-[CUrl::SetScheme](curl-class.md#setscheme)<br/>
-[CUrl::GetScheme](curl-class.md#getscheme)
+[卷曲：： SetScheme](curl-class.md#setscheme)<br/>
+[卷曲：： GetScheme](curl-class.md#getscheme)

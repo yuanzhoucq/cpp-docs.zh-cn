@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143119"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427403"
 ---
 # <a name="context-class"></a>Context 类
 
@@ -37,7 +37,7 @@ ms.locfileid: "77143119"
 class Context;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="protected-constructors"></a>受保护构造函数
 
@@ -215,7 +215,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
 void operator delete(void* _PObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PObject*<br/>
 指向要删除的对象的指针。
@@ -228,7 +228,7 @@ void operator delete(void* _PObject);
 static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_BeginOversubscription*<br/>
 如果**为 true**，则指示应在超额订阅的持续时间内添加额外的虚拟处理器。 如果**为 false**，则表示超额订阅应结束，并且应删除以前添加的虚拟处理器。

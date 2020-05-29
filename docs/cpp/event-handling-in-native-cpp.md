@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cc9265cd3f9f400e2880405019e4d2c9a934f10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222188"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180077"
 ---
 # <a name="event-handling-in-native-c"></a>本机 C++ 中的事件处理
 
-在本机 C++ 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/attributes/event-source.md)和[event_receiver](../windows/attributes/event-receiver.md)属性，分别指定`type` = `native`. 这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。
+在本机C++事件处理中，使用[event_source](../windows/attributes/event-source.md)和[event_receiver](../windows/attributes/event-receiver.md)属性分别设置事件源和事件接收器，同时指定 `type`=`native`。 这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。
 
 ## <a name="declaring-events"></a>声明事件
 
-在事件源类中，使用[__event](../cpp/event.md)关键字来声明为事件的方法在方法声明。 请确保声明该方法，但不要定义它；这样做会产生编译器错误，因为将该方法转换为事件时编译器会隐式定义它。 本机事件可以是带有零个或多个参数的方法。 返回类型可以是 void 或任何整型。
+在事件源类中，对方法声明使用[__event](../cpp/event.md)关键字，将方法声明为事件。 请确保声明该方法，但不要定义它；这样做会产生编译器错误，因为将该方法转换为事件时编译器会隐式定义它。 本机事件可以是带有零个或多个参数的方法。 返回类型可以是 void 或任何整型。
 
 ## <a name="defining-event-handlers"></a>定义事件处理程序
 
@@ -25,7 +25,7 @@ ms.locfileid: "65222188"
 
 ## <a name="hooking-event-handlers-to-events"></a>将事件处理程序挂钩到事件
 
-此外在事件接收器类中，使用内部函数[__hook](../cpp/hook.md)若要将事件与事件处理程序相关联并[__unhook](../cpp/unhook.md)取消事件与事件处理程序。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。
+此外，在事件接收器类中，您可以使用内部函数[__hook](../cpp/hook.md)将事件与事件处理程序关联，并将[__unhook](../cpp/unhook.md)事件处理程序中的解除关联事件。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。
 
 ## <a name="firing-events"></a>激发事件
 
@@ -81,13 +81,13 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 MyHandler2 was called with value 123.
 MyHandler1 was called with value 123.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [事件处理](../cpp/event-handling.md)

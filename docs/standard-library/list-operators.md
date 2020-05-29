@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (list)
 - std::operator== (list)
 ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246466"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425585"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 运算符
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试运算符左侧的列表对象是否不等于右侧的列表对象。
 
@@ -35,12 +35,12 @@ bool operator!=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `list` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -86,12 +86,12 @@ bool operator<(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `list` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> 运算符&lt;=
+## <a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的列表对象是否小于或等于右侧的列表对象。
 
@@ -141,12 +141,12 @@ bool operator<=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `list` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的列表对象是否等于右侧的列表对象。
 
@@ -196,12 +196,12 @@ bool operator==(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `list` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -247,12 +247,12 @@ bool operator>(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `list` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> 运算符&gt;=
+## <a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的列表对象是否大于或等于右侧的列表对象。
 
@@ -302,12 +302,12 @@ bool operator>=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `list` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值

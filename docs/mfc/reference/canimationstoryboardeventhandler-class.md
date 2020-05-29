@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 986555ca91d19dfa838f807665f2cbf9a003bcef
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338254"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755106"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler 类
 
@@ -37,22 +37,22 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|构造 `CAnimationStoryboardEventHandler` 对象。|
+|[动画故事板事件处理程序：：动画故事板事件处理程序](#canimationstoryboardeventhandler)|构造 `CAnimationStoryboardEventHandler` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|创建的实例`CAnimationStoryboardEventHandler`回调。|
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|处理`OnStoryboardStatusChanged`情节提要的状态更改时发生的事件 (重写`CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`。)|
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|处理`OnStoryboardUpdated`情节提要更新时发生的事件 (重写`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`。)|
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|存储指向动画控制器的路由事件。|
+|[动画故事板事件处理程序：：创建实例](#createinstance)|创建回调实例`CAnimationStoryboardEventHandler`。|
+|[C动画故事板事件处理程序：：在故事板状态更改](#onstoryboardstatuschanged)|处理`OnStoryboardStatusChanged`情节提要的状态更改时发生的事件（覆盖`CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`. ）|
+|[C动画故事板事件处理程序：：在故事板上更新](#onstoryboardupdated)|处理`OnStoryboardUpdated`更新情节提要时发生的事件（覆盖`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.）|
+|[动画故事板事件处理程序：：设置动画控制器](#setanimationcontroller)|存储指向动画控制器的指针以路由事件。|
 
 ## <a name="remarks"></a>备注
 
-创建此事件处理程序并将其传递给`IUIAnimationStoryboard::SetStoryboardEventHandler`方法，在调用时`CAnimationController::EnableStoryboardEventHandler`。
+当您调用`CAnimationController::EnableStoryboardEventHandler`时，将创建此`IUIAnimationStoryboard::SetStoryboardEventHandler`事件处理程序并传递给方法。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -66,17 +66,17 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+## <a name="canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>动画故事板事件处理程序：：动画故事板事件处理程序
 
-构造一个 CAnimationStoryboardEventHandler 对象。
+构造 CAnimationStoryboard 事件处理程序对象。
 
 ```
 CAnimationStoryboardEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance
+## <a name="canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>动画故事板事件处理程序：：创建实例
 
-创建 CAnimationStoryboardEventHandler 回调的实例。
+创建 CAnimationStoryboard 事件处理程序回调的实例。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,18 +86,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>参数
 
-*pAnimationController*<br/>
-一个指向动画控制器，它将接收事件。
+*动画控制器*<br/>
+指向动画控制器的指针，该控制器将接收事件。
 
-*ppHandler*
+*普汉德勒*
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。
+如果该方法成功，则它会返回 S_OK。 否则，它将返回一个 HRESULT 错误代码。
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+## <a name="canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>C动画故事板事件处理程序：：在故事板状态更改
 
-处理 OnStoryboardStatusChanged 事件，出现在情节提要的状态更改时
+处理故事板状态更改事件，这些事件发生在情节提要的状态更改时
 
 ```
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -108,22 +108,22 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>参数
 
-*storyboard*<br/>
-指向其状态已更改的情节提要的指针。
+*脚本*<br/>
+指向状态已更改的情节提要的指针。
 
-*newStatus*<br/>
-指定新情节提要状态。
+*新状态*<br/>
+指定新的情节提要状态。
 
-*previousStatus*<br/>
-指定上一个情节提要状态。
+*上一个状态*<br/>
+指定以前的情节提要状态。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 S_OK否则为 E_FAIL。
+如果方法成功，S_OK;否则E_FAIL。
 
-##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated
+## <a name="canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>C动画故事板事件处理程序：：在故事板上更新
 
-处理更新情节提要时，则 OnStoryboardUpdated 事件
+处理更新情节提要时发生的更新事件
 
 ```
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
@@ -131,25 +131,25 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>参数
 
-*storyboard*<br/>
-情节提要的指针，其中已更新。
+*脚本*<br/>
+指向故事板的指针，已更新。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 S_OK否则为 E_FAIL。
+如果方法成功，S_OK;否则E_FAIL。
 
-##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController
+## <a name="canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>动画故事板事件处理程序：：设置动画控制器
 
-存储指向动画控制器的路由事件。
+存储指向动画控制器的指针以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pAnimationController*<br/>
-一个指向动画控制器，它将接收事件。
+*动画控制器*<br/>
+指向动画控制器的指针，该控制器将接收事件。
 
 ## <a name="see-also"></a>请参阅
 

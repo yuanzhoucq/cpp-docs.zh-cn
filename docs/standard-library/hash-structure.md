@@ -5,11 +5,11 @@ f1_keywords:
 - typeindex/std::hash
 ms.assetid: e5a41202-ef3b-45d0-b3a7-4c2dbdc0487a
 ms.openlocfilehash: 4f73d1bfe7f3370d76b39b95f740a4d3a759b908
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687959"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426923"
 ---
 # <a name="hash-structure"></a>hash 结构
 
@@ -35,6 +35,6 @@ template <> struct hash<error_code>;
 template <> struct hash<error_condition>;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<typeindex>](../standard-library/typeindex.md)

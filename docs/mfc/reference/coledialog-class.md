@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: 353e2ed312fa7dbb9ef7bdfabc2b174abf8e1e1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a1983d426e97dd8063aee2857dc36557aa20677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375712"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366093"
 ---
 # <a name="coledialog-class"></a>COleDialog 类
 
@@ -29,33 +29,33 @@ class COleDialog : public CCommonDialog
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleDialog::GetLastError](#getlasterror)|获取由对话框返回的错误代码。|
+|[COleDialog：获取最后错误](#getlasterror)|获取对话框返回的错误代码。|
 
 ## <a name="remarks"></a>备注
 
-Microsoft 基础类库提供了几个类派生自`COleDialog`:
+Microsoft 基础类库提供来自`COleDialog`的多个类：
 
-- [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
+- [COleInsert对话](../../mfc/reference/coleinsertdialog-class.md)
 
 - [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)
 
-- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)
+- [COleChangeIcon对话](../../mfc/reference/colechangeicondialog-class.md)
 
 - [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
 
-- [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)
+- [COleBusy对话](../../mfc/reference/colebusydialog-class.md)
 
-- [COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)
+- [COle 更新对话](../../mfc/reference/coleupdatedialog-class.md)
 
 - [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)
 
-- [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)
+- [COle属性对话](../../mfc/reference/colepropertiesdialog-class.md)
 
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
-有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。
+有关特定于 OLE 的对话框的详细信息，请参阅 OLE[中的"对话框](../../mfc/dialog-boxes-in-ole.md)"一文。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -73,11 +73,11 @@ Microsoft 基础类库提供了几个类派生自`COleDialog`:
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxodlgs.h
+**标题：** afxodlgs.h
 
-##  <a name="getlasterror"></a>  COleDialog::GetLastError
+## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a>COleDialog：获取最后错误
 
-调用`GetLastError`成员函数以获取其他错误信息时`DoModal`返回 IDABORT。
+调用`GetLastError`成员函数以在返回 IDABORT`DoModal`时获取其他错误信息。
 
 ```
 UINT GetLastError() const;
@@ -85,13 +85,13 @@ UINT GetLastError() const;
 
 ### <a name="return-value"></a>返回值
 
-返回的错误代码`GetLastError`取决于特定的对话框显示。
+返回`GetLastError`的错误代码取决于显示的特定对话框。
 
 ### <a name="remarks"></a>备注
 
-请参阅`DoModal`成员函数在派生类的特定错误消息有关的信息。
+有关特定`DoModal`错误消息的信息，请参阅派生类中的成员函数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)
+[层次结构图表](../../mfc/hierarchy-chart.md)

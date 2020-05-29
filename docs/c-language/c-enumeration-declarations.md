@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
 ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326009"
 ---
 # <a name="c-enumeration-declarations"></a>C 枚举声明
 
@@ -30,7 +30,7 @@ ms.locfileid: "56149227"
 &nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*<sub>opt</sub> **{** *enumerator-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
 
-可选的 identifier 命名由 enumerator-list 定义的枚举类型。 此标识符通常称为列表指定的枚举的“标记”。 该形式的类型说明符
+可选的 identifier  命名由 enumerator-list  定义的枚举类型。 此标识符通常称为列表指定的枚举的“标记”。 该形式的类型说明符
 
 ```
 enum identifier
@@ -39,9 +39,9 @@ enum identifier
 }
 ```
 
-将 identifier 声明为由 enumerator-list 非终止符指定的枚举的标记。 enumerator-list 定义“枚举器内容”。 下面详细介绍了 enumerator-list。
+将 identifier  声明为由 enumerator-list  非终止符指定的枚举的标记。  enumerator-list 定义“枚举器内容”。 下面详细介绍了 enumerator-list  。
 
-如果标记的声明可见，则后续使用标记但忽略 enumerator-list 的声明将指定之前声明的枚举的类型。 标记必须引用定义的枚举类型，并且该枚举类型必须在当前范围内。 由于在其他位置定义枚举类型，因此 enumerator-list 不会出现在此声明中。 在定义枚举类型之前，派生自枚举类型的枚举和 `typedef` 声明的类型的声明可以使用枚举标记。
+如果标记的声明可见，则后续使用标记但忽略 enumerator-list  的声明将指定之前声明的枚举的类型。 标记必须引用定义的枚举类型，并且该枚举类型必须在当前范围内。 由于在其他位置定义枚举类型，因此 enumerator-list  不会出现在此声明中。 在定义枚举类型之前，派生自枚举类型的枚举和 `typedef` 声明的类型的声明可以使用枚举标记。
 
 ## <a name="syntax"></a>语法
 
@@ -56,9 +56,9 @@ enum identifier
 *enumeration-constant*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-enumeration-list 中的每个 enumeration-constant 命名一个枚举集的值。 默认情况下，第一个 enumeration-constant 与值 0 相关联。 列表中的下一个 enumeration-constant 与 ( constant-expression + 1 ) 的值相关联，除非显式将其与另一个值相关联。 enumeration-constant 的名称与其值等效。
+ enumeration-list 中的每个 enumeration-constant  命名一个枚举集的值。 默认情况下，第一个 enumeration-constant  与值 0 相关联。 列表中的下一个 enumeration-constant  与 (  constant-expression + 1 ) 的值相关联，除非显式将其与另一个值相关联。  enumeration-constant 的名称与其值等效。
 
-可以使用 enumeration-constant = constant-expression 替代值的默认序列。 因此，如果 enumeration-constant = constant-expression 出现在 enumerator-list 中，则将 enumeration-constant 与由 constant-expression 给定的值相关联。 constant-expression 必须具有 `int` 类型且可为负。
+可以使用 enumeration-constant = constant-expression  替代值的默认序列。 因此，如果 enumeration-constant = constant-expression  出现在 enumerator-list  中，则将 enumeration-constant  与由 constant-expression  给定的值相关联。  constant-expression 必须具有 `int` 类型且可为负。
 
 下面的规则适用于枚举集的成员：
 

@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: 4b883bdf3159c40f8d74866f04f655ae73d82a8a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693401"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747693"
 ---
 # <a name="chandle-class"></a>CHandle 类
 
-此类提供用于创建和使用句柄对象的方法。
+此类提供了创建和使用句柄对象的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -33,61 +33,61 @@ class CHandle
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHandle::CHandle](#chandle)|构造函数。|
-|[CHandle:: ~ CHandle](#dtor)|析构函数。|
+|[操作：：CHandle](#chandle)|构造函数。|
+|[操作：：*CHandle](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHandle::Attach](#attach)|调用此方法以将附加`CHandle`现有句柄到对象。|
-|[CHandle::Close](#close)|调用此方法来关闭`CHandle`对象。|
-|[CHandle::Detach](#detach)|调用此方法可分离句柄从`CHandle`对象。|
+|[操作：：附加](#attach)|调用此方法将`CHandle`对象附加到现有句柄。|
+|[操作：关闭](#close)|调用此方法以关闭对象`CHandle`。|
+|[查德：:D塔奇](#detach)|调用此方法以从`CHandle`对象分离句柄。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHandle::operator 句柄](#operator_handle)|返回存储的句柄的值。|
-|[CHandle::operator =](#operator_eq)|赋值运算符。|
+|[操作：：操作员操作](#operator_handle)|返回存储句柄的值。|
+|[操作：：运算符 |](#operator_eq)|赋值运算符。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHandle::m_h](#m_h)|存储句柄的成员变量。|
+|[操作：：m_h](#m_h)|存储句柄的成员变量。|
 
 ## <a name="remarks"></a>备注
 
-一个`CHandle`需要一个句柄时，可以使用对象： 主要区别在于`CHandle`对象时将自动删除。
+每当`CHandle`需要句柄时，都可以使用对象：主要区别是该`CHandle`对象将自动删除。
 
 > [!NOTE]
->  某些 API 函数将为空或无效的句柄，使用 NULL，而其他人使用 INVALID_HANDLE_VALUE。 `CHandle` 仅使用 NULL，将为 INVALID_HANDLE_VALUE 视为实际句柄。 如果您调用可返回 INVALID_HANDLE_VALUE 的 API，则应检查之前调用此值[CHandle::Attach](#attach)或将其传递给`CHandle`构造函数，并改为将传递 NULL。
+> 某些 API 函数将使用 NULL 作为空句柄或无效句柄，而其他函数则使用INVALID_HANDLE_VALUE。 `CHandle`仅使用 NULL，并将INVALID_HANDLE_VALUE视为真正的句柄。 如果调用可以返回INVALID_HANDLE_VALUE的 API，则应在调用[CHandle：：附加](#attach)或传递给`CHandle`构造函数之前检查此值，然后传递 NULL。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标题：** atlbase.h
 
-##  <a name="attach"></a>  CHandle::Attach
+## <a name="chandleattach"></a><a name="attach"></a>操作：：附加
 
-调用此方法以将附加`CHandle`现有句柄到对象。
+调用此方法将`CHandle`对象附加到现有句柄。
 
-```
+```cpp
 void Attach(HANDLE h) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-`CHandle` 将获得句柄的所有权*h*。
+*H*<br/>
+`CHandle`将取得句柄*h*的所有权。
 
 ### <a name="remarks"></a>备注
 
-将分配`CHandle`对象传递给*h*句柄，然后调用**h.Detach()** 。 在调试生成中 ATLASSERT 情况下会引发*h*为 NULL。 不其他句柄的有效性进行检查。
+将`CHandle`对象分配给*h*句柄，然后调用**h.detach（）**。 在调试生成中，如果*h*为 NULL，将引发 ATLASSERT。 没有对手柄的有效性进行其他检查。
 
-##  <a name="chandle"></a>  CHandle::CHandle
+## <a name="chandlechandle"></a><a name="chandle"></a>操作：：CHandle
 
 构造函数。
 
@@ -99,14 +99,14 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-现有句柄或`CHandle`。
+*H*<br/>
+现有句柄 或`CHandle`。
 
 ### <a name="remarks"></a>备注
 
-创建一个新`CHandle`对象，可选择使用现有句柄或`CHandle`对象。
+创建新`CHandle`对象，可以选择使用现有句柄或`CHandle`对象。
 
-##  <a name="dtor"></a>  CHandle:: ~ CHandle
+## <a name="chandlechandle"></a><a name="dtor"></a>操作：：*CHandle
 
 析构函数。
 
@@ -116,23 +116,23 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="remarks"></a>备注
 
-释放`CHandle`对象通过调用[CHandle::Close](#close)。
+通过调用`CHandle`[CHandle：：关闭](#close)来释放对象。
 
-##  <a name="close"></a>  CHandle::Close
+## <a name="chandleclose"></a><a name="close"></a>操作：关闭
 
-调用此方法来关闭`CHandle`对象。
+调用此方法以关闭对象`CHandle`。
 
-```
+```cpp
 void Close() throw();
 ```
 
 ### <a name="remarks"></a>备注
 
-关闭打开的对象句柄。 如果句柄为 NULL，这将是如果`Close`已被调用，ATLASSERT 将会引发在调试版本中。
+关闭打开的对象句柄。 如果句柄为 NULL（如果`Close`已调用，则为 NULL，则将在调试生成中引发 ATLASSERT）。
 
-##  <a name="detach"></a>  CHandle::Detach
+## <a name="chandledetach"></a><a name="detach"></a>查德：:D塔奇
 
-调用此方法可分离句柄从`CHandle`对象。
+调用此方法以从`CHandle`对象分离句柄。
 
 ```
 HANDLE Detach() throw();
@@ -144,9 +144,9 @@ HANDLE Detach() throw();
 
 ### <a name="remarks"></a>备注
 
-释放该句柄的所有权。
+释放句柄的所有权。
 
-##  <a name="m_h"></a>  CHandle::m_h
+## <a name="chandlem_h"></a><a name="m_h"></a>操作：：m_h
 
 存储句柄的成员变量。
 
@@ -154,9 +154,9 @@ HANDLE Detach() throw();
 HANDLE m_h;
 ```
 
-##  <a name="operator_eq"></a>  CHandle::operator =
+## <a name="chandleoperator-"></a><a name="operator_eq"></a>操作：：运算符 |
 
-赋值运算符。
+分配运算符。
 
 ```
 CHandle& operator=(CHandle& h) throw();
@@ -164,20 +164,20 @@ CHandle& operator=(CHandle& h) throw();
 
 ### <a name="parameters"></a>参数
 
-*h*<br/>
-`CHandle` 将获得句柄的所有权*h*。
+*H*<br/>
+`CHandle`将取得句柄*h*的所有权。
 
 ### <a name="return-value"></a>返回值
 
-返回对新的引用`CHandle`对象。
+返回对新`CHandle`对象的引用。
 
 ### <a name="remarks"></a>备注
 
-如果`CHandle`对象当前包含句柄，则将关闭。 `CHandle`对象中传递将具有其句柄引用设置为 NULL。 这可确保两个`CHandle`对象永远不会将包含相同的活动句柄。
+如果`CHandle`对象当前包含句柄，它将关闭。 传入`CHandle`的对象的句柄引用集 NULL。 这可确保两`CHandle`个对象永远不会包含相同的活动句柄。
 
-##  <a name="operator_handle"></a>  CHandle::operator 句柄
+## <a name="chandleoperator-handle"></a><a name="operator_handle"></a>操作：：操作员操作
 
-返回存储的句柄的值。
+返回存储句柄的值。
 
 ```
 operator HANDLE() const throw();
@@ -185,7 +185,7 @@ operator HANDLE() const throw();
 
 ### <a name="remarks"></a>备注
 
-返回存储中的值[CHandle::m_h](#m_h)。
+返回存储在[CHandle：：m_h](#m_h)中的值。
 
 ## <a name="see-also"></a>请参阅
 

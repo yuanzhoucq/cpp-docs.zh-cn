@@ -1,10 +1,12 @@
 ---
 title: difftime, _difftime32, _difftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _difftime32
 - difftime
 - _difftime64
+- _o__difftime32
+- _o__difftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937644"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914781"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -70,21 +73,23 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 **Difftime**函数计算两个提供的时间值*timeStart*和*timeEnd*之间的差异。
 
-提供的时间值必须在**time_t**范围内。 **time_t**是64位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 **Time_t**的下限仍为1970年1月1日午夜。
+提供的时间值必须在**time_t**范围内。 **time_t**为64位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 **Time_t**的下限仍为1970年1月1日午夜。
 
-**difftime**是一种内联函数，其计算结果为 **_difftime32**或 **_difftime64** ，具体取决于是否定义了 **_USE_32BIT_TIME_T** 。 _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
+**difftime**是一种内联函数，其计算结果为 **_difftime32**或 **_difftime64** ，具体取决于是否定义 **_USE_32BIT_TIME_T** 。 _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
 
 这些函数验证其参数。 如果参数为零或负值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回0，并将**errno**设置为**EINVAL**。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|
 |**_difftime64**|\<time.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -142,7 +147,7 @@ Multiplying 2 floating point numbers 100 million times...
 Program takes      3 seconds.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [时间管理](../../c-runtime-library/time-management.md)<br/>

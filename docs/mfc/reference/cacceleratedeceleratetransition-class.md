@@ -1,5 +1,5 @@
 ---
-title: CAccelerateDecelerateTransition 类
+title: C加速减速转换类
 ms.date: 11/04/2016
 f1_keywords:
 - CAccelerateDecelerateTransition
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-ms.openlocfilehash: 1e55e81b4d9b5c324f86bfd141b74d9faa362d94
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 356ba30e6d9a638672d2c356676735ebfaed8f3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507742"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371152"
 ---
-# <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 类
+# <a name="cacceleratedeceleratetransition-class"></a>C加速减速转换类
 
 实现加速-减速转换。
 
@@ -28,34 +28,34 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|构造转换对象。|
+|[C加速减速转换：：C加速减速转换](#cacceleratedeceleratetransition)|构造过渡对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::Create](#create)|调用转换库以创建封装的转换 COM 对象。 (重写[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[C加速减速转换：：创建](#create)|调用过渡库以创建封装的过渡 COM 对象。 （覆盖[CBase 转换：创建](../../mfc/reference/cbasetransition-class.md#create).）|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|加速到持续时间所花费的时间的比率。|
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|减速花费的时间与持续时间的比率。|
-|[CAccelerateDecelerateTransition::m_duration](#m_duration)|转换的持续时间。|
-|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|转换结束时动画变量的值。|
+|[C加速减速转换：：m_accelerationRatio](#m_accelerationratio)|加速时间与持续时间的比率。|
+|[C加速减速转换：：m_decelerationRatio](#m_decelerationratio)|减速时间与持续时间的比率。|
+|[C加速减速转换：：m_duration](#m_duration)|转换的持续时间。|
+|[C加速减速转换：：m_finalValue](#m_finalvalue)|过渡结束时动画变量的值。|
 
 ## <a name="remarks"></a>备注
 
-在加速减速转换期间, 动画变量会加速, 然后在转换的持续时间内减速, 并以指定的值结束。 可以通过指定不同的加速和减速比率, 来控制变量加速和减速的速度。 当初始速度为零时, 加速度比是变量将在加速中花费的持续时间的小数部分;同样, 采用减速度率。 如果初始速度非零, 则它是速度达到零和转换结束之间的时间的小数部分。 加速比率和减速度比率应最大为1.0。 由于所有转换都将自动清除, 因此建议使用 operator new 将其分配给它们。 封装的 IUIAnimationTransition COM 对象由 CAnimationController:: AnimateGroup 创建, 直到它为 NULL。 在创建此 COM 对象之后更改成员变量不起作用。
+在加速减速转换期间，动画变量会加速，然后在转换期间减慢速度，以指定值结束。 通过指定不同的加速和减速比，您可以控制变量独立加速和减速的速度。 当初始速度为零时，加速度比是变量将加速花费的持续时间的一小部分;同样与减速率。 如果初始速度是非零，则它是速度达到零和过渡结束之间的时间分数。 加速度比和减速率应总和为最大 1.0。 由于所有转换都将自动清除，因此建议使用运算符 new 分配。 封装的 IUI动画转换 COM 对象由 C动画控制器：：AnimateGroup 创建，直到此为止，它才为 NULL。 创建此 COM 对象后更改成员变量不起作用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 转换](../../mfc/reference/cbasetransition-class.md)
 
 `CAccelerateDecelerateTransition`
 
@@ -63,9 +63,9 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
+## <a name="cacceleratedeceleratetransitioncacceleratedeceleratetransition"></a><a name="cacceleratedeceleratetransition"></a>C加速减速转换：：C加速减速转换
 
-构造转换对象。
+构造过渡对象。
 
 ```
 CAccelerateDecelerateTransition(
@@ -77,21 +77,21 @@ CAccelerateDecelerateTransition(
 
 ### <a name="parameters"></a>参数
 
-*duration*<br/>
+*时间*<br/>
 转换的持续时间。
 
-*finalValue*<br/>
-转换结束时动画变量的值。
+*最终价值*<br/>
+过渡结束时动画变量的值。
 
-*accelerationRatio*<br/>
-加速到持续时间所花费的时间的比率。
+*加速度比*<br/>
+加速时间与持续时间的比率。
 
-*decelerationRatio*<br/>
-减速花费的时间与持续时间的比率。
+*减速比*<br/>
+减速时间与持续时间的比率。
 
-##  <a name="create"></a>  CAccelerateDecelerateTransition::Create
+## <a name="cacceleratedeceleratetransitioncreate"></a><a name="create"></a>C加速减速转换：：创建
 
-调用转换库以创建封装的转换 COM 对象。
+调用过渡库以创建封装的过渡 COM 对象。
 
 ```
 virtual BOOL Create(
@@ -101,30 +101,30 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*pLibrary*<br/>
-指向[IUIAnimationTransitionLibrary 接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针, 该接口定义标准转换库。
+*p库*<br/>
+指向[IUIAnimation 转换库接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针，该接口定义标准转换库。
 
 ### <a name="return-value"></a>返回值
 
-如果成功创建转换, 则为 TRUE;否则为 FALSE。
+如果成功创建转换，则为 TRUE;如果成功创建转换，则为 TRUE。否则 FALSE。
 
-##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio
+## <a name="cacceleratedeceleratetransitionm_accelerationratio"></a><a name="m_accelerationratio"></a>C加速减速转换：：m_accelerationRatio
 
-加速到持续时间所花费的时间的比率。
+加速时间与持续时间的比率。
 
 ```
 DOUBLE m_accelerationRatio;
 ```
 
-##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio
+## <a name="cacceleratedeceleratetransitionm_decelerationratio"></a><a name="m_decelerationratio"></a>C加速减速转换：：m_decelerationRatio
 
-减速花费的时间与持续时间的比率。
+减速时间与持续时间的比率。
 
 ```
 DOUBLE m_decelerationRatio;
 ```
 
-##  <a name="m_duration"></a>  CAccelerateDecelerateTransition::m_duration
+## <a name="cacceleratedeceleratetransitionm_duration"></a><a name="m_duration"></a>C加速减速转换：：m_duration
 
 转换的持续时间。
 
@@ -132,14 +132,14 @@ DOUBLE m_decelerationRatio;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>CAccelerateDecelerateTransition::m_finalValue
+## <a name="cacceleratedeceleratetransitionm_finalvalue"></a><a name="m_finalvalue"></a>C加速减速转换：：m_finalValue
 
-转换结束时动画变量的值。
+过渡结束时动画变量的值。
 
 ```
 DOUBLE m_finalValue;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

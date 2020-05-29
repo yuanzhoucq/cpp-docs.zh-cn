@@ -2,7 +2,6 @@
 title: 如何：添加、编辑或删除控件（C++）
 ms.date: 02/15/2019
 f1_keywords:
-- vc.editors.dialog.dialog
 - vc.controls.activex
 - vc.editors.dialog.insertActiveXControls
 helpviewer_keywords:
@@ -43,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b940e94faf710de8ae5bc604b47dc35a1bc290a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491171"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167519"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：添加、编辑或删除控件（C++）
 
@@ -99,7 +98,7 @@ ms.locfileid: "69491171"
 
 ### <a name="to-add-a-custom-control"></a>添加自定义控件
 
-您可以将自定义控件添加到对话框中。 在 "**工具箱**" 中选择 "**自定义控件**" 图标，并将其拖动到对话框中。 若要添加`Syslink`控件，请添加自定义控件，然后将控件的**Class**属性更改`Syslink`为。 此操作将导致属性刷新并显示`Syslink`控件属性。 有关 MFC 包装类的信息，请参阅[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
+您可以将自定义控件添加到对话框中。 在 "**工具箱**" 中选择 "**自定义控件**" 图标，并将其拖动到对话框中。 若要添加 `Syslink` 控件，请添加自定义控件，然后将控件的**Class**属性更改为 `Syslink`。 此操作将导致属性刷新并显示 `Syslink` 控件属性。 有关 MFC 包装类的信息，请参阅[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
 
 ## <a name="edit-controls"></a>编辑控件
 
@@ -113,13 +112,13 @@ ms.locfileid: "69491171"
 1. 在[属性窗口](/visualstudio/ide/reference/properties-window)中，更改控件的属性。
 
    > [!NOTE]
-   > 当您为按钮 、单选按钮或复选框控件设置为等于**True**时，将为您的控件实现样式 BS_BITMAP。 有关详细信息，请参阅[按钮样式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 有关将位图与控件相关联的示例，请参阅[CButton：： SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 在**对话框编辑器**中时，不会在控件上显示位图。
+   > 当您为按钮、单选按钮或复选框控件设置的**位图**属性等于**True**时，将为您的控件实现样式 BS_BITMAP。 有关详细信息，请参阅[按钮样式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 有关将位图与控件相关联的示例，请参阅[CButton：： SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 在**对话框编辑器**中时，不会在控件上显示位图。
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>撤消对控件的属性所做的更改
 
 1. 请确保控件在**对话框编辑器**中具有焦点。
 
-1. "切换到菜单" "**编辑** > " "**撤消**"。 如果焦点不在控件上，则 "**撤消**" 命令将不可用。
+1. "切换到菜单"**编辑** > **撤消**。 如果焦点不在控件上，则 "**撤消**" 命令将不可用。
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>定义（非按钮）对话框控件的成员变量
 
@@ -143,13 +142,13 @@ ms.locfileid: "69491171"
 
 ## <a name="delete-controls"></a>删除控件
 
-在对话框中，选择控件，然后按**Delete**键，或者单击 "浏览" "**编辑** > " "**删除**"。
+在对话框中，选择控件，然后按**Delete**键，或单击 "浏览" "**编辑** > "**删除**"。
 
 ## <a name="other-issues"></a>其他问题
 
-### <a name="troubleshooting"></a>疑难解答
+### <a name="troubleshooting"></a>故障排除
 
-向对话框添加公共控件或超文本编辑控件后，在测试对话框时不会显示该控件。 或者，对话框本身不会出现。 例如:
+向对话框添加公共控件或超文本编辑控件后，在测试对话框时不会显示该控件。 或者，对话框本身不会出现。 例如：
 
 1. 创建 Win32 项目，修改应用程序设置，以便创建 Windows 应用程序（而不是控制台应用）。
 
@@ -170,19 +169,19 @@ ms.locfileid: "69491171"
 ||||
 |-|-|-|
 |滑块控件|树控件|日期时间选择器|
-|陀螺旋控件|选项卡控件|月历|
+|陀螺旋控件|选项卡控件|Month Calendar|
 |进度控件|动画控件|IP 地址控件|
 |热键|Rich Edit 控件|扩展组合框|
 |列表控件|Rich Edit 2.0 控件|自定义控件|
 
-若要在对话框中使用公共控件，需要在创建对话框之前调用  [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) 或 `AFXInitCommonControls`。
+若要在对话框中使用公共控件，需要在创建对话框之前调用[nativemethods.initcommoncontrolsex](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)或 `AFXInitCommonControls`。
 
-若要使用 RichEdit 控件，必须调用`LoadLibrary`。 有关详细信息，请参阅 "Windows SDK 中的[丰富编辑控件](/windows/win32/Controls/about-rich-edit-controls)和[丰富的编辑控件概述](../mfc/overview-of-the-rich-edit-control.md)。
+若要使用 RichEdit 控件，必须调用 `LoadLibrary`。 有关详细信息，请参阅 "Windows SDK 中的[丰富编辑控件](/windows/win32/Controls/about-rich-edit-controls)和[丰富的编辑控件概述](../mfc/overview-of-the-rich-edit-control.md)。
 
 > [!NOTE]
 > 若要将 RichEdit 控件与 MFC 一起使用，必须先调用[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)以加载 RichEdit 2.0 控件（riched20.dll。DLL），或调用[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)以加载较早的 RichEdit 1.0 控件（RICHED32。DLL）。
 >
-> 你可以将当前[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)类与较旧的 RichEdit 1.0 控件一起使用`CRichEditCtrl` ，但它仅用于支持 RichEdit 2.0 控件。 由于 RichEdit 1.0 和 RichEdit 2.0 相似，因此大多数方法都适用。 但是，1.0 和2.0 控件之间有一些差异，因此某些方法可能不会正常运行或根本不工作。
+> 你可以将当前[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)类与较旧的 RichEdit 1.0 控件一起使用，但 `CRichEditCtrl` 仅设计为支持 RichEdit 2.0 控件。 由于 RichEdit 1.0 和 RichEdit 2.0 相似，因此大多数方法都适用。 但是，1.0 和2.0 控件之间有一些差异，因此某些方法可能不会正常运行或根本不工作。
 
 ### <a name="activex-controls"></a>ActiveX 控件
 
@@ -190,7 +189,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 使用 "**插入 Activex 控件**" 对话框，可以在使用[对话框编辑器](../windows/dialog-editor.md)时将 ActiveX 控件插入对话框中。 此对话框包含以下属性：
 
-|属性|描述|
+|properties|说明|
 |---|---|
 |**ActiveX 控件**|显示 ActiveX 控件的列表。<br/><br/>从此对话框插入控件不会生成包装类。 如果需要包装类，请使用[类视图](/visualstudio/ide/viewing-the-structure-of-code)来创建一个，请参阅[添加类](../ide/adding-a-class-visual-cpp.md)。<br/><br/>如果 ActiveX 控件未出现在此对话框中，请尝试根据供应商的说明安装控件。|
 |**路径**|显示在其中找到 ActiveX 控件的文件。|
@@ -217,7 +216,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 独立供应商提供的 ActiveX 控件可以具有其自己的属性和特性。 这些属性将显示在 "**属性**" 窗口中。 由 ActiveX 控件的编写器创建的所有属性页都显示在 "**属性页**" 对话框中。 （若要查看特定 ActiveX 控件的**属性页**，请选择 "[属性窗口](/visualstudio/ide/reference/properties-window)中的"**属性页**"按钮。
 
-- 选择**ActiveX**控件并单击 "浏览" **"查看** > **属性" 页**以查看属性。 根据需要在属性页中进行更改。
+- 选择**ActiveX**控件，然后单击 " > 属性"**页**上的 "菜单" **"查看属性**"。 根据需要在属性页中进行更改。
 
    ActiveX 控件的属性页中显示了各种选项卡，具体取决于作为 ActiveX 控件一部分的属性表。
 
@@ -228,11 +227,11 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 Win32
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [管理对话框控件](controls-in-dialog-boxes.md)<br/>
 [如何：布局控件](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[如何：定义控件访问权限和值](defining-mnemonics-access-keys.md)
+[如何：定义控件访问和值](defining-mnemonics-access-keys.md)
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179934"
 ---
 # <a name="expressions-c"></a>表达式 (C++)
 
@@ -22,23 +22,23 @@ ms.locfileid: "62184011"
 
 - 生成“副作用”。 （副作用是表达式的计算之外的所有操作 - 例如，修改对象的值。）
 
-在 C++ 中，可以重载运算符，并且其含义可以是用户定义的。 但是，不能修改其优先级以及它们采用的操作数的数目。 本节描述了使用语言提供而不是重载的运算符的语法和语义。 除了[类型的表达式](../cpp/types-of-expressions.md)并[表达式的语义](../cpp/semantics-of-expressions.md)，包括以下主题：
+在 C++ 中，可以重载运算符，并且其含义可以是用户定义的。 但是，不能修改其优先级以及它们采用的操作数的数目。 本节描述了使用语言提供而不是重载的运算符的语法和语义。 除了表达式的[类型](../cpp/types-of-expressions.md)[以外，还](../cpp/semantics-of-expressions.md)介绍了以下主题：
 
 - [主要表达式](../cpp/primary-expressions.md)
 
-- [范围解析运算符](../cpp/scope-resolution-operator.md)
+- [作用域解析运算符](../cpp/scope-resolution-operator.md)
 
 - [后缀表达式](../cpp/postfix-expressions.md)
 
-- [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)
+- [带有一元运算符的表达式](../cpp/expressions-with-unary-operators.md)
 
-- [使用二进制运算符的表达式](../cpp/expressions-with-binary-operators.md)
+- [带有二元运算符的表达式](../cpp/expressions-with-binary-operators.md)
 
 - [条件运算符](../cpp/conditional-operator-q.md)
 
 - [常量表达式](../cpp/cpp-constant-expressions.md)
 
-- [强制转换运算符](../cpp/casting-operators.md)
+- [转换运算符](../cpp/casting-operators.md)
 
 - [运行时类型信息](../cpp/run-time-type-information.md)
 
@@ -46,13 +46,13 @@ ms.locfileid: "62184011"
 
 - [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-- [重载的运算符](../cpp/operator-overloading.md)
+- [重载运算符](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) （C++/cli）
 
     > [!NOTE]
     >  无法重载内置类型的运算符；它们的行为是预定义的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)

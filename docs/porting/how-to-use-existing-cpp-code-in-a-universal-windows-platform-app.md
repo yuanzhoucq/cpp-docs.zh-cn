@@ -2,12 +2,12 @@
 title: 如何：在通用 Windows 平台应用中使用现有 C++ 代码
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: b1351a1c7858b00cffc454fa66831b3995aea804
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630426"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366432"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
 
@@ -21,7 +21,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 如果只是尝试从通用 Windows 项目添加引用到经典桌面库，你将得到一条显示库不兼容的错误消息。 如果是静态库，你只需通过将库（.lib 文件）添加到链接器输入就可以链接到库，类似在经典 Win32 应用程序中的操作。 对于仅二进制可用的库，这是唯一的选项。 静态库链接到应用的可执行文件中，但在 UWP 应用中使用的 Win32 DLL 必须通过将其包括在项目中并标记为“内容”来打包到应用中。 要在 UWP 应用中加载 Win32 DLL，还需要调用 [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)，而不是 `LoadLibrary` 或 `LoadLibraryEx`。
 
-如果你有 DLL 或静态库的源代码，可使用 `/ZW` 重新编译为 UWP 项目。 如果要这样做，可使用解决方案资源管理器添加引用并在 C++ UWP 应用中使用它  。 在 DLL 的情况下，与导出库链接。
+如果你有 DLL 或静态库的源代码，可使用 `/ZW` 重新编译为 UWP 项目。 如果这样做，则可以使用**解决方案资源管理器**添加引用，并在 uWP 应用中C++使用它。 在 DLL 的情况下，与导出库链接。
 
 若要向其他语言中的调用方公开功能，则可以将库转换为 Windows 运行时组件。 Windows 运行时组件与普通的 DLL 的不同之处在于它们包括 .winmd 文件格式的元数据，这些元数据以 .NET 和 JavaScript 的使用者需要的方式介绍内容。 若要向其他语言公开 API 元素，你可以添加 C++/CX 构造（如 ref 类）并将其设置为公共，或使用 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  在 Windows 10 以及更高版本中，可使用 [C++/WinRT 库](https://github.com/microsoft/cppwinrt)，而不是 C++/CX。
 
@@ -50,7 +50,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 - [将 C++ 库移植到 Windows 运行时组件](#BK_WinRTComponent)
 
-##  <a name="BK_Win32DLL"></a>在 UWP 应用中使用 Win32 DLL
+## <a name="using-a-win32-dll-in-a-uwp-app"></a><a name="BK_Win32DLL"></a>在 UWP 应用程序中使用 Win32 DLL
 
 为了获得更好的安全性和可靠性，通用 Windows 应用在受限的运行时环境中运行，因此不能像在经典 Windows 桌面应用程序中那样使用任何本机 DLL。 如果你有 DLL 的源代码，则可以移植此代码，以便使其在 UWP 上运行。 你首先更改几个项目设置和项目文件元数据，以将此项目标识为 UWP 项目。 你需要使用 `/ZW` 选项编译库代码，从而启用 C++/CX。 由于与该环境相关的控制更严格，在 UWP 应用中，某些 API 调用是不被允许的。 请参阅[用于 UWP 应用的 Win32 和 COM API](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
@@ -133,11 +133,11 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
    该代码将在定义 `_DLL` 时（即当项目生成为 DLL 时），定义解析为 `__declspec(dllexport)` 的宏 `GIRAFFE_API`。
 
-2. 打开 DLL 项目中的“项目属性”，并将“配置”设置为“所有配置”    。
+2. 打开 DLL**项目的项目属性**，并将**配置**设置为 **"所有配置**"。
 
-3. 在“项目属性”的“C/C++” > “常规”选项卡下，将“使用 Windows 运行时扩展”设置为“是(/ZW)”      。 这将启用组件扩展 (C++/CX)。
+3. 在“项目属性”的“C/C++” > “常规”选项卡下，将“使用 Windows 运行时扩展”设置为“是(/ZW)”********************。 这将启用组件扩展 (C++/CX)。
 
-4. 在“解决方案资源管理器”  中，选择项目节点，打开快捷菜单，然后选择“卸载项目”  。 然后，在卸载的项目节点上打开快捷菜单，然后选择编辑项目文件。 找到 `WindowsTargetPlatformVersion` 元素，并将其替换为下列元素。
+4. 在“解决方案资源管理器”**** 中，选择项目节点，打开快捷菜单，然后选择“卸载项目”****。 然后，在卸载的项目节点上打开快捷菜单，然后选择编辑项目文件。 找到 `WindowsTargetPlatformVersion` 元素，并将其替换为下列元素。
 
     ```xml
     <AppContainerApplication>true</AppContainerApplication>
@@ -147,25 +147,25 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     ```
 
-   关闭 .vcxproj 文件，再次打开快捷菜单，然后选择“重新加载项目”  。
+   关闭 .vcxproj 文件，再次打开快捷菜单，然后选择“重新加载项目”****。
 
-   现在，解决方案资源管理器会将该项目标识为通用 Windows 项目  。
+   **解决方案资源管理器**现在将项目标识为通用 Windows 项目。
 
-5. 请确保预编译的头文件的名称正确。 在“预编译标头”  部分中，将“预编译标头文件”  从“pch.h”  更改为“stdafx.h”  。 如果没有这样操作，将出现以下错误。
+5. 请确保预编译的头文件的名称正确。 在“预编译标头”**** 部分中，将“预编译标头文件”**** 从“pch.h”** 更改为“stdafx.h”**。 如果没有这样操作，将出现以下错误。
 
    > 错误 C2857：在源文件中没有找到用 /Ycpch.h 命令行选项指定的“#include”语句
 
    问题在于通用 Windows 项目对预编译标头文件使用不同的命名约定。
 
-6. 生成项目。 可能会收到一些有关不兼容的命令行选项的错误。 例如，许多较旧的 C++ 项目中默认设置有“启用最小重新生成(/Gm)”这一常用选项（但现在已弃用），它与 `/ZW` 不兼容  。
+6. 生成项目。 可能会收到一些有关不兼容的命令行选项的错误。 例如，许多较旧的 C++ 项目中默认设置有“启用最小重新生成(/Gm)”这一常用选项（但现在已弃用），它与 `/ZW` 不兼容****。
 
    当为通用 Windows 平台编译时，某些功能不可用。 将看到有关任何问题的编译器错误。 解决这些问题，直到有一个干净的生成。
 
-7. 要在同一解决方案中的 UWP 应用中使用该 DLL，请打开 UWP 项目节点的快捷菜单，然后选择“添加” > “引用”   。
+7. 要在同一解决方案中的 UWP 应用中使用 DLL，请打开 UWP 项目节点的快捷菜单，然后选择 **"添加** > **参考**"。
 
-   在“项目” > “解决方案”下，选中 DLL 项目旁边的复选框，然后选择“确定”按钮    。
+   在 **"项目** > **解决方案**"下，选择 DLL 项目旁边的复选框，然后选择 **"确定**"按钮。
 
-8. 将库的一个或多个头文件添加到 UWP 应用的 pch.h  文件中。
+8. 将库的一个或多个头文件添加到 UWP 应用的 pch.h** 文件中。
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -183,7 +183,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
     }
     ```
 
-##  <a name="BK_StaticLib"></a>在 UWP 应用中使用本机 C++ 静态库
+## <a name="using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a>在 UWP 应用中使用本机C++静态库
 
 你可以在 UWP 项目中使用本机 C++ 静态库，但有一些限制和局限需要注意。 请先阅读 [C++/CX 中的静态库](../cppcx/static-libraries-c-cx.md)。 你可以从 UWP 应用访问静态库中的本机代码，但不建议在此类静态库中创建公共 ref 类型。 如果使用 `/ZW` 选项编译静态库，则管理员（实际是经过伪装的链接器）会发出警告：
 
@@ -193,17 +193,17 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>若要在 UWP 项目中使用本机 C++ 静态库
 
-1. 在 UWP 项目的项目属性中，在左窗格中依次选择“配置属性” > “链接器” > “输入”    。 在右窗格中，将路径添加到库中的“其他依赖项”  属性中。 例如，对于将其输出放置在 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib 中的项目中的库，则添加相对路径 `Debug\MyNativeLibrary\MyNativeLibrary.lib`。
+1. 在 UWP 项目的项目属性中，在左侧窗格中选择 **"配置属性** > **链接器** > **输入**"。 在右窗格中，将路径添加到库中的“其他依赖项”**** 属性中。 例如，对于将其输出放置在 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib 中的项目中的库，则添加相对路径 `Debug\MyNativeLibrary\MyNativeLibrary.lib`。
 
-2. 添加 include 语句，以将头文件引用到 pch.h  文件（若有）或所需的任何 .cpp 文件中，并开始添加使用库的代码。
+2. 添加 include 语句，以将头文件引用到 pch.h** 文件（若有）或所需的任何 .cpp 文件中，并开始添加使用库的代码。
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
    ```
 
-   不要在“解决方案资源管理器”  的“引用”  节点中添加引用 。 该机制仅适用于 Windows 运行时组件。
+   不要在“解决方案资源管理器”**** 的“引用”**** 节点中添加引用 。 该机制仅适用于 Windows 运行时组件。
 
-##  <a name="BK_WinRTComponent"></a>将 C++ 库移植到 Windows 运行时组件
+## <a name="porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a>将C++库移植到 Windows 运行时组件
 
 如果你想要从 UWP 应用使用静态库中的本机 API，并且你具有本机库的源代码，则你可以将代码移植到 Windows 运行时组件。 它将不再是静态库，而将是 DLL。 你可以在任何 C++ UWP 应用中使用它，但与静态库不同，你可以无论何种语言，都能够添加 ref 类型和可用于 UWP 应用代码中的客户端的其他 C++/CX 构造。 因此，你可以从 C#、Visual Basic 或 JavaScript 来访问这些类型。  基本过程如下：创建 Windows 运行时组件项目，将静态库的代码复制到其中，再解决将代码从标准的 C++ 编译移至 `/ZW` 编译而引发的所有错误。
 
@@ -213,15 +213,15 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 2. 关闭该项目。
 
-3. 在 Windows 文件资源管理器中，找到该项目  。 默认情况下，Visual Studio 将使用“文档”文件夹中的“Visual Studio 2017”\“项目”文件夹。 找到 C++ 库项目，该项目包含你想要移植的代码。 从 C++ 库项目复制源文件（头文件、代码文件和包括在子目录中的任何其他资源），并将它们粘贴到项目文件夹，同时确保保留相同的文件夹结构。
+3. 在**Windows 文件资源管理器中**，找到项目。 默认情况下，Visual Studio 将使用“文档”文件夹中的“Visual Studio 2017”\“项目”文件夹。 找到 C++ 库项目，该项目包含你想要移植的代码。 从 C++ 库项目复制源文件（头文件、代码文件和包括在子目录中的任何其他资源），并将它们粘贴到项目文件夹，同时确保保留相同的文件夹结构。
 
-4. 重新打开 Windows 运行时组件项目，并在解决方案资源管理器中打开项目节点的快捷菜单，然后选择“添加” > “现有项”    。
+4. 重新打开 Windows 运行时组件项目，并在解决方案资源管理器中打开项目节点的快捷菜单，然后选择“添加” > “现有项”************。
 
-5. 从原始项目中选择要添加的所有文件，然后选择“确定”  。 如果子文件夹需要，则重复。
+5. 选择要从原始项目添加的所有文件，然后选择 **"确定**"。 如果子文件夹需要，则重复。
 
-6. 你现在可能有一些重复代码。 如果有多个预编译标头（例如 stdafx.h  和 pch.h  ），请选择一个保留。 将任何所需的代码（比如 include 语句）复制到你要保留的标头中。 然后，删除另一个，并在“预编译标头”  下的项目属性中，请确保头文件的名称正确。
+6. 你现在可能有一些重复代码。 如果有多个预编译标头（例如 stdafx.h** 和 pch.h**），请选择一个保留。 将任何所需的代码（比如 include 语句）复制到你要保留的标头中。 然后，删除另一个，并在“预编译标头”**** 下的项目属性中，请确保头文件的名称正确。
 
-   如果更改了要用作预编译标头的文件，请确保预编译标头选项适用于每个文件。 依次选择每个 .cpp 文件，打开其属性窗口，并确保所有项都设置为“使用 (/Yu)”  （所需的预编译标头除外，其应设置为“创建 (/Yc)”  ）。
+   如果更改了要用作预编译标头的文件，请确保预编译标头选项适用于每个文件。 依次选择每个 .cpp 文件，打开其属性窗口，并确保所有项都设置为“使用 (/Yu)”****（所需的预编译标头除外，其应设置为“创建 (/Yc)”****）。
 
 7. 生成项目并解决任何错误。 这些错误可能由使用 `/ZW` 选项导致，可能由新版本的 Windows SDK 导致，也可能反映了依赖关系（例如，你的库依赖的头文件或新旧项目之间的项目设置差异）。
 
@@ -229,6 +229,6 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 9. 通过从 UWP 应用项目添加对组件的引用来测试该组件，然后添加某些代码来调用你创建的公共 API。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [移植到通用 Windows 平台](../porting/porting-to-the-universal-windows-platform-cpp.md)

@@ -44,17 +44,18 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c5d7d5135c3b207bbf113970deb8cbeb186bcca
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374033"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749568"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
 在 Microsoft Outlook 中具有 **“导航窗格”** 可视外观的选项卡控件。
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
+
 ## <a name="syntax"></a>语法
 
 ```
@@ -65,51 +66,51 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|默认构造函数。|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|为 Outlook 栏中的新选项卡中添加一个 Windows 控件。|
-|`CMFCOutlookBarTabCtrl::CalcRectEdit`|由框架调用以确定用户时，将显示编辑框的尺寸将重命名一个选项卡。（重写 `CMFCBaseTabCtrl::CalcRectEdit`。）|
-|[CMFCOutlookBarTabCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|由框架调用以确定如果不是当前可见，可以显示更少的 Outlook 栏选项卡页按钮的大小调整操作过程。|
-|[CMFCOutlookBarTabCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|由框架调用以确定如果不是当前可见，可以显示多个 Outlook 栏选项卡页按钮的大小调整操作过程。|
-|[CMFCOutlookBarTabCtrl::Create](#create)|创建 Outlook 栏选项卡控件。|
+|[CMFCOutlookBarTabCtrl：：添加控制](#addcontrol)|在 Outlook 栏中将 Windows 控件添加为新选项卡。|
+|`CMFCOutlookBarTabCtrl::CalcRectEdit`|由框架调用以确定用户重命名选项卡时显示的编辑框的尺寸。 `CMFCBaseTabCtrl::CalcRectEdit`|
+|[CMFCOutlookBarTabCtrl：：可以显示更少的页面按钮](#canshowfewerpagebuttons)|框架在调整大小操作期间调用，以确定显示的 Outlook 栏选项卡页按钮是否少于当前可见按钮。|
+|[CMFCOutlookBarTabCtrl：：可以显示更多页面按钮](#canshowmorepagebuttons)|框架在调整大小操作期间调用，以确定显示的 Outlook 栏选项卡页按钮是否比当前可见数多。|
+|[CMFCOutlookBarTabCtrl：：创建](#create)|创建 Outlook 栏选项卡控件。|
 |`CMFCOutlookBarTabCtrl::CreateObject`|由框架用于创建此类类型的动态实例。|
-|[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)|指定是否启用动画时所发生的活动选项卡之间切换。|
-|[CMFCOutlookBarTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|指定用户是否可以修改上的 Outlook 栏选项卡按钮的文本标签。 (重写[CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit)。)|
-|[CMFCOutlookBarTabCtrl::EnableScrollButtons](#enablescrollbuttons)|由框架调用以启用允许用户滚动浏览 Outlook 栏窗格上的按钮的按钮。|
-|`CMFCOutlookBarTabCtrl::FindTargetWnd`|标识包含指定的点的窗格。 (重写[CMFCBaseTabCtrl::FindTargetWnd](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd)。)|
-|[CMFCOutlookBarTabCtrl::GetBorderSize](#getbordersize)|返回 Outlook 选项卡控件的边框大小。|
-|`CMFCOutlookBarTabCtrl::GetTabArea`|检索的大小和选项卡控件的选项卡区域的位置。 (重写[CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea)。)|
-|`CMFCOutlookBarTabCtrl::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
-|[CMFCOutlookBarTabCtrl::GetVisiblePageButtons](#getvisiblepagebuttons)||
-|[CMFCOutlookBarTabCtrl::IsAnimation](#isanimation)|确定是否启用动画时所发生的活动选项卡之间切换。|
-|[CMFCOutlookBarTabCtrl::IsMode2003](#ismode2003)|确定 Outlook 栏选项卡控件是否在模拟 Microsoft Outlook 2003 模式下。|
-|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|确定点是否在选项卡区域内。 (重写[CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea)。)|
-|`CMFCOutlookBarTabCtrl::IsTabDetachable`|确定选项卡是否可拆分。 (重写[CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable)。)|
-|`CMFCOutlookBarTabCtrl::OnChangeTabs`|插入或删除一个选项卡时，由框架调用。 （重写 `CMFCBaseTabCtrl::OnChangeTabs`。）|
-|[CMFCOutlookBarTabCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|由框架调用以减少可见的选项卡页按钮的数目。|
-|[CMFCOutlookBarTabCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|由框架调用以增加可见的选项卡页按钮的数目。|
-|[CMFCOutlookBarTabCtrl::OnShowOptions](#onshowoptions)|显示**导航窗格选项**对话框。|
-|`CMFCOutlookBarTabCtrl::RecalcLayout`|重新计算选项卡控件的内部布局。 (重写[CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)。)|
-|[CMFCOutlookBarTabCtrl::SetActiveTab](#setactivetab)|设置活动选项卡。(重写[CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)。)|
-|[CMFCOutlookBarTabCtrl::SetBorderSize](#setbordersize)|设置 Outlook 选项卡控件的边框大小。|
-|[CMFCOutlookBarTabCtrl::SetPageButtonTextAlign](#setpagebuttontextalign)|设置上的 Outlook 栏选项卡按钮的文本标签的对齐方式。|
-|[CMFCOutlookBarTabCtrl::SetToolbarImageList](#settoolbarimagelist)|设置包含在 Outlook 2003 模式下的 Outlook 栏底部显示的图标的位图 (请参阅[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md))。|
-|[CMFCOutlookBarTabCtrl::SetVisiblePageButtons](#setvisiblepagebuttons)||
+|[CMFCOutlookBarTabCtrl：：启用动画](#enableanimation)|指定是否启用活动选项卡之间切换期间发生的动画。|
+|[CMFCOutlookBartabCtrl：：启用原点编辑](#enableinplaceedit)|指定用户是否可以修改 Outlook 栏选项卡按钮上的文本标签。 （覆盖[CMFCBaseTabctrl：启用位置编辑](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).）|
+|[CMFCOutlookBarTabCtrl：：启用ScrollButton](#enablescrollbuttons)|由框架调用以启用允许用户滚动浏览 Outlook 栏窗格上的按钮的按钮。|
+|`CMFCOutlookBarTabCtrl::FindTargetWnd`|标识包含指定点的窗格。 （覆盖[CMFCBaseTabctrl：查找目标](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd).）|
+|[CMFCOutlookBarTabCtrl：获取边界大小](#getbordersize)|返回 Outlook 选项卡控件的边框大小。|
+|`CMFCOutlookBarTabCtrl::GetTabArea`|检索选项卡控件的选项卡区域的大小和位置。 （覆盖[CMFCBaseTabCtrl：getTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).）|
+|`CMFCOutlookBarTabCtrl::GetThisClass`|框架用于获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|[CMFCOutlookBarTabCtrl：：获取可见页面按钮](#getvisiblepagebuttons)||
+|[CMFCOutlookBarTabCtrl：动画](#isanimation)|确定是否启用了在活动选项卡之间切换期间发生的动画。|
+|[CMFCOutlookBarTabCtrl：isMode2003](#ismode2003)|确定 Outlook 栏选项卡控件是否处于模拟 Microsoft Outlook 2003 的模式。|
+|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|确定点是否位于选项卡区域内。 （覆盖[CMFCBaseTabctrl：isPtinTab区域](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).）|
+|`CMFCOutlookBarTabCtrl::IsTabDetachable`|确定选项卡是否可拆卸。 （覆盖[CMFCBaseTabCtrl：可分离的 Tab](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable)|
+|`CMFCOutlookBarTabCtrl::OnChangeTabs`|插入或删除选项卡时由框架调用。 （重写 `CMFCBaseTabCtrl::OnChangeTabs`。）|
+|[CMFCOutlookBarTabCtrl：：在显示少点页面按钮](#onshowfewerpagebuttons)|框架调用以减少可见的选项卡页按钮数。|
+|[CMFCOutlookBarTabCtrl：：在显示更多页面按钮](#onshowmorepagebuttons)|由框架调用以增加可见的选项卡页按钮数。|
+|[CMFCOutlookBarTabCtrl：：在显示选项上](#onshowoptions)|显示**导航窗格选项**对话框。|
+|`CMFCOutlookBarTabCtrl::RecalcLayout`|重新计算选项卡控件的内部布局。 （覆盖[CMFCBaseTabCtrl：recalclayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).）|
+|[CMFCOutlookBarTabCtrl：：设置活动选项卡](#setactivetab)|设置活动选项卡.（覆盖[CMFCBaseTabCtrl：：设置活动选项卡](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).）|
+|[CMFCOutlookBarTabCtrl：：设置边框大小](#setbordersize)|设置 Outlook 选项卡控件的边框大小。|
+|[CMFCOutlookBarTabCtrl：：设置页面按钮文本对齐](#setpagebuttontextalign)|设置 Outlook 栏选项卡按钮上文本标签的对齐方式。|
+|[CMFCOutlookBarTabCtrl：：设置工具栏图片列表](#settoolbarimagelist)|设置包含 Outlook 2003 模式下 Outlook 栏底部显示的图标的位图（请参阅[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)）。|
+|[CMFCOutlookBarTabCtrl：：设置可见页面按钮](#setvisiblepagebuttons)||
 
 ## <a name="remarks"></a>备注
 
-若要创建一个 Outlook 栏，停靠支持，请使用`CMFCOutlookBar`要托管的 Outlook 栏选项卡控件对象。 有关详细信息，请参阅[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。
+要创建具有停靠支持的 Outlook 栏，请使用对象`CMFCOutlookBar`承载 Outlook 栏选项卡控件。 有关详细信息，请参阅[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何初始化`CMFCOutlookBarTabCtrl`对象，并使用各种方法中的`CMFCOutlookBarTabCtrl`类。 该示例演示如何以启用上的 Outlook 栏选项卡页按钮的文本标签的就地编辑、 启用动画、 启用滚动句柄，使用户可以滚动浏览 Outlook 栏窗格上的按钮，设置 Outlook 选项卡 cont 的边框大小rol 和组上的 Outlook 栏选项卡按钮的文本标签的对齐方式。 此代码片段属于[Outlook 演示示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何初始化`CMFCOutlookBarTabCtrl`对象并在`CMFCOutlookBarTabCtrl`类中使用各种方法。 该示例演示如何在 Outlook 栏的选项卡页按钮上启用文本标签的就地编辑、启用动画、启用允许用户滚动"Outlook"栏窗格上的按钮的滚动控点、设置 Outlook 选项卡控件的边框大小以及设置 Outlook 栏选项卡按钮上文本标签的对齐方式。 此代码段是 Outlook[演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -128,13 +129,13 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxoutlookbartabctrl.h
+**标题：** afxoutlookbartabctrl.h
 
-##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl
+## <a name="cmfcoutlookbartabctrladdcontrol"></a><a name="addcontrol"></a>CMFCOutlookBarTabCtrl：：添加控制
 
-为 Outlook 栏中的新选项卡中添加一个 Windows 控件。
+在 Outlook 栏中将 Windows 控件添加为新选项卡。
 
-```
+```cpp
 void AddControl(
     CWnd* pWndCtrl,
     LPCTSTR lpszName,
@@ -146,37 +147,37 @@ void AddControl(
 ### <a name="parameters"></a>参数
 
 *pWndCtrl*<br/>
-[in]指向要添加的控件的指针。
+[在]指向要添加的控件的指针。
 
-*lpszName*<br/>
-[in]指定选项卡的名称。
+*lpsz名称*<br/>
+[在]指定选项卡的名称。
 
-*bDetachable*<br/>
-[in]如果为 TRUE，将创建页为可拆分。
+*b 可拆卸*<br/>
+[在]如果为 TRUE，则页面将创建为可拆卸页面。
 
 *nImageID*<br/>
-[in]在新选项卡中显示的图像的内部图像列表中的图像索引。
+[在]要在新选项卡中显示的图像的内部图像列表中的图像索引。
 
-*dwControlBarStyle*<br/>
-[in]指定已包装的停靠窗格 AFX_ CBRS_ * 样式。
+*dwControlBar样式*<br/>
+[在]为包装的停靠窗格指定AFX_CBRS_* 样式。
 
 ### <a name="remarks"></a>备注
 
-使用此函数作为新页的 outlook 栏添加一个控件。
+使用此函数将控件添加为 Outlook 栏的新页。
 
-此函数在内部调用上[cmfcbasetabctrl:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)。
+此功能在[CMFCBaseTabCtrl 上内部调用：：AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)。
 
-如果您设置*bDetachable*为 TRUE，`AddControl`会在内部创建`CDockablePaneAdapter`对象，并包装添加的控件。 它会自动设置为运行时类的选项卡式窗口的运行时类`CMFCOutlookBar`和运行时类在浮动帧的`CMultiPaneFrameWnd`。
+如果将*bDetach*设置为 TRUE，`AddControl`则内部创建`CDockablePaneAdapter`对象并包装添加的控件。 它会自动将选项卡式窗口的运行时类设置到 的`CMFCOutlookBar`运行时类，将浮动帧的运行时类设置到`CMultiPaneFrameWnd`。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`AddControl`中的方法`CMFCOutlookBarTabCtrl`类。 此代码片段属于[Outlook 演示示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何在`AddControl``CMFCOutlookBarTabCtrl`类中使用 方法。 此代码段是 Outlook[演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
-##  <a name="canshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowFewerPageButtons
+## <a name="cmfcoutlookbartabctrlcanshowfewerpagebuttons"></a><a name="canshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl：：可以显示更少的页面按钮
 
-在调整大小操作，以确定是否比当前可见，也可以显示更少的 Outlook 栏选项卡页按钮过程由框架调用。
+框架在调整大小操作期间调用，以确定显示的 Outlook 栏选项卡页按钮是否少于当前可见按钮。
 
 ```
 virtual BOOL CanShowFewerPageButtons() const;
@@ -184,15 +185,15 @@ virtual BOOL CanShowFewerPageButtons() const;
 
 ### <a name="return-value"></a>返回值
 
-如果多个按钮，则为 TRUE否则为 FALSE。
+如果有多个按钮，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-Outlook 栏选项卡控件动态添加或删除从具体取决于如何太多空间可显示的选项卡。 该框架使用此方法可帮助完成该过程。
+Outlook 栏选项卡控件会根据可用空间的可用空间量动态添加或删除显示选项卡。 框架使用此方法来帮助该过程。
 
-##  <a name="canshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowMorePageButtons
+## <a name="cmfcoutlookbartabctrlcanshowmorepagebuttons"></a><a name="canshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl：：可以显示更多页面按钮
 
-在调整大小操作，以确定是否比当前可见，也可以显示多个 Outlook 栏选项卡页按钮过程由框架调用。
+框架在调整大小操作期间调用，以确定显示的 Outlook 栏选项卡页按钮是否比当前可见数多。
 
 ```
 virtual BOOL CanShowMorePageButtons() const;
@@ -200,13 +201,13 @@ virtual BOOL CanShowMorePageButtons() const;
 
 ### <a name="return-value"></a>返回值
 
-如果按钮不是当前可见，则为 TRUE否则为 FALSE。
+如果当前看不到按钮，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-Outlook 栏选项卡控件动态添加或删除的显示，具体取决于多少空间是可用的选项卡。 该框架使用此方法可帮助完成该过程。
+Outlook 栏选项卡控件会根据可用空间的可用空间量动态添加或删除选项卡。 框架使用此方法来帮助该过程。
 
-##  <a name="create"></a>  CMFCOutlookBarTabCtrl::Create
+## <a name="cmfcoutlookbartabctrlcreate"></a><a name="create"></a>CMFCOutlookBarTabCtrl：：创建
 
 创建 Outlook 栏选项卡控件。
 
@@ -219,26 +220,26 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
-[in]指定的初始大小和位置，以像素为单位。
+*矩形*<br/>
+[在]指定初始大小和位置（以像素为单位）。
 
-*pParentWnd*<br/>
-[in]指向父窗口。 不能为 NULL。
+*pparentwnd*<br/>
+[在]指向父窗口。 不能为 NULL。
 
 *nID*<br/>
-[in]控件 id。
+[在]控件 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建控件，非零值否则为 0。
+如果控件已成功创建，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-通常情况下，outlook 栏选项卡控件时，会创建[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)控制 WM_CREATE 消息的过程。
+通常，当[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)控制进程的WM_CREATE消息时，将创建 Outlook 栏选项卡控件。
 
-##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation
+## <a name="cmfcoutlookbartabctrlenableanimation"></a><a name="enableanimation"></a>CMFCOutlookBarTabCtrl：：启用动画
 
-指定是否启用动画时所发生的活动选项卡之间切换。
+指定是否启用活动选项卡之间切换期间发生的动画。
 
 ```
 static void EnableAnimation(BOOL bEnable=TRUE);
@@ -246,16 +247,16 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>参数
 
-*bEnable*<br/>
-[in]指定是否应启用或禁用动画。
+*b 启用*<br/>
+[在]指定是启用还是禁用动画。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可启用和禁用动画。 当用户打开选项卡页时，页面的标题幻灯片向上或向下如果启用动画。 如果禁用了动画，页面将立即变为活动状态。
+调用此函数以启用和禁用动画。 当用户打开选项卡页时，如果启用了动画，该页的标题将向上或向下滑动。 如果禁用动画，页面将立即变为活动状态。
 
-默认情况下已启用动画。
+默认情况下，动画已启用。
 
-##  <a name="enableinplaceedit"></a>  CMFCOutlookBarTabCtrl::EnableInPlaceEdit
+## <a name="cmfcoutlookbartabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCOutlookBartabCtrl：：启用原点编辑
 
 指定用户是否可以修改 Outlook 栏选项卡页按钮上的文本标签。
 
@@ -265,18 +266,18 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>参数
 
-*bEnable*<br/>
-如果为 TRUE，则启用就地编辑的文本标签。 如果为 FALSE，则禁用就地编辑。
+*b 启用*<br/>
+如果为 TRUE，则启用文本标签的就地编辑。 如果 FALSE，则禁用就地编辑。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可启用或禁用就地编辑的选项卡页按钮上的文本标签。 默认情况下禁用就地编辑。
+调用此函数以启用或禁用选项卡页按钮上文本标签的就地编辑。 默认情况下，将禁用就地编辑。
 
-##  <a name="enablescrollbuttons"></a>  CMFCOutlookBarTabCtrl::EnableScrollButtons
+## <a name="cmfcoutlookbartabctrlenablescrollbuttons"></a><a name="enablescrollbuttons"></a>CMFCOutlookBarTabCtrl：：启用ScrollButton
 
-由框架调用以启用滚动句柄，允许用户滚动浏览 Outlook 栏窗格上的按钮。
+框架调用以启用允许用户滚动在 Outlook 栏窗格上的按钮的滚动控点。
 
-```
+```cpp
 void EnableScrollButtons(
     BOOL bEnable = TRUE,
     BOOL bIsUp = TRUE,
@@ -285,20 +286,20 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>参数
 
-*bEnable*<br/>
-[in]确定是否显示滚动按钮。
+*b 启用*<br/>
+[在]确定是否显示滚动按钮。
 
 *bIsUp*<br/>
-[in]确定是否显示顶部的滚动条。
+[在]确定是否显示顶部滚动条。
 
 *bIsDown*<br/>
-[in]确定是否显示底部滚动条。
+[在]确定是否显示底部滚动条。
 
 ### <a name="remarks"></a>备注
 
-启用滚动按钮的显示功能。 活动选项卡更改要还原的滚动按钮时，由框架调用此方法。
+启用滚动按钮的显示。 当活动选项卡更改以还原滚动按钮时，框架将调用此方法。
 
-##  <a name="getbordersize"></a>  CMFCOutlookBarTabCtrl::GetBorderSize
+## <a name="cmfcoutlookbartabctrlgetbordersize"></a><a name="getbordersize"></a>CMFCOutlookBarTabCtrl：获取边界大小
 
 返回 Outlook 选项卡控件的边框大小。
 
@@ -308,9 +309,9 @@ int GetBorderSize() const;
 
 ### <a name="return-value"></a>返回值
 
-边框的大小，以像素为单位。
+边框大小（以像素为单位）。
 
-##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons
+## <a name="cmfcoutlookbartabctrlgetvisiblepagebuttons"></a><a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl：：获取可见页面按钮
 
 ```
 int GetVisiblePageButtons() const;
@@ -320,9 +321,9 @@ int GetVisiblePageButtons() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isanimation"></a>  CMFCOutlookBarTabCtrl::IsAnimation
+## <a name="cmfcoutlookbartabctrlisanimation"></a><a name="isanimation"></a>CMFCOutlookBarTabCtrl：动画
 
-指定是否启用动画时所发生的活动选项卡之间切换。
+指定是否启用活动选项卡之间切换期间发生的动画。
 
 ```
 static BOOL IsAnimation();
@@ -330,15 +331,15 @@ static BOOL IsAnimation();
 
 ### <a name="return-value"></a>返回值
 
-如果启用动画，则非零值否则为 0。
+如果启用了动画，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-调用[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)函数来启用或禁用动画。
+调用[CMFCOutlookBarTabCtrl：：启用动画](#enableanimation)功能以启用或禁用动画。
 
-##  <a name="ismode2003"></a>  CMFCOutlookBarTabCtrl::IsMode2003
+## <a name="cmfcoutlookbartabctrlismode2003"></a><a name="ismode2003"></a>CMFCOutlookBarTabCtrl：isMode2003
 
-确定 Outlook 栏选项卡控件是否在模拟 Microsoft Outlook 2003 模式下。
+确定 Outlook 栏选项卡控件是否处于模拟 Microsoft Outlook 2003 的模式。
 
 ```
 BOOL IsMode2003() const;
@@ -346,15 +347,15 @@ BOOL IsMode2003() const;
 
 ### <a name="return-value"></a>返回值
 
-Outlook 栏选项卡控件在 Outlook 2003 模式下; 如果为 TRUE否则为 FALSE。
+如果 Outlook 栏选项卡控件处于 Outlook 2003 模式，则为 TRUE;如果 Outlook 栏选项卡控件处于 Outlook 2003 模式，则为 TRUE。否则 FALSE;
 
 ### <a name="remarks"></a>备注
 
-通过设置此值[CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003)。
+此值由[CMFCOutlookBar 设置：setMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003)。
 
-##  <a name="onshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowFewerPageButtons
+## <a name="cmfcoutlookbartabctrlonshowfewerpagebuttons"></a><a name="onshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl：：在显示少点页面按钮
 
-由框架调用以减少可见的选项卡页按钮的数目。
+框架调用以减少可见的选项卡页按钮数。
 
 ```
 virtual void OnShowFewerPageButtons();
@@ -362,11 +363,11 @@ virtual void OnShowFewerPageButtons();
 
 ### <a name="remarks"></a>备注
 
-此方法在调整大小时该控件调整可见的页面选项卡按钮的数目。
+此方法调整控件调整大小时可见页选项卡按钮的数量。
 
-##  <a name="onshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowMorePageButtons
+## <a name="cmfcoutlookbartabctrlonshowmorepagebuttons"></a><a name="onshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl：：在显示更多页面按钮
 
-由框架调用以增加可见的选项卡页按钮的数目。
+由框架调用以增加可见的选项卡页按钮数。
 
 ```
 virtual void OnShowMorePageButtons();
@@ -374,11 +375,11 @@ virtual void OnShowMorePageButtons();
 
 ### <a name="remarks"></a>备注
 
-此方法调整控件的大小调整时，会显示的选项卡页按钮的数目。
+此方法调整调整控件调整大小时可见的选项卡页按钮数。
 
-##  <a name="onshowoptions"></a>  CMFCOutlookBarTabCtrl::OnShowOptions
+## <a name="cmfcoutlookbartabctrlonshowoptions"></a><a name="onshowoptions"></a>CMFCOutlookBarTabCtrl：：在显示选项上
 
-显示**导航窗格选项**对话框。
+显示 **"导航窗格选项**"对话框。
 
 ```
 virtual void OnShowOptions();
@@ -386,13 +387,13 @@ virtual void OnShowOptions();
 
 ### <a name="remarks"></a>备注
 
-**导航窗格选项**对话框的允许用户选择的选项卡页按钮显示，以及所显示的顺序。
+**"导航窗格选项"** 对话框允许用户选择要显示的选项卡页按钮及其显示顺序。
 
-由框架调用此方法，当用户选择**导航窗格选项**从控件的自定义菜单的菜单项。
+当用户从控件的自定义菜单中选择**导航窗格选项**菜单项时，框架将调用此方法。
 
-##  <a name="setactivetab"></a>  CMFCOutlookBarTabCtrl::SetActiveTab
+## <a name="cmfcoutlookbartabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCOutlookBarTabCtrl：：设置活动选项卡
 
-设置活动选项卡。活动选项卡是处于打开状态，并使用其可见的内容。
+设置活动选项卡。活动选项卡是打开的选项卡，其内容可见。
 
 ```
 virtual BOOL SetActiveTab(int iTab);
@@ -401,38 +402,38 @@ virtual BOOL SetActiveTab(int iTab);
 ### <a name="parameters"></a>参数
 
 *iTab*<br/>
-[in]若要打开的选项卡的从零开始的索引。
+[在]要打开的选项卡的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-如果已成功，则打开指定的选项卡，非零值否则为 0。
+如果指定的选项卡已成功打开，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-设置活动选项卡上的视觉效果取决于您是否已启用动画。 有关详细信息，请参阅[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)。
+设置活动选项卡的视觉效果取决于是否已启用动画。 有关详细信息，请参阅[CMFCOutlookBarTabCtrl：：启用动画](#enableanimation)。
 
-##  <a name="setbordersize"></a>  CMFCOutlookBarTabCtrl::SetBorderSize
+## <a name="cmfcoutlookbartabctrlsetbordersize"></a><a name="setbordersize"></a>CMFCOutlookBarTabCtrl：：设置边框大小
 
 设置 Outlook 选项卡控件的边框大小。
 
-```
+```cpp
 void SetBorderSize(int nBorderSize);
 ```
 
 ### <a name="parameters"></a>参数
 
-*nBorderSize*<br/>
-[in]以像素为单位指定新的边框大小。
+*n边框大小*<br/>
+[在]指定以像素为单位的新边框大小。
 
 ### <a name="remarks"></a>备注
 
-设置新边框大小并重新计算 outlook 窗口布局。
+设置新的边框大小并重新计算 Outlook 窗口布局。
 
-##  <a name="setpagebuttontextalign"></a>  CMFCOutlookBarTabCtrl::SetPageButtonTextAlign
+## <a name="cmfcoutlookbartabctrlsetpagebuttontextalign"></a><a name="setpagebuttontextalign"></a>CMFCOutlookBarTabCtrl：：设置页面按钮文本对齐
 
-设置上的 Outlook 栏选项卡按钮的文本标签的对齐方式。
+设置 Outlook 栏选项卡按钮上文本标签的对齐方式。
 
-```
+```cpp
 void SetPageButtonTextAlign(
     UINT uiAlign,
     BOOL bRedraw=TRUE);
@@ -440,29 +441,29 @@ void SetPageButtonTextAlign(
 
 ### <a name="parameters"></a>参数
 
-*uiAlign*<br/>
-[in]指定的文本对齐方式。
+*乌伊·马利*<br/>
+[在]指定文本对齐方式。
 
-*bRedraw*<br/>
-[in]如果为 TRUE，则将重绘 outlook 窗口。
+*bredraw*<br/>
+[在]如果为 TRUE，则将重绘 Outlook 窗口。
 
 ### <a name="remarks"></a>备注
 
-使用此函数更改页面按钮的文本对齐方式。
+使用此函数可以更改页面按钮的文本对齐方式。
 
-*uiAlign*可以是下列值之一：
+*uiAlign*可以是以下值之一：
 
 |返回的常量|含义|
 |--------------|-------------|
-|TA_LEFT|左的对齐|
-|TA_CENTER|居中对齐|
+|TA_LEFT|左对齐|
+|TA_CENTER|中心对齐|
 |TA_RIGHT|右对齐|
 
-默认值为 TA_CENTER。
+默认值为TA_CENTER。
 
-##  <a name="settoolbarimagelist"></a>  CMFCOutlookBarTabCtrl::SetToolbarImageList
+## <a name="cmfcoutlookbartabctrlsettoolbarimagelist"></a><a name="settoolbarimagelist"></a>CMFCOutlookBarTabCtrl：：设置工具栏图片列表
 
-设置包含在 Outlook 2003 模式下的 Outlook 栏底部显示的图标的位图。
+设置包含 Outlook 2003 模式下 Outlook 栏底部显示的图标的位图。
 
 ```
 BOOL SetToolbarImageList(
@@ -474,39 +475,39 @@ BOOL SetToolbarImageList(
 ### <a name="parameters"></a>参数
 
 *uiID*<br/>
-[in]指定要加载图像的资源 ID。
+[在]指定要加载的图像的资源 ID。
 
-*cx*<br/>
-[in]在图像列表中，以像素为单位指定的图像的宽度。
+*残雪*<br/>
+[在]指定图像列表中图像的宽度（以像素为单位）。
 
 *clrTransp*<br/>
-[in]一个指定透明颜色的 RGB 值。
+[在]指定透明颜色的 RGB 值。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE否则返回 FALSE。
+如果成功，则返回 TRUE;否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-使用此函数将附加图像列表将在 Microsoft Office 2003 模式下的工具栏按钮显示的图像。 映像索引应对应于页的索引。
+使用此功能可以附加图像列表，其图像将在 Microsoft Office 2003 模式下显示在工具栏按钮上。 图像索引应对应于页面索引。
 
-如果未在 Microsoft Office 2003 模式下，不应调用此方法。 有关详细信息，请参阅[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。
+如果不是在 Microsoft Office 2003 模式下，则不应调用此方法。 有关详细信息，请参阅[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。
 
-##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons
+## <a name="cmfcoutlookbartabctrlsetvisiblepagebuttons"></a><a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl：：设置可见页面按钮
 
-```
+```cpp
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in] *nVisiblePageButtons*<br/>
+[在]*n 可见页面按钮*<br/>
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs_s
+- _o_wcsrtombs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: c804d232dbcce67b8d467eaa37ccf2b15282881a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518304"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910600"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -72,7 +74,7 @@ errno_t wcsrtombs_s(
 *wcstr*<br/>
 指向要转换的宽字符字符串的指针。
 
-*count*<br/>
+*计数*<br/>
 要存储在*mbstr*缓冲区中的最大字节数，或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *mbstate*<br/>
@@ -82,7 +84,7 @@ errno_t wcsrtombs_s(
 
 如果成功，返回零；如果失败，则返回错误代码。
 
-|错误条件|返回值和**errno**|
+|添加状态|返回值和**errno**|
 |---------------------|------------------------------|
 |*mbstr*为**NULL** ， *sizeInBytes* > 0|**EINVAL**|
 |*wcstr*为**NULL**|**EINVAL**|
@@ -104,9 +106,9 @@ errno_t wcsrtombs_s(
 
 如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)的特殊值，则**wcsrtombs_s**会将尽可能多的字符串转换为目标缓冲区的大小，同时仍然为 null 终止符留下空间。
 
-如果**wcsrtombs_s**成功转换源字符串，则会将转换后的字符串的大小（以字节为单位）放入 *&#42;pReturnValue* （如果*pReturnValue*不为**null**）。 即使*mbstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*mbstr*为**NULL**，则忽略*count* 。
+如果**wcsrtombs_s**成功转换源字符串，则会将转换后的字符串的大小（以字节为单位）放入 *&#42;pReturnValue* （提供的*pReturnValue*不为**null**）。 即使*mbstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*mbstr*为**NULL**，则忽略*count* 。
 
-如果**wcsrtombs_s**遇到不能转换为多字节字符的宽字符，它将在 *\*pReturnValue*中设置-1，将目标缓冲区设置为空字符串，将**errno**设置为**eilseq 且**，并返回**eilseq 且**。
+如果**wcsrtombs_s**遇到不能转换为多字节字符的宽字符，则它将* \*pReturnValue*中的-1，将目标缓冲区设置为空字符串，**将 errno**设置为**eilseq 且**，并返回**eilseq 且**。
 
 如果由*wcstr*和*mbstr*指向的序列重叠，则**wcsrtombs_s**的行为是不确定的。 **wcsrtombs_s**受当前区域设置的 LC_TYPE 类别的影响。
 
@@ -117,7 +119,9 @@ errno_t wcsrtombs_s(
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-## <a name="exceptions"></a>异常
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
+## <a name="exceptions"></a>例外
 
 只要当前线程中的任何函数在执行此函数时都不会调用**setlocale** ，并且*mbstate*为 null， **wcsrtombs_s**函数就是多线程安全的。
 
@@ -168,16 +172,16 @@ int main()
 The string was successfully converted.
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**wcsrtombs_s**|\<wchar.h>|
 
 ## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

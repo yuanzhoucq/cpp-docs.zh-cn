@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 7e19fc9257c1fe986ff09a8bbc86bf2fb55af7ee
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7b31f4b725a6983171162d9805d08224ad787808
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504734"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360464"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 类
 
-包含组合框控件的工具栏按钮, 该控件使用户能够从系统字体列表中选择一种字体。
+包含组合框控件的工具栏按钮，使用户能够从系统字体列表中选择字体。
 
 ## <a name="syntax"></a>语法
 
@@ -33,37 +33,37 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|构造 `CMFCToolBarFontComboBox` 对象。|
+|[CMFCToolBarFontBox：CMFCToolBarFontCombox](#cmfctoolbarfontcombobox)|构造 `CMFCToolBarFontComboBox` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|返回一个指向组合框`CMFCFontInfo`中指定索引的对象的指针。|
-|[CMFCToolBarFontComboBox::SetFont](#setfont)|根据字体的名称或字体的前缀和字符集, 在 "字体" 组合框中选择一种字体。|
+|[CMFCToolBarFontComboBox：：获取丰得斯克](#getfontdesc)|返回指向组合框中指定`CMFCFontInfo`索引对象的指针。|
+|[CMFCToolBarFontBox：：SetFont](#setfont)|根据字体的名称或字体的前缀和字符集在字体组合框中选择字体。|
 
 ### <a name="data-members"></a>数据成员
 
-[CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)<br/>
+[CMFCToolBarFontComboBox：：m_nFontHeight](#m_nfontheight)<br/>
 字体组合框中字符的高度。
 
 ## <a name="remarks"></a>备注
 
-若要将字体组合框按钮添加到工具栏, 请执行以下步骤:
+要向工具栏添加字体组合框按钮，请按照以下步骤操作：
 
 1. 在父级工具栏资源中保留该按钮的虚拟资源 ID。
 
-1. `CMFCToolBarFontComboBox`构造对象。
+1. 构造`CMFCToolBarFontComboBox`对象。
 
-1. 在处理 AFX_WM_RESETTOOLBAR 消息的消息处理程序中, 使用[CMFCToolBar:: ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)将原始按钮替换为新组合框按钮。
+1. 在处理AFX_WM_RESETTOOLBAR消息的消息处理程序中，使用[CMFCToolBar：：：替换Button，](../../mfc/reference/cmfctoolbar-class.md#replacebutton)将原始按钮替换为新的组合框按钮。
 
-1. 使用[CMFCToolBarFontComboBox:: SetFont](#setfont)方法同步在组合框中选择的字体和文档中的字体。
+1. 使用[CMFCToolBarFontCombox：：setFont](#setfont)方法，将组合框中选择的字体与文档中的字体同步。
 
-若要使用组合框中所选的字体同步文档字体, 请使用[CMFCToolBarFontComboBox:: GetFontDesc](#getfontdesc)方法检索选定字体的属性, 并使用这些属性创建[CFont 类](../../mfc/reference/cfont-class.md)对象。
+若要将文档的字体与组合框中选择的字体同步，请使用[CMFCToolBarFontComboBox：：GetFontDesc](#getfontdesc)方法检索所选字体的属性，并使用这些属性创建[CFont 类](../../mfc/reference/cfont-class.md)对象。
 
-字体组合框按钮调用 Win32 函数[EnumFontFamiliesEx](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexw) , 以确定可用于系统的屏幕和打印机字体。
+字体组合框按钮调用 Win32 功能[EnumFontSeEx](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexw)以确定系统可用的屏幕和打印机字体。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -71,17 +71,17 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+[CMFCToolBarComBox按钮](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
 [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxtoolbarfontcombobox
+**标题：** afxtoolbarfontcombox.h
 
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
+## <a name="cmfctoolbarfontcomboboxcmfctoolbarfontcombobox"></a><a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontBox：CMFCToolBarFontCombox
 
-构造[CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)对象。
+构造[CMFCToolBarFontCombox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)对象。
 
 ```
 public:
@@ -107,13 +107,13 @@ CMFCToolBarFontComboBox();
 ### <a name="parameters"></a>参数
 
 *uiID*<br/>
-中组合框的命令 ID。
+[在]组合框的命令 ID。
 
-*iImage*<br/>
-中工具栏图像的从零开始的索引。 该图像位于[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)维护的[CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)对象中。
+*i图像*<br/>
+[在]工具栏图像的零基索引。 图像位于[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)维护的[CMFCToolBar 图像类](../../mfc/reference/cmfctoolbarimages-class.md)对象中。
 
-*nFontType*<br/>
-中组合框包含的字体类型。 此参数可以是下列值的组合 (布尔值或):
+*n字体类型*<br/>
+[在]组合框包含的字体类型。 此参数可以是以下值的组合（布尔或）：
 
 DEVICE_FONTTYPE
 
@@ -122,23 +122,23 @@ RASTER_FONTTYPE
 TRUETYPE_FONTTYPE
 
 *nCharSet*<br/>
-中如果设置为 DEFAULT_CHARSET, 则组合框包含所有字符集中所有唯一命名的字体。 (如果两个字体具有相同的名称, 组合框会包含其中一种。)如果设置为有效的字符集值, 组合框只包含指定字符集中的字体。 有关可能的字符集的列表, 请参阅[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) 。
+[在]如果设置为DEFAULT_CHARSET，组合框包含所有字符集中的所有唯一命名字体。 （如果有两个具有相同名称的字体，则组合框包含其中一种字体。如果设置为有效的字符集值，组合框仅包含指定字符集中的字体。 有关可能的字符集的列表，请参阅[LOGFONT。](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
 *dwStyle*<br/>
-中组合框的样式。 (请参见[组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))
+[在]组合框的样式。 （请参阅[组合盒样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)）
 
 *iWidth*<br/>
-中编辑控件的宽度 (以像素为单位)。
+[在]编辑控件的宽度（以像素为单位）。
 
-*nPitchAndFamily*<br/>
-中如果设置为 DEFAULT_PITCH, 组合框将包含字体, 而不考虑间距。 如果设置为 "FIXED_PITCH" 或 "VARIABLE_PITCH", 则组合框仅包含具有该螺距类型的字体。 当前不支持基于字体系列的筛选。
+*n 皮奇和家庭*<br/>
+[在]如果设置为DEFAULT_PITCH，组合框包含字体，而不考虑间距。 如果设置为FIXED_PITCH或VARIABLE_PITCH，组合框仅包含具有该间距类型的字体。 当前不支持基于字体系列进行筛选。
 
-*pLstFontsExternal*<br/>
-弄指向存储可用字体的[CObList 类](../../mfc/reference/coblist-class.md)对象的指针。
+*pLstFonts 外部*<br/>
+[出]指向存储可用字体的[CObList 类](../../mfc/reference/coblist-class.md)对象的指针。
 
 ### <a name="remarks"></a>备注
 
-通常, `CMFCToolBarFontComboBox`对象会在单个共享`CObList`对象中存储可用字体的列表。 如果使用构造函数的第二个重载, 并提供指向*pLstFontsExternal*的有效指针, `CMFCToolBarFontComboBox`则该对象`CObList`将改为使用可用字体填充*pLstFontsExternal*指向的内容。
+通常，`CMFCToolBarFontComboBox`对象将可用字体列表存储在单个共享`CObList`对象中。 如果使用构造函数的第二个重载并提供指向*pLstFonts 外部*的有效指针，则该`CMFCToolBarFontComboBox`对象将改为用可用字体`CObList`填充该*pLstFonts 外部*点。
 
 ### <a name="example"></a>示例
 
@@ -146,9 +146,9 @@ TRUETYPE_FONTTYPE
 
 [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]
 
-##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc
+## <a name="cmfctoolbarfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCToolBarFontComboBox：：获取丰得斯克
 
-返回一个指向组合框`CMFCFontInfo`中指定索引的对象的指针。
+返回指向组合框中指定`CMFCFontInfo`索引对象的指针。
 
 ```
 const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
@@ -157,15 +157,15 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-中指定组合框项的从零开始的索引。
+[在]指定组合框项的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-指向 `CMFCFontInfo` 对象的指针。 如果*iIndex*未指定有效的项索引, 则返回值为 NULL。
+一个指向 `CMFCFontInfo` 对象的指针。 如果*iIndex*未指定有效的物料索引，则返回值为 NULL。
 
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight
+## <a name="cmfctoolbarfontcomboboxm_nfontheight"></a><a name="m_nfontheight"></a>CMFCToolBarFontComboBox：：m_nFontHeight
 
-如果组合框具有所有者绘制样式, 则指定字体组合框中字符的高度 (以像素为单位)。
+如果组合框具有所有者绘制样式，则指定字体组合框中字符的高度（以像素为单位）。
 
 ```
 static int m_nFontHeight
@@ -173,11 +173,11 @@ static int m_nFontHeight
 
 ### <a name="remarks"></a>备注
 
-`m_nFontHeight`如果变量是 0, 则会根据组合框的默认字体自动计算高度。 高度包括基线上方的字符的上移量和基线下的字符的下降量。
+如果`m_nFontHeight`变量为 0，则根据组合框的默认字体自动计算高度。 高度包括基线上方的字符上升和基线下方字符的下降。
 
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont
+## <a name="cmfctoolbarfontcomboboxsetfont"></a><a name="setfont"></a>CMFCToolBarFontBox：：SetFont
 
-根据参数中指定的字体名称和字符集, 在 "字体" 组合框中选择字体。
+根据参数中指定的字体名称和字符集选择字体组合框中的字体。
 
 ```
 BOOL SetFont(
@@ -188,30 +188,30 @@ BOOL SetFont(
 
 ### <a name="parameters"></a>参数
 
-*lpszName*<br/>
-中指定字体名称或前缀。
+*lpsz名称*<br/>
+[在]指定字体名称或前缀。
 
 *nCharSet*<br/>
-中指定字符集。
+[在]指定字符集。
 
-*bExact*<br/>
-中指定*lpszName*是否包含字体名称或字体前缀。
+*b精确*<br/>
+[在]指定*lpszName*是否包含字体名称还是字体前缀。
 
 ### <a name="return-value"></a>返回值
 
-如果成功选择字体, 则为非零值;否则为0。
+如果已成功选择字体，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-如果*bExact*为 TRUE, 则此方法将选择与指定为*lpszName*的名称完全匹配的字体。 如果*bExact*为 FALSE, 此方法将选择一个字体, 该字体以指定为*lpszName*的文本开头, 并使用指定为*nCharSet*的字符集。 如果将*nCharSet*设置为 DEFAULT_CHARSET, 则将忽略字符集, 并且仅将*lpszName*用于选择字体。
+如果*bExact*为 TRUE，则此方法将选择与您指定为*lpszName*的名称完全匹配的字体。 如果*bExact*是 FALSE，则此方法选择以指定为*lpszName*的文本开头并使用指定为*nCharSet*的字符集的字体。 如果*nCharSet*设置为DEFAULT_CHARSET，则字符集将被忽略，并且将仅使用*lpszName*来选择字体。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
+[CMFC工具栏按钮类](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CMFCToolBarComboBoxButton 类](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo 类](../../mfc/reference/cmfcfontinfo-class.md)<br/>
-[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[演练：将控件添加到工具栏](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[CMFC工具栏：更换按钮](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
+[演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388574"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198128"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>编译器警告（等级 4）C4754
 
@@ -19,11 +19,11 @@ ms.locfileid: "62388574"
 
 发出了 C4754 警告，因为比较的结果总是相同。 这可能表示条件的其中一个分支绝不会执行，原因最可能是关联的整数表达式不正确。 此代码缺陷通常在对 64 位体系结构执行了不正确的整数溢出检查时发生。
 
-整数转换规则很复杂，并且有很多微小的缺陷。 作为解决每个 C4754 警告的替代方法，你可以更新代码以使用[SafeInt 库](../../safeint/safeint-library.md)。
+整数转换规则很复杂，并且有很多微小的缺陷。 作为修复每个 C4754 警告的替代方法，你可以更新代码以使用[SafeInt 库](../../safeint/safeint-library.md)。
 
 ## <a name="example"></a>示例
 
-此示例会生成 C4754:
+此示例生成 C4754：
 
 ```cpp
 // C4754a.cpp
@@ -96,7 +96,7 @@ Warning C4754: Conversion rules for arithmetic operations in the comparison at C
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**请注意**编译器警告中引用的行号是语句的最后一行。 在有关分布到多个行的复杂条件语句的警告消息中，具有行代码缺陷的行可能是所报告的行前面几行的行。 例如：
+**注意**编译器警告中提到的行号是语句的最后一行。 在有关分布到多个行的复杂条件语句的警告消息中，具有行代码缺陷的行可能是所报告的行前面几行的行。 例如：
 
 ```cpp
 unsigned long a;

@@ -17,50 +17,50 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: 5372fe4e96c444d454c277394dd811cfac14d1f6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9bd1cafe40417872d42f2e9e1427e5f2eccad7a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220894"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328865"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>创建发行版本时遇到的常见问题
 
-在开发期间，将通常生成和测试你的项目的调试版本。 如果您然后构建应用程序的发布版本，可能会收到访问冲突。
+在开发过程中，通常使用项目的调试版本来生成和测试。 如果随后为发布版本生成应用程序，则可能会遇到访问冲突。
 
-以下列表显示调试和发布 （非调试） 生成之间的主要差异。 其他差异，但以下是它适用于调试版本时，会导致失败的应用程序在发布版本中的主要区别。
+下面的列表显示了调试和发布（非调试）版本之间的主要区别。 还有其他差异，但以下是导致应用程序在调试版本中可运行但在发布版本中不运行的主要区别。
 
 - [堆布局](#_core_heap_layout)
 
 - [编译](#_core_compilation)
 
-- [指针的支持](#_core_pointer_support)
+- [指针支持](#_core_pointer_support)
 
 - [优化](#_core_optimizations)
 
-请参阅[/GZ （调试版本中捕捉版本生成错误）](reference/gz-enable-stack-frame-run-time-error-checking.md)如何捕获版本信息的编译器选项生成调试版本中的错误。
+有关如何捕获调试版本中的发布版本错误的信息，请参阅 [/GZ（捕获调试版本中的发布版本错误）](reference/gz-enable-stack-frame-run-time-error-checking.md)编译器选项。
 
-##  <a name="_core_heap_layout"></a> 堆布局
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a> 堆布局
 
-堆布局将大约 90%的明显的问题的原因，当应用程序中调试，但不是发布的工作。
+关于导致应用程序在调试版本中可运行，但在发布版本中不运行的问题，约有百分之九十都是由堆布局引起的。
 
-生成用于调试的项目时，将调试内存分配器。 这意味着所有内存分配都有其周围放置保护字节。 这些保护字节检测内存改写。 因为堆布局不同之间发行版和调试版本中，内存改写可能会在调试版本，不创建任何问题，但在发行版本中可能导致灾难性的后果。
+生成用于调试的项目时，使用的是调试内存分配器。 这意味着所有内存分配的周围都有保护字节。 这些保护字节检测内存覆盖。 由于堆布局在发布版本和调试版本之间不同，因此内存覆盖在调试版本中可能不会引起任何问题，但在发布版本中可能导致灾难性的后果。
 
-有关详细信息，请参阅[检查内存改写](checking-for-memory-overwrites.md)并[用于调试版本来检查内存改写](using-the-debug-build-to-check-for-memory-overwrite.md)。
+有关详细信息，请参阅[查看内存覆盖](checking-for-memory-overwrites.md)和[使用调试版本检查内存覆盖](using-the-debug-build-to-check-for-memory-overwrite.md)。
 
-##  <a name="_core_compilation"></a> 编译
+## <a name="compilation"></a><a name="_core_compilation"></a> 编译
 
-许多 MFC 宏和很多时生成发布版本的 MFC 实现更改。 具体而言，ASSERT 宏计算结果为 nothing 在发行版本中，因此将执行任何 assert 语句中的代码。 有关详细信息，请参阅[检查断言语句](using-verify-instead-of-assert.md)。
+许多 MFC 宏和大部分 MFC 实现在生成以用于发布时都会发生更改。 特别是，ASSERT 宏在发布版本中不计算任何内容，因此不会执行 ASSERT 中找到的任何代码。 有关详细信息，请参阅[检查 ASSERT 语句](using-verify-instead-of-assert.md)。
 
-一些函数是内联以在发布版本中提高速度。 优化通常是在发布版本中打开的。 此外使用不同的内存分配器。
+为提高运行速度，发布版本中内联了某些函数。 发行版本中通常会启用优化。 还会使用不同的内存分配器。
 
-##  <a name="_core_pointer_support"></a> 指针的支持
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a> 指针支持
 
-缺少调试信息从你的应用程序中删除填充。 在发布版本中，杂散指针具有更好的指向未初始化的内存，而不是指向要调试的信息。
+缺少调试信息会从应用程序中删除填充。 在发布版本中，迷途指针更有可能指向未初始化的内存，而不是指向调试信息。
 
-##  <a name="_core_optimizations"></a> 优化
+## <a name="optimizations"></a><a name="_core_optimizations"></a> 优化
 
-根据某些代码段的性质，优化编译器可能生成意外的代码。 这是最不可能的原因的发行版本问题，但有时确实会发生。 一种解决方案，请参阅[优化您的代码](optimizing-your-code.md)。
+根据代码片段的特性，优化编译器可能会生成意外代码。 这导致发布版本问题的可能性最低，但有时确实会发生。 有关解决方案，请参阅[优化代码](optimizing-your-code.md)。
 
 ## <a name="see-also"></a>请参阅
 

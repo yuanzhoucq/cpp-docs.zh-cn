@@ -1,9 +1,11 @@
 ---
 title: mbtowc、_mbtowc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbtowc
 - _mbtowc_l
+- _o__mbtowc_l
+- _o_mbtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952023"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915412"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
@@ -59,12 +62,12 @@ int _mbtowc_l(
 ### <a name="parameters"></a>参数
 
 *wchar*<br/>
-宽字符（ **wchar_t**类型）的地址。
+宽字符的地址（类型**wchar_t**）。
 
 *mbchar*<br/>
 字节（多字节字符）序列的地址。
 
-*count*<br/>
+*计数*<br/>
 要检查的字节数。
 
 *locale*<br/>
@@ -76,16 +79,18 @@ int _mbtowc_l(
 
 ## <a name="remarks"></a>备注
 
-如果*mbchar*不为**NULL**，则**mbtowc**函数将*mbchar*指向的*计数*或更少的字节转换为相应的宽字符。 如果*wchar*不为**NULL**，则**mbtowc**会将生成的宽字符存储在*wchar 中*。 **mbtowc**不检查超过**MB_CUR_MAX**个字节。 **mbtowc**对与区域设置相关的行为使用当前区域设置; **_mbtowc_l**是相同的，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果*mbchar*不为**NULL**，则**mbtowc**函数将*mbchar*指向的*计数*或更少的字节转换为相应的宽字符。 如果*wchar*不为**NULL**，则**mbtowc**会将生成的宽字符存储在*wchar 中*。 **mbtowc**不检查超过**MB_CUR_MAX**个字节。 **mbtowc**对与区域设置相关的行为使用当前区域设置;**_mbtowc_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -147,11 +152,11 @@ Attempt to convert a NULL pointer to a wide character:
    Bytes converted: 0
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>

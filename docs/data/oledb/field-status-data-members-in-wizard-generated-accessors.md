@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 61ee867f664b6b0d885e35f6d58840b37ce322b9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707564"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210907"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>向导生成的访问器中的字段状态数据成员
 
@@ -44,18 +44,18 @@ public:
    DBLENGTH m_dwAuthorLength;
    DBLENGTH m_dwYearBornLength;
 
-    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
-    SELECT \
-        AuID, \
-        Author, \
-        YearBorn \
-        FROM dbo.Authors")
+   DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+   SELECT \
+      AuID, \
+      Author, \
+      YearBorn \
+      FROM dbo.Authors")
 
-    BEGIN_COLUMN_MAP(CAuthorsAccessor)
-       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
-    END_COLUMN_MAP()
+   BEGIN_COLUMN_MAP(CAuthorsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+   END_COLUMN_MAP()
 ...
 ```
 

@@ -3,12 +3,12 @@ title: 在 Visual Studio 中部署、运行和调试 C++ Linux 项目
 description: 介绍如何从 Visual Studio 中的 C++ Linux 项目内针对远程目标编译、执行和调试代码。
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042760"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80077828"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、运行和调试 Linux 项目
 
@@ -35,7 +35,7 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
 ## <a name="debug-your-linux-project"></a>调试 Linux 项目
 
 1. 在“调试”属性页中选择调试模式  。
-   
+
    ::: moniker range="vs-2019"
 
    GDB 用于调试在 Linux 上运行的应用程序。 在远程系统（而非 WSL）上进行调试时，GDB 可以在两种不同的模式下运行，可从项目“调试”属性页中的“调试模式”选项中进行选择   ：
@@ -51,7 +51,6 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
    ![GDB 选项](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - 在 gdbserver 模式下，GDB 在本地运行，连接到在远程系统上的 gdbserver  。  请注意，这是 Linux 控制台窗口唯一支持的模式。
 
@@ -129,7 +128,7 @@ AttachOptionsForConnection 具有你可能需要的大多数属性  。 上述�
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a>指定用于生成和调试的不同计算机
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a>指定用于生成和调试的不同计算机
 
 在 Visual Studio 2019 版本 16.1 中，可以将远程生成计算机与远程调试计算机分开，以便处理基于 MSBuild 的 Linux 项目和面向远程 Linux 计算机的 CMake 项目。 例如，现在可以在 x64 系统上进行交叉编译，并在定位 IoT 方案时部署到 ARM 设备。
 
@@ -191,6 +190,7 @@ IntelliSense 将建议使用包含所有已建立的远程连接的列表。 可
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤

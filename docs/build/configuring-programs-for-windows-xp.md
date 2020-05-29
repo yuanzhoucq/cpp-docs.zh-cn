@@ -1,37 +1,52 @@
 ---
 title: 配置适用于 Windows XP 的程序
-ms.date: 05/16/2019
+description: 如何在 Visual Studio 中安装和使用 C++ Windows XP 工具集。
+ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
-ms.translationtype: MT
+ms.openlocfilehash: 92364d7fd25ac617baacc125b279fb0ee9c92f62
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450700"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440476"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>配置适用于 Windows XP 的程序
 
-因为 Visual Studio 支持多个平台工具集，所以可以面向不受默认工具集支持的操作系统和运行时库。 例如，通过切换平台工具集，可以在 Visual Studio 中使用受 MSVC 编译器支持的 C++11、C++14 和 C++17 语言增强来创建面向 Windows XP 和 Windows Server 2003 的应用。 还可以使用较旧的平台工具集来维护二进制兼容旧代码，同时仍然可以利用 Visual Studio IDE 的最新功能。
+Visual Studio 支持多个平台工具集。 这意味着可以面向不受默认工具集支持的操作系统和运行时库。 例如，通过切换平台工具集，可以使用 Visual Studio 2017 C++ 编译器创建面向 Windows XP 和 Windows Server 2003 的应用。 还可以使用较旧的平台工具集来维护二进制兼容旧代码，同时仍然可以利用 Visual Studio IDE 的最新功能。
 
-Visual Studio 2019 及更高版本不支持使用 v142 工具集为 Windows XP 创建代码。 支持使用 Visual Studio 2017 中附带的 v141 工具集进行 Windows XP 开发，该支持作为 Visual Studio 安装程序中的可选组件提供。
+::: moniker range="vs-2019"
+
+Visual Studio 2019 中提供的 v142 工具集不支持为 Windows XP 创建代码。 支持使用 Visual Studio 2017 v141_xp 工具集进行 Windows XP 开发，该支持作为 Visual Studio 安装程序中的单独组件选项提供。
+
+::: moniker-end
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安装 Windows XP 平台工具集
 
-要获取平台工具集和组件以在 Visual Studio 2017 中针对 Windows XP 和 Windows Server 2003 进行开发，请运行 Visual Studio 安装程序。 在最初安装 Visual Studio 时或选择“修改”以修改现有安装时，请确保选择“使用 C++ 的桌面开发”工作负载   。 在此工作负载的可选组件列表中，选择“针对 C++ 的 Windows XP 支持”，然后选择“安装”或“修改”    。
+::: moniker range="<=vs-2017"
+
+若要使 Visual Studio 2017 平台工具集和组件可面向 Windows XP 和 Windows Server 2003，请运行 Visual Studio 安装程序。 在最初安装 Visual Studio 时或修改现有安装时，请确保选择“使用 C++ 的桌面开发”工作负载  。 在此工作负载的可选组件列表中，选择“针对 C++ 的 Windows XP 支持”，然后选择“安装”或“修改”    。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+若要使 v141_xp 平台工具集和组件可面向 Windows XP 和 Windows Server 2003，请运行 Visual Studio 安装程序。 在最初安装 Visual Studio 时或修改现有安装时，请确保选择“使用 C++ 的桌面开发”工作负载  。 在“单个组件”  选项卡上的“编译器、生成工具和运行时”  下，选择“对 VS 2017 (v141)工具的 C++ Windows XP 支持 \[已弃用]”  ，然后选择“安装”  或“修改”  。
+
+::: moniker-end
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP 定向体验
 
-Visual Studio 中内含的 Windows XP 平台工具集是 Windows 7 SDK 的一个版本，但它使用当前的 C++ 编译器。 它还将项目属性配置为适当的默认值，例如，为低级别的定向规范兼容的链接器。 只有通过使用 Windows XP 平台工具集创建的 Windows 桌面应用才能在 Windows XP 和 Windows Server 2003 上运行，不过这些应用也可以在更新的 Windows 操作系统上运行。
+Visual Studio 中包含的 Windows XP 平台工具集是 Windows 7 SDK 的一个版本，但它使用 Visual Studio 2017 C++ 编译器。 它还将项目属性配置为适当的默认值，例如，为低级别的定向规范兼容的链接器。 只有使用 Windows XP 平台工具集创建的 Windows 桌面应用才能在 Windows XP 和 Windows Server 2003 上运行。 这些应用也可以在更新的 Windows 操作系统上运行。
 
-#### <a name="to-target-windows-xp"></a>若要针对 Windows XP
+### <a name="to-target-windows-xp"></a>若要针对 Windows XP
 
 1. 在“解决方案资源管理器”  中，打开项目的快捷菜单，然后选择“属性”  。
 
-1. 在项目的“属性页”对话框中，在“配置属性” > “常规”下，将“平台工具集”属性设置为所需的 Windows XP 工具集     。 例如，选择“Visual Studio 2017 - Windows XP (v141_xp)”，通过使用 Visual Studio 2017 中的 Microsoft C++ 编译器为 Windows XP 和 Windows Server 2003 创建代码  。
+1. 在项目的“属性页”  对话框中，选择“配置属性”   > “常规”  。 将“平台工具集”  属性设置为首选 Windows XP 工具集。 例如，选择“Visual Studio 2017 - Windows XP (v141_xp)”，通过使用 Visual Studio 2017 中的 Microsoft C++ 编译器为 Windows XP 和 Windows Server 2003 创建代码  。
 
 ### <a name="c-runtime-support"></a>C++ 运行时支持
 
-Windows XP 平台工具集、C 运行库 (CRT)、C++ 标准库、活动模板库 (ATL)、并发运行时库 (ConCRT)、并行模式库 (PPL)、Microsoft 基础类库 (MFC) 和 C++ AMP（C++ 加速大规模编程）库均包括对 Windows XP 和 Windows Server 2003 的运行时支持。 对于这些操作系统，支持的最低版本是适用于 x86 的 Windows XP Service Pack 3 (SP3)、适用于 x64 的 Windows XP Service Pack 2 (SP2) 以及适用于 x86 和 x64 的 Windows Server 2003 Service Pack 2 (SP2)。
+除了 Windows XP 平台工具集之外，一些库还包含对 Windows XP 和 Windows Server 2003 的运行时支持。 这些库包括：C 运行时库 (CRT)、C++ 标准库、活动模板库 (ATL)、并发运行时库 (ConCRT)、并行模式库 (PPL)、Microsoft 基础类库 (MFC) 和 C++ AMP（C++ 加速大规模编程）库。 对于这些操作系统，支持的最低版本为：适用于 x86 的 Windows XP Service Pack 3 (SP3)、适用于 x64 的 Windows XP Service Pack 2 (SP2) 以及适用于 x86 和 x64 的 Windows Server 2003 Service Pack 2 (SP2)。
 
 这些库受通过 Visual Studio 安装的平台工具集的支持，具体取决于目标：
 
@@ -53,19 +68,19 @@ Windows XP 平台工具集、C 运行库 (CRT)、C++ 标准库、活动模板库
 
 - **C++ 语言功能**
 
-   在使用 v110\_xp 平台工具集的应用中仅支持在 Visual Studio 2012 中实现的 C++ 语言功能。 在使用 v120\_xp 平台工具集的应用中仅支持在 Visual Studio 2013 中实现的 C++ 语言功能。 在使用 v140\_xp 平台工具集的应用中仅支持在 Visual Studio 2015 中实现的 C++ 语言功能。 Visual Studio 在使用较旧的平台工具集进行生成时会使用相应的编译器。 请使用最新的 Windows XP 平台工具集以利用在该版本的编译器中实现的其他 C++ 语言功能。
+   在使用 v110\_xp 平台工具集的应用中仅支持在 Visual Studio 2012 中实现的 C++ 语言功能。 在使用 v120\_xp 平台工具集的应用中仅支持在 Visual Studio 2013 中实现的 C++ 语言功能。 在使用 v140\_xp 平台工具集的应用中仅支持在 Visual Studio 2015 中实现的 C++ 语言功能。 在使用 v141\_xp 平台工具集的应用中仅支持在 Visual Studio 2017 中实现的 C++ 语言功能。 Visual Studio 在使用较旧的平台工具集进行生成时会使用相应的编译器。 请使用最新的 Windows XP 平台工具集以利用在该版本的编译器中实现的其他 C++ 语言功能。
 
 - **远程调试**
 
-   Visual Studio 远程工具不支持在 Windows XP 或 Windows Server 2003 上进行远程调试。 对于在 Windows XP 或 Windows Server 2003 上运行的应用，若要对其进行调试，可使用来自 Visual Studio 较早版本的调试器，以本地或远程方式对其进行调试。 这类似于调试 Windows Vista 上的应用程序的体验，因为它是平台工具集的运行时目标，而不是远程调试的目标。
+   Visual Studio 远程工具不支持在 Windows XP 或 Windows Server 2003 上进行远程调试。 若要在 Windows XP 或 Windows Server 2003 上以本地或远程方式调试应用，请使用来自 Visual Studio 较早版本的调试器。 这类似于在 Windows Vista 上调试应用，因为它是平台工具集的运行时目标，而不是远程调试的目标。
 
 - **静态分析**
 
-   Windows XP 平台工具集不支持静态分析，因为 Windows 7 SDK 的 SAL 批注和运行时库不兼容。 如果想对支持 Windows XP 或 Windows Server 2003 的应用执行静态分析，可以临时将解决方案切换为针对目标默认平台工具集，从而进行分析，然后再切换回 Windows XP 平台工具集来构建应用。
+   Windows XP 平台工具集不支持静态分析，因为 Windows 7 SDK 的 SAL 批注和运行时库不兼容。 仍可以对支持 Windows XP 或 Windows Server 2003 的应用执行静态分析。 临时将解决方案切换为面向默认平台工具集来进行分析，然后再切换回 Windows XP 平台工具集来生成应用。
 
 - **调试 DirectX 图形**
 
-   因为图形调试器不支持 Direct3D 9 API，所以它不能用于调试在 Windows XP 或 Windows Server 2003 上使用 Direct3D 的应用。 但是，如果应用程序可实现使用 Direct3D 10 或 Direct3D 11 API 的备用呈现器，则可以使用图形调试器来诊断有关这些 API 的使用情况的问题。
+   因为图形调试器不支持 Direct3D 9 API，所以它不能用于在 Windows XP 或 Windows Server 2003 上调试使用 Direct3D 的应用。 但是，如果应用可基于 Direct3D 10 或 Direct3D 11 API 实现备用呈现器，则可以使用图形调试器来诊断有关问题。
 
 - **生成 HLSL**
 

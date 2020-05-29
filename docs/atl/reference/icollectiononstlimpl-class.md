@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8ccab08b89da8c1b8ef56c8932e27a6c74e62aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329905"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 类
 
-此类提供了使用集合类的方法。
+此类提供集合类使用的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -34,50 +34,50 @@ class ICollectionOnSTLImpl : public T
 *T*<br/>
 COM 集合接口。
 
-*CollType*<br/>
-一个C++标准库容器类。
+*拼贴*<br/>
+C++标准库容器类。
 
-*ItemType*<br/>
-容器接口所显示的项的类型。
+*项目类型*<br/>
+容器接口公开的项的类型。
 
-*CopyItem*<br/>
-一个[复制策略类](../../atl/atl-copy-policy-classes.md)。
+*复制项目*<br/>
+[复制策略类](../../atl/atl-copy-policy-classes.md)。
 
-*EnumType*<br/>
-一个[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-兼容的枚举器类。
+*枚举类型*<br/>
+[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)- 兼容枚举器类。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|返回集合的枚举器对象。|
-|[ICollectionOnSTLImpl::getcount](#get_count)|返回集合中的元素数。|
-|[ICollectionOnSTLImpl::get_Item](#get_item)|从集合返回请求的项。|
+|[ICollectiononSTLimpl：：get__NewEnum](#newenum)|返回集合的枚举对象。|
+|[ICollectiononSTLimpl：：获取计数](#get_count)|返回集合中的元素数。|
+|[ICollectiononSTLimpl：get_Item](#get_item)|从集合返回请求的项。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::m_coll](#m_coll)|集合。|
+|[ICollectiononSTLimpl：m_coll](#m_coll)|集合。|
 
 ## <a name="remarks"></a>备注
 
-此类提供了三种方法的集合接口的实现： [getcount](#get_count)， [get_Item](#get_item)，并[get__NewEnum](#newenum)。
+此类为集合接口的三种方法提供实现[：getcount、get_Item](#get_count)和[get_Item](#get_item)[get__NewEnum](#newenum)。
 
-若要使用此类：
+要使用此类：
 
-- 定义 （或借用） 想要实现的集合接口。
+- 定义（或借用）要实现的集合接口。
 
-- 您的类派生的专用化`ICollectionOnSTLImpl`基于此集合接口。
+- 基于此集合接口的`ICollectionOnSTLImpl`专门化派生类。
 
-- 使用派生的类实现中未处理的集合接口的任何方法`ICollectionOnSTLImpl`。
+- 使用派生类实现来自 未由`ICollectionOnSTLImpl`处理的集合接口的任何方法。
 
 > [!NOTE]
->  如果集合接口是双重接口，派生类从[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)，并传入`ICollectionOnSTLImpl`如果你想 ATL 提供的实现的第一个模板参数的专用化`IDispatch`方法。
+> 如果集合接口是双接口，请从[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)派生类，如果希望`ICollectionOnSTLImpl`ATL 提供`IDispatch`方法的实现，则将专业化作为第一个模板参数传递。
 
-- 将项添加到[程序 m_coll](#m_coll)要填充的集合成员。
+- 将项添加到[m_coll](#m_coll)成员以填充集合。
 
 有关详细信息和示例，请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)。
 
@@ -89,11 +89,11 @@ COM 集合接口。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标题：** atlcom.h
 
-##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount
+## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a>ICollectiononSTLimpl：：获取计数
 
-此方法返回集合中项的数目。
+此方法返回集合中的项数。
 
 ```
 STDMETHOD(getcount)(long* pcount);
@@ -102,13 +102,13 @@ STDMETHOD(getcount)(long* pcount);
 ### <a name="parameters"></a>参数
 
 *pcount*<br/>
-[out]集合中的元素数。
+[出]集合中的元素数。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
-##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item
+## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a>ICollectiononSTLimpl：get_Item
 
 此方法从集合中返回指定的项。
 
@@ -118,23 +118,23 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>参数
 
-*Tuple*<br/>
-[in]集合中的项的从 1 开始的索引。
+*索引*<br/>
+[在]集合中项的基于 1 的索引。
 
-*pvar*<br/>
-[out]对应的项*索引*。
+*普瓦尔*<br/>
+[出]对应于*索引*的项 。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-通过将复制的数据中指定的位置获取项[程序 m_coll](#m_coll)使用的复制方法[复制策略类](../../atl/atl-copy-policy-classes.md)作为模板参数中传递`ICollectionOnSTLImpl`专用化。
+通过使用在`ICollectionOnSTLImpl`专门化中作为模板参数传递[的复制策略类](../../atl/atl-copy-policy-classes.md)的复制方法，在[m_coll](#m_coll)的指定位置复制数据，从而获取该项目。
 
-##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum
+## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a>ICollectiononSTLimpl：：get__NewEnum
 
-返回集合的枚举器对象。
+返回集合的枚举对象。
 
 ```
 STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
@@ -142,26 +142,26 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>参数
 
-*ppUnk*<br/>
-[out]**IUnknown**新创建的枚举数对象的指针。
+*普恩克*<br/>
+[出]新创建的枚举器对象的**I 未知**指针。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-新创建枚举器保留对原始集合的迭代器`m_coll`，（因此不会创建副本） 并要确保集合保持活动状态，尽管有未完成的枚举器的集合对象上保存的 COM 引用。
+新创建的枚举器在原始集合上维护迭代器`m_coll`（因此不创建副本），并在集合对象上保留 COM 引用，以确保集合在存在未完成的枚举器时保持活动状态。
 
-##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll
+## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a>ICollectiononSTLimpl：m_coll
 
-此成员保留表示集合的项。
+此成员保存集合表示的项。
 
 ```
 CollType m_coll;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[ATLCollections 示例](../../overview/visual-cpp-samples.md)<br/>
+[ATL集合示例](../../overview/visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -1,8 +1,9 @@
 ---
 title: qsort
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort
+- _o_qsort
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949700"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913257"
 ---
 # <a name="qsort"></a>qsort
 
@@ -56,13 +58,13 @@ void qsort(
 *base*<br/>
 目标数组的开头。
 
-*number*<br/>
+*数字*<br/>
 元素中的数组大小。
 
-*width*<br/>
+width <br/>
 元素大小（字节）。
 
-*compare*<br/>
+*并排*<br/>
 指向用户提供的例程的指针比较两个数组元素，并返回指定它们关系的值。
 
 ## <a name="remarks"></a>备注
@@ -77,7 +79,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 该例程将比较元素，并返回下列值之一。
 
-|比较函数返回值|描述|
+|比较函数返回值|说明|
 |-----------------------------------|-----------------|
 |< 0|**elem1**小于**elem2**|
 |0|**elem1**等效于**elem2**|
@@ -87,13 +89,15 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 此函数验证其参数。 如果*compare*或*number*为**Null**，或者*base*为**null**且*number*为非零，或者*Width*小于零，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回，并将**errno**设置为**EINVAL**。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> 和 \<search.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -139,7 +143,7 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-ms.openlocfilehash: 116c550f45bf622e7620b3a6f552339b4bcc24a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8cbf08082fd24ef2cf0e8794e2944a799baec084
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321092"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection 类
 
-`CComAutoCriticalSection`提供用于获取和释放关键节对象的所有权的方法。
+`CComAutoCriticalSection`提供了获取和释放关键部分对象所有权的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -29,30 +29,30 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|构造函数。|
-|[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|析构函数。|
+|[CCom自动临界部分：cCom自动临界部分](#ccomautocriticalsection)|构造函数。|
+|[CCom自动临界部分：：_CCom自动临界部分](#dtor)|析构函数。|
 
 ## <a name="remarks"></a>备注
 
-`CComAutoCriticalSection`类似于类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), 但`CComAutoCriticalSection`在构造函数中自动初始化临界区对象。
+`CComAutoCriticalSection`与类[CCom临界节](../../atl/reference/ccomcriticalsection-class.md)类似，除了`CComAutoCriticalSection`在构造函数中自动初始化关键截面对象。
 
-通常, 使用`CComAutoCriticalSection` `typedef`名称[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)。 当使用`CComAutoCriticalSection` [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)时, 此名称引用。
+通常，您可以通过`typedef`名称`CComAutoCriticalSection`["自动关键节](ccommultithreadmodel-class.md#autocriticalsection)"来使用 。 此名称引用`CComAutoCriticalSection`时，使用[CComMultiThreadModel。](../../atl/reference/ccommultithreadmodel-class.md)
 
-使用`Init`此`Term`类时, [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)中的和方法不可用。
+使用`Init`此类`Term`时[，CCom临界节](../../atl/reference/ccomcriticalsection-class.md)中的 和 方法不可用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+[CCom临界部分](../../atl/reference/ccomcriticalsection-class.md)
 
 `CComAutoCriticalSection`
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlcore
+**标题：** atlcore.h
 
-##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection
+## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a>CCom自动临界部分：cCom自动临界部分
 
 构造函数。
 
@@ -62,9 +62,9 @@ CComAutoCriticalSection();
 
 ### <a name="remarks"></a>备注
 
-调用 Win32 函数[InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), 该函数初始化临界区对象。
+调用 Win32 函数[初始化关键节](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection)，它初始化关键节对象。
 
-##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection
+## <a name="ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a>CCom自动临界部分：：_CCom自动临界部分
 
 析构函数。
 
@@ -74,9 +74,9 @@ CComAutoCriticalSection();
 
 ### <a name="remarks"></a>备注
 
-析构函数调用[DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), 后者释放由临界区对象使用的所有系统资源。
+析构函数调用[Delete关键节](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection)，它释放关键节对象使用的所有系统资源。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CComFakeCriticalSection 类](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

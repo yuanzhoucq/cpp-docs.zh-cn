@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0036
 ms.assetid: ee215cd1-2d66-474d-9a63-b9096f1c4923
-ms.openlocfilehash: 9b9232583c464548167e22d0104e0c6098093eab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67a225f907d06cd240ec2ebef236c0b4e0b849e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348388"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192090"
 ---
 # <a name="project-build-error-prj0036"></a>项目生成错误 PRJ0036
 
-Web 部署工具的附加文件属性包含无效项。
+Web 部署工具的 "附加文件" 属性包含无效项。
 
-Web 部署属性页上的其他文件属性包含一个错误，可能是因为宏计算问题。 此错误还可能意味着路径有格式错误，其中包含的字符或在文件路径中是非法的字符的组合。
+Web 部署属性页上的 "其他文件" 属性包含错误，可能是由于宏计算问题引起的。 此错误还可能意味着路径格式不正确，包含文件路径中非法字符或字符的组合。
 
-若要解决此错误，请修复该宏或修复所指定的路径。 计算出的路径是从项目目录的绝对路径。
+若要解决此错误，请修复宏或修复路径规范。 计算的路径是项目目录中的绝对路径。
 
-此错误还可能表示一个引用的文件不存在。
+此错误还可能意味着引用的一个文件不存在。

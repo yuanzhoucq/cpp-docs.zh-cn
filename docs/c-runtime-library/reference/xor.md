@@ -17,18 +17,17 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- Xor
 - std::xor
 - std.xor
 helpviewer_keywords:
 - xor function
 ms.assetid: 0fe9554b-d87b-4487-92ed-366c6dc21df2
-ms.openlocfilehash: 44290cb42cd70370ae9bbdac2c8588bbade59577
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a9b3c393f481f083dcf476ae95cc30541a01ad28
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170093"
 ---
 # <a name="xor"></a>xor
 
@@ -73,4 +72,4 @@ int main( )
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<iso646.h>
+**标头：** \<iso646 >

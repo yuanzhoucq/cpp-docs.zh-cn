@@ -1,8 +1,9 @@
 ---
 title: _fcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fcvt_s
+- _o__fcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623836"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920206"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -62,7 +64,7 @@ errno_t _fcvt_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 所提供的缓冲区将保留转换的结果。
 
 *sizeInBytes*<br/>
@@ -71,31 +73,31 @@ errno_t _fcvt_s(
 *value*<br/>
 要转换的数字。
 
-*count*<br/>
+*计数*<br/>
 小数点后面的数字位数。
 
-*dec*<br/>
+*十进制*<br/>
 指向存储的小数点位置的指针。
 
-*sign*<br/>
+*表明*<br/>
 指向存储的符号指示符的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 ERRNO.h 中定义的。 有关这些错误的列表，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 Errno.h 中定义。 有关这些错误的列表，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*sizeInBytes*|值|count|dec|Sign|返回|*缓冲区*中的值|
+|*宽限*|*sizeInBytes*|value|count|dec|签名|返回|*缓冲区*中的值|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|any|any|any|any|any|**EINVAL**|未修改。|
+|**Null**|any|any|any|any|any|**EINVAL**|未修改。|
 |Not **NULL** （指向有效内存）|<=0|any|any|any|any|**EINVAL**|未修改。|
-|any|any|any|any|**NULL**|any|**EINVAL**|未修改。|
-|any|any|any|any|any|**NULL**|**EINVAL**|未修改。|
+|any|any|any|any|**Null**|any|**EINVAL**|未修改。|
+|any|any|any|any|any|**Null**|**EINVAL**|未修改。|
 
-## <a name="security-issues"></a>安全性问题
+## <a name="security-issues"></a>安全问题
 
 如果*缓冲区*未指向有效内存且不为**NULL**，则 **_fcvt_s**可能会产生访问冲突。
 
@@ -105,13 +107,15 @@ errno_t _fcvt_s(
 
 字符串中仅存储位数。 在调用后，可以从*dec*和*符号*获取小数点的位置和*值*的符号。 *Dec*参数指向整数值;此整数值提供小数点相对于字符串开头的位置。 零或负整数值表示小数点位于第一个数字的左侧。 参数*sign*指向一个整数，该整数指示*值*的符号。 如果*值*为正，则整数设置为 0; 如果*值*为负，则设置为非零数字。
 
-长度为 **_CVTBUFSIZE**的缓冲区足以满足任何浮点值。
+长度 **_CVTBUFSIZE**的缓冲区足以满足任何浮点值。
 
-**_Ecvt_s**和 **_fcvt_s**之间的区别在于*count*参数的解释。 **_ecvt_s**将*count*解释为输出字符串中的总位数， **_fcvt_s**将*count*解释为小数点后的位数。
+**_Ecvt_s**和 **_fcvt_s**之间的区别在于*count*参数的解释。 **_ecvt_s**将*计数**解释为输出*字符串中的总位数，并 **_fcvt_s**解释为小数点后的位数。
 
 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 此函数的调试版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -119,9 +123,9 @@ errno_t _fcvt_s(
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。
+**库：**[CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。
 
 ## <a name="example"></a>示例
 
@@ -155,7 +159,7 @@ int main()
 Converted value: 120000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>

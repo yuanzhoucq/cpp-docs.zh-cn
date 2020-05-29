@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515782"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172173"
 ---
-# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+# <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
 允许使用 C++ 关键字作为标识符。
 
@@ -43,7 +43,7 @@ __identifier(C++_keyword)
 
 在下面的示例中，名为“template”的类在 C# 中创建，并作为 DLL 分发。 在使用 template 类的 C++/CLI 程序中，_identifier 关键字掩盖了 template 是标准 C++ 关键字这一事实。
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -75,7 +75,7 @@ _identifier 关键字对 `/clr` 编译器选项有效。
 
 在下面的示例中，名为“template”的类在 C# 中创建，并作为 DLL 分发。 在使用 template 类的 C++/CLI 程序中，_identifier 关键字掩盖了 template 是标准 C++ 关键字这一事实。
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

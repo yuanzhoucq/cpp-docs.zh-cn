@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398714"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214105"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 结构
 
-指示对`RuntimeClass`，`Implements`和`ChainInterfaces`： 指定的接口是无法访问 IID 列表中的模板。
+向 `RuntimeClass`、`Implements` 和 `ChainInterfaces` 模板指示指定接口在 IID 列表中不可访问。
 
 ## <a name="syntax"></a>语法
 
@@ -25,14 +25,14 @@ template<typename T>
 struct CloakedIid : T;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
-接口处于隐藏状态 （已掩蔽）。
+隐藏（掩蔽）的接口。
 
 ## <a name="remarks"></a>备注
 
-下面是如何的示例**CloakedIid**使用： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。
+下面是如何使用**CloakedIid**的示例： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -42,10 +42,10 @@ struct CloakedIid : T;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
 ms.openlocfilehash: 35b0fda1f501755640123f5181454a5c36b7e986
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233730"
 ---
 # <a name="external-linkage"></a>外部链接
 
-如果标识符的文件范围级别的第一个声明不使用 static 存储类说明符，则该对象具有外部链接。
+如果标识符的文件范围级别的第一个声明不使用 static  存储类说明符，则该对象具有外部链接。
 
-如果函数标识符的声明没有 storage-class-specifier，则就像使用 storage-class-specifier `extern` 声明它一样准确确定其链接。 如果对象标识符的声明具有文件范围但没有 storage-class-specifier，则其链接为外部的。
+如果函数标识符的声明没有 storage-class-specifier，则就像使用 storage-class-specifier `extern` 声明它一样准确确定其链接   。 如果对象标识符的声明具有文件范围但没有 storage-class-specifier  ，则其链接为外部的。
 
 具有外部链接的标识符的名称指定相同的函数或数据对象，这与具有外部连接的相同名称的任何其他声明一样。 这两个声明可以在同一个翻译单元中，也可以在不同的翻译单元中。 如果该对象或函数还具有全局生存期，则该对象或函数由整个程序共享。
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6d85e9b10831bc964706ef94d715b7a5d4ab4c50
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688309"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366346"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution 类
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType* \
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
-*URNG* \
-统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*乌尔格*\
+统一的随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述产生用户指定的浮点类型的值的分布，或者如果未提供，则根据χ2分布进行分布时，键入**double** 。 下表链接到有关各个成员的文章。
+类模板描述生成用户指定的浮点类型的值的分布，或者如果没有提供，则键入**双精度值**，该分布根据 Chi-Squared 分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 有关卡方分布的详细信息，请参阅 Wolfram MathWorld 文章[卡方分布](https://go.microsoft.com/fwlink/p/?linkid=400528)。
 
@@ -224,7 +224,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution：chi_squared_distribution
 
 构造分布。
 
@@ -238,18 +238,18 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*\
 `n` 分布参数。
 
-*parm* \
+*帕尔姆*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < n`
+**先决条件：**`0.0 < n`
 
 第一个构造函数将构造一个对象，该对象存储的 `n` 值保留值 *n*。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>  chi_squared_distribution::param_type
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution：:p阿拉姆型
 
 存储分布的参数。
 
@@ -269,15 +269,15 @@ struct param_type {
 *n*\
 `n` 分布参数。
 
-*right* \
+*对*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < n`
+**先决条件：**`0.0 < n`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

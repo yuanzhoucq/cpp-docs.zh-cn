@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: b28711991835dd14929e5387709046c3867c715e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 468d947947fc89f9ebc832cda722d854bb8b4be2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403693"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752473"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 类
 
-表示可以在颜色对话框中选择自定义颜色的属性页。
+表示可在颜色对话框中选择自定义颜色的属性页。
 
 ## <a name="syntax"></a>语法
 
@@ -31,21 +31,21 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 |||
 |-|-|
-|名称|描述|
+|名称|说明|
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|默认构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |||
 |-|-|
-|名称|描述|
+|名称|说明|
 |`CMFCCustomColorsPropertyPage::CreateObject`|由框架用于创建此类类型的动态实例。|
-|`CMFCCustomColorsPropertyPage::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|设置的属性页的颜色组件。|
+|`CMFCCustomColorsPropertyPage::GetThisClass`|框架用于获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|[CMFC自定义颜色属性页：：设置](#setup)|设置属性页的颜色组件。|
 
 ### <a name="remarks"></a>备注
 
-`CMFCColorDialog`类使用此类以显示自定义颜色属性页。 有关详细信息`CMFCColorDialog`，请参阅[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。
+类`CMFCColorDialog`使用此类来显示自定义颜色属性页。 有关 的详细信息`CMFCColorDialog`，请参阅[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。
 
 ## <a name="example"></a>示例
 
@@ -65,17 +65,17 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 [CPropertyPage](../../mfc/reference/cpropertypage-class.md)
 
-[CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
+[CMFC自定义颜色属性页](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxcustomcolorspropertypage.h
+**标题：** afx自定义颜色属性页.h
 
-##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup
+## <a name="cmfccustomcolorspropertypagesetup"></a><a name="setup"></a>CMFC自定义颜色属性页：：设置
 
-设置的属性页的颜色组件。
+设置属性页的颜色组件。
 
-```
+```cpp
 void Setup(
     BYTE R,
     BYTE G,
@@ -86,18 +86,18 @@ void Setup(
 
 |||
 |-|-|
-|参数|描述|
-|*R*|[in]RGB 值的红色部分。|
-|*G*|[in]RGB 值的绿色部分。|
-|*B*|[in]RGB 值的蓝色部分。|
+|参数|说明|
+|*R*|[在]RGB 值的红色组件。|
+|*G*|[在]RGB 值的绿色组件。|
+|*B*|[在]RGB 值的蓝色组件。|
 
 ### <a name="remarks"></a>备注
 
-此方法会更新当前 RGB 和关联的 HLS （hue、 亮度和饱和度） 颜色值的属性页。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)方法框架初始化颜色对话框或用户按下鼠标左键时调用此方法。 有关详细信息`CMFCColorDialog`，请参阅[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。
+此方法更新属性页的当前 RGB 和关联的 HLS（色调、光度和饱和度）颜色值。 当框架初始化颜色对话框或用户按下鼠标左键时[，CMFCColorDialog：setPageTWO](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)方法调用此方法。 有关 的详细信息`CMFCColorDialog`，请参阅[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)<br/>
+[CMFCColor对话类](../../mfc/reference/cmfccolordialog-class.md)<br/>
 [CMFCStandardColorsPropertyPage 类](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178202"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
 **Microsoft 专用**
 
-MicrosoftC++接口可以按如下所示定义：
+可以按C++如下所示定义 Microsoft 界面：
 
 - 可从零个或多个基接口继承。
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>备注
 
-一个C++[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)未能实现这些规则，但 **__interface**强制实施它们。
+C++ [类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)可以使用这些规则来实现，但 **__interface**强制执行这些规则。
 
 例如，以下是示例接口定义：
 
@@ -58,7 +58,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface**意味着[novtable](../cpp/novtable.md) **__declspec**修饰符。
+**__interface**表示[novtable](../cpp/novtable.md) **__declspec**修饰符。
 
 ## <a name="example"></a>示例
 
@@ -144,7 +144,7 @@ bstr_data = Testing
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [接口特性](../windows/attributes/interface-attributes.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3766a93d7cba9096ce3ff775d94c17a85456fb00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447757"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363105"
 ---
-# <a name="istreamiterator-class"></a>istream_iterator 类
+# <a name="istream_iterator-class"></a>istream_iterator 类
 
 描述一个输入迭代器对象。 它从输入流中提取 `Type` 类的对象，并通过其存储的、指向 `basic_istream`< `CharType`, `Traits`> 的 `pointer` 类型对象访问此输入流。
 
@@ -36,29 +36,29 @@ class istream_iterator
 
 ### <a name="parameters"></a>参数
 
-*类别*\
+*类型*\
 要从输入流中提取的对象的类型。
 
-*CharType*\
-表示 `istream_iterator` 字符类型的类型。 此参数是可选的, 默认值为**char**。
+*字符类型*\
+表示 `istream_iterator` 字符类型的类型。 此参数是可选的，默认值为**char**。
 
-*特征*\
+*性状*\
 表示 `istream_iterator` 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`< `CharType`>。
 
-*长途*\
+*距离*\
 表示 `istream_iterator` 差异类型的带符号的整数类型。 此参数为可选参数，默认值为 `ptrdiff_t`。
 
 构造或递增带有非 null 存储指针的 istream_iterator 类对象后，此对象将尝试从关联的输入流提取和存储 `Type` 类型的对象。 如果提取失败，对象将使用 null 指针有效替换存储指针，从而设置序列末尾指示符。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[istream_iterator](#istream_iterator)|构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_type](#char_type)|为 `istream_iterator` 的字符类型提供的类型。|
 |[istream_type](#istream_type)|为 `istream_iterator` 的流类型提供的类型。|
@@ -66,19 +66,19 @@ class istream_iterator
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|操作员|说明|
 |-|-|
-|[operator*](#op_star)|此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。|
-|[operator->](#op_arrow)|返回成员的值（如果有）。|
-|[operator++](#op_add_add)|从输入流提取增量对象，或在递增对象之前复制对象并返回副本。|
+|[运算符*](#op_star)|此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。|
+|[运算符>](#op_arrow)|返回成员的值（如果有）。|
+|[运算符*](#op_add_add)|从输入流提取增量对象，或在递增对象之前复制对象并返回副本。|
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<iterator>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="char_type"></a>istream_iterator::char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator：：char_type
 
 为 `istream_iterator` 的字符类型提供的类型。
 
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Chartype` 的同义词。
+类型是模板参数 `Chartype` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -126,7 +126,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iterator"></a>istream_iterator::istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator：：istream_iterator
 
 构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。
 
@@ -143,7 +143,7 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过空指针初始化输入流指针，并创建流末尾迭代器。 第二个构造函数使用 *& _Istr*初始化输入流指针, 然后尝试提取并存储类型`Type`的对象。
+第一个构造函数通过空指针初始化输入流指针，并创建流末尾迭代器。 第二个构造函数用 *&_Istr*初始化输入流指针，然后尝试提取和存储类型`Type`的对象。
 
 流末尾迭代器可用于测试 `istream_iterator` 是否已达到流末尾。
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istream_type"></a>istream_iterator::istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator：istream_type
 
 为 `istream_iterator` 的流类型提供的类型。
 
@@ -191,13 +191,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `basic_istream`\< **CharType**, **Traits**> 的同义词。
+该类型是`basic_istream`\<**字符类型**的同义词，**特征**>。
 
 ### <a name="example"></a>示例
 
 有关如何声明和使用 `istream_type` 的示例，请参阅 [istream_iterator](#istream_iterator)。
 
-## <a name="op_star"></a>istream_iterator::operator*
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator：：操作员*
 
 此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>返回值
 
-类型`Type`的存储对象。
+类型的`Type`存储对象。
 
 ### <a name="example"></a>示例
 
@@ -241,7 +241,7 @@ int main( )
 }
 ```
 
-## <a name="op_arrow"></a>istream_iterator::operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator：：操作员-&gt;
 
 返回成员的值（如果有）。
 
@@ -255,7 +255,7 @@ const Type* operator->() const;
 
 ### <a name="remarks"></a>备注
 
-`i->m`等效于`(*i).m`
+`i->m` 等效于 `(*i).m`
 
 运算符返回 `&*this`。
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="op_add_add"></a>istream_iterator::operator++
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator：：操作员*
 
 从输入流提取增量对象，或在递增对象之前复制对象并返回副本。
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>返回值
 
-第一个成员运算符返回对从输入流中提取的类型`Type`的递增对象的引用, 第二个成员函数返回该对象的副本。
+第一个成员运算符返回对从输入流中提取的类型`Type`增量对象的引用，第二个成员函数返回该对象的副本。
 
 ### <a name="example"></a>示例
 
@@ -337,7 +337,7 @@ int main( )
 }
 ```
 
-## <a name="traits_type"></a>istream_iterator::traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator：：traits_type
 
 为 `istream_iterator` 的字符特征类型提供的类型。
 
@@ -384,10 +384,10 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[input_iterator_tag 结构](../standard-library/input-iterator-tag-struct.md)\
-[iterator 结构](../standard-library/iterator-struct.md)\
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[input_iterator_tag结构](../standard-library/input-iterator-tag-struct.md)\
+[迭代器结构](../standard-library/iterator-struct.md)\
+[\<迭代器>](../standard-library/iterator.md)\
+[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

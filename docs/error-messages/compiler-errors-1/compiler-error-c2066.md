@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2066
 ms.assetid: f1efc63f-948a-410b-bf6e-ba250d52cd38
-ms.openlocfilehash: b8576614e76ddad06fa579c442032e0a5105afe3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50bec0c3bddde2ffe27fd8492397d3401cbcad3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408597"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207930"
 ---
 # <a name="compiler-error-c2066"></a>编译器错误 C2066
 
-为函数类型的转换是非法的
+强制转换到函数类型是非法的
 
-在 ANSI C 中，是不合法的函数指针与数据指针之间强制转换。
+在 ANSI C 中，在函数指针与数据指针之间进行强制转换是非法的。

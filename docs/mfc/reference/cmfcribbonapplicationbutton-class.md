@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: d1dc8ef6e801623aa96cb4b47936413cd17f24f0
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: b28d075c5fcc4313e1a62ae731b3fad8ef4d8a12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821238"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749928"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton 类
 
-实现位于应用程序窗口左上角的特殊按钮。 单击此按钮将打开一个菜单，其中通常包含公共的 **“文件”** 命令，如 **“打开”** 、 **“保存”** 和 **“退出”** 。
+实现位于应用程序窗口左上角的特殊按钮。 单击此按钮将打开一个菜单，其中通常包含公共的 **“文件”** 命令，如 **“打开”**、 **“保存”** 和 **“退出”**。
 
 ## <a name="syntax"></a>语法
 
@@ -31,21 +31,21 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|构造并初始化一个 `CMFCRibbonApplicationButton` 对象。|
+|[CMFC功能化应用按钮：：CMFC功能化应用按钮](#cmfcribbonapplicationbutton)|构造并初始化一个 `CMFCRibbonApplicationButton` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`CMFCRibbonApplicationButton::CreateObject`|由框架用于创建此类类型的动态实例。|
-|`CMFCRibbonApplicationButton::GetThisClass`|由框架用于获取指向与此类类型相关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|将图像分配到功能区应用程序按钮。|
+|`CMFCRibbonApplicationButton::GetThisClass`|框架用于获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|[CMFC功能化应用按钮：：设置图像](#setimage)|将图像分配给功能区应用程序按钮。|
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CMFCRibbonApplicationButton` 类中的各种方法。 该示例演示如何将图像分配给应用程序按钮, 以及如何设置其 tooltip。 此代码片段属于 [Draw Client 示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCRibbonApplicationButton` 类中的各种方法。 该示例演示如何将图像分配给应用程序按钮，以及如何设置其工具提示。 此代码片段属于 [Draw Client 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
@@ -62,11 +62,11 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxribbonbar。h
+**标题：** afxRibbonBar.h
 
-##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+## <a name="cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFC功能化应用按钮：：CMFC功能化应用按钮
 
-构造并初始化[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)对象。
+构造并初始化[CMFC 功能应用程序按钮](../../mfc/reference/cmfcribbonapplicationbutton-class.md)对象。
 
 ```
 CMFCRibbonApplicationButton();
@@ -76,7 +76,7 @@ CMFCRibbonApplicationButton(HBITMAP hBmp);
 
 ### <a name="parameters"></a>参数
 
-*uiBmpResID*<br/>
+*乌布布雷斯ID*<br/>
 要在应用程序按钮上显示的图像的资源 ID。
 
 *hBmp*<br/>
@@ -84,31 +84,31 @@ CMFCRibbonApplicationButton(HBITMAP hBmp);
 
 ### <a name="remarks"></a>备注
 
-功能区应用程序按钮是位于应用程序窗口左上角的特殊按钮。 当用户单击此按钮时, 应用程序将打开一个菜单, 其中通常包含常见的**文件**命令, 如 "**打开**"、"**保存**" 和 "**退出**"。
+功能区应用程序按钮是位于应用程序窗口左上角的特殊按钮。 当用户单击此按钮时，应用程序将打开一个菜单，该菜单通常包含常见的**文件**命令，如**打开**、**保存**和**退出**。
 
-##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage
+## <a name="cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFC功能化应用按钮：：设置图像
 
 将图像分配给应用程序按钮。
 
-```
+```cpp
 void SetImage(UINT uiBmpResID);
 void SetImage(HBITMAP hBmp);
 ```
 
 ### <a name="parameters"></a>参数
 
-*uiBmpResID*<br/>
-中要在应用程序按钮上显示的图像的资源 ID。
+*乌布布雷斯ID*<br/>
+[在]要在应用程序按钮上显示的图像的资源 ID。
 
 *hBmp*<br/>
-中要显示在应用程序按钮上的位图的句柄。
+[在]要显示在应用程序按钮上的位图的句柄。
 
 ### <a name="remarks"></a>备注
 
-创建按钮后, 使用此方法将新图像分配给功能区应用程序按钮。 应用程序按钮位于应用程序窗口的左上角。
+使用此方法在创建按钮后将新映像分配给功能区应用程序按钮。 应用程序按钮位于应用程序窗口的左上角。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFC 功能按钮类](../../mfc/reference/cmfcribbonbutton-class.md)

@@ -28,18 +28,18 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: d3b1d6d1579c9f9bf5eca4f8a3f6733f27584674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95d1e7a1e4322eb497a2d7ed410065bb92f17e09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399234"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170640"
 ---
-# <a name="comptrt-relational-operators"></a>_com_ptr_t 关系运算符
+# <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t 关系运算符
 
 **Microsoft 专用**
 
-比较的智能指针对象与另一个智能指针、 原始接口指针，则为 NULL。
+将智能指针对象与另一个智能指针、原始接口指针或 NULL 进行比较。
 
 ## <a name="syntax"></a>语法
 
@@ -47,7 +47,7 @@ ms.locfileid: "62399234"
 template<typename _OtherIID>
 bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
+template<typename _OtherIID>
 bool operator==( _com_ptr_t<_OtherIID>& p );
 
 template<typename _InterfaceType>
@@ -114,10 +114,10 @@ bool operator>=( _InterfaceType* p );
 
 ## <a name="remarks"></a>备注
 
-进行比较的智能指针对象复制到另一个智能指针、 原始接口指针或 NULL。 除了 NULL 指针测试，这些运算符首先查询两个指针`IUnknown`，并比较结果。
+将智能指针对象与另一个智能指针、原始接口指针或 NULL 比较。 除了 NULL 指针测试，这些运算符首先查询 `IUnknown`的指针，并比较结果。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

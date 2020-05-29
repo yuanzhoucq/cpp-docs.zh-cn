@@ -1,21 +1,21 @@
 ---
-title: 对象 (C++ COM 属性)
+title: object （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4545d899c13a1eabf8ea5fb6fe3918fb5f05b626
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407531"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214646"
 ---
 # <a name="object-c"></a>object (C++)
 
-标识的自定义的接口。
+标识自定义接口。
 
 ## <a name="syntax"></a>语法
 
@@ -25,13 +25,13 @@ ms.locfileid: "62407531"
 
 ## <a name="remarks"></a>备注
 
-前面的接口定义中，当**对象**C++属性导致将接口置于.idl 文件作为自定义的接口。
+在接口定义前面时，**对象** C++特性会导致接口作为自定义接口放置在 .idl 文件中。
 
-使用对象标记任何接口必须继承自`IUnknown`。 如果从任何基接口继承，则满足此条件`IUnknown`。 如果没有基接口继承自`IUnknown`，编译器将导致使用标记的接口**对象**为派生`IUnknown`。
+标记有对象的任何接口都必须继承自 `IUnknown`。 如果任何基接口从 `IUnknown`继承，则满足此条件。 如果没有基接口继承自 `IUnknown`，编译器将导致用**对象**标记的接口从 `IUnknown`派生。
 
 ## <a name="example"></a>示例
 
-请参阅[nonbrowsable](nonbrowsable.md)有关如何使用的示例**对象**。
+有关如何使用**对象**的示例，请参阅[nonbrowsable](nonbrowsable.md) 。
 
 ## <a name="requirements"></a>要求
 
@@ -39,14 +39,14 @@ ms.locfileid: "62407531"
 
 |||
 |-|-|
-|**适用对象**|**interface**|
+|**适用对象**|**接口**|
 |**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>

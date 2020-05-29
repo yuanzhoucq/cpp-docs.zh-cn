@@ -1,10 +1,12 @@
 ---
 title: _strdup、_wcsdup、_mbsdup
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
+- _o__strdup
+- _o__wcsdup
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958182"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914470"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
@@ -84,9 +87,11 @@ null 终止的源字符串。
 
 ## <a name="remarks"></a>备注
 
-**_Strdup**函数调用[malloc](malloc.md)为*strSource*的副本分配存储空间，然后将*strSource*复制到分配的空间。
+**_Strdup**函数调用[Malloc](malloc.md)来为*strSource*的副本分配存储空间，然后将*strSource*复制到分配的空间。
 
-**_wcsdup**和 **_mbsdup**是 **_strdup**的宽字符和多字节字符版本。 **_Wcsdup**的参数和返回值是宽字符字符串; **_mbsdup**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_wcsdup**和 **_mbsdup**是 **_strdup**的宽字符和多字节字符版本。 **_Wcsdup**的参数和返回值都是宽字符字符串;**_mbsdup**的是多字节字符字符串。 否则这三个函数否则具有相同行为。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -94,19 +99,19 @@ null 终止的源字符串。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-因为 **_strdup**调用**malloc**为*strSource*的副本分配存储空间，所以最好始终通过调用 **_strdup**调用返回的指针上的[自由](free.md)例程来释放此内存。
+因为 **_strdup**调用**malloc**为*strSource*的副本分配存储空间，所以最好始终通过调用 **_strdup**的调用返回的指针上的[自由](free.md)例程来释放此内存。
 
-如果定义了 **_debug**和 **_CRTDBG_MAP_ALLOC** ，则 **_strdup**和 **_wcsdup**的调用将替换为对 **_strdup_dbg**和 **_wcsdup_dbg**的调用，以允许调试内存分配。 有关详细信息，请参阅 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
+如果定义了 **_DEBUG**和 **_CRTDBG_MAP_ALLOC** ，则 **_strdup**和 **_wcsdup**将替换为对 **_strdup_dbg**和 **_wcsdup_dbg**的调用，以便调试内存分配。 有关详细信息，请参阅 [_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_strdup**|\<string.h>|
 |**_wcsdup**|\<string.h> 或 \<wchar.h>|
 |**_mbsdup**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -132,7 +137,7 @@ Original: This is the buffer text
 Copy:     This is the buffer text
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>

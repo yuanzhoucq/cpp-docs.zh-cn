@@ -1,9 +1,11 @@
 ---
 title: asctime_s、_wasctime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime_s
 - asctime_s
+- _o__wasctime_s
+- _o_asctime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624786"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909415"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
@@ -71,7 +74,7 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 指向用于存储字符串结果的缓冲区的指针。 此函数假定指针指向使用*numberOfElements*指定的大小的有效内存位置。
 
 *numberOfElements*<br/>
@@ -86,22 +89,22 @@ errno_t _wasctime_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*numberOfElements*|*tmSource*|返回|*缓冲区*中的值|
+|*宽限*|*numberOfElements*|*tmSource*|返回|*缓冲区*中的值|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|任意|任意|**EINVAL**|未修改|
+|**Null**|任意|任意|**EINVAL**|未修改|
 |Not **NULL** （指向有效内存）|0|任意|**EINVAL**|未修改|
 |Not **NULL**|0< 大小 < 26|任意|**EINVAL**|空字符串|
-|Not **NULL**|>= 26|**NULL**|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|**Null**|**EINVAL**|空字符串|
 |Not **NULL**|>= 26|无效的时间结构或超出时间组件值范围|**EINVAL**|空字符串|
 
 > [!NOTE]
-> **Wasctime_s**的错误条件类似于**asctime_s** ，但大小限制以单词度量的情况除外。
+> **Wasctime_s**的错误情况类似于**asctime_s** ，但大小限制以单词度量。
 
 ## <a name="remarks"></a>备注
 
 **Asctime**函数将存储为结构的时间转换为字符串。 *TmSource*值通常是通过调用**gmtime**或**localtime**获取的。 这两个函数可用于填写**tm**结构，如时间中所定义。高.
 
-|timeptr 成员|“值”|
+|timeptr 成员|值|
 |--------------------|-----------|
 |**tm_hour**|午夜后的小时数（0-23）|
 |**tm_isdst**|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|
@@ -115,11 +118,13 @@ errno_t _wasctime_s(
 
 转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间的信息，请参阅 [time、_time32、_time64](time-time32-time64.md) 和 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md) 以及 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 函数，有关定义时区环境和全局变量的信息，请参阅 [_tzset](tzset.md) 函数。
 
-**Asctime_s**生成的字符串结果正好包含26个字符，格式 `Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果小于，则返回错误代码**EINVAL**。
+**Asctime_s**生成的字符串结果正好包含26个字符，其形式`Wed Jan 02 02:03:55 1980\n\0`为。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果小于，则返回错误代码**EINVAL**。
 
-**_wasctime_s**是**asctime_s**的宽字符版本。 否则， **_wasctime_s**和**asctime_s**的行为相同。
+**_wasctime_s**是**asctime_s**的宽字符版本。 否则 **_wasctime_s**和**asctime_s**的行为相同。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射
 
@@ -131,12 +136,12 @@ errno_t _wasctime_s(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> 或 \<wchar.h>|
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
 如果缓冲区指针不为**NULL** ，并且指针不指向有效的缓冲区，则该函数将覆盖位置上的任何内容。 该操作还将导致访问冲突。
 
@@ -178,12 +183,12 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
-[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
+[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>
 [_tzset](tzset.md)<br/>

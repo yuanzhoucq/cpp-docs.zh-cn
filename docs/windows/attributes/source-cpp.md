@@ -1,21 +1,21 @@
 ---
-title: 源 (C++ COM 特性)
+title: 源（C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166219"
 ---
 # <a name="source-c"></a>source (C++)
 
-在类上, 为连接点指定 COM 对象的源接口。 在属性或方法上, 指示成员返回作为事件来源的对象或变体。
+在类上，为连接点指定 COM 对象的源接口。 在属性或方法上，指示成员返回作为事件来源的对象或变体。
 
 ## <a name="syntax"></a>语法
 
@@ -23,10 +23,10 @@ ms.locfileid: "69514019"
 [ source(interfaces) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*interfaces*<br/>
-将源属性应用于类时指定的一个或多个接口。 将源应用于属性或方法时, 不使用此参数。
+*接口*<br/>
+将源属性应用于类时指定的一个或多个接口。 将源应用于属性或方法时，不使用此参数。
 
 ## <a name="remarks"></a>备注
 
@@ -74,14 +74,14 @@ class NN : public b
 
 |||
 |-|-|
-|**适用于**|**类**、**结构**、**接口**|
-|**可重复**|No|
-|**必需的特性**|`coclass`(应用于类或结构时)|
+|**适用对象**|**类**、**结构**、**接口**|
+|**可重复**|否|
+|**必需的特性**|`coclass` （应用于类或结构时）|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

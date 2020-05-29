@@ -1,8 +1,9 @@
 ---
 title: _getw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getw
+- _o__getw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954879"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916313"
 ---
 # <a name="_getw"></a>_getw
 
@@ -47,7 +49,7 @@ int _getw(
 
 ### <a name="parameters"></a>参数
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -56,15 +58,17 @@ int _getw(
 
 ## <a name="remarks"></a>备注
 
-**_Getw**函数从与*流*关联的文件中读取**int**类型的下一个二进制值，并递增关联的文件指针（如果有）以指向下一个未读字符。 **_getw**不假定流中项的任何特殊对齐方式。 由于 int 类型的**int**类型的大小和**int**类型中的字节顺序在不同系统之间不同，因此可能会出现与 **_getw**有关的问题。
+**_Getw**函数从与*流*关联的文件中读取**int**类型的下一个二进制值，并递增关联的文件指针（如果有）以指向下一个未读字符。 **_getw**不假定流中项的任何特殊对齐方式。 与 **_getw**之间可能会发生移植问题，因为**int**类型的大小和**int**类型中的字节顺序因系统而异。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

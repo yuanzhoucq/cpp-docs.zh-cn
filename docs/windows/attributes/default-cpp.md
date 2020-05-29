@@ -1,5 +1,5 @@
 ---
-title: 默认值C++ (COM 特性)
+title: 默认值C++ （COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501684"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167181"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "69501684"
 [ default(interface1, interface2) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *interface1*<br/>
 默认接口，将可用于根据类（使用 **default** 属性定义）创建对象的脚本环境。
@@ -43,7 +43,7 @@ ms.locfileid: "69501684"
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何在组件类的定义中使用**default**来指定`ICustomDispatch`为默认可编程性接口:
+下面的代码演示如何在组件类的定义中使用**default**来将 `ICustomDispatch` 指定为默认可编程性接口：
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -99,14 +99,14 @@ int main() {
 
 |||
 |-|-|
-|**适用于**|**类**、**结构**、数据成员|
-|**可重复**|No|
-|**必需的特性**|**coclass**(应用于**类**或**结构**时)|
+|**适用对象**|**类**、**结构**、数据成员|
+|**可重复**|否|
+|**必需的特性**|**coclass** （应用于**类**或**结构**时）|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294702"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169742"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>调用约定、参数和返回类型
 
@@ -24,15 +24,15 @@ FARPROC WINAPI __delayLoadHelper2(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pidd*<br/>
-一个`const`指针，指向`ImgDelayDescr`，其中包含各种与导入相关的数据、 绑定信息时的时间戳和一组提供有关描述符内容的详细信息的属性的偏移量。 目前只有一个特性， `dlattrRva`，这表示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅中的声明*delayimp.h*。
+一个指向 `ImgDelayDescr` 的 `const` 指针，该指针包含各种导入相关数据的偏移量、绑定信息的时间戳，以及提供有关描述符内容的进一步信息的一组属性。 目前，只有一个属性 `dlattrRva`，它指示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅*delayimp.lib*中的声明。
 
-定义`PCImgDelayDescr`结构，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
+有关 `PCImgDelayDescr` 结构的定义，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
-指向延迟加载导入地址表 (IAT) 导入的函数的地址使用更新中的槽的指针。 帮助器例程需要存储它返回到此位置的相同值。
+指向延迟加载导入地址表（IAT）中的槽的指针，该槽是使用导入函数的地址更新的。 Helper 例程需要存储返回到此位置的相同值。
 
 ## <a name="expected-return-values"></a>预期的返回值
 
@@ -46,11 +46,11 @@ FARPROC WINAPI __delayLoadHelper2(
 
 - `GetProcAddress` 失败。
 
-它由你负责处理这些异常。
+您负责处理这些异常。
 
 ## <a name="remarks"></a>备注
 
-Helper 函数的调用约定是 `__stdcall`。 返回值的类型无关，所以使用 FARPROC。 该函数具有 C 链接。
+Helper 函数的调用约定是 `__stdcall`。 返回值的类型不相关，因此使用了 FARPROC。 该函数具有 C 链接。
 
 除非要将 Helper 例程用作通知挂钩，否则延迟加载 Helper 的返回值需要存储在已传入函数指针的位置。 在这种情况下，由你的代码负责查找要返回的适当函数指针。 然后，链接器生成的 thunk 代码可将该返回值用作导入的实际目标并直接跳转到该目标。
 
@@ -135,6 +135,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [了解 Helper 函数](understanding-the-helper-function.md)

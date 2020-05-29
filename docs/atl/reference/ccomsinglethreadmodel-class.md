@@ -1,6 +1,6 @@
 ---
 title: CComSingleThreadModel 类
-ms.date: 11/04/2016
+ms.date: 2/29/2020
 f1_keywords:
 - CComSingleThreadModel
 - ATLBASE/ATL::CComSingleThreadModel
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d8169c999ba96049bc711033f7ba2ef53989663
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327331"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel 类
 
-此类提供用于方法递增和递减变量的值。
+此类提供递增和递减变量值的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -35,41 +35,41 @@ class CComSingleThreadModel
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComSingleThreadModel::AutoCriticalSection](#autocriticalsection)|引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。|
-|[CComSingleThreadModel::CriticalSection](#criticalsection)|引用类`CComFakeCriticalSection`。|
-|[CComSingleThreadModel::ThreadModelNoCS](#threadmodelnocs)|引用`CComSingleThreadModel`。|
+|[CCom 单线程模型：：自动临界部分](#autocriticalsection)|引用类[CComFake 临界节](../../atl/reference/ccomfakecriticalsection-class.md)。|
+|[CCom 单线程模型：：关键部分](#criticalsection)|引用类`CComFakeCriticalSection`。|
+|[CCom 单线程模型：：线程模型NoCS](#threadmodelnocs)|引用`CComSingleThreadModel`.|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComSingleThreadModel::Decrement](#decrement)|递减指定变量的值。 此实现不是线程安全。|
-|[CComSingleThreadModel::Increment](#increment)|递增指定变量的值。 此实现不是线程安全。|
+|[CCom 单线程模型：:D](#decrement)|声明指定变量的值。 此实现不是线程安全的。|
+|[CCom 单线程模型：增量](#increment)|增加指定变量的值。 此实现不是线程安全的。|
 
 ## <a name="remarks"></a>备注
 
-`CComSingleThreadModel` 提供用于递增和递减变量的值的方法。 与不同[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)并[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，这些方法不是线程安全。
+`CComSingleThreadModel`提供了递增和递减变量值的方法。 与[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)不同，这些方法不是线程安全的。
 
-通常情况下，使用`CComSingleThreadModel`通过两个之一**typedef**名称，或者[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。 每个引用的类**typedef** ，所使用的线程处理模型取决于下表中所示：
+通常，您可以通过两`CComSingleThreadModel`个**类型定义**名称之一[（CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel）使用](atl-typedefs.md#ccomglobalsthreadmodel)。 每个**typedef**引用的类取决于所使用的线程模型，如下表所示：
 
-|typedef|单线程模型|单元线程处理模型|自由线程处理模型|
+|typedef|单线程模型|公寓线程模型|免费线程模型|
 |-------------|----------------------------|-------------------------------|--------------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
+S= `CComSingleThreadModel`;M#`CComMultiThreadModel`
 
-`CComSingleThreadModel` 本身定义三个**typedef**名称。 `ThreadModelNoCS` 引用`CComSingleThreadModel`。 `AutoCriticalSection` 并`CriticalSection`引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)，其中提供了与获取并释放关键节的所有权相关联的方法为空。
+`CComSingleThreadModel`本身定义三**个类型定义**名称。 `ThreadModelNoCS`引用`CComSingleThreadModel`. `AutoCriticalSection`和`CriticalSection`引用类[CComFake临界节](../../atl/reference/ccomfakecriticalsection-class.md)，它提供了与获取和释放关键部分的所有权相关的空方法。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标题：** atlbase.h
 
-##  <a name="autocriticalsection"></a>  CComSingleThreadModel::AutoCriticalSection
+## <a name="ccomsinglethreadmodelautocriticalsection"></a><a name="autocriticalsection"></a>CCom 单线程模型：：自动临界部分
 
-使用时`CComSingleThreadModel`，则**typedef**名称`AutoCriticalSection`引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。
+使用`CComSingleThreadModel`时 **，typedef** `AutoCriticalSection`名称引用类[CComFake临界节](../../atl/reference/ccomfakecriticalsection-class.md)。
 
 ```
 typedef CComFakeCriticalSection AutoCriticalSection;
@@ -77,25 +77,25 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 
 ### <a name="remarks"></a>备注
 
-因为`CComFakeCriticalSection`不提供一个临界区，其方法不执行任何操作。
+因为`CComFakeCriticalSection`不提供关键部分，因此其方法不执行任何操作。
 
-[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)并[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含的定义`AutoCriticalSection`。 下表显示了线程处理模型类与所引用的关键部分类之间的关系`AutoCriticalSection`:
+[CCom 多线程模型](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含`AutoCriticalSection`的定义。 下表显示了线程模型类与 引用`AutoCriticalSection`的关键节类之间的关系：
 
-|在中定义类|引用类|
+|类定义在|引用的类|
 |----------------------|----------------------|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComAutoCriticalSection`|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 
-除了`AutoCriticalSection`，可以使用**typedef**名称[CriticalSection](#criticalsection)。 不应指定`AutoCriticalSection`全局对象或如果你想要消除 CRT 启动代码的静态类成员中。
+除 之外`AutoCriticalSection`，还可以使用**typedef**名称["临界节](#criticalsection)"。 如果要消除 CRT 启动代码，不应在全局对象或静态类成员中指定`AutoCriticalSection`。
 
 ### <a name="example"></a>示例
 
-请参阅[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
+请参阅[CCom 多线程模型：：自动临界节](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
 
-##  <a name="criticalsection"></a>  CComSingleThreadModel::CriticalSection
+## <a name="ccomsinglethreadmodelcriticalsection"></a><a name="criticalsection"></a>CCom 单线程模型：：关键部分
 
-使用时`CComSingleThreadModel`，则**typedef**名称`CriticalSection`引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。
+使用`CComSingleThreadModel`时 **，typedef** `CriticalSection`名称引用类[CComFake临界节](../../atl/reference/ccomfakecriticalsection-class.md)。
 
 ```
 typedef CComFakeCriticalSection CriticalSection;
@@ -103,25 +103,25 @@ typedef CComFakeCriticalSection CriticalSection;
 
 ### <a name="remarks"></a>备注
 
-因为`CComFakeCriticalSection`不提供一个临界区，其方法不执行任何操作。
+因为`CComFakeCriticalSection`不提供关键部分，因此其方法不执行任何操作。
 
-[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)并[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含的定义`CriticalSection`。 下表显示了线程处理模型类与所引用的关键部分类之间的关系`CriticalSection`:
+[CCom 多线程模型](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含`CriticalSection`的定义。 下表显示了线程模型类与 引用`CriticalSection`的关键节类之间的关系：
 
-|在中定义类|引用类|
+|类定义在|引用的类|
 |----------------------|----------------------|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 
-除了`CriticalSection`，可以使用**typedef**名称[AutoCriticalSection](#autocriticalsection)。 不应指定`AutoCriticalSection`全局对象或如果你想要消除 CRT 启动代码的静态类成员中。
+除 之外`CriticalSection`，还可以使用**typedef**名称[Auto临界节](#autocriticalsection)。 如果要消除 CRT 启动代码，不应在全局对象或静态类成员中指定`AutoCriticalSection`。
 
 ### <a name="example"></a>示例
 
-请参阅[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
+请参阅[CCom 多线程模型：：自动临界节](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
 
-##  <a name="decrement"></a>  CComSingleThreadModel::Decrement
+## <a name="ccomsinglethreadmodeldecrement"></a><a name="decrement"></a>CCom 单线程模型：:D
 
-此静态函数递减变量的值由指向*p*。
+此静态函数会递减*p*指向的变量的值。
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -129,16 +129,16 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
-[in]指向要递减的变量。
+*P*<br/>
+[在]指向要递减的变量的指针。
 
 ### <a name="return-value"></a>返回值
 
 递减的结果。
 
-##  <a name="increment"></a>  CComSingleThreadModel::Increment
+## <a name="ccomsinglethreadmodelincrement"></a><a name="increment"></a>CCom 单线程模型：增量
 
-此静态函数递减变量的值由指向*p*。
+此静态函数递增*p*指向的变量的值。
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();
@@ -146,16 +146,16 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
-[in]指向要递增的变量。
+*P*<br/>
+[在]指向要递增的变量的指针。
 
 ### <a name="return-value"></a>返回值
 
-增量结果。
+增量的结果。
 
-##  <a name="threadmodelnocs"></a>  CComSingleThreadModel::ThreadModelNoCS
+## <a name="ccomsinglethreadmodelthreadmodelnocs"></a><a name="threadmodelnocs"></a>CCom 单线程模型：：线程模型NoCS
 
-使用时`CComSingleThreadModel`，则**typedef**名称`ThreadModelNoCS`只需引用`CComSingleThreadModel`。
+使用`CComSingleThreadModel`时 **，typedef** `ThreadModelNoCS`名称仅`CComSingleThreadModel`引用 。
 
 ```
 typedef CComSingleThreadModel ThreadModelNoCS;
@@ -163,9 +163,9 @@ typedef CComSingleThreadModel ThreadModelNoCS;
 
 ### <a name="remarks"></a>备注
 
-[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)并[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含的定义`ThreadModelNoCS`。 下表显示了线程处理模型类与所引用的类之间的关系`ThreadModelNoCS`:
+[CCom 多线程模型](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含`ThreadModelNoCS`的定义。 下表显示了线程模型类与 引用的`ThreadModelNoCS`类之间的关系：
 
-|在中定义类|引用类|
+|类定义在|引用的类|
 |----------------------|----------------------|
 |`CComSingleThreadModel`|`CComSingleThreadModel`|
 |`CComMultiThreadModel`|`CComMultiThreadModelNoCS`|
@@ -173,8 +173,8 @@ typedef CComSingleThreadModel ThreadModelNoCS;
 
 ### <a name="example"></a>示例
 
-请参阅[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
+请参阅[CCom 多线程模型：：自动临界节](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../../atl/atl-class-overview.md)

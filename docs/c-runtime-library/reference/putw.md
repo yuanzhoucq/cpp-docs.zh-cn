@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,25 +16,25 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949755"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916082"
 ---
 # <a name="_putw"></a>_putw
 
@@ -53,7 +54,7 @@ int _putw(
 *binint*<br/>
 要输出的二进制整数。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -64,15 +65,17 @@ int _putw(
 
 ## <a name="remarks"></a>备注
 
-**_Putw**函数将**int**类型的二进制值写入流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要用于与以前的库兼容。 **_Putw**可能会出现可移植性**问题，因为 int 和** **int**中的字节顺序的大小在不同系统之间存在差异。
+**_Putw**函数将**int**类型的二进制值写入流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库兼容。 **_Putw**上可能会出现可移植性**问题，因为 int 和** **int**中的字节顺序的大小在不同系统之间不同。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

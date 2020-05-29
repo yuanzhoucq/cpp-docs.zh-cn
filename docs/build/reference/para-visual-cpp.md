@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38c50a1152b8fea9b6d7bd55d89deff6546dbc83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320014"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171172"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
@@ -25,7 +25,7 @@ ms.locfileid: "62320014"
 <para>content</para>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *content*<br/>
 段落文本。
@@ -36,8 +36,8 @@ ms.locfileid: "62320014"
 
 ## <a name="example"></a>示例
 
-有关使用 \<para> 的示例，请参阅 [\<summary>](summary-visual-cpp.md)。
+有关使用 [para> 的示例，请参阅 \<](summary-visual-cpp.md)summary>\<。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

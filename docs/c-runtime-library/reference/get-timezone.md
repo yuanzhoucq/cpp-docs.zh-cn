@@ -1,8 +1,9 @@
 ---
 title: _get_timezone
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_timezone
+- _o__get_timezone
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955639"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918502"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -61,15 +63,17 @@ UTC 和当地时间之间的差异（以秒为单位）。
 
 如果*seconds*为**NULL**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 
-有关详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

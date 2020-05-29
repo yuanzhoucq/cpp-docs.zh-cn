@@ -7,22 +7,22 @@ helpviewer_keywords:
 - limits.h header file
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
-ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75cd05e73aba2d2e82e8077e0a289d8b0fae7ec4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178219"
 ---
 # <a name="integer-limits"></a>整数限制
 
 **Microsoft 专用**
 
-下表列出了整数类型的限制。 标准标头文件中也定义了这些限制\<limits.h >。
+下表列出了整数类型的限制。 这些限制也在标准标头文件中定义，\<限制 .h >。
 
 ## <a name="limits-on-integer-constants"></a>对整数常量的限制
 
-|返回的常量|含义|“值”|
+|一直|含义|值|
 |--------------|-------------|-----------|
 |CHAR_BIT|不是位域的最小变量中的位数。|8|
 |SCHAR_MIN|**signed char** 类型的变量的最小值。|-128|
@@ -40,14 +40,14 @@ ms.locfileid: "62183361"
 |LONG_MIN|**long** 类型的变量的最小值。|-2147483648|
 |LONG_MAX|**long** 类型的变量的最大值。|2147483647|
 |ULONG_MAX|unsigned long 类型的变量的最大值。|4294967295 (0xffffffff)|
-|LLONG_MIN|最小值的变量的类型**长时间长**|-9223372036854775808|
-|LLONG_MAX|最大值类型的变量的**长时间长**|9223372036854775807|
-|ULLONG_MAX|最大值类型的变量的**无符号长时间长**|18446744073709551615 (0xffffffffffffffff)|
+|LLONG_MIN|**Long**类型的变量的最小值|-9223372036854775808|
+|LLONG_MAX|**Long**类型的变量的最大值|9223372036854775807|
+|ULLONG_MAX|**无符号 long**类型的变量的最大值|18446744073709551615 (0xffffffffffffffff)|
 
 如果值超出了最大整数表示形式，则 Microsoft 编译器会产生错误。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点限制](../cpp/floating-limits.md)

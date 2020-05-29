@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300296"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351666"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 函数
 
@@ -69,14 +69,14 @@ ms.locfileid: "75300296"
 
 |||
 |-|-|
-|[_execl、_wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)|
-|[_execle、_wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)|
+|[_execl，_wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)|
+|[_execle，_wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)|
 |[_execlp、_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
-|[_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe、_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
+|[_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe，_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
 
 函数名称末尾的字母可确定该变量。
 
-|_exec 函数后缀|描述|
+|_exec 函数后缀|说明|
 |----------------------------|-----------------|
 |`e`|将指向环境设置的指针数组 `envp` 传递给新进程。|
 |`l`|将命令行参数单独传递给 `_exec` 函数。 通常在提前知道新进程的参数数量时使用。|
@@ -105,10 +105,10 @@ ms.locfileid: "75300296"
 通过将一个或多个指向字符字符串的指针给定为 `_exec` 调用中的参数，将参数传递给新进程。 这些字符字符串将构成该新进程的参数列表。 继承的环境设置和构成新进程参数列表的字符串的组合长度不能超过 32 KB。 计数中不包括每个字符串的以 null 结尾的字符 ('\0')，但是会计入空格字符（自动插入以分隔参数）。
 
 > [!NOTE]
->  嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_exec` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。
+> 嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_exec` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。
 
 > [!IMPORTANT]
->  如果没有显式地检查其内容，请不要将用户输入传递给 `_exec`。 `_exec` 将导致调用 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。
+> 如果没有显式地检查其内容，请不要将用户输入传递给 `_exec`。 `_exec` 将导致调用 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。
 
 `_exec` 函数将验证其参数。 如果预期参数是空指针、空字符串或省略了预期参数，则 `_exec` 函数调用的参数处理程序无效，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。 不执行任何新进程。
 
@@ -116,11 +116,11 @@ ms.locfileid: "75300296"
 
 通常在提前知道参数数量时使用 `_execl`、`_execle`、`_execlp` 和 `_execlpe` 调用。 参数 `arg0` 通常是一个指向 `cmdname` 的指针。 参数 `arg1` 到 `argn` 指向构成新参数列表的字符字符串。 空指针必须在 `argn` 后才能标记参数列表的末尾。
 
-`_execv`、`_execve`、`_execvp` 和 `_execvpe` 调用在新进程的参数数量可变时很有用。 将指向参数的指针作为数组 `argv` 进行传递。 参数 `argv`[0] 通常是一个指向 `cmdname` 的指针。 参数 `argv`[1] 到 `argv`[`n`] 指向构成新参数列表的字符字符串。 参数 `argv`[`n`+1] 必须是一个 NULL 指针，用以标记参数列表的末尾。
+`_execv`、`_execve`、`_execvp` 和 `_execvpe` 调用在新进程的参数数量可变时很有用。 将指向参数的指针作为数组 `argv` 进行传递。 参数 `argv`[0] 通常是一个指向 `cmdname` 的指针。 参数 `argv`[1] 到 `argv`[`n`] 指向构成新参数列表的字符字符串。 参数 `argv`[`n`+1] 必须是一个 NULL 指针，用以标记参数列表的末尾****。
 
-在进行 `_exec` 调用时打开的文件在新进程中仍然保持打开状态。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 调用中，新进程将继承调用进程的环境。 通过 `_execle` 参数传递环境设置的列表，`_execlpe`、`_execve`、`_execvpe` 和 `envp` 调用可更改新进程的环境。 `envp` 是一个字符指针数组，其中每个元素（最后一个元素除外）均指向定义环境变量的以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 并未括在双引号中。）`envp` 数组的最后一个元素应该是 NULL。 当 `envp` 本身是 NULL 时，新进程将继承调用进程的环境设置。
+在进行 `_exec` 调用时打开的文件在新进程中仍然保持打开状态。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 调用中，新进程将继承调用进程的环境。 通过 `_execle` 参数传递环境设置的列表，`_execlpe`、`_execve`、`_execvpe` 和 `envp` 调用可更改新进程的环境。 `envp` 是一个字符指针数组，其中每个元素（最后一个元素除外）均指向定义环境变量的以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value`未以双引号括起来。数组的最后一`envp`个元素应为**NULL**。 当 `envp` 本身是 NULL 时，新进程将继承调用进程的环境设置****。
 
-使用一个 `_exec` 函数执行的程序将始终加载到内存中，如同已将该程序的 .exe 文件头中的最大分配字段设置为默认值 0xFFFFH。
+使用一个  函数执行的程序将始终加载到内存中，如同已将该程序的 .exe 文件头中的最大分配字段设置为默认值 0xFFFFH。
 
 `_exec` 调用不会保留打开的文件的转换模式。 如果新进程必须使用继承自调用进程的文件，请使用 [_setmode](../c-runtime-library/reference/setmode.md) 例程将这些文件的转换模式设置为所需模式。 在 `fflush` 函数调用之前，你必须（使用 `_flushall` 或 `_exec`）显式刷新或关闭任何流。 信号设置不会保留在通过对 `_exec` 例程的调用而创建的新进程中。 会在新进程中将信号设置重置为默认设置。
 
@@ -236,12 +236,12 @@ int main( int ac, char* av[] )
 
 **标头：** process.h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](../c-runtime-library/reference/abort.md)<br/>
+[中止](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn、_wspawn 函数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 函数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)

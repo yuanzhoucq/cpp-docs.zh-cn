@@ -1,10 +1,12 @@
 ---
 title: cbrt、cbrtf、cbrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cbrt
 - cbrtf
 - cbrtl
+- _o_cbrt
+- _o_cbrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939289"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912107"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -76,7 +79,9 @@ long double cbrtl(
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用**float**或**long** **双精度**类型的**cbrt**的重载。 在 C 程序中， **cbrt**始终采用并返回**double**。
+由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**cbrt**的重载。 在 C 程序中， **cbrt**始终采用并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -84,7 +89,7 @@ long double cbrtl(
 |--------------|--------------|------------------|
 |**cbrt**、 **cbrtf**、 **cbrtl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -110,7 +115,7 @@ int main( void )
 The cube root of -64.64 is -4.013289
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [exp、expf、expl](exp-expf.md)<br/>

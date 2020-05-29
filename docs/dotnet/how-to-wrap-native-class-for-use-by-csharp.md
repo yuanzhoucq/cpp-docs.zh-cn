@@ -1,25 +1,25 @@
 ---
-title: 如何：包装本机类以使用由C#
+title: 如何：包装本机类以供 C# 使用
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387118"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545887"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包装本机类以使用由C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包装本机类以供 C\# 使用
 
-此示例演示如何包装一个本机C++类中编写的代码可以使用它，因此C#，或其他.NET 语言。
+此示例演示如何包装本机C++类，以便它可由中C#创作的代码或其他 .net 语言使用。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

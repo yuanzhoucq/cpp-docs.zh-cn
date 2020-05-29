@@ -2,7 +2,7 @@
   tocHref: /
   topicHref: /
   items:
-    - name: Visual C++
+    - name: Microsoft C++
       tocHref: /cpp/
       topicHref: /cpp
       items:
@@ -32,7 +32,7 @@
                 - name: MASM
                   tocHref: /cpp/assembler/masm/
                   topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-            - name: C 运行库
+            - name: C 运行时库
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
@@ -45,27 +45,27 @@
             - name: Windows
               tocHref: /cpp/windows/
               topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+              items: null
+            - name: ATL
+              tocHref: /cpp/atl/
+              topicHref: /cpp/atl/atl-com-desktop-components
+            - name: MFC
+              tocHref: /cpp/mfc/
+              topicHref: /cpp/mfc/mfc-desktop-applications
               items:
-                - name: ATL
-                  tocHref: /cpp/atl/
-                  topicHref: /cpp/atl/atl-com-desktop-components
-                - name: MFC
-                  tocHref: /cpp/mfc/
-                  topicHref: /cpp/mfc/mfc-desktop-applications
-                  items:
-                    - name: 参考
-                      tocHref: /cpp/mfc/reference/
-                      topicHref: /cpp/mfc/reference/mfc-classes
-                - name: ATL/MFC 共享类
-                  tocHref: /cpp/atl-mfc-shared/
-                  topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
-                  items:
-                    - name: 参考
-                      tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
-                - name: C++/CX
-                  tocHref: /cpp/cppcx/
-                  topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+                - name: 参考
+                  tocHref: /cpp/mfc/reference/
+                  topicHref: /cpp/mfc/reference/mfc-classes
+            - name: ATL/MFC 共享类
+              tocHref: /cpp/atl-mfc-shared/
+              topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+              items:
+                - name: 参考
+                  tocHref: /cpp/atl-mfc-shared/reference/
+                  topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
+            - name: C++/CX
+              tocHref: /cpp/cppcx/
+              topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
             - name: Linux
               tocHref: /cpp/linux/
               topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
@@ -87,7 +87,7 @@
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
             - name: 编辑、导航和重构代码
               tocHref: /cpp/ide
-              topicHref: /cpp/overview-of-cpp-development
+              topicHref: /cpp/ide/read-and-understand-code-cpp
               items:
                 - name: IDE
                   tocHref: /cpp/ide/
@@ -96,13 +96,15 @@
               tocHref: /cpp/build/
               topicHref: /cpp/build/building-c-cpp-programs
               items:
-                - name: 生成参考
+                - name: 生成引用
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
-                  items:
-                    - name: 编译器和工具错误与警告
-                      tocHref: /cpp/error-messages/
-                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
+            - name: 生成见解
+              tocHref: /cpp/build-insights/
+              topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
+            - name: 错误和警告
+              tocHref: /cpp/error-messages/
+              topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: 移植和升级
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide

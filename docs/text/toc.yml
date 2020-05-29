@@ -1,0 +1,61 @@
+- name: MSVC 中的文本和字符串
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Unicode 和 MBCS
+  expanded: false
+  items:
+    - name: Unicode 和 MBCS
+      href: ../text/unicode-and-mbcs.md
+    - name: 国际支持
+      href: ../text/international-enabling.md
+    - name: 国际化策略
+      href: ../text/internationalization-strategies.md
+    - name: 区域设置和代码页
+      href: ../text/locales-and-code-pages.md
+    - name: 字符集可迁移性的好处
+      href: ../text/benefits-of-character-set-portability.md
+- name: 支持 Unicode
+  expanded: false
+  items:
+    - name: 支持 Unicode
+      href: ../text/support-for-unicode.md
+    - name: 支持使用 wmain
+      href: ../text/support-for-using-wmain.md
+    - name: Unicode 编程摘要
+      href: ../text/unicode-programming-summary.md
+- name: 支持多字节字符集 (MBCS)
+  expanded: false
+  items:
+    - name: 支持多字节字符集 (MBCS)
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: MSVC 中的 MBCS 支持
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: MBCS 编程提示
+      expanded: false
+      items:
+        - name: MBCS 编程提示
+          href: ../text/mbcs-programming-tips.md
+        - name: 常规 MBCS 编程建议
+          href: ../text/general-mbcs-programming-advice.md
+        - name: 递增和递减指针
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: 字节索引
+          href: ../text/byte-indices.md
+        - name: 字符串中的最后一个字符
+          href: ../text/last-character-in-a-string.md
+        - name: 字符赋值
+          href: ../text/character-assignment.md
+        - name: 字符比较
+          href: ../text/character-comparison.md
+        - name: 缓冲区溢出
+          href: ../text/buffer-overflow.md
+- name: 对 ANSI 的支持
+  href: ../text/support-for-ansi.md
+- name: Tchar.h 中的一般文本映射
+  expanded: false
+  items:
+    - name: Tchar.h 中的一般文本映射
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: 将 TCHAR.H 数据类型用于 _MBCS 代码
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: 如何：在各种字符串类型之间进行转换
+  href: ../text/how-to-convert-between-various-string-types.md

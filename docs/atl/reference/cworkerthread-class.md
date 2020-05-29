@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 05e6b432d44927fa7e276792643e29c80c42d822
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496107"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330211"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 
-此类创建一个或多个工作线程, 并使用现有的工作线程, 在一个或多个内核对象句柄上等待, 并在其中一个句柄发出信号时执行指定的客户端函数。
+此类创建辅助线程或使用现有线程，在一个或多个内核对象句柄上等待，并在其中一个句柄发出信号时执行指定的客户端函数。
 
 > [!IMPORTANT]
-> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -38,35 +38,35 @@ class CWorkerThread
 
 ### <a name="parameters"></a>参数
 
-*ThreadTraits*<br/>
-提供线程创建函数的类, 如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。
+*线程特征*<br/>
+提供线程创建函数的类，如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。
 
 ## <a name="members"></a>成员
 
-### <a name="protected-structures"></a>受保护的结构
+### <a name="protected-structures"></a>受保护结构
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CWorkerThread::CWorkerThread](#cworkerthread)|工作线程的构造函数。|
-|[CWorkerThread:: ~ CWorkerThread](#dtor)|工作线程的析构函数。|
+|[CWorker 线程：CWorkerThread](#cworkerthread)|辅助线程的构造函数。|
+|[CWorker 线程：*CWorkerThread](#dtor)|辅助线程的析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CWorkerThread::AddHandle](#addhandle)|调用此方法可将可等待对象的句柄添加到由工作线程维护的列表。|
-|[CWorkerThread::AddTimer](#addtimer)|调用此方法可将定期可等待计时器添加到由工作线程维护的列表。|
-|[CWorkerThread::GetThreadHandle](#getthreadhandle)|调用此方法可获取工作线程的线程句柄。|
-|[CWorkerThread::GetThreadId](#getthreadid)|调用此方法可获取工作线程的线程 ID。|
-|[CWorkerThread::Initialize](#initialize)|调用此方法可初始化工作线程。|
-|[CWorkerThread::RemoveHandle](#removehandle)|调用此方法可从可等待对象列表中删除句柄。|
-|[CWorkerThread::Shutdown](#shutdown)|调用此方法可关闭工作线程。|
+|[CWorkerThread：：添加句柄](#addhandle)|调用此方法以将可等待对象的句柄添加到辅助线程维护的列表。|
+|[CWorkerThread：：添加计时器](#addtimer)|调用此方法以将定期可等待计时器添加到辅助线程维护的列表。|
+|[CWorker 线程：获取线程句柄](#getthreadhandle)|调用此方法以获取辅助线程的线程句柄。|
+|[CWorkerThread：getThreadId](#getthreadid)|调用此方法以获取辅助线程的线程 ID。|
+|[CWorkerThread：初始化](#initialize)|调用此方法以初始化辅助线程。|
+|[CWorkerThread：：删除句柄](#removehandle)|调用此方法从可等待对象列表中删除句柄。|
+|[CWorkerThread：：关闭](#shutdown)|调用此方法以关闭辅助线程。|
 
 ## <a name="remarks"></a>备注
 
@@ -74,27 +74,27 @@ class CWorkerThread
 
 1. 创建此类的实例。
 
-1. 调用[CWorkerThread:: Initialize](#initialize)。
+1. 调用[CWorkerThread：：初始化](#initialize)。
 
-1. 调用[CWorkerThread:: AddHandle](#addhandle) , 其中包含内核对象的句柄和指向[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)的实现的指针。
+1. 调用[CWorkerThread：使用](#addhandle)内核对象的句柄和指向[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)实现的指针添加Handle。
 
    \- 或 -
 
-   调用[CWorkerThread:: AddTimer](#addtimer) , 其中包含指向[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)的实现的指针。
+   调用[CWorkerThread：使用](#addtimer)指向[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)实现的指针添加Timer。
 
-1. 实现[IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)以在句柄或计时器发出信号时执行某种操作。
+1. 实现[IWorkerThreadClient：：执行](../../atl/reference/iworkerthreadclient-interface.md#execute)在发出信号的句柄或计时器时执行一些操作。
 
-1. 若要从可等待对象列表中删除对象, 请调用[CWorkerThread:: RemoveHandle](#removehandle)。
+1. 要从可等待对象列表中删除对象，请调用[CWorkerThread：：删除句柄](#removehandle)。
 
-1. 若要终止线程, 请调用[CWorkerThread:: Shutdown](#shutdown)。
+1. 要终止线程，请调用[CWorkerThread：：关机](#shutdown)。
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlutil
+**标题：** atlutil.h
 
-##  <a name="addhandle"></a>CWorkerThread::AddHandle
+## <a name="cworkerthreadaddhandle"></a><a name="addhandle"></a>CWorkerThread：：添加句柄
 
-调用此方法可将可等待对象的句柄添加到由工作线程维护的列表。
+调用此方法以将可等待对象的句柄添加到辅助线程维护的列表。
 
 ```
 HRESULT AddHandle(
@@ -109,22 +109,22 @@ HRESULT AddHandle(
 可等待对象的句柄。
 
 *pClient*<br/>
-指向对象上的[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)接口的指针, 该对象将在终止句柄时调用。
+指向对象上的[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)接口的指针，当句柄发出信号时，要调用该接口。
 
-*dwParam*<br/>
-要传递给[IWorkerThreadClient::](../../atl/reference/iworkerthreadclient-interface.md#execute)在句柄终止时执行的参数。
+*德帕拉姆*<br/>
+要传递给[IWorkerThreadClient 的参数：](../../atl/reference/iworkerthreadclient-interface.md#execute)在发出信号时执行。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-当句柄*hObject*时, [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)将通过*pClient*调用。
+[IWorkerThreadClient：当](../../atl/reference/iworkerthreadclient-interface.md#execute)句柄*hObject*发出信号时，将通过*pClient*调用执行。
 
-##  <a name="addtimer"></a>CWorkerThread::AddTimer
+## <a name="cworkerthreadaddtimer"></a><a name="addtimer"></a>CWorkerThread：：添加计时器
 
-调用此方法可将定期可等待计时器添加到由工作线程维护的列表。
+调用此方法以将定期可等待计时器添加到辅助线程维护的列表。
 
 ```
 HRESULT AddTimer(
@@ -136,29 +136,29 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>参数
 
-*dwInterval*<br/>
-指定计时器的持续时间 (以毫秒为单位)。
+*dw间隔*<br/>
+指定计时器的周期（以毫秒为单位）。
 
 *pClient*<br/>
-指向对象上的[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)接口的指针, 该对象将在终止句柄时调用。
+指向对象上的[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)接口的指针，当句柄发出信号时，要调用该接口。
 
-*dwParam*<br/>
-要传递给[IWorkerThreadClient::](../../atl/reference/iworkerthreadclient-interface.md#execute)在句柄终止时执行的参数。
+*德帕拉姆*<br/>
+要传递给[IWorkerThreadClient 的参数：](../../atl/reference/iworkerthreadclient-interface.md#execute)在发出信号时执行。
 
 *phTimer*<br/>
-弄成功时接收到新创建的计时器的句柄的句柄变量的地址。
+[出]HANDLE 变量的地址，在成功时，接收新创建的计时器的句柄。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-当计时器发出信号时, [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)将通过*pClient*调用。
+[IWorkerThreadClient：当](../../atl/reference/iworkerthreadclient-interface.md#execute)计时器发出信号时，将通过*pClient*调用执行。
 
-将计时器句柄从*phTimer*传递到[CWorkerThread:: RemoveHandle](#removehandle)以关闭计时器。
+将计时器句柄从*phTimer*传递到[CWorkerThread：：删除手柄](#removehandle)以关闭计时器。
 
-##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread
+## <a name="cworkerthreadcworkerthread"></a><a name="cworkerthread"></a>CWorker 线程：CWorkerThread
 
 构造函数。
 
@@ -166,7 +166,7 @@ HRESULT AddTimer(
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread
+## <a name="cworkerthreadcworkerthread"></a><a name="dtor"></a>CWorker 线程：*CWorkerThread
 
 析构函数。
 
@@ -176,11 +176,11 @@ CWorkerThread() throw();
 
 ### <a name="remarks"></a>备注
 
-调用[CWorkerThread:: Shutdown](#shutdown)。
+调用[CWorkerThread：：关闭](#shutdown)。
 
-##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle
+## <a name="cworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CWorker 线程：获取线程句柄
 
-调用此方法可获取工作线程的线程句柄。
+调用此方法以获取辅助线程的线程句柄。
 
 ```
 HANDLE GetThreadHandle() throw();
@@ -188,11 +188,11 @@ HANDLE GetThreadHandle() throw();
 
 ### <a name="return-value"></a>返回值
 
-如果工作线程尚未初始化, 则返回线程句柄或 NULL。
+如果工作线程尚未初始化，则返回线程句柄或 NULL。
 
-##  <a name="getthreadid"></a>CWorkerThread::GetThreadId
+## <a name="cworkerthreadgetthreadid"></a><a name="getthreadid"></a>CWorkerThread：getThreadId
 
-调用此方法可获取工作线程的线程 ID。
+调用此方法以获取辅助线程的线程 ID。
 
 ```
 DWORD GetThreadId() throw();
@@ -200,11 +200,11 @@ DWORD GetThreadId() throw();
 
 ### <a name="return-value"></a>返回值
 
-如果工作线程尚未初始化, 则返回线程 ID 或 NULL。
+如果工作线程尚未初始化，则返回线程 ID 或 NULL。
 
-##  <a name="initialize"></a>CWorkerThread:: Initialize
+## <a name="cworkerthreadinitialize"></a><a name="initialize"></a>CWorkerThread：初始化
 
-调用此方法可初始化工作线程。
+调用此方法以初始化辅助线程。
 
 ```
 HRESULT Initialize() throw();
@@ -215,23 +215,23 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ### <a name="parameters"></a>参数
 
 *pThread*<br/>
-现有的工作线程。
+现有辅助线程。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-调用[CWorkerThread:: Shutdown](#shutdown)后, 应调用此方法来初始化对象。
+应调用此方法在创建后或调用[CWorkerThread：：：：：关机](#shutdown)后初始化对象。
 
-若要使两个`CWorkerThread`或多个对象使用同一个工作线程, 请在不传递任何参数的情况下初始化其中一个对象, `Initialize`然后将指向该对象的指针传递给其他对象的方法。 使用指针初始化的对象应在用于初始化它们的对象之前关闭。
+要让两个或多个`CWorkerThread`对象使用相同的辅助线程，请初始化其中一个对象而不传递任何参数，然后将指向该对象的指针传递给其他对象`Initialize`的方法。 使用指针初始化的对象应在用于初始化的对象之前关闭。
 
-有关使用指向现有对象的指针进行初始化时该方法的行为如何发生更改的信息, 请参阅[CWorkerThread:: Shutdown](#shutdown) 。
+有关使用指向现有对象的指针初始化时该方法的行为如何变化的信息，请参阅[CWorkerThread：：关机](#shutdown)。
 
-##  <a name="removehandle"></a>CWorkerThread::RemoveHandle
+## <a name="cworkerthreadremovehandle"></a><a name="removehandle"></a>CWorkerThread：：删除句柄
 
-调用此方法可从可等待对象列表中删除句柄。
+调用此方法从可等待对象列表中删除句柄。
 
 ```
 HRESULT RemoveHandle(HANDLE hObject) throw();
@@ -240,19 +240,19 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-要移除的句柄。
+要删除的句柄。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
+返回成功S_OK，或失败时返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-删除句柄时, 将对传递到[AddHandle](#addhandle)的关联对象调用[IWorkerThreadClient:: CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) 。 如果此调用失败, `CWorkerThread`将对句柄调用 Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle)函数。
+删除句柄时[，IWorkerThreadClient：：关闭处理](../../atl/reference/iworkerthreadclient-interface.md#closehandle)将在传递给[AddHandle](#addhandle)的关联对象上调用。 如果此调用失败，`CWorkerThread`将在句柄上调用 Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle)函数。
 
-##  <a name="shutdown"></a>CWorkerThread:: Shutdown
+## <a name="cworkerthreadshutdown"></a><a name="shutdown"></a>CWorkerThread：：关闭
 
-调用此方法可关闭工作线程。
+调用此方法以关闭辅助线程。
 
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
@@ -261,21 +261,21 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="parameters"></a>参数
 
 *dwWait*<br/>
-等待工作线程关闭所用的时间 (以毫秒为单位)。 ATL_WORKER_THREAD_WAIT 默认为10秒。 如有必要, 你可以在包括 atlutil 之前为此符号定义你自己的值。
+等待辅助线程关闭的时间（以毫秒为单位）。 ATL_WORKER_THREAD_WAIT默认值为 10 秒。 如有必要，您可以在包含 atlutil.h 之前为此符号定义您自己的值。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 S_OK; 如果失败, 则返回错误 HRESULT, 如超出超时值*dwWait*。
+返回成功时S_OK，或失败时出现错误 HRESULT，例如如果超过超时值*dwWait。*
 
 ### <a name="remarks"></a>备注
 
-若要重用该对象, 请在调用此方法后调用[CWorkerThread:: Initialize](#initialize) 。
+要重用该对象，请调用[CWorkerThread：：](#initialize)调用此方法后初始化。
 
-请注意, `Shutdown`对使用指向另一`CWorkerThread`对象的指针进行初始化的对象的调用不起作用, 并且始终返回 S_OK。
+请注意，使用`Shutdown`指向另`CWorkerThread`一个对象的指针初始化的对象调用不起作用，并且始终返回S_OK。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[默认线程特征](atl-typedefs.md#defaultthreadtraits)<br/>
 [类](../../atl/reference/atl-classes.md)<br/>
-[多线程处理：创建工作线程](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient 接口](../../atl/reference/iworkerthreadclient-interface.md)

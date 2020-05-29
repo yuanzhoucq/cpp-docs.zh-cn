@@ -1,14 +1,14 @@
 ---
-title: 类、结构和联合的大括号初始化
-description: 对任何C++类、结构或联合使用大括号初始化
+title: 为类、结构和联合进行初始化
+description: 将大括号初始化与任何C++类、结构或联合
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
-ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
+ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75652619"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374078"
 ---
 # <a name="brace-initialization"></a>大括号初始化
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-请注意，当类或结构没有构造函数时，将按在类中声明成员的顺序提供列表元素。 如果类具有构造函数，请按参数的顺序提供元素。 如果类型具有隐式或显式声明的默认构造函数，则您可以使用默认大括号初始化（具有空大括号）。 例如，可通过使用默认和非默认大括号初始化来初始化以下类：
+请注意，当类或结构没有构造函数时，您按在类中声明成员的顺序提供列表元素。 如果类具有构造函数，请按参数的顺序提供元素。 如果类型具有隐式或显式声明的默认构造函数，则您可以使用默认大括号初始化（具有空大括号）。 例如，可通过使用默认和非默认大括号初始化来初始化以下类：
 
 ```cpp
 #include <string>
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-您可以在通常执行初始化的任何位置（例如，作为函数参数或返回值，或使用**新**关键字）使用大括号初始化：
+您可以在通常执行初始化的任意位置使用大括号初始化，例如，作为函数参数或返回值，或者使用**新**关键字：
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-在 **/std： c + + 17**模式下，用于空大括号初始化的规则略有限制。 请参见[派生的构造函数和扩展的聚合初始化](constructors-cpp.md#extended_aggregate)。
+在 **/std：c++17**模式下，空大括号初始化的规则稍微限制一些。 请参阅[派生构造函数和扩展聚合初始化](constructors-cpp.md#extended_aggregate)。
 
-## <a name="initializer_list-constructors"></a>initializer_list 构造函数
+## <a name="initializer_list-constructors"></a>initializer_list构造函数
 
-[Initializer_list 类](../standard-library/initializer-list-class.md)表示指定类型的对象的列表，这些对象可以在构造函数中使用，也可以在其他上下文中使用。 您可通过使用大括号初始化构造 initializer_list：
+[initializer_list类](../standard-library/initializer-list-class.md)表示可在构造函数和其他上下文中使用的指定类型的对象的列表。 您可通过使用大括号初始化构造 initializer_list：
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  若要使用此类，则必须包含[\<initializer_list >](../standard-library/initializer-list.md)标头。
+> 要使用此类，必须包括[\<initializer_list>](../standard-library/initializer-list.md)标头。
 
 可以复制 `initializer_list`。 在这种情况下，新列表的成员是对原始列表成员的引用：
 
@@ -166,7 +166,6 @@ map<int, string> m1{ {1, "a"}, {2, "b"} };
 string s{ 'a', 'b', 'c' };
 regex rgx{ 'x', 'y', 'z' };
 ```
-
 
 ## <a name="see-also"></a>另请参阅
 

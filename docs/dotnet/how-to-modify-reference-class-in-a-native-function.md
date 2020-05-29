@@ -6,22 +6,22 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404385"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544879"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改本机函数中的引用类
 
-可以将具有 CLR 数组的引用类传递给本机函数，并修改类，使用 PInvoke 服务。
+可以将具有 CLR 数组的引用类传递到本机函数，并使用 PInvoke 服务修改类。
 
 ## <a name="example"></a>示例
 
-编译以下本机库。
+编译下面的本机库。
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -49,9 +49,9 @@ extern "C"  {
 
 ## <a name="example"></a>示例
 
-编译以下程序集。
+编译下面的程序集。
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;
@@ -89,6 +89,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

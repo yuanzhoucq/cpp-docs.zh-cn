@@ -1,9 +1,11 @@
 ---
 title: asctime、_wasctime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime
 - asctime
+- _o__wasctime
+- _o_asctime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939675"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909429"
 ---
 # <a name="asctime-_wasctime"></a>asctime、_wasctime
 
@@ -62,7 +65,7 @@ wchar_t *_wasctime(
 
 ## <a name="return-value"></a>返回值
 
-**asctime**返回指向字符串结果的指针; **_wasctime**返回指向宽字符字符串结果的指针。 无错误返回值。
+**asctime**返回指向字符串结果的指针;**_wasctime**返回指向宽字符字符串结果的指针。 无错误返回值。
 
 ## <a name="remarks"></a>备注
 
@@ -90,6 +93,8 @@ wchar_t *_wasctime(
 
 这些函数验证其参数。 如果*timeptr*是 null 指针，或者如果它包含超出范围的值，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
@@ -98,7 +103,7 @@ wchar_t *_wasctime(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**asctime**|\<time.h>|
 |**_wasctime**|\<time.h> 或 \<wchar.h>|
@@ -135,11 +140,11 @@ int main( void )
 Current date and time: Sun Feb 03 11:38:58 2002
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
-[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
+[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>

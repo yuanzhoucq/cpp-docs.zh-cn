@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: d9b9a6c04e7e9a5d88df516125280b6b23894a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302548"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206522"
 ---
 # <a name="compiler-error-c2248"></a>编译器错误 C2248
 
-'*成员*： 无法访问'*access_level*在类中声明成员'*类*
+"*member*"：无法访问 "*class*" 类中声明的 "*access_level*" 成员
 
-在派生类的成员不能访问`private`基类的成员。 不能访问`private`或`protected`类实例的成员。
+派生类的成员无法访问基类 `private` 成员。 不能访问类实例 `private` 或 `protected` 成员。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2248 时私有或受保护的成员的类从类外部访问。 若要解决此问题，并访问这些成员直接在类的外部。 使用公共成员数据和成员函数与类进行交互。
+下面的示例在从类外部访问类的私有或受保护成员时，生成 C2248。 若要解决此问题，请不要在类的外部直接访问这些成员。 使用公共成员数据和成员函数与类进行交互。
 
 ```cpp
 // C2248_access.cpp
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-另一个公开 C2248 的符合性问题是使用模板友元和专用化。 若要解决此问题，请声明友元模板函数使用空参数列表 template<> 或特定的模板参数。
+公开 C2248 的另一个一致性问题是使用模板好友和专用化。 若要解决此问题，请使用空模板参数列表 < > 或特定模板参数来声明友元模板函数。
 
 ```cpp
 // C2248_template.cpp
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-尝试声明友元的类和类不是可见的作用域中的类的友元声明时，另一个公开 C2248 的一致性问题。 若要解决此问题，授予对封闭类的友元关系。
+公开 C2248 的另一个一致性问题是在您尝试声明一个类的友元，而当该类对类的作用域中的友元声明不可见时。 若要解决此问题，请向封闭类授予友元。
 
 ```cpp
 // C2248_enclose.cpp

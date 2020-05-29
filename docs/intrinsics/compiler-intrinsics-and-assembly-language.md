@@ -2,12 +2,12 @@
 title: 编译器内部函数和程序集语言
 ms.date: 09/02/2019
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 1beeb0dedb153e4cd2b0a26bfc94ef7d0f9201c2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 36feb6971a8f5e4affd4f71b6afc1d508b2802f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217938"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171679"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>编译器内部函数和程序集语言
 
@@ -15,7 +15,7 @@ ms.locfileid: "70217938"
 
 ## <a name="related-articles"></a>相关文章
 
-|标题|描述|
+|标题|说明|
 |-----------|-----------------|
 |[编译器内部函数](../intrinsics/compiler-intrinsics.md)|描述可用于 x86、ARM 和 x64 体系结构的 Microsoft C 和 C++ 的内部函数。|
 |[内联汇编程序](../assembler/inline/inline-assembler.md)|解释如何使用具有 x86 处理器的 Visual C/C++ 内联汇编。|

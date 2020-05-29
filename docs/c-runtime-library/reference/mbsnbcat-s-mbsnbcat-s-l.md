@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcat_s、_mbsnbcat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
+- _o__mbsnbcat_s
+- _o__mbsnbcat_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: a148f4be503ee793e4e36855233edfc8fa8f165a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d731c94c879d0e4334dc3b57a19b94cc0378abaf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624340"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915635"
 ---
 # <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s、_mbsnbcat_s_l
 
@@ -82,7 +85,7 @@ errno_t _mbsnbcat_s_l(
 
 ### <a name="parameters"></a>参数
 
-*dest*<br/>
+dest**<br/>
 以 null 终止的多字节字符目标字符串。
 
 *sizeInBytes*<br/>
@@ -91,7 +94,7 @@ errno_t _mbsnbcat_s_l(
 *src*<br/>
 以 null 终止的多字节字符源字符串。
 
-*count*<br/>
+*计数*<br/>
 从*src*追加到*目标*的字节数。
 
 *locale*<br/>
@@ -105,21 +108,23 @@ errno_t _mbsnbcat_s_l(
 
 |**目的**|*sizeInBytes*|*src*|返回值|
 |------------|-------------------|-----------|------------------|
-|**NULL**|any|any|**EINVAL**|
+|**Null**|any|any|**EINVAL**|
 |任意|<= 0|any|**EINVAL**|
-|任意|any|**NULL**|**EINVAL**|
+|任意|any|**Null**|**EINVAL**|
 
 如果出现任何一个错误状态，该函数生成无效参数错误，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcat_s**函数最多追加 *src*的第一个*计数*字节。 如果在*dest*中紧跟在 null 字符之前的字节是前导字节，则*src*的初始字节将覆盖该字节。 否则， *src*的初始字节将覆盖*dest*的终止 null 字符。 如果在附加*count*个字节之前， *src*中出现 null 字节，则 **_mbsnbcat_s**会将所有字节从*src*追加到 null 字符。 如果*count*大于*src*的长度，则使用*src*的长度代替*计数*。 生成的字符串由 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**_Mbsnbcat_s**函数最多追加*dest* *src*的第一个*计数*字节。 如果在*dest*中紧跟在 null 字符之前的字节是前导字节，则*src*的初始字节将覆盖该字节。 否则， *src*的初始字节将覆盖*dest*的终止 null 字符。 如果在附加*count*个字节之前， *src*中出现 null 字节， **_mbsnbcat_s**将从*src*中追加到 null 字符之前的所有字节。 如果*count*大于*src*的长度，则使用*src*的长度代替*计数*。 生成的字符串由 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
-输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数使用当前区域设置，而使用的是 **_l**后缀，而是使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数使用当前区域设置，而使用了 **_l**后缀的区域设置，则使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度，从而不再需要指定大小自变量，并且它们可以自动使用更新、更安全的函数替换较旧、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -130,14 +135,14 @@ errno_t _mbsnbcat_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcat_s**|\<mbstring.h>|
 |**_mbsnbcat_s_l**|\<mbstring.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp、_mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>

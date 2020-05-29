@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 85a315ee393a002da4d0999569d4af6c34a37ee3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455519"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376847"
 ---
 # <a name="basic_ifstream-class"></a>basic_ifstream 类
 
-描述一个对象，该对象可控制从 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 类的流缓冲区提取元素和编码对象，其中 `Elem` 类型的元素的字符特征由 `Tr` 类确定。
+描述一个对象，它控制从类[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`的流缓冲区中提取元素和编码对象，>，`Tr`其元素的类型`Elem`由类`Tr`确定。
 
 ## <a name="syntax"></a>语法
 
@@ -36,7 +36,7 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*\
+*埃莱姆*\
 文件缓冲区的基本元素。
 
 *Tr*\
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 This is the contents of basic_ifstream_class.txt.
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -85,33 +85,33 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|初始化 `basic_ifstream` 对象的新实例。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
-|[close](#close)|关闭文件。|
+|[关闭](#close)|关闭文件。|
 |[is_open](#is_open)|确定文件是否打开。|
 |[open](#open)|打开文件。|
 |[rdbuf](#rdbuf)|返回存储的流缓冲区的地址。|
-|[swap](#swap)|为所提供 `basic_ifstream` 的内容交换此 `basic_ifstream` 的内容。|
+|[交换](#swap)|为所提供 `basic_ifstream` 的内容交换此 `basic_ifstream` 的内容。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|操作员|说明|
 |-|-|
-|[operator=](#op_eq)|分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue` 不会留下副本。|
+|[运算符*](#op_eq)|分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue` 不会留下副本。|
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<fstream>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="basic_ifstream"></a>  basic_ifstream::basic_ifstream
+## <a name="basic_ifstreambasic_ifstream"></a><a name="basic_ifstream"></a>basic_ifstream：：basic_ifstream
 
 构造 `basic_ifstream` 类型的对象。
 
@@ -144,9 +144,9 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用 [basic_istream](../standard-library/basic-istream-class.md)(`sb`) 初始化基类，其中 `sb` 是 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 类的存储对象。 通过调用 `basic_filebuf`< `Elem`, `Tr`>，它还可以初始化 `sb`。
+第一个构造函数通过调用[basic_istream](../standard-library/basic-istream-class.md) `sb`（） 初始化基类`sb`，其中类[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`的存储对象`Tr`>。 通过调用 `basic_filebuf`< `Elem`, `Tr`>，它还可以初始化 `sb`。
 
-通过调用 `basic_istream`(`sb`)，第二个和第三个构造函数可初始化基类。 通过调用 [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>，然后调用 `sb`，它还可以初始化 `sb`。 [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`)。 如果后一个函数返回一个空指针，构造函数将调用 **setstate**( `failbit`)。
+通过调用 `basic_istream`(`sb`)，第二个和第三个构造函数可初始化基类。 它还`sb`通过调用basic_filebuf，>，[basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem``Tr`然后`sb`初始化。 [打开](../standard-library/basic-filebuf-class.md#open) `_Filename`（， `ios_base::in`&#124; `_Mode` ）。 如果后一个函数返回空指针，则构造函数将调用**setstate**（ `failbit`。
 
 第四个构造函数初始化具有 `right` 的内容的对象，将其视为右值引用。
 
@@ -175,7 +175,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="close"></a>  basic_ifstream::close
+## <a name="basic_ifstreamclose"></a><a name="close"></a>basic_ifstream：关闭
 
 关闭文件。
 
@@ -185,13 +185,13 @@ void close();
 
 ### <a name="remarks"></a>备注
 
-成员函数调用 [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
+成员函数调用[rdbuf](#rdbuf) **->** [关闭](../standard-library/basic-filebuf-class.md#close)。
 
 ### <a name="example"></a>示例
 
 有关如何使用 `close` 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
 
-## <a name="is_open"></a>  basic_ifstream::is_open
+## <a name="basic_ifstreamis_open"></a><a name="is_open"></a>basic_ifstream：is_open
 
 确定文件是否打开。
 
@@ -205,13 +205,13 @@ bool is_open() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。
+成员函数返回[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。
 
 ### <a name="example"></a>示例
 
 有关如何使用 `is_open` 的示例，请参阅 [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open)。
 
-## <a name="open"></a>  basic_ifstream::open
+## <a name="basic_ifstreamopen"></a><a name="open"></a>basic_ifstream：：打开
 
 打开文件。
 
@@ -248,13 +248,13 @@ void open(
 
 ### <a name="remarks"></a>备注
 
-成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败，该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`），这可能会引发 ios_base：：失败异常。
+成员函数调用[rdbuf](#rdbuf) **->** [打开](../standard-library/basic-filebuf-class.md#open)（*`_Mode`*文件名*，&#124;ios_base：：in 。 **ios_base::in** 如果打开失败，函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`），这可能会引发ios_base：失败异常。
 
 ### <a name="example"></a>示例
 
-有关使用`open`的示例，请参阅[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
+有关使用`open`的示例，请参阅[basic_filebuf：：打开](../standard-library/basic-filebuf-class.md#open)。
 
-## <a name="op_eq"></a>  basic_ifstream::operator=
+## <a name="basic_ifstreamoperator"></a><a name="op_eq"></a>basic_ifstream：：操作员*
 
 分配此流对象的内容。 这是一种移动赋值，所涉右值不会留下副本。
 
@@ -264,7 +264,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*对*\
 对 `basic_ifstream` 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
@@ -273,9 +273,9 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符使用*right*的内容替换对象的内容，并将其视为右值引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
+成员运算符使用*权利*的内容替换对象的内容，该内容被视为 rvalue 引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
-## <a name="rdbuf"></a>  basic_ifstream::rdbuf
+## <a name="basic_ifstreamrdbuf"></a><a name="rdbuf"></a>basic_ifstream：：rdbuf
 
 返回存储的流缓冲区的地址。
 
@@ -291,7 +291,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 有关如何使用 `rdbuf` 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
 
-## <a name="swap"></a>  basic_ifstream::swap
+## <a name="basic_ifstreamswap"></a><a name="swap"></a>basic_ifstream：：交换
 
 交换两个 `basic_ifstream` 对象的内容。
 
@@ -301,15 +301,15 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*对*\
 对另一个流缓冲区的引用。
 
 ### <a name="remarks"></a>备注
 
-该成员函数将此对象的内容与*右侧*的内容进行交换。
+成员函数将此对象的内容交换为*权利*的内容。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream 编程](../standard-library/iostream-programming.md)\
+[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[电流编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
 ms.openlocfilehash: 136065466d3adb4017cf18f2baf8c3387ffbd035
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313293"
 ---
 # <a name="c-sized-integer-types"></a>C 调整了大小的整型
 
 **Microsoft 专用**
 
-Microsoft C 支持固定大小整数类型。 可以使用 __intn 类型说明符声明 8 位、16 位、32 位或 64 位整数变量，其中 n 是整数变量的大小（以位为单位）。 n 的值可以是 8、16、32 或 64。 以下示例为四种类型的固定大小整数各声明了一个变量：
+Microsoft C 支持固定大小整数类型。 可以使用 __intn 类型说明符声明 8 位、16 位、32 位或 64 位整数变量，其中 n 是整数变量的大小（以位为单位）   。 n 的值可以是 8、16、32 或 64  。 以下示例为四种类型的固定大小整数各声明了一个变量：
 
 ```
 __int8 nSmall;      // Declares 8-bit integer

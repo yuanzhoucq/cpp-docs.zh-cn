@@ -15,19 +15,19 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-ms.openlocfilehash: 7a350a4349cb825795a18dd860a2482952b04dcb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0d6ac4639ac0cfb97416ca80b7a2ec3903d7b8e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326464"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 类
 
 此类实现`IUnknown`并提供[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)接口的默认实现。
 
 > [!IMPORTANT]
->  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -40,26 +40,26 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自`IPersistStreamInitImpl`的类。
+您的类，派生自`IPersistStreamInitImpl`。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[IPersistStreamInitImpl::GetClassID](#getclassid)|检索对象的 CLSID。|
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|检索保存对象数据所需的流的大小。 ATL 实现返回 E_NOTIMPL。|
-|[IPersistStreamInitImpl::InitNew](#initnew)|初始化新创建的对象。|
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|检查对象的数据自上次保存后是否已更改。|
-|[IPersistStreamInitImpl::Load](#load)|从指定的流加载对象的属性。|
-|[IPersistStreamInitImpl::Save](#save)|将对象的属性保存到指定的流。|
+|[I 坚持流化：：获取类ID](#getclassid)|检索对象的 CLSID。|
+|[I 坚持流化：：获取 SizeMax](#getsizemax)|检索保存对象数据所需的流的大小。 ATL 实现返回E_NOTIMPL。|
+|[I 坚持流化：：Initnew](#initnew)|初始化新创建的对象。|
+|[我坚持流化：：是肮脏的](#isdirty)|检查对象的数据自上次保存以来是否已更改。|
+|[I 坚持流化：：加载](#load)|从指定的流加载对象的属性。|
+|[I 坚持流化：：保存](#save)|将对象的属性保存到指定的流。|
 
 ## <a name="remarks"></a>备注
 
-[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)接口允许客户端请求你的对象将其持久性数据加载并保存到单个流。 类`IPersistStreamInitImpl`提供此接口的默认实现, 并通过`IUnknown`在调试版本中将信息发送到转储设备来实现。
+[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)接口允许客户端请求对象加载，并将其持久数据保存到单个流中。 类`IPersistStreamInitImpl`通过在调试生成中向转储设备发送`IUnknown`信息来提供此接口的默认实现和实现。
 
-**相关文章**[Atl 教程](../../atl/active-template-library-atl-tutorial.md),[创建 atl 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)， 创建[ATL 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -69,9 +69,9 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlcom。h
+**标题：** atlcom.h
 
-##  <a name="getclassid"></a>IPersistStreamInitImpl:: GetClassID
+## <a name="ipersiststreaminitimplgetclassid"></a><a name="getclassid"></a>I 坚持流化：：获取类ID
 
 检索对象的 CLSID。
 
@@ -81,9 +81,9 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>备注
 
-请参阅 Windows SDK 中的[IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) 。
+请参阅[IPersist：在](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid)Windows SDK 中获取 ClassID。
 
-##  <a name="getsizemax"></a>IPersistStreamInitImpl:: GetSizeMax
+## <a name="ipersiststreaminitimplgetsizemax"></a><a name="getsizemax"></a>I 坚持流化：：获取 SizeMax
 
 检索保存对象数据所需的流的大小。
 
@@ -97,9 +97,9 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 
 ### <a name="remarks"></a>备注
 
-请参阅 Windows SDK 中的[IPersistStreamInit:: GetSizeMax](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) 。
+请参阅[IPersistStreaminit：在](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax)Windows SDK 中获取 SizeMax。
 
-##  <a name="initnew"></a>IPersistStreamInitImpl:: InitNew
+## <a name="ipersiststreaminitimplinitnew"></a><a name="initnew"></a>I 坚持流化：：Initnew
 
 初始化新创建的对象。
 
@@ -109,11 +109,11 @@ STDMETHOD(InitNew)();
 
 ### <a name="remarks"></a>备注
 
-请参阅 Windows SDK 中的[IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) 。
+请参阅[IPersistStreaminit：：Windows](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) SDK 中的"新"。
 
-##  <a name="isdirty"></a>IPersistStreamInitImpl:: IsDirty
+## <a name="ipersiststreaminitimplisdirty"></a><a name="isdirty"></a>我坚持流化：：是肮脏的
 
-检查对象的数据自上次保存后是否已更改。
+检查对象的数据自上次保存以来是否已更改。
 
 ```
 STDMETHOD(IsDirty)();
@@ -121,9 +121,9 @@ STDMETHOD(IsDirty)();
 
 ### <a name="remarks"></a>备注
 
-请参阅 Windows SDK 中的[IPersistStreamInit:: IsDirty](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) 。
+请参阅[IPersistStreaminit：Windows](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) SDK 中脏话。
 
-##  <a name="load"></a>IPersistStreamInitImpl:: Load
+## <a name="ipersiststreaminitimplload"></a><a name="load"></a>I 坚持流化：：加载
 
 从指定的流加载对象的属性。
 
@@ -135,9 +135,9 @@ STDMETHOD(Load)(LPSTREAM pStm);
 
 ATL 使用对象的属性映射来检索此信息。
 
-请参阅 Windows SDK 中的[IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) 。
+请参阅[IPersistStreaminit：：](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load)在 Windows SDK 中加载。
 
-##  <a name="save"></a>IPersistStreamInitImpl:: Save
+## <a name="ipersiststreaminitimplsave"></a><a name="save"></a>I 坚持流化：：保存
 
 将对象的属性保存到指定的流。
 
@@ -149,9 +149,9 @@ STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 
 ATL 使用对象的属性映射来存储此信息。
 
-请参阅 Windows SDK 中的[IPersistStreamInit:: Save](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save) 。
+请参阅[IPersistStreamInit：：保存在](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save)Windows SDK 中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [存储和流](/windows/win32/Stg/storages-and-streams)<br/>
 [类概述](../../atl/atl-class-overview.md)

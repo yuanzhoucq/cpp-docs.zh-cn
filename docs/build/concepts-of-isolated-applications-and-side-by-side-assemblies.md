@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
 ms.openlocfilehash: f75a95ccca214f437152d13e099fbd9d03eaaee2
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493298"
@@ -22,7 +22,7 @@ ms.locfileid: "69493298"
 
 ## <a name="manifests-and-search-order"></a>清单和搜索顺序
 
-独立应用程序和并行程序集均由 [清单](/windows/win32/sbscs/manifests)描述。 清单是一个 XML 文档，既可以是外部文件，也可以作为资源嵌入到应用程序或程序集内。 独立应用程序的清单文件用于管理共享的并行程序集的名称和版本，应用程序应当在运行时绑定到这些程序集。 并行程序集的清单用于指定并行程序集的名称、版本、资源和依赖程序集。 对于共享并行程序集，其清单安装在 %WINDIR%\WinSxS\Manifests\ 文件夹中。 对于私有程序集，建议将其清单作为 ID 为 1 的资源包含在 DLL 中。 还可以为私有程序集提供与 DLL 相同的名称。 有关详细信息, 请参阅[关于专用程序集](/windows/win32/SbsCs/about-private-assemblies-)。
+独立应用程序和并行程序集均由 [清单](/windows/win32/sbscs/manifests)描述。 清单是一个 XML 文档，既可以是外部文件，也可以作为资源嵌入到应用程序或程序集内。 独立应用程序的清单文件用于管理共享的并行程序集的名称和版本，应用程序应当在运行时绑定到这些程序集。 并行程序集的清单用于指定并行程序集的名称、版本、资源和依赖程序集。 对于共享并行程序集，其清单安装在 %WINDIR%\WinSxS\Manifests\ 文件夹中。 对于私有程序集，建议将其清单作为 ID 为 1 的资源包含在 DLL 中。 还可以为私有程序集提供与 DLL 相同的名称。 有关更多信息，请参阅[关于私有程序集](/windows/win32/SbsCs/about-private-assemblies-)。
 
 执行时，Windows 将使用应用程序清单中的程序集信息，以搜索并加载相应的并行程序集。 如果独立应用程序指定了程序集依赖项，则操作系统会首先在 %WINDIR%\WinSxS\ 文件夹中的本机程序集缓存中的共享程序集中搜索程序集。 如果未找到所需的程序集，则操作系统会在应用程序目录结构的文件夹中搜索私有程序集。 有关更多信息，请参见 [程序集搜索顺序](/windows/win32/SbsCs/assembly-searching-sequence)。
 
@@ -32,7 +32,7 @@ ms.locfileid: "69493298"
 
 ## <a name="visual-c-libraries"></a>Visual C++ 库
 
-在 Visual Studio 2005 和 Visual Studio 2008 中，可再发行库（如 ATL、MFC、CRT、标准 C++、OpenMP 和 MSDIA）已作为共享的并行程序集部署到本机程序集缓存中。 在当前版本中，可再发行库使用集中部署。 默认情况下, 使用 Visual Studio 生成的所有应用程序都是使用嵌入到最终二进制文件中的清单生成的, 而清单描述了该二进制文件在视觉C++对象库上的依赖关系。 若要了解应用程序C++的清单生成, 请参阅[了解 C/C++程序的清单生成](understanding-manifest-generation-for-c-cpp-programs.md)。 对于静态链接到自身使用的库的应用程序，或链接到使用本地部署的库的应用程序，清单不是必需的。 有关部署的更多信息，请参阅 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)。
+在 Visual Studio 2005 和 Visual Studio 2008 中，可再发行库（如 ATL、MFC、CRT、标准 C++、OpenMP 和 MSDIA）已作为共享的并行程序集部署到本机程序集缓存中。 在当前版本中，可再发行库使用集中部署。 默认情况下，使用 Visual Studio 生成的所有应用程序在生成时都将清单嵌入到最终二进制文件中，该清单将描述此二进制文件在 Visual C++ 库中的依赖项。 若要了解 C++ 应用程序的清单生成，请参阅 [了解 C/C++ 程序的清单生成](understanding-manifest-generation-for-c-cpp-programs.md)。 对于静态链接到自身使用的库的应用程序，或链接到使用本地部署的库的应用程序，清单不是必需的。 有关部署的更多信息，请参阅 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,8 +1,6 @@
 ---
 title: Windows 套接字：使用类 CAsyncSocket
 ms.date: 11/04/2016
-f1_keywords:
-- CAsyncSocket
 helpviewer_keywords:
 - CAsyncSocket class [MFC], programming model
 - Windows Sockets [MFC], asynchronous
@@ -11,32 +9,32 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3fc32d9da54d9cf8c79e9e5de45b81c2ef64a6e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399559"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371971"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows 套接字：使用类 CAsyncSocket
 
-本文介绍如何使用类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 请注意，此类将封装 Windows 套接字 API 级别非常低。 `CAsyncSocket` 适用于由编程人员了解详细信息中的网络通信，但希望的网络事件通知的回调方便地使用。 基于此假设，这篇文章仅提供基本说明。 您可能应考虑使用`CAsyncSocket`如果希望 Windows 套接字的易用性与 MFC 应用程序中的多个网络协议的处理，但不是想要以牺牲灵活性为代价。 你还可能会觉得您可以通过编程的更多的通信，直接自行比你无法使用类的更一般的替代模型获取更高的效率`CSocket`。
+本文介绍如何使用类[CAsyncSocket。](../mfc/reference/casyncsocket-class.md) 请注意，此类在非常低的级别封装 Windows 套接字 API。 `CAsyncSocket`供程序员使用，他们详细了解网络通信，但希望回拨的便利性用于通知网络事件。 基于此假设，本文仅提供基本说明。 如果您希望 Windows 套`CAsyncSocket`接字在 MFC 应用程序中轻松处理多个网络协议，但不想牺牲灵活性，则可能需要考虑使用。 您可能还觉得，通过更直接地编程通信，您比使用更通用的类`CSocket`替代模型更直接地编程，可以获得更好的效率。
 
-`CAsyncSocket` 中所述*MFC 参考*。 VisualC++还提供 Windows 套接字规范，位于 Windows SDK 中。 细节被留给您。 VisualC++不提供的示例应用程序`CAsyncSocket`。
+`CAsyncSocket`记录在*MFC 参考*中。 可视C++还提供位于 Windows SDK 中的 Windows 套接字规范。 详情将留给你。 可视C++不提供`CAsyncSocket`的示例应用程序。
 
-如果您不了高度掌握网络通信，需要一个简单的解决方案，使用类[CSocket](../mfc/reference/csocket-class.md)与`CArchive`对象。 请参阅[Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)有关详细信息。
+如果您对网络通信了解不够，并且想要一个简单的解决方案，请使用类[CSocket](../mfc/reference/csocket-class.md)与`CArchive`对象。 有关详细信息[，请参阅 Windows 套接字：使用带存档的套接字](../mfc/windows-sockets-using-sockets-with-archives.md)。
 
-本文包含以下内容：
+本文介绍：
 
 - 创建和使用`CAsyncSocket`对象。
 
-- [您的职责与 CAsyncSocket](#_core_your_responsibilities_with_casyncsocket)。
+- [您在 CAsyncSocket 中的职责](#_core_your_responsibilities_with_casyncsocket)。
 
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> 创建和使用 CAsyncSocket 对象
+## <a name="creating-and-using-a-casyncsocket-object"></a><a name="_core_creating_and_using_a_casyncsocket_object"></a>创建和使用 CAsyncSocket 对象
 
-#### <a name="to-use-casyncsocket"></a>若要使用 CAsyncSocket
+#### <a name="to-use-casyncsocket"></a>使用 CAsyncSocket
 
-1. 构造[CAsyncSocket](../mfc/reference/casyncsocket-class.md)对象，并使用该对象创建基础**套接字**处理。
+1. 构造一个[CAsyncSocket](../mfc/reference/casyncsocket-class.md)对象，并使用 该对象创建基础**SOCKET**句柄。
 
    套接字的创建遵循两阶段构造的 MFC 模式。
 
@@ -44,64 +42,64 @@ ms.locfileid: "62399559"
 
    [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
-     或
+     -或-
 
    [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-   上面的第一个构造函数创建`CAsyncSocket`在堆栈上的对象。 第二个构造函数创建`CAsyncSocket`堆上。 第一个[创建](../mfc/reference/casyncsocket-class.md#create)调用上面使用的默认参数来创建流套接字。 第二个`Create`调用使用指定的端口和地址创建一个数据报套接字。 (你可以使用`Create`采用哪种构造方法的版本。)
+   上面的第一个构造函数在`CAsyncSocket`堆栈上创建一个对象。 第二个构造函数在`CAsyncSocket`堆上创建 一个。 上面的第一个[创建](../mfc/reference/casyncsocket-class.md#create)调用使用默认参数创建流套接字。 第二`Create`个调用创建具有指定端口和地址的数据报号套接字。 （您可以将任一`Create`版本与任一构造方法一起使用。
 
-   为参数`Create`是：
+   要的`Create`参数是：
 
-   - "端口": 短整数。
+   - "端口"：短整数。
 
-         For a server socket, you must specify a port. For a client socket, you typically accept the default value for this parameter, which lets Windows Sockets select a port.
+      对于服务器套接字，必须指定端口。 对于客户端套接字，您通常接受此参数的默认值，该值允许 Windows 套接字选择端口。
 
-   - 套接字类型：**SOCK_STREAM** （默认值） 或**SOCK_DGRAM**。
+   - 套接字类型 **：SOCK_STREAM（** 默认值）或**SOCK_DGRAM。**
 
-   - 一个套接字"地址"，如"ftp.microsoft.com"或"128.56.22.8"。
+   - 套接字"地址"，如"ftp.microsoft.com"或"128.56.22.8"。
 
-         This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
+      这是您的互联网协议 （IP） 地址。 您可能始终依赖于此参数的默认值。
 
-   中所述的条款"端口"和"套接字地址" [Windows 套接字：端口和套接字地址](../mfc/windows-sockets-ports-and-socket-addresses.md)。
+   术语"端口"和"套接字地址"在[Windows 套接字：端口和套接字地址）](../mfc/windows-sockets-ports-and-socket-addresses.md)中解释。
 
-1. 如果套接字，客户端套接字对象连接到服务器套接字，使用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)。
+1. 如果套接字是客户端，请使用[CAsyncSocket：：连接](../mfc/reference/casyncsocket-class.md#connect)将套接字对象连接到服务器套接字：连接 。
 
-     或
+     -或-
 
-   如果套接字是服务器，设置要开始侦听的套接字 (与[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) 从客户端的连接尝试。 收到连接请求后，它具有接受[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。
+   如果套接字是服务器，请将套接字设置为开始侦听（使用[CAsyncSocket：：LISTEN），](../mfc/reference/casyncsocket-class.md#listen)以便从客户端进行连接尝试。 收到连接请求后，请使用[CAsyncSocket 接受：接受](../mfc/reference/casyncsocket-class.md#accept)。
 
-   接受连接，可以执行此类验证密码的任务。
+   接受连接后，可以执行验证密码等任务。
 
     > [!NOTE]
-    >  `Accept`成员函数将一个新的空引用`CSocket`对象作为其参数。 在调用之前，必须构造此对象`Accept`。 如果此套接字对象超出范围，则关闭连接。 不要调用`Create`此新的套接字对象。 有关示例，请参阅文章[Windows 套接字：操作顺序](../mfc/windows-sockets-sequence-of-operations.md)。
+    >  成员`Accept`函数以引用新的空`CSocket`对象作为其参数。 在调用`Accept`之前，必须构造此对象。 如果此套接字对象超出范围，则关闭连接。 不要调用`Create`此新套接字对象。 例如，请参阅文章 Windows[套接字：操作序列](../mfc/windows-sockets-sequence-of-operations.md)。
 
-1. 通过调用执行与其他套接字通信`CAsyncSocket`封装 Windows 套接字 API 函数的对象的成员函数。
+1. 通过调用封装 Windows 套接字`CAsyncSocket`API 函数的对象成员函数，与其他套接字执行通信。
 
-   请参阅 Windows 套接字规范和类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)中*MFC 参考*。
+   请参阅*MFC 参考*中的 Windows 套接字规范和类[CAsyncSocket。](../mfc/reference/casyncsocket-class.md)
 
 1. 销毁`CAsyncSocket`对象。
 
-   如果在堆栈上创建的套接字对象，包含函数超出范围时调用其析构函数。 如果在堆上创建的套接字对象，使用**新**运算符，您应负责使用**删除**运算符来销毁该对象。
+   如果在堆栈上创建了套接字对象，则当包含函数超出范围时，将调用其析构函数。 如果在堆上创建了套接字对象，请使用**新**运算符，则负责使用**delete**运算符销毁该对象。
 
-   析构函数调用的对象[关闭](../mfc/reference/casyncsocket-class.md#close)之前销毁的对象的成员函数。
+   析构函数在销毁对象之前调用对象的[Close](../mfc/reference/casyncsocket-class.md#close)成员函数。
 
-有关此序列中的代码示例 (实际上为`CSocket`对象)，请参阅[Windows 套接字：操作顺序](../mfc/windows-sockets-sequence-of-operations.md)。
+有关代码中此序列的示例（实际上对于`CSocket`对象），请参阅 Windows[套接字：操作序列](../mfc/windows-sockets-sequence-of-operations.md)。
 
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a> 您的职责与 CAsyncSocket
+## <a name="your-responsibilities-with-casyncsocket"></a><a name="_core_your_responsibilities_with_casyncsocket"></a>您对 CAsyncSocket 的责任
 
-创建类的对象时[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，该对象封装 Windows**套接字**句柄并提供对该句柄的操作。 当你使用`CAsyncSocket`，必须处理可能会遇到如果直接使用 API 的所有问题。 例如：
+创建类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)的对象时，该对象封装 Windows **SOCKET**句柄，并为此句柄提供操作。 使用`CAsyncSocket`时，必须处理直接使用 API 时可能面临的所有问题。 例如：
 
 - "阻止"方案。
 
-- 在发送和接收计算机之间的字节顺序差异。
+- 发送和接收计算机之间的字节订单差异。
 
-- Unicode 和多字节字符之间进行转换设置 (MBCS) 字符串。
+- 在 Unicode 和多字节字符集 （MBCS） 字符串之间进行转换。
 
-术语的定义这些以及其他信息，请参阅[Windows 套接字：阻塞](../mfc/windows-sockets-blocking.md)， [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)， [Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)。
+有关这些条款的定义和其他信息，请参阅[Windows 套接字：阻止](../mfc/windows-sockets-blocking.md)[、Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)[、Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)。
 
-尽管这些问题，类`CAsycnSocket`可能是正确的选择，如果应用程序需要的所有灵活性和控制可以获取。 如果不是，你应考虑使用类`CSocket`相反。 `CSocket` 隐藏从你的详细信息： 泵 Windows 期间阻止调用消息，并为您提供了访问权限的 it `CArchive`，用于管理的字节顺序差异并为您的字符串转换。
+尽管存在这些问题，如果应用程序`CAsycnSocket`需要您可以获得的所有灵活性和控制，类可能是您的最佳选择。 如果没有，则应考虑改用类`CSocket`。 `CSocket`隐藏了很多细节：它在阻止调用期间泵送 Windows 消息，并允许您访问`CArchive`，该消息为您管理字节顺序差异和字符串转换。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [Windows 套接字：背景](../mfc/windows-sockets-background.md)
 
@@ -109,6 +107,6 @@ ms.locfileid: "62399559"
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)

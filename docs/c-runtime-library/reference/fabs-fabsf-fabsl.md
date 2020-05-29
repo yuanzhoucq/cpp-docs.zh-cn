@@ -1,10 +1,11 @@
 ---
 title: fabs、fabsf、fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941486"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920243"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -81,7 +83,9 @@ long double fabsl(
 
 ## <a name="remarks"></a>备注
 
-C++允许重载，因此，如果包含\<h > 标头，则可以调用**fabs**的重载。 在 C 程序中， **fabs**始终采用并返回**双精度型**。
+C + + 允许重载，因此，如果包含**fabs** \<h> 标头，则可以调用 fabs 的重载。 在 C 程序中， **fabs**始终采用并返回**双精度型**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -89,13 +93,13 @@ C++允许重载，因此，如果包含\<h > 标头，则可以调用**fabs**的
 |--------------|-----------------------|---------------------------|
 |**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [abs](abs-labs-llabs-abs64.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>

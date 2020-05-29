@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-ms.openlocfilehash: 3d4a073a0fd74f7564d9183779acfd66b41a9540
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0aa5831e2262602ee46bd69031e5927a86b978e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372967"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364093"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 类
 
@@ -37,43 +37,43 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|构造一个抛物线加速转换并初始化使用指定的参数。|
+|[从加速中转换的环数：：从加速转换的环代谢](#cparabolictransitionfromacceleration)|构造抛物面加速过渡，并用指定的参数初始化它。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::Create](#create)|调用要创建封装的转换 COM 对象的转换库。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[从加速转换：创建](#create)|调用过渡库以创建封装的过渡 COM 对象。 （覆盖[CBase 转换：创建](../../mfc/reference/cbasetransition-class.md#create).）|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|在转换期间的动画变量的加速度。|
-|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|
-|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|转换结束时的动画变量的速度。|
+|[从加速转换：：m_dblAcceleration](#m_dblacceleration)|转换期间动画变量的加速度。|
+|[从加速转换：：m_dblFinalValue](#m_dblfinalvalue)|过渡结束时动画变量的值。|
+|[从加速转换：：m_dblFinalVelocity](#m_dblfinalvelocity)|转换结束时动画变量的速度。|
 
 ## <a name="remarks"></a>备注
 
-期间一个抛物线加速转换，动画变量的值从初始的值更改为结束时间指定速度的最终值。 您可以控制变量通过指定的加速的速率达到的最终值的速度。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。
+在抛物面加速过渡期间，动画变量的值从初始值更改为以指定速度结束的最终值。 您可以通过指定加速度来控制变量到达最终值的速度。 由于所有转换都将自动清除，因此建议使用运算符 new 分配。 封装的 IUI动画转换 COM 对象由 C动画控制器：：AnimateGroup 创建，直到此为止，它才为 NULL。 创建此 COM 对象后更改成员变量不起作用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBase 转换](../../mfc/reference/cbasetransition-class.md)
 
-[CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
+[从加速过渡](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
 
 ## <a name="requirements"></a>要求
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration
+## <a name="cparabolictransitionfromaccelerationcparabolictransitionfromacceleration"></a><a name="cparabolictransitionfromacceleration"></a>从加速中转换的环数：：从加速转换的环代谢
 
-构造一个抛物线加速转换并初始化使用指定的参数。
+构造抛物面加速过渡，并用指定的参数初始化它。
 
 ```
 CParabolicTransitionFromAcceleration(
@@ -84,18 +84,18 @@ CParabolicTransitionFromAcceleration(
 
 ### <a name="parameters"></a>参数
 
-*dblFinalValue*<br/>
-转换结束时的动画变量的值。
+*dbl 最终值*<br/>
+过渡结束时动画变量的值。
 
-*dblFinalVelocity*<br/>
-转换结束时的动画变量的速度。
+*dblFinal速度*<br/>
+转换结束时动画变量的速度。
 
-*dblAcceleration*<br/>
-在转换期间的动画变量的加速度。
+*dbl加速*<br/>
+转换期间动画变量的加速度。
 
-##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create
+## <a name="cparabolictransitionfromaccelerationcreate"></a><a name="create"></a>从加速转换：创建
 
-调用要创建封装的转换 COM 对象的转换库。
+调用过渡库以创建封装的过渡 COM 对象。
 
 ```
 virtual BOOL Create(
@@ -105,37 +105,37 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*pLibrary*<br/>
-指向转换库，负责创建标准转换的指针。
+*p库*<br/>
+指向过渡库的指针，它负责创建标准转换。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建转换，则返回 TRUE否则为 FALSE。
+如果成功创建转换，则为 TRUE;如果成功创建转换，则为 TRUE。否则 FALSE。
 
-##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration
+## <a name="cparabolictransitionfromaccelerationm_dblacceleration"></a><a name="m_dblacceleration"></a>从加速转换：：m_dblAcceleration
 
-在转换期间的动画变量的加速度。
+转换期间动画变量的加速度。
 
 ```
 DOUBLE m_dblAcceleration;
 ```
 
-##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>从加速转换：：m_dblFinalValue
 
-转换结束时的动画变量的值。
+过渡结束时动画变量的值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>从加速转换：：m_dblFinalVelocity
 
-转换结束时的动画变量的速度。
+转换结束时动画变量的速度。
 
 ```
 DOUBLE m_dblFinalVelocity;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

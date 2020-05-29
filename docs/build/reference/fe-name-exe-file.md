@@ -10,49 +10,50 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0bd8f3a96555cc29d06f74fb44a73bbed32889b
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292610"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825573"
 ---
 # <a name="fe-name-exe-file"></a>/Fe（命名 EXE 文件）
 
-指定的名称和.exe 文件或由编译器创建的 DLL 的目录。
+指定由编译器创建的 .exe 文件或 DLL 的名称和目录。
 
 ## <a name="syntax"></a>语法
 
-> **/Fe**[_pathname_] **/Fe:** _路径名_
+> **/Fe**[_pathname_] \
+> **/Fe：** _pathname_
 
-### <a name="arguments"></a>自变量
+### <a name="arguments"></a>参数
 
-*pathname*<br/>
-相对或绝对路径和基文件名或相对或绝对路径的目录中或要用于生成可执行文件的基本文件名称。
+*路径名*<br/>
+相对或绝对路径和基文件名称，或目录的相对或绝对路径，或者要用于生成的可执行文件的基文件名。
 
 ## <a name="remarks"></a>备注
 
-**/Fe**选项可以指定输出目录、 输出可执行文件名称，或两者，为生成的可执行文件。 如果*pathname*以路径分隔符结束 (**&#92;**)，则假定它指定仅输出目录。 否则为最后一个组成部分*pathname*用作输出文件基名称和其余*路径名*指定的输出目录。 如果*pathname*不具有任何路径分隔符，则假定当前目录中指定输出文件的名称。 *Pathname*必须括在双引号 (**"**) 如果它包含任何字符，不能在短路径，如空格字符或扩展路径组件超过八个字符长时间。
+通过 **/Fe**选项，可以指定生成的可执行文件的输出目录、输出可执行文件名称或同时指定两者。 如果*路径名*以路径分隔符（**&#92;**）结尾，则假定它仅指定输出目录。 否则， *pathname*的最后一个部分将用作输出文件基名称，其余的*pathname*指定输出目录。 如果*路径名*没有任何路径分隔符，则假定指定当前目录中的输出文件名。 如果路径包含的字符不能在短路径中（如空格、扩展字符或路径部分的长度超过8个字符），则必须将*路径名*括在双引号（**"**）中。
 
-当 **/Fe**未指定选项，或基本的文件时在未指定名称*路径名*，编译器为输出文件赋予其默认名称，使用指定的第一个源或对象文件的基名称在命令行和扩展名为.exe 或.dll。
+如果未指定 **/Fe**选项，或未在*pathname*中指定文件基名称，编译器将使用命令行上指定的第一个源或对象文件的基名称和扩展名 .exe 或 .dll 为输出文件指定默认名称。
 
-如果指定[/c （编译而无需链接）](c-compile-without-linking.md)选项， **/Fe**不起作用。
+如果指定[/c （Compile 但不链接）](c-compile-without-linking.md)选项，则 **/Fe**不起作用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 打开**配置属性** > **链接器** > **常规**属性页。
 
-1. 修改**输出文件**属性。 选择“确定”以保存更改。
+1. 修改 "**输出文件**" 属性。 选择“确定”以保存更改****。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>。
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A> 。
 
 ## <a name="example"></a>示例
 
-下面的命令行编译并链接当前目录中的所有 C 源代码文件。 生成可执行文件名为 PROCESS.exe 和目录"C:\Users\User Name\repos\My Project\bin"中创建。
+以下命令行编译和链接当前目录中的所有 C 源文件。 生成的可执行文件命名为 store.exe，并在目录 "C:\users\ 用户名 Name\repos\My Project\bin" 中创建。
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
@@ -60,13 +61,13 @@ CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 
 ## <a name="example"></a>示例
 
-下面的命令行创建可执行文件在`C:\BIN`具有相同基名称为当前目录中的第一个源文件：
+以下命令行在中`C:\BIN`创建一个可执行文件，该文件与当前目录中的第一个源文件具有相同的基名称：
 
 ```
 CL /FeC:\BIN\ *.C
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [输出文件 (/F) 选项](output-file-f-options.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>

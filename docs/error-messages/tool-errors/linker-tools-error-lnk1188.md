@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1188
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
-ms.openlocfilehash: 69ac20522aebb7391319c0de210e06b305f3fd0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b18a93c7434ee3d66f42829f373bd916a65369bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226473"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195170"
 ---
 # <a name="linker-tools-error-lnk1188"></a>链接器工具错误 LNK1188
 
-BADFIXUPSECTION:: 无效的链接地址信息目标 symbol;可能为零长度部分
+BADFIXUPSECTION：：修正目标 "symbol" 无效;可能的零长度部分
 
-在 VxD 链接期间的重定位的目标没有一个部分。 使用 LINK386 （较旧版本），（由 MASM 组指令生成） 的 OMF 组记录可能已使用组合与另一个非零长度部分零长度的节。 COFF 格式不支持 GROUP 指令和长度为零的部分。 当链接会自动将此类型的 OMF 对象转换到 COFF 时，可能会发生此错误。
+在 VxD 链接期间，重定位的目标没有部分。 使用 LINK386 （较旧版本）时，可能已使用 OMF 组记录（由 MASM 组指令生成）将零长度部分与另一个非零长度部分组合在一起。 COFF 格式不支持组指令和长度为零的部分。 当 LINK 自动将此类型的 OMF 对象转换为 COFF 时，可能会发生此错误。

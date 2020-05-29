@@ -7,23 +7,23 @@ helpviewer_keywords:
 - views [C++], MFC
 - documents [C++], MFC
 ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
-ms.openlocfilehash: 030ac53b924e4746bcd79e712313ce2f30b4198c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 452fb010705e808aabd2ad42d1a0b6ba1c5921ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329746"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212363"
 ---
 # <a name="working-with-documents-and-views"></a>使用文档和视图
 
-Microsoft 基础类 (MFC) 库依赖于它的许多功能的文档/视图体系结构。 通常情况下，存储数据的文档和视图的框架窗口的工作区内显示和管理用户与数据交互。 该视图与要获取和更新数据的文档进行通信。 使用框架或没有它，可以使用数据库类。
+Microsoft 基础类（MFC）库依赖于其中许多功能的文档/视图体系结构。 通常，文档存储数据，视图在框架窗口的工作区中显示，并管理用户与数据的交互。 视图与文档通信以获取和更新数据。 可以将数据库类与框架一起使用，也可以不使用。
 
-有关在框架中使用数据库类的详细信息，请参阅[MFC:结合文档和视图使用数据库类](../../data/mfc-using-database-classes-with-documents-and-views.md)。
+有关在框架中使用数据库类的详细信息，请参阅[MFC：将数据库类与文档和视图结合使用](../../data/mfc-using-database-classes-with-documents-and-views.md)。
 
-默认情况下，MFC 应用程序向导创建主干应用程序不支持数据库。 但是，你可以选择选项以包括最少的数据库支持或更完整的基于窗体的支持。 有关应用程序向导选项的详细信息，请参阅[数据库支持，MFC 应用程序向导](../../mfc/reference/database-support-mfc-application-wizard.md)。
+默认情况下，MFC 应用程序向导创建没有数据库支持的框架应用程序。 不过，您可以选择选项以包括最小数据库支持或更完整的基于窗体的支持。 有关应用程序向导选项的详细信息，请参阅[MFC 应用程序向导的数据库支持](../../mfc/reference/database-support-mfc-application-wizard.md)。
 
-此外可以在不使用完整的文档/视图体系结构的情况下使用数据库类。 有关详细信息，请参阅[MFC:使用不含文档和视图的类](../../data/mfc-using-database-classes-without-documents-and-views.md)。
+你还可以使用数据库类，而无需使用完整的文档/视图体系结构。 有关详细信息，请参阅[MFC：不使用文档和视图的数据库类](../../data/mfc-using-database-classes-without-documents-and-views.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

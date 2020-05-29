@@ -3,12 +3,12 @@ title: MFC 概念
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178517"
 ---
 # <a name="mfc-concepts"></a>MFC 概念
 
@@ -20,7 +20,7 @@ ms.locfileid: "70927909"
 讨论 MFC 库的技术详细信息。
 
 [使用 CObject](../mfc/using-cobject.md)<br/>
-提供指向的链接`CObject`，该链接指向 MFC 中大多数类的基类。
+提供一些链接，这些链接指向使用 `CObject`（MFC 中大多数类的基类）。
 
 [集合](../mfc/collections.md)<br/>
 讨论从模板创建的集合类，而C++不是从模板创建的。
@@ -29,7 +29,7 @@ ms.locfileid: "70927909"
 提供指向主题的链接，这些主题介绍如何将日期和时间与 MFC 结合使用。
 
 [文件](../mfc/files-in-mfc.md)<br/>
-讨论`CFile`和如何处理 MFC 中的文件。
+讨论 `CFile` 以及如何处理 MFC 中的文件。
 
 [内存管理（MFC）](../mfc/memory-management.md)<br/>
 介绍如何利用与内存管理相关的通用服务。
@@ -66,5 +66,5 @@ ms.locfileid: "70927909"
 [MFC 参考](../mfc/mfc-desktop-applications.md)<br/>
 提供 MFC 库参考材料，一组构成应用程序框架的类，它是为 Windows API 编写的应用程序框架。
 
-[MFC 示例](../overview/visual-cpp-samples.md)<br/>
+[MFC 示例](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 提供指向示例的链接，这些示例演示如何在桌面应用程序、Dll、数据库应用程序、控件、Web 应用程序等中使用 MFC。

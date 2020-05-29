@@ -5,15 +5,15 @@ f1_keywords:
 - forward_list/std::swap
 ms.assetid: 0d6bc656-7049-4651-a4bd-c9a805e47756
 ms.openlocfilehash: 78b1eaa44ed464de67d8ec45fab3241179bb94b9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240668"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424799"
 ---
-# <a name="ltforwardlistgt-functions"></a>&lt;forward_list&gt; 函数
+# <a name="ltforward_listgt-functions"></a>&lt;forward_list&gt; 函数
 
-## <a name="swap"></a> 交换
+## <a name="swap"></a>购
 
 交换两个转发列表的元素。
 
@@ -21,12 +21,12 @@ ms.locfileid: "68240668"
 void swap(forward_list <Type, Allocator>& left, forward_list <Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `forward_list` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `forward_list` 类型的对象。
 
 ### <a name="remarks"></a>备注

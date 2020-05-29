@@ -9,12 +9,12 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169326"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>在内联汇编程序内跳转到标签
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-因为**退出**名称的 C 库函数，该代码可能跳转到**退出**函数而不是到所需位置。
+由于**exit**是 C 库函数的名称，此代码可能会导致跳转到**exit**函数而不是所需的位置。
 
 与在 MASM 程序中一样，美元符号 (`$`) 用作当前位置计数器。 它是当前组合的指令的标签。 在 `__asm` 块中，其主要用途是做长条件跳转：
 
@@ -81,6 +81,6 @@ farlabel:
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内联汇编程序](../../assembler/inline/inline-assembler.md)<br/>

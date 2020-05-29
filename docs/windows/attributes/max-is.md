@@ -1,17 +1,17 @@
 ---
-title: max_is (C++ COM 特性)
+title: max_is （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514431"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166752"
 ---
 # <a name="max_is"></a>max_is
 
@@ -23,9 +23,9 @@ ms.locfileid: "69514431"
 [ max_is("expression") ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-expression<br/>
+*expression*<br/>
 一个或多个 C 语言表达式。 允许空参数槽。
 
 ## <a name="remarks"></a>备注
@@ -38,8 +38,8 @@ expression<br/>
 
 |||
 |-|-|
-|**适用于**|**结构**或**联合**中的字段, 接口参数, 接口方法|
-|**可重复**|No|
+|**适用对象**|**结构**或**联合**中的字段，接口参数，接口方法|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|**size_is**|
 
@@ -47,9 +47,9 @@ expression<br/>
 
 ## <a name="example"></a>示例
 
-有关如何指定数组的部分的示例, 请参阅[first_is](first-is.md) 。
+有关如何指定数组的部分的示例，请参阅[first_is](first-is.md) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

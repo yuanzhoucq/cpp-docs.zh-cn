@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C2558
 ms.assetid: 822b701e-dcae-423a-b21f-47f36aff9c90
-ms.openlocfilehash: b0dca0b19d427cf83238c824739d288a1cfd54d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93b6e414f26c56702a1c7ac12863cbcd5063b570
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352997"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177490"
 ---
 # <a name="compiler-error-c2558"></a>编译器错误 C2558
 
 “identifier”: 没有可用的复制构造函数或复制构造函数声明为“explicit”
 
-复制构造函数从同一类型的另一个对象初始化某对象。 （它生成源对象的副本。）如果没有定义任何构造函数，则编译器生成默认复制构造函数。
+复制构造函数从同一类型的另一个对象初始化某对象。 （它创建对象的副本。）如果未定义任何构造函数，编译器将生成一个默认的复制构造函数。
 
-### <a name="to-fix-this-error"></a>修复此错误的方法
+### <a name="to-fix-this-error"></a>修复此错误
 
 1. 在尝试复制其复制构造函数为 `private` 的类时，可能出现该问题。 在大多数情况下，不应复制具有 `private` 复制构造函数的类。 通用编程技术声明 `private` 复制构造函数以防止直接使用类。 该类本身可能无用，或需要另一个类才能正常工作。
 
    如果确定可安全地使用具有 `private` 复制构造函数的类，请从该具有 `private` 构造函数的类派生一个新类，并使 `public` 或 `protected` 复制构造函数在该新类中可用。 使用该派生类替代原始类。
 
-1. 在尝试复制其复制构造函数为显式的类时，可能出现该问题。 将复制构造函数声明为 `explicit` 会阻止将类的对象传递到对象或从函数到类的对象。 有关显式构造函数的详细信息，请参阅[用户定义类型的转换](../../cpp/user-defined-type-conversions-cpp.md)。
+1. 在尝试复制其复制构造函数为 explicit 的类时，可能出现该问题。 将复制构造函数声明为 `explicit` 会阻止将类的对象传递到对象或从函数到类的对象。 有关显式构造函数的详细信息，请参阅[用户定义的类型转换](../../cpp/user-defined-type-conversions-cpp.md)。
 
 1. 当尝试复制使用不采用 `const` 引用参数声明 `const` 的类实例时，可能出现该问题。 请使用 `const` 类型引用而不是非常量类型引用声明复制构造函数。

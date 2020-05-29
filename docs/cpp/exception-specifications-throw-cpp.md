@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 6f8f9466b867603738919c6210055d02d3c579ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180038"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>异常规范（throw、noexcept）（C++）
 
@@ -24,11 +24,13 @@ ms.locfileid: "74245882"
 ```cpp
 void MyFunction(int i) throw();
 ```
+
 告诉编译器函数不引发任何异常。 但是，在 **/std： c + + 14**模式下，如果函数引发异常，这可能会导致未定义的行为。 因此，建议使用[noexcept](../cpp/noexcept-cpp.md)运算符而不是上述运算符：
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
+
 下表总结了 Microsoft C++的异常规范实现：
 
 |异常规范|含义|
@@ -55,7 +57,7 @@ void MyFunction(int i) noexcept;
 |函数|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
 |没有异常规范的 C++ 函数|是|是|是|是|
-|C++带有 `noexcept`、`noexcept(true)`或 `throw()` 异常规范的函数|是|是|是|是|
+|C++带有 `noexcept`、`noexcept(true)`或 `throw()` 异常规范的函数|否|否|是|是|
 |C++带有 `noexcept(false)`、`throw(...)`或 `throw(type)` 异常规范的函数|是|是|是|是|
 
 ## <a name="example"></a>示例

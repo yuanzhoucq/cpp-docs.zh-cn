@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3893e4ce4fcd24f48d9e981ad24505f82dc98833
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260982"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168639"
 ---
-# <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 结构
+# <a name="_atl_base_module70-structure"></a>_ATL_BASE_MODULE70 结构
 
-使用的任何项目都使用 ATL
+由任何使用 ATL 的项目使用。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInst;
@@ -41,25 +41,25 @@ struct _ATL_BASE_MODULE70 {
 用于版本控制的结构的大小。
 
 `m_hInst`<br/>
-`hInstance`此模块 （exe 或 dll）。
+此`hInstance`模块（exe 或 dll）的。
 
 `m_hInstResource`<br/>
-默认实例的资源句柄。
+默认实例资源句柄。
 
 `m_bNT5orWin98`<br/>
-操作系统版本信息。 在内部由 atl。
+操作系统版本信息。 由 ATL 在内部使用。
 
 `dwAtlBuildVer`<br/>
-将存储版本的 atl。 当前 0x0700。
+存储 ATL 的版本。 当前0x0700。
 
 `pguidVer`<br/>
 ATL 的内部 GUID。
 
 `m_csResource`<br/>
-用于同步对`m_rgResourceInstance`数组。 在内部由 atl。
+用于同步对数组的`m_rgResourceInstance`访问。 由 ATL 在内部使用。
 
 `m_rgResourceInstance`<br/>
-用于搜索的 ATL 的识别的所有资源实例中的资源数组。 在内部由 atl。
+用于在 ATL 可识别的所有资源实例中搜索资源的数组。 由 ATL 在内部使用。
 
 ## <a name="remarks"></a>备注
 
@@ -67,8 +67,8 @@ ATL 的内部 GUID。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcore.h
+**标头：** atlcore
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../../atl/reference/atl-classes.md)

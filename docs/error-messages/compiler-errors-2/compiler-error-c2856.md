@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2856
 ms.assetid: fe616c51-124e-49e3-9dd8-883ec1660680
-ms.openlocfilehash: 1e515f250c8ab9d1008ded91b99176f1d86d7cd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c88610607083ecfaf5f20cd585b479991fa51b44
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406842"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201866"
 ---
 # <a name="compiler-error-c2856"></a>编译器错误 C2856
 
-\#杂注 hdrstop #if 块内不能为
+\#pragma hdrstop 不能在 #if 块内
 
-`hdrstop`杂注不能放置在条件编译块的主体内。
+不能将 `hdrstop` 杂注放置在条件编译块的正文内。
 
-移动`#pragma hdrstop`语句未包含在一个区域`#if/#endif`块。
+将 `#pragma hdrstop` 语句移动到 `#if/#endif` 块中未包含的区域。

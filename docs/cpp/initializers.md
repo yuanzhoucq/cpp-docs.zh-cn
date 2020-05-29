@@ -7,11 +7,11 @@ helpviewer_keywords:
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123963"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423740"
 ---
 # <a name="initializers"></a>初始值设定项
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-你应该会看到以下输出：
+应该会看到以下输出：
 
 ```Output
 agg1: c: 1

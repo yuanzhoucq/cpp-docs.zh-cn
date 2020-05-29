@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0034
 - CXX0034
 ms.assetid: afcee5f1-beff-489f-aea6-04f55e76364f
-ms.openlocfilehash: 34cb7de7382f43d41ab8f92343b4ae57eee2ed67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d764ce8b243c7004f95650f93e7a44a36962cef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195482"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>表达式计算器错误 CXX0034
 
-**类型与运算符不兼容**
+**与运算符不兼容的类型**
 
-指定的操作数类型不是合法的操作的。
+指定的操作数类型对运算是非法的。
 
-例如，指针不能乘以的任何值。
+例如，指针不能与任何值相乘。
 
-可能需要键入强制转换运算符与兼容的类型的操作数。
+可能需要键入将操作数转换为与运算符兼容的类型。

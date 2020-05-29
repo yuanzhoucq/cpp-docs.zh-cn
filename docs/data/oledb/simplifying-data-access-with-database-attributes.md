@@ -1,13 +1,6 @@
 ---
 title: 使用数据库特性简化数据访问
 ms.date: 10/19/2018
-f1_keywords:
-- vc-attr.db_param
-- vc-attr.db_column
-- vc-attr.db_accessor
-- vc-attr.db_command
-- vc-attr.db_table
-- vc-attr.db_source
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -18,54 +11,55 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: 83519ffff7dd1f1b5f8a635f094932a1f9728193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d22f8a25bc7bb58f72346a15edb51f062c44e1b4
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404463"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79546175"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>使用数据库特性简化数据访问
 
-本主题演示如何使用数据库特性简化数据库操作。
+本主题演示如何使用数据库属性简化数据库操作。
 
-若要从数据库访问信息的基本方法是在数据库中创建的命令 （或表） 类和特定表的用户记录类。 数据库特性简化了一些您之前所要做的模板声明。
+从数据库访问信息的基本方法是为数据库中的特定表创建命令（或表）类和用户记录类。 数据库属性简化了之前必须执行的一些模板声明。
 
-若要演示如何使用数据库属性，以下部分介绍两个等效表和用户记录类声明： 第一个示例使用属性和另一个使用 OLE DB 模板。 此类声明代码通常放置在头文件中名为表或命令对象，例如，Authors.h。
+为了演示数据库属性的使用，以下各节显示了两个等效的表和用户记录类声明：第一个使用特性，第二个使用 OLE DB 模板。 此类声明代码通常放置在一个名为的表或命令对象（例如，作者 .h）中。
 
-通过比较两个文件，可以看到属性结合使用是多么简单。 差异包括：
+通过比较这两个文件，可以看出使用特性的方法要简单得多。 不同之处在于：
 
-- 使用特性，只需声明一个类： `CAuthors`，而您必须声明两个模板：`CAuthorsNoAttrAccessor`和`CAuthorsNoAttr`。
+- 使用特性，你只需声明一个类： `CAuthors`，使用模板时，必须声明两个： `CAuthorsNoAttrAccessor` 和 `CAuthorsNoAttr`。
 
-- `db_source`特性化的版本中的调用等同于`OpenDataSource()`调用模板声明中。
+- 特性化版本中的 `db_source` 调用等效于模板声明中的 `OpenDataSource()` 调用。
 
-- `db_table`特性化的版本中的调用是等效于下面的模板声明：
+- 特性化版本中的 `db_table` 调用等效于以下模板声明：
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- `db_column`特性化的版本中的调用是列映射到等效的 (请参阅`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 模板声明中。
+- 特性化版本中的 `db_column` 调用等效于模板声明中的列映射（参见 `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`）。
 
-属性将为您插入的用户记录类声明。 用户记录类等于`CAuthorsNoAttrAccessor`模板声明中。 如果表类是`CAuthors`，名为插入的用户记录类`CAuthorsAccessor`，和你仅可以查看其声明中插入的代码。 详细信息，请参阅"特性插入的用户记录类"中[用户记录](../../data/oledb/user-records.md)。
+属性为您注入用户记录类声明。 用户记录类等于模板声明中的 `CAuthorsNoAttrAccessor`。 如果表类是 `CAuthors`的，则插入的用户记录类的名称为 `CAuthorsAccessor`，并且只能在注入的代码中查看其声明。 有关详细信息，请参阅[用户记录](../../data/oledb/user-records.md)中的 "属性插入的用户记录类"。
 
-在特性化和模板化代码，必须设置行集属性使用`CDBPropSet::AddProperty`。
+在特性化和模板化的代码中，必须使用 `CDBPropSet::AddProperty`设置行集属性。
 
-本主题中讨论的特性相关的信息，请参阅[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)。
+有关本主题中讨论的属性的信息，请参阅[OLE DB 使用者属性](../../windows/ole-db-consumer-attributes.md)。
 
 > [!NOTE]
-> 以下`include`语句所需编译下面的示例：
+> 下面的 `include` 语句需要编译下面的示例：
+
 > ```cpp
 > #include <atlbase.h>
 > #include <atlplus.h>
 > #include <atldbcli.h>
 > ```
 
-## <a name="table-and-accessor-declaration-using-attributes"></a>表和使用属性访问器声明
+## <a name="table-and-accessor-declaration-using-attributes"></a>使用特性的表和访问器声明
 
-下面的代码调用`db_source`和`db_table`表类上。 `db_source` 指定数据源和要使用的连接。 `db_table` 将插入相应的模板代码以声明的表类。 `db_column` 指定列映射，并将访问器声明。 可以在支持 atl。 任何项目中使用 OLE DB 使用者特性
+下面的代码对 table 类调用 `db_source` 和 `db_table`。 `db_source` 指定要使用的数据源和连接。 `db_table` 插入适当的模板代码以声明表类。 `db_column` 指定列映射并注入访问器声明。 可以在任何支持 ATL 的项目中使用 OLE DB 使用者属性。
 
-下面是使用属性的表和取值函数声明：
+下面是使用属性的表和访问器声明：
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -100,7 +94,7 @@ public:
 };
 ```
 
-## <a name="table-and-accessor-declaration-using-templates"></a>使用表和访问器声明模板
+## <a name="table-and-accessor-declaration-using-templates"></a>使用模板的表和访问器声明
 
 下面是使用模板的表和访问器声明。
 
@@ -206,6 +200,6 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)

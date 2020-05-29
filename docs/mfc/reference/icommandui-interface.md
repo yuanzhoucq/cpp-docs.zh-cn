@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: b75509beb7287fad5e51dc9d15fc3e47cacf6854
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907888"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751307"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 接口
 
@@ -35,100 +35,108 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[icommandui__Check](#check)|将此命令的用户界面项设置为相应的复选状态。|
-|[ICommandUI::ContinueRouting](#continuerouting)|告诉命令路由机制继续向下传递处理程序链中的当前消息。|
-|[ICommandUI::Enabled](#enabled)|启用或禁用此命令的用户界面项。|
-|[ICommandUI::ID](#id)|获取由`ICommandUI`对象表示的用户界面对象的 ID。|
-|[ICommandUI::Index](#index)|获取由`ICommandUI`对象表示的用户界面对象的索引。|
-|[ICommandUI::Radio](#radio)|将此命令的用户界面项设置为相应的复选状态。|
-|[ICommandUI::Text](#text)|为此命令设置用户界面项的文本。|
+|[icommandui__Check](#check)|将此命令的用户界面项设置为相应的检查状态。|
+|[ICommandUI：：继续路由](#continuerouting)|告诉命令路由机制继续将当前消息路由到处理程序链中。|
+|[ICommandUI：已启用](#enabled)|启用或禁用此命令的用户界面项。|
+|[ICommandUI：ID](#id)|获取由对象表示的`ICommandUI`用户界面对象的 ID。|
+|[ICommandUI：索引](#index)|获取由对象表示的`ICommandUI`用户界面对象的索引。|
+|[ICommandUI：：收音机](#radio)|将此命令的用户界面项设置为相应的检查状态。|
+|[ICommandUI：文本](#text)|设置此命令的用户界面项的文本。|
 
 ## <a name="remarks"></a>备注
 
-此接口提供管理用户界面命令的方法和属性。 `ICommandUI`类似于[CCmdUI 类](../../mfc/reference/ccmdui-class.md)，但用于与`ICommandUI` .net 组件进行互操作的 MFC 应用程序除外。
+此接口提供管理用户界面命令的方法和属性。 `ICommandUI`与[CmCmdUI 类](../../mfc/reference/ccmdui-class.md)类似，只`ICommandUI`不过用于与 .NET 组件互操作的 MFC 应用程序。
 
-`ICommandUI`在[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)派生类中的 ON_UPDATE_COMMAND_UI 处理程序中使用。 当应用程序的用户激活（选择或单击）菜单时，每个菜单项都将显示为 "已启用" 或 "已禁用"。 每个菜单命令的目标通过实现 ON_UPDATE_COMMAND_UI 处理程序来提供此信息。 对于应用程序中的每个命令用户界面对象，使用[类向导](mfc-class-wizard.md)创建每个处理程序的消息映射项和函数原型。
+`ICommandUI`在[iCommandTarget](../../mfc/reference/icommandtarget-interface.md)派生类中ON_UPDATE_COMMAND_UI处理程序中使用。 当应用程序的用户激活（选择或单击）菜单时，每个菜单项将显示为已启用或禁用。 每个菜单命令的目标通过实现ON_UPDATE_COMMAND_UI处理程序来提供此信息。 对于应用程序中的每个命令用户界面对象，使用[类向导](mfc-class-wizard.md)为每个处理程序创建消息映射条目和函数原型。
 
-有关如何`ICommandUI`在命令路由中使用接口的详细信息，请参阅[如何：向 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)添加命令路由。
+有关接口在命令路由中的`ICommandUI`使用方式的详细信息，请参阅[如何：将命令路由添加到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 有关如何在 MFC 中管理用户界面命令的详细信息，请参阅[CCmdUI 类](../../mfc/reference/ccmdui-class.md)。
 
-## <a name="check"></a>ICommandUI：： Check
+## <a name="icommanduicheck"></a><a name="check"></a>ICommandUI：检查
 
-将此命令的用户界面项设置为相应的复选状态。
+将此命令的用户界面项设置为相应的检查状态。
+
 ```
 property UICheckState Check;
 ```
 
 ## <a name="remarks"></a>备注
 
-此属性将此命令的用户界面项设置为相应的复选状态。 将 "检查" 设置为以下值：
-- 0取消选中
-- 1个检查
-- 2集不确定
+此属性将此命令的用户界面项设置为相应的检查状态。 将"检查"设置为以下值：
 
-## <a name="continuerouting"></a>ICommandUI::ContinueRouting
+- 0 取消选中
+- 1 检查
+- 2 设置不确定
 
-告诉命令路由机制继续向下传递处理程序链中的当前消息。
-```
+## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI：：继续路由
+
+告诉命令路由机制继续将当前消息路由到处理程序链中。
+
+```cpp
 void ContinueRouting();
 ```
 
 ## <a name="remarks"></a>备注
 
-这是一个高级成员函数，应与返回 FALSE 的 ON_COMMAND_EX 处理程序结合使用。 有关详细信息，请参阅技术说明 TN006：消息映射。
+这是一个高级成员函数，应与返回 FALSE 的ON_COMMAND_EX处理程序结合使用。 有关详细信息，请参阅技术说明 TN006：消息映射。
 
-## <a name="enabled"></a>ICommandUI：： Enabled
+## <a name="icommanduienabled"></a><a name="enabled"></a>ICommandUI：已启用
 
 启用或禁用此命令的用户界面项。
+
 ```
 property bool Enabled;
 ```
 
 ## <a name="remarks"></a>备注
 
-此属性将启用或禁用此命令的用户界面项。 设置为 TRUE 可启用项，设置为 FALSE 可禁用项。
+此属性启用或禁用此命令的用户界面项。 设置为 TRUE 以启用项目，FALSE 将其禁用。
 
-## <a name="id"></a>ICommandUI：： ID
+## <a name="icommanduiid"></a><a name="id"></a>ICommandUI：ID
 
-获取由 ICommandUI 对象表示的用户界面对象的 ID。
+获取 ICommandUI 对象表示的用户界面对象的 ID。
+
 ```
 property unsigned int ID;
 ```
 
 ## <a name="remarks"></a>备注
 
-此属性获取菜单项、工具栏按钮或 ICommandUI 对象所表示的其他用户界面对象的 ID （一个句柄）。
+此属性获取菜单项、工具栏按钮或 ICommandUI 对象表示的其他用户界面对象的 ID（句柄）。
 
-## <a name="index"></a>ICommandUI：： Index
+## <a name="icommanduiindex"></a><a name="index"></a>ICommandUI：索引
 
 获取由 ICommandUI 对象表示的用户界面对象的索引。
+
 ```
 property unsigned int Index;
 ```
 
 ## <a name="remarks"></a>备注
 
-此属性获取菜单项、工具栏按钮或 ICommandUI 对象所表示的其他用户界面对象的索引（一个句柄）。
+此属性获取菜单项、工具栏按钮或 ICommandUI 对象表示的其他用户界面对象的索引（句柄）。
 
-## <a name="radio"></a>ICommandUI：：收音机
+## <a name="icommanduiradio"></a><a name="radio"></a>ICommandUI：：收音机
 
-将此命令的用户界面项设置为相应的复选状态。
+将此命令的用户界面项设置为相应的检查状态。
+
 ```
 property bool Radio;
 ```
 
 ## <a name="remarks"></a>备注
 
-此属性将此命令的用户界面项设置为相应的复选状态。 将 "收音机" 设置为 "TRUE" 以启用该项;否则为 FALSE。
+此属性将此命令的用户界面项设置为相应的检查状态。 将"无线电"设置为 TRUE 以启用该项目;将"无线电"设置为 TRUE，以启用该项目。否则 FALSE。
 
-## <a name="text"></a>ICommandUI：： Text
+## <a name="icommanduitext"></a><a name="text"></a>ICommandUI：文本
 
-为此命令设置用户界面项的文本。
+设置此命令的用户界面项的文本。
+
 ```
 property String^ Text;
 ```
@@ -139,8 +147,8 @@ property String^ Text;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxwinforms （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）
+**标题**：afxwinforms.h（在程序集 atlmfc_lib_mfcmc80.dll 中定义）
 
 ## <a name="see-also"></a>请参阅
 
-[CCmdUI 类](../../mfc/reference/ccmdui-class.md)
+[CmDUI 类](../../mfc/reference/ccmdui-class.md)

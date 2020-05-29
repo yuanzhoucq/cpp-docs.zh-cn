@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2121
 ms.assetid: e04f32da-3736-4df3-8a1c-d687afcecf5c
-ms.openlocfilehash: cc16a6212b99142be24560f39888ec0b59a87712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eede1c1c22cd3edf37706589f1148a1d8b2f5be3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397687"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207462"
 ---
 # <a name="compiler-error-c2121"></a>编译器错误 C2121
 
-'#': 无效的字符： 可能是宏扩展的结果
+"#"：无效字符：可能是宏扩展的结果
 
-无效的 # 字符可能由使用标记粘贴运算符 （#），而不是字符串化运算符的不正确宏插入 (）。
+使用标记粘贴运算符（# #）而不是字符串化运算符（#）的不正确宏可能插入了无效的 # 字符。

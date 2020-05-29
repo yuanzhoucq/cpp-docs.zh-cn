@@ -12,39 +12,39 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 043ba019c6b5ad79db2cedb6314c9e65f14b14b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376936"
 ---
 # <a name="serializing-data-to-and-from-files"></a>针对文件进行数据序列化
 
-暂留的基本理念是一个对象应该能够编写其成员变量，到持久存储的值指示其当前状态。 更高版本，可以通过读取，或"反序列化，"对象的状态从持久性存储区重新创建该对象。 此处的关键一点是对象本身负责读取和写入其自己的状态。 因此，对于为持久的类，它必须实现的基本序列化操作。
+持久性的基本思想是，对象应该能够将其当前状态（由其成员变量的值指示）写入持久存储。 稍后，可以通过读取或"反序列化"从持久存储读取对象的状态来重新创建对象。 此处的关键点是对象本身负责读取和写入其自己的状态。 因此，要使类持久化，它必须实现基本的序列化操作。
 
-框架提供了用于将文档保存到磁盘文件保存到的响应中的默认实现和另存为命令和打开命令的响应中的磁盘文件中加载文档的文件菜单上。 随着工作很少，您可以实现写入和读取其数据传入和传出文件文档的功能。 必须执行的主要操作是重写[Serialize](../mfc/reference/cobject-class.md#serialize)成员函数在您的文档类。
+该框架提供了一个默认实现，用于将文档保存到磁盘文件，以响应"文件"菜单上的"保存和保存为"命令，以及从磁盘文件加载文档以响应 Open 命令。 只需很少工作，即可实现文档在文件中写入和读取其数据的能力。 您必须执行的主要操作是重写文档类中的[序列化](../mfc/reference/cobject-class.md#serialize)成员函数。
 
-MFC 应用程序向导会放置的主干重写`CDocument`成员函数`Serialize`中将为你创建的文档类。 在实现应用程序的成员变量后，您可以填充你`Serialize`重写，将数据发送到"存档对象"连接到一个文件的代码。 一个[CArchive](../mfc/reference/carchive-class.md)对象都类似于**cin**并**cout**输入/输出从对象C++iostream 库。 但是，`CArchive`写入和读取二进制格式，而非格式化文本。
+MFC 应用程序向导在其为您创建的文档类中放置`CDocument`成员函数`Serialize`的骨骼覆盖。 实现应用程序的成员变量后，可以使用将数据发送到连接到文件的"存档对象"的代码填充`Serialize`重写。 [CArchive](../mfc/reference/carchive-class.md)对象类似于C++ iostream 库中的**cin**和**cout**输入/输出对象。 但是，`CArchive`写入和读取二进制格式，而不是格式化文本。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
 
 - [序列化](../mfc/serialization-in-mfc.md)
 
-- [在序列化文档的角色](#_core_the_document.92.s_role_in_serialization)
+- [文档在序列化中的作用](#_core_the_document.92.s_role_in_serialization)
 
-- [在序列化的数据的角色](#_core_the_data.92.s_role_in_serialization)
+- [数据在序列化中的作用](#_core_the_data.92.s_role_in_serialization)
 
 - [跳过序列化机制](../mfc/bypassing-the-serialization-mechanism.md)
 
-##  <a name="_core_the_document.92.s_role_in_serialization"></a> 在序列化文档的角色
+## <a name="the-documents-role-in-serialization"></a><a name="_core_the_document.92.s_role_in_serialization"></a>文档在序列化中的作用
 
-框架自动响应为文件菜单打开，保存，并将另存为命令通过调用文档的`Serialize`成员函数，如果它实现的。 ID_FILE_OPEN 命令，例如，调用处理程序函数中的应用程序对象。 在此过程中，用户将看到并响应文件打开对话框，并在框架获取用户选择的文件名。 框架将创建`CArchive`对象设置了数据加载到文档并将传递到存档`Serialize`。 框架已打开该文件。 在文档中的代码`Serialize`成员函数将读取通过存档，根据需要重新构造数据对象中的数据。 有关序列化的详细信息，请参阅文章[序列化](../mfc/serialization-in-mfc.md)。
+框架自动响应文件菜单的"打开"、"保存"和"保存为"命令，如果文档`Serialize`的成员函数已实现，则调用该函数。 例如，ID_FILE_OPEN命令调用应用程序对象中的处理程序函数。 在此过程中，用户看到并响应"文件打开"对话框，框架获取用户选择的文件名。 框架创建一个`CArchive`对象，用于将数据加载到文档中并将存档传递到`Serialize`。 框架已打开该文件。 文档`Serialize`成员函数中的代码通过存档读取数据，根据需要重建数据对象。 有关序列化的详细信息，请参阅文章[序列化](../mfc/serialization-in-mfc.md)。
 
-##  <a name="_core_the_data.92.s_role_in_serialization"></a> 在序列化的数据的角色
+## <a name="the-datas-role-in-serialization"></a><a name="_core_the_data.92.s_role_in_serialization"></a>数据在序列化中的作用
 
-一般情况下，类类型的数据应该能够自行序列化。 也就是说时对象传递给存档时，, 该对象应了解如何将自己写入存档以及如何从存档中读取本身。 MFC 使类可序列化以这种方式提供支持。 如果设计的类来定义数据类型和所要序列化该类型的数据时，设计用于序列化。
+通常，类类型数据应该能够序列化自身。 也就是说，当您将对象传递到存档时，该对象应知道如何将自己写入存档以及如何从存档中读取自身。 MFC 支持以这种方式使类序列化。 如果设计一个类来定义数据类型，并且打算序列化该类型的数据，则设计序列化。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用文档](../mfc/using-documents.md)

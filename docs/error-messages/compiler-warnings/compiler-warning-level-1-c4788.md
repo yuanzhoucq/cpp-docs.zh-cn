@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4788
 ms.assetid: 47d75bda-f833-4bdd-93a0-a134df0cd303
-ms.openlocfilehash: 03ce38aaa910a410025c5cccdf39646d34104779
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 76a33b24446debffb2c00bf1b0497cfc86022ce0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052392"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175129"
 ---
 # <a name="compiler-warning-level-1-c4788"></a>编译器警告（等级 1）C4788
 
@@ -21,7 +21,7 @@ ms.locfileid: "74052392"
 
 生成的 funclet 名称可能太长，编译器将截断该名称并生成 C4788。
 
-若要解决此警告，请缩短原始函数名称。 如果函数是C++模板函数或方法，请对名称的部分使用 typedef。 例如:
+若要解决此警告，请缩短原始函数名称。 如果函数是C++模板函数或方法，请对名称的部分使用 typedef。 例如：
 
 ```cpp
 C1<x, y, z<T>>::C2<a,b,c>::f

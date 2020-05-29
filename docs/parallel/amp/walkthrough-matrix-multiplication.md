@@ -2,84 +2,84 @@
 title: 演练：矩阵乘法
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f30f8dc235bf0e76c342bea26a35bcbb36cfa237
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518486"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366800"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>演练：矩阵乘法
 
-此分步演练演示如何使用C++ AMP 加速矩阵相乘的执行。 将显示两个算法，一个不平铺，另一个用于平铺。
+此分步演练演示了如何使用C++ AMP 加速执行矩阵乘法。 提出了两种算法，一种不平铺，一种不平铺。
 
 ## <a name="prerequisites"></a>先决条件
 
 开始之前：
 
-- 阅读[ C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
+- 阅读[C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
 
-- [使用磁贴](../../parallel/amp/using-tiles.md)读取。
+- [使用磁贴](../../parallel/amp/using-tiles.md)读取 。
 
-- 请确保至少运行 Windows 7 或 Windows Server 2008 R2。
+- 请确保您至少运行的是 Windows 7 或 Windows 服务器 2008 R2。
 
 ### <a name="to-create-the-project"></a>创建项目
 
-根据你安装的 Visual Studio 版本，创建新项目的说明有所不同。 请确保将左上方的版本选择器设置为正确的版本。
+创建新项目的说明因已安装的 Visual Studio 版本而异。 要查看您首选版本的 Visual Studio 的文档，请使用**版本**选择器控件。 它位于此页面的目录顶部。
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-the-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建项目
+### <a name="to-create-the-project-in-visual-studio-2019"></a>在视觉工作室 2019 中创建项目
 
-1. 在菜单栏上，选择 "**文件**" ">**新建**>**项目**" 打开 "新建**项目**" 对话框。
+1. 在菜单栏上，选择“文件”“新建”“项目”，打开“创建新项目”对话框**** > **** > ********。
 
-1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。 
+1. 在对话框顶部，将“语言”**** 设置为“C++”****，将“平台”**** 设置为“Windows”****，并将“项目类型”**** 设置为“控制台”****。
 
-1. 从筛选的项目类型列表中，选择 "**空项目**"，然后选择 "**下一步**"。 在下一页中，在 "**名称**" 框中输入*MatrixMultiply*以指定项目的名称，并指定项目位置（如果需要）。
+1. 从筛选的项目类型列表中，选择 **"空项目"，** 然后选择 **"下一步**"。 在下一页中，在 **"名称"** 框中输入*MatrixMultiply*以指定项目的名称，并根据需要指定项目位置。
 
-   ![新建控制台应用](../../build/media/mathclient-project-name-2019.png "新建控制台应用")
+   ![新的控制台应用程序](../../build/media/mathclient-project-name-2019.png "新的控制台应用程序")
 
-1. 选择“创建”按钮创建客户端项目。
+1. 选择“创建”**** 按钮创建客户端项目。
 
-1. 在**解决方案资源管理器**中，打开 "**源文件**" 的快捷菜单，然后选择 "**添加**>**新项**"。
+1. 在**解决方案资源管理器**中，打开**源文件的**快捷方式菜单，然后选择"**Add**>**添加新项**"。
 
-1. 在 "**添加新项**" 对话框中，选择 **C++ "文件（.cpp）** "，在 "**名称**" 框中输入*MatrixMultiply* ，然后选择 "**添加**" 按钮。
+1. 在"**添加新项目"** 对话框中，选择**C++文件 （.cpp）**，在 **"名称"** 框中输入*Matrixmultiply.cpp，* 然后选择"**添加**"按钮。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>在 Visual Studio 2017 或2015中创建项目
+### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>在 Visual Studio 2017 或 2015 中创建项目
 
-1. 在 Visual Studio 的菜单栏上，选择 "**文件**>**新建**>**项目**"。
+1. 在 Visual Studio 的菜单栏上，选择 **"文件**>**新项目**>**"。**
 
-1. 在 "模板" 窗格中的 "**已安装**" 下，选择**视觉对象C++** 。
+1. 在模板窗格中 **"安装"** 下，选择 **"可视C++**"。
 
-1. 选择 "**空项目**"，在 "**名称**" 框中输入*MatrixMultiply* ，然后选择 **"确定"** 按钮。
+1. 选择 **"空项目**"，在 **"名称"** 框中输入*矩阵乘法*，然后选择 **"确定**"按钮。
 
-1. 选择“下一步”按钮。
+1. 选择“下一步”按钮****。
 
-1. 在**解决方案资源管理器**中，打开 "**源文件**" 的快捷菜单，然后选择 "**添加**>**新项**"。
+1. 在**解决方案资源管理器**中，打开**源文件的**快捷方式菜单，然后选择"**Add**>**添加新项**"。
 
-1. 在 "**添加新项**" 对话框中，选择 **C++ "文件（.cpp）** "，在 "**名称**" 框中输入*MatrixMultiply* ，然后选择 "**添加**" 按钮。
+1. 在"**添加新项目"** 对话框中，选择**C++文件 （.cpp）**，在 **"名称"** 框中输入*Matrixmultiply.cpp，* 然后选择"**添加**"按钮。
 
 ::: moniker-end
 
 ## <a name="multiplication-without-tiling"></a>不平铺的乘法
 
-在本部分中，考虑两个矩阵 A 和 B 的乘法，定义如下：
+在本节中，请考虑两个矩阵 A 和 B 的乘法，它们的定义如下：
 
-![3&#45;x&#45;2 矩阵 A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;x&#45;2 矩阵 A")
+![3&#45;由&#45;2 矩阵 A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;由&#45;2 矩阵 A")
 
-![2&#45;x&#45;3 矩阵 B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;x&#45;3 矩阵 B")
+![2&#45;矩阵 B&#45;](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;矩阵 B&#45;")
 
-是一个 3 x 2 的矩阵，而 B 是一个 2 x 3 的矩阵。 与 B 相乘的乘积是以下 3 x 3 矩阵。 该产品的计算方法是将的行与 B 元素的列相乘。
+A 是 3×2 矩阵，B 为 2×3 矩阵。 将 A 乘以 B 的乘积为以下 3×3 矩阵。 通过乘以 A 元素的列来计算产品。
 
-![3&#45;x&#45;3 产品矩阵](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;x&#45;3 产品矩阵")
+![3&#45;3 个产品矩阵&#45;](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;3 个产品矩阵&#45;")
 
-### <a name="to-multiply-without-using-c-amp"></a>在不使用C++ AMP 的情况下进行相乘
+### <a name="to-multiply-without-using-c-amp"></a>不使用C++ AMP 相乘
 
-1. 打开 MatrixMultiply 并使用下面的代码替换现有代码。
+1. 打开矩阵乘法.cpp 并使用以下代码替换现有代码。
 
    ```cpp
    #include <iostream>
@@ -107,17 +107,17 @@ ms.locfileid: "76518486"
    }
    ```
 
-   算法是矩阵乘法定义的简单实现。 它不使用任何并行或线程算法来减少计算时间。
+   该算法是矩阵乘法定义的一个直接实现。 它不使用任何并行或线程算法来减少计算时间。
 
-1. 在菜单栏上，依次选择“文件” > “全部保存”。
+1. 在菜单栏上，选择 **"全部保存文件** > **Save All**"。
 
-1. 选择**F5**键盘快捷方式开始调试，并验证输出是否正确。
+1. 选择**F5**键盘快捷键以开始调试并验证输出是否正确。
 
-1. 选择**Enter**以退出应用程序。
+1. 选择 **"输入"** 以退出应用程序。
 
-### <a name="to-multiply-by-using-c-amp"></a>使用C++ AMP 进行相乘
+### <a name="to-multiply-by-using-c-amp"></a>使用C++ AMP 相乘
 
-1. 在 MatrixMultiply 中，将以下代码添加到 `main` 方法前面。
+1. 在 Matrixmultiply.cpp 中，在`main`方法之前添加以下代码。
 
    ```cpp
    void MultiplyWithAMP() {
@@ -152,16 +152,16 @@ ms.locfileid: "76518486"
    }
    ```
 
-   AMP 代码类似于非 AMP 代码。 对的调用 `parallel_for_each` 为 `product.extent`中的每个元素启动一个线程，并替换行和列的 `for` 循环。 `idx`中提供了行和列中的单元格的值。 您可以通过使用 `[]` 运算符和索引变量或 `()` 运算符以及行和列变量来访问 `array_view` 对象的元素。 该示例演示了这两种方法。 `array_view::synchronize` 方法将 `product` 变量的值复制回 `productMatrix` 变量。
+   AMP 代码类似于非 AMP 代码。 调用 为`parallel_for_each`中`product.extent`的每个元素启动一个线程，并替换行`for`和列的循环。 行和列中的单元格的值在 中`idx`可用。 可以使用`[]`运算符和索引变量或`()`运算符`array_view`以及行和列变量访问对象的元素。 该示例演示了这两种方法。 该方法`array_view::synchronize`将`product`变量的值复制回变量`productMatrix`。
 
-1. 将以下 `include` 和 `using` 语句添加到 MatrixMultiply 的顶部。
+1. 在 Matrixmultiply.cpp 的顶部添加以下内容`include`和`using`语句。
 
    ```cpp
    #include <amp.h>
    using namespace concurrency;
    ```
 
-1. 修改 `main` 方法以调用 `MultiplyWithAMP` 方法。
+1. 修改方法`main`以调用 方法`MultiplyWithAMP`。
 
    ```cpp
    int main() {
@@ -171,53 +171,53 @@ ms.locfileid: "76518486"
    }
    ```
 
-1. 按**Ctrl**+**F5**键盘快捷方式开始调试，并验证输出是否正确。
+1. 按**Ctrl**+**F5**键盘快捷键开始调试并验证输出是否正确。
 
 1. 按**空格键**退出应用程序。
 
-## <a name="multiplication-with-tiling"></a>乘法 with 平铺
+## <a name="multiplication-with-tiling"></a>平铺乘法
 
-平铺是一种方法，用于将数据分区成大小相等的子集（称为磁贴）。 使用平铺时，有三种情况会发生变化。
+平铺是一种将数据划分为大小相等的子集（称为切片）的技术。 使用平铺时，有三件事会改变。
 
-- 您可以创建 `tile_static` 变量。 访问 `tile_static` 空间中的数据比访问全局空间中的数据更快。 为每个图块创建 `tile_static` 变量的实例，并且该图块中的所有线程都可以访问该变量。 平铺的主要优点是 `tile_static` 访问导致性能提升。
+- 您可以创建`tile_static`变量。 在空间中`tile_static`访问数据的速度可能比访问全局空间中的数据快很多倍。 为每个磁贴创建`tile_static`变量的实例，并且磁贴中的所有线程都有权访问该变量。 平铺的主要好处是由于访问而`tile_static`获得性能。
 
-- 可以调用[tile_barrier：： wait](reference/tile-barrier-class.md#wait)方法，停止一个磁贴中指定代码行处的所有线程。 不能保证线程将在其中运行的顺序，仅一个磁贴中的所有线程将在调用 `tile_barrier::wait` 时停止，然后再继续执行。
+- 您可以调用[tile_barrier：：wait](reference/tile-barrier-class.md#wait)方法，以在指定的代码行上停止一个磁贴中的所有线程。 您无法保证线程将运行的顺序，只有一个磁贴中的所有线程在继续执行之前在调用`tile_barrier::wait`时停止。
 
-- 您可以访问相对于整个 `array_view` 对象的线程索引和与磁贴相关的索引。 使用本地索引可以使代码更易于读取和调试。
+- 您可以访问线程相对于整个`array_view`对象的索引和相对于磁贴的索引。 通过使用本地索引，可以使代码更易于读取和调试。
 
-若要利用矩阵相乘的平铺，该算法必须将矩阵分区为磁贴，然后将磁贴数据复制到 `tile_static` 变量中，以加快访问速度。 在此示例中，矩阵分区为大小相等的 submatrices。 此产品可通过将 submatrices 相乘。 本示例中的两个矩阵及其产品是：
+为了利用矩阵乘法中的平铺，算法必须将矩阵分区到切片中，然后将切片数据复制到变量中`tile_static`，以便更快地访问。 在此示例中，矩阵被划分为大小相等的子矩阵。 通过乘以子矩阵找到产品。 此示例中的两个矩阵及其产品是：
 
-![4&#45;x&#45;4 矩阵 A](../../parallel/amp/media/campmatrixatiled.png "4&#45;x&#45;4 矩阵 A")
+![4&#45;由&#45;4 矩阵 A](../../parallel/amp/media/campmatrixatiled.png "4&#45;由&#45;4 矩阵 A")
 
-![4&#45;x&#45;4 矩阵 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;x&#45;4 矩阵 B")
+![4&#45;由&#45;4 矩阵 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;由&#45;4 矩阵 B")
 
-![4&#45;x&#45;4 产品矩阵](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;x&#45;4 产品矩阵")
+![4&#45;由&#45;4 个产品矩阵](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;由&#45;4 个产品矩阵")
 
-矩阵分区为四个2x2 矩阵，定义如下：
+矩阵被划分为四个 2x2 矩阵，定义如下：
 
-![4&#45;x&#45;4 矩阵分区为 2&#45;x&#45;2 子矩阵&#45;](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;x&#45;4 矩阵分区为 2&#45;x&#45;2 子矩阵&#45;")
+![4&#45;由&#45;4 矩阵 A 分区为 2&#45;由&#45;子&#45;矩阵](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;由&#45;4 矩阵 A 分区为 2&#45;由&#45;子&#45;矩阵")
 
-![4&#45;个&#45;，分为2个&#45;，&#45;分为2个子&#45;矩阵](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;个&#45;，分为2个&#45;，&#45;分为2个子&#45;矩阵")
+![4&#45;由&#45;4 矩阵 B 分区为 2&#45;，由&#45;2 子&#45;矩阵](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;由&#45;4 矩阵 B 分区为 2&#45;，由&#45;2 子&#45;矩阵")
 
-现在可以按如下方式编写和计算 A 和 B 的产品：
+A 和 B 的积数现在可以编写和计算如下：
 
-![4&#45;x&#45;4 个矩阵 a，分为 2&#45;&#45;个子&#45;矩阵](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;x&#45;4 个矩阵 a，分为 2&#45;&#45;个子&#45;矩阵")
+![4&#45;由&#45;4 矩阵 A B 分区为 2&#45;由&#45;2 子&#45;矩阵](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;由&#45;4 矩阵 A B 分区为 2&#45;由&#45;2 子&#45;矩阵")
 
-由于矩阵 `a` 到 `h` 是2x2 矩阵，因此它们的所有产品和总和也是2x2 矩阵。 它还遵循： A 和 B 的产品是按预期方式进行的4x4 矩阵。 若要快速检查算法，请计算产品中第一行、第一列中的元素的值。 在本示例中，这将是 `ae + bg`第一行和第一列中的元素的值。 只需计算每个字词的第一列 `ae` 和 `bg`。 `(1 * 1) + (2 * 5) = 11``ae` 的值。 `bg` 的值为 `(3 * 1) + (4 * 5) = 23`。 最终值为 `11 + 23 = 34`，这是正确的。
+由于矩阵`a`为`h`2x2 矩阵，因此所有产品和总和也是 2x2 矩阵。 因此，A 和 B 的乘积是 4x4 矩阵，正如预期的那样。 要快速检查算法，请计算第一行中元素的值，在产品中的第一列。 在此示例中，这将是 元素在 的第一行和第一列中`ae + bg`的元素的值。 您只需要计算每个术语的第一列、第一行`ae`和`bg`。 值 为`ae``(1 * 1) + (2 * 5) = 11`。 `bg` 的值为 `(3 * 1) + (4 * 5) = 23`。 最终值为`11 + 23 = 34`，这是正确的。
 
-若要实现此算法，代码：
+要实现此算法，代码：
 
-- 在 `parallel_for_each` 调用中使用 `tiled_extent` 对象，而不是 `extent` 对象。
+- 使用`tiled_extent`对象而不是调用中`extent``parallel_for_each`的对象。
 
-- 在 `parallel_for_each` 调用中使用 `tiled_index` 对象，而不是 `index` 对象。
+- 使用`tiled_index`对象而不是调用中`index``parallel_for_each`的对象。
 
-- 创建用于保存 submatrices 的 `tile_static` 变量。
+- 创建`tile_static`变量以保存子矩阵。
 
-- 使用 `tile_barrier::wait` 方法来停止计算 submatrices 的产品。
+- 使用`tile_barrier::wait`方法停止用于计算子矩阵的产品的线程。
 
-### <a name="to-multiply-by-using-amp-and-tiling"></a>使用 AMP 和平铺进行相乘
+### <a name="to-multiply-by-using-amp-and-tiling"></a>使用 AMP 和平铺进行乘以
 
-1. 在 MatrixMultiply 中，将以下代码添加到 `main` 方法前面。
+1. 在 Matrixmultiply.cpp 中，在`main`方法之前添加以下代码。
 
    ```cpp
    void MultiplyWithTiling() {
@@ -288,24 +288,24 @@ ms.locfileid: "76518486"
    }
    ```
 
-   此示例与不带平铺的示例大不相同。 此代码使用以下概念步骤：
-   1. 将 `a` 的磁贴 [0，0] 的元素复制到 `locA`中。 将 `b` 的磁贴 [0，0] 的元素复制到 `locB`中。 请注意，`product` 是平铺的，而不是 `a` 和 `b`。 因此，您可以使用全局索引来访问 `a, b`和 `product`。 对 `tile_barrier::wait` 的调用非常重要。 它将停止磁贴中的所有线程，直至 `locA` 和 `locB` 都已填充。
+   此示例与不平铺的示例明显不同。 代码使用以下概念步骤：
+   1. 将 的磁贴 [0，0]`a`的元素`locA`复制到 中。 将 的磁贴 [0，0]`b`的元素`locB`复制到 中。 请注意，`product`该请注意已平铺`a`，`b`而不是 和 。 因此，您可以使用全局索引来访问`a, b`和`product`。 调用`tile_barrier::wait`至关重要。 它停止磁贴中的所有线程，直到填充`locA`和`locB`填充。
 
-   1. 将 `locA` 和 `locB` 相乘并将结果置于 `product`中。
+   1. 乘`locA`以`locB`并将结果放入`product`中。
 
-   1. 将 `a` 的磁贴 [0，1] 的元素复制到 `locA`中。 将 `b` 的磁贴 [1，0] 的元素复制到 `locB`中。
+   1. 将 的磁贴[0，1] 的元素`a`复制到`locA`中。 将 的磁贴 [1，0]`b`的元素`locB`复制到 中。
 
-   1. 将 `locA` 和 `locB` 相乘，然后将它们添加到已在 `product`中的结果。
+   1. 相`locA`乘`locB`并添加它们到 中已有的结果`product`。
 
-   1. 磁贴 [0，0] 的乘法已完成。
+   1. 切片[0，0] 的乘法已完成。
 
-   1. 对其他四个磁贴重复此操作。 没有专门针对磁贴的索引，线程可以按任意顺序执行。 每个线程执行时，会为每个图块正确地创建 `tile_static` 变量，并对 `tile_barrier::wait` 的调用控制程序流。
+   1. 对其他四个磁贴重复上述步骤。 没有专门针对切片的索引，线程可以按任何顺序执行。 当每个线程执行时，`tile_static`将为每个磁贴适当地创建变量，并相应地调用控制`tile_barrier::wait`程序流。
 
-   1. 仔细检查算法时，请注意，每个 submatrix 都将加载到 `tile_static` 内存两次。 这种数据传输确实会花费一些时间。 但是，一旦数据 `tile_static` 内存中，对数据的访问速度要快得多。 因为计算产品需要对 submatrices 中的值进行重复访问，所以存在总体性能提升。 对于每种算法，都需要试验才能找到最佳算法和磁贴大小。
+   1. 仔细检查算法时，请注意每个子矩阵都加载到内存中`tile_static`两次。 数据传输确实需要时间。 但是，一旦数据进入内存`tile_static`中，对数据的访问就会更快。 由于计算产品需要重复访问子矩阵中的值，因此性能会提高。 对于每个算法，需要实验才能找到最佳算法和切片大小。
 
-   在非磁贴和非磁贴示例中，A 和 B 的每个元素都从全局内存访问四次，以计算该产品。 在该磁贴示例中，每个元素都从全局内存访问两次，从 `tile_static` 内存访问四次。 这并不是显著的性能提升。 但是，如果 A 和 B 是1024x1024 矩阵，磁贴大小为16，则会显著提高性能。 在这种情况下，每个元素仅复制到 `tile_static` 内存16次，并从 `tile_static` 内存1024次访问。
+   在非 AMP 和非切片示例中，A 和 B 的每个元素从全局内存中访问四次以计算产品。 在磁贴示例中，每个元素从全局内存访问两次，从`tile_static`内存访问四次。 这不是显著的性能提升。 但是，如果 A 和 B 是 1024x1024 矩阵，并且切片大小为 16，则性能会显著提高。 在这种情况下，每个元素将只复制到`tile_static`内存 16 次，并从`tile_static`内存访问 1024 次。
 
-1. 修改 main 方法以调用 `MultiplyWithTiling` 方法，如下所示。
+1. 修改主方法以调用`MultiplyWithTiling`方法，如图所示。
 
    ```cpp
    int main() {
@@ -316,9 +316,9 @@ ms.locfileid: "76518486"
    }
    ```
 
-1. 按**Ctrl**+**F5**键盘快捷方式开始调试，并验证输出是否正确。
+1. 按**Ctrl**+**F5**键盘快捷键开始调试并验证输出是否正确。
 
-1. 按**空格键**退出应用程序。
+1. 按**空格**键退出应用程序。
 
 ## <a name="see-also"></a>另请参阅
 

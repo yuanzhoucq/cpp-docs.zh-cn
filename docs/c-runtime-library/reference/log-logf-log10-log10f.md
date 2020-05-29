@@ -1,6 +1,6 @@
 ---
 title: log、logf、logl、log10、log10f、log10l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953231"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911483"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -84,22 +87,24 @@ long double log10( long double x );  // C++ only
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± QNAN，IND|无|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|±0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
 **日志**和**Log10**具有使用流式处理 SIMD 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-C++允许重载，因此你可以调用采用并返回**浮点**或**长双精度**值的**log**和**log10**的重载。 在 C 程序中， **log**和**log10**始终采用并返回**double**。
+C + + 允许重载，因此你可以调用采用并返回**浮点**或**长双精度**值的**log**和**log10**的重载。 在 C 程序中， **log**和**log10**始终采用并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**log**、 **logf**、 **logl**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -156,7 +161,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md) <br/>
 [exp、expf、expl](exp-expf.md) <br/>

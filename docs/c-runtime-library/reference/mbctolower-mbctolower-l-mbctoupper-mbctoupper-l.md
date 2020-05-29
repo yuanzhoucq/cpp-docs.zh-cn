@@ -1,11 +1,15 @@
 ---
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952543"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914293"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -80,7 +85,7 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要转换的多字节字符。
 
 *locale*<br/>
@@ -96,12 +101,14 @@ unsigned int _mbctoupper_l(
 
 |例程|转换|
 |--------------|--------------|
-|**_mbctolower**、 **_mbctolower_l**|大写字符到小写字符。|
-|**_mbctoupper**、 **_mbctoupper_l**|小写字符到大写字符。|
+|**_mbctolower**， **_mbctolower_l**|大写字符到小写字符。|
+|**_mbctoupper**， **_mbctoupper_l**|小写字符到大写字符。|
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 不带 **_l**后缀的此函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在以前的版本中， **_mbctolower**称为 " **jtolower**"， **_mbctoupper**称为 " **jtoupper**"。 对于新代码，请改用新名称。
+在以前的版本中， **_mbctolower**称为**jtolower**， **_mbctoupper**称为**jtoupper**。 对于新代码，请改用新名称。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -116,12 +123,12 @@ unsigned int _mbctoupper_l(
 
 |例程|必需的标头|
 |--------------|---------------------|
-|**_mbctolower**、 **_mbctolower_l**|\<mbstring.h>|
-|**_mbctoupper**、 **_mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower**， **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**， **_mbctoupper_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc、_mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

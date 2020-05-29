@@ -5,16 +5,16 @@ helpviewer_keywords:
 - ODBC, record views
 - record views, ODBC
 ms.assetid: 6a2ce346-8104-4ccd-b06e-ca0859a132fe
-ms.openlocfilehash: d2267c732a2f879fc507f6793ac0a7bd9cda8128
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0b5235508c3e44381736b0575ebdfc994bee1a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329798"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212534"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>通过 ODBC 使用数据库窗体（记录视图）
 
-某些应用程序，如数据输入或数据查看需要窗体，具有对话框样式的控件的视图。
+某些应用程序（如数据输入或数据查看）需要窗体，该窗体具有对话框样式控件。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -24,12 +24,12 @@ ms.locfileid: "62329798"
 
 - [记录视图的数据交换](../../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [在使用记录视图中的角色](../../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [你在使用记录视图中的角色](../../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
 - [设计和创建记录视图](../../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
 - [使用记录视图](../../data/using-a-record-view-mfc-data-access.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

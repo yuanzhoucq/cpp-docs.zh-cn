@@ -1,6 +1,6 @@
 ---
 title: nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nextafterf
 - _nextafterf
@@ -10,6 +10,13 @@ api_name:
 - nexttoward
 - nexttowardf
 - nexttowardl
+- _o__nextafter
+- _o_nextafter
+- _o_nextafterf
+- _o_nextafterl
+- _o_nexttoward
+- _o_nexttowardf
+- _o_nexttowardl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857718"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909332"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -90,7 +98,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 *x*<br/>
 要从其开始的浮点值。
 
-*y*<br/>
+*误差*<br/>
 要达到的浮点值。
 
 ## <a name="return-value"></a>返回值
@@ -101,18 +109,20 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 **Nextafter**和**nexttoward**函数系列等效，但*y*的参数类型除外。 如果*x*和*y*相等，则返回的值将*转换为*返回类型。
 
-由于C++允许重载，因此，如果包括 \<h > 则可以调用返回**float**和**long** **双精度**类型的**nextafter**和**nexttoward**的重载。 在 C 程序中， **nextafter**和**nexttoward**始终返回**double**。
+由于 c + + 允许重载，因此\<，如果包括 h> 可以调用返回**float**和**long** **双精度**类型的**nextafter**和**nexttoward**的重载。 在 C 程序中， **nextafter**和**nexttoward**始终返回**double**。
 
 **_Nextafter**和 **_Nextafterf**函数是 Microsoft 特定的。 只有在编译 x64 时， **_nextafterf**函数才可用。
 
-## <a name="requirements"></a>需求
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
-|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
+## <a name="requirements"></a>要求
+
+|例程|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------------|-------------------------------|
 |**nextafter**、 **nextafterf**、 **nextafterl**、 **_nextafterf**、 **nexttoward**、 **nexttowardf**、 **nexttowardl**|\<math.h>|\<math.h> 或 \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> 或 \<cfloat>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 

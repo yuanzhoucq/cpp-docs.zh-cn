@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: ac3e0fda473cf50c8adc10e603d9b6c3beee05be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183037"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214253"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode 枚举
 
@@ -26,19 +26,19 @@ enum class TypeCode {};
 
 ### <a name="members"></a>成员
 
-|类型代码|描述|
+|类型代码|说明|
 |---------------|-----------------|
 |Boolean|Platform::Boolean 类型。|
 |Char16|default::char16 类型。|
 |DateTime|DateTime 类型。|
-|十进制|数值类型。|
+|Decimal|数值类型。|
 |Double|default::float64 类型。|
 |空|Void|
 |Int16|default::int16 类型。|
 |Int32|default::int32 类型。|
 |Int64|default::int64 类型。|
 |Int8|default::int8 类型。|
-|对象|Platform::Object 类型。|
+|Object|Platform::Object 类型。|
 |Single|default::float32 类型。|
 |String|Platform::String 类型。|
 |UInt16|default::uint16 类型。|

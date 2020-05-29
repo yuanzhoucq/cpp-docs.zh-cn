@@ -10,27 +10,27 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: c64d47be6df515a0bd4a8d2cfef51f8d56311f4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b4492ea393c01b3fa382828d3ca6097d52493f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252009"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317364"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 注册表组件（注册器）
 
-ATL 注册器提供了通过自定义界面在系统注册表的优化的访问。 在注册机构是自由线程，并允许静态链接的代码C++客户端。
+ATL 注册器通过自定义接口提供对系统注册表的优化访问。 注册器是自由线程的，允许C++客户端的静态代码链接。
 
 > [!NOTE]
->  可在 atlmfc\include\atliface.h ATL 注册器的源代码。
+> ATL 注册器的源代码可在 atlmfc_include_atliface.h 中找到。
 
 ## <a name="in-this-section"></a>本节内容
 
-[创建注册器脚本](../atl/creating-registrar-scripts.md)<br/>
-创建脚本的注册机构的指南。 包括有关 BNF 语法中，分析树注册表脚本示例，使用可替换参数，并调用脚本的主题。
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)<br/>
+创建注册器脚本的指南。 包括有关 BNF 语法、解析树、注册表脚本示例、使用可替换参数和调用脚本的主题。
 
-[设置去代码静态链接 (C++仅)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
-列出的步骤设置静态链接到注册机构。
+[设置指向注册器代码的静态链接（仅限C++）](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
+列出设置到注册器的静态链接的步骤。
 
 ## <a name="related-sections"></a>相关章节
 

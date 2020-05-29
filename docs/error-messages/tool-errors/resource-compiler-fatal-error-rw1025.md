@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - RW1025
 ms.assetid: 561a02af-e7e0-442a-8ad3-a00b2ca1b62e
-ms.openlocfilehash: 8ecfc11f5cc991294d966a4b6c75d8da6669d5b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b6697dff0a445cc342f30d08bd79822b02df7b8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172719"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>资源编译器错误 RW1025
 
-远端的堆内存不足
+超出最大堆内存
 
-检查可能会占用太多的空间驻留在内存中的软件。 使用 CHKDSK 程序若要了解有多少内存。
+检查可能占用过多空间的内存驻留软件。 使用 CHKDSK 程序来找出有多少内存。
 
-如果要创建一个大型资源文件，将资源脚本拆分为两个文件中。 在创建后两个.res 文件，使用 MS-DOS 命令行来将其联接起来：
+如果要创建大资源文件，请将资源脚本拆分为两个文件。 创建两个 .res 文件后，使用 MS-DOS 命令行将它们联接在一起：
 
 ```
 copy first.res /b + second.res /b full.res

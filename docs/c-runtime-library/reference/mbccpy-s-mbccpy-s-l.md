@@ -1,9 +1,11 @@
 ---
 title: _mbccpy_s、_mbccpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy_s
 - _mbccpy_s_l
+- _o__mbccpy_s
+- _o__mbccpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952636"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920325"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
@@ -82,7 +85,7 @@ errno_t _mbccpy_s_l(
 
 ### <a name="parameters"></a>参数
 
-dest<br/>
+dest**<br/>
 复制目标。
 
 *buffSizeInBytes*<br/>
@@ -118,9 +121,11 @@ dest<br/>
 
 请注意，第二行只是第一行的特殊情况。 另请注意，表假设*buffSizeInBytes* >= *pCopied*。
 
-**_mbccpy_s**为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_s_l**与 **_mbccpy_s**相同，不同之处在于 **_mbccpy_s_l**使用传入的区域设置用于任何依赖于区域设置的行为。
+**_mbccpy_s**为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_s_l**与 **_mbccpy_s**相同，不同之处在于 **_mbccpy_s_l**使用传入的区域设置来实现与区域设置相关的行为。
 
-在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -130,15 +135,15 @@ dest<br/>
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

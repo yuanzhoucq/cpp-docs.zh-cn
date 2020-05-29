@@ -1,12 +1,17 @@
 ---
 title: toupper、_toupper、towupper、_toupper_l、_towupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
+- _o__toupper
+- _o__toupper_l
+- _o__towupper_l
+- _o_toupper
+- _o_towupper
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957910"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913871"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper、_toupper、towupper、_toupper_l、_towupper_l
 
@@ -80,7 +86,7 @@ int _towupper_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要转换的字符。
 
 *locale*<br/>
@@ -94,15 +100,17 @@ int _towupper_l(
 
 没有保留任何返回值以指示错误。
 
-为了使**toupper**能够提供预期的结果， [__isascii](isascii-isascii-iswascii.md)和[islower](islower-iswlower-islower-l-iswlower-l.md)必须均返回非零值。
+为了使**toupper**能够提供预期的结果， [__isascii](isascii-isascii-iswascii.md)和[islower](islower-iswlower-islower-l-iswlower-l.md)都必须返回非零值。
 
 ## <a name="remarks"></a>备注
 
-如果可行且恰当，则其中的各个例程将指定小写字母转换为大写字母。 **Towupper**的大小写转换是特定于区域设置的。 只改变与当前区域设置相关的字符的大小写。 不带 **_l**后缀的函数使用当前设置的区域设置。 这些使用 **_l**后缀的函数的版本将区域设置用作参数，并使用该区域设置，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果可行且恰当，则其中的各个例程将指定小写字母转换为大写字母。 **Towupper**的大小写转换是特定于区域设置的。 只改变与当前区域设置相关的字符的大小写。 没有 **_l**后缀的函数使用当前设置的区域设置。 这些具有 **_l**后缀的函数的版本将区域设置用作参数，并使用该区域设置，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-为了使**toupper**能够提供预期的结果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必须均返回非零值。
+为了使**toupper**能够提供预期的结果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)都必须返回非零值。
 
 [数据转换例程](../../c-runtime-library/data-conversion.md)
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -112,25 +120,25 @@ int _towupper_l(
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l**和 **_towupper_l**没有区域设置依赖关系，因此不应直接调用。 它们供 **_totupper_l**内部使用。
+> **_toupper_l**和 **_towupper_l**没有区域设置依赖关系，因此不应直接调用。 它们由 **_totupper_l**供内部使用。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**toupper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h 1> 或 \<wchar.h 1>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [to 函数](../../c-runtime-library/to-functions.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
 [to 函数](../../c-runtime-library/to-functions.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

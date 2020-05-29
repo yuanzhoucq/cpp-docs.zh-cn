@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
 ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857146"
@@ -27,24 +27,24 @@ ms.locfileid: "74857146"
 ## <a name="syntax"></a>语法
 
 *storage-class-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;__declspec /\* \*/ **（** *decl* **）** &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Microsoft-specific \*/
 
-*decl*&nbsp;&nbsp;&nbsp;&nbsp;/\* 特定于 Microsoft 的 \*/<br/>
+extended-decl-modifier-seq  ：&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*decl-修饰符*：&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
+extended-decl-modifier  ：&nbsp;&nbsp;&nbsp;&nbsp;/\*Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-空格可分隔声明修饰符。 请注意，extended-decl-modifier-seq 可以为空；在此情况下，__declspec 不起作用。
+空格可分隔声明修饰符。 请注意，  extended-decl-modifier-seq 可以为空；在此情况下，__declspec 不起作用。
 
 thread、naked、dllimport 和 dllexport 存储类特性仅为它们应用于的数据或函数的声明的属性；它们不重新定义函数自身的类型特性。 thread 特性只影响数据。 naked 特性仅影响函数。 dllimport 和 dllexport 特性影响函数和数据。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [声明和类型](../c-language/declarations-and-types.md)

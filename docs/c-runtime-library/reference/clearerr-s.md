@@ -1,8 +1,9 @@
 ---
 title: clearerr_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr_s
+- _o_clearerr_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939152"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917211"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -47,7 +49,7 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>参数
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针
 
 ## <a name="return-value"></a>返回值
@@ -56,17 +58,19 @@ errno_t clearerr_s(
 
 ## <a name="remarks"></a>备注
 
-**Clearerr_s**函数将重置*流*的错误指示符和文件尾指示符。 错误指示器不会自动清除;设置指定流的错误指示符后，在调用**clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或[倒带](rewind.md)之前，对该流执行的操作将继续返回错误值。
+**Clearerr_s**函数将重置*流*的错误指示符和文件尾指示符。 错误指示器不会自动清除;设置指定流的错误指示符后，对该流执行的操作将继续返回错误值，直到调用**clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或[倒带](rewind.md)。
 
 如果*stream*为**NULL**，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

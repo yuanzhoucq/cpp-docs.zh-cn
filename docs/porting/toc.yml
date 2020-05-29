@@ -1,0 +1,54 @@
+- name: Microsoft C++ 移植和升级指南
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: 从早期版本升级项目
+  items:
+    - name: 从早期版本升级项目
+      href: ../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+    - name: 潜在升级问题概述
+      href: ../porting/overview-of-potential-upgrade-issues-visual-cpp.md
+    - name: 将代码升级到通用 CRT
+      href: ../porting/upgrade-your-code-to-the-universal-crt.md
+    - name: 更新 WINVER 和 _WIN32_WINNT
+      href: ../porting/modifying-winver-and-win32-winnt.md
+    - name: 在库的内部修复依赖项
+      href: ../porting/fix-your-dependencies-on-library-internals.md
+    - name: 浮点迁移问题
+      href: ../porting/floating-point-migration-issues.md
+    - name: 使用 Visual Studio 中的本机多目标来生成旧项目
+      href: ../porting/use-native-multi-targeting.md
+    - name: Visual Studio 2019 已弃用 C++ 功能
+      href: ../porting/features-deprecated-in-visual-studio.md
+    - name: VCBuild 与MSBuild
+      href: ../porting/build-system-changes.md
+    - name: 移植第三方库
+      href: ../porting/porting-third-party-libraries.md
+    - name: 移植数据应用程序
+      href: ../data/data-access-programming-mfc-atl.md
+- name: 用于升级 C++ 代码的 IDE 工具
+  href: ../porting/ide-tools-for-upgrading-code.md
+- name: Visual C++ 更改历史记录（2003 - 2015）
+  href: ../porting/visual-cpp-change-history-2003-2015.md
+- name: Visual C++ 新增功能 (2003 - 2015)
+  href: ../porting/visual-cpp-what-s-new-2003-through-2015.md
+- name: C++ 二进制兼容性 (2015-2019)
+  href: ../porting/binary-compat-2015-2017.md
+- name: 移植和升级：示例和案例研究
+  items:
+    - name: 示例和案例研究
+      href: ../porting/porting-and-upgrading-examples-and-case-studies.md
+    - name: 移植指南：MFC Scribble
+      href: ../porting/porting-guide-mfc-scribble.md
+    - name: 移植指南：COM Spy
+      href: ../porting/porting-guide-com-spy.md
+    - name: 移植指南：Spy++
+      href: ../porting/porting-guide-spy-increment.md
+- name: Microsoft C++ 简介（针对 UNIX 用户）
+  href: ../porting/introduction-to-visual-cpp-for-unix-users.md
+- name: 在 Windows 上运行 Linux 程序
+  href: ../porting/porting-from-unix-to-win32.md
+- name: 移植到通用 Windows 平台 (C++)
+  items:
+    - name: 移植到通用 Windows 平台 (C++)
+      href: ../porting/porting-to-the-universal-windows-platform-cpp.md
+    - name: 如何：在通用 Windows 平台应用中使用现有 C++ 代码
+      href: ../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md

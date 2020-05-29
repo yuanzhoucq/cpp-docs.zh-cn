@@ -1,9 +1,11 @@
 ---
 title: _lseek、_lseeki64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lseeki64
 - _lseek
+- _o__lseek
+- _o__lseeki64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952976"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911308"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek、_lseeki64
 
@@ -66,12 +69,12 @@ __int64 _lseeki64(
 *offset*<br/>
 *origin* 中的字节数。
 
-*origin*<br/>
+*格式*<br/>
 初始位置。
 
 ## <a name="return-value"></a>返回值
 
-**_lseek**返回从文件开头开始的新位置的偏移量（以字节为单位）。 **_lseeki64**返回64位整数中的偏移量。 函数将返回-1L 以指示错误。 如果传递的参数无效，例如文件描述符格式错误，或 *origin* 的值无效或 *offset* 指定的位置在文件的开头之前，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**Ebadf (** 并返回1L。 在无法查找（例如端接设备和打印机）的设备上，返回值未定义。
+**_lseek**返回文件开头的新位置的偏移量（以字节为单位）。 **_lseeki64**返回64位整数中的偏移量。 函数将返回-1L 以指示错误。 如果传递的参数无效，例如文件描述符格式错误，或 *origin* 的值无效或 *offset* 指定的位置在文件的开头之前，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**Ebadf (** 并返回1L。 在无法查找（例如端接设备和打印机）的设备上，返回值未定义。
 
 有关这些及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -85,16 +88,18 @@ __int64 _lseeki64(
 | **SEEK_CUR** | 文件指针的当前位置。 |
 | **SEEK_END** | 文件结尾。 |
 
-可以使用 **_lseek**将指针重新定位到文件中的任何位置，或移到文件的末尾之外。
+您可以使用 **_lseek**将指针重定位到文件中的任何位置或超出文件末尾。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_lseek**|\<io.h>|
 |**_lseeki64**|\<io.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -172,6 +177,6 @@ Position for end of file seek = 57
 
 ## <a name="see-also"></a>请参阅
 
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [fseek、_fseeki64](fseek-fseeki64.md)<br/>
 [_tell、_telli64](tell-telli64.md)<br/>

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215203"
 ---
 # <a name="how-to-manage-resources-c"></a>如何：管理资源（C++）
 
@@ -46,7 +46,7 @@ ms.locfileid: "70740652"
 可以轻松地将资源从现有资源或可执行文件复制到当前资源文件。 若要复制资源，请同时打开包含资源的两个文件，并将项从一个文件拖动到另一个文件，或者在这两个文件之间进行复制和粘贴。 此方法适用于资源脚本（.rc）文件和资源模板（.rct）文件，以及作为可执行文件（.exe）文件。
 
 > [!NOTE]
-> 视觉C++对象包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请[参阅剪贴画：常见资源](https://github.com/Microsoft/VCSamples)。
+> 视觉C++对象包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请参阅[剪贴画：常见资源](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general)。
 
 不能在项目中的资源文件之间进行拖放、复制、剪切或粘贴（**资源视图**）和文档窗口中打开的独立 .rc 文件。 你可以在以前版本的产品中执行此操作。 仅在项目外部打开的 .rc 文件之间使用拖放方法。
 
@@ -80,7 +80,7 @@ ms.locfileid: "70740652"
 
 - 资源的条件是定义的符号，后者标识了使用资源的此特定副本的条件。
 
-资源的语言和条件显示在**工作区**窗口中资源名称后的括号中。 此处名`IDD_AboutBox`为的资源使用`Finnish`作为其语言，其条件是`XX33`：
+资源的语言和条件显示在**工作区**窗口中资源名称后的括号中。 此处名为 `IDD_AboutBox` 的资源使用 `Finnish` 作为其语言，其条件 `XX33`：
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -126,8 +126,8 @@ IDD_AboutBox (Finnish - XX33)
 
 Win32
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 [如何：创建资源](../windows/how-to-create-a-resource-script-file.md)<br/>
-[如何：在编译时添加资源](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[如何：在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)

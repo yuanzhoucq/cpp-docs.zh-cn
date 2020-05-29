@@ -1,9 +1,11 @@
 ---
 title: _cputs、_cputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cputws
 - _cputs
+- _o__cputs
+- _o__cputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942635"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917606"
 ---
 # <a name="_cputs-_cputws"></a>_cputs、_cputws
 
@@ -60,7 +63,7 @@ int _cputws(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 输出字符串。
 
 ## <a name="return-value"></a>返回值
@@ -73,6 +76,8 @@ int _cputws(
 
 此函数验证其参数。 如果*str*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并返回-1。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
@@ -81,12 +86,12 @@ int _cputws(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -149,7 +154,7 @@ Hello world (courtesy of _cputs)!
 Hello world (courtesy of _cputws)!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch、_putwch](putch-putwch.md)<br/>

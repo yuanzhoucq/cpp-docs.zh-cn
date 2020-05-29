@@ -1,8 +1,9 @@
 ---
 title: rand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand
+- _o_rand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949551"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919531"
 ---
 # <a name="rand"></a>rand
 
-使用众所周知且完全可重复的算法生成一个伪随机数。 提供此函数的更具编程的安全版本;请参阅[rand_s](rand-s.md)。 **Rand**生成的数字不是加密安全的。 若要进行更安全的安全随机数生成，请使用[rand_s](rand-s.md)或在C++标准库中[ \<](../../standard-library/random.md)声明的函数 > 随机声明。
+使用众所周知且完全可重复的算法生成一个伪随机数。 提供此函数的更具编程的安全版本;请参阅[rand_s](rand-s.md)。 **Rand**生成的数字不是加密安全的。 对于更安全的安全随机数生成，请在[ \<随机>](../../standard-library/random.md)中使用[rand_s](rand-s.md)或 c + + 标准库中声明的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -54,15 +56,17 @@ int rand( void );
 
 **Rand**函数返回0到**RAND_MAX** （32767）范围内的一个随机整数。 在调用**rand**之前，使用[srand](srand.md)函数对伪随机数生成器进行种子设定。
 
-**Rand**函数生成一个众所周知的序列，它不适合用作加密函数。 若要进行更安全的安全随机数生成，请使用[rand_s](rand-s.md)或在C++标准库中[ \<](../../standard-library/random.md)声明的函数 > 随机声明。 有关**rand**错误以及随机 > 如何\<处理这些缺点的信息，请参阅此带标题的[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的视频。
+**Rand**函数生成一个众所周知的序列，它不适合用作加密函数。 对于更安全的安全随机数生成，请在[ \<随机>](../../standard-library/random.md)中使用[rand_s](rand-s.md)或 c + + 标准库中声明的函数。 有关**rand**错误以及随机> 如何\<处理这些缺点的信息，请参阅此带标题的[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的视频。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -134,7 +138,7 @@ int main( void )
    66
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>

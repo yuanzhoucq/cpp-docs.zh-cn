@@ -1,23 +1,21 @@
 ---
-title: 安全库:C++ 标准库
+title: 安全库：C++ 标准库
 ms.date: 11/04/2016
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e352489ca12b5815aab5517defc72571abe177fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454551"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446093"
 ---
-# <a name="safe-libraries-c-standard-library"></a>安全库:C++ 标准库
+# <a name="safe-libraries-c-standard-library"></a>安全库：C++ 标准库
 
-已对 Microsoft C++随附的库进行了多项改进, 其中包括C++标准库, 以使它们更加安全。
+已对 Microsoft C++随附的库进行了多项改进，其中包括C++标准库，以使它们更加安全。
 
 已将 C++ 标准库中的多个方法确定为具有潜在的不安全性，因为它们可能导致缓冲区溢出或其他代码缺陷。 建议不要使用这些方法，已创建了更安全的新方法来替代这些方法。 这些新方法均以 `_s`结尾。
 
@@ -44,6 +42,6 @@ ms.locfileid: "68454551"
 
 [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)

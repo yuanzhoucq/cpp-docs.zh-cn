@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C4799
 ms.assetid: 8ecbd06f-c778-4371-a2fb-c690b6743ec8
-ms.openlocfilehash: 475451b47d461e7ea1428eb715a876fb023694d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec92da425718cd5ddc579d1d733a0bc4e56dc04a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175098"
 ---
 # <a name="compiler-warning-level-1-c4799"></a>编译器警告（等级 1）C4799
 
-> 在函数末尾没有 EMMS '*函数*
+> 函数 "*function*" 的末尾没有 emm
 
-该函数具有至少一个 MMX 指令，但不具有`EMMS`指令。 当使用多媒体指令时，`EMMS`指令或`_mm_empty`内部函数应还可用于清除多媒体标记单词末尾的 MMX 代码。
+函数至少具有一个 MMX 指令，但没有 `EMMS` 的指令。 使用多媒体指令时，还应使用 `EMMS` 指令或 `_mm_empty` 内部函数来清除 MMX 代码末尾的多媒体标记字。
 
-当使用 ivec.h，代码不正确使用，该值指示执行在返回之前的 EMMS 指令时，可能会收到 C4799。 这是这些标头的假警告。 您可能会禁用这些选项通过定义 _SILENCE_IVEC_C4799 ivec.h 中。 但是，请注意，这还将给出此类型的正确警告来保留编译器。
+使用 ivec 时，可能会收到 C4799，指示在返回之前，代码不会正确地执行 EMM 指令。 对于这些标头，这是一个错误警告。 可以通过在 IVEC 中定义 _SILENCE_IVEC_C4799 来关闭这些。 但请注意，这也会使编译器无法提供此类型的正确警告。
 
 有关相关信息，请参阅[Intel 的 MMX 指令集](../../assembler/inline/intel-s-mmx-instruction-set.md)。

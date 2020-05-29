@@ -1,19 +1,19 @@
 ---
-title: 如何：使用 interior_ptr 关键字声明值类型 (C++/CLI)
+title: 如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172277"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>如何：使用 interior_ptr 关键字声明值类型 (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
 
 interior_ptr 可以用于值类型。
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

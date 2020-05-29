@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1009
 ms.assetid: c11aceaf-3527-4509-867d-e7b22254e276
-ms.openlocfilehash: 77fe8e69d5357e61ab6863e4557ed9a0ed714080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e54037144763c6c1a0d8563fac3714d68887403e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374245"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172786"
 ---
 # <a name="resource-compiler-fatal-error-rw1009"></a>资源编译器错误 RW1009
 
 创建资源名称时出错
 
-无法创建指定的.res 文件。 请确保它不创建只读驱动器上。 使用 /V 找出是否创建该文件。
+无法创建指定的 .res 文件。 请确保它未在只读驱动器上创建。 使用/V 确定是否正在创建文件。

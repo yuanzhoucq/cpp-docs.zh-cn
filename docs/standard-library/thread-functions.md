@@ -14,21 +14,21 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375840"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函数
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[交换](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 唯一标识当前的执行线程。
 
@@ -40,7 +40,7 @@ thread::id this_thread::get_id() noexcept;
 
 类型为 [thread:: id](../standard-library/thread-class.md) 的对象，用于唯一标识当前的执行线程。
 
-## <a name="sleep_for"></a>  sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 阻止调用线程。
 
@@ -57,9 +57,9 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="remarks"></a>备注
 
-函数会阻止调用线程, 至少为*Rel_time*指定的时间。 此函数不引发任何异常。
+该函数至少阻止调用线程，至少*Rel_time指定的时间*。 此函数不引发任何异常。
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 阻止调用线程，至少直到指定的时间。
 
@@ -79,9 +79,9 @@ void sleep_until(const xtime *Abs_time);
 
 此函数不引发任何异常。
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>交换
 
-交换两个**线程**对象的状态。
+交换两个**线程**对象状态。
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*左中*\
-左**螺纹**对象。
+*离开*\
+左**线程**对象。
 
-*然后*\
-右**线程**对象。
+*对*\
+正确的**线程**对象。
 
 ### <a name="remarks"></a>备注
 
 函数调用 `Left.swap(Right)`。
 
-## <a name="yield"></a>  yield
+## <a name="yield"></a><a name="yield"></a>产量
 
 表示要运行其他线程的操作系统，即使当前线程会照常继续运行。
 
@@ -107,6 +107,6 @@ void swap(thread& Left, thread& Right) noexcept;
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<thread>](../standard-library/thread.md)
+[\<线程>](../standard-library/thread.md)

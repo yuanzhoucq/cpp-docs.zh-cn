@@ -53,12 +53,12 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 367d0b0cd3197623b27ee1a50e804cca797aedf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0254aa4dc243eeffa43850c437a833a6530c01e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371860"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 类
 
@@ -81,56 +81,55 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ### <a name="parameters"></a>参数
 
-*TComplete*<br/>
-异步操作完成时调用事件处理程序。
+*完成*<br/>
+异步操作完成后调用的事件处理程序。
 
-*TProgress*<br/>
-当正在运行的异步操作报告当前操作的进度时调用事件处理程序。
+*T进展*<br/>
+运行异步操作报告操作的当前进度时调用的事件处理程序。
 
-*resultType*<br/>
-之一[AsyncResultType](asyncresulttype-enumeration.md)枚举值。 默认情况下， `SingleResult`。
+*结果类型*<br/>
+[AsyncResult 类型](asyncresulttype-enumeration.md)枚举值之一。 默认为 `SingleResult`。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                               | 描述
+名称                               | 说明
 ---------------------------------- | -------------------------------------------------
-[AsyncBase::AsyncBase](#asyncbase) | 初始化 `AsyncBase` 类的实例。
+[异步基础：：异步基础](#asyncbase) | 初始化 `AsyncBase` 类的实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                         | 描述
+名称                                         | 说明
 -------------------------------------------- | -------------------------------------------------------------------------------------
-[AsyncBase::Cancel](#cancel)                 | 取消异步操作。
-[AsyncBase::Close](#close)                   | 关闭的异步操作。
-[AsyncBase::FireCompletion](#firecompletion) | 调用完成事件处理程序，或重置内部进行委托。
-[AsyncBase::FireProgress](#fireprogress)     | 调用当前正在进行事件处理程序。
-[AsyncBase::get_ErrorCode](#get-errorcode)   | 检索当前的异步操作的错误代码。
-[AsyncBase::get_Id](#get-id)                 | 检索异步操作的句柄。
-[AsyncBase::get_Status](#get-status)         | 检索一个值，该值指示异步操作的状态。
-[AsyncBase::GetOnComplete](#getoncomplete)   | 将当前的完成事件处理程序的地址复制到指定的变量。
-[AsyncBase::GetOnProgress](#getonprogress)   | 将当前进度事件处理程序的地址复制到指定的变量。
-[AsyncBase::put_Id](#put-id)                 | 设置异步操作的句的柄。
-[AsyncBase::PutOnComplete](#putoncomplete)   | 为指定的值设置完成事件处理程序的地址。
-[AsyncBase::PutOnProgress](#putonprogress)   | 为指定的值设置的进度事件处理程序的地址。
-
+[异步基础：：取消](#cancel)                 | 取消异步操作。
+[异步基础：关闭](#close)                   | 关闭异步操作。
+[异步基础：：火完成](#firecompletion) | 调用完成事件处理程序，或重置内部进度委托。
+[异步基础：：火进度](#fireprogress)     | 调用当前进度事件处理程序。
+[异步基础：：get_ErrorCode](#get-errorcode)   | 检索当前异步操作的错误代码。
+[异步基础：：get_Id](#get-id)                 | 检索异步操作的句柄。
+[异步基础：：get_Status](#get-status)         | 检索指示异步操作状态的值。
+[异步基础：：完成](#getoncomplete)   | 将当前完成事件处理程序的地址复制到指定的变量。
+[异步基础：：获取进度](#getonprogress)   | 将当前进度事件处理程序的地址复制到指定的变量。
+[异步基础：:put_Id](#put-id)                 | 设置异步操作的句柄。
+[异步基础：:PutOnComplete](#putoncomplete)   | 将完成事件处理程序的地址设置为指定值。
+[异步基础：:P](#putonprogress)   | 将进度事件处理程序的地址设置为指定值。
 
 ### <a name="protected-methods"></a>受保护的方法
 
-名称                                                                         | 描述
+名称                                                                         | 说明
 ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[AsyncBase::CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | 测试是否可以在当前的异步状态中修改委托属性。
-[AsyncBase::CheckValidStateForResultsCall](#checkvalidstateforresultscall)   | 测试是否可以在当前的异步状态中收集的异步操作结果。
-[AsyncBase::ContinueAsyncOperation](#continueasyncoperation)                 | 确定异步操作是否会继续进行处理，或者应该中止。
-[AsyncBase::CurrentStatus](#currentstatus)                                   | 检索当前的异步操作的状态。
-[AsyncBase::ErrorCode](#errorcode)                                           | 检索当前的异步操作的错误代码。
-[AsyncBase::OnCancel](#oncancel)                                             | 当在派生类中重写时取消异步操作。
-[AsyncBase::OnClose](#onclose)                                               | 当在派生类中重写，会关闭一个异步操作。
-[AsyncBase::OnStart](#onstart)                                               | 当在派生类中重写时启动的异步操作。
-[AsyncBase::Start](#start)                                                   | 启动异步操作。
-[AsyncBase::TryTransitionToCompleted](#trytransitiontocompleted)             | 指示当前的异步操作是否已完成。
-[AsyncBase::TryTransitionToError](#trytransitiontoerror)                     | 指示指定的错误代码是否可以修改的内部错误状态。
+[异步基础：：检查有效状态的委托呼叫](#checkvalidstatefordelegatecall) | 测试是否可以在当前异步状态下修改委托属性。
+[异步基础：：检查有效状态结果调用](#checkvalidstateforresultscall)   | 测试异步操作的结果是否可以在当前异步状态下收集。
+[异步基础：继续同步操作](#continueasyncoperation)                 | 确定异步操作是继续处理还是应停止。
+[异步基础：：当前状态](#currentstatus)                                   | 检索当前异步操作的状态。
+[异步基础：：错误代码](#errorcode)                                           | 检索当前异步操作的错误代码。
+[异步基础：：打开取消](#oncancel)                                             | 在派生类中重写时，将取消异步操作。
+[异步基础：：关闭](#onclose)                                               | 在派生类中重写时，将关闭异步操作。
+[异步基础：：开始](#onstart)                                               | 在派生类中重写时，启动异步操作。
+[异步基础：：开始](#start)                                                   | 启动异步操作。
+[异步基础：：尝试过渡完成](#trytransitiontocompleted)             | 指示当前异步操作是否已完成。
+[异步基础：：尝试转换到错误](#trytransitiontoerror)                     | 指示指定的错误代码是否可以修改内部错误状态。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -140,11 +139,11 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ## <a name="requirements"></a>要求
 
-**标头：** async.h
+**标题：** 异步.h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="asyncbase"></a>AsyncBase::AsyncBase
+## <a name="asyncbaseasyncbase"></a><a name="asyncbase"></a>异步基础：：异步基础
 
 初始化 `AsyncBase` 类的实例。
 
@@ -152,7 +151,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 AsyncBase();
 ```
 
-## <a name="cancel"></a>AsyncBase::Cancel
+## <a name="asyncbasecancel"></a><a name="cancel"></a>异步基础：：取消
 
 取消异步操作。
 
@@ -164,15 +163,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>返回值
 
-默认情况下，始终返回 S_OK。
+默认情况下，始终返回S_OK。
 
 ### <a name="remarks"></a>备注
 
-`Cancel()` 是的默认实现`IAsyncInfo::Cancel`，并不执行任何实际工作。 若要实际取消异步操作，请重写`OnCancel()`纯虚方法。
+`Cancel()`是 的`IAsyncInfo::Cancel`默认实现，不执行实际工作。 要实际取消异步操作，请重写`OnCancel()`纯虚拟方法。
 
-## <a name="checkvalidstatefordelegatecall"></a>AsyncBase::CheckValidStateForDelegateCall
+## <a name="asyncbasecheckvalidstatefordelegatecall"></a><a name="checkvalidstatefordelegatecall"></a>异步基础：：检查有效状态的委托呼叫
 
-测试是否可以在当前的异步状态中修改委托属性。
+测试是否可以在当前异步状态下修改委托属性。
 
 ```cpp
 inline HRESULT CheckValidStateForDelegateCall();
@@ -180,11 +179,11 @@ inline HRESULT CheckValidStateForDelegateCall();
 
 ### <a name="return-value"></a>返回值
 
-如果可以修改委托属性; 则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+S_OK是否可以修改委托属性;如果可以修改委托属性，则否则，E_ILLEGAL_METHOD_CALL。
 
-## <a name="checkvalidstateforresultscall"></a>AsyncBase::CheckValidStateForResultsCall
+## <a name="asyncbasecheckvalidstateforresultscall"></a><a name="checkvalidstateforresultscall"></a>异步基础：：检查有效状态结果调用
 
-测试是否可以在当前的异步状态中收集的异步操作结果。
+测试异步操作的结果是否可以在当前异步状态下收集。
 
 ```cpp
 inline HRESULT CheckValidStateForResultsCall();
@@ -192,11 +191,11 @@ inline HRESULT CheckValidStateForResultsCall();
 
 ### <a name="return-value"></a>返回值
 
-如果可以收集结果; 则为 S_OK否则为 E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。
+S_OK是否可以收集结果;否则，E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。
 
-## <a name="close"></a>AsyncBase::Close
+## <a name="asyncbaseclose"></a><a name="close"></a>异步基础：关闭
 
-关闭的异步操作。
+关闭异步操作。
 
 ```cpp
 STDMETHOD(
@@ -206,15 +205,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>返回值
 
-如果该操作将关闭，或者已经为 S_OK 关闭;否则为 E_ILLEGAL_STATE_CHANGE。
+如果操作关闭或已关闭，S_OK;否则，E_ILLEGAL_STATE_CHANGE。
 
 ### <a name="remarks"></a>备注
 
-`Close()` 是的默认实现`IAsyncInfo::Close`，并不执行任何实际工作。 若要实际关闭异步操作，请重写`OnClose()`纯虚方法。
+`Close()`是 的`IAsyncInfo::Close`默认实现，不执行实际工作。 要实际关闭异步操作，重写`OnClose()`纯虚拟方法。
 
-## <a name="continueasyncoperation"></a>AsyncBase::ContinueAsyncOperation
+## <a name="asyncbasecontinueasyncoperation"></a><a name="continueasyncoperation"></a>异步基础：继续同步操作
 
-确定异步操作是否会继续进行处理，或者应该中止。
+确定异步操作是继续处理还是应停止。
 
 ```cpp
 inline bool ContinueAsyncOperation();
@@ -222,11 +221,11 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>返回值
 
-**true**异步操作的当前状态是否*启动*，这意味着该操作应继续。 否则为**false**，这意味着该操作应该中止。
+如果异步操作的当前状态*已启动*，则**为 true，** 这意味着该操作应继续。 否则 **，false**，这意味着操作应停止。
 
-## <a name="currentstatus"></a>AsyncBase::CurrentStatus
+## <a name="asyncbasecurrentstatus"></a><a name="currentstatus"></a>异步基础：：当前状态
 
-检索当前的异步操作的状态。
+检索当前异步操作的状态。
 
 ```cpp
 inline void CurrentStatus(
@@ -236,16 +235,16 @@ inline void CurrentStatus(
 
 ### <a name="parameters"></a>参数
 
-*status*<br/>
-此操作存储的当前状态的位置。
+*状态*<br/>
+此操作存储当前状态的位置。
 
 ### <a name="remarks"></a>备注
 
 此操作是线程安全的。
 
-## <a name="errorcode"></a>AsyncBase::ErrorCode
+## <a name="asyncbaseerrorcode"></a><a name="errorcode"></a>异步基础：：错误代码
 
-检索当前的异步操作的错误代码。
+检索当前异步操作的错误代码。
 
 ```cpp
 inline void ErrorCode(
@@ -255,16 +254,16 @@ inline void ErrorCode(
 
 ### <a name="parameters"></a>参数
 
-*error*<br/>
-此操作存储当前的错误代码的位置。
+*错误*<br/>
+此操作存储当前错误代码的位置。
 
 ### <a name="remarks"></a>备注
 
 此操作是线程安全的。
 
-## <a name="firecompletion"></a>AsyncBase::FireCompletion
+## <a name="asyncbasefirecompletion"></a><a name="firecompletion"></a>异步基础：：火完成
 
-调用完成事件处理程序，或重置内部进行委托。
+调用完成事件处理程序，或重置内部进度委托。
 
 ```cpp
 void FireCompletion(
@@ -276,11 +275,11 @@ virtual void FireCompletion();
 
 ### <a name="remarks"></a>备注
 
-第一个版本`FireCompletion()`重置内部进度委托变量。 如果异步操作已完成，第二个版本调用完成事件处理程序。
+第一个版本`FireCompletion()`重置内部进度委托变量。 如果异步操作完成，第二个版本将调用完成事件处理程序。
 
-## <a name="fireprogress"></a>AsyncBase::FireProgress
+## <a name="asyncbasefireprogress"></a><a name="fireprogress"></a>异步基础：：火进度
 
-调用当前正在进行事件处理程序。
+调用当前进度事件处理程序。
 
 ```cpp
 void FireProgress(
@@ -290,16 +289,16 @@ void FireProgress(
 
 ### <a name="parameters"></a>参数
 
-*arg*<br/>
+*精 氨 酸*<br/>
 要调用的事件处理程序方法。
 
 ### <a name="remarks"></a>备注
 
-`ProgressTraits` 派生自[ArgTraitsHelper 结构](argtraitshelper-structure.md)。
+`ProgressTraits`派生自[阿格格瑟斯帮助器结构](argtraitshelper-structure.md)。
 
-## <a name="get-errorcode"></a>AsyncBase::get_ErrorCode
+## <a name="asyncbaseget_errorcode"></a><a name="get-errorcode"></a>异步基础：：get_ErrorCode
 
-检索当前的异步操作的错误代码。
+检索当前异步操作的错误代码。
 
 ```cpp
 STDMETHOD(
@@ -310,13 +309,13 @@ STDMETHOD(
 ### <a name="parameters"></a>参数
 
 *errorCode*<br/>
-存储当前的错误代码的位置。
+存储当前错误代码的位置。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL 如果关闭当前的异步操作。
+S_OK如果成功;否则，如果关闭当前异步操作，则E_ILLEGAL_METHOD_CALL。
 
-## <a name="get-id"></a>AsyncBase::get_Id
+## <a name="asyncbaseget_id"></a><a name="get-id"></a>异步基础：：get_Id
 
 检索异步操作的句柄。
 
@@ -329,19 +328,19 @@ STDMETHOD(
 ### <a name="parameters"></a>参数
 
 *id*<br/>
-句柄所在存储的位置。
+要存储句柄的位置。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+S_OK如果成功;否则，E_ILLEGAL_METHOD_CALL。
 
 ### <a name="remarks"></a>备注
 
 此方法实现 `IAsyncInfo::get_Id`。
 
-## <a name="get-status"></a>AsyncBase::get_Status
+## <a name="asyncbaseget_status"></a><a name="get-status"></a>异步基础：：get_Status
 
-检索一个值，该值指示异步操作的状态。
+检索指示异步操作状态的值。
 
 ```cpp
 STDMETHOD(
@@ -351,20 +350,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*status*<br/>
-状态所在存储的位置。 有关详细信息，请参阅 `Windows::Foundation::AsyncStatus`。
+*状态*<br/>
+要存储状态的位置。 有关详细信息，请参阅 `Windows::Foundation::AsyncStatus`。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+S_OK如果成功;否则，E_ILLEGAL_METHOD_CALL。
 
 ### <a name="remarks"></a>备注
 
 此方法实现 `IAsyncInfo::get_Status`。
 
-## <a name="getoncomplete"></a>AsyncBase::GetOnComplete
+## <a name="asyncbasegetoncomplete"></a><a name="getoncomplete"></a>异步基础：：完成
 
-将当前的完成事件处理程序的地址复制到指定的变量。
+将当前完成事件处理程序的地址复制到指定的变量。
 
 ```cpp
 STDMETHOD(
@@ -374,14 +373,14 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*completeHandler*<br/>
-存储当前完成事件处理程序的地址的位置。
+*完成汉德勒*<br/>
+存储当前完成事件处理程序地址的位置。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+S_OK如果成功;否则，E_ILLEGAL_METHOD_CALL。
 
-## <a name="getonprogress"></a>AsyncBase::GetOnProgress
+## <a name="asyncbasegetonprogress"></a><a name="getonprogress"></a>异步基础：：获取进度
 
 将当前进度事件处理程序的地址复制到指定的变量。
 
@@ -393,16 +392,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*progressHandler*<br/>
-存储当前进度事件处理程序的地址的位置。
+*进度处理程序*<br/>
+存储当前进度事件处理程序地址的位置。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+S_OK如果成功;否则，E_ILLEGAL_METHOD_CALL。
 
-## <a name="oncancel"></a>AsyncBase::OnCancel
+## <a name="asyncbaseoncancel"></a><a name="oncancel"></a>异步基础：：打开取消
 
-当在派生类中重写时取消异步操作。
+在派生类中重写时，将取消异步操作。
 
 ```cpp
 virtual void OnCancel(
@@ -410,9 +409,9 @@ virtual void OnCancel(
 ) = 0;
 ```
 
-## <a name="onclose"></a>AsyncBase::OnClose
+## <a name="asyncbaseonclose"></a><a name="onclose"></a>异步基础：：关闭
 
-当在派生类中重写，会关闭一个异步操作。
+在派生类中重写时，将关闭异步操作。
 
 ```cpp
 virtual void OnClose(
@@ -420,9 +419,9 @@ virtual void OnClose(
 ) = 0;
 ```
 
-## <a name="onstart"></a>AsyncBase::OnStart
+## <a name="asyncbaseonstart"></a><a name="onstart"></a>异步基础：：开始
 
-当在派生类中重写时启动的异步操作。
+在派生类中重写时，启动异步操作。
 
 ```cpp
 virtual HRESULT OnStart(
@@ -430,9 +429,9 @@ virtual HRESULT OnStart(
 ) = 0;
 ```
 
-## <a name="put-id"></a>AsyncBase::put_Id
+## <a name="asyncbaseput_id"></a><a name="put-id"></a>异步基础：:put_Id
 
-设置异步操作的句的柄。
+设置异步操作的句柄。
 
 ```cpp
 STDMETHOD(
@@ -443,15 +442,15 @@ STDMETHOD(
 ### <a name="parameters"></a>参数
 
 *id*<br/>
-非零值的句柄。
+非零句柄。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_INVALIDARG 或 E_ILLEGAL_METHOD_CALL。
+S_OK如果成功;否则，E_INVALIDARG或E_ILLEGAL_METHOD_CALL。
 
-## <a name="putoncomplete"></a>AsyncBase::PutOnComplete
+## <a name="asyncbaseputoncomplete"></a><a name="putoncomplete"></a>异步基础：:PutOnComplete
 
-为指定的值设置完成事件处理程序的地址。
+将完成事件处理程序的地址设置为指定值。
 
 ```cpp
 STDMETHOD(
@@ -461,16 +460,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*completeHandler*<br/>
-为设置完成事件处理程序地址。
+*完成汉德勒*<br/>
+将完成事件处理程序设置为的地址。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+S_OK如果成功;否则，E_ILLEGAL_METHOD_CALL。
 
-## <a name="putonprogress"></a>AsyncBase::PutOnProgress
+## <a name="asyncbaseputonprogress"></a><a name="putonprogress"></a>异步基础：:P
 
-为指定的值设置的进度事件处理程序的地址。
+将进度事件处理程序的地址设置为指定值。
 
 ```cpp
 STDMETHOD(
@@ -480,14 +479,14 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*progressHandler*<br/>
-进度事件处理程序设置为地址。
+*进度处理程序*<br/>
+将进度事件处理程序设置为的地址。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+S_OK如果成功;否则，E_ILLEGAL_METHOD_CALL。
 
-## <a name="start"></a>AsyncBase::Start
+## <a name="asyncbasestart"></a><a name="start"></a>异步基础：：开始
 
 启动异步操作。
 
@@ -499,15 +498,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>返回值
 
-如果该操作启动或已，启动，则为 S_OK;否则为 E_ILLEGAL_STATE_CHANGE。
+S_OK操作是否启动或已启动;如果操作已启动，则否则，E_ILLEGAL_STATE_CHANGE。
 
 ### <a name="remarks"></a>备注
 
-`Start()` 是受保护的方法，因为异步操作"热开始"返回到调用方之前不外部可见的。
+`Start()`是一种不受外部可见的受保护方法，因为异步操作在返回到调用方之前"热启动"。
 
-## <a name="trytransitiontocompleted"></a>AsyncBase::TryTransitionToCompleted
+## <a name="asyncbasetrytransitiontocompleted"></a><a name="trytransitiontocompleted"></a>异步基础：：尝试过渡完成
 
-指示当前的异步操作是否已完成。
+指示当前异步操作是否已完成。
 
 ```cpp
 bool TryTransitionToCompleted(
@@ -517,11 +516,11 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>返回值
 
-**true**如果异步操作已完成; 否则为**false**。
+如果异步操作已完成，**则为 true;** 否则，**假**。
 
-## <a name="trytransitiontoerror"></a>AsyncBase::TryTransitionToError
+## <a name="asyncbasetrytransitiontoerror"></a><a name="trytransitiontoerror"></a>异步基础：：尝试转换到错误
 
-指示指定的错误代码是否可以修改的内部错误状态。
+指示指定的错误代码是否可以修改内部错误状态。
 
 ```cpp
 bool TryTransitionToError(
@@ -531,13 +530,13 @@ bool TryTransitionToError(
 
 ### <a name="parameters"></a>参数
 
-*error*<br/>
-错误的 HRESULT。
+*错误*<br/>
+错误 HRESULT。
 
 ### <a name="return-value"></a>返回值
 
-**true**内部错误状态已更改; 否则为如果**false**。
+如果内部错误状态已更改，为 true;如果内部错误状态已更改，**则为 true。** 否则，**假**。
 
 ### <a name="remarks"></a>备注
 
-仅当错误状态已设置为，则为 S_OK，则此操作修改的错误状态。 如果错误状态已经是错误，已取消、 已完成，或已关闭，则此操作无效。
+仅当错误状态已设置为S_OK时，此操作才会修改错误状态。 如果错误状态已出错、已取消、已完成或关闭，则此操作无效。

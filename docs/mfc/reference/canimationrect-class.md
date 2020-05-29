@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 273ea2b548d35722ebf937d2db2b589fef5e69fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378175"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755134"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 类
 
@@ -59,61 +59,61 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationRect::CAnimationRect](#canimationrect)|已重载。 构造一个动画 rect 对象。|
+|[动画重器：：动画Rect](#canimationrect)|已重载。 构造动画矩形对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationRect::AddTransition](#addtransition)|添加转换的左侧、 顶部、 右侧和底部坐标。|
-|[CAnimationRect::GetBottom](#getbottom)|提供访问权限 CAnimationVariable 表示下边缘坐标。|
-|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|返回矩形的边界的默认值。|
-|[CAnimationRect::GetLeft](#getleft)|提供访问权限 CAnimationVariable 表示左边缘坐标。|
-|[CAnimationRect::GetRight](#getright)|提供访问权限 CAnimationVariable 表示右边缘坐标。|
-|[CAnimationRect::GetTop](#gettop)|提供访问权限 CAnimationVariable 表示上边缘坐标。|
-|[CAnimationRect::GetValue](#getvalue)|返回当前值。|
-|[CAnimationRect::SetDefaultValue](#setdefaultvalue)|设置默认值。|
+|[动画重器：：添加转换](#addtransition)|添加左、上、右和下坐标的过渡。|
+|[动画重器：：获取底部](#getbottom)|提供对表示底部坐标的 CAnimation 变量的访问。|
+|[动画重： ：获取默认值](#getdefaultvalue)|返回矩形边界的默认值。|
+|[动画重器：：获取左](#getleft)|提供对表示左坐标的 CAnimation 变量的访问。|
+|[动画重： ：获得正确](#getright)|提供对表示正确坐标的 CAnimation 变量的访问。|
+|[动画重器：：获取顶部](#gettop)|提供对表示顶部坐标的 CAnimation 变量的访问。|
+|[动画重器：：获取价值](#getvalue)|返回当前值。|
+|[动画重定：：设置默认值](#setdefaultvalue)|设置默认值。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|将封装的动画变量放入列表。 (重写[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|
+|[动画重： ：获取动画变量列表](#getanimationvariablelist)|将封装的动画变量放入列表中。 （覆盖[动画基础对象：获取动画变量列表](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationRect::operator RECT](#operator_rect)|CAnimationRect 转换矩形|
-|[CAnimationRect::operator=](#operator_eq)|将 rect 分配给 CAnimationRect。|
+|[动画重器：：操作员 RECT](#operator_rect)|将 C 动画 Rect 转换为 RECT。|
+|[动画重器：：运算符*](#operator_eq)|将矩形分配给 CAnimationRect。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|指定矩形是否具有固定大小。|
+|[动画：：m_bFixedSize](#m_bfixedsize)|指定矩形是否具有固定大小。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationRect::m_bottomValue](#m_bottomvalue)|封装的动画变量，表示底层动画矩形的边界。|
-|[CAnimationRect::m_leftValue](#m_leftvalue)|表示左侧的封装的动画变量动画矩形的边界。|
-|[CAnimationRect::m_rightValue](#m_rightvalue)|封装的动画变量表示右动画矩形的边界。|
-|[CAnimationRect::m_szInitial](#m_szinitial)|指定动画矩形的初始大小。|
-|[CAnimationRect::m_topValue](#m_topvalue)|封装的动画变量表示顶部动画矩形的边界。|
+|[动画重器：：m_bottomValue](#m_bottomvalue)|表示动画矩形底部边界的封装动画变量。|
+|[动画：：m_leftValue](#m_leftvalue)|表示动画矩形左边界的封装动画变量。|
+|[动画重器：：m_rightValue](#m_rightvalue)|表示动画矩形右边界的封装动画变量。|
+|[动画重器：：m_szInitial](#m_szinitial)|指定动画矩形的初始大小。|
+|[动画重器：：m_topValue](#m_topvalue)|表示动画矩形的"顶部"边界的封装动画变量。|
 
 ## <a name="remarks"></a>备注
 
-CAnimationRect 类封装四个 CAnimationVariable 对象，并可以表示在应用程序中一个矩形。 若要使用此类应用程序中，只需实例化此类的对象、 将其添加到动画控制器使用 CAnimationController::AddAnimationObject 和调用每个转换下要应用于左、 右顶部和底部坐标。
+CAnimationRect 类封装了四个 CAnimationvariable 对象，可以在应用程序中表示一个矩形。 要在应用程序中使用此类，只需实例化此类的对象，请使用 CAnimationController：：addAnimationObject 将其添加到动画控制器，并调用 AddTransition，以便应用于左、右上和下坐标的每个转换。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
+[动画基础对象](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationRect`
 
@@ -121,11 +121,11 @@ CAnimationRect 类封装四个 CAnimationVariable 对象，并可以表示在应
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationRect::AddTransition
+## <a name="canimationrectaddtransition"></a><a name="addtransition"></a>动画重器：：添加转换
 
-添加转换的左侧、 顶部、 右侧和底部坐标。
+添加左、上、右和下坐标的过渡。
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pLeftTransition,
     CBaseTransition* pTopTransition,
@@ -135,25 +135,25 @@ void AddTransition(
 
 ### <a name="parameters"></a>参数
 
-*pLeftTransition*<br/>
-指定左侧和右侧的转换。
+*p 左转换*<br/>
+指定左侧的过渡。
 
-*pTopTransition*<br/>
-指定的顶边的转换。
+*p 上过渡*<br/>
+指定顶部的过渡。
 
-*pRightTransition*<br/>
-指定的左右两边的转换。
+*pRight 转换*<br/>
+指定右侧的过渡。
 
-*pBottomTransition*<br/>
-指定的底边的转换。
+*p底转换*<br/>
+指定下边的过渡。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可指定的转换添加到转换应用于每个矩形边的动画变量的内部列表。 添加转换，它们不会立即应用并存储在内部列表。 转换应用 （已添加到情节提要的特定值） 当你调用 CAnimationController::AnimateGroup。 如果不需要将转换应用到一个矩形边，则可以传递 NULL。
+调用此函数以将指定的过渡添加到要应用于每个矩形边的动画变量的内部过渡列表中。 添加转换时，不会立即应用这些转换并存储在内部列表中。 当您调用 CAnimationController：：AnimateGroup 时，将应用转换（添加到特定值的情节提要中）。 如果不需要对矩形的一个边应用过渡，则可以传递 NULL。
 
-##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect
+## <a name="canimationrectcanimationrect"></a><a name="canimationrect"></a>动画重器：：动画Rect
 
-构造一个 CAnimationRect 对象。
+构造 CAnimationRect 对象。
 
 ```
 CAnimationRect();
@@ -183,14 +183,14 @@ CAnimationRect(
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
+*矩形*<br/>
 指定默认矩形。
 
-*nGroupID*<br/>
-指定组 id。
+*n集团ID*<br/>
+指定组 ID。
 
 *nObjectID*<br/>
-指定对象 id。
+指定对象 ID。
 
 *dwUserData*<br/>
 指定用户定义的数据。
@@ -198,28 +198,28 @@ CAnimationRect(
 *pt*<br/>
 左上角的坐标。
 
-*sz*<br/>
+*深圳*<br/>
 矩形的大小。
 
-*nLeft*<br/>
-指定左边边界的坐标。
+*n 左*<br/>
+指定左绑定的坐标。
 
 *nTop*<br/>
-指定绑定的顶部坐标。
+指定上绑定的坐标。
 
 *nRight*<br/>
-指定坐标正确绑定。
+指定右绑定的坐标。
 
-*nBottom*<br/>
-指定绑定的底部坐标。
+*n下角*<br/>
+指定下绑定的坐标。
 
 ### <a name="remarks"></a>备注
 
-使用默认值为左侧、 顶部、 右侧和底部，对象 ID 和组 ID，将设置为 0 构造对象。 它们可以在运行时使用 SetDefaultValue SetID 以后更改。
+对象构造的默认值为左、上、右和下，对象 ID 和组 ID，将设置为 0。 可以使用 SetDefaultValue 和 SetID 在运行时稍后更改它们。
 
-##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList
+## <a name="canimationrectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>动画重： ：获取动画变量列表
 
-将封装的动画变量放入列表。
+将封装的动画变量放入列表中。
 
 ```
 virtual void GetAnimationVariableList(
@@ -229,12 +229,12 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>参数
 
-*lst*<br/>
-当函数返回时，它包含指向表示矩形的坐标的四个 CAnimationVariable 对象的指针。
+*Lst*<br/>
+当函数返回时，它包含指向表示矩形坐标的四个 CAnimation 变量对象的指针。
 
-##  <a name="getbottom"></a>  CAnimationRect::GetBottom
+## <a name="canimationrectgetbottom"></a><a name="getbottom"></a>动画重器：：获取底部
 
-提供访问权限 CAnimationVariable 表示下边缘坐标。
+提供对表示底部坐标的 CAnimation 变量的访问。
 
 ```
 CAnimationVariable& GetBottom();
@@ -242,15 +242,15 @@ CAnimationVariable& GetBottom();
 
 ### <a name="return-value"></a>返回值
 
-对封装 CAnimationVariable 表示下边缘坐标的引用。
+表示底部坐标的封装 CAnimation 变量的引用。
 
 ### <a name="remarks"></a>备注
 
-可以调用此方法以获取直接访问基础 CAnimationVariable 表示的下边缘坐标。
+您可以调用此方法来直接访问表示底部坐标的基础 C动画变量。
 
-##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue
+## <a name="canimationrectgetdefaultvalue"></a><a name="getdefaultvalue"></a>动画重： ：获取默认值
 
-返回矩形的边界的默认值。
+返回矩形边界的默认值。
 
 ```
 CRect GetDefaultValue();
@@ -258,15 +258,15 @@ CRect GetDefaultValue();
 
 ### <a name="return-value"></a>返回值
 
-CRect 值，该值包含左、 右、 顶部和底部的默认值。
+包含左、右、上和下默认值的 CRect 值。
 
 ### <a name="remarks"></a>备注
 
-调用此函数检索以前已由构造函数或 SetDefaultValue 设置的默认值。
+调用此函数以检索以前由构造函数或 SetDefaultValue 设置的默认值。
 
-##  <a name="getleft"></a>  CAnimationRect::GetLeft
+## <a name="canimationrectgetleft"></a><a name="getleft"></a>动画重器：：获取左
 
-提供访问权限 CAnimationVariable 表示左边缘坐标。
+提供对表示左坐标的 CAnimation 变量的访问。
 
 ```
 CAnimationVariable& GetLeft();
@@ -274,15 +274,15 @@ CAnimationVariable& GetLeft();
 
 ### <a name="return-value"></a>返回值
 
-对封装 CAnimationVariable 表示左边缘坐标的引用。
+表示左坐标的封装 CAnimation 变量的引用。
 
 ### <a name="remarks"></a>备注
 
-可以调用此方法以获取直接访问基础 CAnimationVariable 表示的左边缘坐标。
+您可以调用此方法以直接访问表示左侧坐标的基础 C动画变量。
 
-##  <a name="getright"></a>  CAnimationRect::GetRight
+## <a name="canimationrectgetright"></a><a name="getright"></a>动画重： ：获得正确
 
-提供访问权限 CAnimationVariable 表示右边缘坐标。
+提供对表示正确坐标的 CAnimation 变量的访问。
 
 ```
 CAnimationVariable& GetRight();
@@ -290,15 +290,15 @@ CAnimationVariable& GetRight();
 
 ### <a name="return-value"></a>返回值
 
-对封装 CAnimationVariable 表示右边缘坐标的引用。
+对表示正确坐标的封装的 CAnimation 的引用。
 
 ### <a name="remarks"></a>备注
 
-可以调用此方法以获取直接访问基础 CAnimationVariable 表示的右边缘坐标。
+您可以调用此方法来直接访问表示正确坐标的基础 C动画变量。
 
-##  <a name="gettop"></a>  CAnimationRect::GetTop
+## <a name="canimationrectgettop"></a><a name="gettop"></a>动画重器：：获取顶部
 
-提供访问权限 CAnimationVariable 表示上边缘坐标。
+提供对表示顶部坐标的 CAnimation 变量的访问。
 
 ```
 CAnimationVariable& GetTop();
@@ -306,13 +306,13 @@ CAnimationVariable& GetTop();
 
 ### <a name="return-value"></a>返回值
 
-对封装 CAnimationVariable 表示上边缘坐标的引用。
+表示顶部坐标的封装 CAnimation 变量的引用。
 
 ### <a name="remarks"></a>备注
 
-可以调用此方法以获取直接访问基础 CAnimationVariable 表示的上边缘坐标。
+您可以调用此方法来直接访问表示顶部坐标的基础 C动画变量。
 
-##  <a name="getvalue"></a>  CAnimationRect::GetValue
+## <a name="canimationrectgetvalue"></a><a name="getvalue"></a>动画重器：：获取价值
 
 返回当前值。
 
@@ -322,18 +322,18 @@ BOOL GetValue(CRect& rect);
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
-输出。 此方法返回时包含的当前值。
+*矩形*<br/>
+输出。 当此方法返回时，包含当前值。
 
 ### <a name="return-value"></a>返回值
 
-已成功检索当前值; 如果为 TRUE否则为 FALSE。
+TRUE，如果成功检索当前值;如果成功检索当前值，则为 TRUE。否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可检索当前动画矩形的值。 如果此方法失败或基础 COM 对象的左侧、 顶部、 右侧和底部尚未初始化，rect 包含构造函数中或通过 SetDefaultValue 以前设置的默认值。
+调用此函数以检索动画矩形的当前值。 如果此方法失败或左、上、右和下的基础 COM 对象尚未初始化，则 rect 包含默认值，该值以前在构造函数或 SetDefaultValue 中设置。
 
-##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize
+## <a name="canimationrectm_bfixedsize"></a><a name="m_bfixedsize"></a>动画：：m_bFixedSize
 
 指定矩形是否具有固定大小。
 
@@ -343,33 +343,33 @@ BOOL m_bFixedSize;
 
 ### <a name="remarks"></a>备注
 
-如果此成员为 true，然后矩形的大小是固定和右和探底值每的次重新计算的左上角移动根据固定大小。 将此值设置为 TRUE 以轻松地移动屏幕周围的矩形。 在这种情况下将忽略应用于右侧和底部坐标的转换。 当构造对象和/或调用 SetDefaultValue 时，将在内部存储大小。 默认情况下此成员设置为 FALSE。
+如果此成员为 true，则矩形的大小是固定的，并且每次根据固定大小移动左上角时都会重新计算右和下值。 将此值设置为 TRUE 以轻松地在屏幕上移动矩形。 在这种情况下，将忽略应用于右坐标和底部坐标的过渡。 当您构造对象和/或调用 SetDefaultValue 时，大小存储在内部。 默认情况下，此成员设置为 FALSE。
 
-##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue
+## <a name="canimationrectm_bottomvalue"></a><a name="m_bottomvalue"></a>动画重器：：m_bottomValue
 
-封装的动画变量，表示底层动画矩形的边界。
+表示动画矩形底部边界的封装动画变量。
 
 ```
 CAnimationVariable m_bottomValue;
 ```
 
-##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue
+## <a name="canimationrectm_leftvalue"></a><a name="m_leftvalue"></a>动画：：m_leftValue
 
-表示左侧的封装的动画变量动画矩形的边界。
+表示动画矩形左边界的封装动画变量。
 
 ```
 CAnimationVariable m_leftValue;
 ```
 
-##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue
+## <a name="canimationrectm_rightvalue"></a><a name="m_rightvalue"></a>动画重器：：m_rightValue
 
-封装的动画变量表示右动画矩形的边界。
+表示动画矩形右边界的封装动画变量。
 
 ```
 CAnimationVariable m_rightValue;
 ```
 
-##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial
+## <a name="canimationrectm_szinitial"></a><a name="m_szinitial"></a>动画重器：：m_szInitial
 
 指定动画矩形的初始大小。
 
@@ -377,17 +377,17 @@ CAnimationVariable m_rightValue;
 CSize m_szInitial;
 ```
 
-##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue
+## <a name="canimationrectm_topvalue"></a><a name="m_topvalue"></a>动画重器：：m_topValue
 
-封装的动画变量表示顶部动画矩形的边界。
+表示动画矩形的"顶部"边界的封装动画变量。
 
 ```
 CAnimationVariable m_topValue;
 ```
 
-##  <a name="operator_rect"></a>  CAnimationRect::operator RECT
+## <a name="canimationrectoperator-rect"></a><a name="operator_rect"></a>动画重器：：操作员 RECT
 
-CAnimationRect 转换矩形
+将 C 动画 Rect 转换为 RECT。
 
 ```
 operator RECT();
@@ -395,45 +395,45 @@ operator RECT();
 
 ### <a name="return-value"></a>返回值
 
-为矩形的动画矩形的当前值
+动画矩形作为 RECT 的当前值。
 
 ### <a name="remarks"></a>备注
 
-此函数在内部调用 GetValue。 如果出于某种原因 GetValue 失败，则返回的矩形将包含所有矩形坐标的默认值。
+此功能在内部调用 GetValue。 如果由于某种原因 GetValue 失败，则返回的 RECT 将包含所有矩形坐标的默认值。
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator=
+## <a name="canimationrectoperator"></a><a name="operator_eq"></a>动画重器：：运算符*
 
-将 rect 分配给 CAnimationRect。
+将矩形分配给 CAnimationRect。
 
-```
+```cpp
 void operator=(const RECT& rect);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
-新动画矩形的值。
+*矩形*<br/>
+动画矩形的新值。
 
 ### <a name="remarks"></a>备注
 
-建议为此动画开始之前，原因是此运算符将调用 SetDefaultValue，这会创建它们的情况下重新创建颜色组件的基础 COM 对象。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 此动画对象，您需要重新启用这些事件。
+建议在动画启动之前执行此操作，因为此运算符称为 SetDefaultValue，如果已创建颜色组件，则重新创建颜色组件的基础 COM 对象。 如果将此动画对象订阅到事件（Value已更改或整数值更改），则需要重新启用这些事件。
 
-##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue
+## <a name="canimationrectsetdefaultvalue"></a><a name="setdefaultvalue"></a>动画重定：：设置默认值
 
 设置默认值。
 
-```
+```cpp
 void SetDefaultValue(const CRect& rect);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rect*<br/>
-指定左侧、 顶部、 右侧和底部的新默认的值。
+*矩形*<br/>
+为左、上、右和下指定新的默认值。
 
 ### <a name="remarks"></a>备注
 
-此函数用于将默认值设置为动画对象。 此方法将默认值分配为矩形的边界。 它还重新创建底层的 COM 对象，如果已创建。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 此动画对象，您需要重新启用这些事件。
+使用此函数可为动画对象设置默认值。 此方法将默认值分配给矩形的边界。 它还会重新创建基础 COM 对象（如果已创建）。 如果将此动画对象订阅到事件（Value已更改或整数值更改），则需要重新启用这些事件。
 
 ## <a name="see-also"></a>请参阅
 

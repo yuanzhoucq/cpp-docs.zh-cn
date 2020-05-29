@@ -5,7 +5,6 @@ f1_keywords:
 - IOpenRowsetImpl
 - IOpenRowsetImpl.CreateRowset
 - IOpenRowsetImpl::CreateRowset
-- CreateRowset
 - OpenRowset
 - IOpenRowsetImpl::OpenRowset
 - IOpenRowsetImpl.OpenRowset
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 6f0dfb90b0ea79e115f459968558e48ae9827e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ecbcd46e534baa73574f0930e1cbac4dbc49dfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390771"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210530"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl 类
 
-提供了实现`IOpenRowset`接口。
+提供 `IOpenRowset` 接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -32,10 +31,10 @@ template <class SessionClass>
 class IOpenRowsetImpl : public IOpenRowset
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *SessionClass*<br/>
-您的类，派生自`IOpenRowsetImpl`。
+派生自 `IOpenRowsetImpl`的类。
 
 ## <a name="requirements"></a>要求
 
@@ -47,16 +46,16 @@ class IOpenRowsetImpl : public IOpenRowset
 
 |||
 |-|-|
-|[CreateRowset](#createrowset)|创建一个行集对象。 不直接由用户调用。|
-|[OpenRowset](#openrowset)|打开并返回包含来自单个基表或索引的所有行的行集。 （不在 ATLDB。H)|
+|[CreateRowset](#createrowset)|创建行集对象。 不是由用户直接调用。|
+|[OpenRowset](#openrowset)|打开并返回一个行集，其中包括单个基表或索引中的所有行。 （不在为 ATLDB.H 中。高|
 
 ## <a name="remarks"></a>备注
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))接口是必需的会话对象。 打开，并返回包含来自单个基表或索引的所有行的行集。
+对于 session 对象， [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))接口是必需的。 它将打开并返回一个行集，其中包括单个基表或索引中的所有行。
 
-## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
+## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a>IOpenRowsetImpl：： CreateRowset
 
-创建一个行集对象。 不直接由用户调用。 请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考。*
+创建行集对象。 不是由用户直接调用。 请参阅*OLE DB 程序员参考*中的[IOpenRowset：： OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 。
 
 ### <a name="syntax"></a>语法
 
@@ -72,19 +71,19 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
    RowsetClass*& pRowsetObj);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *RowsetClass*<br/>
-模板类成员表示用户的行集类。 通常由向导生成。
+表示用户的行集类的模板类成员。 通常由向导生成。
 
 *pRowsetObj*<br/>
-[out]指向行集对象的指针。 通常不使用此参数，但如果必须传递给 COM 对象之前在行集上执行更多的工作，可以使用它。 生存期*pRowsetObj*受*ppRowset*。
+弄指向行集对象的指针。 通常不使用此参数，但如果必须在将其传递给 COM 对象之前对行集执行更多工作，则可以使用此参数。 *PRowsetObj*的生存期由*ppRowset*绑定。
 
-其他参数，请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考。*
+有关其他参数，请参阅*OLE DB 程序员参考*中的[IOpenRowset：： OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 。
 
-## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
+## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a>IOpenRowsetImpl：： OpenRowset
 
-打开并返回包含来自单个基表或索引的所有行的行集。
+打开并返回一个行集，其中包括单个基表或索引中的所有行。
 
 ### <a name="syntax"></a>语法
 
@@ -98,15 +97,15 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
    IUnknown** ppRowset);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IOpenRowset：： OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 。
 
 ### <a name="remarks"></a>备注
 
-ATLDB 中找不到此方法。H. 它由 ATL 对象向导时创建提供程序创建。
+在为 ATLDB.H 中找不到此方法。高. 它是在创建提供程序时由 ATL 对象向导创建的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

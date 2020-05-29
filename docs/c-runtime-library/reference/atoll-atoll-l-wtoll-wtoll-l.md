@@ -1,11 +1,15 @@
 ---
 title: atoll、_atoll_l、_wtoll、_wtoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
+- _o__atoll_l
+- _o__wtoll
+- _o__wtoll_l
+- _o_atoll
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913519"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-字符串转换为**长** **长**整数。
+将字符串转换为**长****整型。**
 
 ## <a name="syntax"></a>语法
 
@@ -68,7 +73,7 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 要转换的字符串。
 
 *locale*<br/>
@@ -76,15 +81,15 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回**长** **长**生成的输入的字符解释为数字的值。 如果输入不能转换为该类型的值，则**atoll**的返回值为0。
+每个函数都返回通过将输入字符解释为数字来生成的**长****长**值。 如果输入不能转换为该类型的值，则**atoll**的返回值为0。
 
-对于具有大量正整数值的溢出， **atoll**将返回**LLONG_MAX**，对于具有较大负整数值的溢出，将返回**LLONG_MIN**。
+对于具有较大正整数值的溢出， **atoll**返回**LLONG_MAX**，对于具有较大负整数值的溢出，将返回**LLONG_MIN**。
 
 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为**长** **长**整数值。
+这些函数将字符串转换为**长****整型整数值**。
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的 null 字符（'\0' 或 L'\0'）。
 
@@ -94,9 +99,11 @@ long long _wtoll_l(
 
 *空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个数字。
 
-**_wtoll**与**atoll**相同，只不过它采用宽字符字符串作为参数。
+**_wtoll**与**atoll**相同，不同之处在于它采用宽字符字符串作为参数。
 
-具有 **_l**后缀的这些函数的版本与不具有该后缀的函数的版本相同，不同之处在于它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的这些函数的版本与不具有该后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -111,7 +118,7 @@ long long _wtoll_l(
 |例程|必需的标头|
 |--------------|---------------------|
 |**atoll**、 **_atoll_l**|\<stdlib.h>|
-|**_wtoll**、 **_wtoll_l**|\<stdlib.h> 或 \<wchar.h>|
+|**_wtoll**， **_wtoll_l**|\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
@@ -163,13 +170,13 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

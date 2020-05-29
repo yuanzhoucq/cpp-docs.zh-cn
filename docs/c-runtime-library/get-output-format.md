@@ -23,19 +23,19 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 682ab9796942e52ed036193887158ea22b738189
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944359"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349339"
 ---
 # <a name="_get_output_format"></a>_get_output_format
 
 获取输出格式标志的当前值。
 
 > [!IMPORTANT]
->  此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
+> 此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
 
 ## <a name="syntax"></a>语法
 
@@ -53,13 +53,13 @@ unsigned int _get_output_format();
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`_get_output_format`|\<stdio.h>|
 
-有关更多兼容性信息，请参见“简介”中的 [兼容性](../c-runtime-library/compatibility.md) 。
+有关兼容性的详细信息，请参阅“简介”中的[兼容性](../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [格式规范语法：printf 和 wprintf 函数](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>

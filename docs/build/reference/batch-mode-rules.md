@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328413"
 ---
 # <a name="batch-mode-rules"></a>批模式规则
 
@@ -20,16 +20,16 @@ ms.locfileid: "62295014"
    commands
 ```
 
-批模式推理规则提供推理规则仅一次的调用时 N 命令经历此推断规则。 不批模式推理规则，它将要求要调用的 N 命令。 N 是触发推理规则的依赖项的数目。
+当 N 命令通过此推理规则时，批处理模式推理规则仅提供一个推理规则的调用。 如果没有批处理模式推理规则，则需要调用 N 命令。 N 是触发推理规则的从属项数。
 
-包含批模式推理规则生成文件必须使用 NMAKE 1.62 或更高版本。 若要检查的 NMAKE 版本，运行 _NMAKE_VER 宏可用于 NMAKE 版本 1.62 或更高版本。 此宏将返回一个字符串，表示视觉对象C++产品版本。
+制作包含批处理模式推理规则的文件必须使用 NMAKE 版本 1.62 或更高版本。 要检查 NMAKE 版本，请运行与 NMAKE 版本 1.62 或更高版本的_NMAKE_VER宏。 此宏返回表示 VisualC++产品版本的字符串。
 
-与标准的推理规则仅语法上的差异是： 批模式推理规则以双冒号 （:）
+与标准推理规则的唯一语法区别是批处理模式推理规则终止了双冒号 （：:)。
 
 > [!NOTE]
->  正在调用的工具必须能够处理多个文件。 批模式推理规则必须使用`$<`为宏来访问依赖文件。
+> 正在调用的工具必须能够处理多个文件。 批处理模式推理规则必须用作`$<`宏才能访问相关文件。
 
-批模式推理规则可以加快生成过程。 它是更快地提供文件复制到的编译器中批处理，因为编译器驱动程序调用一次。 例如，C 和C++编译器时处理一组文件，因为它可以保持内存驻留在过程中会更好地执行。
+批处理模式推理规则可以加快生成过程。 批量向编译器提供文件会更快，因为编译器驱动程序只调用一次。 例如，在处理一组文件时，C 和C++编译器性能更好，因为它可以在过程中保持内存驻留。
 
 下面的示例演示如何使用批处理模式推理规则：
 
@@ -56,7 +56,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE 生成以下输出不批模式推理规则：
+NMAKE 生成以下输出，无需批处理模式推理规则：
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +73,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE 生成以下结果与批模式推理规则：
+NMAKE 使用批处理模式推理规则生成以下结果：
 
 ```
 E:\tmp> nmake -f test.mak -a
@@ -89,6 +89,6 @@ foo4.cpp
 Generating Code...
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [推理规则](inference-rules.md)

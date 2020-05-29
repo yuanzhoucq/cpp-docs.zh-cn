@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-ms.openlocfilehash: 0ce6e9193107cbd0d033d99b257e41004b4343a8
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 223f37d7cabbd0b8cd238582773c05d7b9eaabf6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821852"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371411"
 ---
 # <a name="implements-structure"></a>Implements 结构
 
-为指定的接口实现 `QueryInterface` 和 `GetIid`。
+实现`QueryInterface`和`GetIid`指定接口。
 
 ## <a name="syntax"></a>语法
 
@@ -77,67 +77,67 @@ struct __declspec(novtable) Implements<
 ### <a name="parameters"></a>参数
 
 *I0*<br/>
-第零个接口 ID。 必需
+第零个接口 ID。 （必需）
 
 *I1*<br/>
-第一个接口 ID。 （可选）
+第一个接口 ID。 (可选)
 
 *I2*<br/>
-第二个接口 ID。 （可选）
+第二个接口 ID。 (可选)
 
 *I3*<br/>
-第三个接口 ID。 （可选）
+第三个接口 ID。 (可选)
 
 *I4*<br/>
-第四个接口 ID。 （可选）
+第四个接口 ID。 (可选)
 
 *I5*<br/>
-第五个接口 ID。 （可选）
+第五个接口 ID。 (可选)
 
 *I6*<br/>
-第六个接口 ID。 （可选）
+第六个接口 ID。 (可选)
 
 *I7*<br/>
-第七个接口 ID。 （可选）
+第七个接口 ID。 (可选)
 
 *I8*<br/>
-第八个接口 ID。 （可选）
+第八个接口 ID。 (可选)
 
 *I9*<br/>
-第九个接口 ID。 （可选）
+第九个接口 ID。 (可选)
 
-*flags*<br/>
-类的配置标志。 [RuntimeClassFlags](runtimeclassflags-structure.md)结构中指定的一个或多个[RuntimeClassType](runtimeclasstype-enumeration.md)枚举。
+*标志*<br/>
+类的配置标志。 在[运行时类标志](runtimeclassflags-structure.md)结构中指定的一个或多个[运行时类类型](runtimeclasstype-enumeration.md)枚举。
 
 ## <a name="remarks"></a>备注
 
-派生自指定接口的列表并实现 `QueryInterface` 和 `GetIid`的帮助器模板。
+派生自 和 的指定接口和实现帮助程序模板`QueryInterface``GetIid`的列表。
 
-每个*I0*到*I9*接口参数都必须派生自 `IUnknown`、`IInspectable`或[ChainInterfaces](chaininterfaces-structure.md)模板。 *Flags*参数确定是否为 `IUnknown` 或 `IInspectable`生成支持。
+每个*I0*到*I9*接口参数`IUnknown`必须`IInspectable`派生自 ，或[链接口](chaininterfaces-structure.md)模板。 *标志*参数确定是否为`IUnknown`或`IInspectable`生成支持。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-| Name        | 描述                               |
+| 名称        | 说明                               |
 | ----------- | ----------------------------------------- |
 | `ClassFlags`| `RuntimeClassFlags<WinRt>` 的同义词。 |
 
-### <a name="protected-methods"></a>受保護的方法
+### <a name="protected-methods"></a>受保护的方法
 
-| Name                                              | 描述                                                                                                   |
+| 名称                                              | 说明                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [Implements::CanCastTo](#cancastto)               | 获取指向指定接口的指针。                                                                    |
-| [Implements：： CastToUnknown](#casttounknown)       | 获取指向基础 `IUnknown` 接口的指针。                                                        |
-| [Implements::FillArrayWithIid](#fillarraywithiid) | 将当前第零个模板参数指定的接口 ID 插入指定的数组元素。 |
+| [实现：：坎卡斯特托](#cancastto)               | 获取指向指定接口的指针。                                                                    |
+| [实现：：强制未知](#casttounknown)       | 获取指向基础`IUnknown`接口的指针。                                                        |
+| [实现：：用 Iid 填充](#fillarraywithiid) | 将当前零点模板参数指定的接口 ID 插入指定的数组元素。 |
 
-### <a name="protected-constants"></a>受保护常量
+### <a name="protected-constants"></a>受保护的常量
 
-| Name                              | 描述                                    |
+| 名称                              | 说明                                    |
 | --------------------------------- | ---------------------------------------------- |
-| [Implements::IidCount](#iidcount) | 保留已实现的接口 Id 的数量。 |
+| [实现：：IdCount](#iidcount) | 保存已实现的接口指示数。 |
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `I0`
 
@@ -151,13 +151,13 @@ struct __declspec(novtable) Implements<
 
 `Implements`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-**标头：** 实现。h
+**标题：** 实现.h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="cancastto"></a>Implements：： CanCastTo
+## <a name="implementscancastto"></a><a name="cancastto"></a>实现：：坎卡斯特托
 
 获取指向指定接口的指针。
 
@@ -173,20 +173,20 @@ __forceinline HRESULT CanCastTo(
 *riid*<br/>
 对接口 ID 的引用。
 
-*ppv*<br/>
-如果成功，则为由*riid*指定的接口的指针。
+*Ppv*<br/>
+如果成功，则指向*riid*指定的接口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK;否则，为指示错误的 HRESULT，如 E_NOINTERFACE。
+S_OK如果成功;否则，指示错误的 HRESULT，如E_NOINTERFACE。
 
 ### <a name="remarks"></a>备注
 
-这是执行 QueryInterface 操作的内部 helper 函数。
+这是执行查询接口操作的内部帮助器函数。
 
-## <a name="casttounknown"></a>Implements：： CastToUnknown
+## <a name="implementscasttounknown"></a><a name="casttounknown"></a>实现：：强制未知
 
-获取指向基础 `IUnknown` 接口的指针。
+获取指向基础`IUnknown`接口的指针。
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -194,15 +194,15 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>返回值
 
-此操作始终成功并返回 `IUnknown` 指针。
+此操作始终成功并返回`IUnknown`指针。
 
 ### <a name="remarks"></a>备注
 
-内部 helper 函数。
+内部帮助器功能。
 
-## <a name="fillarraywithiid"></a>Implements::FillArrayWithIid
+## <a name="implementsfillarraywithiid"></a><a name="fillarraywithiid"></a>实现：：用 Iid 填充
 
-将当前第零个模板参数指定的接口 ID 插入指定的数组元素。
+将当前零点模板参数指定的接口 ID 插入指定的数组元素。
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -214,18 +214,18 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>参数
 
 *index*<br/>
-从零开始的索引，它指示此操作的起始数组元素。 此操作完成后，*索引*将递增1。
+一个基于零的索引，指示此操作的起始数组元素。 此操作完成后，*索引*将递增 1。
 
-*iid*<br/>
-类型为 IID 的数组。
+*伊德*<br/>
+IID 类型的数组。
 
 ### <a name="remarks"></a>备注
 
-内部 helper 函数。
+内部帮助器功能。
 
-## <a name="iidcount"></a>Implements::IidCount
+## <a name="implementsiidcount"></a><a name="iidcount"></a>实现：：IdCount
 
-保留已实现的接口 Id 的数量。
+保存已实现的接口指示数。
 
 ```cpp
 static const unsigned long IidCount;

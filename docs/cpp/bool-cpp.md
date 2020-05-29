@@ -8,18 +8,18 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: db246cda79c778f37c5afbfda4a68c191c474e12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301621"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190490"
 ---
 # <a name="bool-c"></a>bool (C++)
 
 此关键字是内置类型。 此类型的变量可以具有值[true](../cpp/true-cpp.md)和[false](../cpp/false-cpp.md)。 条件表达式的类型为**bool** ，因此具有类型为**bool**的值。 例如，`i!=0` 现在具有 TRUE 或 FALSE，具体取决于 `i`的值。
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换言之，在给定变量 `b` 类型为**bool**后，将不再允许使用以下表达式：
+**Visual Studio 2017 版本15.3 及更高版本**（可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：后缀或前缀递增或递减运算符的操作数的类型不能为**bool**。 换言之，在给定变量 `b` 类型为**bool**后，将不再允许使用以下表达式：
 
 ```cpp
     b++;

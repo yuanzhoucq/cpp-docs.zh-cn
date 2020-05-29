@@ -1,11 +1,15 @@
 ---
 title: strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
 - _mbscpy_s_l
 - strcpy_s
+- _o__mbscpy_s
+- _o__mbscpy_s_l
+- _o_strcpy_s
+- _o_wcscpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,19 +45,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 12c20abc13846388b7a303af4e29de3cd2a60fed
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957861"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911848"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
 复制字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md) 具有安全性增强功能。
 
 > [!IMPORTANT]
-> **_mbscpy_s**和 **_mbscpy_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbscpy_s**和 **_mbscpy_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -107,11 +112,11 @@ errno_t _mbscpy_s_l(
 
 ### <a name="parameters"></a>参数
 
-dest<br/>
+dest**<br/>
 目标字符串缓冲区的位置。
 
 *dest_size*<br/>
-大小为窄和多字节函数的目标字符串缓冲区的大小，以及用于宽函数的**wchar_t** **单元。** 此值必须大于零且不能大于**RSIZE_MAX**。
+对于窄和多字节函数，目标字符串缓冲区的大小（以**字符**为单位），宽函数的**wchar_t**单元。 此值必须大于零且不大于**RSIZE_MAX**。
 
 *src*<br/>
 以 null 结尾的源字符串缓冲区。
@@ -125,25 +130,27 @@ dest<br/>
 
 ### <a name="error-conditions"></a>错误条件
 
-|dest|*dest_size*|*src*|返回值|*Dest*的内容|
+|dest**|*dest_size*|*src*|返回值|*Dest*的内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|*dest*[0] 设置为0|
-|任何|0 或过小|任何|**ERANGE**|*dest*[0] 设置为0|
+|**Null**|any|any|**EINVAL**|未修改|
+|any|any|**Null**|**EINVAL**|*dest*[0] 设置为0|
+|any|0 或过小|any|**ERANGE**|*dest*[0] 设置为0|
 
 ## <a name="remarks"></a>备注
 
-**Strcpy_s**函数将*src*地址中的内容（包括终止 null 字符）复制到*dest*指定的位置。 目标字符串必须足够大以保存源字符串及其结尾的 null 字符。 如果源和目标字符串重叠，则**strcpy_s**的行为是不确定的。
+**Strcpy_s**函数将*src*地址中的内容（包括终止 null 字符）复制到*dest*指定的位置。 目标字符串必须足够大以保存源字符串及其结尾的 null 字符。 如果源和目标字符串重叠，则**strcpy_s**的行为不确定。
 
-**wcscpy_s**是**strcpy_s**的宽字符版本，而 **_mbscpy_s**是多字节字符版本。 **Wcscpy_s**的参数是宽字符字符串; **_mbscpy_s**和 **_mbscpy_s_l**的字符串是多字节字符字符串。 否则这些函数具有相同行为。 **_mbscpy_s_l**与 **_mbscpy_s**相同，只不过它使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wcscpy_s**是**strcpy_s**的宽字符版本， **_mbscpy_s**为多字节字符版本。 **Wcscpy_s**的参数是宽字符字符串;**_mbscpy_s**和 **_mbscpy_s_l**的是多字节字符字符串。 否则这些函数具有相同行为。 **_mbscpy_s_l**与 **_mbscpy_s**相同，只不过它使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*dest*或*src*为空指针，或者如果目标字符串大小*dest_size*太小，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno** **设置为** **EINVAL** ，前提是*dest*或*src*为 null 指针，**并在**目标字符串太小。
+如果*dest*或*src*为空指针，或者如果目标字符串的大小*dest_size*太小，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则当*dest*或*src*为 null 指针时，这些函数将返回**EINVAL** ，并将**errno**设置为**EINVAL** ; 当目标字符串过小时，它们将返回**ERANGE**并将**errno**设置为**ERANGE** 。
 
 成功执行时，目标字符串始终以 null 结尾。
 
-在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量；并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量；并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -153,13 +160,13 @@ dest<br/>
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**strcpy_s**|\<string.h>|
 |**wcscpy_s**|\<string.h> 或 \<wchar.h>|
 |**_mbscpy_s**|\<mbstring.h>|
 
-这些函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -193,7 +200,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-在生成C++代码时，模板版本可能更易于使用。
+在生成 c + + 代码时，模板版本可能更易于使用。
 
 ```cpp
 // crt_wcscpy_s.cpp
@@ -224,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat、wcscat、_mbscat、_mbscat_l](strcat-wcscat-mbscat.md) <br/>

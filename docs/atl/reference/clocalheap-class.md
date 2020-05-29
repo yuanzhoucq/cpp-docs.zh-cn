@@ -1,5 +1,5 @@
 ---
-title: CLocalHeap 类
+title: C本地堆类
 ms.date: 11/04/2016
 f1_keywords:
 - CLocalHeap
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: a302ba4ea55c42ce214c8de4a24be843d6cb1b9f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 303e3b85ad11c309f862f59d6ec610701c4ef6db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496745"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326763"
 ---
-# <a name="clocalheap-class"></a>CLocalHeap 类
+# <a name="clocalheap-class"></a>C本地堆类
 
-此类使用 Win32 本地堆函数实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) 。
+此类使用 Win32 本地堆函数实现[IAtlMemMgr。](../../atl/reference/iatlmemmgr-class.md)
 
 > [!IMPORTANT]
->  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -35,19 +35,19 @@ class CLocalHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CLocalHeap::Allocate](#allocate)|调用此方法来分配内存块。|
-|[CLocalHeap::Free](#free)|调用此方法可释放此内存管理器分配的内存块。|
-|[CLocalHeap::GetSize](#getsize)|调用此方法可获取此内存管理器分配的内存块的分配大小。|
-|[CLocalHeap::Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
+|[CLocalHeap：分配](#allocate)|调用此方法来分配内存块。|
+|[CLocalHeap：免费](#free)|调用此方法以释放此内存管理器分配的内存块。|
+|[CLocalHeap：获取大小](#getsize)|调用此方法获取此内存管理器分配的内存块的分配大小。|
+|[CLocalHeap：重新分配](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
 
 ## <a name="remarks"></a>备注
 
 `CLocalHeap`使用 Win32 本地堆函数实现内存分配函数。
 
 > [!NOTE]
->  本地堆函数比其他内存管理函数慢, 并且不提供任何多个功能。 因此, 新应用程序应使用[堆函数](/windows/win32/Memory/heap-functions)。 这些都在[CWin32Heap](../../atl/reference/cwin32heap-class.md)类中提供。
+> 本地堆函数比其他内存管理函数慢，并且不提供尽可能多的功能。 因此，新应用程序应使用[堆函数](/windows/win32/Memory/heap-functions)。 这些在[CWin32Heap](../../atl/reference/cwin32heap-class.md)类中可用。
 
 ## <a name="example"></a>示例
 
@@ -61,9 +61,9 @@ class CLocalHeap : public IAtlMemMgr
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlmem
+**标题：** atlmem.h
 
-##  <a name="allocate"></a>CLocalHeap:: Allocate
+## <a name="clocalheapallocate"></a><a name="allocate"></a>CLocalHeap：分配
 
 调用此方法来分配内存块。
 
@@ -73,7 +73,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBytes*<br/>
+*n 字节*<br/>
 新内存块中请求的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -82,13 +82,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[CLocalHeap:: Free](#free)或[CLocalHeap:: 重新分配](#reallocate)以释放此方法分配的内存。
+调用[CLocalHeap：：免费](#free)或[ClocalHeap：重新分配](#reallocate)以释放此方法分配的内存。
 
-使用[LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)和 LMEM_FIXED 参数实现。
+使用带有LMEM_FIXED标志参数的[LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)实现。
 
-##  <a name="free"></a>CLocalHeap:: Free
+## <a name="clocalheapfree"></a><a name="free"></a>CLocalHeap：免费
 
-调用此方法可释放此内存管理器分配的内存块。
+调用此方法以释放此内存管理器分配的内存块。
 
 ```
 virtual void Free(void* p) throw();
@@ -96,16 +96,16 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
-指向此内存管理器以前分配的内存的指针。 NULL 是有效的值并且不执行任何操作。
+*P*<br/>
+指向此内存管理器以前分配的内存的指针。 NULL 是有效的值，不执行任何操作。
 
 ### <a name="remarks"></a>备注
 
-使用[LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)实现。
+使用[本地自由](/windows/win32/api/winbase/nf-winbase-localfree)实现 。
 
-##  <a name="getsize"></a>CLocalHeap:: GetSize
+## <a name="clocalheapgetsize"></a><a name="getsize"></a>CLocalHeap：获取大小
 
-调用此方法可获取此内存管理器分配的内存块的分配大小。
+调用此方法获取此内存管理器分配的内存块的分配大小。
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -113,18 +113,18 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
+*P*<br/>
 指向此内存管理器以前分配的内存的指针。
 
 ### <a name="return-value"></a>返回值
 
-返回分配的内存块的大小 (以字节为单位)。
+返回以字节为单位的分配内存块的大小。
 
 ### <a name="remarks"></a>备注
 
-使用[LocalSize](/windows/win32/api/winbase/nf-winbase-localsize)实现。
+使用[本地大小](/windows/win32/api/winbase/nf-winbase-localsize)实现 。
 
-##  <a name="reallocate"></a>CLocalHeap:: 重新分配
+## <a name="clocalheapreallocate"></a><a name="reallocate"></a>CLocalHeap：重新分配
 
 调用此方法以重新分配由该内存管理器分配的内存。
 
@@ -134,10 +134,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
+*P*<br/>
 指向此内存管理器以前分配的内存的指针。
 
-*nBytes*<br/>
+*n 字节*<br/>
 新内存块中请求的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -146,11 +146,11 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[CLocalHeap:: free](#free)可释放由此方法分配的内存。
+调用[CLocalHeap：：可自由](#free)释放此方法分配的内存。
 
-使用[LocalReAlloc](/windows/win32/api/winbase/nf-winbase-localrealloc)实现。
+使用[本地ReAlloc](/windows/win32/api/winbase/nf-winbase-localrealloc)实现。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../../atl/atl-class-overview.md)<br/>
 [CComHeap 类](../../atl/reference/ccomheap-class.md)<br/>

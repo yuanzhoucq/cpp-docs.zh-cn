@@ -1,9 +1,11 @@
 ---
 title: remove、_wremove
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wremove
 - remove
+- _o__wremove
+- _o_remove
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 2ceedcf9d3cc2b26a8d91ca923f81f0ce539b64a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949439"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917838"
 ---
 # <a name="remove-_wremove"></a>remove、_wremove
 
@@ -68,7 +71,9 @@ int _wremove(
 
 ## <a name="remarks"></a>备注
 
-**remove** 函数删除由  *路径指定的文件。* **_wremove**是宽字符**版本的分隔符**; **_wremove**的*path*参数是宽字符字符串。 否则， **_wremove 和**的行为相同。 必须先结束对文件的所有处理，然后才能删除文件。
+**remove** 函数删除由 * 路径指定的文件。* **_wremove**是 **_remove**的宽字符版本;**_wremove**的*path*参数是宽字符字符串。 否则 **_wremove**和 **_remove**的行为相同。 必须先结束对文件的所有处理，然后才能删除文件。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -78,12 +83,12 @@ int _wremove(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**remove**|\<stdio.h> 或 \<io.h>|
 |**_wremove**|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -118,7 +123,7 @@ This file will be deleted.
 Deleted 'CRT_REMOVE.TXT'
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_unlink、_wunlink](unlink-wunlink.md)<br/>

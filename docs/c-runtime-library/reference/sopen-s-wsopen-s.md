@@ -1,9 +1,11 @@
 ---
 title: _sopen_s、_wsopen_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _sopen_s
 - _wsopen_s
+- _o__sopen_s
+- _o__wsopen_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 86bfef0d8aab81ae990f1e111ec4870cd4b854b8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947899"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912694"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s、_wsopen_s
 
@@ -69,7 +72,7 @@ errno_t _wsopen_s(
 *pfh*<br/>
 文件句柄或 -1（如果出现错误）。
 
-*filename*<br/>
+*名字*<br/>
 文件名。
 
 *oflag*<br/>
@@ -88,7 +91,7 @@ errno_t _wsopen_s(
 |errno 值|条件|
 |-|-|
 | **EACCES** |  给定路径是目录，或者文件是只读的，但是已尝试打开以供写入操作。 |
-| **EEXIST** |  已指定 **_O_CREAT**和 **_O_EXCL**标志，但*filename*已经存在。 |
+| **EEXIST** |  指定了 **_O_CREAT**和 **_O_EXCL**标志，但*filename*已经存在。 |
 | **EINVAL** |  *Oflag*、 *shflag*或*pmode*参数无效，或者*pfh*或*filename*为 null 指针。 |
 | **EMFILE** | 没有更多可用的文件描述符。 |
 | **ENOENT** | 未找到文件或路径。 |
@@ -101,7 +104,9 @@ errno_t _wsopen_s(
 
 ## <a name="remarks"></a>备注
 
-**_Sopen_s**函数打开*文件名*指定的文件，并根据*oflag*和*shflag*的定义，准备文件以供共享读取或写入。 **_wsopen_s**是 **_sopen_s**的宽字符版本; **_wsopen_s**的*filename*参数是宽字符字符串。 否则， **_wsopen_s**和 **_sopen_s**的行为相同。
+**_Sopen_s**函数将打开*文件名*指定的文件，并准备文件以供*oflag*和*shflag*定义的共享读取或写入。 **_wsopen_s**是 **_sopen_s**的宽字符版本;**_wsopen_s**的*filename*参数是宽字符字符串。 否则 **_wsopen_s**和 **_sopen_s**的行为相同。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,7 +114,7 @@ errno_t _wsopen_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-整数表达式*oflag*是通过组合在 fcntl.h> > 中\<定义的一个或多个清单常量而形成的。 当两个或多个常量构成参数*oflag*时，它们将与按位 "或" **&#124;** 运算符（）组合在一起。
+整数表达式*oflag*是通过组合在 fcntl.h>> 中\<定义的一个或多个清单常量而形成的。 当两个或多个常量构成参数*oflag*时，它们将与按位 "或" 运算符（ **&#124;** ）组合在一起。
 
 |*oflag*常量|行为|
 |-|-|
@@ -118,14 +123,14 @@ errno_t _wsopen_s(
 | **_O_CREAT** | 创建文件并打开它以供写入。 如果*文件名*指定的文件存在，则不起作用。 指定 **_O_CREAT**时， *pmode*参数是必需的。 |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | 创建一个文件作为临时文件，如果可能，请不要将它刷新到磁盘中。 指定 **_O_CREAT**时， *pmode*参数是必需的。 |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | 创建一个文件作为临时文件；在关闭最后一个文件描述符时，删除该文件。 指定 **_O_CREAT**时， *pmode*参数是必需的。 |
-| **_O_CREAT** &#124; ` _O_EXCL` | 如果*文件名*指定的文件存在，则返回一个错误值。 仅当与 **_O_CREAT**一起使用时才适用。 |
+| **_O_CREAT** &#124;`_O_EXCL` | 如果*文件名*指定的文件存在，则返回一个错误值。 仅当与 **_O_CREAT**一起使用时才适用。 |
 | **_O_NOINHERIT** | 阻止创建共享文件描述符。 |
 | **_O_RANDOM** | 指定缓存针对（但不限于）从磁盘的随机访问进行优化。 |
 | **_O_RDONLY** | 打开文件以供只读。 不能与 **_O_RDWR**或 **_O_WRONLY**一起指定。 |
 | **_O_RDWR** | 打开文件以供读取和写入。 不能与 **_O_RDONLY**或 **_O_WRONLY**一起指定。 |
 | **_O_SEQUENTIAL** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
 | **_O_TEXT** | 在文本（转换）模式下打开文件。 （有关详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md)。） |
-| **_O_TRUNC** | 打开文件并将其长度截断为零；该文件必须具有写入权限。 不能与 **_O_RDONLY**一起指定。 用于 **_O_CREAT**的 **_O_TRUNC**打开现有文件或创建文件。 **注意：** **_O_TRUNC**标志会销毁指定文件的内容。 |
+| **_O_TRUNC** | 打开文件并将其长度截断为零；该文件必须具有写入权限。 不能与 **_O_RDONLY**一起指定。 与 **_O_CREAT**一起使用 **_O_TRUNC**会打开现有文件或创建文件。 **注意：****_O_TRUNC**标志会销毁指定文件的内容。 |
 | **_O_WRONLY** | 打开文件以供只写。 不能与 **_O_RDONLY**或 **_O_RDWR**一起指定。 |
 | **_O_U16TEXT** | 在 Unicode UTF-16 模式下打开文件。 |
 | **_O_U8TEXT** | 在 Unicode UTF-8 模式下打开文件。 |
@@ -133,11 +138,11 @@ errno_t _wsopen_s(
 
 若要指定文件访问模式，必须指定 **_O_RDONLY**、 **_O_RDWR**或 **_O_WRONLY**。 对于访问模式，不存在默认值。
 
-使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型**wchar_t**的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为**wchar_t**类型的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
+当使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型**wchar_t**的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型**wchar_t**的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
 
-如果 **_sopen_s**是通过 **_O_WRONLY** |  **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用的，则它首先会尝试打开文件以进行读取和写入、读取 BOM，然后重新打开它。仅用于写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
+如果通过 **_O_WRONLY** | **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用 **_sopen_s** ，它将首先尝试打开文件以进行读取和写入、读取 BOM，然后将其重新打开以进行写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
 
-自变量*shflag*是一个常量表达式，它包含在 share > 中\<定义的以下清单常量之一。
+自变量*shflag*是一个常量表达式，它包含在 share> 中\<定义的以下清单常量之一。
 
 |*shflag*常量|行为|
 |-|-|
@@ -146,7 +151,7 @@ errno_t _wsopen_s(
 | **_SH_DENYRD** | 拒绝对文件的读取访问。 |
 | **_SH_DENYNO** | 允许读取和写入访问。 |
 
-*Pmode*参数始终是必需的，不同于在 **_sopen**中。 指定 **_O_CREAT**时，如果该文件不存在，则*pmode*将指定文件的权限设置，这是在首次关闭新文件时设置的。 否则，将忽略*pmode* 。 *pmode*是一个整数表达式，它包含 sys\stat.h > 中\<定义的清单常量 **_S_IWRITE**和 **_S_IREAD**。 当给定这两个常量时，将使用按位“或”运算符合并它们。 *Pmode*的含义如下所示。
+*Pmode*参数始终是必需的，与 **_sopen**中的不同。 指定 **_O_CREAT**时，如果该文件不存在， *pmode*将指定文件的权限设置，该设置将在首次关闭新文件时设置。 否则，将忽略*pmode* 。 *pmode*是一个整数表达式，它包含在 sys\stat.h> 中\<定义的清单常量 **_S_IWRITE**和 **_S_IREAD**。 当给定这两个常量时，将使用按位“或”运算符合并它们。 *Pmode*的含义如下所示。
 
 |*pmode*|含义|
 |-|-|
@@ -154,28 +159,28 @@ errno_t _wsopen_s(
 | **_S_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
-如果未授予写入权限，则该文件为只读。 在 Windows 操作系统中，所有文件均可读；不可能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** |  **_S_IWRITE**模式是等效的。
+如果未授予写入权限，则该文件为只读。 在 Windows 操作系统中，所有文件均可读；不可能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** | **_S_IWRITE**的模式是等效的。
 
-在设置权限之前， **_sopen_s**会将当前文件权限掩码应用到*pmode* 。 （请参阅 [_umask](umask.md)。）
+**_sopen_s**在设置权限之前将当前文件权限掩码应用到*pmode* 。 （请参阅 [_umask](umask.md)。）
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_sopen_s**|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|
 |**_wsopen_s**|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys/types.h>、\<sys/stat.h>、\<share.h>|
 
-**_sopen_s**和 **_wsopen_s**是 Microsoft 扩展。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_sopen_s**和 **_wsopen_s**是 Microsoft 扩展。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [_locking](locking.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
-[fopen、_wfopen_wfopen](fopen-wfopen.md)<br/>
+[fopen、_wfopen](fopen-wfopen.md)<br/>
 [_fsopen、_wfsopen](fsopen-wfsopen.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>

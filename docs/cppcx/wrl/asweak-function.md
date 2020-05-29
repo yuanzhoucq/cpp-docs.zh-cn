@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398844"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214170"
 ---
 # <a name="asweak-function"></a>AsWeak 函数
 
@@ -28,27 +28,27 @@ HRESULT AsWeak(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-指向参数的类型的指针*p*。
+指向参数*p*的类型的指针。
 
 *p*<br/>
 类型的实例。
 
 *pWeak*<br/>
-此操作完成后，对参数的弱引用的指针*p*。
+此操作完成后，指向参数*p*的弱引用的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则此操作，则为 S_OK否则为错误 HRESULT，指示失败的原因。
+S_OK，如果此操作成功，则为;否则，会出现指示失败原因的错误 HRESULT。
 
 ## <a name="requirements"></a>要求
 
 **标头：** client.h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

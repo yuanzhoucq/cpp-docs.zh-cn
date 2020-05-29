@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172069"
 ---
 # <a name="overview-of-generics-in-ccli"></a>C++/CLI 中的泛型概述
 
@@ -29,7 +29,7 @@ C++ 支持模板，模板和泛型均支持参数化类型创建类型化的集�
 
 ## <a name="generic-functions-and-types"></a>泛型函数和类型
 
-类类型只要是托管类型，则可以是泛型。 此示例可能是 `List` 类。 列表中的对象类型为类型参数。 如果需要对很多不同类型对象使用的 `List` 类，在使用泛型前，你可能已使用将 `System::Object` 用作项目类型的 `List`。 但这会使任何对象（包括错误类型的对象）用于列表。 这种列表称为非类型化集合类。 在最佳情况下，您可以在运行时检查类型并引发异常。 或者，可能使用了模板，但它在编译为程序集后将丢失其泛型特性。 程序集的使用者不能创建该模板的专用化。 使用泛型，可以创建类型化集合类，如 `List<int>`（读作“int 列表”）和 `List<double>`（读作“double 列表”）。如果尝试在类型化集合中放入集合未指定接受的类型，这便会生成编译时错误。 此外，这些类型在编译后仍然是泛型。
+类类型只要是托管类型，则可以是泛型。 此示例可能是 `List` 类。 列表中的对象类型为类型参数。 如果需要对很多不同类型对象使用的 `List` 类，在使用泛型前，你可能已使用将 `List` 用作项目类型的 `System::Object`。 但这会使任何对象（包括错误类型的对象）用于列表。 这种列表称为非类型化集合类。 在最佳情况下，您可以在运行时检查类型并引发异常。 或者，可能使用了模板，但它在编译为程序集后将丢失其泛型特性。 程序集的使用者不能创建该模板的专用化。 使用泛型，可以创建类型化集合类，如 `List<int>`（读作“int 列表”）和 `List<double>`（读作“double 列表”）。如果尝试在类型化集合中放入集合未指定接受的类型，这便会生成编译时错误。 此外，这些类型在编译后仍然是泛型。
 
 有关泛型类的语法说明，可参阅[泛型类 (C++/CLI)](generic-classes-cpp-cli.md)。 新命名空间 <xref:System.Collections.Generic> 引入了一组参数化集合类型，包括 <xref:System.Collections.Generic.Dictionary%602>、<xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.LinkedList%601>。
 
@@ -124,12 +124,12 @@ int main() {
 
 这些限制也适用于运算符。 如果类型不支持这些运算符，那么不受约束的泛型类型参数就不能使用 `==` 和 `!=` 运算符比较类型参数的两个实例。 这些检查是对泛型的必要检查，但不适用于模板，因为当来不及检查成员是否无效时，泛型可以在运行时使用满足约束的任何类专用化。
 
-通过使用 `()` 运算符，可以创建类型参数的默认实例。 例如:
+通过使用 `()` 运算符，可以创建类型参数的默认实例。 例如：
 
 `T t = T();`
 
 其中 `T` 是泛型类或方法定义中的类型参数，可将变量初始化为其默认值。 如果 `T` 是 ref 类，它将为 null 指针；如果 `T` 是值类，对象将初始化为零。 这称为“默认初始值设定项”。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [泛型](generics-cpp-component-extensions.md)

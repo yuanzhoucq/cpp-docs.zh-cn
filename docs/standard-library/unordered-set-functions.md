@@ -6,11 +6,11 @@ f1_keywords:
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
 ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257762"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427691"
 ---
 # <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt; 函数
 

@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy_s、_mbsnbcpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
+- _o__mbsnbcpy_s
+- _o__mbsnbcpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: fbbdbeb671f501974ceee9565b8d668e8281f92e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624305"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911877"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
 
@@ -91,7 +94,7 @@ errno_t _mbsnbcpy_s_l(
 *strSource*<br/>
 要复制的字符串。
 
-*count*<br/>
+*计数*<br/>
 要复制的字节数。
 
 *locale*<br/>
@@ -105,14 +108,16 @@ errno_t _mbsnbcpy_s_l(
 
 **_Mbsnbcpy_s**函数将*计数*字节从*strSource*复制到*strDest*。 如果*count*超过*strDest*的大小，则其中一个输入字符串为 Null 指针，或*sizeInBytes*或*count*为0，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL**。 如果源和目标字符串重叠，则 **_mbsnbcpy_s**的行为是不确定的。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
-> 与此函数的不安全版本不同， **_mbsnbcpy_s**不会执行任何空填充，并且始终为 null 会终止字符串。
+> 与此函数的不安全版本不同， **_mbsnbcpy_s**不会进行任何 null 填充，并且始终为 null 会终止字符串。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -123,14 +128,14 @@ errno_t _mbsnbcpy_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcpy_s**|\<mbstring.h>|
 |**_mbsnbcpy_s_l**|\<mbstring.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

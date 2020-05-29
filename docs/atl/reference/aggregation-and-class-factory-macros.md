@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: 38239942b99a29b5777deef8000d9f1ab85b10e6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 554210ab0a26bc54a716a389a1660c4cbd42a209
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492198"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168652"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 
@@ -47,11 +47,11 @@ ms.locfileid: "69492198"
 
 **标头：** atlcom。h
 
-##  <a name="declare_aggregatable"></a>  DECLARE_AGGREGATABLE
+## <a name="declare_aggregatable"></a><a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE
 
 指定可以聚合对象。
 
-```
+```cpp
 DECLARE_AGGREGATABLE( x )
 ```
 
@@ -68,11 +68,11 @@ DECLARE_AGGREGATABLE( x )
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_classfactory"></a>DECLARE_CLASSFACTORY
+## <a name="declare_classfactory"></a><a name="declare_classfactory"></a>DECLARE_CLASSFACTORY
 
 将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)声明为类工厂。
 
-```
+```cpp
 DECLARE_CLASSFACTORY()
 ```
 
@@ -84,11 +84,11 @@ DECLARE_CLASSFACTORY()
 
 [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]
 
-##  <a name="ccomclassfactory_class"></a>CComClassFactory 类
+## <a name="ccomclassfactory-class"></a><a name="ccomclassfactory_class"></a>CComClassFactory 类
 
 此类实现[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)接口。
 
-```
+```cpp
 class CComClassFactory : public IClassFactory,
 public CComObjectRootEx<CComGlobalsThreadModel>
 ```
@@ -97,7 +97,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 `CComClassFactory`实现[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)接口，该接口包含用于创建特定 CLSID 对象的方法，以及在内存中锁定类工厂以允许更快地创建新对象。 `IClassFactory`必须为在系统注册表中注册的每个类实现，并为其分配 CLSID。
 
-ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包括声明`CComClassFactory`为默认类工厂的宏[DECLARE_CLASSFACTORY](#declare_classfactory)。 若要重写此默认值，请在类定义中指定 DECLARE_CLASSFACTORY*XXX*宏之一。 例如， [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)宏为类工厂使用指定的类：
+ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏[DECLARE_CLASSFACTORY](#declare_classfactory)，该宏声明`CComClassFactory`为默认类工厂。 若要重写此默认值，请在类定义中指定 DECLARE_CLASSFACTORY*XXX*宏之一。 例如， [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)宏为类工厂使用指定的类：
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
@@ -111,11 +111,11 @@ ATL 提供三个声明类工厂的宏：
 
 - [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)使用构造单个[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)对象的[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)。
 
-##  <a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX
+## <a name="declare_classfactory_ex"></a><a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX
 
 声明`cf`为类工厂。
 
-```
+```cpp
 DECLARE_CLASSFACTORY_EX( cf )
 ```
 
@@ -126,40 +126,40 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="remarks"></a>备注
 
-*Cf*参数必须从[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)派生`CreateInstance`并重写方法。
+*Cf*参数必须从[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)派生并重写`CreateInstance`方法。
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md)包括[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏指定`CComClassFactory`为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY_EX 宏，可以覆盖此默认值。
+[CComCoClass](../../atl/reference/ccomcoclass-class.md)包含[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏指定`CComClassFactory`为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY_EX 宏，可以覆盖此默认值。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
-##  <a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2
+## <a name="declare_classfactory2"></a><a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2
 
 将[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)声明为类工厂。
 
-```
+```cpp
 DECLARE_CLASSFACTORY2( lic )
 ```
 
 ### <a name="parameters"></a>参数
 
-*lic*<br/>
-中实现`VerifyLicenseKey`、 `GetLicenseKey`和的类。`IsLicenseValid`
+*许可证*<br/>
+中实现`VerifyLicenseKey`、 `GetLicenseKey`和`IsLicenseValid`的类。
 
 ### <a name="remarks"></a>备注
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md)包括[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)指定为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY2 宏，可以覆盖此默认值。
+[CComCoClass](../../atl/reference/ccomcoclass-class.md)包含[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)指定为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY2 宏，可以覆盖此默认值。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-##  <a name="ccomclassfactory2_class"></a>CComClassFactory2 类
+## <a name="ccomclassfactory2-class"></a><a name="ccomclassfactory2_class"></a>CComClassFactory2 类
 
 此类实现[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)接口。
 
-```
+```cpp
 template <class license>
 class  CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>参数
 
-*license*<br/>
+*照*<br/>
 实现以下静态函数的类：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -181,42 +181,42 @@ class  CComClassFactory2 : public IClassFactory2,
 
 `CComClassFactory2`实现[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)接口，该接口是[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)的扩展。 `IClassFactory2`通过许可证控制对象的创建。 在许可计算机上执行的类工厂可以提供运行时许可证密钥。 此许可证密钥允许应用程序在完整的计算机许可证不存在时实例化对象。
 
-ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏[DECLARE_CLASSFACTORY](#declare_classfactory)，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)声明为默认类工厂。 若要`CComClassFactory2`使用，请在对象的类定义中指定[DECLARE_CLASSFACTORY2](#declare_classfactory2)宏。 例如:
+ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏[DECLARE_CLASSFACTORY](#declare_classfactory)，它将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)声明为默认类工厂。 若要`CComClassFactory2`使用，请在对象的类定义中指定[DECLARE_CLASSFACTORY2](#declare_classfactory2)宏。 例如：
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-`CMyLicense`，的模板`CComClassFactory2`参数必须实现静态函数`VerifyLicenseKey`、 `GetLicenseKey`和`IsLicenseValid`。 下面是一个简单许可证类的示例：
+`CMyLicense`，的模板`CComClassFactory2`参数必须实现静态函数`VerifyLicenseKey`、 `GetLicenseKey`和。 `IsLicenseValid` 下面是一个简单许可证类的示例：
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]
 
 `CComClassFactory2`派生自`CComClassFactory2Base`和*许可证*。 `CComClassFactory2Base`反过来，派生自`IClassFactory2`和**CComObjectRootEx\< CComGlobalsThreadModel >**。
 
-##  <a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD
+## <a name="declare_classfactory_auto_thread"></a><a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD
 
 将[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)声明为类工厂。
 
-```
+```cpp
 DECLARE_CLASSFACTORY_AUTO_THREAD()
 ```
 
 ### <a name="remarks"></a>备注
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md)包括[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)指定为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY_AUTO_THREAD 宏，可以覆盖此默认值。
+[CComCoClass](../../atl/reference/ccomcoclass-class.md)包含[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)指定为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY_AUTO_THREAD 宏，可以覆盖此默认值。
 
-在多个单元中创建对象（在进程外服务器中）时，请将 DECLARE_CLASSFACTORY_AUTO_THREAD 添加到类。
+在多个单元中创建对象（在进程外服务器中）时，请将 DECLARE_CLASSFACTORY_AUTO_THREAD 添加到类中。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread 类
+## <a name="ccomclassfactoryautothread-class"></a><a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread 类
 
 此类实现[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)接口，并允许在多个单元中创建对象。
 
 > [!IMPORTANT]
->  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
-```
+```cpp
 class CComClassFactoryAutoThread : public IClassFactory,
 public CComObjectRootEx<CComGlobalsThreadModel>
 ```
@@ -225,39 +225,39 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 `CComClassFactoryAutoThread`类似于[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)，但允许在多个单元中创建对象。 若要利用此支持，请从[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)派生 EXE 模块。
 
-ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏[DECLARE_CLASSFACTORY](#declare_classfactory)，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)声明为默认类工厂。 若要`CComClassFactoryAutoThread`使用，请在对象的类定义中指定[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)宏。 例如:
+ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏[DECLARE_CLASSFACTORY](#declare_classfactory)，它将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)声明为默认类工厂。 若要`CComClassFactoryAutoThread`使用，请在对象的类定义中指定[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)宏。 例如：
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON
+## <a name="declare_classfactory_singleton"></a><a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON
 
 将[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)声明为类工厂。
 
-```
+```cpp
 DECLARE_CLASSFACTORY_SINGLETON( obj )
 ```
 
 ### <a name="parameters"></a>参数
 
-*obj*<br/>
+obj**<br/>
 中类对象的名称。
 
 ### <a name="remarks"></a>备注
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md)包括[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)指定为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY_SINGLETON 宏，可以覆盖此默认值。
+[CComCoClass](../../atl/reference/ccomcoclass-class.md)包含[DECLARE_CLASSFACTORY](#declare_classfactory)宏，该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)指定为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY_SINGLETON 宏，可以覆盖此默认值。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
-##  <a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton 类
+## <a name="ccomclassfactorysingleton-class"></a><a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton 类
 
 此类派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md) ，并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)构造单个对象。
 
 > [!IMPORTANT]
->  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
-```
+```cpp
 template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
@@ -271,15 +271,15 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="remarks"></a>备注
 
-ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包括声明`CComClassFactory`为默认类工厂的宏[DECLARE_CLASSFACTORY](#declare_classfactory)。 若要`CComClassFactorySingleton`使用，请在对象的类定义中指定[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)宏。 例如:
+ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏[DECLARE_CLASSFACTORY](#declare_classfactory)，该宏声明`CComClassFactory`为默认类工厂。 若要`CComClassFactorySingleton`使用，请在对象的类定义中指定[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)宏。 例如：
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
-##  <a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN
+## <a name="declare_get_controlling_unknown"></a><a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN
 
 声明虚函数`GetControllingUnknown`。
 
-```
+```cpp
 DECLARE_GET_CONTROLLING_UNKNOWN()
 ```
 
@@ -287,11 +287,11 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 
 如果收到未定义的编译器错误消息`GetControllingUnknown` （例如，在中`CComAggregateCreator`），请将此宏添加到对象。
 
-##  <a name="declare_not_aggregatable"></a>  DECLARE_NOT_AGGREGATABLE
+## <a name="declare_not_aggregatable"></a><a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE
 
 指定不能聚合您的对象。
 
-```
+```cpp
 DECLARE_NOT_AGGREGATABLE( x )
 ```
 
@@ -310,11 +310,11 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_only_aggregatable"></a>  DECLARE_ONLY_AGGREGATABLE
+## <a name="declare_only_aggregatable"></a><a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE
 
 指定必须聚合您的对象。
 
-```
+```cpp
 DECLARE_ONLY_AGGREGATABLE( x )
 ```
 
@@ -325,7 +325,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="remarks"></a>备注
 
-如果尝试`CoCreate`将对象用作非聚合对象，DECLARE_ONLY_AGGREGATABLE 会导致错误（E_FAIL）。
+如果尝试`CoCreate`将对象作为非聚合对象，DECLARE_ONLY_AGGREGATABLE 会导致错误（E_FAIL）。
 
 默认情况下， [CComCoClass](../../atl/reference/ccomcoclass-class.md)包含[DECLARE_AGGREGATABLE](#declare_aggregatable)宏，该宏指定可以聚合对象。 若要重写此默认行为，请在类定义中包括 DECLARE_ONLY_AGGREGATABLE。
 
@@ -333,11 +333,11 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 [!code-cpp[NVC_ATL_Windowing#125](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]
 
-##  <a name="declare_poly_aggregatable"></a>  DECLARE_POLY_AGGREGATABLE
+## <a name="declare_poly_aggregatable"></a><a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE
 
 指定在创建对象时**创建\< CComPolyObject** *x* **>** 的实例。
 
-```
+```cpp
 DECLARE_POLY_AGGREGATABLE( x )
 ```
 
@@ -350,23 +350,23 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 在创建过程中，将检查外部 "未知" 的值。 如果为 NULL， `IUnknown`则为非聚合对象实现。 如果外部未知值不为 NULL， `IUnknown`则为聚合对象实现。
 
-使用 DECLARE_POLY_AGGREGATABLE 的优点是，你可以避免在模块`CComAggObject`中`CComObject`同时使用和来处理聚合和非聚合事例。 单个`CComPolyObject`对象处理两种情况。 这意味着在您的模块中只存在一个 vtable 副本和一个函数副本。 如果 vtable 很大，这可能会显著降低模块大小。 但是，如果你的 vtable 很小， `CComPolyObject`则使用可能会导致模块大小稍微大一些，因为它未针对聚合或非聚合对象进行优化， `CComAggObject`如`CComObject`和。
+使用 DECLARE_POLY_AGGREGATABLE 的优点在于，您可以避免在模块`CComAggObject`中`CComObject`同时使用和来处理聚合和非聚合情况。 单个`CComPolyObject`对象处理两种情况。 这意味着在您的模块中只存在一个 vtable 副本和一个函数副本。 如果 vtable 很大，这可能会显著降低模块大小。 但是，如果你的 vtable 很小， `CComPolyObject`则使用可能会导致模块大小稍微大一些，因为它未针对聚合或非聚合对象进行优化， `CComAggObject`如`CComObject`和。
 
 如果使用 ATL 控件向导创建完全控件，则会在对象中自动声明 DECLARE_POLY_AGGREGATABLE 宏。
 
-##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT
+## <a name="declare_protect_final_construct"></a><a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT
 
 保护对象不被删除（在[FinalConstruct](ccomobjectrootex-class.md#finalconstruct)期间）内部聚合对象递增引用计数，然后将计数递减为0。
 
-```
+```cpp
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```
 
-##  <a name="declare_view_status"></a>DECLARE_VIEW_STATUS
+## <a name="declare_view_status"></a><a name="declare_view_status"></a>DECLARE_VIEW_STATUS
 
 将此宏置于 ATL ActiveX 控件的控件类中，以指定容器的 VIEWSTATUS 标志。
 
-```
+```cpp
 DECLARE_VIEW_STATUS( statusFlags )
 ```
 
@@ -379,6 +379,6 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [宏](../../atl/reference/atl-macros.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 1bd0d7638a8e7f2e3c671229e1f8d118d681e6f4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.openlocfilehash: 0dc8488acc90f1a38a4c0de0f052590ef4f398af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492576"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335436"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 独立应用程序和并行程序集疑难解答
 
@@ -27,28 +27,28 @@ ms.locfileid: "69492576"
 
 如果应用程序没有清单，并且依赖于 Windows 在典型搜索位置找不到的 DLL，则可能会显示类似于下面这样的错误消息：
 
-- 由于找不到*所需 DLL* , 此应用程序未能启动。 重新安装应用程序可能会修复此问题。
+- 没有找到所需 DLL，因此这个应用程序未能启动  。 重新安装应用程序可能会修复此问题。
 
 如果应用程序部署在未安装 Visual Studio 的计算机上，并且它在出现类似于以上消息的错误消息的情况下崩溃，请检查以下内容：
 
-1. 按照[了解可视化C++应用程序的依赖项](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)中所述的步骤进行操作。 Dependency Walker 可以显示应用程序或 DLL 的大多数依赖项。 如果观察到某些 DLL 缺失，请在尝试运行应用程序的计算机上安装它们。
+1. 按照[理解 Visual C++ 应用程序的依赖项](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)中介绍的步骤执行。 Dependency Walker 可以显示应用程序或 DLL 的大多数依赖项。 如果观察到某些 DLL 缺失，请在尝试运行应用程序的计算机上安装它们。
 
-1. 操作系统加载程序会使用应用程序清单加载应用程序所依赖的程序集。 清单可以作为资源嵌入在二进制文件中，或作为单独文件安装在应用程序文件夹中。 若要检查是否将清单嵌入到二进制文件中, 请在 Visual Studio 中打开二进制文件, 并在其资源列表中查找 RT_MANIFEST。 如果找不到嵌入清单, 请在应用程序文件夹中查找名为的文件, 如 < binary_name >。\<扩展 >。
+1. 操作系统加载程序会使用应用程序清单加载应用程序所依赖的程序集。 清单可以作为资源嵌入在二进制文件中，或作为单独文件安装在应用程序文件夹中。 若要检查清单是否嵌入在二进制文件中，请在 Visual Studio 中打开二进制文件，然后在其资源列表中查找 RT_MANIFEST。 如果找不到嵌入的清单，请在应用程序文件夹中查找名称类似于 <binary_name>.\<extension>.manifest 的文件。
 
-1. 如果应用程序依赖于并行程序集，但不存在清单，则必须确保链接器为项目生成清单。 检查项目的 "**项目属性**" 对话框中的 "链接器" 选项 "**生成清单**"。
+1. 如果应用程序依赖于并行程序集，但不存在清单，则必须确保链接器为项目生成清单。 在项目的“项目属性”对话框中选中链接器选项“生成清单”   。
 
-1. 如果清单嵌入在二进制文件中，请确保 RT_MANIFEST 的 ID 对于此类型的二进制文件是正确的。 有关要使用的资源 ID 的详细信息, 请参阅[使用并行程序集作为资源 (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource)。 如果清单位于单独文件中，请在 XML 编辑器或文本编辑器中打开它。 有关用于部署的清单和规则的详细信息, 请参阅[清单](/windows/win32/sbscs/manifests)。
+1. 如果清单嵌入在二进制文件中，请确保 RT_MANIFEST 的 ID 对于此类型的二进制文件是正确的。 有关要使用的资源 ID 的详细信息，请参阅[使用并行程序集作为资源 (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource)。 如果清单位于单独文件中，请在 XML 编辑器或文本编辑器中打开它。 有关清单和部署规则的详细信息，请参阅[清单](/windows/win32/sbscs/manifests)。
 
    > [!NOTE]
    > 如果嵌入式清单和单独清单文件同时存在，则操作系统加载程序使用嵌入式清单，忽略单独文件。 但是，在 Windows XP 中，情况相反 — 使用单独清单文件，而忽略嵌入式清单。
 
-1. 我们建议将清单嵌入在每个 DLL 中，因为在通过 `LoadLibrary` 调用加载 DLL 时会忽略外部清单。 有关详细信息, 请参阅[程序集清单](/windows/win32/SbsCs/assembly-manifests)。
+1. 我们建议将清单嵌入在每个 DLL 中，因为在通过 `LoadLibrary` 调用加载 DLL 时会忽略外部清单。 有关详细信息，请参阅[程序集清单](/windows/win32/SbsCs/assembly-manifests)。
 
-1. 检查清单中枚举的所有程序集是否都正确安装在计算机上。 每个程序集都通过其名称、版本号和处理器体系结构在清单中进行指定。 如果你的应用程序依赖于并行程序集, 请检查是否在计算机上正确安装了这些程序集, 以便操作系统加载程序可以找到它们, 如[程序集搜索顺序](/windows/win32/SbsCs/assembly-searching-sequence)中所述。 请记住，64 位程序集不能在 32 位进程中加载，并且不能在 32 位操作系统上执行。
+1. 检查清单中枚举的所有程序集是否都正确安装在计算机上。 每个程序集都通过其名称、版本号和处理器体系结构在清单中进行指定。 如果应用程序依赖于并行程序集，请检查这些程序集是否正确安装在计算机上，以便操作系统加载程序可以找到它们（如[程序集搜索顺序](/windows/win32/SbsCs/assembly-searching-sequence)中所述）。 请记住，64 位程序集不能在 32 位进程中加载，并且不能在 32 位操作系统上执行。
 
 ## <a name="example"></a>示例
 
-假设我们有一个使用视觉对象C++构建的应用程序 appl.exe。 该应用程序清单作为二进制资源 RT_MANIFEST（ID 等于 1）嵌入在 appl.exe 中，或存储为单独文件 appl.exe.manifest。 此清单的内容类似于下面这样：
+假设我们有一个使用 Visual C++ 生成的应用程序 appl.exe。 该应用程序清单作为二进制资源 RT_MANIFEST（ID 等于 1）嵌入在 appl.exe 中，或存储为单独文件 appl.exe.manifest。 此清单的内容类似于下面这样：
 
 ```
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -74,7 +74,7 @@ ms.locfileid: "69492576"
 </assembly>
 ```
 
-并行程序集还可以使用[发行者配置文件](/windows/win32/SbsCs/publisher-configuration-files)(也称为策略文件) 将应用程序和程序集全局重定向为使用并行程序集的一个版本, 而不是使用同一程序集的另一个版本。 可以在 %WINDIR%\WinSxS\Policies\ 文件夹中检查共享程序集的策略。 下面是一个示例策略文件：
+并行程序集还可以使用[发行者配置文件](/windows/win32/SbsCs/publisher-configuration-files)（也称为策略文件）对应用程序和程序集进行全局重定向，以使用并行程序集的某个版本而不是相同程序集的另一个版本。 可以在 %WINDIR%\WinSxS\Policies\ 文件夹中检查共享程序集的策略。 下面是一个示例策略文件：
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -94,11 +94,11 @@ ms.locfileid: "69492576"
 
 不过，程序集也可以作为私有并行程序集安装在已安装应用程序文件夹中。 如果操作系统未能找到作为共享程序集的程序集，则它会按以下顺序查找作为私有程序集的程序集：
 
-1. 检查应用程序文件夹中是否存在名称\<为 assemblyName > 清单的清单文件。 在此示例中，加载程序尝试在包含 appl.exe 的文件夹中查找 Fabrikam.SxS.Library.manifest。 如果找到清单，则加载程序从应用程序文件夹加载程序集。 如果找不到程序集，则加载会失败。
+1. 在应用程序文件夹中检查是否存在名称为 \<assemblyName>.manifest 的清单文件。 在此示例中，加载程序尝试在包含 appl.exe 的文件夹中查找 Fabrikam.SxS.Library.manifest。 如果找到清单，则加载程序从应用程序文件夹加载程序集。 如果找不到程序集，则加载会失败。
 
-1. 尝试打开包含 appl.exe \\的文件夹\>中的 < assemblyName \ 文件夹, 如果\\< assemblyname\>\ 存在, 请尝试加载具有名称\<assemblyname > 的清单文件。此文件夹中的清单。 如果找到清单, 则加载程序将从\\< assemblyName\>\ 文件夹加载程序集。 如果找不到程序集，则加载会失败。
+1. 尝试在包含 appl.exe 的文件夹中打开 \\<assemblyName\>\ 文件夹，如果 \\<assemblyName\>\ 存在，则尝试从此文件夹加载名称为 \<assemblyName>.manifest 的清单文件。 如果找到清单，加载程序会从 \\<assemblyName\>\ 文件夹加载程序集。 如果找不到程序集，则加载会失败。
 
-有关加载程序如何搜索依赖程序集的详细信息, 请参阅[程序集搜索顺序](/windows/win32/SbsCs/assembly-searching-sequence)。 如果加载程序未能找到作为私有程序集的依赖程序集，则加载会失败，并显示消息“系统无法执行指定的程序”。 若要解决此错误，请确保依赖程序集（以及作为它们一部分的 DLL）作为私有或共享程序集安装在计算机上。
+有关加载程序如何搜索依赖程序集的详细信息，请参阅[程序集搜索顺序](/windows/win32/SbsCs/assembly-searching-sequence)。 如果加载程序未能找到作为私有程序集的依赖程序集，则加载会失败，并显示消息“系统无法执行指定的程序”。 若要解决此错误，请确保依赖程序集（以及作为它们一部分的 DLL）作为私有或共享程序集安装在计算机上。
 
 ## <a name="see-also"></a>请参阅
 

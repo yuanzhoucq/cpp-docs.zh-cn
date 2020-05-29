@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - M6110
 ms.assetid: aac9ae37-6a6d-46e9-85d4-dfe03f1c3e11
-ms.openlocfilehash: d56326c0daa326ef832eb81024850d6ef06f5649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7302ce1d8b715dfcceb638958fef4c6db8af375e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173707"
 ---
 # <a name="math-error-m6110"></a>数学错误 M6110
 
@@ -19,6 +19,6 @@ ms.locfileid: "62393254"
 
 浮点表达式导致浮点堆栈溢出。
 
-最多为七个级别除了通常支持 8087/287/387 协处理器的八个级别，可以捕获堆栈溢出浮点异常。
+除8087/287/387 协处理器通常支持的八个级别外，堆栈溢出浮点异常将捕获到7个级别的限制。
 
-程序终止，退出代码为 138。
+程序终止，退出代码为138。

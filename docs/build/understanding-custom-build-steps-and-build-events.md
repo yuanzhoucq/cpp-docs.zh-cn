@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
 ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70177324"
@@ -32,13 +32,13 @@ ms.locfileid: "70177324"
 
 - **生成事件**
 
-   生成事件可用于自定义项目的生成。 有三种生成事件：预先生成、预链接和后期生成。 通过生成事件，可以指定在生成过程中的特定时间发生的操作。 例如，可以使用生成事件在项目完成生成后通过 regsvr32.exe 注册文件。 有关详细信息，请参阅[指定生成事件](specifying-build-events.md)。
+   生成事件可用于自定义项目的生成。 有三种生成事件：预先生成、预链接和后期生成    。 通过生成事件，可以指定在生成过程中的特定时间发生的操作。 例如，可以使用生成事件在项目完成生成后通过 regsvr32.exe 注册文件  。 有关详细信息，请参阅[指定生成事件](specifying-build-events.md)。
 
 [生成自定义项疑难解答](troubleshooting-build-customizations.md)可帮助确保自定义生成步骤和生成事件按预期运行。
 
 自定义生成步骤或生成事件的输出格式也可以增强工具的可用性。 有关详细信息，请参阅[设置自定义生成步骤或生成事件输出的格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)。
 
-对于解决方案中的每个项目, "生成事件" 和 "自定义生成步骤" 将按以下顺序以及其他生成步骤运行:
+对于解决方案中的每个项目，生成事件和自定义生成步骤与其他生成步骤一起按以下顺序运行：
 
 1. 预先生成事件
 

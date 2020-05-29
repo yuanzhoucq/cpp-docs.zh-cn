@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中配置 C++ Linux 项目
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80150961"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
@@ -17,9 +17,9 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-本主题介绍如何配置 C++ Linux 项目，如[在 Visual Studio 中新建 C++ Linux 项目](create-a-new-linux-project.md)中所述。 对于 CMake Linux 项目，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。 
+本主题介绍如何配置 C++ Linux 项目，如[在 Visual Studio 中新建 C++ Linux 项目](create-a-new-linux-project.md)中所述。 对于 CMake Linux 项目，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
 
-可以将 Linux 项目配置为以物理 Linux 计算机、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about) (WSL) 为目标。 
+可以将 Linux 项目配置为以物理 Linux 计算机、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about) (WSL) 为目标。
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Visual Studio 2019 版本 16.1：
 
 ![生成事件](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> 远程系统上标头的 IntelliSense
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> 远程系统上标头的 IntelliSense
 
 在连接管理器中添加新连接时，Visual Studio 会自动为远程系统上的编译器检测包含目录  。 随后 Visual Studio 压缩这些文件压缩，并将其复制到本地 Windows 计算机上的目录中。 此后，每当在 Visual Studio 或 CMake 项目中使用该连接时，都会使用这些目录中的标头来提供 IntelliSense。
 

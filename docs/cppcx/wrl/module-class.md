@@ -43,12 +43,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: db3eb123382ac70f6198d094c5eb3fe44d3bbcd9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: afd2edacefdf5d62b50a03c0a8c37f13ee5d9c9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371321"
 ---
 # <a name="module-class"></a>Module 类
 
@@ -69,68 +69,70 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="parameters"></a>参数
 
-*moduleType*<br/>
-一个或多个组合[ModuleType](moduletype-enumeration.md)枚举值。
+*模块类型*<br/>
+一个或多个[模块类型](moduletype-enumeration.md)枚举值的组合。
 
 ## <a name="members"></a>成员
 
-### <a name="protected-classes"></a>受保护的类
+### <a name="protected-classes"></a>受保护类
 
-名称                                                                                | 描述
+名称                                                                                | 说明
 ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier](module-genericreleasenotifier-class.md) | 在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由 lambda、functor 或 pointer-to-function 指定。
-[Module::MethodReleaseNotifier](module-methodreleasenotifier-class.md)   | 在释放当前模块中的最后一个对象时调用事件处理程序。 对象并将其指针到方法成员由指定的事件处理程序。
-[Module::ReleaseNotifier](module-releasenotifier-class.md)               | 在释放模块中的最后一个对象时调用事件处理程序。
+[模块：：通用释放程序](module-genericreleasenotifier-class.md) | 在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由 lambda、functor 或 pointer-to-function 指定。
+[模块：：方法释放器](module-methodreleasenotifier-class.md)   | 在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由对象及其指向方法的成员指定。
+[模块：：释放器](module-releasenotifier-class.md)               | 在释放模块中的最后一个对象时调用事件处理程序。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                             | 描述
+名称                             | 说明
 -------------------------------- | -----------------------------------------------------------
-[模块:: ~ 模块](#tilde-module) | 取消初始化的当前实例`Module`类。
+[模块：：*模块](#tilde-module) | 取消初始化类的`Module`当前实例。
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-名称                      | 描述
+名称                      | 说明
 ------------------------- | ---------------------------------------------------
-[Module::Module](#module) | 初始化 `Module` 类的新实例。
+[模块：：模块](#module) | 初始化 `Module` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                    | 描述
+名称                                                    | 说明
 ------------------------------------------------------- | --------------------------------------------------------------------------------------------------
-[Module::Create](#create)                               | 创建模块的实例。
-[Module::DecrementObjectCount](#decrementobjectcount)   | 递减模块所跟踪对象的数量。
-[Module::GetActivationFactory](#getactivationfactory)   | 获取模块的激活工厂。
-[Module::GetClassObject](#getclassobject)               | 检索类工厂的缓存。
-[Module::GetModule](#getmodule)                         | 创建模块的实例。
-[Module::GetObjectCount](#getobjectcount)               | 检索此模块管理的对象数量。
-[Module::IncrementObjectCount](#incrementobjectcount)   | 递增模块所跟踪对象的数量。
-[Module::RegisterCOMObject](#registercomobject)         | 注册一个或多个 COM 对象，以便其他应用程序可连接到它们。
-[Module::RegisterObjects](#registerobjects)             | 注册 COM 或 Windows 运行时对象，以便其他应用程序可以连接到它们。
-[Module::RegisterWinRTObject](#registerwinrtobject)     | 注册一个或多个 Windows 运行时对象，以便其他应用程序可以连接到它们。
-[Module::Terminate](#terminate)                         | 导致关闭模块实例化的所有工厂。
-[Module::UnregisterCOMObject](#unregistercomobject)     | 注销一个或多个 COM 对象，以阻止其他应用程序连接到它们。
-[Module::UnregisterObjects](#unregisterobjects)         | 取消指定模块中的对象，以便其他应用程序无法连接到它们。
-[Module::UnregisterWinRTObject](#unregisterwinrtobject) | 注销一个或多个 Windows 运行时对象，以便其他应用程序无法连接到它们。
+[模块：：创建](#create)                               | 创建模块的实例。
+[模块：:D对象计数](#decrementobjectcount)   | 递减模块所跟踪对象的数量。
+[模块：：获取激活工厂](#getactivationfactory)   | 获取模块的激活工厂。
+[模块：：获取类对象](#getclassobject)               | 检索类工厂的缓存。
+[模块：：获取模块](#getmodule)                         | 创建模块的实例。
+[模块：：获取对象计数](#getobjectcount)               | 检索此模块管理的对象数量。
+[模块：：增量对象计数](#incrementobjectcount)   | 递增模块所跟踪对象的数量。
+[模块：：注册COM对象](#registercomobject)         | 注册一个或多个 COM 对象，以便其他应用程序可连接到它们。
+[模块：：注册对象](#registerobjects)             | 注册 COM 或 Windows 运行时对象，以便其他应用程序可以连接到它们。
+[模块：：注册WinRT对象](#registerwinrtobject)     | 注册一个或多个 Windows 运行时对象，以便其他应用程序可以连接到它们。
+[模块：：终止](#terminate)                         | 导致关闭模块实例化的所有工厂。
+[模块：：未注册COM对象](#unregistercomobject)     | 注销一个或多个 COM 对象，以阻止其他应用程序连接到它们。
+[模块：：取消注册对象](#unregisterobjects)         | 取消指定模块中的对象，以便其他应用程序无法连接到它们。
+[模块：：未注册WinRT对象](#unregisterwinrtobject) | 取消注册一个或多个 Windows 运行时对象，以便其他应用程序无法连接到它们。
 
 ### <a name="protected-methods"></a>受保护的方法
 
-名称                      | 描述
+名称                      | 说明
 ------------------------- | --------------------------------
-[Module::Create](#create) | 创建模块的实例。
+[模块：：创建](#create) | 创建模块的实例。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-name                                         | 描述
+名称                                         | 说明
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
-[Module::objectCount_](#objectcount)         | 跟踪已使用创建多少个类的[使](make-function.md)函数。
-[Module::releaseNotifier_](#releasenotifier) | 包含一个指向`ReleaseNotifier`对象。
+[模块：：objectCount_](#objectcount)         | 跟踪使用[Make](make-function.md)函数创建的类数。
+[模块：：releaseNotifier_](#releasenotifier) | 保存指向`ReleaseNotifier`对象的指针。
 
 ### <a name="macros"></a>宏
 
-名称 |说明-----|---美元[ActivatableClass](activatableclass-macros.md) | 填充内部缓存，其中包含一个工厂，它可以创建指定类的实例。 此宏指定默认工厂和组 ID 参数。
-[ActivatableClassWithFactory](activatableclass-macros.md) |填充内部缓存，其中包含一个工厂，它可以创建指定类的实例。 此宏可用于指定特定工厂参数。
-[ActivatableClassWithFactoryEx](activatableclass-macros.md) |填充内部缓存，其中包含一个工厂，它可以创建指定类的实例。 此宏可用于指定特定工厂和组 ID 参数。
+名称                                                                   | 说明
+---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ActivatableClass](activatableclass-macros.md)              | 填充包含可以创建指定类实例的工厂的内部缓存。 此宏指定默认工厂和组 ID 参数。
+[ActivatableClassWithFactory](activatableclass-macros.md)   | 填充包含可以创建指定类实例的工厂的内部缓存。 此宏使您能够指定特定的工厂参数。
+[ActivatableClassWithFactoryEx](activatableclass-macros.md) | 填充包含可以创建指定类实例的工厂的内部缓存。 此宏使您能够指定特定的工厂和组 ID 参数。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -142,19 +144,19 @@ name                                         | 描述
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标题：** 模块.h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="tilde-module"></a>模块:: ~ 模块
+## <a name="modulemodule"></a><a name="tilde-module"></a>模块：：*模块
 
-取消初始化的当前实例`Module`类。
+取消初始化类的`Module`当前实例。
 
 ```cpp
 virtual ~Module();
 ```
 
-## <a name="create"></a>Module::Create
+## <a name="modulecreate"></a><a name="create"></a>模块：：创建
 
 创建模块的实例。
 
@@ -176,20 +178,20 @@ WRL_NOTHROW static Module& Create(
 *T*<br/>
 模块类型。
 
-*callback*<br/>
-释放该模块的最后一个实例对象时调用。
+*回调 (callback)*<br/>
+释放模块的最后一个实例对象时调用。
 
-*object*<br/>
-*对象*并*方法*结合使用的参数。 点到最后一个实例对象时释放模块中的最后一个实例对象。
+*对象*<br/>
+*对象**和方法*参数是组合使用的。 释放模块中的最后一个实例对象时，指向最后一个实例对象。
 
-*方法*<br/>
-*对象*并*方法*结合使用的参数。 指向最后一个实例对象时释放模块中的最后一个实例对象的方法。
+*method*<br/>
+*对象**和方法*参数是组合使用的。 在释放模块中的最后一个实例对象时，指向最后一个实例对象的方法。
 
 ### <a name="return-value"></a>返回值
 
-对模块引用。
+参考模块。
 
-## <a name="decrementobjectcount"></a>Module::DecrementObjectCount
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>模块：:D对象计数
 
 递减模块所跟踪对象的数量。
 
@@ -201,7 +203,7 @@ virtual long DecrementObjectCount();
 
 递减操作之前的计数。
 
-## <a name="getactivationfactory"></a>Module::GetActivationFactory
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>模块：：获取激活工厂
 
 获取模块的激活工厂。
 
@@ -215,20 +217,20 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>参数
 
-*pActivatibleClassId*<br/>
+*p 可激活类 Id*<br/>
 运行时类的 IID。
 
 *ppIFactory*<br/>
 指定运行时类的 IActivationFactory。
 
-*serverName*<br/>
-当前模块中类工厂的子集名称。 指定中使用的服务器名称[ActivatableClassWithFactoryEx](activatableclass-macros.md)宏，或指定`nullptr`若要获取默认服务器名称。
+*服务器名称*<br/>
+当前模块中类工厂的子集名称。 指定[可激活类与FactoryEx](activatableclass-macros.md)宏中使用的服务器名称，或指定`nullptr`获取默认服务器名称。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为 GetActivationFactory 返回的 HRESULT。
 
-## <a name="getclassobject"></a>Module::GetClassObject
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a>模块：：获取类对象
 
 检索类工厂的缓存。
 
@@ -243,25 +245,25 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>参数
 
-*clsid*<br/>
+*Clsid*<br/>
 类 ID。
 
 *riid*<br/>
 您请求的接口 ID。
 
-*ppv*<br/>
+*Ppv*<br/>
 指向返回对象的指针。
 
-*serverName*<br/>
+*服务器名称*<br/>
 在 `ActivatableClassWithFactory`、`ActivatableClassWithFactoryEx` 或 `ActivatableClass` 宏中指定的服务器名称；或用于获取默认服务器名称的 `nullptr`。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-仅对 COM 而不是 Windows 运行时使用此方法。 此方法仅公开`IClassFactory`方法。
+此方法仅适用于 COM，而不是 Windows 运行时。 此方法仅`IClassFactory`公开方法。
 
-## <a name="getmodule"></a>Module::GetModule
+## <a name="modulegetmodule"></a><a name="getmodule"></a>模块：：获取模块
 
 创建模块的实例。
 
@@ -274,7 +276,7 @@ WRL_NOTHROW static Module& GetModule();
 
 对模块的引用。
 
-## <a name="getobjectcount"></a>Module::GetObjectCount
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>模块：：获取对象计数
 
 检索此模块管理的对象数量。
 
@@ -286,7 +288,7 @@ virtual long GetObjectCount() const;
 
 此模块管理的当前对象数量。
 
-## <a name="incrementobjectcount"></a>Module::IncrementObjectCount
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>模块：：增量对象计数
 
 递增模块所跟踪对象的数量。
 
@@ -298,7 +300,7 @@ virtual long IncrementObjectCount();
 
 递增操作之前的计数。
 
-## <a name="module"></a>Module::Module
+## <a name="modulemodule"></a><a name="module"></a>模块：：模块
 
 初始化 `Module` 类的新实例。
 
@@ -308,17 +310,17 @@ Module();
 
 ### <a name="remarks"></a>备注
 
-此构造函数受保护，不能使用 `new` 关键字进行调用。 请调用[module:: getmodule](#getmodule)或[module:: create](#create)。
+此构造函数受保护，不能使用 `new` 关键字进行调用。 相反，调用[模块：获取模块](#getmodule)或[模块：：创建](#create)。
 
-## <a name="objectcount"></a>Module::objectCount_
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a>模块：：objectCount_
 
-跟踪已使用创建多少个类的[使](make-function.md)函数。
+跟踪使用[Make](make-function.md)函数创建的类数。
 
 ```cpp
 volatile long objectCount_;
 ```
 
-## <a name="registercomobject"></a>Module::RegisterCOMObject
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>模块：：注册COM对象
 
 注册一个或多个 COM 对象，以便其他应用程序可连接到它们。
 
@@ -333,16 +335,16 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>参数
 
-*serverName*<br/>
+*服务器名称*<br/>
 服务器的完全限定名。
 
-*clsids*<br/>
+*克拉西德斯*<br/>
 要注册的 CLSID 的数组。
 
 *factories*<br/>
 其可用性正发布的类对象的 IUnknown 接口的数组。
 
-*cookies*<br/>
+*饼干*<br/>
 完成此操作后，指向标识已注册类对象的值的指针数组。 以后将使用这些值来撤销注册。
 
 *count*<br/>
@@ -356,9 +358,9 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 COM 对象是使用 CLSCTX 枚举的 CLSCTX_LOCAL_SERVER 枚举器注册的。
 
-当前的组合来指定连接到已注册的对象的类型*comflag*模板参数，并结合枚举的 REGCLS_SUSPENDED 枚举器。
+与已注册对象的连接类型由当前*标志*模板参数和 REGCLS 枚举的REGCLS_SUSPENDED枚举器的组合指定。
 
-## <a name="registerobjects"></a>Module::RegisterObjects
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>模块：：注册对象
 
 注册 COM 或 Windows 运行时对象，以便其他应用程序可以连接到它们。
 
@@ -370,17 +372,17 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>参数
 
-*module*<br/>
+*模块*<br/>
 COM 或 Windows 运行时对象的数组。
 
-*serverName*<br/>
+*服务器名称*<br/>
 创建对象的服务器的名称。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为指示操作失败原因的 HRESULT。
 
-## <a name="registerwinrtobject"></a>Module::RegisterWinRTObject
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>模块：：注册WinRT对象
 
 注册一个或多个 Windows 运行时对象，以便其他应用程序可以连接到它们。
 
@@ -393,13 +395,13 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>参数
 
-*serverName*<br/>
+*服务器名称*<br/>
 指定受此操作影响的对象子集的名称。
 
-*activatableClassIds*<br/>
+*可激活类标识*<br/>
 要注册的可激活 CLSID 的数组。
 
-*cookie*<br/>
+*饼干*<br/>
 标识已注册类对象的值。 此值以后将用于撤销注册。
 
 *count*<br/>
@@ -409,15 +411,15 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 如果成功，则为 S_OK；否则为指示操作失败原因的 HRESULT（如 CO_E_OBJISREG）。
 
-## <a name="releasenotifier"></a>Module::releaseNotifier_
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>模块：：releaseNotifier_
 
-包含一个指向`ReleaseNotifier`对象。
+保存指向`ReleaseNotifier`对象的指针。
 
 ```cpp
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="terminate"></a>Module::Terminate
+## <a name="moduleterminate"></a><a name="terminate"></a>模块：：终止
 
 导致关闭模块实例化的所有工厂。
 
@@ -429,7 +431,7 @@ void Terminate();
 
 释放缓存中的工厂。
 
-## <a name="unregistercomobject"></a>Module::UnregisterCOMObject
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>模块：：未注册COM对象
 
 注销一个或多个 COM 对象，以阻止其他应用程序连接到它们。
 
@@ -442,11 +444,11 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>参数
 
-*serverName*<br/>
+*服务器名称*<br/>
 （未使用）
 
-*cookies*<br/>
-指针的数组，其指向标识要注销的类对象的值。 该数组通过创建[RegisterCOMObject](#registercomobject)方法。
+*饼干*<br/>
+指针的数组，其指向标识要注销的类对象的值。 数组由[注册COMObject](#registercomobject)方法创建。
 
 *count*<br/>
 要注销的类的数量。
@@ -455,7 +457,7 @@ virtual HRESULT UnregisterCOMObject(
 
 如果此操作成功，则为 S_OK；否则为指示此操作失败原因的错误 HRESULT。
 
-## <a name="unregisterobjects"></a>Module::UnregisterObjects
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>模块：：取消注册对象
 
 取消指定模块中的对象，以便其他应用程序无法连接到它们。
 
@@ -467,19 +469,19 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>参数
 
-*module*<br/>
+*模块*<br/>
 指向模块的指针。
 
-*serverName*<br/>
+*服务器名称*<br/>
 指定受此操作影响的对象子集的限定名。
 
 ### <a name="return-value"></a>返回值
 
 如果此操作成功，则为 S_OK；否则为指示此操作失败原因的错误 HRESULT。
 
-## <a name="unregisterwinrtobject"></a>Module::UnregisterWinRTObject
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>模块：：未注册WinRT对象
 
-注销一个或多个 Windows 运行时对象，以便其他应用程序无法连接到它们。
+取消注册一个或多个 Windows 运行时对象，以便其他应用程序无法连接到它们。
 
 ```cpp
 virtual HRESULT UnregisterWinRTObject(
@@ -490,5 +492,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>参数
 
-*cookie*<br/>
+*饼干*<br/>
 指针，其指向标识将撤销其注册的类对象的值。

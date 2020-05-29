@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2091
 ms.assetid: 247c3b57-f123-4420-b68e-d65a364b63cb
-ms.openlocfilehash: 836aad27fa1d3c5b23ad0c14be9810a61f731c3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56263b7b11ee0e3a9dbe6b0d3b12cd0ce09df70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207671"
 ---
 # <a name="compiler-error-c2091"></a>编译器错误 C2091
 
 函数返回函数
 
-函数不能返回一个函数。 而是返回指向函数的指针。
+函数不能返回函数。 改为返回指向函数的指针。

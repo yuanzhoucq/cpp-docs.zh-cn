@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-ms.openlocfilehash: dc81df89609f59834c8a3271dd64f3b99b281f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1758fffb72e183e8a186d115b2b3f3b30c32e047
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395074"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193871"
 ---
 # <a name="linker-tools-warning-lnk4206"></a>链接器工具警告 LNK4206
 
-> 找不到; 预编译的类型信息'*文件名*不链接或重写; 正在链接对象，如同没有调试信息一样
+> 未找到预编译类型信息;未链接或覆盖 "*filename*";正在链接对象，如同没有调试信息一样
 
-*文件名*通过使用编译的对象文件[/Yc](../../build/reference/yc-create-precompiled-header-file.md)、 LINK 命令中既未指定或已被覆盖。
+使用[/yc](../../build/reference/yc-create-precompiled-header-file.md)编译的*filename*对象文件未在 LINK 命令中指定或已被覆盖。
 
-此警告的常见方案是用 /Yc 编译.obj 时在库中，并有没有对该.obj 在代码中的符号引用。  在这种情况下，链接器将不使用 （或甚至看到）.obj 文件。  在此情况下，应重新编译代码并将[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)使用编译的对象[/Yu](../../build/reference/yu-use-precompiled-header-file.md)。
+当使用/Yc 编译的 .obj 位于库中，并且代码中没有对该 .obj 的符号引用时，会出现此警告的常见情况。  在这种情况下，链接器将不使用（甚至查看） .obj 文件。  在这种情况下，应重新编译代码，并将[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)用于使用[/yu](../../build/reference/yu-use-precompiled-header-file.md)编译的对象。

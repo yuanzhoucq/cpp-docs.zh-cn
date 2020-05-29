@@ -1,6 +1,6 @@
 ---
 title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -8,6 +8,10 @@ api_name:
 - strncpy_s
 - _mbsncpy_s
 - _wcsncpy_s_l
+- _o__mbsncpy_s
+- _o__mbsncpy_s_l
+- _o_strncpy_s
+- _o_wcsncpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,19 +54,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626153"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919298"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
 将一个字符串的字符复制到另一个字符串。  这些版本的 [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsncpy_s**和 **_mbsncpy_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsncpy_s**和 **_mbsncpy_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -155,9 +160,9 @@ errno_t _mbsncpy_s_l(
 目标字符串的大小（以字符为单位）。
 
 *strSource*<br/>
-源字符串。
+资源字符串。
 
-*count*<br/>
+*计数*<br/>
 要复制的字符数或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
@@ -171,18 +176,18 @@ errno_t _mbsncpy_s_l(
 
 |*strDest*|*numberOfElements*|*strSource*|返回值|*StrDest*的内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|any|any|**EINVAL**|未修改|
-|any|any|**NULL**|**EINVAL**|*strDest*[0] 设置为0|
+|**Null**|any|any|**EINVAL**|未修改|
+|any|any|**Null**|**EINVAL**|*strDest*[0] 设置为0|
 |any|0|any|**EINVAL**|未修改|
-|Not **NULL**|过小|any|**ERANGE**|*strDest*[0] 设置为0|
+|not **NULL**|过小|any|**ERANGE**|*strDest*[0] 设置为0|
 
 ## <a name="remarks"></a>备注
 
 这些函数尝试将*strSource*的前*D*个字符复制到*strDest*，其中*D*是*count*和*strSource*的长度。 如果这些*D*字符将放在*strDest* （其大小被赋予*numberOfElements*）中，并且仍为 null 终止符留出空间，则会复制这些字符，并追加一个终止 null。否则， *strDest*[0] 设置为 null 字符，并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
-在上段描述的内容中有一个例外。 如果*count*为 **_TRUNCATE**，则在仍留出用于终止 null 的空间（始终追加）的情况下，将复制*StrDest*中可容纳的*strSource*数量。
+在上段描述的内容中有一个例外。 如果*count*是 **_TRUNCATE**的，则在仍留出用于终止 null 的空间（始终追加）的情况下，将复制*StrDest*中可容纳的*strSource*数量。
 
-例如，应用于对象的
+例如，
 
 ```C
 char dst[5];
@@ -191,7 +196,7 @@ strncpy_s(dst, 5, "a long string", 5);
 
 表示我们要求**strncpy_s**将五个字符复制到缓冲区5个字节长;这将不会为 null 终止符留出空间，因此**strncpy_s**将字符串输出为零，并调用无效的参数处理程序。
 
-如果需要截断行为，请使用 **_TRUNCATE**或（*size* -1）：
+如果需要截断行为，请使用 **_TRUNCATE**或（*大小*-1）：
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
@@ -200,17 +205,19 @@ strncpy_s(dst, 5, "a long string", 4);
 
 请注意，与**strncpy**不同的是，如果*count*大于*STRSOURCE*的长度，则不会将目标字符串填充到长度为零*的空字符。*
 
-如果源和目标字符串重叠，则**strncpy_s**的行为是不确定的。
+如果源和目标字符串重叠，则**strncpy_s**的行为不确定。
 
 如果*strDest*或*strSource*为**NULL**，或者*numberOfElements*为0，则调用无效的参数处理程序。 如果允许执行继续，则该函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 **wcsncpy_s**和 **_mbsncpy_s**是**strncpy_s**的宽字符和多字节字符版本。 **Wcsncpy_s**和**mbsncpy_s**的参数和返回值将相应变化。 否则这六个函数具有相同行为。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -220,17 +227,17 @@ strncpy_s(dst, 5, "a long string", 4);
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**、 **_wcsncpy_s_l**和 **_mbsncpy_s_l**没有区域设置依赖关系，只为 **_tcsncpy_s_l**提供，不应直接调用。
+> **_strncpy_s_l**、 **_wcsncpy_s_l**和 **_mbsncpy_s_l**没有区域设置依赖关系，只是为 **_tcsncpy_s_l**提供，不应直接调用。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**strncpy_s**、 **_strncpy_s_l**|\<string.h>|
-|**wcsncpy_s**、 **_wcsncpy_s_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsncpy_s**、 **_mbsncpy_s_l**|\<mbstring.h>|
+|**strncpy_s**， **_strncpy_s_l**|\<string.h>|
+|**wcsncpy_s**， **_wcsncpy_s_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsncpy_s**， **_mbsncpy_s_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -403,10 +410,10 @@ After strncpy_s (with null-termination):
    'mice'
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>

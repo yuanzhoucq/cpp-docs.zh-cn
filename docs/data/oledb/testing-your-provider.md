@@ -6,23 +6,23 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: d7a3adad546834e2bdc80a695f4c3bf2259dc0ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f068c928abd0a6656bed0702422d9bda843208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389120"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209492"
 ---
 # <a name="testing-your-provider"></a>测试提供程序
 
-发布提供程序之前，应执行以下测试，指示的顺序。 这些测试表明，大多数潜在用户对正常运行的提供程序函数。
+在发布提供程序之前，应按指示的顺序执行以下测试。 这些测试表明提供程序适用于大多数可能的用户。
 
-1. 测试使用的提供程序[使用者](../../data/oledb/creating-an-ole-db-consumer.md)使用 OLE DB 使用者模板编写的应用程序。 测试使用者应包括您的提供程序 （已添加或修改的所有代码） 的所有功能区域。
+1. 使用使用 OLE DB 使用者模板编写的使用[者](../../data/oledb/creating-an-ole-db-consumer.md)应用程序测试提供程序。 测试使用者应涵盖提供程序的所有功能区域（已添加或修改的所有代码）。
 
-1. 测试提供程序使用 ADO 编写的使用者应用程序。 大多数开发人员 （特别是 Microsoft Visual Basic 和 Microsoft C# 的开发人员） 的使用者应用程序使用 ADO 或 ADO.NET。 测试使用者应涵盖你的提供商的所有功能区域。 ADO 使用者应用程序的示例，请参阅[Microsoft Visual Basic 中的 ADO 代码示例](https://msdn.microsoft.com/library/ms807514.aspx)。
+1. 使用用 ADO 编写的使用者应用程序测试提供程序。 大多数开发人员（特别是 Microsoft Visual Basic C#和 microsoft 开发人员）使用 ADO 或 ADO.NET 作为使用者应用程序。 测试使用者应涵盖提供商的所有功能区域。 有关 ADO 使用者应用程序的示例，请参阅[Microsoft Visual Basic 中的 Ado 代码示例](/previous-versions/ms807514(v=msdn.10))。
 
-1. 运行 OLE DB 一致性测试 （包括 ADO 一致性测试） 以显示您的提供程序对 OLE DB 访问接口满足级别 0 标准。 (有关级别 0 的说明，搜索**OLE DB 级别 0 一致性测试**处[OLE DB 程序员指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)。 这些测试和相关的文档将包括使用视觉对象C++数据访问 SDK 中。 这些测试还帮助显示您的提供程序运行良好时由其他聚合[服务提供商](../../data/oledb/ole-db-resource-pooling-and-services.md)时特别有用，如果修改或添加属性。 有关符合性测试的详细信息，请参阅数据访问 sdk，位于其中一个 Visual Studio Cd 上的自述文件。
+1. 运行 OLE DB 一致性测试（包括 ADO 一致性测试）以显示提供程序满足 OLE DB 提供程序的级别0标准。 （有关级别0的说明，请在[OLE DB 程序员指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)中搜索**OLE DB 级别0一致性测试**。 数据访问 SDK 中的视觉对象C++附带了这些测试和相关文档。 这些测试还有助于说明提供程序在由其他[服务提供程序](../../data/oledb/ole-db-resource-pooling-and-services.md)聚合时运行良好，并且在修改或添加属性时特别有用。 有关一致性测试的详细信息，请参阅数据访问 SDK 的自述文件，该文件位于某个 Visual Studio Cd 中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4006
 ms.assetid: 3a637d17-1676-4ea6-bd8b-290137d28d3b
-ms.openlocfilehash: c81c93a6df8c7eef809f243e3dc56164ea548371
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d949ba259de8e131f6191e757119b4c42effc3d4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187136"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194312"
 ---
 # <a name="linker-tools-warning-lnk4006"></a>链接器工具警告 LNK4006
 
-中的对象; 已定义的符号忽略第二个定义
+已在对象中定义了符号;已忽略第二个定义
 
-以修饰形式显示的给定 `symbol` 被多次定义。 当遇到此警告时，`symbol`会获得两次，但将使用只有其第一个窗体。
+以修饰形式显示的给定 `symbol` 被多次定义。 遇到此警告时，`symbol` 将添加两次，但只使用其第一个窗体。
 
-如果你尝试将两个导入 libs 合并为一个，可以获取此警告。
+如果尝试将两个导入库合并为一个，则可以收到此警告。
 
-如果您正在重新生成的 C 运行时库，可以忽略此消息。
+如果要重新生成 C 运行时库，可以忽略此消息。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复
 
-1. 给定`symbol`可能会使用编译时所创建已包装的函数[/Gy](../../build/reference/gy-enable-function-level-linking.md)。 此符号包含在多个文件，但各编译间已改变。 重新编译包括的所有文件`symbol`。
+1. 给定的 `symbol` 可能是通过用[/gy](../../build/reference/gy-enable-function-level-linking.md)编译创建的打包函数。 此符号包含在多个文件中，但在两个编译之间发生了更改。 重新编译包含 `symbol`的所有文件。
 
-1. 给定`symbol`可能以不同的方式定义不同的库中的两个成员对象中。
+1. 给定的 `symbol` 在不同库中的两个成员对象中的定义可能不同。
 
-1. 绝对符号可能已定义了两次，每个定义中的不同值。
+1. 绝对可能定义了两次，每个定义中的值不同。
 
-1. 如果组合库时收到错误消息`symbol`添加到库中已存在。
+1. 如果在组合库时收到错误消息，则 `symbol` 在要添加到的库中已经存在。

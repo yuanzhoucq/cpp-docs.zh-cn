@@ -1,9 +1,11 @@
 ---
 title: _getche、_getwche
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getwche
 - _getche
+- _o__getche
+- _o__getwche
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: cf7aa10702dca5118d03d7ce2e2d4341941fc51c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd8c72d4c8d6eedb2485fc23e09e9118ab6d45ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955318"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910825"
 ---
 # <a name="_getche-_getwche"></a>_getche、_getwche
 
@@ -63,6 +66,8 @@ wint_t _getwche( void );
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本的信息，请参阅 [_getche_nolock、_getwche_nolock](getche-nolock-getwche-nolock.md)。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
@@ -71,12 +76,12 @@ wint_t _getwche( void );
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_getche**|\<conio.h>|
 |**_getwche**|\<conio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -114,9 +119,9 @@ abcdefy
 Type 'Y' when finished typing keys: abcdefyY
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets、_cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc、getwc](getc-getwc.md)<br/>
 [_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

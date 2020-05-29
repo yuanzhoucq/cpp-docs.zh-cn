@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1305
 ms.assetid: 1629c850-e2db-4678-83d8-9bfc85323bc5
-ms.openlocfilehash: 988842a0d5e8002ffd1478a2e10a8c88ee971911
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad00eb3d95e9f09d4f84daefb7e2a87fd1a3abf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397492"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203354"
 ---
 # <a name="fatal-error-c1305"></a>错误 C1305
 
-配置文件数据库 pgd_file 是用于不同的体系结构
+配置文件数据库 "pgd_file" 适用于不同的体系结构
 
-另一个平台已传递给从 /ltcg: pginstrument 操作生成一个.pgd 文件[/ltcg: pgoptimize](../../build/reference/ltcg-link-time-code-generation.md) 。 [按配置优化](../../build/profile-guided-optimizations.md)可用于 x86 和 x64 平台。 但是，与针对一个平台 /ltcg: pginstrument 操作生成的.pgd 文件不是有效作为针对不同平台 /ltcg: pgoptimize 的输入。
+向[/ltcg： PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)传递了从另一个平台的/LTCG： PGINSTRUMENT 操作生成的 .pgd 文件。 [按配置优化](../../build/profile-guided-optimizations.md)适用于 x86 和 x64 平台。 但是，对于一个平台，为/LTCG： PGINSTRUMENT 操作生成的 .pgd 文件对于不同平台的/LTCG： PGOPTIMIZE 的输入无效。
 
-若要解决此错误，仅传递使用 /ltcg: pginstrument 到 /ltcg: pgoptimize 同一平台上创建一个.pgd 文件。
+若要解决此错误，请仅在同一平台上将使用/LTCG： PGINSTRUMENT 创建的 .pgd 文件传递给/LTCG： PGOPTIMIZE。

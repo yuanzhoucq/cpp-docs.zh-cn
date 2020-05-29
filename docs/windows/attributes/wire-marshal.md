@@ -1,21 +1,21 @@
 ---
-title: wire_marshal (C++ COM 特性)
+title: wire_marshal （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0bf6b2ab353b8ad8866de5b2c7c79959306ee954
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514851"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215223"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
-指定将用于传输的数据类型, 而不是特定于应用程序的数据类型。
+指定将用于传输的数据类型，而不是特定于应用程序的数据类型。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ ms.locfileid: "69514851"
 
 ## <a name="example"></a>示例
 
-下面的代码演示**wire_marshal**的用法:
+以下代码演示了如何使用**wire_marshal**：
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -53,14 +53,14 @@ ms.locfileid: "69514851"
 
 |||
 |-|-|
-|**适用于**|**typedef**|
-|**可重复**|No|
+|**适用对象**|**typedef**|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)

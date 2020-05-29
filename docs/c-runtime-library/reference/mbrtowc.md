@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952450"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919192"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -49,16 +51,16 @@ size_t mbrtowc(
 ### <a name="parameters"></a>参数
 
 *wchar*<br/>
-用于接收已转换的宽字符字符串（类型为**wchar_t**）的宽字符的地址。 如果不需要返回任何宽字符，则此值可为 null 指针。
+用于接收已转换的宽字符字符串（类型**wchar_t**）的宽字符的地址。 如果不需要返回任何宽字符，则此值可为 null 指针。
 
 *mbchar*<br/>
 字节（多字节字符）序列的地址。
 
-*count*<br/>
+*计数*<br/>
 要检查的字节数。
 
 *mbstate*<br/>
-指向转换状态对象的指针。 如果此值为 null 指针，则函数使用静态的内部转换状态对象。 由于内部**mbstate_t**对象不是线程安全的，因此建议您始终传递您自己的*mbstate*参数。
+指向转换状态对象的指针。 如果此值为 null 指针，则函数使用静态的内部转换状态对象。 由于内部**mbstate_t**对象不是线程安全的，因此建议您始终传递自己的*mbstate*参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -82,7 +84,9 @@ size_t mbrtowc(
 
 如果*mbchar*不是空指针，则该函数将检查来自*mbchar*的*计数*字节，以确定完成下一个多字节字符所需的字节数。 如果下一个字符是有效的，则相应的多字节字符将存储在*wchar*中（如果它不是空指针）。 如果字符为相应的宽 null 字符，则*mbstate*的生成状态是初始转换状态。
 
-**Mbrtowc**函数的可重启性不同于[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序应使用**wcsrlen**而不是**wcslen** 。
+**Mbrtowc**函数不同于[mbtowc，](mbtowc-mbtowc-l.md)其可重启性 _mbtowc_l。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序应使用**wcsrlen**而不是**wcslen** 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 
@@ -205,12 +209,12 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

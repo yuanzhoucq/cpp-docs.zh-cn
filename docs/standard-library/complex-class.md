@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257970"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423941"
 ---
 # <a name="complex-class"></a>complex 类
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171887"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>用户定义特性（C++/CLI 和 C++/CX）
 
@@ -31,7 +31,7 @@ C++/CX 特性可应用于属性，但无法应用于构造函数或方法。
 
 可以定义自定义特性，具体方法为定义类型，让 <xref:System.Attribute> 成为此类型的基类，并视需要应用 <xref:System.AttributeUsageAttribute> 特性。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [特性目标](attribute-targets-cpp-component-extensions.md)
 
@@ -192,6 +192,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

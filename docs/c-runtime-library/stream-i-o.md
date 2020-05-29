@@ -1,19 +1,17 @@
 ---
 title: 流 I/O
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746248"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444616"
 ---
 # <a name="stream-io"></a>流 I/O
 
@@ -21,7 +19,7 @@ ms.locfileid: "57746248"
 
 ## <a name="stream-io-routines"></a>流 I/O 例程
 
-|例程所返回的值|使用|
+|例程|使用|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md)、 [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除流的错误指示器|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|关闭流|
@@ -69,7 +67,7 @@ ms.locfileid: "57746248"
 |[_snscanf、_snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md)、[_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|从标准输入流读取指定长度的格式化数据。|
 |[sprintf、swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)、[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|将格式化数据写入字符串|
 |[sscanf、swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)、[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|从字符串读取格式化数据|
-|[_tempnam，_wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|在给定目录中生成临时文件名|
+|[_tempnam、_wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|在给定目录中生成临时文件名|
 |[tmpfile](../c-runtime-library/reference/tmpfile.md)、 [tmpfile_s](../c-runtime-library/reference/tmpfile-s.md)|创建临时文件|
 |[tmpnam、_wtmpnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)、 [tmpnam_s, _wtmpnam_s](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|生成临时文件名|
 |[ungetc、ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|将字符推送回流上|
@@ -95,7 +93,7 @@ ms.locfileid: "57746248"
 
 只有通过对 fflush 或对文件定位函数（fseek、fsetpos 或 rewind）进行干预调用时，输入才能直接跟随输出。 如果输入操作遇到文件末尾，则输出可以在没有对文件定位函数进行干预调用的情况下跟随输入。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [输入和输出](../c-runtime-library/input-and-output.md)<br/>
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,25 +1,25 @@
 ---
-title: '如何：将 system:: string 转换为标准字符串'
+title: 如何：将 System::String 转换为标准字符串
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: 3ea3c56af2fefaf7c65055135e8549fb153c9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd73b8fed98918135b66af1b6351977426cd26e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379111"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545299"
 ---
-# <a name="how-to-convert-systemstring-to-standard-string"></a>如何：将 system:: string 转换为标准字符串
+# <a name="how-to-convert-systemstring-to-standard-string"></a>如何：将 System::String 转换为标准字符串
 
-可以将转换<xref:System.String>到`std::string`或`std::wstring`，而无需使用`PtrToStringChars`在 Vcclr.h 中。
+可以将 <xref:System.String> 转换为 `std::string` 或 `std::wstring`，而无需在 Vcclr 中使用 `PtrToStringChars`。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // convert_system_string.cpp
 // compile with: /clr
 #include <string>
@@ -63,6 +63,6 @@ abcd
 efgh
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

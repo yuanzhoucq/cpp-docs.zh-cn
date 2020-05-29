@@ -8,15 +8,15 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
 ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325515"
 ---
 # <a name="l-value-and-r-value-expressions"></a>左值和右值表达式
 
-引用内存位置的表达式称为“左值”表达式。 左值表示存储区域的“locator”值或“left”值，并暗示它可以出现在等号 (**=**) 的左侧。 左值通常是标识符。
+引用内存位置的表达式称为“左值”表达式。 左值表示存储区域的“locator”值或“left”值，并暗示它可以出现在等号 ( **=** ) 的左侧。 左值通常是标识符。
 
 引用可修改的位置的表达式称为“可修改的左值”。 可修改的左值不能具有数组类型、不完整的类型或带 **const** 特性的类型。 对于要成为可修改的左值的结构和联合，它们不得具有带 **const** 特性的任何成员。 标识符的名称表示存储位置，而变量的值是存储在该位置的值。
 
@@ -26,9 +26,9 @@ ms.locfileid: "56150215"
 
 - 整型、浮点、指针、结构或联合类型的标识符
 
-- 计算结果不为数组的下标 (**[ ]**) 表达式
+- 计算结果不为数组的下标 ( **[ ]** ) 表达式
 
-- 成员选择表达式（**->** 或 **.**）
+- 成员选择表达式（ **->** 或 **.** ）
 
 - 不引用数组的一元间接寻址 (<strong>\*</strong>) 表达式
 

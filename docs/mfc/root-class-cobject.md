@@ -1,31 +1,29 @@
 ---
 title: 根类：CObject
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - base classes [MFC], MFC objects
 - classes [MFC], MFC base class [MFC]
 - root class [MFC]
 - MFC, base class
 ms.assetid: 593706f3-e9e5-435f-815d-e7b5176b2a61
-ms.openlocfilehash: 664f6608c98a6edba85ddc666b42db802c8736f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca1912175c00d12a201a53631216eef69ab50a82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308857"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446441"
 ---
 # <a name="root-class-cobject"></a>根类：CObject
 
-大多数 Microsoft 基础类 (MFC) 库中的类派生自单个根处的基类的类层次结构。 `CObject` 提供了大量有用的功能，所有派生的类，以非常低的开销。 有关详细信息`CObject`和及其功能，请参阅[使用 CObject](../mfc/using-cobject.md)。
+Microsoft 基础类（MFC）库中的大多数类都是从类层次结构的根处的单个基类派生的。 `CObject` 为派生自它的所有类提供许多有用的功能，开销非常低。 有关 `CObject` 及其功能的详细信息，请参阅[使用 CObject](../mfc/using-cobject.md)。
 
 [CObject](../mfc/reference/cobject-class.md)<br/>
-大多数 MFC 类的最终基类。 支持序列化数据并获取有关类的运行时信息。
+大多数 MFC 类的最终基类。 支持对数据进行序列化和获取有关类的运行时信息。
 
 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
-用来在运行时确定对象的具体类结构。
+用于在运行时确定对象的确切类的结构。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../mfc/class-library-overview.md)

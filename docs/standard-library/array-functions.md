@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456771"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364930"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函数
 
-数组\<> 的标头包括两个在**数组**对象`get`上`swap`操作的非成员函数和。
+数组\<>标头包括两个非成员函数，`get`和`swap`，它们对**数组**对象进行操作。
 
 |||
 |-|-|
-|[get](#get)|[swap](#swap)|
+|[get](#get)|[交换](#swap)|
 
-## <a name="get"></a>  get
+## <a name="get"></a><a name="get"></a>获取
 
 返回对数组中指定元素的引用。
 
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*编入*\
+*指数*\
 元素偏移量。
 
-*关心*\
+*T*\
 元素的类型。
 
-*北*\
+*N*\
 数组中的元素数。
 
-*arr*\
+*阿尔尔*\
 要从中进行选择的数组。
 
 ### <a name="example"></a>示例
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>交换
 
-交换两个`std::swap` **数组**对象的非成员模板专用化。
+`std::swap`交换两个**数组**对象的非成员模板专门化。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,16 +97,16 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>参数
 
-*Ty*\
+*泰*\
 元素的类型。
 
-*北*\
+*N*\
 数组大小。
 
-*左中*\
+*离开*\
 要交换的第一个数组。
 
-*然后*\
+*对*\
 要交换的第二个数组。
 
 ### <a name="remarks"></a>备注
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<array>](../standard-library/array.md)
+[\<数组>](../standard-library/array.md)

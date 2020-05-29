@@ -6,39 +6,38 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395737"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213078"
 ---
 # <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
 
-Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 截至 Visual Studio 2015 和 SQL Server 2012 ODBC 是连接到 SQL 数据源的首选的方法。
+Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 从 Visual Studio 2015 到 SQL Server 2012 ODBC 是连接到 SQL 数据源的首选方式。
 
-有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN 中的 SDK。
-
+若要详细了解如何使用没有 MFC 的 ODBC API，请参阅 MSDN 中的[开放式数据库连接（ODBC）](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
 
 ## <a name="in-this-section"></a>本节内容
 
-- [ODBC](odbc-basics.md)— 开放式数据库连接标准和 API
+- [ODBC](odbc-basics.md)—开放式数据库连接标准和 API
 
-- [哪些 MFC 支持提供](odbc-and-mfc.md)针对 ODBC 编程
+- 为 ODBC 编程[提供了哪些 MFC 支持](odbc-and-mfc.md)
 
-- [ODBC 驱动程序都可用](odbc-driver-list.md)
+- [ODBC 驱动程序的可用性](odbc-driver-list.md)
 
 - [连接到 ODBC 数据源](data-source-managing-connections-odbc.md)
 
-- [记录字段交换 (RFX)](record-field-exchange-rfx.md)数据库和记录集对象之间
+- 数据库和记录集对象之间的[记录字段交换（RFX）](record-field-exchange-rfx.md)
 
 - [ODBC 记录集](recordset-odbc.md)
 
-- [SQL](sql.md)用于 ODBC
+- 适用于 ODBC 的[SQL](sql.md)
 
 - [数据库事务](transaction-odbc.md)
 
-- [确定 ODBC 数据源的架构](data-source-determining-the-schema-of-the-data-source-odbc.md)在运行时
+- 在运行时[确定 ODBC 数据源的架构](data-source-determining-the-schema-of-the-data-source-odbc.md)
 
 - [以编程方式配置 ODBC 数据源](data-source-programmatically-configuring-an-odbc-data-source.md)
 
@@ -48,19 +47,19 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 
 - [自定义记录集的 SQL 语句](sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [执行直接 SQL 调用](sql-making-direct-sql-calls-odbc.md)
+- [进行直接 SQL 调用](sql-making-direct-sql-calls-odbc.md)
 
 - [直接调用 ODBC API](odbc-calling-odbc-api-functions-directly.md)
 
-- [数据库类如何使用 MFC 文档/视图体系结构工作？](working-with-documents-and-views.md)
+- [数据库类如何使用 MFC 文档/视图体系结构？](working-with-documents-and-views.md)
 
 - [ODBC 驱动程序列表](odbc-driver-list.md)
 
 ## <a name="odbc-database-tasks"></a>ODBC 数据库任务
 
-这些任务基于 MFC [ODBC](odbc-basics.md)类。 有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
+这些任务基于 MFC [ODBC](odbc-basics.md)类。 若要详细了解如何使用没有 MFC 的 ODBC API，请参阅[开放式数据库连接（ODBC）](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
 
-- [安装并开始使用 ODBC](installing-and-getting-started-with-odbc.md)
+- [ODBC 安装和入门](installing-and-getting-started-with-odbc.md)
 
 - [设计和创建 ODBC 数据库应用程序](design-and-create-an-odbc-database-application.md)
 
@@ -76,6 +75,6 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 
 - [使用 MFC ODBC 记录集](use-mfc-odbc-recordsets.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据访问编程 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

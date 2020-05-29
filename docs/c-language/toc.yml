@@ -1,0 +1,692 @@
+- name: C 语言文档
+  href: ../c-language/index.yml
+- name: C 语言参考
+  items:
+    - name: C 语言参考
+      href: ../c-language/c-language-reference.md
+    - name: 《C 语言参考》的组织
+      items:
+        - name: 《C 语言参考》的组织
+          href: ../c-language/organization-of-the-c-language-reference.md
+        - name: 此手册的范围
+          href: ../c-language/scope-of-this-manual.md
+        - name: ANSI 一致性
+          href: ../c-language/ansi-conformance.md
+    - name: C 的元素
+      items:
+        - name: C 的元素
+          href: ../c-language/elements-of-c.md
+        - name: C 标记
+          items:
+            - name: C 标记
+              href: ../c-language/c-tokens.md
+            - name: 空白字符
+              href: ../c-language/white-space-characters.md
+            - name: C 注释
+              href: ../c-language/c-comments.md
+            - name: 标记的计算
+              href: ../c-language/evaluation-of-tokens.md
+        - name: C 关键字
+          href: ../c-language/c-keywords.md
+        - name: C 标识符
+          items:
+            - name: C 标识符
+              href: ../c-language/c-identifiers.md
+            - name: 多字节和宽字符
+              href: ../c-language/multibyte-and-wide-characters.md
+            - name: 三字符组
+              href: ../c-language/trigraphs.md
+        - name: C 常量
+          items:
+            - name: C 常量
+              href: ../c-language/c-constants.md
+            - name: C 浮点常量
+              items:
+                - name: C 浮点常量
+                  href: ../c-language/c-floating-point-constants.md
+                - name: 对浮点常量的限制
+                  href: ../c-language/limits-on-floating-point-constants.md
+            - name: C 整数常量
+              items:
+                - name: C 整数常量
+                  href: ../c-language/c-integer-constants.md
+                - name: 整数类型
+                  href: ../c-language/integer-types.md
+                - name: C 和 C++ 整数限制
+                  href: ../c-language/cpp-integer-limits.md
+            - name: C 字符常量
+              items:
+                - name: C 字符常量
+                  href: ../c-language/c-character-constants.md
+                - name: 字符类型
+                  href: ../c-language/character-types.md
+                - name: 执行字符集
+                  href: ../c-language/execution-character-set.md
+                - name: 转义序列
+                  href: ../c-language/escape-sequences.md
+                - name: 八进制和十六进制字符规范
+                  href: ../c-language/octal-and-hexadecimal-character-specifications.md
+        - name: C 字符串文本
+          items:
+            - name: C 字符串文本
+              href: ../c-language/c-string-literals.md
+            - name: 字符串文本的类型
+              href: ../c-language/type-for-string-literals.md
+            - name: 字符串文本的存储
+              href: ../c-language/storage-of-string-literals.md
+            - name: 字符串文本串联
+              href: ../c-language/string-literal-concatenation.md
+            - name: 最大字符串长度
+              href: ../c-language/maximum-string-length.md
+        - name: 标点和特殊字符
+          href: ../c-language/punctuation-and-special-characters.md
+    - name: 程序结构
+      items:
+        - name: 程序结构
+          href: ../c-language/program-structure.md
+        - name: 源文件和源程序
+          items:
+            - name: 源文件和源程序
+              href: ../c-language/source-files-and-source-programs.md
+            - name: 对预处理器的指令
+              href: ../c-language/directives-to-the-preprocessor.md
+            - name: C 杂注
+              href: ../c-language/c-pragmas.md
+            - name: C 声明和定义
+              href: ../c-language/c-declarations-and-definitions.md
+            - name: 函数声明和定义
+              href: ../c-language/function-declarations-and-definitions.md
+            - name: Blocks
+              href: ../c-language/blocks.md
+            - name: 示例程序
+              href: ../c-language/example-program.md
+        - name: main 函数和程序执行
+          items:
+            - name: main 函数和程序执行
+              href: ../c-language/main-function-and-program-execution.md
+            - name: 使用 wmain
+              href: ../c-language/using-wmain.md
+            - name: 自变量说明
+              href: ../c-language/argument-description.md
+            - name: 扩展通配符自变量
+              href: ../c-language/expanding-wildcard-arguments.md
+            - name: 分析 C 命令行自变量
+              href: ../c-language/parsing-c-command-line-arguments.md
+            - name: 自定义 C 命令行处理
+              href: ../c-language/customizing-c-command-line-processing.md
+        - name: 生存期、范围、可见性和链接
+          items:
+            - name: 生存期、范围、可见性和链接
+              href: ../c-language/lifetime-scope-visibility-and-linkage.md
+            - name: 生存期
+              href: ../c-language/lifetime.md
+            - name: 范围和可见性
+              href: ../c-language/scope-and-visibility.md
+            - name: 生存期和可见性的摘要
+              href: ../c-language/summary-of-lifetime-and-visibility.md
+            - name: 链接
+              items:
+                - name: 链接
+                  href: ../c-language/linkage.md
+                - name: 内部链接
+                  href: ../c-language/internal-linkage.md
+                - name: 外部链接
+                  href: ../c-language/external-linkage.md
+                - name: 无链接
+                  href: ../c-language/no-linkage.md
+        - name: 命名空间
+          href: ../c-language/name-spaces.md
+    - name: 声明和类型
+      items:
+        - name: 声明和类型
+          href: ../c-language/declarations-and-types.md
+        - name: 声明概述
+          href: ../c-language/overview-of-declarations.md
+        - name: C 存储类
+          items:
+            - name: C 存储类
+              href: ../c-language/c-storage-classes.md
+            - name: 外部级别声明的存储类说明符
+              href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
+            - name: 内部级别声明的存储类说明符
+              items:
+                - name: 内部级别声明的存储类说明符
+                  href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
+                - name: auto 存储类说明符
+                  href: ../c-language/auto-storage-class-specifier.md
+                - name: register 存储类说明符
+                  href: ../c-language/register-storage-class-specifier.md
+                - name: 静态存储类说明符
+                  href: ../c-language/static-storage-class-specifier.md
+                - name: extern 存储类说明符
+                  href: ../c-language/extern-storage-class-specifier.md
+            - name: 具有函数声明的存储类说明符
+              href: ../c-language/storage-class-specifiers-with-function-declarations.md
+        - name: C 类型说明符
+          items:
+            - name: C 类型说明符
+              href: ../c-language/c-type-specifiers.md
+            - name: 数据类型说明符和等效项
+              href: ../c-language/data-type-specifiers-and-equivalents.md
+        - name: 类型限定符
+          href: ../c-language/type-qualifiers.md
+        - name: 声明符和变量声明
+          items:
+            - name: 声明符和变量声明
+              href: ../c-language/declarators-and-variable-declarations.md
+            - name: 简单变量声明
+              href: ../c-language/simple-variable-declarations.md
+            - name: C 枚举声明
+              href: ../c-language/c-enumeration-declarations.md
+            - name: 结构声明
+              items:
+                - name: 结构声明
+                  href: ../c-language/structure-declarations.md
+                - name: C 位域
+                  href: ../c-language/c-bit-fields.md
+                - name: 结构的存储和对齐
+                  href: ../c-language/storage-and-alignment-of-structures.md
+            - name: 联合声明
+              items:
+                - name: 联合声明
+                  href: ../c-language/union-declarations.md
+                - name: 联合的存储
+                  href: ../c-language/storage-of-unions.md
+            - name: 数组声明
+              items:
+                - name: 数组声明
+                  href: ../c-language/array-declarations.md
+                - name: 数组的存储
+                  href: ../c-language/storage-of-arrays.md
+            - name: 指针声明
+              items:
+                - name: 指针声明
+                  href: ../c-language/pointer-declarations.md
+                - name: 地址存储
+                  href: ../c-language/storage-of-addresses.md
+            - name: 基指针 (C)
+              href: ../c-language/based-pointers-c.md
+            - name: C 抽象声明符
+              href: ../c-language/c-abstract-declarators.md
+        - name: 解释更复杂的声明符
+          href: ../c-language/interpreting-more-complex-declarators.md
+        - name: 初始化
+          items:
+            - name: 初始化
+              href: ../c-language/initialization.md
+            - name: 初始化标量类型
+              href: ../c-language/initializing-scalar-types.md
+            - name: 初始化聚合类型
+              href: ../c-language/initializing-aggregate-types.md
+            - name: 初始化字符串
+              href: ../c-language/initializing-strings.md
+        - name: 基本类型的存储
+          items:
+            - name: 基本类型的存储
+              href: ../c-language/storage-of-basic-types.md
+            - name: char 类型
+              href: ../c-language/type-char.md
+            - name: int 类型
+              href: ../c-language/type-int.md
+            - name: C 调整了大小的整型
+              href: ../c-language/c-sized-integer-types.md
+            - name: float 类型
+              href: ../c-language/type-float.md
+            - name: 类型 double
+              href: ../c-language/type-double.md
+            - name: 长双精度类型
+              href: ../c-language/type-long-double.md
+        - name: 不完整类型
+          href: ../c-language/incomplete-types.md
+        - name: Typedef 声明
+          href: ../c-language/typedef-declarations.md
+        - name: C 扩展的存储类特性
+          items:
+            - name: C 扩展的存储类特性
+              href: ../c-language/c-extended-storage-class-attributes.md
+            - name: DLL 导入和导出
+              href: ../c-language/dll-import-and-export.md
+            - name: Naked (C)
+              href: ../c-language/naked-c.md
+            - name: 线程本地存储
+              href: ../c-language/thread-local-storage.md
+    - name: 表达式和赋值
+      items:
+        - name: 表达式和赋值
+          href: ../c-language/expressions-and-assignments.md
+        - name: 操作数和表达式
+          items:
+            - name: 操作数和表达式
+              href: ../c-language/operands-and-expressions.md
+            - name: C 主要表达式
+              items:
+                - name: C 主要表达式
+                  href: ../c-language/c-primary-expressions.md
+                - name: 主要表达式中的标识符
+                  href: ../c-language/identifiers-in-primary-expressions.md
+                - name: 主要表达式中的常量
+                  href: ../c-language/constants-in-primary-expressions.md
+                - name: 主要表达式中的字符串文本
+                  href: ../c-language/string-literals-in-primary-expressions.md
+                - name: 括号中的表达式
+                  href: ../c-language/expressions-in-parentheses.md
+            - name: 左值和右值表达式
+              href: ../c-language/l-value-and-r-value-expressions.md
+            - name: C 常量表达式
+              href: ../c-language/c-constant-expressions.md
+            - name: 表达式计算 (C)
+              items:
+                - name: 表达式计算 (C)
+                  href: ../c-language/expression-evaluation-c.md
+                - name: 副作用
+                  href: ../c-language/side-effects.md
+                - name: C 序列点
+                  href: ../c-language/c-sequence-points.md
+        - name: C 运算符
+          items:
+            - name: C 运算符
+              href: ../c-language/c-operators.md
+            - name: 计算的优先级和顺序
+              href: ../c-language/precedence-and-order-of-evaluation.md
+            - name: 常用算术转换
+              href: ../c-language/usual-arithmetic-conversions.md
+            - name: 后缀运算符
+              items:
+                - name: 后缀运算符
+                  href: ../c-language/postfix-operators.md
+                - name: 一维数组
+                  href: ../c-language/one-dimensional-arrays.md
+                - name: 多维数组 (C)
+                  href: ../c-language/multidimensional-arrays-c.md
+                - name: 函数调用 (C)
+                  href: ../c-language/function-call-c.md
+                - name: 结构和联合成员
+                  href: ../c-language/structure-and-union-members.md
+                - name: C 后缀增量和减量运算符
+                  href: ../c-language/c-postfix-increment-and-decrement-operators.md
+            - name: C 一元运算符
+              items:
+                - name: C 一元运算符
+                  href: ../c-language/c-unary-operators.md
+                - name: 前缀增量和减量运算符
+                  href: ../c-language/prefix-increment-and-decrement-operators.md
+                - name: 间接寻址运算符和 address-of 运算符
+                  href: ../c-language/indirection-and-address-of-operators.md
+                - name: 一元算术运算符
+                  href: ../c-language/unary-arithmetic-operators.md
+                - name: sizeof 运算符 (C)
+                  href: ../c-language/sizeof-operator-c.md
+            - name: 强制转换运算符
+              href: ../c-language/cast-operators.md
+            - name: C 乘法运算符
+              href: ../c-language/c-multiplicative-operators.md
+            - name: C 加法运算符
+              items:
+                - name: C 加法运算符
+                  href: ../c-language/c-additive-operators.md
+                - name: 加 (+)
+                  href: ../c-language/addition-plus.md
+                - name: 减法 (–)
+                  href: ../c-language/subtraction-minus.md
+                - name: 使用加法运算符
+                  href: ../c-language/using-the-additive-operators.md
+                - name: 指针算术
+                  href: ../c-language/pointer-arithmetic.md
+            - name: 按位移位运算符
+              href: ../c-language/bitwise-shift-operators.md
+            - name: C 关系和相等运算符
+              href: ../c-language/c-relational-and-equality-operators.md
+            - name: C 按位运算符
+              href: ../c-language/c-bitwise-operators.md
+            - name: C 逻辑运算符
+              href: ../c-language/c-logical-operators.md
+            - name: 条件表达式运算符
+              href: ../c-language/conditional-expression-operator.md
+            - name: C 赋值运算符
+              items:
+                - name: C 赋值运算符
+                  href: ../c-language/c-assignment-operators.md
+                - name: 简单赋值 (C)
+                  href: ../c-language/simple-assignment-c.md
+                - name: C 复合赋值
+                  href: ../c-language/c-compound-assignment.md
+            - name: 有序评估运算符
+              href: ../c-language/sequential-evaluation-operator.md
+        - name: 类型转换 (C)
+          items:
+            - name: 类型转换 (C)
+              href: ../c-language/type-conversions-c.md
+            - name: 赋值转换
+              items:
+                - name: 赋值转换
+                  href: ../c-language/assignment-conversions.md
+                - name: 从带符号整型的转换
+                  href: ../c-language/conversions-from-signed-integral-types.md
+                - name: 从无符号整型的转换
+                  href: ../c-language/conversions-from-unsigned-integral-types.md
+                - name: 从浮点类型的转换
+                  href: ../c-language/conversions-from-floating-point-types.md
+                - name: 指针类型之间的转换
+                  href: ../c-language/conversions-to-and-from-pointer-types.md
+                - name: 从其他类型的转换
+                  href: ../c-language/conversions-from-other-types.md
+            - name: 类型强制转换的转换
+              href: ../c-language/type-cast-conversions.md
+            - name: 函数调用转换
+              href: ../c-language/function-call-conversions.md
+    - name: 语句 (C)
+      items:
+        - name: 语句 (C)
+          href: ../c-language/statements-c.md
+        - name: C 语句概述
+          href: ../c-language/overview-of-c-statements.md
+        - name: break 语句 (C)
+          href: ../c-language/break-statement-c.md
+        - name: 复合语句 (C)
+          href: ../c-language/compound-statement-c.md
+        - name: continue 语句 (C)
+          href: ../c-language/continue-statement-c.md
+        - name: do-while 语句 (C)
+          href: ../c-language/do-while-statement-c.md
+        - name: 表达式语句 (C)
+          href: ../c-language/expression-statement-c.md
+        - name: for 语句 (C)
+          href: ../c-language/for-statement-c.md
+        - name: goto 和标记语句 (C)
+          href: ../c-language/goto-and-labeled-statements-c.md
+        - name: if 语句 (C)
+          href: ../c-language/if-statement-c.md
+        - name: Null 语句 (C)
+          href: ../c-language/null-statement-c.md
+        - name: return 语句 (C)
+          href: ../c-language/return-statement-c.md
+        - name: switch 语句 (C)
+          href: ../c-language/switch-statement-c.md
+        - name: try-except 语句 (C)
+          href: ../c-language/try-except-statement-c.md
+        - name: try-finally 语句 (C)
+          href: ../c-language/try-finally-statement-c.md
+        - name: While 语句 (C)
+          href: ../c-language/while-statement-c.md
+    - name: 函数 (C)
+      items:
+        - name: 函数 (C)
+          href: ../c-language/functions-c.md
+        - name: 函数概述
+          items:
+            - name: 函数概述
+              href: ../c-language/overview-of-functions.md
+            - name: 函数声明和定义的过时形式
+              href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
+        - name: C 函数定义
+          items:
+            - name: C 函数定义
+              href: ../c-language/c-function-definitions.md
+            - name: 函数特性
+              items:
+                - name: 函数特性
+                  href: ../c-language/function-attributes.md
+                - name: 指定调用约定
+                  href: ../c-language/specifying-calling-conventions.md
+                - name: 内联函数
+                  href: ../c-language/inline-functions.md
+                - name: 内联汇编程序 (C)
+                  href: ../c-language/inline-assembler-c.md
+            - name: DLL 导入和导出函数
+              items:
+                - name: DLL 导入和导出函数
+                  href: ../c-language/dll-import-and-export-functions.md
+                - name: 定义和声明 (C)
+                  href: ../c-language/definitions-and-declarations-c.md
+                - name: 使用 dllexport 和 dllimport 定义内联 C 函数
+                  href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
+                - name: dllimport-dllexport 的规则和限制
+                  href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
+            - name: Naked 函数
+              items:
+                - name: 裸函数
+                  href: ../c-language/naked-functions.md
+                - name: 针对使用 Naked 函数的规则和限制
+                  href: ../c-language/rules-and-limitations-for-using-naked-functions.md
+                - name: 编写 Prolog-Epilog 代码时的注意事项
+                  href: ../c-language/considerations-when-writing-prolog-epilog-code.md
+            - name: 存储类
+              href: ../c-language/storage-class.md
+            - name: 返回类型
+              href: ../c-language/return-type.md
+            - name: 参数
+              href: ../c-language/parameters.md
+            - name: 函数体
+              href: ../c-language/function-body.md
+        - name: 函数原型
+          href: ../c-language/function-prototypes.md
+        - name: 函数调用
+          items:
+            - name: 函数调用
+              href: ../c-language/function-calls.md
+            - name: 自变量
+              href: ../c-language/arguments.md
+            - name: 使用数目可变的自变量调用
+              href: ../c-language/calls-with-a-variable-number-of-arguments.md
+            - name: 递归函数
+              href: ../c-language/recursive-functions.md
+    - name: C 语言语法摘要
+      items:
+        - name: C 语言语法摘要
+          href: ../c-language/c-language-syntax-summary.md
+        - name: 定义和约定
+          href: ../c-language/definitions-and-conventions.md
+        - name: 词法语法
+          items:
+            - name: 词法语法
+              href: ../c-language/lexical-grammar.md
+            - name: 标记摘要
+              href: ../c-language/summary-of-tokens.md
+            - name: 关键字摘要
+              href: ../c-language/summary-of-keywords.md
+            - name: 标识符摘要
+              href: ../c-language/summary-of-identifiers.md
+            - name: 常量摘要
+              href: ../c-language/summary-of-constants.md
+            - name: 字符串文本的摘要
+              href: ../c-language/summary-of-string-literals.md
+            - name: 运算符 (C)
+              href: ../c-language/operators-c.md
+            - name: 标点符号
+              href: ../c-language/punctuators.md
+        - name: 短语结构语法
+          items:
+            - name: 短语结构语法
+              href: ../c-language/phrase-structure-grammar.md
+            - name: 表达式摘要
+              href: ../c-language/summary-of-expressions.md
+            - name: 声明摘要
+              href: ../c-language/summary-of-declarations.md
+            - name: 语句摘要
+              href: ../c-language/summary-of-statements.md
+            - name: 外部定义
+              href: ../c-language/external-definitions.md
+    - name: 实现定义的行为
+      items:
+        - name: 实现定义的行为
+          href: ../c-language/implementation-defined-behavior.md
+        - name: 翻译：诊断
+          href: ../c-language/translation-diagnostics.md
+        - name: 环境
+          items:
+            - name: 环境
+              href: ../c-language/environment.md
+            - name: 要保留的自变量
+              href: ../c-language/arguments-to-main.md
+            - name: 交互式设备
+              href: ../c-language/interactive-devices.md
+        - name: 标识符的行为
+          items:
+            - name: 标识符的行为
+              href: ../c-language/behavior-of-identifiers.md
+            - name: 没有外部链接的重要字符
+              href: ../c-language/significant-characters-without-external-linkage.md
+            - name: 带有外部链接的重要字符
+              href: ../c-language/significant-characters-with-external-linkage.md
+            - name: 大写和小写
+              href: ../c-language/uppercase-and-lowercase.md
+        - name: 字符
+          items:
+            - name: 字符
+              href: ../c-language/characters.md
+            - name: ASCII 字符集
+              href: ../c-language/ascii-character-set.md
+            - name: 多字节字符
+              href: ../c-language/multibyte-characters.md
+            - name: 每字符的位数
+              href: ../c-language/bits-per-character.md
+            - name: 字符集 1
+              href: ../c-language/character-sets1.md
+            - name: 无代表的字符常量
+              href: ../c-language/unrepresented-character-constants.md
+            - name: 宽字符
+              href: ../c-language/wide-characters.md
+            - name: 转换多字节字符
+              href: ../c-language/converting-multibyte-characters.md
+            - name: 字符值的范围
+              href: ../c-language/range-of-char-values.md
+        - name: 整数
+          items:
+            - name: 整数
+              href: ../c-language/integers.md
+            - name: 整数值的范围
+              href: ../c-language/range-of-integer-values.md
+            - name: 整数的降级
+              href: ../c-language/demotion-of-integers.md
+            - name: 带符号的按位运算
+              href: ../c-language/signed-bitwise-operations.md
+            - name: 余数
+              href: ../c-language/remainders.md
+            - name: 右移
+              href: ../c-language/right-shifts.md
+        - name: 浮点数学
+          items:
+            - name: 浮点数学
+              href: ../c-language/floating-point-math.md
+            - name: 值
+              href: ../c-language/values.md
+            - name: 将整数转换为浮点值
+              href: ../c-language/casting-integers-to-floating-point-values.md
+            - name: 浮点值的截断
+              href: ../c-language/truncation-of-floating-point-values.md
+        - name: 数组和指针
+          items:
+            - name: 数组和指针
+              href: ../c-language/arrays-and-pointers.md
+            - name: 最大数组大小
+              href: ../c-language/largest-array-size.md
+            - name: 指针减法
+              href: ../c-language/pointer-subtraction.md
+        - name: 寄存器：寄存器的可用性
+          href: ../c-language/registers-availability-of-registers.md
+        - name: 结构、联合、枚举和位域
+          items:
+            - name: 结构、联合、枚举和位域
+              href: ../c-language/structures-unions-enumerations-and-bit-fields.md
+            - name: 对联合的不正确的访问
+              href: ../c-language/improper-access-to-a-union.md
+            - name: 结构成员的填充和对齐
+              href: ../c-language/padding-and-alignment-of-structure-members.md
+            - name: 位域的符号
+              href: ../c-language/sign-of-bit-fields.md
+            - name: 位域的存储
+              href: ../c-language/storage-of-bit-fields.md
+            - name: 枚举类型
+              href: ../c-language/enum-type.md
+        - name: 限定符：访问易失对象
+          href: ../c-language/qualifiers-access-to-volatile-objects.md
+        - name: 声明符：最大数量
+          href: ../c-language/declarators-maximum-number.md
+        - name: 语句：对 Switch 语句的限制
+          href: ../c-language/statements-limits-on-switch-statements.md
+        - name: 预处理指令
+          items:
+            - name: 预处理指令
+              href: ../c-language/preprocessing-directives.md
+            - name: 字符常量和条件包含
+              href: ../c-language/character-constants-and-conditional-inclusion.md
+            - name: 包含用括号括起来的文件名
+              href: ../c-language/including-bracketed-filenames.md
+            - name: 包含带引号的文件名
+              href: ../c-language/including-quoted-filenames.md
+            - name: 字符序列
+              href: ../c-language/character-sequences.md
+            - name: 杂注
+              href: ../c-language/pragmas.md
+            - name: 默认日期和时间
+              href: ../c-language/default-date-and-time.md
+        - name: 库函数
+          items:
+            - name: 库函数
+              href: ../c-language/library-functions.md
+            - name: NULL 宏
+              href: ../c-language/null-macro.md
+            - name: assert 函数输出的诊断
+              href: ../c-language/diagnostic-printed-by-the-assert-function.md
+            - name: 字符测试
+              href: ../c-language/character-testing.md
+            - name: 域错误
+              href: ../c-language/domain-errors.md
+            - name: 浮点值的下溢
+              href: ../c-language/underflow-of-floating-point-values.md
+            - name: fmod 函数
+              href: ../c-language/fmod-function.md
+            - name: signal 函数 (C)
+              href: ../c-language/signal-function-c.md
+            - name: 默认信号
+              href: ../c-language/default-signals.md
+            - name: 终止换行符
+              href: ../c-language/terminating-newline-characters.md
+            - name: 空行
+              href: ../c-language/blank-lines.md
+            - name: Null 字符
+              href: ../c-language/null-characters.md
+            - name: 追加模式中的文件位置
+              href: ../c-language/file-position-in-append-mode.md
+            - name: 文本文件的截断
+              href: ../c-language/truncation-of-text-files.md
+            - name: 文件缓冲
+              href: ../c-language/file-buffering.md
+            - name: 零长度文件
+              href: ../c-language/zero-length-files.md
+            - name: 文件名
+              href: ../c-language/filenames.md
+            - name: 文件访问限制
+              href: ../c-language/file-access-limits.md
+            - name: 删除打开的文件
+              href: ../c-language/deleting-open-files.md
+            - name: 使用已存在的名称进行重命名
+              href: ../c-language/renaming-with-a-name-that-exists.md
+            - name: 读取指针值
+              href: ../c-language/reading-pointer-values.md
+            - name: 读取范围
+              href: ../c-language/reading-ranges.md
+            - name: 文件位置错误
+              href: ../c-language/file-position-errors.md
+            - name: 由 perror 函数生成的消息
+              href: ../c-language/messages-generated-by-the-perror-function.md
+            - name: 分配零内存
+              href: ../c-language/allocating-zero-memory.md
+            - name: abort 函数 (C)
+              href: ../c-language/abort-function-c.md
+            - name: atexit 函数 (C)
+              href: ../c-language/atexit-function-c.md
+            - name: 环境名称
+              href: ../c-language/environment-names.md
+            - name: 系统函数
+              href: ../c-language/system-function.md
+            - name: strerror 函数
+              href: ../c-language/strerror-function.md
+            - name: 时区
+              href: ../c-language/time-zone.md
+            - name: clock 函数 (C)
+              href: ../c-language/clock-function-c.md
+- name: C/C++ 预处理器参考
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: C 运行时库 (CRT) 参考
+  href: ../c-runtime-library/c-run-time-library-reference.md

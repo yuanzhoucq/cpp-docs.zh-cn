@@ -4,7 +4,6 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
-- /GS
 helpviewer_keywords:
 - buffers [C++], buffer overruns
 - buffer overruns, compiler /GS switch
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d296e8079a9ecd8d366c46bbdad8b2ee5dc313
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292167"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439560"
 ---
 # <a name="gs-buffer-security-check"></a>/GS（缓冲区安全检查）
 
-检测到某些覆盖函数的返回地址、 异常处理程序地址或某些类型的参数的缓冲区溢出。 导致缓冲区溢出是黑客用于攻击不会强制缓冲区大小限制的代码的技术。
+检测某些覆盖函数的返回地址、异常处理程序地址或某些类型的参数的缓冲区溢出。 导致缓冲区溢出是黑客用来利用不强制缓冲区大小限制的代码的一种技术。
 
 ## <a name="syntax"></a>语法
 
@@ -33,25 +32,25 @@ ms.locfileid: "62292167"
 
 ## <a name="remarks"></a>备注
 
-**/GS**默认情况下。 如果希望应用程序拥有不出现安全漏洞，使用 **/GS-**。 有关取消缓冲区溢出检测的详细信息，请参阅[safebuffers](../../cpp/safebuffers.md)。
+默认情况下， **/gs**处于启用状态。 如果你希望你的应用程序不存在安全漏洞，请使用 **/GS-** 。 有关抑制缓冲区溢出检测的详细信息，请参阅[safebuffers](../../cpp/safebuffers.md)。
 
 ## <a name="security-checks"></a>安全检查
 
-编译器认为容易出现缓冲区溢出问题的函数，编译器将分配的返回地址之前在堆栈上的空间。 在进入函数时，分配的空间将以加载*安全 cookie*一次在模块加载中计算的。 函数退出时，和帧 64 位操作系统上的展开过程中，调用帮助程序函数以确保 cookie 的值仍为相同。 不同的值指示堆栈的覆盖可能已发生。 如果检测到一个不同的值，则进程将终止。
+在编译器识别为受缓冲区溢出问题的函数时，编译器会在返回地址之前在堆栈上分配空间。 在函数项上，使用在模块加载时计算的*安全 cookie*加载分配的空间。 在函数退出时，以及在64位操作系统的帧展开期间，将调用 helper 函数以确保 cookie 的值仍然相同。 其他值表示可能发生了堆栈覆盖。 如果检测到其他值，将终止该进程。
 
 ## <a name="gs-buffers"></a>GS 缓冲区
 
-在执行缓冲区溢出安全检查*GS 缓冲区*。 GS 缓冲区可以是下列之一：
+对*GS 缓冲区*执行缓冲区溢出安全检查。 GS 缓冲区可以是以下项之一：
 
-- 一个数组，大于 4 个字节，超过两个元素，并且具有不是指针类型的元素类型。
+- 大于4个字节的数组，包含两个以上的元素，并且其元素类型不是指针类型。
 
-- 一种数据结构，其大小超过 8 个字节，不包含指针。
+- 大小超过8个字节且不包含任何指针的数据结构。
 
-- 通过使用分配的缓冲区[_alloca](../../c-runtime-library/reference/alloca.md)函数。
+- 使用[_alloca](../../c-runtime-library/reference/alloca.md)函数分配的缓冲区。
 
-- 任何类或结构，其中包含 GS 缓冲区。
+- 包含 GS 缓冲区的任何类或结构。
 
-例如，以下语句声明 GS 缓冲区。
+例如，下面的语句声明 GS 缓冲区。
 
 ```cpp
 char buffer[20];
@@ -60,7 +59,7 @@ struct { int a; int b; int c; int d; } myStruct;
 struct { int a; char buf[20]; };
 ```
 
-但是，以下语句不声明 GS 缓冲区。 前两个声明包含指针类型的元素。 第三个和第四个语句声明的数组太小。 第五个语句声明一个结构，其大小在 x86 平台不超过 8 个字节。
+但是，以下语句不会声明 GS 缓冲区。 前两个声明包含指针类型的元素。 第三个和第四个语句声明的数组的大小太小。 第五个语句声明一个结构，其在 x86 平台上的大小不超过8个字节。
 
 ```cpp
 char *pBuf[20];
@@ -72,65 +71,65 @@ struct { int a; int b; };
 
 ## <a name="initialize-the-security-cookie"></a>初始化安全 Cookie
 
-**/GS**编译器选项要求使用 cookie 的任何函数运行之前初始化安全 cookie。 在进入 EXE 或 DLL，必须立即初始化安全 cookie。 如果你使用默认 VCRuntime 入口点会自动完成： mainCRTStartup，wmainCRTStartup，WinMainCRTStartup，wWinMainCRTStartup，或 _DllMainCRTStartup。 如果使用备用的入口点，必须通过调用手动初始化的安全 cookie [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)。
+**/Gs**编译器选项要求在运行任何使用 cookie 的函数之前初始化安全 cookie。 安全 cookie 必须立即初始化为 EXE 或 DLL。 如果使用默认的 VCRuntime 入口点： mainCRTStartup、wmainCRTStartup、WinMainCRTStartup、wWinMainCRTStartup 或 _DllMainCRTStartup，则会自动执行此操作。 如果使用备用入口点，则必须通过调用[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)来手动初始化安全 cookie。
 
 ## <a name="what-is-protected"></a>受保护的内容
 
-**/GS**编译器选项保护以下各项：
+**/Gs**编译器选项保护以下项：
 
 - 函数调用的返回地址。
 
-- 异常处理程序函数的地址。
+- 函数的异常处理程序的地址。
 
 - 易受攻击的函数参数。
 
-在所有平台上 **/GS**尝试检测到的寄信人地址的缓冲区溢出。 在 x86 和 x64，使用函数调用的返回地址存储在堆栈的调用约定等平台上更轻松地利用缓冲区溢出。
+在所有平台上， **/gs**都尝试检测返回地址中的缓冲区溢出。 在 x86 和 x64 等平台上，可以更容易地利用缓冲区溢出，它们使用调用约定将函数调用的返回地址存储在堆栈上。
 
-在 x86，如果函数使用异常处理程序，编译器将插入安全 cookie 来保护异常处理程序的地址。 展开帧的过程期间将检查该 cookie。
+在 x86 上，如果函数使用异常处理程序，则编译器将插入一个安全 cookie 来保护异常处理程序的地址。 帧展开期间会检查 cookie。
 
-**/GS**保护*易受攻击的参数*，传递到函数。 易受攻击的参数是指针，C++引用，C 结构 (C++的 POD 类型)，其中包含一个指针或 GS 缓冲区。
+**/Gs**保护传递到函数中的*易受攻击的参数*。 易受攻击的参数是一种C++指针、引用、包含指针的C++ C 结构（POD 类型）或 GS 缓冲区。
 
-Cookie 和本地变量之前分配的易受攻击的参数。 缓冲区溢出可以覆盖这些参数。 和之前该函数将返回和执行安全检查，使用这些参数的函数中的代码可能会导致攻击。 为了尽量减少这种危险，编译器将函数 prolog 过程中使用易受攻击的参数的副本，并将其放任何缓冲区的存储区域下方。
+在 cookie 变量和局部变量之前，将分配一个有漏洞的参数。 缓冲区溢出可以覆盖这些参数。 在函数返回之前，使用这些参数的函数中的代码可能会导致攻击，并执行安全检查。 为了最大限度地降低这种风险，编译器会在函数 prolog 期间复制易受攻击的参数，并将其放在所有缓冲区的存储区域下方。
 
-在以下情况下，编译器不会使易受攻击的参数的副本：
+在以下情况下，编译器不会生成易受攻击的参数的副本：
 
 - 不包含 GS 缓冲区的函数。
 
-- 优化 ([/O 选项](o-options-optimize-code.md)) 未启用。
+- 不启用优化（[/o 选项](o-options-optimize-code.md)）。
 
-- 具有变量参数列表 （...） 的函数。
+- 具有变量参数列表（...）的函数。
 
-- 使用标记的函数[裸](../../cpp/naked-cpp.md)。
+- 用[naked](../../cpp/naked-cpp.md)标记的函数。
 
-- 包含第一个语句中的内联程序集代码的函数。
+- 在第一个语句中包含内联程序集代码的函数。
 
-- 仅在不太可能会发生缓冲区溢出时可利用的方法中使用一个参数。
+- 参数的使用方法仅在于在出现缓冲区溢出时可能会被利用的方式。
 
-## <a name="what-is-not-protected"></a>什么是不受保护
+## <a name="what-is-not-protected"></a>不受保护的内容
 
-**/GS**编译器选项不能防止所有缓冲区溢出安全攻击。 例如，如果在对象中有一个缓冲区和 vtable，缓冲区溢出可能会损坏 vtable。
+**/Gs**编译器选项不能防止所有缓冲区溢出安全攻击。 例如，如果对象中有一个缓冲区和一个 vtable，缓冲区溢出可能会损坏 vtable。
 
-即使您使用 **/GS**，始终应该尝试编写安全代码没有缓冲区溢出。
+即使使用的是 **/gs**，也应始终尝试编写没有缓冲区溢出的安全代码。
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项
 
-1. 在中**解决方案资源管理器**，右键单击项目，然后单击**属性**。
+1. 在**解决方案资源管理器**中，右键单击项目，然后单击 "**属性**"。
 
-   有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+   有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 在中**属性页**对话框中，单击**C /C++** 文件夹。
+1. 在 "**属性页**" 对话框中，单击 " **CC++ /** 文件夹"。
 
-1. 单击**代码生成**属性页。
+1. 单击 "**代码生成**" 属性页。
 
-1. 修改**缓冲区安全检查**属性。
+1. 修改 "**缓冲区安全检查**" 属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>。
+- 请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>。
 
 ## <a name="example"></a>示例
 
-此示例溢出缓冲区。 这将导致应用程序在运行时失败。
+此示例溢出缓冲区。 这会导致应用程序在运行时失败。
 
 ```C
 // compile with: /c /W1
@@ -155,7 +154,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

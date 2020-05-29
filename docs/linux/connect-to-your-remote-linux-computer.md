@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中连接到你的目标 Linux 系统
 description: 如何从 Visual Studio C++ 项目连接到远程 Linux 计算机或适用于 Linux 的 Windows 子系统。
 ms.date: 01/17/2020
-ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518213"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364366"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>在 Visual Studio 中连接到你的目标 Linux 系统
 
@@ -150,10 +150,10 @@ gdbserver 可用于在嵌入式设备上进行调试。 如果无法启用 TCP �
 
 对结合使用 C++ 与[适用于 Linux 的 Windows 子系统 (WSL)](/windows/wsl/about)，Visual Studio 2019 版本 16.1 添加了本机支持。 这意味着可以直接在本地 WSL 安装上生成和调试。 不再需要添加远程连接或配置 SSH。 可在此处找到有关[如何安装 WSL](/windows/wsl/install-win10)的详细信息。
 
-要将 WSL 安装配置为可与 Visual Studio 结合使用，需要安装以下工具：gcc 或 clang、gdb、make、rsync 和 zip。 你可以使用此命令将它们安装在使用 apt 的发行版上，这还将安装 g++ 编译器：
+若要配置 WSL 安装，使其可与 Visual Studio 结合使用，则需安装以下工具：gcc 或 clang、gdb、make、ninja-build（仅适用于使用 Visual Studio 2019 版本 16.6 或更高版本的 CMake 项目）、rsync 和 zip。 你可以使用此命令将它们安装在使用 apt 的发行版上，这还将安装 g++ 编译器：
 
 ```bash
-sudo apt install g++ gdb make rsync zip
+sudo apt install g++ gdb make ninja-build rsync zip
 ```
 
 有关详细信息，请参阅[下载、安装和设置 Linux 工作负荷](download-install-and-setup-the-linux-development-workload.md)。

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
 ms.openlocfilehash: 641d85b03fca13a6592610d87563e3e701ad3e3e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142090"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424859"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>并行模式库中的最佳做法
 
@@ -130,7 +130,7 @@ PPL 提供了两种方法来取消任务组或并行算法所执行的并行工�
 
 [!code-cpp[concrt-parallel-resource-destruction#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_11.cpp)]
 
-该示例产生下面的输出：
+此示例生成以下输出：
 
 ```Output
 Container 1: Freeing resources...Exiting program...

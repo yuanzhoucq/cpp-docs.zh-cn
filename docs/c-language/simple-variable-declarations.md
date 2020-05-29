@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158231"
 ---
 # <a name="simple-variable-declarations"></a>简单变量声明
 
@@ -21,19 +21,19 @@ ms.locfileid: "56149981"
 ## <a name="syntax"></a>语法
 
 *declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;pointer<sub>opt</sub> direct-declarator
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-identifier：<br/>
+identifier  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
 对于算术、结构、联合、枚举和 void 类型以及由 `typedef` 名称表示的类型，可以在声明中使用简单声明符，因为类型说明符提供了所有类型化信息。 指针、数组和函数类型需要更复杂的声明符。
 
-可以使用一系列由逗号 (,) 分隔的标识符来指定同一个声明中的多个变量。 声明中定义的所有变量都具有相同的基类型。 例如:
+可以使用一系列由逗号 (,  ) 分隔的标识符来指定同一个声明中的多个变量。 声明中定义的所有变量都具有相同的基类型。 例如：
 
 ```C
 int x, y;        /* Declares two simple variables of type int */

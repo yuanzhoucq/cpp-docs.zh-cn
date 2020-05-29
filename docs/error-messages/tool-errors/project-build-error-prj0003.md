@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 59028c6d886630ef7db115a2ea93327669b2fcfd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450755"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192921"
 ---
 # <a name="project-build-error-prj0003"></a>项目生成错误 PRJ0003
 
-> 错误生成 '*命令行*。
+> 生成 "*命令行*" 时出错。
 
-*命令行*命令中的输入来形成**属性页**对话框的返回错误代码，但没有信息会显示在**输出**窗口。
+"**属性页**" 对话框中的 "输入" 生成的*命令行*命令返回了错误代码，但在 "**输出**" 窗口中没有显示信息。
 
 此错误的可能原因包括：
 
-- 你的项目依赖于 ATL 服务器。 从 Visual Studio 2008 开始，ATL Server 不再包含在 Visual Studio 中，但已作为 CodePlex 上的共享源项目发布。 若要下载 ATL Server 源代码和工具，请转到[ATL 服务器库和工具](https://go.microsoft.com/fwlink/p/?linkid=81979)。
+- 你的项目依赖于 ATL 服务器。 从 Visual Studio 2008 开始，ATL Server 不再作为 Visual Studio 的一部分提供，而是在 CodePlex 中作为共享源项目发布。 若要下载 ATL 服务器源代码和工具，请参阅[Atl 服务器库和工具](https://go.microsoft.com/fwlink/p/?linkid=81979)。
 
-- 较低的系统资源。 关闭一些应用程序以解决此问题。
+- 系统资源不足。 关闭一些应用程序以解决此问题。
 
-- 没有足够的安全特权。 验证具有足够的安全特权。
+- 安全权限不足。 验证你是否具有足够的安全特权。
 
-- 中指定的可执行文件路径**VC + + 目录**不包括尝试运行该工具的路径。 有关信息，请参阅[设置编译器和生成属性](../../build/working-with-project-properties.md)
+- 在**VC + + 目录**中指定的可执行路径不包括您尝试运行的工具的路径。 有关信息，请参阅[设置编译器和生成属性](../../build/working-with-project-properties.md)
 
-- 对生成文件项目缺少一个用于在运行命令**生成命令行**或**重新生成命令行**。
+- 对于生成文件项目，缺少在**生成命令行**或**重新生成命令行**上运行的命令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [项目生成错误和警告 (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

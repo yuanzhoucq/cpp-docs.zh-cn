@@ -1,10 +1,12 @@
 ---
 title: _set_app_type
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_app_type
+- _o__set_app_type
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -13,12 +15,12 @@ f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 2b78b7205b1e5dda7ac7062747c6dd1065ed1c94
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957928"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919917"
 ---
 # <a name="_set_app_type"></a>_set_app_type
 
@@ -54,8 +56,10 @@ void __cdecl _set_app_type(
 
 通常情况下，不需要调用此函数。 它是在应用中调用 `main` 前执行的 C 运行时启动代码的一部分。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |_set_app_type|process.h|

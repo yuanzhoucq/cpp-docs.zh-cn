@@ -2,7 +2,6 @@
 title: 如何：创建资源（C++）
 ms.date: 02/14/2019
 f1_keywords:
-- vc.editors.resource
 - vc.resvw.add.MFC
 - vs.resourceview.F1
 - vc.editors.insertresource
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5527b7c46b728a4a009a56fca3fea52bf5ef9bf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214417"
 ---
 # <a name="how-to-create-resources-c"></a>如何：创建资源（C++）
 
@@ -115,11 +114,11 @@ ms.locfileid: "72444976"
 
 **资源视图**windows 包括 "**添加资源**" 对话框，其中包含以下用于将资源添加到C++ windows 桌面应用程序项目的属性：
 
-| 属性 | 说明 |
+| properties | 说明 |
 |---|---|
 | **资源类型** | 指定要创建的资源类型。<br/><br/>您可以展开光标和对话框资源类别以显示*位于中的其他资源。\Microsoft Visual Studio \<版本\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*。 如果需要添加 .rct 文件，请将它们放在此处或指定另一个[包含路径](../windows/how-to-specify-include-directories-for-resources.md)。 在树控件中的顶层显示的资源是 Visual Studio 提供的默认资源。 .Rct 文件中的资源将显示在相应类别下的第二个级别。 对于可以添加的 .rct 文件数没有预设的限制。<br/><br/> |
 | **新建** | 根据在 "**资源类型**" 框中选择的类型创建资源，然后在相应的编辑器中打开该资源。<br/><br/>例如，如果您创建一个对话框资源，它将在[对话框编辑器](../windows/dialog-editor.md)中打开该资源。 |
-| **Import** | 打开 "**导入**" 对话框以导航到要导入到当前项目中的资源。<br/><br/>可以导入位图、图标、光标、HTML 和声音（。WAV）或自定义资源文件。 |
+| **导入** | 打开 "**导入**" 对话框以导航到要导入到当前项目中的资源。<br/><br/>可以导入位图、图标、光标、HTML 和声音（。WAV）或自定义资源文件。 |
 | **自定义** | 打开 "**新建自定义资源**" 对话框以创建自定义资源。<br/><br/>还包括一个**资源类型**属性，该属性提供一个文本框以输入自定义资源类型的名称。 退出C++时，视觉对象会自动将名称改为大写。 自定义资源仅在[二进制编辑器](../windows/binary-editor.md)中进行编辑。 |
 
 创建新资源时，视觉对象C++将为其分配一个唯一名称，例如 `IDD_Dialog1`。 可以通过在关联的资源编辑器或[属性窗口](/visualstudio/ide/reference/properties-window)中编辑资源属性来自定义此资源 ID。
@@ -155,7 +154,7 @@ ms.locfileid: "72444976"
 > [!NOTE]
 > 将特定于语言的模板文件放在主模板目录的子目录中。 例如，仅限英语的模板文件 *\\< 资源模板目录\>\ 1033*。
 >
-> Visual Studio 中的新.rct 文件搜索 *\Program Files\Microsoft Visual Studio\<版本\>\VC\VCResourceTemplates*， *\Program Files\Microsoft Visual Studio \<版本 > \VC\VCResourceTemplates\\< LCID\>*  （例如 1033 为英语的 LCID)，或在任何位置[包括路径](../windows/how-to-specify-include-directories-for-resources.md)。 如果希望将 .rct 文件存储在其他位置，则必须将该位置添加到包含路径中。
+> Visual Studio 将在 *\Program Files\Microsoft Visual studio \<版本\>\VC\VCResourceTemplates*、 *\Program Files\Microsoft visual studio \<version > \VC\VCRESOURCETEMPLATES\\< lcid\>* （例如，1033的 lcid 为）或[包括路径](../windows/how-to-specify-include-directories-for-resources.md)中的任何位置搜索新的 .rct 文件。 如果希望将 .rct 文件存储在其他位置，则必须将该位置添加到包含路径中。
 
 ### <a name="to-create-and-use-a-resource-template"></a>创建和使用资源模板
 

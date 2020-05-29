@@ -15,24 +15,24 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 81b26e61f64623d1e3da5ed207d0e8e43350229d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 8e42fc9da672ca4ef97e775776935650ab7f545a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708006"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367118"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>记录字段交换：使用向导代码
 
-> [!NOTE] 
+> [!NOTE]
 > MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建使用者。
 
-本主题介绍 MFC 应用程序向导和“添加类”（如[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)中所述）编写的用于支持 RFX 的代码，以及你可能需要如何更改此代码。
+本主题介绍 MFC 应用程序向导和“添加类”（如[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)中所述）编写的用于支持 RFX 的代码，以及你可能需要如何更改此代码****。
 
 > [!NOTE]
->  本主题适用于从 `CRecordset` 派生的类，其中尚未实现批量提取行。 如果使用批量提取行，则将实现批量记录字段交换（批量 RFX）。 批量 RFX 与 RFX 类似。 若要了解差异，请参阅[记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本主题适用于从 `CRecordset` 派生的类，其中尚未实现批量提取行。 如果使用批量提取行，则将实现批量记录字段交换（批量 RFX）。 批量 RFX 与 RFX 类似。 要了解差异，请参阅[记录集：批量提取记录 （ODBC）。](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-使用 MFC 应用程序向导或“添加类”创建记录集类时，向导将根据你在向导中选择的数据源、表和列选项编写以下与 RFX 相关的元素：
+使用 MFC 应用程序向导或“添加类”创建记录集类时，向导将根据你在向导中选择的数据源、表和列选项编写以下与 RFX 相关的元素****：
 
 - 记录集类中记录集字段数据成员的声明
 
@@ -40,7 +40,7 @@ ms.locfileid: "65708006"
 
 - 记录集类构造函数中记录集字段数据成员的初始化
 
-##  <a name="_core_the_field_data_member_declarations"></a> 字段数据成员声明
+## <a name="field-data-member-declarations"></a><a name="_core_the_field_data_member_declarations"></a> 字段数据成员声明
 
 向导将在 .h 文件中编写记录集类声明，类似于类 `CSections` 的以下内容：
 
@@ -78,7 +78,7 @@ public:
 
 另请注意，向导会替代 `CRecordset` 类的 `DoFieldExchange` 成员函数。
 
-##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange 替代
+## <a name="dofieldexchange-override"></a><a name="_core_the_dofieldexchange_override"></a> DoFieldExchange 替代
 
 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 是 RFX 的核心。 框架会在任何需要的时候调用 `DoFieldExchange` 来将数据从数据源移动到记录集或从记录集移动到数据源。 `DoFieldExchange` 还支持通过 [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) 和 [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) 成员函数来获取有关字段数据成员的信息。
 
@@ -109,7 +109,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 - 当它调用 `DoFieldExchange` 时框架传递的 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) 对象的 `pFX` 指针。 `CFieldExchange` 对象指定 `DoFieldExchange` 要执行的操作、传输方向和其他上下文信息。
 
-##  <a name="_core_the_recordset_constructor"></a> 记录集构造函数
+## <a name="recordset-constructor"></a><a name="_core_the_recordset_constructor"></a> 记录集构造函数
 
 向导编写的记录集构造函数包含两个与 RFX 相关的操作：
 
@@ -133,7 +133,7 @@ CSections::CSections(CDatabase* pdb)
 ```
 
 > [!NOTE]
->  如果手动添加任何字段数据成员，就像如果动态绑定新列一样，则必须递增 `m_nFields`。 通过追加另一行代码来执行此操作，例如：
+> 如果手动添加任何字段数据成员，就像如果动态绑定新列一样，则必须递增 `m_nFields`。 通过追加另一行代码来执行此操作，例如：
 
 ```cpp
 m_nFields += 3;
@@ -141,6 +141,6 @@ m_nFields += 3;
 
 这是用于添加三个新字段的代码。 如果添加任何参数数据成员，则必须初始化 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) 数据成员，其中包含参数数据成员的数量。 将 `m_nParams` 初始化放置在括号外。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

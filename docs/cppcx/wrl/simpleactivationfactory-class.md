@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-ms.openlocfilehash: 1831a816d0967c2ca53f941128639ea368c1b727
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39e539c63e91b508f51656114ee8fbd68150991f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403073"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370941"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 类
 
@@ -33,14 +33,14 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>参数
 
-*基本*<br/>
+*基地*<br/>
 基类。
 
 ## <a name="remarks"></a>备注
 
-类的基类必须提供默认构造函数。
+基类必须提供默认构造函数。
 
-下面的代码示例演示如何使用与 SimpleActivationFactory [ActivatableClassWithFactoryEx](activatableclass-macros.md)宏。
+以下代码示例演示如何将简单激活工厂与[可激活的类与 FactoryEx](activatableclass-macros.md)宏一起使用。
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`
 
@@ -48,11 +48,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[SimpleActivationFactory::ActivateInstance 方法](#activateinstance)|创建指定接口的实例。|
-|[SimpleActivationFactory::GetRuntimeClassName 方法](#getruntimeclassname)|获取指定的类的实例的运行时类名称*Base*类模板参数。|
-|[SimpleActivationFactory::GetTrustLevel 方法](#gettrustlevel)|获取指定的类的实例的信任级别*Base*类模板参数。|
+|[SimpleActivationFactory::GetRuntimeClassName 方法](#getruntimeclassname)|获取*Base*类模板参数指定的类实例的运行时类名称。|
+|[SimpleActivationFactory::GetTrustLevel 方法](#gettrustlevel)|获取*Base*类模板参数指定的类实例的信任级别。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -80,11 +80,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标题：** 模块.h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="activateinstance"></a>Simpleactivationfactory:: Activateinstance 方法
+## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a>简单激活工厂：：激活实例方法
 
 创建指定接口的实例。
 
@@ -97,7 +97,7 @@ STDMETHOD( ActivateInstance )(
 #### <a name="parameters"></a>参数
 
 *ppvObject*<br/>
-此操作完成后，指向由指定的对象的实例`Base`类模板参数。
+此操作完成后，将指针指向`Base`类模板参数指定的对象的实例。
 
 ### <a name="return-value"></a>返回值
 
@@ -105,11 +105,11 @@ STDMETHOD( ActivateInstance )(
 
 ### <a name="remarks"></a>备注
 
-如果`__WRL_STRICT__`是定义，断言错误发出如果类模板参数中指定的基类不派生自[RuntimeClass](runtimeclass-class.md)，或者因配置不与 WinRt 或 WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md)枚举值。
+如果`__WRL_STRICT__`已定义，如果类模板参数中指定的基类不是从[RuntimeClass](runtimeclass-class.md)派生，或者未配置 WinRt 或 WinRtClassicComMix[运行时类型](runtimeclasstype-enumeration.md)枚举值，则将发出断言错误。
 
-## <a name="getruntimeclassname"></a>Simpleactivationfactory:: Getruntimeclassname 方法
+## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a>简单激活工厂：：获取运行时类名称方法
 
-获取指定的类的实例的运行时类名称`Base`类模板参数。
+获取`Base`类模板参数指定的类实例的运行时类名称。
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -119,7 +119,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>参数
 
-*runtimeName*<br/>
+*运行时名称*<br/>
 此操作完成后，运行时类名称。
 
 ### <a name="return-value"></a>返回值
@@ -128,11 +128,11 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="remarks"></a>备注
 
-如果`__WRL_STRICT__`是定义，断言错误如果由指定的类发出`Base`类模板参数不派生自[RuntimeClass](runtimeclass-class.md)，或者因配置不与 WinRt 或 WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md)枚举值。
+如果`__WRL_STRICT__`已定义，如果`Base`类模板参数指定的类不是从[RuntimeClass](runtimeclass-class.md)派生，或者未配置 WinRt 或 WinRtClassicComMix[运行时类型](runtimeclasstype-enumeration.md)枚举值，则将发出断言错误。
 
-## <a name="gettrustlevel"></a>Simpleactivationfactory:: Gettrustlevel 方法
+## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a>简单激活工厂：：获取信任级别方法
 
-获取指定的类的实例的信任级别`Base`类模板参数。
+获取`Base`类模板参数指定的类实例的信任级别。
 
 ```cpp
 STDMETHOD(
@@ -142,9 +142,9 @@ STDMETHOD(
 
 #### <a name="parameters"></a>参数
 
-*trustLvl*<br/>
+*信任吕尔*<br/>
 此操作完成后，当前类对象的信任级别。
 
 ### <a name="return-value"></a>返回值
 
-始终返回 S_OK。
+始终 S_OK。

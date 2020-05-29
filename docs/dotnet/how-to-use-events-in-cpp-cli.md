@@ -1,25 +1,25 @@
 ---
-title: 如何：使用中的事件C++/CLI
+title: 如何：在 C++/CLI 中使用事件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387170"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545173"
 ---
-# <a name="how-to-use-events-in-ccli"></a>如何：使用中的事件C++/CLI
+# <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
 
-本文介绍如何使用声明事件和函数调用该事件的接口和实现接口的类和事件处理程序。
+本文介绍如何使用声明事件的接口和用于调用该事件的函数以及实现接口的类和事件处理程序。
 
 ## <a name="interface-events"></a>接口事件
 
-下面的代码示例将添加一个事件处理程序，调用事件 — 这将导致其名称写入控制台的事件处理程序，然后删除事件处理程序。
+下面的代码示例添加一个事件处理程序，调用事件，这将导致事件处理程序将其名称写入控制台，然后删除事件处理程序。
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -73,9 +73,9 @@ EventReceiver::Handler
 
 ## <a name="custom-accessor-methods"></a>自定义访问器方法
 
-下面的示例演示如何添加或删除，处理程序的时间和引发事件时定义某一事件的行为。
+下面的示例演示如何在添加或删除处理程序以及引发事件时定义事件的行为。
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -163,11 +163,11 @@ In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>重写默认访问权限添加、 删除和引发的访问器
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>重写添加、移除和引发访问器的默认访问权限
 
-此示例演示如何重写上添加、 删除和引发事件方法的默认访问权限：
+此示例演示如何重写 add、remove 和 raise 事件方法的默认访问权限：
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -223,9 +223,9 @@ int main() {
 
 ## <a name="multiple-event-handlers"></a>多个事件处理程序
 
-事件接收器或任何其他客户端代码，可以向事件添加一个或多个处理程序。
+事件接收器（或任何其他客户端代码）可以向事件添加一个或多个处理程序。
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -304,7 +304,7 @@ DblClickAgain(s=System.Char[])
 
 下面的示例演示如何定义和使用静态事件。
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -392,9 +392,9 @@ In event handler H2 with args 22 and 22.22
 
 ## <a name="virtual-events"></a>虚拟事件
 
-此示例在接口和类中实现虚拟的托管事件：
+此示例实现接口和类中的虚拟托管事件：
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -476,9 +476,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-简单事件不能指定要重写或隐藏基类事件。  必须定义所有事件访问器函数，然后指定`new`或`override`上每个访问器函数的关键字。
+不能指定简单事件来重写或隐藏基类事件。  必须定义所有事件的访问器函数，然后在每个访问器函数上指定 `new` 或 `override` 关键字。
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -512,7 +512,7 @@ ref struct C : B {
 
 下面的示例演示如何实现抽象事件。
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -595,9 +595,9 @@ hello from Event2
 
 ## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>引发在其他程序集中定义的事件
 
-可以在一个程序集中定义和使用另一个程序集的事件和事件处理程序。
+事件和事件处理程序可在一个程序集中定义，并可由其他程序集使用。
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -613,9 +613,9 @@ public:
 };
 ```
 
-此客户端代码使用该事件：
+此客户端代码使用事件：
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"
@@ -647,6 +647,6 @@ hello
 hello
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [event](../extensions/event-cpp-component-extensions.md)

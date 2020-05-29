@@ -1,5 +1,5 @@
 ---
-title: 连接到数据源
+title: 连接数据源
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database connections [C++], ODBC
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 712910aca2622f2678b8b9d06b18a2fdbf9157e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395984"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213338"
 ---
-# <a name="connecting-to-a-data-source"></a>连接到数据源
+# <a name="connecting-to-a-data-source"></a>连接数据源
 
-ODBC 数据源是一组特定的数据，访问该数据和数据源，可以使用数据源名称所述的位置所需的信息。 从程序的角度来看，数据源包括数据、 DBMS、 网络 （如果有） 和 ODBC。
+ODBC 数据源是一组特定的数据、访问该数据所需的信息和数据源的位置，可以使用数据源名称进行描述。 从程序的角度来看，数据源包括数据、DBMS、网络（如果有）和 ODBC。
 
-若要访问数据源提供的数据，您的程序必须首先建立与数据源的连接。 通过该连接管理的所有数据访问。
+若要访问数据源所提供的数据，您的程序必须首先建立与数据源的连接。 所有数据访问都通过该连接进行管理。
 
-数据源连接封装由类[CDatabase](../../mfc/reference/cdatabase-class.md)。 当`CDatabase`对象连接到数据源，您可以：
+数据源连接由类[CDatabase](../../mfc/reference/cdatabase-class.md)封装。 将 `CDatabase` 对象连接到数据源时，可以执行以下操作：
 
-- 构造[记录集](../../mfc/reference/crecordset-class.md)，其中选择表或查询中的记录。
+- 构造[记录集](../../mfc/reference/crecordset-class.md)，它从表或查询中选择记录。
 
-- 管理[事务](../../data/odbc/transaction-odbc.md)，因此所有的批处理更新同时提交到数据源 （或整个事务会回滚以数据源保持不变），如果数据源支持所需的级别的事务。
+- 管理[事务](../../data/odbc/transaction-odbc.md)，对更新进行批处理，以便一次提交到数据源（或者整个事务都将回滚以便数据源不变）（如果数据源支持所需的事务级别）。
 
 - 直接执行[SQL](../../data/odbc/sql.md)语句。
 
-如果完成处理的数据源连接，则在关闭`CDatabase`对象并将其销毁或新的连接中重用它。 有关数据源连接的详细信息，请参阅[数据源 (ODBC)](../../data/odbc/data-source-odbc.md)。
+完成数据源连接的处理后，关闭 `CDatabase` 的对象，并将其销毁或重复用于新连接。 有关数据源连接的详细信息，请参阅[数据源（ODBC）](../../data/odbc/data-source-odbc.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

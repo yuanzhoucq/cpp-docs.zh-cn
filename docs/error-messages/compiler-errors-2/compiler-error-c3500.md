@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3500
 ms.assetid: 77336f16-04f5-4943-bfc0-faba4cd8bb51
-ms.openlocfilehash: 5dd969ae3fdc54e9ae65ee86532a3fc51116a272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf09381f36731a4c8eda125699f473616ef4cf11
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200832"
 ---
 # <a name="compiler-error-c3500"></a>编译器错误 C3500
 
-无效的 ProgID progid
+无效的 ProgID "progid"
 
-与指定 progid 无效`#import`语句。 检查 Windows 注册表，以确保您在指定一个有效 progid。
+使用 `#import` 语句指定了无效的 progid。 检查 Windows 注册表以确保指定的是有效的 progid。

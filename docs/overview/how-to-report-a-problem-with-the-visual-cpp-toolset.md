@@ -6,10 +6,10 @@ ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "71685698"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>如何使用 Microsoft C++ 工具集或文档报告问题
@@ -252,7 +252,7 @@ CONTEXT:
 
 #### <a name="to-confirm-the-preprocessed-file-still-repros-the-error"></a>确认预处理过的文件仍可重现错误
 
-1. 在开发人员命令提示符控制台窗口中，输入命令 cl arguments /TP filename.i     ，告知 cl.exe 将预处理过的文件编译为 C++ 源文件。 此参数  与上文捕获的参数相同，但删除了任何 /D  和 /I  参数。 这是因为它们已包含在预处理过的文件中。 filename.i  是预处理过的文件的名称。
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl arguments /TP filename.i，指示 cl.exe 将预处理过的文件编译为 C++ 源文件     。 此参数  与上文捕获的参数相同，但删除了任何 /D  和 /I  参数。 这是因为它们已包含在预处理过的文件中。 filename.i  是预处理过的文件的名称。
 
 1. 确认该问题可被重现。
 

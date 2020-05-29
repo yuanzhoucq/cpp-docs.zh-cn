@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1d8b92fbc5e95a5061956bafc4922d249a6f18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327422"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr 类
 
@@ -29,28 +29,28 @@ class CComQIPtr: public CComPtr<T>
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-指定要存储的指针的类型的 COM 接口。
+指定要存储的指针类型的 COM 接口。
 
-*piid*<br/>
-指向 IID *T*。
+*皮伊德*<br/>
+指向*T*的 IID 的指针。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComQIPtr::CComQIPtr](#ccomqiptr)|构造函数。|
+|[CComQIPtr：CComQIPtr](#ccomqiptr)|构造函数。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComQIPtr::operator =](#operator_eq)|将一个指针分配给成员指针。|
+|[CComQIPtr：：操作员 |](#operator_eq)|分配指向成员指针的指针。|
 
 ## <a name="remarks"></a>备注
 
-使用 ATL`CComQIPtr`并[CComPtr](../../atl/reference/ccomptr-class.md)若要管理 COM 接口指针，这两个派生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)。 这两个类执行自动引用计数通过调用`AddRef`和`Release`。 重载的运算符处理指针操作。
+ATL`CComQIPtr`使用和[CComPtr](../../atl/reference/ccomptr-class.md)来管理 COM 接口指针，这两个指针都派生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)。 两个类都通过调用`AddRef`和`Release`执行自动引用计数。 重载运算符处理指针操作。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,9 +62,9 @@ class CComQIPtr: public CComPtr<T>
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcomcli.h
+**标题：** atlcomcli.h
 
-##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr
+## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr：CComQIPtr
 
 构造函数。
 
@@ -78,17 +78,17 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 ### <a name="parameters"></a>参数
 
 *lp*<br/>
-用于初始化的接口指针。
+用于初始化接口指针。
 
 *T*<br/>
 COM 接口。
 
-*piid*<br/>
-指向 IID *T*。
+*皮伊德*<br/>
+指向*T*的 IID 的指针。
 
-##  <a name="operator_eq"></a>  CComQIPtr::operator =
+## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr：：操作员 |
 
-赋值运算符。
+分配运算符。
 
 ```
 T* operator= (T* lp) throw();
@@ -99,22 +99,22 @@ T* operator= (IUnknown* lp) throw();
 ### <a name="parameters"></a>参数
 
 *lp*<br/>
-用于初始化的接口指针。
+用于初始化接口指针。
 
 *T*<br/>
 COM 接口。
 
-*piid*<br/>
-指向 IID *T*。
+*皮伊德*<br/>
+指向*T*的 IID 的指针。
 
 ### <a name="return-value"></a>返回值
 
-返回一个指向已更新`CComQIPtr`对象。
+返回指向更新`CComQIPtr`对象的指针。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
-[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
+[CComPtr：CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr：CComQIPtr](#ccomqiptr)<br/>
 [CComPtrBase 类](../../atl/reference/ccomptrbase-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
 ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257957"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423965"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
 

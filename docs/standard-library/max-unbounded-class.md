@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: cea2f09837e5efc6969e4ab305d106b9c9728412
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fbc4351297ab8a3cc90a2a77fa31c3b134f10eab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370997"
 ---
-# <a name="maxunbounded-class"></a>max_unbounded 类
+# <a name="max_unbounded-class"></a>max_unbounded 类
 
 描述 [max 类](../standard-library/allocators-header.md) 对象，该对象不限制 [freelist](../standard-library/freelist-class.md) 对象的最大长度。
 
@@ -33,14 +33,14 @@ ms.locfileid: "68447206"
 class max_unbounded
 ```
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
-|[allocated](#allocated)|逐量增加已分配的内存块的计数。|
-|[deallocated](#deallocated)|逐量减小已分配的内存块的计数。|
+|[分配](#allocated)|逐量增加已分配的内存块的计数。|
+|[交易](#deallocated)|逐量减小已分配的内存块的计数。|
 |[full](#full)|返回一个值，该值指定是否应将更多的内存块添加到空闲列表。|
-|[released](#released)|逐量减小空闲列表上内存块的计数。|
+|[释放](#released)|逐量减小空闲列表上内存块的计数。|
 |[saved](#saved)|逐量增加空闲列表上内存块的计数。|
 
 ## <a name="requirements"></a>要求
@@ -49,7 +49,7 @@ class max_unbounded
 
 **命名空间：** stdext
 
-## <a name="allocated"></a>max_unbounded::allocated
+## <a name="max_unboundedallocated"></a><a name="allocated"></a>max_unbounded：：已分配
 
 逐量增加已分配的内存块的计数。
 
@@ -59,15 +59,15 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*_Nx*|增量值。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 每次成功调用`cache_freelist::allocate`后, 都将调用此方法来调用**new**运算符。 参数 *_Nx*是运算符**new**分配的区块中的内存块数。
+此成员函数不执行任何操作。 它调用后，每次成功调用`cache_freelist::allocate`到运算符**新**。 *参数_Nx*是运算符**new**分配块中的内存块数。
 
-## <a name="deallocated"></a>max_unbounded::deallocated
+## <a name="max_unboundeddeallocated"></a><a name="deallocated"></a>max_unbounded：:d分配
 
 逐量减小已分配的内存块的计数。
 
@@ -77,15 +77,15 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*_Nx*|增量值。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 每次调用`cache_freelist::deallocate`后, 都将调用此成员函数以进行运算符**delete**。 参数 *_Nx*是运算符**delete**释放的块区中的内存块数。
+此成员函数不执行任何操作。 此成员函数在每次调用后调用`cache_freelist::deallocate`运算符**删除**后调用 。 *参数_Nx*是由运算符**删除**处理块中的内存块数。
 
-## <a name="full"></a>max_unbounded::full
+## <a name="max_unboundedfull"></a><a name="full"></a>max_unbounded：：已满
 
 返回一个值，该值指定是否应将更多的内存块添加到空闲列表。
 
@@ -99,9 +99,9 @@ bool full();
 
 ### <a name="remarks"></a>备注
 
-此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true** `deallocate` , 则将内存块置于可用列表中; 如果返回 false, `deallocate`则调用运算符**delete**来释放块。
+此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true，** 则将内存块放在空闲列表中;如果调用返回 true，`deallocate`则将内存块放在可用列表中。如果返回 false，`deallocate`则调用运算符**删除**以取消分配块。
 
-## <a name="released"></a>max_unbounded::released
+## <a name="max_unboundedreleased"></a><a name="released"></a>max_unbounded：：已发布
 
 逐量减小空闲列表上内存块的计数。
 
@@ -113,7 +113,7 @@ void released();
 
 此成员函数不执行任何操作。 每当当前 max 类的 `released` 成员函数从空闲列表中删除内存块时，`cache_freelist::allocate` 将对其进行调用。
 
-## <a name="saved"></a>max_unbounded::saved
+## <a name="max_unboundedsaved"></a><a name="saved"></a>max_unbounded：：已保存
 
 逐量增加空闲列表上内存块的计数。
 
@@ -125,6 +125,6 @@ void saved();
 
 此成员函数不执行任何操作。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<分配器>](../standard-library/allocators-header.md)

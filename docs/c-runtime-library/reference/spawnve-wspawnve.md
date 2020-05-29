@@ -1,9 +1,11 @@
 ---
 title: _spawnve、_wspawnve
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _spawnve
 - _wspawnve
+- _o__spawnve
+- _o__wspawnve
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,7 +27,6 @@ f1_keywords:
 - wspawnve
 - _spawnve
 - _wspawnve
-- spawnve
 helpviewer_keywords:
 - _spawnve function
 - spawnve function
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 37ff1358e8639d49992b8cfafb76b2ddac079889
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f57d959e9aaefe1f86c110d3c3e945abf6d268da
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947538"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916043"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve、_wspawnve
 
@@ -67,7 +69,7 @@ intptr_t _wspawnve(
 
 ### <a name="parameters"></a>参数
 
-*模式*<br/>
+*mode*<br/>
 调用进程的执行模式。
 
 *cmdname*<br/>
@@ -81,7 +83,7 @@ intptr_t _wspawnve(
 
 ## <a name="return-value"></a>返回值
 
-同步 **_spawnve**或 **_wspawnve** （为*mode*指定的 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnve**或 **_wspawnve** （为*Mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用**exit**例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一。
+同步 **_spawnve**或 **_wspawnve** （为*mode*指定 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnve**或 **_wspawnve** （为*mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用**exit**例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一。
 
 |||
 |-|-|
@@ -99,24 +101,26 @@ intptr_t _wspawnve(
 
 这些函数验证其参数。 如果*cmdname*或*argv*为空指针，或者如果*argv*指向 null 指针，或者*argv [0*] 为空字符串，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**，并返回-1。 不生成任何新进程。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_spawnve**|\<stdio.h> 或 \<process.h>|
 |**_wspawnve**|\<stdio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 在参见 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[_spawn, _wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[中止](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit、_Exit、_exit](exit-exit-exit.md)<br/>

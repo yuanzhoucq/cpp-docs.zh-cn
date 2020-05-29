@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631310"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80079292"
 ---
 # <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
 
@@ -19,7 +19,7 @@ ms.locfileid: "69631310"
 
 C++ 程序员通常从在命令行上运行的“Hello, world!” 应用程序开始。 这就是本文中你将在 Visual Studio 中创建的内容，然后我们将继续介绍更具挑战性的内容：计算器应用。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 在 Visual Studio 中安装“使用 C++ 的桌面开发”工作负载并在计算机上运行  。 如果尚未安装，请参阅[在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)。
 
@@ -29,20 +29,20 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 如果刚刚启动 Visual Studio，则可看到“Visual Studio 2019”对话框。 选择“创建新项目”  以开始使用。
 
-   ![Visual Studio 2019 初始对话框](./media/calc-vs2019-initial-dialog.png "The Visual Studio 2019 initial dialog")
+   ![Visual Studio 2019 初始对话框](./media/calc-vs2019-initial-dialog.png "Visual Studio 2019 初始对话框")
 
    否则，在 Visual Studio 中的菜单栏上，选择“文件” > “新建” > “项目”    。 “创建新项目”窗口随即打开  。
 
 1. 在项目模板列表中，选择“控制台应用”，然后选择“下一步”   。
 
-   ![选择控制台应用模板](./media/calc-vs2019-choose-console-app.png "Choose the Console App template")
+   ![“控制台应用”模板](./media/calc-vs2019-choose-console-app.png "选择“控制台应用”模板")
 
    > [!Important]
    > 请确保选择 Console App 模板的 C++  版本。 它具有 C++、Windows 和 Console 标记，该图标在角落处有“++”    。
 
 1. 在“配置新项目”对话框中，选择“项目名称”编辑框，将新项目命名为 CalculatorTutorial，然后选择“创建”     。
 
-   ![在“配置新项目”对话框中为项目命名](./media/calc-vs2019-name-your-project.png "Name your project in the Configure your new project dialog")
+   ![在“配置新项目”对话框中命名项目](./media/calc-vs2019-name-your-project.png "在“配置新项目”对话框中命名项目")
 
    将创建一个空的 C++ Windows 控制台应用程序。 控制台应用程序使用 Windows 控制台窗口显示输出并接受用户输入。 在 Visual Studio 中，将打开一个编辑器窗口并显示生成的代码：
 
@@ -75,11 +75,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 若要生成项目，请从“生成”菜单选择“生成解决方案”   。 “输出”窗口将显示生成过程的结果  。
 
-   ![生成项目](./media/calc-vs2019-build-your-project.png "Build the project")
+   ![生成项目](./media/calc-vs2019-build-your-project.png "生成项目")
 
 1. 若要运行代码，请在菜单栏上选择“调试”、“开始执行(不调试)”   。
 
-   ![启动项目](./media/calc-vs2019-hello-world-console.png "Start the project")
+   ![启动项目](./media/calc-vs2019-hello-world-console.png "启动项目")
 
    随即将打开控制台窗口，然后运行你的应用。 在 Visual Studio 中启动控制台应用时，它会运行代码，然后输出“按任意键关闭此窗口。 。 。” 让你有机会看到输出。 祝贺你！ 你在 Visual Studio 中已创建首个“Hello, world!” 控制台应用！
 
@@ -142,11 +142,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 转到“项目”菜单，并选择“添加类”   。 在“类名”编辑框中，输入“Calculator”   。 选择 **“确定”** 。 这会向项目中添加两个新文件。 若要同时保存所有已更改的文件，请按“Ctrl+Shift+S”  。 这是“文件” > “全部保存”的键盘快捷方式   。 在“保存”按钮旁边还有一个用于“全部保存”的工具栏按钮，这是两个软盘的图标   。 一般来说，最好经常使用“全部保存”，这样你保存时就不会遗漏任何文件  。
 
-   ![创建 Calculator 类](./media/calc-vs2019-create-calculator-class.png "Create the Calculator class")
+   ![创建 Calculator 类](./media/calc-vs2019-create-calculator-class.png "创建 Calculator 类")
 
    类就像执行某事的对象的蓝图。 在本示例中，我们定义了 Calculator 以及它的工作原理。 上文使用的“添加类”向导创建了与该类同名的 .h 和 .cpp 文件  。 可以在 IDE 一侧的“解决方案资源管理器”窗口中看到项目文件的完整列表  。 如果该窗口不可见，则可从菜单栏中打开它：选择“查看” > “解决方案资源管理器”   。
 
-   ![解决方案资源管理器](./media/calc-vs2019-solution-explorer.png "Solution Explorer")
+   ![解决方案资源管理器](./media/calc-vs2019-solution-explorer.png "“解决方案资源管理器”")
 
    现在编辑器中应打开了三个选项卡：CalculatorTutorial.cpp、Calculator.h 和 Calculator.cpp    。 如果你无意关闭了其中一个，可通过在“解决方案资源管理器”窗口中双击来重新打开它  。
 
@@ -170,11 +170,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 你会看到 `Calculate` 下显示绿色波浪线。 因为我们还没有在 .cpp 文件中定义 `Calculate` 函数。 将鼠标悬停在单词上，单击弹出的灯泡（在此示例中为螺丝刀），然后选择“在 Calculator.cpp 中创建 Calculate 定义”  。
 
-   ![创建 Calculate 的定义](./media/calc-vs2019-create-definition.png "Create definition of Calculate")
+   ![创建 Calculate 定义](./media/calc-vs2019-create-definition.png "创建 Calculate 定义")
 
    随即将出现一个弹出窗口，可在其中查看在另一个文件中进行的代码更改。 该代码已添加到“Calculator.cpp”  。
 
-   ![包含 Calculate 定义的弹出窗口](./media/calc-vs2019-pop-up-definition.png "Pop-up with definition of Calculate")
+   ![包含 Calculate 定义的弹出项](./media/calc-vs2019-pop-up-definition.png "包含 Calculate 定义的弹出项")
 
    目前，它只返回 0.0。 让我们来更改它。 按 Esc 关闭弹出窗口  。
 
@@ -264,7 +264,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 输入 `5 + 5`，然后按 Enter  。 验证结果是否为 10。
 
-   ![5 + 5 的结果](./media/calc-vs2019-five-plus-five.png "The result of 5 + 5")
+   ![5 + 5 的结果 ](./media/calc-vs2019-five-plus-five.png "5 + 5 的结果")
 
 ## <a name="debug-the-app"></a>调试应用
 
@@ -274,29 +274,29 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 在用户被要求输入之后，在 `result = c.Calculate(x, oper, y);` 行上设置断点。 若要设置断点，请在该行旁边编辑器窗口左边缘的灰色竖线上单击。 将显示一个红点。
 
-   ![设置断点](./media/calc-vs2019-set-breakpoint.png "Set a breakpoint")
+   ![设置断点](./media/calc-vs2019-set-breakpoint.png "设置断点")
 
    现在，当我们调试程序时，它总是暂停该行的执行。 我们已大概了解了该程序可用于简单案例。 由于我们不想每次暂停执行，因此可以设置断点条件。
 
 1. 右键单击表示断点的红点，并选择“条件”  。 在条件的编辑框中，输入 `(y == 0) && (oper == '/')`。 完成后，选择“关闭”按钮  。 条件将自动保存。
 
-   ![设置条件断点](./media/calc-vs2019-conditional-breakpoint.png "Set a conditional breakpoint")
+   ![设置条件断点](./media/calc-vs2019-conditional-breakpoint.png "设置条件断点")
 
    现在，如果尝试被 0 除，我们将在断点处暂停执行。
 
 1. 若要调试程序，请按 F5 或选择带绿色箭头图标的“本地 Windows 调试程序”工具栏按钮   。 在控制台应用中，如果输入类似“5 - 0”的内容，程序将正常运行并继续运行。 但是，如果键入“10/0”，它会在断点处暂停。 你甚至可以在运算符和数字之间放置任意数量的空格：`cin` 足够智能，可以适当地解析输入。
 
-   ![在条件断点处暂停](./media/calc-vs2019-debug-breakpoint.png "Pause at the conditional breakpoint")
+   ![条件断点暂停](./media/calc-vs2019-debug-breakpoint.png "在条件断点暂停")
 
 ### <a name="useful-windows-in-the-debugger"></a>调试器中有用的窗口
 
 每当调试代码时，你可能会注意到会出现一些新窗口。 你可借助这些窗口提高调试体验。 了解一下“自动”窗口  。 显示的“自动”窗口指示，在当前行之前，变量的当前值至少使用了三行  。 若要查看该函数的所有变量，请切换到“局部变量”窗口  。 实际上，可以在调试时修改这些变量的值，以查看它们对程序的影响。 在这种情况下，将不必理会。
 
-   ![“局部变量”窗口](./media/calc-vs2019-debug-locals.png "The Locals window")
+   ![“局部变量”窗口](./media/calc-vs2019-debug-locals.png "“局部变量”窗口")
 
 也可将鼠标悬停在代码本身中的变量上，以查看当前暂停执行的当前值。 请先单击编辑器窗口，确保其处于焦点位置。
 
-   ![悬停以查看当前变量值](./media/calc-vs2019-hover-tooltip.png "Hover to view current variable values")
+   ![悬停以查看当前变量值](./media/calc-vs2019-hover-tooltip.png "悬停以查看当前变量值")
 
 ### <a name="to-continue-debugging"></a>继续调试
 
@@ -306,9 +306,9 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 继续使用 F10 “单步跳过”每一行，直到返回到另一个文件中的 `main()` 函数，然后停在 `cout` 行   。
 
-   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result`  。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
+   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result` 。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
 
-   ![除数为零的结果](./media/calc-vs2019-divide-by-zero-fail.png "The result of divide by zero")
+   ![除以零的结果](./media/calc-vs2019-divide-by-zero-fail.png "除以零的结果")
 
    发生这种情况是因为除以零未定义，因此程序无法给请求的操作提供数值解。
 
@@ -359,7 +359,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 现在，按 F5 一次  。 程序将继续执行，直到它必须暂停以请求用户输入。 再次输入 `10 / 0`。 现在，将输出更有用的信息。 用户被要求输入更多内容，程序继续正常执行。
 
-   ![更改后的最终结果](./media/calc-vs2019-final-verification.png "The final result after changes")
+   ![更改后的最终结果](./media/calc-vs2019-final-verification.png "更改后的最终结果")
 
    > [!Note]
    > 在调试模式下编辑代码时，有可能会遇到旧代码。 当调试器仍在运行旧代码并且尚未使用更改进行更新时，将发生这种情况。 调试器会弹出一个对话框，通知你何时发生这种情况。 有时，你可能需要按 F5 来刷新正在执行的代码  。 特别是，如果在函数内部进行更改而执行点位于该函数内部，则需要退出该函数，然后再次返回该函数以获取更新的代码。 如果由于某种原因该操作不起作用，且你看到错误消息，则可以通过单击 IDE 顶部菜单下工具栏中的红色方块来停止调试，然后通过输入 F5 或通过选择工具栏上“停止”按钮旁的绿色“播放”箭头重新开始调试。 
@@ -389,7 +389,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 C++ 程序员通常从在命令行上运行的“Hello, world!” 应用程序开始。 这就是本文中你将在 Visual Studio 中创建的内容，然后我们将继续介绍更具挑战性的内容：计算器应用。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 在 Visual Studio 中安装“使用 C++ 的桌面开发”工作负载并在计算机上运行  。 如果尚未安装，请参阅[在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)。
 
@@ -403,7 +403,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 3. 在底部的“名称”编辑框中，将新项目命名为“CalculatorTutorial”，然后选择“确定”    。
 
-   ![“新项目”对话框](./media/calculator-new-project-dialog.png "The New Project dialog")
+   ![“新建项目”对话框](./media/calculator-new-project-dialog.png "“新建项目”对话框")
 
    将创建一个空的 C++ Windows 控制台应用程序。 控制台应用程序使用 Windows 控制台窗口显示输出并接受用户输入。 在 Visual Studio 中，将打开一个编辑器窗口并显示生成的代码：
 
@@ -416,13 +416,13 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
     int main()
     {
-        std::cout << "Hello World!\n"; 
+        std::cout << "Hello World!\n";
     }
 
     // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
     // Debug program: F5 or Debug > Start Debugging menu
 
-    // Tips for Getting Started: 
+    // Tips for Getting Started:
     //   1. Use the Solution Explorer window to add/manage files
     //   2. Use the Team Explorer window to connect to source control
     //   3. Use the Output window to see build output and other messages
@@ -437,11 +437,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 若要生成项目，请从“生成”菜单选择“生成解决方案”   。 “输出”窗口将显示生成过程的结果  。
 
-   ![生成项目](./media/calculator-initial-build-output.png "Build the project")
+   ![生成项目](./media/calculator-initial-build-output.png "生成项目")
 
 1. 若要运行代码，请在菜单栏上选择“调试”、“开始执行(不调试)”   。
 
-   ![启动项目](./media/calculator-hello-world-console.png "Start the project")
+   ![启动项目](./media/calculator-hello-world-console.png "启动项目")
 
    随即将打开控制台窗口，然后运行你的应用。 在 Visual Studio 中启动控制台应用时，它会运行代码，然后输出“按任意键继续。 。 。” 让你有机会看到输出。 祝贺你！ 你在 Visual Studio 中已创建首个“Hello, world!” 控制台应用！
 
@@ -496,7 +496,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 要运行该应用程序，请按“Ctrl+F5”或转到“调试”菜单，然后选择“启动但不调试”    。 如果看到“此项目已过期”弹出窗口，可选择“不再显示此对话框”，然后选择“是”生成应用程序    。 应会显示一个控制台窗口，其中显示代码中指定的文本。
 
-   ![生成并启动应用程序](./media/calculator-first-launch.gif "Build and start your application")
+   ![生成和启动应用程序](./media/calculator-first-launch.gif "生成和启动应用程序")
 
 1. 完成后，请关闭控制台窗口。
 
@@ -508,11 +508,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 转到“项目”菜单，并选择“添加类”   。 在“类名”编辑框中，输入“Calculator”   。 选择 **“确定”** 。 这会向项目中添加两个新文件。 若要同时保存所有已更改的文件，请按“Ctrl+Shift+S”  。 这是“文件” > “全部保存”的键盘快捷方式   。 在“保存”按钮旁边还有一个用于“全部保存”的工具栏按钮，这是两个软盘的图标   。 一般来说，最好经常使用“全部保存”，这样你保存时就不会遗漏任何文件  。
 
-   ![创建 Calculator 类](./media/calculator-create-class.gif "Create the Calculator class")
+   ![创建 Calculator 类](./media/calculator-create-class.gif "创建 Calculator 类")
 
    类就像执行某事的对象的蓝图。 在本示例中，我们定义了 Calculator 以及它的工作原理。 上文使用的“添加类”向导创建了与该类同名的 .h 和 .cpp 文件  。 可以在 IDE 一侧的“解决方案资源管理器”窗口中看到项目文件的完整列表  。 如果该窗口不可见，则可从菜单栏中打开它：选择“查看” > “解决方案资源管理器”   。
 
-   ![解决方案资源管理器](./media/calculator-solution-explorer.png "Solution Explorer")
+   ![解决方案资源管理器](./media/calculator-solution-explorer.png "“解决方案资源管理器”")
 
    现在编辑器中应打开了三个选项卡：CalculatorTutorial.cpp、Calculator.h 和 Calculator.cpp    。 如果你无意关闭了其中一个，可通过在“解决方案资源管理器”窗口中双击来重新打开它  。
 
@@ -536,7 +536,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 你会看到 `Calculate` 下显示绿色波浪线。 因为我们还没有在 .cpp 文件中定义 `Calculate` 函数。 将鼠标悬停在单词上，单击弹出的灯泡，然后选择“在 Calculator.cpp 中创建 Calculate 定义”  。 随即将出现一个弹出窗口，可在其中查看在另一个文件中进行的代码更改。 该代码已添加到“Calculator.cpp”  。
 
-   ![创建 Calculate 的定义](./media/calculator-create-definition.gif "Create definition of Calculate")
+   ![创建 Calculate 定义](./media/calculator-create-definition.gif "创建 Calculate 定义")
 
    目前，它只返回 0.0。 让我们来更改它。 按 Esc 关闭弹出窗口  。
 
@@ -628,7 +628,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 输入 `5 + 5`，然后按 Enter  。 验证结果是否为 10。
 
-   ![5 + 5 的结果](./media/calculator-five-plus-five.png "The result of 5 + 5")
+   ![5 + 5 的结果 ](./media/calculator-five-plus-five.png "5 + 5 的结果")
 
 ## <a name="debug-the-app"></a>调试应用
 
@@ -638,33 +638,33 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 在用户被要求输入之后，在 `result = c.Calculate(x, oper, y);` 行上设置断点。 若要设置断点，请在该行旁边编辑器窗口左边缘的灰色竖线上单击。 将显示一个红点。
 
-   ![设置断点](./media/calculator-set-breakpoint.gif "Set a breakpoint")
+   ![设置断点](./media/calculator-set-breakpoint.gif "设置断点")
 
    现在，当我们调试程序时，它总是暂停该行的执行。 我们已大概了解了该程序可用于简单案例。 由于我们不想每次暂停执行，因此可以设置断点条件。
 
 1. 右键单击表示断点的红点，并选择“条件”  。 在条件的编辑框中，输入 `(y == 0) && (oper == '/')`。 完成后，选择“关闭”按钮  。 条件将自动保存。
 
-   ![设置条件断点](./media/calculator-conditional-breakpoint.gif "Set a conditional breakpoint")
+   ![设置条件断点](./media/calculator-conditional-breakpoint.gif "设置条件断点")
 
    现在，如果尝试被 0 除，我们将在断点处暂停执行。
 
 1. 若要调试程序，请按 F5 或选择带绿色箭头图标的“本地 Windows 调试程序”工具栏按钮   。 在控制台应用中，如果输入类似“5 - 0”的内容，程序将正常运行并继续运行。 但是，如果键入“10/0”，它会在断点处暂停。 你甚至可以在运算符和数字之间放置任意数量的空格；`cin` 足够智能，可以适当地解析输入。
 
-   ![在条件断点处暂停](./media/calculator-debug-conditional.gif "Pause at the conditional breakpoint")
+   ![在条件断点暂停](./media/calculator-debug-conditional.gif "在条件断点暂停")
 
 ### <a name="useful-windows-in-the-debugger"></a>调试器中有用的窗口
 
 每当调试代码时，你可能会注意到会出现一些新窗口。 你可借助这些窗口提高调试体验。 了解一下“自动”窗口  。 显示的“自动”窗口指示，在当前行之前，变量的当前值至少使用了三行  。
 
-   ![“自动”窗口](./media/calculator-autos.png "The Autos window")
+   ![“自动”窗口](./media/calculator-autos.png "“自动”窗口")
 
 若要查看该函数的所有变量，请切换到“局部变量”窗口  。 实际上，可以在调试时修改这些变量的值，以查看它们对程序的影响。 在这种情况下，将不必理会。
 
-   ![“局部变量”窗口](./media/calculator-locals.png "The Locals window")
+   ![“局部变量”窗口](./media/calculator-locals.png "“局部变量”窗口")
 
 也可将鼠标悬停在代码本身中的变量上，以查看当前暂停执行的当前值。 请先单击编辑器窗口，确保其处于焦点位置。
 
-   ![悬停以查看当前变量值](./media/calculator-hover-tooltip.gif "Hover to view current variable values")
+   ![悬停以查看当前变量值](./media/calculator-hover-tooltip.gif "悬停以查看当前变量值")
 
 ### <a name="to-continue-debugging"></a>继续调试
 
@@ -674,11 +674,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 继续使用 F10 “单步跳过”每一行，直到返回到另一个文件中的 `main()` 函数，然后停在 `cout` 行   。
 
-   ![退出 Calculate 并检查结果](./media/calculator-undefined-zero.gif "Step out of Calculate and check result")
+   ![退出 Calculate 并检查结果](./media/calculator-undefined-zero.gif "退出 Calculate 并检查结果")
 
-   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result`  。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
+   看起来程序是在按预期执行操作：取第一个数字，然后除以第二个数字。 在 `cout` 行，将鼠标悬停在 `result` 变量上，或在“自动”窗口中查看 `result` 。 你将看到其值以“inf”列出，这看起来似乎不正确，因此我们来修复此错误。 `cout` 行只输出存储在 `result` 中的任何值，因此当使用 F10 向前再执行一行时，控制台窗口将显示以下内容  ：
 
-   ![除数为零的结果](./media/calculator-divide-by-zero-fail.png "The result of divide by zero")
+   ![除以零的结果](./media/calculator-divide-by-zero-fail.png "除以零的结果")
 
    发生这种情况是因为除以零未定义，因此程序无法给请求的操作提供数值解。
 
@@ -730,11 +730,11 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 现在，按 F5 一次  。 程序将继续执行，直到它必须暂停以请求用户输入。 再次输入 `10 / 0`。 现在，将输出更有用的信息。 用户被要求输入更多内容，程序继续正常执行。
 
-   ![更改后的最终结果](./media/calculator-final-verification.gif "The final result after changes")
+   ![更改后的最终结果](./media/calculator-final-verification.gif "更改后的最终结果")
 
    > [!Note]
    > 在调试模式下编辑代码时，有可能会遇到旧代码。 当调试器仍在运行旧代码并且尚未使用更改进行更新时，将发生这种情况。 调试器会弹出一个对话框，通知你何时发生这种情况。 有时，你可能需要按 F5 来刷新正在执行的代码  。 特别是，如果在函数内部进行更改而执行点位于该函数内部，则需要退出该函数，然后再次返回该函数以获取更新的代码。 如果由于某种原因该操作不起作用，且你看到错误消息，则可以通过单击 IDE 顶部菜单下工具栏中的红色方块来停止调试，然后通过输入 F5 或通过选择工具栏上“停止”按钮旁的绿色“播放”箭头重新开始调试。 
-   
+
    > 了解“运行”和“调试”快捷方式
    >
    > - 按 F5（或“调试” > “启动调试”）启动调试会话（如果尚未激活），并运行程序，直到到达断点或程序需要用户输入    。 如果不需要用户输入，也没有可用的断点，程序将终止，当程序运行结束时，控制台窗口将自动关闭。 如果要运行类似“Hello World”程序，请使用 Ctrl+F5 或在输入 F5 之前设置断点以保持窗口打开   。

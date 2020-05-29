@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bb70acb43f2e73ade86b753ebbb7949759ce88d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253317"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754598"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 类
 
@@ -55,45 +55,45 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDBVariant::CDBVariant](#cdbvariant)|构造 `CDBVariant` 对象。|
+|[CDB 变量：：CDB 变量](#cdbvariant)|构造 `CDBVariant` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDBVariant::Clear](#clear)|清除`CDBVariant`对象。|
+|[CDB 变量：清除](#clear)|清除`CDBVariant`对象。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDBVariant::m_dwType](#m_dwtype)|包含当前存储的值的数据类型。 键入 `DWORD`。|
+|[CDB 变量：：m_dwType](#m_dwtype)|包含当前存储值的数据类型。 键入 `DWORD`。|
 
-### <a name="public-union-members"></a>公共联合成员
+### <a name="public-union-members"></a>公共工会成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDBVariant::m_boolVal](#m_boolval)|包含类型的值**BOOL**。|
-|[CDBVariant::m_chVal](#m_chval)|包含类型的值**无符号 char**。|
-|[CDBVariant::m_dblVal](#m_dblval)|包含类型的值**double**。|
-|[CDBVariant::m_fltVal](#m_fltval)|包含类型的值**float**。|
-|[CDBVariant::m_iVal](#m_ival)|包含类型的值**短**。|
-|[CDBVariant::m_lVal](#m_lval)|包含类型的值**长**。|
-|[CDBVariant::m_pbinary](#m_pbinary)|包含类型的对象的指针`CLongBinary`。|
-|[CDBVariant::m_pdate](#m_pdate)|包含类型的对象的指针**TIMESTAMP_STRUCT**。|
-|[CDBVariant::m_pstring](#m_pstring)|包含类型的对象的指针`CString`。|
-|[CDBVariant::m_pstringA](#m_pstringa)|存储指向 ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。|
-|[CDBVariant::m_pstringW](#m_pstringw)|存储指向宽[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。|
+|[国开行：：m_boolVal](#m_boolval)|包含**BOOL**类型的值。|
+|[CDB 变量：：m_chVal](#m_chval)|包含类型**无符号字符**的值。|
+|[CDB 变量：：m_dblVal](#m_dblval)|包含**双精度**类型的值。|
+|[CDB 变量：：m_fltVal](#m_fltval)|包含类型**浮点**的值。|
+|[CDB 变量：：m_iVal](#m_ival)|包含**短类型**的值。|
+|[CDB变量：：m_lVal](#m_lval)|包含**长**类型的值。|
+|[CDB 变量：m_pbinary](#m_pbinary)|包含指向类型`CLongBinary`对象的指针。|
+|[国开行：：m_pdate](#m_pdate)|包含指向类型**TIMESTAMP_STRUCT对象的指针**。|
+|[国开行：：m_pstring](#m_pstring)|包含指向类型`CString`对象的指针。|
+|[CDB 变量：：m_pstringA](#m_pstringa)|存储指向 ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的指针。|
+|[CDB 变量：：m_pstringW](#m_pstringw)|存储指向宽[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的指针。|
 
 ## <a name="remarks"></a>备注
 
-`CDBVariant` 没有基类。
+`CDBVariant`没有基类。
 
-`CDBVariant` 类似于[COleVariant](../../mfc/reference/colevariant-class.md); 但是，`CDBVariant`不使用 OLE。 `CDBVariant` 可以用来存储值，而无需担心值的数据类型。 `CDBVariant` 跟踪存储在联合中的当前值的数据类型。
+`CDBVariant`类似于[COleVariant;](../../mfc/reference/colevariant-class.md)但是，`CDBVariant`不使用 OLE。 `CDBVariant`允许您存储值，而不必担心该值的数据类型。 `CDBVariant`跟踪存储在联合中的当前值的数据类型。
 
-类[CRecordset](../../mfc/reference/crecordset-class.md)利用`CDBVariant`三个成员函数中的对象： `GetFieldValue`， `GetBookmark`，并`SetBookmark`。 例如，`GetFieldValue`允许你动态提取列中的数据。 因为列的数据类型可能不知道在运行时，`GetFieldValue`使用`CDBVariant`对象来存储列的数据。
+CRecordset[类](../../mfc/reference/crecordset-class.md)`CDBVariant`利用三个成员函数中的对象： `GetFieldValue``GetBookmark`和`SetBookmark`。 例如，`GetFieldValue`允许您动态提取列中的数据。 由于列的数据类型在运行时可能不知道，因此`GetFieldValue`使用`CDBVariant`对象来存储列的数据。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -101,9 +101,9 @@ class CDBVariant
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdb.h
+**标题：** afxdb.h
 
-##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant
+## <a name="cdbvariantcdbvariant"></a><a name="cdbvariant"></a>CDB 变量：：CDB 变量
 
 创建 NULL`CDBVariant`对象。
 
@@ -113,57 +113,57 @@ CDBVariant();
 
 ### <a name="remarks"></a>备注
 
-集[m_dwType](#m_dwtype) DBVT_NULL 到的数据成员。
+将[m_dwType](#m_dwtype)数据成员设置为DBVT_NULL。
 
-##  <a name="clear"></a>  CDBVariant::Clear
+## <a name="cdbvariantclear"></a><a name="clear"></a>CDB 变量：清除
 
-调用此成员函数可清除`CDBVariant`对象。
+调用此成员函数以清除`CDBVariant`对象。
 
-```
+```cpp
 void Clear();
 ```
 
 ### <a name="remarks"></a>备注
 
-如果的值[m_dwType](#m_dwtype)数据成员是 DBVT_DATE、 DBVT_STRING，还是 DBVT_BINARY，`Clear`释放与联合的指针成员相关联的内存。 `Clear` 设置`m_dwType`DBVT_NULL 到。
+如果[m_dwType](#m_dwtype)数据成员的值是DBVT_DATE、DBVT_STRING或DBVT_BINARY，则`Clear`释放与联合指针成员关联的内存。 `Clear`设置`m_dwType`到DBVT_NULL。
 
-`CDBVariant`析构函数调用`Clear`。
+析`CDBVariant`构函数调用`Clear`。
 
-##  <a name="m_boolval"></a>  CDBVariant::m_boolVal
+## <a name="cdbvariantm_boolval"></a><a name="m_boolval"></a>国开行：：m_boolVal
 
-存储类型 BOOL 的值。
-
-### <a name="remarks"></a>备注
-
-`m_boolVal`属于联合数据成员。 在访问之前`m_boolVal`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_BOOL，则`m_boolVal`将包含一个有效的值; 否则为访问`m_boolVal`将生成不可靠的结果。
-
-##  <a name="m_chval"></a>  CDBVariant::m_chVal
-
-存储类型的值**无符号 char**。
+存储 BOOL 类型的值。
 
 ### <a name="remarks"></a>备注
 
-`m_chVal`属于联合数据成员。 在访问之前`m_chVal`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_UCHAR，则`m_chVal`包含有效的值; 否则为访问`m_chVal`将生成不可靠的结果。
+数据`m_boolVal`成员属于联合。 在访问`m_boolVal`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_BOOL，则`m_boolVal`将包含一个有效的值;如果设置为"DBVT_BOOL"，则将包含一个有效值。否则，访问`m_boolVal`将产生不可靠的结果。
 
-##  <a name="m_dblval"></a>  CDBVariant::m_dblVal
+## <a name="cdbvariantm_chval"></a><a name="m_chval"></a>CDB 变量：：m_chVal
 
-存储类型的值**double**。
-
-### <a name="remarks"></a>备注
-
-`m_dblVal`属于联合数据成员。 在访问之前`m_dblVal`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_DOUBLE，则`m_dblVal`包含有效的值; 否则为访问`m_dblVal`将生成不可靠的结果。
-
-##  <a name="m_dwtype"></a>  CDBVariant::m_dwType
-
-此数据成员包含在当前存储的值的数据类型`CDBVariant`对象的联合数据成员。
+存储类型**无符号字符**的值。
 
 ### <a name="remarks"></a>备注
 
-在访问前此并集，必须检查的值`m_dwType`以便确定哪些联合数据成员才能访问。 下表列出了可能的值为`m_dwType`和相应的联合数据成员。
+数据`m_chVal`成员属于联合。 在访问`m_chVal`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_UCHAR，则包含有效的`m_chVal`值;如果设置为"DBVT_UCHAR"，则包含一个有效值。否则，访问`m_chVal`将产生不可靠的结果。
 
-|m_dwType|联合数据成员|
+## <a name="cdbvariantm_dblval"></a><a name="m_dblval"></a>CDB 变量：：m_dblVal
+
+存储类型**为双**的值。
+
+### <a name="remarks"></a>备注
+
+数据`m_dblVal`成员属于联合。 在访问`m_dblVal`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_DOUBLE，则包含有效的`m_dblVal`值;如果设置为"DBVT_DOUBLE"，则包含一个有效值。否则，访问`m_dblVal`将产生不可靠的结果。
+
+## <a name="cdbvariantm_dwtype"></a><a name="m_dwtype"></a>CDB 变量：：m_dwType
+
+此数据成员包含当前存储在`CDBVariant`对象的联合数据成员中的值的数据类型。
+
+### <a name="remarks"></a>备注
+
+在访问此联合之前，必须检查 的值`m_dwType`，以确定要访问哪个联合数据成员。 下表列出了 和`m_dwType`相应的联合数据成员的可能值和相应的联合数据成员。
+
+|m_dwType|联盟数据成员|
 |---------------|-----------------------|
-|DBVT_NULL|任何联合成员不是有效的访问权限。|
+|DBVT_NULL|没有工会成员对访问有效。|
 |DBVT_BOOL|[m_boolVal](#m_boolval)|
 |DBVT_UCHAR|[m_chVal](#m_chval)|
 |DBVT_SHORT|[m_iVal](#m_ival)|
@@ -176,73 +176,73 @@ void Clear();
 |DBVT_ASTRING|[m_pstringA](#m_pstringa)|
 |DBVT_WSTRING|[m_pstringW](#m_pstringw)|
 
-##  <a name="m_fltval"></a>  CDBVariant::m_fltVal
+## <a name="cdbvariantm_fltval"></a><a name="m_fltval"></a>CDB 变量：：m_fltVal
 
-存储类型的值**float**。
-
-### <a name="remarks"></a>备注
-
-`m_fltVal`属于联合数据成员。 在访问之前`m_fltVal`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_SINGLE，则`m_fltVal`包含有效的值; 否则为访问`m_fltVal`将生成不可靠的结果。
-
-##  <a name="m_ival"></a>  CDBVariant::m_iVal
-
-存储类型的值**短**。
+存储类型**浮点**的值。
 
 ### <a name="remarks"></a>备注
 
-`m_iVal`属于联合数据成员。 在访问之前`m_iVal`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_SHORT，则`m_iVal`包含有效的值; 否则为访问`m_iVal`将生成不可靠的结果。
+数据`m_fltVal`成员属于联合。 在访问`m_fltVal`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_SINGLE，则包含有效的`m_fltVal`值;如果设置为 DBVT_SINGLE，则包含一个有效值。否则，访问`m_fltVal`将产生不可靠的结果。
 
-##  <a name="m_lval"></a>  CDBVariant::m_lVal
+## <a name="cdbvariantm_ival"></a><a name="m_ival"></a>CDB 变量：：m_iVal
 
-存储类型的值**长**。
-
-### <a name="remarks"></a>备注
-
-`m_lVal`属于联合数据成员。 在访问之前`m_lVal`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_LONG，则`m_lVal`包含有效的值; 否则为访问`m_lVal`将生成不可靠的结果。
-
-##  <a name="m_pbinary"></a>  CDBVariant::m_pbinary
-
-存储指向类型的对象的指针[CLongBinary](../../mfc/reference/clongbinary-class.md)。
+存储类型**为短**的值。
 
 ### <a name="remarks"></a>备注
 
-`m_pbinary`属于联合数据成员。 在访问之前`m_pbinary`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_BINARY，则`m_pbinary`包含有效的指针; 否则为访问`m_pbinary`将生成不可靠的结果。
+数据`m_iVal`成员属于联合。 在访问`m_iVal`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_SHORT，则包含有效的`m_iVal`值;如果设置为"DBVT_SHORT"，则包含一个有效值。否则，访问`m_iVal`将产生不可靠的结果。
 
-##  <a name="m_pdate"></a>  CDBVariant::m_pdate
+## <a name="cdbvariantm_lval"></a><a name="m_lval"></a>CDB变量：：m_lVal
 
-存储指向类型 TIMESTAMP_STRUCT 的对象的指针。
-
-### <a name="remarks"></a>备注
-
-`m_pdate`属于联合数据成员。 在访问之前`m_pdate`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_DATE，则`m_pdate`包含有效的指针; 否则为访问`m_pdate`将生成不可靠的结果。
-
-有关 TIMESTAMP_STRUCT 数据类型的详细信息，请参阅主题[C 数据类型](/sql/odbc/reference/appendixes/c-data-types)中的附录 D *ODBC 程序员参考*Windows SDK 中。
-
-##  <a name="m_pstring"></a>  CDBVariant::m_pstring
-
-存储指向类型的对象的指针[CString](../../atl-mfc-shared/reference/cstringt-class.md)。
+存储**长**类型的值。
 
 ### <a name="remarks"></a>备注
 
-`m_pstring`属于联合数据成员。 在访问之前`m_pstring`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_STRING，则`m_pstring`包含有效的指针; 否则为访问`m_pstring`将生成不可靠的结果。
+数据`m_lVal`成员属于联合。 在访问`m_lVal`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_LONG，则包含有效的`m_lVal`值;如果设置为 DBVT_LONG，则包含一个有效值。否则，访问`m_lVal`将产生不可靠的结果。
 
-##  <a name="m_pstringa"></a>  CDBVariant::m_pstringA
+## <a name="cdbvariantm_pbinary"></a><a name="m_pbinary"></a>CDB 变量：m_pbinary
 
-存储指向 ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。
-
-### <a name="remarks"></a>备注
-
-`m_pstringA`属于联合数据成员。 在访问之前`m_pstringA`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_ASTRING，则`m_pstringA`包含有效的指针; 否则为访问`m_pstringA`将生成不可靠的结果。
-
-##  <a name="m_pstringw"></a>  CDBVariant::m_pstringW
-
-存储指向宽[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。
+存储指向[CLongBinary](../../mfc/reference/clongbinary-class.md)类型的对象的指针。
 
 ### <a name="remarks"></a>备注
 
-`m_pstringW`属于联合数据成员。 在访问之前`m_pstringW`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_WSTRING，则`m_pstringW`包含有效的指针; 否则为访问`m_pstringW`将生成不可靠的结果。
+数据`m_pbinary`成员属于联合。 在访问`m_pbinary`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_BINARY，则`m_pbinary`包含有效的指针;否则，访问`m_pbinary`将产生不可靠的结果。
+
+## <a name="cdbvariantm_pdate"></a><a name="m_pdate"></a>国开行：：m_pdate
+
+存储指向类型TIMESTAMP_STRUCT对象的指针。
+
+### <a name="remarks"></a>备注
+
+数据`m_pdate`成员属于联合。 在访问`m_pdate`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_DATE，则`m_pdate`包含有效的指针;否则，访问`m_pdate`将产生不可靠的结果。
+
+有关TIMESTAMP_STRUCT数据类型的详细信息，请参阅 Windows SDK 中*ODBC 程序员参考*附录 D 中的主题[C 数据类型](/sql/odbc/reference/appendixes/c-data-types)。
+
+## <a name="cdbvariantm_pstring"></a><a name="m_pstring"></a>国开行：：m_pstring
+
+存储指向[CString](../../atl-mfc-shared/reference/cstringt-class.md)类型的对象的指针。
+
+### <a name="remarks"></a>备注
+
+数据`m_pstring`成员属于联合。 在访问`m_pstring`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_STRING，则`m_pstring`包含有效的指针;否则，访问`m_pstring`将产生不可靠的结果。
+
+## <a name="cdbvariantm_pstringa"></a><a name="m_pstringa"></a>CDB 变量：：m_pstringA
+
+存储指向 ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的指针。
+
+### <a name="remarks"></a>备注
+
+数据`m_pstringA`成员属于联合。 在访问`m_pstringA`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_ASTRING，则`m_pstringA`包含有效的指针;否则，访问`m_pstringA`将产生不可靠的结果。
+
+## <a name="cdbvariantm_pstringw"></a><a name="m_pstringw"></a>CDB 变量：：m_pstringW
+
+存储指向宽[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的指针。
+
+### <a name="remarks"></a>备注
+
+数据`m_pstringW`成员属于联合。 在访问`m_pstringW`之前，首先检查[CDB 变量的值：：：m_dwType](#m_dwtype)。 如果`m_dwType`设置为DBVT_WSTRING，则`m_pstringW`包含有效的指针;否则，访问`m_pstringW`将产生不可靠的结果。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 3159a53b5a500aa61b85cf2bc5a97d321ed6ebb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191a0ba0aeda6ad18cdac7ba14f7ab5f3b2282f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326599"
 ---
 # <a name="com-map-macros"></a>COM 映射宏
 
@@ -20,16 +20,16 @@ ms.locfileid: "62245616"
 
 |||
 |-|-|
-|[BEGIN_COM_MAP](#begin_com_map)|表示 COM 接口映射项的开头。|
-|[END_COM_MAP](#end_com_map)|表示 COM 接口映射项的结尾。|
+|[BEGIN_COM_MAP](#begin_com_map)|标记 COM 接口映射条目的开头。|
+|[END_COM_MAP](#end_com_map)|标记 COM 接口映射条目的末尾。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标题：** atlcom.h
 
-##  <a name="begin_com_map"></a>  BEGIN_COM_MAP
+## <a name="begin_com_map"></a><a name="begin_com_map"></a>BEGIN_COM_MAP
 
-COM 映射是公开的对象通过在客户端上的接口的机制`QueryInterface`。
+COM 映射是通过 向客户端公开对象上的接口的机制`QueryInterface`。
 
 ```
 BEGIN_COM_MAP(x)
@@ -37,20 +37,20 @@ BEGIN_COM_MAP(x)
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
-[in]你将在公开接口的类对象的名称。
+** x <br/>
+[在]要公开接口的类对象的名称。
 
 ### <a name="remarks"></a>备注
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)仅在 COM 映射中返回的接口指针。 启动与 BEGIN_COM_MAP 宏保持一致的接口映射，您的接口的每个添加的条目[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)宏或其一个变体，并完成对地图[END_COM_MAP](#end_com_map)宏。
+[CComObjectRootEx：内部查询接口](ccomobjectrootex-class.md#internalqueryinterface)仅返回 COM 映射中接口的指针。 使用BEGIN_COM_MAP宏启动接口映射，使用[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)宏或其变体之一为每个接口添加条目，然后使用[END_COM_MAP](#end_com_map)宏完成映射。
 
 ### <a name="example"></a>示例
 
-与 ATL[寻呼机](../../overview/visual-cpp-samples.md)示例：
+从 ATL [BEEPER](../../overview/visual-cpp-samples.md)样品中：
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-##  <a name="end_com_map"></a>  END_COM_MAP
+## <a name="end_com_map"></a><a name="end_com_map"></a>END_COM_MAP
 
 结束 COM 接口映射的定义。
 
@@ -58,7 +58,7 @@ BEGIN_COM_MAP(x)
 END_COM_MAP()
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [宏](../../atl/reference/atl-macros.md)<br/>
 [COM 映射全局函数](../../atl/reference/com-map-global-functions.md)

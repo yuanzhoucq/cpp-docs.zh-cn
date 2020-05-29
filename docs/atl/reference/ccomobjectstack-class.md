@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c3fd56635da8b80c84f6151009586b7bd2b4341
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259581"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327576"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack 类
 
-此类创建临时的 COM 对象，并为其提供的主干实现`IUnknown`。
+此类创建一个临时 COM 对象，并为它提供`IUnknown`的骨骼实现。
 
 ## <a name="syntax"></a>语法
 
@@ -32,41 +32,41 @@ class CComObjectStack : public Base
 
 #### <a name="parameters"></a>参数
 
-*基本*<br/>
-您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
+*基地*<br/>
+类派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx，](../../atl/reference/ccomobjectrootex-class.md)以及来自要支持的对象的任何其他接口。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComObjectStack::CComObjectStack](#ccomobjectstack)|构造函数。|
-|[CComObjectStack::~CComObjectStack](#dtor)|析构函数。|
+|[CComObject 堆栈：CComObject堆栈](#ccomobjectstack)|构造函数。|
+|[CComObject 堆栈：*CComObject堆栈](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComObjectStack::AddRef](#addref)|返回零。 在调试模式下，调用`_ASSERTE`。|
-|[CComObjectStack::QueryInterface](#queryinterface)|返回 E_NOINTERFACE。 在调试模式下，调用`_ASSERTE`。|
-|[CComObjectStack::Release](#release)|返回零。 在调试模式下，调用`_ASSERTE`。 ~|
+|[CComObjectStack：：添加参考](#addref)|返回零。 在调试模式下，调用`_ASSERTE`。|
+|[CComObjectStack：：查询接口](#queryinterface)|返回E_NOINTERFACE。 在调试模式下，调用`_ASSERTE`。|
+|[CComObjectStack：：发布](#release)|返回零。 在调试模式下，调用`_ASSERTE`。 ~|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|包含构造期间返回的 HRESULT`CComObjectStack`对象。|
+|[CComObjectStack：：m_hResFinalConstruct](#m_hresfinalconstruct)|包含在构建`CComObjectStack`对象期间返回的 HRESULT。|
 
 ## <a name="remarks"></a>备注
 
-`CComObjectStack` 用于创建临时的 COM 对象，并提供对象的主干实现`IUnknown`。 通常情况下，该对象用作一个函数 （即，推送到堆栈上） 中的本地变量。 因为对象被销毁该函数完成时，引用计数不执行以提高效率。
+`CComObjectStack`用于创建临时 COM 对象，并提供 对象的属性`IUnknown`实现。 通常，对象用作一个函数中的局部变量（即推送到堆栈上）。 由于对象在函数完成时被销毁，因此不会执行引用计数以提高效率。
 
-下面的示例演示如何创建在函数内使用的 COM 对象：
+下面的示例演示如何创建函数中使用的 COM 对象：
 
 [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]
 
-临时对象`Tempobj`推入堆栈，该函数完成时自动将消失。
+临时对象`Tempobj`被推送到堆栈上，并在函数完成时自动消失。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -76,9 +76,9 @@ class CComObjectStack : public Base
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标题：** atlcom.h
 
-##  <a name="addref"></a>  CComObjectStack::AddRef
+## <a name="ccomobjectstackaddref"></a><a name="addref"></a>CComObjectStack：：添加参考
 
 返回零。
 
@@ -94,7 +94,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 在调试模式下，调用`_ASSERTE`。
 
-##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>CComObject 堆栈：CComObject堆栈
 
 构造函数。
 
@@ -104,9 +104,9 @@ CComObjectStack(void* = NULL);
 
 ### <a name="remarks"></a>备注
 
-调用`FinalConstruct`，然后设置[m_hResFinalConstruct](#m_hresfinalconstruct)返回的 HRESULT 到`FinalConstruct`。 如果您不派生从基类[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)，必须提供你自己`FinalConstruct`方法。 析构函数调用 `FinalRelease`。
+调用`FinalConstruct`，然后将[m_hResFinalConstruct](#m_hresfinalconstruct)设置到 返回的`FinalConstruct`HRESULT。 如果您尚未从[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)派生基类，则必须提供您自己的`FinalConstruct`方法。 析构函数调用 `FinalRelease`。
 
-##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a>CComObject 堆栈：*CComObject堆栈
 
 析构函数。
 
@@ -116,19 +116,19 @@ CComObjectStack();
 
 ### <a name="remarks"></a>备注
 
-释放所有已分配的资源并调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
+释放所有分配的资源，并调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct
+## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectStack：：m_hResFinalConstruct
 
-包含从调用返回的 HRESULT`FinalConstruct`的构造期间`CComObjectStack`对象。
+包含在`FinalConstruct``CComObjectStack`对象构造期间从调用返回的 HRESULT。
 
 ```
 HRESULT    m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface
+## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>CComObjectStack：：查询接口
 
-返回 E_NOINTERFACE。
+返回E_NOINTERFACE。
 
 ```
 HRESULT    QueryInterface(REFIID, void**);
@@ -136,13 +136,13 @@ HRESULT    QueryInterface(REFIID, void**);
 
 ### <a name="return-value"></a>返回值
 
-返回 E_NOINTERFACE。
+返回E_NOINTERFACE。
 
 ### <a name="remarks"></a>备注
 
 在调试模式下，调用`_ASSERTE`。
 
-##  <a name="release"></a>  CComObjectStack::Release
+## <a name="ccomobjectstackrelease"></a><a name="release"></a>CComObjectStack：：发布
 
 返回零。
 
@@ -158,7 +158,7 @@ STDMETHOD_(ULONG, Release)();
 
 在调试模式下，调用`_ASSERTE`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject 类](../../atl/reference/ccomobject-class.md)<br/>

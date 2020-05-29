@@ -6,22 +6,22 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384590"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544837"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
-STL/CLR 库包含类似于中的容器的C++标准库，但它在.NET Framework 的托管环境中运行。 不进行更新的实际C++标准库和维护的旧版支持。
+STL/CLR 库包含的容器与C++标准库中的容器相似，但它在 .NET Framework 的托管环境中运行。 它不会与实际C++的标准库保持同步，并为传统支持维护。
 
-本文档提供 STL/CLR 中的容器的概述，例如容器元素的需求、可以插入到容器中的元素类型以及容器中的元素的所有权问题。 在适当的位置，本机之间的差异C++标准库和 STL/CLR 所述。
+本文档提供 STL/CLR 中的容器的概述，例如容器元素的需求、可以插入到容器中的元素类型以及容器中的元素的所有权问题。 在适当的情况下，会C++提到本机标准库和 STL/CLR 之间的差异。
 
 ## <a name="requirements-for-container-elements"></a>容器元素的需求
 
-插入到 STL/CLR 容器的所有元素必须都遵循某些准则。 有关详细信息，请参阅[STL/CLR 容器元素的需求](../dotnet/requirements-for-stl-clr-container-elements.md)。
+插入到 STL/CLR 容器中的所有元素都必须遵循特定的准则。 有关详细信息，请参阅[STL/CLR 容器元素的要求](../dotnet/requirements-for-stl-clr-container-elements.md)。
 
 ## <a name="valid-container-elements"></a>有效的容器元素
 
@@ -37,13 +37,13 @@ STL/CLR 容器可容纳以下两种元素类型之一：
 
 ### <a name="handles-to-reference-types"></a>指向引用类型的句柄
 
-您可以将指向引用类型的句柄插入到 STL/CLR 容器中。 C++ 中面向 CLR 的句柄与 C++ 中的指针类似。 有关详细信息，请参阅[句柄对象运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
+您可以将指向引用类型的句柄插入到 STL/CLR 容器中。 C++ 中面向 CLR 的句柄与 C++ 中的指针类似。 有关详细信息，请参阅[对象的句柄运算符（^）](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
 
 #### <a name="example"></a>示例
 
-下面的示例演示如何插入到 Employee 对象的句柄[cliext:: set](../dotnet/set-stl-clr.md)。
+下面的示例演示如何在[cliext：： set](../dotnet/set-stl-clr.md)中插入 Employee 对象的句柄。
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -138,7 +138,7 @@ int main()
 
 以下示例演示了如何将 Employee 对象插入到 `cliext::set` 中。
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -227,7 +227,7 @@ int main()
 
 ### <a name="unboxed-value-types"></a>未装箱的值类型
 
-您还可以将未装箱的值类型插入到 STL/CLR 容器中。 未装箱的值类型是值类型尚未*装箱*到引用类型。
+您还可以将未装箱的值类型插入到 STL/CLR 容器中。 未装箱的值类型是未*装箱*到引用类型中的值类型。
 
 值类型元素可以是标准值类型之一，如 `int`，也可以是用户定义的值类型，如 `value class`。 有关详细信息，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)
 
@@ -235,7 +235,7 @@ int main()
 
 以下示例对第一个示例进行了修改，使 Employee 类成为一个值类型。 然后，将此值类型插入到 `cliext::set` 中，与在第一个示例中一样。
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-如果你尝试插入到容器中，值类型的句柄[编译器错误 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md)生成。
+如果尝试将值类型的句柄插入到容器中，则会生成[编译器错误 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) 。
 
 ### <a name="performance-and-memory-implications"></a>性能和内存含义
 
@@ -310,6 +310,6 @@ STL/CLR 中的容器处理值语义。 每次将一个元素插入到容器中�
 
 当您调用句柄对象容器的清除或擦除方法时，不会从内存中释放句柄引用的对象。 您必须显式地删除对象，或者允许垃圾回收器在确定不再使用对象之后立即释放内存，因为这些对象驻留在托管堆上。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

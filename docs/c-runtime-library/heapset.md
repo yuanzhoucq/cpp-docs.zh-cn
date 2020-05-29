@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300256"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351273"
 ---
 # <a name="_heapset"></a>_heapset
 
 检查堆是否符合最小一致性，并将可用项设置为指定值。
 
 > [!IMPORTANT]
->  此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
+> 此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
 
 ## <a name="syntax"></a>语法
 
@@ -49,7 +49,7 @@ int _heapset(
 
 #### <a name="parameters"></a>参数
 
-*fill*<br/>
+*填补*<br/>
 填充字符。
 
 ## <a name="return-value"></a>返回值
@@ -71,13 +71,13 @@ int _heapset(
 
 `_heapset` 检查堆上的最小一致性，然后将堆的可用项的每个字节设置为 `fill` 值。 此已知值表示堆的哪些内存位置包含可用节点，以及哪些位置包含为了释放内存而无意写入的数据。 如果操作系统不支持 `_heapset`（例如 Windows 98），则此函数将返回 `_HEAPOK`，并将 `errno` 设置为 `ENOSYS`。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-有关兼容性的详细信息，请参阅“简介”中的 [Compatibility](../c-runtime-library/compatibility.md) 。
+有关兼容性的详细信息，请参阅“简介”中的[兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

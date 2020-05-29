@@ -1,9 +1,11 @@
 ---
 title: system、_wsystem
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - system
 - _wsystem
+- _o__wsystem
+- _o_system
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957679"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912390"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
@@ -81,22 +84,24 @@ int _wsystem(
 
 你必须通过使用[fflush](fflush.md)或[_flushall](flushall.md)显式刷新，或在调用**system**之前关闭任何流。
 
-**_wsystem**是**系统**的宽字符版本; **_wsystem**的*命令*参数是宽字符字符串。 否则这些函数具有相同行为。
+**_wsystem**是**系统**的宽字符版本;**_wsystem**的*命令*参数是宽字符字符串。 否则这些函数具有相同行为。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsystem**|**system**|**system**|**_wsystem**|
+|**_tsystem**|**系统**|**系统**|**_wsystem**|
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**system**|\<process.h> 或 \<stdlib.h>|
+|**系统**|\<process.h> 或 \<stdlib.h>|
 |**_wsystem**|\<process.h> 或 \<stdlib.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -133,4 +138,4 @@ Line two.
 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit、_Exit、_exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

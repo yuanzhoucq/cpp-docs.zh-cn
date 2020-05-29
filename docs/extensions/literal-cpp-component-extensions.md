@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515672"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172134"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal（C++/CLI 和 C++/CX）
 
@@ -92,7 +92,7 @@ public ref struct A {
 
 下面的示例是用 C# 编写，它引用上一示例中创建的元数据，并展示了 literal 和 static const 变量的效果：
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -125,6 +125,6 @@ class B {
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

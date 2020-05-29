@@ -6,16 +6,16 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
-ms.openlocfilehash: 2797937b184bebe0e29f8e5eae428f601c824811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167a1e579c15fd59da1979efd9aa979184318115
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177802"
 ---
 # <a name="null-statement"></a>Null 语句
 
-"Null 语句"是的表达式语句*表达式*缺失。 当语言的语法调用语句而不是表达式计算时，它很有用。   它包括分号。
+"Null 语句" 是缺少*表达式*的表达式语句。 当语言的语法调用语句而不是表达式计算时，它很有用。 它包括分号。
 
 Null 语句通常用作迭代语句中的占位符或用作在复合语句或函数的末尾放置标签的语句。
 
@@ -41,6 +41,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [表达式语句](../cpp/expression-statement.md)

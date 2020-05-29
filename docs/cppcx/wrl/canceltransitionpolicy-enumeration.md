@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398753"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214118"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 枚举
 
-指示异步操作的尝试转换到的终端状态的方式完成或错误的行为根据客户端请求已取消状态。
+指示异步操作尝试转换为已完成或错误的终端状态的方式应与客户端请求的已取消状态的行为有关。
 
 ## <a name="syntax"></a>语法
 
@@ -30,17 +30,17 @@ enum CancelTransitionPolicy;
 
 ### <a name="values"></a>值
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|`RemainCanceled`|如果异步操作目前在客户端请求已取消状态，则表明它将处于已取消状态而不是转换为已完成的终端或错误状态。|
-|`TransitionFromCanceled`|如果异步操作目前在客户端请求已取消状态，则表明状态应转换到的终端状态的已取消的状态完成的或由使用此标志的调用确定的错误。|
+|`RemainCanceled`|如果异步操作当前处于客户端请求的已取消状态，这表示它将保持为 "已取消" 状态，而不是转换为 "已完成" 或 "错误" 状态。|
+|`TransitionFromCanceled`|如果异步操作当前处于客户端请求的已取消状态，则指示状态应从该取消状态转换为已完成或错误的结束状态，这取决于利用此标志的调用。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** async.h
+**标头：** async。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

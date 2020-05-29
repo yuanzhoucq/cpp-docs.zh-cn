@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500642"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367938"
 ---
 # <a name="standard-types"></a>标准类型
 
@@ -173,7 +173,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 
 ### <a name="fixed-width-integral-types-stdinth"></a>定宽整型类型 (stdint.h)
 
-|name|等效内置类型|
+|名称|等效内置类型|
 |----------|-------------------------------|
 |int8\_t、uint8\_t|signed char、unsigned char|
 |int16\_t、uint16\_t|short、unsigned short|
@@ -198,7 +198,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`_CrtMemState` 结构|提供有关 C 运行时调试堆的当前状态的信息。|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|将在 [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 中调用的回调函数的类型定义。<br /><br /> 此函数的参数包括：报告类型、输出消息和回调函数的返回值。|CRTDBG.H|
 |`dev_t`、`_dev_t` short 或 unsigned integer|表示设备句柄。|SYS\TYPES.H|
-|`_diskfree_t` 结构|包含有关磁盘驱动器的信息。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)  使用。|DOS.H 和 DIRECT.H|
+|`_diskfree_t` 结构|包含有关磁盘驱动器的信息。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**** 使用。|DOS.H 和 DIRECT.H|
 |`div_t`、`ldiv_t` 和 `lldiv_t` 结构|存储由 [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 和 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) 分别返回的值。|STDLIB.H|
 |`errno_t` integer|用于处理 `errno` 的错误代码的函数返回类型或参数。|STDDEF.H、<br /><br /> CRTDEFS.H|
 |`_exception` 结构|存储 [_matherr](../c-runtime-library/reference/matherr.md) 的错误信息。|MATH.H|
@@ -217,7 +217,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`jmp_buf` 数组|由 [setjmp](../c-runtime-library/reference/setjmp.md) 和 [longjmp](../c-runtime-library/reference/longjmp.md) 用于保存和还原程序环境。|SETJMP.H|
 |`lconv` 结构|包含数字值在不同国家/地区的格式设置规则。 由 [localeconv](../c-runtime-library/reference/localeconv.md) 使用。|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12`（long double 或 unsigned char 数组）|用于表示一个长双精度值。|STDLIB.H|
-|`_locale_t` 结构|存储当前区域设置值；在所有区域设置特定 C 运行库中使用。|CRTDEF.H|
+|`_locale_t` 结构|存储当前区域设置值；在所有区域设置特定 C 运行库中使用。|CRTDEFS.H|
 |`mbstate_t`|跟踪多字节字符转换的状态。|WCHAR.H|
 |`off_t`、`_off_t` long integer|表示文件偏移量值。|WCHAR.H、SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> `_onexit_m_t` 指针|由 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md) 返回。|STDLIB.H|
@@ -253,6 +253,6 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`wctype_t` integer|可表示任何语言字符集的所有字符。|WCHAR.H、<br /><br /> CRTDEFS.H|
 |`wint_t` integer|可保留任何宽字符或宽文件尾值的数据对象的类型。|WCHAR.H、<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)

@@ -1,6 +1,6 @@
 ---
 title: atan、atanf、atanl、atan2、atan2f、atan2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atan2f
 - atan2l
@@ -8,6 +8,8 @@ api_name:
 - atanf
 - atan
 - atanl
+- _o_atan
+- _o_atan2
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +44,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939611"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920078"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-计算**x**的反正切值 **（atan**、 **atanf**和**atanl**）或**y**/**x**的反正切值（**atan2**、 **atan2f**和**atan2l**）。
+计算**x**的反正切值（**atan**、 **atanf**和**atanl**）或**y**/**x**的反正切值（**atan2**、 **atan2f**和**atan2l**）。
 
 ## <a name="syntax"></a>语法
 
@@ -93,11 +96,13 @@ long double atan2( long double y, long double x );  // C++ only
 
 **atan**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-由于C++允许重载，因此可以调用**atan**和**atan2**的重载，该重载采用**float**或**long** **双**参数。 在 C 程序中， **atan**和**atan2**始终采用**双重**参数并返回**double**。
+由于 c + + 允许重载，因此可以调用**atan**和**atan2**的重载，该重载采用**float**或**long** **双**参数。 在 C 程序中， **atan**和**atan2**始终采用**双重**参数并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
+|例程|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> 或 \<math.h>|
 
@@ -132,7 +137,7 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>

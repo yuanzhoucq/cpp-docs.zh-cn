@@ -38,12 +38,12 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: 2a04e0f1c202717bb6d40a10f07475d78453ffd7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8879336c48d0fec8a20411abf1c07d570a1575e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366396"
 ---
 # <a name="regex_traits-class"></a>regex_traits 类
 
@@ -58,24 +58,24 @@ class regex_traits
 
 ## <a name="parameters"></a>参数
 
-*Elem* \
+*埃莱姆*\
 要描述的字符元素类型。
 
 ## <a name="remarks"></a>备注
 
-类模板描述了*Elem*类型的各种正则表达式特征。 类模板[Basic_regex 类](../standard-library/basic-regex-class.md)使用此信息来操作*Elem*类型的元素。
+类模板描述*Elem*类型的各种正则表达式特征。 [类basic_regex类](../standard-library/basic-regex-class.md)使用此信息来操作*Elem*类型的元素。
 
 每个 `regex_traits` 对象包含 `regex_traits::locale` 类型的对象，该对象由它的一些成员函数使用。 默认区域设置是一份 `regex_traits::locale()`副本。 成员函数 `imbue` 替换区域设置对象，而成员函数 `getloc` 返回区域设置对象的副本。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[regex_traits](#regex_traits)|构造对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_class_type](#char_class_type)|字符类指示符的类型。|
 |[char_type](#char_type)|元素的类型。|
@@ -83,14 +83,14 @@ class regex_traits
 |[size_type](#size_type)|序列长度的类型。|
 |[string_type](#string_type)|元素字符串的类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[getloc](#getloc)|返回存储的区域设置对象。|
 |[imbue](#imbue)|更改存储的区域设置对象。|
-|[isctype](#isctype)|类成员资格测试。|
-|[length](#length)|返回以 null 结尾的序列的长度。|
+|[是型](#isctype)|类成员资格测试。|
+|[length](#length)|返回 null 终止序列的长度。|
 |[lookup_classname](#lookup_classname)|将序列映射到字符类。|
 |[lookup_collatename](#lookup_collatename)|将序列映射到排序规则元素。|
 |[transform](#transform)|转换为等效顺序序列。|
@@ -175,7 +175,7 @@ class digit == d == true
 hex C == 12
 ```
 
-## <a name="char_class_type"></a>regex_traits::char_class_type
+## <a name="regex_traitschar_class_type"></a><a name="char_class_type"></a>regex_traits：char_class_type
 
 字符类指示符的类型。
 
@@ -187,7 +187,7 @@ typedef T8 char_class_type;
 
 类型用于指定字符类的未指定类型的同义词。 可以使用 `|` 运算符指定属于由操作数指定的类并集的字符类，从而组合此类型的值。
 
-## <a name="char_type"></a>  regex_traits::char_type
+## <a name="regex_traitschar_type"></a><a name="char_type"></a>regex_traits：char_type
 
 元素的类型。
 
@@ -199,7 +199,7 @@ typedef Elem char_type;
 
 Typedef 是模板参数 `Elem`的同义词。
 
-## <a name="getloc"></a>  regex_traits::getloc
+## <a name="regex_traitsgetloc"></a><a name="getloc"></a>regex_traits：getloc
 
 返回存储的区域设置对象。
 
@@ -211,7 +211,7 @@ locale_type getloc() const;
 
 此成员函数返回存储的 `locale` 对象。
 
-## <a name="imbue"></a>  regex_traits::imbue
+## <a name="regex_traitsimbue"></a><a name="imbue"></a>regex_traits：：英布埃
 
 更改存储的区域设置对象。
 
@@ -221,14 +221,14 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-*loc* \
+*loc*\
 要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注
 
-该成员函数将*loc*复制到存储的 `locale` 对象，并返回存储 `locale` 对象的以前值的副本。
+成员函数将*loc*复制到存储`locale`的对象，并返回存储`locale`对象的上一个值的副本。
 
-## <a name="isctype"></a>  regex_traits::isctype
+## <a name="regex_traitsisctype"></a><a name="isctype"></a>regex_traits：isc型
 
 类成员资格测试。
 
@@ -238,19 +238,19 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要测试的元素。
 
-*cls* \
+*Cls*\
 要测试的类。
 
 ### <a name="remarks"></a>备注
 
-仅当字符*ch*在*cls*所指定的字符类中时，成员函数才返回 true。
+仅当字符*ch*位于*cls*指定的字符类中时，成员函数才返回 true。
 
-## <a name="length"></a>  regex_traits::length
+## <a name="regex_traitslength"></a><a name="length"></a>regex_traits：长度
 
-返回以 null 结尾的序列的长度。
+返回 null 终止序列的长度。
 
 ```cpp
 static size_type length(const char_type *str);
@@ -258,14 +258,14 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
-以 null 结尾的序列。
+*Str*\
+null 终止序列。
 
 ### <a name="remarks"></a>备注
 
 此静态成员函数返回 `std::char_traits<char_type>::length(str)`。
 
-## <a name="locale_type"></a>  regex_traits::locale_type
+## <a name="regex_traitslocale_type"></a><a name="locale_type"></a>regex_traits：locale_type
 
 存储的区域设置对象的类型。
 
@@ -277,7 +277,7 @@ typedef T7 locale_type;
 
 Typedef 是封装区域设置的类型的同义词。 在专业 `regex_traits<char>` 和 `regex_traits<wchar_t>` 中，它是 `std::locale`的同义词。
 
-## <a name="lookup_classname"></a>  regex_traits::lookup_classname
+## <a name="regex_traitslookup_classname"></a><a name="lookup_classname"></a>regex_traits：lookup_classname
 
 将序列映射到字符类。
 
@@ -288,7 +288,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*\
+*第一*\
 要查找的序列的开头。
 
 *最后*\
@@ -302,7 +302,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 专用化 `regex_traits<wchar_t>` 识别名称 `L"d"`、`L"s"`、`L"w"`、`L"alnum"`、`L"alpha"`、`L"blank"`、`L"cntrl"`、`L"digit"`、`L"graph"`、`L"lower"`、`L"print"`、`L"punct"`、`L"space"`、`L"upper"` 和 `L"xdigit"`，均不区分大小写。
 
-## <a name="lookup_collatename"></a>  regex_traits::lookup_collatename
+## <a name="regex_traitslookup_collatename"></a><a name="lookup_collatename"></a>regex_traits：lookup_collatename
 
 将序列映射到排序规则元素。
 
@@ -313,7 +313,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*\
+*第一*\
 要查找的序列的开头。
 
 *最后*\
@@ -323,7 +323,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 此成员函数将返回一个字符串对象，它包含对应于序列 `[first, last)`的排序规则元素；如果该序列不是有效的排序规则元素，则返回空字符串。
 
-## <a name="regex_traits"></a>regex_traits::regex_traits
+## <a name="regex_traitsregex_traits"></a><a name="regex_traits"></a>regex_traits：regex_traits
 
 构造对象。
 
@@ -335,7 +335,7 @@ regex_traits();
 
 构造函数构造其存储的 `locale` 对象初始化为默认区域设置的对象。
 
-## <a name="size_type"></a>regex_traits::size_type
+## <a name="regex_traitssize_type"></a><a name="size_type"></a>regex_traits：size_type
 
 序列长度的类型。
 
@@ -347,9 +347,9 @@ typedef T6 size_type;
 
 typedef 是无符号整数类型的同义词。 在专业 `regex_traits<char>` 和 `regex_traits<wchar_t>` 中，它是 `std::size_t`的同义词。
 
-typedef 是 `std::size_t` 的同义词。
+typedef 是 `std::size_t`的同义词。
 
-## <a name="string_type"></a>regex_traits::string_type
+## <a name="regex_traitsstring_type"></a><a name="string_type"></a>regex_traits：string_type
 
 元素字符串的类型。
 
@@ -359,9 +359,9 @@ typedef basic_string<Elem> string_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `basic_string<Elem>` 的同义词。
+typedef 是 `basic_string<Elem>`的同义词。
 
-## <a name="transform"></a>regex_traits::transform
+## <a name="regex_traitstransform"></a><a name="transform"></a>regex_traits：转换
 
 转换为等效顺序序列。
 
@@ -372,7 +372,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*\
+*第一*\
 要转换的序列的开头。
 
 *最后*\
@@ -382,7 +382,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 此成员函数返回它使用转换规则生成的字符串，转换规则依赖于 `locale` 对象。 对于由迭代器范围 `[first1, last1)` 和 `[first2, last2)`指定的两个字符序列，如果由迭代器范围 `transform(first1, last1) < transform(first2, last2)` 指定的字符序列排序在由迭代器范围 `[first1, last1)` 指定的字符序列之前，则 `[first2, last2)`。
 
-## <a name="transform_primary"></a>regex_traits::transform_primary
+## <a name="regex_traitstransform_primary"></a><a name="transform_primary"></a>regex_traits：transform_primary
 
 转换为不区分大小写的顺序等效序列。
 
@@ -393,7 +393,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*\
+*第一*\
 要转换的序列的开头。
 
 *最后*\
@@ -403,7 +403,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 此成员函数返回它使用转换规则生成的字符串，转换规则依赖于 `locale` 对象。 对于由迭代器范围 `[first1, last1)` 和 `[first2, last2)`指定的两个字符序列，如果由迭代器范围 `transform_primary(first1, last1) < transform_primary(first2, last2)` 指定的字符序列排序在由迭代器范围 `[first1, last1)` 指定的字符序列之前（不考虑大小写或重音字符），则 `[first2, last2)` 。
 
-## <a name="translate"></a>regex_traits::translate
+## <a name="regex_traitstranslate"></a><a name="translate"></a>regex_traits：翻译
 
 转换为等效的匹配元素。
 
@@ -413,14 +413,14 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要转换的元素。
 
 ### <a name="remarks"></a>备注
 
 此成员函数返回一个字符，它通过使用取决于存储的 `locale` 对象的转换规则而生成。 对于两个 `char_type` 对象（ `ch1` 和 `ch2`），只有 `translate(ch1) == translate(ch2)` 和 `ch1` 匹配（在其中一个在正则表达式定义中出现且另一个在区分区域设置匹配的目标序列中的相应位置出现时），才为 `ch2` 。
 
-## <a name="translate_nocase"></a>  regex_traits::translate_nocase
+## <a name="regex_traitstranslate_nocase"></a><a name="translate_nocase"></a>regex_traits：translate_nocase
 
 转换为不区分大小写的等效匹配序列。
 
@@ -430,14 +430,14 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要转换的元素。
 
 ### <a name="remarks"></a>备注
 
 此成员函数返回一个字符，它通过使用取决于存储的 `locale` 对象的转换规则而生成。 对于两个 `char_type` 对象（ `ch1` 和 `ch2`），只有当 `translate_nocase(ch1) == translate_nocase(ch2)` 和 `ch1` 的匹配条件为其中一个在正则表达式中出现且另一个在不区分大小写匹配的目标序列中的相应位置出现时，才为 `ch2` 。
 
-## <a name="value"></a>  regex_traits::value
+## <a name="regex_traitsvalue"></a><a name="value"></a>regex_traits：值
 
 将元素转换为数字值。
 
@@ -447,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要转换的元素。
 
-*基数*\
+*拉迪克斯*\
 要使用的算术基数。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回基准*基数*中字符*ch*表示的值，如果*ch*不是基本*基数*中的有效数字，则返回-1。 仅使用*基数*参数8、10或16来调用函数。
+成员函数返回由基*半径*中的字符*ch*表示的值，如果*ch*不是基*半径*中的有效数字，则返回 -1。 函数将仅使用*半径*参数 8、10 或 16 调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_constants 类](../standard-library/regex-constants-class.md)\
-[Regex_error 类](../standard-library/regex-error-class.md)\
-[\<regex > 函数](../standard-library/regex-functions.md)\
-[Regex_iterator 类](../standard-library/regex-iterator-class.md)\
-[\<regex > 运算符](../standard-library/regex-operators.md)\
-[Regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
-[\<regex > typedef](../standard-library/regex-typedefs.md) \
-[regex_traits\<char> Class](../standard-library/regex-traits-char-class.md)\
-[regex_traits\<wchar_t> Class](../standard-library/regex-traits-wchar-t-class.md)
+[\<正则>](../standard-library/regex.md)\
+[regex_constants类](../standard-library/regex-constants-class.md)\
+[regex_error类](../standard-library/regex-error-class.md)\
+[\<正则表达式>函数](../standard-library/regex-functions.md)\
+[regex_iterator类](../standard-library/regex-iterator-class.md)\
+[\<正则>运算符](../standard-library/regex-operators.md)\
+[regex_token_iterator类](../standard-library/regex-token-iterator-class.md)\
+[\<正则>类型](../standard-library/regex-typedefs.md)\
+[regex_traits\<字符>类](../standard-library/regex-traits-char-class.md)\
+[regex_traitswchar_t>\<类](../standard-library/regex-traits-wchar-t-class.md)

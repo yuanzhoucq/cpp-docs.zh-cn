@@ -7,16 +7,16 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227053fbfa4190dc6227ba7096a7c76aef30bb54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181546"
 ---
 # <a name="align-c"></a>align (C++)
 
-在 Visual Studio 2015 及更高版本，使用 C + + 11 标准`alignas`说明符来控制对齐效果。 有关详细信息，请参阅[对齐](../cpp/alignment-cpp-declarations.md)。
+在 Visual Studio 2015 和更高版本中，使用 c + + 11 标准 `alignas` 说明符来控制对齐。 有关详细信息，请参阅[对齐](../cpp/alignment-cpp-declarations.md)。
 
 **Microsoft 专用**
 
@@ -24,23 +24,23 @@ ms.locfileid: "62258144"
 
 ## <a name="syntax"></a>语法
 
-> **__declspec( align(** *#* **) )** *declarator*
+> **__declspec （align （** *#* **））** *声明符*
 
 ## <a name="remarks"></a>备注
 
 编写使用最新的处理器指令的应用程序会引入一些新的约束和问题。 具体而言，许多新指令要求数据必须与 16 字节边界对齐。 另外，通过将常用数据与特定处理器的缓存行大小对齐，可以提高缓存性能。 例如，如果你定义一个大小小于 32 字节的结构，你可能希望将此结构对齐到 32 字节，以确保有效缓存该结构类型的对象。
 
-\# 对齐值。 有效项为介于 1 和 8192（字节）之间的 2 的整数幂，如 2、4、8、16、32 或 64。 `declarator` 是你声明为对齐的数据。
+\# 是对齐值。 有效项为介于 1 和 8192（字节）之间的 2 的整数幂，如 2、4、8、16、32 或 64。 `declarator` 是你声明为对齐的数据。
 
-有关如何返回类型的值`size_t`类型的对齐要求，请参阅[__alignof](../cpp/alignof-operator.md)。 有关如何面向 64 位处理器时声明未对齐的指针的信息，请参阅[__unaligned](../cpp/unaligned.md)。
+有关如何返回 `size_t` 类型为类型对齐要求的类型的值的信息，请参阅[__alignof](../cpp/alignof-operator.md)。 有关如何在面向64位处理器时声明未对齐指针的信息，请参阅[__unaligned](../cpp/unaligned.md)。
 
-可以使用`__declspec(align(#))`定义时**struct**，**联合**，或**类**，或当你声明一个变量。
+在定义**结构**、**联合**或**类**或声明变量时，可以使用 `__declspec(align(#))`。
 
-编译器不保证或不尝试保留复制过程中或数据转换操作中数据的对齐特性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以将复制与声明的结构`__declspec(align(#))`到任何位置。 请注意，普通分配器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)， C++ [new 运算符](new-operator-cpp.md)，和 Win32 分配器，返回的通常不充分对齐的内存`__declspec(align(#))`结构或结构的数组。 若要保证复制或数据转换操作的目标正确对齐，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或编写你自己的分配器。
+编译器不保证或不尝试保留复制过程中或数据转换操作中数据的对齐特性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以将使用 `__declspec(align(#))` 声明的结构复制到任何位置。 请注意，普通分配器（例如， [malloc](../c-runtime-library/reference/malloc.md)、 C++ [operator new](new-operator-cpp.md)和 Win32 分配器）返回的内存通常不能充分地与 `__declspec(align(#))` 结构或结构数组对齐。 若要确保复制或数据转换操作的目标正确对齐，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)或编写你自己的分配器。
 
 不能指定函数参数的对齐方式。 当通过堆栈上的值传递具有对齐特性的数据，它的对齐由调用约定控制。 如果数据对齐在所调用函数中很重要，请在使用前将参数复制到正确对齐的内存中。
 
-无需`__declspec(align(#))`，编译器通常会根据目标处理器和数据的大小，最多 4 字节边界上 32 位处理器的自然边界和在 64 位处理器上的 8 字节边界上的数据对齐。 类或结构中的数据在类或结构中依据其自然对齐的最小值和当前包装设置（来自 #pragma `pack` 或 `/Zp` 编译器选项）进行对齐。
+如果没有 `__declspec(align(#))`，则编译器通常会根据目标处理器和数据的大小、32位处理器上最多4个字节的边界以及64位处理器上的8字节边界来对齐自然边界上的数据。 类或结构中的数据在类或结构中依据其自然对齐的最小值和当前包装设置（来自 #pragma `pack` 或 `/Zp` 编译器选项）进行对齐。
 
 本示例演示 `__declspec(align(#))` 的使用：
 
@@ -50,9 +50,9 @@ __declspec(align(32)) struct Str1{
 };
 ```
 
-此类型现在具有 32 字节对齐特性。 这意味着所有静态和自动实例都在 32 字节边界上启动。 使用此类型作为成员声明的其他结构类型保留此类型的对齐特性，也就是说，任何结构与`Str1`如某个元素有至少 32 的对齐特性。
+此类型现在具有 32 字节对齐特性。 这意味着所有静态和自动实例都在 32 字节边界上启动。 将此类型声明为成员的其他结构类型会保留此类型的对齐特性，即，任何 `Str1` 为元素的结构都具有至少32的对齐特性。
 
-请注意，`sizeof(struct Str1)` 等于 32。 这意味着，如果创建 Str1 对象的数组，并且该数组的基为对齐的 32 字节，则数组的每个成员也是对齐的 32 字节。 若要在动态内存中创建其基正确对齐的数组，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或编写你自己的分配器。
+请注意，`sizeof(struct Str1)` 等于 32。 这意味着，如果创建 Str1 对象的数组，并且该数组的基为对齐的 32 字节，则数组的每个成员也是对齐的 32 字节。 若要创建一个在动态内存中正确对齐的数组，请使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)或编写自己的分配器。
 
 任何结构的 `sizeof` 值是最终成员的偏移量加上该成员的大小，向上舍入为最大成员对齐值的最接近倍数或整个结构的对齐值（以较大者为准）。
 
@@ -68,19 +68,19 @@ __declspec(align(32)) struct Str1{
 
 `__declspec(align(#))` 只能增大对齐限制。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [对齐示例](#vclrfalignexamples)
 
-- [定义新的类型与 __declspec(align(#))](#vclrf_declspecaligntypedef)
+- [定义 __declspec 的新类型（align （#））](#vclrf_declspecaligntypedef)
 
-- [在线程本地存储区中对齐数据](#vclrfthreadlocalstorageallocation)
+- [在线程本地存储中对齐数据](#vclrfthreadlocalstorageallocation)
 
-- [与数据打包配合的对齐方式](#vclrfhowalignworkswithdatapacking)
+- [对齐如何与数据打包配合使用](#vclrfhowalignworkswithdatapacking)
 
-- [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)(特定于 x64)
+- [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)（特定于 x64）
 
-## <a name="vclrfalignexamples"></a> 对齐示例
+## <a name="align-examples"></a><a name="vclrfalignexamples"></a>对齐示例
 
 以下示例说明 `__declspec(align(#))` 如何影响数据结构的大小和对齐方式。 这些示例假定下列定义：
 
@@ -89,7 +89,7 @@ __declspec(align(32)) struct Str1{
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-在此示例中，通过使用 `S1` 定义 `__declspec(align(32))` 结构。 针对一个变量定义或其他类型声明中的全部 `S1` 使用均为 32 字节对齐。 `sizeof(struct S1)` 返回 32，并且 `S1` 在包含四个整数所需的 16 字节之后有 16 个填充字节。 每个**int**成员需要 4 字节对齐方式，但结构本身的对齐方式被声明为 32。 因此，整体为 32 字节对齐。
+在此示例中，通过使用 `S1` 定义 `__declspec(align(32))` 结构。 针对一个变量定义或其他类型声明中的全部 `S1` 使用均为 32 字节对齐。 `sizeof(struct S1)` 返回 32，并且 `S1` 在包含四个整数所需的 16 字节之后有 16 个填充字节。 每个**int**成员都需要4字节对齐，但结构本身的对齐方式声明为32。 因此，整体为 32 字节对齐。
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -169,22 +169,22 @@ void fn() {
 }
 ```
 
-在堆上分配了内存时，对齐方式取决于所调用的分配函数。  例如，如果你使用 `malloc`，则该结果取决于操作数大小。 如果*arg* > = 8，返回的内存为 8 字节对齐。 如果*arg* < 8，返回的内存的对齐方式是 2 的第一个幂小于*arg*。 例如，如果你使用 malloc(7)，则对齐方式为 4 字节。
+在堆上分配了内存时，对齐方式取决于所调用的分配函数。  例如，如果你使用 `malloc`，则该结果取决于操作数大小。 如果*arg* > = 8，则返回的内存为8字节对齐。 如果*arg* < 8，则返回的内存的对齐是2小于*arg*的第一个幂。 例如，如果你使用 malloc(7)，则对齐方式为 4 字节。
 
-## <a name="vclrf_declspecaligntypedef"></a> 定义新的类型与 __declspec(align(#))
+## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>定义 __declspec 的新类型（align （#））
 
 可以使用对齐特性定义类型。
 
-例如，可以定义`struct`使用对齐值这种方式：
+例如，可以通过以下方式定义具有对齐值的 `struct`：
 
 ```cpp
 struct aType {int a; int b;};
 typedef __declspec(align(32)) struct aType bType;
 ```
 
-现在，`aType`并`bType`是相同的大小 （8 个字节） 但类型的变量`bType`均为 32 字节对齐。
+现在，`aType` 和 `bType` 大小相同（8字节），但类型 `bType` 的变量为 32-字节对齐。
 
-## <a name="vclrfthreadlocalstorageallocation"></a> 在线程本地存储区中对齐数据
+## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a>在线程本地存储中对齐数据
 
 使用 `__declspec(thread)` 特性创建的置于映像中的 TLS 部分中的静态线程-本地存储 (TLS) 与常规静态数据一样适用于对齐。 若要创建 TLS 数据，操作系统需分配 TLS 部分大小的内存并遵循 TLS 部分对齐特性。
 
@@ -207,9 +207,9 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-## <a name="vclrfhowalignworkswithdatapacking"></a> 与数据打包配合的对齐方式
+## <a name="how-align-works-with-data-packing"></a><a name="vclrfhowalignworkswithdatapacking"></a>对齐如何与数据打包配合使用
 
-`/Zp`编译器选项和`pack`杂注影响的打包数据的结构和联合成员。此示例演示如何`/Zp`和`__declspec(align(#))`协同工作：
+`/Zp` 编译器选项和 `pack` 杂注具有结构和联合成员的封装数据的效果。此示例演示 `/Zp` 和 `__declspec(align(#))` 如何协同工作：
 
 ```cpp
 struct S {
@@ -226,11 +226,11 @@ struct S {
 
 |变量|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
-|a|0|0|0|0|
+|（英文）。|0|0|0|0|
 |b|1|2|2|2|
 |c|3|4|4|8|
 |d|32|32|32|32|
-|E|40|40|40|40|
+|e|40|40|40|40|
 |f|41|42|44|48|
 |sizeof(S)|64|64|64|64|
 
@@ -240,7 +240,7 @@ struct S {
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [__declspec](../cpp/declspec.md)<br/>
 [ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)<br/>

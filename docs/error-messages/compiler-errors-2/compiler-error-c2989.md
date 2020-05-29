@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 585823c2114befa3e6d432e3cf8100fa14ed1a7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176723"
 ---
 # <a name="compiler-error-c2989"></a>编译器错误 C2989
 
-class： 类类型已声明为非类类型
+"class"：类类型已声明为非类类型
 
-泛型类或模板重新定义的非模板或非泛型类。 检查冲突的标头文件。
+类泛型或模板重新定义非模板或非泛型类。 检查标头文件中的冲突。
 
-下面的示例生成 C2989:
+下面的示例生成 C2989：
 
 ```cpp
 // C2989.cpp
@@ -31,7 +31,7 @@ class C{};  // C2989
 class C2{};
 ```
 
-使用泛型时，也可能发生 C2989:
+使用泛型时也可能发生 C2989：
 
 ```cpp
 // C2989b.cpp

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-ms.openlocfilehash: 845597460cdc0ce83adcbba1f47a78c83735cbf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1118f9fcca525b2b2d5869fb507ee974d2b0d28f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374142"
 ---
-# <a name="ifnotexists-statement"></a>__if_not_exists 语句
+# <a name="__if_not_exists-statement"></a>__if_not_exists 语句
 
-**__If_not_exists**语句测试是否存在指定的标识符。 如果该标识符不存在，则执行指定的语句块。
+**__if_not_exists**语句测试指定的标识符是否存在。 如果该标识符不存在，则执行指定的语句块。
 
 ## <a name="syntax"></a>语法
 
@@ -27,32 +27,32 @@ statements
 
 #### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*identifier*|要测试其存在性的标识符。|
-|*statements*|一个或多个时要执行的语句*标识符*不存在。|
+|*标识符*|要测试其存在性的标识符。|
+|*语句*|如果*标识符*不存在，要执行的一个或多个语句。|
 
 ## <a name="remarks"></a>备注
 
 > [!CAUTION]
->  若要实现最可靠的结果，请使用 **__if_not_exists**以下约束条件下的语句。
+> 要获得最可靠的结果，请使用以下约束下的 **__if_not_exists**语句。
 
-- 将应用 **__if_not_exists**语句仅简单类型，而不是模板。
+- 将 **__if_not_exists**语句仅应用于简单类型，而不是模板。
 
-- 将应用 **__if_not_exists**到的内部或外部类标识符的语句。 不适用于 **__if_not_exists**到本地变量的语句。
+- 将 **__if_not_exists**语句应用于类内部或外部的标识符。 不要将 **__if_not_exists**语句应用于局部变量。
 
-- 使用 **__if_not_exists**仅在函数体中的语句。 在函数体外部区域 **__if_not_exists**语句可以测试仅完全定义的类型。
+- 仅在函数正文中使用 **__if_not_exists**语句。 在函数的正文之外 **，__if_not_exists**语句只能测试完全定义的类型。
 
 - 在测试重载函数时，不能测试特定形式的重载。
 
-对补充 **__if_not_exists**语句是[__if_exists](../cpp/if-exists-statement.md)语句。
+**__if_not_exists**语句的补充是[__if_exists](../cpp/if-exists-statement.md)语句。
 
 ## <a name="example"></a>示例
 
-有关如何使用的示例 **__if_not_exists**，请参阅[__if_exists 语句](../cpp/if-exists-statement.md)。
+有关如何使用 **__if_not_exists**的示例，请参阅[__if_exists 语句](../cpp/if-exists-statement.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [选择语句](../cpp/selection-statements-cpp.md)<br/>
-[关键字](../cpp/keywords-cpp.md)<br/>
-[__if_exists 语句](../cpp/if-exists-statement.md)
+[Keywords](../cpp/keywords-cpp.md)<br/>
+[__if_exists声明](../cpp/if-exists-statement.md)

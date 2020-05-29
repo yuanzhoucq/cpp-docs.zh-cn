@@ -34,11 +34,11 @@ helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
 ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142703"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424187"
 ---
 # <a name="source_block-class"></a>source_block 类
 
@@ -51,7 +51,7 @@ template<class _TargetLinkRegistry, class _MessageProcessorType = ordered_messag
 class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_TargetLinkRegistry*<br/>
 将用于保存目标链接的注册表链接到。
@@ -59,7 +59,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 *_MessageProcessorType*<br/>
 用于消息处理的处理器类型。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
@@ -135,7 +135,7 @@ virtual message<_Target_type>* accept(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 提供的 `message` 对象的 `runtime_object_identity`。
@@ -161,7 +161,7 @@ virtual message<_Target_type>* accept(
 virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 `message` 对象的运行时对象标识。
@@ -194,7 +194,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Msg*<br/>
 指向要异步发送的 `message` 对象的指针。
@@ -209,7 +209,7 @@ virtual message<_Target_type>* consume(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 保留 `message` 对象的 `runtime_object_identity`。
@@ -237,7 +237,7 @@ virtual message<_Target_type>* consume(
 virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 所使用的 `message` 对象的 `runtime_object_identity`。
@@ -268,7 +268,7 @@ void initialize_source(
     _Inout_opt_ ScheduleGroup* _PScheduleGroup = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PScheduler*<br/>
 用于计划任务的计划程序。
@@ -284,7 +284,7 @@ void initialize_source(
 virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 指向链接到此 `source_block` 对象的 `ITarget` 块的指针。
@@ -309,7 +309,7 @@ virtual void link_target_notification(_Inout_ ITarget<_Target_type> *);
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PMessage*<br/>
 指向要处理的消息的指针。
@@ -330,7 +330,7 @@ virtual void propagate_output_messages();
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PMessage*<br/>
 指向要传播的消息的指针。
@@ -345,7 +345,7 @@ virtual void release(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 保留 `message` 对象的 `runtime_object_identity`。
@@ -367,7 +367,7 @@ virtual void release(
 virtual void release_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 正在释放的 `message` 对象的 `runtime_object_identity`。
@@ -380,7 +380,7 @@ virtual void release_message(runtime_object_identity _MsgId) = 0;
 virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 指向正在调用此方法的目标块的指针。
@@ -407,7 +407,7 @@ virtual bool reserve(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 提供的 `message` 对象的 `runtime_object_identity`。
@@ -433,7 +433,7 @@ virtual bool reserve(
 virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 保留的 `message` 对象的 `runtime_object_identity`。
@@ -478,7 +478,7 @@ virtual ~source_block();
 virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Msg*<br/>
 指向要同步发送的 `message` 对象的指针。
@@ -491,7 +491,7 @@ virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 指向要从此 `source_block` 对象断开链接的 `ITarget` 块的指针。
@@ -508,7 +508,7 @@ virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 已取消链接的 `ITarget` 块。

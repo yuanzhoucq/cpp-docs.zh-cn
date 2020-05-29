@@ -1,30 +1,30 @@
 ---
-title: 编译器警告 （等级 C4840
+title: 编译器警告（等级4） C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185199"
 ---
-# <a name="compiler-warning-level-4-c4840"></a>编译器警告 （等级 C4840
+# <a name="compiler-warning-level-4-c4840"></a>编译器警告（等级4） C4840
 
-> 类的不可移植用法*类型*作为可变参数函数的参数
+> 类 "*type*" 作为可变参数函数的参数的不可移植使用
 
 ## <a name="remarks"></a>备注
 
-传递给 variadic 函数的类或结构必须完全可复制。 传递此类对象时，编译器只是执行按位复制，不会调用构造函数或析构函数。
+传递给可变参数函数的类或结构必须是完全复制。 传递此类对象时，编译器只是执行按位复制，不会调用构造函数或析构函数。
 
-此警告是 Visual Studio 2017 中的开始提供。
+从 Visual Studio 2017 开始提供此警告。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4840 并演示如何修复此错误：
+下面的示例生成 C4840，并演示如何修复此问题：
 
 ```cpp
 // C4840.cpp
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-对于字符串使用生成和管理`CStringW`，提供`operator LPCWSTR()`应该用于强制转换`CStringW`到所需的格式字符串的 C 样式字符串指针的对象：
+对于使用 `CStringW`生成和管理的字符串，提供的 `operator LPCWSTR()` 应用于将 `CStringW` 对象强制转换为格式字符串所需的 C 样式字符串指针：
 
 ```cpp
     CStringW str1;

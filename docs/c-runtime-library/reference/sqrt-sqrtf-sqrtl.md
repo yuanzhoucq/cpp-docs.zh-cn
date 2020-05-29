@@ -1,10 +1,11 @@
 ---
 title: sqrt、sqrtf、sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958098"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913904"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -72,7 +74,9 @@ long double sqrtl(
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用**浮点**或**长** **双精度**类型的**sqrt**的重载。 在 C 程序中， **sqrt**始终采用并返回**double**。
+由于 c + + 允许重载，因此可以调用采用**浮点**或**长****双精度**类型的**sqrt**的重载。 在 C 程序中， **sqrt**始终采用并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="return-value"></a>返回值
 
@@ -90,7 +94,7 @@ long double sqrtl(
 |--------------|--------------|------------------|
 |**sqrt**、 **sqrtf**、 **sqrtl**|\<math.h>|\<cmath>|
 
-有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -117,7 +121,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [exp、expf、expl](exp-expf.md)<br/>

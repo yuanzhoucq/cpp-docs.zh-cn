@@ -3,15 +3,15 @@ title: 标记摘要
 ms.date: 11/04/2016
 ms.assetid: 2978cbf6-e66e-46fc-9938-caa052f2ccf7
 ms.openlocfilehash: 4fdc1cf4c4e5a89cc9ecf029e64b6eb5422cd6a3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345131"
 ---
 # <a name="summary-of-tokens"></a>标记摘要
 
-token：<br/>
+token  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
@@ -19,7 +19,7 @@ token：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-preprocessing-token:<br/>
+preprocessing-token  :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*header-name*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number*<br/>
@@ -28,16 +28,16 @@ preprocessing-token:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*operator punctuator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;不能成为上述项目之一的每个非空白字符
 
-header-name:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *path-spec*  **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"**  *path spec*  **"**
+header-name  :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\<**  *path-spec*  **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **"**  *path spec*  **"**
 
-path-spec:<br/>
+path-spec  :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;合法文件路径
 
-pp-number:<br/>
+pp-number  :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**.** *digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **.** *digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *digit* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number*  **e**  *sign*<br/>

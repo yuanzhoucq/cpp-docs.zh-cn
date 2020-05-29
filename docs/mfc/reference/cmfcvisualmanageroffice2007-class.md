@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOffice2007 Class
+title: CMFCVisualManagerOffice2007 类
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOffice2007
@@ -230,18 +230,18 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: 4ea04ece6f381fb2bce1c33716c7e7248bca5b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b7e15a540ab95342b030c48c93905daaf86f40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319917"
 ---
-# <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 Class
+# <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 类
 
-`CMFCVisualManagerOffice2007` 向应用程序提供 Microsoft Office 2007 外观。
+`CMFCVisualManagerOffice2007`为应用程序提供 Microsoft Office 2007 外观。
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -253,130 +253,130 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||
-|[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||
-|[CMFCVisualManagerOffice2007::GetCaptionBarTextColor](#getcaptionbartextcolor)||
-|[CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
-|[CMFCVisualManagerOffice2007::GetMenuItemTextColor](#getmenuitemtextcolor)||
-|[CMFCVisualManagerOffice2007::GetNcBtnSize](#getncbtnsize)||
-|[CMFCVisualManagerOffice2007::GetRibbonBar](#getribbonbar)||
-|[CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||
-|[CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize](#getribbonpopupbordersize)||
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset](#getribbonquickaccesstoolbarchevronoffset)||
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin](#getribbonquickaccesstoolbarrightmargin)||
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||
-|[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||
-|[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||
-|[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||
-|`CMFCVisualManagerOffice2007::GetStyle`|返回当前颜色方案的`CMFCVisualManagerOffice2007`图形用户界面，反过来，模仿 Microsoft Office 2007 GUI。|
-|[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||
-|[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||
-|[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||
-|[CMFCVisualManagerOffice2007::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)||
-|[CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)||
-|[CMFCVisualManagerOffice2007::GetToolTipInfo](#gettooltipinfo)||
-|[CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)||
-|[CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip](#islayeredribbonkeytip)||
-|[CMFCVisualManagerOffice2007::IsOwnerDrawCaption](#isownerdrawcaption)||
-|[CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck](#isownerdrawmenucheck)||
-|[CMFCVisualManagerOffice2007::IsRibbonPresent](#isribbonpresent)||
-|[CMFCVisualManagerOffice2007::OnDrawBarGripper](#ondrawbargripper)||
-|[CMFCVisualManagerOffice2007::OnDrawButtonBorder](#ondrawbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawButtonSeparator](#ondrawbuttonseparator)||
-|[CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||
-|[CMFCVisualManagerOffice2007::OnDrawCheckBoxEx](#ondrawcheckboxex)||
-|[CMFCVisualManagerOffice2007::OnDrawComboBorder](#ondrawcomboborder)||
-|[CMFCVisualManagerOffice2007::OnDrawComboDropButton](#ondrawcombodropbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)||
-|[CMFCVisualManagerOffice2007::OnDrawEditBorder](#ondraweditborder)||
-|[CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)||
-|[CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuBorder](#ondrawmenuborder)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuCheck](#ondrawmenucheck)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuItemButton](#ondrawmenuitembutton)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuLabel](#ondrawmenulabel)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuResizeBar](#ondrawmenuresizebar)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuSystemButton](#ondrawmenusystembutton)||
-|[CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder](#ondrawminiframeborder)||
-|[CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)||
-|[CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawPaneCaption](#ondrawpanecaption)||
-|[CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||
-|[CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem](#ondrawpropertysheetlistitem)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCaption](#ondrawribboncaption)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategory](#ondrawribboncategory)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonPanel](#ondrawribbonpanel)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)||
-|[CMFCVisualManagerOffice2007::OnDrawScrollButtons](#ondrawscrollbuttons)||
-|[CMFCVisualManagerOffice2007::OnDrawSeparator](#ondrawseparator)||
-|[CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||
-|[CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)||
-|[CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)||
-|[CMFCVisualManagerOffice2007::OnDrawTab](#ondrawtab)||
-|[CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawTask](#ondrawtask)||
-|[CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)||
-|[CMFCVisualManagerOffice2007::OnDrawTearOffCaption](#ondrawtearoffcaption)||
-|[CMFCVisualManagerOffice2007::OnEraseMDIClientArea](#onerasemdiclientarea)||
-|[CMFCVisualManagerOffice2007::OnEraseTabsArea](#onerasetabsarea)||
-|[CMFCVisualManagerOffice2007::OnEraseTabsButton](#onerasetabsbutton)||
-|[CMFCVisualManagerOffice2007::OnEraseTabsFrame](#onerasetabsframe)||
-|[CMFCVisualManagerOffice2007::OnFillBarBackground](#onfillbarbackground)||
-|[CMFCVisualManagerOffice2007::OnFillButtonInterior](#onfillbuttoninterior)||
-|[CMFCVisualManagerOffice2007::OnFillCaptionBarButton](#onfillcaptionbarbutton)||
-|[CMFCVisualManagerOffice2007::OnFillHighlightedArea](#onfillhighlightedarea)||
-|[CMFCVisualManagerOffice2007::OnFillMiniFrameCaption](#onfillminiframecaption)||
-|[CMFCVisualManagerOffice2007::OnFillOutlookBarCaption](#onfilloutlookbarcaption)||
-|[CMFCVisualManagerOffice2007::OnFillOutlookPageButton](#onfilloutlookpagebutton)||
-|[CMFCVisualManagerOffice2007::OnFillPopupWindowBackground](#onfillpopupwindowbackground)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonButton](#onfillribbonbutton)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonEdit](#onfillribbonedit)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame](#onfillribbonmenuframe)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||
-|[CMFCVisualManagerOffice2007::OnFillTab](#onfilltab)||
-|[CMFCVisualManagerOffice2007::OnHighlightMenuItem](#onhighlightmenuitem)||
-|[CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)||
-|[CMFCVisualManagerOffice2007::OnNcActivate](#onncactivate)||
-|[CMFCVisualManagerOffice2007::OnNcPaint](#onncpaint)||
-|[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||
-|[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||
-|[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||
-|`CMFCVisualManagerOffice2007::SetStyle`|将配色方案设置`CMFCVisualManagerOffice2007`GUI。|
+|[CMFCVisualManagerOffice2007：：始终突出显示3DTabs](#alwayshighlight3dtabs)||
+|[CMFC可视化管理器Office2007：：清洁风格](#cleanstyle)||
+|[CMFCVisualManagerOffice2007：：获取字幕条文本颜色](#getcaptionbartextcolor)||
+|[CMFCVisualManagerOffice2007：：获取突出显示的菜单项目文本颜色](#gethighlightedmenuitemtextcolor)||
+|[CMFCVisualManagerOffice2007：：获取菜单项目文本颜色](#getmenuitemtextcolor)||
+|[CMFC可视化管理器Office2007：：获取NcBtnSize](#getncbtnsize)||
+|[CMFCVisualManagerOffice2007：：获取功能栏](#getribbonbar)||
+|[CMFCVisualManagerOffice2007：：获取功能链接文本颜色](#getribbonhyperlinktextcolor)||
+|[CMFC可视化管理器Office2007：：获取放大缩小字体功能 放大缩小字体功能](#getribbonpopupbordersize)||
+|[CMFCVisualManagerOffice2007：：获取功能快速访问工具BarVveV偏移](#getribbonquickaccesstoolbarchevronoffset)||
+|[CMFCVisualManagerOffice2007：：获取功能快速访问工具栏RightRightMargin](#getribbonquickaccesstoolbarrightmargin)||
+|[CMFCVisualManagerOffice2007：：获取功能快速访问工具文本颜色](#getribbonquickaccesstoolbartextcolor)||
+|[CMFCVisualManagerOffice2007：：获取功能状态栏文本颜色](#getribbonstatusbartextcolor)||
+|[CMFCVisualManagerOffice2007：：获取显示所有菜单项高度](#getshowallmenuitemsheight)||
+|[CMFCVisualManagerOffice2007：：获取状态栏文本颜色](#getstatusbarpanetextcolor)||
+|`CMFCVisualManagerOffice2007::GetStyle`|返回 GUI 的`CMFCVisualManagerOffice2007`当前配色方案，而 GUI 又模仿 Microsoft Office 2007 GUI。|
+|[CMFC可视化管理器Office2007：：获取TabFrame颜色](#gettabframecolors)||
+|[CMFC视觉经理Office2007：：获取塔布霍兹保证金](#gettabhorzmargin)||
+|[CMFCVisualManagerOffice2007：：获取TabtextColor](#gettabtextcolor)||
+|[CMFCVisualManagerOffice2007：：获取工具栏按钮文本颜色](#gettoolbarbuttontextcolor)||
+|[CMFCVisualManagerOffice2007：：获取工具栏禁用文本颜色](#gettoolbardisabledtextcolor)||
+|[CMFC可视化管理器Office2007：：获取工具提示信息](#gettooltipinfo)||
+|[CMFCVisualManagerOffice2007：：是亮点全菜单项目](#ishighlightwholemenuitem)||
+|[CMFC可视化管理器Office2007：：是分层的带状功能键提示](#islayeredribbonkeytip)||
+|[CMFCVisualManagerOffice2007：：所有者绘制标题](#isownerdrawcaption)||
+|[CMFCVisualManagerOffice2007：：是所有者DrawMenu检查](#isownerdrawmenucheck)||
+|[CMFCVisualManagerOffice2007：是](#isribbonpresent)||
+|[CMFCVisualManagerOffice2007：：ONDrawBarGripper](#ondrawbargripper)||
+|[CMFCVisualManagerOffice2007：：在绘制按钮边框](#ondrawbuttonborder)||
+|[CMFCVisualManagerOffice2007：：在DrawButton分离器上](#ondrawbuttonseparator)||
+|[CMFCVisual经理Office2007：：ONDrawCaptionbarinfo区域](#ondrawcaptionbarinfoarea)||
+|[CMFCVisualManagerOffice2007：：在DrawCheckBoxEx上](#ondrawcheckboxex)||
+|[CMFCVisualManagerOffice2007：：ONDrawCombo边界](#ondrawcomboborder)||
+|[CMFCVisualManagerOffice2007：：OnDrawComboDropButton](#ondrawcombodropbutton)||
+|[CMFCVisualManagerOffice2007：：在Draw默认功能图片](#ondrawdefaultribbonimage)||
+|[CMFCVisualManagerOffice2007：：在DrawEdit边界](#ondraweditborder)||
+|[CMFCVisualManagerOffice2007：：在Draw浮动工具栏边框](#ondrawfloatingtoolbarborder)||
+|[CMFCVisualManagerOffice2007：：在绘制标题Ctrl边界](#ondrawheaderctrlborder)||
+|[CMFCVisualManagerOffice2007：：在DrawMenu边框](#ondrawmenuborder)||
+|[CMFCVisualManagerOffice2007：：在DrawMenu检查](#ondrawmenucheck)||
+|[CMFCVisualManagerOffice2007：：在DrawMenu项目按钮](#ondrawmenuitembutton)||
+|[CMFCVisualManagerOffice2007：：在DrawMenu标签上](#ondrawmenulabel)||
+|[CMFCVisualManagerOffice2007：：在DrawMenu重新大小栏](#ondrawmenuresizebar)||
+|[CMFCVisualManagerOffice2007：：在DrawMenuScrollButton](#ondrawmenuscrollbutton)||
+|[CMFCVisualManagerOffice2007：：在DrawMenu系统按钮](#ondrawmenusystembutton)||
+|[CMFCVisualManagerOffice2007：：在DrawMiniFrame边框](#ondrawminiframeborder)||
+|[CMFCVisualManagerOffice2007：：在DrawOutlookbar拆分器上](#ondrawoutlookbarsplitter)||
+|[CMFCVisualManagerOffice2007：：在DrawOutlookPage按钮边框](#ondrawoutlookpagebuttonborder)||
+|[CMFCVisualManagerOffice2007：：ONDrawPaneCaption](#ondrawpanecaption)||
+|[CMFCVisualManagerOffice2007：：在"上拉"窗口标题](#ondrawpopupwindowcaption)||
+|[CMFCVisualManagerOffice2007：：在图片财产表列表项](#ondrawpropertysheetlistitem)||
+|[CMFCVisualManagerOffice2007：：在画网应用按钮](#ondrawribbonapplicationbutton)||
+|[CMFCVisualManagerOffice2007：：在绘制功能按钮边框](#ondrawribbonbuttonborder)||
+|[CMFC可视化管理器Office2007：：在Draw功能区按钮组](#ondrawribbonbuttonsgroup)||
+|[CMFCVisualManagerOffice2007：：在画中带标题](#ondrawribboncaption)||
+|[CMFCVisualManagerOffice2007：：在画带标题按钮](#ondrawribboncaptionbutton)||
+|[CMFCVisualManagerOffice2007：：在画网分类](#ondrawribboncategory)||
+|[CMFCVisualManagerOffice2007：：在Drawribbon分类标题](#ondrawribboncategorycaption)||
+|[CMFCVisualManagerOffice2007：：在Draw功能区分类滚动](#ondrawribboncategoryscroll)||
+|[CMFCVisualManagerOffice2007：：在绘制功能分类选项卡](#ondrawribboncategorytab)||
+|[CMFCVisualManagerOffice2007：：在画丽彩盒列表上](#ondrawribboncheckboxonlist)||
+|[CMFCVisualManagerOffice2007：：在Draw功能区默认窗格按钮](#ondrawribbondefaultpanebutton)||
+|[CMFCVisualManagerOffice2007：：在DrawRibbon默认窗格按钮指示器](#ondrawribbondefaultpanebuttonindicator)||
+|[CMFCVisualManagerOffice2007：：OndrawribbonGallery边框](#ondrawribbongalleryborder)||
+|[CMFCVisualManagerOffice2007：：在Draw功能区画廊按钮](#ondrawribbongallerybutton)||
+|[CMFCVisualManagerOffice2007：：在画彩带键提示](#ondrawribbonkeytip)||
+|[CMFCVisualManagerOffice2007：：在Drawribbon主面板按钮边框](#ondrawribbonmainpanelbuttonborder)||
+|[CMFCVisualManagerOffice2007：：OndrawribbonMainPanel框架](#ondrawribbonmainpanelframe)||
+|[CMFCVisualManagerOffice2007：：在Draw功能区菜单检查框](#ondrawribbonmenucheckframe)||
+|[CMFCVisualManagerOffice2007：ondrawribbon面板](#ondrawribbonpanel)||
+|[CMFCVisualManagerOffice2007：：在画彩带面板标题](#ondrawribbonpanelcaption)||
+|[CMFCVisualManagerOffice2007：：在Drawribbon进度条](#ondrawribbonprogressbar)||
+|[CMFCVisualManagerOffice2007：：：动态文件框](#ondrawribbonrecentfilesframe)||
+|[CMFCVisualManagerOffice2007：：Ondraw功能放大缩小字体功能](#ondrawribbonsliderchannel)||
+|[CMFCVisualManagerOffice2007：：在画条上滑点](#ondrawribbonsliderthumb)||
+|[CMFCVisualManagerOffice2007：：在画条放大缩小字体功能 放大缩小字体功能](#ondrawribbonsliderzoombutton)||
+|[CMFCVisualManagerOffice2007：：在Drawribbon状态栏窗格](#ondrawribbonstatusbarpane)||
+|[CMFC可视化管理器Office2007：：在DrawRibbonTabs框架](#ondrawribbontabsframe)||
+|[CMFCVisualManagerOffice2007：：OnDrawScroll按钮](#ondrawscrollbuttons)||
+|[CMFCVisualManagerOffice2007：OnDrawSeator](#ondrawseparator)||
+|[CMFCVisualManagerOffice2007：：在画秀所有菜单项](#ondrawshowallmenuitems)||
+|[CMFCVisualManagerOffice2007：：在绘制状态栏栏边框](#ondrawstatusbarpaneborder)||
+|[CMFCVisualManagerOffice2007：：在绘制状态栏框](#ondrawstatusbarsizebox)||
+|[CMFCVisualManagerOffice2007：：在DrawTab](#ondrawtab)||
+|[CMFCVisualManagerOffice2007：：在DrawTabsButton边框](#ondrawtabsbuttonborder)||
+|[CMFCVisualManagerOffice2007：在牵引任务](#ondrawtask)||
+|[CMFC可视化管理器Office2007：：在Draw任务组标题](#ondrawtasksgroupcaption)||
+|[CMFCVisualManagerOffice2007：：画中](#ondrawtearoffcaption)||
+|[CMFCVisualManagerOffice2007：：在EraseMDI客户区](#onerasemdiclientarea)||
+|[CMFC可视化管理器Office2007：：在EraseTabs区域](#onerasetabsarea)||
+|[CMFCVisualManagerOffice2007：：在EraseTabsButton上](#onerasetabsbutton)||
+|[CMFCVisualManagerOffice2007：：在EraseTabs框架上](#onerasetabsframe)||
+|[CMFCVisualManagerOffice2007：：在填充栏背景](#onfillbarbackground)||
+|[CMFCVisualManagerOffice2007：：在填充按钮内部](#onfillbuttoninterior)||
+|[CMFCVisualManagerOffice2007：：在填充标题栏按钮](#onfillcaptionbarbutton)||
+|[CMFCVisualManagerOffice2007：：在填充突出显示区域](#onfillhighlightedarea)||
+|[CMFCVisualManagerOffice2007：：onFillminiFrame标题](#onfillminiframecaption)||
+|[CMFCVisualManagerOffice2007：：在填充前景栏标题](#onfilloutlookbarcaption)||
+|[CMFCVisualManagerOffice2007：：在填充OutlookPageButton](#onfilloutlookpagebutton)||
+|[CMFCVisualManagerOffice2007：：在填充窗口背景](#onfillpopupwindowbackground)||
+|[CMFCVisualManagerOffice2007：：打开填充功能按钮](#onfillribbonbutton)||
+|[CMFCVisualManagerOffice2007：：在填充功能编辑](#onfillribbonedit)||
+|[CMFCVisualManagerOffice2007：：在填充功能主面板按钮](#onfillribbonmainpanelbutton)||
+|[CMFCVisualManagerOffice2007：：在填充功能框](#onfillribbonmenuframe)||
+|[CMFCVisualManagerOffice2007：：：在填充功能快速访问工具栏弹出](#onfillribbonquickaccesstoolbarpopup)||
+|[CMFCVisualManagerOffice2007：：OnFillTab](#onfilltab)||
+|[CMFCVisualManagerOffice2007：：关于亮点菜单项目](#onhighlightmenuitem)||
+|[CMFCVisualManagerOffice2007：：关于突出显示很少使用菜单项](#onhighlightrarelyusedmenuitems)||
+|[CMFCVisualManagerOffice2007：：OnNc激活](#onncactivate)||
+|[CMFCVisualManagerOffice2007：OnNcPaint](#onncpaint)||
+|[CMFCVisualManagerOffice2007：：打开窗口区域](#onsetwindowregion)||
+|[CMFCVisualManagerOffice2007：：更新系统颜色](#onupdatesystemcolors)||
+|[CMFC可视化管理器Office2007：：设置资源句柄](#setresourcehandle)||
+|`CMFCVisualManagerOffice2007::SetStyle`|设置 GUI 的`CMFCVisualManagerOffice2007`配色方案。|
 
 ## <a name="remarks"></a>备注
 
-使用`CMFCVisualManagerOffice2007`更改为类似于 Microsoft Office 2007 的应用程序的可视外观。 此视觉管理器要求在使用之前设置的样式。 再传递到此视觉管理器`CMFCVisualManager::SetDefaultManager`，必须调用的静态函数`CMFCVisualManagerOffice2007::SetStyle`。
+用于`CMFCVisualManagerOffice2007`更改应用程序的可视外观，以类似于 Microsoft Office 2007。 此可视化管理器要求您在使用样式之前设置样式。 在将此可视化管理器传递给`CMFCVisualManager::SetDefaultManager`之前，必须调用 静态函数`CMFCVisualManagerOffice2007::SetStyle`。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用 Office 2007 的可视化管理器。 此代码片段属于[桌面警报演示示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用可视化管理器 Office 2007。 此代码段是[桌面警报演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]
 
@@ -384,11 +384,11 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBase可视化管理器](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFC可视化经理办公室XP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
 
@@ -396,9 +396,9 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxvisualmanageroffice2007.h
+**标题：** afxvisualmanageroffice2007.h
 
-##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs
+## <a name="cmfcvisualmanageroffice2007alwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFCVisualManagerOffice2007：：始终突出显示3DTabs
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
@@ -408,7 +408,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="cleanstyle"></a>  CMFCVisualManagerOffice2007::CleanStyle
+## <a name="cmfcvisualmanageroffice2007cleanstyle"></a><a name="cleanstyle"></a>CMFC可视化管理器Office2007：：清洁风格
 
 ```
 static void __stdcall CleanStyle();
@@ -416,7 +416,7 @@ static void __stdcall CleanStyle();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManagerOffice2007::GetCaptionBarTextColor
+## <a name="cmfcvisualmanageroffice2007getcaptionbartextcolor"></a><a name="getcaptionbartextcolor"></a>CMFCVisualManagerOffice2007：：获取字幕条文本颜色
 
 ```
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
@@ -424,13 +424,13 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 
 ### <a name="parameters"></a>参数
 
-[in] *pBar*<br/>
+[在]*pBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor
+## <a name="cmfcvisualmanageroffice2007gethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerOffice2007：：获取突出显示的菜单项目文本颜色
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -438,13 +438,13 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>参数
 
-[in] *pButton*<br/>
+[在]*pButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetMenuItemTextColor
+## <a name="cmfcvisualmanageroffice2007getmenuitemtextcolor"></a><a name="getmenuitemtextcolor"></a>CMFCVisualManagerOffice2007：：获取菜单项目文本颜色
 
 ```
 virtual COLORREF GetMenuItemTextColor(
@@ -455,15 +455,15 @@ virtual COLORREF GetMenuItemTextColor(
 
 ### <a name="parameters"></a>参数
 
-[in] *pButton*<br/>
-[in] *bHighlighted*<br/>
-[in] *bDisabled*<br/>
+[在]*pButton*<br/>
+[在]*b 突出显示*<br/>
+[在]*b 残疾*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getncbtnsize"></a>  CMFCVisualManagerOffice2007::GetNcBtnSize
+## <a name="cmfcvisualmanageroffice2007getncbtnsize"></a><a name="getncbtnsize"></a>CMFC可视化管理器Office2007：：获取NcBtnSize
 
 ```
 virtual CSize GetNcBtnSize(BOOL bSmall) const;
@@ -471,13 +471,13 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 
 ### <a name="parameters"></a>参数
 
-[in] *bSmall*<br/>
+[在]*b 小*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getribbonbar"></a>  CMFCVisualManagerOffice2007::GetRibbonBar
+## <a name="cmfcvisualmanageroffice2007getribbonbar"></a><a name="getribbonbar"></a>CMFCVisualManagerOffice2007：：获取功能栏
 
 ```
 CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
@@ -485,13 +485,13 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>参数
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor
+## <a name="cmfcvisualmanageroffice2007getribbonhyperlinktextcolor"></a><a name="getribbonhyperlinktextcolor"></a>CMFCVisualManagerOffice2007：：获取功能链接文本颜色
 
 ```
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
@@ -499,13 +499,13 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ### <a name="parameters"></a>参数
 
-[in] *pHyperLink*<br/>
+[在]*pHyperLink*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize
+## <a name="cmfcvisualmanageroffice2007getribbonpopupbordersize"></a><a name="getribbonpopupbordersize"></a>CMFC可视化管理器Office2007：：获取放大缩小字体功能 放大缩小字体功能
 
 ```
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
@@ -513,13 +513,13 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
 
 ### <a name="parameters"></a>参数
 
-[in] *pPopup*<br/>
+[在]*pPopup*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset
+## <a name="cmfcvisualmanageroffice2007getribbonquickaccesstoolbarchevronoffset"></a><a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManagerOffice2007：：获取功能快速访问工具BarVveV偏移
 
 ```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
@@ -529,7 +529,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin
+## <a name="cmfcvisualmanageroffice2007getribbonquickaccesstoolbarrightmargin"></a><a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManagerOffice2007：：获取功能快速访问工具栏RightRightMargin
 
 ```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
@@ -539,7 +539,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor
+## <a name="cmfcvisualmanageroffice2007getribbonquickaccesstoolbartextcolor"></a><a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManagerOffice2007：：获取功能快速访问工具文本颜色
 
 ```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -547,13 +547,13 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>参数
 
-[in] *bDisabled*<br/>
+[在]*b 残疾*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor
+## <a name="cmfcvisualmanageroffice2007getribbonstatusbartextcolor"></a><a name="getribbonstatusbartextcolor"></a>CMFCVisualManagerOffice2007：：获取功能状态栏文本颜色
 
 ```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -561,13 +561,13 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="parameters"></a>参数
 
-[in] *pStatusBar*<br/>
+[在]*pStatusbar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight
+## <a name="cmfcvisualmanageroffice2007getshowallmenuitemsheight"></a><a name="getshowallmenuitemsheight"></a>CMFCVisualManagerOffice2007：：获取显示所有菜单项高度
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -577,14 +577,14 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *sizeDefault*<br/>
+[在]*pDC*<br/>
+[在]*大小 默认*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor
+## <a name="cmfcvisualmanageroffice2007getstatusbarpanetextcolor"></a><a name="getstatusbarpanetextcolor"></a>CMFCVisualManagerOffice2007：：获取状态栏文本颜色
 
 ```
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -594,14 +594,14 @@ virtual COLORREF GetStatusBarPaneTextColor(
 
 ### <a name="parameters"></a>参数
 
-[in] *pStatusBar*<br/>
-[in] *pPane*<br/>
+[在]*pStatusbar*<br/>
+[在]*pPane*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2007::GetTabFrameColors
+## <a name="cmfcvisualmanageroffice2007gettabframecolors"></a><a name="gettabframecolors"></a>CMFC可视化管理器Office2007：：获取TabFrame颜色
 
 ```
 virtual void GetTabFrameColors(
@@ -618,19 +618,19 @@ virtual void GetTabFrameColors(
 
 ### <a name="parameters"></a>参数
 
-[in] *pTabWnd*<br/>
-[in] *clrDark*<br/>
-[in] *clrBlack*<br/>
-[in] *clrHighlight*<br/>
-[in] *clrFace*<br/>
-[in] *clrDarkShadow*<br/>
-[in] *clrLight*<br/>
-[in] *pbrFace*<br/>
-[in] *pbrBlack*<br/>
+[在]*pTabwnd*<br/>
+[在]*clrDark*<br/>
+[在]*clrBlack*<br/>
+[在]*clr高光*<br/>
+[在]*clrFace*<br/>
+[在]*clrDark阴影*<br/>
+[在]*clrLight*<br/>
+[在]*pbrFace*<br/>
+[在]*普布布莱克*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettabhorzmargin"></a>  CMFCVisualManagerOffice2007::GetTabHorzMargin
+## <a name="cmfcvisualmanageroffice2007gettabhorzmargin"></a><a name="gettabhorzmargin"></a>CMFC视觉经理Office2007：：获取塔布霍兹保证金
 
 ```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
@@ -638,13 +638,13 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
 
 ### <a name="parameters"></a>参数
 
-[in] *pTabWnd*<br/>
+[在]*pTabwnd*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettabtextcolor"></a>  CMFCVisualManagerOffice2007::GetTabTextColor
+## <a name="cmfcvisualmanageroffice2007gettabtextcolor"></a><a name="gettabtextcolor"></a>CMFCVisualManagerOffice2007：：获取TabtextColor
 
 ```
 virtual COLORREF GetTabTextColor(
@@ -655,15 +655,15 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>参数
 
-[in] *pTabWnd*<br/>
-[in] *iTab*<br/>
-[in] *bIsActive*<br/>
+[在]*pTabwnd*<br/>
+[在]*iTab*<br/>
+[在]*bIsActive*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarButtonTextColor
+## <a name="cmfcvisualmanageroffice2007gettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerOffice2007：：获取工具栏按钮文本颜色
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -673,14 +673,14 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="parameters"></a>参数
 
-[in] *pButton*<br/>
-[in] *state*<br/>
+[在]*pButton*<br/>
+[在]*状态*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor
+## <a name="cmfcvisualmanageroffice2007gettoolbardisabledtextcolor"></a><a name="gettoolbardisabledtextcolor"></a>CMFCVisualManagerOffice2007：：获取工具栏禁用文本颜色
 
 ```
 virtual COLORREF GetToolbarDisabledTextColor();
@@ -690,7 +690,7 @@ virtual COLORREF GetToolbarDisabledTextColor();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2007::GetToolTipInfo
+## <a name="cmfcvisualmanageroffice2007gettooltipinfo"></a><a name="gettooltipinfo"></a>CMFC可视化管理器Office2007：：获取工具提示信息
 
 ```
 virtual BOOL GetToolTipInfo(
@@ -700,14 +700,14 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>参数
 
-[in] *params*<br/>
-[in] *nType*<br/>
+[在]*参数*<br/>
+[在]*n类型*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem
+## <a name="cmfcvisualmanageroffice2007ishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFCVisualManagerOffice2007：：是亮点全菜单项目
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -717,7 +717,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip
+## <a name="cmfcvisualmanageroffice2007islayeredribbonkeytip"></a><a name="islayeredribbonkeytip"></a>CMFC可视化管理器Office2007：：是分层的带状功能键提示
 
 ```
 virtual BOOL IsLayeredRibbonKeyTip() const;
@@ -727,7 +727,7 @@ virtual BOOL IsLayeredRibbonKeyTip() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isownerdrawcaption"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawCaption
+## <a name="cmfcvisualmanageroffice2007isownerdrawcaption"></a><a name="isownerdrawcaption"></a>CMFCVisualManagerOffice2007：：所有者绘制标题
 
 ```
 virtual BOOL IsOwnerDrawCaption();
@@ -737,7 +737,7 @@ virtual BOOL IsOwnerDrawCaption();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck
+## <a name="cmfcvisualmanageroffice2007isownerdrawmenucheck"></a><a name="isownerdrawmenucheck"></a>CMFCVisualManagerOffice2007：：是所有者DrawMenu检查
 
 ```
 virtual BOOL IsOwnerDrawMenuCheck();
@@ -747,7 +747,7 @@ virtual BOOL IsOwnerDrawMenuCheck();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isribbonpresent"></a>  CMFCVisualManagerOffice2007::IsRibbonPresent
+## <a name="cmfcvisualmanageroffice2007isribbonpresent"></a><a name="isribbonpresent"></a>CMFCVisualManagerOffice2007：是
 
 ```
 BOOL IsRibbonPresent(CWnd* pWnd) const;
@@ -755,13 +755,13 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>参数
 
-[in] *pWnd*<br/>
+[在]*pwnd*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2007::OnDrawBarGripper
+## <a name="cmfcvisualmanageroffice2007ondrawbargripper"></a><a name="ondrawbargripper"></a>CMFCVisualManagerOffice2007：：ONDrawBarGripper
 
 ```
 virtual void OnDrawBarGripper(
@@ -773,14 +773,14 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectGripper*<br/>
-[in] *bHorz*<br/>
-[in] *pBar*<br/>
+[在]*pDC*<br/>
+[在]*rectGripper*<br/>
+[在]*布霍兹*<br/>
+[在]*pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFCVisualManagerOffice2007：：在绘制按钮边框
 
 ```
 virtual void OnDrawButtonBorder(
@@ -792,14 +792,14 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *state*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rect*<br/>
+[在]*状态*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerOffice2007::OnDrawButtonSeparator
+## <a name="cmfcvisualmanageroffice2007ondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFCVisualManagerOffice2007：：在DrawButton分离器上
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -812,15 +812,15 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *state*<br/>
-[in] *bHorz*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rect*<br/>
+[在]*状态*<br/>
+[在]*布霍兹*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea
+## <a name="cmfcvisualmanageroffice2007ondrawcaptionbarinfoarea"></a><a name="ondrawcaptionbarinfoarea"></a>CMFCVisual经理Office2007：：ONDrawCaptionbarinfo区域
 
 ```
 virtual void OnDrawCaptionBarInfoArea(
@@ -831,13 +831,13 @@ virtual void OnDrawCaptionBarInfoArea(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2007::OnDrawCheckBoxEx
+## <a name="cmfcvisualmanageroffice2007ondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFCVisualManagerOffice2007：：在DrawCheckBoxEx上
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -851,16 +851,16 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *nState*<br/>
-[in] *bHighlighted*<br/>
-[in] *bPressed*<br/>
-[in] *bEnabled*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*n州*<br/>
+[在]*b 突出显示*<br/>
+[在]*bPressed*<br/>
+[在]*b 启用*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2007::OnDrawComboBorder
+## <a name="cmfcvisualmanageroffice2007ondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFCVisualManagerOffice2007：：ONDrawCombo边界
 
 ```
 virtual void OnDrawComboBorder(
@@ -874,16 +874,16 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*b 残疾*<br/>
+[在]*bIs放弃*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2007::OnDrawComboDropButton
+## <a name="cmfcvisualmanageroffice2007ondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFCVisualManagerOffice2007：：OnDrawComboDropButton
 
 ```
 virtual void OnDrawComboDropButton(
@@ -897,16 +897,16 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*b 残疾*<br/>
+[在]*bIs放弃*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage
+## <a name="cmfcvisualmanageroffice2007ondrawdefaultribbonimage"></a><a name="ondrawdefaultribbonimage"></a>CMFCVisualManagerOffice2007：：在Draw默认功能图片
 
 ```
 virtual void OnDrawDefaultRibbonImage(
@@ -919,15 +919,15 @@ virtual void OnDrawDefaultRibbonImage(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectImage*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bIsPressed*<br/>
-[in]*bIsHighlighted*<br/>
+[在]*pDC*<br/>
+[在]*rectImage*<br/>
+[在]*bIs 已禁用*<br/>
+[在]*bIsPressed*<br/>
+[在]*bIs 突出显示*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondraweditborder"></a>  CMFCVisualManagerOffice2007::OnDrawEditBorder
+## <a name="cmfcvisualmanageroffice2007ondraweditborder"></a><a name="ondraweditborder"></a>CMFCVisualManagerOffice2007：：在DrawEdit边界
 
 ```
 virtual void OnDrawEditBorder(
@@ -940,15 +940,15 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*b 残疾*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder
+## <a name="cmfcvisualmanageroffice2007ondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerOffice2007：：在Draw浮动工具栏边框
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -960,14 +960,14 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pToolBar*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+[在]*pDC*<br/>
+[在]*pToolBar*<br/>
+[在]*rectBorder*<br/>
+[在]*整边界大小*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder
+## <a name="cmfcvisualmanageroffice2007ondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFCVisualManagerOffice2007：：在绘制标题Ctrl边界
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -980,15 +980,15 @@ virtual void OnDrawHeaderCtrlBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pCtrl*<br/>
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in]*bIsHighlighted*<br/>
+[在]*pCtrl*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*bIsPressed*<br/>
+[在]*bIs 突出显示*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2007::OnDrawMenuBorder
+## <a name="cmfcvisualmanageroffice2007ondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFCVisualManagerOffice2007：：在DrawMenu边框
 
 ```
 virtual void OnDrawMenuBorder(
@@ -999,13 +999,13 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pMenu*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*pMenu*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenucheck"></a>  CMFCVisualManagerOffice2007::OnDrawMenuCheck
+## <a name="cmfcvisualmanageroffice2007ondrawmenucheck"></a><a name="ondrawmenucheck"></a>CMFCVisualManagerOffice2007：：在DrawMenu检查
 
 ```
 virtual void OnDrawMenuCheck(
@@ -1018,15 +1018,15 @@ virtual void OnDrawMenuCheck(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *bHighlight*<br/>
-[in] *bIsRadio*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rect*<br/>
+[在]*b 高光*<br/>
+[在]*比无线电*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuItemButton
+## <a name="cmfcvisualmanageroffice2007ondrawmenuitembutton"></a><a name="ondrawmenuitembutton"></a>CMFCVisualManagerOffice2007：：在DrawMenu项目按钮
 
 ```
 virtual void OnDrawMenuItemButton(
@@ -1039,15 +1039,15 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectButton*<br/>
-[in] *bHighlight*<br/>
-[in] *bDisabled*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rectButton*<br/>
+[在]*b 高光*<br/>
+[在]*b 残疾*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenulabel"></a>  CMFCVisualManagerOffice2007::OnDrawMenuLabel
+## <a name="cmfcvisualmanageroffice2007ondrawmenulabel"></a><a name="ondrawmenulabel"></a>CMFCVisualManagerOffice2007：：在DrawMenu标签上
 
 ```
 virtual COLORREF OnDrawMenuLabel(
@@ -1057,14 +1057,14 @@ virtual COLORREF OnDrawMenuLabel(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManagerOffice2007::OnDrawMenuResizeBar
+## <a name="cmfcvisualmanageroffice2007ondrawmenuresizebar"></a><a name="ondrawmenuresizebar"></a>CMFCVisualManagerOffice2007：：在DrawMenu重新大小栏
 
 ```
 virtual void OnDrawMenuResizeBar(
@@ -1075,13 +1075,13 @@ virtual void OnDrawMenuResizeBar(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *nResizeFlags*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*n 重大小标记*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuScrollButton
+## <a name="cmfcvisualmanageroffice2007ondrawmenuscrollbutton"></a><a name="ondrawmenuscrollbutton"></a>CMFCVisualManagerOffice2007：：在DrawMenuScrollButton
 
 ```
 virtual void OnDrawMenuScrollButton(
@@ -1095,16 +1095,16 @@ virtual void OnDrawMenuScrollButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bIsScrollDown*<br/>
-[in]*bIsHighlited*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*bIsScrollDown*<br/>
+[在]*bIs 高亮*<br/>
+[在]*bIsPressed*<br/>
+[在]*bIs 已禁用*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuSystemButton
+## <a name="cmfcvisualmanageroffice2007ondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFCVisualManagerOffice2007：：在DrawMenu系统按钮
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -1117,15 +1117,15 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *uiSystemCommand*<br/>
-[in] *nStyle*<br/>
-[in] *bHighlight*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*uiSystem命令*<br/>
+[在]*n样式*<br/>
+[在]*b 高光*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder
+## <a name="cmfcvisualmanageroffice2007ondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFCVisualManagerOffice2007：：在DrawMiniFrame边框
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -1137,14 +1137,14 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pFrameWnd*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+[在]*pDC*<br/>
+[在]*pFramewnd*<br/>
+[在]*rectBorder*<br/>
+[在]*整边界大小*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter
+## <a name="cmfcvisualmanageroffice2007ondrawoutlookbarsplitter"></a><a name="ondrawoutlookbarsplitter"></a>CMFCVisualManagerOffice2007：：在DrawOutlookbar拆分器上
 
 ```
 virtual void OnDrawOutlookBarSplitter(
@@ -1154,12 +1154,12 @@ virtual void OnDrawOutlookBarSplitter(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectSplitter*<br/>
+[在]*pDC*<br/>
+[在]*重新拆分*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerOffice2007：：在DrawOutlookPage按钮边框
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -1171,14 +1171,14 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectBtn*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
+[在]*pDC*<br/>
+[在]*雷克Btn*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIsPressed*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2007::OnDrawPaneCaption
+## <a name="cmfcvisualmanageroffice2007ondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManagerOffice2007：：ONDrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -1191,17 +1191,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *bActive*<br/>
-[in] *rectCaption*<br/>
-[in]*rectButtons*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*b 活动*<br/>
+[在]*rectCaption*<br/>
+[在]*rectButtons*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption
+## <a name="cmfcvisualmanageroffice2007ondrawpopupwindowcaption"></a><a name="ondrawpopupwindowcaption"></a>CMFCVisualManagerOffice2007：：在"上拉"窗口标题
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -1212,15 +1212,15 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pPopupWnd*<br/>
+[在]*pDC*<br/>
+[在]*rectCaption*<br/>
+[在]*pPopupwnd*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawpropertysheetlistitem"></a>  CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem
+## <a name="cmfcvisualmanageroffice2007ondrawpropertysheetlistitem"></a><a name="ondrawpropertysheetlistitem"></a>CMFCVisualManagerOffice2007：：在图片财产表列表项
 
 ```
 virtual COLORREF OnDrawPropertySheetListItem(
@@ -1233,17 +1233,17 @@ virtual COLORREF OnDrawPropertySheetListItem(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pParent*<br/>
-[in] *rect*<br/>
-[in]*bIsHighlihted*<br/>
-[in] *bIsSelected*<br/>
+[在]*pDC*<br/>
+[在]*p 父级*<br/>
+[在]*rect*<br/>
+[在]*bIsHighlihted*<br/>
+[在]*bIs选择*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbonapplicationbutton"></a><a name="ondrawribbonapplicationbutton"></a>CMFCVisualManagerOffice2007：：在画网应用按钮
 
 ```
 virtual void OnDrawRibbonApplicationButton(
@@ -1253,12 +1253,12 @@ virtual void OnDrawRibbonApplicationButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawribbonbuttonborder"></a><a name="ondrawribbonbuttonborder"></a>CMFCVisualManagerOffice2007：：在绘制功能按钮边框
 
 ```
 virtual void OnDrawRibbonButtonBorder(
@@ -1268,12 +1268,12 @@ virtual void OnDrawRibbonButtonBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup
+## <a name="cmfcvisualmanageroffice2007ondrawribbonbuttonsgroup"></a><a name="ondrawribbonbuttonsgroup"></a>CMFC可视化管理器Office2007：：在Draw功能区按钮组
 
 ```
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -1284,15 +1284,15 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pGroup*<br/>
-[in] *rectGroup*<br/>
+[在]*pDC*<br/>
+[在]*p组*<br/>
+[在]*rectGroup*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribboncaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaption
+## <a name="cmfcvisualmanageroffice2007ondrawribboncaption"></a><a name="ondrawribboncaption"></a>CMFCVisualManagerOffice2007：：在画中带标题
 
 ```
 virtual void OnDrawRibbonCaption(
@@ -1304,14 +1304,14 @@ virtual void OnDrawRibbonCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rectCaption*<br/>
-[in] *rectText*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*rectCaption*<br/>
+[在]*整文*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton
+## <a name="cmfcvisualmanageroffice2007ondrawribboncaptionbutton"></a><a name="ondrawribboncaptionbutton"></a>CMFCVisualManagerOffice2007：：在画带标题按钮
 
 ```
 virtual void OnDrawRibbonCaptionButton(
@@ -1321,12 +1321,12 @@ virtual void OnDrawRibbonCaptionButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribboncategory"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategory
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategory"></a><a name="ondrawribboncategory"></a>CMFCVisualManagerOffice2007：：在画网分类
 
 ```
 virtual void OnDrawRibbonCategory(
@@ -1337,13 +1337,13 @@ virtual void OnDrawRibbonCategory(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pCategory*<br/>
-[in] *rectCategory*<br/>
+[在]*pDC*<br/>
+[在]*p 类别*<br/>
+[在]*rect类别*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategorycaption"></a><a name="ondrawribboncategorycaption"></a>CMFCVisualManagerOffice2007：：在Drawribbon分类标题
 
 ```
 virtual COLORREF OnDrawRibbonCategoryCaption(
@@ -1353,14 +1353,14 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pContextCaption*<br/>
+[在]*pDC*<br/>
+[在]*pContextCaption*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategoryscroll"></a><a name="ondrawribboncategoryscroll"></a>CMFCVisualManagerOffice2007：：在Draw功能区分类滚动
 
 ```
 virtual void OnDrawRibbonCategoryScroll(
@@ -1370,12 +1370,12 @@ virtual void OnDrawRibbonCategoryScroll(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pScroll*<br/>
+[在]*pDC*<br/>
+[在]*pScroll*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategorytab"></a><a name="ondrawribboncategorytab"></a>CMFCVisualManagerOffice2007：：在绘制功能分类选项卡
 
 ```
 virtual COLORREF OnDrawRibbonCategoryTab(
@@ -1386,15 +1386,15 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pTab*<br/>
-[in] *bIsActive*<br/>
+[在]*pDC*<br/>
+[在]*pTab*<br/>
+[在]*bIsActive*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList
+## <a name="cmfcvisualmanageroffice2007ondrawribboncheckboxonlist"></a><a name="ondrawribboncheckboxonlist"></a>CMFCVisualManagerOffice2007：：在画丽彩盒列表上
 
 ```
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -1407,15 +1407,15 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pCheckBox*<br/>
-[in] *rect*<br/>
-[in] *bIsSelected*<br/>
-[in] *bHighlighted*<br/>
+[在]*pDC*<br/>
+[在]*pCheckBox*<br/>
+[在]*rect*<br/>
+[在]*bIs选择*<br/>
+[在]*b 突出显示*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbondefaultpanebutton"></a><a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManagerOffice2007：：在Draw功能区默认窗格按钮
 
 ```
 virtual void OnDrawRibbonDefaultPaneButton(
@@ -1425,12 +1425,12 @@ virtual void OnDrawRibbonDefaultPaneButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator
+## <a name="cmfcvisualmanageroffice2007ondrawribbondefaultpanebuttonindicator"></a><a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManagerOffice2007：：在DrawRibbon默认窗格按钮指示器
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -1443,15 +1443,15 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *bIsSelected*<br/>
-[in] *bHighlighted*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rect*<br/>
+[在]*bIs选择*<br/>
+[在]*b 突出显示*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder
+## <a name="cmfcvisualmanageroffice2007ondrawribbongalleryborder"></a><a name="ondrawribbongalleryborder"></a>CMFCVisualManagerOffice2007：：OndrawribbonGallery边框
 
 ```
 virtual void OnDrawRibbonGalleryBorder(
@@ -1462,13 +1462,13 @@ virtual void OnDrawRibbonGalleryBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectBorder*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rectBorder*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbongallerybutton"></a><a name="ondrawribbongallerybutton"></a>CMFCVisualManagerOffice2007：：在Draw功能区画廊按钮
 
 ```
 virtual void OnDrawRibbonGalleryButton(
@@ -1478,12 +1478,12 @@ virtual void OnDrawRibbonGalleryButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip
+## <a name="cmfcvisualmanageroffice2007ondrawribbonkeytip"></a><a name="ondrawribbonkeytip"></a>CMFCVisualManagerOffice2007：：在画彩带键提示
 
 ```
 virtual void OnDrawRibbonKeyTip(
@@ -1495,14 +1495,14 @@ virtual void OnDrawRibbonKeyTip(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in]*pElement*<br/>
-[in] *rect*<br/>
-[in] *str*<br/>
+[在]*pDC*<br/>
+[在]*p元素*<br/>
+[在]*rect*<br/>
+[在]*斯特*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawribbonmainpanelbuttonborder"></a><a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManagerOffice2007：：在Drawribbon主面板按钮边框
 
 ```
 virtual void OnDrawRibbonMainPanelButtonBorder(
@@ -1512,12 +1512,12 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbonmainpanelframe"></a><a name="ondrawribbonmainpanelframe"></a>CMFCVisualManagerOffice2007：：OndrawribbonMainPanel框架
 
 ```
 virtual void OnDrawRibbonMainPanelFrame(
@@ -1528,13 +1528,13 @@ virtual void OnDrawRibbonMainPanelFrame(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*p面板*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbonmenucheckframe"></a><a name="ondrawribbonmenucheckframe"></a>CMFCVisualManagerOffice2007：：在Draw功能区菜单检查框
 
 ```
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -1545,13 +1545,13 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonpanel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanel
+## <a name="cmfcvisualmanageroffice2007ondrawribbonpanel"></a><a name="ondrawribbonpanel"></a>CMFCVisualManagerOffice2007：ondrawribbon面板
 
 ```
 virtual COLORREF OnDrawRibbonPanel(
@@ -1563,16 +1563,16 @@ virtual COLORREF OnDrawRibbonPanel(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
-[in] *rectPanel*<br/>
-[in] *rectCaption*<br/>
+[在]*pDC*<br/>
+[在]*p面板*<br/>
+[在]*rectPanel*<br/>
+[在]*rectCaption*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption
+## <a name="cmfcvisualmanageroffice2007ondrawribbonpanelcaption"></a><a name="ondrawribbonpanelcaption"></a>CMFCVisualManagerOffice2007：：在画彩带面板标题
 
 ```
 virtual void OnDrawRibbonPanelCaption(
@@ -1583,13 +1583,13 @@ virtual void OnDrawRibbonPanelCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
-[in] *rectCaption*<br/>
+[在]*pDC*<br/>
+[在]*p面板*<br/>
+[在]*rectCaption*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar
+## <a name="cmfcvisualmanageroffice2007ondrawribbonprogressbar"></a><a name="ondrawribbonprogressbar"></a>CMFCVisualManagerOffice2007：：在Drawribbon进度条
 
 ```
 virtual void OnDrawRibbonProgressBar(
@@ -1602,15 +1602,15 @@ virtual void OnDrawRibbonProgressBar(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pProgress*<br/>
-[in] *rectProgress*<br/>
-[in] *rectChunk*<br/>
-[in] *bInfiniteMode*<br/>
+[在]*pDC*<br/>
+[在]*p 进度*<br/>
+[在]*rectProgress*<br/>
+[在]*整流*<br/>
+[在]*b无限模式*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbonrecentfilesframe"></a><a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManagerOffice2007：：：动态文件框
 
 ```
 virtual void OnDrawRibbonRecentFilesFrame(
@@ -1621,13 +1621,13 @@ virtual void OnDrawRibbonRecentFilesFrame(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*p面板*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel
+## <a name="cmfcvisualmanageroffice2007ondrawribbonsliderchannel"></a><a name="ondrawribbonsliderchannel"></a>CMFCVisualManagerOffice2007：：Ondraw功能放大缩小字体功能
 
 ```
 virtual void OnDrawRibbonSliderChannel(
@@ -1638,13 +1638,13 @@ virtual void OnDrawRibbonSliderChannel(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*pSlider*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb
+## <a name="cmfcvisualmanageroffice2007ondrawribbonsliderthumb"></a><a name="ondrawribbonsliderthumb"></a>CMFCVisualManagerOffice2007：：在画条上滑点
 
 ```
 virtual void OnDrawRibbonSliderThumb(
@@ -1658,16 +1658,16 @@ virtual void OnDrawRibbonSliderThumb(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
-[in] *rect*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+[在]*pDC*<br/>
+[在]*pSlider*<br/>
+[在]*rect*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIsPressed*<br/>
+[在]*bIs 已禁用*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbonsliderzoombutton"></a><a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManagerOffice2007：：在画条放大缩小字体功能 放大缩小字体功能
 
 ```
 virtual void OnDrawRibbonSliderZoomButton(
@@ -1682,17 +1682,17 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
-[in] *rect*<br/>
-[in] *bIsZoomOut*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+[在]*pDC*<br/>
+[在]*pSlider*<br/>
+[在]*rect*<br/>
+[在]*bIsZoomOut*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIsPressed*<br/>
+[在]*bIs 已禁用*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane
+## <a name="cmfcvisualmanageroffice2007ondrawribbonstatusbarpane"></a><a name="ondrawribbonstatusbarpane"></a>CMFCVisualManagerOffice2007：：在Drawribbon状态栏窗格
 
 ```
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -1703,15 +1703,15 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *pPane*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*pPane*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbontabsframe"></a><a name="ondrawribbontabsframe"></a>CMFC可视化管理器Office2007：：在DrawRibbonTabs框架
 
 ```
 virtual COLORREF OnDrawRibbonTabsFrame(
@@ -1722,15 +1722,15 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pWndRibbonBar*<br/>
-[in] *rectTab*<br/>
+[在]*pDC*<br/>
+[在]*pwndRibbonBar*<br/>
+[在]*rectTab*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2007::OnDrawScrollButtons
+## <a name="cmfcvisualmanageroffice2007ondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFCVisualManagerOffice2007：：OnDrawScroll按钮
 
 ```
 virtual void OnDrawScrollButtons(
@@ -1743,15 +1743,15 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *nBorderSize*<br/>
-[in] *iImage*<br/>
-[in] *bHilited*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*n边框大小*<br/>
+[在]*i图像*<br/>
+[在]*bHilited*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2007::OnDrawSeparator
+## <a name="cmfcvisualmanageroffice2007ondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManagerOffice2007：OnDrawSeator
 
 ```
 virtual void OnDrawSeparator(
@@ -1763,14 +1763,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
-[in] *bIsHoriz*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*rect*<br/>
+[在]*比绍里兹*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems
+## <a name="cmfcvisualmanageroffice2007ondrawshowallmenuitems"></a><a name="ondrawshowallmenuitems"></a>CMFCVisualManagerOffice2007：：在画秀所有菜单项
 
 ```
 virtual void OnDrawShowAllMenuItems(
@@ -1781,13 +1781,13 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *state*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*状态*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder
+## <a name="cmfcvisualmanageroffice2007ondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerOffice2007：：在绘制状态栏栏边框
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -1800,15 +1800,15 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rectPane*<br/>
-[in] *uiID*<br/>
-[in] *nStyle*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*rectPane*<br/>
+[在]*uiID*<br/>
+[在]*n样式*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox
+## <a name="cmfcvisualmanageroffice2007ondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerOffice2007：：在绘制状态栏框
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -1819,13 +1819,13 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pStatBar*<br/>
-[in] *rectSizeBox*<br/>
+[在]*pDC*<br/>
+[在]*pStatBar*<br/>
+[在]*整式框*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2007::OnDrawTab
+## <a name="cmfcvisualmanageroffice2007ondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManagerOffice2007：：在DrawTab
 
 ```
 virtual void OnDrawTab(
@@ -1838,15 +1838,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectTab*<br/>
-[in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+[在]*pDC*<br/>
+[在]*rectTab*<br/>
+[在]*iTab*<br/>
+[在]*bIsActive*<br/>
+[在]*pTabwnd*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerOffice2007：：在DrawTabsButton边框
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -1859,15 +1859,15 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *uiState*<br/>
-[in] *pWndTab*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pButton*<br/>
+[在]*uiState*<br/>
+[在]*pWndTab*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2007::OnDrawTask
+## <a name="cmfcvisualmanageroffice2007ondrawtask"></a><a name="ondrawtask"></a>CMFCVisualManagerOffice2007：在牵引任务
 
 ```
 virtual void OnDrawTask(
@@ -1880,15 +1880,15 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pTask*<br/>
-[in] *pIcons*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
+[在]*pDC*<br/>
+[在]*pTask*<br/>
+[在]*图标*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIs选择*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption
+## <a name="cmfcvisualmanageroffice2007ondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFC可视化管理器Office2007：：在Draw任务组标题
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -1901,15 +1901,15 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pGroup*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
-[in] *bCanCollapse*<br/>
+[在]*pDC*<br/>
+[在]*p组*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIs选择*<br/>
+[在]*bCan折叠*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTearOffCaption
+## <a name="cmfcvisualmanageroffice2007ondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFCVisualManagerOffice2007：：画中
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -1920,13 +1920,13 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bIsActive*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*bIsActive*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onerasemdiclientarea"></a>  CMFCVisualManagerOffice2007::OnEraseMDIClientArea
+## <a name="cmfcvisualmanageroffice2007onerasemdiclientarea"></a><a name="onerasemdiclientarea"></a>CMFCVisualManagerOffice2007：：在EraseMDI客户区
 
 ```
 virtual BOOL OnEraseMDIClientArea(
@@ -1936,14 +1936,14 @@ virtual BOOL OnEraseMDIClientArea(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
+[在]*pDC*<br/>
+[在]*rectClient*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2007::OnEraseTabsArea
+## <a name="cmfcvisualmanageroffice2007onerasetabsarea"></a><a name="onerasetabsarea"></a>CMFC可视化管理器Office2007：：在EraseTabs区域
 
 ```
 virtual void OnEraseTabsArea(
@@ -1954,13 +1954,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pTabWnd*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pTabwnd*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2007::OnEraseTabsButton
+## <a name="cmfcvisualmanageroffice2007onerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFCVisualManagerOffice2007：：在EraseTabsButton上
 
 ```
 virtual void OnEraseTabsButton(
@@ -1972,14 +1972,14 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *pWndTab*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pButton*<br/>
+[在]*pWndTab*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2007::OnEraseTabsFrame
+## <a name="cmfcvisualmanageroffice2007onerasetabsframe"></a><a name="onerasetabsframe"></a>CMFCVisualManagerOffice2007：：在EraseTabs框架上
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -1990,15 +1990,15 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pTabWnd*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pTabwnd*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2007::OnFillBarBackground
+## <a name="cmfcvisualmanageroffice2007onfillbarbackground"></a><a name="onfillbarbackground"></a>CMFCVisualManagerOffice2007：：在填充栏背景
 
 ```
 virtual void OnFillBarBackground(
@@ -2011,15 +2011,15 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rectClient*<br/>
-[in] *rectClip*<br/>
-[in] *bNCArea*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*rectClient*<br/>
+[在]*整流*<br/>
+[在]*bNCArea*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2007::OnFillButtonInterior
+## <a name="cmfcvisualmanageroffice2007onfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFCVisualManagerOffice2007：：在填充按钮内部
 
 ```
 virtual void OnFillButtonInterior(
@@ -2031,14 +2031,14 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *state*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rect*<br/>
+[在]*状态*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManagerOffice2007::OnFillCaptionBarButton
+## <a name="cmfcvisualmanageroffice2007onfillcaptionbarbutton"></a><a name="onfillcaptionbarbutton"></a>CMFCVisualManagerOffice2007：：在填充标题栏按钮
 
 ```
 virtual COLORREF OnFillCaptionBarButton(
@@ -2054,20 +2054,20 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bHasDropDownArrow*<br/>
-[in] *bIsSysButton*<br/>
+[在]*pDC*<br/>
+[在]*pBar*<br/>
+[在]*rect*<br/>
+[在]*bIsPressed*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIs 已禁用*<br/>
+[在]*b哈斯下拉箭头*<br/>
+[在]*比斯按钮*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2007::OnFillHighlightedArea
+## <a name="cmfcvisualmanageroffice2007onfillhighlightedarea"></a><a name="onfillhighlightedarea"></a>CMFCVisualManagerOffice2007：：在填充突出显示区域
 
 ```
 virtual void OnFillHighlightedArea(
@@ -2079,14 +2079,14 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pBrush*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*pBrush*<br/>
+[在]*pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerOffice2007::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanageroffice2007onfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManagerOffice2007：：onFillminiFrame标题
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -2098,16 +2098,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pFrameWnd*<br/>
-[in] *bActive*<br/>
+[在]*pDC*<br/>
+[在]*rectCaption*<br/>
+[在]*pFramewnd*<br/>
+[在]*b 活动*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2007::OnFillOutlookBarCaption
+## <a name="cmfcvisualmanageroffice2007onfilloutlookbarcaption"></a><a name="onfilloutlookbarcaption"></a>CMFCVisualManagerOffice2007：：在填充前景栏标题
 
 ```
 virtual void OnFillOutlookBarCaption(
@@ -2118,13 +2118,13 @@ virtual void OnFillOutlookBarCaption(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *clrText*<br/>
+[在]*pDC*<br/>
+[在]*rectCaption*<br/>
+[在]*clrText*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2007::OnFillOutlookPageButton
+## <a name="cmfcvisualmanageroffice2007onfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFCVisualManagerOffice2007：：在填充OutlookPageButton
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -2137,15 +2137,15 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *clrText*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIsPressed*<br/>
+[在]*clrText*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2007::OnFillPopupWindowBackground
+## <a name="cmfcvisualmanageroffice2007onfillpopupwindowbackground"></a><a name="onfillpopupwindowbackground"></a>CMFCVisualManagerOffice2007：：在填充窗口背景
 
 ```
 virtual void OnFillPopupWindowBackground(
@@ -2155,12 +2155,12 @@ virtual void OnFillPopupWindowBackground(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillribbonbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonButton
+## <a name="cmfcvisualmanageroffice2007onfillribbonbutton"></a><a name="onfillribbonbutton"></a>CMFCVisualManagerOffice2007：：打开填充功能按钮
 
 ```
 virtual COLORREF OnFillRibbonButton(
@@ -2170,14 +2170,14 @@ virtual COLORREF OnFillRibbonButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillribbonedit"></a>  CMFCVisualManagerOffice2007::OnFillRibbonEdit
+## <a name="cmfcvisualmanageroffice2007onfillribbonedit"></a><a name="onfillribbonedit"></a>CMFCVisualManagerOffice2007：：在填充功能编辑
 
 ```
 virtual void OnFillRibbonEdit(
@@ -2194,19 +2194,19 @@ virtual void OnFillRibbonEdit(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pEdit*<br/>
-[in] *rect*<br/>
-[in]*bIsHighlighted*<br/>
-[in] *bIsPaneHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *clrText*<br/>
-[in] *clrSelBackground*<br/>
-[in] *clrSelText*<br/>
+[在]*pDC*<br/>
+[在]*pEdit*<br/>
+[在]*rect*<br/>
+[在]*bIs 突出显示*<br/>
+[在]*bIsPane 突出显示*<br/>
+[在]*bIs 已禁用*<br/>
+[在]*clrText*<br/>
+[在]*clrSel背景*<br/>
+[在]*clrSelText*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton
+## <a name="cmfcvisualmanageroffice2007onfillribbonmainpanelbutton"></a><a name="onfillribbonmainpanelbutton"></a>CMFCVisualManagerOffice2007：：在填充功能主面板按钮
 
 ```
 virtual COLORREF OnFillRibbonMainPanelButton(
@@ -2216,14 +2216,14 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame
+## <a name="cmfcvisualmanageroffice2007onfillribbonmenuframe"></a><a name="onfillribbonmenuframe"></a>CMFCVisualManagerOffice2007：：在填充功能框
 
 ```
 virtual void OnFillRibbonMenuFrame(
@@ -2234,13 +2234,13 @@ virtual void OnFillRibbonMenuFrame(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*p面板*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup
+## <a name="cmfcvisualmanageroffice2007onfillribbonquickaccesstoolbarpopup"></a><a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManagerOffice2007：：：在填充功能快速访问工具栏弹出
 
 ```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -2251,13 +2251,13 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pMenuBar*<br/>
-[in] *rect*<br/>
+[在]*pDC*<br/>
+[在]*pMenuBar*<br/>
+[在]*rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2007::OnFillTab
+## <a name="cmfcvisualmanageroffice2007onfilltab"></a><a name="onfilltab"></a>CMFCVisualManagerOffice2007：：OnFillTab
 
 ```
 virtual void OnFillTab(
@@ -2271,16 +2271,16 @@ virtual void OnFillTab(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectFill*<br/>
-[in] *pbrFill*<br/>
-[in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+[在]*pDC*<br/>
+[在]*重新填充*<br/>
+[在]*pbrFill*<br/>
+[在]*iTab*<br/>
+[在]*bIsActive*<br/>
+[在]*pTabwnd*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerOffice2007::OnHighlightMenuItem
+## <a name="cmfcvisualmanageroffice2007onhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFCVisualManagerOffice2007：：关于亮点菜单项目
 
 ```
 virtual void OnHighlightMenuItem(
@@ -2292,14 +2292,14 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *clrText*<br/>
+[在]*pDC*<br/>
+[在]*pButton*<br/>
+[在]*rect*<br/>
+[在]*clrText*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems
+## <a name="cmfcvisualmanageroffice2007onhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerOffice2007：：关于突出显示很少使用菜单项
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -2309,12 +2309,12 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>参数
 
-[in] *pDC*<br/>
-[in] *rectRarelyUsed*<br/>
+[在]*pDC*<br/>
+[在]*整流*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onncactivate"></a>  CMFCVisualManagerOffice2007::OnNcActivate
+## <a name="cmfcvisualmanageroffice2007onncactivate"></a><a name="onncactivate"></a>CMFCVisualManagerOffice2007：：OnNc激活
 
 ```
 virtual BOOL OnNcActivate(
@@ -2324,14 +2324,14 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>参数
 
-[in] *pWnd*<br/>
-[in] *bActive*<br/>
+[在]*pwnd*<br/>
+[在]*b 活动*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onncpaint"></a>  CMFCVisualManagerOffice2007::OnNcPaint
+## <a name="cmfcvisualmanageroffice2007onncpaint"></a><a name="onncpaint"></a>CMFCVisualManagerOffice2007：OnNcPaint
 
 ```
 virtual BOOL OnNcPaint(
@@ -2342,15 +2342,15 @@ virtual BOOL OnNcPaint(
 
 ### <a name="parameters"></a>参数
 
-[in] *pWnd*<br/>
-[in] *lstSysButtons*<br/>
-[in] *rectRedraw*<br/>
+[在]*pwnd*<br/>
+[在]*lstSys按钮*<br/>
+[在]*重新绘制*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onsetwindowregion"></a>  CMFCVisualManagerOffice2007::OnSetWindowRegion
+## <a name="cmfcvisualmanageroffice2007onsetwindowregion"></a><a name="onsetwindowregion"></a>CMFCVisualManagerOffice2007：：打开窗口区域
 
 ```
 virtual BOOL OnSetWindowRegion(
@@ -2360,14 +2360,14 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="parameters"></a>参数
 
-[in] *pWnd*<br/>
-[in] *sizeWindow*<br/>
+[在]*pwnd*<br/>
+[在]*大小窗口*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2007::OnUpdateSystemColors
+## <a name="cmfcvisualmanageroffice2007onupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManagerOffice2007：：更新系统颜色
 
 ```
 virtual void OnUpdateSystemColors();
@@ -2375,7 +2375,7 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setresourcehandle"></a>  CMFCVisualManagerOffice2007::SetResourceHandle
+## <a name="cmfcvisualmanageroffice2007setresourcehandle"></a><a name="setresourcehandle"></a>CMFC可视化管理器Office2007：：设置资源句柄
 
 ```
 static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
@@ -2383,13 +2383,13 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 
 ### <a name="parameters"></a>参数
 
-[in] *hinstRes*<br/>
+[在]*欣斯特雷斯*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
 [CMFCVisualManagerOfficeXP 类](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>

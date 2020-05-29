@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942605"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171211"
 ---
 # <a name="creal-crealf-creall"></a>creal、crealf、creall
 
@@ -57,7 +57,7 @@ float creal( _Fcomplex z );  // C++ only
 long double creal( _Lcomplex z );  // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *z*<br/>
 一个复数。
@@ -72,13 +72,13 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|C 标头|C++ 标头|
+|例程|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**creal**、 **crealf**、 **creall**|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**类型分别是特定于 Microsoft 的本机 C99 类型的等效项： **float _Complex**、 **double _Complex**和**long double _Complex**。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**类型是特定于 Microsoft 的等效项，它们分别是未实现的本机 C99 类型**float _Complex**、 **double _Complex**和**long double _Complex**。 有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild、_FCbuild、_LCbuild](cbuild-fcbuild-lcbuild.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
-ms.openlocfilehash: 5fc27c7f1dfde7d1f686f0a752652773ade9cc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f363e309b91e44472447d040aa36752750afec6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183721"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188930"
 ---
 # <a name="false-c"></a>false (C++)
 
-关键字是类型的变量的两个值之一[bool](../cpp/bool-cpp.md)或条件表达式 (条件表达式现**true**布尔表达式)。 例如，如果`i`类型的变量**bool**，则`i = false;`语句分配**false**到`i`。
+关键字是类型为[bool](../cpp/bool-cpp.md)的变量或条件表达式的两个值之一（条件表达式现在为**true**布尔表达式）。 例如，如果 `i` 是**bool**类型的变量，则 `i = false;` 语句将**false**分配给 `i`。
 
 ## <a name="example"></a>示例
 
@@ -37,6 +37,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)

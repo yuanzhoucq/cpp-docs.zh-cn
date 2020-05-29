@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4381
 ms.assetid: f67a6db3-b334-4b2e-8182-b30c7a3c7c32
-ms.openlocfilehash: 31c7e4519e0eb1e0b6c66b6082edc7407522554a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a736a164527d53e69daf25686043922145a7e01
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162798"
 ---
 # <a name="compiler-warning-level-1-c4381"></a>编译器警告（等级 1）C4381
 
-function1： 不能由非公共方法 function2 实现接口方法
+"function1"：非公共方法 "function2" 将不实现接口方法
 
-类必须实现在接口中的所有函数。 如果其基类中的一个实现该函数，类可以满足此条件。 但是，该函数必须作为公共函数实现。
+类必须实现接口中的所有函数。 如果某个类的一个基类实现了此函数，则该类可以满足此条件。 但是，该函数必须作为公共函数实现。

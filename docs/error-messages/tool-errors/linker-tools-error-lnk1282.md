@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1282
 ms.assetid: 99c13f52-eb80-46ce-a5b9-4537583e32a9
-ms.openlocfilehash: 79bfdd9920cbd17af85705530e819316017b0db1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe4edc95eb08e23d8acd0cab5acee4b4dde5683
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160531"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183626"
 ---
 # <a name="linker-tools-error-lnk1282"></a>链接器工具错误 LNK1282
 
-找不到 /REBASE 文件;已签名
+无法/REBASE 文件;已对其进行签名
 
-您尝试更改了 /REBASE 选项签名的程序集的基址[editbin](../../build/reference/editbin-reference.md)。 若要执行此操作，首先更改基址，然后对该程序集进行签名。
+尝试使用[editbin](../../build/reference/editbin-reference.md)的/REBASE 选项更改已签名程序集的基址。 为此，请先更改基址，然后对程序集进行签名。

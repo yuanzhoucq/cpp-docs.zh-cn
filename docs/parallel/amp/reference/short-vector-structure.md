@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: fc2864477da80885b18dabb08b9ccbee30f31387
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126430"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374753"
 ---
 # <a name="short_vector-structure"></a>short_vector 结构
 
@@ -81,7 +81,7 @@ struct short_vector<double, 4>;
 
 *_Size*<br/>
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
@@ -93,7 +93,7 @@ struct short_vector<double, 4>;
 
 |名称|说明|
 |----------|-----------------|
-|[short_vector：： short_vector 构造函数](#ctor)||
+|[short_vector::short_vector 构造函数](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -101,11 +101,11 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors。h
+**标题：** amp_short_vectors.h
 
-**命名空间：** Concurrency：： graphics
+**命名空间：** 并发：：图形
 
-## <a name="ctor"></a>short_vector：： short_vector 构造函数
+## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a>short_vector：short_vector构造函数
 
 ```cpp
 short_vector();

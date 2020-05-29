@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: ba5f884e-9037-4a92-b10e-fc2a3836c5bf
 ms.openlocfilehash: 133a4c0c756c589bdf911c36599ce96842487199
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188748"
 ---
 # <a name="improving-compiler-throughput"></a>提高编译器吞吐量
 
-使用预编译标头文件更快地构建您的项目。 这是重要信息： 如果使用 ATL、 MFC 或 Windows SDK 标头文件。
+使用预编译头文件可更快地生成项目。 如果使用 ATL、MFC 或 Windows SDK 头文件，这一点非常重要。
 
-请参阅[/Yc](reference/yc-create-precompiled-header-file.md)并[/Yu](reference/yu-use-precompiled-header-file.md)。
+请参阅 [/Yc](reference/yc-create-precompiled-header-file.md) 和 [/Yu](reference/yu-use-precompiled-header-file.md)。
 
-预编译标头的详细信息，请参阅[预编译标头文件](creating-precompiled-header-files.md)。
+有关预编译标头的详细信息，请参阅[预编译头文件](creating-precompiled-header-files.md)。
 
 ## <a name="see-also"></a>请参阅
 

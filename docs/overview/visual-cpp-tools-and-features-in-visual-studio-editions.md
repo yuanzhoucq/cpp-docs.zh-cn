@@ -4,18 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400624"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366795"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 C++ 工具和功能
 
-
 ::: moniker range=">=vs-2019"
-
 
 Visual Studio 2019 中提供以下 C++ 功能。 除非另有说明，否则所有功能均在所有版本中提供：Visual Studio Community、Visual Studio Professional 和 Visual Studio Enterprise。 某些功能需要特定工作负荷或可选组件，可使用 Visual Studio 安装程序进行安装。
 
@@ -35,7 +33,7 @@ Visual Studio 2019 中提供以下 C++ 功能。 除非另有说明，否则所�
 - Clang/LLVM
   - 在 Windows 上，Clang/LLVM 7.0，面向 x86 或 x64（仅 CMake 支持）。 其他 Clang 版本可能能够正常工作，但不受官方支持。
   - 在 Linux 上，发行版支持的任何 Clang/LLVM 安装。
- 
+
 ## <a name="c-workloads"></a>C++ 工作负荷
 
 Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任意或所有工作负荷，以及其他工作负荷，例如 .NET 桌面开发、Python 开发、Azure 开发、Visual Studio 扩展开发等等。
@@ -43,9 +41,11 @@ Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任
 ### <a name="desktop-development-with-c"></a>使用 C++ 的桌面开发
 
 包含：
+
 - C++ 核心桌面功能
 
 可选组件：
+
 - MSVC v142 - VS 2019 C++ x64/x86 生成工具 (v14.21)
 - Windows 10 SDK (10.0.17763.0)
 - 实时调试器
@@ -70,17 +70,20 @@ Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任
 ### <a name="linux-development-with-c"></a>使用 C++ 的 Linux 开发
 
 包含：
+
 - C++ 核心功能
 - Windows 通用 C 运行时
 - 适用于 Linux 开发的 C++
 
 可选组件：
+
 - 适用于 Linux 的 C++ CMake 工具
 - 嵌入式和 IoT 开发工具
 
 ### <a name="universal-windows-platform-development"></a>通用 Windows 平台开发
 
 包含：
+
 - Blend for Visual Studio
 - .NET 本机和 .NET 标准
 - NuGet 程序包管理器
@@ -88,6 +91,7 @@ Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任
 - Windows 10 SDK (10.0.17763.0)
 
 可选组件：
+
 - IntelliCode
 - IntelliTrace（仅 Enterprise）
 - USB 设备连接性
@@ -102,12 +106,14 @@ Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任
 ### <a name="c-game-development"></a>C++ 游戏开发
 
 包含：
+
 - C++ 核心功能
 - Windows 通用 C 运行时
 - C++ 2019 Redistributable 更新
 - MSVC v142 - VS 2019 C++ x64/x86 生成工具 (v14.21)
 
 可选组件：
+
 - C++ 分析工具
 - Windows 10 SDK (10.0.17763.0)
 - IntelliCode
@@ -122,10 +128,12 @@ Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任
 ### <a name="mobile-development-with-c"></a>使用 C++ 的移动开发
 
 包含：
+
 - C++ 核心功能
 - Android SDK 安装（API 级别 25）（使用 C++ 的移动开发的本地安装）
 
 可选组件：
+
 - Android NDK (R16B)
 - Apache Ant (1.9.3)
 - C++ Android 开发工具
@@ -135,7 +143,6 @@ Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任
 - Android NDK (R16B)（32 位）
 - C++ iOS 开发工具
 - IncrediBuild - 生成加速
-
 
 ## <a name="individual-components"></a>各个组件
 
@@ -175,6 +182,7 @@ Visual Studio 包含以下用于 C++ 开发的工作负荷。 可安装其中任
 可使用以下项目模板，具体取决于安装的工作负荷。
 
 Windows 桌面：
+
 - 空项目
 - 控制台应用
 - Windows 桌面向导
@@ -195,17 +203,19 @@ Windows 桌面：
 - Google Test
 
 通用 Windows 平台 (C++/CX)：
+
 - 空白应用程序
 - DirectX 11 和 XAML 应用
 - DirectX 11 应用
-- DirectX 12 应用 
-- 单元测试应用 
-- DLL 
-- Windows 运行时组件 
-- 静态库 
+- DirectX 12 应用
+- 单元测试应用
+- DLL
+- Windows 运行时组件
+- 静态库
 - Windows 应用程序打包项目
 
 Linux：
+
 - 控制台应用 (Linux)
 - 空项目 (Linux)
 - Raspberry Pi Blink

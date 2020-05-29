@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1071
 ms.assetid: 328a0c1f-a867-410e-943d-7b6b75a975ab
-ms.openlocfilehash: d9bf335e05993df774bac0684a68197650973bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f696915aafec25d49ba0aea555e447ab899e8988
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367130"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182703"
 ---
 # <a name="nmake-fatal-error-u1071"></a>NMAKE 错误 U1071
 
-在目标 targetname 的依赖关系树中周期
+目标 "targetname" 的依赖关系树中的循环
 
-为给定目标的依赖关系树中存在循环依赖项。 给定的目标是目标的一个给定的依赖关系的依赖项。 循环依赖项均无效。
+给定目标的依赖关系树中存在循环依赖项。 给定目标是给定目标的某个依赖项的依赖项。 循环依赖关系无效。

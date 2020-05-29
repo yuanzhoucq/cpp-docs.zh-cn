@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 3） C4839
+title: 编译器警告（等级3） C4839
 ms.date: 09/13/2018
 f1_keywords:
 - C4839
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 09b6e5b8dc984b35df7de96f5cf8610f2b0f16af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198570"
 ---
-# <a name="compiler-warning-level-3-c4839"></a>编译器警告 （等级 3） C4839
+# <a name="compiler-warning-level-3-c4839"></a>编译器警告（等级3） C4839
 
-> 类的非标准用法*类型*作为可变参数函数的参数
+> 类 "*type*" 作为可变参数函数的参数的非标准用法
 
-类或结构传递给 variadic 函数如`printf`必须完全可复制。 传递此类对象时，编译器只是执行按位复制，不会调用构造函数或析构函数。
+传递给可变参数函数（如 `printf`）的类或结构必须是完全复制。 传递此类对象时，编译器只是执行按位复制，不会调用构造函数或析构函数。
 
-此警告是 Visual Studio 2017 中的开始提供。
+从 Visual Studio 2017 开始提供此警告。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4839:
+下面的示例生成 C4839：
 
 ```cpp
 // C4839.cpp
@@ -51,7 +51,7 @@ int main()
     printf("%i\n", i.load());
 ```
 
-对于字符串使用生成和管理`CStringW`，提供`operator LPCWSTR()`应该用于强制转换`CStringW`到所需的格式字符串的 C 指针的对象。
+对于使用 `CStringW`生成和管理的字符串，提供的 `operator LPCWSTR()` 应用于将 `CStringW` 对象强制转换为格式字符串所需的 C 指针。
 
 ```cpp
     CStringW str1;

@@ -7,14 +7,14 @@ f1_keywords:
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-ms.openlocfilehash: ba4b202a5c8c6da742ac884bf58a5b8c55373d14
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e2c03b4540ea5f89843562d1310b71635b3bc259
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368745"
 ---
-# <a name="durationvalues-structure"></a>duration_values 结构
+# <a name="duration_values-structure"></a>duration_values 结构
 
 为[持续时间](../standard-library/duration-class.md)模板参数 `Rep` 提供指定值。
 
@@ -29,19 +29,19 @@ struct duration_values;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[max](#max)|静态。 指定类型 `Rep` 的值上限。|
-|[min](#min)|静态。 指定类型 `Rep` 的值下限。|
-|[无](#zero)|静态。 返回 `Rep(0)`。|
+|[麦克斯](#max)|静态。 指定类型 `Rep` 的值上限。|
+|[分钟](#min)|静态。 指定类型 `Rep` 的值下限。|
+|[零](#zero)|静态。 返回 `Rep(0)`。|
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<chrono >
+**标题：**\<计时>
 
 **命名空间：** std::chrono
 
-## <a name="max"></a>  duration_values::max
+## <a name="duration_valuesmax"></a><a name="max"></a>duration_values：最大
 
 返回类型 `Ref` 的值上限的静态方法。
 
@@ -57,7 +57,7 @@ static constexpr Rep max();
 
 当 `Rep` 是用户定义类型时，返回值必须大于 [duration_values::zero](#zero)。
 
-## <a name="min"></a>  duration_values::min
+## <a name="duration_valuesmin"></a><a name="min"></a>duration_values：分钟
 
 返回类型值下限的静态方法`Ref`。
 
@@ -73,7 +73,7 @@ static constexpr Rep min();
 
 当 `Rep` 是用户定义类型时，返回值必须小于或等于 [duration_values::zero](#zero)。
 
-## <a name="zero"></a>  duration_values::zero
+## <a name="duration_valueszero"></a><a name="zero"></a>duration_values：：零
 
 返回 `Rep(0)`。
 
@@ -85,7 +85,7 @@ static constexpr Rep zero();
 
 当 `Rep` 是用户定义类型时，返回值必须表示正无穷大。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-ms.openlocfilehash: f114959321c0ed3879a089b944a5ff1b19843118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0024edbad0bb3311a0497be67fc8bcfc954602e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257824"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214235"
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable 接口
 
@@ -24,11 +24,11 @@ ms.locfileid: "62257824"
 public interface class IDisposable
 ```
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>属性
 
-**GuidAttribute**("de0cbaea-8065-4a45-b196-c9d443f9bab3")
+**GuidAttribute**（"de0cbaea-8065-4a45-b196-c9d443f9bab3"）
 
-**VersionAttribute**(NTDDI_WIN8)
+**VersionAttribute**（NTDDI_WIN8）
 
 ### <a name="members"></a>成员
 
@@ -38,7 +38,7 @@ IDisposable 接口从 IUnknown 接口继承。 IDisposable 还具有下列类型
 
 IDisposable 接口具有以下方法。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
 |释放|用于释放非托管资源。|
 

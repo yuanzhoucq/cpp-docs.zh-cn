@@ -1,19 +1,17 @@
 ---
 title: 文件和数据库类
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.file
 helpviewer_keywords:
 - database classes [MFC], MFC
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 96c45cad5da0bf16edfa71cb7e357ae4d66e318d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405828"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442398"
 ---
 # <a name="file-and-database-classes"></a>文件和数据库类
 
@@ -21,7 +19,7 @@ ms.locfileid: "62405828"
 
 以下类别的类支持数据持久性。
 
-- [文件 I/O 类](../mfc/file-i-o-classes.md)
+- [文件 i/o 类](../mfc/file-i-o-classes.md)
 
 - [OLE DB 类](../mfc/ole-db-classes.md)
 
@@ -29,6 +27,6 @@ ms.locfileid: "62405828"
 
 - [ODBC 类](../mfc/odbc-classes.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../mfc/class-library-overview.md)

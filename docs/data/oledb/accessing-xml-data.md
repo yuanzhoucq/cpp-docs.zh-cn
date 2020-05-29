@@ -9,65 +9,65 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: b5704c10393026a14ac66b632559fc376f008f8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be4225003211449a98d3fbe5fd686b9b8058a651
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284513"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212272"
 ---
 # <a name="accessing-xml-data"></a>访问 XML 数据
 
-从数据源中检索 XML 数据的两种不同方法： 一个使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md)和其他用途[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。
+可以通过两种不同的方法从数据源中检索 XML 数据：一个使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md) ，另一个使用[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。
 
 |功能|CStreamRowset|CXMLAccessor|
 |-------------------|-------------------|------------------|
-|传输的数据量|立即从所有列和行中检索数据。|从所有列中的检索数据，但一次只有一个行。 必须导航使用方法，如行`MoveNext`。|
-|格式化字符串|SQL Server 格式的 XML 字符串，并将其发送给使用者。|检索以本机格式 （提供程序将作为 Unicode 字符串发送的请求） 的行集数据，然后生成 XML 格式保存数据的字符串。|
-|控制格式设置|具有某些级别的控制如何通过设置某些特定于 SQL Server 2000 的属性设置的 XML 字符串的格式。|你可以不控制生成的 XML 字符串的格式。|
+|传输的数据量|同时检索所有列和行中的数据。|检索所有列中的数据，但一次只能检索一行。 必须使用 `MoveNext`等方法来浏览行。|
+|设置字符串格式|SQL Server 格式化 XML 字符串并将其发送给使用者。|检索以本机格式表示的行集数据（请求提供程序将其作为 Unicode 字符串发送），然后生成保存 XML 格式的数据的字符串。|
+|控制格式设置|通过设置某些 SQL Server 2000 特定的属性，可以对 XML 字符串的格式设置进行一定程度的控制。|你无法控制生成的 XML 字符串的格式。|
 
-虽然`CStreamRowset`能在 XML 格式检索数据的多个整体高效的方式仅受 SQL Server 2000。
+虽然 `CStreamRowset` 提供了一种更有效的方法来检索 XML 格式的数据，但它仅受 SQL Server 2000 的支持。
 
-## <a name="retrieving-xml-data-using-cstreamrowset"></a>使用 CStreamRowset 中检索 XML 数据
+## <a name="retrieving-xml-data-using-cstreamrowset"></a>使用 CStreamRowset 检索 XML 数据
 
-您指定[CStreamRowset](../../data/oledb/cstreamrowset-class.md)中的行集类型为您`CCommand`或`CTable`声明。 您可以使用它自己的访问器或没有访问器，例如：
+在 `CCommand` 或 `CTable` 声明中指定[CStreamRowset](../../data/oledb/cstreamrowset-class.md)作为行集类型。 你可以将其与你自己的访问器或无访问器一起使用，例如：
 
 ```cpp
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 ```
 
-或
+-或-
 
 ```cpp
 CCommand<CNoAccessor, CStreamRowset> myCmd;
 ```
 
-通常情况下调用`CCommand::Open`(指定，例如，`CRowset`作为`TRowset`类)，它获取`IRowset`指针。 `ICommand::Execute` 返回`IRowset`指针，它存储在`m_spRowset`的成员`CRowset`对象。 等方法`MoveFirst`， `MoveNext`，和`GetData`使用该指针来检索数据。
+通常，当调用 `CCommand::Open` （例如，将 `CRowset` 指定为 `TRowset` 类）时，它将获取 `IRowset` 指针。 `ICommand::Execute` 返回 `IRowset` 指针，该指针存储在 `CRowset` 对象的 `m_spRowset` 成员中。 `MoveFirst`、`MoveNext`和 `GetData` 等方法使用该指针检索数据。
 
-与此相反，当您调用`CCommand::Open`(但指定`CStreamRowset`作为`TRowset`类)，`ICommand::Execute`返回`ISequentialStream`指针，它存储在`m_spStream`的数据成员[CStreamRowset](../../data/oledb/cstreamrowset-class.md). 然后，使用`Read`方法来检索 XML 格式 （Unicode 字符串） 的数据。 例如：
+与此相反，当您调用 `CCommand::Open` （但将 `CStreamRowset` 指定为 `TRowset` 类）时，`ICommand::Execute` 返回 `ISequentialStream` 指针，该指针存储在[CStreamRowset](../../data/oledb/cstreamrowset-class.md)的 `m_spStream` 数据成员中。 然后，使用 `Read` 方法以 XML 格式检索（Unicode 字符串）数据。 例如：
 
 ```cpp
 myCmd.m_spStream->Read()
 ```
 
-SQL Server 2000 进行 XML 格式化，并返回所有列和行集作为一个 XML 字符串的所有行。
+SQL Server 2000 执行 XML 格式设置，并返回行集的所有列和所有行作为一个 XML 字符串。
 
-有关使用示例`Read`方法，请参阅**向使用者添加 XML 支持**中[实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)。
+有关使用 `Read` 方法的示例，请参阅[实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)中**的向使用者添加 XML 支持**。
 
 > [!NOTE]
-> XML 支持使用`CStreamRowset`仅适用于 SQL Server 2000 和要求的 SQL Server 2000 （安装与 MDAC） 具有 OLE DB 访问接口。
+> 使用 `CStreamRowset` 的 XML 支持仅适用于 SQL Server 2000，并且需要具有 SQL Server 2000 的 OLE DB 提供程序（随 MDAC 一起安装）。
 
-## <a name="retrieving-xml-data-using-cxmlaccessor"></a>使用 CXMLAccessor 中检索 XML 数据
+## <a name="retrieving-xml-data-using-cxmlaccessor"></a>使用 CXMLAccessor 检索 XML 数据
 
-[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)允许您在不知道数据存储区的架构时从数据源作为字符串数据访问数据。 `CXMLAccessor` 工作方式类似于`CDynamicStringAccessorW`不同之处在于前者将转换从数据存储为 XML 格式 （标记） 的数据访问的所有数据。 XML 标记名称与尽可能接近地匹配数据存储区的列名称。
+当你不知道数据存储的架构时， [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)允许你以字符串数据的形式访问数据源中的数据。 `CXMLAccessor` 的工作方式类似于 `CDynamicStringAccessorW`，只不过前者会将从数据存储访问的所有数据都转换为 XML 格式（标记）的数据。 XML 标记名称与数据存储区的列名尽可能匹配。
 
-使用`CXMLAccessor`就像任何其他访问器类，将其作为传递到一个模板参数`CCommand`或`CTable`:
+像对待任何其他访问器类一样使用 `CXMLAccessor`，并将其作为模板参数传递到 `CCommand` 或 `CTable`：
 
 ```cpp
 CTable<CXMLAccessor, CRowset> rs;
 ```
 
-使用[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)表的某一行中检索数据，一次，并导航使用方法，如行`MoveNext`，例如：
+使用[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)从表中一次检索一次数据，并使用 `MoveNext`等方法浏览行，例如：
 
 ```cpp
 // Open data source, session, and rowset
@@ -84,8 +84,8 @@ while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
 }
 ```
 
-可以使用[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)检索 XML 格式的字符串数据与列 （数据类型） 的信息。
+可以使用[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)以 XML 格式的字符串数据的形式检索列（数据类型）信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用访问器](../../data/oledb/using-accessors.md)

@@ -1,5 +1,5 @@
 ---
-title: 扩展 Dll:概述
+title: 扩展 DLL：概述
 ms.date: 05/06/2019
 helpviewer_keywords:
 - AFXDLL library
@@ -15,13 +15,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221372"
 ---
-# <a name="mfc-extension-dlls-overview"></a>MFC 扩展 Dll:概述
+# <a name="mfc-extension-dlls-overview"></a>MFC 扩展 DLL：概述
 
-MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可重用类的 DLL。 MFC 扩展 Dll 是使用 MFC （也称为共享的 MFC 版本） 的动态链接库版本构建的。 MFC 的可执行文件 （应用程序或规则 MFC Dll） 使用共享 MFC 版本构建的可以使用 MFC 扩展 DLL。 MFC 扩展 DLL，可从 MFC 派生新的自定义类，并再提供此扩展的版本的 MFC 应用程序调用 DLL 的。
+MFC 扩展 DLL 是通常实现从现有 Microsoft 基础类库类派生的可重用类的 DLL。 MFC 扩展 DLL 使用 MFC 的动态链接库版本（也称为 MFC 的共享版本）生成。 只有使用 MFC 的共享版本生成的 MFC 可执行文件（应用程序或规则 MFC DLL）才能使用 MFC 扩展 DLL。 使用 MFC 扩展 DLL 时，可以从 MFC 派生新的自定义类，然后将 MFC 的此扩展版本提供给调用 DLL 的应用程序。
 
-扩展 Dll 还可以用于应用程序和 DLL 之间传递 MFC 派生的对象。 创建对象时的模块中存在与所传递的对象相关联的成员函数。 由于使用共享的 MFC DLL 版本时正确导出了这些函数，因此可以自由地传递 MFC 或应用程序和 MFC 扩展 Dll 加载之间 MFC 派生的对象指针。
+扩展 DLL 还可用于在应用程序与 DLL 之间传递 MFC 派生对象。 与传递的对象关联的成员函数存在于创建对象的模块中。 由于这些函数会在使用 MFC 的共享 DLL 版本时正确导出，因此可以在应用程序与它所加载的 MFC 扩展 DLL 之间自由传递 MFC 或 MFC 派生对象指针。
 
-有关以满足基本需求的 MFC 扩展 DLL 的 DLL 的示例，请参阅 MFC 示例[DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。 具体而言，看 Testdll1.cpp 和 Testdll2.cpp 文件。
+有关满足 MFC 扩展 DLL 基本要求的 DLL 的示例，请参阅 MFC 示例 [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。 具体而言，请查看 Testdll1.cpp 和 Testdll2.cpp 文件。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
@@ -35,9 +35,9 @@ MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可
 
 - [非 MFC DLL：概述](non-mfc-dlls-overview.md)
 
-- [静态链接到 MFC 的规则 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
+- [静态链接到 MFC 的规则 MFC DLL](regular-dlls-statically-linked-to-mfc.md)
 
-- [动态链接到 MFC 的规则 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [动态链接到 MFC 的规则 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [创建 MFC DLL](../mfc/reference/mfc-dll-wizard.md)
 

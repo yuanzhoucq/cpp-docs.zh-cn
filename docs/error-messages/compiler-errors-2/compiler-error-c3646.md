@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 04ff1d026c97c56611f8b786d8a7254db711e4a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200468"
 ---
 # <a name="compiler-error-c3646"></a>编译器错误 C3646
 
-> specifier： 未知重写说明符
+> "说明符"：未知重写说明符
 
 ## <a name="remarks"></a>备注
 
-编译器在其中它应找到重写说明符，但编译器无法识别标记的位置中找到令牌。
+编译器在预期找到重写说明符的位置找到了一个标记，但编译器无法识别该标记。
 
-例如，如果无法识别*说明符*是 **_NOEXCEPT**，将其替换为关键字**noexcept**。
+例如，如果 **_NOEXCEPT**无法识别的*说明符*，请将其替换为关键字**NOEXCEPT**。
 
 有关详细信息，请参阅[重写说明符](../../extensions/override-specifiers-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3646，并显示了如何修复此错误：
+下面的示例生成 C3646，并演示如何修复此问题：
 
 ```cpp
 // C3646.cpp

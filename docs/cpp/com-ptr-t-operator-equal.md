@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t [C++]
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
-ms.openlocfilehash: 95f1ff784a173731c847abc91c293c74d8d7afbe
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 489d2a3f098d5d1bf1df56cca7eaf6ac8ae776b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222475"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170691"
 ---
-# <a name="comptrtoperator-"></a>_com_ptr_t::operator =
+# <a name="_com_ptr_toperator-"></a>_com_ptr_t::operator =
 
 **Microsoft 专用**
 
@@ -39,7 +39,7 @@ _com_ptr_t& operator=(_InterfaceType* p );
 // AddRef is called to increment the reference count for the encapsulated
 // interface pointer, and Release is called to decrement the reference
 // count for the previously encapsulated pointer.
-template<> _com_ptr_t& 
+template<> _com_ptr_t&
 operator=( Interface* pInterface ) throw();
 
 // Sets a smart pointer to be a copy of another instance of the same
@@ -65,6 +65,6 @@ _com_ptr_t& operator=( const _variant_t& varSrc );
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

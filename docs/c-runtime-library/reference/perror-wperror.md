@@ -1,9 +1,10 @@
 ---
 title: perror、_wperror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wperror
 - perror
+- _o__wperror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951037"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919336"
 ---
 # <a name="perror-_wperror"></a>perror、_wperror
 
@@ -62,7 +64,9 @@ void _wperror(
 
 ## <a name="remarks"></a>备注
 
-**Perror**函数将错误消息打印到**stderr**。 **_wperror**是 **_perror**的宽字符版本; **_wperror**的*message*参数是宽字符字符串。 否则， **_wperror**和 **_perror**的行为相同。
+**Perror**函数将错误消息打印到**stderr**。 **_wperror**是 **_perror**的宽字符版本;**_wperror**的*message*参数是宽字符字符串。 否则 **_wperror**和 **_perror**的行为相同。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -72,7 +76,7 @@ void _wperror(
 
 首先打印一*条消息*，后跟一个冒号，最后是产生错误的最后一个库调用的系统错误消息，最后是一个换行符。 如果*message*为 null 指针或指向空字符串的指针，则**perror**仅打印系统错误消息。
 
-错误数字存储在变量 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中（在 ERRNO.H 中定义）。 通过变量 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 访问系统错误消息，该变量是按错误编号排序的消息数组。 **perror**使用**errno**值作为 **_sys_errlist**的索引来打印相应的错误消息。 变量[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定义为 **_sys_errlist**数组中的最大元素数。
+错误数字存储在变量 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中（在 ERRNO.H 中定义）。 通过变量 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 访问系统错误消息，该变量是按错误编号排序的消息数组。 **perror**使用**errno**值作为要 **_sys_errlist**的索引来打印相应的错误消息。 变量[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定义为 **_sys_errlist**数组中的最大元素数。
 
 为获得准确的结果，请在库例程返回错误后立即调用**perror** 。 否则，后续调用会覆盖**errno**值。
 
@@ -80,12 +84,12 @@ void _wperror(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**perror**|\<stdio.h> 或 \<stdlib.h>|
 |**_wperror**|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -139,9 +143,9 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror、_strerror、_wcserror \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

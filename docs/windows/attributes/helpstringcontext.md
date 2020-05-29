@@ -1,17 +1,17 @@
 ---
-title: helpstringcontext (C++ COM 特性)
+title: helpstringcontext （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501488"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168144"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501488"
 [ helpstringcontext(contextID) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *contextID*<br/>
 **帮助**文件中的32位帮助上下文标识符。
@@ -54,14 +54,14 @@ __interface IMyI
 
 |||
 |-|-|
-|**适用于**|**类**、**接口**、接口方法|
-|**可重复**|No|
+|**适用对象**|**类**、**接口**、接口方法|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>

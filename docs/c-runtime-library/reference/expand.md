@@ -1,8 +1,9 @@
 ---
 title: _expand
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _expand
+- _o__expand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: cb986d893bd862e61ae595317a890fb489c19919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941560"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920260"
 ---
 # <a name="_expand"></a>_expand
 
@@ -58,14 +60,14 @@ void *_expand(
 *memblock*<br/>
 指向之前已分配内存块的指针。
 
-*size*<br/>
+size <br/>
 新大小（字节）。
 
 ## <a name="return-value"></a>返回值
 
-**_expand**返回指向重新分配的内存块的 void 指针。 与**realloc**不同的是， **_expand**不能移动块以更改其大小。 因此，如果有足够的内存可用于扩展块而不移动，则 **_expand**的*memblock*参数与返回值相同。
+**_expand**返回指向重新分配的内存块的 void 指针。 与**realloc**不同， **_expand**无法移动块以更改其大小。 因此，如果有足够的内存可用于扩展块而不移动，则 **_expand**的*memblock*参数与返回值相同。
 
-当在操作过程中检测到错误时， **_expand**将返回**NULL** 。 例如，如果使用 **_expand**来收缩内存块，则可能会检测到小块堆中的损坏或无效的块指针，并返回**NULL**。
+**_expand**在其操作过程中检测到错误时，将返回**NULL** 。 例如，如果使用 **_expand**来收缩内存块，则可能会检测到小块堆中的损坏或无效的块指针，并返回**NULL**。
 
 如果内存不足，无法将块展开到给定的大小，则该函数将返回**NULL**。 **_expand**从不返回扩展到小于请求的大小的块。 如果发生失败， **errno**将指示失败的性质。 有关**errno**的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -73,14 +75,16 @@ void *_expand(
 
 ## <a name="remarks"></a>备注
 
-**_Expand**函数通过尝试展开或收缩块而更改以前分配的内存块的大小，而无需将其位置移到堆中。 *Memblock*参数指向块的开头。 *Size*参数提供块的新大小（以字节为单位）。 根据新大小和旧大小中的较短者，块内容保持不变。 *memblock*不应是已释放的块。
+**_Expand**函数通过尝试扩展或收缩块，而不将其位置移到堆中来更改以前分配的内存块的大小。 *Memblock*参数指向块的开头。 *Size*参数提供块的新大小（以字节为单位）。 根据新大小和旧大小中的较短者，块内容保持不变。 *memblock*不应是已释放的块。
 
 > [!NOTE]
-> 在64位平台上，如果新大小小于当前大小，则 **_expand**可能不会将块收缩;具体而言，如果块的大小小于16K，因而在低碎片堆中分配， **_expand**将保持块不变并返回*memblock*。
+> 在64位平台上，如果新大小小于当前大小，则 **_expand**可能不会将块收缩;特别是，如果块的大小小于16K，因而在低碎片堆中分配， **_expand**会保持块不变，并返回*memblock*。
 
 当应用程序与调试版的 C 运行时库链接时， **_expand**解析为[_expand_dbg](expand-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
 此函数验证其参数。 如果*memblock*为 null 指针，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 如果*size*大于 **_HEAP_MAXREQ**，则**errno**设置为**ENOMEM** ，并且函数返回**NULL**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -88,7 +92,7 @@ void *_expand(
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -124,11 +128,11 @@ Allocated 512 bytes at 002C12BC
 Expanded block to 1024 bytes at 002C12BC
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[忙](free.md)<br/>
 [malloc](malloc.md)<br/>
 [_msize](msize.md)<br/>
 [realloc](realloc.md)<br/>

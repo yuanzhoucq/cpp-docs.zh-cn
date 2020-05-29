@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: 1f56cc5c049c1501ea09c76f31be3ab9dea5ed10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4341f87226118906749dcdb18b9227e68be6a23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167603"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318081"
 ---
-# <a name="accessing-c-or-c-data-in-asm-blocks"></a>在 __asm 块中访问 C 或 C++ 数据
+# <a name="accessing-c-or-c-data-in-__asm-blocks"></a>在 __asm 块中访问 C 或 C++ 数据
 
-**Microsoft 专用**
+**微软特定**
 
 内联程序集的一个重大便利就是能够按名称引用 C 或 C++ 变量。 `__asm` 块可引用任何符号，包括位于块所在的范围内的变量名称。 例如，如果 C 变量 `var` 位于范围内，则指令
 
@@ -26,7 +26,7 @@ __asm mov eax, var
 
 在 EAX 中存储 `var` 的值。
 
-如果类、 结构或联合成员具有唯一的名称，`__asm`块可以引用它只使用成员名称，而无需指定该变量或`typedef`句点前面名称 (**。**) 运算符。 但是，如果成员名称不是唯一的，则必须在紧靠句点运算符前面放置变量或 `typedef` 名称。 例如，以下示例中的结构共享 `same_name` 作为其成员名称：
+如果类、结构或联合成员具有唯一名称，`__asm`则块只能使用成员名称引用它，而不指定句点 （**.**）`typedef`运算符之前的变量或名称。 但是，如果成员名称不是唯一的，则必须在紧靠句点运算符前面放置变量或 `typedef` 名称。 例如，以下示例中的结构共享 `same_name` 作为其成员名称：
 
 如果使用以下类型声明变量
 
@@ -72,8 +72,8 @@ int main()
 
 您可以在 C++ 中访问数据成员而无需考虑访问限制。 但是，您无法调用成员函数。
 
-**结束 Microsoft 专用**
+**结束微软特定**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [在 __asm 块中使用 C 或 C++](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

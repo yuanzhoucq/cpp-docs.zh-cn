@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGalleryMenuButton 类
+title: CMFC功能放大缩小字体功能 放大缩小字体功能
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonGalleryMenuButton
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-ms.openlocfilehash: 0ec295fa64b835064435992a398d4292ccf26f38
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 305393def3b176b052b1db89c66c1e755f528ee6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375139"
 ---
-# <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 类
+# <a name="cmfcribbongallerymenubutton-class"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
 实现包含功能区库的功能区菜单按钮。
-有关更多详细信息, 请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -40,19 +40,19 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|构造并初始化一个 `CMFCRibbonGalleryMenuButton` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(重写[CMFCToolBarMenuButton:: CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom)。)|
-|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(重写[CMFCToolBarMenuButton:: CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu)。)|
-|[CMFCRibbonGalleryMenuButton::GetPalette](#getpalette)||
+|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|（覆盖[CMFCToolBarMenu 按钮：：从](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom)复制。|
+|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|（覆盖[CMFCToolBarMenu 按钮：：创建弹出菜单](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).）|
+|[CMFC功能放大缩小字体功能 放大缩小字体功能](#getpalette)||
 |[CMFCRibbonGalleryMenuButton::HasButton](#hasbutton)|（重写 `CMFCToolBarMenuButton::HasButton`。）|
-|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(重写[CMFCToolBarMenuButton:: IsEmptyMenuAllowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed)。)|
+|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|（覆盖[CMFCToolBarMenu 按钮：：是空门允许](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed).）|
 
 ### <a name="remarks"></a>备注
 
@@ -89,15 +89,15 @@ BOOL CMainFrame::OnShowPopupMenu (CMFCPopupMenu* pMenuPopup)
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+•&nbsp;[CMFC工具栏按钮](../../mfc/reference/cmfctoolbarbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CMFCToolBarMenu按钮](../../mfc/reference/cmfctoolbarmenubutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;[CMFC功能画廊菜单按钮](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxribbonpalettegallery。h
+**标题：** afxRibbonPaletteGallery.h
 
-##  <a name="copyfrom"></a>CMFCRibbonGalleryMenuButton:: CopyFrom
+## <a name="cmfcribbongallerymenubuttoncopyfrom"></a><a name="copyfrom"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -105,13 +105,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>参数
 
-[in] *src*<br/>
+[在]*斯尔克*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="cmfcribbongallerymenubutton"></a>CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton
+## <a name="cmfcribbongallerymenubuttoncmfcribbongallerymenubutton"></a><a name="cmfcribbongallerymenubutton"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
-构造并初始化[CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)对象。
+构造并初始化[CMFC 功能区GalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)对象。
 
 ```
 CMFCRibbonGalleryMenuButton(
@@ -131,34 +131,34 @@ CMFCRibbonGalleryMenuButton(
 ### <a name="parameters"></a>参数
 
 *uiID*<br/>
-按钮的命令 ID。 这是用户单击此按钮时在 WM_COMMAND 消息中发送的值。
+按钮的命令 ID。 这是用户单击此按钮时在WM_COMMAND消息中发送的值。
 
-*iImage*<br/>
-要与库菜单按钮一起显示的图像的索引。 图像存储在*imagesPalette*参数中。
+*i图像*<br/>
+要使用库菜单按钮显示的图像索引。 图像存储在*图像调色板*参数中。
 
 *lpszText*<br/>
-要在菜单按钮上显示的文本。
+要显示在菜单按钮上的文本。
 
-*imagesPalette*<br/>
-包含要在库中显示的图像的列表。
+*图像调色板*<br/>
+包含要在库中显示的图像列表。
 
 *uiImagesPaletteResID*<br/>
-要在库中显示的图像的图像列表的资源 ID。
+要在库中显示的图像列表的资源 ID。
 
-*cxPaletteImage*<br/>
-指定要在库中显示的图像的宽度 (以像素为单位)。
+*cxPalette图像*<br/>
+指定要在库中显示的图像的宽度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-库菜单按钮显示为带有箭头的弹出菜单。 用户单击此按钮时，会显示图像库。
+库菜单按钮显示为具有箭头的弹出式菜单。 用户单击此按钮时，会显示图像库。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`CMFCRibbonGalleryMenuButton`类的构造函数。 此代码片段是[MS Office 2007 演示示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何使用`CMFCRibbonGalleryMenuButton`类的构造函数。 此代码段是 MS [Office 2007 演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]
 
-##  <a name="createpopupmenu"></a>  CMFCRibbonGalleryMenuButton::CreatePopupMenu
+## <a name="cmfcribbongallerymenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
 ```
 virtual CMFCPopupMenu* CreatePopupMenu();
@@ -168,7 +168,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getpalette"></a>CMFCRibbonGalleryMenuButton::GetPalette
+## <a name="cmfcribbongallerymenubuttongetpalette"></a><a name="getpalette"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
 ```
 CMFCRibbonGallery& GetPalette();
@@ -178,7 +178,7 @@ CMFCRibbonGallery& GetPalette();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="hasbutton"></a>CMFCRibbonGalleryMenuButton::HasButton
+## <a name="cmfcribbongallerymenubuttonhasbutton"></a><a name="hasbutton"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
 ```
 virtual BOOL HasButton() const;
@@ -188,7 +188,7 @@ virtual BOOL HasButton() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isemptymenuallowed"></a>CMFCRibbonGalleryMenuButton:: IsEmptyMenuAllowed
+## <a name="cmfcribbongallerymenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;
@@ -198,9 +198,9 @@ virtual BOOL IsEmptyMenuAllowed() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
+[CMFCToolBarMenu按钮类](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 [CMFCRibbonGallery 类](../../mfc/reference/cmfcribbongallery-class.md)

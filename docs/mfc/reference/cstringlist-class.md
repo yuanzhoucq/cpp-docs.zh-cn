@@ -4,58 +4,58 @@ ms.date: 11/04/2016
 f1_keywords:
 - CStringList
 - AFXCOLL/CStringList
-- AFXCOLL/CObList::CObList
-- AFXCOLL/CObList::AddHead
-- AFXCOLL/CObList::AddTail
-- AFXCOLL/CObList::Find
-- AFXCOLL/CObList::FindIndex
-- AFXCOLL/CObList::GetAt
-- AFXCOLL/CObList::GetCount
-- AFXCOLL/CObList::GetHead
-- AFXCOLL/CObList::GetHeadPosition
-- AFXCOLL/CObList::GetNext
-- AFXCOLL/CObList::GetPrev
-- AFXCOLL/CObList::GetSize
-- AFXCOLL/CObList::GetTail
-- AFXCOLL/CObList::GetTailPosition
-- AFXCOLL/CObList::InsertAfter
-- AFXCOLL/CObList::InsertBefore
-- AFXCOLL/CObList::IsEmpty
-- AFXCOLL/CObList::RemoveAll
-- AFXCOLL/CObList::RemoveAt
-- AFXCOLL/CObList::RemoveHead
-- AFXCOLL/CObList::RemoveTail
-- AFXCOLL/CObList::SetAt
+- AFXCOLL/CStringList::CStringList
+- AFXCOLL/CStringList::AddHead
+- AFXCOLL/CStringList::AddTail
+- AFXCOLL/CStringList::Find
+- AFXCOLL/CStringList::FindIndex
+- AFXCOLL/CStringList::GetAt
+- AFXCOLL/CStringList::GetCount
+- AFXCOLL/CStringList::GetHead
+- AFXCOLL/CStringList::GetHeadPosition
+- AFXCOLL/CStringList::GetNext
+- AFXCOLL/CStringList::GetPrev
+- AFXCOLL/CStringList::GetSize
+- AFXCOLL/CStringList::GetTail
+- AFXCOLL/CStringList::GetTailPosition
+- AFXCOLL/CStringList::InsertAfter
+- AFXCOLL/CStringList::InsertBefore
+- AFXCOLL/CStringList::IsEmpty
+- AFXCOLL/CStringList::RemoveAll
+- AFXCOLL/CStringList::RemoveAt
+- AFXCOLL/CStringList::RemoveHead
+- AFXCOLL/CStringList::RemoveTail
+- AFXCOLL/CStringList::SetAt
 helpviewer_keywords:
-- CObList [MFC], CObList
-- CObList [MFC], AddHead
-- CObList [MFC], AddTail
-- CObList [MFC], Find
-- CObList [MFC], FindIndex
-- CObList [MFC], GetAt
-- CObList [MFC], GetCount
-- CObList [MFC], GetHead
-- CObList [MFC], GetHeadPosition
-- CObList [MFC], GetNext
-- CObList [MFC], GetPrev
-- CObList [MFC], GetSize
-- CObList [MFC], GetTail
-- CObList [MFC], GetTailPosition
-- CObList [MFC], InsertAfter
-- CObList [MFC], InsertBefore
-- CObList [MFC], IsEmpty
-- CObList [MFC], RemoveAll
-- CObList [MFC], RemoveAt
-- CObList [MFC], RemoveHead
-- CObList [MFC], RemoveTail
-- CObList [MFC], SetAt
+- CStringList [MFC], CStringList
+- CStringList [MFC], AddHead
+- CStringList [MFC], AddTail
+- CStringList [MFC], Find
+- CStringList [MFC], FindIndex
+- CStringList [MFC], GetAt
+- CStringList [MFC], GetCount
+- CStringList [MFC], GetHead
+- CStringList [MFC], GetHeadPosition
+- CStringList [MFC], GetNext
+- CStringList [MFC], GetPrev
+- CStringList [MFC], GetSize
+- CStringList [MFC], GetTail
+- CStringList [MFC], GetTailPosition
+- CStringList [MFC], InsertAfter
+- CStringList [MFC], InsertBefore
+- CStringList [MFC], IsEmpty
+- CStringList [MFC], RemoveAll
+- CStringList [MFC], RemoveAt
+- CStringList [MFC], RemoveHead
+- CStringList [MFC], RemoveTail
+- CStringList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: 08e481f010be688fb0b9c219caa1954c9960846f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9eb7a713fc02cd3e51135d1985a41688d4c885d9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346261"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447559"
 ---
 # <a name="cstringlist-class"></a>CStringList 类
 
@@ -67,9 +67,9 @@ ms.locfileid: "64346261"
 class CStringList : public CObject
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
-成员函数`CStringList`类似于类的成员函数[CObList](../../mfc/reference/coblist-class.md)。 由于此相似性，因此你可以使用 `CObList` 参考文档获取成员函数细节。 无论您在何处`CObject`指针作为返回值，替换`CString`(不`CString`指针)。 无论您在何处`CObject`指针作为函数参数，将替换`LPCTSTR`。
+`CStringList` 的成员函数类似于类[CObList](../../mfc/reference/coblist-class.md)的成员函数。 由于此相似性，因此你可以使用 `CObList` 参考文档获取成员函数细节。 无论你在何处看到作为返回值的 `CObject` 指针，都请替换 `CString` （而不是 `CString` 指针）。 无论你在何处看到作为函数参数的 `CObject` 指针，都将替换为 `LPCTSTR`。
 
 `CObject*& CObList::GetHead() const;`
 
@@ -87,45 +87,45 @@ class CStringList : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|构造一个空列表。|
+|[CStringList：： CStringList](../../mfc/reference/coblist-class.md#coblist)|构造一个空列表。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|将一个元素 （或另一个列表中的所有元素） 添加到 （使新头） 了列表的开头。|
-|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|将一个元素 （或另一个列表中的所有元素） 添加到列表 （使新结尾） 的尾部。|
-|[CObList::Find](../../mfc/reference/coblist-class.md#find)|获取指针值所指定的元素的位置。|
-|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|获取指定的从零开始的索引的元素的位置。|
-|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|获取位于给定位置的元素。|
-|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|返回此列表中的元素数。|
-|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|返回的列表 （不能为空） 的头元素。|
-|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|返回列表的头元素的位置。|
-|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|获取用于循环的下一个元素。|
-|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|获取循环访问的上一个元素。|
-|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|返回此列表中的元素数。|
-|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|返回 （不能为空） 的列表的结尾元素。|
-|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|返回列表的结尾元素的位置。|
-|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|在给定位置后插入一个新元素。|
-|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|将插入新元素之前的给定位置。|
-|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|对于空列表条件 （元素） 的测试。|
-|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|此列表中移除所有元素。|
-|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|从此列表中，指定位置移除一个元素。|
-|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|从列表的开头移除的元素。|
-|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|从列表的结尾移除的元素。|
-|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|设置给定位置处的元素。|
+|[CStringList：： AddHead](../../mfc/reference/coblist-class.md#addhead)|将一个元素（或另一个列表中的所有元素）添加到列表的开头（构成一个新头）。|
+|[CStringList：： AddTail](../../mfc/reference/coblist-class.md#addtail)|将一个元素（或另一个列表中的所有元素）添加到列表的尾部（生成新的尾部）。|
+|[CStringList：： Find](../../mfc/reference/coblist-class.md#find)|获取由指针值指定的元素的位置。|
+|[CStringList：： FindIndex](../../mfc/reference/coblist-class.md#findindex)|获取以零为基的索引指定的元素的位置。|
+|[CStringList：： GetAt](../../mfc/reference/coblist-class.md#getat)|获取给定位置处的元素。|
+|[CStringList：： GetCount](../../mfc/reference/coblist-class.md#getcount)|返回此列表中的元素数。|
+|[CStringList：： GetHead](../../mfc/reference/coblist-class.md#gethead)|返回列表的 head 元素（不能为空）。|
+|[CStringList：： GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|返回列表头元素的位置。|
+|[CStringList：： GetNext](../../mfc/reference/coblist-class.md#getnext)|获取用于循环访问的下一个元素。|
+|[CStringList：： GetPrev](../../mfc/reference/coblist-class.md#getprev)|获取用于循环访问的上一个元素。|
+|[CStringList：： GetSize](../../mfc/reference/coblist-class.md#getsize)|返回此列表中的元素数。|
+|[CStringList：： GetTail](../../mfc/reference/coblist-class.md#gettail)|返回列表的尾元素（不能为空）。|
+|[CStringList：： GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|返回列表的尾元素的位置。|
+|[CStringList：： InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|将新元素插入到给定位置之后。|
+|[CStringList：： InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|将新元素插入到给定位置之前。|
+|[CStringList：： IsEmpty](../../mfc/reference/coblist-class.md#isempty)|测试空列表条件（无元素）。|
+|[CStringList：： RemoveAll](../../mfc/reference/coblist-class.md#removeall)|从此列表中移除所有元素。|
+|[CStringList：： RemoveAt](../../mfc/reference/coblist-class.md#removeat)|从此列表中移除按位置指定的元素。|
+|[CStringList：： RemoveHead](../../mfc/reference/coblist-class.md#removehead)|从列表头中删除元素。|
+|[CStringList：： RemoveTail](../../mfc/reference/coblist-class.md#removetail)|从列表的末尾移除元素。|
+|[CStringList：： SetAt](../../mfc/reference/coblist-class.md#setat)|设置位于给定位置的元素。|
 
 ## <a name="remarks"></a>备注
 
-所有比较是都由值，这意味着在字符串中的字符进行比较而不是字符串的地址。
+所有比较都是通过值来完成的，这意味着会比较字符串中的字符而不是字符串的地址。
 
-`CStringList` 集成了 IMPLEMENT_SERIAL 宏来支持序列化和转储的它的元素。 如果一系列`CString`对象存储到存档，或者用重载的插入运算符`Serialize`成员函数，每个`CString`反过来序列化元素。
+`CStringList` 包含 IMPLEMENT_SERIAL 宏，以支持其元素的序列化和转储。 如果使用重载的插入运算符或使用 `Serialize` 成员函数将 `CString` 对象的列表存储到存档中，则每个 `CString` 元素将依次序列化。
 
-如果你需要个人的转储`CString`元素，必须将转储上下文的深度设置为 1 或更高版本。
+如果需要单个 `CString` 元素的转储，则必须将转储上下文的深度设置为1或更大。
 
-有关使用的详细信息`CStringList`，请参阅文章[集合](../../mfc/collections.md)。
+有关使用 `CStringList`的详细信息，请参阅文章[集合](../../mfc/collections.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -135,9 +135,9 @@ class CStringList : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxcoll.h
+**标头：** afxcoll。h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>

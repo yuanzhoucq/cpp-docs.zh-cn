@@ -15,14 +15,14 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: e0d26247868440f47c73422510ac0e998f8e8dee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0d7ea1a0bcaf8329cff0cdfb0c01154f3c5a73b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403290"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187565"
 ---
-# <a name="variantt-relational-operators"></a>_variant_t 关系运算符
+# <a name="_variant_t-relational-operators"></a>_variant_t 关系运算符
 
 **Microsoft 专用**
 
@@ -41,24 +41,24 @@ bool operator!=(
    const VARIANT* pSrc) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *varSrc*<br/>
-一个`VARIANT`进行比较与`_variant_t`对象。
+要与 `_variant_t` 对象进行比较的 `VARIANT`。
 
-*pSrc*<br/>
-指向`VARIANT`进行比较与`_variant_t`对象。
+*.Psrc*<br/>
+指向要与 `_variant_t` 对象进行比较的 `VARIANT` 的指针。
 
 ## <a name="return-value"></a>返回值
 
-返回 **，则返回 true**如果比较保留， **false**如果不是。
+如果比较保持，则返回**true** ，否则返回**false** 。
 
 ## <a name="remarks"></a>备注
 
-比较`_variant_t`对象与`VARIANT`，测试是否相等。
+将 `_variant_t` 对象与 `VARIANT`进行比较，测试是否相等或不相等。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_variant_t 类](../cpp/variant-t-class.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: f63b2bb4fd5f809861622a4f6b255ee3725564b6
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 7c3b89ff238b1cb5ee9fbb71e83d20f571e656a3
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816593"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031532"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 
-代表 Windows 运行时类型系统中的 [GUID](/previous-versions/cc317743(v%3dmsdn.10)) 类型。
+表示 Windows 运行时类型系统中的 [GUID]（/窗口/win32/api/guiddef/ns-guiddef-guid-guid 类型）。
 
 ## <a name="syntax"></a>语法
 
@@ -24,33 +24,33 @@ ms.locfileid: "71816593"
 public value struct Guid
 ```
 
-### <a name="members"></a>Members
+### <a name="members"></a>成员
 
-`Platform::Guid` 具有从[platform：： Object 类](../cppcx/platform-object-class.md)派生的 `Equals()`、`GetHashCode()`和 `ToString()` 方法，以及派生自[Platform：： Type 类](../cppcx/platform-type-class.md)的 `GetTypeCode()` 方法。 `Platform::Guid` 还具有下列成员。
+`Platform::Guid``GetHashCode()``ToString()`[Platform::Object Class](../cppcx/platform-object-class.md)`GetTypeCode()`[Platform::Type Class](../cppcx/platform-type-class.md)具有 派生自平台：对象类的方法，以及从平台派生的方法：：类型类 。 `Equals()` `Platform::Guid`也有以下成员。
 
 |成员|说明|
 |------------|-----------------|
 |[Guid](#ctor)|初始化 `Platform::Guid` 的新实例。|
-|[operator==](#operator-equality)|等于运算符。|
-|[operator!=](#operator-inequality)|不等于运算符。|
-|[operator&lt;](#operator-less)|小于运算符。|
-|[operator()](#operator-call)|将 `Platform::Guid` 转换为 `GUID`。|
+|[运算符*](#operator-equality)|等于运算符。|
+|[操作员！](#operator-inequality)|不等于运算符。|
+|[算子&lt;](#operator-less)|小于运算符。|
+|[运算符（）](#operator-call)|将 `Platform::Guid` 转换为 `GUID`。|
 
 ### <a name="remarks"></a>备注
 
-若要生成新的 `Platform::Guid`，请使用[Windows：： Foundation：： GuidHelper：： CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)静态方法。
+要生成新`Platform::Guid`，请使用[Windows：：基础：：GuidHelper：：创建新 Guid](/uwp/api/windows.foundation.guidhelper.createnewguid)静态方法。
 
 ### <a name="requirements"></a>要求
 
-**支持的最低客户端：** Windows 8
+**受支持的最小客户端：** 视窗 8
 
-**支持的最低服务器：** Windows Server 2012
+**受支持的服务器最少：** 视窗服务器 2012
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**元数据：** 平台.winmd
 
-## <a name="ctor"></a>Guid：： Guid 构造函数
+## <a name="guidguid-constructors"></a><a name="ctor"></a>吉德：：吉德构造函数
 
 初始化 `Platform::Guid` 的新实例。
 
@@ -82,45 +82,45 @@ Guid(
 ### <a name="parameters"></a>参数
 
 *a*<br/>
-`GUID`的前4个字节。
+的前 4 个字节`GUID`。
 
-*b*<br/>
-`GUID`的下2个字节。
+*B*<br/>
+的下 2 个字节。 `GUID`
 
-*c*<br/>
-`GUID`的下2个字节。
+*C*<br/>
+的下 2 个字节。 `GUID`
 
-*d*<br/>
-`GUID`的下一个字节。
+*D*<br/>
+`GUID` 的下一个字节。
 
 *e*<br/>
-`GUID`的下一个字节。
+`GUID` 的下一个字节。
 
-*f*<br/>
-`GUID`的下一个字节。
+*F*<br/>
+`GUID` 的下一个字节。
 
-*g*<br/>
-`GUID`的下一个字节。
+*G*<br/>
+`GUID` 的下一个字节。
 
-*h*<br/>
-`GUID`的下一个字节。
+*H*<br/>
+`GUID` 的下一个字节。
 
-*i*<br/>
-`GUID`的下一个字节。
+*Ⅰ*<br/>
+`GUID` 的下一个字节。
 
-*j*<br/>
-`GUID`的下一个字节。
+*J*<br/>
+`GUID` 的下一个字节。
 
-*k*<br/>
-`GUID`的下一个字节。
+*K*<br/>
+`GUID` 的下一个字节。
 
-*m*<br/>
-以[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))形式表示的 `GUID`。
+*米*<br/>
+A`GUID`形式为[GUID 结构](/windows/win32/api/guiddef/ns-guiddef-guid)。
 
 *n*<br/>
-`GUID`的其余8个字节。
+其余 8 个字节的`GUID`。
 
-## <a name="operator-equality"></a>Guid：： operator = = 运算符
+## <a name="guidoperator-operator"></a><a name="operator-equality"></a>吉德：：：操作员=运算符
 
 比较两个 `Platform::Guid` 实例是否相等。
 
@@ -132,21 +132,21 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="parameters"></a>参数
 
-*guid1*<br/>
+*吉德1*<br/>
 要比较的第一个 `Platform::Guid`。
 
-*guid2*<br/>
+*吉德2*<br/>
 要比较的第二个 `Platform::Guid`。
 
 ### <a name="return-value"></a>返回值
 
-如果两个 `Platform::Guid` 实例相等，则为 True。
+如果两`Platform::Guid`个实例相等，则为 True。
 
 ### <a name="remarks"></a>备注
 
-首选使用 `==` 运算符而不是[Windows：： Foundation：： GuidHelper：： Equals](/uwp/api/windows.foundation.guidhelper.equals)静态方法。
+更喜欢使用`==`运算符而不是[Windows：基础：：GuidHelper：：等于](/uwp/api/windows.foundation.guidhelper.equals)静态方法。
 
-## <a name="operator-inequality"></a>Guid：： operator！ = 运算符
+## <a name="guidoperator-operator"></a><a name="operator-inequality"></a>吉德：：操作员！
 
 比较两个 `Platform::Guid` 实例是否不相等。
 
@@ -158,19 +158,19 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="parameters"></a>参数
 
-*guid1*<br/>
+*吉德1*<br/>
 要比较的第一个 `Platform::Guid`。
 
-*guid2*<br/>
+*吉德2*<br/>
 要比较的第二个 `Platform::Guid`。
 
 ### <a name="return-value"></a>返回值
 
-如果两个 `Platform::Guid` 实例不相等，则为 True。
+如果两`Platform::Guid`个实例不相等，则为 True。
 
-## <a name="operator-less"></a>Guid：： operator&lt; 运算符
+## <a name="guidoperatorlt-operator"></a><a name="operator-less"></a>吉德：：操作员&lt;
 
-比较两个 `Platform::Guid` 实例进行排序。
+比较两`Platform::Guid`个排序实例。
 
 ### <a name="syntax"></a>语法
 
@@ -180,21 +180,21 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ### <a name="parameters"></a>参数
 
-*guid1*<br/>
+*吉德1*<br/>
 要比较的第一个 `Platform::Guid`。
 
-*guid2*<br/>
+*吉德2*<br/>
 要比较的第二个 `Platform::Guid`。
 
 ### <a name="return-value"></a>返回值
 
-如果在*guid2*之前对*guid1*进行排序，则为 True。 将每个 `Platform::Guid` 视为 4 32 位无符号值的数组之后，排序将字典。 这并不是 SQL Server 或 .NET Framework 使用的顺序，也不是按字符串表示形式按字典排序的顺序。
+如果*guid1*是在*guid2*之前订购的，则为 True。 排序是字典，在将每个`Platform::Guid`值视为四个 32 位无符号值的数组。 这不是 SQL Server 或 .NET 框架使用的顺序，也不与字符串表示法的字典排序相同。
 
-提供此运算符是为了使 `Guid` 对象更易于由C++标准库使用。
+提供此运算符，以便`Guid`C++标准库可以更轻松地使用对象。
 
-## <a name="operator-call"></a>Guid：： operator （）运算符
+## <a name="guidoperator-operator"></a><a name="operator-call"></a>吉德：：操作员（） 运算符
 
-将 `Platform::Guid` 隐式转换为[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
+隐式将`Platform::Guid`转换为[GUID 结构](/windows/win32/api/guiddef/ns-guiddef-guid)。
 
 ### <a name="syntax"></a>语法
 
@@ -204,8 +204,8 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>返回值
 
-[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
+[GUID 结构](/windows/win32/api/guiddef/ns-guiddef-guid)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

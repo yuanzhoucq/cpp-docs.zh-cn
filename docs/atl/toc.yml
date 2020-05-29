@@ -111,7 +111,7 @@
           items:
             - name: 实现属性页
               href: implementing-property-pages.md
-            - name: '示例:实现属性页'
+            - name: 示例：实现属性页
               href: example-implementing-a-property-page.md
     - name: 针对 DHTML 控件的 ATL 支持
       expanded: false

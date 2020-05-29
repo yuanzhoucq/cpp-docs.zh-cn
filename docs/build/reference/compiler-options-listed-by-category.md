@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257710"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422786"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 

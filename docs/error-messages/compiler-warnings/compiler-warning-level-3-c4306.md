@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-ms.openlocfilehash: 78ec291b555838b1af63287e3d24fdb809afd7c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d200253d304500e10f5fceeade1c8228acde874d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402055"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198882"
 ---
 # <a name="compiler-warning-level-3-c4306"></a>编译器警告（等级 3）C4306
 
-> '*标识符*： 从转换*type1*to*type2*更大的
+> "*identifier*"：从 "*type1*" 转换为 "*type2*" 的大小更大
 
-标识符的类型强制转换为更大的指针。 未填充的新类型高位将用零填充。
+标识符的类型强制转换为更大的指针。 新类型的未填充的高位将填充零。
 
-此警告可能表示不需要的转换。 在生成的指针可能无效。
+此警告可能表示存在不需要的转换。 生成的指针可能无效。

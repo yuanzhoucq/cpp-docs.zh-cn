@@ -9,30 +9,30 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfdcaf1a1f33e89d106d4529ffc9af2d08376b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384656"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545161"
 ---
 # <a name="serialization-ccli"></a>序列化 (C++/CLI)
 
-序列化 （存储对象或成员添加到永久性介质的状态的过程） 的托管类 （包括各个字段或属性） 受<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>类。
+<xref:System.SerializableAttribute> 和 <xref:System.NonSerializedAttribute> 类支持序列化（将对象或成员的状态存储到永久性介质）的序列化（包括单个字段或属性）。
 
 ## <a name="remarks"></a>备注
 
-将应用**SerializableAttribute**于托管类，以序列化整个类或仅向特定字段或属性进行序列化的托管类的部分应用的自定义属性。 使用**nonserializedattribute 特性**从要序列化到的托管类中免除的字段或属性的自定义属性。
+将**SerializableAttribute**自定义特性应用于托管类，以便序列化整个类，或仅应用于特定字段或属性以序列化托管类的各个部分。 使用**system.nonserializedattribute**自定义特性来免除要序列化的托管类的字段或属性。
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
-在下面的示例中，类`MyClass`(和属性`m_nCount`) 被标记为可序列化。 但是，`m_nData`所示，不序列化属性**NonSerialized**自定义属性：
+在下面的示例中，类 `MyClass` （和属性 `m_nCount`）标记为可序列化。 但是，不会按照非**系列化**自定义特性的指示序列化 `m_nData` 属性：
 
 ### <a name="code"></a>代码
 
-```
+```cpp
 // serialization_and_mcpp.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -49,8 +49,8 @@ private:
 
 ### <a name="comments"></a>注释
 
-请注意，可以使用其"短名称"引用这两个属性 (**Serializable**并**NonSerialized**)。 对此进行进一步[应用属性](/dotnet/standard/attributes/applying-attributes)。
+请注意，这两个属性都可以使用其 "short name" （**Serializable**和非**系列化**）来引用。 这将在[应用属性](/dotnet/standard/attributes/applying-attributes)中进一步说明。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

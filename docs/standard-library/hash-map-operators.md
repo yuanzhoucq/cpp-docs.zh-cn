@@ -5,21 +5,21 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed143349f3afc7a27ad565c1cc929c6ecb5f6ad8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448733"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375451"
 ---
-# <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 运算符
+# <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 运算符
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
-|[operator==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
+|[操作员！](#op_neq)|[运算符！* （多映射）](#op_neq_mm)|
+|[运算符*](#op_eq_eq)|[运算符* （多映射）](#op_eq_eq_mm)|
 
-## <a name="op_neq"></a>operator!=
+## <a name="operator"></a><a name="op_neq"></a>操作员！
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_map 类](unordered-map-class.md)。
@@ -32,10 +32,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*离开*\
 一个 `hash_map` 类型的对象。
 
-*然后*\
+*对*\
 一个 `hash_map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -46,7 +46,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 hash_map 对象之间的比较基于其元素的成对比较。 如果两个 hash_map 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_map 相等。 否则，它们不相等。
 
-[< Hash_map](hash-map.md)的成员 > 和[< Hash_set >](hash-set.md) [命名空间](stdext-namespace.md)中的标头文件。
+[<的成员hash_map>](hash-map.md)和[<hash_set>](hash-set.md)头[文件在stdext命名空间](stdext-namespace.md)。
 
 ### <a name="example"></a>示例
 
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>运算符*
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_map 类](unordered-map-class.md)。
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*离开*\
 一个 `hash_map` 类型的对象。
 
-*然后*\
+*对*\
 一个 `hash_map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>operator! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>操作员！* （hash_multimap）
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_multimap 类](unordered-multimap-class.md)。
@@ -168,10 +168,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*离开*\
 一个 `hash_multimap` 类型的对象。
 
-*然后*\
+*对*\
 一个 `hash_multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>运算符* （hash_multimap）
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_multimap 类](unordered-multimap-class.md)。
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*离开*\
 一个 `hash_multimap` 类型的对象。
 
-*然后*\
+*对*\
 一个 `hash_multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -289,6 +289,6 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<hash_map>](hash-map.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 116d12b301af2769c4d4571a07ce604f18f67152
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 303fa73f09220b2139d681bf3109fd843299a900
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516112"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172407"
 ---
 # <a name="consuming-generics-ccli"></a>使用泛型 (C++/CLI)
 
@@ -24,7 +24,7 @@ ms.locfileid: "65516112"
 
 ### <a name="code"></a>代码
 
-```cs
+```csharp
 // consuming_generics_from_other_NET_languages.cs
 // compile with: /target:library
 // a C# program
@@ -118,6 +118,6 @@ int main() {
 10
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [泛型](generics-cpp-component-extensions.md)

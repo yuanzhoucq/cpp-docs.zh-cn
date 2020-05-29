@@ -1,8 +1,9 @@
 ---
 title: _fileno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fileno
+- _o__fileno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957207"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919474"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -48,12 +50,12 @@ int _fileno(
 
 ### <a name="parameters"></a>参数
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-**_fileno**返回文件描述符。 无错误返回。 如果*stream*未指定打开的文件，则结果是不确定的。 如果 stream 为**NULL**， **_fileno**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 -1 并将 errno 设置为 EINVAL。
+**_fileno**返回文件描述符。 无错误返回。 如果*stream*未指定打开的文件，则结果是不确定的。 如果 stream 为**NULL**， **_fileno**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 -1 并将 errno 设置为 EINVAL********。
 
 有关这些及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -62,7 +64,9 @@ int _fileno(
 
 ## <a name="remarks"></a>备注
 
-**_Fileno**例程返回当前与*stream*关联的文件描述符。 此例程作为函数和宏实现。 有关选择任一实现的信息，请参阅[在函数和宏之间选择](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
+**_Fileno**例程返回当前与*stream*关联的文件说明符。 此例程作为函数和宏实现。 有关选择任一实现的信息，请参阅[在函数和宏之间选择](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -70,7 +74,7 @@ int _fileno(
 |--------------|---------------------|
 |**_fileno**|\<stdio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -96,10 +100,10 @@ The file descriptor for stdout is 1
 The file descriptor for stderr is 2
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[_fdopen、_wfdopen](fdopen-wfdopen.md)<br/>
+[_fdopen，_wfdopen](fdopen-wfdopen.md)<br/>
 [_filelength、_filelengthi64](filelength-filelengthi64.md)<br/>
-[fopen、_wfopen_wfopen](fopen-wfopen.md)<br/>
+[fopen、_wfopen](fopen-wfopen.md)<br/>
 [freopen、_wfreopen](freopen-wfreopen.md)<br/>

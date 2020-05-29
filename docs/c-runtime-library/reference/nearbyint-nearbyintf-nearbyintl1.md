@@ -1,10 +1,13 @@
 ---
 title: nearbyint、nearbyintf、nearbyintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
+- _o_nearbyint
+- _o_nearbyintf
+- _o_nearbyintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951396"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914567"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -68,7 +72,7 @@ long double nearbyint( long double x ); //C++ only
 
 |问题|返回|
 |-----------|------------|
-|*x* = ±INFINITY|±无限大，未修改|
+|*x* = ±无限大|±无限大，未修改|
 |*x* = ±0|±0，未修改|
 |*x* = NaN|NaN|
 
@@ -80,7 +84,9 @@ long double nearbyint( long double x ); //C++ only
 
 因为最大浮点值均为精确的整数，所以此函数本身不会溢出；而输出可能会溢出返回值，具体取决于所使用函数的版本。
 
-C++允许重载，因此你可以调用**nearbyint**的重载，该重载采用并返回**浮点**或**长** **双精度**型参数。 在 C 程序中， **nearbyint**始终采用两个双精度值并返回一个双精度值。
+C + + 允许重载，因此你可以调用**nearbyint**的重载，该重载采用并返回**浮点**或**长****双精度**型参数。 在 C 程序中， **nearbyint**始终采用两个双精度值并返回一个双精度值。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -88,9 +94,9 @@ C++允许重载，因此你可以调用**nearbyint**的重载，该重载采用�
 |--------------|--------------|------------------|
 |**nearbyint**、 **nearbyintf**、 **nearbyintl**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
 [数学和浮点支持](../floating-point-support.md)<br/>

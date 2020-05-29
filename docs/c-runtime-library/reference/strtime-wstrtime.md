@@ -1,9 +1,11 @@
 ---
 title: _strtime、_wstrtime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime
 - _strtime
+- _o__strtime
+- _o__wstrtime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946564"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910922"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime、_wstrtime
 
@@ -77,11 +80,13 @@ wchar_t *_wstrtime(
 
 ## <a name="remarks"></a>备注
 
-**_Strtime**函数将当前的本地时间复制到*timestr*指向的缓冲区中。 此时间的格式为**hh： mm： ss** ，其中， **hh**是表示小时的两位数字，以24小时表示法表示， **mm**是表示分钟后的分钟数的两位数， **ss**是表示秒的两位数。 例如，字符串**18:23:44**表示23分钟到 6 p.m 之前的44秒。 缓冲区长度必须至少为 9 个字节。
+**_Strtime**函数将当前的本地时间复制到*timestr*所指向的缓冲区中。 此时间的格式为**hh： mm： ss** ，其中， **hh**是表示小时的两位数字，以24小时表示法表示， **mm**是表示分钟后的分钟数的两位数， **ss**是表示秒的两位数。 例如，字符串**18:23:44**表示23分钟到 6 p.m 之前的44秒。 缓冲区长度必须至少为 9 个字节。
 
-**_wstrtime**是 **_strtime**的宽字符版本; **_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*为**NULL**指针或*timestr*的格式不正确，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行此操作，则这些函数将返回**null** ，并**将 Errno**设置为**EINVAL**如果*timestr*为**null** ，则将设置为，如果*ERANGE*的格式不正确，则将**errno**设置为**timestr** 。
+**_wstrtime**是 **_strtime**的宽字符版本;**_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*为**NULL**指针或*timestr*的格式不正确，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行此操作，则这些函数将返回**null** ，并**将 Errno**设置为**EINVAL**如果*timestr*为**null** ，则将设置为，如果*ERANGE*的格式不正确，则将**errno**设置为**timestr** 。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -91,12 +96,12 @@ wchar_t *_wstrtime(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_strtime**|\<time.h>|
 |**_wstrtime**|\<time.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -120,7 +125,7 @@ int main( void )
 The current time is 14:21:44
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime、_wasctime](asctime-wasctime.md)<br/>

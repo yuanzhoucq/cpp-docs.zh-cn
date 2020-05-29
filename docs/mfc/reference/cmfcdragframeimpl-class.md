@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 527fd089962e05c44a7e47b1ae52345116da4470
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348609"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752440"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 类
 
-`CMFCDragFrameImpl`类绘制当用户在标准停靠模式下拖动窗格时显示的拖动矩形。
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+类`CMFCDragFrameImpl`绘制在标准停靠模式下拖动窗格时出现的拖动矩形。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -26,9 +26,9 @@ class CMFCDragFrameImpl
 
 ## <a name="remarks"></a>备注
 
-此类的一个对象嵌入到每个[CPane 类](../../mfc/reference/cpane-class.md)对象。 因此，使用每个窗格`CanFloat`方法会在用户拖动它时显示拖动矩形。
+此类的对象嵌入在每个[CPane 类](../../mfc/reference/cpane-class.md)对象中。 因此，当用户拖动该方法时，`CanFloat`使用 方法的每个窗格都会显示拖动矩形。
 
-可以通过使用控制的拖动矩形粗细[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)并[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。
+您可以使用[AFX_GLOBAL_DATA：m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)和[AFX_GLOBAL_DATA：m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)来控制拖动矩形的厚度。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -36,47 +36,47 @@ class CMFCDragFrameImpl
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdragframeimpl.h
+**标题：** afxdragframeimpl.h
 
-##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
+## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCDragFrameimpl：：结束绘制拖动框架
 
-```
+```cpp
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in] *bClearInternalRects*<br/>
+[在]*b清除内部重新*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="init"></a>  CMFCDragFrameImpl::Init
+## <a name="cmfcdragframeimplinit"></a><a name="init"></a>CMFCDragframeimpl：：Init
 
-```
+```cpp
 void Init(CWnd* pDraggedWnd);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in] *pDraggedWnd*<br/>
+[在]*普拉普恩德*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
+## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCDragFrameimpl：：移动拖动框架
 
-```
+```cpp
 void MoveDragFrame(BOOL bForceMove = FALSE);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in] *bForceMove*<br/>
+[在]*bForceMove*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
+## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCDragFrameimpl：:PlaceTab预对接
 
-```
+```cpp
 void PlaceTabPreDocking(
     CBaseTabbedPane* pTabbedBar,
     BOOL bFirstTime);
@@ -86,29 +86,29 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>参数
 
-[in] *pTabbedBar*<br/>
+[在]*pTabbedBar*<br/>
 
-[in] *bFirstTime*<br/>
+[在]*b 第一次*<br/>
 
-[in] *pCBarToPlaceOn*<br/>
+[在]*pCBARtoPlaceon*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
+## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCDragFrameimpl：：删除TabpreDocking
 
-```
+```cpp
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-[in] *pOldTargetBar*<br/>
+[在]*pOldTargetBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
+## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCDragFrameimpl：：重置状态
 
-```
+```cpp
 void ResetState();
 ```
 
@@ -116,6 +116,6 @@ void ResetState();
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CPane 类](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

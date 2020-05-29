@@ -7,8 +7,6 @@ f1_keywords:
 - memory/std::hash
 - string/std::hash
 - system_error/std::hash
-- thread/std::hash
-- typeindex/std::hash
 - vector/std::hash
 - XSTDDEF/std::hash
 - xstring/std::hash
@@ -23,12 +21,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: e30810412db29473597da144d2dd42bdb8184f7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: aa51e56197ba79afbe2bd2597596c52b23a4f65b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687992"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446578"
 ---
 # <a name="hash-class"></a>hash 类
 
@@ -45,7 +43,7 @@ struct hash {
 
 ## <a name="remarks"></a>备注
 
-此成员对象定义一个哈希函数，适合将 Ty 类型的值映射到索引值的分布。 成员 `operator()` 返回*val*的哈希代码，适合用于类模板 `unordered_map`、`unordered_multimap`、`unordered_set` 和 `unordered_multiset`。 此标准库对基本类型提供专用化：Ty 可能为任何标量类型，包括指针类型和枚举类型。 此外，还具有库类型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread` `type_index`、`unique_ptr`、`variant` 和 `vector<bool>` 的专用化。
+此成员对象定义一个哈希函数，适合将 Ty 类型的值映射到索引值的分布。 成员 `operator()` 返回*val*的哈希代码，适合用于类模板 `unordered_map`、`unordered_multimap`、`unordered_set`和 `unordered_multiset`。 此标准库对基本类型提供专用化：Ty 可能为任何标量类型，包括指针类型和枚举类型。 此外，还具有库类型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread``type_index`、`unique_ptr`、`variant` 和 `vector<bool>` 的专用化。
 
 ## <a name="example"></a>示例
 
@@ -72,11 +70,11 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<functional>
+**标头：** \<功能 >
 
-**命名空间:** std
+**命名空间：** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [unordered_multimap 类](../standard-library/unordered-multimap-class.md)\

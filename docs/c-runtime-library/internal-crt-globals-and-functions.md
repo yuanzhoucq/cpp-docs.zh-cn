@@ -1,6 +1,6 @@
 ---
 title: 内部 CRT 全局和函数
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - __acrt_iob_func
 - __AdjustPointer
@@ -277,6 +277,113 @@ api_name:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
+- _o__CIacos
+- _o__CIasin
+- _o__CIcosh
+- _o__CIsinh
+- _o__CItanh
+- _o__Getdays
+- _o__Getmonths
+- _o__Gettnames
+- _o__Strftime
+- _o__W_Getdays
+- _o__W_Getmonths
+- _o__Wcsftime
+- _o___acrt_iob_func
+- _o___conio_common_vcprintf
+- _o___conio_common_vcprintf_p
+- _o___conio_common_vcprintf_s
+- _o___conio_common_vcscanf
+- _o___conio_common_vcwprintf
+- _o___conio_common_vcwprintf_p
+- _o___conio_common_vcwprintf_s
+- _o___conio_common_vcwscanf
+- _o___fpe_flt_rounds
+- _o___libm_sse2_acos
+- _o___libm_sse2_acosf
+- _o___libm_sse2_asin
+- _o___libm_sse2_asinf
+- _o___libm_sse2_atan
+- _o___libm_sse2_atan2
+- _o___libm_sse2_atanf
+- _o___libm_sse2_cos
+- _o___libm_sse2_cosf
+- _o___libm_sse2_exp
+- _o___libm_sse2_expf
+- _o___libm_sse2_log
+- _o___libm_sse2_log10
+- _o___libm_sse2_log10f
+- _o___libm_sse2_logf
+- _o___libm_sse2_pow
+- _o___libm_sse2_powf
+- _o___libm_sse2_sin
+- _o___libm_sse2_sinf
+- _o___libm_sse2_tan
+- _o___libm_sse2_tanf
+- _o___p___argc
+- _o___p___argv
+- _o___p___wargv
+- _o___p__acmdln
+- _o___p__environ
+- _o___p__mbcasemap
+- _o___p__mbctype
+- _o___p__pgmptr
+- _o___p__wcmdln
+- _o___p__wenviron
+- _o___p__wpgmptr
+- _o___pwctype_func
+- _o___std_exception_copy
+- _o___std_exception_destroy
+- _o___std_type_info_destroy_list
+- _o___stdio_common_vfprintf
+- _o___stdio_common_vfprintf_p
+- _o___stdio_common_vfprintf_s
+- _o___stdio_common_vfscanf
+- _o___stdio_common_vfwprintf
+- _o___stdio_common_vfwprintf_p
+- _o___stdio_common_vfwprintf_s
+- _o___stdio_common_vfwscanf
+- _o___stdio_common_vsnprintf_s
+- _o___stdio_common_vsnwprintf_s
+- _o___stdio_common_vsprintf
+- _o___stdio_common_vsprintf_p
+- _o___stdio_common_vsprintf_s
+- _o___stdio_common_vsscanf
+- _o___stdio_common_vswprintf
+- _o___stdio_common_vswprintf_p
+- _o___stdio_common_vswprintf_s
+- _o___stdio_common_vswscanf
+- _o___timezone
+- _o___tzname
+- _o__calloc_base
+- _o__configure_narrow_argv
+- _o__configure_wide_argv
+- _o__crt_atexit
+- _o__errno
+- _o__except1
+- _o__free_base
+- _o__get_initial_narrow_environment
+- _o__get_initial_wide_environment
+- _o__get_narrow_winmain_command_line
+- _o__get_stream_buffer_pointers
+- _o__get_wide_winmain_command_line
+- _o__initialize_narrow_environment
+- _o__initialize_wide_environment
+- _o__libm_sse2_acos_precise
+- _o__libm_sse2_asin_precise
+- _o__libm_sse2_atan_precise
+- _o__libm_sse2_cos_precise
+- _o__libm_sse2_exp_precise
+- _o__libm_sse2_log10_precise
+- _o__libm_sse2_log_precise
+- _o__libm_sse2_pow_precise
+- _o__libm_sse2_sin_precise
+- _o__libm_sse2_sqrt_precise
+- _o__libm_sse2_tan_precise
+- _o__malloc_base
+- _o__realloc_base
+- _o__sopen_dispatch
+- _o__wsopen_dispatch
 api_location:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
@@ -287,13 +394,14 @@ api_location:
 - api-ms-win-crt-time-l1-1-0.dll
 - api-ms-win-crt-process-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-conio-l1-1-0.dll
 - vcruntime140_app.dll
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -301,7 +409,6 @@ topic_type:
 f1_keywords:
 - __acrt_iob_func
 - __AdjustPointer
-- _assert
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
@@ -330,7 +437,6 @@ f1_keywords:
 - __conio_common_vcwprintf_s
 - __conio_common_vcwscanf
 - __CppXcptFilter
-- __create_locale
 - _crt_at_quick_exit
 - _crt_atexit
 - _crtAssertBusy
@@ -375,26 +481,16 @@ f1_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
-- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
-- _dclass
 - __DestructExceptionObject
 - __doserrno
 - _dosmaperr
-- _dpcomp
-- _dsign
-- __dstbias
-- _dtest
 - _EH_prolog
 - _errno
 - _except_handler2
 - _except_handler4_common
 - _except1
-- _fdclass
-- _fdpcomp
-- _fdsign
-- _fdtest
 - _filbuf
 - _FindAndUnlinkFrame
 - _flsbuf
@@ -402,13 +498,10 @@ f1_keywords:
 - _FPE_Raise
 - __fpecode
 - __FrameUnwindFilter
-- _fread_nolock_s
 - _free_base
-- __free_locale
 - _freea_s
 - _freefls
 - _ftol
-- __get_current_locale
 - __get_flsindex
 - _get_initial_narrow_environment
 - _get_initial_wide_environment
@@ -428,16 +521,10 @@ f1_keywords:
 - _initialize_narrow_environment
 - _initialize_wide_environment
 - _initptd
-- _invalid_parameter
-- _invoke_watson
 - __iob_func
 - _IsExceptionObjectToBeDestroyed
 - __lconv
 - __lconv_init
-- _ldclass
-- _ldpcomp
-- _ldsign
-- _ldtest
 - __libm_sse2_acos
 - _libm_sse2_acos_precise
 - __libm_sse2_acosf
@@ -474,7 +561,6 @@ f1_keywords:
 - _lock_locales
 - _longjmpex
 - _malloc_base
-- _mbctype
 - _NLG_Dispatch2
 - _NLG_Return
 - _NLG_Return2
@@ -501,7 +587,6 @@ f1_keywords:
 - __p__wcmdln
 - __p__wenviron
 - __p__wpgmptr
-- _pctype
 - __pioinfo
 - _pwctype
 - __pwctype_func
@@ -512,8 +597,6 @@ f1_keywords:
 - __report_gsfailure
 - __RTCastToVoid
 - __RTtypeid
-- _seh_filter_dll
-- _seh_filter_exe
 - _seh_longjmp_unwind
 - _seh_longjmp_unwind4
 - _set_malloc_crt_max_wait
@@ -545,8 +628,6 @@ f1_keywords:
 - __STRINGTOLD
 - __STRINGTOLD_L
 - __strncnt
-- __sys_errlist
-- __sys_nerr
 - __threadhandle
 - __threadid
 - __timezone
@@ -556,7 +637,6 @@ f1_keywords:
 - __unDNameEx
 - __unDNameHelper
 - __unguarded_readlc_active
-- _unloaddll
 - _unlock_locales
 - _vacopy
 - _ValidateExecute
@@ -567,7 +647,6 @@ f1_keywords:
 - _W_Getdays
 - _W_Getmonths
 - _W_Getnames
-- _wassert
 - _Wcsftime
 - __wcsncnt
 - __winitenv
@@ -851,12 +930,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 252065039597b6176b42008b31b7082740bcc265
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: fe9b466ca839cb09011dc7cc38650b8b85037e86
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940245"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914174"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT 全局和函数
 
@@ -866,7 +945,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 
 这些全局变量和宏定义用于实现 CRT。
 
-|name|
+|名称|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
@@ -885,7 +964,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 
 这些函数和函数宏用于实现 CRT 和 C++ 标准库。
 
-|name|
+|名称|
 |----------|
 |__acrt_iob_func|
 |__AdjustPointer|
@@ -1191,6 +1270,6 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

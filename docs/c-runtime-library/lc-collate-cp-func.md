@@ -1,8 +1,9 @@
 ---
 title: ___lc_collate_cp_func
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___lc_collate_cp_func
+- _o____lc_collate_cp_func
 api_location:
 - msvcr120.dll
 - msvcrt.dll
@@ -11,6 +12,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -20,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: d6a857760bf3b76481cc608ef8f015bca207f35f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 7247827cb2bfe18c341ce60c2f3d8976f676b138
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940155"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914083"
 ---
 # <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
@@ -47,13 +49,15 @@ UINT ___lc_codepage_func(void);
 
 内部 CRT 函数特定于实现且会根据每个发行版本发生更改。 不建议在代码中使用它们。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`___lc_collate_cp_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
 ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312400"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>指针类型之间的转换
 
@@ -34,7 +34,7 @@ ms.locfileid: "56147238"
 
 - 如果整型类型的大小与指针类型的大小不同，则使用表[从带符号整型类型转换](../c-language/conversions-from-signed-integral-types.md)和[从无符号整型类型转换](../c-language/conversions-from-unsigned-integral-types.md)中给定的转换路径，首先将整型转换为指针的大小。 然后将其视为一个指针值。
 
-带值 0 的整型常量表达式或到类型 void <strong>\*</strong> 的表达式转换可以通过类型转换、赋值或者与指向任何类型的指针进行比较来进行转换。 这将产生与同一类型的另一个 null 指针相等的 null 指针，但此 null 指针与指向函数或对象的任何指针不相等。 常数 0 以外的整数可以转换为指针类型，但结果是不可移植的。
+带值 0 的整型常量表达式或到类型 void <strong>\*</strong> 的表达式转换可以通过类型转换、赋值或者与指向任何类型的指针进行比较来进行转换  。 这将产生与同一类型的另一个 null 指针相等的 null 指针，但此 null 指针与指向函数或对象的任何指针不相等。 常数 0 以外的整数可以转换为指针类型，但结果是不可移植的。
 
 ## <a name="see-also"></a>请参阅
 

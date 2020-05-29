@@ -1,6 +1,6 @@
 ---
 title: _itoa_s，_itow_s 函数
-ms.date: 03/21/2018
+ms.date: 4/2/2020
 api_name:
 - _itoa_s
 - _ltoa_s
@@ -12,6 +12,16 @@ api_name:
 - _ultow_s
 - _i64tow_s
 - _ui64tow_s
+- _o__i64toa_s
+- _o__i64tow_s
+- _o__itoa_s
+- _o__itow_s
+- _o__ltoa_s
+- _o__ltow_s
+- _o__ui64toa_s
+- _o__ui64tow_s
+- _o__ultoa_s
+- _o__ultow_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,6 +35,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -79,16 +90,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 5cc3706abd07e11c819d4b2d37ff89e9b9137a22
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625065"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916559"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、_itow_s、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s
 
-将整数转换为字符串。 这些版本的[_itoa、_itow 函数](itoa-itow.md)具有 CRT 中的[安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
+将整数转换为字符串。 这些版本的[_itoa，_itow 函数](itoa-itow.md)的安全增强功能，如[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 ## <a name="syntax"></a>语法
 
@@ -138,13 +149,13 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 *value*<br/>
 要转换的数字。
 
-*buffer*<br/>
+*宽限*<br/>
 保存转换结果的输出缓冲区。
 
-*size*<br/>
+size <br/>
 *缓冲区*的大小（字符或宽字符）。
 
-*radix*<br/>
+*基数*<br/>
 用于转换值的基数或数字基数，*该值*必须在2-36 范围内。
 
 ## <a name="return-value"></a>返回值
@@ -153,9 +164,9 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="error-conditions"></a>错误条件
 
-|值|buffer|size|radix|返回|
+|value|缓冲区|大小|radix|返回|
 |-----------|------------|----------------------|-----------|------------|
-|any|**NULL**|any|any|**EINVAL**|
+|any|**Null**|any|any|**EINVAL**|
 |any|any|<=0|any|**EINVAL**|
 |any|any|<= 所需结果字符串的长度|any|**EINVAL**|
 |any|any|any|*基数*< 2 或*基数*> 36|**EINVAL**|
@@ -166,13 +177,15 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ## <a name="remarks"></a>备注
 
-除了参数和返回值以外， **_itoa_s**和 **_itow_s**函数系列与相应的安全 **_itoa**和 **_itow**版本具有相同的行为。
+除了参数和返回值以外， **_itoa_s**和 **_itow_s**函数系列与相应的安全 **_itoa**和 **_itow**版本的行为相同。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 CRT 包含便利的宏，用于定义转换每个整数类型（包括 null 结束符和符号）的最长可能值（对于几个常见基）所需的缓冲区大小。 有关信息，请参阅[最大转换计数宏](itoa-itow.md#maximum-conversion-count-macros)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -186,12 +199,12 @@ CRT 包含便利的宏，用于定义转换每个整数类型（包括 null 结�
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_itoa_s**、 **_ltoa_s**、 **_ultoa_s**、 **_i64toa_s**、 **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、 **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
 
-这些函数是 Microsoft 特定的。 有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是 Microsoft 特定的。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -263,7 +276,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa，_itow 函数](itoa-itow.md)<br/>

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245649"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424829"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 运算符
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试运算符左侧的 deque 对象是否不等于右侧的 deque 对象。
 
@@ -33,12 +33,12 @@ ms.locfileid: "68245649"
 bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `deque` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `deque` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -84,12 +84,12 @@ The deques are not equal.
 bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `deque` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `deque` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a> 运算符&lt;=
+## <a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的 deque 对象是否小于或等于右侧的 deque 对象。
 
@@ -139,12 +139,12 @@ Deque c1 is less than deque c2.
 bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `deque` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `deque` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的 deque 对象是否等于右侧的 deque 对象。
 
@@ -194,12 +194,12 @@ Deque c1 is less than or equal to deque c2.
 bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `deque` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `deque` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -252,12 +252,12 @@ The deques are not equal.
 bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `deque` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `deque` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a> 运算符&gt;=
+## <a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的 deque 对象是否大于或等于右侧的 deque 对象。
 
@@ -308,12 +308,12 @@ Deque c1 is greater than deque c2.
 bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `deque` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `deque` 类型的对象。
 
 ### <a name="return-value"></a>返回值

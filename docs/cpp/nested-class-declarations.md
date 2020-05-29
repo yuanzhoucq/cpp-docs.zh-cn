@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367892"
 ---
 # <a name="nested-class-declarations"></a>嵌套类声明
 
@@ -54,14 +54,14 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` 并`BufferedIO::BufferedOutput`中声明`BufferedIO`。 这些类名称在类 `BufferedIO` 的范围外不可见。 但是，`BufferedIO` 类型的对象不包含 `BufferedInput` 或 `BufferedOutput` 类型的任何对象。
+`BufferedIO::BufferedInput`并在`BufferedIO::BufferedOutput`中`BufferedIO`声明 。 这些类名称在类 `BufferedIO` 的范围外不可见。 但是，`BufferedIO` 类型的对象不包含 `BufferedInput` 或 `BufferedOutput` 类型的任何对象。
 
 嵌套类只能从封闭类中直接使用名称、类型名称，静态成员的名称和枚举数。 若要使用其他类成员的名称，您必须使用指针、引用或对象名。
 
 在前面的 `BufferedIO` 示例中，枚举 `IOError` 可由嵌套类中的成员函数、`BufferedIO::BufferedInput` 或 `BufferedIO::BufferedOutput` 直接访问，如函数 `good` 中所示。
 
 > [!NOTE]
->  嵌套类仅在类范围内声明类型。 它们不会导致创建嵌套类的包含对象。 前面的示例声明两个嵌套类，但未声明这些类类型的任何对象。
+> 嵌套类仅在类范围内声明类型。 它们不会导致创建嵌套类的包含对象。 前面的示例声明两个嵌套类，但未声明这些类类型的任何对象。
 
 在将类型名称与前向声明一起声明时，会引发嵌套类声明的范围可见性的异常。  在这种情况下，由前向声明声明的类名在封闭类的外部可见，其范围定义为最小的封闭非类范围。  例如：
 
@@ -140,7 +140,7 @@ int main()
 BufferedIO::BufferedInput::read()
 ```
 
-表示“作为 `read` 类（位于 `BufferedInput` 类的范围中）的成员的 `BufferedIO` 函数。” 因为此声明使用*限定类型名称*语法中，以下形式的构造是可能：
+表示“作为 `read` 类（位于 `BufferedInput` 类的范围中）的成员的 `BufferedIO` 函数。” 由于此声明使用*限定类型名称*语法，因此可以构造以下窗体：
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-前面的声明等效于前一个，但它使用**typedef**名称来代替类名称。
+前面的声明等效于前一个声明，但它使用**typedef**名称代替类名称。
 
 ## <a name="friend-functions-in-nested-classes"></a>嵌套类中的友元函数
 
@@ -206,6 +206,6 @@ int GetExtendedErrorStatus( char *message )
 
 利用前面的接口，许多类可以通过传递要复制错误消息的内存位置来使用此函数的服务。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../cpp/classes-and-structs-cpp.md)

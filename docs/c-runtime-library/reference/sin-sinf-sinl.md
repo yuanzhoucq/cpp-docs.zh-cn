@@ -1,10 +1,11 @@
 ---
 title: sin、sinf、sinl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - sinl
 - sinf
 - sin
+- _o_sin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948067"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915774"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -69,22 +71,24 @@ long double sin(long double x);  // C++ only
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|无|_DOMAIN|
+|± QNAN，IND|None|_DOMAIN|
 |±∞（sin、sinf、sinl）|INVALID|_DOMAIN|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用采用并返回**浮点**或**长** **双精度**值的**sin**重载。 在 C 程序中， **sin**始终采用并返回**double**。
+由于 c + + 允许重载，因此你可以调用采用并返回**浮点**或**长****双精度**值的**sin**重载。 在 C 程序中， **sin**始终采用并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
+|例程|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
 |**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -114,7 +118,7 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>

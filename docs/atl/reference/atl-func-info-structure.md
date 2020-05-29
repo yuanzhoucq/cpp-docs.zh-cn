@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-ms.openlocfilehash: f6cf32bab86d741f3b0750c150c7bbc647b27ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1c740cf1a1ed344dbceb028bd1f39a87fc09363
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248688"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168587"
 ---
-# <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 结构
+# <a name="_atl_func_info-structure"></a>_ATL_FUNC_INFO 结构
 
-包含用于描述调度接口方法或属性的类型信息。
+包含用于描述调度接口上的方法或属性的类型信息。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 struct _ATL_FUNC_INFO {
     CALLCONV cc;
     VARTYPE vtReturn;
@@ -34,20 +34,20 @@ struct _ATL_FUNC_INFO {
 ## <a name="members"></a>成员
 
 `cc`<br/>
-调用约定。 使用此结构与时[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)类，此成员必须为 CC_STDCALL。 `CC_CDECL` 是在 Windows CE 中支持的唯一选项`CALLCONV`字段的`_ATL_FUNC_INFO`结构。 任何其他值不受支持因此其行为未定义。
+调用约定。 将此结构与[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)类结合使用时，必须 CC_STDCALL 此成员。 `CC_CDECL`为`CALLCONV` `_ATL_FUNC_INFO`结构的字段 Windows CE 中唯一支持的选项。 不支持任何其他值，因此其行为未定义。
 
 `vtReturn`<br/>
-该函数的变体类型返回值。
+函数返回值的变量类型。
 
 `nParams`<br/>
 函数参数的数目。
 
 `pVarTypes`<br/>
-函数参数的 variant 类型的数组。
+函数参数的变量类型的数组。
 
 ## <a name="remarks"></a>备注
 
-在内部，ATL 还使用此结构来保存从类型库获取的信息。 可能需要直接操作此结构，如果您提供事件处理程序与一起使用的类型信息[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)类和[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)宏。
+在内部，ATL 使用此结构来保存从类型库获取的信息。 如果为[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)类和[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)宏一起使用的事件处理程序提供类型信息，则可能需要直接操作此结构。
 
 ## <a name="example"></a>示例
 
@@ -55,15 +55,15 @@ struct _ATL_FUNC_INFO {
 
 [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]
 
-您需要定义`_ATL_FUNC_INFO`结构：
+定义`_ATL_FUNC_INFO`结构：
 
 [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]
 
 ## <a name="requirements"></a>要求
 
-标头： atlcom.h
+标头：atlcom.h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../../atl/reference/atl-classes.md)<br/>
 [IDispEventSimpleImpl 类](../../atl/reference/idispeventsimpleimpl-class.md)<br/>

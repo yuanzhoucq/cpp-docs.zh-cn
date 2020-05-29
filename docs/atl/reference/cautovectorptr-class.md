@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc4bd4ba7a2f41a25679f1da718671f525519708
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260378"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748215"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 类
 
-此类表示智能指针对象在使用矢量 new 和 delete 运算符。
+此类表示使用矢量新运算符和删除运算符的智能指针对象。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -43,46 +43,46 @@ class CAutoVectorPtr
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|构造函数。|
-|[CAutoVectorPtr::~CAutoVectorPtr](#dtor)|析构函数。|
+|[C自动矢量器：C自动矢量器](#cautovectorptr)|构造函数。|
+|[C自动矢量器：：*C自动矢量Ptr](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAutoVectorPtr::Allocate](#allocate)|调用此方法来分配对指向的对象的数组所需的内存`CAutoVectorPtr`。|
-|[CAutoVectorPtr::Attach](#attach)|调用此方法以获取现有指针的所有权。|
-|[CAutoVectorPtr::Detach](#detach)|调用此方法释放的指针的所有权。|
-|[CAutoVectorPtr::Free](#free)|调用此方法以删除指向的对象`CAutoVectorPtr`。|
+|[C自动矢量器：分配](#allocate)|调用此方法以分配 所`CAutoVectorPtr`指向的对象数组所需的内存。|
+|[C自动矢量器：：附加](#attach)|调用此方法以获取现有指针的所有权。|
+|[CAutoVectorPtr：:Detach](#detach)|调用此方法以释放指针的所有权。|
+|[CAutoVectorPtr：免费](#free)|调用此方法以删除 指向 的对象`CAutoVectorPtr`。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAutoVectorPtr::operator T *](#operator_t__star)|强制转换运算符。|
-|[CAutoVectorPtr::operator =](#operator_eq)|赋值运算符。|
+|[CAutoVectorPtr：运算符 T |](#operator_t__star)|强制转换运算符。|
+|[CAutoVectorPtr：：运算符 |](#operator_eq)|分配运算符。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAutoVectorPtr::m_p](#m_p)|指针数据成员变量。|
+|[C自动矢量器：：m_p](#m_p)|指针数据成员变量。|
 
 ## <a name="remarks"></a>备注
 
-此类提供用于创建和管理可帮助保护用户免受内存泄漏，它不再处于作用域时，会自动释放资源的智能指针的方法。 `CAutoVectorPtr` 类似于`CAutoPtr`，唯一的区别在于`CAutoVectorPtr`使用[向量新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)并[向量删除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)来分配和释放内存而不是C++**新**并**删除**运算符。 请参阅[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合类`CAutoVectorPtr`所需。
+此类提供创建和管理智能指针的方法，通过在资源出镜范围时自动释放资源，这将有助于防止内存泄漏。 `CAutoVectorPtr`与 类似`CAutoPtr`，唯一的`CAutoVectorPtr`区别是使用[矢量新&#91;&#93;](../../standard-library/new-operators.md#op_new_arr)和[矢量删除&#91;&#93;](../../standard-library/new-operators.md#op_delete_arr)分配和释放内存，而不是C++**新的**和**删除**运算符。 如果需要 的收集类，`CAutoVectorPtr`请参阅[CAutoVectorPtrElementTraits。](../../atl/reference/cautovectorptrelementtraits-class.md)
 
-请参阅[CAutoPtr](../../atl/reference/cautoptr-class.md)有关使用智能指针类的示例。
+有关使用智能指针类的示例，请参阅[CAutoPtr。](../../atl/reference/cautoptr-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标题：** atlbase.h
 
-##  <a name="allocate"></a>  CAutoVectorPtr::Allocate
+## <a name="cautovectorptrallocate"></a><a name="allocate"></a>C自动矢量器：分配
 
-调用此方法来分配对指向的对象的数组所需的内存`CAutoVectorPtr`。
+调用此方法以分配 所`CAutoVectorPtr`指向的对象数组所需的内存。
 
 ```
 bool Allocate(size_t nElements) throw();
@@ -90,37 +90,37 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>参数
 
-*nElements*<br/>
+*n元素*<br/>
 数组中的元素数。
 
 ### <a name="return-value"></a>返回值
 
-分配的内存为成功时返回 true，false 失败。
+如果内存成功分配，则返回 true，在失败时为 false。
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果出现断言失败[CAutoVectorPtr::m_p](#m_p)成员变量目前指向的现有值; 即，不等于 NULL。
+在调试生成中，如果[CAutoVectorPtr：：m_p](#m_p)成员变量当前指向现有值，则断言失败将发生;也就是说，它不等于 NULL。
 
-##  <a name="attach"></a>  CAutoVectorPtr::Attach
+## <a name="cautovectorptrattach"></a><a name="attach"></a>C自动矢量器：：附加
 
 调用此方法以获取现有指针的所有权。
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
-`CAutoVectorPtr`对象将获得 this 指针的所有权。
+*P*<br/>
+该`CAutoVectorPtr`对象将取得此指针的所有权。
 
 ### <a name="remarks"></a>备注
 
-当`CAutoVectorPtr`对象采用的指针的所有权，它将自动删除指针和任何已分配的数据超出范围时。 如果[CAutoVectorPtr::Detach](#detach)是调用，程序员再次负责释放任何给定分配资源。
+当对象`CAutoVectorPtr`取得指针的所有权时，当它超出范围时，它将自动删除指针和任何已分配的数据。 如果调用[CAutoVectorPtr：:Detach，](#detach)程序员将再次被赋予释放任何分配资源的责任。
 
-在调试版本中，如果出现断言失败[CAutoVectorPtr::m_p](#m_p)成员变量目前指向的现有值; 即，不等于 NULL。
+在调试生成中，如果[CAutoVectorPtr：：m_p](#m_p)成员变量当前指向现有值，则断言失败将发生;也就是说，它不等于 NULL。
 
-##  <a name="cautovectorptr"></a>  CAutoVectorPtr::CAutoVectorPtr
+## <a name="cautovectorptrcautovectorptr"></a><a name="cautovectorptr"></a>C自动矢量器：C自动矢量器
 
 构造函数。
 
@@ -132,14 +132,14 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
-现有的指针。
+*P*<br/>
+现有指针。
 
 ### <a name="remarks"></a>备注
 
-`CAutoVectorPtr`可以使用现有指针创建对象，这种情况下它会将传输的指针的所有权。
+可以使用`CAutoVectorPtr`现有指针创建对象，在这种情况下，该对象会转移指针的所有权。
 
-##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr
+## <a name="cautovectorptrcautovectorptr"></a><a name="dtor"></a>C自动矢量器：：*C自动矢量Ptr
 
 析构函数。
 
@@ -149,11 +149,11 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="remarks"></a>备注
 
-释放任何已分配的资源。 调用[CAutoVectorPtr::Free](#free)。
+释放任何分配的资源。 调用[CAutoVectorPtr：：免费](#free)。
 
-##  <a name="detach"></a>  CAutoVectorPtr::Detach
+## <a name="cautovectorptrdetach"></a><a name="detach"></a>CAutoVectorPtr：:Detach
 
-调用此方法释放的指针的所有权。
+调用此方法以释放指针的所有权。
 
 ```
 T* Detach() throw();
@@ -165,21 +165,21 @@ T* Detach() throw();
 
 ### <a name="remarks"></a>备注
 
-释放的指针的所有权，设置[CAutoVectorPtr::m_p](#m_p)成员变量为 NULL，并返回指针的副本。 在调用`Detach`，它由编程人员，以释放任何分配的资源对其`CAutoVectorPtr`对象可能已以前承担的责任。
+释放指针的所有权，将[CAutoVectorPtr：：m_p](#m_p)成员变量设置为 NULL，并返回指针的副本。 调用`Detach`后，由程序员释放`CAutoVectorPtr`对象以前可能承担的任何分配的资源。
 
-##  <a name="free"></a>  CAutoVectorPtr::Free
+## <a name="cautovectorptrfree"></a><a name="free"></a>CAutoVectorPtr：免费
 
-调用此方法以删除指向的对象`CAutoVectorPtr`。
+调用此方法以删除 指向 的对象`CAutoVectorPtr`。
 
-```
+```cpp
 void Free() throw();
 ```
 
 ### <a name="remarks"></a>备注
 
-指向的对象`CAutoVectorPtr`释放，并[CAutoVectorPtr::m_p](#m_p)成员变量设置为 NULL。
+释放 下`CAutoVectorPtr`指向的对象[，CAutoVectorPtr：：m_p](#m_p)成员变量设置为 NULL。
 
-##  <a name="m_p"></a>  CAutoVectorPtr::m_p
+## <a name="cautovectorptrm_p"></a><a name="m_p"></a>C自动矢量器：：m_p
 
 指针数据成员变量。
 
@@ -191,9 +191,9 @@ T* m_p;
 
 此成员变量保存指针信息。
 
-##  <a name="operator_eq"></a>  CAutoVectorPtr::operator =
+## <a name="cautovectorptroperator-"></a><a name="operator_eq"></a>CAutoVectorPtr：：运算符 |
 
-赋值运算符。
+分配运算符。
 
 ```
 CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
@@ -201,18 +201,18 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
-一个指针。
+*P*<br/>
+指针。
 
 ### <a name="return-value"></a>返回值
 
-返回的引用**CAutoVectorPtr\< T >**。
+返回对**CAutoVectorPtr\< T 的引用>**。
 
 ### <a name="remarks"></a>备注
 
-赋值运算符分离`CAutoVectorPtr`从任何当前指针的对象，并将附加的新指针*p*，在其原位置。
+赋值运算符从任何当前`CAutoVectorPtr`指针分离对象，并将新指针*p*将其附加在其位置。
 
-##  <a name="operator_t__star"></a>  CAutoVectorPtr::operator T *
+## <a name="cautovectorptroperator-t-"></a><a name="operator_t__star"></a>CAutoVectorPtr：运算符 T |
 
 强制转换运算符。
 
@@ -222,7 +222,7 @@ operator T*() const throw();
 
 ### <a name="remarks"></a>备注
 
-返回一个指向类模板中定义的对象数据类型。
+返回指向类模板中定义的对象数据类型的指针。
 
 ## <a name="see-also"></a>请参阅
 

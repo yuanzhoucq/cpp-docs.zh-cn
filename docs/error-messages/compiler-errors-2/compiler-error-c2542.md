@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2542
 ms.assetid: a984520d-f835-4cac-ac0e-7f1d5f5c6278
-ms.openlocfilehash: dc0f5abaed303ee5ccebb997cd706b411ebc4235
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f996a5ddf607a83512788bad0b16cf2eec2b4ef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364098"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202561"
 ---
 # <a name="compiler-error-c2542"></a>编译器错误 C2542
 
-identifier： 类对象已初始化没有构造函数
+"identifier"：类对象没有用于初始化的构造函数
 
 没有与初始化匹配的参数列表的构造函数。
 
-在初始化参数不正确可以导致此错误。
+如果初始化中的参数不正确，则可能导致此错误。

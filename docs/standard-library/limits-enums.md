@@ -6,15 +6,15 @@ f1_keywords:
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245359"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425609"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 枚举
 
-## <a name="float_denorm_style"></a> float_denorm_style
+## <a name="float_denorm_style"></a>float_denorm_style
 
 此枚举描述实现可以选择用于表示非标准化浮点值的各种方法，这种浮点值由于太小而无法表示为规范化值：
 
@@ -29,17 +29,17 @@ enum float_denorm_style {
 
 此枚举返回：
 
-- `denorm_indeterminate` 如果不能在转换时确定是否存在非规范化窗体。
+- 如果在翻译时无法确定是否存在非规范化窗体，则 `denorm_indeterminate`。
 
-- `denorm_absent` 如果不存在非规范化窗体。
+- 如果不存在非规范化窗体，则 `denorm_absent`。
 
-- `denorm_present` 如果存在非规范化窗体。
+- 如果存在非规范化窗体，则 `denorm_present`。
 
 ### <a name="example"></a>示例
 
 有关可访问此枚举的值的示例，请参阅 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)。
 
-## <a name="float_round_style"></a> float_round_style
+## <a name="float_round_style"></a>float_round_style
 
 此枚举描述实现可以选择用于将浮点值舍入为整数值的各种方法。
 
@@ -56,15 +56,15 @@ enum float_round_style {
 
 此枚举返回：
 
-- `round_indeterminate` 如果无法确定舍入方法。
+- 如果无法确定舍入方法，则 `round_indeterminate`。
 
-- `round_toward_zero` 如果向零舍入。
+- 如果向零舍入，则 `round_toward_zero`。
 
-- `round_to_nearest` 如果舍入到最接近的整数。
+- 如果舍入到最接近的整数，则 `round_to_nearest`。
 
-- `round_toward_infinity` 如果远离零方向舍入。
+- 如果从零开始舍入，则 `round_toward_infinity`。
 
-- `round_toward_neg_infinity` 如果舍入到更负整数。
+- 如果舍入为更大的负整数，则 `round_toward_neg_infinity`。
 
 ### <a name="example"></a>示例
 

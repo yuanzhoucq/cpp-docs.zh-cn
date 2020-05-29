@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级1） C4835
+title: 编译器警告（等级 1）C4835
 ms.date: 11/04/2016
 f1_keywords:
 - C4835
 helpviewer_keywords:
 - C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-ms.openlocfilehash: e59c8a7c9cdd9b892155a7d8ee8c8259324c2045
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: f86fcaea8a742c19ce175a453c06669178ed2145
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052310"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174851"
 ---
-# <a name="compiler-warning-level-1-c4835"></a>编译器警告（等级1） C4835
+# <a name="compiler-warning-level-1-c4835"></a>编译器警告（等级 1）C4835
 
 "variable"：在主机程序集中首次执行托管代码时，导出数据的初始值设定项将不会运行
 

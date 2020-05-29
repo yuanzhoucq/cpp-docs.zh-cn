@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c25c54e81bb9c10fc871a2abc178f57e661ae4e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316335"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335723"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 文档 (Visual C++)
 
@@ -27,21 +27,21 @@ ms.locfileid: "62316335"
 1. 在其类型声明和实现位于同一头文件的库中
 
 > [!NOTE]
->  在当前发布版本中，不在模板或包含模板类型的任何内容（例如将参数作为模板的函数）上处理代码注释。 添加此类注释将导致未定义的行为。
+> 在当前发布版本中，不在模板或包含模板类型的任何内容（例如将参数作为模板的函数）上处理代码注释。 添加此类注释将导致未定义的行为。
 
 若要详细了解如何创建带文档注释的 .xml 文件，请参阅以下主题。
 
-|有关以下内容的信息|查看|
+|有关以下方面的信息|查看|
 |---------------------------|---------|
 |要使用的编译器选项|[/doc](doc-process-documentation-comments-c-cpp.md)|
-|可用于在文档中提供常用功能的标记|[建议的文档注释标记](recommended-tags-for-documentation-comments-visual-cpp.md)|
+|可用于在文档中提供常用功能的标记|[文档注释的推荐标记](recommended-tags-for-documentation-comments-visual-cpp.md)|
 |编译器生成的用于标识代码中构造的 ID 字符串|[处理 .xml 文件](dot-xml-file-processing.md)|
 |如何分隔文档标记|[Visual C++ 文档标记的分隔符](delimiters-for-visual-cpp-documentation-tags.md)|
-|基于一个或多个 .xdc 文件生成 .xml 文件。|[XDCMake 参考](xdcmake-reference.md)|
+|基于一个或多个 .xdc 文件生成 .xml 文件。|[XDC 制造参考](xdcmake-reference.md)|
 |与 Visual Studio 功能区有关的 XML 相关信息的链接|[Visual Studio 中的 XML](/visualstudio/xml-tools/xml-tools-in-visual-studio)|
 
 如果需要在文档注释的文本中添加 XML 特殊字符，必须使用 XML 实体或 CDATA 节。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [适用于运行时平台的组件扩展](../../extensions/component-extensions-for-runtime-platforms.md)

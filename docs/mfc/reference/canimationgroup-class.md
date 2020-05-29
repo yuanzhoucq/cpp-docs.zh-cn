@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14ac32524436ff46449171ad90599e60f63dff2a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152065"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750150"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 类
 
-实现结合了动画情节提要、 动画对象和转换来定义动画的动画组。
+实现动画组，该动画组结合了动画情节提要、动画对象和过渡以定义动画。
 
 ## <a name="syntax"></a>语法
 
@@ -67,53 +67,53 @@ class CAnimationGroup;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationGroup::CAnimationGroup](#canimationgroup)|构造一个动画组。|
-|[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|析构函数。 当动画组被销毁时调用。|
+|[动画组：：动画组](#canimationgroup)|构造动画组。|
+|[动画组：*动画组](#_dtorcanimationgroup)|析构函数。 在销毁动画组时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationGroup::Animate](#animate)|对组进行动画处理。|
-|[CAnimationGroup::ApplyTransitions](#applytransitions)|适用于动画对象的转换。|
-|[CAnimationGroup::FindAnimationObject](#findanimationobject)|查找包含指定的动画变量的动画对象。|
-|[CAnimationGroup::GetGroupID](#getgroupid)|返回 GroupID。|
-|[CAnimationGroup::RemoveKeyframes](#removekeyframes)|删除并有选择地销毁所有属于组的动画的关键帧。|
-|[CAnimationGroup::RemoveTransitions](#removetransitions)|从属于组的动画的动画对象中删除转换。|
-|[CAnimationGroup::Schedule](#schedule)|计划在指定的时间的动画。|
-|[CAnimationGroup::SetAutodestroyTransitions](#setautodestroytransitions)|指示属于进行自动分组的所有动画对象都销毁转换。|
+|[动画组：动画](#animate)|为组设置动画。|
+|[动画组：：应用转换](#applytransitions)|将转换应用于动画对象。|
+|[动画组：：查找动画对象](#findanimationobject)|查找包含指定动画变量的动画对象。|
+|[动画组：：获取群体ID](#getgroupid)|返回组 ID。|
+|[动画组：：删除关键帧](#removekeyframes)|删除并选择性地销毁属于动画组的所有关键帧。|
+|[动画组：：删除转换](#removetransitions)|从属于动画组的动画对象中删除过渡。|
+|[动画组：：时间表](#schedule)|在指定时间安排动画。|
+|[动画组：：设置自动销毁转换](#setautodestroytransitions)|引导属于组的所有动画对象自动销毁过渡。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationGroup::AddKeyframes](#addkeyframes)|将关键帧添加到情节提要帮助器。|
-|[CAnimationGroup::AddTransitions](#addtransitions)|一个帮助程序，将转换添加到情节提要。|
-|[CAnimationGroup::CreateTransitions](#createtransitions)|一个帮助程序，创建 COM 转换对象。|
+|[动画组：：添加关键帧](#addkeyframes)|向情节提要添加关键帧的帮助程序。|
+|[动画组：：添加转换](#addtransitions)|向情节提要添加过渡的帮助程序。|
+|[动画组：：创建转换](#createtransitions)|创建 COM 转换对象的帮助程序。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|指定如何清除从属于组的动画对象的转换。 如果此成员为 TRUE，则会自动删除转换时已安排动画。 否则，您需要手动删除转换。|
-|[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|指定如何销毁动画对象。 如果此参数为 TRUE，则销毁组时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值是 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。|
-|[CAnimationGroup::m_bAutodestroyKeyframes](#m_bautodestroykeyframes)|指定要销毁的关键帧的方式。 如果此值为 TRUE，删除并销毁; 所有关键帧否则会从列表中只中删除。 默认值为 TRUE。|
-|[CAnimationGroup::m_lstAnimationObjects](#m_lstanimationobjects)|包含的动画对象的列表。|
-|[CAnimationGroup::m_lstKeyFrames](#m_lstkeyframes)|包含一系列关键帧。|
-|[CAnimationGroup::m_pStoryboard](#m_pstoryboard)|指向以动画情节提要。 此指针仅在调用上进行动画处理后才有效。|
+|[动画组：：m_bAutoclearTransitions](#m_bautocleartransitions)|指定如何清除属于组的动画对象的转换。 如果此成员为 TRUE，则在计划动画时会自动删除过渡。 否则，您需要手动删除过渡。|
+|[动画组：m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|指定如何销毁动画对象。 如果此参数为 TRUE，则在销毁组时将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值是 FALSE。 仅当属于组的所有动画对象都使用运算符 new 动态分配时，才将此值设置为 TRUE。|
+|[动画组：m_bAutodestroyKeyframes](#m_bautodestroykeyframes)|指定如何销毁关键帧。 如果此值为 TRUE，则删除并销毁所有关键帧;如果此值为 TRUE，则删除并销毁所有关键帧。否则，它们仅从列表中删除。 默认值为 TRUE。|
+|[动画组：：m_lstAnimationObjects](#m_lstanimationobjects)|包含动画对象的列表。|
+|[动画组：：m_lstKeyFrames](#m_lstkeyframes)|包含关键帧的列表。|
+|[动画组：：m_pStoryboard](#m_pstoryboard)|指向动画情节提要。 此指针仅在在 Animate 上调用后有效。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationGroup::m_nGroupID](#m_ngroupid)|动画组的唯一标识符。|
-|[CAnimationGroup::m_pParentController](#m_pparentcontroller)|指向此组所属的动画控制器的指针。|
+|[动画组：：m_nGroupID](#m_ngroupid)|动画组的唯一标识符。|
+|[动画组：：m_pParentController](#m_pparentcontroller)|指向此组所属的动画控制器的指针。|
 
 ## <a name="remarks"></a>备注
 
-动画组由动画控制器 (CAnimationController) 添加动画对象使用 CAnimationController::AddAnimationObject 时自动创建。 由 GroupID，通常会作为参数来操作动画组标识的动画组。 GroupID 取自被添加到新的动画组的第一个动画对象。 调用 CAnimationController::AnimateGroup，可以通过公共成员 m_pStoryboard 访问后，将创建封装的动画情节提要。
+当您使用 CAnimationController：：add 动画对象添加动画对象时，动画组由动画控制器 （CAnimationController） 自动创建。 动画组由 GroupID 标识，它通常被视为操作动画组的参数。 GroupID 取自添加到新动画组的第一个动画对象。 在调用 CAnimateController：：AnimateGroup 后，将创建一个封装的动画情节提要，并且可以通过公共成员m_pStoryboard访问。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -123,35 +123,35 @@ class CAnimationGroup;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup::~CAnimationGroup
+## <a name="canimationgroupcanimationgroup"></a><a name="_dtorcanimationgroup"></a>动画组：*动画组
 
-析构函数。 当动画组被销毁时调用。
+析构函数。 在销毁动画组时调用。
 
 ```
 ~CAnimationGroup();
 ```
 
-##  <a name="addkeyframes"></a>  CAnimationGroup::AddKeyframes
+## <a name="canimationgroupaddkeyframes"></a><a name="addkeyframes"></a>动画组：：添加关键帧
 
-将关键帧添加到情节提要帮助器。
+向情节提要添加关键帧的帮助程序。
 
-```
+```cpp
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pStoryboard*<br/>
+*板*<br/>
 指向情节提要 COM 对象的指针。
 
 *bAddDeep*<br/>
-指定是否应将此方法添加到依赖于其他关键帧的情节提要关键帧。
+指定此方法是否应添加到依赖于其他关键帧的情节提要关键帧。
 
-##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions
+## <a name="canimationgroupaddtransitions"></a><a name="addtransitions"></a>动画组：：添加转换
 
-一个帮助程序，将转换添加到情节提要。
+向情节提要添加过渡的帮助程序。
 
-```
+```cpp
 void AddTransitions(
     IUIAnimationStoryboard* pStoryboard,
     BOOL bDependOnKeyframes);
@@ -159,14 +159,14 @@ void AddTransitions(
 
 ### <a name="parameters"></a>参数
 
-*pStoryboard*<br/>
+*板*<br/>
 指向情节提要 COM 对象的指针。
 
-*bDependOnKeyframes*
+*bDependon 关键帧*
 
-##  <a name="animate"></a>  CAnimationGroup::Animate
+## <a name="canimationgroupanimate"></a><a name="animate"></a>动画组：动画
 
-对组进行动画处理。
+为组设置动画。
 
 ```
 BOOL Animate(
@@ -177,33 +177,33 @@ BOOL Animate(
 
 ### <a name="parameters"></a>参数
 
-*pManager*<br/>
+*p经理*<br/>
 *pTimer*
-*bScheduleNow*
+*b计划现在*
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 TRUE否则为 FALSE。
+如果方法成功，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法创建内部情节提要、 创建和应用转换和动画安排 bScheduleNow 为 TRUE。 如果 bScheduleNow 为 FALSE，您需要调用计划来启动动画在指定的时间。
+此方法创建内部情节提要，创建并应用过渡，并在 b-IsisNow 为 TRUE 时安排动画。 如果 bTimeisNow 是 FALSE，则需要调用计划才能在指定时间启动动画。
 
-##  <a name="applytransitions"></a>  CAnimationGroup::ApplyTransitions
+## <a name="canimationgroupapplytransitions"></a><a name="applytransitions"></a>动画组：：应用转换
 
-适用于动画对象的转换。
+将转换应用于动画对象。
 
-```
+```cpp
 void ApplyTransitions();
 ```
 
 ### <a name="remarks"></a>备注
 
-此方法断言在调试模式下，如果尚未创建情节提要。 它首先，创建所有转换，然后添加"静态"关键帧 （取决于的偏移量的关键帧），、 添加不依赖于关键帧的转换、 添加关键帧，具体取决于转换和其他关键帧，并且最后添加依赖于关键帧的转换.
+如果尚未创建情节提要，此方法 ASSERTS 处于调试模式。 它首先创建所有过渡，然后添加"静态"关键帧（依赖于偏移的关键帧），添加不依赖于关键帧的过渡，根据过渡和其他关键帧添加关键帧，最后添加依赖于关键帧的过渡。
 
-##  <a name="canimationgroup"></a>  CAnimationGroup::CAnimationGroup
+## <a name="canimationgroupcanimationgroup"></a><a name="canimationgroup"></a>动画组：：动画组
 
-构造一个动画组。
+构造动画组。
 
 ```
 CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
@@ -211,15 +211,15 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 
 ### <a name="parameters"></a>参数
 
-*pParentController*<br/>
-指向用于创建一组动画控制器的指针。
+*p 家长控制器*<br/>
+指向创建组的动画控制器的指针。
 
-*nGroupID*<br/>
-指定 GroupID。
+*n集团ID*<br/>
+指定组 ID。
 
-##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions
+## <a name="canimationgroupcreatetransitions"></a><a name="createtransitions"></a>动画组：：创建转换
 
-一个帮助程序，创建 COM 转换对象。
+创建 COM 转换对象的帮助程序。
 
 ```
 BOOL CreateTransitions();
@@ -227,11 +227,11 @@ BOOL CreateTransitions();
 
 ### <a name="return-value"></a>返回值
 
-TRUE 是此方法成功，否则为 FALSE。
+TRUE 是方法成功，否则 FALSE。
 
-##  <a name="findanimationobject"></a>  CAnimationGroup::FindAnimationObject
+## <a name="canimationgroupfindanimationobject"></a><a name="findanimationobject"></a>动画组：：查找动画对象
 
-查找包含指定的动画变量的动画对象。
+查找包含指定动画变量的动画对象。
 
 ```
 CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
@@ -239,16 +239,16 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 
 ### <a name="parameters"></a>参数
 
-*pVariable*<br/>
+*pvariable*<br/>
 指向动画变量的指针。
 
 ### <a name="return-value"></a>返回值
 
-动画对象或如果找不到动画对象，则为 NULL 的指针。
+指向动画对象的指针，如果未找到动画对象，则为 NULL。
 
-##  <a name="getgroupid"></a>  CAnimationGroup::GetGroupID
+## <a name="canimationgroupgetgroupid"></a><a name="getgroupid"></a>动画组：：获取群体ID
 
-返回 GroupID。
+返回组 ID。
 
 ```
 UINT32 GetGroupID() const;
@@ -258,47 +258,47 @@ UINT32 GetGroupID() const;
 
 组标识符。
 
-##  <a name="m_bautocleartransitions"></a>  CAnimationGroup::m_bAutoclearTransitions
+## <a name="canimationgroupm_bautocleartransitions"></a><a name="m_bautocleartransitions"></a>动画组：：m_bAutoclearTransitions
 
-指定如何清除从属于组的动画对象的转换。 如果此成员为 TRUE，则会自动删除转换时已安排动画。 否则，您需要手动删除转换。
+指定如何清除属于组的动画对象的转换。 如果此成员为 TRUE，则在计划动画时会自动删除过渡。 否则，您需要手动删除过渡。
 
 ```
 BOOL m_bAutoclearTransitions;
 ```
 
-##  <a name="m_bautodestroyanimationobjects"></a>  CAnimationGroup::m_bAutodestroyAnimationObjects
+## <a name="canimationgroupm_bautodestroyanimationobjects"></a><a name="m_bautodestroyanimationobjects"></a>动画组：m_bAutodestroyAnimationObjects
 
-指定如何销毁动画对象。 如果此参数为 TRUE，则销毁组时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值是 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。
+指定如何销毁动画对象。 如果此参数为 TRUE，则在销毁组时将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值是 FALSE。 仅当属于组的所有动画对象都使用运算符 new 动态分配时，才将此值设置为 TRUE。
 
 ```
 BOOL m_bAutodestroyAnimationObjects;
 ```
 
-##  <a name="m_bautodestroykeyframes"></a>  CAnimationGroup::m_bAutodestroyKeyframes
+## <a name="canimationgroupm_bautodestroykeyframes"></a><a name="m_bautodestroykeyframes"></a>动画组：m_bAutodestroyKeyframes
 
-指定要销毁的关键帧的方式。 如果此值为 TRUE，删除并销毁; 所有关键帧否则会从列表中只中删除。 默认值为 TRUE。
+指定如何销毁关键帧。 如果此值为 TRUE，则删除并销毁所有关键帧;如果此值为 TRUE，则删除并销毁所有关键帧。否则，它们仅从列表中删除。 默认值为 TRUE。
 
 ```
 BOOL m_bAutodestroyKeyframes;
 ```
 
-##  <a name="m_lstanimationobjects"></a>  CAnimationGroup::m_lstAnimationObjects
+## <a name="canimationgroupm_lstanimationobjects"></a><a name="m_lstanimationobjects"></a>动画组：：m_lstAnimationObjects
 
-包含的动画对象的列表。
+包含动画对象的列表。
 
 ```
 CObList m_lstAnimationObjects;
 ```
 
-##  <a name="m_lstkeyframes"></a>  CAnimationGroup::m_lstKeyFrames
+## <a name="canimationgroupm_lstkeyframes"></a><a name="m_lstkeyframes"></a>动画组：：m_lstKeyFrames
 
-包含一系列关键帧。
+包含关键帧的列表。
 
 ```
 CObList m_lstKeyFrames;
 ```
 
-##  <a name="m_ngroupid"></a>  CAnimationGroup::m_nGroupID
+## <a name="canimationgroupm_ngroupid"></a><a name="m_ngroupid"></a>动画组：：m_nGroupID
 
 动画组的唯一标识符。
 
@@ -306,7 +306,7 @@ CObList m_lstKeyFrames;
 UINT32 m_nGroupID;
 ```
 
-##  <a name="m_pparentcontroller"></a>  CAnimationGroup::m_pParentController
+## <a name="canimationgroupm_pparentcontroller"></a><a name="m_pparentcontroller"></a>动画组：：m_pParentController
 
 指向此组所属的动画控制器的指针。
 
@@ -314,41 +314,41 @@ UINT32 m_nGroupID;
 CAnimationController* m_pParentController;
 ```
 
-##  <a name="m_pstoryboard"></a>  CAnimationGroup::m_pStoryboard
+## <a name="canimationgroupm_pstoryboard"></a><a name="m_pstoryboard"></a>动画组：：m_pStoryboard
 
-指向以动画情节提要。 此指针仅在调用上进行动画处理后才有效。
+指向动画情节提要。 此指针仅在在 Animate 上调用后有效。
 
 ```
 ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 ```
 
-##  <a name="removekeyframes"></a>  CAnimationGroup::RemoveKeyframes
+## <a name="canimationgroupremovekeyframes"></a><a name="removekeyframes"></a>动画组：：删除关键帧
 
-删除并有选择地销毁所有属于组的动画的关键帧。
+删除并选择性地销毁属于动画组的所有关键帧。
 
-```
+```cpp
 void RemoveKeyframes();
 ```
 
 ### <a name="remarks"></a>备注
 
-如果 m_bAutodestroyKeyframes 成员为 TRUE，则删除关键帧并将其销毁，否则从关键帧的内部列表只是删除关键帧。
+如果m_bAutodestroyKeyframes成员为 TRUE，则关键帧将被删除并销毁，否则关键帧将仅从关键帧的内部列表中删除。
 
-##  <a name="removetransitions"></a>  CAnimationGroup::RemoveTransitions
+## <a name="canimationgroupremovetransitions"></a><a name="removetransitions"></a>动画组：：删除转换
 
-从属于组的动画的动画对象中删除转换。
+从属于动画组的动画对象中删除过渡。
 
-```
+```cpp
 void RemoveTransitions();
 ```
 
 ### <a name="remarks"></a>备注
 
-如果 m_bAutoclearTransitions 标志设置为 TRUE，此方法将循环属于的组的所有动画对象，并调用 CAnimationObject::ClearTransitions(FALSE)。
+如果m_bAutoclearTransitions标志设置为 TRUE，则此方法将循环访问属于该组的所有动画对象，并调用 CAnimationObject：：：清除转换（FALSE）。
 
-##  <a name="schedule"></a>  CAnimationGroup::Schedule
+## <a name="canimationgroupschedule"></a><a name="schedule"></a>动画组：：时间表
 
-计划在指定的时间的动画。
+在指定时间安排动画。
 
 ```
 BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
@@ -360,32 +360,32 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 指向动画计时器的指针。
 
 *time*<br/>
-指定调度动画的时间。
+指定计划动画的时间。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 TRUEFALSE 如果方法失败或如果进行动画处理尚未调用与 bScheduleNow 设置为 FALSE。
+如果方法成功，则为 TRUE;如果方法失败或 Animate 尚未调用，则使用 b-计划现在设置为 FALSE，则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可计划在指定的时间的动画。 必须首先设置为 FALSE 的 bScheduleNow 与调用进行动画处理。
+调用此函数以在指定时间安排动画。 您必须先将 b-计划现在设置为 FALSE 的 Animate。
 
-##  <a name="setautodestroytransitions"></a>  CAnimationGroup::SetAutodestroyTransitions
+## <a name="canimationgroupsetautodestroytransitions"></a><a name="setautodestroytransitions"></a>动画组：：设置自动销毁转换
 
-指示属于进行自动分组的所有动画对象都销毁转换。
+引导属于组的所有动画对象自动销毁过渡。
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```
 
 ### <a name="parameters"></a>参数
 
-*bAutoDestroy*<br/>
+*bAuto销毁*<br/>
 指定如何销毁转换。
 
 ### <a name="remarks"></a>备注
 
-将此值设置为 FALSE，仅当分配在堆栈上的转换。 默认值为 TRUE，因此强烈建议分配使用 new 运算符的转换对象。
+仅当在堆栈上分配过渡时，才将此值设置为 FALSE。 默认值为 TRUE，因此强烈建议使用运算符 new 分配过渡对象。
 
 ## <a name="see-also"></a>请参阅
 

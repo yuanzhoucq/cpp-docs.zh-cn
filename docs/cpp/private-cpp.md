@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
-ms.openlocfilehash: 19ea551f625cac02e639753a976eddb7a5fa164b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d6dc1ca309c096a4f5e857ade3d7550749991f3f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366202"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -25,22 +25,22 @@ private base-class
 
 ## <a name="remarks"></a>备注
 
-在前面的类成员的列表时**专用**关键字指定这些成员是只能从成员函数和类的友元访问。 这适用于声明到下一个访问指示符或类的末尾的所有成员。
+在类成员列表之前，**私有**关键字指定这些成员只能从类的成员函数和朋友访问。 这适用于声明到下一个访问指示符或类的末尾的所有成员。
 
-当基类名称前面**专用**关键字指定基类的公共和受保护成员为派生类的私有成员。
+在基类名称之前，**私有**关键字指定基类的公共和受保护成员是派生类的私有成员。
 
 类中成员的默认访问是私有的。 结构或联合中成员的默认访问是公共的。
 
 基类的默认访问对于类是私有的，而对于结构是公共的。  联合不能具有基类。
 
-有关相关信息，请参阅[友元](../cpp/friend-cpp.md)，[公共](../cpp/public-cpp.md)，[保护](../cpp/protected-cpp.md)，和中的成员访问表[控制对类成员访问](member-access-control-cpp.md).
+有关相关信息，请参阅[控制对类成员的访问](member-access-control-cpp.md)中[的朋友](../cpp/friend-cpp.md)、[公共](../cpp/public-cpp.md)、[受保护](../cpp/protected-cpp.md)和成员访问表。
 
 ## <a name="clr-specific"></a>/clr 专用
 
-在 CLR 类型中，C++访问说明符关键字 (**公共**，**专用**，并**保护**) 可能会影响的类型和方法与程序集相关的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。
+在 CLR 类型中，C++访问指定器关键字（**公共**、**私有**和**受保护**）可能会影响类型和方法对程序集的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。
 
 > [!NOTE]
->  使用文件编译[/LN](../build/reference/ln-create-msil-module.md)不受此行为。 在这种情况下，所有托管类（公共或私有）都将可见。
+> 使用[/LN](../build/reference/ln-create-msil-module.md)编译的文件不受此行为的影响。 在这种情况下，所有托管类（公共或私有）都将可见。
 
 ## <a name="end-clr-specific"></a>END /clr 专用
 
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [控制对类成员的访问](member-access-control-cpp.md)<br/>
-[关键字](../cpp/keywords-cpp.md)
+[Keywords](../cpp/keywords-cpp.md)

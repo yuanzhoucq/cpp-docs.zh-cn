@@ -1,8 +1,9 @@
 ---
 title: _locking
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _locking
+- _o__locking
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1c211ffaa63a0e4711374b01b0530ed8db20dfb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953271"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911539"
 ---
 # <a name="_locking"></a>_locking
 
@@ -54,7 +56,7 @@ int _locking(
 *fd*<br/>
 文件描述符。
 
-*模式*<br/>
+*mode*<br/>
 要执行的锁定操作
 
 *nbytes*<br/>
@@ -68,7 +70,7 @@ int _locking(
 |-|-|
 | **EACCES** | 锁定冲突（文件已锁定或已解锁）。 |
 | **EBADF** | 无效的文件描述符。 |
-| **EDEADLOCK** | 锁定冲突。 当指定了 **_LK_LOCK**或 **_LK_RLCK**标志并且文件在10次尝试后无法锁定时返回。 |
+| **EDEADLOCK** | 锁定冲突。 当指定 **_LK_LOCK**或 **_LK_RLCK**标志并且文件在10次尝试后无法锁定时返回。 |
 | **EINVAL** | 为 **_locking**提供的参数无效。 |
 
 如果失败是由错误参数导致，如无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
@@ -89,13 +91,15 @@ int _locking(
 
 可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 **_locking**不会合并相邻区域;如果两个锁定区域相邻，则必须单独解锁每个区域。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h 1> 和 \<sys/locking.h 1>|\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -166,7 +170,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>

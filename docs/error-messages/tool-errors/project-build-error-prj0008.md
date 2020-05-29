@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
-ms.openlocfilehash: 5741b7ef8cb9a7ae53d64874d3531e9271c09e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d1c11ab7539f25d371c0bfbd2853b6155c9661c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359483"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192947"
 ---
 # <a name="project-build-error-prj0008"></a>项目生成错误 PRJ0008
 
-无法删除文件 file。
+无法删除文件 "file"。
 
-**请确保文件未被另一个进程打开并且未被写保护。**
+**请确保该文件未被其他进程打开并且未被写保护。**
 
-在重新生成或清理，但 VisualC++删除所有已知中间文件和输出文件的生成，以及符合中的通配符规范的任何文件**删除的扩展插件**中的属性[常规配置设置属性页](../../build/reference/general-property-page-project.md)。
+在重新生成或清理过程中C++ ，视觉对象将删除生成的所有已知中间文件和输出文件，以及在 "[常规配置设置" 属性页](../../build/reference/general-property-page-project.md)中的 "**清理时要删除的扩展**" 属性中满足通配符规范的任何文件。
 
-你将看到此错误，如果 VisualC++不能删除文件。 若要解决此错误，使该文件，其目录可写在生成的用户。
+如果视觉对象C++无法删除文件，则会看到此错误。 若要解决此错误，请为执行生成的用户将文件及其目录设置为可写。

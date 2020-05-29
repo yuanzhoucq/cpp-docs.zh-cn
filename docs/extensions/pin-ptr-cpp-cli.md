@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516492"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172030"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 声明固定指针，此指针仅适用于公共语言运行时。
 
@@ -39,12 +39,12 @@ ms.locfileid: "65516492"
 [cli::]pin_ptr<cv_qualifiertype>var = &initializer;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 cv_qualifier<br/>
 const 或 volatile 限定符。 默认情况下，固定指针为 volatile。 将固定指针声明为 volatile 虽是多余做法，但并不是错误做法。
 
-*type*<br/>
+type<br/>
 初始值设定项的类型。
 
 *var*<br/>
@@ -89,7 +89,7 @@ pin_ptr 位于 `cli` 命名空间中。 有关详细信息，请参阅[平台默
 
 若要详细了解内部指针，请参阅 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)。
 
-若要详细了解固定指针，请参阅[操作说明：固定指针和数组](how-to-pin-pointers-and-arrays.md)，以及[操作说明：声明固定指针和值类型](how-to-declare-pinning-pointers-and-value-types.md)。
+有关固定指针的详细信息，请参阅[如何：固定指针和数组](how-to-pin-pointers-and-arrays.md)和[如何：声明钉住指针和值类型](how-to-declare-pinning-pointers-and-value-types.md)。
 
 ### <a name="requirements"></a>要求
 

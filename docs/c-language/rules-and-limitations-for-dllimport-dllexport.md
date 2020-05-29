@@ -7,19 +7,19 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
 ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158417"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport 的规则和限制
 
 **Microsoft 专用**
 
-- 如果声明没有 dllimport 或 `dllexport` 特性的函数，则该函数不被视为 DLL 接口的一部分。 因此，函数的定义必须存在于该模块或同一程序的另一个模块中。 若要使函数成为 DLL 接口的一部分，您必须将其他模块中函数的定义声明为 `dllexport`。 否则，在构建客户端时，将生成链接器错误。
+- 如果声明没有 dllimport  或 `dllexport` 特性的函数，则该函数不被视为 DLL 接口的一部分。 因此，函数的定义必须存在于该模块或同一程序的另一个模块中。 若要使函数成为 DLL 接口的一部分，您必须将其他模块中函数的定义声明为 `dllexport`。 否则，在构建客户端时，将生成链接器错误。
 
-- 如果程序中的单个模块包含同一函数的 dllimport 和 `dllexport` 声明，则 `dllexport` 特性将优先于 dllimport 特性。 但是，会生成编译器警告。 例如:
+- 如果程序中的单个模块包含同一函数的 dllimport  和 `dllexport` 声明，则 `dllexport` 特性将优先于 dllimport  特性。 但是，会生成编译器警告。 例如：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -31,7 +31,7 @@ ms.locfileid: "56150553"
 
     ```
 
-- 无法利用使用 dllimport 特性声明的数据对象的地址初始化静态数据指针。 例如，下面的代码将生成错误：
+- 无法利用使用 dllimport  特性声明的数据对象的地址初始化静态数据指针。 例如，下面的代码将生成错误：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -50,7 +50,7 @@ ms.locfileid: "56150553"
 
     ```
 
-- 利用使用 dllimport 声明的函数的地址初始化静态函数指针可将指针设置为 DLL 导入形式转换 (thunk) 的地址（将控制权转交给函数的代码存根）而不是函数的地址。 此赋值不生成错误消息：
+- 利用使用 dllimport  声明的函数的地址初始化静态函数指针可将指针设置为 DLL 导入形式转换 (thunk) 的地址（将控制权转交给函数的代码存根）而不是函数的地址。 此赋值不生成错误消息：
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -69,7 +69,7 @@ ms.locfileid: "56150553"
 
     ```
 
-- 由于包含对象声明中的 `dllexport` 特性的程序必须为该对象提供定义，因此您可以利用 `dllexport` 函数的地址初始化全局或局部静态函数指针。 同样，您可以利用 `dllexport` 数据对象的地址初始化全局或局部静态数据指针。 例如:
+- 由于包含对象声明中的 `dllexport` 特性的程序必须为该对象提供定义，因此您可以利用 `dllexport` 函数的地址初始化全局或局部静态函数指针。 同样，您可以利用 `dllexport` 数据对象的地址初始化全局或局部静态数据指针。 例如：
 
     ```
     #define DllImport   __declspec( dllimport )

@@ -6,32 +6,32 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec59ccc0cbd48fc3114eb2dc0833dd3dd65691de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396387"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364673"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控件：添加常用方法
 
-常用的方法不同于自定义方法，它已经由类实现[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含支持为您的控件的 Refresh 方法的预定义的成员函数。 此常用的方法的调度映射项是 DISP_STOCKFUNC_REFRESH。
+stock 方法不同于自定义方法，因为它已经由类[COleControl](../mfc/reference/colecontrol-class.md)实现。 例如，`COleControl`包含支持控件的刷新方法的预定义成员函数。 此库存方法的调度映射条目DISP_STOCKFUNC_REFRESH。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一种不应用于新开发的传统技术。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
 
-`COleControl` 支持两种常用方法：DoClick 和刷新。 控件的用户，以立即更新控件的外观; 调用刷新DoClick 调用以引发该控件的 Click 事件。
+`COleControl`支持两种库存方法：DoClick 和刷新。 控件的用户调用刷新以立即更新控件的外观;调用 DoClick 以触发控件的单击事件。
 
 |方法|调度映射条目|注释|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|触发 Click 事件。|
-|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|将立即更新控件的外观。|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK）**|触发单击事件。|
+|`Refresh`|**DISP_STOCKPROP_REFRESH）**|立即更新控件的外观。|
 
-##  <a name="_core_adding_a_stock_method_using_classwizard"></a> 添加常用方法使用添加方法向导
+## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a>使用添加方法向导添加库存方法
 
-添加常用方法是简单使用[添加方法向导](../ide/add-method-wizard.md)。 以下过程演示如何将刷新方法添加到使用 MFC ActiveX 控件向导创建的控件。
+使用[添加方法向导](../ide/add-method-wizard.md)添加库存方法非常简单。 以下过程演示了将刷新方法添加到使用 MFC ActiveX 控制向导创建的控件。
 
-#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>若要添加股票刷新方法使用添加方法向导
+#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>使用添加方法向导添加库存刷新方法
 
 1. 加载控件的项目。
 
@@ -39,28 +39,28 @@ ms.locfileid: "62396387"
 
 1. 右键单击控件的接口节点（库节点的第二个节点）以打开快捷菜单。
 
-1. 从快捷菜单中，单击**外**，然后单击**添加方法**。
+1. 在快捷菜单中，单击"**添加**"，然后单击"**添加方法**"。
 
-   这将打开添加方法向导。
+   这将打开"添加方法向导"。
 
-1. 在中**方法名称**框中，单击**刷新**。
+1. 在 **"方法名称"** 框中，单击 **"刷新**"。
 
-1. 单击 **“完成”**。
+1. 单击“完成”  。
 
-##  <a name="_core_classwizard_changes_for_stock_methods"></a> 添加方法向导正在更改的常用方法
+## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a>添加库存方法的方法向导更改
 
-常用的 Refresh 方法支持的控件的基类，因为**添加方法向导**不会更改控件的类声明，以任何方式。 它将添加到控件的调度映射和方法的条目及其。IDL 文件。 将以下行添加到控件的调度映射，位于它的实现 (。CPP) 文件：
+由于控件的基类支持股票刷新方法，**因此 Add 方法向导**不会以任何方式更改控件的类声明。 它将该方法的条目添加到控件的调度映射及其 。IDL 文件。 以下行将添加到控件的调度映射中，位于其实现 （中。CPP） 文件：
 
 [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]
 
-这使刷新方法可供该控件的用户。
+这使刷新方法可供控件的用户使用。
 
-以下行添加到控件的。IDL 文件：
+以下行将添加到控件的 。IDL 文件：
 
 [!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_2.idl)]
 
-此行将刷新方法分配特定的 ID 号。
+此行为刷新方法指定特定的 ID 号。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+[MFC 活动X控制](../mfc/mfc-activex-controls.md)

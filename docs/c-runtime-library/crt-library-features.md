@@ -1,8 +1,6 @@
 ---
 title: CRT 库功能
 ms.date: 08/20/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767686"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438551"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -33,14 +31,14 @@ ms.locfileid: "58767686"
 
 C 运行时库 (CRT) 是集成了 ISO C99 标准库的 C++ 标准库。 实现 CRT 的 Visual C++ 库支持用于 .NET 开发的本机代码开发以及本机和托管混合代码。 所有版本的 CRT 都支持多线程开发。 大多数的库都支持通过静态链接将库直接链接到代码中，或通过动态链接让代码使用常用 DLL 文件。
 
-从 Visual Studio 2015 开始，CRT 已被重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 及更高版本支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)。
+从 Visual Studio 2015 开始，CRT 已被重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 及更高版本支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅[重新分发 Visual C++ 文件](../windows/redistributing-visual-cpp-files.md)。
 
 下表列出了实现 UCRT 的库。
 
 |库|关联的 DLL|特征|选项|预处理器指令|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libucrt.lib|None|将 UCRT 静态链接到你的代码。|**/MT**|_MT|
-|libucrtd.lib|None|用于静态链接的 UCRT 调试版本。 不可再发行。|**/MTd**|_DEBUG, _MT|
+|libucrt.lib|无|将 UCRT 静态链接到你的代码。|**/MT**|_MT|
+|libucrtd.lib|无|用于静态链接的 UCRT 调试版本。 不可再发行。|**/MTd**|_DEBUG, _MT|
 |ucrt.lib|ucrtbase.dll|UCRT 的 DLL 导入库。|**/MD**|_MT, _DLL|
 |ucrtd.lib|ucrtbased.dll|UCRT 调试版本的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
 
@@ -50,8 +48,8 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 |库|关联的 DLL|特征|选项|预处理器指令|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libvcruntime.lib|None|静态链接到你的代码。|**/MT**|_MT|
-|libvcruntimed.lib|None|用于静态链接的调试版本。 不可再发行。|**/MTd**|_MT, _DEBUG|
+|libvcruntime.lib|无|静态链接到你的代码。|**/MT**|_MT|
+|libvcruntimed.lib|无|用于静态链接的调试版本。 不可再发行。|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<version>.dll|vcruntime 的 DLL 导入库。|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|调试 vcruntime 的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
 
@@ -79,7 +77,7 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 由于通过链接到静态 CRT 构建的 DLL 将具有其自己的 CRT 状态，因此不建议以静态方式链接到 DLL 中的 CRT，除非特别需要和需了解这一后果。 例如，如果在加载 DLL（链接到其自己的静态 CRT）的可执行文件中调用 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) ，则转换器将不会捕获由 DLL 中的代码生成的任何硬件异常，但会捕获由主可执行文件中的代码生成的硬件异常。
 
-如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（**/MD** 或 **/MDd**）。 纯托管的 CRT 库在 Visual Studio 2015 中已弃用并在 Visual Studio 2017 中不受支持。
+如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（ **/MD** 或 **/MDd**）。 纯托管的 CRT 库在 Visual Studio 2015 中已弃用并在 Visual Studio 2017 中不受支持。
 
 有关将 CRT 与 **/clr** 配合使用的详细信息，请参阅[混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)。
 
@@ -96,7 +94,7 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 |libcpmtd.lib|多线程, 静态链接|**/MTd**|_DEBUG, _MT|
 |msvcprtd.lib|多线程动态链接（MSVCPversionD.DLL 的导入库）|**/MDd**|_DEBUG, _MT, _DLL|
 
-当构建项目的发行版时，默认情况下，将链接其中一个基本 C 运行时库（libcmt.lib、msvcmrt.lib、msvcrt.lib），具体取决于你选择的编译器选项（多线程、DLL、/clr)。 如果在代码中包含其中一个 [C++ 标准库标头文件](../standard-library/cpp-standard-library-header-files.md)，则将在编译时通过 Visual C++ 自动链接 C++ 标准库。 例如:
+当构建项目的发行版时，默认情况下，将链接其中一个基本 C 运行时库（libcmt.lib、msvcmrt.lib、msvcrt.lib），具体取决于你选择的编译器选项（多线程、DLL、/clr)。 如果在代码中包含其中一个 [C++ 标准库标头文件](../standard-library/cpp-standard-library-header-files.md)，则将在编译时通过 Visual C++ 自动链接 C++ 标准库。 例如：
 
 ```cpp
 #include <ios>
@@ -114,6 +112,6 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 如果程序跨 DLL 边界传递某些 CRT 资源（如文件句柄、区域设置和环境变量），即便使用的是相同版本的 CRT，那也需要注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)

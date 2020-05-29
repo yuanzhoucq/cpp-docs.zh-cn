@@ -6,22 +6,21 @@ f1_keywords:
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
 - IDBCreateCommandImpl.CreateCommand
-- CreateCommand
 - IDBCreateCommandImpl::CreateCommand
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210712"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 类
 
-提供的实现[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))接口。
+提供[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -31,13 +30,13 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
    : public IDBCreateCommand
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-会话对象派生自`IDBCreateCommandImpl`。
+派生自 `IDBCreateCommandImpl`的会话对象。
 
 *CommandClass*<br/>
-命令类。
+Command 类。
 
 ## <a name="requirements"></a>要求
 
@@ -53,9 +52,9 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 ## <a name="remarks"></a>备注
 
-要获取新的命令的会话对象上一可选接口。
+用于获取新命令的 session 对象上的可选接口。
 
-## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl：： CreateCommand
 
 创建新的命令并返回所请求的接口。
 
@@ -67,17 +66,17 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
    IUnknown ** ppvCommand);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IDBCreateCommand：： CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 。
 
-某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBCreateCommand::CreateCommand`:
+一些参数对应于*OLE DB 程序员的*不同名称的引用参数，如 `IDBCreateCommand::CreateCommand`中所述：
 
-|OLE DB 模板参数|*OLE DB 程序员参考*参数|
+|OLE DB 模板参数|*OLE DB 程序员引用*参数|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

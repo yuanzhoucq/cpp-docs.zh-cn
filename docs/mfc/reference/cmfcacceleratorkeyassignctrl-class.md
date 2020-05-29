@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
 - CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
-ms.openlocfilehash: 5e57bf149fdbc293692c613afcabcf2d11d32221
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2021a2069885c6314859a65d528cf03712c524b6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505470"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751731"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 类
 
-`CMFCAcceleratorKeyAssignCtrl`类扩展 [CEdit](../../mfc/reference/cedit-class.md) 类以支持额外的系统按钮，如 ALT、CONTROL 和 SHIFT。
+该`CMFCAcceleratorKeyAssignCtrl`类扩展[了 CEdit 类](../../mfc/reference/cedit-class.md)，以支持额外的系统按钮，如 ALT、CONTROL 和 SHIFT。
 
 ## <a name="syntax"></a>语法
 
@@ -39,25 +39,25 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl](#cmfcacceleratorkeyassignctrl)|构造 `CMFCAcceleratorKeyAssignCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|检索 `CMFCAcceleratorKeyAssignCtrl` 对象中按下的快捷键的 `ACCEL` 结构。|
+|[CMFC加速器键分配Ctrl：：GetAccel](#getaccel)|检索 `CMFCAcceleratorKeyAssignCtrl` 对象中按下的快捷键的 `ACCEL` 结构。|
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|确定是否已定义快捷键。|
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) Windows 函数之前，由 [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|类[CWinApp](../../mfc/reference/cwinapp-class.md)在窗口消息发送到[翻译消息](/windows/win32/api/winuser/nf-winuser-translatemessage)和[调度消息](/windows/win32/api/winuser/nf-winuser-dispatchmessage)窗口功能之前，用于转换窗口消息。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|重置快捷键。|
 
 ## <a name="remarks"></a>备注
 
-此类通过支持快捷键（也称为加速键）来扩展 `CEdit` 类的功能。 `CMFCAcceleratorKeyAssignCtrl`类充当 [CEdit](../../mfc/reference/cedit-class.md) 类，还可以识别系统按钮。
+此类通过支持快捷键（也称为加速键）来扩展 `CEdit` 类的功能。 该`CMFCAcceleratorKeyAssignCtrl`类作为[CEdit 类](../../mfc/reference/cedit-class.md)运行，还可以识别系统按钮。
 
-此类会将物理快捷键组合映射到字符串值。 例如，假定键组合 ALT + B 映射到字符串“Alt + B”。 当用户按下 `CMFCAcceleratorKeyAssignCtrl` 对象中的此键组合时，会向用户显示“Alt + B”。 有关快捷键和字符串格式之间映射的详细信息，请参阅[CMFCAcceleratorKey 类](../../mfc/reference/cmfcacceleratorkey-class.md)。
+此类会将物理快捷键组合映射到字符串值。 例如，假定键组合 ALT + B 映射到字符串“Alt + B”。 当用户按下 `CMFCAcceleratorKeyAssignCtrl` 对象中的此键组合时，会向用户显示“Alt + B”。 有关快捷键和字符串格式之间的映射的详细信息，请参阅[CMFC加速器密钥类](../../mfc/reference/cmfcacceleratorkey-class.md)。
 
 ## <a name="example"></a>示例
 
@@ -79,19 +79,19 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxacceleratorkeyassignctrl
+**标题：** afx加速器键分配.h
 
-##  <a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl：： CMFCAcceleratorKeyAssignCtrl
+## <a name="cmfcacceleratorkeyassignctrlcmfcacceleratorkeyassignctrl"></a><a name="cmfcacceleratorkeyassignctrl"></a>CMFC加速器密钥分配Ctrl：：CMFC加速器键分配Ctrl
 
-构造[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)对象。
+构造[CMFC 加速器KeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)对象。
 
 ```
 CMFCAcceleratorKeyAssignCtrl();
 ```
 
-##  <a name="getaccel"></a>CMFCAcceleratorKeyAssignCtrl：： GetAccel
+## <a name="cmfcacceleratorkeyassignctrlgetaccel"></a><a name="getaccel"></a>CMFC加速器键分配Ctrl：：GetAccel
 
-检索在[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)对象中按下的快捷键的结构。`ACCEL`
+检索在`ACCEL`[CMFC 加速器KeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)对象中按下的快捷键的结构。
 
 ```
 ACCEL const* GetAccel() const;
@@ -99,15 +99,15 @@ ACCEL const* GetAccel() const;
 
 ### <a name="return-value"></a>返回值
 
-描述快捷键的结构。 `ACCEL`
+描述`ACCEL`快捷键的结构。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可检索`ACCEL`用户输入`CMFCAcceleratorKeyAssignCtrl`到对象中的快捷键的结构。
+使用此函数可以检索用户输入`ACCEL`到`CMFCAcceleratorKeyAssignCtrl`对象的快捷键的结构。
 
-##  <a name="isfocused"></a>CMFCAcceleratorKeyAssignCtrl：： IsFocused
+## <a name="cmfcacceleratorkeyassignctrlisfocused"></a><a name="isfocused"></a>CMFC加速器密钥分配Ctrl：：聚焦
 
-有关更多详细信息，请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 BOOL IsFocused() const;
@@ -117,9 +117,9 @@ BOOL IsFocused() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="iskeydefined"></a>CMFCAcceleratorKeyAssignCtrl：： IsKeyDefined
+## <a name="cmfcacceleratorkeyassignctrliskeydefined"></a><a name="iskeydefined"></a>CMFC加速器密钥分配Ctrl：：IsKey定义
 
-确定是否已在[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)对象中定义快捷键。
+确定是否已在[CMFC 加速器KeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)对象中定义快捷键。
 
 ```
 BOOL IsKeyDefined() const;
@@ -127,15 +127,15 @@ BOOL IsKeyDefined() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户已经按了定义快捷键的有效键组合，则为非零值;否则为0。
+如果用户已按下定义快捷键的有效键组合，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可确定用户是否在`CMFCAcceleratorKeyAssignCtrl`对象中输入了有效的快捷键。 如果快捷键存在，可以使用[CMFCAcceleratorKeyAssignCtrl：： GetAccel](#getaccel)方法获取与此快捷键关联的`ACCEL`结构。
+使用此函数可确定用户是否在对象`CMFCAcceleratorKeyAssignCtrl`中输入了有效的快捷键。 如果存在快捷键，则可以使用[CMFCFc 加速器KeyAssignCtrl：getAccel](#getaccel)方法获取与此快捷键`ACCEL`关联的结构。
 
-##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage
+## <a name="cmfcacceleratorkeyassignctrlpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFC加速器键分配Ctrl：:P重新翻译消息
 
-有关更多详细信息，请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -143,26 +143,26 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>参数
 
-中*pMsg*<br/>
+[在]*pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="resetkey"></a>CMFCAcceleratorKeyAssignCtrl：： ResetKey
+## <a name="cmfcacceleratorkeyassignctrlresetkey"></a><a name="resetkey"></a>CMFC加速器密钥分配Ctrl：：重置键
 
 重置快捷键。
 
-```
+```cpp
 void ResetKey();
 ```
 
 ### <a name="remarks"></a>备注
 
-函数清除编辑控件文本。 这包括用户按下的任何快捷键。
+该函数清除编辑控制文本。 这包括用户按下的任何快捷键。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCAcceleratorKey 类](../../mfc/reference/cmfcacceleratorkey-class.md)
+[CMFC加速器密钥类](../../mfc/reference/cmfcacceleratorkey-class.md)

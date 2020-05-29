@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398183"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213806"
 ---
 # <a name="make-function"></a>Make 函数
 
-初始化指定的 Windows 运行时类。 使用此函数实例化同一个模块中定义的组件。
+初始化指定的 Windows 运行时类。 使用此函数实例化在同一模块中定义的组件。
 
 ## <a name="syntax"></a>语法
 
@@ -162,79 +162,79 @@ template <
 ComPtr<T> Make();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-用户指定的类，该类继承`WRL::RuntimeClass`。
+继承自 `WRL::RuntimeClass`的用户指定的类。
 
 *TArg1*<br/>
-传递到指定的运行时类的参数 1 的类型。
+传递到指定的运行时类的参数1的类型。
 
 *TArg2*<br/>
-传递到指定的运行时类的参数 2 的类型。
+传递到指定的运行时类的参数2的类型。
 
 *TArg3*<br/>
-传递到指定的运行时类的参数 3 的类型。
+传递到指定的运行时类的参数3的类型。
 
 *TArg4*<br/>
-传递到指定的运行时类的参数 4 的类型。
+传递到指定的运行时类的参数4的类型。
 
 *TArg5*<br/>
-参数 5 传递到指定的运行时类的类型。
+传递到指定的运行时类的参数5的类型。
 
 *TArg6*<br/>
-自 6 变量传递给指定的运行时类的类型。
+传递到指定的运行时类的参数6的类型。
 
 *TArg7*<br/>
-7 传递给自变量指定的运行时类的类型。
+传递到指定的运行时类的参数7的类型。
 
 *TArg8*<br/>
-8 传递给自变量指定的运行时类的类型。
+传递到指定的运行时类的参数8的类型。
 
 *TArg9*<br/>
-参数 9，传递到指定的运行时类的类型。
+传递到指定的运行时类的参数9的类型。
 
 *arg1*<br/>
-传递到指定的运行时类的参数 1。
+参数1，传递到指定的运行时类。
 
 *arg2*<br/>
-传递到指定的运行时类的参数 2。
+参数2，传递到指定的运行时类。
 
 *arg3*<br/>
-传递到指定的运行时类的参数 3。
+参数3，传递到指定的运行时类。
 
 *arg4*<br/>
-传递到指定的运行时类的参数 4。
+参数4，传递到指定的运行时类。
 
 *arg5*<br/>
-参数传递到指定的运行时类 5。
+参数5传递到指定的运行时类。
 
 *arg6*<br/>
-参数传递到指定的运行时类 6。
+参数6传递到指定的运行时类。
 
 *arg7*<br/>
-参数传递到指定的运行时类 7。
+传递到指定的运行时类的参数7。
 
 *arg8*<br/>
-参数传递到指定的运行时类 8。
+参数8，传递到指定的运行时类。
 
 *arg9*<br/>
-参数传递到指定的运行时类 9。
+传递到指定的运行时类的参数9。
 
 ## <a name="return-value"></a>返回值
 
-一个`ComPtr<T>`对象，如果成功; 否则为`nullptr`。
+如果成功，则为 `ComPtr<T>` 对象;否则，`nullptr`。
 
 ## <a name="remarks"></a>备注
 
-请参阅[如何：实例化 WRL 组件直接](how-to-instantiate-wrl-components-directly.md)若要了解此函数之间的差异并[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)，和示例。
+有关示例，请参阅[如何：直接实例化 WRL 组件](how-to-instantiate-wrl-components-directly.md)来了解此函数与[MICROSOFT：： WRL：:D Etails：： MakeAndInitialize](makeandinitialize-function.md)之间的差异。
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

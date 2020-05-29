@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 861bc32382737bd6482a3d51eb8470bf834e8508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369221"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 类
 
-CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 类的基类。
+CD2D线性渐变画笔和 CD2DRadial 梯度画笔类的基类。
 
 ## <a name="syntax"></a>语法
 
@@ -39,31 +39,31 @@ class CD2DGradientBrush : public CD2DBrush;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|构造一个 CD2DGradientBrush 对象。|
-|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|析构函数。 当 D2D 渐变画笔对象被销毁时调用。|
+|[CD2D 梯度画笔：：CD2D 梯度画笔](#cd2dgradientbrush)|构造 CD2D 梯度画笔对象。|
+|[CD2D 梯度画笔：*CD2D 梯度画笔](#_dtorcd2dgradientbrush)|析构函数。 销毁 D2D 渐变画笔对象时调用。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DGradientBrush::Destroy](#destroy)|销毁 CD2DGradientBrush 对象。 (重写[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy)。)|
+|[CD2D梯度画笔：:D](#destroy)|销毁 CD2D 梯度画笔对象。 （覆盖[CD2DBrush：:Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).）|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 结构的数组。|
-|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|在哪种颜色执行内的插渐变停止点之间的空间。|
-|[CD2DGradientBrush::m_extendMode](#m_extendmode)|[0，1] 的规范化范围之外的渐变的行为。|
-|[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|指向 D2D1_GRADIENT_STOP 结构数组的指针。|
+|[CD2D 梯度画笔：：m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP结构的数组。|
+|[CD2D 梯度画笔：：m_colorInterpolationGamma](#m_colorinterpolationgamma)|在渐变停止之间执行颜色插值的空间。|
+|[CD2D 梯度画笔：：m_extendMode](#m_extendmode)|渐变在 [0，1] 规范化范围之外的行为。|
+|[CD2D 梯度画笔：：m_pGradientStops](#m_pgradientstops)|指向D2D1_GRADIENT_STOP结构数组的指针。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D 资源](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
@@ -71,19 +71,19 @@ class CD2DGradientBrush : public CD2DBrush;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrendertarget.h
+**标题：** afxrendertarget.h
 
-##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush
+## <a name="cd2dgradientbrushcd2dgradientbrush"></a><a name="_dtorcd2dgradientbrush"></a>CD2D 梯度画笔：*CD2D 梯度画笔
 
-析构函数。 当 D2D 渐变画笔对象被销毁时调用。
+析构函数。 销毁 D2D 渐变画笔对象时调用。
 
 ```
 virtual ~CD2DGradientBrush();
 ```
 
-##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush
+## <a name="cd2dgradientbrushcd2dgradientbrush"></a><a name="cd2dgradientbrush"></a>CD2D 梯度画笔：：CD2D 梯度画笔
 
-构造一个 CD2DGradientBrush 对象。
+构造 CD2D 梯度画笔对象。
 
 ```
 CD2DGradientBrush(
@@ -98,67 +98,67 @@ CD2DGradientBrush(
 
 ### <a name="parameters"></a>参数
 
-*pParentTarget*<br/>
-指向该呈现器目标的指针。
+*p 父目标*<br/>
+指向渲染目标的指针。
 
-*gradientStops*<br/>
-指向 D2D1_GRADIENT_STOP 结构数组的指针。
+*梯度停止*<br/>
+指向D2D1_GRADIENT_STOP结构数组的指针。
 
-*gradientStopsCount*<br/>
-值大于或等于 1，gradientStops 数组中指定的渐变停止点的数量。
+*梯度停止计数*<br/>
+大于或等于 1 的值，用于指定渐变停止数组中的渐变停止数。
 
-*colorInterpolationGamma*<br/>
-在哪种颜色执行内的插渐变停止点之间的空间。
+*颜色插值伽马*<br/>
+在渐变停止之间执行颜色插值的空间。
 
-*extendMode*<br/>
-[0，1] 的规范化范围之外的渐变的行为。
+*扩展模式*<br/>
+渐变在 [0，1] 规范化范围之外的行为。
 
-*pBrushProperties*<br/>
-一个指向不透明度和画笔的转换。
+*pBrush 属性*<br/>
+指向画笔的不一用性和变换的指针。
 
-*bAutoDestroy*<br/>
-指示所有者 (pParentTarget) 将销毁该对象。
+*bAuto销毁*<br/>
+指示对象将被所有者（pParentTarget）销毁。
 
-##  <a name="destroy"></a>  CD2DGradientBrush::Destroy
+## <a name="cd2dgradientbrushdestroy"></a><a name="destroy"></a>CD2D梯度画笔：:D
 
-销毁 CD2DGradientBrush 对象。
+销毁 CD2D 梯度画笔对象。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops
+## <a name="cd2dgradientbrushm_argradientstops"></a><a name="m_argradientstops"></a>CD2D 梯度画笔：：m_arGradientStops
 
-D2D1_GRADIENT_STOP 结构的数组。
+D2D1_GRADIENT_STOP结构的数组。
 
 ```
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;
 ```
 
-##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma
+## <a name="cd2dgradientbrushm_colorinterpolationgamma"></a><a name="m_colorinterpolationgamma"></a>CD2D 梯度画笔：：m_colorInterpolationGamma
 
-在哪种颜色执行内的插渐变停止点之间的空间。
+在渐变停止之间执行颜色插值的空间。
 
 ```
 D2D1_GAMMA m_colorInterpolationGamma;
 ```
 
-##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode
+## <a name="cd2dgradientbrushm_extendmode"></a><a name="m_extendmode"></a>CD2D 梯度画笔：：m_extendMode
 
-[0，1] 的规范化范围之外的渐变的行为。
+渐变在 [0，1] 规范化范围之外的行为。
 
 ```
 D2D1_EXTEND_MODE m_extendMode;
 ```
 
-##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops
+## <a name="cd2dgradientbrushm_pgradientstops"></a><a name="m_pgradientstops"></a>CD2D 梯度画笔：：m_pGradientStops
 
-指向 D2D1_GRADIENT_STOP 结构数组的指针。
+指向D2D1_GRADIENT_STOP结构数组的指针。
 
 ```
 ID2D1GradientStopCollection* m_pGradientStops;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f6a26c2724146f8723dee3ddce60ddce6995ec8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198195"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747154"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
-表示相对时间，时间跨度。
+表示相对时间、时间跨度。
 
 ## <a name="syntax"></a>语法
 
@@ -47,59 +47,59 @@ class COleDateTimeSpan
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|构造 `COleDateTimeSpan` 对象。|
+|[COleDate时间跨度：COleDatetimeSpan](#coledatetimespan)|构造 `COleDateTimeSpan` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleDateTimeSpan::Format](#format)|生成带格式的字符串表示形式的`COleDateTimeSpan`对象。|
-|[COleDateTimeSpan::GetDays](#getdays)|返回跨度的日部分此`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::GetHours](#gethours)|返回跨度的小时部分此`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::GetMinutes](#getminutes)|返回跨度的分钟部分此`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::GetSeconds](#getseconds)|返回跨度的第二个部分此`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::GetStatus](#getstatus)|获取此状态 （有效期）`COleDateTimeSpan`对象。|
-|[COleDateTimeSpan::GetTotalDays](#gettotaldays)|这将返回的天数`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::GetTotalHours](#gettotalhours)|这将返回的小时数`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::GetTotalMinutes](#gettotalminutes)|这将返回的分钟数`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::GetTotalSeconds](#gettotalseconds)|这将返回的秒数`COleDateTimeSpan`对象表示。|
-|[COleDateTimeSpan::SetDateTimeSpan](#setdatetimespan)|设置此值`COleDateTimeSpan`对象。|
-|[COleDateTimeSpan::SetStatus](#setstatus)|设置此状态 （有效期）`COleDateTimeSpan`对象。|
+|[COleDate时间跨度：：格式](#format)|生成`COleDateTimeSpan`对象的格式化字符串表示形式。|
+|[COleDate时间跨度：获取天数](#getdays)|返回此`COleDateTimeSpan`对象表示的跨值的天部分。|
+|[COleDateTimeSpan：获取小时数](#gethours)|返回此`COleDateTimeSpan`对象表示的跨值的小时部分。|
+|[COleDateTimeSpan：获取分钟数](#getminutes)|返回此`COleDateTimeSpan`对象表示的跨值的分钟部分。|
+|[COleDate时间跨度：获取秒数](#getseconds)|返回此`COleDateTimeSpan`对象表示的跨范围的第二部分。|
+|[COleDate 时间跨度：获取状态](#getstatus)|获取此`COleDateTimeSpan`对象的状态（有效性）。|
+|[COleDate时间跨度：获取总天数](#gettotaldays)|返回此`COleDateTimeSpan`对象表示的天数。|
+|[COleDateTimeSpan：获取总小时数](#gettotalhours)|返回此`COleDateTimeSpan`对象表示的小时数。|
+|[COleDateTimeSpan：获取总分钟数](#gettotalminutes)|返回此`COleDateTimeSpan`对象表示的分钟数。|
+|[COleDate时间跨度：：获取总秒数](#gettotalseconds)|返回此`COleDateTimeSpan`对象表示的秒数。|
+|[COleDate时间跨度：：设置时间跨度](#setdatetimespan)|设置此`COleDateTimeSpan`对象的值。|
+|[COleDate 时间跨度：：设置状态](#setstatus)|设置此`COleDateTimeSpan`对象的状态（有效性）。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |||
 |-|-|
-|[运算符 +、-](#operator_add_-)|添加、 相减，并更改用于登录`COleDateTimeSpan`值。|
-|[operator +=, -=](#operator_add_eq_-_eq)|加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。|
-|[operator =](#operator_eq)|副本`COleDateTimeSpan`值。|
-|[operator ==, <, <=](#coledatetimespan_relational_operators)|比较两个`COleDateTimeSpan`值。|
-|[operator double](#operator_double)|将此转换`COleDateTimeSpan`值设为**double**。|
+|[运算符 +， -](#operator_add_-)|添加、减去和更改值的`COleDateTimeSpan`符号。|
+|[运算符 *， -]](#operator_add_eq_-_eq)|从此值`COleDateTimeSpan`中添加`COleDateTimeSpan`和减去值。|
+|[运算符 |](#operator_eq)|复制值`COleDateTimeSpan`。|
+|[运算符 =、<、<|](#coledatetimespan_relational_operators)|比较两`COleDateTimeSpan`个值。|
+|[运算符 double](#operator_double)|将此值`COleDateTimeSpan`转换为**双精度**值。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleDateTimeSpan::m_span](#m_span)|包含基础**双**此`COleDateTimeSpan`对象。|
-|[COleDateTimeSpan::m_status](#m_status)|包含此状态`COleDateTimeSpan`对象。|
+|[COleDate 时间跨度：：m_span](#m_span)|包含此`COleDateTimeSpan`对象的基础**双精度值**。|
+|[COleDate时间跨度：：m_status](#m_status)|包含此`COleDateTimeSpan`对象的状态。|
 
 ## <a name="remarks"></a>备注
 
-`COleDateTimeSpan` 没有基类。
+`COleDateTimeSpan`没有基类。
 
-一个`COleDateTimeSpan`保留在天中的时间。
+A`COleDateTimeSpan`以天保持时间。
 
-`COleDateTimeSpan` 用于其伴生类[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。 `COleDateTime` 封装`DATE`的 OLE 自动化的数据类型。 `COleDateTime` 表示绝对时间值。 所有`COleDateTime`计算涉及`COleDateTimeSpan`值。 这些类之间的关系是类似于之间[CTime](../../atl-mfc-shared/reference/ctime-class.md)并[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。
+`COleDateTimeSpan`用于其配套类[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。 `COleDateTime`封装 OLE`DATE`自动化的数据类型。 `COleDateTime`表示绝对时间值。 所有`COleDateTime`计算都涉及`COleDateTimeSpan`值。 这些类之间的关系类似于 CTime 和[CTimeSpan](../../atl-mfc-shared/reference/ctime-class.md)之间的关系[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。
 
-有关详细信息`COleDateTime`并`COleDateTimeSpan`类，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关`COleDateTime`和`COleDateTimeSpan`类的详细信息，请参阅文章["日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)"。
 
 ## <a name="requirements"></a>要求
 
-**标头：** ATLComTime.h
+**标题：** ATLComTime.h
 
-##  <a name="coledatetimespan_relational_operators"></a>  COleDateTimeSpan 关系运算符
+## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>COleDateTimeSpan关系运算符
 
 比较运算符。
 
@@ -114,17 +114,17 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>参数
 
-*dateSpan*<br/>
+*日期斯潘*<br/>
 要比较的 `COleDateTimeSpan`。
 
 ### <a name="return-value"></a>返回值
 
-这些运算符比较两个日期/时间范围值并返回 TRUE，如果条件为 true;否则为 FALSE。
+这些运算符比较两个日期/时间跨度值，如果条件为 true，则返回 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
 > [!NOTE]
->  如果任一操作数是无效，将发生 ATLASSERT。
+> 如果任一操作数无效，将发生 ATLASSERT。
 
 ### <a name="example"></a>示例
 
@@ -132,7 +132,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]
 
-##  <a name="coledatetimespan"></a>  COleDateTimeSpan::COleDateTimeSpan
+## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>COleDate时间跨度：COleDatetimeSpan
 
 构造 `COleDateTimeSpan` 对象。
 
@@ -144,33 +144,33 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>参数
 
-*dblSpanSrc*<br/>
-若要复制到新天数`COleDateTimeSpan`对象。
+*德布尔斯潘斯克*<br/>
+要复制到新`COleDateTimeSpan`对象的天数。
 
-*lDays*， *n 小时*， *nMins*， *nSecs*<br/>
-指示要复制到新的日期和时间值`COleDateTimeSpan`对象。
+*l 天*， *nHours*， *nMins*， *nSecs*<br/>
+指示要复制到新`COleDateTimeSpan`对象的日时值。
 
 ### <a name="remarks"></a>备注
 
-所有这些构造函数创建新`COleDateTimeSpan`对象初始化为指定的值。 这些构造函数的简要说明如下所示：
+所有这些构造函数都创建新`COleDateTimeSpan`的对象，初始化到指定值。 每个构造函数的简要描述如下：
 
-- **COleDateTimeSpan （)** 构造`COleDateTimeSpan`对象初始化为 0。
+- **COleDateTimeSpan）** 构造初始化`COleDateTimeSpan`为 0 的对象。
 
-- **COleDateTimeSpan (** `dblSpanSrc` **)** 构造`COleDateTimeSpan`从浮点值的对象。
+- **COleDateTimeSpan）** `dblSpanSrc` **)** 从浮点`COleDateTimeSpan`值构造对象。
 
-- **COleDateTimeSpan (** `lDays` **，** `nHours` **，** `nMins` **，** `nSecs` **)** 构造`COleDateTimeSpan`对象初始化为指定的数字值。
+- **COleDateTimeSpan（** `lDays` **，** `nHours` **，** `nMins` **，** `nSecs` **）** 构造初始化`COleDateTimeSpan`为指定数值的对象。
 
-新的状态`COleDateTimeSpan`对象设置为有效。
+新`COleDateTimeSpan`对象的状态设置为有效。
 
-有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关`COleDateTimeSpan`值边界的详细信息，请参阅文章["日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)"。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]
 
-##  <a name="format"></a>  COleDateTimeSpan::Format
+## <a name="coledatetimespanformat"></a><a name="format"></a>COleDate时间跨度：：格式
 
-生成带格式的字符串表示形式的`COleDateTimeSpan`对象。
+生成`COleDateTimeSpan`对象的格式化字符串表示形式。
 
 ```
 CString Format(LPCTSTR pFormat) const;
@@ -179,47 +179,47 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>参数
 
-*pFormat*<br/>
-格式设置字符串类似于`printf`格式设置字符串。 格式设置代码，前面有百分比 (`%`) 登录，将替换为相应`COleDateTimeSpan`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 值和格式设置代码的含义`Format`如下所示：
+*p格式*<br/>
+类似于格式字符串的`printf`格式字符串。 格式代码（前面为百分比 （`%`） 符号，由相应的`COleDateTimeSpan`组件替换。 格式字符串中的其他字符将复制到返回的字符串。 下面列出了格式化`Format`代码的值和含义：
 
-- **%H**当前天的小时
+- **%H**当天的小时数
 
-- **%M**内当前小时的分钟数
+- **%M**当前小时内的分钟数
 
-- **%S**当前分钟的秒
+- **%S**当前分钟中的秒数
 
 - **%%** 百分比符号
 
-上面列出的四个格式代码是将接受格式的唯一代码。
+上面列出的四个格式代码是格式将接受的唯一代码。
 
 -
 
 *nID*<br/>
-格式控制字符串资源 ID。
+格式控制字符串的资源 ID。
 
 ### <a name="return-value"></a>返回值
 
-一个`CString`，其中包含带格式的日期/时间范围值。
+包含`CString`格式化日期/时间跨度值的 。
 
 ### <a name="remarks"></a>备注
 
-调用这些函数来创建时间跨度值的格式化表示形式。 如果此状态`COleDateTimeSpan`对象为 null，则返回值为空字符串。 如果状态为无效，由字符串资源 IDS_INVALID_DATETIMESPAN 指定返回的字符串。
+调用这些函数以创建时间跨度值的格式化表示形式。 如果此`COleDateTimeSpan`对象的状态为 null，则返回值为空字符串。 如果状态无效，则返回字符串由字符串资源IDS_INVALID_DATETIMESPAN指定。
 
-此函数的窗体的简短说明如下所示：
+此函数的窗体的简要说明如下：
 
-**Format(** *pFormat* **)**<br/>
-此窗体设置使用的格式字符串，包含特殊的格式化代码前面带有百分号 （%） 的值的格式如`printf`。 格式设置字符串作为参数传递给函数。
+**格式（** *pFormat* **）**<br/>
+此窗体使用格式字符串设置值，该格式字符串包含特殊格式代码，前面有百分比符号 （%），如 中`printf`。 格式化字符串作为参数传递给函数。
 
-**Format(** *nID* **)**<br/>
-此窗体设置使用的格式字符串，包含特殊的格式化代码前面带有百分号 （%） 的值的格式如`printf`。 格式设置字符串是一个资源。 此字符串资源的 ID 作为参数进行传递。
+**格式***（nID）* **)**<br/>
+此窗体使用格式字符串设置值，该格式字符串包含特殊格式代码，前面有百分比符号 （%），如 中`printf`。 格式化字符串是一个资源。 此字符串资源的 ID 作为参数传递。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]
 
-##  <a name="getdays"></a>  COleDateTimeSpan::GetDays
+## <a name="coledatetimespangetdays"></a><a name="getdays"></a>COleDate时间跨度：获取天数
 
-检索此日期/时间范围值的日部分。
+检索此日期/时间跨度值的天部分。
 
 ```
 LONG GetDays() const throw();
@@ -227,35 +227,35 @@ LONG GetDays() const throw();
 
 ### <a name="return-value"></a>返回值
 
-此日期/时间范围值的日部分。
+此日期/时间跨度值的日部分。
 
 ### <a name="remarks"></a>备注
 
-返回值属于此函数的范围大约-3,615,000 和 3,615,000。
+此函数的返回值介于大约 - 3，615，000 和 3，615，000 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]
 
-##  <a name="gethours"></a>  COleDateTimeSpan::GetHours
+## <a name="coledatetimespangethours"></a><a name="gethours"></a>COleDateTimeSpan：获取小时数
 
-检索此日期/时间范围值的小时部分。
+检索此日期/时间跨度值的小时部分。
 
 ```
 LONG GetHours() const throw();
@@ -263,35 +263,35 @@ LONG GetHours() const throw();
 
 ### <a name="return-value"></a>返回值
 
-此日期/时间范围值的小时部分。
+此日期/时间跨度值的工时部分。
 
 ### <a name="remarks"></a>备注
 
--23 到 23 之间的此函数范围中的返回值。
+此函数的返回值范围介于 - 23 和 23 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]
 
-##  <a name="getminutes"></a>  COleDateTimeSpan::GetMinutes
+## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a>COleDateTimeSpan：获取分钟数
 
-检索此日期/时间范围值的分钟部分。
+检索此日期/时间跨度值的分钟部分。
 
 ```
 LONG GetMinutes() const throw();
@@ -299,35 +299,35 @@ LONG GetMinutes() const throw();
 
 ### <a name="return-value"></a>返回值
 
-此日期/时间范围值的分钟部分。
+此日期/时间跨度值的分钟部分。
 
 ### <a name="remarks"></a>备注
 
--59 到 59 之间的此函数范围中的返回值。
+此函数的返回值范围介于 - 59 和 59 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]
 
-##  <a name="getseconds"></a>  COleDateTimeSpan::GetSeconds
+## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a>COleDate时间跨度：获取秒数
 
-检索此日期/时间范围值的第二个部分。
+检索此日期/时间跨度值的第二部分。
 
 ```
 LONG GetSeconds() const throw();
@@ -335,35 +335,35 @@ LONG GetSeconds() const throw();
 
 ### <a name="return-value"></a>返回值
 
-此日期/时间范围值的秒部分。
+此日期/时间跨度值的秒部分。
 
 ### <a name="remarks"></a>备注
 
--59 到 59 之间的此函数范围中的返回值。
+此函数的返回值范围介于 - 59 和 59 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]
 
-##  <a name="getstatus"></a>  COleDateTimeSpan::GetStatus
+## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a>COleDate 时间跨度：获取状态
 
-获取此状态 （有效期）`COleDateTimeSpan`对象。
+获取此`COleDateTimeSpan`对象的状态（有效性）。
 
 ```
 DateTimeSpanStatus GetStatus() const throw();
@@ -371,11 +371,11 @@ DateTimeSpanStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>返回值
 
-此状态`COleDateTimeSpan`值。
+此值`COleDateTimeSpan`的状态。
 
 ### <a name="remarks"></a>备注
 
-由定义的返回值`DateTimeSpanStatus`枚举中定义的类型`COleDateTimeSpan`类。
+返回值由`DateTimeSpanStatus`枚举类型定义，该类型在类中`COleDateTimeSpan`定义。
 
 ```
 enum DateTimeSpanStatus{
@@ -385,29 +385,29 @@ enum DateTimeSpanStatus{
 };
 ```
 
-有关这些状态的值的简要说明，请参阅下面的列表：
+有关这些状态值的简要说明，请参阅以下列表：
 
-- `COleDateTimeSpan::valid` 指示此`COleDateTimeSpan`对象是否有效。
+- `COleDateTimeSpan::valid`指示此`COleDateTimeSpan`对象有效。
 
-- `COleDateTimeSpan::invalid` 指示此`COleDateTimeSpan`对象无效; 即，其值可能不正确。
+- `COleDateTimeSpan::invalid`指示此对象`COleDateTimeSpan`无效;如果表明此对象无效。也就是说，其值可能不正确。
 
-- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
+- `COleDateTimeSpan::null`指示此`COleDateTimeSpan`对象为 null，即未为此对象提供任何值。 （这是"无值"的数据库意义上的"空"，而不是C++ NULL。
 
-状态`COleDateTimeSpan`对象是在以下情况下无效：
+在以下情况下，`COleDateTimeSpan`对象的状态无效：
 
-- 如果此对象已溢出或下溢在过程中遇到算术赋值运算，即`+=`或`-=`。
+- 如果此对象在算术赋值操作期间（即`+=`或`-=`） 经历了溢出或下溢。
 
-- 如果无效的值分配给此对象。
+- 如果为此对象分配了无效值。
 
-- 如果已显式设置该对象的状态为无效的使用`SetStatus`。
+- 如果此对象的状态被显式设置为无效使用`SetStatus`。
 
-有关可能的状态设置为无效的操作的详细信息，请参阅[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)并[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
+有关可能将状态设置为无效的操作的详细信息，请参阅[COleDateTimeSpan：：运算符 *，-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)和[COleDateTimeSpan：：运算符 *，-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
 
-有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关`COleDateTimeSpan`值边界的详细信息，请参阅文章["日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)"。
 
-##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays
+## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a>COleDate时间跨度：获取总天数
 
-检索此以天数表示的日期/时间范围值。
+检索以天表示的此日期/时间跨度值。
 
 ```
 double GetTotalDays() const throw();
@@ -415,35 +415,35 @@ double GetTotalDays() const throw();
 
 ### <a name="return-value"></a>返回值
 
-以天数表示此日期/时间范围值。 尽管此函数原型是返回一个双精度值，它将始终返回一个整数值。
+此日期/时间跨度值以天表示。 尽管此函数是原型返回 double，但它始终将返回整数值。
 
 ### <a name="remarks"></a>备注
 
-大约-3.65e6 和 3.65e6 之间此函数范围中的返回值。
+此函数的返回值介于大约 - 3.65e6 和 3.65e6 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]
 
-##  <a name="gettotalhours"></a>  COleDateTimeSpan::GetTotalHours
+## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a>COleDateTimeSpan：获取总小时数
 
-检索此日期/时间范围值以小时为单位。
+检索以小时表示的此日期/时间跨度值。
 
 ```
 double GetTotalHours() const throw();
@@ -451,35 +451,35 @@ double GetTotalHours() const throw();
 
 ### <a name="return-value"></a>返回值
 
-此日期/时间范围值，以小时为单位。 尽管此函数原型是返回一个双精度值，它将始终返回一个整数值。
+此日期/时间跨度值以小时表示。 尽管此函数是原型返回 double，但它始终将返回整数值。
 
 ### <a name="remarks"></a>备注
 
-大约-8.77e7 和 8.77e7 之间此函数范围中的返回值。
+此函数的返回值介于大约 - 8.77e7 和 8.77e7 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[GetTotalDays](#gettotaldays)。
+请参阅[GetTotalDays 日的示例](#gettotaldays)。
 
-##  <a name="gettotalminutes"></a>  COleDateTimeSpan::GetTotalMinutes
+## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>COleDateTimeSpan：获取总分钟数
 
-检索以分钟为单位表示此日期/时间范围值。
+检索以分钟表示的此日期/时间跨度值。
 
 ```
 double GetTotalMinutes() const throw();
@@ -487,35 +487,35 @@ double GetTotalMinutes() const throw();
 
 ### <a name="return-value"></a>返回值
 
-以分钟为单位表示此日期/时间范围值。 尽管此函数原型是返回一个双精度值，它将始终返回一个整数值。
+此日期/时间跨度值以分钟表示。 尽管此函数是原型返回 double，但它始终将返回整数值。
 
 ### <a name="remarks"></a>备注
 
-大约-5.26e9 和 5.26e9 之间此函数范围中的返回值。
+此函数的返回值介于大约 - 5.26e9 和 5.26e9 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[GetTotalDays](#gettotaldays)。
+请参阅[GetTotalDays 日的示例](#gettotaldays)。
 
-##  <a name="gettotalseconds"></a>  COleDateTimeSpan::GetTotalSeconds
+## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>COleDate时间跨度：：获取总秒数
 
-检索此日期/时间范围值以秒为单位。
+检索以秒表示的此日期/时间跨度值。
 
 ```
 double GetTotalSeconds() const throw();
@@ -523,35 +523,35 @@ double GetTotalSeconds() const throw();
 
 ### <a name="return-value"></a>返回值
 
-以秒为单位表示此日期/时间范围值。 尽管此函数原型是返回一个双精度值，它将始终返回一个整数值。
+此日期/时间跨度值以秒为单位表示。 尽管此函数是原型返回 double，但它始终将返回整数值。
 
 ### <a name="remarks"></a>备注
 
-此函数的返回值的范围之间大约-3.16e11 到 3.16e11。
+此函数的返回值介于大约 - 3.16e11 到 3.16e11 之间。
 
-有关查询的值的其他函数`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的其他函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[GetTotalDays](#gettotaldays)。
+请参阅[GetTotalDays 日的示例](#gettotaldays)。
 
-##  <a name="m_span"></a>  COleDateTimeSpan::m_span
+## <a name="coledatetimespanm_span"></a><a name="m_span"></a>COleDate 时间跨度：：m_span
 
-基础**双**值为`COleDateTime`对象。
+此`COleDateTime`对象的基础**双精度值**。
 
 ```
 double m_span;
@@ -559,14 +559,14 @@ double m_span;
 
 ### <a name="remarks"></a>备注
 
-此值表示日期/时间范围以天为单位。
+此值表示日期/时间跨度（以天表示）。
 
 > [!CAUTION]
->  更改中的值**双**数据成员将更改此设置的值`COleDateTimeSpan`对象。 它不会更改此状态`COleDateTimeSpan`对象。
+> 更改**双**数据成员中的值将更改此`COleDateTimeSpan`对象的值。 它不会更改此`COleDateTimeSpan`对象的状态。
 
-##  <a name="m_status"></a>  COleDateTimeSpan::m_status
+## <a name="coledatetimespanm_status"></a><a name="m_status"></a>COleDate时间跨度：：m_status
 
-此数据成员的类型是枚举的类型`DateTimeSpanStatus`，其定义内`COleDateTimeSpan`类。
+此数据成员的类型是枚举类型`DateTimeSpanStatus`，在类中`COleDateTimeSpan`定义。
 
 ```
 DateTimeSpanStatus m_status;
@@ -582,32 +582,32 @@ enum DateTimeSpanStatus{
    };
 ```
 
-有关这些状态的值的简要说明，请参阅下面的列表：
+有关这些状态值的简要说明，请参阅以下列表：
 
-- `COleDateTimeSpan::valid` 指示此`COleDateTimeSpan`对象是否有效。
+- `COleDateTimeSpan::valid`指示此`COleDateTimeSpan`对象有效。
 
-- `COleDateTimeSpan::invalid` 指示此`COleDateTimeSpan`对象无效; 即，其值可能不正确。
+- `COleDateTimeSpan::invalid`指示此对象`COleDateTimeSpan`无效;如果表明此对象无效。也就是说，其值可能不正确。
 
-- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
+- `COleDateTimeSpan::null`指示此`COleDateTimeSpan`对象为 null，即未为此对象提供任何值。 （这是"无值"的数据库意义上的"空"，而不是C++ NULL。
 
-状态`COleDateTimeSpan`对象是在以下情况下无效：
+在以下情况下，`COleDateTimeSpan`对象的状态无效：
 
-- 如果此对象已溢出或下溢在过程中遇到算术赋值运算，即`+=`或`-=`。
+- 如果此对象在算术赋值操作期间（即`+=`或`-=`） 经历了溢出或下溢。
 
-- 如果无效的值分配给此对象。
+- 如果为此对象分配了无效值。
 
-- 如果已显式设置该对象的状态为无效的使用[SetStatus](#setstatus)。
+- 如果此对象的状态被显式设置为无效使用[SetStatus](#setstatus)。
 
-有关可能的状态设置为无效的操作的详细信息，请参阅[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)并[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
+有关可能将状态设置为无效的操作的详细信息，请参阅[COleDateTimeSpan：：运算符 *，-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)和[COleDateTimeSpan：：运算符 *，-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
 
 > [!CAUTION]
->  此数据成员是针对高级编程情况。 应使用的内联成员函数[GetStatus](#getstatus)并[SetStatus](#setstatus)。 请参阅`SetStatus`有关显式设置此数据成员的其他注意事项。
+> 此数据成员适用于高级编程情况。 应使用内联成员函数["获取状态"](#getstatus)和["设置状态](#setstatus)"。 有关`SetStatus`显式设置此数据成员的进一步注意事项，请参阅。
 
-有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关`COleDateTimeSpan`值边界的详细信息，请参阅文章["日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)"。
 
-##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =
+## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a>COleDate时间跨度：：运算符 |
 
-副本`COleDateTimeSpan`值。
+复制值`COleDateTimeSpan`。
 
 ```
 COleDateTimeSpan& operator=(double dblSpanSrc) throw();
@@ -615,11 +615,11 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 ### <a name="remarks"></a>备注
 
-此重载的赋值运算符复制到此源日期/时间范围值`COleDateTimeSpan`对象。
+此重载分配运算符将源日期/时间跨度值复制到此`COleDateTimeSpan`对象中。
 
-##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +, -
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a>COleDateTimeSpan：：运算符 +， -
 
-添加、 相减，并更改用于登录`COleDateTimeSpan`值。
+添加、减去和更改值的`COleDateTimeSpan`符号。
 
 ```
 COleDateTimeSpan operator+(const COleDateTimeSpan& dateSpan) const throw();
@@ -629,21 +629,21 @@ COleDateTimeSpan operator-() const throw();
 
 ### <a name="remarks"></a>备注
 
-可以使用前两个运算符，加法和减法日期/时间范围值。 第三个可以更改日期/时间范围值的符号。
+前两个运算符允许您添加和减去日期/时间跨度值。 第三个允许您更改日期/时间跨度值的符号。
 
-如果任一操作数是 null，生成的状态`COleDateTimeSpan`值为 null。
+如果任一操作数为空，则结果`COleDateTimeSpan`值的状态为 null。
 
-如果任一操作数无效且不为 null，其他的生成状态`COleDateTimeSpan`值无效。
+如果任一操作数无效，另一个操作数不为空，则结果`COleDateTimeSpan`值的状态无效。
 
-有关有效、 无效和 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。
+有关有效、无效和 null 状态值的详细信息，请参阅[m_status](#m_status)成员变量。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, -=
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDate时间跨度：：运算符 *，-*
 
-加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。
+从此值`COleDateTimeSpan`中添加`COleDateTimeSpan`和减去值。
 
 ```
 COleDateTimeSpan& operator+=(const COleDateTimeSpan dateSpan) throw();
@@ -652,19 +652,19 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 ### <a name="remarks"></a>备注
 
-这些运算符用于添加和减去此日期/时间范围值`COleDateTimeSpan`对象。 如果任一操作数是 null，生成的状态`COleDateTimeSpan`值为 null。
+这些运算符允许您在此`COleDateTimeSpan`对象中添加和减去日期/时间跨度值。 如果任一操作数为空，则结果`COleDateTimeSpan`值的状态为 null。
 
-如果任一操作数无效且不为 null，其他的生成状态`COleDateTimeSpan`值无效。
+如果任一操作数无效，另一个操作数不为空，则结果`COleDateTimeSpan`值的状态无效。
 
-有关有效、 无效和 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。
+有关有效、无效和 null 状态值的详细信息，请参阅[m_status](#m_status)成员变量。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]
 
-##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
+## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a>COleDate 时间跨度：：运算符双精度
 
-将此转换`COleDateTimeSpan`值设为**double**。
+将此值`COleDateTimeSpan`转换为**双精度**值。
 
 ```
 operator double() const throw();
@@ -672,61 +672,61 @@ operator double() const throw();
 
 ### <a name="remarks"></a>备注
 
-此运算符将返回此值`COleDateTimeSpan`天的浮点数形式的值。
+此运算符将此值`COleDateTimeSpan`的值作为浮点天数返回。
 
-##  <a name="setdatetimespan"></a>  COleDateTimeSpan::SetDateTimeSpan
+## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>COleDate时间跨度：：设置时间跨度
 
-设置此日期/时间范围值的值。
+设置此日期/时间跨度值的值。
 
-```
+```cpp
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*lDays*， *n 小时*， *nMins*， *nSecs*<br/>
-指示日期范围和时间跨度值复制到此`COleDateTimeSpan`对象。
+*l 天*， *nHours*， *nMins*， *nSecs*<br/>
+指示要复制到此`COleDateTimeSpan`对象的日期跨度和时间跨度值。
 
 ### <a name="remarks"></a>备注
 
-查询的值的函数的`COleDateTimeSpan`对象，请参阅以下成员函数：
+对于查询`COleDateTimeSpan`对象值的函数，请参阅以下成员函数：
 
-- [GetDays](#getdays)
+- [获取天数](#getdays)
 
-- [GetHours](#gethours)
+- [获取时间](#gethours)
 
-- [GetMinutes](#getminutes)
+- [获取分钟](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [获取秒数](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [获取总天数](#gettotaldays)
 
-- [GetTotalHours](#gettotalhours)
+- [获取总小时数](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [获取总分钟数](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [获取总秒数](#gettotalseconds)
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]
 
-##  <a name="setstatus"></a>  COleDateTimeSpan::SetStatus
+## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a>COleDate 时间跨度：：设置状态
 
-设置此状态 （有效期）`COleDateTimeSpan`对象。
+设置此`COleDateTimeSpan`对象的状态（有效性）。
 
-```
+```cpp
 void SetStatus(DateTimeSpanStatus status) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
 *status*<br/>
-为此新的状态值`COleDateTimeSpan`对象。
+此`COleDateTimeSpan`对象的新状态值。
 
 ### <a name="remarks"></a>备注
 
-*状态*参数值由定义`DateTimeSpanStatus`枚举中定义的类型`COleDateTimeSpan`类。
+*状态*参数值由`DateTimeSpanStatus`枚举类型定义，该类型在类中`COleDateTimeSpan`定义。
 
 ```
 enum DateTimeSpanStatus{
@@ -736,25 +736,25 @@ enum DateTimeSpanStatus{
    };
 ```
 
-有关这些状态的值的简要说明，请参阅下面的列表：
+有关这些状态值的简要说明，请参阅以下列表：
 
-- `COleDateTimeSpan::valid` 指示此`COleDateTimeSpan`对象是否有效。
+- `COleDateTimeSpan::valid`指示此`COleDateTimeSpan`对象有效。
 
-- `COleDateTimeSpan::invalid` 指示此`COleDateTimeSpan`对象无效; 即，其值可能不正确。
+- `COleDateTimeSpan::invalid`指示此对象`COleDateTimeSpan`无效;如果表明此对象无效。也就是说，其值可能不正确。
 
-- `COleDateTimeSpan::null` 指示此`COleDateTimeSpan`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
+- `COleDateTimeSpan::null`指示此`COleDateTimeSpan`对象为 null，即未为此对象提供任何值。 （这是"无值"的数据库意义上的"空"，而不是C++ NULL。
 
    > [!CAUTION]
-   > 此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为**null**或**无效**。 请注意，赋值运算符 ([运算符 =](#operator_eq)) 和[SetDateTimeSpan](#setdatetimespan)设置基于源值的对象的状态。
+   > 此功能适用于高级编程情况。 此函数不会更改此对象中的数据。 它最常用于将状态设置为**null**或**无效**。 请注意，赋值运算符 （[运算符 =](#operator_eq)） 和[SetDateTimeSpan](#setdatetimespan)确实根据源值设置对象的状态。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 [CTime 类](../../atl-mfc-shared/reference/ctime-class.md)<br/>
 [CTimeSpan 类](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

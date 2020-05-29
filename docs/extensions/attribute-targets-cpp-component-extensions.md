@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172615"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>特性目标（C++/CLI 和 C++/CX）
 
@@ -272,6 +272,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [用户定义的属性](user-defined-attributes-cpp-component-extensions.md)

@@ -1,0 +1,366 @@
+- name: 使用 C++/CLI 进行 .NET 编程
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 演练：编译定目标到 CLR 的 C++/CLI 程序
+  href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+- name: C++/CLI 任务
+  expanded: false
+  items:
+    - name: C++/CLI 任务
+      href: ../dotnet/cpp-cli-tasks.md
+    - name: 如何：创建 CLR 空项目
+      href: ../dotnet/how-to-create-clr-empty-projects.md
+    - name: 如何：创建 CLR 控制台应用程序
+      href: ../dotnet/how-to-create-clr-console-applications-cpp-cli.md
+    - name: 如何：在 C++/CLI 中使用跟踪引用
+      href: ../dotnet/how-to-use-tracking-references-in-cpp-cli.md
+    - name: 如何：在 C++/CLI 中使用数组
+      href: ../dotnet/how-to-use-arrays-in-cpp-cli.md
+    - name: 如何：定义和使用类和结构
+      href: ../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
+    - name: 参考类型的 C++ 堆栈语义
+      href: ../dotnet/cpp-stack-semantics-for-reference-types.md
+    - name: 用户定义的运算符
+      href: ../dotnet/user-defined-operators-cpp-cli.md
+    - name: 用户定义的转换
+      href: ../dotnet/user-defined-conversions-cpp-cli.md
+    - name: initonly
+      href: ../dotnet/initonly-cpp-cli.md
+    - name: 如何：定义和使用委托
+      href: ../dotnet/how-to-define-and-use-delegates-cpp-cli.md
+    - name: 如何：在 C++/CLI 中定义和使用枚举
+      href: ../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
+    - name: 如何：在 C++/CLI 中使用事件
+      href: ../dotnet/how-to-use-events-in-cpp-cli.md
+    - name: 如何：定义接口静态构造函数
+      href: ../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
+    - name: 如何：在本机编译中声明重写说明符
+      href: ../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
+    - name: 如何：在 C++/CLI 中使用属性
+      href: ../dotnet/how-to-use-properties-in-cpp-cli.md
+    - name: 如何：在 C++/CLI 中使用 safe_cast
+      href: ../dotnet/how-to-use-safe-cast-in-cpp-cli.md
+    - name: 正则表达式
+      href: ../dotnet/regular-expressions-cpp-cli.md
+    - name: 文件处理和 I/O
+      href: ../dotnet/file-handling-and-i-o-cpp-cli.md
+    - name: 图形操作
+      href: ../dotnet/graphics-operations-cpp-cli.md
+    - name: Windows 操作
+      href: ../dotnet/windows-operations-cpp-cli.md
+    - name: 使用 ADO.NET 的数据访问
+      href: ../dotnet/data-access-using-adonet-cpp-cli.md
+- name: 本机和 .NET 的互操作性
+  expanded: false
+  items:
+    - name: 本机和 .NET 的互操作性
+      href: ../dotnet/native-and-dotnet-interoperability.md
+    - name: 与其他 .NET 语言的互操作性
+      href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
+    - name: 混合（本机和托管）程序集
+      expanded: false
+      items:
+        - name: 混合（本机和托管）程序集
+          href: ../dotnet/mixed-native-and-managed-assemblies.md
+        - name: 如何：迁移到 -clr
+          href: ../dotnet/how-to-migrate-to-clr.md
+        - name: 如何：使用 -clr 编译 MFC 和 ATL 代码
+          href: ../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
+        - name: 混合程序集的初始化
+          href: ../dotnet/initialization-of-mixed-assemblies.md
+        - name: 混合程序集的库支持
+          href: ../dotnet/library-support-for-mixed-assemblies.md
+        - name: 互操作的性能注意事项 (C++)
+          href: ../dotnet/performance-considerations-for-interop-cpp.md
+        - name: 应用程序域和 Visual C++
+          href: ../dotnet/application-domains-and-visual-cpp.md
+        - name: 双重 Thunk (C++)
+          href: ../dotnet/double-thunking-cpp.md
+        - name: 使用以 -clr 生成的 COM 对象时避免 CLR 关闭异常
+          href: ../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
+        - name: 如何：通过删除对 CRT 库 DLL 的依赖来创建部分信任的应用程序
+          href: ../dotnet/create-a-partially-trusted-application.md
+    - name: 在 MFC 中使用 Windows 窗体用户控件
+      expanded: false
+      items:
+        - name: 在 MFC 中使用 Windows 窗体用户控件
+          href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
+        - name: Windows 窗体-MFC 编程差异
+          href: ../dotnet/windows-forms-mfc-programming-differences.md
+        - name: 在 MFC 对话框中承载 Windows 窗体用户控件
+          expanded: false
+          items:
+            - name: 在 MFC 对话框中承载 Windows 窗体用户控件
+              href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
+            - name: 如何：创建用户控件并在对话框中托管
+              href: ../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
+            - name: 如何：使用 Windows 窗体执行 DDX-DDV 数据绑定
+              href: ../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
+            - name: 如何：接收来自本机 C++ 类的 Windows 窗体事件
+              href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
+        - name: 以 MFC 视图的形式承载 Windows 窗体用户控件
+          expanded: false
+          items:
+            - name: 以 MFC 视图的形式承载 Windows 窗体用户控件
+              href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
+            - name: 如何：创建用户控件并托管 MDI 视图
+              href: ../dotnet/how-to-create-the-user-control-and-host-mdi-view.md
+            - name: 如何：向 Windows 窗体控件添加命令路由
+              href: ../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
+            - name: 如何：调用 Windows 窗体控件的属性和方法
+              href: ../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
+        - name: 以 MFC 对话框的形式承载 Windows 窗体用户控件
+          href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
+    - name: 从托管代码调用本机函数
+      expanded: false
+      items:
+        - name: 从托管代码调用本机函数
+          href: ../dotnet/calling-native-functions-from-managed-code.md
+        - name: 在 C++ 中使用显式 PInvoke（DllImport 特性）
+          expanded: false
+          items:
+            - name: 在 C++ 中使用显式 PInvoke（DllImport 特性）
+              href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
+            - name: 如何：使用 PInvoke 从托管代码调用本机 DLL
+              href: ../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
+            - name: 如何：使用 PInvoke 封送字符串
+              href: ../dotnet/how-to-marshal-strings-using-pinvoke.md
+            - name: 如何：使用 PInvoke 封送结构
+              href: ../dotnet/how-to-marshal-structures-using-pinvoke.md
+            - name: 如何：使用 PInvoke 封送数组
+              href: ../dotnet/how-to-marshal-arrays-using-pinvoke.md
+            - name: 如何：使用 PInvoke 封送函数指针
+              href: ../dotnet/how-to-marshal-function-pointers-using-pinvoke.md
+            - name: 如何：使用 PInvoke 封送嵌入式指针
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
+        - name: 使用 C++ 互操作（隐式 PInvoke）
+          expanded: false
+          items:
+            - name: 使用 C++ 互操作（隐式 PInvoke）
+              href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
+            - name: 如何：使用 C++ 互操作封送 ANSI 字符串
+              href: ../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
+            - name: 如何：使用 C++ 互操作封送 Unicode 字符串
+              href: ../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
+            - name: 如何：使用 C++ 互操作封送 COM 字符串
+              href: ../dotnet/how-to-marshal-com-strings-using-cpp-interop.md
+            - name: 如何：使用 C++ 互操作封送结构
+              href: ../dotnet/how-to-marshal-structures-using-cpp-interop.md
+            - name: 如何：使用 C++ 互操作封送数组
+              href: ../dotnet/how-to-marshal-arrays-using-cpp-interop.md
+            - name: 如何：使用 C++ 互操作封送回调和委托
+              href: ../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
+            - name: 如何：使用 C++ 互操作封送嵌入式指针
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
+            - name: 如何：扩展封送处理库
+              href: ../dotnet/how-to-extend-the-marshaling-library.md
+            - name: '如何：访问 System::String 中的字符'
+              href: ../dotnet/how-to-access-characters-in-a-system-string.md
+            - name: '如何：将 char* 字符串转换为 System::Byte 数组'
+              href: ../dotnet/how-to-convert-char-star-string-to-system-byte-array.md
+            - name: '如何：将 System::String 转换为 wchar_t* 或 char*'
+              href: ../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
+            - name: '如何：将 System::String 转换为标准字符串'
+              href: ../dotnet/how-to-convert-system-string-to-standard-string.md
+            - name: '如何：将标准字符串转换为 System::String'
+              href: ../dotnet/how-to-convert-standard-string-to-system-string.md
+            - name: 如何：获取指向字节数组的指针
+              href: ../dotnet/how-to-obtain-a-pointer-to-byte-array.md
+            - name: 如何：将非托管资源加载到字节数组中
+              href: ../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
+            - name: 如何：修改本机函数中的引用类
+              href: ../dotnet/how-to-modify-reference-class-in-a-native-function.md
+            - name: 如何：确定是本机映像还是 CLR 映像
+              href: ../dotnet/how-to-determine-if-an-image-is-native-or-clr.md
+            - name: 如何：向全局程序集缓存添加本机 DLL
+              href: ../dotnet/how-to-add-native-dll-to-global-assembly-cache.md
+            - name: 如何：在本机类型中保留对值类型的引用
+              href: ../dotnet/how-to-hold-reference-to-value-type-in-native-type.md
+            - name: 如何：在非托管内存中保留对象引用
+              href: ../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
+            - name: 如何：检测 -clr 编译
+              href: ../dotnet/how-to-detect-clr-compilation.md
+            - name: '如何：在 System::Guid 与 _GUID 之间转换'
+              href: ../dotnet/how-to-convert-between-system-guid-and-guid.md
+            - name: 如何：指定 out 参数
+              href: ../dotnet/how-to-specify-an-out-parameter.md
+            - name: 如何：在 -clr 编译中使用本机类型
+              href: ../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
+            - name: 如何：在本机类型中声明句柄
+              href: ../dotnet/how-to-declare-handles-in-native-types.md
+            - name: '如何：包装本机类以供 C# 使用'
+              href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
+- name: 纯代码和可验证代码
+  expanded: false
+  items:
+    - name: 纯代码和可验证代码
+      href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
+    - name: 如何：创建可验证 C++ 项目
+      href: ../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
+    - name: 结合使用可验证程序集和 SQL Server
+      href: ../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
+    - name: 将项目从混合模式转换为纯中间语言项目
+      href: ../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md
+- name: 序列化
+  href: ../dotnet/serialization-cpp-cli.md
+- name: 友元程序集 (C++)
+  href: ../dotnet/friend-assemblies-cpp.md
+- name: 托管类型
+  href: ../dotnet/managed-types-cpp-cli.md
+- name: 反射
+  href: ../dotnet/reflection-cpp-cli.md
+- name: 强名称程序集（程序集签名）
+  href: ../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
+- name: 调试类
+  href: ../dotnet/debug-class-cpp-cli.md
+- name: STL/CLR 库参考
+  expanded: false
+  items:
+    - name: STL/CLR 库参考
+      href: ../dotnet/stl-clr-library-reference.md
+    - name: cliext 命名空间
+      href: ../dotnet/cliext-namespace.md
+    - name: STL/CLR 容器
+      href: ../dotnet/stl-clr-containers.md
+    - name: STL/CLR 容器元素的需求
+      href: ../dotnet/requirements-for-stl-clr-container-elements.md
+    - name: 如何：从 .NET 集合转换为 STL/CLR 容器
+      href: ../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
+    - name: 如何：从 STL/CLR 容器转换为 .NET 集合
+      href: ../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
+    - name: 如何：从程序集公开 STL/CLR 容器
+      href: ../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
+    - name: 'for each, in'
+      href: ../dotnet/for-each-in.md
+    - name: adapter (STL/CLR)
+      href: ../dotnet/adapter-stl-clr.md
+    - name: algorithm (STL/CLR)
+      href: ../dotnet/algorithm-stl-clr.md
+    - name: deque (STL/CLR)
+      href: ../dotnet/deque-stl-clr.md
+    - name: functional (STL/CLR)
+      href: ../dotnet/functional-stl-clr.md
+    - name: hash_map (STL/CLR)
+      href: ../dotnet/hash-map-stl-clr.md
+    - name: hash_multimap (STL/CLR)
+      href: ../dotnet/hash-multimap-stl-clr.md
+    - name: hash_multiset (STL/CLR)
+      href: ../dotnet/hash-multiset-stl-clr.md
+    - name: hash_set (STL/CLR)
+      href: ../dotnet/hash-set-stl-clr.md
+    - name: list (STL/CLR)
+      href: ../dotnet/list-stl-clr.md
+    - name: map (STL/CLR)
+      href: ../dotnet/map-stl-clr.md
+    - name: multimap (STL/CLR)
+      href: ../dotnet/multimap-stl-clr.md
+    - name: multiset (STL/CLR)
+      href: ../dotnet/multiset-stl-clr.md
+    - name: numeric (STL/CLR)
+      href: ../dotnet/numeric-stl-clr.md
+    - name: priority_queue (STL/CLR)
+      href: ../dotnet/priority-queue-stl-clr.md
+    - name: queue (STL/CLR)
+      href: ../dotnet/queue-stl-clr.md
+    - name: set (STL/CLR)
+      href: ../dotnet/set-stl-clr.md
+    - name: stack (STL/CLR)
+      href: ../dotnet/stack-stl-clr.md
+    - name: utility (STL/CLR)
+      href: ../dotnet/utility-stl-clr.md
+    - name: vector (STL/CLR)
+      href: ../dotnet/vector-stl-clr.md
+- name: C++ 支持库
+  expanded: false
+  items:
+    - name: C++ 支持库
+      href: ../dotnet/cpp-support-library.md
+    - name: C++ 中的封送处理概述
+      expanded: false
+      items:
+        - name: C++ 中的封送处理概述
+          href: ../dotnet/overview-of-marshaling-in-cpp.md
+        - name: marshal_as
+          href: ../dotnet/marshal-as.md
+        - name: marshal_context 类
+          href: ../dotnet/marshal-context-class.md
+    - name: msclr 命名空间
+      href: ../dotnet/msclr-namespace.md
+    - name: 资源管理类
+      expanded: false
+      items:
+        - name: 资源管理类
+          href: ../dotnet/resource-management-classes.md
+        - name: auto_gcroot
+          expanded: false
+          items:
+            - name: auto_gcroot
+              href: ../dotnet/auto-gcroot.md
+            - name: auto_gcroot 类
+              href: ../dotnet/auto-gcroot-class.md
+            - name: swap 函数 (auto_gcroot)
+              href: ../dotnet/swap-function-auto-gcroot.md
+        - name: auto_handle
+          href: ../dotnet/auto-handle.md
+          items:
+            - name: auto_handle
+              href: ../dotnet/auto-handle.md
+            - name: auto_handle 类
+              href: ../dotnet/auto-handle-class.md
+            - name: swap 函数 (auto_handle)
+              href: ../dotnet/swap-function-auto-handle.md
+    - name: 同步（lock 类）
+      expanded: false
+      items:
+        - name: 同步（lock 类）
+          href: ../dotnet/synchronization-lock-class.md
+        - name: 锁 (lock)
+          expanded: false
+          items:
+            - name: 锁 (lock)
+              href: ../dotnet/lock.md
+            - name: lock 类
+              href: ../dotnet/lock-class.md
+            - name: lock_when 枚举
+              href: ../dotnet/lock-when-enum.md
+    - name: 调用特定应用程序域中的函数
+      expanded: false
+      items:
+        - name: 调用特定应用程序域中的函数
+          href: ../dotnet/calling-functions-in-a-specific-application-domain.md
+        - name: call_in_appdomain 函数
+          href: ../dotnet/call-in-appdomain-function.md
+    - name: 'com::ptr'
+      expanded: false
+      items:
+        - name: 'com::ptr'
+          href: ../dotnet/com-ptr.md
+        - name: 'com::ptr 类'
+          href: ../dotnet/com-ptr-class.md
+- name: C++/CLI 中的异常
+  expanded: false
+  items:
+    - name: C++/CLI 中的异常
+      href: ../dotnet/exceptions-in-cpp-cli.md
+    - name: 使用托管异常中的基本概念
+      href: ../dotnet/basic-concepts-in-using-managed-exceptions.md
+    - name: '-clr 下的异常处理行为区别'
+      href: ../dotnet/differences-in-exception-handling-behavior-under-clr.md
+    - name: finally
+      href: ../dotnet/finally.md
+    - name: 如何：在本机代码中捕获从 MSIL 抛出的异常
+      href: ../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
+    - name: 如何：定义和安装全局异常处理程序
+      href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
+- name: 装箱
+  expanded: false
+  items:
+    - name: 装箱
+      href: ../dotnet/boxing-cpp-cli.md
+    - name: 如何：显式请求装箱
+      href: ../dotnet/how-to-explicitly-request-boxing.md
+    - name: 如何：使用 gcnew 创建值类型和使用隐式装箱
+      href: ../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
+    - name: 如何：取消装箱
+      href: ../dotnet/how-to-unbox.md
+    - name: 标准转换和隐式装箱
+      href: ../dotnet/standard-conversions-and-implicit-boxing.md

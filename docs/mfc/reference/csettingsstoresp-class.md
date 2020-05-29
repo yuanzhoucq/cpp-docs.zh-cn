@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9e22184a4081762a3d505645752e514315146981
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275189"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318456"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 类
 
-`CSettingsStoreSP`类是可用于创建实例的一个帮助器类[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。
+该`CSettingsStoreSP`类是一个帮助器类，可用于创建[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)的实例。
 
 ## <a name="syntax"></a>语法
 
@@ -33,47 +33,47 @@ class CSettingsStoreSP
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|构造 `CSettingsStoreSP` 对象。|
+|[CSettingsStoreSP：CSettingsStoreSP](#csettingsstoresp)|构造 `CSettingsStoreSP` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CSettingsStoreSP::Create](#create)|创建派生自的类的实例`CSettingsStore`。|
-|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|设置运行时类。 `Create`方法使用的运行时类来确定哪些类要创建的对象。|
+|[CSettingsStoreSP：创建](#create)|创建派生自`CSettingsStore`的类的实例。|
+|[CSettingsStoreSP：：设置运行时类](#setruntimeclass)|设置运行时类。 该方法`Create`使用运行时类来确定要创建的对象类。|
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
-|`m_dwUserData`|自定义用户数据存储在`CSettingsStoreSP`对象。 提供的构造函数中的此数据`CSettingsStoreSP`对象。|
-|`m_pRegistry`|`CSettingsStore`-派生对象的`Create`方法创建。|
+|`m_dwUserData`|存储在对象中的`CSettingsStoreSP`自定义用户数据。 在`CSettingsStoreSP`对象的构造函数中提供此数据。|
+|`m_pRegistry`|`Create`方法`CSettingsStore`创建的派生对象。|
 
 ## <a name="remarks"></a>备注
 
-可以使用`CSettingsStoreSP`类，以将所有 MFC 注册表操作重都定向到其他位置，例如 XML 文件或数据库。 为此，请执行以下步骤：
+可以使用 该`CSettingsStoreSP`类将所有 MFC 注册表操作重定向到其他位置，如 XML 文件或数据库。 为此，请按照下列步骤进行操作：
 
-1. 创建一个类 (如`CMyStore`) 和从它派生`CSettingsStore`。
+1. 创建类 （如`CMyStore`），并从 派生`CSettingsStore`它。
 
-1. 使用[DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)并[IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)与您的自定义的宏`CSettingsStore`类，以启用动态创建。
+1. 将[DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)和[IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)宏与自定义`CSettingsStore`类一起启用动态创建。
 
-1. 重写虚函数并实现`Read`和`Write`自定义类中的函数。 实现其他功能来读取和写入到所需位置的数据。
+1. 重写虚拟函数，并在自定义类`Read`中`Write`实现 和 函数。 实现任何其他功能，将数据读取和写入所需位置。
 
-1. 在应用程序中调用`CSettingsStoreSP::SetRuntimeClass`，然后将传入到指针[CRuntimeClass 结构](../../mfc/reference/cruntimeclass-structure.md)获取从您的类。
+1. 在应用程序中，调用`CSettingsStoreSP::SetRuntimeClass`并传递指向从类获取的[CRuntimeClass 结构](../../mfc/reference/cruntimeclass-structure.md)的指针。
 
-只要该框架通常会访问注册表，它将现在动态实例化自定义类并使用它来读取或写入数据。
+每当框架通常访问注册表时，它现在都会动态实例化自定义类，并用它来读取或写入数据。
 
-`CSettingsStoreSP::SetRuntimeClass` 使用全局静态变量。 因此，一次只能有一个自定义存储才可用。
+`CSettingsStoreSP::SetRuntimeClass`使用全局静态变量。 因此，一次只能提供一个自定义存储。
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxsettingsstore.h
+**标题：** afxsettingsstore.h
 
-##  <a name="create"></a>  CSettingsStoreSP::Create
+## <a name="csettingsstorespcreate"></a><a name="create"></a>CSettingsStoreSP：创建
 
-创建一个派生自的对象的新实例[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。
+创建从[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)派生的对象的新实例。
 
 ```
 CSettingsStore& CSettingsStoreSP Create(
@@ -84,30 +84,30 @@ CSettingsStore& CSettingsStoreSP Create(
 ### <a name="parameters"></a>参数
 
 *bAdmin*<br/>
-[in]一个布尔型参数，用于确定是否`CSettingsStore`在管理员模式下创建对象。
+[在]确定是否在管理员模式下创建`CSettingsStore`对象的布尔参数。
 
-*bReadOnly*<br/>
-[in]一个布尔型参数，用于确定是否`CSettingsStore`对象创建的只读访问权限。
+*b 只读*<br/>
+[在]确定是否为只读访问创建`CSettingsStore`对象的布尔参数。
 
 ### <a name="return-value"></a>返回值
 
-对新创建的引用`CSettingsStore`对象。
+对新创建`CSettingsStore`对象的引用。
 
 ### <a name="remarks"></a>备注
 
-可以使用方法[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)来确定哪种类型的对象`CSettingsStoreSP::Create`将创建。 默认情况下，此方法创建`CSettingsStore`对象。
+可以使用[方法 CSettingsStoreSP：：SetRuntimeClass](#setruntimeclass)来确定`CSettingsStoreSP::Create`将创建的对象类型。 默认情况下，此方法创建一个`CSettingsStore`对象。
 
-如果您创建`CSettingsStore`对象在管理员模式下，所有注册表访问权限的默认位置为 HKEY_LOCAL_MACHINE。 否则，所有注册表访问权限的默认位置是 HKEY_CURRENT_USER。
+如果在管理员模式下创建`CSettingsStore`对象，则所有注册表访问的默认位置HKEY_LOCAL_MACHINE。 否则，所有注册表访问的默认位置将HKEY_CURRENT_USER。
 
-如果*bAdmin*为 TRUE 时，应用程序必须具有管理权限。 否则，它将失败尝试访问注册表时。
+如果*bAdmin*为 TRUE，则应用程序必须具有管理权限。 否则，当它尝试访问注册表时，它将失败。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`Create`方法的`CSettingsStoreSP`类。
+下面的示例演示如何使用`Create``CSettingsStoreSP`类的方法。
 
 [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]
 
-##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP
+## <a name="csettingsstorespcsettingsstoresp"></a><a name="csettingsstoresp"></a>CSettingsStoreSP：CSettingsStoreSP
 
 构造[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)对象。
 
@@ -118,15 +118,15 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="parameters"></a>参数
 
 *dwUserData*<br/>
-[in]用户定义数据的`CSettingsStoreSP`对象存储。
+[在]`CSettingsStoreSP`对象存储的用户定义数据。
 
 ### <a name="remarks"></a>备注
 
-`CSettingsStoreSP`对象存储中的数据*dwUserData*在受保护的成员变量`m_dwUserData`。
+对象`CSettingsStoreSP`将*dwUserData*的数据存储在受保护的成员变量`m_dwUserData`中。
 
-##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass
+## <a name="csettingsstorespsetruntimeclass"></a><a name="setruntimeclass"></a>CSettingsStoreSP：：设置运行时类
 
-设置运行时类。 该方法[CSettingsStoreSP::Create](#create)使用运行时类来确定要创建对象的类型。
+设置运行时类。 方法[CSettingsStoreSP：create](#create)使用运行时类来确定要创建的对象类型。
 
 ```
 static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
@@ -135,18 +135,18 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ### <a name="parameters"></a>参数
 
 *pRTI*<br/>
-[in]指向类的运行时类信息的指针派生自[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。
+[在]指向从[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)派生的类的运行时类信息的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 TRUE如果通过标识的类，则为 FALSE *pRTI*不派生自`CSettingsStore`。
+如果成功，则为 TRUE;如果*pRTI*标识的类不是派生自`CSettingsStore`，则 FALSE
 
 ### <a name="remarks"></a>备注
 
-可以使用[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)派生类从`CSettingsStore`。 使用方法`SetRuntimeClass`如果你想要创建自定义类派生自的对象`CSettingsStore`。
+可以使用[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)从`CSettingsStore`派生类。 如果要创建派生`SetRuntimeClass`自`CSettingsStore`的自定义类的对象，请使用 方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[CSettingsStore Class](../../mfc/reference/csettingsstore-class.md)

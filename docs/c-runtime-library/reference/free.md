@@ -1,8 +1,9 @@
 ---
 title: 可用
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - free
+- _o_free
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0a53dd9d24634442c8dd456e4f9d38f742e292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956732"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920421"
 ---
 # <a name="free"></a>可用
 
@@ -63,19 +65,21 @@ void free(
 
 若要释放使用 [_malloca](malloca.md) 分配的内存，请使用 [_freea](freea.md)。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**free**|\<stdlib.h> 和 \<malloc.h>|
+|**忙**|\<stdlib.h> 和 \<malloc.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [malloc](malloc.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [_alloca](alloca.md)<br/>

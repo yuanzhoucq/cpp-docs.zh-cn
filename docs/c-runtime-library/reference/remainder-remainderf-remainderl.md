@@ -1,10 +1,13 @@
 ---
 title: remainder、remainderf、remainderl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remainderl
 - remainder
 - remainderf
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949416"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917853"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -59,7 +63,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 *x*<br/>
 分子。
 
-*y*<br/>
+*误差*<br/>
 分母。
 
 ## <a name="return-value"></a>返回值
@@ -68,9 +72,11 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="remarks"></a>备注
 
-**余数**函数计算*x* / *y*的浮点余数*r* ，例如*x* = *n* \* *y* + *r*，其中*n*值与*x* / *y*最接近的整数，即使 &#124; *n* - *x* /  &#124; *y* = 1/2，也是 n。 当*r* = 0 时， *r*与*x*具有相同的符号。
+**余数**函数计算*x* / *y*的浮点余数*r* ，如*x* = *n* \* *y* + *r*（其中*n*是最接近*x* / *y*的整数），n 只要 &#124; *n* - *x* / *y* &#124; = 1/2，就会进行*n*运算。 当*r* = 0 时， *r*与*x*具有相同的符号。
 
-由于C++允许重载，因此你可以调用采用并返回**浮点**或**长** **双精度**值的**余数**的重载。 在 C 程序中，**余数**始终采用两个**双精度型**参数，并返回**double**。
+由于 c + + 允许重载，因此你可以调用采用并返回**浮点**或**长****双精度**值的**余数**的重载。 在 C 程序中，**余数**始终采用两个**双精度型**参数，并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -78,7 +84,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 |--------------|---------------------|-|
 |**余数**、 **remainderf**、 **remainderl**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -102,7 +108,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv、lldiv](ldiv-lldiv.md)<br/>

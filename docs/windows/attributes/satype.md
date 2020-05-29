@@ -1,21 +1,21 @@
 ---
-title: satype (C++ COM 属性)
+title: satype （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407297"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166271"
 ---
 # <a name="satype"></a>satype
 
-指定的数据类型`SAFEARRAY`结构。
+指定 `SAFEARRAY` 结构的数据类型。
 
 ## <a name="syntax"></a>语法
 
@@ -23,10 +23,10 @@ ms.locfileid: "62407297"
 [ satype(data_type) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*data_type*<br/>
-数据类型为`SAFEARRAY`数据结构是作为参数传递给接口方法。
+data_type<br/>
+作为参数传递给接口方法的 `SAFEARRAY` 数据结构的数据类型。
 
 ## <a name="requirements"></a>要求
 
@@ -34,17 +34,17 @@ ms.locfileid: "62407297"
 
 |||
 |-|-|
-|**适用对象**|接口参数，接口方法|
+|**适用对象**|Interface 参数，interface 方法|
 |**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 ## <a name="remarks"></a>备注
 
-**Satype** C++属性指定的数据类型`SAFEARRAY`。
+**Satype** C++属性指定 `SAFEARRAY`的数据类型。
 
 > [!NOTE]
-> 从删除一定程度的间接性`SAFEARRAY`从它在.cpp 文件中的声明方式生成的.idl 文件中的指针。
+> 将从生成的 .idl 文件中的 `SAFEARRAY` 指针中删除间接级别，并从该文件中的声明方式。
 
 ## <a name="example"></a>示例
 
@@ -59,7 +59,7 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
 [参数特性](parameter-attributes.md)<br/>

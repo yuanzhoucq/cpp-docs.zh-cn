@@ -1,37 +1,35 @@
 ---
 title: CStatusBarCtrl 的设置
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - status bar controls [MFC], settings
 - CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
-ms.openlocfilehash: b41997fb9342a651260bc2196d212016dc0deb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd7c68d6721c48f751c04437e43c8770f6ec5736
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307687"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365382"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl 的设置
 
-默认位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)状态窗口的父窗口底部，但可以指定要让其显示在父窗口工作区顶部的 CCS_TOP 样式。
+[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)状态窗口的默认位置位于父窗口的底部，但您可以指定CCS_TOP样式，使其显示在父窗口的工作区的顶部。
 
-可以指定要包括在右端的大小调整手柄的 SBARS_SIZEGRIP 样式`CStatusBarCtrl`状态窗口。 大小调整手柄类似于大小调整边框；它是用户可以通过单击和拖动来重设父窗口大小的矩形区域。
+您可以指定SBARS_SIZEGRIP样式，以在`CStatusBarCtrl`状态窗口的右端包括大小调整夹。 大小调整手柄类似于大小调整边框；它是用户可以通过单击和拖动来重设父窗口大小的矩形区域。
 
 > [!NOTE]
->  如果合并 CCS_TOP 和 SBARS_SIZEGRIP 样式，即使系统将其绘制在状态窗口中不起作用的结果的大小调整手柄。
+> 如果将CCS_TOP和SBARS_SIZEGRIP样式组合在一起，则即使系统在状态窗口中绘制，生成的大小调整夹点也不会正常工作。
 
 状态窗口的窗口过程将自动设置控件窗口的初始大小和位置。 宽度与父窗口工作区的一样。 高度基于实际选入状态窗口设备上下文的字体的度量值和窗口边框的宽度。
 
-每当收到 WM_SIZE 消息时，窗口过程自动调整状态窗口的大小。 通常情况下，当父窗口的大小更改时，父级将 WM_SIZE 消息发送到状态窗口。
+窗口过程在接收WM_SIZE消息时自动调整状态窗口的大小。 通常，当父窗口的大小发生变化时，父窗口向状态窗口发送WM_SIZE消息。
 
-可以通过调用设置状态窗口绘图区的最小高度[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)，以像素为单位指定最小高度。 绘图区不包括窗口边框。
+您可以通过调用[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)来设置状态窗口绘图区域的最小高度，指定最小高度（以像素为单位）。 绘图区不包括窗口边框。
 
-通过调用检索状态窗口的边框的宽度[GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders)。 此成员函数包含指向三元素数组（将收到水平边框、垂直边框和矩形之间的边框的宽度）的指针。
+通过调用[GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders)来检索状态窗口边框的宽度。 此成员函数包含指向三元素数组（将收到水平边框、垂直边框和矩形之间的边框的宽度）的指针。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)

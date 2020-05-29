@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
 ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299086"
@@ -23,15 +23,15 @@ ms.locfileid: "75299086"
 
 - 参数用空白分隔，空白可以是一个空格或制表符。
 
-- 无论其中是否包含空白，双引号括起来的字符串均被解释为单个参数。 带引号的字符串可以嵌入在自变量内。 请注意，插入符号 (^) 未被识别为转义符或者分隔符。
+- 无论其中是否包含空白，双引号括起来的字符串均被解释为单个参数。 带引号的字符串可以嵌入在自变量内。 请注意，插入符号 (^  ) 未被识别为转义符或者分隔符。
 
-- 前面有反斜杠的双引号 \\" 被解释为原义双引号 (")。
+- 前面有反斜杠的双引号 \\"  被解释为原义双引号 ("  )。
 
 - 反斜杠按其原义解释，除非它们紧位于双引号之前。
 
-- 如果偶数个反斜杠后跟双引号，则每对反斜杠 (\\\\) 中有一个反斜杠 (\\) 被置于 `argv` 数组中，而双引号 (") 被解释为字符串分隔符。
+- 如果偶数个反斜杠后跟双引号，则每对反斜杠 (\\\\  ) 中有一个反斜杠 (\\  ) 被置于 `argv` 数组中，而双引号 ("  ) 被解释为字符串分隔符。
 
-- 如果奇数个反斜杠后跟双引号，则每对反斜杠 ( **\\\\** ) 中有一个反斜杠 ( **\\** ) 被置于 `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 ( **"** ) 放置在 `argv` 中。
+- 如果奇数个反斜杠后跟双引号，则每对反斜杠 (\\\\  ) 中有一个反斜杠 (\\  ) 被置于 ) is placed in the `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 ("  ) 放置在 `argv` 中。
 
 此列表通过显示命令行参数的多个示例的传递到 `argv` 的解释结果来阐释上述规则。 在第二列、第三列和第四列中列出的输出来自于遵循列表的 ARGS.C 程序。
 
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>注释
 
 此程序中输出的一个示例是：
 
@@ -97,6 +97,6 @@ Environment variables:
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [main 函数和程序执行](../c-language/main-function-and-program-execution.md)

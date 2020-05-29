@@ -3,11 +3,11 @@ title: 限定符：访问易失对象
 ms.date: 11/04/2016
 ms.assetid: b5644d4a-d93a-4f33-880a-76eb88d5ad7a
 ms.openlocfilehash: 002462cbf436e9f84ead6da821cdf9addb9770f2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147082"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343912"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>限定符：访问易失对象
 

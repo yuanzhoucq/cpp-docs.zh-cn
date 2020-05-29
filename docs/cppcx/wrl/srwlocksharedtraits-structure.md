@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::Unlock method
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
-ms.openlocfilehash: af567fd333854519df4543ad24084e52cda4d96e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dc43d4b9c16145ed7a5abe03cddb598c59b1e94
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383277"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374291"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits 结构
 
-描述的常见特征`SRWLock`中共享锁模式的类。
+描述`SRWLock`共享锁模式下类的常见特征。
 
 ## <a name="syntax"></a>语法
 
@@ -32,16 +32,16 @@ struct SRWLockSharedTraits;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称   | 描述
+名称   | 说明
 ------ | --------------------------------------------------------------------------
-`Type` | 一个指向同义词[SRWLOCK](srwlock-class.md)类。
+`Type` | 指向[SRWLOCK](srwlock-class.md)类的指针的同义词。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                     | 描述
+名称                                                     | 说明
 -------------------------------------------------------- | -----------------------------------------------------------------
-[SRWLockSharedTraits::GetInvalidValue](#getinvalidvalue) | 检索`SRWLockSharedTraits`始终是无效的对象。
-[SRWLockSharedTraits::Unlock](#unlock)                   | 释放指定的全权控制`SRWLock`对象。
+[SRWLock 共享特性：：获取无效值](#getinvalidvalue) | 检索始终无效`SRWLockSharedTraits`的对象。
+[SRWLock 共享特性：解锁](#unlock)                   | 释放指定`SRWLock`对象的独占控件。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,13 +49,13 @@ struct SRWLockSharedTraits;
 
 ## <a name="requirements"></a>要求
 
-**标头：** corewrappers.h
+**标题：** 核心包装.h
 
-**命名空间：** Microsoft::WRL::Wrappers::HandleTraits
+**命名空间：** 微软：：WRL：包装：：处理特征
 
-## <a name="getinvalidvalue"></a>SRWLockSharedTraits::GetInvalidValue
+## <a name="srwlocksharedtraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>SRWLock 共享特性：：获取无效值
 
-检索`SRWLockSharedTraits`始终是无效的对象。
+检索始终无效`SRWLockSharedTraits`的对象。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -63,11 +63,11 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>返回值
 
-句柄`SRWLockSharedTraits`对象。
+`SRWLockSharedTraits`对象的句柄。
 
-## <a name="unlock"></a>SRWLockSharedTraits::Unlock
+## <a name="srwlocksharedtraitsunlock"></a><a name="unlock"></a>SRWLock 共享特性：解锁
 
-释放指定的全权控制`SRWLock`对象。
+释放指定`SRWLock`对象的独占控件。
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +77,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>参数
 
-*srwlock*<br/>
-句柄`SRWLock`对象。
+*斯沃洛克*<br/>
+`SRWLock`对象的句柄。

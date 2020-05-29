@@ -1,9 +1,10 @@
 ---
 title: isascii、__isascii、iswascii
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswascii
 - __isascii
+- _o_iswascii
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857783"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919792"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -63,7 +65,7 @@ int iswascii(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
 ## <a name="return-value"></a>返回值
@@ -74,7 +76,9 @@ int iswascii(
 
 **__Isascii**和**iswascii**都作为宏实现，除非定义了预处理器宏 _CTYPE_DISABLE_MACROS。
 
-为实现向后兼容性，仅当[ &#95; &#95;&#95; ](../../preprocessor/predefined-macros.md)未定义 STDC 或将其定义为0时， **isascii**才作为宏实现;否则为未定义。
+为了向后兼容， **isascii**仅在未定义[&#95;&#95;STDC&#95;&#95;](../../preprocessor/predefined-macros.md)或定义为0时才作为宏实现;否则为未定义。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -82,17 +86,17 @@ int iswascii(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**isascii**、 **__isascii**|C：\<ctype.h><br /><br /> C++：\<cctype> 或 \<ctype.h>|
 |**iswascii**|C：\<wctype.h 1>、\<ctype.h 1>，或 \<wchar.h 1><br /><br /> C++：\<cwctype 1>、\<cctype 1>、\<wctype.h 1>、\<ctype.h 1>，或 \<wchar.h 1>|
 
-**Isascii**、 **__isascii**和**iswascii**函数是 Microsoft 特定的。 有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+**Isascii**、 **__isascii**和**iswascii**函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

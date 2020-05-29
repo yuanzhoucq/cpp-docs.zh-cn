@@ -1,13 +1,13 @@
 ---
-title: 委托构造函数C++（）
-description: 使用在中C++委托构造函数来调用其他构造函数并减少代码重复。
+title: 委派构造函数 （C++）
+description: 在C++中使用委派构造函数来调用其他构造函数并减少代码重复。
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250696"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316674"
 ---
 # <a name="delegating-constructors"></a>委托构造函数
 

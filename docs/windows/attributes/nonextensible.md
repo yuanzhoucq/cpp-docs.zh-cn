@@ -1,21 +1,21 @@
 ---
-title: nonextensible (C++ COM 特性)
+title: nonextensible （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514394"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214647"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-`IDispatch`指定实现仅包含接口说明中列出的属性和方法, 而不能在运行时与其他成员一起扩展。
+指定 `IDispatch` 实现仅包含接口说明中列出的属性和方法，而不能在运行时与其他成员一起扩展。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +31,7 @@ ms.locfileid: "69514394"
 
 ## <a name="example"></a>示例
 
-下面的代码演示**nonextensible**属性的一种用法:
+下面的代码演示**nonextensible**属性的一种用法：
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -54,14 +54,14 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**适用于**|**interface**|
-|**可重复**|No|
-|**必需的特性**|`dual`and `oleautomation`、or`dispinterface`|
+|**适用对象**|**接口**|
+|**可重复**|否|
+|**必需的特性**|`dual` 和 `oleautomation`或 `dispinterface`|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)

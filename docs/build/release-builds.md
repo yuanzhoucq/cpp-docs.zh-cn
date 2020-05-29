@@ -1,21 +1,21 @@
 ---
-title: C++发行版本的 Visual Studio
+title: C++ 发布版本 - Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: MT
+ms.openlocfilehash: 46ae5e0f3d545f0e3e004f612314ab416b270fd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400472"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168819"
 ---
 # <a name="release-builds"></a>发行版本
 
-发布版本使用的优化。 当您使用优化创建发布版本时，编译器将生成符号化调试信息。 符号化调试信息，以及这一事实，代码不会生成用于跟踪和断言没有调用，表示可执行文件的大小会减少，因此将更快。
+发布版本使用优化。 使用优化创建发布版本时，编译器将不会生成符号调试信息。 由于缺少符号调试信息并且未为 TRACE 和 ASSERT 调用生成代码，这意味着可执行文件的大小会减小，因此速度会更快。
 
 ## <a name="in-this-section"></a>本节内容
 

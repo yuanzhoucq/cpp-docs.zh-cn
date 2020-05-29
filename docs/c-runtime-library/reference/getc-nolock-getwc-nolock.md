@@ -1,9 +1,11 @@
 ---
 title: _getc_nolock、_getwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getc_nolock
 - _getwc_nolock
+- _o__getc_nolock
+- _o__getwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 26e72783e3188c663ab1e0b8f824a1da43fe3d16
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955508"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919647"
 ---
 # <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock、_getwc_nolock
 
@@ -62,7 +65,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>参数
 
-*stream*<br/>
+*流*<br/>
 输入流。
 
 ## <a name="return-value"></a>返回值
@@ -73,6 +76,8 @@ wint_t _getwc_nolock(
 
 这些函数与**getc**和**getwc**相同，不同之处在于它们不会锁定调用线程。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
@@ -81,12 +86,12 @@ wint_t _getwc_nolock(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**getc_nolock**|\<stdio.h>|
 |**getwc_nolock**|\<stdio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

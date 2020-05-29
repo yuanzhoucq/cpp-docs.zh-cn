@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385058"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749702"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Microsoft 专用**
+**微软特定**
 
 将 `_bstr_t` 包装器链接到 `BSTR`。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 void Attach(
    BSTR s
 );
@@ -38,10 +38,10 @@ void Attach(
 
 ## <a name="example"></a>示例
 
-请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)示例使用**附加**。
+有关使用**附加**的示例，请参阅[_bstr_t：：分配](../cpp/bstr-t-assign.md)。
 
-**结束 Microsoft 专用**
+**结束微软特定**
 
 ## <a name="see-also"></a>请参阅
 
-[_bstr_t 类](../cpp/bstr-t-class.md)
+[_bstr_t类](../cpp/bstr-t-class.md)

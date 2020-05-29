@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 649686857000b2bee469f0e3ec551d49717c1d7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501134"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204069"
 ---
 # <a name="fatal-error-c1084"></a>错误 C1084
 
@@ -27,7 +27,7 @@ ms.locfileid: "69501134"
 
 - 请确保命令行语法符合[编译器命令行语法](../../build/reference/compiler-command-line-syntax.md)中所述的规则。
 
-- 请确保正确设置环境变量**TMP**和**TEMP** , 并确保访问这些环境变量所引用的目录的适当权限。 还要确保**TMP**和**TEMP**环境变量所引用的驱动器包含足够的可用空间。
+- 请确保正确设置环境变量**TMP**和**TEMP** ，并确保访问这些环境变量所引用的目录的适当权限。 还要确保**TMP**和**TEMP**环境变量所引用的驱动器包含足够的可用空间。
 
 - 如果消息指出“文件号错误”，说明指定的文件在后台进行编译的同时，可能已在前台关闭。
 

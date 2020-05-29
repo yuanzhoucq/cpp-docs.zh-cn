@@ -1,6 +1,6 @@
 ---
 title: scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -8,6 +8,12 @@ api_name:
 - scalblnf
 - scalbn
 - scalbln
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948904"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918192"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -100,7 +107,7 @@ long double scalblnl(
 *x*<br/>
 浮点值。
 
-*exp*<br/>
+*.exp*<br/>
 整数指数。
 
 ## <a name="return-value"></a>返回值
@@ -111,9 +118,11 @@ long double scalblnl(
 
 ## <a name="remarks"></a>备注
 
-**FLT_RADIX**在 float > \<中定义为本机浮点基数; 在二进制系统上，它的值为2， **scalbn**等效于[ldexp](ldexp.md)。
+**FLT_RADIX**在 float> \<中定义为本机浮点基数;在二进制系统上，它的值为2， **scalbn**等效于[ldexp](ldexp.md)。
 
-由于C++允许重载，因此可以调用**scalbn**和**scalbln**的重载，该重载采用和返回**float**或**long** **double**类型。 在 C 程序中， **scalbn**始终采用**double**和**int**并返回**double**， **scalbln**始终使用**double**和**long** ，并返回**double**。
+由于 c + + 允许重载，因此可以调用**scalbn**和**scalbln**的重载，该重载采用和返回**float**或**long** **double**类型。 在 C 程序中， **scalbn**始终采用**double**和**int**并返回**double**， **scalbln**始终使用**double**和**long** ，并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -121,7 +130,7 @@ long double scalblnl(
 |--------------|--------------|------------------|
 |**scalbn**、 **scalbnf**、 **scalbnl**、 **scalbln**、 **scalblnf**、 **scalblnl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

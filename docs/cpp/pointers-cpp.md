@@ -1,36 +1,36 @@
 ---
-title: 指针 （C++）
+title: 指针 (C++)
 ms.date: 11/19/2019
-description: 有关 Microsoft C++中的原始指针和智能指针。
+description: 关于微软C++的原始指针和智能指针。
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
-ms.openlocfilehash: 21dcc55048e9e378f370f25254e1910b05e49d69
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 485cee667fa288bff76fdeac7c9f229355c276d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246424"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371919"
 ---
-# <a name="pointers-c"></a>指针 （C++）
+# <a name="pointers-c"></a>指针 (C++)
 
-指针是一个变量，用于存储对象的内存地址。 指针广泛用于 C 和C++三个主要目的：
+指针是存储对象的内存地址的变量。 指针在 C 和C++中广泛使用，主要有三个目的：
 
-- 若要在堆上分配新对象，
+- 在堆上分配新对象，
 - 将函数传递给其他函数
-- 用于循环访问数组或其他数据结构中的元素。
+- 迭代数组或其他数据结构中的元素。
 
-在 C 样式编程中，*原始指针*用于所有这些方案。 但是，原始指针是许多严重编程错误的根源。 因此，强烈建议不要使用，除非它们提供显著的性能优势，并且没有任何明确的指针是负责删除对象的*所属指针*。 新式C++提供*智能指针*，用于分配对象、用于遍历数据结构的*迭代*器以及用于传递函数的*lambda 表达式*。 通过使用这些语言和库功能而不是原始指针，你将使程序更安全、更易于调试，更易于理解和维护。 有关详细信息，请参阅[智能指针](smart-pointers-modern-cpp.md)、[迭代](../standard-library/iterators.md)器和[Lambda 表达式](lambda-expressions-in-cpp.md)。
+在 C 样式的编程中，*原始指针*用于所有这些方案。 但是，原始指针是许多严重编程错误的根源。 因此，强烈建议不使用它们，除非它们提供了显著的性能优势，并且对于哪个指针是负责删除对象的*拥有指针*没有歧义。 现代C++提供用于分配对象的*智能指针*、用于遍历数据结构的*迭代器*以及用于传递函数*的 lambda 表达式*。 通过使用这些语言和库工具而不是原始指针，可以使程序更安全、更易于调试以及更易于理解和维护。 有关详细信息，请参阅[智能指针](smart-pointers-modern-cpp.md)、[迭代器](../standard-library/iterators.md)和[Lambda 表达式](lambda-expressions-in-cpp.md)。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - [原始指针](raw-pointers.md)
-- [Const 和 volatile 指针](const-and-volatile-pointers.md)
-- [new 和 delete 运算符](new-and-delete-operators.md)
+- [Const 和易失性指针](const-and-volatile-pointers.md)
+- [新建运算符和删除运算符](new-and-delete-operators.md)
 - [智能指针](smart-pointers-modern-cpp.md)
-- [如何：创建和使用 unique_ptr 实例](how-to-create-and-use-unique-ptr-instances.md)
-- [如何：创建和使用 shared_ptr 实例](how-to-create-and-use-shared-ptr-instances.md)
-- [如何：创建和使用 weak_ptr 实例](how-to-create-and-use-weak-ptr-instances.md)
+- [如何：创建和使用unique_ptr实例](how-to-create-and-use-unique-ptr-instances.md)
+- [如何：创建和使用shared_ptr实例](how-to-create-and-use-shared-ptr-instances.md)
+- [如何：创建和使用weak_ptr实例](how-to-create-and-use-weak-ptr-instances.md)
 - [如何：创建和使用 CComPtr 和 CComQIPtr 实例](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
 ## <a name="see-also"></a>另请参阅

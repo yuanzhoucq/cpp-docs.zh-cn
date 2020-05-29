@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6264bb6bc9070b5ce170b294f9db0d371e7b6b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245525"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747664"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 类
 
-从线程池中接收请求并将它们传递到创建和销毁的工作对象上每个请求。
+从线程池接收请求，并将它们传递到在每个请求上创建和销毁的工作对象。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -34,40 +34,40 @@ class CNonStatelessWorker
 
 #### <a name="parameters"></a>参数
 
-*Worker*<br/>
-辅助角色线程类符合[辅助原型](../../atl/reference/worker-archetype.md)合适上处理的请求排队[CThreadPool](../../atl/reference/cthreadpool-class.md)。
+*工人*<br/>
+符合工作[原型](../../atl/reference/worker-archetype.md)的工作线程类，适合处理在[CThreadPool](../../atl/reference/cthreadpool-class.md)上排队的请求。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CNonStatelessWorker::RequestType](#requesttype)|实现[WorkerArchetype::RequestType](worker-archetype.md#requesttype)。|
+|[无状态工作人员：：请求类型](#requesttype)|[workerArche 类型的实现：请求类型](worker-archetype.md#requesttype)。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CNonStatelessWorker::Execute](#execute)|实现[WorkerArchetype::Execute](worker-archetype.md#execute)。|
-|[CNonStatelessWorker::Initialize](#initialize)|实现[WorkerArchetype::Initialize](worker-archetype.md#initialize)。|
-|[CNonStatelessWorker::Terminate](#terminate)|实现[WorkerArchetype::Terminate](worker-archetype.md#terminate)。|
+|[无状态工作人员：执行](#execute)|[工作Arche类型的实现：执行](worker-archetype.md#execute)。|
+|[无状态工作人员：初始化](#initialize)|[工作Arche类型的实现：初始化](worker-archetype.md#initialize)。|
+|[无状态工作人员：：终止](#terminate)|[workerArche 类型的实现：终止](worker-archetype.md#terminate)。|
 
 ## <a name="remarks"></a>备注
 
-此类是用于简单的工作线程[CThreadPool](../../atl/reference/cthreadpool-class.md)。 此类不提供其自己的任何请求处理功能。 相反，它实例化的一个实例*辅助*每个请求，并委托给该实例及其方法的实现。
+此类是一个简单的工作线程，用于[CThreadPool。](../../atl/reference/cthreadpool-class.md) 此类不提供其自己的任何请求处理功能。 相反，它实例化每个请求的一个*Worker*实例，并将其方法的实现委托给该实例。
 
-此类的好处是，它提供了方便地更改现有辅助角色线程类的状态模型。 `CThreadPool` 将线程的生存期内创建单个辅助角色以便如果辅助类保存状态，它将多个请求间保存它。 进行简单包装即可在该类`CNonStatelessWorker`然后再将它与模板`CThreadPool`、 辅助角色和它所持有仅限于单个请求的状态的生存期。
+此类的好处是它提供了一种更改现有辅助线程类的状态模型的便捷方法。 `CThreadPool`将为线程的生存期创建单个辅助角色，因此，如果辅助角色类保持状态，它将跨多个请求保留该工作线程。 只需在`CNonStatelessWorker`模板中包装该类，即可使用`CThreadPool`，辅助角色的生存期及其保留状态仅限于单个请求。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlutil.h
+**标题：** atlutil.h
 
-##  <a name="execute"></a>  CNonStatelessWorker::Execute
+## <a name="cnonstatelessworkerexecute"></a><a name="execute"></a>无状态工作人员：执行
 
-实现[WorkerArchetype::Execute](worker-archetype.md#execute)。
+[工作Arche类型的实现：执行](worker-archetype.md#execute)。
 
-```
+```cpp
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
@@ -76,11 +76,11 @@ void Execute(
 
 ### <a name="remarks"></a>备注
 
-此方法创建的实例*辅助角色*上的堆栈和调用类[初始化](worker-archetype.md#initialize)对该对象。 如果初始化成功，此方法还会调用[Execute](worker-archetype.md#execute)并[终止](worker-archetype.md#terminate)对同一对象。
+此方法在堆栈上创建*辅助角色*类的实例，并在该对象上调用[初始化](worker-archetype.md#initialize)。 如果初始化成功，此方法也会在同一对象上调用["执行](worker-archetype.md#execute)"和["终止](worker-archetype.md#terminate)"。
 
-##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
+## <a name="cnonstatelessworkerinitialize"></a><a name="initialize"></a>无状态工作人员：初始化
 
-实现[WorkerArchetype::Initialize](worker-archetype.md#initialize)。
+[工作Arche类型的实现：初始化](worker-archetype.md#initialize)。
 
 ```
 BOOL Initialize(void* /* pvParam */) throw();
@@ -92,11 +92,11 @@ BOOL Initialize(void* /* pvParam */) throw();
 
 ### <a name="remarks"></a>备注
 
-此类不会进行任意初始化`Initialize`。
+此类不会在 中`Initialize`执行任何初始化。
 
-##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType
+## <a name="cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>无状态工作人员：：请求类型
 
-实现[WorkerArchetype::RequestType](worker-archetype.md#requesttype)。
+[workerArche 类型的实现：请求类型](worker-archetype.md#requesttype)。
 
 ```
 typedef Worker::RequestType RequestType;
@@ -104,19 +104,19 @@ typedef Worker::RequestType RequestType;
 
 ### <a name="remarks"></a>备注
 
-此类处理相同类型的工作项作为用于类*辅助*模板参数。 请参阅[CNonStatelessWorker 概述](../../atl/reference/cnonstatelessworker-class.md)有关详细信息。
+此类处理的工作项类型与用于*辅助角色*模板参数的类相同。 有关详细信息，请参阅[无状态工作人员概述](../../atl/reference/cnonstatelessworker-class.md)。
 
-##  <a name="terminate"></a>  CNonStatelessWorker::Terminate
+## <a name="cnonstatelessworkerterminate"></a><a name="terminate"></a>无状态工作人员：：终止
 
-实现[WorkerArchetype::Terminate](worker-archetype.md#terminate)。
+[workerArche 类型的实现：终止](worker-archetype.md#terminate)。
 
-```
+```cpp
 void Terminate(void* /* pvParam */) throw();
 ```
 
 ### <a name="remarks"></a>备注
 
-此类不执行任何清理操作`Terminate`。
+此类不会在 中`Terminate`进行任何清理。
 
 ## <a name="see-also"></a>请参阅
 

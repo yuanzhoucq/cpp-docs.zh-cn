@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375724"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 结构
 
@@ -31,21 +31,21 @@ friend struct Details::RuntimeClassBaseT;
 
 ### <a name="parameters"></a>参数
 
-*RuntimeClassTypeT*<br/>
-指定一个或多个标记的字段[RuntimeClassType](runtimeclasstype-enumeration.md)枚举器。
+*运行时类类型T*<br/>
+指定一个或多个[运行时类类型](runtimeclasstype-enumeration.md)枚举器的标志字段。
 
 ## <a name="remarks"></a>备注
 
-提供的帮助器方法`QueryInterface`操作和入门的接口 Id。
+为`QueryInterface`操作和获取接口识别器提供帮助程序方法。
 
 ## <a name="members"></a>成员
 
 ### <a name="protected-methods"></a>受保护的方法
 
-名称                                                         | 描述
+名称                                                         | 说明
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
-[RuntimeClassBaseT::AsIID](#asiid)                           | 检索指向指定的接口 id。
-[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | 检索接口实现由指定类型的 Id 的数组。
+[运行时类基础：：AsIID](#asiid)                           | 检索指向指定接口 ID 的指针。
+[运行时类基础：：获取已实现 IIDS](#getimplementediids) | 检索由指定类型实现的接口指示的数组。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -53,11 +53,11 @@ friend struct Details::RuntimeClassBaseT;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标题：** 实现.h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** 微软：：WRL：:D
 
-## <a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>运行时类基础：：AsIID
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -73,26 +73,26 @@ __forceinline static HRESULT AsIID(
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-实现接口 ID 由参数指定的类型*riid*。
+实现参数*riid*指定的接口 ID 的类型。
 
-*implements*<br/>
-指定模板参数的类型的变量*T*。
+*实现*<br/>
+模板参数*T*指定的类型的变量。
 
 *riid*<br/>
 要检索的接口 ID。
 
 *ppvObject*<br/>
-如果此操作成功，由参数指定指针-到-a-指向接口的指针*riid*。
+如果此操作成功，则指向参数*riid*指定的接口的指针指向指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为描述错误的 HRESULT。
+S_OK如果成功;否则，描述错误的 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-检索指向指定的接口 id。
+检索指向指定接口 ID 的指针。
 
-## <a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>运行时类基础：：获取已实现 IIDS
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -108,21 +108,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-类型*实现*参数。
+*实现*参数的类型。
 
-*implements*<br/>
-为参数指定的类型的指针*T*。
+*实现*<br/>
+指向参数*T*指定的类型的指针。
 
 *iidCount*<br/>
-接口 Id 来检索最大数目。
+要检索的接口指示的最大数量。
 
-*iids*<br/>
-如果此操作成功，完成的接口实现的类型的 Id 数组*T*。
+*伊德*<br/>
+如果此操作成功完成，则按*类型 T*实现的接口 I 的数组。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为描述错误的 HRESULT。
+S_OK如果成功;否则，描述错误的 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-检索接口实现由指定类型的 Id 的数组。
+检索由指定类型实现的接口指示的数组。

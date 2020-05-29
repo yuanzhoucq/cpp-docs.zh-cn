@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1a5b6edbc87e14de267cf962dc2b1a71dd6be12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404099"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200533"
 ---
 # <a name="compiler-error-c3615"></a>编译器错误 C3615
 
-> constexpr 函数*函数*不会导致一个常量表达式
+> constexpr 函数 "*function*" 不能导致常量表达式
 
-该函数*函数*可能不会计算为`constexpr`在编译时。 要`constexpr`，一个函数只能调用其他`constexpr`函数。
+函数*函数*在编译时无法计算为 `constexpr`。 若要 `constexpr`，函数只能调用其他 `constexpr` 函数。
 
 ## <a name="example"></a>示例
 
-Visual Studio 2017 正确引发错误，左操作数的条件性运算中无效时`constexpr`上下文。 下面的代码编译，Visual Studio 2015 中但在 Visual Studio 2017 中不编译。
+当条件计算操作的左操作数在 `constexpr` 上下文中无效时，Visual Studio 2017 正确引发错误。 下面的代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中未进行编译。
 
 ```cpp
 // C3615.cpp
@@ -39,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-若要解决此问题，请声明`array::size()`充当`constexpr`或删除`constexpr`限定符从`f`。
+若要解决此问题，请将 `array::size()` 函数声明为 `constexpr` 或删除 `f`中的 `constexpr` 限定符。

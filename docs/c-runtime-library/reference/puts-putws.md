@@ -1,9 +1,11 @@
 ---
 title: puts、_putws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putws
 - puts
+- _o__putws
+- _o_puts
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2e581237c7b839af87df7bc88369f21751b855d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949803"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916108"
 ---
 # <a name="puts-_putws"></a>puts、_putws
 
@@ -57,7 +60,7 @@ int _putws(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 输出字符串。
 
 ## <a name="return-value"></a>返回值
@@ -74,6 +77,8 @@ Put**函数将** *str*写入标准输出流**stdout**，将字符串的终止 nu
 
 **_putwch**使用当前控制台区域设置写入 Unicode 字符。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
@@ -82,12 +87,12 @@ Put**函数将** *str*写入标准输出流**stdout**，将字符串的终止 nu
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

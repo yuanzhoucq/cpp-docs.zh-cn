@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740936"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752893"
 ---
 # <a name="value-classes-and-structs-ccx"></a>值类和结构 (C++/CX)
 
-*值结构*或*值类*是与 Windows 运行时兼容的 POD （"纯旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。
+*值结构*或*值类*是 Windows 运行时兼容 POD（"普通旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。
 
 下面的示例演示如何声明和初始化值结构。
 
@@ -48,11 +48,11 @@ ms.locfileid: "70740936"
     ts3.str = "Another way to init a value struct.";
 ```
 
-将一个值类型的变量分配给另一个变量时，该值被复制，因此，两个变量均有自己的数据副本。 值结构是一种具有固定大小的结构，它只包含公共数据字段并使用 `value struct` 关键字来声明。
+将一个值类型的变量分配给另一个变量时，该值被复制，因此，两个变量均有自己的数据副本。 ** 值结构是一种具有固定大小的结构，它只包含公共数据字段并使用 `value struct` 关键字来声明。
 
-值类则类似于 `value struct` ，只不过必须为其字段显式给定公共可访问性。 使用 `value class` 关键字来声明它。
+** 值类则类似于 `value struct` ，只不过必须为其字段显式给定公共可访问性。 使用 `value class` 关键字来声明它。
 
-值结构或值类只能作为字段包含基本数值类型、枚举类、 `Platform::String^`或[Platform：： IBox \<t > ^](../cppcx/platform-ibox-interface.md) ，其中 t 是数值类型或枚举类或值类或结构。 `IBox<T>^` 字段的值可以是 `nullptr`，这是 C++ 实现“可以为 null 的值类型”概念的方式。
+值结构或值类只能包含基本数值类型、`Platform::String^`枚举类或[Platform：iBox \<T>=](../cppcx/platform-ibox-interface.md)其中 T 是数值类型或枚举类或值类或结构。 `IBox<T>^` 字段的值可以是 `nullptr`，这是 C++ 实现 **“可以为 null 的值类型”概念的方式。
 
 将 `Platform::String^` 或 `IBox<T>^` 类型作为成员包含在内的值类型或结构不支持 `memcpy`。
 
@@ -68,13 +68,13 @@ ms.locfileid: "70740936"
 
 若要声明通过值传递值类型的参数，请使用如下所示的代码：
 
-```
+```cpp
 void Method1(MyValueType obj);
 ```
 
 若要声明通过引用传递值类型参数，请使用引用符号 (&)，如下所示：
 
-```
+```cpp
 void Method2(MyValueType& obj);
 ```
 
@@ -90,7 +90,7 @@ Method2(ref obj);
 
 ## <a name="nullable-value-types"></a>可以为 null 的值类型
 
-如前所述，值类或值结构可具有类型为[Platform：： IBox\<T > ^](../cppcx/platform-ibox-interface.md)的字段，例如。 `IBox<int>^` 此类字段的值可以是对 `int` 类型有效的任何数值，也可以是 `nullptr`。 对于可以为 null 的字段，可将其作为实参传递给已将形参声明为可选参数的方法，或传递到值类型不必具有值的任何其他地方。
+如前所述，值类或值结构可以具有类型为[Platform：：iBox\<T>=](../cppcx/platform-ibox-interface.md)的字段，例如 。 `IBox<int>^` 此类字段的值可以是对 `int` 类型有效的任何数值，也可以是 `nullptr`。 对于可以为 null 的字段，可将其作为实参传递给已将形参声明为可选参数的方法，或传递到值类型不必具有值的任何其他地方。
 
 下面的示例演示如何初始化具有可以为 null 的字段的结构。
 

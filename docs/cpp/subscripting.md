@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 376cacc3f70995c271a29b741ad266049da45785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330543"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160887"
 ---
 # <a name="subscripting"></a>下标
 
-下标运算符 (**[]**)，如函数调用运算符被视为二进制运算符。 下标运算符必须是采用单个参数的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。
+下标运算符（ **[]** ）（如函数调用运算符）被视为二元运算符。 下标运算符必须是采用单个参数的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何创建类型的矢量**int**用于实现边界检查：
+下面的示例演示如何创建实现界限检查的**int**类型的向量：
 
 ```cpp
 // subscripting.cpp
@@ -91,10 +91,10 @@ Element: [10] = 10
 
 ## <a name="comments"></a>注释
 
-当`i`达到在前面的程序中，10 **operator []** 检测越界下标正在使用，并发出一条错误消息。
+当在上一个程序中 `i` 达到10时， **operator []** 将检测到使用了超出界限的下标并且发出错误消息。
 
-请注意，该函数**operator []** 返回引用类型。 这会使它成为左值，从而使您可以在赋值运算符的任何一侧使用下标表达式。
+请注意，函数**运算符 []** 返回引用类型。 这会使它成为左值，从而使您可以在赋值运算符的任何一侧使用下标表达式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [运算符重载](../cpp/operator-overloading.md)

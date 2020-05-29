@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c3bbb2ec8ce9a09dd17c4744a80913f95d85bd00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459530"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376910"
 ---
-# <a name="backinsertiterator-class"></a>back_insert_iterator 类
+# <a name="back_insert_iterator-class"></a>back_insert_iterator 类
 
 描述满足输出迭代器需求的迭代器适配器。 它将元素插入到序列后端而非覆盖序列，因此它提供的语义不同于 C++ 序列容器的迭代器所提供的覆盖语义。 `back_insert_iterator` 类针对容器类型进行模板化。
 
@@ -39,32 +39,32 @@ class back_insert_iterator;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[back_insert_iterator](#back_insert_iterator)|构造在容器的最后一个元素后插入元素的 `back_insert_iterator`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[container_type](#container_type)|为 `back_insert_iterator` 提供容器的类型。|
-|[reference](#reference)|为 `back_insert_iterator` 提供引用的类型。|
+|[参考](#reference)|为 `back_insert_iterator` 提供引用的类型。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|操作员|说明|
 |-|-|
-|[operator*](#op_star)|取消引用运算符, 用于实现后退插入的\*输出迭代器表达式 =  `i`。 `x`|
-|[operator++](#op_add_add)|将 `back_insert_iterator` 递增到下一个可用来存储值的位置。|
-|[operator=](#op_eq)|赋值运算符, 用于实现后退插入的输出\*迭代器表达式 =  `i`。 `x`|
+|[运算符*](#op_star)|用于实现\*`i` = `x`输出迭代器表达式的背插入运算符。|
+|[运算符*](#op_add_add)|将 `back_insert_iterator` 递增到下一个可用来存储值的位置。|
+|[运算符*](#op_eq)|用于实现\*`i` = `x`输出迭代器表达式的后台插入赋值运算符。|
 
 ## <a name="requirements"></a>要求
 
-**标头**：\<iterator>
+**标题** \<： 迭代器>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator
+## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator：：back_insert_iterator
 
 构造在容器的最后一个元素后插入元素的 `back_insert_iterator`。
 
@@ -129,7 +129,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="container_type"></a>  back_insert_iterator::container_type
+## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator：container_type
 
 为 `back_insert_iterator` 提供容器的类型。
 
@@ -183,9 +183,9 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator\*
+## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator：：操作员\*
 
-用于实现输出迭代器表达式 \* *i* = *x* 的取消引用运算符。
+用于实现输出迭代\*器表达式 i *x* = *x*的取消引用运算符。
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -197,7 +197,7 @@ back_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果 **Iter** 是对序列中元素进行寻址的迭代器，则 **\*Iter** = **value** 会替换该元素的值，且不会改变此序列中元素的总数。
+用于实现输出迭代器表达式 = **\*Iter****值**。 如果 **Iter** 是对序列中元素进行寻址的迭代器，则 **\*Iter** = **value** 会替换该元素的值，且不会改变此序列中元素的总数。
 
 ### <a name="example"></a>示例
 
@@ -243,7 +243,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="op_add_add"></a>  back_insert_iterator::operator++
+## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator：：操作员*
 
 将 `back_insert_iterator` 递增到下一个可用来存储值的位置。
 
@@ -254,7 +254,7 @@ back_insert_iterator<Container> operator++(int);
 
 ### <a name="return-value"></a>返回值
 
-`back_insert_iterator`，它寻址下一个可用来存储值的位置。
+`back_insert_iterator`，它寻找下一个可用来存储值的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -304,7 +304,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="op_eq"></a>  back_insert_iterator::operator=
+## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator：：操作员*
 
 将值追加或放回到容器的末尾。
 
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>参数
 
-*初始值*\
+*瓦尔*\
 要插入到容器中的值。
 
 ### <a name="return-value"></a>返回值
@@ -371,7 +371,7 @@ int main( )
 }
 ```
 
-## <a name="reference"></a>  back_insert_iterator::reference
+## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator：参考
 
 为 `back_insert_iterator` 提供引用的类型。
 
@@ -421,8 +421,8 @@ The vector vec is: ( 1 2 3 ).
 The last element in the vector vec is: 3.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[\<迭代器>](../standard-library/iterator.md)\
+[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

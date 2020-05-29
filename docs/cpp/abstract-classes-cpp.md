@@ -7,12 +7,12 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181689"
 ---
 # <a name="abstract-classes-c"></a>抽象类 (C++)
 
@@ -20,7 +20,7 @@ ms.locfileid: "62385084"
 
 包含至少一个纯虚函数的类被视为抽象类。 派生自抽象类的类必须实现纯虚函数或者它们必须也是抽象类。
 
-中介绍的示例，请考虑[虚函数](../cpp/virtual-functions.md)。 类 `Account` 的用途是提供通用功能，但 `Account` 类型的对象太通用，因此没什么用。 因此，`Account` 是抽象类的很合适的候选项：
+请考虑[虚拟函数](../cpp/virtual-functions.md)中显示的示例。 类 `Account` 的用途是提供通用功能，但 `Account` 类型的对象太通用，因此没什么用。 因此，`Account` 是抽象类的很合适的候选项：
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -53,9 +53,9 @@ private:
 
 可以为抽象类定义纯虚函数，但是只能通过使用以下语法直接调用：
 
-*abstract-class-name*::*function-name*()
+*抽象类名称*：：*函数名称*（）
 
-这有助于设计基类包括纯虚析构函数的类层次结构，因为在销毁对象的过程中始终会调用基类析构函数。 请看下面的示例：
+这有助于设计基类包括纯虚析构函数的类层次结构，因为在销毁对象的过程中始终会调用基类析构函数。 请考虑以下示例：
 
 ```cpp
 // Declare an abstract base class with a pure virtual destructor.
@@ -86,6 +86,6 @@ int main() {
 > [!NOTE]
 > 在前面的示例中，纯虚函数 `base::~base` 是从 `derived::~derived` 隐式调用的。 还可使用完全限定的成员函数名称显式调用纯虚函数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [继承](../cpp/inheritance-cpp.md)

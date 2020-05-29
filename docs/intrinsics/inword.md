@@ -2,24 +2,24 @@
 title: __inword
 ms.date: 09/02/2019
 f1_keywords:
-- __indword_cpp
-- __indword
+- __inword_cpp
+- __inword
 helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: cfb6e5a11bed5feec3435ab604d22b8f532d3400
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7daaf1abd5089716061f118e30e9534e5c5c18ee
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217525"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440973"
 ---
 # <a name="__inword"></a>__inword
 
 **Microsoft 专用**
 
-使用`in`指令从指定端口读取数据。
+使用 `in` 指令从指定端口读取数据。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +31,7 @@ unsigned short __inword(
 
 ### <a name="parameters"></a>参数
 
-*口*\
+*端口*\
 中要从其读取的端口。
 
 ## <a name="return-value"></a>返回值
@@ -52,6 +52,6 @@ unsigned short __inword(
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

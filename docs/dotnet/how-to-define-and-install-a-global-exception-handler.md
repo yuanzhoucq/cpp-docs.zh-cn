@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387391"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544975"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>如何：定义和安装全局异常处理程序
 
-下面的代码示例演示如何未经处理的异常被捕获。 该示例窗体包含一个按钮，按下时，执行空引用，从而导致引发异常。 此功能表示典型代码失败。 由安装的主函数的应用程序范围的异常处理程序捕获产生的异常。
+下面的代码示例演示如何捕获未经处理的异常。 示例窗体包含一个按钮，在按下该按钮时，将执行空引用，从而引发异常。 此功能表示典型的代码失败。 产生的异常由 main 函数所安装的应用程序范围的异常处理程序捕获。
 
-这通过绑定到委托实现<xref:System.Windows.Forms.Application.ThreadException>事件。 在这种情况下，并发的异常然后发送到`App::OnUnhandled`方法。
+这是通过将委托绑定到 <xref:System.Windows.Forms.Application.ThreadException> 事件来完成的。 在这种情况下，随后的异常将发送到 `App::OnUnhandled` 方法。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>
@@ -71,6 +71,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理](../extensions/exception-handling-cpp-component-extensions.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6119bf922b05c30a14d8421800e3931c4a038779
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394476"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375963"
 ---
 # <a name="opening-files"></a>打开文件
 
@@ -31,9 +31,9 @@ ms.locfileid: "62394476"
 
 1. 创建文件对象，无需指定路径或权限标志。
 
-   通常通过声明创建的文件对象[CFile](../mfc/reference/cfile-class.md)变量上的堆栈帧。
+   通常通过在堆栈帧上声明[CFile](../mfc/reference/cfile-class.md)变量来创建文件对象。
 
-1. 调用[打开](../mfc/reference/cfile-class.md#open)文件对象，提供路径和权限标志的成员函数。
+1. 调用文件对象的[Open](../mfc/reference/cfile-class.md#open)成员函数，提供路径和权限标志。
 
    如果成功打开文件，则 `Open` 的返回值不为零；否则如果指定文件未能打开，则为 0。 `Open` 成员函数的原型如下所示：
 
@@ -46,10 +46,10 @@ ms.locfileid: "62394476"
 [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
 
 > [!NOTE]
->  此示例将创建并打开文件。 如果出现问题，则 `Open` 调用将在其最后一个参数中返回 `CFileException` 对象，如下所示。 TRACE 宏将打印文件的名称和一个代码，指示失败的原因。 如果您需要更详细的错误报告，则可以调用 `AfxThrowFileException` 函数。
+> 此示例将创建并打开文件。 如果出现问题，则 `Open` 调用将在其最后一个参数中返回 `CFileException` 对象，如下所示。 TRACE 宏同时打印文件名和指示失败原因的代码。 如果您需要更详细的错误报告，则可以调用 `AfxThrowFileException` 函数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CFile 类](../mfc/reference/cfile-class.md)<br/>
-[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
+[文件文件：：打开](../mfc/reference/cfile-class.md#open)<br/>
 [文件](../mfc/files-in-mfc.md)

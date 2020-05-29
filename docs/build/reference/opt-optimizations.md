@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c0ab3579fcb9633c435305a8b02b0c3f73d7a6f
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320237"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825699"
 ---
 # <a name="opt-optimizations"></a>/OPT（优化）
 
@@ -30,74 +30,74 @@ ms.locfileid: "62320237"
 
 ## <a name="syntax"></a>语法
 
-> **/ 选择：**{**REF** | **NOREF**}<br/>
-> **/ 选择：**{**ICF**[**=**_迭代_] |**NOICF**}<br/>
-> **/ 选择：**{**LBR** | **NOLBR**}
+> **/OPT：**{**REF** | **NOREF**} \
+> **/Opt：**{**ICF**[**=**_迭代_] |**NOICF**}\
+> **/OPT：**{**LBR** | **NOLBR**}
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-**REF** &#124; **NOREF**
+**引用**&#124; **NOREF**
 
-**/Opt: ref**消除了函数和数据永远不会引用;**/Opt: noref**保留从未引用过的函数和数据。
+**/Opt： REF**消除了从未引用的函数和数据;**/Opt： NOREF**保留从未引用的函数和数据。
 
-当启用 /opt: ref 时，LINK 移除未引用的已打包的函数和数据，称为*Comdat*。 此优化称为可传递的 COMDAT 消除。 **/Opt: ref**选项也会禁用增量链接。
+启用/OPT： REF 后，LINK 将删除未引用的打包函数和数据（称为*comdat*）。 此优化称为可传递的 COMDAT 消除。 **/Opt： REF**选项还禁用增量链接。
 
-内联的函数和类声明中定义的成员函数始终为 Comdat。 所有的对象文件中的函数将组成排列的 Comdat，如果使用编译[/Gy](gy-enable-function-level-linking.md)选项。 若要放置**const** Comdat 中的数据，您必须将其声明使用`__declspec(selectany)`。 有关如何指定用于删除或折叠的数据的信息，请参阅[selectany](../../cpp/selectany.md)。
+在类声明中定义的内联函数和成员函数始终是 Comdat 的。 如果使用[/gy](gy-enable-function-level-linking.md)选项编译对象文件中的所有函数，则会将其转换为 comdat。 若要将**const**数据放置在 comdat 中，必须使用`__declspec(selectany)`来声明它。 有关如何指定删除或折叠数据的信息，请参阅[selectany](../../cpp/selectany.md)。
 
-默认情况下 **/opt: ref**除非由链接器启用 **/opt: noref**或[/debug](debug-generate-debug-info.md)指定。 若要替代此默认设置，并在程序中保留未引用的 Comdat，指定 **/opt: noref**。 可以使用[/include](include-force-symbol-references.md)选项重写特定符号的删除。
+默认情况下，如果指定了 **/opt： NOREF**或[/debug](debug-generate-debug-info.md) ，则链接器将启用 **/opt： REF** 。 若要替代此默认设置并保留程序中的未引用 Comdat，请指定 **/opt： NOREF**。 可以使用[/INCLUDE](include-force-symbol-references.md)选项重写特定符号的移除。
 
-如果[/debug](debug-generate-debug-info.md)指定的默认值为 **/opt**是**NOREF**，而且所有函数都保留在映像中。 若要覆盖此默认值和优化的调试版本，请指定 **/opt: ref**。 这可以减少到可执行文件的大小，并可以是一项实用优化甚至在调试生成。 我们建议，还可以指定 **/OPT:NOICF**若要保留相同函数在调试生成。 这样更容易读取堆栈跟踪以及在本应折叠在一起的函数中设置断点。
+如果指定了[/debug](debug-generate-debug-info.md) ，则 **/opt**的默认值为**NOREF**，所有函数都保留在映像中。 若要重写此默认值并优化调试生成，请指定 **/opt： REF**。 这可以减少可执行文件的大小，也可以在调试版本中进行有用的优化。 建议你还在调试版本中指定 **/opt： NOICF**以保留相同的函数。 这样更容易读取堆栈跟踪以及在本应折叠在一起的函数中设置断点。
 
-**ICF**\[**=**_迭代_] &#124; **NOICF**
+**ICF**\[ICF**=**_迭代_] &#124; **NOICF**
 
-使用**ICF**\[**=**_迭代_] 若要执行相同的 COMDAT 折叠。 可以从链接器输出中删除冗余 COMDAT。 可选*迭代*参数指定的次数来遍历重复项的符号。 默认迭代次数为 1。 附加的迭代可以找到更多前一次迭代中未通过折叠发现的重复项。
+使用**ICF**\[**=**_迭代_] 执行相同的 COMDAT 折叠。 可以从链接器输出中删除冗余 COMDAT。 可选的*迭代*参数指定遍历符号以查找重复项的次数。 默认迭代次数为1。 附加的迭代可以找到更多前一次迭代中未通过折叠发现的重复项。
 
-默认情况下 **/opt: icf**除非由链接器启用 **/OPT:NOICF**或[/debug](debug-generate-debug-info.md)指定。 若要替代此默认设置，并防止排列的 Comdat 折叠在程序中，指定 **/OPT:NOICF**。
+默认情况下，如果指定了 **/opt： NOICF**或[/debug](debug-generate-debug-info.md) ，则链接器将启用 **/opt： ICF** 。 若要重写此默认值，并在程序中阻止 Comdat 折叠，请指定 **/opt： NOICF**。
 
-在调试版本中，您必须显式指定 **/opt: icf**以启用 COMDAT 折叠。 但是，由于 **/opt: icf**可以合并相同的数据或函数，它可以更改堆栈跟踪中出现的函数名称。 它还可以使其不可能在某些函数中设置断点，或检查在调试器中，某些数据，并可以帮助您进入意外的函数时您单步执行代码。 代码的行为完全相同，但调试器演示文稿可以是非常容易引起混淆。 因此，不建议你使用 **/opt: icf**调试生成中除非较小的代码的好处能弥补这些不足。
+在调试版本中，必须显式指定 **/opt： ICF**才能启用 COMDAT 折叠。 但是，由于 **/opt： ICF**可以合并相同的数据或函数，因此它可以更改堆栈跟踪中出现的函数名称。 它还可能导致在某些函数中设置断点或在调试器中检查某些数据，并在单步执行代码时将您带到意外函数。 代码的行为是相同的，但调试器演示可能会很容易混淆。 因此，建议不要在调试版本中使用 **/opt： ICF** ，除非小型代码的优点超过了这些缺点。
 
 > [!NOTE]
-> 因为 **/opt: icf**可能会导致相同的地址分配给不同的函数或只读数据成员 (即**const**变量使用编译时 **/Gy**)，它可能会中断依赖于函数或只读数据成员的唯一地址的程序。 有关详细信息，请参阅 [/Gy （启用函数级链接）](gy-enable-function-level-linking.md)。
+> 由于 **/opt： ICF**可能导致相同的地址分配给不同的函数或只读数据成员（即，使用 **/gy**编译时的**常量**变量），因此它可能会破坏依赖于函数或只读数据成员的唯一地址的程序。 有关详细信息，请参阅 [/Gy （启用函数级链接）](gy-enable-function-level-linking.md)。
 
 **LBR** &#124; **NOLBR**
 
-**/OPT:LBR**并 **/OPT:NOLBR**选项仅适用于 ARM 二进制文件。 由于某些 ARM 处理器分支指令的范围有限，因此如果链接器检测到跳转的地址超出范围，它就会将分支指令的目标地址替换成包含指向实际目标的分支指令的代码“岛”的地址。 可以使用 **/OPT:LBR**来优化对长分支指令的检测和中间代码岛，若要最大程度减少总体代码大小的布局。 **/OPT:NOLBR**指示链接器生成代码岛的长分支指令，因为其出现，而不进行优化。
+**/Opt： LBR**和 **/opt： NOLBR**选项仅适用于 ARM 二进制文件。 由于某些 ARM 处理器分支指令的范围有限，因此如果链接器检测到超出范围的地址，则会将分支指令的目标地址替换为代码 "岛" 的地址，该代码包含一个包含实际目标的分支指令。 可以使用 **/opt： LBR**来优化长分支指令的检测和中间代码岛的位置，以最大程度地减少总体代码大小。 **/Opt： NOLBR**指示链接器为遇到的长分支指令生成代码岛，但不进行优化。
 
-默认情况下 **/OPT:LBR**时未启用增量链接，设置选项。 如果希望非增量链接而不是长分支优化，指定 **/OPT:NOLBR**。 **/OPT:LBR**选项禁用增量链接。
+默认情况下，当未启用增量链接时，将设置 **/opt： LBR**选项。 如果需要非增量链接而不是长分支优化，请指定 **/opt： NOLBR**。 **/Opt： LBR**选项禁用增量链接。
 
 ## <a name="remarks"></a>备注
 
-如果使用在命令行，链接器将默认为**ICF，/opt: ref LBR**。 如果 **/debug**指定，默认值为**NOICF，/opt: noref NOLBR**。
+当在命令行中使用链接器时，链接器默认为 **/opt： REF、ICF、LBR**。 如果指定了 **/debug** ，则默认值为 **/opt： NOREF、NOICF、NOLBR**。
 
-**/Opt**优化通常减少映像大小并加快程序速度。 这些改进可以在是很明显较大的程序，这就是为什么它们对于零售版本的默认情况下启用。
+**/Opt**优化通常会减小映像大小并提高程序速度。 这些改进在大型程序中可能非常重要，这就是在默认情况下为零售版本启用它们的原因。
 
-链接器优化需要额外的时间，但优化的代码也节省了时间时链接器具有更少的重定位，若要修复，并创建较小的最终图像，并且它将保存时，它具有较少的调试信息来处理和写入 PDB 的更多时间。 启用优化时，它可以生成更快的链接时总体而言，因为在分析中的小额外成本可能会超过由链接器中的节省经过较小的二进制文件的时间偏移量。
+链接器优化之前需要额外的时间，但优化后的代码还可以节省时间，因为链接器的重定位更少，无法修复并创建更小的最终映像，并且在处理和写入 PDB 的调试信息较少的情况下，它可节省更多的时间。 启用优化时，它可能会导致更快的链接时间，因为分析中的较小额外成本可能比通过链接器传递较小的二进制文件时节省的时间更多。
 
-**/Opt**变量可以指定在一起，以逗号隔开。 而不是，如 **/opt: ref /OPT:NOICF**，可以指定 **/opt: ref、 NOICF**。
+可以将 **/opt**参数一起指定，并用逗号分隔。 例如，可以指定 **/opt： ref、NOICF**，而不是 **/OPT： REF/opt： NOICF**。
 
-可以使用[/verbose](verbose-print-progress-messages.md)链接器选项以查看通过删除的函数的 **/opt: ref**和通过折叠函数 **/opt: icf**。
+您可以使用[/verbose](verbose-print-progress-messages.md)链接器选项查看 **/opt： REF**和由 **/opt： ICF**折叠的函数所删除的函数。
 
-**/Opt**通常将其自变量设置为使用创建的项目**新项目**对话框在 Visual Studio IDE 中，并通常具有不同的值，用于调试和发布配置。 如果未不设置任何值，为你的项目中的这些链接器选项，您可能会收到项目默认设置，可以不同于在命令行链接器将使用的默认值。
+通常为使用 Visual Studio IDE 中的 "**新建项目**" 对话框创建的项目设置 **/opt**参数，对于 "调试" 和 "发布" 配置，通常具有不同的值。 如果你的项目中未设置这些链接器选项的值，则可能会获得项目默认值，该默认值可能与命令行中的链接器使用的默认值不同。
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置 OPT:ICF 或 OPT:REF 链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **链接器** > **优化**属性页。
+1. 选择 "**配置属性** > **链接器** > **优化**" 属性页。
 
 1. 修改以下属性之一：
 
    - **启用 COMDAT 折叠**
 
-   - **参考资料**
+   - **参考**
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置 OPT:LBR 链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **链接器** > **命令行**属性页。
+1. 选择 "**配置属性** > **链接器** > **命令行**" 属性页。
 
-1. 输入中的选项**其他选项**:
+1. 在 "**其他选项**" 中输入选项：
 
    `/opt:lbr` 或 `/opt:nolbr`
 
@@ -105,7 +105,7 @@ ms.locfileid: "62320237"
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> 属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSVC 链接器参考](linking.md)
 - [MSVC 链接器选项](linker-options.md)

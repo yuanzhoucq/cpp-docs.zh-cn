@@ -12,54 +12,54 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 11bdfc98c64b2612129e10c002c68ee243bec7da
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447272"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544506"
 ---
-# <a name="mixed-native-and-managed-assemblies"></a>混合 （本机和托管） 程序集
+# <a name="mixed-native-and-managed-assemblies"></a>混合（本机和托管）程序集
 
-混合程序集都能包含非托管的机器指令和 MSIL 指令。 这使他们能够调用并同时保留本机兼容性由.NET 组件调用C++库。 使用混合程序集，开发人员可以编写使用混合使用.NET 和本机应用程序C++代码。
+混合程序集能够同时包含非托管计算机指令和 MSIL 指令。 这允许它们调用并由 .NET 组件调用，同时保持与本机C++库的兼容性。 使用混合程序集，开发人员可以使用 .NET 和本机C++代码的组合创作应用程序。
 
-例如，现有库包含完全的本机C++重新编译使用的只是一个模块，可将代码迁移到.NET 平台 **/clr**编译器开关。 此模块然后可以使用.NET 功能，但保持兼容的应用程序的剩余部分。 甚至可以决定是在同一文件中函数的函数的基础上的托管和本机编译 (请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md))。
+例如，通过使用 **/clr**编译器开关仅重新编译C++一个模块，可将完全由本机代码组成的现有库引入 .net 平台。 然后，此模块可以使用 .NET 功能，但仍与应用程序的其余部分兼容。 在同一文件中，甚至可以在每个函数的基础上确定托管和本机编译的情况（请参阅[托管的非托管](../preprocessor/managed-unmanaged.md)的）。
 
-VisualC++使用仅支持混合的托管程序集的新一代 **/clr**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。 如果您需要纯或可验证的托管程序集，我们建议使用 C# 创建它们。
+Visual C++仅支持通过使用 **/clr**编译器选项生成混合托管程序集。 **/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。 如果需要纯或可验证的托管程序集，我们建议使用C#来创建它们。
 
-早期版本的 MicrosoftC++编译器工具集支持的三种不同类型的托管程序集生成： 混合、 纯代码和可验证。 后一种两个中讨论[纯代码和可验证代码 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+Microsoft C++编译器工具集的早期版本支持生成三个不同类型的托管程序集：混合、纯和可验证。 后两个[代码在纯代码和可验证代码C++（/cli）](../dotnet/pure-and-verifiable-code-cpp-cli.md)中讨论。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
-[如何：迁移到 /clr](../dotnet/how-to-migrate-to-clr.md)<br/>
-介绍有关引入或升级应用程序中的.NET 功能的建议的步骤。
+[如何：迁移到/clr](../dotnet/how-to-migrate-to-clr.md)<br/>
+介绍在应用程序中引入或升级 .NET 功能的建议步骤。
 
-[如何：编译 MFC 和 ATL 代码使用 /clr](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
-讨论如何将现有的 MFC 和 ATL 程序，以面向公共语言运行时编译。
+[如何：使用/clr 编译 MFC 和 ATL 代码](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+讨论如何编译现有的 MFC 和 ATL 程序以面向公共语言运行时。
 
 [混合程序集的初始化](../dotnet/initialization-of-mixed-assemblies.md)<br/>
-描述了"加载程序锁"问题和解决方案。
+介绍 "加载程序锁" 的问题和解决方案。
 
 [混合程序集的库支持](../dotnet/library-support-for-mixed-assemblies.md)<br/>
-讨论如何使用本机库中的 **/clr**编译。
+讨论如何在 **/clr**编译中使用本机库。
 
 [性能注意事项](../dotnet/performance-considerations-for-interop-cpp.md)<br/>
-描述混合程序集和数据封送处理的性能影响。
+介绍混合程序集和数据封送处理的性能影响。
 
 [应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)<br/>
-讨论 VisualC++支持的应用程序域。
+讨论对C++应用程序域的可视化支持。
 
-[双重形式转换](../dotnet/double-thunking-cpp.md)<br/>
+[双 Thunk](../dotnet/double-thunking-cpp.md)<br/>
 讨论托管函数的本机入口点的性能影响。
 
-[使用 /clr 避免 CLR 关闭时使用 COM 对象生成的异常](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
-讨论如何确保正确关闭使用 COM 对象使用编译的托管应用程序 **/clr**。
+[在使用通过/clr 生成的 COM 对象时避免 CLR 关闭异常](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
+讨论如何确保正确关闭使用使用 **/clr**编译的 COM 对象的托管应用程序。
 
-[如何：通过删除对 CRT 库 DLL 的依赖来创建部分信任的应用程序](../dotnet/create-a-partially-trusted-application.md)<br/>
-讨论如何创建使用视觉对象的部分受信任的公共语言运行时应用程序C++通过删除对 msvcm90.dll 依赖关系。
+[如何：通过移除 CRT 库 DLL 上的依赖项来创建部分受信任的应用程序](../dotnet/create-a-partially-trusted-application.md)<br/>
+讨论如何通过删除对 msvcm90 的依赖关系，使用 Visual C++创建部分受信任的公共语言运行时应用程序。
 
-对于混合程序集的编码指南的详细信息，请参阅 MSDN 文章[概述的托管/非托管代码互操作性](https://msdn.microsoft.com/library/ms973872.aspx)。
+有关混合程序集的编码准则的详细信息，请参阅 MSDN 文章[托管/非托管代码互操作性概述](/previous-versions/dotnet/articles/ms973872(v=msdn.10))。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)

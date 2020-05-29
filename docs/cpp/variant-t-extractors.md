@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: ab97238cf13accf3db593b5c4a81550297a53d6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187695"
 ---
-# <a name="variantt-extractors"></a>_variant_t 提取器
+# <a name="_variant_t-extractors"></a>_variant_t 提取器
 
 **Microsoft 专用**
 
-从封装中提取数据`VARIANT`对象。
+从封装的 `VARIANT` 对象中提取数据。
 
 ## <a name="syntax"></a>语法
 
@@ -87,32 +87,32 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>备注
 
-从封装中提取原始数据`VARIANT`。 如果`VARIANT`是不正确的类型，`VariantChangeType`用于尝试进行转换，并在失败时生成错误：
+从封装的 `VARIANT`中提取原始数据。 如果 `VARIANT` 尚不是正确的类型，则使用 `VariantChangeType` 来尝试转换，并在失败时生成错误：
 
-- **operator short （)** 提取**短**整数值。
+- **运算符 short （）** 提取**短**整型值。
 
-- **operator long （)** 提取**长**整数值。
+- **operator long （）** 提取**长**整数值。
 
-- **operator float （)** 提取**float**数字值。
+- **operator float （）** 提取**浮点数**。
 
-- **operator double （)** 提取**double**整数值。
+- **运算符 double （）** 提取**double**整数值。
 
-- **operator CY( )** Extracts a `CY` object.
+- **OPERATOR CY （）** 提取 `CY` 的对象。
 
-- **operator bool （)** 提取**bool**值。
+- **operator bool （）** 提取**bool**值。
 
-- **operator DECIMAL （)** 提取`DECIMAL`值。
+- **运算符 DECIMAL （）** 提取 `DECIMAL` 值。
 
-- **operator BYTE （)** 提取`BYTE`值。
+- **OPERATOR BYTE （）** 提取 `BYTE` 值。
 
-- **operator _bstr_t （)** 提取封装在一个字符串`_bstr_t`对象。
+- **运算符 _bstr_t （）** 提取封装在 `_bstr_t` 对象中的字符串。
 
-- **运算符 IDispatch\*（)** 提取调度接口指针从封装`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。
+- **Operator IDispatch\*（）** 从封装的 `VARIANT`中提取调度接口指针。 对结果指针调用 `AddRef`，因此，你需要调用 `Release` 来释放它。
 
-- **运算符 IUnknown\*（)** 从封装中提取 COM 接口指针`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。
+- **操作员 IUnknown\*（）** 从封装的 `VARIANT`中提取 COM 接口指针。 对结果指针调用 `AddRef`，因此，你需要调用 `Release` 来释放它。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_variant_t 类](../cpp/variant-t-class.md)

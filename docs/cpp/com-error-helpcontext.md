@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - HelpContext method [C++]
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
-ms.openlocfilehash: a421a7fd7fa0817c74dac66946e28928b2ad82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3c79bb069ef504680e83359d6ec90c803f16d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180584"
 ---
-# <a name="comerrorhelpcontext"></a>_com_error::HelpContext
+# <a name="_com_errorhelpcontext"></a>_com_error::HelpContext
 
 **Microsoft 专用**
 
-调用`IErrorInfo::GetHelpContext`函数。
+调用 `IErrorInfo::GetHelpContext` 函数。
 
 ## <a name="syntax"></a>语法
 
@@ -27,14 +27,14 @@ DWORD HelpContext( ) const throw( );
 
 ## <a name="return-value"></a>返回值
 
-返回的结果`IErrorInfo::GetHelpContext`有关`IErrorInfo`对象中记录`_com_error`对象。 如果没有`IErrorInfo`记录对象，它将返回零。
+返回在 `_com_error` 对象内记录的 `IErrorInfo` 对象的 `IErrorInfo::GetHelpContext` 结果。 如果未记录 `IErrorInfo` 对象，则返回零。
 
 ## <a name="remarks"></a>备注
 
-调用时的任何错误`IErrorInfo::GetHelpContext`方法将被忽略。
+调用 `IErrorInfo::GetHelpContext` 方法时，将忽略任何错误。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_com_error 类](../cpp/com-error-class.md)

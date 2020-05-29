@@ -9,7 +9,6 @@ f1_keywords:
 - IRowsetInfoImpl.GetProperties
 - ATL::IRowsetInfoImpl::GetProperties
 - IRowsetInfoImpl::GetProperties
-- GetProperties
 - ATL::IRowsetInfoImpl::GetReferencedRowset
 - GetReferencedRowset
 - ATL.IRowsetInfoImpl.GetReferencedRowset
@@ -26,37 +25,37 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390719"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210439"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
 
-提供一个实现[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))接口。
+提供[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))接口的实现。
 
 ## <a name="syntax"></a>语法
 
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE IRowsetInfoImpl :
-   public IRowsetInfo, 
+   public IRowsetInfo,
    public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自`IRowsetInfoImpl`。
+派生自 `IRowsetInfoImpl`的类。
 
 *PropClass*<br/>
-用户可定义属性类，默认值为*T*。
+用户可定义的属性类，默认值为*T*。
 
 ## <a name="requirements"></a>要求
 
-**标头：** altdb.h
+**标头：** altdb
 
 ## <a name="members"></a>成员
 
@@ -64,17 +63,17 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|返回由行集支持的所有属性的当前设置。|
-|[GetReferencedRowset](#getreferencedrowset)|一个书签所应用于行集返回的接口指针。|
-|[GetSpecification](#getspecification)|返回的接口指针上创建一个行集合的对象 （命令或会话）。|
+|[GetProperties](#getproperties)|返回行集合支持的所有属性的当前设置。|
+|[GetReferencedRowset](#getreferencedrowset)|返回一个接口指针，该指针指向应用书签的行集。|
+|[GetSpecification](#getspecification)|返回对象（命令或会话）上用于创建此行集合的接口指针。|
 
 ## <a name="remarks"></a>备注
 
-行集上的必需接口。 此类实现使用行集属性[属性集映射](../../data/oledb/begin-propset-map.md)命令类中定义。 虽然行集类将显示要使用命令类的属性设置，命令或会话对象创建时具有其自己副本的运行时属性，提供行集。
+行集的必需接口。 此类通过使用在命令类中定义的[属性集](../../data/oledb/begin-propset-map.md)来实现行集属性。 尽管行集类看起来是使用 command 类的属性集，但在通过命令或会话对象创建行集时，将使用其自己的运行时属性副本来提供行集。
 
-## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl：： GetProperties
 
-返回中的属性的当前设置`DBPROPSET_ROWSET`组。
+返回 `DBPROPSET_ROWSET` 组中属性的当前设置。
 
 ### <a name="syntax"></a>语法
 
@@ -85,13 +84,13 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
    DBPROPSET** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IRowsetInfo：： GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) 。
 
-## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl：： GetReferencedRowset
 
-一个书签所应用于行集返回的接口指针。
+返回一个接口指针，该指针指向应用书签的行集。
 
 ### <a name="syntax"></a>语法
 
@@ -101,13 +100,13 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
    IUnknown** ppReferencedRowset);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85))中*OLE DB 程序员参考*。 *IOrdinal*参数必须为书签列。
+请参阅*OLE DB 程序员参考*中的[IRowsetInfo：： GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) 。 *IOrdinal*参数必须是 bookmark 列。
 
-## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl：： GetSpecification
 
-返回的接口指针上创建一个行集合的对象 （命令或会话）。
+返回对象（命令或会话）上用于创建此行集合的接口指针。
 
 ### <a name="syntax"></a>语法
 
@@ -116,15 +115,15 @@ STDMETHOD (GetSpecification )(REFIID riid,
    IUnknown** ppSpecification);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IRowsetInfo：： GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) 。
 
 ### <a name="remarks"></a>备注
 
-将此方法用于[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)来从数据源对象检索属性。
+将此方法与[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)一起使用可从数据源对象检索属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

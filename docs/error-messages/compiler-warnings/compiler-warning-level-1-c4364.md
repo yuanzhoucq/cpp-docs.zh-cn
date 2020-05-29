@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级1） C4364
+title: 编译器警告（等级 1）C4364
 ms.date: 11/04/2016
 f1_keywords:
 - C4364
 helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-ms.openlocfilehash: 716f440cddc3889ec719ef3b295a0d076175be93
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 79c8809b4de9d6853aaacec4283bf01d0e89305e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187097"
 ---
-# <a name="compiler-warning-level-1-c4364"></a>编译器警告（等级1） C4364
+# <a name="compiler-warning-level-1-c4364"></a>编译器警告（等级 1）C4364
 
 \#使用的程序集 "file" 以前在位置（line_number）上出现，无 as_friend 特性;as_friend 未应用
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-ms.openlocfilehash: 6f1bcecf3aaed2bf2b7ebbe511f11cdb5ec1ca5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 201dcaa6a90584d1f9535df11d5722a37bdceb89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187279"
 ---
 # <a name="writing-an-exception-handler"></a>编写异常处理程序
 
@@ -20,7 +20,7 @@ ms.locfileid: "62209398"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [在尝试-除非语句](../cpp/try-except-statement.md)
+- [除 try 语句](../cpp/try-except-statement.md)
 
 - [编写异常筛选器](../cpp/writing-an-exception-filter.md)
 
@@ -28,8 +28,8 @@ ms.locfileid: "62209398"
 
 - [硬件异常](../cpp/hardware-exceptions.md)
 
-- [异常处理程序的限制](../cpp/restrictions-on-exception-handlers.md)
+- [对异常处理程序的限制](../cpp/restrictions-on-exception-handlers.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

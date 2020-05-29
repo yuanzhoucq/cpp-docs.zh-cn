@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::IDBInitializeImpl
 - ATL.IDBInitializeImpl
 - IDBInitializeImpl.IDBInitializeImpl
-- IDBInitializeImpl
 - IDBInitializeImpl::IDBInitializeImpl
 - Initialize
 - IDBInitializeImpl::Initialize
@@ -39,16 +38,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 3418ce11e1a607d66fee593b32fd3a4b7d197407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409013"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210764"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
 
-提供一个实现[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))接口。
+提供[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -57,10 +56,10 @@ template <class T>
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自`IDBInitializeImpl`。
+派生自 `IDBInitializeImpl`的类。
 
 ## <a name="requirements"></a>要求
 
@@ -79,20 +78,20 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |||
 |-|-|
 |[Initialize](#initialize)|启动提供程序。|
-|[取消初始化](#uninitialize)|停止提供程序。|
+|[撤消](#uninitialize)|停止提供程序。|
 
 ### <a name="data-members"></a>数据成员
 
 |||
 |-|-|
-|[m_dwStatus](#dwstatus)|数据源的标志。|
-|[m_pCUtlPropInfo](#pcutlpropinfo)|指向实现 DB 属性信息的指针。|
+|[m_dwStatus](#dwstatus)|数据源标志。|
+|[m_pCUtlPropInfo](#pcutlpropinfo)|指向 DB 属性信息的实现的指针。|
 
 ## <a name="remarks"></a>备注
 
-数据源对象和枚举器上使用的可选接口上必需的接口。
+数据源对象上的必需接口和枚举器上的可选接口。
 
-## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl：： IDBInitializeImpl
 
 构造函数。
 
@@ -106,7 +105,7 @@ IDBInitializeImpl();
 
 初始化所有数据成员。
 
-## <a name="initialize"></a> IDBInitializeImpl::Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl：： Initialize
 
 通过准备数据源对象的属性支持来初始化该对象。
 
@@ -118,11 +117,11 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>备注
 
-请参阅[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IDBInitialize：： Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 。
 
-## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl：：取消初始化
 
-位置数据源，因为内部资源，例如属性支持未初始化状态的对象。
+通过释放内部资源（如属性支持），使数据源对象处于未初始化状态。
 
 ### <a name="syntax"></a>语法
 
@@ -132,11 +131,11 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IDBInitialize：：](/previous-versions/windows/desktop/ms719648(v=vs.85))取消。
 
-## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl：： m_dwStatus
 
-数据源的标志。
+数据源标志。
 
 ### <a name="syntax"></a>语法
 
@@ -146,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>备注
 
-这些标志指定，或者表示为数据源对象的各种属性的状态。 包含一个或多个以下**枚举**值：
+这些标志指定或指明数据源对象的各种属性的状态。 包含一个或多个以下**枚举**值：
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -158,13 +157,13 @@ enum DATASOURCE_FLAGS {
 
 |||
 |-|-|
-|`DSF_MASK_INIT`|一个掩码，若要启用的未初始化状态还原。|
-|`DSF_PERSIST_DIRTY`|如果数据源对象 （即，如果进行了更改） 需要持久性，设置。|
-|`DSF_INITIALIZED`|如果初始化数据源，设置。|
+|`DSF_MASK_INIT`|用于启用未初始化状态还原的掩码。|
+|`DSF_PERSIST_DIRTY`|设置数据源对象是否需要持久性（即，如果已进行了更改）。|
+|`DSF_INITIALIZED`|设置数据源是否已初始化。|
 
-## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl：： m_pCUtlPropInfo
 
-指向实现对象，用于 DB 属性信息的指针。
+指向 DB 属性信息的实现对象的指针。
 
 ### <a name="syntax"></a>语法
 
@@ -172,7 +171,7 @@ enum DATASOURCE_FLAGS {
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 7b87f8c57b0d871a577793936ea3cb7dbab7e58d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200572"
 ---
 # <a name="compiler-error-c3556"></a>编译器错误 C3556
 
-> '*表达式*: decltype 的参数不正确
+> "*expression*"： "decltype" 的参数不正确
 
 编译器无法推导作为 `decltype(`*expression*`)` 类型说明符参数的表达式的类型。
 
 ## <a name="example"></a>示例
 
-在下面的代码示例中，编译器无法推导 `myFunction` 参数的类型，因为 `myFunction` 会进行重载。 若要解决此问题，可以使用`static_cast`若要创建的指向特定的实例的重载函数中指定`decltype`表达式。
+在下面的代码示例中，编译器无法推导 `myFunction` 参数的类型，因为 `myFunction` 会进行重载。 若要解决此问题，可以使用 `static_cast` 创建指向特定重载函数的指针的实例，以在 `decltype` 表达式中指定。
 
 ```cpp
 // C3556.cpp

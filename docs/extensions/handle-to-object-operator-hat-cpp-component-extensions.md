@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516692"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358332"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>指向对象的句柄运算符 (^)（C++/CLI 和 C++/CX）
 
-句柄声明符 `^`（发音为“hat”）将类型[说明符](../cpp/overview-of-declarators.md)修改为，指明当系统确定已声明的对象不再可访问时，应自动删除此对象。
+*句柄声明符*（，`^`发音为"hat"），修改类型[指定器](../cpp/overview-of-declarators.md)，表示在系统确定不再可访问对象时应自动删除声明的对象。
 
 ## <a name="accessing-the-declared-object"></a>访问声明的对象
 
@@ -22,7 +22,7 @@ ms.locfileid: "65516692"
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-编译器使用 COM 引用计数机制来确定对象是否不再被使用，且能否被删除。 因为从 Windows 运行时接口派生的对象实际上是 COM 对象，所以这是可行的。 在创建或复制对象时，引用计数会递增；当对象设置为 null 或超出范围时，引用计数会递减。 如果引用计数归零，将立即自动删除对象。
+编译器使用 COM 引用计数** 机制来确定对象是否不再被使用，且能否被删除。 因为从 Windows 运行时接口派生的对象实际上是 COM 对象，所以这是可行的。 在创建或复制对象时，引用计数会递增；当对象设置为 null 或超出范围时，引用计数会递减。 如果引用计数归零，将立即自动删除对象。
 
 句柄声明符的优点在于，在 COM 中，您必须以显式方式管理对象的引用计数，而这个过程单调乏味又容易出错。 也就是说，要递增或递减引用计数，必须调用对象的 AddRef() 和 Release() 方法。 不过，如果你使用句柄声明符来声明对象，编译器生成自动调整引用计数的代码。
 
@@ -34,7 +34,7 @@ ms.locfileid: "65516692"
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-系统使用 CLR 垃圾回收器机制来确定对象是否不再被使用，且能否被删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可能会移动堆上的对象，进而导致托管引用所引用的位置无效。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。
+系统使用 CLR 垃圾回收器** 机制来确定对象是否不再被使用，且能否被删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可能会移动堆上的对象，进而导致托管引用所引用的位置无效。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。
 
 因为本机 C++ 指针 (`*`) 和引用 (`&`) 都是托管引用，所以垃圾回收器不能更新它们指向的地址。 若要解决此问题，请使用句柄声明符指定一个变量，垃圾回收器能够知道这个变量的状态并会自动进行更新。
 
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-此示例展示了无法将本机引用 (`&`) 绑定到托管类型的 int 成员，因为 int 可能存储在垃圾回收堆中，但本机引用不跟踪托管堆中的对象移动。 解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。
+此示例显示本机引用 （`&`） 无法绑定到托管类型的**int**成员，因为**int**可能存储在垃圾回收堆中，并且本机引用不跟踪托管堆中的对象移动。 解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -221,7 +221,7 @@ int main() {
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
+[.NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [跟踪引用运算符](tracking-reference-operator-cpp-component-extensions.md)

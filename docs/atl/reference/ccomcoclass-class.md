@@ -1,5 +1,5 @@
 ---
-title: CComCoClass 类
+title: CComCo类
 ms.date: 11/04/2016
 f1_keywords:
 - CComCoClass
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 11e724a982f3a2f404473dbdd34d848842cc8e14
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497400"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320823"
 ---
-# <a name="ccomcoclass-class"></a>CComCoClass 类
+# <a name="ccomcoclass-class"></a>CComCo类
 
-此类提供用于创建类的实例并获取其属性的方法。
+此类提供用于创建类实例和获取其属性的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +33,7 @@ class CComCoClass
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自`CComCoClass`的类。
+您的类，派生自`CComCoClass`。
 
 *pclsid*<br/>
 指向对象的 CLSID 的指针。
@@ -42,34 +42,34 @@ class CComCoClass
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComCoClass::CreateInstance](#createinstance)|静止创建类的实例并查询接口。|
-|[CComCoClass::Error](#error)|静止向客户端返回丰富的错误信息。|
-|[CComCoClass::GetObjectCLSID](#getobjectclsid)|静止返回对象的类标识符。|
-|[CComCoClass::GetObjectDescription](#getobjectdescription)|静止重写以返回对象的说明。|
+|[CComCoClass：创建实例](#createinstance)|（静态）为接口创建类和查询的实例。|
+|[CComCoClass：错误](#error)|（静态）将丰富的错误信息返回给客户端。|
+|[CComCoClass：获取对象CLSID](#getobjectclsid)|（静态）返回对象的类标识符。|
+|[CComCoClass：：获取对象描述](#getobjectdescription)|（静态）覆盖以返回对象的说明。|
 
 ## <a name="remarks"></a>备注
 
-`CComCoClass`提供用于检索对象的 CLSID、设置错误信息以及创建类的实例的方法。 对象映射中注册的任何类都应派生自`CComCoClass`。
+`CComCoClass`提供了检索对象的 CLSID、设置错误信息和创建类实例的方法。 在对象映射中注册的任何类都应派生自`CComCoClass`。
 
-`CComCoClass`还定义对象的默认类工厂和聚合模型。 `CComCoClass`使用以下两个宏:
+`CComCoClass`还定义了对象的默认类工厂和聚合模型。 `CComCoClass`使用以下两个宏：
 
-- [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)声明要[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)的类工厂。
+- [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)声明类工厂为[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)。
 
-- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)声明可以聚合您的对象。
+- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)声明可以聚合对象。
 
-您可以通过在类定义中指定另一个宏来重写这些默认值之一。 例如, 若要使用[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)而不`CComClassFactory`是, 请指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)宏:
+您可以通过在类定义中指定另一个宏来覆盖这些默认值中的任何一个。 例如，要使用[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)而不是`CComClassFactory`，请指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)宏：
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]
 
 ## <a name="requirements"></a>要求
 
-**标头:** atlcom。h
+**标题：** atlcom.h
 
-##  <a name="createinstance"></a>CComCoClass:: CreateInstance
+## <a name="ccomcoclasscreateinstance"></a><a name="createinstance"></a>CComCoClass：创建实例
 
-使用这些`CreateInstance`函数创建 com 对象的实例, 并在不使用 COM API 的情况下检索接口指针。
+使用这些`CreateInstance`函数创建 COM 对象的实例，并在不使用 COM API 的情况下检索接口指针。
 
 ```
 template <class  Q>
@@ -84,33 +84,33 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 *Q*<br/>
 应通过*pp*返回的 COM 接口。
 
-*punkOuter*<br/>
-中外部未知或控制聚合的未知。
+*朋克外*<br/>
+[在]聚合的外部未知或控制未知。
 
-*pp*<br/>
-弄如果创建成功, 则为接收请求的接口指针的指针变量的地址。
+*Pp*<br/>
+[出]如果创建成功，接收请求的接口指针的指针变量的地址。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。 有关可能的返回值的说明, 请参阅中的[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) Windows SDK。
+标准 HRESULT 值。 有关可能的返回值的说明，请参阅 Windows SDK 中的[CoCreateInstance。](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 
 ### <a name="remarks"></a>备注
 
-使用此函数的第一个重载来创建典型的对象;需要聚合正在创建的对象时, 请使用第二个重载。
+使用此函数的第一个重载来创建典型对象;当您需要聚合正在创建的对象时，请使用第二个重载。
 
-实现必需 COM 对象 (即, 用作[CComCoClass](../../atl/reference/ccomcoclass-class.md)的第一个模板参数的类) 的 ATL 类必须与调用代码位于同一项目中。 COM 对象的创建由为此 ATL 类注册的类工厂来执行。
+实现所需 COM 对象的 ATL 类（即用作[CComCoClass](../../atl/reference/ccomcoclass-class.md)的第一个模板参数的类）必须与调用代码位于同一项目中。 COM 对象的创建由为此 ATL 类注册的类工厂执行。
 
-这些函数可用于创建已阻止使用[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto)宏进行外部创建的对象。 对于出于效率原因而要避免 COM API 的情况, 它们也非常有用。
+这些函数可用于创建通过使用[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto)宏阻止外部可创建的对象。 它们在您希望出于效率原因避免 COM API 的情况下也很有用。
 
-请注意, 接口*Q*必须具有与之关联的 IID, 可以使用[__uuidof](../../cpp/uuidof-operator.md)运算符来检索它。
+请注意，接口*Q*必须具有与其关联的 IID，可以使用[__uuidof](../../cpp/uuidof-operator.md)运算符检索。
 
 ### <a name="example"></a>示例
 
-在下面的示例中`CDocument` , 是一个由向导生成的、派生`CComCoClass`自的 ATL `IDocument`类, 该类实现接口。 类在对象映射中使用 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO 宏注册, 因此客户端无法使用[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)创建文档的实例。 `CApplication`是一个组件类, 它提供了一个方法, 用于创建该文档类的实例的一个 COM 接口。 下面的代码演示了如何轻松地使用`CreateInstance` `CComCoClass`从基类继承的成员创建 document 类的实例。
+在下面的示例中，`CDocument`是从实现接口`CComCoClass`的向导生成的 ATL 类派生的。 `IDocument` 类在对象映射中注册了OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO宏，因此客户端无法使用[CoCreate实例](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)创建文档实例。 `CApplication`CoClass 在其自己的 COM 接口中提供方法以创建文档类的实例。 下面的代码显示了使用从`CreateInstance``CComCoClass`基类继承的成员创建文档类实例的简便性。
 
 [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]
 
-##  <a name="error"></a>CComCoClass:: Error
+## <a name="ccomcoclasserror"></a><a name="error"></a>CComCoClass：错误
 
 此静态函数设置`IErrorInfo`接口以向客户端提供错误信息。
 
@@ -157,39 +157,39 @@ static HRESULT Error(
 ### <a name="parameters"></a>参数
 
 *lpszDesc*<br/>
-中描述错误的字符串。 的`Error` Unicode 版本指定*lpszDesc*的类型为 LPCOLESTR; ANSI 版本指定 LPCSTR 的类型。
+[在]描述错误的字符串。 的`Error`Unicode 版本指定*lpszDesc*的类型为 LPCOLESTR;ANSI 版本指定 LPCSTR 的类型。
 
-*iid*<br/>
-中定义错误的接口的 IID 或 GUID_NULL (默认值) (如果错误由操作系统定义)。
+*Iid*<br/>
+[在]如果错误由操作系统定义，则定义错误的接口的 IID 或GUID_NULL（默认值）。
 
 *hRes*<br/>
-中要返回给调用方的 HRESULT。 默认值为 0。 有关*hRes*的更多详细信息, 请参阅 "备注"。
+[在]要返回给调用方的 HRESULT。 默认值为 0。 有关*hRe 的更多*详细信息，请参阅备注。
 
 *nID*<br/>
-中存储错误说明字符串的资源标识符。 此值应介于0x0200 和0xFFFF 之间, 包括在内。 在调试版本中, 如果*nID*未为有效字符串编制索引, 则会产生**断言**。 在发布版本中, 错误描述字符串将设置为 "未知错误"。
+[在]存储错误描述字符串的资源标识符。 此值应介于 0x0200 和 0xFF 之间（包括）。 在调试生成中，如果*nID*不索引有效字符串，则会产生**ASSERT。** 在发布版本中，错误描述字符串将设置为"未知错误"。
 
 *dwHelpID*<br/>
-中错误的帮助上下文标识符。
+[在]错误的帮助上下文标识符。
 
-*lpszHelpFile*<br/>
-中描述错误的帮助文件的路径和名称。
+*lpszHelp文件*<br/>
+[在]描述错误的帮助文件的路径和名称。
 
 *hInst*<br/>
-中资源的句柄。 默认情况下, 此参数`_AtlModule::GetResourceInstance`为, `_AtlModule`其中是[CAtlModule](../../atl/reference/catlmodule-class.md)的全局实例。
+[在]资源的句柄。 默认情况下，此参数是`_AtlModule::GetResourceInstance` `_AtlModule` [，CAtlModule](../../atl/reference/catlmodule-class.md)的全局实例就是 。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。 有关详细信息，请参阅“备注”。
+标准 HRESULT 值。 有关详细信息，请参阅“备注”。
 
 ### <a name="remarks"></a>备注
 
-若要`Error`调用, 你的对象必须`ISupportErrorInfo Interface`实现接口。
+要调用`Error`，对象必须实现`ISupportErrorInfo Interface`接口。
 
-如果*hRes*参数为非零值, `Error`则返回*hRes*的值。 如果*hRes*为零, 则`Error`返回 DISP_E_EXCEPTION 的前四个版本。 最后两个版本返回宏**MAKE_HRESULT (1, FACILITY_ITF,** *nID* **)** 的结果。
+如果*hRes*参数是非零，则`Error`返回*hRes*的值。 如果*hRes*为零，则`Error`返回的前四个版本DISP_E_EXCEPTION。 最后两个版本返回宏**MAKE_HRESULT的结果（1、FACILITY_ITF、nID** *nID* **）。**
 
-##  <a name="getobjectclsid"></a>CComCoClass:: GetObjectCLSID
+## <a name="ccomcoclassgetobjectclsid"></a><a name="getobjectclsid"></a>CComCoClass：获取对象CLSID
 
-提供了一种一致的方法来检索对象的 CLSID。
+提供了检索对象的 CLSID 的一致方法。
 
 ```
 static const CLSID& WINAPI GetObjectCLSID();
@@ -199,7 +199,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 
 对象的类标识符。
 
-##  <a name="getobjectdescription"></a>CComCoClass:: GetObjectDescription
+## <a name="ccomcoclassgetobjectdescription"></a><a name="getobjectdescription"></a>CComCoClass：：获取对象描述
 
 此静态函数检索类对象的文本说明。
 
@@ -209,18 +209,18 @@ static LPCTSTR WINAPI GetObjectDescription();
 
 ### <a name="return-value"></a>返回值
 
-类对象的说明。
+类对象的描述。
 
 ### <a name="remarks"></a>备注
 
-默认实现返回 NULL。 可以用[DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)宏重写此方法。 例如:
+默认实现返回 NULL。 您可以使用[DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)宏重写此方法。 例如：
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 
-`GetObjectDescription`由`IComponentRegistrar::GetComponents`调用。 `IComponentRegistrar`是一个自动化接口, 可用于注册和取消注册 DLL 中的单个组件。 使用 ATL 项目向导创建组件注册器对象时, 向导将自动实现`IComponentRegistrar`接口。 `IComponentRegistrar`通常由 Microsoft 事务服务器使用。
+`GetObjectDescription`由`IComponentRegistrar::GetComponents`调用 。 `IComponentRegistrar`是一个自动化接口，允许您在 DLL 中注册和取消注册单个组件。 使用 ATL 项目向导创建组件注册器对象时，向导将自动实现`IComponentRegistrar`接口。 `IComponentRegistrar`通常用于 Microsoft 事务服务器。
 
-有关 ATL 项目向导的详细信息, 请参阅文章[创建 Atl 项目](../../atl/reference/creating-an-atl-project.md)。
+有关 ATL 项目向导的详细信息，请参阅创建[ATL 项目](../../atl/reference/creating-an-atl-project.md)的文章。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../../atl/atl-class-overview.md)

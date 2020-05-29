@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190685"
 ---
 # <a name="resource-compiler-error-rw2002"></a>资源编译器错误 RW2002
 
-分析错误
+正在分析错误
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
@@ -69,7 +69,7 @@ ms.locfileid: "71230404"
 
 1. **应为控件类名**
 
-   **对话框语句**中**控制**语句的字段必须是以下类型之一：`class`按钮、组合框、编辑、列表框、滚动条、静态或用户定义。 请确保类拼写正确。
+   **对话**语句中**控制**语句的 "`class`" 字段必须是以下类型之一：按钮、组合框、编辑、LISTBOX、滚动条、静态或用户定义。 请确保类拼写正确。
 
 1. **应输入字体名称**
 
@@ -85,7 +85,7 @@ ms.locfileid: "71230404"
 
 1. **应为数值命令值**
 
-   资源编译器需要**加速器**语句中的数字*idvalue*字段。 请确保已使用`#define`常量指定值并且常量拼写正确。
+   资源编译器需要**加速器**语句中的数字*idvalue*字段。 请确保已使用 `#define` 常量来指定值，并且常量拼写正确。
 
 1. **字符串表中的预期数值常量**
 
@@ -109,7 +109,7 @@ ms.locfileid: "71230404"
 
 1. **应为 ID 数量**
 
-   **对话框**语句中控制语句`id`的字段应为数字。 请确保有一个数字或`#define`语句作为控件 ID。
+   **对话框**语句中控制语句的 `id` 字段的值应为数字。 请确保有一个数字或 `#define` 语句作为控件 ID。
 
 1. **对话框类中需要带引号的字符串**
 
@@ -141,7 +141,7 @@ ms.locfileid: "71230404"
 
 1. **控件类型无效**
 
-   **对话**语句中的每个控制语句必须是下列各项之一：CHECKBOX、COMBOBOX、CONTROL、CTEXT、DEFPUSHBUTTON、EDITTEXT、分组框、图标、LISTBOX、LTEXT、按钮、单选按钮、RTEXT、滚动条。 请确保这些控制语句拼写正确。
+   **对话**语句中的每个控制语句必须是下列各项： CHECKBOX、COMBOBOX、CONTROL、CTEXT、DEFPUSHBUTTON、EDITTEXT、分组框、图标、LISTBOX、LTEXT、按钮、单选按钮、RTEXT、滚动条。 请确保这些控制语句拼写正确。
 
 1. **类型无效**
 

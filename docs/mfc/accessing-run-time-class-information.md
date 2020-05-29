@@ -16,27 +16,27 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: 2e4f8685033fc7a8a2f49dafa7ef4e4e019d8989
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a836bb7bd03bd6654e5c940442fecf541042fd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392942"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354230"
 ---
 # <a name="accessing-run-time-class-information"></a>访问运行时类信息
 
 本文说明了如何在运行时访问对象的类的相关信息。
 
 > [!NOTE]
->  MFC 不使用[运行时类型信息](../cpp/run-time-type-information.md)视觉对象中引入的 (RTTI) 支持C++4.0。
+> MFC 不使用可视化C++ 4.0 中引入[的运行时类型信息](../cpp/run-time-type-information.md)（RTTI） 支持。
 
-如果具有派生您的类从[CObject](../mfc/reference/cobject-class.md)并用**DECLARE**_**动态**并`IMPLEMENT_DYNAMIC`，则`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`，或`DECLARE_SERIAL`并`IMPLEMENT_SERIAL`宏一文中所述[从 CObject 派生类](../mfc/deriving-a-class-from-cobject.md)，则`CObject`类具有在运行时确定对象的具体类的功能。
+If you have derived your class from [CObject](../mfc/reference/cobject-class.md) and used the **DECLARE**_**DYNAMIC** and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros explained in the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md), the `CObject` class has the ability to determine the exact class of an object at run time.
 
 在需要函数参数的其他类型检查时，以及在必须基于对象的类编写特殊用途的代码时，此功能非常有用。 但是，通常建议不要使用此做法，因为它会复制虚函数的功能。
 
 `CObject` 成员函数 `IsKindOf` 可用于确定某个特定对象是否属于某个指定类或者是否派生自某个特定类。 `IsKindOf` 的自变量是一个 `CRuntimeClass` 对象，您可以将 `RUNTIME_CLASS` 宏与类名一起使用来获取此对象。
 
-### <a name="to-use-the-runtimeclass-macro"></a>使用 RUNTIME_CLASS 宏
+### <a name="to-use-the-runtime_class-macro"></a>使用 RUNTIME_CLASS 宏
 
 1. 将 `RUNTIME_CLASS` 与类名一起使用，如此处为 `CObject` 类所示的：
 
@@ -46,7 +46,7 @@ ms.locfileid: "62392942"
 
 #### <a name="to-use-the-iskindof-function"></a>使用 IsKindOf 函数
 
-1. 确保类具有运行时类支持。 它是派生的类必须具有已直接或间接从`CObject`并用**DECLARE**_**动态**并`IMPLEMENT_DYNAMIC`，则`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`，或`DECLARE_SERIAL`并`IMPLEMENT_SERIAL`宏一文中所述[从 CObject 派生类](../mfc/deriving-a-class-from-cobject.md)。
+1. 确保类具有运行时类支持。 That is, the class must have been derived directly or indirectly from `CObject` and used the **DECLARE**_**DYNAMIC** and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros explained in the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md).
 
 1. 调用该类的对象的 `IsKindOf` 成员函数，并使用 `RUNTIME_CLASS` 宏生成 `CRuntimeClass` 参数，如下所示：
 
@@ -55,12 +55,12 @@ ms.locfileid: "62392942"
    [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
-    >  则 IsKindOf 将返回 **，则返回 TRUE**如果对象是指定类或派生自指定类的类的成员。 `IsKindOf` 不支持多重继承或虚拟基类，但您可以根据需要对派生的 Microsoft 基础类使用多重继承。
+    >  如果对象是指定类的成员或派生自指定类的类的成员，则 IsKindOf 返回**TRUE。** `IsKindOf` 不支持多重继承或虚拟基类，但您可以根据需要对派生的 Microsoft 基础类使用多重继承。
 
-运行时类信息的一种用法是在对象的动态创建中。 在文章中讨论此过程[动态对象创建](../mfc/dynamic-object-creation.md)。
+运行时类信息的一种用法是在对象的动态创建中。 这一过程在"[动态对象创建"](../mfc/dynamic-object-creation.md)一文中进行了讨论。
 
-有关更多详细信息的序列化和运行时类信息，请参阅文章[MFC 中的文件](../mfc/files-in-mfc.md)并[序列化](../mfc/serialization-in-mfc.md)。
+有关序列化和运行时类信息的更多详细信息，请参阅 MFC 和[序列化](../mfc/serialization-in-mfc.md)[中的文章"文件](../mfc/files-in-mfc.md)"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 CObject](../mfc/using-cobject.md)

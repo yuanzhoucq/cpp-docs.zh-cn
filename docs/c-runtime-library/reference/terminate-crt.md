@@ -1,8 +1,9 @@
 ---
 title: terminate (CRT)
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - terminate
+- _o_terminate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946200"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912226"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
@@ -44,7 +46,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>备注
 
-**Terminate**函数与C++异常处理一起使用，并在以下情况下调用：
+**Terminate**函数与 c + + 异常处理一起使用，并在以下情况下调用：
 
 - 无法为引发的 C++ 异常找到匹配的 catch 处理程序。
 
@@ -54,13 +56,15 @@ void terminate( void );
 
 默认情况下，**终止**调用[中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用**set_terminate** ，并将函数名称作为其参数。 **terminate**调用作为**set_terminate**的参数提供的最后一个函数。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**terminate**|\<eh.h>|
+|**终止**|\<eh.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -108,11 +112,11 @@ void term_func()
 term_func() was called by terminate().
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[中止](abort.md)<br/>
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[之外](unexpected-crt.md)<br/>

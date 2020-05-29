@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6c9840d9b8c00d4b03e6ea329c7707a0edff9512
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368018"
 ---
-# <a name="timedmutex-class"></a>timed_mutex 类
+# <a name="timed_mutex-class"></a>timed_mutex 类
 
-表示定时互斥体类型。 此类型的对象在程序内通过时间限制阻止强制实现互相排斥。
+表示定时互斥体类型**。 此类型的对象在程序内通过时间限制阻止强制实现互相排斥。
 
 ## <a name="syntax"></a>语法
 
@@ -39,28 +39,28 @@ class timed_mutex;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[timed_mutex](#timed_mutex)|构造未锁定的 `timed_mutex` 对象。|
-|[timed_mutex::~timed_mutex 构造函数](#dtortimed_mutex_destructor)|释放由 `timed_mutex` 对象使用的任何资源。|
+|[timed_mutex：timed_mutex析构器](#dtortimed_mutex_destructor)|释放由 `timed_mutex` 对象使用的任何资源。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[lock](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|
+|[锁](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|
 |[try_lock](#try_lock)|在不阻止的情况下尝试获取 `mutex` 的所有权。|
 |[try_lock_for](#try_lock_for)|尝试获取在指定时间间隔内有效的 `mutex` 的所有权。|
 |[try_lock_until](#try_lock_until)|尝试获取在指定时间之前有效的 `mutex` 的所有权。|
-|[unlock](#unlock)|释放 `mutex` 的所有权。|
+|[解 锁](#unlock)|释放 `mutex` 的所有权。|
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<mutex >
+**标题：**\<互斥>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="lock"></a>  timed_mutex::lock
+## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex：锁定
 
 阻止调用线程，直到线程获取 `mutex` 的所有权。
 
@@ -72,7 +72,7 @@ void lock();
 
 如果调用线程已拥有 `mutex`，则该行为不确定。
 
-## <a name="timed_mutex"></a>timed_mutex::timed_mutex 构造函数
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>timed_mutex：timed_mutex构造函数
 
 构造未锁定的 `timed_mutex` 对象。
 
@@ -80,7 +80,7 @@ void lock();
 timed_mutex();
 ```
 
-## <a name="dtortimed_mutex_destructor"></a>timed_mutex::~timed_mutex 析构函数
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>timed_mutex：timed_mutex析构器
 
 释放由 `mutex` 对象使用的任何资源。
 
@@ -92,7 +92,7 @@ timed_mutex();
 
 如果当析构函数运行时对象被锁定，则该行为不确定。
 
-## <a name="try_lock"></a>  timed_mutex::try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex：try_lock
 
 在不阻止的情况下尝试获取 `mutex` 的所有权。
 
@@ -102,13 +102,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功获取的`mutex`所有权, 则**为 true** ; 否则为**false**。
+**如果**该方法成功获得 的所有权， `mutex`否则，**假**。
 
 ### <a name="remarks"></a>备注
 
 如果调用线程已拥有 `mutex`，则该行为不确定。
 
-## <a name="try_lock_for"></a>  timed_mutex::try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex：try_lock_for
 
 在不阻止的情况下尝试获取 `mutex` 的所有权。
 
@@ -124,13 +124,13 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功获取的`mutex`所有权, 则**为 true** ; 否则为**false**。
+**如果**该方法成功获得 的所有权， `mutex`否则，**假**。
 
 ### <a name="remarks"></a>备注
 
 如果调用线程已拥有 `mutex`，则该行为不确定。
 
-## <a name="try_lock_until"></a>  timed_mutex::try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex：try_lock_until
 
 在不阻止的情况下尝试获取 `mutex` 的所有权。
 
@@ -148,13 +148,13 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功获取的`mutex`所有权, 则**为 true** ; 否则为**false**。
+**如果**该方法成功获得 的所有权， `mutex`否则，**假**。
 
 ### <a name="remarks"></a>备注
 
 如果调用线程已拥有 `mutex`，则该行为不确定。
 
-## <a name="unlock"></a>timed_mutex:: unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex：解锁
 
 释放 `mutex` 的所有权。
 
@@ -166,7 +166,7 @@ void unlock();
 
 如果调用的线程不拥有 `mutex`，则该行为不确定。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<互斥>](../standard-library/mutex.md)

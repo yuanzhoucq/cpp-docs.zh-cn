@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 83d69df399d556025d0f7d4a8ccd714ff43a76ec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454386"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368763"
 ---
-# <a name="discretedistribution-class"></a>discrete_distribution 类
+# <a name="discrete_distribution-class"></a>discrete_distribution 类
 
 生成包含以等概率分布在每个区间中的等宽区间的离散型整数分布。
 
@@ -73,7 +73,7 @@ public:
 ### <a name="parameters"></a>参数
 
 *IntType*\
-整数结果类型, 默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+整数结果类型，默认值为**int**。有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -88,7 +88,7 @@ public:
 
 属性函数 `vector<double> probabilities()` 将返回每个生成的整数的各自概率。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="example"></a>示例
 
@@ -173,9 +173,9 @@ Distribution for 100 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution：:d
 
 构造分布。
 
@@ -200,28 +200,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*firstW*\
+*第一W*\
 从中构造分布的列表中的第一个迭代器。
 
-*lastW*\
+*上一个W*\
 从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。
 
-*weightlist*\
+*体重列表*\
 从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*计*\
+*计数*\
 分布范围中的元素数。 如果 `count==0`，则等效于默认构造函数（始终生成零）。
 
-*低级*\
+*低*\
 分布范围中的最低值。
 
-*严重*\
+*高*\
 分布范围中的最高值。
 
-*weightfunc*\
-表示分布的概率函数的对象。 参数和返回值都必须可转换为**double**。
+*重量丰茨*\
+表示分布的概率函数的对象。 参数和返回值都必须转换为**双精度**值。
 
-*parm*\
+*帕尔姆*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -230,16 +230,16 @@ explicit discrete_distribution(const param_type& parm);
 
 包含 *firstW* 和 *lastW* 参数的迭代器范围构造函数使用通过区间序列 [*firstW*, *lastW*) 的迭代器中获取的加权值构造分布对象。
 
-具有*weightlist*参数的初始值设定项列表构造函数使用初始值设定项列表*weightlist*中的权重来构造分布对象。
+具有*权重列表*参数的初始化器列表构造函数构造具有初始化器列表*权重列表权重列表*的权重的分布对象。
 
 包含 *count*、*low*、*high*、和 *weightfunc* 参数的构造函数基于以下规则构造初始化的分布对象：
 
 - 如果 *count* < 1，则 **n** = 1，并且等效于默认构造函数（始终生成零）。
-- 如果 *count* > 0，则 **n** = *count*。 如果提供的**d** = (*high* - *low*)/ **n**大于零, 则使用**d**均匀子范围, 每个权重都分配如下`weight[k] = weightfunc(x)`:, 其中**x** = *low*  +  **k**    d d/2, 表示 k = 0, ..., n-1。 +  * 
+- 如果 *count* > 0，则 **n** = *count*。 提供**d** = （*高* - *低*） / **n**大于零， 使用**d**均匀的`weight[k] = weightfunc(x)`子范围， 每个权重分配如下： ， 其中**x** = *低* + **k** * **d** + **d** d / 2， **k** = 0， ...， **n** - 1。
 
 包含 `param_type` 参数 *parm* 的构造函数将 *parm* 用作存储的参数结构来构造分布对象。
 
-## <a name="param_type"></a>  discrete_distribution::param_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution：:p阿拉姆型
 
 存储分布的所有参数。
 
@@ -268,34 +268,34 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*firstW*\
+*第一W*\
 从中构造分布的列表中的第一个迭代器。
 
-*lastW*\
+*上一个W*\
 从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。
 
-*weightlist*\
+*体重列表*\
 从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*计*\
+*计数*\
 分布范围中的元素数。 如果 *count* 为 0，则等效于默认构造函数（始终生成零）。
 
-*低级*\
+*低*\
 分布范围中的最低值。
 
-*严重*\
+*高*\
 分布范围中的最高值。
 
-*weightfunc*\
-表示分布的概率函数的对象。 参数和返回值都必须可转换为**double**。
+*重量丰茨*\
+表示分布的概率函数的对象。 参数和返回值都必须转换为**双精度**值。
 
-*然后*\
+*对*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
 此参数包可传递给 `operator()` 以生成返回值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

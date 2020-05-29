@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214053"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函数
 
@@ -30,19 +30,19 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*flags*<br/>
-一个或多个组合[RuntimeClassType](runtimeclasstype-enumeration.md)枚举值。
+*flag*<br/>
+一个或多个[RuntimeClassType](runtimeclasstype-enumeration.md)枚举值的组合。
 
 *entry*<br/>
-指向[CreatorMap](creatormap-structure.md)包含有关参数的初始化和注册信息*riid*。
+指向包含参数*riid*的初始化和注册信息的[CreatorMap](creatormap-structure.md)的指针。
 
 *riid*<br/>
-引用接口 id。
+对接口 ID 的引用。
 
 *ppFactory*<br/>
-如果此操作成功完成，指向类工厂。
+如果此操作成功完成，则为指向类工厂的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -50,14 +50,14 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ## <a name="remarks"></a>备注
 
-如果发出断言错误模板参数*工厂*不会派生自接口`IClassFactory`。
+如果模板参数*工厂*不是从接口 `IClassFactory`派生的，则会发出断言错误。
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标头：** 模块。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL::Wrappers::Details 命名空间](microsoft-wrl-wrappers-details-namespace.md)

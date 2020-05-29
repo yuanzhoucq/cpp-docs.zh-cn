@@ -1,10 +1,11 @@
 ---
 title: tanh、tanhf、tanhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tanh
 - tanhf
 - tanhl
+- _o_tanh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957537"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912301"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
 
@@ -72,15 +74,17 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用**tanh**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **tanh**始终采用并返回**double**。
+由于 c + + 允许重载，因此你可以调用**tanh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **tanh**始终采用并返回**double**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头 (C)|必需的标头 (C)|
+|例程|必需的标头 (C)|必需的标头 (C)|
 |-------------|---------------------|-|
 |**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -110,7 +114,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>

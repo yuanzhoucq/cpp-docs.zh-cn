@@ -1,8 +1,9 @@
 ---
 title: _CIsqrt
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIsqrt
+- _o__CIsqrt
 api_location:
 - msvcr90.dll
 - msvcr80.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: b914ac73fcaeb924832852294af1535bc87c1119
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: baedb0541e16c28d18d0062fa5498fb8e2c8dea8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940483"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918354"
 ---
 # <a name="_cisqrt"></a>_CIsqrt
 
@@ -36,7 +38,7 @@ ms.locfileid: "70940483"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 void __cdecl _CIsqrt();
 ```
 
@@ -46,11 +48,13 @@ void __cdecl _CIsqrt();
 
 生成的值被将被推送到堆栈顶部。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)

@@ -5,21 +5,39 @@ metadata:
   title: C/C++ 代码分析器
   description: 了解 Visual Studio 可如何帮助你分析 C 和 C++代码质量。
   ms.topic: landing-page
-  ms.date: 02/12/2020
-  ms.openlocfilehash: 62416d462cc6da3bf28da2a7a825b6702c512385
-  ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/17/2020
-  ms.locfileid: "77429482"
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108404"
 landingContent:
 - title: 分析 C 和 C++ 代码
   linkLists:
   - linkListType: overview
     links:
-    - text: 分析 C 和 C++ 代码
+    - text: C/C++ 代码分析概述
       url: code-analysis-for-c-cpp-overview.md
+  - linkListType: quickstart
+    links:
+    - text: C/C++ 代码分析快速入门
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: tutorial
+    links:
+    - text: C/C++ 代码缺陷分析演练
+      url: walkthrough-analyzing-c-cpp-code-for-defects.md
+    - text: 使用 SAL 注释减少 C/C++ 代码缺陷
+      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
+- title: 代码分析参考
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ Core Guidelines
+      url: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
   - linkListType: reference
     links:
+    - text: C++ Core Guidelines 警告
+      url: code-analysis-for-cpp-corecheck.md
     - text: C++ 代码分析警告
       url: code-analysis-for-c-cpp-warnings.md

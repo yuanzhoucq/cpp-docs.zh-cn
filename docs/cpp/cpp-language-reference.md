@@ -5,22 +5,22 @@ ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301582"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079925"
 ---
 # <a name="c-language-reference"></a>C++ 语言参考
 
-本参考说明了C++在 Microsoft C++编译器中实现的编程语言。 组织基于通过 Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO C++国际标准（ISO/IEC FDIS 14882）进行[*批注C++引用手册*](http://www.stroustrup.com/arm.html)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。
+本参考说明了C++在 Microsoft C++编译器中实现的编程语言。 组织基于通过 Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO C++国际标准（ISO/IEC FDIS 14882）进行*批注C++引用手册*。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。
 
-有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
+有关新式C++编程实践的概述，请参阅[欢迎回到C++ ](welcome-back-to-cpp-modern-cpp.md)。
 
 请参阅下面的表以快速查找关键字或运算符：
 
-- [C++ 关键字](../cpp/keywords-cpp.md)
+- [C++字](../cpp/keywords-cpp.md)
 
 - [C++ 运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
@@ -52,13 +52,13 @@ C++ 中的运算符。
 表达式、null、复合、选择、迭代、跳转和声明语句。
 
 [类和结构](../cpp/classes-and-structs-cpp.md)<br/>
-介绍类、结构和联合。 此外，还有成员函数，特殊成员函数，数据成员，位域，**this** 指针和嵌套的类。
+介绍类、结构和联合。 此外，成员函数、特殊成员函数、数据成员、位域、 **this**指针和嵌套类。
 
 [Unions](unions.md)<br/>
 用户定义的类型，其中所有成员共享相同的内存位置。
 
 [派生类](../cpp/inheritance-cpp.md)<br/>
-单个和多个继承、**虚拟**函数、多个基类、**抽象**类、作用域规则。 还有 **__super** 和 **__interface** 关键字。
+单个和多个继承、**虚**函数、多个基类、**抽象**类、范围规则。 此外， **__super**和 **__interface**关键字。
 
 [成员访问控制](../cpp/member-access-control-cpp.md)<br/>
 控制对类成员的访问： **public**、 **private**和**protected**关键字。 友元函数和友元类。
@@ -82,7 +82,7 @@ C++ 异常处理、结构化异常处理 (SEH)、编写异常处理语句所使�
 Microsoft C++ 专用修饰符。 内存寻址、调用约定、**裸**函数、扩展的存储类特性（ **__declspec**） **__w64**。
 
 [内联汇编程序](../assembler/inline/inline-assembler.md)<br/>
-使用程序集语言和 C++ 中的 **__asm**块。
+使用汇编语言和C++ **__asm**块。
 
 [编译器 COM 支持](../cpp/compiler-com-support.md)<br/>
 有关用于支持 COM 类型的 Microsoft 专用类和全局函数的参考。
@@ -112,4 +112,4 @@ Microsoft 的 C++ 扩展。
 
 ## <a name="see-also"></a>另请参阅
 
-[C# 语言参考](../c-language/c-language-reference.md)
+[C 语言参考](../c-language/c-language-reference.md)

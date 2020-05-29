@@ -1,20 +1,18 @@
 ---
 title: 单字节和多字节字符集
 ms.date: 11/04/2016
-f1_keywords:
-- c.character.multibyte
 helpviewer_keywords:
 - SBCS (single byte character set)
 - MBCS [C++], about MBCS
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-ms.openlocfilehash: 1e2d3f26891257101b4a9511f4e0b10f03113309
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a6a0f3aaaa463297b7c51b035acc7b2f4a40b6cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745325"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444645"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>单字节和多字节字符集
 
@@ -25,7 +23,7 @@ ASCII 字符集在 0x00 - 0x7F 范围内定义字符。 还有许多其他字符
 
 多字节字符集可能包括单字节和双字节字符。 因此，多字节字符串可以包含单字节和双字节字符的组合。 两字节多字节字符具有一个前导字节和一个尾字节。 在特定的多字节字符集中，前导字节位于某个范围内，尾字节也是如此。 当这两种范围重叠时，可能需要计算特定上下文以确定某个给定的字节是用作前导字节还是尾字节。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [国际化](../c-runtime-library/internationalization.md)<br/>
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

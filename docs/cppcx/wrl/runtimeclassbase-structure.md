@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-ms.openlocfilehash: 80762a7a2cfdc5c630a42627b8cfd8323f3567eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29bcf37ce9bd524dfe09823e00fda4d41eedaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403173"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213585"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase 结构
 
@@ -24,7 +24,7 @@ struct RuntimeClassBase;
 
 ## <a name="remarks"></a>备注
 
-用于检测`RuntimeClass`中[使](make-function.md)函数。
+用于检测[Make](make-function.md)函数中的 `RuntimeClass`。
 
 **RuntimeClassBase**是一个空的结构。
 
@@ -34,10 +34,10 @@ struct RuntimeClassBase;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)

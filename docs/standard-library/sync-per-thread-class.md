@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450262"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376543"
 ---
-# <a name="syncperthread-class"></a>sync_per_thread 类
+# <a name="sync_per_thread-class"></a>sync_per_thread 类
 
 描述为每个线程提供单独的缓存对象的[同步筛选器](../standard-library/allocators-header.md)。
 
@@ -32,7 +32,7 @@ class sync_per_thread
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*缓存*|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
@@ -40,12 +40,12 @@ class sync_per_thread
 
 使用 `sync_per_thread` 的分配器可比较相等，尽管不能从一个线程释放另一个线程中分配的块。 使用其中一个分配器时，任一线程中的内存块都不应对其他线程可见。 实际上，这意味着单个线程只能访问使用其中一个分配器的容器。
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
-|[allocate](#allocate)|分配内存块。|
-|[deallocate](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|
+|[分配](#allocate)|分配内存块。|
+|[去分配](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|
 |[equals](#equals)|比较两个缓存是否相等。|
 
 ## <a name="requirements"></a>要求
@@ -54,7 +54,7 @@ class sync_per_thread
 
 **命名空间：** stdext
 
-## <a name="allocate"></a>  sync_per_thread::allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread：分配
 
 分配内存块。
 
@@ -64,15 +64,15 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*计数*|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="remarks"></a>备注
 
 在属于当前线程的缓存对象上，成员函数将返回调用 `cache::allocate(count)` 的结果。 如果没有为当前线程分配任何缓存对象，它首先会分配一个缓存对象。
 
-## <a name="deallocate"></a>  sync_per_thread::deallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread：:d分配
 
 从指定位置开始从存储中释放指定数量的的对象。
 
@@ -82,16 +82,16 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*ptr*|指向要从存储中释放的第一个对象的指针。|
-|*计数*|要从存储中释放的对象数量。|
+|*Ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
 在属于当前线程的缓存对象上，成员函数调用 `deallocate`。 如果没有为当前线程分配任何缓存对象，它首先会分配一个缓存对象。
 
-## <a name="equals"></a>  sync_per_thread::equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread：等于
 
 比较两个缓存是否相等。
 
@@ -101,17 +101,17 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*缓存*|同步筛选器的缓存对象。|
 |*其他*|要用于比较是否相等的缓存对象。|
 
 ### <a name="return-value"></a>返回值
 
-如果没有为此对象或当前线程中的*其他*缓存对象分配任何缓存对象, 则为**false** 。 否则，它会返回将 `operator==` 应用到两个缓存对象的结果。
+如果未为此对象或当前线程中的 *"其他*"分配缓存对象，**则为 false。** 否则，它会返回将 `operator==` 应用到两个缓存对象的结果。
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<分配器>](../standard-library/allocators-header.md)

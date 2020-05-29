@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - U1001
 ms.assetid: 5d7da559-6cbd-44d6-848c-aaf54cae0d1a
-ms.openlocfilehash: bfe2edf9c57eda073826a8c161ae0c358f3a6232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb39d9080fdceb1ab26c32e9aedc654323581eb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378448"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173447"
 ---
 # <a name="nmake-fatal-error-u1001"></a>NMAKE 错误 U1001
 
-语法错误： 非法字符 character 在宏
+语法错误：宏中的非法字符 "character"
 
-给定的字符出现在宏中，而不是字母、 数字或下划线。
+给定字符出现在宏中，但不是字母、数字或下划线。
 
-此错误可能被引起宏扩展中缺少冒号：
+此错误可能是由于宏扩展中缺少冒号引起的：
 
 ```
 syntax error : illegal character '=' in macro

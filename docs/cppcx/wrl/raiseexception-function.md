@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231348"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213624"
 ---
 # <a name="raiseexception-function"></a>RaiseException 函数
 
@@ -26,26 +26,26 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*hr*<br/>
-异常引发; 异常代码也就是说，操作失败的 HRESULT。
+*人事*<br/>
+引发的异常的异常代码;也就是说，失败操作的 HRESULT。
 
 *dwExceptionFlags*<br/>
-一个标志，指示持续性异常 （标志值为零） 或 noncontinuable 异常 （标志值为非零）。 默认情况下，例外情况是了不可继续操作。
+指示持续性异常（标志值为零）或不可继续操作异常（标志值为非零）的标志。 默认情况下，异常为不可继续操作。
 
 ## <a name="remarks"></a>备注
 
 引发调用线程中的异常。
 
-有关详细信息，请参阅 Windows`RaiseException`函数。
+有关详细信息，请参阅 Windows `RaiseException` 函数。
 
 ## <a name="requirements"></a>要求
 
-**标头：** internal.h
+**标头：** internal。h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)

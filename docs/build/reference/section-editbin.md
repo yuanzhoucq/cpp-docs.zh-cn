@@ -2,19 +2,19 @@
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /section
+- /section_editbin
 helpviewer_keywords:
 - -SECTION editbin option
 - SECTION editbin option
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318597"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438914"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -24,42 +24,42 @@ ms.locfileid: "62318597"
 
 ## <a name="remarks"></a>备注
 
-此选项可更改的部分中，重写部分中的对象文件已编译或链接时设置的属性的属性。
+此选项将更改节的特性，并覆盖在编译或链接节的对象文件时设置的特性。
 
-冒号后面 ( **:** )，指定*名称*的部分。 若要更改的部分名称，请按照*名称*以等号 （=） 和一个*newname*的部分。
+在冒号（ **：** ）之后指定节的*名称*。 若要更改节名称，请在*名称*后跟一个等号（=）和节的*newname* 。
 
-若要设置或更改的部分`attributes`，指定逗号 (**，**) 后跟一个或多个属性的字符。 要求反属性，其在字符前加一个感叹号 （！）。 以下字符指定内存属性：
+若要设置或更改节的 `attributes`，请指定一个逗号（ **，** ），后跟一个或多个属性字符。 若要对某个属性求反，请在其字符前面加上一个惊叹号（！）。 以下字符指定内存属性：
 
-|特性|设置|
+|属性|设置|
 |---------------|-------------|
 |c|代码|
 |d|可放弃|
-|E|可执行文件|
-|i|已初始化的数据|
-|k|虚拟内存缓存|
-|m|删除链接|
+|e|可执行文件 (executable)|
+|i|初始化数据|
+|k|缓存的虚拟内存|
+|m|链接删除|
 |o|链接信息|
-|p|虚拟内存分页|
+|p|分页虚拟内存|
 |r|读取|
-|秒|共享|
-|u|未初始化的数据|
-|w|写入|
+|s|共享|
+|u|未初始化数据|
+|w|write|
 
-控制*对齐*，指定的字符**A**后面要集对齐的大小 （字节），按如下所示的以下字符之一：
+若要控制*对齐方式*，请指定字符**A**后跟以下字符之一以设置对齐大小（以字节为单位），如下所示：
 
-|字符|对齐大小 （字节）|
+|字符|对齐大小（字节）|
 |---------------|-----------------------------|
 |1|1|
 |2|2|
 |4|4|
 |8|8|
 |p|16|
-|T|32|
-|秒|64|
-|x|未对齐|
+|t|32|
+|s|64|
+|x|无对齐方式|
 
-指定`attributes`并*对齐*作为字符串的任何空格字符。 字符不区分大小写。
+将 `attributes` 和*对齐*字符指定为不带空格的字符串。 字符不区分大小写。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [EDITBIN 选项](editbin-options.md)

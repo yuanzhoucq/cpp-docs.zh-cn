@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
-ms.openlocfilehash: c31602766261a8d6d0c4f0bb0a880ee34ee1ed45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501d79a8a86fcd3e2d8ba08dc2f03488f9abb827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397310"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162304"
 ---
 # <a name="compiler-warning-level-1-c4556"></a>编译器警告（等级 1）C4556
 
-> 内部即时参数的值*值*不在范围内'*lowerbound* - *upperbound*
+> 内部直接参数 "*value*" 的值超出了 "*lowerbound* - *受到上限约束*" 范围
 
 ## <a name="remarks"></a>备注
 
-内部函数匹配硬件指令。 硬件指令具有固定的数量的位进行编码常量。 如果*值*是超出范围，它将不进行编码正确。 编译器将截断多余的位。
+内部函数与硬件指令匹配。 硬件指令具有固定数目的位来对常量进行编码。 如果*值*超出范围，则将不会正确编码。 编译器会截断附加位。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4556:
+下面的示例生成 C4556：
 
 ```cpp
 // C4556.cpp

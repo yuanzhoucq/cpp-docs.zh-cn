@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0bdd6556df892e5e231919dbc4ae95d14a6f95fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373618"
 ---
 # <a name="numpunct-class"></a>numpunct 类
 
-一个类模板，用于描述一个对象，该对象可用作本地方面，以描述用于表示有关数值和布尔表达式的格式和标点的信息的类型 `CharType`。
+一个类模板，用于描述可用作局部面的对象，用于描述有关数字和布尔表达式的格式和`CharType`标点的信息的类型序列。
 
 ## <a name="syntax"></a>语法
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType* \
+*字符类型*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -59,29 +59,29 @@ class numpunct : public locale::facet;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[numpunct](#numpunct)|`numpunct` 类型的对象的构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|
 |[string_type](#string_type)|一种类型，此类型描述包含 `CharType` 类型字符的字符串。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[decimal_point](#decimal_point)|返回要用作小数点的区域设置特定元素。|
 |[do_decimal_point](#do_decimal_point)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作小数点的区域设置特定元素。|
-|[do_falsename](#do_falsename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值**false**的文本表示形式的字符串。|
+|[do_falsename](#do_falsename)|被调用以返回字符串以用作值**false**的文本表示形式的保护虚拟成员函数。|
 |[do_grouping](#do_grouping)|一种受保护的虚拟成员函数，通过调用此函数可返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
 |[do_thousands_sep](#do_thousands_sep)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作千位分隔符的区域设置特定元素。|
 |[do_truename](#do_truename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值 **true** 的文本表示形式的字符串。|
 |[falsename](#falsename)|返回要用作值 **false** 的文本表示形式的字符串。|
-|[grouping](#grouping)|返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
+|[分组](#grouping)|返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
 |[thousands_sep](#thousands_sep)|返回要用作千位分隔符的区域设置特定元素。|
 |[truename](#truename)|返回要用作值 **true** 的文本表示形式的字符串。|
 
@@ -91,7 +91,7 @@ class numpunct : public locale::facet;
 
 **命名空间:** std
 
-## <a name="char_type"></a>  numpunct::char_type
+## <a name="numpunctchar_type"></a><a name="char_type"></a>数字：：char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -101,9 +101,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **CharType** 的同义词。
+类型是模板参数**CharType**的同义词。
 
-## <a name="decimal_point"></a>  numpunct::decimal_point
+## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a>数字：:d次]点
 
 返回要用作小数点的区域设置特定元素。
 
@@ -146,7 +146,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="do_decimal_point"></a>  numpunct::do_decimal_point
+## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a>数字：:d奥多数点
 
 一种受保护的虚拟成员函数，通过调用此函数可返回要用作小数点的区域设置特定元素。
 
@@ -162,7 +162,7 @@ virtual CharType do_decimal_point() const;
 
 请参阅 [decimal_point](#decimal_point) 的示例，其中虚拟成员函数由 `decimal_point` 调用。
 
-## <a name="do_falsename"></a>  numpunct::do_falsename
+## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a>numpunct：:do_假名
 
 受保护的虚拟成员函数将返回一个序列，以便用作值 **false** 的文本表示形式。
 
@@ -182,7 +182,7 @@ virtual string_type do_falsename() const;
 
 请参阅 [falsename](#falsename) 的示例，其中虚拟成员函数由 `falsename` 调用。
 
-## <a name="do_grouping"></a>  numpunct::do_grouping
+## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a>数字：:do_分组
 
 一种受保护的虚拟成员函数，通过调用此函数可返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。
 
@@ -200,9 +200,9 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping` 调用。
+请参阅[分组的示例](#grouping)，其中虚拟成员函数由`grouping`调用。
 
-## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
+## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>数字：:do_千_sep
 
 一种受保护的虚拟成员函数，通过调用此函数可返回要用作千位分隔符的区域设置特定元素。
 
@@ -216,13 +216,13 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数将返回类型 `CharType` 的区域设置特定元素，以用作任何小数点左侧的组分隔符。
+受保护的虚拟成员函数返回特定于区域设置的类型`CharType`元素，以用作任何小数点左侧的组分隔符。
 
 ### <a name="example"></a>示例
 
 请参阅 [thousands_sep](#thousands_sep) 的示例，其中虚拟成员函数由 `thousands_sep` 调用。
 
-## <a name="do_truename"></a>  numpunct::do_truename
+## <a name="numpunctdo_truename"></a><a name="do_truename"></a>numpunct：:do_truename
 
 一种受保护的虚拟成员函数，通过调用此函数可返回要用作值 **true** 的文本表示形式的字符串。
 
@@ -240,7 +240,7 @@ virtual string_type do_truename() const;
 
 请参阅 [truename](#truename) 的示例，其中虚拟成员函数由 `truename` 调用。
 
-## <a name="falsename"></a>  numpunct::falsename
+## <a name="numpunctfalsename"></a><a name="falsename"></a>数字：：假名
 
 返回要用作值 **false** 的文本表示形式的字符串。
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>返回值
 
-一个包含要用作值**false**的文本表示形式的 `CharType`s 序列的字符串。
+包含用于用作值`CharType`**false**的文本表示表示的序列的字符串。
 
 ### <a name="remarks"></a>备注
 
@@ -289,7 +289,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="grouping"></a>  numpunct::grouping
+## <a name="numpunctgrouping"></a><a name="grouping"></a>数字：：分组
 
 返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。
 
@@ -335,7 +335,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunct"></a>  numpunct::numpunct
+## <a name="numpunctnumpunct"></a><a name="numpunct"></a>数字：：numpunct
 
 `numpunct` 类型的对象的构造函数。
 
@@ -345,24 +345,24 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs* \
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为：
+*_Refs*参数的可能值及其显著性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \> 1：未定义这些值。
+- \>1： 未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基对象。
+构造函数用区域设置初始化其基本对象 **：：**[分面](../standard-library/locale-class.md#facet_class)（`_Refs`。
 
-## <a name="string_type"></a>  numpunct::string_type
+## <a name="numpunctstring_type"></a><a name="string_type"></a>数字：：string_type
 
 一种类型，此类型描述包含 **CharType** 类型字符的字符串。
 
@@ -372,9 +372,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储标点符号序列的副本。
+该类型描述了类模板的专门化[basic_string](../standard-library/basic-string-class.md)其对象可以存储标点序列的副本。
 
-## <a name="thousands_sep"></a>  numpunct::thousands_sep
+## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a>数字：：thousands_sep
 
 返回要用作千位分隔符的区域设置特定元素。
 
@@ -417,7 +417,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="truename"></a>  numpunct::truename
+## <a name="numpuncttruename"></a><a name="truename"></a>数字：：真名
 
 返回要用作值 **true** 的文本表示形式的字符串。
 
@@ -466,8 +466,8 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<locale>](../standard-library/locale.md)\
-[facet 类](../standard-library/locale-class.md#facet_class)\
+[\<区域设置>](../standard-library/locale.md)\
+[分面类](../standard-library/locale-class.md#facet_class)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

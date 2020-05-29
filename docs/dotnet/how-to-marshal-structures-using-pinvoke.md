@@ -8,40 +8,40 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe5d2cf4804baea286827e9d5e270c10cd587b30
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387235"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545197"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
 
-本文档介绍如何将纯函数接受 C 样式结构可以从托管函数调用通过使用 P/Invoke。 不过，我们建议你使用C++互操作功能，而不是 P/Invoke 因为 P/Invoke 提供小的编译时错误报告，不类型安全的并可能会很麻烦，若要实现，如果非托管的 API 打包为 DLL 并不是源代码可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：
+本文档说明如何通过使用 P/Invoke 从托管函数调用接受 C 样式结构的本机函数。 尽管我们建议你使用C++互操作功能，而不是 p/invoke，因为 p/invoke 提供了很少的编译时错误报告、不是类型安全的，并且如果非托管 API 打包为 DLL 并且源代码不可用，则 p/invoke 是唯一的选择。 否则，请参阅以下文档：
 
 - [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [如何：使用 PInvoke 封送字符串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [如何：使用 PInvoke 封送处理字符串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
-默认情况下，本机和托管结构的布局方式以不同的方式在内存中，成功跨托管/非托管边界传递结构需要额外的步骤来保持数据的完整性。
+默认情况下，本机和托管结构在内存中的布局方式不同，因此成功地跨托管/非托管边界传递结构需要额外的步骤来保持数据的完整性。
 
-本文档介绍了定义的本机结构，以及如何将得到的结构传递到非托管函数的托管等效项所需的步骤。 本文档假定的简单结构，不包含字符串或指针的那些 — 使用。 有关非 blittable 互操作性的信息，请参阅[使用C++互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能将非 blittable 类型作为返回值。 可直接复制类型在托管和非托管代码中具有相同的表示形式。 有关详细信息，请参阅[Blittable 和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types)。
+本文档说明定义本机结构的托管等效项所需的步骤，以及生成的结构如何传递到非托管函数。 本文档假定使用简单结构（不包含字符串或指针的结构）。 有关非直接实现互操作性的信息，请参阅[ C++使用互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能将非直接复制到本机类型作为返回值。 直接复制类型在托管和非托管代码中具有相同的表示形式。 有关详细信息，请参阅[本机和非直接复制类型](/dotnet/framework/interop/blittable-and-non-blittable-types)。
 
-封送处理简单，可直接复制结构跨托管/非托管边界首先需要定义的每个本机结构的托管的版本。 这些结构可以具有任何合法的名称;其数据的布局以外的两个结构的本机和托管版本之间没有任何关系。 因此，非常重要的托管的版本包含相同的大小和本机版本的相同顺序中的字段。 （没有任何机制，用于确保结构的托管和本机版本等效的因此不兼容性会运行之前出现。 它是程序员的责任，以确保两个结构具有相同的数据布局）。
+封送处理跨托管/非托管边界的简单直接复制结构需要定义每个本机结构的托管版本。 这些结构可以具有任何合法名称;除了其数据布局外，两个结构的本机版本和托管版本之间没有关系。 因此，托管版本包含的字段大小与本机版本相同，这一点非常重要。 （没有机制可确保结构的托管版本和本机版本是等效的，因此在运行时之前不会出现不兼容的情况。 编程人员应负责确保两个结构具有相同的数据布局。）
 
-由于有时出于性能考虑排列的托管结构的成员，因此有必要使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>特性以指示该结构顺序依次布局。 它也是最好显式设置打包设置要使用的本机结构相同的结构。 (尽管默认情况下，视觉对象C++使用装箱这两个托管代码的 8 字节的结构。)
+由于出于性能方面的考虑，托管结构的成员有时会重新排列，因此，需要使用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性来指示结构按顺序排列。 将结构打包设置显式设置为与本机结构所使用的设置相同。 （虽然默认情况下， C++ Visual 对这两个托管代码使用8字节结构打包。）
 
-1. 接下来，使用<xref:System.Runtime.InteropServices.DllImportAttribute>声明对应于接受结构，任何非托管函数的入口点，但使用的函数签名，这是毫无意义，如果使用这两个版本的相同名称的结构的托管的版本结构。
+1. 接下来，使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 声明与任何接受该结构的非托管函数相对应的入口点，但在函数签名中使用结构的托管版本，如果对这两个版本的结构使用相同的名称，则这是差异点。
 
-1. 现在托管的代码可传递结构的托管的的版本的非托管函数就好像它们是实际托管的函数。 这些结构可以传递值或引用，如以下示例所示。
+1. 现在，托管代码可以将结构的托管版本传递给非托管函数，就好像它们实际上是托管函数。 可以通过值或引用传递这些结构，如以下示例中所示。
 
 ## <a name="example"></a>示例
 
-下面的代码由非托管和托管的模块组成。 非托管的模块是一个 DLL，它定义了称为位置和一个名为接受两个位置结构实例的 GetDistance 函数的结构。 第二个模块是托管的命令行应用程序将导入 GetDistance 函数，但其定义的托管等效项的位置结构 MLocation 方面。 在实践中相同的名称可能用于结构; 这两个版本但是，不同的名称用于此处演示的 DllImport 原型定义根据托管版本。
+下面的代码由一个非托管模块和一个托管模块组成。 非托管模块是一个 DLL，它定义了一个名为 Location 的结构和一个名为 GetDistance 的函数，该函数接受 Location 结构的两个实例。 第二个模块是一个托管命令行应用程序，它导入 GetDistance 函数，但根据位置结构 MLocation 的托管等效项进行定义。 在实践中，同一名称可能同时用于这两种版本的结构：不过，此处使用了不同的名称来说明 DllImport 原型是根据托管版本定义的。
 
-请注意该 DLL 的任何部分公开给托管代码使用的传统 #include 指令。 事实上，DLL 访问在运行时仅，因此不会在编译时检测问题的函数与 DllImport 导入。
+请注意，不会向托管代码公开使用传统 #include 指令的任何部分。 事实上，DLL 仅在运行时进行访问，因此在编译时不会检测到用 DllImport 导入的函数的问题。
 
-```
+```cpp
 // TraditionalDll3.cpp
 // compile with: /LD /EHsc
 #include <iostream>
@@ -87,7 +87,7 @@ void InitLocation(Location* lp) {
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // MarshalStruct_pi.cpp
 // compile with: /clr
 using namespace System;
@@ -131,6 +131,6 @@ int main() {
 [managed] x=50 y=50
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

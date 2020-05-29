@@ -1,19 +1,17 @@
 ---
 title: OLE 相关类
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
-ms.openlocfilehash: 7d58072d133b9348558804b848ecfda4497931e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfcc07b3fbd0c5badce8e397f4d52bc7d8d3028c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378292"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447606"
 ---
 # <a name="ole-related-classes"></a>OLE 相关类
 
@@ -31,6 +29,6 @@ ms.locfileid: "62378292"
 [CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
 用于允许就地项的移动、重设大小和重新定位。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../mfc/class-library-overview.md)

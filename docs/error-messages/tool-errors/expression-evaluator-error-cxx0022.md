@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0022
 - CAN0022
 ms.assetid: f6b299ac-a4ee-492c-bd9f-6fff005bc537
-ms.openlocfilehash: ac726c60d30a13d6458636d31dda6a8fb2cbd02d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5858ce936acfb8b949351c9263f3a9379c73648e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359860"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195820"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>表达式计算器错误 CXX0022
 
-函数调用之前 （_m）
+_main 前的函数调用
 
-C 表达式计算器无法在调试器进入该函数之前计算函数 **_main**。 该程序未正确初始化直到 **_main**已调用。
+C 表达式计算器在调试器进入函数 **_main**之前无法计算函数。 调用 **_main**之前，程序未正确初始化。
 
-此错误是与 CAN0022 相同。
+此错误与 CAN0022 相同。

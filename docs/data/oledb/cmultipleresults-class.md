@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-ms.openlocfilehash: 5bc1bb9ab1e0b6f5f8b2914e4249361ff37cce08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88bc956c3a08c6dddbd7d26a18cfc10f778cabcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230822"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211821"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 类
 
-如果你想要处理多个结果集的命令，使用`CMultipleResults`有关`CCommand`模板自变量*TMultiple*。
+如果需要命令处理多个结果集，请将 `CMultipleResults` 用于 `CCommand` 模板参数*TMultiple*。
 
 ## <a name="syntax"></a>语法
 
@@ -31,9 +31,9 @@ class CMultipleResults
 
 ## <a name="requirements"></a>要求
 
-**标头：** atldbcli
+**标头：** atldbcli。h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

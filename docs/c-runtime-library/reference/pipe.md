@@ -1,8 +1,9 @@
 ---
 title: _pipe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pipe
+- _o__pipe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: bd0107fac28deef94716ff0ce65dd5423a1ececa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d3805de6a591169f94926c09a4542ec01f221d1d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951006"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916829"
 ---
 # <a name="_pipe"></a>_pipe
 
@@ -79,23 +81,25 @@ int _pipe(
 
 **_Pipe**函数创建一个管道，该*管道*是程序用于将信息传递给其他程序的人工 i/o 通道。 管道类似于文件，因为它具有文件指针或文件描述符，或者两者兼具，并且可以通过使用标准库输入和输出函数读取或写入。 但是，管道不表示特定的文件或设备。 相反，它表示存储器中独立于程序自身内存的临时存储，并且完全由操作系统控制。
 
-**_pipe**类似于 **_open** ，但会打开用于读取和写入的管道，并返回两个文件描述符而不是一个。 程序可以使用管道的两端或关闭它不需要的一端。 例如，Windows 中的命令处理器会在执行命令时（如**PROGRAM1** | **program2.c**）创建管道。
+**_pipe**类似于 **_open** ，但会打开用于读取和写入的管道，并返回两个文件描述符，而不是一个。 程序可以使用管道的两端或关闭它不需要的一端。 例如，Windows 中的命令处理器会在执行命令时（如**PROGRAM1** | **program2.c**）创建管道。
 
 **PROGRAM1**的标准输出描述符附加到管道的写入描述符。 **Program2.c**的标准输入描述符附加到管道的读取描述符。 这消除了创建临时文件以将信息传递给其他程序的需要。
 
-**_Pipe**函数将两个文件描述符返回到*pfds*参数中的管道。 元素*pfds*[0] 包含读取描述符，而元素*pfds*[1] 包含写入描述符。 管道文件描述符的使用方式与其他文件描述符相同。 （低级别的输入和输出函数 **_read**和 **_write**可以读取和写入管道。）若要检测管道终止条件，请检查是否有返回0的 **_read**请求作为读取的字节数。
+**_Pipe**函数将两个文件描述符返回到*pfds*参数中的管道。 元素*pfds*[0] 包含读取描述符，而元素*pfds*[1] 包含写入描述符。 管道文件描述符的使用方式与其他文件描述符相同。 （低级别的输入和输出函数 **_read**和 **_write**可对管道进行读取和写入。）若要检测管道终止条件，请检查是否有 **_read**请求返回0作为读取的字节数。
 
-*Psize*参数指定要为管道预留的内存量（以字节为单位）。 *Textmode*参数指定管道的转换模式。 清单常量 **_O_TEXT**指定文本转换，常量 **_O_BINARY**指定二进制转换。 （有关文本和二进制模式的说明，请参阅 [fopen、_wfopen](fopen-wfopen.md)。）如果*textmode*参数为0，则 **_pipe**将使用默认模式变量[_fmode](../../c-runtime-library/fmode.md)指定的默认转换模式。
+*Psize*参数指定要为管道预留的内存量（以字节为单位）。 *Textmode*参数指定管道的转换模式。 清单常量 **_O_TEXT**指定文本转换，常量 **_O_BINARY**指定二进制转换。 （有关文本和二进制模式的说明，请参阅[fopen _wfopen](fopen-wfopen.md) 。）如果*textmode*参数为0，则 **_pipe**使用默认模式变量[_fmode](../../c-runtime-library/fmode.md)指定的默认转换模式。
 
 在多线程程序中，未执行任何锁定。 返回的文件描述符是新打开的，并且在 **_pipe**调用完成后，任何线程都不应引用这些说明符。
 
-若要使用 **_pipe**函数在父进程和子进程之间进行通信，每个进程必须在管道上只有一个描述符处于打开状态。 描述符必须是相对的：如果父级打开了一个读取描述符，那么子级必须打开一个写入描述符。 要执行此操作，最简单的方法是将 **|** **_O_NOINHERIT**标志与*textmode*进行位或（）。 然后，使用 **_dup**或 **_dup2**创建要传递给子项的管道描述符的可继承副本。 关闭原始描述符，然后生成子进程。 从生成调用返回时，关闭父进程中的重复描述符。 有关详细信息，请参见本文后续部分的示例 2。
+若要使用 **_pipe**函数在父进程和子进程之间进行通信，则每个进程都必须在管道上只打开一个说明符。 描述符必须是相对的：如果父级打开了一个读取描述符，那么子级必须打开一个写入描述符。 要执行此操作，最简单的方法是按**|** 位 or （） *textmode*的 **_O_NOINHERIT**标志。 然后，使用 **_dup**或 **_dup2**创建要传递给子项的管道描述符的可继承副本。 关闭原始描述符，然后生成子进程。 从生成调用返回时，关闭父进程中的重复描述符。 有关详细信息，请参见本文后续部分的示例 2。
 
-在 Windows 操作系统中，关闭管道的所有描述符时，该管道也就被损坏了。 （如果管道上的所有读取描述符都已关闭，则写入该管道操作将导致错误。）管道上的所有读取和写入操作都需要等待，直到有足够的数据或足够的缓冲区空间来完成 I/O 请求。
+在 Windows 操作系统中，关闭管道的所有描述符时，该管道也就被损坏了。 （如果已关闭管道上的所有读取描述符，则写入管道将导致错误。）管道上的所有读取和写入操作都将等待，直到有足够的数据或足够的缓冲区空间来完成 i/o 请求。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
 
@@ -103,7 +107,7 @@ int _pipe(
 
 2 **errno**定义。
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -343,7 +347,7 @@ This is speaker beep number 9...
 This is speaker beep number 10...
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>

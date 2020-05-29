@@ -1,17 +1,17 @@
 ---
-title: transmit_as (C++ COM 特性)
+title: transmit_as （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214482"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -23,9 +23,9 @@ ms.locfileid: "69513909"
 [ transmit_as(type) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*type*<br/>
+type<br/>
 指定在客户端和服务器之间传输的数据类型。
 
 ## <a name="remarks"></a>备注
@@ -34,7 +34,7 @@ ms.locfileid: "69513909"
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**transmit_as**属性:
+下面的代码演示如何使用**transmit_as**特性：
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -70,14 +70,14 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**适用于**|**typedef**|
-|**可重复**|No|
+|**适用对象**|**typedef**|
+|**可重复**|否|
 |**必需的特性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

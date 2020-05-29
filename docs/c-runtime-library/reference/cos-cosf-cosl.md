@@ -1,10 +1,11 @@
 ---
 title: cos、cosf、cosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cos
 - cosf
 - cosl
+- _o_cos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1aae123de5ef03af8bcaf8480a84327f88c457c5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942823"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917233"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -74,21 +76,23 @@ long double cos( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用采用并返回**浮点**或**长** **双精度**值的**cos**的重载。 在 C 程序中， **cos**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回**浮点**或**长****双精度**值的**cos**的重载。 在 C 程序中， **cos**始终采用并返回**双精度型**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
+|例程|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
 |**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅[sin、sinf、sinl](sin-sinf-sinl.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d85693cec11ef53a6bbbb60d8ced716d2a0bb131
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391408"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754345"
 ---
 # <a name="linker-tools-error-lnk1179"></a>链接器工具错误 LNK1179
 
-无效或损坏的文件： 重复的 COMDAT filename
+无效或损坏的文件：重复COMDAT"文件名"
 
-对象模块包含两个或多个具有相同名称的 Comdat。
+对象模块包含两个或多个具有相同名称的 COMDAT。
 
-使用可导致此错误[/H](../../build/reference/h-restrict-length-of-external-names.md)，这就限制了外部名称的长度并[/Gy](../../build/reference/gy-enable-function-level-linking.md)，哪些程序包中排列的 Comdat 函数。
+此错误可能由使用[/H（](../../build/reference/h-restrict-length-of-external-names.md)限制外部名称的长度）和[/Gy](../../build/reference/gy-enable-function-level-linking.md)（在 COMDATs 中）进行打包函数引起。
 
 ## <a name="example"></a>示例
 
-在下面的代码中，`function1`和`function2`的前八个字符相同。 使用编译 **/Gy**并 **/H8**产生链接错误。
+在以下代码中，`function1``function2`在前八个字符中相同。 使用 **/Gy**和 **/H8**编译会产生链接错误。
 
-```
+```cpp
 void function1(void);
 void function2(void);
 

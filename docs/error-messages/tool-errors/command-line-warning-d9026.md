@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - D9026
 ms.assetid: 149fe5e3-5329-4be8-b871-49dfd423aaba
-ms.openlocfilehash: 3fd8d442dfabaf2f03d8b564c9fdfb1537f6ff28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59dfcdc97fb9caf60a018cb20583ee6fca3dcb27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214191"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196698"
 ---
 # <a name="command-line-warning-d9026"></a>命令行警告 D9026
 
-选项适用于整个命令行
+选项应用于整个命令行
 
-指定文件名后，在命令中指定一个选项。 该选项被应用于它前面有该文件。
+指定文件名后，在命令上指定了一个选项。 此选项已应用于其前面的文件。
 
-例如，在命令中
+例如，在命令
 
 ```
 CL verdi.c /G5 puccini.c
 ```
 
-将使用用 /G5 选项，而不是 /G4 默认编译文件 VERDI.c。
+将使用/G5 选项而不是/G4 默认值编译文件 VERDI。
 
-此行为是不同的某些早期版本中，此方法仅指定文件名，从而导致 VERDI.c 之前的选项所编译使用/G4 和 PUCCINI.c 正在编译使用用 /G5。
+此行为不同于一些以前版本的行为，这种行为仅应用文件名之前指定的选项，导致 VERDI 使用/G4 和 PUCCINI 进行编译，并使用/G5. 进行编译

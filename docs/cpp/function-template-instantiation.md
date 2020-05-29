@@ -6,12 +6,12 @@ helpviewer_keywords:
 - function templates, instantiation
 - instantiation, function templates
 ms.assetid: f22a07c7-3ad1-465a-84f5-8737e274bd47
-ms.openlocfilehash: c4667f5ae625468cdab428706ddaff92a1c1af33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6917448af067542fffb13aa043720bf8a26f7ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154161"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179752"
 ---
 # <a name="function-template-instantiation"></a>函数模板实例化
 
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [函数模板](../cpp/function-templates.md)

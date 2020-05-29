@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: c79d2fb1ac73947ddb13adcbd444ff7b5d50bdb4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907892"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365741"
 ---
 # <a name="event-maps"></a>事件映射
 
@@ -19,9 +19,9 @@ Microsoft 基础类库提供了针对触发事件而优化的编程模型。 在
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK`宏指示每次检测到鼠标单击时，控件都将激发 stock click 事件。 有关其他常用事件的更详细列表，请参阅[ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。 宏还可用于指示自定义事件。
+宏`EVENT_STOCK_CLICK`指示控件每次检测到鼠标单击时都会触发库存单击事件。 有关其他股票事件的更详细列表，请参阅[文章 ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。 宏还可用于指示自定义事件。
 
-虽然事件映射宏很重要，但您一般不会直接插入这些宏。 这是因为 "**属性**" 窗口（在**类视图**）在你使用它来将事件触发函数与事件关联时，会在源文件中自动创建事件映射条目。 无论何时想要编辑或添加事件映射条目，都可以使用 "**属性**" 窗口。
+虽然事件映射宏很重要，但您一般不会直接插入这些宏。 这是因为**属性**窗口（**在类视图中**）在使用该窗口将事件触发函数与事件关联时，会自动在源文件中创建事件映射条目。 任何时候要编辑或添加事件映射条目时，都可以使用 **"属性"** 窗口。
 
 为了支持事件映射，MFC 提供了下列宏：
 
@@ -49,9 +49,9 @@ Microsoft 基础类库提供了针对触发事件而优化的编程模型。 在
 |[ON_OLEVERB](#on_oleverb)|指示 OLE 控件处理的自定义谓词。|
 |[ON_STDOLEVERB](#on_stdoleverb)|重写 OLE 控件的标准谓词映射。|
 
-##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-程序`COleControl`中的每个派生类都可以提供事件映射来指定控件将触发的事件。
+程序中`COleControl`的每个派生类都可以提供事件映射来指定控件将触发的事件。
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,17 +59,17 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>备注
 
-在类声明的末尾使用 DECLARE_EVENT_MAP 宏。 然后，在定义类的成员函数的 .cpp 文件中，使用 BEGIN_EVENT_MAP 宏、每个控件事件的宏条目和 END_EVENT_MAP 宏声明事件列表的末尾。
+在类声明末尾使用DECLARE_EVENT_MAP宏。 然后，在定义类成员函数的 .cpp 文件中，使用BEGIN_EVENT_MAP个宏、每个控件事件的宏条目和END_EVENT_MAP宏来声明事件列表的结束。
 
-有关事件映射的详细信息，请参阅文章[ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。
+有关事件映射的详细信息，请参阅["ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)"一文。
 
 ### <a name="requirements"></a>要求
 
-**标头**afxctl。h
+**头**afxctl.h
 
-## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
 
-开始事件映射的定义。
+开始定义事件映射。
 
 ```cpp
 BEGIN_EVENT_MAP(theClass,  baseClass)
@@ -77,25 +77,25 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>参数
 
-*theClass*<br/>
-指定其事件映射为的控件类的名称。
+*类*<br/>
+指定事件映射为其事件映射的控件类的名称。
 
-*baseClass*<br/>
+*基类*<br/>
 指定*类*的基类的名称。
 
 ### <a name="remarks"></a>备注
 
-在定义类的成员函数的实现（.cpp）文件中，用 BEGIN_EVENT_MAP 宏启动事件映射，然后为每个事件添加宏项，并通过 END_EVENT_MAP 宏完成事件映射。
+在定义类成员函数的实现 （.cpp） 文件中，使用BEGIN_EVENT_MAP宏启动事件映射，然后为每个事件添加宏条目，然后使用END_EVENT_MAP宏完成事件映射。
 
-有关事件映射和 BEGIN_EVENT_MAP 宏的详细信息，请参阅[ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。
+有关事件映射和BEGIN_EVENT_MAP宏的详细信息，请参阅[文章 ActiveX 控件：事件](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>要求
 
-**标头**afxctl。h
+**头**afxctl.h
 
-##  <a name="end_event_map"></a>  END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
 
-使用 END_EVENT_MAP 宏可结束事件映射的定义。
+使用END_EVENT_MAP宏结束事件映射的定义。
 
 ```cpp
 END_EVENT_MAP()
@@ -103,11 +103,11 @@ END_EVENT_MAP()
 
 ### <a name="requirements"></a>要求
 
-**标头**afxctl。h
+**头**afxctl.h
 
-## <a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
 
-定义自定义事件的事件映射项。
+为自定义事件定义事件映射条目。
 
 ```cpp
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
@@ -118,32 +118,32 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 *pszName*<br/>
 事件的名称。
 
-*pfnFire*<br/>
+*普芬火*<br/>
 事件触发函数的名称。
 
 *vtsParams*<br/>
-用空格分隔的列表，其中的一个或多个常量指定函数的参数列表。
+指定函数参数列表的一个或多个常量的空间分隔列表。
 
 ### <a name="remarks"></a>备注
 
-*VtsParams*参数是`VTS_`常量的以空格分隔的值列表。 这些值中的一个或多个由空格（而不是逗号）分隔）指定函数的参数列表。 例如:
+*vtsParams*参数是一个空间分隔的值列表，`VTS_`与常量。 一个或多个这些值由空格（不是逗号）分隔，指定函数的参数列表。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-指定一个列表，其中包含表示 RGB 颜色值的32位整数，后跟指向`IFontDisp` OLE 字体对象的接口的指针。
+指定包含表示 RGB 颜色值的 32 位整数的列表，后跟指向 OLE`IFontDisp`字体对象接口的指针。
 
-`VTS_`常量及其含义如下：
+常`VTS_`量及其含义如下：
 
 |符号|参数类型|
 |------------|--------------------|
 |VTS_I2|**short**|
-|VTS_I4|**long**|
-|VTS_R4|**float**|
+|VTS_I4|**长**|
+|VTS_R4|**浮动**|
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|货币|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const**__char\*__|
+|VTS_BSTR|**康斯特**__字符\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|句柄|
@@ -165,15 +165,15 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> 已为所有变体类型定义了其他变体常量（VTS_FONT 和 VTS_PICTURE 除外），它们提供指向 variant 数据常量的指针。 这些常量是使用约定命名`VTS_Pconstantname`的。 例如，VTS_PCOLOR 是指向 VTS_COLOR 常量的指针。
+> 已为所有变体类型定义了其他变体常量，但提供指向变体数据常量的VTS_FONT和VTS_PICTURE除外。 这些常量使用约定`VTS_Pconstantname`命名。 例如，VTS_PCOLOR是指向VTS_COLOR常量的指针。
 
 ### <a name="requirements"></a>要求
 
-**标头**afxctl。h
+**头**afxctl.h
 
-## <a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
 
-定义属于*dispid*指定的调度 ID 的自定义事件的事件触发函数。
+为属于*dispid*指定的调度 ID 的自定义事件定义事件触发函数。
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -188,30 +188,30 @@ EVENT_CUSTOM_ID(
 *pszName*<br/>
 事件的名称。
 
-*dispid*<br/>
-引发事件时控件使用的调度 ID。
+*不一部分*<br/>
+控件在触发事件时使用的调度 ID。
 
-*pfnFire*<br/>
+*普芬火*<br/>
 事件触发函数的名称。
 
 *vtsParams*<br/>
-引发事件时传递到控件容器的参数的变量列表。
+触发事件时传递给控制容器的参数的可变列表。
 
 ### <a name="remarks"></a>备注
 
-*VtsParams*参数是`VTS_`常量的以空格分隔的值列表。 这些值中的一个或多个由空格（而不是逗号）分隔）指定函数的参数列表。 例如:
+*vtsParams*参数是空格分隔的值列表和`VTS_`常量。 由空格（而不是逗号）分隔的一个或多个值指定函数的参数列表。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-指定一个列表，其中包含表示 RGB 颜色值的32位整数，后跟指向`IFontDisp` OLE 字体对象的接口的指针。
+指定包含表示 RGB 颜色值的 32 位整数的列表，后跟指向 OLE`IFontDisp`字体对象接口的指针。
 
-有关`VTS_`常量的列表，请参阅[EVENT_CUSTOM](#event_custom)。
+有关常量的列表，`VTS_`请参阅[EVENT_CUSTOM](#event_custom)。
 
 ### <a name="requirements"></a>要求
 
-**标头**afxctl。h
+**头**afxctl.h
 
-## <a name="on_oleverb"></a>  ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
 
 此宏定义一个消息映射条目，该条目将自定义谓词映射到控件的特定成员函数。
 
@@ -224,14 +224,14 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 *idsVerbName*<br/>
 谓词名称的字符串资源 ID。
 
-*memberFxn*<br/>
+*成员Fxn*<br/>
 框架在调用谓词时调用的函数。
 
 ### <a name="remarks"></a>备注
 
 资源编辑器可用于创建添加到字符串表的自定义谓词名称。
 
-*MemberFxn*的函数原型是：
+*成员Fxn*的功能原型是：
 
 ```cpp
 BOOL memberFxn(
@@ -240,13 +240,13 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-*LpMsg*、 *hWndParent*和*lpRect*参数的值取自`IOleObject::DoVerb`成员函数的相应参数。
+lpMsg、hWndParent*hWndParent*和*lpRect*参数的值取自`IOleObject::DoVerb`成员函数的相应参数。 *lpMsg*
 
 ### <a name="requirements"></a>要求
 
-**标头**afxole
+**头**afxole.h
 
-## <a name="on_stdoleverb"></a>  ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
 
 使用此宏重写标准谓词的默认行为。
 
@@ -259,19 +259,19 @@ ON_STDOLEVERB(iVerb, memberFxn)
 *iVerb*<br/>
 重写谓词的标准谓词索引。
 
-*memberFxn*<br/>
+*成员Fxn*<br/>
 框架在调用谓词时调用的函数。
 
 ### <a name="remarks"></a>备注
 
-标准谓词索引的形式`OLEIVERB_`为，后跟一个操作。 OLEIVERB_SHOW、OLEIVERB_HIDE 和 OLEIVERB_UIACTIVATE 是标准谓词的一些示例。
+标准动词索引是形式`OLEIVERB_`，后跟一个动作。 OLEIVERB_SHOW、OLEIVERB_HIDE和OLEIVERB_UIACTIVATE是标准动词的一些示例。
 
-有关用作*memberFxn*参数的函数原型的说明，请参阅[ON_OLEVERB](#on_oleverb) 。
+有关用作*成员Fxn*参数的功能原型的说明，请参阅[ON_OLEVERB。](#on_oleverb)
 
 ### <a name="requirements"></a>要求
 
-**标头**afxole
+**头**afxole.h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[宏和全局](../../mfc/reference/mfc-macros-and-globals.md)
+[MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

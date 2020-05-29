@@ -1,9 +1,11 @@
 ---
 title: _chmod、_wchmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chmod
 - _wchmod
+- _o__chmod
+- _o__wchmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939204"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917007"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod、_wchmod
 
@@ -52,7 +55,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>参数
 
-*filename*<br/>
+*名字*<br/>
 现有文件的名称。
 
 *pmode*<br/>
@@ -70,13 +73,15 @@ int _wchmod( const wchar_t *filename, int pmode );
 |-|-|
 | **\_S\_IREAD** | 只允许读取。 |
 | **\_S\_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
-| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | 允许读取和写入。 |
+| **\_S\_IREAD** &#124; ** \_s\_IWRITE** | 允许读取和写入。 |
 
-当同时提供两个常量时，它们将与按位 or 运算符 **\|** （）联接。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** \| **_S_IWRITE**模式是等效的。
+当同时提供两个常量时，它们将与按位 or 运算符**\|**（）联接。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** \| **_S_IWRITE**模式是等效的。
 
-**_wchmod**是 **_chmod**的宽字符版本; **_wchmod**的*filename*参数是宽字符字符串。 否则， **_wchmod**和 **_chmod**的行为相同。
+**_wchmod**是 **_chmod**的宽字符版本;**_wchmod**的*filename*参数是宽字符字符串。 否则 **_wchmod**和 **_chmod**的行为相同。
 
 此函数验证其参数。 如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数只会忽略这些常量。 如果*filename*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回-1。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -86,12 +91,12 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_chmod**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 |**_wchmod**|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -169,7 +174,7 @@ Access is denied.
 Mode set to read/write
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_access、_waccess](access-waccess.md)<br/>

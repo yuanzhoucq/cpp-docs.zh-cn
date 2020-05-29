@@ -1,5 +1,5 @@
 ---
-title: _spawn、_wspawn 函数
+title: _spawn, _wspawn 函数
 ms.date: 11/04/2016
 api_location:
 - msvcr80.dll
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322961"
 ---
-# <a name="_spawn-_wspawn-functions"></a>_spawn、_wspawn 函数
+# <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn 函数
 
 每个 `_spawn` 函数将创建并执行一个新进程：
 
@@ -68,7 +68,7 @@ ms.locfileid: "75301699"
 
 函数名称的结尾字母确定变体。
 
-|Letter|变体|
+|Letter|Variant|
 |-|-|
 | `e`  | 指向环境设置的指针的数组 `envp` 将传递给新进程。  |
 | `l`  | 将命令行参数单独传递给 `_spawn` 函数。 一般将在预先知道新进程的一些参数时使用此后缀。  |
@@ -110,27 +110,27 @@ ms.locfileid: "75301699"
 以前，这些函数中部分函数在成功时将 `errno` 设置为零；当前行为是在成功时保持不改动 `errno`，如 C 标准所指定。 如果需要模拟这一旧行为，请在调用这些函数之前将 `errno` 设置为零。
 
 > [!NOTE]
->  若要确保正确覆盖初始化和终止，请勿使用 `setjmp` 或 `longjmp` 函数进入或离开覆盖例程。
+> 若要确保正确覆盖初始化和终止，请勿使用 `setjmp` 或 `longjmp` 函数进入或离开覆盖例程。
 
 ## <a name="arguments-for-the-spawned-process"></a>生成进程的参数
 
 若要将参数传递给新进程，请在 `_spawn` 调用中将一个或多个指向字符串的指针作为参数提供。 这些字符串构成了生成进程的参数列表。 构成新进程参数列表的字符串的组合长度不得超过 1024 个字节。 每个字符串的终止 null 字符 (“\0”) 不包含在计数中，但是空格字符（自动插入以分隔参数）包括在内。
 
 > [!NOTE]
->  嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_spawn` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。
+> 嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_spawn` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。
 
 > [!IMPORTANT]
->  如果没有显式地检查其内容，请不要将用户输入传递给 `_spawn`。 `_spawn` 将导致调用 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。
+> 如果没有显式地检查其内容，请不要将用户输入传递给 `_spawn`。 `_spawn` 将导致调用 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。
 
 您可以将参数指针作为不同的参数传递（在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中）或作为指针数组传递（在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中）。 您必须至少将一个参数 `arg0` 或 `argv`[0] 传递到生成进程。 按照约定，此参数是程序的名称，因为您将在命令行上键入该名称。 不同的值不会生成错误。
 
-一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 NULL 指针，用以标记参数列表的末尾。
+一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 NULL 指针，用以标记参数列表的末尾****。
 
-`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv` *传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 NULL 指针，用以标记参数列表的末尾。
+`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv`* 传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 NULL 指针，用以标记参数列表的末尾****。
 
 ## <a name="environment-of-the-spawned-process"></a>生成进程的环境
 
-调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 没有用双引号引起来。）`envp` 数组的最后一个元素应为**NULL**。 当 `envp` 本身为 NULL 时，生成进程将继承父进程的环境设置。
+调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value`未以双引号括起来。数组的最后一`envp`个元素应为**NULL**。 当 `envp` 本身为 NULL 时，生成进程将继承父进程的环境设置****。
 
 `_spawn` 函数可将所有有关打开的文件（包括转换模式）的信息传递到新进程。 此信息将在实模式下通过环境中的 `C_FILE_INFO` 条目传递。 启动代码通常会处理此条目，然后将其从环境中删除。 但是，如果 `_spawn` 函数生成一个非 C 进程，则此条目仍将保留在环境中。 打印环境将在此条目的定义字符串中显示图形字符，因为环境信息在实模式下是以二进制格式传递的。 它不应对正常操作具有任何其他影响。 在保护模式下，环境信息是以文本形式传递的，因此不包含图形字符。
 
@@ -232,7 +232,7 @@ from SPAWN!
 ## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](../c-runtime-library/reference/abort.md)<br/>
+[中止](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [_exec、_wexec 函数](../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>

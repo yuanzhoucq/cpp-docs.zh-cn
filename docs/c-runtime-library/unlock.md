@@ -23,23 +23,23 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 73eec2b05b1d321bfc8ac61e743459bf2323fb8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957258"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745107"
 ---
 # <a name="_unlock"></a>_unlock
 
 释放多线程锁定。
 
 > [!IMPORTANT]
->  此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
+> 此函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供此函数。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 void __cdecl _unlock(
    int locknum
 );

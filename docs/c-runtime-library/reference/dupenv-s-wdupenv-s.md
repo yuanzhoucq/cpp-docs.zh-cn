@@ -1,9 +1,11 @@
 ---
 title: _dupenv_s、_wdupenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dupenv_s
 - _wdupenv_s
+- _o__dupenv_s
+- _o__wdupenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942025"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915183"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s、_wdupenv_s
 
@@ -67,7 +70,7 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 用于存储变量值的缓冲区。
 
 *numberOfElements*<br/>
@@ -86,7 +89,7 @@ errno_t _wdupenv_s(
 
 ## <a name="remarks"></a>备注
 
-**_Dupenv_s**函数搜索*varname*的环境变量列表。 如果找到变量， **_dupenv_s**将分配一个缓冲区，并将该变量的值复制到缓冲区中。 缓冲区的地址和长度在*buffer*和*numberOfElements*中返回。 通过分配缓冲区本身， **_dupenv_s**为[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)提供了更方便的替代方法。
+**_Dupenv_s**函数将在环境变量列表中搜索*varname*。 如果找到变量， **_dupenv_s**会分配一个缓冲区，并将该变量的值复制到缓冲区中。 缓冲区的地址和长度在*buffer*和*numberOfElements*中返回。 通过分配缓冲区本身， **_dupenv_s**提供了一种更方便的替代方法来[getenv_s _wgetenv_s](getenv-s-wgetenv-s.md)。
 
 > [!NOTE]
 > 调用程序负责通过调用 [free](free.md) 释放内存。
@@ -95,11 +98,13 @@ errno_t _wdupenv_s(
 
 如果你对缓冲区大小不感兴趣，则可以为*numberOfElements*传递**NULL** 。
 
-Windows 操作系统中的 **_dupenv_s**不区分大小写。 **_dupenv_s**使用全局变量 **_environ**指向的环境副本来访问该环境。 有关 **_environ**的讨论[，请参阅 getenv_s、_Wgetenv_s](getenv-s-wgetenv-s.md)中的备注。
+在 Windows 操作系统中， **_dupenv_s**不区分大小写。 **_dupenv_s**使用全局变量 **_environ**指向的环境副本来访问该环境。 有关 **_environ**的讨论[，](getenv-s-wgetenv-s.md)请参阅 Getenv_s 中的 "备注" _wgetenv_s。
 
 *Buffer*中的值是环境变量值的副本;修改它不会影响环境。 请使用 [_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 函数修改环境变量的值。
 
-**_wdupenv_s**是 **_dupenv_s**的宽字符版本; **_wdupenv_s**的参数是宽字符字符串。 **_Wenviron**全局变量是 **_environ**的宽字符版本。 有关 **_wenviron**的详细信息，请参阅[getenv_s，_Wgetenv_s](getenv-s-wgetenv-s.md)中的备注。
+**_wdupenv_s**是 **_dupenv_s**的宽字符版本;**_wdupenv_s**的参数是宽字符字符串。 **_Wenviron**全局变量是 **_environ**的宽字符版本。 有关 **_wenviron**的详细信息，请参阅 getenv_s 中的 "备注" [_wgetenv_s](getenv-s-wgetenv-s.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,12 +114,12 @@ Windows 操作系统中的 **_dupenv_s**不区分大小写。 **_dupenv_s**使�
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -142,7 +147,7 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [环境常量](../../c-runtime-library/environmental-constants.md)<br/>

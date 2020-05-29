@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2865db023425fa301ad5440a0dc8ed491213f33f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447667"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368059"
 ---
-# <a name="insertiterator-class"></a>insert_iterator 类
+# <a name="insert_iterator-class"></a>insert_iterator 类
 
 描述满足输出迭代器需求的迭代器适配器。 它是将元素插入到序列而不是覆盖，因此不同于 C++ 序列和关联容器的迭代器所提供的覆盖语义，它可以提供不同的语义。 `insert_iterator` 类会针对要适配的容器类型进行模板化。
 
@@ -35,36 +35,36 @@ class insert_iterator;
 
 ## <a name="remarks"></a>备注
 
-类型`Container`的容器必须满足可变大小容器的要求, 并且具有两个参数的 insert 成员函数, 其中的参数类型`Container::iterator`为和`Container::value_type` , 并且返回一个类型`Container::iterator`。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
+类型的`Container`容器必须满足可变大小的容器的要求，并且具有一个双参数插入成员函数，其中参数的类型`Container::iterator`为，并且`Container::value_type`返回类型`Container::iterator`。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[insert_iterator](#insert_iterator)|构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[container_type](#container_type)|一种类型，代表要对其执行泛型插入的容器。|
-|[reference](#reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|
+|[参考](#reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|操作员|说明|
 |-|-|
-|[operator*](#op_star)|取消引用运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|
-|[operator++](#op_add_add)|将 `insert_iterator` 递增到下一个可用来存储值的位置。|
-|[operator=](#op_eq)|赋值运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|
+|[运算符*](#op_star)|取消引用运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|
+|[运算符*](#op_add_add)|将 `insert_iterator` 递增到下一个可用来存储值的位置。|
+|[运算符*](#op_eq)|赋值运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|
 
 ## <a name="requirements"></a>要求
 
-**标头**：\<iterator>
+**标题** \<： 迭代器>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="container_type"></a>insert_iterator::container_type
+## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a>insert_iterator：：container_type
 
 一种类型，代表要对其执行泛型插入的容器。
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iterator"></a>insert_iterator::insert_iterator
+## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a>insert_iterator：insert_iterator
 
 构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。
 
@@ -172,7 +172,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>insert_iterator::operator*
+## <a name="insert_iteratoroperator"></a><a name="op_star"></a>insert_iterator：：操作员*
 
 取消引用插入迭代器，其返回元素为地址。
 
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是在序列中对元素进行寻址的迭代器, 则 **\*Iter** = **值**会将该元素替换为值, 而不会更改序列中的元素总数。
+用于实现输出迭代器表达式 = **\*Iter****值**。 如果`Iter`迭代器处理序列中的元素，则**\*Iter** = **值**将该元素替换为值，并且不会更改序列中元素的总数。
 
 ### <a name="example"></a>示例
 
@@ -232,7 +232,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>insert_iterator::operator++
+## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a>insert_iterator：：操作员*
 
 将 `insert_iterator` 递增到下一个可用来存储值的位置。
 
@@ -296,7 +296,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="op_eq"></a>insert_iterator::operator=
+## <a name="insert_iteratoroperator"></a><a name="op_eq"></a>insert_iterator：：操作员*
 
 将值插入容器并返回更新的迭代器，以指向新元素。
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*初始值*\
+*瓦尔*\
 要赋给容器的值。
 
 ### <a name="return-value"></a>返回值
@@ -379,7 +379,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="reference"></a>insert_iterator::reference
+## <a name="insert_iteratorreference"></a><a name="reference"></a>insert_iterator：参考
 
 一种类型，此类型提供对关联容器所控制序列中的元素的引用。
 
@@ -427,8 +427,8 @@ The first element in the list L is: 10.
 */
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[\<迭代器>](../standard-library/iterator.md)\
+[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

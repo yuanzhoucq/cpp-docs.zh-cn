@@ -1,8 +1,9 @@
 ---
 title: mbrlen
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrlen
+- _o_mbrlen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952495"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920304"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -47,10 +49,10 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 指向多字节字符字符串中要检查的下一字节的指针。
 
-*count*<br/>
+*计数*<br/>
 要检查的最大字节数。
 
 *mbstate*<br/>
@@ -69,11 +71,13 @@ size_t mbrlen(
 
 ## <a name="remarks"></a>备注
 
-**Mbrlen**函数最多检查以*str*指向的字节开头的最多*计数*字节，以确定完成下一个多字节字符（包括任何移位序列）所需的字节数。 它等效于调用`mbrtowc(NULL, str, count, &mbstate)` ，其中*mbstate*是用户提供的**mbstate_t**对象，或者是库提供的静态内部对象。
+**Mbrlen**函数最多检查以*str*指向的字节开头的最多*计数*字节，以确定完成下一个多字节字符（包括任何移位序列）所需的字节数。 它等效于调用`mbrtowc(NULL, str, count, &mbstate)` ，其中*mbstate*是用户提供的**mbstate_t**对象或由库提供的静态内部对象。
 
-**Mbrlen**函数在*mbstate*参数中保存并使用不完整多字节字符的移位状态。 这样， **mbrlen**将在多字节字符中间重启的功能（如果需要），并检查最多的*计数*字节。 如果*mbstate*为 null 指针，则**mbrlen**将使用内部静态**mbstate_t**对象来存储移位状态。 由于内部**mbstate_t**对象不是线程安全的，因此建议始终分配和传递你自己的*mbstate*参数。
+**Mbrlen**函数在*mbstate*参数中保存并使用不完整多字节字符的移位状态。 这样， **mbrlen**将在多字节字符中间重启的功能（如果需要），并检查最多的*计数*字节。 如果*mbstate*为 null 指针，则**mbrlen**将使用内部静态**mbstate_t**对象存储移位状态。 由于内部**mbstate_t**对象不是线程安全的，因此建议始终分配和传递自己的*mbstate*参数。
 
-**Mbrlen**函数的可重启性不同于[_mbclen、mblen 和 _mblen_l](mbclen-mblen-mblen-l.md) 。 移位状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序应使用**wcsrlen**而不是**wcslen** 。
+**Mbrlen**函数的可重启性不同于[_mbclen、mblen _mblen_l](mbclen-mblen-mblen-l.md) 。 移位状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序应使用**wcsrlen**而不是**wcslen** 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -83,11 +87,11 @@ size_t mbrlen(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**mbrlen**|\<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -151,7 +155,7 @@ Code page: 932
 Character count: 25
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>

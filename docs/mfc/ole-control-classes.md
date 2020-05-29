@@ -1,8 +1,6 @@
 ---
 title: OLE 控件类
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - custom controls [MFC], classes
@@ -12,16 +10,16 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 86470c3e3e66d6aee2ce532570cea096641d2c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c28520d592c4bd49ab6cb40edbb2f5ddf59846
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186083"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447647"
 ---
 # <a name="ole-control-classes"></a>OLE 控件类
 
-这些是您在编写 OLE 控件时使用的主类。 `COleControlModule` OLE 控件模块中的类就像[CWinApp](../mfc/reference/cwinapp-class.md)应用程序中的类。 每个模块实现一个或多个 OLE 控件；这些控件由 `COleControl` 对象表示。 这些控件使用 `CConnectionPoint` 对象与其容器进行通信。
+这些是您在编写 OLE 控件时使用的主类。 OLE 控件模块中的 `COleControlModule` 类类似于应用程序中的[CWinApp](../mfc/reference/cwinapp-class.md)类。 每个模块实现一个或多个 OLE 控件；这些控件由 `COleControl` 对象表示。 这些控件使用 `CConnectionPoint` 对象与其容器进行通信。
 
 `CPictureHolder` 和 `CFontHolder` 类封装图片和字体的 COM 接口，而 `COlePropertyPage` 和 `CPropExchange` 类可帮助您实现控件的属性页和属性存留。
 
@@ -44,7 +42,7 @@ ms.locfileid: "62186083"
 显示图形界面（与对话框类似）中的 OLE 控件的属性。
 
 [CPropExchange](../mfc/reference/cpropexchange-class.md)<br/>
-支持 OLE 控件的属性持久性的实现。 类似于[CDataExchange](../mfc/reference/cdataexchange-class.md)对话框。
+支持 OLE 控件的属性持久性的实现。 类似于对话框的[CDataExchange](../mfc/reference/cdataexchange-class.md) 。
 
 [CMonikerFile](../mfc/reference/cmonikerfile-class.md)<br/>
 采用名字对象或可成为名字对象的字符串表示形式，并以同步方式将其绑定到名字对象为其名称的流。
@@ -64,6 +62,6 @@ ms.locfileid: "62186083"
 [COleSafeArray](../mfc/reference/colesafearray-class.md)<br/>
 与任意类型和维度的数组一起使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../mfc/class-library-overview.md)

@@ -1,9 +1,11 @@
 ---
 title: tmpnam_s、_wtmpnam_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - tmpnam_s
 - _wtmpnam_s
+- _o__wtmpnam_s
+- _o_tmpnam_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 847df0d2369857d009c39b4dd61adce45094899c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946042"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917491"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s、_wtmpnam_s
 
@@ -67,7 +70,7 @@ errno_t _wtmpnam_s(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 保留生成的名称的指针。
 
 *sizeInChars*<br/>
@@ -81,21 +84,23 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**返回值**|**内容** *str*|
-|**NULL**|任何|**EINVAL**|未修改|
-|Not **NULL** （指向有效内存）|过短|**ERANGE**|未修改|
+|*字符串*|*sizeInChars*|**返回值**|*Str* **的内容**  |
+|**Null**|any|**EINVAL**|未修改|
+|not **NULL** （指向有效内存）|过短|**ERANGE**|未修改|
 
-如果*str*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
+如果*str*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
 这些函数返回的文件名当前不存在。 **tmpnam_s**返回[GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)返回的指定 Windows 临时目录中的唯一名称。 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。
 
-对于**tmpnam_s**，你可以将生成的文件名存储在*str*中。 **Tmpnam_s**返回的字符串的最大长度为**L_TMPNAM_S**，在 stdio.h 中定义。高. 如果*str*为**NULL**，则**tmpnam_s**将结果保留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 由**tmpnam_s**生成的名称包含程序生成的文件名，并在第一次调用**tmpnam_s**后，在第32中为序列号的文件扩展名，在 stdio.h 中为**TMP_MAX_S** 。H 为**INT_MAX**）。
+对于**tmpnam_s**，你可以将生成的文件名存储在*str*中。 **Tmpnam_s**返回的字符串的最大长度是在 stdio.h 中定义的**L_tmpnam_s**。高. 如果*str*为**NULL**，则**tmpnam_s**将结果保留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 **Tmpnam_s**生成的名称包含程序生成的文件名，在第一次调用**tmpnam_s**后，在 stdio.h 中**TMP_MAX_S**时，将在第32（1vvvvvu）中为序列号的文件扩展名。H 为**INT_MAX**）。
 
-**tmpnam_s**会根据需要自动处理多字节字符串参数，根据从操作系统获取的 OEM 代码页识别多字节字符序列。 **_wtmpnam_s**是**tmpnam_s**的宽字符版本; **_wtmpnam_s**的参数和返回值是宽字符字符串。 **_wtmpnam_s**和**tmpnam_s**的行为相同，只不过 **_wtmpnam_s**不处理多字节字符字符串。
+**tmpnam_s**会根据需要自动处理多字节字符串参数，根据从操作系统获取的 OEM 代码页识别多字节字符序列。 **_wtmpnam_s**是**tmpnam_s**的宽字符版本;**_wtmpnam_s**的参数和返回值是宽字符字符串。 **_wtmpnam_s**和**tmpnam_s**的行为相同，只是 **_wtmpnam_s**不处理多字节字符字符串。
 
-在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -105,12 +110,12 @@ errno_t _wtmpnam_s(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**tmpnam_s**|\<stdio.h>|
 |**_wtmpnam_s**|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -163,7 +168,7 @@ C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file
 C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

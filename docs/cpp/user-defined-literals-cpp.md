@@ -1,17 +1,18 @@
 ---
 title: 用户定义的文本（C++）
-ms.date: 12/10/2019
+description: 描述标准C++中用户定义文本的用途和使用情况。
+ms.date: 02/10/2020
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a6636be414fa4dc199ce10fca1b33f092492575f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301296"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090566"
 ---
 # <a name="user-defined-literals"></a>用户定义的文本
 
-中C++有五种主要类别的文本：整数、字符、浮点、字符串、布尔值和指针。  从 C++ 11 开始，可以基于这些类别定义你自己的文本，以便为常见惯用语提供快捷语法，并提高类型安全性。 例如，假设有一个距离类。 你可以将一个文本定义为表示公里，将另一个文本定义为表示英里，并且只需编写以下内容即可帮助用户明确度量单位：auto d = 42.0_km 或 auto d = 42.0_mi。 用户定义的文本没有任何性能优势或劣势；它们的主要作用在于方便或实现编译时类型推断。 标准库的 std： string 为 std：： complex，在 \<chrono > 标头的时间和持续时间操作中，标准库包含用户定义的文本：
+中C++有六种主要类别的文本：整数、字符、浮点、字符串、布尔值和指针。 从C++ 11 开始，你可以根据这些类别定义你自己的文本，为常见惯例提供句法快捷方式并提高类型安全性。 例如，假设您有一个 `Distance` 类。 您可以为公里定义一个文本，为英里定义另一个文本，并通过编写： `auto d = 42.0_km` 或 `auto d = 42.0_mi`来鼓励用户明确度量单位。 用户定义的文本没有性能优势或缺点;它们主要是为了方便或编译时类型推导。 标准库包含用于 `std::string`的用户定义文本、用于 `std::complex`的用户定义的文本和 \<chrono > 标头中的时间和持续时间操作：
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
@@ -40,74 +41,85 @@ ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-上例中的运算符名是你提供的任意占位符，但需要前导下划线。 （仅允许标准库定义不带下划线的文本。）返回类型是自定义转换或文本执行的其他操作的位置。 此外，这些运算符中的任何一个都可定义为 `constexpr`。
+上例中的运算符名是你提供的任意占位符，但需要前导下划线。 （仅允许标准库定义不带下划线的文本。）返回类型是自定义转换或由文本执行的其他操作的位置。 此外，这些运算符中的任何一个都可定义为 `constexpr`。
 
 ## <a name="cooked-literals"></a>加工的文本
 
-在源代码中，任何文字（无论是否为用户定义的）实质上都是字母数字字符序列，例如 `101`、`54.7`、`"hello"` 或 `true`。 编译器将序列解释为 integer、float、const char\* 字符串，等等。 作为输入接受编译器分配给文本值的任何类型的用户定义的文本非正式地称为*加工文本*。 以上所有运算符（`_r` 和 `_t` 除外）均为加工的文本。 例如，文本 `42.0_km` 将绑定到签名与 _b 类似的运算符 _km；而文本 `42_km` 将绑定到签名与 _a 类似的运算符。
+在源代码中，无论用户定义是否为，任何文本都实质上是字母数字字符序列，例如 `101`、`54.7`或 `"hello"` 或 `true`。 编译器将序列解释为 integer、float、const char\* 字符串，等等。 作为输入接受编译器分配给文本值的任何类型的用户定义的文本非正式地称为*加工文本*。 以上所有运算符（`_r` 和 `_t` 除外）均为加工的文本。 例如，文本 `42.0_km` 将绑定到签名与 _b 类似的运算符 _km；而文本 `42_km` 将绑定到签名与 _a 类似的运算符。
 
-下面的示例演示用户定义的文本如何帮助用户明确其输入。 若要构造 `Distance`，用户必须通过使用相应的用户定义文本显式指定公里或英里。 当然也可以通过其他方式实现相同的结果，但用户定义的文本比其他方案简便。
+下面的示例演示用户定义的文本如何帮助用户明确其输入。 若要构造 `Distance`，用户必须通过使用相应的用户定义文本显式指定公里或英里。 您可以通过其他方式获得相同的结果，但用户定义的文本比替代选项要少得多。
 
 ```cpp
+// UDL_Distance.cpp
+
+#include <iostream>
+#include <string>
+
 struct Distance
 {
 private:
     explicit Distance(long double val) : kilometers(val)
     {}
 
-    friend Distance operator"" _km(long double  val);
+    friend Distance operator"" _km(long double val);
     friend Distance operator"" _mi(long double val);
+
     long double kilometers{ 0 };
 public:
+    const static long double km_per_mile;
     long double get_kilometers() { return kilometers; }
-    Distance operator+(Distance& other)
+
+    Distance operator+(Distance other)
     {
         return Distance(get_kilometers() + other.get_kilometers());
     }
 };
 
-Distance operator"" _km(long double  val)
+const long double Distance::km_per_mile = 1.609344L;
+
+Distance operator"" _km(long double val)
 {
     return Distance(val);
 }
 
 Distance operator"" _mi(long double val)
 {
-    return Distance(val * 1.6);
+    return Distance(val * Distance::km_per_mile);
 }
-int main(int argc, char* argv[])
+
+int main()
 {
     // Must have a decimal point to bind to the operator we defined!
     Distance d{ 402.0_km }; // construct using kilometers
-    cout << "Kilometers in d: " << d.get_kilometers() << endl; // 402
+    std::cout << "Kilometers in d: " << d.get_kilometers() << std::endl; // 402
 
     Distance d2{ 402.0_mi }; // construct using miles
-    cout << "Kilometers in d2: " << d2.get_kilometers() << endl;  //643.2
+    std::cout << "Kilometers in d2: " << d2.get_kilometers() << std::endl;  //646.956
 
     // add distances constructed with different units
     Distance d3 = 36.0_mi + 42.0_km;
-    cout << "d3 value = " << d3.get_kilometers() << endl; // 99.6
+    std::cout << "d3 value = " << d3.get_kilometers() << std::endl; // 99.9364
 
     // Distance d4(90.0); // error constructor not accessible
 
-    string s;
-    getline(cin, s);
+    std::string s;
+    std::getline(std::cin, s);
     return 0;
 }
 ```
 
-注意，文本数字必须使用小数，否则数字将被解释为整数，而该类型与运算符不兼容。 另请注意，对于浮点输入，类型必须为**长双精度**值，对于整型类型，该类型必须**为 long 类型。**
+文本数字必须使用十进制。 否则，该数字将被解释为整数，并且该类型与运算符不兼容。 对于浮点输入，类型必须为**长双精度**值，对于整型类型，该类型必须**为 long 类型。**
 
 ## <a name="raw-literals"></a>原始文本
 
-在原始的用户定义文字中，你定义的运算符将文本作为字符值的序列接受，由你决定将该序列是解释为数字、字符串还是其他类型。 在此页上方显示的运算符列表中，`_r` 和 `_t` 可用于定义原始文本：
+在原始用户定义的文本中，定义的运算符接受文本作为 char 值的序列。 你需要将该序列解释为数字、字符串或其他类型。 在此页上方显示的运算符列表中，`_r` 和 `_t` 可用于定义原始文本：
 
 ```cpp
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-可使用原始文本提供输入序列的自定义解释，使其与编译器将执行的解释不同。 例如，可以定义一段文本，用于将序列 `4.75987` 转换为自定义的十进制类型，而不是 IEEE 754 浮点类型。 原始文本（如加工的文本）还可用于执行输入序列的编译时验证。
+您可以使用原始文字来提供与编译器的正常行为不同的输入序列的自定义解释。 例如，可以定义一段文本，用于将序列 `4.75987` 转换为自定义的十进制类型，而不是 IEEE 754 浮点类型。 原始文本（如加工）也可用于输入序列的编译时验证。
 
 ### <a name="example-limitations-of-raw-literals"></a>示例：原始文本的限制
 

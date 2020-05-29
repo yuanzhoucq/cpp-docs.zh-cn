@@ -1,8 +1,9 @@
 ---
 title: _umask
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask
+- _o__umask
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957499"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913847"
 ---
 # <a name="_umask"></a>_umask
 
@@ -53,7 +55,7 @@ int _umask( int pmode );
 
 ## <a name="return-value"></a>返回值
 
-**_umask**返回*pmode*的以前值。 无错误返回。
+**_umask**返回*pmode*以前的值。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
@@ -67,17 +69,19 @@ int _umask( int pmode );
 | **_S_IREAD** | 允许读取。 |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
-当提供两个常量时，它们将与按位 "或" 运算符 **&#124;** （）联接。 如果*pmode*参数为 **_S_IREAD**，则不允许读取（文件是只写的）。 如果*pmode*参数为 **_S_IWRITE**，则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置为 **_umask**不会影响文件的模式。
+当提供两个常量时，它们将与按位 "或" 运算符联接（ **&#124;** ）。 如果 _S_IREAD *pmode*参数， **_S_IREAD**则不允许读取（文件是只写的）。 如果 _S_IWRITE *pmode*参数， **_S_IWRITE**则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置 **_umask**不会影响文件的模式。
 
 如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数将直接忽略这些常量。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_umask**|\<io.h>、\<sys/stat.h>、\<sys/types.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -112,10 +116,10 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>

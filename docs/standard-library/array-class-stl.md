@@ -96,16 +96,16 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
+ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189413"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643645"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 
-描述了一个对象，此对象控制类型 `N` 的元素的长度序列 `Ty`。 此序列存储为 `Ty` 的数组，包含在 `array<Ty, N>` 对象中。
+描述了一个对象，此对象控制类型 `Ty` 的元素的长度序列 `N`。 此序列存储为 `Ty` 的数组，包含在 `array<Ty, N>` 对象中。
 
 ## <a name="syntax"></a>语法
 
@@ -116,57 +116,57 @@ class array;
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |`Ty`|元素的类型。|
 |`N`|元素数量。|
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-|类型定义|说明|
+|类型定义|描述|
 |-|-|
 |[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|
 |[const_pointer](#const_pointer)|元素的常量指针的类型。|
 |[const_reference](#const_reference)|元素的常量引用的类型。|
 |[const_reverse_iterator](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
-|[迭代器](#iterator)|受控序列的迭代器的类型。|
-|[指针](#pointer)|指向元素的指针的类型。|
-|[reference](#reference)|元素的引用的类型。|
+|[器](#iterator)|受控序列的迭代器的类型。|
+|[指针 (pointer)](#pointer)|指向元素的指针的类型。|
+|[对](#reference)|元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|受控序列的反向迭代器的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |-|-|
-|[array](#array)|构造一个数组对象。|
-|[assign](#assign)|弃用. 使用 `fill`。）替换所有元素。|
+|[组成](#array)|构造一个数组对象。|
+|[assign](#assign)|弃用. 使用`fill`。）替换所有元素。|
 |[at](#at)|访问指定位置处的元素。|
-|[back](#back)|访问最后一个元素。|
-|[begin](#begin)|指定受控序列的开头。|
+|[返回](#back)|访问最后一个元素。|
+|[准备](#begin)|指定受控序列的开头。|
 |[cbegin](#cbegin)|返回一个随机访问常量迭代器，它指向数组中的第一个元素。|
 |[cend](#cend)|返回一个随机访问常量迭代器，它指向刚超过数组末尾的位置。|
 |[crbegin](#crbegin)|返回一个指向反向数据中第一个元素的常量迭代器。|
 |[crend](#crend)|返回一个指向反向数组末尾的常量迭代器。|
-|[data](#data)|获取第一个元素的地址。|
+|[数据](#data)|获取第一个元素的地址。|
 |[empty](#empty)|测试元素是否存在。|
-|[end](#end)|指定受控序列的末尾。|
-|[fill](#fill)|将所有元素替换为指定值。|
-|[front](#front)|访问第一个元素。|
+|[端面](#end)|指定受控序列的末尾。|
+|[适合](#fill)|将所有元素替换为指定值。|
+|[主](#front)|访问第一个元素。|
 |[max_size](#max_size)|对元素数进行计数。|
 |[rbegin](#rbegin)|指定反向受控序列的开头。|
 |[rend](#rend)|指定反向受控序列的末尾。|
-|[size](#size)|对元素数进行计数。|
-|[swap](#swap)|交换两个容器的内容。|
+|size |对元素数进行计数。|
+|[购](#swap)|交换两个容器的内容。|
 
-|运算符|说明|
+|操作员|说明|
 |-|-|
-|[array::operator=](#op_eq)|替换受控序列。|
+|[array：： operator =](#op_eq)|替换受控序列。|
 |[array：： operator\[\]](#op_at)|访问指定位置处的元素。|
 
 ## <a name="remarks"></a>备注
 
-此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，
+此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，应用于对象的
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -178,9 +178,9 @@ array<int, 4> ai = { 1, 2, 3 };
 
 **Header:** \<array>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="array"></a>  array::array
+## <a name="arrayarray"></a><a name="array"></a>array：： array
 
 构造一个数组对象。
 
@@ -192,14 +192,14 @@ array(const array& right);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*然后*\
 要插入的对象或范围。
 
 ### <a name="remarks"></a>备注
 
 默认构造函数 `array()` 将受控序列保留为未初始化（或默认已初始化）。 使用它来指定未初始化的控制序列。
 
-复制构造函数 `array(const array& right)` 使用序列 [*right*`.begin()`, *right*`.end()`) 来初始化受控序列。 使用它来指定初始受控序列，该序列是由数组对象 *right* 控制的序列副本。
+复制构造函数`array(const array& right)`用序列 [*right*`.begin()`， *right*`.end()`）初始化受控序列。 使用它来指定初始受控序列，该序列是由数组对象 *right* 控制的序列副本。
 
 ### <a name="example"></a>示例
 
@@ -239,11 +239,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="assign"></a>  array::assign
+## <a name="arrayassign"></a><a name="assign"></a>array：： assign
 
 Obsolete in C++11，由 [fill](#fill) 替代。 替换所有元素。
 
-## <a name="at"></a>  array::at
+## <a name="arrayat"></a><a name="at"></a>array：： at
 
 访问指定位置处的元素。
 
@@ -255,7 +255,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>参数
 
-*关闭*\
+*非*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -289,7 +289,7 @@ int main()
 }
 ```
 
-## <a name="back"></a>  array::back
+## <a name="arrayback"></a><a name="back"></a>array：： back
 
 访问最后一个元素。
 
@@ -334,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="begin"></a>  array::begin
+## <a name="arraybegin"></a><a name="begin"></a>array：： begin
 
 指定受控序列的开头。
 
@@ -379,7 +379,7 @@ int main()
 0
 ```
 
-## <a name="cbegin"></a>  array::cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a>array：： cbegin
 
 返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
 
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，则为 `cbegin() == cend()`）。
+一个**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()`）。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中， `Container`将视为支持`begin()`和`cbegin()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -405,7 +405,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  array::cend
+## <a name="arraycend"></a><a name="cend"></a>array：： cend
 
 返回一个**常量**迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
 
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中， `Container`将视为支持`end()`和`cend()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -433,7 +433,7 @@ auto i2 = Container.cend();
 
 不应对 `cend` 返回的值取消引用。
 
-## <a name="const_iterator"></a>  array::const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>array：： const_iterator
 
 受控序列的常量迭代器的类型。
 
@@ -481,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="const_pointer"></a>  array::const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>array：： const_pointer
 
 元素的常量指针的类型。
 
@@ -525,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="const_reference"></a>  array::const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a>array：： const_reference
 
 元素的常量引用的类型。
 
@@ -569,7 +569,7 @@ int main()
 0
 ```
 
-## <a name="const_reverse_iterator"></a>  array::const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>array：： const_reverse_iterator
 
 受控序列的常量反向迭代器的类型。
 
@@ -613,7 +613,7 @@ int main()
 3
 ```
 
-## <a name="crbegin"></a>  array::crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a>array：： crbegin
 
 返回一个指向反向数据中第一个元素的常量迭代器。
 
@@ -657,7 +657,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="crend"></a>  array::crend
+## <a name="arraycrend"></a><a name="crend"></a>array：： crend
 
 返回用于寻址反向数组中最后一个元素之后的位置的常量迭代器。
 
@@ -701,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="data"></a>  array::data
+## <a name="arraydata"></a><a name="data"></a>array：:d ata
 
 获取第一个元素的地址。
 
@@ -747,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="difference_type"></a>  array::difference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a>array：:d ifference_type
 
 两个元素间的带符号距离的类型。
 
@@ -791,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="empty"></a>  array::empty
+## <a name="arrayempty"></a><a name="empty"></a>array：： empty
 
 测试元素是否存在。
 
@@ -841,7 +841,7 @@ false
 true
 ```
 
-## <a name="end"></a>  array::end
+## <a name="arrayend"></a><a name="end"></a>array：： end
 
 指定受控序列的末尾。
 
@@ -887,7 +887,7 @@ int main()
 3
 ```
 
-## <a name="fill"></a>  array::fill
+## <a name="arrayfill"></a><a name="fill"></a>array：： fill
 
 清除数组并将指定的元素复制到该空数组。
 
@@ -897,9 +897,9 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
-|*val*|要插入到数组中的元素的值。|
+|*初始值*|要插入到数组中的元素的值。|
 
 ### <a name="remarks"></a>备注
 
@@ -925,7 +925,7 @@ int main()
 
     v1.fill(3);
     cout << "v1 = ";
-    for (const auto& it : c0)
+    for (const auto& it : v1)
     {
         std::cout << " " << it;
     }
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="front"></a>  array::front
+## <a name="arrayfront"></a><a name="front"></a>array：：前门
 
 访问第一个元素。
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="iterator"></a>  array::iterator
+## <a name="arrayiterator"></a><a name="iterator"></a>array：： iterator
 
 受控序列的迭代器的类型。
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="max_size"></a>  array::max_size
+## <a name="arraymax_size"></a><a name="max_size"></a>array：： max_size
 
 对元素数进行计数。
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="op_at"></a>  array::operator[]
+## <a name="arrayoperator"></a><a name="op_at"></a>array：： operator []
 
 访问指定位置处的元素。
 
@@ -1082,7 +1082,7 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>参数
 
-*关闭*\
+*非*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="op_eq"></a>  array::operator=
+## <a name="arrayoperator"></a><a name="op_eq"></a>array：： operator =
 
 替换受控序列。
 
@@ -1133,12 +1133,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*然后*\
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将*右*的每个元素分配给受控序列的相应元素，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符将*右*的每个元素分配给受控序列的相应元素，然后返回`*this`。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="pointer"></a>  array::pointer
+## <a name="arraypointer"></a><a name="pointer"></a>array：:p ointer
 
 指向元素的指针的类型。
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="rbegin"></a>  array::rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a>array：： rbegin
 
 指定反向受控序列的开头。
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="reference"></a>  array::reference
+## <a name="arrayreference"></a><a name="reference"></a>array：： reference
 
 元素的引用的类型。
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="rend"></a>  array::rend
+## <a name="arrayrend"></a><a name="rend"></a>array：： rend
 
 指定反向受控序列的末尾。
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="reverse_iterator"></a>  array::reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>array：： reverse_iterator
 
 受控序列的反向迭代器的类型。
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="size"></a>  array::size
+## <a name="arraysize"></a><a name="size"></a>array：： size
 
 对元素数进行计数。
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="size_type"></a>  array::size_type
+## <a name="arraysize_type"></a><a name="size_type"></a>array：： size_type
 
 两个元素间的无符号距离的类型。
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="swap"></a>  array::swap
+## <a name="arrayswap"></a><a name="swap"></a>array：： swap
 
 将此数组的内容交换到另一个数组。
 
@@ -1497,12 +1497,12 @@ void swap(array& right);
 
 ### <a name="parameters"></a>参数
 
-*right*\
+*然后*\
 要与其交换内容的数组。
 
 ### <a name="remarks"></a>备注
 
-成员函数在 `*this` 和*右*之间交换受控序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
+成员函数交换和`*this` *右*之间的受控序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
 
 还有一个非成员[交换](array-functions.md#swap)函数可用于交换两个**数组**实例。
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="value_type"></a>  array::value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a>array：： value_type
 
 元素的类型。
 
@@ -1563,7 +1563,7 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Ty`的同义词。
+类型是模板参数 `Ty` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[\<array>](../standard-library/array.md)
+[\<数组>](../standard-library/array.md)

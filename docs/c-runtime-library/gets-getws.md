@@ -1,9 +1,11 @@
 ---
 title: gets、_getws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getws
 - gets
+- _o__getws
+- _o_gets
 api_location:
 - msvcr80.dll
 - msvcr90.dll
@@ -13,6 +15,7 @@ api_location:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,22 +34,22 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 1c60cf14334a0dcc0492b23da10a36c3219bb699
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300269"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919904"
 ---
 # <a name="gets-_getws"></a>gets、_getws
 
 从 `stdin` 流中获取行。 提供这些函数的更多安全版本；请参阅 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
 
 > [!IMPORTANT]
->  这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。 这些函数（gets_s 和 _getws_s）的安全版本仍然可用。 有关这些备用函数的信息，请参阅 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
+> 这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。 这些函数（gets_s 和 _getws_s）的安全版本仍然可用。 有关这些备用函数的信息，请参阅 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
 
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -69,21 +72,23 @@ wchar_t *_getws(
 
 #### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 输入字符串的存储位置。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回其参数。 NULL 指针指示错误或文件尾条件。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 NULL 并将 errno 设置为 `EINVAL`。
+如果成功，则返回其参数。 NULL 指针指示错误或文件尾条件****。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述****。 如果允许执行继续，则这些函数返回 NULL 并将 errno 设置为 `EINVAL`****。
 
 ## <a name="remarks"></a>备注
 
-`gets` 函数从标准输入流 `stdin` 中读取一个行并将该行存储在 `buffer`中。 该行由第一个换行符(“\n”)之前的所有字符和该换行符构成。 随后，在返回行之前，`gets` 会将换行符替换为 null 字符（“\0”）。 相反，`fgets` 函数将保留换行符。 `_getws` 是 `gets`的宽字符版本；其参数和返回值都是宽字符字符串。
+`gets` 函数从标准输入流 `stdin` 中读取一个行并将该行存储在 `buffer`中。 该行由第一个换行符(“\n”)之前的所有字符和该换行符构成。 随后，在返回行之前，`gets` 会将换行符替换为 null 字符（“\0”）。 相反， `fgets` 函数将保留换行符。 `_getws` 是 `gets` 的宽字符版本；其参数和返回值都是宽字符字符串。
 
 > [!IMPORTANT]
->  由于无法限制 gets 读取的字符数，因此不受信任的输入容易导致缓冲区溢出。 请改用 `fgets` 。
+> 由于无法限制 gets 读取的字符数，因此不受信任的输入容易导致缓冲区溢出。 请改用 `fgets`。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -91,14 +96,14 @@ wchar_t *_getws(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`gets`|\<stdio.h>|
 |`_getws`|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

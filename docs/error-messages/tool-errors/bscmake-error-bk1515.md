@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - BK1515
 ms.assetid: 4cf2aedb-10c4-4ae8-abe6-c681fd4d617d
-ms.openlocfilehash: 047840a49242a889fbf45378dfa8cac4faf8140e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c0b9ddd5598e8928003aa8265e29dd1460a2421
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214228"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197569"
 ---
 # <a name="bscmake-error-bk1515"></a>BSCMAKE 错误 BK1515
 
-bscfile： 版本不兼容： 不能以增量方式更新
+bscfile：不兼容的版本：无法增量更新
 
-创建.bsc 文件时使用 BSCMAKE 的另一个版本。 重新创建.bsc 文件。
+.Bsc 文件是用其他版本的 BSCMAKE 创建的。 重新创建 .bsc 文件。

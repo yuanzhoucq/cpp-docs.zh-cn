@@ -1,6 +1,7 @@
----
-title: switch 语句 (C++)
-ms.date: 05/06/2019
+﻿---
+title: switch语句（c + +）
+description: Microsoft Visual Studio c + + 中对标准 c + + 语句的引用 switch 。
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -9,76 +10,94 @@ helpviewer_keywords:
 - switch keyword [C++]
 - case keyword [C++], in switch statements
 - default keyword [C++]
+no-loc:
+- switch
+- case
+- default
+- break
+- while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221935"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389696"
 ---
-# <a name="switch-statement-c"></a>switch 语句 (C++)
+# <a name="switch-statement-c"></a>`switch`语句（c + +）
 
 允许根据整型表达式的值在多个代码段中进行选择。
 
 ## <a name="syntax"></a>语法
 
-```
-   switch ( init; expression )
-   case constant-expression : statement
-   [default  : statement]
-```
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub><sup>C + + 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>备注
 
-*expression* 必须是一种整型类型或明确转换为整型类型的类类型。 整型提升的情况见[标准转换](standard-conversions.md)中的描述。
+`switch` 语句使控件根据 `condition` 的值转移到其语句正文中的一个 `labeled-statement`  。
 
-**switch** 语句体由一系列 **case** 标签和一个可选的 **default** 标签组成。**case** 语句的中任何两个常量表达式的值都不能相同。**default** 标签仅可以出现一次。标签语句不是语法要求，但如果没有它们，**switch** 语句是无意义的。default 语句不必必须位于末尾；它可以出现在 switch 语句中的任何位置。 case 或 default 标签只能出现在 switch 语句内。
+*`condition`* 必须具有整型类型，或者是具有到整型的明确转换的类类型。 整数提升的发生方式如[标准转换](standard-conversions.md)中所述。
 
-每个 **case** 标签中的 *constant-expression* 会被转换为 *expression* 的类型并与 *expression* 比较是否相等。 控制将传递给 **case** *constant-expression* 与 *expression* 的值相匹配的语句。 下表中显示了生成的行为。
+__`switch`__ 语句体包含一系列 __`case`__ 标签和一个可选 __`default`__ 标签。 *`labeled-statement`* 是以下标签和后面的语句之一。 带标签的语句无语法要求，但如果 __`switch`__ 没有这些语句，语句就毫无意义了。 语句中的两个 *`constant-expression`* 值的 __`case`__ 计算结果不能为相同的值。 __`default`__ 标签只能出现一次。 __`default`__ 语句通常放置在末尾，但它可以出现在语句体中的任何位置 __`switch`__ 。 `case` 或 `default` 标签只能显示在 `switch` 语句内部    。
 
-### <a name="switch-statement-behavior"></a>switch 语句行为
+*`constant-expression`* 每个标签中的 __`case`__ 会转换为与相同类型的常数值 *`condition`* 。 然后，比较与是否 *`condition`* 相等。 控件将传递到值后的第一条语句 __`case`__ *`constant-expression`* *`condition`* 。 下表中显示了生成的行为。
 
-|条件|操作|
-|---------------|------------|
-|转换后的值与提升的控制表达式的值匹配。|控制将转移到跟在该标签后面的语句。|
-|没有任何常量匹配 **case** 标签中的常量；**default** 标签已存在。|控制权转至**default**标签。|
-|没有任何常量匹配 **case** 标签中的常量；**default** 标签不存在。|控制权转移给 **switch** 语句之后的语句。|
+### <a name="switch-statement-behavior"></a>`switch`语句行为
 
-如果找到匹配的表达式，则控制权不会被后续的 **case** 或 **default** 标签阻断。 [break](../cpp/break-statement-cpp.md) 语句用于停止执行并将控制权转移到 **switch** 语句之后的语句。 如果没有 **break** 语句，从匹配的 **case** 标签到 **switch** 的末尾（包括 **default**）的每个语句都会执行。 例如：
+| 条件 | 操作 |
+|--|--|
+| 转换后的值与提升的控制表达式的值匹配。 | 控制将转移到跟在该标签后面的语句。 |
+| 没有常量与标签中的常量匹配 __`case`__ ; 有一个 __`default`__ 标签。 | 控制将转移到 __`default`__ 标签。 |
+| 没有常量与标签中的常量匹配 __`case`__ ; 不存在任何 __`default`__ 标签。 | 控制在语句后传递到语句 __`switch`__ 。 |
+
+如果找到匹配的表达式，则执行可以继续，稍后 __`case`__ 或 __`default`__ 标签。 [`break`](../cpp/break-statement-cpp.md)语句用于停止执行并将控制转移到语句后面的语句 __`switch`__ 。 如果没有 __`break`__ 语句，则将执行从匹配的标签到末尾的每个语句 __`case`__ __`switch`__ ，包括 __`default`__ 。 例如：
 
 ```cpp
 // switch_statement1.cpp
 #include <stdio.h>
 
 int main() {
-   char *buffer = "Any character stream";
-   int capa, lettera, nota;
+   const char *buffer = "Any character stream";
+   int uppercase_A, lowercase_a, other;
    char c;
-   capa = lettera = nota = 0;
+   uppercase_A = lowercase_a = other = 0;
 
    while ( c = *buffer++ )   // Walks buffer until NULL
    {
       switch ( c )
       {
          case 'A':
-            capa++;
+            uppercase_A++;
             break;
          case 'a':
-            lettera++;
+            lowercase_a++;
             break;
          default:
-            nota++;
+            other++;
       }
    }
-   printf_s( "\nUppercase a: %d\nLowercase a: %d\nTotal: %d\n",
-      capa, lettera, (capa + lettera + nota) );
+   printf_s( "\nUppercase A: %d\nLowercase a: %d\nTotal: %d\n",
+      uppercase_A, lowercase_a, (uppercase_A + lowercase_a + other) );
 }
 ```
 
-在上面的示例中，如果 `c` 是大写 `A` ，则 `capa` 将递增。`capa++` 之后的 **break** 语句终止执行 **switch** 语句体并将控制权转移到 **while** 循环。如果没有 **break** 语句，执行将“贯穿”到下一个标记语句，这样 `lettera` 和 `nota` 也将递增。`case 'a'` 的 **break** 语句也可实现 相同的功能。如果 `c` 是一个小写 `a` ，`lettera` 会递增并且 **break**语句将终止 **switch** 语句体。如果 `c` 不是 `a` 或 `A` ，则执行 **default** 语句。
+在上面的示例中，如果 `uppercase_A` 是大写 `c`，则 `'A'` 将递增。 __`break`__ 后的语句 `uppercase_A++` 终止了 __`switch`__ 语句体的执行，并将控制权传递到 __`while`__ 循环。 如果没有 __`break`__ 语句，执行将 "贯穿" 到下一个标记语句，因此 `lowercase_a` 和也将 `other` 递增。 的语句将提供类似的目的 __`break`__ `case 'a'` 。 如果 `c` 是小写 `'a'` ， `lowercase_a` 则递增，语句将 __`break`__ 终止 __`switch`__ 语句体。 如果 `c` 不是 `'a'` 或 `'A'` ，则 __`default`__ 执行语句。
 
-**2017 及更高版本的 visual Studio:** (适用于 [/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` 属性已在 C++ 17 标准中指定。 可在 **switch** 语句中使用该属性以作为对编译器 （或任何读代码的人）的提醒：这里的 fall-through 行为是目的行为。 Microsoft C++ 编译器当前不会警告 fallthrough 行为，因此，此属性对编译器行为没有影响。请注意，该属性应用于标记语句中的一个空语句；换而言之，分号是必需的。
+**Visual Studio 2017 及更高版本：** （可与[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)一起使用）该 `[[fallthrough]]` 特性是在 c + + 17 标准中指定的。 可以在语句中使用它 __`switch`__ 。 这是一种针对编译器的提示，或读取代码的任何人都是故意的。 Microsoft c + + 编译器当前不会对 fallthrough 行为发出警告，因此此属性不会对编译器行为产生任何影响。 在此示例中，特性应用于未终止标记的语句中的空语句。 换句话说，分号是必需的。
 
 ```cpp
 int main()
@@ -106,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Switch 语句可能会引入并初始化一个变量，其作用域被限制在 switch 语句的块：
+**Visual Studio 2017 版本15.3 及更高版本**（可与[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)一起使用）。 __`switch`__ 语句可能包含以 *`init-statement`* 分号结尾的子句。 它会引入和初始化一个变量，该变量的范围限于语句的块 __`switch`__ ：
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +138,7 @@ int main()
     };
 ```
 
-**switch** 语句中的内部块可以包含带有初始化的定义，只要它们可访问 — 即，不会被所有可能的执行路径绕过。 使用这些声明引入的名称具有局部范围。 例如：
+语句的内部块 __`switch`__ 可以包含具有初始值设定项的定义，只要它们是可*访问*的，即不会被所有可能的执行路径跳过。 使用这些声明引入的名称具有局部范围。 例如：
 
 ```cpp
 // switch_statement2.cpp
@@ -154,15 +173,11 @@ int main(int argc, char *argv[])
 }
 ```
 
-**switch** 语句可以嵌套。在这种情况下，**case** 或 **default** 标签与封装它们的最近 **switch** 语句相关联。
+__`switch`__ 语句可以嵌套。 嵌套时， __`case`__ 或 __`default`__ 标签与包含它们的最近的语句相关联 __`switch`__ 。
 
-**Microsoft 专用**
+### <a name="microsoft-specific-behavior"></a>特定于 Microsoft 的行为
 
-Microsoft C 不限制 **switch** 语句中的 case 值的数量。 该数量仅受可用内存的限制。 ANSI C 要求 **switch** 语句中至少允许 257 个 case 标签。
-
-Microsoft C 的默认设置是启用 Microsoft 扩展。 使用[/Za](../build/reference/za-ze-disable-language-extensions.md)编译器选项来禁用这些扩展。
-
-**结束 Microsoft 专用**
+Microsoft c + + 不会限制 __`case`__ 语句中值的数目 __`switch`__ 。 该数量仅受可用内存的限制。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,11 +1,15 @@
 ---
 title: ato，_atol_l，_wtol，_wtol_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
+- _o__atol_l
+- _o__wtol
+- _o__wtol_l
+- _o_atol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943583"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913531"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>ato，_atol_l，_wtol，_wtol_l
 
@@ -78,7 +83,7 @@ long _wtol_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 要转换的字符串。
 
 *locale*<br/>
@@ -88,7 +93,7 @@ long _wtol_l(
 
 每个函数都返回通过将输入字符解释为数字而产生的**长整型**值。 如果输入不能转换为该类型的值，则返回值为**atol**的0L。
 
-对于具有大量正整数值的溢出， **atol**返回**LONG_MAX**;对于具有较大负整数值的溢出，将返回**LONG_MIN** 。 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
+对于具有大量正整数值的溢出， **atol**返回**LONG_MAX**;对于具有大量负整数值的溢出，将返回**LONG_MIN** 。 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
@@ -104,7 +109,9 @@ long _wtol_l(
 
 **_wtol**与**atol**相同，只不过它采用宽字符字符串。
 
-使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -118,7 +125,7 @@ long _wtol_l(
 |例程|必需的标头|
 |--------------|---------------------|
 |**atol**|\<stdlib.h>|
-|**_atol_l**、 **_wtol**、 **_wtol_l**|\<stdlib.h> 和 \<wchar.h>|
+|**_atol_l**、 **_wtol** **_wtol_l**|\<stdlib.h> 和 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
@@ -169,13 +176,13 @@ Function: atol( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: d930c1884975288ff11f4d4e5cf2728e717e17d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189268"
 ---
 # <a name="do-while-statement-c"></a>do-while 语句 (C++)
 
-执行*语句*重复之前指定的终止条件 (*表达式*) 计算结果为零。
+重复执行*语句*，直到指定的终止条件（*表达式*）的计算结果为零。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +30,7 @@ while ( expression ) ;
 
 ## <a name="remarks"></a>备注
 
-在每次执行循环; 后进行终止条件的测试因此，**执行操作-虽然**循环将执行一个或多个时间，具体取决于终止表达式的值。 **do-while** 语句还可在语句体中执行 [break](../cpp/break-statement-cpp.md)、[goto](../cpp/goto-statement-cpp.md) 或 [return](../cpp/return-statement-cpp.md) 语句时终止。
+终止条件的测试在每次执行循环之后进行;因此， **do**循环会执行一次或多次，具体取决于终止表达式的值。 **do-while** 语句还可在语句体中执行 [break](../cpp/break-statement-cpp.md)、[goto](../cpp/goto-statement-cpp.md) 或 [return](../cpp/return-statement-cpp.md) 语句时终止。
 
 *expression*必须具有算法或指针类型。 执行过程如下所示：
 
@@ -40,7 +40,7 @@ while ( expression ) ;
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何**执行操作-虽然**语句：
+下面的示例演示了**do**语句：
 
 ```cpp
 // do_while_statement.cpp

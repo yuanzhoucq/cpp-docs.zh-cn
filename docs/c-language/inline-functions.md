@@ -7,11 +7,11 @@ helpviewer_keywords:
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
 ms.openlocfilehash: ebe0fd3d785903c149999bd4ec8de9eabeabdb05
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325541"
 ---
 # <a name="inline-functions"></a>内联函数
 
@@ -23,7 +23,7 @@ ms.locfileid: "56147252"
 
 请使用以下形式指定内联函数：
 
-> __inline type<sub>opt</sub> function-definition
+> **__inline** *type*<sub>opt</sub> *function-definition*
 
 使用内联函数将生成更快的代码，有时可能生成比等效函数调用所生成的更小的代码，原因如下：
 

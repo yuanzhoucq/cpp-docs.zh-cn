@@ -2,17 +2,15 @@
 title: EDITBIN 选项
 description: Microsoft EDITBIN 实用程序命令行选项的参考指南。
 ms.date: 02/09/2020
-f1_keywords:
-- editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9fd4170e5ee020780963d83936f1a9fd08d2be11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257697"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439970"
 ---
 # <a name="editbin-options"></a>EDITBIN 选项
 
@@ -30,7 +28,7 @@ EDITBIN 具有以下选项：
 |[/BIND](bind.md)|将指定对象中的入口点地址设为速度加载时间。|
 |[/DYNAMICBASE](dynamicbase.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否可在加载时随机重新设定 DLL 或可执行图像的基址。|
 |[/ERRORREPORT](errorreport-editbin-exe.md)| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
-|[/HEAP](heap.md)|以字节设置可执行映像堆的大小。|
+|[/HEAP](heap.md)|设置可执行映像的堆的大小（以字节为单位）。|
 |[/HIGHENTROPYVA](highentropyva.md)|指定 DLL 或可执行映像是否支持高熵（64 位）地址空间布局随机化 (ASLR)。|
 |[/INTEGRITYCHECK](integritycheck.md)|指定是否在加载时检查数字签名。|
 |[/LARGEADDRESSAWARE](largeaddressaware.md)|指定对象是否支持大于 2 GB 的地址。|
@@ -39,7 +37,7 @@ EDITBIN 具有以下选项：
 |[/REBASE](rebase.md)|设置指定对象的基址。|
 |[/RELEASE](release.md)|在标头中设置校验和。|
 |[/SECTION](section-editbin.md)|重写节的特性。|
-|[/STACK](stack.md)|以字节设置可执行映像栈的大小。|
+|[/STACK](stack.md)|设置可执行映像的堆栈的大小（以字节为单位）。|
 |[/SUBSYSTEM](subsystem.md)|指定执行环境。|
 |[/SWAPRUN](swaprun.md)|指定可执行映像复制到交换文件，然后从该文件运行。|
 |[/TSAWARE](tsaware.md)|指定应用可在多用户环境中运行。|

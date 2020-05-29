@@ -8,33 +8,33 @@ helpviewer_keywords:
 - OLE DB provider templates, stored procedures
 - stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-ms.openlocfilehash: 7ace43283c56c0c859b193f63e8ca104f6b52a31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 436c796b24b0fa498f2b3f45e848392635b22a34
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165757"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376030"
 ---
 # <a name="using-stored-procedures"></a>使用存储过程
 
-存储的过程是存储在数据库中的可执行对象。 调用存储的过程是类似于调用 SQL 命令。 在数据源 （而不是执行或准备客户端应用程序中的语句） 上使用存储的过程可以提供多项优点，包括更高的性能、 减少的网络开销，并可提高的一致性和准确性。
+存储过程是存储在数据库中的可执行对象。 调用存储过程类似于调用 SQL 命令。 在数据源上使用存储过程（而不是在客户端应用程序中执行或准备语句）可以提供几个优点，包括更高的性能、减少网络开销以及提高一致性和准确性。
 
-存储的过程可以有任意数量的 （包括零个） 输入或输出参数，并可以传递返回值。 可以将值硬编码参数为特定的数据值，也可以使用参数标记 (问号？)。
-
-> [!NOTE]
->  CLR SQL Server 存储过程创建使用视觉对象C++必须使用编译`/clr:safe`编译器选项。
-
-OLE DB 访问接口的 SQL Server (SQLOLEDB) 支持以下存储过程使用可返回数据的机制：
-
-- 每个**选择**过程中的语句生成的结果集。
-
-- 该过程可以返回通过输出参数的数据。
-
-- 该过程可具有整数返回代码。
+存储过程可以具有任意数量的（包括零）输入或输出参数，并可以传递返回值。 可以将硬代码参数值作为特定数据值，也可以使用参数标记（问号"？"
 
 > [!NOTE]
-> 你无法将存储的过程的 OLE DB 访问接口用于 Jet 因为该提供程序不支持存储的过程;只允许使用常量查询字符串中。
+> 使用 Visual C++创建的 CLR SQL Server 存储过程`/clr:safe`必须使用编译器选项进行编译。
 
-## <a name="see-also"></a>请参阅
+用于 SQL Server （SQLOLEDB） 的 OLE DB 提供程序支持存储过程用于返回数据的以下机制：
+
+- 过程中的每个**SELECT**语句都会生成结果集。
+
+- 过程可以通过输出参数返回数据。
+
+- 过程可以具有整数返回代码。
+
+> [!NOTE]
+> 不能将存储过程与 Jet 的 OLE DB 提供程序一起使用，因为该提供程序不支持存储过程;因此，该提供程序不支持"处理程序"。"这些过程"查询字符串中只允许常量。
+
+## <a name="see-also"></a>另请参阅
 
 [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

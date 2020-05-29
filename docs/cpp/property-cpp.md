@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179297"
 ---
 # <a name="property-c"></a>属性 (C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "62301482"
 
 ## <a name="remarks"></a>备注
 
-当编译器发现与此特性声明成员选择运算符右侧的数据成员 ("**。**"**->**")，它会将转换到的操作`get`或`put`函数，具体取决于此类表达式是左值或右值。 在更复杂的上下文中，如"`+=`"，由两项操作都执行重写`get`和`put`。
+当编译器在成员选择运算符（" **.** " 或 " **->** "）右侧发现使用此特性声明的数据成员时，它会将操作转换为 `get` 或 `put` 函数，具体取决于此类表达式是左值还是 r 值。 在更复杂的上下文（如 "`+=`"）中，通过执行 `get` 和 `put`执行重写。
 
 此特性还可用于类或结构定义中的空数组的声明。 例如：
 
@@ -66,7 +66,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [__declspec](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

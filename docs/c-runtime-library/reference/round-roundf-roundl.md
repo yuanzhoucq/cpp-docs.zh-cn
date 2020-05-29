@@ -1,10 +1,13 @@
 ---
 title: round、roundf、roundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - round
 - roundl
 - roundf
+- _o_round
+- _o_roundf
+- _o_roundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949107"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916724"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -76,15 +80,17 @@ long double roundl(
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用采用并返回**浮点**型和**长** **双精度**值的**轮**数重载。 在 C 程序中， **round**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回**浮点**型和**长****双精度**值的**轮**数重载。 在 C 程序中， **round**始终采用并返回**双精度型**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**round**、 **roundf**、 **roundl**|\<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -122,7 +128,7 @@ roundl(2.500000) is 3
 roundl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
@@ -131,4 +137,4 @@ roundl(-2.500000) is -3
 [lrint、lrintf、lrintl、llrint、llrintf、llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround、lroundf、lroundl、llround、llroundf、llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
 [nearbyint、nearbyintf、nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
-[rint、rintf、rintl](rint-rintf-rintl.md)<br/>
+[rint, rintf, rintl](rint-rintf-rintl.md)<br/>

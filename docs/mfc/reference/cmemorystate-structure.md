@@ -1,5 +1,5 @@
 ---
-title: CMemoryState 结构
+title: 内存状态结构
 ms.date: 11/04/2016
 f1_keywords:
 - CMemoryState
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163749"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752610"
 ---
-# <a name="cmemorystate-structure"></a>CMemoryState 结构
+# <a name="cmemorystate-structure"></a>内存状态结构
 
-提供了方便地检测您的程序中的内存泄漏。
+提供了一种检测程序中内存泄漏的便捷方法。
 
 ## <a name="syntax"></a>语法
 
@@ -29,43 +29,43 @@ struct CMemoryState
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMemoryState::CMemoryState](#cmemorystate)|构造一个类似于类的结构，用于控制内存检查点。|
+|[C内存状态：：CMemoryState](#cmemorystate)|构造控制内存检查点的类结构。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMemoryState::Checkpoint](#checkpoint)|获取当前内存状态的快照 （检查点）。|
-|[CMemoryState::Difference](#difference)|计算两个对象的类型之间的差异`CMemoryState`。|
-|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|转储自上一个检查点以来的所有当前分配的对象的摘要。|
-|[CMemoryState::DumpStatistics](#dumpstatistics)|打印内存分配的统计信息`CMemoryState`对象。|
+|[CMemoryState：检查点](#checkpoint)|获取当前内存状态的快照（检查点）。|
+|[CMemoryState：:D](#difference)|计算类型`CMemoryState`两个对象之间的差异。|
+|[CMemoryState：:D个ump所有对象](#dumpallobjectssince)|转储自上次检查点以来当前分配的所有对象的摘要。|
+|[CMemoryState：:Dump统计](#dumpstatistics)|打印`CMemoryState`对象的内存分配统计信息。|
 
 ## <a name="remarks"></a>备注
 
-`CMemoryState` 是一种结构，而未一个基类。
+`CMemoryState`是一个结构，没有基类。
 
-当对象内存是在堆上分配但未解除分配时不再需要时，将发生"内存泄漏"。 此类内存泄漏可能最终导致内存不足错误。 有几种方法来分配和释放在程序中的内存：
+当在堆上分配对象的内存，但在不再需要对象时未进行处理时，就会发生"内存泄漏"。 此类内存泄漏最终可能导致内存不足错误。 在程序中分配和分配内存的方法有多种：
 
-- 使用`malloc` /  `free`系列的函数的运行时库。
+- 使用运行时库中的函数`free`系列。 `malloc` / 
 
-- 使用 Windows API 内存管理函数， `LocalAlloc` /  `LocalFree`并`GlobalAlloc` /  `GlobalFree`。
+- 使用 Windows API 内存管理`LocalAlloc`/ `LocalFree`功能`GlobalAlloc`/ `GlobalFree`和 。
 
-- 使用C++**新**并**删除**运算符。
+- 使用C++**新的**运算符和**删除**运算符。
 
-`CMemoryState`诊断仅帮助检测内存泄漏时使用的内存分配导致**新**运算符会释放使用**删除**。 内存管理函数中的其他两个组都为非C++程序，并将它们与混合**新**并**删除**不建议在同一个程序。 提供附加的宏，DEBUG_NEW，替换**新**运算符时所需文件和行号跟踪内存分配。 每当你通常会使用时使用 DEBUG_NEW**新**运算符。
+诊断`CMemoryState`仅有助于检测使用**新**运算符分配的内存未使用**delete**进行定位时导致的内存泄漏。 另外两组内存管理功能用于非C++程序，不建议将它们与同一程序中**的新**程序和**删除**程序混合。 提供了一个额外的宏，DEBUG_NEW，用于在需要内存分配的文件和行号跟踪时替换**新**运算符。 每当您通常使用**新**运算符时，都会使用DEBUG_NEW。
 
-与其他诊断`CMemoryState`诊断程序仅在应用程序的调试版本中可用。 调试版本必须具有定义 _DEBUG 常量。
+与其他诊断一样，`CMemoryState`诊断仅在程序的调试版本中可用。 调试版本必须定义_DEBUG常量。
 
-如果你怀疑你的程序可能具有的内存泄漏，可以使用`Checkpoint`， `Difference`，和`DumpStatistics`函数在程序执行过程中的两个不同点发现的内存状态 （分配的对象） 之间的差异。 此信息可以用于确定函数是否清理它再分配的所有对象。
+如果您怀疑程序存在内存泄漏，则可以使用`Checkpoint`和`Difference``DumpStatistics`函数来发现在程序执行中的两个不同点内存状态（分配的对象）之间的差异。 此信息可用于确定函数是否正在清理它分配的所有对象。
 
-如果只需知道在分配和解除分配不平衡出现的位置不会提供足够的信息，则可以使用`DumpAllObjectsSince`函数来转储自上一个调用分配的所有对象`Checkpoint`。 此转储显示了分配、 源文件和其中对象已分配 （如果使用的 DEBUG_NEW 分配），行的顺序和派生的对象，其地址和其大小。 `DumpAllObjectsSince` 此外会调用每个对象的`Dump`函数以提供有关其当前状态的信息。
+如果仅仅知道分配和分配位置的不平衡位置没有提供足够的信息，则可以使用 函数`DumpAllObjectsSince`转储自上次调用`Checkpoint`以来分配的所有对象。 此转储显示分配顺序、分配对象的源文件和行（如果使用DEBUG_NEW进行分配），以及对象、地址和大小的派生。 `DumpAllObjectsSince`还会调用每个对象的`Dump`函数来提供有关其当前状态的信息。
 
-有关如何使用详细信息`CMemoryState`和其他诊断，请参阅[调试 MFC 应用程序](/visualstudio/debugger/mfc-debugging-techniques)。
+有关如何使用`CMemoryState`和其他诊断的详细信息，请参阅[调试 MFC 应用程序](/visualstudio/debugger/mfc-debugging-techniques)。
 
 > [!NOTE]
->  类型的对象的声明`CMemoryState`和对成员函数的调用应括`#if defined(_DEBUG)/#endif`指令。 这会导致内存诊断功能以包含仅在调试程序的版本。
+> 类型`CMemoryState`对象声明和对成员函数的调用应用`#if defined(_DEBUG)/#endif`指令括括号。 这将导致内存诊断仅包含在程序的调试生成中。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -73,27 +73,27 @@ struct CMemoryState
 
 ## <a name="requirements"></a>要求
 
-**标头：** afx.h
+**标题：** afx.h
 
-##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
+## <a name="cmemorystatecheckpoint"></a><a name="checkpoint"></a>CMemoryState：检查点
 
-获取快照摘要的内存，并将其存储在此`CMemoryState`对象。
+获取内存的快照摘要并将其存储在此`CMemoryState`对象中。
 
-```
+```cpp
 void Checkpoint();
 ```
 
 ### <a name="remarks"></a>备注
 
-`CMemoryState`成员函数[差异](#difference)并[DumpAllObjectsSince](#dumpallobjectssince)使用此快照数据。
+成员`CMemoryState`函数["差异](#difference)"和["转储所有对象"自](#dumpallobjectssince)使用此快照数据。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CMemoryState](#cmemorystate)构造函数。
+  请参阅[CMemoryState](#cmemorystate)构造函数的示例。
 
-##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState
+## <a name="cmemorystatecmemorystate"></a><a name="cmemorystate"></a>C内存状态：：CMemoryState
 
-构造一个空`CMemoryState`对象，它必须通过填写[检查点](#checkpoint)或[差异](#difference)成员函数。
+构造必须由`CMemoryState`[检查点](#checkpoint)或[差异](#difference)成员函数填充的空对象。
 
 ```
 CMemoryState();
@@ -103,9 +103,9 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>  Cmemorystate:: Difference
+## <a name="cmemorystatedifference"></a><a name="difference"></a>CMemoryState：:D
 
-比较两个`CMemoryState`对象，然后将存储到此区别`CMemoryState`对象。
+比较两`CMemoryState`个对象，然后将差异存储到此`CMemoryState`对象中。
 
 ```
 BOOL Difference(
@@ -115,73 +115,73 @@ BOOL Difference(
 
 ### <a name="parameters"></a>参数
 
-*oldState*<br/>
-由定义的初始内存状态`CMemoryState`检查点。
+*旧州*<br/>
+由`CMemoryState`检查点定义的初始内存状态。
 
 *newState*<br/>
-按照定义的新内存状态`CMemoryState`检查点。
+由`CMemoryState`检查点定义的新内存状态。
 
 ### <a name="return-value"></a>返回值
 
-如果两个内存状态不同; 非零值否则为 0。
+如果两个内存状态不同，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-[检查点](#checkpoint)必须为两个内存状态参数的每个调用。
+必须为两个内存状态参数中的每一个调用[检查点](#checkpoint)。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CMemoryState](#cmemorystate)构造函数。
+  请参阅[CMemoryState](#cmemorystate)构造函数的示例。
 
-##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
+## <a name="cmemorystatedumpallobjectssince"></a><a name="dumpallobjectssince"></a>CMemoryState：:D个ump所有对象
 
-调用`Dump`函数的所有对象类型的派生自类`CObject`的分配 （和仍分配） 自上次[检查点](#checkpoint)调用此`CMemoryState`对象。
+调用自`Dump`上次[检查点](#checkpoint)调用此`CMemoryState`对象以来从类`CObject`派生（并且仍已分配）的类型的所有对象的函数。
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
 ### <a name="remarks"></a>备注
 
-调用`DumpAllObjectsSince`使用未初始化`CMemoryState`对象将转储当前在内存中的所有对象。
+使用`DumpAllObjectsSince`未初始化`CMemoryState`的对象调用将转储当前内存中的所有对象。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CMemoryState](#cmemorystate)构造函数。
+  请参阅[CMemoryState](#cmemorystate)构造函数的示例。
 
-##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
+## <a name="cmemorystatedumpstatistics"></a><a name="dumpstatistics"></a>CMemoryState：:Dump统计
 
-将输出从简洁内存统计信息报告`CMemoryState`对象，它由填充[差异](#difference)成员函数。
+从由`CMemoryState`[差异](#difference)成员函数填充的对象打印简明的内存统计信息报表。
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 
 ### <a name="remarks"></a>备注
 
-报表打印[afxDump](diagnostic-services.md#afxdump)设备，显示以下：
+打印在[afxDump](diagnostic-services.md#afxdump)设备上的报表显示以下内容：
 
-示例报表提供有关信息的数量 （或量）：
+示例报告提供有关以下数字（或数量）的信息：
 
-- 可用块
+- 自由方块
 
-- 普通的块
+- 正常块
 
 - CRT 块
 
-- 忽略基块
+- 忽略块
 
 - 客户端块
 
-- 在任何一个时间 （以字节为单位） 由程序所使用的最大内存
+- 程序在任何一次使用的最大内存（以字节为单位）
 
-- 当前使用的程序 （以字节为单位） 的总内存
+- 程序当前使用的总内存（以字节为单位）
 
-可用块是如果时延迟释放的块的数目`afxMemDF`已设置为`delayFreeMemDF`。 有关详细信息，请参阅[afxMemDF](diagnostic-services.md#afxmemdf)，在"MFC 宏和全局变量"部分。
+自由块是如果设置为`afxMemDF``delayFreeMemDF`延迟的块数。 有关详细信息，请参阅"MFC 宏和全局"部分中的[afxMemDF。](diagnostic-services.md#afxmemdf)
 
 ### <a name="example"></a>示例
 
-  下面的代码应置于*projname*app.cpp。 定义以下全局变量：
+  以下代码应放在*projname*App.cpp 中。 定义以下全局变量：
 
 [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]
 
@@ -189,12 +189,12 @@ void DumpStatistics() const;
 
 [!code-cpp[NVC_MFC_Utilities#41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]
 
-添加的处理程序`ExitInstance`函数，并使用以下代码：
+为`ExitInstance`函数添加处理程序并使用以下代码：
 
 [!code-cpp[NVC_MFC_Utilities#42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]
 
-现在可以运行该程序在调试模式下，若要查看的输出`DumpStatistics`函数。
+您现在可以在调试模式下运行该程序以查看`DumpStatistics`函数的输出。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)
+[层次结构图表](../../mfc/hierarchy-chart.md)

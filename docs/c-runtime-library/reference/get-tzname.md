@@ -1,8 +1,9 @@
 ---
 title: _get_tzname
-ms.date: 10/22/2018
+ms.date: 4/2/2020
 api_name:
 - _get_tzname
+- _o__get_tzname
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 9f86a4997c328e86597e3bad8a7f7a3a5f5f50b6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955615"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919687"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -81,19 +83,21 @@ errno_t _get_tzname(
 
 |*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|返回值|*TimeZoneName*的内容|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|TZ 名称的大小|**NULL**|0|0 或 1|0|未修改|
-|TZ 名称的大小|任何|> 0|0 或 1|0|TZ 名称|
-|未修改|**NULL**|> 0|任何|**EINVAL**|未修改|
-|未修改|任何|零|任何|**EINVAL**|未修改|
-|未修改|任何|> 0|> 1|**EINVAL**|未修改|
+|TZ 名称的大小|**Null**|0|0 或 1|0|未修改|
+|TZ 名称的大小|any|> 0|0 或 1|0|TZ 名称|
+|未修改|**Null**|> 0|any|**EINVAL**|未修改|
+|未修改|any|零|any|**EINVAL**|未修改|
+|未修改|any|> 0|> 1|**EINVAL**|未修改|
 
 ## <a name="remarks"></a>备注
 
-**_Get_tzname**函数检索当前时区名称或夏令时标准时区名称（DST）的字符串表示形式 *，具体取决*于索引值以及字符串在中的大小。*pReturnValue*。 如果*timeZoneName*为**NULL** ，并且*sizeInBytes*为零，则在*pReturnValue*中返回保留指定时区和终止 NULL 的字符串大小（以字节为单位）。 标准时区的索引值必须为0，对于日光标准时区，索引值必须为 1;*index*的任何其他值都具有不确定的结果。
+**_Get_tzname**函数根据索引值以及*pReturnValue*中字符串的大小，检索当前时区名称或夏令时标准时区名称（DST）的字符串表示形式，以*timeZoneName*地址。 如果*timeZoneName*为**NULL** ，并且*sizeInBytes*为零，则在*pReturnValue*中返回保留指定时区和终止 NULL 的字符串大小（以字节为单位）。 标准时区的索引值必须为0，对于日光标准时区，索引值必须为 1;*index*的任何其他值都具有不确定的结果。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 
-此示例调用 **_get_tzname**来获取所需的缓冲区大小，以显示当前的标准时区名称，分配该大小的缓冲区，再次调用 **_get_tzname**以在缓冲区中加载该名称，并将其输出到控制台。
+此示例调用 **_get_tzname**以获取所需的缓冲区大小，以显示当前的标准时区名称、分配该大小的缓冲区、再次调用 **_get_tzname**以加载缓冲区中的名称，并将其输出到控制台。
 
 ```C
 // crt_get_tzname.c
@@ -129,7 +133,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 The current Daylight standard time zone name is PDT.
@@ -137,13 +141,13 @@ The current Daylight standard time zone name is PDT.
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_get_tzname**|\<time.h>|
 
-有关详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

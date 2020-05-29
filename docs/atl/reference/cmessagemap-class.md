@@ -10,19 +10,19 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-ms.openlocfilehash: 617b7b4592c96625b44fbe5c2b93da971a423128
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a822f36d6b6fd49301d8240324e27f0ad9ce52e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326723"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 类
 
-此类允许对象的消息映射为另一个对象的访问权限。
+此类允许对象的消息映射由另一个对象访问。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -34,29 +34,29 @@ class ATL_NO_VTABLE CMessageMap
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|访问消息映射中的`CMessageMap`-派生的类。|
+|[CMessageMap：:P窗口消息](#processwindowmessage)|访问派生类中`CMessageMap`的消息映射。|
 
 ## <a name="remarks"></a>备注
 
-`CMessageMap` 是一个抽象基类，允许对象的消息映射来访问另一个对象。 为了使对象公开其消息映射，它的类必须派生自`CMessageMap`。
+`CMessageMap`是一个抽象基类，允许对象的消息映射被另一个对象访问。 为了使对象公开其消息映射，其类必须派生自`CMessageMap`。
 
-使用 ATL`CMessageMap`到支持包含 windows 和动态消息映射链接。 例如，任何类包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象必须派生自`CMessageMap`。 以下代码摘自[SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)示例。 通过[CComControl](../../atl/reference/ccomcontrol-class.md)，则`CAtlEdit`类自动派生`CMessageMap`。
+ATL`CMessageMap`用于支持包含的窗口和动态消息映射链接。 例如，任何包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象的类都必须派生自`CMessageMap`。 以下代码取自[SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)示例。 通过[CComControl，](../../atl/reference/ccomcontrol-class.md)`CAtlEdit`类自动派生自`CMessageMap`。
 
 [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]
 
-因为包含的窗口中， `m_EditCtrl`，将使用消息映射中包含的类，`CAtlEdit`派生自`CMessageMap`。
+因为包含的窗口 将在`m_EditCtrl`包含类中使用消息映射，`CAtlEdit`派生自`CMessageMap`。
 
-有关消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)在文章"ATL 窗口类。"
+有关消息映射的详细信息，请参阅文章"ATL 窗口类"中[的消息映射](../../atl/message-maps-atl.md)。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlwin.h
+**标题：** atlwin.h
 
-##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage
+## <a name="cmessagemapprocesswindowmessage"></a><a name="processwindowmessage"></a>CMessageMap：:P窗口消息
 
-访问由标识的消息映射*dwMsgMapID*中`CMessageMap`-派生的类。
+访问*dwMsgMapID*在`CMessageMap`派生类中标识的消息映射。
 
 ```
 virtual BOOL ProcessWindowMessage(
@@ -70,35 +70,35 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>参数
 
-*hWnd*<br/>
-[in]接收消息的窗口句柄。
+*hwnd*<br/>
+[在]接收消息的窗口的句柄。
 
-*uMsg*<br/>
-[in]发送到窗口的消息。
+*乌姆斯格*<br/>
+[在]发送到窗口的消息。
 
 *wParam*<br/>
-[in]其他特定于消息的信息。
+[在]其他特定于消息的信息。
 
 *lParam*<br/>
-[in]其他特定于消息的信息。
+[在]其他特定于消息的信息。
 
 *lResult*<br/>
-[out]消息处理的结果。
+[出]消息处理的结果。
 
 *dwMsgMapID*<br/>
-[in]将处理该消息的消息映射的标识符。 使用默认消息映射声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，由 0。 使用替换消息映射声明[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，由`msgMapID`。
+[在]将处理消息的消息映射的标识符。 默认消息映射（使用[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)声明）由 0 标识。 使用[ALT_MSG_MAP （msgMapID）](message-map-macros-atl.md#alt_msg_map)声明的替代消息映射由 标识`msgMapID`。
 
 ### <a name="return-value"></a>返回值
 
-如果该消息完全处理; 则为 TRUE否则为 FALSE。
+如果消息已完全处理，则为 TRUE;如果消息已完全处理，则为 TRUE。否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-调用的窗口过程[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象或对象的动态链接到的消息映射。
+由[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象的窗口过程或动态链接到消息映射的对象的窗口过程调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CDynamicChain 类](../../atl/reference/cdynamicchain-class.md)<br/>
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
+[ALT_MSG_MAP（msgMapID）](message-map-macros-atl.md#alt_msg_map)<br/>
 [类概述](../../atl/atl-class-overview.md)

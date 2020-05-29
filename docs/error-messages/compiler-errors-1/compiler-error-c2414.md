@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2414
 ms.assetid: bbe94e03-862e-4990-b15e-544ae464727d
-ms.openlocfilehash: 84fa715c8bd567770f361552e203a37c44ffdde4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbe627a57e5defc499a4bc5d463e0bf33494acba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205655"
 ---
 # <a name="compiler-error-c2414"></a>编译器错误 C2414
 
@@ -19,6 +19,6 @@ ms.locfileid: "62402978"
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 操作码不支持所用操作数的数。 检查程序集语言参考手册以确定正确的操作数数目。
+1. 操作码不支持使用的操作数。 检查汇编语言引用手册以确定正确的操作数。
 
-1. 较新的处理器支持具有不同数目的操作数的指令。 调整[/arch （最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md)选项以使用更高版本的处理器。
+1. 较新的处理器支持具有不同数量操作数的指令。 调整[/arch （最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md)选项，以使用更高版本的处理器。

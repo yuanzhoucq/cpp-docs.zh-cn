@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210686"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 类
 
-提供的实现[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))接口。
+提供[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自`IConvertTypeImpl`。
+派生自 `IConvertTypeImpl`的类。
 
 ## <a name="requirements"></a>要求
 
@@ -48,15 +48,15 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|命令或上一个行集提供类型转换的可用性的信息。|
+|[CanConvert](#canconvert)|提供有关命令或行集上类型转换的可用性的信息。|
 
 ## <a name="remarks"></a>备注
 
-此接口是必需的对于命令、 行集和索引行集。 `IConvertTypeImpl` 通过将委派给提供的 OLE DB 转换对象实现的接口。
+此接口对命令行集和索引行集是必需的。 `IConvertTypeImpl` 通过委托到 OLE DB 提供的转换对象来实现接口。
 
-## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl：： CanConvert
 
-命令或上一个行集提供类型转换的可用性的信息。
+提供有关命令或行集上类型转换的可用性的信息。
 
 ### <a name="syntax"></a>语法
 
@@ -66,15 +66,15 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
    DBCONVERTFLAGS dwConvertFlags);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IConvertType：： CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 。
 
 ### <a name="remarks"></a>备注
 
-使用 OLE DB 中的数据转换`MSADC.DLL`。
+使用 `MSADC.DLL`中 OLE DB 数据转换。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

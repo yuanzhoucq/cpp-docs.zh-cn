@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a784584179186cdf1e63c1ec43cad4d59391ec3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259334"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327627"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal 类
 
-此类管理模块包含的引用计数在`Base`对象。
+此类管理包含对象的`Base`模块上的引用计数。
 
 ## <a name="syntax"></a>语法
 
@@ -32,37 +32,37 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>参数
 
-*基本*<br/>
-您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
+*基地*<br/>
+类派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx，](../../atl/reference/ccomobjectrootex-class.md)以及来自要支持的对象的任何其他接口。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|构造函数。|
-|[CComObjectGlobal::~CComObjectGlobal](#dtor)|析构函数。|
+|[CComObject 全球：CComObject 全球](#ccomobjectglobal)|构造函数。|
+|[CComObject 全球：*CComObject 全球](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComObjectGlobal::AddRef](#addref)|实现全局`AddRef`。|
-|[CComObjectGlobal::QueryInterface](#queryinterface)|实现全局`QueryInterface`。|
-|[CComObjectGlobal::Release](#release)|实现全局`Release`。|
+|[CComObjectGlobal：：添加参考](#addref)|实现全局`AddRef`。|
+|[CComObject 全局：：查询接口](#queryinterface)|实现全局`QueryInterface`。|
+|[CComObject 全球：发布](#release)|实现全局`Release`。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|包含构造期间返回的 HRESULT`CComObjectGlobal`对象。|
+|[CComObjectGlobal：：m_hResFinalConstruct](#m_hresfinalconstruct)|包含在构建`CComObjectGlobal`对象期间返回的 HRESULT。|
 
 ## <a name="remarks"></a>备注
 
-`CComObjectGlobal` 管理包含的模块的引用计数在`Base`对象。 `CComObjectGlobal` 可确保，只要不释放该模块，将不会删除您的对象。 在整个模块的引用计数变为零时，将仅删除您的对象。
+`CComObjectGlobal`管理包含对象的`Base`模块上的引用计数。 `CComObjectGlobal`确保只要不释放模块，您的对象就不会被删除。 仅当整个模块上的引用计数为零时，才会删除对象。
 
-例如，使用`CComObjectGlobal`，类工厂可以包含一个常见的全局对象，由所有客户端共享。
+例如，使用`CComObjectGlobal`类工厂可以保存由其所有客户端共享的通用全局对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -72,11 +72,11 @@ class CComObjectGlobal : public Base
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标题：** atlcom.h
 
-##  <a name="addref"></a>  CComObjectGlobal::AddRef
+## <a name="ccomobjectglobaladdref"></a><a name="addref"></a>CComObjectGlobal：：添加参考
 
-将该对象的引用计数加 1。
+将对象的引用计数增加 1。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -84,15 +84,15 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>返回值
 
-一个值，可能是有用的诊断和测试。
+可用于诊断和测试的值。
 
 ### <a name="remarks"></a>备注
 
-默认情况下`AddRef`调用`_Module::Lock`，其中`_Module`是全局实例[CComModule](../../atl/reference/ccommodule-class.md)或从其派生的类。
+默认情况下，`AddRef`调用`_Module::Lock`， `_Module` [CComModule](../../atl/reference/ccommodule-class.md)的全局实例或派生自它的类的位置。
 
-##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>CComObject 全球：CComObject 全球
 
-构造函数。 调用`FinalConstruct`，然后设置[m_hResFinalConstruct](#m_hresfinalconstruct)到`HRESULT`返回`FinalConstruct`。
+构造函数。 调用`FinalConstruct`，然后[m_hResFinalConstruct](#m_hresfinalconstruct)设置到`HRESULT`返回的`FinalConstruct`。
 
 ```
 CComObjectGlobal(void* = NULL));
@@ -100,9 +100,9 @@ CComObjectGlobal(void* = NULL));
 
 ### <a name="remarks"></a>备注
 
-如果您不派生从基类[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)，必须提供你自己`FinalConstruct`方法。 析构函数调用 `FinalRelease`。
+如果您尚未从[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)派生基类，则必须提供您自己的`FinalConstruct`方法。 析构函数调用 `FinalRelease`。
 
-##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>CComObject 全球：*CComObject 全球
 
 析构函数。
 
@@ -112,17 +112,17 @@ CComObjectGlobal();
 
 ### <a name="remarks"></a>备注
 
-释放所有已分配的资源并调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
+释放所有分配的资源，并调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct
+## <a name="ccomobjectglobalm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectGlobal：：m_hResFinalConstruct
 
-包含调用 HRESULT`FinalConstruct`的构造期间`CComObjectGlobal`对象。
+包含在对象构造期间从调用`FinalConstruct`的`CComObjectGlobal`HRESULT。
 
 ```
 HRESULT m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface
+## <a name="ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>CComObject 全局：：查询接口
 
 检索指向请求的接口指针的指针。
 
@@ -132,23 +132,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>参数
 
-*iid*<br/>
-[in]所请求的接口的 GUID。
+*Iid*<br/>
+[在]请求的接口的 GUID。
 
 *ppvObject*<br/>
-[out]指向标识 iid，则为 NULL，如果找不到该接口的接口指针的指针。
+[出]指向 iid 标识的接口指针，如果未找到接口，则指向 NULL 的指针。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
 `QueryInterface` 仅处理 COM 映射表中的接口。
 
-##  <a name="release"></a>  CComObjectGlobal::Release
+## <a name="ccomobjectglobalrelease"></a><a name="release"></a>CComObject 全球：发布
 
-引用的对象的计数按 1 递减。
+将对象的引用计数减少 1。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -156,13 +156,13 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>返回值
 
-在调试版本中，`Release`返回一个值，可能是有用的诊断和测试。 在非调试版本中，`Release`始终返回 0。
+在调试生成中`Release`，返回可用于诊断和测试的值。 在非调试生成中，`Release`始终返回 0。
 
 ### <a name="remarks"></a>备注
 
-默认情况下`Release`调用`_Module::Unlock`，其中`_Module`是全局实例[CComModule](../../atl/reference/ccommodule-class.md)或从其派生的类。
+默认情况下，`Release`调用`_Module::Unlock`， `_Module` [CComModule](../../atl/reference/ccommodule-class.md)的全局实例或派生自它的类的位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CComObjectStack 类](../../atl/reference/ccomobjectstack-class.md)<br/>
 [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
 ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158340"
 ---
 # <a name="scope-and-visibility"></a>范围和可见性
 
@@ -27,7 +27,7 @@ ms.locfileid: "56151281"
 
 函数原型范围 带函数原型范围的标识符的声明符或类型说明符显示在函数原型（不是函数声明的一部分）中的参数声明列表中。 其范围在函数声明符的末尾终止。
 
-[存储类别](../c-language/c-storage-classes.md)中介绍了可使变量在其他源文件中可见的适当声明。 但是，使用 static 存储类说明符在外部级别声明的变量和函数仅在定义它们的源文件中可见。 所有其他函数都是全局可见的。
+[存储类别](../c-language/c-storage-classes.md)中介绍了可使变量在其他源文件中可见的适当声明。 但是，使用 static  存储类说明符在外部级别声明的变量和函数仅在定义它们的源文件中可见。 所有其他函数都是全局可见的。
 
 ## <a name="see-also"></a>请参阅
 

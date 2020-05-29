@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857887"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032117"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
-表示可按照索引单独访问的对象的有序集合。 实现[Windows：： Foundation：：集合：： IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)以帮助 XAML[数据绑定](/windows/uwp/data-binding/data-binding-in-depth)。
+表示可按照索引单独访问的对象的有序集合。 实现[Windows：基础：集合：：I 可观察Vector](/uwp/api/windows.foundation.collections.iobservablevector-1)以帮助进行 XAML[数据绑定](/windows/uwp/data-binding/data-binding-in-depth)。
 
 ## <a name="syntax"></a>语法
 
@@ -45,70 +45,70 @@ template <typename T, typename E>
 向量对象中包含的元素的类型。
 
 *E*<br/>
-指定一个二元谓词，用于测试与类型*T*的值的相等性。默认值为 `std::equal_to<T>`。
+指定二进制谓词，用于使用*类型 T*的值测试相等性。默认值为`std::equal_to<T>`。
 
 ### <a name="remarks"></a>备注
 
-允许的类型包括：
+允许的类型是：
 
 1. 整数
 
-1. 接口类 ^
+1. 接口类*
 
-1. 公共 ref 类^
+1. 公共 ref 类
 
-1. 值结构
+1. value struct
 
 1. 公共枚举类
 
-**Vector**类是C++ [Windows：： Foundation：：集合：： IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)接口的具体实现。
+**Vector**类是[Windows：：基础：集合：：iVector](/uwp/api/windows.foundation.collections.ivector-1)接口C++具体实现。
 
-如果尝试在公共返回值或参数中使用**Vector**类型，则会引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+如果尝试在公共返回值或参数中使用**Vector**类型，则引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
-### <a name="members"></a>Members
+### <a name="members"></a>成员
 
-### <a name="public-constructors"></a>公用建構函式
+### <a name="public-constructors"></a>公共构造函数
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
-|[Vector::Vector](#ctor)|初始化 Vector 类的新实例。|
+|[矢量：矢量](#ctor)|初始化 Vector 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[Vector::Append](#append)|在当前向量中的最后一项后插入指定项。|
-|[Vector::Clear](#clear)|删除当前向量中的所有元素。|
-|[Vector::First](#first)|返回指定该向量中第一个元素的迭代器。|
-|[Vector::GetAt](#getat)|检索由指定索引标识的当前向量的元素。|
-|[Vector::GetMany](#getmany)|从指定索引处开始，检索当前向量中的项目序列。|
-|[Vector::GetView](#getview)|返回向量的只读视图，即 [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)。|
-|[Vector::IndexOf](#indexof)|在当前向量中搜索指定项，如果找到，则返回该项的索引。|
-|[Vector::InsertAt](#insertat)|将指定的项插入到由指定索引标识的元素的当前向量中。|
+|[矢量：清除](#clear)|删除当前向量中的所有元素。|
+|[矢量：第一](#first)|返回指定该向量中第一个元素的迭代器。|
+|[矢量：getAt](#getat)|检索由指定索引标识的当前向量的元素。|
+|[矢量：获取许多](#getmany)|从指定索引处开始，检索当前向量中的项目序列。|
+|[矢量：获取视图](#getview)|返回向量的只读视图，即 [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)。|
+|[矢量：索引](#indexof)|在当前向量中搜索指定项，如果找到，则返回该项的索引。|
+|[Vector::InsertAt](#insertat)|在指定索引标识的元素处将指定项插入到当前矢量中。|
 |[Vector::ReplaceAll](#replaceall)|删除当前向量中的元素，然后插入来自指定数组的元素。|
 |[Vector::RemoveAt](#removeat)|从当前向量删除指定索引标识的元素。|
 |[Vector::RemoveAtEnd](#removeatend)|删除当前矢量末尾的元素。|
 |[Vector::SetAt](#setat)|将指定值分配给当前向量中指定索引标识的元素。|
-|[Vector::Size](#size)|返回当前向量对象中的元素数目。|
+|[矢量：大小](#size)|返回当前向量对象中的元素数目。|
 
-### <a name="events"></a>Events
+### <a name="events"></a>事件
 
 |||
 |-|-|
-|Name|描述|
-|事件[Windows：： Foundation：： Collection：： VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|当向量更改时发生。|
+|名称|说明|
+|事件[窗口：：基础：集合：：：矢量更改事件\<处理程序 T>= 矢量更改](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|当向量更改时发生。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `Vector`
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>要求
 
-**标头：** collection.h
+**标题：** 集合.h
 
 **命名空间：** Platform::Collections
 
-## <a name="append"></a>Vector：： Append 方法
+## <a name="vectorappend-method"></a><a name="append"></a>矢量：：追加方法
 
 在当前向量中的最后一项后插入指定项。
 
@@ -123,7 +123,7 @@ virtual void Append(T item);
 *index*<br/>
 要插入到向量中的项。 *项*的类型由*T*类型名称定义。
 
-## <a name="clear"></a>Vector：： Clear 方法
+## <a name="vectorclear-method"></a><a name="clear"></a>矢量：清除方法
 
 删除当前向量中的所有元素。
 
@@ -133,7 +133,7 @@ virtual void Append(T item);
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector：： First 方法
+## <a name="vectorfirst-method"></a><a name="first"></a>矢量：第一种方法
 
 返回指向该向量中第一个元素的迭代器。
 
@@ -149,11 +149,11 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 ### <a name="remarks"></a>备注
 
-保存第一个（）返回的迭代器的一种简便方法是将返回值分配给用**auto**类型推导关键字声明的变量。 例如 `auto x = myVector->First();`。 此迭代器知道该集合的长度。
+保存 First（） 返回的迭代器的一个方便方法是将返回值分配给使用**自动**类型扣减关键字声明的变量。 例如，`auto x = myVector->First();` 。 此迭代器知道该集合的长度。
 
-如果需要将一对迭代器传递到 STL 函数，请使用 free 函数[Windows：： foundation：：集合：： begin](../cppcx/begin-function.md)和[Windows：： Foundation：：集合：： end](../cppcx/end-function.md)
+When you need a pair of iterators to pass to an STL function, use the free functions [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) and [Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector：： GetAt 方法
+## <a name="vectorgetat-method"></a><a name="getat"></a>矢量：GetAt 方法
 
 检索由指定索引标识的当前向量的元素。
 
@@ -170,9 +170,9 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="return-value"></a>返回值
 
-由*index*参数指定的元素。 元素类型由*T*类型名称定义。
+*索引*参数指定的元素。 元素类型由*T*类型名称定义。
 
-## <a name="getmany"></a>Vector：： GetMany 方法
+## <a name="vectorgetmany-method"></a><a name="getmany"></a>矢量：获取多种方法
 
 检索当前向量中的项序列，从指定的索引开始，并将它们复制到调用方分配的数组中。
 
@@ -189,8 +189,8 @@ virtual unsigned int GetMany(
 *startIndex*<br/>
 要检索的项开头从零开始的索引。
 
-*dest*<br/>
-调用方分配的项的数组，这些项以*startIndex*指定的元素开始，并在向量中的最后一个元素结束。
+dest**<br/>
+调用方分配的项数组，从*startIndex*指定的元素开始，到 Vector 中的最后一个元素结束。
 
 ### <a name="return-value"></a>返回值
 
@@ -198,9 +198,9 @@ virtual unsigned int GetMany(
 
 ### <a name="remarks"></a>备注
 
-此函数并非旨在由客户端代码直接使用。 它用于在[To_vector 函数](../cppcx/to-vector-function.md)内部使用，以启用 Platform：： vector 实例所在到 std：： vector 实例的有效转换。
+此函数并非旨在由客户端代码直接使用。 它在[to_vector函数](../cppcx/to-vector-function.md)中内部使用，以便有效地转换平台：：矢量内量到 std：：vector 实例。
 
-## <a name="getview"></a>Vector：： GetView 方法
+## <a name="vectorgetview-method"></a><a name="getview"></a>矢量：获取视图方法
 
 返回向量的只读视图，即 IVectorView。
 
@@ -214,7 +214,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 一个 IVectorView 对象。
 
-## <a name="indexof"></a>Vector：： IndexOf 方法
+## <a name="vectorindexof-method"></a><a name="indexof"></a>矢量：方法索引
 
 在当前向量中搜索指定项，如果找到，则返回该项的索引。
 
@@ -230,21 +230,21 @@ virtual bool IndexOf(T value, unsigned int* index);
 要查找的项。
 
 *index*<br/>
-如果找到参数*值*，则为该项的从零开始的索引;否则为0。
+如果找到参数*值*，则项的零基索引;否则，0。
 
-如果项是向量的第一个元素或未找到该项，则*索引*参数为0。 如果返回值为**true**，则表示已找到该项并且它是第一个元素;否则，找不到该项。
+如果项是 Vector 的第一个元素，或者未找到该项，*则索引*参数为 0。 如果返回值为**true，** 则找到项，它是第一个元素;否则，未找到该项目。
 
 ### <a name="return-value"></a>返回值
 
-如果找到指定的项，则为**true** ;否则**为 false**。
+如果找到指定的项，为 true;如果找到指定的项，则**为 true。** 否则，**假**。
 
 ### <a name="remarks"></a>备注
 
 IndexOf 使用 std::find_if 查找该项目。 因此，自定义元素类型应该重载 == 和 != 运算符以支持 find_if 所需的相等性比较。
 
-##  <a name="insertat"></a>Vector：： InsertAt 方法
+## <a name="vectorinsertat-method"></a><a name="insertat"></a>矢量：插入方法
 
-将指定的项插入到由指定索引标识的元素的当前向量中。
+在指定索引标识的元素处将指定项插入到当前矢量中。
 
 ### <a name="syntax"></a>语法
 
@@ -258,9 +258,9 @@ virtual void InsertAt(unsigned int index, T item)
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
 *item*<br/>
-要插入到 Vector 中由*index*指定的元素的项。 *项*的类型由*T*类型名称定义。
+要在*索引*指定的元素处插入到矢量中的项。 *项*的类型由*T*类型名称定义。
 
-## <a name="removeat"></a>Vector：： RemoveAt 方法
+## <a name="vectorremoveat-method"></a><a name="removeat"></a>矢量：删除方法
 
 从当前向量删除指定索引标识的元素。
 
@@ -275,7 +275,7 @@ virtual void RemoveAt(unsigned int index);
 *index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-## <a name="removeatend"></a>Vector：： RemoveAtEnd 方法
+## <a name="vectorremoveatend-method"></a><a name="removeatend"></a>矢量：：删除 Atend 方法
 
 删除当前矢量末尾的元素。
 
@@ -285,7 +285,7 @@ virtual void RemoveAt(unsigned int index);
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector：： ReplaceAll 方法
+## <a name="vectorreplaceall-method"></a><a name="replaceall"></a>矢量：：替换所有方法
 
 删除当前向量中的元素，然后插入来自指定数组的元素。
 
@@ -297,10 +297,10 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>参数
 
-*arr*<br/>
-对象的数组，其类型由*T*类型名称定义。
+*阿尔尔*<br/>
+其类型由*T*类型名称定义的对象的数组。
 
-## <a name="setat"></a>Vector：： SetAt 方法
+## <a name="vectorsetat-method"></a><a name="setat"></a>矢量：setat 方法
 
 将指定值分配给当前向量中指定索引标识的元素。
 
@@ -318,7 +318,7 @@ virtual void SetAt(unsigned int index, T item);
 *item*<br/>
 要分配给指定元素的值。 *项*的类型由*T*类型名称定义。
 
-## <a name="size"></a>Vector：： Size 方法
+## <a name="vectorsize-method"></a><a name="size"></a>矢量：大小方法
 
 返回当前向量对象中的元素数目。
 
@@ -332,7 +332,7 @@ virtual property unsigned int Size;
 
 当前 Vector 中的元素数目。
 
-## <a name="ctor"></a>Vector：： Vector 构造函数
+## <a name="vectorvector-constructor"></a><a name="ctor"></a>矢量：矢量构造函数
 
 初始化 Vector 类的新实例。
 
@@ -358,39 +358,39 @@ Vector(std::initializer_list<T> il);
 ### <a name="parameters"></a>参数
 
 *a*<br/>
-将用于初始化向量的[std：： array](../standard-library/array-class-stl.md) 。
+用于初始化矢量的[std：：数组](../standard-library/array-class-stl.md)。
 
-*arr*<br/>
-将用于初始化向量的[Platform：： Array](../cppcx/platform-array-class.md) 。
+*阿尔尔*<br/>
+[平台：](../cppcx/platform-array-class.md)将用于初始化矢量的数组。
 
-*InIt*<br/>
+*Init*<br/>
 用于初始化当前向量的对象集合的类型。
 
-*il*<br/>
-将用于初始化向量的类型为*T*的对象的[std：： initializer_list](../standard-library/initializer-list-class.md) 。
+*I l*<br/>
+用于初始化矢量的*T*型对象的[std：：initializer_list。](../standard-library/initializer-list-class.md)
 
 *N*<br/>
 用于初始化当前向量的对象集合中的元素数。
 
-*size*<br/>
+size <br/>
 向量中元素的数目。
 
 *value*<br/>
 用于初始化当前向量中每个元素的值。
 
-*v*<br/>
-[左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)到用于初始化当前向量的[std：： vector](../standard-library/vector-class.md) 。
+*五*<br/>
+用于初始化当前矢量的 l[值和 r 值](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std：：矢量](../standard-library/vector-class.md)。
 
-*ptr*<br/>
+*Ptr*<br/>
 指向用于初始化当前向量的 `std::vector` 的指针。
 
-*first*<br/>
-用于初始化当前向量的对象序列中的第一个元素。 *第一*种类型是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+*第一*<br/>
+用于初始化当前向量的对象序列中的第一个元素。 *第一*种是通过*完美的转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*last*<br/>
-用于初始化当前向量的对象序列中的最后一个元素。 *最后一*种方法是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+*最后*<br/>
+用于初始化当前向量的对象序列中的最后一个元素。 *最后*一种是通过*完美的转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [集合 (C++/CX)](collections-c-cx.md)<br/>
 [平台命名空间](platform-namespace-c-cx.md)<br/>

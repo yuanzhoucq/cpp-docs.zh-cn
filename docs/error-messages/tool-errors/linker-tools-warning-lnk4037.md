@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4037
 ms.assetid: 9ba02fd3-b04f-4679-bab9-26fa82cf09bb
-ms.openlocfilehash: 9a8121617e622fc12efe5bd26aac23faf2530f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fae7d0f19f96998d2e1a1739bc3e596bbd9ea9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410299"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194195"
 ---
 # <a name="linker-tools-warning-lnk4037"></a>链接器工具警告 LNK4037
 
->'*符号*不存在; 已忽略
+>"*symbol*" 不存在;掉
 
-修饰的名*符号*不可能通过使用按序[/O](../../build/reference/order-put-functions-in-order.md)选项，因为它找不到程序中。 检查的规范*符号*订单响应文件中。 有关详细信息，请参阅[/ORDER （按顺序放置函数）](../../build/reference/order-put-functions-in-order.md)链接器选项。
+由于无法在程序中找到修饰名*符号*，因此无法使用[该方法对](../../build/reference/order-put-functions-in-order.md)其进行排序。 检查订单响应文件中的*符号*。 有关详细信息，请参阅[/order （按顺序放置函数）](../../build/reference/order-put-functions-in-order.md)链接器选项。
 
 > [!NOTE]
-> 链接不能进行排序的静态函数，因为静态函数名称不是公共符号名称。 当 **/O**指定，此链接器警告生成的是静态的订单响应文件中每个符号或找不到。
+> 由于静态函数名称不是公共符号名称，因此 LINK 无法对静态函数进行排序。 指定 **/order**后，将为顺序响应文件中的每个符号（静态或未找到）生成此链接器警告。

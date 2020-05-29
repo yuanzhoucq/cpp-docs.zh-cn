@@ -9,35 +9,35 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: 使用导入和导出声明可以访问和发布在指定模块中定义的类型和函数。
-ms.openlocfilehash: 7406bf75595bef20775ee1b67c27bd62bff1a932
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+description: 使用导入和导出声明访问并发布指定模块中定义的类型和函数。
+ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518278"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374114"
 ---
 # <a name="module-import-export"></a>模块，导入，导出
 
-**模块**、**导入**和**导出**声明在 c + + 20 中提供，并且需要[/experimental： module](../build/reference/experimental-module.md)编译器开关和[/std： C + + 最新版本](../build/reference/std-specify-language-standard-version.md)。 有关详细信息，请参阅[ C++中模块概述](modules-cpp.md)。
+**模块**、**导入**和**导出**声明在 C++20 中可用，并且需要[/实验：模块](../build/reference/experimental-module.md)编译器开关以及[/std：c_最新](../build/reference/std-specify-language-standard-version.md)。 有关详细信息，请参阅[C++ 中的模块概述](modules-cpp.md)。
 
-## <a name="module"></a>name
+## <a name="module"></a>module
 
-将**模块**声明置于模块实现文件的开头，以指定该文件的内容属于命名模块。
+将**模块**声明放在模块实现文件的开头，以指定文件内容属于命名模块。
 
 ```cpp
 module ModuleA;
 ```
 
-## <a name="export"></a>export
+## <a name="export"></a>导出
 
-为模块的主接口文件（必须具有扩展名**ixx**）使用**导出模块**声明：
+对模块的主接口文件使用**导出模块**声明，该文件必须具有扩展**名 .ixx**：
 
 ```cpp
 export module ModuleA;
 ```
 
-在接口文件中，对要作为公共接口的一部分的名称使用**export**修饰符：
+在接口文件中，对打算成为公共接口一部分的名称使用**导出**修改器：
 
 ```cpp
 // ModuleA.ixx
@@ -52,7 +52,7 @@ namespace Bar
 }
 ```
 
-导入模块的代码不会显示非导出名称：
+导入模块的代码看不到非导出的名称：
 
 ```cpp
 //MyProgram.cpp
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-**Export**关键字不能出现在模块实现文件中。 将**导出**应用于命名空间名称时，将导出命名空间中的所有名称。
+**导出**关键字可能不会显示在模块实现文件中。 当**导出**应用于命名空间名称时，将导出命名空间中的所有名称。
 
-## <a name="import"></a>导入
+## <a name="import"></a>进口
 
-使用**导入**声明使模块的名称在您的程序中可见。 导入声明必须出现在模块声明之后以及任何 #include 指令之后、但在文件中的任何声明之前。
+使用**导入**声明使模块的名称在程序中可见。 导入声明必须出现在模块声明之后和任何#include指令之后，但在文件中的任何声明之前。
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>备注
 
-仅当**import**和**module**出现在逻辑行的开头时，它们才被视为关键字：
+**导入**和**模块**仅在逻辑行的开头出现时被视为关键字：
 
 ```cpp
 
@@ -110,9 +110,9 @@ export import module-name
 int i; module ;
 ```
 
-**Microsoft 专用**
+**微软特定**
 
-在 Microsoft C++中，当用作宏的参数时，令牌**导入**和**模块**始终是标识符，而不是关键字。
+在 Microsoft C++中，**导入**的令牌和**模块**在用作宏的参数时始终是标识符，从不为关键字。
 
 ### <a name="example"></a>示例
 
@@ -125,6 +125,6 @@ import // Always an identifier, never a keyword
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[模块概述C++](modules-cpp.md)
+[C++ 中的模块概述](modules-cpp.md)

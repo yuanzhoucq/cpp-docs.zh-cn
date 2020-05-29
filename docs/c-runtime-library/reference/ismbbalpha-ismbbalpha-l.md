@@ -1,9 +1,11 @@
 ---
 title: _ismbbalpha、_ismbbalpha_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalpha
 - _ismbbalpha_l
+- _o__ismbbalpha
+- _o__ismbbalpha_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954257"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917502"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha、_ismbbalpha_l
 
@@ -55,7 +58,7 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
 *locale*<br/>
@@ -67,22 +70,26 @@ int _ismbbalpha_l(
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-对于*c*，为非零; 否则为0。 **_ismbbalpha**为任何与区域设置相关的字符设置使用当前区域设置。 **_ismbbalpha_l**是相同的，只不过它使用传入的区域设置。
+对于*c*，为非零; 否则为0。 **_ismbbalpha**为任何与区域设置相关的字符设置使用当前区域设置。 **_ismbbalpha_l**相同，只不过它使用传入的区域设置。
+
+## <a name="remarks"></a>备注
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字节分类](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

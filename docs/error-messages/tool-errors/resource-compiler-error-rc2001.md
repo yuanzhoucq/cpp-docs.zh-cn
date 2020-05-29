@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191713"
 ---
 # <a name="resource-compiler-error-rc2001"></a>资源编译器错误 RC2001
 
 常量中有换行符
 
-一个字符串常量在第二个行继续不带反斜杠 (**\\**) 或关闭并打开两个双引号 (**"**)。
+字符串常量在第二行继续，无反斜杠（ **\\** ）或右引号和左双引号（ **"** ）。
 
-若要中断一个字符串常量，它位于源文件中的两行上，执行以下操作：
+若要中断源文件中两行的字符串常数，请执行下列操作之一：
 
-- 结束，第一行用行继续符，反斜杠。
+- 使用行继续符（反斜杠）结束第一行。
 
-- 结束的字符串与双引号匹配的第一行上，打开下一行中的字符串与另一个引号。
+- 用双引号结束第一行的字符串，并在下一行中用另一个引号打开字符串。
 
-不足够结束，第一行用 \n，在一个字符串常量中嵌入换行字符的转义序列。
+在字符串常量中嵌入换行符的转义序列不能用 \n 结束第一行。

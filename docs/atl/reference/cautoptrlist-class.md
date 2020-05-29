@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-ms.openlocfilehash: 2558c522f7903e8d59363cd77d1a86027f6a7511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48c7ad6fe13c5f5fbbe5829c25ce1c27896841be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260274"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318807"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 类
 
-构造的智能指针的列表时，此类提供了有用的方法。
+此类提供在构造智能指针列表时有用的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -39,15 +39,15 @@ class CAutoPtrList :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|构造函数。|
+|[CAutoPtr列表：CAutoPtr列表](#cautoptrlist)|构造函数。|
 
 ## <a name="remarks"></a>备注
 
-此类提供构造函数，并派生方法从[CAtlList](../../atl/reference/catllist-class.md)并[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)来帮助列表对象存储智能指针的创建。 该类[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)为一个数组对象提供类似功能。
+此类提供一个构造函数，并从[CAtlList](../../atl/reference/catllist-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)派生方法，以帮助创建存储智能指针的列表对象。 类[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)为数组对象提供了类似的函数。
 
-有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅[ATL 收集类](../../atl/atl-collection-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -57,9 +57,9 @@ class CAutoPtrList :
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标题：** atlcoll.h
 
-##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList
+## <a name="cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a>CAutoPtr列表：CAutoPtr列表
 
 构造函数。
 
@@ -74,9 +74,9 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>备注
 
-块大小为分配的新元素时所需的内存量的度量值。 更大的块大小降低对内存分配例程的调用，但使用更多的资源。
+块大小是需要新元素时分配的内存量的度量。 较大的块大小减少了对内存分配例程的调用，但使用的资源更多。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CAtlList 类](../../atl/reference/catllist-class.md)<br/>
 [CAutoPtrElementTraits 类](../../atl/reference/cautoptrelementtraits-class.md)<br/>

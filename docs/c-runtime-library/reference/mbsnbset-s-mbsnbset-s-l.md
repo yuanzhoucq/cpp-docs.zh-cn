@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset_s、_mbsnbset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
+- _o__mbsnbset_s
+- _o__mbsnbset_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 7addd7e053816c462ae430443506445b878464a0
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625115"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915538"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s、_mbsnbset_s_l
 
@@ -82,16 +85,16 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 要修改的字符串。
 
-*size*<br/>
+size <br/>
 字符串缓冲区的大小。
 
-*c*<br/>
+*ansi-c*<br/>
 单字节或多字节字符设置。
 
-*count*<br/>
+*计数*<br/>
 要设置的字节数。
 
 *locale*<br/>
@@ -103,17 +106,19 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbset_s**和 **_mbsnbset_s_l**函数最多将*字符串*的第一个*计数*字节数设置为*c*。 如果*count*大于*str*的长度，则使用*str*的长度而不是*count*。 如果*c*是多字节字符，且不能完全设置到*count*指定的最后一个字节中，则用空白字符填充最后一个字节。 **_mbsnbset_s**和 **_mbsnbset_s_l**不在*str*末尾放置终止 null。
+**_Mbsnbset_s**和 **_mbsnbset_s_l**函数最多将*str*的第一个*计数*字节设置为*c*。 如果*count*大于*str*的长度，则使用*str*的长度而不是*count*。 如果*c*是多字节字符，且不能完全设置到*count*指定的最后一个字节中，则用空白字符填充最后一个字节。 **_mbsnbset_s**和 **_mbsnbset_s_l**不要在*str*末尾放置终止 null。
 
-**_mbsnbset_s**和 **_mbsnbset_s_l**类似于 **_mbsnset**，只不过它们设置的是*count*个字节，而不是*count*个字符的*c*。
+**_mbsnbset_s**和 **_mbsnbset_s_l**与 **_mbsnset**相似，不同之处在于它们设置*count*个字节而不是*count*个字符的*c*。
 
 如果*str*为**NULL**或*计数*为零，则此函数将生成无效的参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 此外，如果*c*不是有效的多字节字符，则将**Errno**设置为**EINVAL** ，并改为使用空格。
 
-输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函数的 **_mbsnbset_s**版本对与区域设置相关的行为使用当前区域设置; **_mbsnbset_s_l**版本相同，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函数的 **_mbsnbset_s**版本对与区域设置相关的行为使用当前区域设置;**_mbsnbset_s_l**版本相同，只是它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数的使用由模板重载简化；重载可以自动推导出缓冲区长度，从而不再需要指定大小自变量。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -124,12 +129,12 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbsnbset_s**|\<mbstring.h>|
 |**_mbsnbset_s_l**|\<mbstring.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

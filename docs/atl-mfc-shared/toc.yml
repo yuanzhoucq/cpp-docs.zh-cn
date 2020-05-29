@@ -1,0 +1,92 @@
+- name: ATL-MFC 共享类
+  href: ../atl-mfc-shared/atl-mfc-shared-classes.md
+- name: ATL-MFC 概念
+  expanded: true
+  items:
+    - name: ATL-MFC 概念
+      href: ../atl-mfc-shared/atl-mfc-concepts.md
+    - name: 日期和时间
+      items:
+        - name: 日期和时间概述
+          href: ../atl-mfc-shared/date-and-time.md
+        - name: 日期类型
+          href: ../atl-mfc-shared/date-type.md
+    - name: 字符串 (ATL-MFC)
+      expanded: false
+      items:
+        - name: 字符串 (ATL-MFC)
+          href: ../atl-mfc-shared/strings-atl-mfc.md
+        - name: 使用 CStringT
+          items:
+            - name: 使用 CStringT
+              href: ../atl-mfc-shared/using-cstringt.md
+            - name: 使用 CStringT 进行内存管理
+              items:
+                - name: 使用 CStringT 进行内存管理
+                  href: ../atl-mfc-shared/memory-management-with-cstringt.md
+                - name: 自定义字符串管理器的实现（基本方法）
+                  href: ../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md
+                - name: 避免堆争用
+                  href: ../atl-mfc-shared/avoidance-of-heap-contention.md
+                - name: 自定义字符串管理器的实现（高级方法）
+                  href: ../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md
+                - name: 'CFixedStringT:自定义字符串管理器示例'
+                  href: ../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md
+            - name: 使用 CStringT 导出字符串类
+              href: ../atl-mfc-shared/exporting-string-classes-using-cstringt.md
+        - name: 使用 CString
+          items:
+            - name: 使用 CString
+              href: ../atl-mfc-shared/using-cstring.md
+            - name: 基本 CString 操作
+              href: ../atl-mfc-shared/basic-cstring-operations.md
+            - name: 字符串数据管理
+              href: ../atl-mfc-shared/string-data-management.md
+            - name: CString 语义
+              href: ../atl-mfc-shared/cstring-semantics.md
+            - name: 与 C 样式字符串相关的 CString 操作
+              href: ../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md
+            - name: 为 BSTR 分配和释放内存
+              href: ../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md
+            - name: CString 异常清理
+              href: ../atl-mfc-shared/cstring-exception-cleanup.md
+            - name: CString 自变量传递
+              href: ../atl-mfc-shared/cstring-argument-passing.md
+            - name: Unicode 和多字节字符集 (MBCS) 支持
+              href: ../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
+- name: 参考
+  items:
+    - name: MFC 和 ATL 共享的类
+      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
+    - name: CSize 类
+      href: ../atl-mfc-shared/reference/csize-class.md
+    - name: CTimeSpan 类
+      href: ../atl-mfc-shared/reference/ctimespan-class.md
+    - name: COleDateTime 类
+      href: ../atl-mfc-shared/reference/coledatetime-class.md
+    - name: CRect 类
+      href: ../atl-mfc-shared/reference/crect-class.md
+    - name: CPoint 类
+      href: ../atl-mfc-shared/reference/cpoint-class.md
+    - name: CStringT 类
+      href: ../atl-mfc-shared/reference/cstringt-class.md
+    - name: COleDateTimeSpan 类
+      href: ../atl-mfc-shared/reference/coledatetimespan-class.md
+    - name: CFixedStringT 类
+      href: ../atl-mfc-shared/reference/cfixedstringt-class.md
+    - name: CStrBufT 类
+      href: ../atl-mfc-shared/reference/cstrbuft-class.md
+    - name: CFileTimeSpan 类
+      href: ../atl-mfc-shared/reference/cfiletimespan-class.md
+    - name: CImage 类
+      href: ../atl-mfc-shared/reference/cimage-class.md
+    - name: CStringData 类
+      href: ../atl-mfc-shared/reference/cstringdata-class.md
+    - name: CFileTime 类
+      href: ../atl-mfc-shared/reference/cfiletime-class.md
+    - name: CSimpleStringT 类
+      href: ../atl-mfc-shared/reference/csimplestringt-class.md
+    - name: CTime 类
+      href: ../atl-mfc-shared/reference/ctime-class.md
+    - name: IAtlStringMgr 类
+      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonStatusBar 类
+title: CMFC 功能状态栏类
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonStatusBar
@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296600"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754055"
 ---
-# <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 类
+# <a name="cmfcribbonstatusbar-class"></a>CMFC 功能状态栏类
 
-`CMFCRibbonStatusBar`类实现状态栏控件可以显示功能区元素。
+类`CMFCRibbonStatusBar`实现一个可以显示功能区元素的状态栏控件。
 
 ## <a name="syntax"></a>语法
 
@@ -71,47 +71,47 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|向功能区状态栏的动态元素。|
-|[CMFCRibbonStatusBar::AddElement](#addelement)|将新的功能区元素添加到功能区状态栏。|
-|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|将功能区元素添加到功能区状态栏扩展区域。|
-|[CMFCRibbonStatusBar::AddSeparator](#addseparator)|向功能区状态栏的分隔符。|
-|[CMFCRibbonStatusBar::Create](#create)|创建功能区状态栏。|
-|[CMFCRibbonStatusBar::CreateEx](#createex)|创建功能区状态栏扩展样式。|
-|[CMFCRibbonStatusBar::FindByID](#findbyid)||
-|[CMFCRibbonStatusBar::FindElement](#findelement)|返回一个指向的元素的具有指定的命令 id。|
-|[CMFCRibbonStatusBar::GetCount](#getcount)|返回位于功能区状态栏的主区域中的元素数目。|
-|[CMFCRibbonStatusBar::GetElement](#getelement)|返回一个指向位于指定索引处的元素。|
-|[CMFCRibbonStatusBar::GetExCount](#getexcount)|返回位于功能区状态栏扩展区域中的元素数目。|
-|[CMFCRibbonStatusBar::GetExElement](#getexelement)|返回指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。|
-|[CMFCRibbonStatusBar::GetExtendedArea](#getextendedarea)||
-|[CMFCRibbonStatusBar::GetSpace](#getspace)||
-|[CMFCRibbonStatusBar::IsBottomFrame](#isbottomframe)||
-|[CMFCRibbonStatusBar::IsExtendedElement](#isextendedelement)||
-|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|确定是否为功能区状态栏启用信息模式。|
-|[CMFCRibbonStatusBar::RecalcLayout](#recalclayout)|(重写[CMFCRibbonBar::RecalcLayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout)。)|
-|[CMFCRibbonStatusBar::RemoveAll](#removeall)|从功能区状态栏中移除所有元素。|
-|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|移除具有指定的命令 ID 从功能区状态栏的元素。|
-|[CMFCRibbonStatusBar::SetInformation](#setinformation)|启用或禁用功能区状态栏的信息模式。|
+|[CMFC 功能状态栏：：添加动态元素](#adddynamicelement)|向功能区状态栏添加动态元素。|
+|[CMFC 功能状态栏：添加元素](#addelement)|向功能区状态栏添加新功能区元素。|
+|[CMFC 功能状态栏：：添加扩展元素](#addextendedelement)|将功能区元素添加到功能区状态栏的扩展区域。|
+|[CMFC 功能状态栏：添加分离器](#addseparator)|向功能区状态栏添加分隔符。|
+|[CMFC 功能状态栏：创建](#create)|创建功能区状态栏。|
+|[CMFC 功能状态栏：创建Ex](#createex)|创建具有扩展样式的功能区状态栏。|
+|[CMFC 功能状态栏：查找ByID](#findbyid)||
+|[CMFC 功能状态栏：查找元素](#findelement)|返回指向具有指定命令 ID 的元素的指针。|
+|[CMFC 功能状态栏：获取计数](#getcount)|返回位于功能区状态栏主区域的元素数。|
+|[CMFC 功能状态栏：获取元素](#getelement)|返回指向位于指定索引的元素的指针。|
+|[CMFC 功能状态栏：获取ExCount](#getexcount)|返回位于功能区状态栏扩展区域的元素数。|
+|[CMFC 功能状态栏：获取Exelement](#getexelement)|返回指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。|
+|[CMFC 功能状态栏：获取扩展区域](#getextendedarea)||
+|[CMFC 功能状态栏：获取空间](#getspace)||
+|[CMFC 功能状态栏：：是底部框架](#isbottomframe)||
+|[CMFC 功能状态栏：：扩展元素](#isextendedelement)||
+|[CMFC 功能状态栏：信息模式](#isinformationmode)|确定功能区状态栏是否启用了信息模式。|
+|[CMFC 功能状态栏：Recalclayout](#recalclayout)|（覆盖[CMFC 功能栏：recalclayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout).）|
+|[CMFC 功能状态栏：：删除所有](#removeall)|从功能区状态栏中删除所有元素。|
+|[CMFC 功能状态栏：删除元素](#removeelement)|从功能区状态栏中删除具有指定命令 ID 的元素。|
+|[CMFC 功能状态栏：设置信息](#setinformation)|启用或禁用功能区状态栏的信息模式。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|显示在功能区状态栏的信息模式启用时显示的信息字符串。|
+|[CMFC 功能状态栏：：绘制信息](#ondrawinformation)|显示启用信息模式时功能区状态栏上显示的信息字符串。|
 
 ## <a name="remarks"></a>备注
 
-通过使用功能区状态栏的内置的上下文菜单，用户可以更改功能区状态栏上的功能区元素的可见性。 您可以动态添加或移除元素。
+用户可以使用功能区状态栏的内置上下文菜单来更改功能区状态栏上的功能区元素的可见性。 您可以动态添加或删除元素。
 
-功能区状态栏有两个区域： 主要区域和扩展的区域。 扩展的区域显示功能区状态栏右侧，并显示在不同的颜色，比主要区域。
+功能区状态栏有两个区域：主区域和扩展区域。 扩展区域显示在功能区状态栏的右侧，以与主区域不同的颜色显示。
 
-通常情况下，状态栏的主区域显示状态通知并扩展的区域显示视图的控件。 尽可能长时间在用户调整功能区状态栏扩展的区域保持可见。
+通常，状态栏的主要区域显示状态通知，扩展区域显示视图控件。 当用户调整功能区状态栏的大小时，扩展区域尽可能长时间可见。
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CMFCRibbonStatusBar` 类中的各种方法。 该示例演示如何将新的功能区元素添加到功能区状态栏，将功能区元素添加到功能区状态栏扩展区域添加分隔符，并启用功能区状态栏的常规模式。
+下面的示例演示了如何使用 `CMFCRibbonStatusBar` 类中的各种方法。 该示例演示如何向功能区状态栏添加新功能区元素、向功能区状态栏的扩展区域添加功能区元素、添加分隔符以及启用功能区状态栏的常规模式。
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -134,30 +134,30 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxribbonstatusbar.h
+**标题：** afxribbonstatusbar.h
 
-##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement
+## <a name="cmfcribbonstatusbaradddynamicelement"></a><a name="adddynamicelement"></a>CMFC 功能状态栏：：添加动态元素
 
-向功能区状态栏的动态元素。
+向功能区状态栏添加动态元素。
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pElement*<br/>
-[in]一个指向动态元素。
+*p元素*<br/>
+[在]指向动态元素的指针。
 
 ### <a name="remarks"></a>备注
 
-与正则元素不同的动态元素不是可自定义和状态栏的自定义菜单不显示它们。
+与常规元素不同，动态元素不可自定义，状态栏的自定义菜单不显示它们。
 
-##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement
+## <a name="cmfcribbonstatusbaraddelement"></a><a name="addelement"></a>CMFC 功能状态栏：添加元素
 
-将新的功能区元素添加到功能区状态栏。
+向功能区状态栏添加新功能区元素。
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -166,20 +166,20 @@ void AddElement(
 
 ### <a name="parameters"></a>参数
 
-*pElement*<br/>
-[in]指向添加的元素的指针。
+*p元素*<br/>
+[在]指向添加元素的指针。
 
 *lpszLabel*<br/>
-[in]元素的文本标签。
+[在]元素的文本标签。
 
-*bIsVisible*<br/>
-[in]如果你想要将元素添加为可见，则返回 FALSE 如果你想要将元素添加为隐藏，则为 TRUE。
+*b可见*<br/>
+[在]如果要将元素添加为可见元素，则为 FALSE，如果要将元素添加为隐藏元素，则为 FALSE。
 
-##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement
+## <a name="cmfcribbonstatusbaraddextendedelement"></a><a name="addextendedelement"></a>CMFC 功能状态栏：：添加扩展元素
 
-将功能区元素添加到功能区状态栏扩展区域。
+将功能区元素添加到功能区状态栏的扩展区域。
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -188,32 +188,32 @@ void AddExtendedElement(
 
 ### <a name="parameters"></a>参数
 
-*pElement*<br/>
-[in]指向添加的元素的指针。
+*p元素*<br/>
+[在]指向添加元素的指针。
 
 *lpszLabel*<br/>
-[in]元素的文本标签。
+[在]元素的文本标签。
 
-*bIsVisible*<br/>
-[in]如果你想要将元素添加为可见，则返回 FALSE 如果你想要将元素添加为隐藏，则为 TRUE。
+*b可见*<br/>
+[在]如果要将元素添加为可见元素，则为 FALSE，如果要将元素添加为隐藏元素，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 扩展区域位于状态栏控件的右侧。
 
-##  <a name="addseparator"></a>  CMFCRibbonStatusBar::AddSeparator
+## <a name="cmfcribbonstatusbaraddseparator"></a><a name="addseparator"></a>CMFC 功能状态栏：添加分离器
 
-向功能区状态栏的分隔符。
+向功能区状态栏添加分隔符。
 
-```
+```cpp
 void AddSeparator();
 ```
 
 ### <a name="remarks"></a>备注
 
-Framework 方法的后面添加一个分隔符[CMFCRibbonStatusBar::AddElement](#addelement)。 将插入的最后一个元素。
+框架在方法[CMFCRibbonStatus 状态栏后添加分隔符：addElement](#addelement)。 插入最后一个元素。
 
-##  <a name="create"></a>  CMFCRibbonStatusBar::Create
+## <a name="cmfcribbonstatusbarcreate"></a><a name="create"></a>CMFC 功能状态栏：创建
 
 创建功能区状态栏。
 
@@ -226,22 +226,22 @@ BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*pParentWnd*<br/>
-[in]指向父窗口的指针。
+*pparentwnd*<br/>
+[在]指向父窗口的指针。
 
 *dwStyle*<br/>
-[in]逻辑或组合的控件样式。
+[在]控件样式的逻辑 OR 组合。
 
 *nID*<br/>
-[in]状态栏控件 ID。
+[在]状态栏的控制 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果状态栏成功创建，FALSE 否则，则为 TRUE。
+如果成功创建状态栏，则为 TRUE，否则为 FALSE。
 
-##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx
+## <a name="cmfcribbonstatusbarcreateex"></a><a name="createex"></a>CMFC 功能状态栏：创建Ex
 
-创建功能区状态栏扩展样式。
+创建具有扩展样式的功能区状态栏。
 
 ```
 BOOL CreateEx(
@@ -253,25 +253,25 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>参数
 
-*pParentWnd*<br/>
+*pparentwnd*<br/>
 指向父窗口的指针。
 
-*dwCtrlStyle*<br/>
-逻辑或组合的创建状态栏对象的其他样式。
+*dwCtrl风格*<br/>
+用于创建状态栏对象的其他样式的逻辑 OR 组合。
 
 *dwStyle*<br/>
-状态栏控件样式。
+状态栏的控制样式。
 
 *nID*<br/>
-状态栏控件 ID。
+状态栏的控制 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果状态栏成功创建，FALSE 否则，则为 TRUE。
+如果成功创建状态栏，则为 TRUE，否则为 FALSE。
 
-##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID
+## <a name="cmfcribbonstatusbarfindbyid"></a><a name="findbyid"></a>CMFC 功能状态栏：查找ByID
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -279,16 +279,16 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in] *uiCmdID*<br/>
-[in]*BOOL*<br/>
+[在]*乌伊CmdID*<br/>
+[在]*波尔*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="findelement"></a>  CMFCRibbonStatusBar::FindElement
+## <a name="cmfcribbonstatusbarfindelement"></a><a name="findelement"></a>CMFC 功能状态栏：查找元素
 
-返回一个指向的元素的具有指定的命令 id。
+返回指向具有指定命令 ID 的元素的指针。
 
 ```
 CMFCRibbonBaseElement* FindElement(UINT uiID);
@@ -297,15 +297,15 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ### <a name="parameters"></a>参数
 
 *uiID*<br/>
-[in]元素的 ID。
+[在]元素的 ID。
 
 ### <a name="return-value"></a>返回值
 
-指向的元素具有指定的命令 id。 如果没有此类元素不为 NULL。
+指向具有指定命令 ID 的元素的指针。 如果没有此类元素，则为 NULL。
 
-##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount
+## <a name="cmfcribbonstatusbargetcount"></a><a name="getcount"></a>CMFC 功能状态栏：获取计数
 
-返回位于功能区状态栏的主区域中的元素数目。
+返回位于功能区状态栏主区域的元素数。
 
 ```
 int GetCount() const;
@@ -313,11 +313,11 @@ int GetCount() const;
 
 ### <a name="return-value"></a>返回值
 
-位于功能区状态栏的主区域中的元素数。
+位于功能区状态栏主区域的元素数。
 
-##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement
+## <a name="cmfcribbonstatusbargetelement"></a><a name="getelement"></a>CMFC 功能状态栏：获取元素
 
-返回一个指向位于指定索引处的元素。
+返回指向位于指定索引的元素的指针。
 
 ```
 CMFCRibbonBaseElement* GetElement(int nIndex);
@@ -326,17 +326,17 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ### <a name="parameters"></a>参数
 
 *nIndex*<br/>
-[in]指定位于状态栏控件的主区域中的元素的从零开始索引。
+[在]指定位于状态栏控件主区域的元素的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-指向位于指定索引处的元素的指针。 如果索引为负或超过状态栏中的元素数为 NULL。
+指向位于指定索引的元素的指针。 如果索引为负或超过状态栏中的元素数，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getexcount"></a>  CMFCRibbonStatusBar::GetExCount
+## <a name="cmfcribbonstatusbargetexcount"></a><a name="getexcount"></a>CMFC 功能状态栏：获取ExCount
 
-返回位于功能区状态栏扩展区域中的元素数目。
+返回位于功能区状态栏扩展区域的元素数。
 
 ```
 int GetExCount() const;
@@ -344,9 +344,9 @@ int GetExCount() const;
 
 ### <a name="return-value"></a>返回值
 
-位于功能区状态栏扩展区域中的元素数。
+位于功能区状态栏扩展区域的元素数。
 
-##  <a name="getexelement"></a>  CMFCRibbonStatusBar::GetExElement
+## <a name="cmfcribbonstatusbargetexelement"></a><a name="getexelement"></a>CMFC 功能状态栏：获取Exelement
 
 返回指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 扩展区域位于状态栏控件的右侧。
 
@@ -357,17 +357,17 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="parameters"></a>参数
 
 *nIndex*<br/>
-[in]指定位于状态栏控件的扩展区域中的元素的从零开始索引。
+[在]指定位于状态栏控件扩展区域的元素的零基索引。
 
 ### <a name="return-value"></a>返回值
 
-一个指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 则为 NULL *nIndex*为负或超过功能区状态栏扩展区域中的元素数。
+一个指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 如果*nIndex*为负或超过功能区状态栏扩展区域中的元素数，则 NULL。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea
+## <a name="cmfcribbonstatusbargetextendedarea"></a><a name="getextendedarea"></a>CMFC 功能状态栏：获取扩展区域
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 virtual BOOL GetExtendedArea(CRect& rect) const;
@@ -375,15 +375,15 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>参数
 
-[in] *rect*<br/>
+[在]*rect*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace
+## <a name="cmfcribbonstatusbargetspace"></a><a name="getspace"></a>CMFC 功能状态栏：获取空间
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 int GetSpace() const;
@@ -393,9 +393,9 @@ int GetSpace() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame
+## <a name="cmfcribbonstatusbarisbottomframe"></a><a name="isbottomframe"></a>CMFC 功能状态栏：：是底部框架
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 BOOL IsBottomFrame() const;
@@ -405,9 +405,9 @@ BOOL IsBottomFrame() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement
+## <a name="cmfcribbonstatusbarisextendedelement"></a><a name="isextendedelement"></a>CMFC 功能状态栏：：扩展元素
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
@@ -415,15 +415,15 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*pElement*<br/>
+[在]*p元素*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode
+## <a name="cmfcribbonstatusbarisinformationmode"></a><a name="isinformationmode"></a>CMFC 功能状态栏：信息模式
 
-确定是否为功能区状态栏启用信息模式。
+确定功能区状态栏是否启用了信息模式。
 
 ```
 BOOL IsInformationMode() const;
@@ -431,15 +431,15 @@ BOOL IsInformationMode() const;
 
 ### <a name="return-value"></a>返回值
 
-如果状态栏中的信息模式; 可以起作用，则返回 TRUE否则为 FALSE。
+如果状态栏可以在信息模式下工作，则为 TRUE;否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-在信息模式下，状态栏隐藏所有正则窗格并显示一个消息字符串。
+在信息模式下，状态栏隐藏所有常规窗格并显示消息字符串。
 
-##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation
+## <a name="cmfcribbonstatusbarondrawinformation"></a><a name="ondrawinformation"></a>CMFC 功能状态栏：：绘制信息
 
-显示在功能区状态栏的信息模式启用时显示的字符串。
+显示启用信息模式时功能区状态栏上显示的字符串。
 
 ```
 virtual void OnDrawInformation(
@@ -451,21 +451,21 @@ virtual void OnDrawInformation(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+[在]指向设备上下文的指针。
 
-*strInfo*<br/>
-[in]信息字符串。
+*斯特信息*<br/>
+[在]信息字符串。
 
 *rectInfo*<br/>
-[in]边界矩形。
+[在]边界矩形。
 
 ### <a name="remarks"></a>备注
 
-如果你想要自定义状态栏上的信息字符串的外观，重写此方法在派生类中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法来将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格并显示指定的信息字符串*strInfo*。
+如果要自定义状态栏上信息字符串的外观，请在派生类中重写此方法。 使用[CMFC 功能状态栏：：设置信息](#setinformation)方法将状态栏置于信息模式。 在此模式下，状态栏隐藏所有窗格并显示*strInfo*指定的信息字符串。
 
-##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout
+## <a name="cmfcribbonstatusbarrecalclayout"></a><a name="recalclayout"></a>CMFC 功能状态栏：Recalclayout
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
 
 ```
 virtual void RecalcLayout();
@@ -473,17 +473,17 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="removeall"></a>  CMFCRibbonStatusBar::RemoveAll
+## <a name="cmfcribbonstatusbarremoveall"></a><a name="removeall"></a>CMFC 功能状态栏：：删除所有
 
-从功能区状态栏中移除所有元素。
+从功能区状态栏中删除所有元素。
 
-```
+```cpp
 void RemoveAll();
 ```
 
-##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement
+## <a name="cmfcribbonstatusbarremoveelement"></a><a name="removeelement"></a>CMFC 功能状态栏：删除元素
 
-移除具有指定的命令 ID 从功能区状态栏的元素。
+从功能区状态栏中删除具有指定命令 ID 的元素。
 
 ```
 BOOL RemoveElement(UINT uiID);
@@ -492,35 +492,35 @@ BOOL RemoveElement(UINT uiID);
 ### <a name="parameters"></a>参数
 
 *uiID*<br/>
-[in]若要从状态栏中删除元素的 ID。
+[在]要从状态栏中删除的元素的 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果具有指定的元素则为 TRUE *uiID*中删除。 FALSE 否则为。
+如果删除了具有指定*uiID*的元素，则为 TRUE。 否则。
 
-##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation
+## <a name="cmfcribbonstatusbarsetinformation"></a><a name="setinformation"></a>CMFC 功能状态栏：设置信息
 
 启用或禁用功能区状态栏的信息模式。
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 
 ### <a name="parameters"></a>参数
 
 *lpszInfo*<br/>
-[in]信息字符串。
+[在]信息字符串。
 
 ### <a name="remarks"></a>备注
 
-使用此方法将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格并显示指定的信息字符串*lpszInfo*。
+使用此方法将状态栏置于信息模式。 在此模式下，状态栏隐藏所有窗格并显示*lpszInfo*指定的信息字符串。
 
-当 lpszInfo 为 NULL 时，状态栏将恢复到常规模式。
+当 lpszInfo 为 NULL 时，状态栏将恢复为常规模式。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)<br/>
+[CMFC剪条类](../../mfc/reference/cmfcribbonbar-class.md)<br/>
 [CMFCRibbonBaseElement 类](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)
+[CMFC剪条类](../../mfc/reference/cmfcribbonbar-class.md)

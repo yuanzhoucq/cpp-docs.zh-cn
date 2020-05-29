@@ -1,9 +1,11 @@
 ---
 title: _execv，_wexecv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wexecv
 - _execv
+- _o__execv
+- _o__wexecv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2c92321ebf31cf3dd1e446246674a437919e347b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941857"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919691"
 ---
 # <a name="_execv-_wexecv"></a>_execv，_wexecv
 
@@ -69,7 +72,7 @@ intptr_t _wexecv(
 
 如果成功，这些函数不返回到调用进程。 返回值-1 表示错误，在这种情况下，将设置**errno**全局变量。
 
-|**errno**值|描述|
+|**errno**值|说明|
 |-------------------|-----------------|
 |**E2BIG**|自变量和环境设置所需的空间超过 32 KB。|
 |**EACCES**|指定的文件具有锁定或共享冲突。|
@@ -85,7 +88,9 @@ intptr_t _wexecv(
 
 所有这些函数将加载并执行一个新进程，同时将一个指针数组传递给命令行参数。
 
-**_Execv**函数验证其参数。 如果*cmdname*为 null 指针，或者如果*argv*为空指针、指向空数组的指针，或者如果数组包含一个空字符串作为第一个参数，则 **_execv**函数将调用无效参数处理程序，如参数中所述。 [验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。 不启动任何进程。
+**_Execv**函数验证其参数。 如果*cmdname*为 null 指针，或如果*argv*为空指针、指向空数组的指针，或者如果数组包含一个空字符串作为第一个参数，则 **_execv**函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回-1。 不启动任何进程。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -94,19 +99,19 @@ intptr_t _wexecv(
 |**_execv**|\<process.h>|\<errno.h>|
 |**_wexecv**|\<process.h> 或 \<wchar.h>|\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[中止](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit、_Exit、_exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>
-[_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

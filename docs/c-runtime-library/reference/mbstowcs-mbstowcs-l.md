@@ -1,9 +1,11 @@
 ---
 title: mbstowcs、_mbstowcs_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbstowcs
 - _mbstowcs_l
+- _o__mbstowcs_l
+- _o_mbstowcs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952038"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915474"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs、_mbstowcs_l
 
@@ -77,7 +80,7 @@ size_t _mbstowcs_l(
 *mbstr*<br/>
 Null 终止的多字节字符序列的地址。
 
-*count*<br/>
+*计数*<br/>
 要转换的多字节字符的最大数量。
 
 *locale*<br/>
@@ -96,20 +99,22 @@ Null 终止的多字节字符序列的地址。
 
 如果*wcstr*参数为**NULL**，则**mbstowcs**将返回转换导致的宽字符数，不包括 NULL 终止符。 源字符串必须以 null 结尾才能返回正确的值。 如果需要生成以 null 结尾的宽字符串，请向返回的值添加一个。
 
-如果*mbstr*参数为**NULL**，或者*count* > **INT_MAX**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 errno 设置为**EINVAL** ，并且该函数将返回-1。
+如果*mbstr*参数为**NULL**，或者如果*count* > **INT_MAX**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 errno 设置为**EINVAL** ，并且该函数将返回-1。
 
-**mbstowcs**为任何与区域设置相关的行为使用当前区域设置; **_mbstowcs_l**是相同的，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**mbstowcs**为任何与区域设置相关的行为使用当前区域设置;**_mbstowcs_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -206,10 +211,10 @@ Convert back to wide-character string:
    Hex value of first 2 wide characters: 0x3042 0x3043
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

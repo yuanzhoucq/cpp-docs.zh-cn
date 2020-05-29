@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy、_mbsnbcpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
+- _o__mbsnbcpy
+- _o__mbsnbcpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,13 +18,13 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 f1_keywords:
 - mbsnbcpy
-- _ftcsncpy
 - _mbsnbcpy
 - mbsnbcpy_l
 - _mbsnbcpy_l
@@ -36,12 +38,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9b8a5884b646baf582e6bb9868136ffe7c2a24cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ea89458a51360b8781cb713fc9412239d2e03c78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952254"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911898"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy、_mbsnbcpy_l
 
@@ -87,7 +89,7 @@ unsigned char * _mbsnbcpy_l(
 *strSource*<br/>
 要复制的字符串。
 
-*count*<br/>
+*计数*<br/>
 要复制的字节数。
 
 *locale*<br/>
@@ -99,16 +101,18 @@ unsigned char * _mbsnbcpy_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcpy**函数将*计数*字节从*strSource*复制到*strDest*。 如果*count*超过*strDest*的大小，或者源字符串和目标字符串重叠，则 **_mbsnbcpy**的行为是不确定的。
+**_Mbsnbcpy**函数将*计数*字节从*strSource*复制到*strDest*。 如果*count*超过*strDest*的大小，或者源和目标字符串重叠，则 **_mbsnbcpy**的行为是不确定的。
 
 如果*strSource*或*strDest*为 null 指针，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
-输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数使用当前区域设置，而具有 **_l**后缀的版本则使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数使用当前区域设置，而具有 **_l**后缀的版本则使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
 > 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可用于执行任意代码者攻击，这些代码可能会导致不必要地提升特权并危害系统。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-在 C++ 中，这些函数具有可调用这些函数的更新、更安全的版本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有可调用这些函数的更新、更安全的版本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -119,14 +123,14 @@ unsigned char * _mbsnbcpy_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcpy**|\<mbstring.h>|
 |**_mbsnbcpy_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inline assembly, registers
 - registers, inline assembly
 ms.assetid: c63e6bb4-49d9-4fa1-bb22-eea21b5cbc0f
-ms.openlocfilehash: 5c07fa897da23a55f376a20e7588c8c8c269d1a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 865fc5fac5f46cdc8c55966e9989227d1d671d6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169248"
 ---
 # <a name="segment-references-in-inline-assembly"></a>内联程序集中的段引用
 
@@ -24,6 +24,6 @@ ms.locfileid: "62167369"
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

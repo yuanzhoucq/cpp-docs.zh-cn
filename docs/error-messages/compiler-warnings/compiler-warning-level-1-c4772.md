@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385454"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175125"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>编译器警告（等级 1）C4772
 
-> \#导入缺少的类型库; 从引用类型'*缺少类型*用作占位符
+> \#导入从缺少的类型库引用了类型;"*缺少-type*" 用作占位符
 
-类型库引用与[#import](../../preprocessor/hash-import-directive-cpp.md)指令。 但是，类型库包含对使用未引用的另一个类型库的引用`#import`。 由编译器找不到此其他.tlb 文件。
+使用[#import](../../preprocessor/hash-import-directive-cpp.md)指令引用了类型库。 但是，类型库包含对未使用 `#import`引用的另一个类型库的引用。 编译器找不到此其他 .tlb 文件。
 
-请注意，编译器将不到类型库在不同目录中是否你使用[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)编译器选项来指定这些目录。 如果你想要在不同的目录中查找类型库的编译器，将这些目录添加到 PATH 环境变量。
+请注意，如果使用[/i （附加包含目录）](../../build/reference/i-additional-include-directories.md)编译器选项来指定这些目录，则编译器将不会在不同的目录中找到类型库。 如果希望编译器在不同的目录中查找类型库，请将这些目录添加到 PATH 环境变量中。
 
-默认情况下此警告作为错误发出。 不能与 /W0 抑制 C4772。
+默认情况下，此警告作为错误发出。 不能将 C4772 与/W0. 一起禁用
 
 ## <a name="example"></a>示例
 
@@ -58,7 +58,7 @@ library C4772bLib
 };
 ```
 
-下面的示例生成 C4772:
+下面的示例生成 C4772：
 
 ```cpp
 // C4772.cpp

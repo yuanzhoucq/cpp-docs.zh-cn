@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516582"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172381"
 ---
 # <a name="event--ccli-and-ccx"></a>event（C++/CLI 和 C++/CX）
 
@@ -38,7 +38,7 @@ modifiereventdelegate^ event_name
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 modifier<br/>
 修饰符可用于事件声明或事件访问器方法。  可取值为 static 和 virtual。
@@ -52,7 +52,7 @@ event_name<br/>
 return_value<br/>
 事件访问器方法的返回值。  返回类型必须是 void，才是可验证的。
 
-parameters<br/>
+*参数*<br/>
 （可选）`raise` 方法的参数，与 delegate 参数的签名匹配。
 
 ### <a name="remarks"></a>备注
@@ -75,7 +75,7 @@ event 是上下文相关关键字；有关详细信息，请参阅[上下文相�
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[事件 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx)。
+有关详细信息，请参阅[事件 (C++/CX)](../cppcx/events-c-cx.md)。
 
 如果想要添加，然后删除事件处理程序，则必须保存添加操作返回的 EventRegistrationToken 结构。 然后在删除操作中，必须使用已保存的 EventRegistrationToken 结构来标识要删除的事件处理程序。
 
@@ -102,7 +102,7 @@ modifiereventdelegate^ event_name
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 modifier<br/>
 修饰符可用于事件声明或事件访问器方法。  可取值为 static 和 virtual。
@@ -116,7 +116,7 @@ event_name<br/>
 return_value<br/>
 事件访问器方法的返回值。  返回类型必须是 void，才是可验证的。
 
-parameters<br/>
+*参数*<br/>
 （可选）`raise` 方法的参数，与 delegate 参数的签名匹配。
 
 ### <a name="remarks"></a>备注
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-下面的代码示例展示了用于生成普通事件的 `raise` 方法的逻辑：如果此事件有一个或多个订阅服务器，调用 `raise` 方法会隐式或显式调用委托。 如果委托的返回类型不是 void，并且没有事件订阅服务器，那么 `raise` 方法返回委托类型的默认值。 如果没有事件订阅服务器，则调用 `raise` 方法仅返回而不会引发异常。 如果委托的返回类型不是 void，返回的是委托类型。
+下面的代码示例演示了用于生成普通事件的 `raise` 方法的逻辑：如果该事件具有一个或多个订阅服务器，则隐式调用 `raise` 方法或显式调用委托。 如果委托的返回类型不是 void，并且没有事件订阅服务器，那么 `raise` 方法返回委托类型的默认值。 如果没有事件订阅服务器，则调用 `raise` 方法仅返回而不会引发异常。 如果委托的返回类型不是 void，返回的是委托类型。
 
 ```cpp
 // trivial_events.cpp
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

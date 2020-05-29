@@ -1,15 +1,15 @@
 ---
-title: 移植指南：COM Spy
+title: 迁移指南：COM Spy
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
-ms.translationtype: HT
+ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451183"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368462"
 ---
-# <a name="porting-guide-com-spy"></a>移植指南：COM Spy
+# <a name="porting-guide-com-spy"></a>迁移指南：COM Spy
 
 本主题是一系列文章中的第二个主题，它演示将旧版 Visual Studio C++ 项目升级到最新版本 Visual Studio 的过程。 本主题中的示例代码是先前使用 Visual Studio 2005 编译的代码。
 
@@ -17,16 +17,18 @@ ms.locfileid: "66451183"
 
 COMSpy 是一款用于监视并记录计算机上服务组件活动的程序。 服务组件是在系统中运行的并且同一网络上的其他计算机可以使用的 COM+ 组件。 这些组件可通过“Windows 控制面板”中的“组件服务”功能来管理。
 
-### <a name="step-1-converting-the-project-file"></a>步骤 1。 转换项目文件。
+### <a name="step-1-converting-the-project-file"></a>步骤 1。 转换项目文件
+
 项目文件可轻松转换，并生成迁移报告。 我们可通过报告中的一些条目了解可能需要处理的问题。 下面是报告的一个问题（请注意，在本主题中有时会缩短错误消息以增加可读性，例如删除完整路径）：
 
 ```Output
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-在升级项目时频繁出现的一个问题是，可能需要审核项目属性对话框中的“链接器 OutputFile”设置  。 对于 Visual Studio 2010 之前的项目，如果将 OutputFile 设置为非标准值，则自动转换向导会在此设置中出现问题。 在这种情况下，输出文件的路径会设置为非标准的文件夹 XP32_DEBUG。 为了解有关此错误的详细信息，我们可以参考与 Visual Studio 2010 项目升级相关的[博客文章](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)，该升级涉及从 vcbuild 到 msbuild 的这一重大更改。 据此信息，在创建新项目时 OutputFile 设置的默认值为 `$(OutDir)$(TargetName)$(TargetExt)`，但请不要在转换过程中如此设置，因为转换项目不可能验证确保所有内容均正确  。 但是，我们尝试放入此值，看看它对 OutputFile 是否有效。  此值有效，因此可以继续操作。 如果没有特殊原因要使用非标准输出文件夹，我们建议使用标准位置。 在本例中，我们选择在迁移和升级过程中将输出位置保留为非标准位置；`$(OutDir)` 在“调试”配置中解析到 XP32_DEBUG 文件夹，而在“发布”配置中解析到 ReleaseU 文件夹   。
+升级项目时经常出现的问题之一是可能需要查看项目属性对话框中的**Linker 输出文件**设置。 对于 Visual Studio 2010 之前的项目，如果将 OutputFile 设置为非标准值，则自动转换向导会在此设置中出现问题。 在这种情况下，输出文件的路径会设置为非标准的文件夹 XP32_DEBUG。 为了解有关此错误的详细信息，我们可以参考与 Visual Studio 2010 项目升级相关的[博客文章](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)，该升级涉及从 vcbuild 到 msbuild 的这一重大更改。 据此信息，在创建新项目时 OutputFile 设置的默认值为 `$(OutDir)$(TargetName)$(TargetExt)`，但请不要在转换过程中如此设置，因为转换项目不可能验证确保所有内容均正确****。 但是，我们尝试放入此值，看看它对 OutputFile 是否有效。  此值有效，因此可以继续操作。 如果没有特殊原因要使用非标准输出文件夹，我们建议使用标准位置。 在本例中，我们选择在迁移和升级过程中将输出位置保留为非标准位置；`$(OutDir)` 在“调试”配置中解析到 XP32_DEBUG 文件夹，而在“发布”配置中解析到 ReleaseU 文件夹********。
 
-### <a name="step-2-getting-it-to-build"></a>步骤 2。 开始生成
+### <a name="step-2-getting-it-to-build"></a>步骤 2. 开始生成
+
 生成迁移项目时，会出现很多错误和警告。
 
 由于以下编译器错误，`ComSpyCtl` 不进行编译：
@@ -64,16 +66,17 @@ HRESULT IPersistStreamInit_Load(LPSTREAM pStm, const ATL_PROPMAP_ENTRY* pMap);
 error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\ComSpyCtl\.\XP32_DEBUG\ComSpyCtl.lib"error MSB3073: echo regsvr32 exec. time > ".\XP32_DEBUG\regsvr32.trg"error MSB3073:error MSB3073: :VCEnd" exited with code 3.
 ```
 
-不再需要此类后期生成注册命令。 只需删除自定义生成命令，并在链接器设置中指定为注册输出即可  。
+不再需要此类后期生成注册命令。 相反，我们只需删除自定义生成命令，并在**Linker**设置中指定以注册输出。
 
 ### <a name="dealing-with-warnings"></a>处理警告
+
 项目生成以下链接器警告。
 
 ```Output
 warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
 ```
 
-`/EDITANDCONTINUE` 有用时，`/SAFESEH` 编译器选项在调试模式中将不起作用，因此此处的解决方法是仅在“调试”配置中禁用 `/SAFESEH`  。 要在属性对话框中执行此操作，请打开产生此错误的项目的属性对话框，首先将“配置”设置为“调试”（实际为“调试 Unicode”），然后在“链接器高级”部分中将“映像具有安全异常处理程序”属性重置为“否”(`/SAFESEH:NO`)       。
+`/EDITANDCONTINUE` 有用时，`/SAFESEH` 编译器选项在调试模式中将不起作用，因此此处的解决方法是仅在“调试”配置中禁用 `/SAFESEH`****。 要在属性对话框中执行此操作，请打开产生此错误的项目的属性对话框，首先将“配置”设置为“调试”（实际为“调试 Unicode”），然后在“链接器高级”部分中将“映像具有安全异常处理程序”属性重置为“否”(`/SAFESEH:NO`)************************。
 
 编译器会警告 `PROP_ENTRY_EX` 已弃用。 这是不安全的，推荐改用 `PROP_ENTRY_TYPE_EX`。
 
@@ -112,7 +115,7 @@ for (i=0;i<lCount;i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-问题是 `i` 声明为 `UINT` 而 `lCount` 声明为 long，因此出现有符号/无符号不匹配  。 由于 `lCount` 从 `IMtsEventInfo::get_Count` 中获取值，而后者使用 long 类型且不在用户代码中，因此难以将 lCount 的类型更改为 `UINT`  。 因此，我们向代码添加强制转换。 C 样式转换适合此类数字强制转换，但推荐使用 static_cast 样式  。
+问题是 `i` 声明为 `UINT` 而 `lCount` 声明为 long，因此出现有符号/无符号不匹配****。 由于 `lCount` 从 `IMtsEventInfo::get_Count` 中获取值，而后者使用 long 类型且不在用户代码中，因此难以将 lCount 的类型更改为 `UINT`****。 因此，我们向代码添加强制转换。 C 样式的强制转换可以用于此类数字强制转换，但**static_cast**是推荐的样式。
 
 ```cpp
 for (i=0;i<static_cast<UINT>(lCount);i++)
@@ -121,7 +124,8 @@ for (i=0;i<static_cast<UINT>(lCount);i++)
 
 在以下情况下出现这些警告：在具有相同名称的参数的函数中声明了变量，从而导致可能出现代码混淆。 通过更改本地变量的名称修复了此问题。
 
-### <a name="step-3-testing-and-debugging"></a>步骤 3。 测试和调试
+### <a name="step-3-testing-and-debugging"></a>步骤 3. 测试和调试
+
 测试应用的方式是：首先运行各种菜单和命令，然后关闭应用程序。 唯一要注意的问题是关闭应用时的调试断言。 问题出现在 `CWindowImpl` 的析构函数中，该函数是 `CSpyCon` 对象的基类，也是应用程序的主要 COM 组件。 atlwin.h 的以下代码中出现了断言失败。
 
 ```cpp
@@ -139,7 +143,7 @@ virtual ~CWindowImplRoot()
 
 `hWnd` 通常在 `WindowProc` 函数中设置为零，但未如此设置，原因是为关闭窗口的 Windows 消息 (WM_SYSCOMMAND) 调用了自定义处理程序而非默认的 `WindowProc`。 自定义处理程序未将 `hWnd` 设置为零。 MFC 的 `CWnd` 类中的类似代码显示，正在销毁某个窗口时调用 `OnNcDestroy`；而且在 MFC 中，文档建议在重写 `CWnd::OnNcDestroy` 时，应调用基础 `NcDestroy` 以确保执行正确的清理操作，包括分离窗口处理程序和窗口（即将 `hWnd` 设置为零）。 因为 atlwin.h 旧版本中已存在同一断言代码，所以此断言可能也可在示例的原始版本中触发。
 
-为了测试应用的功能，我们使用 ATL 项目模板创建了“服务组件”，并选择在 ATL 项目向导中添加了 COM+ 支持  。 如果你从未使用过服务组件，可以轻松地创建和注册一个，并在系统或网络上提供该服务组件，以供其他应用使用。 COM Spy 应用旨在监视服务组件的活动，并以此帮助诊断。
+为了测试应用的功能，我们使用 ATL 项目模板创建了**服务组件**，选择在 ATL 项目向导中添加 COM+ 支持。 如果您以前没有使用过服务组件，则创建一个组件并在系统或网络上注册并可供其他应用使用并不困难。 COM Spy 应用旨在监视服务组件的活动，并以此帮助诊断。
 
 我们添加了一个类，选择了 ATL 对象并将对象名称指定为 `Dog`。 然后在 dog.h 和 dog.cpp 中添加了实现。
 
@@ -152,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-接下来，生成并注册了此应用（需要以管理员的身份运行 Visual Studio），并在 Windows 控制面板中使用“服务组件”应用程序来激活它  。 我们创建了一个 C# Windows 窗体项目，将一个按钮从工具箱拖动到此窗体，并双击它进入 Click 事件处理程序。 然后添加了下列代码以实例化 `Dog` 组件。
+接下来，我们构建并注册它（您需要将 Visual Studio 运行为管理员），并使用 Windows 控制面板中的**服务组件**应用程序激活它。 我们创建了一个 C# Windows 窗体项目，将一个按钮从工具箱拖动到此窗体，并双击它进入 Click 事件处理程序。 然后添加了下列代码以实例化 `Dog` 组件。
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)
@@ -164,7 +168,7 @@ private void button1_Click(object sender, EventArgs e)
 
 这将顺畅运行，不出现任何问题，且 COM Spy 启用运行并配置为监视 `Dog` 组件，然后将出现大量显示活动的数据。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一个示例：Spy++](../porting/porting-guide-spy-increment.md)<br/>

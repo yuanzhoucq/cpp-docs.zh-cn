@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811140"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913395"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -52,22 +54,22 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>参数
 
-*密钥*\
+*按键*\
 指向要搜索的键的指针。
 
-*base*\
+*基座*\
 指向搜索数据的基的指针。
 
-*数字*\
+*多种*\
 元素数量。
 
-*width*\
+*宽度*\
 元素的宽度。
 
-*比较*\
+*并排*\
 比较两个元素的回调函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*该键*进行比较的数组元素的指针。
 
-*上下文*\
+*快捷*\
 指向可在比较函数中访问的对象的指针。
 
 ## <a name="return-value"></a>返回值
@@ -80,17 +82,17 @@ void *bsearch_s(
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*多种*|*width*|**errno**|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
+|*键*|*base*|*并排*|*数字*|width |**errno**|
+|**Null**|any|any|any|any|**EINVAL**|
+|any|**Null**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
-|any|any|**NULL**|一个|any|**EINVAL**|
+|any|any|**Null**|一个|any|**EINVAL**|
 
 ## <a name="remarks"></a>备注
 
-**Bsearch_s**函数对*数字*元素的已排序数组执行二进制搜索，其中每个大小均为大小的*宽度*字节。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较，并返回以下指定其关系的值之一：
+**Bsearch_s**函数对*数字*元素的已排序数组执行二进制搜索，其中每个*宽度*字节大小均为大小。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较，并返回以下指定其关系的值之一：
 
-|*比较*例程返回的值|描述|
+|*比较*例程返回的值|说明|
 |-----------------------------------------|-----------------|
 |\< 0|键小于数组元素。|
 |0|键等于数组元素。|
@@ -98,13 +100,15 @@ void *bsearch_s(
 
 如果搜索的数据结构是对象的一部分，并且 compare 函数需要访问该对象的成员，则*上下文*指针可能会很有用。 *Compare*函数可以将 void 指针转换为适当的对象类型并访问该对象的成员。 添加*上下文*参数会使**bsearch_s**更安全，因为其他上下文可用于避免与使用静态变量关联的重入 bug，以使数据可供*compare*函数使用。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> 和 \<search.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -192,7 +196,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

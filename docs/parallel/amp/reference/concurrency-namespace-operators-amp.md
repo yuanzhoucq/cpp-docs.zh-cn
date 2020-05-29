@@ -2,22 +2,22 @@
 title: 并发命名空间运算符 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376290"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>并发命名空间运算符 (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
-|[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
-|[operator==](#operator_eq_eq)|
+|[操作员！](#operator_neq)|[操作员百分比](#operator_mod)|[运算符*](#operator_star)|
+|[运算符*](#operator_add)|[操作员-](#operator-)|[操作员/](#operator_div)|
+|[运算符*](#operator_eq_eq)|
 
-## <a name="operator_eq_eq"></a>operator==
+## <a name="operator"></a><a name="operator_eq_eq"></a>运算符*
 
 确定指定的参数是否相等。
 
@@ -34,19 +34,19 @@ bool operator== (
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-元组参数的秩。
+元组参数的排名。
 
 *_Lhs*<br/>
-要比较的元组之一。
+要比较的元数之一。
 
 *_Rhs*<br/>
-要比较的元组之一。
+要比较的元数之一。
 
 ### <a name="return-value"></a>返回值
 
-如果元组相等，则为**true** ;否则**为 false**。
+如果元数相等，**则为 true;** 否则，**假**。
 
-## <a name="operator_neq"></a>  operator!=
+## <a name="operator"></a><a name="operator_neq"></a>操作员！
 
 确定指定的参数是否不相等。
 
@@ -63,21 +63,21 @@ bool operator!= (
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-元组参数的秩。
+元组参数的排名。
 
 *_Lhs*<br/>
-要比较的元组之一。
+要比较的元数之一。
 
 *_Rhs*<br/>
-要比较的元组之一。
+要比较的元数之一。
 
 ### <a name="return-value"></a>返回值
 
-如果元组不相等，**则为 true** ;否则**为 false**。
+如果元结不相等，**则为 true;** 否则，**假**。
 
-## <a name="operator_add"></a>  operator+
+## <a name="operator"></a><a name="operator_add"></a>运算符*
 
-计算指定参数的按组件的和。
+计算指定参数的组件级总和。
 
 ```cpp
 template <
@@ -108,7 +108,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-元组参数的秩。
+元组参数的排名。
 
 *_Lhs*<br/>
 要添加的参数之一。
@@ -118,11 +118,11 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 
 ### <a name="return-value"></a>返回值
 
-指定参数的按组件的和。
+指定参数的组件和
 
-## <a name="operator-"></a>operator-
+## <a name="operator-"></a><a name="operator-"></a>操作员-
 
-计算指定参数之间的以组件为的差。
+计算指定参数之间的组件差异。
 
 ```cpp
 template <
@@ -153,7 +153,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-元组参数的秩。
+元组参数的排名。
 
 *_Lhs*<br/>
 要从中减去的参数。
@@ -163,11 +163,11 @@ _Tuple_type<_Rank>   operator-(
 
 ### <a name="return-value"></a>返回值
 
-指定参数之间的以组件为方差。
+指定参数之间的组件差异。
 
-## <a name="operator_star"></a>  operator*
+## <a name="operator"></a><a name="operator_star"></a>运算符*
 
-计算指定参数的按组件的积。
+计算指定参数的组件级积。
 
 ```cpp
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-元组参数的秩。
+元组参数的排名。
 
 *_Lhs*<br/>
-要相乘的元组之一。
+要乘法的元数之一。
 
 *_Rhs*<br/>
-要相乘的元组之一。
+要乘法的元数之一。
 
 ### <a name="return-value"></a>返回值
 
-指定参数的按组件的积。
+指定参数的组件级积。
 
-## <a name="operator_div"></a>  operator/
+## <a name="operator"></a><a name="operator_div"></a>操作员/
 
-计算指定参数的按分量的商。
+计算指定参数的按组件商。
 
 ```cpp
 template <
@@ -227,21 +227,21 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-元组参数的秩。
+元组参数的排名。
 
 *_Lhs*<br/>
-要划分的元组。
+要分割的元组。
 
 *_Rhs*<br/>
-要作为除数的元组。
+要除以的元组。
 
 ### <a name="return-value"></a>返回值
 
-指定参数的按组件的商。
+指定参数的组件商。
 
-## <a name="operator_mod"></a>operator%
+## <a name="operator"></a><a name="operator_mod"></a>操作员百分比
 
-按指定的第二个参数计算第一个指定参数的模数。
+计算第二个指定参数的第一个指定参数的模数。
 
 ```cpp
 template <
@@ -264,17 +264,17 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-元组参数的秩。
+元组参数的排名。
 
 *_Lhs*<br/>
-从中计算模的元组。
+计算莫杜洛的元组。
 
 *_Rhs*<br/>
-要作为模的元组。
+元组通过。
 
 ### <a name="return-value"></a>返回值
 
-第一个指定参数的结果将指定第二个指定的参数。
+第一个指定参数的结果调制第二个指定的参数。
 
 ## <a name="see-also"></a>另请参阅
 

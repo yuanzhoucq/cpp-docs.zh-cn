@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-ms.openlocfilehash: 3d89b27c32b33b917abb7fc140eebf5924142423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604dccf01b3dffc0060546bebf19d64c16ebf965
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298537"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193961"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>链接器工具警告 LNK4104
 
-导出符号 symbol 应为 PRIVATE
+符号 "symbol" 的导出应为私有
 
-`symbol`可以是以下之一：
+`symbol` 可以是以下项之一：
 
 - `DllCanUnloadNow`
 
@@ -49,4 +49,4 @@ ms.locfileid: "62298537"
 
 - `RasCustomEntryDlg`
 
-此警告生成 DLL 导入库时，将发出，而无需指定为专用模块定义文件中导出一个更高版本的函数。 一般情况下，这些函数仅由 OLE 用于导出。 将它们放置在库中导入可能会导致异常行为时错误地链接到库的程序会调用它们。 PRIVATE 关键字的详细信息，请参阅[导出](../../build/reference/exports.md)。
+在为 DLL 生成导入库时，将发出此警告，并导出上述函数之一，而不在模块定义文件中将其指定为私有。 通常，这些函数仅供 OLE 使用。 如果链接到库的程序不正确地调用它们，则将它们放入导入库可能导致异常行为。 有关 PRIVATE 关键字的详细信息，请参阅[导出](../../build/reference/exports.md)。

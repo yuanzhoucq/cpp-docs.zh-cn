@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3276
 ms.assetid: dd6b4fd2-094d-4d34-a467-a9afd59789f7
-ms.openlocfilehash: 671fda26958d50340ccc628a8d50d19ea74f7939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4037c5191c0b7316218100123f1cf1823f9d135b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382087"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201443"
 ---
 # <a name="compiler-error-c3276"></a>编译器错误 C3276
 
-keyword: __finally/finally 块中的跳转具有未定义的行为在终止处理期间
+"关键字"：跳出 __finally 在终止处理期间/finally 块具有未定义的行为
 
-此错误是与相同[C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)警告。 但是，当使用 /clr 时，这种情况不能禁用与[警告](../../preprocessor/warning.md)杂注。
+此错误与[C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)警告相同。 但是，在使用/clr 时，不能使用[警告](../../preprocessor/warning.md)杂注禁用此条件。

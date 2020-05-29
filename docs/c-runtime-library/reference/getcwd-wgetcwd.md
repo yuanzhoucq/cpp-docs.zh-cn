@@ -1,10 +1,12 @@
 ---
 title: _getcwd、_wgetcwd
-description: C 运行时库函数 _getcwd，_wgetcwd 获取当前工作目录。
-ms.date: 09/24/2019
+description: _Getcwd，_wgetcwd 获取当前工作目录。
+ms.date: 4/2/2020
 api_name:
 - _wgetcwd
 - _getcwd
+- _o__getcwd
+- _o__wgetcwd
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274630"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915739"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
@@ -67,11 +70,11 @@ wchar_t *_wgetcwd(
 路径的存储位置。
 
 *maxlen*\
-路径的最大长度（字符）： **char** for **_getcwd** ， **wchar_t**用于 **_wgetcwd**。
+**_Wgetcwd**的 **_getcwd**和**wchar_t**的路径的最大**长度（以字符为字符**）。
 
 ## <a name="return-value"></a>返回值
 
-返回一个指向*缓冲区*的指针。 **空**返回值指示错误， **Errno**设置为**ENOMEM**，指示内存不足，无法分配*maxlen*字节（当**空**参数作为*缓冲区*提供时）或**ERANGE**，指示路径长度超过*maxlen*个字符。 如果*maxlen*小于或等于零，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+返回一个指向*缓冲区*的指针。 **空**返回值指示错误， **Errno**设置为**ENOMEM**，指示内存不足，无法分配*maxlen*字节（当**空**参数作为*缓冲区*提供时）或**ERANGE**（指示路径长度超过*maxlen*个字符）。 如果*maxlen*小于或等于零，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -81,9 +84,11 @@ wchar_t *_wgetcwd(
 
 **_getcwd**返回一个字符串，该字符串表示当前工作目录的路径。 如果当前工作目录是根，则字符串以反斜杠（`\`）结尾。 如果当前工作目录为根目录之外的目录，则字符串以目录名称结尾，而不是以反斜杠结尾。
 
-**_wgetcwd**是 **_getcwd**的宽字符版本; **_wgetcwd**的*buffer*参数和返回值是宽字符字符串。 否则， **_wgetcwd**和 **_getcwd**的行为相同。
+**_wgetcwd**是 **_getcwd**的宽字符版本;**_wgetcwd**的*缓冲区*参数和返回值都是宽字符字符串。 否则 **_wgetcwd**和 **_getcwd**的行为相同。
 
-定义 **_debug**和 **_CRTDBG_MAP_ALLOC**时，对 **_getcwd**和 **_wgetcwd**的调用将替换为对 **_getcwd_dbg**和 **_wgetcwd_dbg**的调用，以允许调试内存分配。 有关详细信息，请参阅 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)。
+在定义 **_DEBUG**和 **_CRTDBG_MAP_ALLOC**时，对 **_getcwd**和 **_wgetcwd**的调用将替换为对 **_getcwd_dbg**和 **_wgetcwd_dbg**的调用，以允许调试内存分配。 有关详细信息，请参阅 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -93,12 +98,12 @@ wchar_t *_wgetcwd(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<direct.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -135,9 +140,9 @@ int main( void )
 C:\Code
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)\
-[_chdir、_wchdir](chdir-wchdir.md)\
-[_mkdir、_wmkdir](mkdir-wmkdir.md)\
+[目录控件](../../c-runtime-library/directory-control.md)\
+[_chdir，_wchdir](chdir-wchdir.md)\
+[_mkdir，_wmkdir](mkdir-wmkdir.md)\
 [_rmdir、_wrmdir](rmdir-wrmdir.md)

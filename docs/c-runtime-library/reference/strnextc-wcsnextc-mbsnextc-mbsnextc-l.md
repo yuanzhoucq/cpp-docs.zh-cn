@@ -1,11 +1,13 @@
 ---
 title: _strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strnextc
 - _mbsnextc_l
 - _mbsnextc
 - _wcsnextc
+- _o__mbsnextc
+- _o__mbsnextc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,19 +50,19 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-ms.openlocfilehash: 0cf7055c0454971c8fbab85d54d695e3e5cffdec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4017dc4f72a0072df8d0969406169a26c1da43ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947241"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919266"
 ---
 # <a name="_strnextc-_wcsnextc-_mbsnextc-_mbsnextc_l"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 
 查找字符串中的下一个字符。
 
 > [!IMPORTANT]
-> **_mbsnextc**和 **_mbsnextc_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsnextc**和 **_mbsnextc_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -81,8 +84,8 @@ unsigned int _mbsnextc_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
-源字符串。
+*字符串*<br/>
+资源字符串。
 
 *locale*<br/>
 要使用的区域设置。
@@ -99,31 +102,33 @@ unsigned int _mbsnextc_l(
 
 **安全说明** 此 API 会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc**和 **_wcsnextc**为单字节字符字符串和 **_mbsnextc**的宽字符字符串版本。 **_wcsnextc**返回*str*中下一个宽字符的整数值; **_strnextc**返回*str*中下一个单字节字符的整数值。 仅为此映射提供了 **_strnextc**和 **_wcsnextc** ，否则不应使用它。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
+**_strnextc**和 **_wcsnextc**是 **_mbsnextc**的单字节字符字符串和宽字符字符串版本。 **_wcsnextc**返回*str*中下一个宽字符的整数值;**_strnextc**返回*str*中下一个单字节字符的整数值。 仅为此映射提供 **_strnextc**和 **_wcsnextc** ，因此不应使用。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsnextc_l**是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbsnextc_l**相同，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbsnextc**|\<mbstring.h>|
 |**_mbsnextc_l**|\<mbstring.h>|
 |**_strnextc**|\<tchar.h>|
 |**_wcsnextc**|\<tchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec、_wcsdec、_mbsdec、_mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc、_wcsinc、_mbsinc、_mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

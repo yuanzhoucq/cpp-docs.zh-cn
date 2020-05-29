@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 31998cf77e3f3cfdc6bc19ad2fc57a50da77e0f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516342"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181988"
 ---
 # <a name="generics--ccli-and-ccx"></a>泛型（C++/CLI 和 C++/CX）
 
@@ -54,6 +54,6 @@ ms.locfileid: "65516342"
 [如何：使用 for each 循环访问泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 对泛型集合使用 [for each、in](../dotnet/for-each-in.md) 关键字。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

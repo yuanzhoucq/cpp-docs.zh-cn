@@ -1,38 +1,38 @@
 ---
-title: 记录集：添加记录大容量 (ODBC)
+title: 记录集：批量添加记录 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, adding records
 - recordsets, adding records
 - bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-ms.openlocfilehash: a2c3eab8bb4c0e8db76fceb5a2dafd16a4a07079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f561cb0275933a973e97ef0518148e81e14a0234
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213013"
 ---
-# <a name="recordset-adding-records-in-bulk-odbc"></a>记录集：添加记录大容量 (ODBC)
+# <a name="recordset-adding-records-in-bulk-odbc"></a>记录集：批量添加记录 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
-MFC [CRecordset](../../mfc/reference/crecordset-class.md)类具有了新的优化，当向表中大容量添加新记录时，提高了效率。
+MFC [CRecordset](../../mfc/reference/crecordset-class.md)类提供了一种新的优化，可在将新记录批量添加到表时提高效率。
 
 > [!NOTE]
-> 本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用批量取行，请参阅[记录集：批量提取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-新选项*dwOptions*参数[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)成员函数`optimizeBulkAdd`，可以提高性能，而不会调用连续添加多个记录时`Requery`或`Close`。 脏之前第一个字段`Update`调用标记为已更新的后续`AddNew` / `Update`调用。
+当你在不调用 `Requery` 或 `Close`的情况下连续添加多条记录时，为[CRecordset：： Open](../../mfc/reference/crecordset-class.md#open)成员函数 `optimizeBulkAdd`的*dwOptions*参数提供了一个新选项。 只有在第一次 `Update` 调用之前已更新的字段将被标记为 "已更新"，之后 `AddNew`/`Update` 调用。
 
-如果正在使用数据库类才能利用`::SQLSetPos`ODBC API 函数用于添加、 编辑和删除记录，此优化是不必要。
+如果使用数据库类来利用 `::SQLSetPos` ODBC API 函数来添加、编辑和删除记录，则不需要此优化。
 
-如果加载 ODBC 游标库或 ODBC 驱动程序不支持添加、 编辑和删除通过`::SQLSetPos`，这种优化应提高大容量增加了性能。 若要启用这种优化，设置*dwOptions*中的参数`Open`调用到以下记录集：
+如果已加载 ODBC 游标库，或者 ODBC 驱动程序不支持通过 `::SQLSetPos`添加、编辑和删除，则此优化应该会提高大容量添加性能。 若要启用此优化，请将 `Open` 调用中的*dwOptions*参数设置为以下内容：
 
 ```
 appendOnly | optimizeBulkAdd
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>

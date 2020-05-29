@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级1） C4489
+title: 编译器警告（等级 1）C4489
 ms.date: 11/04/2016
 f1_keywords:
 - C4489
 helpviewer_keywords:
 - C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-ms.openlocfilehash: 78ceecb5918ccb74bd61afe62bbf8b542d585f81
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: e9811e9f9c17463fdcd550ffd82af4f81a40bb34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966198"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186603"
 ---
-# <a name="compiler-warning-level-1-c4489"></a>编译器警告（等级1） C4489
+# <a name="compiler-warning-level-1-c4489"></a>编译器警告（等级 1）C4489
 
 "说明符"：不允许在接口方法 "method" 上使用;重写说明符只允许在 ref 类和值类方法上使用
 

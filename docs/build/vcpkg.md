@@ -4,12 +4,12 @@ description: vcpkg 是一种命令行包管理器，可极大简化 Windows、Ma
 ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
+ms.openlocfilehash: 9dbeba1f55164ace01fb8bb26155dd9319ba62db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869713"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335398"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -128,7 +128,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 可使用适用于 Linux 的 Windows 子系统（也称为 WSL）在 Windows 计算机上生成 Linux 二进制文件。 按照说明[在 Windows 10 上设置 WSL](/windows/wsl/install-win10)，并使用[适用于 Linux 的 Visual Studio 扩展](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)进行配置。 可以将所有针对 Windows 和 Linux 生成的库放入同一文件夹中。 可以从 Windows 和 WSL 访问它们。
 
-## <a name="export_binaries_per_project"></a>导出已编译的二进制文件和标头
+## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a>导出已编译的二进制文件和标头
 
 让团队中的每位成员都下载和生成公用库是一种效率较低的做法。 可以单独让一位团队成员使用 vcpkg export 命令创建二进制文件和标头的通用 zip 文件，或者创建 NuGet 包  。 然后，可以轻松地将它与其他团队成员共享。
 
@@ -136,7 +136,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update  。 准备好将端口集合更新到最新版本的公共目录后，请运行 vcpkg upgrade 命令  。 它会自动下载并重新生成已过期的任意或所有已安装的库。
 
- 默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 若要真正升级这些库，请使用 --no-dry-run 选项  。
+默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级  。 若要真正升级这些库，请使用 --no-dry-run 选项  。
 
 ```cmd
   vcpkg upgrade --no-dry-run

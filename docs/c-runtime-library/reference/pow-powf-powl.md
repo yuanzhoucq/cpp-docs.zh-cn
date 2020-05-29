@@ -1,10 +1,12 @@
 ---
 title: pow、powf、powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950291"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916799"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
@@ -68,7 +71,7 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 Base。
 
-*y*<br/>
+*误差*<br/>
 Exponent。
 
 ## <a name="return-value"></a>返回值
@@ -87,17 +90,19 @@ Exponent。
 
 **pow**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-由于C++允许重载，因此可以调用**pow**的任何不同重载。 在 C 程序中， **pow**始终采用两个**双精度**值并返回一个**双精度**值。
+由于 c + + 允许重载，因此可以调用**pow**的任何不同重载。 在 C 程序中， **pow**始终采用两个**双精度**值并返回一个**双精度**值。
 
 `pow(int, int)` 将不再可用。 如果使用此重载，编译器可能会发出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免此问题，请将第一个参数转换为**double**、 **float**或**long** **double**。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
+|例程|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
 |**pow**、 **powf**、 **powl**|\<math.h>|\<math.h> 或 \<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -120,7 +125,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md) <br/>
 [exp、expf、expl](exp-expf.md) <br/>

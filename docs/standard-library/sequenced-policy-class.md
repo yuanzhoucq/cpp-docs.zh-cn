@@ -2,17 +2,17 @@
 title: sequenced_policy 类
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269189"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444914"
 ---
-# <a name="sequencedpolicy-class"></a>sequenced_policy 类
+# <a name="sequenced_policy-class"></a>sequenced_policy 类
 
-作为一个唯一的类型用于区分重载的并行算法，并且需要并行算法的执行不可能会并行化。
+用作消除并行算法重载的唯一类型，并要求并行算法的执行不会并行化。
 
 ## <a name="syntax"></a>语法
 
@@ -22,4 +22,4 @@ class execution::sequenced_policy;
 
 ## <a name="remarks"></a>备注
 
-使用并行算法的执行期间`execution::sequenced_policy`策略，如果未捕获的异常，通过退出元素访问函数的调用`terminate()`应被调用。
+在使用 `execution::sequenced_policy` 策略执行并行算法期间，如果通过未捕获的异常退出元素访问函数，则应调用 `terminate()`。

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169911"
 ---
 # <a name="contents-of-a-makefile"></a>生成文件的内容
 
@@ -30,10 +30,10 @@ ms.locfileid: "62294091"
 
 ## <a name="remarks"></a>备注
 
-可以使用生成文件中其他功能[通配符](wildcards-and-nmake.md)，[长文件名](long-filenames-in-a-makefile.md)，[注释](comments-in-a-makefile.md)，以及[特殊字符](special-characters-in-a-makefile.md)。
+可在生成文件中使用的其他功能包括[通配符](wildcards-and-nmake.md)、[长文件名](long-filenames-in-a-makefile.md)、[注释](comments-in-a-makefile.md)和[特殊字符](special-characters-in-a-makefile.md)。
 
 有关示例，请参阅[示例生成文件](sample-makefile.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [NMAKE 参考](nmake-reference.md)

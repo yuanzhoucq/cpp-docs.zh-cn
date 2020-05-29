@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4657
 ms.assetid: eb750050-cea6-4ead-b80c-d5dcd4971cfc
-ms.openlocfilehash: 92415d1d17c3342dbb721aa850f37f4dfabd1406
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cc049d99339a6f19ca86cd5c7a10f062a1451a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375686"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199494"
 ---
 # <a name="compiler-warning-level-1-c4657"></a>编译器警告（等级 1）C4657
 
@@ -25,10 +25,10 @@ ms.locfileid: "62375686"
 
 1. 将数据类型改回其在发生错误前的状态。
 
-1. 在“调试”  菜单中选择“应用代码更改” 。
+1. 在“调试” 菜单中选择“应用代码更改”。
 
 ### <a name="to-remove-this-error-without-changing-your-source-code"></a>若要在不更改源代码的情况下删除此错误
 
-1. 在“调试”  菜单上，选择“停止调试” 。
+1. 在“调试” 菜单上，选择“停止调试”。
 
-1. 在“生成”  菜单上，选择“生成” 。
+1. 在“生成” 菜单上，选择“生成”。

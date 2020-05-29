@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6205
 ms.assetid: fd28e7c9-a463-4a9c-a863-cc9e75315550
-ms.openlocfilehash: cdcaa714836f77d6238cc790457a5422cc825889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb9c646329a4db224b853bea91e69576bee04be6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173629"
 ---
 # <a name="math-error-m6205"></a>数学错误 M6205
 
-function: _TLOSS 错误
+"function"： _TLOSS 错误
 
-总丢失基数 （精度） 发生。
+出现总损失（精度）。
 
-此错误 cos，可能会导致的给定的操作数的 sin，非常大或 tan，因为该操作数必须减小为 0 到 2 之间的数字 * pi。
+此错误的原因可能是将一个非常大的数字作为 sin、cos 或 tan 的操作数提供，因为操作数必须缩减为介于0到 2 * pi 之间的数字。

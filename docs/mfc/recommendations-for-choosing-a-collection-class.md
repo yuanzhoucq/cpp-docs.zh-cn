@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53a4eb3e30048d9dc82722d912a026d63a87586d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371750"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>关于选择集合类的建议
 
@@ -47,19 +47,19 @@ ms.locfileid: "62218607"
 
 - 列 6 描述了每个形状是否允许重复元素。
 
-### <a name="_core_collection_shape_features"></a>  Collection Shape Features（集合形状特征）
+### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a>集合形状特征
 
-|形状|Ordered|编制索引|插入元素|搜索指定的元素|重复元素|
+|形状|已订购|已编制索引|插入元素|搜索指定的元素|重复元素|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|列表|是|否|快速|缓慢|是|
-|数组|是|根据 int|缓慢|缓慢|是|
+|列出|是|否|快速|较慢|是|
+|Array|是|根据 int|较慢|较慢|是|
 |映射|否|根据键|快速|快速|否（键）是（值）|
 
 下表 [Characteristics of MFC Collection Classes（MFC 集合类的特征）](#_core_characteristics_of_mfc_collection_classes)总结了特定 MFC 集合类的其他重要特征，可作为选择的指南。 你的选择可以取决于以下因素：类是否基于 C++ 模板，它的元素是否可通过 MFC 的文档 [序列化](../mfc/serialization-in-mfc.md) 机制进行序列化，它的元素是否可通过 MFC 的诊断转储机制进行转储，类是否是安全类型（也就是说，你是否能保证元素的类型存储在且检索自基于类的集合上）。
 
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Characteristics of MFC Collection Classes（MFC 集合类的特征）
+### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a>MFC集合类的特点
 
-|类|使用 C++<br /><br /> 模板|可以<br /><br /> 已序列化|可以<br /><br /> 转储|是<br /><br /> Type-Safe — 类型安全|
+|类|使用 C++<br /><br /> 模板|可以<br /><br /> 已序列化|可以<br /><br /> 转储|Is<br /><br /> Type-Safe — 类型安全|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|是|是 1|是 1|否|
 |`CByteArray`|否|是|是|是 3|
@@ -85,13 +85,13 @@ ms.locfileid: "62218607"
 |`CUIntArray`|否|否|是|是 3|
 |`CWordArray`|否|是|是|是 3|
 
-1. 要序列化，你必须明确地调用集合对象的 `Serialize` 函数；要转储，你必须明确地调用其 `Dump` 函数。 不能使用表单 `ar << collObj` 来进行序列化或使用表单 `dmp` `<< collObj` 来进行转储。
+1. 要序列化，你必须明确地调用集合对象的 `Serialize` 函数；要转储，你必须明确地调用其 `Dump` 函数。 不能使用窗体`ar << collObj`序列化或要转储的窗体`dmp``<< collObj`。
 
 2. 可序列化性取决于基础集合类型。 例如，如果类型化指针数组基于 `CObArray`，则可序列化；如果基于 `CPtrArray`，则不可序列化。 一般情况下，“Ptr”类不能进行序列化。
 
 3. 如果在此列中标记为“是”，若你按要求使用它，则非模板集合类为类型安全。 例如，如果你在 `CByteArray`中存储字节，则数组为类型安全。 但如果你将其用于存储字符，则其类型安全性稍微不确定。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [集合](../mfc/collections.md)<br/>
 [基于模板的类](../mfc/template-based-classes.md)<br/>

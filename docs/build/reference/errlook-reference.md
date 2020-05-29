@@ -5,34 +5,34 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d005f37af0c406c45ef2da52fce2b578c6e864a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271770"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169027"
 ---
 # <a name="errlook-reference"></a>ERRLOOK 参考
 
-可从工具菜单访问的 ERRLOOK 实用工具**错误查找**，检索系统错误消息或模块错误消息根据输入的值。 ERRLOOK 检索错误消息文本自动如果拖放到 Visual Studio 调试器从十六进制或十进制值**值**编辑控件。 您还可以输入一个值，通过键入**值**编辑控件或通过从剪贴板粘贴，然后单击**查找**。
+ERRLOOK 实用工具（可从 "工具" 菜单作为 "**错误查找**" 提供）根据输入的值检索系统错误消息或模块错误消息。 如果将十六进制或小数值从 Visual Studio 调试器拖放到**值**编辑控件中，ERRLOOK 将自动检索错误消息文本。 还可以通过在 "**值**编辑" 控件中键入值或从剪贴板中粘贴值并单击 "**查找**"，来输入值。
 
-快捷键复制 (CTRL + C)、 剪切 (CTRL + X) 和粘贴 (CTRL + V) 用于两者**值**并**错误消息**如果首先突出显示的文本编辑控件。
+如果首次突出显示文本，则 "复制" （CTRL + C）、"剪切" （ctrl + X）和 "粘贴" （CTRL + V）的快捷键适用于 "**值**" 和 "**错误消息**" 编辑控件。
 
 ## <a name="in-this-section"></a>本节内容
 
 [“值”编辑控件](value-edit-control.md)<br/>
-介绍 ERRLOOK 中的值编辑控件。
+描述 ERRLOOK 中的值编辑控件。
 
 [“错误消息”编辑控件](error-message-edit-control.md)<br/>
-描述中 ERRLOOK 的错误消息编辑控件。
+描述 ERRLOOK 中的错误消息编辑控件。
 
 [“模块”按钮](modules-button.md)<br/>
-介绍在 ERRLOOK 模块按钮。
+描述 ERRLOOK 中的 "模块" 按钮。
 
 [“查找”按钮](look-up-button.md)<br/>
-介绍 ERRLOOK 中的查找按钮。
+描述 ERRLOOK 中的 "查找" 按钮。
 
 ## <a name="related-sections"></a>相关章节
 
 [其他 MSVC 生成工具](c-cpp-build-tools.md)<br/>
-提供指向探讨 C /C++生成视觉对象中提供的工具C++。
+提供一些链接，这些链接指向讨论C++视觉对象C++中提供的 C/生成工具的主题。

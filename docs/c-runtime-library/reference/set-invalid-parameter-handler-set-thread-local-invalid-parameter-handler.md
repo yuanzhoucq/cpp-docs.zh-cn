@@ -1,9 +1,11 @@
 ---
 title: _set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
+- _o__set_invalid_parameter_handler
+- _o__set_thread_local_invalid_parameter_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: d2e8dab92c70189533656bac359c794de2ad8002
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 404a865cceb5e4014969b15e9877761187af777b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857770"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913997"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
 
@@ -81,13 +84,15 @@ void _invalid_parameter(
 
 *Expression*参数是引发错误的参数表达式的宽字符串表示形式。 *函数*参数是接收无效自变量的 CRT 函数的名称。 *File*参数是包含该函数的 CRT 源文件的名称。 *Line*参数是该文件中的行号。 最后一个自变量是保留的。 除非使用 CRT 库的调试版本，否则所有参数的值都为**NULL** 。
 
-## <a name="requirements"></a>需求
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
-|例程所返回的值|必需的标头|
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
 |-------------|---------------------|
 |**_set_invalid_parameter_handler**， **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
 
-**_Set_invalid_parameter_handler**和 **_Set_thread_local_invalid_parameter_handler**函数是 Microsoft 特定的。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_Set_invalid_parameter_handler**和 **_Set_thread_local_invalid_parameter_handler**函数是 Microsoft 特定的。 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

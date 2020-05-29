@@ -1,6 +1,6 @@
 ---
 title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstat64
 - _stati64
@@ -14,6 +14,14 @@ api_name:
 - _stat64
 - _stat64i32
 - _wstat32i64
+- _o__stat32
+- _o__stat32i64
+- _o__stat64
+- _o__stat64i32
+- _o__wstat32
+- _o__wstat32i64
+- _o__wstat64
+- _o__wstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -109,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 5a6e78c0d98871e4becbb5e7411d9c819e9d0596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 607a7aff3acf923e0dd62e0dc332283f66b436b1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957952"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918313"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -178,7 +187,7 @@ int _wstat64i32(
 *path*<br/>
 指向字符串的指针，该字符串包含现有文件或目录的路径。
 
-*buffer*<br/>
+*宽限*<br/>
 指向存储结果的结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -187,35 +196,37 @@ int _wstat64i32(
 
 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
-如果文件的日期戳晚于1970年1月1日午夜、23:59:59 到12月 3000 31 日，则为，除非使用 **_stat32**或 **_wstat32**，或者定义 **_USE_32BIT_TIME_T**，在这种情况下，日期可以是仅表示为23:59:59 年1月18日2038（UTC）。
+如果文件的日期戳晚于1970年1月1日午夜、23:59:59 到12月 3000 31 日之前的日期戳，则为，除非你使用 **_stat32**或 **_wstat32**，或者定义了 **_USE_32BIT_TIME_T**，在这种情况下，日期只能在年1月 2038 18 日23:59:59 之前表示。
 
 ## <a name="remarks"></a>备注
 
 **_Stat**函数获取有关*路径*指定的文件或目录的信息，并将其存储在*缓冲区*指向的结构中。 **_stat**会根据需要自动处理多字节字符串参数，根据当前使用的多字节代码页识别多字节字符序列。
 
-**_wstat**是 **_stat**的宽字符版本; **_wstat**的*path*参数是宽字符字符串。 **_wstat**和 **_stat**的行为相同，只不过 **_wstat**不处理多字节字符字符串。
+**_wstat**是 **_stat**的宽字符版本;**_wstat**的*path*参数是宽字符字符串。 **_wstat**和 **_stat**的行为相同，只是 **_wstat**不处理多字节字符字符串。
 
 这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀（**32**或**64**）表示所用时间类型的大小;第二个后缀是**i32**或**i64**，指示文件大小是否表示为32位或64位整数。
 
-**_stat**等效于 **_stat64i32**，而**struct** **_stat**包含64位时间。 除非定义了 **_USE_32BIT_TIME_T** ，这种情况下旧行为有效; **_stat**使用32位时间，**结构** **_stat**包含32位时间。 对于 **_stati64**，情况也是如此。
+**_stat**等效于 **_stat64i32**，而**struct** **_stat**包含64位时间。 除非定义 **_USE_32BIT_TIME_T** ，这种情况下旧行为有效;**_stat**使用32位时间，**结构** **_stat**包含32位时间。 **_Stati64**也是如此。
 
 > [!NOTE]
-> **_wstat**不适用于 Windows Vista 符号链接。 在这些情况下， **_wstat**将始终报告文件大小为0。 **_stat**可正常使用符号链接。
+> **_wstat**不适用于 Windows Vista 符号链接。 在这些情况下， **_wstat**将始终报告文件大小为0。 **_stat**可以正常使用符号链接。
 
 此函数验证其参数。 如果*路径*或*缓冲区*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>_stat 时间类型和文件长度类型变体
 
 |函数|已定义 _USE_32BIT_TIME_T？|时间类型|文件长度类型|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat**、 **_wstat**|未定义|64 位|32 位|
-|**_stat**、 **_wstat**|已定义|32 位|32 位|
-|**_stat32**、 **_wstat32**|不受宏定义影响|32 位|32 位|
-|**_stat64**、 **_wstat64**|不受宏定义影响|64 位|64 位|
-|**_stati64**、 **_wstati64**|未定义|64 位|64 位|
-|**_stati64**、 **_wstati64**|已定义|32 位|64 位|
-|**_stat32i64**、 **_wstat32i64**|不受宏定义影响|32 位|64 位|
-|**_stat64i32**、 **_wstat64i32**|不受宏定义影响|64 位|32 位|
+|**_stat**， **_wstat**|未定义|64 位|32 位|
+|**_stat**， **_wstat**|已定义|32 位|32 位|
+|**_stat32**， **_wstat32**|不受宏定义影响|32 位|32 位|
+|**_stat64**， **_wstat64**|不受宏定义影响|64 位|64 位|
+|**_stati64**， **_wstati64**|未定义|64 位|64 位|
+|**_stati64**， **_wstati64**|已定义|32 位|64 位|
+|**_stat32i64**， **_wstat32i64**|不受宏定义影响|32 位|64 位|
+|**_stat64i32**， **_wstat64i32**|不受宏定义影响|64 位|32 位|
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -235,8 +246,8 @@ int _wstat64i32(
 | **st_atime** | 上次访问文件的时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。 |
 | **st_ctime** | 文件的创建时间。 在 NTFS 上有效，但在 FAT 格式的磁盘驱动器上无效。 |
 | **st_dev** | 包含文件的磁盘的驱动器号（与**st_rdev**相同）。 |
-| **st_ino** | 文件（特定于 UNIX）的信息节点（ **inode**）的编号。 在 UNIX 文件系统上， **inode**描述文件日期和时间戳、权限和内容。 当文件硬链接到另一文件时，它们共享相同的**inode**。 St_ino**在 FAT**、HPFS或 NTFS 文件系统中没有任何意义。 |
-| **st_mode** | 文件模式信息的位掩码。 如果*路径*指定了目录，则设置 **_S_IFDIR**位;如果*path*指定普通文件或设备，则设置 **_S_IFREG**位。 根据文件的权限模式设置用户读/写位；根据文件扩展名设置用户执行位。 |
+| **st_ino** | 文件（特定于 UNIX）的信息节点（ **inode**）的编号。 在 UNIX 文件系统上， **inode**描述文件日期和时间戳、权限和内容。 当文件硬链接到另一文件时，它们共享相同的**inode**。 **St_ino**， **inode**在 FAT、HPFS 或 NTFS 文件系统中没有任何意义。 |
+| **st_mode** | 文件模式信息的位掩码。 如果*路径*指定目录，则设置 **_S_IFDIR**位;如果*path*指定普通文件或设备，则设置 **_S_IFREG**位。 根据文件的权限模式设置用户读/写位；根据文件扩展名设置用户执行位。 |
 | **st_mtime** | 上次修改文件的时间。 |
 | **st_nlink** | 在非 NTFS 文件系统上始终为 1。 |
 | **st_rdev** | 包含文件的磁盘的驱动器号（与**st_dev**相同）。 |
@@ -247,12 +258,12 @@ int _wstat64i32(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_stat**、 **_stat32**、 **_stat64**、 **_stati64**、 **_stat32i64**、 **_stat64i32**|\<sys/types.h> 后跟 \<sys/stat.h>|\<errno.h>|
 |**_wstat**、 **_wstat32**、 **_wstat64**、 **_wstati64**、 **_wstat32i64**、 **_wstat64i32**|\<sys/types.h> 后跟 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -317,7 +328,7 @@ Drive         : C:
 Time modified : Thu Feb 07 14:39:36 2002
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_access、_waccess](access-waccess.md)<br/>

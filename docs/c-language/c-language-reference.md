@@ -11,15 +11,15 @@ helpviewer_keywords:
 - language reference, C
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
 ms.openlocfilehash: 9c5417ff3ced770c8dc8a70932d70d9d96b4331d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326659"
 ---
 # <a name="c-language-reference"></a>C 语言参考
 
-《C 语言参考》介绍了在 Microsoft C 中实现的 C 编程语言。本书的组织基于 ANSI C 标准（有时称为 C89）以及关于 ANSI C 标准的 Microsoft 扩展的其他材料。
+《C 语言参考》  介绍了在 Microsoft C 中实现的 C 编程语言。本书的组织基于 ANSI C 标准（有时称为 C89）以及关于 ANSI C 标准的 Microsoft 扩展的其他材料。
 
 - [《C 语言参考》的组织](../c-language/organization-of-the-c-language-reference.md)
 

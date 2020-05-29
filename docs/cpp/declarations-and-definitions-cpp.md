@@ -2,12 +2,12 @@
 title: 声明和定义（C++）
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301543"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077204"
 ---
 # <a name="declarations-and-definitions-c"></a>声明和定义（C++）
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-第5行声明了 `main` 函数。 在第7行，已声明并*初始化*名为 `pi` 的**常量**变量。 在第8行，使用函数 `f`生成的值来声明和初始化 `i` 整数。 由于第3行上有*前向声明*，因此该名称 `f` 对编译器可见。 
+第5行声明了 `main` 函数。 在第7行，已声明并*初始化*名为 `pi` 的**常量**变量。 在第8行，使用函数 `f`生成的值来声明和初始化 `i` 整数。 由于第3行上有*前向声明*，因此该名称 `f` 对编译器可见。
 
-在第9行，声明一个名为 `C` `obj` 类型为的变量。 但是，此声明会引发错误，因为 `C` 在程序的后面不会声明，也不会被转发。 若要修复此错误，你可以在 `main` 之前移动 `C` 的整个*定义*，或者为其添加前向声明。 此行为不同于其他语言（如C#），可以在这些语言中的声明点之前使用它们。 
+在第9行，声明一个名为 `C` `obj` 类型为的变量。 但是，此声明会引发错误，因为 `C` 在程序的后面不会声明，也不会被转发。 若要修复此错误，你可以在 `main` 之前移动 `C` 的整个*定义*，或者为其添加前向声明。 此行为不同于其他语言（如C#），可以在这些语言中的声明点之前使用它们。
 
 在第10行，声明一个名为 `std::string` `str` 类型为的变量。 名称 `std::string` 可见，因为它是在 `string`[头文件](header-files-cpp.md)中引入的，该文件将合并到第1行的源文件中。 `std` 是声明 `string` 类的命名空间。
 
@@ -94,7 +94,7 @@ char *strchr( const char *Str, const char Target );
 
 一个C++程序可能包含多个[编译单元](header-files-cpp.md)。 若要声明在单独的编译单元中定义的实体，请使用[extern](extern-cpp.md)关键字。 声明中的信息足以满足编译器需求，但如果在链接步骤中找不到实体的定义，则链接器将引发错误。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 [存储类](storage-classes-cpp.md)<br/>
 [const](const-cpp.md)<br/>

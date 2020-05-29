@@ -1,9 +1,10 @@
 ---
 title: _fpclass、_fpclassf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fpclass
 - _fpclassf
+- _o__fpclass
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914847"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -65,7 +67,7 @@ int _fpclassf(
 
 **_Fpclass**和 **_fpclassf**函数返回一个整数值，该值指示参数*x*的浮点分类。 分类可能具有 \<float.h> 中定义的下列值之一。
 
-|{2&gt;值&lt;2}|描述|
+|值|说明|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|信令 NaN|
 |**_FPCLASS_QNAN**|静默 NaN|
@@ -82,7 +84,9 @@ int _fpclassf(
 
 **_Fpclass**和 **_Fpclassf**函数是 Microsoft 特定的。 它们类似于 [fpclassify](fpclassify.md)，但返回有关参数的更多详情信息。 仅当为 x64 平台编译时， **_fpclassf**函数才可用。
 
-## <a name="requirements"></a>需求
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
+## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|

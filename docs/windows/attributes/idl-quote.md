@@ -1,21 +1,21 @@
 ---
-title: idl_quote (C++ COM 属性)
+title: idl_quote （C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448524"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168024"
 ---
-# <a name="idlquote"></a>idl_quote
+# <a name="idl_quote"></a>idl_quote
 
-可使用视觉对象的当前版本中不支持的 IDL 构造C++并将它们传递到生成的.idl 文件。
+允许你使用当前版本的视觉对象C++不支持的 IDL 构造，并将其传递到生成的 .idl 文件。
 
 ## <a name="syntax"></a>语法
 
@@ -23,18 +23,18 @@ ms.locfileid: "65448524"
 [ idl_quote(text) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*文本*<br/>
-你想在 Microsoft 的属性名称C++编译器将通过传递到生成的.idl 文件，而不返回编译器错误。
+*text*<br/>
+您希望 Microsoft C++编译器传递到生成的 .idl 文件的属性名称，但不会返回编译器错误。
 
 ## <a name="remarks"></a>备注
 
-如果**idl_quote** C++属性使用的独立特性 （与右括号后面的分号），然后*文本*原样合并的.idl 文件中放置。 如果**idl_quote**使用的符号*文本*放在该符号的属性块内。
+如果**idl_quote** C++特性用作独立特性（在右括号后带有分号），则*文本*将按原样放置在合并的 .idl 文件中。 如果在符号上使用**idl_quote** ，则将*文本*置于该符号的特性块内。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何可以指定不支持的属性 (使用**在**，这受支持) 以及如何定义和使用未定义的.idl 构造：
+下面的代码演示如何指定不支持的属性（在支持的**中**使用）以及如何定义和使用未定义的 .idl 构造：
 
 ```cpp
 // cpp_attr_ref_idl_quote.cpp
@@ -69,7 +69,7 @@ __interface IStatic{
 };
 ```
 
-此代码会导致`MYFLOT`并`MYDUB`并*文本*要置于生成的.idl 文件中的项。 *名称*参数将强制*文本*在引用的任何操作之前放置*名称*生成的.idl 文件中。 *依赖项*参数强制依赖关系列表定义之前放置*文本*生成的.idl 文件中。
+此代码会导致在生成的 .idl 文件中放置 `MYFLOT` 和 `MYDUB` 以及*文本*项。 *Name*参数强制在生成的 .idl 文件中引用*名称*的任何内容之前放置*文本*。 *依赖项*参数强制在生成的 .idl 文件中的*文本*前放置依赖项列表定义。
 
 ## <a name="requirements"></a>要求
 
@@ -79,12 +79,12 @@ __interface IStatic{
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [独立特性](stand-alone-attributes.md)

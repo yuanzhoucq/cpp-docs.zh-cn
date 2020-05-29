@@ -1,11 +1,15 @@
 ---
 title: atof、_atof_l、_wtof、_wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939570"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909113"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -81,7 +86,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 要转换的字符串。
 
 *locale*<br/>
@@ -101,13 +106,15 @@ double _wtof_l(
 
 **Atof**和 **_wtof**的*str*参数具有以下形式：
 
-[*空格*][*sign*][*数字*][ __.__ *数字*][{**e** &#124; **e** } [*sign*]*数字*]
+[*空格*][*sign*][*数字*][__.__*数字*][{**e** &#124; **e** } [*sign*]*数字*]
 
 *空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个十进制数字。 如果小数点前没有数字，则小数点后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个引导字母（**e**或**e**）和一个有符号的十进制整数。
 
 这些函数的 UCRT 版本不支持 Fortran 样式（**d**或**d**）指数字母的转换。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
 
-使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的*区域设置*参数而不是当前区域设置。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的*区域设置*参数而不是当前区域设置。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -121,7 +128,7 @@ double _wtof_l(
 |例程|必需的标头|
 |------------------|---------------------|
 |**atof**、 **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
-|**_wtof**、 **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**_wtof**， **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
@@ -174,13 +181,13 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

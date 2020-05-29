@@ -1,11 +1,13 @@
 ---
 title: ispunct、iswpunct、_ispunct_l、_iswpunct_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ispunct
 - _iswpunct_l
 - iswpunct
 - _ispunct_l
+- _o_ispunct
+- _o_iswpunct
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: 54c51c612cf3b491b49d7e141df34ed5b4415520
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d0585e9a80919c63dd9aa650dc1544e95569bc8b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953693"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916683"
 ---
 # <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct、iswpunct、_ispunct_l、_iswpunct_l
 
@@ -68,7 +71,7 @@ int _iswpunct_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要测试的整数。
 
 *locale*<br/>
@@ -78,7 +81,7 @@ int _iswpunct_l(
 
 如果*c*是标点符号的特定表示形式，则每个例程将返回非零值。 对于不是空格字符的任何可打印字符或**isalnum**不为零的字符， **ispunct**将返回一个非零值。 **iswpunct**为任何可打印宽字符返回非零值，该字符既不是空格宽字符，也不是宽字符， **iswalnum**不为零。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-**Ispunct**函数的测试条件的结果取决于区域设置的**LC_CTYPE**类别设置;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Ispunct**函数的测试条件的结果取决于区域设置的**LC_CTYPE**类别设置;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 没有 **_l**后缀的这些函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**ispunct**和 **_ispunct_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
@@ -88,19 +91,23 @@ int _iswpunct_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_** **istpunct**|**ispunct**|[_ismbcpunct](ismbcgraph-functions.md)|**iswpunct**|
 
+## <a name="remarks"></a>备注
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**ispunct**|\<ctype.h>|
 |**iswpunct**|\<ctype.h 1> 或 \<wchar.h 1>|
 |**_ispunct_l**|\<ctype.h>|
 |**_iswpunct_l**|\<ctype.h 1> 或 \<wchar.h 1>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

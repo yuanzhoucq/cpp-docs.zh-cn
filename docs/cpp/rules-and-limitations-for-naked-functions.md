@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857302"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178946"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>裸函数的规则和限制
 
@@ -33,7 +33,7 @@ ms.locfileid: "74857302"
 
 - 当用[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译时，将忽略**naked**关键字。
 
-- 有关[__fastcall](../cpp/fastcall.md)裸函数，只要对某个寄存器自变量的 C/C++ 代码中的引用，prolog 代码应将存储到该变量的堆栈位置寄存器的值。 例如：
+- 对于[__fastcall](../cpp/fastcall.md)裸函数，只要 C/C++ code 中有一个寄存器参数的引用，prolog 代码就应将该寄存器的值存储到该变量的堆栈位置。 例如：
 
 ```cpp
 // nkdfastcl.cpp

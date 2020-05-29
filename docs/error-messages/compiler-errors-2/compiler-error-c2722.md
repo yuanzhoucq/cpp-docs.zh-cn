@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2722
 ms.assetid: 4cc2c7fa-cb12-4bcf-9df1-6d627ef62973
-ms.openlocfilehash: 4274ac6ec33e0176f998fcf5a2b3efd570a4009f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7426df1970dee58cd4363ee345e2286165e375b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383030"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202157"
 ---
 # <a name="compiler-error-c2722"></a>编译器错误 C2722
 
-:: 运算符： 非法的后缀运算符命令;使用 operator operator
+"：： operator"：非法的运算符命令;使用 "operator operator"
 
-`operator`语句一些专门选出`::new`或`::delete`。 `new`并`delete`运算符是全局的因此范围解析运算符 (`::`) 没有任何意义。 删除 `::` 运算符。
+`operator` 语句重定义 `::new` 或 `::delete`。 `new` 和 `delete` 运算符是全局运算符，因此范围解析运算符（`::`）没有意义。 删除 `::` 运算符。

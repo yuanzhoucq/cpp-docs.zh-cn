@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292791"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320521"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr（创建 .Sbr 文件）
 
@@ -47,21 +47,21 @@ ms.locfileid: "62292791"
 **/Fr** 已弃用；请改用 **/FR** 。 有关详细信息，请参阅 [Compiler Options Listed by Category](compiler-options-listed-by-category.md)中的“已弃用并删除的编译器选项”。
 
 > [!NOTE]
->  请勿更改 .sbr 扩展名。 BSCMAKE 要求中间文件具有此扩展名。
+> 请勿更改 .sbr 扩展名。 BSCMAKE 要求中间文件具有此扩展名。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 在导航窗格中，选择“C/C++” 、“浏览信息”  属性页。
+1. 在导航窗格中，选择“C/C++” ****、“浏览信息” **** 属性页。
 
-1. 修改“浏览信息文件”  或“启用浏览信息”  属性。
+1. 修改“浏览信息文件” **** 或“启用浏览信息” **** 属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>。
+- 参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [输出文件 (/F) 选项](output-file-f-options.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>

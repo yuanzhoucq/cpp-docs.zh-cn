@@ -1,5 +1,5 @@
 ---
-title: CBitmapButton 类
+title: CBitmap按钮类
 ms.date: 11/04/2016
 f1_keywords:
 - CBitmapButton
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df21591dec1da5861125d7e9480fb9345aaad061
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388457"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752946"
 ---
-# <a name="cbitmapbutton-class"></a>CBitmapButton 类
+# <a name="cbitmapbutton-class"></a>CBitmap按钮类
 
 创建使用位图图像而非文本进行标记的按钮控件。
 
@@ -35,66 +35,66 @@ class CBitmapButton : public CButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBitmapButton::CBitmapButton](#cbitmapbutton)|构造 `CBitmapButton` 对象。|
+|[C 位地图按钮：：C 位地图按钮](#cbitmapbutton)|构造 `CBitmapButton` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBitmapButton::AutoLoad](#autoload)|在对话框中的按钮相关联的对象`CBitmapButton`类中，按名称加载 bitmap(s) 并调整其大小以适应位图按钮。|
-|[CBitmapButton::LoadBitmaps](#loadbitmaps)|从应用程序的资源文件加载一个或多个命名的位图资源并附加到对象的位图初始化的对象。|
-|[CBitmapButton::SizeToContent](#sizetocontent)|调整大小以适应位图按钮。|
+|[CBitmap按钮：自动加载](#autoload)|对话框中的按钮与`CBitmapButton`类的对象关联，按名称加载位图，并调整按钮的大小以适合位图。|
+|[C 位地图按钮：：加载位映射](#loadbitmaps)|通过从应用程序的资源文件加载一个或多个命名位图资源并将位图附加到对象来初始化对象。|
+|[CBitmap按钮：：大小到内容](#sizetocontent)|调整按钮的大小以适应位图。|
 
 ## <a name="remarks"></a>备注
 
-`CBitmapButton` 对象包含最多四个位图，其中包含一个按钮可以假定的不同状态的图像： 向上 （或普通），向下 （或所选），为主要目标，并禁用。 只有第一个位图是必需的;其他是可选的。
+`CBitmapButton`对象最多包含四个位图，其中包含按钮可以假定的不同状态的图像：向上（或正常）、向下（或选中）、聚焦和禁用。 只需要第一个位图;其他是可选的。
 
-位图按钮映像包括为图像本身或图像周围的边框。 边框通常所起的作用中显示按钮的状态。 例如，已设定焦点状态的位图通常就像一个对于松开状态，但与从边框或边界的粗实线虚线的矩形嵌入。 位图为禁用状态通常类似于一个为松开状态，但具有较低对比度 （如为灰色或灰菜单选择）。
+位图按钮图像包括图像周围的边框以及图像本身。 边框通常在显示按钮的状态时发挥作用。 例如，焦点状态的位图通常类似于向上状态的位图，但从边框中设置虚线矩形或边框处的粗实线。 禁用状态的位图通常类似于向上状态的位图，但对比度较低（如灰色或灰色菜单选择）。
 
-这些位图可以是任何大小，但全部都被看作就好像松开状态的位图的大小相同。
+这些位图的大小可以是任意大小的，但所有位图都被视为与上状态的位图大小相同。
 
-各种应用程序要求位图图像的不同的组合：
+各种应用程序需要位图图像的不同组合：
 
 |向上|向下|已设定焦点|已禁用|应用程序|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Bitmap|
-|×|×|||而无需 WS_TABSTOP 样式的按钮|
-|×|×|×|×|与所有状态对话框按钮|
-|×|×|×||WS_TABSTOP 样式对话框按钮|
+|×|×|||无WS_TABSTOP样式的按钮|
+|×|×|×|×|具有所有状态的对话框按钮|
+|×|×|×||具有WS_TABSTOP样式的对话框按钮|
 
-创建时的位图按钮控件，设置要指定按钮为所有者描述的 BS_OWNERDRAW 样式。 这将导致 Windows 发送按钮; 的 WM_MEASUREITEM 和 WM_DRAWITEM 消息框架处理这些消息，并管理为你的按钮的外观。
+创建位图按钮控件时，请设置BS_OWNERDRAW样式以指定按钮是所有者绘制的。 这将导致 Windows 发送按钮的WM_MEASUREITEM和WM_DRAWITEM消息;因此，Windows 会为按钮发送WM_MEASUREITEM消息，然后WM_DRAWITEM消息。框架处理这些消息，并为您管理按钮的外观。
 
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>在窗口的工作区中创建的位图按钮控件
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>在窗口的工作区中创建位图按钮控件
 
-1. 创建一至四个位图图像的按钮。
+1. 为按钮创建一到四个位图图像。
 
 1. 构造[CBitmapButton](#cbitmapbutton)对象。
 
-1. 调用[创建](../../mfc/reference/cbutton-class.md#create)函数来创建 Windows 按钮控件，并将其附加到`CBitmapButton`对象。
+1. 调用["创建"](../../mfc/reference/cbutton-class.md#create)函数以创建 Windows 按钮控件并将其附加到`CBitmapButton`对象。
 
-1. 调用[LoadBitmaps](#loadbitmaps)成员函数来构造的位图按钮之后加载的位图资源。
+1. 调用[LoadBitmap](#loadbitmaps)成员函数，在构造位图按钮后加载位图资源。
 
-### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>若要在对话框中包括的位图按钮控件
+### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>在对话框中包含位图按钮控件
 
-1. 创建一至四个位图图像的按钮。
+1. 为按钮创建一到四个位图图像。
 
-1. 使用放置到所需位图按钮其中一个所有者描述按钮创建对话框模板。 在模板中的按钮的大小并不重要。
+1. 创建一个对话框模板，其中包含所有者绘制按钮，该按钮位于所需的位图按钮的位置。 模板中按钮的大小并不重要。
 
-1. 将按钮的标题设置为一个值，例如"MYIMAGE"，并定义如 IDC_MYIMAGE 按钮的符号。
+1. 将按钮的标题设置为"MYIMAGE"等值，并为按钮定义符号，如IDC_MYIMAGE。
 
-1. 在应用程序的资源脚本中，为每个构造通过追加一个字母"U，""D、"F，"ID 为按钮创建的映像或者"X"（对于向上、 向下具有焦点和禁用） 中的按钮标题的字符串到步骤 3。 对于按钮标题"MYIMAGE"中，例如，Id 将是"MYIMAGEU，""MYIMAGED，""MYIMAGEF，"和"MYIMAGEX。" 您**必须**指定双引号位图的 ID。 否则为资源编辑器将分配给资源的一个整数，并且加载图像时，MFC 将失败。
+1. 在应用程序的资源脚本中，为为按钮创建的每个图像提供一个 ID，该 ID 通过将其中一个字母"U"、"D"、"F"或"X"（用于向上、向下、焦点和禁用）添加到步骤 3 中用于按钮标题的字符串中。 例如，对于按钮标题"MYIMAGE"，ID 将是"MYIMAGEU"、"MYIMAGED"、"MYIMAGEF"和"MYIMAGEX"。 **您必须**在双引号中指定位图的 ID。 否则，资源编辑器将为资源分配整数，并且 MFC 在加载映像时将失败。
 
-1. 在应用程序的对话框类 (派生自`CDialog`)，添加`CBitmapButton`成员对象。
+1. 在应用程序的对话框类中（派生自`CDialog`），添加`CBitmapButton`成员对象。
 
-1. 在中`CDialog`对象的[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)例程，调用`CBitmapButton`对象的[AutoLoad](#autoload)函数，请使用参数作为按钮的控件 ID 和`CDialog`对象**这**指针。
+1. `CDialog`在对象的[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)例程中，`CBitmapButton`调用对象的[自动加载](#autoload)函数，将按钮的控制 ID 和`CDialog`对象的**此**指针用作参数。
 
-如果你想要处理 Windows 通知消息，例如 BN_CLICKED，由位图按钮控件发送到其父级 (从派生的类通常`CDialog`)，将添加到`CDialog`-派生的对象的消息映射条目和消息处理程序成员每个消息的的函数。 由发送的通知`CBitmapButton`对象是否与所发送的相同[CButton](../../mfc/reference/cbutton-class.md)对象。
+如果要处理由位图按钮控件发送到其父级（通常是派生自`CDialog`的类）发送到其父级（通常从 派生`CDialog`对象的 Windows 通知消息，如BN_CLICKED。 `CBitmapButton`对象发送的通知与[CButton](../../mfc/reference/cbutton-class.md)对象发送的通知相同。
 
-该类[CToolBar](../../mfc/reference/ctoolbar-class.md)针对位图按钮采用不同的方法。
+类[CToolBar](../../mfc/reference/ctoolbar-class.md)对位图按钮采取了不同的方法。
 
-有关详细信息`CBitmapButton`，请参阅[控件](../../mfc/controls-mfc.md)。
+有关 的详细信息`CBitmapButton`，请参阅[控件](../../mfc/controls-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -110,11 +110,11 @@ class CBitmapButton : public CButton
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxext.h
+**标题：** afxext.h
 
-##  <a name="autoload"></a>  CBitmapButton::AutoLoad
+## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmap按钮：自动加载
 
-在对话框中的按钮相关联的对象`CBitmapButton`类中，按名称加载 bitmap(s) 并调整其大小以适应位图按钮。
+对话框中的按钮与`CBitmapButton`类的对象关联，按名称加载位图，并调整按钮的大小以适合位图。
 
 ```
 BOOL AutoLoad(
@@ -125,10 +125,10 @@ BOOL AutoLoad(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-按钮的控件 id。
+按钮的控制 ID。
 
-*pParent*<br/>
-对拥有按钮对象的指针。
+*p 父级*<br/>
+指向拥有按钮的对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -136,13 +136,13 @@ BOOL AutoLoad(
 
 ### <a name="remarks"></a>备注
 
-使用`AutoLoad`函数以初始化为位图按钮的对话框中的所有者描述按钮。 使用此函数的说明中的备注`CBitmapButton`类。
+使用`AutoLoad`函数将对话框中的所有者绘制按钮初始化为位图按钮。 有关使用此函数的说明在类的备注中`CBitmapButton`。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]
 
-##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton
+## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>C 位地图按钮：：C 位地图按钮
 
 创建一个 `CBitmapButton` 对象。
 
@@ -152,15 +152,15 @@ CBitmapButton();
 
 ### <a name="remarks"></a>备注
 
-在创建后C++`CBitmapButton`对象，请调用[CButton::Create](../../mfc/reference/cbutton-class.md#create)若要创建的 Windows 按钮控件，并将其附加到`CBitmapButton`对象。
+创建C++`CBitmapButton`对象后，调用[CButton：：创建](../../mfc/reference/cbutton-class.md#create)以创建 Windows 按钮控件并将其附加到`CBitmapButton`对象。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]
 
-##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps
+## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>C 位地图按钮：：加载位映射
 
-如果你想要加载的资源名称或其 ID 号，或不能使用应用程序识别的位图图像使用此函数`AutoLoad`函数，因为，例如，要创建不属于对话框中的位图按钮。
+如果要加载由其资源名称或 ID 号标识的位贴图图像，或者由于创建不是对话框一部分的`AutoLoad`位图按钮而无法使用该函数时，请使用此功能。
 
 ```
 BOOL LoadBitmaps(
@@ -178,29 +178,29 @@ BOOL LoadBitmaps(
 
 ### <a name="parameters"></a>参数
 
-*lpszBitmapResource*<br/>
-指向包含如位图按钮的常规或"up"状态的位图名称的以 null 结尾的字符串。 必需。
+*lpszBitmap资源*<br/>
+指向包含位图按钮正常或"向上"状态的位图名称的 null 端接字符串。 必需。
 
-*lpszBitmapResourceSel*<br/>
-指向包含位图的名称，为选定的位图按钮的以 null 结尾的字符串或"关闭"状态。 可以为 NULL。
+*lpszBitmap 资源塞尔*<br/>
+指向包含位图按钮所选或"向下"状态的位图名称的 null 端接字符串。 可以为 NULL。
 
-*lpszBitmapResourceFocus*<br/>
-指向以 null 结尾的字符串包含位图的名称的位图按钮的已设定焦点状态。 可以为 NULL。
+*lpszBitmap 资源焦点*<br/>
+指向包含位图按钮焦点状态的位图名称的 null 端接字符串。 可以为 NULL。
 
-*lpszBitmapResourceDisabled*<br/>
-指向包含位图按钮的禁用状态的位图名称的以 null 结尾的字符串。 可以为 NULL。
+*lpszBitmap 资源已禁用*<br/>
+指向包含位图按钮禁用状态的位图名称的 null 终止字符串。 可以为 NULL。
 
-*nIDBitmapResource*<br/>
-指定位图资源，如位图按钮的常规或"up"状态的资源 ID 号。 必需。
+*nIDBitmap资源*<br/>
+指定位图按钮的正常或"向上"状态的位图资源的资源 ID 号。 必需。
 
-*nIDBitmapResourceSel*<br/>
-为选定的位图按钮或"关闭"状态，请指定位图资源的资源 ID 号。 可能为 0。
+*nIDBitmap 资源塞尔*<br/>
+指定位图按钮的选定或"向下"状态的位图资源的资源 ID 号。 可能为 0。
 
-*nIDBitmapResourceFocus*<br/>
-指定位图按钮的已设定焦点状态的位图资源的资源 ID 号。 可能为 0。
+*nIDBitmap 资源焦点*<br/>
+指定位图按钮的聚焦状态位图资源的资源 ID 号。 可能为 0。
 
-*nIDBitmapResourceDisabled*<br/>
-指定位图按钮的禁用状态的位图资源的资源 ID 号。 可能为 0。
+*nIDBitmap 资源已禁用*<br/>
+指定位图按钮禁用状态的位图资源的资源 ID 号。 可能为 0。
 
 ### <a name="return-value"></a>返回值
 
@@ -210,11 +210,11 @@ BOOL LoadBitmaps(
 
 [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]
 
-##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent
+## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmap按钮：：大小到内容
 
-调用此函数可调整位图的大小为位图按钮。
+调用此函数以将位图按钮的大小调整到位图的大小。
 
-```
+```cpp
 void SizeToContent();
 ```
 
@@ -222,8 +222,8 @@ void SizeToContent();
 
 [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC 示例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
-[CButton 类](../../mfc/reference/cbutton-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)
+[MFC 样品 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[C按钮类](../../mfc/reference/cbutton-class.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)

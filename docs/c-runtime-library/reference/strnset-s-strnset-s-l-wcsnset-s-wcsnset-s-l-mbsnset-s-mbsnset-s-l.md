@@ -1,6 +1,6 @@
 ---
 title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset_s_l
 - _strnset_s
@@ -8,6 +8,10 @@ api_name:
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
+- _o__mbsnset_s
+- _o__mbsnset_s_l
+- _o__strnset_s
+- _o__wcsnset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,19 +63,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 123f8c4945d98ccf3dd94a48dbbb0fef3b35a8e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626137"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911221"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
 将字符串的字符初始化为给定字符。 这些版本的 [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsnset_s**和 **_mbsnset_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsnset_s**和 **_mbsnset_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -118,16 +123,16 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 要修改的字符串。
 
 *numberOfElements*<br/>
 *Str*缓冲区的大小。
 
-*c*<br/>
+*ansi-c*<br/>
 字符设置。
 
-*count*<br/>
+*计数*<br/>
 要设置的字符数。
 
 *locale*<br/>
@@ -143,11 +148,13 @@ errno_t _mbsnset_s_l(
 
 这些函数最多将*str*的第一个*计数*字符设置为*c*。 如果*count*大于*str*的大小，则使用*str*的大小而不是*count*。 如果*计数*大于*numberOfElements*并且这两个参数都大于*str*大小，则会发生错误。
 
-**_wcsnset_s**和 **_mbsnset_s**是 **_strnset_s**的宽字符和多字节字符版本。 **_Wcsnset_s**的字符串参数是宽字符字符串; **_mbsnset_s**的是 amultibyte 字符串。 否则这三个函数否则具有相同行为。
+**_wcsnset_s**和 **_mbsnset_s**是 **_strnset_s**的宽字符和多字节字符版本。 **_Wcsnset_s**的字符串参数是宽字符字符串;**_mbsnset_s**的字符串为 amultibyte。 否则这三个函数否则具有相同行为。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -158,15 +165,15 @@ errno_t _mbsnset_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_strnset_s**|\<string.h>|
 |**_strnset_s_l**|\<tchar.h>|
 |**_wcsnset_s**|\<string.h> 或 \<wchar.h>|
 |**_wcsnset_s_l**|\<tchar.h>|
-|**_mbsnset_s**、 **_mbsnset_s_l**|\<mbstring.h>|
+|**_mbsnset_s**， **_mbsnset_s_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -190,10 +197,10 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

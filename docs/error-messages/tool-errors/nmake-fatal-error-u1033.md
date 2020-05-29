@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 3b1df28e3cd7b27a9e7a130d9d71c1af68db9aec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173382"
 ---
 # <a name="nmake-fatal-error-u1033"></a>NMAKE 错误 U1033
 
-语法错误: string 意外
+语法错误：意外的 "string"
 
-字符串不是生成文件的有效语法的一部分。
+该字符串不是生成文件的有效语法的一部分。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 如果右尖括号组 (**<<**) 有关内联文件不在行开头，将发生以下错误：
+1. 如果内联文件的右尖括号集（ **<<** ）不在行首，则会发生以下错误：
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. 如果宏定义中生成文件中包含的等号 (**=**) 没有前面名，或者如果正在定义的名称是扩展到 nothing 的宏，将出现以下错误：
+1. 如果生成文件中的宏定义包含一个没有前面名称的等号（ **=** ），或者如果要定义的名称是一个扩展为 nothing 的宏，则会发生以下错误：
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. 如果以分号 (**;**) 工具中的注释行中。INI 不在开头的行，将出现以下错误：
+1. 如果工具的注释行中的分号（ **;** ）。INI 不在行的开头，出现以下错误：
 
     ```
     syntax error : ';' unexpected
     ```
 
-1. 如果已设置生成文件格式的字处理器中，会出现下列错误：
+1. 如果生成文件已由字处理程序设置格式，则可能会发生以下错误：
 
     ```
     syntax error : ':' unexpected

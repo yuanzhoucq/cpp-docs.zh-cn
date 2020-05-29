@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: bd13ba4d0dd60f65372b2c1f51d70d338566301e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 58bb37e9de40f4bc711b417eab107aa55b8ff0e8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916258"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750115"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 类
 
@@ -35,21 +35,21 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|构造 `CAnimationManagerEventHandler` 对象。|
+|[动画管理器事件处理程序：：动画管理器事件处理程序](#canimationmanagereventhandler)|构造 `CAnimationManagerEventHandler` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|创建对象的`CAnimationManagerEventHandler`实例。|
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|动画管理器状态更改时调用。 （重写 `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`。）|
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|存储指向用于路由事件的动画控制器的指针。|
+|[C动画管理器事件处理程序：：创建实例](#createinstance)|创建`CAnimationManagerEventHandler`对象的实例。|
+|[C动画管理器操作器：：在管理器状态更改](#onmanagerstatuschanged)|当动画管理器的状态已更改时调用。 （重写 `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`。）|
+|[C动画管理器处理程序：：设置动画控制器](#setanimationcontroller)|存储指向动画控制器的指针以路由事件。|
 
 ## <a name="remarks"></a>备注
 
-当你调用 CAnimationController:: EnableAnimationManagerEvent 时, 将创建此事件处理程序并将其传递给 IUIAnimationManager:: SetManagerEventHandler 方法。
+此事件处理程序创建并传递给 IUIAnimationManager：：setManagerEventHandler 方法，当您调用 C动画控制器：：启用动画管理器事件时。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -63,21 +63,21 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler:: CAnimationManagerEventHandler
+## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>动画管理器事件处理程序：：动画管理器事件处理程序
 
 需要 Visual Studio 2010 SP1。
 
-构造 CAnimationManagerEventHandler 对象。
+构造 CAnimationManager事件处理程序对象。
 
 ```
 CAnimationManagerEventHandler();
 ```
 
-##  <a name="createinstance"></a>CAnimationManagerEventHandler:: CreateInstance
+## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>C动画管理器事件处理程序：：创建实例
 
 需要 Visual Studio 2010 SP1。
 
-创建 CAnimationManagerEventHandler 对象的实例。
+创建 CAnimationManager事件处理程序对象的实例。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -87,21 +87,21 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>参数
 
-*pAnimationController*<br/>
-指向将接收事件的动画控制器的指针。
+*动画控制器*<br/>
+指向动画控制器的指针，该控制器将接收事件。
 
 *ppManagerEventHandler*<br/>
-输出. 如果该方法成功, 则它包含指向 COM 对象的指针, 该对象将处理动画管理器的状态更新。
+输出。 如果该方法成功，它包含指向 COM 对象的指针，该指针将处理动画管理器的状态更新。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功, 则返回 S_OK。 否则, 它将返回 HRESULT 错误代码。
+如果该方法成功，则它会返回 S_OK。 否则，它将返回一个 HRESULT 错误代码。
 
-##  <a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler:: OnManagerStatusChanged
+## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>C动画管理器操作器：：在管理器状态更改
 
 需要 Visual Studio 2010 SP1。
 
-动画管理器状态更改时调用。
+当动画管理器的状态已更改时调用。
 
 ```
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -111,30 +111,30 @@ IFACEMETHOD(OnManagerStatusChanged)(
 
 ### <a name="parameters"></a>参数
 
-*newStatus*<br/>
+*新状态*<br/>
 新状态。
 
-*previousStatus*<br/>
-以前的状态。
+*上一个状态*<br/>
+上一个状态。
 
 ### <a name="return-value"></a>返回值
 
-当前实现始终返回 S_OK;
+当前实现始终返回S_OK;
 
-##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController
+## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>C动画管理器处理程序：：设置动画控制器
 
 需要 Visual Studio 2010 SP1。
 
-存储指向用于路由事件的动画控制器的指针。
+存储指向动画控制器的指针以路由事件。
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pAnimationController*<br/>
-指向将接收事件的动画控制器的指针。
+*动画控制器*<br/>
+指向动画控制器的指针，该控制器将接收事件。
 
 ## <a name="see-also"></a>请参阅
 

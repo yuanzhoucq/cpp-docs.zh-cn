@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
-ms.openlocfilehash: 698dbfe77c82ac2f0425ed1c1bff4d917ed86f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e74bacfb23081fea64d514d7085261e3648b05e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165887"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750699"
 ---
-# <a name="varianttclear"></a>_variant_t::Clear
+# <a name="_variant_tclear"></a>_variant_t::Clear
 
-**Microsoft 专用**
+**微软特定**
 
-清除封装`VARIANT`对象。
+清除封装`VARIANT`的对象。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 void Clear( );
 ```
 
 ## <a name="remarks"></a>备注
 
-调用`VariantClear`对封装`VARIANT`对象。
+调用`VariantClear`封装`VARIANT`的对象。
 
-**结束 Microsoft 专用**
+**结束微软特定**
 
 ## <a name="see-also"></a>请参阅
 
-[_variant_t 类](../cpp/variant-t-class.md)
+[_variant_t类](../cpp/variant-t-class.md)

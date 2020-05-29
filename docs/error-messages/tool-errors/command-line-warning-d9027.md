@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - D9027
 ms.assetid: 2a29edc5-5649-48f2-9058-2057c747284c
-ms.openlocfilehash: f89e7416efe7a0069ee2dae8df921933bbe76bcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46ed5750bd1f315f20658ace9b83fac532fbbabb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196672"
 ---
 # <a name="command-line-warning-d9027"></a>命令行警告 D9027
 
-源文件\<文件名 > 被忽略
+已忽略源文件 "\<filename >"
 
-CL.exe 忽略输入的源文件。
+CL 已忽略输入源文件。
 
-此警告可能被引起 /Fo 选项与带有 /c 选项的命令行上输出文件名之间留一个空格。 例如：
+此警告可能由使用/c 选项的命令行上的/Fo 选项和输出文件名之间的空格引起。 例如：
 
 ```
 cl /c /Fo output.obj input.c
 ```
 
-因为 /Fo 之间没有空格和`output.obj`，CL.exe 将`output.obj`作为输入文件的名称。 若要解决此问题，请删除空间：
+由于/Fo 与 `output.obj`之间有一个空格，因此 node.js 会将 `output.obj` 作为输入文件的名称。 若要解决此问题，请删除以下空间：
 
 ```
 cl /c /Fooutput.obj input.c

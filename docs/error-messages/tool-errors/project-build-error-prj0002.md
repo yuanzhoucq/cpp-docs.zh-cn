@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-ms.openlocfilehash: d8e13bcc03a02fd9dbc739566a92025a7b97d598
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30680f5b26f3be5e7f9b48d18e82fca42ed65493
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359704"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192934"
 ---
 # <a name="project-build-error-prj0002"></a>项目生成错误 PRJ0002
 
-> 从返回的错误结果*命令行*。
+> 从 "*命令行*" 返回的错误结果。
 
-命令，*命令行*，其中的从中的用户输入正确**属性页**对话框中，返回错误代码，但没有信息将出现在**输出**窗口.
+"**属性页**" 对话框中的 "用户输入" 生成的命令*行*返回了错误代码，但 "**输出**" 窗口中不会显示任何信息。
 
-对此错误的解决方法取决于哪种工具生成该错误。 MIDL，您将获得了解发生的问题，如果定义 /o （重定向输出）。
+此错误的解决方法取决于生成错误的工具。 对于 MIDL，如果定义了/o （重定向输出），就会了解发生了什么错误。
 
-批处理文件，如自定义生成步骤或生成事件，不是故障条件有关的信息性也可能是导致此错误的原因。
+诸如自定义生成步骤或生成事件这样的批处理文件并不是有关失败情况的信息，也可能是导致此错误的原因。

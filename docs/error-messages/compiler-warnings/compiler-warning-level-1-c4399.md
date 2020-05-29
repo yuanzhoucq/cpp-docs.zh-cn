@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a556fbffad41d04b3eb0ea1acfd5e8739ddd5b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186798"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>编译器警告（等级 1）C4399
 
-> '*符号*: per-process 符号不应该用 __declspec （dllimport） 时使用 /clr 编译标记： pure
+> "*symbol*"：用/clr： pure 编译时，每进程符号不应标记为 __declspec （dllimport）
 
 ## <a name="remarks"></a>备注
 
-**/Clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
+**/Clr： pure**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-从本机映像或映像，具有本机和 CLR 构造的数据不导入到纯映像。 若要解决此警告，编译与 **/clr** (不 **/clr: pure**) 或删除`__declspec(dllimport)`。
+本机映像中的数据或具有本机和 CLR 构造的映像的数据无法导入到纯映像。 若要解决此警告，请用 **/clr** （而非 **/clr： pure**）进行编译或删除 `__declspec(dllimport)`。
 
 ## <a name="example"></a>示例
 

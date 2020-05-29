@@ -1,8 +1,9 @@
 ---
 title: _set_new_mode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_mode
+- _o__set_new_mode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: b248f1c97b1ec334b7441f33862b90473e08993f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948446"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920102"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -63,21 +65,23 @@ _set_new_mode(1);
 
 在程序的早期进行调用，或链接到 Newmode.obj（请参阅[链接选项](../../c-runtime-library/link-options.md)）。
 
-此函数验证其参数。 如果*newhandlermode*不是0或1，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则<strong>_set_new_mode</strong>将返回-1，并将**errno**设置为`EINVAL`。
+此函数验证其参数。 如果*newhandlermode*不是0或1，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行， <strong>_set_new_mode</strong>将返回-1，并将**errno**设置`EINVAL`为。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_set_new_mode**|\<new.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[忙](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>
 [_query_new_mode](query-new-mode.md)<br/>

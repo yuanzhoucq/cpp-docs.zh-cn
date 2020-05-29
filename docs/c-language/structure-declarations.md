@@ -9,11 +9,11 @@ helpviewer_keywords:
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157787"
 ---
 # <a name="structure-declarations"></a>结构声明
 
@@ -122,7 +122,7 @@ struct sample   /* Defines a structure named x */
 
 结构的前两个成员为 `char` 变量和指向 **float** 值的指针。 第三个成员 (`next`) 被声明为指向正在定义的结构类型 (`sample`) 的指针。
 
-当不需要命名的标记时，匿名结构很有用。 当一个声明定义了所有结构实例时，就是这种情况。 例如:
+当不需要命名的标记时，匿名结构很有用。 当一个声明定义了所有结构实例时，就是这种情况。 例如：
 
 ```C
 struct
@@ -149,7 +149,7 @@ struct somestruct
 
 编译器允许未确定大小或零大小的数组作为结构的最后一个成员。 如果常量数组在不同的情况下大小不同，这可能很有用。 此类结构的声明类似于以下形式：
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
 
 未确定大小的数组仅在作为结构的最后一个成员时才出现。 只要所有封闭结构中都不再进一步声明成员，那么包含未确定大小的数组声明的结构就可以嵌入其他结构中。 不允许有此类结构的数组。 当应用于此类型的变量或应用于此类型本身时，`sizeof` 运算符假定数组的大小为 0。
 

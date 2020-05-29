@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500545"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444294"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 类
 
@@ -26,7 +26,7 @@ ms.locfileid: "69500545"
 public ref class COMException : Exception,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
 COMException 类从对象类以及 IException、IPrintable 和 IEquatable 接口继承。
 
@@ -55,7 +55,7 @@ COMException 类具有以下属性。
 
 下列预定义的异常从 COMException 派生。 它们与 COMException 的区别只在于名称、构造函数的名称和基础 HRESULT 值。
 
-|name|基础 HRESULT|描述|
+|名称|基础 HRESULT|描述|
 |----------|------------------------|-----------------|
 |COMException|*用户定义的 hresult*|从 COM 方法调用返回无法识别的 HRESULT 时引发。|
 |AccessDeniedException|E_ACCESSDENIED|被拒绝访问资源或功能时引发。|
@@ -73,15 +73,15 @@ COMException 类具有以下属性。
 
 ### <a name="requirements"></a>要求
 
-**支持的最低客户端:** Windows 8
+**支持的最低客户端：** Windows 8
 
-**支持的最低服务器:** Windows Server 2012
+**支持的最低服务器：** Windows Server 2012
 
 **命名空间：** 平台
 
 **元数据：** platform.winmd
 
-## <a name="ctor"></a>COMException:: COMException 构造函数
+## <a name="ctor"></a>COMException：： COMException 构造函数
 
 初始化 COMException 类的新实例。
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 由异常表示的错误 HRESULT。
 
-## <a name="hresult"></a>COMException:: HResult 属性
+## <a name="hresult"></a>COMException：： HResult 属性
 
 与异常相对应的 HRESULT。
 
@@ -113,9 +113,9 @@ public:
 
 ### <a name="remarks"></a>备注
 
-有关如何解释 HRESULT 值的详细信息, 请参阅[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
+有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
-## <a name="message"></a>COMException:: Message 属性
+## <a name="message"></a>COMException：： Message 属性
 
 描述异常的消息。
 

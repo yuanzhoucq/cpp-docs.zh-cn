@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152321"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349742"
 ---
 # <a name="try-except-statement-c"></a>try-except 语句 (C)
 
@@ -48,10 +48,10 @@ ms.locfileid: "56152321"
 由于 `__except` 表达式将作为 C 表达式来计算，因此它被限制为单个值、条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
 
 > [!NOTE]
->  结构化异常处理适用于 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理机制灵活得多，因为它可以处理任何类型的异常。
+> 结构化异常处理适用于 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理机制灵活得多，因为它可以处理任何类型的异常。
 
 > [!NOTE]
->  对于 C++ 程序，应使用 C++ 异常处理，而不是结构化异常处理。 有关详细信息，请参阅《C++ 语言参考》中的[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
+> 对于 C++ 程序，应使用 C++ 异常处理，而不是结构化异常处理。 有关详细信息，请参阅《C++ 语言参考》  中的[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
 
 应用程序中的每个例程可以有自己的异常处理程序。 `__except` 表达式在 `__try` 体的范围内执行。 这意味着它可以访问在该处声明的任何局部变量。
 

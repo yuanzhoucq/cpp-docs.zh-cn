@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC4093
 ms.assetid: 3c61b4a4-b418-465b-a4fd-cb1ff0adb8dd
-ms.openlocfilehash: 23bf436e6e8338f89bc576564181c84715028332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29d24f1e380f5c531e170e5dc23cf5c77eefb874
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346205"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182287"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>资源编译器警告 RC4093
 
-非活动代码中的字符常量中的非转义有换行符
+非活动代码的字符常量中的非转义换行符
 
-常数表达式`#if`， `#elif`， **#ifdef**，或 **#ifndef**计算结果为零，从而使代码的预处理器指令遵循处于非活动状态。 此非活动代码中换行字符出现在一组单引号或双引号括起来。
+`#if`、`#elif`、 **#ifdef**或 **#ifndef**预处理器指令的常量表达式的计算结果为零，使得代码处于非活动状态。 在该非活动代码中，换行符出现在一组单引号或双引号内。
 
-直到下一步双引号被认为是在字符常数中的所有文本。
+所有文本直到下一个双引号被视为在字符常量内。

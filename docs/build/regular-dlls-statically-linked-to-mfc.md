@@ -1,5 +1,5 @@
 ---
-title: 静态链接到 MFC 的规则 MFC Dll
+title: 静态链接到 MFC 的规则 MFC DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - regular MFC DLLs [C++]
@@ -11,66 +11,66 @@ helpviewer_keywords:
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
 ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62314775"
 ---
-# <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>静态链接到 MFC 的规则 MFC Dll
+# <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>静态链接到 MFC 的规则 MFC DLL
 
-正则表达式以静态方式链接到 MFC 的 MFC DLL 是在内部，使用 MFC 的 DLL 和可由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 如名称所述，使用静态链接库版本的 MFC 生成此类型的 DLL。 通常是从正则表达式使用标准的 C 接口的 MFC DLL 导出函数。 有关如何编写、 构建和使用的规则 MFC DLL 的示例，请参阅示例[DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。
+静态链接到 MFC 的规则 MFC DLL 是在内部使用 MFC 的 DLL，而 DLL 中的导出函数可以由 MFC 或非 MFC 可执行文件调用。 顾名思义，此类型的 DLL 使用 MFC 的静态链接库发布生成。 通常使用标准 C 接口从规则 MFC DLL 导出函数。 有关如何编写、生成和使用规则 MFC DLL 的示例，请参阅示例 [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。
 
-请注意，在视觉对象中不再使用的术语 USRDLLC++文档。 静态链接到 MFC 的规则 MFC DLL 具有 usrdll 相同的特性。
+请注意，术语 USRDLL 已不再用于 Visual C++ 文档。 静态链接到 MFC 的规则 MFC DLL 具有与以前 USRDLL 相同的特性。
 
-规则 MFC DLL，静态链接到 MFC，具有以下功能：
+静态链接到 MFC 的规则 MFC DLL 具有以下功能：
 
-- 客户端可执行文件可以采用任何支持 Dll 使用的语言 (C， C++，Pascal、 Visual Basic 中，依次类推);它不必是 MFC 应用程序。
+- 可以采用支持使用 DLL 的任何语言（C、C++、Pascal、Visual Basic 等）编写客户端可执行文件；它不必是 MFC 应用程序。
 
-- DLL 可链接到应用程序使用的相同 MFC 静态链接库。 不再用于 Dll 的静态链接库的单独版本。
+- DLL 可以链接到应用程序使用的相同 MFC 静态链接库。 DLL 不再有单独的静态链接库版本。
 
-- 之前版本的 MFC 4.0，Usrdll 提供相同类型的与静态链接到 MFC 的规则 MFC Dll 的功能。 截至 VisualC++版本 4.0 中，术语 USRDLL 已过时。
+- 在 MFC 版本 4.0 之前，USRDLL 提供了与静态链接到 MFC 的规则 MFC DLL 相同类型的功能。 从 Visual C++ 版本 4.0 起，术语 USRDLL 已过时。
 
-规则 MFC DLL，静态链接到 MFC，具有以下要求：
+静态链接到 MFC 的规则 MFC DLL 具有以下要求：
 
-- 这种类型的 DLL 必须实例化派生自的类`CWinApp`。
+- 这种类型的 DLL 必须实例化派生自 `CWinApp` 的类。
 
-- 这种类型的 DLL 将`DllMain`MFC 提供。 将中的所有 DLL 特定初始化代码都放`InitInstance`中的成员函数和终止代码`ExitInstance`如普通的 MFC 应用程序中所示。
+- 这种 DLL 使用 MFC 提供的 `DllMain`。 将所有特定于 DLL 的初始化代码都置于 `InitInstance` 成员函数中，而将终止代码置于 `ExitInstance` 中，就如同在普通 MFC 应用程序中一样。
 
-- 尽管术语 USRDLL 已过时，仍必须定义"**_USRDLL**"编译器命令行上。 此定义确定从 MFC 标头文件复制的声明。
+- 即使术语 USRDLL 已过时，仍必须在编译器命令行上定义“_USRDLL  ”。 此定义确定从 MFC 头文件拉取的声明。
 
-规则 MFC Dll 必须具有`CWinApp`-派生的类以及该类应用程序的单个对象的 MFC 应用程序一样。 但是， `CWinApp` DLL 的对象不具有主消息泵，如同`CWinApp`应用程序的对象。
+与 MFC 应用程序一样，规则 MFC DLL 必须具有 `CWinApp` 派生类和该应用程序类的单个对象。 但是，DLL 的 `CWinApp` 对象没有主消息泵，而应用程序的 `CWinApp` 对象也是如此。
 
-请注意，`CWinApp::Run`机制不适用于 DLL，因为应用程序拥有主消息泵。 如果 DLL 打开无模式对话框或有其自己的主框架窗口，应用程序的主消息泵必须调用反过来调用 DLL 导出的例程`CWinApp::PreTranslateMessage`DLL 的应用程序对象的成员函数。
+请注意，`CWinApp::Run` 机制不适用于 DLL，因为应用程序拥有主消息泵。 如果 DLL 打开无模式对话框或具有其自己的主框架窗口，则应用程序的主消息泵必须调用由 DLL 导出的例程，该例程又会调用 DLL 的应用程序对象的 `CWinApp::PreTranslateMessage` 成员函数。
 
-此函数的示例，请参阅 DLLScreenCap 示例。
+有关此函数的示例，请参阅 DLLScreenCap 示例。
 
-通常是从正则表达式使用标准的 C 接口的 MFC DLL 导出的符号。 从规则 MFC DLL 导出函数的声明将如下所示：
+通常使用标准 C 接口从规则 MFC DLL 导出符号。 从规则 MFC DLL 导出的函数的声明类似于以下内容：
 
 ```
 extern "C" __declspec(dllexport) MyExportedFunction( );
 ```
 
-规则 MFC DLL 的所有内存分配应都遵守 DLL;DLL 不应传递给或接收从调用的可执行文件的以下任何：
+规则 MFC DLL 内的所有内存分配都应保留在 DLL 内；DLL 不应向调用可执行文件传递或从其接收以下任何内容：
 
-- MFC 对象的指针
+- 指向 MFC 对象的指针
 
 - 指向由 MFC 分配的内存的指针
 
-如果您需要执行上述任何操作或需要调用的可执行文件和 DLL 之间传递 MFC 派生的对象，则必须生成 MFC 扩展 DLL。
+如果需要执行上述任何操作或需要在调用可执行文件与 DLL 之间传递 MFC 派生对象，则必须生成 MFC 扩展 DLL。
 
-它可以安全地将指针传递给已分配的内存的 C 运行时库应用程序和 DLL 之间仅当您制作数据的副本。 您必须删除或调整这些指针的大小或使用它们而无需进行的内存的副本。
+仅当创建数据的副本时，才可安全地在应用程序和 DLL 之间传递指向由 C 运行时库分配的内存的指针。 不得删除这些指针或重设其大小，也不得在不创建内存副本的情况下使用它们。
 
-静态链接到 MFC 的 DLL 还可以动态不能链接到共享 MFC Dll。 静态链接到 MFC 的 DLL 是动态绑定到应用程序就像任何其他 DLL;应用程序链接到它就像任何其他 DLL。
+静态链接到 MFC 的 DLL 还无法动态链接到共享 MFC DLL。 静态链接到 MFC 的 DLL 会动态绑定到应用程序，就像任何其他 DLL 一样；应用程序会链接到它，就像任何其他 DLL 一样。
 
-根据所述的约定命名标准 MFC 静态链接库[MFC dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 但是，使用 MFC 3.0 版及更高版本，就不再需要手动指定链接器所需中链接的 MFC 库版本。 MFC 标头文件相反，自动确定要根据预处理器中链接的 MFC 库的正确版本定义，如 **\_调试** 或 **_UNICODE**。 MFC 标头文件添加 /DEFAULTLIB 指令指示链接器以特定版本的 MFC 库中的链接。
+标准 MFC 静态链接库按照 [MFC DLL 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)中所述的约定进行命名。 但是，在 MFC 3.0 版及更高版本中，不再需要向链接器手动指定要链接的 MFC 库的版本。 相反，MFC 头文件将基于预处理器定义（如 \_DEBUG  或 _UNICODE  ）自动确定要链接的 MFC 库的正确版本。 MFC 头文件会添加 /DEFAULTLIB 指令来指示链接器链接到特定的 MFC 库版本中。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [初始化规则 MFC Dll](run-time-library-behavior.md#initializing-regular-dlls)
+- [初始化规则 MFC DLL](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [将 MFC 作为 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
+- [将 MFC 用作 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 - [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 

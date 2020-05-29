@@ -7,22 +7,22 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfaabf3da62c216d3da662f59c57b63e695d9ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371163"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>为标题项提供拖放支持
 
-若要为标题项提供拖放支持，请指定 HDS_DRAGDROP 样式。 标题项的拖放支持使用户能够对标题控件的标题项进行重新排序。 默认行为将提供要拖动的标题项的半透明化拖动图像和新位置的可视指示器（如果已拖动标题项）。
+要为标头项提供拖放支持，请指定HDS_DRAGDROP样式。 标题项的拖放支持使用户能够对标题控件的标题项进行重新排序。 默认行为将提供要拖动的标题项的半透明化拖动图像和新位置的可视指示器（如果已拖动标题项）。
 
-为常见的拖放功能，在处理 HDN_BEGINDRAG 和 HDN_ENDDRAG 通知，可以将扩展默认拖放行为。 你还可以通过重写定义拖动图像的外观[cheaderctrl:: Createdragimage](../mfc/reference/cheaderctrl-class.md#createdragimage)成员函数。
+利用常见的拖放功能，您可以通过处理 HDN_BEGINDRAG 和 HDN_ENDDRAG 通知来扩展默认的拖放行为。 您还可以通过重写[CHeaderCtrl：：CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage)成员函数来自定义拖动图像的外观。
 
 > [!NOTE]
->  如果要为列表控件中的一个嵌入标头控件来提供拖放支持，请参阅中的扩展样式部分[更改列表控件样式](../mfc/changing-list-control-styles.md)主题。
+> 如果要在列表控件中为嵌入标头控件提供拖放支持，请参阅["更改列表控件样式"](../mfc/changing-list-control-styles.md)主题中的"扩展样式"部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)

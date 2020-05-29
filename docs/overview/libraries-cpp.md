@@ -1,12 +1,12 @@
 ---
 title: 库
 ms.date: 11/18/2018
-ms.openlocfilehash: 7eba3905fc0010f37b15b4af40f6135c4fd97f47
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: dc139fea346be8034fa80236844abb2303fa345d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400705"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80075611"
 ---
 # <a name="libraries"></a>库
 
@@ -24,4 +24,3 @@ ms.locfileid: "67400705"
 [MFC/ATL](../mfc/mfc-and-atl.md)<br/>
 [并行库](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 [数据访问库](../data/data-access-in-cpp.md)
-

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515552"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373444"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
 扩展整数基元，有助于防止整数溢出，并便于比较不同类型的整数。
 
-> [!NOTE] 
-> 有关此库的最新版本，请访问 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)。
+> [!NOTE]
+> 此库的最新版本位于[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)。
 
 ## <a name="syntax"></a>语法
 
@@ -41,21 +41,21 @@ class SafeInt;
 
 | 参数  |  说明 |
 |---------|-----------------|
-| rhs      |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
-| *i*        |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
-| bits     |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
+| rhs**      |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
+| *Ⅰ*        |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
+| bits**     |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-| name                          |  说明 |
+| 名称                          |  说明 |
 |---------------------------|--------------------|
-| [SafeInt::SafeInt](#safeint)  |  默认构造函数。 |
+| [安全：：安全](#safeint)  |  默认构造函数。 |
 
 ### <a name="assignment-operators"></a>赋值运算符
 
-| name  |  语法 |
+| 名称  |  语法 |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>强制转换运算符
 
-| name              |  语法 |
+| 名称              |  语法 |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>比较运算符
 
-| name  |  语法 |
+| 名称  |  语法 |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>算术运算符
 
-| name  |  语法 |
+| 名称  |  语法 |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>逻辑运算符
 
-| name     |  语法 |
+| 名称     |  语法 |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -187,7 +187,7 @@ class SafeInt;
 
 - `((uint)~0) > -1`
 
-第一个语句解析为 true，而第二个语句则解析为 `false`。 0 的按位求反结果为 0xFFFFFFFF。 在第二个语句中，默认比较运算符将 0xFFFFFFFF 与 0xFFFFFFFF 进行比较，并认为它们相等。 `SafeInt` 类的比较运算符了解到，第二个参数为负数，而第一个参数则无符号。 因此，尽管位表示形式完全相同，但 `SafeInt` 逻辑运算符了解到无符号整数大于 -1。
+第一个语句解析为 true****，而第二个语句则解析为 `false`。 0 的按位求反结果为 0xFFFFFFFF。 在第二个语句中，默认比较运算符将 0xFFFFFFFF 与 0xFFFFFFFF 进行比较，并认为它们相等。 `SafeInt` 类的比较运算符了解到，第二个参数为负数，而第一个参数则无符号。 因此，尽管位表示形式完全相同，但 `SafeInt` 逻辑运算符了解到无符号整数大于 -1。
 
 结合使用 `SafeInt` 类和 `?:` 三元运算符时要谨慎。 以下面的代码行为例。
 
@@ -229,7 +229,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **命名空间：** msl:: utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>安全：：安全
 
 构造 `SafeInt` 对象。
 
@@ -257,20 +257,20 @@ SafeInt (
 
 ### <a name="parameters"></a>参数
 
-*i*<br/>
+*Ⅰ*<br/>
 [输入] 新 `SafeInt` 对象的值。 这必须是 T 或 U 类型的参数，具体视构造函数而定。
 
-*b*<br/>
+*B*<br/>
 [输入] 新 `SafeInt` 对象的布尔值。
 
-*u*<br/>
-[输入] U 类型的 `SafeInt`。新 `SafeInt` 对象的值与 u 相同，但类型为 T。
+*美国*<br/>
+[输入] U 类型的 `SafeInt`。新 `SafeInt` 对象的值与 u** 相同，但类型为 T。
 
 U `SafeInt` 中存储的数据的类型。 这可以是布尔类型、字符类型或整数类型。 如果是整数类型，它可以有符号，也可以无符号，且大小介于 8 位和 64 位之间。
 
 ### <a name="remarks"></a>备注
 
-构造函数的输入参数 i 或 u 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数，`SafeInt` 类便会调用 [static_assert](../cpp/static-assert.md)，以指明输入参数无效。
+构造函数的输入参数 i** 或 u** 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数，`SafeInt` 类便会调用 [static_assert](../cpp/static-assert.md)，以指明输入参数无效。
 
 使用模板类型 `U` 的构造函数自动将输入参数转换为 `T` 指定的类型。 `SafeInt` 类转换数据，而不会有任何数据丢失。 如果无法在不丢失数据的情况下将数据转换为 `T` 类型，它会向错误处理程序 `E` 报告。
 

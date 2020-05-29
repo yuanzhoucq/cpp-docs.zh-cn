@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515692"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172147"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
 内部指针声明指向引用类型内部，但不指向对象本身的指针。 内部指针可以指向引用句柄、值类型、装箱类型句柄、托管类型的成员或托管数组的元素。
 
@@ -42,12 +42,12 @@ ms.locfileid: "65515692"
 cli::interior_ptr<cv_qualifier type> var = &initializer;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 cv_qualifier<br/>
 const 或 volatile 限定符。
 
-*type*<br/>
+type<br/>
 初始值设定项的类型。
 
 *var*<br/>
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

@@ -75,7 +75,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */
     ```
 
-- C 允许使用涉及对自身的引用的表达式来初始化变量，但只适用于非静态范围的对象。 例如:
+- C 允许使用涉及对自身的引用的表达式来初始化变量，但只适用于非静态范围的对象。 例如：
 
     ```C
     #define Thread   __declspec( thread )

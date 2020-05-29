@@ -1,9 +1,11 @@
 ---
 title: _tell、_telli64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _telli64
 - _tell
+- _o__tell
+- _o__telli64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,12 +18,12 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946262"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912248"
 ---
 # <a name="_tell-_telli64"></a>_tell、_telli64
 
@@ -72,13 +74,15 @@ __int64 _telli64(
 
 **_Tell**函数获取与*handle*参数关联的文件指针（如果有）的当前位置。 位置将表示为自文件开头起的字节数。 对于 **_telli64**函数，此值表示为64位整数。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**_tell**、 **_telli64**|\<io.h>|
+|**_tell**， **_telli64**|\<io.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -128,6 +132,6 @@ Current file position is: 20
 
 ## <a name="see-also"></a>请参阅
 
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell、_ftelli64](ftell-ftelli64.md)<br/>
 [_lseek、_lseeki64](lseek-lseeki64.md)<br/>

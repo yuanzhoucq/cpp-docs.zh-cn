@@ -1,8 +1,9 @@
 ---
 title: _isatty
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isatty
+- _o__isatty
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954558"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919772"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -51,21 +53,23 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>返回值
 
-如果描述符与字符设备相关联，则 **_isatty**将返回一个非零值。 否则， **_isatty**将返回0。
+如果描述符与字符设备相关联， **_isatty**将返回一个非零值。 否则， **_isatty**返回0。
 
 ## <a name="remarks"></a>备注
 
 **_Isatty**函数确定*fd*是否与字符设备（终端、控制台、打印机或串行端口）相关联。
 
-此函数验证*fd*参数。 如果*fd*是错误的文件指针，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回0并将**errno**设置为**ebadf (** 。
+此函数验证*fd*参数。 如果*fd*是错误的文件指针，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回0并将**errno**设置为**ebadf (**。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -97,6 +101,6 @@ int main( void )
 stdout has not been redirected to a file
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>

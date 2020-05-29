@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
 ms.openlocfilehash: a4771e9c2c48bfe9c4c09629278533b031d60979
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258232"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427211"
 ---
 # <a name="bitset-class"></a>bitset 类
 

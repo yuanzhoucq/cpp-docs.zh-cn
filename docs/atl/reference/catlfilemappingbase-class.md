@@ -16,23 +16,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 75177c195e83a4ab3ad2a6bd4d608d07f8c2234f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739552"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168080"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 类
 
 此类表示内存映射文件。
 
 > [!IMPORTANT]
->  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class CAtlFileMappingBase
 ```
 
@@ -40,27 +40,27 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|构造函数。|
 |[CAtlFileMappingBase：： ~ CAtlFileMappingBase](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CAtlFileMappingBase::CopyFrom](#copyfrom)|调用此方法可从文件映射对象复制。|
-|[CAtlFileMappingBase::GetData](#getdata)|调用此方法可从文件映射对象获取数据。|
-|[CAtlFileMappingBase::GetHandle](#gethandle)|调用此方法以返回文件句柄。|
+|[CAtlFileMappingBase：： CopyFrom](#copyfrom)|调用此方法可从文件映射对象复制。|
+|[CAtlFileMappingBase：：](#getdata)|调用此方法可从文件映射对象获取数据。|
+|[CAtlFileMappingBase：： GetHandle](#gethandle)|调用此方法以返回文件句柄。|
 |[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|调用此方法可从文件映射对象获取映射大小。|
-|[CAtlFileMappingBase::MapFile](#mapfile)|调用此方法可创建文件映射对象。|
+|[CAtlFileMappingBase：：映射](#mapfile)|调用此方法可创建文件映射对象。|
 |[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|调用此方法可创建一个允许对所有进程具有完全访问权限的文件映射对象。|
 |[CAtlFileMappingBase::OpenMapping](#openmapping)|调用此方法以返回文件映射对象的句柄。|
-|[CAtlFileMappingBase::Unmap](#unmap)|调用此方法可取消映射文件映射对象。|
+|[CAtlFileMappingBase：：取消映射](#unmap)|调用此方法可取消映射文件映射对象。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CAtlFileMappingBase：： operator =](#operator_eq)|将当前文件映射对象设置为另一个文件映射对象。|
 
@@ -74,11 +74,11 @@ class CAtlFileMappingBase
 
 **标头：** atlfile
 
-##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase
 
 构造函数。
 
-```
+```cpp
 CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
@@ -96,11 +96,11 @@ CAtlFileMappingBase() throw();
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>CAtlFileMappingBase：： ~ CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase：： ~ CAtlFileMappingBase
 
 析构函数。
 
-```
+```cpp
 ~CAtlFileMappingBase() throw();
 ```
 
@@ -108,11 +108,11 @@ CAtlFileMappingBase() throw();
 
 释放由类分配的任何资源，并调用[CAtlFileMappingBase：：取消映射](#unmap)方法。
 
-##  <a name="copyfrom"></a>CAtlFileMappingBase：： CopyFrom
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase：： CopyFrom
 
 调用此方法可从文件映射对象复制。
 
-```
+```cpp
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```
 
@@ -123,13 +123,13 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 S_OK，否则返回错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-##  <a name="getdata"></a>CAtlFileMappingBase：：
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase：：
 
 调用此方法可从文件映射对象获取数据。
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
@@ -137,11 +137,11 @@ void* GetData() const throw();
 
 返回指向数据的指针。
 
-##  <a name="gethandle"></a>CAtlFileMappingBase：： GetHandle
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase：： GetHandle
 
 调用此方法以返回文件映射对象的句柄。
 
-```
+```cpp
 HANDLE GetHandle() throw ();
 ```
 
@@ -149,11 +149,11 @@ HANDLE GetHandle() throw ();
 
 返回文件映射对象的句柄。
 
-##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize
 
 调用此方法可从文件映射对象获取映射大小。
 
-```
+```cpp
 SIZE_T GetMappingSize() throw();
 ```
 
@@ -165,11 +165,11 @@ SIZE_T GetMappingSize() throw();
 
 请参阅[CAtlFileMappingBase：： CAtlFileMappingBase](#catlfilemappingbase)的示例。
 
-##  <a name="mapfile"></a>CAtlFileMappingBase：：映射
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase：：映射
 
 调用此方法可打开或创建指定文件的文件映射对象。
 
-```
+```cpp
 HRESULT MapFile(
     HANDLE hFile,
     SIZE_T nMappingSize = 0,
@@ -197,7 +197,7 @@ HRESULT MapFile(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 S_OK，否则返回错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
@@ -207,11 +207,11 @@ HRESULT MapFile(
 
 请参阅[CAtlFileMappingBase：： CAtlFileMappingBase](#catlfilemappingbase)的示例。
 
-##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem
 
 调用此方法可创建一个允许对所有进程具有完全访问权限的文件映射对象。
 
-```
+```cpp
 HRESULT MapSharedMem(
     SIZE_T nMappingSize,
     LPCTSTR szName,
@@ -236,24 +236,24 @@ HRESULT MapSharedMem(
 指向`SECURITY_ATTRIBUTES`结构的指针，该结构确定返回的句柄是否可以由子进程继承。 请参阅 Windows SDK 的[CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)中的*lpAttributes* 。
 
 *dwMappingProtection*<br/>
-文件视图所需的保护（在映射文件时）。 请参阅 Windows SDK `CreateFileMapping`中的 flProtect。
+文件视图所需的保护（在映射文件时）。 请*flProtect*参阅 Windows SDK `CreateFileMapping`中的 flProtect。
 
 *dwViewDesiredAccess*<br/>
 指定对文件视图的访问类型，因此还指定对由文件映射的页面的保护。 请参阅 Windows SDK 的[MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)中的*dwDesiredAccess* 。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 S_OK，否则返回错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
 `MapShareMem`允许通过[CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)创建的现有文件映射对象在进程之间共享。
 
-##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
 
 调用此方法以打开指定文件的已命名文件映射对象。
 
-```
+```cpp
 HRESULT OpenMapping(
     LPCTSTR szName,
     SIZE_T nMappingSize,
@@ -277,17 +277,17 @@ HRESULT OpenMapping(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 S_OK，否则返回错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
 在调试版本中，如果输入参数无效，则将发生断言错误。
 
-##  <a name="operator_eq"></a>CAtlFileMappingBase：： operator =
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase：： operator =
 
 将当前文件映射对象设置为另一个文件映射对象。
 
-```
+```cpp
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```
 
@@ -300,23 +300,23 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 返回对当前对象的引用。
 
-##  <a name="unmap"></a>CAtlFileMappingBase：：取消映射
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase：：取消映射
 
 调用此方法可取消映射文件映射对象。
 
-```
+```cpp
 HRESULT Unmap() throw();
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 S_OK，否则返回错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
 有关更多详细信息，请参阅 Windows SDK 中的[UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CAtlFileMapping 类](../../atl/reference/catlfilemapping-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

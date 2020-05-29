@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0030
 - CXX0030
 ms.assetid: ada8b48c-09c8-49bf-ae23-313ed663c4fe
-ms.openlocfilehash: 1e52b238905fba5c310a89377b81548a1c6b5784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 477ec31d18924e91baf2d8b7b732bc7a50eee53b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359795"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195612"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>表达式计算器错误 CXX0030
 
-不可计算的表达式
+表达式 not evaluatable
 
-顾名思义，调试器的表达式计算器无法获取表达式的值。 一个可能的原因是该表达式引用外部程序的地址空间的内存 （取消引用 null 指针是一个例子）。 Windows 不允许访问的外部程序的地址空间的内存。
+调试器的表达式计算器无法获取所写入表达式的值。 其中一种可能的原因是表达式引用的内存不在程序的地址空间（取消引用 null 指针是一个示例）。 Windows 不允许访问位于程序的地址空间以外的内存。
 
-您可能想要重写表达式，使用括号来控制计算顺序。
+您可能想要使用括号重写表达式，以控制计算的顺序。
 
-此错误是与 CAN0030 相同。
+此错误与 CAN0030 相同。

@@ -1,0 +1,658 @@
+- name: MSVC 中的并行编程
+  href: ../parallel/parallel-programming-in-visual-cpp.md
+- name: 自动并行化和自动矢量化
+  href: ../parallel/auto-parallelization-and-auto-vectorization.md
+- name: C++ Accelerated Massive Parallelism (AMP)
+  expanded: false
+  items:
+    - name: C++ AMP (C++ Accelerated Massive Parallelism)
+      href: ../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md
+    - name: C++ AMP 概述
+      href: ../parallel/amp/cpp-amp-overview.md
+    - name: 使用平铺
+      href: ../parallel/amp/using-tiles.md
+    - name: 在 UWP 应用中使用 C++ AMP
+      href: ../parallel/amp/using-cpp-amp-in-windows-store-apps.md
+    - name: 演练：矩阵乘法
+      href: ../parallel/amp/walkthrough-matrix-multiplication.md
+    - name: 演练：调试 C++ AMP 应用程序
+      href: ../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md
+    - name: 使用 Lambda 表达式、函数对象和受限函数
+      href: ../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md
+    - name: 图形 (C++ AMP)
+      href: ../parallel/amp/graphics-cpp-amp.md
+    - name: 使用 accelerator 和 accelerator_view 对象
+      href: ../parallel/amp/using-accelerator-and-accelerator-view-objects.md
+    - name: 参考 (C++ AMP)
+      expanded: false
+      items:
+        - name: 参考 (C++ AMP)
+          href: ../parallel/amp/reference/reference-cpp-amp.md
+        - name: Concurrency 命名空间 (C++ AMP)
+          expanded: false
+          items:
+            - name: Concurrency 命名空间 (C++ AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-cpp-amp.md
+            - name: 并发命名空间函数 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-functions-amp.md
+            - name: 并发命名空间枚举 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-enums-amp.md
+            - name: 并发命名空间运算符 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-operators-amp.md
+            - name: 并发命名空间常量 (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-constants-amp.md
+            - name: accelerator 类
+              href: ../parallel/amp/reference/accelerator-class.md
+            - name: accelerator_view 类
+              href: ../parallel/amp/reference/accelerator-view-class.md
+            - name: accelerator_view_removed 类
+              href: ../parallel/amp/reference/accelerator-view-removed-class.md
+            - name: array 类
+              href: ../parallel/amp/reference/array-class.md
+            - name: array_view 类
+              href: ../parallel/amp/reference/array-view-class.md
+            - name: completion_future 类
+              href: ../parallel/amp/reference/completion-future-class.md
+            - name: extent 类 (C++ AMP)
+              href: ../parallel/amp/reference/extent-class.md
+            - name: index 类
+              href: ../parallel/amp/reference/index-class.md
+            - name: invalid_compute_domain 类
+              href: ../parallel/amp/reference/invalid-compute-domain-class.md
+            - name: out_of_memory 类
+              href: ../parallel/amp/reference/out-of-memory-class.md
+            - name: runtime_exception 类
+              href: ../parallel/amp/reference/runtime-exception-class.md
+            - name: tile_barrier 类
+              href: ../parallel/amp/reference/tile-barrier-class.md
+            - name: tiled_extent 类
+              href: ../parallel/amp/reference/tiled-extent-class.md
+            - name: tiled_index 类
+              href: ../parallel/amp/reference/tiled-index-class.md
+            - name: uninitialized_object 类
+              href: ../parallel/amp/reference/uninitialized-object-class.md
+            - name: unsupported_feature 类
+              href: ../parallel/amp/reference/unsupported-feature-class.md
+        - name: 'Concurrency::direct3d 命名空间'
+          expanded: false
+          items:
+            - name: 'Concurrency::direct3d 命名空间'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace.md
+            - name: 'Concurrency::direct3d 命名空间函数 (AMP)'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace-functions-amp.md
+            - name: adopt_d3d_access_lock_t 结构
+              href: ../parallel/amp/reference/adopt-d3d-access-lock-t-structure.md
+            - name: scoped_d3d_access_lock 类
+              href: ../parallel/amp/reference/scoped-d3d-access-lock-class.md
+        - name: 'Concurrency::fast_math 命名空间'
+          expanded: false
+          items:
+            - name: 'Concurrency::fast_math 命名空间'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace.md
+            - name: 'Concurrency::fast_math 命名空间函数'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace-functions.md
+        - name: 'Concurrency::graphics 命名空间'
+          expanded: false
+          items:
+            - name: 'Concurrency::graphics 命名空间'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace.md
+            - name: 'Concurrency::graphics::direct3d 命名空间'
+              expanded: false
+              items:
+                - name: 'Concurrency::graphics::direct3d 命名空间'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md
+                - name: 'Concurrency::graphics::direct3d 命名空间函数'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace-functions.md
+            - name: 'Concurrency::graphics 命名空间函数'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-functions.md
+            - name: 'Concurrency::graphics 命名空间枚举'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-enums.md
+            - name: double_2 类
+              href: ../parallel/amp/reference/double-2-class.md
+            - name: double_3 类
+              href: ../parallel/amp/reference/double-3-class.md
+            - name: double_4 类
+              href: ../parallel/amp/reference/double-4-class.md
+            - name: float_2 类
+              href: ../parallel/amp/reference/float-2-class.md
+            - name: float_3 类
+              href: ../parallel/amp/reference/float-3-class.md
+            - name: float_4 类
+              href: ../parallel/amp/reference/float-4-class.md
+            - name: int_2 类
+              href: ../parallel/amp/reference/int-2-class.md
+            - name: int_3 类
+              href: ../parallel/amp/reference/int-3-class.md
+            - name: int_4 类
+              href: ../parallel/amp/reference/int-4-class.md
+            - name: norm 类
+              href: ../parallel/amp/reference/norm-class.md
+            - name: norm_2 类
+              href: ../parallel/amp/reference/norm-2-class.md
+            - name: norm_3 类
+              href: ../parallel/amp/reference/norm-3-class.md
+            - name: norm_4 类
+              href: ../parallel/amp/reference/norm-4-class.md
+            - name: sampler 类
+              href: ../parallel/amp/reference/sampler-class.md
+            - name: short_vector 结构
+              href: ../parallel/amp/reference/short-vector-structure.md
+            - name: short_vector_traits 结构
+              href: ../parallel/amp/reference/short-vector-traits-structure.md
+            - name: texture 类
+              href: ../parallel/amp/reference/texture-class.md
+            - name: texture_view 类
+              href: ../parallel/amp/reference/texture-view-class.md
+            - name: writeonly_texture_view 类
+              href: ../parallel/amp/reference/writeonly-texture-view-class.md
+            - name: uint_2 类
+              href: ../parallel/amp/reference/uint-2-class.md
+            - name: uint_3 类
+              href: ../parallel/amp/reference/uint-3-class.md
+            - name: uint_4 类
+              href: ../parallel/amp/reference/uint-4-class.md
+            - name: unorm 类
+              href: ../parallel/amp/reference/unorm-class.md
+            - name: unorm_2 类
+              href: ../parallel/amp/reference/unorm-2-class.md
+            - name: unorm_3 类
+              href: ../parallel/amp/reference/unorm-3-class.md
+            - name: unorm_4 类
+              href: ../parallel/amp/reference/unorm-4-class.md
+        - name: 'Concurrency::precise_math 命名空间'
+          expanded: false
+          items:
+            - name: 'Concurrency::precise_math 命名空间'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace.md
+            - name: 'Concurrency::precise_math 命名空间函数'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace-functions.md
+- name: 并发运行时 (ConCRT)
+  expanded: false
+  items:
+    - name: 并发运行时
+      href: ../parallel/concrt/concurrency-runtime.md
+    - name: 并发运行时的概述
+      href: ../parallel/concrt/overview-of-the-concurrency-runtime.md
+    - name: 并发运行时中的异常处理
+      href: ../parallel/concrt/exception-handling-in-the-concurrency-runtime.md
+    - name: 并行诊断工具（并发运行时）
+      href: ../parallel/concrt/parallel-diagnostic-tools-concurrency-runtime.md
+    - name: 用 C++ 为 UWP 应用创建异步操作
+      href: ../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md
+    - name: 将并发运行时与其他并发模型进行比较
+      expanded: false
+      items:
+        - name: 将并发运行时与其他并发模型进行比较
+          href: ../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md
+        - name: 从 OpenMP 迁移至并发运行时
+          expanded: false
+          items:
+            - name: 从 OpenMP 迁移至并发运行时
+              href: ../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
+            - name: 如何：转换 OpenMP parallel for 循环以使用并发运行时
+              href: ../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
+            - name: 如何：转换使用取消的 OpenMP 循环以使用并发运行时
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
+            - name: 如何：转换使用异常处理的 OpenMP 循环以使用并发运行时
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
+            - name: 如何：将使用缩减变量的 OpenMP 循环转换为使用并发运行时
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
+    - name: 并行模式库 (PPL)
+      expanded: false
+      items:
+        - name: 并行模式库 (PPL)
+          href: ../parallel/concrt/parallel-patterns-library-ppl.md
+        - name: 任务并行（并发运行时）
+          expanded: false
+          items:
+            - name: 任务并行（并发运行时）
+              href: ../parallel/concrt/task-parallelism-concurrency-runtime.md
+            - name: 如何：使用 parallel_invoke 来编写并行排序例程
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
+            - name: 如何：使用 Parallel.Invoke 执行并行操作
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+            - name: 如何：创建在延迟一段时间后完成的任务
+              href: ../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md
+        - name: 并行算法
+          expanded: false
+          items:
+            - name: 并行算法
+              href: ../parallel/concrt/parallel-algorithms.md
+            - name: 如何：编写 parallel_for 循环
+              href: ../parallel/concrt/how-to-write-a-parallel-for-loop.md
+            - name: 如何：编写 parallel_for_each 循环
+              href: ../parallel/concrt/how-to-write-a-parallel-for-each-loop.md
+            - name: 如何：并行执行映射和减少操作
+              href: ../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
+        - name: 并行容器和对象
+          expanded: false
+          items:
+            - name: 并行容器和对象
+              href: ../parallel/concrt/parallel-containers-and-objects.md
+            - name: 如何：使用并行容器提高效率
+              href: ../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
+            - name: 如何：使用 Combinable 改进性能
+              href: ../parallel/concrt/how-to-use-combinable-to-improve-performance.md
+            - name: 如何：使用 combinable 来组合集
+              href: ../parallel/concrt/how-to-use-combinable-to-combine-sets.md
+        - name: PPL 中的取消操作
+          expanded: false
+          items:
+            - name: PPL 中的取消操作
+              href: ../parallel/concrt/cancellation-in-the-ppl.md
+            - name: 如何：通过取消来中断并行循环
+              href: ../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md
+            - name: 如何：通过异常处理中断并行循环
+              href: ../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md
+    - name: 异步代理库
+      expanded: false
+      items:
+        - name: 异步代理库
+          href: ../parallel/concrt/asynchronous-agents-library.md
+        - name: 异步代理
+          href: ../parallel/concrt/asynchronous-agents.md
+        - name: 异步消息块
+          href: ../parallel/concrt/asynchronous-message-blocks.md
+        - name: 消息传递函数
+          href: ../parallel/concrt/message-passing-functions.md
+        - name: 如何：实现各种制造者-使用者模式
+          href: ../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
+        - name: 如何：为 call 和 transformer 类提供工作函数
+          href: ../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
+        - name: 如何：在数据管道中使用转换器
+          href: ../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
+        - name: 如何：在已完成的任务之间选择
+          href: ../parallel/concrt/how-to-select-among-completed-tasks.md
+        - name: 如何：定期发送消息
+          href: ../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
+        - name: 如何：使用消息块筛选器
+          href: ../parallel/concrt/how-to-use-a-message-block-filter.md
+    - name: 同步数据结构
+      expanded: false
+      items:
+        - name: 同步数据结构
+          href: ../parallel/concrt/synchronization-data-structures.md
+        - name: 将同步数据结构与 Windows API 进行比较
+          href: ../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md
+    - name: 任务计划程序（并发运行时）
+      expanded: false
+      items:
+        - name: 任务计划程序（并发运行时）
+          href: ../parallel/concrt/task-scheduler-concurrency-runtime.md
+        - name: 计划程序实例
+          expanded: false
+          items:
+            - name: 计划程序实例
+              href: ../parallel/concrt/scheduler-instances.md
+            - name: 如何：管理计划程序实例
+              href: ../parallel/concrt/how-to-manage-a-scheduler-instance.md
+        - name: 计划程序策略
+          expanded: false
+          items:
+            - name: 计划程序策略
+              href: ../parallel/concrt/scheduler-policies.md
+            - name: 如何：指定特定的计划程序策略
+              href: ../parallel/concrt/how-to-specify-specific-scheduler-policies.md
+            - name: 如何：创建使用特定计划程序策略的代理
+              href: ../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
+        - name: 计划组
+          expanded: false
+          items:
+            - name: 计划组
+              href: ../parallel/concrt/schedule-groups.md
+            - name: 如何：使用计划组影响执行顺序
+              href: ../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md
+        - name: 轻量级任务
+          href: ../parallel/concrt/lightweight-tasks.md
+        - name: 上下文
+          expanded: false
+          items:
+            - name: 上下文
+              href: ../parallel/concrt/contexts.md
+            - name: 如何：使用上下文类实现协作信号量
+              href: ../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
+            - name: 如何：使用过度订阅偏移延迟
+              href: ../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
+        - name: 内存管理函数
+          expanded: false
+          items:
+            - name: 内存管理函数
+              href: ../parallel/concrt/memory-management-functions.md
+            - name: 如何：使用 Alloc 和 Free 提高内存性能
+              href: ../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
+    - name: 并发运行时演练
+      expanded: false
+      items:
+        - name: 并发运行时演练
+          href: ../parallel/concrt/concurrency-runtime-walkthroughs.md
+        - name: 演练：使用任务和 XML HTTP 请求进行连接
+          href: ../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md
+        - name: 演练：创建基于代理的应用程序
+          href: ../parallel/concrt/walkthrough-creating-an-agent-based-application.md
+        - name: 演练：创建数据流代理
+          href: ../parallel/concrt/walkthrough-creating-a-dataflow-agent.md
+        - name: 演练：创建图像处理网络
+          href: ../parallel/concrt/walkthrough-creating-an-image-processing-network.md
+        - name: 演练：实现 Future
+          href: ../parallel/concrt/walkthrough-implementing-futures.md
+        - name: 演练：使用 Join 防止死锁
+          href: ../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md
+        - name: 演练：从用户界面线程中删除工作
+          href: ../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md
+        - name: 演练：在启用 COM 的应用程序中使用并发运行时
+          href: ../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md
+        - name: 演练：调整现有代码以使用轻量级任务
+          href: ../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md
+        - name: 演练：创建自定义消息块
+          href: ../parallel/concrt/walkthrough-creating-a-custom-message-block.md
+    - name: 并发运行时最佳做法
+      expanded: false
+      items:
+        - name: 并发运行时最佳做法
+          href: ../parallel/concrt/concurrency-runtime-best-practices.md
+        - name: 并行模式库中的最佳做法
+          href: ../parallel/concrt/best-practices-in-the-parallel-patterns-library.md
+        - name: 异步代理库中的最佳做法
+          href: ../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
+        - name: 并发运行时中的常规最佳做法
+          href: ../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
+    - name: 参考
+      expanded: false
+      items:
+        - name: 参考（并发运行时）
+          href: ../parallel/concrt/reference/reference-concurrency-runtime.md
+        - name: concurrency 命名空间
+          expanded: false
+          items:
+            - name: concurrency 命名空间
+              href: ../parallel/concrt/reference/concurrency-namespace.md
+            - name: 并发命名空间函数
+              href: ../parallel/concrt/reference/concurrency-namespace-functions.md
+            - name: 并发命名空间运算符
+              href: ../parallel/concrt/reference/concurrency-namespace-operators.md
+            - name: 并发命名空间常量1
+              href: ../parallel/concrt/reference/concurrency-namespace-constants1.md
+            - name: 并发命名空间枚举
+              href: ../parallel/concrt/reference/concurrency-namespace-enums.md
+            - name: affinity_partitioner 类
+              href: ../parallel/concrt/reference/affinity-partitioner-class.md
+            - name: agent 类
+              href: ../parallel/concrt/reference/agent-class.md
+            - name: auto_partitioner 类
+              href: ../parallel/concrt/reference/auto-partitioner-class.md
+            - name: bad_target 类
+              href: ../parallel/concrt/reference/bad-target-class.md
+            - name: call 类
+              href: ../parallel/concrt/reference/call-class.md
+            - name: cancellation_token 类
+              href: ../parallel/concrt/reference/cancellation-token-class.md
+            - name: cancellation_token_registration 类
+              href: ../parallel/concrt/reference/cancellation-token-registration-class.md
+            - name: cancellation_token_source 类
+              href: ../parallel/concrt/reference/cancellation-token-source-class.md
+            - name: choice 类
+              href: ../parallel/concrt/reference/choice-class.md
+            - name: combinable 类
+              href: ../parallel/concrt/reference/combinable-class.md
+            - name: concurrent_priority_queue 类
+              href: ../parallel/concrt/reference/concurrent-priority-queue-class.md
+            - name: concurrent_queue 类
+              href: ../parallel/concrt/reference/concurrent-queue-class.md
+            - name: concurrent_unordered_map 类
+              href: ../parallel/concrt/reference/concurrent-unordered-map-class.md
+            - name: concurrent_unordered_multimap 类
+              href: ../parallel/concrt/reference/concurrent-unordered-multimap-class.md
+            - name: concurrent_unordered_multiset 类
+              href: ../parallel/concrt/reference/concurrent-unordered-multiset-class.md
+            - name: concurrent_unordered_set 类
+              href: ../parallel/concrt/reference/concurrent-unordered-set-class.md
+            - name: concurrent_vector 类
+              href: ../parallel/concrt/reference/concurrent-vector-class.md
+            - name: Context 类
+              href: ../parallel/concrt/reference/context-class.md
+            - name: context_self_unblock 类
+              href: ../parallel/concrt/reference/context-self-unblock-class.md
+            - name: context_unblock_unbalanced 类
+              href: ../parallel/concrt/reference/context-unblock-unbalanced-class.md
+            - name: critical_section 类
+              href: ../parallel/concrt/reference/critical-section-class.md
+            - name: CurrentScheduler 类
+              href: ../parallel/concrt/reference/currentscheduler-class.md
+            - name: default_scheduler_exists 类
+              href: ../parallel/concrt/reference/default-scheduler-exists-class.md
+            - name: DispatchState 结构
+              href: ../parallel/concrt/reference/dispatchstate-structure.md
+            - name: event 类
+              href: ../parallel/concrt/reference/event-class.md
+            - name: IExecutionContext 结构
+              href: ../parallel/concrt/reference/iexecutioncontext-structure.md
+            - name: IExecutionResource 结构
+              href: ../parallel/concrt/reference/iexecutionresource-structure.md
+            - name: improper_lock 类
+              href: ../parallel/concrt/reference/improper-lock-class.md
+            - name: improper_scheduler_attach 类
+              href: ../parallel/concrt/reference/improper-scheduler-attach-class.md
+            - name: improper_scheduler_detach 类
+              href: ../parallel/concrt/reference/improper-scheduler-detach-class.md
+            - name: improper_scheduler_reference 类
+              href: ../parallel/concrt/reference/improper-scheduler-reference-class.md
+            - name: invalid_link_target 类
+              href: ../parallel/concrt/reference/invalid-link-target-class.md
+            - name: invalid_multiple_scheduling 类
+              href: ../parallel/concrt/reference/invalid-multiple-scheduling-class.md
+            - name: invalid_operation 类
+              href: ../parallel/concrt/reference/invalid-operation-class.md
+            - name: invalid_oversubscribe_operation 类
+              href: ../parallel/concrt/reference/invalid-oversubscribe-operation-class.md
+            - name: invalid_scheduler_policy_key 类
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-key-class.md
+            - name: invalid_scheduler_policy_thread_specification 类
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-thread-specification-class.md
+            - name: invalid_scheduler_policy_value 类
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-value-class.md
+            - name: IResourceManager 结构
+              href: ../parallel/concrt/reference/iresourcemanager-structure.md
+            - name: IScheduler 结构
+              href: ../parallel/concrt/reference/ischeduler-structure.md
+            - name: ISchedulerProxy 结构
+              href: ../parallel/concrt/reference/ischedulerproxy-structure.md
+            - name: ISource 类
+              href: ../parallel/concrt/reference/isource-class.md
+            - name: ITarget 类
+              href: ../parallel/concrt/reference/itarget-class.md
+            - name: IThreadProxy 结构
+              href: ../parallel/concrt/reference/ithreadproxy-structure.md
+            - name: ITopologyExecutionResource 结构
+              href: ../parallel/concrt/reference/itopologyexecutionresource-structure.md
+            - name: ITopologyNode 结构
+              href: ../parallel/concrt/reference/itopologynode-structure.md
+            - name: IUMSCompletionList 结构
+              href: ../parallel/concrt/reference/iumscompletionlist-structure.md
+            - name: IUMSScheduler 结构
+              href: ../parallel/concrt/reference/iumsscheduler-structure.md
+            - name: IUMSThreadProxy 结构
+              href: ../parallel/concrt/reference/iumsthreadproxy-structure.md
+            - name: IUMSUnblockNotification 结构
+              href: ../parallel/concrt/reference/iumsunblocknotification-structure.md
+            - name: IVirtualProcessorRoot 结构
+              href: ../parallel/concrt/reference/ivirtualprocessorroot-structure.md
+            - name: join 类
+              href: ../parallel/concrt/reference/join-class.md
+            - name: location 类
+              href: ../parallel/concrt/reference/location-class.md
+            - name: message 类
+              href: ../parallel/concrt/reference/message-class.md
+            - name: message_not_found 类
+              href: ../parallel/concrt/reference/message-not-found-class.md
+            - name: message_processor 类
+              href: ../parallel/concrt/reference/message-processor-class.md
+            - name: missing_wait 类
+              href: ../parallel/concrt/reference/missing-wait-class.md
+            - name: multi_link_registry 类
+              href: ../parallel/concrt/reference/multi-link-registry-class.md
+            - name: multitype_join 类
+              href: ../parallel/concrt/reference/multitype-join-class.md
+            - name: nested_scheduler_missing_detach 类
+              href: ../parallel/concrt/reference/nested-scheduler-missing-detach-class.md
+            - name: network_link_registry 类
+              href: ../parallel/concrt/reference/network-link-registry-class.md
+            - name: operation_timed_out 类
+              href: ../parallel/concrt/reference/operation-timed-out-class.md
+            - name: ordered_message_processor 类
+              href: ../parallel/concrt/reference/ordered-message-processor-class.md
+            - name: overwrite_buffer 类
+              href: ../parallel/concrt/reference/overwrite-buffer-class.md
+            - name: progress_reporter 类
+              href: ../parallel/concrt/reference/progress-reporter-class.md
+            - name: propagator_block 类
+              href: ../parallel/concrt/reference/propagator-block-class.md
+            - name: reader_writer_lock 类
+              href: ../parallel/concrt/reference/reader-writer-lock-class.md
+            - name: ScheduleGroup 类
+              href: ../parallel/concrt/reference/schedulegroup-class.md
+            - name: Scheduler 类
+              href: ../parallel/concrt/reference/scheduler-class.md
+            - name: scheduler_interface 结构
+              href: ../parallel/concrt/reference/scheduler-interface-structure.md
+            - name: scheduler_not_attached 类
+              href: ../parallel/concrt/reference/scheduler-not-attached-class.md
+            - name: scheduler_ptr 结构（并发运行时）
+              href: ../parallel/concrt/reference/scheduler-ptr-structure-concurrency-runtime.md
+            - name: scheduler_resource_allocation_error 类
+              href: ../parallel/concrt/reference/scheduler-resource-allocation-error-class.md
+            - name: scheduler_worker_creation_error 类
+              href: ../parallel/concrt/reference/scheduler-worker-creation-error-class.md
+            - name: SchedulerPolicy 类
+              href: ../parallel/concrt/reference/schedulerpolicy-class.md
+            - name: simple_partitioner 类
+              href: ../parallel/concrt/reference/simple-partitioner-class.md
+            - name: single_assignment 类
+              href: ../parallel/concrt/reference/single-assignment-class.md
+            - name: single_link_registry 类
+              href: ../parallel/concrt/reference/single-link-registry-class.md
+            - name: source_block 类
+              href: ../parallel/concrt/reference/source-block-class.md
+            - name: source_link_manager 类
+              href: ../parallel/concrt/reference/source-link-manager-class.md
+            - name: static_partitioner 类
+              href: ../parallel/concrt/reference/static-partitioner-class.md
+            - name: structured_task_group 类
+              href: ../parallel/concrt/reference/structured-task-group-class.md
+            - name: target_block 类
+              href: ../parallel/concrt/reference/target-block-class.md
+            - name: task 类（并发运行时）
+              href: ../parallel/concrt/reference/task-class.md
+            - name: task_canceled 类
+              href: ../parallel/concrt/reference/task-canceled-class.md
+            - name: task_completion_event 类
+              href: ../parallel/concrt/reference/task-completion-event-class.md
+            - name: task_continuation_context 类
+              href: ../parallel/concrt/reference/task-continuation-context-class.md
+            - name: task_group 类
+              href: ../parallel/concrt/reference/task-group-class.md
+            - name: task_handle 类
+              href: ../parallel/concrt/reference/task-handle-class.md
+            - name: task_options 类（并发运行时）
+              href: ../parallel/concrt/reference/task-options-class-concurrency-runtime.md
+            - name: timer 类
+              href: ../parallel/concrt/reference/timer-class.md
+            - name: transformer 类
+              href: ../parallel/concrt/reference/transformer-class.md
+            - name: unbounded_buffer 类
+              href: ../parallel/concrt/reference/unbounded-buffer-class.md
+            - name: unsupported_os 类
+              href: ../parallel/concrt/reference/unsupported-os-class.md
+        - name: std 命名空间
+          expanded: false
+          items:
+            - name: std 命名空间
+              href: ../parallel/concrt/reference/std-namespace.md
+            - name: make_exception_ptr 函数
+              href: ../parallel/concrt/reference/make-exception-ptr-function.md
+        - name: stdx 命名空间
+          expanded: false
+          items:
+            - name: stdx 命名空间
+              href: ../parallel/concrt/reference/stdx-namespace.md
+            - name: declval 函数
+              href: ../parallel/concrt/reference/declval-function.md
+- name: OpenMP
+  expanded: false
+  items:
+    - name: MSVC 中的 OpenMP
+      href: ../parallel/openmp/openmp-in-visual-cpp.md
+    - name: SIMD 扩展
+      href: ../parallel/openmp/openmp-simd.md
+    - name: OpenMP C 和 C++ 应用程序接口
+      expanded: false
+      items:
+        - name: OpenMP C 和 C++ 应用程序接口
+          href: ../parallel/openmp/openmp-c-and-cpp-application-program-interface.md
+        - name: 介绍
+          href: ../parallel/openmp/1-introduction.md
+        - name: 指令
+          href: ../parallel/openmp/2-directives.md
+        - name: 运行时库函数
+          href: ../parallel/openmp/3-run-time-library-functions.md
+        - name: 环境变量
+          href: ../parallel/openmp/4-environment-variables.md
+        - name: 附录
+          items:
+            - name: 示例
+              href: ../parallel/openmp/a-examples.md
+            - name: 运行时库函数的存根
+              href: ../parallel/openmp/b-stubs-for-run-time-library-functions.md
+            - name: OpenMP C 和 C++ 语法
+              href: ../parallel/openmp/c-openmp-c-and-cpp-grammar.md
+            - name: schedule 子句
+              href: ../parallel/openmp/d-using-the-schedule-clause.md
+            - name: OpenMP C/C++ 中实现定义的行为
+              href: ../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md
+            - name: 版本 2.0 中的新功能和说明
+              href: ../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md
+    - name: OpenMP 库参考
+      expanded: false
+      items:
+        - name: OpenMP 库参考
+          href: ../parallel/openmp/reference/openmp-library-reference.md
+        - name: 指令
+          href: ../parallel/openmp/reference/openmp-directives.md
+        - name: 子句
+          href: ../parallel/openmp/reference/openmp-clauses.md
+        - name: 函数
+          href: ../parallel/openmp/reference/openmp-functions.md
+        - name: 环境变量
+          href: ../parallel/openmp/reference/openmp-environment-variables.md
+- name: 针对旧代码的多线程支持 (C++)
+  expanded: false
+  items:
+    - name: 针对旧代码的多线程支持 (C++)
+      href: ../parallel/multithreading-support-for-older-code-visual-cpp.md
+    - name: 使用 C 和 Win32 进行多线程编程
+      expanded: false
+      items:
+        - name: 使用 C 和 Win32 进行多线程编程
+          href: ../parallel/multithreading-with-c-and-win32.md
+        - name: 多线程 C 程序示例
+          href: ../parallel/sample-multithread-c-program.md
+        - name: 线程本地存储 (TLS)
+          href: ../parallel/thread-local-storage-tls.md
+    - name: 使用 C++ 和 MFC 进行多线程编程
+      expanded: false
+      items:
+        - name: 使用 C++ 和 MFC 进行多线程编程
+          href: ../parallel/multithreading-with-cpp-and-mfc.md
+        - name: 多线程处理：创建用户界面线程
+          href: ../parallel/multithreading-creating-user-interface-threads.md
+        - name: 多线程处理：创建工作线程
+          href: ../parallel/multithreading-creating-worker-threads.md
+        - name: 多线程处理：何时使用同步类
+          href: ../parallel/multithreading-when-to-use-the-synchronization-classes.md
+        - name: 多线程处理：如何使用同步类
+          href: ../parallel/multithreading-how-to-use-the-synchronization-classes.md
+        - name: 多线程处理：终止线程
+          href: ../parallel/multithreading-terminating-threads.md
+        - name: 多线程处理：编程提示
+          href: ../parallel/multithreading-programming-tips.md
+    - name: 多线程和区域设置
+      href: ../parallel/multithreading-and-locales.md

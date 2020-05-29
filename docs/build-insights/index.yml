@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: C++ 生成见解 | 自动生成工具链分析
+summary: 使用 C++ 生成见解实时和自动生成分析和优化。
+metadata:
+  title: C++ 生成见解
+  description: 了解如何使用 C++ 生成见解分析和优化生成。
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: e5a165888026c1485b77bd2784e22b3c9b36684a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153535"
+landingContent:
+- title: 了解生成的执行方式
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ 生成见解入门
+      url: get-started-with-cpp-build-insights.md
+  - linkListType: tutorial
+    links:
+    - text: vcperf 和 Windows Performance Analyzer
+      url: tutorials/vcperf-and-wpa.md
+    - text: Windows Performance Analyzer 基础知识
+      url: tutorials/wpa-basics.md
+- title: 度量生成性能
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: vcperf 命令
+      url: reference/vcperf-commands.md
+    - text: Windows Performance Analyzer 视图
+      url: reference/wpa-views.md
+- title: 创建自己的生成性能分析
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: SDK 参考
+      url: reference/sdk/overview.md

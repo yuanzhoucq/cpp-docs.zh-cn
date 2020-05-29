@@ -1,5 +1,5 @@
 ---
-title: 如何：各种字符串类型之间转换
+title: 如何：在各种字符串类型之间进行转换
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff07bf7a00be36f28620735c48128f973d9fe791
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410721"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375810"
 ---
-# <a name="how-to-convert-between-various-string-types"></a>如何：各种字符串类型之间转换
+# <a name="how-to-convert-between-various-string-types"></a>如何：在各种字符串类型之间进行转换
 
-本主题演示如何将各种视觉对象C++的其他字符串到字符串类型。 介绍了字符串类型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情况下，转换为新类型时进行的字符串的副本。 为新字符串所做的任何更改将不会影响原始字符串，反之亦然。
+本主题演示如何将各种 Visual C++字符串类型转换为其他字符串。 涵盖的字符串类型包括`char *`、_bstr_t、CComBSTR、CString、basic_string`wchar_t*`和[basic_string](../standard-library/basic-string-class.md)<xref:System.String?displayProperty=fullName>。 [_bstr_t](../cpp/bstr-t-class.md) [CComBSTR](../atl/reference/ccombstr-class.md) [CString](../atl-mfc-shared/using-cstring.md) 在所有情况下，在转换为新类型时，将创建字符串的副本。 对新字符串所做的任何更改都不会影响原始字符串，反之亦然。
 
-## <a name="converting-from-char-"></a>从 char 转换 \*
+## <a name="converting-from-char-"></a>从字符转换\*
 
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
 
-此示例演示如何将从转换`char *`为上面列出的其他字符串类型。 一个`char *`字符串 （也称为 C 样式字符串） 使用 null 字符指示字符串的末尾。 C 样式字符串通常需要每个字符，1 个字节，但也可以使用两个字节。 在下面的示例中`char *`字符串有时称为多字节字符字符串，因为从 Unicode 字符串转换得到的字符串数据。 单字节和多字节字符 (`MBCS`) 函数可以对`char *`字符串。
+此示例演示如何从`char *`转换为上面列出的其他字符串类型。 `char *`字符串（也称为 C 样式字符串）使用空字符来指示字符串的末尾。 C 样式字符串通常每个字符需要一个字节，但也可以使用两个字节。 在下面的示例中，`char *`由于从 Unicode 字符串转换产生的字符串数据，字符串有时称为多字节字符串。 单个字节和多字节字符 （`MBCS`） 函数可以在字符串`char *`上操作。
 
 ### <a name="code"></a>代码
 
@@ -119,13 +119,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchart-"></a>从 wchar_t 转换 \*
+## <a name="converting-from-wchar_t-"></a>从wchar_t转换\*
 
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
 
-此示例演示如何将从转换`wchar_t *`为上面列出的其他字符串类型。 一些字符串类型，包括`wchar_t *`，实现宽字符格式。 若要转换多字节和宽字符格式之间的字符串，可以使用单个函数调用等`mbstowcs_s`或类的构造函数调用，如`CStringA`。
+此示例演示如何从`wchar_t *`转换为上面列出的其他字符串类型。 几种字符串类型，包括`wchar_t *`，实现宽字符格式。 要在多字节和宽字符格式之间转换字符串，可以使用单个函数调用类似`mbstowcs_s`或构造函数调用的类（如`CStringA`）。
 
 ### <a name="code"></a>代码
 
@@ -243,13 +243,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-bstrt"></a>从 _bstr_t 转换
+## <a name="converting-from-_bstr_t"></a>从_bstr_t转换
 
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
 
-此示例演示如何将从转换`_bstr_t`为上面列出的其他字符串类型。 `_bstr_t`对象是一种方法来封装宽字符`BSTR`字符串。 BSTR 字符串的长度值，而不使用 null 字符终止字符串，但将转换为字符串类型可能需要终止 null。
+此示例演示如何从`_bstr_t`转换为上面列出的其他字符串类型。 该`_bstr_t`对象是封装宽字符串`BSTR`的一种方式。 BSTR 字符串具有长度值，并且不使用空字符来终止字符串，但转换到的字符串类型可能需要终止 null。
 
 ### <a name="code"></a>代码
 
@@ -349,7 +349,7 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>描述
 
-此示例演示如何将从转换`CComBSTR`为上面列出的其他字符串类型。 与 _bstr_t 一样，`CComBSTR`对象是一种封装宽字符 BSTR 字符串的方法。 BSTR 字符串的长度值，而不使用 null 字符终止字符串，但将转换为字符串类型可能需要终止 null。
+此示例演示如何从`CComBSTR`转换为上面列出的其他字符串类型。 与_bstr_t一`CComBSTR`样，对象是封装宽字符 BSTR 字符串的一种方式。 BSTR 字符串具有长度值，并且不使用空字符来终止字符串，但转换到的字符串类型可能需要终止 null。
 
 ### <a name="code"></a>代码
 
@@ -459,9 +459,9 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>描述
 
-此示例演示如何将从转换`CString`为上面列出的其他字符串类型。 `CString` 基于 TCHAR 数据类型，它又取决于是否符号`_UNICODE`定义。 如果`_UNICODE`未定义，则`TCHAR`定义为 char 和`CString`包含一个多字节字符字符串; 如果`_UNICODE`定义，则`TCHAR`被定义为`wchar_t`和`CString`包含宽字符字符串。
+此示例演示如何从`CString`转换为上面列出的其他字符串类型。 `CString`基于 TCHAR 数据类型，这反过来又取决于符号`_UNICODE`是否定义。 如果未`_UNICODE`定义，则定义为`TCHAR`字符，并且包含多字节`CString`字符串;如果未定义，则定义为字符，并且包含多字节字符串。如果`_UNICODE`已定义，`TCHAR`则定义为`wchar_t`，并且`CString`包含宽字符串。
 
-`CStringA` 多字节字符串的始终版本`CString`，`CStringW`是宽字符字符串的唯一版本。 既不`CStringA`也不`CStringW`使用`_UNICODE`以确定它们应如何编译。 `CStringA` 和`CStringW`用于在此示例说明缓冲区大小分配方面的微小差异和输出处理。
+`CStringA`是多字节字符串始终版本，`CString``CStringW`是宽字符字符串仅版本。 也`CStringA``CStringW`不打算用于`_UNICODE`确定它们应该如何编译。 `CStringA`并`CStringW`用于本示例以阐明缓冲区大小分配和输出处理中的细微差异。
 
 ### <a name="code"></a>代码
 
@@ -485,7 +485,7 @@ int main()
     // Set up a multibyte CStringA string.
     CStringA origa("Hello, World!");
     cout << origa << " (CStringA)" << endl;
-    
+
     // Set up a wide character CStringW string.
     CStringW origw("Hello, World!");
     wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;
@@ -545,7 +545,7 @@ int main()
     // Convert to a wide character CComBSTR string from
     // a wide character CStringW string.
     CComBSTR ccombstrw(origw);
-    
+
     // Append the type of string to it, and display the result.
     if (ccombstrw.Append(_T(" (CComBSTR)")) == S_OK)
     {
@@ -572,7 +572,7 @@ int main()
     systemstring += " (System::String)";
     Console::WriteLine("{0}", systemstring);
     delete systemstring;
-    
+
     // Convert a wide character CStringW to a
     // System::String.
     String ^systemstringw = gcnew String(origw);
@@ -597,13 +597,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basicstring"></a>从 basic_string 转换
+## <a name="converting-from-basic_string"></a>从basic_string转换
 
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
 
-此示例演示如何将从转换`basic_string`为上面列出的其他字符串类型。
+此示例演示如何从`basic_string`转换为上面列出的其他字符串类型。
 
 ### <a name="code"></a>代码
 
@@ -693,13 +693,13 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>从 system:: string 转换
+## <a name="converting-from-systemstring"></a>从系统转换：字符串
 
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
 
-此示例演示如何将从宽字符 (Unicode) 转换[system:: string](assetId:///System::String?qualifyHint=True&autoUpgrade=True)为上面列出的其他字符串类型。
+此示例演示如何从宽字符 （Unicode）[系统：string](/dotnet/api/system.string)转换为上面列出的其他字符串类型。
 
 ### <a name="code"></a>代码
 
@@ -800,16 +800,16 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ATL 和 MFC 字符串转换宏](../atl/reference/string-conversion-macros.md)<br/>
 [与 C 样式字符串相关的 CString 操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 [如何：将标准字符串转换为 System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
 [如何：将 System::String 转换为标准字符串](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[如何：将 system:: string 转换为 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
-[使用 ccombstr 进行编程](../atl/programming-with-ccombstr-atl.md)<br/>
+[如何：转换系统：：字符串到wchar_t*或字符\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[使用 CComBSTR 进行编程](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s、wcscpy_s、_mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)<br/>
-[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)
+[pin_ptr（C++/CLI）](../extensions/pin-ptr-cpp-cli.md)

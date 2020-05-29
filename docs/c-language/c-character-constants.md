@@ -8,15 +8,15 @@ helpviewer_keywords:
 - single quotation mark
 ms.assetid: 388ae7d7-2c3a-44d6-a507-63f541ecd2da
 ms.openlocfilehash: 5d87b57726f741cc96f2180de33cae01403786ec
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326295"
 ---
 # <a name="c-character-constants"></a>C 字符常量
 
-“字符常量”通过在单引号 (' ') 内封闭可表示的字符集中的单个字符来构成。 字符常量用于表示[执行字符集](../c-language/execution-character-set.md)内的字符。
+“字符常量”通过在单引号 (' '  ) 内封闭可表示的字符集中的单个字符来构成。 字符常量用于表示[执行字符集](../c-language/execution-character-set.md)内的字符。
 
 ## <a name="syntax"></a>语法
 
@@ -28,9 +28,9 @@ ms.locfileid: "56152763"
 
 *c-char-sequence c-char*
 
-*c-char*:除单引号 (')、反斜杠 (\\) 或者换行符以外的所有源字符集成员
+*c-char*:除单引号 ('  )、反斜杠 (\\  ) 或者换行符以外的所有源字符集成员
 
-escape-sequence
+escape-sequence 
 
 *escape-sequence*: *simple-escape-sequence*
 
@@ -44,9 +44,9 @@ escape-sequence
 
 *octal-escape-sequence*: **\\**  *octal-digit*
 
-\\  octal-digit octal-digit
+**\\**  *octal-digit octal-digit*
 
-\\  octal-digit octal-digit octal-digit
+**\\**  *octal-digit octal-digit octal-digit*
 
 *hexadecimal-escape-sequence*: **\x**  *hexadecimal-digit*
 

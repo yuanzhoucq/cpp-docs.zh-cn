@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516022"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171939"
 ---
 # <a name="string--ccli-and-ccx"></a>String（C++/CLI 和 C++/CX）
 
@@ -19,7 +19,7 @@ Windows 运行时和公共语言运行时将字符串表示为，已分配内存
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-Windows 运行时体系结构要求，`String` 数据类型必须位于 `Platform` 命名空间中。 为了方便起见，Visual C++ 还在 `default` 命名空间中提供了 `string` 数据类型（它是 `Platform::String` 的同义词）。
+Windows 运行时体系结构要求，`String` 数据类型必须位于 `Platform` 命名空间中。 为了方便起见，Visual C++ 还在 `string` 命名空间中提供了 `Platform::String` 数据类型（它是 `default` 的同义词）。
 
 ### <a name="syntax"></a>语法
 
@@ -259,7 +259,7 @@ System.SByte*
 System.String
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [字符串和字符文本](../cpp/string-and-character-literals-cpp.md)<br/>

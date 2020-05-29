@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: f92058d1aa0dabccf6623d20a248fed8eb99ab26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 717e560035d42957c16168097577d0c8c589e3c7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168045"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753348"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 类
 
@@ -33,14 +33,14 @@ class CDialogEx : public CDialog
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CDialogEx::CDialogEx](#cdialogex)|构造 `CDialogEx` 对象。|
 |`CDialogEx::~CDialogEx`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|设置对话框的背景色。|
 |[CDialogEx::SetBackgroundImage](#setbackgroundimage)|设置对话框的背景图像。|
@@ -49,9 +49,9 @@ class CDialogEx : public CDialog
 
 若要使用`CDialogEx`类，则从`CDialogEx`类而不是`CDialog`类派生对话框类。
 
-对话框图像存储在资源文件中。 该框架将自动删除从资源文件加载的任何图像。 若要以编程方式删除当前的背景图像，请调用[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法或实现`OnDestroy`事件处理程序。 当您调用[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法，请传入`HBITMAP`参数作为图像图柄。 如果`CDialogEx`标记是`m_bAutoDestroyBmp`，`TRUE`对象将取得图像的所有权并将其删除。
+对话框图像存储在资源文件中。 该框架将自动删除从资源文件加载的任何图像。 要以编程方式删除当前背景图像，请调用[CDialogEx：：Set背景图像](#setbackgroundimage)方法或实现`OnDestroy`事件处理程序。 调用[CDialogEx：：Set背景图像](#setbackgroundimage)方法时，将参数`HBITMAP`作为图像句柄传递。 如果`CDialogEx`标记是`m_bAutoDestroyBmp`，`TRUE`对象将取得图像的所有权并将其删除。
 
-一个`CDialogEx`对象可以是区域的父[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象。 [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象调用`CDialogEx::SetActiveMenu`方法时[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象打开。 然后，`CDialogEx`对象将处理任何菜单事件，直到[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象已关闭。
+对象`CDialogEx`可以是[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象的父对象。 [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象在`CDialogEx::SetActiveMenu`[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象打开时调用该方法。 之后，`CDialogEx`对象处理任何菜单事件，直到[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象关闭。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -67,9 +67,9 @@ class CDialogEx : public CDialog
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdialogex.h
+**标题：** afxdialogex.h
 
-##  <a name="cdialogex"></a>  CDialogEx::CDialogEx
+## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx：CDialogEx
 
 构造 `CDialogEx` 对象。
 
@@ -86,26 +86,26 @@ CDialogEx(
 ### <a name="parameters"></a>参数
 
 *nIDTemplate*<br/>
-[in]对话框模板资源 ID。
+[在]对话框模板的资源 ID。
 
-*lpszTemplateName*<br/>
-[in]对话框模板资源名称。
+*lpszTemplate 名称*<br/>
+[在]对话框模板的资源名称。
 
-*pParent*<br/>
-[in]指向父窗口的指针。 默认值为 NULL。
+*p 父级*<br/>
+[在]指向父窗口的指针。 默认值为 NULL。
 
-*pParentWnd*<br/>
-[in]指向父窗口的指针。 默认值为 NULL。
+*pparentwnd*<br/>
+[在]指向父窗口的指针。 默认值为 NULL。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor
+## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogEx：：设置背景颜色
 
 设置对话框的背景色。
 
-```
+```cpp
 void SetBackgroundColor(
     COLORREF color,
     BOOL bRepaint=TRUE);
@@ -113,19 +113,19 @@ void SetBackgroundColor(
 
 ### <a name="parameters"></a>参数
 
-*color*<br/>
-[in]RGB 颜色值。
+*颜色*<br/>
+[在]RGB 颜色值。
 
 *bRepaint*<br/>
-[in]为 TRUE，则立即更新屏幕上。否则为 FALSE。 默认值为 TRUE。
+[在]TRUE 可立即更新屏幕;否则，FALSE。 默认值为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage
+## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx：：设置背景图像
 
 设置对话框的背景图像。
 
-```
+```cpp
 void SetBackgroundImage(
     HBITMAP hBitmap,
     BackgroundLocation location=BACKGR_TILE,
@@ -141,31 +141,31 @@ BOOL SetBackgroundImage(
 ### <a name="parameters"></a>参数
 
 *hBitmap*<br/>
-[in]句柄的背景图像。
+[在]背景图像的句柄。
 
-*uiBmpResId*<br/>
-[in]背景图像的资源 ID。
+*乌布布雷西德*<br/>
+[在]背景图像的资源 ID。
 
 *location*<br/>
-[in]其中一个`CDialogEx::BackgroundLocation`指定的映像的位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 默认值为 BACKGR_TILE。
+[在]指定图像位置`CDialogEx::BackgroundLocation`的值之一。 有效值包括BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT和BACKGR_BOTTOMRIGHT。 默认值为BACKGR_TILE。
 
-*bAutoDestroy*<br/>
-[in]为 TRUE，则自动销毁的背景图像;否则为 FALSE。
+*bAuto销毁*<br/>
+[在]TRUE 自动销毁背景图像;否则，FALSE。
 
 *bRepaint*<br/>
-[in]为 TRUE，则立即重绘对话框;否则为 FALSE。
+[在]TRUE 可立即重绘对话框;否则，FALSE。
 
 ### <a name="return-value"></a>返回值
 
-在第二个方法重载的语法，TRUE 成功，则该方法是否否则为 FALSE。
+在第二个方法重载语法中，如果该方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-您指定的图像不拉伸以适合对话框的工作区。
+指定的图像不会拉伸以适合对话框工作区。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)<br/>
 [CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)

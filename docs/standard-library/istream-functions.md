@@ -5,20 +5,20 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458768"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363069"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 函数
 
 |||
 |-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+|[交换](#istream_swap)|[Ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="swap"></a><a name="istream_swap"></a>交换
 
 交换两个流对象的元素。
 
@@ -36,13 +36,13 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*离开*\
 一个流。
 
-*然后*\
+*对*\
 一个流。
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a><a name="ws"></a>Ws
 
 跳过流中的空白。
 
@@ -61,14 +61,14 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="remarks"></a>备注
 
-此操控器提取并放弃任何 `ch` 元素，对于这些元素，[use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) 为 true。
+操纵器提取`ch`并丢弃[use_facet](../standard-library/basic-filebuf-class.md#open)< **型**\<**Elem> >（getloc）** 的任何元素。 [getloc](../standard-library/ios-base-class.md#getloc) **is**( **ctype**\< **Elem**>:: **space**, **ch**) 为 true。
 
-此函数如果在提取元素时遇到文件末尾，则会调用 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。 它将返回 *_Istr*。
+此函数如果在提取元素时遇到文件末尾，则会调用 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。 它返回 *_Istr*。
 
 ### <a name="example"></a>示例
 
 有关使用 `ws` 的示例，请参阅 [operator>>](../standard-library/istream-operators.md#op_gt_gt)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<istream>](../standard-library/istream.md)

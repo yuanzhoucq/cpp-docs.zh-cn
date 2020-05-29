@@ -29,7 +29,7 @@ ms.locfileid: "69492509"
 
 **Microsoft 专用**
 
-`envp` 参数是以 null 结尾的字符串的数组，这些字符串表示在用户的环境变量中设置的值。 `envp` 参数可以声明为 `char` (`char *envp[]`) 的指针数组，或者声明为一个指针（指向指向 `char` (`char **envp`) 的多个指针）。 在  wmain 函数中，`envp` 参数可以声明为指向 `wchar_t` (`wchar_t *envp[]`) 的指针数组，或者声明为一个指针（指向 `wchar_t` (`wchar_t **envp`) 的多个指针）。 数组的末尾由 NULL  \* 指针来指示。 请注意，传递给 main  或  wmain 的环境块是当前环境的“冻结”副本。 如果随后通过调用 _putenv  或 `_wputenv` 更改环境，则当前环境（由 `getenv`/`_wgetenv` 以及 `_environ` 或 `_wenviron` 变量返回）将发生更改，但 `envp` 指向的块将不会更改。 `envp` 参数在 C 中是与 ANSI 兼容的，但在 C++ 中却不是如此。
+`envp` 参数是以 null 结尾的字符串的数组，这些字符串表示在用户的环境变量中设置的值。 `envp` 参数可以声明为 `char` (`char *envp[]`) 的指针数组，或者声明为一个指针（指向指向 `char` (`char **envp`) 的多个指针）。 在  wmain 函数中，`envp` 参数可以声明为指向 `wchar_t` (`wchar_t *envp[]`) 的指针数组，或者声明为一个指针（指向 `wchar_t` (`wchar_t **envp`) 的多个指针）。 数组的末尾由 NULL \* 指针来指示  。 请注意，传递给 main  或  wmain 的环境块是当前环境的“冻结”副本。 如果随后通过调用 _putenv  或 `_wputenv` 更改环境，则当前环境（由 `getenv`/`_wgetenv` 以及 `_environ` 或 `_wenviron` 变量返回）将发生更改，但 `envp` 指向的块将不会更改。 `envp` 参数在 C 中是与 ANSI 兼容的，但在 C++ 中却不是如此。
 
 **结束 Microsoft 专用**
 

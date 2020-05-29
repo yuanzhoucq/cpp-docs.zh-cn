@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214443"
 ---
 # <a name="menu-editor-c"></a>菜单编辑器（C++）
 
@@ -53,13 +53,13 @@ ms.locfileid: "72444982"
 > [!TIP]
 > 使用**菜单编辑器**时，在许多情况下，你可以右键单击以显示常用命令的弹出菜单。 可用命令取决于指针所指向的内容。
 
-## <a name="how-to"></a>操作说明
+## <a name="how-to"></a>如何
 
 **菜单编辑器**可用于：
 
 ### <a name="to-create-a-standard-menu"></a>创建标准菜单
 
-1. 请参阅菜单**视图** > **其他 Windows** > **资源视图**，然后右键单击**菜单**标题。 选择 "**添加资源**"，然后选择 "**菜单**"。
+1.  > **其他 Windows** **资源视图** > ，请参阅 "菜单"**视图**，然后右键单击**菜单**标题。 选择 "**添加资源**"，然后选择 "**菜单**"。
 
 1. 在菜单栏上选择 "**新建项**" 框（此处包含 "*类型*" 的矩形）。
 
@@ -194,7 +194,7 @@ ms.locfileid: "72444982"
 
 Win32
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [资源编辑器](../windows/resource-editors.md)<br/>
 [菜单命令](../windows/menu-command-properties.md)<br/>

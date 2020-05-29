@@ -88,11 +88,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126222"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427589"
 ---
 # <a name="vector-class"></a>vector 类
 
@@ -141,8 +141,8 @@ class vector
 |[const_reference](#const_reference)|一种类型，它提供对存储在向量中的**const**元素的引用。 它用于读取和执行**const**运算。|
 |[const_reverse_iterator](#const_reverse_iterator)|一个类型，它提供可读取矢量中任何 **const** 元素的随机访问迭代器。|
 |[difference_type](#difference_type)|一个类型，它提供矢量中两个元素的址间的差异。|
-|[迭代器](#iterator)|一个类型，它提供可读取或修改向量中任何元素的随机访问迭代器。|
-|[指针](#pointer)|一个类型，提供指向向量中元素的指针。|
+|[Iterator](#iterator)|一个类型，它提供可读取或修改向量中任何元素的随机访问迭代器。|
+|[pointer](#pointer)|一个类型，提供指向向量中元素的指针。|
 |[reference](#reference)|一个类型，它提供对向量中存储的元素的引用。|
 |[reverse_iterator](#reverse_iterator)|一个类型，它提供可读取或修改反向矢量中的任意元素的随机访问迭代器。|
 |[size_type](#size_type)|一个类型，它计算矢量中的元素数目。|
@@ -203,7 +203,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>示例
 
-有关使用 [ 的示例，请参阅 ](#get_allocator)get_allocator`allocator_type` 的示例。
+有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。
 
 ## <a name="assign"></a>将
 
@@ -487,7 +487,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a> cbegin
 
 返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
 
@@ -591,7 +591,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>示例
 
-有关使用 [ 的示例，请参阅 ](#back)back`const_iterator` 的示例。
+有关使用 `const_iterator` 的示例，请参阅 [back](#back) 的示例。
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -1178,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 返回用于构造矢量的分配器对象的一个副本。
 
@@ -1437,7 +1437,7 @@ vector& operator=(vector&& right);
 ### <a name="parameters"></a>参数
 
 *right*\
-要复制到 [ 中的](../standard-library/vector-class.md)矢量`vector`。
+要复制到 `vector` 中的[矢量](../standard-library/vector-class.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -1494,7 +1494,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-类型 **pointer** 可用于修改元素的值。
+**pointer** 类型可用于修改元素的值。
 
 ### <a name="example"></a>示例
 
@@ -1653,7 +1653,7 @@ typedef typename Allocator::reference reference;
 
 ### <a name="example"></a>示例
 
-有关如何使用矢量类中的 [reference](#at) 的示例，请参阅 **at**。
+有关如何使用矢量类中的 **reference** 的示例，请参阅 [at](#at)。
 
 ## <a name="rend"></a>rend
 
@@ -1891,7 +1891,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 请参阅 [rbegin](#rbegin) 的示例。
 
-## <a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a> shrink_to_fit
 
 放弃额外容量。
 
@@ -2044,7 +2044,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a> value_type
 
 一个类型，它代表向量中存储的数据类型。
 
@@ -2234,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

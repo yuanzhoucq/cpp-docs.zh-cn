@@ -1,17 +1,17 @@
 ---
-title: 对象生存期和资源管理（RAII）
+title: 对象生存期和资源管理 (RAII)
 description: 按照新式C++中的 RAII 原则来避免资源泄漏。
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303370"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078034"
 ---
-# <a name="object-lifetime-and-resource-management-raii"></a>对象生存期和资源管理（RAII）
+# <a name="object-lifetime-and-resource-management-raii"></a>对象生存期和资源管理 (RAII)
 
 与托管语言不同C++ ，没有自动*垃圾回收*。 这是在程序运行时释放堆内存和其他资源的内部过程。 C++程序负责将所有获取的资源返回到操作系统。 未能释放未使用的资源称为 "*泄漏*"。 在进程退出之前，泄漏的资源对其他程序不可用。 具体而言，内存泄漏是 C 样式编程中出现 bug 的一个常见原因。
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 在下面的示例中，`w` 拥有内存资源，因此必须在其析构函数中包含代码以删除内存。
- 
+
 ```cpp
 class widget
 {

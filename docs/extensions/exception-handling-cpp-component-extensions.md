@@ -10,12 +10,12 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: b477f7355ee1f4f70a0ad3df8b85c4276c07d397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 9f5662bb9e744b5db3b0ab25ac4230b2f67016bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516572"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182118"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>异常处理（C++/CLI 和 C++/CX）
 
@@ -35,7 +35,7 @@ ms.locfileid: "65516572"
 [如何：定义和安装全局异常处理程序](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 演示如何捕获未经处理的异常。
 
-[如何：在本机代码中捕获从 MSIL 抛出的异常](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
+[如何：在本机代码中捕捉从 MSIL 引发的异常](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 讨论如何捕获本机代码中的 CLR 和 C++ 异常。
 
 [如何：定义和安装全局异常处理程序](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
@@ -46,6 +46,6 @@ ms.locfileid: "65516572"
 [异常处理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 介绍了标准 C++ 中的异常处理。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

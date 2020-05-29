@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions
 ms.assetid: fdcb82b9-8ae1-489c-a248-1b477220df0a
 ms.openlocfilehash: bb0b78fec112c9161f21ffa829fa6ef933dbe370
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158493"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>针对使用 Naked 函数的规则和限制
 

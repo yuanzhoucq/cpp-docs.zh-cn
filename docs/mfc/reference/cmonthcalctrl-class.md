@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 963aecfed4f6eb67a0ab227df06fce98c0778f7f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504564"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752815"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -111,71 +111,71 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|构造 `CMonthCalCtrl` 对象。|
+|[CMonthCalCtrl：cmonthCalCtrl](#cmonthcalctrl)|构造 `CMonthCalCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMonthCalCtrl::Create](#create)|创建月历控件并将其附加到`CMonthCalCtrl`对象。|
-|[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|检索当前月历控件的边框宽度。|
-|[CMonthCalCtrl::GetCalendarCount](#getcalendarcount)|检索当前月历控件中显示的日历的数目。|
-|[CMonthCalCtrl::GetCalendarGridInfo](#getcalendargridinfo)|检索有关当月日历控件的信息。|
-|[CMonthCalCtrl::GetCalID](#getcalid)|检索当前月历控件的日历标识符。|
-|[CMonthCalCtrl::GetColor](#getcolor)|获取月历控件指定区域的颜色。|
-|[CMonthCalCtrl::GetCurrentView](#getcurrentview)|检索当前月历控件当前显示的视图。|
-|[CMonthCalCtrl::GetCurSel](#getcursel)|按当前选定的日期检索系统时间。|
-|[CMonthCalCtrl::GetFirstDayOfWeek](#getfirstdayofweek)|获取要在日历的最左侧列中显示的一周中的第一天。|
-|[CMonthCalCtrl::GetMaxSelCount](#getmaxselcount)|检索月历控件中可选择的最大天数。|
-|[CMonthCalCtrl::GetMaxTodayWidth](#getmaxtodaywidth)|检索当前月历控件的 "今日" 字符串的最大宽度。|
-|[CMonthCalCtrl::GetMinReqRect](#getminreqrect)|检索在月历控件中显示完整月份所需的最小大小。|
-|[CMonthCalCtrl::GetMonthDelta](#getmonthdelta)|检索月历控件的滚动率。|
-|[CMonthCalCtrl::GetMonthRange](#getmonthrange)|检索表示月历控件显示的上限和下限的日期信息。|
-|[CMonthCalCtrl::GetRange](#getrange)|检索月历控件中设置的当前最小和最大日期。|
-|[CMonthCalCtrl::GetSelRange](#getselrange)|检索表示用户当前所选日期范围的上限和下限的日期信息。|
-|[CMonthCalCtrl::GetToday](#gettoday)|检索为月历控件指定为 "今日" 的日期的日期信息。|
-|[CMonthCalCtrl::HitTest](#hittest)|确定月历控件的哪个部分位于屏幕上的给定点。|
-|[CMonthCalCtrl::IsCenturyView](#iscenturyview)|指示当前月历控件的当前视图是否为 "世纪" 视图。|
-|[CMonthCalCtrl::IsDecadeView](#isdecadeview)|指示当前月历控件的当前视图是否为十年视图。|
-|[CMonthCalCtrl::IsMonthView](#ismonthview)|指示当前月历控件的当前视图是否为月份视图。|
-|[CMonthCalCtrl::IsYearView](#isyearview)|指示当前月历控件的当前视图是否为 "年" 视图。|
-|[CMonthCalCtrl::SetCalendarBorder](#setcalendarborder)|设置当前月历控件的边框宽度。|
-|[CMonthCalCtrl::SetCalendarBorderDefault](#setcalendarborderdefault)|设置当前月历控件的边框的默认宽度。|
-|[CMonthCalCtrl::SetCalID](#setcalid)|设置当月日历控件的日历标识符。|
-|[CMonthCalCtrl::SetCenturyView](#setcenturyview)|设置当前月历控件以显示 "世纪" 视图。|
-|[CMonthCalCtrl::SetColor](#setcolor)|设置月历控件的指定区域的颜色。|
-|[CMonthCalCtrl::SetCurrentView](#setcurrentview)|设置当前月历控件以显示指定的视图。|
-|[CMonthCalCtrl::SetCurSel](#setcursel)|为月历控件设置当前选定的日期。|
-|[CMonthCalCtrl::SetDayState](#setdaystate)|设置月历控件中的天数显示。|
-|[CMonthCalCtrl::SetDecadeView](#setdecadeview)|将 "当月日历" 控件设置为十年视图。|
-|[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|设置要在日历的最左侧列中显示的周日期。|
-|[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|设置月历控件中可选择的最大天数。|
-|[CMonthCalCtrl::SetMonthDelta](#setmonthdelta)|设置月历控件的滚动率。|
-|[CMonthCalCtrl::SetMonthView](#setmonthview)|设置当前月历控件以显示 "月" 视图。|
-|[CMonthCalCtrl::SetRange](#setrange)|设置月历控件允许的最小和最大日期。|
-|[CMonthCalCtrl::SetSelRange](#setselrange)|将月历控件的选择设置为给定的日期范围。|
-|[CMonthCalCtrl::SetToday](#settoday)|设置当前日期的日历控件。|
-|[CMonthCalCtrl::SetYearView](#setyearview)|将当前月历控件设置为 "年" 视图。|
-|[CMonthCalCtrl::SizeMinReq](#sizeminreq)|将月历控件重绘到最小单月大小。|
-|[CMonthCalCtrl::SizeRectToMin](#sizerecttomin)|对于 "当月日历" 控件, 计算可包含符合指定矩形的所有日历的最小矩形。|
+|[CMonthCalctrl：：创建](#create)|创建月历控件并将其附加到`CMonthCalCtrl`对象。|
+|[CMonthCalctrl：：获取日历边框](#getcalendarborder)|检索当前月日历控件的边框的宽度。|
+|[CMonthCalctrl：：获取日历计数](#getcalendarcount)|检索当前月份日历控件中显示的日历数。|
+|[CMonthCalctrl：：获取日历网格信息](#getcalendargridinfo)|检索有关当月日历控件的信息。|
+|[CMonthCalctrl：：GetCalID](#getcalid)|检索当月日历控件的日历标识符。|
+|[CMonthCalctrl：获取颜色](#getcolor)|获取月份日历控件的指定区域的颜色。|
+|[CMonthCalctrl：：获取电流视图](#getcurrentview)|检索当前由当前月份日历控件显示的视图。|
+|[CMonthCalctrl：：获取CurSel](#getcursel)|检索当前选择的日期指示的系统时间。|
+|[CmonthCalctrl：获取第一天周](#getfirstdayofweek)|获取要显示在日历最左侧列中的一周的第一天。|
+|[CMonthCalctrl：：获取MaxSelCount](#getmaxselcount)|检索可在月份日历控件中选择的当前最大天数。|
+|[CMonthCalctrl：：获取今天最大宽度](#getmaxtodaywidth)|检索当前月份日历控件的"今天"字符串的最大宽度。|
+|[CMonthCalctrl：：获取MinReqrect](#getminreqrect)|检索在月份日历控件中显示完整月份所需的最小大小。|
+|[CMonthCalctrl：：获取月德尔塔](#getmonthdelta)|检索一个月日历控件的滚动速率。|
+|[CMonthCalctrl：获取月航程](#getmonthrange)|检索表示月历控件显示的上限和低点的日期信息。|
+|[CMonthCalctrl：获取范围](#getrange)|检索在月份日历控件中设置的当前最小和最大日期。|
+|[CMonthCalctrl：：GetSelRange](#getselrange)|检索表示用户当前选择的日期范围的上限和下限的日期信息。|
+|[CMonthCalctrl：今天获取](#gettoday)|检索指定为"今天"的日期的日期信息，用于一个月的日历控件。|
+|[CMonthCalctrl：hitTest](#hittest)|确定月历控件的哪个部分位于屏幕上的给定点。|
+|[CMonthCalctrl：Is世纪视图](#iscenturyview)|指示当前月历控件的视图是否是世纪视图。|
+|[CMonthCalctrl：：是十年视图](#isdecadeview)|指示当前月日历控件的当前视图是否是十年视图。|
+|[CMonthCalctrl：：IsMonthView](#ismonthview)|指示当前月日历控件的当前视图是否是月视图。|
+|[CMonthCalctrl：isYearView](#isyearview)|指示当前月日历控件的当前视图是否是年份视图。|
+|[CMonthCalctrl：：设置日历边框](#setcalendarborder)|设置当前月日历控件的边框的宽度。|
+|[CMonthCalctrl：：设置日历边框默认](#setcalendarborderdefault)|设置当前月日历控件边框的默认宽度。|
+|[CMonthCalctrl：：SetCalID](#setcalid)|设置当月日历控件的日历标识符。|
+|[CMonthCalctrl：：设置世纪视图](#setcenturyview)|设置当前月历控件以显示世纪视图。|
+|[CMonthCalctrl：：设置颜色](#setcolor)|设置月历控件的指定区域的颜色。|
+|[CMonthCalctrl：：设置电流视图](#setcurrentview)|设置当前月历控件以显示指定的视图。|
+|[CMonthCalctrl：：SetCurSel](#setcursel)|设置月份日历控件的当前选定日期。|
+|[CMonthCalctrl：setDayState](#setdaystate)|设置一个月日历控件中的天数的显示。|
+|[CMonthCalctrl：：设置十年视图](#setdecadeview)|将当前月历控件设置到十年视图。|
+|[CmonthCalctrl：：每周第一天](#setfirstdayofweek)|将要显示在日历最左侧列中的星期几。|
+|[CMonthCalctrl：：SetMaxSelCount](#setmaxselcount)|设置可在月份日历控件中选择的最大天数。|
+|[CMonthCalctrl：：设置月德尔塔](#setmonthdelta)|设置月历控件的滚动速率。|
+|[CMonthCalctrl：：设置月景](#setmonthview)|设置当前月历控件以显示月视图。|
+|[CMonthCalctrl：：SetRange](#setrange)|设置月历控件的最小和最大允许日期。|
+|[CMonthCalctrl：：SetSelRange](#setselrange)|将月份日历控件的选择设置为给定日期范围。|
+|[CMonthCalctrl：：今天设置](#settoday)|设置当天的日历控件。|
+|[CMonthCalctrl：：SetYearView](#setyearview)|将当前月日历控件设置为年视图。|
+|[CMonthCalctrl：：SizeMinReq](#sizeminreq)|将月历控件重新绘制为其最小一个月大小。|
+|[CmonthCalctrl：：大小雷克特明](#sizerecttomin)|对于当前月历控件，计算可以包含适合指定矩形的所有日历的最小矩形。|
 
 ## <a name="remarks"></a>备注
 
-月历控件为用户提供了一个简单的日历界面, 用户可以从中选择日期。 用户可以通过以下方式更改显示:
+月历控件为用户提供了一个简单的日历界面，用户可以从中选择日期。 用户可以通过以下更改显示：
 
-- 向后和向前 (从月到月) 滚动。
+- 逐月向后滚动和向前滚动。
 
-- 单击 "今天" 文本以显示当前日期 (如果未使用 MCS_NOTODAY 样式)。
+- 单击"今天"文本以显示当前天（如果未使用MCS_NOTODAY样式）。
 
-- 从弹出菜单中选择月份或年份。
+- 从弹出式菜单中选择一个月或一年。
 
-您可以在创建月历控件时, 通过将各种样式应用于该对象来对其进行自定义。 Windows SDK 中的月历[控件样式](/windows/win32/Controls/month-calendar-control-styles)中描述了这些样式。
+您可以在创建对象时对对象应用各种样式来自定义月历控件。 这些样式在 Windows SDK 中的[月历控制样式](/windows/win32/Controls/month-calendar-control-styles)中描述。
 
-月历控件可以显示超过一个月, 它可以通过使日期加粗来指示特殊日期 (如假日)。
+月历控件可以显示超过一个月，并且可以通过粗体日期来指示特殊日期（如假日）。
 
-有关使用月历控件的详细信息, 请参阅[Using CMonthCalCtrl](../../mfc/using-cmonthcalctrl.md)。
+有关使用月历控件的详细信息，请参阅[使用 CMonthCalCtrl](../../mfc/using-cmonthcalctrl.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -189,9 +189,9 @@ class CMonthCalCtrl : public CWnd
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxdtctl
+**标题：** afxdtctl.h
 
-##  <a name="cmonthcalctrl"></a>CMonthCalCtrl:: CMonthCalCtrl
+## <a name="cmonthcalctrlcmonthcalctrl"></a><a name="cmonthcalctrl"></a>CMonthCalCtrl：cmonthCalCtrl
 
 构造 `CMonthCalCtrl` 对象。
 
@@ -201,9 +201,9 @@ CMonthCalCtrl();
 
 ### <a name="remarks"></a>备注
 
-构造对象之后`Create` , 必须调用。
+构造对象后`Create`必须调用。
 
-##  <a name="create"></a>CMonthCalCtrl:: Create
+## <a name="cmonthcalctrlcreate"></a><a name="create"></a>CMonthCalctrl：：创建
 
 创建月历控件并将其附加到`CMonthCalCtrl`对象。
 
@@ -224,45 +224,45 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
-指定应用于月历控件的 Windows 样式的组合。 有关样式的详细信息, 请参阅[月历控件样式](/windows/win32/Controls/month-calendar-control-styles)Windows SDK。
+指定应用于月历控件的 Windows 样式的组合。 有关样式的详细信息，请参阅 Windows SDK 中的[月日历控件样式](/windows/win32/Controls/month-calendar-control-styles)。
 
-*rect*<br/>
-对[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用。 包含月历控件的位置和大小。
+*矩形*<br/>
+对[RECT](/windows/win32/api/windef/ns-windef-rect)结构的引用。 包含月历控件的位置和大小。
 
 *pt*<br/>
-对用于标识月历控件位置的[点](/previous-versions/dd162805\(v=vs.85\))结构的引用。
+对标识月历控件位置的[POINT](/windows/win32/api/windef/ns-windef-point)结构的引用。
 
-*pParentWnd*<br/>
-指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针, 该对象是月历控件的父窗口。 它不能为 NULL。
+*pparentwnd*<br/>
+指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针，该对象是月历控件的父窗口。 值不得为 NULL。
 
 *nID*<br/>
-指定月历控件的控件 ID。
+指定月历控件的控制 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果初始化成功, 则为非零值;否则为0。
+初始化成功时非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-通过两个步骤创建月历控件:
+通过两个步骤创建月历控件：
 
-1. 调用[CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)以构造`CMonthCalCtrl`对象。
+1. 调用[CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)构造`CMonthCalCtrl`对象。
 
-1. 调用此成员函数, 该函数创建月历控件并将其附加到`CMonthCalCtrl`对象。
+1. 调用此成员函数，该函数创建月历控件并将其附加到`CMonthCalCtrl`对象。
 
-调用`Create`时, 将初始化公共控件。 `Create`您调用的版本确定如何调整它的大小:
+调用`Create`时调用 ，将初始化公共控件。 调用的版本`Create`决定了其大小：
 
-- 若要使 MFC 自动将控件大小设置为一个月, 请调用使用*pt*参数的重写。
+- 要让 MFC 自动将控件大小调整为一个月，请调用使用*pt*参数的重写。
 
-- 若要自行调整控件大小, 请调用使用*rect*参数的此函数的重写。
+- 要自行调整控件的大小，请调用使用*rect*参数的此函数的重写。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]
 
-##  <a name="getcalendarborder"></a>CMonthCalCtrl:: GetCalendarBorder
+## <a name="cmonthcalctrlgetcalendarborder"></a><a name="getcalendarborder"></a>CMonthCalctrl：：获取日历边框
 
-检索当前月历控件的边框宽度。
+检索当前月日历控件的边框的宽度。
 
 ```
 int GetCalendarBorder() const;
@@ -270,15 +270,15 @@ int GetCalendarBorder() const;
 
 ### <a name="return-value"></a>返回值
 
-控件边框的宽度 (以像素为单位)。
+控件边框的宽度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCALENDARBORDER](/windows/win32/Controls/mcm-getcalendarborder)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_GETCALENDARBORDER](/windows/win32/Controls/mcm-getcalendarborder)消息，这在 Windows SDK 中介绍。
 
-##  <a name="getcalendarcount"></a>CMonthCalCtrl:: GetCalendarCount
+## <a name="cmonthcalctrlgetcalendarcount"></a><a name="getcalendarcount"></a>CMonthCalctrl：：获取日历计数
 
-检索当前月历控件中显示的日历的数目。
+检索当前月份日历控件中显示的日历数。
 
 ```
 int GetCalendarCount() const;
@@ -286,13 +286,13 @@ int GetCalendarCount() const;
 
 ### <a name="return-value"></a>返回值
 
-月历控件中当前显示的日历数。 允许的最大日历数量为12。
+当前显示在月份日历控件中的日历数。 允许的最大日历数为 12。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCALENDARCOUNT](/windows/win32/Controls/mcm-getcalendarcount)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_GETCALENDARCOUNT](/windows/win32/Controls/mcm-getcalendarcount)消息，这在 Windows SDK 中介绍。
 
-##  <a name="getcalendargridinfo"></a>CMonthCalCtrl:: GetCalendarGridInfo
+## <a name="cmonthcalctrlgetcalendargridinfo"></a><a name="getcalendargridinfo"></a>CMonthCalctrl：：获取日历网格信息
 
 检索有关当月日历控件的信息。
 
@@ -302,33 +302,33 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*pmcGridInfo*|弄指向[MCGRIDINFO](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo)结构的指针, 该结构接收当前月历控件的相关信息。 调用方负责分配和初始化此结构。|
+|*pmcGrid信息*|[出]指向接收有关当月日历控件信息的[MCGRIDINFO](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo)结构的指针。 调用方负责分配和初始化此结构。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCALENDARGRIDINFO](/windows/win32/Controls/mcm-getcalendargridinfo)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_GETCALENDARGRIDINFO](/windows/win32/Controls/mcm-getcalendargridinfo)消息，这在 Windows SDK 中介绍。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量, `m_monthCalCtrl`该变量用于以编程方式访问月历控件。 此变量将在下一个示例中使用。
+以下代码示例定义用于以编程方式访问`m_monthCalCtrl`月份日历控件的变量 。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例使用`GetCalendarGridInfo`方法检索当前月历控件显示的日历日期。
+以下代码示例使用 方法`GetCalendarGridInfo`检索当前月份日历控件显示的日历日期。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_3.cpp)]
 
-##  <a name="getcalid"></a>CMonthCalCtrl:: GetCalID
+## <a name="cmonthcalctrlgetcalid"></a><a name="getcalid"></a>CMonthCalctrl：：GetCalID
 
-检索当前月历控件的日历标识符。
+检索当月日历控件的日历标识符。
 
 ```
 CALID GetCalID() const;
@@ -340,13 +340,13 @@ CALID GetCalID() const;
 
 ### <a name="remarks"></a>备注
 
-日历标识符表示特定于区域的日历, 如公历 (本地化)、日语或回历。 应用程序可以使用具有各种语言支持函数的日历标识符。
+日历标识符表示特定于区域的日历，例如公历（本地化）、日语或 Hijri 日历。 您的应用程序可以使用具有各种语言支持功能的日历标识符。
 
-此方法发送[MCM_GETCALID](/windows/win32/Controls/mcm-getcalid)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_GETCALID](/windows/win32/Controls/mcm-getcalid)消息，这在 Windows SDK 中介绍。
 
-##  <a name="getcolor"></a>CMonthCalCtrl:: GetColor
+## <a name="cmonthcalctrlgetcolor"></a><a name="getcolor"></a>CMonthCalctrl：获取颜色
 
-检索由*nRegion*指定的月历控件区域的颜色。
+检索*n 区域*指定的月历控件的区域的颜色。
 
 ```
 COLORREF GetColor(int nRegion) const;
@@ -354,16 +354,16 @@ COLORREF GetColor(int nRegion) const;
 
 ### <a name="parameters"></a>参数
 
-*nRegion*<br/>
-从中检索颜色的月历控件区域。 有关值的列表, 请参阅[SetColor](#setcolor)的*nRegion*参数。
+*n区域*<br/>
+从中检索颜色的月历控件的区域。 有关值列表，请参阅[SetColor](#setcolor)的*n 区域*参数。
 
 ### <a name="return-value"></a>返回值
 
-一个[COLORREF](/windows/win32/gdi/colorref)值, 指定与月历控件的部分关联的颜色 (如果成功)。 否则, 此成员函数将返回-1。
+指定与月历控件部分关联的颜色（如果成功）的[COLORREF](/windows/win32/gdi/colorref)值。 否则，此成员函数返回 -1。
 
-##  <a name="getcurrentview"></a>CMonthCalCtrl:: GetCurrentView
+## <a name="cmonthcalctrlgetcurrentview"></a><a name="getcurrentview"></a>CMonthCalctrl：：获取电流视图
 
-检索当前月历控件当前显示的视图。
+检索当前由当前月份日历控件显示的视图。
 
 ```
 DWORD GetCurrentView() const;
@@ -371,34 +371,34 @@ DWORD GetCurrentView() const;
 
 ### <a name="return-value"></a>返回值
 
-当前视图, 由以下值之一指示:
+当前视图，由以下值之一指示：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCMV_MONTH|每月视图|
 |MCMV_YEAR|年度视图|
 |MCMV_DECADE|十年视图|
-|MCMV_CENTURY|世纪视图|
+|MCMV_CENTURY|世纪景观|
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息，这在 Windows SDK 中介绍。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量, `m_monthCalCtrl`该变量用于以编程方式访问月历控件。 此变量将在下一个示例中使用。
+以下代码示例定义用于以编程方式访问`m_monthCalCtrl`月份日历控件的变量 。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例报表查看当前显示的月历控件。
+显示以下查看月历控件的代码示例报告。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_4.cpp)]
 
-##  <a name="getcursel"></a>CMonthCalCtrl:: GetCurSel
+## <a name="cmonthcalctrlgetcursel"></a><a name="getcursel"></a>CMonthCalctrl：：获取CurSel
 
-按当前选定的日期检索系统时间。
+检索当前选择的日期指示的系统时间。
 
 ```
 BOOL GetCurSel(COleDateTime& refDateTime) const;  BOOL GetCurSel(CTime& refDateTime) const;
@@ -408,28 +408,28 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 
 ### <a name="parameters"></a>参数
 
-*refDateTime*<br/>
+*参考日期时间*<br/>
 对[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。 接收当前时间。
 
 *pDateTime*<br/>
-指向[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该结构将接收当前选定的日期信息。 此参数必须是有效的地址, 并且不能为 NULL。
+指向[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，该结构将接收当前选择的日期信息。 此参数必须是有效地址，不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则为非零值;otherwize 0。
+如果成功，则非零;其他w化0。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETCURSEL](/windows/win32/Controls/mcm-getcursel)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_GETCURSEL](/windows/win32/Controls/mcm-getcursel)的行为，如 Windows SDK 中所述。
 
 > [!NOTE]
->  如果设置了样式 MCS_MULTISELECT, 此成员函数将失败。
+> 如果设置了样式MCS_MULTISELECT，则此成员函数将失败。
 
-`GetCurSel`在 MFC 的实现中, 可以`COleDateTime`指定使用情况、 `CTime`用法或`SYSTEMTIME`结构用法。
+在 MFC 的`GetCurSel`实现 中，可以`COleDateTime`指定用法`CTime`、用法或`SYSTEMTIME`结构用法。
 
-##  <a name="getfirstdayofweek"></a>CMonthCalCtrl:: GetFirstDayOfWeek
+## <a name="cmonthcalctrlgetfirstdayofweek"></a><a name="getfirstdayofweek"></a>CmonthCalctrl：获取第一天周
 
-获取要在日历的最左侧列中显示的一周中的第一天。
+获取要显示在日历最左侧列中的一周的第一天。
 
 ```
 int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
@@ -437,18 +437,18 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 ### <a name="parameters"></a>参数
 
-*pbLocal*<br/>
-指向布尔值的指针。 如果该值为非零, 则该控件的设置与控制面板中的设置不匹配。
+*pb 本地*<br/>
+指向 BOOL 值的指针。 如果值为非零，则控件的设置与控制面板中的设置不匹配。
 
 ### <a name="return-value"></a>返回值
 
-一个整数值, 该值表示一周的第一天。 有关这些整数表示的内容的详细信息, 请参阅 "**备注**"。
+表示一周第一天的整数值。 有关这些整数代表的内容的详细信息，请参阅**备注**。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-getfirstdayofweek)的行为, 如 Windows SDK 中所述。 一周中的几天以整数表示, 如下所示。
+此成员函数实现 Win32 消息[MCM_GETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-getfirstdayofweek)的行为，如 Windows SDK 中所述。 星期的天数表示为整数，如下所示。
 
-|值|一周中的某一日|
+|“值”|星期一|
 |-----------|---------------------|
 |0|星期一|
 |1|星期二|
@@ -460,11 +460,11 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 ### <a name="example"></a>示例
 
-  请参阅[CMonthCalCtrl:: SetFirstDayOfWeek](#setfirstdayofweek)的示例。
+  请参阅[CMonthCalCtrl 的示例：：设置第一天周](#setfirstdayofweek)。
 
-##  <a name="getmaxselcount"></a>CMonthCalCtrl:: GetMaxSelCount
+## <a name="cmonthcalctrlgetmaxselcount"></a><a name="getmaxselcount"></a>CMonthCalctrl：：获取MaxSelCount
 
-检索月历控件中可选择的最大天数。
+检索可在月份日历控件中选择的当前最大天数。
 
 ```
 int GetMaxSelCount() const;
@@ -472,19 +472,19 @@ int GetMaxSelCount() const;
 
 ### <a name="return-value"></a>返回值
 
-一个整数值, 表示可以为控件选择的总天数。
+表示可以为控件选择的天数的总天数的整数值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETMAXSELCOUNT](/windows/win32/Controls/mcm-getmaxselcount)的行为, 如 Windows SDK 中所述。 将此成员函数用于具有 MCS_MULTISELECT 样式集的控件。
+此成员函数实现 Win32 消息[MCM_GETMAXSELCOUNT](/windows/win32/Controls/mcm-getmaxselcount)的行为，如 Windows SDK 中所述。 对于具有MCS_MULTISELECT样式集的控件，使用此成员函数。
 
 ### <a name="example"></a>示例
 
-  请参阅[CMonthCalCtrl:: SetMaxSelCount](#setmaxselcount)的示例。
+  请参阅[CMonthCalCtrl 的示例：：SetMaxSelCount](#setmaxselcount)。
 
-##  <a name="getmaxtodaywidth"></a>CMonthCalCtrl:: GetMaxTodayWidth
+## <a name="cmonthcalctrlgetmaxtodaywidth"></a><a name="getmaxtodaywidth"></a>CMonthCalctrl：：获取今天最大宽度
 
-检索当前月历控件的 "今日" 字符串的最大宽度。
+检索当前月份日历控件的"今天"字符串的最大宽度。
 
 ```
 DWORD GetMaxTodayWidth() const;
@@ -492,29 +492,29 @@ DWORD GetMaxTodayWidth() const;
 
 ### <a name="return-value"></a>返回值
 
-"今天" 字符串的宽度 (以像素为单位)。
+"今天"字符串的宽度（以像素为单位）。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量, `m_monthCalCtrl`该变量用于以编程方式访问月历控件。 此变量将在下一个示例中使用。
+以下代码示例定义用于以编程方式访问`m_monthCalCtrl`月份日历控件的变量 。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`GetMaxTodayWidth`方法。
+以下代码示例演示了该方法`GetMaxTodayWidth`。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_5.cpp)]
 
 ### <a name="remarks"></a>备注
 
-用户可以通过单击 "今天" 字符串返回到当前日期, 该字符串显示在月历控件的底部。 "今天" 字符串包括标签文本和日期文本。
+用户可以通过单击"今天"字符串返回到当前日期，该字符串显示在月历控件的底部。 "今天"字符串包括标签文本和日期文本。
 
-此方法发送[MCM_GETMAXTODAYWIDTH](/windows/win32/Controls/mcm-getmaxtodaywidth)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_GETMAXTODAYWIDTH](/windows/win32/Controls/mcm-getmaxtodaywidth)消息，这在 Windows SDK 中介绍。
 
-##  <a name="getminreqrect"></a>CMonthCalCtrl:: GetMinReqRect
+## <a name="cmonthcalctrlgetminreqrect"></a><a name="getminreqrect"></a>CMonthCalctrl：：获取MinReqrect
 
-检索在月历控件中显示完整月份所需的最小大小。
+检索在月份日历控件中显示完整月份所需的最小大小。
 
 ```
 BOOL GetMinReqRect(RECT* pRect) const;
@@ -522,20 +522,20 @@ BOOL GetMinReqRect(RECT* pRect) const;
 
 ### <a name="parameters"></a>参数
 
-*pRect*<br/>
-指向将接收边框信息的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。 此参数必须是有效的地址, 并且不能为 NULL。
+*普雷克*<br/>
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构将接收边界矩形信息。 此参数必须是有效地址，不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 此成员函数将返回非`lpRect`零值并接收适用的边界信息。 如果不成功, 则成员函数返回0。
+如果成功，此成员函数将返回非零`lpRect`并接收适用的边界信息。 如果不成功，成员函数返回 0。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETMINREQRECT](/windows/win32/Controls/mcm-getminreqrect)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_GETMINREQRECT](/windows/win32/Controls/mcm-getminreqrect)的行为，如 Windows SDK 中所述。
 
-##  <a name="getmonthdelta"></a>CMonthCalCtrl:: GetMonthDelta
+## <a name="cmonthcalctrlgetmonthdelta"></a><a name="getmonthdelta"></a>CMonthCalctrl：：获取月德尔塔
 
-检索月历控件的滚动率。
+检索一个月日历控件的滚动速率。
 
 ```
 int GetMonthDelta() const;
@@ -543,15 +543,15 @@ int GetMonthDelta() const;
 
 ### <a name="return-value"></a>返回值
 
-月历控件的滚动率。 滚动速率是指当用户单击滚动按钮一次时, 控件移动其显示的月份数。
+月历控件的滚动速率。 滚动速率是当用户单击滚动按钮一次时控件移动其显示的月数。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETMONTHDELTA](/windows/win32/Controls/mcm-getmonthdelta)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_GETMONTHDELTA](/windows/win32/Controls/mcm-getmonthdelta)的行为，如 Windows SDK 中所述。
 
-##  <a name="getmonthrange"></a>CMonthCalCtrl:: GetMonthRange
+## <a name="cmonthcalctrlgetmonthrange"></a><a name="getmonthrange"></a>CMonthCalctrl：获取月航程
 
-检索表示月历控件显示的上限和下限的日期信息。
+检索表示月历控件显示的上限和低点的日期信息。
 
 ```
 int GetMonthRange(
@@ -573,40 +573,40 @@ int GetMonthRange(
 ### <a name="parameters"></a>参数
 
 *refMinRange*<br/>
-对包含所允许的最小日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
+对包含允许的最小日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
 
 *refMaxRange*<br/>
-对`COleDateTime` 或`CTime`对象的引用, 该对象包含允许的最大日期。
+对包含允许的最大`COleDateTime`日期`CTime`的 或 对象的引用。
 
-*pMinRange*<br/>
-指向[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该结构包含位于范围下限的日期。
+*普明朗*<br/>
+指向[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，其中包含范围最底层的日期。
 
 *pMaxRange*<br/>
-指向一个`SYSTEMTIME`结构的指针, 该结构包含范围的最大端的日期。
+指向`SYSTEMTIME`包含范围最高端日期的结构的指针。
 
-*dwFlags*<br/>
-值, 该值指定要检索的范围限制的范围。 此值必须是下列值之一。
+dwFlags**<br/>
+指定要检索的范围限制的范围的值。 此值必须是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |GMR_DAYSTATE|包括仅部分显示的可见范围的前几个月和后几个月。|
 |GMR_VISIBLE|仅包括完全显示的月份。|
 
 ### <a name="return-value"></a>返回值
 
-一个整数, 表示在第一个和第二个版本中, *refMinRange*和*refMaxRange*所表示的两个限制的范围 (以月为单位), 或者第三个版本中的*pMinRange*和*pMaxRange* 。
+以月表示范围的整数，由第一和第二版本中*refMinRange*和*refMaxRange*指示的两个限制，或第三版本中*的 pMinRange*和*pMaxRange*表示。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETMONTHRANGE](/windows/win32/Controls/mcm-getmonthrange)的行为, 如 Windows SDK 中所述。 在 MFC 的`GetMonthRange`实现中, 可以指定`COleDateTime`用法、 `CTime`用法或`SYSTEMTIME`结构用法。
+此成员函数实现 Win32 消息[MCM_GETMONTHRANGE](/windows/win32/Controls/mcm-getmonthrange)的行为，如 Windows SDK 中所述。 在 MFC 的`GetMonthRange`实现 中，`COleDateTime`可以指定用`CTime`法、用法`SYSTEMTIME`或结构用法。
 
 ### <a name="example"></a>示例
 
-  请参阅[CMonthCalCtrl:: SetDayState](#setdaystate)的示例。
+  请参阅[CMonthCalCtrl 的示例：：SetDayState](#setdaystate)。
 
-##  <a name="getrange"></a>CMonthCalCtrl:: GetRange
+## <a name="cmonthcalctrlgetrange"></a><a name="getrange"></a>CMonthCalctrl：获取范围
 
-检索月历控件中设置的当前最小和最大日期。
+检索在月份日历控件中设置的当前最小和最大日期。
 
 ```
 DWORD GetRange(
@@ -624,32 +624,32 @@ DWORD GetRange(
 
 ### <a name="parameters"></a>参数
 
-*pMinRange*<br/>
-指向`COleDateTime`对象`CTime` 、对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该对象包含范围的最低端日期。
+*普明朗*<br/>
+指向`COleDateTime`对象、`CTime`对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，其中包含范围最底层的日期。
 
 *pMaxRange*<br/>
-指向`COleDateTime`对象`CTime` 、对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该对象包含范围最高端的日期。
+指向`COleDateTime`对象、`CTime`对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，其中包含范围最高端的日期。
 
 ### <a name="return-value"></a>返回值
 
-可以为零的 DWORD (未设置任何限制) 或以下值的组合, 这些值用于指定限制信息。
+可以为零（不设置限制）的 DWORD 或指定限制信息的以下值的组合。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
-|GDTR_MAX|为控件设置了最大限制;*pMaxRange*有效并且包含适用的日期信息。|
-|GDTR_MIN|为控件设置最小限制;*pMinRange*有效并且包含适用的日期信息。|
+|GDTR_MAX|为控件设置了最大限制;*pMaxRange*有效，包含适用日期信息。|
+|GDTR_MIN|为控件设置了最小限制;*pMinRange*有效，包含适用日期信息。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETRANGE](/windows/win32/Controls/mcm-getrange)的行为, 如 Windows SDK 中所述。 `GetRange`在 MFC 的实现中, 可以`COleDateTime`指定使用情况、 `CTime`用法或`SYSTEMTIME`结构用法。
+此成员函数实现 Win32 消息[MCM_GETRANGE](/windows/win32/Controls/mcm-getrange)的行为，如 Windows SDK 中所述。 在 MFC 的`GetRange`实现 中，可以`COleDateTime`指定用法`CTime`、用法或`SYSTEMTIME`结构用法。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_6.cpp)]
 
-##  <a name="getselrange"></a>CMonthCalCtrl:: GetSelRange
+## <a name="cmonthcalctrlgetselrange"></a><a name="getselrange"></a>CMonthCalctrl：：GetSelRange
 
-检索表示用户当前所选日期范围的上限和下限的日期信息。
+检索表示用户当前选择的日期范围的上限和下限的日期信息。
 
 ```
 BOOL GetSelRange(
@@ -668,16 +668,16 @@ BOOL GetSelRange(
 ### <a name="parameters"></a>参数
 
 *refMinRange*<br/>
-对包含所允许的最小日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
+对包含允许的最小日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
 
 *refMaxRange*<br/>
-对`COleDateTime` 或`CTime`对象的引用, 该对象包含允许的最大日期。
+对包含允许的最大`COleDateTime`日期`CTime`的 或 对象的引用。
 
-*pMinRange*<br/>
-指向[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该结构包含位于范围下限的日期。
+*普明朗*<br/>
+指向[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，其中包含范围最底层的日期。
 
 *pMaxRange*<br/>
-指向一个`SYSTEMTIME`结构的指针, 该结构包含范围的最大端的日期。
+指向`SYSTEMTIME`包含范围最高端日期的结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -685,13 +685,13 @@ BOOL GetSelRange(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETSELRANGE](/windows/win32/Controls/mcm-getselrange)的行为, 如 Windows SDK 中所述。 `GetSelRange`如果应用于不使用 MCS_MULTISELECT 样式的月历控件, 则将失败。
+此成员函数实现 Win32 消息[MCM_GETSELRANGE](/windows/win32/Controls/mcm-getselrange)的行为，如 Windows SDK 中所述。 `GetSelRange`如果应用于不使用MCS_MULTISELECT样式的月历控件，将失败。
 
-在 MFC 的`GetSelRange`实现中, 可以指定`COleDateTime`用法、 `CTime`用法或`SYSTEMTIME`结构用法。
+在 MFC 的`GetSelRange`实现 中，`COleDateTime`可以指定用`CTime`法、用法`SYSTEMTIME`或结构用法。
 
-##  <a name="gettoday"></a>CMonthCalCtrl:: GetToday
+## <a name="cmonthcalctrlgettoday"></a><a name="gettoday"></a>CMonthCalctrl：今天获取
 
-检索为月历控件指定为 "今日" 的日期的日期信息。
+检索指定为"今天"的日期的日期信息，用于一个月的日历控件。
 
 ```
 BOOL GetToday(COleDateTime& refDateTime) const;  BOOL GetToday(COleDateTime& refDateTime) const;
@@ -701,11 +701,11 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 
 ### <a name="parameters"></a>参数
 
-*refDateTime*<br/>
-对指示当前日的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
+*参考日期时间*<br/>
+对指示当前日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
 
 *pDateTime*<br/>
-指向将接收日期信息的[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针。 此参数必须是有效的地址, 并且不能为 NULL。
+指向将接收日期信息的[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针。 此参数必须是有效地址，不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -713,15 +713,15 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_GETTODAY](/windows/win32/Controls/mcm-gettoday)的行为, 如 Windows SDK 中所述。 `GetToday`在 MFC 的实现中, 可以`COleDateTime`指定使用情况、 `CTime`用法或`SYSTEMTIME`结构用法。
+此成员函数实现 Win32 消息[MCM_GETTODAY](/windows/win32/Controls/mcm-gettoday)的行为，如 Windows SDK 中所述。 在 MFC 的`GetToday`实现 中，可以`COleDateTime`指定用法`CTime`、用法或`SYSTEMTIME`结构用法。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_7.cpp)]
 
-##  <a name="hittest"></a>CMonthCalCtrl:: System.windows.media.visualtreehelper.hittest
+## <a name="cmonthcalctrlhittest"></a><a name="hittest"></a>CMonthCalctrl：hitTest
 
-确定在指定位置有哪些月历控件 (如果有)。
+确定哪个月历控件（如果有）处于指定位置。
 
 ```
 DWORD HitTest(PMCHITTESTINFO pMCHitTest);
@@ -730,7 +730,7 @@ DWORD HitTest(PMCHITTESTINFO pMCHitTest);
 ### <a name="parameters"></a>参数
 
 *pMCHitTest*<br/>
-指向[MCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo)结构的指针, 该结构包含月历控件的命中测试点。
+指向[MCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo)结构的指针，其中包含月份日历控件的热门测试点。
 
 ### <a name="return-value"></a>返回值
 
@@ -738,11 +738,11 @@ DWORD 值。 等于`MCHITTESTINFO`结构的**uHit**成员。
 
 ### <a name="remarks"></a>备注
 
-`HitTest``MCHITTESTINFO`使用结构, 该结构包含有关命中测试的信息。
+`HitTest`使用包含`MCHITTESTINFO`命中测试信息的结构。
 
-##  <a name="iscenturyview"></a>CMonthCalCtrl:: IsCenturyView
+## <a name="cmonthcalctrliscenturyview"></a><a name="iscenturyview"></a>CMonthCalctrl：Is世纪视图
 
-指示当前月历控件的当前视图是否为 "世纪" 视图。
+指示当前月历控件的视图是否是世纪视图。
 
 ```
 BOOL IsCenturyView() const;
@@ -750,15 +750,15 @@ BOOL IsCenturyView() const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前视图是世纪视图, 则为 TRUE;否则为 FALSE。
+如果当前视图是世纪视图，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息, 如 Windows SDK 中所述。 如果该消息返回 MCMV_CENTURY, 则此方法返回 TRUE。
+此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息，这在 Windows SDK 中介绍。 如果该消息返回MCMV_CENTURY，则此方法返回 TRUE。
 
-##  <a name="isdecadeview"></a>CMonthCalCtrl:: IsDecadeView
+## <a name="cmonthcalctrlisdecadeview"></a><a name="isdecadeview"></a>CMonthCalctrl：：是十年视图
 
-指示当前月历控件的当前视图是否为十年视图。
+指示当前月日历控件的当前视图是否是十年视图。
 
 ```
 BOOL IsDecadeView() const;
@@ -766,15 +766,15 @@ BOOL IsDecadeView() const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前视图是十年视图, 则为 TRUE;否则为 FALSE。
+如果当前视图是十年视图，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息, 如 Windows SDK 中所述。 如果该消息返回 MCMV_DECADE, 则此方法返回 TRUE。
+此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息，这在 Windows SDK 中介绍。 如果该消息返回MCMV_DECADE，则此方法返回 TRUE。
 
-##  <a name="ismonthview"></a>CMonthCalCtrl:: IsMonthView
+## <a name="cmonthcalctrlismonthview"></a><a name="ismonthview"></a>CMonthCalctrl：：IsMonthView
 
-指示当前月历控件的当前视图是否为月份视图。
+指示当前月日历控件的当前视图是否是月视图。
 
 ```
 BOOL IsMonthView() const;
@@ -782,15 +782,15 @@ BOOL IsMonthView() const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前视图是月份视图, 则为 TRUE;否则为 FALSE。
+如果当前视图是月视图，则为 TRUE;如果当前视图为"月视图"，则为 TRUE。否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息, 如 Windows SDK 中所述。 如果该消息返回 MCMV_MONTH, 则此方法返回 TRUE。
+此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息，这在 Windows SDK 中介绍。 如果该消息返回MCMV_MONTH，则此方法返回 TRUE。
 
-##  <a name="isyearview"></a>CMonthCalCtrl:: IsYearView
+## <a name="cmonthcalctrlisyearview"></a><a name="isyearview"></a>CMonthCalctrl：isYearView
 
-指示当前月历控件的当前视图是否为 "年" 视图。
+指示当前月日历控件的当前视图是否是年份视图。
 
 ```
 BOOL IsYearView() const;
@@ -798,59 +798,59 @@ BOOL IsYearView() const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前视图为年视图, 则为 TRUE;否则为 FALSE。
+如果当前视图是年份视图，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息, 如 Windows SDK 中所述。 如果该消息返回 MCMV_YEAR, 则此方法返回 TRUE。
+此方法发送[MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview)消息，这在 Windows SDK 中介绍。 如果该消息返回MCMV_YEAR，则此方法返回 TRUE。
 
-##  <a name="setcalendarborder"></a>CMonthCalCtrl:: SetCalendarBorder
+## <a name="cmonthcalctrlsetcalendarborder"></a><a name="setcalendarborder"></a>CMonthCalctrl：：设置日历边框
 
-设置当前月历控件的边框宽度。
+设置当前月日历控件的边框的宽度。
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*cxyBorder*|中边框的宽度 (以像素为单位)。|
+|*cxy 边界*|[在]边框的宽度（以像素为单位）。|
 
 ### <a name="remarks"></a>备注
 
-如果此方法成功, 则边框宽度设置为*cxyBorder*参数。 否则, 边框宽度将重置为当前[主题](/windows/win32/Controls/visual-styles-overview)指定的默认值, 如果未使用主题, 则为零。
+如果此方法成功，边框宽度将设置为*cxyBorder*参数。 否则，边框宽度将重置为当前[主题](/windows/win32/Controls/visual-styles-overview)指定的默认值，如果未使用主题，则将重置为零。
 
-此方法发送[MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder)消息，这在 Windows SDK 中介绍。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量, `m_monthCalCtrl`该变量用于以编程方式访问月历控件。 此变量将在下一个示例中使用。
+以下代码示例定义用于以编程方式访问`m_monthCalCtrl`月份日历控件的变量 。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例将月历控件的边框宽度设置为八个像素。 使用[CMonthCalCtrl:: GetCalendarBorder](#getcalendarborder)方法来确定此方法是否成功。
+以下代码示例将月历控件的边框宽度设置为 8 像素。 使用[CMonthCalCtrl：：GetCalendarBorder](#getcalendarborder)方法确定此方法是否成功。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_8.cpp)]
 
-##  <a name="setcalendarborderdefault"></a>CMonthCalCtrl:: SetCalendarBorderDefault
+## <a name="cmonthcalctrlsetcalendarborderdefault"></a><a name="setcalendarborderdefault"></a>CMonthCalctrl：：设置日历边框默认
 
-设置当前月历控件的边框的默认宽度。
+设置当前月日历控件边框的默认宽度。
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
 ### <a name="remarks"></a>备注
 
-边框宽度设置为当前[主题](/windows/win32/Controls/visual-styles-overview)指定的默认值, 如果未使用主题, 则为零。
+边框宽度设置为当前[主题](/windows/win32/Controls/visual-styles-overview)指定的默认值，如果未使用主题，则为零。
 
-此方法发送[MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder)消息，这在 Windows SDK 中介绍。
 
-##  <a name="setcalid"></a>CMonthCalCtrl:: SetCalID
+## <a name="cmonthcalctrlsetcalid"></a><a name="setcalid"></a>CMonthCalctrl：：SetCalID
 
 设置当月日历控件的日历标识符。
 
@@ -860,35 +860,35 @@ BOOL SetCalID(CALID calid);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*calid*|中[日历标识符](/windows/win32/Intl/calendar-identifiers)常量之一。|
+|*卡利德*|[在][日历标识符](/windows/win32/Intl/calendar-identifiers)常量之一。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-日历标识符指定特定于区域的日历, 如公历 (本地化)、日语或回历。 如果计算机上安装了包含日历的区域设置, 请使用方法显示由calid参数指定的`SetCalID`日历。
+日历标识符指定特定于区域的日历，例如公历（本地化）、日语或 Hijri 日历。 如果计算机上`SetCalID`安装了包含日历的区域设置，则使用 方法显示由*校准*参数指定的日历。
 
-此方法发送[MCM_SETCALID](/windows/win32/Controls/mcm-setcalid)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_SETCALID](/windows/win32/Controls/mcm-setcalid)消息，这在 Windows SDK 中介绍。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量, `m_monthCalCtrl`该变量用于以编程方式访问月历控件。 此变量将在下一个示例中使用。
+以下代码示例定义用于以编程方式访问`m_monthCalCtrl`月份日历控件的变量 。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例设置月历控件以显示日语高层时代日历。 仅`SetCalID`当计算机上已安装该日历时, 此方法才会成功。
+以下代码示例设置月历控件以显示日本天皇时代日历。 仅当`SetCalID`计算机上安装了该日历时，该方法才会成功。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_9.cpp)]
 
-##  <a name="setcenturyview"></a>CMonthCalCtrl:: SetCenturyView
+## <a name="cmonthcalctrlsetcenturyview"></a><a name="setcenturyview"></a>CMonthCalctrl：：设置世纪视图
 
-设置当前月历控件以显示 "世纪" 视图。
+设置当前月历控件以显示世纪视图。
 
 ```
 BOOL SetCenturyView();
@@ -896,13 +896,13 @@ BOOL SetCenturyView();
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法使用[CMonthCalCtrl:: SetCurrentView](#setcurrentview)方法将视图设置为`MCMV_CENTURY`, 这表示纪元视图。
+此方法使用[CMonthCalCtrl：：SetCurrentView](#setcurrentview)方法将视图设置为`MCMV_CENTURY`，表示世纪视图。
 
-##  <a name="setcolor"></a>CMonthCalCtrl:: SetColor
+## <a name="cmonthcalctrlsetcolor"></a><a name="setcolor"></a>CMonthCalctrl：：设置颜色
 
 设置月历控件的指定区域的颜色。
 
@@ -914,34 +914,34 @@ COLORREF SetColor(
 
 ### <a name="parameters"></a>参数
 
-*nRegion*<br/>
-一个整数值, 指定要设置的月份日历颜色。 此值可以是下列值之一。
+*n区域*<br/>
+指定要设置的月历颜色的整数值。 此值可以是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
-|MCSC_BACKGROUND|在月之间显示的背景色。|
-|MCSC_MONTHBK|月份内显示的背景色。|
+|MCSC_BACKGROUND|月份之间显示的背景颜色。|
+|MCSC_MONTHBK|月份内显示的背景颜色。|
 |MCSC_TEXT|用于在一个月内显示文本的颜色。|
-|MCSC_TITLEBK|日历标题中显示的背景色。|
-|MCSC_TITLETEXT|用于显示日历标题内的文本的颜色。|
-|MCSC_TRAILINGTEXT|用于显示标题和尾随日期文本的颜色。 标头和尾随日期是当前日历上出现的上个月和后几个月的日期。|
+|MCSC_TITLEBK|日历标题中显示的背景颜色。|
+|MCSC_TITLETEXT|用于在日历标题中显示文本的颜色。|
+|MCSC_TRAILINGTEXT|用于显示标题和尾随日文本的颜色。 标题和尾随日是当前日历上显示的前一个月和后几个月的天数。|
 
 *ref*<br/>
-月份日历控件指定部分的新颜色设置的 COLORREF 值。
+月历控件指定部分的新颜色设置的 COLORREF 值。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则为表示月历控件指定部分的前一种颜色设置的 COLORREF 值。 否则, 此消息将返回-1。
+COLORREF 值，表示月份日历控件指定部分的上一个颜色设置（如果成功）。 否则，此消息返回 -1。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETCOLOR](/windows/win32/Controls/mcm-setcolor)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_SETCOLOR](/windows/win32/Controls/mcm-setcolor)的行为，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_10.cpp)]
 
-##  <a name="setcurrentview"></a>CMonthCalCtrl:: SetCurrentView
+## <a name="cmonthcalctrlsetcurrentview"></a><a name="setcurrentview"></a>CMonthCalctrl：：设置电流视图
 
 设置当前月历控件以显示指定的视图。
 
@@ -951,21 +951,21 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*dwNewView*|中指定 "每月"、"年"、"年" 或 "世纪" 视图的下列值之一。<br /><br /> MCMV_MONTH:每月视图<br /><br /> MCMV_YEAR:年度视图<br /><br /> MCMV_DECADE:十年视图<br /><br /> MCMV_CENTURY:世纪视图|
+|*dwNewView*|[在]指定每月、年度、十年或世纪视图的以下值之一。<br /><br /> MCMV_MONTH：每月视图<br /><br /> MCMV_YEAR：年度视图<br /><br /> MCMV_DECADE：十年视图<br /><br /> MCMV_CENTURY：世纪景观|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[MCM_SETCURRENTVIEW](/windows/win32/Controls/mcm-setcurrentview)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_SETCURRENTVIEW](/windows/win32/Controls/mcm-setcurrentview)消息，这在 Windows SDK 中介绍。
 
-##  <a name="setcursel"></a>CMonthCalCtrl:: SetCurSel
+## <a name="cmonthcalctrlsetcursel"></a><a name="setcursel"></a>CMonthCalctrl：：SetCurSel
 
-为月历控件设置当前选定的日期。
+设置月份日历控件的当前选定日期。
 
 ```
 BOOL SetCurSel(const COleDateTime& refDateTime);
@@ -975,11 +975,11 @@ BOOL SetCurSel(const LPSYSTEMTIME pDateTime);
 
 ### <a name="parameters"></a>参数
 
-*refDateTime*<br/>
-对[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用, 该对象指示当前选定的月历控件。
+*参考日期时间*<br/>
+对指示当前选择的月份日历控件的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
 
 *pDateTime*<br/>
-指向[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该结构包含要设置为当前选择的日期。
+指向包含要设置为当前选择的日期的[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -987,15 +987,15 @@ BOOL SetCurSel(const LPSYSTEMTIME pDateTime);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETCURSEL](/windows/win32/Controls/mcm-setcursel)的行为, 如 Windows SDK 中所述。 `SetCurSel`在 MFC 的实现中, 可以`COleDateTime`指定使用情况、 `CTime`用法或`SYSTEMTIME`结构用法。
+此成员函数实现 Win32 消息[MCM_SETCURSEL](/windows/win32/Controls/mcm-setcursel)的行为，如 Windows SDK 中所述。 在 MFC 的`SetCurSel`实现 中，可以`COleDateTime`指定用法`CTime`、用法或`SYSTEMTIME`结构用法。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]
 
-##  <a name="setdaystate"></a>CMonthCalCtrl:: SetDayState
+## <a name="cmonthcalctrlsetdaystate"></a><a name="setdaystate"></a>CMonthCalctrl：setDayState
 
-设置月历控件中的天数显示。
+设置一个月日历控件中的天数的显示。
 
 ```
 BOOL SetDayState(
@@ -1005,11 +1005,11 @@ BOOL SetDayState(
 
 ### <a name="parameters"></a>参数
 
-*nMonths*<br/>
-指示数组中*pStates*指向的元素数的值。
+*nmonths*<br/>
+指示*pA 指向*的数组中的元素数的值。
 
-*pStates*<br/>
-指向值的[MONTHDAYSTATE](/windows/win32/Controls/monthdaystate)数组的指针, 这些值定义月历控件在其显示中将如何绘制。 MONTHDAYSTATE 数据类型是一个位域, 其中每个位 (1 到 31) 表示一个月中某一天的状态。 如果某个位处于打开状态，则以粗体显示对应的那一天，否则将不会突出显示。
+*p国家*<br/>
+指向["月日状态](/windows/win32/Controls/monthdaystate)"值数组的指针，用于定义月历控件每天在显示中如何绘制。 MonthDAYSTATE 数据类型是位字段，其中每个位（1 到 31）表示一个月内一天的状态。 如果某个位处于打开状态，则以粗体显示对应的那一天，否则将不会突出显示。
 
 ### <a name="return-value"></a>返回值
 
@@ -1017,15 +1017,15 @@ BOOL SetDayState(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETDAYSTATE](/windows/win32/Controls/mcm-setdaystate)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_SETDAYSTATE](/windows/win32/Controls/mcm-setdaystate)的行为，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_12.cpp)]
 
-##  <a name="setdecadeview"></a>CMonthCalCtrl:: SetDecadeView
+## <a name="cmonthcalctrlsetdecadeview"></a><a name="setdecadeview"></a>CMonthCalctrl：：设置十年视图
 
-将 "当月日历" 控件设置为十年视图。
+将当前月历控件设置到十年视图。
 
 ```
 BOOL SetDecadeView();
@@ -1033,15 +1033,15 @@ BOOL SetDecadeView();
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法使用[CMonthCalCtrl:: SetCurrentView](#setcurrentview)方法将视图设置为`MCMV_DECADE`, 这表示十年视图。
+此方法使用[CMonthCalCtrl：：SetCurrentView](#setcurrentview)方法将视图设置为`MCMV_DECADE`，表示十年视图。
 
-##  <a name="setfirstdayofweek"></a>CMonthCalCtrl:: SetFirstDayOfWeek
+## <a name="cmonthcalctrlsetfirstdayofweek"></a><a name="setfirstdayofweek"></a>CmonthCalctrl：：每周第一天
 
-设置要在日历的最左侧列中显示的周日期。
+将要显示在日历最左侧列中的星期几。
 
 ```
 BOOL SetFirstDayOfWeek(
@@ -1052,26 +1052,26 @@ BOOL SetFirstDayOfWeek(
 ### <a name="parameters"></a>参数
 
 *iDay*<br/>
-一个整数值, 表示要将哪一天设置为一周的第一天。 此值必须是某一天数值。 有关日数字的说明, 请参阅[GetFirstDayOfWeek](#getfirstdayofweek) 。
+表示将哪一天设置为星期的第一天的整数值。 此值必须是天数之一。 有关日数的说明，请参阅获取第一[天](#getfirstdayofweek)。
 
 *lpnOld*<br/>
-指向一个整数的指针, 该整数指示之前设置的一周中的第一天。
+指向一个整数的指针，指示之前设置的一周的第一天。
 
 ### <a name="return-value"></a>返回值
 
-如果将第一周的第一天的值设置为非 LOCALE_IFIRSTDAYOFWEEK 的值, 则为非零值, 这是 "控制面板" 设置中指示的那一天。 否则, 此函数返回0。
+如果星期的前一天设置为LOCALE_IFIRSTDAYOFWEEK的值（控制面板设置中指示的当天）以外的值，则非零。 否则，此函数返回 0。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-setfirstdayofweek)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[的行为MCM_SETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-setfirstdayofweek)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_13.cpp)]
 
-##  <a name="setmaxselcount"></a>CMonthCalCtrl:: SetMaxSelCount
+## <a name="cmonthcalctrlsetmaxselcount"></a><a name="setmaxselcount"></a>CMonthCalctrl：：SetMaxSelCount
 
-设置月历控件中可选择的最大天数。
+设置可在月份日历控件中选择的最大天数。
 
 ```
 BOOL SetMaxSelCount(int nMax);
@@ -1080,7 +1080,7 @@ BOOL SetMaxSelCount(int nMax);
 ### <a name="parameters"></a>参数
 
 *nMax*<br/>
-将设置为表示可选择的最大天数的值。
+将设置为表示可选择天数的最大值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1088,15 +1088,15 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETMAXSELCOUNT](/windows/win32/Controls/mcm-setmaxselcount)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_SETMAXSELCOUNT](/windows/win32/Controls/mcm-setmaxselcount)的行为，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#8](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_14.cpp)]
 
-##  <a name="setmonthdelta"></a>  CMonthCalCtrl::SetMonthDelta
+## <a name="cmonthcalctrlsetmonthdelta"></a><a name="setmonthdelta"></a>CMonthCalctrl：：设置月德尔塔
 
-设置月历控件的滚动率。
+设置月历控件的滚动速率。
 
 ```
 int SetMonthDelta(int iDelta);
@@ -1105,19 +1105,19 @@ int SetMonthDelta(int iDelta);
 ### <a name="parameters"></a>参数
 
 *iDelta*<br/>
-要设置为控件的滚动率的月数。 如果此值为零, 则月份增量将重置为默认值, 即显示在控件中的月数。
+要设置为控件滚动速率的月数。 如果此值为零，则月份增量将重置为默认值，即控件中显示的月数。
 
 ### <a name="return-value"></a>返回值
 
-上一个滚动率。 如果之前尚未设置滚动率, 则返回值为0。
+以前的滚动速率。 如果以前未设置滚动速率，则返回值为 0。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETMONTHDELTA](/windows/win32/Controls/mcm-setmonthdelta)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_SETMONTHDELTA](/windows/win32/Controls/mcm-setmonthdelta)的行为，如 Windows SDK 中所述。
 
-##  <a name="setmonthview"></a>CMonthCalCtrl:: SetMonthView
+## <a name="cmonthcalctrlsetmonthview"></a><a name="setmonthview"></a>CMonthCalctrl：：设置月景
 
-设置当前月历控件以显示 "月" 视图。
+设置当前月历控件以显示月视图。
 
 ```
 BOOL SetMonthView();
@@ -1125,27 +1125,27 @@ BOOL SetMonthView();
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法使用[CMonthCalCtrl:: SetCurrentView](#setcurrentview)方法将视图设置为 MCMV_MONTH, 这表示 "月" 视图。
+此方法使用[CMonthCalCtrl：：SetCurrentView](#setcurrentview)方法将视图设置为MCMV_MONTH，该视图表示月视图。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量, `m_monthCalCtrl`该变量用于以编程方式访问月历控件。 此变量将在下一个示例中使用。
+以下代码示例定义用于以编程方式访问`m_monthCalCtrl`月份日历控件的变量 。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例设置月历控件以显示 "月"、"年"、"年" 和 "世纪" 视图。
+以下代码示例将月历控件设置以显示月份、年份、十年和世纪视图。
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_15.cpp)]
 
-##  <a name="setrange"></a>CMonthCalCtrl:: SetRange
+## <a name="cmonthcalctrlsetrange"></a><a name="setrange"></a>CMonthCalctrl：：SetRange
 
-设置月历控件允许的最小和最大日期。
+设置月历控件的最小和最大允许日期。
 
 ```
 BOOL SetRange(
@@ -1163,11 +1163,11 @@ BOOL SetRange(
 
 ### <a name="parameters"></a>参数
 
-*pMinRange*<br/>
-指向`COleDateTime`对象`CTime` 、对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该对象包含范围的最低端日期。
+*普明朗*<br/>
+指向`COleDateTime`对象、`CTime`对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，其中包含范围最底层的日期。
 
 *pMaxRange*<br/>
-指向`COleDateTime`对象`SYSTEMTIME` 、对象或结构的指针, 该对象包含范围最高端的日期。 `CTime`
+指向`COleDateTime`对象、`CTime`对象或`SYSTEMTIME`结构的指针，其中包含范围最高端的日期。
 
 ### <a name="return-value"></a>返回值
 
@@ -1175,15 +1175,15 @@ BOOL SetRange(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETRANGE](/windows/win32/Controls/mcm-setrange)的行为, 如 Windows SDK 中所述。 在 MFC 的`SetRange`实现中, 可以指定`COleDateTime`用法、 `CTime`用法或`SYSTEMTIME`结构用法。
+此成员函数实现 Win32 消息[MCM_SETRANGE](/windows/win32/Controls/mcm-setrange)的行为，如 Windows SDK 中所述。 在 MFC 的`SetRange`实现 中，`COleDateTime`可以指定用`CTime`法、用法`SYSTEMTIME`或结构用法。
 
 ### <a name="example"></a>示例
 
-  请参阅[CMonthCalCtrl:: GetRange](#getrange)的示例。
+  请参阅[CMonthCalCtrl 的示例：：获取范围](#getrange)。
 
-##  <a name="setselrange"></a>CMonthCalCtrl:: SetSelRange
+## <a name="cmonthcalctrlsetselrange"></a><a name="setselrange"></a>CMonthCalctrl：：SetSelRange
 
-将月历控件的选择设置为给定的日期范围。
+将月份日历控件的选择设置为给定日期范围。
 
 ```
 BOOL SetSelRange(
@@ -1201,11 +1201,11 @@ BOOL SetSelRange(
 
 ### <a name="parameters"></a>参数
 
-*pMinRange*<br/>
-指向`COleDateTime`对象`CTime` 、对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针, 该对象包含范围的最低端日期。
+*普明朗*<br/>
+指向`COleDateTime`对象、`CTime`对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，其中包含范围最底层的日期。
 
 *pMaxRange*<br/>
-指向`COleDateTime`对象`SYSTEMTIME` 、对象或结构的指针, 该对象包含范围最高端的日期。 `CTime`
+指向`COleDateTime`对象、`CTime`对象或`SYSTEMTIME`结构的指针，其中包含范围最高端的日期。
 
 ### <a name="return-value"></a>返回值
 
@@ -1213,13 +1213,13 @@ BOOL SetSelRange(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETSELRANGE](/windows/win32/Controls/mcm-setselrange)的行为, 如 Windows SDK 中所述。 在 MFC 的`SetSelRange`实现中, 可以指定`COleDateTime`用法、 `CTime`用法或`SYSTEMTIME`结构用法。
+此成员函数实现 Win32 消息[的行为MCM_SETSELRANGE](/windows/win32/Controls/mcm-setselrange)，如 Windows SDK 中所述。 在 MFC 的`SetSelRange`实现 中，`COleDateTime`可以指定用`CTime`法、用法`SYSTEMTIME`或结构用法。
 
-##  <a name="settoday"></a>CMonthCalCtrl:: SetToday
+## <a name="cmonthcalctrlsettoday"></a><a name="settoday"></a>CMonthCalctrl：：今天设置
 
-设置当前日期的日历控件。
+设置当天的日历控件。
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1227,23 +1227,23 @@ void SetToday(const LPSYSTEMTIME pDateTime);
 
 ### <a name="parameters"></a>参数
 
-*refDateTime*<br/>
+*参考日期时间*<br/>
 对包含当前日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象的引用。
 
 *pDateTime*<br/>
-在第二个版本中, 是指向包含当前日期信息的[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的指针。 在第三个版本中, 指向包含当前日期信息的[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针。
+在第二个版本中，指向包含当前日期信息的[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的指针。 在第三个版本中，指向包含当前日期信息的[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[MCM_SETTODAY](/windows/win32/Controls/mcm-settoday)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[MCM_SETTODAY](/windows/win32/Controls/mcm-settoday)的行为，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
-  请参阅[CMonthCalCtrl:: GetToday](#gettoday)的示例。
+  请参阅[CMonthCalCtrl 的示例：：获取今天](#gettoday)。
 
-##  <a name="setyearview"></a>CMonthCalCtrl:: SetYearView
+## <a name="cmonthcalctrlsetyearview"></a><a name="setyearview"></a>CMonthCalctrl：：SetYearView
 
-将当前月历控件设置为 "年" 视图。
+将当前月日历控件设置为年视图。
 
 ```
 BOOL SetYearView();
@@ -1251,13 +1251,13 @@ BOOL SetYearView();
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则，FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法使用[CMonthCalCtrl:: SetCurrentView](#setcurrentview)方法将视图设置为 MCMV_YEAR, 这表示 "年" 视图。
+此方法使用[CMonthCalCtrl：：SetCurrentView](#setcurrentview)方法将视图设置为MCMV_YEAR，该视图表示年度视图。
 
-##  <a name="sizeminreq"></a>CMonthCalCtrl:: SizeMinReq
+## <a name="cmonthcalctrlsizeminreq"></a><a name="sizeminreq"></a>CMonthCalctrl：：SizeMinReq
 
 将月历控件显示为显示一个月的最小大小。
 
@@ -1268,19 +1268,19 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ### <a name="parameters"></a>参数
 
 *bRepaint*<br/>
-指定是否要重新绘制控件。 默认情况下, 为 TRUE。 如果为 FALSE, 则不进行重画。
+指定是否要重新绘制控件。 默认情况下，TRUE。 如果 FALSE，则不进行重新绘制。
 
 ### <a name="return-value"></a>返回值
 
-如果月历控件的大小调整为最小值, 则为非零值;否则为0。
+如果月历控件的大小调整到其最小值，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-若`SizeMinReq`要成功调用, 将显示一个月的日历的整个月历控件。
+呼叫`SizeMinReq`成功显示一个月日历的整个月历控件。
 
-##  <a name="sizerecttomin"></a>CMonthCalCtrl:: SizeRectToMin
+## <a name="cmonthcalctrlsizerecttomin"></a><a name="sizerecttomin"></a>CmonthCalctrl：：大小雷克特明
 
-对于 "当月日历" 控件, 计算可包含符合指定矩形的所有日历的最小矩形。
+对于当前月历控件，计算可以包含适合指定矩形的所有日历的最小矩形。
 
 ```
 LPRECT SizeRectToMin(LPRECT lpRect);
@@ -1288,23 +1288,23 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*lpRect*|中指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针, 该结构定义包含所需日历数的矩形。|
+|*lpRect*|[在]指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构定义包含所需日历数的矩形。|
 
 ### <a name="return-value"></a>返回值
 
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针, 该结构定义一个其大小小于或等于*lpRect*参数所定义的矩形的矩形。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针，该结构定义大小小于或等于*lpRect*参数定义的矩形的矩形。
 
 ### <a name="remarks"></a>备注
 
-此方法计算*lpRect*参数指定的矩形中可容纳的日历数量, 然后返回可包含该日历数的最小矩形。 实际上, 此方法会缩小指定的矩形, 使其与所需的日历数量完全吻合。
+此方法计算*lpRect*参数指定的矩形中可以容纳的日历数，然后返回可以包含该日历数的最小矩形。 实际上，此方法收缩指定的矩形以完全适合所需的日历数。
 
-此方法发送[MCM_SIZERECTTOMIN](/windows/win32/Controls/mcm-sizerecttomin)消息, 如 Windows SDK 中所述。
+此方法发送[MCM_SIZERECTTOMIN](/windows/win32/Controls/mcm-sizerecttomin)消息，这在 Windows SDK 中介绍。
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CDateTimeCtrl 类](../../mfc/reference/cdatetimectrl-class.md)

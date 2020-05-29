@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 39c5321d5bc22e14ace3335e4a925bf7284d1cb0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2f64f221e0abdf0cd13b44d5f567aa99f9e4af5c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689240"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376213"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution 类
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType* \
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*真实类型*\
+浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-类模板描述产生用户指定的整型值的分布，或者，如果未提供任何值 **，则根据**正态分布分配值。 下表链接到有关各个成员的文章。
+类模板描述生成用户指定积分类型的值的分布，或者如果没有提供，则按正态分布进行**双精度值**。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-属性函数 `mean()` 和 `stddev()` 分别返回存储的分布参数*均值*和*stddev*的值。
+属性分别函数`mean()`并`stddev()`返回存储分布参数*的平均值*和*stddev*的值。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -93,7 +93,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
 
 有关正态分布的详细信息，请参阅 Wolfram MathWorld 文章[正态分布](https://go.microsoft.com/fwlink/p/?linkid=400924)。
 
@@ -187,7 +187,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="normal_distribution"></a>  normal_distribution::normal_distribution
+## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution：normal_distribution
 
 构造分布。
 
@@ -198,24 +198,24 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*平均*\
+*意味 着*\
 `mean` 分布参数。
 
-*stddev* \
+*斯特德夫*\
 `stddev` 分布参数。
 
-*parm* \
+*帕尔姆*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < stddev`
+**先决条件：**`0.0 < stddev`
 
 第一个构造函数将构造一个对象，该对象存储的 `mean` 值保留值 *mean*，并且该对象存储的 `stddev` 值保留值 *stddev*。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="param_type"></a>  normal_distribution::param_type
+## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution：:p阿拉姆型
 
 存储分布的参数。
 
@@ -233,21 +233,21 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*平均*\
+*意味 着*\
 `mean` 分布参数。
 
-*stddev* \
+*斯特德夫*\
 `stddev` 分布参数。
 
-*right* \
+*对*\
 用于比较的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < stddev`
+**先决条件：**`0.0 < stddev`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<random>](../standard-library/random.md)
+[\<随机>](../standard-library/random.md)

@@ -1,21 +1,21 @@
 ---
-title: 双 (C++ COM 属性)
+title: 双重（C++ COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168208"
 ---
 # <a name="dual"></a>dual
 
-双重接口.idl 文件中放置一个接口。
+将一个接口作为双重接口放置在 .idl 文件中。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409676"
 
 ## <a name="remarks"></a>备注
 
-当**双**C++属性优先于接口时，会导致将接口置于生成的.idl 文件中的库块。
+当**双重** C++特性位于接口之前时，它将使该接口放置在生成的 .idl 文件中的库块内。
 
 ## <a name="example"></a>示例
 
-下面的代码是使用特性块**双**接口定义的前面：
+下面的代码是一个在接口定义之前使用**双重**的特性块：
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -59,7 +59,7 @@ __interface IStatic : IDispatch
 
 |||
 |-|-|
-|**适用对象**|**interface**|
+|**适用于**|**interface**|
 |**可重复**|否|
 |**必需的特性**|None|
 |**无效的特性**|`dispinterface`|

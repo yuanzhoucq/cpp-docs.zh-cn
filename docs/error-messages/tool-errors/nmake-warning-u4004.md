@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4004
 ms.assetid: 5086bbcb-42d7-4677-a877-1a02202a86a2
-ms.openlocfilehash: 882f6c98b31d23d283f5e8b32b46a46c543b1a76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d59b5656d76025fa56bfc76bad800659f25acf53
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298147"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193194"
 ---
 # <a name="nmake-warning-u4004"></a>NMAKE 警告 U4004
 
-规则目标 targetname 太多
+目标 "targetname" 的规则太多
 
-为给定目标使用单个冒号已指定多个描述块 (**:**) 作为分隔符。 NMAKE 中的第一个描述块中执行命令，并忽略更高版本的块。
+为给定目标指定了多个描述块，并使用了单个冒号（ **：** ）作为分隔符。 NMAKE 在第一个 description 块中执行了命令，并忽略了以后的块。
 
-若要在多个依赖项中指定相同的目标，请使用双冒号 (`::`) 为每个依赖关系行中的分隔符。
+若要在多个依赖项中指定同一目标，请在每个依赖项行中使用双冒号（`::`）作为分隔符。

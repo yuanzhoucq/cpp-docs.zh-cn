@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1192
 ms.assetid: 54cff717-a3eb-471d-9bd4-1c2e673dbbef
-ms.openlocfilehash: 5fc5e0a17fb3fedca5719065ae426ac8c05db61f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a15a808c1aff46ba6e63b3e86c0745c8ed7711a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228951"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203658"
 ---
 # <a name="fatal-error-c1192"></a>错误 C1192
 
-\#使用 file 上失败
+使用 "文件" 上的失败 \#
 
-仅 Microsoft 中间语言 (MSIL) 格式的文件可以传递给[#using](../../preprocessor/hash-using-directive-cpp.md)指令。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)编译器选项，可以创建一个 MSIL 输出文件。 其他 Visual Studio 语言还生成 MSIL 文件。
+只有 Microsoft 中间语言（MSIL）格式的文件可以传递到[#using](../../preprocessor/hash-using-directive-cpp.md)指令。 使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)编译器选项可以创建 MSIL 输出文件。 其他 Visual Studio 语言还会生成 MSIL 文件。

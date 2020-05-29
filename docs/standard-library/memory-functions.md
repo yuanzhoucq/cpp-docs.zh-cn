@@ -8,7 +8,6 @@ f1_keywords:
 - memory/std::const_pointer_cast
 - memory/std::declare_no_pointers
 - memory/std::declare_reachable
-- memory/std::default_delete
 - memory/std::dynamic_pointer_cast
 - memory/std::get_deleter
 - memory/std::get_pointer_safety
@@ -28,8 +27,6 @@ f1_keywords:
 - memory/std::uninitialized_copy_n
 - memory/std::uninitialized_fill
 - memory/std::uninitialized_fill_n
-- memory/std::get_temporary_buffer
-- memory/std::return_temporary_buffer
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 helpviewer_keywords:
 - std::addressof [C++]
@@ -77,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: fa8f0dd7e5588891aeef4fbe04a907fbbfc52b52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687726"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447394"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函数
 
@@ -133,10 +130,10 @@ void* align(
 *对齐*\
 要尝试的对齐边界。
 
-*大小*\
+size\
 对齐存储的大小（以字节为单位）。
 
-*ptr* \
+*ptr*\
 要使用的可用连续存储池的起始地址。 此参数也是 output 参数，如果对齐成功，则设置为包含新的起始地址。 如果 `align()` 不成功，则不修改此参数。
 
 *空间*\
@@ -191,7 +188,7 @@ shared_ptr<T> allocate_shared(
 *分配*\
 用于创建对象的分配器。
 
-*args* \
+*args*\
 成为对象的零个或更多自变量。
 
 ### <a name="remarks"></a>备注
@@ -307,7 +304,7 @@ void atomic_store_explicit(
 
 ## <a name="const_pointer_cast"></a>const_pointer_cast
 
-常量强制转换为[shared_ptr](shared-ptr-class.md)。
+Const 强制转换为[shared_ptr](shared-ptr-class.md)。
 
 ```cpp
 template <class T, class Other>
@@ -321,13 +318,13 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*T* \
+*T*\
 由返回的共享指针控制的类型。
 
 *其他*\
 由自变量共享指针控制的类型。
 
-*sp* \
+*sp*\
 自变量共享指针。
 
 ### <a name="remarks"></a>备注
@@ -371,10 +368,10 @@ void declare_no_pointers(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 第一个字符的地址，该字符不再包含可跟踪的指针。
 
-*大小*\
+size\
 从不包含可跟踪指针的*ptr*开始的块大小。
 
 ### <a name="remarks"></a>备注
@@ -392,7 +389,7 @@ void declare_reachable(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 指向可访问、已分配且有效的存储区域的指针。
 
 ### <a name="remarks"></a>备注
@@ -417,7 +414,7 @@ struct default_delete
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 指向要删除的对象的指针。
 
 *其他*\
@@ -425,7 +422,7 @@ struct default_delete
 
 ### <a name="remarks"></a>备注
 
-类模板描述了一个删除器，该对象删除使用**new 运算符**分配的标量对象，适合与类模板 `unique_ptr` 一起使用。 它还具有显式专用化 `default_delete<T[]>`。
+类模板描述了一个删除器，该对象删除使用**new 运算符**分配的标量对象，适合与类模板 `unique_ptr`一起使用。 它还具有显式专用化 `default_delete<T[]>`。
 
 ## <a name="destroy_at"></a>destroy_at
 
@@ -486,13 +483,13 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*T* \
+*T*\
 由返回的共享指针控制的类型。
 
 *其他*\
 由自变量共享指针控制的类型。
 
-*sp* \
+*sp*\
 自变量共享指针。
 
 ### <a name="remarks"></a>备注
@@ -550,10 +547,10 @@ Deleter* get_deleter(
 *删除器*\
 删除器的类型。
 
-*T* \
+*T*\
 由共享指针控制的类型。
 
-*sp* \
+*sp*\
 共享的指针。
 
 ### <a name="remarks"></a>备注
@@ -676,7 +673,7 @@ could store is given by: resultPair.second = 9.
 
 ## <a name="make_shared"></a>make_shared
 
-创建并返回一个[shared_ptr](shared-ptr-class.md) ，它指向通过使用默认分配器从零个或多个参数构造的分配对象。 分配并构造指定类型的对象和`shared_ptr`来管理对象的共享所有权，并返回`shared_ptr`。
+创建并返回一个[shared_ptr](shared-ptr-class.md) ，该指向通过使用默认分配器从零个或多个参数构造的分配对象。 分配并构造指定类型的对象和`shared_ptr`来管理对象的共享所有权，并返回`shared_ptr`。
 
 ```cpp
 template <class T, class... Args>
@@ -686,7 +683,7 @@ shared_ptr<T> make_shared(
 
 ### <a name="parameters"></a>参数
 
-*args* \
+*args*\
 零个或多个构造函数参数。 函数根据所提供的自变量来推断要调用的构造函数重载。
 
 ### <a name="remarks"></a>备注
@@ -700,7 +697,7 @@ auto msp = std::make_shared<Example>(argument);
 
 但是，第一条语句进行了两个分配，如果在`shared_ptr`对象的分配成功后，`Example`的分配失败，则未命名的`Example`对象将被泄漏。 使用`make_shared`的语句更简单，因为只涉及到一个函数调用。 这样会更有效，因为库可能会对对象和智能指针进行一个分配。 此函数的速度更快，导致内存碎片更少，但在一次分配时不存在异常，而不是在另一种分配上。 通过使引用对象和更新智能指针中的引用计数的代码具有的更好的地址来提高性能。
 
-如果不需要对该对象具有共享访问权限，请考虑使用[make_unique](memory-functions.md#make_unique) 。 如果需要为对象指定自定义的分配器，请使用 [allocate_shared](memory-functions.md#allocate_shared)。 如果您的对象需要自定义删除器，则不能使用 `make_shared`，因为无法将删除器作为参数传递。
+如果不需要对象的共享访问权限，请考虑使用[make_unique](memory-functions.md#make_unique) 。 如果需要为对象指定自定义的分配器，请使用 [allocate_shared](memory-functions.md#allocate_shared)。 如果您的对象需要自定义删除器，则不能使用 `make_shared`，因为无法将删除器作为参数传递。
 
 以下示例演示如何通过调用特定构造函数重载来创建指向类型的共享指针。
 
@@ -791,24 +788,24 @@ template <class T, class... Args>
 
 ### <a name="parameters"></a>参数
 
-*T* \
+*T*\
 `unique_ptr` 将指向的对象的类型。
 
-*Args* \
+*Args*\
 *Args*指定的构造函数参数的类型。
 
-*args* \
+*args*\
 要传递给类型*T*的对象的构造函数的参数。
 
 *元素*\
 类型为*T*的元素的数组。
 
-*大小*\
+size\
 新数组中要为其分配空间的元素的数目。
 
 ### <a name="remarks"></a>备注
 
-第一个重载用于单个对象。 为数组调用第二个重载。 第三个重载阻止您在类型参数中指定数组大小（make_unique \<T [N] >）;当前标准不支持此构造。 当使用 `make_unique` 将 `unique_ptr` 创建到数组时，必须分别初始化数组元素。 可能更好的选择是使用[std：： vector](vector-class.md)，而不是使用此重载。
+第一个重载用于单个对象。 为数组调用第二个重载。 第三个重载阻止您在类型参数中指定数组大小（make_unique\<T [N] >）;当前标准不支持此构造。 当使用 `make_unique` 将 `unique_ptr` 创建到数组时，必须分别初始化数组元素。 可能更好的选择是使用[std：： vector](vector-class.md)，而不是使用此重载。
 
 由于谨慎实现 `make_unique` 以获得异常安全，因此建议您使用 `make_unique` 而不是直接调用 `unique_ptr` 构造函数。
 
@@ -822,7 +819,7 @@ template <class T, class... Args>
 
 ## <a name="owner_less"></a>owner_less
 
-允许对共享指针和弱指针进行基于所有权的混合比较。 如果在成员函数 `owner_before` 的右参数之前对左侧参数进行排序，则返回**true** 。
+允许对共享指针和弱指针进行基于所有权的混合比较。 如果在成员函数 `owner_before`的右参数之前对左侧参数进行排序，则返回**true** 。
 
 ```cpp
 template <class T>
@@ -888,7 +885,7 @@ template<> struct owner_less<void>
 *左*\
 共享指针或弱指针。
 
-*right* \
+*right*\
 共享指针或弱指针。
 
 ### <a name="remarks"></a>备注
@@ -911,12 +908,12 @@ shared_ptr<T> reinterpret_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
-对 `shared_ptr<U>` 的引用。
+*ptr*\
+对 `shared_ptr<U>`的引用。
 
 ### <a name="remarks"></a>备注
 
-如果*ptr*为空，则新 `shared_ptr` 也为空，否则它将与*ptr*共享所有权。 新的共享指针是对 `reinterpret_cast<Y*>(ptr.get())` 进行计算的结果，其中 `Y` 是 `typename std::shared_ptr<T>::element_type` 的。 如果 `reinterpret_cast<T*>((U*)nullptr)` 的格式不正确，则行为是不确定的。
+如果*ptr*为空，则新 `shared_ptr` 也为空，否则它将与*ptr*共享所有权。 新的共享指针是对 `reinterpret_cast<Y*>(ptr.get())`进行计算的结果，其中 `Y` 是 `typename std::shared_ptr<T>::element_type`的。 如果 `reinterpret_cast<T*>((U*)nullptr)` 的格式不正确，则行为是不确定的。
 
 采用左值引用的模板函数是 c + + 17 中的新增功能。 采用右值引用的模板函数是 c + + 20 中的新增功能。
 
@@ -993,13 +990,13 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*T* \
+*T*\
 由返回的共享指针控制的类型。
 
 *其他*\
 由自变量共享指针控制的类型。
 
-*sp* \
+*sp*\
 自变量共享指针。
 
 ### <a name="remarks"></a>备注
@@ -1065,7 +1062,7 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*T* \
+*T*\
 由自变量指针控制的类型。
 
 *删除器*\
@@ -1074,7 +1071,7 @@ void swap(
 *左*\
 左指针。
 
-*right* \
+*right*\
 右指针。
 
 ### <a name="remarks"></a>备注
@@ -1138,10 +1135,10 @@ void undeclare_no_pointers(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 指向以前使用[declare_no_pointers](#declare_no_pointers)标记的内存地址的指针。
 
-*大小*\
+size\
 内存范围中的字节数。 此值必须等于 `declare_no_pointers` 调用中使用的数字。
 
 ### <a name="remarks"></a>备注
@@ -1160,7 +1157,7 @@ T *undeclare_reachable(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 指向以前使用[declare_reachable](#declare_reachable)标记的内存地址的指针。
 
 ### <a name="remarks"></a>备注
@@ -1197,7 +1194,7 @@ ForwardIterator uninitialized_copy(
 *最后*\
 确定源范围中最后一个元素的地址的输入迭代器。
 
-*dest* \
+*dest*\
 确定目标范围中第一个元素的地址的前向迭代器。
 
 ### <a name="return-value"></a>返回值
@@ -1317,7 +1314,7 @@ ForwardIterator uninitialized_copy_n(
 *计数*\
 指定复制对象的次数的带符号或无符号整数类型。
 
-*dest* \
+*dest*\
 引用新副本所在位置的向前迭代器。
 
 ### <a name="return-value"></a>返回值
@@ -1385,7 +1382,7 @@ for (; first != last; ++first)
 
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
-默认情况下，从指定位置开始构造迭代器 `value_type` 的指定数目的对象。
+默认情况下，从指定位置开始构造迭代器 `value_type`的指定数目的对象。
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1632,7 +1629,7 @@ ForwardIterator uninitialized_move(
 *最后*\
 一种输入迭代器，用于寻址源范围中要移动的最后一个元素之后的一个元素。
 
-*dest* \
+*dest*\
 目标范围的开头。
 
 ### <a name="remarks"></a>备注
@@ -1682,7 +1679,7 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
 *计数*\
 要移动的源范围中的元素计数。
 
-*dest* \
+*dest*\
 目标范围的开头。
 
 ### <a name="remarks"></a>备注
@@ -1804,6 +1801,6 @@ template <class T, class Alloc>
 inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<memory>](memory.md)

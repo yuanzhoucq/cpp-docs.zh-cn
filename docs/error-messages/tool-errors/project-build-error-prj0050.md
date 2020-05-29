@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0050
 ms.assetid: ceef3b37-0acf-4abd-ac62-aa830b4fa145
-ms.openlocfilehash: ec2490bad70d2b2eb72cbb48771900f09f8c2f67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56e092b5f7c33ad9543951621b2a9d8f6992331f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226486"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191985"
 ---
 # <a name="project-build-error-prj0050"></a>项目生成错误 PRJ0050
 
-未能注册输出。 请确保有适当的权限来修改注册表。
+未能注册输出。 请确保您具有适当的权限来修改注册表。
 
-视觉对象C++生成系统无法注册 （dll 或.exe） 生成的输出。 您需要以修改注册表的管理员身份登录。
+Visual C++ build 系统无法注册生成（dll 或 .exe）的输出。 需要以管理员身份登录才能修改注册表。
 
-如果您正在构建.dll，可以尝试以注册.dll 手动使用 regsvr32.exe，此时应显示在生成失败的原因有关的信息。
+如果要生成 .dll，可以尝试使用 regsvr32 手动注册 .dll，这应该显示有关生成失败的原因的信息。
 
-如果您不构建.dll，查看将导致错误的命令生成日志。
+如果未生成 .dll，请查看导致错误的命令的生成日志。

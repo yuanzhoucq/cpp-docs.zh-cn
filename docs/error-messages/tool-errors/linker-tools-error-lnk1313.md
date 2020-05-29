@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160427"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194858"
 ---
 # <a name="linker-tools-error-lnk1313"></a>链接器工具错误 LNK1313
 
@@ -19,9 +19,9 @@ ms.locfileid: "62160427"
 
 ## <a name="remarks"></a>备注
 
-当前版本视觉对象C++不支持本机或混合托管/本机.obj 文件与使用编译的.obj 文件链接 **/clr: pure**。
+Visual C++的当前版本不支持将本机或混合托管/本机 .obj 文件链接到用 **/clr： pure**编译的 .obj 文件。
 
-**/Clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
+**/Clr： pure**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
 ## <a name="example"></a>示例
 

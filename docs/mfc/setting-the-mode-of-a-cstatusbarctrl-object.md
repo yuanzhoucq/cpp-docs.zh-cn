@@ -1,8 +1,6 @@
 ---
 title: 设置 CStatusBarCtrl 对象的模式
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - simple mode and status bar controls
 - IsSimple method, using
@@ -11,25 +9,25 @@ helpviewer_keywords:
 - non-simple mode and status bar controls
 - CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
-ms.openlocfilehash: a6d1a0edb356f9737aa287809dd8bca4146c1854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e09a7bd274c44df2da48bbc007a95802fadd8cf0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307713"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365419"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>设置 CStatusBarCtrl 对象的模式
 
-有两种模式`CStatusBarCtrl`对象： 简单和非简单。 在大多数情况下，在状态栏控件将具有一个或多个部分，以及文本和可能是一个图标或图标。 这被称为非简单模式。 此模式的详细信息，请参阅[初始化 CStatusBarCtrl 对象的组成部分](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。
+对象有两种`CStatusBarCtrl`模式：简单和非简单。 在大多数情况下，您的状态栏控件将包含一个或多个部分，以及文本，以及图标或图标。 这称为非简单模式。 有关此模式的详细信息，请参阅[初始化 CStatusBarCtrl 对象的部分](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。
 
-但是，有情况下，只需要显示单行文本。 在这种情况下，简单模式足以满足你的需求。 若要更改的模式`CStatusBarCtrl`对象为 simple 时，调用[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成员函数。 在简单模式下状态栏控件后，通过调用设置的文本`SetText`成员函数，传递的值为 255 *nPane*参数。
+但是，在某些情况下，您只需要显示一行文本。 在这种情况下，简单模式足以满足您的需要。 要将`CStatusBarCtrl`对象模式更改为简单，请调用[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成员函数。 状态栏控件处于简单模式后，通过调用`SetText`成员函数设置文本，传递 255 作为*nPane*参数的值。
 
-可以使用[IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)函数来确定哪种模式`CStatusBarCtrl`对象处于。
+可以使用[IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)函数来确定`CStatusBarCtrl`对象处于何种模式。
 
 > [!NOTE]
->  如果，反之亦然，立即重绘窗口或状态栏对象从不简单更改为简单的、 和，如果适用，将自动还原任何已定义的部件。
+> 如果状态栏对象从非简单更改为简单，反之亦然，则立即重新绘制窗口，如果适用，将自动还原任何定义的部件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)

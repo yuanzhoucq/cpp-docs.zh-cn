@@ -9,12 +9,12 @@ helpviewer_keywords:
 - virtual base classes [C++]
 - base classes [C++]
 ms.assetid: 6e6d54d0-6f21-4a16-9103-22935d98f596
-ms.openlocfilehash: 59c474f54ea439acf83cf6923eba6e167901dd37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50bddef3ea1ee1462d8cf115c0980270c8deab25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392400"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181468"
 ---
 # <a name="base-classes"></a>基本类
 

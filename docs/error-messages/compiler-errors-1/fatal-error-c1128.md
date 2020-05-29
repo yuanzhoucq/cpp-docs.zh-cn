@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-ms.openlocfilehash: bb1d9af10084d6b3e75325450c7f13ea1683ee2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64671c9abe8ed1375df1e91ca7509e6a597366ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229041"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203618"
 ---
 # <a name="fatal-error-c1128"></a>错误 C1128
 
-节数超过对象文件格式限制： 使用 /bigobj 进行编译
+超过对象文件格式限制的部分数：用/bigobj 编译
 
-.Obj 文件超过了允许的部分中，COFF 对象文件格式限制的数目。
+.Obj 文件超出了允许的部分数，COFF 对象文件格式限制。
 
-达到此部分限制可能是使用的结果[/Gy](../../build/reference/gy-enable-function-level-linking.md)和调试版本;**/Gy**导致函数以转到其自己的 COMDAT 部分。 在调试版本中，没有用于每个 COMDAT 函数的调试信息节。
+达到此部分限制可能是由于使用[/gy](../../build/reference/gy-enable-function-level-linking.md)和调试生成; **/Gy**使函数进入自己的 COMDAT 部分。 在调试版本中，每个 COMDAT 函数都有一个调试信息部分。
 
-如果有太多的内联函数，还会导致 C1128。
+如果内联函数太多，也可能导致 C1128。
 
-若要更正此错误，将源文件拆分到多个源代码文件，而无需编译 **/Gy**，或使用编译[/bigobj （增加的节数中。Obj 文件）](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)。  如果你不具有编译 **/Gy**，将需要单独指定优化由于 **/o2**并 **/o1**均暗指 **/Gy**。
+若要更正此错误，请将您的源文件分成多个源代码文件，不带 **/gy**编译，或用[/Bigobj 编译（增加中的节数。Obj 文件）](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)。  如果不用 **/gy**编译，则需要单独指定优化，因为 **/O2**和 **/O1**两者都隐含 **/gy**。
 
-如果可能，编译而不进行调试的信息。
+如果可能，请在不调试信息的情况下编译。
 
-您可能还需要单独的源文件的代码文件中具有特定的实例化的模板而不是让编译器发出。
+你可能还需要在单独的源代码文件中具有模板的特定实例化，而不是让编译器发出它们。
 
-移植代码时，C1128 可能时将显示第一次使用 x64 编译器，以及更高版本与 x86 编译器。 x64 将包含至少 4 个部分与编译每个函数相关联 **/Gy**或从模板或类内联内联： 代码、 pdata、 和调试信息，以及可能的 xdata。  X86 不会有 pdata。
+在移植代码时，C1128 可能会在第一次使用 x64 编译器时出现，并且在更高版本中使用 x86 编译器。 x64 至少具有4个节，与编译的每个函数相关，或者从**模板或内联**类内联：代码、pdata 和调试信息，以及可能的 xdata。  X86 不具有 pdata。

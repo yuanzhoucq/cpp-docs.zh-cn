@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952754"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170184"
 ---
 # <a name="__max"></a>__max
 
@@ -43,7 +43,7 @@ ms.locfileid: "70952754"
 #define __max(a,b) (((a) > (b)) ? (a) : (b))
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *a*、 *b*<br/>
 要比较的任何数字类型的值。
@@ -56,7 +56,7 @@ ms.locfileid: "70952754"
 
 **__Max**宏比较两个值，并返回较大值的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
 
-返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如`*p++`），则这可能会导致意外的结果。
+返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如 `*p++`），这可能会导致意外的结果。
 
 ## <a name="requirements"></a>要求
 
@@ -68,7 +68,7 @@ ms.locfileid: "70952754"
 
 有关详细信息，请参阅 [__min](min.md) 中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

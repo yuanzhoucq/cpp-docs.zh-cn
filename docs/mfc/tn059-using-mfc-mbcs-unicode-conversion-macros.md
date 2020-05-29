@@ -1,5 +1,5 @@
 ---
-title: TN059:使用 MFC Mbcs-unicode 转换宏
+title: TN059：使用MFC MBCS-Unicode转换宏
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFCANS32.DLL
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 6c182ff584404fb91de8ff5e8020ec2e6ef9f950
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611855"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749445"
 ---
-# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059:使用 MFC MBCS/Unicode 转换宏
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 转换宏
 
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
+> 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
 此说明描述如何将 AFXPRIV.H 中定义的宏用于 MBCS/Unicode 转换。 如果您的应用程序直接处理 OLE API，或出于某种原因经常需要在 Unicode 和 MBCS 之间进行转换，则这些宏会最有用。
 
@@ -76,9 +76,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
 
 有一些需要转换的额外调用，但可轻松而高效地使用宏。
 
-每个宏的实现都使用 _alloca() 函数从堆栈而非堆中分配内存。 从堆栈中分配内存要比在堆上分配内存快得多，并且在退出该函数时，将自动释放内存。 此外，宏会避免调用`MultiByteToWideChar`(或`WideCharToMultiByte`) 不止一次。 这可通过分配比所需内存量多一点的内存来实现。 我们知道，MBC 将转换为最多**WCHAR**并且对于每个**WCHAR**我们将具有最多两个 MBC 字节。 通过分配比所需内存多一点但始终足以处理转换的内存，避免对转换函数进行第二次调用。 调用帮助器函数`AfxA2Whelper`减少了必须完成以便执行转换的自变量推送 (这会导致较小的代码，比如果它调用`MultiByteToWideChar`直接)。
+每个宏的实现都使用 _alloca() 函数从堆栈而非堆中分配内存。 从堆栈中分配内存要比在堆上分配内存快得多，并且在退出该函数时，将自动释放内存。 此外，宏避免调用`MultiByteToWideChar`（或`WideCharToMultiByte`） 多个次。 这可通过分配比所需内存量多一点的内存来实现。 我们知道，MBC 将最多转换为一个**WCHAR，** 并且对于每个**WCHAR，** 我们最多将有两个 MBC 字节。 通过分配比所需内存多一点但始终足以处理转换的内存，避免对转换函数进行第二次调用。 对帮助器函数`AfxA2Whelper`的调用减少了为执行转换而必须执行的参数推送数（这会导致代码更小，而不是直接调用）。 `MultiByteToWideChar`
 
-若要使宏拥有存储临时长度的空间，需要声明称为 _convert 的局部变量，该变量在使用转换宏的每个函数中都执行此操作。 这是通过调用 USES_CONVERSION 宏，如上面示例中所示。
+若要使宏拥有存储临时长度的空间，需要声明称为 _convert 的局部变量，该变量在使用转换宏的每个函数中都执行此操作。 这将通过调用 USES_CONVERSION 宏实现，如示例的上述内容所示。
 
 同时存在泛型转换宏和 OLE 特定的宏。 下面讨论了这两个不同的宏设置。 所有宏位于 AFXPRIV.H 中。
 
@@ -93,13 +93,13 @@ W2CA      (LPCWSTR) -> (LPCSTR)
 W2A      (LPCWSTR) -> (LPSTR)
 ```
 
-除了执行文本转换外，还有用于转换 `TEXTMETRIC`、`DEVMODE`、`BSTR` 和 OLE 分配的字符串的宏和 Helper 函数。 这些宏超出了本文的讨论范围是-请参见 AFXPRIV。H 表示这些宏的详细信息。
+除了执行文本转换外，还有用于转换 `TEXTMETRIC`、`DEVMODE`、`BSTR` 和 OLE 分配的字符串的宏和 Helper 函数。 这些宏超出了本讨论的范围 - 请参阅 AFXPRIV。H 了解有关这些宏的详细信息。
 
 ## <a name="ole-conversion-macros"></a>OLE 转换宏
 
-OLE 转换宏专门用于处理预期的函数**OLESTR**字符。 如果您检查 OLE 标题，您将看到多项引用**LPCOLESTR**并**OLECHAR**。 这些类型用于以一种非特定于平台的方法引用 OLE 接口中使用的字符类型。 **OLECHAR**映射到**char** Win16 和 Macintosh 平台中和**WCHAR**在 Win32 中。
+OLE 转换宏专为处理预期**OLESTR**字符的功能而设计。 如果检查 OLE 标头，您将看到许多对**LPCOLESTR**和**OLECHAR**的引用。 这些类型用于以一种非特定于平台的方法引用 OLE 接口中使用的字符类型。 **OLECHAR**映射到 Win16 和 Macintosh 平台中的**字符**，在 Win32 中映射到**WCHAR。**
 
-若要保留的数 **#ifdef** MFC 中的指令代码在最低限度，我们对于每个转换的类似宏，其中包含 OLE 字符串。 下列宏是最常使用的：
+为了将 MFC 代码中 **#ifdef**指令的数量降至最低，对于涉及 OLE 字符串的每个转换，我们都有类似的宏。 下列宏是最常使用的：
 
 ```
 T2COLE   (LPCTSTR) -> (LPCOLESTR)
@@ -108,13 +108,13 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)
 ```
 
-此外，还有用于执行 TEXTMETRIC、 DEVMODE、 BSTR 和 OLE 分配的字符串的类似宏。 有关更多信息，请参考 AFXPRIV.H。
+同样，对于执行 TEXTMETRIC、DEVMODE、BSTR 和 OLE 分配的字符串，也有类似的宏。 有关更多信息，请参考 AFXPRIV.H。
 
 ## <a name="other-considerations"></a>其他注意事项
 
 请勿在紧凑循环中使用宏。 例如，你不想编写以下类型的代码：
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 上述代码可能导致在堆栈上分配内存（以 MB 为单位），取决于字符串 `lpsz` 的内容！ 它还花时间转换循环的每个迭代的字符串。 相反，请将此类常量转换移出循环：
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 如果字符串不是常量，则将方法调用封装到函数中。 这将允许每次都释放转换缓冲区。 例如：
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -194,5 +194,5 @@ return lpszT; // CString makes copy
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
-[按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+[技术说明（按编号）](../mfc/technical-notes-by-number.md)<br/>
+[按类别分类的技术说明](../mfc/technical-notes-by-category.md)

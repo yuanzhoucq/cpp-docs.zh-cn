@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127863"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425849"
 ---
 # <a name="ole-drag-and-drop"></a>OLE 拖放
 

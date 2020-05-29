@@ -1,11 +1,14 @@
 ---
 title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __wcserror_s
 - _strerror_s
 - _wcserror_s
 - strerror_s
+- _o__strerror_s
+- _o__wcserror_s
+- _o_strerror_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +21,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,16 +46,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625813"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918399"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
-获取系统错误消息（**strerror_s**、 **_wcserror_s**）或打印用户提供的错误消息（ **_strerror_s**、 **__wcserror_s**）。 如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md) 具有安全性增强功能。
+获取系统错误消息（**strerror_s**、 **_wcserror_s**）或打印用户提供的错误消息（**_strerror_s**， **__wcserror_s**）。 如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md) 具有安全性增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -100,7 +104,7 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 要保存错误字符串的缓冲区。
 
 *numberOfElements*<br/>
@@ -118,14 +122,14 @@ errno_t __wcserror_s(
 
 ### <a name="error-condtions"></a>错误条件
 
-|*buffer*|*numberOfElements*|*strErrMsg*|*缓冲区*内容|
+|*宽限*|*numberOfElements*|*strErrMsg*|*缓冲区*内容|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|any|any|不可用|
+|**Null**|any|any|不适用|
 |any|0|any|未修改|
 
 ## <a name="remarks"></a>备注
 
-**Strerror_s**函数将*errnum*映射到错误消息字符串，并返回*缓冲区*中的字符串。 **_strerror_s**不接受错误号;它使用**errno**的当前值来确定相应的消息。 **Strerror_s**和 **_strerror_s**都不会实际打印消息：为此，你需要调用输出函数，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
+**Strerror_s**函数将*errnum*映射到错误消息字符串，并返回*缓冲区*中的字符串。 **_strerror_s**不采用错误号;它使用**errno**的当前值来确定相应的消息。 **Strerror_s**和 **_strerror_s**实际上都不会打印消息：为此，你需要调用输出函数，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -135,7 +139,7 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-如果*strErrMsg*为**NULL**，则 **_strerror_s**将在*缓冲区*中返回一个字符串，该字符串包含产生错误的最后一个库调用的系统错误消息。 错误消息字符串以换行符 ('\n') 结尾。 如果*strErrMsg*不等于**NULL**，则 **_strerror_s**将返回*缓冲区*中的字符串，该字符串包含（按顺序）你的字符串消息、冒号、空格、生成错误的最后一个库调用的系统错误消息，以及一个换行符字符. 你的字符串消息长度最多可达 94 个字符。
+如果*strErrMsg*为**NULL**， **_strerror_s**将在*缓冲区*中返回一个字符串，该字符串包含产生错误的最后一个库调用的系统错误消息。 错误消息字符串以换行符 ('\n') 结尾。 如果*strErrMsg*不等于**NULL**，则 **_strerror_s**返回*缓冲区*中的字符串，该字符串包含（按顺序）你的字符串消息、冒号、空格、生成错误的最后一个库调用的系统错误消息，以及一个换行符。 你的字符串消息长度最多可达 94 个字符。
 
 如果错误消息的长度超过*numberOfElements* -1，则这些函数将截断错误消息。 *缓冲区*中生成的字符串始终以 null 结尾。
 
@@ -151,6 +155,8 @@ if (( _access( "datafile",2 )) == -1 )
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
@@ -159,18 +165,18 @@ if (( _access( "datafile",2 )) == -1 )
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**strerror_s**、 **_strerror_s**|\<string.h>|
-|**_wcserror_s**、 **__wcserror_s**|\<string.h> 或 \<wchar.h>|
+|**strerror_s**， **_strerror_s**|\<string.h>|
+|**_wcserror_s**， **__wcserror_s**|\<string.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [perror](perror-wperror.md) 示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>

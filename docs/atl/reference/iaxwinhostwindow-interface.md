@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebecc611660a788ce59bb11beb95bd60eacaf01b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329995"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 接口
 
-此接口提供用于操作控件和其宿主对象的方法。
+此接口提供操作控件及其宿主对象的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -39,29 +39,29 @@ interface IAxWinHostWindow : IUnknown
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|将现有控件附加到该主机对象。|
-|[CreateControl](#createcontrol)|创建控件，并将其附加到该主机对象。|
-|[CreateControlEx](#createcontrolex)|创建控件，将其附加到该主机对象，并根据需要设置一个事件处理程序。|
-|[QueryControl](#querycontrol)|返回到所承载的控件的接口指针。|
-|[SetExternalDispatch](#setexternaldispatch)|设置外部`IDispatch`接口。|
-|[SetExternalUIHandler](#setexternaluihandler)|设置外部`IDocHostUIHandlerDispatch`接口。|
+|[附加控制](#attachcontrol)|将现有控件附加到主机对象。|
+|[CreateControl](#createcontrol)|创建控件并将其附加到主机对象。|
+|[创建控制Ex](#createcontrolex)|创建控件，将其附加到主机对象，并可以选择设置事件处理程序。|
+|[查询控制](#querycontrol)|返回指向托管控件的接口指针。|
+|[设置外部调度](#setexternaldispatch)|设置外部`IDispatch`接口。|
+|[设置外部 UIHandler](#setexternaluihandler)|设置外部`IDocHostUIHandlerDispatch`接口。|
 
 ## <a name="remarks"></a>备注
 
-此接口由 ATL 的 ActiveX 控件承载对象公开。 针对此接口可创建和/或将一个控件附加到该主机对象，从托管控件，获取一个接口或设置外部调度接口或 UI 处理程序，用于托管 Web 浏览器时调用的方法。
+此接口由 ATL 的 ActiveX 控件托管对象公开。 调用此接口上的方法以创建和/或将控件附加到主机对象、从托管控件获取接口或设置外部接口或 UI 处理程序，以便托管 Web 浏览器时使用。
 
 ## <a name="requirements"></a>要求
 
-此接口的定义现在以 IDL 或C++，如下所示。
+此接口的定义可作为 IDL 或C++，如下所示。
 
 |定义类型|文件|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
-|C++|ATLIFace.h （也包括在 ATLBase.h）|
+|Idl|ATLIFace.idl|
+|C++|ATLIFace.h （也包含在 ATLBase.h 中）|
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
+## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHost 窗口：：附加控制
 
-将现有 （和以前初始化） 控件附加到该主机对象，使用标识窗口*hWnd*。
+使用*hWnd*标识的窗口将现有（以前初始化）控件附加到主机对象。
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -70,18 +70,18 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="parameters"></a>参数
 
 *pUnkControl*<br/>
-[in]一个指向`IUnknown`要附加到该主机对象的控件的接口。
+[在]指向要附加到主机`IUnknown`对象的控件接口的指针。
 
-*hWnd*<br/>
-[in]要用于承载窗口的句柄。
+*hwnd*<br/>
+[在]用于托管的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
-##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
+## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHost 窗口：：创建控制
 
-创建控件，初始化它，并由标识在窗口中承载它*hWnd*。
+创建控件，初始化它，并将其托管在*hWnd*标识的窗口中。
 
 ```
 STDMETHOD(CreateControl)(
@@ -93,29 +93,29 @@ STDMETHOD(CreateControl)(
 ### <a name="parameters"></a>参数
 
 *lpTricsData*<br/>
-[in]标识要创建的控件的字符串。 可以是 （必须包含在大括号） 的 CLSID、 ProgID、 URL 或原始 HTML (加**MSHTML:**)。
+[在]标识要创建的控件的字符串。 可以是 CLSID（必须包括大括号）、ProgID、URL 或原始 HTML（由**MSHTML**预缀： 。
 
-*hWnd*<br/>
-[in]要用于承载窗口的句柄。
+*hwnd*<br/>
+[在]用于托管的窗口的句柄。
 
 *pStream*<br/>
-[in]包含控件的初始化数据的流接口指针。 可以为 NULL。
+[在]包含控件初始化数据的流的接口指针。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-此窗口将公开此接口，以便消息可以发射到控件和其他容器功能将适用的主机对象通过子类化。
+此窗口将由公开此接口的主机对象进行子分类，以便消息可以反射到控件，其他容器功能将起作用。
 
-调用此方法相当于调用[IAxWinHostWindow::CreateControlEx](#createcontrolex)。
+调用此方法等效于调用[IAxWinHostWindow：：createControlEx](#createcontrolex)。
 
-若要创建授权的 ActiveX 控件，请参阅[IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
+要创建许可的 ActiveX 控件，请参阅[IAxWinHostWindowlic：：创建控制项](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
 
-##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
+## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHost 窗口：：创建控制Ex
 
-创建 ActiveX 控件，初始化它，并在指定窗口中，类似于承载[IAxWinHostWindow::CreateControl](#createcontrol)。
+创建一个 ActiveX 控件，初始化它，并将其托管在指定的窗口中，类似于[IAxWinHostWindow：：创建控制](#createcontrol)。
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -130,36 +130,36 @@ STDMETHOD(CreateControlEx)(
 ### <a name="parameters"></a>参数
 
 *lpTricsData*<br/>
-[in]标识要创建的控件的字符串。 可以是 （必须包含在大括号） 的 CLSID、 ProgID、 URL 或原始 HTML (带有前缀**MSHTML:**)。
+[在]标识要创建的控件的字符串。 可以是 CLSID（必须包括大括号）、ProgID、URL 或原始 HTML（与**MSHTML**一起预缀： 。
 
-*hWnd*<br/>
-[in]要用于承载窗口的句柄。
+*hwnd*<br/>
+[在]用于托管的窗口的句柄。
 
 *pStream*<br/>
-[in]包含控件的初始化数据的流接口指针。 可以为 NULL。
+[在]包含控件初始化数据的流的接口指针。 可以为 NULL。
 
-*ppUnk*<br/>
-[out]将接收的指针的地址`IUnknown`接口创建的控件。 可以为 NULL。
+*普恩克*<br/>
+[出]将接收创建控件接口`IUnknown`的指针的地址。 可以为 NULL。
 
-*riidAdvise*<br/>
-[in]包含的对象上的传出接口的接口标识符。 可以为 IID_NULL。
+*里德建议*<br/>
+[在]包含对象上传出接口的接口标识符。 可以IID_NULL。
 
-*punkAdvise*<br/>
-[in]一个指向`IUnknown`接收器对象连接到指定的包含对象上的连接点的接口`iidSink`。
+*朋克建议*<br/>
+[在]指向要连接到`IUnknown`所指定包含对象的连接点的接收器对象的接口的`iidSink`指针。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-与不同`CreateControl`方法，`CreateControlEx`还允许您接收到新创建的控件的接口指针并将事件接收器设置为接收控件触发的事件。
+与`CreateControl`方法不同`CreateControlEx`，还允许您接收指向新创建的控件的接口指针，并设置事件接收器以接收控件触发的事件。
 
-若要创建授权的 ActiveX 控件，请参阅[IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
+要创建许可的 ActiveX 控件，请参阅[IAxWinHostWindowlic：：创建控制项](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。
 
-##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl
+## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHost 窗口：：查询控制
 
-返回提供的托管控件的指定的接口指针。
+返回托管控件提供的指定接口指针。
 
 ```
 STDMETHOD(QueryControl)(
@@ -170,18 +170,18 @@ STDMETHOD(QueryControl)(
 ### <a name="parameters"></a>参数
 
 *riid*<br/>
-[in]所请求的控件上某个接口 ID。
+[在]请求的控件上的接口的 ID。
 
 *ppvObject*<br/>
-[out]将收到创建的控件的指定的接口的指针的地址。
+[出]将接收已创建控件的指定接口的指针的地址。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
-##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch
+## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHost 窗口：：设置外部调度
 
-设置适用于所含控件通过外部 dispinterface [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md)方法。
+设置外部接口，可通过[IDocHostUIHandlerDispatch：get 外部](../../atl/reference/idochostuihandlerdispatch-interface.md)方法包含控件。
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -190,15 +190,15 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="parameters"></a>参数
 
 *pDisp*<br/>
-[in]一个指向`IDispatch`接口。
+[在]指向接口的`IDispatch`指针。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
-##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler
+## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHost 窗口：：设置外部 UIHandler
 
-调用此函数可设置外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)接口`CAxWindow`对象。
+调用此函数以设置`CAxWindow`对象的外部[IDocHostUIHandlerDispatch 接口](../../atl/reference/idochostuihandlerdispatch-interface.md)。
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -207,18 +207,18 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="parameters"></a>参数
 
 *pDisp*<br/>
-[in]一个指向`IDocHostUIHandlerDispatch`接口。
+[在]指向接口的`IDocHostUIHandlerDispatch`指针。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。
+标准 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-此函数可供查询的主机的站点的控件 （如 Web 浏览器控件）`IDocHostUIHandlerDispatch`接口。
+此函数由查询主机站点的`IDocHostUIHandlerDispatch`接口的控件（如 Web 浏览器控件）使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [IAxWinAmbientDispatch 接口](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
+[CAx 窗口：：查询主机](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)

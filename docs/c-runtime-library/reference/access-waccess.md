@@ -1,9 +1,11 @@
 ---
 title: _access、_waccess
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access
 - _waccess
+- _o__access
+- _o__waccess
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943929"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920272"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -63,7 +66,7 @@ int _waccess(
 *path*<br/>
 文件或目录路径。
 
-*模式*<br/>
+*mode*<br/>
 读取/写入属性。
 
 ## <a name="return-value"></a>返回值
@@ -91,9 +94,11 @@ int _waccess(
 
 此函数仅检查文件和目录是否为只读，不检查文件系统安全设置。 因此，你需要访问令牌。 有关文件系统安全性的详细信息，请参阅[访问令牌](/windows/win32/SecAuthZ/access-tokens)。 存在 ATL 类以提供此功能；请参阅 [CAccessToken 类](../../atl/reference/caccesstoken-class.md)。
 
-**_waccess**是 **_access**的宽字符版本; **_waccess**的*path*参数是宽字符字符串。 否则， **_waccess**和 **_access**的行为相同。
+**_waccess**是 **_access**的宽字符版本;**_waccess**的*path*参数是宽字符字符串。 否则 **_waccess**和 **_access**的行为相同。
 
 此函数验证其参数。 如果*path*为 NULL 或*模式*未指定有效模式，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -103,14 +108,14 @@ int _waccess(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> 或 \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>示例
 
-下面的示例使用 **_access**检查名为 crt_ACCESS 的文件。C，查看其是否存在以及是否允许写入。
+下面的示例使用 **_access**来检查名为 crt_ACCESS 的文件。C，查看其是否存在以及是否允许写入。
 
 ```C
 // crt_access.c
@@ -142,7 +147,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>

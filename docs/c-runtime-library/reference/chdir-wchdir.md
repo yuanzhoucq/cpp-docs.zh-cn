@@ -1,9 +1,11 @@
 ---
 title: _chdir、_wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939375"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917044"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir、_wchdir
 
@@ -68,15 +71,17 @@ int _wchdir(
 
 ## <a name="remarks"></a>备注
 
-**_Chdir**函数将当前工作目录更改为*dirname*所指定的目录。 *Dirname*参数必须引用现有目录。 此函数可更改任何驱动器上的当前工作目录。 如果在*dirname*中指定了新的驱动器号，则也会更改默认的驱动器号。 例如，如果 A 为默认的驱动器号而 \BIN 是当前工作目录，则以下调用会更改驱动器 C 的当前工作目录，且会将 C 建立为新的默认驱动器：
+**_Chdir**函数将当前工作目录更改为*dirname*指定的目录。 *Dirname*参数必须引用现有目录。 此函数可更改任何驱动器上的当前工作目录。 如果在*dirname*中指定了新的驱动器号，则也会更改默认的驱动器号。 例如，如果 A 为默认的驱动器号而 \BIN 是当前工作目录，则以下调用会更改驱动器 C 的当前工作目录，且会将 C 建立为新的默认驱动器：
 
 ```C
 _chdir("c:\temp");
 ```
 
-在路径中使用可选的反斜杠 **&#92;** 字符（）时，必须在 C 字符串中 **&#92;** 放置两个反斜杠（），以表示单个反 **&#92;** 斜杠（）。
+在路径中使用可选的反斜杠字符（**&#92;**）时，必须在 C 字符串中放置两个反斜杠（**&#92;&#92;**），以表示单个反斜杠（**&#92;**）。
 
-**_wchdir**是 **_chdir**的宽字符版本; **_wchdir**的*dirname*参数是宽字符字符串。 否则， **_wchdir**和 **_chdir**的行为相同。
+**_wchdir**是 **_chdir**的宽字符版本;**_wchdir**的*dirname*参数是宽字符字符串。 否则 **_wchdir**和 **_chdir**的行为相同。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射：
 
@@ -86,12 +91,12 @@ _chdir("c:\temp");
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> 或 \<wchar.h>|\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -152,7 +157,7 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [目录控制](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>

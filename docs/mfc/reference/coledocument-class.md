@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1500035cb8be3036678090918154829aace48d2f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741599"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753873"
 ---
 # <a name="coledocument-class"></a>COleDocument 类
 
@@ -73,53 +73,53 @@ class COleDocument : public CDocument
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleDocument::COleDocument](#coledocument)|构造 `COleDocument` 对象。|
+|[COle 文档：COleDocument](#coledocument)|构造 `COleDocument` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleDocument::AddItem](#additem)|将一个项添加到文档所维护的项的列表中。|
-|[COleDocument::ApplyPrintDevice](#applyprintdevice)|为文档中的所有客户端项设置打印目标设备。|
-|[COleDocument::EnableCompoundFile](#enablecompoundfile)|导致使用 OLE 结构化存储文件格式存储文档。|
-|[COleDocument::GetInPlaceActiveItem](#getinplaceactiveitem)|返回当前就地活动的 OLE 项。|
-|[COleDocument::GetNextClientItem](#getnextclientitem)|获取用于循环访问的下一个客户端项。|
-|[COleDocument::GetNextItem](#getnextitem)|获取用于循环访问的下一个文档项。|
-|[COleDocument::GetNextServerItem](#getnextserveritem)|获取用于循环访问的下一个服务器项。|
-|[COleDocument::GetPrimarySelectedItem](#getprimaryselecteditem)|返回文档中主选定的 OLE 项。|
-|[COleDocument::GetStartPosition](#getstartposition)|获取开始迭代的初始位置。|
-|[COleDocument::HasBlankItems](#hasblankitems)|检查文档中是否有空白项。|
-|[COleDocument::OnShowViews](#onshowviews)|当文档变为可见或不可见时调用。|
-|[COleDocument::RemoveItem](#removeitem)|从文档维护的项列表中移除一个项。|
-|[COleDocument::UpdateModifiedFlag](#updatemodifiedflag)|如果已修改任何包含的 OLE 项，则将文档标记为已修改。|
+|[COleDocument：：添加项目](#additem)|将项添加到文档维护的项列表中。|
+|[COle 文档：：应用打印设备](#applyprintdevice)|设置文档中所有客户端项的打印目标设备。|
+|[COle 文档：：启用复合文件](#enablecompoundfile)|使用 OLE 结构化存储文件格式存储文档。|
+|[COle 文档：获取位置活动项目](#getinplaceactiveitem)|返回当前就地处于活动状态的 OLE 项。|
+|[COle 文档：获取下一个客户端项目](#getnextclientitem)|获取用于迭代的下一个客户端项。|
+|[COle 文档：获取下一个项目](#getnextitem)|获取下一个文档项以进行迭代。|
+|[COle 文档：获取下一个服务器项目](#getnextserveritem)|获取用于迭代的下一个服务器项。|
+|[COleDocument：获取主要选定项目](#getprimaryselecteditem)|返回文档中主要选定的 OLE 项。|
+|[COle 文档：获取起始位置](#getstartposition)|获取开始迭代的初始位置。|
+|[COle 文档：：有空白项目](#hasblankitems)|检查文档中的空白项。|
+|[COle 文档：：在显示视图](#onshowviews)|当文档变得可见或不可见时调用。|
+|[COle 文档：删除项目](#removeitem)|从文档维护的项列表中删除项。|
+|[COle 文档：：更新已修改的标记](#updatemodifiedflag)|如果包含的任何 OLE 项已被修改，则将文档标记为已修改。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleDocument::OnEditChangeIcon](#oneditchangeicon)|处理更改图标菜单命令中的事件。|
-|[COleDocument::OnEditConvert](#oneditconvert)|处理嵌入对象或链接对象从一种类型到另一种类型的转换。|
-|[COleDocument::OnEditLinks](#oneditlinks)|在 "编辑" 菜单上的 "链接" 命令中处理事件。|
-|[COleDocument::OnFileSendMail](#onfilesendmail)|发送附加了文档的邮件。|
-|[COleDocument::OnUpdateEditChangeIcon](#onupdateeditchangeicon)|由框架调用，以更新 "编辑/更改" 图标菜单选项的命令 UI。|
-|[COleDocument::OnUpdateEditLinksMenu](#onupdateeditlinksmenu)|由框架调用，以更新 "编辑/链接" 菜单选项的命令 UI。|
-|[COleDocument::OnUpdateObjectVerbMenu](#onupdateobjectverbmenu)|由框架调用，以更新编辑/ *objectname*菜单选项的命令 UI，以及从 Edit/ *Objectname*访问的谓词子菜单。|
-|[COleDocument::OnUpdatePasteLinkMenu](#onupdatepastelinkmenu)|由框架调用，以更新 "选择性粘贴" 菜单选项的命令 UI。|
-|[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|由框架调用，以更新 "粘贴" 菜单选项的命令 UI。|
+|[COle 文档：：在编辑更改图标上](#oneditchangeicon)|在"更改图标"菜单命令中处理事件。|
+|[COle 文档：：打开转换](#oneditconvert)|处理嵌入或链接对象从一种类型转换为另一种类型。|
+|[COleDocument：：在编辑链接上](#oneditlinks)|在"编辑"菜单上处理"链接"命令中的事件。|
+|[COle 文档：：在文件发送邮件](#onfilesendmail)|发送附有文档的邮件。|
+|[COle 文档：：更新编辑更改图标](#onupdateeditchangeicon)|由框架调用以更新"编辑/更改图标"菜单选项的命令 UI。|
+|[COle 文档：：更新链接菜单](#onupdateeditlinksmenu)|由框架调用以更新"编辑/链接"菜单选项的命令 UI。|
+|[COleDocument：：更新对象Verbmenu](#onupdateobjectverbmenu)|由框架调用以更新"编辑/*对象名称"* 菜单选项的命令 UI，以及从"编辑/*对象名称*"访问的 Verb 子菜单。|
+|[COle 文档：：更新粘贴链接菜单](#onupdatepastelinkmenu)|由框架调用以更新"粘贴特殊"菜单选项的命令 UI。|
+|[COle 文档：：更新粘贴菜单](#onupdatepastemenu)|由框架调用以更新"粘贴"菜单选项的命令 UI。|
 
 ## <a name="remarks"></a>备注
 
-`COleDocument`派生自`CDocument`，这允许 OLE 应用程序使用由 Microsoft 基础类库提供的文档/视图体系结构。
+`COleDocument`派生自`CDocument`，它允许 OLE 应用程序使用 Microsoft 基础类库提供的文档/视图体系结构。
 
-`COleDocument`将文档视为用于处理 OLE 项的[CDocItem](../../mfc/reference/cdocitem-class.md)对象的集合。 容器和服务器应用程序都需要此类体系结构，因为其文档必须能够包含 OLE 项。 派生自`CDocItem`的 [COleServerItem](../../mfc/reference/coleserveritem-class.md) 和[COleClientItem](../../mfc/reference/coleclientitem-class.md)类管理应用程序和 OLE 项之间的交互。
+`COleDocument`将文档视为处理 OLE 项的[CDocItem](../../mfc/reference/cdocitem-class.md)对象的集合。 容器和服务器应用程序都需要这样的体系结构，因为它们的文档必须能够包含 OLE 项。 [COleServerItem](../../mfc/reference/coleserveritem-class.md)和[COleClientItem](../../mfc/reference/coleclientitem-class.md)类都派生`CDocItem`自 ，管理应用程序和 OLE 项之间的交互。
 
-如果要编写简单的容器应用程序，请从`COleDocument`派生文档类。 如果要编写支持链接到文档包含的嵌入项的容器应用程序，请从[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)派生文档类。 如果要编写服务器应用程序或组合容器/服务器，请从[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)派生文档类。 `COleLinkingDoc`和`COleServerDoc`派生自`COleDocument`，因此这些类继承和`CDocument`中`COleDocument`可用的所有服务。
+如果要编写一个简单的容器应用程序，请从`COleDocument`派生文档类。 如果要编写一个容器应用程序，该应用程序支持链接到其文档中包含的嵌入项，请从[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)派生您的文档类。 如果要编写服务器应用程序或组合容器/服务器，请从[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)派生文档类。 `COleLinkingDoc``COleServerDoc`派生`COleDocument`自 ，因此这些类继承 和`COleDocument``CDocument`中提供的所有服务。
 
-若要`COleDocument`使用，请从其派生一个类，并添加用于管理应用程序的非 OLE 数据以及嵌入项或链接项的功能。 如果定义`CDocItem`派生类来存储应用程序的本机数据，则可以使用`COleDocument`定义的默认实现来存储 OLE 和非 OLE 数据。 你还可以设计自己的数据结构，以便将非 OLE 数据与 OLE 项分开存储。 有关详细信息，请参阅文章[容器：复合文件](../../mfc/containers-compound-files.md)。
+要使用`COleDocument`派生类，并添加用于管理应用程序的非 OLE 数据以及嵌入或链接项的功能。 如果定义`CDocItem`派生类以存储应用程序的本机数据，则可以使用 定义的`COleDocument`默认实现来存储 OLE 和非 OLE 数据。 您还可以设计自己的数据结构，以便将非 OLE 数据与 OLE 项分开存储。 有关详细信息，请参阅文章[容器：复合文件](../../mfc/containers-compound-files.md).
 
-`CDocument`如果邮件支持（MAPI）存在，则支持通过邮件发送文档。 `COleDocument`已更新[OnFileSendMail](#onfilesendmail) ，可正确处理复合文档。 有关详细信息，请参阅文章 MFC 中的[mapi](../../mfc/mapi.md)和[mapi 支持](../../mfc/mapi-support-in-mfc.md)。
+`CDocument`支持通过邮件支持 （MAPI） 发送文档。 `COleDocument`已更新[OnFileSendMail](#onfilesendmail)以正确处理复合文档。 有关详细信息，请参阅 MFC 中的[MAPI](../../mfc/mapi.md)和[MAPI 支持](../../mfc/mapi-support-in-mfc.md)文章 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -133,11 +133,11 @@ class COleDocument : public CDocument
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole
+**标题：** afxole.h
 
-##  <a name="additem"></a>COleDocument：： AddItem
+## <a name="coledocumentadditem"></a><a name="additem"></a>COleDocument：：添加项目
 
-调用此函数可向文档中添加项。
+调用此函数以向文档添加项。
 
 ```
 virtual void AddItem(CDocItem* pItem);
@@ -146,15 +146,15 @@ virtual void AddItem(CDocItem* pItem);
 ### <a name="parameters"></a>参数
 
 *pItem*<br/>
-指向所添加文档项的指针。
+指向要添加的文档项的指针。
 
 ### <a name="remarks"></a>备注
 
-当接受指向文档的指针的`COleClientItem`或`COleServerItem`构造函数调用此函数时，无需显式调用此函数。
+当 接受指向文档的指针的`COleClientItem`或`COleServerItem`构造函数调用此函数时，不需要显式调用它。
 
-##  <a name="applyprintdevice"></a>COleDocument：： ApplyPrintDevice
+## <a name="coledocumentapplyprintdevice"></a><a name="applyprintdevice"></a>COle 文档：：应用打印设备
 
-调用此函数可在应用程序的容器文档中更改所有嵌入[COleClientItem](../../mfc/reference/coleclientitem-class.md)项的打印目标设备。
+调用此函数可更改应用程序容器文档中所有嵌入式[COleClientItem 项目的](../../mfc/reference/coleclientitem-class.md)打印目标设备。
 
 ```
 BOOL ApplyPrintDevice(const DVTARGETDEVICE* ptd);
@@ -164,26 +164,26 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="parameters"></a>参数
 
 *ptd*<br/>
-指向`DVTARGETDEVICE`数据结构的指针，该结构包含有关新的打印目标设备的信息。 可以为 NULL。
+指向数据结构`DVTARGETDEVICE`的指针，其中包含有关新打印目标设备的信息。 可以为 NULL。
 
-*ppd*<br/>
-指向`PRINTDLG`数据结构的指针，该结构包含有关新的打印目标设备的信息。 可以为 NULL。
+*Ppd*<br/>
+指向数据结构`PRINTDLG`的指针，其中包含有关新打印目标设备的信息。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则为非零值;否则为0。
+如果函数成功，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-此函数更新所有项的打印目标设备，但不刷新这些项的表示缓存。 若要更新项目的表示缓存，请调用[COleClientItem：： UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)。
+此函数更新所有项目的打印目标设备，但不会刷新这些项目的演示文稿缓存。 要更新项目的演示文稿缓存，请致电[COleClientItem：：更新链接](../../mfc/reference/coleclientitem-class.md#updatelink)。
 
-此函数的参数包含 OLE 用于标识目标设备的信息。 [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)结构包含 Windows 用于初始化常见 "打印" 对话框的信息。 用户关闭对话框后，Windows 将返回有关此结构中的用户选择的信息。 [CPrintDialog 对象](../../mfc/reference/cprintdialog-class.md)的`PRINTDLG`成员是结构。 `m_pd`
+此函数的参数包含 OLE 用于标识目标设备的信息。 [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)结构包含 Windows 用于初始化公共打印对话框的信息。 用户关闭对话框后，Windows 将返回有关用户在此结构中选择的信息。 `m_pd` [CPrintDialog](../../mfc/reference/cprintdialog-class.md)对象的成员是一个`PRINTDLG`结构。
 
 有关详细信息，请参阅 Windows SDK 中的[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)结构。
 
 有关详细信息，请参阅 Windows SDK 中的[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)结构。
 
-##  <a name="coledocument"></a>COleDocument：： COleDocument
+## <a name="coledocumentcoledocument"></a><a name="coledocument"></a>COle 文档：COleDocument
 
 构造 `COleDocument` 对象。
 
@@ -191,30 +191,30 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 COleDocument();
 ```
 
-##  <a name="enablecompoundfile"></a>COleDocument：： EnableCompoundFile
+## <a name="coledocumentenablecompoundfile"></a><a name="enablecompoundfile"></a>COle 文档：：启用复合文件
 
 如果要使用复合文件格式存储文档，请调用此函数。
 
-```
+```cpp
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>参数
 
-*bEnable*<br/>
+*b 启用*<br/>
 指定是启用还是禁用复合文件支持。
 
 ### <a name="remarks"></a>备注
 
-这也称为结构化存储。 通常从派生类的构造函数`COleDocument`调用此函数。 有关复合文档的详细信息，请参阅文章[容器：复合文件](../../mfc/containers-compound-files.md)。
+这也称为结构化存储。 通常从`COleDocument`派生类的构造函数调用此函数。 有关复合文档的详细信息，请参阅文章["容器：复合文件](../../mfc/containers-compound-files.md)"。
 
-如果未调用此成员函数，则文档将存储为 nonstructured （"平面"）文件格式。
+如果不调用此成员函数，文档将以非结构化（"平面"）文件格式存储。
 
-为文档启用或禁用复合文件支持后，在文档的生存期内不应更改该设置。
+为文档启用或禁用复合文件支持后，不应在文档的生存期内更改设置。
 
-##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem
+## <a name="coledocumentgetinplaceactiveitem"></a><a name="getinplaceactiveitem"></a>COle 文档：获取位置活动项目
 
-调用此函数可获取当前在包含由*pWnd*标识的视图的框架窗口中就地激活的 OLE 项。
+调用此函数，获取当前在包含*pWnd*标识的视图的帧窗口中当前激活的 OLE 项。
 
 ```
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
@@ -222,14 +222,14 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 
 ### <a name="parameters"></a>参数
 
-*pWnd*<br/>
+*pwnd*<br/>
 指向显示容器文档的窗口的指针。
 
 ### <a name="return-value"></a>返回值
 
-指向单一就地活动 OLE 项的指针;如果当前没有 OLE 项处于 "就地活动" 状态，则为 NULL。
+指向单个、就地活动 OLE 项的指针;如果当前没有 OLE 项处于"就地活动"状态，则为 NULL。
 
-##  <a name="getnextclientitem"></a>COleDocument：： GetNextClientItem
+## <a name="coledocumentgetnextclientitem"></a><a name="getnextclientitem"></a>COle 文档：获取下一个客户端项目
 
 重复调用此函数以访问文档中的每个客户端项。
 
@@ -239,24 +239,24 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-对通过上一次调用`GetNextClientItem`设置的位置值的引用; 此初始值`GetStartPosition`由成员函数返回。
+*Pos*<br/>
+对由上一个调用 为 设置的定位`GetNextClientItem`值的引用。成员函数返回`GetStartPosition`初始值。
 
 ### <a name="return-value"></a>返回值
 
-指向文档中的下一个客户端项的指针; 如果没有更多的客户端项，则为 NULL。
+指向文档中下一个客户端项的指针，如果没有更多的客户端项，则指向 NULL。
 
 ### <a name="remarks"></a>备注
 
-每次调用后， *pos*的值都设置为文档中的下一项，这可能是也可能不是客户端项。
+每次调用后，为文档中的下一个项设置*pos*值，该项可能是客户端项，也可能不是客户端项。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]
 
-##  <a name="getnextitem"></a>COleDocument：： GetNextItem
+## <a name="coledocumentgetnextitem"></a><a name="getnextitem"></a>COle 文档：获取下一个项目
 
-重复调用此函数以访问文档中的每个项。
+重复调用此函数以访问文档中的每个项目。
 
 ```
 virtual CDocItem* GetNextItem(POSITION& pos) const;
@@ -264,22 +264,22 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-对通过上一次调用`GetNextItem`设置的位置值的引用; 此初始值`GetStartPosition`由成员函数返回。
+*Pos*<br/>
+对由上一个调用 为 设置的定位`GetNextItem`值的引用。成员函数返回`GetStartPosition`初始值。
 
 ### <a name="return-value"></a>返回值
 
-指向位于指定位置处的文档项的指针。
+指向指定位置的文档项的指针。
 
 ### <a name="remarks"></a>备注
 
-每次调用后， *pos*的值都设置为文档中下一项的位置值。 如果检索到的元素是文档中的最后一个元素，则*pos*的新值为 NULL。
+每次调用后 *，pos*值将设置为文档中下一项的"位置"值。 如果检索到的元素是文档中的最后一个元素，则*pos*的新值为 NULL。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]
 
-##  <a name="getnextserveritem"></a>COleDocument：： GetNextServerItem
+## <a name="coledocumentgetnextserveritem"></a><a name="getnextserveritem"></a>COle 文档：获取下一个服务器项目
 
 重复调用此函数以访问文档中的每个服务器项。
 
@@ -289,22 +289,22 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-对通过上一次调用`GetNextServerItem`设置的位置值的引用; 此初始值`GetStartPosition`由成员函数返回。
+*Pos*<br/>
+对由上一个调用 为 设置的定位`GetNextServerItem`值的引用。成员函数返回`GetStartPosition`初始值。
 
 ### <a name="return-value"></a>返回值
 
-指向文档中下一服务器项的指针; 如果没有更多的服务器项，则为 NULL。
+指向文档中下一个服务器项的指针，如果没有更多的服务器项，则指向 NULL。
 
 ### <a name="remarks"></a>备注
 
-每次调用后， *pos*的值都设置为文档中的下一项，这可能是也可能不是服务器项。
+每次调用后，为文档中的下一个项设置*pos*值，该项可能是服务器项，也可能不是服务器项。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]
 
-##  <a name="getprimaryselecteditem"></a>COleDocument：： GetPrimarySelectedItem
+## <a name="coledocumentgetprimaryselecteditem"></a><a name="getprimaryselecteditem"></a>COleDocument：获取主要选定项目
 
 由框架调用以检索指定视图中当前选定的 OLE 项。
 
@@ -319,15 +319,15 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 
 ### <a name="return-value"></a>返回值
 
-指向单个选定的 OLE 项的指针;如果未选择 OLE 项或选择了多个 OLE 项，则为 NULL。
+指向单个所选 OLE 项的指针;如果未选择 OLE 项或选择多个 OLE 项，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-默认实现会搜索单个选定项的包含 OLE 项列表，并返回指向它的指针。 如果未选择任何项，或者如果选择多个项，则该函数返回 NULL。 必须重写`CView::IsSelected`视图类中的成员函数，此函数才能工作。 如果你有自己的存储包含的 OLE 项的方法，请重写此函数。
+默认实现搜索单个选定项包含的 OLE 项的列表，并返回指向它的指针。 如果没有选择任何项，或者有多个项目被选中，则函数将返回 NULL。 您必须重写视图类`CView::IsSelected`中的成员函数，才能工作。 如果您有自己的方法来存储包含的 OLE 项，请重写此函数。
 
-##  <a name="getstartposition"></a>COleDocument：： GetStartPosition
+## <a name="coledocumentgetstartposition"></a><a name="getstartposition"></a>COle 文档：获取起始位置
 
-调用此函数可获取文档中第一项的位置。
+调用此函数以获取文档中第一个项目的位置。
 
 ```
 virtual POSITION GetStartPosition() const;
@@ -335,15 +335,15 @@ virtual POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>返回值
 
-可用于开始遍历文档项的位置值;如果文档没有项，则为 NULL。
+可用于开始遍历文档项的"位置"值;如果文档没有项目，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-传递返回到`GetNextItem`、 `GetNextClientItem`或`GetNextServerItem`的值。
+将返回的值传递给`GetNextItem`或`GetNextClientItem`。 `GetNextServerItem`
 
-##  <a name="hasblankitems"></a>COleDocument：： HasBlankItems
+## <a name="coledocumenthasblankitems"></a><a name="hasblankitems"></a>COle 文档：：有空白项目
 
-调用此函数可确定文档是否包含任何空白项。
+调用此函数以确定文档是否包含任何空白项。
 
 ```
 BOOL HasBlankItems() const;
@@ -351,15 +351,15 @@ BOOL HasBlankItems() const;
 
 ### <a name="return-value"></a>返回值
 
-如果文档包含任何空白项，则为非零值;否则为0。
+如果文档包含任何空白项，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-空白项是矩形为空的项。
+空白项是其矩形为空的项目。
 
-##  <a name="oneditchangeicon"></a>COleDocument：： OnEditChangeIcon
+## <a name="coledocumentoneditchangeicon"></a><a name="oneditchangeicon"></a>COle 文档：：在编辑更改图标上
 
-显示 OLE "更改图标" 对话框，并将表示当前所选 OLE 项的图标更改为用户在对话框中选择的图标。
+显示 OLE 更改图标对话框，并将表示当前选择的 OLE 项的图标更改为用户在对话框中选择的图标。
 
 ```
 afx_msg void OnEditChangeIcon();
@@ -367,11 +367,11 @@ afx_msg void OnEditChangeIcon();
 
 ### <a name="remarks"></a>备注
 
-`OnEditChangeIcon`创建并启动`COleChangeIconDialog` "更改图标" 对话框。
+`OnEditChangeIcon`创建并启动`COleChangeIconDialog`"更改图标"对话框。
 
-##  <a name="oneditconvert"></a>COleDocument：： OnEditConvert
+## <a name="coledocumentoneditconvert"></a><a name="oneditconvert"></a>COle 文档：：打开转换
 
-显示 "OLE 转换" 对话框，并根据对话框中的用户选择，转换或激活当前选定的 OLE 项。
+显示 OLE 转换对话框，并根据对话框中的用户选择转换或激活当前选定的 OLE 项目。
 
 ```
 afx_msg void OnEditConvert();
@@ -379,13 +379,13 @@ afx_msg void OnEditConvert();
 
 ### <a name="remarks"></a>备注
 
-`OnEditConvert`创建并启动`COleConvertDialog` "转换" 对话框。
+`OnEditConvert`创建并启动`COleConvertDialog`"转换"对话框。
 
-转换的一个示例是将 Microsoft Word 文档转换为写字板文档。
+转换的一个示例是将 Microsoft Word 文档转换为 WordPad 文档。
 
-##  <a name="oneditlinks"></a>COleDocument：： OnEditLinks
+## <a name="coledocumentoneditlinks"></a><a name="oneditlinks"></a>COleDocument：：在编辑链接上
 
-显示 "OLE 编辑/链接" 对话框。
+显示"OLE 编辑/链接"对话框。
 
 ```
 afx_msg void OnEditLinks();
@@ -393,11 +393,11 @@ afx_msg void OnEditLinks();
 
 ### <a name="remarks"></a>备注
 
-`OnEditLinks`创建并启动`COleLinksDialog` "链接" 对话框，该对话框允许用户更改链接的对象。
+`OnEditLinks`创建并启动"`COleLinksDialog`链接"对话框，该对话框允许用户更改链接的对象。
 
-##  <a name="onfilesendmail"></a>  COleDocument::OnFileSendMail
+## <a name="coledocumentonfilesendmail"></a><a name="onfilesendmail"></a>COle 文档：：在文件发送邮件
 
-通过居民邮件主机（如果有）将邮件作为附件发送。
+通过驻留邮件主机（如果有）发送邮件，并将文档作为附件。
 
 ```
 afx_msg void OnFileSendMail();
@@ -405,15 +405,15 @@ afx_msg void OnFileSendMail();
 
 ### <a name="remarks"></a>备注
 
-`OnFileSendMail`调用`OnSaveDocument`将无标题和修改的文档序列化（保存）到临时文件，然后通过电子邮件发送该文件。 如果未修改文档，则不需要临时文件;发送原始。 `OnFileSendMail`加载 MAPI32.DLL。如果尚未加载 DLL，则为。
+`OnFileSendMail`调用`OnSaveDocument`序列化（保存）无标题和修改的文档到临时文件，然后通过电子邮件发送。 如果文档尚未修改，则不需要临时文件;因此，不需要临时文件。原始文件已发送。 `OnFileSendMail`加载 MAPI32。尚未加载 DLL。
 
-与的实现`OnFileSendMail` `CDocument`不同，此函数将正确处理复合文件。
+与`OnFileSendMail`的`CDocument`实现不同，此函数正确处理复合文件。
 
-有关详细信息，请参阅 MFC 文章中的[Mapi 主题](../../mfc/mapi.md)和[mapi 支持](../../mfc/mapi-support-in-mfc.md)。
+有关详细信息，请参阅 MFC 文章中的[MAPI 主题](../../mfc/mapi.md)和[MAPI 支持](../../mfc/mapi-support-in-mfc.md)。
 
-##  <a name="onshowviews"></a>COleDocument：： OnShowViews
+## <a name="coledocumentonshowviews"></a><a name="onshowviews"></a>COle 文档：：在显示视图
 
-框架在文档的可见性状态更改后调用此函数。
+在文档的可见性状态更改后，框架调用此函数。
 
 ```
 virtual void OnShowViews(BOOL bVisible);
@@ -421,16 +421,16 @@ virtual void OnShowViews(BOOL bVisible);
 
 ### <a name="parameters"></a>参数
 
-*bVisible*<br/>
-指示文档是否已变得可见或不可见。
+*b可见*<br/>
+指示文档是可见的还是不可见的。
 
 ### <a name="remarks"></a>备注
 
-此函数的默认版本不执行任何操作。 如果你的应用程序在文档的可见性更改时必须执行任何特殊处理，则重写它。
+此函数的默认版本不执行任何操作。 如果应用程序必须在文档的可见性更改时执行任何特殊处理，请覆盖它。
 
-##  <a name="onupdateeditchangeicon"></a>COleDocument：： OnUpdateEditChangeIcon
+## <a name="coledocumentonupdateeditchangeicon"></a><a name="onupdateeditchangeicon"></a>COle 文档：：更新编辑更改图标
 
-由框架调用，以更新 "编辑" 菜单上的 "更改图标" 命令。
+由框架调用以更新"编辑"菜单上的"更改图标"命令。
 
 ```
 afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
@@ -439,15 +439,15 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>参数
 
 *pCmdUI*<br/>
-指向`CCmdUI`结构的指针，该结构表示生成更新命令的菜单。 更新处理程序通过`Enable` *pCmdUI*调用`CCmdUI`结构的成员函数以更新用户界面。
+指向表示生成更新`CCmdUI`命令的菜单的结构的指针。 更新处理程序通过`Enable`*pCmdUI* `CCmdUI`调用结构的成员函数以更新用户界面。
 
 ### <a name="remarks"></a>备注
 
-`OnUpdateEditChangeIcon`根据文档中是否存在有效的图标，更新命令的用户界面。 重写此函数以更改行为。
+`OnUpdateEditChangeIcon`更新命令的用户界面，具体取决于文档中是否存在有效的图标。 重写此函数以更改行为。
 
-##  <a name="onupdateeditlinksmenu"></a>COleDocument：： OnUpdateEditLinksMenu
+## <a name="coledocumentonupdateeditlinksmenu"></a><a name="onupdateeditlinksmenu"></a>COle 文档：：更新链接菜单
 
-由框架调用，以更新 "编辑" 菜单上的 "链接" 命令。
+由框架调用以更新"编辑"菜单上的"链接"命令。
 
 ```
 afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
@@ -456,15 +456,15 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>参数
 
 *pCmdUI*<br/>
-指向`CCmdUI`结构的指针，该结构表示生成更新命令的菜单。 更新处理程序通过`Enable` *pCmdUI*调用`CCmdUI`结构的成员函数以更新用户界面。
+指向表示生成更新`CCmdUI`命令的菜单的结构的指针。 更新处理程序通过`Enable`*pCmdUI* `CCmdUI`调用结构的成员函数以更新用户界面。
 
 ### <a name="remarks"></a>备注
 
-从文档中的第一个 OLE 项开始， `OnUpdateEditLinksMenu`访问每个项，测试该项是否为链接，如果是链接，则启用 "链接" 命令。 重写此函数以更改行为。
+从文档中的第一个 OLE 项开始`OnUpdateEditLinksMenu`，访问每个项，测试该项是否为链接，如果是链接，则启用 Links 命令。 重写此函数以更改行为。
 
-##  <a name="onupdateobjectverbmenu"></a>COleDocument：： OnUpdateObjectVerbMenu
+## <a name="coledocumentonupdateobjectverbmenu"></a><a name="onupdateobjectverbmenu"></a>COleDocument：：更新对象Verbmenu
 
-由框架调用，以更新 "编辑" 菜单中的 " *objectname* " 命令和从*ObjectName*命令访问的谓词子菜单，其中*ObjectName*是嵌入在文档中的 OLE 对象的名称。
+由框架调用以更新"编辑"菜单上*的 ObjectName*命令，以及从*ObjectName*命令访问的 Verb 子菜单，其中*ObjectName*是嵌入在文档中的 OLE 对象的名称。
 
 ```
 afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
@@ -473,15 +473,15 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>参数
 
 *pCmdUI*<br/>
-指向`CCmdUI`结构的指针，该结构表示生成更新命令的菜单。 更新处理程序通过`Enable` *pCmdUI*调用`CCmdUI`结构的成员函数以更新用户界面。
+指向表示生成更新`CCmdUI`命令的菜单的结构的指针。 更新处理程序通过`Enable`*pCmdUI* `CCmdUI`调用结构的成员函数以更新用户界面。
 
 ### <a name="remarks"></a>备注
 
-`OnUpdateObjectVerbMenu`根据文档中是否存在有效的对象，更新*ObjectName*命令的用户界面。 如果对象存在，则会启用 "编辑" 菜单上的 " *ObjectName* " 命令。 选择此菜单命令后，将显示谓词子菜单。 谓词子菜单包含可用于对象的所有谓词命令，如编辑、属性等。 重写此函数以更改行为。
+`OnUpdateObjectVerbMenu`更新*ObjectName*命令的用户界面，具体取决于文档中是否存在有效对象。 如果存在对象，则启用"编辑"菜单上*的对象名称*命令。 选择此菜单命令时，将显示"动词子菜单"。 "动词"子菜单包含可用于对象的所有谓词命令，如"编辑"、"属性"等。 重写此函数以更改行为。
 
-##  <a name="onupdatepastelinkmenu"></a>COleDocument：： OnUpdatePasteLinkMenu
+## <a name="coledocumentonupdatepastelinkmenu"></a><a name="onupdatepastelinkmenu"></a>COle 文档：：更新粘贴链接菜单
 
-由框架调用，用于确定是否可以从剪贴板中粘贴链接的 OLE 项。
+由框架调用以确定是否可以从剪贴板粘贴链接的 OLE 项。
 
 ```
 afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
@@ -490,15 +490,15 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>参数
 
 *pCmdUI*<br/>
-指向`CCmdUI`结构的指针，该结构表示生成更新命令的菜单。 更新处理程序通过`Enable` *pCmdUI*调用`CCmdUI`结构的成员函数以更新用户界面。
+指向表示生成更新`CCmdUI`命令的菜单的结构的指针。 更新处理程序通过`Enable`*pCmdUI* `CCmdUI`调用结构的成员函数以更新用户界面。
 
 ### <a name="remarks"></a>备注
 
-"选择性粘贴" 菜单命令是启用还是禁用的，具体取决于是否可以将项粘贴到文档中。
+根据项目是否可以粘贴到文档中，启用或禁用"粘贴特殊"菜单命令。
 
-##  <a name="onupdatepastemenu"></a>COleDocument：： OnUpdatePasteMenu
+## <a name="coledocumentonupdatepastemenu"></a><a name="onupdatepastemenu"></a>COle 文档：：更新粘贴菜单
 
-由框架调用，用于确定是否可以从剪贴板中粘贴嵌入的 OLE 项。
+由框架调用以确定是否可以从剪贴板粘贴嵌入的 OLE 项。
 
 ```
 afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
@@ -507,15 +507,15 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>参数
 
 *pCmdUI*<br/>
-指向`CCmdUI`结构的指针，该结构表示生成更新命令的菜单。 更新处理程序通过`Enable` *pCmdUI*调用`CCmdUI`结构的成员函数以更新用户界面。
+指向表示生成更新`CCmdUI`命令的菜单的结构的指针。 更新处理程序通过`Enable`*pCmdUI* `CCmdUI`调用结构的成员函数以更新用户界面。
 
 ### <a name="remarks"></a>备注
 
-启用或禁用 "粘贴" 菜单命令和按钮，具体取决于是否可以将项粘贴到文档中。
+"粘贴"菜单命令和按钮已启用或禁用，具体取决于项目是否可以粘贴到文档中。
 
-##  <a name="removeitem"></a>COleDocument：： RemoveItem
+## <a name="coledocumentremoveitem"></a><a name="removeitem"></a>COle 文档：删除项目
 
-调用此函数可从文档中移除项。
+调用此函数从文档中删除项目。
 
 ```
 virtual void RemoveItem(CDocItem* pItem);
@@ -528,11 +528,11 @@ virtual void RemoveItem(CDocItem* pItem);
 
 ### <a name="remarks"></a>备注
 
-通常无需显式调用此函数;它由`COleClientItem`和`COleServerItem`的析构函数调用。
+您通常不需要显式调用此函数;因此，您不需要显式调用此函数。它由`COleClientItem`和`COleServerItem`的析构函数调用。
 
-##  <a name="updatemodifiedflag"></a>COleDocument：： UpdateModifiedFlag
+## <a name="coledocumentupdatemodifiedflag"></a><a name="updatemodifiedflag"></a>COle 文档：：更新已修改的标记
 
-如果已修改任何包含的 OLE 项，则调用此函数可将文档标记为已修改。
+如果包含的任何 OLE 项已被修改，请调用此函数将文档标记为已修改。
 
 ```
 virtual void UpdateModifiedFlag();
@@ -540,11 +540,11 @@ virtual void UpdateModifiedFlag();
 
 ### <a name="remarks"></a>备注
 
-这允许框架在关闭前提示用户保存文档，即使未修改文档中的本机数据也是如此。
+这允许框架提示用户在关闭之前保存文档，即使文档中的本机数据尚未修改也是如此。
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例容器](../../overview/visual-cpp-samples.md)<br/>
-[MFC 示例 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品容器](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [CDocument 类](../../mfc/reference/cdocument-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)
+[层次结构图表](../../mfc/hierarchy-chart.md)

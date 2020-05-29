@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-ms.openlocfilehash: 3f544cac1835a5a01e4d287cee1084bc56141716
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7a18d2f9f229a62a539be072870e38a990677636
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246245"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076363"
 ---
-# <a name="systemerror-class"></a>system_error 类
+# <a name="system_error-class"></a>system_error 类
 
 表示为报告低级别系统错误而引发的所有异常的基类。
 
@@ -25,7 +25,7 @@ class system_error : public runtime_error {
     system_error(error_code _Errcode, const char *_Message);
     system_error(error_code::value_type _Errval, const error_category& _Errcat, const string& _Message);
     system_error(error_code::value_type _Errval, const error_category& _Errcat, const char *_Message);
-    
+
     const error_code& code() const throw();
     const char* what() const noexcept override;
 };
@@ -33,6 +33,6 @@ class system_error : public runtime_error {
 
 ## <a name="remarks"></a>备注
 
-返回的值`what`类中[exception](../standard-library/exception-class.md)从构造`_Message`和类型的存储的对象[error_code](../standard-library/error-code-class.md) (或者`code`或`error_code(_Errval, _Errcat)`)。
+由 `what`[ 类中的 ](../standard-library/exception-class.md) 返回的值根据 `_Message` 和 [error_code](../standard-library/error-code-class.md)（`code` 或 `error_code(_Errval, _Errcat)`）进行构造。
 
 成员函数 `code` 返回存储的 [error_code](../standard-library/error-code-class.md) 对象。

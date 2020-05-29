@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: C++ 语言文档
+summary: 了解如何使用 C++ 和 C++ 标准库。
+metadata:
+  title: C# 文档 - 入门、教程、参考。
+  description: 适用于 Microsoft C++ 和 Visual Studio 用户的 C++ 编程参考。
+  ms.topic: landing-page
+  ms.date: 05/08/2020
+  ms.openlocfilehash: d94a9821e28641c6297261f520359a7179006ff4
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108617"
+landingContent:
+- title: 在 Visual Studio 中学习 C++
+  linkLists:
+  - linkListType: download
+    links:
+    - text: 下载 Visual Studio for Windows
+      url: https://visualstudio.microsoft.com/downloads
+    - text: 在 Visual Studio 中安装 C/C++ 支持
+      url: ../build/vscpp-step-0-installation.md
+    - text: 仅下载命令行生成工具
+      url: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019
+  - linkListType: get-started
+    links:
+    - text: 在 Visual Studio 中使用 C++ 生成 Hello World
+      url: ../build/vscpp-step-1-create.md
+    - text: 在 C++ 中创建计算器
+      url: ../get-started/tutorial-console-cpp.md
+  - linkListType: video
+    links:
+    - text: 了解 C++ - 常规用途语言和库
+      url: https://channel9.msdn.com/Series/cplusplus-language-library
+  - linkListType: learn
+    links:
+    - text: 欢迎回到 C++ - 现代 C++
+      url: ../cpp/welcome-back-to-cpp-modern-cpp.md
+    - text: 示例和示例存档
+      url: ../overview/visual-cpp-samples.md
+- title: Visual Studio 中的 C++ 新变化
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio 中的 C++ 新变化
+      url: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - text: C++ 的符合性改进
+      url: ../overview/cpp-conformance-improvements.md
+  - linkListType: overview
+    links:
+    - text: Visual Studio 中的 C++ 开发概述
+      url: ../overview/overview-of-cpp-development.md
+    - text: 支持的目标平台
+      url: ../overview/supported-platforms-visual-cpp.md
+    - text: 帮助和社区资源
+      url: ../overview/visual-cpp-help-and-community.md
+    - text: 报告问题或提出建议
+      url: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- title: 使用编译器和工具
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C/C++ 生成参考
+      url: ../build/reference/c-cpp-building-reference.md
+    - text: 项目和生成系统
+      url: ../build/projects-and-build-systems-cpp.md
+    - text: 编译器参考
+      url: ../build/reference/compiling-a-c-cpp-program.md
+    - text: 链接器参考
+      url: ../build/reference/linking.md
+    - text: 其他生成工具
+      url: ../build/reference/c-cpp-build-tools.md
+    - text: 错误和警告
+      url: ../error-messages/compiler-errors-1/c-cpp-build-errors.md
+- title: C++ 语言
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 语言参考
+      url: ../cpp/cpp-language-reference.md
+    - text: C++ 关键字
+      url: ../cpp/keywords-cpp.md
+    - text: C++ 运算符
+      url: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+    - text: C/C++ 预处理器参考
+      url: ../preprocessor/c-cpp-preprocessor-reference.md
+- title: C++ 标准库 (STL)
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 标准库概述
+      url: ../standard-library/cpp-standard-library-overview.md
+    - text: C++ 标准库参考（按标题）
+      url: ../standard-library/cpp-standard-library-header-files.md
+    - text: C++ 标准库容器
+      url: ../standard-library/stl-containers.md
+    - text: 迭代器
+      url: ../standard-library/iterators.md
+    - text: 算法
+      url: ../standard-library/algorithms.md
+    - text: Allocators
+      url: ../standard-library/allocators.md
+    - text: 函数对象
+      url: ../standard-library/function-objects-in-the-stl.md
+    - text: iostream 编程
+      url: ../standard-library/iostream-programming.md
+    - text: 正则表达式
+      url: ../standard-library/regular-expressions-cpp.md
+    - text: 文件系统导航
+      url: ../standard-library/file-system-navigation.md

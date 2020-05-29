@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
 ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157781"
 ---
 # <a name="string-literal-concatenation"></a>字符串文本串联
 
@@ -29,13 +29,13 @@ ken into two or more pieces."
 
 在之前可能已使用过反斜杠后跟换行符的任何地方，都可以使用字符串串联，用来输入长于一行的字符串。
 
-若要在字符串文本中强制换行，请在字符串中要换行的位置输入换行转义序列 (\n)，如下所示：
+若要在字符串文本中强制换行，请在字符串中要换行的位置输入换行转义序列 (\n)，如下所示  ：
 
 ```
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-由于字符串可以在源代码的任何列中开始，而长字符串可以在后面的行的任何列中继续，因此可以放置字符串以增强源代码可读性。 在任一情况下，在输出时，字符串的屏幕表示形式都不受影响。 例如:
+由于字符串可以在源代码的任何列中开始，而长字符串可以在后面的行的任何列中继续，因此可以放置字符串以增强源代码可读性。 在任一情况下，在输出时，字符串的屏幕表示形式都不受影响。 例如：
 
 ```
 printf_s ( "This is the first half of the string, "

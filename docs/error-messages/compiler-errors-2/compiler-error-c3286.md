@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381341"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201391"
 ---
 # <a name="compiler-error-c3286"></a>编译器错误 C3286
 
-> '*说明符*： 迭代变量不能包含任何存储类说明符
+> "*说明符*"：迭代变量不能包含任何存储类说明符
 
-存储类不能对指定的迭代变量。 有关详细信息，请参阅[存储类 (C++)](../../cpp/storage-classes-cpp.md)并[对于每个，在](../../dotnet/for-each-in.md)。
+不能对迭代变量指定存储类。 有关详细信息，请参阅[中的](../../dotnet/for-each-in.md)[存储C++类（）](../../cpp/storage-classes-cpp.md)和。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 c3286:，并还显示了正确的使用。
+下面的示例生成 C3286，并显示正确的用法。
 
 ```cpp
 // C3286.cpp

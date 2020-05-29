@@ -1,21 +1,20 @@
 ---
-title: '&lt;代码 > (C++文档注释)'
+title: '&lt;代码 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
-- code
 - <code>
 helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4bc28c4615a4aab3076940806f54c699ec1ee0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169925"
 ---
-# <a name="ltcodegt"></a>&lt;代码&gt;
+# <a name="ltcodegt"></a>&lt;code&gt;
 
 \<code> 标记可将一行或多行内容指示为代码。
 
@@ -25,7 +24,7 @@ ms.locfileid: "62272398"
 <code>content</code>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *content*<br/>
 要标记为代码的文本。
@@ -38,8 +37,8 @@ ms.locfileid: "62272398"
 
 ## <a name="example"></a>示例
 
-有关如何使用 \<code> 标记的示例，请参阅 [\<example>](example-visual-cpp.md) 主题。
+有关如何使用 [code> 标记的示例，请参阅 \<](example-visual-cpp.md)example>\< 主题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

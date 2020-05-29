@@ -5,11 +5,11 @@ helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837608"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422714"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>演练：使用 MSBuild 创建 Visual C++ 项目
 
@@ -25,11 +25,11 @@ ms.locfileid: "65837608"
 
 - 使用 MSBuild 自定义项目。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，你需要具备以下条件：
 
-- 需安装 Visual Studio 的副本，并安装“使用 C++ 的桌面开发”工作负载。
+- 需安装 Visual Studio 的副本，并安装“使用 C++ 的桌面开发”工作负载  。
 
 - 对 MSBuild 系统有大致的了解。
 
@@ -37,7 +37,7 @@ ms.locfileid: "65837608"
 > 如果以后想通过使用 Visual Studio IDE 编辑项目文件，请勿采用此方法。 如果手动创建 .vcxproj 文件，Visual Studio IDE 可能无法编辑或加载该文件，尤其是在项目在项目项中使用通配符时。
 
 > [!NOTE]
-> 大多数低级别的生成说明都包含在 .targets 和 .props 文件中，这些文件是在 VCTargets 目录中定义的，存储在属性 `$(VCTargetsPath)` 中。 这些文件在 Visual Studio 2019 Enterprise Edition 中的默认路径为 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props。
+> 大多数低级别的生成说明都包含在 .targets 和 .props 文件中，这些文件是在 VCTargets 目录中定义的，存储在属性 `$(VCTargetsPath)` 中   。 这些文件在 Visual Studio 2019 Enterprise Edition 中的默认路径为 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props。
 
 ## <a name="creating-the-c-source-files"></a>创建 C++ 源文件
 
@@ -131,7 +131,7 @@ MSBuild 项目文件是一个包含项目根元素 (`<Project>`) 的 XML 文件�
     ```
 
    > [!NOTE]
-   > `<ClCompile>` 是生成目标，且在 VCTargets 目录中进行定义。
+   > `<ClCompile>` 是生成目标，且在 VCTargets 目录中进行定义   。
 
 1. 在 `<ItemGroup>` 元素中添加以下 `<ClInclude>` 子元素。 该子元素指定 C/C++ 源文件的头文件的名称：
 
@@ -189,7 +189,7 @@ MSBuild 创建输出文件的命令，然后编译并链接项目以生成 Mypro
 
 `myproject`
 
-该应用程序应在控制台窗口中 显示“Hello, from MSBuild!”。
+该应用程序应在控制台窗口中 显示文本字符串“Hello World!”。
 
 ## <a name="customizing-your-project"></a>对项目进行自定义
 
@@ -207,7 +207,7 @@ MSBuild 创建输出文件的命令，然后编译并链接项目以生成 Mypro
 
 ### <a name="using-msbuild-with-build-targets"></a>将 MSBuild 和生成目标配合使用
 
-“生成目标”是一组命名的预定义或用户定义的命令，可以在生成期间执行这些命令。 使用目标命令行选项 (`/t`) 以指定生成目标。 对于 `myproject` 示例项目，预定义的清理目标删除调试文件夹中的所有文件，并创建新的日志文件。
+“生成目标”是一组命名的预定义或用户定义的命令，可以在生成期间执行这些命令  。 使用目标命令行选项 (`/t`) 以指定生成目标。 对于 `myproject` 示例项目，预定义的清理目标删除调试文件夹中的所有文件，并创建新的日志文件  。
 
 在命令提示符处，键入下列命令以清理 `myproject`。
 

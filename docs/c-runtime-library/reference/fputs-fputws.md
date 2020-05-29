@@ -1,9 +1,11 @@
 ---
 title: fputs、fputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputs
 - fputws
+- _o_fputs
+- _o_fputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 7470901fda72e74caea12758bed4f23fcc087a33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 718bcd227e5821c85517ff7c0a1f195bd24d230b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956904"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912742"
 ---
 # <a name="fputs-fputws"></a>fputs、fputws
 
@@ -57,10 +60,10 @@ int fputws(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 输出字符串。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -75,6 +78,8 @@ int fputws(
 
 如果在 ANSI 模式下打开流，则这两个函数行为相同。 **fputs**当前不支持输出到 UNICODE 流中。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
@@ -88,7 +93,7 @@ int fputws(
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台（**stdin**、 **stdout**和**stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台（**stdin**、 **stdout**和**stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -109,7 +114,7 @@ int main( void )
 Hello world from fputs.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets、fgetws](fgets-fgetws.md)<br/>

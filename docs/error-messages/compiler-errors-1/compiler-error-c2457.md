@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347098"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205239"
 ---
 # <a name="compiler-error-c2457"></a>编译器错误 C2457
 
-> '*宏*： 预定义的宏不能出现在函数体的外部
+> "*宏*"：预定义的宏不能出现在函数体的外部
 
-尝试使用预定义的宏，如[ &#95;&#95;函数&#95;&#95;](../../preprocessor/predefined-macros.md)，在全局空间中。
+尝试在全局空间中使用预定义的宏，如[ &#95; &#95;函数&#95;](../../preprocessor/predefined-macros.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2457，并还显示了正确的使用：
+下面的示例生成 C2457，并显示正确的用法：
 
 ```cpp
 // C2457.cpp

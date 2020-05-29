@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188390"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180909"
 ---
 # <a name="class-templates"></a>类模板
 
@@ -75,9 +75,9 @@ int main()
 }
 ```
 
-## <a name="nested-class-templates"></a>嵌套的类模板
+## <a name="nested-class-templates"></a>嵌套类模板
 
-模板可以在类或类模板中定义，在这种情况下，它们被称为成员模板。 作为类的成员模板称为嵌套类模板。 是函数的成员模板中讨论[成员函数模板](../cpp/member-function-templates.md)。
+模板可以在类或类模板中定义，在这种情况下，它们被称为成员模板。 作为类的成员模板称为嵌套类模板。 成员[函数模板](../cpp/member-function-templates.md)中讨论了作为函数的成员模板。
 
 嵌套类模板被声明为外部类范围内的类模板。 可以在封闭类的内部或外部定义它们。
 
@@ -193,9 +193,9 @@ X<T>::Y<U>::~Y()
 
 局部类不允许具有成员模板。
 
-## <a name="template-friends"></a>模板友元
+## <a name="template-friends"></a>模板朋友
 
-类模板可以具有[朋友](friend-cpp.md)。 类或类模板、函数或函数模板可以是模板类的友元。 友元也可以是类模板或函数模板的专用化，但不是部分专用化。
+类模板可以具有[友元](friend-cpp.md)。 类或类模板、函数或函数模板可以是模板类的友元。 友元也可以是类模板或函数模板的专用化，但不是部分专用化。
 
 在以下示例中，友元函数将定义为类模板中的函数模板。 此代码为模板的每个实例化生成一个友元函数版本。 如果您的友元函数与类依赖于相同的模板参数，则此构造很有用。
 
@@ -411,9 +411,9 @@ A
 a
 ```
 
-## <a name="reuse-of-template-parameters"></a>重用的模板参数
+## <a name="reuse-of-template-parameters"></a>重用模板参数
 
-模板参数列表中，可以重复使用模板参数。 例如，以下代码是允许的：
+模板参数可以在模板参数列表中重复使用。 例如，以下代码是允许的：
 
 ```cpp
 // template_specifications2.cpp
@@ -438,6 +438,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [模板](../cpp/templates-cpp.md)

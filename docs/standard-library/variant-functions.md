@@ -1,5 +1,5 @@
 ---
-title: '&lt;变体&gt;函数'
+title: '&lt;variant&gt; 函数'
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::get
@@ -7,17 +7,17 @@ f1_keywords:
 - variant/std::holds_alternative
 - variant/std::visit
 ms.openlocfilehash: d558eb086e076ba22722080b0c19f3d5733136d2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268379"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427619"
 ---
-# <a name="ltvariantgt-functions"></a>&lt;变体&gt;函数
+# <a name="ltvariantgt-functions"></a>&lt;variant&gt; 函数
 
-## <a name="get"></a> 获取
+## <a name="get"></a>获取
 
-获取一个对象的变体。
+获取对象的变体。
 
 ```cpp
 template <size_t I, class... Types>
@@ -38,9 +38,9 @@ template <class T, class... Types>
     constexpr const T&& get(const variant<Types...>&&);
 ```
 
-## <a name="get_if"></a> get_if
+## <a name="get_if"></a>get_if
 
-如果它存在，则获取一个对象的变体。
+获取对象的变体（如果存在）。
 
 ```cpp
 template <size_t I, class... Types>
@@ -53,23 +53,23 @@ template <class T, class... Types>
     constexpr add_pointer_t<const T> get_if(const variant<Types...>*) noexcept;
 ```
 
-## <a name="holds_alternative"></a> holds_alternative
+## <a name="holds_alternative"></a>holds_alternative
 
-返回 **，则返回 true**如果存在一个变体。
+如果变量存在，**则返回 true** 。
 
 ```cpp
 template <class T, class... Types>
     constexpr bool holds_alternative(const variant<Types...>&) noexcept;
 ```
 
-## <a name="swap"></a> 交换
+## <a name="swap"></a>购
 
 ```cpp
 template <class... Types>
     void swap(variant<Types...>&, variant<Types...>&) noexcept(see below);
 ```
 
-## <a name="variant_npos"></a> variant_npos
+## <a name="variant_npos"></a>variant_npos
 
 ```cpp
 namespace std {
@@ -77,9 +77,9 @@ namespace std {
 }
 ```
 
-## <a name="visit"></a> 请访问
+## <a name="visit"></a>参阅
 
-将移动到下一步**变体**。
+移到下一个**变体**。
 
 ```cpp
 template <class Visitor, class... Variants>

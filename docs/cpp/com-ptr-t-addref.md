@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - AddRef method [C++], interface pointers
 ms.assetid: c104dac3-aad3-40bb-a298-75c6cd0e63a2
-ms.openlocfilehash: 7408b5c174f76673b56caffd56aaa87895bd08d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dcf643357c9b368d4b2ea3bc51e6567acf45a44
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154937"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745103"
 ---
-# <a name="comptrtaddref"></a>_com_ptr_t::AddRef
+# <a name="_com_ptr_taddref"></a>_com_ptr_t::AddRef
 
-**Microsoft 专用**
+**微软特定**
 
-调用`AddRef`成员函数的`IUnknown`上封装的接口指针。
+调用`AddRef`封装接口指针`IUnknown`上的成员函数。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 void AddRef( );
 ```
 
 ## <a name="remarks"></a>备注
 
-调用`IUnknown::AddRef`封装的接口指针上引发`E_POINTER`错误如果指针为 NULL。
+调用`IUnknown::AddRef`封装的接口指针，如果指针为`E_POINTER`NULL，则引发错误。
 
-**结束 Microsoft 专用**
+**结束微软特定**
 
 ## <a name="see-also"></a>请参阅
 

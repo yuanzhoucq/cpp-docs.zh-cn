@@ -1,8 +1,9 @@
 ---
 title: _recalloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _recalloc
+- _o__recalloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: f06631fe4dd0abcb0b18895ccb04e5b52cda6a2c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 342228635e69d49e0b51196aef03a296c1f0e652
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949450"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917865"
 ---
 # <a name="_recalloc"></a>_recalloc
 
@@ -52,10 +54,10 @@ void *_recalloc(
 *memblock*<br/>
 指向之前已分配内存块的指针。
 
-*number*<br/>
+*数字*<br/>
 元素数量。
 
-*size*<br/>
+size <br/>
 每个元素的长度（以字节为单位）。
 
 ## <a name="return-value"></a>返回值
@@ -76,7 +78,7 @@ void *_recalloc(
 
 如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**， **_recalloc**将**errno**设置为**ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**recalloc**调用**realloc**以使用C++ [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新处理程序模式指示在失败时， **realloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下， **realloc**不会在失败时调用新的处理程序例程来分配内存。 您可以重写此默认行为，以便在 **_recalloc**无法分配内存时， **realloc**会调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值，请在程序的早期调用：
+**recalloc**调用**realloc** ，以便使用 c + + [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新处理程序模式指示在失败时， **realloc**是否调用[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下， **realloc**不会在失败时调用新的处理程序例程来分配内存。 您可以重写此默认行为，以便在 **_recalloc**无法分配内存时， **realloc**会调用新的处理程序例程，方法与在同一原因下，**新**的运算符出现故障的方式相同。 若要重写默认值，请在程序的早期调用：
 
 ```C
 _set_new_mode(1);
@@ -86,21 +88,23 @@ _set_new_mode(1);
 
 当应用程序与调试版的 C 运行时库链接时， **_recalloc**解析为[_recalloc_dbg](recalloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-**_recalloc**被标记`__declspec(noalias)` `__declspec(restrict)`为，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**_recalloc**标记`__declspec(noalias)` `__declspec(restrict)`为，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_recalloc**|\<stdlib.h> 和 \<malloc.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [_recalloc_dbg](recalloc-dbg.md)<br/>
 [_aligned_recalloc](aligned-recalloc.md)<br/>
 [_aligned_offset_recalloc](aligned-offset-recalloc.md)<br/>
-[free](free.md)<br/>
+[忙](free.md)<br/>
 [链接选项](../../c-runtime-library/link-options.md)<br/>

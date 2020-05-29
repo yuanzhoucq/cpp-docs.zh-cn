@@ -46,18 +46,18 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 6be7d29a4b43ac10980601708f5bcc666a48dd58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511383"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754388"
 ---
 # <a name="reflected-window-message-ids"></a>反射窗口消息 ID
 
-一种快速创建 ActiveX 控件或其他专用控件的方法是子类化窗口。 有关详细信息, 请[参阅 MFC ActiveX 控件:为 Windows 控件](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)进行子类化。
+一种快速创建 ActiveX 控件或其他专用控件的方法是子类化窗口。 有关详细信息，请参阅[MFC ActiveX 控件：对 Windows 控件进行子类化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
 
-为了防止控件的容器接收由子类 Windows 控件发送的窗口消息, [COleControl](../mfc/reference/colecontrol-class.md)创建了一个 "反射器" 窗口来截获某些窗口消息并将其发送回控件。 控件在其窗口过程中可以通过对 ActiveX 控件采取适当操作来处理这些反射的消息。
+为了防止控件的容器接收子类 Windows 控件发送的窗口消息[，COleControl](../mfc/reference/colecontrol-class.md)创建一个"反射器"窗口来拦截某些窗口消息并将其发送回控件。 控件在其窗口过程中可以通过对 ActiveX 控件采取适当操作来处理这些反射的消息。
 
 下表显示了截获的消息和反射器窗口发送的相应消息。
 
@@ -78,11 +78,11 @@ ms.locfileid: "69511383"
 |[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
 |[WM_HSCROLL](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
-|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
+|[WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
->  如果该控件在 Win32 系统上运行, 则它可能会接收到\*几种类型的 WM_CTLCOLOR 消息。 有关详细信息, 请参阅 WM_CTLCOLORBTN、WM_CTLCOLORDLG、WM_CTLCOLOREDIT、WM_CTLCOLORLISTBOX、WM_CTLCOLORMSGBOX、WM_CTLCOLORSCROLLBAR、WM_CTLCOLORSTATIC。
+> 如果控件在 Win32 系统上运行，则可能会收到多种类型的WM_CTLCOLOR\*消息。 有关详细信息，请参阅 WM_CTLCOLORBTN、WM_CTLCOLORDLG、WM_CTLCOLOREDIT、WM_CTLCOLORLISTBOX、WM_CTLCOLORMSGBOX、WM_CTLCOLORSCROLLBAR 和 WM_CTLCOLORSTATIC。
 
 ## <a name="see-also"></a>请参阅
 

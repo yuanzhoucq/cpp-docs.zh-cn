@@ -1,8 +1,9 @@
 ---
 title: _umask_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask_s
+- _o__umask_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: 21d9ba194f85e40c3c5a4d67d16ebca9721f68f8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 712313314c67d15987326e3e3a920cd5f1039239
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945987"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913880"
 ---
 # <a name="_umask_s"></a>_umask_s
 
@@ -52,7 +54,7 @@ errno_t _umask_s(
 
 ### <a name="parameters"></a>参数
 
-*模式*<br/>
+*mode*<br/>
 默认权限设置。
 
 *pOldMode*<br/>
@@ -64,12 +66,12 @@ errno_t _umask_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*模式*|*pOldMode*|返回值|*POldMode*的内容|
+|*mode*|*pOldMode*|返回值|*POldMode*的内容|
 |------------|----------------|----------------------|--------------------------------|
-|任何|**NULL**|**EINVAL**|未修改|
-|无效模式|任何|**EINVAL**|未修改|
+|any|**Null**|**EINVAL**|未修改|
+|无效模式|any|**EINVAL**|未修改|
 
-发生上述情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **_umask_s**将返回**EINVAL** ，并将**errno**设置为**EINVAL**。
+发生上述情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行， **_umask_s**将返回**EINVAL** ，并将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
@@ -83,17 +85,19 @@ errno_t _umask_s(
 |**_S_IREAD**|允许读取。|
 |**_S_IREAD** \| **_S_IWRITE**|允许读取和写入。|
 
-当提供两个常量时，它们将与按位 "或" 运算符 **|** （）联接。 如果*mode*参数为 **_S_IREAD**，则不允许读取（文件是只写的）。 如果*mode*参数为 **_S_IWRITE**，则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置为 **_umask_s**不会影响文件的模式。
+当提供两个常量时，它们将与按位 "或" 运算符**|** （）联接。 如果 _S_IREAD*模式*参数， **_S_IREAD**则不允许读取（文件是只写的）。 如果 _S_IWRITE*模式*参数， **_S_IWRITE**则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置 **_umask_s**不会影响文件的模式。
 
 如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数将直接忽略这些常量。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_umask_s**|\<io.h> 和 \<sys/stat.h> 和 \<sys/types.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -129,10 +133,10 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>

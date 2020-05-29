@@ -1,22 +1,20 @@
 ---
 title: 运行时错误检查
 ms.date: 11/04/2016
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: ec07b9b0c6aa52187c3c24bff4cc51712dbf9fc8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cf707cbd53e2285684d53d3f440db0f618343598
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746456"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444841"
 ---
 # <a name="run-time-error-checking"></a>运行时错误检查
 
-C 运行库包含支持运行时错误检查 (RTC) 的函数。 利用运行时错误检查，您可以生成程序来报告特定类型的运行时错误。 您可指定如何报告错误以及报告哪些类型的错误。 有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)
+C 运行库包含支持运行时错误检查 (RTC) 的函数。 利用运行时错误检查，您可以生成程序来报告特定类型的运行时错误。 您可指定如何报告错误以及报告哪些类型的错误。 有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
 
 使用下列函数自定义程序执行运行时错误检查的方式。
 
@@ -29,7 +27,7 @@ C 运行库包含支持运行时错误检查 (RTC) 的函数。 利用运行时�
 |[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|将函数指定为报告运行时错误检查的处理程序。|
 |[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|将一个由运行时错误检查检测到的错误与一个类型关联。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [/RTC（运行时错误检查）](../build/reference/rtc-run-time-error-checks.md)<br/>

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: a8cc429763d042ba262d5543f4a2d85bbf8aa29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515962"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376309"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows 运行时和托管模板（C++/CLI 和 C++/CX）
 
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。 如果模板未实例化，则元数据中不会发出该模板。 如果模板已实例化，则元数据中仅显示引用的成员函数。
+不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。 如果未实例化模板，则不会在元数据中发出模板。 如果模板已实例化，则元数据中仅显示引用的成员函数。
 
 ```cpp
 // managed_templates_3.cpp
@@ -130,6 +130,6 @@ template <>
 class A <int> {};
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[.NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

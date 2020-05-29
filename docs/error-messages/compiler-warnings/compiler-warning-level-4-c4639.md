@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C4639
 ms.assetid: f94f7392-cdbb-4bf4-8a00-20dc90d3efe9
-ms.openlocfilehash: 4419493c673cb5916be751cc95af19a779086a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d379b159cd7fd67629ea74c47a9e55f1167dc74a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408077"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198245"
 ---
 # <a name="compiler-warning-level-4-c4639"></a>编译器警告（等级 4）C4639
 
-MSXML 错误，不会处理注释的 XML 文档。 原因
+MSXML 错误，将不会处理 XML 文档注释。 reason
 
-此警告可能由于多种原因。
+出现此警告的原因有很多。
 
 若要解决此警告：
 
-- 重新编译。
+- 重新编译.
 
 - 通过重新安装公共语言运行时重新安装 MSXML。
 
-- 编辑或删除该警告并重新编译导致的文档注释。
+- 编辑或删除导致警告和重新编译的文档注释。
 
-当发出 C4639 时，禁用所有进一步的 XML 注释处理，并不会生成.xdc 文件。
+发出 C4639 时，将禁用所有进一步的 XML 注释处理，并且不生成 .xdc 文件。

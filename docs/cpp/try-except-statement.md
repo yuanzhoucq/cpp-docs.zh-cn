@@ -1,19 +1,16 @@
 ---
 title: try-except 语句
-ms.date: 10/09/2018
+description: 对 __try 和 __except 结构化异常处理语句的 Microsoft c + + 引用。
+ms.date: 04/03/2020
 f1_keywords:
 - _abnormal_termination_cpp
 - _exception_code_cpp
-- EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
 - _except
-- EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
 - _exception_info_cpp
-- EXCEPTION_EXECUTE_HANDLER
-- _abnormal_termination
 helpviewer_keywords:
 - __try keyword [C++]
 - EXCEPTION_CONTINUE_EXECUTION macro
@@ -26,56 +23,54 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: d0471bbd50e07fccbf160e9e866de4c545cdeb7e
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245162"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825765"
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
-**Microsoft 专用**
-
-**除 try 语句外**，还可以使用支持结构化异常处理C++的 C 和语言。
+**除 try 语句外**，还支持 C 和 c + + 语言中的结构化异常处理。 此扩展是**Microsoft 特定**的。
 
 ## <a name="syntax"></a>语法
 
-> **\_\_尝试**<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;//受保护代码<br/>
-> }<br/>
-> **\_\_除外**（ *expression* ）<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;//异常处理程序代码<br/>
+> **\_\_然后**\
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;受保护代码 \
+> }\
+> except （ *expression* ） \ ** \_ \_**
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;异常处理程序代码 \
 > }
 
 ## <a name="remarks"></a>备注
 
-**除 try 语句外**，C 和C++语言是 Microsoft 扩展，使目标应用程序能够在正常终止程序执行的事件发生时获得控制权。 此类事件称为*异常*，处理异常的机制称为*结构化异常处理*（SEH）。
+**除 try**语句，是 C 和 c + + 语言的 Microsoft 扩展。 它使目标应用程序能够在正常终止程序执行的事件发生时获得控制。 此类事件称为 "*结构化异常*" 或简称为 "*异常*"。 处理这些异常的机制称为*结构化异常处理*（SEH）。
 
 有关相关信息，请参阅[try-finally 语句](../cpp/try-finally-statement.md)。
 
-异常可基于硬件，也可基于软件。 即使应用程序无法从硬件或软件异常中完全恢复，结构化异常处理也可以显示错误信息并捕获应用程序的内部状态，从而帮助诊断问题。 这对于无法轻松重现的间歇性问题特别有用。
+异常可能基于硬件或基于软件。 即使应用程序无法从硬件或软件异常中完全恢复，结构化异常处理也很有用。 通过 SEH，可以显示错误信息并捕获应用程序的内部状态，从而帮助诊断问题。 它特别适用于无法轻松重现的间歇性问题。
 
 > [!NOTE]
-> 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于C++程序，建议使用C++异常处理机制（[try、catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句）。
+> 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，它并不是专门为 c + + 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 c + + 程序，我们建议使用本机 c + + 异常处理： [try、catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句。
 
-**__Try**子句后的复合语句是正文或受保护部分。 **__Except**子句后的复合语句是异常处理程序。 处理程序指定在执行受保护节的主体时引发了异常的情况下要执行的一组操作。 执行过程如下所示：
+**__Try**子句后的复合语句是*正文*或*受保护*部分。 **__Except**表达式也称为*筛选器*表达式。 其值确定如何处理异常。 **__Except**子句后的复合语句是异常处理程序。 处理程序指定在执行正文部分期间引发异常时要执行的操作。 执行过程如下所示：
 
 1. 执行受保护节。
 
 1. 如果在受保护节执行过程中未发生异常，则继续执行 **__except**子句之后的语句。
 
-1. 如果在受保护节的执行过程中或在受保护的节调用的任何例程中发生异常，则将计算 **__except** *表达式*（称为*筛选器*表达式），值确定如何处理异常。 有三个可能的值：
+1. 如果在受保护节的执行过程中或在受保护的节调用的任何例程中发生异常，则将计算 **__except**表达式。 有三种可能的值：
 
-   - EXCEPTION_CONTINUE_EXECUTION （-1）异常已消除。 从出现异常的点继续执行。
+   - `EXCEPTION_CONTINUE_EXECUTION`（-1）异常已消除。 从出现异常的点继续执行。
 
-   - EXCEPTION_CONTINUE_SEARCH （0）异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
+   - `EXCEPTION_CONTINUE_SEARCH`（0）异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
 
-   - 已识别 EXCEPTION_EXECUTE_HANDLER （1）异常。 通过执行 **__except**复合语句将控制转移到异常处理程序，然后在 **__except**块后继续执行。
+   - `EXCEPTION_EXECUTE_HANDLER`（1）异常被识别。 通过执行 **__except**复合语句将控制转移到异常处理程序，然后在 **__except**块后继续执行。
 
-由于 **__except**表达式将作为 C 表达式进行计算，因此它被限制为单个值、条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
+**__Except**表达式将作为 C 表达式进行计算。 它被限制为单个值、条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
 
 每个应用程序都可以有各自的异常处理程序。
 
@@ -87,15 +82,15 @@ ms.locfileid: "74245162"
 
 **__Leave**关键字仅在 " **try** " 语句的 "受保护" 部分中有效，其作用是跳转到受保护部分的结尾。 将继续执行异常处理程序后的第一个语句。
 
-**Goto**语句还可以跳过受保护的部分，并且它不会降低性能，因为它是在**try finally**语句中进行的，因为不发生堆栈展开。 但是，我们建议你使用 **__leave**关键字而不是**goto**语句，因为如果受保护的部分很大或很复杂，则不太可能发生编程错误。
+**Goto**语句还可以跳出受保护的部分，并且不会降低性能，因为它在**try finally**语句中。 这是因为不会发生堆栈展开。 但是，我们建议使用 **__leave**关键字而不是**goto**语句。 原因在于，如果受保护的部分很大或很复杂，则可能导致编程错误。
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>结构化异常处理内部函数
 
-结构化异常处理提供了两个可用于**除 try**语句的内部函数： `GetExceptionCode` 和 `GetExceptionInformation`。
+结构化异常处理提供了两个可用于**除 try**语句的内部函数： [GetExceptionCode](/windows/win32/Debug/getexceptioncode)和[GetExceptionInformation](/windows/win32/Debug/getexceptioninformation)。
 
-`GetExceptionCode` 返回异常的代码（32位整数）。
+`GetExceptionCode`返回异常的代码（32位整数）。
 
-内部函数 `GetExceptionInformation` 返回指向结构的指针，该结构包含有关异常的其他信息。 通过此指针，您可以访问在出现硬件异常时存在的计算机状态。 该结构如下所示：
+内部函数`GetExceptionInformation`返回一个指向[EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers)结构的指针，该结构包含有关异常的其他信息。 通过此指针，您可以访问在出现硬件异常时存在的计算机状态。 结构如下：
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -104,13 +99,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-指针类型 `PEXCEPTION_RECORD` 和 `PCONTEXT` 在包含文件 \<winnt > 中定义，`_EXCEPTION_RECORD` 和 `_CONTEXT` 是在包含文件 \<excpt.h 中定义的 >
+指针`PEXCEPTION_RECORD`类型和`PCONTEXT`在> \< `_EXCEPTION_RECORD` `_CONTEXT`包含文件 excpt.h 中定义，并在包含文件\<中定义>
 
-您可以在异常处理程序中使用 `GetExceptionCode`。 但是，只能在异常筛选器表达式中使用 `GetExceptionInformation`。 它指向的信息通常位于堆栈上，并且这些信息在控制权转交给异常处理程序之后不再可用。
+您可以在`GetExceptionCode`异常处理程序中使用。 但是，只能在异常`GetExceptionInformation`筛选器表达式中使用。 它所指向的信息通常位于堆栈上，并且在控件传输到异常处理程序时不再可用。
 
-内部函数 `AbnormalTermination` 在终止处理程序中可用。 如果**try finally**语句的主体按顺序终止，则返回0。 在所有其他情况下，它将返回 1。
+内部函数[AbnormalTermination](/windows/win32/Debug/abnormaltermination)在终止处理程序中可用。 如果**try finally**语句的主体按顺序终止，则返回0。 在所有其他情况下，它将返回 1。
 
-excpt.h 定义了这些内部函数的一些替代名称：
+\<excpt.h> 为这些内部函数定义一些替代名称：
 
 `GetExceptionCode` 等效于 `_exception_code`
 
@@ -182,9 +177,7 @@ in except
 world
 ```
 
-**结束 Microsoft 专用**
-
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编写异常处理程序](../cpp/writing-an-exception-handler.md)<br/>
 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>

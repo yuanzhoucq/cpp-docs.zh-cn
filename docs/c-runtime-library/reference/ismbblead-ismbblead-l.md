@@ -1,10 +1,12 @@
 ---
 title: _ismbblead、_ismbblead_l
 description: 描述 Microsoft C 运行时库（CRT） _ismbblead 和 _ismbblead_l 函数。
-ms.date: 01/08/2020
+ms.date: 4/2/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
+- _o__ismbblead
+- _o__ismbblead_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 7680793b71c4535ed75433ac98167e52a39896ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755033"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918672"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead、_ismbblead_l
 
@@ -61,10 +64,10 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>参数
 
-*c*\
+*ansi-c*\
 要测试的整数。
 
-*区域设置*\
+*本地*\
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
@@ -81,22 +84,24 @@ int _ismbblead_l(
 
 **_ismbblead**和 **_Ismbblead_l**特定于 Microsoft，而不是标准 C 库的一部分。 建议你不要在需要可移植代码的位置使用它们。 对于标准 C 兼容性，请改用**mbrlen** 。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|始终返回 false|**_ismbblead**|始终返回 false|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|可选标头|
+|例程|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_ismbblead**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
 |**_ismbblead_l**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
 
 \* 适用于测试条件的清单常量。
 
-有关兼容性的详细信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 

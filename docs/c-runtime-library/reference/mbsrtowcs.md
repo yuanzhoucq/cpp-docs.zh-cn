@@ -1,8 +1,9 @@
 ---
 title: mbsrtowcs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbsrtowcs
+- _o_mbsrtowcs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: de7b25ea8a520dfe2c9cb26ec8989624b670dcb9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc9310a95165944b7f516c1f8c48d8d4d1e56117
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952051"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915483"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -61,11 +63,11 @@ size_t mbsrtowcs(
 *mbstr*<br/>
 指向要转换的多字节字符字符串位置的间接指针。
 
-*count*<br/>
+*计数*<br/>
 要转换并存储在*wcstr*中的最大字符数（不是字节）。
 
 *mbstate*<br/>
-指向**mbstate_t**转换状态对象的指针。 如果此值为 null 指针，则使用静态内部转换状态对象。 由于内部**mbstate_t**对象不是线程安全的，因此建议您始终传递您自己的*mbstate*参数。
+指向**mbstate_t**转换状态对象的指针。 如果此值为 null 指针，则使用静态内部转换状态对象。 由于内部**mbstate_t**对象不是线程安全的，因此建议您始终传递自己的*mbstate*参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -73,11 +75,11 @@ size_t mbsrtowcs(
 
 ## <a name="remarks"></a>备注
 
-**Mbsrtowcs**函数通过使用*mbstate*中包含的转换状态，将*mbstr*间接指向的多字节字符的字符串转换为存储在*wcstr*所指向的缓冲区中的宽字符。 在遇到终止 null 多字节字符、遇到与当前区域设置中的有效字符不对应的多字节序列，或直到*count*个字符得到. 如果**mbsrtowcs**在计算之前或*计数*时遇到多字节 null 字符（"\ 0"），则它会将其转换为16位终止 null 字符并停止。
+**Mbsrtowcs**函数通过使用*mbstate*中包含的转换状态，将*mbstr*间接指向的多字节字符的字符串转换为存储在*wcstr*所指向的缓冲区中的宽字符。 在遇到终止 null 多字节字符时，将继续对每个字符执行转换，但会遇到与当前区域设置中的有效字符不对应的多字节序列，或直至*计数*字符已转换。 如果**mbsrtowcs**在计算之前或*计数*时遇到多字节 null 字符（"\ 0"），则它会将其转换为16位终止 null 字符并停止。
 
-因此，仅当**mbsrtowcs**在转换期间遇到多字节 null 字符时，位于*wcstr*的宽字符字符串才以 null 结尾。 如果由*mbstr*和*wcstr*指向的序列重叠，则**mbsrtowcs**的行为不确定。 **mbsrtowcs**受当前区域设置的 LC_TYPE 类别影响。
+因此，仅当**mbsrtowcs**在转换期间遇到多字节 null 字符时，位于*wcstr*的宽字符字符串才以 null 结尾。 如果由*mbstr*和*wcstr*指向的序列重叠，则**mbsrtowcs**的行为不确定。 **mbsrtowcs**受当前区域设置的 LC_TYPE 类别的影响。
 
-**Mbsrtowcs**函数的可重启性不同于[mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用了对**mbsrtowcs**的后续调用而不是**mbstowcs**，则应用程序应使用**mbsrlen**而不是**mbslen**。
+**Mbsrtowcs**函数不同于[mbstowcs，](mbstowcs-mbstowcs-l.md)其可重启性 _mbstowcs_l。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用了对**mbsrtowcs**的后续调用而不是**mbstowcs**，则应用程序应使用**mbsrlen**而不是**mbslen**。
 
 如果*wcstr*不是空指针，则在转换因到达终止 null 字符而停止时，将为*mbstr*指向的指针对象分配一个空指针。 否则，它将分配到紧跟已转换出的最后一个多字节字符的地址（若有）。 这将允许调用后续函数以在此调用停止的位置重新调用转换。
 
@@ -85,22 +87,24 @@ size_t mbsrtowcs(
 
 如果*mbstr* isa null 指针，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回-1。
 
-在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-## <a name="exceptions"></a>Exceptions
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
+## <a name="exceptions"></a>例外
 
 只要当前线程中的函数都不调用**setlocale** （只要此函数正在执行且*mbstate*参数不是 null 指针）， **mbsrtowcs**函数就是多线程安全的。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**mbsrtowcs**|\<wchar.h>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

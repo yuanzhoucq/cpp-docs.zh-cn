@@ -30,14 +30,14 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 0445c2f8868fc9f2863ad4a2a12cc00261546c75
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 578d0e31e08f3e077a908c4344f77da5495df40d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447846"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364877"
 ---
-# <a name="basicstringbuf-class"></a>basic_stringbuf 类
+# <a name="basic_stringbuf-class"></a>basic_stringbuf 类
 
 描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与数组对象中存储的元素序列之间的来回传输进行控制的流缓冲区。
 
@@ -51,10 +51,10 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*分配*\
+*Alloc*\
 allocator 类。
 
-*Elem*\
+*埃莱姆*\
 字符串的基本元素的类型。
 
 *Tr*\
@@ -72,30 +72,30 @@ allocator 类。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[basic_stringbuf](#basic_stringbuf)|构造 `basic_stringbuf` 类型的对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
-|[allocator_type](#allocator_type)|该类型是模板参数*分配*的同义词。|
+|[allocator_type](#allocator_type)|该类型是模板参数*Alloc*的同义词。|
 |[char_type](#char_type)|将类型名与 *Elem* 模板参数关联。|
-|[int_type](#int_type)|使范围中`basic_filebuf`的此类型等效于*Tr*范围内具有相同名称的类型。|
-|[off_type](#off_type)|使范围中`basic_filebuf`的此类型等效于*Tr*范围内具有相同名称的类型。|
-|[pos_type](#pos_type)|使范围中`basic_filebuf`的此类型等效于*Tr*范围内具有相同名称的类型。|
+|[int_type](#int_type)|使此类型在`basic_filebuf`的范围中等效于*Tr*作用域中的相同名称的类型。|
+|[off_type](#off_type)|使此类型在`basic_filebuf`的范围中等效于*Tr*作用域中的相同名称的类型。|
+|[pos_type](#pos_type)|使此类型在`basic_filebuf`的范围中等效于*Tr*作用域中的相同名称的类型。|
 |[traits_type](#traits_type)|将类型名与 *Tr* 模板参数关联。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[overflow](#overflow)|将新字符插入到已满缓冲区时可以调用的受保护虚函数。|
 |[pbackfail](#pbackfail)|受保护虚拟成员函数尝试将元素放回到输入缓冲区中，随后使它成为当前元素（由下一个指针指向）。|
 |[seekoff](#seekoff)|受保护虚拟成员函数尝试更改受控制流的当前位置。|
 |[seekpos](#seekpos)|受保护虚拟成员函数尝试更改受控制流的当前位置。|
-|[str](#str)|设置或获取字符串缓冲区中的文本，而无需更改写入位置。|
+|[Str](#str)|设置或获取字符串缓冲区中的文本，而无需更改写入位置。|
 |swap||
 |[underflow](#underflow)|从输入流中提取当前元素的受保护虚拟成员函数。|
 
@@ -103,17 +103,17 @@ allocator 类。
 
 **标头：** \<sstream>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="allocator_type"></a>  basic_stringbuf::allocator_type
+## <a name="basic_stringbufallocator_type"></a><a name="allocator_type"></a>basic_stringbuf：allocator_type
 
-该类型是模板参数*分配*的同义词。
+该类型是模板参数*Alloc*的同义词。
 
 ```cpp
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_stringbuf"></a>  basic_stringbuf::basic_stringbuf
+## <a name="basic_stringbufbasic_stringbuf"></a><a name="basic_stringbuf"></a>basic_stringbuf：basic_stringbuf
 
 构造 `basic_stringbuf` 类型的对象。
 
@@ -131,16 +131,16 @@ basic_stringbuf(
 *_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*字符串*\
+*Str*\
 类型 [basic_string](../standard-library/basic-string-class.md) 的对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将 null 指针存储在控制输入缓冲区和输出缓冲区的所有指针中。 有关详细信息，请参阅 [basic_streambuf 类](../standard-library/basic-streambuf-class.md)的备注部分。 它还将 *_Mode*存储为 stringbuf 模式。 有关详细信息，请参阅 [basic_stringbuf 类](../standard-library/basic-stringbuf-class.md)的备注部分。
+第一个构造函数将 null 指针存储在控制输入缓冲区和输出缓冲区的所有指针中。 有关详细信息，请参阅 [basic_streambuf 类](../standard-library/basic-streambuf-class.md)的备注部分。 它还存储 *_Mode*为 stringbuf 模式。 有关详细信息，请参阅 [basic_stringbuf 类](../standard-library/basic-stringbuf-class.md)的备注部分。
 
-第二个构造函数分配由字符串对象*str*控制的序列副本。 如果 `_Mode & ios_base::in` 是非零值，则其将输入缓冲区设置为在序列的开头开始读取。 如果 `_Mode & ios_base::out` 是非零值，则其将输出缓冲区设置为在序列的开头开始写入。 它还将 *_Mode*存储为 stringbuf 模式。 有关详细信息，请参阅 [basic_stringbuf 类](../standard-library/basic-stringbuf-class.md)的备注部分。
+第二个构造函数分配由字符串对象*str*控制的序列的副本。 如果 `_Mode & ios_base::in` 是非零值，则其将输入缓冲区设置为在序列的开头开始读取。 如果 `_Mode & ios_base::out` 是非零值，则其将输出缓冲区设置为在序列的开头开始写入。 它还存储 *_Mode*为 stringbuf 模式。 有关详细信息，请参阅 [basic_stringbuf 类](../standard-library/basic-stringbuf-class.md)的备注部分。
 
-## <a name="char_type"></a>  basic_stringbuf::char_type
+## <a name="basic_stringbufchar_type"></a><a name="char_type"></a>basic_stringbuf：char_type
 
 将类型名与 *Elem* 模板参数关联。
 
@@ -148,23 +148,23 @@ basic_stringbuf(
 typedef Elem char_type;
 ```
 
-## <a name="int_type"></a>  basic_stringbuf::int_type
+## <a name="basic_stringbufint_type"></a><a name="int_type"></a>basic_stringbuf：int_type
 
-在 basic_filebuf's 范围内使此类型等效于`Tr`范围中具有相同名称的类型。
+使此类型basic_filebuf范围中等效于`Tr`作用域中的相同名称的类型。
 
 ```cpp
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="off_type"></a>  basic_stringbuf::off_type
+## <a name="basic_stringbufoff_type"></a><a name="off_type"></a>basic_stringbuf：off_type
 
-在 basic_filebuf's 范围内使此类型等效于`Tr`范围中具有相同名称的类型。
+使此类型basic_filebuf范围中等效于`Tr`作用域中的相同名称的类型。
 
 ```cpp
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="overflow"></a>  basic_stringbuf::overflow
+## <a name="basic_stringbufoverflow"></a><a name="overflow"></a>basic_stringbuf：溢出
 
 将新字符插入到已满缓冲区时可以调用的受保护虚函数。
 
@@ -179,17 +179,17 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `traits_type::eof`。 否则，它将返回 **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
+如果该函数不成功，它将返回 `traits_type::eof`。 否则，它将返回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
 
 ### <a name="remarks"></a>备注
 
-*如果\_Meta*不等于**traits_type::** [eof](../standard-library/char-traits-struct.md#eof), 则受保护虚拟成员函数尝试将元素**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) 插入到输出缓冲区。 它可以用多种方法执行此操作：
+如果*\_Meta*不比较等于**traits_type：**[eof](../standard-library/char-traits-struct.md#eof)，则受保护的虚拟成员函数将尝试将元素**traits_type：to_char_type**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)*\_（Meta）* 插入到输出缓冲区中。 它可以用多种方法执行此操作：
 
 - 如果写入位置可用，它可将元素存储到写入位置并递增输出缓冲区的下一个指针。
 
 - 它可以通过为输出缓冲区分配新的或额外的存储空间，提供写入位置。 以这种方式扩展输出缓冲区还会扩展任何关联的输入缓冲区。
 
-## <a name="pbackfail"></a>  basic_stringbuf::pbackfail
+## <a name="basic_stringbufpbackfail"></a><a name="pbackfail"></a>basic_stringbuf：:p回击失败
 
 受保护虚拟成员函数尝试将元素放回输入缓冲区，随后使它成为当前元素（由下一个指针指向）。
 
@@ -204,25 +204,25 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `traits_type::eof`。 否则，它将返回 **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
+如果该函数不成功，它将返回 `traits_type::eof`。 否则，它将返回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
 
 ### <a name="remarks"></a>备注
 
-如果 *_Meta*与**traits_type::** [eof](../standard-library/char-traits-struct.md#eof)相等, 则要推送回的元素在当前元素之前实际上已是流中的一个元素。 否则，则由 **byte** = **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) 替换该元素。 该函数可以用多种方法放回元素：
+如果 *_Meta*与**traits_type：eof**[eof](../standard-library/char-traits-struct.md#eof)进行比较，则要回滚的元素实际上是当前元素之前流中已有的元素。 否则，该元素将被**字节** = **traits_type：to_char_type**[（*](../standard-library/char-traits-struct.md#to_char_type) *Meta*） 替换。 该函数可以用多种方法放回元素：
 
 - 如果放回的位置可用，且存储在该位置的元素等于 byte，它可以递减输入缓冲区中的下一个指针。
 
 - 如果放回的位置可用且 stringbuf 模式允许更改序列（**mode & ios_base::out** 是非零值），则该函数可以将 byte 存储到放回位置并递减输入缓冲区中的下一个指针。
 
-## <a name="pos_type"></a>  basic_stringbuf::pos_type
+## <a name="basic_stringbufpos_type"></a><a name="pos_type"></a>basic_stringbuf：:pos_类型
 
-在 basic_filebuf's 范围内使此类型等效于`Tr`范围中具有相同名称的类型。
+使此类型basic_filebuf范围中等效于`Tr`作用域中的相同名称的类型。
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="seekoff"></a>  basic_stringbuf::seekoff
+## <a name="basic_stringbufseekoff"></a><a name="seekoff"></a>basic_stringbuf：：寻求
 
 受保护虚拟成员函数尝试更改受控制流的当前位置。
 
@@ -236,7 +236,7 @@ virtual pos_type seekoff(
 ### <a name="parameters"></a>参数
 
 *_Off*\
-要查找的相对于 *_Way*的位置。 有关详细信息，请参阅 [basic_stringbuf::off_type](#off_type)。
+相对于 *_Way*寻求的位置。 有关详细信息，请参阅 [basic_stringbuf::off_type](#off_type)。
 
 *_Way*\
 偏移操作的起点。 请参阅 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
@@ -252,19 +252,19 @@ virtual pos_type seekoff(
 
 对于 `basic_stringbuf<Elem, Tr, Alloc>` 类的对象，流位置仅包含流偏移量。 如果偏移量为零，将指定受控序列的第一个元素。
 
-确定新位置，如下所示：
+确定新的位置，如下所示：
 
-- 如果`_Way`为 == ,则新位置是流的开头加上 *_Off。* `ios_base::beg`
+- `_Way` == 如果`ios_base::beg`，新位置是流的开始加上 *_Off*。
 
-- 如果`_Way`为 == ,则新位置是当前流位置加上 *_Off。* `ios_base::cur`
+- `_Way` == 如果`ios_base::cur`，新位置是当前流位置加上 *_Off*。
 
-- 如果`_Way`为 == ,则新位置是流的末尾加上 *_Off。* `ios_base::end`
+- `_Way` == 如果`ios_base::end`，新位置是流的末尾加上 *_Off*。
 
-如果 `_Mode & ios_base::in` 是非零值，则函数更改下一个位置以在输入缓冲区中读取。 如果 `_Mode & ios_base::out` 是非零值，则函数更改下一个位置以在输出缓冲区中写入。 要使流受影响，其必须存在缓冲区。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。 如果该函数同时影响两个流位置, 则`ios_base::beg` _Way `ios_base::end`必须为或, 并且两个流都位于同一个元素上。 否则（或者如果两个位置均不受影响），定位操作失败。
+如果 `_Mode & ios_base::in` 是非零值，则函数更改下一个位置以在输入缓冲区中读取。 如果 `_Mode & ios_base::out` 是非零值，则函数更改下一个位置以在输出缓冲区中写入。 要使流受影响，其必须存在缓冲区。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。 如果函数影响两个流位置，*则必须*_Way`ios_base::beg`或`ios_base::end`，并且两个流都位于同一元素中。 否则（或者如果两个位置均不受影响），定位操作失败。
 
 如果此函数成功更改任何一个流位置或两个流位置，则返回结果流位置。 否则，如果失败将返回一个无效的流位置。
 
-## <a name="seekpos"></a>  basic_stringbuf::seekpos
+## <a name="basic_stringbufseekpos"></a><a name="seekpos"></a>basic_stringbuf：：寻求者
 
 受保护虚拟成员函数尝试更改受控制流的当前位置。
 
@@ -278,11 +278,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 要搜寻的位置。
 
 *_Mode*\
-指定指针位置的模式。 默认允许修改读取和写入位置。
+指定指针位置的模式。 默认值允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
-如果此函数成功更改任何一个流位置或两个流位置，则返回结果流位置。 否则，如果失败将返回一个无效的流位置。 若要确定流位置是否有效，请比较返回值和 `pos_type(off_type(-1))`。
+如果此函数成功更改任何一个流位置或两个流位置，则返回结果流位置。 否则，如果失败将返回一个无效的流位置。 若要确定流位置是否无效，请比较返回值与 `pos_type(off_type(-1))`。
 
 ### <a name="remarks"></a>备注
 
@@ -290,7 +290,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 如果 **mode & ios_base::in** 是非零值，则函数更改下一个位置以在输入缓冲区中读取。 如果 **mode & ios_base::out** 是非零值，则函数更改下一个位置以在输出缓冲区中写入。 要使流受影响，其必须存在缓冲区。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。 否则（或者如果两个位置均不受影响），定位操作失败。
 
-## <a name="str"></a>  basic_stringbuf::str
+## <a name="basic_stringbufstr"></a><a name="str"></a>basic_stringbuf：斯特
 
 设置或获取字符串缓冲区中的文本，而无需更改写入位置。
 
@@ -319,7 +319,7 @@ void str(
 
 - 否则，复制的序列为空。
 
-第二个成员函数释放当前由 **\*this** 控制的任何序列。 然后, 它分配由 *_Newstr*控制的序列副本。 如果 **mode & ios_base::in** 是非零值，则其将输入缓冲区设置为在序列的开头开始读取。 如果 **mode & ios_base::out** 是非零值，则其将输出缓冲区设置为在序列的开头开始写入。
+第二个成员函数将解分配当前由**\*它**控制的任何序列。 然后，它分配由 *_Newstr*控制序列的副本。 如果 **mode & ios_base::in** 是非零值，则其将输入缓冲区设置为在序列的开头开始读取。 如果 **mode & ios_base::out** 是非零值，则其将输出缓冲区设置为在序列的开头开始写入。
 
 ### <a name="example"></a>示例
 
@@ -353,7 +353,7 @@ zest
 be
 ```
 
-## <a name="traits_type"></a>  basic_stringbuf::traits_type
+## <a name="basic_stringbuftraits_type"></a><a name="traits_type"></a>basic_stringbuf：traits_type
 
 将类型名与 *Tr* 模板参数关联。
 
@@ -365,7 +365,7 @@ typedef Tr traits_type;
 
 该类型是模板参数 *Tr* 的同义词。
 
-## <a name="underflow"></a>  basic_stringbuf::underflow
+## <a name="basic_stringbufunderflow"></a><a name="underflow"></a>basic _ stringbuf ：
 
 受保护虚函数从输入流中提取当前元素。
 
@@ -375,13 +375,13 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 否则，它返回输入流中的已转换的当前元素。
+如果该函数不成功，它将返回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。 否则，它返回输入流中的已转换的当前元素。
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数尝试从输入缓冲区提取`byte`当前元素, 提升当前流位置, 并将该元素作为**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**) 返回。 它可以通过一种方式实现此目的:如果读取位置可用, 则它`byte`将作为存储在读取位置中的元素, 并提升输入缓冲区的下一个指针。
+受保护的虚拟成员函数尝试从输入缓冲区中提取当前元素`byte`，推进当前流位置，并将该元素返回为**traits_type：to_int_type**[（](../standard-library/char-traits-struct.md#to_int_type)**字节**）。 它可以以一种方式做到这一点：如果读取位置可用，它将作为`byte`存储在读取位置的元素，并推进输入缓冲区的下一个指针。
 
-## <a name="swap"></a>  basic_streambuf::swap
+## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf：：交换
 
 将此字符串缓冲区与另一个字符串缓冲区的内容交换。
 
@@ -391,12 +391,12 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>参数
 
-*以外*\
+*其他*\
 其内容将与此 basic_stringbuf 交换的 basic_stringbuf 。
 
 ### <a name="remarks"></a>备注
 
-## <a name="op_eq"></a>  basic_stringbuf::operator=
+## <a name="basic_stringbufoperator"></a><a name="op_eq"></a>basic_stringbuf：：操作员*
 
 将运算符右侧的 basic_stringbuf 内容赋予左侧的 basic_stringbuf。
 
@@ -406,13 +406,13 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>参数
 
-*以外*\
+*其他*\
 将 basic_stringbuf 中的内容（包括区域设置特征）赋予运算符左侧的 stringbuf。
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream 编程](../standard-library/iostream-programming.md)\
+[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[电流编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

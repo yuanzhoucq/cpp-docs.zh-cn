@@ -9,11 +9,11 @@ helpviewer_keywords:
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326282"
 ---
 # <a name="c-comments"></a>C 注释
 
@@ -57,17 +57,17 @@ printf( "Hello\n" );  /* Comments can go here */
 
 该错误发生的原因是编译器将单词 `*/` 后的第一个 `Open file` 识别为注释的末尾。 编译器尝试处理剩余的文本，当它在注释外找到 `*/` 时，便产生了错误。
 
-尽管您可以出于测试目的使用注释来呈现某些处于非活动状态的代码行，但预处理器指令 `#if` 和 `#endif` 以及条件编译都是执行此任务的有用的替代选择。 有关详细信息，请参阅预处理器参考中的[预处理器指令](../preprocessor/preprocessor-directives.md)。
+尽管您可以出于测试目的使用注释来呈现某些处于非活动状态的代码行，但预处理器指令 `#if` 和 `#endif` 以及条件编译都是执行此任务的有用的替代选择。 有关详细信息，请参阅预处理器参考  中的[预处理器指令](../preprocessor/preprocessor-directives.md)。
 
 **Microsoft 专用**
 
-Microsoft 编译器还支持前面有两个正斜杠 (__//__) 的单行注释。 如果使用 /Za（ANSI 标准）进行编译，这些注释将产生错误。 这些注释不能扩展到第二行。
+Microsoft 编译器还支持前面有两个正斜杠 ( __//__ ) 的单行注释。 如果使用 /Za（ANSI 标准）进行编译，这些注释将产生错误。 这些注释不能扩展到第二行。
 
 ```C
 // This is a valid comment
 ```
 
-以两个正斜杠 (__//__) 开头的注释被前面没有转义字符的下一个换行符终止。 在下一个示例中，换行符的前面有一个反斜杠 (**\\**)，这将创建“转义序列”。 此转义序列会使编译器将下一行视为上一行的一部分。 （有关详细信息，请参阅[转义序列](../c-language/escape-sequences.md)。）
+以两个正斜杠 ( __//__ ) 开头的注释被前面没有转义字符的下一个换行符终止。 在下一个示例中，换行符的前面有一个反斜杠 ( **\\** )，这将创建“转义序列”。 此转义序列会使编译器将下一行视为上一行的一部分。 （有关详细信息，请参阅[转义序列](../c-language/escape-sequences.md)。）
 
 ```C
 // my comment \

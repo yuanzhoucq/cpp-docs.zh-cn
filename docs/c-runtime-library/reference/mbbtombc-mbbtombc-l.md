@@ -1,9 +1,11 @@
 ---
 title: _mbbtombc、_mbbtombc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbbtombc_l
 - _mbbtombc
+- _o__mbbtombc
+- _o__mbbtombc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b2088ea83729a74a60e75d1710529480f34cd638
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919606"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc、_mbbtombc_l
 
@@ -59,7 +62,7 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要转换的单字节字符。
 
 *locale*<br/>
@@ -73,20 +76,22 @@ unsigned int _mbbtombc_l(
 
 **_Mbbtombc**函数将给定的单字节的多字节字符转换为相应的双字节的多字节字符。 字符必须在要转换的0x7E 或0xA1 的范围内。
 
-输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函数的版本相同，不同之处在于 **_mbbtombc**将当前区域设置用于与区域设置相关的行为，而 **_mbbtombc_l**则使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函数的版本相同，不同之处在于 **_mbbtombc**会将当前区域设置用于与区域设置相关的行为，而 **_mbbtombc_l**使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在早期版本中， **_mbbtombc**命名为**hantozen**。 对于新代码，请使用 **_mbbtombc**。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_mbctombb、_mbctombb_l](mbctombb-mbctombb-l.md)<br/>

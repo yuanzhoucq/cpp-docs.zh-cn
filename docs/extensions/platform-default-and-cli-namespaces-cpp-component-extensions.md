@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516512"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181819"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>平台默认 cli 命名空间（C++/CLI 和 C++/CX）
 
@@ -26,7 +26,7 @@ ms.locfileid: "65516512"
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-有关详细信息，请参阅[命名空间和类型可见性 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx)。
+有关详细信息，请参阅[命名空间和类型可见性 (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -78,6 +78,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

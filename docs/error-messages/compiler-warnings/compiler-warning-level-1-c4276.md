@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4276
 ms.assetid: 9d738c2d-29e5-408a-b9ff-be1a850b2238
-ms.openlocfilehash: 87f13f7da12a3f7e40aaad180e2a3bc83e121771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1de07cd65bbc9f02a979ceebe31be4143af70ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207134"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175813"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>编译器警告（等级 1）C4276
 
-function： 不提供原型;假定无参数
+"function"：未提供原型;假定没有参数
 
-执行的函数的地址时[__stdcall](../../cpp/stdcall.md)调用约定，您必须提供原型，以便编译器可以创建函数的修饰的名。 由于*函数*具有的原型，编译器创建的修饰的名时，假定函数没有任何参数。
+采用[__stdcall](../../cpp/stdcall.md)调用约定的函数的地址时，必须提供原型，以便编译器可以创建函数的修饰名。 由于*函数*不具有原型，因此，当创建修饰名称时，编译器将假定函数没有参数。

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CXX0021
 - CAN0021
 ms.assetid: d6c0c35a-16c2-42c0-a7d2-e910350a47f0
-ms.openlocfilehash: 373829e7200a556b3f832b1da127b4e33aa75749
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a800deb6bacbcae8666a3abad08b87d4f027790f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195834"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>表达式计算器错误 CXX0021
 
-结构或联合用作标量
+用作标量的 struct 或 union
 
-在表达式中，使用结构或联合，但未指定任何元素。
+表达式中使用了结构或联合，但未指定任何元素。
 
-当操作结构或联合变量，变量的名称可能会单独出现，无字段限定符。 如果在表达式中使用的结构或联合，它必须与所需的特定元素进行限定。
+在操作结构或联合变量时，变量的名称可能会自行显示，无需字段限定符。 如果在表达式中使用结构或联合，则必须使用所需的特定元素进行限定。
 
-指定其值将在表达式中使用的元素。
+指定要在表达式中使用其值的元素。
 
-此错误是与 CAN0021 相同。
+此错误与 CAN0021 相同。

@@ -1,6 +1,6 @@
----
+﻿---
 title: CComPtr 类
-description: Microsoft C++活动模板库（ATL）类 CComPtr 的参考指南。
+description: Microsoft C++活动模板库 （ATL） 类 CComPtr 的参考指南。
 ms.date: 02/07/2020
 f1_keywords:
 - CComPtr
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-ms.openlocfilehash: 74a12b460f55a782fa2747b02f7d00287786fae6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 855466225db2672755658dcbbc9a266d09e0e7be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127400"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327525"
 ---
 # <a name="ccomptr-class"></a>CComPtr 类
 
@@ -30,33 +30,33 @@ class CComPtr
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-一个 COM 接口，指定要存储的指针的类型。
+指定要存储的指针类型的 COM 接口。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
 |名称|说明|
 |----------|-----------------|
-|[CComPtr：： CComPtr](#ccomptr)|构造函数。|
+|[CComPtr：CComPtr](#ccomptr)|构造函数。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |----------|-----------------|
-|[CComPtr：： operator =](#operator_eq)|分配指向成员指针的指针。|
+|[CComPtr：：运算符 |](#operator_eq)|分配指向成员指针的指针。|
 
 ## <a name="remarks"></a>备注
 
-ATL 使用 `CComPtr` 和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)管理 COM 接口指针。 两者均派生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)，它们都执行自动引用计数。
+ATL`CComPtr`使用[CComQIPtr](../../atl/reference/ccomqiptr-class.md)来管理 COM 接口指针。 两者都来自[CComPtrBase，](../../atl/reference/ccomptrbase-class.md)并且都执行自动引用计数。
 
-`CComPtr` 和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)类可以通过执行自动引用计数来帮助消除内存泄露。  以下函数执行相同的逻辑操作。 但是，第二个版本可能不容易出错，因为它使用 `CComPtr` 类：
+`CComPtr`和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)类可以通过执行自动引用计数来帮助消除内存泄漏。  以下函数都执行相同的逻辑操作。 但是，第二个版本可能不太容易出错，因为它使用类`CComPtr`：
 
 [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]
 
 [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]
 
-在调试版本中，将 atlsd.lib 链接到代码跟踪。
+在调试版本中，链接 atlsd.lib 进行代码跟踪。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -66,9 +66,9 @@ ATL 使用 `CComPtr` 和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)管�
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标题：** atlbase.h
 
-## <a name="ccomptr"></a>CComPtr：： CComPtr
+## <a name="ccomptrccomptr"></a><a name="ccomptr"></a>CComPtr：CComPtr
 
 构造函数。
 
@@ -88,9 +88,9 @@ COM 接口。
 
 ### <a name="remarks"></a>备注
 
-采用自变量调用的构造函数如果不是 null 指针，则 `AddRef` *lp*。 非 null 拥有的对象将获取 CComPtr 对象的析构上的 `Release` 调用，或如果将新对象分配给 CComPtr 对象，则为。
+在`AddRef`*lp*上获取参数调用的构造函数，如果它不是空指针。 非空拥有的对象获取对 CComPtr 对象的破坏的`Release`调用，或者如果将新对象分配给 CComPtr 对象。
 
-## <a name="operator_eq"></a>CComPtr：： operator =
+## <a name="ccomptroperator-"></a><a name="operator_eq"></a>CComPtr：：运算符 |
 
 赋值运算符。
 
@@ -101,14 +101,14 @@ T* operator= (const CComPtr<T>& lp) throw ();
 
 ### <a name="return-value"></a>返回值
 
-返回指向已更新 `CComPtr` 对象的指针
+返回指向更新`CComPtr`对象的指针
 
 ### <a name="remarks"></a>备注
 
-此操作 AddRefs 新的对象并释放现有对象（如果存在）。
+此操作 AddRef 新对象并释放现有对象（如果存在）。
 
 ## <a name="see-also"></a>另请参阅
 
-[CComPtr：： CComPtr](#ccomptr)<br/>
-[CComQIPtr：： CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
+[CComPtr：CComPtr](#ccomptr)<br/>
+[CComQIPtr：CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [类概述](../../atl/atl-class-overview.md)

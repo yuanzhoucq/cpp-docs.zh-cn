@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0041
 - CXX0041
 ms.assetid: ce8a2366-758f-481b-8c03-ed7d779091b2
-ms.openlocfilehash: 0b2d2a17bbc7f1084e25fe53157eb5c17e4d71bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b297f7ed928bc2ea248773014293ebae4e8f1d23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185082"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>表达式计算器错误 CXX0041
 
 类元素必须是静态成员或成员函数
 
-非静态成员的类 （或结构或联合） 而无需指定的实例化的类用于使用。
+使用了类（或结构或联合）的非静态成员，无需指定要使用的类的实例化。
 
-仅静态数据成员或成员函数可以使用而无需指定实例化。
+只有静态数据成员或成员函数可以在不指定实例化的情况下使用。
 
-此错误是与 CAN0041 相同。
+此错误与 CAN0041 相同。

@@ -1,8 +1,9 @@
 ---
 title: _CIlog
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIlog
+- _o__CIlog
 api_location:
 - msvcr90.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: edc096680522da50910eb42a95a481b83be8791d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 405af59eab918498578c2d62c66be1017ecf156f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944800"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918062"
 ---
 # <a name="_cilog"></a>_CIlog
 
@@ -36,7 +38,7 @@ ms.locfileid: "70944800"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 void __cdecl _CIlog();
 ```
 
@@ -46,11 +48,13 @@ void __cdecl _CIlog();
 
 生成的值被将被推送到堆栈顶部。
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [log、logf、log10、log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

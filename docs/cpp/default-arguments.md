@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189541"
 ---
 # <a name="default-arguments"></a>默认自变量
 
-在许多情况下，函数具有不常使用的自变量，因为使用默认值便已足够。 为了解决此问题，默认自变量工具允许为函数仅指定在给定调用中有意义的自变量。 为了说明这一概念，请考虑中介绍的示例[函数重载](../cpp/function-overloading.md)。
+在许多情况下，函数具有不常使用的自变量，因为使用默认值便已足够。 为了解决此问题，默认自变量工具允许为函数仅指定在给定调用中有意义的自变量。 为了说明此概念，请考虑[函数重载](../cpp/function-overloading.md)中提供的示例。
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-实现`print`函数略微更改，以反映这一事实仅一个此类函数的类型存在**double**:
+`print` 函数的实现会略微变化，以反映类型**double**只存在一个这样的函数：
 
 ```cpp
 // default_arguments.cpp

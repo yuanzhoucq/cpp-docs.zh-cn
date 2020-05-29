@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 460f79fe0f23643fafcebb64aecf2988bdb0debe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685833"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376585"
 ---
 # <a name="sub_match-class"></a>sub_match 类
 
@@ -41,16 +41,16 @@ class sub_match
 
 ## <a name="parameters"></a>参数
 
-*BidIt* \
+*比比*\
 子匹配项的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
-类模板描述一个对象，该对象指定在对[regex_match](../standard-library/regex-functions.md#regex_match)或[regex_search](../standard-library/regex-functions.md#regex_search)的调用中与捕获组相匹配的字符序列。 [match_results Class](../standard-library/match-results-class.md) 类型的对象保存这些对象的数组，每个数组用于搜索中所用正则表达式中的每个捕获组。
+类模板描述一个对象，该对象指定与[regex_match或](../standard-library/regex-functions.md#regex_match)[regex_search](../standard-library/regex-functions.md#regex_search)调用中捕获组匹配的字符序列。 [match_results Class](../standard-library/match-results-class.md) 类型的对象保存这些对象的数组，每个数组用于搜索中所用正则表达式中的每个捕获组。
 
 如果捕获组不匹配，则对象的数据成员 `matched` 保持为 false，两个迭代器 `first` 和 `second` （继承自基类 `std::pair`）相等。 如果捕获组匹配，则 `matched` 保持为 true，迭代器 `first` 指向与捕获组匹配的目标序列中第一个字符，迭代器 `second` 与捕获组匹配的目标序列中最后一个字符后紧邻的位置。 请注意，对于长度为零的匹配项，成员 `matched` 保持为 true，两个迭代器将相等并将同时将指向匹配项的位置。
 
-当捕获组仅由一个断言或一个允许重复次数为零的重复组成时，可能出现长度为零的匹配项。 例如:
+当捕获组仅由一个断言或一个允许重复次数为零的重复组成时，可能出现长度为零的匹配项。 例如：
 
 “^”匹配目标序列“a”； `sub_match` 对象对应捕获组 0 持有两个迭代器，它们均指向序列中第一个字符。
 
@@ -58,26 +58,26 @@ class sub_match
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[difference_type](#difference_type)|迭代器差异的类型。|
-|[迭代器](#iterator)|迭代器的类型。|
+|[迭 代](#iterator)|迭代器的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员职能
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
-|[compare](#compare)|将子匹配项与序列进行比较。|
+|[比较](#compare)|将子匹配项与序列进行比较。|
 |[length](#length)|返回子匹配项的长度。|
 |[匹配](#matched)|指示是否匹配成功。|
-|[str](#str)|将子匹配转换为字符串。|
+|[Str](#str)|将子匹配转换为字符串。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|操作员|说明|
 |-|-|
-|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|将子匹配转换为字符串。|
+|[操作员basic_string<value_type>](#op_basic_string_lt_value_type_gt)|将子匹配转换为字符串。|
 
 ## <a name="example"></a>示例
 
@@ -137,7 +137,7 @@ compare(sub) == 0
 
 **命名空间:** std
 
-## <a name="compare"></a>  sub_match::compare
+## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match：比较
 
 将子匹配项与序列进行比较。
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*对*\
 要比较的子匹配项。
 
-*str* \
+*Str*\
 要与之比较的字符串。
 
-*ptr* \
+*Ptr*\
 要比较的以 null 结尾的序列。
 
 ### <a name="remarks"></a>备注
@@ -170,7 +170,7 @@ int compare(const value_type *ptr) const;
 
 否则返回正值
 
-## <a name="difference_type"></a>  sub_match::difference_type
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match：:d）类型
 
 迭代器差异的类型。
 
@@ -180,9 +180,9 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `iterator_traits<BidIt>::difference_type` 的同义词。
+typedef 是 `iterator_traits<BidIt>::difference_type`的同义词。
 
-## <a name="iterator"></a>  sub_match::iterator
+## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match：迭代器
 
 迭代器的类型。
 
@@ -194,7 +194,7 @@ typedef BidIt iterator;
 
 typedef 是模板类型参数 `Bidit` 的同义词。
 
-## <a name="length"></a>  sub_match::length
+## <a name="sub_matchlength"></a><a name="length"></a>sub_match：长度
 
 返回子匹配项的长度。
 
@@ -206,7 +206,7 @@ difference_type length() const;
 
 如果没有任何匹配的序列，则成员函数返回匹配的序列的长度或零。
 
-## <a name="matched"></a>  sub_match::matched
+## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match：：匹配
 
 指示是否匹配成功。
 
@@ -216,9 +216,9 @@ bool matched;
 
 ### <a name="remarks"></a>备注
 
-仅当与 `*this` 关联的捕获组是正则表达式匹配的一部分时，成员才**为 true** 。
+仅当与 关联的`*this`捕获组是正则表达式匹配的一部分时，该成员才保持为**true。**
 
-## <a name="op_basic_string_lt_value_type_gt"></a>sub_match::operator basic_string&lt;value_type&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match：：操作员basic_stringvalue_type&lt;&gt;
 
 将子匹配转换为字符串。
 
@@ -230,7 +230,7 @@ operator basic_string<value_type>() const;
 
 该成员运算符将返回 `str()`。
 
-## <a name="str"></a>  sub_match::str
+## <a name="sub_matchstr"></a><a name="str"></a>sub_match：斯特
 
 将子匹配转换为字符串。
 
@@ -240,9 +240,9 @@ basic_string<value_type> str() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回 `basic_string<value_type>(first, second)`。
+成员函数返回 `basic_string<value_type>(first, second)`。
 
-## <a name="value_type"></a>  sub_match::value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match：value_type
 
 元素的类型。
 
@@ -252,9 +252,9 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `iterator_traits<BidIt>::value_type` 的同义词。
+typedef 是 `iterator_traits<BidIt>::value_type`的同义词。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<regex>](../standard-library/regex.md)\
+[\<正则>](../standard-library/regex.md)\
 [sub_match](../standard-library/sub-match-class.md)

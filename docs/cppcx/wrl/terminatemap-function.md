@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398116"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213546"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 函数
 
@@ -27,31 +27,31 @@ inline bool TerminateMap(
     bool forceTerminate) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *module*<br/>
-一个[模块](module-class.md)。
+[模块](module-class.md)。
 
 *serverName*<br/>
-参数指定的模块中的类工厂的子集名称*模块*。
+由 parameter *module*指定的模块中的类工厂子集的名称。
 
 *forceTerminate*<br/>
-**true**终止类而不考虑它们的工厂处于活动状态;**false**不终止类工厂，如果任何工厂处于活动状态。
+**如果为 true，则**不管类工厂是否处于活动状态，都将终止它们;如果任何工厂处于活动**状态，则**不终止类工厂。
 
 ## <a name="return-value"></a>返回值
 
-**true**如果所有类工厂都已终止; 否则为**false**。
+如果所有类工厂均已终止，**则为 true** ;否则**为 false**。
 
 ## <a name="remarks"></a>备注
 
-关闭指定的模块中的类工厂。
+关闭指定模块中的类工厂。
 
 ## <a name="requirements"></a>要求
 
-**标头：** module.h
+**标头：** 模块。h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)

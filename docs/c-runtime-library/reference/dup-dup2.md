@@ -1,9 +1,11 @@
 ---
 title: _dup、_dup2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dup
 - _dup2
+- _o__dup
+- _o__dup2
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: da47d6f040b62906d30107f9036ffa2a3ea05a1c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937790"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915216"
 ---
 # <a name="_dup-_dup2"></a>_dup、_dup2
 
-为打开的文件（ **_dup**）创建另一个文件说明符，或重新分配文件描述符（ **_dup2**）。
+为打开的文件（**_dup**）创建第二个文件描述符，或重新分配文件描述符（**_dup2**）。
 
 ## <a name="syntax"></a>语法
 
@@ -67,20 +70,22 @@ int _dup2( int fd1, int fd2 );
 
 **_Dup**和 **_dup2**函数将另一个文件说明符与当前打开的文件相关联。 这些函数可用于将预定义文件描述符（如用于**stdout**的文件）与其他文件相关联。 可以使用任一文件说明符执行针对文件的操作。 文件允许的访问类型不受新说明符创建的影响。 **_dup**返回给定文件的下一个可用文件说明符。 **_dup2**强制*fd2*引用与*fd1*相同的文件。 如果*fd2*与调用时打开的文件相关联，则关闭该文件。
 
-**_Dup**和 **_dup2**都接受文件说明符作为参数。 若要将流（`FILE *`）传递给这些函数中的任何一个，请使用[_fileno](fileno.md)。 **Fileno**例程返回当前与给定流关联的文件描述符。 下面的示例演示如何将**stderr** （在 stdio.h 中`FILE *`定义为）与文件描述符关联：
+**_Dup**和 **_dup2**接受文件说明符作为参数。 若要将流（`FILE *`）传递给这些函数中的任何一个，请使用[_fileno](fileno.md)。 **Fileno**例程返回当前与给定流关联的文件描述符。 下面的示例演示如何将**stderr** （在 stdio.h 中`FILE *`定义为）与文件描述符关联：
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
 
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -143,9 +148,9 @@ The file 'data' contains:
 This goes to file 'data'
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>

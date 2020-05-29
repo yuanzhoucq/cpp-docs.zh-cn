@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9476c0c446463c04084f46ed17a8ada7fb01fd7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330461"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188124"
 ---
-# <a name="tilestatic-keyword"></a>tile_static 关键字
+# <a name="tile_static-keyword"></a>tile_static 关键字
 
-**Tile_static**关键字用于声明可由线程平铺中的所有线程访问的变量。 此变量的生存期在执行到达声明点时开始，在内核函数返回时结束。 使用磁贴的详细信息，请参阅[使用磁贴](../parallel/amp/using-tiles.md)。
+**Tile_static**关键字用于声明可由线程平铺中的所有线程访问的变量。 此变量的生存期在执行到达声明点时开始，在内核函数返回时结束。 有关使用磁贴的详细信息，请参阅[使用磁贴](../parallel/amp/using-tiles.md)。
 
 **Tile_static**关键字具有以下限制：
 
@@ -23,15 +23,15 @@ ms.locfileid: "62330461"
 
 - 它不能对作为指针或引用类型的变量使用。
 
-- 一个**tile_static**变量不能具有初始值设定项。 不会自动调用默认构造函数和析构函数。
+- **Tile_static**变量不能有初始值设定项。 不会自动调用默认构造函数和析构函数。
 
-- 未初始化的值**tile_static**变量是未定义。
+- 未初始化的**tile_static**变量的值是不确定的。
 
-- 如果**tile_static**通过非平铺调用取得 root 权限的调用关系图中声明变量`parallel_for_each`、 生成警告和未定义变量的行为。
+- 如果在通过对 `parallel_for_each`的非平铺调用为根的调用关系图中声明**tile_static**变量，则会生成警告，并且不定义变量的行为。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何**tile_static**变量可用于多个线程一个磁贴中累积的数据。
+下面的示例演示如何使用**tile_static**变量来跨磁贴中的多个线程来聚合数据。
 
 ```cpp
 // Sample data:
@@ -144,9 +144,9 @@ for (int i = 0; i < 4; i++) {
 // 5 5 2 2 4 4
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)<br/>
 [C++ AMP 概述](../parallel/amp/cpp-amp-overview.md)<br/>
-[parallel_for_each 函数 (C++ a m P)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
+[parallel_for_each 函数（C++ AMP）](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
 [演练：矩阵乘法](../parallel/amp/walkthrough-matrix-multiplication.md)

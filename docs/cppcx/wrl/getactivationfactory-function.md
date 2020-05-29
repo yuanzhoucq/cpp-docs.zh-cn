@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398415"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213975"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 函数
 
-检索指定模板参数的类型的激活工厂。
+检索由模板参数指定的类型的激活工厂。
 
 ## <a name="syntax"></a>语法
 
@@ -30,27 +30,27 @@ inline HRESULT GetActivationFactory(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-模板参数，用于指定的激活工厂的类型。
+指定激活工厂类型的模板参数。
 
 *activatableClassId*<br/>
 激活工厂可以生成的类的名称。
 
-*factory*<br/>
-此操作完成后，对类型的激活工厂的引用*T*。
+*集*<br/>
+此操作完成后，将引用对类型*T*的激活工厂。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为错误 HRESULT，指示此操作失败的原因。
+如果成功，则为 S_OK;否则，会出现错误 HRESULT，指示此操作失败的原因。
 
 ## <a name="requirements"></a>要求
 
 **标头：** client.h
 
-**命名空间：** Windows::Foundation
+**命名空间：** Windows：： Foundation
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Windows::Foundation 命名空间](windows-foundation-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: 动态链接到 MFC 的规则 MFC Dll
+title: 动态链接到 MFC 的规则 MFC DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - regular MFC DLLs [C++], dynamically linked to MFC
@@ -10,90 +10,90 @@ helpviewer_keywords:
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
 ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62314996"
 ---
-# <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>动态链接到 MFC 的规则 MFC Dll
+# <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>动态链接到 MFC 的规则 MFC DLL
 
-MFC DLL 动态链接到 MFC 正则表达式是在内部，使用 MFC 的 DLL 和可由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 如名称所述，使用动态链接库版本的 MFC （也称为共享的 MFC 版本） 生成此类型的 DLL。 通常是从正则表达式使用标准的 C 接口的 MFC DLL 导出函数。
+动态链接到 MFC 的规则 MFC DLL 是在内部使用 MFC 的 DLL，而 DLL 中的导出函数可以由 MFC 或非 MFC 可执行文件调用。 顾名思义，这种 DLL 是使用 MFC 的动态链接库版本（也称为 MFC 的共享版本）生成的。 通常使用标准 C 接口从规则 MFC DLL 导出函数。
 
-必须添加`AFX_MANAGE_STATE`动态链接到 MFC，以便将当前模块状态设置为 dll 的规则 MFC Dll 中的所有导出函数的开始处的宏。 这是通过将以下代码行添加到从 DLL 导出的函数的开头：
+你必须在动态链接到 MFC 的规则 MFC DLL 中的所有导出函数的开头处添加 `AFX_MANAGE_STATE` 宏，以将当前模块状态设置为 DLL 的状态。 这通过将以下代码行添加到从 DLL 导出的函数的开头来实现：
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-常规 MFC DLL 动态链接到 MFC 具有以下功能：
+动态链接到 MFC 的规则 MFC DLL 具有以下功能：
 
-- 这是一种新引入的视觉对象的 DLL C++ 4.0。
+- 这是 Visual C++ 4.0 引入的新型 DLL。
 
-- 客户端可执行文件可以采用任何支持 Dll 使用的语言 (C， C++，Pascal、 Visual Basic 中，依次类推);它不必是 MFC 应用程序。
+- 可以采用支持使用 DLL 的任何语言（C、C++、Pascal、Visual Basic 等）编写客户端可执行文件；它不必是 MFC 应用程序。
 
-- 与静态链接的规则 MFC DLL，这种类型的 DLL 动态链接到 MFC DLL (也称为共享 MFC DLL)。
+- 与静态链接的规则 MFC DLL 不同，这种 DLL 动态链接到 MFC DLL（也称为共享 MFC DLL）。
 
-- MFC 导入库链接到此类型的 DLL 是由 MFC 扩展 Dll 或使用 MFC DLL 的应用程序使用同一个：MFCxx (D).lib。
+- 链接到这种 DLL 的 MFC 导入库与用于 MFC 扩展 DLL 或应用程序（使用 MFC DLL）的库相同：MFCxx(D).lib。
 
-常规 MFC DLL 动态链接到 MFC 具有以下要求：
+动态链接到 MFC 的规则 MFC DLL 具有以下要求：
 
-- 与编译这些 Dll **_AFXDLL**定义，就像动态链接到 MFC DLL 的可执行文件。 但是 **_USRDLL**也定义，就像静态链接到 MFC 的规则 MFC DLL。
+- 编译这些 DLL 时需定义 _AFXDLL  ，就像动态链接到 MFC DLL 的可执行文件一样。 但同时还需定义 _USRDLL  ，就像静态链接到 MFC 的规则 MFC DLL 一样。
 
-- 这种类型的 DLL 必须实例化`CWinApp`-派生的类。
+- 这种 DLL 必须实例化 `CWinApp` 派生类。
 
-- 这种类型的 DLL 将`DllMain`MFC 提供。 将中的所有 DLL 特定初始化代码都放`InitInstance`中的成员函数和终止代码`ExitInstance`如普通的 MFC 应用程序中所示。
+- 这种 DLL 使用 MFC 提供的 `DllMain`。 将所有特定于 DLL 的初始化代码都置于 `InitInstance` 成员函数中，而将终止代码置于 `ExitInstance` 中，就如同在普通 MFC 应用程序中一样。
 
-由于这种 DLL 使用 MFC 的动态链接库版本，您必须显式设置为 DLL 的一个的当前模块状态。 若要执行此操作，请使用[AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state)从 DLL 导出的每个函数开头的宏。
+由于这种 DLL 使用 MFC 的动态链接库版本，因此必须将当前模块状态显式设置为 DLL 的状态。 为此，请在从 DLL 导出的每个函数的开头使用 [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) 宏。
 
-规则 MFC Dll 必须具有`CWinApp`-派生的类以及该类应用程序的单个对象的 MFC 应用程序一样。 但是， `CWinApp` DLL 的对象不具有主消息泵，如同`CWinApp`应用程序的对象。
+与 MFC 应用程序一样，规则 MFC DLL 必须具有 `CWinApp` 派生类和该应用程序类的单个对象。 但是，DLL 的 `CWinApp` 对象没有主消息泵，而应用程序的 `CWinApp` 对象也是如此。
 
-请注意，`CWinApp::Run`机制不适用于 DLL，因为应用程序拥有主消息泵。 如果您的 DLL 将显示无模式对话框或有其自己的主框架窗口，应用程序的主消息泵必须调用 DLL 导出的例程来调用`CWinApp::PreTranslateMessage`。
+请注意，`CWinApp::Run` 机制不适用于 DLL，因为应用程序拥有主消息泵。 如果 DLL 显示无模式对话框或有自己的主框架窗口，则应用程序的主消息泵必须调用从 DLL 导出的例程来调用 `CWinApp::PreTranslateMessage`。
 
-将中的所有 DLL 特定初始化都放`CWinApp::InitInstance`如普通的 MFC 应用程序中所示的成员函数。 `CWinApp::ExitInstance`成员函数在`CWinApp`派生的类称为从 MFC 提供`DllMain`函数卸载 DLL 之前。
+将所有特定于 DLL 的初始化代码都置于 `CWinApp::InitInstance` 成员函数中，就如同在普通 MFC 应用程序中一样。 在卸载 DLL 之前，从 MFC 提供的 `DllMain` 函数调用 `CWinApp` 派生类的 `CWinApp::ExitInstance` 成员函数。
 
-使用你的应用程序，必须将分发共享的 Dll MFCx0.dll 和 Msvcr*0.dll （或类似文件）。
+你必须随应用程序分发共享的 DLL MFCx0.dll 和 Msvcr*0.dll（或类似文件）。
 
-动态链接到 MFC 的 DLL 无法还以静态方式链接到 MFC。 应用程序链接到 MFC 的规则 Dll 动态链接到 MFC 它就像任何其他 DLL。
+动态链接到 MFC 的 DLL 不能同时又静态链接到 MFC。 应用程序链接到动态链接到 MFC 的规则 MFC DLL，就像链接到任何其他 DLL 一样。
 
-通常是从正则表达式使用标准的 C 接口的 MFC DLL 导出的符号。 从规则 MFC DLL 导出函数的声明如下所示：
+通常使用标准 C 接口从规则 MFC DLL 导出符号。 从规则 MFC DLL 导出的函数的声明如下所示：
 
 ```
 extern "C" __declspec(dllexport) MyExportedFunction( );
 ```
 
-规则 MFC DLL 的所有内存分配应都遵守 DLL;DLL 不应传递给或接收从调用的可执行文件的以下任何：
+规则 MFC DLL 内的所有内存分配都应保留在 DLL 内；DLL 不应向调用可执行文件传递或从其接收以下任何内容：
 
-- MFC 对象的指针
+- 指向 MFC 对象的指针
 
 - 指向由 MFC 分配的内存的指针
 
-如果你需要执行上述任一或者如果你需要调用的可执行文件和 DLL 之间传递 MFC 派生的对象，则必须生成 MFC 扩展 DLL。
+如果需要执行上述任何操作，或者需要在调用可执行文件与 DLL 之间传递 MFC 派生对象，则必须生成 MFC 扩展 DLL。
 
-它可以安全地将指针传递给已分配的内存的 C 运行时库应用程序和 DLL 之间仅当您制作数据的副本。 您必须删除或调整这些指针的大小或使用它们而无需进行的内存的副本。
+仅当创建数据的副本时，才可安全地在应用程序和 DLL 之间传递指向由 C 运行时库分配的内存的指针。 不得删除这些指针或重设其大小，也不得在不创建内存副本的情况下使用它们。
 
-当生成规则 MFC DLL 的动态链接到 MFC 时，需要使用该宏[AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state)正确切换 MFC 模块状态。 这是通过将以下代码行添加到从 DLL 导出的函数的开头：
+在生成动态链接到 MFC 的规则 MFC DLL 时，需要使用宏 [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) 来正确切换 MFC 模块状态。 这通过将以下代码行添加到从 DLL 导出的函数的开头来实现：
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-**AFX_MANAGE_STATE**在静态链接到 MFC 的规则 MFC Dll 或 MFC 扩展 Dll 中，不应使用宏。 有关详细信息，请参阅[管理 MFC 模块状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)。
+在静态链接到 MFC 的规则 MFC DLL 或 MFC 扩展 DLL 中，不应使用 AFX_MANAGE_STATE  宏。 有关详细信息，请参阅[管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)。
 
-有关如何编写、 构建和使用的规则 MFC DLL 的示例，请参阅示例[DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。 有关动态链接到 MFC 的规则 MFC Dll 的详细信息，请参阅示例的抽象中标题为"转换 DLLScreenCap 到动态链接与 MFC DLL"部分。
+有关如何编写、生成和使用规则 MFC DLL 的示例，请参阅示例 [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。 有关动态链接到 MFC 的规则 MFC DLL 的详细信息，请参阅该示例的摘要中标题为“Converting DLLScreenCap to Dynamically Link with the MFC DLL”（转换 DLLScreenCap 以动态链接到 MFC DLL）的部分。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [初始化规则 MFC Dll](run-time-library-behavior.md#initializing-regular-dlls)
+- [初始化规则 MFC DLL](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
 - [动态链接到 MFC 的规则 MFC DLL 的模块状态](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
-- [管理 MFC 模块状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
+- [管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
 
 - [在规则 MFC DLL 中使用数据库、OLE 和套接字 MFC 扩展 DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [将 MFC 作为 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
+- [将 MFC 用作 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>请参阅
 

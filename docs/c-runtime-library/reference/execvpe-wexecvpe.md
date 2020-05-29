@@ -1,9 +1,11 @@
 ---
 title: _execvpe，_wexecvpe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _execvpe
 - _wexecvpe
+- _o__execvpe
+- _o__wexecvpe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,13 +18,13 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4a1a2d66600a7502c088577adca4085c68e4ccd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941743"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909702"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe，_wexecvpe
 
@@ -75,7 +77,7 @@ intptr_t _wexecvpe(
 
 如果成功，这些函数不返回到调用进程。 返回值-1 表示错误，在这种情况下，将设置**errno**全局变量。
 
-|**errno**值|描述|
+|**errno**值|说明|
 |-------------------|-----------------|
 |**E2BIG**|自变量和环境设置所需的空间超过 32 KB。|
 |**EACCES**|指定的文件具有锁定或共享冲突。|
@@ -90,7 +92,9 @@ intptr_t _wexecvpe(
 
 其中每个函数都将加载并执行一个新进程，同时将一个指针数组传递给命令行自变量，并将一个指针数组传递给环境设置。 这些函数使用**PATH**环境变量查找要执行的文件。
 
-**_Execvpe**函数验证其参数。 如果*cmdname*为 null 指针，或者*argv*为空指针、指向空数组的指针或指向包含空字符串作为第一个参数的数组的指针，则这些函数将调用无效参数处理程序，如中[所述。参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。 不启动任何进程。
+**_Execvpe**函数验证其参数。 如果*cmdname*为 null 指针，或者*argv*为空指针、指向空数组的指针或指向包含空字符串作为第一个参数的数组的指针，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回-1。 不启动任何进程。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -99,19 +103,19 @@ intptr_t _wexecvpe(
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> 或 \<wchar.h>|\<errno.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[中止](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit、_Exit、_exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>
-[_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

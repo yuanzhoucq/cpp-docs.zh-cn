@@ -1,11 +1,15 @@
 ---
 title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
+- _o__atoi64
+- _o__atoi64_l
+- _o__wtoi64
+- _o__wtoi64_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939489"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913566"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -81,7 +86,7 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*字符串*<br/>
 要转换的字符串。
 
 *locale*<br/>
@@ -89,9 +94,9 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都返回通过将输入字符解释为数字而产生的 **__int64**值。 如果输入不能转换为该类型的值，则 **_atoi64**的返回值为0。
+每个函数都通过将输入字符解释为数字来返回 **__int64**值。 如果输入不能转换为该类型的值，则 **_atoi64**的返回值为0。
 
-对于具有大量正整数值的溢出，如果溢出的整数值较大，则 **_atoi64**将返回**I64_MAX**和**I64_MIN** 。
+对于具有较大正整数值的溢出， **_atoi64**返回**I64_MAX**和**I64_MIN** ，在溢出时会出现大量的整数值。
 
 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
@@ -109,7 +114,9 @@ __int64 _wtoi64_l(
 
 **_wtoi64**与 **_atoi64**相同，只不过它采用宽字符字符串作为参数。
 
-使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -122,8 +129,8 @@ __int64 _wtoi64_l(
 
 |例程|必需的标头|
 |--------------|---------------------|
-|**_atoi64**、 **_atoi64_l**|\<stdlib.h>|
-|**_wtoi64**、 **_wtoi64_l**|\<stdlib.h> 或 \<wchar.h>|
+|**_atoi64**， **_atoi64_l**|\<stdlib.h>|
+|**_wtoi64**， **_wtoi64_l**|\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
@@ -174,13 +181,13 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
+[本地](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

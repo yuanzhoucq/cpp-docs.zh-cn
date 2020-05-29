@@ -1,11 +1,15 @@
 ---
 title: _mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbcjistojms
 - _mbcjmstojis
 - _mbcjistojms_l
 - _mbcjmstojis_l
+- _o__mbcjistojms
+- _o__mbcjistojms_l
+- _o__mbcjmstojis
+- _o__mbcjmstojis_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: 6bf1109cfba93042bd00acde4812706c1bbf7a01
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc4df04274c33fa14af0762dc62f20ed09f23cd9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952592"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918440"
 ---
 # <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
 
@@ -76,7 +81,7 @@ unsigned int _mbcjmstojis_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*ansi-c*<br/>
 要转换的字符。
 
 *locale*<br/>
@@ -94,22 +99,24 @@ unsigned int _mbcjmstojis_l(
 
 值*c*应为16位值，其前8位表示要转换的字符的前导字节，其低8位表示尾字节。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在早期版本中， **_mbcjistojms**和 **_mbcjmstojis**分别称为**jistojms**和**jmstojis**。 应改用 **_mbcjistojms**、 **_mbcjistojms_l**、 **_mbcjmstojis**和 **_mbcjmstojis_l** 。
+在早期版本中， **_mbcjistojms**和 **_mbcjmstojis**分别称为**jistojms**和**jmstojis**。 应改为使用 **_mbcjistojms**、 **_mbcjistojms_l**、 **_mbcjmstojis**和 **_mbcjmstojis_l** 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_mbcjistojms**|\<mbstring.h>|
 |**_mbcjistojms_l**|\<mbstring.h>|
 |**_mbcjmstojis**|\<mbstring.h>|
 |**_mbcjmstojis_l**|\<mbstring.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

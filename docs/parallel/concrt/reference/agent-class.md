@@ -18,11 +18,11 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142892"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427475"
 ---
 # <a name="agent-class"></a>agent 类
 
@@ -34,7 +34,7 @@ ms.locfileid: "77142892"
 class agent;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -88,7 +88,7 @@ agent(Scheduler& _PScheduler);
 agent(ScheduleGroup& _PGroup);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PScheduler*<br/>
 在其中计划代理的执行任务的 `Scheduler` 对象。
@@ -198,7 +198,7 @@ static agent_status __cdecl wait(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PAgent*<br/>
 一个指针，指向要等待的代理。
@@ -228,9 +228,9 @@ static void __cdecl wait_for_all(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*count*<br/>
+*计数*<br/>
 数组 `_PAgents`中存在的代理指针数。
 
 *_PAgents*<br/>
@@ -261,9 +261,9 @@ static void __cdecl wait_for_one(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*count*<br/>
+*计数*<br/>
 数组 `_PAgents`中存在的代理指针数。
 
 *_PAgents*<br/>

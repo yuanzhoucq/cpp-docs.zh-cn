@@ -1,8 +1,9 @@
 ---
 title: _setmbcp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _setmbcp
+- _o__setmbcp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948217"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918819"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -48,7 +50,7 @@ int _setmbcp(
 
 ### <a name="parameters"></a>参数
 
-*codepage*<br/>
+*ansi*<br/>
 独立于区域设置的多字节例程的新代码页设置。
 
 ## <a name="return-value"></a>返回值
@@ -67,7 +69,7 @@ int _setmbcp(
 |[_fullpath](fullpath-wfullpath.md)|[_spawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-此外，所有将多字节字符*argv*或*envp*程序参数作为参数（例如 **_exec**和 **_spawn**家族）的运行时库例程会根据多字节代码页处理这些字符串。 因此，在对更改多字节代码页的 **_setmbcp**进行调用时，也会影响这些例程。
+此外，所有将多字节字符*argv*或*envp*程序参数作为参数（如 **_exec**和 **_spawn**系列）的运行时库例程会根据多字节代码页处理这些字符串。 因此，对更改多字节代码页的 **_setmbcp**的调用也会影响这些例程。
 
 *代码页*参数可设置为以下任意值：
 
@@ -79,17 +81,21 @@ int _setmbcp(
 
 - **_MB_CP_SBCS**使用单字节代码页。 将代码页设置为 **_MB_CP_SBCS**时，例程（如[_ismbblead](ismbblead-ismbblead-l.md) ）始终返回 false。
 
-- 任何其他有效的代码页值，而不考虑该值是否为 ANSI、OEM 或其他操作系统支持的代码页（除不受支持的 UTF-7 和 UTF-8 以外）。
+- **_MB_CP_UTF8**使用 UTF-8。  将代码页设置为 **_MB_CP_UTF8**时，例程（如[_ismbblead](ismbblead-ismbblead-l.md) ）始终返回 false。
+
+- 任何其他有效的代码页值，无论该值是 ANSI、OEM 还是其他操作系统支持的代码页（不支持 UTF-7 除外）。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>

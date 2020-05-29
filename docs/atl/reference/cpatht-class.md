@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69496620"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032129"
 ---
 # <a name="cpatht-class"></a>CPathT 类
 
-此类表示一个路径。
+此类表示路径。
 
 > [!IMPORTANT]
-> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
+> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -73,84 +73,84 @@ class CPathT
 #### <a name="parameters"></a>参数
 
 *StringType*<br/>
-要用于路径的 ATL/MFC 字符串类（请参见[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)）。
+用于路径的 ATL/MFC 字符串类（请参阅[CStringT）。](../../atl-mfc-shared/reference/cstringt-class.md)
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
-|[CPathT：:P CXSTR](#pcxstr)|常量字符串类型。|
-|[CPathT：:P XSTR](#pxstr)|字符串类型。|
-|[CPathT::XCHAR](#xchar)|一个字符类型。|
+|[CPathT：:PCXSTR](#pcxstr)|常量字符串类型。|
+|[CPathT：:PXSTR](#pxstr)|一种字符串类型。|
+|[CPathT：XCHAR](#xchar)|一个字符类型。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
-|[CPathT::CPathT](#cpatht)|路径的构造函数。|
+|[CPathT：CPathT](#cpatht)|路径的构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
-|[CPathT::AddBackslash](#addbackslash)|调用此方法可将反斜杠添加到字符串的末尾，以便为路径创建正确的语法。|
-|[CPathT::AddExtension](#addextension)|调用此方法可将文件扩展名添加到路径。|
-|[CPathT：： Append](#append)|调用此方法可将字符串追加到当前路径。|
-|[CPathT：： BuildRoot](#buildroot)|调用此方法可从给定的驱动器号创建根路径。|
-|[CPathT：：规范化](#canonicalize)|调用此方法可将路径转换为规范格式。|
-|[CPathT：：合并](#combine)|调用此方法可将表示目录名称的字符串和表示文件路径名称的字符串串联到一个路径中。|
-|[CPathT::CommonPrefix](#commonprefix)|调用此方法可确定指定的路径是否与当前路径共享公共前缀。|
-|[CPathT::CompactPath](#compactpath)|调用此方法可通过将路径组件替换为省略号，来截断文件路径以适应给定的像素宽度。|
-|[CPathT::CompactPathEx](#compactpathex)|调用此方法可通过将路径组件替换为省略号来截断文件路径，使其适合给定的字符数。|
-|[CPathT::FileExists](#fileexists)|调用此方法以检查此路径名称处的文件是否存在。|
-|[CPathT::FindExtension](#findextension)|调用此方法可查找文件扩展名在路径中的位置。|
-|[CPathT::FindFileName](#findfilename)|调用此方法可查找文件名在路径中的位置。|
-|[CPathT::GetDriveNumber](#getdrivenumber)|调用此方法可在路径 "A" 到 "Z" 的范围内搜索驱动器号，并返回相应的驱动器号。|
-|[CPathT：： Path.getextension 对](#getextension)|调用此方法可从路径获取文件扩展名。|
-|[CPathT::IsDirectory](#isdirectory)|调用此方法以检查路径是否为有效的目录。|
-|[CPathT::IsFileSpec](#isfilespec)|调用此方法可在路径中搜索任何路径分隔字符（例如，"：" 或 "\\"）。 如果不存在路径分隔字符，则将路径视为文件规范路径。|
-|[CPathT::IsPrefix](#isprefix)|调用此方法以确定路径是否包含*pszPrefix*传递的类型的有效前缀。|
-|[CPathT::IsRelative](#isrelative)|调用此方法以确定路径是否为相对路径。|
-|[CPathT：： IsRoot](#isroot)|调用此方法以确定路径是否为目录根。|
-|[CPathT::IsSameRoot](#issameroot)|调用此方法以确定另一个路径是否具有具有当前路径的公共根组件。|
-|[CPathT::IsUNC](#isunc)|调用此方法以确定路径是否为服务器和共享的有效 UNC （通用命名约定）路径。|
-|[CPathT::IsUNCServer](#isuncserver)|调用此方法以确定路径是否为服务器的有效 UNC （通用命名约定）路径。|
-|[CPathT::IsUNCServerShare](#isuncservershare)|调用此方法以确定路径是否为有效的 UNC （通用命名约定）共享路径，\\ \ *server* \ *共享*。|
-|[CPathT::MakePretty](#makepretty)|调用此方法可将路径转换为所有小写字符，以便为路径指定一致的外观。|
-|[CPathT::MatchSpec](#matchspec)|调用此方法以搜索包含通配符匹配类型的字符串的路径。|
-|[CPathT::QuoteSpaces](#quotespaces)|如果路径包含空格，则调用此方法将路径用引号引起来。|
-|[CPathT::RelativePathTo](#relativepathto)|调用此方法可创建从一个文件或文件夹到另一个文件或文件夹的相对路径。|
-|[CPathT::RemoveArgs](#removeargs)|调用此方法可从路径中删除任何命令行参数。|
-|[CPathT::RemoveBackslash](#removebackslash)|调用此方法可删除路径中的尾部反斜杠。|
-|[CPathT::RemoveBlanks](#removeblanks)|调用此方法可从路径中删除所有前导空格和尾随空格。|
-|[CPathT::RemoveExtension](#removeextension)|调用此方法可删除路径中的文件扩展名（如果有）。|
-|[CPathT::RemoveFileSpec](#removefilespec)|调用此方法可删除路径中的尾随文件名和反斜杠（如果有）。|
-|[CPathT::RenameExtension](#renameextension)|调用此方法可将路径中的文件扩展名替换为新扩展名。 如果文件名不包含扩展，则扩展将附加到字符串的末尾。|
-|[CPathT::SkipRoot](#skiproot)|调用此方法可分析路径，忽略驱动器号或 UNC 服务器/共享路径部分。|
-|[CPathT::StripPath](#strippath)|调用此方法可删除完全限定路径和文件名的路径部分。|
-|[CPathT::StripToRoot](#striptoroot)|调用此方法可删除路径的所有部分（根信息除外）。|
-|[CPathT::UnquoteSpaces](#unquotespaces)|调用此方法可删除路径开头和末尾的引号。|
+|[CPathT：：添加反斜杠](#addbackslash)|调用此方法向字符串的末尾添加反斜杠，以创建路径的正确语法。|
+|[CPathT：：添加扩展](#addextension)|调用此方法以向路径添加文件扩展名。|
+|[CPathT：：附加](#append)|调用此方法以将字符串追加到当前路径。|
+|[CPathT：：构建根](#buildroot)|调用此方法从给定驱动器号创建根路径。|
+|[CPathT：规范化](#canonicalize)|调用此方法将路径转换为规范形式。|
+|[CPathT：：合并](#combine)|调用此方法将表示目录名称的字符串和表示文件路径名称的字符串串联到一个路径中。|
+|[CPathT：：通用前缀](#commonprefix)|调用此方法以确定指定的路径是否与当前路径共享公共前缀。|
+|[CPathT：：紧凑路径](#compactpath)|调用此方法可截取文件路径，方法是将路径组件替换为省略号，以适合给定像素宽度。|
+|[CPathT：：压缩路径](#compactpathex)|调用此方法，通过将路径组件替换为省略号来截取文件路径以适合给定数量的字符。|
+|[CPathT：文件存在](#fileexists)|调用此方法以检查此路径名称下的文件是否存在。|
+|[CPathT：：查找扩展](#findextension)|调用此方法以查找路径中文件扩展名的位置。|
+|[CPathT：：查找文件名](#findfilename)|调用此方法以查找文件名在路径中的位置。|
+|[CPathT：获取驱动器号码](#getdrivenumber)|调用此方法以在"A"到"Z"范围内搜索驱动器号路径并返回相应的驱动器号。|
+|[CPathT：获取扩展](#getextension)|调用此方法从路径获取文件扩展名。|
+|[CPathT：是目录](#isdirectory)|调用此方法以检查路径是否为有效目录。|
+|[CPathT：是文件规格](#isfilespec)|调用此方法以搜索路径以查找任何路径分隔字符（例如，"："或''）。\\ 如果不存在路径分隔字符，则路径被视为文件规格路径。|
+|[CPathT：isprefix](#isprefix)|调用此方法以确定路径是否包含*pszPrefix*传递的类型的有效前缀。|
+|[CPathT：相对](#isrelative)|调用此方法以确定路径是否相对。|
+|[CPathT：是根](#isroot)|调用此方法以确定路径是否为目录根。|
+|[CPathT：：IsSameRoot](#issameroot)|调用此方法以确定另一个路径是否具有与当前路径的通用根组件。|
+|[CPathT：ISUNC](#isunc)|调用此方法以确定路径是否是服务器和共享的有效 UNC（通用命名约定）路径。|
+|[CPathT：isUNCServer](#isuncserver)|调用此方法以确定路径是否仅是服务器的有效 UNC（通用命名约定）路径。|
+|[CPathT：isUNCServer共享](#isuncservershare)|调用此方法以确定路径是否是有效的 UNC（通用命名约定）共享路径、\\\ *服务器*\ *共享*。|
+|[CPathT：：制作漂亮](#makepretty)|调用此方法可将路径转换为所有小写字符，以使路径的外观一致。|
+|[CPathT：：匹配规格](#matchspec)|调用此方法以搜索包含通配符匹配类型的字符串的路径。|
+|[CPathT：：报价空间](#quotespaces)|如果路径包含任何空格，则调用此方法以引号括上路径。|
+|[CPatht：：相对路径](#relativepathto)|调用此方法以创建从一个文件或文件夹到另一个文件或文件夹的相对路径。|
+|[CPathT：：删除阿格](#removeargs)|调用此方法从路径中删除任何命令行参数。|
+|[CPathT：：删除反斜杠](#removebackslash)|调用此方法以从路径中删除尾随反斜杠。|
+|[CPathT：：删除空白](#removeblanks)|调用此方法从路径中删除所有前导空格和尾随空格。|
+|[CPathT：：删除扩展](#removeextension)|调用此方法以从路径中删除文件扩展名（如果有）。|
+|[CPathT：：删除文件规格](#removefilespec)|调用此方法以从路径中删除尾随文件名和反斜杠（如果有）。|
+|[CPathT：：重命名扩展](#renameextension)|调用此方法以将路径中的文件名扩展名替换为新的扩展名。 如果文件名不包含扩展名，则扩展名将附加到字符串的末尾。|
+|[CPathT：：跳过根](#skiproot)|调用此方法以分析路径，忽略驱动器号或 UNC 服务器/共享路径部件。|
+|[CPathT：：条带路径](#strippath)|调用此方法以删除完全限定的路径和文件名的路径部分。|
+|[CPatht：：条纹根](#striptoroot)|调用此方法以删除路径的所有部分，但根信息除外。|
+|[CPathT：无引号空格](#unquotespaces)|调用此方法以从路径的开头和结尾删除引号。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
-|[CPathT：： operator const StringType &](#operator_const_stringtype_amp)|此运算符允许将对象视为一个字符串。|
-|[CPathT：： operator CPathT：:P CXSTR](#operator_cpatht__pcxstr)|此运算符允许将对象视为一个字符串。|
-|[CPathT：： operator StringType &](#operator_stringtype_amp)|此运算符允许将对象视为一个字符串。|
-|[CPathT：： operator + =](#operator_add_eq)|此运算符将字符串附加到路径。|
+|[CPathT：：运算符 const 字符串类型&](#operator_const_stringtype_amp)|此运算符允许将对象视为字符串。|
+|[CPathT：：操作员 CPathT：:PCXSTR](#operator_cpatht__pcxstr)|此运算符允许将对象视为字符串。|
+|[CPathT：：运算符字符串类型&](#operator_stringtype_amp)|此运算符允许将对象视为字符串。|
+|[CPathT：：操作员 |](#operator_add_eq)|此运算符将字符串追加到路径中。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
-|[CPathT::m_strPath](#m_strpath)|路径。|
+|[CPathT：m_strPath](#m_strpath)|路径。|
 
 ## <a name="remarks"></a>备注
 
-`CPath`、`CPathA` 和 `CPathW` 是 `CPathT` 定义的实例化，如下所示：
+`CPath``CPathA`，并且`CPathW`是定义的实例化，`CPathT`如下所示：
 
 `typedef CPathT< CString > CPath;`
 
@@ -160,23 +160,23 @@ class CPathT
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlpath。h
+**标题：** atlpath.h
 
-##  <a name="addbackslash"></a>CPathT::AddBackslash
+## <a name="cpathtaddbackslash"></a><a name="addbackslash"></a>CPathT：：添加反斜杠
 
-调用此方法可将反斜杠添加到字符串的末尾，以便为路径创建正确的语法。 如果路径已经有尾随反斜杠，则不会添加反斜杠。
+调用此方法向字符串的末尾添加反斜杠，以创建路径的正确语法。 如果路径已具有尾随反斜杠，则不会添加反斜杠。
 
-```
+```cpp
 void AddBackslash();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathAddBackSlash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)。
+有关详细信息，请参阅[路径添加回斜杠](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)。
 
-##  <a name="addextension"></a>CPathT::AddExtension
+## <a name="cpathtaddextension"></a><a name="addextension"></a>CPathT：：添加扩展
 
-调用此方法可将文件扩展名添加到路径。
+调用此方法以向路径添加文件扩展名。
 
 ```
 BOOL AddExtension(PCXSTR pszExtension);
@@ -184,20 +184,20 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>参数
 
-*pszExtension*<br/>
+*psz 扩展*<br/>
 要添加的文件扩展名。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)。
+有关详细信息，请参阅[路径添加扩展](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)。
 
-##  <a name="append"></a>CPathT：： Append
+## <a name="cpathtappend"></a><a name="append"></a>CPathT：：附加
 
-调用此方法可将字符串追加到当前路径。
+调用此方法以将字符串追加到当前路径。
 
 ```
 BOOL Append(PCXSTR pszMore);
@@ -210,52 +210,52 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)。
+有关详细信息，请参阅[路径应用](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)。
 
-##  <a name="buildroot"></a>CPathT：： BuildRoot
+## <a name="cpathtbuildroot"></a><a name="buildroot"></a>CPathT：：构建根
 
-调用此方法可从给定的驱动器号创建根路径。
+调用此方法从给定驱动器号创建根路径。
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
 ### <a name="parameters"></a>参数
 
 *iDrive*<br/>
-驱动器号（0是：，1是 B：，以此类推）。
+驱动器号（0 为 A：，1 表示 B：，等等）。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)。
+有关详细信息，请参阅[路径构建根](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)。
 
-##  <a name="canonicalize"></a>CPathT：：规范化
+## <a name="cpathtcanonicalize"></a><a name="canonicalize"></a>CPathT：规范化
 
-调用此方法可将路径转换为规范格式。
+调用此方法将路径转换为规范形式。
 
-```
+```cpp
 void Canonicalize();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)。
+有关详细信息，请参阅[路径化](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)。
 
-##  <a name="combine"></a>CPathT：：合并
+## <a name="cpathtcombine"></a><a name="combine"></a>CPathT：：合并
 
-调用此方法可将表示目录名称的字符串和表示文件路径名称的字符串串联到一个路径中。
+调用此方法将表示目录名称的字符串和表示文件路径名称的字符串串联到一个路径中。
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pszDir*<br/>
+*皮兹迪尔*<br/>
 目录路径。
 
 *pszFile*<br/>
@@ -263,11 +263,11 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)。
+有关详细信息，请参阅[路径合并](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)。
 
-##  <a name="commonprefix"></a>CPathT::CommonPrefix
+## <a name="cpathtcommonprefix"></a><a name="commonprefix"></a>CPathT：：通用前缀
 
-调用此方法可确定指定的路径是否与当前路径共享公共前缀。
+调用此方法以确定指定的路径是否与当前路径共享公共前缀。
 
 ```
 CPathT<StringType> CommonPrefix(PCXSTR pszOther);
@@ -276,7 +276,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 ### <a name="parameters"></a>参数
 
 *pszOther*<br/>
-要与当前的路径进行比较的路径。
+要与当前路径进行比较的路径。
 
 ### <a name="return-value"></a>返回值
 
@@ -284,11 +284,11 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="remarks"></a>备注
 
-前缀为以下类型之一： "C： \\ \\"、"."、".."、".."。\\ \\ "。 有关详细信息，请参阅[PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)。
+前缀是以下类型之一："C："，"."，"."，"."，"."."."."."."\\\\\\\\". 有关详细信息，请参阅[路径公共前缀](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)。
 
-##  <a name="compactpath"></a>CPathT::CompactPath
+## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT：：紧凑路径
 
-调用此方法可通过将路径组件替换为省略号，来截断文件路径以适应给定的像素宽度。
+调用此方法可截取文件路径，方法是将路径组件替换为省略号，以适合给定像素宽度。
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -299,20 +299,20 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 *hDC*<br/>
 用于字体指标的设备上下文。
 
-*nWidth*<br/>
-强制字符串适合的宽度（以像素为单位）。
+*n 宽度*<br/>
+字符串将强制拟合的宽度（以像素为单位）。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)。
+有关详细信息，请参阅[路径压缩路径](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)。
 
-##  <a name="compactpathex"></a>CPathT::CompactPathEx
+## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT：：压缩路径
 
-调用此方法可通过将路径组件替换为省略号来截断文件路径，使其适合给定的字符数。
+调用此方法，通过将路径组件替换为省略号来截取文件路径以适合给定数量的字符。
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -321,20 +321,20 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="parameters"></a>参数
 
 *nMaxChars*<br/>
-要包含在新字符串中的最大字符数，包括终止 NULL 字符。
+新字符串中要包含的最大字符数，包括终止 NULL 字符。
 
-*dwFlags*<br/>
+dwFlags**<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)。
+有关详细信息，请参阅[路径压缩路径Ex](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)。
 
-##  <a name="cpatht"></a>CPathT::CPathT
+## <a name="cpathtcpatht"></a><a name="cpatht"></a>CPathT：CPathT
 
 构造函数。
 
@@ -349,12 +349,12 @@ CPathT() throw();
 *pszPath*<br/>
 指向路径字符串的指针。
 
-*path*<br/>
+*路径*<br/>
 路径字符串。
 
-##  <a name="fileexists"></a>CPathT::FileExists
+## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT：文件存在
 
-调用此方法以检查此路径名称处的文件是否存在。
+调用此方法以检查此路径名称下的文件是否存在。
 
 ```
 BOOL FileExists() const;
@@ -366,11 +366,11 @@ BOOL FileExists() const;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)。
+有关详细信息，请参阅[路径文件存在](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)。
 
-##  <a name="findextension"></a>CPathT::FindExtension
+## <a name="cpathtfindextension"></a><a name="findextension"></a>CPathT：：查找扩展
 
-调用此方法可查找文件扩展名在路径中的位置。
+调用此方法以查找路径中文件扩展名的位置。
 
 ```
 int FindExtension() const;
@@ -378,15 +378,15 @@ int FindExtension() const;
 
 ### <a name="return-value"></a>返回值
 
-返回扩展前面的 "." 的位置。 如果找不到扩展，则返回-1。
+返回扩展之前的"" 的位置。 如果未找到扩展，则返回 -1。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)。
+有关详细信息，请参阅[路径查找扩展](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)。
 
-##  <a name="findfilename"></a>CPathT::FindFileName
+## <a name="cpathtfindfilename"></a><a name="findfilename"></a>CPathT：：查找文件名
 
-调用此方法可查找文件名在路径中的位置。
+调用此方法以查找文件名在路径中的位置。
 
 ```
 int FindFileName() const;
@@ -394,15 +394,15 @@ int FindFileName() const;
 
 ### <a name="return-value"></a>返回值
 
-返回文件名的位置。 如果未找到文件名，则返回-1。
+返回文件名的位置。 如果未找到文件名，则返回 -1。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)。
+有关详细信息，请参阅[路径查找文件名称](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)。
 
-##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber
+## <a name="cpathtgetdrivenumber"></a><a name="getdrivenumber"></a>CPathT：获取驱动器号码
 
-调用此方法可在路径 "A" 到 "Z" 的范围内搜索驱动器号，并返回相应的驱动器号。
+调用此方法以在"A"到"Z"范围内搜索驱动器号路径并返回相应的驱动器号。
 
 ```
 int GetDriveNumber() const;
@@ -410,15 +410,15 @@ int GetDriveNumber() const;
 
 ### <a name="return-value"></a>返回值
 
-如果路径包含驱动器号，则返回驱动器号（从0到25，对应于 "A" 到 "Z"），否则返回-1。
+如果路径具有驱动器号，则将驱动器号作为从 0 到 25 的整数（对应于"A"到"Z"）返回，否则为 -1。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)。
+有关详细信息，请参阅[路径获取驱动器编号](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)。
 
-##  <a name="getextension"></a>CPathT：： Path.getextension 对
+## <a name="cpathtgetextension"></a><a name="getextension"></a>CPathT：获取扩展
 
-调用此方法可从路径获取文件扩展名。
+调用此方法从路径获取文件扩展名。
 
 ```
 StringType GetExtension() const;
@@ -428,9 +428,9 @@ StringType GetExtension() const;
 
 返回文件扩展名。
 
-##  <a name="isdirectory"></a>CPathT::IsDirectory
+## <a name="cpathtisdirectory"></a><a name="isdirectory"></a>CPathT：是目录
 
-调用此方法以检查路径是否为有效的目录。
+调用此方法以检查路径是否为有效目录。
 
 ```
 BOOL IsDirectory() const;
@@ -438,15 +438,15 @@ BOOL IsDirectory() const;
 
 ### <a name="return-value"></a>返回值
 
-如果路径是目录，则返回非零值（16），否则返回 FALSE。
+如果路径是目录，则返回非零值 （16），否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 有关详细信息，请参阅[PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)。
 
-##  <a name="isfilespec"></a>CPathT::IsFileSpec
+## <a name="cpathtisfilespec"></a><a name="isfilespec"></a>CPathT：是文件规格
 
-调用此方法可在路径中搜索任何路径分隔字符（例如，"：" 或 "\\"）。 如果不存在路径分隔字符，则将路径视为文件规范路径。
+调用此方法以搜索路径以查找任何路径分隔字符（例如，"："或''）。\\ 如果不存在路径分隔字符，则路径被视为文件规格路径。
 
 ```
 BOOL IsFileSpec() const;
@@ -454,13 +454,13 @@ BOOL IsFileSpec() const;
 
 ### <a name="return-value"></a>返回值
 
-如果路径中没有任何路径分隔字符，则返回 TRUE; 如果有路径分隔字符，则返回 FALSE。
+如果路径中没有路径分隔字符，则返回 TRUE;如果存在路径分隔字符，则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)。
+有关详细信息，请参阅[PathisFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)。
 
-##  <a name="isprefix"></a>CPathT::IsPrefix
+## <a name="cpathtisprefix"></a><a name="isprefix"></a>CPathT：isprefix
 
 调用此方法以确定路径是否包含*pszPrefix*传递的类型的有效前缀。
 
@@ -471,19 +471,19 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>参数
 
 *pszPrefix*<br/>
-要搜索的前缀。 前缀为以下类型之一： "C： \\ \\"、"."、".."、".."。\\ \\ "。
+要为其搜索的前缀。 前缀是以下类型之一："C："，"."，"."，"."，"."."."."."."\\\\\\\\".
 
 ### <a name="return-value"></a>返回值
 
-如果路径包含前缀，则返回 TRUE; 否则返回 FALSE。
+如果路径包含前缀，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)。
+有关详细信息，请参阅[路径前缀](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)。
 
-##  <a name="isrelative"></a>CPathT::IsRelative
+## <a name="cpathtisrelative"></a><a name="isrelative"></a>CPathT：相对
 
-调用此方法以确定路径是否为相对路径。
+调用此方法以确定路径是否相对。
 
 ```
 BOOL IsRelative() const;
@@ -491,13 +491,13 @@ BOOL IsRelative() const;
 
 ### <a name="return-value"></a>返回值
 
-如果路径是相对路径，则返回 TRUE; 否则返回 FALSE。
+如果路径是相对的，则返回 TRUE;如果路径是绝对的，则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)。
+有关详细信息，请参阅[路径相关](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)。
 
-##  <a name="isroot"></a>CPathT：： IsRoot
+## <a name="cpathtisroot"></a><a name="isroot"></a>CPathT：是根
 
 调用此方法以确定路径是否为目录根。
 
@@ -507,15 +507,15 @@ BOOL IsRoot() const;
 
 ### <a name="return-value"></a>返回值
 
-如果路径是根路径，则返回 TRUE; 否则返回 FALSE。
+如果路径是根，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)。
+有关详细信息，请参阅[PathIsroot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)。
 
-##  <a name="issameroot"></a>CPathT::IsSameRoot
+## <a name="cpathtissameroot"></a><a name="issameroot"></a>CPathT：：IsSameRoot
 
-调用此方法以确定另一个路径是否具有具有当前路径的公共根组件。
+调用此方法以确定另一个路径是否具有与当前路径的通用根组件。
 
 ```
 BOOL IsSameRoot(PCXSTR pszOther) const;
@@ -524,19 +524,19 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 ### <a name="parameters"></a>参数
 
 *pszOther*<br/>
-其他路径。
+另一条路径。
 
 ### <a name="return-value"></a>返回值
 
-如果两个字符串具有相同的根组件，则返回 TRUE; 否则返回 FALSE。
+如果两个字符串具有相同的根组件，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)。
+有关详细信息，请参阅[路径IsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)。
 
-##  <a name="isunc"></a>CPathT::IsUNC
+## <a name="cpathtisunc"></a><a name="isunc"></a>CPathT：ISUNC
 
-调用此方法以确定路径是否为服务器和共享的有效 UNC （通用命名约定）路径。
+调用此方法以确定路径是否是服务器和共享的有效 UNC（通用命名约定）路径。
 
 ```
 BOOL IsUNC() const;
@@ -544,15 +544,15 @@ BOOL IsUNC() const;
 
 ### <a name="return-value"></a>返回值
 
-如果路径是有效的 UNC 路径，则返回 TRUE; 否则返回 FALSE。
+如果路径是有效的 UNC 路径，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)。
+有关详细信息，请参阅[PathisUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)。
 
-##  <a name="isuncserver"></a>CPathT::IsUNCServer
+## <a name="cpathtisuncserver"></a><a name="isuncserver"></a>CPathT：isUNCServer
 
-调用此方法以确定路径是否为服务器的有效 UNC （通用命名约定）路径。
+调用此方法以确定路径是否仅是服务器的有效 UNC（通用命名约定）路径。
 
 ```
 BOOL IsUNCServer() const;
@@ -560,15 +560,15 @@ BOOL IsUNCServer() const;
 
 ### <a name="return-value"></a>返回值
 
-如果字符串是仅适用于服务器的有效 UNC 路径（无共享名称），则返回 TRUE; 否则返回 FALSE。
+如果字符串仅针对服务器（无共享名称）或 FALSE 为"FALSE"，则返回 TRUE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)。
+有关详细信息，请参阅[PathisUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)。
 
-##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare
+## <a name="cpathtisuncservershare"></a><a name="isuncservershare"></a>CPathT：isUNCServer共享
 
-调用此方法以确定路径是否为有效的 UNC （通用命名约定）共享路径，\\ \ *server* \ *共享*。
+调用此方法以确定路径是否是有效的 UNC（通用命名约定）共享路径、\\\ *服务器*\ *共享*。
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,13 +576,13 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>返回值
 
-如果路径 \\ \ *server* \ *共享*格式，则返回 TRUE; 否则返回 FALSE。
+如果路径\\\ *位于服务器*\ *共享*窗体中，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)。
+有关详细信息，请参阅[PathisUNCServer 共享](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)。
 
-##  <a name="m_strpath"></a>CPathT::m_strPath
+## <a name="cpathtm_strpath"></a><a name="m_strpath"></a>CPathT：m_strPath
 
 路径。
 
@@ -592,11 +592,11 @@ StringType m_strPath;
 
 ### <a name="remarks"></a>备注
 
-`StringType` 是 `CPathT` 的模板参数。
+`StringType`是 的`CPathT`模板参数。
 
-##  <a name="makepretty"></a>CPathT::MakePretty
+## <a name="cpathtmakepretty"></a><a name="makepretty"></a>CPathT：：制作漂亮
 
-调用此方法可将路径转换为所有小写字符，以便为路径指定一致的外观。
+调用此方法可将路径转换为所有小写字符，以使路径的外观一致。
 
 ```
 BOOL MakePretty();
@@ -604,13 +604,13 @@ BOOL MakePretty();
 
 ### <a name="return-value"></a>返回值
 
-如果路径已转换，则返回 TRUE; 否则返回 FALSE。
+如果路径已转换，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)。
+有关详细信息，请参阅[PathMake"美丽](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)"。
 
-##  <a name="matchspec"></a>CPathT::MatchSpec
+## <a name="cpathtmatchspec"></a><a name="matchspec"></a>CPathT：：匹配规格
 
 调用此方法以搜索包含通配符匹配类型的字符串的路径。
 
@@ -621,19 +621,19 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="parameters"></a>参数
 
 *pszSpec*<br/>
-指向要搜索的文件类型的以 null 结尾的字符串的指针。 例如，若要测试当前路径中的文件是否为 DOC 文件，应将*pszSpec*设置为 "* .doc"。
+指向具有要搜索的文件类型的 null 终止字符串的指针。 例如，要测试当前路径上的文件是否是 DOC 文件，应将*pszSpec*设置为"*.doc"。
 
 ### <a name="return-value"></a>返回值
 
-如果字符串匹配，则返回 TRUE; 否则返回 FALSE。
+如果字符串匹配，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)。
+有关详细信息，请参阅[路径匹配Spec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)。
 
-##  <a name="operator_add_eq"></a>CPathT：： operator + =
+## <a name="cpathtoperator-"></a><a name="operator_add_eq"></a>CPathT：：操作员 |
 
-此运算符将字符串附加到路径。
+此运算符将字符串追加到路径中。
 
 ```
 CPathT<StringType>& operator+=(PCXSTR pszMore);
@@ -648,9 +648,9 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 返回更新的路径。
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT：： operator const StringType &amp;
+## <a name="cpathtoperator-const-stringtype-amp"></a><a name="operator_const_stringtype_amp"></a>CPathT：：运算符 const 字符串类型&amp;
 
-此运算符允许将对象视为一个字符串。
+此运算符允许将对象视为字符串。
 
 ```
 operator const StringType&() const throw();
@@ -658,11 +658,11 @@ operator const StringType&() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回一个字符串，该字符串表示由此对象管理的当前路径。
+返回表示此对象管理的当前路径的字符串。
 
-##  <a name="operator_cpatht__pcxstr"></a>CPathT：： operator CPathT：:P CXSTR
+## <a name="cpathtoperator-cpathtpcxstr"></a><a name="operator_cpatht__pcxstr"></a>CPathT：：操作员 CPathT：:PCXSTR
 
-此运算符允许将对象视为一个字符串。
+此运算符允许将对象视为字符串。
 
 ```
 operator PCXSTR() const throw();
@@ -670,11 +670,11 @@ operator PCXSTR() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回一个字符串，该字符串表示由此对象管理的当前路径。
+返回表示此对象管理的当前路径的字符串。
 
-##  <a name="operator_stringtype_amp"></a>CPathT：： operator StringType &amp;
+## <a name="cpathtoperator-stringtype-amp"></a><a name="operator_stringtype_amp"></a>CPathT：：运算符字符串类型&amp;
 
-此运算符允许将对象视为一个字符串。
+此运算符允许将对象视为字符串。
 
 ```
 operator StringType&() throw();
@@ -682,9 +682,9 @@ operator StringType&() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回一个字符串，该字符串表示由此对象管理的当前路径。
+返回表示此对象管理的当前路径的字符串。
 
-##  <a name="pcxstr"></a>CPathT：:P CXSTR
+## <a name="cpathtpcxstr"></a><a name="pcxstr"></a>CPathT：:PCXSTR
 
 常量字符串类型。
 
@@ -694,11 +694,11 @@ typedef StringType::PCXSTR PCXSTR;
 
 ### <a name="remarks"></a>备注
 
-`StringType` 是 `CPathT` 的模板参数。
+`StringType`是 的`CPathT`模板参数。
 
-##  <a name="pxstr"></a>CPathT：:P XSTR
+## <a name="cpathtpxstr"></a><a name="pxstr"></a>CPathT：:PXSTR
 
-字符串类型。
+一种字符串类型。
 
 ```
 typedef StringType::PXSTR PXSTR;
@@ -706,23 +706,23 @@ typedef StringType::PXSTR PXSTR;
 
 ### <a name="remarks"></a>备注
 
-`StringType` 是 `CPathT` 的模板参数。
+`StringType`是 的`CPathT`模板参数。
 
-##  <a name="quotespaces"></a>CPathT::QuoteSpaces
+## <a name="cpathtquotespaces"></a><a name="quotespaces"></a>CPathT：：报价空间
 
-如果路径包含空格，则调用此方法将路径用引号引起来。
+如果路径包含任何空格，则调用此方法以引号括上路径。
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)。
+有关详细信息，请参阅[路径报价空间](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)。
 
-##  <a name="relativepathto"></a>CPathT::RelativePathTo
+## <a name="cpathtrelativepathto"></a><a name="relativepathto"></a>CPatht：：相对路径
 
-调用此方法可创建从一个文件或文件夹到另一个文件或文件夹的相对路径。
+调用此方法以创建从一个文件或文件夹到另一个文件或文件夹的相对路径。
 
 ```
 BOOL RelativePathTo(
@@ -734,77 +734,77 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>参数
 
-*pszFrom*<br/>
+*psz 从*<br/>
 相对路径的开头。
 
-*dwAttrFrom*<br/>
-*PszFrom*的文件属性。 如果此值包含 FILE_ATTRIBUTE_DIRECTORY，则假定*pszFrom*为目录;否则， *pszFrom*将被假定为文件。
+*dwAttr 从*<br/>
+*pszfrom*的文件属性。 如果此值包含FILE_ATTRIBUTE_DIRECTORY，则*pszFrom*假定为目录;如果此值包含 FILE_ATTRIBUTE_DIRECTORY，则 pszFrom 假定为目录。否则 *，pszFrom*假定为文件。
 
-*pszTo*<br/>
-相对路径的终结点。
+*pszto*<br/>
+相对路径的终点。
 
-*dwAttrTo*<br/>
-*PszTo*的文件属性。 如果此值包含 FILE_ATTRIBUTE_DIRECTORY，则假定*pszTo*为目录;否则， *pszTo*将被假定为文件。
+*德沃特尔托*<br/>
+*pszTo*的文件属性。 如果此值包含FILE_ATTRIBUTE_DIRECTORY，则*pszTo*假定为目录;如果此值包含 FILE_ATTRIBUTE_DIRECTORY，则 pszTo 假定为目录。否则 *，pszTo*假定为文件。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)。
+有关详细信息，请参阅[路径相对路径。](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)
 
-##  <a name="removeargs"></a>CPathT::RemoveArgs
+## <a name="cpathtremoveargs"></a><a name="removeargs"></a>CPathT：：删除阿格
 
-调用此方法可从路径中删除任何命令行参数。
+调用此方法从路径中删除任何命令行参数。
 
-```
+```cpp
 void RemoveArgs();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)。
+有关详细信息，请参阅[路径删除 。](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)
 
-##  <a name="removebackslash"></a>CPathT::RemoveBackslash
+## <a name="cpathtremovebackslash"></a><a name="removebackslash"></a>CPathT：：删除反斜杠
 
-调用此方法可删除路径中的尾部反斜杠。
+调用此方法以从路径中删除尾随反斜杠。
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)。
+有关详细信息，请参阅[路径删除反斜杠](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)。
 
-##  <a name="removeblanks"></a>CPathT::RemoveBlanks
+## <a name="cpathtremoveblanks"></a><a name="removeblanks"></a>CPathT：：删除空白
 
-调用此方法可从路径中删除所有前导空格和尾随空格。
+调用此方法从路径中删除所有前导空格和尾随空格。
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)。
+有关详细信息，请参阅[路径删除空白](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)。
 
-##  <a name="removeextension"></a>CPathT::RemoveExtension
+## <a name="cpathtremoveextension"></a><a name="removeextension"></a>CPathT：：删除扩展
 
-调用此方法可删除路径中的文件扩展名（如果有）。
+调用此方法以从路径中删除文件扩展名（如果有）。
 
-```
+```cpp
 void RemoveExtension();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)。
+有关详细信息，请参阅[路径删除扩展](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)。
 
-##  <a name="removefilespec"></a>CPathT::RemoveFileSpec
+## <a name="cpathtremovefilespec"></a><a name="removefilespec"></a>CPathT：：删除文件规格
 
-调用此方法可删除路径中的尾随文件名和反斜杠（如果有）。
+调用此方法以从路径中删除尾随文件名和反斜杠（如果有）。
 
 ```
 BOOL RemoveFileSpec();
@@ -812,15 +812,15 @@ BOOL RemoveFileSpec();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)。
+有关详细信息，请参阅[路径删除文件Spec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)。
 
-##  <a name="renameextension"></a>CPathT::RenameExtension
+## <a name="cpathtrenameextension"></a><a name="renameextension"></a>CPathT：：重命名扩展
 
-调用此方法可将路径中的文件扩展名替换为新扩展名。 如果文件名不包含扩展名，则扩展将附加到路径的末尾。
+调用此方法以将路径中的文件名扩展名替换为新的扩展名。 如果文件名不包含扩展名，则扩展名将附加到路径的末尾。
 
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -828,20 +828,20 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>参数
 
-*pszExtension*<br/>
-新文件扩展名，前面加一个 "." 字符。
+*psz 扩展*<br/>
+新的文件名扩展名，前面有一个"." 字符。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE，否则返回 FALSE。
+成功时返回 TRUE，在失败时返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)。
+有关详细信息，请参阅[路径重新命名扩展](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)。
 
-##  <a name="skiproot"></a>CPathT::SkipRoot
+## <a name="cpathtskiproot"></a><a name="skiproot"></a>CPathT：：跳过根
 
-调用此方法可分析路径，忽略驱动器号或 UNC （通用命名约定）服务器/共享路径部分。
+调用此方法以分析路径，忽略驱动器号或 UNC（通用命名约定）服务器/共享路径部件。
 
 ```
 int SkipRoot() const;
@@ -849,27 +849,27 @@ int SkipRoot() const;
 
 ### <a name="return-value"></a>返回值
 
-返回位于根（驱动器号或 UNC 服务器/共享）后面的子路径开头的位置。
+返回根（驱动器号或 UNC 服务器/共享）后面的子路径的开头的位置。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)。
+有关详细信息，请参阅[路径跳过根](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)。
 
-##  <a name="strippath"></a>CPathT::StripPath
+## <a name="cpathtstrippath"></a><a name="strippath"></a>CPathT：：条带路径
 
-调用此方法可删除完全限定路径和文件名的路径部分。
+调用此方法以删除完全限定的路径和文件名的路径部分。
 
-```
+```cpp
 void StripPath();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)。
+有关详细信息，请参阅[路径条带路径](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)。
 
-##  <a name="striptoroot"></a>CPathT::StripToRoot
+## <a name="cpathtstriptoroot"></a><a name="striptoroot"></a>CPatht：：条纹根
 
-调用此方法可删除路径的所有部分（根信息除外）。
+调用此方法以删除路径的所有部分，但根信息除外。
 
 ```
 BOOL StripToRoot();
@@ -877,25 +877,25 @@ BOOL StripToRoot();
 
 ### <a name="return-value"></a>返回值
 
-如果在路径中找到了有效的驱动器号，则返回 TRUE; 否则返回 FALSE。
+如果在路径中找到有效的驱动器号，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)。
+有关详细信息，请参阅[路径条块](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)。
 
-##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces
+## <a name="cpathtunquotespaces"></a><a name="unquotespaces"></a>CPathT：无引号空格
 
-调用此方法可删除路径开头和末尾的引号。
+调用此方法以从路径的开头和结尾删除引号。
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)。
+有关详细信息，请参阅[路径取消引用空格](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)。
 
-##  <a name="xchar"></a>CPathT::XCHAR
+## <a name="cpathtxchar"></a><a name="xchar"></a>CPathT：XCHAR
 
 一个字符类型。
 
@@ -905,7 +905,7 @@ typedef StringType::XCHAR XCHAR;
 
 ### <a name="remarks"></a>备注
 
-`StringType` 是 `CPathT` 的模板参数。
+`StringType`是 的`CPathT`模板参数。
 
 ## <a name="see-also"></a>请参阅
 

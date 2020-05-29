@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-ms.openlocfilehash: 47bb81827bb6ae1f580ff907be6c0acf7139a29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c5204239909e579fa93006e245e3841b7fb64eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299733"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197452"
 ---
 # <a name="bscmake-warning-bk4502"></a>BSCMAKE 警告 BK4502
 
-被截断。SBR 文件不在文件名中的 i
+截断.不在文件名中的 .SBR 文件 "filename"
 
-更新期间指定了长度为零的.sbr 文件最初不是.bsc 文件的一部分。
+在更新过程中未指定最初不属于 .bsc 文件的零长度 .sbr 文件。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 指定的文件名出错。
+1. 指定的文件名不正确。
 
-1. 已删除的文件。 (错误[BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md)结果。)
+1. 文件已删除。 （错误[BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md)结果。）
 
-1. 文件已损坏，需要 BSCMAKE 可执行完整生成。
+1. 文件已损坏，要求 BSCMAKE 执行完整生成。

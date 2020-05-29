@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
 ms.openlocfilehash: 974c32cef87801599ba0d14fd146e84ad874467f
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273732"
@@ -26,27 +26,27 @@ ms.locfileid: "62273732"
 
 通过在 .def 文件中导出函数，您可以控制导出序号。 将导出函数添加到 DLL 后，您可以为其赋予高于任何其他导出函数的序号值。 执行此操作后，使用隐式链接的应用程序不必与包含新函数的导入库重新链接。 如果您要设计由很多应用程序使用的 DLL，那么这非常方便，因为您可以添加新功能，并可以确保该 DLL 可以继续正确地用于已依赖于它的应用程序。 例如，MFC DLL 是使用 .def 文件生成的。
 
-使用 .def 文件的另一个优点是您可以使用 `NONAME` 特性导出函数。 这只会将序号放入 DLL 中的导出表。 对于具有大量导出函数的 DLL，使用 `NONAME` 特性可以减小 DLL 文件的大小。 有关如何编写模块定义语句的信息，请参阅[模块定义语句的规则](reference/rules-for-module-definition-statements.md)。 有关序号导出的信息，请参阅[从按序号而不是按名称的 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
+使用 .def 文件的另一个优点是您可以使用 `NONAME` 特性导出函数。 这只会将序号放入 DLL 中的导出表。 对于具有大量导出函数的 DLL，使用 `NONAME` 特性可以减小 DLL 文件的大小。 有关如何编写模块定义语句的信息，请参阅[模块定义语句的规则](reference/rules-for-module-definition-statements.md)。 有关序号导出的信息，请参阅[按序号而不是按名称从 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
 
-使用.def 文件的缺点是，如果要导出中的函数C++文件中，您必须将修饰的名放入.def 文件或者通过使用 extern"C"，以避免名称修饰已完成的定义导出的函数的 MSVC 编译器。
+使用 .def 文件的缺点是：如果在 C++ 文件中导出函数，则必须将修饰名放入 .def 文件，或者使用外部“C”定义导出函数以避免 MSVC 编译器进行名称重整。
 
-如果将修饰的名放在.def 文件中，你可以通过使用获取它们[DUMPBIN](reference/dumpbin-reference.md)工具或通过使用链接器[/map](reference/map-generate-mapfile.md)选项。 编译器生成的修饰名是编译器特定的；因此，如果将编译器生成的修饰名放入.def 文件，则链接到 DLL 的应用程序也必须使用相同版本的编译器生成，以便让调用应用程序中的修饰名与 DLL 的 .def 文件中的导出的名称相匹配。
+如果将修饰名放入 .def 文件，则可以使用 [DUMPBIN](reference/dumpbin-reference.md) 工具或连接器 [/MAP](reference/map-generate-mapfile.md) 选项来获取这些修饰名。 编译器生成的修饰名是编译器特定的；因此，如果将编译器生成的修饰名放入.def 文件，则链接到 DLL 的应用程序也必须使用相同版本的编译器生成，以便让调用应用程序中的修饰名与 DLL 的 .def 文件中的导出的名称相匹配。
 
-## <a name="pros-and-cons-of-using-declspecdllexport"></a>使用 __declspec （dllexport） 的优点和缺点
+## <a name="pros-and-cons-of-using-__declspecdllexport"></a>使用 __declspec(dllexport) 的优缺点
 
 使用 `__declspec(dllexport)` 非常方便，因为您不必为维护 .def 文件和获取导出函数的修饰名操心。 但是，这种效用受限于您要重新生成的链接应用程序的数量。 如果使用新导出重新生成 DLL，则还必须重新生成应用程序，因为如果使用不同版本的编译器重新生成 DLL，导出的 C++ 函数的修饰名可能会发生变化。
 
 ### <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [导出从 DLL 使用。DEF 文件](exporting-from-a-dll-using-def-files.md)
+- [使用 .DEF 文件从 DLL 导出](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec(dllexport) 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [使用 AFX_EXT_CLASS 导出和导入](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出 C++ 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [导出 C 函数以用于 C 或C++-语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [导出 C 函数以用于 C 或 C++ 语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [使用 __declspec(dllimport) 导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -58,7 +58,7 @@ ms.locfileid: "62273732"
 
 - [相互导入](mutual-imports.md)
 
-- [修饰的名](reference/decorated-names.md)
+- [修饰名](reference/decorated-names.md)
 
 ## <a name="see-also"></a>请参阅
 

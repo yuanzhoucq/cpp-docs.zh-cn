@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182262"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369449"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 类
 
@@ -29,13 +29,13 @@ class CCommonDialog : public CDialog
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CCommonDialog::CCommonDialog](#ccommondialog)|构造 `CCommonDialog` 对象。|
+|[C 公共对话：C 公共对话](#ccommondialog)|构造 `CCommonDialog` 对象。|
 
 ## <a name="remarks"></a>备注
 
-下列类能封装 Windows 公共对话框的功能：
+以下类封装了 Windows 通用对话框的功能：
 
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
@@ -67,9 +67,9 @@ class CCommonDialog : public CDialog
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdlgs.h
+**标题：** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>C 公共对话：C 公共对话
 
 构造 `CCommonDialog` 对象。
 
@@ -79,18 +79,18 @@ explicit CCommonDialog(CWnd* pParentWnd);
 
 ### <a name="parameters"></a>参数
 
-*pParentWnd*<br/>
-指向父或所有者窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象属于的。 如果它为 NULL，对话框对象的父窗口设置为应用程序主窗口。
+*pparentwnd*<br/>
+指向对话框对象所属的父窗口或所有者窗口对象[（CWnd](../../mfc/reference/cwnd-class.md)类型）。 如果为 NULL，则对话框对象的父窗口将设置为主应用程序窗口。
 
 ### <a name="remarks"></a>备注
 
-请参阅[CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog)的完整信息。
+有关详细信息[，请参阅 CDialog：CDialog。](../../mfc/reference/cdialog-class.md#cdialog)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CDialog 类](../../mfc/reference/cdialog-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[CFileDialog 类](../../mfc/reference/cfiledialog-class.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[文件对话类](../../mfc/reference/cfiledialog-class.md)<br/>
 [CFontDialog 类](../../mfc/reference/cfontdialog-class.md)<br/>
 [CColorDialog 类](../../mfc/reference/ccolordialog-class.md)<br/>
 [CPageSetupDialog 类](../../mfc/reference/cpagesetupdialog-class.md)<br/>

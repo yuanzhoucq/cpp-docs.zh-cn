@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0009
 ms.assetid: 89291778-cda4-495d-983f-ddcc06dfc98b
-ms.openlocfilehash: 963b7c861f9e8ee7105ebdc23afff08c4be46465
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d02325504b04a13cd15dee0bd70891bf5a63b62e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359496"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192952"
 ---
 # <a name="project-build-error-prj0009"></a>项目生成错误 PRJ0009
 
-生成无法打开日志，以进行写入。
+未能打开生成日志以进行写入。
 
-**请确保文件未被另一个进程打开并且未被写保护。**
+**请确保该文件未被其他进程打开并且未被写保护。**
 
-设置后**生成日志记录**属性设置为**是**执行生成或重新生成，视觉对象和C++无法以独占方式打开生成日志。
+在将**生成日志记录**属性设置为 **"是"** 并执行生成或重新C++生成后，视觉对象无法以独占模式打开生成日志。
 
-检查**生成日志记录**通过打开设置**选项**对话框中 (在**工具**菜单上，单击**选项**命令)，然后选择**VC + + Build**中**项目**文件夹。 生成文件为 buildlog.htm，并且会写入到中间目录 $(IntDir)。
+通过打开 "**选项**" 对话框（在 "**工具**" 菜单上单击 "**选项**" 命令），然后选择 "**项目**" 文件夹中的 " **VC + + 生成**" 来检查**生成日志记录**设置。 生成文件称为 Buildlog.htm，并写入中间目录 $ （IntDir）。
 
 此错误的可能原因：
 
-- 运行视觉对象的两个进程C++和尝试同时生成的同一个项目在这种相同的配置。
+- 正在运行两个视觉C++进程，并尝试同时在这两个过程中生成相同项目的相同配置。
 
 - 在锁定文件的进程中打开生成日志文件。
 
-- 用户没有权限创建的文件。
+- 用户没有创建文件的权限。
 
-- 当前用户没有写访问权限的文件的 BuildLog.htm。
+- 当前用户对文件 Buildlog.htm 没有写入访问权限。

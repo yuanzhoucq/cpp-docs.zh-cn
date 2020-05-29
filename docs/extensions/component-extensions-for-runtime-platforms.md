@@ -1,7 +1,7 @@
 ---
 title: 适用于 .NET 和 UWP 的组件扩展
 ms.date: 10/12/2018
-ms.topic: reference
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172460"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>适用于 .NET 和 UWP 的组件扩展
 
@@ -37,12 +37,12 @@ C++/CX 扩展是 C++/CLI 的子集。 虽然扩展语法在大多数情况下是
 
 下表列出了 C++ 语言扩展中的关键字。
 
-|关键字|区分上下文|目标|参考|
+|关键字|区分上下文|用途|参考|
 |-------------|-----------------------|-------------|---------------|
-|**ref class**<br /><br /> **ref struct**|No|声明类。|[类和结构](classes-and-structs-cpp-component-extensions.md)|
-|**value class**<br /><br /> **value struct**|No|声明值类。|[类和结构](classes-and-structs-cpp-component-extensions.md)|
-|**接口类**<br /><br /> **interface struct**|No|声明接口。|[接口类](interface-class-cpp-component-extensions.md)|
-|**枚举类**<br /><br /> **enum struct**|No|声明枚举。|[枚举类](enum-class-cpp-component-extensions.md)|
+|**ref class**<br /><br /> **ref struct**|否|声明类。|[类和结构](classes-and-structs-cpp-component-extensions.md)|
+|**value class**<br /><br /> **value struct**|否|声明值类。|[类和结构](classes-and-structs-cpp-component-extensions.md)|
+|**接口类**<br /><br /> **interface struct**|否|声明接口。|[接口类](interface-class-cpp-component-extensions.md)|
+|**枚举类**<br /><br /> **enum struct**|否|声明枚举。|[枚举类](enum-class-cpp-component-extensions.md)|
 |**属性**|是|声明属性。|[属性](property-cpp-component-extensions.md)|
 |**delegate**|是|声明委托。|[委托 (C++/CLI 和 C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|是|声明事件。|[event](event-cpp-component-extensions.md)|
@@ -51,10 +51,10 @@ C++/CX 扩展是 C++/CLI 的子集。 虽然扩展语法在大多数情况下是
 
 可以使用下列关键字来限定派生的替代行为。 虽然 new 关键字不是 C++ 的扩展，但仍将它列于此处是因为它可用于其他上下文。 某些说明符还可用于本机编程。 有关详细信息，请参阅[如何：在本机编译中声明重写说明符 (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。
 
-|关键字|区分上下文|目标|参考|
+|关键字|区分上下文|用途|参考|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|是|指示函数或类是抽象的。|[abstract](abstract-cpp-component-extensions.md)|
-|**new**|No|指示函数不替代基类版本。|[新（vtable 中的新槽）](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**new**|否|指示函数不替代基类版本。|[新（vtable 中的新槽）](new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|是|指示方法必须替代基类版本。|[override](override-cpp-component-extensions.md)|
 |**sealed**|是|防止类用作基类。|[sealed](sealed-cpp-component-extensions.md)|
 
@@ -62,30 +62,30 @@ C++/CX 扩展是 C++/CLI 的子集。 虽然扩展语法在大多数情况下是
 
 已添加下列关键字来支持泛型类型。 有关详细信息，请参阅[泛型](generics-cpp-component-extensions.md)。
 
-|关键字|区分上下文|目标|
+|关键字|区分上下文|用途|
 |-------------|-----------------------|-------------|
-|**generic**|No|声明泛型类型。|
+|**generic**|否|声明泛型类型。|
 |**where**|是|指定应用于泛型类型参数的约束。|
 
 ## <a name="miscellaneous-keywords"></a>杂项关键字
 
 C++ 扩展中已添加下列关键字。
 
-|关键字|区分上下文|目标|参考|
+|关键字|区分上下文|用途|参考|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|是|指示默认异常处理行为。|[异常处理](exception-handling-cpp-component-extensions.md)|
-|**for each, in**|No|枚举集合元素。|[for each, in](../dotnet/for-each-in.md)|
-|**gcnew**|No|分配垃圾回收堆上的类型。 用它代替 new 和 delete。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**for each, in**|否|枚举集合元素。|[for each, in](../dotnet/for-each-in.md)|
+|**gcnew**|否|分配垃圾回收堆上的类型。 用它代替 new 和 delete。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|是|分配 Windows 运行时类型。 用它代替 new 和 delete。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|是|指示只能在声明时或在静态构造函数中初始化成员。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**名称**|是|创建文本变量。|[名称](literal-cpp-component-extensions.md)|
-|**nullptr**|No|指示图柄或指针不指向对象。|[nullptr](nullptr-cpp-component-extensions.md)|
+|**nullptr**|否|指示图柄或指针不指向对象。|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>模板构造
 
 下列语言构造作为模板而非关键字实现。 如果指定 `/ZW` 编译器选项，它们将在 `lang` 命名空间中定义。 如果指定 `/clr` 编译器选项，它们将在 `cli` 命名空间中定义。
 
-|关键字|目标|参考|
+|关键字|用途|参考|
 |-------------|-------------|---------------|
 |**array**|声明数组。|[数组](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|（仅限 CLR）指向引用类型中的数据。|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ C++ 扩展中已添加下列关键字。
 
 下列类型声明符指示运行时自动管理已分配对象的生存期和删除。
 
-|运算符|目标|参考|
+|Operator|用途|参考|
 |--------------|-------------|---------------|
 |`^`|声明指向对象的句柄；即指向 Windows 运行时或不再可用时自动删除的 CLR 对象的指针。|[对象句柄运算符 (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|声明跟踪引用；即对 Windows 运行时或不再可用时自动删除的 CLR 对象的引用。|[跟踪引用运算符](tracking-reference-operator-cpp-component-extensions.md)|
@@ -106,12 +106,12 @@ C++ 扩展中已添加下列关键字。
 
 本节列出了其他编程构造以及与 CLR 相关的主题。
 
-|主题|说明|
+|主题|描述|
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|（Windows 运行时和 CLR）允许使用关键字作为标识符。|
 |[变量自变量列表 (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|（Windows 运行时和 CLR）允许函数使用可变数量参数。|
 |[对应于 C++ 本机类型的 .NET Framework 类型 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|列出替代 C++ 整型类型的 CLR 类型。|
-|[appdomain](../cpp/appdomain.md) __declspec 修饰符|规定每个 AppDomain 都必须存在静态变量和全局变量的 __declspec 修饰符。|
+|[appdomain](../cpp/appdomain.md) **__declspec** modifier|规定每个 AppDomain 都必须存在静态变量和全局变量的 __declspec 修饰符。|
 |[使用 /clr 时的 C 样式强制转换 (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|描述如何解释 C 样式转换。|
 |[__clrcall](../cpp/clrcall.md) 调用约定|指示符合 CLS 的调用约定。|
 |`__cplusplus_cli`|[预定义宏](../preprocessor/predefined-macros.md)|
@@ -122,7 +122,7 @@ C++ 扩展中已添加下列关键字。
 |[装箱](boxing-cpp-component-extensions.md)|演示值类型进行装箱的条件。|
 |[编译器对类型特征的支持](compiler-support-for-type-traits-cpp-component-extensions.md)|讨论如何在编译时检测类型的特征。|
 |[managed、unmanaged](../preprocessor/managed-unmanaged.md) 杂注|演示 managed 和 unmanaged 函数如何共存于同一模块中。|
-|[process](../cpp/process.md) __declspec 修饰符|规定每个 process 都必须存在静态变量和全局变量的 __declspec 修饰符。|
+|[进程](../cpp/process.md) **__declspec**修饰符|规定每个 process 都必须存在静态变量和全局变量的 __declspec 修饰符。|
 |[反射 (C++/CLI)](../dotnet/reflection-cpp-cli.md)|演示运行时类型信息的 CLR 版本。|
 |[字符串](string-cpp-component-extensions.md)|讨论编译器如何将字符串文本转换为 <xref:System.String>。|
 |[类型转发 (C++/CLI)](type-forwarding-cpp-cli.md)|允许将一个传送程序集中的类型移动到另一个程序集，从而使客户端代码无需重新编译。|

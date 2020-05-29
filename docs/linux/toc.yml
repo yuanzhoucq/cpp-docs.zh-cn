@@ -1,50 +1,50 @@
 - name: “使用 Visual Studio C++ 的 Linux”文档
-  href: index.md
+  href: ../linux/index.yml
 - name: 下载、安装和设置 Linux 开发工作负载
-  href: download-install-and-setup-the-linux-development-workload.md
+  href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: 连接到远程 Linux 计算机
   expanded: true
   items:
     - name: 连接到远程 Linux 计算机
-      href: connect-to-your-remote-linux-computer.md
+      href: ../linux/connect-to-your-remote-linux-computer.md
     - name: 设置符合 FIPS 标准的安全远程 Linux 开发
-      href: set-up-fips-compliant-secure-remote-linux-development.md
+      href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: ConnectionManager 引用
-      href: connectionmanager-reference.md
+      href: ../linux/connectionmanager-reference.md
 - name: 新建 Linux 项目
-  href: create-a-new-linux-project.md
+  href: ../linux/create-a-new-linux-project.md
 - name: 配置 Linux 项目
-  href: configure-a-linux-project.md
+  href: ../linux/configure-a-linux-project.md
 - name: 创建和配置 Linux CMake 项目
-  href: cmake-linux-project.md
+  href: ../linux/cmake-linux-project.md
 - name: 配置 Linux 项目以使用地址擦除器
-  href: linux-asan-configuration.md
+  href: ../linux/linux-asan-configuration.md
 - name: 部署、运行和调试 Linux 项目
-  href: deploy-run-and-debug-your-linux-project.md
+  href: ../linux/deploy-run-and-debug-your-linux-project.md
 - name: 教程：在 Visual Studio 中创建 C++ 跨平台项目
   href: ../build/get-started-linux-cmake.md
 - name: Linux 项目属性页参考
   expanded: false
   items:
     - name: Linux 项目属性页参考
-      href: prop-pages-linux.md
+      href: ../linux/prop-pages-linux.md
     - name: 常规属性 (Linux)
-      href: prop-pages/general-linux.md
+      href: ../linux/prop-pages/general-linux.md
     - name: 调试属性 (Linux)
-      href: prop-pages/debugging-linux.md
+      href: ../linux/prop-pages/debugging-linux.md
     - name: VC++ 目录属性 (Linux)
-      href: prop-pages/directories-linux.md
+      href: ../linux/prop-pages/directories-linux.md
     - name: 复制源属性 (Linux)
-      href: prop-pages/copy-sources-project.md
+      href: ../linux/prop-pages/copy-sources-project.md
     - name: C/C++ 属性 (Linux)
-      href: prop-pages/c-cpp-linux.md
+      href: ../linux/prop-pages/c-cpp-linux.md
     - name: 链接器属性 (Linux)
-      href: prop-pages/linker-linux.md
+      href: ../linux/prop-pages/linker-linux.md
     - name: 生成事件属性 (Linux)
-      href: prop-pages/build-events-linux.md
+      href: ../linux/prop-pages/build-events-linux.md
     - name: 自定义生成步骤属性 (Linux)
-      href: prop-pages/custom-build-step-linux.md
+      href: ../linux/prop-pages/custom-build-step-linux.md
     - name: 生成文件项目属性 (Linux)
-      href: prop-pages/makefile-linux.md
+      href: ../linux/prop-pages/makefile-linux.md
     - name: 远程存档属性 (Linux)
-      href: prop-pages/remote-ar-linux.md
+      href: ../linux/prop-pages/remote-ar-linux.md

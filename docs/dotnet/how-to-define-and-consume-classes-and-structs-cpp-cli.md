@@ -5,18 +5,18 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5bec92ce2bd97f11723cdf59c58b7331b39565f2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447291"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370181"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C++/CLI)
 
-本文介绍如何定义和使用用户定义的引用类型和中的值类型C++/CLI。
+本文演示如何在C++/CLI中定义和使用用户定义的引用类型和值类型。
 
-##  <a name="BKMK_Contents"></a> 内容
+## <a name="contents"></a><a name="BKMK_Contents"></a>内容
 
 [对象实例化](#BKMK_Object_instantiation)
 
@@ -24,23 +24,23 @@ ms.locfileid: "65447291"
 
 [类型可见性](#BKMK_Type_visibility)
 
-[成员的可见性](#BKMK_Member_visibility)
+[成员可见性](#BKMK_Member_visibility)
 
-[公钥和私钥的本机类](#BKMK_Public_and_private_native_classes)
+[公共和私有本机类](#BKMK_Public_and_private_native_classes)
 
 [静态构造函数](#BKMK_Static_constructors)
 
-[语义的 this 指针](#BKMK_Semantics_of_the_this_pointer)
+[此指针的语义](#BKMK_Semantics_of_the_this_pointer)
 
-[按签名隐藏函数](#BKMK_Hide_by_signature_functions)
+[按签名隐藏功能](#BKMK_Hide_by_signature_functions)
 
 [复制构造函数](#BKMK_Copy_constructors)
 
 [析构函数和终结器](#BKMK_Destructors_and_finalizers)
 
-##  <a name="BKMK_Object_instantiation"></a> 对象实例化
+## <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a>对象实例化
 
-引用 (ref) 可以仅将类型实例化托管堆上，不能在堆栈或本机堆上。 值类型可以在堆栈或托管的堆上实例化。
+引用（ref） 类型只能在托管堆上实例化，只能在堆栈上或本机堆上实例化。 值类型可以在堆栈或托管堆上实例化。
 
 ```cpp
 // mcppv2_ref_class2.cpp
@@ -93,13 +93,13 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Implicitly_abstract_classes"></a> 隐式抽象类
+## <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a>隐式抽象类
 
-*隐式抽象类*不能实例化。 如果类的基类型是一个接口和类未实现的所有接口的成员函数，类是隐式抽象。
+无法实例化*隐式抽象类*。 如果类的基类型是接口，并且类未实现接口的所有成员函数，则类是隐式抽象的。
 
-如果你不能构造中从接口派生的类的对象，原因可能是此类是隐式抽象。 有关抽象类的详细信息，请参阅[抽象](../extensions/abstract-cpp-component-extensions.md)。
+如果无法从从接口派生的类构造对象，原因可能是该类是隐式抽象的。 有关抽象类的详细信息，请参阅[抽象](../extensions/abstract-cpp-component-extensions.md)。
 
-下面的代码示例演示`MyClass`不能实例化类，因为函数`MyClass::func2`未实现。 若要启用要编译的示例，请取消注释`MyClass::func2`。
+以下代码示例演示了由于函数`MyClass``MyClass::func2`未实现而无法实例化类。 要使示例编译，请取消注释`MyClass::func2`。
 
 ```cpp
 // mcppv2_ref_class5.cpp
@@ -121,17 +121,17 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Type_visibility"></a> 类型可见性
+## <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a>类型可见性
 
-您可以控制公共语言运行时 (CLR) 类型的可见性，以便引用程序集，如果程序集中的类型可以是可见或程序集外部不可见。
+您可以控制通用语言运行时 （CLR） 类型的可见性，以便在引用程序集时，程序集中的类型可以在程序集外部可见或不可见。
 
-`public` 指示类型是否包含任何源文件可见`#using`指令包含的类型的程序集。  `private` 指示类型不可见的包含源文件`#using`指令包含的类型的程序集。 但是，专用类型都是相同的程序集内可见的。 默认情况下，一个类的可见性是`private`。
+`public`指示类型对包含该类型的程序集的`#using`指令的任何源文件都可见。  `private`指示类型对于包含该类型的程序集的`#using`指令的源文件不可见。 但是，私有类型在同一程序集中可见。 默认情况下，类的可见性为`private`。
 
-默认情况下，在 Visual Studio 2005 之前的本机类型必须在程序集外部的公共可访问性。 启用[编译器警告 （等级 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以帮助您查看私有本机类型使用不正确。 使用[make_public](../preprocessor/make-public.md)杂注提供公共可访问性不能修改源代码文件中的本机类型。
+默认情况下，在 Visual Studio 2005 之前，本机类型具有程序集外部的公共可访问性。 启用[编译器警告（级别 1） C4692，](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以帮助您查看私有本机类型的使用不正确的位置。 使用[make_public](../preprocessor/make-public.md)实用新型为源代码文件中无法修改的本机类型提供公共可访问。
 
 有关详细信息，请参阅 [#using 指令](../preprocessor/hash-using-directive-cpp.md)。
 
-下面的示例演示如何声明类型并指定其可访问性，然后访问这些类型在程序集中。 当然，如果具有私有类型的程序集引用使用`#using`、 只在程序集中的公共类型都是可见。
+下面的示例演示如何声明类型并指定其可访问性，然后在程序集中访问这些类型。 当然，如果使用 引用具有私有类型的程序集`#using`，则只有程序集中的公共类型可见。
 
 ```cpp
 // type_visibility.cpp
@@ -173,7 +173,7 @@ in Private_Class
 in Private_Class_2
 ```
 
-现在，让我们重新编写前面的示例，以便生成为 DLL。
+现在，让我们重写前面的示例，以便将其构建为 DLL。
 
 ```cpp
 // type_visibility_2.cpp
@@ -196,7 +196,7 @@ public:
 };
 ```
 
-下一个示例演示如何访问程序集之外的类型。 在此示例中，客户端使用在前面的示例生成的组件。
+下一个示例演示如何访问程序集外部的类型。 在此示例中，客户端使用上一个示例中生成的组件。
 
 ```cpp
 // type_visibility_3.cpp
@@ -218,22 +218,22 @@ int main() {
 in Public_Class
 ```
 
-##  <a name="BKMK_Member_visibility"></a> 成员的可见性
+## <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a>成员可见性
 
-您可以对访问从同一程序集中的公共类的成员不同于访问到它从程序集外部的通过使用成对的访问说明符`public`， `protected`，和 `private`
+您可以使用访问指定器`public`对 ，使从同一程序集中访问公共类的成员不同于从程序集外部访问公共类的成员。 `protected``private`
 
-下表汇总了各种访问说明符的效果：
+下表总结了各种访问指定器的效果：
 
 |说明符|效果|
 |---------------|------------|
-|public|成员是可访问内部和外部程序集。  请参阅[公共](../cpp/public-cpp.md)有关详细信息。|
-|private|成员不是内部和外部程序集都不访问的。  请参阅[专用](../cpp/private-cpp.md)有关详细信息。|
-|protected|成员是可访问内部和外部程序集，而只是派生类型。  请参阅[保护](../cpp/protected-cpp.md)有关详细信息。|
-|internal|成员是在程序集中公共的但是私有程序集外部的。  `internal` 是上下文相关的关键字。  有关详细信息，请参阅[上下文相关的关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
-|公共受保护-或-受保护公共|成员是在程序集中公共的但是程序集外部的受保护。|
-|专用受保护-或-受保护的私有|成员是受保护在程序集中，但专用程序集外部的。|
+|public|成员可在程序集内外访问。  有关详细信息，请参阅[公众](../cpp/public-cpp.md)。|
+|private|成员不可访问，无论是在程序集内部还是外部。  有关详细信息，请参阅[私有](../cpp/private-cpp.md)。|
+|protected|成员可在程序集内外访问，但只能访问派生类型。  有关详细信息，请参阅[受保护](../cpp/protected-cpp.md)。|
+|internal|成员在程序集内是公共的，但在程序集外部是私有的。  `internal` 是上下文相关的关键字。  有关详细信息，请参阅[上下文相关关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
+|公共保护-或受保护的公众|成员在程序集内是公共的，但在程序集外部受到保护。|
+|私有保护 -或受保护的私有|成员在程序集内受到保护，但在程序集外部是私有的。|
 
-下面的示例显示了具有不同的可访问性，使用声明的成员的公共类型，然后显示了如何在程序集中从这些成员的访问。
+下面的示例显示了一种公共类型，该类型具有使用不同的访问权限声明的成员，然后显示这些成员从程序集内访问。
 
 ```cpp
 // compile with: /clr
@@ -312,7 +312,7 @@ exiting function of derived class
 =======================
 ```
 
-现在让我们构建一个 DLL 作为前面的示例。
+现在，让我们将前面的示例构建为 DLL。
 
 ```cpp
 // compile with: /clr /LD
@@ -358,7 +358,7 @@ ref struct MyClass : public Public_Class {
 };
 ```
 
-下面的示例使用在上一示例中，创建并从而演示如何访问从外部程序集的成员的组件。
+以下示例使用在前一个示例中创建的组件，从而演示如何从程序集外部访问成员。
 
 ```cpp
 // compile with: /clr
@@ -406,9 +406,9 @@ exiting function of derived class
 =======================
 ```
 
-##  <a name="BKMK_Public_and_private_native_classes"></a> 公钥和私钥的本机类
+## <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a>公共和私有本机类
 
-可以从托管类型中引用的本机类型。  例如，托管类型中的函数可以采用参数的类型为本机结构。  如果公共程序集中的托管的类型和函数，然后在本机类型还必须公共。
+可以从托管类型引用本机类型。  例如，托管类型的函数可以采用其类型为本机结构的参数。  如果托管类型和函数在程序集中是公共的，则本机类型也必须为公共类型。
 
 ```cpp
 // native type
@@ -418,7 +418,7 @@ public struct N {
 };
 ```
 
-接下来，创建使用本机类型的源的代码文件：
+接下来，创建使用本机类型的源代码文件：
 
 ```cpp
 // compile with: /clr /LD
@@ -445,17 +445,17 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Static_constructors"></a>静态构造函数
+## <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a>静态构造函数
 
-CLR 类型，例如，类或结构，可以具有可用于初始化静态数据成员的静态构造函数。  静态构造函数调用最多一次，并在第一次访问类型的任何静态成员之前调用。
+CLR 类型（例如类或结构）可以具有可用于初始化静态数据成员的静态构造函数。  静态构造函数最多调用一次，并在首次访问类型的任何静态成员之前调用。
 
 实例构造函数始终在静态构造函数之后运行。
 
-如果类具有静态构造函数，编译器不能内联构造函数的调用。  如果类是值类型的、 具有静态构造函数，并且不包含实例构造函数，编译器不能内联到任何成员函数的调用。  CLR 可以内联调用，但编译器不能。
+如果类具有静态构造函数，编译器不能将调用内联到构造函数。  如果类是值类型、具有静态构造函数并且没有实例构造函数，则编译器不能将调用内联到任何成员函数。  CLR 可以内联调用，但编译器不能。
 
-作为私有成员函数，定义静态构造函数，因为它旨在只能由 CLR 调用。
+将静态构造函数定义为私有成员函数，因为它仅由 CLR 调用。
 
-有关静态构造函数的详细信息，请参阅[如何：定义接口静态构造函数 (C++/CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) 。
+有关静态构造函数的详细信息，请参阅[如何：定义接口静态构造函数 （C++/CLI）。](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -491,17 +491,17 @@ in static constructor
 11
 ```
 
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a> 语义的 this 指针
+## <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a>此指针的语义
 
-使用视觉对象时C++定义类型，`this`中引用类型的指针为类型"句柄"。 `this`在值类型的指针为类型"内部指针"。
+使用 Visual C++定义类型时，`this`引用类型的指针的类型为"句柄"。 值`this`类型的指针为"内部指针"类型。
 
-这些不同的语义的`this`调用默认索引器时，指针可能会导致意外的行为。 下面的示例演示访问默认索引器 ref 类型和值类型中的正确方法。
+当调用默认索引器时`this`，指针的这些不同语义可能会导致意外行为。 下一个示例显示了在 ref 类型和值类型中访问默认索引器的正确方法。
 
-有关详细信息，请参见
+有关详细信息，请参阅
 
-- [对象句柄运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [句柄到对象运算符 （*）](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
+- [interior_ptr（C++/CLI）](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -546,19 +546,19 @@ int main() {
 10.89
 ```
 
-##  <a name="BKMK_Hide_by_signature_functions"></a> 按签名隐藏函数
+## <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a>按签名隐藏功能
 
-在标准C++，即使该派生类函数不具有相同数量或类型的参数，在派生类中，具有相同名称的函数被隐藏基类中的函数。 这被称为*按名称隐藏*语义。 在引用类型，在基类中的函数可以仅隐藏由派生类中的函数如果的名称和参数列表相同。 这称为*按签名隐藏*语义。
+在标准C++中，基类中的函数由派生类中具有相同名称的函数隐藏，即使派生类函数的参数数量或类型不同。 这称为 *"逐名隐藏*"语义。 在引用类型中，如果名称和参数列表相同，则基类中的函数只能由派生类中的函数隐藏。 这称为 *"按签名隐藏*"语义。
 
-类被视为按签名隐藏类，其所有功能都作为元数据中标记为`hidebysig`。 默认情况下，将创建的所有类 **/clr**具有`hidebysig`函数。 当一个类具有`hidebysig`函数，编译器不会在任何直接的基类中按名称隐藏函数，但如果编译器遇到继承链中的一个按名称隐藏类，它仍然按名称隐藏该行为。
+当类的所有函数在元数据中标记为`hidebysig`时，类被视为按签名隐藏类。 默认情况下，在 **/clr**下创建的所有类都有`hidebysig`函数。 当类具有`hidebysig`函数时，编译器不会在任何直接基类中按名称隐藏函数，但如果编译器在继承链中遇到逐名隐藏类，则它将继续这种逐个名称隐藏行为。
 
-按签名隐藏语义下对一个对象，调用函数时编译器标识包含无法满足函数调用的函数的派生程度最高的类。 如果无法满足该调用的类中只有一个函数，编译器将调用该函数。 如果无法满足该调用的类中存在多个函数，编译器使用重载决策规则来确定要调用的函数。 有关重载规则的详细信息，请参阅[函数重载](../cpp/function-overloading.md)。
+在"逐个签名"语义下，当在对象上调用函数时，编译器标识包含可满足函数调用的函数的最派生类。 如果类中只有一个函数可以满足调用，编译器将调用该函数。 如果类中有多个函数可以满足调用，编译器将使用重载解析规则来确定调用哪个函数。 有关重载规则的详细信息，请参阅[函数重载](../cpp/function-overloading.md)。
 
-对于给定的函数调用中，在基类中的函数可能必须使其成为派生类中的略有更好的匹配比函数的签名。 但是，如果在派生类的对象上显式调用该函数，被调用派生类中的函数。
+对于给定的函数调用，基类中的函数可能具有一个签名，使其比派生类中的函数稍微匹配一些。 但是，如果在派生类的对象上显式调用该函数，则调用派生类中的函数。
 
-因为返回值不被视为函数的签名的一部分，基类函数是隐藏如果它具有相同的名称，并为派生类函数，采用的相同数量和类型的自变量，即使它在返回值的类型不同。
+由于返回值不被视为函数签名的一部分，因此，如果基类函数具有相同的名称，并且采用与派生类函数相同的数量和类型的参数，即使它在返回值的类型上有所不同，则隐藏该函数。
 
-下面的示例显示了由派生类中的函数不会隐藏基类中的函数。
+下面的示例显示基类中的函数不被派生类中的函数隐藏。
 
 ```cpp
 // compile with: /clr
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-下一步的示例演示在 MicrosoftC++编译器调用的函数派生程度最高的类中 — 即使需要转换，以匹配一个或多个参数，并不是函数调用的更好地匹配项的基类中调用函数。
+下一个示例显示 Microsoft C++编译器调用派生最多的类中的函数，即使需要转换以匹配一个或多个参数，也不会调用基类中更适合函数调用的函数。
 
 ```cpp
 // compile with: /clr
@@ -619,7 +619,7 @@ int main() {
 Derived::Test2
 ```
 
-下面的示例演示就可以隐藏函数，即使基本类具有与派生的类相同的签名。
+下面的示例显示，即使基类具有与派生类相同的签名，也可以隐藏函数。
 
 ```cpp
 // compile with: /clr
@@ -654,15 +654,15 @@ Derived::Test4
 97
 ```
 
-##  <a name="BKMK_Copy_constructors"></a> 复制构造函数
+## <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a>复制构造函数
 
-C++标准规定当移动对象，以便对对象进行创建和销毁在相同的地址时，调用复制构造函数。
+C++标准表示，在移动对象时调用复制构造函数，以便在同一地址创建和销毁对象。
 
-但是，当 **/clr**用于编译和编译为 MSIL 调用本机函数的本机类的函数，或多个-传递的值，其中的本机类具有一个复制构造函数和/或析构函数，没有复制调用构造函数和对象被销毁后，在与创建它时所在不同的地址。 如果类具有到自身，指针或代码的地址跟踪对象，这可能导致问题。
+但是，当 **/clr**用于编译，编译到 MSIL 的函数调用本机函数，其中本机类（或多个类）通过值传递，而本机类具有复制构造函数和/或析构函数，则不调用任何复制构造函数，并且对象在创建位置不同的地址被销毁。 如果类本身有指针，或者代码按地址跟踪对象，则可能会导致问题。
 
-有关详细信息，请参阅 [/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。
+有关更多信息，请参见 [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md)。
 
-下面的示例演示时不生成复制构造函数。
+以下示例演示如何生成复制构造函数。
 
 ```cpp
 // compile with: /clr
@@ -719,9 +719,9 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378
 ```
 
-##  <a name="BKMK_Destructors_and_finalizers"></a> 析构函数和终结器
+## <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a>析构函数和终结器
 
-引用类型中的析构函数执行确定性清理的资源。 终结器清理非托管资源，析构函数或不确定地由垃圾回收器可以明确地调用。 有关标准中的析构函数的信息C++，请参阅[析构函数](../cpp/destructors-cpp.md)。
+引用类型的析构函数执行资源确定性清理。 终结器清理非托管资源，并且可以由析构函数或垃圾回收器在确定性上调用确定性资源。 有关标准C++中的析构函数的信息，请参阅[析构函数](../cpp/destructors-cpp.md)。
 
 ```cpp
 class classname {
@@ -730,13 +730,13 @@ class classname {
 };
 ```
 
-托管的视觉对象中的析构函数的行为C++类不同于托管扩展C++。 有关此更改的详细信息，请参阅[析构函数语义的更改](../dotnet/changes-in-destructor-semantics.md)。
+托管 Visual C++ 类中的析构函数的行为不同于 C++的托管扩展。 有关此更改的详细信息，请参阅[析构函数语义中的更改](../dotnet/changes-in-destructor-semantics.md)。
 
-CLR 垃圾回收器删除未使用的托管的对象，并在不再需要时释放其内存。 但是，一种类型可能会使用垃圾回收器不知道如何释放的资源。 这些资源称为非托管资源 （例如本机文件处理）。 我们建议在发布的终结器中的所有非托管的资源。 因为垃圾回收器不确定地释放托管的资源，是不安全，请参阅对托管资源，在终结器因为可能有垃圾回收器已清除该托管资源。
+CLR 垃圾回收器删除未使用的托管对象，并在不再需要它们时释放其内存。 但是，类型可能使用垃圾回收器不知道如何释放的资源。 这些资源称为非托管资源（例如本机文件句柄）。 我们建议您释放终结器中的所有非托管资源。 由于托管资源由垃圾回收器非确定性地释放，因此在终结器中引用托管资源不安全，因为垃圾回收器可能已清理该托管资源。
 
-视觉对象C++终结器不与相同<xref:System.Object.Finalize%2A>方法。 (CLR 文档使用终结器和<xref:System.Object.Finalize%2A>方法同义词)。 <xref:System.Object.Finalize%2A>垃圾回收器，它调用类的继承链中每个终结器调用方法。 与不同的视觉对象C++析构函数，派生类终结器调用不会导致编译器将调用所有基类中的终结器。
+可视化C++终结器与<xref:System.Object.Finalize%2A>方法不同。 （CLR 文档使用终结器和方法<xref:System.Object.Finalize%2A>同义）。 垃圾<xref:System.Object.Finalize%2A>回收器调用该方法，它调用类继承链中的每个终结器。 与 Visual C++析构函数不同，派生类终结器调用不会导致编译器调用所有基类中的终结器。
 
-因为 MicrosoftC++编译器支持的资源的确定性释放，请勿尝试实现<xref:System.IDisposable.Dispose%2A>或<xref:System.Object.Finalize%2A>方法。 但是，如果您熟悉这些方法，下面是一个视觉对象C++终结器和析构函数调用终结器将映射到<xref:System.IDisposable.Dispose%2A>模式：
+由于 Microsoft C++编译器支持资源确定性释放，因此不要尝试实现 或<xref:System.IDisposable.Dispose%2A><xref:System.Object.Finalize%2A>方法。 但是，如果您熟悉这些方法，下面是 Visual C++终结器和将终结器映射调用<xref:System.IDisposable.Dispose%2A>模式的析构函数的方式：
 
 ```cpp
 // Visual C++ code
@@ -755,9 +755,9 @@ void Dispose(bool disposing) {
 }
 ```
 
-托管的类型还可以使用您希望具有确定性，发布，而不将留给垃圾回收器不再需要对象后，系统不确定地释放在某个时间点的托管的资源。 资源的确定性释放可以显著提高性能。
+托管类型还可以使用您希望以确定性方式释放的托管资源，而不是让垃圾回收器在不再需要对象后的某个时间点以非确定性方式释放。 确定性资源释放可以显著提高性能。
 
-MicrosoftC++编译器使您能够以明确地清理对象的析构函数的定义。 使用析构函数释放要明确地释放的所有资源。  如果存在一个终结器，则请从析构函数，以避免代码重复调用它。
+Microsoft C++编译器使析构函数的定义能够确定清理对象。 使用析构函数释放要确定释放的所有资源。  如果存在终结器，请从析构函数调用它，以避免代码重复。
 
 ```cpp
 // compile with: /clr /c
@@ -781,35 +781,35 @@ ref struct A {
 };
 ```
 
-如果使用你的类型的代码未调用析构函数时，垃圾回收器最终释放所有托管的资源。
+如果使用您的类型的代码不调用析构函数，则垃圾回收器最终将释放所有托管资源。
 
-析构函数存在并不表示终结器存在。 但是，终结器的出现意味着，必须定义析构函数，并从该析构函数调用的终结器。 这提供了非托管资源的确定性释放。
+析构函数的存在并不意味着存在终结器。 但是，终结器的存在意味着您必须定义析构函数并从该析构函数调用终结器。 这提供了非托管资源的确定性释放。
 
-调用析构函数取消 — 通过使用<xref:System.GC.SuppressFinalize%2A>— 终结的对象。 如果未调用析构函数，则最终将由垃圾回收器调用类型的终结器。
+调用析构函数会通过对象的<xref:System.GC.SuppressFinalize%2A>"定稿"来抑制。 如果未调用析构函数，则垃圾回收器最终将调用类型的终结器。
 
-明确地清理对象的资源通过调用析构函数可以提高性能与让 CLR 以非确定性终结该对象进行比较。
+与让 CLR 非确定性地完成对象相比，通过调用析构函数来确定清理对象的资源可以提高性能。
 
-视觉对象中编写的代码C++并使用编译的 **/clr**如果运行类型的析构函数：
+在 Visual C++ 中编写并使用 **/clr**编译的代码在：
 
-- 通过使用堆栈语义创建的对象超出范围。 有关详细信息，请参阅[C++引用类型的堆栈语义](../dotnet/cpp-stack-semantics-for-reference-types.md)。
+- 使用堆栈语义创建的对象超出范围。 有关详细信息，请参阅[C++堆栈语义的引用类型](../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 - 在对象的构造期间引发异常。
 
-- 该对象是运行其析构函数的对象中的成员。
+- 该对象是正在运行析构函数的对象中的成员。
 
-- 在调用[删除](../cpp/delete-operator-cpp.md)句柄运算符 ([对象句柄运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md))。
+- 在句柄上调用[删除](../cpp/delete-operator-cpp.md)运算符 （[句柄到对象运算符 （*）。](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
 - 显式调用析构函数。
 
-如果您的类型由以另一种语言编写的客户端，析构函数调用，如下所示：
+如果类型被用其他语言编写的客户端使用，则析构函数的调用方式如下：
 
-- 在调用<xref:System.IDisposable.Dispose%2A>。
+- 在呼叫<xref:System.IDisposable.Dispose%2A>时。
 
-- 在调用`Dispose(void)`类型上。
+- 在类型`Dispose(void)`上的调用。
 
-- 如果不在 C# 中的范围之内类型`using`语句。
+- 如果类型超出 C#`using`语句的范围。
 
-如果 （不引用类型使用堆栈语义） 在托管堆上创建引用类型的对象，请使用[的 try-finally](../cpp/try-finally-statement.md)语法以确保异常不会运行阻止析构函数。
+如果在托管堆上创建引用类型的对象（不对引用类型使用堆栈语义），请使用[尝试-finally](../cpp/try-finally-statement.md)语法来确保异常不会阻止析构函数运行。
 
 ```cpp
 // compile with: /clr
@@ -828,25 +828,25 @@ int main() {
 }
 ```
 
-如果您的类型具有析构函数，编译器将生成`Dispose`方法，实现<xref:System.IDisposable>。 如果编写视觉对象中的类型C++和具有从另一种语言，使用析构函数调用`IDisposable::Dispose`对该类型将导致该类型的析构函数调用。 当类型使用从视觉对象C++客户端，不能直接调用`Dispose`; 相反，通过调用其析构函数`delete`运算符。
+如果类型具有析构函数，编译器将生成实现`Dispose`<xref:System.IDisposable>的方法。 如果以 Visual C++编写的类型具有从另一种语言消耗的析构函数，则调用`IDisposable::Dispose`该类型会导致调用该类型的析构函数。 当类型从 Visual C++ 客户端使用时，不能直接调用`Dispose`;相反，使用`delete`运算符调用析构函数。
 
-如果您的类型有终结器，编译器将生成`Finalize(void)`方法来重写<xref:System.Object.Finalize%2A>。
+如果类型具有终结器，编译器将生成一个`Finalize(void)`重写<xref:System.Object.Finalize%2A>的方法。
 
-如果类型具有终结器或析构函数，编译器将生成`Dispose(bool)`方法，根据设计模式。 (有关信息，请参阅[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern))。 不能显式创作或调用`Dispose(bool)`视觉对象中C++。
+如果类型具有终结器或析构函数，编译器将根据设计模式生成方法`Dispose(bool)`。 （有关信息，请参阅[处置模式](/dotnet/standard/design-guidelines/dispose-pattern)。 您不能在 Visual C++中`Dispose(bool)`显式创作或调用。
 
-如果类型具有一个基类，它符合设计模式，时会调用派生类的析构函数调用的所有基类的析构函数。 (如果您的类型编写视觉对象中C++，编译器可确保您的类型实现此模式。)换而言之，引用类的析构函数链接到其基类和成员由指定C++标准 — 类的析构函数为运行，则在相反的顺序在其中它们的创建过程，其成员的析构函数的第一个和最后在构造它们的顺序相反其基类的析构函数。
+如果类型具有符合设计模式的基类，则当调用派生类的析构函数时，将调用所有基类的析构函数。 （如果类型是在 Visual C++中编写的，编译器将确保类型实现此模式。换句话说，引用类的析构函数按C++标准指定，链到其基和成员，首先运行类的析构函数，然后按其构造顺序相反的成员的析构函数，最后以其基类的析构函数按其构造顺序的相反运行。
 
-析构函数和终结器不允许在值类型或接口中。
+不允许在值类型或接口内使用析构函数和终结器。
 
-只能定义或引用类型中声明终结器。 与构造函数和析构函数中，终结器有没有返回类型。
+只能以引用类型定义或声明终结器。 与构造函数和析构函数一样，终结器没有返回类型。
 
-对象的终结器运行后，在任何基类中的终结器也称为，开头的派生程度最低的类型。 数据成员的终结器不会自动链接到类的终结器。
+运行对象的终结器后，还会调用任何基类中的终结器，从派生最少的类型开始。 数据成员的终结者不会由类的终结器自动链接到。
 
-如果终结器中删除的托管类型中的本机指针，则必须确保，不会过早地收集到或通过本机指针的引用;而不是使用的托管类型上调用析构函数<xref:System.GC.KeepAlive%2A>。
+如果终结器删除托管类型的本机指针，则必须确保不会过早地收集对本机指针的引用或通过本机指针收集的引用;否则，将不过早地收集对本机指针的引用。调用托管类型的析构函数，而不是使用<xref:System.GC.KeepAlive%2A>。
 
-在编译时，可以检测类型是否具有终结器或析构函数。 有关详细信息，请参阅[编译器支持类型特征](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
+在编译时，可以检测类型是具有终结器还是析构函数。 有关详细信息，请参阅[编译器对类型特征的支持](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)。
 
-下一个示例演示两种类型，一个具有非托管的资源，一个具有托管确定性地释放的资源。
+下一个示例显示两种类型，一种具有非托管资源，另一种具有具有确定性释放的托管资源。
 
 ```cpp
 // compile with: /clr
@@ -912,7 +912,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
 [类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)

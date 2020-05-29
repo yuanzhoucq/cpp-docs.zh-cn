@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13d2ed705bff7b42eb3c348692a5829bd54158b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164867"
 ---
 # <a name="compiler-warning-c4959"></a>编译器警告 C4959
 
-> 不能定义非托管的结构*类型*/clr: safe 中因为访问其成员会产生不可验证代码
+> 无法在/clr： safe 中定义非托管结构 "*type*"，因为访问其成员会产生不可验证的代码
 
 ## <a name="remarks"></a>备注
 
 访问非托管类型的成员会生成无法验证的 (peverify.exe) 映像。
 
-有关详细信息，请参阅[纯代码和可验证代码 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+有关详细信息，请参阅[纯代码和可C++验证代码（/cli）](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
-**/Clr: safe**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
+**/Clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
 此警告作为错误发出，可通过 [warning](../../preprocessor/warning.md) 杂注或 [/wd](../../build/reference/compiler-option-warning-level.md) 编译器选项禁用该警告。
 

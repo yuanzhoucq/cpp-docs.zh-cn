@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-ms.openlocfilehash: 9cd0428726f92c7347b162f74b46035f99cc2d3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de7994e8bf46105e94271ab29bf9e27f1da3e76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165556"
 ---
 # <a name="compiler-error-c3850"></a>编译器错误 C3850
 
-> '*char*： 通用字符名称指定的字符无效
+> "*char*"：通用字符名称指定的字符无效
 
 ## <a name="remarks"></a>备注
 
 表示为通用字符名称的字符必须表示 0-10FFFF 范围内的有效 Unicode 码位。 通用字符名称不能包含 Unicode 代理项范围、D800-DFFF 或编码的代理项对中的值。 编译器从有效码位自动生成代理项对。
 
-在作为 C 编译的代码中，通用字符名称可能不表示 0000-009F 的范围中的字符 （含 0024 （' $'） 的异常) 0040 (\@) 和 0060 (' ')。
+在编译为 C 的代码中，通用字符名称不能表示009F （含）范围内的字符，024（"$"），0040（"\@"）和0060（"" "）除外。
 
 在编译为 C++ 的代码中，通用字符名称可以使用字符串或字符文本中的任意有效 Unicode 码位。 在文字之外，通用字符名称不能表示 0000-001F 或 007F-009F（均含）范围内的控制字符或基本源字符集成员。  有关详细信息，请参阅 [Character Sets](../../cpp/character-sets.md)。
 

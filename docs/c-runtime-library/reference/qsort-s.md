@@ -1,8 +1,9 @@
 ---
 title: qsort_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort_s
+- _o_qsort_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 934801531804345a8cede6ed1ac4abb06bae45b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949760"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913279"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -56,16 +58,16 @@ void qsort_s(
 *base*<br/>
 目标数组的开头。
 
-*number*<br/>
+*数字*<br/>
 元素中的数组大小。
 
-*width*<br/>
+width <br/>
 元素大小（字节）。
 
-*compare*<br/>
+*并排*<br/>
 比较函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*该键*进行比较的数组元素的指针。
 
-*context*<br/>
+*上下文*<br/>
 指向上下文的指针，它可以是*比较*例程需要访问的任何对象。
 
 ## <a name="remarks"></a>备注
@@ -78,7 +80,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 该例程必须比较这些元素，然后返回下列值之一：
 
-|返回值|描述|
+|返回值|说明|
 |------------------|-----------------|
 |< 0|**elem1**小于**elem2**|
 |0|**elem1**等效于**elem2**|
@@ -86,28 +88,30 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 数组按比较函数中定义的升序进行排序。 若要以降序对数组进行排序，请反转比较函数中的“大于”和“小于”的意义。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回，并且**errno**设置为**EINVAL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果传递到函数的参数无效，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回，并且**errno**设置为**EINVAL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
-|密钥|base|compare|num|宽度|errno|
+|键|base|compare|num|width|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|任何|任何|任何|任何|**EINVAL**|
-|任何|**NULL**|任何|!= 0|任何|**EINVAL**|
-|任何|任何|任何|任何|<= 0|**EINVAL**|
-|任何|任何|**NULL**|任何|任何|**EINVAL**|
+|**Null**|any|any|any|any|**EINVAL**|
+|any|**Null**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|<= 0|**EINVAL**|
+|any|any|**Null**|any|any|**EINVAL**|
 
-**qsort_s**具有与**qsort**相同的行为，但具有*上下文*参数并设置**errno**。 通过传递*上下文*参数，比较函数可以使用对象指针访问对象功能或无法通过元素指针访问的其他信息。 添加*上下文*参数会使**qsort_s**更安全，因为*上下文*可用于避免使用静态变量引入的重入 bug，以使共享信息可用于*比较*函数。
+**qsort_s**具有与**qsort**相同的行为，但具有*上下文*参数并设置**errno**。 通过传递*上下文*参数，比较函数可以使用对象指针访问对象功能或无法通过元素指针访问的其他信息。 添加*上下文*参数使得**qsort_s**更安全，因为*上下文*可用于避免使用静态变量引入的重入 bug，使共享信息可用于*比较*函数。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**qsort_s**|\<stdlib.h> 和 \<search.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-**库**所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
+**库：**[CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。
 
 ## <a name="example"></a>示例
 
@@ -263,7 +267,7 @@ España Español espantado
 table tablet tableux
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

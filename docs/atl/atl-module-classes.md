@@ -6,56 +6,56 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-ms.openlocfilehash: 2fe659b47893f821aab4cda31ab1a4e9a6788ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b72cac0da06b70a40e01fcc75da52f1678f3f64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252065"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317371"
 ---
 # <a name="atl-module-classes"></a>ATL Module 类
 
-本主题讨论了新增的 ATL 7.0 的模块类。
+本主题讨论 ATL 7.0 中新增的模块类。
 
-## <a name="ccommodule-replacement-classes"></a>CComModule 替换类
+## <a name="ccommodule-replacement-classes"></a>CCom 模块更换类
 
-使用 ATL 的早期版本`CComModule`。 ATL 7.0 中`CComModule`功能替换由几个类：
+使用的`CComModule`ATL 的早期版本。 在 ATL 7.0 中，`CComModule`功能被几个类替换：
 
-- [CAtlBaseModule](../atl/reference/catlbasemodule-class.md)包含信息所需的大多数应用程序使用 atl。 包含 HINSTANCE 的模块和资源实例。
+- [CAtlBase模块](../atl/reference/catlbasemodule-class.md)包含大多数使用 ATL 的应用程序所需的信息。 包含模块和资源实例的 HINSTANCE。
 
-- [CAtlComModule](../atl/reference/catlcommodule-class.md)包含所需的 atl。 中的 COM 类信息
+- [CAtlCom 模块](../atl/reference/catlcommodule-class.md)包含 ATL 中的 COM 类所需的信息。
 
-- [CAtlWinModule](../atl/reference/catlwinmodule-class.md)包含所需的 atl。 中的窗口类信息
+- [CAtlWin 模块](../atl/reference/catlwinmodule-class.md)包含 ATL 中窗口类所需的信息。
 
-- [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md)包含对接口调试的支持。
+- [CAtlDebug接口模块](../atl/reference/catldebuginterfacesmodule-class.md)包含对接口调试的支持。
 
-- [CAtlModule](../atl/reference/catlmodule-class.md)以下`CAtlModule`-自定义派生的类以包含所需的特定应用程序类型中的信息。 可以重写这些类中的大多数成员：
+- [CAtlModule](../atl/reference/catlmodule-class.md)以下`CAtlModule`派生类被自定义以包含特定应用程序类型中所需的信息。 可以重写这些类中的大多数成员：
 
-   - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) DLL 应用程序中使用。 提供用于标准导出代码。
+  - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md)用于 DLL 应用程序。 提供标准导出的代码。
 
-   - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) EXE 应用程序中使用。 提供在 EXE 所需的代码。
+  - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md)用于 EXE 应用程序。 提供 EXE 中所需的代码。
 
-   - [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md)提供支持，以创建 Windows NT 和 Windows 2000 服务。
+  - [CAtl服务模块T](../atl/reference/catlservicemodulet-class.md)提供创建 Windows NT 和 Windows 2000 服务的支持。
 
-`CComModule` 是仍可用于向后兼容性。
+`CComModule`仍然可用于向后兼容性。
 
 ## <a name="reasons-for-distributing-ccommodule-functionality"></a>分发 CComModule 功能的原因
 
-功能`CComModule`已分布到几个新类，原因如下：
+由于以下原因`CComModule`，将 的功能分发到几个新类中：
 
-- 进行中的功能`CComModule`精细。
+- 使功能以`CComModule`粒度进行。
 
-   COM、 窗口化、 调试接口，和特定于应用程序 （DLL 或 EXE） 功能的支持现已在单独的类。
+   现在，对 COM、窗口、接口调试和特定于应用程序的 （DLL 或 EXE） 功能的支持处于单独的类中。
 
-- 自动声明每个这些模块的全局的实例。
+- 自动声明每个模块的全局实例。
 
-   所需的模块类的全局实例链接到项目。
+   所需模块类的全局实例链接到项目中。
 
-- 删除调用 Init 和字词方法的必要性。
+- 删除调用 Init 和术语方法的必要性。
 
-   Init 和术语方法的模块类; 已移到构造函数和析构函数不再需要调用 Init 和术语。
+   Init 和术语方法已移入模块类的构造函数和析构函数;不再需要调用 Init 和术语。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [类概述](../atl/atl-class-overview.md)

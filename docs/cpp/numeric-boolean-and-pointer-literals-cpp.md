@@ -6,16 +6,16 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 21685af5fc4f2dcf042698e054430e50531163b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177737"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>数值、布尔和指针文本
 
-文本是一种直接表示值的程序元素。 本文介绍整数、浮点、布尔和指针类型的文本。 有关字符串和字符文本的信息，请参阅[字符串和字符文本 （C++）](../cpp/string-and-character-literals-cpp.md)。 你还可以定义基于任何这些类别中; 你自己的文本有关详细信息请参阅[用户定义文本 （C++）](../cpp/user-defined-literals-cpp.md)
+文本是一种直接表示值的程序元素。 本文介绍整数、浮点、布尔和指针类型的文本。 有关字符串和字符文本的信息，请参阅[字符串和字符文本C++（）](../cpp/string-and-character-literals-cpp.md)。 你还可以根据这些类别定义你自己的文本;有关详细信息，请参阅[用户定义的C++文本（）](../cpp/user-defined-literals-cpp.md)
 
 。 你可以在许多上下文中使用文本，但文本的最常用法是初始化命名变量以及将自变量传递给函数：
 
@@ -103,19 +103,19 @@ long long i = 24'847'458'121
 void func( double );
 ```
 
-和
+and
 
 ```cpp
 void func( long double );
 ```
 
-## <a name="boolean-literals"></a>布尔文本
+## <a name="boolean-literals"></a>布尔值文字
 
 布尔值文本为**true**和**false**。
 
 ## <a name="pointer-literal-c11"></a>指针文本 (C++11)
 
-C++ 引入[nullptr](../cpp/nullptr.md)文本来指定初始化为零的指针。 在可移植代码中，应使用**nullptr** ，而不是整数类型零或宏，如 NULL。
+C++引入[nullptr](../cpp/nullptr.md)文本以指定零初始化指针。 在可移植代码中，应使用**nullptr** ，而不是整数类型零或宏，如 NULL。
 
 ## <a name="binary-literals-c14"></a>二进制文本 (C++14)
 
@@ -141,4 +141,4 @@ if (num < 100)
 
 [词法约定](../cpp/lexical-conventions.md)<br/>
 [C++字符串文本](../cpp/string-and-character-literals-cpp.md)<br/>
-[C++ 用户定义的文本](../cpp/user-defined-literals-cpp.md)
+[C++用户定义的文本](../cpp/user-defined-literals-cpp.md)

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-ms.openlocfilehash: ec2d6bf6bac46cca8bdc2e3b8fe7cc6b7799d78a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 056db975fecef4e101dbbba7e2084236489498c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202860"
 ---
 # <a name="fatal-error-c1853"></a>错误 C1853
 
-> '*文件名*预编译的头文件是从以前版本的编译器，或预编译标头是C++并将它从 C （或相反）
+> "*filename*" 预编译头文件来自早期版本的编译器，或者预编译标头是C++ ，并且你正在使用 C （或反之）
 
 可能的原因：
 
-- 以前的编译器版本编译预编译标头。 请尝试重新编译使用当前的编译器的标头。
+- 预编译标头是使用以前的编译器版本编译的。 尝试用当前编译器重新编译标头。
 
-- 预编译标头是C++，并且使用从 c。 请尝试重新与 C 配合使用的标头编译通过指定之一[/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)编译器选项或源文件的后缀更改为"c"。 有关详细信息，请参阅[预编译代码的两种方法](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code)。
+- 预编译标头C++为，并且你正在从 C 中使用它。尝试通过指定一个[/tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)编译器选项或将源文件的后缀更改为 "c"，来重新编译标头以用于 C。 有关详细信息，请参阅[预编译代码的两种选择](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code)。

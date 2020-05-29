@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _bstr_t class [C++], member functions
 ms.assetid: 61f9c6c8-6b8f-46eb-8fc2-038e42563bd2
-ms.openlocfilehash: 325a4290ba8e6137a116b764f7055b2c17de5977
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f0456d4a4c12bd91569a5ca4975f9c01ee44675
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181130"
 ---
-# <a name="bstrt-member-functions"></a>_bstr_t 成员函数
+# <a name="_bstr_t-member-functions"></a>_bstr_t 成员函数
 
-璝惠`_bstr_t`成员函数，请参阅[_bstr_t 类](../cpp/bstr-t-class.md)。
+有关 `_bstr_t` 成员函数的信息，请参阅[_Bstr_t 类](../cpp/bstr-t-class.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_bstr_t 类](../cpp/bstr-t-class.md)

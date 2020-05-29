@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688461"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364910"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 运算符
 
-@No__t_0array > 标头包括这些**数组**非成员比较模板函数。
+数组\<>标头包括这些**数组**非成员比较模板函数。
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[操作员！](#op_neq)|[算子&gt;](#op_gt)|[算子&gt;=](#op_gt_eq)|
+|[算子&lt;](#op_lt)|[算子&lt;=](#op_lt_eq)|[运算符*](#op_eq_eq)|
 
-## <a name="op_neq"></a>operator!=
+## <a name="operator"></a><a name="op_neq"></a>操作员！
 
 数组比较，不等于。
 
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*Ty* \
+*泰*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
-*左*\
+*离开*\
 要比较的左容器。
 
-*right* \
+*对*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
 
 数组的比较，小于。
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*Ty* \
+*泰*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
-*左*\
+*离开*\
 要比较的左容器。
 
-*right* \
+*对*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-模板函数重载 `operator<` 比较类模板[数组类](../standard-library/array-class-stl.md)的两个对象。 该函数返回 `lexicographical_compare(left.begin(), left.end(), right.begin())`。
+模板函数重载`operator<`以比较类模板数组[Class](../standard-library/array-class-stl.md)的两个对象。 该函数返回 `lexicographical_compare(left.begin(), left.end(), right.begin())`。
 
 ### <a name="example"></a>示例
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
 
 数组的比较，小于或等于。
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*Ty* \
+*泰*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
-*左*\
+*离开*\
 要比较的左容器。
 
-*right* \
+*对*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>运算符*
 
 数组比较，等于。
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*Ty* \
+*泰*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
-*左*\
+*离开*\
 要比较的左容器。
 
-*right* \
+*对*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-模板函数重载 `operator==` 比较类模板[数组类](../standard-library/array-class-stl.md)的两个对象。 该函数返回 `equal(left.begin(), left.end(), right.begin())`。
+模板函数重载`operator==`以比较类模板数组[Class](../standard-library/array-class-stl.md)的两个对象。 该函数返回 `equal(left.begin(), left.end(), right.begin())`。
 
 ### <a name="example"></a>示例
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
 
 数组比较，大于。
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*Ty* \
+*泰*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
-*左*\
+*离开*\
 要比较的左容器。
 
-*right* \
+*对*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
 
 数组比较，大于或等于。
 
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*Ty* \
+*泰*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
-*左*\
+*离开*\
 要比较的左容器。
 
-*right* \
+*对*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -463,6 +463,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<array>](../standard-library/array.md)
+[\<数组>](../standard-library/array.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: 97794261c0dc77ca41d543aa34a1fc2111c83619
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: e6d2dea1af43b52a7704af58855842075087a221
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445914"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169352"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>内联程序集的指令集
 
 **Microsoft 专用**
 
-MicrosoftC++编译器支持通过 Pentium 4 和 AMD Athlon 的所有操作码。 可用于创建目标处理器支持的其他说明[_emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)。
+Microsoft C++编译器通过奔腾4和 AMD 速龙支持所有操作码。 可使用[_Emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)创建目标处理器支持的其他说明。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

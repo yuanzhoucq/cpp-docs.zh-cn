@@ -1,9 +1,11 @@
 ---
 title: _makepath、_wmakepath
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _makepath
 - _wmakepath
+- _o__makepath
+- _o__wmakepath
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: aafde0aeeebb7b773d3f96ca66ae65762dcdebdf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 19a20de40bb02e49f618e8e617c9659788dc3e25
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952928"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914392"
 ---
 # <a name="_makepath-_wmakepath"></a>_makepath、_wmakepath
 
@@ -71,23 +74,25 @@ void _wmakepath(
 *path*<br/>
 完整路径缓冲区。
 
-*drive*<br/>
+*光驱*<br/>
 包含一个与所需的驱动器对应的字母（A、B 等）和可选的尾随冒号。 如果缺少冒号， **_makepath**会自动在复合路径中插入冒号。 如果*驱动器*为**NULL**或指向空字符串，则在复合*路径*字符串中不会出现驱动器号。
 
-*目录*<br/>
+*dir*<br/>
 包含目录路径，但不包括驱动器指示符或实际文件名。 尾随斜杠是可选的，正斜杠（/）或反斜杠（\\）或两者均可用于单个*dir*参数。 如果未指定尾随斜杠（\ 或 \\），将自动插入。 如果*dir*为**NULL**或指向一个空字符串，则在复合*路径*字符串中不会插入目录路径。
 
 *fname*<br/>
 包含无任何文件扩展名的基文件名。 如果*fname*为**NULL**或指向一个空字符串，则在复合*路径*字符串中不会插入文件名。
 
-*ext*<br/>
-包含实际的文件扩展名（带有或不带前导句点 (.)）。 如果 **_makepath**未出现在*ext*中，则会自动插入句点。如果*ext*为**NULL**或指向空字符串，则不会在复合*路径*字符串中插入扩展。
+*宋体*<br/>
+包含实际的文件扩展名（带有或不带前导句点 (.)）。 如果句点未出现在*ext*中， **_makepath**会自动插入句点。如果*ext*为**NULL**或指向空字符串，则不会在复合*路径*字符串中插入扩展。
 
 ## <a name="remarks"></a>备注
 
-**_Makepath**函数从各个组件创建复合路径字符串，并将结果存储在*路径*中。 *路径*可能包括驱动器号、目录路径、文件名和文件扩展名。 **_wmakepath**是 **_makepath**的宽字符版本; **_wmakepath**的参数是宽字符字符串。 否则， **_wmakepath**和 **_makepath**的行为相同。
+**_Makepath**函数使用单个组件创建复合路径字符串，并将结果存储在*路径*中。 *路径*可能包括驱动器号、目录路径、文件名和文件扩展名。 **_wmakepath**是 **_makepath**的宽字符版本;**_wmakepath**的参数是宽字符字符串。 否则 **_wmakepath**和 **_makepath**的行为相同。
 
 **安全说明** 使用以 null 结尾的字符串。 若要避免缓冲区溢出，以 null 结尾的字符串不得超过*路径*缓冲区的大小。 **_makepath**不确保复合路径字符串的长度不超过 **_MAX_PATH**。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -95,18 +100,18 @@ void _wmakepath(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-*路径*参数必须指向足以容纳完整路径的空缓冲区。 复合*路径*不能大于在 stdlib.h 中定义的 **_MAX_PATH**常量。
+*路径*参数必须指向足以容纳完整路径的空缓冲区。 复合*路径*不能大于在 stdlib.h 中定义的 **_MAX_PATH**常数。
 
 如果 path 为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 此外， **errno**设置为**EINVAL**。 所有其他参数都允许**空**值。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_makepath**|\<stdlib.h>|
 |**_wmakepath**|\<stdlib.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -146,7 +151,7 @@ Path extracted with _splitpath:
    Ext: .c
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath、_wfullpath](fullpath-wfullpath.md)<br/>

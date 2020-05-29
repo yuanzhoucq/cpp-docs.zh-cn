@@ -8,35 +8,35 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: f44fb734c8441e10b656c5326c8df4bf6879499a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: MT
+ms.openlocfilehash: 00356cf50ca8e50c80e8a1142adf654816490c9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220174"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078496"
 ---
 # <a name="optimizing-your-code"></a>优化代码
 
-通过优化可执行文件，可以实现快速执行速度和较小代码大小之间的平衡。 本主题讨论了一些 Visual Studio 提供了有助于优化代码的机制。
+通过优化可执行文件，你可以在快速的执行速度和较小的代码大小之间实现平衡。 本主题讨论 Visual Studio 提供的一些有助于你优化代码的机制。
 
 ## <a name="language-features"></a>语言功能
 
-下面的主题介绍的一些优化功能在 C /C++语言。
+以下主题描述了 C/C++ 语言中的一些优化功能。
 
 [优化杂注和关键字](optimization-pragmas-and-keywords.md) \
-关键字和杂注，您可以使用在代码中以提高性能的列表。
+可以在代码中使用关键字和杂注列表来提高性能。
 
 [按类别列出的编译器选项](reference/compiler-options-listed-by-category.md) \
-一系列 **/O**专门影响执行速度或代码大小的编译器选项。
+专门影响执行速度或代码大小的“/O”编译器选项的列表  。
 
-[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
-右值引用支持的实现*移动语义*。 如果可以显著提高的移动语义用于实现模板库，使用这些模板的应用程序的性能。
+[ 引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md) \
+Rvalue 引用支持移动语义的实现  。 如果使用移动语义来实现模板库，那么使用这些模板的应用程序的性能将显著提高。
 
 ### <a name="the-optimize-pragma"></a>优化杂注
 
-如果已优化的代码节将导致错误或速度减慢，则可以使用[优化](../preprocessor/optimize.md)杂注来关闭该部分的优化。
+如果优化的代码段导致错误或速度减慢，则可以使用[优化](../preprocessor/optimize.md)杂注关闭该段的优化。
 
-将两个杂注，代码如下所示：
+将代码括在两个杂注之间，如下所示：
 
 ```cpp
 #pragma optimize("", off)
@@ -46,23 +46,23 @@ ms.locfileid: "65220174"
 
 ## <a name="programming-practices"></a>编程做法
 
-当编译使用优化代码时，可能会注意到其他警告消息。 需要此行为，因为一些警告仅与优化的代码。 如果注意到这些警告，则可以避免很多优化问题。
+使用优化编译代码时，你可能会注意到其他警告消息。 此行为是预期的，因为某些警告仅与优化的代码相关。 注意到这些警告，就可以避免许多优化问题。
 
-自相矛盾的是，优化速度的程序可能会导致代码运行速度变慢。 这是因为一些优化速度增加代码大小。 例如，内联函数消除函数调用的开销。 但是，内联太多代码可能会使您的程序很大的错误的虚拟内存页面数增加。 因此，获得通过消除函数调用的速度可能会丢失对内存换用。
+矛盾的是，优化程序的速度可能会导致代码运行速度变慢。 这是因为对速度的某些优化增加了代码大小。 例如，内联函数消除了函数调用的开销。 但内联太多代码可能会使程序太大，以至于虚拟内存页错误的数量增加。 因此，消除函数调用所获得的速度可能会因内存交换而丢失。
 
-以下主题讨论最佳编程实践。
+以下主题介绍了良好的编程做法。
 
 [提高时间关键代码的技巧](tips-for-improving-time-critical-code.md) \
-更好地编码技术可产生更好的性能。 本主题建议的编码技术可以帮助您确保你的代码的时间关键部分满意地执行。
+使用更好的编码技术可以提高性能。 本主题建议一些编码技术，这些技术有助于你确保代码的时间关键部分让人满意。
 
 [优化最佳做法](optimization-best-practices.md) \
-提供有关如何最好地优化您的应用程序的常规指南。
+提供有关如何最佳地优化应用程序的一般准则。
 
-## <a name="debugging-optimized-code"></a>调试优化的代码
+## <a name="debugging-optimized-code"></a>调试优化后的代码
 
-因为优化可能会更改由编译器创建的代码，我们建议您调试应用程序和测量其性能，然后优化您的代码。
+由于优化可能会更改编译器创建的代码，建议你调试应用程序并测量其性能，然后优化代码。
 
-以下主题提供有关如何调试版本生成的信息。
+以下主题提供有关如何调试发布版本的信息。
 
 - [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)
 
@@ -70,8 +70,7 @@ ms.locfileid: "65220174"
 
 - [为何浮点数可能丢失精度](why-floating-point-numbers-may-lose-precision.md)
 
-
-以下主题提供有关如何优化生成、 加载和执行代码的信息。
+以下主题提供有关如何优化生成、加载和执行代码的信息。
 
 - [提高编译器吞吐量](improving-compiler-throughput.md)
 
@@ -81,8 +80,7 @@ ms.locfileid: "65220174"
 
 - [为 ATL 项目指定编译器优化](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [我应该使用哪些优化技术来提高时加载的客户端应用程序的性能？](../build/dll-frequently-asked-questions.md#mfc_optimization)
-
+- [加载时应使用哪些优化技术来提高客户端应用程序的性能？](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -91,10 +89,10 @@ ms.locfileid: "65220174"
 [为何浮点数可能丢失精度](why-floating-point-numbers-may-lose-precision.md) \
 [IEEE 浮点表示形式](ieee-floating-point-representation.md) \
 [提高时间关键代码的技巧](tips-for-improving-time-critical-code.md) \
-[使用函数名 （） 不产生代码](using-function-name-without-parens-produces-no-code.md) \
+[使用没有 () 的函数名不产生代码](using-function-name-without-parens-produces-no-code.md) \
 [优化最佳做法](optimization-best-practices.md) \
 [按配置优化](profile-guided-optimizations.md) \
-[按配置优化的环境变量](environment-variables-for-profile-guided-optimizations.md) \
+[用于按配置优化的环境变量](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \

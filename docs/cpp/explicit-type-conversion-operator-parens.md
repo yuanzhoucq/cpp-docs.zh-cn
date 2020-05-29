@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-ms.openlocfilehash: 9dc9440db9ea1ff7285ff9b682f6be9900c2a1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c168653a82b4d4c5023de1f76a1e6269625c74d8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184308"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354864"
 ---
 # <a name="explicit-type-conversion-operator-"></a>显式类型转换运算符：()
 
@@ -27,13 +27,13 @@ simple-type-name ( expression-list )
 
 ## <a name="remarks"></a>备注
 
-一个*简单类型名称*跟*表达式列表*括在括号构造使用指定的表达式的指定类型的对象。 以下示例显示到类型 int 的显式类型转换：
+*简单类型名称*后跟括号中包含的*表达式列表*使用指定的表达式构造指定类型的对象。 以下示例显示到类型 int 的显式类型转换：
 
 ```cpp
 int i = int( d );
 ```
 
-下面的示例演示`Point`类。
+下面的示例显示了一个`Point`类。
 
 ## <a name="example"></a>示例
 
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 x = 20, y = 10
@@ -116,16 +116,16 @@ struct Point
 Point pt = Point( 3, 10 );
 ```
 
-上述示例中，使用函数样式转换，演示如何将两个值 (一个用于*x* ，另一个用于*y*) 为用户定义类型`Point`。
+前面的示例使用函数样式转换，演示如何将两个值（一个用于*x*和一个用于*y）* 转换为用户定义的类型`Point`。
 
 > [!CAUTION]
->  请谨慎使用显式类型转换，因其会重写 C++ 编译器的内置类型检查。
+> 请谨慎使用显式类型转换，因其会重写 C++ 编译器的内置类型检查。
 
-[Cast](../cpp/cast-operator-parens.md)表示法必须用于转换为类型，不具有*简单类型名称*（指针或引用类型，例如）。 可以使用表示的类型转换*简单类型名称*可以采用两种形式编写。
+[强制转换](../cpp/cast-operator-parens.md)记号必须用于转换为没有*简单类型名称*的类型（例如指针或引用类型）。 转换为可以使用*简单类型名称*表示的类型可以以任一形式编写。
 
 在强制转换中的类型定义是非法的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[后缀表达式](../cpp/postfix-expressions.md)<br/>
+[后修复表达式](../cpp/postfix-expressions.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

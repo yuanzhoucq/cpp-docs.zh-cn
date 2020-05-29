@@ -1,5 +1,5 @@
 ---
-title: COleLinkingDoc 类
+title: COle链接文档类
 ms.date: 11/04/2016
 f1_keywords:
 - COleLinkingDoc
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224355"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753848"
 ---
-# <a name="colelinkingdoc-class"></a>COleLinkingDoc 类
+# <a name="colelinkingdoc-class"></a>COle链接文档类
 
 支持链接到所包含的嵌入项的 OLE 容器文档的基类。
 
@@ -37,47 +37,47 @@ class COleLinkingDoc : public COleDocument
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|构造 `COleLinkingDoc` 对象。|
+|[COle链接文档：：COle链接文档](#colelinkingdoc)|构造 `COleLinkingDoc` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleLinkingDoc::Register](#register)|使用 OLE 系统 Dll 注册文档。|
-|[COleLinkingDoc::Revoke](#revoke)|撤消文档的注册。|
+|[COle链接文档：：注册](#register)|将文档注册到 OLE 系统 DLL。|
+|[COle链接文档：撤销](#revoke)|撤销文档的注册。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|查找指定的嵌入的项。|
-|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|查找指定的链接的项。|
+|[COle链接文档：：在查找嵌入式项目](#onfindembeddeditem)|查找指定的嵌入项。|
+|[COlelinkDoc：：上链接项目](#ongetlinkeditem)|查找指定的链接项。|
 
 ## <a name="remarks"></a>备注
 
-支持将链接到嵌入的项的容器应用程序称为"链接容器"。 [OCLIENT](../../overview/visual-cpp-samples.md)示例应用程序是链接容器的示例。
+支持链接到嵌入项的容器应用程序称为"链接容器"。 [OCLIENT](../../overview/visual-cpp-samples.md)示例应用程序是链接容器的示例。
 
-链接的项的源是在另一个文档，必须在要编辑嵌入项的顺序加载包含文档中嵌入的项。 出于此原因，链接容器必须能够在用户想要编辑的链接项目源时由另一个容器应用程序启动。 你的应用程序还必须使用[COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)类，以便它可以创建文档时以编程方式启动。
+当链接项的源是另一个文档中的嵌入项时，必须加载包含文档才能编辑嵌入项。 因此，当用户想要编辑链接项的源时，链接容器必须能够由另一个容器应用程序启动。 您的应用程序还必须使用[COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)类，以便在以编程方式启动时创建文档。
 
-若要使容器链接容器，派生文档类从`COleLinkingDoc`而不是[COleDocument](../../mfc/reference/coledocument-class.md)。 与任何其他 OLE 容器，必须设计你的类用于存储应用程序的本机数据以及嵌入或链接的项。 此外，您必须设计用于将本机数据存储的数据结构。 如果定义了`CDocItem`的派生类，为你的应用程序的本机数据，可以使用所定义接口`COleDocument`本机数据以及 OLE 数据存储。
+要使容器成为链接容器，请从`COleLinkingDoc`[COleDocument](../../mfc/reference/coledocument-class.md)派生文档类。 与任何其他 OLE 容器一样，必须设计用于存储应用程序的本机数据以及嵌入或链接项的类。 此外，还必须设计用于存储本机数据的数据结构。 如果为应用程序的本机`CDocItem`数据定义派生类，则可以使用 定义的`COleDocument`接口来存储本机数据和 OLE 数据。
 
-若要允许应用程序能够以编程方式启动的另一个容器，请声明`COleTemplateServer`对象的应用程序的成员作为`CWinApp`-派生的类：
+要允许应用程序由另一个容器以编程方式启动，请声明`COleTemplateServer`对象为应用程序`CWinApp`派生类的成员：
 
 [!code-cpp[NVC_MFCOleContainer#23](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]
 
-在`InitInstance`成员函数在`CWinApp`-派生的类，创建文档模板，并指定你`COleLinkingDoc`-派生的类作为文档类：
+在`InitInstance``CWinApp`派生类的成员函数中，创建文档模板并将`COleLinkingDoc`派生类指定为文档类：
 
 [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]
 
-连接你`COleTemplateServer`到通过调用对象的文档模板对象`ConnectTemplate`成员函数，并注册所有类的都对象与 OLE 系统通过调用`COleTemplateServer::RegisterAll`:
+通过调用`COleTemplateServer`对象`ConnectTemplate`的成员函数将对象连接到文档模板，并通过调用`COleTemplateServer::RegisterAll`：
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-有关示例`CWinApp`的派生类定义和`InitInstance`函数中，请参阅 OCLIENT。H 和 OCLIENT。在 MFC 示例 CPP [OCLIENT](../../overview/visual-cpp-samples.md)。
+有关示例`CWinApp`派生类定义和`InitInstance`函数，请参阅 OCLIENT。H 和 OCLIENT。MFC 样本[OCLIENT](../../overview/visual-cpp-samples.md)中的 CPP。
 
-有关使用的详细信息`COleLinkingDoc`，请参阅文章[容器：实现容器](../../mfc/containers-implementing-a-container.md)和[容器：高级功能](../../mfc/containers-advanced-features.md)。
+有关使用`COleLinkingDoc`的详细信息，请参阅[文章容器：实现容器](../../mfc/containers-implementing-a-container.md)和[容器：高级功能](../../mfc/containers-advanced-features.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -93,11 +93,11 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole.h
+**标题：** afxole.h
 
-##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc
+## <a name="colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a>COle链接文档：：COle链接文档
 
-构造`COleLinkingDoc`没有从与 OLE 系统 Dll 之间的通信对象。
+构造`COleLinkingDoc`对象而不开始与 OLE 系统 DLL 通信。
 
 ```
 COleLinkingDoc();
@@ -105,11 +105,11 @@ COleLinkingDoc();
 
 ### <a name="remarks"></a>备注
 
-必须调用`Register`成员函数，以通知 OLE 文档处于打开状态。
+您必须调用`Register`成员函数，通知 OLE 文档已打开。
 
-##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem
+## <a name="colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a>COle链接文档：：在查找嵌入式项目
 
-由框架调用以确定文档是否包含具有指定名称的嵌入的 OLE 项。
+由框架调用以确定文档是否包含具有指定名称的嵌入式 OLE 项。
 
 ```
 virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
@@ -117,20 +117,20 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 
 ### <a name="parameters"></a>参数
 
-*lpszItemName*<br/>
-指向嵌入 OLE 项请求的名称。
+*lpszItem名称*<br/>
+指向请求的嵌入 OLE 项的名称。
 
 ### <a name="return-value"></a>返回值
 
-指向指定的项;如果未找到该项，则为 NULL。
+指向指定项的指针;指向指定项的指针。如果未找到该项目，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-默认实现将搜索具有指定名称 （名称比较不区分大小写） 的项的嵌入项的列表。 如果您有自己的存储或命名嵌入的 OLE 项的方法，重写此函数。
+默认实现搜索具有指定名称的项的嵌入项列表（名称比较区分大小写）。 如果您有自己的方法来存储或命名嵌入的 OLE 项，请重写此函数。
 
-##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem
+## <a name="colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a>COlelinkDoc：：上链接项目
 
-由框架调用以检查文档是否包含具有指定名称的链接的服务器项。
+由框架调用以检查文档是否包含具有指定名称的链接服务器项。
 
 ```
 virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
@@ -138,20 +138,20 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 
 ### <a name="parameters"></a>参数
 
-*lpszItemName*<br/>
-指向链接 OLE 项请求的名称。
+*lpszItem名称*<br/>
+指向请求的链接 OLE 项的名称。
 
 ### <a name="return-value"></a>返回值
 
-指向指定的项;如果未找到该项，则为 NULL。
+指向指定项的指针;指向指定项的指针。如果未找到该项目，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-默认值`COleLinkingDoc`实现始终返回 NULL。 此函数是在派生类中的重写`COleServerDoc`搜索具有指定名称 （名称比较不区分大小写） 链接的项的 OLE 服务器项的列表。 如果已实现您自己的存储或检索链接的服务器项的方法，重写此函数。
+默认`COleLinkingDoc`实现始终返回 NULL。 此函数在派生类`COleServerDoc`中重写，以搜索具有指定名称的链接项的 OLE 服务器项列表（名称比较区分大小写）。 如果您已经实现了自己的存储或检索链接的服务器项的方法，请重写此函数。
 
-##  <a name="register"></a>  COleLinkingDoc::Register
+## <a name="colelinkingdocregister"></a><a name="register"></a>COle链接文档：：注册
 
-告知 OLE 系统 Dll 文档处于打开状态。
+通知 OLE 系统 DLL 文档已打开。
 
 ```
 BOOL Register(
@@ -162,38 +162,38 @@ BOOL Register(
 ### <a name="parameters"></a>参数
 
 *pFactory*<br/>
-指向 OLE 工厂对象 （可以为 NULL）。
+指向 OLE 工厂对象的指针（可以是 NULL）。
 
-*lpszPathName*<br/>
-指向容器文档的完全限定路径。
+*lpszPath名称*<br/>
+指向容器文档完全限定路径的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功注册文档; 非零值否则为 0。
+如果文档已成功注册，则非零;否则 0。
 
 ### <a name="remarks"></a>备注
 
-调用此函数时创建或打开要将文档注册 OLE 系统 Dll 的命名的文件。 没有无需调用此函数，如果文档表示嵌入的项。
+创建或打开命名文件以将文档注册到 OLE 系统 DLL 时调用此功能。 如果文档表示嵌入的项，则无需调用此函数。
 
-如果使用的`COleTemplateServer`应用程序中`Register`为您通过调用`COleLinkingDoc`的实现`OnNewDocument`， `OnOpenDocument`，并`OnSaveDocument`。
+如果在应用程序中使用`COleTemplateServer`，`Register`则 由`COleLinkingDoc`的 实现`OnNewDocument`调用 。 `OnSaveDocument` `OnOpenDocument`
 
-##  <a name="revoke"></a>  COleLinkingDoc::Revoke
+## <a name="colelinkingdocrevoke"></a><a name="revoke"></a>COle链接文档：撤销
 
-告知 OLE 系统 Dll 文档不再处于打开状态。
+通知 OLE 系统 DLL 文档不再打开。
 
-```
+```cpp
 void Revoke();
 ```
 
 ### <a name="remarks"></a>备注
 
-调用此函数可撤消向 OLE 系统 Dll 的文档的注册。
+调用此函数以撤销文档在 OLE 系统 DLL 中的注册。
 
-关闭的命名的文件时，应调用此函数，但通常不需要直接调用。 `Revoke` 为您通过调用`COleLinkingDoc`的实现`OnCloseDocument`， `OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。
+关闭命名文件时应调用此函数，但通常不需要直接调用它。 `Revoke`是`COleLinkingDoc`按 的`OnCloseDocument`实现来调用 的`OnNewDocument`，`OnOpenDocument`和`OnSaveDocument`。
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[MFC 样品 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument 类](../../mfc/reference/coledocument-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)

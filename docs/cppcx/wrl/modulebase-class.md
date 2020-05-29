@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403212"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371263"
 ---
 # <a name="modulebase-class"></a>ModuleBase 类
 
@@ -34,23 +34,23 @@ class ModuleBase;
 
 ## <a name="remarks"></a>备注
 
-表示类的基类[模块](module-class.md)类。
+表示[模块](module-class.md)类的基类。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                         | 描述
+名称                                         | 说明
 -------------------------------------------- | ---------------------------------------------------------
-[ModuleBase::ModuleBase](#modulebase)        | 初始化 `Module` 类的实例。
-[ModuleBase::~ModuleBase](#tilde-modulebase) | 取消初始化的当前实例`Module`类。
+[模块基础：：模块库](#modulebase)        | 初始化 `Module` 类的实例。
+[模块基础：：*模块库](#tilde-modulebase) | 取消初始化类的`Module`当前实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                      | 描述
+名称                                                      | 说明
 --------------------------------------------------------- | -------------------------------------------------------------------------
-[ModuleBase::DecrementObjectCount](#decrementobjectcount) | 实现时，递减的对象数模块所跟踪。
-[ModuleBase::IncrementObjectCount](#incrementobjectcount) | 实现时，递增模块所跟踪的对象数。
+[模块基础：:D对象计数](#decrementobjectcount) | 实现后，将声明模块跟踪的对象数。
+[模块基础：：增量对象计数](#incrementobjectcount) | 实现后，将递增模块跟踪的对象数。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,11 +58,11 @@ class ModuleBase;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标题：** 实现.h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** 微软：：WRL：:D
 
-## <a name="tilde-modulebase"></a>ModuleBase:: ~ ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>模块基础：：*模块库
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -72,9 +72,9 @@ virtual ~ModuleBase();
 
 ### <a name="remarks"></a>备注
 
-取消初始化的当前实例`ModuleBase`类。
+取消初始化类的`ModuleBase`当前实例。
 
-## <a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>模块基础：:D对象计数
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -88,9 +88,9 @@ virtual long DecrementObjectCount() = 0;
 
 ### <a name="remarks"></a>备注
 
-实现时，递减的对象数模块所跟踪。
+实现后，将声明模块跟踪的对象数。
 
-## <a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>模块基础：：增量对象计数
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -104,9 +104,9 @@ virtual long IncrementObjectCount() = 0;
 
 ### <a name="remarks"></a>备注
 
-实现时，递增模块所跟踪的对象数。
+实现后，将递增模块跟踪的对象数。
 
-## <a name="modulebase"></a>ModuleBase::ModuleBase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>模块基础：：模块库
 
 支持 WRL 基础结构，不应在代码中直接使用。
 

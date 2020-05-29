@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46f0a23fcfd949843e3548354f52970b10b6d63b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169482"
 ---
-# <a name="defining-asm-blocks-as-c-macros"></a>将 __asm 块定义为 C 宏
+# <a name="defining-__asm-blocks-as-c-macros"></a>将 __asm 块定义为 C 宏
 
 **Microsoft 专用**
 
@@ -47,14 +47,14 @@ __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al
 
 大括号也是必需的。 如果省略它们，则编译器会对同一行上的 C 或 C++ 语句与宏调用的右侧内容混淆不清。 在没有右大括号的情况下，编译器无法告知程序集代码停止的位置，并且会将 `__asm` 块后面的 C 或 C++ 语句视为程序集指令。
 
-使用分号启动的程序集样式注释 (**;**) 继续到行尾。 这会导致宏出现问题，因为编译器将忽略注释后面的内容，直到到达逻辑行尾。 上述情况同样适用于单行 C 或 C++ 注释 (`// comment`)。 若要防止错误，请在定义为宏的 `/* comment */` 块中使用旧式 C 注释 (`__asm`)。
+以分号（ **;** ）开头的程序集样式注释将继续到行的末尾。 这会导致宏出现问题，因为编译器将忽略注释后面的内容，直到到达逻辑行尾。 上述情况同样适用于单行 C 或 C++ 注释 (`// comment`)。 若要防止错误，请在定义为宏的 `/* comment */` 块中使用旧式 C 注释 (`__asm`)。
 
 编写为 C 宏的 `__asm` 块可以采用自变量。 但与普通 C 宏不同，`__asm` 宏不能返回值。 这样您便无法在 C 或 C++ 表达式中使用这些宏。
 
-请注意，不要任意调用此类型的宏。 例如，调用使用 `__fastcall` 约定声明的函数中的汇编语言宏可能会导致意外的结果。 (请参阅[使用和保留内联程序集中的寄存器](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。)
+请注意，不要任意调用此类型的宏。 例如，调用使用 `__fastcall` 约定声明的函数中的汇编语言宏可能会导致意外的结果。 （请参阅[使用和保留内联程序集中的寄存器](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。）
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内联汇编程序](../../assembler/inline/inline-assembler.md)<br/>

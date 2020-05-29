@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205304"
 ---
 # <a name="compiler-error-c2441"></a>编译器错误 C2441
 
-> '*变量*： 使用 __declspec （process） 声明的符号必须是常量在 /clr: pure 模式
+> "*variable*"：使用 __declspec （process）声明的符号必须是/clr： pure 模式中的常量
 
 ## <a name="remarks"></a>备注
 
-**/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
+**/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-默认情况下，变量是每个应用程序域下 **/clr: pure**。 变量标记`__declspec(process)`下 **/clr: pure**容易发生错误，如果在另一个应用程序域中修改读。
+默认情况下，变量位于 **/clr： pure**下的每个应用程序域中。 如果在一个应用程序域中修改并读取另一个应用程序域中的，则在 **/clr： pure**下标记为 `__declspec(process)` 的变量容易出现错误。
 
-因此，编译器可强制每个进程的变量是`const`下 **/clr: pure**，使其读取仅在所有应用程序域中的。
+因此，编译器强制每个进程变量在 **/clr： pure**下 `const`，使其仅在所有应用程序域中都是只读的。
 
-有关详细信息，请参阅[进程](../../cpp/process.md)并[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。
+有关详细信息，请参阅[进程](../../cpp/process.md)和[/Clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。
 
 ## <a name="example"></a>示例
 

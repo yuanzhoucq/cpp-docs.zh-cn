@@ -12,27 +12,27 @@ helpviewer_keywords:
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
 ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233055"
 ---
 # <a name="if-statement-c"></a>if 语句 (C)
 
-if 语句控制条件分支。 如果表达式的值不为零，则执行 if 语句体。 if 语句的语法有两种形式。
+ if 语句控制条件分支。 如果表达式的值不为零，则执行 if  语句体。  if 语句的语法有两种形式。
 
 ## <a name="syntax"></a>语法
 
 *selection-statement*: **if (**  *expression*  **)**  *statement*
 
-if (  expression  )  statement  else  statement
+**if (**  *expression*  **)**  *statement*  **else**  *statement*
 
-在两种形式的 if 语句中，将计算可具有结构之外的任何值的表达式（包括所有副作用）。
+在两种形式的 if  语句中，将计算可具有结构之外的任何值的表达式（包括所有副作用）。
 
-在第一种形式的语法中，如果 expression 为 true（非零），则执行 statement。 如果 expression 为 false，则忽略 statement。 在第二种形式的语法（使用了 else）中，如果 expression 为 false，则执行第二个 statement。 对于这两种形式，除非其中一个语句包含 break、continue 或 `goto`，否则控制随后会从程序中的 if 语句传递到的下一语句。
+在第一种形式的语法中，如果 expression  为 true（非零），则执行 statement  。 如果 expression  为 false，则忽略 statement  。 在第二种形式的语法（使用了 else  ）中，如果 expression  为 false，则执行第二个 statement  。 对于这两种形式，除非其中一个语句包含 break  、continue  或 `goto`，否则控制随后会从程序中的 if  语句传递到的下一语句。
 
-下面是 if 语句的示例：
+下面是 if  语句的示例：
 
 ```
 if ( i > 0 )
@@ -44,9 +44,9 @@ else
 }
 ```
 
-在此示例中，如果 `y = x/i;` 大于 0，则执行 `i` 语句。 如果 `i` 小于或等于 0，则将 `i` 赋给 `x`，并将 `f( x )` 赋给 `y`。 请注意，构成 if 子句的语句将以分号结尾。
+在此示例中，如果 `y = x/i;` 大于 0，则执行 `i` 语句。 如果 `i` 小于或等于 0，则将 `i` 赋给 `x`，并将 `f( x )` 赋给 `y`。 请注意，构成 if  子句的语句将以分号结尾。
 
-嵌套 if 语句和 else 子句时，请使用大括号将语句和子句分组到可阐名你的意图的复合语句中。 如果大括号不存在，则编译器会通过将每个 else 与没有 else 的最近的 if 关联来解决二义性。
+嵌套 if  语句和 else  子句时，请使用大括号将语句和子句分组到可阐名你的意图的复合语句中。 如果大括号不存在，则编译器会通过将每个 else  与没有 else  的最近的 if  关联来解决二义性。
 
 ```
 if ( i > 0 )           /* Without braces */
@@ -56,7 +56,7 @@ if ( i > 0 )           /* Without braces */
         x = i;
 ```
 
-在本示例中，else 子句与内部 if 语句关联。 如果 `i` 小于或等于 0，则不会将任何值赋给 `x`。
+在本示例中，else  子句与内部 if  语句关联。 如果 `i` 小于或等于 0，则不会将任何值赋给 `x`。
 
 ```
 if ( i > 0 )
@@ -68,7 +68,7 @@ else
     x = i;
 ```
 
-此示例中的内部 if 语句两边的大括号使 else 子句成为外部 if 语句的一部分。 如果 `i` 小于或等于 0，则将 `i` 赋给 `x`。
+此示例中的内部 if  语句两边的大括号使 else  子句成为外部 if  语句的一部分。 如果 `i` 小于或等于 0，则将 `i` 赋给 `x`。
 
 ## <a name="see-also"></a>请参阅
 

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821683"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214131"
 ---
 # <a name="callback-function-wrl"></a>Callback 函数（WRL）
 
@@ -189,7 +189,7 @@ ComPtr<TDelegateInterface> Callback(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TDelegateInterface*<br/>
 一个模板参数，指定在事件发生时要调用的委托接口。
@@ -227,13 +227,13 @@ ComPtr<TDelegateInterface> Callback(
 *TArg9*<br/>
 一个模板参数，指定第九个回调方法自变量的类型。
 
-*callback*<br/>
+*拨*<br/>
 一个对象，表示回调对象及其成员函数。
 
-*object*<br/>
+对象<br/>
 一个对象，在事件发生时调用该对象的成员函数。
 
-*付款方式*<br/>
+*method*<br/>
 在事件发生时要调用的成员函数。
 
 ## <a name="return-value"></a>返回值
@@ -244,7 +244,7 @@ ComPtr<TDelegateInterface> Callback(
 
 委托对象的基必须 `IUnknown`，而不是 `IInspectable`。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** 事件。h
 

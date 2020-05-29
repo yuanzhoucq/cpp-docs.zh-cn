@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1143
 ms.assetid: 5dc6b634-d142-4448-b5ea-48e8fb10c10a
-ms.openlocfilehash: d379845291a8f1c092c2621fc7b5ff52d0821a7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13152ab7c806965e7cd3141e4f97931e7de7aa4f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184172"
 ---
 # <a name="linker-tools-error-lnk1143"></a>链接器工具错误 LNK1143
 
-无效或损坏的文件： COMDAT 节号没有符号
+无效或损坏的文件：没有用于 COMDAT 节号的符号
 
-如果对象文件已损坏，则可以导致此错误。
+如果对象文件已损坏，则可能会导致此错误。
 
-重新生成该文件。
+重新生成文件。

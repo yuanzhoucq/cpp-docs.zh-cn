@@ -8,42 +8,42 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 994f81524001a80d1cf0dd3783b9de742d61e84d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741609"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365847"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>声明基于新控件类的变量
 
-创建 MFC 控件类后，可以声明其为基础的变量。 若要为新的变量提供上下文，必须打开对话框编辑器并编辑想要使用可重用控件的对话框。 此外，对话框中必须已有与之关联的类。 有关使用对话框编辑器的信息，请参阅[对话框编辑器](../../windows/dialog-editor.md)。
+创建 MFC 控制类后，可以基于它声明变量。 要为新变量提供上下文，必须打开对话框编辑器并编辑要在其中使用可重用控件的对话框。 此外，对话框必须已具有与其关联的类。 有关使用对话框编辑器的信息，请参阅[对话框编辑器](../../windows/dialog-editor.md)。
 
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>若要声明变量基于可重用类
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>基于可重用类声明变量
 
-1. 在编辑对话框中，将从拖到对话框控件工具栏中拖动新控件的基类的类型相同的控件。
+1. 编辑对话框时，将与新控件的基类相同的控件从"控件"工具栏拖动到对话框中。
 
-1. 将鼠标指针放在拖动的控件。
+1. 将鼠标指针放在丢弃的控件上。
 
-1. 在按住 CTRL 键，双击该控件。
+1. 按下 CTRL 键时，双击控件。
 
-   [添加成员变量](../../ide/add-member-variable-wizard.md)对话框随即出现。
+   将显示"[添加成员变量"](../../ide/add-member-variable-wizard.md)对话框。
 
-1. 在中**访问**框中，选择正确的访问权限为您的控件。
+1. 在 **"访问"** 框中，为控件选择正确的访问。
 
-1. 单击**控制变量**复选框。
+1. 单击 **"控制变量**"复选框。
 
-1. 在中**变量名**框中，键入一个名称。
+1. 在 **"变量名称"** 框中，键入名称。
 
-1. 下**类别**，单击**控制**。
+1. 在**类别**下，单击 **"控制**"。
 
-1. 在中**控件 ID**列表中，选取你添加的控件。 **变量类型**列表中应显示正确的变量类型，并**控件类型**框应显示正确的控件类型。
+1. 在 **"控件 ID"** 列表中，选择添加的控件。 **变量类型**列表应显示正确的变量类型，**控件类型**框应显示正确的控件类型。
 
-9. 在中**注释**框中，添加你想要显示在代码中的注释。
+1. 在 **"注释"** 框中，添加要在代码中显示的任何注释。
 
-10. 单击 **“确定”** 。
+1. 单击“确定”。 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [将消息映射到函数](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

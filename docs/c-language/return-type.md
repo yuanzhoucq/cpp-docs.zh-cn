@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857029"
@@ -23,10 +23,10 @@ ms.locfileid: "74857029"
 
 ## <a name="syntax"></a>语法
 
-function-definition：<br/>
+function-definition  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**属性-seq*是特定于 Microsoft 的 \*/
+/\* *attribute-seq* is Microsoft-specific \*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -38,10 +38,10 @@ function-definition：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int8 /\*** \*/<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int16 /\*** \*/<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int32 /\*** \*/<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int64 /\*** \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft-specific \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft-specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -51,7 +51,7 @@ function-definition：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
-type-specifier 可以指定任何基本、结构或联合类型。 如果不包含 type-specifier，则假定返回类型 `int`。
+type-specifier  可以指定任何基本、结构或联合类型。 如果不包含 type-specifier  ，则假定返回类型 `int`。
 
 函数定义中给定的返回类型必须与程序中其他位置的函数声明中的返回类型相匹配。 当执行包含表达式的 `return` 语句时，函数将返回值。 计算该表达式，转换为返回值类型（如果需要）并返回到调用函数的点。 如果使用返回类型 `void` 声明函数，则包含表达式的返回语句会生成警告，并且不计算该表达式。
 
@@ -97,6 +97,6 @@ char *smallstr( char s1[], char s2[] )
 
 在调用函数之前，您无需使用 `int` 返回类型声明函数，但建议使用原型，以便启用对参数和返回值的正确类型检查。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C 函数定义](../c-language/c-function-definitions.md)

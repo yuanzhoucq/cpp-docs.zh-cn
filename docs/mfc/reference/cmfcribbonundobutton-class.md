@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonUndoButton 类
+title: CMFC 功能放大缩小字体功能 放大缩小字体功能
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonUndoButton
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15cf93d39057f0e235779d47cf24d920d80a807d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410069"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753493"
 ---
-# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 类
+# <a name="cmfcribbonundobutton-class"></a>CMFC 功能放大缩小字体功能 放大缩小字体功能
 
-`CMFCRibbonUndoButton`类实现包含最新的用户命令的下拉列表按钮。 用户可以从要重做或撤消它们的下拉列表选择一个或多个最新的命令。
+类`CMFCRibbonUndoButton`实现包含最新用户命令的下拉列表按钮。 用户可以从下拉列表中选择一个或多个最新命令，以重做或撤消这些命令。
 
 ## <a name="syntax"></a>语法
 
@@ -37,26 +37,26 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|构造一个新`CMFCRibbonUndoButton`通过使用指定的命令 ID、 文本标签和映像从父对象的图像列表对象。|
+|[CMFC 功能Undo按钮：：CMFC功能放大缩小字体功能](#cmfcribbonundobutton)|使用指定的命令`CMFCRibbonUndoButton`ID、文本标签和父对象的图像列表中的图像来构造新对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|将新的操作添加到的操作的列表。|
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|清除操作列表中，这是下拉列表。|
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|确定用户从下拉列表中选择的项的数目。|
-|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|指示对象是否包含一个菜单。|
+|[CMFC 功能Undo按钮：：添加UndoAction](#addundoaction)|向操作列表添加新操作。|
+|[CMFC 功能整理按钮：：清除 Undo 列表](#cleanupundolist)|清除操作列表，这是下拉列表。|
+|[CMFC 功能Undo按钮：获取操作编号](#getactionnumber)|确定用户从下拉列表中选择的项数。|
+|[CMFC功能放大缩小字体功能 放大缩小字体功能](#hasmenu)|指示对象是否包含菜单。|
 
 ## <a name="remarks"></a>备注
 
-`CMFCRibbonUndoButton`类使用堆栈来表示下拉列表。
+类`CMFCRibbonUndoButton`使用堆栈来表示下拉列表。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCRibbonUndoButton`类，并将新的操作添加到的操作的列表。 此代码片段属于[功能区的小工具示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何构造`CMFCRibbonUndoButton`类的对象，以及如何向操作列表中添加新操作。 此代码段是[功能区小工具示例的一](../../overview/visual-cpp-samples.md)部分。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 
@@ -74,32 +74,32 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxribbonundobutton.h
+**标题：** afxribbonundobutton.h
 
-##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction
+## <a name="cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFC 功能Undo按钮：：添加UndoAction
 
-将新的操作添加到的操作的列表。
+向操作列表添加新操作。
 
-```
+```cpp
 void AddUndoAction(LPCTSTR lpszLabel);
 ```
 
 ### <a name="parameters"></a>参数
 
 *lpszLabel*<br/>
-[in]将显示在下拉列表中的操作标签。
+[在]将在下拉列表中显示的操作标签。
 
-##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList
+## <a name="cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFC 功能整理按钮：：清除 Undo 列表
 
-清除操作列表中，这是下拉列表。
+清除操作列表，这是下拉列表。
 
-```
+```cpp
 void CleanUpUndoList();
 ```
 
-##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton
+## <a name="cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFC 功能Undo按钮：：CMFC功能放大缩小字体功能
 
-构造一个新`CMFCRibbonUndoButton`通过使用指定的命令 ID、 文本标签和映像从父对象的图像列表对象。
+使用指定的命令`CMFCRibbonUndoButton`ID、文本标签和父对象的图像列表中的图像来构造新对象。
 
 ```
 CMFCRibbonUndoButton(
@@ -117,23 +117,23 @@ CMFCRibbonUndoButton(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[in]指定命令标识符。
+[在]指定命令标识符。
 
 *lpszText*<br/>
-[in]指定按钮的文本标签。
+[在]指定按钮的文本标签。
 
-*nSmallImageIndex*<br/>
-[in]中的图像列表的按钮的小图像的父对象的从零开始索引。
+*n 小图像索引*<br/>
+[在]按钮小图像的父对象图像列表中的零索引。
 
 *nLargeImageIndex*<br/>
-[in]从零开始的索引中的父对象的图像列表的按钮的大图像。
+[在]按钮大图像的父对象图像列表中的零索引。
 
 *hIcon*<br/>
-[in]句柄可用作按钮的图像的图标。
+[在]图标的句柄，您可以将其用作按钮的图像。
 
-##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber
+## <a name="cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFC 功能Undo按钮：获取操作编号
 
-确定用户从下拉列表中选择的项的数目。
+确定用户从下拉列表中选择的项数。
 
 ```
 int GetActionNumber() const;
@@ -141,11 +141,11 @@ int GetActionNumber() const;
 
 ### <a name="return-value"></a>返回值
 
-用户选择的项目数。
+用户选择的项数。
 
-##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu
+## <a name="cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFC功能放大缩小字体功能 放大缩小字体功能
 
-指示对象是否包含一个菜单。
+指示对象是否包含菜单。
 
 ```
 virtual BOOL HasMenu() const;
@@ -159,7 +159,7 @@ virtual BOOL HasMenu() const;
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonGallery 类](../../mfc/reference/cmfcribbongallery-class.md)<br/>
-[CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFC 功能按钮类](../../mfc/reference/cmfcribbonbutton-class.md)

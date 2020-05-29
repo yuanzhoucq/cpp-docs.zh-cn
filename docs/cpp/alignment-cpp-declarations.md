@@ -1,21 +1,18 @@
 ---
-title: 对齐
+title: Alignment
 description: 如何在新式C++中指定数据对齐方式。
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301660"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076116"
 ---
-# <a name="alignment"></a>对齐
+# <a name="alignment"></a>Alignment
 
-C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器会按大小值对类和结构成员进行对齐： `bool` 和 `char` 在1个字节的边界上，`short` 2 字节边界、`int`、`long`和 `float`，在4个字节边界上，以及在8字节边界上 `long long`、`double`和 `long double`。 
+C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器会按大小值对类和结构成员进行对齐： `bool` 和 `char` 在1个字节的边界上，`short` 2 字节边界、`int`、`long`和 `float`，在4个字节边界上，以及在8字节边界上 `long long`、`double`和 `long double`。
 
 在大多数情况下，你永远不需要关心对齐方式，因为默认对齐已经是最佳的。 但是，在某些情况下，您可以通过为数据结构指定自定义对齐方式来实现显著的性能改进或节省内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 特定的关键字 `__alignof` 和 `declspec(alignas)` 指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 c + + 11 标准关键字**alignof**和**alignas** ，以获得最大的代码可移植性。 新关键字的行为方式与 Microsoft 特定的扩展相同。 这些扩展插件的文档也适用于新关键字。 有关详细信息，请参阅[__Alignof 运算符](../cpp/alignof-operator.md)并[对齐](../cpp/align-cpp.md)。 C++标准不指定在边界比目标平台的编译器默认值小的边界上对齐的封装行为，因此在这种情况下仍需要使用 Microsoft #pragma [pack](../preprocessor/pack.md) 。
 

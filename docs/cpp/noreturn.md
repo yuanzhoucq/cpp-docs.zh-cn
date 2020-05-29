@@ -7,27 +7,27 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: f9ca61c9d734ccdd6b8d8374ed3a7c4128ee3d5e
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a30840aa0556a7324ba24c0f2aaec57dea88d082
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367857"
 ---
 # <a name="noreturn"></a>noreturn
 
-**Microsoft 专用**
+**微软特定**
 
-此 **__declspec**特性告知编译器函数不返回。 因此，编译器知道调用 **__declspec （noreturn）** 函数后的代码是无法访问的。
+此 **__declspec**属性告诉编译器函数不返回。 因此，编译器知道调用 **__declspec（返回）** 函数后的代码是无法访问的。
 
-如果编译器找到带有不返回值的控制路径的函数，则它会生成警告 (C4715) 或错误消息 (C2202)。 如果由于从不返回的函数而无法访问控件路径，则可以使用 **__declspec （noreturn）** 来防止此警告或错误。
+如果编译器找到带有不返回值的控制路径的函数，则它会生成警告 (C4715) 或错误消息 (C2202)。 如果由于函数永远不会返回而无法访问控制路径，则可以使用 **__declspec（不返回）** 来防止此警告或错误。
 
 > [!NOTE]
->  将 **__declspec （noreturn）** 添加到预期返回的函数可能会导致未定义的行为。
+> 向预期返回的函数添加 **__declspec（不返回）** 可能会导致未定义的行为。
 
 ## <a name="example"></a>示例
 
-在下面的示例中， **else**子句不包含 return 语句。  将 `fatal` 声明为 **__declspec （noreturn）** 可避免出现错误或警告消息。
+在下面的示例中，**其他**子句不包含返回语句。  声明`fatal`为 **__declspec（不返回）** 可避免错误或警告消息。
 
 ```cpp
 // noreturn2.cpp
@@ -43,9 +43,9 @@ int main() {
 }
 ```
 
-**结束 Microsoft 专用**
+**结束微软特定**
 
 ## <a name="see-also"></a>另请参阅
 
 [__declspec](../cpp/declspec.md)<br/>
-[关键字](../cpp/keywords-cpp.md)
+[Keywords](../cpp/keywords-cpp.md)

@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（第 1 级）C4461
+title: 编译器警告（等级 1）C4461
 ms.date: 11/04/2016
 f1_keywords:
 - C4461
 helpviewer_keywords:
 - C4461
 ms.assetid: 104ffecc-3dd4-4cb1-89a8-81154fbe46d9
-ms.openlocfilehash: 195e5532b6555210077e43ad3086ee3106f3e757
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 819c433a58c6b0c3a3958b483dc1d1a08bde58c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186746"
 ---
-# <a name="compiler-warning-level-1-c4461"></a>编译器警告（第 1 级）C4461
+# <a name="compiler-warning-level-1-c4461"></a>编译器警告（等级 1）C4461
 
 "type"：此类具有终结器 "finalizer"，但没有析构函数 "dtor"
 

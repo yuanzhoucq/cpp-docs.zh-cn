@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224405"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376152"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 类
 
@@ -31,21 +31,21 @@ class COleResizeBar : public CControlBar
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleResizeBar::COleResizeBar](#coleresizebar)|构造 `COleResizeBar` 对象。|
+|[COle ResizeBar：COle resizebar](#coleresizebar)|构造 `COleResizeBar` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[COleResizeBar::Create](#create)|创建和初始化 Windows 子窗口并将关联到`COleResizeBar`对象。|
+|[COle Resize 栏：创建](#create)|创建 Windows 子窗口并将其初始化，并将其关联到`COleResizeBar`对象。|
 
 ## <a name="remarks"></a>备注
 
-`COleResizeBar` 对象显示为[CRectTracker](../../mfc/reference/crecttracker-class.md)具有阴影边框和外部重设大小句柄。
+`COleResizeBar`对象显示为具有阴影边框和外部调整大小的控点的[CRectTracker。](../../mfc/reference/crecttracker-class.md)
 
-`COleResizeBar` 对象是通常嵌入的成员的框架窗口对象派生自[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类。
+`COleResizeBar`对象通常是派生自[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类的帧窗口对象的嵌入成员。
 
 有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)。
 
@@ -57,15 +57,15 @@ class COleResizeBar : public CControlBar
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[C控制栏](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole.h
+**标题：** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COle ResizeBar：COle resizebar
 
 构造 `COleResizeBar` 对象。
 
@@ -75,11 +75,11 @@ COleResizeBar();
 
 ### <a name="remarks"></a>备注
 
-调用`Create`创建大小调整条对象。
+调用`Create`以创建调整条形对象的大小。
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="coleresizebarcreate"></a><a name="create"></a>COle Resize 栏：创建
 
-创建子窗口，并将其与`COleResizeBar`对象。
+创建子窗口并将其与`COleResizeBar`对象关联。
 
 ```
 virtual BOOL Create(
@@ -90,22 +90,22 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*pParentWnd*<br/>
-向父窗口大小调整条的指针。
+*pparentwnd*<br/>
+指向调整大小条的父窗口。
 
 *dwStyle*<br/>
 指定[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性。
 
 *nID*<br/>
-大小调整条的子窗口 id。
+调整条形的子窗口 ID 的大小。
 
 ### <a name="return-value"></a>返回值
 
-如果创建的大小调整条; 非零值否则为 0。
+如果创建了调整大小条，则非零;否则 0。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC 示例 SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[MFC 样品 SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc 类](../../mfc/reference/coleserverdoc-class.md)

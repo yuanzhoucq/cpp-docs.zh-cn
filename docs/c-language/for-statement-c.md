@@ -5,11 +5,11 @@ helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
 ms.openlocfilehash: df00bcab2f9f9e51a6f37e19670b6cd240fa5cc4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233639"
 ---
 # <a name="for-statement-c"></a>for 语句 (C)
 
@@ -26,7 +26,7 @@ ms.locfileid: "56152828"
 
 1. 将计算 *cond-expression*（如果有）。 此表达式必须具有算法或指针类型。 它在每次迭代前计算。 可能有三个结果：
 
-   - 如果 *cond-expression* 为 **true**（非零），则执行语句，然后计算 *loop-expression*（若有）。 在每次迭代之后，将计算 *loop-expression*。 对其类型没有限制。 副作用将按顺序执行。 该过程随后从计算 *cond-expression* 重新开始。
+   - 如果 *cond-expression* 为 **true**（非零），则执行语句  ，然后计算 *loop-expression*（若有）。 在每次迭代之后，将计算 *loop-expression*。 对其类型没有限制。 副作用将按顺序执行。 该过程随后从计算 *cond-expression* 重新开始。
 
    - 如果省略了 *cond-expression*，则 *cond-expression* 被视为 true，执行将完全按上一段中所述方式继续。 仅当执行了语句体中的 **break** 或 **return** 语句时，或执行了 **goto**（到 **for** 语句体外的标记语句）时，没有 *cond-expression* 参数的 **for** 语句才会终止。
 
@@ -71,7 +71,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 Number of spaces: 4

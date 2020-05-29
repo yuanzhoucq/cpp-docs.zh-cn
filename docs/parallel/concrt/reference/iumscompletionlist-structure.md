@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: 02382ef4606a6e73804fcbd5ce7735ecf2f0dcc7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c388cc98aedbd35b2d0e00a4653a85a47abcb838
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140038"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368124"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList 结构
 
@@ -25,17 +25,17 @@ ms.locfileid: "77140038"
 struct IUMSCompletionList;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|说明|
 |----------|-----------------|
-|[IUMSCompletionList：： GetUnblockNotifications](#getunblocknotifications)|检索一个 `IUMSUnblockNotification` 接口链，该链表示自上次调用此方法以来关联的线程代理已取消阻止的执行上下文。|
+|[IUMS 完成列表：：获取取消阻止通知](#getunblocknotifications)|检索表示执行上下文的`IUMSUnblockNotification`接口链，自上次调用此方法以来，其关联的线程代理已解除阻止。|
 
 ## <a name="remarks"></a>备注
 
-计划程序必须特别注意使用此接口对完成列表中的项取消排队后，执行了哪些操作。 应将这些项放在可运行上下文的计划程序列表中，并尽快进行访问。 完全有可能为某个取消排队的项授予了任意锁的所有权。 计划程序可以不执行任何函数调用，它们可能会在对出列项的调用和列表中放置这些项的位置之间进行阻止，通常可以从计划程序内访问这些项。
+计划程序必须格外小心，利用此接口从完成列表中取消项目排队后执行哪些操作。 这些项目应放在计划程序的可运行上下文列表中，并且通常可以尽快访问。 完全有可能，其中一个取消排队的项目已被授予任意锁的所有权。 计划程序不能进行任意的函数调用，这些调用在取消排队项的调用和这些项放置在通常可以从计划程序内访问的列表中之间。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -43,13 +43,13 @@ struct IUMSCompletionList;
 
 ## <a name="requirements"></a>要求
 
-**标头：** concrtrm。h
+**标题：** concrtrm.h
 
 **命名空间：** 并发
 
-## <a name="getunblocknotifications"></a>IUMSCompletionList：： GetUnblockNotifications 方法
+## <a name="iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>IUMS 完成列表：：获取取消阻止通知方法
 
-检索一个 `IUMSUnblockNotification` 接口链，该链表示自上次调用此方法以来关联的线程代理已取消阻止的执行上下文。
+检索表示执行上下文的`IUMSUnblockNotification`接口链，自上次调用此方法以来，其关联的线程代理已解除阻止。
 
 ```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
@@ -57,14 +57,14 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 
 ### <a name="return-value"></a>返回值
 
-`IUMSUnblockNotification` 接口的链。
+接口链`IUMSUnblockNotification`。
 
 ### <a name="remarks"></a>备注
 
-重新计划执行上下文后，返回的通知无效。
+重新计划执行上下文后，返回的通知将无效。
 
 ## <a name="see-also"></a>另请参阅
 
-[并发命名空间](concurrency-namespace.md)<br/>
+[concurrency 命名空间](concurrency-namespace.md)<br/>
 [IUMSScheduler 结构](iumsscheduler-structure.md)<br/>
 [IUMSUnblockNotification 结构](iumsunblocknotification-structure.md)

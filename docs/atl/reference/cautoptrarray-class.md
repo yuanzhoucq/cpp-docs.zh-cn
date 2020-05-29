@@ -8,47 +8,47 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246806"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167654"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 类
 
-构造的智能指针的数组时，此类提供了有用的方法。
+此类提供在构造智能指针数组时有用的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*E*<br/>
+*电邮*<br/>
 指针类型。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|构造函数。|
 
 ## <a name="remarks"></a>备注
 
-此类提供构造函数，并派生方法从[CAtlArray](../../atl/reference/catlarray-class.md)并[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)来帮助存储智能指针集合类对象的创建。
+此类提供构造函数并从[CAtlArray](../../atl/reference/catlarray-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)派生方法，以帮助创建存储智能指针的集合类对象。
 
-有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅[ATL Collection 类](../../atl/atl-collection-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,13 +58,13 @@ class CAutoPtrArray : public CAtlArray<
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标头：** atlcoll
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 构造函数。
 
-```
+```cpp
 CAutoPtrArray() throw();
 ```
 
@@ -72,7 +72,7 @@ CAutoPtrArray() throw();
 
 初始化智能指针数组。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CAtlArray 类](../../atl/reference/catlarray-class.md)<br/>
 [CAutoPtrElementTraits 类](../../atl/reference/cautoptrelementtraits-class.md)<br/>

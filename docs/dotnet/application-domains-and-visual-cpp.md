@@ -8,18 +8,18 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16c02bb58681ecb241d3552f57e0b05f2d6711b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223022"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208793"
 ---
-# <a name="application-domains-and-visual-c"></a>应用程序域和视觉对象C++
+# <a name="application-domains-and-visual-c"></a>应用程序域和 Visual C++
 
-如果您有`__clrcall`虚函数，vtable 将为每个应用程序域 (appdomain)。 如果在一个 appdomain 中创建一个对象，只能调用从该 appdomain 中的虚拟函数。 在混合模式下 (**/clr**) 如果您的类型不具有将具有每个进程 vtable`__clrcall`虚函数。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
+如果有 `__clrcall` 虚函数，则 vtable 将为每个应用程序域（appdomain）。 如果在一个 appdomain 中创建对象，则只能从该 appdomain 内调用虚拟函数。 在混合模式（ **/clr**）中，如果类型没有 `__clrcall` 虚函数，则会有每个进程的 vtables。 **/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [appdomain](../cpp/appdomain.md)
 
@@ -27,6 +27,6 @@ ms.locfileid: "62223022"
 
 - [进程](../cpp/process.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)

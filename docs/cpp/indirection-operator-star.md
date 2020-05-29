@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: a35d8cb28baaee37ad64a61cbcb9d4c76a5aad06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183578"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178271"
 ---
 # <a name="indirection-operator-"></a>间接寻址运算符：*
 
@@ -24,7 +24,7 @@ ms.locfileid: "62183578"
 
 ## <a name="remarks"></a>备注
 
-一元间接寻址运算符 (<strong>\*</strong>) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 利用<strong>\*</strong>运算符在此上下文中的是不同于其含义为二元运算符，后者是乘法。
+一元间接寻址运算符（<strong>\*</strong>）取消引用指针;也就是说，它将指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 在此上下文中使用<strong>\*</strong>运算符不同于其含义，后者是乘法运算。
 
 如果操作数指向函数，则结果是函数指示符。 如果它指向存储位置，则结果是指定存储位置的左值。
 
@@ -60,7 +60,7 @@ int main() {
 
 - 该指针指定执行程序未使用的地址。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

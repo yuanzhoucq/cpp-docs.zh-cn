@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3180
 ms.assetid: 5281f583-7df7-418a-8507-d4da67ed6572
-ms.openlocfilehash: bfe2699ce448aa879f0c93aa431a17dbc1334274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c94019bf7a58492fcbb27c4f092a6e5f7e36ca25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382380"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176450"
 ---
 # <a name="compiler-error-c3180"></a>编译器错误 C3180
 
-type name： 名称超出了 limit 个字符的元数据限制
+"type name"：名称超出了 "限制" 字符的元数据限制
 
-编译器截断元数据中的托管类型的名称。 截断将使类型无法通过`#using`指令 （或另一种语言的等效项）。
+编译器截断了元数据中托管类型的名称。 截断将使类型无法与 `#using` 指令一起使用（或其他语言的等效项）。
 
 类型名称限制包括任何命名空间限定。

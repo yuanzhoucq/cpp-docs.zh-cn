@@ -5,12 +5,12 @@ helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b101234c582d8730b1a8fb62e8182df68554b18c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214989"
 ---
 # <a name="fix-your-dependencies-on-c-library-internals"></a>解决库内部的C++依赖关系
 
@@ -20,13 +20,13 @@ Microsoft 为标准库、绝大多数 C 运行时库和众多 Visual Studio 版�
 
 ## <a name="_hash_seq"></a>_Hash_seq
 
-在某些字符串类型上实现 `std::hash` 的内部哈希函数 `std::_Hash_seq(const unsigned char *, size_t)`，在最新版本的标准库中是可见的。 此函数在字符序列上实现了 [FNV-1a hash]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)。
+在某些字符串类型上实现 `std::_Hash_seq(const unsigned char *, size_t)` 的内部哈希函数 `std::hash`，在最新版本的标准库中是可见的。 此函数在字符序列上实现了 [FNV-1a hash]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)。
 
 删除此依赖项的方法有几种。
 
-- 如果要使用和 `basic_string` 相同的哈希代码机制将 `const char *` 序列加入无序的容器，则可利用使用 `std::string_view` 的 `std::hash` 模板重载，它将以可移植的方式返回哈希代码。 在未来，字符串库可能依赖（也可能不依赖） FNV-1a 哈希的使用，因此这是避免特定哈希算法上的依赖项的最佳方法。
+- 如果要使用和 `const char *` 相同的哈希代码机制将 `basic_string` 序列加入无序的容器，则可利用使用 `std::hash` 的 `std::string_view` 模板重载，它将以可移植的方式返回哈希代码。 在未来，字符串库可能依赖（也可能不依赖） FNV-1a 哈希的使用，因此这是避免特定哈希算法上的依赖项的最佳方法。
 
-- 如果要通过任意内存生成 FNV-1a 哈希，则可使用 GitHub 上的 [VCSamples]( https://github.com/Microsoft/vcsamples) 存储库的独立头文件 - [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq)（在 [MIT license](https://github.com/Microsoft/VCSamples/blob/master/license.txt) 下）中的代码。 为方便起见，我们还在此处添加了副本。 可将此代码复制到头文件，将标头添加到任何受影响的代码，然后通过 `fnv1a_hash_bytes` 查找和替换 `_Hash_seq`。 你将在 `_Hash_seq` 中获得与内部实现相同的行为。
+- 如果要通过任意内存生成 FNV-1a 哈希，则可使用 GitHub 上的 [VCSamples]( https://github.com/Microsoft/vcsamples) 存储库的独立头文件 - [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq)（在 [MIT license](https://github.com/Microsoft/VCSamples/blob/master/license.txt) 下）中的代码。 为方便起见，我们还在此处添加了副本。 可将此代码复制到头文件，将标头添加到任何受影响的代码，然后通过 `_Hash_seq` 查找和替换 `fnv1a_hash_bytes`。 你将在 `_Hash_seq` 中获得与内部实现相同的行为。
 
 ```cpp
 /*
@@ -74,7 +74,7 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [从 Visual 早期版本升级项目C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

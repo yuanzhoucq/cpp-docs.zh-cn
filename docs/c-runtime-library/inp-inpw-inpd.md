@@ -36,19 +36,19 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 48e0e58d2886c5a8bb90a86c81cb785d364666e8
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988709"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825824"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw、_inpd
 
-输入、端口、字节（`inp`、`_inp`）、字（`inpw`、`_inpw`）或双字（`_inpd`）。
+输入、端口、`inp`字节（、 `_inp`）、字（`inpw`、 `_inpw`）或双字（`_inpd`）。
 
 > [!IMPORTANT]
-> 这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。  
+> 这些函数已过时。 从 Visual Studio 2015 开始，它们在 CRT 中不可用。
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
@@ -67,7 +67,7 @@ unsigned long _inpd(
 
 ### <a name="parameters"></a>参数
 
-*端口*\
+*口*\
 I/O 端口号。
 
 ## <a name="return-value"></a>返回值
@@ -80,17 +80,17 @@ I/O 端口号。
 
 由于这些函数可直接从 I/O 端口读取数据，因此无法用于用户代码。
 
-`inp` 和 `inpw` 名称是 `_inp` 和 `_inpw` 函数的旧的、不推荐使用的名称。 有关详细信息，请参阅[POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+`inp`和`inpw`名称是`_inp`和`_inpw`函数的旧的、不推荐使用的名称。 有关详细信息，请参阅[POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`_inp`|\<conio.h>|
 |`_inpw`|\<conio.h>|
 |`_inpd`|\<conio.h>|
 
-有关兼容性的详细信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -98,5 +98,5 @@ I/O 端口号。
 
 ## <a name="see-also"></a>另请参阅
 
-[控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md)\
+[控制台和端口 i/o](../c-runtime-library/console-and-port-i-o.md)\
 [outp、outpw、_outp、_outpw _outpd](../c-runtime-library/outp-outpw-outpd.md)

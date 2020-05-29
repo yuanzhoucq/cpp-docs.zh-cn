@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 745348e81888b5a87c57fbb99d397fcd423c3ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213858"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 结构
 
@@ -25,13 +25,13 @@ template <typename T, typename U>
 struct InterfaceList;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 接口名称;递归列表中的第一个接口。
 
 *U*<br/>
-接口名称;其余的接口中的递归列表。
+接口名称;递归列表中的其余接口。
 
 ## <a name="remarks"></a>备注
 
@@ -41,10 +41,10 @@ struct InterfaceList;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|`FirstT`|模板参数的同义词*T*。|
-|`RestT`|模板参数的同义词*U*。|
+|`FirstT`|模板参数*T*的同义词。|
+|`RestT`|模板参数*U*的同义词。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -52,10 +52,10 @@ struct InterfaceList;
 
 ## <a name="requirements"></a>要求
 
-**标头：** implements.h
+**标头：** 实现。h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)

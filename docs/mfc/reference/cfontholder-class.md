@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 04de8141469f82bdd1fbb6adc1bae94d6026324c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506448"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754996"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 类
 
@@ -47,34 +47,34 @@ class CFontHolder
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CFontHolder::CFontHolder](#cfontholder)|构造 `CFontHolder` 对象。|
+|[CFontHolder：C方霍尔德](#cfontholder)|构造 `CFontHolder` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CFontHolder::GetDisplayString](#getdisplaystring)|检索容器的属性浏览器中显示的字符串。|
-|[CFontHolder::GetFontDispatch](#getfontdispatch)|返回字体的`IDispatch`接口。|
-|[CFontHolder::GetFontHandle](#getfonthandle)|返回 Windows 字体的句柄。|
-|[CFontHolder::InitializeFont](#initializefont)|`CFontHolder`初始化对象。|
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|检索相关字体的信息。|
-|[CFontHolder::ReleaseFont](#releasefont)|`CFontHolder`断开对象`IFont`与和`IFontNotification`接口的连接。|
-|[CFontHolder::Select](#select)|在设备上下文中选择字体资源。|
-|[CFontHolder::SetFont](#setfont)|将对象连接到`IFont`接口。 `CFontHolder`|
+|[CFontHolder：：获取显示字符串](#getdisplaystring)|检索容器属性浏览器中显示的字符串。|
+|[CFontHolder：获取方调度](#getfontdispatch)|返回字体的`IDispatch`界面。|
+|[CFontHolder：：获取方瑟柄](#getfonthandle)|将句柄返回到 Windows 字体。|
+|[CFontHolder：：初始化字体](#initializefont)|初始化`CFontHolder`对象。|
+|[CFontHolder：：查询文本参数](#querytextmetrics)|检索相关字体的信息。|
+|[CFont持有人：：释放字体](#releasefont)|断开`CFontHolder`对象与 和`IFont``IFontNotification`接口的连接。|
+|[CFontHolder：：选择](#select)|在设备上下文中选择字体资源。|
+|[CFontHolder：：设置字体](#setfont)|将`CFontHolder`对象连接到`IFont`接口。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CFontHolder::m_pFont](#m_pfont)|`CFontHolder` 指向`IFont`对象接口的指针。|
+|[CFontHolder：：m_pFont](#m_pfont)|指向`CFontHolder`对象接口的`IFont`指针。|
 
 ## <a name="remarks"></a>备注
 
 `CFontHolder`没有基类。
 
-使用此类实现控件的自定义字体属性。 有关创建此类属性的信息, 请参阅[文章 ActiveX 控件:使用字体](../../mfc/mfc-activex-controls-using-fonts.md)。
+使用此类可实现控件的自定义字体属性。 有关创建此类属性的信息，请参阅["ActiveX 控件：使用字体](../../mfc/mfc-activex-controls-using-fonts.md)"一文。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -82,9 +82,9 @@ class CFontHolder
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxctl。h
+**标题：** afxctl.h
 
-##  <a name="cfontholder"></a>CFontHolder::CFontHolder
+## <a name="cfontholdercfontholder"></a><a name="cfontholder"></a>CFontHolder：C方霍尔德
 
 构造 `CFontHolder` 对象。
 
@@ -94,14 +94,14 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 
 ### <a name="parameters"></a>参数
 
-*pNotify*<br/>
-指向字体`IPropertyNotifySink`接口的指针。
+*p 通知*<br/>
+指向字体界面的`IPropertyNotifySink`指针。
 
 ### <a name="remarks"></a>备注
 
-使用之前, `InitializeFont`必须先调用来初始化生成的对象。
+在使用结果`InitializeFont`对象之前，必须调用它来初始化结果对象。
 
-##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString
+## <a name="cfontholdergetdisplaystring"></a><a name="getdisplaystring"></a>CFontHolder：：获取显示字符串
 
 检索可在容器的属性浏览器中显示的字符串。
 
@@ -112,15 +112,15 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="parameters"></a>参数
 
 *strValue*<br/>
-对用于保存显示字符串的[CString](../../atl-mfc-shared/reference/cstringt-class.md)的引用。
+引用用于保存显示字符串的[CString。](../../atl-mfc-shared/reference/cstringt-class.md)
 
 ### <a name="return-value"></a>返回值
 
-如果成功检索到该字符串, 则为非零值;否则为0。
+如果已成功检索字符串，则非零;否则 0。
 
-##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch
+## <a name="cfontholdergetfontdispatch"></a><a name="getfontdispatch"></a>CFontHolder：获取方调度
 
-调用此函数可检索指向字体的调度接口的指针。
+调用此功能以检索指向字体调度界面的指针。
 
 ```
 LPFONTDISP GetFontDispatch();
@@ -128,15 +128,15 @@ LPFONTDISP GetFontDispatch();
 
 ### <a name="return-value"></a>返回值
 
-`CFontHolder` 指向`IFontDisp`对象接口的指针。 请注意, 调用`GetFontDispatch`的函数必须在完成后调用`IUnknown::Release`此接口指针。
+指向`CFontHolder`对象接口的`IFontDisp`指针。 请注意，调用`GetFontDispatch`的函数在使用此`IUnknown::Release`接口指针时必须调用它。
 
 ### <a name="remarks"></a>备注
 
-在`InitializeFont` 调用`GetFontDispatch`前调用。
+呼叫`InitializeFont`前呼叫`GetFontDispatch`。
 
-##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle
+## <a name="cfontholdergetfonthandle"></a><a name="getfonthandle"></a>CFontHolder：：获取方瑟柄
 
-调用此函数可获取 Windows 字体的句柄。
+调用此函数以获取 Windows 字体的句柄。
 
 ```
 HFONT GetFontHandle();
@@ -148,29 +148,29 @@ HFONT GetFontHandle(
 
 ### <a name="parameters"></a>参数
 
-*cyLogical*<br/>
-绘制控件的矩形的高度 (以逻辑单位表示)。
+*cyLogic*<br/>
+以逻辑单位表示绘制控件的矩形的高度。
 
-*cyHimetric*<br/>
-控件的高度 (以 MM_HIMETRIC 单位为单位)。
+*环测量*<br/>
+控件的高度（以MM_HIMETRIC单位为单位）。
 
 ### <a name="return-value"></a>返回值
 
-Font 对象的句柄;否则为 NULL。
+字体对象的句柄;否则 NULL。
 
 ### <a name="remarks"></a>备注
 
-*CyLogical*和*cyHimetric*的比率用于计算以 MM_HIMETRIC 单位表示的字体磅值的正确显示大小 (以逻辑单位表示):
+*cyLogic*和*cyHimetric*的比率用于计算以MM_HIMETRIC为单位表示的字体点大小的正确显示大小：
 
-显示大小 = ( *cyLogical* / *cyHimetric*) X 字体大小
+显示大小 = （ *cyLogic* / *cyhimetric*） X 字体大小
 
-不带参数的版本将返回为屏幕正确调整字体大小的句柄。
+没有参数的版本会为屏幕返回正确大小的字体的句柄。
 
-##  <a name="initializefont"></a>CFontHolder::InitializeFont
+## <a name="cfontholderinitializefont"></a><a name="initializefont"></a>CFontHolder：：初始化字体
 
-`CFontHolder`初始化对象。
+初始化`CFontHolder`对象。
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -178,33 +178,33 @@ void InitializeFont(
 
 ### <a name="parameters"></a>参数
 
-*pFontDesc*<br/>
-指向字体说明结构 ( [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)) 的指针, 该结构指定字体的特征。
+*普丰德斯茨*<br/>
+指向指定字体特征的字体描述结构 （ [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)） 的指针。
 
-*pFontDispAmbient*<br/>
-指向容器环境字体属性的指针。
+*pFontDisp环境*<br/>
+指向容器的环境字体属性的指针。
 
 ### <a name="remarks"></a>备注
 
-如果*pFontDispAmbient*不为 NULL, 则`CFontHolder`对象连接到容器的环境字体属性`IFont`所使用的接口的克隆。
+如果*pFontDispAmbient*不是 NULL，则`CFontHolder`对象将连接到容器的环境字体`IFont`属性使用的接口的克隆。
 
-如果*pFontDispAmbient*为 NULL, 则将通过从*pFontDesc*指向的字体说明创建一个新的字体对象, 如果*pFontDesc*为 null, 则从默认的说明创建一个。
+如果*pFontDispAmbient*为 NULL，则从*pFontDesc*指向的字体说明创建新的字体对象，或者从默认说明创建*pFontDesc（如果 pFontDesc*为 NULL）。
 
-构造`CFontHolder`对象之后调用此函数。
+构造`CFontHolder`对象后调用此函数。
 
-##  <a name="m_pfont"></a>CFontHolder::m_pFont
+## <a name="cfontholderm_pfont"></a><a name="m_pfont"></a>CFontHolder：：m_pFont
 
-`CFontHolder` 指向`IFont`对象接口的指针。
+指向`CFontHolder`对象接口的`IFont`指针。
 
 ```
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics
+## <a name="cfontholderquerytextmetrics"></a><a name="querytextmetrics"></a>CFontHolder：：查询文本参数
 
-检索有关由`CFontHolder`对象表示的物理字体的信息。
+检索`CFontHolder`对象表示的物理字体的信息。
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -213,17 +213,17 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 *lptm*<br/>
 指向将接收信息的[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构的指针。
 
-##  <a name="releasefont"></a>CFontHolder::ReleaseFont
+## <a name="cfontholderreleasefont"></a><a name="releasefont"></a>CFont持有人：：释放字体
 
-此函数将`CFontHolder`对象从其`IFont`接口断开连接。
+此函数断开`CFontHolder`对象与其`IFont`接口的连接。
 
-```
+```cpp
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>CFontHolder:: Select
+## <a name="cfontholderselect"></a><a name="select"></a>CFontHolder：：选择
 
-调用此函数可将控件的字体选择到指定的设备上下文中。
+调用此功能以在指定的设备上下文中选择控件的字体。
 
 ```
 CFont* Select(
@@ -235,13 +235,13 @@ CFont* Select(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-选定字体的设备上下文。
+选择字体的设备上下文。
 
-*cyLogical*<br/>
-绘制控件的矩形的高度 (以逻辑单位表示)。
+*cyLogic*<br/>
+以逻辑单位表示绘制控件的矩形的高度。
 
-*cyHimetric*<br/>
-控件的高度 (以 MM_HIMETRIC 单位为单位)。
+*环测量*<br/>
+控件的高度（以MM_HIMETRIC单位为单位）。
 
 ### <a name="return-value"></a>返回值
 
@@ -249,22 +249,22 @@ CFont* Select(
 
 ### <a name="remarks"></a>备注
 
-有关*cyLogical*和*cyHimetric*参数的讨论, 请参阅[GetFontHandle](#getfonthandle) 。
+有关*cyLogic*和*cyHimetric*参数的讨论，请参阅[GetFontHandle。](#getfonthandle)
 
-##  <a name="setfont"></a>CFontHolder::SetFont
+## <a name="cfontholdersetfont"></a><a name="setfont"></a>CFontHolder：：设置字体
 
-释放任何现有字体并将`CFontHolder`对象连接`IFont`到接口。
+释放任何现有字体并将`CFontHolder`对象连接到`IFont`接口。
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pNewFont*<br/>
+*p 纽丰特*<br/>
 指向新`IFont`接口的指针。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
 [CPropExchange 类](../../mfc/reference/cpropexchange-class.md)

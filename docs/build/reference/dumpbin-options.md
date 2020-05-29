@@ -2,17 +2,15 @@
 title: DUMPBIN 选项
 description: Microsoft DUMPBIN 实用程序命令行选项的参考指南。
 ms.date: 02/09/2020
-f1_keywords:
-- dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 54f5a22808026f4442f85d5e53a0805702e05868
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257723"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440044"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN 选项
 
@@ -72,7 +70,7 @@ DUMPBIN 具有以下选项：
 
 - [/TLS](tls.md)
 
-若要列出命令行上的 DUMPBIN 支持的选项，请使用 **/？** 。
+若要列出命令行上的 DUMPBIN 支持的选项，请使用 **/？** 选项。
 
 ## <a name="see-also"></a>另请参阅
 

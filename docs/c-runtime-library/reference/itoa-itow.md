@@ -1,6 +1,6 @@
 ---
 title: _itoa，_itow 函数
-ms.date: 08/19/2019
+ms.date: 4/2/2020
 api_name:
 - itoa
 - _itoa
@@ -15,6 +15,16 @@ api_name:
 - _ultow
 - _i64tow
 - _ui64tow
+- _o__i64toa
+- _o__i64tow
+- _o__itoa
+- _o__itow
+- _o__ltoa
+- _o__ltow
+- _o__ui64toa
+- _o__ui64tow
+- _o__ultoa
+- _o__ultow
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -28,6 +38,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -102,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: a4e429b51e4157b49086d2425bec2698a724a0e0
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898789"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914670"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
@@ -171,14 +182,14 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 *value*<br/>
 要转换的数字。
 
-*buffer*<br/>
+*宽限*<br/>
 保存转换结果的缓冲区。
 
-*radix*<br/>
+*基数*<br/>
 用于转换值的基数，*该值*必须在2-36 范围内。
 
-*size*<br/>
-缓冲区的长度（以字符类型的单位表示）。 此参数是从中C++的*buffer*参数推断出来的。
+size <br/>
+缓冲区的长度（以字符类型的单位表示）。 此参数是从 c + + 中的*buffer*参数推断出来的。
 
 ## <a name="return-value"></a>返回值
 
@@ -186,23 +197,25 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>备注
 
-**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函数将给定*值*参数的数字转换为以 null 结尾的字符串，并将结果（最多33个字符用于 **_itoa**、 **_ltoa**和 **_ultoa**，以及65（最多个 **字符）放**入*缓冲区*。 如果*基数*等于10并且*值*为负，则存储字符串的第一个字符为减号（ **-** ）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函数分别是 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**的宽字符版本。
+**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函数将给定*值*参数的数字转换为以 null 结尾的字符串，并将结果（最多33个字符用于 **_itoa**、 **_ltoa**和 **_ultoa**，以及65（最多个 **_i64toa** **字符）放**入*缓冲区*。 如果*基数*等于10并且*值*为负，则存储字符串的第一个字符为减号（**-**）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函数分别是 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**的宽字符版本。
 
 > [!IMPORTANT]
 > 这些函数可以写入超过太小缓冲区末尾的部分。 若要防止缓冲区溢出，请确保*缓冲区*的大小足以容纳转换后的数字加上尾随的 null 字符和符号字符。 这些函数的误用可能导致代码中出现严重的安全问题。
 
-由于可能存在安全问题，因此默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此函数或变量可能不安全。请考虑**改用*safe_function* **。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 建议更改源代码，以使用警告消息建议的 *safe_function* 。 更安全的函数不能写入超过指定缓冲区大小的字符。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
+由于可能存在安全问题，因此默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此函数或变量可能不安全。请考虑**改用*safe_function* **。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 建议更改源代码，以使用警告消息所建议的*safe_function* 。 更安全的函数不能写入超过指定缓冲区大小的字符。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
 
 若要在不使用弃用警告的情况下使用这些函数，请在包含任何 CRT 标头之前定义 **_CRT_SECURE_NO_WARNINGS**预处理器宏。 可以在开发人员命令提示符下的命令行中执行此操作，方法是将 **/D_CRT_SECURE_NO_WARNINGS**编译器选项添加到**cl**命令。 否则，在源文件中定义宏。 如果使用预编译标头，请在预编译标头包含文件、 *pch* （Visual Studio 2017 及更早版本）的顶部定义宏（*stdafx.h* ）。 若要在源代码中定义宏，请在包含任何 CRT 标头之前使用 **#define**指令，如以下示例中所示：
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-在C++中，这些函数具有调用更安全的副本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+在 c + + 中，这些函数具有调用更安全的副本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-POSIX 名称**itoa**、 **ltoa**和**ultoa**作为 **_itoa**、 **_ltoa**和 **_ultoa**函数的别名存在。 POSIX 名称已弃用，因为它们不遵循 ISO C 的特定于实现的全局函数名称约定。默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此项的 POSIX 名称已弃用。请改用 ISO C 和C++相容名称：** *new_name*。 建议更改源代码以使用这些函数的更安全版本， **_itoa_s**、 **_ltoa_s**或 **_ultoa_s**。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
+POSIX 名称**itoa**、 **ltoa**和**ultoa**作为 **_itoa**、 **_ltoa**和 **_ultoa**函数的别名存在。 POSIX 名称已弃用，因为它们不遵循 ISO C 的特定于实现的全局函数名称约定。默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此项的 POSIX 名称已弃用。请改用与 ISO C 和 c + + 一致的名称：** *new_name*。 建议更改源代码以使用这些函数的更安全版本， **_itoa_s**、 **_ltoa_s**或 **_ultoa_s**。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
 
 对于源代码可移植性，你可能想要在代码中保留 POSIX 名称。 若要在不使用弃用警告的情况下使用这些函数，请在包含任何 CRT 标头之前定义 **_CRT_NONSTDC_NO_WARNINGS**和 **_CRT_SECURE_NO_WARNINGS**预处理器宏。 可以在开发人员命令提示符下的命令行中执行此操作，方法是将 **/D_CRT_SECURE_NO_WARNINGS**和 **/D_CRT_NONSTDC_NO_WARNINGS**编译器选项添加到**cl**命令。 否则，在源文件中定义宏。 如果使用预编译标头，请在预编译头包含文件的顶部定义宏。 若要在源代码中定义宏，请在包含任何 CRT 标头之前使用 **#define**指令，如以下示例中所示：
 
@@ -249,15 +262,15 @@ int main()
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**itoa**、 **ltoa**、 **ultoa**|\<stdlib.h>|
 |**_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**|\<stdlib.h>|
 |**_itow**、 **_ltow**、 **_ultow**、 **_i64tow**、 **_ui64tow**|\<stdlib.h> 或 \<wchar.h>|
 
-这些函数和宏是 Microsoft 特定的。 有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数和宏是 Microsoft 特定的。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

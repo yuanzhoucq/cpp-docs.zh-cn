@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9abe4ae55d9d84ea435cd5d82925ff8b8a544480
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164145"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752957"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 类
 
@@ -65,48 +65,48 @@ class CBaseTransition : public CObject;
 
 ### <a name="public-enumerations"></a>公共枚举
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBaseTransition::TRANSITION_TYPE 枚举](#transition_type_enumeration)|定义当前支持 Windows 动画 API 的 MFC 实现的转换类型。|
+|[CBase 转换：：TRANSITION_TYPE枚举](#transition_type_enumeration)|定义 Windows 动画 API MFC 实现当前支持的过渡类型。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|构造一个基转换对象。|
-|[CBaseTransition:: ~ CBaseTransition](#_dtorcbasetransition)|析构函数。 当转换对象被销毁时调用。|
+|[CBase 转换：CBase 转换](#cbasetransition)|构造基本过渡对象。|
+|[CBase 转换：*CBase 转换](#_dtorcbasetransition)|析构函数。 在销毁过渡对象时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBaseTransition::AddToStoryboard](#addtostoryboard)|将转换添加到情节提要。|
-|[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|将转换添加到情节提要。|
-|[CBaseTransition::Clear](#clear)|版本封装 IUIAnimationTransition COM 对象。|
-|[CBaseTransition::Create](#create)|创建的 COM 过渡。|
-|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|开始返回关键帧。|
-|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|返回一个指向相关的变量。|
-|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|开始返回关键帧。|
-|[CBaseTransition::GetTransition](#gettransition)|已重载。 返回指向基础 COM 转换对象的指针。|
-|[CBaseTransition::GetType](#gettype)|返回转换类型。|
-|[CBaseTransition::IsAdded](#isadded)|指示是否已将转换添加到情节提要。|
-|[CBaseTransition::SetKeyframes](#setkeyframes)|设置关键帧进行转换。|
-|[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|建立动画变量和转换之间的关系。|
+|[CBase 转换：：添加到故事板](#addtostoryboard)|向情节提要添加过渡。|
+|[CBase 转换：：添加到故事板的帧](#addtostoryboardatkeyframes)|向情节提要添加过渡。|
+|[CBase 转换：清除](#clear)|释放封装的 IUI 动画转换 COM 对象。|
+|[CBase 转换：创建](#create)|创建 COM 转换。|
+|[CBase 转换：获取结束关键帧](#getendkeyframe)|返回启动关键帧。|
+|[CBase 转换：获取相关变量](#getrelatedvariable)|返回指向相关变量的指针。|
+|[CBase 转换：获取启动关键帧](#getstartkeyframe)|返回启动关键帧。|
+|[CBase 转换：获取过渡](#gettransition)|已重载。 返回指向基础 COM 过渡对象的指针。|
+|[CBase 转换：获取类型](#gettype)|返回转换类型。|
+|[CBase 转换：已添加](#isadded)|告诉是否已将过渡添加到情节提要中。|
+|[CBase 转换：：设置关键帧](#setkeyframes)|为过渡设置关键帧。|
+|[CBase 转换：：设置相关变量](#setrelatedvariable)|在动画变量和转换之间建立关系。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CBaseTransition::m_bAdded](#m_badded)|指定是否已将转换添加到情节提要。|
-|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|将存储到指定的转换结束的关键帧的指针。|
-|[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|指向与存储在 m_transition 转换进行动画处理的动画变量的指针。|
-|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|存储指向指定过渡的开头的关键帧的指针。|
-|[CBaseTransition::m_transition](#m_transition)|存储指向 IUIAnimationTransition 的指针。 如果尚未创建 COM 转换对象为 NULL。|
-|[CBaseTransition::m_type](#m_type)|将存储的过渡类型。|
+|[CBase 转换：m_bAdded](#m_badded)|指定过渡是否已添加到情节提要。|
+|[CBase 转换：m_pEndKeyframe](#m_pendkeyframe)|存储指向指定过渡结束的关键帧的指针。|
+|[CBase 转换：m_pRelatedVariable](#m_prelatedvariable)|指向动画变量的指针，该变量使用存储在m_transition中的过渡进行动画处理。|
+|[CBase 转换：m_pStartKeyframe](#m_pstartkeyframe)|存储指向指定转换开始的关键帧的指针。|
+|[CBase 转换：m_transition](#m_transition)|存储指向 IUI 动画转换的指针。 如果未创建 COM 过渡对象，则为 NULL。|
+|[CBase 转换：m_type](#m_type)|存储过渡类型。|
 
 ## <a name="remarks"></a>备注
 
-此类封装 IUIAnimationTransition 接口，并用作基类的所有转换。
+此类封装 IUIAnimation 转换接口，并用作所有转换的基类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -118,17 +118,17 @@ class CBaseTransition : public CObject;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="_dtorcbasetransition"></a>CBase 转换：*CBase 转换
 
-析构函数。 当转换对象被销毁时调用。
+析构函数。 在销毁过渡对象时调用。
 
 ```
 virtual ~CBaseTransition();
 ```
 
-##  <a name="addtostoryboard"></a>  CBaseTransition::AddToStoryboard
+## <a name="cbasetransitionaddtostoryboard"></a><a name="addtostoryboard"></a>CBase 转换：：添加到故事板
 
-将转换添加到情节提要。
+向情节提要添加过渡。
 
 ```
 BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
@@ -136,20 +136,20 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 
 ### <a name="parameters"></a>参数
 
-*pStoryboard*<br/>
-情节提要的指针，这将对相关的变量进行动画处理。
+*板*<br/>
+指向情节提要的指针，它将为相关变量设置动画。
 
 ### <a name="return-value"></a>返回值
 
-如果为 TRUE，转换已成功添加到情节提要。
+如果过渡已成功添加到情节提要，则为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-将该转换应用到情节提要中的相关变量。 如果这是应用于此情节提要中此变量的第一个转换，转换将开始在情节提要开始。 否则，转换被追加到最近添加到该变量的转换。
+将转换应用于情节提要中的相关变量。 如果这是在此情节提要中应用于此变量的第一个过渡，则过渡从情节提要的开头开始。 否则，过渡将追加到最近添加到变量的过渡。
 
-##  <a name="addtostoryboardatkeyframes"></a>  CBaseTransition::AddToStoryboardAtKeyframes
+## <a name="cbasetransitionaddtostoryboardatkeyframes"></a><a name="addtostoryboardatkeyframes"></a>CBase 转换：：添加到故事板的帧
 
-将转换添加到情节提要。
+向情节提要添加过渡。
 
 ```
 BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
@@ -157,40 +157,40 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 
 ### <a name="parameters"></a>参数
 
-*pStoryboard*<br/>
-情节提要的指针，这将对相关的变量进行动画处理。
+*板*<br/>
+指向情节提要的指针，它将为相关变量设置动画。
 
 ### <a name="return-value"></a>返回值
 
-如果为 TRUE，转换已成功添加到情节提要。
+如果过渡已成功添加到情节提要，则为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-将该转换应用到情节提要中的相关变量。 如果指定了开始关键帧，在该关键帧开始转换。 如果指定了结束关键帧，转换将开始在启动关键帧，并且在结束关键帧处停止。 如果在创建转换时指定的持续时间参数，则会开始和结束关键帧之间的时间的持续时间以覆盖该持续时间。 如果不指定了任何关键帧，转换被追加到最近添加到该变量的转换。
+将转换应用于情节提要中的相关变量。 如果指定了启动关键帧，则转换从该关键帧开始。 如果指定了端键帧，则过渡从启动关键帧开始，并在端键帧停止。 如果转换是在指定持续时间参数下创建的，则该持续时间将覆盖在开始和结束关键帧之间的持续时间。 如果未指定关键帧，则过渡将追加到最近添加到变量的过渡中。
 
-##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="cbasetransition"></a>CBase 转换：CBase 转换
 
-构造一个基转换对象。
+构造基本过渡对象。
 
 ```
 CBaseTransition();
 ```
 
-##  <a name="clear"></a>  CBaseTransition::Clear
+## <a name="cbasetransitionclear"></a><a name="clear"></a>CBase 转换：清除
 
-版本封装 IUIAnimationTransition COM 对象。
+释放封装的 IUI 动画转换 COM 对象。
 
-```
+```cpp
 void Clear();
 ```
 
 ### <a name="remarks"></a>备注
 
-为了防止 IUITransition 接口泄漏，应从派生的类的 Create 方法调用此方法。
+应从派生类的 Create 方法调用此方法，以防止 IUI 转换接口泄漏。
 
-##  <a name="create"></a>  CBaseTransition::Create
+## <a name="cbasetransitioncreate"></a><a name="create"></a>CBase 转换：创建
 
-创建的 COM 过渡。
+创建 COM 转换。
 
 ```
 virtual BOOL Create(
@@ -200,23 +200,23 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-*pLibrary*<br/>
-指向转换库，创建标准转换的指针。 它可以为 NULL 的自定义转换。
+*p库*<br/>
+指向过渡库的指针，该指针创建标准转换。 对于自定义转换，它可以为 NULL。
 
 *pFactory*<br/>
-创建自定义转换的转换工厂指向的指针。 它可以为 NULL 的标准转换。
+指向转换工厂的指针，该指针创建自定义转换。 对于标准转换，它可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果转换为 COM 对象已成功创建;否则为 FALSE。
+如果成功创建了转换 COM 对象，则为 TRUE;如果成功创建了转换 COM 对象，则为 TRUE。否则 FALSE。
 
 ### <a name="remarks"></a>备注
 
-这是必须在派生类中重写一个纯虚函数。 若要实例化的基础 COM 转换对象框架调用它。
+这是一个纯虚拟函数，必须在派生类中重写。 框架调用它来实例化基础 COM 转换对象。
 
-##  <a name="getendkeyframe"></a>  CBaseTransition::GetEndKeyframe
+## <a name="cbasetransitiongetendkeyframe"></a><a name="getendkeyframe"></a>CBase 转换：获取结束关键帧
 
-开始返回关键帧。
+返回启动关键帧。
 
 ```
 CBaseKeyFrame* GetEndKeyframe();
@@ -224,15 +224,15 @@ CBaseKeyFrame* GetEndKeyframe();
 
 ### <a name="return-value"></a>返回值
 
-指向一个关键帧或如果不应关键帧之间插入一个转换，则为 NULL 的有效指针。
+如果不应在关键帧之间插入过渡，则指向关键帧的有效指针或 NULL。
 
 ### <a name="remarks"></a>备注
 
-此方法可用于访问由 SetKeyframes 以前设置的关键帧对象。 当转换被添加到情节提要时，它是由顶级代码调用。
+此方法可用于访问以前由 SetKeyframe 设置的关键帧对象。 在将转换添加到情节提要时，由顶级代码调用它。
 
-##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
+## <a name="cbasetransitiongetrelatedvariable"></a><a name="getrelatedvariable"></a>CBase 转换：获取相关变量
 
-返回一个指向相关的变量。
+返回指向相关变量的指针。
 
 ```
 CAnimationVariable* GetRelatedVariable();
@@ -240,15 +240,15 @@ CAnimationVariable* GetRelatedVariable();
 
 ### <a name="return-value"></a>返回值
 
-指向动画变量或如果 SetRelatedVariable 尚未设置动画变量，则为 NULL 的有效指针。
+动画变量尚未由 Set关联变量设置动画变量，则指向动画变量的有效指针，或 NULL。
 
 ### <a name="remarks"></a>备注
 
-这是对相关的动画变量的访问器。
+这是相关动画变量的访问器。
 
-##  <a name="getstartkeyframe"></a>  CBaseTransition::GetStartKeyframe
+## <a name="cbasetransitiongetstartkeyframe"></a><a name="getstartkeyframe"></a>CBase 转换：获取启动关键帧
 
-开始返回关键帧。
+返回启动关键帧。
 
 ```
 CBaseKeyFrame* GetStartKeyframe();
@@ -256,15 +256,15 @@ CBaseKeyFrame* GetStartKeyframe();
 
 ### <a name="return-value"></a>返回值
 
-指向一个关键帧或如果关键帧后不能以一个转换，则为 NULL 的有效指针。
+如果过渡不应在关键帧之后启动，则指向关键帧的有效指针或 NULL。
 
 ### <a name="remarks"></a>备注
 
-此方法可用于访问由 SetKeyframes 以前设置的关键帧对象。 当转换被添加到情节提要时，它是由顶级代码调用。
+此方法可用于访问以前由 SetKeyframe 设置的关键帧对象。 在将转换添加到情节提要时，由顶级代码调用它。
 
-##  <a name="gettransition"></a>  CBaseTransition::GetTransition
+## <a name="cbasetransitiongettransition"></a><a name="gettransition"></a>CBase 转换：获取过渡
 
-返回指向基础 COM 转换对象的指针。
+返回指向基础 COM 过渡对象的指针。
 
 ```
 IUIAnimationTransition* GetTransition(
@@ -276,21 +276,21 @@ IUIAnimationTransition* GetTransition();
 
 ### <a name="parameters"></a>参数
 
-*pLibrary*<br/>
-指向转换库，创建标准转换的指针。 它可以为 NULL 的自定义转换。
+*p库*<br/>
+指向过渡库的指针，该指针创建标准转换。 对于自定义转换，它可以为 NULL。
 
 *pFactory*<br/>
-创建自定义转换的转换工厂指向的指针。 它可以为 NULL 的标准转换。
+指向转换工厂的指针，该指针创建自定义转换。 对于标准转换，它可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-无法创建 IUIAnimationTransition 或如果基础转换，则为 NULL 的有效指针。
+如果无法创建基础转换，则指向 IUIAnimation 转换或 NULL 的有效指针。
 
 ### <a name="remarks"></a>备注
 
-此方法返回指向基础 COM 转换对象的指针，必要时创建它。
+此方法返回指向基础 COM 过渡对象的指针，并在必要时创建它。
 
-##  <a name="gettype"></a>  CBaseTransition::GetType
+## <a name="cbasetransitiongettype"></a><a name="gettype"></a>CBase 转换：获取类型
 
 返回转换类型。
 
@@ -300,15 +300,15 @@ TRANSITION_TYPE GetType() const;
 
 ### <a name="return-value"></a>返回值
 
-一个 TRANSITION_TYPE 枚举值。
+TRANSITION_TYPE枚举值之一。
 
 ### <a name="remarks"></a>备注
 
-此方法可以用于标识转换对象由其类型。 在派生类的构造函数集的类型。
+此方法可用于按其类型标识过渡对象。 类型在派生类中的构造函数中设置。
 
-##  <a name="isadded"></a>  CBaseTransition::IsAdded
+## <a name="cbasetransitionisadded"></a><a name="isadded"></a>CBase 转换：已添加
 
-指示是否已将转换添加到情节提要。
+告诉是否已将过渡添加到情节提要中。
 
 ```
 BOOL IsAdded();
@@ -316,65 +316,65 @@ BOOL IsAdded();
 
 ### <a name="return-value"></a>返回值
 
-如果已将转换添加到情节提要，否则为 FALSE，则返回 TRUE。
+如果过渡已添加到情节提要，则返回 TRUE，否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-顶级代码添加到情节提要的转换时，将在内部设置此标志。
+当顶级代码向情节提要添加转换时，将在内部设置此标志。
 
-##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
+## <a name="cbasetransitionm_badded"></a><a name="m_badded"></a>CBase 转换：m_bAdded
 
-指定是否已将转换添加到情节提要。
+指定过渡是否已添加到情节提要。
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_pendkeyframe"></a>  CBaseTransition::m_pEndKeyframe
+## <a name="cbasetransitionm_pendkeyframe"></a><a name="m_pendkeyframe"></a>CBase 转换：m_pEndKeyframe
 
-将存储到指定的转换结束的关键帧的指针。
+存储指向指定过渡结束的关键帧的指针。
 
 ```
 CBaseKeyFrame* m_pEndKeyframe;
 ```
 
-##  <a name="m_prelatedvariable"></a>  CBaseTransition::m_pRelatedVariable
+## <a name="cbasetransitionm_prelatedvariable"></a><a name="m_prelatedvariable"></a>CBase 转换：m_pRelatedVariable
 
-指向与存储在 m_transition 转换进行动画处理的动画变量的指针。
+指向动画变量的指针，该变量使用存储在m_transition中的过渡进行动画处理。
 
 ```
 CAnimationVariable* m_pRelatedVariable;
 ```
 
-##  <a name="m_pstartkeyframe"></a>  CBaseTransition::m_pStartKeyframe
+## <a name="cbasetransitionm_pstartkeyframe"></a><a name="m_pstartkeyframe"></a>CBase 转换：m_pStartKeyframe
 
-存储指向指定过渡的开头的关键帧的指针。
+存储指向指定转换开始的关键帧的指针。
 
 ```
 CBaseKeyFrame* m_pStartKeyframe;
 ```
 
-##  <a name="m_transition"></a>  CBaseTransition::m_transition
+## <a name="cbasetransitionm_transition"></a><a name="m_transition"></a>CBase 转换：m_transition
 
-存储指向 IUIAnimationTransition 的指针。 如果尚未创建 COM 转换对象为 NULL。
+存储指向 IUI 动画转换的指针。 如果未创建 COM 过渡对象，则为 NULL。
 
 ```
 ATL::CComPtr<IUIAnimationTransition> m_transition;
 ```
 
-##  <a name="m_type"></a>  CBaseTransition::m_type
+## <a name="cbasetransitionm_type"></a><a name="m_type"></a>CBase 转换：m_type
 
-将存储的过渡类型。
+存储过渡类型。
 
 ```
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
+## <a name="cbasetransitionsetkeyframes"></a><a name="setkeyframes"></a>CBase 转换：：设置关键帧
 
-设置关键帧进行转换。
+为过渡设置关键帧。
 
-```
+```cpp
 void SetKeyframes(
     CBaseKeyFrame* pStart = NULL,
     CBaseKeyFrame* pEnd = NULL);
@@ -382,36 +382,36 @@ void SetKeyframes(
 
 ### <a name="parameters"></a>参数
 
-*pStart*<br/>
-指定过渡的开头关键帧。
+*p 开始*<br/>
+指定转换开头的关键帧。
 
 *pEnd*<br/>
-指定在转换结束关键帧。
+指定过渡结束的关键帧。
 
 ### <a name="remarks"></a>备注
 
-此方法要求指定关键帧后启动，并 （可选） 如果挂起不为 NULL，则最终的转换之前指定关键帧。 如果在创建转换时指定的持续时间参数，则会开始和结束关键帧之间的时间的持续时间以覆盖该持续时间。
+此方法告诉转换在指定的关键帧之后开始，并且（可选地，如果 pEnd 不是 NULL）在指定的关键帧之前结束。 如果转换是在指定持续时间参数下创建的，则该持续时间将覆盖在开始和结束关键帧之间的持续时间。
 
-##  <a name="setrelatedvariable"></a>  CBaseTransition::SetRelatedVariable
+## <a name="cbasetransitionsetrelatedvariable"></a><a name="setrelatedvariable"></a>CBase 转换：：设置相关变量
 
-建立动画变量和转换之间的关系。
+在动画变量和转换之间建立关系。
 
-```
+```cpp
 void SetRelatedVariable(CAnimationVariable* pVariable);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pVariable*<br/>
-指向相关的动画变量的指针。
+*pvariable*<br/>
+指向相关动画变量的指针。
 
 ### <a name="remarks"></a>备注
 
-建立动画变量和转换之间的关系。 可以仅对一个变量应用转换。
+在动画变量和转换之间建立关系。 转换只能应用于一个变量。
 
-##  <a name="transition_type_enumeration"></a>  CBaseTransition::TRANSITION_TYPE 枚举
+## <a name="cbasetransitiontransition_type-enumeration"></a><a name="transition_type_enumeration"></a>CBase 转换：：TRANSITION_TYPE枚举
 
-定义当前支持 Windows 动画 API 的 MFC 实现的转换类型。
+定义 Windows 动画 API MFC 实现当前支持的过渡类型。
 
 ```
 enum TRANSITION_TYPE;
@@ -419,7 +419,7 @@ enum TRANSITION_TYPE;
 
 ### <a name="remarks"></a>备注
 
-转换类型的特定转换构造函数中设置。 例如，CSinusoidalTransitionFromRange 其类型设置为 SINUSOIDAL_FROM_RANGE。
+在特定过渡的构造函数中设置过渡类型。 例如，CSinusoid转换FromRange将其类型设置为SINUSOIDAL_FROM_RANGE。
 
 ## <a name="see-also"></a>请参阅
 

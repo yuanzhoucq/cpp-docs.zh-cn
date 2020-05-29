@@ -2,16 +2,16 @@
 title: exception 类
 ms.date: 11/04/2016
 f1_keywords:
-- exception
+- exception/std::exception
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 90906469e923d29dd886930bd36944e4292bd9cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5bef8190889ae00298760ea395fb524f557c2be2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246071"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446827"
 ---
 # <a name="exception-class"></a>exception 类
 
@@ -36,7 +36,7 @@ class exception {
 
 具体来说，此基类是 [\<stdexcept>](../standard-library/stdexcept.md) 中定义的标准异常类的根。 默认构造函数将 `what` 返回的 C 字符串值保留为不指定，但是可以通过某些派生类的构造函数定义为由实现定义的 C 字符串。 无成员函数引发任何异常。
 
-**Int**参数，可指定应分配任何内存。 值**int**将被忽略。
+**Int**参数用于指定不应分配任何内存。 忽略**int**的值。
 
 > [!NOTE]
 > 构造函数 `exception(const char* const &message)` 和 `exception(const char* const &message, int)` 是 C++ 标准库的 Microsoft 扩展。

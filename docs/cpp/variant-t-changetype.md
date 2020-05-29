@@ -9,22 +9,22 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: 319c4fde808932e86021ee59b051261c43ca2edd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166199"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750726"
 ---
-# <a name="varianttchangetype"></a>_variant_t::ChangeType
+# <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
-**Microsoft 专用**
+**微软特定**
 
-更改的类型`_variant_t`所指示的对象`VARTYPE`。
+将`_variant_t`对象的类型更改为指示`VARTYPE`的 。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 void ChangeType(
    VARTYPE vartype,
    const _variant_t* pSrc = NULL
@@ -34,17 +34,17 @@ void ChangeType(
 #### <a name="parameters"></a>参数
 
 *vartype*<br/>
-`VARTYPE`此`_variant_t`对象。
+此`VARTYPE``_variant_t`对象的 。
 
 *pSrc*<br/>
-指向要转换的 `_variant_t` 对象的指针。 如果此值为 NULL，是就地完成转换。
+指向要转换的 `_variant_t` 对象的指针。 如果此值为 NULL，则转换将就地完成。
 
 ## <a name="remarks"></a>备注
 
-此成员函数将转换`_variant_t`到所指示的对象`VARTYPE`。 如果*pSrc*为 NULL，则转换将就地，否则为这`_variant_t`从复制对象*pSrc* ，然后再转换。
+此成员函数将`_variant_t`对象转换为指示`VARTYPE`的 。 如果*pSrc*为 NULL，则转换就位，否则`_variant_t`此对象将从*pSrc*复制，然后转换。
 
-**结束 Microsoft 专用**
+**结束微软特定**
 
 ## <a name="see-also"></a>请参阅
 
-[_variant_t 类](../cpp/variant-t-class.md)
+[_variant_t类](../cpp/variant-t-class.md)
