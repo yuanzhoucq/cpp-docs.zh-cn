@@ -1,4 +1,4 @@
----
+﻿---
 title: switch语句（c + +）
 description: Microsoft Visual Studio c + + 中对标准 c + + 语句的引用 switch 。
 ms.date: 04/25/2020

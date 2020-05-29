@@ -19,12 +19,12 @@ ms.locfileid: "69498047"
 |类/结构|描述|标头文件|
 |-----------|-----------------|-----------------|
 |[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|包含用于呈现到各种目标（如打印机、图元文件或 ActiveX 控件）的信息。|atlctl.h|
-|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|包含 ATL 的窗口代码中的类实例数据。|atlbase。h|
-|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|由任何使用 ATL 的项目使用。|atlbase。h|
-|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|由 ATL 中与 COM 相关的代码使用。| atlbase。h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|包含 ATL 的窗口代码中的类实例数据。|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|由任何使用 ATL 的项目使用。|atlbase.h|
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|由 ATL 中与 COM 相关的代码使用。| atlbase.h|
 |[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|包含用于描述调度接口上的方法或属性的类型信息。|atlcom.h|
-|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|包含每个 ATL 模块使用的数据。|atlbase。h|
-|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|由 ATL 中的窗口化代码使用。|atlbase。h|
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|包含每个 ATL 模块使用的数据。|atlbase.h|
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|由 ATL 中的窗口化代码使用。|atlbase.h|
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|此类由字符串转换宏 CA2TEX 和 CT2AEX 以及 typedef CA2A 使用。|atlconv.h|
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|此类由字符串转换宏 CA2CTEX 和 CT2CAEX 以及 typedef CA2CA 使用。|atlconv.h|
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|此类由字符串转换宏 CA2TEX、CA2CTEX、CT2WEX、CT2CWEX 和 typedef CA2W 使用。|atlconv.h|
@@ -32,42 +32,42 @@ ms.locfileid: "69498047"
 |[CAcl](../../atl/reference/cacl-class.md)|此类是 ACL （访问控制列表）结构的包装。|atlsecurity.h|
 |[CAdapt](../../atl/reference/cadapt-class.md)|此模板用于包装一些类，这些类将 address-of 运算符重新定义为返回对象地址之外的内容。|atlcomcli.h|
 |[CAtlArray](../../atl/reference/catlarray-class.md)|此类实现数组对象。|atlcoll.h|
-|[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)|此类实现线程池的单元模型 COM 服务器。|atlbase。h|
-|[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)|此类提供用于实现线程池单元模型 COM 服务器的方法。|atlbase。h|
+|[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)|此类实现线程池的单元模型 COM 服务器。|atlbase.h|
+|[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)|此类提供用于实现线程池单元模型 COM 服务器的方法。|atlbase.h|
 |[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)|此类在每个 ATL 项目中实例化。|atlcore|
-|[CAtlComModule](../../atl/reference/catlcommodule-class.md)|此类实现 COM 服务器模块。|atlbase。h|
-|[CAtlDebugInterfacesModule](../../atl/reference/catldebuginterfacesmodule-class.md)|此类为调试接口提供支持。|atlbase。h|
-|[CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)|此类表示 DLL 的模块。|atlbase。h|
+|[CAtlComModule](../../atl/reference/catlcommodule-class.md)|此类实现 COM 服务器模块。|atlbase.h|
+|[CAtlDebugInterfacesModule](../../atl/reference/catldebuginterfacesmodule-class.md)|此类为调试接口提供支持。|atlbase.h|
+|[CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)|此类表示 DLL 的模块。|atlbase.h|
 |[CAtlException](../../atl/reference/catlexception-class.md)|此类定义 ATL 异常。|atlexcept.h|
-|[CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)|此类表示应用程序的模块。|atlbase。h|
+|[CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)|此类表示应用程序的模块。|atlbase.h|
 |[CAtlFile](../../atl/reference/catlfile-class.md)|此类提供了围绕 Windows 文件处理 API 的精简包装器。|atlfile|
 |[CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)|此类表示内存映射文件，并向[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)的方法添加强制转换运算符。|atlfile|
 |[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)|此类表示内存映射文件。|atlfile|
 |[CAtlList](../../atl/reference/catllist-class.md)|此类提供用于创建和管理列表对象的方法。|atlcoll.h|
 |[CAtlMap](../../atl/reference/catlmap-class.md)|此类提供用于创建和管理地图对象的方法。|atlcoll.h|
-|[CAtlModule](../../atl/reference/catlmodule-class.md)|此类提供多个 ATL 模块类使用的方法。|atlbase。h|
-|[CAtlModuleT](../../atl/reference/catlmodulet-class.md)|此类实现 ATL 模块。|atlbase。h|
+|[CAtlModule](../../atl/reference/catlmodule-class.md)|此类提供多个 ATL 模块类使用的方法。|atlbase.h|
+|[CAtlModuleT](../../atl/reference/catlmodulet-class.md)|此类实现 ATL 模块。|atlbase.h|
 |[CAtlPreviewCtrlImpl](../../atl/reference/catlpreviewctrlimpl-class.md)|此类是窗口的 ATL 实现，它放置在 Shell 提供的宿主窗口上以用于丰富的预览。|atlpreviewctrlimpl.h|
-|[CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md)|此类实现服务。|atlbase。h|
+|[CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md)|此类实现服务。|atlbase.h|
 |[CAtlTemporaryFile](../../atl/reference/catltemporaryfile-class.md)|此类提供用于创建和使用临时文件的方法。|atlfile|
 |[CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)|此类提供内核事务管理器（KTM）函数的包装器。|atltransactionmanager.h|
-|[CAtlWinModule](../../atl/reference/catlwinmodule-class.md)|此类提供对 ATL 窗口化组件的支持。|atlbase。h|
-|[CAutoPtr](../../atl/reference/cautoptr-class.md)|此类表示智能指针对象。|atlbase。h|
-|[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)|此类提供在构造智能指针数组时有用的方法。|atlbase。h|
+|[CAtlWinModule](../../atl/reference/catlwinmodule-class.md)|此类提供对 ATL 窗口化组件的支持。|atlbase.h|
+|[CAutoPtr](../../atl/reference/cautoptr-class.md)|此类表示智能指针对象。|atlbase.h|
+|[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)|此类提供在构造智能指针数组时有用的方法。|atlbase.h|
 |[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)|此类提供在创建智能指针集合时有用的方法、静态函数和 typedef。|atlcoll.h|
 |[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)|此类提供在构造智能指针列表时有用的方法。|atlcoll.h|
-|[CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)|此类表示使用向量 new 和 delete 运算符的智能指针对象。|atlbase。h|
+|[CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)|此类表示使用向量 new 和 delete 运算符的智能指针对象。|atlbase.h|
 |[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)|使用向量 new 和 delete 运算符创建智能指针集合时，此类提供的方法、静态函数和 typedef 非常有用。|atlcoll.h|
 |[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)|此类实现承载 ActiveX 控件的对话框（模式或无模式）。|atlwin.h|
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|此类提供用于操作承载 ActiveX 控件的窗口的方法。|atlwin.h|
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|此类提供了一些方法，用于操作承载 ActiveX 控件的窗口，并且还支持承载许可的 ActiveX 控件。|atlwin.h|
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|此类实现 `IBindStatusCallback` 接口。|atlctl.h|
 |[CComAggObject](../../atl/reference/ccomaggobject-class.md)|此类为聚合的对象实现[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。|atlcom.h|
-|[CComAllocator](../../atl/reference/ccomallocator-class.md)|此类提供使用 COM 内存例程管理内存的方法。|atlbase。h|
-|[CComApartment](../../atl/reference/ccomapartment-class.md)|此类提供对在线程池 EXE 模块中管理单元的支持。|atlbase。h|
+|[CComAllocator](../../atl/reference/ccomallocator-class.md)|此类提供使用 COM 内存例程管理内存的方法。|atlbase.h|
+|[CComApartment](../../atl/reference/ccomapartment-class.md)|此类提供对在线程池 EXE 模块中管理单元的支持。|atlbase.h|
 |[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)|此类提供用于获取和释放关键节对象的所有权的方法。|atlcore|
-|[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)|在 atl 7.0 中， `CComAutoThreadModule`已过时：有关更多详细信息，请参阅[ATL 模块](../../atl/atl-module-classes.md)。|atlbase。h|
-|[CComBSTR](../../atl/reference/ccombstr-class.md)|此类是 Bstr 的包装器。|atlbase。h|
+|[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)|在 atl 7.0 中， `CComAutoThreadModule`已过时：有关更多详细信息，请参阅[ATL 模块](../../atl/atl-module-classes.md)。|atlbase.h|
+|[CComBSTR](../../atl/reference/ccombstr-class.md)|此类是 Bstr 的包装器。|atlbase.h|
 |[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|此类为拆卸接口实现[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。|atlcom.h|
 |[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|此类实现[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)接口。|atlcom.h|
 |[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|此类实现[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)接口。|atlcom.h|
@@ -79,19 +79,19 @@ ms.locfileid: "69498047"
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|此类提供用于创建和管理 ATL 控件的方法。|atlctl.h|
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|此类提供用于创建和管理 ATL 控件的方法。|atlctl.h|
 |[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)|此类提供用于获取和释放关键节对象的所有权的方法。|atlcore|
-|[CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)|此类提供用于锁定和解锁临界区对象的方法。|atlbase。h|
+|[CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)|此类提供用于锁定和解锁临界区对象的方法。|atlbase.h|
 |[CComCurrency](../../atl/reference/ccomcurrency-class.md)|此类具有用于创建和管理货币对象的方法和运算符。|atlcur。h|
 |[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)|此类存储指针的`IUnknown`数组。|atlcom.h|
 |[CComEnum](../../atl/reference/ccomenum-class.md)|此类定义基于数组的 COM 枚举器对象。|atlcom.h|
 |[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)|此类提供 COM 枚举器接口的实现，其中所枚举的项存储在数组中。|atlcom.h|
 |[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)|此类定义基于C++标准库集合的 COM 枚举器对象。|atlcom.h|
 |[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)|此类提供与[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)相同的方法，但不提供临界区。|atlcore|
-|[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|此类提供用于处理接口指针和全局接口表（GIT）的方法。|atlbase。h|
+|[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|此类提供用于处理接口指针和全局接口表（GIT）的方法。|atlbase.h|
 |[CComHeap](../../atl/reference/ccomheap-class.md)|此类使用 COM 内存分配函数实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) 。|ATLComMem.h|
-|[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|用于管理堆指针的智能指针类。|atlbase。h|
-|[CComModule](../../atl/reference/ccommodule-class.md)|在 atl 7.0 中， `CComModule`已过时：有关更多详细信息，请参阅[ATL 模块](../../atl/atl-module-classes.md)。|atlbase。h|
-|[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)|此类提供用于递增和递减变量的值的线程安全方法。|atlbase。h|
-|[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)|此类提供用于递增和递减变量的值的线程安全方法，而不会锁定或解锁功能。|atlbase。h|
+|[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|用于管理堆指针的智能指针类。|atlbase.h|
+|[CComModule](../../atl/reference/ccommodule-class.md)|在 atl 7.0 中， `CComModule`已过时：有关更多详细信息，请参阅[ATL 模块](../../atl/atl-module-classes.md)。|atlbase.h|
+|[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)|此类提供用于递增和递减变量的值的线程安全方法。|atlbase.h|
+|[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)|此类提供用于递增和递减变量的值的线程安全方法，而不会锁定或解锁功能。|atlbase.h|
 |[CComObject](../../atl/reference/ccomobject-class.md)|此类实现`IUnknown`非聚合对象。|atlcom.h|
 |[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)|此类管理包含`Base`对象的模块的引用计数。|atlcom.h|
 |[CComObjectNoLock](../../atl/reference/ccomobjectnolock-class.md)|此类实现`IUnknown`非聚合对象，但不会在构造函数中递增模块锁计数。|atlcom.h|
@@ -105,8 +105,8 @@ ms.locfileid: "69498047"
 |[CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)|此类提供方法、静态函数和 typedef 在创建 COM 接口指针的集合时非常有用。|atlcoll.h|
 |[CComSafeArray](../../atl/reference/ccomsafearray-class.md)|此类是`SAFEARRAY Data Type`结构的包装器。|atlsafe。h|
 |[CComSafeArrayBound](../../atl/reference/ccomsafearraybound-class.md)|此类是`SAFEARRAYBOUND`结构的包装器。|atlsafe。h|
-|[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)|此类管理类[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)的线程选择。|atlbase。h|
-|[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)|此类提供用于递增和递减变量值的方法。|atlbase。h|
+|[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)|此类管理类[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)的线程选择。|atlbase.h|
+|[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)|此类提供用于递增和递减变量值的方法。|atlbase.h|
 |[CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)|此类实现一个脱离接口。|atlcom.h|
 |[CComUnkArray](../../atl/reference/ccomunkarray-class.md)|此类存储`IUnknown`指针，旨在用作[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)模板类的参数。|atlcom.h|
 |[CComVariant](../../atl/reference/ccomvariant-class.md)|此类包装变量类型，并提供指示所存储数据类型的成员。|atlcomcli.h|
@@ -125,7 +125,7 @@ ms.locfileid: "69498047"
 |[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)|此类提供集合类的默认复制和移动方法。|atlcoll.h|
 |[CFirePropNotifyEvent](../../atl/reference/cfirepropnotifyevent-class.md)|此类提供用于通知容器接收器有关控件属性更改的方法。|atlctl.h|
 |[CGlobalHeap](../../atl/reference/cglobalheap-class.md)|此类使用 Win32 全局堆函数实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) 。|atlmem.h|
-|[CHandle](../../atl/reference/chandle-class.md)|此类提供用于创建和使用 handle 对象的方法。|atlbase。h|
+|[CHandle](../../atl/reference/chandle-class.md)|此类提供用于创建和使用 handle 对象的方法。|atlbase.h|
 |[CHeapPtr](../../atl/reference/cheapptr-class.md)|用于管理堆指针的智能指针类。|atlcore|
 |[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)|此类构成了几个智能堆指针类的基础。|atlcore|
 |[CHeapPtrElementTraits 类](../../atl/reference/cheapptrelementtraits-class.md)|此类提供方法、静态函数和 typedef 在创建堆指针的集合时非常有用。|atlcoll.h|
@@ -143,8 +143,8 @@ ms.locfileid: "69498047"
 |[CRBMap](../../atl/reference/crbmap-class.md)|此类表示使用 Red-黑色二进制树的映射结构。|atlcoll.h|
 |[CRBMultiMap](../../atl/reference/crbmultimap-class.md)|此类表示一个映射结构，该结构允许每个键与多个值相关联，同时使用 Red-黑色二进制树。|atlcoll.h|
 |[CRBTree](../../atl/reference/crbtree-class.md)|此类提供用于创建和使用红黑树的方法。|atlcoll.h|
-|[CRegKey](../../atl/reference/cregkey-class.md)|此类提供用于操作系统注册表中的项的方法。|atlbase。h|
-|[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)|此类为 CRT 线程提供创建函数。 如果线程将使用 CRT 函数，请使用此类。|atlbase。h|
+|[CRegKey](../../atl/reference/cregkey-class.md)|此类提供用于操作系统注册表中的项的方法。|atlbase.h|
+|[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)|此类为 CRT 线程提供创建函数。 如果线程将使用 CRT 函数，请使用此类。|atlbase.h|
 |[CSacl](../../atl/reference/csacl-class.md)|此类是 SACL （系统访问控制列表）结构的包装器。|atlsecurity.h|
 |[CSecurityAttributes](../../atl/reference/csecurityattributes-class.md)|此类是`SECURITY_ATTRIBUTES`结构的精简包装器。|atlsecurity.h|
 |[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)|此类是`SECURITY_DESCRIPTOR`结构的包装器。|atlsecurity.h|
@@ -176,7 +176,7 @@ ms.locfileid: "69498047"
 |[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)|此类提供了一个方法，用于标准化创建窗口对象时使用的样式。|atlwin.h|
 |[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)|此类提供用于注册窗口类的信息的方法。|atlwin.h|
 |[CWorkerThread 类](../../atl/reference/cworkerthread-class.md)|此类创建一个或多个工作线程，并使用现有的工作线程，在一个或多个内核对象句柄上等待，并在其中一个句柄发出信号时执行指定的客户端函数。|atlutil.h|
-|[IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)|此类表示`CreateInstance`方法的接口。|atlbase。h|
+|[IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)|此类表示`CreateInstance`方法的接口。|atlbase.h|
 |[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)|此类表示内存管理器的接口。|atlmem.h|
 |[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|此接口提供用于指定承载的控件或容器的特性的方法。|atlbase.h，ATLIFace|
 |[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)|此接口实现寄宿控件的补充环境属性。|atlbase.h，ATLIFace|
@@ -217,7 +217,7 @@ ms.locfileid: "69498047"
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|此类提供和`CreateWindow` `CreateWindowEx`的包装。|atlwin.h|
 |[_U_RECT](../../atl/reference/u-rect-class.md)|此参数适配器类允许`RECT`将指针或引用传递给在指针方面实现的函数。|atlwin.h|
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|使用此参数适配器类，可以将资源名称（LPCTSTRs）或资源 Id （UINTs）传递给函数，而无需调用方使用 MAKEINTRESOURCE 宏将 ID 转换为字符串。|atlwin.h|
-|[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)|此类提供 Windows 线程的创建功能。 如果线程不使用 CRT 函数，请使用此类。|atlbase。h|
+|[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)|此类提供 Windows 线程的创建功能。 如果线程不使用 CRT 函数，请使用此类。|atlbase.h|
 
 ## <a name="see-also"></a>请参阅
 

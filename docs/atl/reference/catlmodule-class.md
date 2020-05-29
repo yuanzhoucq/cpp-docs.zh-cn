@@ -1,4 +1,4 @@
----
+﻿---
 title: CAtlModule 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase。h
+**标头:** atlbase.h
 
 ## <a name="catlmoduleaddcommonrgsreplacements"></a><a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements
 

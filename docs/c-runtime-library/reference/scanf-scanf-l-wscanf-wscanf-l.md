@@ -1,4 +1,4 @@
----
+﻿---
 title: scanf、_scanf_l、wscanf、_wscanf_l
 ms.date: 10/21/2019
 api_name:

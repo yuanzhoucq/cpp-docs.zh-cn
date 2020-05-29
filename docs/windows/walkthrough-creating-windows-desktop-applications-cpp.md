@@ -1,4 +1,4 @@
----
+﻿---
 title: 演练：创建传统的 Windows 桌面应用程序（C++）
 description: 如何使用 Visual Studio、C++ 和 Win32 API 创建最小的传统 Windows 桌面应用程序
 ms.custom: get-started-article

@@ -1,4 +1,4 @@
----
+﻿---
 title: 在 Visual Studio 中安装 C++ 支持
 description: 安装对 Visual C++ 的 Visual Studio 支持
 ms.custom: mvc
@@ -152,6 +152,7 @@ ms.locfileid: "81335367"
    > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或 [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
 1. 找到下载的安装程序文件并运行。 它可能会显示在浏览器中，也可能会在“Downloads”文件夹中找到它。 安装程序需要管理员权限才能运行。 你可能会看到“用户帐户控制”  对话框，要求你授予权限以便让安装程序可对系统进行更改；选择“是”  。 如果遇到问题，请在文件资源管理器中找到下载的文件，右键单击安装程序图标，然后从上下文菜单中选择“以管理员身份运行”  。
+
 
    ![下载并安装 Visual Studio 安装程序](media/vscpp-concierge-run-installer.gif "下载并安装 Visual Studio 安装程序")
 

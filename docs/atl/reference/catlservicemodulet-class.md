@@ -1,4 +1,4 @@
----
+﻿---
 title: CAtlServiceModuleT 类
 ms.date: 05/06/2019
 f1_keywords:
@@ -129,7 +129,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase。h
+**标头:** atlbase.h
 
 ## <a name="catlservicemoduletcatlservicemodulet"></a><a name="catlservicemodulet"></a>CAtlServiceModuleT：： CAtlServiceModuleT
 
