@@ -1,49 +1,61 @@
 ---
 title: C++ 生成见解入门
-description: C++生成见解的高级概述。
+description: 简要概述了 C++ 生成见解。
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3a75dfe3bf1263cce53d70b764607cad4eec86d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325719"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759220"
 ---
 # <a name="get-started-with-c-build-insights"></a>C++ 生成见解入门
 
 ::: moniker range="<=vs-2017"
 
-C++构建见解工具可在 Visual Studio 2019 中使用。 要查看该版本的文档，请将本文的可视化工作室**版本**选择器控件设置为 Visual Studio 2019。 它位于此页面的目录顶部。
+Visual Studio 2019 中提供 C++ 生成见解工具。 若要查看此版本对应的文档，请将本文的 Visual Studio“版本”选择器控件设置为“Visual Studio 2019”。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-C++构建见解是一个工具的集合，可提高对 Microsoft 可视化C++ （MSVC） 工具链的可见性。 这些工具收集有关C++生成的数据，并以可帮助您回答常见问题的格式呈现数据，例如：
+C++ 生成见解是一个工具集合，可便于更深入地了解 Microsoft Visual C++ (MSVC) 工具链。 这些工具收集与 C++ 生成相关的数据，并用一种有助于你回答常见问题的格式来呈现这些数据，比如：
 
-- 我的生成是否足够并行化？
-- 我应该在预编译的标头 （PCH） 中包括哪些内容？
-- 是否有特定的瓶颈我应该关注以提高我的生成速度？
+- 我的生成是否已充分并行化？
+- 我应在预编译头 (PCH) 中添加什么？
+- 为了提高生成速度，是否有我应重点关注的特定瓶颈？
 
-该技术的主要组成部分是：
+这项技术的主要组成部分包括：
 
-- *vcperf.exe，* 一个命令行实用程序，可用于收集生成的痕迹，
-- 一个 Windows 性能分析器 （WPA） 扩展，允许您在 WPA 中查看生成跟踪，以及
-- C++构建见解 SDK，这是一个软件开发工具包，用于创建使用C++生成见解数据的工具。
+- vcperf.exe：可用于收集生成跟踪的命令行实用工具；
+- Windows Performance Analyzer (WPA) 扩展：可便于在 WPA 中查看生成跟踪；以及
+- C++ 生成见解 SDK：软件开发工具包，用于创建你自己的工具来使用 C++ 生成见解数据。
 
-单击以下链接可快速启动这些组件：
+## <a name="documentation-sections"></a>文档部分
 
-[教程：vcperf 和 Windows 性能分析器](tutorials/vcperf-and-wpa.md)\
-了解如何收集C++项目的生成跟踪，以及如何在 WPA 中查看它们。
+[教程：vcperf 和 Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
+了解如何收集 C++ 项目的生成跟踪，以及如何在 WPA 中查看它们。
 
 [教程：Windows 性能基础知识](tutorials/wpa-basics.md)\
-发现用于分析生成跟踪的有用 WPA 提示。
+发现用于分析生成跟踪的实用 WPA 使用技巧。
 
-[C++构建见解 SDK](reference/sdk/overview.md)\
-C++生成见解 SDK 的概述。
+[C++ 生成见解 SDK](reference/sdk/overview.md)\
+概述了 C++ 生成见解 SDK。
+
+## <a name="articles"></a>文章
+
+若要详细了解 C++ 生成见解，请阅读官方 C++ 团队博客中的以下文章：
+
+[C++ 生成见解简介](https://devblogs.microsoft.com/cppblog/introducing-c-build-insights/)
+
+[使用 C++ 生成见解 SDK 以编程方式分析生成](https://devblogs.microsoft.com/cppblog/analyze-your-builds-programmatically-with-the-c-build-insights-sdk/)
+
+[根据 C++ 生成见解查找生成瓶颈](https://devblogs.microsoft.com/cppblog/finding-build-bottlenecks-with-cpp-build-insights/)
+
+[使用根据 C++ 生成见解提出的 PCH 建议加速生成](https://devblogs.microsoft.com/cppblog/faster-builds-with-pch-suggestions-from-c-build-insights/)
 
 ::: moniker-end
