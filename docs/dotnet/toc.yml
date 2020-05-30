@@ -3,7 +3,6 @@
 - name: 演练：编译定目标到 CLR 的 C++/CLI 程序
   href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
 - name: C++/CLI 任务
-  expanded: false
   items:
     - name: C++/CLI 任务
       href: ../dotnet/cpp-cli-tasks.md
@@ -50,14 +49,12 @@
     - name: 使用 ADO.NET 的数据访问
       href: ../dotnet/data-access-using-adonet-cpp-cli.md
 - name: 本机和 .NET 的互操作性
-  expanded: false
   items:
     - name: 本机和 .NET 的互操作性
       href: ../dotnet/native-and-dotnet-interoperability.md
     - name: 与其他 .NET 语言的互操作性
       href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
     - name: 混合（本机和托管）程序集
-      expanded: false
       items:
         - name: 混合（本机和托管）程序集
           href: ../dotnet/mixed-native-and-managed-assemblies.md
@@ -80,14 +77,12 @@
         - name: 如何：通过删除对 CRT 库 DLL 的依赖来创建部分信任的应用程序
           href: ../dotnet/create-a-partially-trusted-application.md
     - name: 在 MFC 中使用 Windows 窗体用户控件
-      expanded: false
       items:
         - name: 在 MFC 中使用 Windows 窗体用户控件
           href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
         - name: Windows 窗体-MFC 编程差异
           href: ../dotnet/windows-forms-mfc-programming-differences.md
         - name: 在 MFC 对话框中承载 Windows 窗体用户控件
-          expanded: false
           items:
             - name: 在 MFC 对话框中承载 Windows 窗体用户控件
               href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
@@ -98,7 +93,6 @@
             - name: 如何：接收来自本机 C++ 类的 Windows 窗体事件
               href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
         - name: 以 MFC 视图的形式承载 Windows 窗体用户控件
-          expanded: false
           items:
             - name: 以 MFC 视图的形式承载 Windows 窗体用户控件
               href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
@@ -111,12 +105,10 @@
         - name: 以 MFC 对话框的形式承载 Windows 窗体用户控件
           href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
     - name: 从托管代码调用本机函数
-      expanded: false
       items:
         - name: 从托管代码调用本机函数
           href: ../dotnet/calling-native-functions-from-managed-code.md
         - name: 在 C++ 中使用显式 PInvoke（DllImport 特性）
-          expanded: false
           items:
             - name: 在 C++ 中使用显式 PInvoke（DllImport 特性）
               href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
@@ -133,7 +125,6 @@
             - name: 如何：使用 PInvoke 封送嵌入式指针
               href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
         - name: 使用 C++ 互操作（隐式 PInvoke）
-          expanded: false
           items:
             - name: 使用 C++ 互操作（隐式 PInvoke）
               href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
@@ -190,7 +181,6 @@
             - name: '如何：包装本机类以供 C# 使用'
               href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
 - name: 纯代码和可验证代码
-  expanded: false
   items:
     - name: 纯代码和可验证代码
       href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
@@ -213,7 +203,6 @@
 - name: 调试类
   href: ../dotnet/debug-class-cpp-cli.md
 - name: STL/CLR 库参考
-  expanded: false
   items:
     - name: STL/CLR 库参考
       href: ../dotnet/stl-clr-library-reference.md
@@ -270,12 +259,10 @@
     - name: vector (STL/CLR)
       href: ../dotnet/vector-stl-clr.md
 - name: C++ 支持库
-  expanded: false
   items:
     - name: C++ 支持库
       href: ../dotnet/cpp-support-library.md
     - name: C++ 中的封送处理概述
-      expanded: false
       items:
         - name: C++ 中的封送处理概述
           href: ../dotnet/overview-of-marshaling-in-cpp.md
@@ -286,12 +273,10 @@
     - name: msclr 命名空间
       href: ../dotnet/msclr-namespace.md
     - name: 资源管理类
-      expanded: false
       items:
         - name: 资源管理类
           href: ../dotnet/resource-management-classes.md
         - name: auto_gcroot
-          expanded: false
           items:
             - name: auto_gcroot
               href: ../dotnet/auto-gcroot.md
@@ -300,7 +285,6 @@
             - name: swap 函数 (auto_gcroot)
               href: ../dotnet/swap-function-auto-gcroot.md
         - name: auto_handle
-          href: ../dotnet/auto-handle.md
           items:
             - name: auto_handle
               href: ../dotnet/auto-handle.md
@@ -309,12 +293,10 @@
             - name: swap 函数 (auto_handle)
               href: ../dotnet/swap-function-auto-handle.md
     - name: 同步（lock 类）
-      expanded: false
       items:
         - name: 同步（lock 类）
           href: ../dotnet/synchronization-lock-class.md
         - name: 锁 (lock)
-          expanded: false
           items:
             - name: 锁 (lock)
               href: ../dotnet/lock.md
@@ -323,21 +305,18 @@
             - name: lock_when 枚举
               href: ../dotnet/lock-when-enum.md
     - name: 调用特定应用程序域中的函数
-      expanded: false
       items:
         - name: 调用特定应用程序域中的函数
           href: ../dotnet/calling-functions-in-a-specific-application-domain.md
         - name: call_in_appdomain 函数
           href: ../dotnet/call-in-appdomain-function.md
     - name: 'com::ptr'
-      expanded: false
       items:
         - name: 'com::ptr'
           href: ../dotnet/com-ptr.md
         - name: 'com::ptr 类'
           href: ../dotnet/com-ptr-class.md
 - name: C++/CLI 中的异常
-  expanded: false
   items:
     - name: C++/CLI 中的异常
       href: ../dotnet/exceptions-in-cpp-cli.md
@@ -352,7 +331,6 @@
     - name: 如何：定义和安装全局异常处理程序
       href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
 - name: 装箱
-  expanded: false
   items:
     - name: 装箱
       href: ../dotnet/boxing-cpp-cli.md
