@@ -1,6 +1,5 @@
----
+﻿---
 title: MSVC 编译器选项
-ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler

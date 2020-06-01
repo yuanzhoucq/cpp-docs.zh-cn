@@ -1,4 +1,4 @@
----
+﻿---
 title: CComModule 类
 ms.date: 08/19/2019
 f1_keywords:
