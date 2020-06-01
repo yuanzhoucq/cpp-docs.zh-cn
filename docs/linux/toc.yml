@@ -3,7 +3,6 @@
 - name: 下载、安装和设置 Linux 开发工作负载
   href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: 连接到远程 Linux 计算机
-  expanded: true
   items:
     - name: 连接到远程 Linux 计算机
       href: ../linux/connect-to-your-remote-linux-computer.md
@@ -11,40 +10,43 @@
       href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: ConnectionManager 引用
       href: ../linux/connectionmanager-reference.md
-- name: 新建 Linux 项目
-  href: ../linux/create-a-new-linux-project.md
-- name: 配置 Linux 项目
-  href: ../linux/configure-a-linux-project.md
-- name: 创建和配置 Linux CMake 项目
-  href: ../linux/cmake-linux-project.md
+- name: 在 Visual Studio 中使用 MSBuild 生成 Linux 项目
+  items:
+    - name: 新建 Linux 项目
+      href: ../linux/create-a-new-linux-project.md
+    - name: 配置 Linux 项目
+      href: ../linux/configure-a-linux-project.md
+    - name: 部署、运行和调试 Linux 项目
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Linux 项目属性页参考
+      items:
+        - name: Linux 项目属性页参考
+          href: ../linux/prop-pages-linux.md
+        - name: 常规属性 (Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: 调试属性 (Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: VC++ 目录属性 (Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: 复制源属性 (Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: C/C++ 属性 (Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: 链接器属性 (Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: 生成事件属性 (Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: 自定义生成步骤属性 (Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: 生成文件项目属性 (Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: 远程存档属性 (Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: 在 Visual Studio 中使用 CMake 生成 Linux 项目
+  items:
+    - name: 创建和配置 Linux CMake 项目
+      href: ../linux/cmake-linux-project.md
+    - name: 教程：在 Visual Studio 中创建 C++ 跨平台项目
+      href: ../build/get-started-linux-cmake.md
 - name: 配置 Linux 项目以使用地址擦除器
   href: ../linux/linux-asan-configuration.md
-- name: 部署、运行和调试 Linux 项目
-  href: ../linux/deploy-run-and-debug-your-linux-project.md
-- name: 教程：在 Visual Studio 中创建 C++ 跨平台项目
-  href: ../build/get-started-linux-cmake.md
-- name: Linux 项目属性页参考
-  expanded: false
-  items:
-    - name: Linux 项目属性页参考
-      href: ../linux/prop-pages-linux.md
-    - name: 常规属性 (Linux)
-      href: ../linux/prop-pages/general-linux.md
-    - name: 调试属性 (Linux)
-      href: ../linux/prop-pages/debugging-linux.md
-    - name: VC++ 目录属性 (Linux)
-      href: ../linux/prop-pages/directories-linux.md
-    - name: 复制源属性 (Linux)
-      href: ../linux/prop-pages/copy-sources-project.md
-    - name: C/C++ 属性 (Linux)
-      href: ../linux/prop-pages/c-cpp-linux.md
-    - name: 链接器属性 (Linux)
-      href: ../linux/prop-pages/linker-linux.md
-    - name: 生成事件属性 (Linux)
-      href: ../linux/prop-pages/build-events-linux.md
-    - name: 自定义生成步骤属性 (Linux)
-      href: ../linux/prop-pages/custom-build-step-linux.md
-    - name: 生成文件项目属性 (Linux)
-      href: ../linux/prop-pages/makefile-linux.md
-    - name: 远程存档属性 (Linux)
-      href: ../linux/prop-pages/remote-ar-linux.md
