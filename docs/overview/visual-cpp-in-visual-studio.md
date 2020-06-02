@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
+ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365210"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84108427"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -99,7 +99,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 [使用 C++/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 了解如何创建 DLL，在本机 C++ 和以 C# 或 Visual Basic 等语言编写的 .NET 程序之间实现互操作性。
 
-[Linux 编程](../linux/index.md)<br/>
+[Linux 编程](../linux/index.yml)<br/>
 使用 Visual Studio IDE 编写代码，并将其部署到远程 Linux 计算机上，以便使用 GCC 进行编译。
 
 [在 Visual Studio 中创建 C/C++ DLL](../build/dlls-in-visual-cpp.md)<br/>
