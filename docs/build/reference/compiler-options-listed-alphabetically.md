@@ -1,15 +1,15 @@
 ---
 title: 按字母顺序列出的编译器选项
-description: Microsoft C/C++编译器命令行选项的按字母顺序排列的引用列表。
-ms.date: 02/09/2020
+description: Microsoft C/c + + 编译器命令行选项的按字母顺序排列的引用列表。
+ms.date: 06/03/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: e07b41d77daf4960d43146c29eb1613e122d414f
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257736"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421346"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -17,7 +17,7 @@ ms.locfileid: "77257736"
 
 ## <a name="compiler-options"></a>编译器选项
 
-|选项|目的|
+|选项|目标|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
@@ -39,8 +39,8 @@ ms.locfileid: "77257736"
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出。|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
-|[/experimental： module](experimental-module.md)|启用实验性模块支持。|
-|[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
+|[/experimental:module](experimental-module.md)|启用实验性模块支持。|
+|[/experimental:preprocessor](experimental-preprocessor.md)|启用实验相容预处理器支持。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成针对特定 x64 体系结构进行了优化的代码。 或者，适用于 AMD64 和 EM64T 体系结构中的特定微体系结构。|
 |[/FA](fa-fa-listing-file.md)|创建列表文件。|
@@ -55,7 +55,7 @@ ms.locfileid: "77257736"
 |[/fp](fp-specify-floating-point-behavior.md)|指定浮点行为。|
 |[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|生成浏览器文件。 **/Fr** 已弃用。|
-|[/FS](fs-force-synchronous-pdb-writes.md)|通过 MSPDBSRV.EXE 强制对程序数据库（PDB）文件的所有写入操作进行序列化.EXE.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|通过 MSPDBSRV.EXE 强制对程序数据库（PDB）文件的所有写入操作进行序列化。.EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|强制使用文件名，就像它已被传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令一样。|
 |[/Fx](fx-merge-injected-code.md)|将插入的代码与源文件合并。|
 |[/GA](ga-optimize-for-windows-application.md)|优化 Windows 应用程序的代码。|
@@ -72,6 +72,7 @@ ms.locfileid: "77257736"
 |[/Gs](gs-control-stack-checking-calls.md)|控制堆栈探测。|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|支持使用静态线程本地存储区分配的数据的纤程安全。|
 |[/guard:cf](guard-enable-control-flow-guard.md)|添加控制流防护安全检查。|
+|[/guard： ehcont](guard-enable-eh-continuation-metadata.md)|启用 EH 继续元数据。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|使用 `__vectorcall` 调用约定。 （仅限 x86 和 x64）|
 |[/Gw](gw-optimize-global-data.md)|启用全程序全局数据优化。|
 |[/GX](gx-enable-exception-handling.md)|已弃用。 启用同步异常处理。 改为使用 [/EH](eh-exception-handling-model.md) 。|
@@ -84,7 +85,7 @@ ms.locfileid: "77257736"
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建热可修补映像。|
 |[/I](i-additional-include-directories.md)|在目录中搜索包含文件。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
-|[/JMC](jmc.md)|支持本机C++仅我的代码调试。|
+|[/JMC](jmc.md)|支持本机 c + + 仅我的代码调试。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|编译器和链接器将创建可在 Windows 内核中执行的二进制文件。|
 |[/LD](md-mt-ld-use-run-time-library.md)|创建动态链接库。|
 |[/LDd](md-mt-ld-use-run-time-library.md)|创建调试动态链接库。|
@@ -102,7 +103,7 @@ ms.locfileid: "77257736"
 |[/Od](od-disable-debug.md)|禁用优化。|
 |[/Og](og-global-optimizations.md)|已弃用。 使用全局优化。|
 |[/Oi](oi-generate-intrinsic-functions.md)|生成内部函数。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|在源代码中启用[`#pragma omp`](../../preprocessor/omp.md)指令。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|启用 [`#pragma omp`](../../preprocessor/omp.md) 源代码中的指令。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|代码大小优先。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|代码速度优先。|
 |[/Ox](ox-full-optimization.md)|不包含/GF 或/Gy. 的/O2 子集|
@@ -113,21 +114,21 @@ ms.locfileid: "77257736"
 |[/QIfist](qifist-suppress-ftol.md)|已弃用。 当需要从浮点类型转换为整型时（仅限 x86）取消 `_ftol` 。|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 块中的 `try` 命令。|
 |[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|缓解 Intel JCC 错误微代码更新对性能的影响。|
-|[/Qpar（自动并行化程序）](qpar-auto-parallelizer.md)|对标记有 [#pragma loop()](../../preprocessor/loop.md) 指令的循环启用自动并行化。|
+|[/Qpar （自动并行）](qpar-auto-parallelizer.md)|对标记有 [#pragma loop()](../../preprocessor/loop.md) 指令的循环启用自动并行化。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
 |[/Qspectre](qspectre.md)|指定编译器生成指令以缓解某些 Spectre 变体 1 安全漏洞。|
 |[/Qspectre-load](qspectre-load.md)|指定编译器生成序列化说明，以根据负载说明减少 Spectre 的安全漏洞。|
 |[/Qspectre-load-cf](qspectre-load-cf.md)|指定编译器的序列化说明的生成，以根据加载内存的控制流指令来减少 Spectre 的安全漏洞。|
-|[/Qvec-report（自动矢量化程序报告等级）](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
+|[/Qvec-report （自动向量化报告级别）](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
 |[/sdl](sdl-enable-additional-security-checks.md)|启用更多安全功能和警告。|
 |[/showIncludes](showincludes-list-include-files.md)|在编译期间显示包含文件的列表。|
 |[/source-charset](source-charset-set-source-character-set.md)|设置源字符集。|
-|[/std](std-specify-language-standard-version.md)|C++标准版本兼容性选择器。|
+|[/std](std-specify-language-standard-version.md)|C + + 标准版本兼容性选择器。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件均为 C。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件C++。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件均为 c + +。|
 |[/U](u-u-undefine-symbols.md)|移除预定义宏。|
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|将源和执行字符集设置为 UTF-8。|
@@ -165,7 +166,7 @@ ms.locfileid: "77257736"
 |[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中移除。 生成函数原型。|
 |[/ZH](zh.md)|为调试信息中的校验和指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
-|[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
+|[/ZI](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名（仅限 x86）。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定预编译头内存分配限制。|
 |[/Zo](zo-enhance-optimized-debugging.md)|为优化代码生成增强的调试信息。|
