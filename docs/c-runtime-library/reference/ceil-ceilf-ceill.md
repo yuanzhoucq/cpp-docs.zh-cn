@@ -1,11 +1,12 @@
 ---
 title: ceil、ceilf、ceill
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - ceilf
 - ceil
 - ceill
 - _o_ceil
+- _o_ceilf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507074"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -80,7 +81,7 @@ long double ceill(
 
 **ceil**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**ceil**的重载。 在 C 程序中， **ceil**始终采用并返回**双精度型**。
 
@@ -88,7 +89,7 @@ long double ceill(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**ceil**、 **ceilf**、 **ceill**|\<math.h>|
 
@@ -102,5 +103,5 @@ long double ceill(
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
-[fmod、fmodf](fmod-fmodf.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
 [round、roundf、roundl](round-roundf-roundl.md)<br/>

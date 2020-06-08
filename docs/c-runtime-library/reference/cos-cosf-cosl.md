@@ -1,11 +1,12 @@
 ---
 title: cos、cosf、cosl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - cos
 - cosf
 - cosl
 - _o_cos
+- _o_cosf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 1aae123de5ef03af8bcaf8480a84327f88c457c5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917233"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506892"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -74,7 +75,7 @@ long double cos( long double x );  // C++ only
 |± QNAN，IND|无|**_DOMAIN**|
 |± INF|**无效**|**_DOMAIN**|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 由于 c + + 允许重载，因此你可以调用采用并返回**浮点**或**长****双精度**值的**cos**的重载。 在 C 程序中， **cos**始终采用并返回**双精度型**。
 
@@ -82,7 +83,7 @@ long double cos( long double x );  // C++ only
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
 |**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
 
