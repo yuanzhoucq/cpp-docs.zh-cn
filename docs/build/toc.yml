@@ -567,8 +567,10 @@
                   href: ../build/reference/gs-buffer-security-check.md
                 - name: /Gs（控制堆栈检查调用）
                   href: ../build/reference/gs-control-stack-checking-calls.md
-                - name: /guard（启用控制流保护）
+                - name: '/guard:cf（启用控制流保护）'
                   href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/guard:ehcont（启用 EH 持续元数据）'
+                  href: ../build/reference/guard-enable-eh-continuation-metadata.md
                 - name: /GT（支持纤程安全的线程本地存储区）
                   href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
                 - name: /Gw（优化全局数据）
