@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 431c27a26fb549705abde28b08654ce47498e239
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759233"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421320"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -92,7 +92,7 @@ argument <br/>
 
 有关**errno**和错误代码的信息，请参阅[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Printf**函数设置格式并将一系列字符和值输出到标准输出流（ **stdout**）。 如果参数跟在*格式*字符串之后，*格式*字符串必须包含确定自变量的输出格式的规范。 **printf**和[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)的行为相同，只不过**printf**将输出写入到**stdout** ，而不是写入到类型**文件**的目标。
 
@@ -139,6 +139,9 @@ Line one
 |**wprintf**、 **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+
+> [!IMPORTANT]
+> 从 Windows 10 版本2004（版本19041）开始， `printf` 函数系列按用于舍入的 IEEE 754 规则打印完全可表示的浮点数。 在以前版本的 Windows 中，准确地表示以 "5" 结尾的浮点数始终向上舍入。 IEEE 754 指出它们必须舍入为最接近的偶数数字（也称为 "银行家舍入"）。 例如，1.5 和2.5 都应该舍入为2。 以前，1.5 将舍入为2，2.5 将舍入为3。 此更改只影响精确的可表示数字。 例如，2.35 （在内存中表示的更接近2.35000000000000008）将继续向上舍入到2.4。 这些函数所做的舍入现在还遵循由[fesetenv](fesetenv1.md)设置的浮点舍入模式。 以前，舍入始终选择 FE_TONEAREST 行为。 此更改仅影响使用 Visual Studio 2019 版本16.2 和更高版本生成的程序。 若要使用旧的浮点舍入行为，请将与[legacy_stdio_float_rounding](../link-options.md)链接。
 
 ## <a name="example"></a>示例
 
@@ -231,7 +234,7 @@ Address as:   0012FF3C
 [格式规范语法： printf 和 wprintf 函数](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
