@@ -1,6 +1,6 @@
 ---
 title: atan、atanf、atanl、atan2、atan2f、atan2l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - atan2f
 - atan2l
@@ -10,6 +10,7 @@ api_name:
 - atanl
 - _o_atan
 - _o_atan2
+- _o_atan2f
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920078"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506775"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-计算**x**的反正切值（**atan**、 **atanf**和**atanl**）或**y**/**x**的反正切值（**atan2**、 **atan2f**和**atan2l**）。
+计算**x**的反正切值（**atan**、 **atanf**和**atanl**）或**y**x 的反正切值 / **x** （**atan2**、 **atan2f**和**atan2l**）。
 
 ## <a name="syntax"></a>语法
 
@@ -82,7 +83,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**atan**返回*x*的反正切值，范围为-π/2 到π/2 弧度。 **atan2**返回范围-π到π弧度的*y*/*x*的反正切值。 如果*x*为0，则**atan**将返回0。 如果**atan2**的两个参数均为0，则该函数返回0。 所有结果都都以弧度为单位。
+**atan**返回*x*的反正切值，范围为-π/2 到π/2 弧度。 **atan2**返回*y* / 范围-π到π弧度的 y*x*的反正切值。 如果*x*为0，则**atan**将返回0。 如果**atan2**的两个参数均为0，则该函数返回0。 所有结果都都以弧度为单位。
 
 **atan2**使用两个参数的符号来确定返回值的象限。
 
@@ -90,9 +91,9 @@ long double atan2( long double y, long double x );  // C++ only
 |-----------|-------------------|-----------------------|
 |± **QNAN**， **IND**|无|**_DOMAIN**|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Atan**函数计算*x*的反正切值（反切线函数）。 **atan2**计算*y*/*x*的反正切值（如果*x*等于 0 *，如果 y 为正值*，则**atan2**返回π/2; 如果 y*为负数*，则返回-π/2; 如果*y*为0，则返回0。）
+**Atan**函数计算*x*的反正切值（反切线函数）。 **atan2**计算*y*x 的反正切值 / *x* （如果*x*等于0，*如果 y*为正值，则**atan2**返回π/2; 如果 y*为*负数，则返回-π/2; 如果*y*为0，则返回0。）
 
 **atan**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
@@ -102,7 +103,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> 或 \<math.h>|
 

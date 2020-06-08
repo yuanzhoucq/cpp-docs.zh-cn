@@ -30,12 +30,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: ea71faab639a8c0a09d6e332618dd7e09159a4e5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351098"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506853"
 ---
 # <a name="link-options"></a>链接选项
 
@@ -51,7 +51,7 @@ CRT lib 目录中包括大量无需更改任何代码就能启用特定的 CRT �
 |exe_initialize_mta.lib|不适用|在 EXE 启动期间初始化 MTA 单元，以便在全局智能指针中使用 COM 对象。 因为此选项在关闭期间会泄漏 MTA 单元引用，所以请不要将其用于 DLL。 链接到此选项等效于包括 combase.h 和定义 _EXE_INITIALIZE_MTA。 |
 |fp10.obj|不适用|将默认精度控制更改为 64 位。 请参阅[浮点支持](../c-runtime-library/floating-point-support.md)。|
 |invalidcontinue.obj|pinvalidcontinue.obj|设置不执行任何操作的默认无效参数处理程序，这意味着传递到 CRT 函数的无效参数将只会设置 errno 并返回一个错误结果。|
-|legacy_stdio_float_rounding.obj|不适用|使用 Windows 10 19041 通用 C 运行时打印浮点值（例如，使用[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)时）已修复。 它现在正确地舍入了完全可表示的浮点数字，并尊重[fesetenv](../c-runtime-library/reference/fesetenv1.md)要求的浮点舍入。 此行为更新在 Visual Studio 2019 版本 16.2 及更高版本中提供。 旧行为用于早期版本的 Visual Studio，或通过提供此链接选项。|
+|legacy_stdio_float_rounding .obj|不适用|在 Windows 10 19041 通用 C 运行时中打印浮点值（例如，使用[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)时）已修复。 它现在正确地舍入精确表示的浮点数，并遵循[fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)请求的浮点舍入。 Visual Studio 2019 版本16.2 及更高版本中提供了此行为更新。 早期版本的 Visual Studio 或提供此链接选项将使用旧行为。|
 |loosefpmath.obj|不适用|确保浮点代码容忍不正常的值。|
 |newmode.obj|pnewmode.obj|导致 [malloc](../c-runtime-library/reference/malloc.md) 调用新处理程序失败。 请参阅 [_set_new_mode](../c-runtime-library/reference/set-new-mode.md)、[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)、[calloc](../c-runtime-library/reference/calloc.md)，和 [realloc](../c-runtime-library/reference/realloc.md)。|
 |noarg.obj|pnoarg.obj|禁用所有 argc 和 argv 进程。|

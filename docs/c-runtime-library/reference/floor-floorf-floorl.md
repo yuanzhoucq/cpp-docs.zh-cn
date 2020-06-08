@@ -1,11 +1,12 @@
 ---
 title: floor、floorf、floorl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - floorf
 - floorl
 - floor
 - _o_floor
+- _o_floorf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911638"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506996"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -80,7 +81,7 @@ long double floorl(
 
 **楼层**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 C + + 允许重载，因此你可以调用采用并返回**浮点**型和**长****双精度**值的**地面**重载。 在 C 程序中，**地面**始终采用并返回**双精度型**。
 
@@ -134,4 +135,4 @@ The ceil of -2.8 is -2.000000
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [round、roundf、roundl](round-roundf-roundl.md)<br/>
-[fmod、fmodf](fmod-fmodf.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>

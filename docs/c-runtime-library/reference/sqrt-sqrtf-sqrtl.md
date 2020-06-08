@@ -1,11 +1,12 @@
 ---
 title: sqrt、sqrtf、sqrtl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
 - _o_sqrt
+- _o_sqrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913904"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506879"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -72,7 +73,7 @@ long double sqrtl(
 *x*<br/>
 非负浮点值
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 由于 c + + 允许重载，因此可以调用采用**浮点**或**长****双精度**类型的**sqrt**的重载。 在 C 程序中， **sqrt**始终采用并返回**double**。
 
