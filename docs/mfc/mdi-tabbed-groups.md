@@ -5,16 +5,16 @@ helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c1bf925003d5081b2cdc837012a57585b1ace60
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310833"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624360"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI 选项卡式组
 
-多文档界面 (MDI) 选项卡式的组功能，多文档界面 (MDI) 应用程序以显示一个或多个选项卡式的窗口 (或组的选项卡式窗口，称为*选项卡式组*) MDI 客户端区域中。 选项卡式窗口可垂直对齐或水平对齐。 如果应用程序承载多个 MDI 选项卡式组，则将用拆分器分隔这些组。
+多文档界面（MDI）选项卡式组功能使多文档界面（MDI）应用程序能够在 MDI 客户端区域中显示一个或多个选项卡式窗口（或选项卡式*组*的组）。 选项卡式窗口可垂直对齐或水平对齐。 如果应用程序承载多个 MDI 选项卡式组，则将用拆分器分隔这些组。
 
 ## <a name="features"></a>功能
 
@@ -42,7 +42,7 @@ ms.locfileid: "62310833"
 
 以下是使用 MDI 选项卡式组执行的常见任务：
 
-- 若要启用主框架窗口的 MDI 选项卡式组，请调用[cmdiframewndex:: Enablemditabbedgroups](../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)。 此方法的第二个参数是 `CMDITabInfo` 类的实例。 您可在调用 `CMDIFrameWndEx::EnableMDITabbedGroups` 之前使用默认参数或修改这些参数。
+- 若要为主框架窗口启用 MDI 选项卡式组，请调用[CMDIFrameWndEx：： EnableMDITabbedGroups](reference/cmdiframewndex-class.md#enablemditabbedgroups)。 此方法的第二个参数是 `CMDITabInfo` 类的实例。 您可在调用 `CMDIFrameWndEx::EnableMDITabbedGroups` 之前使用默认参数或修改这些参数。
 
 - 若要在运行时修改 MDI 选项卡式组的属性，请创建或修改 `CMDITabInfo` 对象并再次调用 `CMDIFrameWndEx::EnableMDITabbedGroups`
 
@@ -58,11 +58,11 @@ ms.locfileid: "62310833"
 
 - 若要在用户单击选项卡或将其拖至其他 MDI 选项卡式组时显示快捷菜单，请重写 `CMDIFrameWndEx::OnShowMDITabContextMenu` 派生类中的 `CMDIFrameWndEx`。 如果您未实现此方法，则应用程序将不会显示快捷菜单。
 
-- 若要将 MDI 选项卡式组的布局保存在应用程序中，请调用 `CMDIFrameWndEx::SaveMDIState`。 若要加载之前保存的 MDI 选项卡式组配置文件，请调用 `CMDIFrameWndEx::LoadMDIState`。 您还可调用这些方法在 MDI 应用程序中加载或保存已打开文档的列表。 有关保存和加载 MDI 状态的详细信息，请参阅[cmdiframewndex:: Loadmdistate](../mfc/reference/cmdiframewndex-class.md#loadmdistate)。
+- 若要将 MDI 选项卡式组的布局保存在应用程序中，请调用 `CMDIFrameWndEx::SaveMDIState`。 若要加载之前保存的 MDI 选项卡式组配置文件，请调用 `CMDIFrameWndEx::LoadMDIState`。 您还可调用这些方法在 MDI 应用程序中加载或保存已打开文档的列表。 有关保存和加载 MDI 状态的详细信息，请参阅[CMDIFrameWndEx：： LoadMDIState](reference/cmdiframewndex-class.md#loadmdistate)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[用户界面元素](../mfc/user-interface-elements-mfc.md)<br/>
-[CMDIFrameWndEx 类](../mfc/reference/cmdiframewndex-class.md)<br/>
-[CMDIChildWndEx 类](../mfc/reference/cmdichildwndex-class.md)<br/>
-[CMDITabInfo 类](../mfc/reference/cmditabinfo-class.md)
+[用户界面元素](user-interface-elements-mfc.md)<br/>
+[CMDIFrameWndEx 类](reference/cmdiframewndex-class.md)<br/>
+[CMDIChildWndEx 类](reference/cmdichildwndex-class.md)<br/>
+[CMDITabInfo 类](reference/cmditabinfo-class.md)

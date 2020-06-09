@@ -1,5 +1,5 @@
 ---
-title: 二进制编辑器（C++）
+title: 二进制编辑器（c + +）
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.binary.F1
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 591a6714f1adabb30fda446cad0e79e2c28c30ad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215236"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615348"
 ---
-# <a name="binary-editor-c"></a>二进制编辑器（C++）
+# <a name="binary-editor-c"></a>二进制编辑器（c + +）
 
 > [!CAUTION]
 > 在**二进制编辑器**中编辑对话框、图像或菜单等资源是很危险的。 不正确的编辑可能会损坏资源，导致其在其本机编辑器中无法读取。
 
 **二进制编辑器**允许在二进制级别编辑十六进制或 ASCII 格式的任何资源。 还可以使用 [查找命令](/visualstudio/ide/reference/find-command) 来搜索 ASCII 字符串或十六进制字节。 仅当需要查看或更改 Visual Studio 环境不支持的自定义资源或资源类型时，才应使用**二进制编辑器**。 **二进制编辑器**在 Express 版本中不可用。
 
-- 若要在新文件上打开**二进制编辑器**，请前往菜单**文件** > **新建** > **文件**，选择要编辑的文件的类型，然后选择 "**打开**" 按钮旁边的下拉箭头，然后选择 "使用 > **二进制编辑器** **打开**"。
+- 若要在新文件上打开**二进制编辑器**，请前往 "菜单**文件**  >  " "**新建**  >  **文件**"，选择要编辑的文件的类型，然后选择 "**打开**" 按钮旁边的下拉箭头，然后选择 "**使用**  >  **二进制编辑器**打开"。
 
-- 若要在现有文件上打开**二进制编辑器**，请前往菜单**文件** > **打开** > **文件**"，选择要编辑的文件，然后选择"**打开**"按钮旁边的下拉箭头，然后选择"**使用** > **二进制编辑器**打开 "。
+- 若要在现有文件上打开**二进制编辑器**，请前往 "菜单" "**文件**  >  **Open**  >  " "打开**文件**"，选择要编辑的文件，然后选择 "**打开**" 按钮旁边的下拉箭头，然后选择 "**使用**  >  **二进制编辑器**打开"。
 
    ![二进制编辑器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    **二进制编辑器**中显示的对话框的二进制数据
@@ -66,10 +66,10 @@ ms.locfileid: "80215236"
 
 1. 右键单击该资源，然后选择 "**打开方式**"。
 
-1. 在“打开方式” 对话框中，选择“二进制编辑器”。
+1. 在“打开方式” **** 对话框中，选择“二进制编辑器” ****。
 
 > [!NOTE]
-> 您可以使用[图像编辑器](../windows/image-editor-for-icons.md)和**二进制编辑器**处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
+> 您可以使用[图像编辑器](image-editor-for-icons.md)和**二进制编辑器**处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
 
 ### <a name="to-edit-a-resource"></a>编辑资源的步骤
 
@@ -90,7 +90,7 @@ ms.locfileid: "80215236"
 
 可以搜索 ASCII 字符串或十六进制字节。 例如，若要查找*Hello*，可以搜索字符串 " *hello* " 或其十六进制值 " *48 65 6C 6C 6F*"。
 
-1. 中转到菜单**编辑** > [查找](/visualstudio/ide/reference/find-command)。
+1. 中转到菜单**编辑**  >  [查找](/visualstudio/ide/reference/find-command)。
 
 1. 在 "**查找内容**" 框中，从下拉列表中选择之前的搜索字符串或键入要查找的数据。
 
@@ -100,7 +100,7 @@ ms.locfileid: "80215236"
 
 您可以创建新的自定义资源或数据资源，只需要使用常规资源脚本（.rc）文件语法将资源置于单独的文件中，然后在**解决方案资源管理器**中右键单击项目并选择 "**资源包括**" 即可包含该文件。
 
-1. [创建 .rc 文件](../windows/how-to-create-a-resource-script-file.md) （其中包含自定义资源或数据资源）。
+1. [创建 .rc 文件](how-to-create-a-resource-script-file.md) （其中包含自定义资源或数据资源）。
 
    可以在 .rc 文件中键入自定义数据，格式为以 null 结尾的带引号的字符串，或十进制、十六进制或八进制格式的整数。
 
@@ -127,4 +127,4 @@ ms.locfileid: "80215236"
 
 ## <a name="see-also"></a>另请参阅
 
-[资源编辑器](../windows/resource-editors.md)
+[资源编辑器](resource-editors.md)

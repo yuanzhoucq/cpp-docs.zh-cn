@@ -10,18 +10,18 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 303b8a566a730c5abd06d51fb7977174e19a6435
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615911"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>删除 CObject 集合中的所有对象
 
 本文介绍如何删除集合中的所有对象（而不删除集合对象本身）。
 
-要删除`CObject`s 集合中的所有对象（或派生自`CObject`的对象），请使用"[访问集合的所有成员](../mfc/accessing-all-members-of-a-collection.md)"一文中描述的迭代技术之一依次删除每个对象。
+若要删除 `CObject` （或派生自的对象）集合中的所有对象 `CObject` ，请使用[访问集合的所有成员](accessing-all-members-of-a-collection.md)一文中所述的一种迭代技术，依次删除每个对象。
 
 > [!CAUTION]
 > 集合中的对象可以共享。 也就是说，集合将保留指向对象的指针，但程序的其他部分也可能具有指向同一对象的指针。 在使用共享对象删除所有部分之前，您必须小心以免删除此对象。
@@ -38,13 +38,13 @@ ms.locfileid: "81370536"
 
 1. 使用 `GetHeadPosition` 和 `GetNext` 循环访问该列表。
 
-1. 使用**delete**运算符删除迭代中遇到的每个对象。
+1. 使用**delete**运算符删除迭代时遇到的每个对象。
 
 1. 在删除与列表中所有元素关联的对象之后，调用 `RemoveAll` 函数删除这些元素。
 
 以下示例演示如何删除 `CPerson` 对象列表中的所有对象。 列表中的每个对象都是指向最初在堆上分配的 `CPerson` 对象的指针。
 
-[!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]
+[!code-cpp[NVC_MFCCollections#17](codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]
 
 最后一个函数调用 `RemoveAll` 是删除列表中所有元素的成员函数列表。 成员函数 `RemoveAt` 将删除单个元素。
 
@@ -54,30 +54,30 @@ ms.locfileid: "81370536"
 
 1. 使用 `GetSize` 和整数索引值循环访问数组。
 
-1. 使用**delete**运算符删除迭代中遇到的每个元素。
+1. 使用**delete**运算符删除迭代时遇到的每个元素。
 
 1. 在删除数组中的所有元素后，调用 `RemoveAll` 函数从数组中移除这些元素。
 
    删除数组所有元素的代码如下所示：
 
-   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 与上述列表示例一样，您可调用 `RemoveAll` 删除数组中的所有元素或调用 `RemoveAt` 删除独立元素。
 
-#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>删除地图中的所有元素
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>删除映射中的所有元素
 
 1. 使用 `GetStartPosition` 和 `GetNextAssoc` 循环访问数组。
 
-1. 使用**delete**运算符删除迭代中遇到的每个映射元素的键和/或值。
+1. 使用**delete**运算符删除迭代中遇到的每个地图元素的键和/或值。
 
 1. 在删除映射中的所有元素后，调用 `RemoveAll` 函数从映射中移除这些元素。
 
    删除 `CMap` 集合的所有元素的代码如下所示。 映射中每个元素都具有一个作为键的字符串和一个作为值的 `CPerson` 对象（派生自 `CObject`）。
 
-   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 您可以调用 `RemoveAll` 删除映射中的所有元素或调用 `RemoveKey` 删除具有指定键的独立元素。
 
 ## <a name="see-also"></a>另请参阅
 
-[访问集合的所有成员](../mfc/accessing-all-members-of-a-collection.md)
+[访问集合的所有成员](accessing-all-members-of-a-collection.md)

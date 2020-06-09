@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: d49a1596371e4a69873b826d3e756f263539d034
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aa5012f6657b2676756d1d8023274a524b451df3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448312"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617465"
 ---
-# <a name="allocatornewdel-class"></a>allocator_newdel 类
+# <a name="allocator_newdel-class"></a>allocator_newdel 类
 
-实现一个分配器, 该分配器使用**运算符 delete**来释放内存块, 使用**new 运算符**分配内存块。
+实现一个分配器，该分配器使用**运算符 delete**来释放内存块，使用**new 运算符**分配内存块。
 
 ## <a name="syntax"></a>语法
 
@@ -35,14 +35,14 @@ class allocator_newdel;
 
 ## <a name="remarks"></a>备注
 
-在以下语句中, [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)宏将此类作为*name*参数传递:`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏将此类作为以下语句中的*name*参数传递：`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<allocators>
+**标头：**\<allocators>
 
 **命名空间：** stdext
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

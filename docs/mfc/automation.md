@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370826"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616512"
 ---
 # <a name="automation"></a>自动化
 
 自动化（以前称为“OLE 自动化”）使一个应用程序能够操作在其他应用程序中实现的对象，或公开对象以供其他应用程序进行操作。
 
-[自动化服务器](../mfc/automation-servers.md) 是一个通过 COM 接口向其他应用程序（称为 [自动化客户端](../mfc/automation-clients.md)）公开其功能的应用程序（一种 COM 服务器）。 公开可以使自动化客户端通过直接访问对象并使用它们提供的服务来自动执行某些功能。
+[自动化服务器](automation-servers.md) 是一个通过 COM 接口向其他应用程序（称为 [自动化客户端](automation-clients.md)）公开其功能的应用程序（一种 COM 服务器）。 公开可以使自动化客户端通过直接访问对象并使用它们提供的服务来自动执行某些功能。
 
 自动化服务器和客户端使用始终从 `IDispatch` 派生的 COM 接口，并采用和返回一组称为“自动化类型”的特定数据类型。 您可以自动化任何公开自动化接口的对象，提供可以从其他应用程序访问的方法和属性。 自动化可用于 OLE 和 COM 对象。 自动化的对象可能是本地或远程的（在网络中其他可访问的计算机上）；因此有两个类别的自动化：
 
@@ -47,11 +47,11 @@ ms.locfileid: "81370826"
 
 许多商业应用程序，如 Microsoft Excel 和 Microsoft Visual C++，允许您自动化大部分功能。 例如，在 Visual C++ 中，可以编写 VBScript 宏来自动执行生成、代码编辑相关工作或调试任务。
 
-## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a>自动化中的传递参数
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a>在自动化中传递参数
 
-创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **VARIANT** 类型支持很多标准数据类型：2 字节和 4 字节的整数、4 字节和 8 字节的浮点数、字符串和布尔值。 此外，它还支持**HRESULT（OLE**错误代码）、**货币**（定点数值类型）和**日期**（绝对日期和时间）类型，以及指向 和`IUnknown``IDispatch`接口的指针。
+创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **VARIANT** 类型支持很多标准数据类型：2 字节和 4 字节的整数、4 字节和 8 字节的浮点数、字符串和布尔值。 此外，它还支持**HRESULT** （OLE 错误代码）、**货币**（定点数值类型）和**日期**（绝对日期和时间）类型，以及指向 `IUnknown` 和接口的指针 `IDispatch` 。
 
-**VARIANT** 类型封装在 [COleVariant](../mfc/reference/colevariant-class.md) 类中。 支持的 **CURRENCY** 和 **DATE** 类封装在 [COleCurrency](../mfc/reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 类中。
+**VARIANT** 类型封装在 [COleVariant](reference/colevariant-class.md) 类中。 支持的 **CURRENCY** 和 **DATE** 类封装在 [COleCurrency](reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 类中。
 
 ## <a name="automation-samples"></a>自动化示例
 
@@ -67,26 +67,26 @@ ms.locfileid: "81370826"
 
 - [MFCCALC](../overview/visual-cpp-samples.md) 演示自动化客户端应用程序。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [自动化客户端](../mfc/automation-clients.md)
+- [自动化客户端](automation-clients.md)
 
-- [自动化服务器](../mfc/automation-servers.md)
+- [自动化服务器](automation-servers.md)
 
-- [OLE](../mfc/ole-in-mfc.md)
+- [OLE](ole-in-mfc.md)
 
-- [Active 技术](../mfc/mfc-com.md)
+- [Active 技术](mfc-com.md)
 
-## <a name="what-do-you-want-to-do"></a>你想做什么
+## <a name="what-do-you-want-to-do"></a>要执行的操作
 
-- [添加自动化类](../mfc/automation-servers.md)
+- [添加自动化类](automation-servers.md)
 
-- [使用类型库](../mfc/automation-clients-using-type-libraries.md)
+- [使用类型库](automation-clients-using-type-libraries.md)
 
-- [访问自动化服务器](../mfc/automation-servers.md)
+- [访问自动化服务器](automation-servers.md)
 
-- [采用 C++ 编写自动化客户端](../mfc/automation-clients.md)
+- [采用 C++ 编写自动化客户端](automation-clients.md)
 
 ## <a name="see-also"></a>另请参阅
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

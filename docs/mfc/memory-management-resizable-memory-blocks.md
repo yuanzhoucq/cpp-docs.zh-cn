@@ -9,20 +9,20 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74ae94146b1ec711b586ea1fecbbc89a47b40b5e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626270"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>内存管理：可调整大小的内存块
 
-新的**new****和删除**运算符，在文章[内存管理：示例](../mfc/memory-management-examples.md)中介绍，非常适合分配和释放固定大小的内存块和对象。 有时，应用程序可能需要可调整大小的内存块。 您必须使用标准的 C 运行时库函数[malloc、realloc](../c-runtime-library/reference/malloc.md)和[免费](../c-runtime-library/reference/free.md)来管理堆上可调整大小的内存块。 [realloc](../c-runtime-library/reference/realloc.md)
+[内存管理：示例](memory-management-examples.md)一文中介绍的**new**和**delete**运算符非常适合用于分配和分配固定大小的内存块和对象。 有时，应用程序可能需要可调整大小的内存块。 必须使用标准 C 运行时库函数[malloc](../c-runtime-library/reference/malloc.md)、 [realloc](../c-runtime-library/reference/realloc.md)和[free](../c-runtime-library/reference/free.md) ，以管理堆上可调整大小的内存块。
 
 > [!IMPORTANT]
-> 将**新的**运算符和**删除**运算符与同一内存块上的可调整大小的内存分配函数混合将导致 MFC 的调试版本中的内存损坏。 不应在使用**new**分配的内存块上使用**realloc。** 同样，您不应使用**新**运算符分配内存块，并使用**空闲**的 删除内存块，或使用使用**malloc**分配的内存块上的**删除**运算符。
+> 将**new**和**delete**运算符与同一内存块上可调整大小的内存分配函数混合在一起会导致 MFC 调试版本中的内存损坏。 不应在使用**new**分配的内存块上使用**realloc** 。 同样，你不应使用**new**运算符分配内存块并将其**删除，或者**对使用**malloc**分配的内存块使用**delete**运算符。
 
 ## <a name="see-also"></a>另请参阅
 
-[内存管理：堆分配](../mfc/memory-management-heap-allocation.md)
+[内存管理：堆分配](memory-management-heap-allocation.md)
