@@ -8,27 +8,27 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-ms.openlocfilehash: 5998d5707eb741be0e8ac270f6ac5ce77a9ff8d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399230446977636cc8769efe32b8f86fad466b83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153263"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616115"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>从 CDocument 派生文档类
 
-文档包含和管理应用程序的数据。 若要使用的 MFC 应用程序向导提供的文档类，必须执行以下操作：
+文档包含和管理应用程序的数据。 若要使用 MFC 应用程序向导提供的文档类，您必须执行以下操作：
 
-- 从派生类`CDocument`每种类型的文档。
+- `CDocument`为每种类型的文档从派生一个类。
 
-- 添加成员变量来存储每个文档的数据。
+- 添加成员变量以存储每个文档的数据。
 
-- 重写`CDocument`的`Serialize`成员函数在您的文档类。 `Serialize` 写入，并读取文档的数据传入和传出磁盘。
+- 重写 `CDocument` 的 `Serialize` 文档类中的成员函数。 `Serialize`在磁盘上写入和读取文档的数据。
 
-## <a name="other-document-functions-often-overridden"></a>经常重写其他文档函数
+## <a name="other-document-functions-often-overridden"></a>经常重写的其他文档函数
 
-您可能还想要重写其他`CDocument`成员函数。 具体而言，通常将需要重写[OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)并[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)文档的数据成员进行初始化并[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)销毁动态分配的数据。 可重写成员的信息，请参阅类[CDocument](../mfc/reference/cdocument-class.md)中*MFC 参考*。
+您可能还需要重写其他 `CDocument` 成员函数。 具体而言，通常需要重写[OnNewDocument](reference/cdocument-class.md#onnewdocument)和[OnOpenDocument](reference/cdocument-class.md#onopendocument) ，以初始化文档的数据成员和[DeleteContents](reference/cdocument-class.md#deletecontents) ，以销毁动态分配的数据。 有关可重写成员的信息，请参阅*MFC 参考*中的[CDocument](reference/cdocument-class.md)类。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用文档](../mfc/using-documents.md)
+[使用文档](using-documents.md)

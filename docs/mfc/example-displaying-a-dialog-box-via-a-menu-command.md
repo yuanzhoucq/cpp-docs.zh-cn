@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078828"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616039"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例：通过菜单命令显示对话框
 
@@ -25,11 +25,11 @@ ms.locfileid: "80078828"
 
 - 通过菜单命令显示无模式对话框。
 
-这两个示例过程都适用于 MFC 应用程序，并可在使用[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)创建的应用程序中使用。
+这两个示例过程都适用于 MFC 应用程序，并可在使用[MFC 应用程序向导](reference/mfc-application-wizard.md)创建的应用程序中使用。
 
 这些过程使用以下名称和值：
 
-|Item|名称或值|
+|项目|名称或值|
 |----------|-------------------|
 |应用程序|DisplayDialog|
 |菜单命令|"视图" 菜单上的测试命令;命令 ID = ID_VIEW_TEST|
@@ -44,7 +44,7 @@ ms.locfileid: "80078828"
 
 1. 为您的对话框添加一个类。 有关详细信息，请参阅[添加类](../ide/adding-a-class-visual-cpp.md)。
 
-1. 在**类视图**中，选择 "文档类" （CDisplayDialogDoc）。 在“属性”窗口中，单击“事件”按钮。 双击菜单命令的 ID （ID_VIEW_TEST）。 接下来，单击向下箭头，然后选择 **\<添加 > OnViewTest**。
+1. 在**类视图**中，选择 "文档类" （CDisplayDialogDoc）。 在 **“属性”** 窗口中，单击 **“事件”** 按钮。 双击菜单命令的 ID （ID_VIEW_TEST）。 接下来，单击向下箭头并选择 " ** \<Add> OnViewTest**"。
 
    如果已将菜单命令添加到 MDI 应用程序的大型机，请改为选择应用程序类（CDisplayDialogApp）。
 
@@ -112,5 +112,5 @@ ms.locfileid: "80078828"
 
 ## <a name="see-also"></a>另请参阅
 
-[对话框](../mfc/dialog-boxes.md)<br/>
-[模式和无模式对话框](../mfc/modal-and-modeless-dialog-boxes.md)
+[对话框](dialog-boxes.md)<br/>
+[模式对话框和无模式对话框](modal-and-modeless-dialog-boxes.md)

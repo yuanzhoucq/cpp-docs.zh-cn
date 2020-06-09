@@ -18,48 +18,48 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e705f28476df7b594f9648aee8317759211c66c9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225462"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626214"
 ---
 # <a name="menus-and-resources-ole"></a>菜单和资源 (OLE)
 
-此系列文章解释了如何使用 MFC OLE 文档应用程序中菜单和资源。
+这一组文章介绍了 MFC OLE 文档应用程序中的菜单和资源的使用。
 
-OLE 可视化编辑对其他要求菜单和其他资源，因为有多种模式的这两个容器中提供的 OLE 文档应用程序和服务器 （组件） 应用程序可以启动和使用。 例如，完全服务器应用程序可以在以下三种模式之一中运行：
+OLE 视觉对象编辑对 OLE 文档应用程序提供的菜单和其他资源施加了其他要求，因为有多种模式可以启动和使用容器和服务器（组件）应用程序。 例如，完全服务器应用程序可以使用以下三种模式之一运行：
 
-- 单独存在。
+- 独立。
 
-- 在编辑上下文中的容器的项的位置。
+- 就地，用于在容器的上下文中编辑项。
 
-- 打开，以进行编辑其容器，通常在单独的窗口的上下文以外的项。
+- 打开，用于在其容器的上下文之外编辑项，通常在单独的窗口中进行编辑。
 
-这需要三个单独的菜单布局，一个用于应用程序的每个可能的模式。 快捷键对应表也是每种新模式必需的。 容器应用程序可能会或可能不支持就地激活;如果是这样，它需要新的菜单结构和关联的快捷键对应表。
+这需要三个单独的菜单布局，每个适用于每种可能的应用程序模式。 每个新模式还需要快捷键对应表。 容器应用程序不一定支持就地激活;如果是这样，则需要新的菜单结构和关联的快捷键对应表。
 
-在就地激活要求容器和服务器应用程序必须协商菜单、 工具栏和状态条空间。 记住，必须与此设计的所有资源。 文章[菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)了解本主题的详细信息。
+就地激活要求容器和服务器应用程序必须协商菜单、工具栏和状态栏空间。 所有资源都必须在设计时考虑到这一点。 项目[菜单和资源：菜单合并](menus-and-resources-menu-merging.md)详细介绍了此主题。
 
-由于存在这些问题，通过应用程序向导创建 OLE 文档应用程序可以具有最多四个单独的菜单和快捷键对应表资源。 由于以下原因需要使用这些：
+由于这些问题，使用应用程序向导创建的 OLE 文档应用程序最多可以有四个单独的菜单和快捷键对应表资源。 这些原因如下：
 
-|资源名称|使用|
+|资源名称|用途|
 |-------------------|---------|
-|IDR_MAINFRAME|在 MDI 应用程序是否没有文件处于打开状态，或在 SDI 应用程序而不考虑打开的文件中使用。 这是在非 OLE 应用程序中使用的标准菜单。|
-|IDR_\<project>TYPE|如果已打开的文件在 MDI 应用程序中使用。 在应用程序以独立模式运行时使用。 这是在非 OLE 应用程序中使用的标准菜单。|
-|IDR_\<project>TYPE_SRVR_IP|在位置中打开对象时使用的服务器或容器。|
-|IDR_\<project>TYPE_SRVR_EMB|如果不使用就地激活的情况下打开对象服务器应用程序使用。|
+|IDR_MAINFRAME|在未打开任何文件的情况下在 MDI 应用程序中使用，或在 SDI 应用程序中使用，而不考虑打开的文件。 这是在非 OLE 应用程序中使用的标准菜单。|
+|IDR_ \<project> 类型|如果文件已打开，则在 MDI 应用程序中使用。 当应用程序独立运行时使用。 这是在非 OLE 应用程序中使用的标准菜单。|
+|IDR_ \<project> TYPE_SRVR_IP|当对象处于打开状态时，由服务器或容器使用。|
+|IDR_ \<project> TYPE_SRVR_EMB|如果在不使用就地激活的情况下打开对象，则由服务器应用程序使用。|
 
-每个这些资源名称代表一个菜单和快捷键对应表，通常情况下。 应在不使用应用程序向导创建的 MFC 应用程序中使用类似的方案。
+其中每个资源名称都表示一个菜单，通常是一个快捷键对应表。 应在不使用应用程序向导创建的 MFC 应用程序中使用类似的方案。
 
-以下文章介绍了与容器、 服务器和菜单合并有必要实现就地激活相关的主题：
+以下文章讨论了实现就地激活所需的容器、服务器和菜单合并的相关主题：
 
-- [菜单和资源：容器添加项](../mfc/menus-and-resources-container-additions.md)
+- [菜单和资源：容器添加](menus-and-resources-container-additions.md)
 
-- [菜单和资源：服务器添加项](../mfc/menus-and-resources-server-additions.md)
+- [菜单和资源：服务器添加](menus-and-resources-server-additions.md)
 
-- [菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)
+- [菜单和资源：菜单合并](menus-and-resources-menu-merging.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[OLE](../mfc/ole-in-mfc.md)
+[OLE](ole-in-mfc.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: 8e1bfd1baa8ffef76ba31912fc619c4217696683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36dab679a2e41910b2445a7dab36f5786081563
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624285"
 ---
 # <a name="messages"></a>消息
 
-中的消息循环`Run`类的成员函数`CWinApp`检索生成的排队消息的各种事件。 例如，当用户单击鼠标，Windows 会发送多个与鼠标相关的消息，如 WM_LBUTTONDOWN 时按下鼠标左键和 WM_LBUTTONUP 释放鼠标按钮时。 应用程序消息循环的框架的实现会将消息调度到合适的窗口。
+类的成员函数中的消息循环 `Run` `CWinApp` 检索由各种事件生成的已排队消息。 例如，当用户单击鼠标时，Windows 将发送多个与鼠标相关的消息，例如在按下鼠标左键时 WM_LBUTTONDOWN，并在释放鼠标左键时 WM_LBUTTONUP。 应用程序消息循环的框架的实现会将消息调度到合适的窗口。
 
-消息的重要类别中所述[消息类别](../mfc/message-categories.md)。
+[消息类别](message-categories.md)中描述了重要的消息类别。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[框架中的消息和命令](../mfc/messages-and-commands-in-the-framework.md)
+[框架中的消息和命令](messages-and-commands-in-the-framework.md)

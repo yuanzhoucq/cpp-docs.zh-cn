@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: cf130bf8dead5c59548821658b979785c4d54726
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef4ed9865d3a88a6ff85f777984b856d03cc48e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376485"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616364"
 ---
 # <a name="containers-advanced-features"></a>容器：高级功能
 
@@ -31,7 +31,7 @@ ms.locfileid: "81376485"
 
 容器/服务器应用程序是既充当容器又充当服务器的应用程序。 Microsoft Word for Windows 是此应用程序的一个示例。 您可将 Word for Windows 文档嵌入其他应用程序，也可将项目嵌入 Word for Windows 文档。 修改既是容器也是完全服务器的容器应用程序的过程（您无法创建组合容器/袖珍服务器应用程序）类似于创建完全服务器的过程。
 
-文章["服务器：实现服务器](../mfc/servers-implementing-a-server.md)"列出了实现服务器应用程序所需的许多任务。 如果将容器应用程序转换为容器/服务器应用程序，则你需要执行一些相同的任务，将代码添加到容器。 下面列出了重要的注意事项：
+文章[服务器：实现服务器](servers-implementing-a-server.md)列出了实现服务器应用程序所需的多个任务。 如果将容器应用程序转换为容器/服务器应用程序，则你需要执行一些相同的任务，将代码添加到容器。 下面列出了重要的注意事项：
 
 - 由应用程序向导创建的容器代码已初始化 OLE 子系统。 您无需为此支持更改或添加任何内容。
 
@@ -39,9 +39,9 @@ ms.locfileid: "81376485"
 
 - 重写 `COleClientItem::CanActivate` 以避免在使用服务器自身进行就地编辑时就地编辑项目。
 
-   例如，MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)嵌入了由容器/服务器应用程序创建的项。 打开 OCLIENT 应用程序并就地编辑由容器/服务器应用程序创建的项目。 编辑应用程序的项目时，您决定要嵌入由 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)创建的项。 为此，您无法使用就地激活。 您必须完全打开 HIERSVR 才能激活此项目。 由于 Microsoft 基础类库不支持此 OLE 功能，因此重写 `COleClientItem::CanActivate` 使您可检查此情况并防止应用程序中出现可能的运行时错误。
+   例如，MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)已嵌入由容器/服务器应用程序创建的项目。 打开 OCLIENT 应用程序并就地编辑由容器/服务器应用程序创建的项目。 编辑应用程序项时，您决定要嵌入由 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)创建的项。 为此，您无法使用就地激活。 您必须完全打开 HIERSVR 才能激活此项目。 由于 Microsoft 基础类库不支持此 OLE 功能，因此重写 `COleClientItem::CanActivate` 使您可检查此情况并防止应用程序中出现可能的运行时错误。
 
-如果要创建新的应用程序并希望它充当容器/服务器应用程序，请在应用程序向导的“OLE 选项”对话框中选择此选项，将自动创建此支持。 有关详细信息，请参阅文章[概述：创建 ActiveX 控件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 有关 MFC 样品的信息，请参阅[MFC 样品](../overview/visual-cpp-samples.md#mfc-samples)。
+如果要创建新的应用程序并希望它充当容器/服务器应用程序，请在应用程序向导的“OLE 选项”对话框中选择此选项，将自动创建此支持。 有关详细信息，请参阅文章[概述：创建 ActiveX 控件容器](reference/creating-an-mfc-activex-control-container.md)。 有关 MFC 示例的信息，请参阅[Mfc 示例](../overview/visual-cpp-samples.md#mfc-samples)。
 
 请注意，您无法将 MDI 应用程序插入其本身。 为容器/服务器的应用程序不能插入其本身，除非它是 SDI 应用程序。
 
@@ -63,15 +63,15 @@ ms.locfileid: "81376485"
 
    - 通过调用对象的 `COleTemplateServer` 成员函数，将您的 `ConnectTemplate` 对象连接到文档模板。
 
-   - 调用`COleTemplateServer::RegisterAll`成员函数以将所有类对象注册到 OLE 系统。
+   - 调用 `COleTemplateServer::RegisterAll` 成员函数以向 OLE 系统注册所有类对象。
 
-   - 调用 `COleTemplateServer::UpdateRegistry`。 如果应用程序未使用`UpdateRegistry`"/嵌入式"开关启动，则应*OAT_CONTAINER*唯一参数。 这会将应用程序作为可支持链接到嵌入对象的容器注册。
+   - 调用 `COleTemplateServer::UpdateRegistry`。 `UpdateRegistry`如果应用程序未通过 "/Embedded" 开关启动，则应*OAT_CONTAINER*唯一的参数。 这会将应用程序作为可支持链接到嵌入对象的容器注册。
 
       如果应用程序已使用“/Embedded”开关启动，则不应显示其主窗口，这与服务器应用程序类似。
 
-MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)实现了此功能。 有关如何完成此操作的示例，请参阅`InitInstance`*OCLIENT 中的函数。* 此示例应用程序的 CPP 文件。
+MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)实现了此功能。 有关如何执行此操作的示例，请参阅 `InitInstance` OCLIENT 中的函数 *。* 此示例应用程序的 CPP 文件。
 
 ## <a name="see-also"></a>另请参阅
 
-[容器](../mfc/containers.md)<br/>
-[服务器](../mfc/servers.md)
+[容器](containers.md)<br/>
+[服务器](servers.md)

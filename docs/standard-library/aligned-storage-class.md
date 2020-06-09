@@ -7,14 +7,14 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 741106888cdab63a75e090e860269f125c35efa6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456482"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623835"
 ---
-# <a name="alignedstorage-class"></a>aligned_storage 类
+# <a name="aligned_storage-class"></a>aligned_storage 类
 
 生成适当对齐的类型。
 
@@ -38,7 +38,7 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ## <a name="remarks"></a>备注
 
-模板成员 typedef `type`是具有对齐*方式和大小* *长度*的 POD 类型的同义词。 对于某一类型`T`, *Align*必须等于或为默认对齐方式。 `alignment_of<T>::value`
+模板成员 typedef `type` 是具有对齐方式和大小*长度*的 POD 类型*Align*的同义词。 *Align* `alignment_of<T>::value` 对于某一类型，Align 必须等于 `T` 或为默认对齐方式。
 
 ## <a name="example"></a>示例
 
@@ -66,11 +66,11 @@ aligned to double == 8
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[<type_traits>](../standard-library/type-traits.md)\
-[alignment_of Class](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[alignment_of 类](alignment-of-class.md)

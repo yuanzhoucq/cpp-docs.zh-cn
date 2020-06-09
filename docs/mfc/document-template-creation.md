@@ -8,26 +8,26 @@ helpviewer_keywords:
 - MFC, document templates
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
-ms.openlocfilehash: 85ff6ad47b37d85c812608dbee918f0543730eae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952a383792eb3a4d0a4ed1b3e24dd82f7fa644cf
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615784"
 ---
 # <a name="document-template-creation"></a>文档模板创建
 
-在响应中创建一个新文档时**新建**或**打开**命令**文件**菜单中，文档模板还创建用来查看新的框架窗口文档。
+当在 "**文件**" 菜单中创建新文档来响应**新**的或**打开**的命令时，文档模板还将创建一个新的框架窗口，通过该窗口查看文档。
 
-文档模板构造函数指定哪些类型的文档、 窗口和视图将能够创建模板。 这是通过将传递给文档模板构造函数的参数确定的。 下面的代码演示创建[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)示例应用程序：
+文档模板构造函数指定模板可以创建的文档、窗口和视图的类型。 这取决于您传递给文档模板构造函数的参数。 下面的代码演示如何为示例应用程序创建[CMultiDocTemplate](reference/cmultidoctemplate-class.md) ：
 
-[!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/cpp/document-template-creation_1.cpp)]
+[!code-cpp[NVC_MFCDocView#7](codesnippet/cpp/document-template-creation_1.cpp)]
 
-指向新指针`CMultiDocTemplate`使用对象作为参数[AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate)。 自变量`CMultiDocTemplate`构造函数包含文档类型的菜单和快捷键，与关联的资源 ID 和三个用途[RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)宏。 `RUNTIME_CLASS` 返回[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)对象的C++作为其参数名为的类。 这三个`CRuntimeClass`对象传递给文档模板构造函数提供文档创建过程中创建的指定类的新对象所需的信息。 该示例演示如何创建用于创建的文档模板`CScribDoc`对象与`CScribView`附加的对象。 视图是构建框架通过标准的 MDI 子框架窗口。
+指向新对象的指针用作 `CMultiDocTemplate` [AddDocTemplate](reference/cwinapp-class.md#adddoctemplate)的参数。 `CMultiDocTemplate`构造函数的参数包括与文档类型的菜单和快捷键相关联的资源 ID，以及三个[RUNTIME_CLASS](reference/run-time-object-model-services.md#runtime_class)宏的用法。 `RUNTIME_CLASS`返回名为的 c + + 类的[CRuntimeClass](reference/cruntimeclass-structure.md)对象作为其参数。 `CRuntimeClass`传递给文档模板构造函数的三个对象提供在文档创建过程中创建指定类的新对象所需的信息。 该示例演示如何创建一个文档模板，该模板创建对象 `CScribDoc` 并 `CScribView` 附加了对象。 视图通过标准 MDI 子框架窗口进行分帧。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[文档/视图创建](../mfc/document-view-creation.md)<br/>
-[MFC 对象之间的关系](../mfc/relationships-among-mfc-objects.md)<br/>
-[创建新文档、窗口和视图](../mfc/creating-new-documents-windows-and-views.md)
+[文档模板和文档/视图创建过程](document-templates-and-the-document-view-creation-process.md)<br/>
+[文档/视图创建](document-view-creation.md)<br/>
+[MFC 对象之间的关系](relationships-among-mfc-objects.md)<br/>
+[创建新文档、窗口和视图](creating-new-documents-windows-and-views.md)

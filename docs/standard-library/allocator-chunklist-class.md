@@ -8,16 +8,16 @@ helpviewer_keywords:
 - stdext::allocator_chunklist
 - stdext::allocators [C++], allocator_chunklist
 ms.assetid: ea72ed0a-dfdb-4c8b-8096-e4baf567b80f
-ms.openlocfilehash: 46ae9c613b66e00658f09ad10f33b721c6948ff7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c2342d068293714871b3f79675dd0d0b9db83448
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617548"
 ---
-# <a name="allocatorchunklist-class"></a>allocator_chunklist 类
+# <a name="allocator_chunklist-class"></a>allocator_chunklist 类
 
-描述一个对象，用于管理使用缓存类型为 [cache_chunklist](../standard-library/cache-chunklist-class.md) 的对象的存储分配和释放。
+描述一个对象，用于管理使用缓存类型为 [cache_chunklist](cache-chunklist-class.md) 的对象的存储分配和释放。
 
 ## <a name="syntax"></a>语法
 
@@ -34,14 +34,14 @@ class allocator_chunklist;
 
 ## <a name="remarks"></a>备注
 
-在以下语句中, [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)宏将此类作为*name*参数传递:`ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏将此类作为以下语句中的*name*参数传递：`ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<allocators>
+**标头：**\<allocators>
 
 **命名空间：** stdext
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)
