@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2d9b84a2be42df38df36bb90c0b5aeee076bf6a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364973"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623612"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; 宏
 
@@ -38,7 +38,7 @@ ms.locfileid: "81364973"
 
 ### <a name="remarks"></a>备注
 
-宏生成一个模板定义`template <class Type> class name {.....}`和一个`template <> class name<void> {.....}`专门化，它们共同定义一个分配器类模板，`sync`该模板使用同步筛选器`cache`和类型的缓存。
+该宏将生成一个模板定义 `template <class Type> class name {.....}` 和一个特殊化， `template <> class name<void> {.....}` 它们共同定义使用同步筛选器的分配器类模板 `sync` 和类型为的缓存 `cache` 。
 
 对于可以编译重新绑定的编译器，其生成的模板定义如下所示：
 
@@ -112,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>另请参阅
 
-[\<分配器>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

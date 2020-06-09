@@ -15,12 +15,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 1aaeea11dd7916332ab0c281561550039ee03498
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685756"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616775"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>对话框数据交换和验证
 
@@ -28,11 +28,11 @@ ms.locfileid: "71685756"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [对话框数据交换](../mfc/dialog-data-exchange.md)
+- [对话框数据交换](dialog-data-exchange.md)
 
-- [对话框数据验证](../mfc/dialog-data-validation.md)
+- [对话框数据验证](dialog-data-validation.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[对话框](../mfc/dialog-boxes.md)<br/>
-[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)
+[对话框](dialog-boxes.md)<br/>
+[在 MFC 中使用对话框](life-cycle-of-a-dialog-box.md)

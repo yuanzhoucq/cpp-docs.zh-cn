@@ -6,49 +6,49 @@ f1_keywords:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-ms.openlocfilehash: a7034a99bfefe8f4c11cdf8f99dc4b0c31fac10a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 012d107d7bcc630c4bc02a9dc697172080787eac
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219790"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615806"
 ---
 # <a name="document-classes"></a>文档类
 
-创建的文档模板对象的文档类对象管理应用程序的数据。 从这些类之一，将为你的文档中派生一个类。
+文档类对象（由文档模板对象创建）管理应用程序的数据。 你将从这些类中的一个类派生你的文档的类。
 
-文档类对象与视图对象进行交互。 视图对象表示一个窗口的工作区，显示文档的数据，并使用户可以与其进行交互。 文档模板对象的情况下，将创建文档和视图。
+文档类对象与视图对象交互。 视图对象表示窗口的工作区，显示文档的数据，并允许用户与之交互。 文档和视图由文档模板对象创建。
 
-[CDocument](../mfc/reference/cdocument-class.md)<br/>
-特定于应用程序的文档的基类。 从派生文档类`CDocument`。
+[CDocument](reference/cdocument-class.md)<br/>
+特定于应用程序的文档的基类。 从派生您的文档类 `CDocument` 。
 
-[COleDocument](../mfc/reference/coledocument-class.md)<br/>
-用于复合文档实现，以及基本容器支持。 可用作容器的类派生自[CDocItem](../mfc/reference/cdocitem-class.md)。 此类可以用作基类，为容器记录，并且是类的基类`COleServerDoc`。
+[COleDocument](reference/coledocument-class.md)<br/>
+用于复合文档实现以及基本容器支持。 用作派生自[CDocItem](reference/cdocitem-class.md)的类的容器。 此类可用作容器文档的基类，并且是的基类 `COleServerDoc` 。
 
-[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
-一个类派生自`COleDocument`为链接提供了基础结构。 应为此类，而不是从容器应用程序派生文档类`COleDocument`如果你希望它们以支持链接到嵌入对象。
+[COleLinkingDoc](reference/colelinkingdoc-class.md)<br/>
+一个派生自 `COleDocument` 的类，它提供用于链接的基础结构。 应从此类派生容器应用程序的文档类，而不是从中派生 `COleDocument` 。
 
-[CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-维护格式文本编辑控件中的 OLE 客户端项的列表。 用于[CRichEditView](../mfc/reference/cricheditview-class.md)并[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)。
+[CRichEditDoc](reference/cricheditdoc-class.md)<br/>
+维护在 rich edit 控件中的 OLE 客户端项的列表。 与[CRichEditView](reference/cricheditview-class.md)和[CRichEditCntrItem](reference/cricheditcntritem-class.md)一起使用。
 
-[COleServerDoc](../mfc/reference/coleserverdoc-class.md)<br/>
-用作服务器应用程序文档类的基类。 `COleServerDoc` 对象提供的与的交互通过服务器支持批量[COleServerItem](../mfc/reference/coleserveritem-class.md)对象。 使用类库的文档/视图体系结构提供可视编辑功能。
+[COleServerDoc](reference/coleserverdoc-class.md)<br/>
+用作服务器应用程序文档类的基类。 `COleServerDoc`对象通过与[COleServerItem](reference/coleserveritem-class.md)对象的交互来提供大量服务器支持。 使用类库的文档/视图体系结构提供了可视编辑功能。
 
-[CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)<br/>
-提供了，与[CHtmlEditView](../mfc/reference/chtmleditview-class.md)，MFC 文档视图体系结构的上下文中的 webbrowser 控件中 HTML 编辑平台功能。
+[CHtmlEditDoc](reference/chtmleditdoc-class.md)<br/>
+通过[CHtmlEditView](reference/chtmleditview-class.md)，可以在 MFC 文档视图体系结构的上下文中提供 WebBrowser HTML 编辑平台的功能。
 
-## <a name="related-classes"></a>相关的类
+## <a name="related-classes"></a>相关类
 
-文档类对象可以是永久性的即，它们可以将其状态写入到存储介质和读回。 MFC 提供了`CArchive`类以方便在文档的数据传输到存储介质。
+文档类对象可能是持久性的，换言之，它们可以将其状态写入存储介质并重新读取。 MFC 提供 `CArchive` 类，以便于将文档数据传输到存储介质。
 
-[CArchive](../mfc/reference/carchive-class.md)<br/>
-所以会与协作[CFile](../mfc/reference/cfile-class.md)对象来实现通过序列化对象的持久性存储区 (请参阅[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize))。
+[CArchive](reference/carchive-class.md)<br/>
+使用[CFile](reference/cfile-class.md)对象会通过序列化实现对象的持久存储（请参阅[CObject：：串行化](reference/cobject-class.md#serialize)）。
 
-文档还包含 OLE 对象。 `CDocItem` 是服务器和客户端项的基类。
+文档还可以包含 OLE 对象。 `CDocItem`服务器和客户端项的基类。
 
-[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-抽象类的基类[COleClientItem](../mfc/reference/coleclientitem-class.md)并[COleServerItem](../mfc/reference/coleserveritem-class.md)。 类的对象派生自`CDocItem`表示文档的某些部分。
+[CDocItem](reference/cdocitem-class.md)<br/>
+[COleClientItem](reference/coleclientitem-class.md)和[COleServerItem](reference/coleserveritem-class.md)的抽象基类。 派生自的类的对象 `CDocItem` 表示文档的各个部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[类概述](../mfc/class-library-overview.md)
+[类概述](class-library-overview.md)

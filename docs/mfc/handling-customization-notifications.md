@@ -47,18 +47,18 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: 67f40d0dc50a853a39cb9b60a938d8eafe8293c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d88e1efe12fd5b31a9f78b8fe439ba1aefa72d1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370490"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625730"
 ---
 # <a name="handling-customization-notifications"></a>处理自定义通知
 
 Windows 工具栏公共控件有内置的自定义功能，包括一个系统定义的自定义对话框，使用户可以插入、删除或重排工具栏按钮。 应用程序确定自定义功能是否可用，并控制用户可以自定义工具栏的程度。
 
-通过为工具栏提供**CCS_ADJUSTABLE**样式，可以使这些自定义功能可供用户使用。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示 **** “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。
+可以通过为工具栏提供**CCS_ADJUSTABLE**样式，使这些自定义功能对用户可用。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示 **** “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。
 
 工具控件在自定义过程的每一步都会向父窗口发送通知消息。 如果用户按住 SHIFT 键并开始拖动按钮，工具栏将自动处理拖动操作。 工具栏将向父窗口发送 **TBN_QUERYDELETE** 通知消息，确定是否可删除该按钮。 如果父窗口返回 **FALSE**，则结束拖动操作。 否则，工具栏将捕获鼠标输入并等待用户释放鼠标按钮。
 
@@ -80,7 +80,7 @@ Windows 工具栏公共控件有内置的自定义功能，包括一个系统定
 ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 ```
 
-- **wNotifyCode**
+- **此接通 wnotifycode**
 
    通知消息标识符代码，如 **TBN_BEGINADJUST**。
 
@@ -88,7 +88,7 @@ ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 
    发送通知的控件的标识符。
 
-- **成员Fxn**
+- **memberFxn**
 
    接收到通知时调用的成员函数。
 
@@ -114,13 +114,13 @@ typedef struct tagNMHDR {
 
 - **hwndFrom**
 
-   发送通知的控件的窗口句柄。 要将此句柄转换为 `CWnd` 指针，可使用 [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle)。
+   发送通知的控件的窗口句柄。 要将此句柄转换为 `CWnd` 指针，可使用 [CWnd::FromHandle](reference/cwnd-class.md#fromhandle)。
 
 - **idFrom**
 
    发送通知的控件的标识符。
 
-- **代码**
+- **code**
 
    通知代码： 此成员可以是特定于控件类型的值，如 **TBN_BEGINADJUST** 或 **TTN_NEEDTEXT**，或者是下面列出的常见通知值之一：
 
@@ -162,7 +162,7 @@ typedef struct {
 
 - **tbButton**
 
-   包含与通知关联的工具栏按钮的信息的**TBBUTTON**结构。
+   包含与通知关联的工具栏按钮有关的信息的**TBBUTTON**结构。
 
 - **cchText**
 
@@ -180,11 +180,11 @@ typedef struct {
 
 - **TBN_BEGINDRAG**
 
-   当用户开始拖动工具栏控件中的按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。
+   当用户开始在工具栏控件中拖动按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。
 
 - **TBN_CUSTHELP**
 
-   当用户在"自定义工具栏"对话框中选择"帮助"按钮时发送。 没有返回值。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。
+   当用户在 "自定义工具栏" 对话框中选择 "帮助" 按钮时发送。 没有返回值。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。
 
 - **TBN_ENDADJUST**
 
@@ -192,23 +192,23 @@ typedef struct {
 
 - **TBN_ENDDRAG**
 
-   当用户停止拖动工具栏控件中的按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。
+   当用户停止在工具栏控件中拖动按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。
 
 - **TBN_GETBUTTONINFO**
 
-   在用户自定义工具栏控件时发送。 工具栏使用此通知消息来检索自定义工具栏对话框所需的信息。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员指定按钮的从零开始的索引。 **pszText** 和 **cchText** 成员指定当前按钮文本的地址和长度（以字符为单位）。 应用程序应使用有关按钮的信息填充结构。 如果已将按钮信息复制到结构，则返回 **TRUE** ，否则返回 **FALSE** 。
+   当用户自定义工具栏控件时发送。 工具栏使用此通知消息来检索自定义工具栏对话框所需的信息。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员指定按钮的从零开始的索引。 **pszText** 和 **cchText** 成员指定当前按钮文本的地址和长度（以字符为单位）。 应用程序应使用有关按钮的信息填充结构。 如果已将按钮信息复制到结构，则返回 **TRUE** ，否则返回 **FALSE** 。
 
 - **TBN_QUERYDELETE**
 
-   在用户自定义工具栏以确定是否可以从工具栏控件中删除按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要删除的按钮的从零开始的索引。 返回 **TRUE** ，允许删除该按钮，或返回 **FALSE** ，阻止删除该按钮。
+   当用户正在自定义工具栏时发送，以确定是否可以从工具栏控件中删除某个按钮。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要删除的按钮的从零开始的索引。 返回 **TRUE** ，允许删除该按钮，或返回 **FALSE** ，阻止删除该按钮。
 
 - **TBN_QUERYINSERT**
 
-   在用户自定义工具栏控件以确定是否可以将按钮插入到给定按钮左侧时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要插入的按钮的从零开始的索引。 返回 **TRUE** ，允许将按钮插入到给定按钮之前，或返回 **FALSE** ，阻止插入按钮。
+   当用户正在自定义工具栏控件时发送，以确定是否可以将某个按钮插入到给定按钮的左侧。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要插入的按钮的从零开始的索引。 返回 **TRUE** ，允许将按钮插入到给定按钮之前，或返回 **FALSE** ，阻止插入按钮。
 
 - **TBN_RESET**
 
-   当用户重置"自定义工具栏"对话框的内容时发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。
+   当用户重置 "自定义工具栏" 对话框的内容时发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。
 
 - **TBN_TOOLBARCHANGE**
 
@@ -216,5 +216,5 @@ typedef struct {
 
 ## <a name="see-also"></a>另请参阅
 
-[使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[控件](../mfc/controls-mfc.md)
+[使用 CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[控件](controls-mfc.md)
