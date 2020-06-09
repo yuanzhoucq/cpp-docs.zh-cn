@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241943"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626505"
 ---
 # <a name="creating-windows"></a>创建窗口
 
-框架会自动在框架程序中创建的大多数窗口所需。 [文档/视图创建](../mfc/document-view-creation.md)演示框架如何创建与文档和视图相关联的框架窗口。 但是对于特殊用途可以创建你自己的 windows — 包括您自己的框架窗口或视图的子窗口，除了框架所提供的 windows。
+框架自动在框架程序中创建所需的大多数窗口。 [文档/视图创建](document-view-creation.md)显示框架如何创建与文档和视图关联的框架窗口。 但出于特殊目的，您可以创建自己的窗口（包括您自己的框架窗口或视图的子窗口）以及框架提供的窗口。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [注册窗口"类"](../mfc/registering-window-classes.md) (而不是C++窗口对象)
+- [注册窗口 "类"](registering-window-classes.md) （与 c + + 窗口对象相对）
 
-- [常规窗口创建序列](../mfc/general-window-creation-sequence.md)
+- [常规窗口创建顺序](general-window-creation-sequence.md)
 
-- [销毁窗口对象](../mfc/destroying-window-objects.md)
+- [销毁窗口对象](destroying-window-objects.md)
 
-- [使用窗口对象](../mfc/working-with-window-objects.md)
+- [使用窗口对象](working-with-window-objects.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[窗口对象](../mfc/window-objects.md)
+[窗口对象](window-objects.md)

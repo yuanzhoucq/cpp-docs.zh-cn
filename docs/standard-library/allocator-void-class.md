@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: af29c70dca56b1e68eef3614357269c587a77ec9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688527"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623682"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 类
 
@@ -41,12 +41,12 @@ class allocator<void> {
 
 ## <a name="remarks"></a>备注
 
-类显式专用化类型为**void**的类模板[分配](../standard-library/allocator-class.md)器。 其构造函数和赋值运算符的行为与类模板的行为相同，但它只定义以下类型：
+类显式专用化类型为**void**的类模板[分配](allocator-class.md)器。 其构造函数和赋值运算符的行为与类模板的行为相同，但它只定义以下类型：
 
-- [const_pointer](../standard-library/allocator-class.md#const_pointer)。
+- [const_pointer](allocator-class.md#const_pointer)。
 
-- [pointer](../standard-library/allocator-class.md#pointer)。
+- [指针](allocator-class.md#pointer)。
 
-- [value_type](../standard-library/allocator-class.md#value_type)。
+- [value_type](allocator-class.md#value_type)。
 
-- 重新[绑定](../standard-library/allocator-class.md#rebind)，嵌套类模板。
+- 重新[绑定](allocator-class.md#rebind)，嵌套类模板。

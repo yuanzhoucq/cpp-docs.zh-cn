@@ -9,12 +9,12 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 620a9ec58b3a5a8fcdac63626b81fbc4620de399
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87cb560a1054a912a4e8574cfe2dee74d5e61fe6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625134"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX 控件容器：将 ActiveX 控件连接到成员变量
 
@@ -25,20 +25,20 @@ ms.locfileid: "81371618"
 
 ### <a name="adding-a-member-variable-to-the-dialog-class"></a>将成员变量添加到对话框类
 
-1. 从“类视图”中，右键单击主对话框类以打开快捷菜单。 例如，`CContainerDlg` 。
+1. 从“类视图”中，右键单击主对话框类以打开快捷菜单。 例如 `CContainerDlg`。
 
-1. 在快捷菜单中，单击"**添加"，** 然后**添加变量**。
+1. 在快捷菜单中，单击 "**添加**"，然后单击 "**添加变量**"。
 
-1. 在"添加成员变量向导"中，单击 **"控制变量**"。
+1. 在添加成员变量向导中，单击 "**控制变量**"。
 
-1. 在 **"控制 ID"** 列表框中，选择嵌入式 ActiveX 控件的控制 ID。 例如，`IDC_CIRCCTRL1` 。
+1. 在 "**控件 id** " 列表框中，选择嵌入的 ActiveX 控件的控件 id。 例如 `IDC_CIRCCTRL1`。
 
-1. 在 **"变量名称"** 框中，输入名称。
+1. 在 "**变量名称**" 框中，输入名称。
 
-   例如 *，m_circctl*。
+   例如， *m_circctl*。
 
-1. 单击 **"完成"** 以接受您的选择并退出"添加成员变量向导"。
+1. 单击 "**完成**" 接受你的选择并退出 "添加成员变量向导"。
 
 ## <a name="see-also"></a>另请参阅
 
-[ActiveX 控制容器](../mfc/activex-control-containers.md)
+[ActiveX 控件容器](activex-control-containers.md)

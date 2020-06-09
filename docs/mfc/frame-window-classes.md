@@ -12,33 +12,33 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: d42fa475fca7c92e4ba46b164a9beda9869231c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffa5b966ee042120213896dc7ad9d81c048ef928
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625815"
 ---
 # <a name="frame-window-classes"></a>框架窗口类
 
-每个应用程序都有一个"主框架窗口，"桌面窗口通常具有其标题中的应用程序名称。 每个文档通常有一个"文档框架窗口。" 文档框架窗口包含至少一个视图，其中显示文档的数据。
+每个应用程序都有一个 "主框架窗口"，它是一个桌面窗口，其标题中通常具有应用程序名称。 每个文档通常具有一个 "文档框架窗口"。 文档框架窗口包含至少一个显示文档数据的视图。
 
-## <a name="frame-windows-in-sdi-and-mdi-applications"></a>SDI 和 MDI 应用程序中的帧 Windows
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>SDI 和 MDI 应用程序中的框架窗口
 
-对于 SDI 应用程序，没有一个框架窗口类派生[CFrameWnd](../mfc/reference/cframewnd-class.md)。 此窗口是主框架窗口和文档框架窗口。 对于 MDI 应用程序，在主框架窗口派生自类[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)，和文档框架窗口是 MDI 子窗口，派生自类[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)。
+对于 SDI 应用程序，有一个从类[CFrameWnd](reference/cframewnd-class.md)派生的框架窗口。 此窗口同时为主框架窗口和文档框架窗口。 对于 MDI 应用程序，主框架窗口派生自类[CMDIFrameWnd](reference/cmdiframewnd-class.md)，文档框架窗口（MDI 子窗口）派生自类[CMDIChildWnd](reference/cmdichildwnd-class.md)。
 
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>使用框架窗口类，或从其派生
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>使用框架窗口类或从其派生
 
-这些类提供大部分应用程序所需的框架窗口功能。 正常情况下，默认行为和它们提供的外观将满足您的需要。 如果需要其他功能，从这些类派生。
+这些类提供应用程序所需的大部分框架窗口功能。 正常情况下，它们提供的默认行为和外观将适合你的需求。 如果需要其他功能，请从这些类派生。
 
-### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+### <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [应用程序向导创建的框架窗口类](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+- [应用程序向导创建的框架窗口类](frame-window-classes-created-by-the-application-wizard.md)
 
-- [框架窗口样式](../mfc/frame-window-styles-cpp.md)
+- [框架窗口样式](frame-window-styles-cpp.md)
 
-- [更改 MFC 创建的窗口样式](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+- [更改 MFC 创建的窗口的样式](changing-the-styles-of-a-window-created-by-mfc.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[框架窗口](../mfc/frame-windows.md)
+[框架窗口](frame-windows.md)

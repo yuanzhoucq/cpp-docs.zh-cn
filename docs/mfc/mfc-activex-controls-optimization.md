@@ -14,57 +14,57 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4e12889ca1bb5f4bb423a1f1ede1c396f8d60b5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186887"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615405"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控件：优化
 
-本文介绍了可以用来优化更好的性能将 ActiveX 控件的方法。
+本文介绍可用于优化 ActiveX 控件以提高性能的方法。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一种不能用于新开发的旧技术。 有关取代 ActiveX 的新式技术的详细信息，请参阅[Activex 控件](activex-controls.md)。
 
-主题[启用关闭激活可见时选项](../mfc/turning-off-the-activate-when-visible-option.md)并[提供鼠标交互而处于非活动状态](../mfc/providing-mouse-interaction-while-inactive.md)讨论不创建窗口之前激活的控件。 本主题[提供无窗口激活](../mfc/providing-windowless-activation.md)讨论永远不会创建一个窗口，即使它们被激活的控件。
+主题[关闭 "在可见时激活" 选项](turning-off-the-activate-when-visible-option.md)并[提供鼠标交互，而非活动讨论在](providing-mouse-interaction-while-inactive.md)激活之前不创建窗口的控件。 [提供无窗口激活](providing-windowless-activation.md)的主题讨论从不创建窗口的控件（即使它们已激活）。
 
-Windows 具有 OLE 对象的两个主要缺点： 它们导致对象不透明的或非矩形时处于活动状态，并且也将大量的系统开销添加到实例化和控件的显示。 通常情况下，创建一个窗口需要控件的创建时间的 60%。 使用单个共享的窗口 （通常是容器的） 和一些调度代码，一个控件接收相同的窗口服务，一般不会降低性能。 具有一个窗口是主要对象的不必要的开销。
+Windows 对 OLE 对象有两个主要缺点：它们在活动时阻止对象处于透明或非矩形状态，并且它们会将大开销添加到控件的实例化和显示。 通常，创建窗口时，会占用60% 的控件创建时间。 使用单个共享窗口（通常是容器的）和某些调度代码，控件接收相同的窗口服务，通常不会损失性能。 具有窗口的主要是对象的不必要开销。
 
-某些优化不一定是提高性能时特定容器中使用您的控件。 例如，1996 年之前发布的容器不支持无窗口激活，因此实现此功能将不会提供较旧的容器中的权益。 但是，几乎每个容器支持暂留，因此优化您的控件的持久性代码很可能会提高其性能任何容器中。 如果您的控件专门用于一种特定类型的容器，可能想要研究这些优化这一项受该容器。 一般情况下，但是，您应尝试实现的许多技术中适用于您的特定控件以确保您的控件以及它可能是执行那样广泛的容器中。
+在某些容器中使用控件时，某些优化并不一定会提高性能。 例如，在1996之前发布的容器不支持无窗口激活，因此实现此功能将不会在较旧的容器中提供权益。 不过，几乎每个容器都支持持久性，因此优化控件的持久性代码可能会提高其在任何容器中的性能。 如果你的控件专门用于一种特定类型的容器，你可能想要研究该容器支持哪些优化。 但一般情况下，您应该尝试实现与特定控件适用的这些方法，以确保控件执行和可能在各种容器中运行。
 
-您可以实现许多通过这些优化[MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)，然后在[控制设置](../mfc/reference/control-settings-mfc-activex-control-wizard.md)页。
+您可以在 "[控件设置](reference/control-settings-mfc-activex-control-wizard.md)" 页上通过[MFC ActiveX 控件向导](reference/mfc-activex-control-wizard.md)实现其中许多优化。
 
 ### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>MFC ActiveX 控件向导 OLE 优化选项
 
-|在 MFC ActiveX 控件向导控件设置|操作|详细信息|
+|MFC ActiveX 控件向导中的控件设置|操作|更多信息|
 |-------------------------------------------------------|------------|----------------------|
-|**在可见时激活**复选框|清除|[关闭激活时可见的选项](../mfc/turning-off-the-activate-when-visible-option.md)|
-|**无窗口激活**复选框|选择|[提供无窗口激活](../mfc/providing-windowless-activation.md)|
-|**剪辑的设备上下文**复选框|选择|[使用未剪辑的设备上下文](../mfc/using-an-unclipped-device-context.md)|
-|**无闪烁激活**复选框|选择|[提供无闪烁激活](../mfc/providing-flicker-free-activation.md)|
-|**将鼠标指针通知不活动时**复选框|选择|[不活动时提供鼠标交互](../mfc/providing-mouse-interaction-while-inactive.md)|
-|**优化绘制代码**复选框|选择|[优化控件绘制](../mfc/optimizing-control-drawing.md)|
+|**可见时激活**"复选框|Clear|[关闭 "在可见时激活" 选项](turning-off-the-activate-when-visible-option.md)|
+|"**无窗口激活**" 复选框|Select|[提供无窗口激活](providing-windowless-activation.md)|
+|"**未剪辑设备上下文**" 复选框|Select|[使用未剪辑设备上下文](using-an-unclipped-device-context.md)|
+|"**无闪烁激活**" 复选框|Select|[提供无闪烁激活](providing-flicker-free-activation.md)|
+|"不**活动时，鼠标指针通知**" 复选框|Select|[在非活动时提供鼠标交互](providing-mouse-interaction-while-inactive.md)|
+|**优化的绘图代码**复选框|Select|[优化控件绘制](optimizing-control-drawing.md)|
 
-有关实现这些优化的成员函数的详细信息，请参阅[COleControl](../mfc/reference/colecontrol-class.md)。
+有关实现这些优化的成员函数的详细信息，请参阅[COleControl](reference/colecontrol-class.md)。
 
 有关详细信息，请参见:
 
-- [优化持久性和初始化](../mfc/optimizing-persistence-and-initialization.md)
+- [优化持久性和初始化](optimizing-persistence-and-initialization.md)
 
-- [提供无窗口激活](../mfc/providing-windowless-activation.md)
+- [提供无窗口激活](providing-windowless-activation.md)
 
-- [关闭激活时可见的选项](../mfc/turning-off-the-activate-when-visible-option.md)
+- [关闭 "在可见时激活" 选项](turning-off-the-activate-when-visible-option.md)
 
-- [不活动时提供鼠标交互](../mfc/providing-mouse-interaction-while-inactive.md)
+- [在非活动时提供鼠标交互](providing-mouse-interaction-while-inactive.md)
 
-- [提供无闪烁激活](../mfc/providing-flicker-free-activation.md)
+- [提供无闪烁激活](providing-flicker-free-activation.md)
 
-- [使用未剪辑的设备上下文](../mfc/using-an-unclipped-device-context.md)
+- [使用未剪辑设备上下文](using-an-unclipped-device-context.md)
 
-- [优化控件绘制](../mfc/optimizing-control-drawing.md)
+- [优化控件绘制](optimizing-control-drawing.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+[MFC ActiveX 控件](mfc-activex-controls.md)

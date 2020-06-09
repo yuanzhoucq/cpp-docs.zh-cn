@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 0f2c10f4a88b723d1ab9f4bb0ca903987359c9fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: da0b99e6c9c803f3c3a4c09d67853649a4bac314
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508904"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626048"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>剪贴板：使用 OLE 剪贴板机制
 
 OLE 使用标准格式和一些 OLE 特定格式通过剪贴板传输数据。
 
-当您在应用程序中剪切或复制数据时，数据将存储在之后将在复制操作中用到的剪贴板上。 此数据有多种格式。 当用户选择粘贴剪贴板中的数据时，应用程序可选择要使用哪种格式。 应用程序应写入才能选择提供最多信息的格式，除非用户使用“选择性粘贴”特地要求特定格式。 在继续之前, 您可能需要阅读[数据对象和数据源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)主题。 这些主题介绍了数据传输原理以及如何在应用程序中实现数据传输的基础知识。
+当您在应用程序中剪切或复制数据时，数据将存储在之后将在复制操作中用到的剪贴板上。 此数据有多种格式。 当用户选择粘贴剪贴板中的数据时，应用程序可选择要使用哪种格式。 应用程序应写入才能选择提供最多信息的格式，除非用户使用“选择性粘贴”特地要求特定格式。 在继续之前，您可能需要阅读[数据对象和数据源（OLE）](data-objects-and-data-sources-ole.md)主题。 这些主题介绍了数据传输原理以及如何在应用程序中实现数据传输的基础知识。
 
 Windows 定义了一些可用于通过剪贴板传输数据的标准格式。 这些格式包含元文件、文本、位图和其他。 OLE 也定义了一些 OLE 特定格式。 对于这些标准格式所提供的详细信息不能满足其需求的应用程序，最好注册其自己的自定义剪贴板格式。 使用 Win32 API 函数[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)执行此操作。
 
@@ -33,16 +33,16 @@ Windows 定义了一些可用于通过剪贴板传输数据的标准格式。 �
 
 ## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)
+- [复制和粘贴数据](clipboard-copying-and-pasting-data.md)
 
-- [添加其他格式](../mfc/clipboard-adding-other-formats.md)
+- [添加其他格式](clipboard-adding-other-formats.md)
 
-- [使用 Windows 剪贴板](../mfc/clipboard-using-the-windows-clipboard.md)
+- [使用 Windows 剪贴板](clipboard-using-the-windows-clipboard.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OLE](ole-background.md)
 
-- [OLE 数据对象和数据源和统一数据传输](../mfc/data-objects-and-data-sources-ole.md)
+- [OLE 数据对象和数据源以及统一数据传输](data-objects-and-data-sources-ole.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[剪贴板](../mfc/clipboard.md)
+[剪贴板](clipboard.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 649d64f8e8b894027b9d6850b62d357d79c1dafa
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616276"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>创建并显示对话框
 
@@ -21,13 +21,13 @@ ms.locfileid: "71685736"
 
 ### <a name="dialog-creation"></a>对话框创建
 
-|对话框类型|如何创建|
+|对话类型|如何创建|
 |-----------------|----------------------|
-|[模态](../mfc/creating-modeless-dialog-boxes.md)|构造 `CDialog`，然后调用 `Create` 成员函数。|
-|[模型](../mfc/creating-modal-dialog-boxes.md)|构造 `CDialog`，然后调用 `DoModal` 成员函数。|
+|[模态](creating-modeless-dialog-boxes.md)|构造 `CDialog`，然后调用 `Create` 成员函数。|
+|[模型](creating-modal-dialog-boxes.md)|构造 `CDialog`，然后调用 `DoModal` 成员函数。|
 
-如果需要，可以从已构造的[内存中对话框模板](../mfc/using-a-dialog-template-in-memory.md)而不是从对话框模板资源创建对话框。 但这是一个高级主题。
+如果需要，可以从已构造的[内存中对话框模板](using-a-dialog-template-in-memory.md)而不是从对话框模板资源创建对话框。 但这是一个高级主题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)
+[在 MFC 中使用对话框](life-cycle-of-a-dialog-box.md)

@@ -6,30 +6,30 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 703008b78994a9400bd5dfa1dfa64072fea949bd
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f49580610b247605f1c3ca030c0927acab29db89
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618728"
 ---
 # <a name="hierarchy-chart"></a>层次结构图
 
-下图表示派生自 MFC 类`CObject`:
+下图表示从派生的 MFC 类 `CObject` ：
 
-![从 CObject 派生的类](../mfc/media/mfc_hierarchy_chart1of3.png  "从 CObject 派生的类")
+![派生自 CObject 的类](../mfc/media/mfc_hierarchy_chart1of3.png  "派生自 CObject 的类")
 
-下图表示派生自 MFC 类`CWnd`和`CCmdTarget`:
+下图表示从和派生的 MFC 类 `CWnd` `CCmdTarget` ：
 
-![类派生自 CCmdTarget 或 CWnd](../mfc/media/mfc_hierarchy_chart2of3.png "自 CCmdTarget 或 CWnd 派生的类")
+![派生自 CCmdTarget 或 CWnd 的类](../mfc/media/mfc_hierarchy_chart2of3.png "派生自 CCmdTarget 或 CWnd 的类")
 
-下图表示不是派生自 MFC 类`CObject`:
+下图表示了不是从派生的 MFC 类 `CObject` ：
 
-![类不派生自 CObject](../mfc/media/mfc_hierarchy_chart3of3.png "不派生自 CObject 的类")
+![不是派生自 CObject 的类](../mfc/media/mfc_hierarchy_chart3of3.png "不是派生自 CObject 的类")
 
-可以从以下位置下载完整图表：[MFC 层次结构图表中显示下载](https://aka.ms/hxgg8e)。
+您可以从以下位置下载完整的图表： [MFC 层次结构图下载](https://aka.ms/hxgg8e)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图类别](../mfc/hierarchy-chart-categories.md)<br/>
-[类概述](../mfc/class-library-overview.md)
+[层次结构图类别](hierarchy-chart-categories.md)<br/>
+[类概述](class-library-overview.md)
