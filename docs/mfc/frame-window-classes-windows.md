@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-ms.openlocfilehash: 3e56bd0f449992118db75a44c39b6e0e15cb0d86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c0a1e1e93433e0fbe07c11eb350216173e74d84
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392788"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625842"
 ---
 # <a name="frame-window-classes-windows"></a>框架窗口类 (Windows)
 
-框架窗口是窗口框架应用程序或应用程序的一部分。 框架窗口通常包含其他窗口，如视图、 工具栏和状态栏。 情况下`CMDIFrameWnd`，它们可能包含`CMDIChildWnd`间接对象。
+框架窗口是应用程序或应用程序的一部分的窗口。 框架窗口通常包含其他窗口，如视图、工具栏和状态栏。 对于 `CMDIFrameWnd` ，它们可能会 `CMDIChildWnd` 间接包含对象。
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-SDI 应用程序的主框架窗口的基类。 此外用于其他框架窗口类基本的类。
+[CFrameWnd](reference/cframewnd-class.md)<br/>
+SDI 应用程序的主框架窗口的基类。 也是其他所有框架窗口类的基类。
 
-[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
+[CMDIFrameWnd](reference/cmdiframewnd-class.md)<br/>
 MDI 应用程序的主框架窗口的基类。
 
-[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
+[CMDIChildWnd](reference/cmdichildwnd-class.md)<br/>
 MDI 应用程序的文档框架窗口的基类。
 
-[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)<br/>
-通常在浮动工具条周围出现一个半高框架窗口。
+[CMiniFrameWnd](reference/cminiframewnd-class.md)<br/>
+通常在浮动工具栏周围出现的半高框架窗口。
 
-[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
-正在就地编辑服务器文档时，应提供视图框架窗口。
+[COleIPFrameWnd](reference/coleipframewnd-class.md)<br/>
+当正在就地编辑服务器文档时，提供视图的框架窗口。
 
-## <a name="related-class"></a>相关的类
+## <a name="related-class"></a>相关类
 
-类`CMenu`提供了一个用来访问应用程序的菜单接口。 它可用于在运行时; 动态操作菜单例如，添加或删除菜单项时根据上下文。 尽管菜单最常与框架窗口，但它们还可使用对话框和其他非子窗口。
+类 `CMenu` 提供用于访问应用程序菜单的接口。 它适用于在运行时动态操作菜单;例如，根据上下文添加或删除菜单项时。 尽管菜单最常用于框架窗口，但也可用于对话框和其他 nonchild 窗口。
 
-[CMenu](../mfc/reference/cmenu-class.md)<br/>
-封装`HMENU`到应用程序的菜单栏和弹出菜单的句柄。
+[CMenu](reference/cmenu-class.md)<br/>
+封装 `HMENU` 应用程序的菜单栏和弹出菜单的句柄。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[类概述](../mfc/class-library-overview.md)
+[类概述](class-library-overview.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 98166a355fd267ecbec0a7f0cc1d18fd0b2e7cd0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 344c444602555e2b5c145e58d237586199b9e1ed
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353591"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624816"
 ---
 # <a name="containers-compound-files"></a>容器：复合文件
 
@@ -38,11 +38,11 @@ ms.locfileid: "81353591"
 
 - 存储对象（如目录）可以包含其他存储和流对象。
 
-- `LockBytes`对象表示存储对象和物理硬件之间的接口。 它们确定如何将实际字节写入`LockBytes`对象正在访问的任何存储设备，如硬盘驱动器或全局内存区域。 有关`LockBytes`对象和接口的详细信息，`ILockBytes`请参阅 OLE*程序员的参考*。
+- `LockBytes`对象表示存储对象与物理硬件之间的接口。 它们确定如何将实际的字节写入到该对象访问的任何存储设备 `LockBytes` ，例如硬盘或全局内存区域。 有关 `LockBytes` 对象和接口的详细信息 `ILockBytes` ，请参阅*OLE 程序员参考*。
 
-## <a name="advantages-and-disadvantages-of-compound-files"></a><a name="_core_advantages_and_disadvantages_of_compound_files"></a>复合文件的优缺点
+## <a name="advantages-and-disadvantages-of-compound-files"></a><a name="_core_advantages_and_disadvantages_of_compound_files"></a>复合文件的优点和缺点
 
-复合文件提供了之前的文件存储方式不具备的好处。 其中包括：
+复合文件提供了之前的文件存储方式不具备的好处。 它们包括：
 
 - 增量文件访问。
 
@@ -52,7 +52,7 @@ ms.locfileid: "81353591"
 
 确定是否在应用程序中使用复合文件时，应考虑复合文件的潜在劣势 - 规模大以及与软光盘存储有关的性能问题。
 
-### <a name="incremental-access-to-files"></a><a name="_core_incremental_access_to_files"></a>对文件的增量访问
+### <a name="incremental-access-to-files"></a><a name="_core_incremental_access_to_files"></a>增量访问文件
 
 对文件的增量访问是使用复合文件必然的好处。 由于复合文件可作为“文件中的文件系统”、独立对象类型（如流或存储）查看，因此访问时无需加载整个文件。 这可以显著减少应用程序访问用户要编辑的新对象所需的时间。 根据同一概念，增量更新将提供类似的好处。 OLE 将仅保存用户编辑的流或存储对象，而不是保存整个文件只为了保存对一个对象所做的更改。
 
@@ -64,9 +64,9 @@ ms.locfileid: "81353591"
 
 - 直接模式在更改文档时合并所做更改，这些更改之后无法撤销。
 
-有关访问模式的详细信息，请参阅 OLE*程序员的参考*。
+有关访问模式的详细信息，请参阅*OLE 程序员参考*。
 
-### <a name="standardization"></a><a name="_core_standardization"></a>标准化
+### <a name="standardization"></a><a name="_core_standardization"></a>实现
 
 复合文件的标准结构使不同的 OLE 应用程序可浏览 OLE 应用程序创建的复合文件，而不必了解实际创建文件的应用程序。
 
@@ -80,11 +80,11 @@ ms.locfileid: "81353591"
 
 在成功创建文档类派生自 `COleDocument` 的应用程序之后，确保您的主文档构造函数调用 `EnableCompoundFile`。 应用程序向导创建 OLE 容器应用程序之后，将为您插入此调用。
 
-在*OLE 程序员的参考中*，请参阅[IStream、IStorage](/windows/win32/api/objidl/nn-objidl-istream)和[ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes)。 [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)
+在*OLE 程序员参考*中，请参阅[IStream](/windows/win32/api/objidl/nn-objidl-istream)， [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)，and [ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes)。
 
 ## <a name="see-also"></a>另请参阅
 
-[容器](../mfc/containers.md)<br/>
-[容器：用户界面问题](../mfc/containers-user-interface-issues.md)<br/>
-[COleStreamFile 类](../mfc/reference/colestreamfile-class.md)<br/>
-[COleDocument 类](../mfc/reference/coledocument-class.md)
+[容器](containers.md)<br/>
+[容器：用户界面问题](containers-user-interface-issues.md)<br/>
+[COleStreamFile 类](reference/colestreamfile-class.md)<br/>
+[COleDocument 类](reference/coledocument-class.md)

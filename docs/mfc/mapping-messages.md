@@ -11,19 +11,19 @@ helpviewer_keywords:
 - mappings [MFC], messages
 - messages [MFC], mapping
 ms.assetid: 996f0652-0698-4b8c-b893-cdaa836d9d0f
-ms.openlocfilehash: 82c55c82d6b7a3faa65906345137885555a57d08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d6d7725d82bed6c9bfc02e408b68dcf7ffe5e4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625489"
 ---
 # <a name="mapping-messages"></a>映射消息
 
 每个可以接收消息或命令的框架类都有自己的“消息映射”。 框架使用消息映射来将消息和命令连接到其处理程序函数。 派生自类 `CCmdTarget` 的所有类都可拥有消息映射。 其他文章详细解释了消息映射并说明了其使用方式。
 
-尽管名称为"消息映射"映射可以同时处理的消息的消息和命令，所有三个类别的消息中列出[消息类别](../mfc/message-categories.md)。
+尽管名称为 "消息映射"，但消息映射会同时处理消息和命令（[消息类别](message-categories.md)中列出的所有三类消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[框架中的消息和命令](../mfc/messages-and-commands-in-the-framework.md)
+[框架中的消息和命令](messages-and-commands-in-the-framework.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocator_variable_size
 - stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
-ms.openlocfilehash: bf243089ee8f4e26930e183b007a108e38f444e3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4e4c5ab0167d49c9ee892f39f18892edd004c3f6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458158"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623708"
 ---
-# <a name="allocatorvariablesize-class"></a>allocator_variable_size 类
+# <a name="allocator_variable_size-class"></a>allocator_variable_size 类
 
-描述一个对象, 该*对象使用类型*为[cache_freelist](../standard-library/cache-freelist-class.md)的缓存 (其长度由[max_variable_size](../standard-library/max-variable-size-class.md)管理) 来管理类型为 type 的对象的存储分配和释放。
+描述一个对象，该对象使用[cache_freelist](cache-freelist-class.md)类型的缓存来管理类型*为 type 的*对象的存储分配和释放，其长度由[max_variable_size](max-variable-size-class.md)管理。
 
 ## <a name="syntax"></a>语法
 
@@ -35,14 +35,14 @@ class allocator_variable_size;
 
 ## <a name="remarks"></a>备注
 
-在以下语句中, [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)宏将此类作为*name*参数传递:`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏将此类作为以下语句中的*name*参数传递：`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<allocators>
+**标头：**\<allocators>
 
 **命名空间：** stdext
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)
