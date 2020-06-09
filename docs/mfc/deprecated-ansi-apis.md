@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbcae085b76e2dbce79265c0695c2b4e933553e2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153549"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616998"
 ---
 # <a name="deprecated-ansi-apis"></a>弃用的 ANSI API
 
-Microsoft 基础类 (MFC) 库迁移到类和方法，基于 Unicode 字符集中。 因此，已弃用某些 MFC 方法的 ANSI 版本。 在以后的应用程序中使用这些方法的 Unicode 版本。
+Microsoft 基础类（MFC）库正在向基于 Unicode 字符集的类和方法迁移。 因此，不推荐使用几个 MFC 方法的 ANSI 版本。 在未来的应用程序中使用这些方法的 Unicode 版本。
 
-Windows 公共控件版本 6.1、 预装 Windows Vista 中，从开始不推荐使用以下 ANSI 方法。
+从 windows Vista 中随附的 Windows 公共控件6.1 版开始，将弃用以下 ANSI 方法。
 
 ## <a name="cbutton-class"></a>CButton 类
 
@@ -150,6 +150,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Windows Vista 公用控件的生成要求](../mfc/build-requirements-for-windows-vista-common-controls.md)
+[Windows Vista 公共控件的生成要求](build-requirements-for-windows-vista-common-controls.md)
