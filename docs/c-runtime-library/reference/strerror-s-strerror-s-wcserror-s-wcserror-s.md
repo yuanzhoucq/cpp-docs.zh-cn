@@ -1,6 +1,6 @@
 ---
 title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918399"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664321"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -62,22 +62,22 @@ ms.locfileid: "82918399"
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *宽限*<br/>
 要保存错误字符串的缓冲区。
 
-*numberOfElements*<br/>
-缓冲区的大小。
+*sizeInBytes*<br/>
+缓冲区中的字节数。
+
+*sizeInWords*<br/>
+缓冲区中的字数。
 
 *errnum*<br/>
 错误号。
@@ -122,12 +125,12 @@ errno_t __wcserror_s(
 
 ### <a name="error-condtions"></a>错误条件
 
-|*宽限*|*numberOfElements*|*strErrMsg*|*缓冲区*内容|
+|*宽限*|*sizeInBytes/sizeInWords*|*strErrMsg*|*缓冲区*内容|
 |--------------|------------------------|-----------------|--------------------------|
-|**Null**|any|any|不适用|
+|**NULL**|any|any|不适用|
 |any|0|any|未修改|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Strerror_s**函数将*errnum*映射到错误消息字符串，并返回*缓冲区*中的字符串。 **_strerror_s**不采用错误号;它使用**errno**的当前值来确定相应的消息。 **Strerror_s**和 **_strerror_s**实际上都不会打印消息：为此，你需要调用输出函数，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
 
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 如果*strErrMsg*为**NULL**， **_strerror_s**将在*缓冲区*中返回一个字符串，该字符串包含产生错误的最后一个库调用的系统错误消息。 错误消息字符串以换行符 ('\n') 结尾。 如果*strErrMsg*不等于**NULL**，则 **_strerror_s**返回*缓冲区*中的字符串，该字符串包含（按顺序）你的字符串消息、冒号、空格、生成错误的最后一个库调用的系统错误消息，以及一个换行符。 你的字符串消息长度最多可达 94 个字符。
 
-如果错误消息的长度超过*numberOfElements* -1，则这些函数将截断错误消息。 *缓冲区*中生成的字符串始终以 null 结尾。
+如果错误消息的长度超过缓冲区的大小，则这些函数将截断错误消息。 *缓冲区*中生成的字符串将始终以 null 结尾。
 
 **_Strerror_s**的实际错误号存储在变量[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中。 通过变量 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 访问系统错误消息，该变量是按错误编号排序的消息数组。 **_strerror_s**通过使用**errno**值作为变量 **_sys_errlist**的索引来访问相应的错误消息。 变量[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定义为 **_sys_errlist**数组中的最大元素数。 若要生成准确的结果，请在库例程返回错误后立即调用 **_strerror_s** 。 否则，对**strerror_s**或 **_strerror_s**的后续调用可能会覆盖**errno**值。
 
@@ -165,7 +168,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strerror_s**， **_strerror_s**|\<string.h>|
 |**_wcserror_s**， **__wcserror_s**|\<string.h> 或 \<wchar.h>|
