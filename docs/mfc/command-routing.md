@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620696"
 ---
 # <a name="command-routing"></a>命令传送
 
@@ -31,18 +31,18 @@ Windows 消息通常发送到主框架窗口中，但命令消息则传送到其
 
 此路由机制与处理程序响应命令所执行的操作相比，此路由机制的代价是很低。 请记住，仅当用户与用户界面对象交互时，框架才生成命令。
 
-### <a name="_core_standard_command_route"></a> 标准命令传送
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a>标准命令路由
 
 |当此类型的对象收到命令时。 . .|它给自身和其他命令目标对象一个机会以此顺序处理命令：|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI 框架窗口 (`CMDIFrameWnd`)|1.活动 `CMDIChildWnd`<br />2.此框架窗口<br />3.应用程序（`CWinApp` 对象）|
-|文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1.活动视图<br />2.此框架窗口<br />3.应用程序（`CWinApp` 对象）|
-|视图|1.此视图<br />2.附加到视图的文档|
-|Document|1.此文档<br />2.附加到文档的文档模板|
-|对话框|1.此对话框<br />2.拥有对话框的窗口<br />3.应用程序（`CWinApp` 对象）|
+|MDI 框架窗口 (`CMDIFrameWnd`)|1. 活动`CMDIChildWnd`<br />2. 此框架窗口<br />3. 应用程序（ `CWinApp` 对象）|
+|文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1. 活动视图<br />2. 此框架窗口<br />3. 应用程序（ `CWinApp` 对象）|
+|视图|1. 此视图<br />2. 附加到视图的文档|
+|文档|1. 此文档<br />2. 附加到文档的文档模板|
+|对话框|1. 此对话框<br />2. 拥有对话框的窗口<br />3. 应用程序（ `CWinApp` 对象）|
 
 如果前述表第二列中带编号的项提到其他对象（例如文档），请参见第一列中相应的项。 例如，当你在第二列中看到视图将命令转发到其文档，则参阅第一列中的“文档”项了解进一步的传送。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[框架如何调用处理程序](../mfc/how-the-framework-calls-a-handler.md)
+[框架如何调用处理程序](how-the-framework-calls-a-handler.md)

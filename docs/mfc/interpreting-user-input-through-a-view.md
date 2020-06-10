@@ -8,37 +8,37 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: 3ef23ad74e1ff53d947453faa5682c5ecc1f4e43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fb903fa169233ce532e41ecdf02c23ab6037c8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621451"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>通过视图解释用户输入
 
-视图的其他成员函数处理和解释所有用户输入。 通常将处理在视图类中定义消息处理程序成员函数：
+视图的其他成员函数会处理并解释所有用户输入。 通常会在视图类中定义消息处理程序成员函数来处理：
 
-- Windows[消息](../mfc/messages.md)生成的鼠标和键盘操作。
+- 鼠标和键盘操作生成的 Windows[消息](messages.md)。
 
-- [命令](../mfc/user-interface-objects-and-command-ids.md)从菜单、 工具栏按钮和快捷键。
+- 来自菜单、工具栏按钮和快捷键的[命令](user-interface-objects-and-command-ids.md)。
 
-这些消息处理程序成员函数解释为数据输入、 所选内容，或编辑，其中包括将数据移到和从剪贴板的以下操作：
+这些消息处理程序成员函数将以下操作解释为数据输入、选择或编辑，包括将数据移到剪贴板以及从剪贴板移出数据：
 
-- 鼠标移动和单击、 拖动和双击
+- 鼠标移动和单击、拖动和双击
 
-- 击键
+- 敲击
 
 - 菜单命令
 
-哪些 Windows 消息视图句柄取决于应用程序的需求。
+视图处理哪些 Windows 消息取决于应用程序的需求。
 
-[消息处理和映射主题](../mfc/message-handling-and-mapping.md)介绍如何将菜单项和其他用户界面对象分配给命令以及如何将命令绑定到处理程序函数。 [消息处理和映射主题](../mfc/message-handling-and-mapping.md)还介绍了 MFC 如何路由命令并将标准 Windows 消息发送到为它们包含处理程序的对象。
+[消息处理和映射主题](message-handling-and-mapping.md)说明了如何将菜单项和其他用户界面对象分配到命令，以及如何将命令绑定到处理程序函数。 [消息处理和映射主题](message-handling-and-mapping.md)还介绍了 MFC 如何路由命令并将标准 Windows 消息发送到包含它们的处理程序的对象。
 
-例如，你的应用程序可能需要实现直接绘制在视图中的鼠标。 Scribble 示例演示如何处理 WM_LBUTTONDOWN、 WM_MOUSEMOVE 和 WM_LBUTTONUP 消息，分别用于开始，继续，并结束绘制一条线段。 但是，你有时可能需要将与所选内容在视图中的鼠标单击解释。 视图的`OnLButtonDown`处理程序函数将确定用户是否已绘制或选择。 如果选择，该处理程序将会判断是否单击了该视图中的某个对象的边界内，如果是，更改显示器以显示为选中状态的对象。
+例如，你的应用程序可能需要在视图中实现直接的鼠标绘图。 自由绘制示例显示了如何分别处理 WM_LBUTTONDOWN、WM_MOUSEMOVE 和 WM_LBUTTONUP 消息，以便开始、继续和结束绘制直线段。 另一方面，有时可能需要将视图中的鼠标单击解释为选择。 视图的 `OnLButtonDown` 处理程序函数将确定用户是否在绘制或选择。 如果选择，处理程序将确定单击是否在视图中某个对象的边界内，如果是，则更改显示以显示选定的对象。
 
-您的视图也可能会处理某些菜单命令，如从编辑菜单来剪切、 复制、 粘贴或删除所选的数据使用剪贴板。 此类处理程序将调用剪贴板相关成员的一些类的函数`CWnd`要传输到或从剪贴板所选的数据项。
+视图还可以处理某些菜单命令，例如 "编辑" 菜单中的某些菜单命令，用剪贴板剪切、复制、粘贴或删除所选数据。 此类处理程序将调用类的某些与剪贴板相关的成员函数，以将选定的数据项 `CWnd` 传输到剪贴板或从剪贴板传输选定的数据项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用视图](../mfc/using-views.md)
+[使用视图](using-views.md)

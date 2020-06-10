@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03edba0a4336fdc147ef6dd10c7a8154aca19d3a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616635"
 ---
 # <a name="activation-verbs"></a>激活：谓词
 
-此文章介绍了 OLE 中的角色主要和次要谓词 play[激活](../mfc/activation-cpp.md)。
+本文介绍 OLE[激活](activation-cpp.md)中的主要角色和辅助谓词扮演的角色。
 
-通常情况下，双击嵌入的项允许用户对其进行编辑。 但是，某些项目不支持这种方式。 例如，双击使用录音机应用程序创建的项不会打开服务器在单独的窗口;相反，它会播放声音。
+通常，通过双击嵌入项，用户可以对其进行编辑。 但是，某些项的行为并不相同。 例如，双击用录音机应用程序创建的项不会在单独的窗口中打开服务器;相反，它会播放声音。
 
-此行为差异的原因是录音机项具有不同"主谓词。" 主谓词是当用户双击 OLE 项时执行的操作。 对于大多数类型的 OLE 项中，主谓词是编辑，将启动创建项的服务器。 对于某些类型的项，如录音机项主谓词是 Play。
+此行为差异的原因是录音机项具有不同的 "主谓词"。 主谓词是用户双击 OLE 项时执行的操作。 对于大多数类型的 OLE 项，主要谓词是 "编辑"，用于启动创建该项的服务器。 对于某些类型的项，例如录音机项，主谓词将播放。
 
-许多类型的 OLE 项支持只有一个谓词，并编辑是最常见的一个。 但是，某些类型的项支持多个谓词。 例如，录音机会项支持编辑作为辅助谓词。
+许多类型的 OLE 项仅支持一个谓词，编辑是最常见的一项。 但是，某些类型的项支持多个谓词。 例如，录音机项支持编辑为辅助谓词。
 
-另一个常用的谓词为 Open。 动词 Open 等同于编辑，但在一个单独的窗口中启动服务器应用程序。 容器应用程序或服务器应用程序不支持就地激活时，应使用此谓词。
+通常会打开另一个使用的谓词。 除了服务器应用程序在单独的窗口中启动之外，Open 谓词与 Edit 完全相同。 当容器应用程序或服务器应用程序不支持就地激活时，应使用此谓词。
 
-选择项时，主谓词以外的任何谓词必须调用通过子菜单命令。 此子菜单包含所有支持的项的谓词，并通常通过访问*typename* **对象**命令**编辑**菜单。 有关的信息*typename* **对象**命令，请参阅文章[菜单和资源：添加容器](../mfc/menus-and-resources-container-additions.md)。
+选择项时，必须通过子菜单命令调用除主谓词以外的任何谓词。 此子菜单包含该项支持的所有谓词，并且通常通过 "**编辑**" 菜单上的 " *typename* **对象**" 命令访问。 有关*typename* **Object**命令的信息，请参阅文章[菜单和资源：容器添加](menus-and-resources-container-additions.md)。
 
-Windows 注册数据库中列出的服务器应用程序支持的谓词。 如果服务器应用程序使用 Microsoft 基础类库编写的它将在服务器启动时自动注册所有谓词。 否则，应在服务器应用程序的初始化阶段进行注册。 有关详细信息，请参阅文章[注册](../mfc/registration.md)。
+Windows 注册数据库中列出了服务器应用程序支持的谓词。 如果用 Microsoft 基础类库编写服务器应用程序，则在启动服务器时，它将自动注册所有谓词。 否则，应在服务器应用程序的初始化阶段注册它们。 有关详细信息，请参阅[注册](registration.md)文章。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[激活](../mfc/activation-cpp.md)<br/>
-[容器](../mfc/containers.md)<br/>
-[服务器](../mfc/servers.md)
+[激活](activation-cpp.md)<br/>
+[容器](containers.md)<br/>
+[服务器](servers.md)

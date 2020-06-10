@@ -15,55 +15,55 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620727"
 ---
 # <a name="connection-points"></a>连接点
 
-此文章介绍了如何实现连接点 （以前称为 OLE 连接点） 使用 MFC 类`CCmdTarget`和`CConnectionPoint`。
+本文说明如何使用 MFC 类和实现连接点（以前称为 OLE 连接点） `CCmdTarget` `CConnectionPoint` 。
 
-在过去，组件对象模型 (COM) 定义的通用机制 (`IUnknown::QueryInterface`*) 允许对象实现和公开接口中的功能。 但是，未定义相应的机制，允许对象来公开其功能来调用特定的接口。 它是 COM 对象定义如何传入指针 （指向该对象的接口的指针） 进行处理，但它不具有输出接口 （该对象保存到其他对象的接口的指针） 的显式模型。 COM 现在具有一个模型，称为连接点支持此功能。
+过去，组件对象模型（COM）定义了一个 `IUnknown::QueryInterface` 允许对象实现并公开接口中的功能的常规机制（*）。 但是，如果未定义允许对象公开其调用特定接口功能的相应机制，则为。 也就是说，COM 定义了如何处理指向对象的传入指针（指向该对象的接口的指针），但它没有用于传出接口的显式模型（对象保存到其他对象接口的指针）。 COM 现在具有一个名为 "连接点" 的模型，该模型支持此功能。
 
-一个连接的两个部分： 调用调用源，并实现接口，该对象的接口的对象调用了接收器。 连接点是由源公开的接口。 通过公开连接点，源允许接收器来建立连接到其自身 （源）。 通过连接点机制 (`IConnectionPoint`接口)，到接收器接口的指针传递到源对象。 此指针提供有权访问接收器的实现的一组的成员函数的源。 例如，若要激发事件接收器实现的源可以调用的接收器的实现适当的方法。 下图演示了连接刚刚介绍的点。
+连接具有两部分：调用接口的对象（称为 "源"）和一个实现接口的对象（称为接收器）。 连接点是由源公开的接口。 通过公开连接点，源允许接收器建立与自身（源）的连接。 通过连接点机制（ `IConnectionPoint` 接口），指向接收器接口的指针传递到源对象。 此指针提供源，可以访问接收器对一组成员函数的实现。 例如，若要激发由接收器实现的事件，源可以调用接收器实现的适当方法。 下图显示了刚刚介绍的连接点。
 
-![实现连接点](../mfc/media/vc37lh1.gif "实现连接点") <br/>
+![已实现的连接点](../mfc/media/vc37lh1.gif "已实现的连接点") <br/>
 已实现的连接点
 
-MFC 实现在此模型[CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)并[CCmdTarget](../mfc/reference/ccmdtarget-class.md)类。 类派生自`CConnectionPoint`实现`IConnectionPoint`接口，用于公开与其他对象的连接点。 类派生自`CCmdTarget`实现`IConnectionPointContainer`接口，它可以枚举的所有对象的可用连接点或查找特定的连接点。
+MFC 在[CConnectionPoint](reference/cconnectionpoint-class.md)和[CCmdTarget](reference/ccmdtarget-class.md)类中实现此模型。 派生自 `CConnectionPoint` 的类实现 `IConnectionPoint` 接口，用于向其他对象公开连接点。 派生自的类 `CCmdTarget` 实现 `IConnectionPointContainer` 接口，该接口可枚举对象的所有可用连接点或查找特定连接点。
 
-在您的类中实现每个连接点，您必须声明实现连接点的连接部分。 如果你实现一个或多个连接点，还必须在类中声明一个单一连接映射。 连接映射是 ActiveX 控件支持的连接点的表。
+对于在类中实现的每个连接点，必须声明实现连接点的连接部分。 如果实现一个或多个连接点，则还必须在类中声明一个连接映射。 连接映射是 ActiveX 控件支持的连接点表。
 
-以下示例演示一个简单的连接映射和一个连接点。 第一个示例声明连接映射和点;第二个示例实现地图和点。 请注意，`CMyClass`必须是`CCmdTarget`-派生的类。 在第一个示例中，代码中插入类声明中下,**保护**部分：
+下面的示例演示了一个简单的连接映射和一个连接点。 第一个示例声明连接映射和点;第二个示例实现了地图和点。 请注意， `CMyClass` 必须是 `CCmdTarget` 派生类。 在第一个示例中，代码将插入到 "**受保护**" 部分下的类声明中：
 
-[!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]
+[!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
-**BEGIN_CONNECTION_PART**并**END_CONNECTION_PART**宏声明嵌入的类， `XSampleConnPt` (派生自`CConnectionPoint`)，使实现此特定连接点。 如果你想要重写任何`CConnectionPoint`成员函数或添加您自己的成员函数，将它们声明两个两个宏之间。 例如，`CONNECTION_IID`宏重写`CConnectionPoint::GetIID`成员函数时放置在以下两个宏之间。
+**BEGIN_CONNECTION_PART**和**END_CONNECTION_PART**宏声明 `XSampleConnPt` `CConnectionPoint` 实现此特定连接点的嵌入类（派生自）。 如果要重写任何 `CConnectionPoint` 成员函数或添加自己的成员函数，请在这两个宏之间进行声明。 例如，当在 `CONNECTION_IID` `CConnectionPoint::GetIID` 两个宏之间放置成员函数时，宏会重写该函数。
 
-在第二个示例中，代码插入控件的实现文件 （.cpp 文件） 中。 该代码将实现连接映射，其中包括连接点， `SampleConnPt`:
+在第二个示例中，代码插入到控件的实现文件（.cpp 文件）中。 此代码实现连接映射，其中包括连接点 `SampleConnPt` ：
 
-[!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#2](codesnippet/cpp/connection-points_2.cpp)]
 
-如果您的类具有多个连接点，插入其他**CONNECTION_PART**宏之间**BEGIN_CONNECTION_MAP**并**END_CONNECTION_MAP**宏。
+如果类具有多个连接点，请在**BEGIN_CONNECTION_MAP**和**END_CONNECTION_MAP**宏之间插入其他**CONNECTION_PART**宏。
 
-最后，添加对的调用`EnableConnections`类的构造函数中。 例如：
+最后， `EnableConnections` 在类的构造函数中添加对的调用。 例如：
 
-[!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#3](codesnippet/cpp/connection-points_3.cpp)]
 
-一旦已插入此代码，你`CCmdTarget`的派生的类公开的连接点`ISampleSink`接口。 下图演示了此示例。
+插入此代码后， `CCmdTarget` 派生类将公开接口的连接点 `ISampleSink` 。 下图说明了此示例。
 
 ![使用 MFC 实现的连接点](../mfc/media/vc37lh2.gif "使用 MFC 实现的连接点") <br/>
-使用 MFC 实现连接点
+使用 MFC 实现的连接点
 
-通常情况下，连接点支持"多播"— 能够广播到多个接收器连接到相同的接口。 下面的示例片段演示如何通过迭代浏览每个接收器连接点上的多播：
+通常，连接点支持 "多播"-广播到连接到同一接口的多个接收器。 以下示例段演示了如何通过循环访问连接点上的每个接收器来进行多播：
 
-[!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#4](codesnippet/cpp/connection-points_4.cpp)]
 
-此示例检索当前的连接集上`SampleConnPt`连接点通过调用`CConnectionPoint::GetConnections`。 然后循环访问连接和调用`ISampleSink::SinkFunc`上每个活动连接。
+此示例 `SampleConnPt` 通过调用来检索连接点上的当前连接集 `CConnectionPoint::GetConnections` 。 然后，它会遍历连接，并对 `ISampleSink::SinkFunc` 每个活动的连接调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

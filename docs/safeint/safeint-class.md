@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373444"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620950"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
 扩展整数基元，有助于防止整数溢出，并便于比较不同类型的整数。
 
 > [!NOTE]
-> 此库的最新版本位于[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)。
+> 此库的最新版本位于 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。
 
 ## <a name="syntax"></a>语法
 
@@ -39,19 +39,19 @@ class SafeInt;
 | E         |  定义错误处理策略的枚举数据类型。 |
 | U         |  辅助操作数的整数或布尔参数的类型。 |
 
-| 参数  |  说明 |
+| 参数  |  描述 |
 |---------|-----------------|
 | rhs**      |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
-| *Ⅰ*        |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
-| bits**     |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
+| *i*        |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
+| *带宽*     |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-| 名称                          |  说明 |
+| “属性”                          |  描述 |
 |---------------------------|--------------------|
-| [安全：：安全](#safeint)  |  默认构造函数。 |
+| [SafeInt：： SafeInt](#safeint)  |  默认构造函数。 |
 
 ### <a name="assignment-operators"></a>赋值运算符
 
@@ -212,7 +212,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 > [!NOTE]
 > 尽管 `SafeInt` 类接受任何类型的整数，但它对无符号类型的执行效率更高。
 
-`E` 是 `SafeInt` 使用的错误处理机制。 SafeInt 库随附了两个错误处理机制。 默认策略是 `SafeIntErrorPolicy_SafeIntException`，它在出错时抛出 [SafeIntException 类](../safeint/safeintexception-class.md)异常。 另一个策略是 `SafeIntErrorPolicy_InvalidParameter`，它在出错时停止程序运行。
+`E` 是 `SafeInt` 使用的错误处理机制。 SafeInt 库随附了两个错误处理机制。 默认策略是 `SafeIntErrorPolicy_SafeIntException`，它在出错时抛出 [SafeIntException 类](safeintexception-class.md)异常。 另一个策略是 `SafeIntErrorPolicy_InvalidParameter`，它在出错时停止程序运行。
 
 自定义错误策略的方法有两种。 第一种方法是，在创建 `SafeInt` 时设置参数 `E`。 如果只想更改一个 `SafeInt` 的错误处理策略，请使用这种方法。 另一种方法是，在添加 `SafeInt` 库前，将 _SAFEINT_DEFAULT_ERROR_POLICY 定义为自定义错误处理类。 若要对代码中 `SafeInt` 类的所有实例更改默认错误处理策略，请使用这种方法。
 
@@ -229,7 +229,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **命名空间：** msl:: utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>安全：：安全
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt：： SafeInt
 
 构造 `SafeInt` 对象。
 
@@ -257,13 +257,13 @@ SafeInt (
 
 ### <a name="parameters"></a>参数
 
-*Ⅰ*<br/>
+*i*<br/>
 [输入] 新 `SafeInt` 对象的值。 这必须是 T 或 U 类型的参数，具体视构造函数而定。
 
-*B*<br/>
+*b*<br/>
 [输入] 新 `SafeInt` 对象的布尔值。
 
-*美国*<br/>
+*u*<br/>
 [输入] U 类型的 `SafeInt`。新 `SafeInt` 对象的值与 u** 相同，但类型为 T。
 
 U `SafeInt` 中存储的数据的类型。 这可以是布尔类型、字符类型或整数类型。 如果是整数类型，它可以有符号，也可以无符号，且大小介于 8 位和 64 位之间。

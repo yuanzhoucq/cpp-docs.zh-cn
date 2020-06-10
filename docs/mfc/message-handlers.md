@@ -9,12 +9,12 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-ms.openlocfilehash: 25805187f88c5423ea41cd7cbe346e44e7d7d36a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: f9c5272b513a92dc6dcfa37559b00ae79b658918
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907462"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619974"
 ---
 # <a name="message-handlers"></a>消息处理程序
 
@@ -24,8 +24,8 @@ ms.locfileid: "70907462"
 
 消息的处理程序执行的操作会执行您想要执行的任何操作来响应该消息。 您可以使用类的[类向导](reference/mfc-class-wizard.md)创建处理程序，然后使用源代码编辑器填写处理程序的代码。
 
-您可以使用 Microsoft Visual C++ 和 MFC 的所有工具编写处理程序。 有关所有类的列表，请参阅*MFC 参考*中的类库[概述](../mfc/class-library-overview.md)。
+您可以使用 Microsoft Visual C++ 和 MFC 的所有工具编写处理程序。 有关所有类的列表，请参阅*MFC 参考*中的类库[概述](class-library-overview.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[框架中的消息和命令](../mfc/messages-and-commands-in-the-framework.md)
+[框架中的消息和命令](messages-and-commands-in-the-framework.md)

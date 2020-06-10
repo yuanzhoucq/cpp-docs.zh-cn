@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907780"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620021"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自定义快速访问工具栏
 
@@ -31,14 +31,14 @@ ms.locfileid: "70907780"
 
 下表定义了快速访问工具栏的属性。
 
-|Property|定义|
+|properties|定义|
 |--------------|----------------|
 |QAT 位置|在应用程序启动时，指定快速访问工具栏的位置。 位置可以**高于**或**低于**功能区控件。|
 |QAT 项|指定可用于快速访问工具栏的命令。|
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>添加或移除快速访问工具栏上的命令
 
-1. 在 "**属性**" 窗口中，单击 " **QAT 项**"，然后单击省略号按钮 **（...）** 。
+1. 在 "**属性**" 窗口中，单击 " **QAT 项**"，然后单击省略号按钮 **（...）**。
 
 1. 在 " **QAT 项编辑器**" 对话框中，使用 "**添加**" 和 "**删除**" 按钮来修改快速访问工具栏上命令的列表。
 
@@ -52,6 +52,6 @@ ms.locfileid: "70907780"
 
 - 在**功能区编辑器工具栏**上，单击 "**测试功能区**"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
+[功能区设计器（MFC）](ribbon-designer-mfc.md)

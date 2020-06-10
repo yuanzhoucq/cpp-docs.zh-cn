@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685645"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620506"
 ---
 # <a name="creating-your-dialog-class"></a>创建自己的对话框类
 
@@ -23,7 +23,7 @@ ms.locfileid: "71685645"
 
 在 .h 文件中：
 
-- 对话框类的类声明。 该类派生自[CDialog](../mfc/reference/cdialog-class.md)。
+- 对话框类的类声明。 该类派生自[CDialog](reference/cdialog-class.md)。
 
 在 .cpp 文件中：
 
@@ -31,9 +31,9 @@ ms.locfileid: "71685645"
 
 - 对话框的标准构造函数。
 
-- [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)成员函数的重写。 编辑此函数。 它用于对话框数据交换和验证功能，如稍后在[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)中所述。
+- [DoDataExchange](reference/cwnd-class.md#dodataexchange)成员函数的重写。 编辑此函数。 它用于对话框数据交换和验证功能，如稍后在[对话框数据交换和验证](dialog-data-exchange-and-validation.md)中所述。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用代码向导创建对话框类](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)
+[使用代码向导创建对话框类](creating-a-dialog-class-with-code-wizards.md)<br/>
+[在 MFC 中使用对话框](life-cycle-of-a-dialog-box.md)

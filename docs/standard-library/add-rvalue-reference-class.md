@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6d7cc1d45ed3b963de0a0a004c1696ddbf0af440
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456541"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623918"
 ---
-# <a name="addrvaluereference-class"></a>add_rvalue_reference 类
+# <a name="add_rvalue_reference-class"></a>add_rvalue_reference 类
 
 如果模板参数是对象或函数类型，则创建模板参数的右值引用类型。 否则，由于引用折叠的语义，类型与模板参数相同。
 
@@ -34,9 +34,9 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ## <a name="remarks"></a>备注
 
-类具有一个名为`type`的成员, 该成员是模板参数 T 的右值引用类型的别名。  `add_rvalue_reference`引用折叠的语义意味着对于非对象类型和非函数类型*t*, `T&&`为*t*。例如, 当*T*是左值引用类型时, `add_rvalue_reference<T>::type`是左值引用类型, 而不是右值引用。
+`add_rvalue_reference`类具有一个名为的成员 `type` ，该成员是模板参数*T*的右值引用类型的别名。引用折叠的语义意味着对于非对象类型和非函数类型*t*， `T&&` 为*t*。例如，当*T*是左值引用类型时， `add_rvalue_reference<T>::type` 是左值引用类型，而不是右值引用。
 
-为方便起见\<, type_traits > 定义了一个`add_rvalue_reference`用于`add_rvalue_reference_t`对的`type`成员进行别名的帮助器模板。
+为方便起见， \<type_traits> 定义了一个用于 `add_rvalue_reference_t` 对的成员进行别名的帮助器模板 `type` `add_rvalue_reference` 。
 
 ## <a name="example"></a>示例
 
@@ -71,12 +71,12 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>要求
 
-标头\<: type_traits >
+标头：\<type_traits>
 
 命名空间: std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[<type_traits>](../standard-library/type-traits.md)\
-[add_lvalue_reference 类](../standard-library/add-lvalue-reference-class.md)\
-[is_rvalue_reference 类](../standard-library/is-rvalue-reference-class.md)
+[<type_traits>](type-traits.md)\
+[add_lvalue_reference 类](add-lvalue-reference-class.md)\
+[is_rvalue_reference 类](is-rvalue-reference-class.md)

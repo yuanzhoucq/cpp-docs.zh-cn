@@ -5,21 +5,21 @@ helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7d675891904301b16aafe3acb2c294eede6d8d8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219883"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619043"
 ---
 # <a name="command-ids"></a>命令 ID
 
-命令完整描述了由其单独的命令 ID (以编码**WM_COMMAND**消息)。 此 ID 被分配给生成命令的用户界面对象。 通常情况下，Id 被命名的用户界面对象分配给他们的功能。
+命令只通过其命令 ID 进行完全描述（在**WM_COMMAND**消息中进行编码）。 此 ID 分配给生成命令的用户界面对象。 通常，Id 是为其分配到的用户界面对象的功能命名的。
 
-例如，在编辑菜单中的清除所有项可能都分配一个 ID 如**ID_EDIT_CLEAR_ALL**。 类库预定义了一些 Id，特别是对于命令，该框架将处理本身，如**ID_EDIT_CLEAR_ALL**或**ID_FILE_OPEN**。 您将自行创建其他命令 Id。
+例如，可以为 "编辑" 菜单中的 "全部清除" 项分配 ID，如**ID_EDIT_CLEAR_ALL**。 类库预定义一些 Id，特别是对于框架处理自身的命令，例如**ID_EDIT_CLEAR_ALL**或**ID_FILE_OPEN**。 你将自行创建其他命令 Id。
 
-当在视觉对象中创建你自己的菜单C++菜单编辑器中，它是最好按照类库的命名约定，如所示**ID_FILE_OPEN**。 [标准命令](../mfc/standard-commands.md)介绍由类库定义的标准命令。
+在 "Visual C++ 菜单编辑器" 中创建自己的菜单时，最好遵循类库的命名约定，如**ID_FILE_OPEN**所示。 [标准命令](standard-commands.md)说明类库定义的标准命令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)
+[用户界面对象和命令 ID](user-interface-objects-and-command-ids.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 69eb604b3a343fd135c76a4bb3c17245ece62092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617842"
 ---
 # <a name="ole-classes"></a>OLE 类
 
@@ -32,24 +32,24 @@ OLE 类可与其他应用程序框架类一起使用来方便对 ActiveX API 的
 
 以下类类别支持 ActiveX：
 
-- [OLE 容器类](../mfc/ole-container-classes.md)
+- [OLE 容器类](ole-container-classes.md)
 
-- [OLE 服务器类](../mfc/ole-server-classes.md)
+- [OLE 服务器类](ole-server-classes.md)
 
-- [OLE 拖放和数据传输类](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)
+- [OLE 拖放和数据传输类](ole-drag-and-drop-and-data-transfer-classes.md)
 
-- [OLE 通用对话框类](../mfc/ole-common-dialog-classes.md)
+- [OLE 通用对话框类](ole-common-dialog-classes.md)
 
-- [OLE 自动化类](../mfc/ole-automation-classes.md)
+- [OLE 自动化类](ole-automation-classes.md)
 
-- [OLE 控件类](../mfc/ole-control-classes.md)
+- [OLE 控件类](ole-control-classes.md)
 
-- [活动文档类](../mfc/active-document-classes.md)
+- [活动文档类](active-document-classes.md)
 
-- [OLE 相关类](../mfc/ole-related-classes.md)
+- [OLE 相关类](ole-related-classes.md)
 
-若要查看类继承，请使用[类层次结构图表](../mfc/hierarchy-chart.md)。
+若要查看类的继承，请使用[类层次结构图](hierarchy-chart.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[类概述](../mfc/class-library-overview.md)
+[类概述](class-library-overview.md)

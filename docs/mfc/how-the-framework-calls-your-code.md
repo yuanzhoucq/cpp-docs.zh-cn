@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407947"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622598"
 ---
 # <a name="how-the-framework-calls-your-code"></a>框架如何调用你的代码
 
@@ -29,8 +29,8 @@ ms.locfileid: "62407947"
 
 在相关主题中，您将会了解到，当框架初始化并运行应用程序时所做的工作，以及后来在应用程序终止时进行的清理工作。 你还将了解适合应用你编写的代码的位置。
 
-有关详细信息，请参阅[类 CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)并[文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)。
+有关详细信息，请参阅[类 CWinApp：应用程序类](cwinapp-the-application-class.md)和[文档模板和文档/视图创建过程](document-templates-and-the-document-view-creation-process.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[基于框架生成](../mfc/building-on-the-framework.md)
+[基于框架生成](building-on-the-framework.md)

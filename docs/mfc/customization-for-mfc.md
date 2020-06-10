@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - customizations, MFC Extensions
 ms.assetid: 3b1b7532-8cc9-48dc-9bbe-7fd4060530b5
-ms.openlocfilehash: 42f4b21fb257646d4d505427760a8fe1c7056e77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b7597c3709ed700e82af94c78450ee5aff2d99b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622959"
 ---
 # <a name="customization-for-mfc"></a>MFC 自定义
 
@@ -23,21 +23,21 @@ ms.locfileid: "62241688"
 
 可以在下列主题中找到其他自定义提示：
 
-- [CBasePane 类](../mfc/reference/cbasepane-class.md)
+- [CBasePane 类](reference/cbasepane-class.md)
 
-- [CDockablePane 类](../mfc/reference/cdockablepane-class.md)
+- [CDockablePane Class](reference/cdockablepane-class.md)
 
-- [CDockingManager 类](../mfc/reference/cdockingmanager-class.md)
+- [CDockingManager 类](reference/cdockingmanager-class.md)
 
-- [CMFCBaseTabCtrl 类](../mfc/reference/cmfcbasetabctrl-class.md)
+- [CMFCBaseTabCtrl 类](reference/cmfcbasetabctrl-class.md)
 
 ## <a name="additional-customization-tips"></a>其他自定义提示
 
-[键盘和鼠标自定义](../mfc/keyboard-and-mouse-customization.md)
+[键盘和鼠标自定义](keyboard-and-mouse-customization.md)
 
-[用户定义的工具](../mfc/user-defined-tools.md)
+[用户定义的工具](user-defined-tools.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)<br/>
-[自定义对安全有何影响](../mfc/security-implications-of-customization.md)
+[MFC 桌面应用程序](mfc-desktop-applications.md)<br/>
+[自定义的安全隐患](security-implications-of-customization.md)
