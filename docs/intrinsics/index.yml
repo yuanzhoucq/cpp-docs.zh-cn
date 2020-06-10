@@ -1,0 +1,91 @@
+### YamlMime:Landing
+title: 编译器内部函数和程序集语言
+summary: 了解 Visual Studio 如何创建处理器特定的低级别代码以实现最优性能和控制。
+metadata:
+  title: 编译器内部函数和程序集语言
+  description: Visual Studio 包含适用于低级别编程任务的汇编程序和编译器内部函数。
+  ms.topic: landing-page
+  ms.date: 05/26/2020
+  ms.openlocfilehash: f50d2541bd9fd7ca0071cc6ff76397b3dd240843
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507818"
+landingContent:
+- title: 使用编译器内部函数
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 编译器内部函数概述
+      url: ../intrinsics/compiler-intrinsics.md
+  - linkListType: reference
+    links:
+    - text: ARM 内部函数
+      url: ../intrinsics/arm-intrinsics.md
+    - text: ARM64 内部函数
+      url: ../intrinsics/arm64-intrinsics.md
+    - text: x86 内部函数列表
+      url: ../intrinsics/x86-intrinsics-list.md
+    - text: x64 (amd64) 内部函数列表
+      url: ../intrinsics/x64-amd64-intrinsics-list.md
+    - text: 在所有体系结构上都可用的内部函数
+      url: ../intrinsics/intrinsics-available-on-all-architectures.md
+    - text: 按字母顺序排列的内部函数列表
+      url: ../intrinsics/alphabetical-listing-of-intrinsic-functions.md
+- title: 在 Microsoft C/C++ 中使用适用于 x86 的内联程序集
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 内联汇编程序概述
+      url: ../assembler/inline/inline-assembler-overview.md
+  - linkListType: concept
+    links:
+    - text: __asm 关键字
+      url: ../assembler/inline/asm.md
+  - linkListType: how-to-guide
+    links:
+    - text: 在 __asm 块中使用汇编语言
+      url: ../assembler/inline/using-assembly-language-in-asm-blocks.md
+    - text: 在 __asm 块中使用 C 或 C++
+      url: ../assembler/inline/using-c-or-cpp-in-asm-blocks.md
+    - text: 使用和保留寄存器
+      url: ../assembler/inline/using-and-preserving-registers-in-inline-assembly.md
+    - text: 在内联程序集内调用 C++ 函数
+      url: ../assembler/inline/calling-cpp-functions-in-inline-assembly.md
+    - text: 优化内联程序集
+      url: ../assembler/inline/optimizing-inline-assembly.md
+- title: 使用 ARM 和 ARM64 汇编程序
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ARM 和 ARM64 汇编程序引用
+      url: ../assembler/arm/arm-assembler-reference.md
+    - text: ARM 和 ARM64 汇编程序命令行参考
+      url: ../assembler/arm/arm-assembler-command-line-reference.md
+    - text: ARM 和 ARM64 汇编程序诊断消息
+      url: ../assembler/arm/arm-assembler-diagnostic-messages.md
+    - text: ARM 和 ARM64 汇编程序指令
+      url: ../assembler/arm/arm-assembler-directives.md
+- title: 使用 x86 和 x64 汇编程序
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 适用于 x86 和 x64 的 Microsoft 宏汇编程序参考
+      url: ../assembler/masm/microsoft-macro-assembler-reference.md
+    - text: MASM for x64 (ml64.exe)
+      url: ../assembler/masm/masm-for-x64-ml64-exe.md
+    - text: ML 和 ML64 命令行参考
+      url: ../assembler/masm/ml-and-ml64-command-line-reference.md
+    - text: 指令参考
+      url: ../assembler/masm/directives-reference.md
+    - text: 符号参考
+      url: ../assembler/masm/symbols-reference.md
+    - text: 运算符参考
+      url: ../assembler/masm/operators-reference.md
+    - text: MASM BNF 语法
+      url: ../assembler/masm/masm-bnf-grammar.md
+    - text: ML 和 ML64 错误消息
+      url: ../assembler/masm/ml-error-messages.md
+    - text: 处理器制造商编程手册
+      url: ../assembler/masm/processor-manufacturer-programming-manuals.md
