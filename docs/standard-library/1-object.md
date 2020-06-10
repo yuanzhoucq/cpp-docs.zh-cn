@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246538"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620928"
 ---
-# <a name="1-object"></a>_1 对象
+# <a name="_1-object"></a>_1 对象
 
 可替换自变量的占位符。
 
@@ -29,7 +29,7 @@ namespace placeholders {
 
 ## <a name="remarks"></a>备注
 
-对象`_1, _2, ... _M`占位符指定第一个，第二个、...、 第 m 个参数，在返回的对象的函数调用中分别[绑定](../standard-library/functional-functions.md#bind)。 使用 `_N` 指定评估绑定表达式时第 N 个参数应插入的位置。
+对象 `_1, _2, ... _M` 是占位符，分别用于指定第一个、第二个 "..."、"Mth" 参数，以及对[bind](functional-functions.md#bind)返回的对象的函数调用。 使用 `_N` 指定评估绑定表达式时第 N 个参数应插入的位置。
 
 在此次实现中，`M` 的值为 20。
 

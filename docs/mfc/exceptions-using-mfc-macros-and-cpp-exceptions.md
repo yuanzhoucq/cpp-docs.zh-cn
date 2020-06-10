@@ -16,45 +16,45 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: afad5335bedf001329ecb401a8a16c663afb5571
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371593"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622725"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>异常：使用 MFC 宏和 C++ 异常
 
-本文讨论了编写同时使用 MFC 异常处理宏和C++异常处理关键字的代码的注意事项。
+本文讨论编写使用 MFC 异常处理宏和 c + + 异常处理关键字的代码的注意事项。
 
 本文涵盖以下主题：
 
 - [混合异常关键字和宏](#_core_mixing_exception_keywords_and_macros)
 
-- [尝试 catch 块内的块](#_core_try_blocks_inside_catch_blocks)
+- [Catch 块内的 Try 块](#_core_try_blocks_inside_catch_blocks)
 
 ## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>混合异常关键字和宏
 
-您可以在同一程序中混合 MFC 异常宏和C++异常关键字。 但是，您不能将 MFC 宏与同一块中的C++异常关键字混合在一起，因为宏在异常对象超出范围时会自动删除它们，而使用异常处理关键字的代码则不删除它们。 有关详细信息，请参阅文章["例外：捕获和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)"。
+可以在同一程序中混合使用 MFC 异常宏和 c + + 异常关键字。 但不能在同一个块中将 MFC 宏与 c + + 异常关键字混合使用，因为当宏超出范围时，它们会自动删除异常对象，而使用异常处理关键字的代码则不能。 有关详细信息，请参阅文章[异常：捕获和删除异常](exceptions-catching-and-deleting-exceptions.md)。
 
-宏和关键字之间的主要区别是，宏"自动"删除捕获的异常，当异常超出范围时。 使用关键字的代码不;必须显式删除捕获块中捕获的异常。 混合宏和C++异常关键字可能会导致未删除异常对象时内存泄漏，或者在异常删除两次时导致堆损坏。
+宏和关键字之间的主要区别在于，当异常超出范围时，宏会 "自动" 删除捕获的异常。 使用关键字的代码不会;必须显式删除 catch 块中捕获的异常。 不删除异常对象时，混合宏和 c + + 异常关键字可能会导致内存泄漏，或在异常被删除两次时导致堆损坏。
 
-例如，以下代码使异常指针无效：
+例如，以下代码使异常指针失效：
 
-[!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#10](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
 
-出现此问题的原因是`e`在执行从"内部 **"CATCH**块中传递时被删除。 使用**THROW_LAST**宏而不是**THROW**语句将导致"外部 **"CATCH**块接收有效的指针：
+之所以出现此问题， `e` 是因为在执行从 "内部" **CATCH**块中传递时删除。 使用**THROW_LAST**宏而不是**THROW**语句将导致 "外部" **CATCH**块接收有效指针：
 
-[!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
+[!code-cpp[NVC_MFCExceptions#11](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>尝试 Catch 块内的块
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Catch 块内的 Try 块
 
-不能从**CATCH**块内**的尝试**块中重新引发当前异常。 以下示例无效：
+不能从**CATCH**块内的**try**块内重新引发当前异常。 下面的示例无效：
 
-[!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-有关详细信息，请参阅[异常：检查异常内容](../mfc/exceptions-examining-exception-contents.md)。
+有关详细信息，请参阅异常[：检查异常内容](exceptions-examining-exception-contents.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[异常处理](../mfc/exception-handling-in-mfc.md)
+[异常处理](exception-handling-in-mfc.md)

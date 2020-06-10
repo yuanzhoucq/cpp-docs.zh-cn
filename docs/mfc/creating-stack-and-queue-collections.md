@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 5b3427f7bb2e46435ddf2768bcbb816f9d7e5c1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5db90422f78fc6ca3bc2a182f9569c33db56cad1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371608"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623211"
 ---
 # <a name="creating-stack-and-queue-collections"></a>创建堆栈和队列集合
 
 本文介绍如何从 MFC 列表类创建其他数据结构，如[堆栈](#_core_stacks)和[队列](#_core_queues)。 示例使用从 `CList` 派生的类，但可以直接使用 `CList`，除非您需要添加功能。
 
-## <a name="stacks"></a><a name="_core_stacks"></a>栈
+## <a name="stacks"></a><a name="_core_stacks"></a>排列
 
 由于标准列表集合具有头和尾，因此很容易创建一个模仿后进先出堆栈的行为的派生列表集合。 堆栈就像自助餐厅中的一堆盘子。 新添的盘子将会放在现有的盘子的上面。 最后添加的盘子将会首先被取用。 列表集合成员函数 `AddHead` 和 `RemoveHead` 可用于专门从列表头中添加和移除元素；因此，最新添加的元素将是第一个被移除的。
 
@@ -32,7 +32,7 @@ ms.locfileid: "81371608"
 
    以下示例显示如何添加成员函数以将元素推送到堆栈，查看堆栈的顶部元素并弹出堆栈中的顶部元素：
 
-   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 请注意，此方法将公开基础的 `CObList` 类。 用户可以调用任何 `CObList` 成员函数，无论它对堆栈是否有意义。
 
@@ -46,8 +46,8 @@ ms.locfileid: "81371608"
 
    以下示例显示可如何追加成员函数以将元素添加到队列的结尾以及从队列的前面获取元素。
 
-   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>另请参阅
 
-[集合](../mfc/collections.md)
+[集合](collections.md)

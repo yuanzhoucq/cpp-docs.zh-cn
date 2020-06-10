@@ -8,12 +8,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: 35416025339b8fc059ed44b2b3c55d9c38d18570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153003"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620639"
 ---
 # <a name="containers"></a>容器
 
@@ -21,19 +21,19 @@ ms.locfileid: "62153003"
 
 ## <a name="in-this-section"></a>本节内容
 
-[实现容器](../mfc/containers-implementing-a-container.md)
+[实现容器](containers-implementing-a-container.md)
 
-[容器客户端项](../mfc/containers-client-items.md)
+[容器客户端项](containers-client-items.md)
 
-[使用复合文件](../mfc/containers-compound-files.md)
+[使用复合文件](containers-compound-files.md)
 
-[容器用户界面问题](../mfc/containers-user-interface-issues.md)
+[容器用户界面问题](containers-user-interface-issues.md)
 
-[容器的高级的功能](../mfc/containers-advanced-features.md)
+[容器的高级功能](containers-advanced-features.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[服务器](../mfc/servers.md)<br/>
-[激活](../mfc/activation-cpp.md)<br/>
-[菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)
+[OLE](ole-in-mfc.md)<br/>
+[服务器](servers.md)<br/>
+[激活](activation-cpp.md)<br/>
+[菜单和资源（OLE）](menus-and-resources-ole.md)

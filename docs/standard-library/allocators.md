@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457548"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623515"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -24,7 +24,7 @@ template <
 class vector
 ```
 
-C++ 标准库提供分配器的默认实现。 在 C++11 及更高版本中，默认分配器更新以公开较小接口；新的分配器称为*最小的分配器*。 具体而言，最小分配器的 `construct()` 成员支持移动语义，从而可以极大地提高性能。 在大多数情况下，此默认分配器应该是够用的。 在 C++11 中，所有采用分配器类型参数的标准库类型和函数均支持最小分配器接口，包括 `std::function`、`shared_ptr, allocate_shared()` 和 `basic_string`。  有关默认分配器的详细信息，请参阅 [allocator](../standard-library/allocator-class.md) 类。
+C++ 标准库提供分配器的默认实现。 在 C++11 及更高版本中，默认分配器更新以公开较小接口；新的分配器称为*最小的分配器*。 具体而言，最小分配器的 `construct()` 成员支持移动语义，从而可以极大地提高性能。 在大多数情况下，此默认分配器应该是够用的。 在 C++11 中，所有采用分配器类型参数的标准库类型和函数均支持最小分配器接口，包括 `std::function`、`shared_ptr, allocate_shared()` 和 `basic_string`。  有关默认分配器的详细信息，请参阅 [allocator](allocator-class.md) 类。
 
 ## <a name="writing-your-own-allocator-c11"></a>编写你自己的分配器 (C++11)
 
@@ -119,8 +119,8 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 |`allocate`|`operator!=`|
 |`construct`||
 
-有关这些类型定义和方法的详细信息，请参阅 [allocator 类](../standard-library/allocator-class.md)。
+有关这些类型定义和方法的详细信息，请参阅 [allocator 类](allocator-class.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[C + + 标准库参考](cpp-standard-library-reference.md)

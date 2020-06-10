@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中配置 C++ Linux 项目
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623592"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
@@ -126,7 +126,7 @@ sudo apt install zip
 ## <a name="see-also"></a>请参阅
 
 [设置编译器和生成属性](../build/working-with-project-properties.md)<br/>
-[C++ 常规属性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[VC++ 目录 (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[复制源项目属性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[生成事件属性 (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[C++ 常规属性 (Linux C++)](prop-pages/general-linux.md)<br/>
+[VC++ 目录 (Linux C++)](prop-pages/directories-linux.md)<br/>
+[复制源项目属性 (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[生成事件属性 (Linux C++)](prop-pages/build-events-linux.md)

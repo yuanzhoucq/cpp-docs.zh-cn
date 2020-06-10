@@ -35,29 +35,29 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 845834679bca274f1f2ca7a363b8a0681fb8f328
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215186"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623066"
 ---
 # <a name="how-to-manage-symbols"></a>如何：管理符号
 
-创建新资源或资源对象时，开发环境会将其分配给默认符号名称，例如 `IDD_DIALOG1`。 您可以使用[属性窗口](/visualstudio/ide/reference/properties-window)更改默认符号名称或更改已与资源关联的任何符号的名称。
+创建新资源或资源对象时，开发环境会将其分配给默认符号名称，例如 `IDD_DIALOG1` 。 您可以使用[属性窗口](/visualstudio/ide/reference/properties-window)更改默认符号名称或更改已与资源关联的任何符号的名称。
 
 对于与单个资源关联的符号，还可以使用 "**属性**" 窗口更改符号值。 您可以使用 "[资源符号" 对话框](../windows/resource-symbols-dialog-box.md)更改当前未分配给资源的符号的值。
 
-通常，所有符号定义都保存在 `Resource.h`中。 但是，你可能需要更改此包含文件名，以便可以在同一个目录下使用多个资源文件。
+通常，所有符号定义都保存在中 `Resource.h` 。 但是，你可能需要更改此包含文件名，以便可以在同一个目录下使用多个资源文件。
 
 > [!NOTE]
-> 如果你的项目尚未包含 .rc 文件，请参阅[如何：创建资源](../windows/how-to-create-a-resource-script-file.md)。
+> 如果你的项目尚未包含 .rc 文件，请参阅[如何：创建资源](how-to-create-a-resource-script-file.md)。
 
 ## <a name="symbol-name-restrictions"></a>符号名限制
 
 对符号名的限制如下所示：
 
-- 所有[符号](../windows/symbols-resource-identifiers.md)在应用程序范围内必须是唯一的，以防止标头文件中的符号定义发生冲突。
+- 所有[符号](symbols-resource-identifiers.md)在应用程序范围内必须是唯一的，以防止标头文件中的符号定义发生冲突。
 
 - 符号名的有效字符包括 A-Z、a-z、0-9 和下划线 (_)。
 
@@ -70,15 +70,15 @@ ms.locfileid: "80215186"
    定义符号的头文件由资源编译器/编辑器和 C++ 程序用于引用资源文件中定义的资源。 对于只有大小写不同的两个符号名，C++ 程序会看到两个单独的符号，而资源编译器/编辑器将这两个名称视为引用单个符号。
 
 > [!NOTE]
-> 如果不遵循下面所述的标准符号名称方案（ID * _ [关键字]），并且符号名称与资源脚本编译器已知的关键字相同，则尝试生成资源脚本文件将导致似乎随机生成错误这很难诊断。 若要防止出现此情况，请遵循标准命名方案。
+> 如果你不遵循下面所述的标准符号名称方案（ID * _ [关键字]），并且你的符号名称与资源脚本编译器已知的关键字相同，则尝试生成资源脚本文件将导致似乎随机生成错误，这很难诊断。 若要防止出现此情况，请遵循标准命名方案。
 
 符号名具有描述性前缀，可指示它们所表示的资源或对象的类型。 这些描述性前缀以文本组合 ID 开头。 Microsoft 基础类（MFC）库使用下表中所示的符号命名约定：
 
 |类别|前缀|用途|
 |--------------|------------|---------|
 |资源|IDR_、IDD_、IDC_、IDI_、IDB_|加速器或菜单（和关联的或自定义的资源）、对话框、光标、图标、位图|
-|菜单项|ID_|菜单项|
-|命令|ID_|Command|
+|菜单项|ID_|Menu item|
+|命令|ID_|命令|
 |控件和子窗口|IDC_|控制|
 |字符串|IDS_|字符串表中的字符串|
 |MFC|AFX_|为预定义 MFC 符号保留|
@@ -96,7 +96,7 @@ ms.locfileid: "80215186"
 
 ## <a name="symbol-value-restrictions"></a>符号值限制
 
-符号值可以是以正常方式表示 `#define` 预处理器指令的任何整数。 下面是符号值的一些示例：
+符号值可以是以正常方式表示的 `#define` 预处理器指令的任何整数。 下面是符号值的一些示例：
 
 ```
 18
@@ -119,7 +119,7 @@ ms.locfileid: "80215186"
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- 不能将具有参数的预处理器宏用作值定义。 在编译时，下面的示例不是有效的表达式，无论 `ID` 计算结果如何：
+- 不能将具有参数的预处理器宏用作值定义。 下面的示例不是有效的表达式，无论 `ID` 在编译时的计算结果如何：
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
@@ -189,7 +189,7 @@ ms.locfileid: "80215186"
 
 1. 在 "**只读符号指令**" 框中，使用 `#include` 编译器指令指定要保存只读符号的文件。
 
-   请勿 `Resource.h`调用文件，因为这是主符号头文件通常使用的文件名。
+   请勿调用文件 `Resource.h` ，因为这是主符号头文件通常使用的文件名。
 
    > [!NOTE]
    > 在 "**只读符号指令**" 框中键入的内容将与您键入的内容完全相同。 请确保输入的内容不包含任何拼写或语法错误。
@@ -214,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>另请参阅
 
-[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>
-[如何：创建符号](../windows/creating-new-symbols.md)<br/>
-[预定义的符号 ID](../windows/predefined-symbol-ids.md)<br/>
+[资源标识符（符号）](symbols-resource-identifiers.md)<br/>
+[如何：创建符号](creating-new-symbols.md)<br/>
+[预定义的符号 Id](predefined-symbol-ids.md)<br/>

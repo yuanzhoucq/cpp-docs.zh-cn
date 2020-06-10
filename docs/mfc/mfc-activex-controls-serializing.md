@@ -15,84 +15,84 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: d804486b612906f537b6ed1665dfc0cec5149826
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621203"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控件：序列化
 
-本文讨论如何序列化 ActiveX 控件。 序列化是从持久存储介质（如磁盘文件）读取或写入的过程。 微软基础类 （MFC） 库为类`CObject`中的序列化提供了内置支持。 `COleControl`使用属换机制将此支持扩展到 ActiveX 控件。
+本文介绍如何序列化 ActiveX 控件。 序列化是对持久存储介质（如磁盘文件）进行读取或写入操作的过程。 Microsoft 基础类（MFC）库为类中的序列化提供内置支持 `CObject` 。 `COleControl`通过使用属性交换机制将此支持扩展到 ActiveX 控件。
 
 >[!IMPORTANT]
-> ActiveX 是一种不应用于新开发的传统技术。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一种不能用于新开发的旧技术。 有关取代 ActiveX 的新式技术的详细信息，请参阅[Activex 控件](activex-controls.md)。
 
-ActiveX 控件的序列化是通过重写[COleControl：:DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)实现的。 此函数在加载和保存控件对象期间调用，存储使用成员变量或成员变量实现的所有属性以及更改通知。
+ActiveX 控件的序列化是通过重写[COleControl：:D opropexchange](reference/colecontrol-class.md#dopropexchange)实现的。 此函数（在加载和保存控件对象的过程中调用）存储通过成员变量或具有更改通知的成员变量实现的所有属性。
 
-以下主题涵盖与序列化 ActiveX 控件相关的主要问题：
+以下主题介绍了有关序列化 ActiveX 控件的主要问题：
 
-- 实现`DoPropExchange`对控件对象进行序列化的功能
+- 实现 `DoPropExchange` 函数以序列化控件对象
 
 - [自定义序列化过程](#_core_customizing_the_default_behavior_of_dopropexchange)
 
 - [实现版本支持](#_core_implementing_version_support)
 
-## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a>实现 DoPropExchange 功能
+## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a>实现 DoPropExchange 函数
 
-当您使用 ActiveX 控件向导生成控件项目时，多个默认处理程序函数将自动添加到控件类中，包括[COleControl：:DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)的默认实现。 以下示例显示添加到使用 ActiveX 控件向导创建的类的代码：
+使用 ActiveX 控件向导生成控制项目时，会自动向 control 类添加几个默认的处理程序函数，包括 COleControl 的默认实现[：:D opropexchange](reference/colecontrol-class.md#dopropexchange)。 下面的示例演示添加到用 ActiveX 控件向导创建的类的代码：
 
-[!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]
+[!code-cpp[NVC_MFC_AxUI#43](codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]
 
-如果要使属性持久化，请通过向属性`DoPropExchange`交换函数添加调用进行修改。 下面的示例演示了自定义布尔环形状属性的序列化，其中 CircleShape 属性的默认值为**TRUE**：
+如果要使属性持久，请 `DoPropExchange` 通过添加对属性交换函数的调用来进行修改。 下面的示例演示自定义布尔 CircleShape 属性的序列化，其中 CircleShape 属性的默认值**为 TRUE**：
 
-[!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
-[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]
+[!code-cpp[NVC_MFC_AxSer#1](codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
+[!code-cpp[NVC_MFC_AxSer#2](codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]
 
-下表列出了可用于序列化控件属性的可能属换函数：
+下表列出了可用于序列化控件的属性的可能的属性交换函数：
 
-|属换功能|目标|
+|属性交换函数|目的|
 |---------------------------------|-------------|
-|**PX_Blob）**|序列化类型二进制大对象 （BLOB） 数据属性。|
-|**PX_Bool）**|序列化布尔属性类型。|
-|**PX_Color）**|序列化类型颜色属性。|
-|**PX_Currency）**|序列化类型**CY（** 货币）属性。|
-|**PX_Double）**|序列化类型**双属性**。|
-|**PX_Font）**|序列化字体类型属性。|
-|**PX_Float）**|序列化类型**浮动**属性。|
-|**PX_IUnknown）**|序列化类型`LPUNKNOWN`的属性。|
-|**PX_Long）**|序列化类型**长**属性。|
-|**PX_Picture）**|序列化类型图片属性。|
-|**PX_Short）**|序列化类型**短**属性。|
-|**PXstring（ ）**|序列化类型`CString`属性。|
-|**PX_ULong）**|序列化类型**ULONG**属性。|
-|**PX_UShort）**|序列化类型**USHORT**属性。|
+|**PX_Blob （）**|序列化类型二进制大型对象（BLOB）数据属性。|
+|**PX_Bool （）**|序列化类型布尔属性。|
+|**PX_Color （）**|序列化类型颜色属性。|
+|**PX_Currency （）**|序列化类型**CY** （currency）属性。|
+|**PX_Double （）**|序列化类型**双精度**属性。|
+|**PX_Font （）**|序列化字体类型属性。|
+|**PX_Float （）**|序列化类型**float**属性。|
+|**PX_IUnknown （）**|序列化类型的属性 `LPUNKNOWN` 。|
+|**PX_Long （）**|序列化**long**类型的属性。|
+|**PX_Picture （）**|序列化类型图片属性。|
+|**PX_Short （）**|序列化**short**类型属性。|
+|**PXstring( )**|序列化类型 `CString` 属性。|
+|**PX_ULong （）**|序列化类型**ULONG**属性。|
+|**PX_UShort （）**|序列化类型**USHORT**属性。|
 
-有关这些属换函数的详细信息，请参阅*MFC 参考*中的[OLE 控件持久性](../mfc/reference/persistence-of-ole-controls.md)。
+有关这些属性交换函数的详细信息，请参阅*MFC 参考*中[的 OLE 控件的持久性](reference/persistence-of-ole-controls.md)。
 
 ## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>自定义 DoPropExchange 的默认行为
 
-的`DoPropertyExchange`默认实现（如上一个主题所示）对基类`COleControl`进行调用。 这将序列化 由`COleControl`自动支持的属性集，该属性使用比仅序列化控件的自定义属性更多的存储空间。 删除此调用允许对象仅序列化您认为重要的属性。 保存或加载控件对象时，不会序列化控件已实现的任何股票属性，除非您显式添加**PX_** 调用它们。
+`DoPropertyExchange`如前面的主题中所示，的默认实现将调用基类 `COleControl` 。 这会序列化自动支持的属性集 `COleControl` ，该属性使用比仅序列化控件的自定义属性更多的存储空间。 通过删除此调用，你的对象只会序列化你认为重要的那些属性。 在保存或加载控件对象时，不会序列化控件已经实现的任何常用属性状态，除非您显式添加了**PX_** 调用。
 
 ## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a>实现版本支持
 
-版本支持使修订后的 ActiveX 控件能够添加新的持久性属性，并且仍然能够检测和加载控件的早期版本创建的持久状态。 要使控件的版本作为其持久数据的一部分可用，请调用控件`DoPropExchange`函数中的[COleControl：：ExchangeVersion。](../mfc/reference/colecontrol-class.md#exchangeversion) 如果使用 ActiveX 控制向导创建 ActiveX 控件，则会自动插入此调用。 如果不需要版本支持，可以将其删除。 但是，对于版本支持提供的额外灵活性，控制大小的成本非常小（4 字节）。
+版本支持使修改后的 ActiveX 控件能够添加新的持久性属性，同时仍然能够检测和加载由早期版本的控件创建的持久状态。 若要使控件的版本可作为其永久性数据的一部分，请在控件的函数中调用[COleControl：： ExchangeVersion](reference/colecontrol-class.md#exchangeversion) `DoPropExchange` 。 如果 ActiveX 控件是使用 ActiveX 控件向导创建的，则此调用会自动插入。 如果不需要版本支持，则可以将其删除。 不过，控件大小的成本非常小（4个字节），因为它提供了版本支持所提供的灵活性。
 
-如果未使用 ActiveX 控件向导创建控件，`COleControl::ExchangeVersion`请通过在`DoPropExchange`函数开头插入以下行（在调用 之前）`COleControl::DoPropExchange`添加调用。
+如果控件不是使用 ActiveX 控件向导创建的，则 `COleControl::ExchangeVersion` 通过在函数开头插入以下行来添加对的调用 `DoPropExchange` `COleControl::DoPropExchange` ：
 
-[!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
+[!code-cpp[NVC_MFC_AxSer#1](codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
+[!code-cpp[NVC_MFC_AxSer#3](codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-您可以使用任何**DWORD**作为版本号。 由 ActiveX 控件向导生成的项目`_wVerMinor`使用`_wVerMajor`并作为默认值。 这些是在项目 ActiveX 控件类的实现文件中定义的全局常量。 在`DoPropExchange`函数的其余部分中，您可以随时调用[CPropExchange：GetVersion](../mfc/reference/cpropexchange-class.md#getversion)检索要保存或检索的版本。
+可以使用任何**DWORD**作为版本号。 ActiveX 控件向导生成的项目使用 `_wVerMinor` 和 `_wVerMajor` 作为默认值。 这些是在项目的 ActiveX 控件类的实现文件中定义的全局常量。 在函数的其余部分中 `DoPropExchange` ，可以随时调用[CPropExchange：： GetVersion](reference/cpropexchange-class.md#getversion)来检索要保存或检索的版本。
 
-在下面的示例中，此示例控件的版本 1 仅具有"发布日期"属性。 版本 2 添加了"原始日期"属性。 如果指示控件从旧版本中加载持久状态，它将新属性的成员变量初始化为默认值。
+在下面的示例中，此示例控件的第1版只有一个 "ReleaseDate" 属性。 版本2添加了 "OriginalDate" 属性。 如果指示控件从旧版本加载持久状态，则会将新属性的成员变量初始化为默认值。
 
-[!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
+[!code-cpp[NVC_MFC_AxSer#4](codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]
+[!code-cpp[NVC_MFC_AxSer#3](codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-默认情况下，控件会将旧数据"转换为"最新格式。 例如，如果控件的版本 2 加载由版本 1 保存的数据，则当再次保存版本 2 格式时，它将编写版本 2 格式。 如果希望控件在上次读取时以格式保存数据，则在调用**FALSE**`ExchangeVersion`时将 FALSE 作为第三个参数传递。 此第三个参数是可选的，默认情况下为**TRUE。**
+默认情况下，控件 "将旧数据转换为最新格式"。 例如，如果控件的版本2加载了版本1保存的数据，则它将在再次保存时写入版本2格式。 如果希望控件以上次读取的格式保存数据，请在调用时将**FALSE**作为第三个参数传递 `ExchangeVersion` 。 此第三个参数是可选的，默认情况下为**TRUE** 。
 
 ## <a name="see-also"></a>另请参阅
 
-[MFC 活动X控制](../mfc/mfc-activex-controls.md)
+[MFC ActiveX 控件](mfc-activex-controls.md)

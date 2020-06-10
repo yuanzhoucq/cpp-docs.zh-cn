@@ -4,42 +4,42 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
-ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f9ec06852ed0376583363df7649331a0be02105
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386364"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621239"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX 控件：方法
 
-ActiveX 控件触发事件本身和其控件的容器之间进行通信。 容器还可以通过方法和属性通信与控件。 方法也称为函数。
+ActiveX 控件引发事件，以在其自身与其控件容器之间进行通信。 容器还可以通过方法和属性与控件进行通信。 方法也称为函数。
 
-方法和属性提供了导出的接口用于其他应用程序，例如自动化客户端和 ActiveX 控件容器。 ActiveX 控件属性的详细信息，请参阅文章[MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)。
+方法和属性提供导出接口，供其他应用程序（如自动化客户端和 ActiveX 控件容器）使用。 有关 ActiveX 控件属性的详细信息，请参阅[MFC ActiveX 控件：属性](mfc-activex-controls-properties.md)一文。
 
-方法是类似的用法和用途的成员函数的C++类。 有两种类型的控件可以实现的方法： 常用和自定义。 常用事件，库存方法类似于这些方法是为其[COleControl](../mfc/reference/colecontrol-class.md)提供实现。 常用方法的详细信息，请参阅文章[MFC ActiveX 控件：添加常用方法](../mfc/mfc-activex-controls-adding-stock-methods.md)。 自定义方法，开发人员，定义允许其他自定义控件。 有关详细信息，请参阅文章[MFC ActiveX 控件：添加自定义方法](../mfc/mfc-activex-controls-adding-custom-methods.md)。
+方法与 c + + 类的成员函数的使用和用途类似。 控件可以实现两种类型的方法： "常用" 和 "自定义"。 与 stock 事件类似，stock 方法是[COleControl](reference/colecontrol-class.md)为其提供实现的方法。 有关常用方法的详细信息，请参阅[MFC ActiveX 控件：添加常用方法](mfc-activex-controls-adding-stock-methods.md)一文。 自定义方法（由开发人员定义）允许对控件进行其他自定义。 有关详细信息，请参阅[MFC ActiveX 控件：添加自定义方法](mfc-activex-controls-adding-custom-methods.md)一文。
 
-Microsoft 基础类库 (MFC) 实现了一个机制，使控件以支持股票和自定义方法。 第一个部分是类`COleControl`。 派生自`CWnd`，`COleControl`成员函数支持所有 ActiveX 控件都通用的常用方法。 此机制的第二部分是调度映射。 调度映射是类似于消息映射;但是，而不是将函数映射到 Windows 消息 ID，调度映射到 IDispatch ID 映射的虚拟成员函数。
+Microsoft 基础类库（MFC）实现了一种机制，使控件可以支持常用和自定义方法。 第一部分是 class `COleControl` 。 派生自 `CWnd` ， `COleControl` 成员函数支持所有 ActiveX 控件通用的常用方法。 此机制的第二部分是调度映射。 调度映射类似于消息映射;但是，调度映射将虚拟成员函数映射到 IDispatch ID，而不是将函数映射到 Windows 消息 ID。
 
-为了使控件可正确支持不同的方法，它的类必须声明调度映射。 这通过下面的代码位于控件类标头行实现 (。H） 文件：
+为了使控件正确支持各种方法，其类必须声明一个调度映射。 这是通过控件类标头（中的以下代码行来实现的。H）文件：
 
-[!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/cpp/mfc-activex-controls-methods_1.h)]
+[!code-cpp[NVC_MFC_AxUI#13](codesnippet/cpp/mfc-activex-controls-methods_1.h)]
 
-调度映射的主要目的是类的使用外部呼叫者 （如容器） 和实现方法的成员函数的控件的方法名称之间建立关系。 已声明调度映射后，需要对其控件的实现中定义 (。CPP) 文件。 以下代码行定义调度映射：
+调度映射的主要目的是建立外部调用方（如容器）使用的方法名称与实现这些方法的控件类的成员函数之间的关系。 声明调度映射后，需要在控件的实现（中定义）。CPP）文件。 以下代码行将定义调度映射：
 
-[!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/cpp/mfc-activex-controls-methods_2.cpp)]
-[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/cpp/mfc-activex-controls-methods_3.cpp)]
+[!code-cpp[NVC_MFC_AxUI#14](codesnippet/cpp/mfc-activex-controls-methods_2.cpp)]
+[!code-cpp[NVC_MFC_AxUI#15](codesnippet/cpp/mfc-activex-controls-methods_3.cpp)]
 
-如果您使用了[MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)若要创建项目时，这些行已自动添加。 如果未使用 MFC ActiveX 控件向导，您必须手动添加这些行。
+如果使用[MFC ActiveX 控件向导](reference/mfc-activex-control-wizard.md)创建项目，则会自动添加这些行。 如果未使用 MFC ActiveX 控件向导，则必须手动添加这些行。
 
-以下文章介绍了详细信息中的方法：
+以下文章详细介绍了方法：
 
-- [MFC ActiveX 控件：添加内置方法](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [MFC ActiveX 控件：添加常用方法](mfc-activex-controls-adding-stock-methods.md)
 
-- [MFC ActiveX 控件：添加自定义方法](../mfc/mfc-activex-controls-adding-custom-methods.md)
+- [MFC ActiveX 控件：添加自定义方法](mfc-activex-controls-adding-custom-methods.md)
 
-- [MFC ActiveX 控件：从方法返回错误代码](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [MFC ActiveX 控件：从方法返回错误代码](mfc-activex-controls-returning-error-codes-from-a-method.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+[MFC ActiveX 控件](mfc-activex-controls.md)

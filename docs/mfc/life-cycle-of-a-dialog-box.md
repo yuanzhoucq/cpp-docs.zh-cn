@@ -1,5 +1,5 @@
 ---
-title: 使用 MFC 中的对话框
+title: 在 MFC 中使用对话框
 ms.date: 09/27/2019
 helpviewer_keywords:
 - dialog boxes [MFC], life cycle
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: ad15250cf9a8dd663072cf9423263260bbb40a0e
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d365be21ef19a6779df649e9368fdc0cda4851df
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685726"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621450"
 ---
-# <a name="working-with-dialog-boxes-in-mfc"></a>使用 MFC 中的对话框
+# <a name="working-with-dialog-boxes-in-mfc"></a>在 MFC 中使用对话框
 
 在对话框的生命周期内，用户调用对话框，通常在创建和初始化对话框对象的命令处理程序中，用户与对话框交互，然后对话框关闭。
 
@@ -25,30 +25,30 @@ ms.locfileid: "71685726"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [创建和显示对话框](../mfc/creating-and-displaying-dialog-boxes.md)
+- [创建并显示对话框](creating-and-displaying-dialog-boxes.md)
 
-- [创建模式对话框](../mfc/creating-modal-dialog-boxes.md)
+- [创建模式对话框](creating-modal-dialog-boxes.md)
 
-- [创建无模式对话框](../mfc/creating-modeless-dialog-boxes.md)
+- [创建非模式对话框](creating-modeless-dialog-boxes.md)
 
-- [在内存中使用对话框模板](../mfc/using-a-dialog-template-in-memory.md)
+- [在内存中使用对话框模板](using-a-dialog-template-in-memory.md)
 
-- [设置对话框的背景色](../mfc/setting-the-dialog-boxs-background-color.md)
+- [设置对话框的背景色](setting-the-dialog-boxs-background-color.md)
 
-- [初始化对话框](../mfc/initializing-the-dialog-box.md)
+- [初始化对话框](initializing-the-dialog-box.md)
 
-- [处理对话框中的 Windows 消息](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [处理对话框中的 Windows 消息](handling-windows-messages-in-your-dialog-box.md)
 
-- [从对话框对象检索数据](../mfc/retrieving-data-from-the-dialog-object.md)
+- [从对话框对象检索数据](retrieving-data-from-the-dialog-object.md)
 
-- [关闭对话框](../mfc/closing-the-dialog-box.md)
+- [关闭对话框](closing-the-dialog-box.md)
 
-- [销毁对话框](../mfc/destroying-the-dialog-box.md)
+- [销毁对话框](destroying-the-dialog-box.md)
 
-- [对话框数据交换（DDX）和验证（DDV）](../mfc/dialog-data-exchange-and-validation.md)
+- [对话框数据交换（DDX）和验证（DDV）](dialog-data-exchange-and-validation.md)
 
-- [属性表对话框](../mfc/property-sheets-and-property-pages-mfc.md)
+- [属性表对话框](property-sheets-and-property-pages-mfc.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[对话框](../mfc/dialog-boxes.md)
+[对话框](dialog-boxes.md)

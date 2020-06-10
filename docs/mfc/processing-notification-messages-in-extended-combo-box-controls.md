@@ -5,12 +5,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 044cef644f746f7cb70944805882bd8e2f2806b4
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 58a7c5ec36807489d24014055c39775b4552be03
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908099"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620990"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>处理扩展组合框控件中的通知消息
 
@@ -20,19 +20,19 @@ ms.locfileid: "70908099"
 
 下表介绍了由扩展组合框控件发送的各种通知。
 
-- CBEN_BEGINEDIT 用户激活下拉列表或单击控件的编辑框时发送。
+- CBEN_BEGINEDIT 用户激活下拉列表或单击该控件的编辑框时发送。
 
-- CBEN_DELETEITEM 在删除项时发送。
+- CBEN_DELETEITEM 删除某项时发送。
 
-- CBEN_DRAGBEGIN 当用户开始拖动控件编辑部分中显示的项的图像时发送。
+- CBEN_DRAGBEGIN 用户开始拖动控件编辑部分中显示的项图片时发送。
 
-- 当用户结束编辑框中的某个操作或从控件的下拉列表中选择某项时，CBEN_ENDEDIT 发送。
+- CBEN_ENDEDIT 用户结束编辑框中的某个操作或从控件的下拉列表中选择某个项后发送。
 
-- CBEN_GETDISPINFO 发送以检索有关回调项的显示信息。
+- CBEN_GETDISPINFO 要检索有关回调项的显示信息时发送。
 
-- CBEN_INSERTITEM 在控件中插入新项时发送。
+- CBEN_INSERTITEM 在控件中插入新项后发送。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用 CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
-[控件](../mfc/controls-mfc.md)
+[使用 CComboBoxEx](using-ccomboboxex.md)<br/>
+[控件](controls-mfc.md)

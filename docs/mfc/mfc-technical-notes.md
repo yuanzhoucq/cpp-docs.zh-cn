@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 3621bca8116e3dd8edf202f4efa758bcb2590fcc
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 251c37f687c0176256f74c7e4dc14cff7f25c99c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617928"
 ---
 # <a name="mfc-technical-notes"></a>MFC 技术说明
 
@@ -21,10 +21,10 @@ ms.locfileid: "65610919"
 
 浏览技术说明的方式有两种：
 
-- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)
+- [按编号的技术说明](technical-notes-by-number.md)
 
-- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+- [按类别列出的技术说明](technical-notes-by-category.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)
+[MFC 桌面应用程序](mfc-desktop-applications.md)

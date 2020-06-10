@@ -12,23 +12,23 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: c8e79f54ed586201a7d82327662643a9a241b8f4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64888b8ab53ebd80f328e1efe79df6256f30f9b6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81357264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622570"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>管理 MFC 模块的状态数据
 
-本文讨论 MFC 模块的状态数据以及在执行流（路径代码将在执行时通过应用程序）进入和离开模块时如何更新此状态。 还讨论了具有AFX_MANAGE_STATE的切换模块状态，并讨论了METHOD_PROLOGUE宏。
+本文讨论 MFC 模块的状态数据以及在执行流（路径代码将在执行时通过应用程序）进入和离开模块时如何更新此状态。 还讨论了如何将模块状态与 AFX_MANAGE_STATE 和 METHOD_PROLOGUE 宏一起切换。
 
 > [!NOTE]
 > 此处术语“模块”指一个可执行程序，或指独立于剩下的应用程序运行、但使用 MFC DLL 的共享副本的 DLL（或 DLL 集）。 ActiveX 控件是典型的模块示例。
 
 如下图所示，MFC 具有应用程序中所用每个模块的状态数据。 此数据的示例包括 Windows 实例句柄（用于加载资源）、指向应用程序的当前 `CWinApp` 和 `CWinThread` 对象的指针、OLE 模块引用计数和大量保留 Windows 对象句柄和对应的 MFC 对象实例之间的连接的映射。 但是，当应用程序使用多个模块时，每个模块的状态数据不在应用程序范围内。 每个模块具有其自己的 MFC 状态数据的私有副本。
 
-![&#40;应用程序&#41;单个模块的状态数据](../mfc/media/vc387n1.gif "单个模块的状态数据&#40;应用程序&#41;") <br/>
+![单个模块的状态数据 &#40;应用程序&#41;](../mfc/media/vc387n1.gif "单个模块的状态数据 &#40;应用程序&#41;") <br/>
 单模块的状态数据（应用程序）
 
 模块的状态数据包含在结构中并且始终可通过指向所在结构的指针使用。 如下图所示，在执行流进入特定模块时，该模块的状态必须为“当前”或“有效”状态。 因此，每个线程对象具有指向应用程序的有效状态结构的指针。 时时更新此指针对管理应用程序的全局状态和维护每个模块状态的完整性至关重要。 全局状态的管理不当可能导致不可预知的应用程序行为。
@@ -38,12 +38,12 @@ ms.locfileid: "81357264"
 
 换句话说，每个模块负责在其所有入口点的模块状态之间正确切换。 “入口点”是执行流可以进入模块代码的所有位置。 入口点包括：
 
-- [DLL 中的导出函数](../mfc/exported-dll-function-entry-points.md)
+- [DLL 中的导出函数](exported-dll-function-entry-points.md)
 
-- [COM 接口的成员函数](../mfc/com-interface-entry-points.md)
+- [COM 接口的成员函数](com-interface-entry-points.md)
 
-- [窗口过程](../mfc/window-procedure-entry-points.md)
+- [窗口过程](window-procedure-entry-points.md)
 
 ## <a name="see-also"></a>另请参阅
 
-[一般 MFC 主题](../mfc/general-mfc-topics.md)
+[常规 MFC 主题](general-mfc-topics.md)

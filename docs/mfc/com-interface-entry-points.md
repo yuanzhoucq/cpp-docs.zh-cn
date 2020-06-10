@@ -9,22 +9,22 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 132dd7394119081dcaeb098c2088782ff5d40ae4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207847"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619339"
 ---
 # <a name="com-interface-entry-points"></a>COM 接口入口点
 
-对于 COM 接口的成员函数，使用`METHOD_PROLOGUE`宏维护适当的全局状态时调用导出接口的方法。
+对于 COM 接口的成员函数，使用 `METHOD_PROLOGUE` 宏在调用导出接口的方法时保持适当的全局状态。
 
 通常，由 `CCmdTarget` 派生的对象实现的接口的成员函数已使用此宏提供 `pThis` 指针的自动初始化。 例如：
 
-[!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#5](codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
-有关其他信息，请参阅[技术说明 38](../mfc/tn038-mfc-ole-iunknown-implementation.md)有关 MFC/OLE`IUnknown`实现。
+有关其他信息，请参阅 MFC/OLE 实现上的[技术说明 38](tn038-mfc-ole-iunknown-implementation.md) `IUnknown` 。
 
 按如下方式定义 `METHOD_PROLOGUE` 宏：
 
@@ -39,8 +39,8 @@ ms.locfileid: "62207847"
 
 `AFX_MANAGE_STATE( pThis->m_pModuleState )`
 
-在此表达式中， *m_pModuleState*被假定为包含对象的成员变量。 它由 `CCmdTarget` 基类实现，并在实例化对象时由 `COleObjectFactory` 初始化为适当的值。
+在此表达式中，假定*m_pModuleState*为包含对象的成员变量。 它由 `CCmdTarget` 基类实现，并在实例化对象时由 `COleObjectFactory` 初始化为适当的值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
+[管理 MFC 模块的状态数据](managing-the-state-data-of-mfc-modules.md)

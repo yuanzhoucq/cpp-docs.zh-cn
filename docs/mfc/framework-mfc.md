@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303406"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618789"
 ---
 # <a name="framework-mfc"></a>框架 (MFC)
 
@@ -29,26 +29,26 @@ ms.locfileid: "74303406"
 
 ## <a name="in-this-section"></a>本节内容
 
-[SDI 和 MDI](../mfc/sdi-and-mdi.md)
+[SDI 和 MDI](sdi-and-mdi.md)
 
-[文档、视图和框架](../mfc/documents-views-and-the-framework.md)
+[文档、视图和框架](documents-views-and-the-framework.md)
 
-[向导和资源编辑器](../mfc/wizards-and-the-resource-editors.md)
+[向导和资源编辑器](wizards-and-the-resource-editors.md)
 
 ## <a name="in-related-sections"></a>相关章节
 
-[基于框架生成](../mfc/building-on-the-framework.md)
+[基于框架生成](building-on-the-framework.md)
 
-[框架如何调用你的代码](../mfc/how-the-framework-calls-your-code.md)
+[框架如何调用你的代码](how-the-framework-calls-your-code.md)
 
-[CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)
+[CWinApp：应用程序类](cwinapp-the-application-class.md)
 
-[文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)
+[文档模板和文档/视图创建过程](document-templates-and-the-document-view-creation-process.md)
 
-[消息处理和映射](../mfc/message-handling-and-mapping.md)
+[消息处理和映射](message-handling-and-mapping.md)
 
-[窗口对象](../mfc/window-objects.md)
+[窗口对象](window-objects.md)
 
 ## <a name="see-also"></a>另请参阅
 
-[使用类编写 Windows 应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[使用类编写适用于 Windows 的应用程序](using-the-classes-to-write-applications-for-windows.md)

@@ -7,55 +7,55 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: a46096592c9983d04d2122bfabb56ece9346c4bc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d2ef494be66171cbcbf2b8b9e19c29c8bdc5c2f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371194"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619807"
 ---
 # <a name="printing"></a>打印
 
-微软视窗实现与设备无关的显示。 在 MFC 中，这意味着视图类`OnDraw`的成员函数中的相同绘图调用负责在显示器和其他设备（如打印机）上进行绘图。 对于打印预览，目标设备是打印到显示器的模拟打印机输出。
+Microsoft Windows 实现与设备无关的显示。 在 MFC 中，这意味着，同一绘图调用在 `OnDraw` 视图类的成员函数中，负责在显示器和其他设备（如打印机）上进行绘制。 对于打印预览，目标设备是显示的模拟打印机输出。
 
-## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>您在打印中的角色与框架的角色
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>你在打印中的角色与框架的角色
 
 您的视图类具有以下职责：
 
 - 通知框架文档中有多少页。
 
-- 当要求打印指定的页面时，绘制文档的该部分。
+- 当系统请求打印指定页面时，请绘制文档的该部分。
 
-- 分配和取消分配打印所需的任何字体或其他图形设备接口 （GDI） 资源。
+- 分配和释放打印所需的任何字体或其他图形设备接口（GDI）资源。
 
-- 如有必要，在打印给定页面之前发送更改打印机模式所需的任何转义代码，例如，以每页更改打印方向。
+- 如有必要，在打印给定页面之前发送更改打印机模式所需的任何转义代码，例如，在每页上更改打印方向。
 
-该框架的职责如下：
+框架的职责如下：
 
-- 显示 **"打印"** 对话框。
+- 显示 "**打印**" 对话框。
 
-- 为打印机创建[CDC](../mfc/reference/cdc-class.md)对象。
+- 为打印机创建[CDC](reference/cdc-class.md)对象。
 
-- 调用`CDC`对象的[StartDoc](../mfc/reference/cdc-class.md#startdoc)和[EndDoc](../mfc/reference/cdc-class.md#enddoc)成员函数。
+- 调用对象的[StartDoc](reference/cdc-class.md#startdoc)和[EndDoc](reference/cdc-class.md#enddoc)成员函数 `CDC` 。
 
-- `CDC`重复调用对象的[StartPage](../mfc/reference/cdc-class.md#startpage)成员函数，通知应打印哪个页面的视图类，并调用`CDC`对象的[EndPage](../mfc/reference/cdc-class.md#endpage)成员函数。
+- 重复调用对象的[StartPage](reference/cdc-class.md#startpage)成员函数 `CDC` ，通知视图类应打印哪个页面，并调用该对象的[EndPage](reference/cdc-class.md#endpage)成员函数 `CDC` 。
 
 - 在适当的时间调用视图中的可重写函数。
 
-以下文章讨论框架如何支持打印和打印预览：
+以下文章介绍了框架如何支持打印和打印预览：
 
-### <a name="what-do-you-want-to-know-more-about"></a>你想知道更多
+### <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [如何完成默认打印](../mfc/how-default-printing-is-done.md)
+- [如何完成默认打印](how-default-printing-is-done.md)
 
-- [多页文档](../mfc/multipage-documents.md)
+- [多页文档](multipage-documents.md)
 
-- [标题和页脚](../mfc/headers-and-footers.md)
+- [页眉和页脚](headers-and-footers.md)
 
-- [分配用于打印的 GDI 资源](../mfc/allocating-gdi-resources.md)
+- [分配用于打印的 GDI 资源](allocating-gdi-resources.md)
 
-- [打印预览](../mfc/print-preview-architecture.md)
+- [打印预览](print-preview-architecture.md)
 
 ## <a name="see-also"></a>另请参阅
 
-[打印和打印预览](../mfc/printing-and-print-preview.md)
+[打印和打印预览](printing-and-print-preview.md)
