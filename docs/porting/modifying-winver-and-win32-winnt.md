@@ -1,25 +1,25 @@
 ---
 title: 更新 WINVER 和 _WIN32_WINNT
-description: 何时以及如何更新升级的 Visual Studio C++项目中的 WINVER 和 _WIN32_WINNT 宏。
-ms.date: 01/22/2020
+description: 在升级后的 Visual Studio c + + 项目中更新 WINVER 和 _WIN32_WINNT 宏的时间和方式。
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725691"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141049"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>更新 WINVER 和 _WIN32_WINNT
 
-当你使用 Windows SDK 时，可以指定你的代码可在哪个版本的 Windows 上运行。 预处理器宏**WINVER**和 **_WIN32_WINNT**指定代码支持的最低操作系统版本。 Visual Studio 和 Microsoft C++编译器支持面向 WINDOWS 7 SP1 及更高版本。 旧版工具集包括对 Windows XP SP4、Windows Server 2003 SP4、Vista 和 Windows Server 2008 的支持。 不支持 windows 95、Windows 98、Windows ME、Windows NT 和 Windows 2000。
+当你使用 Windows SDK 时，可以指定你的代码可在哪个版本的 Windows 上运行。 预处理器宏**WINVER**和 **_WIN32_WINNT**指定代码支持的最低操作系统版本。 Visual Studio 和 Microsoft c + + 编译器支持面向 Windows 7 SP1 及更高版本。 旧版工具集包括对 Windows XP SP2、Windows Server 2003 SP1、Vista 和 Windows Server 2008 的支持。 不支持 windows 95、Windows 98、Windows ME、Windows NT 和 Windows 2000。
 
 升级旧项目时，可能需要更新**WINVER**或 **_WIN32_WINNT**宏。 如果为不受支持的 Windows 版本分配值，可能会看到与这些宏相关的编译错误。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 若要修改宏，请在标头文件中（例如，在*targetver.h*中，它由面向 Windows 的某些项目模板包含）添加以下行。
 
@@ -96,6 +96,6 @@ ms.locfileid: "76725691"
 
 若要深入了解这些宏的含义，请参阅 [使用 Windows 头文件](/windows/win32/WinProg/using-the-windows-headers)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Visual C++ 更改历史记录](../porting/visual-cpp-change-history-2003-2015.md)
