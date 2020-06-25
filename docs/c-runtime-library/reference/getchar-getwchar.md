@@ -1,6 +1,6 @@
 ---
 title: getchar、getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920331"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334979"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>返回值
 
-返回读取的字符。 若要指示读取错误或文件尾条件， **getchar**将返回**EOF**，并且**getwchar**将返回**WEOF**。 对于**getchar**，请使用**ferror**或**feof**检查是否有错误或文件结束。
+返回读取的字符。 这些函数将等待输入，在输入可用之前不会返回。
 
-## <a name="remarks"></a>备注
+若要指示读取错误或文件尾条件， **getchar**将返回**EOF**，并且**getwchar**将返回**WEOF**。 对于**getchar**，请使用**ferror**或**feof**检查是否有错误或文件结束。
+
+## <a name="remarks"></a>注解
 
 每个例程从**stdin**中读取单个字符，并递增关联的文件指针，使之指向下一个字符。 **getchar**与[_fgetchar](fgetc-fgetwc.md)相同，但它作为函数和宏实现。
 
-这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
+这些函数也会锁定调用线程，并且是线程安全的。 有关非锁定版本，请参阅 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -71,7 +73,7 @@ wint_t getwchar();
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> 或 \<wchar.h>|
