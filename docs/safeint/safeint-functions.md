@@ -1,6 +1,6 @@
 ---
 title: SafeInt 函数
-ms.date: 10/22/2018
+ms.date: 06/23/2020
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622066"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334915"
 ---
 # <a name="safeint-functions"></a>SafeInt 函数
 
-SafeInt 库提供了多个无需创建 [SafeInt 类](safeint-class.md)实例即可使用的函数。 若要防止一个数学运算出现整数溢出，可使用这些函数。 若要保护多个数学运算，应创建 `SafeInt` 对象。 创建 `SafeInt` 对象比多次使用这些函数更高效。
+SafeInt 库提供了多个无需创建 [SafeInt 类](safeint-class.md)实例即可使用的函数。 若要防止一个数学运算出现整数溢出，可使用这些函数。 若要保护多个数学运算，应创建 `SafeInt` 对象。 创建 `SafeInt` 对象比多次使用这些函数更有效。
 
 使用这些函数，可以对两个不同类型的参数进行比较或执行数学运算，无需先将它们转换为相同类型。
 
@@ -81,7 +81,7 @@ inline bool SafeAdd (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 要相加的第一个数字。 其类型必须为 T。
@@ -89,7 +89,7 @@ inline bool SafeAdd (
 *u*<br/>
 [输入] 要相加的第二个数字。 其类型必须为 U。
 
-*输出*<br/>
+*result*<br/>
 [输出] `SafeAdd` 在其中存储结果的参数。
 
 ### <a name="return-value"></a>返回值
@@ -108,12 +108,12 @@ inline bool SafeCast (
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *From*<br/>
 [输入] 要转换的源数字。 这必须是 `T` 类型。
 
-*收件人*<br/>
+*To*<br/>
 [输出] 对新数字类型的引用。 这必须是 `U` 类型。
 
 ### <a name="return-value"></a>返回值
@@ -133,15 +133,15 @@ inline bool SafeDivide (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
-[输入] 除数。 其类型必须为 T。
+[输入] 被除数。 其类型必须为 T。
 
 *u*<br/>
-[输入] 被除数。 其类型必须为 U。
+[输入] 除数。 其类型必须为 U。
 
-*输出*<br/>
+*result*<br/>
 [输出] `SafeDivide` 在其中存储结果的参数。
 
 ### <a name="return-value"></a>返回值
@@ -150,7 +150,7 @@ inline bool SafeDivide (
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
-比较两个数字，以确定它们是否相等。
+比较两个数字以确定它们是否相等。
 
 ```cpp
 template<typename T, typename U>
@@ -160,7 +160,7 @@ inline bool SafeEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 要比较的第一个数字。 其类型必须为 T。
@@ -172,7 +172,7 @@ inline bool SafeEquals (
 
 如果 t** 和 u** 相等，返回 true****；否则，返回 false****。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该方法增强了 `==`，因为 `SafeEquals` 使您能够将两个不同类型的数字作比较。
 
@@ -188,7 +188,7 @@ inline bool SafeGreaterThan (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 要比较的第一个数字。 这必须是 `T` 类型。
@@ -200,7 +200,7 @@ inline bool SafeGreaterThan (
 
 如果 t** 大于 u**，返回 true****；否则，返回 false****。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `SafeGreaterThan` 扩展了常规比较运算符，因为它可便于比较两个不同类型的数字。
 
@@ -216,7 +216,7 @@ inline bool SafeGreaterThanEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 要比较的第一个数字。 这必须是 `T` 类型。
@@ -228,7 +228,7 @@ inline bool SafeGreaterThanEquals (
 
 如果 t** 大于或等于 u**，返回 true****；否则，返回 false****。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `SafeGreaterThanEquals` 增强了标准比较运算符，因为它可便于比较两个不同类型的数字。
 
@@ -244,19 +244,19 @@ inline bool SafeLessThan (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 第一个数字。 这必须是 `T` 类型。
 
 *u*<br/>
-[输入] 第二个数字。 这必须是 `U` 类型。
+中第二个数字。 这必须是 `U` 类型。
 
 ### <a name="return-value"></a>返回值
 
 如果 t** 小于 u**，返回 true****；否则，返回 false****。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 这种方法增强了标准比较运算符，因为 `SafeLessThan` 可便于比较两个不同类型的数字。
 
@@ -272,7 +272,7 @@ inline bool SafeLessThanEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 要比较的第一个数字。 这必须是 `T` 类型。
@@ -284,7 +284,7 @@ inline bool SafeLessThanEquals (
 
 如果 t** 小于或等于 u**，返回 true****；否则，返回 false****。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `SafeLessThanEquals` 扩展了常规比较运算符，因为它可便于比较两个不同类型的数字。
 
@@ -301,7 +301,7 @@ inline bool SafeModulus (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 除数。 这必须是 `T` 类型。
@@ -309,7 +309,7 @@ inline bool SafeModulus (
 *u*<br/>
 [输入] 被除数。 这必须是 `U` 类型。
 
-*输出*<br/>
+*result*<br/>
 [输出] `SafeModulus` 在其中存储结果的参数。
 
 ### <a name="return-value"></a>返回值
@@ -329,7 +329,7 @@ inline bool SafeMultiply (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 要相乘的第一个数字。 这必须是 `T` 类型。
@@ -337,7 +337,7 @@ inline bool SafeMultiply (
 *u*<br/>
 [输入] 要相乘的第二个数字。 这必须是 `U` 类型。
 
-*输出*<br/>
+*result*<br/>
 [输出] `SafeMultiply` 在其中存储结果的参数。
 
 ### <a name="return-value"></a>返回值
@@ -346,7 +346,7 @@ inline bool SafeMultiply (
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
-确定两个数字不相等。
+确定两个数字是否不相等。
 
 ```cpp
 template<typename T, typename U>
@@ -356,7 +356,7 @@ inline bool SafeNotEquals (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 要比较的第一个数字。 这必须是 `T` 类型。
@@ -366,9 +366,9 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>返回值
 
-如果 t** 和 u** 不相等，返回 true****；否则，返回 false****。
+如果*t*和*u*不相等，则为**true** ;否则**为 false**。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该方法增强了 `!=`，因为 `SafeNotEquals` 使您能够将两个不同类型的数字作比较。
 
@@ -385,7 +385,7 @@ inline bool SafeSubtract (
 ) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*<br/>
 [输入] 减法运算中的第一个数字。 这必须是 `T` 类型。
@@ -393,7 +393,7 @@ inline bool SafeSubtract (
 *u*<br/>
 [输入] 要从 t** 中减去的数字。 这必须是 `U` 类型。
 
-*输出*<br/>
+*result*<br/>
 [输出] `SafeSubtract` 在其中存储结果的参数。
 
 ### <a name="return-value"></a>返回值
