@@ -156,16 +156,16 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: dad7c72510c64f5e63586a204f8994f429e7f80f
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737447"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 
-扩展[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)的功能，Windows 多文档接口 （MDI） 框架窗口。
+扩展了[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)（Windows 多文档界面（MDI）框架窗口的功能。
 
 ## <a name="syntax"></a>语法
 
@@ -177,100 +177,100 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMDIFramewndEx：：活动项目Recalc布局](#activeitemrecalclayout)|重新计算活动项的布局。|
+|[CMDIFrameWndEx：： ActiveItemRecalcLayout](#activeitemrecalclayout)|重新计算活动项的布局。|
 |`CMDIFrameWndEx::AddDockSite`|未使用此方法。|
-|[CMDIFramewndEx：：添加窗格](#addpane)|向停靠管理器注册窗格。|
-|[CMDIFramewndEx：：调整客户区域](#adjustclientarea)|减小工作区以允许边框。|
-|[CMDIFramewndEx：：调整扩展布局](#adjustdockinglayout)|重新计算所有停靠窗格的布局。|
-|[CMDIFramewndEx：：AreMDITabs](#aremditabs)|确定是否启用了 MDI 选项卡功能或 MDI 选项卡组功能。|
-|[CMDIframewndEx：：可隐藏控制巴托迪儿童](#cancovertcontrolbartomdichild)|框架调用以确定框架窗口是否可以将停靠窗格转换为选项卡式文档。|
-|[CMDIFramewndEx：：控制巴托塔贝德文件](#controlbartotabbeddocument)|将指定的停靠窗格转换为选项卡式文档。|
-|[CMDIFramewndEx：：创建文档窗口](#createdocumentwindow)|创建子文档窗口。|
-|[CMDIFramewndEx：：创建新窗口](#createnewwindow)|由框架调用以创建新窗口。|
+|[CMDIFrameWndEx：： AddPane](#addpane)|向停靠管理器注册窗格。|
+|[CMDIFrameWndEx：： AdjustClientArea](#adjustclientarea)|缩小工作区以允许使用边框。|
+|[CMDIFrameWndEx：： AdjustDockingLayout](#adjustdockinglayout)|重新计算所有停靠窗格的布局。|
+|[CMDIFrameWndEx：： AreMDITabs](#aremditabs)|确定是否启用 MDI 选项卡功能或 MDI 选项卡式组功能。|
+|[CMDIFrameWndEx：： CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|由框架调用，以确定框架窗口是否可以将停靠窗格转换为选项卡式文档。|
+|[CMDIFrameWndEx：： ControlBarToTabbedDocument](#controlbartotabbeddocument)|将指定的停靠窗格转换为选项卡式文档。|
+|[CMDIFrameWndEx：： CreateDocumentWindow](#createdocumentwindow)|创建子文档窗口。|
+|[CMDIFrameWndEx：： CreateNewWindow](#createnewwindow)|由框架调用以创建新窗口。|
 |`CMDIFrameWndEx::CreateObject`|由框架用于创建此类类型的动态实例。|
-|[CMDIFramewndEx：:DockPane](#dockpane)|将指定的窗格停靠到框架窗口。|
-|[CMDIframewndEx：:D奥克帕内左侧](#dockpaneleftof)|将一个窗格停靠到另一个窗格的左侧。|
-|[CMDIFramewndEx：启用自动隐藏窗格](#enableautohidepanes)|当窗格停靠在主框架窗口的指定边时，为窗格启用自动隐藏模式。|
-|[CMDIFramewndEx：：启用对接](#enabledocking)|启用属于 MDI 框架窗口的窗格的停靠。|
-|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|在全屏模式下显示或隐藏主菜单。|
+|[CMDIFrameWndEx：:D ockPane](#dockpane)|将指定的窗格停靠到框架窗口中。|
+|[CMDIFrameWndEx：:D ockPaneLeftOf](#dockpaneleftof)|将一个窗格停靠到另一个窗格的左侧。|
+|[CMDIFrameWndEx：： EnableAutoHidePanes](#enableautohidepanes)|当面板停靠在主框架窗口的指定边时，为其启用自动隐藏模式。|
+|[CMDIFrameWndEx：： EnableDocking](#enabledocking)|允许停靠属于 MDI 框架窗口的窗格。|
+|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|显示或隐藏全屏模式下的主菜单。|
 |[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|为框架窗口启用全屏模式。|
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|启用或禁用停靠状态的加载。|
-|[CMDIFramewndEx：：启用MDITabbed组](#enablemditabbedgroups)|启用或禁用 MDI 选项卡式组功能。|
-|[CMDIFramewndEx：启用MDITabs](#enablemditabs)|启用或禁用 MDI 选项卡功能。 启用后，框架窗口将显示每个 MDI 子窗口的选项卡。|
-|[CMDIFramewndEx：启用MDITabs上次激活](#enablemditabslastactiveactivation)|指定在用户关闭当前选项卡时是否应激活最后一个活动选项卡。|
-|[CMDIFramewndEx：：启用PaneMenu](#enablepanemenu)|启用或禁用自动创建和管理弹出式窗格菜单，该菜单显示应用程序窗格的列表。  .|
-|[CMDIFramewndEx：：启用Windows对话](#enablewindowsdialog)|插入其命令 ID 调用[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)对话框的菜单项。|
-|[CMDIFramewndEx：获取主动弹出](#getactivepopup)|返回一个指向当前显示的弹出菜单的指针。|
-|[CMDIFramewndEx：：获取窗格](#getpane)|返回指向具有指定控件 ID 的窗格的指针。|
-|[CMDIFramewndEx：获取默认 Resid](#getdefaultresid)|返回 MDI 框架窗口的共享资源的 ID。|
-|[CMDIFramewndEx：getMDITab组](#getmditabgroups)|返回 MDI 选项卡式窗口的列表。|
-|[CMDIFramewndEx：GetMDITabs](#getmditabs)|返回对带下划线选项卡窗口的引用。|
-|[CMDIFramewndEx：获取MDITabs上下文菜单允许项目](#getmditabscontextmenualloweditems)|返回一个标志组合，确定启用 MDI 选项卡式组功能时，哪些上下文菜单项有效。|
-|[CMDIFramewndEx：：获取菜单栏](#getmenubar)|返回指向附加到框架窗口的菜单栏对象的指针。|
-|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|检索框架的功能区条控件。|
-|[CMDIFramewndEx：：获取关闭条形](#gettearoffbars)|返回处于拆解状态的[CPane](../../mfc/reference/cpane-class.md)派生对象的列表。|
-|`CMDIFrameWndEx::GetThisClass`|由框架调用以获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
-|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|当应用程序显示工具栏按钮的工具提示时，由框架调用。|
-|[CMDIFramewndEx：：插入窗格](#insertpane)|向停靠管理器注册指定的窗格。|
+|[CMDIFrameWndEx：： EnableMDITabbedGroups](#enablemditabbedgroups)|启用或禁用 MDI 选项卡式组功能。|
+|[CMDIFrameWndEx：： EnableMDITabs](#enablemditabs)|启用或禁用 MDI 选项卡功能。 启用后，框架窗口将显示每个 MDI 子窗口的选项卡。|
+|[CMDIFrameWndEx：： EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定在用户关闭当前选项卡时是否应激活最后一个活动选项卡。|
+|[CMDIFrameWndEx：： EnablePaneMenu](#enablepanemenu)|启用或禁用弹出窗口窗格菜单的自动创建和管理，其中显示了应用程序窗格的列表。  .|
+|[CMDIFrameWndEx：： EnableWindowsDialog](#enablewindowsdialog)|插入其命令 ID 调用[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)对话框的菜单项。|
+|[CMDIFrameWndEx：： GetActivePopup](#getactivepopup)|返回一个指向当前显示的弹出菜单的指针。|
+|[CMDIFrameWndEx：： GetPane](#getpane)|返回一个指向具有指定控件 ID 的窗格的指针。|
+|[CMDIFrameWndEx：： GetDefaultResId](#getdefaultresid)|返回 MDI 框架窗口的共享资源的 ID。|
+|[CMDIFrameWndEx：： GetMDITabGroups](#getmditabgroups)|返回 MDI 选项卡式窗口的列表。|
+|[CMDIFrameWndEx：： GetMDITabs](#getmditabs)|返回对带下划线的选项卡式窗口的引用。|
+|[CMDIFrameWndEx：： GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|返回在启用 MDI 选项卡式组功能时确定哪些上下文菜单项有效的标志组合。|
+|[CMDIFrameWndEx：： GetMenuBar](#getmenubar)|返回一个指向附加到框架窗口的菜单栏对象的指针。|
+|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|检索框架的功能区栏控件。|
+|[CMDIFrameWndEx：： GetTearOffBars](#gettearoffbars)|返回[CPane](../../mfc/reference/cpane-class.md)派生对象的列表，这些对象处于撕状态。|
+|`CMDIFrameWndEx::GetThisClass`|由框架调用以获取指向与此类类型相关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|当应用程序显示工具栏按钮的工具提示时由框架调用。|
+|[CMDIFrameWndEx：： InsertPane](#insertpane)|向停靠管理器注册指定窗格。|
 |[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|确定框架窗口是否处于全屏模式。|
-|[CMDIFramewndEx：IsMDITab贝德集团](#ismditabbedgroup)|确定是否启用了 MDI 选项卡式组功能。|
-|[CMDIframewndEx：是MDITab集团的成员](#ismemberofmditabgroup)|确定指定的选项卡式窗口是否位于 MDI 选项卡式组中的窗口列表中。|
-|[CMDIFramewndEx：：IsMenuBar可用](#ismenubaravailable)|确定框架窗口是否具有菜单栏。|
-|[CMDIFramewndEx：：IsPointNearDockSite](#ispointneardocksite)|确定指定点是否靠近停靠站点。|
+|[CMDIFrameWndEx：： IsMDITabbedGroup](#ismditabbedgroup)|确定是否已启用 MDI 选项卡式组功能。|
+|[CMDIFrameWndEx：： IsMemberOfMDITabGroup](#ismemberofmditabgroup)|确定指定的选项卡式窗口是否处于 MDI 选项卡式组中的窗口列表中。|
+|[CMDIFrameWndEx：： IsMenuBarAvailable](#ismenubaravailable)|确定框架窗口是否包含菜单栏。|
+|[CMDIFrameWndEx：： IsPointNearDockSite](#ispointneardocksite)|确定指定点是否在停靠站点附近。|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|确定框架窗口是否处于打印预览模式。|
-|[CMDIFramewndEx：：加载帧](#loadframe)|从资源信息创建框架窗口。 （重写 `CMDIFrameWnd::LoadFrame`。）|
-|[CMDIFramewndEx：：加载MDIState](#loadmdistate)|加载 MDI 选项卡组的指定布局和以前打开的文档列表。|
-|[CMDIFramewndEx：：MDITabmoveToNextGroup](#mditabmovetonextgroup)|将活动选项卡从当前活动的选项卡式窗口移动到下一个或上一个选项卡式选项卡组。|
-|[CMDIFramewndEx：：MDITabNewGroup](#mditabnewgroup)|创建具有单个窗口的新选项卡式组。|
-|[CMDIFramewndEx：：谈判边界空间](#negotiateborderspace)|在 OLE 就地激活期间协商框架窗口中的边框空间。|
-|[CMDIFramewndEx：：关闭对接窗格](#onclosedockingpane)|当用户单击可停靠窗格上的 **"关闭**"按钮时，由框架调用。|
-|[CMDIFramewndEx：：在关闭迷你框架上](#oncloseminiframe)|当用户单击浮动迷你框架窗口中的 **"关闭**"按钮时，由框架调用。|
-|[CMDIFramewndEx：：在关闭弹出菜单](#onclosepopupmenu)|当活动的弹出菜单处理 WM_DESTROY 消息时由框架调用。|
-|[CMDIFramewndEx：：在CmdMsg上](#oncmdmsg)|由框架调用以路由和调度命令消息并更新命令用户界面对象。|
-|[CMDIFramewndEx：：在画上菜单图像](#ondrawmenuimage)|当绘制与菜单项关联的图像时由框架调用。|
-|[CMDIFramewndEx：：在DrawMenulogo上](#ondrawmenulogo)|当[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)处理WM_PAINT消息时，由框架调用。|
-|[CMDIFramewndEx：：在EraseMDI客户端背景上](#onerasemdiclientbackground)|当 MDI 帧窗口处理WM_ERASEBKGND消息时，由框架调用。|
-|[CMDIFramewndEx：：在MenuButton工具命中测试](#onmenubuttontoolhittest)|当[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)对象处理WM_NCHITTEST消息时，由框架调用。|
-|[CMDIFramewndEx：：移动迷你框架](#onmoveminiframe)|由框架调用以移动微型框架窗口。|
-|[CMDIFramewndEx：：打开预览模式](#onsetpreviewmode)|设置应用程序的主框架窗口打印预览模式。 （重写 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。）|
-|[CMDIFramewndEx：：在显示自定义窗格](#onshowcustomizepane)|激活"快速自定义"窗格时，由框架调用。|
-|[CMDIFramewndEx：上秀MDITab上下文菜单](#onshowmditabcontextmenu)|当上下文菜单应显示在其中一个选项卡上时，由框架调用。 （仅适用于 MDI 选项卡式组。|
-|[CMDIFramewndEx：：在显示窗格](#onshowpanes)|由框架调用以显示或隐藏窗格。|
-|[CMDIFramewndEx：：在显示弹出菜单](#onshowpopupmenu)|当激活弹出菜单时由框架调用。|
-|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|当客户端 MDI 窗口的大小发生变化时，由框架调用。|
-|[CMDIFramewndEx：：在TearoffMenu上](#ontearoffmenu)|当激活带有拖曳栏的菜单时由框架调用。|
-|[CMDIFramewndEx：：更新框架菜单](#onupdateframemenu)|由框架调用以更新框架菜单。 （重写 `CMDIFrameWnd::OnUpdateFrameMenu`。）|
-|[CMDIFramewndEx：:P从点](#panefrompoint)|返回包含指定点的停靠窗格。|
-|`CMDIFrameWndEx::PreTranslateMessage`|类[CWinApp](../../mfc/reference/cwinapp-class.md)在窗口消息发送到[翻译消息](/windows/win32/api/winuser/nf-winuser-translatemessage)和[调度消息](/windows/win32/api/winuser/nf-winuser-dispatchmessage)窗口功能之前，用于转换窗口消息。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|
-|[CMDIFramewndEx：recalclayout](#recalclayout)|由框架调用以重新计算框架窗口的布局。 （覆盖[CFramewnd：recalclayout](../../mfc/reference/cframewnd-class.md#recalclayout).）|
-|[CMDIFramewndEx：：从Dock管理器中删除Pane](#removepanefromdockmanager)|取消注册窗格并从停靠管理器中删除它。|
-|[CMDIFramewndEx：：保存MDIState](#savemdistate)|保存 MDI 选项卡组的当前布局和以前打开的文档列表。|
+|[CMDIFrameWndEx：： LoadFrame](#loadframe)|从资源信息创建框架窗口。 （重写 `CMDIFrameWnd::LoadFrame`。）|
+|[CMDIFrameWndEx：： LoadMDIState](#loadmdistate)|加载指定的 MDI 选项卡式组的布局和以前打开的文档的列表。|
+|[CMDIFrameWndEx：： MDITabMoveToNextGroup](#mditabmovetonextgroup)|将活动选项卡从当前活动的选项卡式窗口移到下一个或上一个选项卡式组。|
+|[CMDIFrameWndEx：： MDITabNewGroup](#mditabnewgroup)|创建一个新的选项卡式组，其中包含一个窗口。|
+|[CMDIFrameWndEx：： NegotiateBorderSpace](#negotiateborderspace)|在 OLE 就地激活过程中，在框架窗口中协商边框空间。|
+|[CMDIFrameWndEx：： OnCloseDockingPane](#onclosedockingpane)|当用户单击可停靠窗格上的 "**关闭**" 按钮时，由框架调用。|
+|[CMDIFrameWndEx：： OnCloseMiniFrame](#oncloseminiframe)|当用户在浮动袖珍框架窗口上单击 "**关闭**" 按钮时，由框架调用。|
+|[CMDIFrameWndEx：： OnClosePopupMenu](#onclosepopupmenu)|当活动的弹出菜单处理 WM_DESTROY 消息时由框架调用。|
+|[CMDIFrameWndEx：： OnCmdMsg](#oncmdmsg)|由框架调用以路由和调度命令消息，并更新命令用户界面对象。|
+|[CMDIFrameWndEx：： OnDrawMenuImage](#ondrawmenuimage)|当绘制与菜单项关联的图像时由框架调用。|
+|[CMDIFrameWndEx：： OnDrawMenuLogo](#ondrawmenulogo)|当[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)处理 WM_PAINT 消息时由框架调用。|
+|[CMDIFrameWndEx：： OnEraseMDIClientBackground](#onerasemdiclientbackground)|当 MDI 框架窗口处理 WM_ERASEBKGND 消息时由框架调用。|
+|[CMDIFrameWndEx：： OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|当[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)对象处理 WM_NCHITTEST 消息时由框架调用。|
+|[CMDIFrameWndEx：： OnMoveMiniFrame](#onmoveminiframe)|由框架调用以移动微型框架窗口。|
+|[CMDIFrameWndEx：： OnSetPreviewMode](#onsetpreviewmode)|设置应用程序的主框架窗口打印预览模式。 （重写 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。）|
+|[CMDIFrameWndEx：： OnShowCustomizePane](#onshowcustomizepane)|当激活快速自定义窗格时由框架调用。|
+|[CMDIFrameWndEx：： OnShowMDITabContextMenu](#onshowmditabcontextmenu)|当上下文菜单应显示在某个选项卡上时由框架调用。 （仅对 MDI 选项卡式组有效。）|
+|[CMDIFrameWndEx：： OnShowPanes](#onshowpanes)|由框架调用以显示或隐藏窗格。|
+|[CMDIFrameWndEx：： OnShowPopupMenu](#onshowpopupmenu)|当激活弹出菜单时由框架调用。|
+|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|当客户端 MDI 窗口的大小正在更改时由框架调用。|
+|[CMDIFrameWndEx：： OnTearOffMenu](#ontearoffmenu)|当激活带有拖曳栏的菜单时由框架调用。|
+|[CMDIFrameWndEx：： OnUpdateFrameMenu](#onupdateframemenu)|由框架调用以更新框架菜单。 （重写 `CMDIFrameWnd::OnUpdateFrameMenu`。）|
+|[CMDIFrameWndEx：:P aneFromPoint](#panefrompoint)|返回包含指定点的停靠窗格。|
+|`CMDIFrameWndEx::PreTranslateMessage`|在将窗口消息调度到[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函数之前，由[CWinApp](../../mfc/reference/cwinapp-class.md)类用于转换窗口消息。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|
+|[CMDIFrameWndEx：： RecalcLayout](#recalclayout)|由框架调用以重新计算框架窗口的布局。 （重写[CFrameWnd：： RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。）|
+|[CMDIFrameWndEx：： RemovePaneFromDockManager](#removepanefromdockmanager)|取消注册窗格，并将其从停靠管理器中删除。|
+|[CMDIFrameWndEx：： SaveMDIState](#savemdistate)|保存 MDI 选项卡式组的当前布局和以前打开的文档的列表。|
 |[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|设置打印预览框架窗口。|
-|[CMDIFramewndEx：：设置工具栏菜单](#setuptoolbarmenu)|通过搜索虚拟项并将其替换为指定的用户定义项修改工具栏对象。|
-|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|将主帧从常规模式切换到全屏模式。|
-|[CMDIFramewndEx：：显示窗格](#showpane)|显示或隐藏指定的窗格。|
-|[CMDIFramewndEx：：显示窗口对话](#showwindowsdialog)|创建一个[CMFCWindowsManager对话框](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)并打开它。|
-|[CMDIFramewndEx：：Tabbed文档到控制栏](#tabbeddocumenttocontrolbar)|将指定的选项卡式文档转换为停靠窗格。|
+|[CMDIFrameWndEx：： SetupToolbarMenu](#setuptoolbarmenu)|通过搜索虚拟项并将其替换为指定的用户定义项修改工具栏对象。|
+|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|将主框架从常规模式切换到全屏模式。|
+|[CMDIFrameWndEx：： ShowPane](#showpane)|显示或隐藏指定窗格。|
+|[CMDIFrameWndEx：： ShowWindowsDialog](#showwindowsdialog)|创建[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)框并将其打开。|
+|[CMDIFrameWndEx：： TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|将指定的选项卡式文档转换为停靠窗格。|
 |[CMDIFrameWndEx::UpdateCaption](#updatecaption)|由框架调用以更新窗口框架标题。|
-|[CMDIFramewndEx：：更新MDITab贝德巴图标](#updatemditabbedbarsicons)|设置每个 MDI 选项卡式窗格的图标。|
-|[CMDIFramewndEx：：赢帮助](#winhelp)|由框架调用以启动 WinHelp 应用程序或上下文帮助。 （覆盖[CWnd：winHelp](../../mfc/reference/cwnd-class.md#winhelp).）|
+|[CMDIFrameWndEx：： UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|为每个 MDI 选项卡式窗格设置图标。|
+|[CMDIFrameWndEx：： WinHelp](#winhelp)|由框架调用以启动 WinHelp 应用程序或上下文帮助。 （重写[CWnd：： WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。）|
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMDIFramewndEx：：m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|确定停靠窗格是否可以转换为 MDI 子窗口。|
-|[CMDIFramewndEx：：m_bDisableSetRedraw](#m_bdisablesetredraw)|启用或禁用 MDI 子窗口的重绘优化。|
+|[CMDIFrameWndEx：： m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|确定停靠窗格是否可转换为 MDI 子窗口。|
+|[CMDIFrameWndEx：： m_bDisableSetRedraw](#m_bdisablesetredraw)|启用或禁用 MDI 子窗口的重绘优化。|
 
 ## <a name="remarks"></a>备注
 
-要利用 MDI 应用程序中的扩展自定义功能，请从`CMDIFrameWndEx`而不是`CMDIFrameWnd`派生应用程序的 MDI 框架窗口类。
+若要利用 MDI 应用程序中的扩展自定义功能，请从而不是派生应用程序的 MDI 框架窗口类 `CMDIFrameWndEx` `CMDIFrameWnd` 。
 
 ## <a name="example"></a>示例
 
-下面的示例派生类来自`CMDIFrameWndEx`。 此代码段来自[DrawClient 示例：基于 MFC 功能区的 OLE 对象绘图应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例从派生一个类 `CMDIFrameWndEx` 。 此代码段来自于[DrawClient 示例： MFC 基于功能区的 OLE 对象绘图应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -290,9 +290,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxMDIFrameWndEx.h
+**标头：** afxMDIFrameWndEx
 
-## <a name="cmdiframewndexactiveitemrecalclayout"></a><a name="activeitemrecalclayout"></a>CMDIFramewndEx：：活动项目Recalc布局
+## <a name="cmdiframewndexactiveitemrecalclayout"></a><a name="activeitemrecalclayout"></a>CMDIFrameWndEx：： ActiveItemRecalcLayout
 
 重新计算活动项的布局。
 
@@ -300,7 +300,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 void ActiveItemRecalcLayout();
 ```
 
-## <a name="cmdiframewndexaddpane"></a><a name="addpane"></a>CMDIFramewndEx：：添加窗格
+## <a name="cmdiframewndexaddpane"></a><a name="addpane"></a>CMDIFrameWndEx：： AddPane
 
 向停靠管理器注册窗格。
 
@@ -312,29 +312,29 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>参数
 
-*p控制栏*<br/>
-[在]指向要注册的窗格。
+*pControlBar*<br/>
+中指向要注册的窗格的指针。
 
-*b泰尔*<br/>
-[在]指定是否将此窗格添加到列表的末尾。
+*bTail*<br/>
+中指定是否将此窗格添加到列表的末尾。
 
 ### <a name="return-value"></a>返回值
 
-如果窗格已成功注册，则返回非零值。 如果窗格已注册到停靠管理器，则返回 0。
+如果成功注册窗格，则返回一个非零值。 如果窗格已注册到停靠管理器，则返回0。
 
 ### <a name="remarks"></a>备注
 
-每个窗格都必须注册到[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)，然后才能参与扩展布局。 使用此方法可通知停靠管理器要停靠特定窗格。 注册该窗格后，停靠管理器将根据其对齐设置和停靠管理器维护的窗格列表中的位置将其对齐。
+每个窗格都必须在[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)中注册，然后才能加入到停靠布局中。 使用此方法通知停靠管理器您要停靠特定窗格。 注册该窗格后，定位管理器会根据其对齐方式设置，并将其对齐到停靠管理器维护的窗格的列表中。
 
-## <a name="cmdiframewndexadjustclientarea"></a><a name="adjustclientarea"></a>CMDIFramewndEx：：调整客户区域
+## <a name="cmdiframewndexadjustclientarea"></a><a name="adjustclientarea"></a>CMDIFrameWndEx：： AdjustClientArea
 
-减小工作区以允许边框。
+缩小工作区以允许使用边框。
 
 ```
 virtual void AdjustClientArea();
 ```
 
-## <a name="cmdiframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CMDIFramewndEx：：调整扩展布局
+## <a name="cmdiframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CMDIFrameWndEx：： AdjustDockingLayout
 
 重新计算所有停靠窗格的布局。
 
@@ -345,15 +345,15 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="parameters"></a>参数
 
 *hdwp*<br/>
-[在]标识多窗口位置结构。 您可以通过调用`BeginDeferWindowPos`获得此值。
+中标识多窗口位置结构。 可以通过调用来获取此值 `BeginDeferWindowPos` 。
 
 ### <a name="remarks"></a>备注
 
 调用此成员函数以重新计算停靠到框架窗口的所有窗格的布局。
 
-## <a name="cmdiframewndexaremditabs"></a><a name="aremditabs"></a>CMDIFramewndEx：：AreMDITabs
+## <a name="cmdiframewndexaremditabs"></a><a name="aremditabs"></a>CMDIFrameWndEx：： AreMDITabs
 
-确定是否启用了 MDI 选项卡功能或 MDI 选项卡组功能。
+确定是否启用 MDI 选项卡功能或 MDI 选项卡式组功能。
 
 ```
 BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
@@ -361,30 +361,30 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 
 ### <a name="parameters"></a>参数
 
-*pnMDITabs 类型*<br/>
-[出]指向整数变量的指针，指示启用了哪些要素：
+*pnMDITabsType*<br/>
+弄指向整数变量的指针，该变量指示启用了哪些功能：
 
-- 0： 禁用所有功能。
+- 0：禁用所有功能。
 
-- 1： 启用 MDI 选项卡。
+- 1：启用 MDI 选项卡。
 
-- 2： 启用 MDI 选项卡组。
+- 2：已启用 MDI 选项卡式组。
 
 ### <a name="return-value"></a>返回值
 
-如果启用了 MDI 选项卡或 MDI 选项卡组，则返回 TRUE。
+如果启用 MDI 选项卡或 MDI 选项卡式组，则返回 TRUE。
 
-如果未启用上述功能，则返回 FALSE。
+如果未启用上述任何功能，则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可确定是否为框架窗口启用了 MDI 选项卡或 MDI 选项卡组。 使用[CMDIFrameWndEx：启用MDITabs](#enablemditabs)以启用或禁用 MDI 选项卡功能。
+使用此函数可确定是否为框架窗口启用 MDI 选项卡或 MDI 选项卡式组。 使用[CMDIFrameWndEx：： EnableMDITabs](#enablemditabs)可以启用或禁用 MDI 选项卡功能。
 
-使用[CMDIFrameWndEx：：启用 MDI 标签组](#enablemditabbedgroups)以启用或禁用 MDI 选项卡式组功能。
+使用[CMDIFrameWndEx：： EnableMDITabbedGroups](#enablemditabbedgroups)可以启用或禁用 MDI 选项卡式组功能。
 
-## <a name="cmdiframewndexcancovertcontrolbartomdichild"></a><a name="cancovertcontrolbartomdichild"></a>CMDIframewndEx：：可隐藏控制巴托迪儿童
+## <a name="cmdiframewndexcancovertcontrolbartomdichild"></a><a name="cancovertcontrolbartomdichild"></a>CMDIFrameWndEx：： CanCovertControlBarToMDIChild
 
-框架调用以确定框架窗口是否可以将停靠窗格转换为选项卡式文档
+由框架调用，以确定框架窗口是否可以将停靠窗格转换为选项卡式文档
 
 ```
 virtual BOOL CanCovertControlBarToMDIChild();
@@ -392,13 +392,13 @@ virtual BOOL CanCovertControlBarToMDIChild();
 
 ### <a name="return-value"></a>返回值
 
-如果框架窗口可以将停靠窗格转换为选项卡式文档，则返回 TRUE;否则返回 FALSE。
+如果框架窗口可以将停靠窗格转换为选项卡式文档，则返回 TRUE;否则，返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-在派生类中重写此方法并返回 TRUE，以便将停靠窗格转换为选项卡式文档。 或者，您可以将[CMDIFrameWndEx：：：m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)设置为 TRUE。
+在派生类中重写此方法并返回 TRUE，以允许将停靠窗格转换为选项卡式文档。 或者，您可以将[CMDIFrameWndEx：： m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)设置为 TRUE。
 
-## <a name="cmdiframewndexcontrolbartotabbeddocument"></a><a name="controlbartotabbeddocument"></a>CMDIFramewndEx：：控制巴托塔贝德文件
+## <a name="cmdiframewndexcontrolbartotabbeddocument"></a><a name="controlbartotabbeddocument"></a>CMDIFrameWndEx：： ControlBarToTabbedDocument
 
 将指定的停靠窗格转换为选项卡式文档。
 
@@ -409,17 +409,17 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ### <a name="parameters"></a>参数
 
 *pBar*<br/>
-指向要转换的停靠窗格的指针。
+一个指针，指向要转换的停靠窗格。
 
 ### <a name="return-value"></a>返回值
 
-返回指向包含停靠窗格的新 MDI 子窗口的指针。
+返回一个指向包含停靠窗格的新 MDI 子窗口的指针。
 
 ### <a name="remarks"></a>备注
 
-此方法将停靠窗格转换为选项卡式文档。 调用此方法时，框架将创建一个[CMDIChildWndEx 类](../../mfc/reference/cmdichildwndex-class.md)对象，从停靠管理器中删除停靠窗格，并将停靠窗格添加到新的 MDI 子窗口。 MDI 子窗口调整停靠窗格的大小以覆盖整个工作区
+此方法将停靠窗格转换为选项卡式文档。 当你调用此方法时，框架会创建一个[CMDIChildWndEx 类](../../mfc/reference/cmdichildwndex-class.md)对象，从停靠管理器中删除停靠窗格，并将停靠窗格添加到新的 MDI 子窗口。 MDI 子窗口将调整停靠窗格的大小，以覆盖整个工作区
 
-## <a name="cmdiframewndexcreatedocumentwindow"></a><a name="createdocumentwindow"></a>CMDIFramewndEx：：创建文档窗口
+## <a name="cmdiframewndexcreatedocumentwindow"></a><a name="createdocumentwindow"></a>CMDIFrameWndEx：： CreateDocumentWindow
 
 创建子文档窗口。
 
@@ -431,11 +431,11 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="parameters"></a>参数
 
-*lpcszDoc名称*<br/>
-[在]包含文档标识符的文本字符串。 通常，它是文档文件的完整路径。
+*lpcszDocName*<br/>
+中包含文档标识符的文本字符串。 通常，它是文档文件的完整路径。
 
 *pObj*<br/>
-[在]指向用户定义对象的指针。 例如，开发人员可以创建描述文档的应用程序特定数据结构，并告诉如何在启动时初始化文档。
+中指向用户定义的对象的指针。 例如，开发人员可以创建一个应用程序特定的数据结构，该结构描述文档并说明如何在启动时初始化该文档。
 
 ### <a name="return-value"></a>返回值
 
@@ -443,19 +443,19 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="remarks"></a>备注
 
-当框架加载以前保存在注册表中的文档列表时，它将调用此方法。
+在加载以前保存在注册表中的文档列表时，框架会调用此方法。
 
 重写此方法，以便在从注册表加载文档时创建文档。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`CreateDocumentWindow` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `CreateDocumentWindow` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
-在此示例中，`g_strStartViewName`可以是实际上不是从磁盘文件加载的"虚拟文档"（例如"起始页"）的名称。 因此，我们需要特殊处理来处理这种情况。
+在此示例中， `g_strStartViewName` 可能是不是从磁盘文件实际加载的 "虚拟文档" （例如 "起始页"）的名称。 因此，我们需要特殊处理来处理这种情况。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
-## <a name="cmdiframewndexcreatenewwindow"></a><a name="createnewwindow"></a>CMDIFramewndEx：：创建新窗口
+## <a name="cmdiframewndexcreatenewwindow"></a><a name="createnewwindow"></a>CMDIFrameWndEx：： CreateNewWindow
 
 由框架调用以创建新窗口。
 
@@ -467,19 +467,19 @@ virtual CMDIChildWndEx* CreateNewWindow(
 
 ### <a name="parameters"></a>参数
 
-*lpcszDoc名称*<br/>
-[在]文档名称。
+*lpcszDocName*<br/>
+中文档名称。
 
 *pObj*<br/>
-[在]保留以供将来使用。
+中保留供将来使用。
 
 ### <a name="return-value"></a>返回值
 
 指向新窗口的指针。
 
-## <a name="cmdiframewndexdockpane"></a><a name="dockpane"></a>CMDIFramewndEx：:DockPane
+## <a name="cmdiframewndexdockpane"></a><a name="dockpane"></a>CMDIFrameWndEx：:D ockPane
 
-将指定的窗格停靠到框架窗口。
+将指定的窗格停靠到框架窗口中。
 
 ```cpp
 void DockPane(
@@ -491,25 +491,25 @@ void DockPane(
 ### <a name="parameters"></a>参数
 
 *pBar*<br/>
-[在]指向要停靠的窗格的指针。
+中指向要停靠的窗格的指针。
 
 *nDockBarID*<br/>
-[在]指定要停靠的帧窗口的哪一侧。
+中指定要停靠到框架窗口的哪一侧。
 
 *lpRect*<br/>
-[在]未使用。
+中不使用。
 
 ### <a name="remarks"></a>备注
 
-此方法将指定的窗格停靠到框架窗口的一侧，该边是在[CBasePane：：启用停靠](../../mfc/reference/cbasepane-class.md#enabledocking)和[CMDIFrameWndEx：：启用停靠](#enabledocking)时指定的。
+此方法将指定的窗格停靠到在调用[CBasePane：： EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)和[CMDIFrameWndEx：： EnableDocking](#enabledocking)时指定的框架窗口的一侧。
 
 ### <a name="example"></a>示例
 
-下面的示例演示 `DockPane` 方法的用法。 此代码段来自[VisualStudioDemo 示例：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示 `DockPane` 方法的用法。 此代码段来自于[VisualStudioDemo 示例： MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
-## <a name="cmdiframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CMDIframewndEx：:D奥克帕内左侧
+## <a name="cmdiframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CMDIFrameWndEx：:D ockPaneLeftOf
 
 将一个窗格停靠到另一个窗格的左侧。
 
@@ -522,10 +522,10 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>参数
 
 *pBar*<br/>
-[在]指向停靠窗格的指针。
+中指向停靠窗格的指针。
 
-*左撇子*<br/>
-[在]指向用作停靠站点的窗格的指针。 .
+*pLeftOf*<br/>
+中指向充当停靠站点的窗格的指针。 .
 
 ### <a name="return-value"></a>返回值
 
@@ -533,17 +533,17 @@ BOOL DockPaneLeftOf(
 
 ### <a name="remarks"></a>备注
 
-调用此方法以预定义的顺序停靠多个窗格对象。 此方法将*pBar*指定的窗格停靠到*pLeftOf*指定的窗格的左侧。
+调用此方法以按预定义顺序停靠若干窗格对象。 此方法将*pBar*指定的窗格停靠在*pLeftOf*指定的窗格的左侧。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`DockPaneLeftOf`[VisualStudioDemo 示例：MFC 可视化工作室应用程序中](../../overview/visual-cpp-samples.md)使用该方法。
+下面的示例演示如何 `DockPaneLeftOf` 在 VisualStudioDemo 示例中使用该方法[： MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
-## <a name="cmdiframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CMDIFramewndEx：启用自动隐藏窗格
+## <a name="cmdiframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CMDIFrameWndEx：： EnableAutoHidePanes
 
-当窗格停靠在主框架窗口的指定边时，为窗格启用自动隐藏模式。
+当面板停靠在主框架窗口的指定边时，为其启用自动隐藏模式。
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -551,8 +551,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>参数
 
-*dwDock风格*<br/>
-[在]指定将启用的主框架窗口的两侧。 使用以下一个或多个标志。
+*dwDockStyle*<br/>
+中指定将启用的主框架窗口的边。 使用以下一个或多个标志。
 
 - CBRS_ALIGN_LEFT
 
@@ -564,19 +564,19 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="return-value"></a>返回值
 
-调用此函数，以便在窗格停靠在主框架窗口的指定边时启用自动隐藏模式。
+调用此函数可在其停靠在主框架窗口的指定边时为其启用自动隐藏模式。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`EnableAutoHidePanes`[VisualStudioDemo 示例：MFC 可视化工作室应用程序中](../../overview/visual-cpp-samples.md)使用该方法。
+下面的示例演示如何 `EnableAutoHidePanes` 在 VisualStudioDemo 示例中使用该方法[： MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexenabledocking"></a><a name="enabledocking"></a>CMDIFramewndEx：：启用对接
+## <a name="cmdiframewndexenabledocking"></a><a name="enabledocking"></a>CMDIFrameWndEx：： EnableDocking
 
-启用属于 MDI 框架窗口的窗格的停靠。
+允许停靠属于 MDI 框架窗口的窗格。
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -584,24 +584,24 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>参数
 
-*dwDock风格*<br/>
-[在]指定要应用的停靠样式。
+*dwDockStyle*<br/>
+中指定要应用的停靠样式。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-调用此函数以启用属于对象的窗格的`CMDIFrameWndEx`停靠。
+调用此函数可启用属于对象的窗格的停靠 `CMDIFrameWndEx` 。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`EnableDocking`[VisualStudioDemo 示例：MFC 可视化工作室应用程序中](../../overview/visual-cpp-samples.md)使用该方法。
+下面的示例演示如何 `EnableDocking` 在 VisualStudioDemo 示例中使用该方法[： MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
-## <a name="cmdiframewndexenablefullscreenmainmenu"></a><a name="enablefullscreenmainmenu"></a>CMDIFramewndEx：启用全屏主菜单
+## <a name="cmdiframewndexenablefullscreenmainmenu"></a><a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx：： EnableFullScreenMainMenu
 
-在全屏模式下显示或隐藏主菜单。
+显示或隐藏全屏模式下的主菜单。
 
 ```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
@@ -609,12 +609,12 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 ### <a name="parameters"></a>参数
 
-*b启用菜单*<br/>
-[在]TRUE 以全屏模式显示主菜单，或 FALSE 以隐藏主菜单。
+*bEnableMenu*<br/>
+中若要在全屏模式下显示主菜单，则为 TRUE; 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexenablefullscreenmode"></a><a name="enablefullscreenmode"></a>CMDIFramewndEx：：启用全屏模式
+## <a name="cmdiframewndexenablefullscreenmode"></a><a name="enablefullscreenmode"></a>CMDIFrameWndEx：： EnableFullScreenMode
 
 为框架窗口启用全屏模式。
 
@@ -624,14 +624,14 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 ### <a name="parameters"></a>参数
 
-*ui 全屏幕Cmd*<br/>
-[在]启用或禁用全屏模式的命令的 ID。
+*uiFullScreenCmd*<br/>
+中启用或禁用全屏模式的命令 ID。
 
 ### <a name="remarks"></a>备注
 
-在全屏模式下，所有停靠控制栏、工具栏和菜单都隐藏，活动视图将调整大小以占据全屏。启用全屏模式时，必须指定启用或禁用该命令的命令的 ID。 可以从主框架`EnableFullScreenMode`的功能`OnCreate`调用。 当框架窗口切换到全屏模式时，框架将创建一个浮动工具栏，其中一个按钮具有指定的命令 ID。如果要将主菜单保留在屏幕上，请致电[CMDIFrameWndEx：：启用全屏幕主菜单](#enablefullscreenmainmenu)。
+在全屏模式下，将隐藏所有停靠控件栏、工具栏和菜单，并调整活动视图的大小以占据全屏。启用全屏模式时，必须指定启用或禁用它的命令 ID。 可以 `EnableFullScreenMode` 从主框架的函数中调用 `OnCreate` 。 当框架窗口切换到全屏模式时，框架会创建一个浮动工具栏，其中包含一个按钮，该按钮具有指定的命令 ID。如果要在屏幕上保留主菜单，请调用[CMDIFrameWndEx：： EnableFullScreenMainMenu](#enablefullscreenmainmenu)。
 
-## <a name="cmdiframewndexenableloaddockstate"></a><a name="enableloaddockstate"></a>CMDIFramewndEx：：启用LoadDockState
+## <a name="cmdiframewndexenableloaddockstate"></a><a name="enableloaddockstate"></a>CMDIFrameWndEx：： EnableLoadDockState
 
 启用或禁用停靠状态的加载。
 
@@ -641,12 +641,12 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*b 启用*<br/>
-[在]TRUE 要启用停靠状态的加载，FALSE 将禁用停靠状态的加载。
+*bEnable*<br/>
+中若要启用停靠状态的加载，则为 FALSE，禁用停靠状态的加载。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexenablemditabbedgroups"></a><a name="enablemditabbedgroups"></a>CMDIFramewndEx：：启用MDITabbed组
+## <a name="cmdiframewndexenablemditabbedgroups"></a><a name="enablemditabbedgroups"></a>CMDIFrameWndEx：： EnableMDITabbedGroups
 
 启用或禁用框架窗口的 MDI 选项卡式组功能。
 
@@ -658,41 +658,41 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>参数
 
-*b 启用*<br/>
-[在]如果为 TRUE，则启用 MDI 选项卡式组功能;如果为 TRUE，则启用 MDI 选项卡式组功能。如果 FALSE，则禁用 MDI 选项卡式组功能。
+*bEnable*<br/>
+中如果为 TRUE，则启用 MDI 选项卡式组功能;如果为 FALSE，则禁用 MDI 选项卡式组功能。
 
 *params*<br/>
-[在]指定框架应用于在 MDI 工作区中创建的子窗口的参数。
+中指定框架适用于在 MDI 客户端区域中创建的子窗口的参数。
 
 ### <a name="remarks"></a>备注
 
-使用此方法可启用或禁用 MDI 选项卡式组功能。 此功能使 MDI 应用程序能够将子窗口显示为在 MDI 工作区内垂直或水平对齐的选项卡式窗口。 将用拆分器分隔选项卡式窗口组。 用户可以使用拆分器调整选项卡式组的大小。
+使用此方法可以启用或禁用 MDI 选项卡式组功能。 此功能允许 MDI 应用程序将子窗口显示为在 MDI 工作区中垂直或水平对齐的选项卡式窗口。 将用拆分器分隔选项卡式窗口组。 用户可以使用拆分器调整选项卡式组的大小。
 
 - 用户可以：
 
-- 在组之间拖动单个选项卡。
+- 拖动组间的各个选项卡。
 
-- 将各个选项卡拖动到窗口边缘以创建新组。
+- 将各个选项卡拖动到窗口的边缘，以创建新组。
 
 - 使用快捷菜单移动选项卡或创建新组。
 
-- 应用程序可以保存选项卡式窗口的当前布局和当前打开的文档列表。
+- 您的应用程序可以保存选项卡式窗口的当前布局以及当前打开的文档的列表。
 
-如果将此方法称为*bEnable 设置为*FALSE，则*将忽略参数*。
+如果在*bEnable*设置为 FALSE 的情况下调用此方法，则将忽略*params* 。
 
-即使已启用 MDI 选项卡式组，您也可以再次调用此方法以修改子窗口的设置。 将*bEnable*设置为 TRUE 的方法调用该方法，并修改`CMDITabInfo`*参数*参数指定的对象成员。
+即使已启用 MDI 选项卡式组，也可以再次调用此方法来修改子窗口的设置。 调用方法，将*bEnable*设置为 TRUE，并修改 `CMDITabInfo` 由*params*参数指定的对象的成员。
 
-有关如何使用 MDI 选项卡式组的详细信息，请参阅[MDI 选项卡式组](../../mfc/mdi-tabbed-groups.md)。
+有关如何使用 MDI 选项卡式组的详细信息，请参阅[Mdi 选项卡式组](../../mfc/mdi-tabbed-groups.md)。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`EnableMDITabbedGroups` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `EnableMDITabbedGroups` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
-## <a name="cmdiframewndexenablemditabs"></a><a name="enablemditabs"></a>CMDIFramewndEx：启用MDITabs
+## <a name="cmdiframewndexenablemditabs"></a><a name="enablemditabs"></a>CMDIFrameWndEx：： EnableMDITabs
 
-启用或禁用 MDI 框架窗口的 MDI 选项卡功能。 启用后，框架窗口将显示每个 MDI 子窗口的选项卡。
+为 MDI 框架窗口启用或禁用 MDI 选项卡功能。 启用后，框架窗口将显示每个 MDI 子窗口的选项卡。
 
 ```cpp
 void EnableMDITabs(
@@ -707,42 +707,42 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>参数
 
-*b 启用*<br/>
-指定是否启用了选项卡。
+*bEnable*<br/>
+指定是否启用选项卡。
 
-*b图标*<br/>
-指定是否应在选项卡上显示图标。
+*bIcons*<br/>
+指定图标是否应显示在选项卡上。
 
-*选项卡位置*<br/>
+*tabLocation*<br/>
 指定选项卡标签的位置。
 
-*bTab关闭按钮*<br/>
-指定是否显示选项卡关闭按钮。
+*bTabCloseButton*<br/>
+指定是否显示制表符关闭按钮。
 
 style <br/>
-指定选项卡的样式。 对常规选项卡或 STYLE_3D_ONENOTE对 Microsoft OneNote 选项卡使用STYLE_3D_SCROLLED。
+指定选项卡的样式。 将 STYLE_3D_SCROLLED 用于常规选项卡或 Microsoft OneNote 选项卡 STYLE_3D_ONENOTE。
 
-*bTab自定义工具提示*<br/>
-指定是否启用了自定义工具提示。
+*bTabCustomTooltips*<br/>
+指定是否启用自定义工具提示。
 
-*b 活动标签关闭按钮*<br/>
-如果为 TRUE，则"**关闭**"按钮将显示在活动选项卡上，而不是选项卡区域的右角。
+*bActiveTabCloseButton*<br/>
+如果为 TRUE，则 "**关闭**" 按钮将显示在 "活动" 选项卡上，而不是在选项卡区域的右侧。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以启用或禁用 MDI 框架窗口的 MDI 选项卡功能。 启用后，所有子窗口都显示为选项卡。
+调用此方法可为 MDI 框架窗口启用或禁用 MDI 选项卡功能。 启用后，所有子窗口都显示为选项卡。
 
-选项卡标签可以位于框架的顶部或底部，具体取决于参数*选项卡"位置"* 的设置。 您可以指定`CMFCTabCtrl::LOCATION_BOTTOM`（默认设置）或`CMFCTabCtrl::LOCATION_TOP`。
+选项卡标签可以位于帧的顶部或底部，具体取决于参数*tabLocation*的设置。 您可以指定 `CMFCTabCtrl::LOCATION_BOTTOM` （默认设置）或 `CMFCTabCtrl::LOCATION_TOP` 。
 
-如果*bTabCustomTool 提示*为 TRUE，则会向主框架窗口发送AFX_WM_ON_GET_TAB_TOOLTIP消息。 您的代码可以处理此消息，并为框架提供 MDI 选项卡的自定义工具提示。
+如果*bTabCustomTooltips*为 TRUE，则会向主框架窗口发送 AFX_WM_ON_GET_TAB_TOOLTIP 消息。 你的代码可以处理此消息，并为 framework 提供了用于 MDI 选项卡的自定义工具提示。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`EnableMDITabs` [MDITabsDemo 示例中使用：MFC 选项卡式 MDI 应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `EnableMDITabs` 在[MDITabsDemo 示例中使用： MFC 选项卡式 MDI 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
-## <a name="cmdiframewndexenablemditabslastactiveactivation"></a><a name="enablemditabslastactiveactivation"></a>CMDIFramewndEx：启用MDITabs上次激活
+## <a name="cmdiframewndexenablemditabslastactiveactivation"></a><a name="enablemditabslastactiveactivation"></a>CMDIFrameWndEx：： EnableMDITabsLastActiveActivation
 
 指定在用户关闭当前选项卡时是否应打开最后一个活动选项卡。
 
@@ -753,7 +753,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ### <a name="parameters"></a>参数
 
 *bLastActiveTab*<br/>
-[在]如果为 TRUE，则启用激活最后一个活动选项卡。如果 FALSE，则禁用最后一个活动选项卡的激活。
+中如果为 TRUE，则启用上一个活动选项卡的激活。如果为 FALSE，则禁用上一个活动选项卡的激活。
 
 ### <a name="remarks"></a>备注
 
@@ -761,15 +761,15 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 - 激活下一个选项卡。
 
-- 激活以前处于活动状态的选项卡。
+- 激活以前活动的选项卡。
 
-默认实现使用第一种方式。
+默认实现使用第一种方法。
 
-用于`EnableMDITabsLastActiveActivation`启用第二种选项卡激活方式。 它模拟 Windows 打开 MDI 子窗口的方式。
+使用 `EnableMDITabsLastActiveActivation` 启用选项卡激活的第二种方式。 它模拟 Windows 打开 MDI 子窗口的方式。
 
-## <a name="cmdiframewndexenablepanemenu"></a><a name="enablepanemenu"></a>CMDIFramewndEx：：启用PaneMenu
+## <a name="cmdiframewndexenablepanemenu"></a><a name="enablepanemenu"></a>CMDIFrameWndEx：： EnablePaneMenu
 
-启用或禁用自动创建和管理弹出式窗格菜单，该菜单显示应用程序窗格的列表。
+启用或禁用弹出窗口窗格菜单的自动创建和管理，其中显示了应用程序窗格的列表。
 
 ```cpp
 void EnablePaneMenu(
@@ -783,35 +783,35 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>参数
 
-*b 启用*<br/>
-[在]如果为 TRUE，则启用窗格菜单的自动处理;如果为 TRUE，则启用窗格菜单的自动处理。如果 FALSE，则禁用自动处理。
+*bEnable*<br/>
+中如果为 TRUE，则启用窗格菜单的自动处理;如果为 FALSE，则禁用自动处理。
 
-*ui 定制Cmd*<br/>
-[在]**"自定义"** 菜单项的命令 ID。 此菜单项通常添加到窗格列表的末尾。
+*uiCustomizeCmd*<br/>
+中"**自定义**" 菜单项的命令 ID。 此菜单项通常添加到窗格列表的末尾。
 
-*str定制标签*<br/>
-[在]要为 **"自定义"** 菜单项（用于本地化）显示的文本。
+*strCustomizeLabel*<br/>
+中要为 "**自定义**" 菜单项显示的文本（用于本地化）。
 
-*uiView工具栏菜单入口ID*<br/>
-[在]指定打开窗格菜单的工具栏菜单项的 ID。 通常这是 **"视图"** 菜单的**工具栏**子菜单。
+*uiViewToolbarsMenuEntryID*<br/>
+中指定打开窗格菜单的工具栏菜单项的 ID。 通常，这是 "**视图**" 菜单的 "**工具栏**" 子菜单。
 
-*bContextMenu 仅显示工具栏*<br/>
-[在]如果为 TRUE，窗格菜单仅显示工具栏列表。 如果 FALSE，菜单将显示工具栏和停靠条的列表。
+*bContextMenuShowsToolbarsOnly*<br/>
+中如果为 TRUE，则窗格菜单仅显示工具栏列表。 如果为 FALSE，则菜单显示工具栏和停靠栏的列表。
 
-*b 只查看菜单显示工具栏*<br/>
-[在]如果为 TRUE，窗格菜单仅显示工具栏列表。 如果 FALSE，菜单将显示工具栏和停靠条的列表。
+*bViewMenuShowsToolbarsOnly*<br/>
+中如果为 TRUE，则窗格菜单仅显示工具栏列表。 如果为 FALSE，则菜单显示工具栏和停靠栏的列表。
 
 ### <a name="remarks"></a>备注
 
-弹出窗格菜单显示应用程序窗格的列表，并允许用户显示或隐藏单个窗格。
+弹出式窗格菜单将显示应用程序窗格的列表，并允许用户显示或隐藏单个窗格。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`EnablePaneMenu` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `EnablePaneMenu` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
-## <a name="cmdiframewndexenablewindowsdialog"></a><a name="enablewindowsdialog"></a>CMDIFramewndEx：：启用Windows对话
+## <a name="cmdiframewndexenablewindowsdialog"></a><a name="enablewindowsdialog"></a>CMDIFrameWndEx：： EnableWindowsDialog
 
 插入其命令 ID 调用[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)对话框的菜单项。
 
@@ -831,29 +831,29 @@ void EnableWindowsDialog(
 
 ### <a name="parameters"></a>参数
 
-*乌伊梅奈*<br/>
-[在]指定菜单的资源 ID。
+*uiMenuId*<br/>
+中指定菜单的资源 ID。
 
 *lpszMenuText*<br/>
-[在]指定项目的文本。
+中指定项的文本。
 
-*b 显示帮助按钮*<br/>
-[在]指定是否在窗口管理对话框上显示 **"帮助**"按钮。
+*bShowHelpButton*<br/>
+中指定是否在 "windows 管理" 对话框中显示 "**帮助**" 按钮。
 
 *uiMenuTextResId*<br/>
-[在]包含项文本字符串的字符串资源标识符。
+中字符串资源标识符，其中包含项的文本字符串。
 
 ### <a name="remarks"></a>备注
 
-使用此方法插入其命令调用 MDI 子窗口管理对话框[（CMFCWindowsManagerDialog 类](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)） 的菜单项。 新项目将插入到*uiMenuId*指定的菜单中。 处理`EnableWindowsDialog`WM_CREATE消息时调用。
+使用此方法插入其命令调用 MDI 子窗口管理对话框（ [CMFCWindowsManagerDialog 类](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)）的菜单项。 新项将插入到由*uiMenuId*指定的菜单中。 `EnableWindowsDialog`处理 WM_CREATE 消息时调用。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`EnableWindowsDialog` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `EnableWindowsDialog` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
-## <a name="cmdiframewndexgetactivepopup"></a><a name="getactivepopup"></a>CMDIFramewndEx：获取主动弹出
+## <a name="cmdiframewndexgetactivepopup"></a><a name="getactivepopup"></a>CMDIFrameWndEx：： GetActivePopup
 
 返回一个指向当前显示的弹出菜单的指针。
 
@@ -863,13 +863,13 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>返回值
 
-指向活动弹出菜单的指针;如果没有弹出窗口菜单处于活动状态，则为 NULL。
+指向活动弹出菜单的指针;如果没有活动的弹出菜单，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可以获取指向当前显示的[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象的指针。
+使用此函数获取指向当前显示的[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象的指针。
 
-## <a name="cmdiframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>CMDIFramewndEx：获取默认 Resid
+## <a name="cmdiframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>CMDIFrameWndEx：： GetDefaultResId
 
 返回 MDI 框架窗口的共享资源的 ID。
 
@@ -879,13 +879,13 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>返回值
 
-资源 ID 值。 如果框架窗口没有菜单栏，则为 0。
+资源 ID 值。 如果框架窗口没有菜单栏，则为0。
 
 ### <a name="remarks"></a>备注
 
-此方法返回 CFramewnd 加载 MDI 帧窗口时指定的资源[ID：：LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)。
+此方法返回由[CFrameWnd：： LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)加载 MDI 框架窗口时指定的资源 ID。
 
-## <a name="cmdiframewndexgetmditabgroups"></a><a name="getmditabgroups"></a>CMDIFramewndEx：getMDITab组
+## <a name="cmdiframewndexgetmditabgroups"></a><a name="getmditabgroups"></a>CMDIFrameWndEx：： GetMDITabGroups
 
 返回 MDI 选项卡式窗口的列表。
 
@@ -895,15 +895,15 @@ const CObList& GetMDITabGroups() const;
 
 ### <a name="return-value"></a>返回值
 
-对包含选项卡式窗口列表的[CObList 类](../../mfc/reference/coblist-class.md)对象的引用。 不要存储或修改列表。
+对[CObList 类](../../mfc/reference/coblist-class.md)对象的引用，该对象包含选项卡式窗口的列表。 请勿存储或修改列表。
 
 ### <a name="remarks"></a>备注
 
-使用此方法可以访问选项卡式窗口的列表。 如果要更改或查询各个选项卡式窗口的某些参数，则可能会有所帮助。
+使用此方法访问选项卡式窗口的列表。 如果要更改或查询各个选项卡式窗口的某些参数，这会很有帮助。
 
-## <a name="cmdiframewndexgetmditabs"></a><a name="getmditabs"></a>CMDIFramewndEx：GetMDITabs
+## <a name="cmdiframewndexgetmditabs"></a><a name="getmditabs"></a>CMDIFrameWndEx：： GetMDITabs
 
-返回对带下划线选项卡窗口的引用。
+返回对带下划线的选项卡式窗口的引用。
 
 ```
 CMFCTabCtrl& GetMDITabs();
@@ -911,11 +911,11 @@ CMFCTabCtrl& GetMDITabs();
 
 ### <a name="return-value"></a>返回值
 
-对带下划线选项卡窗口的引用。
+对带下划线的选项卡式窗口的引用。
 
-## <a name="cmdiframewndexgetmditabscontextmenualloweditems"></a><a name="getmditabscontextmenualloweditems"></a>CMDIFramewndEx：获取MDITabs上下文菜单允许项目
+## <a name="cmdiframewndexgetmditabscontextmenualloweditems"></a><a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx：： GetMDITabsContextMenuAllowedItems
 
-返回一个标志组合，确定启用 MDI 选项卡式组功能时哪些操作有效。
+返回在启用 MDI 选项卡式组功能时确定哪些操作有效的标志组合。
 
 ```
 DWORD GetMDITabsContextMenuAllowedItems();
@@ -923,31 +923,31 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 ### <a name="return-value"></a>返回值
 
-以下标志的位-OR 组合：
+以下标志的按位 "或" 组合：
 
-- BCGP_MDI_CREATE_VERT_GROUP - 可以创建垂直选项卡组。
+- AFX_MDI_CREATE_VERT_GROUP-可以创建垂直选项卡组。
 
-- BCGP_MDI_CREATE_HORZ_GROUP - 可以创建水平选项卡组。
+- AFX_MDI_CREATE_HORZ_GROUP-可以创建水平选项卡组。
 
-- BCGP_MDI_CAN_MOVE_PREV - 可以将选项卡移动到上一个选项卡组。
+- AFX_MDI_CAN_MOVE_PREV-可以将选项卡移到上一个选项卡组。
 
-- BCGP_MDI_CAN_MOVE_NEXT - 可以将选项卡移动到下一个选项卡组。
+- AFX_MDI_CAN_MOVE_NEXT-可以将选项卡移到下一个选项卡组。
 
 ### <a name="remarks"></a>备注
 
-启用 MDI 选项卡组功能后，必须知道特定窗口的选项卡上允许执行哪些操作。 此方法分析选项卡式窗口的当前布局，并返回可用于生成快捷菜单的标志组合。
+启用 MDI 选项卡式组功能后，必须知道在特定窗口的选项卡上允许哪些操作。 此方法分析选项卡式窗口的当前布局，并返回可用于生成的标志的组合，例如快捷菜单。
 
-当所有选项卡式窗口垂直对齐或只有一个选项卡式窗口时，可以创建新的垂直选项卡组。
+当所有选项卡式窗口垂直对齐时，或在只有一个选项卡式窗口时，可以创建新的垂直选项卡组。
 
-当所有选项卡式窗口水平对齐时，或者只有一个选项卡式窗口时，可以创建新的水平选项卡组。
+当所有选项卡式窗口水平对齐时，或在只有一个选项卡式窗口时，可以创建新的水平选项卡组。
 
-仅当选项卡式窗口中有多个选项卡时，才能将选项卡移动到前一个组。
+仅当选项卡式窗口中有多个选项卡时，才能将选项卡移到上一个组。
 
-仅当选项卡式窗口中有多个选项卡时，才能将选项卡移动到下一个组。
+仅当选项卡式窗口中有多个选项卡时，才能将选项卡移到下一组。
 
-## <a name="cmdiframewndexgetmenubar"></a><a name="getmenubar"></a>CMDIFramewndEx：：获取菜单栏
+## <a name="cmdiframewndexgetmenubar"></a><a name="getmenubar"></a>CMDIFrameWndEx：： GetMenuBar
 
-返回指向附加到框架窗口的菜单栏对象的指针。
+返回一个指向附加到框架窗口的菜单栏对象的指针。
 
 ```
 const CMFCMenuBar* GetMenuBar() const;
@@ -957,9 +957,9 @@ const CMFCMenuBar* GetMenuBar() const;
 
 指向菜单栏对象的指针。
 
-## <a name="cmdiframewndexgetpane"></a><a name="getpane"></a>CMDIFramewndEx：：获取窗格
+## <a name="cmdiframewndexgetpane"></a><a name="getpane"></a>CMDIFrameWndEx：： GetPane
 
-返回指向具有指定控件 ID 的窗格的指针。
+返回一个指向具有指定控件 ID 的窗格的指针。
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -968,15 +968,15 @@ CBasePane* GetPane(UINT nID);
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[在]控件 ID。
+中控件 ID。
 
 ### <a name="return-value"></a>返回值
 
-指向具有指定控件 ID 的窗格的指针（如果存在）。 否则，NULL。
+指向具有指定控件 ID 的窗格的指针（如果存在）。 否则为 NULL。
 
-## <a name="cmdiframewndexgetribbonbar"></a><a name="getribbonbar"></a>CMDIFramewndEx：获取带状栏
+## <a name="cmdiframewndexgetribbonbar"></a><a name="getribbonbar"></a>CMDIFrameWndEx：： GetRibbonBar
 
-检索框架的功能区条控件。
+检索框架的功能区栏控件。
 
 ```
 CMFCRibbonBar* GetRibbonBar();
@@ -984,13 +984,13 @@ CMFCRibbonBar* GetRibbonBar();
 
 ### <a name="return-value"></a>返回值
 
-指向框架的[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)。
+指向帧的[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)的指针。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexgettearoffbars"></a><a name="gettearoffbars"></a>CMDIFramewndEx：：获取关闭条形
+## <a name="cmdiframewndexgettearoffbars"></a><a name="gettearoffbars"></a>CMDIFrameWndEx：： GetTearOffBars
 
-返回撕下菜单的列表。
+返回一个脱离菜单列表。
 
 ```
 const CObList& GetTearOffBars() const;
@@ -998,15 +998,15 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>返回值
 
-对[CObList 类](../../mfc/reference/coblist-class.md)对象的引用，该对象包含指向`CPane`处于分泪状态的派生对象的指针集合。
+对[CObList 类](../../mfc/reference/coblist-class.md)对象的引用，该对象包含指向 `CPane` 派生对象的指针的集合，这些对象处于脱离状态。
 
 ### <a name="remarks"></a>备注
 
-`CMDIFrameWndEx`维护撕掉菜单的集合。 使用此方法检索对此列表的引用。
+`CMDIFrameWndEx`维护一个脱离菜单的集合。 使用此方法可检索此列表的引用。
 
-## <a name="cmdiframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CMDIFramewndEx：：获取工具栏按钮工具提示文本
+## <a name="cmdiframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx：： GetToolbarButtonToolTipText
 
-当应用程序显示工具栏按钮的工具提示时，由框架调用。
+当应用程序显示工具栏按钮的工具提示时由框架调用。
 
 ```
 virtual BOOL GetToolbarButtonToolTipText(
@@ -1017,20 +1017,20 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="parameters"></a>参数
 
 *pButton*<br/>
-[在]指向工具栏按钮的指针。
+中指向工具栏按钮的指针。
 
-*斯特特文本*<br/>
-[在]要显示按钮的工具提示文本。
+*strTTText*<br/>
+中要为按钮显示的工具提示文本。
 
 ### <a name="return-value"></a>返回值
 
-如果已显示工具提示，则为 TRUE。 否则。
+如果显示了工具提示，则为 TRUE。 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexinsertpane"></a><a name="insertpane"></a>CMDIFramewndEx：：插入窗格
+## <a name="cmdiframewndexinsertpane"></a><a name="insertpane"></a>CMDIFrameWndEx：： InsertPane
 
-向停靠管理器注册指定的窗格。
+向停靠管理器注册指定窗格。
 
 ```
 BOOL InsertPane(
@@ -1041,24 +1041,24 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>参数
 
-*p控制栏*<br/>
-[在]指向要插入的窗格的指针。
+*pControlBar*<br/>
+中指向要插入的窗格的指针。
 
-*p目标*<br/>
-[在]指向窗格之前或之后插入窗格的指针。
+*pTarget*<br/>
+中一个指针，指向要在其之前或之后插入窗格的窗格。
 
-*b 后*<br/>
-[在]如果为 TRUE，则*pControlBar*在*pTarget*后插入。 如果 FALSE，则在*pTarget*之前插入*pControlBar。*
+*bAfter*<br/>
+中如果为 TRUE，则在*pTarget*之后插入*pControlBar* 。 如果为 FALSE，则在*pTarget*之前插入*pControlBar* 。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功注册窗格，则为 TRUE，如果窗格已注册到停靠管理器，则 FALSE。
+如果该方法成功注册了窗格，则为 TRUE; 如果该窗格已注册到停靠管理器，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-使用此方法可以告诉停靠管理器*pControlBar*指定的窗格。 停靠管理器将根据窗格的对齐方式和停靠管理器内部列表中的位置对齐此窗格。
+使用此方法将*pControlBar*指定的窗格告知停靠管理器。 停靠管理器将根据窗格的对齐方式与停靠管理器的内部列表中的位置对齐此窗格。
 
-## <a name="cmdiframewndexisfullscreen"></a><a name="isfullscreen"></a>CMDIFramewndEx：是全屏
+## <a name="cmdiframewndexisfullscreen"></a><a name="isfullscreen"></a>CMDIFrameWndEx：： IsFullScreen
 
 确定框架窗口是否处于全屏模式。
 
@@ -1068,13 +1068,13 @@ BOOL IsFullScreen() const;
 
 ### <a name="return-value"></a>返回值
 
-如果帧窗口处于全屏模式，则为 TRUE;如果帧窗口处于全屏模式，则为 TRUE。否则 FALSE。
+如果框架窗口处于全屏模式，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-您可以通过调用[CMDIFrameWndEx：：启用全屏模式](#enablefullscreenmode)方法来设置全屏模式。
+可以通过调用[CMDIFrameWndEx：： EnableFullScreenMode](#enablefullscreenmode)方法来设置全屏模式。
 
-## <a name="cmdiframewndexismditabbedgroup"></a><a name="ismditabbedgroup"></a>CMDIFramewndEx：IsMDITab贝德集团
+## <a name="cmdiframewndexismditabbedgroup"></a><a name="ismditabbedgroup"></a>CMDIFrameWndEx：： IsMDITabbedGroup
 
 指定是否启用 MDI 选项卡式组功能。
 
@@ -1084,15 +1084,15 @@ BOOL IsMDITabbedGroup() const;
 
 ### <a name="return-value"></a>返回值
 
-如果启用了 MDI 选项卡式组功能，则为 TRUE;如果启用了 MDI 选项卡式组功能，则为 TRUE。否则 FALSE。
+如果已启用 MDI 选项卡式组功能，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-要确定是否启用了常规 MDI 选项卡或 MDI 选项卡组功能，请使用[CMDIFrameWndEx：：areMDITabs](#aremditabs)。
+若要确定是否已启用常规 MDI 选项卡或 MDI 选项卡式组功能，请使用[CMDIFrameWndEx：： AreMDITabs](#aremditabs)。
 
-## <a name="cmdiframewndexismemberofmditabgroup"></a><a name="ismemberofmditabgroup"></a>CMDIframewndEx：是MDITab集团的成员
+## <a name="cmdiframewndexismemberofmditabgroup"></a><a name="ismemberofmditabgroup"></a>CMDIFrameWndEx：： IsMemberOfMDITabGroup
 
-确定指定的选项卡式窗口是否位于 MDI 选项卡式组中的窗口列表中。
+确定指定的选项卡式窗口是否处于 MDI 选项卡式组中的窗口列表中。
 
 ```
 BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
@@ -1100,16 +1100,16 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 
 ### <a name="parameters"></a>参数
 
-*pwnd*<br/>
-[在]指向选项卡式窗口的指针。
+*pWnd*<br/>
+中指向选项卡式窗口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果指定的选项卡式窗口位于构成 MDI 选项卡式组的选项卡式窗口列表中，则为 TRUE。 否则，FALSE。
+如果指定的选项卡式窗口位于形成 MDI 选项卡式组的选项卡式窗口列表中，则为 TRUE。 否则为 FALSE。
 
-## <a name="cmdiframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>CMDIFramewndEx：：IsMenuBar可用
+## <a name="cmdiframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>CMDIFrameWndEx：： IsMenuBarAvailable
 
-确定框架窗口是否具有菜单栏。
+确定框架窗口是否包含菜单栏。
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -1117,11 +1117,11 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>返回值
 
-如果指向菜单栏对象的指针不是 NULL，则为 TRUE;如果指向菜单栏对象的指针为 NULL，则为 TRUE。否则 FALSE。
+如果指向菜单栏对象的指针不为 NULL，则为 TRUE;否则为 FALSE。
 
-## <a name="cmdiframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>CMDIFramewndEx：：IsPointNearDockSite
+## <a name="cmdiframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>CMDIFrameWndEx：： IsPointNearDockSite
 
-确定指定点是否靠近停靠站点。
+确定指定点是否在停靠站点附近。
 
 ```
 BOOL IsPointNearDockSite(
@@ -1132,24 +1132,24 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
-[在]屏幕坐标中的指定点。
+*情况*<br/>
+中屏幕坐标中的指定点。
 
-*dwBaralignment*<br/>
-[在]指定点附近的边。 可能的值是CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP 和CBRS_ALIGN_BOTTOM
+*dwBarAlignment*<br/>
+中指定点附近的边缘。 可能的值为 CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP 和 CBRS_ALIGN_BOTTOM
 
-*bouterEdge*<br/>
-[在]如果点靠近停靠站点的外部边界，则为 TRUE;否则。
+*bOuterEdge*<br/>
+中如果点位于停靠站点的外边框附近，则为 TRUE;否则为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-如果点靠近停靠站点，则为 TRUE;否则 FALSE。
+如果点在停靠站点附近，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-当点位于停靠管理器中设置的灵敏度内时，该点位于停靠站点附近。 默认灵敏度为 15 像素。
+如果该点位于停靠管理器的灵敏度集中，则该点位于停靠站点附近。 默认敏感度为15像素。
 
-## <a name="cmdiframewndexisprintpreview"></a><a name="isprintpreview"></a>CMDIFramewndEx：：是打印预览
+## <a name="cmdiframewndexisprintpreview"></a><a name="isprintpreview"></a>CMDIFrameWndEx：： IsPrintPreview
 
 确定框架窗口是否处于打印预览模式。
 
@@ -1159,11 +1159,11 @@ BOOL IsPrintPreview();
 
 ### <a name="return-value"></a>返回值
 
-如果帧窗口处于打印预览模式，则为 TRUE;否则，FALSE。
+如果框架窗口处于打印预览模式，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexloadframe"></a><a name="loadframe"></a>CMDIFramewndEx：：加载帧
+## <a name="cmdiframewndexloadframe"></a><a name="loadframe"></a>CMDIFrameWndEx：： LoadFrame
 
 从资源信息创建框架窗口。
 
@@ -1177,25 +1177,25 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>参数
 
-*nID资源*<br/>
-[在]与框架窗口关联的共享资源的 ID。
+*nIDResource*<br/>
+中与框架窗口关联的共享资源的 ID。
 
-*dwDefault样式*<br/>
-[在]框架窗口的样式。
+*dwDefaultStyle*<br/>
+中框架窗口的样式。
 
-*pparentwnd*<br/>
-[在]指向帧父级的指针。
+*pParentWnd*<br/>
+中指向框架的父项的指针。
 
 *pContext*<br/>
-[在]指向[CCreateContext 结构](../../mfc/reference/ccreatecontext-structure.md)的指针。 此参数可以是 NULL。
+中指向[CCreateContext 结构](../../mfc/reference/ccreatecontext-structure.md)的指针。 此参数可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 TRUE，否则为 FALSE。
+如果该方法成功，则为 TRUE; 否则为 FALSE。
 
-## <a name="cmdiframewndexloadmdistate"></a><a name="loadmdistate"></a>CMDIFramewndEx：：加载MDIState
+## <a name="cmdiframewndexloadmdistate"></a><a name="loadmdistate"></a>CMDIFrameWndEx：： LoadMDIState
 
-加载 MDI 选项卡组的指定布局和以前打开的文档列表。
+加载指定的 MDI 选项卡式组的布局和以前打开的文档的列表。
 
 ```
 virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
@@ -1203,34 +1203,34 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="parameters"></a>参数
 
-*lpsz配置文件名称*<br/>
-[在]指定配置文件名称。
+*lpszProfileName*<br/>
+中指定配置文件名称。
 
 ### <a name="return-value"></a>返回值
 
-如果负载成功，则为 TRUE;如果负载失败或没有要加载的数据，则 FALSE。
+如果加载成功，则为 TRUE;如果加载失败或没有要加载的数据，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-要加载或保存 MDI 选项卡和组的状态以及打开的文档列表，执行以下操作：
+若要加载或保存 MDI 选项卡和组的状态以及打开的文档的列表，请执行以下操作：
 
-- 调用[CMDIFrameWndEx：：](#savemdistate)在主框架关闭时保存MDIState
+- 在关闭主框架时调用[CMDIFrameWndEx：： SaveMDIState](#savemdistate)
 
-- 调用[CMDIFrameWndEx：：创建主帧时加载MDIState。](#loadmdistate) 此调用的建议位置是首次在主帧显示之前。 在`CWinAppEx::EnableLoadWindowPlacement``(FALSE);`调用`pMainFrame->LoadFrame (IDR_MAINFRAME);.`后`CBCGPWorkspace::ReloadWindowPlacement``(pMainFrame);`添加以`LoadMDIState`在注册表中存储的位置显示主帧。
+- 在创建主框架时调用[CMDIFrameWndEx：： LoadMDIState](#loadmdistate) 。 此调用的建议位置在第一次显示主框架之前。 在对 `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` `pMainFrame->LoadFrame (IDR_MAINFRAME);.` `CWinAppEx::ReloadWindowPlacement` `(pMainFrame);` 的调用后添加， `LoadMDIState` 以便在注册表中存储的位置显示主帧。
 
-- 如果`GetDocumentName`应用程序显示`CMDIChildWndEx`的文档未存储为文件，则在 派生类中覆盖。 返回的字符串将作为文档标识符保存在注册表中。 [CMDIChildWndEx 的基本实现：获取文档名称](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)返回从[CDocument 获取的值：：获取PathName](../../mfc/reference/cdocument-class.md#getpathname)。
+- `GetDocumentName` `CMDIChildWndEx` 如果你的应用程序显示未存储为文件的文档，则在派生的类中重写。 返回的字符串将作为文档标识符保存在注册表中。 [CMDIChildWndEx：： GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)的基实现返回从[CDocument：： GetPathName](../../mfc/reference/cdocument-class.md#getpathname)获取的值。
 
-- 覆盖[CMDIFrameWndEx：创建文档窗口](#createdocumentwindow)，以在从注册表加载文档时正确创建文档。 第一个参数是返回的`GetDocumentName`字符串。
+- 重写[CMDIFrameWndEx：： CreateDocumentWindow](#createdocumentwindow)以在从注册表加载文档时正确创建文档。 第一个参数是返回的字符串 `GetDocumentName` 。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`LoadMDIState` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `LoadMDIState` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
-## <a name="cmdiframewndexmditabmovetonextgroup"></a><a name="mditabmovetonextgroup"></a>CMDIFramewndEx：：MDITabmoveToNextGroup
+## <a name="cmdiframewndexmditabmovetonextgroup"></a><a name="mditabmovetonextgroup"></a>CMDIFrameWndEx：： MDITabMoveToNextGroup
 
-将活动选项卡从当前活动的选项卡式窗口移动到下一个或上一个选项卡式选项卡组。
+将活动选项卡从当前活动的选项卡式窗口移到下一个或上一个选项卡式组。
 
 ```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
@@ -1238,12 +1238,12 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>参数
 
-*b下一个*<br/>
-[在]如果为 TRUE，则将选项卡移动到下一个选项卡式组。 如果 FALSE，则将其移动到以前的选项卡式组。
+*bNext*<br/>
+中如果为 TRUE，则将选项卡移到下一个选项卡式组。 如果为 FALSE，则将其移到上一个选项卡式组。
 
-## <a name="cmdiframewndexmditabnewgroup"></a><a name="mditabnewgroup"></a>CMDIFramewndEx：：MDITabNewGroup
+## <a name="cmdiframewndexmditabnewgroup"></a><a name="mditabnewgroup"></a>CMDIFrameWndEx：： MDITabNewGroup
 
-创建具有单个窗口的新选项卡式组。
+创建一个新的选项卡式组，其中包含一个窗口。
 
 ```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
@@ -1252,21 +1252,21 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ### <a name="parameters"></a>参数
 
 *bVert*<br/>
-[在]指定新的组对齐方式。 如果为 TRUE，则新组垂直对齐。 如果 FALSE，则新组水平对齐。
+中指定新的组对齐方式。 如果为 TRUE，则新组垂直对齐。 如果为 FALSE，则新组水平对齐。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可以创建新的选项卡式窗口（新的选项卡式组），并将第一个选项卡添加到该窗口。
+使用此函数创建新的选项卡式窗口（新的选项卡式组），并向其添加第一个选项卡。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`MDITabNewGroup` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `MDITabNewGroup` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
-## <a name="cmdiframewndexm_bcancovertcontrolbartomdichild"></a><a name="m_bcancovertcontrolbartomdichild"></a>CMDIFramewndEx：：m_bCanCovertControlBarToMDIChild
+## <a name="cmdiframewndexm_bcancovertcontrolbartomdichild"></a><a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx：： m_bCanCovertControlBarToMDIChild
 
-指定停靠窗格是否可以转换为 MDI 子窗口。
+指定停靠窗格是否可转换为 MDI 子窗口。
 
 ```
 BOOL m_bCanCovertControlBarToMDIChild;
@@ -1274,17 +1274,17 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="remarks"></a>备注
 
-指示停靠控制条是否可以转换为 MDI 子窗口。 如果此标志为 TRUE，则当用户选择 **"选项卡式文档"** 命令时，框架将自动处理转换。 标志受到保护，您必须通过在`m_bCanCovertControlBarToMDIChild``CMDIFrameWndEx`派生类的构造函数中设置或重写`CanConvertControlBarToMDIChild`来显式启用此选项。
+指示停靠控件条能否转换为 MDI 子窗口。 如果此标志为 TRUE，则当用户选择**选项卡式文档**命令时，框架会自动处理转换。 标志是受保护的，你必须通过 `m_bCanCovertControlBarToMDIChild` 在派生类的构造函数中设置 `CMDIFrameWndEx` 或重写来显式启用此选项 `CanConvertControlBarToMDIChild` 。
 
 默认值为 `FALSE`。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`m_bCanCovertControlBarToMDIChild` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `m_bCanCovertControlBarToMDIChild` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
-## <a name="cmdiframewndexm_bdisablesetredraw"></a><a name="m_bdisablesetredraw"></a>CMDIFramewndEx：：m_bDisableSetRedraw
+## <a name="cmdiframewndexm_bdisablesetredraw"></a><a name="m_bdisablesetredraw"></a>CMDIFrameWndEx：： m_bDisableSetRedraw
 
 启用或禁用 MDI 子窗口的重绘优化。
 
@@ -1296,13 +1296,13 @@ AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
 
 默认值为 TRUE。
 
-如果要优化 MDI 子级的重新绘制，将此标志设置为 FALSE。 在这种情况下，当应用程序更改活动选项卡`SetRedraw (FALSE)`时，框架将调用主框架。
+如果要优化 MDI 子级的重绘，请将此标志设置为 FALSE。 在这种情况下， `SetRedraw (FALSE)` 当应用程序更改活动选项卡时，框架将为主框架调用。
 
-此标志可能会导致不需要的效果（例如，变得可见的后台应用程序）。 因此，我们建议您仅在 MDI 选项卡激活期间遇到明显的闪烁时才更改默认值。
+此标志可能会导致不需要的效果（例如变为可见的后台应用程序）。 因此，建议您仅在 MDI 选项卡激活过程中出现明显闪烁时才更改默认值。
 
-## <a name="cmdiframewndexnegotiateborderspace"></a><a name="negotiateborderspace"></a>CMDIFramewndEx：：谈判边界空间
+## <a name="cmdiframewndexnegotiateborderspace"></a><a name="negotiateborderspace"></a>CMDIFrameWndEx：： NegotiateBorderSpace
 
-在 OLE 就地激活期间协商框架窗口中的边框空间。
+在 OLE 就地激活过程中，在框架窗口中协商边框空间。
 
 ```
 virtual BOOL NegotiateBorderSpace(
@@ -1313,7 +1313,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>参数
 
 *nBorderCmd*<br/>
-[在]包含枚举`CFrameWnd::BorderCmd`中的以下值之一：
+中包含枚举中的以下值之一 `CFrameWnd::BorderCmd` ：
 
 - `borderGet` = 1
 
@@ -1321,20 +1321,20 @@ virtual BOOL NegotiateBorderSpace(
 
 - `borderSet` = 3
 
-*lprect边框*<br/>
-[进出]指向[RECT 结构](/windows/win32/api/windef/ns-windef-rect)或指定边框坐标的[CRect 类](../../atl-mfc-shared/reference/crect-class.md)对象的指针。
+*lpRectBorder*<br/>
+[in，out]指向[RECT 结构](/windows/win32/api/windef/ns-windef-rect)或[CRect 类](../../atl-mfc-shared/reference/crect-class.md)对象的指针，该对象指定边框的坐标。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则非零;否则 0。
+如果方法成功，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-该方法是OLE边界空间谈判的实现。
+此方法是 OLE 边框空间协商的实现。
 
-## <a name="cmdiframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>CMDIFramewndEx：：关闭对接窗格
+## <a name="cmdiframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>CMDIFrameWndEx：： OnCloseDockingPane
 
-当用户单击可停靠窗格上的 **"关闭**"按钮时，由框架调用。
+当用户单击可停靠窗格上的 "**关闭**" 按钮时，由框架调用。
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
@@ -1342,8 +1342,8 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 
 ### <a name="parameters"></a>参数
 
-*pwnd*<br/>
-[在]指向正在关闭的窗格的指针。
+*pWnd*<br/>
+中指向正在关闭的窗格的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1351,13 +1351,13 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 
 ### <a name="remarks"></a>备注
 
-重写此方法以处理停靠窗格的隐藏。 如果要防止隐藏停靠窗格，则返回 FALSE。
+重写此方法以处理隐藏停靠窗格。 如果要阻止隐藏停靠窗格，则返回 FALSE。
 
-默认实现不执行任何操作，并返回 TRUE。
+默认实现不执行任何操作并返回 TRUE。
 
-## <a name="cmdiframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>CMDIFramewndEx：：在关闭迷你框架上
+## <a name="cmdiframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>CMDIFrameWndEx：： OnCloseMiniFrame
 
-当用户单击浮动小型框架窗口中的 **"关闭**"按钮时，由框架调用。
+当用户在浮动袖珍框架窗口上单击 "**关闭**" 按钮时，由框架调用。
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -1365,20 +1365,20 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>参数
 
-*pwnd*<br/>
-[在]指向正在关闭的微型框架窗口的指针。
+*pWnd*<br/>
+中指向待关闭袖珍框架窗口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果可以关闭浮动小型框架窗口，则为 TRUE。 否则为 FALSE。
+如果可以关闭浮动袖珍框架窗口，则为 TRUE。 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以处理浮动小型框架窗口的隐藏。 如果要防止隐藏浮动的微型框架窗口，则返回 FALSE。
+重写此方法以处理浮动袖珍框架窗口的隐藏。 如果要阻止隐藏浮动袖珍框架窗口，则返回 FALSE。
 
-默认实现不执行任何操作，并返回 TRUE。
+默认实现不执行任何操作并返回 TRUE。
 
-## <a name="cmdiframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>CMDIFramewndEx：：在关闭弹出菜单
+## <a name="cmdiframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>CMDIFrameWndEx：： OnClosePopupMenu
 
 当活动的弹出菜单处理 WM_DESTROY 消息时由框架调用。
 
@@ -1389,15 +1389,15 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>参数
 
 *pMenuPopup*<br/>
-[在]指向弹出式菜单的指针。
+中指向弹出菜单的指针。
 
 ### <a name="remarks"></a>备注
 
-如果要处理来自[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象的通知，这些对象处理WM_DESTROY消息时，将重写此方法。
+如果要处理[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象中的通知（当这些对象处理 WM_DESTROY 消息时），请重写此方法。
 
-## <a name="cmdiframewndexoncmdmsg"></a><a name="oncmdmsg"></a>CMDIFramewndEx：：在CmdMsg上
+## <a name="cmdiframewndexoncmdmsg"></a><a name="oncmdmsg"></a>CMDIFrameWndEx：： OnCmdMsg
 
-由框架调用以路由和调度命令消息并更新命令用户界面对象。
+由框架调用以路由和调度命令消息，并更新命令用户界面对象。
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1410,22 +1410,22 @@ virtual BOOL OnCmdMsg(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[在]命令 ID。
+中命令 ID。
 
-*n代码*<br/>
-[在]标识命令通知代码。 有关*nCode*的值的详细信息，请参阅[CMDTarget：onCmdMsg。](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)
+*nCode*<br/>
+中标识命令通知代码。 有关*nCode*的值的详细信息，请参阅[CCmdTarget：： OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) 。
 
 *pExtra*<br/>
-[在]根据*nCode*的值使用。 有关*pExtra*的更多信息，请参阅[CMDTarget：onCmdMsg。](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)
+中根据*nCode*的值使用。 有关*pExtra*的详细信息，请参阅[CCmdTarget：： OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) 。
 
 *pHandlerInfo*<br/>
-[进出]通常，此参数应为 NULL。如果不是 NULL，`OnCmdMsg`请填写*pHandlerInfo*结构 的`pTarget`和`pmf`成员，而不是调度命令。
+[in，out]通常，此参数应为 NULL。如果不为 NULL，则 `OnCmdMsg` 填充 `pTarget` `pmf` *pHandlerInfo*结构的和成员，而不是分派命令。
 
 ### <a name="return-value"></a>返回值
 
-处理消息时非零;否则 0。
+如果处理消息，则为非零值;否则为0。
 
-## <a name="cmdiframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMDIFramewndEx：：在画上菜单图像
+## <a name="cmdiframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMDIFrameWndEx：： OnDrawMenuImage
 
 当绘制与菜单项关联的图像时由框架调用。
 
@@ -1439,13 +1439,13 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[在]指向设备上下文的指针。
+中指向设备上下文的指针。
 
-*pMenu按钮*<br/>
-[在]指向菜单按钮。
+*pMenuButton*<br/>
+中指向菜单按钮的指针。
 
 *rectImage*<br/>
-[在]图像的边界矩形。
+中图像的边框。
 
 ### <a name="return-value"></a>返回值
 
@@ -1453,11 +1453,11 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="remarks"></a>备注
 
-如果要为属于`CMDIFrameWndEx`派生对象拥有的菜单栏的菜单项自定义图像渲染，请重写此方法。 默认实现不执行任何操作。
+如果要为属于由派生对象拥有的菜单栏的菜单项自定义图像呈现，请重写此方法 `CMDIFrameWndEx` 。 默认实现不执行任何操作。
 
-## <a name="cmdiframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>CMDIFramewndEx：：在DrawMenulogo上
+## <a name="cmdiframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>CMDIFrameWndEx：： OnDrawMenuLogo
 
-当[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)处理WM_PAINT消息时，由框架调用。
+当[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)处理 WM_PAINT 消息时由框架调用。
 
 ```
 virtual void OnDrawMenuLogo(
@@ -1468,11 +1468,11 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="remarks"></a>备注
 
-重写此函数，在属于`CMDIFrameWndEx`派生对象的菜单栏的弹出式菜单上显示徽标。 默认实现不执行任何操作。
+重写此函数可在属于由派生的对象所拥有的菜单栏的弹出菜单上显示徽标 `CMDIFrameWndEx` 。 默认实现不执行任何操作。
 
-## <a name="cmdiframewndexonerasemdiclientbackground"></a><a name="onerasemdiclientbackground"></a>CMDIFramewndEx：：在EraseMDI客户端背景上
+## <a name="cmdiframewndexonerasemdiclientbackground"></a><a name="onerasemdiclientbackground"></a>CMDIFrameWndEx：： OnEraseMDIClientBackground
 
-当 MDI 帧窗口处理WM_ERASEBKGND消息时，由框架调用。
+当 MDI 框架窗口处理 WM_ERASEBKGND 消息时由框架调用。
 
 ```
 virtual BOOL OnEraseMDIClientBackground(CDC*);
@@ -1480,15 +1480,15 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
 
 ### <a name="return-value"></a>返回值
 
-如果应用程序处理消息并擦除背景，则为 TRUE。
+如果应用程序处理消息并清除背景，则为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-如果要在`CMDIFrameWndEx`派生类中处理WM_ERASEBKGND消息，则重写此成员函数。
+如果要处理派生类中的 WM_ERASEBKGND 消息，请重写此成员函数 `CMDIFrameWndEx` 。
 
-## <a name="cmdiframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>CMDIFramewndEx：：在MenuButton工具命中测试
+## <a name="cmdiframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx：： OnMenuButtonToolHitTest
 
-当[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)对象处理WM_NCHITTEST消息时，由框架调用。
+当[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)对象处理 WM_NCHITTEST 消息时由框架调用。
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1499,10 +1499,10 @@ virtual BOOL OnMenuButtonToolHitTest(
 ### <a name="parameters"></a>参数
 
 *pButton*<br/>
-[在]工具栏按钮。
+中工具栏按钮。
 
-*Pti*<br/>
-[出]指向[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)结构的指针。
+*pTI*<br/>
+弄指向[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1510,9 +1510,9 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ### <a name="remarks"></a>备注
 
-如果要向工具提示提供有关特定菜单项的信息，请重写此方法。 默认实现不执行任何操作。
+如果要将特定菜单项的相关信息提供给工具提示，请重写此方法。 默认实现不执行任何操作。
 
-## <a name="cmdiframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CMDIFramewndEx：：移动迷你框架
+## <a name="cmdiframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CMDIFrameWndEx：： OnMoveMiniFrame
 
 由框架调用以移动微型框架窗口。
 
@@ -1523,13 +1523,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>参数
 
 *pFrame*<br/>
-[在]指向微型框架窗口的指针。
+中指向袖珍框架窗口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 TRUE，否则为 FALSE。
+如果该方法成功，则为 TRUE; 否则为 FALSE。
 
-## <a name="cmdiframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CMDIFramewndEx：：打开预览模式
+## <a name="cmdiframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CMDIFrameWndEx：： OnSetPreviewMode
 
 设置应用程序的主框架窗口打印预览模式。
 
@@ -1541,19 +1541,19 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>参数
 
-*b预览*<br/>
-[在]如果为 TRUE，则设置打印预览模式。 如果 FALSE，则取消预览模式。
+*bPreview*<br/>
+中如果为 TRUE，则设置打印预览模式。 如果为 FALSE，则取消预览模式。
 
 *pState*<br/>
-[在]指向结构的`CPrintPreviewState`指针。
+中指向结构的指针 `CPrintPreviewState` 。
 
 ### <a name="remarks"></a>备注
 
-此方法重写[CFramewnd：：OnSet预览模式](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。
+此方法将重写[CFrameWnd：： OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。
 
-## <a name="cmdiframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>CMDIFramewndEx：：在显示自定义窗格
+## <a name="cmdiframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>CMDIFrameWndEx：： OnShowCustomizePane
 
-激活"快速自定义"窗格时，由框架调用。
+当激活快速自定义窗格时由框架调用。
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -1564,10 +1564,10 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>参数
 
 *pMenuPane*<br/>
-[在]指向"快速自定义"窗格的指针。
+中指向 "快速自定义" 窗格的指针。
 
 *uiToolbarID*<br/>
-[在]要自定义工具栏的控制 ID。
+中要自定义的工具栏的控件 ID。
 
 ### <a name="return-value"></a>返回值
 
@@ -1575,13 +1575,13 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="remarks"></a>备注
 
-"快速自定义"窗格是当用户单击工具栏上的 **"自定义"** 时打开的菜单。
+"快速自定义" 窗格是用户单击工具栏上的 "**自定义**" 时打开的菜单。
 
-在派生类中重写此方法，在"快速自定义"窗格中进行更改。
+在派生类中重写此方法，以在 "快速自定义" 窗格中进行更改。
 
-## <a name="cmdiframewndexonshowmditabcontextmenu"></a><a name="onshowmditabcontextmenu"></a>CMDIFramewndEx：上秀MDITab上下文菜单
+## <a name="cmdiframewndexonshowmditabcontextmenu"></a><a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx：： OnShowMDITabContextMenu
 
-在其中一个选项卡上显示快捷菜单之前，由框架调用。 仅适用于 MDI 选项卡式组。
+在快捷菜单显示在某个选项卡上之前由框架调用。 仅对 MDI 选项卡式组有效。
 
 ```
 virtual BOOL OnShowMDITabContextMenu(
@@ -1592,40 +1592,40 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
-[在]菜单在屏幕坐标中的位置。
+*情况*<br/>
+中菜单在屏幕坐标中的位置。
 
-*可被项目*<br/>
-[在]指示当前选项卡允许执行的操作的标志的位-OR 组合：
+*dwAllowedItems*<br/>
+中标志的按位 "或" 组合，用于指示当前选项卡允许哪些操作：
 
-- BCGP_MDI_CREATE_VERT_GROUP - 可以创建垂直选项卡组。
+- AFX_MDI_CREATE_VERT_GROUP-可以创建垂直选项卡组。
 
-- BCGP_MDI_CREATE_HORZ_GROUP - 可以创建水平选项卡组。
+- AFX_MDI_CREATE_HORZ_GROUP-可以创建水平选项卡组。
 
-- BCGP_MDI_CAN_MOVE_PREV - 可以将选项卡移动到上一个选项卡组。
+- AFX_MDI_CAN_MOVE_PREV-可以将选项卡移到上一个选项卡组。
 
-- BCGP_MDI_CAN_MOVE_NEXT - 可以将选项卡移动到下一个选项卡组。
+- AFX_MDI_CAN_MOVE_NEXT-可以将选项卡移到下一个选项卡组。
 
-- BCGP_MDI_CAN_BE_DOCKED - 将选项卡式文档切换到停靠状态（仅与选项卡式文档相关）。
+- AFX_MDI_CAN_BE_DOCKED 将选项卡式文档切换为固定状态（仅适用于选项卡式文档）。
 
 *bTabDrop*<br/>
-[在]TRUE 显示菜单，因为将选项卡拖动到另一个选项卡组。 FALSE 将菜单显示为当前活动选项卡上的快捷菜单。
+中如果为 TRUE，则在将选项卡拖动到另一个选项卡式组上时显示菜单。 若为 FALSE，则将菜单显示为当前处于活动状态的选项卡上的快捷菜单。
 
 ### <a name="return-value"></a>返回值
 
-在[CBCGGPMDIFramewnd](../../mfc/reference/cmdiframewndex-class.md)派生类中重写此方法。
+在[CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)派生的类中重写此方法。
 
 ### <a name="remarks"></a>备注
 
-如果不处理`OnShowMDITabContextMenu`，将不会显示快捷菜单。 启用 MDI 选项卡组功能时 **，MFC 应用程序向导**会生成此功能。
+如果不进行处理 `OnShowMDITabContextMenu` ，将不会显示快捷菜单。 当启用 MDI 选项卡式组功能时， **MFC 应用程序向导**将生成此函数。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`OnShowMDITabContextMenu` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `OnShowMDITabContextMenu` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
-## <a name="cmdiframewndexonshowpanes"></a><a name="onshowpanes"></a>CMDIFramewndEx：：在显示窗格
+## <a name="cmdiframewndexonshowpanes"></a><a name="onshowpanes"></a>CMDIFrameWndEx：： OnShowPanes
 
 由框架调用以显示或隐藏窗格。
 
@@ -1635,22 +1635,22 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>参数
 
-*b显示*<br/>
-[在]TRUE 显示窗格，FALSE 以隐藏窗格。
+*bShow*<br/>
+中若要显示窗格，则为 TRUE，隐藏窗格。
 
 ### <a name="return-value"></a>返回值
 
-如果窗格的状态因调用此方法而发生更改，则 FALSE 如果窗格已处于*bShow*指定的状态。 例如，如果窗格是隐藏的，并且*bShow*是 FALSE，则返回值为 FALSE。
+如果调用此方法时窗格的状态发生更改，则为 TRUE; 如果窗格已经处于*bShow*指定的状态，则为 FALSE。 例如，如果窗格隐藏并且*bShow*为 false，则返回值为 false。
 
 ### <a name="remarks"></a>备注
 
-默认实现从顶层框架窗口中删除工具栏。
+默认实现将工具栏从顶级框架窗口中删除。
 
-如果[CDockingManager：m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode)为 TRUE（默认值），则所有停靠窗格都将隐藏。
+如果[CDockingManager：： m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode)为 TRUE （默认值），则所有停靠窗格都将隐藏。
 
-## <a name="cmdiframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMDIFramewndEx：：在显示弹出菜单
+## <a name="cmdiframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMDIFrameWndEx：： OnShowPopupMenu
 
-框架在打开弹出式菜单时调用它。
+当框架打开弹出菜单时由框架调用。
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
@@ -1658,17 +1658,17 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 
 ### <a name="return-value"></a>返回值
 
-如果要显示弹出式菜单，则为 TRUE。 否则为 FALSE。 默认实现返回 TRUE。
+如果要显示弹出菜单，则为 TRUE。 否则为 FALSE。 默认实现返回 TRUE。
 
 ### <a name="remarks"></a>备注
 
-如果要在弹出菜单激活时实现特殊处理，请重写此方法。 例如，如果要将常规菜单项更改为颜色菜单按钮，则设置撕线，等等。
+如果要在弹出菜单激活时实现特殊处理，请重写此方法。 例如，如果您想要将普通菜单项更改为彩色菜单按钮，请设置撕块等。
 
 默认实现不执行任何操作。
 
-## <a name="cmdiframewndexonsizemdiclient"></a><a name="onsizemdiclient"></a>CMDIFramewndEx：onsizeMDIClient
+## <a name="cmdiframewndexonsizemdiclient"></a><a name="onsizemdiclient"></a>CMDIFrameWndEx：： OnSizeMDIClient
 
-当客户端 MDI 窗口的大小发生变化时，由框架调用。
+当客户端 MDI 窗口的大小正在更改时由框架调用。
 
 ```
 virtual void OnSizeMDIClient(
@@ -1679,14 +1679,14 @@ virtual void OnSizeMDIClient(
 ### <a name="parameters"></a>参数
 
 *rectOld*<br/>
-[在]MDI 客户端窗口的当前大小。
+中MDI 客户端窗口的当前大小。
 
-*重新*<br/>
-[在]MDI 客户端窗口的新大小。
+*rectNew*<br/>
+中MDI 客户端窗口的新大小。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>CMDIFramewndEx：：在TearoffMenu上
+## <a name="cmdiframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>CMDIFrameWndEx：： OnTearOffMenu
 
 当激活带有拖曳栏的菜单时由框架调用。
 
@@ -1699,20 +1699,20 @@ virtual BOOL OnTearOffMenu(
 ### <a name="parameters"></a>参数
 
 *pMenuPopup*<br/>
-[在]指向弹出菜单的指针。
+中指向弹出菜单的指针。
 
 *pBar*<br/>
-[在]指向撕裂条的指针。
+中指向被撕条的指针。
 
 ### <a name="return-value"></a>返回值
 
-TRUE 允许激活带有撕开栏的弹出式菜单;否则 FALSE。 默认值为 TRUE。
+如果为 TRUE，则允许弹出菜单中包含可激活的栏;否则为 FALSE。 默认值为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-如果要实现撕开条的特殊设置，则重写此功能。 默认实现不执行任何操作。
+如果要为被撕条实现特殊设置，请重写此函数。 默认实现不执行任何操作。
 
-## <a name="cmdiframewndexonupdateframemenu"></a><a name="onupdateframemenu"></a>CMDIFramewndEx：：更新框架菜单
+## <a name="cmdiframewndexonupdateframemenu"></a><a name="onupdateframemenu"></a>CMDIFrameWndEx：： OnUpdateFrameMenu
 
 由框架调用以更新框架菜单。
 
@@ -1722,10 +1722,10 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 
 ### <a name="parameters"></a>参数
 
-*哈梅内阿尔特*<br/>
-[在]菜单的句柄。
+*hMenuAlt*<br/>
+中菜单的句柄。
 
-## <a name="cmdiframewndexpanefrompoint"></a><a name="panefrompoint"></a>CMDIFramewndEx：:P从点
+## <a name="cmdiframewndexpanefrompoint"></a><a name="panefrompoint"></a>CMDIFrameWndEx：:P aneFromPoint
 
 返回包含指定点的停靠窗格。
 
@@ -1745,30 +1745,30 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
-[在]点（在屏幕坐标中）。
+*情况*<br/>
+中点（以屏幕坐标表示）。
 
 *nSensitivity*<br/>
-[在]此值在所有方向上放大每个选中窗格的窗口矩形。
+中每个选中窗格的窗口矩形都按此值在所有方向放大。
 
 *bExactBar*<br/>
-[在]如果为 TRUE，则忽略*nSensitivity*参数。
+中如果为 TRUE，则忽略*nSensitivity*参数。
 
-*pRTCBar类型*<br/>
-[在]如果非 NULL，则该方法仅在指定类型的窗格上遍网。
+*pRTCBarType*<br/>
+中如果非 NULL，则方法只循环访问指定类型的窗格。
 
-*dwalignment*<br/>
-[出]如果找到窗格，此参数将指定窗格的哪一侧最接近指定点。
+*dwAlignment*<br/>
+弄如果找到了窗格，此参数将指定窗格的哪一侧靠近指定的点。
 
 ### <a name="return-value"></a>返回值
 
-指向停靠窗格的指针，如果没有控件包含*点*指定的点，则为 NULL。
+指向停靠窗格的指针; 如果没有控件包含*point*指定的点，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-呼叫被重定向到[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)。 有关详细信息[，请参阅 CDockingManager：控制栏从点](../../mfc/reference/cdockingmanager-class.md#panefrompoint)。
+调用将重定向到[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)。 有关详细信息，请参阅[CDockingManager：： ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) 。
 
-## <a name="cmdiframewndexrecalclayout"></a><a name="recalclayout"></a>CMDIFramewndEx：recalclayout
+## <a name="cmdiframewndexrecalclayout"></a><a name="recalclayout"></a>CMDIFrameWndEx：： RecalcLayout
 
 由框架调用以重新计算框架窗口的布局。
 
@@ -1778,16 +1778,16 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*b 通知*<br/>
-[在]确定框架窗口的活动就地项目是否接收布局更改通知。 如果为 TRUE，则会通知该项目;如果为 TRUE，则通知该项目。否则 FALSE。
+*bNotify*<br/>
+中确定框架窗口的活动就地项是否收到布局更改的通知。 如果为 TRUE，则通知该项;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法重写[CFramewnd：：recalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。
+此方法将重写[CFrameWnd：： RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。
 
-## <a name="cmdiframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CMDIFramewndEx：：从Dock管理器中删除Pane
+## <a name="cmdiframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CMDIFrameWndEx：： RemovePaneFromDockManager
 
-取消注册窗格并从停靠管理器中删除它。
+取消注册窗格，并将其从停靠管理器中删除。
 
 ```cpp
 void RemovePaneFromDockManager(
@@ -1800,30 +1800,30 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>参数
 
-*p控制栏*<br/>
-[在]指向要删除的窗格的指针。
+*pControlBar*<br/>
+中指向要删除的窗格的指针。
 
-*b破坏*<br/>
-[在]TRUE 以销毁已删除的窗格。 不摧毁它。
+*bDestroy*<br/>
+中若要销毁删除的窗格，则为 TRUE。 如果不销毁，则为 FALSE。
 
-*b 调整布局*<br/>
-[在]TRUE 可立即调整停靠布局。 如果 FALSE，则仅当由于其他原因（用户调整窗口大小、拖动主框架等）而发生重绘事件时才会进行调整。
+*bAdjustLayout*<br/>
+中若要立即调整停靠布局，则为 TRUE。 如果为 FALSE，则只会在由于其他原因而发生重绘事件时（用户调整窗口的大小、拖动主框架等）进行调整。
 
 *bAutoHide*<br/>
-[在]TRUE 从自动隐藏窗格列表中删除窗格。 FALSE 从常规窗格列表中删除窗格。
+中若要从自动隐藏窗格的列表中删除窗格，则为 TRUE。 若要从常规窗格列表中删除该窗格，则为 FALSE。
 
-*pBar 替换*<br/>
-[在]指向替换已删除窗格的窗格的指针。
+*pBarReplacement*<br/>
+中指向替换已删除窗格的窗格的指针。
 
 ### <a name="remarks"></a>备注
 
-您必须向停靠管理器注册每个窗格才能参与停靠布局。 使用[CMDIFrameWndEx：：添加窗格](#addpane)或[CMDIFramewndEx：：插入窗格](#insertpane)以注册窗格。
+必须将每个窗格注册到停靠管理器，才能参与停靠布局。 使用[CMDIFrameWndEx：： AddPane](#addpane)或[CMDIFrameWndEx：： InsertPane](#insertpane)注册窗格。
 
-当窗格不再是框架窗口的停靠布局的一部分时，请使用此方法。
+当窗格不再是框架窗口的停靠布局的一部分时，可使用此方法。
 
-## <a name="cmdiframewndexsavemdistate"></a><a name="savemdistate"></a>CMDIFramewndEx：：保存MDIState
+## <a name="cmdiframewndexsavemdistate"></a><a name="savemdistate"></a>CMDIFrameWndEx：： SaveMDIState
 
-保存 MDI 选项卡组的当前布局和以前打开的文档列表。
+保存 MDI 选项卡式组的当前布局和以前打开的文档的列表。
 
 ```
 virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
@@ -1831,36 +1831,36 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="parameters"></a>参数
 
-*lpsz配置文件名称*<br/>
-[在]指定配置文件名称。
+*lpszProfileName*<br/>
+中指定配置文件名称。
 
 ### <a name="return-value"></a>返回值
 
-如果保存成功，则为 TRUE;如果保存失败，则 FALSE。
+如果保存成功，则为 TRUE;如果保存失败，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-要加载或保存 MDI 选项卡和组的状态以及打开的文档列表，执行以下操作：
+若要加载或保存 MDI 选项卡和组的状态以及打开的文档的列表，请执行以下操作：
 
-- 主`SaveMDIState`框架关闭时呼叫
+- 在 `SaveMDIState` 关闭主框架时调用
 
-- 调用[CMDIFrameWndEx：：创建主帧时加载MDIState。](#loadmdistate) 此调用的建议位置是首次在显示主帧之前。
+- 在创建主框架时调用[CMDIFrameWndEx：： LoadMDIState](#loadmdistate) 。 此调用的建议位置在第一次显示主框架之前。
 
-- 之前`CWinAppEx::EnableLoadWindowPlacement(FALSE);`致电`pMainFrame->LoadFrame (IDR_MAINFRAME);`
+- `CWinAppEx::EnableLoadWindowPlacement(FALSE);`之前调用`pMainFrame->LoadFrame (IDR_MAINFRAME);`
 
-- 之后`CWinAppEx::ReloadWindowPlacement(pMainFrame)``LoadMDIState`调用以在注册表中存储的位置显示主框架。
+- 在 `CWinAppEx::ReloadWindowPlacement(pMainFrame)` 之后调用 `LoadMDIState` ，以在注册表中存储的位置显示主帧。
 
-- 如果`GetDocumentName`应用程序显示`CMDIChildWndEx`的文档未存储为文件，则在 派生类中覆盖。 返回的字符串将作为文档标识符保存在注册表中。 有关详细信息，请参阅[CMDIChildwndEx：：获取文档名称](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)。
+- `GetDocumentName` `CMDIChildWndEx` 如果你的应用程序显示未存储为文件的文档，则在派生的类中重写。 返回的字符串将作为文档标识符保存在注册表中。 有关详细信息，请参阅[CMDIChildWndEx：： GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)。
 
-- 覆盖[CMDIFrameWndEx：创建文档窗口](#createdocumentwindow)，以便从注册表加载文档时正确创建文档。 的参数`CreateDocumentWindow`是前面返回的`GetDocumentName`字符串。
+- 重写[CMDIFrameWndEx：： CreateDocumentWindow](#createdocumentwindow)以在从注册表加载文档时正确创建文档。 的参数为 `CreateDocumentWindow` 之前返回的字符串 `GetDocumentName` 。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`SaveMDIState` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `SaveMDIState` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
-## <a name="cmdiframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CMDIFramewndEx：：设置打印预览框架
+## <a name="cmdiframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CMDIFrameWndEx：： SetPrintPreviewFrame
 
 设置打印预览框架窗口。
 
@@ -1870,14 +1870,14 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ### <a name="parameters"></a>参数
 
-*pwnd*<br/>
-[在]指向打印预览框架窗口的指针。
+*pWnd*<br/>
+中指向打印预览框架窗口的指针。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>CMDIFramewndEx：：设置工具栏菜单
+## <a name="cmdiframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>CMDIFrameWndEx：： SetupToolbarMenu
 
-通过将虚拟项目替换为用户定义的项来修改工具栏对象。
+通过使用用户定义的项替换虚拟项来修改工具栏对象。
 
 ```cpp
 void SetupToolbarMenu(
@@ -1888,18 +1888,18 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>参数
 
-*菜单*<br/>
-[在]对要修改的[CMenu 类](../../mfc/reference/cmenu-class.md)对象的引用。
+*下拉菜单*<br/>
+中对要修改的[CMenu 类](../../mfc/reference/cmenu-class.md)对象的引用。
 
 *uiViewUserToolbarCmdFirst*<br/>
-[在]指定第一个用户定义的命令。
+中指定第一个用户定义的命令。
 
 *uiViewUserToolbarCmdLast*<br/>
-[在]指定最后一个用户定义的命令。
+中指定最后一个用户定义的命令。
 
-## <a name="cmdiframewndexshowfullscreen"></a><a name="showfullscreen"></a>CMDIFramewndEx：：显示全屏
+## <a name="cmdiframewndexshowfullscreen"></a><a name="showfullscreen"></a>CMDIFrameWndEx：： ShowFullScreen
 
-将主帧从常规模式切换到全屏模式。
+将主框架从常规模式切换到全屏模式。
 
 ```cpp
 void ShowFullScreen();
@@ -1907,9 +1907,9 @@ void ShowFullScreen();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexshowpane"></a><a name="showpane"></a>CMDIFramewndEx：：显示窗格
+## <a name="cmdiframewndexshowpane"></a><a name="showpane"></a>CMDIFrameWndEx：： ShowPane
 
-显示或隐藏指定的窗格。
+显示或隐藏指定窗格。
 
 ```cpp
 void ShowPane(
@@ -1922,30 +1922,30 @@ void ShowPane(
 ### <a name="parameters"></a>参数
 
 *pBar*<br/>
-[在]指向要显示或隐藏的窗格的指针。
+中指向要显示或隐藏的窗格的指针。
 
-*b显示*<br/>
-[在]TRUE 以显示窗格。 FALSE 以隐藏窗格。
+*bShow*<br/>
+中若要显示窗格，则为 TRUE。 若要隐藏窗格，则为 FALSE。
 
 *bDelay*<br/>
-[在]TRUE 以延迟停靠布局的重新计算。 FALSE 可立即重新计算停靠布局。
+中如果为 TRUE，则延迟停靠布局的重新计算。 若要立即重新计算停靠布局，则为 FALSE。
 
-*b 激活*<br/>
-[在]TRUE 以显示窗格应为活动。 FALSE 将窗格显示为非活动状态。
+*bActivate*<br/>
+中如果显示窗格应为活动状态，则为 TRUE。 若为 FALSE，则将窗格显示为非活动状态。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以显示或隐藏窗格。 请勿用于`ShowWindow`停靠窗格。
+调用此方法以显示或隐藏窗格。 请勿用于 `ShowWindow` 停靠窗格。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`ShowPane` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `ShowPane` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
-## <a name="cmdiframewndexshowwindowsdialog"></a><a name="showwindowsdialog"></a>CMDIFramewndEx：：显示窗口对话
+## <a name="cmdiframewndexshowwindowsdialog"></a><a name="showwindowsdialog"></a>CMDIFrameWndEx：： ShowWindowsDialog
 
-创建一个[CMFCWindowsManager对话框](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)并打开它。
+创建[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)框并将其打开。
 
 ```cpp
 void ShowWindowsDialog();
@@ -1953,11 +1953,11 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`ShowWindowsDialog` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `ShowWindowsDialog` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
-## <a name="cmdiframewndextabbeddocumenttocontrolbar"></a><a name="tabbeddocumenttocontrolbar"></a>CMDIFramewndEx：：Tabbed文档到控制栏
+## <a name="cmdiframewndextabbeddocumenttocontrolbar"></a><a name="tabbeddocumenttocontrolbar"></a>CMDIFrameWndEx：： TabbedDocumentToControlBar
 
 将指定的选项卡式文档转换为停靠窗格。
 
@@ -1967,24 +1967,24 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 ### <a name="parameters"></a>参数
 
-*pMDIChildwnd*<br/>
+*pMDIChildWnd*<br/>
 指向包含停靠窗格的 MDI 子窗口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 TRUE，失败时为 FALSE。
+如果方法成功，则为 TRUE; 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-使用此方法可将选项卡式文档转换为停靠窗格。 选项卡式文档必须使用[CMDIFrameWndEx：：：控制栏标签文档](#controlbartotabbeddocument)创建。
+使用此方法可将选项卡式文档转换为停靠窗格。 必须使用[CMDIFrameWndEx：： ControlBarToTabbedDocument](#controlbartotabbeddocument)创建选项卡式文档。
 
 ### <a name="example"></a>示例
 
-下面的示例显示了如何在`TabbedDocumentToControlBar` [VisualStudioDemo 示例中使用：MFC 可视化工作室应用程序](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何 `TabbedDocumentToControlBar` 在[VisualStudioDemo 示例中使用 MFC Visual Studio 应用程序](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 
-## <a name="cmdiframewndexupdatecaption"></a><a name="updatecaption"></a>CMDIFramewndEx：：更新标题
+## <a name="cmdiframewndexupdatecaption"></a><a name="updatecaption"></a>CMDIFrameWndEx：： UpdateCaption
 
 由框架调用以更新窗口框架标题。
 
@@ -1994,15 +1994,15 @@ void UpdateCaption();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmdiframewndexupdatemditabbedbarsicons"></a><a name="updatemditabbedbarsicons"></a>CMDIFramewndEx：：更新MDITab贝德巴图标
+## <a name="cmdiframewndexupdatemditabbedbarsicons"></a><a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx：： UpdateMDITabbedBarsIcons
 
-设置每个 MDI 选项卡式窗格的图标。
+为每个 MDI 选项卡式窗格设置图标。
 
 ```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 
-## <a name="cmdiframewndexwinhelp"></a><a name="winhelp"></a>CMDIFramewndEx：：赢帮助
+## <a name="cmdiframewndexwinhelp"></a><a name="winhelp"></a>CMDIFrameWndEx：： WinHelp
 
 由框架调用以启动 WinHelp 应用程序或上下文帮助。
 
@@ -2015,10 +2015,10 @@ virtual void WinHelp(
 ### <a name="parameters"></a>参数
 
 *dwData*<br/>
-[在]指定*nCmd*指定的帮助类型所需的数据。
+中根据*nCmd*指定的帮助类型的要求指定数据。
 
 *nCmd*<br/>
-[在]指定请求的帮助类型。 有关可能值的列表及其如何影响*dwData*参数，请参阅 Windows SDK 中的[WinHelp 函数](/windows/win32/api/winuser/nf-winuser-winhelpw)。
+中指定请求的帮助的类型。 有关可能值的列表以及这些值如何影响*dwData*参数，请参阅 Windows SDK 中的[WinHelp 函数](/windows/win32/api/winuser/nf-winuser-winhelpw)。
 
 ### <a name="remarks"></a>备注
 
@@ -2026,7 +2026,7 @@ virtual void WinHelp(
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [CMDIChildWndEx 类](../../mfc/reference/cmdichildwndex-class.md)

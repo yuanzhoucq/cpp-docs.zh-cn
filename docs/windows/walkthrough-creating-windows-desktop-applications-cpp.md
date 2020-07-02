@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813604"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建传统的 Windows 桌面应用程序（c + +）
 
@@ -57,7 +57,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![向 DesktopApp 项目添加新项](../build/media/desktop-app-project-add-new-item-153.gif "向 DesktopApp 项目添加新项")
 
-1. 在“添加新项” **** 对话框中选择“C++ 文件(.cpp)” ****。 在 "**名称**" 框中，键入文件的名称，例如 " *HelloWindowsDesktop*"。 选择 "**添加**"。
+1. 在“添加新项” **** 对话框中选择“C++ 文件(.cpp)” ****。 在 "**名称**" 框中，键入文件的名称，例如 " *HelloWindowsDesktop*"。 选择“添加”。
 
    ![将 .cpp 文件添加到 DesktopApp 项目](../build/media/desktop-app-add-cpp-file-153.png "将 .cpp 文件添加到 DesktopApp 项目")
 
@@ -83,7 +83,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![向 DesktopApp 项目添加新项](../build/media/desktop-app-project-add-new-item-153.gif "向 DesktopApp 项目添加新项")
 
-1. 在“添加新项” **** 对话框中选择“C++ 文件(.cpp)” ****。 在 "**名称**" 框中，键入文件的名称，例如 " *HelloWindowsDesktop*"。 选择 "**添加**"。
+1. 在“添加新项” **** 对话框中选择“C++ 文件(.cpp)” ****。 在 "**名称**" 框中，键入文件的名称，例如 " *HelloWindowsDesktop*"。 选择“添加”。
 
    ![将 .cpp 文件添加到 DesktopApp 项目](../build/media/desktop-app-add-cpp-file-153.png "将 .cpp 文件添加到 DesktopApp 项目")
 
@@ -113,7 +113,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![向 DesktopApp 项目添加新项](../build/media/desktop-app-project-add-new-item-150.gif "向 DesktopApp 项目添加新项")
 
-1. 在“添加新项” **** 对话框中选择“C++ 文件(.cpp)” ****。 在 "**名称**" 框中，键入文件的名称，例如 " *HelloWindowsDesktop*"。 选择 "**添加**"。
+1. 在“添加新项” **** 对话框中选择“C++ 文件(.cpp)” ****。 在 "**名称**" 框中，键入文件的名称，例如 " *HelloWindowsDesktop*"。 选择“添加”。
 
    ![将 .cpp 文件添加到 DesktopApp 项目](../build/media/desktop-app-add-cpp-file-150.png "将 .cpp 文件添加到 DesktopApp 项目")
 
@@ -389,7 +389,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
    ```
 
    `HDC`在代码中，是用于在窗口的工作区中进行绘制的设备上下文的句柄。 使用 `BeginPaint` 和 `EndPaint` 函数来准备并完成工作区中的绘图。 `BeginPaint`返回用于在客户端区域中绘制的显示设备上下文的句柄;`EndPaint`结束绘制请求并释放设备上下文。
-   
+
 1. 应用程序通常会处理许多其他消息。 例如，在首次创建窗口时[WM_CREATE](/windows/win32/winmsg/wm-create) ，当窗口关闭时[WM_DESTROY](/windows/win32/winmsg/wm-destroy) 。 以下代码显示基本但完整的 `WndProc` 函数。
 
    ```cpp
@@ -588,7 +588,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![运行 DesktopApp 项目](../build/media/desktop-app-project-run-157.PNG "运行 DesktopApp 项目")
 
-祝贺你！ 您已经完成了本演练，并构建了传统的 Windows 桌面应用程序。
+恭喜！ 您已经完成了本演练，并构建了传统的 Windows 桌面应用程序。
 
 ## <a name="see-also"></a>请参阅
 

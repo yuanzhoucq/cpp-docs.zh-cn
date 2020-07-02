@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813517"
 ---
 # <a name="cfileexception-class"></a>CFileException 类
 
@@ -45,13 +45,13 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CFileException：： CFileException](#cfileexception)|构造 `CFileException` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CFileException：： ErrnoToException](#errnotoexception)|返回与运行时错误号对应的原因代码。|
 |[CFileException：： GetErrorMessage](#geterrormessage)|检索描述异常的消息。|
@@ -61,13 +61,13 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CFileException：： m_cause](#m_cause)|包含与异常原因相对应的可移植代码。|
 |[CFileException：： m_lOsError](#m_loserror)|包含相关的操作系统错误号。|
 |[CFileException：： m_strFileName](#m_strfilename)|包含此异常的文件的名称。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CFileException`类包括的公共数据成员保存可移植原因代码和特定于操作系统的错误号。 类还提供静态成员函数，用于引发文件异常，并为操作系统错误和 C 运行时错误返回原因代码。
 
@@ -107,7 +107,7 @@ CFileException(
 *lpszArchiveName*<br/>
 指向一个字符串，该字符串包含 `CFile` 导致异常的对象的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 不要直接使用此构造函数，而应调用 global 函数[AfxThrowFileException](exception-processing.md#afxthrowfileexception)。
 
@@ -131,7 +131,7 @@ static int PASCAL ErrnoToException(int nErrno);
 
 与给定的运行时库错误值相对应的枚举值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关可能的枚举值的列表，请参阅[CFileException：： m_cause](#m_cause) 。
 
@@ -165,7 +165,7 @@ virtual BOOL GetErrorMessage(
 
 如果方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果指定的缓冲区太小，则会截断错误消息。
 
@@ -183,7 +183,7 @@ virtual BOOL GetErrorMessage(
 int m_cause;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此数据成员是**int**类型的公共变量。枚举器及其含义如下：
 
@@ -205,11 +205,11 @@ int m_cause;
 | `CFileException::diskFull` | 13：磁盘已满。 |
 | `CFileException::endOfFile` | 14：已到达文件结尾。 |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> 引发这些 `CFileException` 的枚举器不同于引发 `CArchiveException` 的枚举器。
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> `CArchiveException::generic` 已弃用。 请改用 `genericException`。 如果在应用程序中使用**泛型**，并使用/clr 生成，则生成的语法错误并不容易解密。
 
 ### <a name="example"></a>示例
 
@@ -223,7 +223,7 @@ int m_cause;
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关错误代码的列表，请参阅操作系统技术手册。 此数据成员是 LONG 类型的公共变量。
 
@@ -296,7 +296,7 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

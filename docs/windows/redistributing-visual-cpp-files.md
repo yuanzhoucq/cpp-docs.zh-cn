@@ -8,37 +8,37 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 46192fe7ff5b29c22a5001cc460c74f5ddf6d1bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16a450f65689251c67a5326bd772d09d5c4abb74
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737495"
 ---
 # <a name="redistributing-visual-c-files"></a>重新分发 Visual C++ 文件
 
 > [!NOTE]
-> 你转到此处是否因为想下载某个 Visual C++ 运行时文件？ 请参阅[Microsoft 网站](https://www.microsoft.com/)并在搜索框中输入**Visual C++可再发行组件**。 下载并安装适用于你的计算机体系结构的可再发行组件包（例如，如果运行 64 位 Windows，请使用 x64）以及所需的 Visual C++ 版本（例如 2015 版）。
+> 你转到此处是否因为想下载某个 Visual C++ 运行时文件？ 请在[Microsoft 网站](https://www.microsoft.com/)上，在 "搜索" 框中输入**Visual C++ 可再发行组件**。 下载并安装适用于你的计算机体系结构的可再发行组件包（例如，如果运行 64 位 Windows，请使用 x64）以及所需的 Visual C++ 版本（例如 2015 版）。
 
 部署应用程序时，还必须部署支持该应用程序所需的文件。 如果其中有任何文件由 Microsoft 提供，请检查是否允许你重新发布这些文件。 若要查看 Visual Studio 许可条款，请在 IDE 中的“关于 Microsoft Visual Studio”对话框查看许可条款链接，或下载 [Microsoft 软件许可条款](https://visualstudio.microsoft.com/license-terms/mlt687465/)文件。 若要查看某些版本的 Visual Studio 的 Microsoft 软件许可条款中“可分发代码”部分引用的“REDIST 列表”，请参阅 [Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK 的可分发代码（包括实用程序和 BuildServer 文件）](/visualstudio/productinfo/2017-redistribution-vs)，或者如果使用的是 Visual Studio 2015，请参阅 [Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可分发代码](/visualstudio/productinfo/2015-redistribution-vs)。 有关可再发行文件的详细信息，请参阅[确定要重新分发的 Dll](determining-which-dlls-to-redistribute.md) 和[部署示例](deployment-examples.md)。
 
-若要部署可再发行 Visual C++ 文件，可以使用包含在 Visual Studio 中的 Visual C++ 可再发行组件包（VCRedist\_x86.exe、VCRedist\_x64.exe 或 VCRedist\_arm.exe）。 在 Visual Studio 2017 中，可在 Program Files[ (x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_ 文件夹中找到这些文件，其中 _edition_ 是所安装的 Visual Studio 版本，_lib-version_ 是要重新分发的库的版本。 在 Visual Studio 2015 中，可在 Program Files [(x86)]\Microsoft Visual Studio version\VC\redist*locale* 中的 Visual Studio 安装目录下找到这些文件\\\\。 另一个选项是使用可再发行合并模块（.msm 文件），可在 Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ 文件夹中的 Visual Studio 2017 找到该文件。 在 Visual Studio 2015 中，可在 Program Files [(x86)]\Common Files\Merge Modules\\ 找到这些文件。 还可以在应用程序本地文件夹（这是包含可执行应用程序文件的文件夹）中直接安装可再发行 Visual C++ DLL。 出于维护原因，不建议使用此安装位置。
+若要部署可再发行 Visual C++ 文件，可以使用包含在 Visual Studio 中的 Visual C++ 可再发行组件包（VCRedist\_x86.exe、VCRedist\_x64.exe 或 VCRedist\_arm.exe）。 在 Visual Studio 2019 中，可以在 Program Files [（x86）] 中找到这些文件 \\ Microsoft Visual Studio \\ 2019 \\ _edition_ \\ Vc \\ \\ MSVC \\ v142 文件夹或 program files [（x86）] \\ Microsoft Visual Studio \\ 2019 \\ _Edition_ \\ vc 再发行 \\ 版本 \\ MSVC \\ _lib_ ，其中_版本_是安装的 Visual Studio edition， _lib 版本_是要重新分发的库版本。 在 Visual Studio 2017 中，可以在 Program Files [（x86）] 中找到这些文件 \\ Microsoft Visual Studio \\ 2017 \\ _版_ \\ VC \\ \\ MSVC \\ ，其中_版本_是安装的 Visual Studio 版本，而_lib 版本_是要重新分发的库的版本。_lib-version_ 在 Visual Studio 2015 中，可在 Program Files [(x86)]\Microsoft Visual Studio version\VC\redist\\locale\\ 中的 Visual Studio 安装目录下找到这些文件****。 另一种方法是使用可再发行的合并模块（.msm 文件），在 Visual Studio 2019 中，可以在 Program Files [（x86）] 中找到 \\ Microsoft Visual Studio \\ 2019 \\ _版_ \\ Vc \\ \\ MSVC \\ v142 \\ MergeModules 或 program files [（x86）] \\ Microsoft Visual Studio \\ 2019 \\ _edition_ \\ vc \\ \\ \\ _lib-version_ \\ 文件夹。 在 Visual Studio 2017 中，可以在 Program Files [（x86）] 中找到 \\ Microsoft Visual Studio \\ 2017 \\ _版_ \\ VC \\ \\ MSVC \\ _lib-version_ \\ MergeModules 文件夹。 在 Visual Studio 2015 中，可在 Program Files [(x86)]\Common Files\Merge Modules 找到这些文件。 还可以在应用程序本地文件夹（这是包含可执行应用程序文件的文件夹）中直接安装可再发行 Visual C++ DLL**。 出于维护原因，不建议使用此安装位置。
 
 Visual C++ Redistributable Package 将安装并注册所有 Visual C++ 库。 如果你使用其中一个包，则必须将其设置为在目标系统上运行，以此作为安装应用程序的先决条件。 我们建议你在部署中使用这些包，因为它们能够启用 Visual C++ 库的自动更新。 有关如何使用这些包的示例，请参阅[演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。
 
-每个 Visual C++ 可再发行包都会检查计算机上是否存在较新版本。 如果找到较新版本，则不安装包。 从 Visual Studio 2015 开始，可再发行包会显示一个表明安装失败的错误消息。 如果使用 /quiet 标志运行包，则不会显示错误消息。 在任一情况下，Microsoft 安装程序都会记录错误，并且会将错误结果返回给调用方。 从 Visual Studio 2015 包开始，可以检查注册表是否安装了更新的版本，从而避免出现此错误。 当前所安装的版本存储在 HKEY_LOCAL_MACHINE\SOFTWARE[\Wow6432Node]\Microsoft\VisualStudio\\_vs-version_\VC\Runtimes\\{x86|x64|ARM} 键中，其中 _vs-version_ 是 Visual Studio 的版本号（由于更新的 2017 可再发行组件与 2015 版是二进制兼容的，所以 Visual Studio 2015 和 Visual Studio 2017 的版本号都为 14.0），根据平台所安装的 vcredist 版本，该键可能为 ARM、x86 或 x64。 （除非使用 RegEdit 在 x64 平台上查看已安装 x86 包的版本，否则不需要在 Wow6432Node 子项下检查。）版本号存储在 REG_SZ 字符串值**版本**中，同时还存储在**主**版本号、**次**版本号、 **Bld**值和**Rbld** REG_DWORD 值的集合中。 为了避免在安装时出错，如果当前安装的版本较新，必须跳过可再发行组件包的安装。
+每个 Visual C++ 可再发行包都会检查计算机上是否存在较新版本。 如果找到较新版本，则不安装包。 从 Visual Studio 2015 开始，可再发行包会显示一个表明安装失败的错误消息。 如果使用 /quiet 标志运行包，则不会显示错误消息****。 在任一情况下，Microsoft 安装程序都会记录错误，并且会将错误结果返回给调用方。 从 Visual Studio 2015 包开始，可以检查注册表是否安装了更新的版本，从而避免出现此错误。 当前所安装的版本存储在 HKEY_LOCAL_MACHINE\SOFTWARE[\Wow6432Node]\Microsoft\VisualStudio\\_vs-version_\VC\Runtimes\\{x86|x64|ARM} 键中，其中 _vs-version_ 是 Visual Studio 的版本号（由于更新的 2017 可再发行组件与 2015 版是二进制兼容的，所以 Visual Studio 2015 和 Visual Studio 2017 的版本号都为 14.0），根据平台所安装的 vcredist 版本，该键可能为 ARM、x86 或 x64。 （除非使用 RegEdit 在 x64 平台上查看已安装 x86 包的版本，否则不需要在 Wow6432Node 子项下检查。）版本号存储在 REG_SZ 字符串值**版本**中，同时还存储在**主**版本号、**次**版本号、 **Bld**值和**Rbld** REG_DWORD 值的集合中。 为了避免在安装时出错，如果当前安装的版本较新，必须跳过可再发行组件包的安装。
 
 如果使用包含 Visual C++ DLL 的合并模块，则必须将该模块包含在用于部署应用程序的 Windows Installer 包（或类似的安装包）中。 有关详细信息，请参阅[使用合并模块重新分发](redistributing-components-by-using-merge-modules.md)。 有关示例，请参阅[演练：使用安装项目部署 Visual C++ 应用程序](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)，该演练还演示了如何使用 InstallShield Limited Edition 创建安装包。
 
 ## <a name="potential-run-time-errors"></a>可能的运行时错误
 
-若 Windows 无法找到应用程序所需的某个可再发行库 DLL，可能会出现类似这样的消息：“因为找不到 library.dll，此应用程序未能启动。 重新安装应用程序可能会修复此问题。”
+若 Windows 无法找到应用程序所需的某个可再发行库 DLL，可能会出现类似这样的消息：“因为找不到 library.dll，此应用程序未能启动**。 重新安装应用程序可能会修复此问题。”
 
 若要解决这种错误，请确保你的应用程序安装程序正确生成，并且可再发行库正确部署到目标系统中。 有关详细信息，请参阅[了解 Visual C++ 应用程序的依赖项](understanding-the-dependencies-of-a-visual-cpp-application.md)。
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|说明|
+|Title|描述|
 |-----------|-----------------|
 |[使用合并模块重新分发](redistributing-components-by-using-merge-modules.md)|描述如何使用 Visual C++ 可再发行合并模块将 Visual C++ 运行库作为共享 DLL 安装到 %windir%\system32\ 文件夹中。|
 |[重新分发 Visual C++ ActiveX 控件](redistributing-visual-cpp-activex-controls.md)|描述如何重新发布使用 ActiveX 控件的应用程序。|

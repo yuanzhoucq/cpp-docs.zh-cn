@@ -5,16 +5,16 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: ebd0a30c677ea44f95e64e2d2ba010bc99cb412b
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813530"
 ---
 # <a name="ltspangt"></a>&lt;格&gt;
 
-`span`是一个视图，它是一系列连续的对象。 它提供快速且不安全的访问。 与 `vector` 或不同 `array` ，它不会 "拥有" 它提供访问权限的元素。 
+`span`是一个视图，它是一系列连续的对象。 它提供快速且不安全的访问。 与 `vector` 或不同 `array` ，它不会 "拥有" 它提供访问权限的元素。
 
 有关详细信息，请参阅[span 类](span-class.md)。 下面是如何使用范围的示例：
 
@@ -80,6 +80,6 @@ int main()
 |-|:-|
 | **dynamic_extent** | 指示范围大小在运行时确定，而不是在编译时确定。 如果范围中的元素数量在编译时是已知的，则会将其指定为 `Extent` 模板参数。 如果在运行时之前不知道该数字，请改为指定 `dynamic_extent` 。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)
