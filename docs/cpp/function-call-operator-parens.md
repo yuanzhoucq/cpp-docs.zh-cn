@@ -12,33 +12,34 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777300"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813545"
 ---
 # <a name="function-call-operator-"></a>函数调用运算符：()
 
-函数调用是一种形式的 *`postfix-expression`* ，它由标识函数后跟函数调用运算符的表达式构成 **`()`** 。 对象可以声明一个 `operator ()` 函数，该函数为对象提供函数调用语义。
+函数调用是一种 *`postfix-expression`* 由表达式构成的，该表达式的计算结果为函数或可调用的对象，后跟函数调用运算符 **`()`** 。 对象可以声明一个 `operator ()` 函数，该函数为对象提供函数调用语义。
 
 ## <a name="syntax"></a>语法
 
 > *`postfix-expression`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
+> &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 函数调用运算符的参数来自以 *`argument-expression-list`* 逗号分隔的表达式列表。 这些表达式的值作为参数传递给函数。 *参数表达式列表*可以为空。 在 c + + 17 之前，函数表达式的计算顺序是未指定的，并且可以按任意顺序出现。 在 c + + 17 和更高版本中，函数表达式在任何参数表达式或默认参数之前计算。 参数表达式按不确定的顺序进行计算。
 
-*`postfix-expression`* 标识要调用的函数。 它的计算结果必须是函数地址。 它可以采用以下任意一种形式：
+*`postfix-expression`* 计算结果为要调用的函数。 它可以采用以下任意一种形式：
 
-- 函数或函数对象名或指针，
-- 引用函数对象或函数对象的左值表达式。
-- 成员函数访问器，无论是显式的还是隐式的。
+- 函数标识符在当前范围内或在所提供的任何函数参数的作用域中可见，
+- 一个表达式，该表达式的计算结果为函数、函数指针、可调用对象或对一个的引用。
+- 成员函数访问器，无论是显式的还是隐式的
+- 指向成员函数的取消引用的指针。
 
-指定的函数 *`postfix-expression`* 可能是重载函数。 重载决策的常用规则确定要调用的实际函数。
+*`postfix-expression`* 可能是重载的函数标识符或重载成员函数访问器。 重载决策的规则确定要调用的实际函数。 如果成员函数是虚拟的，则在运行时确定要调用的函数。
 
 一些示例声明：
 

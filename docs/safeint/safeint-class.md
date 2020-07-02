@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737580"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
 扩展整数基元，有助于防止整数溢出，并便于比较不同类型的整数。
 
 > [!NOTE]
-> 此库的最新版本位于 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。
+> 最新版本的 SafeInt 库位于 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。 若要使用 SafeInt 库，请克隆存储库，并`#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>语法
 
@@ -168,26 +168,26 @@ class SafeInt;
 
 `SafeInt` 类检查是否发生算术溢出，或代码是否尝试除以零。 在这两种情况下，此类都会调用错误处理程序，以警告程序存在潜在问题。
 
-此类还便于比较两个不同类型的整数，只要它们是 `SafeInt` 对象。 通常情况下，在执行比较时，必须先将数字转换为相同类型。 将一种类型的数字强制转换为另一种类型通常需要进行检查，以确保没有数据丢失。
+此类还便于比较两个不同类型的整数，只要它们是 `SafeInt` 对象。 通常，在进行比较时，必须首先将数字转换为同一类型。 将一种类型的数字强制转换为另一种类型通常需要进行检查，以确保没有数据丢失。
 
 本主题中的“运算符”表列出了 `SafeInt` 类支持的数学运算符和比较运算符。 大多数数学运算符返回类型为 `T` 的 `SafeInt` 对象。
 
 `SafeInt` 和整型类型之间的比较运算可以在任意一个方向上执行。 例如，`SafeInt<int>(x) < y` 和 `y> SafeInt<int>(x)` 都是有效的，返回的结果也相同。
 
-许多二元运算符不支持使用两种不同的 `SafeInt` 类型。 其中一个例子就是 `&` 运算符。 `SafeInt<T, E> & int` 受支持，但 `SafeInt<T, E> & SafeInt<U, E>` 不受支持。 在后一个示例中，编译器不知道返回什么类型的参数。 此问题的一个解决方案是，将第二个参数强制转换回基类型。 通过使用相同参数，可以借助 `SafeInt<T, E> & (U)SafeInt<U, E>` 完成此操作。
+许多二进制运算符不支持使用两种不同 `SafeInt` 的类型。 其中一个例子就是 `&` 运算符。 `SafeInt<T, E> & int`支持，但 `SafeInt<T, E> & SafeInt<U, E>` 不支持。 在后一个示例中，编译器不知道返回什么类型的参数。 此问题的一个解决方案是，将第二个参数强制转换回基类型。 通过使用相同参数，可以借助 `SafeInt<T, E> & (U)SafeInt<U, E>` 完成此操作。
 
 > [!NOTE]
-> 对于任何位运算，两个不同的参数应大小相同。 如果大小不同，编译器便会抛出 [ASSERT](../mfc/reference/diagnostic-services.md#assert) 异常。 无法保证此运算的结果是准确的。 若要解决此问题，请将较小参数强制转换为与较大参数大小相同。
+> 对于任何位运算，两个不同的参数应大小相同。 如果大小不同，编译器便会抛出 [ASSERT](../mfc/reference/diagnostic-services.md#assert) 异常。 无法保证此操作的结果是准确的。 若要解决此问题，请强制转换较小的参数，直到其大小与较大参数相同。
 
 对于移位运算符，如果移位位数超出模板类型的现有位数，便会抛出 ASSERT 异常。 这在发布模式下不会产生任何影响。 对于移位运算符，可以混用两种类型的 SafeInt 参数，因为返回类型与原始类型相同。 运算符右侧的数字仅指明要移位的位数。
 
-如果使用 SafeInt 对象执行逻辑比较，这严格来说是算术比较。 以下面这些表达式为例：
+使用 SafeInt 对象进行逻辑比较时，比较是严格的算法。 以下面这些表达式为例：
 
 - `SafeInt<uint>((uint)~0) > -1`
 
 - `((uint)~0) > -1`
 
-第一个语句解析为 true****，而第二个语句则解析为 `false`。 0 的按位求反结果为 0xFFFFFFFF。 在第二个语句中，默认比较运算符将 0xFFFFFFFF 与 0xFFFFFFFF 进行比较，并认为它们相等。 `SafeInt` 类的比较运算符了解到，第二个参数为负数，而第一个参数则无符号。 因此，尽管位表示形式完全相同，但 `SafeInt` 逻辑运算符了解到无符号整数大于 -1。
+第一个语句解析为 true****，而第二个语句则解析为 `false`。 0 的按位求反结果为 0xFFFFFFFF。 在第二个语句中，默认比较运算符将 0xFFFFFFFF 与 0xFFFFFFFF 进行比较，并认为它们相等。 类的比较运算符 `SafeInt` 认识到第二个参数为负值，但第一个参数未签名。 因此，尽管位表示形式完全相同，但 `SafeInt` 逻辑运算符认识到无符号整数大于-1。
 
 结合使用 `SafeInt` 类和 `?:` 三元运算符时要谨慎。 以下面的代码行为例。
 
@@ -217,7 +217,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 自定义错误策略的方法有两种。 第一种方法是，在创建 `SafeInt` 时设置参数 `E`。 如果只想更改一个 `SafeInt` 的错误处理策略，请使用这种方法。 另一种方法是，在添加 `SafeInt` 库前，将 _SAFEINT_DEFAULT_ERROR_POLICY 定义为自定义错误处理类。 若要对代码中 `SafeInt` 类的所有实例更改默认错误处理策略，请使用这种方法。
 
 > [!NOTE]
-> 处理 SafeInt 库中错误的自定义类不得将控制权返回给调用了错误处理程序的代码。 在错误处理程序获得调用后，无法信任 `SafeInt` 运算的结果。
+> 处理 SafeInt 库中错误的自定义类不得将控制权返回给调用了错误处理程序的代码。 调用错误处理程序后，操作的结果将 `SafeInt` 不受信任。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -225,9 +225,28 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 ## <a name="requirements"></a>要求
 
-**头：** safeint.h
+**标头：** SafeInt. hpp
+> [!NOTE]
+> 此库的最新版本位于 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。 克隆库，并包括 SafeInt hpp 以使用 SafeInt 库。
+> 首选此 github 存储库 <safeint>。 它是 <safeint> 的新式版本，其中包括少量的 bug 修复，使用 c + + 的新式功能生成更高效的代码，并可移植到使用 gcc、clang 或 Intel 编译器的任何平台。
 
-**命名空间：** msl:: utilities
+### <a name="example"></a>示例
+
+```c
+#include "SafeInt.hpp" // set path to your clone of the SafeInt GitHub repo (https://github.com/dcleblanc/SafeInt)
+
+int main()
+{
+    int divisor = 3;
+    int dividend = 6;
+    int result;
+
+    bool success = SafeDivide(dividend, divisor, result); // result = 2
+    success = SafeDivide(dividend, 0, result); // expect fail. result isn't modified.
+}
+```
+
+**命名空间：** 无
 
 ## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt：： SafeInt
 
@@ -236,42 +255,34 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 ```cpp
 SafeInt() throw
 
-SafeInt (
-   const T& i
-) throw ()
+SafeInt (const T& i) throw ()
 
-SafeInt (
-   bool b
-) throw ()
+SafeInt (bool b) throw ()
 
 template <typename U>
-SafeInt (
-   const SafeInt <U, E>& u
-)
+SafeInt (const SafeInt <U, E>& u)
 
 I template <typename U>
-SafeInt (
-   const U& i
-)
+SafeInt (const U& i)
 ```
 
 ### <a name="parameters"></a>参数
 
-*i*<br/>
+`i`<br/>
 [输入] 新 `SafeInt` 对象的值。 这必须是 T 或 U 类型的参数，具体视构造函数而定。
 
-*b*<br/>
+`b`<br/>
 [输入] 新 `SafeInt` 对象的布尔值。
 
-*u*<br/>
+`u`<br/>
 [输入] U 类型的 `SafeInt`。新 `SafeInt` 对象的值与 u** 相同，但类型为 T。
 
-U `SafeInt` 中存储的数据的类型。 这可以是布尔类型、字符类型或整数类型。 如果是整数类型，它可以有符号，也可以无符号，且大小介于 8 位和 64 位之间。
+`U`存储在中的数据的类型 `SafeInt` 。 这可以是布尔类型、字符类型或整数类型。 如果它是整数类型，它可以是有符号或无符号的，并且可以介于8到64位之间。
 
 ### <a name="remarks"></a>备注
 
-构造函数的输入参数 i** 或 u** 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数，`SafeInt` 类便会调用 [static_assert](../cpp/static-assert.md)，以指明输入参数无效。
+构造函数的输入参数 i** 或 u** 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数， `SafeInt` 类将调用[static_assert](../cpp/static-assert.md)以指示无效的输入参数。
 
-使用模板类型 `U` 的构造函数自动将输入参数转换为 `T` 指定的类型。 `SafeInt` 类转换数据，而不会有任何数据丢失。 如果无法在不丢失数据的情况下将数据转换为 `T` 类型，它会向错误处理程序 `E` 报告。
+使用模板类型 `U` 的构造函数自动将输入参数转换为 `T` 指定的类型。 `SafeInt` 类转换数据，而不会有任何数据丢失。 `E`如果无法在 `T` 不丢失数据的情况下将数据转换为类型，它将报告错误处理程序。
 
-如果是通过布尔参数创建 `SafeInt`，需要立即初始化值。 无法使用代码 `SafeInt<bool> sb;` 来构造 `SafeInt`。 这会生成编译错误。
+如果是通过布尔参数创建 `SafeInt`，需要立即初始化值。 不能 `SafeInt` 使用代码构造 `SafeInt<bool> sb;` 。 这会生成编译错误。

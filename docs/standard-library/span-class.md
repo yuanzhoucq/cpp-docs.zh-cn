@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: b76c1db2176c27983ccdcd4742f889f5a4d95af6
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813504"
 ---
 # <a name="span-class-c-standard-library"></a>span 类（c + + 标准库）
 
@@ -75,7 +75,7 @@ class span;
 
 ### <a name="template-parameters"></a>模板参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |`T`| 范围中元素的类型。 |
 |`Extent`| 如果在编译时指定，则为跨距中的元素数。 否则， `std::dynamic_extent` 如果在运行时将指定元素的数量，则为。 |
@@ -100,7 +100,7 @@ class span;
 |[格](#span)| 构造 `span` 。|
 | **迭代器支持** | **说明** |
 |[准备](#begin) | 获取一个迭代器，该迭代器指向范围中的第一个元素。|
-|[end](#end) | 获取一个迭代器，该迭代器指向范围的末尾。 |
+|[端面](#end) | 获取一个迭代器，该迭代器指向范围的末尾。 |
 |[rbegin](#rbegin) | 获取一个反向迭代器，该迭代器指向范围的最后一个元素;即反向跨度的开头。|
 |[rend](#rend) | 获取指向范围前部的反向迭代器;也就是说，已反转范围的结尾。|
 | **访问元素**| **说明** |
@@ -120,7 +120,7 @@ class span;
 |[span：： operator =](#op_eq)| 替换跨度。|
 |[span：：运算符\[\]](#op_at)| 获取指定位置处的元素。 |
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 所有 `span` 成员函数都具有恒定的时间复杂性。
 
@@ -270,7 +270,7 @@ int main()
 using element_type = T;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 创建范围时，将从模板参数获取类型 `T` 。
 
@@ -336,7 +336,7 @@ constexpr iterator end() const noexcept;
 
 指向刚超出范围末尾的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `end` 用于测试迭代器是否超过了其范围的末尾。
 
@@ -371,7 +371,7 @@ template <size_t count> constexpr auto first() const noexcept;
 
 包含 `count` 此范围前面的元素的范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果可能，请使用此函数的模板版本在 `count` 编译时验证，并保留有关范围的信息，因为它返回的是一个固定区范围。
 
@@ -387,14 +387,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.first(2);
     cout << "mySpan.first(2): ";
     for (auto& i : first2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.first<2>: ";
     auto viewSpan = mySpan.first<2>();
     for (auto& i : viewSpan)
@@ -451,7 +451,7 @@ int main()
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类型充当范围内的元素的迭代器。
 
@@ -496,7 +496,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 包含 `count` 此范围中最后一个元素的范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果可能，请使用此函数的模板版本在 `count` 编译时验证，并保留有关范围的信息，因为它返回的是一个固定区范围。
 
@@ -512,14 +512,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.last(2);
     cout << "mySpan.last(2): ";
     for (auto& i : last2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.last<2>: ";
     auto viewSpan = mySpan.last<2>();
     for (auto& i : viewSpan)
@@ -588,7 +588,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 `*this`
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 赋值将对数据指针和大小进行浅表复制。 浅表副本是安全的，因为 `span` 不会为其包含的元素分配内存。
 
@@ -643,7 +643,7 @@ int main()
     span<int>::pointer ptr = &mySpan[2];
     *ptr = 9;
     cout << mySpan[2];
-    
+
     // const pointer
     span<int>::const_pointer cPtr = &mySpan[0];
     // *cPtr = 9; error - const
@@ -740,7 +740,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 反向迭代器指向反向范围中最后一个元素之后的占位符;也就是说，非反向范围中第一个元素之前的占位符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rend`与反向跨度一起使用，正如[span：： end](#end)用于跨距。 用于测试反向迭代器是否已到达其跨度的终点。
 
@@ -954,7 +954,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *迅驰*\
 从此范围构造范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 跨度不会释放范围内的项的存储，因为它不拥有其中的对象的存储。
 
@@ -978,13 +978,13 @@ using namespace std;
 int main()
 {
     const int MAX=10;
-    
+
     int x[MAX];
     for (int i = 0; i < MAX; i++)
     {
         x[i] = i;
     }
-    
+
     span<int, MAX> span1{ x }; // fixed-size span: compiler error if size of x doesn't match template argument MAX
     span<int> span2{ x }; // size is inferred from x
     span<const int> span3 = span2; // converting constructor
@@ -1015,7 +1015,7 @@ constexpr auto subspan() const noexcept
 
 `offset`从此范围中开始的范围。 包含 `count` 元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的模板版本可用来检查编译时的计数，该计数通过返回一段固定区来保留范围的相关信息。
 
@@ -1031,7 +1031,7 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     cout << "mySpan.subspan(1,2): ";
     for (auto& i : mySpan.subspan(1,2))
     {
@@ -1115,7 +1115,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<span>](../standard-library/span.md)  
 [如何使用类模板参数推导](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

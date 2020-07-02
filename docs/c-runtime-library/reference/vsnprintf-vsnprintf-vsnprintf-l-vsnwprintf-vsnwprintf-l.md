@@ -1,6 +1,6 @@
 ---
 title: vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
-ms.date: 11/04/2016
+ms.date: 06/24/2020
 api_name:
 - _vsnprintf
 - _vsnprintf_l
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737581"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -142,13 +142,13 @@ int _vsnwprintf_l(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 输出的存储位置
 
-*count*<br/>
+*计数*<br/>
 要写入的最大字符数。
 
-*格式*<br/>
+*format*<br/>
 格式规范。
 
 *argptr*<br/>
@@ -163,11 +163,13 @@ int _vsnwprintf_l(
 
 **Vsnprintf**函数返回写入的字符数，不包括终止 null 字符。 如果*count*指定的缓冲区大小不够大，无法包含由*format*和*argptr*指定的输出，则**vsnprintf**的返回值是将写入的字符数，而不是在*count*太大的情况下计数空字符。 如果返回值大于*计数*-1，则输出已被截断。 返回值 -1 指示发生编码错误。
 
-如果要写入的字符数小于或等于*count*， **_vsnprintf**和 **_vsnwprintf**函数都将返回写入的字符数;如果要写入的字符数大于*计数*，则这些函数将返回-1，指示输出已被截断。
+如果要写入的字符数小于或等于*计数*，则 **_vsnprintf**和 **_vsnwprintf**函数都将返回写入的字符数。 如果要写入的字符数大于*计数*，则这些函数将返回-1，指示输出已被截断。
 
-不论是否写入终止 null，所有这些函数的返回值都不会将其包含在内。 当*count*为零时，返回的值是函数将写入的字符数，不包括任何终止 null。 可以将此结果用于为字符串和终止 null 分配足够的缓冲区空间，然后再次调用可填充缓冲区的函数。
+所有这些函数返回的值不包括终止 null，无论是否写入。
 
-如果*format*为**null**，或者如果*buffer*为**null**并且*count*不等于零，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
+- 如果*count*为零且*缓冲区*为**NULL**，则返回的值是函数将写入的字符数。 此值不考虑终止**NULL**。 可以将此结果用于为字符串和终止 null 分配足够的缓冲区空间，然后再次调用可填充缓冲区的函数。
+- 如果*count*为零，但*缓冲区*不**为 NULL**，则不写入任何内容并且函数将返回 `-1` 。
+- 如果*format*为**null**，或者如果*buffer*为**null**并且*count*不等于零，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
@@ -194,14 +196,14 @@ int _vsnwprintf_l(
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**、 **_vsnprintf**、 **_vsnprintf_l**|\<stdio.h>|\<stdio.h> 或 \<cstdio>|
 |**_vsnwprintf**， **_vsnwprintf_l**|\<stdio.h> 或 \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio> 或 \<cwchar>|
 
-**_Vsnprintf**、 **_vsnprintf_l**、 **_Vsnwprintf**和 **_vsnwprintf_l**函数是 Microsoft 特定的。 有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+**_Vsnprintf**、 **_vsnprintf_l**、 **_Vsnwprintf**和 **_vsnwprintf_l**函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -281,12 +283,12 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf 函数](../../c-runtime-library/vprintf-functions.md)<br/>
-[格式规范语法：printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>
