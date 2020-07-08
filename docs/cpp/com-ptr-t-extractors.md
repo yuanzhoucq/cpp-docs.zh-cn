@@ -1,6 +1,7 @@
 ---
 title: _com_ptr_t 提取器
-ms.date: 11/04/2016
+description: 描述 _com_ptr_t 类的提取运算符。
+ms.date: 07/07/2020
 f1_keywords:
 - _com_ptr_t::operatorInterface&
 - _com_ptr_t::operatorbool
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190022"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127853"
 ---
-# <a name="_com_ptr_t-extractors"></a>_com_ptr_t 提取器
+# <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`提取器
 
 **Microsoft 专用**
 
@@ -35,7 +36,7 @@ ms.locfileid: "80190022"
 
 ## <a name="syntax"></a>语法
 
-```
+```c++
 operator Interface*( ) const throw( );
 operator Interface&( ) const;
 Interface& operator*( ) const;
@@ -46,19 +47,20 @@ operator bool( ) const throw( );
 
 ## <a name="remarks"></a>备注
 
-- **Operator interface** <strong>\*</strong>返回封装的接口指针，该指针可能为 NULL。
+- **`operator Interface*`** 返回封装的接口指针，它可以为 NULL。
 
-- **操作员界面 &** 返回对封装的接口指针的引用，如果指针为 NULL，则会发出错误。
+- **`operator Interface&`** 返回对封装的接口指针的引用，如果指针为 NULL，则会发出错误。
 
-- **运算符**<strong>\*</strong>允许智能指针对象在取消引用时充当实际封装的接口。
+- **`operator*`** 允许智能指针对象在取消引用时充当实际封装的接口。
 
-- **operator->** 允许智能指针对象在取消引用时充当实际封装的接口。
+- **`operator->`** 允许智能指针对象在取消引用时充当实际封装的接口。
 
-- **运算符 &** 释放所有封装的接口指针，并将其替换为 NULL，并返回封装的指针的地址。 这允许将智能指针按地址传递到具有*out*参数的函数，该函数通过该函数返回接口指针。
+- **`operator&`** 释放所有封装的接口指针，并将其替换为 NULL，并返回封装的指针的地址。 此运算符允许将智能指针按地址传递到具有*out*参数的函数，该函数通过该函数返回接口指针。
 
-- **operator bool**允许将智能指针对象用于条件表达式。 如果指针不为 NULL，则此运算符返回 TRUE。
+- **`operator bool`** 允许将智能指针对象用于条件表达式。 如果指针不为 NULL，则此运算符返回 TRUE。
 
-**结束 Microsoft 专用**
+  > [!NOTE]
+  > 由于未 **`operator bool`** 声明为，因此可 **`explicit`** `_com_ptr_t` 隐式转换为 **`bool`** ，这可转换为任意标量类型。 这可能会在你的代码中产生意外结果。 启用[编译器警告（等级4） C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md)以防止无意中使用此转换。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
 ms.openlocfilehash: 7b671cfdf5d5ce43024ac3e038c214396ac8679c
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058615"
@@ -23,7 +24,7 @@ ms.locfileid: "86058615"
 
 > **`#line`***数字序列*["*filename*"]
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 编译器使用行号和可选文件名来引用它在编译过程中发现的错误。 行号通常指的是当前输入行，filename 指的是当前输入文件。 每行处理一次后，行号就会增加。
 
@@ -72,6 +73,6 @@ This code is on line 21, in file hello.cpp
 __LINE__, __FILE__ );}
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [预处理器指令](../preprocessor/preprocessor-directives.md)
