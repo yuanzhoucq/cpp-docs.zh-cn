@@ -1,51 +1,51 @@
 ---
 title: new 和 delete 运算符
-ms.date: 11/19/2019
+description: C + + 语言 new 和 delete 运算符允许对分配进行控制。
+ms.date: 07/07/2020
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
-ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: fd170c1500e2d80879fdd89f7d825930189ae942
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e609d1fdbd4f945ab8709c554d1396100027c4c1
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367890"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127840"
 ---
-# <a name="new-and-delete-operators"></a>new 和 delete 运算符
+# <a name="new-and-delete-operators"></a>`new` 和 `delete` 运算符
 
-C++支持使用[新的](new-operator-cpp.md)运算符和[删除](delete-operator-cpp.md)运算符动态分配和分配对象。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 **新**运算符调用特殊函数运算符[new](new-operator-cpp.md)，**删除**运算符调用特殊函数[运算符删除](delete-operator-cpp.md)。
+C + + 支持使用和运算符动态分配和释放对象 [`new`](new-operator-cpp.md) [`delete`](delete-operator-cpp.md) 。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 **`new`** 运算符调用特殊函数 [`operator new`](new-operator-cpp.md) ， **`delete`** 运算符调用特殊函数 [`operator delete`](delete-operator-cpp.md) 。
 
-C++标准库中**的新功能**支持C++标准中指定的行为，即如果内存分配失败，则引发 std：：bad_alloc 异常。 如果您仍想要**新版本的**非引发版本，请将程序链接到 nothrownew.obj。但是，当您链接到 nothrownew.obj 时，C++标准库中**的默认运算符**不再正常工作。
+**`new`** C + + 标准库中的函数支持 c + + 标准中指定的行为， `std::bad_alloc` 如果内存分配失败，则会引发异常。 如果仍需要的非引发版本 **`new`** ，请将程序链接到 *`nothrownew.obj`* 。 但是，当你链接时 *`nothrownew.obj`* ， **`operator new`** c + + 标准库中的默认值将不再起作用。
 
-有关构成 C 运行时库和C++标准库的库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。
+有关 C 运行库和 c + + 标准库中库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。
 
-## <a name="the-new-operator"></a><a id="new_operator"> </a>新运算符
+## <a name="the-new-operator"></a><a id="new_operator"> </a> `new` 运算符
 
-当程序中遇到如下语句时，它将转换为对函数**运算符 new**的调用：
+编译器将此类语句转换为对函数的调用 **`operator new`** ：
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-如果请求为零字节的存储，**则运算符 new**返回指向不同对象的指针（即，对**运算符的新**重复调用返回不同的指针）。 如果分配请求内存不足，**则运算符 new**会引发异常`std::bad_alloc`，或者如果已链接在非引发**运算符新**支持中，则返回**nullptr。**
+如果请求的存储空间为零字节，则 **`operator new`** 返回指向不同对象的指针。 也就是说，重复调用将 **`operator new`** 返回不同的指针。 如果分配请求没有足够的内存，则会 **`operator new`** 引发 `std::bad_alloc` 异常。 或者， **`nullptr`** 如果已在非引发支持中链接，则返回 **`operator new`** 。
 
-您可以编写一个例程，尝试释放内存并重试分配;有关详细信息[，请参阅_set_new_handler。](../c-runtime-library/reference/set-new-handler.md) 有关恢复方案的更多详细信息，请参阅本主题的"处理内存不足"部分。
+可以编写一个例程来尝试释放内存，然后重试分配。 有关详细信息，请参阅 [`_set_new_handler`](../c-runtime-library/reference/set-new-handler.md)。 有关恢复方案的详细信息，请参阅[处理内存不足](#handling-insufficient-memory)部分。
 
-**下表描述了运算符新功能**的两个作用域。
+下表描述了函数的两个作用域 **`operator new`** 。
 
-### <a name="scope-for-operator-new-functions"></a>操作员新功能的范围
+### <a name="scope-for-operator-new-functions"></a>函数的作用域 `operator new`
 
-|操作员|范围|
-|--------------|-----------|
-|**：： 运算符新**|Global|
-|*类名称* **：：运算符新**|类|
+| 运算符 | 范围 |
+|--|--|
+| **`::operator new`** | 全球 |
+| *类名***`::operator new`** | 类 |
 
-**运算符 new**的第一个参数必须为`size_t`类型（在 stddef.h>中\<定义的类型），并且返回类型始终**为空**<strong>\*</strong>。
+的第一个参数 **`operator new`** 必须为类型 `size_t` ，在中定义， \<stddef.h> 并且返回类型始终为 **`void*`** 。
 
-当**使用新**运算符分配内置类型的对象、不包含用户定义的**运算符新**函数的类类型对象以及任何类型的数组时，将调用全局**运算符新功能**。 当**新**运算符用于分配定义**运算符 new**的类类型的对象时，将调用该类的**运算符 new。**
+**`operator new`** 当 **`new`** 运算符用于分配内置类型的对象、不包含用户定义函数的类类型的对象 **`operator new`** 和任何类型的数组时，将调用全局函数。 当 **`new`** 运算符用于分配已定义的类类型的对象时 **`operator new`** ， **`operator new`** 将调用该类的。
 
-为类定义的**运算符新**函数是一个静态成员函数（因此，它不能是虚拟的），它隐藏该类类型对象的全局**运算符新**函数。 考虑使用**new**将内存分配和设置为给定值的情况：
+**`operator new`** 为类定义的函数是静态成员函数（不能是虚函数），该函数隐藏此 **`operator new`** 类类型的对象的全局函数。 请考虑 **`new`** 用于分配内存并将其设置为给定值的情况：
 
 ```cpp
 #include <malloc.h>
@@ -74,13 +74,13 @@ int main()
 }
 ```
 
-以括号提供给**new**的参数作为`Blanks::operator new``chInit`参数传递给。 但是，全局**运算符新**函数被隐藏，导致以下代码生成错误：
+在括号中提供的参数将 **`new`** `Blanks::operator new` 作为参数传递给 `chInit` 。 然而，全局 **`operator new`** 函数是隐藏的，导致如下代码生成错误：
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-编译器支持类声明中**的新**成员数组**和删除**运算符。 例如：
+编译器 **`new`** **`delete`** 在类声明中支持成员数组和运算符。 例如：
 
 ```cpp
 class MyClass
@@ -104,7 +104,7 @@ int main()
 
 ### <a name="handling-insufficient-memory"></a>处理内存不足
 
-可以测试失败的内存分配，如下所示：
+可按如下所示对失败的内存分配进行测试：
 
 ```cpp
 #include <iostream>
@@ -119,28 +119,28 @@ int main() {
 }
 ```
 
-还有另一种方法来处理失败的内存分配请求。 编写自定义恢复例程来处理此类故障，然后通过调用[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)运行时函数来注册函数。
+还可以通过另一种方法来处理失败的内存分配请求。 编写自定义恢复例程来处理此类故障，并通过调用 [`_set_new_handler`](../c-runtime-library/reference/set-new-handler.md) 运行时函数来注册函数。
 
-## <a name="the-delete-operator"></a><a id="delete_operator"> </a>删除运算符
+## <a name="the-delete-operator"></a><a id="delete_operator"> </a> `delete` 运算符
 
-可以使用**delete**运算符释放使用**新**运算符动态分配的内存。 删除运算符调用**运算符删除**函数，该函数将内存释放回可用池。 使用**delete**运算符还会导致调用类析构函数（如果有）。
+使用运算符动态分配的内存 **`new`** 可以使用运算符来释放 **`delete`** 。 Delete 运算符调用 **`operator delete`** 函数，该函数将内存释放回可用池。 使用 **`delete`** 运算符还会导致调用类析构函数（如果存在）。
 
-有全局和类作用域**运算符删除**函数。 只能为给定类定义一个**运算符删除**函数;如果已定义，它将隐藏全局**运算符删除**函数。 对于任何类型的数组，始终调用全局**运算符删除**函数。
+存在全局和类范围的 **`operator delete`** 函数。 只能 **`operator delete`** 为给定类定义一个函数; 如果定义了该函数，它会隐藏全局 **`operator delete`** 函数。 **`operator delete`** 始终为任何类型的数组调用全局函数。
 
-全局**运算符删除**函数。 全局**运算符删除**和类成员**运算符删除**函数存在两种形式：
+全局 **`operator delete`** 函数。 全局 **`operator delete`** 函数和类成员函数有两种形式 **`operator delete`** ：
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-给定类只能存在前两个窗体中的一个。 第一个窗体采用类型的`void *`单个参数 ，其中包含指向要解调的对象的指针。 第二种形式（大小处理）采用两个参数，第一个参数是指向要解分配的内存块的指针，第二个参数是要解调的字节数。 两种形式的返回**类型无效（****运算符删除**不能返回值）。
+对于给定的类，只能存在上述两个窗体中的一个。 第一种形式采用一个类型为的参数 **`void *`** ，该参数包含指向要释放的对象的指针。 第二种形式的大小释放是使用两个参数：第一个是指向要释放的内存块的指针，第二个是要释放的字节数。 这两个窗体的返回类型为 **`void`** （ **`operator delete`** 无法返回值）。
 
-第二个窗体的目的是加快搜索要删除的对象的正确大小类别，该类别通常不存储在分配本身附近，并且可能未缓存。 当运算符从基类**中删除**函数用于删除派生类的对象时，第二个窗体很有用。
+第二种形式的目的是加快搜索要删除的对象的正确大小类别。 此信息通常不会存储在分配本身附近，这可能不会缓存。 当 **`operator delete`** 使用基类中的函数删除派生类的对象时，第二种形式很有用。
 
-**运算符删除**函数是静态的;因此，它不能是虚拟的。 **运算符删除**函数遵循访问控制，如[成员访问控制](member-access-control-cpp.md)中所述。
+**`operator delete`** 函数是静态的，因此它不能是虚拟的。 **`operator delete`** 函数服从访问控制，如[成员访问控制](member-access-control-cpp.md)中所述。
 
-下面的示例显示用户定义的**运算符新的**和**运算符删除**旨在记录内存分配和分配位置的功能：
+下面的示例演示了 **`operator new`** **`operator delete`** 用于记录内存分配和释放的用户定义的和函数：
 
 ```cpp
 #include <iostream>
@@ -188,9 +188,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-前面的代码可用于检测“内存溢出”，即在自由储存中分配但从未释放过的内存。 要执行此检测，将重新定义**new**全局新**运算符和删除**运算符，以计数内存的分配和分配。
+前面的代码可用于检测 "内存泄漏"，即，在免费存储中分配但从未释放的内存。 为了检测泄漏，将重新 **`new`** 定义全局和 **`delete`** 运算符，以计数分配和内存释放。
 
-编译器支持类声明中**的新**成员数组**和删除**运算符。 例如：
+编译器 **`new`** **`delete`** 在类声明中支持成员数组和运算符。 例如：
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

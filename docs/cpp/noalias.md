@@ -1,36 +1,36 @@
 ---
 title: noalias
-ms.date: 02/09/2018
+ms.date: 07/07/2020
 f1_keywords:
 - noalias_cpp
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 2eceffd10f97615859918991320ceebf577d094c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377434"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127870"
 ---
-# <a name="noalias"></a>noalias
+# `noalias`
 
 **Microsoft 专用**
 
-**noalias**意味着函数调用不会修改或引用可见全局状态且只会修改指向的内存*直接*指针参数 （第一级间接寻址）。
+**`noalias`** 表示函数调用不会修改或引用可见全局状态，而只会修改指针参数（第一级间接寻址）*直接*指向的内存。
 
-如果函数被批注作为**noalias**，则优化器假设，除了参数本身，仅第一级间接寻址指针参数的引用或修改在函数内。 可见全局状态是未在编译范围外定义或引用的所有数据的集合，因此不采用它们的地址。 编译范围是所有源文件 ([/LTCG （链接时间代码生成）](../build/reference/ltcg-link-time-code-generation.md)生成) 或单个源文件 (非 **/LTCG**生成)。
+如果将函数注释为 **`noalias`** ，则优化器可以假定仅参数本身，并且仅在函数内引用或修改指针参数的第一级间接寻址。
 
-**Noalias**批注仅适用于带批注的函数的主体。 函数标记为 **__declspec(noalias)** 不会影响的函数返回的指针的别名。
+**`noalias`** 批注仅适用于带批注的函数的主体。 将函数标记为 **`__declspec(noalias)`** 不会影响函数所返回的指针的别名。
 
-可能会影响别名的另一个批注，请参阅[__declspec(restrict)](../cpp/restrict.md)。
+对于可能会影响别名的其他注释，请参阅 [`__declspec(restrict)`](../cpp/restrict.md) 。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用 **__declspec(noalias)**。
+下面的示例演示如何使用 **`__declspec(noalias)`** 。
 
-当函数`multiply`访问内存进行批注 **__declspec(noalias)**，它会告知编译器该函数不会修改通过指针在它的参数列表中的全局状态除外。
+当 `multiply` 批注访问内存的函数时 **`__declspec(noalias)`** ，它会告知编译器此函数不会修改全局状态，除非通过其参数列表中的指针。
 
 ```C
 // declspec_noalias.c
@@ -98,8 +98,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
-[__declspec(restrict)](../cpp/restrict.md)
+[`__declspec(restrict)`](../cpp/restrict.md)
