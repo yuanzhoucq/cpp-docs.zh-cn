@@ -1,6 +1,7 @@
 ---
 title: /Og（全局优化）
-ms.date: 09/22/2017
+description: 介绍了弃用的 MSVC 编译器选项/Og，以前用于启用全局优化。
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GlobalOptimizations
 - /og
@@ -13,30 +14,30 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320287"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180846"
 ---
-# <a name="og-global-optimizations"></a>/Og（全局优化）
+# <a name="og-global-optimizations"></a>`/Og` (全局优化) 
 
-已否决。 提供本地和全局优化自动寄存器分配和循环优化。 我们建议你使用任一[/O1 （最小化大小）](o1-o2-minimize-size-maximize-speed.md)或[/o2 （最大化速度）](o1-o2-minimize-size-maximize-speed.md)改为。
+已弃用。 提供本地和全局优化、自动注册分配和循环优化。 建议使用[ `/O1` (最小化大小) ](o1-o2-minimize-size-maximize-speed.md)或[ `/O2` () 最大化速度](o1-o2-minimize-size-maximize-speed.md)。
 
 ## <a name="syntax"></a>语法
 
-> /Og
+> **`/Og`**
 
 ## <a name="remarks"></a>备注
 
-**/Og**已弃用。 现在默认情况下通常启用这些优化。 优化的详细信息，请参阅[/o1，/o2 （最小化大小、 最大化速度）](o1-o2-minimize-size-maximize-speed.md)或[/Ox （启用最速度优化）](ox-full-optimization.md)。
+**`/Og`** 已弃用。 默认情况下，在启用任何优化后，将默认启用这些优化。 有关优化的详细信息，请参阅[ `/O1` `/O2` (最小化大小、最大化速度) ](o1-o2-minimize-size-maximize-speed.md)或[ `/Ox` (启用大多数速度优化) ](ox-full-optimization.md)。
 
-以下优化下有 **/Og**:
+下提供了以下优化 **`/Og`** ：
 
 - 本地和全局公共子表达式消除
 
-   在这种优化，一次计算公共子表达式的值。 在以下示例中，如果的值`b`并`c`三个表达式之间没有更改，编译器可以分配的计算`b + c`给临时变量，并将其替换为变量`b + c`:
+   在此优化中，将计算通用子表达式的值一次。 在下面的示例中，如果 `b` `c` 在三个表达式之间没有更改的值，则编译器可将的计算分配 `b + c` 给临时变量，并将该变量用于 `b + c` ：
 
     ```C
     a = b + c;
@@ -44,15 +45,15 @@ ms.locfileid: "62320287"
     e = b + c;
     ```
 
-   对于本地公共子表达式优化，编译器将检查公共子表达式的代码的一小部分。 对于全局公共子表达式优化，编译器将搜索整个函数的公共子表达式。
+   对于本地公共子表达式优化，编译器将检查常见子表达式的代码的简短部分。 对于全局公共子表达式优化，编译器会在整个函数中搜索常见子表达式。
 
 - 自动注册分配
 
-   这种优化允许将经常使用变量和子表达式编译器在寄存器中;`register`关键字将被忽略。
+   此优化允许编译器将经常使用的变量和子表达式存储在寄存器中;`register`忽略关键字。
 
 - 循环优化
 
-   这种优化从循环主体中删除固定的子表达式。 最佳的循环包含仅通过循环的每次执行更改其值的表达式。 在下面的示例中，表达式`x + y`不会更改在循环体中：
+   此优化从循环主体中删除固定子表达式。 最佳循环只包含其值在每次执行循环时都发生更改的表达式。 在下面的示例中，表达式 `x + y` 在循环体中不会发生更改：
 
     ```C
     i = -100;
@@ -61,7 +62,7 @@ ms.locfileid: "62320287"
     }
     ```
 
-   优化之后，`x + y`计算一次而不是每次执行循环：
+   优化之后， `x + y` 只计算一次（而不是每次执行循环）：
 
     ```C
     i = -100;
@@ -71,27 +72,25 @@ ms.locfileid: "62320287"
     }
     ```
 
-   编译器可以假定没有别名，与设置时，循环优化是更有效[__restrict](../../cpp/extension-restrict.md)， [noalias](../../cpp/noalias.md)，或[限制](../../cpp/restrict.md)。
+   当编译器可以假设没有别名（您通过、或设置）时，循环优化更 [`__restrict`](../../cpp/extension-restrict.md) 有效 [`noalias`](../../cpp/noalias.md) [`restrict`](../../cpp/restrict.md) 。
 
    > [!NOTE]
-   > 可以启用或禁用函数的函数使用全局优化`optimize`一起使用的杂注`g`选项。
+   > 可以通过将 `optimize` 杂注与选项一起使用来启用或禁用每个函数的全局优化 `g` 。
 
-有关相关信息，请参阅[/Oi （生成内部函数）](oi-generate-intrinsic-functions.md)并[/Ox （启用最速度优化）](ox-full-optimization.md)。
+有关相关信息，请参阅[ `/Oi` (生成内部函数) ](oi-generate-intrinsic-functions.md)并[ `/Ox ` (启用大多数速度优化) ](ox-full-optimization.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击 **“C/C++”** 文件夹。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 点击“命令行”  属性页。
-
-1. 输入中的编译器选项**其他选项**框。
+1. 在 "**附加选项**" 框中输入编译器选项。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)
