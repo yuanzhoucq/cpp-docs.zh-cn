@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170054"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373705"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE（使用地址空间布局随机化功能）
 
@@ -21,7 +21,7 @@ ms.locfileid: "80170054"
 
 ## <a name="syntax"></a>语法
 
-> **/DYNAMICBASE**[ **： NO**]
+> **/DYNAMICBASE**[**： NO**]
 
 ## <a name="remarks"></a>备注
 
@@ -31,9 +31,9 @@ ms.locfileid: "80170054"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中设置此链接器选项
 
-1. 打开项目“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1.  > **链接器** > "**高级**" 属性页中选择 "**配置属性**"。
+1. 选择 "**配置属性**  >  **链接器**  >  **高级**属性" 页。
 
 1. 修改 "**随机基址**" 属性。
 
@@ -46,4 +46,4 @@ ms.locfileid: "80170054"
 - [MSVC 链接器参考](linking.md)
 - [MSVC 链接器选项](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Windows ISV 软件安全防御](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Windows ISV 软件安全防御](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

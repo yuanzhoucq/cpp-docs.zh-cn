@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 8556e005618a1b69c47498a07e218284dcb1164f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443436"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373562"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 
-可以将国家和地区字符串与语言字符串结合使用，以便创建 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函数的区域设置规范。 有关各种 Windows 操作系统版本支持的国家/地区和区域名称列表，请参阅以下附录中表的“语言”、“位置”和“语言标记”列：[附录 A：产品行为](https://msdn.microsoft.com/library/cc233982.aspx)（位于 [MS-LCID]：Windows 语言代码标识符 (LCID) 参考内）。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/win32/intl/nls--name-based-apis-sample)。
+可以将国家和地区字符串与语言字符串结合使用，以便创建 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函数的区域设置规范。 有关各种 Windows 操作系统版本支持的国家/地区名称的列表，请参阅[附录 A：产品行为](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)in MS-LCID]： Windows 语言代码标识符（LCID）参考中的表的**语言**、**位置**和**语言标记**列 \[ 。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/win32/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-country-and-region-strings"></a>其他受支持的国家和地区字符串
 
@@ -24,7 +24,7 @@ Microsoft C 运行时库实现还支持以下其他国家/地区字符串和缩�
 |america|USA|en-US|
 |britain|GBR|en-GB|
 |china|CHN|zh-CN|
-|czech|CZE|cs-CZ|
+|捷克|CZE|cs-CZ|
 |england|GBR|en-GB|
 |great britain|GBR|en-GB|
 |holland|NLD|nl-NL|
@@ -34,7 +34,7 @@ Microsoft C 运行时库实现还支持以下其他国家/地区字符串和缩�
 |pr china|CHN|zh-CN|
 |pr-china|CHN|zh-CN|
 |puerto-rico|PRI|es-PR|
-|slovak|SVK|sk-SK|
+|斯洛伐克|SVK|sk-SK|
 |south africa|ZAF|af-ZA|
 |south korea|KOR|ko-KR|
 |south-africa|ZAF|af-ZA|
@@ -45,7 +45,7 @@ Microsoft C 运行时库实现还支持以下其他国家/地区字符串和缩�
 |united-states|USA|en-US|
 |us|USA|en-US|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [语言字符串](../c-runtime-library/language-strings.md)<br/>

@@ -1,15 +1,15 @@
 ---
 title: 使用规则集指定要运行的 C++ 规则
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269710"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373848"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用规则集指定要运行的 C++ 规则
 
@@ -17,7 +17,7 @@ ms.locfileid: "85269710"
 
 **Visual Studio 2017 版本15.7 及更高版本：** 你可以使用任何文本编辑器创建自定义规则集，并在命令行生成中应用它们，无论你使用的是何种生成系统。 有关详细信息，请参阅[/analyze：规则集](/cpp/build/reference/analyze-code-analysis)。
 
-若要在 Visual Studio 中创建自定义 c + + 规则集，必须在 Visual Studio IDE 中打开 C/c + + 项目。 然后，在规则集编辑器中打开某一标准规则集，再添加或移除特定的规则，并且可更改当代码分析确定违反规则时所发生的操作。
+若要在 Visual Studio 中创建自定义 c + + 规则集，必须在 Visual Studio IDE 中打开 C/c + + 项目。 然后在规则集编辑器中打开标准规则集，然后添加或删除特定规则，并根据需要更改在代码分析确定违反规则时发生的操作。
 
 若要创建新的自定义规则集，请使用新文件名进行保存。 自定义规则集会自动分配给项目。
 
@@ -65,7 +65,7 @@ ms.locfileid: "85269710"
 
 - 若要在规则列中添加或删除字段，请选择**列选项**。
 
-- 若要隐藏不适用于当前解决方案的规则，请选择 "**隐藏不适用于当前解决方案的规则**"。
+- 若要隐藏不适用于当前解决方案的规则，请选择 **"隐藏不适用于当前解决方案的规则**"。
 
 - 若要切换显示和隐藏分配了 "错误" 操作的规则，请选择 "**显示可以生成代码分析错误的规则**"。
 
@@ -236,17 +236,19 @@ ms.locfileid: "85269710"
 
 架构元素详细信息：
 
-- TLocalization：本地化信息，包括规则集文件的名称、规则集文件的说明、包含本地化资源的资源程序集的名称以及本地化资源的基名称。
-- TRuleHintPaths：作为提示搜索规则集文件的文件路径。
-- TName：当前规则集文件的名称。
-- TDescription：当前规则集文件的说明。
-- TInclude：包含规则操作的包含规则集的路径。
-- TIncludeAll：适用于所有规则的规则操作。
-- TRule：规则 ID 规则操作。
-- TRules：一个或多个规则的集合。
-- TRuleSet：规则集文件格式由本地化信息、规则提示路径，包括所有信息，包括信息、规则信息、名称、说明和工具版本信息。
-- TRuleAction：描述规则操作（如错误、警告、信息、隐藏或无）的枚举。
-- TIncludeAction：描述规则操作（如错误、警告、信息、隐藏、无或默认）的枚举。
-- TIncludeAllAction：描述规则操作（如错误、警告、信息或隐藏）的枚举。
+| 架构元素 | 说明 |
+|--------------------|--------------|
+| `TLocalization` | 本地化信息包括规则集文件的名称、规则集文件的说明、包含本地化资源的资源程序集的名称以及本地化资源的基名称 |
+| `TRuleHintPaths` | 用作提示以搜索规则集文件的文件路径 |
+| `TName` | 当前规则集文件的名称 |
+| `TDescription` | 当前规则集文件的说明 |
+| `TInclude` | 包含规则操作的包含规则集的路径 |
+| `TIncludeAll` | 所有规则的规则操作 |
+| `TRule` | 规则 ID 与规则操作 |
+| `TRules` | 一个或多个规则的集合 |
+| `TRuleSet` | 规则集文件格式由本地化信息、规则提示路径、包含所有信息、包括信息、规则信息、名称、说明和工具版本信息组成 |
+| `TRuleAction` | 描述规则操作（如错误、警告、信息、隐藏或无）的枚举 |
+| `TIncludeAction` | 描述规则操作（如错误、警告、信息、隐藏、无或默认）的枚举 |
+| `TIncludeAllAction` | 描述规则操作（如错误、警告、信息或隐藏）的枚举 |
 
 若要查看规则集的示例，请参阅[在文本编辑器中创建规则集](#to-create-a-rule-set-in-a-text-editor)或存储在中的任何默认规则集 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` 。
