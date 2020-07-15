@@ -4,12 +4,12 @@ description: vcpkg 是一种命令行包管理器，可极大简化 Windows、ma
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2a179a25a7332a93486d42750f06f18658991b30
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058641"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373627"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 macOS 的 C++ 包管理器
 
@@ -167,7 +167,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="target-linux-from-windows-via-wsl"></a>通过 WSL 从 Windows 指向 Linux
 
-可使用适用于 Linux 的 Windows 子系统（也称为 WSL）在 Windows 计算机上生成 Linux 二进制文件。 按照[在 Windows 10 上安装 WSL](/windows/wsl/install-win10) 的说明操作。 然后，使用[适用于 Linux 的 Visual Studio 扩展](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)对其进行配置。 可以将所有针对 Windows 和 Linux 生成的库放入同一文件夹中。 可以从 Windows 和 WSL 访问它们。
+可使用适用于 Linux 的 Windows 子系统（也称为 WSL）在 Windows 计算机上生成 Linux 二进制文件。 按照[在 Windows 10 上安装 WSL](/windows/wsl/install-win10) 的说明操作。 然后，使用[适用于 Linux 的 Visual Studio 扩展](https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/)对其进行配置。 可以将所有针对 Windows 和 Linux 生成的库放入同一文件夹中。 可以从 Windows 和 WSL 访问它们。
 
 ## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a>导出已编译的二进制文件和标头
 

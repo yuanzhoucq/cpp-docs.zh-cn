@@ -2,19 +2,19 @@
 title: 演练：在命令行上编译 C++/CX 程序
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 83369fc7b458463ea1f44a347bbcd0ca4eb32224
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 456373fc9009920b734243f6a6c1af3d2c0301d4
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078211"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373679"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>演练：在命令行上编译 C++/CX 程序
 
 > [!NOTE]
 > 对于新 UWP 应用和组件，建议使用 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，这是 Windows 运行时 API 的 标准 C++17 语言投影。 C++/WinRT 从版本 1803 起在 Windows 10 SDK 中提供。 C++/WinRT 完全在头文件中实现，旨在提供对新式 Windows API 的优先访问权限。
 
-Microsoft C++ 编译器 (MSVC) 支持 C++ 组件扩展 (C++/CX)，其中具有面向 Windows 运行时编程模型的其他类型和运算符。 可使用 C++/CX 为通用 Windows 平台 (UWP) 和 Windows 桌面生成应用。 有关详细信息，请参阅 [C++/CX 教程](https://msdn.microsoft.com/magazine/dn166929.aspx)和[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
+Microsoft C++ 编译器 (MSVC) 支持 C++ 组件扩展 (C++/CX)，其中具有面向 Windows 运行时编程模型的其他类型和运算符。 可使用 C++/CX 为通用 Windows 平台 (UWP) 和 Windows 桌面生成应用。 有关详细信息，请参阅 [C++/CX 教程](https://docs.microsoft.com/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx)和[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
 
 在此演练中，你将使用文本编辑器创建一个基本的 C++/CX 程序，然后在命令行上对其进行编译。 （可使用你自己的 C++/CX 程序，而非键入显示的程序，或者也可使用来自另一篇帮助文章中的 C++/CX 代码示例。 这种技术有助于生成和测试不包含 UI 元素的小模块。）
 
