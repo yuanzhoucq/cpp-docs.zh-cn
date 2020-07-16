@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: 8966d982b7bcbe9844a7bf1ec3088c2a9424b23a
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467052"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404019"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
 
@@ -71,7 +71,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 |`_Create_lock_level_(name)`|该语句声明符号 `name` 为锁级别，因此可以在批注 `_Has_Lock_level_` 和 `_Lock_level_order_` 中使用。|
 |`_Has_lock_kind_(kind)`|批注所有对象以优化资源对象的类型信息。 有时一种通用类型会用于不同类型的资源，并且重载的类型不足以区分各资源之间的语义需求。 下面提供了一个预定义 `kind` 参数的列表：<br /><br /> `_Lock_kind_mutex_`<br /> 互斥锁的锁类型 ID。<br /><br /> `_Lock_kind_event_`<br /> 事件的锁类型 ID。<br /><br /> `_Lock_kind_semaphore_`<br /> 信号量的锁类型 ID。<br /><br /> `_Lock_kind_spin_lock_`<br /> 自旋锁的锁类型 ID。<br /><br /> `_Lock_kind_critical_section_`<br /> 临界区的锁类型 ID。|
 |`_Has_lock_level_(name)`|批注锁对象并赋予其 `name` 锁级别。|
-|`_Lock_level_order_(name1, name2)`|该语句提供 `name1` 和 `name2` 之间的锁排序。  必须在具有级别 `name2`的锁之前获取具有级别 `name1` 的锁。|
+|`_Lock_level_order_(name1, name2)`|该语句提供 `name1` 和 `name2` 之间的锁排序。  `name1`必须在具有级别的锁之前获取具有级别的锁 `name2` 。|
 |`_Post_same_lock_(expr1, expr2)`|批注函数并表明在状态后，两个锁 `expr1` 和 `expr2` 被视为相同的锁对象。|
 |`_Releases_exclusive_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的排他锁计数递减 1。|
 |`_Releases_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的锁计数递减 1。|
@@ -107,20 +107,20 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 
 ## <a name="smart-lock-and-raii-annotations"></a>Smart Lock 和 RAII 批注
 
-智能锁通常会包装本机锁并管理其生存期。 下表列出了可与智能锁定和 RAII 编码模式结合使用的批注，支持 `move` 语义。
+智能锁通常会包装本机锁并管理其生存期。 下表列出了可用于支持语义的智能锁和 RAII 编码模式的批注 `move` 。
 
 |Annotation|说明|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|通知分析器假设已获取智能锁定。 此批注需要引用锁类型作为其参数。|
 |`_Analysis_assume_smart_lock_released_`|通知分析器假设已释放智能锁定。 此批注需要引用锁类型作为其参数。|
-|`_Moves_lock_(target, source)`|介绍 `move constructor` 操作，该操作将锁定状态从 `source` 对象传输到 `target`。 `target` 被视为新构造的对象，因此，它之前的任何状态都将丢失并替换为 `source` 状态。 `source` 也会重置为无锁计数或别名目标的干净状态，但指向它的别名仍保持不变。|
-|`_Replaces_lock_(target, source)`|介绍 `move assignment operator` 的语义，其中在从源传输状态之前释放目标锁。 这可以被视为 `_Releases_lock_(target)``_Moves_lock_(target, source)` 的组合。|
-|`_Swaps_locks_(left, right)`|描述标准 `swap` 行为，该行为假设对象 `left` 并 `right` 交换它们的状态。 交换状态包括 "锁计数" 和 "别名目标" （如果存在）。 指向 `left` 和 `right` 对象的别名保持不变。|
-|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于 `std::unique_ptr` 如何与其内部指针一起使用：它允许程序员提取指针并使其智能指针容器处于干净状态。 `std::unique_lock` 支持类似的逻辑，可以在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为与 `_Moves_lock_` 完全相同，只不过分离的参数应 `return` 而不是 `this`。|
+|`_Moves_lock_(target, source)`|描述将 `move constructor` 锁定状态从 `source` 对象传输到的操作 `target` 。 `target`被视为新构造的对象，因此它之前的任何状态都将丢失并替换为 `source` 状态。 `source`还将重置为无锁计数或别名目标的干净状态，但指向它的别名仍保持不变。|
+|`_Replaces_lock_(target, source)`|描述在 `move assignment operator` 从源传输状态之前释放目标锁的语义。 这可以被视为后跟的组合 `_Moves_lock_(target, source)` `_Releases_lock_(target)` 。|
+|`_Swaps_locks_(left, right)`|描述 `swap` 假设对象 `left` 并 `right` 交换其状态的标准行为。 交换状态包括 "锁计数" 和 "别名目标" （如果存在）。 指向和对象的别名 `left` `right` 保持不变。|
+|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于 `std::unique_ptr` 其内部指针的工作方式：它允许程序员提取指针并使其智能指针容器处于干净状态。 支持类似的逻辑 `std::unique_lock` ，并且可在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为完全相同， `_Moves_lock_` 只不过分离的参数应为 `return` 而不是 `this` 。|
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 SAL 批注以减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
+- [使用 SAL 注释减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [了解 SAL](../code-quality/understanding-sal.md)
 - [对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)
 - [对函数行为进行批注](../code-quality/annotating-function-behavior.md)
@@ -128,4 +128,3 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 - [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [内部函数](../code-quality/intrinsic-functions.md)
 - [最佳做法和示例](../code-quality/best-practices-and-examples-sal.md)
-- [代码分析团队博客](https://blogs.msdn.microsoft.com/codeanalysis/)

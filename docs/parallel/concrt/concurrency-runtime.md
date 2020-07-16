@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 84a52b8a509edad86f64c28df843e92f1441f2f0
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: 268c612237bacaca49934120b03e1de505b6cd20
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538655"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404520"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 
@@ -37,9 +37,9 @@ ms.locfileid: "82538655"
 
 |||
 |-|-|
-|[任务并行度](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [如何：使用 parallel_invoke 执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [如何：创建在延迟一段时间后完成的任务](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|介绍任务和任务组，它们可帮助你编写异步代码并将并行工作分解为较小的部分。|
-|[演练：实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)|演示如何组合使用并发运行时功能来完成更多任务。|
-|[演练：从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|演示如何将由 MFC 应用程序中的 UI 线程执行的工作移到工作线程中。|
+|[任务并行度](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [如何：使用 parallel_invoke 编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [如何：使用 parallel_invoke 执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [如何：创建在延迟一段时间后完成的任务](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|介绍任务和任务组，它们可帮助你编写异步代码并将并行工作分解为较小的部分。|
+|[演练：实现先期备货](../../parallel/concrt/walkthrough-implementing-futures.md)|演示如何组合使用并发运行时功能来完成更多任务。|
+|[演练：从用户界面线程中移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|演示如何将由 MFC 应用程序中的 UI 线程执行的工作移到工作线程中。|
 |[并行模式库中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [并发运行时中的常规最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|提供使用 PPL 的提示和最佳做法。|
 
 ## <a name="data-parallelism-in-the-ppl"></a>PPL 中的数据并行度
@@ -47,7 +47,7 @@ ms.locfileid: "82538655"
 |||
 |-|-|
 |[并行算法](../../parallel/concrt/parallel-algorithms.md)<br /><br /> [如何：编写 parallel_for 循环](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)<br /><br /> [如何：编写 parallel_for_each 循环](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)<br /><br /> [如何：并行执行映射和减少操作](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|介绍 `parallel_for`、 `parallel_for_each`、 `parallel_invoke`和其他并行算法。 使用并行算法来解决涉及数据集合的 *数据并行* 问题。|
-|[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [如何：使用并行容器提高效率](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [如何：使用 combinable 来组合集](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|介绍 `combinable` 类，以及 `concurrent_vector`、 `concurrent_queue`、 `concurrent_unordered_map`和其他并行容器。 当你需要提供对其元素的线程安全访问的容器时，请使用并行容器和对象。|
+|[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [如何：使用并行容器提高效率](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [如何：使用可组合来提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [如何：使用可组合的组合集](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|介绍 `combinable` 类，以及 `concurrent_vector`、 `concurrent_queue`、 `concurrent_unordered_map`和其他并行容器。 当你需要提供对其元素的线程安全访问的容器时，请使用并行容器和对象。|
 |[并行模式库中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [并发运行时中的常规最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|提供使用 PPL 的提示和最佳做法。|
 
 ## <a name="canceling-tasks-and-parallel-algorithms"></a>取消任务和并行算法
@@ -55,21 +55,21 @@ ms.locfileid: "82538655"
 |||
 |-|-|
 |[PPL 中的取消操作](cancellation-in-the-ppl.md)|介绍 PPL 中取消操作的角色，包括如何启动和相应取消请求。|
-|[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示取消数据并行工作的两种方法。|
+|[如何：使用取消中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示取消数据并行工作的两种方法。|
 
 ## <a name="universal-windows-platform-apps"></a>通用 Windows 平台应用
 
 |||
 |-|-|
-|[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述在使用并发运行时在 UWP 应用中生成异步操作时要记住的一些要点。|
-|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何将 PPL 任务与`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口结合使用，以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
-|[Windows 运行时应用示例](https://code.msdn.microsoft.com/windowsapps)|包含适用于 Windows 3.x 的可下载代码示例和演示应用。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|
+|[为 UWP 应用创建 c + + 异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述在使用并发运行时在 UWP 应用中生成异步操作时要记住的一些要点。|
+|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何将 PPL 任务与和接口结合使用， `IXMLHTTPRequest2` `IXMLHTTPRequest2Callback` 以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
+|[Windows 运行时应用示例](https://docs.microsoft.com/samples/browse/?languages=cpp&expanded=windows&products=windows-uwp)|包含 Windows 运行时的可下载代码示例和演示应用。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>异步代理库中的数据流编程
 
 |||
 |-|-|
-|[异步代理](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [消息传递函数](../../parallel/concrt/message-passing-functions.md)<br /><br /> [如何：实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [如何：为 call 和 transformer 类提供工作函数](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [如何：在数据管道中使用转换器](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [如何：在已完成的任务之间选择](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [如何：定期发送消息](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [如何：使用消息块筛选器](../../parallel/concrt/how-to-use-a-message-block-filter.md)|介绍异步代理、消息块和消息传递函数，它们是在并发运行时中执行数据流操作的构建基块。|
+|[异步代理](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [消息传递函数](../../parallel/concrt/message-passing-functions.md)<br /><br /> [如何：实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [如何：向调用和转换器类提供工作函数](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [如何：在数据管道中使用转换器](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [如何：在已完成的任务之间进行选择](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [如何：定期发送消息](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [如何：使用消息块筛选器](../../parallel/concrt/how-to-use-a-message-block-filter.md)|介绍异步代理、消息块和消息传递函数，它们是在并发运行时中执行数据流操作的构建基块。|
 |[演练：创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [演练：创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|演示如何创建基本的基于代理的应用程序。|
 |[演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|演示如何创建执行图像处理的异步消息块网络。|
 |[演练：使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|通过哲学家就餐问题说明如何使用并发运行时来避免应用程序中发生死锁。|
@@ -91,8 +91,8 @@ ms.locfileid: "82538655"
 |[计划程序实例](../../parallel/concrt/scheduler-instances.md)<br /><br /> [如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br /><br /> [计划程序策略](../../parallel/concrt/scheduler-policies.md)<br /><br /> [如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br /><br /> [如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)|演示如何使用管理计划程序实例和计划程序策略。 对于桌面应用，计划程序策略使你能够将特定规则与特定工作负载类型关联。 例如，你可以创建一个计划程序实例来以提升的线程优先级运行一些任务，并使用默认计划程序以普通线程优先级运行其他任务。|
 |[计划组](../../parallel/concrt/schedule-groups.md)<br /><br /> [如何：使用计划组影响执行顺序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)|演示如何使用计划组来关联相关任务或将它们组合到一起。 例如，当相关任务从在同一处理器节点上执行中获益时，你可能需要这些任务具有高度的局域性。|
 |[轻量级任务](../../parallel/concrt/lightweight-tasks.md)|说明轻量级任务如何有助于创建不需要负载平衡或取消的工作，以及它们如何有助于调整现有代码以便与并发运行时一起使用。|
-|[上下文](../../parallel/concrt/contexts.md)<br /><br /> [如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br /><br /> [如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)|介绍如何控制由并发运行时管理的线程的行为。|
-|[内存管理函数](../../parallel/concrt/memory-management-functions.md)<br /><br /> [如何：使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)|介绍并发运行时提供的内存管理函数，可帮助你以并发方式分配和释放内存。|
+|[上下文](../../parallel/concrt/contexts.md)<br /><br /> [如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br /><br /> [如何：使用过度订阅抵消延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)|介绍如何控制由并发运行时管理的线程的行为。|
+|[内存管理函数](../../parallel/concrt/memory-management-functions.md)<br /><br /> [如何：使用分配和自由提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)|介绍并发运行时提供的内存管理函数，可帮助你以并发方式分配和释放内存。|
 
 ## <a name="additional-resources"></a>其他资源
 
@@ -103,6 +103,6 @@ ms.locfileid: "82538655"
 |[C++ 和本机代码中的并行计算论坛](https://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
 |[并行编程](/dotnet/standard/parallel-programming/index)|讲授 .NET Framework 中可用的并行编程模型。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)
+[引用](../../parallel/concrt/reference/reference-concurrency-runtime.md)

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332248"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404546"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 
@@ -84,7 +84,7 @@ friend class ComPtr;
 
 `ComPtr<>`声明表示基础接口指针的类型。 使用 `ComPtr<>` 声明变量，然后使用箭头成员访问运算符（ `->` ）访问接口成员函数。
 
-有关智能指针的详细信息，请参阅 MSDN Library 中的[Com 编码方法](/windows/win32/LearnWin32/com-coding-practices)一文的 "Com 智能指针" 部分。
+有关智能指针的详细信息，请参阅[Com 编码方法](/windows/win32/LearnWin32/com-coding-practices)一文中的 "Com 智能指针" 子节。
 
 ## <a name="members"></a>成员
 

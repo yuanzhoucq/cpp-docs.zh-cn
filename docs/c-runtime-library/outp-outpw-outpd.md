@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373471"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404055"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw _outpd
 
@@ -61,15 +61,15 @@ ms.locfileid: "86373471"
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,7 +78,7 @@ unsigned long _outpd(
 *口*\
 端口号。
 
-*databyte、dataword*\
+*data_byte，data_word*\
 输出值。
 
 ## <a name="return-value"></a>返回值
@@ -87,9 +87,11 @@ unsigned long _outpd(
 
 ## <a name="remarks"></a>备注
 
-`_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *port* 参数可为 0 - 65,535 范围内的任何无符号整数。*databyte* 可为 0 - 255 范围内的任何整数；*dataword* 可分别为整数、无符号短整数和无符号长整数范围内的任何值。
+`_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *端口*参数可以是 0-65535 范围内的任何无符号整数。 *data_byte*可以是 0-255 范围内的任意整数。 *data_word*可以是整数范围内的任何值、无符号短整数和无符号长整数。
 
-由于这些函数直接写入到 i/o 端口，因此它们不能在用户模式 Windows 代码中使用。 有关在 Windows 操作系统中使用 i/o 端口的信息，请参阅[串行通信](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))。
+由于这些函数直接写入到 i/o 端口，因此不能在用户模式 Windows 代码中使用它们。
+
+有关在 Windows 操作系统中使用 i/o 端口的信息，请参阅[串行通信](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))。
 
 `outp`和 `outpw` 名称是和函数的旧的、不推荐使用的名称 `_outp` `_outpw` 。 有关详细信息，请参阅[POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
@@ -110,4 +112,4 @@ unsigned long _outpd(
 ## <a name="see-also"></a>另请参阅
 
 [控制台和端口 i/o](../c-runtime-library/console-and-port-i-o.md)\
-[sct.inp、inpw、_inp、_inpw _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

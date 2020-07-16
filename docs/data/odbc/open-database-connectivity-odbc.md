@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213078"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403798"
 ---
 # <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
 
 Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 从 Visual Studio 2015 到 SQL Server 2012 ODBC 是连接到 SQL 数据源的首选方式。
 
-若要详细了解如何使用没有 MFC 的 ODBC API，请参阅 MSDN 中的[开放式数据库连接（ODBC）](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK。
+有关在不使用 MFC 的情况下使用 ODBC API 的详细信息，请参阅[开放式数据库连接（ODBC）](/sql/odbc/microsoft-open-database-connectivity-odbc)文档。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -65,7 +65,7 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 
 - [通过 ODBC 使用数据库窗体（记录视图）](use-database-forms-record-views-with-odbc.md)
 
-- [使用 ODBC 与其他用户一同工作](use-odbc-to-work-with-other-users.md)
+- [使用 ODBC 与其他用户一起工作](use-odbc-to-work-with-other-users.md)
 
 - [使用 ODBC 数据库连接](work-with-odbc-database-connections.md)
 
@@ -77,4 +77,4 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 
 ## <a name="see-also"></a>另请参阅
 
-[数据访问编程 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[数据访问编程（MFC/ATL）](../../data/data-access-programming-mfc-atl.md)
