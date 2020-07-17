@@ -10,12 +10,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 06/04/2020
-  ms.openlocfilehash: aa696ed1057c0c47ff8dd66a76dd1f65a46f10bb
-  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.openlocfilehash: 2ab980b46a68c46e19e5ee04aad63e4d664c2e85
+  ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/08/2020
-  ms.locfileid: "84507838"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "86404458"
 highlightedContent:
   items:
   - title: 安装 Visual Studio 并选择你的 C++ 工作负载
@@ -55,7 +55,7 @@ conceptualContent:
       url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
   - title: 在 Visual Studio 中编写 C++ 和 C 应用
     links:
-    - text: 创建控制台应用
+    - text: 创建控制台计算器应用
       url: get-started/tutorial-console-cpp.md
       itemType: tutorial
     - text: 使用 Win32 创建 Windows 桌面应用
@@ -182,4 +182,4 @@ additionalContent:
         url: cloud/cloud-and-web-programming-in-visual-cpp.md
       - text: 通用 Windows 平台库
         url: cppcx/namespaces-reference-c-cx.md
-  footer: '[博客](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [报告问题](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [开发者社区](https://developercommunity.visualstudio.com/spaces/62/index.html) - 参与编写 C++ 文档：请参阅我们的[参与者指南](https://docs.microsoft.com/contribute/)。'
+  footer: '[Blogs](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [Report an issue](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html) - Contribute to C++ docs: Read our [contributor guide](https://docs.microsoft.com/contribute/).'
