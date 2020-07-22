@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: 77bcb8336e4650de7ed01a067fa1bdd7ec0ba3e8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a111e0368ec6f4fcf8e89383b6261ad25ca6ebcf
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374268"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403812"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 类
 
@@ -35,14 +35,14 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="parameters"></a>参数
 
-*同步特征*<br/>
-可以获取资源的独占或共享所有权的类型。
+*SyncTraits*<br/>
+一种类型，该类型可以采用资源的独占或共享所有权。
 
 ## <a name="remarks"></a>备注
 
-表示可以获取资源的独占或共享所有权的类型。
+表示一个类型，该类型可以采用资源的独占或共享所有权。
 
-该`SyncLockWithStatusT`类用于实现[Mutex](mutex-class.md)和[信号量](semaphore-class.md)类。
+`SyncLockWithStatusT`类用于实现[互斥体](mutex-class.md)和[信号灯](semaphore-class.md)类。
 
 ## <a name="members"></a>成员
 
@@ -50,26 +50,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 名称                                                             | 说明
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[与状态同步锁定：：与状态同步锁定](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 类的新实例。
+[SyncLockWithStatusT：： SyncLockWithStatusT](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 类的新实例。
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
 名称                                                             | 说明
 ---------------------------------------------------------------- | --------------------------------------------------------------
-[与状态同步锁定：：与状态同步锁定](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 类的新实例。
+[SyncLockWithStatusT：： SyncLockWithStatusT](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                         | 说明
+“属性”                                         | 说明
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
-[与状态同步锁定：：获取状态](#getstatus) | 检索当前`SyncLockWithStatusT`对象的等待状态。
-[与状态同步锁定：：已锁定](#islocked)   | 指示当前对象是否`SyncLockWithStatusT`拥有资源;如果当前对象是否拥有资源，则表明当前对象是否拥有资源。也就是说，`SyncLockWithStatusT`对象已*锁定*。
+[SyncLockWithStatusT：： GetStatus](#getstatus) | 检索当前对象的等待状态 `SyncLockWithStatusT` 。
+[SyncLockWithStatusT：： IsLocked](#islocked)   | 指示当前对象是否 `SyncLockWithStatusT` 拥有资源; 即， `SyncLockWithStatusT` 对象已*锁定*。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
 名称                                    | 说明
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
-[与状态同步锁定：：status_](#status) | 保存基于当前`SyncLockWithStatusT`对象的锁定操作后基础等待操作的结果。
+[SyncLockWithStatusT：： status_](#status) | 保存基于当前对象的对象上的锁定操作后的基础等待操作的结果 `SyncLockWithStatusT` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -79,11 +79,11 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 核心包装.h
+**标头：** corewrappers。h
 
-**命名空间：** 微软：：WRL：包装：:D
+**命名空间：** Microsoft：： WRL：：包装：:D etails
 
-## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a>与状态同步锁定：：获取状态
+## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a>SyncLockWithStatusT：： GetStatus
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -93,15 +93,15 @@ DWORD GetStatus() const;
 
 ### <a name="return-value"></a>返回值
 
-基于`SyncLockWithStatusT`类的对象（如[Mutex](mutex-class.md)或[Semaphore）](semaphore-class.md)的等待操作的结果。 零 （0） 表示等待操作返回了信号状态;否则，则发生另一种状态，例如已经过的超时值。
+基于类的对象（ `SyncLockWithStatusT` 如[互斥体](mutex-class.md)或[信号量](semaphore-class.md)）上等待操作的结果。 零（0）指示等待操作返回了终止状态;否则，会发生另一种状态，如已用超时值。
 
 ### <a name="remarks"></a>备注
 
-检索当前`SyncLockWithStatusT`对象的等待状态。
+检索当前对象的等待状态 `SyncLockWithStatusT` 。
 
-GetStatus（） 函数检索基础[status_](#status)数据成员的值。 当基于`SyncLockWithStatusT`类的对象执行锁定操作时，该对象首先等待该对象变为可用。 等待操作的结果存储在数据成员中`status_`。 `status_`数据成员的可能值是等待操作的返回值。 有关详细信息，请参阅 MSDN 库中`WaitForSingleObjectEx()`函数的返回值。
+GetStatus （）函数检索基础[status_](#status)数据成员的值。 当基于类的对象 `SyncLockWithStatusT` 执行锁定操作时，对象首先会等待对象变为可用。 该等待操作的结果存储在 `status_` 数据成员中。 数据成员的可能值 `status_` 为 wait 操作的返回值。 有关详细信息，请参阅函数的返回值 [`WaitForSingleObjectEx`](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex) 。
 
-## <a name="synclockwithstatustislocked"></a><a name="islocked"></a>与状态同步锁定：：已锁定
+## <a name="synclockwithstatustislocked"></a><a name="islocked"></a>SyncLockWithStatusT：： IsLocked
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -111,13 +111,13 @@ bool IsLocked() const;
 
 ### <a name="remarks"></a>备注
 
-指示当前对象是否`SyncLockWithStatusT`拥有资源;如果当前对象是否拥有资源，则表明当前对象是否拥有资源。也就是说，`SyncLockWithStatusT`对象已*锁定*。
+指示当前对象是否 `SyncLockWithStatusT` 拥有资源; 即， `SyncLockWithStatusT` 对象已*锁定*。
 
 ### <a name="return-value"></a>返回值
 
-如果对象已`SyncLockWithStatusT`锁定，**则为 true;** 否则，**假**。
+**true**如果 `SyncLockWithStatusT` 对象被锁定，则为 true; 否则为**false**。
 
-## <a name="synclockwithstatuststatus_"></a><a name="status"></a>与状态同步锁定：：status_
+## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT：： status_
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -127,9 +127,9 @@ DWORD status_;
 
 ### <a name="remarks"></a>备注
 
-保存基于当前`SyncLockWithStatusT`对象的锁定操作后基础等待操作的结果。
+保存基于当前对象的对象上的锁定操作后的基础等待操作的结果 `SyncLockWithStatusT` 。
 
-## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a>与状态同步锁定：：与状态同步锁定
+## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a>SyncLockWithStatusT：： SyncLockWithStatusT
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -146,17 +146,17 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>参数
 
-*其他*<br/>
-对另一个`SyncLockWithStatusT`对象的 rvalue 引用。
+*以外*<br/>
+对另一对象的 rvalue 引用 `SyncLockWithStatusT` 。
 
-*sync*<br/>
-对另一个`SyncLockWithStatusT`对象的引用。
+*同步*<br/>
+对另一对象的引用 `SyncLockWithStatusT` 。
 
-*状态*<br/>
-*另*一个参数或*同步*参数的数据成员[status_](#status)的值。
+*status*<br/>
+*其他*参数或*sync*参数的[status_](#status)数据成员的值。
 
 ### <a name="remarks"></a>备注
 
 初始化 `SyncLockWithStatusT` 类的新实例。
 
-第一个构造函数从参数*其他*指定的`SyncLockWithStatusT`另一个`SyncLockWithStatusT`初始化当前对象，然后使另一个`SyncLockWithStatusT`对象无效。 第二个构造函数`protected`是 ，并将当前`SyncLockWithStatusT`对象初始化为无效状态。
+第一个构造函数 `SyncLockWithStatusT` 从另一个由参数指定的中初始化当前对象 `SyncLockWithStatusT` ，然后使另一个对象失效*other* `SyncLockWithStatusT` 。 第二个构造函数为 `protected` ，并将当前 `SyncLockWithStatusT` 对象初始化为无效状态。

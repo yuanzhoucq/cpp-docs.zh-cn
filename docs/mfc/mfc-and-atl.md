@@ -3,12 +3,12 @@ title: MFC 和 ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 2fd109792bde0717c88222d5d53be3a26df95239
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0ad1eac7991655eae5ae1a328145e66031e40dd
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619924"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405034"
 ---
 # <a name="mfc-and-atl"></a>MFC 和 ATL
 
@@ -22,10 +22,10 @@ Microsoft 基础类 (MFC) 通过 Win32 提供面向 C++ 对象的包装，以便
 
 ## <a name="related-articles"></a>相关文章
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
 |[MFC 桌面应用程序](mfc-desktop-applications.md)|Microsoft 基础类通过 Win32 提供面向对象的精简包装，以在 C++ 实现 GUI 应用程序的开速开发。|
 |[ATL COM 桌面组件](../atl/atl-com-desktop-components.md)|ATL 提供类模板和其他使用构造来简化 C++ 中 COM 对象的创建。|
 |[ATL/MFC 共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)|对 MFC 和 ATL 共享的 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) 和其他类的引用。|
 |[使用资源文件](../windows/working-with-resource-files.md)|通过资源编辑器可以编辑 UI 资源，如字符串、图像和对话框。|
-|[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|MSDN 库中的所有 C++ 内容的父主题。|
+|[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|所有 c + + 文档的父主题。|

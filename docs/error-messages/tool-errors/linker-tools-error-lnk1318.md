@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183574"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446696"
 ---
 # <a name="linker-tools-error-lnk1318"></a>链接器工具错误 LNK1318
 
@@ -24,7 +24,7 @@ ms.locfileid: "80183574"
 
 - 在生成目录中执行清理操作，然后执行解决方案的完整生成。
 
-- 重新启动计算机，或检查游离或挂起的 mspdbsrv.exe 进程并在 TaskManager 中将其终止。
+- 重新启动计算机，或者在 TaskManager 中检查是否有被或无 mspdbsrv.exe 响应的进程。
 
 - 关闭项目目录中的防病毒检查。
 
@@ -32,4 +32,4 @@ ms.locfileid: "80183574"
 
 - 尝试使用64位托管工具集生成。
 
-- 序列化链接以根据需要缓解并行链接问题。 如果 mspdbsrv.exe 是由一个链接实例启动的，则可能会导致此错误，并在使用它的另一个链接实例完成之前关闭。 此修补程序的缺点是您的项目生成可能需要更长的时间才能完成。
+- 序列化链接以根据需要缓解并行链接问题。 如果 mspdbsrv.exe 由一个链接实例启动，则可能会导致此错误，并在使用它的另一个链接实例完成之前关闭。 此修补程序的缺点是您的项目生成可能需要更长的时间才能完成。

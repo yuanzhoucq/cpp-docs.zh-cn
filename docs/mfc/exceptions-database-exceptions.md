@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624673"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403720"
 ---
 # <a name="exceptions-database-exceptions"></a>异常：数据库异常
 
@@ -38,7 +38,7 @@ ms.locfileid: "84624673"
 
 除了由框架定义的返回代码（具有形式**AFX_SQL_ERROR_XXX**的名称），某些[CDBExceptions](reference/cdbexception-class.md)是基于[ODBC](../data/odbc/odbc-basics.md)返回代码。 此类异常的返回代码具有形式**SQL_ERROR_XXX**的名称。
 
-数据库类可以返回的返回代码（由框架定义和 ODBC 定义）记录在类的[m_nRetCode](reference/cdbexception-class.md#m_nretcode)数据成员下 `CDBException` 。 有关 ODBC 定义的返回代码的其他信息，请参阅 MSDN Library 中的 ODBC SDK*程序员参考*。
+数据库类可以返回的返回代码（由框架定义和 ODBC 定义）记录在类的[m_nRetCode](reference/cdbexception-class.md#m_nretcode)数据成员下 `CDBException` 。 有关 ODBC 定义的返回代码的其他信息，请[参阅 Odbc 程序员参考](/sql/odbc/reference/odbc-programmer-s-reference)。
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>用于 DAO 异常的错误代码
 

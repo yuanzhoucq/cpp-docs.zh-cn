@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 54fff4421fbf6accf8ed3e37bb80ed09ec83165c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126326"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404712"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
 
@@ -34,7 +34,7 @@ ms.locfileid: "77126326"
 
 在开始本演练之前：
 
-- 阅读[ C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
+- 阅读[C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
 
 - 确保文本编辑器中显示行号。 有关详细信息，请参阅[如何：在编辑器中显示行号](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
 
@@ -50,15 +50,15 @@ ms.locfileid: "77126326"
 
 ### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建示例项目
 
-1. 在菜单栏上，选择 "**文件**" ">**新建**>**项目**" 打开 "新建**项目**" 对话框。
+1. 在菜单栏上，选择“文件”>“新建”>“项目”，打开“创建新项目”对话框     。
 
-1. 在对话框顶部，将“语言”设置为“C++”，将“平台”设置为“Windows”，并将“项目类型”设置为“控制台”。
+1. 在对话框顶部，将“语言”  设置为“C++”  ，将“平台”  设置为“Windows”  ，并将“项目类型”  设置为“控制台”  。
 
-1. 从筛选的项目类型列表中，选择“控制台应用”，然后选择“下一步”。 在下一页中的“名称”`AMPMapReduce`**框内输入**  以指定项目的名称，并根据需要指定项目位置。
+1. 从筛选的项目类型列表中，选择“控制台应用”，然后选择“下一步”   。 在下一页中的“名称”**** 框内输入 `AMPMapReduce` 以指定项目的名称，并根据需要指定项目位置。
 
    ![为项目命名](../../build/media/mathclient-project-name-2019.png "将该项目命名为")
 
-1. 选择“创建”按钮创建客户端项目。
+1. 选择“创建”  按钮创建客户端项目。
 
 ::: moniker-end
 
@@ -68,13 +68,13 @@ ms.locfileid: "77126326"
 
 1. 启动 Visual Studio。
 
-1. 在菜单栏上，依次选择“文件”>“新建”>“项目”。
+1. 在菜单栏上，依次选择“文件”  >“新建”  >“项目”  。
 
-1. 在 "模板" 窗格中的 "**已安装**" 下，选择**视觉对象C++** 。
+1. 在 "模板" 窗格中的 "**已安装**" 下，选择**Visual C++**。
 
-1. 选择 " **Win32 控制台应用程序**"，在 "**名称**" 框中键入 `AMPMapReduce`，然后选择 "**确定"** 按钮。
+1. 选择 " **Win32 控制台应用程序**"， `AMPMapReduce` 在 "**名称**" 框中键入，然后选择 "**确定"** 按钮。
 
-1. 选择“下一步”按钮。
+1. 选择“下一步”按钮  。
 
 1. 清除 "**预编译标头**" 复选框，然后选择 "**完成**" 按钮。
 
@@ -82,7 +82,7 @@ ms.locfileid: "77126326"
 
 ::: moniker-end
 
-下一部分：
+接下来：
 
 1. 打开 AMPMapReduce.cpp 并用下面的代码替换其中的内容。
 
@@ -203,15 +203,15 @@ ms.locfileid: "77126326"
     }
 ```
 
-1. 在菜单栏上，依次选择“文件” > “全部保存”。
+1. 在菜单栏上，选择 "**文件**" "  >  **全部保存**"。
 
 1. 在**解决方案资源管理器**中，打开**AMPMapReduce**的快捷菜单，然后选择 "**属性**"。
 
-1. 在 "**属性页**" 对话框中的 "**配置属性**" 下，选择 " **C/C++**  > **预编译标头**"。
+1. 在 "**属性页**" 对话框中的 "**配置属性**" 下，选择 " **c/c + +**  >  **预编译标头**"。
 
 1. 对于 "**预编译标头**" 属性，选择 "**不使用预编译头**"，然后选择 **"确定"** 按钮。
 
-1. 在菜单栏上，依次选择“生成” **“生成解决方案”**  > 。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
 ## <a name="debugging-the-cpu-code"></a>调试 CPU 代码
 
@@ -230,11 +230,11 @@ ms.locfileid: "77126326"
    ![CPU 断点](../../parallel/amp/media/campcpubreakpoints.png "CPU 断点") <br/>
    CPU 断点
 
-5. 在菜单栏上，依次选择“调试” > “开始调试”。
+5. 在菜单栏上，选择 "**调试**" "  >  **开始调试**"。
 
-6. 在 "**局部变量**" 窗口中，观察 `stride_size` 的值，直到达到第70行的断点。
+6. 在 "**局部变量**" 窗口中，观察的值， `stride_size` 直到达到第70行的断点。
 
-7. 在菜单栏上，依次选择“调试” > “停止调试”。
+7. 在菜单栏上，选择 "**调试**" "  >  **停止调试**"。
 
 ## <a name="debugging-the-gpu-code"></a>调试 GPU 代码
 
@@ -246,35 +246,35 @@ ms.locfileid: "77126326"
 
 2. 在 "**属性页**" 对话框中的 "**配置属性**" 下，选择 "**调试**"。
 
-3. 在“要启动的调试器”列表中，选择“本地 Windows 调试器”。
+3. 在“要启动的调试器”列表中，选择“本地 Windows 调试器” 。
 
 4. 在 "**调试器类型**" 列表中，验证是否选择了 "**自动**"。
 
     **自动**为默认值。 在 Windows 10 之前，**仅 GPU**是所需的值而不是 "**自动**"。
 
-5. 选择 **“确定”** 按钮。
+5. 选择“确定”  按钮。
 
 6. 如下图所示，在第 30 行处设置一个断点。
 
    ![GPU 断点](../../parallel/amp/media/campgpubreakpoints.png "GPU 断点") <br/>
    GPU 断点
 
-7. 在菜单栏上，依次选择“调试” > “开始调试”。 由于第 67 和 70 行代码在 CPU 上执行，因此 GPU 调试期间将不执行这些行中的 CPU 代码断点。
+7. 在菜单栏上，选择 "**调试**" "  >  **开始调试**"。 由于第 67 和 70 行代码在 CPU 上执行，因此 GPU 调试期间将不执行这些行中的 CPU 代码断点。
 
 ### <a name="to-use-the-gpu-threads-window"></a>使用“GPU 线程”窗口
 
-1. 若要打开 " **GPU 线程**" 窗口，请在菜单栏上选择 "**调试**" > **Windows** > **GPU 线程**"。
+1. 若要打开 " **GPU 线程**" 窗口，请在菜单栏上选择 "**调试**  >  **Windows**  >  **GPU 线程**"。
 
    可以在显示的 " **Gpu 线程**" 窗口中检查 gpu 线程的状态。
 
 2. 将 " **GPU 线程**" 窗口停靠在 Visual Studio 的底部。 选择 "**展开线程切换**" 按钮以显示 "磁贴" 和 "线程" 文本框。 " **GPU 线程**" 窗口显示活动和阻塞的 GPU 线程的总数，如下图所示。
 
-   ![具有4个活动线程的 GPU 线程窗口](../../parallel/amp/media/campc.png "包含 4 个活动线程的 GPU 线程窗口") <br/>
-   GPU 线程窗口
+   ![包含 4 个活动线程的 GPU 线程窗口](../../parallel/amp/media/campc.png "包含 4 个活动线程的 GPU 线程窗口") <br/>
+   “GPU 线程”窗口
 
    系统为此计算分配了 313 个 Tile。 每个 Tile 包含 32 个线程。 由于本地 GPU 调试在软件模拟器中进行，因此有四个活动的 GPU 线程。 四个线程同时执行指令，然后一起移动到下一条指令。
 
-   在 " **GPU 线程**" 窗口中，有四个可用的 gpu 线程，并在大约第21行（`t_idx.barrier.wait();`）定义的[tile_barrier：： wait](reference/tile-barrier-class.md#wait)语句中阻止了28个 gpu 线程。 所有这 32 个GPU 线程都属于第一个 Tile `tile[0]`。 当前线程所在的行由箭头指示。 若要切换到其他线程，请使用下列方法之一：
+   在 " **GPU 线程**" 窗口中，有四个可用的 gpu 线程，并在大约第21行（）的[tile_barrier：： wait](reference/tile-barrier-class.md#wait)语句中阻止了28个 gpu 线程 `t_idx.barrier.wait();` 。 所有这 32 个GPU 线程都属于第一个 Tile `tile[0]`。 当前线程所在的行由箭头指示。 若要切换到其他线程，请使用下列方法之一：
 
     - 在 " **GPU 线程**" 窗口中要切换到的线程所在的行中，打开快捷菜单，然后选择 "**切换到线程**"。 如果该行代表多个线程，将按线程坐标切换到第一个线程。
 
@@ -284,7 +284,7 @@ ms.locfileid: "77126326"
 
 ### <a name="to-use-the-parallel-stacks-window"></a>使用“并行堆栈”窗口
 
-1. 若要打开 "**并行堆栈**" 窗口，请在菜单栏上选择 "**调试**" > **Windows** > "**并行堆栈**"。
+1. 若要打开 "**并行堆栈**" 窗口，请在菜单栏上选择 "**调试**  >  **Windows**  >  **并行堆栈**"。
 
    您可以使用 "**并行堆栈**" 窗口同时检查多个 GPU 线程的堆栈帧。
 
@@ -292,42 +292,42 @@ ms.locfileid: "77126326"
 
 3. 请确保在左上角的列表中选择 "**线程**"。 在下图中，"**并行堆栈**" 窗口显示在 " **gpu 线程**" 窗口中看到的 gpu 线程的调用堆栈焦点视图。
 
-   ![具有4个活动线程的并行堆栈窗口](../../parallel/amp/media/campd.png "包含 4 个活动线程的并行堆栈窗口") <br/>
+   ![包含 4 个活动线程的并行堆栈窗口](../../parallel/amp/media/campd.png "包含 4 个活动线程的并行堆栈窗口") <br/>
    “并行堆栈”窗口
 
-   32 个线程从 `_kernel_stub` 执行到 `parallel_for_each` 函数调用中的 lambda 语句，随后执行到 `sum_kernel_tiled` 函数，再从这里进行并行缩减。 32线程中的28已进展到[tile_barrier：： wait](reference/tile-barrier-class.md#wait)语句，并在第22行保持阻塞状态，而另一个4线程在第30行的 `sum_kernel_tiled` 函数中保持活动状态。
+   32 个线程从 `_kernel_stub` 执行到 `parallel_for_each` 函数调用中的 lambda 语句，随后执行到 `sum_kernel_tiled` 函数，再从这里进行并行缩减。 32线程中的28已进展到[tile_barrier：： wait](reference/tile-barrier-class.md#wait)语句，并在第22行保持受阻，而其他4个线程在函数中的 `sum_kernel_tiled` 第30行保持活动状态。
 
    可以在 "**并行堆栈**" 窗口的丰富数据提示中检查 " **gpu 线程**" 窗口中可用的 gpu 线程的属性。 为此，请将鼠标指针停留在**sum_kernel_tiled**的堆栈帧上。 下图显示了数据提示。
 
-   !["并行堆栈" 窗口的数据提示](../../parallel/amp/media/campe.png "并行堆栈窗口的数据提示") <br/>
+   ![并行堆栈窗口的数据提示](../../parallel/amp/media/campe.png "并行堆栈窗口的数据提示") <br/>
    GPU 线程数据提示
 
    有关 "**并行堆栈**" 窗口的详细信息，请参阅[使用 "并行堆栈" 窗口](/visualstudio/debugger/using-the-parallel-stacks-window)。
 
 ### <a name="to-use-the-parallel-watch-window"></a>使用“并行监视”窗口
 
-1. 若要打开 "**并行监视**" 窗口，请在菜单栏上选择 "**调试**" > **Windows** ** > "并行监视**" > "**并行监视 1**"。
+1. 若要打开 "**并行监视**" 窗口，请在菜单栏上选择 "**调试**  >  **Windows**  >  **并行监视**  >  **并行监视 1**"。
 
    您可以使用 "**并行监视**" 窗口跨多个线程检查表达式的值。
 
 2. 将 "**并行监视 1** " 窗口停靠在 Visual Studio 的底部。 "**并行监视**" 窗口的表中有32行。 每个对应于出现在 "GPU 线程" 窗口和 "**并行堆栈**" 窗口中的 gpu 线程。 现在，可以输入所需的表达式，以检查其在所有这 32 个 GPU 线程中的值。
 
-3. 选择 "**添加监视**" 列标题，输入 `localIdx`，然后选择**enter**键。
+3. 选择 "**添加监视**" 列标题，输入 `localIdx` ，然后选择**enter**键。
 
-4. 再次选择 "**添加监视**" 列标题，键入 `globalIdx`，然后选择**Enter**键。
+4. 再次选择 "**添加监视**" 列标题，键入 `globalIdx` ，然后选择**Enter**键。
 
-5. 再次选择 "**添加监视**" 列标题，键入 `localA[localIdx[0]]`，然后选择**Enter**键。
+5. 再次选择 "**添加监视**" 列标题，键入 `localA[localIdx[0]]` ，然后选择**Enter**键。
 
    您可以通过选择相应的列标题来按指定表达式排序。
 
    选择 " **localA [localIdx [0]]** " 列标题对列进行排序。 下图显示了按**localA [localIdx [0]]** 排序的结果。
 
-   ![具有已排序结果的并行监视窗口](../../parallel/amp/media/campf.png "包含分类结果的并行监视窗口") <br/>
+   ![包含分类结果的并行监视窗口](../../parallel/amp/media/campf.png "包含分类结果的并行监视窗口") <br/>
    排序结果
 
    可以通过选择 " **excel** " 按钮，然后选择 "**在 excel 中打开**"，将 "**并行监视**" 窗口中的内容导出到 excel。 如果开发计算机上安装有 Excel，这将打开包含该内容的 Excel 工作表。
 
-6. 在 "**并行监视**" 窗口的右上角有一个 "筛选器" 控件，可用于通过使用布尔表达式来筛选内容。 在 "筛选器控件" 文本框中输入 `localA[localIdx[0]] > 20000`，然后选择**Enter**键。
+6. 在 "**并行监视**" 窗口的右上角有一个 "筛选器" 控件，可用于通过使用布尔表达式来筛选内容。 `localA[localIdx[0]] > 20000`在 "筛选器控件" 文本框中输入，然后选择**enter**键。
 
    该窗口现在只包含 `localA[localIdx[0]]` 值大于 20000 的线程。 内容仍按 `localA[localIdx[0]]` 列排序，这是之前执行的排序操作。
 
@@ -339,13 +339,13 @@ ms.locfileid: "77126326"
 
 1. 选择 "**并行监视 1** " 窗口中的 " **[Thread]** " 列标题，按图块索引和线程索引进行排序。
 
-2. 在菜单栏上，选择 "**调试**" > "**继续**"，这会导致四个处于活动状态的线程进度到下一个关卡（在 AMPMapReduce 的第32行中定义）。
+2. 在菜单栏上，选择 "**调试**  >  **继续**"，这会导致四个处于活动状态的线程进度到下一个关卡（在 AMPMapReduce 的第32行中定义）。
 
 3. 在当前处于活动状态的四个线程所在行的左侧，选择标志符号。
 
    下图显示了 " **GPU 线程**" 窗口中的四个活动标记的线程。
 
-   ![带有标记线程的 GPU 线程窗口](../../parallel/amp/media/campg.png "包含已标记线程的 GPU 线程窗口") <br/>
+   ![包含已标记线程的 GPU 线程窗口](../../parallel/amp/media/campg.png "包含已标记线程的 GPU 线程窗口") <br/>
    GPU 线程窗口中的活动线程
 
    "并行**监视**" 窗口和 "**并行堆栈**" 窗口的数据提示都指示已标记的线程。
@@ -354,7 +354,7 @@ ms.locfileid: "77126326"
 
    选择任何窗口或 "**调试位置**" 工具栏上的 "**只显示标记**为" 按钮。 下图显示了 "**调试位置**" 工具栏上的 "**仅显示标记**的" 按钮。
 
-   ![带有仅显示标记图标的 "调试位置" 工具栏](../../parallel/amp/media/camph.png "具有“仅显示已标记项”图标的“调试位置”工具栏") <br/>
+   ![具有“仅显示已标记项”图标的“调试位置”工具栏](../../parallel/amp/media/camph.png "具有“仅显示已标记项”图标的“调试位置”工具栏") <br/>
    **显示仅标记**按钮
 
    现在，" **GPU 线程**"、"**并行监视**" 和 "**并行堆栈**" 窗口仅显示标记的线程。
@@ -367,18 +367,18 @@ ms.locfileid: "77126326"
 
 1. 选择 "**仅显示标记**的按钮" 以显示所有线程。
 
-2. 在菜单栏上，选择 "**调试**" > **继续**。
+2. 在菜单栏上，选择 "**调试**  >  **继续**"。
 
 3. 打开活动行的快捷菜单，然后选择 "**冻结**"。
 
    下图 " **GPU 线程**" 窗口显示了所有四个线程均已冻结。
 
-   ![显示冻结线程的 GPU 线程窗口](../../parallel/amp/media/campk.png "显示已冻结线程的 GPU 线程窗口") <br/>
+   ![显示已冻结线程的 GPU 线程窗口](../../parallel/amp/media/campk.png "显示已冻结线程的 GPU 线程窗口") <br/>
    " **GPU 线程**" 窗口中的已冻结线程
 
    同样，"**并行监视**" 窗口会显示所有四个线程均已冻结。
 
-4. 在菜单栏上，选择 "**调试**" > **继续**允许接下来的四个 GPU 线程越过第22行的关卡并到达第30行的断点处。 " **GPU 线程**" 窗口显示四个以前冻结的线程保持冻结状态和处于活动状态。
+4. 在菜单栏上，选择 "**调试**  >  " "**继续**"，以允许接下来的四个 GPU 线程越过第22行的关卡并到达第30行的断点处。 " **GPU 线程**" 窗口显示四个以前冻结的线程保持冻结状态和处于活动状态。
 
 5. 在菜单栏上，依次选择 "**调试**" 和 "**继续**"。
 
@@ -390,7 +390,7 @@ ms.locfileid: "77126326"
 
    " **GPU 线程**" 窗口中的线程按地址分组。 该地址对应于每组线程所在的反汇编指令。 24个线程位于第22行，其中[tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)执行。 12 个线程位于第 32 行屏障的指令处。 其中 4 个线程经过标记。 8 个线程位于第 30 行的断点处。 其中 4 个线程已冻结。 下图显示了 " **GPU 线程**" 窗口中的分组线程。
 
-   ![包含按地址分组的线程的 GPU 线程窗口](../../parallel/amp/media/campl.png "其中的线程按地址进行分组的 GPU 线程窗口") <br/>
+   ![其中的线程按地址进行分组的 GPU 线程窗口](../../parallel/amp/media/campl.png "其中的线程按地址进行分组的 GPU 线程窗口") <br/>
    " **GPU 线程**" 窗口中的分组线程
 
 2. 您还可以通过打开 "**并行监视**" 窗口的 "数据" 网格的快捷菜单，选择 "**分组依据**"，然后选择与要将线程分组的菜单项相对应的菜单项，来执行 "**分组依据**" 操作。
@@ -415,4 +415,4 @@ ms.locfileid: "77126326"
 [调试 GPU 代码](/visualstudio/debugger/debugging-gpu-code)<br/>
 [如何：使用“GPU 线程”窗口](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
 [如何：使用“并行监视”窗口](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
-[利用C++并发可视化工具分析 AMP 代码](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+[利用并发可视化工具分析 C++ AMP 代码](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)

@@ -2,12 +2,12 @@
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 44fcb6776118e829fe7c96e54f3f51615604ac31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368484"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404816"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -33,11 +33,11 @@ C++ 不具备稳定的应用程序二进制接口 (ABI)。 但是，Visual Studi
 
 如果对象文件具有包含 C++ 链接的外部符号，则该对象文件可能无法与其他主版本工具集生成的对象文件正确链接。 有许多可能的结果：链接可能会完全失败（例如，如果名称修饰已更改）。 链接可能会成功，但对象在运行时可能无法正常工作（例如，如果类型布局已更改）。 或在许多情况下，对象可能碰巧能够正常工作并且不会出现任何错误。 另请注意，尽管 C++ ABI 不稳定，但 COM 所需的 C ABI 和 C++ ABI 子集是稳定的。
 
-如果链接到导入库，保留 ABI 兼容性的 Visual Studio 可再发行库的更高版本可在运行时使用。 例如，如果使用 Visual Studio 2015 Update 3 工具集编译和链接应用，则可使用任何 Visual Studio 2017 或 Visual Studio 2019 可再发行库，因为 2015、2017 和 2019 库具有保留的二进制后向兼容性。 相反，情况并非如此：对于早期版本的工具集，您无法使用可再分发版本来构建代码，即使它们具有兼容的 ABI。
+如果链接到导入库，保留 ABI 兼容性的 Visual Studio 可再发行库的更高版本可在运行时使用。 例如，如果使用 Visual Studio 2015 Update 3 工具集编译和链接应用，则可使用任何 Visual Studio 2017 或 Visual Studio 2019 可再发行库，因为 2015、2017 和 2019 库具有保留的二进制后向兼容性。 反之亦然：如果工具集的早期版本不能使用可再发行组件，而不能使用用于生成代码的可再发行组件，即使它们具有兼容的 ABI。
 
 ### <a name="libraries"></a>库
 
-如果使用 Visual Studio C++ 库头文件的特定版本来编译源文件（通过 #including 标头），生成的对象文件必须与相同版本的库链接。 例如，如果使用 Visual Studio 2015 Update 3 \<immintrin.h> 编译源文件，则必须使用 Visual Studio 2015 Update 3 vcruntime 库进行链接。 同样地，如果使用 Visual Studio 2017 版本 15.5 \<iostream> 编译源文件，则必须使用 Visual Studio 2017 版本 15.5 标准 C++ 库 msvcprt 进行链接。 不支持混合与匹配。
+如果使用 Visual Studio C++ 库头文件的特定版本来编译源文件（通过 #including 标头），生成的对象文件必须与相同版本的库链接。 例如，如果源文件是用 Visual Studio 2015 Update 3 编译的 \<immintrin.h> ，则必须链接到 Visual studio 2015 update 3 vcruntime 库。 同样，如果源文件是用 Visual Studio 2017 版本15.5 编译的 \<iostream> ，则必须与 Visual studio 2017 版本15.5 标准 c + + 库（msvcprt）链接。 不支持混合与匹配。
 
 对于 C++ 标准库，从 Visual Studio 2010 起，通过在标准标头中使用 `#pragma detect_mismatch` 显示禁止混合与匹配。 如果尝试链接不兼容的对象文件，或尝试与错误的标准库链接，链接将失败。
 
@@ -51,15 +51,15 @@ CRT 向来不支持混合与匹配，但通常还是能使用混合与匹配（�
 
 1. 如果无法（或不希望）重新生成静态库，则可以尝试使用 legacy\_stdio\_definitions.lib 进行链接。 如果它满足静态库的链接时间依赖关系，则需要彻底测试静态库在二进制文件中的使用情况，以确保[对通用 CRT 所做的行为变更](visual-cpp-change-history-2003-2015.md#BK_CRT)不会对其造成不利影响。
 
-1. 如果静态库的依赖项未满足遗留\_stdio\_定义.lib，或者由于上述行为更改导致库不能与通用 CRT 配合使用，我们建议您将静态库封装到与 Microsoft C 运行时的正确版本链接的 DLL 中。 例如，如果使用 Visual Studio 2013 生成静态库，则也需要使用 Visual Studio 2013 和 Visual Studio 2013 C++ 库来生成此 DLL。 通过将库构建到 DLL 中，可封装实现的详细信息（此详细信息是在特定版本 Microsoft C 运行时上的它的依赖项）。 需要注意不要让 DLL 接口泄露有关其所使用的 C 运行时的详细信息，例如，通过返回跨 DLL 边界的 FILE*，或通过返回 malloc 分配的指针并让调用方释放它。
+1. 如果旧的 stdio.h 定义不满足静态库的依赖项的要求 \_ \_ ，或者如果库由于上述行为发生更改而无法使用通用 CRT，则建议将静态库封装到与正确版本的 Microsoft C 运行时链接的 DLL 中。 例如，如果使用 Visual Studio 2013 生成静态库，则也需要使用 Visual Studio 2013 和 Visual Studio 2013 C++ 库来生成此 DLL。 通过将库构建到 DLL 中，可封装实现的详细信息（此详细信息是在特定版本 Microsoft C 运行时上的它的依赖项）。 需要注意不要让 DLL 接口泄露有关其所使用的 C 运行时的详细信息，例如，通过返回跨 DLL 边界的 FILE*，或通过返回 malloc 分配的指针并让调用方释放它。
 
-在单个进程中使用多个 CRT 本身不是问题（实际上，大多数进程最终将加载多个 CRT DLL；例如，Windows 操作系统组件将依赖于 msvcrt.dll，而 CLR 也将依赖于自己的专用 CRT）。 当混杂不同 CRT 中的状态时，会出现问题。 例如，不应使用 msvcr110.dll!malloc 分配内存，也不应使用 msvcr120.dll!free 取消分配内存，不应尝试使用 msvcr110!fopen 打开文件，也不应尝试使用 msvcr120!fread 读取文件。 只要您不从不同的 CRT 中混乱状态，就可以安全地在单个进程中加载多个 CRT。
+在单个进程中使用多个 CRT 本身不是问题（实际上，大多数进程最终将加载多个 CRT DLL；例如，Windows 操作系统组件将依赖于 msvcrt.dll，而 CLR 也将依赖于自己的专用 CRT）。 当混杂不同 CRT 中的状态时，会出现问题。 例如，不应使用 msvcr110.dll!malloc 分配内存，也不应使用 msvcr120.dll!free 取消分配内存，不应尝试使用 msvcr110!fopen 打开文件，也不应尝试使用 msvcr120!fread 读取文件。 只要不混杂不同 Crt 中的状态，就可以安全地在单个进程中加载多个 Crt。
 
 有关详细信息，请参阅[将代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)。
 
 ## <a name="errors-due-to-project-settings"></a>项目设置导致的错误
 
-若要开始升级进程，请在最新版本的 Visual Studio 中打开旧的 project/solution/workspace。 Visual Studio 将基于旧的项目设置创建新项目。 如果较旧的项目具有库或包含硬编码到非标准位置的路径，则当项目使用默认设置时，这些路径中的文件可能看不到编译器。 有关详细信息，请参阅[链接器 OutputFile 设置](porting-guide-spy-increment.md#linker_output_settings)。
+若要开始升级进程，请在最新版本的 Visual Studio 中打开旧的 project/solution/workspace。 Visual Studio 将基于旧的项目设置创建新项目。 如果旧项目具有库或包含硬编码为非标准位置的路径，则当项目使用默认设置时，这些路径中的文件将不会对编译器可见。 有关详细信息，请参阅[链接器 OutputFile 设置](porting-guide-spy-increment.md#linker_output_settings)。
 
 一般情况下，现在是恰当组织项目代码的绝佳时机，以便简化项目维护，并尽可能加快已升级代码编译。 如果已恰当组织源代码，且使用 Visual Studio 2010 或更高版本对旧项目进行编译，则可手动编辑新项目文件，以支持在旧编译器和新编译器上进行编译。 下面的示例演示了如何为 Visual Studio 2015 和 Visual Studio 2017 进行编译：
 
@@ -72,13 +72,13 @@ CRT 向来不支持混合与匹配，但通常还是能使用混合与匹配（�
 
 对于无法解析的符号，可能需要修复项目设置。
 
-- 如果源文件位于非默认位置，您是否将路径添加到项目的包含目录？
+- 如果源文件位于非默认位置，是否将该路径添加到项目的包含目录？
 
 - 如果在 .lib 文件中定义了外部符号，你是否在项目属性中指定了 lib 路径？正确版本的 .lib 文件是否位于此处？
 
 - 是否尝试链接到由其他版本的 Visual Studio 编译的 .lib 文件？ 如果是，请参阅前面部分中关于库和工具集依赖项的内容。
 
-- 调用站点处的参数类型是否匹配现有的函数重载？ 验证函数签名中任何 typedef 的基础类型，在调用函数的代码中验证它们的基础类型。这些类型是您希望它们的基础类型。
+- 调用站点处的参数类型是否匹配现有的函数重载？ 验证函数签名中和调用函数的代码中的任何 typedef 的基础类型是否为预期的类型。
 
 若要解决无法解析的符号错误，可以尝试使用 dumpbin.exe 来检查二进制文件中定义的符号。 请尝试使用下面的命令行来查看在库中定义的符号：
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
-（在 Microsoft Visual C++ 6.0 及更早版本中 **，wchar_t**不是作为内置类型实现的，而是在 wchar.h 中声明为未签名的短号的类型定义。C++标准要求**wchar_t**是内置类型。 使用 typedef 版本可能导致可移植性问题。 如果你从 Visual Studio 的早期版本进行升级，并遇到编译器错误 C2664（理由是代码尝试将 wchar_t 隐式转换为 unsigned short），则建议更改代码来修正错误，而不是设置 `/Zc:wchar_t-`********。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+（在 Microsoft Visual C++ 6.0 及更早版本中， **wchar_t**未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。）C + + 标准要求**wchar_t**为内置类型。 使用 typedef 版本可能导致可移植性问题。 如果你从 Visual Studio 的早期版本进行升级，并遇到编译器错误 C2664（理由是代码尝试将 wchar_t 隐式转换为 unsigned short），则建议更改代码来修正错误，而不是设置 `/Zc:wchar_t-`********。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用链接器选项 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升级。
 
@@ -118,19 +118,19 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 有关特定符合性改进的详细信息，请参阅 [Visual C++ 更改历史记录 2003 - 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)。
 
-## <a name="errors-involving-stdinth-integral-types"></a>涉及 \<stdint.h> 整型类型的错误
+## <a name="errors-involving-stdinth-integral-types"></a>涉及整型的错误 \<stdint.h>
 
-\<stdint.h> 标头定义了 typedef 和宏，它们保证在所有平台上具有指定长度，这与内置整型类型不同。 一些示例包括 `uint32_t` 和 `int64_t`。 \<stdint.h> 标头已添加到 Visual Studio 2010 中。 编写于 2010 年之前的代码可能为这些类型提供了专用定义，这些定义可能无法总是与 \<stdint.h> 定义保持一致。
+\<stdint.h>标头定义与内置整数类型不同的 typedef 和宏，保证在所有平台上都具有指定长度。 一些示例包括 `uint32_t` 和 `int64_t`。 \<stdint.h>标头已添加到 Visual Studio 2010 中。 在2010之前编写的代码可能为这些类型提供了专用定义，这些定义可能并不总是与定义一致 \<stdint.h> 。
 
-如果错误为 C2371 且涉及 `stdint` 类型，这可能意味着该类型是在代码或第三方 lib 文件中的标头中定义的。 升级时，应消除 \<stdint.h> 类型的任何自定义定义，但应先将自定义定义与当前标准定义进行对比，确保不会引入新问题。
+如果错误为 C2371 且涉及 `stdint` 类型，这可能意味着该类型是在代码或第三方 lib 文件中的标头中定义的。 升级时，应该消除类型的任何自定义定义 \<stdint.h> ，但首先将自定义定义与当前标准定义进行比较，以确保不会引入新问题。
 
-您可以按**F12** （**转到定义**） 以查看相关类型的定义位置。
+您可以按**F12** （"**访问定义**"）来查看所述类型的定义位置。
 
 此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++” > “高级”页，并将“显示包含文件”设置为“是”********************。 然后重新生成项目，并在输出窗口中查看 `#include` 列表。 每个标头在包含它的标头下都是缩进的。
 
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函数的错误
 
-多年来，针对 C 运行时进行了许多更改。 已添加函数的许多安全版本，也删除了函数的一些安全版本。 此外，如本文前面所述，Microsoft 在 Visual Studio 2015 中重构了 CRT 的实现，并重构为新的二进制文件和相关 .lib 文件。
+多年来，针对 C 运行时进行了许多更改。 已添加函数的许多安全版本，也删除了函数的一些安全版本。 另外，如本文前面所述，Microsoft 在 Visual Studio 2015 中对 CRT 的实现已重构为新的二进制文件和关联的 .lib 文件。
 
 如果错误涉及 CRT 函数，请搜索 [Visual C++ 更改历史记录 (2003 - 2015)](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)，查阅这些文章中是否包含任何附加信息。 如果错误为 LNK2019，无法解析的外部对象，请确保未删除函数。 否则，若确定函数仍存在，且调用代码正确，请检查项目是否使用了 `/NODEFAULTLIB`。 在这种情况下，需更新库列表，以便项目使用新的通用 (UCRT) 库。 有关详细信息，请参阅以上有关库和依赖项的部分。
 
@@ -142,7 +142,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动语义、新关键字以及其他语言和标准库功能可能导致编译器错误和不同的运行时行为。
 
-例如，旧 C++ 程序可能包含 iostream.h 标头。 此标头已在早期版本的 C++ 中弃用，且最终从 Visual Studio 中彻底删除。 在此情况下，需使用 \<iostream>，并重写代码。 有关详细信息，请参阅[更新旧的 iostreams 代码](porting-guide-spy-increment.md#updating_iostreams_code)。
+例如，旧 C++ 程序可能包含 iostream.h 标头。 此标头已在早期版本的 C++ 中弃用，且最终从 Visual Studio 中彻底删除。 在这种情况下，你将需要使用 \<iostream> 并重新编写你的代码。 有关详细信息，请参阅[更新旧的 iostreams 代码](porting-guide-spy-increment.md#updating_iostreams_code)。
 
 ### <a name="c4838-narrowing-conversion-warning"></a>C4838：收缩转换警告
 
@@ -150,13 +150,13 @@ C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动�
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>使用安全 CRT 函数的警告
 
-多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 要禁用解决方案中所有项目的警告，请打开 **"查看** > **属性管理器**"，选择要禁用该警告的所有项目，然后右键单击所选项目并选择 **"属性**"。 在“配置属性” > “C/C++” > “高级”下的“属性页”中，选择“禁用特定警告”********************。 **** 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。 （不包括"C"前缀。有关详细信息，请参阅[移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
+多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 若要为解决方案中的所有项目禁用警告，请打开 "**视图**"  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择 "**属性**"。 在“配置属性” > “C/C++” > “高级”下的“属性页”中，选择“禁用特定警告”********************。 **** 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。 （请勿包含 "C" 前缀。）有关详细信息，请参阅[移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>对 Windows API 或已过时 SDK 进行的更改所导致的错误
 
 多年来，已添加若干 Windows API 和数据类型，有时还会对其进行更改或删除。 此外，不属于核心操作系统的其他 SDK 也是添了又删。 因此，较旧的程序可能包含对已不存在的 API 的调用。 它们还可能包含对已不受支持的其它 Microsoft SDK 中 API 的调用。 如果错误涉及 Windows API 或较旧 Microsoft SDK 中的 API，则 API 可能已删除且/或已被更新、更安全的函数取代。
 
-若要深入了解当前 API 设置以及特定 Windows API 支持的操作系统最低版本，请参阅 [Microsoft API 和参考目录](https://msdn.microsoft.com/library)，并导航至出现问题的 API。
+有关特定 Windows API 的当前 API 集和支持的最低操作系统的详细信息，请参阅适用于[桌面 Windows 应用程序的 Api 索引](/windows/win32/apiindex/api-index-portal)和导航到相关的 api。
 
 ### <a name="windows-version"></a>Windows 版本
 
@@ -180,11 +180,11 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 和 MBCS/ASCII
 
-在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 要禁用解决方案中的所有项目，请打开 **"查看** > **属性管理器**"，选择要禁用该警告的所有项目，然后右键单击所选项目并选择 **"属性**"。 在“属性页”对话框中，选择“配置属性” > “C/C++” > “高级”****************。 在 **"禁用特定警告"** 属性中，打开下拉箭头，然后选择 **"编辑**"。 在文本框中输入 4996。 （不包括"C"前缀。选择 **"确定"** 以保存属性，然后选择 **"确定"** 以保存更改。
+在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 若要为解决方案中的所有项目禁用该选项，请打开 "**视图**  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择"**属性**"。 在“属性页”对话框中，选择“配置属性” > “C/C++” > “高级”****************。 在 "**禁用特定警告**" 属性中，打开下拉箭头，然后选择 "**编辑**"。 在文本框中输入 4996。 （请勿包含 "C" 前缀。）选择 **"确定"** 保存属性，然后选择 **"确定"** 保存更改。
 
-有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 与 Unicode 的一般信息，请参阅[可视化C++和国际化中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)。 [Internationalization](../c-runtime-library/internationalization.md)
+有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 与 Unicode 的一般信息，请参阅 Visual C++ 和[国际化](../c-runtime-library/internationalization.md)[中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[从早期版本的 Visual C++升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)

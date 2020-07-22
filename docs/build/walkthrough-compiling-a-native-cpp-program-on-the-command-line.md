@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: c24fdfdaef612059d5c2fbaaa58f10d83f5fe3a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8af104598f56aa6c8eb5a9a87905324700da3d37
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335235"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373666"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
 
@@ -26,22 +26,22 @@ Visual Studio 包含命令行 C 和 C++ 编译器。 可以使用它创建从基
 
 ## <a name="prerequisites"></a>先决条件
 
-要完成此演练，必须安装 Visual Studio 和可选的“使用 C++ 进行桌面开发”工作负载，或 Visual Studio 的命令行生成工具  。
+要完成此演练，必须安装 Visual Studio 和可选的“使用 C++ 进行桌面开发”工作负载，或 Visual Studio 的命令行生成工具。
 
-Visual Studio 是一个集成开发环境 (IDE)  。 它支持多种语言和平台的功能完备的编辑器、资源管理器、调试器和编译器。 可用版本包括免费的 Visual Studio Community 版本，且所有版本都支持 C 和 C++ 开发。 有关如何下载和安装 Visual Studio 的信息，请参阅[在 Visual Studio 中安装 C++ 支持](vscpp-step-0-installation.md)。
+Visual Studio 是一个集成开发环境 (IDE)。 它支持多种语言和平台的功能完备的编辑器、资源管理器、调试器和编译器。 可用版本包括免费的 Visual Studio Community 版本，且所有版本都支持 C 和 C++ 开发。 有关如何下载和安装 Visual Studio 的信息，请参阅[在 Visual Studio 中安装 C++ 支持](vscpp-step-0-installation.md)。
 
 Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编译器、工具和库。 它非常适合生成实验室或课堂练习，安装速度也相对较快。 如果只安装命令行工具，请在 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)页面上查找 Visual Studio 生成工具。
 
-在命令行上生成 C 或 C++ 程序之前，请验证是否安装了这些工具，并且是否可以从命令行访问它们。 Visual C++ 对用于查找其使用的工具、标头和库的命令行环境有复杂的要求。 如果没有事先准备，在普通的命令提示窗口中不能使用 Visual C++  。 幸运的是，Visual C++ 为你安装了快捷方式来启动开发人员命令提示，该命令提示符为命令行生成设置了环境。 遗憾的是，开发人员命令提示快捷方式的名称和它们所在的位置在几乎所有版本的 Visual C++ 和不同版本的 Windows 中都是不同的。 你的第一个演练任务是找到要使用的正确的命令提示符。
+在命令行上生成 C 或 C++ 程序之前，请验证是否安装了这些工具，并且是否可以从命令行访问它们。 Visual C++ 对用于查找其使用的工具、标头和库的命令行环境有复杂的要求。 如果没有事先准备，在普通的命令提示窗口中不能使用 Visual C++。 幸运的是，Visual C++ 为你安装了快捷方式来启动开发人员命令提示，该命令提示符为命令行生成设置了环境。 遗憾的是，开发人员命令提示快捷方式的名称和它们所在的位置在几乎所有版本的 Visual C++ 和不同版本的 Windows 中都是不同的。 你的第一个演练任务是找到要使用的正确的命令提示符。
 
 > [!NOTE]
-> 开发人员命令提示快捷方式自动为编译器和工具以及所有必需的标头和库设置正确的路径。 如果使用常规的命令提示窗口，则必须自己设置这些环境值  。 有关详细信息，请参阅 [为命令行生成设置路径和环境变量](setting-the-path-and-environment-variables-for-command-line-builds.md)。 建议使用开发人员命令提示快捷方式，而不是构建自己的快捷方式。
+> 开发人员命令提示快捷方式自动为编译器和工具以及所有必需的标头和库设置正确的路径。 如果使用常规的命令提示窗口，则必须自己设置这些环境值。 有关详细信息，请参阅 [为命令行生成设置路径和环境变量](setting-the-path-and-environment-variables-for-command-line-builds.md)。 建议使用开发人员命令提示快捷方式，而不是构建自己的快捷方式。
 
 ### <a name="open-a-developer-command-prompt"></a>打开“开发人员命令提示”
 
-1. 如果在 Windows 10 上安装了 Visual Studio 2017 或更高版本，请打开“开始”菜单并选择“所有应用”  。 向下滚动并打开“Visual Studio”文件夹（不是 Visual Studio 应用程序）  。 选择“VS 开发人员命令提示”以打开命令提示窗口  。
+1. 如果在 Windows 10 上安装了 Visual Studio 2017 或更高版本，请打开“开始”菜单并选择“所有应用”。 向下滚动并打开“Visual Studio”文件夹（不是 Visual Studio 应用程序）。 选择“VS 开发人员命令提示”以打开命令提示窗口。
 
-   如果在 Windows 10 上安装了 Microsoft Visual C++ 生成工具 2015，请打开“开始”菜单并选择“所有应用”   。 向下滚动并打开“Visual C++ 生成工具”文件夹  。 选择“Visual C++ 2015 x86 本机工具命令提示”，打开命令提示窗口  。
+   如果在 Windows 10 上安装了 Microsoft Visual C++ 生成工具 2015，请打开“开始”菜单并选择“所有应用” 。 向下滚动并打开“Visual C++ 生成工具”文件夹。 选择“Visual C++ 2015 x86 本机工具命令提示”，打开命令提示窗口。
 
    还可以使用 Windows 搜索功能搜索“开发人员命令提示”，然后选择与安装的 Visual Studio 版本匹配的命令提示。 使用快捷方式打开命令提示窗口。
 
@@ -58,12 +58,12 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编�
    当前目录或版本号可能存在差异。 这些值取决于 Visual C++ 的版本和安装的任何更新。 如果上述输出与所看到的类似，则可以在命令行中生成 C 或 C++ 程序。
 
    > [!NOTE]
-   > 当你运行 `cl` 命令时，如果遇到错误，例如“CL 无法识别为内部或外部命令、可操作的程序或批处理文件”、错误 C1034 或错误 LNK1104，则说明你没有使用开发人员命令提示，或者安装 Visual C++ 时出现了错误  。 必须先解决此问题，然后才能继续。
+   > 当你运行 `cl` 命令时，如果遇到错误，例如“CL 无法识别为内部或外部命令、可操作的程序或批处理文件”、错误 C1034 或错误 LNK1104，则说明你没有使用开发人员命令提示，或者安装 Visual C++ 时出现了错误。 必须先解决此问题，然后才能继续。
 
-   如果找不到开发人员命令提示快捷方式，或在输入 `cl` 时收到错误消息，则说明 Visual C++ 安装可能有问题。 尝试在 Visual Studio 中重新安装 Visual C++ 组件，或重新安装 Microsoft Visual C++ 生成工具。 除非 `cl` 命令运行，否则不要继续下一节  。 有关 Visual C++ 的安装和故障排除的更多信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
+   如果找不到开发人员命令提示快捷方式，或在输入 `cl` 时收到错误消息，则说明 Visual C++ 安装可能有问题。 尝试在 Visual Studio 中重新安装 Visual C++ 组件，或重新安装 Microsoft Visual C++ 生成工具。 除非 `cl` 命令运行，否则不要继续下一节。 有关 Visual C++ 的安装和故障排除的更多信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
 
    > [!NOTE]
-   > 根据计算机上的 Windows 版本和系统安全配置，可能必须右键单击以打开“开发人员命令提示”快捷方式的快捷菜单，然后选择“以管理员身份运行”，才能成功生成和运行通过本演练创建的程序  。
+   > 根据计算机上的 Windows 版本和系统安全配置，可能必须右键单击以打开“开发人员命令提示”快捷方式的快捷菜单，然后选择“以管理员身份运行”，才能成功生成和运行通过本演练创建的程序。
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>创建 Visual C++ 源文件并在命令行上对其进行编译
 
@@ -71,7 +71,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编�
 
 1. 在命令提示窗口中输入 `notepad hello.cpp`。
 
-   当记事本提示你创建文件时，选择“是”  。 此步骤将打开一个空白记事本窗口，你可以在名为 hello.cpp 的文件中输入代码。
+   当记事本提示你创建文件时，选择“是”。 此步骤将打开一个空白记事本窗口，你可以在名为 hello.cpp 的文件中输入代码。
 
 1. 在记事本中，输入以下代码行：
 
@@ -86,7 +86,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编�
 
    此代码是一个非常简单的程序，会在屏幕上写入一行文本，然后退出。 为了尽量减少错误，请将此代码复制并粘贴到记事本中。
 
-1. 保存所有内容！ 在记事本中，在“文件”  菜单上选择“保存”  。
+1. 保存所有内容！ 在记事本中，在“文件”  菜单上选择“保存” 。
 
    恭喜，你已经创建了一个 C++ 源文件 Helo.cp，可以进行编译。
 
@@ -107,7 +107,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编�
 
    ```
 
-   日期和其他详细信息在你的计算机上会有所不同。 如果看不到源代码文件 hello.cpp，请确保已更改为所创建的“c:\\hello”目录   。 在记事本中，请确保将源文件保存在此目录中。 另请确保保存的源代码扩展名为 `.cpp`，而不是 `.txt`  。
+   日期和其他详细信息在你的计算机上会有所不同。 如果看不到源代码文件 hello.cpp，请确保已更改为所创建的“c:\\hello”目录 。 在记事本中，请确保将源文件保存在此目录中。 另请确保保存的源代码扩展名为 `.cpp`，而不是 `.txt` 。
 
 1. 在开发人员命令提示下，输入 `cl /EHsc hello.cpp` 来编译程序。
 
@@ -127,10 +127,10 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编�
    ```
 
    > [!NOTE]
-   > 如果遇到错误（例如“‘cl’无法识别为内部或外部命令、可操作的程序或批处理文件”、错误 C1034 或错误 LNK1104），则说明未正确设置开发人员命令提示。 有关如何解决此问题的信息，请返回“打开开发人员命令提示”部分  。
+   > 如果遇到错误（例如“‘cl’无法识别为内部或外部命令、可操作的程序或批处理文件”、错误 C1034 或错误 LNK1104），则说明未正确设置开发人员命令提示。 有关如何解决此问题的信息，请返回“打开开发人员命令提示”部分。
 
    > [!NOTE]
-   > 如果收到其他编译器或链接器错误或警告，请检查源代码以更正任何错误，然后保存它并再次运行编译器。 有关特定错误的信息，请使用此 MSDN 页上的搜索框查找错误号。
+   > 如果收到其他编译器或链接器错误或警告，请检查源代码以更正任何错误，然后保存它并再次运行编译器。 有关特定错误的信息，请使用搜索框查找错误号。
 
 1. 若要运行 hello.exe 程序，请在命令提示处输入 `hello`。
 
@@ -146,7 +146,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编�
 
 此“Hello, World”示例与 C++ 程序一样简单。 现实世界中的程序通常有头文件、更多源文件和指向库的链接。
 
-你可以使用本演练中的步骤来创建自己的 C++ 代码，而不是键入所示的示例代码。 还可通过这些步骤生成你在其他位置看到的许多 C++ 代码示例程序。 你可以在任何可写目录放置源代码并生成应用。 默认情况下，Visual Studio IDE 在用户文件夹的“source\\repos”子文件夹中创建项目  。 旧版本可能会将项目放入 Documents\\Visual Studio \<version>\\ 文件夹中  。
+你可以使用本演练中的步骤来创建自己的 C++ 代码，而不是键入所示的示例代码。 还可通过这些步骤生成你在其他位置看到的许多 C++ 代码示例程序。 你可以在任何可写目录放置源代码并生成应用。 默认情况下，Visual Studio IDE 在用户文件夹的“source\\repos”子文件夹中创建项目。 旧版本可能会将项目放入 Documents\\Visual Studio \<version>\\Projects* 文件夹中。
 
 若要编译包含其他源代码文件的程序，请在命令行上将它们全部输入，例如：
 
@@ -166,7 +166,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行编�
 
 可以使用 NMAKE 和生成文件、MSBuild 和项目文件或 CMake 在命令行上配置和生成更复杂的项目。 有关使用这些工具的详细信息，请参阅 [NMAKE 参考](reference/nmake-reference.md)、[MSBuild](msbuild-visual-cpp.md) 和 [Visual Studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)。
 
-C 和 C++ 语言相似，但并不相同。 MSVC 编译器使用一个简单的规则来确定在编译代码时使用哪种语言。 默认情况下，MSVC 编译器将以 `.c` 结尾的文件视为 C 源代码，将以 `.cpp` 结尾的所有文件视为 C++ 源代码   。 要强制编译器将所有文件视为独立于文件扩展名的 C++，请使用 [/TP](reference/tc-tp-tc-tp-specify-source-file-type.md) 编译器选项。
+C 和 C++ 语言相似，但并不相同。 MSVC 编译器使用一个简单的规则来确定在编译代码时使用哪种语言。 默认情况下，MSVC 编译器将以 `.c` 结尾的文件视为 C 源代码，将以 `.cpp` 结尾的所有文件视为 C++ 源代码 。 要强制编译器将所有文件视为独立于文件扩展名的 C++，请使用 [/TP](reference/tc-tp-tc-tp-specify-source-file-type.md) 编译器选项。
 
 MSVC 编译器包括符合 ISO C99 标准的 C 运行时库 (CRT)，只有几个较小例外。 可移植代码通常按预期方式进行编译和运行。 MSVC 编译器弃用了某些过时的库函数和多个 POSIX 函数名。 这些函数仍然受支持，但首选名称已更改。 有关详细信息，请参阅 [CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)和[编译器警告（级别 3）C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 

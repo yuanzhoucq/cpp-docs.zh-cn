@@ -1,5 +1,5 @@
 ---
-title: 左移和右移运算符（&gt; &gt;和&lt; &lt;）
+title: 左移和右移运算符（ &gt; &gt; 和 &lt; &lt; ）
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825910"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404765"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左移和右移运算符（&gt; &gt;和&lt; &lt;）
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左移和右移运算符（ &gt; &gt; 和 &lt; &lt; ）
 
-按位移位运算符是**&gt;** 右移位运算符（），它将*shift 表达式*的位移动到右侧，将左移位运算符（）移动到左边的移位**&lt;** 运算符（）。 *shift-expression* <sup>1</sup>
+按位移位运算符是右移位运算符（ **&gt;&gt;** ），它将*shift 表达式*的位移动到右侧，将左移位运算符（）移动到左边的移位运算符（ **&lt;&lt;** ）。 *shift-expression* <sup>1</sup>
 
 ## <a name="syntax"></a>语法
 
-> *移位表达式* `<<` *加法表达式*\
+> *移位表达式* `<<`*加法表达式*\
 > *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>备注
 
 > [!IMPORTANT]
-> 以下说明和示例在 Windows 上适用于 x86 和 x64 体系结构。 对于 ARM 设备，左移运算符和右移位运算符的实现在很大程度上是不同的。 有关详细信息，请参阅[HELLO ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx)博客文章的 "移位运算符" 部分。
+> 以下说明和示例在 Windows 上适用于 x86 和 x64 体系结构。 对于 ARM 设备，左移运算符和右移位运算符的实现在很大程度上是不同的。 有关详细信息，请参阅[HELLO ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/)博客文章的 "移位运算符" 部分。
 
 ## <a name="left-shifts"></a>左移
 
@@ -195,7 +195,7 @@ int main() {
 }
 ```
 
-## <a name="additional-details"></a>更多详细信息
+## <a name="additional-details"></a>其他详细信息
 
 如果*加法表达式*为负，或者*加法表达式*大于或等于（提升）*移位表达式*中的位数，则移位运算的结果是不确定的。 如果*加法表达式*为0，则不执行移位运算。
 
@@ -224,9 +224,9 @@ int main() {
 
 <sup>1</sup>以下是 c + + 11 ISO 规范（INCITS/ISO/IEC 14882-2011 [2012]）、5.8.2 和5.8.3 部分中的移位运算符的说明。
 
-`E1 << E2` 的值是 `E1` 向左移动 `E2` 位的结果，空出的位用零填充。 如果`E1`有一个无符号类型，则结果的值为**E1 × 2**<sup>**E2**</sup>，减少的模数比结果类型中可表示的最大值多一个。 否则，如果`E1`具有有符号类型和非负值，并且**E1 × 2**<sup>**E2**</sup>在结果类型的相应无符号类型中表示，则该值转换为结果类型就是生成的值;否则，该行为是不确定的。
+`E1 << E2` 的值是 `E1` 向左移动 `E2` 位的结果，空出的位用零填充。 如果 `E1` 有一个无符号类型，则结果的值为**E1 × 2**<sup>**E2**</sup>，减少的模数比结果类型中可表示的最大值多一个。 否则，如果 `E1` 具有有符号的类型和非负值，并且**E1 × 2**<sup>**E2**</sup>可在结果类型的相应无符号类型中表示，则该值转换为结果类型就是生成的值; 否则，该行为是不确定的。
 
-`E1 >> E2` 的值是 `E1` 向右移动 `E2` 位的结果。 如果`E1`具有无符号类型或`E1`具有有符号类型和非负值，则结果的值为**E1/2**<sup>**E2**</sup>的商的整数部分。 如果 `E1` 属于有符号类型且为负值，则结果值由实现决定。
+`E1 >> E2` 的值是 `E1` 向右移动 `E2` 位的结果。 如果 `E1` 具有无符号类型或 `E1` 具有有符号类型和非负值，则结果的值为**E1/2**<sup>**E2**</sup>的商的整数部分。 如果 `E1` 属于有符号类型且为负值，则结果值由实现决定。
 
 ## <a name="see-also"></a>另请参阅
 

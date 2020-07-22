@@ -4254,6 +4254,8 @@
           href: compiler-warnings/c5046.md
         - name: 编译器警告（等级 1）C5105
           href: compiler-warnings/c5105.md
+        - name: 编译器警告（等级 1）C5208
+          href: compiler-warnings/c5208.md
 - name: 因编译器版本生成的编译器警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: 默认关闭的编译器警告

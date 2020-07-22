@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 3265bffb393eeff1d8a04a41357e2b138aa0ebf7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615563"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405021"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 
@@ -68,14 +68,12 @@ MFC 提供支持 Internet 编程的类。 可以使用[COleControl](reference/co
 
 - [ATL 支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>网站获取详细信息
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>网站获取详细信息
 
-有关 Microsoft Internet 技术的其他信息，请参阅[Microsoft Developer Network （MSDN）](https://go.microsoft.com/fwlink/p/?linkid=56322)网站。 （链接可能会更改，恕不另行通知。）
-
-此面向开发人员的网站包含有关使用 Microsoft 开发工具和技术的信息，以及有关最近和即将举行的会议的热门案例。 在此页上，您可以跳转到许多相关的开发人员网站，包括 .NET 和 XML 开发人员中心。 你还可以下载 beta Sdk 和示例。
+有关 Microsoft Internet 技术的详细信息，请参阅[Microsoft Docs](https://docs.microsoft.com/)。
 
 [万维网联合会（W3C）](https://go.microsoft.com/fwlink/p/?linkid=37125)发布 HTML、HTTP、CGI 和其他万维网技术的规格。
 
-## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>更多 Internet 帮助
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>更多 internet 帮助
 
 Windows SDK 的 OLE 部分包含有关 OLE 编程的其他信息。 此信息提供有关直接使用 Win32 WinInet 函数而不是通过 MFC 类的详细信息。 它还包含有关 Internet 技术的概述信息。

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 96ece9a2a5be6ea29c95e17e81f6ce4adbfd4c0b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f18614f7b156a1757df9dfaac9e4a0ad4f8209eb
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624163"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404289"
 ---
 # <a name="ole-background"></a>OLE 后台
 
@@ -66,7 +66,7 @@ OLE 包含很多不同的概念，它们全部用于实现应用程序之间的�
 
 - [OLE 后台：MFC 实现](ole-background-mfc-implementation.md)
 
-对于上述文章中找不到的常规 OLE 信息，请在 MSDN 中搜索 OLE。
+有关上述文章中未找到的常规 OLE 信息，请在 Microsoft Docs 中[搜索 OLE](https://docs.microsoft.com/search/?terms=ole) 。
 
 ## <a name="see-also"></a>另请参阅
 

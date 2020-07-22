@@ -2,34 +2,34 @@
 title: 图形 (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 393fadbba90b135e6394cf848668b4957a6d7ce2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449866"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404829"
 ---
 # <a name="graphics-c-amp"></a>图形 (C++ AMP)
 
-C++AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)可用于访问在 Gpu 的纹理支持的命名空间。 一些常见的情况有：
+C++ AMP 包含[Concurrency：： graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)命名空间中的多个 api，可用于访问 gpu 上的纹理支持。 一些常见的情况有：
 
-- 可以使用[纹理](../../parallel/amp/reference/texture-class.md)类作为计算和利用漏洞攻击的数据容器*空间局部性*的纹理缓存和 GPU 硬件的布局。 空间局部性是相距较近的数据元素的属性。
+- 可以使用[纹理](../../parallel/amp/reference/texture-class.md)类作为数据容器进行计算，并利用纹理缓存和 GPU 硬件布局的*空间位置*。 空间局部性是相距较近的数据元素的属性。
 
 - 运行时可以实现与非计算着色器的高效互操作。 像素、顶点、分割和外壳着色器经常使用或生成一些可在你的 C++ AMP 计算中使用的纹理。
 
-- C++ AMP 中的图形 API 提供访问子字已打包缓冲区的替代方法。 纹理格式代表*纹素*（纹理元素） 的组成的 8 位或 16 位标量允许访问此类已打包的数据存储。
+- C++ AMP 中的图形 API 提供访问子字已打包缓冲区的替代方法。 如果纹理的格式表示由8位或16位标量组成的*纹素*（纹理元素），则允许访问此类打包的数据存储。
 
 ## <a name="the-norm-and-unorm-types"></a>norm 和 unorm 类型
 
-`norm`并`unorm`类型是标量类型的限制的范围**float**值; 这称为*夹紧*。 这些类型可从其他标量类型显式构造。 在强制转换时，值首先转换为**float** ，然后限制到 norm [-1.0，1.0] 或 unorm [0.0，1.0] 允许的各自区域。 从 +/- 无穷强制转换时将返回 +/-1。 未定义从 NaN 的强制转换。 可以从 unorm 隐式构造 norm，而且不会丢失数据。 这些类型已定义到浮点类型的隐式转换运算符。 这些类型和其他内置标量类型之间等定义二元运算符**float**并**int**: +、-， \*，/、 = =、 ！ =，>， \<，> =、 < =。 此外支持复合赋值运算符: + =、-=、 \*=、 / =。 Norm 类型已定义一元求反运算符 (-)。
+`norm`和 `unorm` 类型是限制**浮点**值范围的标量类型; 这称为*钳位*。 这些类型可从其他标量类型显式构造。 在强制转换中，值首先强制转换为**float** ，然后限制为标准 [-1.0，1.0] 或 unorm [0.0，1.0] 所允许的相应区域。 从 +/- 无穷强制转换时将返回 +/-1。 未定义从 NaN 的强制转换。 可以从 unorm 隐式构造 norm，而且不会丢失数据。 这些类型已定义到浮点类型的隐式转换运算符。 二元运算符是在这些类型和其他内置标量类型（例如**float**和**int**： +、-、 \* 、/、= =、！ =、>、 \<, > =、<=）之间定义的。 还支持复合赋值运算符： + =、-=、 \* =、/=。 Norm 类型已定义一元求反运算符 (-)。
 
 ## <a name="short-vector-library"></a>短矢量库
 
-短矢量库提供的功能的某些[矢量类型](https://go.microsoft.com/fwlink/p/?linkid=248500)的 HLSL 中定义，通常用于定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型为**双**， **float**， **int**， `norm`， `uint`，和`unorm`。 下表中显示了这些类型名称。 对于每种类型，没有也相应**typedef** ，没有下划线在名称中。 具有下划线的类型[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 没有下划线的类型[Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) ，以便它们明确区分的命名方式类似的基础类型如 **__int8**并 **__int16**。
+Short 向量库提供了 HLSL 中定义的[矢量类型](https://go.microsoft.com/fwlink/p/?linkid=248500)的一些功能，通常用于定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型为**double**、 **float**、 **int**、 `norm` 、 `uint` 和 `unorm` 。 下表中显示了这些类型名称。 对于每种类型，还有一个在名称中没有下划线的相应**typedef** 。 具有下划线的类型位于[Concurrency：： Graphics 命名空间](../../parallel/amp/reference/concurrency-graphics-namespace.md)中。 不带下划线的类型位于[Concurrency：： graphics：:d Irect3d 命名空间](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)中，以便与类似的命名基础类型（如 **__int8**和 **__int16**）明确分隔。
 
-||长度 2|长度为 3|长度为 4|
+||长度 2|长度3|长度4|
 |-|--------------|--------------|--------------|
-|double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
+|Double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
 |int|int_2<br /><br /> int2|int_3<br /><br /> int3|int_4<br /><br /> int4|
 |norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|
@@ -48,26 +48,26 @@ C++AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/reference
 
 |运算符类型|有效类型|
 |-------------------|-----------------|
-|二元运算符|对所有类型有效: +、-， \*，/，<br /><br /> 对整数类型有效: %、 ^、 &#124;，&，<\<，>><br /><br /> 两个矢量必须具有相同的大小，而结果将是相同大小的矢量。|
+|二元运算符|对所有类型有效： +、-、 \* 、/、<br /><br /> 对整数类型有效：%、^、&#124;、&、<\<, >><br /><br /> 两个矢量必须具有相同的大小，而结果将是相同大小的矢量。|
 |关系运算符|对所有类型有效：== 和 !=|
-|复合赋值运算符|对所有类型有效: + =、-=、 \*=、 / =<br /><br /> 对整数类型有效: %=、 ^ =、 &#124;=、 & =、 <\<=、 >> =|
+|复合赋值运算符|对所有类型有效： + =、-=、 \* =、/=<br /><br /> 对整数类型有效：% =、^ =、&#124;=、&=、<\<=, >>=|
 |递增和递减运算符|对所有类型有效：++、--<br /><br /> 前缀和后缀均有效。|
 |位非运算符 (~)|对整数类型有效。|
 |一元 - 运算符|对除 `unorm` 和 `uint` 外的所有类型有效。|
 
 ### <a name="swizzling-expressions"></a>Swizzling 表达式
 
-短矢量库支持 `vector_type.identifier` 访问器构造来访问短矢量的组件。 `identifier`，这被称为*swizzling 表达式*，指定矢量的组件。 此表达式可以是左值或右值。 在标识符中的各个字符可能是： x、 y、 z 和 w;或 r、 g、 b、 和。 "x"和"r"表示第零个组件、"y"和"g"表示第一个组件等。 （请注意，“x”和“r”不能在同一标识符中使用。）因此，“rgba”和“xyzw”将返回相同的结果。 诸如“x”和“y”等单组件访问器属于标量值类型。 多组件访问器属于短矢量类型。 例如，如果构造一个名为 `int_4` 且值为 2、4、6、8 的 `fourInts` 矢量，则 `fourInts.y` 将返回整数 4，而 `fourInts.rg` 将返回一个值为 2、4 的 `int_2` 对象。
+短矢量库支持 `vector_type.identifier` 访问器构造来访问短矢量的组件。 `identifier`（称为*swizzling 表达式*）指定矢量的组件。 此表达式可以是左值或右值。 标识符中的单个字符可以是： x、y、z 和 w;或 r、g、b 和 a。 "x" 和 "r" 表示零个分量，"y" 和 "g" 表示第一个组件，依此类推。 （请注意，不能在同一标识符中使用 "x" 和 "r"。）因此，"rgba" 和 "xyzw" 将返回相同的结果。 诸如“x”和“y”等单组件访问器属于标量值类型。 多组件访问器属于短矢量类型。 例如，如果构造一个名为 `int_4` 且值为 2、4、6、8 的 `fourInts` 矢量，则 `fourInts.y` 将返回整数 4，而 `fourInts.rg` 将返回一个值为 2、4 的 `int_2` 对象。
 
 ## <a name="texture-classes"></a>纹理类
 
-许多 GPU 具有已进行优化的硬件和缓存，适用于获取像素和纹素以及呈现图像和纹理。 [纹理\<T，N >](../../parallel/amp/reference/texture-class.md)类，该类是纹素对象的容器类，公开这些 Gpu 的纹理功能。 纹素可以是：
+许多 GPU 具有已进行优化的硬件和缓存，适用于获取像素和纹素以及呈现图像和纹理。 [纹理 \<T,N> ](../../parallel/amp/reference/texture-class.md)类是纹素对象的容器类，它公开了这些 gpu 的纹理功能。 纹素可以是：
 
-- **Int**， `uint`， **float**， **double**， `norm`，或`unorm`标量。
+- **Int**、 `uint` 、 **float**、 **double**、 `norm` 或 `unorm` 标量。
 
 - 具有两个或四个组件的短矢量。 唯一的例外是 `double_4`，不允许使用此短矢量。
 
-`texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[Direct3D 11 中的纹理简介](https://go.microsoft.com/fwlink/p/?linkid=248502)。
+`texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关 Direct3D 中纹理和纹素的详细信息，请参阅[direct3d 11 中的纹理简介](https://go.microsoft.com/fwlink/p/?linkid=248502)。
 
 你所使用的纹素类型可以是图形编程中使用的众多纹理格式中的一种。 例如，RGBA 格式可以使用 32 位，其中，R、G、B 和 A 标量元素各 8 位。 图形卡的纹理硬件可以访问基于格式的各个元素。 例如，如果你使用的是 RGBA 格式，则纹理硬件可以提取每个 8 位组件形成 32 位窗体。 在 C++ AMP 中，你可以设置每个纹理标量元素的位数，以便自动访问代码中的各个标量元素，而不必进行移位。
 
@@ -135,13 +135,13 @@ void createTextureWithBPC() { // Create the source data.
 
 |纹理|每个维度的大小限制|
 |-------------|---------------------|
-|纹理\<T 1 >|16384|
-|纹理\<T，2 >|16384|
-|纹理\<T，3 >|2048|
+|褐色\<T,1>|16384|
+|褐色\<T,2>|16384|
+|褐色\<T,3>|2048|
 
 ### <a name="reading-from-texture-objects"></a>读取纹理对象
 
-你可以从读取`texture`通过使用对象[texture:: operator\[\]](reference/texture-class.md#operator_at)，[纹理:: operator （) 运算符](reference/texture-class.md#operator_call)，或[texture:: get 方法](reference/texture-class.md#get). 两个运算符将返回一个值，而不是引用。 因此，你不能使用 `texture` 写入 `texture::operator\[\]` 对象。
+您可以 `texture` 通过使用[以下纹理：： operator \[ \] ](reference/texture-class.md#operator_at)，[纹理：： operator （）运算符](reference/texture-class.md#operator_call)或[纹理：： get 方法](reference/texture-class.md#get)从对象中进行读取。 这两个运算符返回值，而不是引用。 因此，你不能使用 `texture` 写入 `texture::operator\[\]` 对象。
 
 ```cpp
 void readTexture() {
@@ -210,15 +210,15 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 ### <a name="writing-to-texture-objects"></a>写入纹理对象
 
-使用[texture:: set](reference/texture-class.md#set)方法将写入`texture`对象。 纹理对象可以是只读或读/写属性。 纹理对象若要可读写，必须满足以下条件：
+使用 "[纹理：： set](reference/texture-class.md#set) " 方法写入 `texture` 对象。 纹理对象可以是只读或读/写属性。 纹理对象若要可读写，必须满足以下条件：
 
 - T 只有一个标量组件。 （不允许使用短矢量。）
 
-- T 不是**双**， `norm`，或`unorm`。
+- T 不是**double**、 `norm` 或 `unorm` 。
 
 - `texture::bits_per_scalar_element` 属性为 32。
 
-如果不符合这三个条件，则 `texture` 对象为只读对象。 编译期间将检查前两个条件。 如果有代码尝试写入 `readonly` 纹理对象，将产生编译错误。 为条件`texture::bits_per_scalar_element`在运行时，检测，并在运行时生成[unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md)异常，如果尝试写入只读`texture`对象。
+如果不符合这三个条件，则 `texture` 对象为只读对象。 编译期间将检查前两个条件。 如果有代码尝试写入 `readonly` 纹理对象，将产生编译错误。 在 `texture::bits_per_scalar_element` 运行时检测到的条件，如果尝试写入 readonly 对象，则运行时将生成[unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md)异常 `texture` 。
 
 下面的代码示例向一个纹理对象写入了多个值。
 
@@ -234,7 +234,7 @@ void writeTexture() {
 
 ### <a name="copying-texture-objects"></a>复制纹理对象
 
-可通过使用纹理对象之间复制[副本](reference/concurrency-namespace-functions-amp.md#copy)函数或[copy_async](reference/concurrency-namespace-functions-amp.md#copy_async)函数，如下面的代码示例中所示。
+您可以通过使用[copy](reference/concurrency-namespace-functions-amp.md#copy)函数或[copy_async](reference/concurrency-namespace-functions-amp.md#copy_async)函数在纹理对象之间进行复制，如下面的代码示例所示。
 
 ```cpp
 void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.
@@ -259,11 +259,11 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 }
 ```
 
-也可以复制从一个纹理到另一个使用[texture:: copy_to](reference/texture-class.md#copy_to)方法。 这两个纹理可以位于不同的 accelerator_view 上。 当复制到 `writeonly_texture_view` 对象时，数据将复制到基础 `texture` 对象。 源和目标 `texture` 对象上的每标量元素位数和范围必须相同。 如果不符合这些需求，运行时将引发异常。
+还可以通过使用 "[纹理：： copy_to](reference/texture-class.md#copy_to)方法" 将一个纹理复制到另一个纹理。 这两个纹理可以位于不同的 accelerator_view 上。 当复制到 `writeonly_texture_view` 对象时，数据将复制到基础 `texture` 对象。 源和目标 `texture` 对象上的每标量元素位数和范围必须相同。 如果不符合这些需求，运行时将引发异常。
 
 ## <a name="texture-view-classes"></a>纹理视图类
 
-C++引入了 AMP [texture_view 类](../../parallel/amp/reference/texture-view-class.md)Visual Studio 2013 中。 纹理视图支持相同的纹素类型和为排名[texture 类](../../parallel/amp/reference/texture-class.md)，但与纹理不同，它们提供对其他硬件功能，如纹理采样和 mipmap 访问。 纹理视图支持对基础纹理数据进行只读、只写和读/写访问。
+C++ AMP 在 Visual Studio 2013 中引入了[Texture_view 类](../../parallel/amp/reference/texture-view-class.md)。 纹理视图支持与[纹理类](../../parallel/amp/reference/texture-class.md)相同的纹素类型和秩，但不同的是纹理，它们提供对其他硬件功能（如纹理采样和 mipmap）的访问。 纹理视图支持对基础纹理数据进行只读、只写和读/写访问。
 
 - 只读访问由 `texture_view<const T, N>` 模板专用化提供，支持具有 1 个、2 个或 4 个组件的元素、纹理采样以及动态访问在实例化视图时确定的一系列 mipmap 级别。
 
@@ -271,11 +271,11 @@ C++引入了 AMP [texture_view 类](../../parallel/amp/reference/texture-view-cl
 
 - 读写访问由非专用模板类 `texture_view<T, N>` 提供，与纹理一样，支持仅具有 1 个组件的元素；视图可以访问在实例化视图时确定的一个 mipmap 级别。 它不支持采样。
 
-纹理视图类似于数组视图，但不是提供自动数据管理和移动功能， [array_view 类](../../parallel/amp/reference/array-view-class.md)优于[array 类](../../parallel/amp/reference/array-class.md)。 `texture_view` 只能在基础纹理数据所在的快捷键视图中进行访问。
+纹理视图与数组视图类似，但并不提供[Array_view 类](../../parallel/amp/reference/array-view-class.md)在[数组类](../../parallel/amp/reference/array-class.md)上提供的自动数据管理和移动功能。 `texture_view` 只能在基础纹理数据所在的快捷键视图中进行访问。
 
-### <a name="writeonlytextureview-deprecated"></a>弃用 writeonly_texture_view
+### <a name="writeonly_texture_view-deprecated"></a>弃用 writeonly_texture_view
 
-对于 Visual Studio 2013， C++ AMP 引入了更好地支持硬件纹理功能，例如采样和 mipmap，不可能受[writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)。 新引入的 `texture_view` 类支持 `writeonly_texture_view` 中功能的超集；因此，`writeonly_texture_view` 已被弃用。
+对于 Visual Studio 2013，C++ AMP 为硬件纹理功能（如采样和 mipmap）提供了更好的支持，而[Writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)却不支持该功能。 新引入的 `texture_view` 类支持 `writeonly_texture_view` 中功能的超集；因此，`writeonly_texture_view` 已被弃用。
 
 我们建议（至少在新代码中）使用 `texture_view` 来访问之前由 `writeonly_texture_view` 提供的功能。 请比较下面两个代码示例，这两个示例均会写入具有 2 个组件的纹理对象 (int_2)。 请注意，在这两种情况下，都必须通过 lambda 表达式中的值来捕获视图 `wo_tv4`。 以下是采用新 `texture_view` 类的示例：
 
@@ -307,11 +307,11 @@ void write2ComponentTexture() {
 
 你可以看到，如果只是写入主 mipmap 级别，则两个代码示例几乎完全相同。 如果已在现有代码中使用 `writeonly_texture_view` 并且不打算改进该代码，则不必进行更改。 但是，如果你考虑改进该代码，则我们建议你重写代码以便使用 `texture_view`，因为它的一些改进支持一些新硬件纹理功能。 有关这些新功能的更多信息，请阅读下文。
 
-有关不推荐使用的详细信息`writeonly_texture_view`，请参阅[中的纹理视图设计概述C++a m P](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)本机代码博客中的并行编程。
+有关弃用的详细信息 `writeonly_texture_view` ，请参阅 "本机代码中的并行编程" 博客[中的 "纹理视图设计概述" C++ AMP](/archive/blogs/nativeconcurrency/overview-of-the-texture-view-design-in-c-amp) 。
 
 ### <a name="instantiating-texture-view-objects"></a>实例化纹理视图对象
 
-声明`texture_view`类似于声明`array_view`相关联**数组**。 下面的代码示例声明了多个`texture`对象以及与之关联的 `texture_view` 对象。
+声明 `texture_view` 是与声明 `array_view` 与**数组**关联的。 下面的代码示例声明了多个`texture`对象以及与之关联的 `texture_view` 对象。
 
 ```cpp
 #include <amp.h>
@@ -342,10 +342,10 @@ void declareTextureViews()
 
 在决定视图是否支持纹理采样以及 mipmap 级别的访问方式时，`texture_view` 的元素类型（其常量性及其组件数）也会发挥一定的作用：
 
-|类型|组件数|读取|Write|采样|Mipmap 访问|
+|类型|组件|读取|写入|采样|Mipmap 访问|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T，N >|1, 2, 4|是|否 (1)|是|是，可索引。 范围在实例化时确定。|
-|Texture_view\<T，N >|1<br /><br /> 2, 4|是<br /><br /> 否 （2)|是<br /><br /> 是|否 (1)<br /><br /> 否 (1)|是，一个级别。 级别在实例化时确定。<br /><br /> 是，一个级别。 级别在实例化时确定。|
+|texture_view\<const T, N>|1, 2, 4|是|否 (1)|是|是，可索引。 范围在实例化时确定。|
+|Texture_view\<T, N>|1<br /><br /> 2, 4|是<br /><br /> 否（2）|是<br /><br /> 是|否 (1)<br /><br /> 否 (1)|是，一个级别。 级别在实例化时确定。<br /><br /> 是，一个级别。 级别在实例化时确定。|
 
 通过此表，你可以看到只读纹理视图完全支持新功能，以此换取不能写入视图。 可写纹理视图的限制在于它们只能访问一个 mipmap 级别。 读写纹理视图的专用性甚至高于可写纹理视图，因为它们增加了一项要求，即纹理视图的元素类型应只有一个组件。 请注意，可写纹理视图不支持采样，因为采样是面向读取的操作。
 
@@ -377,15 +377,15 @@ void write2ComponentTexture() {
 }
 ```
 
-元素基于浮点类型（例如，float、float_2 或 float_4）的纹理视图也可以使用纹理采样来读取，以便利用对各种筛选模式和寻址模式的硬件支持。 C++ AMP 支持计算情景下两种最常见的筛选模式，即点筛选（最近邻域）和线性筛选（加权平均），同时支持四种寻址模式，即重叠寻址、镜像寻址、钳位寻址和边框寻址。 有关寻址模式的详细信息，请参阅[address_mode 枚举](reference/concurrency-graphics-namespace-enums.md#address_mode)。
+元素基于浮点类型（例如，float、float_2 或 float_4）的纹理视图也可以使用纹理采样来读取，以便利用对各种筛选模式和寻址模式的硬件支持。 C++ AMP 支持计算情景下两种最常见的筛选模式，即点筛选（最近邻域）和线性筛选（加权平均），同时支持四种寻址模式，即重叠寻址、镜像寻址、钳位寻址和边框寻址。 有关寻址模式的详细信息，请参阅[Address_mode 枚举](reference/concurrency-graphics-namespace-enums.md#address_mode)。
 
-除了 C++ AMP 直接支持的模式外，你还可以访问底层平台的其他筛选模式和寻址模式，方法是使用互操作 API 采用通过平台 API 直接创建的纹理采样器。 例如，Direct3D 支持各向异性筛选等其他筛选模式，并可以对纹理的各个维度应用不同的寻址模式。 通过使用 Direct3D API，你可以创建一个坐标为纵向重叠、横向镜像并进行各向异性筛选采样的纹理采样器，然后通过 `make_sampler` 互操作 API 利用 C++ AMP 代码中的采样器。 有关详细信息请参阅[中的纹理采样C++AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)本机代码博客中的并行编程。
+除了 C++ AMP 直接支持的模式外，你还可以访问底层平台的其他筛选模式和寻址模式，方法是使用互操作 API 采用通过平台 API 直接创建的纹理采样器。 例如，Direct3D 支持各向异性筛选等其他筛选模式，并可以对纹理的各个维度应用不同的寻址模式。 通过使用 Direct3D API，你可以创建一个坐标为纵向重叠、横向镜像并进行各向异性筛选采样的纹理采样器，然后通过 `make_sampler` 互操作 API 利用 C++ AMP 代码中的采样器。 有关详细信息，请参阅本机代码中的并行编程的[C++ AMP 中的纹理采样](/archive/blogs/nativeconcurrency/texture-sampling-in-c-amp)博客。
 
-纹理视图还支持读取 mipmap。 只读纹理视图（具有常量元素类型的视图）可以提供最大的灵活性，原因在于可对实例化时确定的一系列 mip 级别进行动态采样，而且支持具有 1、2 或 4 个组件的元素。 元素仅具有一个组件的读写纹理视图也支持 mipmap，但仅限实例化时确定的一个 mipmap 级别。 有关详细信息，请参阅[具有 Mipmap 的纹理](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)本机代码博客中的并行编程。
+纹理视图还支持读取 mipmap。 只读纹理视图（具有常量元素类型的视图）可以提供最大的灵活性，原因在于可对实例化时确定的一系列 mip 级别进行动态采样，而且支持具有 1、2 或 4 个组件的元素。 元素仅具有一个组件的读写纹理视图也支持 mipmap，但仅限实例化时确定的一个 mipmap 级别。 有关详细信息，请参阅本机代码博客中的并行编程上的[带有 mipmap 的纹理](/archive/blogs/nativeconcurrency/texture-with-mipmaps)。
 
 ### <a name="writing-to-texture-view-objects"></a>写入纹理视图对象
 
-使用[texture_view:: get 方法](reference/texture-view-class.md#get)要写入到基础`texture`通过`texture_view`对象。 纹理视图可以为只读、读写或只写视图。 纹理视图若要可写，则必须具有非常量元素类型；纹理视图若要可读写，则其元素类型还必须只有一个组件。 否则，纹理视图为只读视图。 通过纹理视图一次只能访问一个纹理 mipmap 级别，此级别将在实例化视图时指定。
+使用[texture_view：： Get 方法](reference/texture-view-class.md#get) `texture` 通过对象写入基础 `texture_view` 。 纹理视图可以为只读、读写或只写视图。 纹理视图若要可写，则必须具有非常量元素类型；纹理视图若要可读写，则其元素类型还必须只有一个组件。 否则，纹理视图为只读视图。 通过纹理视图一次只能访问一个纹理 mipmap 级别，此级别将在实例化视图时指定。
 
 此示例演示如何写入纹理（具有 4 个 mipmap 级别）的第二详细 mipmap 级别。 最详细的 mipmap 级别为级别 0。
 
@@ -404,9 +404,9 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>互操作性
 
-C++ AMP 运行时支持之间的互操作性`texture<T,1>`并[ID3D11Texture1D 接口](https://go.microsoft.com/fwlink/p/?linkId=248503)之间`texture<T,2>`并[ID3D11Texture2D 接口](https://go.microsoft.com/fwlink/p/?linkId=255317)，之间以及`texture<T,3>`并[ID3D11Texture3D 接口](https://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用`texture`对象，并返回`IUnknown`接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用`IUnknown`接口和一个`accelerator_view`对象，并返回`texture`对象。
+C++ AMP 运行时支持 `texture<T,1>` 与[ID3D11Texture1D 接口](https://go.microsoft.com/fwlink/p/?linkId=248503)之间的互操作性，以及 `texture<T,2>` [ID3D11Texture2D 接口](https://go.microsoft.com/fwlink/p/?linkId=255317)之间以及 `texture<T,3>` 和[ID3D11Texture3D 接口](https://go.microsoft.com/fwlink/p/?linkId=255377)之间的互操作性。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用 `texture` 对象并返回 `IUnknown` 接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用 `IUnknown` 接口和 `accelerator_view` 对象，并返回一个 `texture` 对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [double_2 类](../../parallel/amp/reference/double-2-class.md)<br/>
 [double_3 类](../../parallel/amp/reference/double-3-class.md)<br/>

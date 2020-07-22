@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825923"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404055"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw _outpd
 
-在端口、`outp`字节（、 `_outp`）、字（`outpw`、 `_outpw`）或双字（`_outpd`）输出。
+在端口、字节（ `outp` 、 `_outp` ）、字（ `outpw` 、 `_outpw` ）或双字（ `_outpd` ）输出。
 
 > [!IMPORTANT]
 > 这些函数已过时。 从 Visual Studio 2015 开始，它们在 CRT 中不可用。
@@ -61,15 +61,15 @@ ms.locfileid: "82825923"
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,7 +78,7 @@ unsigned long _outpd(
 *口*\
 端口号。
 
-*databyte、dataword*\
+*data_byte，data_word*\
 输出值。
 
 ## <a name="return-value"></a>返回值
@@ -87,15 +87,17 @@ unsigned long _outpd(
 
 ## <a name="remarks"></a>备注
 
-`_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *port* 参数可为 0 - 65,535 范围内的任何无符号整数。*databyte* 可为 0 - 255 范围内的任何整数；*dataword* 可分别为整数、无符号短整数和无符号长整数范围内的任何值。
+`_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *端口*参数可以是 0-65535 范围内的任何无符号整数。 *data_byte*可以是 0-255 范围内的任意整数。 *data_word*可以是整数范围内的任何值、无符号短整数和无符号长整数。
 
-由于这些函数可直接将数据写入 I/O 端口，因此无法用于用户代码。 有关在这些操作系统中使用 I/O 端口的信息，请在 MSDN 上搜索“Win32 中的串行通信”。
+由于这些函数直接写入到 i/o 端口，因此不能在用户模式 Windows 代码中使用它们。
 
-`outp`和`outpw`名称是`_outp`和`_outpw`函数的旧的、不推荐使用的名称。 有关详细信息，请参阅[POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+有关在 Windows 操作系统中使用 i/o 端口的信息，请参阅[串行通信](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))。
+
+`outp`和 `outpw` 名称是和函数的旧的、不推荐使用的名称 `_outp` `_outpw` 。 有关详细信息，请参阅[POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`_outp`|\<conio.h>|
 |`_outpw`|\<conio.h>|
@@ -110,4 +112,4 @@ unsigned long _outpd(
 ## <a name="see-also"></a>另请参阅
 
 [控制台和端口 i/o](../c-runtime-library/console-and-port-i-o.md)\
-[sct.inp、inpw、_inp、_inpw _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

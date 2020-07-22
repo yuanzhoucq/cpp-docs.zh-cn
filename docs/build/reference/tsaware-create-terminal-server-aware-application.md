@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: 135d919278c8e969dc3a31381d5abbd1058c8663
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587380"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373887"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE（创建终端服务器识别的应用程序）
 
@@ -42,7 +42,7 @@ ms.locfileid: "82587380"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击“链接器”文件夹****。
 
@@ -52,11 +52,11 @@ ms.locfileid: "82587380"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
-- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A> 。
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)<br/>
 [存储特定于用户的信息](/windows/win32/TermServ/storing-user-specific-information)<br/>
-[终端服务环境中的旧版应用程序](https://msdn.microsoft.com/library/aa382957.aspx)
+[终端服务环境中的旧版应用程序](https://docs.microsoft.com/previous-versions//aa382957(v=vs.85))

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920024"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404315"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 
@@ -123,7 +123,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-*Format*参数包含一个或多个代码;与**printf**中一样，格式设置代码前面有一个百分号（**%**）。 不以开头的字符**%** 将复制到*strDest*中。 当前区域设置的**LC_TIME**类别将影响**strftime**的输出格式。 （有关**LC_TIME**的详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。）**Strftime**和**wcsftime**函数使用当前设置的区域设置。 这些函数的 **_strftime_l**和 **_wcsftime_l**版本相同，只不过它们将区域设置用作参数并使用它，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+*Format*参数包含一个或多个代码;与**printf**中一样，格式设置代码前面有一个百分号（ **%** ）。 不以开头的字符 **%** 将复制到*strDest*中。 当前区域设置的**LC_TIME**类别将影响**strftime**的输出格式。 （有关**LC_TIME**的详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。）**Strftime**和**wcsftime**函数使用当前设置的区域设置。 这些函数的 **_strftime_l**和 **_wcsftime_l**版本相同，只不过它们将区域设置用作参数并使用它，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 **Strftime**函数支持以下格式代码：
 
@@ -179,9 +179,12 @@ size_t _wcsftime_l(
 
 **% V**、 **% g**和 **% g**生成的基于 ISO 8601 周和每周的年份使用的周始于星期一，其中第1周是包含一年中至少四天的第一周。 如果该年的第一个星期一为第二个、第三个或第四个星期，则前一年的最后一周是第一天。 对于这些天， **% V**被替换为53，而 **% g**和 **% g**均替换为上一年的位数。
 
+> [!NOTE]
+> 将其中一个 `strftime` 函数与从返回的指针一起使用时 `tm` `gmtime` ，通过和说明符打印的值 `%Z` `%z` 将不准确。 这是因为 `tm` C 标准指定的结构不包含时区名称的信息，也不包含偏移量的信息。 而是通过全局变量[ `_timezone` 和 `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)填充时区信息。
+
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strftime**|\<time.h>|
 |**wcsftime**|\<time.h> 或 \<wchar.h>|
@@ -196,7 +199,7 @@ size_t _wcsftime_l(
 
 ## <a name="see-also"></a>另请参阅
 
-[本地](../../c-runtime-library/locale.md) <br/>
+[区域设置](../../c-runtime-library/locale.md) <br/>
 [时间管理](../../c-runtime-library/time-management.md) <br/>
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>
