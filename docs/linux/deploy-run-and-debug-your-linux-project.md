@@ -3,12 +3,12 @@ title: 在 Visual Studio 中部署、运行和调试 C++ Linux 项目
 description: 介绍如何从 Visual Studio 中的 C++ Linux 项目内针对远程目标编译、执行和调试代码。
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df095d5561bea6dac94b9faa139c83c197802bbf
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80077828"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404406"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、运行和调试 Linux 项目
 
@@ -195,7 +195,7 @@ IntelliSense 将建议使用包含所有已建立的远程连接的列表。 可
 
 ## <a name="next-steps"></a>后续步骤
 
-- 要在 Linux 上调试 ARM 设备，请参阅此博客文章：[在 Visual Studio 中调试嵌入式 ARM 设备](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/)。
+- 要在 Linux 上调试 ARM 设备，请参阅此博客文章：[在 Visual Studio 中调试嵌入式 ARM 设备](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/)。
 
 ## <a name="see-also"></a>请参阅
 
