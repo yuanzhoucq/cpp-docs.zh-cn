@@ -1,4 +1,4 @@
----
+﻿---
 title: CComPtr 类
 description: Microsoft C++活动模板库 （ATL） 类 CComPtr 的参考指南。
 ms.date: 02/07/2020

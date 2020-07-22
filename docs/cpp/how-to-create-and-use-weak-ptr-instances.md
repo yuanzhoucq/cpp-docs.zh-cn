@@ -1,4 +1,4 @@
----
+﻿---
 title: 如何：创建和使用 weak_ptr 实例
 ms.custom: how-to
 ms.date: 11/19/2019
@@ -12,9 +12,8 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245601"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>如何：创建和使用 weak_ptr 实例
-
+有时对象必须存储一种可访问 `shared_ptr` 的基础对象又不导致其引用计数递增的方法。通常 `shared_ptr` 实例之间存在循环引用时会出现这种情况。最佳设计是尽可能避免共享指针的所有权。但如果必须具有共享所有权的 `shared_ptr`，请避免它们之间存在循环引用。如果循环引用不可避免，或出于某种原因，使用循环引用更合适，请使用 `weak_ptr` 为一个或多个所有者提供对另一个 `shared_ptr` 的弱引用。通过使用 `weak_ptr`，可以创建 `shared_ptr`，它可联接到一组现有的相关实例，前提是基础内存资源仍有效。`weak_ptr` 本身不参与引用计数，因此，它无法阻止引用计数计为零。但可使用 `weak_ptr` 来尝试获取初始化时用使用的 `shared_ptr` 的新副本。如果内存已删除，会引发 `bad_weak_ptr` 异常。如果内存仍有效，新的共享指针会递增引用计数，保证内存在 `shared_ptr` 变量保持在作用域内时一直有效。
 有时，对象必须存储一种方法来访问[shared_ptr](../standard-library/shared-ptr-class.md)的基础对象，而不会导致引用计数递增。 通常情况下，在 `shared_ptr` 实例之间具有循环引用时，会发生这种情况。
-
 最佳设计是避免在任何时候都能实现指针的共享所有权。 但是，如果您必须拥有 `shared_ptr` 实例的共享所有权，请避免它们之间的循环引用。 如果无法避免循环引用，或者出于某种原因更可取，则使用[weak_ptr](../standard-library/weak-ptr-class.md)向一个或多个所有者提供对另一 `shared_ptr`的弱引用。 通过使用 `weak_ptr`，可以创建加入到现有相关实例集的 `shared_ptr`，但前提是基础内存资源仍有效。 `weak_ptr` 本身并不参与引用计数，因此它无法阻止引用计数转到零。 不过，你可以使用 `weak_ptr` 来尝试获取已初始化的 `shared_ptr` 的新副本。 如果已删除内存，则 `weak_ptr`的布尔运算符将返回 `false`。 如果内存仍有效，新的共享指针会递增引用计数，并保证只要 `shared_ptr` 变量保持在范围内，内存就有效。
 
 ## <a name="example"></a>示例

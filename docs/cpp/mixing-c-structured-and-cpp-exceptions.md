@@ -1,4 +1,4 @@
----
+﻿---
 title: 混合 C （结构化） C++和异常
 ms.date: 08/14/2018
 helpviewer_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: 用于编译时封装的 Pimpl（现代 C++）
 ms.date: 11/04/2016
 ms.topic: conceptual

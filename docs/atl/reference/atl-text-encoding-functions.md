@@ -1,4 +1,4 @@
----
+﻿---
 title: ATL 文本编码函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -108,7 +108,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlbase。h
+**标头:** atlbase.h
 
 ## <a name="atlhexdecode"></a><a name="atlhexdecode"></a>AtlHexDecode
 
