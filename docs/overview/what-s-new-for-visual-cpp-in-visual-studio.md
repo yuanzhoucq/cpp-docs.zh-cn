@@ -3,12 +3,12 @@ title: Visual Studio 中的 C++ 新变化
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630488"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446865"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -62,7 +62,7 @@ Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序�
 
   - 使用 `memmove`（例如 `std::copy` 或 `std::vector` 和 `std::string` 构造）优化代码的过程。
 
-- 优化标准库物理设计，以避免不直接包含标准库的编译部分。 此更改将只包含 \<vector> 的空文件的生成时间减少了一半。 因此，可能需要为之前间接包含的标头添加 `#include` 指令。 例如，现在可能需要为使用 `std::out_of_range` 的代码添加 `#include <stdexcept>`。 现在可能需要为使用流插入运算符的代码添加 `#include <ostream>`。 这样做的好处是，只有真正使用 \<stdexcept> 或 \<ostream> 组件的转换单元，才需要支付吞吐量费用来编译它们。
+- 优化标准库物理设计，以避免不直接包含标准库的编译部分。 此更改将只包含 \<vector> 的空文件的生成时间缩短了一半。 因此，可能需要为之前间接包含的标头添加 `#include` 指令。 例如，现在可能需要为使用 `std::out_of_range` 的代码添加 `#include <stdexcept>`。 现在可能需要为使用流插入运算符的代码添加 `#include <ostream>`。 这样做的好处是，只有真正使用 \<stdexcept> 或 \<ostream> 组件的转换单元，才需要支付吞吐量费用来编译它们。
 
 - `if constexpr` 已应用于标准库中的多个位置，用于在复制操作、反向和旋转等排列操作和并行算法库中提高吞吐量并缩减代码大小。
 
@@ -70,7 +70,7 @@ Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序�
 
 - 并行算法库的运行时动态链接检测不再使用整个页面来存储函数指针数组。 将此内存设为只读被视为不再与安全目的相关。
 
-- `std::thread` 的构造函数不再等待线程启动，并且不再在基础 C 库 `_beginthreadex` 和提供的可调用对象之间插入太多函数调用层。 以前，`std::thread` 在 `_beginthreadex` 和所提供的可调用对象之间放置了六个函数。 这个数字已经减少到只有三个，其中两个就是 `std::invoke`。 此更改还修复了难处理的计时 bug，即当系统时钟在 `std::thread` 创建的确切时刻更改时，`std::thread` 的构造函数会挂起。
+- `std::thread` 的构造函数不再等待线程启动，并且不再在基础 C 库 `_beginthreadex` 和提供的可调用对象之间插入太多函数调用层。 以前，`std::thread` 在 `_beginthreadex` 和所提供的可调用对象之间放置了六个函数。 这个数字已经减少到只有三个，其中两个就是 `std::invoke`。 此更改还修复了一个难处理的计时 bug，即当系统时钟恰好在创建 `std::thread` 的时刻更改时，`std::thread` 构造函数会停止响应。
 
 - 修复了实现 `std::hash<std::filesystem::path>` 时引入的 `std::hash` 中的性能回归。
 
@@ -358,7 +358,7 @@ Visual Studio 2017 RTM 中有更多的标准库改进。 有关完整列表，�
 
 ### <a name="conformance-improvements"></a>符合性改进
 
-- 添加了 \<any\>、\<string_view\>、`apply()` 和 `make_from_tuple()`。
+- 我们添加了 \<any\>、\<string_view\>、`apply()`、`make_from_tuple()`。
 - 添加了 \<optional\>、\<variant\>、`shared_ptr::weak_type` 和 \<cstdalign\>。
 - 在 `min(initializer_list)`、`max(initializer_list)`、`minmax(initializer_list)`、`min_element()`, `max_element()` 和 `minmax_element()` 中实现了 C++14 `constexpr`。
 
@@ -590,7 +590,7 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
 现提供原始 C++ 工作流的更细化的安装体验。 我们添加了可选组件，使你能够仅安装所需工具。 在安装程序 UI 中列出的组件的安装大小指示是不正确的，并低估了总大小。
 
-若要在 C++ 桌面工作负载中成功创建 Win32 项目，则必须安装工具集和 Windows SDK。 安装推荐（选中）的组件“VC++ 2017 v141 工具集（x86、x64）”和“Windows 10 SDK (10.0.nnnnn)”可以确保正常运行 。 如果没有安装必要的工具，项目将无法成功创建，向导将挂起。
+若要在 C++ 桌面工作负载中成功创建 Win32 项目，则必须安装工具集和 Windows SDK。 安装推荐（选中）的组件“VC++ 2017 v141 工具集（x86、x64）”和“Windows 10 SDK (10.0.nnnnn)”可以确保正常运行 。 如果没有安装必要的工具，就无法成功创建项目，且向导将停止响应。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 版本 15.5
 
@@ -598,7 +598,7 @@ Visual C++ 生成工具（以前作为单独的产品提供）现在作为工作
 
 ## <a name="linux-development-with-c"></a>使用 C++ 的 Linux 开发
 
-热门扩展“[用于 Linux 开发的 Visual C++](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e)”现已纳入 Visual Studio。 此安装提供开发和调试运行在 Linux 环境中的 C++ 应用程序所需的一切信息。
+热门扩展“[用于 Linux 开发的 Visual C++](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment)”现已纳入 Visual Studio。 此安装提供开发和调试运行在 Linux 环境中的 C++ 应用程序所需的一切信息。
 
 ##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017 版本 15.2
 

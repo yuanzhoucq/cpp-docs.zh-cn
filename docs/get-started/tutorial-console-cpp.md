@@ -1,23 +1,23 @@
 ---
-title: 创建 C++ 控制台应用项目
+title: 用 C++ 创建控制台计算器
 description: 在 Visual C++ 中创建 Hello World 控制台应用和计算器应用
 ms.custom: mvc
 ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80079292"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404445"
 ---
-# <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
+# <a name="create-a-console-calculator-in-c"></a>用 C++ 创建控制台计算器
 
 ::: moniker range=">=vs-2019"
 
-C++ 程序员通常从在命令行上运行的“Hello, world!” 应用程序开始。 这就是本文中你将在 Visual Studio 中创建的内容，然后我们将继续介绍更具挑战性的内容：计算器应用。
+C++ 程序员通常从在命令行上运行的“Hello, world!” 应用程序开始。 在本文中，你将首先在 Visual Studio 中创建此内容，然后继续创建更具挑战性的对象：计算器应用。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -122,7 +122,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
    > 了解代码：
    >
-   > - `#include` 语句允许引用位于其他文件中的代码。 有时，文件名使用尖括号 ( **\<\>** ) 包围；其他情况下，使用引号 ( **" "** ) 包围。 通常，引用 C++ 标准库时使用尖括号，引用其他文件时使用引号。
+   > - `#include` 语句允许引用位于其他文件中的代码。 有时，文件名使用尖括号 (\<\>) 包围；其他情况下，使用引号 (" ") 包围 。 通常，引用 C++ 标准库时使用尖括号，引用其他文件时使用引号。
    > - `using namespace std;` 行提示编译器期望在此文件中使用 C++ 标准库中的内容。 如果没有此行，库中的每个关键字都必须以 `std::` 开头，以表示其范围。 例如，如果没有该行，则对 `cout` 的每个引用都必须写为 `std::cout`。 `using` 语句的使用是为了使代码看起来更干净。
    > - `cout` 关键字用于在 C++ 中打印到标准输出。 “\<\<”运算符提示编译器将其右侧的任何内容发送到标准输出  。
    > - “endl”关键字与 Enter 键类似；用于结束该行并将光标移动到下一行  。 如果要执行相同的操作，最好在字符串中使用 `\n`用 "" 包含），因为使用 `endl` 会始终刷新缓冲，进而可能影响程序的性能，但由于这是一个非常小的应用，所以改为使用 `endl` 以提高可读性。
@@ -362,7 +362,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
    ![更改后的最终结果](./media/calc-vs2019-final-verification.png "更改后的最终结果")
 
    > [!Note]
-   > 在调试模式下编辑代码时，有可能会遇到旧代码。 当调试器仍在运行旧代码并且尚未使用更改进行更新时，将发生这种情况。 调试器会弹出一个对话框，通知你何时发生这种情况。 有时，你可能需要按 F5 来刷新正在执行的代码  。 特别是，如果在函数内部进行更改而执行点位于该函数内部，则需要退出该函数，然后再次返回该函数以获取更新的代码。 如果由于某种原因该操作不起作用，且你看到错误消息，则可以通过单击 IDE 顶部菜单下工具栏中的红色方块来停止调试，然后通过输入 F5 或通过选择工具栏上“停止”按钮旁的绿色“播放”箭头重新开始调试。 
+   > 在调试模式下编辑代码时，有可能会遇到旧代码。 当调试器仍在运行旧代码并且尚未使用更改进行更新时，将发生这种情况。 调试器会弹出一个对话框，通知你何时发生这种情况。 有时，你可能需要按 F5 来刷新正在执行的代码  。 特别是，如果在函数内部进行更改而执行点位于该函数内部，则需要退出该函数，然后再次返回该函数以获取更新的代码。 如果由于某种原因该操作不起作用，且你看到错误消息，则可以通过单击 IDE 顶部菜单下工具栏中的红色方块来停止调试，然后通过输入 F5 或通过选择工具栏上“停止”按钮旁的绿色“播放”箭头重新开始调试。
 
    > 了解“运行”和“调试”快捷方式
    >
@@ -381,7 +381,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 ## <a name="next-steps"></a>后续步骤
 
-[了解有关 Visual Studio for C++ 的更多信息](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[了解有关 Visual Studio for C++ 的更多信息](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
 
@@ -485,7 +485,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
    > 了解代码：
    >
-   > - `#include` 语句允许引用位于其他文件中的代码。 有时，文件名使用尖括号 ( **\<\>** ) 包围；其他情况下，使用引号 ( **" "** ) 包围。 通常，引用 C++ 标准库时使用尖括号，引用其他文件时使用引号。
+   > - `#include` 语句允许引用位于其他文件中的代码。 有时，文件名使用尖括号 (\<\>) 包围；其他情况下，使用引号 (" ") 包围 。 通常，引用 C++ 标准库时使用尖括号，引用其他文件时使用引号。
    > - `#include "pch.h"`（或 Visual Studio 2017 及更低版本中的 `#include "stdafx.h"`）行引用预编译标头。 专业程序员经常使用它们来缩短编译时间，但它们超出了本教程的范围。
    > - `using namespace std;` 行提示编译器期望在此文件中使用 C++ 标准库中的内容。 如果没有此行，库中的每个关键字都必须以 `std::` 开头，以表示其范围。 例如，如果没有该行，则对 `cout` 的每个引用都必须写为 `std::cout`。 `using` 语句的使用是为了使代码看起来更干净。
    > - `cout` 关键字用于在 C++ 中打印到标准输出。 “\<\<”运算符提示编译器将其右侧的任何内容发送到标准输出  。
@@ -733,7 +733,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
    ![更改后的最终结果](./media/calculator-final-verification.gif "更改后的最终结果")
 
    > [!Note]
-   > 在调试模式下编辑代码时，有可能会遇到旧代码。 当调试器仍在运行旧代码并且尚未使用更改进行更新时，将发生这种情况。 调试器会弹出一个对话框，通知你何时发生这种情况。 有时，你可能需要按 F5 来刷新正在执行的代码  。 特别是，如果在函数内部进行更改而执行点位于该函数内部，则需要退出该函数，然后再次返回该函数以获取更新的代码。 如果由于某种原因该操作不起作用，且你看到错误消息，则可以通过单击 IDE 顶部菜单下工具栏中的红色方块来停止调试，然后通过输入 F5 或通过选择工具栏上“停止”按钮旁的绿色“播放”箭头重新开始调试。 
+   > 在调试模式下编辑代码时，有可能会遇到旧代码。 当调试器仍在运行旧代码并且尚未使用更改进行更新时，将发生这种情况。 调试器会弹出一个对话框，通知你何时发生这种情况。 有时，你可能需要按 F5 来刷新正在执行的代码  。 特别是，如果在函数内部进行更改而执行点位于该函数内部，则需要退出该函数，然后再次返回该函数以获取更新的代码。 如果由于某种原因该操作不起作用，且你看到错误消息，则可以通过单击 IDE 顶部菜单下工具栏中的红色方块来停止调试，然后通过输入 F5 或通过选择工具栏上“停止”按钮旁的绿色“播放”箭头重新开始调试。
 
    > 了解“运行”和“调试”快捷方式
    >
@@ -752,6 +752,6 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 ## <a name="next-steps"></a>后续步骤
 
-[了解有关 Visual Studio for C++ 的更多信息](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[了解有关 Visual Studio for C++ 的更多信息](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end

@@ -3,12 +3,12 @@ title: C++ 的符合性改进
 ms.date: 05/18/2020
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
-ms.openlocfilehash: c7c93de8b0e4c266290b858c76e7b34fccc0cabd
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 7796728c869e39270ee9e8fe82fb5e0e9a3a8630
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630506"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405099"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -237,7 +237,7 @@ void f() {
 - 用于 `basic_string` 和 `basic_string_view` 的 `starts_with()` 和 `ends_with()`。
 - 关联容器的 `contains()`。
 - `list` 和 `forward_list` 的 `remove()`、`remove_if()` 和 `unique()` 现在返回 `size_type`。
-- `shift_left()` 和 `shift_right()` 已添加到 \<algorithm> 中。
+- 向 \<algorithm> 添加了 `shift_left()` 和 `shift_right()`。
 
 ## <a name="conformance-improvements-in-162"></a><a name="improvements_162"></a> 16.2 中的符合性改进
 
@@ -456,7 +456,7 @@ extern "C" void f(int, int, int, BOOL){}
 
 ### <a name="standard-library-improvements"></a>标准库改进
 
-已删除非标准标头 \<stdexcpt.h> 和 \<typeinfo.h>。 包含它们的代码应改为分别包括标准标头 \<exception > 和 \<typeinfo >。
+已删除非标准标头 \<stdexcpt.h> 和 \<typeinfo.h>。 包含它们的代码应改为分别包括标准标头 \<exception> 和 \<typeinfo>。
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-164"></a><a name="improvements_164"></a> Visual Studio 2019 版本 16.4 的符合性改进
 
@@ -506,7 +506,7 @@ int* f(bool* p) {
 }
 ```
 
-若要修复此错误，请使用 nullptr，而不要使用 false。  文本 0 仍是允许的：
+若要修复此错误，请使用 nullptr，而不要使用 false。 文本 0 仍是允许的：
 
 ```cpp
 int* f(bool* p) {
@@ -1322,7 +1322,7 @@ int main()
 
 - 之前，传递给并发库的某些时间值会溢出，例如，`condition_variable::wait_for(seconds::max())`。 这些溢出问题现已修复，其在一个看似随机的 29 天周期（当基础 Win32 API 接受的 uint32_t 毫秒溢出时）中改变了行为。
 
-- 现在，\<ctime> 头除了在全局命名空间中声明 `timespec` 和 `timespec_get` 之外，还可在命名空间 `std` 中正确地声明它们。
+- \<ctime> 标头除了在全局命名空间中声明 `timespec` 和 `timespec_get` 之外，现在还可在命名空间 `std` 中正确地声明它们。
 
 ### <a name="various-fixes-for-containers"></a>针对容器的各种修复
 
@@ -1410,7 +1410,7 @@ Visual Studio 2017 中的 Microsoft C++ 编译器支持通用 constexpr 和用�
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11：在更多库中支持表达式 SFINAE
 
-编译器持续改进对表达式 SFINAE 的支持。 它是模板参数推导和替换所必需的，其中 decltype 和 constexpr 表达式可能显示为模板参数。 有关详细信息，请参阅 [Visual Studio 2017 RC 中的表达式 SFINAE 改进之处](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)。
+编译器持续改进对表达式 SFINAE 的支持。 它是模板参数推导和替换所必需的，其中 decltype 和 constexpr 表达式可能显示为模板参数。 有关详细信息，请参阅 [Visual Studio 2017 RC 中的表达式 SFINAE 改进之处](https://devblogs.microsoft.com/cppblog/expression-sfinae-improvements-in-vs-2015-update-3/)。
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14：用于聚合的 NSDMI
 
@@ -1542,7 +1542,7 @@ C++ 标准的 Annex D 包含所有已弃用的功能，包括 `shared_ptr::uniqu
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17 Library Fundamentals V1
 
-[P0220R1](https://wg21.link/p0220r1) 将用于 C++17 的 Library Fundamentals 技术规范纳入了标准。 包含对 \<experimental/tuple>、\<experimental/optional>、\<experimental/functional>、\<experimental/any>、\<experimental/string_view>、\<experimental/memory>、\<experimental/memory_resource> 和 \<experimental/algorithm> 的更新。
+[P0220R1](https://wg21.link/p0220r1) 将用于 C++17 的 Library Fundamentals 技术规范纳入了标准。 涵盖 \<experimental/tuple>、\<experimental/optional>、\<experimental/functional>、\<experimental/any>、\<experimental/string_view>、\<experimental/memory>、\<experimental/memory_resource> 和 \<experimental/algorithm> 的更新。
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C++17：改进针对标准库的类模板参数推导
 
