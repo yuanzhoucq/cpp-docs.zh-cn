@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755910"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214758"
 ---
 # <a name="compiler-error-c2146"></a>编译器错误 C2146
 
 语法错误：标识符 "identifier" 之前缺少 "token"
 
-编译器需要 `token`，但 `identifier` 改为找到。  可能的原因：
+应改为 `token` 找到编译器 `identifier` 。  可能的原因：
 
 1. 拼写错误或大小写错误。
 
@@ -46,7 +46,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-对于 Visual Studio .NET 2003：缺少 `typename` 关键字，因此也可能会生成此错误。
+对于 Visual Studio .NET 2003：缺少关键字，此错误也可能是由编译器一致性工作所导致的 **`typename`** 。
 
 下面的示例在 Visual Studio .NET 2002 中进行编译，但在 Visual Studio .NET 2003 中将失败：
 
@@ -73,7 +73,7 @@ typename X<T>::Y func() { }
 
 您还会看到此错误是对 Visual Studio .NET 2003 执行的编译器一致性工作的结果：显式专用化不再从主模板中查找模板参数。
 
-显式专用化中不允许使用主模板中的 `T`。 要使代码在 Visual Studio .NET 2003 和 Visual Studio .NET 中有效，请将专用化中的模板参数的所有实例替换为显式专用化的类型。
+`T`显式专用化中不允许使用主模板中的。 要使代码在 Visual Studio .NET 2003 和 Visual Studio .NET 中有效，请将专用化中的模板参数的所有实例替换为显式专用化的类型。
 
 下面的示例在 Visual Studio .NET 中进行编译，但在 Visual Studio .NET 2003 中将失败：
 

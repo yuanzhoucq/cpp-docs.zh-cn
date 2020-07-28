@@ -24,12 +24,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946020"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188994"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s、vswscanf_s
 
@@ -52,7 +52,7 @@ int vswscanf_s(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 存储的数据
 
 *format*<br/>
@@ -71,18 +71,18 @@ int vswscanf_s(
 
 ## <a name="remarks"></a>备注
 
-**Vsscanf_s**函数将*缓冲区*中的数据读取到*arglist*参数列表中每个参数给定的位置。 自变量列表中的参数指定指向类型的变量的指针，该类型与*格式*的类型说明符对应。 与不太安全版本**vsscanf**不同的是，使用类型字段字符**c**、 **c**、 **s**、 **s**或括在 **[]** 中的字符串控件集时，需要使用缓冲区大小参数。 必须紧跟在需要缓冲区大小的缓冲区参数后提供缓冲区大小（以字符为单位）作为附加参数。
+**Vsscanf_s**函数将*缓冲区*中的数据读取到*arglist*参数列表中每个自变量所提供的位置。 自变量列表中的参数指定指向类型的变量的指针，该类型与*格式*的类型说明符对应。 与不太安全版本**vsscanf**不同的是，使用类型字段字符**c**、 **c**、 **s**、 **s**或括在 **[]** 中的字符串控件集时，需要使用缓冲区大小参数。 必须紧跟在需要缓冲区大小的缓冲区参数后提供缓冲区大小（以字符为单位）作为附加参数。
 
 缓冲区大小包括终止 null 字符。 可以使用宽度规范字段来确保读入的标记可放入缓冲区中。 如果未使用任何宽度规范字段，并且读取的标记太大以致缓冲区中无法容纳，则不会向该缓冲区写入任何内容。
 
 有关详细信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> 大小参数的类型为**无符号**类型，而不是**size_t**。
+> 大小参数的类型为 **`unsigned`** ，而不是**size_t**。
 
-*Format*参数控制输入字段的解释，其形式和函数与**scanf_s**函数的*format*参数相同。 如果在重叠的字符串之间发生复制，则此行为不确定。
+*Format*参数控制输入字段的解释，其形式和函数与**scanf_s**函数的*格式*参数相同。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-**vswscanf_s**是**vsscanf_s**的宽字符版本;**vswscanf_s**的参数是宽字符字符串。 **vsscanf_s**不处理多字节十六进制字符。 **vswscanf_s**不处理 Unicode 全角十六进制或 "兼容区域" 字符。 否则， **vswscanf_s**和**vsscanf_s**的行为方式相同。
+**vswscanf_s**是**vsscanf_s**的宽字符版本;**vswscanf_s**的参数是宽字符字符串。 **vsscanf_s**不处理多字节十六进制字符。 **vswscanf_s**不处理 Unicode 全角十六进制或 "兼容区域" 字符。 否则， **vswscanf_s**和**vsscanf_s**的行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -97,7 +97,7 @@ int vswscanf_s(
 |**vsscanf_s**|\<stdio.h>|
 |**vswscanf_s**|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -151,11 +151,11 @@ Integer:  = 15
 Real:     = 15.000000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf、vswscanf](vsscanf-vswscanf.md)<br/>

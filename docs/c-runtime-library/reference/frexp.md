@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911610"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220699"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -82,9 +82,9 @@ long double frexp(
 
 ## <a name="remarks"></a>备注
 
-**Frexp**函数将浮点值（*x*）分解为尾数（*m*）和指数（*n*），以使*m*的绝对值大于或等于0.5 且小于1.0， *x* = *m* * 2<sup>*n*</sup>。 整数指数*n*存储在*expptr*所指向的位置。
+**Frexp**函数将浮点值（*x*）分解为尾数（*m*）和指数（*n*），以使*m*的绝对值大于或等于0.5 且小于1.0， *x*  =  *m* * 2<sup>*n*</sup>。 整数指数*n*存储在*expptr*所指向的位置。
 
-C + + 允许重载，因此可以调用**frexp**的重载。 在 C 程序中， **frexp**始终采用**double**和**int**指针并返回**double**。
+C + + 允许重载，因此可以调用**frexp**的重载。 在 C 程序中， **frexp**始终采用 **`double`** 和 **`int`** 指针，并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

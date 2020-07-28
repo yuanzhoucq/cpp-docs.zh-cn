@@ -11,20 +11,20 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 7d60a31e69e8a1ad82086f715cac6dde064d1fac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37536443455ca4ddc40568e15951b814982d4ad9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359205"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193297"
 ---
 # <a name="fpos-class"></a>fpos 类
 
-类模板描述一个对象，该对象可以存储在任何流中还原任意文件位置指示器所需的所有信息。 fpos\< **St**> 类的对象能够有效存储至少两个成员对象：
+类模板描述了一个对象，该对象可以存储还原任何流内的任意文件位置指示器所需的所有信息。 类 fpos 的对象 \< **St**> 有效存储至少两个成员对象：
 
 - 一是 [streamoff](../standard-library/ios-typedefs.md#streamoff) 类型的字节偏移。
 
-- 转换状态，供类basic_filebuf的对象使用，类型`St`通常`mbstate_t`为 。
+- 类型为的类 basic_filebuf 的对象使用的转换状态 `St` 通常为 `mbstate_t` 。
 
 它还能存储 `fpos_t` 类型的任意文件位置，以供 [basic_filebuf](../standard-library/basic-filebuf-class.md) 类的对象使用。 但是，对于文件大小受限的环境，`streamoff` 和 `fpos_t` 有时可能互换使用。 对于不具有依赖于状态的编码的流的环境，实际上可能不会使用 `mbstate_t`。 因此，所存储成员对象的数目可能会有所不同。
 
@@ -37,41 +37,41 @@ class fpos
 
 ### <a name="parameters"></a>参数
 
-*状态类型*\
+*Statetype*\
 状态信息。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|说明|
+|构造函数|描述|
 |-|-|
 |[fpos](#fpos)|创建一个包含有关流中位置（偏移量）信息的对象。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
 |[seekpos](#seekpos)|仅由 C++ 标准库内部使用。 请勿从代码中调用此方法。|
-|[状态](#state)|设置或返回转换状态。|
+|State|设置或返回转换状态。|
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|操作员|描述|
 |-|-|
-|[操作员！](#op_neq)|测试文件位置指示器是否不相等。|
-|[运算符*](#op_add)|递增文件位置指示器。|
-|[运算符*](#op_add_eq)|递增文件位置指示器。|
-|[操作员-](#operator-)|递减文件位置指示器。|
-|[运算符-*](#operator-_eq)|递减文件位置指示器。|
-|[运算符*](#op_eq_eq)|测试文件位置指示器是否相等。|
+|[operator！ =](#op_neq)|测试文件位置指示器是否不相等。|
+|[operator +](#op_add)|递增文件位置指示器。|
+|[运算符 + =](#op_add_eq)|递增文件位置指示器。|
+|[操作员](#operator-)|递减文件位置指示器。|
+|[operator-=](#operator-_eq)|递减文件位置指示器。|
+|[operator = =](#op_eq_eq)|测试文件位置指示器是否相等。|
 |[operator streamoff](#op_streamoff)|将 `fpos` 类型的对象强制转换为 `streamoff` 类型的对象。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<ios>
+**标头：**\<ios>
 
 **命名空间:** std
 
-## <a name="fposfpos"></a><a name="fpos"></a>fpos：：fpos
+## <a name="fposfpos"></a><a name="fpos"></a>fpos：： fpos
 
 创建一个包含有关流中位置（偏移量）信息的对象。
 
@@ -94,11 +94,11 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数存储偏移 *_Off*相对于文件的开头和初始转换状态（如果这很重要）。 如果 *_Off*为 -1，则生成的对象表示无效的流位置。
+第一个构造函数存储相对于文件开头和初始转换状态（如果有问题）的偏移量 *_Off*。 如果 *_Off*为-1，则生成的对象表示无效的流位置。
 
-第二个构造函数存储一个零偏移量，对象 *_State。*
+第二个构造函数存储零偏移量并且对象 *_State*。
 
-## <a name="fposoperator"></a><a name="op_neq"></a>fpos：：操作员！
+## <a name="fposoperator"></a><a name="op_neq"></a>fpos：： operator！ =
 
 测试文件位置指示器是否不相等。
 
@@ -108,12 +108,12 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*对*\
+*然后*\
 要与之比较的文件位置指示器。
 
 ### <a name="return-value"></a>返回值
 
-如果文件位置指示符不相等，则为 **true**，否则为 **false**。
+**`true`** 如果文件位置指示符不相等，则为; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -171,7 +171,7 @@ int main( )
 }
 ```
 
-## <a name="fposoperator"></a><a name="op_add"></a>fpos：：操作员*
+## <a name="fposoperator"></a><a name="op_add"></a>fpos：： operator +
 
 递增文件位置指示器。
 
@@ -196,7 +196,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator+` 的示例。
 
-## <a name="fposoperator"></a><a name="op_add_eq"></a>fpos：：操作员*
+## <a name="fposoperator"></a><a name="op_add_eq"></a>fpos：： operator + =
 
 递增文件位置指示器。
 
@@ -215,13 +215,13 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>备注
 
-成员函数向存储的偏移成员对象添加 *_Off，* 然后返回**\*此**。 对于文件内的位置，结果通常仅对不具有状态依赖编码的二进制流有效。
+成员函数将 *_Off*添加到存储的 offset 成员对象，然后返回** \* this**。 对于文件内的位置，结果通常仅对不具有状态依赖编码的二进制流有效。
 
 ### <a name="example"></a>示例
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator+=` 的示例。
 
-## <a name="fposoperator-"></a><a name="operator-"></a>fpos：：操作员-
+## <a name="fposoperator-"></a><a name="operator-"></a>fpos：： operator-
 
 递减文件位置指示器。
 
@@ -233,7 +233,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>参数
 
-*对*\
+*然后*\
 文件位置。
 
 *_Off*\
@@ -247,7 +247,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator-` 的示例。
 
-## <a name="fposoperator-"></a><a name="operator-_eq"></a>fpos：：运算符-*
+## <a name="fposoperator-"></a><a name="operator-_eq"></a>fpos：： operator-=
 
 递减文件位置指示器。
 
@@ -272,7 +272,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator-=` 的示例。
 
-## <a name="fposoperator"></a><a name="op_eq_eq"></a>fpos：：运算符*
+## <a name="fposoperator"></a><a name="op_eq_eq"></a>fpos：： operator = =
 
 测试文件位置指示器是否相等。
 
@@ -282,12 +282,12 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*对*\
+*然后*\
 要与之比较的文件位置指示器。
 
 ### <a name="return-value"></a>返回值
 
-如果文件位置指示器相等，则为 **true**，否则为 **false**。
+**`true`** 如果文件位置指示器相等，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -297,7 +297,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator+=` 的示例。
 
-## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>fpos：：运算符流出
+## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>fpos：： operator streamoff
 
 将 `fpos` 类型的对象转换为 `streamoff` 类型的对象。
 
@@ -336,7 +336,7 @@ int main( )
 0
 ```
 
-## <a name="fposseekpos"></a><a name="seekpos"></a>fpos：：寻求者
+## <a name="fposseekpos"></a><a name="seekpos"></a>fpos：： seekpos
 
 此方法仅由 C++ 标准库内部使用。 请勿从代码中调用此方法。
 
@@ -344,7 +344,7 @@ int main( )
 fpos_t seekpos() const;
 ```
 
-## <a name="fposstate"></a><a name="state"></a>fpos：状态
+## <a name="fposstate"></a><a name="state"></a>fpos：： state
 
 设置或返回转换状态。
 
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回存储在成员对象中`St`的值。 第二个成员函数将 *_State*存储在成员`St`对象中。
+第一个成员函数返回存储在成员对象中的值 `St` 。 第二个成员函数将 *_State*存储在 `St` 成员对象中。
 
 ### <a name="example"></a>示例
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[电流编程](../standard-library/iostream-programming.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

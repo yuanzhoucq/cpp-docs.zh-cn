@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
-ms.openlocfilehash: 0d2ea3677d883fa4843c37a41d733872b23cbba0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cfb89c79534318ab1fbcaa06667d594bfe2f1157
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760668"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214589"
 ---
 # <a name="compiler-error-c2801"></a>编译器错误 C2801
 
@@ -19,19 +19,19 @@ ms.locfileid: "74760668"
 
 以下运算符只能重载为非静态成员：
 
-- 赋值 `=`
+- #A1`=`
 
-- 类成员访问 `->`
+- 类成员访问`->`
 
-- 下标 `[]`
+- 下标`[]`
 
-- 函数调用 `()`
+- 函数调用`()`
 
 可能的 C2801 原因：
 
 - 重载运算符不是类、结构或联合成员。
 
-- 重载运算符是 `static`声明的。
+- 已声明重载运算符 **`static`** 。
 
 - 下面的示例生成 C2801：
 

@@ -1,5 +1,5 @@
 ---
-title: isgreater、 isgreaterequal、 isless、 islessequal、 islessgreater、 isunordered
+title: isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 ms.date: 01/31/2019
 f1_keywords:
 - isgreater
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220712"
 ---
-# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、 isgreaterequal、 isless、 islessequal、 islessgreater、 isunordered
+# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 
 确定两个浮点值之间的排序关系。
 
@@ -106,32 +106,32 @@ inline bool isunordered(
 
 ### <a name="parameters"></a>参数
 
-*x*， *y*<br/>
+*x*、 *y*<br/>
 要比较的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-在所有比较中，相同的符号无穷大比较结果相等。 小于任何有限值或正无穷大，负无穷大。 正无穷大大于任何有限值或负无穷大。 零而不考虑登录相等。 Nan 不小于、 等于还是大于任何值，包括另一的 NaN。
+在所有比较中，相同符号比较的无穷大等于相等。 负无穷小于任何有限值或正无穷。 正无穷大于任何有限值或负无穷。 无论符号如何，0都是相等的。 Nan 不小于、等于或大于任何值（包括另一个 NaN）。
 
-当任一参数是 NaN，排序宏**isgreater**， **isgreaterequal**， **isless**，以及**islessequal**返回非零值如果，则值之间的指定排序关系*x*并*y*保持为 true。 如果一个或两个参数为 Nan 或排序关系为 false，这些宏将返回 0。 函数窗体的行为方式相同，但返回 **，则返回 true**或**false**。
+如果这两个参数都不是 NaN，则如果*x*和*y*之间的指定排序关系为 true，则顺序宏**isgreater**、 **isgreaterequal**、 **isless**和**islessequal**将返回非零值。 如果其中一个参数或两个参数均为 Nan，则这些宏将返回 0; 如果排序关系为 false，则返回。 函数窗体的行为方式相同，但返回 **`true`** 或 **`false`** 。
 
-**Islessgreater**宏返回一个非零值，如果这两种*x*并*y*不是 Nan，以及*x*是小于或大于*y*。 如果一个或两个参数为 Nan，或如果值相等，则返回 0。 函数窗体行为方式相同，但返回 **，则返回 true**或**false**。
+如果*x*和*y*不是 nan 并且*x*小于或大于*y*，则**islessgreater**宏将返回一个非零值。 如果其中一个或两个参数均为 Nan，则返回 0; 如果值相等，则返回。 函数形式的行为方式相同，但返回 **`true`** 或 **`false`** 。
 
-**Isunordered**宏返回一个非零值，如果任一*x*， *y*，或两者都是 Nan。 否则返回 0。 函数窗体行为方式相同，但返回 **，则返回 true**或**false**。
+如果*x*、 *y*或两者均为 nan，则**isunordered**宏将返回一个非零值。 否则，返回 0。 函数形式的行为方式相同，但返回 **`true`** 或 **`false`** 。
 
 ## <a name="remarks"></a>备注
 
-这些比较操作作为宏时编译为 C，并作为内联模板函数在作为编译时实现C++。
+当编译为 C 时，这些比较运算作为宏实现，在编译为 c + + 时作为内联模板函数实现。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头 (C)|必需的标头 (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**， **isgreaterequal**， **isless**，<br/>**islessequal**， **islessgreater**， **isunordered** | \<math.h> | \<math.h> 或 \<cmath> |
+| **isgreater**、 **isgreaterequal**、 **isless**、<br/>**islessequal**、 **islessgreater**、 **isunordered** | \<math.h> | \<math.h> 或 \<cmath> |
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>

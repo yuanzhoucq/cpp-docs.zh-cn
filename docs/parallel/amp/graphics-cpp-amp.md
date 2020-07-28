@@ -2,12 +2,12 @@
 title: 图形 (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 393fadbba90b135e6394cf848668b4957a6d7ce2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404829"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182806"
 ---
 # <a name="graphics-c-amp"></a>图形 (C++ AMP)
 
@@ -21,11 +21,11 @@ C++ AMP 包含[Concurrency：： graphics](../../parallel/amp/reference/concurre
 
 ## <a name="the-norm-and-unorm-types"></a>norm 和 unorm 类型
 
-`norm`和 `unorm` 类型是限制**浮点**值范围的标量类型; 这称为*钳位*。 这些类型可从其他标量类型显式构造。 在强制转换中，值首先强制转换为**float** ，然后限制为标准 [-1.0，1.0] 或 unorm [0.0，1.0] 所允许的相应区域。 从 +/- 无穷强制转换时将返回 +/-1。 未定义从 NaN 的强制转换。 可以从 unorm 隐式构造 norm，而且不会丢失数据。 这些类型已定义到浮点类型的隐式转换运算符。 二元运算符是在这些类型和其他内置标量类型（例如**float**和**int**： +、-、 \* 、/、= =、！ =、>、 \<, > =、<=）之间定义的。 还支持复合赋值运算符： + =、-=、 \* =、/=。 Norm 类型已定义一元求反运算符 (-)。
+`norm`和 `unorm` 类型是限制值范围的标量类型 **`float`** ; 这称为*钳位*。 这些类型可从其他标量类型显式构造。 在强制转换中，值首先转换为 **`float`** ，然后限制到标准 [-1.0，1.0] 或 unorm [0.0，1.0] 所允许的相应区域。 从 +/- 无穷强制转换时将返回 +/-1。 未定义从 NaN 的强制转换。 可以从 unorm 隐式构造 norm，而且不会丢失数据。 这些类型已定义到浮点类型的隐式转换运算符。 二元运算符是在这些类型和其他内置标量类型（例如和）之间定义的 **`float`** **`int`** ： +、-、 \* 、/、= =、！ =、>、 \<, > =、<=。 还支持复合赋值运算符： + =、-=、 \* =、/=。 Norm 类型已定义一元求反运算符 (-)。
 
 ## <a name="short-vector-library"></a>短矢量库
 
-Short 向量库提供了 HLSL 中定义的[矢量类型](https://go.microsoft.com/fwlink/p/?linkid=248500)的一些功能，通常用于定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型为**double**、 **float**、 **int**、 `norm` 、 `uint` 和 `unorm` 。 下表中显示了这些类型名称。 对于每种类型，还有一个在名称中没有下划线的相应**typedef** 。 具有下划线的类型位于[Concurrency：： Graphics 命名空间](../../parallel/amp/reference/concurrency-graphics-namespace.md)中。 不带下划线的类型位于[Concurrency：： graphics：:d Irect3d 命名空间](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)中，以便与类似的命名基础类型（如 **__int8**和 **__int16**）明确分隔。
+Short 向量库提供了 HLSL 中定义的[矢量类型](https://go.microsoft.com/fwlink/p/?linkid=248500)的一些功能，通常用于定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型为 **`double`** 、、、 **`float`** **`int`** `norm` 、 `uint` 和 `unorm` 。 下表中显示了这些类型名称。 对于每种类型，还有一个在 **`typedef`** 名称中没有下划线的对应的。 具有下划线的类型位于[Concurrency：： Graphics 命名空间](../../parallel/amp/reference/concurrency-graphics-namespace.md)中。 不带下划线的类型位于[Concurrency：： graphics：:d Irect3d 命名空间](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)中，以便与类似于的基本类型（如和）明确分隔 **`__int8`** **`__int16`** 。
 
 ||长度 2|长度3|长度4|
 |-|--------------|--------------|--------------|
@@ -63,7 +63,7 @@ Short 向量库提供了 HLSL 中定义的[矢量类型](https://go.microsoft.co
 
 许多 GPU 具有已进行优化的硬件和缓存，适用于获取像素和纹素以及呈现图像和纹理。 [纹理 \<T,N> ](../../parallel/amp/reference/texture-class.md)类是纹素对象的容器类，它公开了这些 gpu 的纹理功能。 纹素可以是：
 
-- **Int**、 `uint` 、 **float**、 **double**、 `norm` 或 `unorm` 标量。
+- **`int`**、 `uint` 、、 **`float`** **`double`** 、 `norm` 或 `unorm` 标量。
 
 - 具有两个或四个组件的短矢量。 唯一的例外是 `double_4`，不允许使用此短矢量。
 
@@ -214,7 +214,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 - T 只有一个标量组件。 （不允许使用短矢量。）
 
-- T 不是**double**、 `norm` 或 `unorm` 。
+- T 不是 **`double`** 、 `norm` 或 `unorm` 。
 
 - `texture::bits_per_scalar_element` 属性为 32。
 

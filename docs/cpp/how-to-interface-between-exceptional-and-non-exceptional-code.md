@@ -4,26 +4,26 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: fccc40302ab7bd43b3e6b2f87eef488c7813c9be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245610"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187694"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：异常和非异常代码之间的接口
 
 本文介绍如何在 C++ 模块中实现一致的异常处理，以及如何在异常边界将异常和错误代码进行互相转换。
 
-有时 C++ 模块必须与不使用异常的代码（非异常代码）进行交互。 此类接口称为*异常边界*。 例如，您可能希望在 C++程序中调用 Win32 的函数 `CreateFile`。 `CreateFile` 不会引发异常;相反，它会设置可由 `GetLastError` 函数检索的错误代码。 如果您的 C++ 程序很重要，则您可能更愿意在其中部署一致的基于异常的错误处理策略。 此外，你可能不想放弃异常，因为你与异常代码相接；你也不希望在 C ++ 模块中将基于异常的错误策略与不基于异常的错误策略混合。
+有时 C++ 模块必须与不使用异常的代码（非异常代码）进行交互。 此类接口称为*异常边界*。 例如，您可能希望在 C++程序中调用 Win32 的函数 `CreateFile`。 `CreateFile` 不会引发异常；而会设置 `GetLastError` 函数可能检索到的错误代码。 如果您的 C++ 程序很重要，则您可能更愿意在其中部署一致的基于异常的错误处理策略。 此外，你可能不想放弃异常，因为你与异常代码相接；你也不希望在 C ++ 模块中将基于异常的错误策略与不基于异常的错误策略混合。
 
-## <a name="calling-non-exceptional-functions-from-c"></a>从调用非异常函数C++
+## <a name="calling-non-exceptional-functions-from-c"></a>从 c + + 调用非异常函数
 
 当您从 C++ 调用非异常函数时，您的想法是将该函数包装在检测任何错误的 C++函数中，然后可能引发异常。 当设计此类包装器函数时，首先应确定提供的异常保证的类型：no-throw、strong 或 basic。 其次，设计函数以使得异常引发时能够正确发布所有资源（例如文件句柄）。 通常，这意味着您可使用智能指针或类似的资源管理器来拥有资源。 有关设计注意事项的详细信息，请参阅[如何：设计异常安全性](how-to-design-for-exception-safety.md)。
 
 ### <a name="example"></a>示例
 
-以下示例演示使用 Win32 `CreateFile` 和 `ReadFile`函数在内部打开并读取两个文件的 C++ 函数。  `File` 类是文件句柄的“资源获取即是初始化”(RAII) 包装器。 其构造函数检测到“找不到文件”条件并引发了在 C++ 模块的调用堆栈（本示例中为 `main()` 函数）中向上传播错误的异常。 如果在完全构造好 `File` 对象后引发了异常，析构函数将自动调用 `CloseHandle` 以释放文件句柄。 （如果您愿意，也可以使用活动模板库（ATL） `CHandle` 类来实现相同的目的，或将 `unique_ptr` 与自定义删除器一起使用。）调用 Win32 和 CRT Api 的函数会检测错误，然后使用C++本地定义的 `ThrowLastErrorIf` 函数（该函数反过来使用派生自 `runtime_error` 类的 `Win32Exception` 类）引发异常。 本示例中的所有函数提供了强力的异常保证；当这些函数中的任何点上引发异常时，资源不会泄漏，程序状态也不会修改。
+以下示例演示使用 Win32 `CreateFile` 和 `ReadFile`函数在内部打开并读取两个文件的 C++ 函数。  `File` 类是文件句柄的“资源获取即是初始化”(RAII) 包装器。 其构造函数检测到“找不到文件”条件并引发了在 C++ 模块的调用堆栈（本示例中为 `main()` 函数）中向上传播错误的异常。 如果在完全构造好 `File` 对象后引发了异常，析构函数将自动调用 `CloseHandle` 以释放文件句柄。 （如果您愿意，也可以将活动模板库（ATL） `CHandle` 类用于相同的目的，也可以将其 `unique_ptr` 与自定义删除器一起使用。）调用 Win32 和 CRT Api 的函数会检测错误，然后使用本地定义的函数引发 c + + 异常 `ThrowLastErrorIf` ，后者又使用 `Win32Exception` 派生自类的类 `runtime_error` 。 本示例中的所有函数提供了强力的异常保证；当这些函数中的任何点上引发异常时，资源不会泄漏，程序状态也不会修改。
 
 ```cpp
 // compile with: /EHsc
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-当从异常转换为错误代码时，一个潜在问题是错误代码包含的信息通常不及异常可存储的信息丰富。 若要解决此问题，可以为可能引发的每个特定异常类型提供一个**catch**块，并在将异常的详细信息转换为错误代码之前执行日志记录以记录该异常的详细信息。 如果多个函数都使用一组相同的**catch**块，则此方法可能会产生大量代码重复。 避免代码重复的一个好方法是将这些块重构为一个私有实用工具函数，该函数实现**try**和**catch**块并接受在**try**块中调用的函数对象。 在每个公用函数中，将代码传递到实用工具函数以作为 lambda 表达式。
+当从异常转换为错误代码时，一个潜在问题是错误代码包含的信息通常不及异常可存储的信息丰富。 若要解决此问题，可以 **`catch`** 为可能引发的每个特定异常类型提供一个块，并在将异常的详细信息转换为错误代码之前执行日志记录以记录该异常的详细信息。 如果多个函数都使用同一组块，则此方法可能会产生大量代码重复 **`catch`** 。 避免代码重复的一个好方法是将这些块重构为一个私有实用工具函数，该函数实现 **`try`** 并 **`catch`** 阻止和接受在块中调用的函数对象 **`try`** 。 在每个公用函数中，将代码传递到实用工具函数以作为 lambda 表达式。
 
 ```cpp
 template<typename Func>
@@ -232,9 +232,9 @@ bool DiffFiles3(const string& file1, const string& file2)
 }
 ```
 
-有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](lambda-expressions-in-cpp.md)。
+有关 lambda 表达式的详细信息，请参阅[Lambda 表达式](lambda-expressions-in-cpp.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[异常C++和错误处理的新式最佳实践](errors-and-exception-handling-modern-cpp.md)<br/>
+[异常和错误处理的新式 c + + 最佳做法](errors-and-exception-handling-modern-cpp.md)<br/>
 [如何：设计异常安全性](how-to-design-for-exception-safety.md)<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220491"
 ---
 # <a name="enableif-structure"></a>EnableIf 结构
 
@@ -28,7 +28,7 @@ template <typename T>
 struct EnableIf<true, T>;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
 一种类型。
@@ -38,15 +38,15 @@ struct EnableIf<true, T>;
 
 ## <a name="remarks"></a>备注
 
-如果第一个模板参数的计算结果为**true**，则定义由第二个模板参数指定的类型的数据成员。
+如果第一个模板参数的计算结果为，则定义由第二个模板参数指定的类型的数据成员 **`true`** 。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|`type`|如果模板参数*b*的计算结果为**true**，则部分专用化定义 `type` 类型为 `T`的数据成员。|
+|`type`|如果模板参数*b*的计算结果为 **`true`** ，则部分专用化将数据成员定义 `type` 为类型 `T` 。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -60,4 +60,4 @@ struct EnableIf<true, T>;
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)
+[Microsoft：： WRL：:D etails 命名空间](microsoft-wrl-details-namespace.md)

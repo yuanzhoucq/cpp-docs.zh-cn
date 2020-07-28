@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949cd208d8c4f86afb1ef0a36db8483de4aac232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185329"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214381"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>编译器警告（等级 4）C4437
 
@@ -19,7 +19,7 @@ ms.locfileid: "80185329"
 
 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
 
-编译器遇到具有以下特征的 `dynamic_cast` 操作。
+编译器遇到 **`dynamic_cast`** 具有以下特征的操作。
 
 - 转换是从基类指针到派生类的指针。
 
@@ -29,11 +29,11 @@ ms.locfileid: "80185329"
 
 - 在派生类的构造函数或析构函数中找不到该强制转换，或在派生类中进一步继承了某个类（否则，将发出编译器警告 C4436）。
 
-警告表明，如果 `dynamic_cast` 在部分构造的对象上操作，则可能无法正常执行。  当通过继承在警告中命名的派生类的类的构造函数或析构函数调用封闭函数时，会发生这种情况。  如果在警告中命名的派生类绝不会进一步派生，或在对象构造或析构期间不调用封闭函数，则可以忽略此警告。
+警告表明，如果在 **`dynamic_cast`** 部分构造的对象上操作，则可能无法正常执行。  当通过继承在警告中命名的派生类的类的构造函数或析构函数调用封闭函数时，会发生这种情况。  如果在警告中命名的派生类绝不会进一步派生，或在对象构造或析构期间不调用封闭函数，则可以忽略此警告。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4437，并演示从缺少的 `vtordisp` 字段中生成的代码生成问题。
+下面的示例生成 C4437，并演示从缺少的字段中生成的代码生成问题 `vtordisp` 。
 
 ```cpp
 // C4437.cpp
@@ -85,4 +85,4 @@ int main()
 
 [dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[编译器警告（等级 1）C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+[编译器警告（等级1） C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

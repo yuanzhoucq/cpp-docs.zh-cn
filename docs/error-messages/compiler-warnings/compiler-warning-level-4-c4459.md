@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 C4459
+title: 编译器警告（等级4） C4459
 ms.date: 11/04/2016
 f1_keywords:
 - C4459
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d6d0a802f9f628145fbc5910aca805a5b01b94d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447766"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214368"
 ---
-# <a name="compiler-warning-level-4-c4459"></a>编译器警告 （等级 C4459
+# <a name="compiler-warning-level-4-c4459"></a>编译器警告（等级4） C4459
 
-> 声明*标识符*隐藏了全局声明
+> "*identifier*" 的声明隐藏了全局声明
 
-声明*标识符*在本地作用域中隐藏了相同名称的声明*标识符*全局作用域中。 此警告，可以了解到引用*标识符*在此范围内解析为本地声明的版本中，不是全局版本，可能会也可能不是你的意图。 通常情况下，我们建议你尽量减少使用的全局变量作为良好工程做法。 为了尽量减少污染全局命名空间，我们建议使用已命名的命名空间的全局变量。
+局部范围内的*标识符*声明隐藏全局范围内具有相同名称的*标识符*的声明。 此警告使你知道，此范围内的*标识符*引用解析为本地声明的版本，而不是全局版本，这可能是你的意图，也可能不是。 通常，我们建议将全局变量的使用降到最低。 为了最大限度地减少全局命名空间的污染，我们建议为全局变量使用命名命名空间。
 
-此警告是 Visual Studio 2015 中，在 Microsoft 中的新增功能C++编译器版本 18.00。 若要禁止显示警告从该版本的编译器或更高版本时迁移你的代码，请使用[/wv:18](../../build/reference/compiler-option-warning-level.md)编译器选项。
+在 Microsoft c + + 编译器版本18.00 中，Visual Studio 2015 中新增了此警告。 若要在迁移代码时禁止显示编译器或更高版本的警告，请使用[/Wv： 18](../../build/reference/compiler-option-warning-level.md)编译器选项。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4459:
+下面的示例生成 C4459：
 
 ```cpp
 // C4459_hide.cpp
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-若要解决此问题的一种方法是创建用于在全局命名空间，但不是使用`using`指令将该命名空间引入作用域，因此必须使用明确的所有引用限定的名称：
+解决此问题的一种方法是为全局创建命名空间，但不使用 **`using`** 指令将命名空间引入作用域，因此所有引用都必须使用明确限定名称：
 
 ```cpp
 // C4459_namespace.cpp

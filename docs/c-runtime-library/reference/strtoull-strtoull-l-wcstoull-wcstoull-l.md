@@ -42,16 +42,16 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: 95b64b96de1919e430a8114678cbb3db2d513c78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9664ee4c671796ad8805c19c93d5a5fd289c80ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912425"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189111"
 ---
 # <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull、_strtoull_l、wcstoull、_wcstoull_l
 
-将字符串转换为无符号的长整数值。
+将字符串转换为 **`unsigned long long`** 整数值。
 
 ## <a name="syntax"></a>语法
 
@@ -102,7 +102,7 @@ unsigned long long _wcstoull_l(
 
 ## <a name="remarks"></a>备注
 
-其中每个函数将输入字符串*strSource*转换为**无符号****长****整型整数值**。
+其中每个函数将输入字符串*strSource*转换为 **`unsigned long long`** 整数值。
 
 **strtoull**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 这可能是终止 null 字符，也可能是大于或等于*基准*的第一个数字字符。 区域设置的**LC_NUMERIC**类别确定*strSource*中的基数字符的识别;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 **strtoull**和**wcstoull**使用当前区域设置;**_strtoull_l**和 **_wcstoull_l**改为使用传入的区域设置，但却是相同的。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -121,13 +121,13 @@ unsigned long long _wcstoull_l(
 
 **strtoull**要求*strSource*指向以下格式的字符串：
 
-> [*空格*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*数字*&#124;*字母*]
+> [*空格*][{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*数字*&#124;*字母*]
 
-*空白*可能包含被忽略的空格和制表符。 *数字*是一个或多个十进制数字。 *字母*是从 "a" 到 "z" （或 "a" 到 "z"）的一个或多个字母。 不符合此形式的第一个字符停止扫描。 如果*base*介于2和36之间，则将其用作数字的基数。 如果*base*为0，则使用*strSource*指向的字符串的初始字符来确定基。 如果第一个字符为“0”，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*base*为0且扫描的第一个字符为 "0"，则假定八进制整数，且 "8" 或 "9" 字符会停止扫描。 **strtoull**允许使用加号（**+**）或减号（**-**）前缀;前导减号表示返回值为否定。
+*空白*可能包含被忽略的空格和制表符。 *数字*是一个或多个十进制数字。 *字母*是从 "a" 到 "z" （或 "a" 到 "z"）的一个或多个字母。 不符合此形式的第一个字符停止扫描。 如果*base*介于2和36之间，则将其用作数字的基数。 如果*base*为0，则使用*strSource*指向的字符串的初始字符来确定基。 如果第一个字符为“0”，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*base*为0且扫描的第一个字符为 "0"，则假定八进制整数，且 "8" 或 "9" 字符会停止扫描。 **strtoull**允许加号（ **+** ）或减号（ **-** ）前缀; 前导减号表示返回值为否定。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strtoull**|\<stdlib.h>|
 |**wcstoull**|\<stdlib.h> 或 \<wchar.h>|
@@ -143,7 +143,7 @@ unsigned long long _wcstoull_l(
 ## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [字符串到数值函数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

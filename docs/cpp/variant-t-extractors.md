@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185601"
 ---
 # <a name="_variant_t-extractors"></a>_variant_t 提取器
 
 **Microsoft 专用**
 
-从封装的 `VARIANT` 对象中提取数据。
+从封装的对象中提取数据 `VARIANT` 。
 
 ## <a name="syntax"></a>语法
 
@@ -87,32 +87,32 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>备注
 
-从封装的 `VARIANT`中提取原始数据。 如果 `VARIANT` 尚不是正确的类型，则使用 `VariantChangeType` 来尝试转换，并在失败时生成错误：
+从封装的中提取原始数据 `VARIANT` 。 如果尚 `VARIANT` 不是正确的类型， `VariantChangeType` 则将用于尝试转换，并在失败时生成错误：
 
-- **运算符 short （）** 提取**短**整型值。
+- **运算符 short （）** 提取 **`short`** 整数值。
 
-- **operator long （）** 提取**长**整数值。
+- **operator long （）** 提取 **`long`** 整数值。
 
-- **operator float （）** 提取**浮点数**。
+- **operator float （）** 提取 **`float`** 数值。
 
-- **运算符 double （）** 提取**double**整数值。
+- **运算符 double （）** 提取 **`double`** 整数值。
 
-- **OPERATOR CY （）** 提取 `CY` 的对象。
+- **OPERATOR CY （）** 提取 `CY` 对象。
 
-- **operator bool （）** 提取**bool**值。
+- **operator bool （）** 提取 **`bool`** 值。
 
 - **运算符 DECIMAL （）** 提取 `DECIMAL` 值。
 
 - **OPERATOR BYTE （）** 提取 `BYTE` 值。
 
-- **运算符 _bstr_t （）** 提取封装在 `_bstr_t` 对象中的字符串。
+- **运算符 _bstr_t （）** 提取封装在对象中的字符串 `_bstr_t` 。
 
-- **Operator IDispatch\*（）** 从封装的 `VARIANT`中提取调度接口指针。 对结果指针调用 `AddRef`，因此，你需要调用 `Release` 来释放它。
+- **Operator IDispatch \* （）** 从封装的中提取调度接口指针 `VARIANT` 。 `AddRef`在得到的指针上调用，因此由您调用 `Release` 来释放它。
 
-- **操作员 IUnknown\*（）** 从封装的 `VARIANT`中提取 COM 接口指针。 对结果指针调用 `AddRef`，因此，你需要调用 `Release` 来释放它。
+- **Operator IUnknown \* （）** 从封装的中提取 COM 接口指针 `VARIANT` 。 `AddRef`在得到的指针上调用，因此由您调用 `Release` 来释放它。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_variant_t 类](../cpp/variant-t-class.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213806"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220465"
 ---
 # <a name="make-function"></a>Make 函数
 
@@ -162,10 +162,10 @@ template <
 ComPtr<T> Make();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-继承自 `WRL::RuntimeClass`的用户指定的类。
+从继承的用户指定的类 `WRL::RuntimeClass` 。
 
 *TArg1*<br/>
 传递到指定的运行时类的参数1的类型。
@@ -223,7 +223,7 @@ ComPtr<T> Make();
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为 `ComPtr<T>` 对象;否则，`nullptr`。
+`ComPtr<T>`如果成功，则为对象; 否则为 **`nullptr`** 。
 
 ## <a name="remarks"></a>备注
 
@@ -237,4 +237,4 @@ ComPtr<T> Make();
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

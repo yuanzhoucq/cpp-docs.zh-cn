@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c11133fbf28cfb98de1367955c00c899e8b1042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200468"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214524"
 ---
 # <a name="compiler-error-c3646"></a>编译器错误 C3646
 
@@ -21,7 +21,7 @@ ms.locfileid: "80200468"
 
 编译器在预期找到重写说明符的位置找到了一个标记，但编译器无法识别该标记。
 
-例如，如果 **_NOEXCEPT**无法识别的*说明符*，请将其替换为关键字**NOEXCEPT**。
+例如，如果 **_NOEXCEPT**无法识别的*说明符*，请将其替换为关键字 **`noexcept`** 。
 
 有关详细信息，请参阅[重写说明符](../../extensions/override-specifiers-cpp-component-extensions.md)。
 

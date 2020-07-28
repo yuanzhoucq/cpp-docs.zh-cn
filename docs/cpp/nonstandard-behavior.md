@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f31938c78e443bb53a286f79661d86b7a6e9edbc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161030"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186537"
 ---
 # <a name="nonstandard-behavior"></a>非标准行为
 
-以下部分列出了的 Microsoft 实现C++不符合C++标准的一些地方。 下面给出的节号引用了 C++ 11 标准 (ISO/IEC 14882:2011(E)) 中的节号。
+以下部分列出了 c + + 的 Microsoft 实现不符合 c + + 标准的一些地方。 下面给出的节号引用了 C++ 11 标准 (ISO/IEC 14882:2011(E)) 中的节号。
 
-编译器C++ [限制](../cpp/compiler-limits.md)中提供了不同于标准中定义的编译器限制的列表。
+编译器[限制](../cpp/compiler-limits.md)中提供了不同于 c + + 标准中定义的编译器限制的列表。
 
 ## <a name="covariant-return-types"></a>协变返回类型
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>绑定模板中的非依赖性名称
 
-Microsoft C++编译器当前不支持在最初分析模板时绑定非依赖性名称。 这不符合 C++ ISO 规范的第 14.6.3 节。 这可能导致在模板之后（但在模板实例化之前）声明的重载出现。
+最初分析模板时，Microsoft c + + 编译器当前不支持绑定非依赖性名称。 这不符合 C++ ISO 规范的第 14.6.3 节。 这可能导致在模板之后（但在模板实例化之前）声明的重载出现。
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ void g() throw();    // parsed and used
 
 ## <a name="char_traitseof"></a>char_traits::eof()
 
-C++ [Char_traits：： eof](../standard-library/char-traits-struct.md#eof)的标准状态不能对应于有效的 `char_type` 值。 Microsoft C++编译器对类型**char**强制执行此约束，但不为类型**wchar_t**强制此约束。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的要求。 下面的示例将说明这一点。
+C + + 标准状态[char_traits：： eof](../standard-library/char-traits-struct.md#eof)不能对应于有效的 `char_type` 值。 Microsoft c + + 编译器对类型 **`char`** （而不是类型）强制此约束 **`wchar_t`** 。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的要求。 下面的示例将说明这一点。
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>对象的存储位置
 
-C++ 标准（第 1.8 节第 6 段）要求完整的 C++ 对象具有唯一的存储位置。 但对于 Microsoft C++，在某些情况下，没有数据成员的类型将在对象的生存期内与其他类型共享存储位置。
+C++ 标准（第 1.8 节第 6 段）要求完整的 C++ 对象具有唯一的存储位置。 但是，在 Microsoft c + + 中，某些情况下，没有数据成员的类型将与对象的生存期内的其他类型共享存储位置。

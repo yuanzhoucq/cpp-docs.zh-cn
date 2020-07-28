@@ -1,5 +1,5 @@
 ---
-title: 标识符 （C++）
+title: 标识符 (C++)
 ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: c905d6acc52f2f4f2a7bf3e92426f76adf25390e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 2d16dd318cd42b6294ef60edf44a16ccaf47b99b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450312"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187668"
 ---
-# <a name="identifiers-c"></a>标识符 （C++）
+# <a name="identifiers-c"></a>标识符 (C++)
 
 标识符是用于表示以下内容之一的字符序列：
 
@@ -62,7 +62,7 @@ N O P Q R S T U V W X Y Z
 
 **Microsoft 专用**
 
-只有 Microsoft C++ 标识符的前 2048 个字符是有意义的。 用户定义类型的名称由编译器“修饰”以保留类型信息。 结果名称（包括类型信息）不能超过 2048 个字符。 (请参阅[修饰名](../build/reference/decorated-names.md)有关详细信息。)可能影响修饰标识符的长度的因素包括：
+只有 Microsoft C++ 标识符的前 2048 个字符是有意义的。 用户定义类型的名称由编译器“修饰”以保留类型信息。 结果名称（包括类型信息）不能超过 2048 个字符。 （有关详细信息，请参阅[修饰名](../build/reference/decorated-names.md)。）可能影响修饰标识符的长度的因素包括：
 
 - 标识符是表示用户定义类型的对象还是表示派生自用户定义类型的类型。
 
@@ -70,7 +70,7 @@ N O P Q R S T U V W X Y Z
 
 - 函数的参数的数量。
 
-美元符号`$`是 Microsoft 中的有效标识符字符C++编译器 （msvc） 编写。 MSVC 还允许你使用的通用字符名称标识符中允许的范围所表示的实际字符。 若要使用这些字符，必须使用包含它们的文件编码代码页保存文件。  此示例演示如何在代码中互换使用扩展字符和通用字符名称。
+美元符号 `$` 是 Microsoft c + + 编译器（MSVC）中的有效标识符字符。 使用 MSVC 还可以在标识符中使用通用字符名称允许的范围所表示的实际字符。 若要使用这些字符，必须使用包含它们的文件编码代码页保存文件。  此示例演示如何在代码中互换使用扩展字符和通用字符名称。
 
 ```cpp
 // extended_identifier.cpp
@@ -87,16 +87,16 @@ int main() {
 }
 ```
 
-编译 C++/CLI 代码时，标识符中允许的字符范围限制更少。 使用 /clr 编译的代码中的标识符应遵循[ECMA-335 标准：公共语言基础结构 (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。
+编译 C++/CLI 代码时，标识符中允许的字符范围限制更少。 使用 /clr 编译的代码中的标识符应遵循  [标准 ECMA-335：公共语言基础结构 (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。
 
 **结束 Microsoft 专用**
 
 标识符的第一个字符必须是字母字符（大写、小写或带下划线 ( **_** ) 的字母）。 由于 C++ 标识符区分大小写，因此 `fileName` 与 `FileName`不同。
 
-标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如，`Pint`是一个合法标识符，即使它包含**int**，这是一个关键字。
+标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如， `Pint` 是一个合法标识符，即使它包含 **`int`** 关键字。
 
-使用两个顺序下划线字符 ( **__** ) 在一个标识符或在单个前导下划线后跟一个大写字母，将保留用于C++中的所有作用域的实现。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。
+在标识符中使用两个顺序下划线字符（ **__** ）或在单个前导下划线后跟一个大写字母，为所有作用域中的 c + + 实现保留。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [词法约定](../cpp/lexical-conventions.md)

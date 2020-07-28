@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365614"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186355"
 ---
 # <a name="single-inheritance"></a>单个继承
 
 在“单继承”（继承的常见形式）中，类仅具有一个基类。 考虑下图中阐释的关系。
 
-![基本单&#45;继承图](../cpp/media/vc38xj1.gif "基本单&#45;继承图") <br/>
+![基本单一&#45;继承关系图](../cpp/media/vc38xj1.gif "基本单一&#45;继承关系图") <br/>
 简单单继承关系图
 
 注意该图中从常规到特定的进度。 在大多数类层次结构的设计中发现的另一个常见特性是，派生类与基类具有“某种”关系。 在该图中，`Book` 是一种 `PrintedDocument`，而 `PaperbackBook` 是一种 `book`。
@@ -44,7 +44,7 @@ class PaperbackBook : public Book {};
 
 在声明派生的类之前声明从中派生每个类的基类。 为基类提供前向引用声明是不够的；它必须是一个完整声明。
 
-在前面的示例中，使用访问指定器**公共**。 公共、受保护和私有继承的含义在[成员访问控制中描述。](../cpp/member-access-control-cpp.md)
+在前面的示例中，使用访问说明符 **`public`** 。 在[成员访问控制](../cpp/member-access-control-cpp.md)中介绍了公共、受保护和私有继承的含义。
 
 类可用作多个特定类的基类，如下图所示。
 
@@ -154,4 +154,4 @@ int main() {
 由于 `Document` 类具有一个 `PrintNameOf` 函数，因此它可以打印库中每本书的名称，但它可能会忽略某些特定于文档类型的信息（`Book` 的页计数、`HelpFile` 的字节数等）。
 
 > [!NOTE]
-> 强制使用基类来实现函数（如 `PrintNameOf`）通常不是最佳设计。 [虚拟函数](../cpp/virtual-functions.md)提供其他设计备选方案。
+> 强制使用基类来实现函数（如 `PrintNameOf`）通常不是最佳设计。 [虚函数](../cpp/virtual-functions.md)提供其他设计替代项。

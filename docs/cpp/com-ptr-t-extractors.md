@@ -21,12 +21,12 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
-ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
+ms.openlocfilehash: fb5441d87dc35ec6fbb495bc38d9041c1f2d2f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86127853"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220569"
 ---
 # <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`提取器
 
@@ -57,7 +57,7 @@ operator bool( ) const throw( );
 
 - **`operator&`** 释放所有封装的接口指针，并将其替换为 NULL，并返回封装的指针的地址。 此运算符允许将智能指针按地址传递到具有*out*参数的函数，该函数通过该函数返回接口指针。
 
-- **`operator bool`** 允许将智能指针对象用于条件表达式。 如果指针不为 NULL，则此运算符返回 TRUE。
+- **`operator bool`** 允许将智能指针对象用于条件表达式。 **`true`** 如果指针不为 NULL，则此运算符返回。
 
   > [!NOTE]
   > 由于未 **`operator bool`** 声明为，因此可 **`explicit`** `_com_ptr_t` 隐式转换为 **`bool`** ，这可转换为任意标量类型。 这可能会在你的代码中产生意外结果。 启用[编译器警告（等级4） C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md)以防止无意中使用此转换。

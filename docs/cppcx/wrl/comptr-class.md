@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220543"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 
@@ -90,20 +90,20 @@ friend class ComPtr;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称            | 说明
+名称            | 描述
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | *T*模板参数指定的类型的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                             | 说明
+名称                             | 描述
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
 [ComPtr：： ComPtr](#comptr)        | 初始化 `ComPtr` 类的新实例。 重载提供默认、复制、移动和转换构造函数。
 [ComPtr：： ~ ComPtr](#tilde-comptr) | 取消初始化的实例 `ComPtr` 。
 
 ### <a name="public-methods"></a>公共方法
 
-“属性”                                                      | 说明
+“属性”                                                      | 描述
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtr：： As](#as)                                         | 返回 `ComPtr` 表示由指定模板参数标识的接口的对象。
 [ComPtr：： AsIID](#asiid)                                   | 返回一个 `ComPtr` 对象，该对象表示由指定接口 ID 标识的接口。
@@ -119,14 +119,14 @@ friend class ComPtr;
 
 ### <a name="protected-methods"></a>受保护的方法
 
-名称                                        | 说明
+名称                                        | 描述
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr：： InternalAddRef](#internaladdref)   | 递增与此相关联的接口的引用计数 `ComPtr` 。
 [ComPtr：： InternalRelease](#internalrelease) | 对与此关联的接口执行 COM 释放操作 `ComPtr` 。
 
 ### <a name="public-operators"></a>公共运算符
 
-名称                                                                                           | 说明
+名称                                                                                           | 描述
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr：： operator&](#operator-ampersand)                                                       | 检索当前的地址 `ComPtr` 。
 [ComPtr：： operator->](#operator-arrow)                                                          | 检索指向当前模板参数所指定类型的指针。
@@ -137,7 +137,7 @@ friend class ComPtr;
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-名称                 | 说明
+名称                 | 描述
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr：:p tr_](#ptr) | 包含指向与关联的接口的指针，并由此管理 `ComPtr` 。
 
@@ -440,7 +440,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="remarks"></a>备注
 
-此 helper 函数消除了使用 STDMETHOD 宏引起的不必要的开销。 此函数将生成 `IUnknown` 类型， `private` 而不是 `virtual` 。
+此 helper 函数消除了使用 STDMETHOD 宏引起的不必要的开销。 此函数将生成 `IUnknown` 类型， **`private`** 而不是 **`virtual`** 。
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr：： operator =
 
@@ -532,9 +532,9 @@ bool operator==(
 
 ### <a name="return-value"></a>返回值
 
-`true`如果对象*a*等于对象*b*，则第一个运算符将生成; 否则为 `false` 。
+**`true`** 如果对象*a*等于对象*b*，则第一个运算符将生成; 否则为 **`false`** 。
 
-第二个和第三个运算符在 `true` 对象*a*等于时生成 `nullptr` ; 否则为 `false` 。
+第二个和第三个运算符在 **`true`** 对象*a*等于时生成 **`nullptr`** ; 否则为 **`false`** 。
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr：： operator！ =
 
@@ -567,9 +567,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>返回值
 
-`true`如果对象*a*不等于对象*b*，则第一个运算符将生成; 否则返回 `false` 。
+**`true`** 如果对象*a*不等于对象*b*，则第一个运算符将生成; 否则返回 **`false`** 。
 
-`true`如果对象*a*不等于，则第二个和第三个运算符将生成 `nullptr` ; 否则为 `false` 。
+**`true`** 如果对象*a*不等于，则第二个和第三个运算符将生成 **`nullptr`** ; 否则为 **`false`** 。
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>返回值
 
-如果接口与此关联，则为 `ComPtr` [BoolStruct：： member](boolstruct-structure.md#member)数据成员的地址; 否则为 `nullptr` 。
+如果接口与此关联，则为 `ComPtr` [BoolStruct：： member](boolstruct-structure.md#member)数据成员的地址; 否则为 **`nullptr`** 。
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr：:p tr_
 
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>参数
 
 *r*<br/>
-一个 `ComPtr`。
+`ComPtr`。

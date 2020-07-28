@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: 05c93bf6a2765bd11489075067c627ab3c3ab691
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3573cad21734a97629cbc12b76d73b99024cbc2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220504"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 结构
 
-专门化`CriticalSection`对象以支持无效的关键部分或释放关键部分的函数。
+专用化 `CriticalSection` 对象，以支持无效的临界区或函数以释放关键部分。
 
 ## <a name="syntax"></a>语法
 
@@ -32,16 +32,16 @@ struct CriticalSectionTraits;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称   | 说明
+名称   | 描述
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | 定义`typedef`指向关键节的指针的 。 `Type` 定义为 `typedef CRITICAL_SECTION* Type;`。
+`Type` | 一个 **`typedef`** ，它定义指向关键部分的指针。 `Type` 定义为 `typedef CRITICAL_SECTION* Type;`。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                       | 说明
+“属性”                                                       | 描述
 ---------------------------------------------------------- | -----------------
-[关键节特征：：获取无效值](#getinvalidvalue) | 专门化`CriticalSection`模板，以便模板始终无效。
-[临界截面：解锁](#unlock)                   | 专门化`CriticalSection`模板，以便它支持释放指定关键节对象的所有权。
+[CriticalSectionTraits：： GetInvalidValue](#getinvalidvalue) | 专用化 `CriticalSection` 模板，使模板始终无效。
+[CriticalSectionTraits：： Unlock](#unlock)                   | 专用化 `CriticalSection` 模板，使其支持释放指定的关键部分对象的所有权。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,13 +49,13 @@ struct CriticalSectionTraits;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 核心包装.h
+**标头：** corewrappers。h
 
-**命名空间：** 微软：：WRL：包装：：处理特征
+**命名空间：** Microsoft：： WRL：：包装：： HandleTraits
 
-## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>关键节特征：：获取无效值
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits：： GetInvalidValue
 
-专门化`CriticalSection`模板，以便模板始终无效。
+专用化 `CriticalSection` 模板，使模板始终无效。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -67,11 +67,11 @@ inline static Type GetInvalidValue();
 
 ### <a name="remarks"></a>备注
 
-修饰`Type`符定义为`typedef CRITICAL_SECTION* Type;`。
+`Type`修饰符定义为 `typedef CRITICAL_SECTION* Type;` 。
 
-## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>临界截面：解锁
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits：： Unlock
 
-专门化`CriticalSection`模板，以便它支持释放指定关键节对象的所有权。
+专用化 `CriticalSection` 模板，使其支持释放指定的关键部分对象的所有权。
 
 ```cpp
 inline static void Unlock(
@@ -81,11 +81,11 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>参数
 
-*cs*<br/>
-指向关键截面对象的指针。
+*站*<br/>
+指向关键节对象的指针。
 
 ### <a name="remarks"></a>备注
 
-修饰`Type`符定义为`typedef CRITICAL_SECTION* Type;`。
+`Type`修饰符定义为 `typedef CRITICAL_SECTION* Type;` 。
 
-有关详细信息，请参阅 Windows API 文档的**同步函数**部分中的 **"Leave关键"节功能**。
+有关详细信息，请参阅 Windows API 文档的**同步函数**部分中的**LeaveCriticalSection 函数**。

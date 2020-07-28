@@ -4,22 +4,22 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 32e8d64fdb6449f1d40aec4161bfda54987ca66a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: d7caea7cfd13b3a41a1cd20f88a9914267cf9677
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187850"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>如何：创建和使用 weak_ptr 实例
 
-有时，对象必须存储一种方法来访问[shared_ptr](../standard-library/shared-ptr-class.md)的基础对象，而不会导致引用计数递增。 通常情况下，在 `shared_ptr` 实例之间具有循环引用时，会发生这种情况。
+有时，对象必须存储一种方法来访问[shared_ptr](../standard-library/shared-ptr-class.md)的基础对象，而不会导致引用计数递增。 通常情况下，在实例之间具有循环引用时，会发生这种情况 `shared_ptr` 。
 
-最佳设计是避免在任何时候都能实现指针的共享所有权。 但是，如果您必须拥有 `shared_ptr` 实例的共享所有权，请避免它们之间的循环引用。 如果无法避免循环引用，或者出于某种原因更可取，则使用[weak_ptr](../standard-library/weak-ptr-class.md)向一个或多个所有者提供对另一 `shared_ptr`的弱引用。 通过使用 `weak_ptr`，可以创建加入到现有相关实例集的 `shared_ptr`，但前提是基础内存资源仍有效。 `weak_ptr` 本身并不参与引用计数，因此它无法阻止引用计数转到零。 不过，你可以使用 `weak_ptr` 来尝试获取已初始化的 `shared_ptr` 的新副本。 如果已删除内存，则 `weak_ptr`的布尔运算符将返回 `false`。 如果内存仍有效，新的共享指针会递增引用计数，并保证只要 `shared_ptr` 变量保持在范围内，内存就有效。
+最佳设计是避免在任何时候都能实现指针的共享所有权。 但是，如果您必须有实例的共享所有权 `shared_ptr` ，请避免它们之间存在循环引用。 如果无法避免循环引用，或者出于某种原因更可取，则使用[weak_ptr](../standard-library/weak-ptr-class.md)向一个或多个所有者提供对另一个的弱引用 `shared_ptr` 。 通过使用 `weak_ptr` ，可以创建一个 `shared_ptr` 联接到一组现有相关实例的，但前提是基础内存资源仍有效。 本身并不 `weak_ptr` 参与引用计数，因此它无法阻止引用计数转到零。 但是，你可以使用 `weak_ptr` 来尝试获取用于初始化的的新副本 `shared_ptr` 。 如果已删除内存，则的 `weak_ptr` bool 运算符将返回 **`false`** 。 如果内存仍有效，新的共享指针会递增引用计数，并保证只要 `shared_ptr` 变量保持在范围内，内存就有效。
 
 ## <a name="example"></a>示例
 
-下面的代码示例演示了一个示例，该示例使用 `weak_ptr` 来确保正确删除具有循环依赖关系的对象。 当你查看该示例时，假定它是在考虑了替代解决方案之后创建的。 `Controller` 对象表示计算机进程的某个方面，它们独立运行。 每个控制器都必须能够随时查询其他控制器的状态，并且每个控制器都包含用于此目的的专用 `vector<weak_ptr<Controller>>`。 每个向量都包含一个循环引用，因此使用 `weak_ptr` 实例，而不是 `shared_ptr`。
+下面的代码示例演示了一个用 `weak_ptr` 来确保正确删除具有循环依赖关系的对象的情况。 当你查看该示例时，假定它是在考虑了替代解决方案之后创建的。 `Controller`对象表示计算机进程的某个方面，它们独立运行。 每个控制器都必须能够随时查询其他控制器的状态，并且每个控制器都包含一个专用 `vector<weak_ptr<Controller>>` 于此目的。 每个向量都包含一个循环引用，因此 `weak_ptr` 使用的是实例，而不是 `shared_ptr` 。
 
 [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]
 
@@ -82,7 +82,7 @@ Destroying Controller4
 Press any key
 ```
 
-作为试验，将 vector `others` 修改为 `vector<shared_ptr<Controller>>`，然后在输出中，请注意，`TestRun` 返回时不会调用析构函数。
+作为试验，将 vector 修改 `others` 为 `vector<shared_ptr<Controller>>` ，然后在输出中，请注意，当返回时不调用析构函数 `TestRun` 。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -6,28 +6,28 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172109"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214225"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr（C++/CLI 和 C++/CX）
 
-nullptr 关键字表示空指针值。 空指针值可用于指明对象句柄、内部指针或本机指针类型不指向对象。
+**`nullptr`** 关键字表示*null 指针值*。 空指针值可用于指明对象句柄、内部指针或本机指针类型不指向对象。
 
-结合使用 nullptr 与托管代码或本机代码。 编译器为托管空指针值和本机空指针值发出相应但不同的指令。 若要了解如何使用此关键字的 ISO 标准 C++ 版本，请参阅 [nullptr](../cpp/nullptr.md)。
+使用 **`nullptr`** 托管代码或本机代码。 编译器为托管空指针值和本机空指针值发出相应但不同的指令。 若要了解如何使用此关键字的 ISO 标准 C++ 版本，请参阅 [nullptr](../cpp/nullptr.md)。
 
-__nullptr 是 Microsoft 专用关键字，虽然与 nullptr 的含义相同，但仅适用于本机代码。 如果你将 nullptr 与本机 C/C++ 代码结合使用，然后使用 [/clr](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项进行编译，那么编译器便无法确定 nullptr 指明的是本机空指针值，还是托管空指针值。 若要向编译器明确表达你的意图，请使用 nullptr 来指定托管值，或使用 __nullptr 来指定本机值。
+**__Nullptr**关键字是 Microsoft 特定的关键字，其含义与相同 **`nullptr`** ，但仅适用于本机代码。 如果你使用 **`nullptr`** with 本机 C/c + + 代码，然后使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项进行编译，则编译器无法确定是否 **`nullptr`** 指示本机或托管 null 指针值。 为了使你的意图对编译器清楚，请使用 **`nullptr`** 指定托管值或 **__nullptr**来指定本机值。
 
-nullptr 关键字相当于 Visual Basic 中的“无”和 C# 中的“null”。
+**`nullptr`** 关键字与 c # 中**的**Visual Basic 和**null**都等效。
 
 ## <a name="usage"></a>使用情况
 
-nullptr 关键字可用于任何能使用句柄、本机指针或函数参数的位置。
+可以在 **`nullptr`** 可以使用句柄、本机指针或函数参数的任何位置使用关键字。
 
-nullptr 关键字不是一种类型，也不支持用于：
+**`nullptr`** 关键字不是类型，并且不支持与一起使用：
 
 - [sizeof](../cpp/sizeof-operator.md)
 
@@ -35,7 +35,7 @@ nullptr 关键字不是一种类型，也不支持用于：
 
 - `throw nullptr`（尽管 `throw (Object^)nullptr;` 可以正常发挥作用）
 
-nullptr 关键字可用于初始化以下指针类型：
+**`nullptr`** 关键字可用于以下指针类型的初始化：
 
 - 本机指针
 
@@ -45,15 +45,15 @@ nullptr 关键字可用于初始化以下指针类型：
 
 - 托管内部指针
 
-nullptr 关键字可用于在使用指针或句柄引用之前，先测试引用是否为空。
+**`nullptr`** 关键字可用于在使用引用之前测试指针或句柄引用是否为 null。
 
 应正确解释使用空指针值进行错误检查的语言之间的函数调用。
 
-无法将句柄初始化为 0；只能使用 nullptr。 将常数 0 赋给对象句柄会生成装箱的 `Int32`，并强制转换为 `Object^`。
+不能将句柄初始化为零;只能 **`nullptr`** 使用。 将常数 0 赋给对象句柄会生成装箱的 `Int32`，并强制转换为 `Object^`。
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了 nullptr 关键字可用于任何能使用句柄、本机指针或函数参数的位置。 此示例还展示了 nullptr 关键字可用于在使用引用之前先检查引用。
+下面的代码示例演示可以在 **`nullptr`** 可以使用句柄、本机指针或函数参数的任何位置使用关键字。 该示例说明 **`nullptr`** 关键字可用于在使用之前检查引用。
 
 ```cpp
 // mcpp_nullptr.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了可以对本机指针交换使用 nullptr 和 0。
+下面的代码示例演示了 **`nullptr`** 如何在本机指针上交替使用和零。
 
 ```cpp
 // mcpp_nullptr_1.cpp
@@ -121,7 +121,7 @@ pMyClass == 0
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了 nullptr 被解释为指向任何类型的一个句柄，或指向任何类型的一个本机指针。 如果函数重载了多个指向不同类型的句柄，便会生成多义性错误。 必须将 nullptr 显式强制转换为一种类型。
+下面的代码示例演示 **`nullptr`** 如何将解释为任何类型的句柄或指向任何类型的本机指针。 如果函数重载了多个指向不同类型的句柄，便会生成多义性错误。 **`nullptr`** 必须显式强制转换为类型。
 
 ```cpp
 // mcpp_nullptr_2.cpp
@@ -139,7 +139,7 @@ void f_null() {
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了可以强制转换 nullptr，并返回指向强制转换类型的指针或句柄，其中包含 nullptr 值。
+下面的代码示例演示允许强制转换 **`nullptr`** ，并将指针或句柄返回到包含值的强制转换类型 **`nullptr`** 。
 
 ```cpp
 // mcpp_nullptr_3.cpp
@@ -160,7 +160,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了 nullptr 可用作函数参数。
+下面的代码示例演示 **`nullptr`** 可用作函数参数的。
 
 ```cpp
 // mcpp_nullptr_4.cpp
@@ -181,7 +181,7 @@ test
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了已声明但未显式初始化的句柄默认初始化为 nullptr。
+下面的代码示例演示在声明句柄且未显式初始化时，它们默认初始化为 **`nullptr`** 。
 
 ```cpp
 // mcpp_nullptr_5.cpp
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>示例
 
-下面的代码示例展示了在使用  **编译时，可以将 nullptr**`/clr` 赋给本机指针。
+下面的代码示例演示了在 **`nullptr`** 使用进行编译时，可以分配给本机指针 `/clr` 。
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -221,9 +221,9 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-编译器选项：（不是必需的; 由所有代码生成选项支持，包括 `/ZW` 和 `/clr`）
+编译器选项：（不是必需的; 所有代码生成选项均支持，包括 `/ZW` 和 `/clr` ）
 
 ## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

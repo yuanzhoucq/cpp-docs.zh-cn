@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: e33842f574df5617fb40c5b3f6bb8324d5ba7c1e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d7908670b67df7dbf7b2b74e98f8b59cf30f8e96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184938"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 结构
 
@@ -35,31 +35,31 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>参数
 
-*运行时类标志T*<br/>
-指定一个或多个[运行时类类型](runtimeclasstype-enumeration.md)枚举器的标志字段。
+*RuntimeClassFlagsT*<br/>
+指定一个或多个[RuntimeClassType](runtimeclasstype-enumeration.md)枚举器的标志字段。
 
 *ILst*<br/>
-接口指示列表。
+接口 Id 的列表。
 
-*是委托类*<br/>
-如果 当前`Implements`实例是*ILst*中第一个接口 ID 的基类，请**指定 true;** 否则，**假**。
+*IsDelegateToClass*<br/>
+**`true`** 如果的当前实例 `Implements` 是*ILst*中第一个接口 ID 的基类，则为; 否则为 **`false`** 。
 
 ## <a name="remarks"></a>备注
 
-帮助实现[实现器](implements-structure.md)结构。
+帮助实现[实现](implements-structure.md)结构。
 
-此模板遍历接口列表，并将它们添加为基类，并作为启用`QueryInterface`所需的信息。
+此模板会遍历接口的列表，并将其添加为基类，以及作为启用所需的信息 `QueryInterface` 。
 
 ## <a name="members"></a>成员
 
 ### <a name="protected-methods"></a>受保护的方法
 
-名称                                                    | 说明
+名称                                                    | 描述
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[实现帮助器：：坎卡斯特托](#cancastto)               | 获取指向指定接口 ID 的指针。
-[实现帮助器：：Castto 未知](#casttounknown)       | 获取指向当前`IUnknown``Implements`结构的基础接口的指针。
-[实现帮助器：：fillarray 与 Id](#fillarraywithiid) | 将当前零点模板参数指定的接口 ID 插入指定的数组元素。
-[实现帮助器：：IidCount](#iidcount)                 | 保存当前`Implements`对象中已实现的接口指示数。
+[ImplementsHelper：： CanCastTo](#cancastto)               | 获取指向指定接口 ID 的指针。
+[ImplementsHelper：： CastToUnknown](#casttounknown)       | 获取一个指针，该指针指向 `IUnknown` 当前结构的基础接口 `Implements` 。
+[ImplementsHelper：： FillArrayWithIid](#fillarraywithiid) | 将当前第零个模板参数指定的接口 ID 插入指定的数组元素。
+[ImplementsHelper：： IidCount](#iidcount)                 | 保留当前对象中已实现的接口 Id 的数量 `Implements` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -67,11 +67,11 @@ friend struct Details::ImplementsHelper;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 实现.h
+**标头：** 实现。h
 
-**命名空间：** 微软：：WRL：:D
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="implementshelpercancastto"></a><a name="cancastto"></a>实现帮助器：：坎卡斯特托
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper：： CanCastTo
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -92,10 +92,10 @@ HRESULT CanCastTo(
 *riid*<br/>
 对接口 ID 的引用。
 
-*Ppv*<br/>
-如果此操作成功，则指向*riid*或*iid*指定的接口的指针。
+*ppv*<br/>
+如果此操作成功，则为由*riid*或*iid*指定的接口的指针。
 
-*Iid*<br/>
+*iid*<br/>
 对接口 ID 的引用。
 
 ### <a name="return-value"></a>返回值
@@ -106,7 +106,7 @@ HRESULT CanCastTo(
 
 获取指向指定接口 ID 的指针。
 
-## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>实现帮助器：：Castto 未知
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper：： CastToUnknown
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -116,13 +116,13 @@ IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>返回值
 
-指向基础`IUnknown`接口的指针。
+指向基础接口的指针 `IUnknown` 。
 
 ### <a name="remarks"></a>备注
 
-获取指向当前`IUnknown``Implements`结构的基础接口的指针。
+获取一个指针，该指针指向 `IUnknown` 当前结构的基础接口 `Implements` 。
 
-## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>实现帮助器：：fillarray 与 Id
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper：： FillArrayWithIid
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -135,16 +135,16 @@ void FillArrayWithIid(
 ### <a name="parameters"></a>参数
 
 *index*<br/>
-一个基于零的索引，指示此操作的起始数组元素。 此操作完成后，*索引*将递增 1。
+从零开始的索引，它指示此操作的起始数组元素。 此操作完成后，*索引*将递增1。
 
-*伊德*<br/>
-IID 类型的数组。
+*iid*<br/>
+Iid 类型的数组。
 
 ### <a name="remarks"></a>备注
 
-将当前零点模板参数指定的接口 ID 插入指定的数组元素。
+将当前第零个模板参数指定的接口 ID 插入指定的数组元素。
 
-## <a name="implementshelperiidcount"></a><a name="iidcount"></a>实现帮助器：：IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper：： IidCount
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -154,4 +154,4 @@ static const unsigned long IidCount;
 
 ### <a name="remarks"></a>备注
 
-保存当前`Implements`对象中已实现的接口指示数。
+保留当前对象中已实现的接口 Id 的数量 `Implements` 。

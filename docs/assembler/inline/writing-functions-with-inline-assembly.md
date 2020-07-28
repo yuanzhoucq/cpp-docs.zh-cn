@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3ce42147693f0c4c180076c627ef88c182745186
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169053"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190996"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>使用内联程序集编写函数
 
@@ -76,10 +76,10 @@ int power2( int num, int power )
 
 `power2` 函数的内联版本按名称引用其自变量并显示在程序的其余部分所在的同一源文件中。 此外，该版本需要的程序集指令更少。
 
-由于 `power2` 的内联版本不执行 C `return` 语句，因此它将生成一个无害警告（如果您在警告等级 2 或更高等级进行编译）。 函数将返回一个值，但编译器无法告知缺少 `return` 语句。 您可以使用[#pragma 警告](../../preprocessor/warning.md)来禁用此警告的生成。
+由于内联版本的 `power2` 不执行 C **`return`** 语句，因此如果您在警告级别2或更高版本中进行编译，则会导致出现无害警告。 函数会返回一个值，但编译器无法在没有语句的情况下告诉该函数 **`return`** 。 您可以使用[#pragma 警告](../../preprocessor/warning.md)来禁用此警告的生成。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[在 __asm 块中使用 C 或 C++](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[在 __asm 块中使用 C 或 c + +](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
