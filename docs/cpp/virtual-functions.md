@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926091"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231034"
 ---
 # <a name="virtual-functions"></a>虚函数
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 请注意，无论 `NameOf` 函数是通过指向 `Base` 的指针还是通过指向 `Derived` 的指针进行调用，它都会调用 `Derived` 的函数。 它调用 `Derived` 的函数，因为 `NameOf` 是虚函数，并且 `pBase` 和 `pDerived` 都指向类型 `Derived` 的对象。
 
-由于仅对类类型的对象调用虚函数，因此不能将全局或静态函数声明为**虚拟**函数。
+由于仅对类类型的对象调用虚函数，因此不能将全局或静态函数声明为 **`virtual`** 。
 
-当在派生类中声明重写函数时，可以使用**virtual**关键字，但这是不必要的;虚函数的重写始终为虚函数。
+**`virtual`** 当在派生类中声明重写函数时，可以使用关键字，但这是不必要的; 虚函数的重写始终为虚函数。
 
 必须定义基类中的虚函数，除非它们是使用*纯说明符*声明的。 （有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。）
 
