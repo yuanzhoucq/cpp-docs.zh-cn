@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232425"
 ---
 # <a name="_putw"></a>_putw
 
@@ -65,13 +65,13 @@ int _putw(
 
 ## <a name="remarks"></a>备注
 
-**_Putw**函数将**int**类型的二进制值写入流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库兼容。 **_Putw**上可能会出现可移植性**问题，因为 int 和** **int**中的字节顺序的大小在不同系统之间不同。
+**_Putw**函数将类型的二进制值写入 **`int`** 流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库兼容。 **_Putw**可能会出现可移植性问题，因为的大小 **`int`** 和中的字节顺序在 **`int`** 不同系统之间存在差异。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 

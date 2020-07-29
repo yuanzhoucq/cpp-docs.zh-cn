@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 76eb3553090cd88cf0798b2b17bbd49906852e40
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427583"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212004"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 运算符
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试两个相同大小的 valarray 的对应元素是否不相等，或 valarray 的所有元素是否都不等于指定值。
 
@@ -63,29 +63,29 @@ operator!=(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，将对此 valarray 的元素进行不相等测试。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，将对此 valarray 的元素进行不相等测试。
 
 ### <a name="return-value"></a>返回值
 
 布尔值的 valarray，其中每个：
 
-- 如果对应的元素不相等，则为 **true**。
+- **`true`** 如果对应的元素不相等，则为。
 
-- 如果对应的元素相等，则为 **false**。
+- **`false`** 如果对应的元素不相等，则为。
 
 ### <a name="remarks"></a>备注
 
-第一个模板运算符返回类[valarray\<bool >](../standard-library/valarray-bool-class.md)的对象，其中每个元素 `I` 为 `left[I] != right[I]`。
+第一个模板运算符返回[valarray \<bool> ](../standard-library/valarray-bool-class.md)类的对象，其中每个元素 `I` 均为 `left[I] != right[I]` 。
 
-第二个模板运算符存储在元素 `I` `left[I] != right`中。
+第二个模板运算符存储在元素中 `I` `left[I] != right` 。
 
-第三个模板运算符存储在元素 `I` `left != right[I]`中。
+第三个模板运算符存储在元素中 `I` `left != right[I]` 。
 
 ### <a name="example"></a>示例
 
@@ -136,7 +136,7 @@ The element-by-element result of the not equal comparison test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="op_mod"></a>操作员
+## <a name="operator"></a><a name="op_mod"></a>操作员
 
 获取指定值除以两个大小相同的 valarray 的对应元素所得的余数或除以 valarray 所得的余数，或 valarray 除以指定值所得的余数。
 
@@ -160,17 +160,17 @@ operator%(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个值或 valarray，它充当另一个值或 valarray 的被除数。
 
-*right*\
+*然后*\
 一个值或 valarray，它充当另一个值或 valarray 的除数。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，其元素是按*右* *分隔的*元素的余数。
+一个 valarray，其元素是按*右**分隔的*元素的余数。
 
 ### <a name="example"></a>示例
 
@@ -221,7 +221,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_amp"></a> 运算符&amp;
+## <a name="operatoramp"></a><a name="op_amp"></a>操作员&amp;
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 **AND**。
 
@@ -245,12 +245,12 @@ operator&(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的每个元素将与按位 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的每个元素将与按位 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
 ### <a name="return-value"></a>返回值
@@ -259,9 +259,9 @@ operator&(
 
 ### <a name="remarks"></a>备注
 
-按位运算只能用于处理**char**和**int**数据类型中的位和变体，而不能使用**float**、 **double**、 **longdouble**、 **void**、 **bool**或其他更复杂的数据类型。
+按位运算仅可用于操作和数据类型中的位和 **`char`** **`int`** 变体，不能用于 **`float`** 、 **`double`** 、 **longdouble**、 **`void`** **`bool`** 或其他更复杂的数据类型。
 
-按位 `AND` 具有与逻辑 `AND` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 [operator&&](#op_amp_amp) 应用于元素级别，它将所有非零值视为 true，结果是布尔值的 valarray。 相反，按位 `AND`[运算符 &](#op_amp)会导致值不是0或1的 valarray，具体取决于按位运算的结果。
+按位 `AND` 具有与逻辑 `AND` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 [operator&&](#op_amp_amp) 应用于元素级别，它将所有非零值视为 true，结果是布尔值的 valarray。 相反，按位 `AND` [运算符&](#op_amp)会导致值不是0或1的 valarray，具体取决于按位运算的结果。
 
 ### <a name="example"></a>示例
 
@@ -312,7 +312,7 @@ The element-by-element result of the bitwise operator & is the
 valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
 ```
 
-## <a name="op_amp_amp"></a>操作员&amp;&amp;
+## <a name="operatorampamp"></a><a name="op_amp_amp"></a>操作员&amp;&amp;
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 **AND**。
 
@@ -336,21 +336,21 @@ operator&&(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的每个元素将与逻辑 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的每个元素将与逻辑 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
 ### <a name="return-value"></a>返回值
 
-其元素属于 bool 类型的 valarray，是*从左*到*右*逻辑 `AND` 操作的按元素组合。
+其元素属于 bool 类型的 valarray，是 `AND` *从左*到*右*逻辑运算的按元素组合。
 
 ### <a name="remarks"></a>备注
 
-逻辑 `ANDoperator&&` 适用于元素级别，将所有非零值计算为 true，结果为布尔值的 valarray。 与此相反，[运算符 &](#op_amp)的按位版本 `AND`，它可能会导致 valarray 的值不是0或1，具体取决于按位运算的结果。
+逻辑 `ANDoperator&&` 应用于元素级别，将所有非零值计算为 true，结果为布尔值的 valarray。 `AND`相反，[运算符&](#op_amp)的按位版本会导致 valarray 的值不是0或1，具体取决于按位运算的结果。
 
 ### <a name="example"></a>示例
 
@@ -401,7 +401,7 @@ The element-by-element result of the logical AND operator&& is the
 valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="op_gt"></a> 运算符&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
 
 测试某个 valarray 的元素是否大于某个与其大小相等的 valarray 的元素，或者 valarray 的所有元素都是否都大于或小于某个指定值。
 
@@ -425,21 +425,21 @@ operator>(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
 布尔值的 valarray，其中每个：
 
-- 如果*左侧*元素或值大于对应的*右*元素或值，**则为 true** 。
+- **`true`** 如果*左侧*元素或值大于对应的*右*元素或值，则为。
 
-- 如果*左侧*元素或值不大于对应的*右*元素或值，则**为 false** 。
+- **`false`** 如果*左侧*元素或值不大于对应的*右*元素或值，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -494,7 +494,7 @@ The element-by-element result of the greater than comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
 测试某个 valarray 的元素是否大于或等于某个与其大小相等的 valarray 的元素，或者 valarray 的所有元素都是否都大于等于或小于等于某个指定值。
 
@@ -518,21 +518,21 @@ operator>=(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
 布尔值的 valarray，其中每个：
 
-- 如果*左侧*元素或值大于或等于对应的*右*元素或值，**则为 true** 。
+- **`true`** 如果*左侧*元素或值大于或等于对应的*右*元素或值，则为。
 
-- 如果*左侧*元素或值小于对应的*右*元素或值，则**为 false** 。
+- **`false`** 如果*左侧*元素或值小于对应的*右*元素或值，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -587,7 +587,7 @@ The element-by-element result of the greater than or equal test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="op_gt_gt"></a>操作员&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>操作员&gt;&gt;
 
 将 valarray 的每个元素的位以指定数位向右移位，或按由第二个 valarray 指定的元素指向值向右移位。
 
@@ -611,12 +611,12 @@ operator>>(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 要移动的值，或要移动其元素的 valarray。
 
-*right*\
+*然后*\
 指示右移位数或 valarray（其元素指示右移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
@@ -676,7 +676,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
 
 测试某个 valarray 的元素是否小于某个与其大小相等的 valarray 的元素，或者 valarray 的所有元素都是否都大于或小于某个指定值。
 
@@ -700,21 +700,21 @@ operator<(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
 布尔值的 valarray，其中每个：
 
-- 如果*左侧*元素或值小于对应的*右*元素或值，**则为 true** 。
+- **`true`** 如果*左侧*元素或值小于对应的*右*元素或值，则为。
 
-- 如果*左侧*元素或值小于对应的*右*元素或值，则**为 false** 。
+- **`false`** 如果*左侧*元素或值小于对应的*右*元素或值，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -769,7 +769,7 @@ The element-by-element result of the less-than comparson test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
 
 测试某个 valarray 的元素是否小于或等于某个与其大小相等的 valarray 的元素，或者 valarray 的所有元素都是否都大于等于或小于等于某个指定值。
 
@@ -793,21 +793,21 @@ operator<=(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
 布尔值的 valarray，其中每个：
 
-- 如果*左侧*元素或值小于或等于对应的*右*元素或值，**则为 true** 。
+- **`true`** 如果*左侧*元素或值小于或等于对应的*右*元素或值，则为。
 
-- 如果*左侧*元素或值大于对应的*右*元素或值，则**为 false** 。
+- **`false`** 如果*左侧*元素或值大于对应的*右*元素或值，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -862,7 +862,7 @@ The element-by-element result of the less than or equal test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="op_lt_lt"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
 
 将 valarray 的每个元素的位以指定数位向左移位，或按由第二个 valarray 指定的元素指向值向左移位。
 
@@ -886,12 +886,12 @@ operator<<(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 要移动的值，或要移动其元素的 valarray。
 
-*right*\
+*然后*\
 指示左移位数或 valarray（其元素指示左移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
@@ -951,7 +951,7 @@ The element-by-element result of the left shift is the
 valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
 ```
 
-## <a name="op_star"></a>操作员
+## <a name="operator"></a><a name="op_star"></a>操作员
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和指定值之间的点积。
 
@@ -975,12 +975,12 @@ operator*(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的元素将进行乘法运算；或一个指定值，此值将与 valarray 的每个元素相乘。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的元素将进行乘法运算；或一个指定值，此值将与 valarray 的每个元素相乘。
 
 ### <a name="return-value"></a>返回值
@@ -1036,7 +1036,7 @@ The element-by-element result of the multiplication is the
 valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
 ```
 
-## <a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a>operator +
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的点和。
 
@@ -1060,12 +1060,12 @@ operator+(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的元素将进行加法运算；或一个指定值，此值将与 valarray 的每个元素相加。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的元素将进行加法运算；或一个指定值，此值将与 valarray 的每个元素相加。
 
 ### <a name="return-value"></a>返回值
@@ -1121,7 +1121,7 @@ The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
 ```
 
-## <a name="operator-"></a>操作员
+## <a name="operator-"></a><a name="operator-"></a>操作员
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的点差。
 
@@ -1145,12 +1145,12 @@ operator-(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个值或 valarray，它充当另一个值或 valarray 的被减数，并得出差值。
 
-*right*\
+*然后*\
 一个值或 valarray，它充当另一个值或 valarray 的减数，并得出差值。
 
 ### <a name="return-value"></a>返回值
@@ -1212,7 +1212,7 @@ The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
 ```
 
-## <a name="op_div"></a>操作员
+## <a name="operator"></a><a name="op_div"></a>操作员
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的点商。
 
@@ -1236,12 +1236,12 @@ operator/(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个值或 valarray，它充当另一个值或 valarray 的被除数，并得出商。
 
-*right*\
+*然后*\
 一个值或 valarray，它充当另一个值或 valarray 的除数，并得出商。
 
 ### <a name="return-value"></a>返回值
@@ -1303,7 +1303,7 @@ The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试两个相同大小的 valarray 的对应元素是否相等，或 valarray 的所有元素是否都等于指定值。
 
@@ -1327,25 +1327,25 @@ operator==(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，将对此 valarray 的元素进行相等性测试。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，将对此 valarray 的元素进行相等性测试。
 
 ### <a name="return-value"></a>返回值
 
 布尔值的 valarray，其中每个：
 
-- 如果对应的元素相等，则为 **true**。
+- **`true`** 如果对应的元素相等，则为。
 
-- 如果对应的元素不相等，则为 **false**。
+- **`false`** 如果对应的元素不相等，则为。
 
 ### <a name="remarks"></a>备注
 
-第一个模板运算符返回类[valarray\<bool >](../standard-library/valarray-bool-class.md)的对象，其中每个元素 `I` 为 `left[I] == right[I]`。 第二个模板运算符存储在元素 `I` `left[I] == right`中。 第三个模板运算符存储在元素 `I` `left == right[I]`中。
+第一个模板运算符返回[valarray \<bool> ](../standard-library/valarray-bool-class.md)类的对象，其中每个元素 `I` 均为 `left[I] == right[I]` 。 第二个模板运算符存储在元素中 `I` `left[I] == right` 。 第三个模板运算符存储在元素中 `I` `left == right[I]` 。
 
 ### <a name="example"></a>示例
 
@@ -1396,7 +1396,7 @@ The element-by-element result of the equality comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="op_xor"></a>运算符 ^
+## <a name="operator"></a><a name="op_xor"></a>运算符 ^
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位异 `OR` ( **XOR**)。
 
@@ -1420,12 +1420,12 @@ operator^(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的每个元素将与按位 **XOR** 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的每个元素将与按位 **XOR** 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
 ### <a name="return-value"></a>返回值
@@ -1434,9 +1434,9 @@ operator^(
 
 ### <a name="remarks"></a>备注
 
-按位运算只能用于处理**char**和**int**数据类型中的位和变体，而不能用于**浮点**、**双**精度、**长双精度**、 **void**、 **bool**或其他更复杂的数据类型。
+按位运算仅可用于操作和数据类型中的位和 **`char`** **`int`** 变体，而不能用于 **`float`** 、 **`double`** 、、 **`long double`** **`void`** **`bool`** 或其他更复杂的数据类型。
 
-按位 "异 `OR` （ **XOR**）具有以下语义：给定位*b*1 和*b*2， *b*1 **XOR** *b*2 为**true** ; 如果其中只有一个位为 true，则为 true;如果两个位都为 false 或都为 true，则**为 false** 。
+按位 "异 `OR` 或" （ **XOR**）具有以下语义：给定位*b*1 和*b*2， *b*1 **XOR** *b*2 是 **`true`** 只有一个位为 true; 如果两个位都为 true，则为 **`false`** true。
 
 ### <a name="example"></a>示例
 
@@ -1491,7 +1491,7 @@ The element-by-element result of the bitwise XOR operator^ is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
 ```
 
-## <a name="op_or"></a>操作员&#124;
+## <a name="operator124"></a><a name="op_or"></a>运算符&#124;
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 `OR`。
 
@@ -1515,23 +1515,23 @@ operator|(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的每个元素将与按位 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的每个元素将与按位 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，其元素是*左*和*右*按位 `OR` 运算的按元素组合。
+一个 valarray，其元素是 `OR` *左侧*和*右侧*的按位运算的按元素组合。
 
 ### <a name="remarks"></a>备注
 
-按位运算只能用于处理**char**和**int**数据类型中的位和变体，而不能使用**float**、 **double**、 **longdouble**、 **void**、 **bool**或其他更复杂的数据类型。
+按位运算仅可用于操作和数据类型中的位和 **`char`** **`int`** 变体，不能用于 **`float`** 、 **`double`** 、 **longdouble**、 **`void`** **`bool`** 或其他更复杂的数据类型。
 
-按位 OR 具有与逻辑 `OR` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 如果至少有一个位为 true，则给定位*b*1 和*b* *2，b*1 `OR` *b*2 为**true** ; 如果两个位都为 false，则为**false** 。 逻辑 `OR`[operator||](../standard-library/valarray-operators.md#op_lor) 在元素级别上适用，将所有非零值视为 **true**，结果为布尔值的 valarray。 相反，按位 OR `operator|` 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。
+按位 OR 具有与逻辑 `OR` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 给定位*b*1 和*b*2， *b* `OR` *b* **`true`** 如果至少有一个位为 true 或两个位都为 false，则 b 1 b 2 为 **`false`** 。 逻辑 `OR` [运算符&#124;&#124;](../standard-library/valarray-operators.md#op_lor)适用于元素级别，将所有非零值计算为 **`true`** ，结果为布尔值的 valarray。 相反，按位 OR `operator|` 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。
 
 ### <a name="example"></a>示例
 
@@ -1586,7 +1586,7 @@ The element-by-element result of the bitwise OR operator| is the
 valarray: ( 1 0 1 3 3 4 7 6 7 9 ).
 ```
 
-## <a name="op_lor"></a>操作员&#124;&#124;
+## <a name="operator124124"></a><a name="op_lor"></a>运算符&#124;&#124;
 
 获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 `OR`。
 
@@ -1610,21 +1610,21 @@ operator||(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个 valarray 中的第一个，它的每个元素将与逻辑 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
-*right*\
+*然后*\
 两个 valarray 中的第二个，它的每个元素将与逻辑 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
 ### <a name="return-value"></a>返回值
 
-其元素属于**bool**类型的 valarray，是*左侧*和*右侧*逻辑或运算的按元素组合。
+一个 valarray，其元素的类型为 **`bool`** ，并且是*左*和*右*逻辑或运算的按元素组合。
 
 ### <a name="remarks"></a>备注
 
-逻辑 `OR` `operator||` 应用于元素级别，将所有非零值计算为**true**，结果为布尔值的 valarray。 相反，按位版本的 `OR`、[operator|](../standard-library/valarray-operators.md#op_or) 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。
+逻辑 `OR` `operator||` 应用于元素级别，将所有非零值计算为 **`true`** ，结果为布尔值的 valarray。 相反，按位版本的 `OR`、[operator|](../standard-library/valarray-operators.md#op_or) 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。
 
 ### <a name="example"></a>示例
 

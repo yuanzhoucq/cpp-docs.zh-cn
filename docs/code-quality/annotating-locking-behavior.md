@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404019"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232360"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
 
@@ -62,7 +62,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 
 下表列出了锁定批注。
 
-|Annotation|说明|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Acquires_exclusive_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的排他锁计数递增 1。|
 |`_Acquires_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的锁计数递增 1。|
@@ -87,7 +87,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 
 某些锁对象不通过关联锁定函数的实现公开。  下表列出可对在未公开的锁对象上运行的函数启用批注的 SAL 内部变量。
 
-|Annotation|说明|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Global_cancel_spin_lock_`|说明取消自旋锁。|
 |`_Global_critical_region_`|说明临界区。|
@@ -98,7 +98,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 
 下表列出了用于共享数据访问的批注。
 
-|Annotation|说明|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|批注变量并表明变量每次受到访问时，`expr` 命名的锁对象的锁计数至少为 1。|
 |`_Interlocked_`|批注变量，与 `_Guarded_by_(_Global_interlock_)` 等效。|
@@ -109,14 +109,14 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 
 智能锁通常会包装本机锁并管理其生存期。 下表列出了可用于支持语义的智能锁和 RAII 编码模式的批注 `move` 。
 
-|Annotation|说明|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|通知分析器假设已获取智能锁定。 此批注需要引用锁类型作为其参数。|
 |`_Analysis_assume_smart_lock_released_`|通知分析器假设已释放智能锁定。 此批注需要引用锁类型作为其参数。|
 |`_Moves_lock_(target, source)`|描述将 `move constructor` 锁定状态从 `source` 对象传输到的操作 `target` 。 `target`被视为新构造的对象，因此它之前的任何状态都将丢失并替换为 `source` 状态。 `source`还将重置为无锁计数或别名目标的干净状态，但指向它的别名仍保持不变。|
 |`_Replaces_lock_(target, source)`|描述在 `move assignment operator` 从源传输状态之前释放目标锁的语义。 这可以被视为后跟的组合 `_Moves_lock_(target, source)` `_Releases_lock_(target)` 。|
 |`_Swaps_locks_(left, right)`|描述 `swap` 假设对象 `left` 并 `right` 交换其状态的标准行为。 交换状态包括 "锁计数" 和 "别名目标" （如果存在）。 指向和对象的别名 `left` `right` 保持不变。|
-|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于 `std::unique_ptr` 其内部指针的工作方式：它允许程序员提取指针并使其智能指针容器处于干净状态。 支持类似的逻辑 `std::unique_lock` ，并且可在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为完全相同， `_Moves_lock_` 只不过分离的参数应为 `return` 而不是 `this` 。|
+|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于 `std::unique_ptr` 其内部指针的工作方式：它允许程序员提取指针并使其智能指针容器处于干净状态。 支持类似的逻辑 `std::unique_lock` ，并且可在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为完全相同， `_Moves_lock_` 只不过分离的参数应为 **`return`** 而不是 **`this`** 。|
 
 ## <a name="see-also"></a>另请参阅
 

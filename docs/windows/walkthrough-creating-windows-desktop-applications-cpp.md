@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813604"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231567"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建传统的 Windows 桌面应用程序（c + +）
 
@@ -73,7 +73,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
 1. 在 "**新建项目**" 对话框的左窗格中，展开 "**已安装**  >  "**Visual C++**，然后选择 " **Windows 桌面**"。 在中间窗格中，选择 " **Windows 桌面向导**"。
 
-   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择 **“确定”** 。
+   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择“确定”。
 
    ![为 DesktopApp 项目命名](../build/media/desktop-app-new-project-name-153.png "为 DesktopApp 项目命名")
 
@@ -99,7 +99,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
 1. 在 "**新建项目**" 对话框的左窗格中，展开 "**已安装**  >  的**模板**"  >  **Visual C++**，然后选择 " **Win32**"。 在中间窗格中，选择“Win32 项目” ****。
 
-   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择 **“确定”** 。
+   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择“确定”。
 
    ![为 DesktopApp 项目命名](../build/media/desktop-app-new-project-name-150.png "为 DesktopApp 项目命名")
 
@@ -141,9 +141,9 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
    有关此函数的参数和返回值的信息，请参阅[WinMain 入口点](/windows/win32/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 所有这些额外的词，例如 `CALLBACK` 、或 `HINSTANCE` `_In_` 。 传统的 Windows API 广泛使用 typedef 和预处理器宏来抽象掉某些类型和特定于平台的代码的详细信息，例如调用约定、 **__declspec**声明和编译器杂注。 在 Visual Studio 中，可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏定义的内容。 将鼠标悬停在感兴趣的字词上，或选择它，**然后按 ctrl** + **K**， **ctrl** + **I**获取包含定义的小的弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 批注*来帮助您捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/c + + 代码缺陷](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 所有这些额外的词，例如 `CALLBACK` 、或 `HINSTANCE` `_In_` 。 传统的 Windows API 广泛使用 typedef 和预处理器宏来抽象掉某些类型的详细信息和特定于平台的代码，例如调用约定、 **`__declspec`** 声明和编译器杂注。 在 Visual Studio 中，可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏定义的内容。 将鼠标悬停在感兴趣的字词上，或选择它，**然后按 ctrl** + **K**， **ctrl** + **I**获取包含定义的小的弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 批注*来帮助您捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/c + + 代码缺陷](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
-1. Windows 桌面程序需要 &lt;>。 &lt;tchar> 定义 `TCHAR` 宏，如果在项目中定义了 UNICODE 符号，则该宏将最终解析为**wchar_t** ，否则它将解析为**char**。  如果你始终启用了 UNICODE 生成，则无需 TCHAR，只需直接使用**wchar_t**即可。
+1. Windows 桌面程序需要 &lt;>。 &lt;tchar> 定义 `TCHAR` 宏， **`wchar_t`** 如果在项目中定义了 UNICODE 符号，则该宏将最终解析为，否则它将解析为 **`char`** 。  如果你始终启用了 UNICODE 生成，则无需 TCHAR，只需直接使用即可 **`wchar_t`** 。
 
    ```cpp
    #include <windows.h>
@@ -588,8 +588,8 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![运行 DesktopApp 项目](../build/media/desktop-app-project-run-157.PNG "运行 DesktopApp 项目")
 
-恭喜！ 您已经完成了本演练，并构建了传统的 Windows 桌面应用程序。
+祝贺你！ 您已经完成了本演练，并构建了传统的 Windows 桌面应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Windows 桌面应用程序](../windows/windows-desktop-applications-cpp.md)

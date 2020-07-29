@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954769"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232516"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -75,22 +75,22 @@ int ilogbl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则以有符号**整数**值的形式返回*x*的以2为底的指数。
+如果成功，则返回*x*的以2为底的指数作为 **`signed int`** 值。
 
-否则将返回在 \<math.h> 中定义的以下值之一：
+否则，将返回中定义的以下值之一 \<math.h> ：
 
 |输入|结果|
 |-----------|------------|
 |±0|FP_ILOGB0|
 |± inf，± nan，不定|FP_ILOGBNAN|
 
-按 [_matherr](matherr.md) 中指定的内容报告错误。
+按 [_matherr](matherr.md) 中所指定的报告错误。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**ilogb**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **ilogb**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的**ilogb**的重载 **`float`** **`long double`** 。 在 C 程序中， **ilogb**始终采用并返回 **`double`** 。
 
-调用此函数类似于调用等效的**logb**函数，然后将返回值强制转换为**int**。
+调用此函数类似于调用等效的**logb**函数，然后将返回值强制转换为 **`int`** 。
 
 ## <a name="requirements"></a>要求
 
@@ -98,10 +98,10 @@ int ilogbl(
 |-------------|--------------|------------------|
 |**ilogb**、 **ilogbf**、 **ilogbl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>
 [logb、logbf、logbl、_logb、_logbf](logb-logbf-logbl-logb-logbf.md)<br/>

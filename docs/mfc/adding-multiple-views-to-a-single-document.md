@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 83bb7e54567319a7af4bd3d8a6bf02256fef68fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623359"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215967"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>向单个文档添加多个视图
 
@@ -65,7 +65,7 @@ ms.locfileid: "84623359"
 
 将类添加到项目后，需要更改某些视图类成员的可访问性。
 
-修改*NEWVIEW。H* ：将访问说明符从**protected** to **public**更改为构造函数和析构函数。 这允许动态创建和销毁类，并在视图外观可见之前修改其外观。
+修改*NEWVIEW。H* ：将访问说明符从更改 **`protected`** 为， **`public`** 为构造函数和析构函数。 这允许动态创建和销毁类，并在视图外观可见之前修改其外观。
 
 保存更改，然后继续下一步。
 

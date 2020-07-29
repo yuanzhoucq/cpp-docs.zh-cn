@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951942"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232464"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -75,13 +75,13 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*<br/>
 指向缓冲区的指针。
 
-*c*<br/>
+*ansi-c*<br/>
 要查找的字符。
 
-*count*<br/>
+*计数*<br/>
 要检查的字符数。
 
 ## <a name="return-value"></a>返回值
@@ -90,9 +90,9 @@ const wchar_t *wmemchr(
 
 ## <a name="remarks"></a>备注
 
-`memchr`并`wmemchr`在*缓冲区*的第一个*计数*字符中查找*c*的第一个匹配项。 它在找到*c*或已检查第一个*计数*字符时停止。
+`memchr`并 `wmemchr` 在*缓冲区*的第一个*计数*字符中查找*c*的第一个匹配项。 它在找到*c*或已检查第一个*计数*字符时停止。
 
-在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些\_函数\_的\_**常量**和非常**量**版本都可用，则会定义宏 CRT 常量正确\_重载。 如果对C++中C++的两个重载都需要非常**量**行为，请定义符号\_const\_返回。
+在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向 **`const`** 非的指针 **`const`** 。 \_ \_ \_ \_ 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 CRT 常量正确重载 **`const`** 。 如果 **`const`** 在 c + + 中需要两个 c + + 重载的非行为，请定义符号 \_ CONST \_ 返回。
 
 ## <a name="requirements"></a>要求
 

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 28c162f6a868c8d6640ba17af875d84fef78c79a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49fef050393f7196fe26aa172ac02792ae5c717e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458862"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212223"
 ---
-# <a name="isvoid-class"></a>is_void 类
+# <a name="is_void-class"></a>is_void 类
 
 测试类型是否为 void。
 
@@ -32,7 +32,7 @@ struct is_void;
 
 ## <a name="remarks"></a>备注
 
-如果类型*T*为**void**或 cv 限定的**void**格式, 则类型谓词的实例为 true; 否则为 false。
+如果类型*T*是或的 cv 限定格式，则类型谓词的实例为 true **`void`** **`void`** ; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -68,10 +68,10 @@ is_void<void> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

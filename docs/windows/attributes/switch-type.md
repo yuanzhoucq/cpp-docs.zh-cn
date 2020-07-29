@@ -1,17 +1,17 @@
 ---
-title: switch_type （C++ COM 特性）
+title: switch_type （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214521"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211926"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -25,16 +25,16 @@ type
 }]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-type<br/>
+*type*<br/>
 开关类型可以是整数、字符、布尔值或枚举类型。
 
 ## <a name="remarks"></a>备注
 
-**Switch_type** C++特性具有与[switch_type](/windows/win32/Midl/switch-type) MIDL 特性相同的功能。
+**Switch_type** c + + 特性具有与[switch_type](/windows/win32/Midl/switch-type) MIDL 特性相同的功能。
 
-C++属性不支持[封装的联合](/windows/win32/Midl/encapsulated-unions)。 仅支持以下格式的[Nonencapsulated 联合](/windows/win32/Midl/nonencapsulated-unions)：
+C + + 特性不支持[封装的联合](/windows/win32/Midl/encapsulated-unions)。 仅支持以下格式的[Nonencapsulated 联合](/windows/win32/Midl/nonencapsulated-unions)：
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -63,9 +63,9 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**适用对象**|**typedef**|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**`typedef`**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
@@ -74,4 +74,4 @@ struct SizedValue2 {
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[先导](export.md)

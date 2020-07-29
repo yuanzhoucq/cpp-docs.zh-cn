@@ -1,27 +1,27 @@
 ---
-title: '&lt;new&gt;'
+title: '&lt;全新&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <new>
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457689"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212158"
 ---
-# <a name="ltnewgt"></a>&lt;new&gt;
+# <a name="ltnewgt"></a>&lt;全新&gt;
 
 定义一些类型和函数，它们控制程序控件下存储空间的分配和释放。 它还定义了用于报告存储管理错误的组件。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<new>
+**标头：**\<new>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="remarks"></a>备注
 
@@ -33,7 +33,7 @@ ms.locfileid: "68457689"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|提供一个对象, 该对象用作**new**和**delete**的**nothrow**版本的参数。|
+|[nothrow](../standard-library/new-functions.md#nothrow)|提供一个对象，该对象用作和的版本的参数 **`nothrow`** **`new`** **`delete`** 。|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -74,7 +74,7 @@ ms.locfileid: "68457689"
 |[bad_array_new_length 类](../standard-library/bad-array-new-length.md)||
 |[nothrow_t Class](../standard-library/nothrow-t-structure.md)|该类用作运算符 new 的函数参数，指示函数应返回一个 null 指针来报告分配失败，而不是引发异常。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 1bae98663b8dc2b09efeff9139e8d028abcd862e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168813"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229995"
 ---
 # <a name="cadapt-class"></a>CAdapt 类
 
@@ -39,15 +39,15 @@ class CAdapt
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAdapt::CAdapt](#cadapt)|构造函数。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CAdapt：： operator const T&](#operator_const_t_amp)|返回对**const** `m_T`的常量引用。|
+|[CAdapt：： operator const T&](#operator_const_t_amp)|返回 **`const`** 对的引用 `m_T` 。|
 |[CAdapt：： operator T&](#operator_t_amp)|返回对 `m_T` 的引用。|
 |[CAdapt：： operator <](#operator_lt)|将已适配类型的对象与 `m_T` 作比较。|
 |[CAdapt：： operator =](#operator_eq)|将已适配类型的对象分配给 `m_T`。|
@@ -55,15 +55,15 @@ class CAdapt
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CAdapt：： m_T](#m_t)|正在适配的数据。|
 
 ## <a name="remarks"></a>备注
 
-`CAdapt` 是用于包装类（将 address-of 运算符 (`operator &`) 重新定义为返回对象地址以外的内容）的简单模板。 这样的类的示例包括 ATL 的 `CComBSTR`、`CComPtr` 和 `CComQIPtr` 类，以及编译器 COM 支持类 `_com_ptr_t`。 这些类都将重定义该地址的运算符，以返回其一个数据成员的地址（对于为`CComBSTR`，则为一个 BSTR，在其他类的情况下为一个接口指针）。
+`CAdapt` 是用于包装类（将 address-of 运算符 (`operator &`) 重新定义为返回对象地址以外的内容）的简单模板。 这样的类的示例包括 ATL 的 `CComBSTR`、`CComPtr` 和 `CComQIPtr` 类，以及编译器 COM 支持类 `_com_ptr_t`。 这些类都将重定义该地址的运算符，以返回其一个数据成员的地址（对于为，则为一个 BSTR `CComBSTR` ，在其他类的情况下为一个接口指针）。
 
-`CAdapt`的主要作用是隐藏类*T*定义的地址运算符，但仍保留改编类的特征。 `CAdapt`fulfils 此角色的方法是：保存一个[m_T](#m_t)公共成员，m_T *T*，并定义转换运算符、比较运算符和复制构造函数，以允许将的`CAdapt`专用化视为类型为*T*的对象。
+`CAdapt`的主要作用是隐藏类*T*定义的地址运算符，但仍保留改编类的特征。 `CAdapt`fulfils 此角色的方法是：保存一个[m_T](#m_t)公共成员，m_T *T*，并定义转换运算符、比较运算符和复制构造函数，以允许将的专用化 `CAdapt` 视为类型为*T*的对象。
 
 适配器类 `CAdapt` 很有用，因为某些容器样式类期望能够使用 address-of 运算符获取其包含的对象的地址。 重新定义 address-of 运算符可能使此需求无法得到满足，而且通常会导致编译错误并阻止将非适配类型用于期望它“正常工作”的类。 `CAdapt` 围绕这些问题提供了一种方法。
 
@@ -103,11 +103,11 @@ T m_T;
 
 ### <a name="remarks"></a>备注
 
-可以直接或间接访问此**公共**数据成员， [&](#operator_const_t_amp)和[运算符 t&](#operator_t_amp)。
+此 **`public`** 数据成员可以直接或间接地通过[Operator const T&](#operator_const_t_amp)和[operator t&](#operator_t_amp)进行访问。
 
 ## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt：： operator const T&amp;
 
-返回对[m_T](#m_t)成员的**const**引用，允许将适配器对象视为类型为*T*的对象。
+返回 **`const`** 对[m_T](#m_t)成员的引用，允许将适配器对象视为类型为*T*的对象。
 
 ```cpp
 operator const T&() const;
@@ -115,7 +115,7 @@ operator const T&() const;
 
 ### <a name="return-value"></a>返回值
 
-对**const** `m_T`的常量引用。
+对的 **`const`** 引用 `m_T` 。
 
 ## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt：： operator T&amp;
 
@@ -144,7 +144,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="return-value"></a>返回值
 
-与`m_T` *.rsrc*之间的比较结果。
+与 .Rsrc 之间的比较结果 `m_T` 。 *rSrc*
 
 ## <a name="cadaptoperator-"></a><a name="operator_eq"></a>CAdapt：： operator =
 

@@ -2,12 +2,12 @@
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404816"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231632"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
-（在 Microsoft Visual C++ 6.0 及更早版本中， **wchar_t**未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。）C + + 标准要求**wchar_t**为内置类型。 使用 typedef 版本可能导致可移植性问题。 如果你从 Visual Studio 的早期版本进行升级，并遇到编译器错误 C2664（理由是代码尝试将 wchar_t 隐式转换为 unsigned short），则建议更改代码来修正错误，而不是设置 `/Zc:wchar_t-`********。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+（在 Microsoft Visual C++ 6.0 及更早版本中， **`wchar_t`** 未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。）C + + 标准要求 **`wchar_t`** 是内置类型。 使用 typedef 版本可能导致可移植性问题。 如果从 Visual Studio 的早期版本升级并遇到编译器错误 C2664，因为代码尝试将隐式转换 **`wchar_t`** 为，所以 **`unsigned short`** 建议更改代码以修复错误，而不是设置 `/Zc:wchar_t-` 。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用链接器选项 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升级。
 

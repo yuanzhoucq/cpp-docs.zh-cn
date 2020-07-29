@@ -38,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232529"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
@@ -58,13 +58,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>返回值
 
-fgetchar 返回作为**int**读取的字符，或返回`EOF`以指示错误或文件尾。 ** \_** fgetwchar 返回[wint_t](../../c-runtime-library/standard-types.md)，它是与读取字符对应的宽字符，或返回`WEOF`以指示错误或文件尾。 ** \_** 对于这两个函数，请使用**feof**或**ferror**来区分错误和文件尾条件。
+** \_ fgetchar**返回作为读取的字符， **`int`** 或返回 `EOF` 以指示错误或文件尾。 ** \_ fgetwchar**返回[wint_t](../../c-runtime-library/standard-types.md)，它是与读取字符对应的宽字符，或返回 `WEOF` 以指示错误或文件尾。 对于这两个函数，请使用**feof**或**ferror**来区分错误和文件尾条件。
 
 ## <a name="remarks"></a>备注
 
 这些函数从**stdin**中读取单个字符。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
 
-**_fgetchar**与等效`fgetc( stdin )`。 它还等效于**getchar**，但仅作为函数实现，而不是作为函数和宏实现。 **_fgetwchar**是 **_fgetchar**的宽字符版本。
+**_fgetchar**与等效 `fgetc( stdin )` 。 它还等效于**getchar**，但仅作为函数实现，而不是作为函数和宏实现。 **_fgetwchar**是 **_fgetchar**的宽字符版本。
 
 这些函数不符合 ANSI 标准。
 

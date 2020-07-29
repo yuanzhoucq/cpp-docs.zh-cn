@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216396"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>如何：定义和使用委托 (C++/CLI)
 
-本文介绍如何定义和使用委托中的C++/CLI。
+本文介绍如何在 c + +/CLI 中定义和使用委托。
 
-尽管.NET Framework 提供了多个委托，但有时您可能需要定义新委托。
+尽管 .NET Framework 提供了许多委托，但有时你可能需要定义新的委托。
 
-下面的代码示例定义名为的委托`MyCallback`。 事件处理代码 — 时激发此新的委托调用的函数-必须具有返回类型为`void`，并采取<xref:System.String>引用。
+下面的代码示例定义一个名为的委托 `MyCallback` 。 事件处理代码（触发此新委托时调用的函数）的返回类型必须为 **`void`** 并采用 <xref:System.String> 引用。
 
-主函数使用定义的静态方法`SomeClass`若要实例化`MyCallback`委托。 委托则成为调用此函数的另一种方法，如所示:"单个"将字符串发送到委托对象。 接下来，其他实例的`MyCallback`链接在一起，然后执行一次调用的委托对象。
+Main 函数使用定义的静态方法 `SomeClass` 来实例化 `MyCallback` 委托。 然后，委托将成为调用此函数的替代方法，通过将字符串 "single" 发送到委托对象进行演示。 接下来，的其他实例 `MyCallback` 链接在一起，然后通过调用委托对象来执行。
 
 ```cpp
 // use_delegate.cpp
@@ -81,7 +81,7 @@ OtherClass::Method - chained, num = 99
 OtherClass::Method - chained, num = 100
 ```
 
-下一步的代码示例演示如何将委托的值类成员与相关联。
+下面的代码示例演示如何将委托与值类的成员相关联。
 
 ```cpp
 // mcppv2_del_mem_value_class.cpp
@@ -111,9 +111,9 @@ test
 test
 ```
 
-## <a name="how-to-compose-delegates"></a>如何构造委托
+## <a name="how-to-compose-delegates"></a>如何编写委托
 
-可以使用"`-`"运算符以从组合的委托中删除组件委托。
+您可以使用 " `-` " 运算符从组合委托中删除组件委托。
 
 ```cpp
 // mcppv2_compose_delegates.cpp
@@ -165,11 +165,11 @@ Invoking delegate d:
   Goodbye, D!
 ```
 
-## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>将委托传递 ^ 到需要函数指针的本机函数
+## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>将委托 ^ 传递到需要函数指针的本机函数
 
-从托管组件可以调用函数的本机函数的指针参数的本机函数然后可以调用成员函数的托管的组件的委托。
+从托管组件中，可以使用函数指针参数调用本机函数，其中本机函数随后可以调用托管组件的委托的成员函数。
 
-此示例将创建.dll 文件，可以将导出的本机函数：
+此示例创建导出本机函数的 .dll：
 
 ```cpp
 // delegate_to_native_function.cpp
@@ -183,7 +183,7 @@ extern "C" {
 }
 ```
 
-下一个示例使用.dll 文件，并将委托句柄传递给需要函数指针的本机函数。
+下一个示例使用 .dll，并向需要函数指针的本机函数传递委托句柄。
 
 ```cpp
 // delegate_to_native_function_2.cpp
@@ -215,9 +215,9 @@ int main() {
 Call to Managed Function
 ```
 
-## <a name="to-associate-delegates-with-unmanaged-functions"></a>若要将委托与非托管函数相关联
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>将委托与非托管函数关联
 
-若要将委托与本机函数相关联，必须在托管类型中包装的本机函数并声明该函数通过调用`PInvoke`。
+若要将委托与本机函数关联，必须将本机函数包装在托管类型中，并声明要通过调用的函数 `PInvoke` 。
 
 ```cpp
 // mcppv2_del_to_umnangd_func.cpp
@@ -259,21 +259,21 @@ int main() {
 hello
 ```
 
-## <a name="to-use-unbound-delegates"></a>若要使用未绑定的委托
+## <a name="to-use-unbound-delegates"></a>使用未绑定的委托
 
-可以使用未绑定的委托将传递您想要调用时调用该委托的函数的类型的实例。
+在调用委托时，可以使用未绑定的委托传递要调用其函数的类型的实例。
 
-未绑定的委托时特别有用，如果你想要循环访问集合中的对象 — 通过使用[对于每个，在](../dotnet/for-each-in.md)关键字-和每个实例上调用成员函数。
+如果您想要循环访问集合中的对象（通过[在关键字中](../dotnet/for-each-in.md)使用）并在每个实例上调用成员函数，则未绑定的委托特别有用。
 
-下面介绍了如何声明、 实例化，并调用绑定和未绑定的委托：
+下面介绍了如何声明、实例化和调用绑定委托和未绑定委托：
 
-|操作|绑定的委托|未绑定的委托|
+|操作|绑定委托|未绑定的委托|
 |------------|---------------------|-----------------------|
-|声明|委托签名必须与你想要通过委托调用的函数的签名匹配。|委托签名的第一个参数是一种`this`你想要调用的对象。<br /><br /> 后的第一个参数的委托签名必须与你想要通过委托调用的函数的签名匹配。|
-|实例化|当您实例化绑定的委托时，可以指定实例函数或全局或静态成员函数。<br /><br /> 若要指定实例函数，第一个参数是您想要调用的成员函数的类型的实例，第二个参数是您想要调用的函数的地址。<br /><br /> 如果你想要调用的全局或静态成员函数，只需传递全局函数的名称或静态成员函数的名称。|当您实例化未绑定的委托时，只需传递您想要调用的函数的地址。|
-|调用|当调用绑定的委托时，只需传递所需的委托签名的参数。|绑定相同委托，但请记住，第一个参数必须是包含你想要调用的函数对象的实例。|
+|Declare|委托签名必须与要通过委托调用的函数的签名匹配。|委托签名的第一个参数是 **`this`** 要调用的对象的类型。<br /><br /> 在第一个参数之后，委托签名必须与你要通过委托调用的函数的签名匹配。|
+|上述|实例化绑定委托时，可以指定实例函数或全局或静态成员函数。<br /><br /> 若要指定实例函数，第一个参数是要调用其成员函数的类型的实例，第二个参数是要调用的函数的地址。<br /><br /> 如果要调用全局或静态成员函数，只需传递全局函数的名称或静态成员函数的名称。|实例化未绑定的委托时，只需传递要调用的函数的地址。|
+|调用|调用绑定委托时，只传递委托签名所需的参数。|与绑定委托相同，但请记住，第一个参数必须是包含要调用的函数的对象的实例。|
 
-此示例演示如何声明、 实例化，并调用未绑定的委托：
+此示例演示如何声明、实例化和调用未绑定的委托：
 
 ```cpp
 // unbound_delegates.cpp
@@ -351,7 +351,7 @@ int main() {
 7
 ```
 
-下一个示例演示如何使用未绑定的委托与[对于每个，在](../dotnet/for-each-in.md)关键字来循环访问集合中的对象并对每个实例中调用成员函数。
+下一个示例演示如何使用未绑定的委托，并[在关键字中](../dotnet/for-each-in.md)循环访问集合中的对象并在每个实例上调用成员函数。
 
 ```cpp
 // unbound_delegates_2.cpp
@@ -383,7 +383,7 @@ int main() {
 }
 ```
 
-此示例将创建一个属性访问器函数未绑定的委托：
+此示例将创建一个未绑定的委托给属性的访问器函数：
 
 ```cpp
 // unbound_delegates_3.cpp
@@ -418,7 +418,7 @@ int main() {
 11
 ```
 
-下面的示例演示如何调用多路广播的委托，其中一个实例绑定，一个实例是未绑定。
+下面的示例演示如何调用多播委托，其中一个实例是绑定的，一个实例未绑定。
 
 ```cpp
 // unbound_delegates_4.cpp
@@ -502,6 +502,6 @@ int main() {
 14
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [委托（C++ 组件扩展）](../extensions/delegate-cpp-component-extensions.md)
