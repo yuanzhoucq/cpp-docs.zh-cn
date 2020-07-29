@@ -1,17 +1,17 @@
 ---
-title: switch_is （C++ COM 特性）
+title: switch_is （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85ee066a12d4297d9a782ae07ef0fa16798f1616
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214534"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228045"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214534"
 
 ## <a name="remarks"></a>备注
 
-**Switch_is** C++特性具有与[switch_is](/windows/win32/Midl/switch-is) MIDL 特性相同的功能。
+**Switch_is** c + + 特性具有与[switch_is](/windows/win32/Midl/switch-is) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -37,9 +37,9 @@ ms.locfileid: "80214534"
 
 |||
 |-|-|
-|**适用对象**|**typedef**|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**`typedef`**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

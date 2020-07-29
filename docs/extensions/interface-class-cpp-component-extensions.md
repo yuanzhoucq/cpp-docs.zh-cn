@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172160"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228695"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class（C++/CLI 和 C++/CX）
 
@@ -29,29 +29,29 @@ interface class
 name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-interface_access<br/>
-程序集外部接口的可访问性。  可取值为 public 和 private。  private 是默认值。 嵌套接口不得包含 interface_access 说明符。
+interface_access**<br/>
+程序集外部接口的可访问性。  可能的值为 **`public`** 和 **`private`** 。  **`private`** 默认值为。 嵌套接口不得包含 interface_access** 说明符。
 
-name<br/>
+*name*<br/>
 接口的名称。
 
-inherit_access<br/>
-base_interface 的可访问性。  唯一允许的基接口可访问性是 public（默认值）。
+inherit_access**<br/>
+base_interface** 的可访问性。  基接口唯一允许的可访问性是 **`public`** （默认值）。
 
-base_interface<br/>
-（可选）接口 name 的基接口。
+base_interface**<br/>
+（可选）接口 name** 的基接口。
 
 ### <a name="remarks"></a>备注
 
-interface struct 相当于 interface class。
+interface struct**** 相当于 interface class****。
 
 接口可以包含函数、事件和属性的声明。  所有接口成员都有 public 可访问性。 接口还可以包含静态数据成员、函数、事件和属性，必须在接口中定义这些静态成员。
 
 接口定义类的实现方式。 接口不是类，类只能实现接口。 如果类定义接口中声明的函数，函数会实现，但不会被重写。 因此，名称查找不包括接口成员。
 
-派生自接口的类或结构必须实现接口的所有成员。 实现接口 name 时，还必须实现 `base_interface` 列表中的接口。
+派生自接口的类或结构必须实现接口的所有成员。 实现接口 name** 时，还必须实现 `base_interface` 列表中的接口。
 
 有关详细信息，请参阅：
 
@@ -63,7 +63,7 @@ interface struct 相当于 interface class。
 
 在编译时，可以使用 `__is_interface_class(type)` 来检测类型是否是 interface。 有关详细信息，请参阅[编译器对类型特征的支持](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
-在开发环境中，可以突出显示关键字（例如 `interface class`）并按 F1，从而获取这些关键字的 F1 帮助。
+在开发环境中，可以通过突出显示关键字（ **`interface class`** 例如）并按 f1 来获取有关这些关键字的 F1 帮助。
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
@@ -220,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

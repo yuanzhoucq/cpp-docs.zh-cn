@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: d8b6f4e0f0b5bca41f8d895415fff4003231ad1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3851003500d37a11a88736cf611b69a2d6b1813c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373607"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228149"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 运算符
 
 ||
 |-|
-|[算子&lt;&lt;](#op_lt_lt)|
+|[操作员&lt;&lt;](#op_lt_lt)|
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
 
 将各种类型写入流。
 
@@ -89,13 +89,13 @@ basic_ostream <_Elem, _Tr>& operator<<(
 *_Ostr*\
 `basic_ostream` 对象。
 
-*Str*\
+*字符串*\
 字符串。
 
 *_Tr*\
 字符特征。
 
-*瓦尔*\
+*初始值*\
 类型
 
 ### <a name="return-value"></a>返回值
@@ -104,7 +104,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="remarks"></a>备注
 
-`basic_ostream` 类还定义了多个插入运算符。 有关详细信息，请参阅[basic_ostream：运算符&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)。
+`basic_ostream` 类还定义了多个插入运算符。 有关详细信息，请参阅[basic_ostream：： &lt; &lt; operator](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)。
 
 模板函数
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-确定序列的长度 N `traits_type::`=`str`[长度](../standard-library/char-traits-struct.md#length)（ ）， 从*str*开始，然后插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 如果 （），`_Ostr`重复在序列之前。 [flags](../standard-library/ios-base-class.md#flags) & 标志`adjustfield`！=[左](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 函数返回 *_Ostr*。
+确定从 str 开始的序列的长度 N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)（ `str` ） *str*，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 如果为（，则在序列之前重复 `_Ostr` 。 [flags](../standard-library/ios-base-class.md#flags)  &  标志 `adjustfield`！ = [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 函数返回 *_Ostr*。
 
 模板函数
 
@@ -126,7 +126,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-插入元素 `_Ch`。 如果 1 < `_Ostr.width`，则该函数还将插入 `_Ostr.width` 的重复项 - 1 个填充字符。 如果 `_Ostr.flags & adjustfield != left`，则该重复项在序列前。 否则，重复项在该序列后。 它返回 *_Ostr*。
+插入元素 `_Ch`。 如果 1 < `_Ostr.width`，则该函数还将插入 `_Ostr.width` 的重复项 - 1 个填充字符。 如果 `_Ostr.flags & adjustfield != left`，则该重复项在序列前。 否则，重复项在该序列后。 它将返回 *_Ostr*。
 
 模板函数
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-只不过，序列从*str*开始的每个元素 *_Ch*通过`_Ostr.`调用[put（](../standard-library/basic-ostream-class.md#put)`_Ostr.`[加宽](../standard-library/basic-ios-class.md#widen)（`_Ch`） ） 转换为类型`Elem`的对象。
+除了从*str*开始的序列的每个元素 *_Ch*都 `Elem` 通过调用 `_Ostr.` [put](../standard-library/basic-ostream-class.md#put)（ `_Ostr.` [拓宽](../standard-library/basic-ios-class.md#widen)（ `_Ch` ））转换为类型的对象。
 
 模板函数
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-除非 *_Ch*通过`Elem`调用`_Ostr.put`（ ）`_Ostr.widen``_Ch`转换为类型的对象。
+除了 *_Ch*通过调用转换为类型的对象 `Elem` `_Ostr.put( _Ostr.widen( _Ch ))` 。
 
 模板函数
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-（在插入 *_Ch*之前，它不必加宽。
+（无需在插入之前扩大 *_Ch* 。）
 
 模板函数
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-返回`_Ostr` << （`const char *` `str`）
+返回 `_Ostr << (const char *)str`。
 
 模板函数
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-返回`_Ostr` << （`char` `_Ch`）
+返回 `_Ostr << (char)_Ch`。
 
 模板函数：
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-返回`_Ostr` << （`const char *` `str`）
+返回 `_Ostr << (const char *)str`。
 
 模板函数：
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-返回`_Ostr` << （`char` `_Ch`）
+返回 `_Ostr << (char)_Ch`。
 
 模板函数：
 
@@ -261,7 +261,7 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-返回 `_Ostr` `<<` `val`（并将[右值引用](../cpp/rvalue-reference-declarator-amp-amp.md)转换为进程中左值的 `_Ostr`）。
+返回 `_Ostr << val`（并将[右值引用](../cpp/rvalue-reference-declarator-amp-amp.md)转换为进程中左值的 `_Ostr`）。
 
 ### <a name="example"></a>示例
 
@@ -269,4 +269,4 @@ basic_ostream<_Elem, _Tr>& operator<<(
 
 ## <a name="see-also"></a>另请参阅
 
-[\<流>](../standard-library/ostream.md)
+[\<ostream>](../standard-library/ostream.md)
