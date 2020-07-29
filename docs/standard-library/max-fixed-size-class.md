@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: 7f75dd71caa3cfcfec19264b1da62c6d47a3e01d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23aa10a3398c3f20de73eb2ac6fa1372efdc32e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228201"
 ---
 # <a name="max_fixed_size-class"></a>max_fixed_size 类
 
@@ -38,7 +38,7 @@ class max_fixed_size
 
 |参数|说明|
 |---------------|-----------------|
-|*麦克斯*|max 类，用于决定要存储于 `freelist` 中的最大元素数目。|
+|*最大值*|max 类，用于决定要存储于 `freelist` 中的最大元素数目。|
 
 ### <a name="constructors"></a>构造函数
 
@@ -46,19 +46,19 @@ class max_fixed_size
 |-|-|
 |[max_fixed_size](#max_fixed_size)|构造 `max_fixed_size` 类型的对象。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
 |[分配](#allocated)|逐量增加已分配的内存块的计数。|
-|[交易](#deallocated)|逐量减小已分配的内存块的计数。|
+|[分配](#deallocated)|逐量减小已分配的内存块的计数。|
 |[full](#full)|返回一个值，该值指定是否应将更多的内存块添加到空闲列表。|
-|[释放](#released)|逐量减小空闲列表上内存块的计数。|
+|[取出](#released)|逐量减小空闲列表上内存块的计数。|
 |[saved](#saved)|逐量增加空闲列表上内存块的计数。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<allocators>
+**标头：**\<allocators>
 
 **命名空间：** stdext
 
@@ -78,9 +78,9 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 此成员函数在每次成功调用`cache_freelist::allocate`运算符**new**后调用。 *参数_Nx*是运算符**new**分配块中的内存块数。
+此成员函数不执行任何操作。 此成员函数在每次成功调用后调用 `cache_freelist::allocate` 到运算符 **`new`** 。 参数 *_Nx*是由运算符分配的块区中的内存块数 **`new`** 。
 
-## <a name="max_fixed_sizedeallocated"></a><a name="deallocated"></a>max_fixed_size：:d分配
+## <a name="max_fixed_sizedeallocated"></a><a name="deallocated"></a>max_fixed_size：:d eallocated
 
 逐量减小已分配的内存块的计数。
 
@@ -96,9 +96,9 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 此成员函数在每次调用后调用`cache_freelist::deallocate`运算符**删除**后调用 。 *参数_Nx*是由运算符**删除**处理块中的内存块数。
+此成员函数不执行任何操作。 此成员函数在每次调用后调用 `cache_freelist::deallocate` 到运算符 **`delete`** 。 参数 *_Nx*是由运算符释放的块区中的内存块数 **`delete`** 。
 
-## <a name="max_fixed_sizefull"></a><a name="full"></a>max_fixed_size：：完整
+## <a name="max_fixed_sizefull"></a><a name="full"></a>max_fixed_size：： full
 
 返回一个值，该值指定是否应将更多的内存块添加到空闲列表。
 
@@ -108,13 +108,13 @@ bool full();
 
 ### <a name="return-value"></a>返回值
 
-**如果为** `Max <= _Nblocks`true;否则，**假**。
+**`true`** 如果 `Max <= _Nblocks` 为，则为; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true，** 则将内存块放在空闲列表中;如果调用返回 true，`deallocate`则将内存块放在可用列表中。如果返回 false，`deallocate`则调用运算符**删除**以取消分配块。
+此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回，则将 **`true`** `deallocate` 内存块置于可用列表中; 如果返回 false，则 `deallocate` 调用运算符 **`delete`** 来释放块。
 
-## <a name="max_fixed_sizemax_fixed_size"></a><a name="max_fixed_size"></a>max_fixed_size：max_fixed_size
+## <a name="max_fixed_sizemax_fixed_size"></a><a name="max_fixed_size"></a>max_fixed_size：： max_fixed_size
 
 构造 `max_fixed_size` 类型的对象。
 
@@ -136,7 +136,7 @@ void released();
 
 ### <a name="remarks"></a>备注
 
-逐量减小存储值 `_Nblocks`。 每当从空闲列表中删除内存块时，就会调用当前 max`released`[类](../standard-library/allocators-header.md)的成员函数。 `cache_freelist::allocate`
+逐量减小存储值 `_Nblocks`。 `released`每当当前[max 类](../standard-library/allocators-header.md)的成员函数 `cache_freelist::allocate` 从空闲列表中删除内存块时，将调用该成员函数。
 
 ## <a name="max_fixed_sizesaved"></a><a name="saved"></a>max_fixed_size：：已保存
 
@@ -152,4 +152,4 @@ void saved();
 
 ## <a name="see-also"></a>另请参阅
 
-[\<分配器>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

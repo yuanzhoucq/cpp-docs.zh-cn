@@ -1,16 +1,16 @@
 ---
 title: C + + 标准库头文件
-ms.date: 07/12/2019
+ms.date: 07/23/2020
 helpviewer_keywords:
 - header files, C++ Standard Library
 - C++ Standard Library, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-ms.openlocfilehash: 207e7b7d2d689d3912399e3a867102ee893e003a
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 845fda9e020727b71752f19c38bb8432d5cf7c25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226046"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228292"
 ---
 # <a name="c-standard-library-header-files"></a>C + + 标准库头文件
 
@@ -33,7 +33,7 @@ C + + 标准库和扩展的头文件（按类别）。
 | 容器适配器 | [\<queue>](queue.md), [\<stack>](stack.md) |
 | 容器视图 | [\<span>](span.md)<sup>0.2</sup> |
 | [错误和异常处理](../cpp/errors-and-exception-handling-modern-cpp.md) | [\<cassert>](cassert.md)， [\<exception>](exception.md) ， [\<stdexcept>](stdexcept.md) ， [\<system_error>](system-error.md) <sup>11</sup> |
-| 常规实用工具 | \<any><sup>17</sup>， [\<bitset>](bitset.md) ， \<charconv> <sup>17</sup>， [\<cstdlib>](cstdlib.md) ， \<execution> <sup>17</sup>， [\<functional>](functional.md) ， [\<memory>](memory.md) ， \<memory_resource> <sup>17</sup>， \<optional> <sup>17</sup>， [\<ratio>](ratio.md) <sup>11</sup>， [\<scoped_allocator>](scoped-allocator.md) <sup>11</sup>， [\<tuple>](tuple.md) <sup>11</sup>， [\<type_traits>](type-traits.md) <sup>11</sup>， [\<typeindex>](typeindex.md) <sup>11</sup>， [\<utility>](utility.md) ， \<variant> <sup>17</sup> |
+| 常规实用工具 | \<any><sup>17</sup>， [\<bitset>](bitset.md) ， [\<cstdlib>](cstdlib.md) ， \<execution> <sup>17</sup>， [\<functional>](functional.md) ， [\<memory>](memory.md) ， \<memory_resource> <sup>17</sup>， \<optional> <sup>17</sup>， [\<ratio>](ratio.md) <sup>11</sup>， [\<scoped_allocator>](scoped-allocator.md) <sup>11</sup>， [\<tuple>](tuple.md) <sup>11</sup>， [\<type_traits>](type-traits.md) <sup>11</sup>， [\<typeindex>](typeindex.md) <sup>11</sup>， [\<utility>](utility.md) ， \<variant> <sup>17</sup> |
 | [I/o 和格式设置](../text/string-and-i-o-formatting-modern-cpp.md) | [\<cinttypes>](cinttypes.md)<sup>11</sup>， [\<cstdio>](cstdio.md) ， [\<filesystem>](filesystem.md) <sup>17</sup>，，，，，，，，，， [\<fstream>](fstream.md) [\<iomanip>](iomanip.md) [\<ios>](ios.md) [\<iosfwd>](iosfwd.md) [\<iostream>](iostream.md) [\<istream>](istream.md) [\<ostream>](ostream.md) [\<sstream>](sstream.md) [\<streambuf>](streambuf.md) [\<strstream>](strstream.md) <sup>c</sup>， \<syncstream> <sup>20</sup> |
 | 迭代器 | [\<iterator>](iterator.md) |
 | 语言支持 | [\<cfloat>](cfloat.md)， [\<climits>](climits.md) ， [\<codecvt>](codecvt.md) <sup>11 a</sup>， \<compare> <sup>20</sup>， \<contract> <sup>20</sup>， \<coroutine> <sup>20</sup>， [\<csetjmp>](csetjmp.md) ，，， [\<csignal>](csignal.md) [\<cstdarg>](cstdarg.md) [\<cstddef>](cstddef.md) ， [\<cstdint>](cstdint.md) <sup>11</sup>， [\<cstdlib>](cstdlib.md) ， [\<exception>](exception.md) ， [\<initializer_list>](initializer-list.md) <sup>11</sup>， [\<limits>](limits.md) ， [\<new>](new.md) [\<typeinfo>](typeinfo.md) \<version> <sup>20</sup> ，，20 |
@@ -43,7 +43,7 @@ C + + 标准库和扩展的头文件（按类别）。
 | 多线程处理 | [\<atomic>](atomic.md)<sup>11</sup>、 [\<condition_variable>](condition-variable.md) <sup>11</sup>、 [\<future>](future.md) <sup>11</sup>、 [\<mutex>](mutex.md) <sup>11</sup>、 [\<shared_mutex>](shared-mutex.md) <sup>14</sup>、 [\<thread>](thread.md) <sup>11</sup> |
 | 范围 | \<ranges><sup>0.2</sup> |
 | 正则表达式 | [\<regex>](regex.md)<sup>11x17</sup> |
-| 字符串和字符数据 | [\<cctype>](cctype.md)， [\<cstdlib>](cstdlib.md) ， [\<cstring>](cstring.md) ， [\<cuchar>](cuchar.md) <sup>11</sup>， [\<cwchar>](cwchar.md) ， [\<cwctype>](cwctype.md) ， [\<regex>](regex.md) <sup>11</sup>， [\<string>](string.md) ， [\<string_view>](string-view.md) <sup>17</sup> |
+| 字符串和字符数据 | [\<charconv>](charconv.md)<sup>17</sup>， [\<cctype>](cctype.md) ， [\<cstdlib>](cstdlib.md) ， [\<cstring>](cstring.md) ， [\<cuchar>](cuchar.md) <sup>11</sup>， [\<cwchar>](cwchar.md) ， [\<cwctype>](cwctype.md) ， [\<regex>](regex.md) <sup>11</sup>， [\<string>](string.md) ， [\<string_view>](string-view.md) <sup>17</sup> |
 | 时间 | [\<chrono>](chrono.md)<sup>11</sup>，[\<ctime>](ctime.md) |
 
 <sup>11</sup> c + + 11 标准版中添加了11。
@@ -82,4 +82,4 @@ c + + 17 标准版中<sup>的</sup>弃用。
 ## <a name="see-also"></a>另请参阅
 
 [使用 c + + 库标头](using-cpp-library-headers.md)\
-[C + + 标准库](cpp-standard-library-reference.md)
+[C++ 标准库](cpp-standard-library-reference.md)

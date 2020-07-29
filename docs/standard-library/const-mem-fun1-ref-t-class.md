@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 76fae1ce29cb4c47870e45e8f946f6ff1fea1885
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f9f426b7280872846695e204f2c9843d2622fe19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688177"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228331"
 ---
 # <a name="const_mem_fun1_ref_t-class"></a>const_mem_fun1_ref_t 类
 
-一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将仅带一个自变量的 **const** 成员函数作为二元函数对象调用。 在 c + + 11 中已弃用，在 c + + 17 中删除。
+一种适配器类， **`const`** 在使用引用参数进行初始化时，此类允许使用单个自变量的成员函数作为二元函数对象调用。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
 ## <a name="syntax"></a>语法
 
@@ -31,13 +31,13 @@ template <class Result, class Type, class Arg>
 
 ### <a name="parameters"></a>参数
 
-*Pm* \
+*下午*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*左*\
-*Pm*成员函数在其上调用的**const**对象。
+*左中*\
+**`const`** 在其上调用*Pm*成员函数的对象。
 
-*right* \
+*然后*\
 要提供给*Pm*的参数。
 
 ## <a name="return-value"></a>返回值
@@ -46,7 +46,7 @@ template <class Result, class Type, class Arg>
 
 ## <a name="remarks"></a>备注
 
-类模板存储*Pm*的副本，该副本必须是指向私有成员对象中 `Type` 类的成员函数的指针。 它将其成员函数定义 `operator()` 为返回（`left` \* *Pm*）（`right`） **const**。
+类模板*Pm* `Type` 在私有成员对象中存储 Pm 的副本，该副本必须是指向类的成员函数的指针。 它将其成员函数定义 `operator()` 为返回 `left` （ \* *Pm*）（ `right` ） **`const`** 。
 
 ## <a name="example"></a>示例
 

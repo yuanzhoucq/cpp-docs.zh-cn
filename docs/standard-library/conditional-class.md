@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 03ec6248ba3361622ad061ac3854a60995148f4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457325"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228370"
 ---
 # <a name="conditional-class"></a>conditional 类
 
@@ -36,19 +36,19 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 *T1*\
 当 B 为 true 时的类型结果。
 
-\
+*T2*\
 当 B 为 false 时的类型结果。
 
 ## <a name="remarks"></a>备注
 
-当*b*的计算`conditional<B, T1, T2>::type`结果为**true**时, 模板成员 typedef 的计算结果为 *T1* , 而*b*的计算结果为**false**。
+当 b 的计算结果为时，模板成员 typedef 的 `conditional<B, T1, T2>::type` 计算结果为*T1* *B* **`true`** ，当*b*计算为时，其计算结果为*T2* **`false`** 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)
