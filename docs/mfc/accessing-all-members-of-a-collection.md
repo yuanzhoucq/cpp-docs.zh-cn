@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616486"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214173"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>访问集合的所有成员
 
@@ -42,11 +42,11 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
 
    此示例使用一个类型化的指针数组，其中包含指向 `CPerson` 对象的指针。 数组派生自 `CObArray`类，这是一个非模板预定义类。 `GetAt` 返回一个指向 `CPerson` 对象的指针。 对于类型化的指针集合类（数组或列表），第一个参数指定基类；第二个参数指定要存储的类型。
 
-   `CTypedPtrArray`类还重载了 **[]** 运算符，以便您可以使用常用的数组下标语法来访问数组的元素。 上述**for**循环正文中的语句的替代项是
+   `CTypedPtrArray`类还重载了 **[]** 运算符，以便您可以使用常用的数组下标语法来访问数组的元素。 以上循环正文中的语句的替代项 **`for`** 是
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   此运算符同时存在于 **常量** 和非**常量** 版本。 **常量** 版本（为 **常量** 数组调用）仅可在赋值语句右侧出现。
+   和非版本中均存在此运算符 **`const`** **`const`** 。 为 **`const`** 数组调用的版本只能 **`const`** 出现在赋值语句的右侧。
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a>循环访问列表
 

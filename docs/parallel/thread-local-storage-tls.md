@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 888a33161cd33b20d5f40a07f9b54235f06b8bd8
-ms.sourcegitcommit: 57e26bdd7839fce3c4154a61e987d165f0ba6f5b
+ms.openlocfilehash: f677d7382a9747df63023bd83b104a6bb3b74c1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301961"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222649"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 
@@ -22,9 +22,9 @@ ms.locfileid: "84301961"
 
 ## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>TLS 的编译器实现
 
-**C + + 11：** `thread_local`建议使用存储类说明符来指定对象和类成员的线程本地存储。 有关详细信息，请参阅[存储类（c + +）](../cpp/storage-classes-cpp.md)。
+**C + + 11：** **`thread_local`** 建议使用存储类说明符来指定对象和类成员的线程本地存储。 有关详细信息，请参阅[存储类（c + +）](../cpp/storage-classes-cpp.md)。
 
-MSVC 还提供了特定于 Microsoft 的属性，即[线程](../cpp/thread.md)，作为扩展存储类修饰符。 使用 **__declspec**关键字声明**线程**变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
+MSVC 还提供了特定于 Microsoft 的属性，即[线程](../cpp/thread.md)，作为扩展存储类修饰符。 使用 **`__declspec`** 关键字来声明 **`thread`** 变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
 
 ```C
 __declspec( thread ) int tls_i = 1;
@@ -34,13 +34,13 @@ __declspec( thread ) int tls_i = 1;
 
 声明静态绑定的线程本地对象和变量时，必须遵守以下准则： 这些准则适用于[thread](../cpp/thread.md)和 to [thread_local](../cpp/storage-classes-cpp.md)：
 
-- **线程**特性只能应用于类和数据声明和定义。 它不能用于函数声明或定义。 例如，下面的代码生成一个编译器错误：
+- **`thread`** 特性只能应用于类和数据声明和定义。 它不能用于函数声明或定义。 例如，下面的代码生成一个编译器错误：
 
     ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- 只能在具有**静态**范围的数据项上指定**线程**修饰符。 这包括全局数据对象（**静态**和**外部**）、本地静态对象和 c + + 类的静态数据成员。 不能用**thread**特性声明自动数据对象。 以下代码生成编译器错误：
+- **`thread`** 只能对具有范围的数据项指定修饰符 **`static`** 。 这包括全局数据对象（ **`static`** 和 **`extern`** ）、本地静态对象和 c + + 类的静态数据成员。 不能用特性声明自动数据对象 **`thread`** 。 以下代码生成编译器错误：
 
     ```C
     void func1()
@@ -54,7 +54,7 @@ __declspec( thread ) int tls_i = 1;
     }
     ```
 
-- 线程本地对象的声明和定义都必须指定**thread**特性。 例如，下面的代码将生成错误：
+- 线程本地对象的声明和定义都必须指定 **`thread`** 属性。 例如，下面的代码将生成错误：
 
     ```C
     #define Thread  __declspec( thread )
@@ -62,13 +62,13 @@ __declspec( thread ) int tls_i = 1;
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- **线程**属性不能用作类型修饰符。 例如，下面的代码生成一个编译器错误：
+- **`thread`** 属性不能用作类型修饰符。 例如，下面的代码生成一个编译器错误：
 
     ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- 由于允许使用**thread**特性的 c + + 对象的声明，因此以下两个示例在语义上是等效的：
+- 由于允许使用属性的 c + + 对象的声明 **`thread`** ，因此以下两个示例在语义上是等效的：
 
     ```cpp
     __declspec( thread ) class B
@@ -100,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   `sizeof`包含要初始化的对象的表达式不表示对自身的引用，并在 c 和 c + + 中启用。
+   **`sizeof`** 包含要初始化的对象的表达式不表示对自身的引用，并在 c 和 c + + 中启用。
 
    C + + 不允许对线程数据进行这样的动态初始化，因为将来可能会对线程本地存储设施进行增强。
 

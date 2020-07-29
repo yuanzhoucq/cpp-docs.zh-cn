@@ -139,12 +139,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636925"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215161"
 ---
 # <a name="data-type-constants"></a>数据类型常量
 
@@ -159,29 +159,29 @@ ms.locfileid: "50636925"
 ```
 
 > [!NOTE]
-> [/J](../build/reference/j-default-char-type-is-unsigned.md) 编译器选项将默认的 char 类型更改为 unsigned。
+> [`/J`](../build/reference/j-default-char-type-is-unsigned.md)编译器选项将默认 **`char`** 类型从更改 **`signed char`** 为 **`unsigned char`** 。
 
-|返回的常量|“值”|描述|
+|返回的常量|值|描述|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|char 中的位数|
-|**SCHAR_MIN**|(-128)|最小有符号 char 值|
-|**SCHAR_MAX**|127|最大有符号 char 值|
-|**UCHAR_MAX**|255 (0xff)|最大无符号 char 值|
-|**CHAR_MIN**|(-128)（如果使用了 /J 选项，则为 0）|最小 char 值|
-|**CHAR_MAX**|127（如果使用了 /J 选项，则为 255）|最大 char 值|
-|**MB_LEN_MAX**|5|多字节 char 中的最大字节数|
-|**SHRT_MIN**|-32768|最小有符号 short 值|
-|**SHRT_MAX**|32767|最大有符号 short 值|
-|**USHRT_MAX**|65535 (0xffff)|最大无符号 short 值|
-|**INT_MIN**|(-2147483647 - 1)|最小有符号 int 值|
-|**INT_MAX**|2147483647|最大有符号 int 值|
-|**UINT_MAX**|4294967295 (0xffffffff)|最大无符号 int 值|
-|**LONG_MIN**|(-2147483647L - 1)|最小有符号 long 值|
-|**LONG_MAX**|2147483647L|最大有符号 long 值|
-|**ULONG_MAX**|4294967295UL (0xfffffffful)|最大无符号 long 值|
-|**LLONG_MIN**|(-9223372036854775807LL - 1)|最小有符号 long long 或 __int64 值|
-|**LLONG_MAX**|9223372036854775807LL|最大有符号 long long 或 __int64 值|
-|**ULLONG_MAX**|0xffffffffffffffffull|最大无符号 long long 值|
+|**CHAR_BIT**|8|中的位数**`char`**|
+|**SCHAR_MIN**|(-128)|最小 **`signed char`** 值|
+|**SCHAR_MAX**|127|最大 **`signed char`** 值|
+|**UCHAR_MAX**|255 (0xff)|最大 **`unsigned char`** 值|
+|**CHAR_MIN**|（-128）（如果使用了选项，则为 0 **`/J`** ）|最小 **`char`** 值|
+|**CHAR_MAX**|127（如果使用了选项，则为 255 **`/J`** ）|最大 **`char`** 值|
+|**MB_LEN_MAX**|5|多字节中的最大字节数**`char`**|
+|**SHRT_MIN**|-32768|最小 **`signed short`** 值|
+|**SHRT_MAX**|32767|最大 **`signed short`** 值|
+|**USHRT_MAX**|65535 (0xffff)|最大 **`unsigned short`** 值|
+|**INT_MIN**|(-2147483647 - 1)|最小 **`signed int`** 值|
+|**INT_MAX**|2147483647|最大 **`signed int`** 值|
+|**UINT_MAX**|4294967295 (0xffffffff)|最大 **`unsigned int`** 值|
+|**LONG_MIN**|(-2147483647L - 1)|最小 **`signed long`** 值|
+|**LONG_MAX**|2147483647L|最大 **`signed long`** 值|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|最大 **`unsigned long`** 值|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|最 **`signed long long`** 小 **`__int64`** 值或值|
+|**LLONG_MAX**|9223372036854775807LL|最 **`signed long long`** 大 **`__int64`** 值或值|
+|**ULLONG_MAX**|0xffffffffffffffffull|最大 **`unsigned long long`** 值|
 |**_I8_MIN**|(-127i8 - 1)|最小有符号的 8 位数值|
 |**_I8_MAX**|127i8|最大有符号的 8 位数值|
 |**_UI8_MAX**|0xffui8|最大无符号的 8 位数值|
@@ -197,22 +197,22 @@ ms.locfileid: "50636925"
 |**_I128_MIN**|(-170141183460469231731687303715884105727i128 - 1)|最小有符号的 128 位数值|
 |**_I128_MAX**|170141183460469231731687303715884105727i128|最大有符号的 128 位数值|
 |**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|最大无符号的 128 位数值|
-|**SIZE_MAX**|如果已定义 _WIN64 或为 UINT_MAX，则与 _UI64_MAX 相同|最大本机整数大小|
-|**RSIZE_MAX**|与 (SIZE_MAX >> 1) 相同|最大安全裤整数大小|
+|**SIZE_MAX**|如果已定义 _WIN64 或为 UINT_MAX，则与 _UI64_MAX 相同************|最大本机整数大小|
+|**RSIZE_MAX**|与 (SIZE_MAX >> 1) 相同****|最大安全裤整数大小|
 
 ## <a name="floating-point-type-constants"></a>浮点类型常量
 
-以下常量提供了 long double、double 和 float 数据类型的范围和其他特性： 要使用这些常量，请在源文件中包含 float.h 标头：
+以下常量给出了 **`long double`** 、 **`double`** 和数据类型的范围和其他特性 **`float`** 。 要使用这些常量，请在源文件中包含 float.h 标头：
 
 ```C
 #include <float.h>
 ```
 
-|返回的常量|“值”|描述|
+|返回的常量|值|描述|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|十进制位数的舍入精度|
 |**DBL_DIG**|15|精度的小数位数|
-|**DBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + DBL_EPSILON != 1.0|
+|**DBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + DBL_EPSILON != 1.0****|
 |**DBL_HAS_SUBNORM**|1|类型支持低能数（非规格化）数|
 |**DBL_MANT_DIG**|53|有效数字（尾数）的位数|
 |**DBL_MAX**|1.7976931348623158e+308|最大值|
@@ -225,7 +225,7 @@ ms.locfileid: "50636925"
 |**DBL_TRUE_MIN**|4.9406564584124654e-324|最小次正规值|
 |**FLT_DECIMAL_DIG**|9|十进制位数的舍入精度|
 |**FLT_DIG**|6|十进制位数的精度|
-|**FLT_EPSILON**|1.192092896e-07F|最小，这样 1.0 + FLT_EPSILON != 1.0|
+|**FLT_EPSILON**|1.192092896e-07F|最小，这样 1.0 + FLT_EPSILON != 1.0****|
 |**FLT_HAS_SUBNORM**|1|类型支持低能数（非规格化）数|
 |**FLT_MANT_DIG**|24|有效数字（尾数）的位数|
 |**FLT_MAX**|3.402823466e+38F|最大值|
@@ -237,7 +237,7 @@ ms.locfileid: "50636925"
 |**FLT_RADIX**|2|指数基数|
 |**FLT_TRUE_MIN**|1.401298464e-45F|最小次正规值|
 |**LDBL_DIG**|15|精度的小数位数|
-|**LDBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + LDBL_EPSILON != 1.0|
+|**LDBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + LDBL_EPSILON != 1.0****|
 |**LDBL_HAS_SUBNORM**|1|类型支持低能数（非规格化）数|
 |**LDBL_MANT_DIG**|53|有效数字（尾数）的位数|
 |**LDBL_MAX**|1.7976931348623158e+308|最大值|
@@ -248,8 +248,8 @@ ms.locfileid: "50636925"
 |**LDBL_MIN_EXP**|(-1021)|最小二进制指数|
 |**_LDBL_RADIX**|2|指数基数|
 |**LDBL_TRUE_MIN**|4.9406564584124654e-324|最小次正规值|
-|**DECIMAL_DIG**|与 DBL_DECIMAL_DIG 相同|默认（双精度）十进制位数的舍入精度|
+|**DECIMAL_DIG**|与 DBL_DECIMAL_DIG 相同****|默认（双精度）十进制位数的舍入精度|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [全局常量](../c-runtime-library/global-constants.md)

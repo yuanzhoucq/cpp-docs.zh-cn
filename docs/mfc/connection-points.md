@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620727"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214147"
 ---
 # <a name="connection-points"></a>连接点
 
@@ -37,7 +37,7 @@ MFC 在[CConnectionPoint](reference/cconnectionpoint-class.md)和[CCmdTarget](re
 
 对于在类中实现的每个连接点，必须声明实现连接点的连接部分。 如果实现一个或多个连接点，则还必须在类中声明一个连接映射。 连接映射是 ActiveX 控件支持的连接点表。
 
-下面的示例演示了一个简单的连接映射和一个连接点。 第一个示例声明连接映射和点;第二个示例实现了地图和点。 请注意， `CMyClass` 必须是 `CCmdTarget` 派生类。 在第一个示例中，代码将插入到 "**受保护**" 部分下的类声明中：
+下面的示例演示了一个简单的连接映射和一个连接点。 第一个示例声明连接映射和点;第二个示例实现了地图和点。 请注意， `CMyClass` 必须是 `CCmdTarget` 派生类。 在第一个示例中，代码将插入到类声明中的 **`protected`** 以下部分：
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-ms.openlocfilehash: 0b61407920a0ce35a1c6a8466458736e983e271e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 90c07874b61656a8bec0f9ef373f2ee8f339e994
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168559"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215369"
 ---
 # <a name="support-for-unicode"></a>支持 Unicode
 
 Unicode 是支持所有字符集（包括不能用单字节表示的字符集）的规范。  如果要对国际市场进行编程，建议使用 Unicode 或[多字节字符集](../text/support-for-multibyte-character-sets-mbcss.md)（MBCS）。 或者编写程序代码，以便可以通过更改开关来生成。
 
-宽字符是双字节多语言字符代码。 成千上万个字符（包括技术符号和特殊的发布字符）可根据 Unicode 规范（包括技术符号和特殊的发布字符）用使用 UTF-16。 使用 Unicode 代理项对功能，只能在 Unicode 对中表示不能用一个宽字符表示的字符。 由于几乎每个字符在单个16位宽字符中以 UTF-16 表示，因此使用宽字符可简化使用国际字符集进行的编程。 使用 UTF-16LE （对于小字节序）进行编码的宽字符是 Windows 的本机字符格式。
+宽字符是双字节多语言字符代码。 如果有成千上万个字符（包括技术符号和特殊的发布字符），则可以根据 Unicode 规范将这些字符（包括技术符号和特殊的发布字符）表示为使用 UTF-16 编码的单个宽字符。 使用 Unicode 代理项对功能，只能在 Unicode 对中表示不能用一个宽字符表示的字符。 由于几乎每个字符在单个16位宽字符中以 UTF-16 表示，因此使用宽字符可简化使用国际字符集进行的编程。 使用 UTF-16LE （对于小字节序）进行编码的宽字符是 Windows 的本机字符格式。
 
 宽字符串表示为一个 `wchar_t[]` 数组，由 `wchar_t*` 指针指向它。 通过使用字母 L 作为该字符的前缀，可将任何 ASCII 字符表示为宽字符。 例如，L'\0' 是（16 位）NULL 终止宽字符。 同样，通过使用字母 L 作为 ASCII 文本的前缀 (L"Hello")，可将任何 ASCII 字符串文本表示为宽字符字符串。
 
@@ -32,9 +32,9 @@ MFC 框架完全支持 Unicode，MFC 通过使用可移植的宏来实现对 Uni
 
 |不可移植的数据类型|替换为此宏|
 |-----------------------------|----------------------------|
-|`char`、`wchar_t`|`_TCHAR`|
-|`char*`，`LPSTR` （Win32 数据类型），`LPWSTR`|`LPTSTR`|
-|`const char*`，`LPCSTR` （Win32 数据类型），`LPCWSTR`|`LPCTSTR`|
+|**`char`**, **`wchar_t`**|`_TCHAR`|
+|**`char*`**， `LPSTR` （Win32 数据类型），`LPWSTR`|`LPTSTR`|
+|`const char*`， `LPCSTR` （Win32 数据类型），`LPCWSTR`|`LPCTSTR`|
 
 类 `CString` 使用 `_TCHAR` 作为其基，并提供用于轻松转换的构造函数和运算符。 通过使用与用于处理 Windows ANSI 字符集相同的逻辑，可编写 Unicode 的大多数字符串操作，但基本操作单位是 16 位字符，而非 8 位字节。 与使用多字节字符集不同，不必（也不应）将 Unicode 字符视为两个不同的字节。 但是，您必须处理由代理项对宽字符表示的单个字符。 通常，不要编写假定字符串长度与它所包含的字符数（无论是否为窄或宽）相同的代码。
 
@@ -54,7 +54,7 @@ MFC 框架完全支持 Unicode，MFC 通过使用可移植的宏来实现对 Uni
 
 - [请参阅 Unicode 编程摘要](../text/unicode-programming-summary.md)
 
-- [了解用于字节宽度可移植性的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)
+- [了解字节宽度可移植性的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>另请参阅
 

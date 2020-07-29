@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912381"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215122"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -77,13 +77,13 @@ long double tan( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用具有**tan**的重载，并返回**浮点**或**长****双精度**值。 在 C 程序中， **tan**始终采用并返回**double**。
+由于 c + + 允许重载，因此可以调用采用和返回或值的**茶色**重载 **`float`** **`long double`** 。 在 C 程序中， **tan**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
 

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: a9ef9990db6376536f2f2a15c053b3b1d4ed12cf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: df592e965b436ed5a1d60702f9e57088887d5a94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222701"
 ---
 # <a name="isource-class"></a>ISource 类
 
@@ -39,33 +39,33 @@ class ISource;
 *T*<br/>
 源块生成的消息内有效负载的数据类型。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|`source_type`|`T`的类型别名。|
+|`source_type`|的类型别名 `T` 。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[~ ISource 析构函数](#dtor)|销毁 `ISource` 的对象。|
+|[~ ISource 析构函数](#dtor)|销毁 `ISource` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[接受](#accept)|当在派生类中重写时，接受由此 `ISource` 块提供的消息，并将所有权转移到调用方。|
-|[acquire_ref](#acquire_ref)|当在派生类中重写时，获取此 `ISource` 块上的引用计数，以防止删除。|
-|[使用](#consume)|当在派生类中重写时，使用以前由此 `ISource` 块提供的消息，并通过目标成功保留该消息，并将所有权转移到调用方。|
+|[接受](#accept)|当在派生类中重写时，接受此块提供的消息 `ISource` ，并将所有权转移到调用方。|
+|[acquire_ref](#acquire_ref)|当在派生类中重写时，获取此块上的引用计数 `ISource` ，以防止删除。|
+|[接受](#consume)|当在派生类中重写时，使用以前由此块提供的消息， `ISource` 并已成功保留目标，将所有权转移给调用方。|
 |[link_target](#link_target)|当在派生类中重写时，将目标块链接到此 `ISource` 块。|
-|[release](#release)|当在派生类中重写时，释放以前的成功消息保留。|
-|[release_ref](#release_ref)|当在派生类中重写时，释放此 `ISource` 块上的引用计数。|
-|[reserve](#reserve)|当在派生类中重写时，保留以前由此 `ISource` 块提供的消息。|
-|[unlink_target](#unlink_target)|当在派生类中重写时，如果发现以前已链接，则取消链接此 `ISource` 块中的目标块。|
-|[unlink_targets](#unlink_targets)|当在派生类中重写时，将所有目标块与此 `ISource` 块断开。|
+|[拆卸](#release)|当在派生类中重写时，释放以前的成功消息保留。|
+|[release_ref](#release_ref)|当在派生类中重写时，释放此块上的引用计数 `ISource` 。|
+|[保留](#reserve)|当在派生类中重写时，保留此块先前提供的消息 `ISource` 。|
+|[unlink_target](#unlink_target)|当在派生类中重写时， `ISource` 如果发现以前已链接，则取消链接此块中的目标块。|
+|[unlink_targets](#unlink_targets)|当在派生类中重写时，将此块中的所有目标块断开 `ISource` 。|
 
 ## <a name="remarks"></a>备注
 
@@ -81,9 +81,9 @@ class ISource;
 
 **命名空间：** 并发
 
-## <a name="accept"></a>接受
+## <a name="accept"></a><a name="accept"></a>接受
 
-当在派生类中重写时，接受由此 `ISource` 块提供的消息，并将所有权转移到调用方。
+当在派生类中重写时，接受此块提供的消息 `ISource` ，并将所有权转移到调用方。
 
 ```cpp
 virtual message<T>* accept(
@@ -94,10 +94,10 @@ virtual message<T>* accept(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-提供的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity`所提供的 `message` 对象的。
 
 *_PTarget*<br/>
-指向调用 `accept` 方法的目标块的指针。
+指向调用方法的目标块的指针 `accept` 。
 
 ### <a name="return-value"></a>返回值
 
@@ -105,11 +105,11 @@ virtual message<T>* accept(
 
 ### <a name="remarks"></a>备注
 
-在此 `ISource` 块提供消息时，目标调用 `accept` 方法。 如果此源决定创建消息的副本，则返回的消息指针可能与传入 `ITarget` 块 `propagate` 方法的消息指针不同。
+`accept`此方法由目标在此块提供消息时调用 `ISource` 。 `propagate` `ITarget` 如果此源决定创建消息的副本，则返回的消息指针可能不同于传递到块的方法中的消息指针。
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-当在派生类中重写时，获取此 `ISource` 块上的引用计数，以防止删除。
+当在派生类中重写时，获取此块上的引用计数 `ISource` ，以防止删除。
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -122,11 +122,11 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="remarks"></a>备注
 
-此方法由在 `link_target` 方法中链接到此源的 `ITarget` 对象调用。
+此方法由在 `ITarget` 方法中链接到此源的对象调用 `link_target` 。
 
-## <a name="consume"></a>接受
+## <a name="consume"></a><a name="consume"></a>接受
 
-当在派生类中重写时，使用以前由此 `ISource` 块提供的消息，并通过目标成功保留该消息，并将所有权转移到调用方。
+当在派生类中重写时，使用以前由此块提供的消息， `ISource` 并已成功保留目标，将所有权转移给调用方。
 
 ```cpp
 virtual message<T>* consume(
@@ -137,28 +137,28 @@ virtual message<T>* consume(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-保留 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity`保留 `message` 对象的。
 
 *_PTarget*<br/>
-指向调用 `consume` 方法的目标块的指针。
+指向调用方法的目标块的指针 `consume` 。
 
 ### <a name="return-value"></a>返回值
 
-指向调用方现在具有所有权的 `message` 对象的指针。
+指向 `message` 调用方现在具有所有权的对象的指针。
 
 ### <a name="remarks"></a>备注
 
-`consume` 方法类似于 `accept`，但必须始终调用返回**true**的 `reserve`。
+此 `consume` 方法类似于 `accept` ，但必须始终在之前调用 `reserve` 返回的 **`true`** 。
 
-## <a name="dtor"></a>~ ISource
+## <a name="isource"></a><a name="dtor"></a>~ ISource
 
-销毁 `ISource` 的对象。
+销毁 `ISource` 对象。
 
 ```cpp
 virtual ~ISource();
 ```
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
 当在派生类中重写时，将目标块链接到此 `ISource` 块。
 
@@ -169,9 +169,9 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>参数
 
 *_PTarget*<br/>
-指向链接到此 `ISource` 块的目标块的指针。
+指向链接到此块的目标块的指针 `ISource` 。
 
-## <a name="release"></a>拆卸
+## <a name="release"></a><a name="release"></a>拆卸
 
 当在派生类中重写时，释放以前的成功消息保留。
 
@@ -184,14 +184,14 @@ virtual void release(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-保留 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity`保留 `message` 对象的。
 
 *_PTarget*<br/>
-指向调用 `release` 方法的目标块的指针。
+指向调用方法的目标块的指针 `release` 。
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-当在派生类中重写时，释放此 `ISource` 块上的引用计数。
+当在派生类中重写时，释放此块上的引用计数 `ISource` 。
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -204,11 +204,11 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="remarks"></a>备注
 
-此方法由正在从此源取消链接的 `ITarget` 对象调用。 允许源块释放为目标块保留的任何资源。
+此方法由 `ITarget` 正在从此源取消链接的对象调用。 允许源块释放为目标块保留的任何资源。
 
-## <a name="reserve"></a>保留
+## <a name="reserve"></a><a name="reserve"></a>保留
 
-当在派生类中重写时，保留以前由此 `ISource` 块提供的消息。
+当在派生类中重写时，保留此块先前提供的消息 `ISource` 。
 
 ```cpp
 virtual bool reserve(
@@ -219,22 +219,22 @@ virtual bool reserve(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-提供的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity`所提供的 `message` 对象的。
 
 *_PTarget*<br/>
-指向调用 `reserve` 方法的目标块的指针。
+指向调用方法的目标块的指针 `reserve` 。
 
 ### <a name="return-value"></a>返回值
 
-如果消息已成功保留，**则为 true** ; 否则为**false** 。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
+**`true`** 如果消息已成功保留，则 **`false`** 为; 否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
 
 ### <a name="remarks"></a>备注
 
-调用 `reserve`后，如果成功，则必须调用 `consume` 或 `release` 以便分别获取或放弃该消息。
+调用后 `reserve` ，如果成功，则必须调用或，才能 `consume` `release` 分别获取或放弃消息的所有权。
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
-当在派生类中重写时，如果发现以前已链接，则取消链接此 `ISource` 块中的目标块。
+当在派生类中重写时， `ISource` 如果发现以前已链接，则取消链接此块中的目标块。
 
 ```cpp
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -243,11 +243,11 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>参数
 
 *_PTarget*<br/>
-指向与此 `ISource` 块取消链接的目标块的指针。
+指向正在从此块取消链接的目标块的指针 `ISource` 。
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-当在派生类中重写时，将所有目标块与此 `ISource` 块断开。
+当在派生类中重写时，将此块中的所有目标块断开 `ISource` 。
 
 ```cpp
 virtual void unlink_targets() = 0;

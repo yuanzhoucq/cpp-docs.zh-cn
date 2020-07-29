@@ -24,12 +24,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945397"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215096"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s、vwscanf_s
 
@@ -58,7 +58,7 @@ int vwscanf_s(
 
 ## <a name="return-value"></a>返回值
 
-返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 对于错误，返回值为**EOF** ; 或者，如果在第一次尝试读取字符时遇到文件尾字符或字符串末尾字符，则为。 如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**vscanf_s**和**Vwscanf_s**将返回**EOF**并将**errno**设置为**EINVAL**。
+返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 对于错误，返回值为**EOF** ; 或者，如果在第一次尝试读取字符时遇到文件尾字符或字符串末尾字符，则为。 如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， **vscanf_s**和**vwscanf_s**返回**EOF**并将**errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -68,12 +68,12 @@ int vwscanf_s(
 
 **vwscanf_s**是**vscanf_s**的宽字符版本;**vwscanf_s**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**vwscanf_s**和**vscanf_s**的行为相同。 **vscanf_s**不支持 UNICODE 流的输入。
 
-与**vscanf**和**vwscanf**不同， **vscanf_s**和**vwscanf_s**需要为**c**、 **c**、 **s**、 **s**或 string 控制集类型的所有输入参数（包括在 **[] 中）指定缓冲区大小**. 字符形式的缓冲区大小作为额外参数，紧跟在指针后面传递到缓冲区或变量。 **Wchar_t**字符串的缓冲区大小（以字符为单位）不同于大小（以字节为单位）。
+与**vscanf**和**vwscanf**不同， **vscanf_s**和**vwscanf_s**需要为**c**、 **c**、 **s**、 **s**或 string 控制集类型的所有输入参数（包括在 **[]** 中）指定缓冲区大小。 字符形式的缓冲区大小作为额外参数，紧跟在指针后面传递到缓冲区或变量。 字符串的缓冲区大小（以字符为 **`wchar_t`** 单位）不同于大小（以字节为单位）。
 
 缓冲区大小包括终止 null 字符。 可以使用宽度规范字段来确保读入的标记可放入缓冲区中。 如果未使用任何宽度规范字段，并且读取的标记太大以致缓冲区中无法容纳，则不会向该缓冲区写入任何内容。
 
 > [!NOTE]
-> *大小*参数的类型为**无符号**类型，而不是**size_t**。
+> *大小*参数的类型为 **`unsigned`** ，而不是**size_t**。
 
 有关详细信息，请参阅 [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)。
 
@@ -92,7 +92,7 @@ int vwscanf_s(
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -157,7 +157,7 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>

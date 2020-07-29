@@ -89,18 +89,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: 38b0a3278efd10ef5cc989a5fc900bf82d377eae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76f67ad900e975ff084f5760e6830c6a5d229e86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320311"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214876"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
-模板类描述控制具有双向访问权限的不同长度元素序列的对象。 您可以使用容器`set`将一系列元素作为（几乎）平衡有序的节点树进行管理，每个节点存储一个元素。
+此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 使用容器可以将 `set` 一系列元素作为（几乎）均衡的节点的排序树来管理，每个节点存储一个元素。
 
-在下面的描述中，`GValue`它与 相同`GKey`，后者又与*Key*相同，除非后者是 ref 类型，在这种情况下，它是`Key^`。
+在下面的说明中，与 `GValue` 键相同 `GKey` ，除非后者为 ref 类型，在*Key*这种情况下，它是 `Key^` 。
 
 ## <a name="syntax"></a>语法
 
@@ -120,27 +120,27 @@ template<typename Key>
 
 ### <a name="parameters"></a>参数
 
-*密钥*<br/>
+*Key*<br/>
 受控序列中元素的键组件的类型。
 
 ## <a name="requirements"></a>要求
 
-**标题**\<：cliext/set>
+**标头：**\<cliext/set>
 
-**命名空间**：cliext
+**命名空间：** cliext
 
 ## <a name="declarations"></a>声明
 
-|类型定义|说明|
+|类型定义|描述|
 |---------------------|-----------------|
 |[set::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|
 |[set::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
 |[set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
-|[set::difference_type (STL/CLR)](#difference_type)|两个元素之间的距离的类型（可能已签名）。|
+|[set::difference_type (STL/CLR)](#difference_type)|两个元素之间的（可能有符号）距离的类型。|
 |[set::generic_container (STL/CLR)](#generic_container)|容器的泛型接口的类型。|
 |[set::generic_iterator (STL/CLR)](#generic_iterator)|容器的泛型接口的迭代器的类型。|
 |[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型接口的反向迭代器的类型。|
-|[set::generic_value (STL/CLR)](#generic_value)|容器的泛型接口的元素的类型。|
+|[set::generic_value (STL/CLR)](#generic_value)|容器的泛型接口的元素类型。|
 |[set::iterator (STL/CLR)](#iterator)|受控序列的迭代器的类型。|
 |[set::key_compare (STL/CLR)](#key_compare)|两个键的排序委托。|
 |[set::key_type (STL/CLR)](#key_type)|排序键的类型。|
@@ -150,11 +150,11 @@ template<typename Key>
 |[set::value_compare (STL/CLR)](#value_compare)|两个元素值的排序委托。|
 |[set::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[set::begin (STL/CLR)](#begin)|指定受控序列的开头。|
 |[set::clear (STL/CLR)](#clear)|删除所有元素。|
-|[set::count (STL/CLR)](#count)|计算与指定键匹配的元素。|
+|[set::count (STL/CLR)](#count)|对与指定的键匹配的元素进行计数。|
 |[set::empty (STL/CLR)](#empty)|测试元素是否存在。|
 |[set::end (STL/CLR)](#end)|指定受控序列的末尾。|
 |[set::equal_range (STL/CLR)](#equal_range)|查找与指定键匹配的范围。|
@@ -163,7 +163,7 @@ template<typename Key>
 |[set::insert (STL/CLR)](#insert)|添加元素。|
 |[set::key_comp (STL/CLR)](#key_comp)|复制两个键的排序委托。|
 |[set::lower_bound (STL/CLR)](#lower_bound)|查找与指定键匹配的范围的开头。|
-|[set::make_value (STL/CLR)](#make_value)|构造值对象。|
+|[set::make_value (STL/CLR)](#make_value)|构造一个值对象。|
 |[set::rbegin (STL/CLR)](#rbegin)|指定反向受控序列的开头。|
 |[set::rend (STL/CLR)](#rend)|指定反向受控序列的末尾。|
 |[set::set (STL/CLR)](#set)|构造容器对象。|
@@ -173,58 +173,58 @@ template<typename Key>
 |[set::upper_bound (STL/CLR)](#upper_bound)|查找与指定键匹配的范围的末尾。|
 |[set::value_comp (STL/CLR)](#value_comp)|复制两个元素值的排序委托。|
 
-|操作员|说明|
+|操作员|描述|
 |--------------|-----------------|
 |[set::operator= (STL/CLR)](#op_as)|替换受控序列。|
-|[运算符！*（设置）（STL/CLR）](#op_neq)|确定对象`set`是否不等于其他`set`对象。|
-|[运算符<（设置）（STL/CLR）](#op_lt)|确定`set`对象是否小于其他`set`对象。|
-|[运算符<= （设置） （STL/CLR）](#op_lteq)|确定对象是否`set`小于或等于另一个`set`对象。|
-|[运算符* （设置） （STL/CLR）](#op_eq)|确定对象是否`set`等于另一个`set`对象。|
-|[运算符>（设置）（STL/CLR）](#op_gt)|确定对象是否`set`大于另一个`set`对象。|
-|[operator>= (set) (STL/CLR)](#op_gteq)|确定对象是否`set`大于或等于另一个`set`对象。|
+|[operator！ = （set）（STL/CLR）](#op_neq)|确定对象是否 `set` 不等于另一个 `set` 对象。|
+|[运算符< （set）（STL/CLR）](#op_lt)|确定 `set` 对象是否小于另一个 `set` 对象。|
+|[运算符<= （set）（STL/CLR）](#op_lteq)|确定 `set` 对象是否小于或等于另一个 `set` 对象。|
+|[operator = = （set）（STL/CLR）](#op_eq)|确定 `set` 对象是否等于另一个 `set` 对象。|
+|[运算符> （set）（STL/CLR）](#op_gt)|确定 `set` 对象是否大于另一个 `set` 对象。|
+|[operator>= (set) (STL/CLR)](#op_gteq)|确定 `set` 对象是否大于或等于另一个 `set` 对象。|
 
 ## <a name="interfaces"></a>接口
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
-|<xref:System.Collections.IEnumerable>|通过元素排序。|
+|<xref:System.Collections.IEnumerable>|通过元素进行排序。|
 |<xref:System.Collections.ICollection>|维护元素组。|
 |<xref:System.Collections.Generic.IEnumerable%601>|通过类型化元素进行排序。|
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
-|ITree\<键，值>|维护通用容器。|
+|ITree\<Key, Value>|维护泛型容器。|
 
 ## <a name="remarks"></a>备注
 
-对象为其控制为单个节点控制的顺序分配和释放存储。 它将元素插入到（几乎）平衡的树中，它通过更改节点之间的链接（从不通过将一个节点的内容复制到另一个节点）来保持顺序。 这意味着您可以自由插入和删除元素，而不会干扰其余元素。
+对象为其控制的序列分配并释放存储，以作为单个节点。 它通过更改节点之间的链接，将元素插入到（几乎）平衡树中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
 
-对象通过调用[类型集：：：key_compare （STL/CLR）](../dotnet/set-key-compare-stl-clr.md)的存储委托对象来命令其控制的顺序。 您可以在构造集时指定存储的委托对象;但是，在构造集时，可以指定存储的委托对象。如果指定没有委托对象，则默认值为 比较`operator<(key_type, key_type)`。 通过调用成员函数[集：：key_comp （STL/CLR）](../dotnet/set-key-comp-stl-clr.md)`()`来访问此存储的对象。
+对象通过调用类型为 " [set：： key_compare （STL/CLR）](../dotnet/set-key-compare-stl-clr.md)" 的存储的委托对象，对它控制的序列进行排序。 构造集时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为 "比较" `operator<(key_type, key_type)` 。 可以通过调用成员函数[set：： key_comp （STL/CLR）](../dotnet/set-key-comp-stl-clr.md)访问此存储的对象 `()` 。
 
-此类委托对象必须对类型[集：：：key_type （STL/CLR） 的](../dotnet/set-key-type-stl-clr.md)键施加严格的弱排序。 这意味着，对于任何两个键`X`和`Y`：
+此类委托对象必须对[set：： key_type （STL/CLR）](../dotnet/set-key-type-stl-clr.md)类型的键施加严格弱排序。 这意味着，对于任意两个密钥 `X` 和 `Y` ：
 
-`key_comp()(X, Y)`在每个调用上返回相同的布尔结果。
+`key_comp()(X, Y)`针对每个调用返回相同的布尔值结果。
 
-如果`key_comp()(X, Y)`为 true，`key_comp()(Y, X)`则必须为 false。
+如果 `key_comp()(X, Y)` 为 true，则 `key_comp()(Y, X)` 必须为 false。
 
-如果`key_comp()(X, Y)`为 true，`X`则表示之前已订购`Y`。
+如果 `key_comp()(X, Y)` 为 true，则 `X` 称之前为排序 `Y` 。
 
-如果`!key_comp()(X, Y) && !key_comp()(Y, X)`为 true，`X`则`Y`表示具有等效排序。
+如果 `!key_comp()(X, Y) && !key_comp()(Y, X)` 为 true，则 `X` `Y` 认为和具有等效的排序。
 
-对于受控序列`X``Y`中前面的任何元素，`key_comp()(Y, X)`都是 false。 （对于默认委托对象，键的值永远不会减少。与模板类[集](../dotnet/set-stl-clr.md)不同，模板类`set`的对象不要求所有元素的键都是唯一的。 （两个或多个密钥可以具有等效排序。
+对于位于 `X` `Y` 受控序列中的任何元素， `key_comp()(Y, X)` 为 false。 （对于默认的委托对象，键从不减小值。）与模板类[集](../dotnet/set-stl-clr.md)不同，模板类的对象 `set` 不需要所有元素的键都是唯一的。 （两个或两个以上的键可以具有等效的顺序。）
 
-每个元素同时充当 ey 和值。 序列的表示方式允许查找、插入和删除任意元素，其操作数量与序列中元素数（对数时间）的对数成正比。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
+每个元素都作为3om-ey-2vk 和值。 序列以允许查找、插入和移除任意元素的方式表示，这些操作与序列中的元素数的对数成正比（对数时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
-集支持双向迭代器，这意味着您可以步进到相邻元素，给定一个迭代器，该迭代器在受控序列中指定元素。 特殊头节点对应于按[set：end （STL/CLR）](../dotnet/set-end-stl-clr.md)`()`返回的迭代器。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以增量一个集迭代器以到达头节点，然后它将比较等于`end()`。 但是，您不能取消引用 返回的`end()`迭代器。
+集支持双向迭代器，这意味着，如果迭代器指定了受控序列中的元素，则可以单步执行相邻元素。 特殊头节点对应于[set：： end （STL/CLR）](../dotnet/set-end-stl-clr.md)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增集迭代器来访问头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
 
-请注意，您不能直接引用给定其数值位置的集元素，该元素需要随机访问迭代器。
+请注意，不能直接引用具有需要随机访问迭代器的数字位置的 set 元素。
 
-集迭代器将句柄存储到其关联的集节点，而该节点又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要集迭代器的关联集节点与某个集相关联，则其迭代器仍然有效。 此外，有效的迭代器是可引用的 -- 只要它不等于`end()`， 就可以使用它来访问或更改它指定的元素值。
+集迭代器将句柄存储到其关联的设置节点，后者又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要集合迭代器的关联集节点与某个集相关联，就会保持有效。 而且，有效的迭代器是 dereferencable 的，您可以使用它来访问或更改它指定的元素值，但前提是它不等于 `end()` 。
 
-删除或删除元素将调用析构函数的存储值。 销毁容器会擦除所有元素。 因此，元素类型为 ref 类的容器可确保没有元素比容器寿命大。 但是请注意，句柄的容器*不会*破坏其元素。
+清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器*不*会销毁其元素。
 
 ## <a name="members"></a>成员
 
-## <a name="setbegin-stlclr"></a><a name="begin"></a>设置：开始（STL/CLR）
+## <a name="setbegin-stlclr"></a><a name="begin"></a>set：： begin （STL/CLR）
 
 指定受控序列的开头。
 
@@ -236,7 +236,7 @@ iterator begin();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个双向迭代器，该迭代器指定受控序列的第一个元素，或刚刚超出空序列的末尾。 用于获取一个迭代器，该迭代器指定受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
+成员函数返回一个双向迭代器，该迭代器指定受控序列的第一个元素，或刚超出空序列的末尾。 用于获取一个迭代器，该迭代器指定受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
 
 ### <a name="example"></a>示例
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="setclear-stlclr"></a><a name="clear"></a>设置：清除（STL/CLR）
+## <a name="setclear-stlclr"></a><a name="clear"></a>set：： clear （STL/CLR）
 
 删除所有元素。
 
@@ -284,7 +284,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[集：：擦除 （STL/CLR）](../dotnet/set-erase-stl-clr.md) `(`[集：开始（STL/CLR）](../dotnet/set-begin-stl-clr.md)`(),`[集：：结束（STL/CLR）](../dotnet/set-end-stl-clr.md)`())`。 使用它来确保受控序列为空。
+成员函数有效地调用 set： [： erase （stl/clr）](../dotnet/set-erase-stl-clr.md) `(` [set：： begin （stl/clr）](../dotnet/set-begin-stl-clr.md) `(),` [set：： end （stl/clr）](../dotnet/set-end-stl-clr.md) `())` 。 用于确保受控序列为空。
 
 ### <a name="example"></a>示例
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>集：：const_iterator（STL/CLR）
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>set：： const_iterator （STL/CLR）
 
 受控序列的常量迭代器的类型。
 
@@ -342,7 +342,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>备注
 
-类型描述未指定类型`T2`的对象，该对象可用作受控序列的恒定双向迭代器。
+该类型描述 `T2` 可用作受控序列的常量双向迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>设置：：const_reference（STL/CLR）
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>set：： const_reference （STL/CLR）
 
 元素的常量引用的类型。
 
@@ -417,7 +417,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>设置：：const_reverse_iterator（STL/CLR）
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>set：： const_reverse_iterator （STL/CLR）
 
 受控序列的常量反向迭代器的类型。
 
@@ -429,7 +429,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>备注
 
-类型描述未指定类型`T4`的对象，该对象可用作受控序列的恒定反向迭代器。
+该类型描述 `T4` 可用作受控序列的常量反向迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="setcount-stlclr"></a><a name="count"></a>设置：计数（STL/CLR）
+## <a name="setcount-stlclr"></a><a name="count"></a>set：： count （STL/CLR）
 
 查找与指定键匹配的元素数。
 
@@ -471,12 +471,12 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>参数
 
-*关键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回具有与*键*等效排序的受控序列中的元素数。 用于确定受控序列中当前与指定键匹配的元素数。
+该成员函数将返回受控序列中与*键*具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
 
 ### <a name="example"></a>示例
 
@@ -512,9 +512,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>设置：:d）类型（STL/CLR）
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>集：:d ifference_type （STL/CLR）
 
-两个元素之间签名距离的类型。
+两个元素间的带符号距离的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -524,7 +524,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>备注
 
-类型描述可能为负的元素计数。
+该类型描述了可能的负元素计数。
 
 ### <a name="example"></a>示例
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="setempty-stlclr"></a><a name="empty"></a>集：：空（STL/CLR）
+## <a name="setempty-stlclr"></a><a name="empty"></a>set：： empty （STL/CLR）
 
 测试元素是否存在。
 
@@ -579,7 +579,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[设置：大小 （STL/CLR）。](../dotnet/set-size-stl-clr.md)`() == 0` 使用它来测试该集是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[set：： size （STL/CLR）](../dotnet/set-size-stl-clr.md) `() == 0` 。 用于测试集是否为空。
 
 ### <a name="example"></a>示例
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="setend-stlclr"></a><a name="end"></a>设置：结束（STL/CLR）
+## <a name="setend-stlclr"></a><a name="end"></a>set：： end （STL/CLR）
 
 指定受控序列的末尾。
 
@@ -631,7 +631,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个双向迭代器，该迭代器的点位于受控序列的末尾之外。 使用它来获取指定受控序列结束的迭代器;如果受控序列的长度发生更改，其状态不会更改。
+成员函数返回一个双向迭代器，它指向刚超出受控序列末尾的位置。 用于获取一个迭代器，该迭代器指定受控序列的末尾;如果受控序列的长度发生更改，则其状态不会更改。
 
 ### <a name="example"></a>示例
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>集：：equal_range（STL/CLR）
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>set：： equal_range （STL/CLR）
 
 查找与指定键匹配的范围。
 
@@ -680,12 +680,12 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 #### <a name="parameters"></a>参数
 
-*关键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一对迭代器`cliext::pair<iterator, iterator>(`[集：lower_bound （STL/CLR）](../dotnet/set-lower-bound-stl-clr.md) `(key),` [集：：upper_bound （STL/CLR）。](../dotnet/set-upper-bound-stl-clr.md)`(key))` 使用它来确定当前在受控序列中与指定键匹配的元素范围。
+此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [set：： lower_bound （stl/clr）](../dotnet/set-lower-bound-stl-clr.md) `(key),` [set：： upper_bound （stl/clr）](../dotnet/set-upper-bound-stl-clr.md) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
 
 ### <a name="example"></a>示例
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="seterase-stlclr"></a><a name="erase"></a>设置：擦除（STL/CLR）
+## <a name="seterase-stlclr"></a><a name="erase"></a>set：： erase （STL/CLR）
 
 移除指定位置处的元素。
 
@@ -742,27 +742,27 @@ size_type erase(key_type key)
 
 #### <a name="parameters"></a>参数
 
-*第一*<br/>
-要擦除的范围的开始。
+*first*<br/>
+要清除的范围的开头。
 
-*关键*<br/>
-要擦除的关键值。
+*key*<br/>
+要清除的键值。
 
-*最后*<br/>
-要擦除的范围结束。
+*last*<br/>
+要清除的范围的结束。
 
-*其中*<br/>
-要擦除的元素。
+*where*<br/>
+要清除的元素。
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数删除由*何处*指向的受控序列的元素，并返回一个迭代器，该迭代器指定删除的元素之外的第一个元素，如果不存在此类元素，[则设置：end （STL/CLR）。](../dotnet/set-end-stl-clr.md) `()` 使用它删除单个元素。
+第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则[设置：： end （STL/CLR）](../dotnet/set-end-stl-clr.md) `()` 。 使用它可以删除单个元素。
 
-第二个成员函数删除范围 *`first``last`中的受控序列的元素，并返回一个迭代器，该迭代器指定超出删除的任何元素之外的第一个元素，或者如果`end()`不存在此类元素。 使用它删除零个或多个连续元素。
+第二个成员函数删除范围 [，）中的受控序列的元素， `first` `last` 并返回一个迭代器，该迭代器指定删除的任何元素之外保留的第一个元素; `end()` 如果此类元素不存在，则为。 使用它可以删除零个或多个连续元素。
 
-第三个成员函数删除键与*键*的等效排序的受控序列的任何元素，并返回删除的元素数的计数。 使用它删除和计数与指定键匹配的所有元素。
+第三个成员函数删除受控序列中其键与*键*具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
 
-每个元素擦除所需的时间与受控序列中元素数的对数成正比。
+每个元素擦除与受控序列中的元素数的对数成正比。
 
 ### <a name="example"></a>示例
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="setfind-stlclr"></a><a name="find"></a>设置：查找（STL/CLR）
+## <a name="setfind-stlclr"></a><a name="find"></a>set：： find （STL/CLR）
 
 查找与指定键匹配的元素。
 
@@ -824,12 +824,12 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>参数
 
-*关键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-如果受控序列中至少有一个元素具有与*键*等效排序，则成员函数将返回指定其中一个元素的迭代器;否则它将返回[集：：结束 （STL/CLR）。](../dotnet/set-end-stl-clr.md)`()` 使用它来查找当前与指定键匹配的受控序列中的元素。
+如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它[将返回 set：： end （STL/CLR）](../dotnet/set-end-stl-clr.md) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
 
 ### <a name="example"></a>示例
 
@@ -868,7 +868,7 @@ find b = b
 find C = False
 ```
 
-## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>设置：：generic_container（STL/CLR）
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>set：： generic_container （STL/CLR）
 
 容器的泛型接口的类型。
 
@@ -932,9 +932,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>设置：：generic_iterator（STL/CLR）
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>set：： generic_iterator （STL/CLR）
 
-用于容器的泛型接口的迭代器的类型。
+与容器的泛型接口一起使用的迭代器的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -946,7 +946,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>备注
 
-该类型描述了一个泛型迭代器，该迭代器可与此模板容器类的泛型接口一起使用。
+该类型描述了可与此模板容器类的泛型接口一起使用的泛型迭代器。
 
 ### <a name="example"></a>示例
 
@@ -988,7 +988,7 @@ a b c
 a
 ```
 
-## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>套：：generic_reverse_iterator（STL/CLR）
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>set：： generic_reverse_iterator （STL/CLR）
 
 用于容器的泛型接口的反向迭代器的类型。
 
@@ -1002,7 +1002,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>备注
 
-该类型描述了一个通用反向迭代器，该迭代器可与此模板容器类的泛型接口一起使用。
+该类型描述了可与此模板容器类的泛型接口一起使用的一般反向迭代器。
 
 ### <a name="example"></a>示例
 
@@ -1044,9 +1044,9 @@ a b c
 c
 ```
 
-## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>设置：：generic_value（STL/CLR）
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>set：： generic_value （STL/CLR）
 
-用于容器的泛型接口的元素的类型。
+用于容器的泛型接口的元素类型。
 
 ### <a name="syntax"></a>语法
 
@@ -1056,7 +1056,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>备注
 
-类型描述类型`GValue`对象，该对象描述存储的元素值，以便与此模板容器类的泛型接口一起使用。
+类型描述了一个类型为的对象 `GValue` ，该对象描述用于此模板容器类的泛型接口的存储元素值。
 
 ### <a name="example"></a>示例
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="setinsert-stlclr"></a><a name="insert"></a>设置：插入（STL/CLR）
+## <a name="setinsert-stlclr"></a><a name="insert"></a>set：： insert （STL/CLR）
 
 添加元素。
 
@@ -1114,34 +1114,34 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>参数
 
-*第一*<br/>
-要插入的范围的开始。
+*first*<br/>
+要插入的范围的开头。
 
-*最后*<br/>
-要插入的范围结束。
+*last*<br/>
+要插入的范围的末尾。
 
-*对*<br/>
+*然后*<br/>
 要插入的枚举。
 
-*瓦尔*<br/>
-要插入的键值。
+*初始值*<br/>
+要插入的项值。
 
-*其中*<br/>
-容器中要插入的位置（仅限提示）。
+*where*<br/>
+容器中要插入的位置（仅提示）。
 
 ### <a name="remarks"></a>备注
 
-每个成员函数插入由其余操作数指定的序列。
+每个成员函数都插入由剩余操作数指定的序列。
 
-第一个成员函数尝试插入值*为 val*的元素，并返回一对值`X`。 如果`X.second`为 true，则指定新插入的元素;如果为 true，`X.first`则指定新插入的元素。否则`X.first`指定具有已存在的等效排序且未插入新元素的元素。 使用它插入单个元素。
+第一个成员函数将使用值*val*来插入元素，并返回一对值 `X` 。 如果 `X.second` 为 true，则 `X.first` 指定新插入的元素; 否则 `X.first` 指定一个具有等效排序的元素，并且不插入新元素。 用于插入单个元素。
 
-第二个成员函数插入值*为 val*的元素，使用*其中*用作提示（以提高性能），并返回指定新插入的元素的迭代器。 使用它插入一个可能与您知道的元素相邻的单个元素。
+第二个成员函数插入具有值*val*的元素，并使用*where*作为提示（以提高性能），并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
 
-第三个成员函数插入序列 *`first`。 `last` 使用它插入从其他序列复制的零个或多个元素。
+第三个成员函数插入序列 [ `first` ， `last` ）。 用于插入从另一个序列复制的零个或多个元素。
 
-第四个成员函数插入*右侧*指定的序列。 使用它插入枚举器描述的序列。
+第四个成员函数插入由*权限*指定的序列。 使用它可以插入枚举器描述的序列。
 
-每个元素插入所需的时间与受控序列中元素数的对数成正比。 但是，给定指定插入点附近的元素的提示，可以在摊销常量时间内进行插入。
+每个元素插入时间与受控序列中的元素数的对数成正比。 但是，如果指定一个在插入点附近指定元素的提示，则可能会在分期常量时间内进行插入。
 
 ### <a name="example"></a>示例
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="setiterator-stlclr"></a><a name="iterator"></a>集：迭代器（STL/CLR）
+## <a name="setiterator-stlclr"></a><a name="iterator"></a>set：： iterator （STL/CLR）
 
 受控序列的迭代器的类型。
 
@@ -1226,7 +1226,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>备注
 
-类型描述一个未指定类型`T1`的对象，该对象可用作受控序列的双向迭代器。
+该类型描述 `T1` 可用作受控序列的双向迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -1256,7 +1256,7 @@ int main()
 a b c
 ```
 
-## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>设置：key_comp（STL/CLR）
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>set：： key_comp （STL/CLR）
 
 复制两个键的排序委托。
 
@@ -1268,7 +1268,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回用于排序受控序列的排序委托。 用于对两个键进行比较。
+此成员函数返回用于对受控序列进行排序的排序委托。 用于对两个键进行比较。
 
 ### <a name="example"></a>示例
 
@@ -1315,7 +1315,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>设置：：key_compare（STL/CLR）
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>set：： key_compare （STL/CLR）
 
 两个键的排序委托。
 
@@ -1328,7 +1328,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>备注
 
-类型是委托的同义词，用于确定其键参数的顺序。
+类型是委托的同义词，它确定其密钥参数的顺序。
 
 ### <a name="example"></a>示例
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_type-stlclr"></a><a name="key_type"></a>设置：key_type（STL/CLR）
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a>set：： key_type （STL/CLR）
 
 排序键的类型。
 
@@ -1387,7 +1387,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数*Key*的同义词。
+该类型是模板参数*键*的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1420,7 +1420,7 @@ int main()
 a b c
 ```
 
-## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>设置：lower_bound（STL/CLR）
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>set：： lower_bound （STL/CLR）
 
 查找与指定键匹配的范围的开头。
 
@@ -1432,12 +1432,12 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>参数
 
-*关键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数确定受控序列中与`X`*键*具有等效排序的第一个元素。 如果不存在此类元素，它将返回[集：：结束（STL/CLR）;](../dotnet/set-end-stl-clr.md)`()`否则，它将返回指定 的`X`迭代器。 使用它来定位当前在受控序列中匹配指定键的元素序列的开头。
+成员函数确定 `X` 受控序列中对*key*具有等效顺序的第一个元素。 如果此类元素不存在，则返回[set：： end （STL/CLR）](../dotnet/set-end-stl-clr.md) `()` ; 否则返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
 
 ### <a name="example"></a>示例
 
@@ -1477,9 +1477,9 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="setmake_value-stlclr"></a><a name="make_value"></a>设置：make_value（STL/CLR）
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a>set：： make_value （STL/CLR）
 
-构造值对象。
+构造一个值对象。
 
 ### <a name="syntax"></a>语法
 
@@ -1489,12 +1489,12 @@ static value_type make_value(key_type key);
 
 #### <a name="parameters"></a>参数
 
-*关键*<br/>
-要使用的键值。
+*key*<br/>
+要使用的密钥值。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回其键`value_type`为*键*的对象。 使用它来组合一个适合与其他几个成员函数一起使用的对象。
+成员函数返回一个 `value_type` 对象，其键为*key*。 使用它来编写适用于多个其他成员函数的对象。
 
 ### <a name="example"></a>示例
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="setoperator-stlclr"></a><a name="op_as"></a>设置：：运算符* （STL/CLR）
+## <a name="setoperator-stlclr"></a><a name="op_as"></a>set：： operator = （STL/CLR）
 
 替换受控序列。
 
@@ -1535,12 +1535,12 @@ set<Key>% operator=(set<Key>% right);
 
 #### <a name="parameters"></a>参数
 
-*对*<br/>
+*然后*<br/>
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符*将右侧*复制到对象，然后返回`*this`。 使用它将受控序列替换为*右侧*受控序列的副本。
+成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>设置：rbegin（STL/CLR）
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>set：： rbegin （STL/CLR）
 
 指定反向受控序列的开头。
 
@@ -1590,7 +1590,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个反向迭代器，该迭代器指定受控序列的最后一个元素，或刚刚超出空序列的开头。 因此，它指定反向序列的 `beginning`。 用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
+成员函数返回一个反向迭代器，该迭代器指定受控序列的最后一个元素，或刚超出空序列的开头。 因此，它指定反向序列的 `beginning`。 用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
 
 ### <a name="example"></a>示例
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="setreference-stlclr"></a><a name="reference"></a>设置：参考（STL/CLR）
+## <a name="setreference-stlclr"></a><a name="reference"></a>set：： reference （STL/CLR）
 
 元素的引用的类型。
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="setrend-stlclr"></a><a name="rend"></a>设置：rend （STL/CLR）
+## <a name="setrend-stlclr"></a><a name="rend"></a>set：： rend （STL/CLR）
 
 指定反向受控序列的末尾。
 
@@ -1683,7 +1683,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一个反向迭代器，该迭代器的点位于受控序列的开头之外。 因此，它指定反向序列的 `end`。 用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 末尾，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
+成员函数返回一个反向迭代器，该迭代器指向刚刚超出受控序列的开头。 因此，它指定反向序列的 `end`。 用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 末尾，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。
 
 ### <a name="example"></a>示例
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>设置：reverse_iterator（STL/CLR）
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>set：： reverse_iterator （STL/CLR）
 
 受控序列的反向迭代器的类型。
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="setset-stlclr"></a><a name="set"></a>设置：设置（STL/CLR）
+## <a name="setset-stlclr"></a><a name="set"></a>set：： set （STL/CLR）
 
 构造容器对象。
 
@@ -1785,16 +1785,16 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>参数
 
-*第一*<br/>
-要插入的范围的开始。
+*first*<br/>
+要插入的范围的开头。
 
-*最后*<br/>
-要插入的范围结束。
+*last*<br/>
+要插入的范围的末尾。
 
-*Pred*<br/>
-对受控序列的谓词进行排序。
+*pred*<br/>
+受控序列的排序谓词。
 
-*对*<br/>
+*然后*<br/>
 要插入的对象或范围。
 
 ### <a name="remarks"></a>备注
@@ -1803,49 +1803,49 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `set();`
 
-初始化没有元素的受控序列，默认排序谓词`key_compare()`。 使用它指定一个空的初始控制序列，使用默认排序谓词。
+用默认的排序谓词初始化没有元素的受控序列 `key_compare()` 。 使用它可以指定一个空的初始受控序列，并使用默认的排序谓词。
 
 构造函数：
 
 `explicit set(key_compare^ pred);`
 
-初始化没有元素的受控序列，顺序谓词*预置*。 使用它指定一个空的初始控制序列，以及指定的排序谓词。
+用排序谓词*pred*初始化不包含元素的受控序列。 使用此方法可以指定一个具有指定排序谓词的空的初始受控序列。
 
 构造函数：
 
 `set(set<Key>% right);`
 
-使用默认排序谓词使用序列 *`right.begin()`初始`right.end()`化受控序列。 使用它指定初始受控序列，该序列是设置对象*右侧*控制序列的副本，具有默认排序谓词。
+用序列 [，）初始化受控序列 `right.begin()` `right.end()` ，并带有默认的排序谓词。 使用此方法可以指定初始受控序列，该序列是由集对象*权限*控制的序列的副本，具有默认的排序谓词。
 
 构造函数：
 
 `set(set<Key>^ right);`
 
-使用默认排序谓词使用序列 *`right->begin()`初始`right->end()`化受控序列。 使用它指定初始受控序列，该序列是设置对象*右侧*控制序列的副本，具有默认排序谓词。
+用序列 [，）初始化受控序列 `right->begin()` `right->end()` ，并带有默认的排序谓词。 使用此方法可以指定初始受控序列，该序列是由集对象*权限*控制的序列的副本，具有默认的排序谓词。
 
 构造函数：
 
 `template<typename InIter> set(InIter first, InIter last);`
 
-使用默认排序谓词使用序列 *`first`初始`last`化受控序列。 使用它使受控序列成为另一个序列的副本，默认排序谓词。
+用序列 [，）初始化受控序列 `first` `last` ，并带有默认的排序谓词。 使用它可以通过默认排序谓词使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`
 
-使用序列 # 初始化受控序列`first`，`last`使用排序谓词*预置*。 使用它使受控序列成为另一个序列的副本，并带有指定的排序谓词。
+用序列 [，）初始化受控序列 `first` `last` ，其排序谓词为*pred*。 使用此方法可以通过指定的排序谓词使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-使用枚举器*右侧*指定的序列初始化受控序列，使用默认排序谓词。 使用它使受控序列成为枚举器描述的另一个序列的副本，并带有默认排序谓词。
+使用默认排序谓词，*用枚举器*指定的序列初始化受控序列。 使用此方法可以通过默认的排序谓词，使受控序列成为枚举器描述的另一个序列的副本。
 
 构造函数：
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-使用枚举器*右侧*指定的序列初始化受控序列，并*预用*排序谓词 。 使用它使受控序列成为枚举器描述的另一个序列的副本，并带有指定的排序谓词。
+使用排序谓词*pred*，*通过枚举器*指定的序列初始化受控序列。 它用于使受控序列成为使用指定排序谓词的枚举器所描述的另一序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="setsize-stlclr"></a><a name="size"></a>设置：大小（STL/CLR）
+## <a name="setsize-stlclr"></a><a name="size"></a>set：： size （STL/CLR）
 
 对元素数进行计数。
 
@@ -1945,7 +1945,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 使用它来确定当前受控序列中的元素数。 如果您关心的只是序列是否具有非零大小，请参阅[设置：空 （STL/CLR）。](../dotnet/set-empty-stl-clr.md)`()`
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[set：： empty （STL/CLR）](../dotnet/set-empty-stl-clr.md) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -1987,9 +1987,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="setsize_type-stlclr"></a><a name="size_type"></a>设置：size_type（STL/CLR）
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a>set：： size_type （STL/CLR）
 
-两个元素之间的签名距离的类型。
+两个元素间的带符号距离的类型。
 
 ### <a name="syntax"></a>语法
 
@@ -1999,7 +1999,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>备注
 
-类型描述非负元素计数。
+该类型描述了一个非负元素计数。
 
 ### <a name="example"></a>示例
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="setswap-stlclr"></a><a name="swap"></a>集：：交换（STL/CLR）
+## <a name="setswap-stlclr"></a><a name="swap"></a>set：： swap （STL/CLR）
 
 交换两个容器的内容。
 
@@ -2047,12 +2047,12 @@ void swap(set<Key>% right);
 
 #### <a name="parameters"></a>参数
 
-*对*<br/>
+*然后*<br/>
 要与其交换内容的容器。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换*和*之间的`this`受控序列。 它在恒定时间内这样做，并且不会引发任何异常。 使用它作为交换两个容器内容的快速方法。
+成员函数交换和右之间的受控 **`this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2103,7 +2103,7 @@ d e f
 a b c
 ```
 
-## <a name="setto_array-stlclr"></a><a name="to_array"></a>设置：to_array（STL/CLR）
+## <a name="setto_array-stlclr"></a><a name="to_array"></a>set：： to_array （STL/CLR）
 
 将受控序列复制到新数组。
 
@@ -2115,7 +2115,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回包含受控序列的数组。 使用它以数组形式获取受控序列的副本。
+此成员函数返回包含受控序列的数组。 可以使用它以数组形式获取受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2153,7 +2153,7 @@ a b c d
 a b c
 ```
 
-## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>设置：：upper_bound（STL/CLR）
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>set：： upper_bound （STL/CLR）
 
 查找与指定键匹配的范围的末尾。
 
@@ -2165,12 +2165,12 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>参数
 
-*关键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数确定受控序列中与`X`*键*具有等效排序的最后一个元素。 如果不存在此类元素，或者`X`是受控序列中的最后一个元素，则返回[集：：end （STL/CLR）;](../dotnet/set-end-stl-clr.md)`()`否则，它将返回一个迭代器，该迭代器指定超出`X`的第一个元素。 使用它来定位当前在受控序列中匹配指定键的元素序列的末尾。
+成员函数确定 `X` 受控序列中对*key*具有等效排序的最后一个元素。 如果此类元素不存在，或者如果 `X` 是受控序列中的最后一个元素，则返回[set：： END （STL/CLR）](../dotnet/set-end-stl-clr.md) `()` ; 否则返回指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
 
 ### <a name="example"></a>示例
 
@@ -2210,7 +2210,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>设置：：value_comp（STL/CLR）
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>set：： value_comp （STL/CLR）
 
 复制两个元素值的排序委托。
 
@@ -2222,7 +2222,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>备注
 
-成员函数返回用于排序受控序列的排序委托。 使用它比较两个元素值。
+此成员函数返回用于对受控序列进行排序的排序委托。 用于比较两个元素值。
 
 ### <a name="example"></a>示例
 
@@ -2254,7 +2254,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>集：：value_compare（STL/CLR）
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>set：： value_compare （STL/CLR）
 
 两个元素值的排序委托。
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>集：：value_type（STL/CLR）
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>set：： value_type （STL/CLR）
 
 元素的类型。
 
@@ -2344,9 +2344,9 @@ int main()
 a b c
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_neq"></a>运算符！*（设置）（STL/CLR）
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operator！ = （set）（STL/CLR）
 
-列出不相等的比较。
+列表不相等比较。
 
 ### <a name="syntax"></a>语法
 
@@ -2358,15 +2358,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>参数
 
-*离开*<br/>
+*左中*<br/>
 要比较的左容器。
 
-*对*<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-运算符函数返回`!(left == right)`。 使用它来测试在按元素比较两个集时 *，左的*排序是否与*右侧*相同。
+Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素对两个集进行*比较时，是否按原样对**左侧*进行排序。
 
 ### <a name="example"></a>示例
 
@@ -2414,7 +2414,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>运算符&lt;（设置）（STL/CLR）
+## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>运算符 &lt; （set）（STL/CLR）
 
 列表小于比较。
 
@@ -2428,15 +2428,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>参数
 
-*离开*<br/>
+*左中*<br/>
 要比较的左容器。
 
-*对*<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-如果 对于最低位置`i``!(right[i] < left[i])`，运算符函数返回`left[i] < right[i]`true， 如果 。 否则，它返回`left->size() < right->size()`"使用它"来测试在按元素比较两个集之前是否*对**左侧*进行排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回，用于 `left->size() < right->size()` 测试在按元素对两个*right*集进行比较时，是否向*左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2484,9 +2484,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>运算符&lt;= （设置） （STL/CLR）
+## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>operator &lt; = （set）（STL/CLR）
 
-列出小于或相等的比较。
+列表小于或等于比较。
 
 ### <a name="syntax"></a>语法
 
@@ -2498,15 +2498,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>参数
 
-*离开*<br/>
+*左中*<br/>
 要比较的左容器。
 
-*对*<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-运算符函数返回`!(right < left)`。 使用它来测试在按元素比较两个集时，*是否*未*在右后右*排序。
+Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个集进行比较*时，是否向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2554,9 +2554,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_eq"></a>运算符* （设置） （STL/CLR）
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a>operator = = （set）（STL/CLR）
 
-列出相等的比较。
+列出相等比较。
 
 ### <a name="syntax"></a>语法
 
@@ -2568,15 +2568,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>参数
 
-*离开*<br/>
+*左中*<br/>
 要比较的左容器。
 
-*对*<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-仅当*由左右*控制的顺序长度相同*right*且每个位置`i``left[i] ==``right[i]`具有相同的长度时，运算符函数才会返回 true。 使用它来测试在按元素比较两个集时 *，左的*排序是否与*右侧*相同。
+仅当由*左*和*右*控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个集进行*比较时，* *左侧*是否按原样排序。
 
 ### <a name="example"></a>示例
 
@@ -2624,7 +2624,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>运算符&gt;（设置）（STL/CLR）
+## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>运算符 &gt; （set）（STL/CLR）
 
 列表大于比较。
 
@@ -2638,15 +2638,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>参数
 
-*离开*<br/>
+*左中*<br/>
 要比较的左容器。
 
-*对*<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-运算符函数返回`right``<``left`。 使用它来测试在按元素比较两个集时 *，左是否*按*右*顺序排列。
+Operator 函数返回 `right` `<` `left` 。 用于测试是否在按元素对两个集进行*比较时向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2694,9 +2694,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>运算符&gt;= （设置） （STL/CLR）
+## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>operator &gt; = （set）（STL/CLR）
 
-列出大于或相等的比较。
+列出大于或等于比较。
 
 ### <a name="syntax"></a>语法
 
@@ -2708,15 +2708,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>参数
 
-*离开*<br/>
+*左中*<br/>
 要比较的左容器。
 
-*对*<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-运算符函数返回`!(left < right)`。 使用它来测试在按元素比较两个集之前是否未*对**左侧*进行排序。
+Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个集进行比较*时，是否向**左*排序。
 
 ### <a name="example"></a>示例
 

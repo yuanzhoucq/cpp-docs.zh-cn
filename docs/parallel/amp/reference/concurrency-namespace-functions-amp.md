@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 1187b745a6d8c903c22958185be8d98a6e3d0204
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bf3c1f8a1de4d61b849bd56363ce3f0c7437348
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376350"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222740"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>并发命名空间函数 (AMP)
 
@@ -27,14 +27,14 @@ ms.locfileid: "81376350"
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
 |[atomic_exchange 函数 (C++ AMP)](#atomic_exchange)|[atomic_fetch_add 函数 (C++ AMP)](#atomic_fetch_add)|[atomic_fetch_and 函数 (C++ AMP)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函数 (C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub功能（C++安培）](#atomic_fetch_sub)|
-|[atomic_fetch_xor 函数 (C++ AMP)](#atomic_fetch_xor)|[复制](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函数 (C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub 函数（C++ AMP）](#atomic_fetch_sub)|
+|[atomic_fetch_xor 函数 (C++ AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
 |[global_memory_fence](#global_memory_fence)|[parallel_for_each 函数 (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
 ## <a name="all_memory_fence"></a><a name="all_memory_fence"></a>all_memory_fence
 
-阻止执行磁贴中的所有线程，直到完成所有内存访问。 这可确保线程磁贴中的其他线程对所有内存访问都可见，并且按程序顺序执行。
+阻止在磁贴中所有线程的执行，直到所有内存访问都完成。 这可确保所有内存访问对于线程平铺中的其他线程都可见，并按程序顺序执行。
 
 ```cpp
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -47,7 +47,7 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 
 ## <a name="amp_uninitialize"></a><a name="amp_uninitialize"></a>amp_uninitialize
 
-取消初始化C++ AMP 运行时。 在应用程序生存期内多次调用此函数是合法的。 调用此函数后调用任何C++ AMP API 将重新初始化 C++ AMP 运行时。 请注意，跨调用此函数C++ AMP 对象是非法的，这样做将导致未定义的行为。 此外，同时调用此函数和任何其他 AMP API 是非法的，将导致未定义的行为。
+取消 C++ AMP 运行时。 在应用程序生存期内多次调用此函数是合法的。 调用此函数后调用任意 C++ AMP API 将重新初始化 C++ AMP 运行时。 请注意，在对此函数的调用中使用 C++ AMP 对象是非法的，这样做将导致未定义的行为。 同时，同时调用此函数和任何其他 AMP Api 是非法的，并会导致未定义的行为。
 
 ```cpp
 void __cdecl amp_uninitialize();
@@ -55,7 +55,7 @@ void __cdecl amp_uninitialize();
 
 ## <a name="atomic_compare_exchange"></a><a name="atomic_compare_exchange"></a>atomic_compare_exchange
 
-原子方式将存储在第一个参数中指定的内存位置的值与第二个指定参数的值进行比较，如果值相同，则内存位置的值将更改为第三个指定参数的值。
+以原子方式比较第一个参数中指定的内存位置上存储的值是否与第二个指定参数的值相等，如果值相同，则将内存位置的值更改为第三个指定参数的值。
 
 ```cpp
 inline bool atomic_compare_exchange(
@@ -74,19 +74,19 @@ inline bool atomic_compare_exchange(
 ### <a name="parameters"></a>参数
 
 *_Dest*<br/>
-读取要比较的一个值的位置，以及要存储新值（如果有）的位置。
+从中进行比较的值的读取位置，若要存储新值（如果有），则为。
 
 *_Expected_value*<br/>
-读取要比较的第二个值的位置。
+要从其进行比较的第二个值的读取位置。
 
 *value*<br/>
-要存储到 的内存位置 的值，`_Dest`如果`_Dest`等于 。 `_Expected_value`
+如果等于，则为要存储在中指定的内存位置的值 `_Dest` `_Dest` `_Expected_value` 。
 
 ### <a name="return-value"></a>返回值
 
-如果操作成功，**为 true;** 否则，**假**。
+**`true`** 如果操作成功，则为; 否则为。否则为 **`false`** 。
 
-## <a name="atomic_exchange-function-c-amp"></a><a name="atomic_exchange"></a>atomic_exchange功能（C++安培）
+## <a name="atomic_exchange-function-c-amp"></a><a name="atomic_exchange"></a>atomic_exchange 函数（C++ AMP）
 
 像原子运算那样设置目标位置的值。
 
@@ -119,9 +119,9 @@ inline float atomic_exchange(
 
 目标位置的初始值。
 
-## <a name="atomic_fetch_add-function-c-amp"></a><a name="atomic_fetch_add"></a>atomic_fetch_add功能（C++安培）
+## <a name="atomic_fetch_add-function-c-amp"></a><a name="atomic_fetch_add"></a>atomic_fetch_add 函数（C++ AMP）
 
-以原子方式向内存位置的值添加值。
+以原子方式将一个值添加到内存位置的值。
 
 ```cpp
 inline int atomic_fetch_add(
@@ -147,9 +147,9 @@ inline unsigned int atomic_fetch_add(
 
 内存位置的初始值。
 
-## <a name="atomic_fetch_and-function-c-amp"></a><a name="atomic_fetch_and"></a>atomic_fetch_and功能（C++安培）
+## <a name="atomic_fetch_and-function-c-amp"></a><a name="atomic_fetch_and"></a>atomic_fetch_and 函数（C++ AMP）
 
-原子上执行值和内存位置的值的位和操作。
+以原子方式对值和内存位置的值执行 "位与" 运算。
 
 ```cpp
 inline int atomic_fetch_and(
@@ -169,7 +169,7 @@ inline unsigned int atomic_fetch_and(
 指向该内存位置的指针。
 
 *value*<br/>
-要在位和计算中使用的值。
+要在按位 "与" 运算中使用的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -177,7 +177,7 @@ inline unsigned int atomic_fetch_and(
 
 ## <a name="atomic_fetch_dec"></a><a name="atomic_fetch_dec"></a>atomic_fetch_dec
 
-从原子上递减存储在指定内存位置的值。
+以原子方式递减存储在指定内存位置的值。
 
 ```cpp
 inline int atomic_fetch_dec(_Inout_ int* _Dest
@@ -189,7 +189,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>参数
 
 *_Dest*<br/>
-要递减的值的内存中的位置。
+要递减的值在内存中的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -197,7 +197,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 
 ## <a name="atomic_fetch_inc"></a><a name="atomic_fetch_inc"></a>atomic_fetch_inc
 
-以原子方式增加存储在指定内存位置的值。
+以原子方式递增存储在指定内存位置的值。
 
 ```cpp
 inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
@@ -208,7 +208,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>参数
 
 *_Dest*<br/>
-要递增的值的内存中的位置。
+要递增的值在内存中的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -216,7 +216,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 
 ## <a name="atomic_fetch_max"></a><a name="atomic_fetch_max"></a>atomic_fetch_max
 
-原子计算存储在第一个参数中指定的内存位置的值和第二个参数中指定的值之间的最大值，并将其存储在相同的内存位置。
+以原子方式计算存储在第一个参数中指定的内存位置的值与第二个参数中指定的值之间的最大值，并将其存储在相同的内存位置。
 
 ```cpp
 inline int atomic_fetch_max(
@@ -233,18 +233,18 @@ inline unsigned int atomic_fetch_max(
 ### <a name="parameters"></a>参数
 
 *_Dest*<br/>
-读取要比较的一个值的位置，以及将两个值的最大值存储到的位置。
+从中进行比较的值的读取位置，最多可存储两个值中的最大值。
 
 *value*<br/>
 要与指定位置的值进行比较的值。
 
 ### <a name="return-value"></a>返回值
 
-存储在指定位置的原始值。
+存储在指定位置位置的原始值。
 
 ## <a name="atomic_fetch_min"></a><a name="atomic_fetch_min"></a>atomic_fetch_min
 
-以原子方式计算存储在第一个参数中指定的内存位置的值和第二个参数中指定的值之间的最小值，并将其存储在相同的内存位置。
+以原子方式计算存储在第一个参数中指定的内存位置的值与第二个参数中指定的值之间的最小值，并将其存储在相同的内存位置。
 
 ```cpp
 inline int atomic_fetch_min(
@@ -261,16 +261,16 @@ inline unsigned int atomic_fetch_min(
 ### <a name="parameters"></a>参数
 
 *_Dest*<br/>
-读取要比较的一个值的位置，以及要存储两个值的最小值的位置。
+要从中进行比较的值的读取位置，最小值为存储的两个值。
 
 *value*<br/>
 要与指定位置的值进行比较的值。
 
 ### <a name="return-value"></a>返回值
 
-存储在指定位置的原始值。
+存储在指定位置位置的原始值。
 
-## <a name="atomic_fetch_or-function-c-amp"></a><a name="atomic_fetch_or"></a>atomic_fetch_or功能（C++安培）
+## <a name="atomic_fetch_or-function-c-amp"></a><a name="atomic_fetch_or"></a>atomic_fetch_or 函数（C++ AMP）
 
 通过一个值和一个内存位置的值在原子级别执行按位或运算。
 
@@ -298,7 +298,7 @@ inline unsigned int atomic_fetch_or(
 
 内存位置的初始值。
 
-## <a name="atomic_fetch_sub-function-c-amp"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub功能（C++安培）
+## <a name="atomic_fetch_sub-function-c-amp"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub 函数（C++ AMP）
 
 从内存位置以原子方式减去值。
 
@@ -326,9 +326,9 @@ inline unsigned int atomic_fetch_sub(
 
 内存位置的初始值。
 
-## <a name="atomic_fetch_xor-function-c-amp"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor功能（C++安培）
+## <a name="atomic_fetch_xor-function-c-amp"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor 函数（C++ AMP）
 
-原子上执行值和内存位置的位 XOR 操作。
+以原子方式执行值和内存位置的按位 XOR 运算。
 
 ```cpp
 inline int atomic_fetch_xor(
@@ -354,9 +354,9 @@ inline unsigned int atomic_fetch_xor(
 
 内存位置的初始值。
 
-## <a name="copy"></a><a name="copy"></a>复制
+## <a name="copy"></a><a name="copy"></a>复本
 
-复制C++ AMP 对象。 满足所有同步数据传输要求。 在加速器上运行代码时，无法复制数据。 此函数的一般形式是`copy(src, dest)`。
+复制 C++ AMP 对象。 满足所有同步数据传输要求。 在加速器上运行代码时，不能复制数据。 此函数的常规形式是 `copy(src, dest)` 。
 
 ```cpp
 template <typename value_type, int _Rank>
@@ -428,32 +428,32 @@ void copy(
 要复制到的对象。
 
 *_DestIter*<br/>
-到目标处开始位置的输出迭代器。
+指向目标位置处的起始位置的输出迭代器。
 
-*输入迭代器*<br/>
+*InputIterator*<br/>
 输入迭代器的类型。
 
-*输出迭代器*<br/>
+*OutputIterator*<br/>
 输出迭代器的类型。
 
 *_Rank*<br/>
-要复制的对象的排名或要复制到的对象。
+要从其复制的对象或要复制到的对象的级别。
 
 *_Src*<br/>
-以反对复制。
+要复制的对象。
 
 *_SrcFirst*<br/>
-到源容器的开始迭代器。
+源容器中的开始迭代器。
 
 *_SrcLast*<br/>
-到源容器的结束迭代器。
+源容器中的结束迭代器。
 
 *value_type*<br/>
-复制的元素的数据类型。
+要复制的元素的数据类型。
 
 ## <a name="copy_async"></a><a name="copy_async"></a>copy_async
 
-复制C++ AMP 对象并返回可以等待[的对象completion_future。](completion-future-class.md) 在加速器上运行代码时，无法复制数据。  此函数的一般形式是`copy(src, dest)`。
+复制 C++ AMP 对象并返回可等待的[completion_future](completion-future-class.md)对象。 在加速器上运行代码时，不能复制数据。  此函数的常规形式是 `copy(src, dest)` 。
 
 ```cpp
 template <typename value_type, int _Rank>
@@ -517,28 +517,28 @@ concurrency::completion_future copy_async(
 要复制到的对象。
 
 *_DestIter*<br/>
-到目标处开始位置的输出迭代器。
+指向目标位置处的起始位置的输出迭代器。
 
-*输入迭代器*<br/>
+*InputIterator*<br/>
 输入迭代器的类型。
 
-*输出迭代器*<br/>
+*OutputIterator*<br/>
 输出迭代器的类型。
 
 *_Rank*<br/>
-要复制的对象的排名或要复制到的对象。
+要从其复制的对象或要复制到的对象的级别。
 
 *_Src*<br/>
-以反对复制。
+要复制的对象。
 
 *_SrcFirst*<br/>
-到源容器的开始迭代器。
+源容器中的开始迭代器。
 
 *_SrcLast*<br/>
-到源容器的结束迭代器。
+源容器中的结束迭代器。
 
 *value_type*<br/>
-复制的元素的数据类型。
+要复制的元素的数据类型。
 
 ### <a name="return-value"></a>返回值
 
@@ -554,7 +554,7 @@ void direct3d_abort() restrict(amp);
 
 ## <a name="direct3d_errorf"></a><a name="direct3d_errorf"></a>direct3d_errorf
 
-将格式化的字符串打印到可视化工作室输出窗口。 它从具有限制子句的`restrict(amp)`函数调用。 当 AMP 运行时检测到调用时，它会引发具有相同格式字符串[runtime_exception](runtime-exception-class.md)异常。
+打印格式化的字符串到 Visual Studio "输出" 窗口。 它是使用限制子句的函数调用的 `restrict(amp)` 。 当 AMP 运行时检测到调用时，它将使用相同的格式设置字符串引发[runtime_exception](runtime-exception-class.md)异常。
 
 ```cpp
 void direct3d_errorf(
@@ -564,7 +564,7 @@ void direct3d_errorf(
 
 ## <a name="direct3d_printf"></a><a name="direct3d_printf"></a>direct3d_printf
 
-将格式化的字符串打印到可视化工作室输出窗口。 它从具有限制子句的`restrict(amp)`函数调用。
+打印格式化的字符串到 Visual Studio "输出" 窗口。 它是使用限制子句的函数调用的 `restrict(amp)` 。
 
 ```cpp
 void direct3d_printf(
@@ -574,7 +574,7 @@ void direct3d_printf(
 
 ## <a name="global_memory_fence"></a><a name="global_memory_fence"></a>global_memory_fence
 
-阻止执行磁贴中的所有线程，直到完成所有全局内存访问。 这可确保全局内存访问对线程磁贴中的其他线程可见，并且按程序顺序执行。
+阻止在磁贴中所有线程的执行，直到所有全局内存访问都完成。 这可确保全局内存访问对于线程平铺中的其他线程可见，并按程序顺序执行。
 
 ```cpp
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -583,9 +583,9 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ### <a name="parameters"></a>参数
 
 *_Barrier*<br/>
-tile_barrier对象
+一个 tile_barrier 对象
 
-## <a name="parallel_for_each-function-c-amp"></a><a name="parallel_for_each"></a>parallel_for_each功能（C++安培）
+## <a name="parallel_for_each-function-c-amp"></a><a name="parallel_for_each"></a>parallel_for_each 函数（C++ AMP）
 
 跨计算域运行函数。 有关详细信息，请参阅[C++ AMP 概述](../../../parallel/amp/cpp-amp-overview.md)。
 
@@ -638,32 +638,32 @@ void parallel_for_each(
 ### <a name="parameters"></a>参数
 
 *_Accl_view*<br/>
-要`accelerator_view`运行并行计算的对象。
+`accelerator_view`要对其运行并行计算的对象。
 
 *_Compute_domain*<br/>
-包含`extent`计算数据的对象。
+一个 `extent` 包含用于计算的数据的对象。
 
 *_Dim0*<br/>
-`tiled_extent`对象的维度。
+对象的维度 `tiled_extent` 。
 
 *_Dim1*<br/>
-`tiled_extent`对象的维度。
+对象的维度 `tiled_extent` 。
 
 *_Dim2*<br/>
-`tiled_extent`对象的维度。
+对象的维度 `tiled_extent` 。
 
 *_Kernel*<br/>
-采用类型为"索引\<_Rank>"并执行并行计算的参数的 lambda 或函数对象。
+一个 lambda 或函数对象，它采用类型为 "index" 的自变量 \<_Rank> 并执行并行计算。
 
 *_Kernel_type*<br/>
-羊羔或娱乐。
+Lambda 或函子。
 
 *_Rank*<br/>
-范围的等级。
+范围的秩。
 
 ## <a name="tile_static_memory_fence"></a><a name="tile_static_memory_fence"></a>tile_static_memory_fence
 
-阻止执行磁贴中的所有线程，直到完成所有未完成的`tile_static`内存访问。 这可确保`tile_static`内存访问对线程磁贴中的其他线程可见，并且按程序顺序执行访问。
+阻止在磁贴中所有线程的执行，直到所有未完成的 `tile_static` 内存访问都完成。 这可确保 `tile_static` 内存访问对于线程平铺中的其他线程是可见的，并且访问是按程序顺序执行的。
 
 ```cpp
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -672,8 +672,8 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
 ### <a name="parameters"></a>参数
 
 *_Barrier*<br/>
-tile_barrier对象。
+一个 tile_barrier 对象。
 
 ## <a name="see-also"></a>另请参阅
 
-[Concurrency 命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[并发命名空间（C++ AMP）](concurrency-namespace-cpp-amp.md)

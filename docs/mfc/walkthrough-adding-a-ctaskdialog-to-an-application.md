@@ -5,27 +5,27 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: 1a46cc7681a2556aee8e856be6ce1fd7cc01686a
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 3a970df4911fed643045a1c6b59fcda1a853dbcf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222766"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>演练：向应用程序添加 CTaskDialog
 
 本演练介绍了 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) ，并演示如何将其添加到应用程序中。
 
-`CTaskDialog`是一个任务对话框，用于替换 windows Vista 或更高版本中的 windows 消息框。 `CTaskDialog` 改进了原始消息框并添加了功能。 Visual Studio 中仍支持 Windows 消息框。
+`CTaskDialog`是一个任务对话框，用于替换 Windows Vista 或更高版本中的 windows 消息框。 `CTaskDialog` 改进了原始消息框并添加了功能。 Visual Studio 中仍支持 Windows 消息框。
 
 > [!NOTE]
-> 早于 Windows Vista 的 Windows 版本不支持`CTaskDialog`。 如果你想要向在早期版本的 Windows 上运行你的应用程序的用户显示一条消息，则必须编写备用对话框选项的程序。 可以使用静态方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) 在运行时确定用户的计算机能否显示 `CTaskDialog`中的 Windows 消息框。 此外，仅当应用程序使用 Unicode 库生成时， `CTaskDialog` 才可用。
+> 早于 Windows Vista 的 Windows 版本不支持 `CTaskDialog` 。 如果你想要向在早期版本的 Windows 上运行你的应用程序的用户显示一条消息，则必须编写备用对话框选项的程序。 可以使用静态方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) 在运行时确定用户的计算机能否显示 `CTaskDialog`中的 Windows 消息框。 此外，仅当应用程序使用 Unicode 库生成时， `CTaskDialog` 才可用。
 
 `CTaskDialog` 支持使用多种可选元素来收集和显示信息。 例如， `CTaskDialog` 可以显示命令链接、自定义按钮、自定义图标和页脚。 `CTaskDialog` 还具有多种方法，可查询任务对话框状态以确定用户选择的可选元素。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-你需要以下组件来完成本演练：
+您需要满足以下条件才能完成本演练：
 
 - Visual Studio 2010 或更高版本
 
@@ -33,11 +33,11 @@ ms.locfileid: "71096026"
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog
 
-以下过程演示了将要替换 Windows 消息框的 `CTaskDialog`最基本的用法。 此示例还更改了与任务对话框关联的图标。 更改图标会使`CTaskDialog`与 Windows 消息框相同。
+以下过程演示了将要替换 Windows 消息框的 `CTaskDialog`最基本的用法。 此示例还更改了与任务对话框关联的图标。 更改图标会使与 `CTaskDialog` Windows 消息框相同。
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog 的步骤
 
-1. 使用**Mfc 应用程序向导**创建具有所有默认设置的 mfc 应用程序。 请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)获取有关如何为你的 Visual Studio 版本打开向导的说明。
+1. 使用**Mfc 应用程序向导**创建具有所有默认设置的 mfc 应用程序。 有关如何为你的 Visual Studio 版本打开向导的说明，请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)。
 
 1. *MyProject*调用它。
 
@@ -66,7 +66,7 @@ ms.locfileid: "71096026"
     }
     ```
 
-1. 在步骤 5 中 `if` 语句后面的括号之间插入以下代码。 此代码将创建 `CTaskDialog`。
+1. 在步骤5中语句后面的括号之间插入以下代码 **`if`** 。 此代码将创建 `CTaskDialog`。
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
@@ -84,7 +84,7 @@ ms.locfileid: "71096026"
     taskDialog.DoModal();
     ```
 
-如果你不希望`CTaskDialog`显示与 Windows 消息框相同的图标，则可以避免执行步骤7。 如果您不这样做，当`CTaskDialog`应用程序显示时，没有图标。
+如果你不希望 `CTaskDialog` 显示与 Windows 消息框相同的图标，则可以避免执行步骤7。 如果您不这样 `CTaskDialog` 做，当应用程序显示时，没有图标。
 
 编译并运行该应用程序。 在启动后，应用程序将显示任务对话框。
 
@@ -163,7 +163,7 @@ ms.locfileid: "71096026"
     }
     ```
 
-在步骤9的代码中，将以开头的注释`PROCESS IF`替换为要在指定条件下执行的代码。
+在步骤9的代码中，将以开头的注释替换 `PROCESS IF` 为要在指定条件下执行的代码。
 
 编译并运行该应用程序。 应用程序将显示使用新控件和其他信息的任务对话框。
 
@@ -177,7 +177,7 @@ ms.locfileid: "71096026"
 
 1. 导航到 `if (CTaskDialog::IsSupported())` 语句的右括号处。
 
-1. 直接在 `if` 语句的右括号前面（ `else` 块的前面）插入以下代码：
+1. 将以下代码插入到语句的右括号前面 **`if`** （ **`else`** 块之前）：
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -189,9 +189,9 @@ ms.locfileid: "71096026"
 
 编译并运行该应用程序。 应用程序将显示两个任务对话框。 第一个对话框来自，将**功能添加到 CTaskDialog**过程;第二个对话框来自上一个过程。
 
-这些示例并未演示的所有可用选项`CTaskDialog`，但会帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
+这些示例并未演示的所有可用选项 `CTaskDialog` ，但会帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [对话框](../mfc/dialog-boxes.md)<br/>
 [CTaskDialog 类](../mfc/reference/ctaskdialog-class.md)<br/>

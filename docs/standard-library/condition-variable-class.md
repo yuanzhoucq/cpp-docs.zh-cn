@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427163"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222545"
 ---
 # <a name="condition_variable-class"></a>condition_variable 类
 
-使用 `condition_variable` 类在具有 `mutex` 类型的 `unique_lock<mutex>` 时等待事件。 此类型的对象的性能可能比 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 类型的对象更好。
+使用 `condition_variable` 类在具有 `mutex` 类型的 `unique_lock<mutex>` 时等待事件。 与类型[condition_variable_any<unique_lock \<mutex> > ](../standard-library/condition-variable-any-class.md)的对象相比，此类型的对象的性能可能更好。
 
 ## <a name="syntax"></a>语法
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|阻止某个线程，并设置线程阻止的时间间隔。|
 |[wait_until](#wait_until)|阻止某个线程，并设置线程阻止的最大时间点。|
 
-## <a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
 
 构造 `condition_variable` 对象。
 
@@ -66,9 +66,9 @@ condition_variable();
 
 ### <a name="remarks"></a>备注
 
-如果没有足够的内存，构造函数将抛出包含 [ 错误代码的 ](../standard-library/system-error-class.md)system_error`not_enough_memory` 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `system_error` 错误代码的 `resource_unavailable_try_again` 对象。
+如果没有足够的内存，构造函数将抛出包含 `not_enough_memory` 错误代码的 [system_error](../standard-library/system-error-class.md) 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `resource_unavailable_try_again` 错误代码的 `system_error` 对象。
 
-## <a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a>native_handle
 
 返回表示 condition_variable 句柄的特定于实现的类型。
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` 被定义为指向并发运行时内部数据结构的指针。
 
-## <a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a>notify_all
 
 取消阻止正在等待 `condition_variable` 对象的所有线程。
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a>notify_one
 
 取消阻止正在 `condition_variable` 对象上等待的某个线程。
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>再
+## <a name="wait"></a><a name="wait"></a>再
 
 阻止线程。
 
@@ -107,17 +107,17 @@ template <class Predicate>
 void wait(unique_lock<mutex>& Lck, Predicate Pred);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Fuj-bk-lck*\
-[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
+一个[unique_lock \<mutex> ](../standard-library/unique-lock-class.md)对象。
 
 *Pred*\
-返回**true**或**false**的任何表达式。
+返回或的任何 **`true`** 表达式 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-第一种方法进行阻止，直到通过调用 `condition_variable`notify_one[ 或 ](#notify_one)notify_all[ 对 ](#notify_all) 对象发出信号。 它还可错误唤醒。
+第一种方法进行阻止，直到通过调用 [notify_one](#notify_one) 或 [notify_all](#notify_all) 对 `condition_variable` 对象发出信号。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a>wait_for
 
 阻止某个线程，并设置线程阻止的时间间隔。
 
@@ -143,26 +143,26 @@ bool wait_for(
     Predicate Pred);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Fuj-bk-lck*\
-[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
+一个[unique_lock \<mutex> ](../standard-library/unique-lock-class.md)对象。
 
 *Rel_time*\
 `chrono::duration` 对象指定线程唤醒前的时间。
 
 *Pred*\
-返回**true**或**false**的任何表达式。
+返回或的任何 **`true`** 表达式 **`false`** 。
 
 ### <a name="return-value"></a>返回值
 
-如果*Rel_time*结束，则第一个方法返回 `cv_status::timeout`。 否则，该方法将返回 `cv_status::no_timeout`。
+`cv_status::timeout`如果*Rel_time*已过，则第一种方法返回。 否则，该方法将返回 `cv_status::no_timeout`。
 
 第二个方法返回*Pred*的值。
 
 ### <a name="remarks"></a>备注
 
-第一种方法将被阻止，`condition_variable` 直到通过调用[notify_one](#notify_one)或[notify_all](#notify_all)或直到时间间隔*Rel_time*已过。 它还可错误唤醒。
+第一种方法将在 `condition_variable` 对象被调用[notify_one](#notify_one)或[notify_all 或](#notify_all)时间*Rel_time*间隔结束之前，阻止。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a>wait_until
 
 阻止某个线程，并设置线程阻止的最大时间点。
 
@@ -201,26 +201,26 @@ bool wait_until(
     Predicate Pred);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Fuj-bk-lck*\
-[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
+一个[unique_lock \<mutex> ](../standard-library/unique-lock-class.md)对象。
 
 *Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) 对象。
 
 *Pred*\
-返回**true**或**false**的任何表达式。
+返回或的任何 **`true`** 表达式 **`false`** 。
 
 ### <a name="return-value"></a>返回值
 
-如果等待*Abs_time*过期，返回 `cv_status` 类型的方法将返回 `cv_status::timeout`。 否则，方法返回 `cv_status::no_timeout`。
+`cv_status` `cv_status::timeout` 如果等待*Abs_time*结束时，返回类型的方法将返回。 否则，方法返回 `cv_status::no_timeout`。
 
-返回**布尔**值的方法返回*Pred*的值。
+返回的方法 **`bool`** 返回*Pred*的值。
 
 ### <a name="remarks"></a>备注
 
-第一种方法进行阻止，直到通过调用 `condition_variable`notify_one[ 或 ](#notify_one)notify_all[ 对 ](#notify_all) 对象发出信号，或直到 `Abs_time`。 它还可错误唤醒。
+第一种方法进行阻止，直到通过调用 [notify_one](#notify_one) 或 [notify_all](#notify_all) 对 `condition_variable` 对象发出信号，或直到 `Abs_time`。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码
 
@@ -236,5 +236,5 @@ return true;
 
 ## <a name="see-also"></a>另请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

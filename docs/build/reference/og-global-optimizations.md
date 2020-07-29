@@ -14,16 +14,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180846"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215200"
 ---
-# <a name="og-global-optimizations"></a>`/Og` (全局优化) 
+# <a name="og-global-optimizations"></a>`/Og`（全局优化）
 
-已弃用。 提供本地和全局优化、自动注册分配和循环优化。 建议使用[ `/O1` (最小化大小) ](o1-o2-minimize-size-maximize-speed.md)或[ `/O2` () 最大化速度](o1-o2-minimize-size-maximize-speed.md)。
+已否决。 提供本地和全局优化、自动注册分配和循环优化。 建议改为使用[ `/O1` （最小化大小）](o1-o2-minimize-size-maximize-speed.md)或[ `/O2` （最大化速度）](o1-o2-minimize-size-maximize-speed.md) 。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +31,7 @@ ms.locfileid: "86180846"
 
 ## <a name="remarks"></a>备注
 
-**`/Og`** 已弃用。 默认情况下，在启用任何优化后，将默认启用这些优化。 有关优化的详细信息，请参阅[ `/O1` `/O2` (最小化大小、最大化速度) ](o1-o2-minimize-size-maximize-speed.md)或[ `/Ox` (启用大多数速度优化) ](ox-full-optimization.md)。
+**`/Og`** 已弃用。 默认情况下，在启用任何优化后，将默认启用这些优化。 有关优化的详细信息，请参阅[ `/O1` `/O2` （最小化大小、最大化速度）](o1-o2-minimize-size-maximize-speed.md)或[ `/Ox` （启用最大速度优化）](ox-full-optimization.md)。
 
 下提供了以下优化 **`/Og`** ：
 
@@ -49,7 +49,7 @@ ms.locfileid: "86180846"
 
 - 自动注册分配
 
-   此优化允许编译器将经常使用的变量和子表达式存储在寄存器中;`register`忽略关键字。
+   此优化允许编译器将经常使用的变量和子表达式存储在寄存器中;**`register`** 忽略关键字。
 
 - 循环优化
 
@@ -77,7 +77,7 @@ ms.locfileid: "86180846"
    > [!NOTE]
    > 可以通过将 `optimize` 杂注与选项一起使用来启用或禁用每个函数的全局优化 `g` 。
 
-有关相关信息，请参阅[ `/Oi` (生成内部函数) ](oi-generate-intrinsic-functions.md)并[ `/Ox ` (启用大多数速度优化) ](ox-full-optimization.md)。
+有关相关信息，请参阅[ `/Oi` （生成内部函数）](oi-generate-intrinsic-functions.md)和[ `/Ox ` （启用最大速度优化）](ox-full-optimization.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: c0fc15920018104147b6fd7ea39ab04bbc8862ad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9145a6c75850fec78ca821b236133cc6c38beda9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688759"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215421"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; 类
 
-类模板的专用版本**valarray \<Type >** 为**bool**类型的元素。
+类模板的专用版本**valarray \<Type> **类型的元素 **`bool`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -73,11 +73,11 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<valarray>
+**标头：**\<valarray>
 
 **命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [valarray 类](../standard-library/valarray-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

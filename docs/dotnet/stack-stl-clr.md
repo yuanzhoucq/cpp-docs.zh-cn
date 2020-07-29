@@ -53,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f5cfbb4f6125c1c72550018735b377e1507ab08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214877"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
-此模板类描述一个对象，该对象控制具有最后一次访问权限的元素的不同长度的序列。 使用容器适配器 `stack` 将基础容器作为向下推送堆栈管理。
+此模板类描述一个对象，该对象控制具有最后一次访问权限的元素的不同长度的序列。 使用容器适配器可将 `stack` 基础容器作为向下推送堆栈管理。
 
-在下面的说明中，`GValue` 与*值*相同，除非后者为 ref 类型，在这种情况下，它是 `Value^`的。 同样，`GContainer` 与*容器*相同，除非后者为 ref 类型，在这种情况下，它是 `Container^`的。
+在下面的说明中，与 `GValue` *值*相同，除非后者为 ref 类型，在这种情况下，它是 `Value^` 。 同样，与 `GContainer` *容器*相同，除非后者为 ref 类型，在这种情况下，它是 `Container^` 。
 
 ## <a name="syntax"></a>语法
 
@@ -78,7 +78,7 @@ template<typename Value,
     { ..... };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *值*<br/>
 受控序列中的元素的类型。
@@ -88,13 +88,13 @@ template<typename Value,
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<cliext/stack >
+**标头：**\<cliext/stack>
 
 **命名空间：** cliext
 
 ## <a name="declarations"></a>声明
 
-|类型定义|说明|
+|类型定义|描述|
 |---------------------|-----------------|
 |[stack::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
 |[stack::container_type (STL/CLR)](#container_type)|基础容器的类型。|
@@ -105,7 +105,7 @@ template<typename Value,
 |[stack::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[stack::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[stack::assign (STL/CLR)](#assign)|替换所有元素。|
 |[stack::empty (STL/CLR)](#empty)|测试元素是否存在。|
@@ -117,26 +117,26 @@ template<typename Value,
 |[stack::top (STL/CLR)](#top)|访问最后一个元素。|
 |[stack::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 
-|properties|说明|
+|属性|描述|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|访问最后一个元素。|
 
-|操作员|说明|
+|操作员|描述|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|替换受控序列。|
-|[operator!= (stack) (STL/CLR)](#op_neq)|确定 `stack` 对象是否不等于另一个 `stack` 对象。|
+|[operator！ = （stack）（STL/CLR）](#op_neq)|确定对象是否 `stack` 不等于另一个 `stack` 对象。|
 |[operator< (stack) (STL/CLR)](#op_lt)|确定 `stack` 对象是否小于另一个 `stack` 对象。|
-|[operator<= (stack) (STL/CLR)](#op_lteq)|确定 `stack` 对象是否小于或等于另一个 `stack` 对象。|
-|[operator== (stack) (STL/CLR)](#op_eq)|确定 `stack` 对象是否等于另一个 `stack` 对象。|
-|[operator> (stack) (STL/CLR)](#op_gt)|确定 `stack` 对象是否大于另一个 `stack` 对象。|
-|[operator>= (stack) (STL/CLR)](#op_gteq)|确定 `stack` 对象是否大于或等于另一个 `stack` 对象。|
+|[运算符<= （stack）（STL/CLR）](#op_lteq)|确定 `stack` 对象是否小于或等于另一个 `stack` 对象。|
+|[operator = = （stack）（STL/CLR）](#op_eq)|确定 `stack` 对象是否等于另一个 `stack` 对象。|
+|[运算符> （stack）（STL/CLR）](#op_gt)|确定 `stack` 对象是否大于另一个 `stack` 对象。|
+|[运算符>= （stack）（STL/CLR）](#op_gteq)|确定 `stack` 对象是否大于或等于另一个 `stack` 对象。|
 
-## <a name="interfaces"></a>界面
+## <a name="interfaces"></a>接口
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
-|IStack\<值，容器 >|维护泛型容器适配器。|
+|IStack\<Value, Container>|维护泛型容器适配器。|
 
 ## <a name="remarks"></a>备注
 
@@ -154,14 +154,14 @@ template<typename Value,
 void assign(stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要插入的容器适配器。
 
 ### <a name="remarks"></a>备注
 
-成员函数将 `right.get_container()` 分配给基础容器。 使用此方法可以更改堆栈的全部内容。
+成员函数将分配 `right.get_container()` 给基础容器。 使用此方法可以更改堆栈的全部内容。
 
 ### <a name="example"></a>示例
 
@@ -354,7 +354,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[stack：： size （STL/CLR）](../dotnet/stack-size-stl-clr.md)`() == 0`。 用于测试堆栈是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[stack：： size （STL/CLR）](../dotnet/stack-size-stl-clr.md) `() == 0` 。 用于测试堆栈是否为空。
 
 ### <a name="example"></a>示例
 
@@ -471,7 +471,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>备注
 
-该类型描述了一个 `GValue` 类型的对象，该对象描述用于此模板容器类的泛型接口的存储元素值。 （如果 `value_type` 为 ref 类型，则`GValue` 为 `value_type` 或 `value_type^`。）
+类型描述了一个类型为的对象 `GValue` ，该对象描述用于此模板容器类的泛型接口的存储元素值。 （ `GValue` `value_type` `value_type^` 如果是引用类型，则为或 `value_type` 。）
 
 ### <a name="example"></a>示例
 
@@ -569,14 +569,14 @@ a b c
 stack <Value, Container>% operator=(stack <Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要复制的容器适配器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符*直接*复制到对象，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -673,7 +673,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>备注
 
-此成员函数在受控序列的末尾插入一个具有值 `val` 的元素。 使用此方法可以将另一个元素追加到堆栈中。
+此成员函数在 `val` 受控序列的末尾插入一个具有值的元素。 使用此方法可以将另一个元素追加到堆栈中。
 
 ### <a name="example"></a>示例
 
@@ -763,7 +763,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[stack：： empty （STL/CLR）](../dotnet/stack-empty-stl-clr.md)`()`。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[stack：： empty （STL/CLR）](../dotnet/stack-empty-stl-clr.md) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -867,9 +867,9 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要复制的对象。
 
 *覆盖*<br/>
@@ -887,13 +887,13 @@ right<br/>
 
 `stack(stack<Value, Container>% right);`
 
-创建作为 `right.get_container()`副本的包装容器。 用于指定初始受控序列，该序列是由 stack 对象*权限*控制的序列的副本。
+创建作为的副本的已包装容器 `right.get_container()` 。 用于指定初始受控序列，该序列是由 stack 对象*权限*控制的序列的副本。
 
 构造函数：
 
 `stack(stack<Value, Container>^ right);`
 
-创建作为 `right->get_container()`副本的包装容器。 用于指定初始受控序列，该序列是由 stack 对象 `*right`控制的序列的副本。
+创建作为的副本的已包装容器 `right->get_container()` 。 用于指定初始受控序列，该序列是由 stack 对象控制的序列的副本 `*right` 。
 
 构造函数：
 
@@ -1159,17 +1159,17 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)`。 使用它可以测试在按元素对两个堆栈进行比较*时，是否按原样对* *左侧*进行排序。
+Operator 函数返回 `!(left == right)` 。 使用它可以测试在按元素对两个堆栈进行比较*时，是否按原样对**左侧*进行排序。
 
 ### <a name="example"></a>示例
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>运算符&lt; （stack）（STL/CLR）
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operator &lt; （stack）（STL/CLR）
 
 堆栈小于比较。
 
@@ -1230,17 +1230,17 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-如果为，则运算符函数将返回 true，以便为其 `!(right[i] < left[i])` `i` 也为 `left[i] < right[i]`。 否则，它将返回 `left->`[stack：： size （STL/CLR）](../dotnet/stack-size-stl-clr.md)`() <` `right->size()` 在按元素对两个堆栈进行比较*时，* 使用此方法来测试是否按顺序向*左*排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它将返回 `left->` [stack：： size （STL/CLR）](../dotnet/stack-size-stl-clr.md) ， `() <` `right->size()` 以便在按元素对两个堆栈*right*进行比较时，使用它来测试是否向*左*排序。
 
 ### <a name="example"></a>示例
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>运算符&lt;= （stack）（STL/CLR）
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator &lt; = （stack）（STL/CLR）
 
 堆栈小于或等于比较。
 
@@ -1301,17 +1301,17 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)`。 用于测试在按元素对两个堆栈进行比较*时，是否向* *左*排序。
+Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个堆栈进行比较*时，是否向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -1372,17 +1372,17 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-仅当由*左*和*右*控制的序列具有相同的长度，并且每个位置 `i``left[i] ==` `right[i]`时，operator 函数才返回 true。 用于测试在按元素对两个堆栈进行*比较时，是否按原样对* *左侧*排序。
+仅当由*左*和*右*控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个堆栈进行*比较时，是否按原样对**左侧*排序。
 
 ### <a name="example"></a>示例
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>运算符&gt; （stack）（STL/CLR）
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operator &gt; （stack）（STL/CLR）
 
 堆栈大于比较。
 
@@ -1443,17 +1443,17 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left`。 使用此方法可以测试是否在按元素对两个堆栈进行比较时*向* *左*排序。
+Operator 函数返回 `right` `<` `left` 。 使用此方法可以测试是否在按元素对两个堆栈进行比较时*向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>运算符&gt;= （stack）（STL/CLR）
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator &gt; = （stack）（STL/CLR）
 
 堆栈大于或等于比较。
 
@@ -1514,17 +1514,17 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left < right)`。 用于测试在按元素对两个堆栈进行比较*时，是否向* *左*排序。
+Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个堆栈进行比较*时，是否向**左*排序。
 
 ### <a name="example"></a>示例
 

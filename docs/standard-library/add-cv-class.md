@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 412dc8426112e65d00b572a65f064667d2709a0d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0afeea71daf8358b2aeeefe8d368c135a54a6ad6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620784"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222623"
 ---
 # <a name="add_cv-class"></a>add_cv 类
 
-从类型中进行**常量可变**类型。
+**`const volatile`** 从类型中创建类型。
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +35,7 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>备注
 
-修改后的类型的实例 `add_cv<T>` 具有与 `type` *t*同时[add_volatile](add-volatile-class.md)和[add_const](add-const-class.md)修改的成员**typedef** ，除非已经有*T* cv 限定符、是引用或函数。
+修改后的类型的实例 `add_cv<T>` 具有 `type` **`typedef`** 等效于[add_volatile](add-volatile-class.md)和*T* [add_const](add-const-class.md)修改的成员，除非已经有 cv *T*限定符、是引用或函数。
 
 `add_cv_t<T>` 帮组程序类型是访问 `add_cv<T>` 成员 typedef `type` 的快捷方式。
 
