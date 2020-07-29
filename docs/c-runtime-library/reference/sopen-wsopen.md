@@ -37,12 +37,12 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: 58fa41a2824f86411cab50b11eedd922739ed5b1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b02219ba0afa37fdff02b6848540064d12cd001d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909329"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229371"
 ---
 # <a name="_sopen-_wsopen"></a>_sopen、_wsopen
 
@@ -67,7 +67,7 @@ int _wsopen(
 
 ### <a name="parameters"></a>参数
 
-*名字*<br/>
+*filename*<br/>
 文件名。
 
 *oflag*<br/>
@@ -107,7 +107,7 @@ int _wsopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen**|**_sopen**|**_sopen**|**_wsopen**|
 
-整数表达式*oflag*是通过合并在 fcntl.h>> 中\<定义的以下一个或多个清单常量而形成的。 当两个或多个常量构成参数*oflag*时，它们将与按位 "或" 运算符（ **&#124;** ）组合在一起。
+整数表达式*oflag*是通过合并在中定义的一个或多个以下清单常量组成的 \<fcntl.h> 。 当两个或多个常量构成参数*oflag*时，它们将与按位 "或" 运算符（ **&#124;** ）组合在一起。
 
 |*oflag*常量|行为|
 |-|-|
@@ -131,11 +131,11 @@ int _wsopen(
 
 若要指定文件访问模式，必须指定 **_O_RDONLY**、 **_O_RDWR**或 **_O_WRONLY**。 对于访问模式，不存在默认值。
 
-当使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型**wchar_t**的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型**wchar_t**的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
+当使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型的 utf-16 数据 **`wchar_t`** 。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型的 UTF-16 数据的缓冲区 **`wchar_t`** 。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
 
-如果通过 **_O_WRONLY** | **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用 **_sopen** ，它将首先尝试打开文件以进行读取和写入、读取 BOM，然后将其重新打开以进行写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
+如果 **_sopen**通过 **_O_WRONLY**  |  **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用 _sopen，它将首先尝试打开文件以进行读取和写入、读取 BOM，然后将其重新打开以进行写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
 
-自变量*shflag*是一个常量表达式，它包含在 share> 中\<定义的以下清单常量之一。
+自变量*shflag*是一个常量表达式，它包含在中定义的以下清单常量之一 \<share.h> 。
 
 |*shflag*常量|行为|
 |-|-|
@@ -144,7 +144,7 @@ int _wsopen(
 | **_SH_DENYRD** | 拒绝对文件的读取访问。 |
 | **_SH_DENYNO** | 允许读取和写入访问。 |
 
-仅当指定 **_O_CREAT**时， *pmode*参数是必需的。 如果文件不存在，则*pmode*指定文件的权限设置，该设置是在首次关闭新文件时设置的。 否则，将忽略*pmode* 。 *pmode*是一个整数表达式，它包含在 sys\stat.h> 中\<定义的清单常量 **_S_IWRITE**和 **_S_IREAD**。 当给定这两个常量时，将使用按位“或”运算符合并它们。 *Pmode*的含义如下所示。
+仅当指定 **_O_CREAT**时， *pmode*参数是必需的。 如果文件不存在，则*pmode*指定文件的权限设置，该设置是在首次关闭新文件时设置的。 否则，将忽略*pmode* 。 *pmode*是一个整数表达式，它包含中定义的一个或两个清单常量 **_S_IWRITE**和 **_S_IREAD** \<sys\stat.h> 。 当给定这两个常量时，将使用按位“或”运算符合并它们。 *Pmode*的含义如下所示。
 
 |*pmode*|含义|
 |-|-|
@@ -152,16 +152,16 @@ int _wsopen(
 | **_S_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
-如果未授予写入权限，则该文件为只读。 在 Windows 操作系统中，所有文件均可读；不可能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** | **_S_IWRITE**的模式是等效的。
+如果未授予写入权限，则该文件为只读。 在 Windows 操作系统中，所有文件均可读；不可能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD**  |  **_S_IWRITE**的模式是等效的。
 
 **_sopen**在设置权限之前将当前文件权限掩码应用到*pmode* 。 （请参阅 [_umask](umask.md)。）
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
-|**_sopen**|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|
-|**_wsopen**|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|
+|**_sopen**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
+|**_wsopen**|\<io.h> 或 \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

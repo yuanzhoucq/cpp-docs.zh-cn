@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180858"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229046"
 ---
 # <a name="cleaning-up-resources"></a>清理资源
 
@@ -26,7 +26,7 @@ ms.locfileid: "80180858"
 
 1. 在 **__try**语句块中，分配资源。 随着资源的分配，句柄将被设置为正值。
 
-1. 在 **__finally**语句块中，释放其对应的句柄或标志变量为非零或非 NULL 的每个资源。
+1. 在 **`__finally`** 语句块中，释放其对应的句柄或标志变量为非零或非 NULL 的每个资源。
 
 ## <a name="example"></a>示例
 
@@ -73,4 +73,4 @@ int main() {
 ## <a name="see-also"></a>另请参阅
 
 [编写终止处理程序](../cpp/writing-a-termination-handler.md)<br/>
-[结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

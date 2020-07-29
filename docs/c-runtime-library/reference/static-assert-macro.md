@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78544424b727797158109fa3000ee2ebf8066cf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957934"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229319"
 ---
 # <a name="_static_assert-macro"></a>_STATIC_ASSERT 宏
 
@@ -47,11 +47,11 @@ _STATIC_ASSERT(
 
 ## <a name="remarks"></a>备注
 
-此宏类似于[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只不过*booleanExpression*在编译时（而不是在运行时）进行计算。 如果*booleanExpression*的计算结果为**FALSE** （0），则会生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 。
+此宏类似于[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只是在编译时（而不是在运行时）对*booleanExpression*进行计算。 如果*booleanExpression*的计算结果为**FALSE** （0），则会生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 。
 
 ## <a name="example"></a>示例
 
-在此示例中，我们将检查[sizeof](../../c-language/sizeof-operator-c.md) **int**是否大于或等于2字节以及[sizeof](../../c-language/sizeof-operator-c.md) **是否为 1**字节。 程序将不会进行编译，并且它将生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ，因为**long**大于1字节。
+在此示例中，我们检查[sizeof](../../c-language/sizeof-operator-c.md)的是否大于 **`int`** 或等于2字节以及[sizeof](../../c-language/sizeof-operator-c.md) a 是否 **`long`** 为1字节。 该程序将不会进行编译，并且它将生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ，因为大于 **`long`** 1 字节。
 
 ```C
 // crt__static_assert.c
@@ -77,7 +77,7 @@ int main()
 |-----------|---------------------|
 |**_STATIC_ASSERT**|\<crtdbg.h>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
-[_ASSERT、_ASSERTE、_ASSERT_EXPR 宏](assert-asserte-assert-expr-macros.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
+[_ASSERT、_ASSERTE _ASSERT_EXPR 宏](assert-asserte-assert-expr-macros.md)<br/>

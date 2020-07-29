@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206188"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229293"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
@@ -112,11 +112,11 @@ errno_t _mbscpy_s_l(
 
 ### <a name="parameters"></a>参数
 
-dest**<br/>
+*目的*<br/>
 目标字符串缓冲区的位置。
 
 *dest_size*<br/>
-对于窄和多字节函数，目标字符串缓冲区的大小（以**字符**为单位），宽函数的**wchar_t**单元。 此值必须大于零且不大于**RSIZE_MAX**。 确保该大小的终止 `NULL` 字符串后终止。
+**`char`** 用于窄和多字节函数的目标字符串缓冲区的大小，以及 **`wchar_t`** 宽函数的单位。 此值必须大于零且不大于**RSIZE_MAX**。 确保该大小的终止 `NULL` 字符串后终止。
 
 *src*<br/>
 以 null 结尾的源字符串缓冲区。
@@ -130,7 +130,7 @@ dest**<br/>
 
 ### <a name="error-conditions"></a>错误条件
 
-|dest**|*dest_size*|*src*|返回值|*Dest*的内容|
+|*目的*|*dest_size*|*src*|返回值|*Dest*的内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|any|any|**EINVAL**|未修改|
 |any|any|**NULL**|**EINVAL**|*dest*[0] 设置为0|
@@ -231,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat、wcscat、_mbscat、_mbscat_l](strcat-wcscat-mbscat.md) <br/>

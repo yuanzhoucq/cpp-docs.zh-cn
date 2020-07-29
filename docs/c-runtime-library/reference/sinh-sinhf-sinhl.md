@@ -37,12 +37,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229410"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
@@ -72,20 +72,20 @@ long double sinh(long double x);  // C++ only
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|None|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 |&#124;x&#124; ≥ 7.104760 e + 002|溢出 + 不准确|OVERFLOW|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用**sinh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **sinh**始终采用并返回**double**。
+由于 c + + 允许重载，因此可以调用**sinh**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **sinh**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
 |**sinh**、 **sinhf**、 **sinhl**|\<math.h>|\<cmath> 或 \<math.h>|
 

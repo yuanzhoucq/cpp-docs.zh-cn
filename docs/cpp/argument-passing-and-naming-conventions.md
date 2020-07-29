@@ -13,18 +13,18 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: e621db339102f1f40030bc7826d383d306a39be8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b6b65b4e0cc33ea384eff306952589a49e7ad41a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190763"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229228"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>参数传递和命名约定
 
 **Microsoft 专用**
 
-Microsoft C++编译器，你可以指定传递自变量的约定和返回值的函数和调用方。 并非所有约定都在所有支持的平台上可用，某些约定使用平台特定的实现。 在大多数情况下，将忽略在特定平台上指定不支持的约定的关键字或编译器开关，并将使用平台默认约定。
+Microsoft c + + 编译器允许您指定在函数和调用方之间传递参数和返回值的约定。 并非所有约定都在所有支持的平台上可用，某些约定使用平台特定的实现。 在大多数情况下，将忽略在特定平台上指定不支持的约定的关键字或编译器开关，并将使用平台默认约定。
 
 在 x86 平台上，所有自变量在传递时都将加宽到 32 位。 返回值也将加宽到 32 位，并将通过 EAX 寄存器返回，但在 EDX:EAX 寄存器对中返回的 8 字节结构除外。 更大的结构将在 EAX 寄存器中作为指向隐藏返回结构的指针返回。 参数将从右到左推送到堆栈中。 不是 POD 的结构不会在寄存器中返回。
 
@@ -35,7 +35,7 @@ Microsoft C++编译器，你可以指定传递自变量的约定和返回值的�
 
 有关如何定义自己的函数 prolog 和 epilog 代码的信息，请参阅[裸函数调用](../cpp/naked-function-calls.md)。
 
-有关面向 x64 平台的代码中的默认调用约定的信息，请参阅[X64 调用约定](../build/x64-calling-convention.md)。 有关面向 ARM 平台的代码中的调用约定问题的信息，请参阅[常见的视觉C++ arm 迁移问题](../build/common-visual-cpp-arm-migration-issues.md)。
+有关面向 x64 平台的代码中的默认调用约定的信息，请参阅[X64 调用约定](../build/x64-calling-convention.md)。 有关面向 ARM 平台的代码中的调用约定问题的信息，请参阅[常见 VISUAL C++ Arm 迁移问题](../build/common-visual-cpp-arm-migration-issues.md)。
 
 Visual C/C++ 编译器支持下列调用约定。
 
@@ -45,13 +45,13 @@ Visual C/C++ 编译器支持下列调用约定。
 |[__clrcall](../cpp/clrcall.md)|不适用|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|
 |[__stdcall](../cpp/stdcall.md)|被调用方|在堆栈上按相反顺序推送参数（从右到左）|
 |[__fastcall](../cpp/fastcall.md)|被调用方|存储在寄存器中，然后在堆栈上推送|
-|[__thiscall](../cpp/thiscall.md)|被调用方|已推送到堆栈上;**此**指针存储在 ECX 中|
+|[__thiscall](../cpp/thiscall.md)|被调用方|已推送到堆栈上;**`this`** 存储在 ECX 中的指针|
 |[__vectorcall](../cpp/vectorcall.md)|被调用方|存储在寄存器中，然后按相反顺序在堆栈上推送（从右到左）|
 
 有关相关信息，请参阅[过时调用约定](../cpp/obsolete-calling-conventions.md)。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [调用约定](../cpp/calling-conventions.md)
