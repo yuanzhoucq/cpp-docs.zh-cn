@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: a12900f3145f0dde797fe56c893442e1632cc01c
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 0361da761b9b05e75233711df9e826c15aa14e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404507"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213926"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>为 UWP 应用创建 c + + 异步操作
 
@@ -29,7 +29,7 @@ ms.locfileid: "86404507"
 
 - 使用取消标记实现内部异步操作的取消。
 
-- `create_async` 函数的行为取决于传递给它的工作函数的返回类型。 返回任务（ `task<T>` 或 `task<void>`）的工作函数在调用了 `create_async`的上下文中同步运行。 返回 `T` 或 `void` 的工作函数在任意上下文中运行。
+- `create_async` 函数的行为取决于传递给它的工作函数的返回类型。 返回任务（ `task<T>` 或 `task<void>`）的工作函数在调用了 `create_async`的上下文中同步运行。 `T` **`void`** 在任意上下文中返回或运行的工作函数。
 
 - 可以使用 [concurrency::task::then](reference/task-class.md#then) 方法创建一个可依次运行的任务链。 在 UWP 应用中，任务延续的默认上下文取决于该任务的构造方式。 如果是通过向任务构造函数传递异步操作，或通过传递可返回异步操作的 lambda 表达式创建的任务，那么此任务所有延续的默认上下文是当前上下文。 如果任务不是从异步操作构造的，则默认情况下会对任务的延续使用任意上下文。 可以用 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 类重写默认上下文。
 
@@ -63,7 +63,7 @@ Windows 运行时是一种编程接口，可用于创建只在特殊操作系统
 [Windows：： Foundation：： IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 表示返回结果并报告进度的异步操作。
 
-*动作* 的概念是指异步任务不生成值（想一想返回 `void`的函数）。 *操作* 的概念是指异步任务确实会生成值。 *进程* 的概念是指任务可以向调用方报告进程消息。 JavaScript、.NET Framework 和 Visual C++ 均提供自己的方式来创建这些接口的实例，以便跨 ABI 边界使用。 对于 Visual C++，PPL 提供 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函数。 此函数创建一个 Windows 运行时异步操作或表示任务完成的操作。 `create_async`函数采用一个工作函数（通常是 lambda 表达式），在内部创建一个 `task` 对象，并将该任务包装到四个异步 Windows 运行时接口之一中。
+*操作*的概念是指异步任务不生成值（可考虑返回的函数 **`void`** ）。 *操作* 的概念是指异步任务确实会生成值。 *进程* 的概念是指任务可以向调用方报告进程消息。 JavaScript、.NET Framework 和 Visual C++ 均提供自己的方式来创建这些接口的实例，以便跨 ABI 边界使用。 对于 Visual C++，PPL 提供 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函数。 此函数创建一个 Windows 运行时异步操作或表示任务完成的操作。 `create_async`函数采用一个工作函数（通常是 lambda 表达式），在内部创建一个 `task` 对象，并将该任务包装到四个异步 Windows 运行时接口之一中。
 
 > [!NOTE]
 > `create_async`仅在必须创建可从另一语言或另一个 Windows 运行时组件访问的功能时使用。 当知道操作是由 C++ 代码在同一组件中生成和使用时，可以直接使用 `task` 类。
@@ -79,8 +79,8 @@ Windows 运行时是一种编程接口，可用于创建只在特殊操作系统
 
 |创建此 Windows 运行时接口|请从 `create_async`返回此类型|将这些参数类型传递给您的工作函数以使用隐式取消标记|将这些参数类型传递给您的工作函数以使用显式取消标记|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|`void` 或 `task<void>`|（无）|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|`void` 或 `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|**`void`** 或`task<void>`|（无）|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|**`void`** 或`task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 |`IAsyncOperation<TResult>`|`T` 或 `task<T>`|（无）|(`cancellation_token`)|
 |`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` 或 `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
@@ -92,7 +92,7 @@ Windows 运行时是一种编程接口，可用于创建只在特殊操作系统
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>示例：创建 c + + Windows 运行时组件并从 C 使用它\#
 
-假设某个应用使用 XAML 和 c # 定义 UI，使用 c + + Windows 运行时组件来执行计算密集型操作。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 为了说明这四个 Windows 运行时异步任务接口之间的差异，请在 Visual Studio 中创建一个**空的解决方案**并对其进行命名，开始 `Primes` 。 然后在解决方案中添加一个“Windows 运行时组件” **** 项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回值的方法返回[Windows：： Foundation：：集合：： IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。
+假设某个应用使用 XAML 和 c # 定义 UI，使用 c + + Windows 运行时组件来执行计算密集型操作。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 为了说明这四个 Windows 运行时异步任务接口之间的差异，请在 Visual Studio 中创建一个**空的解决方案**并对其进行命名，开始 `Primes` 。 然后在解决方案中添加一个“Windows 运行时组件” **** 项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 **`public`** 方法定义四个异步接口之一。 返回值的方法返回[Windows：： Foundation：：集合：： IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1)对象。 报告进度的方法生成的 **`double`** 值定义了已完成的整体工作的百分比。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -169,7 +169,7 @@ Windows 运行时使用 COM 线程模型。 在此模型中，根据对象处理
 
 [!code-cpp[concrt-windowsstore-commonwords#3](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_8.h)]
 
-将以下 `using` 语句添加到 MainPage.cpp。
+将以下 **`using`** 语句添加到 MainPage。
 
 [!code-cpp[concrt-windowsstore-commonwords#4](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_9.cpp)]
 

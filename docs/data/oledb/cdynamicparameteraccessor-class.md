@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 9c326c337ff210ef9de26b3fd88c0d853832b260
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211858"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216461"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 类
 
@@ -109,7 +109,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ## <a name="requirements"></a>要求
 
-**标头**：atldbcli.h
+**标头**： atldbcli。h
 
 ## <a name="members"></a>成员
 
@@ -153,7 +153,7 @@ CDynamicParameterAccessor(
    : CDynamicAccessor(eBlobHandling, nBlobSize )
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *eBlobHandling*<br/>
 指定处理 BLOB 数据的方式。 默认值为 DBBLOBHANDLING_DEFAULT。 有关 DBBLOBHANDLINGENUM 值的说明，请参阅[CDynamicAccessor：： SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 。
@@ -183,7 +183,7 @@ void* GetParam(DBORDINAL nParam) const throw();
 void* GetParam(TCHAR* pParamName) const throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *ctype*<br/>
 作为数据类型的模板化参数。
@@ -199,9 +199,9 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 ### <a name="return-value"></a>返回值
 
-对于非模板化版本，指向包含从缓冲区中检索到的数据的内存。 对于模板化版本，在成功时返回**true** ，否则返回**false** 。
+对于非模板化版本，指向包含从缓冲区中检索到的数据的内存。 对于模板化版本， **`true`** 在成功或 **`false`** 失败时返回。
 
-使用 `GetParam` 从缓冲区中检索非字符串参数数据。 使用[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)从缓冲区中检索字符串参数数据。
+用于 `GetParam` 从缓冲区中检索非字符串参数数据。 使用[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)从缓冲区中检索字符串参数数据。
 
 ## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor：： GetParamCount
 
@@ -228,13 +228,13 @@ bool GetParamIO(DBORDINAL nParam,
    DBPARAMIO* pParamIO) const throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
 
 *pParamIO*<br/>
-指向一个变量的指针，该变量包含指定参数的 `DBPARAMIO` 类型（输入或输出）。 它的定义如下：
+指向变量的指针，该变量包含 `DBPARAMIO` 指定参数的类型（输入或输出）。 它的定义如下：
 
 ```cpp
 typedef DWORD DBPARAMIO;
@@ -248,7 +248,7 @@ enum DBPARAMIOENUM {
 
 ### <a name="return-value"></a>返回值
 
-如果成功，**则返回 true** ; 否则返回**false** 。
+**`true`** 成功或失败时返回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor：： GetParamLength
 
@@ -263,7 +263,7 @@ bool GetParamLength(DBORDINAL nParam,
 DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
@@ -273,7 +273,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 ### <a name="remarks"></a>备注
 
-第一次重写会在成功时返回**true** ，否则返回**false** 。 第二个重写指向包含参数的长度的内存。
+第一次重写会 **`true`** 在成功或 **`false`** 失败时返回。 第二个重写指向包含参数的长度的内存。
 
 ## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor：： GetParamName
 
@@ -285,7 +285,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
@@ -307,7 +307,7 @@ bool GetParamStatus(DBORDINAL nParam,
 DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
@@ -317,7 +317,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 
 ### <a name="remarks"></a>备注
 
-第一次重写会在成功时返回**true** ，否则返回**false** 。 第二次重写指向包含指定参数状态的内存。
+第一次重写会 **`true`** 在成功或 **`false`** 失败时返回。 第二次重写指向包含指定参数状态的内存。
 
 ## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor：： GetParamString
 
@@ -341,13 +341,13 @@ bool GetParamString(DBORDINAL nParam,
    size_t* pMaxLen) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
 
 *strOutput*<br/>
-弄指定参数的 ANSI （`CSimpleStringA`）或 Unicode （`CSimpleStringW`）字符串数据。 应传递 `CString`类型的参数，例如：
+弄指定参数的 ANSI （ `CSimpleStringA` ）或 Unicode （ `CSimpleStringW` ）字符串数据。 应传递类型为的参数 `CString` ，例如：
 
 [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
 
@@ -359,13 +359,13 @@ bool GetParamString(DBORDINAL nParam,
 
 ### <a name="remarks"></a>备注
 
-如果成功，**则返回 true** ; 否则返回**false** 。
+**`true`** 成功或失败时返回 **`false`** 。
 
-如果*pBuffer*为 NULL，则此方法将在*pMaxLen*指向的内存中设置所需的缓冲区大小，并返回**true**而不复制数据。
+如果*pBuffer*为 NULL，则此方法将在*pMaxLen*指向的内存中设置所需的缓冲区大小，并返回 **`true`** 而不复制数据。
 
 如果缓冲区*pBuffer*不够大，无法包含整个字符串，则此方法将失败。
 
-使用 `GetParamString` 从缓冲区中检索字符串参数数据。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)从缓冲区中检索非字符串参数数据。
+用于 `GetParamString` 从缓冲区中检索字符串参数数据。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)从缓冲区中检索非字符串参数数据。
 
 ## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor：： GetParamType
 
@@ -378,7 +378,7 @@ bool GetParamType(DBORDINAL nParam,
    DBTYPE* pType) const throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
@@ -388,7 +388,7 @@ bool GetParamType(DBORDINAL nParam,
 
 ### <a name="return-value"></a>返回值
 
-如果成功，**则返回 true** ; 否则返回**false** 。
+**`true`** 成功或失败时返回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor：： SetParam
 
@@ -408,7 +408,7 @@ bool SetParam(TCHAR* pParamName,
    DBSTATUS status = DBSTATUS_S_OK) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *ctype*<br/>
 作为数据类型的模板化参数。
@@ -429,9 +429,9 @@ bool SetParam(TCHAR* pParamName,
 
 ### <a name="return-value"></a>返回值
 
-如果成功，**则返回 true** ; 否则返回**false** 。
+**`true`** 成功或失败时返回 **`false`** 。
 
-使用 `SetParam` 设置缓冲区中的非字符串参数数据。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)设置缓冲区中的字符串参数数据。
+用于 `SetParam` 设置缓冲区中的非字符串参数数据。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)设置缓冲区中的字符串参数数据。
 
 ## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor：： SetParamLength
 
@@ -444,7 +444,7 @@ bool SetParamLength(DBORDINAL nParam,
    DBLENGTH length);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
@@ -454,7 +454,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 ### <a name="remarks"></a>备注
 
-如果成功，**则返回 true** ; 否则返回**false** 。
+**`true`** 成功或失败时返回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor：： SetParamStatus
 
@@ -467,7 +467,7 @@ bool SetParamStatus(DBORDINAL nParam,
    DBSTATUS status);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
@@ -477,7 +477,7 @@ bool SetParamStatus(DBORDINAL nParam,
 
 ### <a name="remarks"></a>备注
 
-如果成功，**则返回 true** ; 否则返回**false** 。
+**`true`** 成功或失败时返回 **`false`** 。
 
 ## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor：： SetParamString
 
@@ -493,7 +493,7 @@ bool SetParamString(DBORDINAL nParam,
    DBSTATUS status = DBSTATUS_S_OK) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 。
@@ -506,11 +506,11 @@ bool SetParamString(DBORDINAL nParam,
 
 ### <a name="remarks"></a>备注
 
-如果成功，**则返回 true** ; 否则返回**false** 。
+**`true`** 成功或失败时返回 **`false`** 。
 
-如果尝试设置的字符串大于为*pString*指定的最大大小，则 `SetParamString` 会失败。
+`SetParamString`如果尝试设置的字符串大于为*pString*指定的最大大小，则将失败。
 
-使用 `SetParamString` 设置缓冲区中的字符串参数数据。 使用[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)设置缓冲区中的非字符串参数数据。
+用于 `SetParamString` 设置缓冲区中的字符串参数数据。 使用[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)设置缓冲区中的非字符串参数数据。
 
 ## <a name="see-also"></a>另请参阅
 

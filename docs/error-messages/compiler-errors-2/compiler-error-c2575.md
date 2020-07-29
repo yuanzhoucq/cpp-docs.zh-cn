@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2575
 ms.assetid: 9eb45706-37ef-4481-b373-6d193ba13634
-ms.openlocfilehash: a63696ba35a8b923f8fbf0c6d6387f2402969cff
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c00ae519f5e6b595ec07d6a617813a3ae79ab72d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755455"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221128"
 ---
 # <a name="compiler-error-c2575"></a>编译器错误 C2575
 
 "identifier"：只有成员函数和基可以是虚拟的
 
-全局函数或类 `virtual`声明。 不允许这样做。
+声明全局函数或类 **`virtual`** 。 这是不允许的。
 
 下面的示例生成 C2575：
 

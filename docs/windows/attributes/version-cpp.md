@@ -1,5 +1,5 @@
 ---
-title: 版本（C++ COM 特性）
+title: version （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b537f56c39c33abc52897cf53ea2cc0fb24ee458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165985"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213796"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -24,14 +24,14 @@ ms.locfileid: "80165985"
 [ version("version") ]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *version*<br/>
 `coclass` 的版本号。 如果未指定，则将1.0 放置在 .idl 文件中。
 
 ## <a name="remarks"></a>备注
 
-**Version** C++特性具有与[版本](/windows/win32/Midl/version)MIDL 特性相同的功能，并被传递到生成的 .idl 文件。
+**版本**c + + 特性具有与[版本](/windows/win32/Midl/version)MIDL 特性相同的功能，并将传递到生成的 .idl 文件。
 
 ## <a name="example"></a>示例
 
@@ -43,9 +43,9 @@ ms.locfileid: "80165985"
 
 |||
 |-|-|
-|**适用对象**|**class**、 **struct**|
-|**可重复**|否|
-|**必需的特性**|**coclass**|
+|**适用于**|**`class`**, **`struct`**|
+|**且**|否|
+|**必需属性**|**coclass**|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

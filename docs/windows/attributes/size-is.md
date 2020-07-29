@@ -1,17 +1,17 @@
 ---
-title: size_is （C++ COM 特性）
+title: size_is （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166245"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213835"
 ---
 # <a name="size_is"></a>size_is
 
@@ -23,14 +23,14 @@ ms.locfileid: "80166245"
 [ size_is("expression") ]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *expression*<br/>
 为大小指针分配的内存的大小。
 
 ## <a name="remarks"></a>备注
 
-**Size_is** C++特性具有与[size_is](/windows/win32/Midl/size-is) MIDL 特性相同的功能。
+**Size_is** c + + 特性具有与[size_is](/windows/win32/Midl/size-is) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -42,9 +42,9 @@ ms.locfileid: "80166245"
 
 |||
 |-|-|
-|**适用对象**|**结构**或**联合**中的字段，接口参数，接口方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|或中的字段 **`struct`** **`union`** ，接口参数，接口方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|`max_is`|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
@@ -53,7 +53,7 @@ ms.locfileid: "80166245"
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[参数属性](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>

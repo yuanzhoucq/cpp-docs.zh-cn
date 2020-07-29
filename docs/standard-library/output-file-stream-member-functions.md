@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: 8c23008d0c46a532f11e89442328ed25cc203077
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453058"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217670"
 ---
 # <a name="output-file-stream-member-functions"></a>输出文件流成员函数
 
@@ -17,9 +17,9 @@ ms.locfileid: "68453058"
 
 ## <a name="the-open-function-for-output-streams"></a>输出流的 open 函数
 
-若要使用输出文件流 ([ofstream](../standard-library/basic-ofstream-class.md)), 则必须将该流与构造函数或`open`函数中的特定磁盘文件相关联。 如果使用`open`函数, 则可以对一系列文件重复使用同一个流对象。 在任一情况下，描述该文件的参数是相同的。
+若要使用输出文件流（[ofstream](../standard-library/basic-ofstream-class.md)），则必须将该流与构造函数或函数中的特定磁盘文件相关联 `open` 。 如果使用 `open` 函数，则可以对一系列文件重复使用同一个流对象。 在任一情况下，描述该文件的参数是相同的。
 
-打开与输出流关联的文件时, 通常会指定一个`open_mode`标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+打开与输出流关联的文件时，通常会指定一个 `open_mode` 标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 三种常见的输出流情况涉及模式选项：
 
@@ -86,7 +86,7 @@ int main( )
 }
 ```
 
-`write`函数在达到 null 字符后不会停止, 因此会写入完整的类结构。 该函数采用两个参数:**字符**指针和要写入的字符计数。 请注意, 在结构对象地址之前需要强制转换为**char** <strong>\*</strong> 。
+`write`函数在达到 null 字符后不会停止，因此会写入完整的类结构。 函数采用两个参数：一个 **`char`** 指针和一个要写入的字符计数。 请注意 **`char`** <strong>\*</strong> 结构对象地址前面的必需强制转换。
 
 ## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函数
 
@@ -94,24 +94,24 @@ int main( )
 
 ## <a name="the-close-function-for-output-streams"></a>输出流的 close 函数
 
-`close`成员函数关闭与输出文件流关联的磁盘文件。 若要完成所有磁盘输出，则必须关闭该文件。 如有必要, `ofstream`析构函数将关闭该文件, 但如果需要为同`close`一个流对象打开另一个文件, 则可以使用函数。
+`close`成员函数关闭与输出文件流关联的磁盘文件。 若要完成所有磁盘输出，则必须关闭该文件。 如有必要， `ofstream` 析构函数将关闭该文件，但 `close` 如果需要为同一个流对象打开另一个文件，则可以使用函数。
 
-仅当构造函数或`open`成员函数打开文件时, 输出流析构函数才会自动关闭流的文件。 如果向构造函数传递已打开文件的文件描述符或使用`attach`成员函数, 则必须显式关闭该文件。
+仅当构造函数或 `open` 成员函数打开文件时，输出流析构函数才会自动关闭流的文件。 如果向构造函数传递已打开文件的文件描述符或使用 `attach` 成员函数，则必须显式关闭该文件。
 
-## <a name="vclrferrorprocessingfunctionsanchor10"></a>错误处理函数
+## <a name="error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a>错误处理函数
 
 使用这些成员函数来测试写入流时是否出现错误：
 
 |函数|返回值|
 |--------------|------------------|
-|[bad](basic-ios-class.md#bad)|如果存在不可恢复的错误，则返回 **true**。|
-|[fail](basic-ios-class.md#fail)|如果出现不可恢复的错误或“预期”条件（例如出现转换错误），或者如果找不到该文件，则返回 **true**。 `clear`使用零参数对的调用后, 处理通常可以恢复。|
-|[good](basic-ios-class.md#good)|如果没有任何错误条件（不可恢复的或其他的条件），且未设置文件结束标志，则返回 **true**。|
-|[eof](basic-ios-class.md#eof)|在文件结尾时返回 **true**。|
-|[clear](basic-ios-class.md#clear)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
-|[rdstate](basic-ios-class.md#rdstate|返回当前错误状态。|
+|[无效](basic-ios-class.md#bad)|**`true`** 如果出现不可恢复的错误，则返回。|
+|[失败](basic-ios-class.md#fail)|**`true`** 如果出现不可恢复的错误或 "预期" 条件（如转换错误），或者如果找不到该文件，则返回。 使用零参数对的调用后，处理通常可以恢复 `clear` 。|
+|[良好](basic-ios-class.md#good)|**`true`** 如果没有错误条件（不可恢复或其他），并且未设置文件尾标志，则返回。|
+|[eof](basic-ios-class.md#eof)|返回 **`true`** 文件尾条件。|
+|[清除](basic-ios-class.md#clear)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
+|rdstate（基本-ios-类 md # rdstate|返回当前错误状态。|
 
-重载 **!** 重载运算符以执行与`fail`函数相同的函数。 因此表达式：
+**！** 重载运算符以执行与函数相同的函数 `fail` 。 因此表达式：
 
 ```cpp
 if(!cout)...
@@ -135,8 +135,8 @@ if(cout)...
 if(!cout.fail())...
 ```
 
-**Void\*()** 运算符不等效于, `good`因为它不会测试文件的结尾。
+**Void \* （）** 运算符不等效于， `good` 因为它不会测试文件的结尾。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [输出流](../standard-library/output-streams.md)

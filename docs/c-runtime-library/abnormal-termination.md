@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: a963f1059eccaddce9ec01cd53a07df668ee46c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944715"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213653"
 ---
 # <a name="_abnormal_termination"></a>_abnormal_termination
 
-指示是否在系统执行终止处理程序的内部列表时进入 [try-finally 语句](../cpp/try-finally-statement.md)的 `__finally` 块。
+指示 **`__finally`** 当系统正在执行终止处理程序的内部列表时，是否输入[try-catch 语句](../cpp/try-finally-statement.md)的块。
 
 ## <a name="syntax"></a>语法
 
@@ -40,7 +40,7 @@ int   _abnormal_termination(
 
 ## <a name="return-value"></a>返回值
 
-如果系统“展开”堆栈则为“true”，否则为“false”    。
+**`true`** 如果系统正在*展开*堆栈，则为;否则为 **`false`** 。
 
 ## <a name="remarks"></a>备注
 

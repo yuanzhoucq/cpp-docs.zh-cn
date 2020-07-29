@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320209"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217605"
 ---
 # <a name="recursive_mutex-class"></a>recursive_mutex 类
 
@@ -35,26 +35,26 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|构造 `recursive_mutex` 对象。|
 |[~recursive_mutex 析构函数](#dtorrecursive_mutex_destructor)|释放由 `recursive_mutex` 对象使用的任何资源。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[锁](#lock)|阻止调用线程，直到线程获取 mutex 的所有权。|
+|[lock](#lock)|阻止调用线程，直到线程获取 mutex 的所有权。|
 |[try_lock](#try_lock)|在不阻止的情况下尝试获取 mutex 的所有权。|
-|[解 锁](#unlock)|释放 mutex 的所有权。|
+|[解锁](#unlock)|释放 mutex 的所有权。|
 
 ## <a name="requirements"></a>要求
 
-**标题：**\<互斥>
+**标头：**\<mutex>
 
 **命名空间:** std
 
-## <a name="lock"></a><a name="lock"></a>锁
+## <a name="lock"></a><a name="lock"></a>住
 
 阻止调用线程，直到线程获取 `mutex` 的所有权。
 
@@ -96,13 +96,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功获得 或`mutex`调用线程已拥有 ， `mutex**; otherwise, **false`**则为 true。**
+**`true`** 如果方法成功获取的所有权，则为 `mutex` ; 如果调用线程已拥有，则为 `mutex**; otherwise, **false` 。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 ，`mutex`则函数将立即返回**true，** 并且以前的锁仍然有效。
+如果调用线程已拥有 `mutex` ，则该函数将立即返回 **`true`** ，而上一个锁仍有效。
 
-## <a name="unlock"></a><a name="unlock"></a>解 锁
+## <a name="unlock"></a><a name="unlock"></a>解锁
 
 释放 mutex 的所有权。
 
@@ -118,5 +118,5 @@ void unlock();
 
 ## <a name="see-also"></a>另请参阅
 
-[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[\<互斥>](../standard-library/mutex.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

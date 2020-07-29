@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403720"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217956"
 ---
 # <a name="exceptions-database-exceptions"></a>异常：数据库异常
 
@@ -54,11 +54,11 @@ ms.locfileid: "86403720"
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>数据库异常处理示例
 
-下面的示例尝试使用**new**运算符在堆上构造一个[CRecordset](reference/crecordset-class.md)派生的对象，然后打开该记录集（对于 ODBC 数据源）。 有关 DAO 类的类似示例，请参阅下面的 "DAO 异常示例"。
+下面的示例尝试使用运算符在堆上构造一个[CRecordset](reference/crecordset-class.md)派生的对象 **`new`** ，然后打开该记录集（对于 ODBC 数据源）。 有关 DAO 类的类似示例，请参阅下面的 "DAO 异常示例"。
 
 ### <a name="odbc-exception-example"></a>ODBC 异常示例
 
-[Open](reference/crecordset-class.md#open)成员函数可能会引发异常（针对 ODBC 类的类型为[CDBException](reference/cdbexception-class.md) ），因此，此代码将 `Open` 使用**try**块将调用括起来。 后续**catch**块将捕获 `CDBException` 。 您可以检查已调用的异常对象本身， `e` 但在这种情况下，必须知道创建记录集的尝试已失败。 **Catch**块将显示一个消息框，并通过删除记录集对象来清除该消息框。
+[Open](reference/crecordset-class.md#open)成员函数可能会引发异常（针对 ODBC 类的类型为[CDBException](reference/cdbexception-class.md) ），因此此代码将 `Open` 使用块的调用括起来 **`try`** 。 后续 **`catch`** 块将捕获 `CDBException` 。 您可以检查已调用的异常对象本身， `e` 但在这种情况下，必须知道创建记录集的尝试已失败。 该 **`catch`** 块将显示一个消息框，并通过删除记录集对象来清除该消息框。
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622827"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217930"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>异常：释放异常中的对象
 
@@ -30,9 +30,9 @@ ms.locfileid: "84622827"
 
 可以通过两种主要方法完成此操作。
 
-- 使用**try**和**catch**关键字在本地处理异常，然后销毁包含一条语句的所有对象。
+- 使用和关键字在本地处理异常 **`try`** **`catch`** ，然后销毁包含一条语句的所有对象。
 
-- 在引发块外的异常之前销毁**catch**块中的任何对象以进行进一步处理。
+- 销毁块外的任何对象 **`catch`** ，然后在块外引发异常，以便进一步处理。
 
 下面这两种方法的示例如下所示：
 
@@ -50,7 +50,7 @@ ms.locfileid: "84622827"
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>销毁对象后引发异常
 
-处理异常的另一种方法是将其传递到下一个外部异常处理上下文。 在**catch**块中，你可以对本地分配的对象执行一些清理，然后在上引发异常以便进一步处理。
+处理异常的另一种方法是将其传递到下一个外部异常处理上下文。 在 **`catch`** 块中，你可以对本地分配的对象执行一些清理，然后在上引发异常以便进一步处理。
 
 引发函数可能需要也可能不需要释放堆对象。 如果函数在正常情况下返回之前始终释放堆对象，则该函数还应在引发异常之前释放堆对象。 另一方面，如果在正常情况下，该函数通常不会解除分配对象，则必须根据具体情况决定是否应释放堆对象。
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ae1b6b9460ec58aec319196e3c116bd29c3e80e4
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737513"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219308"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf 类
 
@@ -71,7 +71,7 @@ class basic_filebuf : public basic_streambuf<Char_T, Tr>
 类模板描述了一个流缓冲区，该缓冲区控制*Char_T*类型的元素（其字符特征由类*Tr*确定）与外部文件中存储的元素序列之间的传输。
 
 > [!NOTE]
-> 类型为的对象 `basic_filebuf` 是使用__ \* char__类型的内部缓冲区创建的，而不考虑 `char_type` 由类型参数指定的*Char_T*。 这意味着在将 Unicode 字符串（ **wchar_t**包含字符）写入内部缓冲区之前，会将其转换为 ANSI 字符串 **（包含字符**）。 若要在缓冲区中存储 Unicode 字符串，请创建**wchar_t**类型的新缓冲区，并使用方法对其进行设置 [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` 。 若要查看演示此行为的示例，请参阅下面的内容。
+> 类型为的对象 `basic_filebuf` 是使用__ \* char__类型的内部缓冲区创建的，而不考虑 `char_type` 由类型参数指定的*Char_T*。 这意味着 Unicode 字符串（包含 **`wchar_t`** 字符）会在写入内部缓冲区之前转换为 ANSI 字符串（包含 **`char`** 字符）。 若要在缓冲区中存储 Unicode 字符串，请创建类型的新缓冲区， **`wchar_t`** 并使用方法对其进行设置 [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` 。 若要查看演示此行为的示例，请参阅下面的内容。
 
 类的对象 `basic_filebuf<Char_T, Tr>` 存储文件指针，它指定 `FILE` 控制与打开的文件关联的流的对象。 另外，它还存储指向两个文件转换方面的指针，以供受保护的成员函数 [overflow](#overflow) 和 [underflow](#underflow) 使用。 有关详细信息，请参阅 [`basic_filebuf::open`](#open)。
 
@@ -271,9 +271,9 @@ basic_filebuf<Char_T, Tr> *close();
 
 ### <a name="remarks"></a>备注
 
-`close` 调用 `fclose(fp)`。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它将返回 **this** 以指示已成功关闭文件。
+`close` 调用 `fclose(fp)`。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它将返回 **`this`** 以指示已成功关闭该文件。
 
-对于宽流，如果自打开流以来或自上次调用以来发生了插入， `streampos` 则函数将调用 [`overflow`](#overflow) 。 它还会插入还原初始转换状态所需的任何序列，方法是使用文件转换方面 `fac` `fac.unshift` 根据需要调用。 Char 类型的每个生成元素 `byte` 都写入由文件指针指定的关联流**char** ， `fp` 就像连续调用窗体一样 `fputc(byte, fp)` 。 如果对或的调用 `fac.unshift` 失败，则该函数不会成功。
+对于宽流，如果自打开流以来或自上次调用以来发生了插入， `streampos` 则函数将调用 [`overflow`](#overflow) 。 它还会插入还原初始转换状态所需的任何序列，方法是使用文件转换方面 `fac` `fac.unshift` 根据需要调用。 类型的每个生成元素 `byte` **`char`** 都将写入由文件指针指定的关联流， `fp` 就像通过连续调用窗体一样 `fputc(byte, fp)` 。 如果对或的调用 `fac.unshift` 失败，则该函数不会成功。
 
 ### <a name="example"></a>示例
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>返回值
 
-如果文件指针不为空，**则为 true** 。
+**`true`** 如果文件指针不为空，则为。
 
 ### <a name="example"></a>示例
 
@@ -413,7 +413,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 ### <a name="return-value"></a>返回值
 
-如果缓冲区已打开，或者文件指针为 null 指针，则该函数返回 null 指针。 否则，返回 **this**。
+如果缓冲区已打开，或者文件指针为 null 指针，则该函数返回 null 指针。 否则，它将返回 **`this`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - 如果函数可以使 `putback` 位置可用，则可以执行此操作，将下一个指针设置为指向该位置的点，并将其存储 `ch` 在该位置。
 
-- 如果函数可以将元素推送回输入流，则它可以执行此操作，例如通过调用 `ungetc` **char**类型的元素。
+- 如果函数可以将某个元素推送回输入流，则可以通过调用 `ungetc` 类型为的元素来执行此操作 **`char`** 。
 
 ## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf：:p os_type
 
@@ -582,7 +582,7 @@ virtual pos_type seekpos(
 
 对于打开供读取和写入的文件，输入流和输出流串联放置。 若要在插入和提取之间切换，必须调用 [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) 或 [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) 。 对 `pubseekoff` `seekoff` 文本流、二进制流和宽流的调用（和）有各种限制。
 
-对于宽流，如果自打开流后，或者自上次调用 `streampos` 后发生任何插入，该函数都将调用 [overflow](#overflow)。 它还会插入还原初始转换状态所需的任何序列，方法是使用文件转换方面 `fac` `fac.unshift` 根据需要调用。 Char 类型的每个生成元素 `byte` 都写入由文件指针指定的关联流**char** ， `fp` 就像连续调用窗体一样 `fputc(byte, fp)` 。 如果对或的调用 `fac.unshift` 失败，则该函数不会成功。
+对于宽流，如果自打开流后，或者自上次调用 `streampos` 后发生任何插入，该函数都将调用 [overflow](#overflow)。 它还会插入还原初始转换状态所需的任何序列，方法是使用文件转换方面 `fac` `fac.unshift` 根据需要调用。 类型的每个生成元素 `byte` **`char`** 都将写入由文件指针指定的关联流， `fp` 就像通过连续调用窗体一样 `fputc(byte, fp)` 。 如果对或的调用 `fac.unshift` 失败，则该函数不会成功。
 
 ## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf：： setbuf
 
@@ -608,7 +608,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 ### <a name="remarks"></a>备注
 
-`setbuf`调用 `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` 可提供 `count` 从 *_Buffer*开始的元素数组，作为流的缓冲区。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它将返回 **this** 表示成功。
+`setbuf`调用 `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` 可提供 `count` 从 *_Buffer*开始的元素数组，作为流的缓冲区。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它会返回 **`this`** 信号成功。
 
 ## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf：： swap
 
@@ -661,9 +661,9 @@ virtual int_type underflow();
 
 - 如果读取位置可用，则它将 `ch` 作为存储在读取位置中的元素，并提升输入缓冲区的下一个指针。
 
-- 它可以读取**char**类型的一个或多个元素，就像通过连续调用窗体一样 `fgetc(fp)` ，并 `ch` `Char_T` 通过使用 "文件转换" facet `fac` `fac.in` 根据需要将其转换为类型的元素。 如果任何读取或转换失败，该函数不会成功。
+- 它可以读取类型的一个或多个元素 **`char`** ，就像通过连续调用窗体一样 `fgetc(fp)` ，并 `ch` `Char_T` 通过使用 "文件转换" facet 按 `fac` 需调用来将其转换为类型的元素 `fac.in` 。 如果任何读取或转换失败，该函数不会成功。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<fstream>](../standard-library/fstream.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

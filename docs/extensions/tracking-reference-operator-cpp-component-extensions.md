@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 93f56580f35ffc1f6e517905467c3deb92922f5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368239"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218008"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>跟踪引用运算符（C++/CLI 和 C++/CX）
 
-*跟踪引用*（`%`） 与普通C++引用 （`&`） 一样，只不过当对象分配给跟踪引用时，对象的引用计数将递增。
+*跟踪引用*（ `%` ）的行为类似于普通 c + + 引用（ `&` ），不同的是，在将对象分配给跟踪引用时，对象的引用计数将递增。
 
 ## <a name="all-platforms"></a>所有平台
 
 跟踪引用具有下列特征：
 
-- 将对象分配给跟踪引用会导致对象的引用计数增加。
+- 将对象分配给跟踪引用会导致对象的引用计数递增。
 
 - 本机引用 (`&`) 是取消引用 `*` 时的结果。 跟踪引用 (`%`) 是取消引用 `^` 时的结果。 只要有指向对象的 `%`，此对象就会一直保留在内存中。
 
@@ -31,7 +31,7 @@ ms.locfileid: "81368239"
 
 - 跟踪引用对值类型和句柄（例如 `String^`）有效。
 
-- 不得将 NULL 或 nullptr**** 值赋给跟踪引用。 根据需要，可以将一个跟踪引用重新分配给另一个有效对象，没有次数限制。
+- 不能为跟踪引用分配 null 值或 **`nullptr`** 值。 根据需要，可以将一个跟踪引用重新分配给另一个有效对象，没有次数限制。
 
 - 跟踪引用不能用作一元获取地址运算符。
 
@@ -75,7 +75,7 @@ ref class Foo sealed {};
 
 有关 C++/CLI 中跟踪引用的详细信息，请参阅：
 
-- [如何：在 C++/CLI 中使用跟踪引用](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [如何：在 c + +/CLI 中使用跟踪引用](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>示例
 
