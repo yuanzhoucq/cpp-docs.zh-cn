@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914670"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216929"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
@@ -188,7 +188,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 *基数*<br/>
 用于转换值的基数，*该值*必须在2-36 范围内。
 
-size <br/>
+*大小*<br/>
 缓冲区的长度（以字符类型的单位表示）。 此参数是从 c + + 中的*buffer*参数推断出来的。
 
 ## <a name="return-value"></a>返回值
@@ -197,7 +197,7 @@ size <br/>
 
 ## <a name="remarks"></a>备注
 
-**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函数将给定*值*参数的数字转换为以 null 结尾的字符串，并将结果（最多33个字符用于 **_itoa**、 **_ltoa**和 **_ultoa**，以及65（最多个 **_i64toa** **字符）放**入*缓冲区*。 如果*基数*等于10并且*值*为负，则存储字符串的第一个字符为减号（**-**）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函数分别是 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**的宽字符版本。
+**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函数将给定*值*参数的数字转换为以 null 结尾的字符串，并将结果（最多33个字符用于 **_itoa**、 **_ltoa**和 **_ultoa**，以及65（最多个 **_i64toa** **字符）放**入*缓冲区*。 如果*基数*等于10并且*值*为负，则存储字符串的第一个字符为减号（ **-** ）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函数分别是 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**的宽字符版本。
 
 > [!IMPORTANT]
 > 这些函数可以写入超过太小缓冲区末尾的部分。 若要防止缓冲区溢出，请确保*缓冲区*的大小足以容纳转换后的数字加上尾随的 null 字符和符号字符。 这些函数的误用可能导致代码中出现严重的安全问题。
@@ -240,7 +240,7 @@ POSIX 名称**itoa**、 **ltoa**和**ultoa**作为 **_itoa**、 **_ltoa**和 **_
 |**_i64toa**， **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**， **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-此示例使用转换计数宏来定义一个缓冲区，该缓冲区足以在 base 2 中包含**无符号长**时间：
+此示例使用转换计数宏来定义一个缓冲区，该缓冲区足以 **`unsigned long long`** 在第2个中包含 a：
 
 ```cpp
 #include <wchar.h>
@@ -264,7 +264,7 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**itoa**、 **ltoa**、 **ultoa**|\<stdlib.h>|
 |**_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**|\<stdlib.h>|

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364851"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230254"
 ---
 # <a name="bernoulli_distribution-class"></a>bernoulli_distribution 类
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*乌尔格*\
-统一的随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
+*URNG*\
+统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>备注
 
-该类描述一个分布，该分布产生**布尔**型值，该分布基于伯努利分布离散概率函数分布。 下表链接到有关各个成员的文章。
+类描述产生类型的值的分布 **`bool`** ，根据伯努利分布离散概率函数进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
 有关伯努利分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[伯努利分布](https://go.microsoft.com/fwlink/p/?linkid=398467)。
 
@@ -154,11 +154,11 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：**\<random>
 
 **命名空间:** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution：bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution：： bernoulli_distribution
 
 构造分布。
 
@@ -169,39 +169,39 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*P*\
+*h-p*\
 存储的 `p` 分布参数。
 
-*帕尔姆*\
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**先决条件：**`0.0 ≤ p ≤ 1.0`
+**前提条件：**`0.0 ≤ p ≤ 1.0`
 
 第一个构造函数将构造一个其存储的 `p` 值保留值 *p* 的对象。
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution：:p阿拉姆型
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution：:p aram_type
 
 包含分布的参数。
 
-结构param_type = 类型bernoulli_distributiondistribution_type;param_type（双 p = 0.5）;双 p（） 同;
+struct param_type {typedef bernoulli_distribution distribution_type; param_type （double p = 0.5）; double p （） const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>参数
 
-*P*\
+*h-p*\
 存储的 `p` 分布参数。
 
 ### <a name="remarks"></a>备注
 
-**先决条件：**`0.0 ≤ p ≤ 1.0`
+**前提条件：**`0.0 ≤ p ≤ 1.0`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<随机>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

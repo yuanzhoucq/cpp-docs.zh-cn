@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914640"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216864"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -78,15 +78,15 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 **modf**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C + + 允许重载，因此你可以调用**modf**的重载，该重载采用并返回**浮点**或**长****双精度**型参数。 在 C 程序中， **modf**始终采用两个双精度值并返回一个双精度值。
+C + + 允许重载，因此你可以调用采用和返回或参数的**modf**的重载 **`float`** **`long double`** 。 在 C 程序中， **modf**始终采用两个双精度值并返回一个双精度值。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**modf**、 **modff**、 **modfl**|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|
+|**modf**、 **modff**、 **modfl**|Ansi-c\<math.h><br /><br /> C + +：、 \<cmath> 或\<math.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

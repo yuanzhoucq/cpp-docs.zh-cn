@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216851"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -84,7 +84,7 @@ long double nearbyint( long double x ); //C++ only
 
 因为最大浮点值均为精确的整数，所以此函数本身不会溢出；而输出可能会溢出返回值，具体取决于所使用函数的版本。
 
-C + + 允许重载，因此你可以调用**nearbyint**的重载，该重载采用并返回**浮点**或**长****双精度**型参数。 在 C 程序中， **nearbyint**始终采用两个双精度值并返回一个双精度值。
+C + + 允许重载，因此你可以调用采用和返回或参数的**nearbyint**的重载 **`float`** **`long double`** 。 在 C 程序中， **nearbyint**始终采用两个双精度值并返回一个双精度值。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -98,5 +98,5 @@ C + + 允许重载，因此你可以调用**nearbyint**的重载，该重载采�
 
 ## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [数学和浮点支持](../floating-point-support.md)<br/>

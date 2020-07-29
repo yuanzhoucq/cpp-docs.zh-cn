@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-ms.openlocfilehash: 551309757f5e76e230d0a275da94ac94ec30fb13
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c4cb71355b4f3dca66c56ed4b89012ca9b9e646d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163918"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197041"
 ---
 # <a name="compiler-warning-level-1-c4090"></a>编译器警告（等级1） C4090
 
@@ -19,9 +19,9 @@ ms.locfileid: "80163918"
 
 操作中使用的变量是使用指定修饰符定义的，该修饰符可防止在编译器未检测到它的情况下对其进行修改。 不修改即可编译表达式。
 
-如果将指向**const**或 `volatile` 项的指针分配给未声明为指向**const**或 `volatile`的指针，则可能会导致此警告。
+如果将指向 **`const`** 或项的指针 **`volatile`** 分配给未声明为指向或的指针，则可能会导致此 **`const`** 警告 **`volatile`** 。
 
-对于 C 程序，将发出此警告。 在C++程序中，编译器会发出错误： [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。
+对于 C 程序，将发出此警告。 在 c + + 程序中，编译器会发出错误： [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。
 
 下面的示例生成 C4090：
 

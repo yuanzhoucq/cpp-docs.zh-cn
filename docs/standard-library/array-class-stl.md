@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
-ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
+ms.openlocfilehash: 9cde21624e3a8d4cce6db9cdc054bad427340f31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643645"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203897"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 
@@ -131,16 +131,16 @@ class array;
 |[const_reverse_iterator](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
 |[器](#iterator)|受控序列的迭代器的类型。|
-|[指针 (pointer)](#pointer)|指向元素的指针的类型。|
-|[对](#reference)|元素的引用的类型。|
+|[变为](#pointer)|指向元素的指针的类型。|
+|[reference](#reference)|元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|受控序列的反向迭代器的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
 |成员函数|描述|
 |-|-|
-|[组成](#array)|构造一个数组对象。|
-|[assign](#assign)|弃用. 使用`fill`。）替换所有元素。|
+|[array](#array)|构造一个数组对象。|
+|[assign](#assign)|弃用. 使用 `fill` 。）替换所有元素。|
 |[at](#at)|访问指定位置处的元素。|
 |[返回](#back)|访问最后一个元素。|
 |[准备](#begin)|指定受控序列的开头。|
@@ -148,25 +148,25 @@ class array;
 |[cend](#cend)|返回一个随机访问常量迭代器，它指向刚超过数组末尾的位置。|
 |[crbegin](#crbegin)|返回一个指向反向数据中第一个元素的常量迭代器。|
 |[crend](#crend)|返回一个指向反向数组末尾的常量迭代器。|
-|[数据](#data)|获取第一个元素的地址。|
+|[data](#data)|获取第一个元素的地址。|
 |[empty](#empty)|测试元素是否存在。|
-|[端面](#end)|指定受控序列的末尾。|
+|[end](#end)|指定受控序列的末尾。|
 |[适合](#fill)|将所有元素替换为指定值。|
 |[主](#front)|访问第一个元素。|
 |[max_size](#max_size)|对元素数进行计数。|
 |[rbegin](#rbegin)|指定反向受控序列的开头。|
 |[rend](#rend)|指定反向受控序列的末尾。|
-|size |对元素数进行计数。|
-|[购](#swap)|交换两个容器的内容。|
+|[大小](#size)|对元素数进行计数。|
+|[swap](#swap)|交换两个容器的内容。|
 
-|操作员|说明|
+|操作员|描述|
 |-|-|
 |[array：： operator =](#op_eq)|替换受控序列。|
 |[array：： operator\[\]](#op_at)|访问指定位置处的元素。|
 
 ## <a name="remarks"></a>备注
 
-此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，应用于对象的
+此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>要求
 
-**Header:** \<array>
+**标头：**\<array>
 
 **命名空间:** std
 
@@ -199,7 +199,7 @@ array(const array& right);
 
 默认构造函数 `array()` 将受控序列保留为未初始化（或默认已初始化）。 使用它来指定未初始化的控制序列。
 
-复制构造函数`array(const array& right)`用序列 [*right*`.begin()`， *right*`.end()`）初始化受控序列。 使用它来指定初始受控序列，该序列是由数组对象 *right* 控制的序列副本。
+复制构造函数 `array(const array& right)` 用序列 [*right* `.begin()` ， *right*）初始化受控序列 `.end()` 。 使用它来指定初始受控序列，该序列是由数组对象 *right* 控制的序列副本。
 
 ### <a name="example"></a>示例
 
@@ -381,7 +381,7 @@ int main()
 
 ## <a name="arraycbegin"></a><a name="cbegin"></a>array：： cbegin
 
-返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
+返回一个 **`const`** 迭代器，该迭代器用于寻址范围内的第一个元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-一个**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()`）。
+一个 **`const`** 随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()` ）。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中， `Container`将视为支持`begin()`和`cbegin()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `begin()` `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -407,7 +407,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="arraycend"></a><a name="cend"></a>array：： cend
 
-返回一个**常量**迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
+返回一个 **`const`** 迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中， `Container`将视为支持`end()`和`cend()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `end()` `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -1138,7 +1138,7 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符将*右*的每个元素分配给受控序列的相应元素，然后返回`*this`。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符将*右*的每个元素分配给受控序列的相应元素，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1502,7 +1502,7 @@ void swap(array& right);
 
 ### <a name="remarks"></a>备注
 
-成员函数交换和`*this` *右*之间的受控序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
+成员函数交换和右之间的受控 **`*this`** 序列*right*。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
 
 还有一个非成员[交换](array-functions.md#swap)函数可用于交换两个**数组**实例。
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<数组>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

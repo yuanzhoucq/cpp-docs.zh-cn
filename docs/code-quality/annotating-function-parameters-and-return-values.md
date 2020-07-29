@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404032"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231255"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>注释函数参数和返回值
 
@@ -167,7 +167,7 @@ ms.locfileid: "86404032"
 
      指向数组的指针，该数组由函数读取。 数组的大小为 `s` 元素，所有元素都必须有效。
 
-     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， **`char`** `_bytes_` 仅当使用的类似函数时，字符串才使用变体 **`wchar_t`** 。
 
 - `_In_reads_z_(s)`
 
@@ -190,7 +190,7 @@ ms.locfileid: "86404032"
 
      在此示例中，调用方 `size` 为提供元素的缓冲区 `p1` 。 `MyStringCopy`使其中一些元素有效。 更重要的 `_Null_terminated_` 是，上的批注 `PWSTR` 表示 `p1` 在 post 状态下以 null 结尾。 通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。
 
-     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， **`char`** `_bytes_` 仅当使用的类似函数时，字符串才使用变体 **`wchar_t`** 。
 
 - `_Out_writes_z_(s)`
 
@@ -202,7 +202,7 @@ ms.locfileid: "86404032"
 
      指向数组的指针，该数组在函数中进行读取和写入。 它是大小 `s` 元素，在预状态和后状态下有效。
 
-     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， **`char`** `_bytes_` 仅当使用的类似函数时，字符串才使用变体 **`wchar_t`** 。
 
 - `_Inout_updates_z_(s)`
 
@@ -231,7 +231,7 @@ ms.locfileid: "86404032"
 
      指向数组的指针，该数组由函数读取和写入。 这是大小 `s` 元素，其中的所有元素都必须在预状态中有效，并且 `c` 元素必须在 post 状态下有效。
 
-     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， **`char`** `_bytes_` 仅当使用的类似函数时，字符串才使用变体 **`wchar_t`** 。
 
 - `_Inout_updates_all_(s)`
 
@@ -243,7 +243,7 @@ ms.locfileid: "86404032"
 
      换句话说，缓冲区中的每个位于 `s` 预状态的元素都在前置状态和 post 状态下有效。
 
-     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， **`char`** `_bytes_` 仅当使用的类似函数时，字符串才使用变体 **`wchar_t`** 。
 
 - `_In_reads_to_ptr_(p)`
 

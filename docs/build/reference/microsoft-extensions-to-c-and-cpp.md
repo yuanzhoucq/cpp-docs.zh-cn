@@ -1,5 +1,5 @@
 ---
-title: Microsoft C 扩展和C++
+title: Microsoft C 和 C++ 扩展
 ms.date: 06/14/2018
 helpviewer_keywords:
 - or_eq operator
@@ -29,24 +29,24 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321184"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231502"
 ---
-# <a name="microsoft-extensions-to-c-and-c"></a>Microsoft C 扩展和C++
+# <a name="microsoft-extensions-to-c-and-c"></a>Microsoft C 和 C++ 扩展
 
 Visual C++ 按如下方式扩展 ANSI C 和 ANSI C++ 标准。
 
 ## <a name="keywords"></a>关键字
 
-添加了几个关键字。 在列表中[关键字](../../cpp/keywords-cpp.md)，有两个前导下划线的关键字是 VisualC++扩展。
+添加了几个关键字。 在[关键字](../../cpp/keywords-cpp.md)列表中，具有两个前导下划线的关键字是 Visual C++ 扩展。
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>带静态常量整型 （或枚举） 成员的类定义
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>静态常量整型（或枚举）成员的类定义
 
-在标准下 (**/Za**)，必须为数据成员进行扩展的类定义，如下所示：
+在标准（**/za**）下，必须为数据成员生成类外定义，如下所示：
 
 ```cpp
 class CMyClass  {
@@ -57,15 +57,15 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-下 **/Ze**，扩展的类定义是可选的静态、 常量整数和常量枚举数据成员。 在类中，只有静态和常量类型的整数和枚举可以有初始值；初始化表达式必须是常量表达式。
+在 **/ze**下，类外定义对于 static、const 整型和 const 枚举数据成员是可选的。 在类中，只有静态和常量类型的整数和枚举可以有初始值；初始化表达式必须是常量表达式。
 
-若要避免错误，当提供的标头中文件和头文件包含在多个源文件时，扩展的类定义，请使用[selectany](../../cpp/selectany.md)。 例如：
+若要避免在标头文件中提供类外定义且标头文件包含在多个源文件中时出现错误，请使用[selectany](../../cpp/selectany.md)。 例如：
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
 ```
 
-## <a name="casts"></a>强制转换
+## <a name="casts"></a>转换
 
 C++ 编译器和 C 编译器都支持以下类型的非 ANSI 转换：
 
@@ -99,7 +99,7 @@ C++ 编译器和 C 编译器都支持以下类型的非 ANSI 转换：
    pdata = ( int * ) (uintptr_t) pfunc;
    ```
 
-## <a name="variable-length-argument-lists"></a>长度可变的自变量列表
+## <a name="variable-length-argument-lists"></a>可变长度参数列表
 
 C++ 编译器和 C 编译器都支持指定可变数量的自变量并后跟提供类型的函数定义的函数声明符：
 
@@ -117,11 +117,11 @@ C 编译器支持单行注释，它是使用两个正斜杠 (//) 字符引入的
 // This is a single-line comment.
 ```
 
-## <a name="scope"></a>范围
+## <a name="scope"></a>作用域
 
 C 编译器支持以下范围相关功能。
 
-- 为静态的外部项的重定义：
+- 将 extern 项的重新定义为静态：
 
    ```C
    extern int clip();
@@ -129,14 +129,14 @@ C 编译器支持以下范围相关功能。
    {}
    ```
 
-- 良性 typedef 重新定义相同的作用域内的使用：
+- 在同一范围内使用良性 typedef 重新定义：
 
    ```C
    typedef int INT;
    typedef int INT;
    ```
 
-- 函数声明符具有文件范围内：
+- 函数声明符具有文件范围：
 
    ```C
    void func1()
@@ -172,13 +172,13 @@ C 编译器支持以下范围相关功能。
 
 C 编译器支持以下数据声明和定义功能。
 
-- 初始值设定项中的混合的字符和字符串常量：
+- 初始值设定项中的混合字符和字符串常量：
 
    ```C
    char arr[5] = {'a', 'b', "cde"};
    ```
 
-- 位域，而不具有的基类型**无符号的 int**或**带符号整型**。
+- 包含除或之外的基类型的位域 **`unsigned int`** **`signed int`** 。
 
 - 没有类型的声明符：
 
@@ -190,7 +190,7 @@ C 编译器支持以下数据声明和定义功能。
    }
    ```
 
-- 未确定大小的数组，作为结构和联合中的最后一个字段：
+- 成员列表数组数组作为结构和联合中的最后一个字段：
 
    ```C
    struct zero
@@ -200,7 +200,7 @@ C 编译器支持以下数据声明和定义功能。
    };
    ```
 
-- 未命名 （匿名） 的结构：
+- 未命名（匿名）结构：
 
    ```C
    struct
@@ -210,7 +210,7 @@ C 编译器支持以下数据声明和定义功能。
    };
    ```
 
-- 未命名 （匿名） 的联合：
+- 未命名（匿名）联合：
 
    ```C
    union
@@ -220,7 +220,7 @@ C 编译器支持以下数据声明和定义功能。
    };
    ```
 
-- 未命名的成员：
+- 未命名成员：
 
    ```C
    struct s
@@ -230,13 +230,13 @@ C 编译器支持以下数据声明和定义功能。
    }
    ```
 
-## <a name="intrinsic-floating-point-functions"></a>内部函数的浮点函数
+## <a name="intrinsic-floating-point-functions"></a>内部浮点函数
 
-X86C++编译器和 C 编译器支持的内联生成`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，以及`tan`函数时 **/Oi**指定。 对于 C 编译器，使用这些内部函数时将违反 ANSI，因为它们没有设置 `errno` 变量。
+`atan` `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` `tan` 当指定 **/Oi**时，x86 c + + 编译器和 C 编译器都支持、、、、、、、和函数的内联生成。 对于 C 编译器，使用这些内部函数时将违反 ANSI，因为它们没有设置 `errno` 变量。
 
-## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>向函数传递非 const 指针参数需要 const 指针参数的引用
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>向需要引用常量指针参数的函数传递一个非常量指针参数
 
-这是一个扩展C++。 此代码将使用进行编译 **/Ze**:
+这是 c + + 的扩展。 此代码将用 **/ze**编译：
 
 ```cpp
 typedef   int   T;
@@ -258,35 +258,35 @@ void func ()
 }
 ```
 
-## <a name="iso646h-not-enabled"></a>ISO646。H 未启用
+## <a name="iso646h-not-enabled"></a>ISO646.H 未启用
 
-下 **/Ze**，您必须包含 iso646.h，如果你想要使用的文本形式的以下运算符：
+在 **/ze**下，如果要使用以下运算符的文本格式，则必须包含 iso646：
 
-- & & （和）
+- &&（与）
 
-- &= (and_eq)
+- &= （and_eq）
 
-- & (bitand)
+- & （bitand）
 
-- &#124;(bitor)
+- &#124; （bitor）
 
-- ~ （完成）
+- ~ （compl）
 
-- ! (not)
+- ! 不仅
 
-- != (not_eq)
+- ！ = （not_eq）
 
-- &#124;&#124;（或者）
+- &#124;&#124;（或）
 
-- &#124;= (or_eq)
+- &#124;= （or_eq）
 
-- ^ (xor)
+- ^ （xor）
 
-- ^ = (xor_eq)
+- ^ = （xor_eq）
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>字符串文本的地址的类型 const char []，不是 const char （*）]
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>字符串的地址具有类型 const char []，而不是常量 char （*） []
 
-下面的示例将输出`char const (*)[4]`下 **/Za**，但`char const [4]`下 **/Ze**。
+下面的示例将 `char const (*)[4]` 在 **/za**下输出，但 `char const [4]` 在 **/ze**下输出。
 
 ```cpp
 #include <stdio.h>
@@ -298,8 +298,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [/Za、/Ze（禁用语言扩展）](za-ze-disable-language-extensions.md)
+- [/Za、/Ze （禁用语言扩展）](za-ze-disable-language-extensions.md)
 - [MSVC 编译器选项](compiler-options.md)
 - [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

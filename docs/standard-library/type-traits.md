@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684415"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201955"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -26,22 +26,22 @@ ms.locfileid: "72684415"
 
 ## <a name="remarks"></a>备注
 
-@No__t_0type_traits > 中的类和模板用于在编译时支持类型推理、分类和转换。 它们还用于检测与类型相关的错误，有助于优化一般代码。 一元类型特征描述类型的属性，二进制类型特征描述类型之间的关系，转换特征修改类型的属性。
+中的类和模板 \<type_traits> 用于在编译时支持类型推理、分类和转换。 它们还用于检测与类型相关的错误，有助于优化一般代码。 一元类型特征描述类型的属性，二进制类型特征描述类型之间的关系，转换特征修改类型的属性。
 
-Helper 类 `integral_constant` 及其模板专用化 `true_type` 并 `false_type` 形成类型谓词的基类。 类型谓词是采用一个或多个类型参数的模板。 当类型谓词*为 true*时，它会直接或间接从[true_type](../standard-library/type-traits-typedefs.md#true_type)中派生。 当类型谓词*为 false*时，它会直接或间接从[false_type](../standard-library/type-traits-typedefs.md#false_type)中派生。
+Helper 类 `integral_constant` 及其模板专用化 `true_type` 并 `false_type` 形成类型谓词的基类。 类型谓词** 是采用一个或多个类型参数的模板。 当类型谓词*为 true*时，它是从[true_type](../standard-library/type-traits-typedefs.md#true_type)中直接或间接派生的。 当类型谓词*为 false*时，它将从[false_type](../standard-library/type-traits-typedefs.md#false_type)中直接或间接派生。
 
-类型修饰符或转换特征是一个模板，包含一个或多个参数以及一个成员 `type`（即修改后的类型）。
+类型修饰符** 或转换特征** 是一个模板，包含一个或多个参数以及一个成员 `type`（即修改后的类型）。
 
 ### <a name="alias-templates"></a>别名模板
 
-为了简化类型特征表达式，提供 `typename some_trait<T>::type` 的[别名模板](../cpp/aliases-and-typedefs-cpp.md)，其中*some_trait*是类模板名称。 例如，[add_const](../standard-library/add-const-class.md) 具有其类型 `add_const_t` 的别名模板，定义如下：
+为了简化类型特征表达式，提供了的[别名模板](../cpp/aliases-and-typedefs-cpp.md) `typename some_trait<T>::type` ，其中*some_trait*为类模板名称。 例如，[add_const](../standard-library/add-const-class.md) 具有其类型 `add_const_t` 的别名模板，定义如下：
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-这些是为 `type` 成员提供的别名：
+这些是为成员提供的别名 `type` ：
 
 ||||
 |-|-|-|
@@ -68,7 +68,7 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|测试类型是否为**void**。|
+|[is_void](../standard-library/is-void-class.md)|测试类型是否为 **`void`** 。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|测试类型是否为 `std::nullptr_t`。|
 |[is_integral](../standard-library/is-integral-class.md)|测试类型是否为整型。|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|测试类型是否为浮点。|
@@ -89,23 +89,23 @@ using add_const_t = typename add_const<T>::type;
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|测试类型是否为引用。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|测试类型是否为算术型。|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|测试类型是否为**void**或算术。|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|测试类型是否为 **`void`** 或算术类型。|
 |[is_object](../standard-library/is-object-class.md)|测试类型是否为对象类型。|
 |[is_scalar](../standard-library/is-scalar-class.md)|测试类型是否为标量类型。|
 |[is_compound](../standard-library/is-compound-class.md)|测试类型是否为非标量类型。|
 |[is_member_pointer](../standard-library/is-member-pointer-class.md)|测试类型是否为指向成员的指针。|
 
-类型属性
+Type 属性
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|测试类型是否为**常量**。|
-|[is_volatile](../standard-library/is-volatile-class.md)|测试类型是否是**可变**的。|
+|[is_const](../standard-library/is-const-class.md)|测试类型是否为 **`const`** 。|
+|[is_volatile](../standard-library/is-volatile-class.md)|测试类型是否为 **`volatile`** 。|
 |[is_trivial](../standard-library/is-trivial-class.md)|测试类型是否常用。|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|测试类型是否可完全复制。|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|测试类型是否为标准布局类型。|
 |[is_pod](../standard-library/is-pod-class.md)|测试类型是否为 POD。|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|测试类型是否可以是 `constexpr` 变量或是否可用于 `constexpr` 函数。|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|测试类型是否可以是 **`constexpr`** 变量或在函数中使用 **`constexpr`** 。|
 |[is_empty](../standard-library/is-empty-class.md)|测试类型是否为空类。|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|测试类型是否为多态类。|
 |[is_abstract](../standard-library/is-abstract-class.md)|测试类型是否为抽象类。|
@@ -153,8 +153,8 @@ Type 属性查询
 |||
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|获取类型的对齐方式。|
-|[rank](../standard-library/rank-class.md)|获取数组维度数。|
-|[extent](../standard-library/extent-class.md)|获取指定数组维度中的元素数。|
+|[级别](../standard-library/rank-class.md)|获取数组维度数。|
+|[范围](../standard-library/extent-class.md)|获取指定数组维度中的元素数。|
 
 类型关系
 
@@ -168,9 +168,9 @@ Const-volatile 修改
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|从类型生成**常量**类型。|
-|[add_volatile](../standard-library/add-volatile-class.md)|从类型生成**可变**类型。|
-|[add_cv](../standard-library/add-cv-class.md)|从类型生成**常量可变**类型。|
+|[add_const](../standard-library/add-const-class.md)|**`const`** 从类型生成类型。|
+|[add_volatile](../standard-library/add-volatile-class.md)|**`volatile`** 从类型生成类型。|
+|[add_cv](../standard-library/add-cv-class.md)|**`const volatile`** 从类型生成类型。|
 |[remove_const](../standard-library/remove-const-class.md)|从类型生成一个非常量类型。|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|从类型生成一个非易失类型。|
 |[remove_cv](../standard-library/remove-cv-class.md)|从类型生成一个非常量非易失类型。|
@@ -211,7 +211,7 @@ Const-volatile 修改
 |[aligned_storage](../standard-library/aligned-storage-class.md)|为对齐类型分配未初始化的内存。|
 |[aligned_union](../standard-library/aligned-union-class.md)|为具有不常用构造函数或析构函数的对齐联合分配未初始化的内存。|
 |[common_type](../standard-library/common-type-class.md)|生成参数包的所有类型的通用类型。|
-|[conditional](../standard-library/conditional-class.md)|如果条件为 true，则生成第一个指定类型，否则生成第二个指定类型。|
+|[增值税](../standard-library/conditional-class.md)|如果条件为 true，则生成第一个指定类型，否则生成第二个指定类型。|
 |[decay](../standard-library/decay-class.md)|生成按值传递的类型。 设置非引用、非常量或非可变类型或者设置指向类型的指针。|
 |[enable_if](../standard-library/enable-if-class.md)|如果条件为 true，则生成指定类型，否则不生成类型。|
 |[invoke_result](invoke-result-class.md)|确定可调用类型的返回类型，该可调用类型采用指定参数类型。 <br/>在 c + + 17 中添加。 |
@@ -222,10 +222,10 @@ Const-volatile 修改
 
 |||
 |-|-|
-|[互相](../standard-library/conjunction-class.md)||
-|[或运算](../standard-library/disjunction-class.md)||
+|[连接](../standard-library/conjunction-class.md)||
+|[析取](../standard-library/disjunction-class.md)||
 |[求反](../standard-library/negation-class.md)||
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<functional>](../standard-library/functional.md)

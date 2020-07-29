@@ -1,21 +1,21 @@
 ---
-title: 实现 (C++ COM 属性)
+title: implements （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409367"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217228"
 ---
 # <a name="implements-c"></a>implements (C++)
 
-指定强制 IDL 组件类的成员的调度接口。
+指定强制成为 IDL 组件类成员的调度接口。
 
 ## <a name="syntax"></a>语法
 
@@ -27,14 +27,14 @@ ms.locfileid: "62409367"
 ### <a name="parameters"></a>参数
 
 *interfaces*<br/>
-以逗号分隔列表将为 IDL 组件类的成员的接口。 用于指定单个接口的速记方法是**实现 (** *interface_name* **)**。
+将成为 IDL 组件类成员的接口的逗号分隔列表。 指定单个接口的简写方法为**实现（** *interface_name* **）**。
 
-*dispinterfaces*<br/>
-以逗号分隔的将是 IDL 组件类的成员的调度接口的列表。 用于指定单个调度接口的速记方法是**实现 (调度接口 =** *dispinterface_name* **)**。
+*调度*<br/>
+将成为 IDL 组件类成员的调度接口的逗号分隔列表。 用于指定单个调度接口的简写方法为**实现（调度接口 =** *dispinterface_name* **）**。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，唯一的 COM 接口的基类的`coclass`IDL 组件类中添加。 **实现**允许你强制添加其他接口为 IDL`coclass`成员。
+默认情况下，仅 `coclass` 在 IDL 组件类中添加作为基类的 COM 接口。 **实现**允许强制其他接口成为 IDL `coclass` 成员。
 
 ## <a name="requirements"></a>要求
 
@@ -42,18 +42,18 @@ ms.locfileid: "62409367"
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**|
-|**可重复**|是|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**`class`**, **`struct`**|
+|**且**|是|
+|**必需属性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="example"></a>示例
 
-下面的示例分为三个部分：.idl 文件和其关联的.h 文件，和一个C++文件。
+下面的示例分为三个部分：一个 .idl 文件及其关联的 .h 文件和一个 c + + 文件。
 
-假设以下.idl 文件中，将在提供给编译器。
+假设以下 .idl 文件可供编译器使用。
 
 ```
 // attr_implements.idl
@@ -101,7 +101,7 @@ library odod
 
 ## <a name="example"></a>示例
 
-和以下.h 文件，还必须是可用于编译器。
+和下面的 .h 文件，编译器也需要使用该文件。
 
 ```cpp
 // attr_implements.h
@@ -381,7 +381,7 @@ CBar;
 
 ## <a name="example"></a>示例
 
-在下面的程序，而无需实现`IBar1`， `IBar2`，并`ISna`不会在`coclass`为生成的 IDL 中。
+在以下程序中，不实现、 `IBar1` 、 `IBar2` 和 `ISna` 将不会在生成的 IDL 中的中 `coclass` 。
 
 ```cpp
 // attr_implements.cpp
@@ -484,7 +484,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
 [类特性](class-attributes.md)

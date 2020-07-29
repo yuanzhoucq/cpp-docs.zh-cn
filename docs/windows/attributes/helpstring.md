@@ -1,17 +1,17 @@
 ---
-title: helpstring （C++ COM 特性）
+title: helpstring （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 18a8dbea2387224070903aa10c812c9dd079bf96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166960"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217254"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -23,14 +23,14 @@ ms.locfileid: "80166960"
 [ helpstring("string") ]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *string*<br/>
 帮助字符串的文本。
 
 ## <a name="remarks"></a>备注
 
-**Helpstring** C++特性具有与[helpstring](/windows/win32/Midl/helpstring) MIDL 特性相同的功能。
+**Helpstring** c + + 特性具有与[helpstring](/windows/win32/Midl/helpstring) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -42,9 +42,9 @@ ms.locfileid: "80166960"
 
 |||
 |-|-|
-|**适用对象**|**接口**、 **typedef**、**类**、方法、属性|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**interface**、 **`typedef`** ， **`class`** 、method、property|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

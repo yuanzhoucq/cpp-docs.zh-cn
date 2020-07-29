@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914954"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216994"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -112,7 +112,7 @@ long double fmal(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回**浮点**型和**长****双精度**类型的**fma**的重载。 在 C 程序中， **fma**始终采用并返回**double**。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的**fma**的重载 **`float`** **`long double`** 。 在 C 程序中， **fma**始终采用并返回 **`double`** 。
 
 此函数计算值就好像它采取了无限精度，然后将最终结果舍入。
 
@@ -128,6 +128,6 @@ long double fmal(
 
 ## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [remainder、remainderf、remainderl](remainder-remainderf-remainderl.md)<br/>
 [remquo、remquof、remquol](remquo-remquof-remquol.md)<br/>

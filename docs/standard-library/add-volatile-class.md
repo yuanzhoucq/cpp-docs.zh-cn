@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: 1a4ad8a86b88cdfa98f043bb49ba6eeff8b090c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619207"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230267"
 ---
 # <a name="add_volatile-class"></a>add_volatile 类
 
-从指定类型创建**可变**类型。
+**`volatile`** 从指定类型创建类型。
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +35,7 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ## <a name="remarks"></a>备注
 
-`add_volatile<T>` **typedef** `type` 如果*t*是引用、函数或可变限定类型，则实例的成员 typedef 为*T* ，否则为**volatile** *t*。别名 `add_volatile_t` 是访问成员**typedef**的快捷方式 `type` 。
+`add_volatile<T>` **`typedef`** `type` 如果*t*是引用、函数或可变限定类型，则实例的成员为*t* ，否则为 **`volatile`** *t*。别名 `add_volatile_t` 是访问成员的快捷方式 **`typedef`** `type` 。
 
 ## <a name="example"></a>示例
 

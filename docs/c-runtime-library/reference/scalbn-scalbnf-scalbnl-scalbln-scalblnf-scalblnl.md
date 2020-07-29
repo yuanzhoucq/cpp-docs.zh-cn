@@ -46,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231372"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -107,7 +107,7 @@ long double scalblnl(
 *x*<br/>
 浮点值。
 
-*.exp*<br/>
+*exp*<br/>
 整数指数。
 
 ## <a name="return-value"></a>返回值
@@ -118,9 +118,9 @@ long double scalblnl(
 
 ## <a name="remarks"></a>备注
 
-**FLT_RADIX**在 float> \<中定义为本机浮点基数;在二进制系统上，它的值为2， **scalbn**等效于[ldexp](ldexp.md)。
+**FLT_RADIX**在中定义 \<float.h> 为本机浮点基数; 在二进制系统上，它的值为2， **scalbn**等效于[ldexp](ldexp.md)。
 
-由于 c + + 允许重载，因此可以调用**scalbn**和**scalbln**的重载，该重载采用和返回**float**或**long** **double**类型。 在 C 程序中， **scalbn**始终采用**double**和**int**并返回**double**， **scalbln**始终使用**double**和**long** ，并返回**double**。
+由于 c + + 允许重载，因此你可以调用采用并返回或类型的**scalbn**和**scalbln**的重载 **`float`** **`long double`** 。 在 C 程序中， **scalbn**始终采用 **`double`** 和 **`int`** 并返回 **`double`** ，且**scalbln**始终采用 **`double`** 和并 **`long`** 返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

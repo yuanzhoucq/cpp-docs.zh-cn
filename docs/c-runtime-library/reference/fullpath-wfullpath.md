@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909947"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231385"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath、_wfullpath
 
@@ -71,7 +71,7 @@ wchar_t *_wfullpath(
 相对路径名称。
 
 *maxLength*<br/>
-绝对路径名称缓冲区的最大长度（*absPath*）。 对于 **_fullpath** ，此长度以字节为单位，但对于 **_wfullpath**为宽字符（**wchar_t**）。
+绝对路径名称缓冲区的最大长度（*absPath*）。 对于 **_fullpath** ，此长度以字节为单位，但是 **`wchar_t`** 对于 **_wfullpath**，为宽字符（）。
 
 ## <a name="return-value"></a>返回值
 

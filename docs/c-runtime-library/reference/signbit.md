@@ -6,12 +6,12 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356324"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216734"
 ---
 # <a name="signbit"></a>signbit
 
@@ -44,11 +44,11 @@ inline bool signbit(
 
 ## <a name="return-value"></a>返回值
 
-**signbit**返回一个非零值 (**true**在C++) 如果该参数*x*为负或负无穷大。 它将返回 0 (**false**中C++) 如果参数为非负、 正无穷大或 NAN。
+**signbit** **`true`** 如果参数*x*为负或负无穷，则 signbit 返回非零值（在 c + + 中为）。 **`false`** 如果参数为非负数、正无穷或 NAN，则返回0（在 c + + 中为）。
 
 ## <a name="remarks"></a>备注
 
-**signbit**是一个宏时编译为 C 和重载的内联函数作为编译时C++。
+在编译为 C 时， **signbit**是宏，而在编译为 c + + 时则是重载内联函数。
 
 ## <a name="requirements"></a>要求
 
@@ -56,9 +56,9 @@ inline bool signbit(
 |--------------|---------------------------|-------------------------------|
 |**signbit**|\<math.h>|\<math.h> 或 \<cmath>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>

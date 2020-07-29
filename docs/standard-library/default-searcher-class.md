@@ -1,20 +1,20 @@
 ---
-title: default_searcher类
+title: default_searcher 类
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 2c8b93b83b271f787c993f789e1a68f84a60f016
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368929"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203723"
 ---
-# <a name="default_searcher-class"></a>default_searcher类
+# <a name="default_searcher-class"></a>default_searcher 类
 
-是`default_searcher`搜索对象构造函数中指定的序列的操作的函数对象类型。 搜索在提供给对象的函数调用运算符的另一个序列中完成。 调用`default_searcher` [std：：搜索](algorithm-functions.md#search)以执行搜索。
+`default_searcher`是用于搜索在对象的构造函数中指定的序列的操作的函数对象类型。 搜索是在提供给对象的函数调用运算符的另一序列中完成的。 `default_searcher`调用[std：： search](algorithm-functions.md#search)来执行搜索。
 
 ## <a name="syntax"></a>语法
 
@@ -38,14 +38,14 @@ class default_searcher
 
 | | |
 | - | - |
-| **构造 函数** | |
+| **构造函数** | |
 | [default_searcher](#default-searcher-constructor) | |
 | **运算符** | |
-| [运算符（）](#operator-call) | |
+| [operator （）](#operator-call) | |
 
-## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>default_searcher构造函数
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>default_searcher 构造函数
 
-通过使用序列搜索`default_searcher`和相等谓词构造函数对象。
+`default_searcher`使用序列搜索和相等谓词来构造函数对象。
 
 ```cpp
 default_searcher(                   // C++17
@@ -67,18 +67,18 @@ constexpr default_searcher(         // C++20
 *pat_last*\
 要搜索的序列的末尾。
 
-*Pred*\
-序列元素的可选相等比较谓词。 如果未指定相等比较类型，则默认值为`std::equal_to`。
+*pred*\
+序列元素的可选相等比较谓词。 如果未指定相等比较类型，则默认值为 `std::equal_to` 。
 
 ### <a name="remarks"></a>备注
 
-引发*二进制谓词*或*转发器*类型的复制构造函数引发的任何异常。
+引发*BinaryPredicate*或*ForwardIterator*类型的复制构造函数引发的任何异常。
 
-此类在 C++17 中是新的。 C++20 使构造函数`constexpr`。
+此类是 c + + 17 中新增的。 C + + 20 生成构造函数 **`constexpr`** 。
 
-## <a name="operator"></a><a name="operator-call"></a>运算符（）
+## <a name="operator"></a><a name="operator-call"></a>operator （）
 
-函数运算符的呼叫运算符。 在参数序列`[first, last)`中搜索指定给构造函数的序列。
+函数运算符的调用运算符。 在参数序列内搜索 `[first, last)` 指定给构造函数的序列。
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -94,26 +94,26 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 ### <a name="parameters"></a>参数
 
-*第一*\
-要在其中搜索的序列的初始元素。
+*1*\
+要在其中进行搜索的序列的初始元素。
 
-*最后*\
-要在其中搜索的序列的末尾。
+*时间*\
+要在其中进行搜索的序列的末尾。
 
 ### <a name="remarks"></a>备注
 
-返回一对迭代器。 初始迭代器*i*是以下有效结果：
+返回一对迭代器。 初始迭代器*i*是的有效结果：
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-如果*i*= 是*最后*一个，则配对的第二个迭代器是*最后*一个。 否则，它是以下有效结果：
+如果*i** 是*最后*一个，则对的第二个迭代器是*最后一个*。 否则，结果为：
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
-此类在 C++17 中是新的。 C++20使呼叫接线`constexpr`员。
+此类是 c + + 17 中新增的。 C + + 20 已成为调用运算符 **`constexpr`** 。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<功能>](functional.md)\
+[\<functional>](functional.md)\
 [算法函数](algorithm-functions.md)\
-[分：：搜索](algorithm-functions.md#search)
+[std：： search](algorithm-functions.md#search)

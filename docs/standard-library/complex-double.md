@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 8955669f4bc6fd7b3b373751e0e5134205dd1657
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b9bf4780dd78800653804762301b36ff6bb30a92
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230073"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-描述一个对象，该对象存储两个均为**double**类型的有序对象对，第一个对象表示复数的实部，第二个对象表示复数的虚部。
+描述一个对象，该对象存储两个都为类型的有序对象对 **`double`** ，第一个对象表示复数的实部，第二个对象表示复数的虚部。
 
 ## <a name="syntax"></a>语法
 
@@ -36,24 +36,24 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*RealVal* \
-正在构造的复数实部的 **double** 类型值。
+*RealVal*\
+**`double`** 正在构造的复数的实部的类型值。
 
-*ImagVal* \
-正在构造的复数虚部的 **double** 类型值。
+*ImagVal*\
+**`double`** 正在构造的复数虚部的类型值。
 
-*complexNum* \
-**Float**类型或**long double**类型的复数，其实部和虚部用于初始化正在构造的**double**类型的复数。
+*complexNum*\
+类型 **`float`** 或类型的复数， **`long double`** 其实部和虚部用于初始化正在构造的类型的复数 **`double`** 。
 
 ## <a name="return-value"></a>返回值
 
-**double** 类型的复数。
+类型的复数 **`double`** 。
 
 ## <a name="remarks"></a>备注
 
-复杂类型为**double**的复杂类的类模板的显式专用化不同于它所定义的构造函数中的类模板。 从**float**到**double**类型的转换可以是隐式的，但从**long double**到**double**的转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。
+类模板复杂的类模板的显式专用化只与它所 **`double`** 定义的构造函数中的类模板不同。 允许从到的转换是 **`float`** **`double`** 隐式的，但从到的 **`long double`** 转换 **`double`** 是必需的 **`explicit`** 。 使用 **`explicit`** 赋值语法将规则用于类型转换的启动。
 
-有关类模板 `complex` 的详细信息，请参阅[Complex 类](../standard-library/complex-class.md)。 有关 `complex` 类模板的成员列表，请参见。
+有关类模板的详细信息 `complex` ，请参阅[complex 类](../standard-library/complex-class.md)。 有关类模板的成员列表 `complex` ，请参见。
 
 ## <a name="example"></a>示例
 
@@ -116,7 +116,7 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 **命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [complex 类](../standard-library/complex-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

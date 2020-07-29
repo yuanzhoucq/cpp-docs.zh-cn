@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: d83f5278c2c4f8344334bfce40946612e9ca3e56
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53a77ff993d3a99cae1ec8e48a06dd7800ce74c7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448964"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230215"
 ---
-# <a name="chartraitsltchar16tgt-struct"></a>char_traits&lt;char16_t&gt; 结构
+# <a name="char_traitsltchar16_tgt-struct"></a>char_traits&lt;char16_t&gt; 结构
 
-此结构是模板结构 **char_traits\<CharType>** 对 `char16_t` 类型的一个元素的专用化。
+作为模板结构的专用化的结构，该**结构 \<CharType> char_traits**类型为的元素 **`char16_t`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -27,16 +27,16 @@ struct char_traits<char16_t>;
 
 ## <a name="remarks"></a>备注
 
-专用化允许结构利用库函数处理 `char16_t` 类型的对象。
+专用化允许结构利用操作类型对象的库函数 **`char16_t`** 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<string>
+**标头：**\<string>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<string>](../standard-library/string.md)\
 [char_traits 结构](../standard-library/char-traits-struct.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

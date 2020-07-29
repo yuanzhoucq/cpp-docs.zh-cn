@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 9a3a04046d75a4cfdbb50347259820eb727eeb38
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195091"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 类
 
@@ -95,7 +95,7 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CAsyncSocket：： CAsyncSocket](#casyncsocket)|构造 `CAsyncSocket` 对象。|
 
@@ -133,7 +133,7 @@ class CAsyncSocket : public CObject
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CAsyncSocket：： OnAccept](#onaccept)|通知侦听套接字它可以通过调用来接受挂起的连接请求 `Accept` 。|
 |[CAsyncSocket：： OnClose](#onclose)|通知套接字连接到它的套接字已关闭。|
@@ -144,14 +144,14 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-operators"></a>公共运算符
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CAsyncSocket：： operator =](#operator_eq)|将新值分配给 `CAsyncSocket` 对象。|
 |[CAsyncSocket：： operator 套接字](#operator_socket)|使用此运算符检索对象的套接字句柄 `CAsyncSocket` 。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CAsyncSocket：： m_hSocket](#m_hsocket)|指示附加到此对象的套接字句柄 `CAsyncSocket` 。|
 
@@ -819,7 +819,7 @@ BOOL GetSockOpt(
 要为其检索值的套接字选项。
 
 *lpOptionValue*<br/>
-指向缓冲区的指针，请求的选项的值将返回到该缓冲区。 与所选选项关联的值将在缓冲区*lpOptionValue*中返回。 *LpOptionLen*所指向的整数应最初包含此缓冲区的大小（以字节为单位）;返回时，它将被设置为返回的值的大小。 对于 SO_LINGER，这将是结构的大小 `LINGER` ; 对于所有其他选项，它将是布尔值或**int**大小，具体取决于选项。 请参阅 "备注" 部分中的选项列表及其大小。
+指向缓冲区的指针，请求的选项的值将返回到该缓冲区。 与所选选项关联的值将在缓冲区*lpOptionValue*中返回。 *LpOptionLen*所指向的整数应最初包含此缓冲区的大小（以字节为单位）;返回时，它将被设置为返回的值的大小。 对于 SO_LINGER，这将是结构的大小 `LINGER` ; 对于所有其他选项，它将是布尔值或的大小 **`int`** ，具体取决于选项。 请参阅 "备注" 部分中的选项列表及其大小。
 
 *lpOptionLen*<br/>
 一个指针，指向*lpOptionValue*缓冲区的大小（以字节为单位）。
@@ -856,26 +856,26 @@ BOOL GetSockOpt(
 |SO_DEBUG|BOOL|启用调试。|
 |SO_DONTLINGER|BOOL|如果为 true，则禁用 SO_LINGER 选项。|
 |SO_DONTROUTE|BOOL|已禁用路由。|
-|SO_ERROR|**int**|检索错误状态并清除。|
+|SO_ERROR|**`int`**|检索错误状态并清除。|
 |SO_KEEPALIVE|BOOL|正在发送 keep-alive。|
 |SO_LINGER|`struct LINGER`|返回当前逗留选项。|
 |SO_OOBINLINE|BOOL|正在正常数据流中接收带外数据。|
 |SO_RCVBUF|int|接收的缓冲区大小。|
 |SO_REUSEADDR|BOOL|可以将套接字绑定到已在使用中的地址。|
-|SO_SNDBUF|**int**|发送的缓冲区大小。|
-|SO_TYPE|**int**|套接字的类型（例如，SOCK_STREAM）。|
+|SO_SNDBUF|**`int`**|发送的缓冲区大小。|
+|SO_TYPE|**`int`**|套接字的类型（例如，SOCK_STREAM）。|
 |TCP_NODELAY|BOOL|为发送合并禁用 Nagle 算法。|
 
 不支持的 Berkeley 软件分发（BSD）选项 `GetSockOpt` 包括：
 
 |值|类型|含义|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|接收低水位线。|
-|SO_RCVTIMEO|**int**|接收超时。|
-|SO_SNDLOWAT|**int**|发送低水位线。|
-|SO_SNDTIMEO|**int**|发送超时。|
+|SO_RCVLOWAT|**`int`**|接收低水位线。|
+|SO_RCVTIMEO|**`int`**|接收超时。|
+|SO_SNDLOWAT|**`int`**|发送低水位线。|
+|SO_SNDTIMEO|**`int`**|发送超时。|
 |IP_OPTIONS||获取 IP 标头中的选项。|
-|TCP_MAXSEG|**int**|获取 TCP 最大段大小。|
+|TCP_MAXSEG|**`int`**|获取 TCP 最大段大小。|
 
 `GetSockOpt`使用不受支持的选项调用将导致从返回错误代码 WSAENOPROTOOPT `GetLastError` 。
 
@@ -1765,9 +1765,9 @@ TCP_NODELAY 选项禁用 Nagle 算法。 Nagle 算法用于通过缓冲未确认
 |SO_KEEPALIVE|BOOL|发送 keep-alive。|
 |SO_LINGER|`struct LINGER`|逗留 `Close` 未发送的数据是否存在。|
 |SO_OOBINLINE|BOOL|接收正常数据流中的带外数据。|
-|SO_RCVBUF|**int**|指定接收的缓冲区大小。|
+|SO_RCVBUF|**`int`**|指定接收的缓冲区大小。|
 |SO_REUSEADDR|BOOL|允许将套接字绑定到已在使用中的地址。 （请参见[绑定](#bind)。）|
-|SO_SNDBUF|**int**|指定发送的缓冲区大小。|
+|SO_SNDBUF|**`int`**|指定发送的缓冲区大小。|
 |TCP_NODELAY|BOOL|为发送合并禁用 Nagle 算法。|
 
 不支持的 Berkeley 软件分发（BSD）选项 `SetSockOpt` 包括：
@@ -1775,12 +1775,12 @@ TCP_NODELAY 选项禁用 Nagle 算法。 Nagle 算法用于通过缓冲未确认
 |值|类型|含义|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|套接字正在侦听|
-|SO_ERROR|**int**|获取错误状态并清除。|
-|SO_RCVLOWAT|**int**|接收低水位线。|
-|SO_RCVTIMEO|**int**|接收超时|
-|SO_SNDLOWAT|**int**|发送低水位线。|
-|SO_SNDTIMEO|**int**|发送超时。|
-|SO_TYPE|**int**|套接字的类型。|
+|SO_ERROR|**`int`**|获取错误状态并清除。|
+|SO_RCVLOWAT|**`int`**|接收低水位线。|
+|SO_RCVTIMEO|**`int`**|接收超时|
+|SO_SNDLOWAT|**`int`**|发送低水位线。|
+|SO_SNDTIMEO|**`int`**|发送超时。|
+|SO_TYPE|**`int`**|套接字的类型。|
 |IP_OPTIONS||在 IP 标头中设置选项字段。|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket：： ShutDown
@@ -1876,7 +1876,7 @@ BOOL Socket(
 
 此方法分配套接字句柄。 它不会调用[CAsyncSocket：： bind](#bind)将套接字绑定到指定地址，因此你需要在以后调用 `Bind` 以将套接字绑定到指定的地址。 在绑定之前，可以使用[CAsyncSocket：： SetSockOpt](#setsockopt)设置套接字选项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

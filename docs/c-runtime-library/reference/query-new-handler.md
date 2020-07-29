@@ -28,12 +28,12 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c87a63a9ed94eb1473230aedb5e9c17fcc6410b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949697"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216838"
 ---
 # <a name="_query_new_handler"></a>_query_new_handler
 
@@ -49,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>返回值
 
-返回由 **_set_new_handler**设置的当前新处理程序例程的地址。
+返回 **_set_new_handler**设置的当前新处理程序例程的地址。
 
 ## <a name="remarks"></a>备注
 
-C++ **_Query_new_handler**函数返回C++ [_set_new_handler](set-new-handler.md)函数设置的当前异常处理函数的地址。 **_set_new_handler**用于指定一个异常处理函数，该函数在**新**运算符无法分配内存时获得控制权。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。
+C + + **_query_new_handler**函数返回 c + + [_set_new_handler](set-new-handler.md)函数设置的当前异常处理函数的地址。 **_set_new_handler**用于指定一个异常处理函数，该函数将在 **`new`** 运算符无法分配内存时获得控制权。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。
 
 ## <a name="requirements"></a>要求
 
@@ -61,13 +61,13 @@ C++ **_Query_new_handler**函数返回C++ [_set_new_handler](set-new-handler.md)
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[忙](free.md)<br/>

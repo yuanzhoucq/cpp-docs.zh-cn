@@ -27,12 +27,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: ab1e172374cd117b07cc62923d291fbd3972882e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b604819391629d057850c17466807e7c329c472d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919451"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198588"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -54,7 +54,7 @@ size_t fwrite(
 *宽限*<br/>
 指向要写入的数据的指针。
 
-size <br/>
+*大小*<br/>
 项大小（以字节为单位）。
 
 *计数*<br/>
@@ -71,7 +71,7 @@ size <br/>
 
 **Fwrite**函数将每个项的*大小*从*缓冲区*写入到输出*流*，并对其进行*计算*。 与*流*关联的文件指针（如果有）以实际写入的字节数为增量递增。 如果在文本模式下打开*流*，则会将每个换行符替换为回车换行符对。 该替换不会影响返回值。
 
-在 Unicode 转换模式下打开*流*时，例如如果*流*是通过调用**fopen**并使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式参数打开的，或者如果模式通过使用 **_Setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式参数更改为 Unicode 转换模式，则*缓冲区*将解释为指向包含 utf-16 数据的**wchar_t**的数组的指针。 尝试在此模式下写入奇数个字节会导致参数验证错误。
+在 Unicode 转换模式下打开*流*时，例如如果通过调用**fopen**并使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式参数打开*流*，或**使用**包含 _O_WTEXT **、**_O_U16TEXT**或**_O_U8TEXT**的**模式参数 _setmode 将该模式更改为 Unicode 转换模式，则*缓冲区*将解释为指向 **`wchar_t`** 包含 utf-16 数据的数组的指针。 尝试在此模式下写入奇数个字节会导致参数验证错误。
 
 因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本，请参阅 **_fwrite_nolock**。
 

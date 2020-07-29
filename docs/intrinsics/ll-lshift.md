@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 988284b81c9f04ee5d7f09f8a2f173a689f9fb55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221822"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230514"
 ---
 # <a name="__ll_lshift"></a>__ll_lshift
 
@@ -40,21 +40,21 @@ unsigned __int64 __ll_lshift(
 
 ## <a name="return-value"></a>返回值
 
-按`nBit`位向左移动的掩码。
+按位向左移动的掩码 `nBit` 。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__ll_lshift`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-如果为64位体系结构编译程序, 并且`nBit`大于 63, 则要移位的位数为`nBit`模数64。 如果为32位体系结构编译程序, 并且`nBit`大于 31, 则要移位的位数为`nBit`模数32。
+如果为64位体系结构编译程序，并且大于 `nBit` 63，则要移位的位数为 `nBit` 模数64。 如果为32位体系结构编译程序，并且大于 `nBit` 31，则要移位的位数为 `nBit` 模数32。
 
-名称`ll`中的指示它是对`long long` (`__int64`) 的操作。
+`ll`名称中的指示它是对（）的操作 **`long long`** **`__int64`** 。
 
 ## <a name="example"></a>示例
 
@@ -77,14 +77,14 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 10000
 ```
 
 > [!NOTE]
-> 左移操作没有未签名的版本。 这是因为`__ll_lshift`已使用未签名的输入参数。 与右移位不同, 左移不会有任何符号相关性, 因为结果中的最小有效位始终设置为零, 而不考虑值的符号。
+> 左移操作没有未签名的版本。 这是因为 `__ll_lshift` 已使用未签名的输入参数。 与右移位不同，左移不会有任何符号相关性，因为结果中的最小有效位始终设置为零，而不考虑值的符号。
 
 **结束 Microsoft 专用**
 

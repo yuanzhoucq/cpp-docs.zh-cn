@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216513"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>记录集：创建和关闭记录集 (ODBC)
 
@@ -74,10 +74,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-调用 `Open` 后，使用对象的成员函数和数据成员来处理记录。 在某些情况下，你可能需要再次查询或刷新记录集来包含数据源上发生的更改。 有关详细信息，请参阅[记录集：重新查询记录集 （ODBC）。](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+调用 `Open` 后，使用对象的成员函数和数据成员来处理记录。 在某些情况下，你可能需要再次查询或刷新记录集来包含数据源上发生的更改。 有关详细信息，请参阅[记录集：重新查询记录集（ODBC）](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
 
 > [!TIP]
-> 你在开发期间使用的连接字符串可能与最终用户所需的连接字符串不同。 有关在这方面对应用程序进行一般化的想法，请参阅[数据源：管理连接 （ODBC）。](../../data/odbc/data-source-managing-connections-odbc.md)
+> 你在开发期间使用的连接字符串可能与最终用户所需的连接字符串不同。 有关在这方面通用化应用程序的建议，请参阅[数据源：管理连接（ODBC）](../../data/odbc/data-source-managing-connections-odbc.md)。
 
 ## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> 设置记录集选项
 
@@ -106,7 +106,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 1. 销毁记录集对象。
 
-   如果在函数的堆栈帧上进行了声明，当对象超出作用域时，此对象将自动销毁。 否则，请使用 delete 运算符****。
+   如果在函数的堆栈帧上进行了声明，当对象超出作用域时，此对象将自动销毁。 否则，请使用 **`delete`** 运算符。
 
 `Close` 释放记录集的 `HSTMT` 句柄。 它不会销毁 C++ 对象。
 
@@ -114,4 +114,4 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[记录集：添加、更新和删除记录（ODBC）](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

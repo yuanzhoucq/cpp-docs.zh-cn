@@ -16,19 +16,19 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 9ceb903ec38bc0ad7cfdee1c59babd2379422ac3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 83166b32a20b8d24f748f85946caa01dbc76d4d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302349"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230436"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 实现
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-OLE 2 的核心是“OLE 组件对象模型”，又称为 COM。 COM 定义协同对象如何互相通信的标准。 这包括“对象”外观的详细信息，其中包括方法如何在对象上分派。 COM 还定义了一个基类，所有兼容 COM 的类都由此派生。 此基类是[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)。 尽管[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)接口称为C++类，但 COM 并不特定于任何一种语言，它可以在 C、PASCAL 或任何其他可以支持 COM 对象的二进制布局的语言中实现。
+OLE 2 的核心是“OLE 组件对象模型”，又称为 COM。 COM 定义协同对象如何互相通信的标准。 这包括“对象”外观的详细信息，其中包括方法如何在对象上分派。 COM 还定义了一个基类，所有兼容 COM 的类都由此派生。 此基类是[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)。 尽管[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)接口称为 c + + 类，但 COM 并不特定于任何一种语言，它可以在 C、PASCAL 或任何其他可以支持 COM 对象的二进制布局的语言中实现。
 
 OLE 是指从[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)派生的所有类作为 "接口"。 这是一个重要的区别，因为[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)之类的 "接口" 无实现。 它只定义对象借由通信的协议，而不定义这些实现可以完成的具体事项。 这对于允许最大灵活性的系统而言是合理的。 MFC 的作用是实现 MFC/C++ 程序的默认行为。
 
@@ -45,9 +45,9 @@ public:
 ```
 
 > [!NOTE]
-> 此例中省略了某些必要的调用约定详细信息，例如 `__stdcall`。
+> 某些必要的调用约定详细信息，如 **`__stdcall`** 此图中所示。
 
-[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)成员函数控制对象的内存管理。 COM 使用引用计数方案跟踪对象。 从来不会像在 C++ 中一样直接引用对象。 相反，始终通过指针引用 COM 对象。 若要在使用对象时释放该对象，则会调用该对象的[release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)成员（而不是使用运算符 delete，就像针对传统C++对象执行的操作）。 引用计数机制允许管理单个对象的多个引用。 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)的实现维护对象的引用计数，直到对象的引用计数变为零时，才会将其删除。
+[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)成员函数控制对象的内存管理。 COM 使用引用计数方案跟踪对象。 从来不会像在 C++ 中一样直接引用对象。 相反，始终通过指针引用 COM 对象。 若要在使用对象时释放该对象，则会调用该对象的[release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)成员（而不是使用运算符 delete，这将针对传统 c + + 对象执行）。 引用计数机制允许管理单个对象的多个引用。 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)的实现维护对象的引用计数，直到对象的引用计数变为零时，才会将其删除。
 
 从实现的角度来看， [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)非常简单。 此处为普通实现：
 
@@ -68,7 +68,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))成员函数稍微有趣一些。 如果对象只有成员函数是[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) ，则很难告诉对象执行的操作比[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)提供的要多。 这是[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))的用处。 它允许你在同一对象上获取不同的“接口”。 这些接口通常从[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)派生，并通过添加新成员函数来添加其他功能。 COM 接口从不在接口中声明成员变量，并且所有成员函数都声明为纯虚。 例如，应用于对象的
+[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))成员函数稍微有趣一些。 如果对象只有成员函数是[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) ，则很难告诉对象执行的操作比[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)提供的要多。 这是[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))的用处。 它允许你在同一对象上获取不同的“接口”。 这些接口通常从[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)派生，并通过添加新成员函数来添加其他功能。 COM 接口从不在接口中声明成员变量，并且所有成员函数都声明为纯虚。 例如，
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -78,7 +78,7 @@ public:
 };
 ```
 
-若要获取 IPrintInterface，如果只有[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)，请使用 `IPrintInterface`的 `IID` 调用[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 。 `IID` 是唯一标识接口的 128 位数字。 你或 OLE 定义的每个接口都具有 `IID`。 如果*pUnk*是指向[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)对象的指针，则从中检索 IPrintInterface 的代码可能是：
+若要获取 IPrintInterface，如果只有[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)，请使用的调用[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) `IID` `IPrintInterface` 。 `IID` 是唯一标识接口的 128 位数字。 你或 OLE 定义的每个接口都具有 `IID`。 如果*pUnk*是指向[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)对象的指针，则从中检索 IPrintInterface 的代码可能是：
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -102,7 +102,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)的实现将与上述实现的实现完全相同。 `CPrintObj::QueryInterface` 如下所示：
+[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)的实现将与上述实现的实现完全相同。 `CPrintObj::QueryInterface`如下所示：
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -240,7 +240,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 
 MFC/OLE 包括一个与 MFC 的“消息映射”和“分派映射”在概念和执行上类似的“接口映射”实现。 MFC 的接口映射的核心功能如下所示：
 
-- [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)的标准实现，内置于 `CCmdTarget` 类中。
+- [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)的标准实现，内置于类中 `CCmdTarget` 。
 
 - 维护引用计数，由[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)修改
 
@@ -256,7 +256,7 @@ MFC/OLE 包括一个与 MFC 的“消息映射”和“分派映射”在概念�
 
 有关聚合的详细信息，请参阅[聚合](/windows/win32/com/aggregation)主题。
 
-MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget` "*具有*" 引用计数以及与[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)实现关联的所有成员函数（例如，引用计数在 `CCmdTarget`中）。 要创建支持 OLE COM 的类，请从 `CCmdTarget` 派生类并使用各种宏以及 `CCmdTarget` 的成员函数实现所需接口。 MFC 的实现使用嵌套类定义每个接口实现，与上面的示例非常类似。 借助 IUnknown 标准实现和数个可以消除一些重复代码的宏，此操作变得更轻松。
+MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget`"*具有*" 引用计数以及与[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)实现关联的所有成员函数（例如中的引用计数 `CCmdTarget` ）。 要创建支持 OLE COM 的类，请从 `CCmdTarget` 派生类并使用各种宏以及 `CCmdTarget` 的成员函数实现所需接口。 MFC 的实现使用嵌套类定义每个接口实现，与上面的示例非常类似。 借助 IUnknown 标准实现和数个可以消除一些重复代码的宏，此操作变得更轻松。
 
 ## <a name="interface-map-basics"></a>接口映射基本知识
 
@@ -274,9 +274,9 @@ MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget` "*具有*" �
 
 6. 实现表示所支持接口的每个嵌套类。
 
-7. 使用 METHOD_PROLOGUE 宏访问父级的 `CCmdTarget`派生对象。
+7. 使用 METHOD_PROLOGUE 宏访问父级 `CCmdTarget` 派生的对象。
 
-8. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)和[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))可以委托给这些函数的 `CCmdTarget` 实现（`ExternalAddRef`、`ExternalRelease`和 `ExternalQueryInterface`）。
+8. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)和[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))可以委托给 `CCmdTarget` 这些函数（ `ExternalAddRef` 、和）的实现 `ExternalRelease` `ExternalQueryInterface` 。
 
 以上 CPrintEditObj 示例可按下列方式实现：
 
@@ -300,7 +300,7 @@ protected:
 };
 ```
 
-以上声明创建派生自 `CCmdTarget` 的类。 DECLARE_INTERFACE_MAP 宏向框架告知此类将具有自定义接口映射。 此外，BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏会定义嵌套类，在此示例中，名称为 CEditObj 和 CPrintObj （X 仅用于将嵌套类与以 "C" 开头的全局类和接口类区分开来，后者以 "I" 开头）。 创建了这些类的两个嵌套成员，分别为 m_CEditObj 和 m_CPrintObj。 宏自动声明[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)和[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))函数;因此，只需声明特定于此接口的函数： EditObject 和 PrintObject （使用 OLE 宏 STDMETHOD，以便为目标平台提供 **_stdcall**和虚关键字）。
+以上声明创建派生自 `CCmdTarget` 的类。 DECLARE_INTERFACE_MAP 宏向框架告知此类将具有自定义接口映射。 此外，BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏会定义嵌套类，在此示例中，名称为 CEditObj 和 CPrintObj （X 仅用于将嵌套类与以 "C" 开头的全局类和以 "I" 开头的接口类区分开来。） 创建了这些类的两个嵌套成员，分别为 m_CEditObj 和 m_CPrintObj。 宏自动声明[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)和[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))函数;因此，只需声明特定于此接口的函数： EditObject 和 PrintObject （使用 OLE 宏 STDMETHOD，以便为目标平台提供 **_stdcall**和虚关键字）。
 
 实现此类的接口映射：
 
@@ -311,7 +311,7 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-这将分别连接 IID_IPrintInterface IID 和 m_CPrintObj 以及 IID_IEditInterface 和 m_CEditObj。 当请求时 ，[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))（`CCmdTarget::ExternalQueryInterface`）的`CCmdTarget`实现将使用此映射返回指向m_CPrintObj和m_CEditObj的指针。 无需包括 `IID_IUnknown` 的条目；请求 `IID_IUnknown` 时，框架将使用映射中的第一个接口（在此例中为 m_CPrintObj）。
+这将分别连接 IID_IPrintInterface IID 和 m_CPrintObj 以及 IID_IEditInterface 和 m_CEditObj。 `CCmdTarget`当请求时， [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) （）的实现将 `CCmdTarget::ExternalQueryInterface` 使用此映射返回指向 m_CPrintObj 和 m_CEditObj 的指针。 无需包括 `IID_IUnknown` 的条目；请求 `IID_IUnknown` 时，框架将使用映射中的第一个接口（在此例中为 m_CPrintObj）。
 
 即使 BEGIN_INTERFACE_PART 宏自动声明[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)和[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))函数，仍需要实现它们：
 
@@ -356,7 +356,7 @@ CEditPrintObj::CPrintObj 的实现将与上面对 CEditPrintObj::CEditObj 的定
 此外，框架在内部使用消息映射。 这让你可以从框架类进行派生，例如 `COleServerDoc`，它已支持某些接口并向框架提供的接口提供替换项或添加项。 框架完全支持从基类继承接口映射，因此你可进行此操作。 这就是 BEGIN_INTERFACE_MAP 采用其第二个参数作为基类的名称的原因。
 
 > [!NOTE]
-> 通常不可能仅通过从 MFC 版本继承 OLE 接口的嵌入专用化来重用 MFC 的 OLE 接口内置实现的实现。 这是不可能的，因为使用 METHOD_PROLOGUE 宏获取对包含 `CCmdTarget`派生对象的访问权限，这意味着嵌入对象相对于 `CCmdTarget`派生对象的*固定偏移量*。 举例来说，这意味着你无法在 `COleClientItem::XAdviseSink` 中从 MFC 的实现派生嵌入 XMyAdviseSink，因为 XAdviseSink 依赖于对 `COleClientItem` 对象顶部进行特定偏移。
+> 通常不可能仅通过从 MFC 版本继承 OLE 接口的嵌入专用化来重用 MFC 的 OLE 接口内置实现的实现。 这是不可能的，因为使用 METHOD_PROLOGUE 宏获取对包含派生对象的访问权限，这 `CCmdTarget` 意味着嵌入对象相对于派生对象的*固定偏移量* `CCmdTarget` 。 举例来说，这意味着你无法在 `COleClientItem::XAdviseSink` 中从 MFC 的实现派生嵌入 XMyAdviseSink，因为 XAdviseSink 依赖于对 `COleClientItem` 对象顶部进行特定偏移。
 
 > [!NOTE]
 > 但是，你可以为所有你想要其具有 MFC 默认行为的函数委托到 MFC 实现。 这在 `COleFrameHook` 类（它为许多函数委托到 m_xOleInPlaceUIWindow）中的 `IOleInPlaceFrame` (XOleInPlaceFrame) 的 MFC 实现中完成。 选择这种设计是为了减少实现多个接口的对象的运行时大小；它可以避免使用后向指针（例如上一节中使用 m_pParent 的方式）。
@@ -369,7 +369,7 @@ CEditPrintObj::CPrintObj 的实现将与上面对 CEditPrintObj::CEditObj 的定
 
 ### <a name="using-an-aggregate-object"></a>使用聚合对象
 
-要使用聚合对象，需要有某种方法能将聚合连接到 QueryInterface 机制中。 换言之，聚合对象必须表现得像是你的对象的本机部分一样。 因此，此操作如何将绑定到 MFC 的接口映射机制以及 INTERFACE_PART 宏，其中嵌套对象映射到 IID，还可以将聚合对象声明为 `CCmdTarget` 派生类的一部分。 为此，请使用 INTERFACE_AGGREGATE 宏。 这允许您指定成员变量（必须是指向[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)或派生类的指针），该变量将集成到接口映射机制中。 如果在调用 `CCmdTarget::ExternalQueryInterface` 时指针不为 NULL，则框架将自动调用聚合对象的[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))成员函数，如果请求的 `IID` 不是 `CCmdTarget` 对象本身支持的本机 `IID`之一。
+要使用聚合对象，需要有某种方法能将聚合连接到 QueryInterface 机制中。 换言之，聚合对象必须表现得像是你的对象的本机部分一样。 因此，这如何将绑定到 MFC 的接口映射机制以及 INTERFACE_PART 宏，其中嵌套对象映射到 IID，还可以将聚合对象声明为 `CCmdTarget` 派生类的一部分。 为此，请使用 INTERFACE_AGGREGATE 宏。 这允许您指定成员变量（必须是指向[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)或派生类的指针），该变量将集成到接口映射机制中。 如果调用时指针不为 NULL `CCmdTarget::ExternalQueryInterface` ，则框架将自动调用聚合对象的[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))成员函数（如果 `IID` 请求的不是 `IID` 对象本身支持的本机）之一 `CCmdTarget` 。
 
 #### <a name="to-use-the-interface_aggregate-macro"></a>使用 INTERFACE_AGGREGATE 宏
 
@@ -510,14 +510,14 @@ END_INTERFACE_PART(localClass)
 *localClass*<br/>
 实现接口的类的名称
 
-*iface*<br/>
+iface**<br/>
 此类实现的接口的名称
 
 #### <a name="remarks"></a>备注
 
 对于类将实现的每个接口，需要具有 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 对。 这些宏定义从你定义的 OLE 接口派生的本地类以及该类的嵌入成员变量。 自动声明[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)和[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))成员。 必须包含作为正在实现的接口的一部分的其他成员函数的声明（这些声明位于 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏之间）。
 
-*Iface*参数是你希望实现的 OLE 接口，例如 `IAdviseSink`或 `IPersistStorage` （或你自己的自定义接口）。
+*Iface*参数是你希望实现的 OLE 接口，例如 `IAdviseSink` 或 `IPersistStorage` （或你自己的自定义接口）。
 
 *LocalClass*参数是将定义的本地类的名称。 名称前面会自动追加一个“X”。 此命名约定用于避免与同名的全局类发生冲突。 此外，嵌入成员的名称与*localClass*名称相同，只不过它是 "m_x" 前缀。
 
@@ -536,7 +536,7 @@ END_INTERFACE_PART(MyAdviseSink)
 将定义从 IAdviseSink 派生的名为 XMyAdviseSink 的本地类和在该类中声明的名为 m_xMyAdviseSink 的成员。注意：
 
 > [!NOTE]
-> 以 `STDMETHOD`_ 开头的行实质上是从 OLE2 复制的。H，并稍作修改。 从 OLE2.H 复制它们能减少难以解决的错误。
+> 以 _ 开头的行 `STDMETHOD` 实质上是从 OLE2 复制的。H，并稍作修改。 从 OLE2.H 复制它们能减少难以解决的错误。
 
 ### <a name="begin_interface_map-and-end_interface_map--macro-descriptions"></a>BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP － 宏说明
 
@@ -547,7 +547,7 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>参数
 
-*theClass*<br/>
+*类*<br/>
 要在其中定义接口映射的类
 
 *baseClass*<br/>
@@ -565,7 +565,7 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>参数
 
-*theClass*<br/>
+*类*<br/>
 包含接口映射的类的名称。
 
 *iid*<br/>
@@ -585,7 +585,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-如果对象实现 `IOleInPlaceFrameWindow`，则客户端可能会在以下任何接口上 `QueryInterface`： `IOleUIWindow`、`IOleWindow`或[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)，而不是 "派生程度最高" 的接口 `IOleInPlaceFrameWindow` （实际实现的接口除外）。 若要处理这种情况，可以使用多个 INTERFACE_PART 宏将每个基接口映射到 `IOleInPlaceFrameWindow` 接口：
+如果对象实现 `IOleInPlaceFrameWindow` ，则 `QueryInterface` `IOleUIWindow` `IOleWindow` 除了 "派生程度最高" 的接口（实际实现的接口） [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)外，客户端还可以在这些接口中的任何一个上执行 `IOleInPlaceFrameWindow` 。 若要处理这种情况，可以使用多个 INTERFACE_PART 宏将每个基接口映射到 `IOleInPlaceFrameWindow` 接口：
 
 在类定义文件中：
 
@@ -613,7 +613,7 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>参数
 
-*theClass*<br/>
+*类*<br/>
 包含接口映射的类的名称，
 
 *theAggr*<br/>
@@ -625,5 +625,5 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 ## <a name="see-also"></a>另请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)

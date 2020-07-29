@@ -1,6 +1,6 @@
 ---
 title: '&lt;atomic&gt;'
-description: 描述标准C++库的原子标头中可用的类型和函数。
+description: 描述在标准 c + + 库的原子标头中可用的类型和函数。
 ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
@@ -49,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3c5f732dbda701eb7744b1b25a9a8e7426f7a3e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991165"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203893"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -79,11 +79,11 @@ ms.locfileid: "74991165"
 
 在某些平台上，如果不使用 `mutex` 锁，可能无法有效地实施某些类型的原子操作。 如果对该类型执行的原子操作都没有使用锁，则原子类型为*无锁*。
 
-**C + + 11**：在信号处理程序中，如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 为 true，则可以对对象 `obj` 执行原子操作。
+**C + + 11**：在信号处理程序中，如果或为 true，则可以对对象执行原子操作 `obj` `obj.is_lock_free()` `atomic_is_lock_free(x)` 。
 
-类[atomic_flag](../standard-library/atomic-flag-structure.md)提供保存**bool**标志的最小原子类型。 其操作始终为无锁操作。
+类[atomic_flag](../standard-library/atomic-flag-structure.md)提供保存标志的最小原子类型 **`bool`** 。 其操作始终为无锁操作。
 
-类模板 `atomic<T>` 存储其参数类型的对象 `T`，并提供对该存储值的原子访问。 你可以使用可通过 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 复制的任何类型对该类进行实例化，并通过使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 测试是否相等。 特别是，你可以将其与满足这些要求的用户定义类型结合使用，在很多情况下是与浮点类型结合使用。
+类模板 `atomic<T>` 存储其参数类型的对象 `T` ，并提供对该存储值的原子访问。 你可以使用可通过 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 复制的任何类型对该类进行实例化，并通过使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 测试是否相等。 特别是，你可以将其与满足这些要求的用户定义类型结合使用，在很多情况下是与浮点类型结合使用。
 
 另外，该模板还具有一套用于整型类型的专用化和用于指针的部分专用化。 这些专用化提供了无法通过主模板获得的其他操作。
 
@@ -101,22 +101,22 @@ ms.locfileid: "74991165"
 
 |`atomic_integral` 类型|整型类型|`atomic_is_lock_free` 宏|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**带符号字符**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
-|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
-|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
-|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
-|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
-|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
-|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
-|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**无符号长长**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_char`|**`char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**`signed char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**`unsigned char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|**`char16_t`**|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|**`char32_t`**|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**`wchar_t`**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**`short`**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**`unsigned short`**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**`int`**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**`unsigned int`**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**`long`**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**`unsigned long`**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**`long long`**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**`unsigned long long`**|ATOMIC_LLONG_LOCK_FREE|
 
-对于标头 \<inttypes.h> 中定义的某些类型，原子模版的专用化存在 Typedef 名称。
+在标头中定义的某些类型的原子模板专用化 Typedef 名称 \<inttypes.h> 。
 
 |原子类型|Typedef 名称|
 |-----------------|------------------|
@@ -153,22 +153,22 @@ ms.locfileid: "74991165"
 
 ## <a name="structs"></a>结构
 
-|Name|描述|
+|名称|描述|
 |----------|-----------------|
 |[atomic 结构](../standard-library/atomic-structure.md)|描述对存储值执行原子操作的对象。|
-|[atomic_flag 结构](../standard-library/atomic-flag-structure.md)|描述一个对象，该对象以原子方式设置并清除**布尔**型标志。|
+|[atomic_flag 结构](../standard-library/atomic-flag-structure.md)|描述一个对象，该对象以原子方式设置并清除 **`bool`** 标志。|
 
 ## <a name="enums"></a>枚举
 
-|Name|描述|
+|名称|描述|
 |----------|-----------------|
 |[memory_order 枚举](../standard-library/atomic-enums.md#memory_order_enum)|为内存位置上的同步操作提供符号名称。 这些操作将影响一个线程内的分配如何在另一个线程内变得可见。|
 
 ## <a name="functions"></a>函数
 
-在下面的列表中，不以 `_explicit` 结尾的函数具有相应 `_explicit`的语义，只不过它们具有 `memory_order_seq_cst`的隐式[memory_order](../standard-library/atomic-enums.md#memory_order_enum)参数。
+在下面的列表中，不以结尾的函数 `_explicit` 具有对应的语义 `_explicit` ，只不过它们具有的隐式[memory_order](../standard-library/atomic-enums.md#memory_order_enum)自变量 `memory_order_seq_cst` 。
 
-|Name|描述|
+|名称|描述|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|执行*原子比较和交换*操作。|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|执行*原子比较和交换*操作。|
@@ -186,10 +186,10 @@ ms.locfileid: "74991165"
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|从现有存储值减去指定的值。|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|对指定值和现有存储值执行按位 `exclusive or`。|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|对指定值和现有存储值执行按位 `exclusive or`。|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|将 `atomic_flag` 对象中的标志设置为**false**。|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|将 `atomic_flag` 对象中的标志设置为**false**。|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|将 `atomic_flag` 对象中的标志设置为**true**。|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|将 `atomic_flag` 对象中的标志设置为**true**。|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|将对象中的标志设置 `atomic_flag` 为 **`false`** 。|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|将对象中的标志设置 `atomic_flag` 为 **`false`** 。|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|将对象中的标志设置 `atomic_flag` 为 **`true`** 。|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|将对象中的标志设置 `atomic_flag` 为 **`true`** 。|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|设置 `atomic` 对象中存储的值。|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|指定对指定对象执行的原子操作是否为无锁。|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|以原子方式检索一个值。|
@@ -202,5 +202,5 @@ ms.locfileid: "74991165"
 
 ## <a name="see-also"></a>另请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

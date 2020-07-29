@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917853"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216799"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -68,13 +68,13 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="return-value"></a>返回值
 
-*X* / *y*的浮点余数。 如果*y*的值为0.0，则**余数**返回静默 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+*X*  /  *y*的浮点余数。 如果*y*的值为0.0，则**余数**返回静默 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**余数**函数计算*x* / *y*的浮点余数*r* ，如*x* = *n* \* *y* + *r*（其中*n*是最接近*x* / *y*的整数），n 只要 &#124; *n* - *x* / *y* &#124; = 1/2，就会进行*n*运算。 当*r* = 0 时， *r*与*x*具有相同的符号。
+**余数**函数计算*x*y 的浮点余数*r*  /  *y* ，如*x*  =  *n* \* *y*  +  *r*（其中*n*是最接近*x*  /  *y*的整数），n 只要 &#124; *n* *n*  -  *x*  /  *y* &#124; = 1/2，就会进行 n 运算。 当*r* = 0 时， *r*与*x*具有相同的符号。
 
-由于 c + + 允许重载，因此你可以调用采用并返回**浮点**或**长****双精度**值的**余数**的重载。 在 C 程序中，**余数**始终采用两个**双精度型**参数，并返回**double**。
+由于 c + + 允许重载，因此可以调用采用和返回或值的**余数**的重载 **`float`** **`long double`** 。 在 C 程序中，**余数**始终采用两个 **`double`** 参数，并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -113,5 +113,5 @@ The remainder of -10.00 / 3.00 is -1.000000
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv、lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
-[fmod、fmodf](fmod-fmodf.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
 [remquo、remquof、remquol](remquo-remquof-remquol.md)<br/>

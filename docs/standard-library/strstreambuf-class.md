@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 28399a1cd55407aadbc5d59e1e835892218ad0c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e6b4df60f4d28839419d02fd3ed6d7cbf73d327f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376613"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202189"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf 类
 
-描述控制元素在**字符**数组对象中存储的序列中的元素的传输的流缓冲区。
+描述一个流缓冲区，该缓冲区控制元素与数组对象中存储的元素序列之间的来回传输 **`char`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -60,30 +60,30 @@ class strstreambuf : public streambuf
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|说明|
+|构造函数|描述|
 |-|-|
 |[strstreambuf](#strstreambuf)|构造 `strstreambuf` 类型的对象。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
-|[冻结](#freeze)|导致无法通过流缓冲区操作使用流缓冲区。|
-|[overflow](#overflow)|将新字符插入到已满缓冲区时可以调用的受保护虚函数。|
+|[&](#freeze)|导致无法通过流缓冲区操作使用流缓冲区。|
+|[超出](#overflow)|将新字符插入到已满缓冲区时可以调用的受保护虚函数。|
 |[pbackfail](#pbackfail)|一个受保护的虚拟成员函数，该函数尝试将元素放回到输入流，然后使它成为当前元素（由下一个指针指向）。|
 |[pcount](#pcount)|返回写入到受控序列的元素计数。|
 |[seekoff](#seekoff)|一个受保护的虚拟成员函数，它尝试更改受控流的当前位置。|
 |[seekpos](#seekpos)|一个受保护的虚拟成员函数，它尝试更改受控流的当前位置。|
-|[Str](#str)|调用 [freeze](#freeze)，然后将返回指向受控序列开头的指针。|
-|[underflow](#underflow)|一个受保护的虚拟函数，用于从输入流中提取当前元素。|
+|[字符串](#str)|调用 [freeze](#freeze)，然后将返回指向受控序列开头的指针。|
+|[下](#underflow)|一个受保护的虚拟函数，用于从输入流中提取当前元素。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<strstream>
+**标头：**\<strstream>
 
 **命名空间:** std
 
-## <a name="strstreambuffreeze"></a><a name="freeze"></a>斯特兰布夫：冻结
+## <a name="strstreambuffreeze"></a><a name="freeze"></a>strstreambuf：：冻结
 
 导致无法通过流缓冲区操作使用流缓冲区。
 
@@ -94,11 +94,11 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>参数
 
 *_Freezeit*\
-指示是否要冻结流的**布尔**。
+一个 **`bool`** ，该值指示是否要冻结流。
 
 ### <a name="remarks"></a>备注
 
-如果 *_Freezeit*为 true，则函数将更改存储`strstreambuf`模式，使受控序列冻结。 否则，不能冻结受控序列。
+如果 *_Freezeit*为 true，则函数将更改存储 `strstreambuf` 模式，以使受控序列冻结。 否则，不能冻结受控序列。
 
 [str](#str) 意味着 `freeze`。
 
@@ -171,7 +171,7 @@ after clearing stream: stream good
 test1test3
 ```
 
-## <a name="strstreambufoverflow"></a><a name="overflow"></a>斯特兰布夫：溢出
+## <a name="strstreambufoverflow"></a><a name="overflow"></a>strstreambuf：：溢出
 
 将新字符插入到已满缓冲区时可以调用的受保护虚函数。
 
@@ -186,17 +186,17 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `EOF`。 否则，如果*\_Meta* == `EOF`返回 某些值，`EOF`则 返回 以外的一些值。 否则，它将返回*\_Meta*。
+如果该函数不成功，它将返回 `EOF`。 否则，如果为* \_ 元*  ==  `EOF` ，则返回除之外的其他值 `EOF` 。 否则，它将返回* \_ 元*。
 
 ### <a name="remarks"></a>备注
 
-如果*\_Meta* `EOF`！* ，受保护的虚拟成员函数将尝试将`(char)_Meta`元素插入到输出缓冲区中。 它可以用多种方法执行此操作：
+如果为* \_ Meta* ！ = `EOF` ，受保护的虚拟成员函数尝试将元素插入 `(char)_Meta` 到输出缓冲区。 它可以用多种方法执行此操作：
 
 - 如果写入位置可用，它可将元素存储到写入位置并递增输出缓冲区的下一个指针。
 
 - 如果存储的 strstreambuf 模式指出受控的序列可修改、可扩展且未被冻结，则该函数通过向输出缓冲区分配新的序列，生成写入位置。 以这种方式扩展输出缓冲区还会扩展任何关联的输入缓冲区。
 
-## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a>斯特兰布夫：:p回击失败
+## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a>strstreambuf：:p backfail
 
 一个受保护的虚拟成员函数，该函数尝试将元素放回到输入流，然后使它成为当前元素（由下一个指针指向）。
 
@@ -211,19 +211,19 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `EOF`。 否则，如果*\_Meta* == `EOF`返回 某些值，`EOF`则 返回 以外的一些值。 否则，它将返回*\_Meta*。
+如果该函数不成功，它将返回 `EOF`。 否则，如果为* \_ 元*  ==  `EOF` ，则返回除之外的其他值 `EOF` 。 否则，它将返回* \_ 元*。
 
 ### <a name="remarks"></a>备注
 
 受保护虚拟成员函数尝试将元素放回输入缓冲区，随后使它成为当前元素（由下一个指针指向）。
 
-如果*\_Meta，* == `EOF`则要回滚的元素实际上是当前元素之前流中已有的元素。 否则，该元素将替换为`ch = (char)_Meta`。 该函数可以用多种方法放回元素：
+如果是* \_ Meta*  ==  `EOF` ，要推送回的元素在当前元素之前实际上已是流中的一个元素。 否则，该元素将替换为 `ch = (char)_Meta` 。 该函数可以用多种方法放回元素：
 
-- 如果回放位置可用，并且存储在那里的元素比较等于`ch`，则可以递减输入缓冲区的下一个指针。
+- 如果放回位置可用，且存储在该位置的元素与相等 `ch` ，则它可以递减输入缓冲区的下一个指针。
 
-- 如果回退位置可用，并且 strstreambuf 模式表示受控序列是可修改的，则函数可以存储`ch`到回退位置并递减输入缓冲区的下一个指针。
+- 如果放回位置可用，且 strstreambuf 模式显示受控序列是可修改的，则该函数可以存储在 `ch` 放回位置并减小输入缓冲区的下一个指针。
 
-## <a name="strstreambufpcount"></a><a name="pcount"></a>斯特里布夫：:p计数
+## <a name="strstreambufpcount"></a><a name="pcount"></a>strstreambuf：:p 计数
 
 返回写入到受控序列的元素计数。
 
@@ -237,7 +237,7 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>备注
 
-具体而言，如果 [pptr](../standard-library/basic-streambuf-class.md#pptr) 是空指针，该函数将返回零。 否则，它将返回`pptr` -  [pbase](../standard-library/basic-streambuf-class.md#pbase)。
+具体而言，如果 [pptr](../standard-library/basic-streambuf-class.md#pptr) 是空指针，该函数将返回零。 否则，它将返回 `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)。
 
 ### <a name="example"></a>示例
 
@@ -258,7 +258,7 @@ int main( )
 }
 ```
 
-## <a name="strstreambufseekoff"></a><a name="seekoff"></a>斯特里布夫：寻人
+## <a name="strstreambufseekoff"></a><a name="seekoff"></a>strstreambuf：： seekoff
 
 一个受保护的虚拟成员函数，它尝试更改受控流的当前位置。
 
@@ -271,7 +271,7 @@ virtual streampos seekoff(streamoff _Off,
 ### <a name="parameters"></a>参数
 
 *_Off*\
-相对于 *_Way*寻求的位置。
+要查找的相对于 *_Way*的位置。
 
 *_Way*\
 偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
@@ -289,17 +289,17 @@ virtual streampos seekoff(streamoff _Off,
 
 确定新的位置，如下所示：
 
-- 如果`_Way == ios_base::beg`，新位置是流的开头加 *_Off*。
+- 如果 `_Way == ios_base::beg` 为，则新位置是流的开头加 *_Off*。
 
-- 如果`_Way == ios_base::cur`，新位置是当前流位置加上 *_Off*。
+- 如果 `_Way == ios_base::cur` 为，则新位置是当前流位置加 *_Off*。
 
-- 如果`_Way == ios_base::end`，新位置是流的末尾加上 *_Off*。
+- 如果 `_Way == ios_base::end` 为，则新位置是流的末尾加 *_Off*。
 
-如果`_Which & ios_base::in`为非零且存在输入缓冲区，则函数将更改输入缓冲区中要读取的下一个位置。 如果`_Which & ios_base::out`也是非零，`_Way != ios_base::cur`则 和输出缓冲区存在，则函数还会设置下一个位置以写入以匹配要读取的下一个位置。
+如果 `_Which & ios_base::in` 为非零值且存在输入缓冲区，则函数将更改下一个位置以在输入缓冲区中读取。 如果 `_Which & ios_base::out` 也为非零值， `_Way != ios_base::cur` 并且存在输出缓冲区，则该函数还会将下一个要写入的位置设置为匹配要读取的下一个位置。
 
 否则，如果 `_Which & ios_base::out` 为非零值且存在输出缓冲区，则该函数将更改输出缓冲区中的下一个写入位置。 否则，定位操作将失败。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。
 
-## <a name="strstreambufseekpos"></a><a name="seekpos"></a>斯特里布夫：：寻求者
+## <a name="strstreambufseekpos"></a><a name="seekpos"></a>strstreambuf：： seekpos
 
 一个受保护的虚拟成员函数，它尝试更改受控流的当前位置。
 
@@ -321,11 +321,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数尝试更改受控流的当前位置。 对于 strstreambuf 类的对象，流位置仅包含流偏移量。 如果偏移量为零，将指定受控序列的第一个元素。 新职位由 *_Sp*决定。
+受保护虚拟成员函数尝试更改受控流的当前位置。 对于 strstreambuf 类的对象，流位置仅包含流偏移量。 如果偏移量为零，将指定受控序列的第一个元素。 新位置由 *_Sp*确定。
 
 如果 `_Which` & **ios_base::in** 为非零值且存在输入缓冲区，则该函数将更改输入缓冲区中的下一个读取位置。 如果 `_Which` & `ios_base::out` 为非零值且存在输出缓冲区，则该函数还将设置下一个写入位置以便匹配下一个读取位置。 否则，如果 `_Which` & `ios_base::out` 为非零值且存在输出缓冲区，则该函数将更改输出缓冲区中的下一个写入位置。 否则，定位操作将失败。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。
 
-## <a name="strstreambufstr"></a><a name="str"></a>斯特兰布夫：斯特
+## <a name="strstreambufstr"></a><a name="str"></a>strstreambuf：： str
 
 调用 [freeze](#freeze)，然后将返回指向受控序列开头的指针。
 
@@ -345,128 +345,128 @@ char *str();
 
 有关使用 **str** 的示例，请参阅 [strstreambuf::freeze](#freeze)。
 
-## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a>斯特兰布夫：斯特特兰布夫
+## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a>strstreambuf：： strstreambuf
 
 构造 `strstreambuf` 类型的对象。
 
 ```cpp
 explicit strstreambuf(streamsize count = 0);
 
-strstreambuf(void (* _Allocfunc)(size_t),
-    void (* _Freefunc)(void*));
+strstreambuf(void (* alloc_func)(size_t),
+    void (* free_func)(void*));
 
-strstreambuf(char* _Getptr,
+strstreambuf(char* getptr,
     streamsize count,
-    char* _Putptr = 0);
+    char* putptr = 0);
 
-strstreambuf(signed char* _Getptr,
+strstreambuf(signed char* getptr,
     streamsize count,
-    signed char* _Putptr = 0);
+    signed char* putptr = 0);
 
-strstreambuf(unsigned char* _Getptr,
+strstreambuf(unsigned char* getptr,
     streamsize count,
-    unsigned char* _Putptr = 0);
+    unsigned char* putptr = 0);
 
-strstreambuf(const char* _Getptr,
+strstreambuf(const char* getptr,
     streamsize count);
 
-strstreambuf(const signed char* _Getptr,
+strstreambuf(const signed char* getptr,
     streamsize count);
 
-strstreambuf(const unsigned char* _Getptr,
+strstreambuf(const unsigned char* getptr,
     streamsize count);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Allocfunc*\
+*alloc_func*\
 用以分配缓冲区内存的函数。
 
-*计数*\
-确定 *_Getptr*指向的缓冲区的长度。 如果 *_Getptr*不是参数（第一个构造函数形式），则为缓冲区建议的分配大小。
+*计*\
+确定*getptr*所指向的缓冲区的长度。 如果*getptr*不是参数（第一个构造函数格式），则为缓冲区提供建议的分配大小。
 
 *_Freefunc*\
 用来释放缓冲区内存的函数。
 
-*_Getptr*\
+*getptr*\
 用于输入的缓冲区。
 
-*_Putptr*\
+*putptr*\
 用于输出的缓冲区。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将空指针存储在所有控制输入缓冲区、输出缓冲区和 strstreambuf 分配的指针中。 该函数可设置存储的 strstreambuf 模式，使受控序列可修改和可扩展。 它还接受*计数*作为建议的初始分配大小。
+第一个构造函数将空指针存储在所有控制输入缓冲区、输出缓冲区和 strstreambuf 分配的指针中。 该函数可设置存储的 strstreambuf 模式，使受控序列可修改和可扩展。 它还接受*count*作为建议的初始分配大小。
 
-第二个构造函数的构造函数与第一个构造函数类似，只不过它存储*\_Allocfunc*作为调用以分配存储的函数的指针，而*\_Freefunc*则作为指向函数的指针来调用释放该存储。
+第二个构造函数的行为与第一个相同，不同之处在于它将*alloc_func*存储为指向函数的指针，调用该函数以调用来分配存储，并将其*free_func*为用于释放该存储的函数的指针。
 
 这三个构造函数为：
 
 ```cpp
-strstreambuf(char *_Getptr,
+strstreambuf(char *getptr,
     streamsize count,
     char *putptr = 0);
 
-strstreambuf(signed char *_Getptr,
+strstreambuf(signed char *getptr,
     streamsize count,
     signed char *putptr = 0);
 
-strstreambuf(unsigned char *_Getptr,
+strstreambuf(unsigned char *getptr,
     streamsize count,
     unsigned char *putptr = 0);
 ```
 
-同样与第一个构造函数类似，只不过 `_Getptr` 指定用来存储受控序列的数组对象。 （因此，它不得为空指针。数组中的元素*N*数确定如下：
+的行为与第一个类似，不同之处在于*getptr*指定用于保存受控序列的数组对象。 （因此，它不能为 null 指针。）确定数组中的元素*N*的数目，如下所示：
 
-- 如果`count`（> 0），则`count` *N*是 。
+- 如果（*计数*> 0），则*N*为*count*。
 
-- 如果`count`（ = 0），`strlen`则*N*是`_Getptr`（ （ **_** `char` _ ） 。
+- 如果（*计数*= = 0），则*N*为 `strlen((const char *) getptr )` 。
 
-- 如果`count`（< 0），则*N* **INT_MAX**。
+- 如果（*计数*< 0），则*N*为**INT_MAX**。
 
-如果 `_Putptr` 是空指针，该函数通过执行指令建立输入缓冲区：
+如果*putptr*为 null 指针，则该函数将通过执行以下操作来仅建立输入缓冲区：
 
 ```cpp
-setg(_Getptr,
-    _Getptr,
-    _Getptr + N);
+setg(getptr,
+    getptr,
+    getptr + N);
 ```
 
 否则，它将通过执行以下指令建立输入和输出缓冲区：
 
 ```cpp
-setg(_Getptr,
-    _Getptr,
-    _Putptr);
+setg(getptr,
+    getptr,
+    putptr);
 
-setp(_Putptr,
-    _Getptr + N);
+setp(putptr,
+    getptr + N);
 ```
 
-在这种情况下，`_Putptr` 必须在间隔 [ `_Getptr`、`_Getptr` + *N*] 中。
+在这种情况下， *putptr*必须处于 [ *getptr*， *getptr*  +  *N*] 的间隔内。
 
 最后，这三个构造函数为：
 
 ```cpp
-strstreambuf(const char *_Getptr,
+strstreambuf(const char *getptr,
     streamsize count);
 
-strstreambuf(const signed char *_Getptr,
+strstreambuf(const signed char *getptr,
     streamsize count);
 
-strstreambuf(const unsigned char *_Getptr,
+strstreambuf(const unsigned char *getptr,
     streamsize count);
 ```
 
 所有构造函数的行为都与以下项相同：
 
 ```cpp
-streambuf((char *)_Getptr, count);
+streambuf((char *)getptr, count);
 ```
 
 只不过存储模式使受控序列既不可修改也不可扩展。
 
-## <a name="strstreambufunderflow"></a><a name="underflow"></a>斯特兰布夫：
+## <a name="strstreambufunderflow"></a><a name="underflow"></a>strstreambuf：：下溢
 
 一个受保护的虚拟函数，用于从输入流中提取当前元素。
 
@@ -480,11 +480,11 @@ virtual int underflow();
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数努力从输入缓冲区`ch`中提取当前元素，然后推进当前流位置，并将该元素返回为 （）（）ch`int``unsigned char`。 **ch** 它只能以一种方式做到这一点：如果读取位置可用，它将作为`ch`存储在读取位置的元素，并推进输入缓冲区的下一个指针。
+受保护的虚拟成员函数致力于 `ch` 从输入缓冲区提取当前元素，然后提升当前流位置，并将该元素作为返回 `(int)(unsigned char)ch` 。 它只能通过一种方式执行此操作：如果读取位置可用，则它将 `ch` 作为存储在读取位置中的元素，并提升输入缓冲区的下一个指针。
 
 ## <a name="see-also"></a>另请参阅
 
-[溪流布夫](../standard-library/streambuf-typedefs.md#streambuf)\
-[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[电流编程](../standard-library/iostream-programming.md)\
+[streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 663ef761d6c52aeb4c3cc9ce109079c647904e36
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197548"
 ---
 # <a name="compiler-error-c3537"></a>编译器错误 C3537
 
 "type"：不能强制转换为包含 "auto" 的类型
 
-不能将变量强制转换为指定的类型，因为该类型包含 `auto` 关键字并且默认[/zc： auto](../../build/reference/zc-auto-deduce-variable-type.md)编译器选项有效。
+不能将变量强制转换为指定的类型，因为该类型包含 **`auto`** 关键字并且默认[/zc： auto](../../build/reference/zc-auto-deduce-variable-type.md)编译器选项有效。
 
 ## <a name="example"></a>示例
 
-下面的代码将生成 C3537，因为这些变量将强制转换为包含 `auto` 关键字的类型。
+下面的代码将生成 C3537，因为这些变量将强制转换为包含关键字的类型 **`auto`** 。
 
 ```cpp
 // C3537.cpp
@@ -38,6 +38,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [auto 关键字](../../cpp/auto-keyword.md)

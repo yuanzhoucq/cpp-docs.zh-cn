@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 441006c977b4a4249270d0f4809da0fba0163395
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688245"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230060"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-描述一个对象，该对象存储两个都为**float**类型的有序对象对，第一个对象表示复数的实部，第二个对象表示复数的虚部。
+描述一个对象，该对象存储两个都为类型的有序对象对 **`float`** ，第一个对象表示复数的实部，第二个对象表示复数的虚部。
 
 ## <a name="syntax"></a>语法
 
@@ -41,24 +41,24 @@ constexpr complex(
 
 ### <a name="parameters"></a>参数
 
-*_RealVal* \
-正在构造的复数实部的 **float** 类型值。
+*_RealVal*\
+**`float`** 正在构造的复数的实部的类型值。
 
-*_ImagVal* \
-正在构造的复数虚部的 **float** 类型值。
+*_ImagVal*\
+**`float`** 正在构造的复数虚部的类型值。
 
-*complexNum* \
-**Double**或**long double**类型的复数，其实部和虚部用于初始化正在构造的**float**类型的复数。
+*complexNum*\
+类型 **`double`** 或类型的复数， **`long double`** 其实部和虚部用于初始化正在构造的类型的复数 **`float`** 。
 
 ## <a name="return-value"></a>返回值
 
-**float** 类型的复数。
+类型的复数 **`float`** 。
 
 ## <a name="remarks"></a>备注
 
-类型为**float**的复杂类复杂的类模板的显式专用化不同于它所定义的构造函数中的类模板。 从**float**到**double**类型的转换可以是隐式的，但从**float**到**long double**的不太安全转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。
+类模板复杂的类模板的显式专用化只与它所 **`float`** 定义的构造函数中的类模板不同。 允许从到的转换是 **`float`** **`double`** 隐式的，但从到的到的安全转换不一定是 **`float`** **`long double`** **`explicit`** 。 使用 **`explicit`** 赋值语法将规则用于类型转换的启动。
 
-有关类模板 `complex` 的详细信息，请参阅[Complex 类](../standard-library/complex-class.md)。 有关 `complex` 类模板的成员列表，请参见。
+有关类模板的详细信息 `complex` ，请参阅[complex 类](../standard-library/complex-class.md)。 有关类模板的成员列表 `complex` ，请参见。
 
 ## <a name="example"></a>示例
 
@@ -122,7 +122,7 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 **命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [complex 类](../standard-library/complex-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

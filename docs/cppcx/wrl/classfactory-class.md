@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372669"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198094"
 ---
 # <a name="classfactory-class"></a>ClassFactory 类
 
@@ -63,9 +63,9 @@ class ClassFactory :
 
 ## <a name="remarks"></a>备注
 
-利用`ClassFactory`来提供用户定义的工厂实现。
+利用 `ClassFactory` 提供用户定义的工厂实现。
 
-以下编程模式演示如何使用[实现器](implements-structure.md)结构在类工厂上指定三个多个接口。
+下面的编程模式演示如何使用[实现](implements-structure.md)结构在类工厂中指定三个以上的接口。
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -73,18 +73,18 @@ class ClassFactory :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                        | 说明
+名称                                        | 描述
 ------------------------------------------- | -----------
-[类工厂：：类工厂](#classfactory) |
+[ClassFactory：： ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                            | 说明
+“属性”                                            | 描述
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[类工厂：：添加参考](#addref)                 | 增加当前`ClassFactory`对象的引用计数。
-[类工厂：：锁服务器](#lockserver)         | 增加或递减当前`ClassFactory`对象跟踪的基础对象数。
-[类工厂：：查询接口](#queryinterface) | 检索指向参数指定的接口的指针。
-[类工厂：：发布](#release)               | 取消当前`ClassFactory`对象的引用计数。
+[ClassFactory：： AddRef](#addref)                 | 递增当前对象的引用计数 `ClassFactory` 。
+[ClassFactory：： LockServer](#lockserver)         | 递增或递减由当前对象跟踪的基础对象的数量 `ClassFactory` 。
+[ClassFactory：： QueryInterface](#queryinterface) | 检索指向参数指定的接口的指针。
+[ClassFactory：： Release](#release)               | 递减当前对象的引用计数 `ClassFactory` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -110,13 +110,13 @@ class ClassFactory :
 
 ## <a name="requirements"></a>要求
 
-**标题：** 模块.h
+**标头：** 模块。h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>类工厂：：添加参考
+## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory：： AddRef
 
-增加当前`ClassFactory`对象的引用计数。
+递增当前对象的引用计数 `ClassFactory` 。
 
 ```cpp
 STDMETHOD_(
@@ -129,15 +129,15 @@ STDMETHOD_(
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>类工厂：：类工厂
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory：： ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>类工厂：：锁服务器
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory：： LockServer
 
-增加或递减当前`ClassFactory`对象跟踪的基础对象数。
+递增或递减由当前对象跟踪的基础对象的数量 `ClassFactory` 。
 
 ```cpp
 STDMETHOD(
@@ -147,8 +147,8 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*羊群*<br/>
-**true**以增加跟踪对象的数量。 **false**以减少被跟踪对象的数量。
+*fLock*<br/>
+**`true`** 递增跟踪的对象数。 **`false`** 减少跟踪的对象数。
 
 ### <a name="return-value"></a>返回值
 
@@ -158,7 +158,7 @@ STDMETHOD(
 
 `ClassFactory`跟踪[模块](module-class.md)类的基础实例中的对象。
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>类工厂：：查询接口
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory：： QueryInterface
 
 检索指向参数指定的接口的指针。
 
@@ -180,9 +180,9 @@ STDMETHOD(
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="classfactoryrelease"></a><a name="release"></a>类工厂：：发布
+## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory：： Release
 
-取消当前`ClassFactory`对象的引用计数。
+递减当前对象的引用计数 `ClassFactory` 。
 
 ```cpp
 STDMETHOD_(

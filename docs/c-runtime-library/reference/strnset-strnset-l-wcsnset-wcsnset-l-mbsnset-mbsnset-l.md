@@ -73,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231320"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
@@ -145,7 +145,7 @@ unsigned char *_mbsnset_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strnset**函数最多将*str*的第一个*计数*字符设置为*c* （转换为**char**）。 如果*count*大于*str*的长度，则使用*str*的长度而不是*count*。
+**_Strnset**函数最多将*str*的第一个*计数*字符设置为*c* （转换为 **`char`** ）。 如果*count*大于*str*的长度，则使用*str*的长度而不是*count*。
 
 **_wcsnset**和 **_mbsnset**是 **_strnset**的宽字符和多字节字符版本。 **_Wcsnset**的字符串参数和返回值都是宽字符字符串;**_mbsnset**的是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
@@ -164,7 +164,7 @@ unsigned char *_mbsnset_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strnset**|\<string.h>|
 |**_strnset_l**|\<tchar.h>|
@@ -201,7 +201,7 @@ After:  **** is a test
 ## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

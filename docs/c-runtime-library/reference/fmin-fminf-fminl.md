@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216981"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -78,7 +78,7 @@ long double fminl(
 *x*<br/>
 要比较的第一个值。
 
-*y*<br/>
+*误差*<br/>
 要比较的第二个值。
 
 ## <a name="return-value"></a>返回值
@@ -87,7 +87,7 @@ long double fminl(
 
 |输入|结果|
 |-----------|------------|
-|*x*为 NaN|*y*|
+|*x*为 NaN|*误差*|
 |*y*为 NaN|*x*|
 |*x*和*y*为 NaN|NaN|
 
@@ -95,17 +95,17 @@ long double fminl(
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**fmin**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **fmin**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的**fmin**的重载 **`float`** **`long double`** 。 在 C 程序中， **fmin**始终采用并返回 **`double`** 。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**fmin**、 **fminf**、 **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
+|**fmin**、 **fminf**、 **fminl**|Ansi-c\<math.h><br />C + +： \<math.h> 或\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [fmax、fmaxf、fmaxl](fmax-fmaxf-fmaxl.md)<br/>

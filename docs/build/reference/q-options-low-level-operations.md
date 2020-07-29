@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: f5342071cef76bcc736f128c344279898a61c462
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034514"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231489"
 ---
 # <a name="q-options-low-level-operations"></a>/Q 选项（低级别操作）
 
@@ -20,9 +20,9 @@ ms.locfileid: "77034514"
 
 - [/Qfast_transcendentals （强制 Fast 先验）](qfast-transcendentals-force-fast-transcendentals.md)：生成快速先验。
 
-- [/QIfist （取消 _ftol）](qifist-suppress-ftol.md)：当需要从浮点类型到整数类型的转换时取消 `_ftol` （仅限 x86）。
+- [/QIfist （取消 _ftol）](qifist-suppress-ftol.md)：取消 `_ftol` 从浮点类型到整数类型的转换（仅限 x86）。
 
-- [/Qimprecise_fwaits （在 Try 块内删除 fwaits）](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)：删除 `try` 块中 `fwait` 的命令。
+- [/Qimprecise_fwaits （在 Try 块内删除 fwaits）](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)：删除 `fwait` **`try`** 块中的命令。
 
 - [/QIntel-jcc-erratum](qintel-jcc-erratum.md)：缓解由 Intel 跳转条件代码（jcc）错误微代码更新导致的性能影响。
 
