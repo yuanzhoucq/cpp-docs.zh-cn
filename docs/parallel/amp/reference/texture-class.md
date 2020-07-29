@@ -17,16 +17,16 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: f7a38c84c5def629c7a42b2c05bf1ed04441593b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b8a37293166ec21aeb9410f05fb70c9753ec4f22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127772"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230410"
 ---
 # <a name="texture-class"></a>texture 类
 
-纹理是在范围域中的 `accelerator_view` 上的数据聚合。 它是变量集合，每个元素对应于一个范围域中的一个元素。 每个变量都保留与C++基元类型（`unsigned int`、`int`、`float`、`double`）、标量类型（`norm`或 `unorm`）或短向量类型相对应的值。
+纹理是在范围域中的上的数据聚合 `accelerator_view` 。 它是变量集合，每个元素对应于一个范围域中的一个元素。 每个变量都保留与 c + + 基元类型（ **`unsigned int`** 、 **`int`** 、 **`float`** 、 **`double`** ）、标量类型（ `norm` 、或 `unorm` ）或短向量类型相对应的值。
 
 ## <a name="syntax"></a>语法
 
@@ -43,7 +43,7 @@ class texture;
 *_Rank*<br/>
 纹理的排名。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
@@ -57,13 +57,13 @@ class texture;
 |名称|说明|
 |----------|-----------------|
 |[纹理构造函数](#ctor)|初始化 `texture` 类的新实例。|
-|[~ 纹理析构函数](#ctor)|销毁 `texture` 的对象。|
+|[~ 纹理析构函数](#ctor)|销毁 `texture` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
-|[copy_to](#copy_to)|通过执行深层复制，将 `texture` 对象复制到目标。|
+|[copy_to](#copy_to)|`texture`通过执行深层复制，将对象复制到目标。|
 |[data](#data)|返回一个 CPU 指针，该指针指向此纹理的原始数据。|
 |[get](#get)|返回指定索引处的元素的值。|
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|返回作为要将此纹理复制到的首选目标的[accelerator_view](accelerator-view-class.md) 。|
@@ -71,19 +71,19 @@ class texture;
 |[get_row_pitch](#get_row_pitch)|返回 CPU 上2D 或3D 暂存纹理中每行之间的字节数。|
 |[set](#set)|设置指定索引处的元素的值。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |----------|-----------------|
-|[operator()](#operator_call)|返回由参数指定的元素值。|
-|[operator\[\]](#operator_at)|返回指定索引处的元素。|
-|[operator=](#operator_eq)|将指定的[纹理](texture-class.md)对象复制到此对象。|
+|[operator （）](#operator_call)|返回由参数指定的元素值。|
+|[操作员\[\]](#operator_at)|返回指定索引处的元素。|
+|[operator =](#operator_eq)|将指定的[纹理](texture-class.md)对象复制到此对象。|
 
 ### <a name="public-constants"></a>公共常量
 
 |名称|说明|
 |----------|-----------------|
-|[rank 常量](#rank)|获取 `texture` 对象的排名。|
+|[rank 常量](#rank)|获取对象的秩 `texture` 。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -105,15 +105,15 @@ class texture;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="dtor"></a>~ 纹理
+## <a name="texture"></a><a name="dtor"></a>~ 纹理
 
-销毁 `texture` 的对象。
+销毁 `texture` 对象。
 
 ```cpp
 ~texture() restrict(cpu);
 ```
 
-## <a name="associated_accelerator_view"></a>associated_accelerator_view
+## <a name="associated_accelerator_view"></a><a name="associated_accelerator_view"></a>associated_accelerator_view
 
 获取要将此纹理复制到的首选目标的[accelerator_view](accelerator-view-class.md) 。
 
@@ -121,9 +121,9 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-## <a name="copy_to"></a>copy_to
+## <a name="copy_to"></a><a name="copy_to"></a>copy_to
 
-通过执行深层复制，将 `texture` 对象复制到目标。
+`texture`通过执行深层复制，将对象复制到目标。
 
 ```cpp
 void copy_to(texture& _Dest) const;
@@ -141,7 +141,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 *value_type*<br/>
 纹理中元素的类型。
 
-## <a name="data"></a>数据
+## <a name="data"></a><a name="data"></a> 数据
 
 返回一个 CPU 指针，该指针指向此纹理的原始数据。
 
@@ -155,7 +155,7 @@ const void* data() const restrict(cpu);
 
 指向纹理的原始数据的指针。
 
-## <a name="depth_pitch"></a>depth_pitch
+## <a name="depth_pitch"></a><a name="depth_pitch"></a>depth_pitch
 
 获取 CPU 上3D 暂存纹理中每个深度切片之间的字节数。
 
@@ -163,7 +163,7 @@ const void* data() const restrict(cpu);
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-## <a name="get"></a>获取
+## <a name="get"></a><a name="get"></a>获取
 
 返回指定索引处的元素的值。
 
@@ -180,7 +180,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 
 位于指定索引处的元素的值。
 
-## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
 返回作为要将此纹理复制到的首选目标的 accelerator_view。
 
@@ -192,7 +192,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 
 作为此纹理要复制到的首选目标的[accelerator_view](accelerator-view-class.md) 。
 
-## <a name="get_depth_pitch"></a>get_depth_pitch
+## <a name="get_depth_pitch"></a><a name="get_depth_pitch"></a>get_depth_pitch
 
 返回 CPU 上3D 暂存纹理中每个深度切片之间的字节数。
 
@@ -204,7 +204,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 
 CPU 上3D 暂存纹理中每个深度切片之间的字节数。
 
-## <a name="get_row_pitch"></a>get_row_pitch
+## <a name="get_row_pitch"></a><a name="get_row_pitch"></a>get_row_pitch
 
 返回二维暂存纹理中每行之间或三维过渡纹理中深度切片的每一行之间的字节数。
 
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 二维暂存纹理中每行之间或三维过渡纹理中深度切片的每一行之间的字节数。
 
-## <a name="operator_call"></a>operator （）
+## <a name="operator"></a><a name="operator_call"></a>operator （）
 
 返回由参数指定的元素值。
 
@@ -258,7 +258,7 @@ const value_type operator() (
 
 由参数指定的元素值。
 
-## <a name="operator_at"></a>运算符 []
+## <a name="operator"></a><a name="operator_at"></a>运算符 []
 
 返回指定索引处的元素。
 
@@ -280,7 +280,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 
 位于指定索引处的元素。
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
 将指定的[纹理](texture-class.md)对象复制到此对象。
 
@@ -295,21 +295,21 @@ texture& operator= (
 ### <a name="parameters"></a>参数
 
 *_Other*<br/>
-要从中进行复制的 `texture` 对象。
+`texture`要从中进行复制的对象。
 
 ### <a name="return-value"></a>返回值
 
-对此 `texture` 对象的引用。
+对此对象的引用 `texture` 。
 
-## <a name="rank"></a>级别
+## <a name="rank"></a><a name="rank"></a>级别
 
-获取 `texture` 对象的排名。
+获取对象的秩 `texture` 。
 
 ```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="row_pitch"></a>row_pitch
+## <a name="row_pitch"></a><a name="row_pitch"></a>row_pitch
 
 获取 CPU 上2D 或3D 过渡纹理中每行之间的字节数。
 
@@ -317,7 +317,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-## <a name="set"></a>字符集
+## <a name="set"></a><a name="set"></a>字符集
 
 设置指定索引处的元素的值。
 
@@ -338,7 +338,7 @@ void set(
 *value*<br/>
 该元素的新值。
 
-## <a name="ctor"></a>褐色
+## <a name="texture"></a><a name="ctor"></a>褐色
 
 初始化 `texture` 类的新实例。
 

@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-ms.openlocfilehash: 87e6703f759888b36ed89daed10df937701c6dbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f6190b0d16648490552c0f415251a3df2b33188
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372554"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230943"
 ---
 # <a name="auto_gcroot-class"></a>auto_gcroot 类
 
-自动资源管理（如[auto_ptr类](../standard-library/auto-ptr-class.md)），可用于将虚拟句柄嵌入本机类型。
+自动资源管理（如[Auto_ptr 类](../standard-library/auto-ptr-class.md)）可用于将虚拟句柄嵌入到本机类型中。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ class auto_gcroot;
 
 |名称|说明|
 |---------|-----------|
-|[auto_gcroot：auto_gcroot](#auto-gcroot)|构造`auto_gcroot`函数。|
+|[auto_gcroot：： auto_gcroot](#auto-gcroot)|`auto_gcroot`构造函数。|
 |[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot`析构函数。
 |
 
@@ -53,31 +53,31 @@ class auto_gcroot;
 
 |名称|说明|
 |---------|-----------|
-|[auto_gcroot::attach](#attach)|附加到`auto_gcroot`对象。|
+|[auto_gcroot::attach](#attach)|附加 `auto_gcroot` 到对象。|
 |[auto_gcroot::get](#get)|获取包含的对象。|
-|[auto_gcroot::release](#release)|从管理中`auto_gcroot`释放对象。|
-|[auto_gcroot::reset](#reset)|销毁当前拥有的对象，并可以选择拥有新对象。|
-|[auto_gcroot::swap](#swap)|将对象与另一个`auto_gcroot`交换 。|
+|[auto_gcroot::release](#release)|从管理中释放对象 `auto_gcroot` 。|
+|[auto_gcroot::reset](#reset)|销毁当前拥有的对象，并选择性地拥有新的对象。|
+|[auto_gcroot::swap](#swap)|将对象与另一个对象交换 `auto_gcroot` 。|
 
-### <a name="public-operators"></a>公共运营商
+### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |---------|-----------|
-|[auto_gcroot：：操作员-&gt;](#operator-arrow)|成员访问运算符。|  
-|[auto_gcroot：：操作员*](#operator-assign)|赋值运算符。|
-|[auto_gcroot：：操作员&nbsp;auto_gcroot](#operator-auto-gcroot)|类型和兼容类型之间的`auto_gcroot`类型转换运算符。|
-|[auto_gcroot：：操作员&nbsp;布尔](#operator-bool)|用于`auto_gcroot`条件表达式的运算符。|  
-|[auto_gcroot::operator!](#operator-logical-not)|用于`auto_gcroot`条件表达式的运算符。|
+|[auto_gcroot：： operator-&gt;](#operator-arrow)|成员访问运算符。|  
+|[auto_gcroot：： operator =](#operator-assign)|赋值运算符。|
+|[auto_gcroot：： operator &nbsp; auto_gcroot](#operator-auto-gcroot)|与兼容的类型之间的类型转换运算符 `auto_gcroot` 。|
+|[auto_gcroot：： operator &nbsp; bool](#operator-bool)|用于 `auto_gcroot` 条件表达式中的运算符。|  
+|[auto_gcroot::operator!](#operator-logical-not)|用于 `auto_gcroot` 条件表达式中的运算符。|
 
 ## <a name="requirements"></a>要求
 
-**>，头文件**\<msclr_auto_gcroot.h
+**头文件** \<msclr\auto_gcroot.h>
 
 **命名空间**msclr
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot：auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot：： auto_gcroot
 
-构造`auto_gcroot`函数。
+`auto_gcroot`构造函数。
 
 ```cpp
 auto_gcroot(
@@ -102,7 +102,7 @@ auto_gcroot(
 
 ### <a name="remarks"></a>备注
 
-`auto_gcroot`从现有`auto_gcroot`构造 时， 现有`auto_gcroot`在将对象的所有权转移到新`auto_gcroot`之前释放其对象。
+在 `auto_gcroot` 从现有中构造时 `auto_gcroot` ，现有的将 `auto_gcroot` 释放其对象，然后将对象的所有权转移给新的 `auto_gcroot` 。
 
 ### <a name="example"></a>示例
 
@@ -191,7 +191,7 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot：auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot：： ~ auto_gcroot
 
 `auto_gcroot`析构函数。
 
@@ -201,7 +201,7 @@ done
 
 ### <a name="remarks"></a>备注
 
-析构函数还会破坏拥有的对象。
+析构函数还 destructs 拥有的对象。
 
 ### <a name="example"></a>示例
 
@@ -238,9 +238,9 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot：附加
+## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot：： attach
 
-附加到`auto_gcroot`对象。
+附加 `auto_gcroot` 到对象。
 
 ```cpp
 auto_gcroot<_element_type> & attach(
@@ -258,7 +258,7 @@ auto_gcroot<_element_type> & attach(
 ### <a name="parameters"></a>参数
 
 *_right*<br/>
-要附加的对象或`auto_gcroot`包含要附加的对象的对象。
+要附加的对象，或 `auto_gcroot` 包含要附加的对象的。
 
 ### <a name="return-value"></a>返回值
 
@@ -266,7 +266,7 @@ auto_gcroot<_element_type> & attach(
 
 ### <a name="remarks"></a>备注
 
-如果是`_right`，`auto_gcroot`则在对象附加到当前`auto_gcroot`之前，它会释放其对象的所有权。
+如果 `_right` 为 `auto_gcroot` ，则在将对象附加到当前之前，它将释放其对象的所有权 `auto_gcroot` 。
 
 ### <a name="example"></a>示例
 
@@ -333,7 +333,7 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot：获取
+## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot：： get
 
 获取包含的对象。
 
@@ -393,9 +393,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot：：发布
+## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot：： release
 
-从管理中`auto_gcroot`释放对象。
+从管理中释放对象 `auto_gcroot` 。
 
 ```cpp
 _element_type release();
@@ -403,7 +403,7 @@ _element_type release();
 
 ### <a name="return-value"></a>返回值
 
-释放的对象。
+已释放的对象。
 
 ### <a name="example"></a>示例
 
@@ -456,9 +456,9 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot：重置
+## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot：： reset
 
-销毁当前拥有的对象，并可以选择拥有新对象。
+销毁当前拥有的对象，并选择性地拥有新的对象。
 
 ```cpp
 void reset(
@@ -469,7 +469,7 @@ void reset(
 ### <a name="parameters"></a>参数
 
 *_new_ptr*<br/>
-（可选）新对象。
+可有可无新的对象。
 
 ### <a name="example"></a>示例
 
@@ -521,9 +521,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot：：交换
+## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot：： swap
 
-将对象与另一个`auto_gcroot`交换 。
+将对象与另一个对象交换 `auto_gcroot` 。
 
 ```cpp
 void swap(
@@ -534,7 +534,7 @@ void swap(
 ### <a name="parameters"></a>参数
 
 *_right*<br/>
-`auto_gcroot`用于交换对象。
+`auto_gcroot`用于交换对象的。
 
 ### <a name="example"></a>示例
 
@@ -563,7 +563,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot：：操作员-&gt;
+## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot：： operator-&gt;
 
 成员访问运算符。
 
@@ -573,7 +573,7 @@ _element_type operator->() const;
 
 ### <a name="return-value"></a>返回值
 
-由`auto_gcroot`进行包装的对象。
+被包装的对象 `auto_gcroot` 。
 
 ### <a name="example"></a>示例
 
@@ -612,7 +612,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot：：操作员*
+## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot：： operator =
 
 赋值运算符。
 
@@ -632,11 +632,11 @@ auto_gcroot<_element_type> & operator=(
 ### <a name="parameters"></a>参数
 
 *_right*<br/>
-对象或`auto_gcroot`要分配给当前`auto_gcroot`。
+要分配给 `auto_gcroot` 当前的对象 `auto_gcroot` 。
 
 ### <a name="return-value"></a>返回值
 
-当前`auto_gcroot`，现在拥有`_right`。
+当前 `auto_gcroot` 拥有的 `_right` 。
 
 ### <a name="example"></a>示例
 
@@ -704,9 +704,9 @@ done
 in ClassA destructor: third
 ```
 
-## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot：：操作员auto_gcroot
+## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot：： operator auto_gcroot
 
-类型和兼容类型之间的`auto_gcroot`类型转换运算符。
+与兼容的类型之间的类型转换运算符 `auto_gcroot` 。
 
 ```cpp
 template<typename _other_type>
@@ -715,7 +715,7 @@ operator auto_gcroot<_other_type>();
 
 ### <a name="return-value"></a>返回值
 
-当前`auto_gcroot`强制转换到`auto_gcroot<_other_type>`。
+当前 `auto_gcroot` 强制转换为的 `auto_gcroot<_other_type>` 。
 
 ### <a name="example"></a>示例
 
@@ -759,9 +759,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot：：操作员布尔
+## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot：： operator bool
 
-用于`auto_gcroot`条件表达式的运算符。
+用于 `auto_gcroot` 条件表达式中的运算符。
 
 ```cpp
 operator bool() const;
@@ -769,11 +769,11 @@ operator bool() const;
 
 ### <a name="return-value"></a>返回值
 
-`true`如果包装的对象有效;如果包装对象有效。`false`否则。
+**`true`** 如果包装的对象有效，则为; 否则为。**`false`** 否则为。
 
 ### <a name="remarks"></a>备注
 
-此运算符实际上转换为`_detail_class::_safe_bool`，这比无法转换为积分类型`bool`更安全。
+此运算符实际上转换为 `_detail_class::_safe_bool` ， **`bool`** 因为它不能转换为整型类型，这比更安全。
 
 ### <a name="example"></a>示例
 
@@ -804,9 +804,9 @@ now s is valid
 now s is invalid
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot：：操作员！
+## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot：： operator！
 
-用于`auto_gcroot`条件表达式的运算符。
+用于 `auto_gcroot` 条件表达式中的运算符。
 
 ```cpp
 bool operator!() const;
@@ -814,7 +814,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>返回值
 
-`true`如果包装的对象无效;如果包装对象无效。`false`否则。
+**`true`** 如果包装的对象无效，则为; 否则为。**`false`** 否则为。
 
 ### <a name="example"></a>示例
 
