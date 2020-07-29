@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506775"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232607"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
@@ -91,13 +91,13 @@ long double atan2( long double y, long double x );  // C++ only
 |-----------|-------------------|-----------------------|
 |± **QNAN**， **IND**|无|**_DOMAIN**|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Atan**函数计算*x*的反正切值（反切线函数）。 **atan2**计算*y*x 的反正切值 / *x* （如果*x*等于0，*如果 y*为正值，则**atan2**返回π/2; 如果 y*为*负数，则返回-π/2; 如果*y*为0，则返回0。）
 
 **atan**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-由于 c + + 允许重载，因此可以调用**atan**和**atan2**的重载，该重载采用**float**或**long** **双**参数。 在 C 程序中， **atan**和**atan2**始终采用**双重**参数并返回**double**。
+由于 c + + 允许重载，因此你可以调用采用或参数的**atan**和**atan2**的重载 **`float`** **`long double`** 。 在 C 程序中， **atan**和**atan2**始终采用 **`double`** 参数，并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
