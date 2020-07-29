@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: 035cc4e7b9cfac262979509bf7b4570e2c55336c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d15667f4e30561dbba024f877530c4ff0f824f64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377426"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224742"
 ---
 # <a name="money_put-class"></a>money_put 类
 
-类模板描述一个对象，该对象可用作区域设置，用于控制货币值转换为类型`CharType`序列的对象。
+类模板描述可用作区域设置 facet 的对象，用于控制货币值到类型序列的转换 `CharType` 。
 
 ## <a name="syntax"></a>语法
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*字符类型*\
+*CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
-*输出迭代器*\
+*OutputIterator*\
 供货币放置函数写入其输出结果的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -55,26 +55,26 @@ class money_put : public locale::facet;
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|说明|
+|类型名称|描述|
 |-|-|
 |[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|
 |[iter_type](#iter_type)|一种类型，此类型描述输出迭代器。|
 |[string_type](#string_type)|一种类型，此类型描述包含 `CharType` 类型字符的字符串。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
 |[do_put](#do_put)|一种虚拟函数，通过调用此函数可将数字或字符串转换为表示货币值的字符序列。|
-|[把](#put)|将数字或字符串转换为表示货币值的字符序列。|
+|[准备](#put)|将数字或字符串转换为表示货币值的字符序列。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
-## <a name="money_putchar_type"></a><a name="char_type"></a>money_put：char_type
+## <a name="money_putchar_type"></a><a name="char_type"></a>money_put：： char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -86,7 +86,7 @@ typedef CharType char_type;
 
 该类型是模板参数 **CharType** 的同义词。
 
-## <a name="money_putdo_put"></a><a name="do_put"></a>money_put：:d
+## <a name="money_putdo_put"></a><a name="do_put"></a>money_put：:d o_put
 
 一种虚拟函数，通过调用此函数可将数字或字符串转换为表示货币值的字符序列。
 
@@ -108,11 +108,11 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-*下一个*\
+*一个*\
 发现插入的字符串中第一个元素的迭代器。
 
 *_Intl*\
-一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
+一个布尔值，指示序列中预期的货币符号类型： **`true`** 如果是国际，则为（如果为 **`false`** 国内）。
 
 *_Iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
@@ -120,7 +120,7 @@ virtual iter_type do_put(
 *_Fill*\
 用于调整间距的字符。
 
-*瓦尔*\
+*初始值*\
 要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
@@ -129,13 +129,13 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>备注
 
-第一个虚拟受保护成员函数生成顺序元素，从*下一个*开始，从[string_type](#string_type)对象*val*生成货币输出字段。 由*val*控制的序列必须以一个或多个小数位数开头，可选前面有一个表示金额的减号 （-）。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
+第一个受保护的虚拟成员函数将生成从 "*下一步*" 开始的连续元素，以便从[string_type](#string_type)对象*val*生成货币输出字段。 由*val*控制的序列必须以一个或多个十进制数字开头，可选择前面带有一个减号（-），表示数量。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
 
-第二个虚拟受保护成员函数的表示与第一个函数相同，只不过它首先有效地将*val*转换为小数位数序列，选项前面有减号，然后按上述顺序转换该序列。
+第二个受保护的虚拟成员函数的行为与第一个相同，不同之处在于，它会有效地将*val*转换为十进制数字的序列，可选择前面加上负号，然后将其转换为上述顺序。
 
-货币输出字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class) fac 决定，而后者又由（有效）调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)）。
+货币输出字段的格式由（有效）调用[use_facet](../standard-library/locale-functions.md#use_facet)moneypunct > （iosbase 返回的[区域设置 facet](../standard-library/locale-class.md#facet_class) fac 确定  <  [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**> 。 **iosbase** [getloc](../standard-library/ios-base-class.md#getloc)）。
 
-具体来说：
+具体而言：
 
 - **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) 确定生成非负数值的字段组件所采用的顺序。
 
@@ -157,11 +157,11 @@ virtual iter_type do_put(
 
 如果符号字符串（**fac**. `negative_sign` 或 **fac**. `positive_sign`具有多个元素，则第一个元素会在等于 **money_base::sign** 的元素在 ( **fac**. `neg_format` 或 **fac**. `pos_format`). 剩余所有元素在货币输出字段的末尾生成。
 
-如果 **iosbase**. [标志](../standard-library/ios-base-class.md#flags) & [显示库](../standard-library/ios-functions.md#showbase)是非零的，字符串**fac**。 `curr_symbol` 将在等于 **money_base::symbol** 的元素在此格式模式中出现的位置处生成。 否则，将不生成货币符号。
+如果 **iosbase**. [标志](../standard-library/ios-base-class.md#flags)  & [showbase](../standard-library/ios-functions.md#showbase)的值为非零 **。** `curr_symbol` 将在等于 **money_base::symbol** 的元素在此格式模式中出现的位置处生成。 否则，将不生成货币符号。
 
 如果 **fac**. **grouping** 未采用任何分组约束（其首个元素具有值 CHAR_MAX），则 **fac**. `thousands_sep` 的任何实例都不会在货币输出字段的值部分（等于 **money_base::value** 的元素在格式模式中出现的位置）生成。 如果 **fac**. `frac_digits` 为零，则在十进制数字后不会生成 **fac**. `decimal_point` 的任何实例。 否则，生成的货币输出字段会将低位 **fac**. `frac_digits` 十进制数字置于小数点右侧。
 
-对于任何数字输出字段，都会发生填充，除非 **iosbase**. **标志** & **iosbase**。 [internal](../standard-library/ios-functions.md#internal) 不为零；将在等于 **money_base::space** 的元素在此格式模式中出现的位置处生成任何内部填充（如果确实出现该元素）。 否则，将在生成的序列之前出现内部填充。 填充字符为 **fill**。
+对于任何数字输出字段，都会发生填充，除非 **iosbase**. **标志**  & **iosbase**。 [internal](../standard-library/ios-functions.md#internal) 不为零；将在等于 **money_base::space** 的元素在此格式模式中出现的位置处生成任何内部填充（如果确实出现该元素）。 否则，将在生成的序列之前出现内部填充。 填充字符为 **fill**。
 
 该函数将调用 **iosbase**. **width**(0) 以便将字段宽度重置为零。
 
@@ -169,7 +169,7 @@ virtual iter_type do_put(
 
 请参阅 [put](#put) 的示例，其中虚拟成员函数由 **put** 调用。
 
-## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put：iter_type
+## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put：： iter_type
 
 一种类型，此类型描述输出迭代器。
 
@@ -181,7 +181,7 @@ typedef OutputIterator iter_type;
 
 该类型是模板参数 **OutputIterator** 的同义词。
 
-## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put：money_put
+## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put：： money_put
 
 `money_put` 类型的对象的构造函数。
 
@@ -196,19 +196,19 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其显著性为：
+*_Refs*参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1：这些值未定义。
+- \>1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数用区域设置初始化其基本对象 **：：**[分面](../standard-library/locale-class.md#facet_class)（ `_Refs`。
+构造函数通过**locale：：**[facet](../standard-library/locale-class.md#facet_class)（）初始化其基对象 `_Refs` 。
 
-## <a name="money_putput"></a><a name="put"></a>money_put：:p乌特
+## <a name="money_putput"></a><a name="put"></a>money_put：:p
 
 将数字或字符串转换为表示货币值的字符序列。
 
@@ -230,11 +230,11 @@ iter_type put(
 
 ### <a name="parameters"></a>参数
 
-*下一个*\
+*一个*\
 发现插入的字符串中第一个元素的迭代器。
 
 *_Intl*\
-一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
+一个布尔值，指示序列中预期的货币符号类型： **`true`** 如果是国际，则为（如果为 **`false`** 国内）。
 
 *_Iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
@@ -242,7 +242,7 @@ iter_type put(
 *_Fill*\
 用于调整间距的字符。
 
-*瓦尔*\
+*初始值*\
 要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
@@ -251,7 +251,7 @@ iter_type put(
 
 ### <a name="remarks"></a>备注
 
-两个成员函数返回[do_put](#do_put) `next` `_Intl`（、 `_Iosbase` `_Fill`、 `val`、 、
+这两个成员函数都返回[do_put](#do_put)（ `next` 、 `_Intl` 、 `_Iosbase` 、 `_Fill` 、 `val` ）。
 
 ### <a name="example"></a>示例
 
@@ -281,7 +281,7 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="money_putstring_type"></a><a name="string_type"></a>money_put：string_type
+## <a name="money_putstring_type"></a><a name="string_type"></a>money_put：： string_type
 
 一种类型，此类型描述包含 `CharType` 类型字符的字符串。
 
@@ -291,10 +291,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-类型描述类模板的专门化[basic_string](../standard-library/basic-string-class.md)其对象可以存储源序列中的元素序列。
+该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储源序列中的元素序列。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<区域设置>](../standard-library/locale.md)\
-[分面类](../standard-library/locale-class.md#facet_class)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[facet 类](../standard-library/locale-class.md#facet_class)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

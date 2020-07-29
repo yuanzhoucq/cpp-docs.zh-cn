@@ -1,24 +1,24 @@
 ---
-title: 如何：使用中的属性C++/CLI
+title: 如何：在 C++/CLI 中使用属性
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447324"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225665"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>如何：使用中的属性C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用属性
 
-本文介绍如何使用中的属性C++/CLI。
+本文介绍如何使用 c + +/CLI 中的属性
 
 ## <a name="basic-properties"></a>基本属性
 
-为基本属性，只分配和检索私有数据成员的那些 — 无需显式定义 get 和 set 访问器函数，因为编译器自动提供其在给定只是该属性的数据类型。 此代码演示了基本属性：
+对于基本属性（仅分配和检索专用数据成员的属性），无需显式定义 get 和 set 访问器函数，因为当给定仅提供属性的数据类型时，编译器会自动提供函数。 此代码演示了一个基本属性：
 
 ```cpp
 // SimpleProperties.cpp
@@ -82,15 +82,15 @@ int main() {
 47
 ```
 
-## <a name="indexed-properties"></a>索引的属性
+## <a name="indexed-properties"></a>索引属性
 
-索引的属性通常公开使用下标运算符访问的数据结构。
+索引属性通常公开通过使用下标运算符访问的数据结构。
 
-如果使用默认索引属性，只需通过指类名称，可以访问的数据结构，但如果使用用户定义的索引的属性，则必须指定要访问的数据结构的属性名称。
+如果使用默认的索引属性，只需引用类名即可访问数据结构，但如果使用用户定义的索引属性，则必须指定属性名称以访问数据结构。
 
-有关如何使用索引器中写入的信息C#，请参阅[如何：使用C#索引器 (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
+有关如何使用以 c # 编写的索引器的信息，请参阅[如何：使用 c # 索引器（c + +/cli）](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
 
-此代码示例演示如何使用默认值和用户定义的索引的属性：
+此代码示例演示如何使用默认的和用户定义的索引属性：
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-下一个示例演示如何通过使用调用的默认索引器`this`指针。
+下一个示例演示如何使用指针调用默认索引器 **`this`** 。
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -177,7 +177,7 @@ private:
 };
 ```
 
-此示例演示如何使用<xref:System.Reflection.DefaultMemberAttribute>指定的默认索引器：
+此示例演示如何使用 <xref:System.Reflection.DefaultMemberAttribute> 指定默认索引器：
 
 ```cpp
 // specify_default_indexer.cpp
@@ -257,11 +257,11 @@ int main() {
 43
 ```
 
-## <a name="abstract-and-sealed-properties"></a>抽象和密封属性
+## <a name="abstract-and-sealed-properties"></a>抽象属性和密封属性
 
-尽管[抽象](../extensions/abstract-cpp-component-extensions.md)并[密封](../extensions/sealed-cpp-component-extensions.md)关键字指定为有效中在 ECMA C++/CLI 规范，MicrosoftC++编译器，您不能指定它们在普通的属性，也不在非 trivial 属性在属性声明。
+尽管在 ECMA c + +/CLI 规范中将[abstract](../extensions/abstract-cpp-component-extensions.md)和[sealed](../extensions/sealed-cpp-component-extensions.md)关键字指定为有效，但对于 Microsoft c + + 编译器，不能在普通属性上指定它们，也不能在非普通属性的属性声明上指定它们。
 
-若要声明密封的或抽象属性，必须定义非 trivial 属性，然后指定`abstract`或`sealed`关键字为 get 和 set 访问器函数。
+若要声明密封属性或抽象属性，必须定义一个非常重要的属性，然后 **`abstract`** **`sealed`** 在 get 和 set 访问器函数上指定或关键字。
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -326,7 +326,7 @@ int main() {
 
 ## <a name="multidimensional-properties"></a>多维属性
 
-多维属性可用于定义使用非标准数量的参数的属性访问器方法。
+可以使用多维属性定义采用非标准数量参数的属性访问器方法。
 
 ```cpp
 // mcppv2_property_5.cpp
@@ -370,7 +370,7 @@ int main() {
 
 ## <a name="overloading-property-accessors"></a>重载属性访问器
 
-下面的示例演示如何重载索引的属性。
+下面的示例演示如何重载索引属性。
 
 ```cpp
 // mcppv2_property_6.cpp
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[属性](../extensions/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

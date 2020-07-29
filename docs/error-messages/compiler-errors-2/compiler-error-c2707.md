@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225418"
 ---
 # <a name="compiler-error-c2707"></a>编译器错误 C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760434"
 
 结构化异常处理内部函数在某些上下文中无效：
 
-- 在异常筛选器或 `__except` 块外 `_exception_code()`
+- `_exception_code()`在异常筛选器或 **`__except`** 块外
 
-- 在异常筛选器外 `_exception_info()`
+- `_exception_info()`在异常筛选器外
 
-- `__finally` 块外 `_abnormal_termination()`
+- `_abnormal_termination()`块外 **`__finally`**
 
 若要解决此错误，请确保将异常处理内部函数放在适当的上下文中。
 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-ms.openlocfilehash: 35dd47bd87c278d60fc616dca854bf843acc7c57
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0f84474e86f0287469a31c310ab0e7e70c8a22c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544512"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225639"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合程序集的初始化
 
-在 `DllMain`过程中运行代码时，Windows 开发人员必须始终警惕加载程序锁。 但是，在处理C++/clr 混合模式程序集时，需要考虑一些其他问题。
+在过程中运行代码时，Windows 开发人员必须始终警惕加载程序锁 `DllMain` 。 但是，在处理 c + +/clr 混合模式程序集时，需要考虑一些其他问题。
 
-[DllMain](/windows/win32/Dlls/dllmain)中的代码不能访问 .Net 公共语言运行时（CLR）。 这意味着 `DllMain` 不应直接或间接调用托管函数;`DllMain`中不应声明或实现托管代码;并且不会在 `DllMain`中发生垃圾回收或自动库加载。
+[DllMain](/windows/win32/Dlls/dllmain)中的代码不能访问 .Net 公共语言运行时（CLR）。 这意味着，不 `DllMain` 应直接或间接调用托管函数; 在中不应声明或实现托管代码 `DllMain` ; 并且在中不应发生垃圾回收或自动库加载 `DllMain` 。
 
 ## <a name="causes-of-loader-lock"></a>加载程序锁定的原因
 
@@ -31,7 +31,7 @@ ms.locfileid: "79544512"
 
 Windows 加载程序保证在初始化之前，没有代码可以访问该 DLL 中的代码或数据，并且在部分初始化 DLL 时，任何代码都不能对其进行冗余加载。 为此，Windows 加载程序使用一个进程全局临界区（通常称为 "加载程序锁定"）来防止模块初始化期间的不安全访问。 因此，加载进程容易受到许多典型死锁情况的攻击。 对于混合程序集来说，下面的两种情况增加了死锁风险：
 
-- 首先，如果用户尝试在加载程序锁时执行编译为 Microsoft 中间语言（MSIL）的函数（例如，在 `DllMain` 或静态初始值设定项中），它可能会导致死锁。 假设 MSIL 函数引用未加载的程序集中的类型。 CLR 会尝试自动加载该程序集，这可能要求 Windows 加载程序在加载程序锁上阻止。 发生死锁，因为加载程序锁已由调用序列中前面的代码持有。 但是，在加载程序锁下执行 MSIL 不能保证发生死锁，这使得这种情况很难诊断和修复。 在某些情况下，例如，当被引用类型的 DLL 不包含本机构造并且其所有依赖项都不包含本机结构时，加载被引用类型的 .NET 程序集不需要 Windows 加载程序。 此外，所需的程序集或其混合本机/.NET 依赖项可能已经由其他代码加载了。 因此，死锁情况很难预测，它在很大程度上取决于目标计算机的配置。
+- 首先，如果用户尝试在加载程序锁时执行编译为 Microsoft 中间语言（MSIL）的函数（ `DllMain` 例如，在静态初始值设定项中或在静态初始值设定项中），它可能会导致死锁。 假设 MSIL 函数引用未加载的程序集中的类型。 CLR 会尝试自动加载该程序集，这可能要求 Windows 加载程序在加载程序锁上阻止。 发生死锁，因为加载程序锁已由调用序列中前面的代码持有。 但是，在加载程序锁下执行 MSIL 不能保证发生死锁，这使得这种情况很难诊断和修复。 在某些情况下，例如，当被引用类型的 DLL 不包含本机构造并且其所有依赖项都不包含本机结构时，加载被引用类型的 .NET 程序集不需要 Windows 加载程序。 此外，所需的程序集或其混合本机/.NET 依赖项可能已经由其他代码加载了。 因此，死锁情况很难预测，它在很大程度上取决于目标计算机的配置。
 
 - 其次，在 .NET Framework 的1.0 和1.1 版本中加载 Dll 时，CLR 假定未持有加载程序锁，并且在加载程序锁下执行了若干无效操作。 假设加载程序锁不是纯 .NET Dll 的有效假设，但由于混合 Dll 执行本机初始化例程，因此它们需要本机 Windows 加载程序，因此加载程序锁。 因此，即使开发人员在 DLL 初始化期间并未尝试执行任何 MSIL 函数，.NET Framework 1.0 和 1.1 版中仍有可能发生不确定的死锁。
 
@@ -39,7 +39,7 @@ Windows 加载程序保证在初始化之前，没有代码可以访问该 DLL �
 
 - CLR 在加载混合 DLL 时不再作出错误的假定。
 
-- 非托管初始化和托管初始化在两个不同的阶段执行。 将首先执行非托管初始化（通过 DllMain），然后通过进行托管初始化。NET-支持 `.cctor` 构造。 后者对于用户完全透明，除非使用的是 **/Zl** 或 **/NODEFAULTLIB** 。 有关更多信息，请参阅[/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md) 和 [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) 。
+- 非托管初始化和托管初始化在两个不同的阶段执行。 将首先执行非托管初始化（通过 DllMain），然后通过进行托管初始化。支持 NET 的 `.cctor` 构造。 后者对于用户完全透明，除非使用的是 **/Zl** 或 **/NODEFAULTLIB** 。 有关更多信息，请参阅[/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md) 和 [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) 。
 
 加载程序锁还是会出现，但现在它的出现是重复出现的，因而可以检测到。 如果 `DllMain` 包含 MSIL 指令，编译器将生成警告[编译器警告（等级1） C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)。 CRT 或 CLR 都将尝试检测并报告在加载程序锁下执行 MSIL 的企图。 CRT 检测导致运行时诊断 C 运行时错误 R6033。
 
@@ -51,7 +51,7 @@ Windows 加载程序保证在初始化之前，没有代码可以访问该 DLL �
 
 ### <a name="dllmain"></a>DllMain
 
-`DllMain` 函数是 DLL 的用户定义入口点。 除非用户指定，否则，每当进程或线程附加到包含 DLL 或从包含 DLL 中分离时，都会调用 `DllMain` 。 由于这种调用可以在加载程序锁被保留时发生，因此不应将用户提供的 `DllMain` 函数编译为 MSIL。 此外，以 `DllMain` 为根的调用树中的函数不能编译为 MSIL。 若要在此处解决问题，则应使用 #pragma `DllMain` 来修改定义 `unmanaged`的代码块。 对于由 `DllMain` 调用的每个函数，应执行同样的操作。
+`DllMain`函数是 DLL 的用户定义入口点。 除非用户指定，否则，每当进程或线程附加到包含 DLL 或从包含 DLL 中分离时，都会调用 `DllMain` 。 由于这种调用可以在加载程序锁被保留时发生，因此不应将用户提供的 `DllMain` 函数编译为 MSIL。 此外，以 `DllMain` 为根的调用树中的函数不能编译为 MSIL。 若要在此处解决问题，则应使用 #pragma `DllMain` 来修改定义 `unmanaged`的代码块。 对于由 `DllMain` 调用的每个函数，应执行同样的操作。
 
 如果这些函数必须调用的某个函数需要一个用于其他调用上下文的 MSIL 实现，可以使用一个会创建同一函数的 .NET 版本和本机版本的复制策略。
 
@@ -74,7 +74,7 @@ CObject o(arg1, arg2);
 CObject* op = new CObject(arg1, arg2);
 ```
 
-死锁风险取决于包含的模块是否使用 **/clr** 编译，以及是否会执行 MSIL。 具体来说，如果静态变量不使用 **/clr** 编译（或驻留在 #pragma `unmanaged` 块中），而初始化它所需的动态初始值设定项导致执行 MSIL 指令，则可能发生死锁。 这是因为，对于不使用 **/clr**编译的模块，静态变量的初始化由 DllMain 执行。 与此相反，使用 **/clr**编译的静态变量在非托管初始化阶段完成并且已释放加载程序锁之后由 `.cctor`初始化。
+死锁风险取决于包含的模块是否使用 **/clr** 编译，以及是否会执行 MSIL。 具体来说，如果静态变量不使用 **/clr** 编译（或驻留在 #pragma `unmanaged` 块中），而初始化它所需的动态初始值设定项导致执行 MSIL 指令，则可能发生死锁。 这是因为，对于不使用 **/clr**编译的模块，静态变量的初始化由 DllMain 执行。 相反，使用 **/clr**编译的静态变量将由初始化 `.cctor` ，在非托管初始化阶段完成并且加载程序锁已释放后。
 
 有许多解决方案可以解决由动态初始化静态变量引起的死锁（大致按照修复问题所需的时间顺序排列）：
 
@@ -86,9 +86,9 @@ CObject* op = new CObject(arg1, arg2);
 
 ### <a name="user-supplied-functions-affecting-startup"></a>影响启动的用户提供的函数
 
-在启动过程中，库依赖一些由用户提供的函数进行初始化。 例如，当在中C++全局重载运算符（如 `new` 和 `delete` 运算符）时，用户提供的版本将在任何位置使用， C++包括在标准库初始化和析构中。 因此， C++标准库和用户提供的静态初始值设定项将调用这些运算符的任何用户提供的版本。
+在启动过程中，库依赖一些由用户提供的函数进行初始化。 例如，在 c + + 中全局重载运算符（如 **`new`** 和运算符）时，将在 **`delete`** 任何位置使用用户提供的版本，包括 c + + 标准库初始化和析构。 因此，c + + 标准库和用户提供的静态初始值设定项将调用这些运算符的任何用户提供的版本。
 
-如果将用户提供的版本编译为 MSIL，这些初始值设定项在加载程序锁被保留时会尝试执行 MSIL 指令。 用户提供的 `malloc` 具有相同的结果。 若要解决此问题，必须使用 #pragma `unmanaged` 指令将所有这些重载或用户提供的定义实现为本机代码。
+如果将用户提供的版本编译为 MSIL，这些初始值设定项在加载程序锁被保留时会尝试执行 MSIL 指令。 用户提供 `malloc` 的结果相同。 若要解决此问题，必须使用 #pragma `unmanaged` 指令将所有这些重载或用户提供的定义实现为本机代码。
 
 有关此方案的详细信息，请参阅[诊断障碍](#impediments-to-diagnosis)。
 
@@ -114,7 +114,7 @@ CObject* op = new CObject(arg1, arg2);
 
 在 Visual Studio 2005 之前，链接器只是选择这些语义上等效定义中的最大值，以适应前向声明，并为不同的源文件使用不同优化选项的情况。 它为混合本机/.NET Dll 创建问题。
 
-由于在启用和禁用了C++ **/clr**的文件中可以同时包含相同的标头，或者 #include 可以包装在 `#pragma unmanaged` 块中，因此可以同时具有在标头中提供实现的 MSIL 和本机版本的函数。 MSIL 和本机实现在有加载程序锁时的初始化方面具有不同的语义，而这实际上违反了单一定义规则。 因此，当链接器选择最大的实现时，即使在其他位置使用 #pragma unmanaged 指令将一个函数显式编译为本机代码，它也可能选择该函数的 MSIL 版本。 若要确保在 "加载程序锁定" 下永远不会调用 MSIL 版本的模板或内联函数，必须使用 `#pragma unmanaged` 指令修改在 "加载程序锁" 下调用的每个此类函数的每个定义。 如果标头文件来自第三方，则进行此更改的最简单方法是在出现问题的标头文件的 #include 指令前后推送和弹出 `#pragma unmanaged` 指令。 （有关示例，请参阅[托管和非托管](../preprocessor/managed-unmanaged.md)。）但是，此策略不适用于包含其他必须直接调用 .NET Api 的代码的标头。
+由于在启用和禁用了 **/clr**的 c + + 文件中可以同时包含相同的标头，或者可以在块中包装 #include，因此，可以 `#pragma unmanaged` 同时具有在标头中提供实现的 MSIL 和本机版本的函数。 MSIL 和本机实现在有加载程序锁时的初始化方面具有不同的语义，而这实际上违反了单一定义规则。 因此，当链接器选择最大的实现时，即使在其他位置使用 #pragma unmanaged 指令将一个函数显式编译为本机代码，它也可能选择该函数的 MSIL 版本。 若要确保在 "加载程序锁定" 下永远不会调用 MSIL 版本的模板或内联函数，则必须使用指令修改在 "加载程序锁" 下调用的每个此类函数的每个定义 `#pragma unmanaged` 。 如果标头文件来自第三方，则进行此更改的最简单方法是在出现 `#pragma unmanaged` 问题的标头文件的 #include 指令前后推送和弹出指令。 （有关示例，请参阅[托管和非托管](../preprocessor/managed-unmanaged.md)。）但是，此策略不适用于包含其他必须直接调用 .NET Api 的代码的标头。
 
 为方便用户处理加载程序锁，当两种版本同时出现时，链接器将选择本机实现，而不选择托管实现。 此默认值可避免上述问题。 但是，由于编译器中有两个未解决的问题，所以在此发行版中此规则有两种例外情况：
 
@@ -144,33 +144,33 @@ void DuringLoaderlock(C & c)
 
 ## <a name="how-to-debug-loader-lock-issues"></a>如何调试加载程序锁定问题
 
-在调用 MSIL 函数时，CLR 生成的诊断会导致 CLR 暂停执行。 反过来，在进程内运行调试C++对象时，这会导致可视化混合模式调试器挂起。 但是，当附加到进程时，不可能使用混合调试器获取调试对象的托管调用堆栈。
+在调用 MSIL 函数时，CLR 生成的诊断会导致 CLR 暂停执行。 反过来，在进程内运行调试对象时，还会导致 Visual C++ 混合模式调试器挂起。 但是，当附加到进程时，不可能使用混合调试器获取调试对象的托管调用堆栈。
 
 为确定在有加载程序锁时调用的具体 MSIL 函数，开发人员应该完成以下步骤：
 
 1. 确保 mscoree.dll 和 mscorwks.dll 的符号可用。
 
-   可以通过两种方式使符号可用。 首先，可将 mscoree.dll 和 mscorwks.dll 的 PDB 添加到符号搜索路径中。 若要添加它们，请打开符号搜索路径选项对话框。 （从 "**工具**" 菜单中，选择 "**选项**"。 在 "**选项**" 对话框的左窗格中，打开 "**调试**" 节点并选择 "**符号**"。）将 mscoree.dll 和 mscorwks.dll PDB 文件的路径添加到搜索列表。 将这些 PDB 安装到 %VSINSTALLDIR%\SDK\v2.0\symbols 中。 选择“确定”。
+   可以通过两种方式使符号可用。 首先，可将 mscoree.dll 和 mscorwks.dll 的 PDB 添加到符号搜索路径中。 若要添加它们，请打开符号搜索路径选项对话框。 （从 "**工具**" 菜单中，选择 "**选项**"。 在 "**选项**" 对话框的左窗格中，打开 "**调试**" 节点并选择 "**符号**"。）将 mscoree.dll 的路径和 mscorwks.dll PDB 文件添加到搜索列表。 将这些 PDB 安装到 %VSINSTALLDIR%\SDK\v2.0\symbols 中。 选择“确定”。
 
-   其次，可以从 Microsoft Symbol Server 中下载 mscoree.dll 和 mscorwks.dll 的 PDB。 若要配置 Symbol Server，请打开符号搜索路径选项对话框。 （从 "**工具**" 菜单中，选择 "**选项**"。 在 "**选项**" 对话框的左窗格中，打开 "**调试**" 节点并选择 "**符号**"。）将此搜索路径添加到搜索列表： `https://msdl.microsoft.com/download/symbols`。 向符号服务器缓存文本框中添加一个符号缓存目录。 选择“确定”。
+   其次，可以从 Microsoft Symbol Server 中下载 mscoree.dll 和 mscorwks.dll 的 PDB。 若要配置 Symbol Server，请打开符号搜索路径选项对话框。 （从 "**工具**" 菜单中，选择 "**选项**"。 在 "**选项**" 对话框的左窗格中，打开 "**调试**" 节点并选择 "**符号**"。）将此搜索路径添加到搜索列表： `https://msdl.microsoft.com/download/symbols` 。 向符号服务器缓存文本框中添加一个符号缓存目录。 选择“确定”。
 
 1. 将调试程序模式设置为仅限本机模式。
 
-   在解决方案中打开启动项目的 "**属性**" 网格。 选择 "**配置属性**" > **调试**。 将**调试器类型**设置为 "**仅限本机**"。
+   在解决方案中打开启动项目的 "**属性**" 网格。 选择“配置属性” > “调试”。 将**调试器类型**设置为 "**仅限本机**"。
 
 1. 启动调试器（F5）。
 
 1. 生成 **/clr**诊断时，选择 "**重试**"，然后选择 "**中断**"。
 
-1. 打开“调用堆栈”窗口。 （在菜单栏上，选择 "**调试**" > **Windows** > **调用堆栈**"。）令人讨厌的 `DllMain` 或静态初始值设定项用绿色箭头标识。 如果未标识出有问题的函数，必须执行以下步骤来找到该函数。
+1. 打开“调用堆栈”窗口。 （在菜单栏上，选择 "**调试**  >  "**Windows**  > **调用堆栈**。）`DllMain`使用绿色箭头标识有问题或静态初始值设定项。 如果未标识出有问题的函数，必须执行以下步骤来找到该函数。
 
-1. 打开 "**即时**" 窗口（在菜单栏上，选择 "**调试**" > **Windows** > "**即时**"。）
+1. 打开 "**即时**" 窗口（在菜单栏上，选择 "立即**调试**  >  **Windows**"  >  **Immediate**。）
 
-1. 在 "**即时**" 窗口中输入 `.load sos.dll` 以加载 SOS 调试服务。
+1. `.load sos.dll`在 "**即时**" 窗口中输入，加载 SOS 调试服务。
 
-1. 在 "**即时**" 窗口中输入 `!dumpstack`，以获取内部 **/clr**堆栈的完整列表。
+1. `!dumpstack`在 "**即时**" 窗口中输入，以获取内部 **/clr**堆栈的完整列表。
 
-1. 查找 _CorDllMain 中的第一个实例（最接近堆栈的底部）（如果 `DllMain` 导致此问题）或 _VTableBootstrapThunkInitHelperStub 或 GetTargetForVTableEntry （如果静态初始值设定项导致此问题）。 紧挨着位于此调用下方的堆栈项是 MSIL 实现的函数的调用，该函数曾试图在有加载程序锁时执行。
+1. 查找 _CorDllMain 中的第一个实例（如果 `DllMain` 导致问题）或 _VTableBootstrapThunkInitHelperStub 或 GetTargetForVTableEntry （如果静态初始值设定项导致此问题）。 紧挨着位于此调用下方的堆栈项是 MSIL 实现的函数的调用，该函数曾试图在有加载程序锁时执行。
 
 1. 请参阅上一步中标识的源文件和行号，并使用 "方案" 一节中所述的方案和解决方案更正问题。
 
@@ -178,9 +178,9 @@ void DuringLoaderlock(C & c)
 
 ### <a name="description"></a>说明
 
-下面的示例演示如何通过将代码从 `DllMain` 移动到全局对象的构造函数中来避免加载程序锁。
+下面的示例演示如何通过将代码从移 `DllMain` 到全局对象的构造函数中来避免加载程序锁。
 
-在此示例中，有一个全局托管对象，它的构造函数包含最初处于 `DllMain`中的托管对象。 此示例的第二部分引用程序集，并创建托管对象的一个实例以调用执行初始化的模块构造函数。
+在此示例中，有一个全局托管对象，它的构造函数包含最初在中的托管对象 `DllMain` 。 此示例的第二部分引用程序集，并创建托管对象的一个实例以调用执行初始化的模块构造函数。
 
 ### <a name="code"></a>代码
 

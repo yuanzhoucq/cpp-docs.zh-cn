@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224872"
 ---
 # <a name="error_category-class"></a>error_category 类
 
@@ -113,7 +113,7 @@ virtual bool equivalent(const error_code& _Code,
 
 #### <a name="return-value"></a>返回值
 
-如果类别和值相等，则**为 true** ;否则**为 false**。
+**`true`** 如果类别和值相等，则为;否则为 **`false`** 。
 
 #### <a name="remarks"></a>备注
 
@@ -179,7 +179,7 @@ bool operator==(const error_category& right) const;
 
 #### <a name="return-value"></a>返回值
 
-如果对象相等，则为 **true**；如果对象不相等，则为 **false**。
+**`true`** 如果对象相等，则为; 否则为。**`false`** 如果对象不相等，则为。
 
 #### <a name="remarks"></a>备注
 
@@ -200,7 +200,7 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="return-value"></a>返回值
 
-**true**如果 `error_category` 对象与右传递的对象不相等，则为 true `error_category` ; 否则为**false**。 *right*
+**`true`** 如果 `error_category` 对象与右传递的对象不相等， `error_category` 则*right*为; 否则为 **`false`** 。
 
 #### <a name="remarks"></a>备注
 
@@ -221,7 +221,7 @@ bool operator<(const error_category& right) const;
 
 #### <a name="return-value"></a>返回值
 
-如果 `error_category` 对象小于要比较的传入对象 `error_category`，则为 **true**；否则为 **false**。
+**`true`** 如果 `error_category` 对象小于 `error_category` 用于比较的对象，则为; 否则为。否则为 **`false`** 。
 
 #### <a name="remarks"></a>备注
 
@@ -243,4 +243,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>备注
 
-此类型定义是**int**的同义词。
+此类型定义是的同义词 **`int`** 。
