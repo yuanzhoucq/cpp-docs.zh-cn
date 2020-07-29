@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: af7088348cd3f52b38f0277fb7d0a973a1ca0e4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213650"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226888"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 运算符 (Microsoft::WRL)
 
@@ -53,9 +53,9 @@ WRL_NOTHROW bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*a*<br/>
+*的*<br/>
 左对象。
 
 *b*<br/>
@@ -63,7 +63,7 @@ WRL_NOTHROW bool operator!=(
 
 ## <a name="return-value"></a>返回值
 
-如果对象不相等，则为**true** ;否则**为 false**。
+**`true`** 如果对象不相等，则为; 否则为。否则为 **`false`** 。
 
 ## <a name="requirements"></a>要求
 
@@ -73,4 +73,4 @@ WRL_NOTHROW bool operator!=(
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)
