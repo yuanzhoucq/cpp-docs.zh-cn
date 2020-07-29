@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076947"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228747"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>编译器警告（等级4） C4471
 
 "*enumeration*"：未区分范围的枚举的前向声明必须有基础类型（假定为 int）
 
-找到未区分范围的枚举的前向声明，但未提供基础类型的说明符。 默认情况下， C++ Visual 假定 `int` 是枚举的基础类型。 如果在枚举定义中使用了不同的类型（例如，如果指定了不同的显式类型），或者如果初始值设定项隐式设置其他类型，则这可能会导致问题。 您还可能具有可移植性问题;其他编译器不假定 `int` 是枚举的基础类型。
+找到未区分范围的枚举的前向声明，但未提供基础类型的说明符。 默认情况下，Visual C++ 假设 **`int`** 是枚举的基础类型。 如果在枚举定义中使用了不同的类型（例如，如果指定了不同的显式类型），或者如果初始值设定项隐式设置其他类型，则这可能会导致问题。 您还可能具有可移植性问题;其他编译器不假定 **`int`** 为枚举的基础类型。
 
 默认情况下，此警告处于关闭状态。您可以使用/Wall 或/w*N*4471 在命令行上启用它，或在您的源文件中使用 #pragma[警告](../../preprocessor/warning.md)。
 

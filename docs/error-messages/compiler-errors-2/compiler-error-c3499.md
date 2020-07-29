@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228838"
 ---
 # <a name="compiler-error-c3499"></a>编译器错误 C3499
 
 已指定返回类型为 void 的 lambda 无法返回值
 
-当将 `void` 指定为返回类型的 lambda 表达式返回值时，编译器产生此错误；或者当 lambda 表达式包含多条语句并返回一个值，但是未指定其返回类型时也会产生此错误。
+当指定为返回类型的 lambda 表达式返回值时，编译器将生成此错误 **`void`** ; 或者当 lambda 表达式包含多个语句并返回值但未指定其返回类型时，编译器将生成此错误。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
