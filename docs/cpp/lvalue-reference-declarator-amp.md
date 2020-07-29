@@ -1,5 +1,5 @@
 ---
-title: Lvalue 引用声明符： &amp;
+title: Lvalue 引用声明符：&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30dd6ba9cb91395f72124cad71908a4e6bcdf7dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178062"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225977"
 ---
-# <a name="lvalue-reference-declarator-amp"></a>Lvalue 引用声明符： &amp;
+# <a name="lvalue-reference-declarator-amp"></a>Lvalue 引用声明符：&amp;
 
 保留对象的地址，但行为方式在语法上与对象相似。
 
@@ -30,7 +30,7 @@ type-id & cast-expression
 
 地址可转换为给定指针类型的任何对象也可转换为相似的引用类型。 例如，地址可转换为类型 `char *` 的任何对象也可转换为类型 `char &`。
 
-不要将引用声明与[地址运算符](../cpp/address-of-operator-amp.md)的使用混淆。 如果 `&`*标识符*前面有一个类型，如**int**或**char**，则*标识符*将声明为对该类型的引用。 当 `&`*标识符*前面没有类型时，使用的是地址为的运算符。
+不要将引用声明与[地址运算符](../cpp/address-of-operator-amp.md)的使用混淆。 如果 `&` *标识符*前面有一个类型（如 **`int`** 或 **`char`** ），则*标识符*将声明为对该类型的引用。 如果 `&` *标识符*前面没有类型，则使用的是地址运算符。
 
 ## <a name="example"></a>示例
 

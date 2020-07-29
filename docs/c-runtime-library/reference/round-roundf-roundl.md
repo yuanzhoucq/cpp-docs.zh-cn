@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916724"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226172"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -80,13 +80,13 @@ long double roundl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回**浮点**型和**长****双精度**值的**轮**数重载。 在 C 程序中， **round**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和值的**轮**的重载 **`float`** **`long double`** 。 在 C 程序中， **round**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**round**、 **roundf**、 **roundl**|\<math.h>|
 
@@ -133,7 +133,7 @@ roundl(-2.500000) is -3
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
-[fmod、fmodf](fmod-fmodf.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint、lrintf、lrintl、llrint、llrintf、llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround、lroundf、lroundl、llround、llroundf、llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
 [nearbyint、nearbyintf、nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>

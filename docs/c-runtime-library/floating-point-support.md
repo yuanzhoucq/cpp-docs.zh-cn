@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821507"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226224"
 ---
 # <a name="math-and-floating-point-support"></a>数学和浮点支持
 
@@ -21,11 +21,11 @@ ms.locfileid: "76821507"
 
 许多浮点数学库函数具有不同 CPU 体系结构的不同实现。 例如，相比 64 位 x64 CRT，32 位 x86 CRT 可能具有不同的实现。 此外，某些函数可能有适用于给定 CPU 体系结构的多个实现。 在运行时动态地选择最有效的实现，具体取决于受 CPU 支持的指令集。 例如，在 32 位 x86 CRT 中，一些函数同时具有 x87 实现和 SSE2 实现。 在支持 SSE2 的 CPU 上运行时，使用速度更快的 SSE2 实现。 在不支持 SSE2 的 CPU 上运行时，使用速度较慢的 x87 实现。 数学库函数的不同实现可能会使用不同的 CPU 指令和不同的算法来生成其结果，因此，这些函数可能会在各 CPU 中产生不同的结果。 在大多数情况下，结果在正确舍入结果的 +/-1 ulp 范围内，但实际结果在各 CPU 中可能会有所不同。
 
-以前的 16 位版本 Microsoft C/C ++ 和 Microsoft Visual C++ 支持长双精度类型作为 80 位精度浮点数据类型。 在更高版本的 Visual C++ 中，长双精度数据类型是与双精度类型相同的 64 位精度浮点数据类型。 编译器将长双精度数据类型和双精度数据类型视为不同类型，但长双精度函数与双精度函数相同。 CRT 为 ISO C99 源代码兼容性提供了数学函数的长双精度版本，但请注意，二进制表示形式可能不同于其他编译器。
+以前的16位版本的 Microsoft C/c + + 和 Microsoft Visual C++ 支持 **`long double`** 类型为80位精度浮点数据类型。 在 Visual C++ 的更高版本中， **`long double`** 数据类型是与类型相同的64位精度浮点数据类型 **`double`** 。 编译器将 **`long double`** 和视为 **`double`** 不同的类型，但 **`long double`** 函数与其对应项完全相同 **`double`** 。 CRT **`long double`** 为 ISO C99 源代码兼容性提供了数学函数的版本，但请注意，二进制表示形式可能不同于其他编译器。
 
 ## <a name="supported-math-and-floating-point-routines"></a>受支持的数学和浮点例程
 
-|例程所返回的值|“使用”|
+|例程所返回的值|用途|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|计算整数类型的绝对值
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|计算反余弦值
@@ -34,29 +34,29 @@ ms.locfileid: "76821507"
 [asinh、asinhf、asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|计算双曲反正弦值
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|计算反正切值
 [atanh、atanhf、atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|计算双曲反正切值
-[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为双精度型
-[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将字符串转换为双精度型
-[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为浮点型或长双精度型
+[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为**`double`**
+[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将字符串转换为**`double`**
+[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为 **`float`** 或**`long double`**
 [cbrt、cbrtf、cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|计算立方根
 [ceil、ceilf、ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|计算上限
 [_chgsign、_chgsignf、_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|计算相反数
 [_clear87、_clearfp](../c-runtime-library/reference/clear87-clearfp.md)|获取并清除浮点状态注册
 [_control87、\__control87_2、_controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)|获取并设置浮点控制字
-[_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|_controlfp 的安全版本
+[_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|_controlfp 的安全版本****
 [copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|返回一个值，该值具有一个自变量的数值和另一个自变量的符号
 [cos、cosf、cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|计算正弦值
 [cosh、coshf、coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|计算双曲正弦值
 [div、ldiv、lldiv](../c-runtime-library/reference/div.md)|计算两个整数值的商和余数
-[_ecvt](../c-runtime-library/reference/ecvt.md)、[ecvt](../c-runtime-library/reference/posix-ecvt.md)|将双精度型转换为字符串
-[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|_ecvt 的安全版本
+[_ecvt](../c-runtime-library/reference/ecvt.md)、[ecvt](../c-runtime-library/reference/posix-ecvt.md)|将转换 **`double`** 为字符串
+[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|_ecvt 的安全版本****
 [erf、erff、erfl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|计算错误函数
 [erfc、erfcf、erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|计算互补错误函数
-[exp、expf、expl](../c-runtime-library/reference/exp-expf.md)|计算指数 e<sup>x</sup>
+[exp、expf、expl](../c-runtime-library/reference/exp-expf.md)|计算指数 e<sup>x</sup>**
 [exp2、exp2f、exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)|计算指数 2<sup>x</sup>
-[expm1、expm1f、expm1l](../c-runtime-library/reference/expm1-expm1f-expm1l.md)|计算 e<sup>x</sup>-1
+[expm1、expm1f、expm1l](../c-runtime-library/reference/expm1-expm1f-expm1l.md)|计算 e<sup>x</sup>-1**
 [fabs、fabsf、fabsl](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|计算浮点类型的绝对值
 [_fcvt](../c-runtime-library/reference/fcvt.md)、[fcvt](../c-runtime-library/reference/posix-fcvt.md)|将浮点数转换为字符串
-[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|_fcvt 的安全版本
+[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|_fcvt 的安全版本****
 [fdim、fdimf、fdiml](../c-runtime-library/reference/fdim-fdimf-fdiml.md)|确定两个值之间的正数差
 [feclearexcept](../c-runtime-library/reference/feclearexcept1.md)|清除指定的浮点异常
 [fegetenv](../c-runtime-library/reference/fegetenv1.md)|存储当前的浮点环境
@@ -80,7 +80,7 @@ ms.locfileid: "76821507"
 [_fpreset](../c-runtime-library/reference/fpreset.md)|重置浮点环境
 [frexp、frexpf、frexpl](../c-runtime-library/reference/frexp.md)|获取浮点数的尾数和指数
 [_gcvt](../c-runtime-library/reference/gcvt.md)、[gcvt](../c-runtime-library/reference/posix-gcvt.md)|将浮点数转换为字符串
-[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|_gcvt 的安全版本
+[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|_gcvt 的安全版本****
 [_get_FMA3_enable、_set_FMA3_enable](../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)|获取或设置用于 x64 上 FMA3 指令的标志
 [hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)|计算斜边
 [ilogb、ilogbf、ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|计算以整数 2 为底的指数
@@ -91,18 +91,18 @@ ms.locfileid: "76821507"
 [isinf](../c-runtime-library/reference/isinf.md)|确定浮点值是否为无穷大
 [isnan、_isnan、_isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|测试 NaN 的浮点值
 [isnormal](../c-runtime-library/reference/isnormal.md)|测试浮点值是否既有限又不低于正常值
-[_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|计算贝塞尔函数
+[_j0、_j1 _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|计算贝塞尔函数
 [ldexp、ldexpf、ldexpl](../c-runtime-library/reference/ldexp.md)|计算 x*2<sup>n</sup>
 [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|计算 gamma 函数的绝对值的自然对数
-[llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|将浮点值舍入为最接近的超长值
-[llround、llroundf、llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|将浮点值舍入为最接近的超长值
+[llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|将浮点值舍入到最接近的 **`long long`** 值
+[llround、llroundf、llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|将浮点值舍入到最接近的 **`long long`** 值
 [log、logf、logl、log10、log10f、log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|计算自然对数或以 10 为底的对数
 [log1p、log1pf、log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)|计算 1+x 的自然对数
 [log2、log2f、log2l](../c-runtime-library/reference/log2-log2f-log2l.md)|计算以 2 为底的对数
 [logb、logbf、logbl、_logb、_logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|返回浮点值的指数
-[lrint、lrintf、lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|将浮点值舍入为最接近的长值
+[lrint、lrintf、lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|将浮点值舍入到最接近的 **`long`** 值
 [_lrotl、_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|向左或向右旋转整数值
-[lround、lroundf、lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|将浮点值舍入为最接近的长值
+[lround、lroundf、lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|将浮点值舍入到最接近的 **`long`** 值
 [_matherr](../c-runtime-library/reference/matherr.md)|默认数学错误处理程序
 [__max](../c-runtime-library/reference/max.md)|返回两个值中的较大者的宏
 [__min](../c-runtime-library/reference/min.md)|返回两个值中的较小者的宏
@@ -111,29 +111,29 @@ ms.locfileid: "76821507"
 [nearbyint、nearbyintf、nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)|返回舍入后的值
 [nextafter、nextafterf、nextafterl、_nextafter、_nextafterf](../c-runtime-library/reference/nextafter-functions.md)|返回下一个可表示的浮点值
 [nexttoward、nexttowardf、nexttowardl](../c-runtime-library/reference/nextafter-functions.md)|返回下一个可表示的浮点值
-[pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)|返回 x<sup>y</sup> 的值
+[pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)|返回 x<sup>y</sup>**** 的值
 [remainder、remainderf、remainderl](../c-runtime-library/reference/remainder-remainderf-remainderl.md)|计算两个浮点值的商的余数
 [remquo、remquof、remquol](../c-runtime-library/reference/remquo-remquof-remquol.md)|计算两个整数值的余数
-[rint、rintf、rintl](../c-runtime-library/reference/rint-rintf-rintl.md)|舍入浮点值
+[rint, rintf, rintl](../c-runtime-library/reference/rint-rintf-rintl.md)|舍入浮点值
 [_rotl、_rotl64、_rotr、_rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|旋转整数类型中的位
 [round、roundf、roundl](../c-runtime-library/reference/round-roundf-roundl.md)|舍入浮点值
 [_scalb、_scalbf](../c-runtime-library/reference/scalb.md)|按 2 的幂缩放参数
-[scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|将浮点数乘以 FLT_RADIX 的整数幂
+[scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|将浮点数乘以**FLT_RADIX**的整数幂
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|设置浮点控制字
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|启用或禁用 SSE2 指令
 [signbit](../c-runtime-library/reference/signbit.md)|测试浮点值的符号位
 [sin、sinf、sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|计算正弦值
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|计算双曲正弦值
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|计算平方根
-[_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|获取浮点状态字
-[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|将字符串转换为浮点型
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|将字符串转换为**长** **双精度**型
+[_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|获取浮点状态字
+[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|将字符串转换为**`float`**
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|将字符串转换为**`long double`**
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|计算正切值
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|计算双曲正切值
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|计算 gamma 函数
 [trunc、truncf、truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|截断小数部分
-[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将宽字符串转换为双精度型
-[_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|计算贝塞尔函数
+[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将宽字符串转换为**`double`**
+[_y0、_y1 _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|计算贝塞尔函数
 
 ## <a name="see-also"></a>另请参阅
 

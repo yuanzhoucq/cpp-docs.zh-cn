@@ -34,12 +34,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-ms.openlocfilehash: 4ce6e9aebe5d058143ad737f9c9db5bb68b30b1f
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: f57ad33fe09938e0f04d0ca2615898fa2cdbd642
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150716"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226198"
 ---
 # <a name="_open-_wopen"></a>_open、_wopen
 
@@ -60,7 +60,7 @@ int _wopen(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *filename*<br/>
 文件名。
@@ -87,7 +87,7 @@ int _wopen(
 
 ## <a name="remarks"></a>备注
 
-**_Open**函数打开*文件名*指定的文件，并按*oflag*指定的方式为读取或写入做好准备。 **_wopen**是 **_open**的宽字符版本; **_wopen**的*filename*参数是宽字符字符串。 否则 **_wopen**和 **_open**的行为相同。
+**_Open**函数打开*文件名*指定的文件，并按*oflag*指定的方式为读取或写入做好准备。 **_wopen**是 **_open**的宽字符版本;**_wopen**的*filename*参数是宽字符字符串。 否则 **_wopen**和 **_open**的行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -95,7 +95,7 @@ int _wopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_topen**|**_open**|**_open**|**_wopen**|
 
-*oflag*是一个由以下一个或多个清单常量或常量组合构成的整数表达式，在 \<fcntl.h> > 中定义。
+*oflag*是由中定义的一个或多个以下清单常量或常量组合构成的整数表达式 \<fcntl.h> 。
 
 |*oflag*常量|行为|
 |-|-|
@@ -104,14 +104,14 @@ int _wopen(
 | **_O_CREAT** | 创建文件并打开它以供写入。 如果*文件名*指定的文件存在，则不起作用。 指定 **_O_CREAT**时， *pmode*参数是必需的。 |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | 创建一个文件作为临时文件，如果可能，请不要将它刷新到磁盘中。 指定 **_O_CREAT**时， *pmode*参数是必需的。 |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | 创建一个文件作为临时文件；在关闭最后一个文件描述符时，删除该文件。 指定 **_O_CREAT**时， *pmode*参数是必需的。 |
-| **_O_CREAT** &#124; `_O_EXCL` | 如果*文件名*指定的文件存在，则返回一个错误值。 仅当与 **_O_CREAT**一起使用时才适用。 |
+| **_O_CREAT** &#124;`_O_EXCL` | 如果*文件名*指定的文件存在，则返回一个错误值。 仅当与 **_O_CREAT**一起使用时才适用。 |
 | **_O_NOINHERIT** | 阻止创建共享文件描述符。 |
 | **_O_RANDOM** | 指定缓存针对（但不限于）从磁盘的随机访问进行优化。 |
 | **_O_RDONLY** | 打开文件以供只读。 不能与 **_O_RDWR**或 **_O_WRONLY**一起指定。 |
 | **_O_RDWR** | 打开文件以供读取和写入。 不能与 **_O_RDONLY**或 **_O_WRONLY**一起指定。 |
 | **_O_SEQUENTIAL** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
 | **_O_TEXT** | 在文本（转换）模式下打开文件。 （有关详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md)。） |
-| **_O_TRUNC** | 打开文件并将其长度截断为零；该文件必须具有写入权限。 不能与 **_O_RDONLY**一起指定。 与 **_O_CREAT**一起使用 **_O_TRUNC**会打开现有文件或创建文件。 **注意：** **_O_TRUNC**标志会销毁指定文件的内容。 |
+| **_O_TRUNC** | 打开文件并将其长度截断为零；该文件必须具有写入权限。 不能与 **_O_RDONLY**一起指定。 与 **_O_CREAT**一起使用 **_O_TRUNC**会打开现有文件或创建文件。 **注意：****_O_TRUNC**标志会销毁指定文件的内容。 |
 | **_O_WRONLY** | 打开文件以供只写。 不能与 **_O_RDONLY**或 **_O_RDWR**一起指定。 |
 | **_O_U16TEXT** | 在 Unicode UTF-16 模式下打开文件。 |
 | **_O_U8TEXT** | 在 Unicode UTF-8 模式下打开文件。 |
@@ -121,13 +121,13 @@ int _wopen(
 
 如果使用 **_O_WTEXT**打开要读取的文件，则 **_open**读取文件的开头并检查字节顺序标记（BOM）。 如果存在 BOM，则将该文件视为 UTF-8 或 UTF-16LE，具体取决于该 BOM。 如果不存在 BOM，则将该文件视为 ANSI。 使用 **_O_WTEXT**打开文件进行写入时，将使用 utf-16。 无论以前的设置或字节顺序标记如何，如果使用 **_O_U8TEXT** ，则文件始终以 utf-8 形式打开;如果使用 **_O_U16TEXT** ，则文件始终以 utf-16 的形式打开。
 
-当使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型**wchar_t**的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型**wchar_t**的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
+当使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型的 utf-16 数据 **`wchar_t`** 。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型的 UTF-16 数据的缓冲区 **`wchar_t`** 。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
 
-如果通过 **_O_WRONLY** |  **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用 **_open** ，它首先会尝试打开文件进行读取和写入、读取 BOM，然后将其重新打开以进行写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
+如果 **_open**通过 **_O_WRONLY**  |  **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用 _open，它将首先尝试打开文件以进行读取和写入、读取 BOM，然后将其重新打开以进行写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
 
 当使用两个或多个清单常量构成*oflag*参数时，这些常量将与按位 "或" 运算符（ **&#124;** ）组合在一起。 有关二进制模式和文本模式的讨论，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 
-仅当指定 **_O_CREAT**时， *pmode*参数是必需的。 如果文件已存在，则会忽略*pmode* 。 否则， *pmode*将指定在首次关闭新文件时设置的文件权限设置。 **_open**在设置权限之前将当前文件权限掩码应用到*pmode* 。 （有关详细信息，请参阅[_umask](umask.md)。）*pmode*是一个整数表达式，它包含在 \<sys\stat.h > 中定义的以下一个或两个清单常量。
+仅当指定 **_O_CREAT**时， *pmode*参数是必需的。 如果文件已存在，则会忽略*pmode* 。 否则， *pmode*将指定在首次关闭新文件时设置的文件权限设置。 **_open**在设置权限之前将当前文件权限掩码应用到*pmode* 。 （有关详细信息，请参阅[_umask](umask.md)。）*pmode*是一个整数表达式，它包含在中定义的以下一个或两个清单常量 \<sys\stat.h> 。
 
 |*pmode*|含义|
 |-|-|
@@ -135,18 +135,18 @@ int _wopen(
 | **_S_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
-当提供两个常量时，它们将与按位 "或" 运算符 **&#124;** （）联接。 在 Windows 中，所有文件均可读；不会提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** | 的模式 **_S_IWRITE**是等效的。
+当提供两个常量时，它们将与按位 "或" 运算符联接（ **&#124;** ）。 在 Windows 中，所有文件均可读；不会提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD**  |  **_S_IWRITE**的模式是等效的。
 
 如果为*pmode*指定了 **_S_IREAD**和 **_S_IWRITE**的某个组合以外的值（即使它将在另一个操作系统中指定有效的*pmode* ），或者指定了除允许的*oflag*值以外的任何值，则该函数将在调试模式下生成断言并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并将**errno**设置为**EINVAL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
-|**_open**|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|
-|**_wopen**|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|
+|**_open**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
+|**_wopen**|\<io.h> 或 \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 
-**_open**和 **_wopen**是 Microsoft 扩展。 有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_open**和 **_wopen**是 Microsoft 扩展。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -193,19 +193,19 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Open succeeded on input file
 Open succeeded on output file
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[低级别 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>
 [_close](close.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_dup、_dup2](dup-dup2.md)<br/>
-[fopen、_wfopen_wfopen](fopen-wfopen.md)<br/>
+[fopen、_wfopen](fopen-wfopen.md)<br/>
 [_sopen、_wsopen](sopen-wsopen.md)<br/>

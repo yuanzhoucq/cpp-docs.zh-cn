@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7437f4e1f6874d4c708780a146e1761ac6d98305
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225730"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 类
 
@@ -42,19 +42,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 名称                                                                                                     | 说明
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[模块：：通用释放程序：：通用释放程序](#genericreleasenotifier-genericreleasenotifier) | 初始化 `Module::GenericReleaseNotifier` 类的新实例。
+[Module：： GenericReleaseNotifier：： GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | 初始化 `Module::GenericReleaseNotifier` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                                     | 说明
+“属性”                                                                     | 说明
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[模块：：通用释放程序：：调用](#genericreleasenotifier-invoke) | 调用与当前`Module::GenericReleaseNotifier`对象关联的事件处理程序。
+[Module：： GenericReleaseNotifier：： Invoke](#genericreleasenotifier-invoke) | 调用与当前对象关联的事件处理程序 `Module::GenericReleaseNotifier` 。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
 名称                                                                          | 说明
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[模块：：通用释放程序：：callback_](#genericreleasenotifier-callback) | 保存与当前`Module::GenericReleaseNotifier`对象关联的 lambda、functor 或指向函数的指针事件处理程序。
+[Module：： GenericReleaseNotifier：： callback_](#genericreleasenotifier-callback) | 保存与当前对象相关联的 lambda、函子或指向函数的指针事件处理程序 `Module::GenericReleaseNotifier` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -64,19 +64,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 模块.h
+**标头：** 模块。h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>模块：：通用释放程序：：callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>Module：： GenericReleaseNotifier：： callback_
 
-保存与当前`Module::GenericReleaseNotifier`对象关联的 lambda、functor 或指向函数的指针事件处理程序。
+保存与当前对象相关联的 lambda、函子或指向函数的指针事件处理程序 `Module::GenericReleaseNotifier` 。
 
 ```cpp
 T callback_;
 ```
 
-## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>模块：：通用释放程序：：通用释放程序
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>Module：： GenericReleaseNotifier：： GenericReleaseNotifier
 
 初始化 `Module::GenericReleaseNotifier` 类的新实例。
 
@@ -89,15 +89,15 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>参数
 
-*回调 (callback)*<br/>
-可以使用括号函数运算符 （）`()`调用的 lambda、functor 或指针到函数事件处理程序。
+*拨*<br/>
+一个 lambda、函子或指向函数的事件处理程序，可使用括号函数运算符（）进行调用 `()` 。
 
-*释放*<br/>
-指定`true`以启用调用基础[模块：：释放说明器：：：释放（）](module-releasenotifier-class.md#releasenotifier-release)方法;否则，指定`false`。
+*拆卸*<br/>
+指定 **`true`** 以启用对基础[模块：： ReleaseNotifier：： Release （）](module-releasenotifier-class.md#releasenotifier-release)方法的调用; 否则指定 **`false`** 。
 
-## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>模块：：通用释放程序：：调用
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>Module：： GenericReleaseNotifier：： Invoke
 
-调用与当前`Module::GenericReleaseNotifier`对象关联的事件处理程序。
+调用与当前对象关联的事件处理程序 `Module::GenericReleaseNotifier` 。
 
 ```cpp
 void Invoke();

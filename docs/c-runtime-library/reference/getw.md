@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226211"
 ---
 # <a name="_getw"></a>_getw
 
@@ -58,13 +58,13 @@ int _getw(
 
 ## <a name="remarks"></a>备注
 
-**_Getw**函数从与*流*关联的文件中读取**int**类型的下一个二进制值，并递增关联的文件指针（如果有）以指向下一个未读字符。 **_getw**不假定流中项的任何特殊对齐方式。 与 **_getw**之间可能会发生移植问题，因为**int**类型的大小和**int**类型中的字节顺序因系统而异。
+**_Getw**函数 **`int`** 从与*流*关联的文件中读取类型的下一个二进制值，并递增关联的文件指针（如果有）以指向下一个未读字符。 **_getw**不假定流中项的任何特殊对齐方式。 由于与系统之间的类型 **_getw**大小 **`int`** 和字节顺序不同，因此可能会在 _getw 中发生移植问题 **`int`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
