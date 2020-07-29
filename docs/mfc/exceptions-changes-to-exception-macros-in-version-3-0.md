@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 25095257096efd869e237383c5cd202ae4e602c2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 72b343641b0b43d408c5820ca2a2af1de94ce327
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620174"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225054"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常：3.0 版本中对异常宏的修改
 
@@ -34,7 +34,7 @@ ms.locfileid: "84620174"
 
 [!code-cpp[NVC_MFCExceptions#1](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-此代码在版本3.0 中的行为不同，因为控件始终传递到具有匹配的异常声明的第一个**catch**块。 Throw 表达式的结果
+此代码在版本3.0 中的行为不同，因为控件始终传递到 **`catch`** 具有匹配的异常声明的第一个块。 Throw 表达式的结果
 
 [!code-cpp[NVC_MFCExceptions#19](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 

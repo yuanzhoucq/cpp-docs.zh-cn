@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 9a22bdda407b02b8723b7198d62289d39f62792d
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: a02b69981d3cf1d35a6700261fc5142cfa8ec8e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180963"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225353"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>编译器警告（等级 1）C4750
 
-> "*identifier*"：使用 _alloca ( # A1 内联到循环中的函数
+> "*identifier*"：将 _alloca （）内联到循环中的函数
 
 ## <a name="remarks"></a>备注
 
@@ -34,7 +34,7 @@ ms.locfileid: "86180963"
 
 ## <a name="example"></a>示例
 
-下面的代码示例在循环中调用 `MyFunction` ，并且 `MyFunction` 调用 `_alloca` 函数。 `__forceinline` 修饰符导致 `_alloca` 函数内联扩展。
+下面的代码示例在循环中调用 `MyFunction` ，并且 `MyFunction` 调用 `_alloca` 函数。 **`__forceinline`** 修饰符导致函数内联扩展 `_alloca` 。
 
 ```cpp
 // c4750.cpp

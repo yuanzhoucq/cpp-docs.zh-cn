@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: 2424d076be0914a68c3227566cb851b7ab64cc0f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17a33f7c55fa2825eae1c7d8b9d8ab78e4ed5274
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175033"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225327"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>编译器警告（等级 1）C4807
 
 “operation”: 类型“type”与类型“type”的有符号位域的混合不安全
 
-在将一位有符号位域与 `bool` 变量进行比较时生成此警告。 因为一位有符号位域只能包含值 -1 或 0，所以将其与 `bool`比较很危险。 将 `bool` 与一位无符号位域进行混合不生成警告，因为它们与 `bool` 相同，只包含 0 或 1。
+将一位有符号位域与变量进行比较时，将生成此警告 **`bool`** 。 因为一位有符号位域只能包含值-1 或0，所以将其与进行比较是危险的 **`bool`** 。 不会生成有关混合 **`bool`** 和一位无符号位域的警告，因为它们与相同， **`bool`** 并且只能包含0或1。
 
 ## <a name="example"></a>示例
 

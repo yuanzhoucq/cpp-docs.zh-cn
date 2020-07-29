@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: 2574ba5a10bbf5eddc68d6e0265d5dfc99c6d8fc
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b3331c17fc2313cbd6146db3beb015cd8d8c1eeb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221453"
 ---
 # <a name="finally"></a>finally
 
-除了 `try` 和 `catch` 子句外，CLR 异常处理还支持 `finally` 子句。 语义与结构化异常处理（SEH）中的 `__finally` 块相同。 `__finally` 块可以遵循 `try` 或 `catch` 块。
+除 **`try`** 和子句外 **`catch`** ，CLR 异常处理还支持 **`finally`** 子句。 语义与 **`__finally`** 结构化异常处理（SEH）中的块完全相同。 **`__finally`** 块可以跟在 **`try`** 或块之后 **`catch`** 。
 
 ## <a name="remarks"></a>备注
 
-`finally` 块的用途是在发生异常后清理剩余的资源。 请注意，即使未引发异常，也始终会执行 `finally` 块。 仅当关联的 `try` 块内引发了托管异常时，才会执行 `catch` 块。
+此块的用途 **`finally`** 是在发生异常后清理剩余的资源。 请注意， **`finally`** 即使未引发异常，也始终会执行块。 **`catch`** 仅当关联的块中引发了托管异常时，才会执行块 **`try`** 。
 
-`finally` 是区分上下文的关键字;有关详细信息，请参阅[上下文相关的关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。
+`finally`是上下文相关的关键字;有关详细信息，请参阅[上下文相关的关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个简单的 `finally` 块：
+下面的示例演示一个简单的 **`finally`** 块：
 
 ```cpp
 // keyword__finally.cpp

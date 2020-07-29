@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 3f16ea3ad77c676695a9d5ca6e2deb10637de455
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621187"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224989"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 
@@ -93,13 +93,13 @@ ActiveX 控件的一个功能更强大的用途是数据绑定，它允许控件
 
 1. 在 "**属性名称**" 框中键入属性名称。 在 `MyProp` 此示例中使用。
 
-1. 从 "**属性类型**" 下拉列表框中选择一种数据类型。 对于本示例，请使用**short** 。
+1. 从 "**属性类型**" 下拉列表框中选择一种数据类型。 在 **`short`** 此示例中使用。
 
 1. 对于“实现类型” ****，请单击“Get/Set 方法” ****。
 
 1. 从 "IDL 特性" 选项卡中选择以下复选框：可**绑定**、 **requestedit**、 **displaybind**和**defaultbind** ，以将特性添加到项目的中的属性定义。IDL 文件。 这些属性使控件对用户可见，并使 stock 属性成为默认的可绑定属性。
 
-1. 单击“完成”。
+1. 单击 **“完成”** 。
 
 1. 修改函数的主体， `SetMyProp` 使其包含以下代码：
 

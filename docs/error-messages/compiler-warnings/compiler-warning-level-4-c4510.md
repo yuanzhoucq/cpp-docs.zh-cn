@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4510
 ms.assetid: fd28d1d4-ad27-4dad-94c0-9dba46c93180
-ms.openlocfilehash: 05a6d0fe42d8247d3328506d8772b2fa77b5703c
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: e4bb688266d9fe638978d2d3fa2666b83b3e6cc9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230389"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225249"
 ---
 # <a name="compiler-warning-level-4-c4510"></a>编译器警告（等级 4）C4510
 
@@ -22,7 +22,7 @@ ms.locfileid: "71230389"
 
 有几种情况会阻止编译器生成默认构造函数，包括：
 
-- **常量**数据成员。
+- **`const`** 数据成员。
 
 - 一个引用的数据成员。
 

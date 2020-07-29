@@ -18,12 +18,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 1ecf1c08164d1a760fce62457a6019e767ed2605
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225041"
 ---
 # <a name="memory-management-frame-allocation"></a>内存管理：帧分配
 
@@ -33,7 +33,7 @@ ms.locfileid: "84626305"
 
 [!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-对于局部函数变量，当函数存在时会发生此范围转换，但如果使用嵌套括号，则帧变量的范围会比函数的范围小。 此自动删除帧变量的功能是非常重要的。 对于简单的基元类型（例如**int**或**byte**）、数组或数据结构，自动删除只会回收变量使用的内存。 由于变量超出了范围，因此无法访问它。 不过，对于 C++ 对象，自动删除过程会更复杂一点。
+对于局部函数变量，当函数存在时会发生此范围转换，但如果使用嵌套括号，则帧变量的范围会比函数的范围小。 此自动删除帧变量的功能是非常重要的。 对于简单的基元类型（如 **`int`** 或**byte**）、数组或数据结构，自动删除只会回收变量使用的内存。 由于变量超出了范围，因此无法访问它。 不过，对于 C++ 对象，自动删除过程会更复杂一点。
 
 在将某个对象定义为帧变量时，会在遇到定义的位置自动调用其构造函数。 如果对象超出范围，则在回收此对象的内存之前将自动调用其析构函数。 此自动构造和析构非常方便，但您必须意识到自动调用，特别是对于析构函数。
 
