@@ -48,16 +48,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: 430d72595aadc677fe51d9ed868e4388071decec
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dc70cc5a2a7c1c8975e90d5e8d1d5225522e0592
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233933"
 ---
 # <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
 
-将字符串转换为无符号 **__int64**值。
+将字符串转换为 **`unsigned __int64`** 值。
 
 ## <a name="syntax"></a>语法
 
@@ -112,7 +112,7 @@ unsigned __int64 _wcstoui64(
 
 ## <a name="remarks"></a>备注
 
-**_Strtoui64**函数将*strSource*转换为**无符号** **__int64**。 **_wcstoui64**是 **_strtoui64**的宽字符版本;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+**_Strtoui64**函数将*strSource*转换为 **`unsigned __int64`** 。 **_wcstoui64**是 **_strtoui64**的宽字符版本;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
 
 这两个函数在其无法识别为数字一部分的第一个字符处停止读取字符串*strSource* 。 这可能是终止 null 字符，也可能是大于或等于*base*的第一个数字字符。
 
@@ -131,13 +131,13 @@ unsigned __int64 _wcstoui64(
 
 **_strtoui64**要求*strSource*指向以下格式的字符串：
 
-> [*空格*][{**+** &#124; **-**}][**0** [{ **x** &#124; **x** }]] [*数字*&#124;*字母*]
+> [*空格*][{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*数字*&#124;*字母*]
 
 *空白*可能包含被忽略的空格和制表符。 *数字*是一个或多个十进制数字。 *字母*是从 "a" 到 "z" （或 "a" 到 "z"）的一个或多个字母。 不符合此形式的第一个字符停止扫描。 如果*base*介于2和36之间，则将其用作数字的基数。 如果*base*为0，则使用*strSource*指向的字符串的初始字符来确定基。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*base*为0且扫描的第一个字符为 "0"，则假定八进制整数，且 "8" 或 "9" 字符会停止扫描。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strtoui64**|\<stdlib.h>|
 |**_wcstoui64**|\<stdlib.h> 或 \<wchar.h>|
@@ -169,7 +169,7 @@ u = 18446744073709551615
 ## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
 [字符串到数值函数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

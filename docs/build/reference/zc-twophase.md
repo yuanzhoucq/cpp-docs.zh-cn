@@ -9,16 +9,16 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 712503d08221d29a61323946008f2f36a467cb31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438642"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234323"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-（禁用两阶段名称查找）
 
-" **/Zc： twoPhase** " 选项在 " **/permissive-** " 下，通知编译器使用原始的、不一致的 Microsoft C++编译器行为来分析和实例化类模板和函数模板。
+" **/Zc： twoPhase** " 选项在 " **/permissive-**" 下，通知编译器使用原始的、不一致的 Microsoft c + + 编译器行为来分析和实例化类模板和函数模板。
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +26,7 @@ ms.locfileid: "79438642"
 
 ## <a name="remarks"></a>备注
 
-Visual Studio 2017 版本15.3 及更高版本：在[/Permissive-](permissive-standards-conformance.md)下，编译器将使用两阶段名称查找来查找模板名称。 如果还指定 **/zc： twoPhase-** ，则编译器会恢复为其以前的不一致类模板和函数模板名称解析和替换行为。 如果未指定 **/permissive-** ，则默认情况下不一致的行为。
+Visual Studio 2017 版本15.3 及更高版本：在[/Permissive-](permissive-standards-conformance.md)下，编译器将使用两阶段名称查找来查找模板名称。 如果还指定 **/zc： twoPhase-**，则编译器会恢复为其以前的不一致类模板和函数模板名称解析和替换行为。 如果未指定 **/permissive-** ，则默认情况下不一致的行为。
 
 版本10.0.15063.0 （创意者更新或 RS2）及更早版本中的 Windows SDK 头文件在一致性模式下不起作用。 **/Zc： twoPhase-** 当你使用 **/permissive-** 时，需要编译这些 SDK 版本的代码。 从版本10.0.15254.0 （秋季创意者更新或 RS3）开始的 Windows SDK 版本在一致性模式下正常工作。 它们不需要 **/zc： twoPhase** 。
 
@@ -42,7 +42,7 @@ Visual Studio 2017 版本15.3 及更高版本：在[/Permissive-](permissive-sta
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   模板声明、`template <typename T>`、类头 `class Derived`和基类列表 `public Base<T>` 进行了分析，但会将模板正文捕获为令牌流。
+   分析模板声明、 `template <typename T>` 类头 `class Derived` 和基类列表 `public Base<T>` ，但会将模板正文捕获为令牌流。
 
 - 分析函数模板时，编译器仅分析函数签名。 永远不会分析函数体。 相反，它被捕获为令牌流。
 
@@ -50,7 +50,7 @@ Visual Studio 2017 版本15.3 及更高版本：在[/Permissive-](permissive-sta
 
 此行为的另一个效果是重载解决方案。 由于在实例化的位置扩展令牌流的方式，出现非标准行为。 在模板声明中看不到的符号在实例化时可能可见。 这意味着它们可以参与重载决策。 你可能会发现模板更改行为的方式取决于模板定义中不可见的代码，而不是标准。
 
-例如，考虑此代码：
+例如，假设有以下代码：
 
 ```cpp
 // zctwophase.cpp
@@ -92,7 +92,7 @@ zctwophase.cpp
 Microsoft one-phase
 ```
 
-当在 **/permissive-** 下的一致性模式下进行编译时，此程序将打印 "`Standard two-phase`"，因为当编译器到达模板时，`func` 的第二个重载不可见。 如果添加 **/zc： twoPhase**，程序将打印 "`Microsoft one-phase`"。 输出与未指定 **/permissive-** 时相同。
+当在 **/permissive-** 下的一致性模式下进行编译时，此程序将打印 " `Standard two-phase` "，因为 `func` 当编译器到达模板时，的第二个重载不可见。 如果添加 **/zc： twoPhase-**，程序将打印 " `Microsoft one-phase` "。 输出与未指定 **/permissive-** 时相同。
 
 *依赖名称*是依赖于模板参数的名称。 在 **/zc： twoPhase-** 下，这些名称还具有不同的查找行为。 在一致性模式下，依赖名称不会绑定到模板的定义点。 相反，编译器会在实例化模板时对其进行查找。 对于具有依赖函数名称的函数调用，该名称将绑定到模板定义中的调用站点上可见的函数。 自变量相关查找的其他重载将添加到模板定义的点，并在模板实例化的点添加。
 
@@ -150,21 +150,21 @@ func(int)
 NS::func(NS::S)
 ```
 
-在 **/permissive-** 下的一致性模式下，调用 `tfunc(1729)` 解析 `void func(long)` 重载。 它不会解析 `void func(int)` 重载，如 **/zc： twoPhase-** 。 这是因为非限定的 `func(int)` 是在模板定义之后声明的，不能通过依赖于参数的查找找到。 但 `void func(S)` 参与参数依赖的查找，因此它将添加到调用 `tfunc(s)`的重载集，即使它是在模板函数之后声明的。
+在 **/permissive-** 下的一致性模式下，调用 `tfunc(1729)` 解析为 `void func(long)` 重载。 它不会解析为 `void func(int)` 重载，如 **/Zc： twoPhase-**。 这是因为非限定 `func(int)` 是在定义模板后声明的，因此它不是通过依赖于参数的查找找到的。 但 `void func(S)` 参与了依赖于参数的查找，因此它将被添加到调用的重载集 `tfunc(s)` ，即使它是在模板函数之后声明的。
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>更新代码以实现两阶段一致性
 
-旧版本的编译器不需要关键字 `template` 和 `typename` 在C++标准需要它们的地方。 某些位置需要这些关键字，以消除编译器在查找的第一个阶段时应如何分析依赖名称。 例如：
+较早版本的编译器不需要关键字 **`template`** ，且 **`typename`** 在 c + + 标准位置需要它们。 某些位置需要这些关键字，以消除编译器在查找的第一个阶段时应如何分析依赖名称。 例如：
 
 `T::Foo<a || b>(c);`
 
-一致性编译器会将 `Foo` 分析为 `T`范围内的变量，这意味着此代码是一个逻辑或表达式，其 `T::foo < a` 为左操作数，而 `b > (c)` 作为右操作数。 如果希望将 `Foo` 用作函数模板，则必须通过添加 `template` 关键字来指示它是模板：
+一致性编译器在的 `Foo` 范围内分析为变量，这 `T` 意味着此代码是一个逻辑 or 表达式，其中包含 `T::foo < a` 为左操作数和 `b > (c)` 右操作数。 如果要使用 `Foo` 作为函数模板，则必须通过添加关键字来指示它是模板 **`template`** ：
 
 `T::template Foo<a || b>(c);`
 
-在 Visual Studio 2017 版本15.3 及更高版本中，当指定 **/permissive-** 和 **/zc： twoPhase**时，编译器将允许此代码，而不包含 `template` 关键字。 它将代码解释为带有 `a || b`的参数的函数模板调用，因为它仅以有限的方式分析模板。 在第一阶段中，根本不分析上述代码。 在第二阶段中，有足够的上下文可告诉 `T::Foo` 是模板而不是变量，因此编译器不会强制使用关键字。
+在 Visual Studio 2017 版本15.3 及更高版本中，当指定 **/permissive-** 和 **/zc： twoPhase**时，编译器允许此代码不带 **`template`** 关键字。 它将代码解释为对参数为的函数模板的调用 `a || b` ，因为它仅以有限的方式分析模板。 在第一阶段中，根本不分析上述代码。 在第二阶段中，有足够的上下文可告诉这 `T::Foo` 是一个模板而不是一个变量，因此编译器不会强制使用关键字。
 
-此行为还可通过以下方式查看：在函数模板正文、初始值设定项、默认参数和 noexcept 参数中的名称之前消除关键字 `typename`。 例如：
+还可以通过在 **`typename`** 函数模板主体、初始值设定项、默认参数和 noexcept 参数中的名称之前消除关键字来查看此行为。 例如：
 
 ```cpp
 template<typename T>
@@ -174,7 +174,7 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-如果不在函数体中使用关键字 `typename`，则此代码将在 **/Permissive-/zc： twoPhase**下进行编译，但不会在 **/permissive-** 单独使用。 需要 `typename` 关键字来指示 `TYPE` 依赖于。 由于不在 **/zc： twoPhase-** 下分析正文，因此编译器不需要关键字。 在 **/permissive-** 一致性模式下，没有 `typename` 关键字的代码会生成错误。 若要将代码迁移到 Visual Studio 2017 版本15.3 和更高版本中的符合性，请在缺少 `typename` 关键字时将其插入。
+如果不在 **`typename`** 函数体中使用关键字，则此代码将在 **/permissive-/Zc： twoPhase**下进行编译，但不是在 **/permissive-** 单独使用。 **`typename`** 关键字为指示依赖项是必需的 `TYPE` 。 由于不在 **/zc： twoPhase-** 下分析正文，因此编译器不需要关键字。 在 **/permissive-** 一致性模式下，不带关键字的代码会 **`typename`** 生成错误。 若要将代码迁移到 Visual Studio 2017 版本15.3 和更高版本中的符合性，请在 **`typename`** 缺少关键字的位置插入关键字。
 
 同样，请看下面的代码示例：
 
@@ -186,17 +186,17 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-在 **/Permissive-/zc： twoPhase**下，在较旧的编译器中，编译器仅要求第2行 `template` 关键字。 在一致性模式下，编译器现在还要求第4行中的 `template` 关键字，以指示 `T::X<T>` 为模板。 查找缺少此关键字的代码，并提供它以使你的代码符合标准。
+在 **/Permissive-/zc： twoPhase**下，在较旧的编译器中，编译器只需 **`template`** 第2行上的关键字。 在一致性模式下，编译器现在还需要 **`template`** 第4行的关键字来指示这 `T::X<T>` 是一个模板。 查找缺少此关键字的代码，并提供它以使你的代码符合标准。
 
-有关一致性问题的详细信息，请参阅[ C++ Visual Studio 中的一致性改进](../../overview/cpp-conformance-improvements.md)和[非标准行为](../../cpp/nonstandard-behavior.md)。
+有关一致性问题的详细信息，请参阅[Visual Studio 中的 c + + 一致性改进](../../overview/cpp-conformance-improvements.md)和[非标准行为](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择“配置属性” **“C/C++”** “命令行”属性页 >  > 。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 修改 "**附加选项**" 属性以包含 **/zc： twoPhase** ，然后选择 **"确定"** 。
+1. 修改 "**附加选项**" 属性以包含 **/zc： twoPhase** ，然后选择 **"确定"**。
 
 ## <a name="see-also"></a>另请参阅
 

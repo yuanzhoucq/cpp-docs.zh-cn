@@ -2,12 +2,12 @@
 title: 基于范围的 for 语句 (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1197080e2e96e0e5c51bc06e93026567a33c7842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188345"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223611"
 ---
 # <a name="range-based-for-statement-c"></a>基于范围的 for 语句 (C++)
 
@@ -15,18 +15,16 @@ ms.locfileid: "80188345"
 
 ## <a name="syntax"></a>语法
 
-```
-for ( for-range-declaration : expression )
-   statement
-```
+> **`for (`***对于范围声明* **`:`***表达式***`)`**\
+&emsp;*语句*
 
 ## <a name="remarks"></a>备注
 
-使用基于范围**的 for**语句来构造必须通过 "范围" 执行的循环，该循环定义为可循环访问的任何内容（例如 `std::vector`或任何其他C++标准库序列，其范围由 `begin()` 和 `end()`定义）。 `for-range-declaration` 部分中声明的名称是**for**语句的本地名称，不能在 `expression` 或 `statement`中重新声明。 请注意，在语句的 `for-range-declaration` 部分中， [auto](../cpp/auto-cpp.md)关键字是首选的。
+使用基于范围的 **`for`** 语句来构造必须通过*范围*执行的循环，该范围定义为可循环访问的任何内容，例如， `std::vector` 或其范围由和定义的任何其他 c + + 标准库序列 `begin()` `end()` 。 部分中声明的名称 `for-range-declaration` 是语句的本地名称 **`for`** ，不能在或中重新声明 `expression` `statement` 。 请注意，在 [`auto`](../cpp/auto-cpp.md) 语句的部分中，关键字是首选的 `for-range-declaration` 。
 
-**Visual Studio 2017 中的新增内容：** 基于范围的 for 循环不再需要 begin （）和 end （）返回相同类型的对象。 这使得 end() 能够返回类似于 Ranges-V3 方案中定义的 ranges 所使用的那种 sentinel 对象。 有关详细信息，请参阅 [Generalizing the Range-Based For Loop](https://wg21.link/p0184r0)（通用化基于范围的 for 循环）和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3)（GitHub 上的 range-v3 库）。
+**Visual Studio 2017 中的新增内容：** 基于范围的 **`for`** 循环不再要求 `begin()` 和 `end()` 返回相同类型的对象。 这允许 `end()` 返回一个 sentinel 对象，如范围-V3 建议中定义的范围所使用的。 有关详细信息，请参阅 GitHub 上[的通用化基于范围的 `For` 循环](https://wg21.link/p0184r0)和[范围-v3 库](https://github.com/ericniebler/range-v3)。
 
-此代码演示如何使用基于范围**的 for**循环来循环访问数组和向量：
+此代码演示如何使用基于范围的 **`for`** 循环来循环访问数组和向量：
 
 ```cpp
 // range-based-for.cpp
@@ -96,9 +94,9 @@ end of integer array test
 end of vector test
 ```
 
-执行 `statement` 中的其中一项时，基于范围**的 for**循环将终止：在基于范围**的 for**循环外部的标记语句的[break](../cpp/break-statement-cpp.md)、 [return](../cpp/return-statement-cpp.md)或[goto](../cpp/goto-statement-cpp.md) 。 基于范围**的 for**循环中的[continue](../cpp/continue-statement-cpp.md)语句仅终止当前迭代。
+**`for`** 当执行以下中的其中一项时，基于范围的循环将终止 `statement` ：将 [`break`](../cpp/break-statement-cpp.md) 、 [`return`](../cpp/return-statement-cpp.md) 或 [`goto`](../cpp/goto-statement-cpp.md) 添加到基于范围的循环之外的标记语句中 **`for`** 。 [`continue`](../cpp/continue-statement-cpp.md)基于范围的循环中的语句 **`for`** 仅终止当前迭代。
 
-请记住以下有关基于范围**的**内容：
+请记住以下有关基于范围的 **`for`** 内容：
 
 - 自动识别数组。
 
@@ -108,9 +106,9 @@ end of vector test
 
 ## <a name="see-also"></a>另请参阅
 
-[auto](../cpp/auto-cpp.md)<br/>
+[`auto`](../cpp/auto-cpp.md)<br/>
 [迭代语句](../cpp/iteration-statements-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
-[While 语句 (C++)](../cpp/while-statement-cpp.md)<br/>
-[do-while 语句 (C++)](../cpp/do-while-statement-cpp.md)<br/>
-[for 语句 (C++)](../cpp/for-statement-cpp.md)
+[`while`语句 (C++)](../cpp/while-statement-cpp.md)<br/>
+[`do-while`语句 (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[`for`语句 (C++)](../cpp/for-statement-cpp.md)

@@ -1,17 +1,17 @@
 ---
-title: 模板专用化 （C++）
+title: 模板特殊化 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 96f755b20e1de21eae47c4de0a181aa5d0738bf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330500"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223572"
 ---
-# <a name="template-specialization-c"></a>模板专用化 （C++）
+# <a name="template-specialization-c"></a>模板特殊化 (C++)
 
 类模板可以部分专用化，生成的类仍是模板。 在类似于下面的情况下，部分专用化允许为特定类型部分自定义模板代码：
 
@@ -68,7 +68,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 
 ## <a name="example"></a>示例
 
-如果必须采用任何类型的模板集合类`T`，可以创建采用任何指针类型的部分专用化`T*`。 以下代码演示了一个集合类模板 `Bag` 以及指针类型的部分专用化，在此专用化中，该集合在将指针类型复制到数组前取消引用它们。 该集合随后存储指向的值。 对于原始模板，只有指针本身将存储在集合中，从而使数据易受删除或修改。 在此特殊指针版本的集合中，添加了在 `add` 方法中检查 null 指针的代码。
+如果具有采用任何类型的模板集合类 `T` ，则可以创建采用任何指针类型的部分专用化 `T*` 。 以下代码演示了一个集合类模板 `Bag` 以及指针类型的部分专用化，在此专用化中，该集合在将指针类型复制到数组前取消引用它们。 该集合随后存储指向的值。 对于原始模板，只有指针本身将存储在集合中，从而使数据易受删除或修改。 在此特殊指针版本的集合中，添加了在 `add` 方法中检查 null 指针的代码。
 
 ```cpp
 // partial_specialization_of_class_templates2.cpp
@@ -180,7 +180,7 @@ Null pointer!
 
 ## <a name="example"></a>示例
 
-下面的示例定义了一个模板接受对任何两个类型，然后定义该模板类的部分专用化的类专用化，以便一种类型是**int**。该专用化定义了基于整数实现简单气泡排序的另一种排序方法。
+下面的示例定义了一个模板类，该类采用任意两种类型的对，然后定义该模板类的部分专用化，以便其中一个类型为 **`int`** 。 该专用化定义了基于整数实现简单气泡排序的另一种排序方法。
 
 ```cpp
 // partial_specialization_of_class_templates3.cpp

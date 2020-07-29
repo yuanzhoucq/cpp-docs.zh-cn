@@ -46,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915016"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234180"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -109,7 +109,7 @@ long double erfcl(
 
 互补高斯错误函数定义为 erf （x）。 **Erf**函数返回的值范围为-1.0 到1.0。 无错误返回。 **Erfc**函数返回0到2范围内的值。 如果*x*对于**erfc**太大，则将**errno**变量设置为**ERANGE**。
 
-由于 c + + 允许重载，因此可以调用**erf**和**erfc**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **erf**和**erfc**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的**erf**和**erfc**的重载 **`float`** **`long double`** 。 在 C 程序中， **erf**和**erfc**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

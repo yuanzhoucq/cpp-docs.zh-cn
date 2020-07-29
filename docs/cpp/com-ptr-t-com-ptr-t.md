@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180480"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233790"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -133,37 +133,37 @@ explicit _com_ptr_t(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pInterface*<br/>
 原始接口指针。
 
 *fAddRef*<br/>
-如果为 TRUE，则调用 `AddRef` 来递增封装的接口指针的引用计数。
+如果为 **`true`** ， `AddRef` 则调用来增加封装的接口指针的引用计数。
 
 *cp*<br/>
 一个 **_com_ptr_t**对象。
 
-*p*<br/>
+*h-p*<br/>
 原始接口指针，其类型不同于此 **_com_ptr_t**对象的智能指针类型。
 
 *varSrc*<br/>
 `_variant_t` 对象。
 
 *clsid*<br/>
-组件类的 `CLSID`。
+`CLSID`组件类的。
 
 *dwClsContext*<br/>
 运行可执行代码的上下文。
 
 *lpcStr*<br/>
-包含 `CLSID` （以 " **{** " 开头）或 `ProgID`的多字节字符串。
+包含 `CLSID` （以 "**{**" 开头）或的多字节字符串 `ProgID` 。
 
 *pOuter*<br/>
 [聚合](/windows/win32/com/aggregation)的外部未知。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

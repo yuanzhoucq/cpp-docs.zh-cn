@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920260"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234141"
 ---
 # <a name="_expand"></a>_expand
 
@@ -60,7 +60,7 @@ void *_expand(
 *memblock*<br/>
 指向之前已分配内存块的指针。
 
-size <br/>
+*大小*<br/>
 新大小（字节）。
 
 ## <a name="return-value"></a>返回值
@@ -71,7 +71,7 @@ size <br/>
 
 如果内存不足，无法将块展开到给定的大小，则该函数将返回**NULL**。 **_expand**从不返回扩展到小于请求的大小的块。 如果发生失败， **errno**将指示失败的性质。 有关**errno**的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要检查项的新大小，请使用 **_msize**。 若要获取指向非**void**类型的指针，请在返回值上使用类型转换。
+返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要检查项的新大小，请使用 **_msize**。 若要获取指向类型而非的指针 **`void`** ，请在返回值上使用类型转换。
 
 ## <a name="remarks"></a>备注
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178844"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223598"
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 
-表达式根据其运算符的优先级和分组来计算。 （[词法约定](../cpp/lexical-conventions.md)中的C++ [运算符优先级和结合](../cpp/cpp-built-in-operators-precedence-and-associativity.md)性，显示运算符对表达式施加的关系。）
+表达式根据其运算符的优先级和分组来计算。 （在[词法约定](../cpp/lexical-conventions.md)中，[运算符优先级和结合](../cpp/cpp-built-in-operators-precedence-and-associativity.md)性显示了 c + + 运算符对表达式施加的关系。）
 
 ## <a name="order-of-evaluation"></a>评估顺序
 
@@ -52,11 +52,11 @@ int main()
 
 1. 加法 (+) 具有第二高的优先级，因此，`a` 将与 `b` 和 `c` 的乘积相加。
 
-1. 左移（< <）在表达式中的优先级最低，但有两个匹配项。 由于左移运算符从左到右分组，因此先计算左子表达式，再计算右子表达式。
+1. 左移（<<）在表达式中的优先级最低，但有两个匹配项。 由于左移运算符从左到右分组，因此先计算左子表达式，再计算右子表达式。
 
 当使用括号为子表达式分组时，它们将更改表达式的计算优先级和顺序，如下图所示。
 
-![带括号的表达式的计算顺序](../cpp/media/vc38zv2.gif "带括号表达式的计算顺序") <br/>
+![带括号表达式的计算顺序](../cpp/media/vc38zv2.gif "带括号表达式的计算顺序") <br/>
 带有括号的表达式计算顺序
 
 类似于上图的表达式的计算纯粹是为了展示副作用 - 在本例中是将信息转移到标准输出设备。
@@ -69,10 +69,10 @@ int main()
 
 |应为类型|允许的类型|
 |-------------------|-------------------|
-|type|`const`*类型*<br /> `volatile`*类型*<br /> *type*&<br /> `const`*类型*&<br /> `volatile`*类型*&<br /> `volatile const`*类型*<br /> `volatile const`*类型*&|
-|*类型*\*|*类型*\*<br /> `const`*类型*\*<br /> `volatile`*类型*\*<br /> `volatile const`*类型*\*|
-|`const`*类型*|type<br /> `const`*类型*<br />`const`*类型*&|
-|`volatile`*类型*|type<br /> `volatile`*类型*<br /> `volatile`*类型*&|
+|*type*|**`const`***类型*<br /> **`volatile`***类型*<br /> *type*&<br /> **`const`***类型*&<br /> **`volatile`***类型*&<br /> `volatile const`*类型*<br /> `volatile const`*类型*&|
+|*类型*\*|*类型*\*<br /> **`const`***类型*\*<br /> **`volatile`***类型*\*<br /> `volatile const`*类型*\*|
+|**`const`***类型*|*type*<br /> **`const`***类型*<br />**`const`***类型*&|
+|**`volatile`***类型*|*type*<br /> **`volatile`***类型*<br /> **`volatile`***类型*&|
 
 由于上述规则始终可以组合使用，因此，可以在指针所需的位置提供指向可变对象的 const 指针。
 
@@ -88,15 +88,15 @@ func( i, ++i );
 
 C++ 语言不保证计算函数调用的参数的顺序。 因此，在前面的示例中，`func` 的参数可以接受值 7 和 8 或 8 和 8，取决于参数是从左到右还是从右到左计算。
 
-## <a name="c-sequence-points-microsoft-specific"></a>C++序列点（Microsoft 特定）
+## <a name="c-sequence-points-microsoft-specific"></a>C + + 序列点（Microsoft 特定）
 
 在连续的“序列点”之间，表达式只能修改对象的值一次。
 
 C++ 语言定义当前未指定序列点。 Microsoft C++ 对涉及 C 运算符但不涉及重载运算符的任何表达式使用与 ANSI C 相同的序列点。 当重载运算符时，语义从运算符排序更改为函数调用排序。 Microsoft C++ 使用以下序列点：
 
-- 逻辑 "与" 运算符的左操作数（& &）。 完全计算逻辑“与”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“与”运算符的右操作数。
+- 逻辑 "与" 运算符的左操作数（&&）。 完全计算逻辑“与”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“与”运算符的右操作数。
 
-- 逻辑 "或" 运算符（&#124;&#124;）的左操作数。 完全计算逻辑“或”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“或”运算符的右操作数。
+- 逻辑 "或" 运算符的左操作数（&#124;&#124;）。 完全计算逻辑“或”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“或”运算符的右操作数。
 
 - 逗号运算符的左操作数。 完全计算逗号运算符的左操作数，并在继续之前完成所有副作用。 始终计算逗号运算符的两个操作数。
 

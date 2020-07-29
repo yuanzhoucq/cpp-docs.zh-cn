@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909650"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234167"
 ---
 # <a name="exp-expf-expl"></a>exp、expf、expl
 
@@ -77,7 +77,7 @@ long double expl(
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± Quiet NaN、不确定|None|_DOMAIN|
+|± Quiet NaN、不确定|无|_DOMAIN|
 |±无限大|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
@@ -86,7 +86,7 @@ long double expl(
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此你可以调用采用**浮点**或**长双精度**型参数的**exp**重载。 在 C 程序中， **exp**始终采用并返回**double**。
+C + + 允许重载，因此你可以调用采用或参数的**exp**的重载 **`float`** **`long double`** 。 在 C 程序中， **exp**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

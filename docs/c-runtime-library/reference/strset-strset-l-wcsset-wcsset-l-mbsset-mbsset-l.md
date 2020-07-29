@@ -67,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911115"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233998"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
@@ -130,7 +130,7 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strset**函数将*str*的所有字符（终止 null 字符除外）设置为*c*，并将其转换为**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的宽字符和多字节字符版本，参数和返回值的数据类型也有所不同。 否则这些函数具有相同行为。
+**_Strset**函数将*str*的所有字符（终止 null 字符除外）设置为*c*，并将其转换为 **`char`** 。 **_wcsset**和 **_mbsset_l**是 **_strset**的宽字符和多字节字符版本，参数和返回值的数据类型也有所不同。 否则这些函数具有相同行为。
 
 **_mbsset**验证其参数。 如果*str*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行， **_mbsset**将返回**NULL** ，并将**errno**设置为**EINVAL**。 **_strset**和 **_wcsset**不会验证其参数。
 
@@ -150,7 +150,7 @@ unsigned char *_mbsset_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strset**|\<string.h>|
 |**_strset_l**|\<tchar.h>|
@@ -187,7 +187,7 @@ After:  *******************************
 ## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>

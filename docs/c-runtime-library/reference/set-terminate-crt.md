@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234011"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -60,7 +60,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 在多线程环境中，终止单独为每个线程维护的函数。 每个新线程都需要安装自己的终止函数。 因此，每个线程都负责处理它自己的终止处理。
 
-**Terminate_function**类型在 EH 中定义。H 作为指向用户定义的终止函数的指针， *termFunction*返回**void**。 自定义函数*termFunction*不能采用任何参数，并且不应返回到其调用方。 如果是，则调用[abort](abort.md) 。 不能从*termFunction*内部引发异常。
+**Terminate_function**类型在 EH 中定义。H 作为指向用户定义的终止函数的指针， *termFunction*返回 **`void`** 。 自定义函数*termFunction*不能采用任何参数，并且不应返回到其调用方。 如果是，则调用[abort](abort.md) 。 不能从*termFunction*内部引发异常。
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -75,7 +75,7 @@ typedef void ( *terminate_function )( );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**set_terminate**|\<eh.h>|
 

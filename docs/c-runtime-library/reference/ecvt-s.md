@@ -30,16 +30,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915144"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234206"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
-将**双精度**数字转换为字符串。 这是 [_ecvt](ecvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
+将 **`double`** 数字转换为字符串。 这是 [_ecvt](ecvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -92,10 +92,10 @@ errno_t _ecvt_s(
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|返回值|*缓冲区*中的值|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**Null**|any|any|any|any|any|**EINVAL**|未修改。|
+|**NULL**|any|any|any|any|any|**EINVAL**|未修改。|
 |Not **NULL** （指向有效内存）|<=0|any|any|any|any|**EINVAL**|未修改。|
-|any|any|any|any|**Null**|any|**EINVAL**|未修改。|
-|any|any|any|any|any|**Null**|**EINVAL**|未修改。|
+|any|any|any|any|**NULL**|any|**EINVAL**|未修改。|
+|any|any|any|any|any|**NULL**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全问题
 

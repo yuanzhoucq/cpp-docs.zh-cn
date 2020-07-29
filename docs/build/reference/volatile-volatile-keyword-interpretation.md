@@ -13,46 +13,46 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c2c1cd477b424f56e66bd9246e7bde76ad06120
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316634"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223780"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile（volatile 关键字解释）
 
-指定如何[易失性](../../cpp/volatile-cpp.md)关键字将被解释。
+指定如何解释[volatile](../../cpp/volatile-cpp.md)关键字。
 
 ## <a name="syntax"></a>语法
 
-> **/volatile:**{**iso**|**ms**}
+> **/volatile：**{**iso** | **ms**}
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-**/volatile: iso**<br/>
-选择严格`volatile`语义根据 ISO 标准的定义C++语言。 获取/释放语义无法保证可变访问。 如果编译器面向 ARM，这是默认的解释`volatile`。
+**/volatile： iso**<br/>
+选择 **`volatile`** ISO 标准 c + + 语言定义的严格语义。 在易失性访问上不保证获取/释放语义。 如果编译器面向 ARM，则这是的默认解释 **`volatile`** 。
 
-**/volatile:ms**<br/>
-选择 Microsoft 扩展`volatile`语义，这将添加内存顺序调整保证超出 ISO 标准C++语言。 获取/释放语义可保证可变访问。 但是，此选项还强制编译器生成硬件内存障碍，这可能会在 ARM 和其他弱内存命令体系结构上添加很大的开销。 如果编译器面向除 ARM 之外的任何平台，这是默认值解释`volatile`。
+**/volatile： ms**<br/>
+选择 Microsoft 扩展 **`volatile`** 语义，该语义添加超出 ISO 标准 c + + 语言的内存排序保证。 获取/释放语义可保证可变访问。 但是，此选项还强制编译器生成硬件内存障碍，这可能会增加 ARM 和其他弱内存排序体系结构的开销。 如果编译器以除 ARM 以外的任何平台为目标，则这是的默认解释 **`volatile`** 。
 
 ## <a name="remarks"></a>备注
 
-我们强烈建议你使用 **/volatile: iso**以及显式同步基元和编译器内部函数在处理跨线程共享的内存时。 有关详细信息，请参阅[易失性](../../cpp/volatile-cpp.md)。
+当处理跨线程共享的内存时，强烈建议使用 **/volatile： iso**以及显式同步基元和编译器内部函数。 有关详细信息，请参阅[volatile](../../cpp/volatile-cpp.md)。
 
-如果将现有代码或更改项目中间此选项，它可能是启用警告[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)来标识受语义上差异影响的代码位置。
+如果在项目中间移植现有代码或更改此选项，则启用警告[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)可能会很有帮助，以便识别受语义差异影响的代码位置。
 
-没有任何`#pragma`相当于控制此选项。
+没有 `#pragma` 等效于控制此选项。
 
-### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置 /volatile 编译器选项
+### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置/volatile 编译器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C /C++** > **命令行**属性页。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 在中**其他选项**框中，添加 **/volatile: iso**或 **/volatile: ms** ，然后选择**确定**或**应用**以保存所做的更改。
+1. 在 "**附加选项**" 框中，添加 **/volatile： iso**或 **/volatile： Ms** ，然后选择 **"确定" 或 "** **应用**" 保存更改。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>

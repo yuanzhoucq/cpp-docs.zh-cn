@@ -30,12 +30,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 77bd44975e97cc646f7d2fd100d86b6661b8c2e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63e984f2228ac6896cd9d2ea959b491565bfb8d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234128"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1、expm1f、expm1l
 
@@ -72,7 +72,7 @@ long double expm1l(
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用**expm1**的重载，该重载采用并返回**浮点**和**长** **双精度**值。 在 C 程序中， **expm1**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用**expm1**的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中， **expm1**始终采用并返回 **`double`** 。
 
 ## <a name="requirements"></a>要求
 
@@ -80,9 +80,9 @@ long double expm1l(
 |-------------|---------------------|
 |**expm1**、 **expm1f**、 **expm1l**|\<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [exp2、exp2f、exp2l](exp2-exp2f-exp2l.md)<br/>

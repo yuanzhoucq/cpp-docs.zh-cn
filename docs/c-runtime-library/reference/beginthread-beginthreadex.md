@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913510"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234271"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -109,13 +109,13 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="remarks"></a>备注
 
-**_Beginthread**函数创建一个在*start_address*开始执行例程的线程。 *Start_address*中的例程必须使用 **__cdecl** （对于本机代码）或 **__clrcall** （对于托管代码）调用约定，并且应没有返回值。 当线程从该例程返回时，就会自动终止。 有关线程的详细信息，请参阅[针对旧代码的多线程支持 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
+**_Beginthread**函数创建一个在*start_address*开始执行例程的线程。 *Start_address*中的例程必须使用 **`__cdecl`** （对于本机代码）或 **__clrcall** （用于托管代码）调用约定，并且应没有返回值。 当线程从该例程返回时，就会自动终止。 有关线程的详细信息，请参阅[针对旧代码的多线程支持 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
 与 **_beginthread**相比， **_Beginthreadex**类似于 Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API。 **_beginthreadex**在以下方面与 **_beginthread**不同：
 
 - **_beginthreadex**有三个附加参数： *initflag*、 *Security*和**threadaddr**。 可以使用指定的安全性在挂起状态下创建新线程，并且可以使用*thrdaddr*（它是线程标识符）进行访问。
 
-- 传递到 **_beginthreadex**的*start_address*中的例程必须使用 **__stdcall** （对于本机代码）或 **__clrcall** （用于托管代码）调用约定，并且必须返回线程退出代码。
+- 传递到 _beginthreadex *start_address*的例程必须使用 **_beginthreadex** **`__stdcall`** （对于本机代码）或 **__clrcall** （对于托管代码）调用约定，并且必须返回线程退出代码。
 
 - 如果失败， **_beginthreadex**将返回0，而不是-1L。
 
@@ -144,7 +144,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -332,5 +332,5 @@ Counter should be 1000000; it is-> 1000000
 - [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread、_endthreadex](endthread-endthreadex.md)
 - [中止](abort.md)
-- [exit、_Exit、_exit](exit-exit-exit.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
 - [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

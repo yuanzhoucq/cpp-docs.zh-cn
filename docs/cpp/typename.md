@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62e8a2026babbfea3cd1583def05a03b4bc4a229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160679"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223507"
 ---
 # <a name="typename"></a>typename
 
@@ -27,7 +27,7 @@ typename identifier;
 
 如果模板定义中的名称是依赖于模板参数的限定名，则必须使用此关键字;如果限定名不是依赖项，则此项是可选的。 有关详细信息，请参阅[模板和名称解析](../cpp/templates-and-name-resolution.md)。
 
-可在模板声明或定义中的任何位置使用类型**名称**。 不允许在基类列表中使用该关键字，除非将它用作模板基类的模板自变量。
+**`typename`** 可由模板声明或定义中任意位置的任何类型使用。 不允许在基类列表中使用该关键字，除非将它用作模板基类的模板自变量。
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-**Typename**关键字还可以用于替代模板参数列表中的**类**。 例如，下面的语句在语义上是等效的：
+**`typename`** 关键字还可以用于替代 **`class`** 模板参数列表中的。 例如，下面的语句在语义上是等效的：
 
 ```cpp
 template<class T1, class T2>...

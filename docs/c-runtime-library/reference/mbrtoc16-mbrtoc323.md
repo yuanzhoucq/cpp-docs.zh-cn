@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234063"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -64,7 +64,7 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>参数
 
 *位置*\
-指向要转换的 UTF-8 多字节字符的**char16_t**或**char32_t**等效项的指针。 如果为 null，则该函数不存储值。
+一个指针，指向要 **`char16_t`** **`char32_t`** 转换的 utf-8 多字节字符的或等效项。 如果为 null，则该函数不存储值。
 
 *源程序*\
 指向要转换的 UTF-8 多字节字符字符串的指针。
@@ -91,7 +91,7 @@ size_t mbrtoc32(
 
 **Mbrtoc16**函数*从源*中读取最多*max_bytes*个字节，以查找第一个完整的、有效的 utf-8 多字节字符，然后将等效的 utf-16 字符存储在*目标*中。 如果字符需要多个 UTF-16 输出字符，如代理项对，则将*状态*值设置为在下一次调用**mbrtoc16**时将下一个 utf-16 字符存储在*目标*中。 **Mbrtoc32**函数相同，但输出存储为32字符。
 
-如果*source*为 null，则这些函数将返回对源使用**null**的自变量的等效项的`""`等效*项，（* 空值终止的字符串）用于*源*，1表示*max_bytes*。 将忽略*目标*和*max_bytes*的传递值。
+如果*source*为 null，则这些函数将返回对源使用**null**的自变量的等效项的等效*项，* `""` （空值终止的字符串）用于*源*，1表示*max_bytes*。 将忽略*目标*和*max_bytes*的传递值。
 
 如果*源*不为 null，则函数将从字符串的开头开始，并检查最多*max_bytes*个字节，以确定完成下一个 utf-8 多字节字符（包括任何移位序列）所需的字节数。 如果检查的字节包含有效且完整的 UTF-8 多字节字符，则该函数将字符转换为等效的16位或32位宽字符。 如果*destination*不为 null，则该函数将在目标中存储第一个（并且可能只是）结果字符。 如果需要其他输出字符，则将值设置为 "*状态*"，以便对函数的后续调用输出其他字符并返回值-3。 如果不需要其他输出字符，则*状态*设置为初始移位状态。
 
