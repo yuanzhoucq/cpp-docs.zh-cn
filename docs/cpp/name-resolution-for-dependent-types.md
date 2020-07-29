@@ -2,16 +2,16 @@
 title: 依赖类型的名称解析
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227304"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依赖类型的名称解析
 
-将**typename**用于模板定义中的限定名称，告诉编译器给定的限定名称标识类型。 有关详细信息，请参阅[类型名称](../cpp/typename.md)。
+**`typename`** 在模板定义中使用限定名，告诉编译器给定的限定名称标识类型。 有关详细信息，请参阅[类型名称](../cpp/typename.md)。
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-相关名称的名称查找从模板定义的上下文中检查名称-在下面的示例中，此上下文将查找 `myFunction(char)`以及模板实例化的上下文。在下面的示例中，模板在 main 中实例化;因此，`MyNamespace::myFunction` 从实例化的点可见，并被选取为更好的匹配。 如果重命名 `MyNamespace::myFunction`，则将调用 `myFunction(char)`。
+相关名称的名称查找从模板定义的上下文中检查名称-在下面的示例中，此上下文会发现 `myFunction(char)` 和模板实例化的上下文。在下面的示例中，模板在 main 中实例化;因此，在 `MyNamespace::myFunction` 实例化点可见，并将其选取为更好的匹配项。 如果重命名 `MyNamespace::myFunction`，则将调用 `myFunction(char)`。
 
 所有名称都会得到解析，就如同它们是依赖名称一样。 尽管如此，如果存在任何可能的冲突，建议您使用完全限定名。
 

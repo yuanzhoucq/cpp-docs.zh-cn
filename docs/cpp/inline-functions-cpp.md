@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: 454a727f0c002dc476e5fdab217efc3dea716e14
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d2356d7813167f3973ac2748423c6af7f0b5573b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180704"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227408"
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 
@@ -73,13 +73,13 @@ int main()
 
 仅当编译器的成本收益分析表明有必要时，才会发生插入，称为*内联展开*或*内联*。 内联扩展可将函数调用的开销降到最低，因为这可能会产生更大的代码大小。
 
-**`__forceinline`** 关键字覆盖成本收益分析，并依赖于程序员的判断。 使用时，请务必小心 **`__forceinline`** 。 任意使用 **`__forceinline`** 可能会导致更大的代码，且仅具有边际性能增益，在某些情况下，即使增加了更大的可执行文件的分页（例如) ），也会导致 (性能下降。
+**`__forceinline`** 关键字覆盖成本收益分析，并依赖于程序员的判断。 使用时，请务必小心 **`__forceinline`** 。 **`__forceinline`** 在某些情况下，任意使用可能会导致更大的代码，但在某些情况下甚至会导致性能损失（例如，由于增加了更大的可执行文件的分页）。
 
 使用内联函数可以使程序更快，因为它们消除了与函数调用关联的开销。 内联展开的函数可以进行无法对普通函数使用的代码优化。
 
 编译器将内联扩展选项和关键字视为建议。 不保证函数将内联。 即使使用关键字，也不能强制编译器内联特定函数 **`__forceinline`** 。 使用进行编译时 **`/clr`** ，如果存在应用于函数的安全属性，则编译器不会内联函数。
 
-**`inline`** 关键字仅在 c + + 中可用。 **`__inline`** 和 **`__forceinline`** 关键字在 C 和 c + + 中均可用。 为了与早期版本兼容， **`_inline`** 并且 **`_forceinline`** 是的同义词 **`__inline`** ， **`__forceinline`** 除非指定了编译器选项 " [ `/Za` \( 禁用语言扩展") ](../build/reference/za-ze-disable-language-extensions.md) 。
+**`inline`** 关键字仅在 c + + 中可用。 **`__inline`** 和 **`__forceinline`** 关键字在 C 和 c + + 中均可用。 对于与以前版本的兼容性， **`_inline`** 和 **`_forceinline`** 是的同义词 **`__inline`** ， **`__forceinline`** 除非指定编译器选项 " [ `/Za` \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"。
 
 **`inline`** 关键字指示编译器首选内联扩展。 但是，编译器可以创建函数的单独实例（实例化），并创建标准调用链接而不是内联插入代码。 可能出现这种情况的两种情况如下：
 
@@ -131,7 +131,7 @@ private:
 
 即使对于 **`__forceinline`** ，编译器也无法在所有情况下内联代码。 编译器无法在以下情况中内联函数：
 
-- 函数或其调用方是用 **`/Ob0`** (调试生成) 的默认选项进行编译的。
+- 函数或其调用方用 **`/Ob0`** （调试生成的默认选项）进行编译。
 
 - 函数和调用方使用不同类型的异常处理（一个中使用 C++ 异常处理，另一个中使用结构化异常处理）。
 
@@ -153,11 +153,11 @@ private:
 
 - 函数在外部、包含的库或其他翻译单元中定义，或者是虚拟调用目标或间接调用目标。 编译器无法标识在当前翻译单元中找不到的非内联代码。
 
-可以使用内联代码将递归函数替换为杂注指定的深度 [`inline_depth`](../preprocessor/inline-depth.md) ，最多可达16个调用。 该深度之后，递归函数调用被视为对函数实例的调用。  内联试探法检查递归函数的深度不能超过16。 [`inline_recursion`](../preprocessor/inline-recursion.md)杂注控制当前扩展下的函数的内联展开。 有关相关信息，请参阅[内联函数展开](../build/reference/ob-inline-function-expansion.md) (/ob) 编译器选项。
+可以使用内联代码将递归函数替换为杂注指定的深度 [`inline_depth`](../preprocessor/inline-depth.md) ，最多可达16个调用。 该深度之后，递归函数调用被视为对函数实例的调用。  内联试探法检查递归函数的深度不能超过16。 [`inline_recursion`](../preprocessor/inline-recursion.md)杂注控制当前扩展下的函数的内联展开。 有关相关信息，请参阅[内联函数扩展](../build/reference/ob-inline-function-expansion.md)（/Ob）编译器选项。
 
 **结束 Microsoft 专用**
 
-有关使用**内联**说明符的详细信息，请参阅：
+有关使用说明符的详细信息 **`inline`** ，请参阅：
 
 - [内联类成员函数](../cpp/inline-functions-cpp.md)
 
@@ -196,7 +196,7 @@ int main()
 }
 ```
 
-假设在此类类的客户端中，协调操作是一个相对较常见的操作，在前面的示例中指定两个取值函数函数 (`x` 和 `y`) **`inline`** 通常会节约开销：
+假定在此类类的客户端中，协调操作是比较常见的操作，则指定两个访问器函数（ `x` `y` 在前面的示例中） **`inline`** 通常会节省的开销：
 
 - 函数调用（包括参数传递和在堆栈上放置对象地址）
 
@@ -239,7 +239,7 @@ int main() {
 // Sample Output:  Z
 ```
 
-表达式的目的 `toupper(getc(stdin))` 是应从控制台设备 () 读取字符，并根据需要将字符 `stdin` 转换为大写。
+表达式的目的 `toupper(getc(stdin))` 是应从控制台设备（）中读取字符，并根据需要将字符 `stdin` 转换为大写。
 
 由于实现宏， `getc` 将执行一次以确定字符是大于还是等于 "a"，一次则执行，以确定它是否小于或等于 "z"。 如果它在该范围内，则再次执行 `getc` 以将其转换为大写形式。 这意味着，在理想情况下，程序将等待两个或三个字符，只应等待一个。
 

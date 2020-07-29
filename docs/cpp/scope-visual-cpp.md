@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
-ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.openlocfilehash: 5cff7a4607201175c7095a87134850583b76d636
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204133"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227083"
 ---
 # <a name="scope-c"></a>范围 (C++)
 
@@ -31,9 +31,9 @@ ms.locfileid: "83204133"
 
 - **本地范围**在函数或 lambda 中声明的名称（包括参数名称）具有本地范围。 它们通常称为 "局部变量"。 它们只能从其声明点到函数或 lambda 主体的末尾可见。 本地作用域是一种块范围，本文稍后将对此进行讨论。
 
-- **类范围**类成员的名称具有类作用域，它在整个类定义中进行扩展，而不考虑声明点。 类成员可访问性由**public**、 **private**和**protected**关键字进一步控制。 只能使用成员选择运算符（.）访问公共或受保护成员 **。** 或 **->** ）或指向成员的指针运算符（**.** <strong>\*</strong> 或 **->** <strong>\*</strong> ）。
+- **类范围**类成员的名称具有类作用域，它在整个类定义中进行扩展，而不考虑声明点。 类成员可访问性由 **`public`** 、 **`private`** 和关键字进一步控制 **`protected`** 。 只能使用成员选择运算符（.）访问公共或受保护成员 **。** 或 **->** ）或指向成员的指针运算符（**.** <strong>\*</strong> 或 **->** <strong>\*</strong> ）。
 
-- **语句范围**在**for**、 **if**、 **while**或**switch**语句中声明的名称将在语句块的末尾可见。
+- **语句范围**在、、或语句中声明的名称 **`for`** **`if`** **`while`** **`switch`** 直到语句块的末尾才可见。
 
 - **函数范围**[标签](labeled-statements.md)具有函数范围，这意味着它在整个函数体中可见，即使在其声明点之前也是如此。 函数作用域使得可以在 `goto cleanup` 声明标签之前编写语句 `cleanup` 。
 
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>隐藏类名
 
-通过声明同一范围内的函数、对象或变量或枚举器，可以隐藏类名称。 但是，当关键字**类**作为前缀时，仍可以访问类名。
+通过声明同一范围内的函数、对象或变量或枚举器，可以隐藏类名称。 但是，当使用关键字作为前缀时，仍可以访问类名 **`class`** 。
 
 ```cpp
 // hiding_class_names.cpp
@@ -94,18 +94,18 @@ int main()
 > [!NOTE]
 > 为调用类名称（）的任何位置 `Account` ，都必须使用关键字类将其与全局范围内的变量帐户区分开来。 当类名出现在范围解析运算符 (::) 的左侧时，此规则不适用。 在范围解析运算符的左侧的名称始终被视为类名称。
 
-下面的示例演示如何 `Account` 使用**class**关键字声明指向类型对象的指针：
+下面的示例演示如何使用关键字声明指向类型对象的指针 `Account` **`class`** ：
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-前面的语句中的 `Account` 初始值设定项（括号中）的具有全局范围; 它的类型为**double**。
+前面的语句中的 `Account` 初始值设定项（括号中）的具有全局范围; 它的类型为 **`double`** 。
 
 > [!NOTE]
 > 此示例中所示的标识符名称的重用被视为较差的编程样式。
 
-有关类对象的声明和初始化的信息，请参阅[类、结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用**新**的和**删除**的自由存储运算符的信息，请参阅[new 和 delete 运算符](new-and-delete-operators.md)。
+有关类对象的声明和初始化的信息，请参阅[类、结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用 **`new`** 和 **`delete`** 免费存储运算符的信息，请参阅[new 和 delete 运算符](new-and-delete-operators.md)。
 
 ## <a name="hiding-names-with-global-scope"></a>隐藏具有全局范围的名称
 
