@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: c46b74cc9c1d3c6f3a93925d6df46f46d0151e2d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8da613bca165f68ef2e15e2be6291485a89222de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452595"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222389"
 ---
-# <a name="isfloatingpoint-class"></a>is_floating_point 类
+# <a name="is_floating_point-class"></a>is_floating_point 类
 
 测试类型是否为浮点。
 
@@ -32,9 +32,9 @@ struct is_floating_point;
 
 ## <a name="remarks"></a>备注
 
-如果类型*Ty*为浮点类型或`cv-qualified`浮点类型的形式, 则类型谓词的实例为 true; 否则为 false。
+如果类型*Ty*为浮点类型或浮点类型的形式，则类型谓词的实例为 true `cv-qualified` ; 否则为 false。
 
-浮点类型为**float**、 **double**或**long double**之一。
+浮点类型为 **`float`** 、 **`double`** 或之一 **`long double`** 。
 
 ## <a name="example"></a>示例
 
@@ -70,11 +70,11 @@ is_floating_point<float> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
 [is_integral 类](../standard-library/is-integral-class.md)

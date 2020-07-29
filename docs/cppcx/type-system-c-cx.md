@@ -2,12 +2,12 @@
 title: 类型系统 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404621"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221544"
 ---
 # <a name="type-system-ccx"></a>类型系统 (C++/CX)
 
@@ -38,8 +38,8 @@ ms.locfileid: "86404621"
 |||
 |-|-|
 |**在元数据中发布**|**未在元数据中发布**|
-|public|private|
-|protected|internal|
+|公共|private|
+|protected|内部|
 |公共受保护|私有受保护|
 
 可以使用 **“对象浏览器”** 查看 .winmd 文件的内容。 Windows 附带的 Windows 运行时组件位于 Windows winmd 文件中。 默认 winmd 文件包含 c + +/CX 中使用的基本类型，而 platform.string 包含平台命名空间中的其他类型。 默认情况下，这三个 winmd 文件包含在通用 Windows 平台应用的每个 c + + 项目中。
@@ -63,7 +63,7 @@ Windows API 本身已重创为按命名空间组织的分解类库。  所有 Wi
 
 Windows 运行时定义以下基本类型： UInt8、Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Double、Char16、Boolean 和 String。 C + +/CX 支持其默认命名空间中的基本数值类型，如 uint16、uint32、uint64、int16、int32、int64、float32、float64 和 char16。 布尔值和字符串也在平台命名空间中定义。
 
-C + +/CX 还定义了 uint8，它等效于 `unsigned char` ，这在 Windows 运行时不受支持，因此不能用于公共 api。
+C + +/CX 还定义了 uint8，它等效于 **`unsigned char`** ，这在 Windows 运行时不受支持，因此不能用于公共 api。
 
 可通过将基础类型包装在 [Platform::IBox Interface](../cppcx/platform-ibox-interface.md) 接口中来使其可以为 null。 有关更多信息，请参见 [值类和结构](../cppcx/value-classes-and-structs-c-cx.md)中定义的接口的私有 C++ 特定实现。
 
@@ -71,7 +71,7 @@ C + +/CX 还定义了 uint8，它等效于 `unsigned char` ，这在 Windows 运
 
 ### <a name="strings"></a>字符串
 
-Windows 运行时字符串是16位 UNICODE 字符的不可变序列。 Windows 运行时的字符串被投影为 `Platform::String^` 。 此类为字符串构造、处理和在 `wchar_t`间来回转换提供方法。
+Windows 运行时字符串是16位 UNICODE 字符的不可变序列。 Windows 运行时的字符串被投影为 `Platform::String^` 。 此类提供用于字符串构造、操作以及与之间的转换的方法 **`wchar_t`** 。
 
 有关更多信息，请参见 [字符串](../cppcx/strings-c-cx.md)中定义的接口的私有 C++ 特定实现。
 
@@ -169,7 +169,7 @@ C++/CX 支持标准 C++ 强制转换运算符 [static_cast](../cpp/static-cast-o
 
 有关更多信息，请参见 [装箱](../cppcx/boxing-c-cx.md)中定义的接口的私有 C++ 特定实现。
 
-### <a name="attributes"></a>特性
+### <a name="attributes"></a>属性
 
 特性是可以应用于任何 Windows 运行时类型或类型成员并且可以在运行时进行检查的元数据值。 Windows 运行时定义命名空间中的一组公共特性 `Windows::Foundation::Metadata` 。 此版本中的 Windows 运行时不支持公共接口上的用户定义属性。
 

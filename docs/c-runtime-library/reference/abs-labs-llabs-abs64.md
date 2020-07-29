@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171406"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221986"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
@@ -67,7 +67,7 @@ long double abs( long double n );   // C++ only
 float abs( float n );   // C++ only
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *n*<br/>
 数值。
@@ -78,18 +78,18 @@ float abs( float n );   // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用采用并返回**long**、 **long** **、** **float**、 **double**和**long** **双精度**值的**abs**重载。 这些重载在 \<cmath> 标头中进行定义。 在 C 程序中， **abs**始终采用并返回**int**。
+由于 c + + 允许重载，因此你可以**abs**调用采用并返回、、、 **`long`** **`long long`** **`float`** **`double`** 和 **`long double`** 值的 abs 的重载。 这些重载在 \<cmath> 标头中定义。 在 C 程序中， **abs**始终采用并返回 **`int`** 。
 
 **Microsoft 专用**：由于可使用任何整型类型表示的负整数的范围大于可使用该类型表示的正整数的范围，因此，可以为这些不能转换的函数提供参数。 如果参数的绝对值不能由返回类型表示，则**abs**函数返回的参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着不能使用**abs**函数来保证正值。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|-----------------------|---------------------------|
 |**abs**、 **labs**、 **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要在中C++使用**abs**的重载版本，必须包含 \<h > 标头。
+若要在 c + + 中使用**abs**的重载版本，必须包含 \<cmath> 标头。
 
 ## <a name="example"></a>示例
 
@@ -153,5 +153,5 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
 [imaxabs](imaxabs.md)

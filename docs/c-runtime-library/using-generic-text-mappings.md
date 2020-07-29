@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747925"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221869"
 ---
 # <a name="using-generic-text-mappings"></a>使用一般文本映射
 
 **Microsoft 专用**
 
-为了简化各种国际市场的代码开发，Microsoft 运行时库为许多数据类型、例程和其他对象提供了 Microsoft 专用的“一般文本”映射。 这些映射在 TCHAR.H 中进行定义。 可使用这些名称映射来写入泛型代码，使其可针对以下任何一种字符集进行编译：ASCII (SBCS)、MBCS 或 Unicode，具体取决于使用 `#define` 语句定义的应用程序清单常数。 一般文本映射是与 ANSI 不兼容的 Microsoft 扩展。
+为了简化各种国际市场的代码开发，Microsoft 运行时库为许多数据类型、例程和其他对象提供了 Microsoft 专用的“一般文本”映射。 这些映射在 TCHAR.H 中进行定义。 可以使用这些名称映射来编写可编译全部三种字符集（ASCII (SBCS)、MBCS 或 Unicode）的通用代码：具体取决于使用 `#define` 语句定义的清单常量。 一般文本映射是与 ANSI 不兼容的 Microsoft 扩展。
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>用于一般文本映射的预处理器指令
 
@@ -50,17 +50,17 @@ ms.locfileid: "57747925"
 
 例如，如果已在程序中定义了 `MBCS`，则在 TCHAR.H 中定义的一般文本函数 `_tcsrev` 映射到 `mbsrev`，如果已定义了 `_UNICODE`，则将映射到 `_wcsrev`。 否则，`_tcsrev` 将映射到 `strrev`。
 
-如果已定义了 `_MBCS`，则仍在 TCHAR.H 中定义的一般文本数据类型 `_TCHAR` 将映射到类型 `char`，如果定义了 `_UNICODE`，则映射到类型 `wchar_t`，如果未定义任何常量，则映射到 `char`。 TCHAR.H 中提供了其他数据类型映射，可方便地用于编程，但 `_TCHAR` 是最有用的类型。
+一般文本数据类型 `_TCHAR` ，也是在 TCHAR 中定义的。如果已定义，则映射到类型; 如果定义了，则映射到类型; **`char`** `_MBCS` **`wchar_t`** `_UNICODE` **`char`** 如果不定义常数，则键入。 TCHAR.H 中提供了其他数据类型映射，可方便地用于编程，但 `_TCHAR` 是最有用的类型。
 
 ### <a name="generic-text-data-type-mappings"></a>一般文本数据类型映射
 
 |一般文本数据类型名称|SBCS（未定义的 _UNICODE 和 _MBCS）|已定义 _MBCS|已定义 _UNICODE|
 |----------------------------------|--------------------------------------------|--------------------|-----------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` 或 `_TEXT`|无效果（由预处理器删除）|无效果（由预处理器删除）|`L`（将以下字符或字符串转换为其 Unicode 对应项）|
 
 有关例程、变量和其他对象的一般文本映射的完整列表，请参阅[一般文本映射](../c-runtime-library/generic-text-mappings.md)。

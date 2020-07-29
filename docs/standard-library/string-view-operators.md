@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; 运算符'
+title: '&lt;string_view &gt; 运算符'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076405"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222232"
 ---
-# <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 运算符
+# <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 运算符
 
-使用这些运算符来比较两个 string_view 对象或 string_view 以及为其提供了隐式转换的其他某个字符串对象（例如[std：： string](basic-string-class.md)或**char\*** ）。
+使用这些运算符来比较两个 string_view 对象或 string_view 以及为其提供了隐式转换的其他某个字符串对象（例如[std：： string](basic-string-class.md)或**char \* **）。
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[运算符 "" sv](#op_sv)|
+|[operator！ =](#op_neq)|[操作员&gt;](#op_gt)|[操作员&gt;=](#op_gt_eq)|
+|[操作员&lt;](#op_lt)|[操作员&lt;&lt;](#op_lt_lt)|[操作员&lt;=](#op_lt_eq)|
+|[operator = =](#op_eq_eq)|[运算符 "" sv](#op_sv)|
 
 ## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
@@ -55,17 +55,17 @@ bool operator!=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*左中*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
-*right*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*然后*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的对象不按字典顺序等于右侧的对象，则为**true** ; 否则为 false。否则**为 false**。
+**`true`** 如果运算符左侧的对象不按字典顺序等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -94,17 +94,17 @@ bool operator==(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*左中*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
-*right*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*然后*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的对象按字典顺序等于右侧的对象，则为**true** ; 否则为 false。否则**为 false**。
+**`true`** 如果运算符左侧的对象按字典顺序等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -112,7 +112,7 @@ bool operator==(
 
 比较基于对字符序列进行成对字典比较。 如果它们具有相同数量的元素，并且元素都相等，则这两个对象相等。
 
-## <a name="operatorlt"></a><a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
 
 测试运算符左侧的对象是否小于右端的对象 sidestring_view
 
@@ -133,17 +133,17 @@ bool operator<(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*左中*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
-*right*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*然后*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的对象按字典顺序小于右侧的对象，则为**true** ; 否则为 false。否则**为 false**。
+**`true`** 如果运算符左侧的对象按字典顺序小于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -194,21 +194,21 @@ bool operator<=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*左中*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
-*right*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*然后*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的对象按字典顺序小于或等于右侧的对象，**则为 true** ; 否则为 false。否则**为 false**。
+**`true`** 如果运算符左侧的对象按字典顺序小于或等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-请参阅[操作员&lt;](#op_lt)。
+请[参阅 &lt; 运算符](#op_lt)。
 
 ## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
 
@@ -220,12 +220,12 @@ inline basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& Ostr, const basic_string_view<CharType, Traits> Str);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Ostr*\
 要写入的输出流。
 
-*Str*\
+*字符串*\
 要输入到输出流中的 string_view。
 
 ### <a name="return-value"></a>返回值
@@ -236,7 +236,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 使用此运算符将 string_view 的内容插入到输出流中，例如使用[std：： cout](iostream.md#cout)。
 
-## <a name="operatorgt"></a><a name="op_gt"></a> 运算符&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
 
 测试运算符左侧的对象是否大于右侧的对象。
 
@@ -257,21 +257,21 @@ bool operator>(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*左中*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
-*right*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*然后*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的对象按字典顺序大于右侧的 string_view 对象，则为**true** ; 否则为。否则**为 false**。
+**`true`** 如果运算符左侧的对象按字典顺序大于右侧的 string_view 对象，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-请参阅[操作员&lt;](#op_lt)。
+请[参阅 &lt; 运算符](#op_lt)。
 
 ## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
@@ -294,25 +294,25 @@ bool operator>=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*左中*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
-*right*\
-任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
+*然后*\
+任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的对象按字典顺序大于或等于右侧的对象，**则为 true** ; 否则为 false。否则**为 false**。
+**`true`** 如果运算符左侧的对象按字典顺序大于或等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-请参阅[操作员&lt;](#op_lt)。
+请[参阅 &lt; 运算符](#op_lt)。
 
 ## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>运算符 "" sv （string_view 文本）
 
-从字符串文本构造 string_view。 需要命名空间 `std::literals::string_view_literals`。
+从字符串文本构造 string_view。 需要命名空间 `std::literals::string_view_literals` 。
 
 ### <a name="example"></a>示例
 
@@ -329,4 +329,4 @@ using namespace literals::string_view_literals;
 
 ## <a name="see-also"></a>另请参阅
 
-[\<string_view >](../standard-library/string-view.md)
+[\<string_view>](../standard-library/string-view.md)

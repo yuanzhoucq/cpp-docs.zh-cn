@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912107"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221973"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -79,7 +79,7 @@ long double cbrtl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**cbrt**的重载。 在 C 程序中， **cbrt**始终采用并返回**double**。
+由于 c + + 允许重载，因此你可以调用采用或类型的**cbrt**的重载 **`float`** **`long double`** 。 在 C 程序中， **cbrt**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

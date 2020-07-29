@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92a95b97cb4c57d3ad5cfbf8fe1d9980d5362cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221206"
 ---
 # <a name="compiler-error-c2338"></a>编译器错误 C2338
 
 > *错误消息*
 
-此错误可能引起`static_assert`编译过程中的出错。 该消息提供的`static_assert`参数。
+此错误可能是 **`static_assert`** 编译期间出错引起的。 消息由 **`static_assert`** 参数提供。
 
-此外可以通过向编译器的外部提供程序生成此错误消息。 在大多数情况下，这些错误由特性提供程序 DLL，如 ATLPROV 进行报告。 此消息的一些常见形式包括：
+此错误消息还可以由外部提供程序生成到编译器。 在大多数情况下，属性提供程序 DLL （如 ATLPROV）会报告这些错误。 此消息的一些常见形式包括：
 
-- '*特性*Atl 特性提供程序： 错误 ATL*数量* *消息*
+- "*attribute*" Atl 特性提供程序：错误 Atl*编号**消息*
 
-- 属性的用法不正确*特性*
+- 特性 "*attribute*" 的用法不正确
 
-- '*使用情况*： 特性用途的格式不正确
+- "*用法*"：特性 "usage" 的格式不正确
 
-这些错误通常是不可恢复，并可能跟一个严重的编译器错误。
+这些错误通常是不可恢复的，并且可能会出现严重的编译器错误。
 
-若要解决这些问题，请更正属性用法。 例如，在某些情况下，特性参数必须声明才可以使用。 如果提供 ATL 错误号，则检查该错误以了解更多特定信息的文档。
+若要解决这些问题，请更正属性用法。 例如，在某些情况下，必须先声明特性参数，然后才能使用这些参数。 如果提供了 ATL 错误号，请查看有关该错误的文档以了解更多特定信息。

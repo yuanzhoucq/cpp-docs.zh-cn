@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: c49ceec72be62d8ff3125f04d97bbb6952501677
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8eee77afebdc78ef7c5b3b9ecacb8762b354567
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370980"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222285"
 ---
 # <a name="max_none-class"></a>max_none 类
 
@@ -36,23 +36,23 @@ class max_none
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
-|*麦克斯*|max 类，用于决定要存储于 `freelist` 中的最大元素数目。|
+|*最大值*|max 类，用于决定要存储于 `freelist` 中的最大元素数目。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
 |[分配](#allocated)|逐量增加已分配的内存块的计数。|
-|[交易](#deallocated)|逐量减小已分配的内存块的计数。|
+|[分配](#deallocated)|逐量减小已分配的内存块的计数。|
 |[full](#full)|返回一个值，该值指定是否应将更多的内存块添加到空闲列表。|
-|[释放](#released)|逐量减小空闲列表上内存块的计数。|
+|[取出](#released)|逐量减小空闲列表上内存块的计数。|
 |[saved](#saved)|逐量增加空闲列表上内存块的计数。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<allocators>
+**标头：**\<allocators>
 
 **命名空间：** stdext
 
@@ -66,15 +66,15 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*_Nx*|增量值。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 它调用后，每次成功调用`cache_freelist::allocate`到运算符**新**。 *参数_Nx*是运算符**new**分配块中的内存块数。
+此成员函数不执行任何操作。 它在每次成功调用后调用 `cache_freelist::allocate` 到运算符 **`new`** 。 参数 *_Nx*是由运算符分配的块区中的内存块数 **`new`** 。
 
-## <a name="max_nonedeallocated"></a><a name="deallocated"></a>max_none：:d分配
+## <a name="max_nonedeallocated"></a><a name="deallocated"></a>max_none：:d eallocated
 
 逐量减小已分配的内存块的计数。
 
@@ -84,15 +84,15 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*_Nx*|增量值。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 此成员函数在每次调用后调用`cache_freelist::deallocate`运算符**删除**后调用 。 *参数_Nx*是由运算符**删除**处理块中的内存块数。
+此成员函数不执行任何操作。 此成员函数在每次调用后调用 `cache_freelist::deallocate` 到运算符 **`delete`** 。 参数 *_Nx*是由运算符释放的块区中的内存块数 **`delete`** 。
 
-## <a name="max_nonefull"></a><a name="full"></a>max_none：：完整
+## <a name="max_nonefull"></a><a name="full"></a>max_none：： full
 
 返回一个值，该值指定是否应将更多的内存块添加到空闲列表。
 
@@ -102,11 +102,11 @@ bool full();
 
 ### <a name="return-value"></a>返回值
 
-此成员函数始终返回**true**。
+此成员函数总是返回 **`true`** 。
 
 ### <a name="remarks"></a>备注
 
-此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true，** 则将内存块放在空闲列表中;如果调用返回 true，`deallocate`则将内存块放在可用列表中。如果它返回**false** `deallocate` ，则调用运算符**删除**以取消分配块。
+此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回，则将 **`true`** `deallocate` 内存块置于可用列表中; 如果返回，则 **`false`** `deallocate` 调用运算符 **`delete`** 来解除分配块。
 
 ## <a name="max_nonereleased"></a><a name="released"></a>max_none：：已发布
 
@@ -134,4 +134,4 @@ void saved();
 
 ## <a name="see-also"></a>另请参阅
 
-[\<分配器>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)
