@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4062
 ms.assetid: 36d1c6ae-c917-4b08-bf30-2eb49ee94169
-ms.openlocfilehash: 79658afc31565b708cdbd8a88f49b887cdd10cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efe021c9994e20f2630e31537bcc6099783b4308
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401405"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219997"
 ---
 # <a name="compiler-warning-level-4-c4062"></a>编译器警告（等级 4）C4062
 
-> 枚举器*标识符*的 switch 中的*枚举*未处理
+> 未处理枚举 "*enumeration*" 的 switch 中的枚举器 "*identifier*"
 
-枚举器*标识符*无关联`case`处理程序中的`switch`语句，并且没有任何`default`可以捕捉到它的标签。 缺少用例可能监督，是在代码中可能出现的错误。 在未使用枚举器上的相关警告`switch`具有语句`default`情况下，请参阅[C4061](compiler-warning-level-4-c4061.md)。
+枚举器*标识符* `case` 在语句中没有关联的处理程序 **`switch`** ，并且没有 **`default`** 可以捕获它的标签。 缺少的事例可能是监督，这是代码中的潜在错误。 有关包含事例的语句中未使用的枚举器的相关警告 **`switch`** **`default`** ，请参阅[C4061](compiler-warning-level-4-c4061.md)。
 
-默认情况下，此警告处于关闭状态。 有关如何启用默认情况下处于关闭状态的警告的详细信息，请参阅[编译器警告的 Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
+默认情况下，此警告处于关闭状态。 有关如何启用默认情况下处于关闭状态的警告的详细信息，请参阅[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4062，并演示如何修复此错误：
+下面的示例生成 C4062，并演示如何修复此问题：
 
 ```cpp
 // C4062.cpp
@@ -43,6 +43,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[编译器警告（等级 4）C4061](compiler-warning-level-4-c4061.md)
+[编译器警告（等级4） C4061](compiler-warning-level-4-c4061.md)

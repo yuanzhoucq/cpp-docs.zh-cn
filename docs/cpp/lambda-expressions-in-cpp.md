@@ -6,22 +6,22 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: e206ea8d67bb333065bf43f7f9c2dc373a5a5258
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6fcc26c3ed86c86264773a70ac16501c102e1861
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857484"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213328"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
 
-在 C++ 11 和更高版本，lambda 表达式-通常称为*lambda*— 是定义匿名函数对象的简便方法 (*闭包*) 坐在调用或作为参数传递位置的位置到函数。 Lambda 通常用于封装传递给算法或异步方法的少量代码行。 本文将提供 lambda 的定义、将它与其他编程技术做比较、介绍各自的优点并提供一个基本示例。
+在 c + + 11 和更高版本中，lambda 表达式（通常称为 " *lambda*"）是一种在被调用的位置或作为自变量传递给函数的位置定义匿名函数对象（*闭包*）的简便方法。 Lambda 通常用于封装传递给算法或异步方法的少量代码行。 本文将提供 lambda 的定义、将它与其他编程技术做比较、介绍各自的优点并提供一个基本示例。
 
 ## <a name="related-topics"></a>相关主题
 
 - [Lambda 表达式与 function 对象](lambda-expression-syntax.md)
 - [使用 lambda 表达式](examples-of-lambda-expressions.md)
-- [constexpr lambda 表达式](lambda-expressions-constexpr.md)
+- [constexpr Lambda 表达式](lambda-expressions-constexpr.md)
 
 ## <a name="parts-of-a-lambda-expression"></a>Lambda 表达式的各部分
 
@@ -43,9 +43,9 @@ void abssort(float* x, unsigned n) {
 
 此图显示了 lambda 的组成部分：
 
-![Lambda 表达式的结构元素](../cpp/media/lambdaexpsyntax.png "lambda 表达式的结构化元素")
+![lambda 表达式的结构化元素](../cpp/media/lambdaexpsyntax.png "lambda 表达式的结构化元素")
 
-1. *capture 子句*(也称为*lambda 引导*C++ 规范中。)
+1. *捕获子句*（在 c + + 规范中也称为*lambda 引导*）。
 
 1. *参数列表*可有可无. （也称为*lambda 声明符*）
 
@@ -59,11 +59,11 @@ void abssort(float* x, unsigned n) {
 
 ### <a name="capture-clause"></a>Capture 子句
 
-Lambda 可以引入在其主体中的新变量 (在**C++ 14**)，并且它还可以访问，或*捕获*，从周边范围的变量。 Lambda 以捕获子句（标准语法中的*引导*）开头，后者指定捕获的变量以及捕获是通过值还是通过引用。 有与号 (`&`) 前缀的变量通过引用访问，没有该前缀的变量通过值访问。
+Lambda 可以在其主体（ **c + + 14**）中引入新变量，并且它还可以从周围范围访问或*捕获*变量。 Lambda 以捕获子句（标准语法中的*引导*）开头，后者指定捕获的变量以及捕获是通过值还是通过引用。 有与号 (`&`) 前缀的变量通过引用访问，没有该前缀的变量通过值访问。
 
 空 capture 子句 `[ ]` 指示 lambda 表达式的主体不访问封闭范围中的变量。
 
-您可以使用默认捕获模式（标准语法中的*捕获默认值*）来指示如何捕获 lambda 中引用的任何外部变量： `[&]` 表示引用的所有变量都按引用捕获，`[=]` 意味着它们按值捕获。 可以使用默认捕获模式，然后为特定变量显式指定相反的模式。 例如，如果 lambda 体通过引用访问外部变量 `total` 并通过值访问外部变量 `factor`，则以下 capture 子句等效：
+您可以使用默认捕获模式（标准语法中的*捕获默认值*）来指示如何捕获在 lambda 中引用的任何外部变量：表示引用的 `[&]` 所有变量都按引用捕获， `[=]` 这意味着它们按值捕获。 可以使用默认捕获模式，然后为特定变量显式指定相反的模式。 例如，如果 lambda 体通过引用访问外部变量 `total` 并通过值访问外部变量 `factor`，则以下 capture 子句等效：
 
 ```cpp
 [&total, factor]
@@ -76,7 +76,7 @@ Lambda 可以引入在其主体中的新变量 (在**C++ 14**)，并且它还可
 
 使用捕获默认值时只捕获 lambda 中提到的变量。
 
-如果捕获子句包括捕获-默认 `&`，则该捕获子句的 `capture` 中的 `identifier` 不能采用 `& identifier`形式。 同样，如果捕获子句包括捕获默认 `=`，则该 capture 子句的 `capture` 不能 `= identifier`格式。 标识符或**此**标识符在捕获子句中不能出现多次。 以下代码片段给出了一些示例。
+如果捕获子句包含捕获-默认值 `&` ，则 `identifier` 该 capture 子句的中的不 `capture` 能有格式 `& identifier` 。 同样，如果捕获子句包括捕获默认值 `=` ，则该捕获子句中的任何一个 `capture` 都不能具有格式 `= identifier` 。 标识符或 **`this`** 在捕获子句中不能出现多次。 以下代码片段给出了一些示例。
 
 ```cpp
 struct S { void f(int i); };
@@ -100,15 +100,15 @@ void f(Args... args) {
 }
 ```
 
-若要在类方法的主体中使用 lambda 表达式，请将**this**指针传递给捕获子句，以提供对封闭类的方法和数据成员的访问。
+若要在类方法的主体中使用 lambda 表达式，请将 **`this`** 指针传递给捕获子句，以提供对封闭类的方法和数据成员的访问。
 
-**Visual Studio 2017 版本15.3 及更高版本**（可在/std 中使用[： c + + 17](../build/reference/std-specify-language-standard-version.md)）：通过在捕获子句中指定 `*this`，可通过值捕获**this**指针。 按值捕获意味着整个*闭包*（即 encapulates lambda 表达式的匿名函数对象）将复制到调用 lambda 的每个调用站点。 当 lambda 将在并行或异步操作中执行时，按值捕获非常有用，尤其是在某些硬件体系结构（如 NUMA）上。
+**Visual Studio 2017 版本15.3 及更高版本**（可在/std 中使用[： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **`this`** 可以通过 **`*this`** 在捕获子句中指定来按值捕获指针。 按值捕获意味着整个*闭包*（即 encapulates lambda 表达式的匿名函数对象）将复制到调用 lambda 的每个调用站点。 当 lambda 将在并行或异步操作中执行时，按值捕获非常有用，尤其是在某些硬件体系结构（如 NUMA）上。
 
 有关演示如何将 lambda 表达式与类方法一起使用的示例，请参阅[Lambda 表达式的示例中的](../cpp/examples-of-lambda-expressions.md)"示例：在方法中使用 lambda 表达式"。
 
 在使用 capture 子句时，建议你记住以下几点（尤其是使用采取多线程的 lambda 时）：
 
-- 引用捕获可用于修改外部变量，而值捕获却不能实现此操作。 （**可变**允许修改副本，而不是原始副本。）
+- 引用捕获可用于修改外部变量，而值捕获却不能实现此操作。 （ **`mutable`** 允许修改副本，而不是原始副本。）
 
 - 引用捕获会反映外部变量的更新，而值捕获却不会反映。
 
@@ -138,7 +138,7 @@ auto y = [] (int first, int second)
 };
 ```
 
-在**C++ 14**，如果参数类型是泛型，则可以使用 auto 关键字作为类型说明符。 这将告知编译器将函数调用运算符创建为模板。 参数列表中的每个 auto 实例等效于一个不同的类型参数。
+在**c + + 14**中，如果参数类型为泛型，则可以使用 **`auto`** 关键字作为类型说明符。 这将告知编译器将函数调用运算符创建为模板。 参数列表中的每个实例 **`auto`** 都等效于不同的类型参数。
 
 ```cpp
 auto y = [] (auto first, auto second)
@@ -149,15 +149,15 @@ auto y = [] (auto first, auto second)
 
 Lambda 表达式可以将另一个 Lambda 表达式作为其自变量。 有关详细信息，请参阅[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)主题中的 "高阶 Lambda 表达式"。
 
-由于参数列表是可选的，因此，如果不将参数传递给 lambda 表达式，并且其 lambda 声明符不包含*异常规范*、*尾随返回类型*或**可变**类型，则可以省略空括号。
+由于参数列表是可选的，因此，如果不将参数传递给 lambda 表达式，并且其 lambda 声明符不包含*异常规范*、*尾随返回类型*或，则可以省略空括号 **`mutable`** 。
 
 ### <a name="mutable-specification"></a>可变规范
 
-通常，lambda 的函数调用运算符是按值进行的，但**可变**关键字的使用会取消此操作。它不会生成可变的数据成员。 利用可变规范，lambda 表达式的主体可以修改通过值捕获的变量。 本文后面的一些示例介绍如何使用**可变**。
+通常，lambda 的函数调用运算符是按值常数值，但使用 **`mutable`** 关键字会取消此操作。它不会生成可变的数据成员。 利用可变规范，lambda 表达式的主体可以修改通过值捕获的变量。 本文后面的一些示例演示如何使用 **`mutable`** 。
 
 ### <a name="exception-specification"></a>异常规范
 
-你可以使用 `noexcept` 异常规范来指示 lambda 表达式不会引发任何异常。 与普通函数一样，如果 lambda C++表达式声明 `noexcept` 异常规范且 lambda 体引发异常，Microsoft 编译器将生成警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) ，如下所示：
+您可以使用 **`noexcept`** 异常规范来指示 lambda 表达式不会引发任何异常。 与普通函数一样，如果 lambda 表达式声明[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) **`noexcept`** 异常规范且 lambda 体引发异常，Microsoft c + + 编译器将生成警告 C4297，如下所示：
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -168,13 +168,13 @@ int main() // C4297 expected
 }
 ```
 
-有关详细信息，请参阅[异常规范 (throw)](../cpp/exception-specifications-throw-cpp.md)。
+有关详细信息，请参阅[异常规范（throw）](../cpp/exception-specifications-throw-cpp.md)。
 
 ### <a name="return-type"></a>返回类型
 
-将自动推导 Lambda 表达式的返回类型。 除非指定*尾随返回类型*，否则不必使用[auto](../cpp/auto-cpp.md)关键字。 *尾随返回类型*类似于普通方法或函数的返回类型部分。 但是，返回类型必须跟在参数列表的后面，你必须在返回类型前面包含 trailing-return-type 关键字 `->`。
+将自动推导 Lambda 表达式的返回类型。 [`auto`](../cpp/auto-cpp.md)除非指定*尾随返回类型*，否则不需要使用关键字。 *尾随返回类型*类似于普通方法或函数的返回类型部分。 但是，返回类型必须跟在参数列表的后面，并且必须在返回类型前面包含尾随返回类型关键字 **`->`** 。
 
-如果 lambda 体仅包含一个返回语句或其表达式不返回值，则可以省略 lambda 表达式的返回类型部分。 如果 lambda 体包含单个返回语句，编译器将从返回表达式的类型推导返回类型。 否则，编译器会将返回类型推导为**void**。 下面的代码示例片段说明了这一原则。
+如果 lambda 体仅包含一个返回语句或其表达式不返回值，则可以省略 lambda 表达式的返回类型部分。 如果 lambda 体包含单个返回语句，编译器将从返回表达式的类型推导返回类型。 否则，编译器会将返回类型推导为 **`void`** 。 下面的代码示例片段说明了这一原则。
 
 ```cpp
 auto x1 = [](int i){ return i; }; // OK: return type is int
@@ -194,7 +194,7 @@ Lambda 表达式的 lambda 体（标准语法中的*复合语句*）可包含普
 
 - 本地声明变量
 
-- 类数据成员（在类中声明时）**并被**捕获
+- 类数据成员（在类中声明时 **`this`** 被捕获）
 
 - 具有静态存储持续时间的任何变量（例如，全局变量）
 
@@ -220,7 +220,7 @@ int main()
 0
 ```
 
-由于变量 `n` 是通过值捕获的，因此在调用 lambda 表达式后，变量的值仍保持 `0` 不变。 **可变**规范允许在 lambda 内修改 `n`。
+由于变量 `n` 是通过值捕获的，因此在调用 lambda 表达式后，变量的值仍保持 `0` 不变。 该 **`mutable`** 规范允许在 `n` lambda 中修改。
 
 尽管 lambda 表达式只能捕获具有自动存储持续时间的变量，但你可以在 lambda 表达式的主体中使用具有静态存储持续时间的变量。 以下示例使用 `generate` 函数和 lambda 表达式为 `vector` 对象中的每个元素赋值。 lambda 表达式将修改静态变量以生成下一个元素的值。
 
@@ -240,7 +240,7 @@ void fillVector(vector<int>& v)
 
 有关详细信息，请参阅[生成](../standard-library/algorithm-functions.md#generate)。
 
-下面的代码示例使用从前面的示例中，函数，并添加使用 C++ 标准库算法 lambda 表达式的示例`generate_n`。 该 lambda 表达式将 `vector` 对象的元素指派给前两个元素之和。 使用**可变**关键字，以便 lambda 表达式的主体可以修改其外部变量的副本 `x` 和 `y`，lambda 表达式通过值捕获这些变量。 由于 lambda 表达式通过值捕获原始变量 `x` 和 `y`，因此它们的值在 lambda 执行后仍为 `1`。
+下面的代码示例使用上一示例中的函数，并添加了使用 c + + 标准库算法的 lambda 表达式的示例 `generate_n` 。 该 lambda 表达式将 `vector` 对象的元素指派给前两个元素之和。 **`mutable`** 使用关键字，以便 lambda 表达式的主体可以修改其外部变量的副本 `x` 和 `y` lambda 表达式通过值捕获的副本。 由于 lambda 表达式通过值捕获原始变量 `x` 和 `y`，因此它们的值在 lambda 执行后仍为 `1`。
 
 ```cpp
 // compile with: /W4 /EHsc
@@ -322,9 +322,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 有关详细信息，请参阅[generate_n](../standard-library/algorithm-functions.md#generate_n)。
 
-## <a name="constexpr-lambda-expressions"></a>constexpr Lambda 表达式
+## <a name="constexpr-lambda-expressions"></a>`constexpr`lambda 表达式
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 可以将 lambda 表达式声明为`constexpr`或常量表达式中使用时的每个数据成员的初始化它捕获或引入的常量表达式内允许。
+**Visual Studio 2017 版本15.3 及更高版本**（可与一起使用 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ）： **`constexpr`** 当常量表达式中允许对其捕获或引入的每个数据成员进行初始化时，可以将 lambda 表达式声明为或在常量表达式中使用。
 
 ```cpp
     int y = 32;
@@ -340,7 +340,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     }
 ```
 
-如果 lambda 的结果满足 `constexpr` 函数的要求，则它会隐式 `constexpr`：
+如果 lambda 的 **`constexpr`** 结果满足函数的要求，则隐式 **`constexpr`** ：
 
 ```cpp
     auto answer = [](int n)
@@ -351,7 +351,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     constexpr int response = answer(10);
 ```
 
-如果隐式或显式地 `constexpr`lambda，则转换到函数指针将产生 `constexpr` 函数：
+如果隐式或显式 lambda **`constexpr`** ，则转换为函数指针将产生一个 **`constexpr`** 函数：
 
 ```cpp
     auto Increment = [](int n)
@@ -364,9 +364,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 ## <a name="microsoft-specific"></a>Microsoft 专用
 
-以下公共语言运行时（CLR）托管实体中不支持 lambda： **ref 类**、 **ref 结构**、**值类**或**值结构**。
+以下公共语言运行时（CLR）托管实体中不支持 lambda： **`ref class`** 、 **`ref struct`** 、 **`value class`** 或 **`value struct`** 。
 
-如果使用的是 Microsoft 特定的修饰符（如[__declspec](../cpp/declspec.md)），则可以在 `parameter-declaration-clause`后立即将其插入 lambda 表达式，例如：
+如果使用的是 Microsoft 特定的修饰符（例如 [`__declspec`](../cpp/declspec.md) ），则可以将其插入到紧随之后的 lambda 表达式中， `parameter-declaration-clause` 例如：
 
 ```cpp
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
@@ -374,11 +374,11 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
 
 若要确定 lambda 是否支持修饰符，请参阅文档的[Microsoft 特定修饰符](../cpp/microsoft-specific-modifiers.md)部分中的相关文章。
 
-除了 C++ 11 标准 lambda 功能，Visual Studio 支持无状态 lambda，可完全转换为使用任意调用约定函数指针。
+除了 c + + 11 标准 lambda 功能，Visual Studio 还支持无状态 lambda，它们可全转换为使用任意调用约定的函数指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-[C++ 标准库中的函数对象](../standard-library/function-objects-in-the-stl.md)<br/>
+[C + + 标准库中的函数对象](../standard-library/function-objects-in-the-stl.md)<br/>
 [函数调用](../cpp/function-call-cpp.md)<br/>
-[for_each](../standard-library/algorithm-functions.md#for_each)
+[`for_each`](../standard-library/algorithm-functions.md#for_each)

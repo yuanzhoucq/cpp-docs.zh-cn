@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212938"
 ---
 # <a name="updating-rowsets"></a>更新行集合
 
@@ -31,7 +31,7 @@ ms.locfileid: "65525304"
 > [!NOTE]
 > ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
 
-使用 ATL OLE DB 使用者向导创建使用者时，可以选中“更改”、“插入”和“删除”这三个复选框中的一个或多个来支持更新操作。 如果你选中这些选项，向导会将代码相应修改为支持你选择的更改类型。 不过，如果不使用向导，必须将以下行集属性设置为 `VARIANT_TRUE`，才能支持更新：
+使用**ATL OLE DB 使用者向导**创建使用者时，可以通过选择 "**更改**"、"**插入**" 和 "**删除**" 三个复选框中的一个或多个来支持更新操作。 如果你选中这些选项，向导会将代码相应修改为支持你选择的更改类型。 不过，如果不使用向导，必须将以下行集属性设置为 `VARIANT_TRUE`，才能支持更新：
 
 - `DBPROPVAL_UP_CHANGE`：允许更改行内的数据值。
 
@@ -80,9 +80,9 @@ HRESULT hr = product.SetData();
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **false** （默认值）指定将当前行移到下一行（以便指针指向插入的行）。
+- **`false`**（默认值）指定当前行递增到下一行（在这种情况下，它指向插入的行）。
 
-- true 指定当前行保持原来位置不变。
+- **`true`** 指定当前行保留在何处。
 
 下面的代码设置绑定到表 `Products` 中列的数据成员的值，然后调用 `Insert` 在行集的第 100 行后面插入包含这些值的新行。 建议设置所有列值，以免新行中出现未定义的数据：
 
@@ -160,11 +160,11 @@ HRESULT hr = product.Delete();
 
 - [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md)：传输自上次提取或对它调用 `Update` 后，对所有行进行的任何挂起的更改。
 
-更新方法中使用的 Update 对于更改命令有特定的含义，不要与 SQL UPDATE 命令混淆（`SetData` 相当于 SQL UPDATE 命令）。
+更新方法中使用的 Update 对于更改命令有特定的含义，不要与 SQL UPDATE**** 命令混淆（`SetData` 相当于 SQL UPDATE**** 命令）。
 
 延迟更新非常有用，例如在进行一系列银行交易的情况下；如果一项交易已取消，你可以撤消更改，因为只有在提交了上一个更改后才会发送一系列更改。 此外，提供程序还可将更改绑定到一个网络调用，这更加有效。
 
-若要支持延迟更新，必须设置 `DBPROP_IRowsetChange` 属性，以及“支持更新操作”中介绍的属性：
+若要支持延迟更新，必须设置 `DBPROP_IRowsetChange` 属性，以及“支持更新操作”**** 中介绍的属性：
 
 ```cpp
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);
@@ -206,8 +206,8 @@ product.Update();                 // Update row 101 now
 
 最后，延迟更改的一个重要原因是能够撤消更改。 调用 [CRowset::Undo](../../data/oledb/crowset-undo.md) 会将本地更改缓存的状态回滚到进行任何挂起的更改之前数据存储区的状态。 请务必注意，`Undo` 不会将本地存储的状态回滚一步（即仅在最新更改之前的状态），而是清除相应行的本地缓存。 此外，`Undo` 只影响当前行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset 类](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>
+[IrowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

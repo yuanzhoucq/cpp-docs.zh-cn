@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a516be2e6e1966c3249ed21cc6d480ddea8b5ec1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198583"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220010"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>编译器警告（等级4） C4800
 
@@ -23,7 +23,7 @@ Visual Studio 2019 及更高版本：
 C4800 是 Visual Studio 2015 及更早版本中的3级警告：
 > "*type*"：将值强制为布尔值 "true" 或 "false" （性能警告）
 
-将值隐式转换为类型 `bool`时，将生成此警告。 通常，此消息是由将 `int` 变量分配给 `bool` 变量导致的，其中 `int` 变量只包含值**true**和**false**，并且可以重新声明为类型 `bool`。 如果无法重写表达式以使用类型 `bool`，则可以将 "`!=0`" 添加到表达式，该表达式将为表达式类型提供 `bool`。 将表达式强制转换为类型 `bool` 不会禁用该警告，这是设计使然。
+当值隐式转换为类型时，将生成此警告 **`bool`** 。 通常情况下，此消息是通过以下方式引起的：将变量赋给变量， **`int`** **`bool`** 其中 **`int`** 变量只包含值 **`true`** 和 **`false`** ，并且可以重新声明为类型 **`bool`** 。 如果无法重写表达式以使用类型 **`bool`** ，则可以将 "" 添加 `!=0` 到表达式中，后者将提供表达式类型 **`bool`** 。 将表达式强制转换为类型 **`bool`** 不会禁用该警告，这是设计使然。
 
 ::: moniker range=">= vs-2017"
 此警告不会在 Visual Studio 2017 中发出。

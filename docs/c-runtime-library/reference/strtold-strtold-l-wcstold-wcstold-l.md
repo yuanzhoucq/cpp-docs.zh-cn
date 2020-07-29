@@ -35,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: ba57eed25fd8e1310b9e837c55cb1e1f7ec2b718
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912602"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213484"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold、_strtold_l、 wcstold、_wcstold_l
 
@@ -82,7 +82,7 @@ long double wcstold_l(
 
 ## <a name="return-value"></a>返回值
 
-**strtold**以**长****双精度**形式返回浮点数的值，但当表示形式导致溢出时除外，在这种情况下，函数返回 +/-**HUGE_VALL**。 **HUGE_VALL**的符号与无法表示的值的符号匹配。 如果无法执行任何转换或发生下溢，则**strtold**将返回0。
+**strtold**返回浮点数的值 **`long double`** ，除非表示形式会导致溢出，在这种情况下，函数返回 +/-**HUGE_VALL**。 **HUGE_VALL**的符号与无法表示的值的符号匹配。 如果无法执行任何转换或发生下溢，则**strtold**将返回0。
 
 **wcstold**将类似值返回到**strtold**。 对于这两个函数，如果出现溢出或下溢，则**errno**设置为**ERANGE** ，并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
@@ -90,7 +90,7 @@ long double wcstold_l(
 
 ## <a name="remarks"></a>备注
 
-每个函数将输入字符串*strSource*转换为**长****双精度**值。 **Strtold**函数在其无法识别为数字一部分的第一个字符处停止读取字符串*strSource* 。 这可能是终止 null 字符。 **Strtold**的宽字符版本为**wcstold**;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+每个函数将输入字符串*strSource*转换为 **`long double`** 。 **Strtold**函数在其无法识别为数字一部分的第一个字符处停止读取字符串*strSource* 。 这可能是终止 null 字符。 **Strtold**的宽字符版本为**wcstold**;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -109,11 +109,11 @@ long double wcstold_l(
 
 [*空格*][*sign*][*数字*][.*数字*][{**d** &#124; **d** &#124; **e** &#124; **e**} [*sign*]*数字*]
 
-*空格*可能包含被忽略的空格和制表符;*sign*为加号（**+**）或减号（**-**）;和*数字*是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字可以后跟一个指数，其中包含介绍性字母（**d**、**D**、**e** 或 **E**）和可选的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
+*空格*可能包含被忽略的空格和制表符;*sign*可以是加号（ **+** ）或减号（ **-** ）; 并且*数字*是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字可以后跟一个指数，其中包含介绍性字母（**d**、**D**、**e** 或 **E**）和可选的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strtold**、 **_strtold_l**|\<stdlib.h>|
 |**wcstold**、 **_wcstold_l**|\<stdlib.h> 或 \<wchar.h>|
@@ -156,7 +156,7 @@ string = 3.1415926535898This stopped it
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [字符串到数值函数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

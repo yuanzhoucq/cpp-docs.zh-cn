@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: d0f2f81957ee88d4263c6acd879bd286c95631eb
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e02fa1ffbf4c3e2c7d17dfe2d6ae66758945d9de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142338"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219513"
 ---
 # <a name="unbounded_buffer-class"></a>unbounded_buffer 类
 
@@ -44,36 +44,36 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 *_Type*<br/>
 缓冲区存储和传播的消息的负载类型。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[unbounded_buffer](#ctor)|已重载。 构造 `unbounded_buffer` 消息块。|
 |[~ unbounded_buffer 析构函数](#dtor)|销毁 `unbounded_buffer` 消息块。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[去除](#dequeue)|删除 `unbounded_buffer` 消息块中的项。|
-|[排队](#enqueue)|将一个项添加到 `unbounded_buffer` 消息块。|
+|[去除](#dequeue)|从消息块中删除一项 `unbounded_buffer` 。|
+|[排队](#enqueue)|向消息块添加一个项 `unbounded_buffer` 。|
 
-### <a name="protected-methods"></a>受保护方法
+### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[accept_message](#accept_message)|接受此 `unbounded_buffer` 消息块提供的消息，并将所有权转移到调用方。|
-|[consume_message](#consume_message)|使用之前由 `unbounded_buffer` 消息块提供并由目标保留的消息，将所有权转移给调用方。|
-|[link_target_notification](#link_target_notification)|一个回调，通知新目标已链接到此 `unbounded_buffer` 消息块。|
-|[process_input_messages](#process_input_messages)|将 `message` `_PMessage` 置于此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。|
-|[propagate_message](#propagate_message)|将消息从 `ISource` 块异步传递到此 `unbounded_buffer` 消息块。 它由源块调用时由 `propagate` 方法调用。|
-|[propagate_output_messages](#propagate_output_messages)|将 `message` `_PMessage` 置于此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。 （重写[source_block：:p ropagate_output_messages](source-block-class.md#propagate_output_messages)。）|
+|[accept_message](#accept_message)|接受此消息块提供的消息 `unbounded_buffer` ，并将所有权转移到调用方。|
+|[consume_message](#consume_message)|使用消息块先前提供的消息 `unbounded_buffer` 并由目标保留，将所有权转移给调用方。|
+|[link_target_notification](#link_target_notification)|通知新目标已链接到此 `unbounded_buffer` 消息块的回调。|
+|[process_input_messages](#process_input_messages)|将放置 `message` `_PMessage` 在此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。|
+|[propagate_message](#propagate_message)|将消息从块异步传递 `ISource` 到此 `unbounded_buffer` 消息块。 此 `propagate` 方法由源块调用时由方法调用。|
+|[propagate_output_messages](#propagate_output_messages)|将放置 `message` `_PMessage` 在此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。 （重写[source_block：:p ropagate_output_messages](source-block-class.md#propagate_output_messages)。）|
 |[release_message](#release_message)|释放以前的消息保留。 （重写[source_block：： release_message](source-block-class.md#release_message)。）|
-|[reserve_message](#reserve_message)|保留此 `unbounded_buffer` 消息块之前提供的消息。 （重写[source_block：： reserve_message](source-block-class.md#reserve_message)。）|
+|[reserve_message](#reserve_message)|保留此消息块先前提供的消息 `unbounded_buffer` 。 （重写[source_block：： reserve_message](source-block-class.md#reserve_message)。）|
 |[resume_propagation](#resume_propagation)|释放保留后恢复传播。 （重写[source_block：： resume_propagation](source-block-class.md#resume_propagation)。）|
-|[send_message](#send_message)|将消息从 `ISource` 块同步传递到此 `unbounded_buffer` 消息块。 它由源块调用时由 `send` 方法调用。|
+|[send_message](#send_message)|将消息从块同步传递 `ISource` 到此 `unbounded_buffer` 消息块。 此 `send` 方法由源块调用时由方法调用。|
 |[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 （重写[ITarget：： supports_anonymous_source](itarget-class.md#supports_anonymous_source)。）|
 
 有关详细信息，请参阅[异步消息块](../asynchronous-message-blocks.md)。
@@ -96,9 +96,9 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 **命名空间：** 并发
 
-## <a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a>accept_message
 
-接受此 `unbounded_buffer` 消息块提供的消息，并将所有权转移到调用方。
+接受此消息块提供的消息 `unbounded_buffer` ，并将所有权转移到调用方。
 
 ```cpp
 virtual message<_Type> * accept_message(
@@ -109,15 +109,15 @@ virtual message<_Type> * accept_message(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-提供的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity`所提供的 `message` 对象的。
 
 ### <a name="return-value"></a>返回值
 
-指向调用方现在具有所有权的 `message` 对象的指针。
+指向 `message` 调用方现在具有所有权的对象的指针。
 
-## <a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a>consume_message
 
-使用之前由 `unbounded_buffer` 消息块提供并由目标保留的消息，将所有权转移给调用方。
+使用消息块先前提供的消息 `unbounded_buffer` 并由目标保留，将所有权转移给调用方。
 
 ```cpp
 virtual message<_Type> * consume_message(
@@ -128,19 +128,19 @@ virtual message<_Type> * consume_message(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-所使用的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity` `message` 所使用的对象的。
 
 ### <a name="return-value"></a>返回值
 
-指向调用方现在具有所有权的 `message` 对象的指针。
+指向 `message` 调用方现在具有所有权的对象的指针。
 
 ### <a name="remarks"></a>备注
 
-与 `accept`类似，但前面总是调用 `reserve`。
+类似于 `accept` ，但后面始终是对的调用 `reserve` 。
 
-## <a name="dequeue"></a>去除
+## <a name="dequeue"></a><a name="dequeue"></a>去除
 
-删除 `unbounded_buffer` 消息块中的项。
+从消息块中删除一项 `unbounded_buffer` 。
 
 ```cpp
 _Type dequeue();
@@ -148,11 +148,11 @@ _Type dequeue();
 
 ### <a name="return-value"></a>返回值
 
-从 `unbounded_buffer`中移除的消息的有效负载。
+从中移除的消息的负载 `unbounded_buffer` 。
 
-## <a name="enqueue"></a>排队
+## <a name="enqueue"></a><a name="enqueue"></a>排队
 
-将一个项添加到 `unbounded_buffer` 消息块。
+向消息块添加一个项 `unbounded_buffer` 。
 
 ```cpp
 bool enqueue(
@@ -167,11 +167,11 @@ bool enqueue(
 
 ### <a name="return-value"></a>返回值
 
-如果接受该项，**则为 true** ; 否则为**false** 。
+**`true`** 如果此项已被接受，则 **`false`** 为; 否则为。
 
-## <a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
 
-一个回调，通知新目标已链接到此 `unbounded_buffer` 消息块。
+通知新目标已链接到此 `unbounded_buffer` 消息块的回调。
 
 ```cpp
 virtual void link_target_notification(
@@ -184,9 +184,9 @@ virtual void link_target_notification(
 *_PTarget*<br/>
 指向新链接的目标的指针。
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-将消息从 `ISource` 块异步传递到此 `unbounded_buffer` 消息块。 它由源块调用时由 `propagate` 方法调用。
+将消息从块异步传递 `ISource` 到此 `unbounded_buffer` 消息块。 此 `propagate` 方法由源块调用时由方法调用。
 
 ```cpp
 virtual message_status propagate_message(
@@ -207,9 +207,9 @@ virtual message_status propagate_message(
 
 [Message_status](concurrency-namespace-enums.md#message_status)指示目标决定对消息执行的操作。
 
-## <a name="propagate_output_messages"></a>propagate_output_messages
+## <a name="propagate_output_messages"></a><a name="propagate_output_messages"></a>propagate_output_messages
 
-将 `message` `_PMessage` 置于此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。
+将放置 `message` `_PMessage` 在此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。
 
 ```cpp
 virtual void propagate_output_messages();
@@ -217,11 +217,11 @@ virtual void propagate_output_messages();
 
 ### <a name="remarks"></a>备注
 
-如果在 `unbounded_buffer`中，另一条消息已在此消息之前，将不会发生传播到已接受或使用之前的消息。 成功 `accept` 或 `consume` 消息的第一个链接目标取得所有权，而其他目标则无法获取该消息。
+如果中的另一条消息已在中，则在 `unbounded_buffer` 接受或使用以前的消息之前，将不会发生传播到链接目标。 成功的第一个链接目标 `accept` 或 `consume` 消息取得所有权，而其他目标则无法获取该消息。
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
-将 `message` `_PMessage` 置于此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。
+将放置 `message` `_PMessage` 在此 `unbounded_buffer` 消息块中，并尝试将其提供给所有链接目标。
 
 ```cpp
 virtual void process_input_messages(
@@ -234,7 +234,7 @@ virtual void process_input_messages(
 *_PMessage*<br/>
 指向要处理的消息的指针。
 
-## <a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a>release_message
 
 释放以前的消息保留。
 
@@ -247,11 +247,11 @@ virtual void release_message(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-正在释放的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity` `message` 要释放的对象的。
 
-## <a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
 
-保留此 `unbounded_buffer` 消息块之前提供的消息。
+保留此消息块先前提供的消息 `unbounded_buffer` 。
 
 ```cpp
 virtual bool reserve_message(
@@ -262,17 +262,17 @@ virtual bool reserve_message(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-保留的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity` `message` 保留的对象的。
 
 ### <a name="return-value"></a>返回值
 
-如果消息已成功保留，**则为 true** ; 否则为**false** 。
+**`true`** 如果消息已成功保留，则 **`false`** 为; 否则为。
 
 ### <a name="remarks"></a>备注
 
-调用 `reserve` 后，如果返回**true**，则必须调用 `consume` 或 `release`，才能获取或释放消息的所有权。
+`reserve`调用后，如果它返回 **`true`** ，则 `consume` 或 `release` 必须调用以获取或释放消息的所有权。
 
-## <a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
 
 释放保留后恢复传播。
 
@@ -280,9 +280,9 @@ virtual bool reserve_message(
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-将消息从 `ISource` 块同步传递到此 `unbounded_buffer` 消息块。 它由源块调用时由 `send` 方法调用。
+将消息从块同步传递 `ISource` 到此 `unbounded_buffer` 消息块。 此 `send` 方法由源块调用时由方法调用。
 
 ```cpp
 virtual message_status send_message(
@@ -303,7 +303,7 @@ virtual message_status send_message(
 
 [Message_status](concurrency-namespace-enums.md#message_status)指示目标决定对消息执行的操作。
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
 重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。
 
@@ -313,9 +313,9 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>返回值
 
-**true** ，因为块不会推迟所提供的消息。
+**`true`** 因为块不会推迟所提供的消息。
 
-## <a name="ctor"></a>unbounded_buffer
+## <a name="unbounded_buffer"></a><a name="ctor"></a>unbounded_buffer
 
 构造 `unbounded_buffer` 消息块。
 
@@ -360,9 +360,9 @@ unbounded_buffer(
 
 如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。
 
-类型 `filter_method` 是具有签名 `bool (_Type const &)` 的函子，此 `unbounded_buffer` 消息块调用此方法来确定它是否应接受提供的消息。
+该类型 `filter_method` 是具有签名的函子， `bool (_Type const &)` 此消息块调用此方法 `unbounded_buffer` 来确定它是否应接受提供的消息。
 
-## <a name="dtor"></a>~ unbounded_buffer
+## <a name="unbounded_buffer"></a><a name="dtor"></a>~ unbounded_buffer
 
 销毁 `unbounded_buffer` 消息块。
 

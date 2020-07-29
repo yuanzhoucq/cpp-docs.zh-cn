@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942339"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213588"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -55,7 +55,7 @@ int _CrtReportBlockType(
 
 ## <a name="return-value"></a>返回值
 
-传递有效的调试堆指针时， **_CrtReportBlockType**函数以**int**的形式返回块类型和子类型。当传递了无效的指针时，该函数返回 -1。
+传递有效的调试堆指针时， **_CrtReportBlockType**函数将以形式返回块类型和子类型 **`int`** 。 当传递了无效的指针时，该函数返回 -1。
 
 ## <a name="remarks"></a>备注
 
@@ -69,7 +69,7 @@ int _CrtReportBlockType(
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -134,7 +134,7 @@ Data: <          > CD CD CD CD CD CD CD CD CD CD
 Object dump complete.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_CrtDoForAllClientObjects](crtdoforallclientobjects.md)<br/>
 [_CrtSetDumpClient](crtsetdumpclient.md)<br/>

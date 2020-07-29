@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: d42c7fbd3e065fc295027b7c56e207b2a49221bb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a063f0bba9482824817e4efe21ae5b7bf3c0995
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358734"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219529"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 类（并发运行时）
 
-并行模式库 (PPL) `task` 类。 对象`task`表示可以异步执行的工作，并与其他并发运行时中的并行算法生成的并行工作同时执行。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它还可以使用延续（）和联接（）`then``when_all`和选择（）`when_any`模式与其他任务组成。 当任务对象分配给新变量时，行为是 。 `std::shared_ptr`换句话说，两个对象表示相同的基础任务。
+并行模式库 (PPL) `task` 类。 `task`对象表示可与其他任务同时异步执行的工作，以及并发运行时中并行算法生成的并行工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它还可以与使用延续（ `then` ）和 join （） `when_all` 和 choice （）模式的其他任务组合在一起 `when_any` 。 当任务对象被分配给新变量时，行为是的 `std::shared_ptr` ; 换言之，这两个对象表示相同的基础任务。
 
 ## <a name="syntax"></a>语法
 
@@ -44,38 +44,38 @@ class task;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`result_type`|此类的一个对象生成的结果类型。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[任务](#ctor)|已重载。 构造 `task` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[get](#get)|已重载。 返回此任务产生的结果。 如果任务不处于终止状态，则对 `get` 的调用将等待任务完成。 在调用 `result_type` 为 `void` 的任务时，此方法不返回值。|
+|[get](#get)|已重载。 返回此任务产生的结果。 如果任务不处于终止状态，则对 `get` 的调用将等待任务完成。 当使用的为的任务调用时，此方法不返回值 `result_type` **`void`** 。|
 |[is_apartment_aware](#is_apartment_aware)|确定任务是否解包 Windows 运行时 `IAsyncInfo` 接口或继承自此类任务。|
 |[is_done](#is_done)|确定任务是否已完成。|
-|[调度](#scheduler)|返回此任务的计划程序|
-|[然后](#then)|已重载。 向此任务添加延续任务。|
-|[等](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|
+|[日程](#scheduler)|返回此任务的计划程序|
+|[接着](#then)|已重载。 向此任务添加延续任务。|
+|[再](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[操作员！](#operator_neq)|已重载。 确定两个 `task` 对象是否表示不同的内部任务。|
-|[运算符*](#operator_eq)|已重载。 将一个 `task` 对象的内容替换为另一个对象的内容。|
-|[运算符*](#operator_eq_eq)|已重载。 确定两个 `task` 对象是否表示相同的内部任务。|
+|[operator！ =](#operator_neq)|已重载。 确定两个 `task` 对象是否表示不同的内部任务。|
+|[operator =](#operator_eq)|已重载。 将一个 `task` 对象的内容替换为另一个对象的内容。|
+|[operator = =](#operator_eq_eq)|已重载。 确定两个 `task` 对象是否表示相同的内部任务。|
 
 ## <a name="remarks"></a>备注
 
-有关详细信息，请参阅[任务并行性](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
+有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -83,13 +83,13 @@ class task;
 
 ## <a name="requirements"></a>要求
 
-**标题：** ppltasks.h
+**标头：** ppltasks。h
 
 **命名空间：** 并发
 
 ## <a name="get"></a><a name="get"></a>获取
 
-返回此任务产生的结果。 如果任务不处于终止状态，则对 `get` 的调用将等待任务完成。 在调用 `result_type` 为 `void` 的任务时，此方法不返回值。
+返回此任务产生的结果。 如果任务不处于终止状态，则对 `get` 的调用将等待任务完成。 当使用的为的任务调用时，此方法不返回值 `result_type` **`void`** 。
 
 ```cpp
 _ResultType get() const;
@@ -103,10 +103,10 @@ void get() const;
 
 ### <a name="remarks"></a>备注
 
-如果任务被取消，则调用 将`get`引发[task_canceled](task-canceled-class.md)异常。 如果任务遇到了不同的异常或异常从前面的任务传播到此任务，则对 `get` 的调用将引发该异常。
+如果任务已取消，则对的调用 `get` 将引发[task_canceled](task-canceled-class.md)异常。 如果任务遇到了不同的异常或异常从前面的任务传播到此任务，则对 `get` 的调用将引发该异常。
 
 > [!IMPORTANT]
-> 在通用 Windows 平台 （UWP） 应用中，不要在用户界面线程上运行的代码中调用[并发：任务：：等待](#wait)或`get`（`wait`调用）。 `get` 否则，运行时将引发[并发：：invalid_operation](invalid-operation-class.md)因为这些方法会阻止当前线程，并可能导致应用变得无响应。 但是，`get`您可以调用 方法以在基于任务的延续中接收前任务的结果，因为结果立即可用。
+> 在通用 Windows 平台（UWP）应用程序中，不要[concurrency::task::wait](#wait) `get` `wait` `get` 在用户界面线程上运行的代码中调用 concurrency：： task：： wait 或（调用）。 否则，运行时会引发[concurrency：： invalid_operation](invalid-operation-class.md) ，因为这些方法会阻止当前线程，并可能导致应用程序停止响应。 但是，您可以调用 `get` 方法来接收基于任务的延续中的先行任务的结果，因为结果会立即可用。
 
 ## <a name="is_apartment_aware"></a><a name="is_apartment_aware"></a>is_apartment_aware
 
@@ -118,9 +118,9 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>返回值
 
-**如果**任务解包`IAsyncInfo`接口或是此类任务的后裔，则为**true，否则为 false。**
+**`true`** 如果该任务对某个 `IAsyncInfo` 接口进行了解包或源自此类任务，则为 **`false`** ; 否则为。
 
-## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a>任务：：is_done方法（并发运行时）
+## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a>task：： is_done 方法（并发运行时）
 
 确定任务是否已完成。
 
@@ -130,13 +130,13 @@ bool is_done() const;
 
 ### <a name="return-value"></a>返回值
 
-如果任务已完成，则为 True，否则为 false。
+如果任务已完成，则为 True; 否则为 false。
 
 ### <a name="remarks"></a>备注
 
-如果任务已完成或取消（无论是否有用户异常），则函数将返回 true。
+如果该任务已完成或已取消（有或没有用户例外），该函数将返回 true。
 
-## <a name="operator"></a><a name="operator_neq"></a>操作员！
+## <a name="operator"></a><a name="operator_neq"></a>operator！ =
 
 确定两个 `task` 对象是否表示不同的内部任务。
 
@@ -153,9 +153,9 @@ bool operator!= (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>返回值
 
-如果对象引用不同的基础任务，**则为 true，** 否则**为 false。**
+**`true`** 如果对象引用不同的基础任务，则为 **`false`** ; 否则为。
 
-## <a name="operator"></a><a name="operator_eq"></a>运算符*
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
 将一个 `task` 对象的内容替换为另一个对象的内容。
 
@@ -176,7 +176,7 @@ task& operator= (task&& _Other);
 
 `task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>运算符*
+## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
 
 确定两个 `task` 对象是否表示相同的内部任务。
 
@@ -193,9 +193,9 @@ bool operator== (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>返回值
 
-如果对象引用同一基础任务，**则为 true，** 否则**为 false。**
+**`true`** 如果对象引用相同的基础任务，则为 **`false`** ; 否则为。
 
-## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>任务：：调度程序方法（并发运行时）
+## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>task：：计划程序方法（并发运行时）
 
 返回此任务的计划程序
 
@@ -235,7 +235,7 @@ task(
 从中构造任务的参数的类型。
 
 *_Param*<br/>
-从中构造任务的参数。 这可能是 lambda、函数对象、`task_completion_event<result_type>`对象或 Windows：基础：：：IAsyncInfo，如果您正在 Windows 运行时应用中使用任务。 lambda 或函数对象应与 等效的类型`std::function<X(void)>`，其中 X 可以是 类型的`result_type`变量 ，`task<result_type>`或 Windows：：基础：：IAsyncInfo 在 Windows 运行时应用中。
+从中构造任务的参数。 如果在 Windows 运行时应用中使用任务，则这可能是 lambda、函数对象、 `task_completion_event<result_type>` 对象或 Windows：： Foundation：： IAsyncInfo。 Lambda 或函数对象应为等效于的类型 `std::function<X(void)>` ，其中 X 可以是类型为的变量， `result_type` `task<result_type>` 或在 Windows 运行时应用中为 Windows：： Foundation：： IAsyncInfo。
 
 *_TaskOptions*<br/>
 任务选项包括取消标记、计划程序等
@@ -245,21 +245,21 @@ task(
 
 ### <a name="remarks"></a>备注
 
-`task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 方法，如`get` `wait` ，`then`或将在调用默认构造的任务时引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常。
+`task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 `get` `wait` `then` 在默认构造的任务上调用时，等方法将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常。
 
 通过 `task_completion_event` 创建的任务将在设置任务完成事件后完成（并安排好其延续）。
 
 采用取消标记的构造函数的版本可创建能够通过使用提供标记的 `cancellation_token_source` 取消的任务。 创建时没有使用取消标记的任务不可取消。
 
-通过 `Windows::Foundation::IAsyncInfo` 接口或返回 `IAsyncInfo` 接口的 lambda 创建的任务在封闭的 Windows 运行时异步操作或行为完成时达到其终止状态。 同样，从 lambda 创建的任务，当`task<result_type>`内部任务到达其终端状态时返回到达其终端状态，而不是当 lambda 返回时返回其终端状态。
+通过 `Windows::Foundation::IAsyncInfo` 接口或返回 `IAsyncInfo` 接口的 lambda 创建的任务在封闭的 Windows 运行时异步操作或行为完成时达到其终止状态。 同样，从返回的 lambda 中创建的任务 `task<result_type>` 在内部任务达到其终止状态时达到其终止状态，而不是在 lambda 返回时。
 
 `task` 行为与智能指针的行为类似，可按值安全传递。 它可以由多个线程访问，而无需锁定。
 
-采用 Windows：：基础：：iAsyncInfo 接口或返回此类接口的 lambda 的构造函数重载仅适用于 Windows 运行时应用。
+采用 Windows：： Foundation：： IAsyncInfo 接口或返回此类接口的 lambda 的构造函数重载仅适用于 Windows 运行时应用。
 
-有关详细信息，请参阅[任务并行性](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
+有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
 
-## <a name="then"></a><a name="then"></a>然后
+## <a name="then"></a><a name="then"></a>接着
 
 向此任务添加延续任务。
 
@@ -311,7 +311,7 @@ __declspec(
 要与延续任务相关联的取消标记。 创建时不带取消标记的延续任务将继承其前面的任务的标记。
 
 *_ContinuationContext*<br/>
-用于指定执行延续的位置的变量。 此变量仅在 UWP 应用中使用时有用。 有关详细信息，请参阅[task_continuation_context](task-continuation-context-class.md)
+用于指定执行延续的位置的变量。 此变量仅在 UWP 应用中使用时才有用。 有关详细信息，请参阅[task_continuation_context](task-continuation-context-class.md)
 
 ### <a name="return-value"></a>返回值
 
@@ -319,11 +319,11 @@ __declspec(
 
 ### <a name="remarks"></a>备注
 
-重载`then`的 lambda 或 functor 返回 Windows：：基础：：iAsyncInfo 界面，仅适用于 Windows 运行时应用。
+`then`采用返回 Windows：： Foundation：： IAsyncInfo 接口的 lambda 或函子的的重载仅适用于 Windows 运行时应用。
 
-有关如何使用任务延续来撰写异步工作的详细信息，请参阅[任务并行性](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
+有关如何使用任务延续来编写异步工作的详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
 
-## <a name="wait"></a><a name="wait"></a>等
+## <a name="wait"></a><a name="wait"></a>再
 
 等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。
 
@@ -338,8 +338,8 @@ task_status wait() const;
 ### <a name="remarks"></a>备注
 
 > [!IMPORTANT]
-> 在通用 Windows 平台 （UWP） 应用中，`wait`不要调用在用户界面线程上运行的代码。 否则，运行时会引发 [concurrency::invalid_operation](invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](#get) 方法来接收基于任务的延续中的先行任务的结果。
+> 在通用 Windows 平台（UWP）应用程序中，不要 `wait` 在用户界面线程上运行的代码中调用。 否则，运行时会引发 [concurrency::invalid_operation](invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](#get) 方法来接收基于任务的延续中的先行任务的结果。
 
 ## <a name="see-also"></a>另请参阅
 
-[concurrency 命名空间](concurrency-namespace.md)
+[并发命名空间](concurrency-namespace.md)

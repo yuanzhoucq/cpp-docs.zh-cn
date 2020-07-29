@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213133"
 ---
 # <a name="unions"></a>Unions
 
 > [!NOTE]
 > 在 c + + 17 和更高版本中， **std：： variant**类是联合的一种类型安全的替代类。
 
-**联合**是用户定义的类型，其中的所有成员共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。
+**`union`** 是用户定义的类型，其中的所有成员共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。
 
 具有大量对象和/或内存有限时，联合可用于节省内存。 但是，需要格外小心才能正确使用它们，因为由你负责确保可始终访问写入的最后一个成员。 如果任何成员类型具有不常用构造函数，则必须编写附加代码来显式构造和销毁该成员。 使用联合之前，应考虑是否可以使用基类和派生类来更好地表示尝试解决的问题。
 
@@ -34,14 +34,14 @@ union [name]  { member-list };
 *name*<br/>
 为联合提供的类型名称。
 
-*member-list*<br/>
+*成员列表*<br/>
 联合可以包含的成员。 请参阅“备注”。
 
 ## <a name="remarks"></a>备注
 
 ## <a name="declaring-a-union"></a>声明联合
 
-使用**union**关键字开始联合的声明，并将成员列表括在大括号中：
+使用关键字开始联合的声明 **`union`** ，并将成员列表括在大括号中：
 
 ```cpp
 // declaring_a_union.cpp
@@ -648,15 +648,15 @@ union  {  member-list  }
 
 除了对命名联合的限制之外，匿名联合还服从以下附加限制：
 
-- 如果在文件或命名空间范围内声明，则还必须将它们声明为**static** 。
+- 还必须将它们声明为 **`static`** 在文件或命名空间范围中声明的。
 
-- 它们只能有**公共**成员;匿名联合中的**私有**和**受保护**成员会产生错误。
+- 它们只能具有 **`public`** 成员; **`private`** 而 **`protected`** 匿名联合中的成员则生成错误。
 
 - 它们不能具有函数成员。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../cpp/classes-and-structs-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
-[class](../cpp/class-cpp.md)<br/>
+class<br/>
 [struct](../cpp/struct-cpp.md)

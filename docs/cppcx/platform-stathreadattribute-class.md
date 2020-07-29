@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183360"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213016"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 类
 
@@ -32,17 +32,17 @@ public ref class STAThreadAttribute sealed : Attribute
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
-|[STAThreadAttribute 构造函数 1](#ctor)|初始化类的新实例。|
+|[STAThreadAttribute 构造函数 1](#ctor)|初始化此类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-STAThreadAttribute 属性继承[platform:: object 类](../cppcx/platform-object-class.md)。 STAThreadAttribute 还会重载或具有以下成员：
+STAThreadAttribute 属性继承自[Platform：： Object 类](../cppcx/platform-object-class.md)。 STAThreadAttribute 还会重载或具有以下成员：
 
 |名称|描述|
 |----------|-----------------|
-|[STAThreadAttribute::Equals](#equals)|确定指定的对象是否等于当前对象。|
+|[STAThreadAttribute::Equals](#equals)|确定指定对象是否等于当前对象。|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|返回此实例的哈希代码。|
 |[STAThreadAttribute::ToString](#tostring)|返回表示当前对象的字符串。|
 
@@ -52,11 +52,11 @@ STAThreadAttribute 属性继承[platform:: object 类](../cppcx/platform-object-
 
 ### <a name="requirements"></a>要求
 
-**标头：** collection.h
+**标头：** 集合。h
 
 **命名空间：** Platform
 
-## <a name="ctor"></a> STAThreadAttribute constructor
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a> STAThreadAttribute constructor
 
 初始化 STAThreadAttribute 类的新实例。
 
@@ -66,9 +66,9 @@ STAThreadAttribute 属性继承[platform:: object 类](../cppcx/platform-object-
 public:STAThreadAttribute();
 ```
 
-## <a name="equals"></a> STAThreadAttribute::Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute：： Equals
 
-确定指定的对象是否等于当前对象。
+确定指定对象是否等于当前对象。
 
 ### <a name="syntax"></a>语法
 
@@ -83,9 +83,9 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="return-value"></a>返回值
 
-**true**如果对象相等; 否则为**false**。
+**`true`** 如果对象相等，则为; 否则为。否则为 **`false`** 。
 
-## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute：： GetHashCode
 
 返回此实例的哈希代码。
 
@@ -99,7 +99,7 @@ public:int GetHashCode();
 
 此实例的哈希代码。
 
-## <a name="tostring"></a> STAThreadAttribute::ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute：： ToString
 
 返回表示当前对象的字符串。
 
@@ -113,6 +113,6 @@ public:String^ ToString();
 
 表示当前对象的字符串。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台命名空间](platform-namespace-c-cx.md)

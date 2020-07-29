@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371450"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212990"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 结构
 
-定义句柄的常见特征。
+定义句柄的常见特性。
 
 ## <a name="syntax"></a>语法
 
@@ -32,16 +32,16 @@ struct HANDLETraits;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称   | 说明
+名称   | 描述
 ------ | ---------------------
-`Type` | HANDLE 的同义词。
+`Type` | 句柄的同义词。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                              | 说明
+“属性”                                              | 描述
 ------------------------------------------------- | -----------------------------
-[操作：关闭](#close)                     | 关闭指定的句柄。
-[操作：获取无效值](#getinvalidvalue) | 表示无效的句柄。
+[HANDLETraits：： Close](#close)                     | 关闭指定的句柄。
+[HANDLETraits：： GetInvalidValue](#getinvalidvalue) | 表示无效的句柄。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,11 +49,11 @@ struct HANDLETraits;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 核心包装.h
+**标头：** corewrappers。h
 
-**命名空间：** 微软：：WRL：包装：：处理特征
+**命名空间：** Microsoft：： WRL：：包装：： HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>操作：关闭
+## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits：： Close
 
 关闭指定的句柄。
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>参数
 
-*H*<br/>
+*h*<br/>
 要关闭的句柄。
 
 ### <a name="return-value"></a>返回值
 
-如果句柄*h*成功关闭，**则为 true;** 否则，**假**。
+**`true`** 如果 handle *h*成功关闭，则为;否则为 **`false`** 。
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>操作：获取无效值
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits：： GetInvalidValue
 
 表示无效的句柄。
 
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>返回值
 
-始终返回INVALID_HANDLE_VALUE。 （INVALID_HANDLE_VALUE由 Windows 定义。
+始终返回 INVALID_HANDLE_VALUE。 （INVALID_HANDLE_VALUE 由 Windows 定义。）

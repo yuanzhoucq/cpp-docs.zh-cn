@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172473"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219749"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 
@@ -27,23 +27,23 @@ ms.locfileid: "80172473"
 where type-parameter: constraint list
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-type-parameter<br/>
+*类型-参数*<br/>
 要约束的其中一个类型参数。
 
-constraint list<br/>
-constraint list 是约束规范的逗号分隔列表。 列表可以包含由类型参数实现的接口。
+constraint list**<br/>
+constraint list** 是约束规范的逗号分隔列表。 列表可以包含由类型参数实现的接口。
 
 列表也可以包含类。 要让类型参数满足基类约束，它必须与约束的类相同或从约束派生。
 
-还可以指定 gcnew()，以指明类型参数必须有公共的无参数构造函数；或指定 ref class，以指明类型参数必须是引用类型（包括任意类、接口、委托或数组类型）；或指定 value class，以指明类型参数必须是值类型。 可以指定除 Nullable\<T> 以外的任何值类型。
+还可以指定 gcnew()****，以指明类型参数必须有公共的无参数构造函数；或指定 ref class****，以指明类型参数必须是引用类型（包括任意类、接口、委托或数组类型）；或指定 value class****，以指明类型参数必须是值类型。 可以指定除 Nullable 以外的任何值类型 \<T> 。
 
 还可以指定泛型参数作为约束。 为要约束的类型提供的类型参数必须是或派生自约束的类型。 这称为裸类型约束。
 
 ## <a name="remarks"></a>备注
 
-约束子句包括 where，后面依次是类型参数、冒号 (:)，以及用于指定对类型参数施加的限制性质的约束。 where 是上下文相关关键字；有关详细信息，请参阅[上下文相关关键字](context-sensitive-keywords-cpp-component-extensions.md)。 用空格分隔多个 where 子句。
+约束子句包括 where****，后面依次是类型参数、冒号 (:****)，以及用于指定对类型参数施加的限制性质的约束。 where**** 是上下文相关关键字；有关详细信息，请参阅[上下文相关关键字](context-sensitive-keywords-cpp-component-extensions.md)。 用空格分隔多个 where**** 子句。
 
 约束可应用于类型参数，可对可用作泛型类型或方法的自变量的类型加以限制。
 
@@ -64,7 +64,7 @@ ref class List {};
 
 类型参数类的静态方法不能通过类型参数调用，只能通过实际命名类型调用。
 
-约束不得是值类型（包括 int 或 double 等内置类型在内）。 由于值类型不能有派生类，因此只有一个类可以满足约束。 在这种情况下，可以使用特定值类型替换的类型参数重写泛型。
+约束不能是值类型，包括内置类型（如 **`int`** 或） **`double`** 。 由于值类型不能有派生类，因此只有一个类可以满足约束。 在这种情况下，可以使用特定值类型替换的类型参数重写泛型。
 
 在某些情况下需要约束，因为编译器不允许使用未知类型的方法或其他功能，除非约束表示未知类型支持这些方法或接口。
 
@@ -80,7 +80,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-对于多个类型参数，请对每个类型参数使用一个 where 子句。 例如：
+对于多个类型参数，请对每个类型参数使用一个 where**** 子句。 例如：
 
 ```cpp
 // generics_constraints_3.cpp
@@ -198,6 +198,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [泛型](generics-cpp-component-extensions.md)

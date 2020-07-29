@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a10d071e46c79f49abf7e3eba498fae0487ccdc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179687"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213354"
 ---
 # <a name="labeled-statements"></a>标记语句
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**Goto 语句**
+**goto 语句**
 
-源程序中*标识符*标签的外观声明一个标签。 只有[goto](../cpp/goto-statement-cpp.md)语句才能将控件传输到*标识符*标签。 下面的代码段说明如何使用**goto**语句和*标识符*标签：
+源程序中*标识符*标签的外观声明一个标签。 只有[goto](../cpp/goto-statement-cpp.md)语句才能将控件传输到*标识符*标签。 下面的代码段说明了语句的用法 **`goto`** 和*标识符*标签：
 
 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**Case 语句**
+**case 语句**
 
-**Case**关键字后出现的标签也不能出现在**switch**语句的外部。 （此限制还适用于**default**关键字。）下面的代码片段演示了**case**标签的正确用法：
+关键字后出现的标签 **`case`** 也不能出现在语句的外部 **`switch`** 。 （此限制也适用于 **`default`** 关键字。）下面的代码段显示了正确使用 **`case`** 标签：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>case 语句中的标签
 
-**Case**关键字后出现的标签也不能出现在**switch**语句的外部。 （此限制还适用于**default**关键字。）下面的代码片段演示了**case**标签的正确用法：
+关键字后出现的标签 **`case`** 也不能出现在语句的外部 **`switch`** 。 （此限制也适用于 **`default`** 关键字。）下面的代码段显示了正确使用 **`case`** 标签：
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>goto 语句中的标签
 
-源程序中*标识符*标签的外观声明一个标签。 只有[goto](../cpp/goto-statement-cpp.md)语句才能将控件传输到*标识符*标签。 下面的代码段说明如何使用**goto**语句和*标识符*标签：
+源程序中*标识符*标签的外观声明一个标签。 只有[goto](../cpp/goto-statement-cpp.md)语句才能将控件传输到*标识符*标签。 下面的代码段说明了语句的用法 **`goto`** 和*标识符*标签：
 
 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。
 
@@ -180,5 +180,5 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[ 语句概述](../cpp/overview-of-cpp-statements.md)<br/>
-[switch 语句 (C++)](../cpp/switch-statement-cpp.md)
+[C + + 语句概述](../cpp/overview-of-cpp-statements.md)<br/>
+[switch 语句（c + +）](../cpp/switch-statement-cpp.md)

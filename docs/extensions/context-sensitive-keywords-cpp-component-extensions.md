@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182170"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219737"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>上下文相关关键字（C++/CLI 和 C++/CX）
 
-上下文相关关键字是仅在特定上下文中才能识别出来的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。
+上下文相关关键字** 是仅在特定上下文中才能识别出来的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -38,11 +38,11 @@ ms.locfileid: "80182170"
 
 - `internal`
 
-- [名称](literal-cpp-component-extensions.md)
+- [文本](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
-- [属性](property-cpp-component-extensions.md)
+- [property](property-cpp-component-extensions.md)
 
 - [sealed](sealed-cpp-component-extensions.md)
 
@@ -72,7 +72,7 @@ ms.locfileid: "80182170"
 
 ### <a name="examples"></a>示例
 
-下面的代码示例展示了在相应上下文中，property 上下文相关关键字可用于定义属性和变量。
+下面的代码示例显示，在相应的上下文中， **`property`** 可以使用区分上下文的关键字来定义属性和变量。
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

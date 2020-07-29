@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ded4b06423be53911f3efd0b55d75cb979773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206522"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212808"
 ---
 # <a name="compiler-error-c2248"></a>编译器错误 C2248
 
 "*member*"：无法访问 "*class*" 类中声明的 "*access_level*" 成员
 
-派生类的成员无法访问基类 `private` 成员。 不能访问类实例 `private` 或 `protected` 成员。
+派生类的成员不能访问 **`private`** 基类的成员。 不能访问 **`private`** 或 **`protected`** 类实例的成员。
 
 ## <a name="example"></a>示例
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-公开 C2248 的另一个一致性问题是使用模板好友和专用化。 若要解决此问题，请使用空模板参数列表 < > 或特定模板参数来声明友元模板函数。
+公开 C2248 的另一个一致性问题是使用模板好友和专用化。 若要解决此问题，请使用空模板参数列表 <> 或特定模板参数来声明友元模板函数。
 
 ```cpp
 // C2248_template.cpp
