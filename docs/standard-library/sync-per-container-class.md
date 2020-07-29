@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d38307c4ae19e5f87d0dbcca8943dc1c3f239917
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376551"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232893"
 ---
 # <a name="sync_per_container-class"></a>sync_per_container 类
 
@@ -30,9 +30,9 @@ class sync_per_container
 
 |参数|说明|
 |---------------|-----------------|
-|*缓存*|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*Cache*|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
@@ -40,11 +40,11 @@ class sync_per_container
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<allocators>
+**标头：**\<allocators>
 
 **命名空间：** stdext
 
-## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container：等于
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container：： equals
 
 比较两个缓存是否相等。
 
@@ -56,15 +56,15 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |参数|说明|
 |---------------|-----------------|
-|*缓存*|同步筛选器的缓存对象。|
+|*Cache*|同步筛选器的缓存对象。|
 |*其他*|要用于比较是否相等的缓存对象。|
 
 ### <a name="return-value"></a>返回值
 
-成员函数始终返回**false**。
+成员函数总是返回 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 
-[\<分配器>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

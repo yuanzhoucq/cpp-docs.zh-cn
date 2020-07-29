@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 1b16028ea4be5303df5c6337260de5098e9c6ed6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c632966c9ac1264747568facd459a33d1e13338
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233075"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 运算符
 
-## <a name="operator"></a><a name="op_neq"></a>操作员！
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试运算符左侧和右侧的 map 对象是否不相等。
 
@@ -37,15 +37,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `map` 类型的对象。
 
-*对*\
+*然后*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 map 不相等，则为 **true**；如果 map 相等，则为 **false**。
+**`true`** 如果映射不相等，则为; 否则为。**`false`** 如果映射相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
 
 测试运算符左侧的映射对象是否小于右侧的映射对象。
 
@@ -102,15 +102,15 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `map` 类型的对象。
 
-*对*\
+*然后*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的映射严格小于运算符右侧的映射，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的映射严格小于运算符右侧的映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的映射对象是否小于或等于右侧的映射对象。
 
@@ -167,15 +167,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `map` 类型的对象。
 
-*对*\
+*然后*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的映射小于或等于右侧的映射，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的映射小于或等于运算符右侧的映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>运算符*
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧和右侧的 map 对象是否相等。
 
@@ -235,15 +235,15 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `map` 类型的对象。
 
-*对*\
+*然后*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的映射等于运算符右侧的映射，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的映射等于运算符右侧的映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
 
 测试运算符左侧的映射对象是否大于右侧的映射对象。
 
@@ -300,15 +300,15 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `map` 类型的对象。
 
-*对*\
+*然后*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的映射大于右侧的映射，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的映射大于运算符右侧的映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的映射对象是否大于或等于右侧的映射对象。
 
@@ -364,15 +364,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `map` 类型的对象。
 
-*对*\
+*然后*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的映射大于或等于列表右侧的映射，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的映射大于或等于列表右侧的映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>运算符！* （多映射）
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>operator！ = （多重映射）
 
 测试运算符左侧和右侧的 multimap 对象是否不相等。
 
@@ -432,15 +432,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `multimap` 类型的对象。
 
-*对*\
+*然后*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 multimap 不相等，则为 **true**；如果 multimap 相等，则为 **false**。
+**`true`** 如果 multimap 不相等，则为;**`false`** 如果 multimap 相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_multimap"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt_multimap"></a>操作员&lt;
 
 测试运算符左侧的 multimap 对象是否小于右侧的 multimap 对象。
 
@@ -497,15 +497,15 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `multimap` 类型的对象。
 
-*对*\
+*然后*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的多重映射严格小于右侧的多重映射，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的多重映射严格小于运算符右侧的多重映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>操作员&lt;=
 
 测试运算符左侧的 multimap 对象是否小于或等于右侧的 multimap 对象。
 
@@ -562,15 +562,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `multimap` 类型的对象。
 
-*对*\
+*然后*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的多重映射小于或等于右侧的多重映射，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的多重映射小于或等于运算符右侧的多重映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>运算符*
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operator = =
 
 测试运算符左侧和右侧的 multimap 对象是否相等。
 
@@ -630,15 +630,15 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `multimap` 类型的对象。
 
-*对*\
+*然后*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的多重映射等于右侧的多重映射，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的多重映射等于运算符右侧的多重映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_multimap"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt_multimap"></a>操作员&gt;
 
 测试运算符左侧的 multimap 对象是否大于右侧的 multimap 对象。
 
@@ -695,15 +695,15 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `multimap` 类型的对象。
 
-*对*\
+*然后*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的多重映射大于右侧的多重映射，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的多重映射大于运算符右侧的多重映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>操作员&gt;=
 
 测试运算符左侧的 multimap 对象是否大于或等于右侧的 multimap 对象。
 
@@ -760,15 +760,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 一个 `multimap` 类型的对象。
 
-*对*\
+*然后*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的多重映射大于或等于列表右侧的多重映射，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的多重映射大于或等于列表右侧的多重映射，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 

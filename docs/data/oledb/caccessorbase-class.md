@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233452"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
 
-OLE DB 模板中的所有访问器都从此类派生。 `CAccessorBase` 允许一个行集管理多个访问器。 它还提供了参数和输出列的绑定。
+OLE DB 模板中的所有访问器都从此类派生。 `CAccessorBase`允许一个行集管理多个访问器。 它还提供了参数和输出列的绑定。
 
 ## <a name="syntax"></a>语法
 
@@ -82,7 +82,7 @@ void Close();
 HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nAccessor*<br/>
 [in] 访问器的零偏移量。
@@ -115,14 +115,14 @@ ULONG GetNumAccessors() const;
 bool IsAutoAccessor(ULONG nAccessor) const;
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nAccessor*<br/>
 [in] 访问器的零偏移量。
 
 ### <a name="return-value"></a>返回值
 
-如果访问器是 autoaccessor，则返回**true** 。 否则，返回 **false**。
+**`true`** 如果访问器是 autoaccessor，则返回。 否则，它将返回 **`false`** 。
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase：： ReleaseAccessors
 
@@ -134,10 +134,10 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *pUnk*<br/>
-中一个指针，指向为其创建了访问器的 COM 对象的 `IUnknown` 接口。
+中指向为 `IUnknown` 其创建了访问器的 COM 对象的接口的指针。
 
 ### <a name="return-value"></a>返回值
 

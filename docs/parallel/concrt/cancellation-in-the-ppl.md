@@ -9,35 +9,35 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: 27c0ea3cfcf62060800c1c0b034dde7de6357250
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e85de9a07b625030976e6f03c9e965d34c3134d4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368497"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220972"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 
 本文档说明并行模式库 (PPL) 中取消操作的角色、如何取消并行工作以及如何确定取消并行工作的时间。
 
 > [!NOTE]
-> 运行时使用异常处理实现取消操作。 请勿在代码中捕捉或处理这些异常。 此外，还建议你在任务的函数体中编写异常安全的代码。 例如，可以使用*资源获取初始化*（RAII） 模式，以确保在任务正文中引发异常时正确处理资源。 有关使用 RAII 模式清理可取消任务中的资源的完整示例，请参阅[演练：从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)。
+> 运行时使用异常处理实现取消操作。 请勿在代码中捕捉或处理这些异常。 此外，还建议你在任务的函数体中编写异常安全的代码。 例如，你可以使用*资源采集为初始化*（RAII）模式，以确保在任务正文中引发异常时正确处理资源。 有关使用 RAII 模式清除可取消任务中的资源的完整示例，请参阅[演练：从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)。
 
 ## <a name="key-points"></a>要点
 
 - 取消是协作性的并且涉及在请求取消的代码和响应取消的任务之间的协作。
 
-- 如有可能，使用取消标记取消工作。 [并发：：cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)类定义取消令牌。
+- 如有可能，使用取消标记取消工作。 [Concurrency：： cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)类定义取消标记。
 
-- 使用取消令牌时，请使用[并发：：cancellation_token_source：：取消](reference/cancellation-token-source-class.md#cancel)方法启动取消，[并发：：cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)函数响应取消。 使用[并发：cancellation_token：is_canceled](reference/cancellation-token-class.md#is_canceled)方法检查任何其他任务是否请求取消。
+- 使用取消标记时，请使用[concurrency：： cancellation_token_source：： cancel](reference/cancellation-token-source-class.md#cancel)方法来启动取消，使用[concurrency：： cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)函数来响应取消。 使用[concurrency：： cancellation_token：： is_canceled](reference/cancellation-token-class.md#is_canceled)方法检查是否有其他任务请求取消。
 
-- 取消不会立即发生。 如果任务或任务组被取消，则不会启动新工作，但活动工作必须检查并响应取消。
+- 取消不会立即发生。 尽管在取消任务或任务组时未启动新工作，但活动工作必须检查并响应取消。
 
 - 基于值的延续继承前面的任务的取消标记。 基于任务的继续不会继承其前面的任务的标记。
 
-- 调用采用`cancellation_token`对象的构造函数或函数，但不希望该操作是可调用的，请使用[并发：：cancellation_token：：无](reference/cancellation-token-class.md#none)方法。 此外，如果不将取消令牌传递给[并发：：任务](../../parallel/concrt/reference/task-class.md)构造函数或[并发：：create_task](reference/concurrency-namespace-functions.md#create_task)函数，则该任务是无法调用的。
+- 当你调用采用对象的构造函数或函数，但你不希望该操作被可取消时，请使用[concurrency：： cancellation_token：： none](reference/cancellation-token-class.md#none)方法 `cancellation_token` 。 此外，如果未将取消标记传递给[concurrency：： task](../../parallel/concrt/reference/task-class.md)构造函数或[concurrency：： create_task](reference/concurrency-namespace-functions.md#create_task)函数，则该任务不可取消。
 
-## <a name="in-this-document"></a><a name="top"></a>在本文档中
+## <a name="in-this-document"></a><a name="top"></a>本文档中
 
 - [并行工作树](#trees)
 
@@ -55,33 +55,33 @@ ms.locfileid: "81368497"
 
 ## <a name="parallel-work-trees"></a><a name="trees"></a>并行工作树
 
-PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任务组以形成并行工作的*树*。 下图演示了并行工作树。 在该图中，`tg1` 和 `tg2` 表示任务组；`t1`、`t2`、`t3`、`t4` 和 `t5` 表示任务组执行的工作。
+PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任务组来形成并行工作*树*。 下图演示了并行工作树。 在该图中，`tg1` 和 `tg2` 表示任务组；`t1`、`t2`、`t3`、`t4` 和 `t5` 表示任务组执行的工作。
 
 ![并行工作树](../../parallel/concrt/media/parallelwork_trees.png "并行工作树")
 
-下面的示例演示了创建该图中的树所需的代码。 在此示例中，`tg1`并`tg2`[发：：structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)对象;`t1` `t4` `t5` 、、`t3`和 为[一致：task_handle](../../parallel/concrt/reference/task-handle-class.md)`t2`对象。
+下面的示例演示了创建该图中的树所需的代码。 在此示例中， `tg1` 和 `tg2` 为[concurrency：： structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)对象; `t1` 、 `t2` 、 `t3` 、 `t4` 和 `t5` 是[concurrency：： task_handle](../../parallel/concrt/reference/task-handle-class.md)对象。
 
 [!code-cpp[concrt-task-tree#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_1.cpp)]
 
-您还可以使用[并发：：task_group](reference/task-group-class.md)类创建类似的工作树。 [并发：：任务](../../parallel/concrt/reference/task-class.md)类还支持工作树的概念。 但是，`task` 树是依赖关系树。 在 `task` 树中，将来的工作在当前工作之后完成。 在任务组树中，内部工作在外部工作之前完成。 有关任务和任务组之间的差异的详细信息，请参阅[任务并行性](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
+你还可以使用[concurrency：： task_group](reference/task-group-class.md)类创建类似的工作树。 [Concurrency：： task](../../parallel/concrt/reference/task-class.md)类还支持工作树的概念。 但是，`task` 树是依赖关系树。 在 `task` 树中，将来的工作在当前工作之后完成。 在任务组树中，内部工作在外部工作之前完成。 有关任务和任务组之间的差异的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
 
 [[顶部](#top)]
 
 ## <a name="canceling-parallel-tasks"></a><a name="tasks"></a>取消并行任务
 
-可以通过多种方法来取消并行工作。 首选方法是使用取消标记。 任务组还支持[并发：：task_group：：：取消](reference/task-group-class.md#cancel)方法和[并发：：structured_task_group：：取消](reference/structured-task-group-class.md#cancel)方法。 最后一种方法是在任务工作函数体中引发异常。 无论选择哪种方法，都应知道取消不会立即发生。 如果任务或任务组被取消，则不会启动新工作，但活动工作必须检查并响应取消。
+可以通过多种方法来取消并行工作。 首选方法是使用取消标记。 任务组还支持[concurrency：： task_group：： cancel](reference/task-group-class.md#cancel)方法和[concurrency：： structured_task_group：： cancel](reference/structured-task-group-class.md#cancel)方法。 最后一种方法是在任务工作函数体中引发异常。 无论选择哪种方法，都应知道取消不会立即发生。 尽管在取消任务或任务组时未启动新工作，但活动工作必须检查并响应取消。
 
-有关取消并行任务的更多示例，请参阅[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)，[如何：使用取消从并行循环中断](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)，以及如何[：使用异常处理从并行循环中断](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
+有关取消并行任务的更多示例，请参阅[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)，[如何：使用取消中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)，[如何：使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
 
-### <a name="using-a-cancellation-token-to-cancel-parallel-work"></a><a name="tokens"></a>使用取消令牌取消并行工作
+### <a name="using-a-cancellation-token-to-cancel-parallel-work"></a><a name="tokens"></a>使用取消标记来取消并行工作
 
-`task`、`task_group` 和 `structured_task_group` 类支持通过使用取消标记进行取消。 PPL 为此定义[并发：：：cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)[和并发：cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)类。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 已处于活动状态的工作可以使用[is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)成员函数监视取消令牌并在可以时停止。
+`task`、`task_group` 和 `structured_task_group` 类支持通过使用取消标记进行取消。 PPL 定义[concurrency：： cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)和[concurrency：： cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)类以实现此目的。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 已处于活动状态的工作可以使用[is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)成员函数监视取消标记并在可能时停止。
 
-要启动取消，请调用[并发：cancellation_token_source：：取消](reference/cancellation-token-source-class.md#cancel)方法。 可以采用以下方法响应取消：
+若要启动取消，请调用[concurrency：： cancellation_token_source：： cancel](reference/cancellation-token-source-class.md#cancel)方法。 可以采用以下方法响应取消：
 
-- 对于`task`对象，请使用[并发：：cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)函数。 `cancel_current_task` 取消当前任务及其任何基于值的延续。 （它不取消与任务或其延续关联的取消*令牌*。
+- 对于 `task` 对象，请使用[concurrency：： cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)函数。 `cancel_current_task` 取消当前任务及其任何基于值的延续。 （它不会取消与任务或其延续关联的取消*标记*。）
 
-- 对于任务组和并行算法，使用[并发：is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)函数检测取消，并在函数返回**true**时尽快从任务正文返回。 （请勿从任务组调用 `cancel_current_task`。）
+- 对于任务组和并行算法，使用[concurrency：： is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)函数来检测取消，并在此函数返回时尽快从任务正文中返回 **`true`** 。 （请勿从任务组调用 `cancel_current_task`。）
 
 下面的示例演示用于进行任务取消的第一个基本模式。 任务正文偶尔检查循环内的取消。
 
@@ -90,14 +90,14 @@ PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任
 `cancel_current_task` 函数引发；因此，你不必从当前循环或函数显示返回。
 
 > [!TIP]
-> 或者，您可以调用[并发：：interruption_point](reference/concurrency-namespace-functions.md#interruption_point)函数，`cancel_current_task`而不是 。
+> 或者，你可以调用[concurrency：： interruption_point](reference/concurrency-namespace-functions.md#interruption_point)函数，而不是 `cancel_current_task` 。
 
 响应取消时，请务必调用 `cancel_current_task`，因为任务转换为已取消状态。 如果提前返回而不是调用 `cancel_current_task`，则操作转换为已完成状态并且所有基于值的延续都会运行。
 
 > [!CAUTION]
 > 切勿从代码中引发 `task_canceled`。 请改为调用 `cancel_current_task`。
 
-当任务以取消状态结束时，[并发：：任务：get](reference/task-class.md#get)方法将并[发：：：task_canceled](../../parallel/concrt/reference/task-canceled-class.md)。 （相反，[并发：：任务：：等待](reference/task-class.md#wait)返回[task_status：：取消](reference/concurrency-namespace-enums.md#task_group_status)，不引发。下面的示例说明了基于任务的延续的此行为。 始终调用基于任务的延续，即使前面的任务已取消。
+当任务以 "已取消" 状态结束时， [concurrency：： task：： get](reference/task-class.md#get)方法会引发[concurrency：： task_canceled](../../parallel/concrt/reference/task-canceled-class.md)。 （相反， [concurrency：： task：： wait](reference/task-class.md#wait)返回[task_status：：已取消](reference/concurrency-namespace-enums.md#task_group_status)且不引发。）下面的示例演示了基于任务的延续的此行为。 始终调用基于任务的延续，即使前面的任务已取消。
 
 [!code-cpp[concrt-task-canceled#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_3.cpp)]
 
@@ -106,55 +106,55 @@ PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-> 如果不将取消令牌传递给`task`构造函数或[并发：create_task](reference/concurrency-namespace-functions.md#create_task)函数，则该任务是无法调用的。 此外，还必须将相同的取消标记传递给任何嵌套的任务（即，在另一项任务的正文中创建的任务）的构造函数，以同时取消所有任务。
+> 如果未将取消标记传递给 `task` 构造函数或[concurrency：： create_task](reference/concurrency-namespace-functions.md#create_task)函数，则该任务不可取消。 此外，还必须将相同的取消标记传递给任何嵌套的任务（即，在另一项任务的正文中创建的任务）的构造函数，以同时取消所有任务。
 
-你可能想要在取消标记被取消时运行任意代码。 例如，如果用户在用户界面上选择 **"取消"** 按钮来取消该操作，则可以禁用该按钮，直到用户开始另一个操作。 下面的示例演示如何使用[并发：：cancellation_token：register_callback](reference/cancellation-token-class.md#register_callback)方法来注册取消取消令牌时运行的回调函数。
+你可能想要在取消标记被取消时运行任意代码。 例如，如果用户在用户界面上选择 "**取消**" 按钮来取消操作，则可以在用户启动另一个操作之前禁用该按钮。 下面的示例演示如何使用[concurrency：： cancellation_token：： register_callback](reference/cancellation-token-class.md#register_callback)方法来注册取消标记被取消时运行的回调函数。
 
 [!code-cpp[concrt-task-cancellation-callback#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_5.cpp)]
 
-文档["任务并行性"](../../parallel/concrt/task-parallelism-concurrency-runtime.md)解释了基于值的延续和基于任务的延续之间的区别。 如果未向延续任务提供 `cancellation_token` 对象，则延续通过以下方式从前面的任务继承取消标记：
+文档[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)性介绍了基于值和基于任务的延续之间的差异。 如果未向延续任务提供 `cancellation_token` 对象，则延续通过以下方式从前面的任务继承取消标记：
 
 - 基于值的延续始终继承前面的任务的取消标记。
 
 - 基于任务的延续从不继承前面的任务的取消标记。 使基于任务的延续可取消的唯一方法是显式传递一个取消标记。
 
-这些行为不会受出错任务（即引发异常的任务）影响。 在这种情况下，基于值的延续将被取消;因此，将取消基于值的延续。不会取消基于任务的延续。
+这些行为不会受出错任务（即引发异常的任务）影响。 在这种情况下，将取消基于值的延续;基于任务的延续不会被取消。
 
 > [!CAUTION]
 > 在另一个任务中创建的任务（即嵌套任务）不会继承父任务的取消标记。 只有基于值的继承延续前面的任务的取消标记。
 
 > [!TIP]
-> 调用采用`cancellation_token`对象的构造函数或函数时，请使用[并发：：cancellation_token：：无](reference/cancellation-token-class.md#none)方法，并且不希望该操作是可调用的。
+> 当你调用采用对象的构造函数或函数，并且你不希望该操作被可取消时，请使用[concurrency：： cancellation_token：： none](reference/cancellation-token-class.md#none)方法 `cancellation_token` 。
 
-还可以向 `task_group` 或 `structured_task_group` 对象的构造函数提供取消标记。 一个重要方面是子任务组继承此取消标记。 有关使用[并发：：run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token)函数来运行调用`parallel_for`来演示这一概念的示例，请参阅本文档后面的[取消并行算法](#algorithms)。
+还可以向 `task_group` 或 `structured_task_group` 对象的构造函数提供取消标记。 一个重要方面是子任务组继承此取消标记。 有关通过使用[concurrency：： run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token)函数运行以调用来演示此概念的示例 `parallel_for` ，请参阅本文档后面的[取消并行算法](#algorithms)。
 
 [[顶部](#top)]
 
 #### <a name="cancellation-tokens-and-task-composition"></a>取消标记和任务复合
 
-[并发：：when_all](reference/concurrency-namespace-functions.md#when_all)[和并发：：when_any](reference/concurrency-namespace-functions.md#when_all)函数可以帮助您组成多个任务以实现通用模式。 本节描述这些函数如何与取消标记配合使用。
+[Concurrency：： when_all](reference/concurrency-namespace-functions.md#when_all)和[concurrency：： when_any](reference/concurrency-namespace-functions.md#when_all)函数可帮助你组合多个任务以实现常见模式。 本节描述这些函数如何与取消标记配合使用。
 
-当您向`when_all`和`when_any`函数提供取消令牌时，该函数仅在取消该取消令牌或其中一个参与者任务以已取消状态结束或引发异常时才取消。
+当你向和函数提供取消标记时 `when_all` `when_any` ，该函数仅在取消标记被取消时或参与者任务之一以 "已取消" 状态结束或引发异常时取消。
 
-不向 `when_all` 函数提供取消标记时，该函数从组合成整体操作的每个任务继承取消标记。 当其中任何一个令牌`when_all`被取消且至少有一个参与者任务尚未启动或正在运行时，将从返回的任务将被取消。 当其中一个任务引发异常时，将发生类似的行为 - 返回`when_all`的任务将立即取消该异常。
+不向 `when_all` 函数提供取消标记时，该函数从组合成整体操作的每个任务继承取消标记。 `when_all`当取消其中的任何标记并且至少有一个参与者任务尚未启动或正在运行时，从返回的任务将被取消。 当某个任务引发异常时，将会出现类似的行为-从返回的任务 `when_all` 会立即取消并出现该异常。
 
 任务完成时，运行时会选择从 `when_any` 函数返回的任务的取消标记。 如果没有参与任务以已完成状态结束，并且一个或多个任务引发异常，则选择引发的一个任务来完成 `when_any`，并且其标记被选为结束任务的标记。 如果有多个任务以已完成状态结束，则从 `when_any` 任务返回的任务以已完成状态结束。 运行时尝试在完成时选取其标记未被取消的已完成任务，以便 `when_any` 不会被立即取消，则即使其他正在执行的任务可能在以后完成也是如此。
 
 [[顶部](#top)]
 
-### <a name="using-the-cancel-method-to-cancel-parallel-work"></a><a name="cancel"></a>使用取消方法取消并行工作
+### <a name="using-the-cancel-method-to-cancel-parallel-work"></a><a name="cancel"></a>使用 cancel 方法取消并行工作
 
-[并发：：task_group：：：取消](reference/task-group-class.md#cancel)[和并发：：structured_task_group：：取消](reference/structured-task-group-class.md#cancel)方法将任务组设置为已取消状态。 在你调用 `cancel` 之后，任务组不会启动将来的任务。 `cancel` 方法可以由多个子任务调用。 已取消的任务会导致[并发：：task_group：：等待](reference/task-group-class.md#wait)[和并发：：structured_task_group：等待](reference/structured-task-group-class.md#wait)方法返回[并发：：已取消](reference/concurrency-namespace-enums.md#task_group_status)。
+[Concurrency：： task_group：： cancel](reference/task-group-class.md#cancel)和[concurrency：： structured_task_group：： cancel](reference/structured-task-group-class.md#cancel)方法将任务组设置为已取消状态。 在你调用 `cancel` 之后，任务组不会启动将来的任务。 `cancel` 方法可以由多个子任务调用。 取消的任务会导致[concurrency：： task_group：： wait](reference/task-group-class.md#wait)和[concurrency：： structured_task_group：： wait](reference/structured-task-group-class.md#wait)方法返回[concurrency：：已取消](reference/concurrency-namespace-enums.md#task_group_status)。
 
-如果任务组被取消，则从每个子任务到运行时的调用可能会触发*中断点*，从而导致运行时引发和捕获内部异常类型以取消活动任务。 并发运行时不定义具体的中断点；它们可以在对运行时的任何调用中出现。 运行时必须处理它引发的异常才能执行取消。 因此，不要处理任务正文中的未知异常。
+如果任务组已取消，则从每个子任务到运行时的调用会触发一个*中断点*，这会导致运行时引发和捕获内部异常类型来取消活动任务。 并发运行时不定义具体的中断点；它们可以在对运行时的任何调用中出现。 运行时必须处理它引发的异常才能执行取消。 因此，不要处理任务正文中的未知异常。
 
 如果子任务执行耗时的操作，并且不会调入运行时，它必须定期检查取消并及时退出。 下面的示例演示一种确定取消工作的时间的方法。 任务 `t4` 在遇到错误时取消父任务组。 任务 `t5` 偶尔调用 `structured_task_group::is_canceling` 方法来检查取消。 如果父任务组已取消，则任务 `t5` 打印一条消息并退出。
 
 [!code-cpp[concrt-task-tree#6](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_6.cpp)]
 
-此示例检查任务循环每 100<sup>次</sup>迭代取消。 检查取消的频率取决于任务执行的工作量和你需要任务响应取消的速度。
+此示例在任务循环的每个<sup>第</sup>100 次迭代时检查取消。 检查取消的频率取决于任务执行的工作量和你需要任务响应取消的速度。
 
-如果无法访问父任务组对象，请调用[并发：：is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)函数以确定是否取消父任务组。
+如果无权访问父任务组对象，请调用[concurrency：： is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)函数以确定父任务组是否已取消。
 
 `cancel` 方法只影响子任务。 例如，如果取消并行工作树插图中的任务组 `tg1`，则该树中的所有任务（`t1`、`t2`、`t3`、`t4` 和 `t5`）都将受到影响。 如果取消嵌套的任务组 `tg2`，则只有任务 `t4` 和 `t5` 会受到影响。
 
@@ -168,23 +168,23 @@ PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任
 
 [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]
 
-`structured_task_group` 类不是线程安全的。 因此，调用其父 `structured_task_group` 对象方法的子任务会产生未指定的行为。 此规则的例外情况是`structured_task_group::cancel`[和并发：structured_task_group：：is_canceling](reference/structured-task-group-class.md#is_canceling)方法。 子任务可以调用这些方法来取消父任务组和检查取消。
+`structured_task_group` 类不是线程安全的。 因此，调用其父 `structured_task_group` 对象方法的子任务会产生未指定的行为。 此规则的例外情况是 `structured_task_group::cancel` 和[concurrency：： structured_task_group：： is_canceling](reference/structured-task-group-class.md#is_canceling)方法。 子任务可以调用这些方法来取消父任务组和检查取消。
 
 > [!CAUTION]
 > 尽管可以使用取消标记来取消由作为 `task` 对象的子级运行的任务组执行的工作，但不能使用 `task_group::cancel` 或 `structured_task_group::cancel` 方法来取消任务组中运行的 `task` 对象。
 
 [[顶部](#top)]
 
-### <a name="using-exceptions-to-cancel-parallel-work"></a><a name="exceptions"></a>使用异常取消并行工作
+### <a name="using-exceptions-to-cancel-parallel-work"></a><a name="exceptions"></a>使用异常来取消并行工作
 
-要取消并行工作树，使用取消标记和 `cancel` 方法比使用异常处理更有效。 取消标记和 `cancel` 方法由上向下取消任务和所有子任务。 相反，异常处理以自下而上的方式工作，并且必须在异常向上传播时单独取消每个子任务组。 主题["异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)"解释了并发运行时如何使用异常来传达错误。 但是，并非所有异常都表示错误。 例如，搜索算法可能在找到结果时取消其关联的任务。 但是，如上所述，在取消并行工作时，异常处理的效率比使用 `cancel` 方法低。
+要取消并行工作树，使用取消标记和 `cancel` 方法比使用异常处理更有效。 取消标记和 `cancel` 方法由上向下取消任务和所有子任务。 相反，异常处理以自下而上的方式工作，并且必须在异常向上传播时单独取消每个子任务组。 主题[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)说明了并发运行时如何使用异常来传达错误。 但是，并非所有异常都表示错误。 例如，搜索算法可能在找到结果时取消其关联的任务。 但是，如上所述，在取消并行工作时，异常处理的效率比使用 `cancel` 方法低。
 
 > [!CAUTION]
 > 如非必要，建议你不要使用异常来取消并行工作。 取消标记和任务组 `cancel` 方法更高效且更不易出错。
 
 当在传递给任务组的工作函数体中引发异常时，运行时存储该异常，并将该异常封送到等待任务组完成的上下文。 与 `cancel` 方法一样，运行时将放弃任何尚未启动的任务，并且不接受新任务。
 
-第三个示例与第二个示例类似，只不过任务 `t4` 引发异常来取消任务组 `tg2`。 本`try`-`catch`示例使用块在任务组`tg2`等待其子任务完成时检查取消。 与第一个示例类似，这会导致任务组 `tg2` 进入已取消状态，但不会取消任务组 `tg1`。
+第三个示例与第二个示例类似，只不过任务 `t4` 引发异常来取消任务组 `tg2`。 此示例在 **`try`** - **`catch`** 任务组等待其子任务完成时使用块来检查取消 `tg2` 。 与第一个示例类似，这会导致任务组 `tg2` 进入已取消状态，但不会取消任务组 `tg1`。
 
 [!code-cpp[concrt-task-tree#4](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_9.cpp)]
 
@@ -206,7 +206,7 @@ PPL 中的并行算法（如 `parallel_for`）基于任务组生成。 因此，
 
 [!code-cpp[concrt-cancel-parallel-for#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_11.cpp)]
 
-下面的示例使用[并发：：structured_task_group：：run_and_wait](reference/structured-task-group-class.md#run_and_wait)方法调用`parallel_for`该算法。 `structured_task_group::run_and_wait` 方法等待提供的任务完成。 `structured_task_group` 对象可让工作函数取消该任务。
+下面的示例使用[concurrency：： structured_task_group：： run_and_wait](reference/structured-task-group-class.md#run_and_wait)方法来调用 `parallel_for` 算法。 `structured_task_group::run_and_wait` 方法等待提供的任务完成。 `structured_task_group` 对象可让工作函数取消该任务。
 
 [!code-cpp[concrt-task-tree#7](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_12.cpp)]
 
@@ -236,15 +236,15 @@ Caught 50
 
 ## <a name="when-not-to-use-cancellation"></a><a name="when"></a>何时不使用取消
 
-当一组相关任务中的每个成员可以及时退出时，使用取消是恰当的。 但是，在某些情况下取消可能不适合你的应用程序。 例如，由于任务取消是协作性的，如果任何单个任务被阻止，则无法取消整个任务集。 例如，如果一个任务尚未开始，但它取消阻止另一个活动任务，则在任务组已取消时，它将不能启动。 这会导致应用程序中发生死锁。 可能不适合使用取消的另一个示例是任务被取消，但其子任务会执行重要操作（如释放资源）。 因为在取消父任务时整个任务集也会被取消，所以将无法执行此操作。 有关说明这一点的示例，请参阅"并行模式库"主题中的"最佳实践"中的"[了解取消和异常处理如何影响对象销毁](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)"部分。
+当一组相关任务中的每个成员可以及时退出时，使用取消是恰当的。 但是，在某些情况下取消可能不适合你的应用程序。 例如，由于任务取消是协作性的，如果任何单个任务被阻止，则无法取消整个任务集。 例如，如果一个任务尚未开始，但它取消阻止另一个活动任务，则在任务组已取消时，它将不能启动。 这会导致应用程序中发生死锁。 可能不适合使用取消的另一个示例是任务被取消，但其子任务会执行重要操作（如释放资源）。 因为在取消父任务时整个任务集也会被取消，所以将无法执行此操作。 有关说明这一点的示例，请参阅并行模式库中的最佳实践主题中的[了解取消和异常处理如何影响对象析构](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)部分。
 
 [[顶部](#top)]
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
-|[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|演示如何使用取消来实现并行搜索算法。|
+|[如何：使用取消中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|演示如何使用取消来实现并行搜索算法。|
 |[如何：使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示如何使用 `task_group` 类编写基本树结构的搜索算法。|
 |[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|描述运行时如何处理任务组、轻量级任务和异步代理引发的异常，以及如何在应用程序中响应异常。|
 |[任务并行度](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|描述任务与任务组之间的关系，以及如何在应用程序中使用非结构化和结构化的任务。|

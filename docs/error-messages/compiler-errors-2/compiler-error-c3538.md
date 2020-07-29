@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233361"
 ---
 # <a name="compiler-error-c3538"></a>编译器错误 C3538
 
@@ -21,11 +21,11 @@ ms.locfileid: "74761538"
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
-1. 确保列表中的所有 `auto` 声明都推导为同一类型。
+1. 确保 **`auto`** 列表中的所有声明都推导为同一类型。
 
 ## <a name="example"></a>示例
 
-下面的语句生成 C3538。 每条语句声明多个变量，但 `auto` 关键字的每次使用都不推导为同一类型。
+下面的语句生成 C3538。 每个语句声明多个变量，但关键字的每个使用都 **`auto`** 不能推导为同一类型。
 
 ```cpp
 // C3538.cpp
@@ -45,6 +45,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [auto 关键字](../../cpp/auto-keyword.md)

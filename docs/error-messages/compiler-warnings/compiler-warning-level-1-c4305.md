@@ -5,12 +5,12 @@ f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233283"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>编译器警告（等级 1）C4305
 
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-若要解决此问题，请使用正确类型的值进行初始化，或使用显式强制转换为正确的类型。 例如，使用**浮点**文本（如 2.71828 f），而不是**双精度**（浮点文本的默认类型）来初始化**浮点**变量，或传递给采用**float**参数的构造函数。
+若要解决此问题，请使用正确类型的值进行初始化，或使用显式强制转换为正确的类型。 例如，使用文本（例如 **`float`** 2.71828 f）而不是 **`double`** （浮点文本的默认类型）来初始化 **`float`** 变量，或传递给采用参数的构造函数 **`float`** 。

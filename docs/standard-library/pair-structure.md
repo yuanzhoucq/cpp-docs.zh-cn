@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: f372ae036ff4843532efa18c3d518820b5f06111
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233010"
 ---
 # <a name="pair-structure"></a>pair 结构
 
@@ -65,22 +65,22 @@ template<class T1, class T2>
 *Val2*\
 初始化 `pair` 的第二个元素的值。
 
-*右侧*\
+*然后*\
 一个对，其值将用于初始化另一对的元素。
 
 ## <a name="return-value"></a>返回值
 
-第一个 （默认） 构造函数初始化的类型为默认值对的第一个元素`T1`和第二个元素的类型的默认`T2`。
+第一个（默认）构造函数将该对的第一个元素初始化为类型的默认值 `T1` 和第二个元素的默认值 `T2` 。
 
-第二个构造函数初始化到该对的第一个元素*Val1*第二个*Val2。*
+第二个构造函数将该对的第一个元素初始化为*Val1* ，并将秒初始化为*Val2。*
 
-第三个（模板）构造函数将该对的第一个元素初始化为 `Right`. **first** 并将第二个元素初始化为 `Right`. **second** 相同。
+第三个（模板）构造函数将该对的第一个元素初始化为 `Right`. **first** 并将第二个元素初始化为 `Right`. **second**。
 
-第四个构造函数初始化到该对的第一个元素*Val1*第二个*Val2*使用[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+第四个构造函数使用[右值引用声明符](../cpp/rvalue-reference-declarator-amp-amp.md)将*Val1*的第一个元素和第二个元素初始化为*Val2* ：  &&。
 
 ## <a name="remarks"></a>备注
 
-模板结构存储类型的对象对`T1`和`T2`分别。 类型`first_type`等同于模板参数`T1`和类型`second_type`等同于模板参数`T2`。 `T1` 和`T2`每个需要提供一个默认构造函数、 单自变量构造函数和析构函数。 类型为 `pair` 的所有成员都是公共的，因为该类型声明为 `struct` 而不是 **class**。 对的两种最常见用法是作为返回两个值的函数的返回类型以及作为关联容器类 [map 类](../standard-library/map-class.md)和 [multimap 类](../standard-library/multimap-class.md)的元素，这些类具有与每个元素相关联的键和值类型。 后者满足对关联容器的要求，且具有形式为 `pair`< **const**`key_type`, `mapped_type`> 的值类型。
+模板结构分别存储类型为和的一对 `T1` 对象 `T2` 。 类型与 `first_type` 模板参数相同 `T1` ，类型与 `second_type` 模板参数相同 `T2` 。 `T1``T2`每个只需要提供一个默认构造函数、一个参数构造函数和一个析构函数。 此类型的所有成员 `pair` 都是公共的，因为该类型声明为 **`struct`** 而不是 **`class`** 。 对的两种最常见用法是作为返回两个值的函数的返回类型以及作为关联容器类 [map 类](../standard-library/map-class.md)和 [multimap 类](../standard-library/multimap-class.md)的元素，这些类具有与每个元素相关联的键和值类型。 后者满足对关联容器的要求，并具有形式的值类型 `pair` <  **`const`** `key_type` `mapped_type`>。
 
 ## <a name="example"></a>示例
 

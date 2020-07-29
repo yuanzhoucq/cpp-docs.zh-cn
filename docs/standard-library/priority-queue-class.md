@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: cef85eafaa3aab1c448234399f146191de957b8b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a1b33e45d066082a0f225067db84a6240e8fc53
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232945"
 ---
 # <a name="priority_queue-class"></a>priority_queue 类
 
@@ -40,20 +40,20 @@ class priority_queue
 
 ### <a name="parameters"></a>参数
 
-*类型*\
+*类别*\
 要存储在 priority_queue 中的元素数据类型。
 
 *容器*\
 用来实现 priority_queue 的基础容器的类型。
 
-*比较*\
+*并排*\
 一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在 priority_queue 中的相对顺序。 此参数为可选自变量，默认值是二元谓词 `less<typename Container::value_type>`。
 
 ## <a name="remarks"></a>备注
 
-队列对象的第一`Type`个模板参数中规定的类元素是[value_type](#value_type)的同义词，必须匹配第二个模板参数中规定的基础容器类`Container`中的元素类型。 `Type`必须可分配，以便可以复制该类型的对象并将值分配给该类型的变量。
+`Type`Queue 对象的第一个模板参数中的规定类的元素与[value_type](#value_type)同义，并且必须与 `Container` 第二个模板参数规定的基础容器类中的元素类型相匹配。 `Type`必须是可赋值的，以便可以复制该类型的对象并为该类型的变量赋值。
 
-priority_queue通过调用类`Traits`的存储函数对象来命令它控制的顺序。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。
+Priority_queue 通过调用类的存储函数对象，对它控制的序列进行排序 `Traits` 。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。
 
 适用于 Priority_queue 的基础容器类包括 [deque 类](../standard-library/deque-class.md)和默认的 [vector 类](../standard-library/vector-class.md)，或任何支持 `front`、`push_back`、`pop_back` 的操作和随机访问迭代器的其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
 
@@ -61,9 +61,9 @@ priority_queue通过调用类`Traits`的存储函数对象来命令它控制的�
 
 C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priority_queue。 每种适配器都限制了一些基础容器类的功能，以便对标准数据结构提供精确控制的接口。
 
-- [堆栈类](../standard-library/stack-class.md)支持最后一次首次出出 （LIFO） 数据结构。 可以在脑海中将其类比为一摞盘子。 元素（盘子）只能从堆栈顶部（基容器末尾的最后一个元素）插入、检查或删除。 限制仅访问顶部元素是使用堆栈类的原因。
+- [堆栈类](../standard-library/stack-class.md)支持后进先出（LIFO）数据结构。 可以在脑海中将其类比为一摞盘子。 元素（盘子）只能从堆栈顶部（基容器末尾的最后一个元素）插入、检查或删除。 限制仅访问顶部元素是使用堆栈类的原因。
 
-- [队列类](../standard-library/queue-class.md)支持先出先出 （FIFO） 数据结构。 可以在脑海中将其类比为排队等候银行柜员的人。 元素（人）可从行的后部添加，并且可以从行的前部删除。 行的前部和后部都可以插入。 以这种方式限制仅访问前部和后部元素是使用队列类的原因。
+- [Queue 类](../standard-library/queue-class.md)支持先进先出（FIFO）数据结构。 可以在脑海中将其类比为排队等候银行柜员的人。 元素（人）可从行的后部添加，并且可以从行的前部删除。 行的前部和后部都可以插入。 以这种方式限制仅访问前部和后部元素是使用队列类的原因。
 
 - Priority_queue 类将对其元素进行排序，以便最大的元素始终位于顶部位置。 它支持元素的插入以及顶部元素的检查和删除。 可以在脑海中将其类比为按年龄、身高或其他标准排队的人。
 
@@ -75,29 +75,29 @@ C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priorit
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|说明|
+|类型名称|描述|
 |-|-|
 |[container_type](#container_type)|一种类型，它提供将由 `priority_queue` 采用的基容器。|
 |[size_type](#size_type)|可表示 `priority_queue` 中元素数量的无符号整数类型。|
 |[value_type](#value_type)|一种类型，它表示存储为 `priority_queue` 中元素的对象的类型。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
-|[空](#empty)|测试 `priority_queue` 是否为空。|
-|[流行](#pop)|从顶部位置移除 `priority_queue` 的最大元素。|
-|[推](#push)|基于来自 operator< 的元素的优先级将元素添加到优先级队列。|
+|[empty](#empty)|测试 `priority_queue` 是否为空。|
+|[弹出](#pop)|从顶部位置移除 `priority_queue` 的最大元素。|
+|[push](#push)|基于来自 operator< 的元素的优先级将元素添加到优先级队列。|
 |[大小](#size)|返回 `priority_queue` 中的元素数量。|
-|[top](#top)|返回对 `priority_queue` 顶部的最大元素的常量引用。|
+|[返回页首](#top)|返回对 `priority_queue` 顶部的最大元素的常量引用。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<queue>
+**标头：**\<queue>
 
 **命名空间:** std
 
-## <a name="priority_queuecontainer_type"></a><a name="container_type"></a>priority_queue：container_type
+## <a name="priority_queuecontainer_type"></a><a name="container_type"></a>priority_queue：： container_type
 
 一种类型，它提供将调整的基容器。
 
@@ -115,7 +115,7 @@ typedef Container container_type;
 
 有关如何声明和使用 `container_type` 的示例，请参阅 [priority_queue](#priority_queue) 的示例。
 
-## <a name="priority_queueempty"></a><a name="empty"></a>priority_queue：：空
+## <a name="priority_queueempty"></a><a name="empty"></a>priority_queue：： empty
 
 测试 priority_queue 是否为空。
 
@@ -125,7 +125,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>返回值
 
-如果 priority_queue 为空，则为 **true**；如果 priority_queue 不为空，则为 **false**。
+**`true`** 如果 priority_queue 为空，则为; 否则为。**`false`** 如果 priority_queue 不是空的。
 
 ### <a name="example"></a>示例
 
@@ -161,7 +161,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.
 ```
 
-## <a name="priority_queuepop"></a><a name="pop"></a>priority_queue：:pop
+## <a name="priority_queuepop"></a><a name="pop"></a>priority_queue：:p op
 
 从顶部位置移除 priority_queue 的最大元素。
 
@@ -217,7 +217,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.
 ```
 
-## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a>priority_queue：:p里）队列
+## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a>priority_queue：:p riority_queue
 
 构造一个空的 priority_queue，或是一定范围内基容器对象或其他 priority_queue 的副本。
 
@@ -248,22 +248,22 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 *_Cont*\
 要以构造的 priority_queue 为副本的基容器。
 
-*对*\
+*然后*\
 要以构造的集为副本的 priority_queue。
 
-*第一*\
+*1*\
 要复制的范围元素中的第一个元素的位置。
 
-*最后*\
+*时间*\
 要复制的元素范围以外的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
-前三个构造函数中的每一个都指定一个空的初始priority_queue，第二个构造函数 （`comp`） 的类型指定用于建立元素的顺序，第三个显式指定要使用的`container_type`（`_Cont`）。 关键字 **explicit** 取消某些种类的自动类型转换。
+前三个构造函数中的每一个都指定一个空的初始 priority_queue，第二个函数还指定用于建立元素顺序的比较函数（）的类型，第三个指定要 `comp` `container_type` 使用的（ `_Cont` ）。 关键字 **`explicit`** 取消了某些类型的自动类型转换。
 
-第四个构造函数指定priority_queue*右侧*的副本。
+第四个构造函数指定 priority_queue*权限*的副本。
 
-最后三个构造函数\[*首先*复制某个容器的范围，*最后*一个）并使用值初始化priority_queue在指定类`Traits`和`container_type`的比较函数的类型时越来越明确。
+最后三个构造函数复制某个容器的范围的 \[ *第一个*、*最后一个*），并使用这些值在指定类和的比较函数的类型的情况下，使用增加的明确初始化 priority_queue `Traits` `container_type` 。
 
 ### <a name="example"></a>示例
 
@@ -376,7 +376,7 @@ int main( )
 }
 ```
 
-## <a name="priority_queuepush"></a><a name="push"></a>priority_queue：:p乌什
+## <a name="priority_queuepush"></a><a name="push"></a>priority_queue：:p 推送
 
 基于来自 operator< 的元素的优先级将元素添加到优先级队列。
 
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*瓦尔*\
+*初始值*\
 添加到 priority_queue 顶部的元素。
 
 ### <a name="remarks"></a>备注
@@ -425,7 +425,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="priority_queuesize"></a><a name="size"></a>priority_queue：大小
+## <a name="priority_queuesize"></a><a name="size"></a>priority_queue：： size
 
 返回 priority_queue 中的元素数目。
 
@@ -466,7 +466,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.
 ```
 
-## <a name="priority_queuesize_type"></a><a name="size_type"></a>priority_queue：：size_type
+## <a name="priority_queuesize_type"></a><a name="size_type"></a>priority_queue：： size_type
 
 一种无符号整数类型，此类型可表示 priority_queue 中的元素数量。
 
@@ -482,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例。
 
-## <a name="priority_queuetop"></a><a name="top"></a>priority_queue：顶部
+## <a name="priority_queuetop"></a><a name="top"></a>priority_queue：： top
 
 返回对 priority_queue 顶部的最大元素的常量引用。
 
@@ -492,7 +492,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>返回值
 
-对priority_queue的最大元素的引用，由`Traits`函数确定。
+对最大元素的引用，由 `Traits` priority_queue 的函数和对象确定。
 
 ### <a name="remarks"></a>备注
 
@@ -530,7 +530,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="priority_queuevalue_type"></a><a name="value_type"></a>priority_queue：value_type
+## <a name="priority_queuevalue_type"></a><a name="value_type"></a>priority_queue：： value_type
 
 一种类型，它表示存储为 priority_queue 中元素的对象的类型。
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>另请参阅
 
-[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299073"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220803"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 
@@ -20,13 +20,13 @@ ms.locfileid: "75299073"
 
 |特性：<br /><br /> 级别|项|存储类<br /><br /> 说明符|结果:<br /><br /> 生存期|可见性|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|文件范围|变量定义|**static**|Global|此项所在的源文件的剩余部分|
-||变量声明|**extern**|Global|此项所在的源文件的剩余部分|
-||函数原型或定义|**static**|Global|单个源文件|
-||函数原型|**extern**|Global|源文件的剩余部分|
-|块范围|变量声明|**extern**|Global|块|
-||变量定义|**static**|Global|块|
-||变量定义|auto  或 register |本地|块|
+|文件范围|变量定义|**`static`**|Global|此项所在的源文件的剩余部分|
+||变量声明|**`extern`**|Global|此项所在的源文件的剩余部分|
+||函数原型或定义|**`static`**|Global|单个源文件|
+||函数原型|**`extern`**|Global|源文件的剩余部分|
+|块范围|变量声明|**`extern`**|Global|块|
+||变量定义|**`static`**|Global|块|
+||变量定义|**`auto`** 或 **`register`**|本地|块|
 
 ## <a name="example"></a>示例
 
