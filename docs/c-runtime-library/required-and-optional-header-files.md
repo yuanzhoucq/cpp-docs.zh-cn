@@ -7,12 +7,12 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: 06f7ced45f8def05219d8869708f555a78f73cd3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8d1547ae7dd3b6adb33271e93e85022f04859886
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744522"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211601"
 ---
 # <a name="required-and-optional-header-files"></a>必需和可选的头文件
 
@@ -24,8 +24,8 @@ ms.locfileid: "57744522"
 |预定义的常量|许多库例程都引用在标头文件中定义的常量。 例如，`_open` 例程使用常量，如在标头文件 FCNTL.H 中定义的 `_O_CREAT`。|
 |类型定义|某些库例程返回结构或将结构用作参数。 例如，流输入/输出例程使用在 STDIO.H 中定义的 `FILE` 类型的结构。|
 
-运行库标头文件提供 ANSI/ISO C 标准推荐样式的函数声明。 编译器对在其关联的函数声明后发生的任何例程引用执行类型检查。 函数声明对于返回默认的 `int` 类型之外的其他类型的值的例程尤为重要。 未在其声明中指定适当的返回值的例程将由编译器用来返回 `int`，这可能导致出现意外结果。 有关详细信息，请参阅[类型检查](../c-runtime-library/type-checking-crt.md)。
+运行库标头文件提供 ANSI/ISO C 标准推荐样式的函数声明。 编译器对在其关联的函数声明后发生的任何例程引用执行类型检查。 函数声明对于返回除之外的某种类型的值的例程尤为重要 **`int`** ，这是默认值。 编译器将认为未在其声明中指定适当返回值的例程将返回 **`int`** ，这可能会导致意外的结果。 有关详细信息，请参阅[类型检查](../c-runtime-library/type-checking-crt.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRT 库功能](../c-runtime-library/crt-library-features.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2186
 ms.assetid: 284bfb7e-ab85-4fcb-9864-1ddf7f6c94ae
-ms.openlocfilehash: f60dd02a8325cd04f05e53bc3cee998e8dc83148
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a11b6b7aad4469c7151648a5f092265a4cb9d504
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87209794"
 ---
 # <a name="compiler-error-c2186"></a>编译器错误 C2186
 
 “operator”：“void”类型的操作数非法
 
-运算符有 `void` 操作数。
+运算符有 **`void`** 操作数。
 
 下面的示例生成 C2186：
 

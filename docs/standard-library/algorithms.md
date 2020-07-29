@@ -8,12 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 4b49b3c296d3afcbb26af028dc0b4a885444a897
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617636"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205218"
 ---
 # <a name="algorithms"></a>算法
 
@@ -33,7 +33,7 @@ ms.locfileid: "84617636"
 
 - 表达式（如*x*  -  *Y*，其中*x*和*Y*可以是随机访问迭代器以外的迭代器）的数学意义。 **-** 如果该函数必须确定此类值，则它不一定计算运算符。 对于*X*  +  *n*和*x*n 等表达式也是如此  -  *N*，其中*N*是整数类型。
 
-几种算法使用执行成对比较的谓词（例如 with `operator==` ）来产生**布尔**值结果。 谓词函数 `operator==` 或其任何替代函数不得更改其任一操作数。 它必须在每次计算时都生成相同的**bool**结果，并且如果任一操作数的副本替换为操作数，则必须生成相同的结果。
+多种算法使用执行成对比较的谓词（例如 with `operator==` ）来生成 **`bool`** 结果。 谓词函数 `operator==` 或其任何替代函数不得更改其任一操作数。 它必须在 **`bool`** 每次计算时都生成相同的结果，并且如果为操作数替换任一操作数的副本，则必须生成相同的结果。
 
 几种算法使用对序列中的元素对执行严格弱排序的谓词。 对于谓词*pred*（*X*， *Y*）：
 
@@ -45,9 +45,9 @@ ms.locfileid: "84617636"
 
 其中一些算法隐式使用谓词*X* \< *Y*. Other predicates that typically satisfy the strict weak ordering requirement are *X* > *Y*、 `less` （*x*， *y*）和 `greater` （*x*， *y*）。 但请注意， *X* \<= *Y* and *X* > =  *Y*等谓词不满足此要求。
 
-范围第一个、最后一个的迭代器指定的元素序列 \[ *First*是按运算符排序*Last*的序列 **<** （对于范围0、最后一个的范围中的每个*N* \[ *Last*  -  *First*）和范围内的每个*M* （*N*，*最后*  -  *一个*），谓词 \! （ \* （*第一个*  +  *M*） < \* （*第*一个  +  *N*））为 true。 （请注意，元素按升序排序。）谓词函数 `operator<` 或其任何替代函数不得更改其任一操作数。 它必须在每次计算时都生成相同的**bool**结果，并且如果任一操作数的副本替换为操作数，则必须生成相同的结果。 此外，必须对它比较的操作数进行严格弱排序。
+范围第一个、最后一个的迭代器指定的元素序列 \[ *First*是按运算符排序*Last*的序列 **<** （对于范围0、最后一个的范围中的每个*N* \[ *Last*  -  *First*）和范围内的每个*M* （*N*，*最后*  -  *一个*），谓词 \! （ \* （*第一个*  +  *M*） < \* （*第*一个  +  *N*））为 true。 （请注意，元素按升序排序。）谓词函数 `operator<` 或其任何替代函数不得更改其任一操作数。 它必须在 **`bool`** 每次计算时都生成相同的结果，并且如果为操作数替换任一操作数的副本，则必须生成相同的结果。 此外，必须对它比较的操作数进行严格弱排序。
 
-范围内的迭代器指定的元素序列（ \[ `First` `Last` ）是一个按顺序排序的堆 `operator<` （对于范围 1*中的*每个 \[ ，*最后*  -  *一个*），谓词 \! 为 \* _First_  <  \* *First*  +  *N*true。 （第一个元素最大。）另外，它的内部结构仅对[make_heap](algorithm-functions.md#make_heap)、 [pop_heap](algorithm-functions.md#pop_heap)和[push_heap](algorithm-functions.md#push_heap)的模板函数是已知的。 对于有序序列，谓词函数 `operator<` 或它的任何替换都不得更改其任一操作数，并且它必须对它所比较的操作数施加严格的弱排序。 它必须在每次计算时都生成相同的**bool**结果，并且如果任一操作数的副本替换为操作数，则必须生成相同的结果。
+范围内的迭代器指定的元素序列（ \[ `First` `Last` ）是一个按顺序排序的堆 `operator<` （对于范围 1*中的*每个 \[ ，*最后*  -  *一个*），谓词 \! 为 \* _First_  <  \* *First*  +  *N*true。 （第一个元素最大。）另外，它的内部结构仅对[make_heap](algorithm-functions.md#make_heap)、 [pop_heap](algorithm-functions.md#pop_heap)和[push_heap](algorithm-functions.md#push_heap)的模板函数是已知的。 对于有序序列，谓词函数 `operator<` 或它的任何替换都不得更改其任一操作数，并且它必须对它所比较的操作数施加严格的弱排序。 它必须在 **`bool`** 每次计算时都生成相同的结果，并且如果为操作数替换任一操作数的副本，则必须生成相同的结果。
 
 C + + 标准库算法位于 [\<algorithm>](algorithm.md) 和 [\<numeric>](numeric.md) 标头文件中。
 

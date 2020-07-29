@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2533
 ms.assetid: 5b335652-076c-4824-87c8-a741f64a3ce0
-ms.openlocfilehash: b111448e7e9d8260a5101d05996a670013936894
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6c598c2c5b3ac6d88fb843534cae240c65a2d322
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746404"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207909"
 ---
 # <a name="compiler-error-c2533"></a>编译器错误 C2533
 
 “identifier”: 构造函数不能有返回类型
 
-构造函数不能具有返回类型（甚至不能是 `void` 返回类型）。
+构造函数不能有返回类型（甚至是 **`void`** 返回类型）。
 
 此错误的常见来源是类定义结尾与第一个构造函数实现之间缺少分号。 编译器会将类视为构造函数返回类型的定义，会生成 C2533。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 068bdb2c7c87e8fe7cd3e482f53934de098a6166
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991010"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218086"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>编译器警告（等级 4）C4512
 
@@ -23,13 +23,13 @@ ms.locfileid: "74991010"
 
 若要避免此警告，请为类指定用户定义的赋值运算符。
 
-编译器还会为不会定义此函数的类生成一个赋值运算符函数。 此赋值运算符是对象的数据成员的成员复制。 因为无法在初始化之后修改 `const` 数据项，所以如果类包含 `const` 项，则默认赋值运算符将不起作用。 出现C4512 警告的另一个原因是声明了引用类型的非静态数据成员。 如果这样做是为了创建一个非可复制的类型，则还必须防止创建默认复制构造函数。
+编译器还会为不会定义此函数的类生成一个赋值运算符函数。 此赋值运算符是对象的数据成员的成员复制。 由于 **`const`** 无法在初始化之后修改数据项，因此，如果类包含 **`const`** 项，则默认赋值运算符将不起作用。 出现C4512 警告的另一个原因是声明了引用类型的非静态数据成员。 如果这样做是为了创建一个非可复制的类型，则还必须防止创建默认复制构造函数。
 
 可使用以下三种方式之一解决代码的 C4512 警告：
 
 - 显式定义类的赋值运算符。
 
-- 删除类中数据项的**const**或 reference 运算符。
+- **`const`** 从类中的数据项删除或引用运算符。
 
 - 使用 #pragma [warning](../../preprocessor/warning.md)语句来禁止显示警告。
 

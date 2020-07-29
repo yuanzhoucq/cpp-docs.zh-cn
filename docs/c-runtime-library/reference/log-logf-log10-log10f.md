@@ -48,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218593"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -94,9 +94,9 @@ long double log10( long double x );  // C++ only
 
 **日志**和**Log10**具有使用流式处理 SIMD 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-C + + 允许重载，因此你可以调用采用并返回**浮点**或**长双精度**值的**log**和**log10**的重载。 在 C 程序中， **log**和**log10**始终采用并返回**double**。
+C + + 允许重载，因此你可以调用采用并返回或值的**log**和**log10**的重载 **`float`** **`long double`** 。 在 C 程序中， **log**和**log10**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

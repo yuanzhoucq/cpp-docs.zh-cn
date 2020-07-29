@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
-ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee5b8105241ee347812a0dcc083a4f1cc7dca49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388899"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87208403"
 ---
 # <a name="compiler-error-c2280"></a>编译器错误 C2280
 
-'*声明*： 尝试引用已删除的函数
+"*声明*"：尝试引用已删除的函数
 
-编译器检测到尝试引用`deleted`函数。 此错误可能引起对显式标记为成员函数的调用`= deleted`的源代码中。 此错误还可能引起对结构或类，该类是自动声明并标记为的隐式的特殊成员函数的调用`deleted`编译器。 有关编译器自动生成详细信息`default`或`deleted`特殊成员函数，请参阅[特殊成员函数](../../cpp/special-member-functions.md)。
+编译器检测到引用函数的尝试 `deleted` 。 此错误的原因可能是调用了在源代码中显式标记为的成员函数 `= deleted` 。 此错误还可能由编译器调用自动声明并标记为的结构或类的隐式特殊成员函数引起 `deleted` 。 有关编译器自动生成或特殊成员函数的时间的详细信息 **`default`** `deleted` ，请参阅[特殊成员函数](../../cpp/special-member-functions.md)。
 
-## <a name="example-explicitly-deleted-functions"></a>示例:已显式删除的函数
+## <a name="example-explicitly-deleted-functions"></a>示例：显式删除的函数
 
-调用显式`deleted`函数会导致此错误。 显式`deleted`成员函数表示类或结构有意设计是为了防止其使用，因此，若要解决此问题，则应更改代码时，避免它。
+调用显式 `deleted` 函数会导致此错误。 显式 `deleted` 成员函数意味着该类或结构特意设计为防止其使用，因此，若要解决此问题，应更改代码以避免此问题。
 
 ```cpp
 // C2280_explicit.cpp
@@ -42,9 +42,9 @@ void f() {
 }
 ```
 
-## <a name="example-uninitialized-data-members"></a>示例:未初始化的数据成员
+## <a name="example-uninitialized-data-members"></a>示例：未初始化的数据成员
 
-未初始化的引用类型的数据成员或`const`数据成员将使编译器隐式声明`deleted`默认构造函数。 若要解决此问题，请声明时初始化数据成员。
+未初始化的引用类型数据成员或 **`const`** 数据成员将导致编译器隐式声明 `deleted` 默认构造函数。 若要解决此问题，请在声明数据成员时对其进行初始化。
 
 ```cpp
 // C2280_uninit.cpp
@@ -58,9 +58,9 @@ struct A {
 } a;    // C2280
 ```
 
-## <a name="example-reference-and-const-data-members"></a>示例:引用和 const 数据成员
+## <a name="example-reference-and-const-data-members"></a>示例： Reference 和 const 数据成员
 
-一个`const`或引用类型的数据成员将使编译器声明`deleted`复制赋值运算符。 初始化后，这些成员不能分配到，因此，简单的复制或移动不能正常运行。 若要解决此问题，我们建议您更改自己的逻辑来删除导致错误的赋值操作。
+**`const`** 或引用类型的数据成员导致编译器声明 `deleted` 复制赋值运算符。 初始化后，不能将这些成员分配到，因此无法使用简单的复制或移动操作。 若要解决此问题，我们建议您更改逻辑以删除导致错误的赋值运算。
 
 ```cpp
 // C2280_ref.cpp
@@ -79,11 +79,11 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>示例:可移动删除隐式的副本
+## <a name="example-movable-deletes-implicit-copy"></a>示例：可移动删除隐式复制
 
-如果一个类声明了移动构造函数或移动赋值运算符，但未显式声明复制构造函数，编译器隐式声明复制构造函数，其定义为`deleted`。 同样，如果一个类声明了移动构造函数或移动赋值运算符，但未显式声明复制赋值运算符，编译器隐式声明复制赋值运算符和其定义为`deleted`。 若要解决此问题，必须显式声明这些成员。
+如果类声明了移动构造函数或移动赋值运算符，但没有显式声明复制构造函数，则编译器会隐式声明一个复制构造函数，并将其定义为 `deleted` 。 同样，如果某个类声明了移动构造函数或移动赋值运算符，但没有显式声明复制赋值运算符，则编译器会隐式声明一个复制赋值运算符，并将其定义为 `deleted` 。 若要解决此问题，必须显式声明这些成员。
 
-当看到门户中的错误 C2280 `unique_ptr`，它几乎可以肯定是因为你尝试调用其复制构造函数，这是`deleted`函数。 根据设计，`unique_ptr`无法复制。 使用移动构造函数以改为转让所有权。
+当你看到 "将错误 C2280 与 a 连接 `unique_ptr` " 时，几乎肯定是因为你尝试调用其复制构造函数，该构造函数是一个 `deleted` 函数。 按照设计， `unique_ptr` 无法复制。 改为使用移动构造函数转移所有权。
 
 ```cpp
 // C2280_move.cpp
@@ -108,9 +108,9 @@ void copy(base *p)
 }
 ```
 
-## <a name="example-variant-and-volatile-members"></a>示例:变体和易失性成员
+## <a name="example-variant-and-volatile-members"></a>示例： Variant 和 volatile 成员
 
-Visual Studio 2015 Update 2 之前的编译器版本是不符合要求和生成默认构造函数和匿名联合的析构函数。 这些现在隐式声明为`deleted`。 这些版本还允许使用的不符合要求的隐式定义`default`复制和移动构造函数和`default`复制和移动赋值运算符中类和结构具有`volatile`成员变量。 编译器现在会考虑这些具有非普通构造函数和赋值运算符，不会生成`default`实现。 如果这样的类，联合或在类内部匿名联合的成员的复制和移动构造函数和联合或类的复制和移动赋值运算符隐式定义为`deleted`。 若要解决此问题，必须显式声明所需的特殊成员函数。
+Visual Studio 2015 Update 2 之前的编译器版本是不一致的，并且生成了匿名联合的默认构造函数和析构函数。 它们现在隐式声明为 `deleted` 。 这些版本还允许 **`default`** **`default`** 在具有成员变量的类和结构中进行复制和移动构造函数的非一致性隐式定义，以及复制和移动赋值运算符 **`volatile`** 。 编译器现在将其视为具有不重要的构造函数和赋值运算符，并且不生成 **`default`** 实现。 如果此类是联合的成员或类内的匿名联合，则联合或类的复制和移动构造函数和复制和移动赋值运算符将隐式定义为 `deleted` 。 若要解决此问题，必须显式声明必需的特殊成员函数。
 
 ```cpp
 // C2280_variant.cpp
@@ -137,11 +137,11 @@ int main() {
 }
 ```
 
-## <a name="example-indirect-base-members-deleted"></a>示例:已删除的间接基成员
+## <a name="example-indirect-base-members-deleted"></a>示例：已删除的间接基成员
 
-Visual Studio 2015 Update 2 之前的编译器版本是不符合要求和允许派生的类调用的特殊成员函数的间接派生`private virtual`基类。 当进行此类调用时，编译器现将发出编译器错误 C2280。
+Visual Studio 2015 Update 2 之前的编译器版本不一致，并且允许派生类调用间接派生基类的特殊成员函数 `private virtual` 。 发出此类调用时，编译器现在会发出编译器错误 C2280。
 
-在此示例中，类`top`间接派生自专用虚拟`base`。 在符合标准代码中，这使得的成员`base`无法访问`top`; 类型的对象`top`不能为默认构造或销毁。 若要解决此问题在依赖旧的编译器行为的代码中，更改要使用的中间类`protected virtual`派生或更改`top`以使用直接派生的类：
+在此示例中，类 `top` 间接派生自私有虚拟 `base` 。 在一致的代码中，这使得的成员无法 `base` 访问 `top` ; 无法对类型的对象 `top` 进行默认构造或销毁。 若要在依赖旧编译器行为的代码中解决此问题，请将中间类更改为使用 `protected virtual` 派生，或将 `top` 类更改为使用直接派生：
 
 ```cpp
 // C2280_indirect.cpp

@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913519"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218710"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-将字符串转换为**长****整型。**
+将字符串转换为 **`long long`** 整数。
 
 ## <a name="syntax"></a>语法
 
@@ -81,7 +81,7 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都返回通过将输入字符解释为数字来生成的**长****长**值。 如果输入不能转换为该类型的值，则**atoll**的返回值为0。
+每个函数都 **`long long`** 通过将输入字符解释为数字来返回生成的值。 如果输入不能转换为该类型的值，则**atoll**的返回值为0。
 
 对于具有较大正整数值的溢出， **atoll**返回**LLONG_MAX**，对于具有较大负整数值的溢出，将返回**LLONG_MIN**。
 
@@ -89,7 +89,7 @@ long long _wtoll_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为**长****整型整数值**。
+这些函数将字符串转换为 **`long long`** 整数值。
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的 null 字符（'\0' 或 L'\0'）。
 
@@ -174,7 +174,7 @@ Overflow condition occurred.
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

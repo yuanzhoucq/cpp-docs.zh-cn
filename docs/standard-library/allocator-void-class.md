@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: af29c70dca56b1e68eef3614357269c587a77ec9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b6ca3f8b994756a21d85860fd8aff429ee38e58b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623682"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204925"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 类
 
-类模板分配器到类型**void**的专用化，用于定义在此上下文中有意义的类型。
+类模板分配器到类型的专用化 **`void`** ，用于定义在此上下文中有意义的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>备注
 
-类显式专用化类型为**void**的类模板[分配](allocator-class.md)器。 其构造函数和赋值运算符的行为与类模板的行为相同，但它只定义以下类型：
+类为类型显式专用化类模板[分配](allocator-class.md)器 **`void`** 。 其构造函数和赋值运算符的行为与类模板的行为相同，但它只定义以下类型：
 
 - [const_pointer](allocator-class.md#const_pointer)。
 

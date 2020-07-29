@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2352
 ms.assetid: 0efad8cb-659f-4b3e-8f6f-9f8ec44d345c
-ms.openlocfilehash: 33fdaff31fc9e3fcde1a7101c7858704773ae74c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 95b3a3bae531170bf12c0e34613ad41f742304bb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759979"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218242"
 ---
 # <a name="compiler-error-c2352"></a>编译器错误 C2352
 
 “class::function”：非静态成员函数的非法调用
 
-`static` 成员函数调用了非静态成员函数。 或者，从类外部将非静态成员函数作为静态函数进行了调用。
+**`static`** 称为非静态成员函数的成员函数。 或者，从类外部将非静态成员函数作为静态函数进行了调用。
 
 下面的示例生成 C2352，并演示如何修复此错误：
 

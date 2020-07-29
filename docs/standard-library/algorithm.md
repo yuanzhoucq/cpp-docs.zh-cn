@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: d36ee5ea0d38455b52cb988dc30b13d47be16e53
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623846"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205530"
 ---
 # <a name="ltalgorithmgt"></a>&lt;算法&gt;
 
@@ -49,13 +49,13 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |||
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|搜索相等或满足指定条件的两个相邻元素。|
-|[all_of](algorithm-functions.md#all_of)|当给定范围内的每个元素都存在条件时，返回**true** 。|
-|[any_of](algorithm-functions.md#any_of)|如果在指定的元素范围内至少出现一次条件，**则返回 true** 。|
+|[all_of](algorithm-functions.md#all_of)|**`true`** 当给定范围内的每个元素都存在条件时返回。|
+|[any_of](algorithm-functions.md#any_of)|**`true`** 如果在指定的元素范围内至少出现一次条件，则返回。|
 |[binary_search](algorithm-functions.md#binary_search)|测试已排序的范围中是否有等于指定值的元素，或在二元谓词指定的意义上与指定值等效的元素。|
 |[固定](algorithm-functions.md#clamp)||
 |[copy](algorithm-functions.md#copy)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向前方向的新位置。|
 |[copy_backward](algorithm-functions.md#copy_backward)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向后方向的新位置。|
-|[copy_if](algorithm-functions.md#copy_if)|复制给定范围中的所有元素，这些元素对指定条件测试**true**|
+|[copy_if](algorithm-functions.md#copy_if)|复制给定范围内测试指定条件的所有元素 **`true`**|
 |[copy_n](algorithm-functions.md#copy_n)|复制指定数量的元素。|
 |[计数](algorithm-functions.md#count)|返回范围中其值与指定值匹配的元素的数量。|
 |[count_if](algorithm-functions.md#count_if)|返回范围中其值与指定条件匹配的元素的数量。|
@@ -74,12 +74,12 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[generate_n](algorithm-functions.md#generate_n)|将函数对象生成的值分配给范围中指定数量的元素，并返回到超出最后一个分配值的下一位置。|
 |[涵盖](algorithm-functions.md#includes)|测试一个排序的范围是否包含另一排序范围中的所有元素，其中元素之间的排序或等效条件可通过二元谓词指定。|
 |[inplace_merge](algorithm-functions.md#inplace_merge)|将两个连续的排序范围中的元素合并为一个排序范围，其中排序条件可通过二元谓词指定。|
-|[is_heap](algorithm-functions.md#is_heap)|如果指定范围中的元素形成堆，**则返回 true** 。|
-|[is_heap_until](algorithm-functions.md#is_heap_until)|如果指定的范围形成堆直到最后一个元素，则返回**true** 。|
-|[is_partitioned](algorithm-functions.md#is_partitioned)|如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前，则返回**true** 。|
+|[is_heap](algorithm-functions.md#is_heap)|**`true`** 如果指定范围中的元素形成堆，则返回。|
+|[is_heap_until](algorithm-functions.md#is_heap_until)|**`true`** 如果指定的范围形成堆直到最后一个元素，则返回。|
+|[is_partitioned](algorithm-functions.md#is_partitioned)|**`true`** 如果给定范围中测试条件的所有元素都在 **`true`** 测试的任何元素之前，则返回 **`false`** 。|
 |[is_permutation](algorithm-functions.md#is_permutation)|确定给定范围的元素是否形成有效排列。|
-|[is_sorted](algorithm-functions.md#is_sorted)|如果指定范围中的元素按顺序排序，**则返回 true** 。|
-|[is_sorted_until](algorithm-functions.md#is_sorted_until)|如果指定范围中的元素按顺序排序，**则返回 true** 。|
+|[is_sorted](algorithm-functions.md#is_sorted)|**`true`** 如果指定范围中的元素按排序顺序返回，则返回。|
+|[is_sorted_until](algorithm-functions.md#is_sorted_until)|**`true`** 如果指定范围中的元素按排序顺序返回，则返回。|
 |[iter_swap](algorithm-functions.md#iter_swap)|交换由一对指定迭代器引用的两个值。|
 |[lexicographical_compare](algorithm-functions.md#lexicographical_compare)|逐个元素比较两个序列以确定其中的较小序列。|
 |[lower_bound](algorithm-functions.md#lower_bound)|在排序的范围中查找其值大于或等效于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。|
@@ -95,12 +95,12 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[&lt;alg &gt; 移动](algorithm-functions.md#alg_move)|移动与指定范围关联的元素。|
 |[move_backward](algorithm-functions.md#move_backward)|将一个迭代器的元素移动到另一迭代器。 移动从指定范围的最后一个元素开始，并在此范围的第一个元素结束。|
 |[next_permutation](algorithm-functions.md#next_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
-|[none_of](algorithm-functions.md#none_of)|当给定范围内的元素内从不出现条件时，返回**true** 。|
+|[none_of](algorithm-functions.md#none_of)|**`true`** 当给定范围内的元素内从不出现条件时，返回。|
 |[nth_element](algorithm-functions.md#nth_element)|对一系列元素进行分区，正确找到范围中序列的第*n*个元素，以使其前面的所有元素都小于或等于该元素，并且序列后面的所有元素都大于或等于此元素。|
 |[partial_sort](algorithm-functions.md#partial_sort)|将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。|
 |[依据](algorithm-functions.md#partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。|
-|[partition_copy](algorithm-functions.md#partition_copy)|将条件为**true**的元素复制到一个目标，并将条件为**false**的元素复制到另一个目标。 元素必须来自于指定范围。|
+|[partition_copy](algorithm-functions.md#partition_copy)|将条件为的元素复制 **`true`** 到一个目标，将条件复制到另一个目标 **`false`** 。 元素必须来自于指定范围。|
 |[partition_point](algorithm-functions.md#partition_point)|返回给定范围中不满足条件的第一个元素。 元素经过排序，满足条件的元素在不满足条件的元素之前。|
 |[pop_heap](algorithm-functions.md#pop_heap)|移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。|
 |[prev_permutation](algorithm-functions.md#prev_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
@@ -114,7 +114,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[replace_copy](algorithm-functions.md#replace_copy)|检查源范围中的每个元素，并替换与指定值匹配的元素，同时将结果复制到新的目标范围。|
 |[replace_copy_if](algorithm-functions.md#replace_copy_if)|检查源范围中的每个元素，并替换满足指定谓词的元素，同时将结果复制到新的目标范围。|
 |[replace_if](algorithm-functions.md#replace_if)|检查范围中的每个元素，并替换满足指定谓词的元素。|
-|[反向](algorithm-functions.md#reverse)|反转范围中元素的顺序。|
+|[reverse](algorithm-functions.md#reverse)|反转范围中元素的顺序。|
 |[reverse_copy](algorithm-functions.md#reverse_copy)|反转源范围中元素的顺序，同时将这些元素复制到目标范围|
 |[90](algorithm-functions.md#rotate)|交换两个相邻范围中的元素。|
 |[rotate_copy](algorithm-functions.md#rotate_copy)|交换源范围中两个相邻范围内的元素，并将结果复制到目标范围。|
@@ -130,7 +130,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[sort_heap](algorithm-functions.md#sort_heap)|将堆转换为排序的范围。|
 |[stable_partition](algorithm-functions.md#stable_partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前，并保留等效元素的相对顺序。|
 |[stable_sort](algorithm-functions.md#stable_sort)|将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列，并保留等效元素的相对顺序。|
-|[购](algorithm-functions.md#swap)|在两种类型的对象之间交换元素值，将第一个对象的内容分配给第二个对象，将第二个对象的内容分配给第一个对象。|
+|[swap](algorithm-functions.md#swap)|在两种类型的对象之间交换元素值，将第一个对象的内容分配给第二个对象，将第二个对象的内容分配给第一个对象。|
 |[swap_ranges](algorithm-functions.md#swap_ranges)|将一个范围中的元素与另一大小相等的范围中的元素交换。|
 |[transform](algorithm-functions.md#transform)|将指定的函数对象应用于源范围中的每个元素或两个源范围中的元素对，并将函数对象的返回值复制到目标范围。|
 |[unique](algorithm-functions.md#unique)|移除指定范围中彼此相邻的重复元素。|

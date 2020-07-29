@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: 1dc9781bc0cf1bc6c7f879cc3971828983471c6f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd815bf90b135f65072a56911c7c4b0f054fcfec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757743"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210067"
 ---
 # <a name="compiler-error-c2071"></a>编译器错误 C2071
 
 "identifier"：非法的存储类
 
-使用无效的[存储类](../../c-language/c-storage-classes.md)声明了 `identifier`。 为标识符指定多个存储类时或定义与存储类声明不兼容时，会导致此错误。
+`identifier`已使用无效的[存储类](../../c-language/c-storage-classes.md)声明。 为标识符指定多个存储类时或定义与存储类声明不兼容时，会导致此错误。
 
-若要解决此问题，请了解标识符的预期存储类（例如 `static` 或 `extern`），并更正要匹配的声明。
+若要解决此问题，请了解标识符的预期存储类（例如 **`static`** 或）， **`extern`** 并更正要匹配的声明。
 
 ## <a name="example"></a>示例
 

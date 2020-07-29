@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218697"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite、_finite、_finitef
 
@@ -74,22 +74,22 @@ int _finitef(
 
 ## <a name="return-value"></a>返回值
 
-如果 x 为法线`_finite`或`_finitef`次正常有限值， 宏和和函数将返回一个非零值。`isfinite` 如果参数为无限或 NaN，则返回0。 C++内联`isfinite`模板函数的行为方式相同，但返回**true**或**false**。
+`isfinite` `_finite` `_finitef` 如果*x*为法线或次正常有限值，宏和和函数将返回一个非零值。 如果参数为无限或 NaN，则返回0。 C + + 内联模板函数 `isfinite` 的行为方式相同，但返回 **`true`** 或 **`false`** 。
 
 ## <a name="remarks"></a>备注
 
-`isfinite`在编译为 C 时为宏，在编译为C++时为内联模板函数。 `_finite` 和`_finitef`函数是 Microsoft 特定的。 `_finitef` 函数仅在编译 x86、ARM、或 ARM64 平台时可用。
+`isfinite`在编译为 C 时为宏，在编译为 c + + 时为内联模板函数。 `_finite`和 `_finitef` 函数是 Microsoft 特定的。 `_finitef` 函数仅在编译 x86、ARM、或 ARM64 平台时可用。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头 (C)|必需的标头 (C++)|
 |--------------|---------------------------|-------------------------------|
-|`_finite`|\<float.h 1> 或 \<math.h 1>|\<float.h 1>、\<math.h 1>、\<cfloat 1> 或 \<cmath 1>|
-|`isfinite`， `_finitef`|\<math.h>|\<math.h> 或 \<cmath>|
+|`_finite`|\<float.h> 或 \<math.h>|\<float.h>、\<math.h>、\<cfloat> 或 \<cmath>|
+|`isfinite`, `_finitef`|\<math.h>|\<math.h> 或 \<cmath>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

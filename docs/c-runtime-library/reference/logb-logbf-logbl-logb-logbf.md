@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911405"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218567"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -97,18 +97,18 @@ float _logbf(
 
 **Logb**函数提取浮点参数*x*的指数值，就好像*x*是用无限范围表示的。 如果参数*x*不规范，则将其视为已规范化。
 
-由于 c + + 允许重载，因此你可以调用**logb**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **logb**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此可以调用**logb**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **logb**始终采用并返回 **`double`** 。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|None|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 |±0|ZERODIVIDE|_SING|
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**、 **logbf**、 **logbl**、 **_logbf**|\<math.h>|

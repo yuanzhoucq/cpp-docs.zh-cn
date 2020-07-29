@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 159f474927b4aaf364ad6972450edbe513a3c0b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821429"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218736"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -47,12 +47,12 @@ void *_alloca(
 
 ### <a name="parameters"></a>参数
 
-*size*<br/>
+*大小*<br/>
 在堆栈中要分配的字节数。
 
 ## <a name="return-value"></a>返回值
 
-**_Alloca**例程返回指向已分配空间的**void**指针，保证为任何类型的对象的存储进行适当的调整。 如果*size*为0，则 **_alloca**分配一个长度为零的项，并返回指向该项的有效指针。
+**_Alloca**例程返回一个指向 **`void`** 已分配空间的指针，该指针保证为任何类型的对象的存储进行适当的调整。 如果*size*为0，则 **_alloca**分配一个长度为零的项，并返回指向该项的有效指针。
 
 如果无法分配空间，将生成堆栈溢出异常。 堆栈溢出异常不是 C++ 异常，它是结构化异常。 必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而使用 C++ 异常处理。
 
@@ -62,9 +62,9 @@ void *_alloca(
 
 在异常处理程序（EH）中显式调用 **_alloca**存在一些限制。 在 x86 类处理器上运行的 EH 例程在自己的内存框架中工作：它们在未基于封闭函数堆栈指针当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任何一种情况下，显式调用 **_alloca**会导致在返回到调用 EH 例程期间程序失败：
 
-- Windows NT SEH 异常筛选器表达式： `__except ( _alloca() )`
+- Windows NT SEH 异常筛选器表达式：`__except ( _alloca() )`
 
-- Windows NT SEH 最终异常处理程序： `__finally { _alloca() }`
+- Windows NT SEH 最终异常处理程序：`__finally { _alloca() }`
 
 - C++ EH catch 子句表达式
 
@@ -73,9 +73,9 @@ void *_alloca(
 > [!IMPORTANT]
 > 在 Windows XP 中，如果在 try/catch 块内调用 **_alloca** ，则必须在 catch 块中调用[_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制之外，在使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项时，不能在 **__except**块中使用 **_alloca** 。 有关详细信息，请参阅 [/clr 限制](../../build/reference/clr-restrictions.md)。
+除了上述限制之外，在使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项时，不能在块中使用 **_alloca** **`__except`** 。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|

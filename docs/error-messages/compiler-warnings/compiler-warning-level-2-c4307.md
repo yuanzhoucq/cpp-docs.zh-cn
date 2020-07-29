@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4307
 ms.assetid: 7cca11e9-be61-49e4-8b15-88b84f0cbf07
-ms.openlocfilehash: f6e06acaf43708d6c0da6d67531b6c4b9f202971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d0179dc5f5cb9367ee83a7f40f8b9ceb368474fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161875"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218125"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>编译器警告（等级 2）C4307
 
 "operator"：整型常量溢出
 
-运算符用于导致整数常量溢出为其分配的空间的表达式。 可能需要对常数使用较大的类型。 **带符号的 int**保存的值比 `unsigned int` 更小，因为**有符号的 int**使用一位表示符号。
+运算符用于导致整数常量溢出为其分配的空间的表达式。 可能需要对常数使用较大的类型。 **`signed int`** 保留比更小的值， **`unsigned int`** 因为 **`signed int`** 使用一位表示符号。
 
 下面的示例生成 C4307：
 

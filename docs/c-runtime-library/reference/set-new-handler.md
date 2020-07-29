@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913961"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218541"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-如果 new 运算符无法分配内存，则将控制权传输到错误处理机制****。
+如果运算符无法分配内存，则将控制权转移到错误处理机制 **`new`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -58,7 +58,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>备注
 
-C + + **_set_new_handler**函数指定一个异常处理函数，该函数在**新**运算符无法分配内存时获得控制权。 如果**new**失败，则运行时系统将自动调用作为参数传递给 **_set_new_handler**的异常处理函数。 **_PNH**（在新的 .h 中定义）是指向函数的指针，该函数返回类型**int**并采用**size_t**类型的参数。 使用**size_t**来指定要分配的空间量。
+C + + **_set_new_handler**函数指定一个异常处理函数，该函数在 **`new`** 运算符无法分配内存时获得控制权。 如果 **`new`** 失败，则运行时系统将自动调用作为参数传递给 **_set_new_handler**的异常处理函数。 **_PNH**（在新的 .h 中定义）是指向函数的指针，该函数返回类型 **`int`** 并采用**size_t**类型的参数。 使用**size_t**来指定要分配的空间量。
 
 没有默认处理程序。
 
@@ -95,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) 函数将为 [malloc](malloc.md) 设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由 **_set_new_handler**设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**malloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值，请调用：
+C++ [_set_new_mode](set-new-mode.md) 函数将为 [malloc](malloc.md) 设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由 **_set_new_handler**设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**malloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与 **`new`** 运算符在相同原因发生故障时相同。 若要重写默认值，请调用：
 
 ```cpp
 _set_new_mode(1);
@@ -103,7 +103,7 @@ _set_new_mode(1);
 
 在您程序的早期，或链接到 Newmode.obj。
 
-如果提供了用户定义`operator new`的，则不会在失败时自动调用新的处理程序函数。
+如果提供了用户定义的 `operator new` ，则不会在失败时自动调用新的处理程序函数。
 
 有关详细信息，请参阅 *C++ 语言参考*中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。
 
@@ -111,7 +111,7 @@ _set_new_mode(1);
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 

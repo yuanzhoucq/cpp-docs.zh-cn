@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916686"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218673"
 ---
 # <a name="floating-point-primitives"></a>浮点基元
 
@@ -189,7 +189,7 @@ short __cdecl _fdclass(float x);
 
 这些浮点基元实现适用于浮点类型的 CRT 宏[fpclassify](fpclassify.md)的 C 版本。 自变量*x*的分类作为以下常量之一返回：在 math 中定义：
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 | **FP_NAN** | 静态、信令或不确定的 NaN |
 | **FP_INFINITE** | 正或负无穷大 |
@@ -237,7 +237,7 @@ int __cdecl _fdpcomp(float x, float y);
 
 这些浮点基元采用两个参数*x*和*y*，并返回一个值，该值显示其顺序关系，表示为在 math 中定义的常量的按位 or。
 
-| 值 | 说明 |
+| 值 | 描述 |
 |------------|-----------------|
 | **_FP_LT** | *x*可以视为小于*y* |
 | **_FP_EQ** | *x*可以视为等于*y* |
@@ -264,7 +264,7 @@ short __cdecl _fdtest(float* px);
 
 这些浮点基元实现适用于浮点类型的 CRT 函数[fpclassify](fpclassify.md)的 c + + 版本。 计算参数*x* ，并以 math 定义的常量之一返回分类：
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 | **FP_NAN** | 静态、信令或不确定的 NaN |
 | **FP_INFINITE** | 正或负无穷大 |
@@ -289,7 +289,7 @@ short __cdecl _fd_int(float* px, short exp);
 *像素*<br/>
 指向浮点自变量的指针。
 
-*.exp*<br/>
+*exp*<br/>
 整数类型的指数。
 
 ### <a name="remarks"></a>备注
@@ -311,7 +311,7 @@ short __cdecl _fdscale(float* px, long exp);
 *像素*<br/>
 指向浮点自变量的指针。
 
-*.exp*<br/>
+*exp*<br/>
 整数类型的指数。
 
 ### <a name="remarks"></a>备注
@@ -358,7 +358,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 *像素*<br/>
 指向浮点自变量的指针。
 
-*.exp*<br/>
+*exp*<br/>
 整数类型的指数。
 
 ### <a name="remarks"></a>备注
@@ -377,11 +377,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>参数
 
 *ps*<br/>
-一个指针，它指向表示为**无符号** **short**数组的浮点值的按位表示形式。
+一个指针，它指向表示为数组的浮点值的按位表示形式 **`unsigned short`** 。
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元标准化下溢浮点值的小数部分，并调整*特征*或偏差指数以进行匹配。 **通过在**punning 中声明的`_double_val`、或`_ldouble_val` `_float_val`类型的联合，将值作为转换为**无符号**的数组的浮点类型的按位表示形式传递。 如果输入浮点值为 NaN 或无穷大，则返回值为**fpclassify**的结果，否则返回值为。
+这些浮点基元标准化下溢浮点值的小数部分，并调整*特征*或偏差指数以进行匹配。 该值作为 **`unsigned short`** 通过 `_double_val` `_ldouble_val` `_float_val` 在 math 中声明的、或类型 punning 联合转换为数组的浮点类型的按位表示形式传递。 如果输入浮点值为 NaN 或无穷大，则返回值为**fpclassify**的结果，否则返回值为。
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly、_ldpoly _fdpoly
 
@@ -406,7 +406,7 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元返回按顺序*n*的多项式计算*x*的计算，其系数由*表*中的相应常量值表示。 例如，如果*表*\[0] = 3.0，*表*\[1] = 4.0，*表*\[2] = 5.0， *n* = 2，则表示多项式 5.0 x<sup>2</sup> + 4.0 x + 3.0。 如果对*x*的2.0 计算此多项式，则结果为31.0。 这些函数不在内部使用。
+这些浮点基元返回按顺序*n*的多项式计算*x*的计算，其系数由*表*中的相应常量值表示。 例如，如果*表* \[ 0] = 3.0，*表* \[ 1] = 4.0，*表* \[ 2] = 5.0， *n* = 2，则表示多项式 5.0 x<sup>2</sup> + 4.0 x + 3.0。 如果对*x*的2.0 计算此多项式，则结果为31.0。 这些函数不在内部使用。
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog、_dlog _dlog
 
@@ -446,7 +446,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 浮点函数参数。
 
 *矩形*<br/>
-`sin`要用于生成`cos`、、 `-sin`和`-cos`结果的象限偏移量（0、1、2或3）。
+要用于生成 `sin` 、 `cos` 、 `-sin` 和结果的象限偏移量（0、1、2或3） `-cos` 。
 
 ### <a name="remarks"></a>备注
 
@@ -454,7 +454,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ## <a name="requirements"></a>要求
 
-标头\<： math>
+标头：\<math.h>
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

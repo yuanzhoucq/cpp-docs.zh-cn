@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: b55a7ec92787cb6b3103bf71b65d137d24ffff04
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204997"
 ---
 # <a name="allocator_base-class"></a>allocator_base 类
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |成员函数|说明|
 |-|-|
-|[_Charalloc](#charalloc)|为**char**类型的数组分配存储。|
-|[_Chardealloc](#chardealloc)|为包含**char**类型的元素的数组释放存储。|
+|[_Charalloc](#charalloc)|为类型的数组分配存储 **`char`** 。|
+|[_Chardealloc](#chardealloc)|为包含类型的元素的数组释放存储 **`char`** 。|
 |[address](#address)|查找指定了其值的对象的地址。|
 |[allocate](#allocate)|分配大小足以存储至少某个指定数量的元素的内存块。|
 |[构造](#construct)|在使用指定值初始化的指定地址处构造特定类型的对象。|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base：： _Charalloc
 
-为**char**类型的数组分配存储。
+为类型的数组分配存储 **`char`** 。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -110,7 +110,7 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*计数*|数组中要分配的元素数目。|
 
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base：： _Chardealloc
 
-为包含**char**类型的元素的数组释放存储。
+为包含类型的元素的数组释放存储 **`char`** 。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -132,14 +132,14 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*ptr*|指向要从存储中释放的第一个对象的指针。|
 |*计数*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
-在使用无法编译重新绑定的编译器进行编译时，容器使用此成员函数。 它通过调用同步筛选器的 `deallocate` 函数来为用户定义的分配器实现 `_Chardealloc`。 指针 ptr 必须由分配器对象调用 `_Charalloc` 在较早时间返回，分配器对象应与 `*this`（分配具有同一大小和类型的数组对象）相等。 `_Chardealloc` 绝不会引发异常。
+在使用无法编译重新绑定的编译器进行编译时，容器使用此成员函数。 它通过调用同步筛选器的 `deallocate` 函数来为用户定义的分配器实现 `_Chardealloc`。 对于与相等的分配器对象的调用，必须先返回指针 ptr， `_Charalloc` **`*this`** 并分配大小和类型相同的数组对象。 `_Chardealloc` 绝不会引发异常。
 
 ## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base：： address
 
@@ -177,7 +177,7 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*_Nx*|数组中要分配的元素数目。|
 |*_Hint*|该参数将被忽略。|

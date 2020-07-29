@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161810"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206037"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>编译器警告（等级 2）C4396
 
@@ -21,11 +21,11 @@ ms.locfileid: "80161810"
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
-- 从友元函数声明中删除 `inline`、 `__inline`，或 `__forceinline` 说明符。
+- **`inline`** **`__inline`** **`__forceinline`** 从友元函数声明中删除、或说明符。
 
 ## <a name="example"></a>示例
 
-下面的代码示例演示了一个带有 `inline` 说明符的无效友元函数声明。
+下面的代码示例演示了一个带有说明符的无效友元函数声明 **`inline`** 。
 
 ```cpp
 // C4396.cpp

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218606"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -82,8 +82,8 @@ errno_t _localtime64_s(
 
 |*tmDest*|*sourceTime*|返回值|*TmDest*中的值|调用无效参数处理程序|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**Null**|any|**EINVAL**|未修改|是|
-|Not **NULL** （指向有效内存）|**Null**|**EINVAL**|所有字段都设置为 -1|是|
+|**NULL**|any|**EINVAL**|未修改|是|
+|Not **NULL** （指向有效内存）|**NULL**|**EINVAL**|所有字段都设置为 -1|是|
 |Not **NULL** （指向有效内存）|小于0或大于 **_MAX__TIME64_T**|**EINVAL**|所有字段都设置为 -1|否|
 
 对于前两种错误条件，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
@@ -101,9 +101,9 @@ errno_t _localtime64_s(
 
 **localtime_s**是计算结果为 **_localtime64_s**的内联函数， **time_t**等效于 **__time64_t**。 如果需要强制编译器将**time_t**解释为旧32位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**localtime_s**计算为 **_localtime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
-结构类型[tm](../../c-runtime-library/standard-types.md)的字段存储以下值，其中每个值都是**int**。
+结构类型[tm](../../c-runtime-library/standard-types.md)的字段存储以下值，其中每个值都是 **`int`** 。
 
-|字段|说明|
+|字段|描述|
 |-|-|
 |**tm_sec**|每分钟的秒数（0-59）。|
 |**tm_min**|每小时后的分钟数（0-59）。|
@@ -121,9 +121,9 @@ errno_t _localtime64_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**localtime_s**、 **_localtime32_s** **_localtime64_s**|\<time.h>|\<ctime> 或\<time .h>|
+|**localtime_s**、 **_localtime32_s** **_localtime64_s**|\<time.h>|\<ctime> 或 \<time.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -184,8 +184,8 @@ Fri Apr 25 01:19:27 PM
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>
-[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
-[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
+[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>

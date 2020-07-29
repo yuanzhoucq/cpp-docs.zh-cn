@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 207f5d517eaae475af1c65a284a3d1ebe50621af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032221"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218385"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 
@@ -35,29 +35,29 @@ template <typename T, typename E>
 *T*<br/>
 `VectorView` 对象中包含的元素的类型。
 
-*E*<br/>
+*电邮*<br/>
 使用 `T`类型的值指定测试相等性的二进制谓词。 默认值为 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>备注
 
-该`VectorView`类实现[Windows：基础：：集合：：iVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1)接口，并支持标准模板库迭代器。
+`VectorView`类实现[Windows：： Foundation：：集合：： IVectorView \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)接口，并支持标准模板库迭代器。
 
 ### <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[矢量视图：矢量视图](#ctor)|初始化 VectorView 类的新实例。|
+|[VectorView：： VectorView](#ctor)|初始化 VectorView 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[矢量视图：第一](#first)|返回指定 VectorView 中的第一个元素的迭代器。|
-|[矢量视图：获取](#getat)|检索由指定的索引表示的当前 VectorView 的元素。|
-|[矢量视图：获取许多](#getmany)|从当前 VectorView 检索项序列，从指定索引处开始。|
-|[矢量视图：索引](#indexof)|在当前 VectorView 中搜索指定项，如果找到，则返回该项的索引。|
+|[VectorView：： First](#first)|返回指定 VectorView 中的第一个元素的迭代器。|
+|[VectorView：： GetAt](#getat)|检索由指定的索引表示的当前 VectorView 的元素。|
+|[VectorView：： GetMany](#getmany)|从当前 VectorView 检索项序列，从指定索引处开始。|
+|[VectorView：： IndexOf](#indexof)|在当前 VectorView 中搜索指定项，如果找到，则返回该项的索引。|
 |[VectorView::Size](#size)|返回当前 VectorView 对象中的元素数目。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
@@ -66,11 +66,11 @@ template <typename T, typename E>
 
 ### <a name="requirements"></a>要求
 
-**标题：** 集合.h
+**标头：** 集合。h
 
 **命名空间：** Platform::Collections
 
-## <a name="vectorviewfirst-method"></a><a name="first"></a>矢量视图：第一种方法
+## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView：： First 方法
 
 返回指定 VectorView 中的第一个元素的迭代器。
 
@@ -88,9 +88,9 @@ virtual Windows::Foundation::Collections::IIterator<T>^
 
 ### <a name="remarks"></a>备注
 
-保存 First（） 返回的迭代器的一个方便方法是将返回值分配给使用**自动**类型扣减关键字声明的变量。 例如，`auto x = myVectorView->First();` 。
+保存第一个（）返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myVectorView->First();`。
 
-## <a name="vectorviewgetat-method"></a><a name="getat"></a>矢量视图：GetAt 方法
+## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView：： GetAt 方法
 
 检索由指定的索引表示的当前 VectorView 的元素。
 
@@ -112,7 +112,7 @@ T GetAt(
 
 `index` 参数指定的元素。 元素类型由 VectorView 模板参数*T*指定。
 
-## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>矢量视图：获取许多方法
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView：： GetMany 方法
 
 从当前 VectorView 检索项序列，从指定索引处开始。
 
@@ -131,14 +131,14 @@ virtual unsigned int GetMany(
 *startIndex*<br/>
 要检索的项开头从零开始的索引。
 
-dest**<br/>
+*目的*<br/>
 此操作完成时的项列表，以由 `startIndex` 指定的元素开始，以 VectorView 中最后一个元素结尾。
 
 ### <a name="return-value"></a>返回值
 
 已检索的项的数量。
 
-## <a name="vectorviewindexof-method"></a><a name="indexof"></a>矢量视图：方法索引
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a>VectorView：： IndexOf 方法
 
 在当前 VectorView 中搜索指定项，如果找到，则返回该项的索引。
 
@@ -160,13 +160,13 @@ virtual bool IndexOf(
 *index*<br/>
 如果找到参数 `value`，则为该项的从零开始的索引；否则，为 0。
 
-如果项是 的第一个元素`VectorView`，或者未找到项，*则索引*参数为 0。 如果返回值为**true，** 则找到项，它是第一个元素;否则，未找到该项目。
+如果*index*项是的第一个元素 `VectorView` 或未找到该项，则索引参数为0。 如果返回值为 **`true`** ，则发现该项并且它是第一个元素; 否则找不到该项。
 
 ### <a name="return-value"></a>返回值
 
-如果找到指定的项，为 true;如果找到指定的项，则**为 true。** 否则，**假**。
+**`true`** 如果找到指定的项，则为;否则为 **`false`** 。
 
-## <a name="vectorviewsize-method"></a><a name="size"></a>矢量视图：大小方法
+## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView：： Size 方法
 
 返回当前 VectorView 对象中的元素数目。
 
@@ -181,7 +181,7 @@ virtual property unsigned int Size;
 
 当前 VectorView 中的元素数目。
 
-## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>矢量视图：矢量视图构造函数
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>VectorView：： VectorView 构造函数
 
 初始化 VectorView 类的新实例。
 
@@ -241,40 +241,40 @@ VectorView(
 
 ### <a name="parameters"></a>参数
 
-*Init*<br/>
+*InIt*<br/>
 用于初始化当前 VectorView 的对象集合的类型。
 
-*I l*<br/>
-[std：：initializer_list](../standard-library/initializer-list-class.md)其元素将用于初始化 VectorView。
+*il*<br/>
+[Std：： initializer_list](../standard-library/initializer-list-class.md) ，其元素将用于初始化 VectorView。
 
-*N*<br/>
+N**<br/>
 用于初始化当前 VectorView 的对象集合中元素的数量。
 
-size <br/>
+*大小*<br/>
 VectorView 中元素的数量。
 
 *value*<br/>
 用于初始化当前 VectorView 中每个元素的值。
 
-*五*<br/>
-用于初始化当前 VectorView 的 l[值和 R 值](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std：：矢量](../standard-library/vector-class.md)。
+*向量*<br/>
+用于初始化当前 VectorView 的[std：： vector](../standard-library/vector-class.md)的[左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
-*Ptr*<br/>
+*ptr*<br/>
 指向用于初始化当前 VectorView 的 `std::vector` 的指针。
 
-*阿尔尔*<br/>
-平台[：用于](../cppcx/platform-array-class.md)初始化当前 VectorView 的数组对象。
+*arr*<br/>
+用于初始化当前 VectorView 的[Platform：： Array](../cppcx/platform-array-class.md)对象。
 
-*a*<br/>
-用于初始化当前 VectorView 的[std：：数组](../standard-library/array-class-stl.md)对象。
+*的*<br/>
+用于初始化当前 VectorView 的[std：： array](../standard-library/array-class-stl.md)对象。
 
-*第一*<br/>
-用于初始化当前 VectorView 的对象序列中的第一个元素。 的类型`first`是通过*完美的转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+*first*<br/>
+用于初始化当前 VectorView 的对象序列中的第一个元素。 的类型 `first` 是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*最后*<br/>
-用于初始化当前 VectorView 的对象序列中的最后一个元素。 的类型`last`是通过*完美的转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+*last*<br/>
+用于初始化当前 VectorView 的对象序列中的最后一个元素。 的类型 `last` 是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)<br/>
 [用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

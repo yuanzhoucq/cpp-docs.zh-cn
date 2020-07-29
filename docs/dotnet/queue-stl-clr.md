@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208359"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210925"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
-此模板类描述一个对象，该对象控制具有先进先出访问权限的元素的不同长度的序列。 使用容器适配器 `queue` 将基础容器作为队列进行管理。
+此模板类描述一个对象，该对象控制具有先进先出访问权限的元素的不同长度的序列。 使用容器适配器 `queue` 将基础容器作为队列来管理。
 
-在下面的说明中，`GValue` 与*值*相同，除非后者为 ref 类型，在这种情况下，它是 `Value^`的。 同样，`GContainer` 与*容器*相同，除非后者为 ref 类型，在这种情况下，它是 `Container^`的。
+在下面的说明中，与 `GValue` *值*相同，除非后者为 ref 类型，在这种情况下，它是 `Value^` 。 同样，与 `GContainer` *容器*相同，除非后者为 ref 类型，在这种情况下，它是 `Container^` 。
 
 ## <a name="syntax"></a>语法
 
@@ -82,7 +82,7 @@ template<typename Value,
     { ..... };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *值*<br/>
 受控序列中的元素的类型。
@@ -92,13 +92,13 @@ template<typename Value,
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<cliext/queue >
+**标头：**\<cliext/queue>
 
 **命名空间：** cliext
 
 ## <a name="declarations"></a>声明
 
-|类型定义|说明|
+|类型定义|描述|
 |---------------------|-----------------|
 |[queue::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
 |[queue::container_type (STL/CLR)](#container_type)|基础容器的类型。|
@@ -109,7 +109,7 @@ template<typename Value,
 |[queue::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[queue::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[queue::assign (STL/CLR)](#assign)|替换所有元素。|
 |[queue::back (STL/CLR)](#back)|访问最后一个元素。|
@@ -122,31 +122,31 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|对元素数进行计数。|
 |[queue::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 
-|properties|说明|
+|属性|描述|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|访问最后一个元素。|
 |[queue::front_item (STL/CLR)](#front_item)|访问第一个元素。|
 
-|操作员|说明|
+|操作员|描述|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|替换受控序列。|
-|[operator!= (queue) (STL/CLR)](#op_neq)|确定 `queue` 对象是否不等于另一个 `queue` 对象。|
-|[operator< (queue) (STL/CLR)](#op_lt)|确定 `queue` 对象是否小于另一个 `queue` 对象。|
-|[operator<= (queue) (STL/CLR)](#op_lteq)|确定 `queue` 对象是否小于或等于另一个 `queue` 对象。|
-|[operator== (queue) (STL/CLR)](#op_eq)|确定 `queue` 对象是否等于另一个 `queue` 对象。|
-|[operator> (queue) (STL/CLR)](#op_gt)|确定 `queue` 对象是否大于另一个 `queue` 对象。|
+|[operator！ = （queue）（STL/CLR）](#op_neq)|确定对象是否 `queue` 不等于另一个 `queue` 对象。|
+|[操作员< （queue）（STL/CLR）](#op_lt)|确定 `queue` 对象是否小于另一个 `queue` 对象。|
+|[运算符<= （queue）（STL/CLR）](#op_lteq)|确定 `queue` 对象是否小于或等于另一个 `queue` 对象。|
+|[operator = = （queue）（STL/CLR）](#op_eq)|确定 `queue` 对象是否等于另一个 `queue` 对象。|
+|[操作员> （queue）（STL/CLR）](#op_gt)|确定 `queue` 对象是否大于另一个 `queue` 对象。|
 |[operator>= (queue) (STL/CLR)](#op_gteq)|确定 `queue` 对象是否大于或等于另一个 `queue` 对象。|
 
-## <a name="interfaces"></a>界面
+## <a name="interfaces"></a>接口
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
-|IQueue\<值，容器 >|维护泛型容器适配器。|
+|IQueue\<Value, Container>|维护泛型容器适配器。|
 
 ## <a name="remarks"></a>备注
 
-对象为其控制的序列分配并释放存储，以实现存储 `Value` 元素并按需增长的基础容器（类型为 `Container`）。 对象限制访问，只需推送第一个元素并弹出最后一个元素，实现先进先出队列（也称为 FIFO 队列，或只是队列）。
+对象为其控制的序列分配并释放存储，以 `Container` 存储 `Value` 元素并按需增长。 对象限制访问，只需推送第一个元素并弹出最后一个元素，实现先进先出队列（也称为 FIFO 队列，或只是队列）。
 
 ## <a name="members"></a>成员
 
@@ -160,14 +160,14 @@ template<typename Value,
 void assign(queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要插入的容器适配器。
 
 ### <a name="remarks"></a>备注
 
-成员函数将 `right.get_container()` 分配给基础容器。 您可以使用它更改队列的全部内容。
+成员函数将分配 `right.get_container()` 给基础容器。 您可以使用它更改队列的全部内容。
 
 ### <a name="example"></a>示例
 
@@ -364,7 +364,7 @@ typedef Container value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Container`的同义词。
+类型是模板参数 `Container` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md)`() == 0`。 用于测试队列是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md) `() == 0` 。 用于测试队列是否为空。
 
 ### <a name="example"></a>示例
 
@@ -685,7 +685,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>备注
 
-该类型描述了一个 `GValue` 类型的对象，该对象描述用于此模板容器类的泛型接口的存储元素值。 （如果 `value_type` 为 ref 类型，则`GValue` 为 `value_type` 或 `value_type^`。）
+类型描述了一个类型为的对象 `GValue` ，该对象描述用于此模板容器类的泛型接口的存储元素值。 （ `GValue` `value_type` `value_type^` 如果是引用类型，则为或 `value_type` 。）
 
 ### <a name="example"></a>示例
 
@@ -782,14 +782,14 @@ a b c
 queue <Value, Container>% operator=(queue <Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要复制的容器适配器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符*直接*复制到对象，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -886,7 +886,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>备注
 
-成员函数在队列的末尾添加一个具有值 `val` 的元素。 使用它可以将元素追加到队列中。
+成员函数在队列的末尾添加一个值为的元素 `val` 。 使用它可以将元素追加到队列中。
 
 ### <a name="example"></a>示例
 
@@ -928,9 +928,9 @@ queue(queue<Value, Container>^ right);
 explicit queue(container_type% wrapped);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要复制的对象。
 
 *覆盖*<br/>
@@ -948,13 +948,13 @@ right<br/>
 
 `queue(queue<Value, Container>% right);`
 
-创建作为 `right.get_container()`副本的包装容器。 用于指定初始受控序列，该序列是由 queue 对象*权限*控制的序列的副本。
+创建作为的副本的已包装容器 `right.get_container()` 。 用于指定初始受控序列，该序列是由 queue 对象*权限*控制的序列的副本。
 
 构造函数：
 
 `queue(queue<Value, Container>^ right);`
 
-创建作为 `right->get_container()`副本的包装容器。 用于指定初始受控序列，该序列是由 queue 对象 `*right`控制的序列的副本。
+创建作为的副本的已包装容器 `right->get_container()` 。 用于指定初始受控序列，该序列是由 queue 对象控制的序列的副本 `*right` 。
 
 构造函数：
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[queue：： empty （STL/CLR）](../dotnet/queue-empty-stl-clr.md)`()`。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[queue：： empty （STL/CLR）](../dotnet/queue-empty-stl-clr.md) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -1268,17 +1268,17 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)`。 用于测试在按元素对两个队列进行*比较时，是否按原样对* *左侧*进行排序。
+Operator 函数返回 `!(left == right)` 。 用于测试在按元素对两个队列进行*比较时，是否按原样对**左侧*进行排序。
 
 ### <a name="example"></a>示例
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>操作员&lt; （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>运算符 &lt; （queue）（STL/CLR）
 
 队列小于比较。
 
@@ -1339,17 +1339,17 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-如果为，则运算符函数将返回 true，以便为其 `!(right[i] < left[i])` `i` 也为 `left[i] < right[i]`。 否则，它将返回 `left->`[queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md)`() <` `right->size()` 使用此方法来*测试在按*元素对两个队列进行比较时，是否对*left*进行排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它将返回 `left->` [queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md) ， `() <` `right->size()` 以便在按元素对两个队列*right*进行比较时，使用它来测试是否向*左*排序。
 
 ### <a name="example"></a>示例
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>运算符&lt;= （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = （queue）（STL/CLR）
 
 队列小于或等于比较。
 
@@ -1410,17 +1410,17 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)`。 用于测试在按元素对两个队列进行比较*时，是否向* *左*排序。
+Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个队列进行比较*时，是否向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -1481,17 +1481,17 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-仅当由*左*和*右*控制的序列具有相同的长度，并且每个位置 `i``left[i] ==` `right[i]`时，operator 函数才返回 true。 用于测试在按元素对两个队列进行*比较时，是否按原样对* *左侧*进行排序。
+仅当由*左*和*右*控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个队列进行*比较时，是否按原样对**左侧*进行排序。
 
 ### <a name="example"></a>示例
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>操作员&gt; （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>运算符 &gt; （queue）（STL/CLR）
 
 队列大于比较。
 
@@ -1552,17 +1552,17 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left`。 用于测试是否在按元素对两个队列进行*比较时向* *左*排序。
+Operator 函数返回 `right` `<` `left` 。 用于测试是否在按元素对两个队列进行*比较时向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>运算符&gt;= （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = （queue）（STL/CLR）
 
 队列大于或等于比较。
 
@@ -1623,17 +1623,17 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left < right)`。 在按元素对两个队列进行*比较时，* 可以使用它来测试是否向*左*排序。
+Operator 函数返回 `!(left < right)` 。 在按元素对两个队列进行*比较时，* 可以使用它来测试是否向*左*排序。
 
 ### <a name="example"></a>示例
 

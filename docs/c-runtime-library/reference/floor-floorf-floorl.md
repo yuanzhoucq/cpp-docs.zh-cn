@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506996"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218672"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -81,9 +81,9 @@ long double floorl(
 
 **楼层**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-C + + 允许重载，因此你可以调用采用并返回**浮点**型和**长****双精度**值的**地面**重载。 在 C 程序中，**地面**始终采用并返回**双精度型**。
+C + + 允许重载，因此你可以调用采用并返回和值的**楼层**的重载 **`float`** **`long double`** 。 在 C 程序中，**地面**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
