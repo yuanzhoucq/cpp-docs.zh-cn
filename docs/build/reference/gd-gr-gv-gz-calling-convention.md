@@ -108,7 +108,7 @@ ms.locfileid: "87234362"
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSVC 编译器选项](compiler-options.md)
 - [MSVC 编译器命令行语法](compiler-command-line-syntax.md)
