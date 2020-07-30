@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404276"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389774"
 ---
 # <a name="fatal-error-c1083"></a>错误 C1083
 
@@ -29,7 +29,7 @@ ms.locfileid: "86404276"
 
 `#include <algorithm>`
 
-某些 C 运行库标头位于标准包含目录的子目录中。 例如，若要包含 sys/types .h，则必须在指令中包含 sys 子目录名称 `#include` ：
+某些 C 运行库标头位于标准包含目录的子目录中。 例如，若要包括 *`sys/types.h`* ，必须 *`sys`* 在指令中包含子目录名称 `#include` ：
 
 `#include <sys/types.h>`
 
@@ -45,9 +45,9 @@ ms.locfileid: "86404276"
 
 `#include <stdio.h>`
 
-编译器遵循由生成环境、 **/i**编译器选项、 **/x**编译器选项和**INCLUDE**环境变量定义的搜索路径。 有关详细信息，包括有关用于查找文件的搜索顺序的特定详细信息，请参阅[#include 指令（c/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。
+编译器遵循由生成环境、 **`/I`** 编译器选项、 **`/X`** 编译器选项和**INCLUDE**环境变量定义的搜索路径。 有关详细信息，包括有关用于查找文件的搜索顺序的特定详细信息，请参阅[#include 指令（c/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。
 
-如果包含文件与源目录相对应的另一个目录，并且在 include 指令中使用相对路径，则必须使用双引号而非尖括号。 例如，如果标头文件 myheader 位于名为 header 的项目源的子目录中，则此示例将无法找到该文件并导致 C1083：
+如果包含文件与源目录相对应的另一个目录，并且在 include 指令中使用相对路径，则必须使用双引号而非尖括号。 例如，如果头文件位于 *`myheader.h`* 名为 "标头" 的项目源的子目录中，则此示例将无法找到该文件并导致 C1083：
 
 `#include <headers\myheader.h>`
 
@@ -55,23 +55,23 @@ ms.locfileid: "86404276"
 
 `#include "headers\myheader.h"`
 
-相对路径也可用于包含搜索路径中的目录。 如果将目录添加到**include**环境变量或 Visual Studio 中的**包含目录**路径，请不要将部分路径添加到 include 指令中。 例如，如果标头位于 \path\example\headers\myheader.h，则在 Visual Studio 中将 \path\example\headers\ 添加到 "**包含目录**" 路径，但指令将 `#include` 该文件称为
+相对路径也可用于包含搜索路径中的目录。 如果将目录添加到**include**环境变量或 Visual Studio 中的**包含目录**路径，请不要将部分路径添加到 include 指令中。 例如，如果你的标头位于 *`\path\example\headers\myheader.h`* ，并在 *`\path\example\headers\`* Visual Studio 中添加到**包含目录**路径，但你 `#include` 的指令将该文件称为
 
 `#include <headers\myheader.h>`
 
-否则，找不到该文件。 使用相对于在包括搜索路径中指定的目录的正确路径。 在此示例中，可以将包含搜索路径更改为 \path\example， \, 或者从指令中删除标头 \ 路径段 `#include` 。
+否则，找不到该文件。 使用相对于在包括搜索路径中指定的目录的正确路径。 在此示例中，可以将包含搜索路径更改为 *`\path\example\`* ，或 *`headers\`* 从指令中删除路径段 `#include` 。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>第三方库问题和 vcpkg
 
-如果尝试在生成过程中配置第三方库时看到此错误，请考虑使用[vcpkg](../../vcpkg.md)（c + + 程序包管理器）安装和生成库。 vcpkg 支持较大和不断增长[的第三方库列表](https://github.com/Microsoft/vcpkg/tree/master/ports)，并将成功生成所需的所有配置属性和依赖项设置为项目的一部分。
+如果尝试在生成过程中配置第三方库时看到此错误，请考虑使用 [`vcpkg`](../../vcpkg.md) c + + 程序包管理器来安装和生成库。 vcpkg 支持较大和不断增长[的第三方库列表](https://github.com/Microsoft/vcpkg/tree/master/ports)，并将成功生成所需的所有配置属性和依赖项设置为项目的一部分。
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>文件在你的项目中，但不包含搜索路径
 
-即使头文件作为项目的一部分列在**解决方案资源管理器**中，这些文件仅在源文件中由或指令引用时才由编译器找到 `#include` `#import` ，并且位于包含搜索路径中。 不同种类的生成可能会使用不同搜索路径。 **/X**编译器选项可用于排除包含搜索路径中的目录。 这样不同的生成就可以使用具有相同名称、但保存在不同目录中的不同包含文件。 这是使用预处理器命令进行的条件编译的替代方法。 有关 **/x**编译器选项的详细信息，请参阅[/X （忽略标准包含路径）](../../build/reference/x-ignore-standard-include-paths.md)。
+即使头文件作为项目的一部分列在**解决方案资源管理器**中，这些文件仅在源文件中由或指令引用时才由编译器找到 `#include` `#import` ，并且位于包含搜索路径中。 不同种类的生成可能会使用不同搜索路径。 **`/X`** 编译器选项可用于排除包含搜索路径中的目录。 这样不同的生成就可以使用具有相同名称、但保存在不同目录中的不同包含文件。 这是使用预处理器命令进行的条件编译的替代方法。 有关编译器选项的详细信息 **`/X`** ，请参阅[ `/X` （忽略标准包含路径）](../../build/reference/x-ignore-standard-include-paths.md)。
 
-若要修复此问题，请更改编译器用于搜索包含或导入的文件的路径。 新项目使用默认的包含搜索路径。 可能需要修改包含搜索路径才能为项目添加目录。 如果要在命令行上进行编译，请将路径添加到**INCLUDE**环境变量或 **/i**编译器选项，以指定文件的路径。
+若要修复此问题，请更改编译器用于搜索包含或导入的文件的路径。 新项目使用默认的包含搜索路径。 可能需要修改包含搜索路径才能为项目添加目录。 如果要在命令行上进行编译，请将路径添加到**INCLUDE**环境变量或 **`/I`** 编译器选项，以指定文件的路径。
 
-若要在 Visual Studio 中设置包含目录路径，请打开项目的 "**属性页**" 对话框。 选择左窗格中 "**配置属性**" 下的 " **VC + + 目录**"，然后编辑 "**包含目录**" 属性。 若要详细了解由编译器在 Visual Studio 中搜索的每个用户和每个项目的目录，请参阅 " [VC + + 目录" 属性页](../../build/reference/vcpp-directories-property-page.md)。 有关 **/i**编译器选项的详细信息，请参阅[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)。
+若要在 Visual Studio 中设置包含目录路径，请打开项目的 "**属性页**" 对话框。 选择左窗格中 "**配置属性**" 下的 " **VC + + 目录**"，然后编辑 "**包含目录**" 属性。 若要详细了解由编译器在 Visual Studio 中搜索的每个用户和每个项目的目录，请参阅 " [VC + + 目录" 属性页](../../build/reference/vcpp-directories-property-page.md)。 有关编译器选项的详细信息 **`/I`** ，请参阅[ `/I` （附加包含目录）](../../build/reference/i-additional-include-directories.md)。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>未设置命令行包含或 LIB 环境
 
@@ -87,15 +87,15 @@ C1083 错误还可能指示包含了错误版本的文件。 例如，某个生�
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>预编译头尚未预编译
 
-当项目配置为使用预编译头时，必须创建相关 .pch 文件，以便可以编译使用头内容的文件。 例如，在新项目的项目目录中自动创建*pch*文件（Visual Studio 2017 及更早版本中的*stdafx.h* ）。 先编译该文件以创建预编译的头文件。 在典型的生成过程设计中，这是自动完成的。 有关详细信息，请参阅[创建预编译头文件](../../build/creating-precompiled-header-files.md)。
+当项目配置为使用预编译头时， *`.pch`* 必须创建相关文件，以便可以编译使用标题内容的文件。 例如，在 *`pch.cpp`* *`stdafx.cpp`* 新项目的项目目录中自动创建文件（在 Visual Studio 2017 及更早版本中）。 先编译该文件以创建预编译的头文件。 在典型的生成过程设计中，这是自动完成的。 有关详细信息，请参阅[创建预编译头文件](../../build/creating-precompiled-header-files.md)。
 
 ## <a name="additional-causes"></a>其他原因
 
 - 你已安装 SDK 或第三方库，但你在安装 SDK 或库之后未打开新的开发人员命令提示符窗口。 如果 SDK 或库向**包含**路径添加文件，则可能需要打开新的 "开发人员命令提示" 窗口来选取这些环境变量更改。
 
-- 该文件使用托管代码，但未指定编译器选项 **/clr** 。 有关详细信息，请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。
+- 该文件使用托管代码，但 **`/clr`** 未指定编译器选项。 有关详细信息，请参阅[ `/clr` （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。
 
-- 使用不同于用于预编译标头的 **/analyze**编译器选项设置来编译文件。 预编译项目的标头时，所有这些标头都应使用相同的 **/analyze**设置。 有关详细信息，请参阅 [/analyze（代码分析）](../../build/reference/analyze-code-analysis.md)。
+- 使用与 **`/analyze`** 用于预编译标头的编译器选项设置不同的编译器选项设置来编译文件。 预编译项目的标头时，所有这些标头都应使用相同的 **`/analyze`** 设置。 有关详细信息，请参阅[ `/analyze` （代码分析）](../../build/reference/analyze-code-analysis.md)。
 
 - 文件或目录是由适用于 Linux 的 Windows 子系统创建的，启用了每个目录的区分大小写，而路径或文件的指定大小写与磁盘上的路径或文件的大小写不匹配。
 
@@ -118,6 +118,6 @@ C1083 错误还可能指示包含了错误版本的文件。 例如，某个生�
 
 有关如何在 IDE 或命令行上生成 C/c + + 项目的信息，以及有关设置环境变量的信息，请参阅[项目和生成系统](../../build/projects-and-build-systems-cpp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)
