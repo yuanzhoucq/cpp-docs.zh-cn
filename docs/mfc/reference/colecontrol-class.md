@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: c0e31b44daad56da2cd0fd20bb7d591797079391
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214121"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470914"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -355,7 +355,7 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[COleControl：： COleControl](#colecontrol)|创建一个 `COleControl` 对象。|
 
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[COleControl：:D rawContent](#drawcontent)|当需要更新控件的外观时由框架调用。|
 |[COleControl：:D rawMetafile](#drawmetafile)|当使用图元文件设备上下文时由框架调用。|
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
 
 *lpStgMedium*<br/>
-指向要返回数据的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)结构。
+指向要返回数据的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构的指针，该结构指定数据的格式。
 
 *lpStgMedium*<br/>
-指向数据所在的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)结构的指针。
+指向数据所在的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)结构的指针。
 
 *bRelease*<br/>
 如果控件应释放存储介质，则为 TRUE;如果控件不应释放存储介质，则为 FALSE。
@@ -4207,7 +4207,7 @@ virtual LRESULT WindowProc(
 
 调用此函数可通过控件的消息映射调度特定消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 示例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>
