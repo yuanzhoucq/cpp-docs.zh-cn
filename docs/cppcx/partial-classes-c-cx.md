@@ -2,12 +2,12 @@
 title: 分部类 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740469"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185458"
 ---
 # <a name="partial-classes-ccx"></a>分部类 (C++/CX)
 
@@ -17,23 +17,23 @@ ms.locfileid: "70740469"
 
 若要定义分部类，请紧接在类键（不然就是一个普通类定义的类键）之前使用 `partial` 关键字。 关键字（如 `partial ref class` ）是包含空白字符的上下文关键字。 下列构造支持分部定义。
 
-- `class` 或 `struct`
+- **`class`** 或 **`struct`**
 
-- `ref class` 或 `ref struct`
+- **`ref class`** 或 **`ref struct`**
 
-- `value class` 或 `value struct`
+- **`value class`** 或 **`value struct`**
 
-- `enum` 或 `enum class`
+- **`enum`** 或 **`enum class`**
 
-- `ref interface`、 `interface class`、 `interface struct`或 `__interface`
+- `ref interface`、 **`interface class`** 、 **`interface struct`** 或 **"__interface**
 
-- `union`
+- **`union`**
 
-此示例演示分部 `ref class`：
+此示例演示部分 **`ref class`** ：
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>内容
+## <a name="contents"></a>目录
 
 如果省略了 `partial` 关键字，则分部类定义可以包含完整类定义可包含的一切。 有一个例外，其中包括所有有效构造，如基类、数据成员、成员函数、枚举、友元声明和特性。 并且允许静态数据成员的内联定义。
 
@@ -61,7 +61,7 @@ ms.locfileid: "70740469"
 
 类的每个分部类定义在词法上都必须排在该类的一个完整定义前，但是不必排在类的前向声明前。 如果类没有完整定义，则分部类声明只能是前向声明。
 
-所有类键（如 `class` 和 `struct` ）都必须匹配。 例如，编码 `partial class X {}; struct X {};`。
+所有类键（如 **`class`** 和） **`struct`** 都必须匹配。 例如，编码 `partial class X {}; struct X {};`。
 
 下面的示例演示编号和排序。 最后一个分部声明失败，因为该类已经定义。
 
@@ -85,7 +85,7 @@ ms.locfileid: "70740469"
 
 分部类不能超越一个翻译单元范围。
 
-`partial` 关键字只能与 `ref class` 关键字或 `value class` 关键字组合使用。
+`partial`关键字只能与 **`ref class`** 关键字或关键字组合在一起 **`value class`** 。
 
 ### <a name="examples"></a>示例
 
@@ -95,8 +95,8 @@ ms.locfileid: "70740469"
 
 [!code-cpp[cx_partial#09](../cppcx/codesnippet/CPP/partialclassexample/address.h#09)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[命名空间参考](../cppcx/namespaces-reference-c-cx.md)
+[C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[命名空间引用](../cppcx/namespaces-reference-c-cx.md)

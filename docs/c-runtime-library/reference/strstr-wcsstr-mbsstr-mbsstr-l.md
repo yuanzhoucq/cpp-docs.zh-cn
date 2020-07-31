@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911003"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233985"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -137,12 +137,12 @@ const unsigned char *_mbsstr_l(
 
 ## <a name="remarks"></a>备注
 
-`strstr`函数返回一个指针，该指针指向*str*中*strSearch*的第一个匹配项。 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果*str*或*strSearch*为 NULL，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `_mbsstr`则将设置`errno`为 EINVAL，并返回0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。
+`strstr`函数返回一个指针，该指针指向*Str*中*strSearch*的第一个匹配项。 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果*str*或*strSearch*为 NULL，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `_mbsstr` 将设置 `errno` 为 EINVAL，并返回0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
 > [!IMPORTANT]
 > 这些函数可能从缓冲区溢出问题引发威胁。 缓冲区溢出问题可用来攻击系统，因为它们可能允许执行任意代码，这可能导致没有保证的权限提升。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些函数的**常量**和非常**量**版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS。 如果这两个 c + + 重载都需要非常**量**行为，请定义符号 _CONST_RETURN。
+在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向非的 **`const`** 指针 **`const`** 。 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS **`const`** 。 如果 **`const`** 这两个 c + + 重载都需要非行为，请定义符号 _CONST_RETURN。
 
 输出值受 LC_CTYPE 的区域设置类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 没有 **_l**后缀的这些函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -153,11 +153,11 @@ const unsigned char *_mbsstr_l(
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
-|**不适用**|**不适用**|`_mbsstr_l`|**不适用**|
+|**n/a**|**n/a**|`_mbsstr_l`|**n/a**|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`strstr`|\<string.h>|
 |`wcsstr`|\<string.h> 或 \<wchar.h>|
@@ -205,7 +205,7 @@ lazy found at position 36
 ## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

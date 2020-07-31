@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233959"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof、_strtof_l、wcstof、_wcstof_l
 
@@ -101,7 +101,7 @@ float wcstof_l(
 
 ## <a name="remarks"></a>备注
 
-每个函数将输入字符串*strSource*转换为**float**。 **Strtof**函数将*strSource*转换为单精度值。 **strtof**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 这可能是终止 null 字符。 **wcstof**是**strtof**的宽字符版本;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+每个函数将输入字符串*strSource*转换为 **`float`** 。 **Strtof**函数将*strSource*转换为单精度值。 **strtof**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 这可能是终止 null 字符。 **wcstof**是**strtof**的宽字符版本;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -120,16 +120,16 @@ float wcstof_l(
 
 [*空格*][*sign*][*数字*][__.__*数字*][{**e** &#124; **e**} [*sign*]*数字*]
 
-*空格*可能包含被忽略的空格和制表符;*sign*为加号（**+**）或减号（**-**）;和*数字*是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个引导字母（**e**或**e**）和一个可选择的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
+*空格*可能包含被忽略的空格和制表符;*sign*可以是加号（ **+** ）或减号（ **-** ）; 并且*数字*是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个引导字母（**e**或**e**）和一个可选择的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
 
 这些函数的 UCRT 版本不支持 Fortran 样式（**d**或**d**）指数字母的转换。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**strtof**、 **_strtof_l**|C：\<stdlib.h> C++：&lt;cstdlib> 或 \<stdlib.h>|
-|**wcstof**、 **_wcstof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：&lt;cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**strtof**、 **_strtof_l**|C： \<stdlib.h> c + +： &lt; b> 或\<stdlib.h>|
+|**wcstof**、 **_wcstof_l**|C： \<stdlib.h> 或 \<wchar.h> c + +： &lt; b> \<stdlib.h> 或\<wchar.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -168,7 +168,7 @@ string = 3.14159This stopped it
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [字符串到数值函数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188293"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233621"
 ---
 # <a name="reference-type-function-returns"></a>引用类型函数返回
 
@@ -86,7 +86,7 @@ y = 9
 
 除以下情况之外，引用类型的声明必须包含初始值设定项：
 
-- 显式**extern**声明
+- 显式 **`extern`** 声明
 
 - 类成员的声明
 
@@ -108,7 +108,7 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-在这种情况下，编译器会发出警告： `warning C4172: returning address of local variable or temporary`。 在简单程序中，如果调用方在覆盖内存位置之前访问引用，则有时可能不会发生访问冲突。 这纯属运气。 请注意该警告。
+在这种情况下，编译器会发出警告： `warning C4172: returning address of local variable or temporary` 。 在简单程序中，如果调用方在覆盖内存位置之前访问引用，则有时可能不会发生访问冲突。 这纯属运气。 请注意该警告。
 
 ## <a name="see-also"></a>另请参阅
 

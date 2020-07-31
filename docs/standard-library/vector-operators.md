@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224534"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 运算符
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试运算符左侧的对象是否不等于右侧的对象。
 
@@ -33,17 +33,17 @@ ms.locfileid: "79427571"
 bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `vector` 类型的对象。
 
-*right*\
+*然后*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 vector 不相等，则为 **true**；如果 vector 相等，则为 **false**。
+**`true`** 如果向量不相等，则为; 否则为。**`false`** 如果向量相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
 
 测试运算符左侧的对象是否小于右侧的对象。
 
@@ -84,17 +84,17 @@ Vectors not equal.
 bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `vector` 类型的对象。
 
-*right*\
+*然后*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的 vector 小于运算符右侧的 vector，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的向量小于运算符右侧的向量，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的对象是否小于或等于右侧的对象。
 
@@ -135,17 +135,17 @@ Vector v1 is less than vector v2.
 bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `vector` 类型的对象。
 
-*right*\
+*然后*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的 vector 小于或等于运算符右侧的 vector，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的向量小于或等于运算符右侧的向量，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的对象是否等于右侧的对象。
 
@@ -186,17 +186,17 @@ Vector v1 is less than or equal to vector v2.
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `vector` 类型的对象。
 
-*right*\
+*然后*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的 vector 等于运算符右侧的 vector，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的向量等于运算符右侧的向量，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a> 运算符&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
 
 测试运算符左侧的对象是否大于右侧的对象。
 
@@ -237,17 +237,17 @@ Vectors equal.
 bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `vector` 类型的对象。
 
-*right*\
+*然后*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的 vector 大于运算符右侧的 vector，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的向量大于运算符右侧的向量，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的对象是否大于或等于右侧的对象。
 
@@ -289,17 +289,17 @@ Vector v1 is greater than vector v2.
 bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `vector` 类型的对象。
 
-*right*\
+*然后*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的 vector 大于或等于运算符右侧的 vector，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的向量大于或等于向量右侧的向量，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 

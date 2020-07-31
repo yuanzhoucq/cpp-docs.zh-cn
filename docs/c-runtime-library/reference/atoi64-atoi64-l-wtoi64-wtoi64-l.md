@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232555"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -94,7 +94,7 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都通过将输入字符解释为数字来返回 **__int64**值。 如果输入不能转换为该类型的值，则 **_atoi64**的返回值为0。
+每个函数都返回 **`__int64`** 通过将输入字符解释为数字而生成的值。 如果输入不能转换为该类型的值，则 **_atoi64**的返回值为0。
 
 对于具有较大正整数值的溢出， **_atoi64**返回**I64_MAX**和**I64_MIN** ，在溢出时会出现大量的整数值。
 
@@ -185,7 +185,7 @@ Overflow condition occurred.
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

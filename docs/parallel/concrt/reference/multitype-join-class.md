@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 4214c43fa0d0ab8fdd29ed54738c19f72a07267a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c648e77e404cf39eab281a93e03d8b427da375f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138956"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205855"
 ---
 # <a name="multitype_join-class"></a>multitype_join 类
 
@@ -41,39 +41,39 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-块所联接和传播的消息 `tuple` 负载类型。
+`tuple`块加入和传播的消息的负载类型。
 
 *_Jtype*<br/>
-`join` 块的类型为，`greedy` 或 `non_greedy`
+`join`此块的类型为， `greedy` 或`non_greedy`
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|`type`|`T`的类型别名。|
+|`type`|的类型别名 `T` 。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[multitype_join](#ctor)|已重载。 构造 `multitype_join` 消息块。|
 |[~ multitype_join 析构函数](#dtor)|销毁 `multitype_join` 消息块。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[接受](#accept)|接受由此 `multitype_join` 块提供的消息，并将所有权转移到调用方。|
-|[acquire_ref](#acquire_ref)|获取此 `multitype_join` 消息块上的引用计数，以防止删除。|
-|[使用](#consume)|使用以前由 `multitype_join` 消息块提供的消息，并通过目标成功保留该消息，从而将所有权转移给调用方。|
+|[接受](#accept)|接受此块提供的消息 `multitype_join` ，并将所有权转移到调用方。|
+|[acquire_ref](#acquire_ref)|获取此消息块上的引用计数 `multitype_join` ，以防止删除。|
+|[接受](#consume)|使用消息块先前提供的消息 `multitype_join` ，并由目标成功保留该消息，并将所有权转移到调用方。|
 |[link_target](#link_target)|将目标块链接到此 `multitype_join` 消息块。|
-|[release](#release)|释放以前成功的消息保留。|
-|[release_ref](#release_ref)|释放此 `multiple_join` 消息块上的引用计数。|
-|[reserve](#reserve)|保留此 `multitype_join` 消息块之前提供的消息。|
+|[拆卸](#release)|释放以前成功的消息保留。|
+|[release_ref](#release_ref)|释放此消息块上的引用计数 `multiple_join` 。|
+|[保留](#reserve)|保留此消息块先前提供的消息 `multitype_join` 。|
 |[unlink_target](#unlink_target)|将目标块与此 `multitype_join` 消息块断开。|
-|[unlink_targets](#unlink_targets)|将此 `multitype_join` 消息块中的所有目标断开。 （重写[ISource：： unlink_targets](isource-class.md#unlink_targets)。）|
+|[unlink_targets](#unlink_targets)|从此消息块取消所有目标的 `multitype_join` 锁定。 （重写[ISource：： unlink_targets](isource-class.md#unlink_targets)。）|
 
 ## <a name="remarks"></a>备注
 
@@ -91,9 +91,9 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 
 **命名空间：** 并发
 
-## <a name="accept"></a>接受
+## <a name="accept"></a><a name="accept"></a>接受
 
-接受由此 `multitype_join` 块提供的消息，并将所有权转移到调用方。
+接受此块提供的消息 `multitype_join` ，并将所有权转移到调用方。
 
 ```cpp
 virtual message<_Destination_type>* accept(
@@ -104,18 +104,18 @@ virtual message<_Destination_type>* accept(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-提供的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity`所提供的 `message` 对象的。
 
 *_PTarget*<br/>
-指向调用 `accept` 方法的目标块的指针。
+指向调用方法的目标块的指针 `accept` 。
 
 ### <a name="return-value"></a>返回值
 
 指向调用方现在具有所有权的消息的指针。
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-获取此 `multitype_join` 消息块上的引用计数，以防止删除。
+获取此消息块上的引用计数 `multitype_join` ，以防止删除。
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -128,11 +128,11 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 ### <a name="remarks"></a>备注
 
-此方法由在 `link_target` 方法中链接到此源的 `ITarget` 对象调用。
+此方法由在 `ITarget` 方法中链接到此源的对象调用 `link_target` 。
 
-## <a name="consume"></a>接受
+## <a name="consume"></a><a name="consume"></a>接受
 
-使用以前由 `multitype_join` 消息块提供的消息，并通过目标成功保留该消息，从而将所有权转移给调用方。
+使用消息块先前提供的消息 `multitype_join` ，并由目标成功保留该消息，并将所有权转移到调用方。
 
 ```cpp
 virtual message<_Destination_type>* consume(
@@ -143,20 +143,20 @@ virtual message<_Destination_type>* consume(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-保留 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity`保留 `message` 对象的。
 
 *_PTarget*<br/>
-指向调用 `consume` 方法的目标块的指针。
+指向调用方法的目标块的指针 `consume` 。
 
 ### <a name="return-value"></a>返回值
 
-指向调用方现在具有所有权的 `message` 对象的指针。
+指向 `message` 调用方现在具有所有权的对象的指针。
 
 ### <a name="remarks"></a>备注
 
-`consume` 方法类似于 `accept`，但必须始终调用返回**true**的 `reserve`。
+此 `consume` 方法类似于 `accept` ，但必须始终在之前调用 `reserve` 返回的 **`true`** 。
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
 将目标块链接到此 `multitype_join` 消息块。
 
@@ -167,9 +167,9 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="parameters"></a>参数
 
 *_PTarget*<br/>
-指向 `ITarget` 块的指针，该指针指向此 `multitype_join` 消息块。
+指向 `ITarget` 链接到此消息块的块的指针 `multitype_join` 。
 
-## <a name="ctor"></a>multitype_join
+## <a name="multitype_join"></a><a name="ctor"></a>multitype_join
 
 构造 `multitype_join` 消息块。
 
@@ -209,7 +209,7 @@ multitype_join(
 
 在锁定状态下不执行移动构造，这意味着应由用户确保在移动期间没有轻量任务处于飞行状态。 否则可能会发生大量争用，从而导致异常或不一致的状态。
 
-## <a name="dtor"></a>~ multitype_join
+## <a name="multitype_join"></a><a name="dtor"></a>~ multitype_join
 
 销毁 `multitype_join` 消息块。
 
@@ -217,7 +217,7 @@ multitype_join(
 ~multitype_join();
 ```
 
-## <a name="release"></a>拆卸
+## <a name="release"></a><a name="release"></a>拆卸
 
 释放以前成功的消息保留。
 
@@ -230,14 +230,14 @@ virtual void release(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-正在释放的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity` `message` 要释放的对象的。
 
 *_PTarget*<br/>
-指向调用 `release` 方法的目标块的指针。
+指向调用方法的目标块的指针 `release` 。
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-释放此 `multiple_join` 消息块上的引用计数。
+释放此消息块上的引用计数 `multiple_join` 。
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -250,11 +250,11 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 ### <a name="remarks"></a>备注
 
-此方法由正在从此源取消链接的 `ITarget` 对象调用。 允许源块释放为目标块保留的任何资源。
+此方法由 `ITarget` 正在从此源取消链接的对象调用。 允许源块释放为目标块保留的任何资源。
 
-## <a name="reserve"></a>保留
+## <a name="reserve"></a><a name="reserve"></a>保留
 
-保留此 `multitype_join` 消息块之前提供的消息。
+保留此消息块先前提供的消息 `multitype_join` 。
 
 ```cpp
 virtual bool reserve(
@@ -265,20 +265,20 @@ virtual bool reserve(
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-保留的 `message` 对象的 `runtime_object_identity`。
+`runtime_object_identity` `message` 保留的对象的。
 
 *_PTarget*<br/>
-指向调用 `reserve` 方法的目标块的指针。
+指向调用方法的目标块的指针 `reserve` 。
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果消息已成功保留，则为 `false` 否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
+**`true`** 如果消息已成功保留，则 **`false`** 为; 否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。
 
 ### <a name="remarks"></a>备注
 
-调用 `reserve`后，如果成功，则必须调用 `consume` 或 `release` 以便分别获取或放弃该消息。
+调用后 `reserve` ，如果成功，则必须调用或，才能 `consume` `release` 分别获取或放弃消息的所有权。
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
 将目标块与此 `multitype_join` 消息块断开。
 
@@ -289,11 +289,11 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="parameters"></a>参数
 
 *_PTarget*<br/>
-指向要从此 `multitype_join` 消息块断开链接的 `ITarget` 块的指针。
+指向 `ITarget` 要从此消息块断开链接的块的指针 `multitype_join` 。
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-将此 `multitype_join` 消息块中的所有目标断开。
+从此消息块取消所有目标的 `multitype_join` 锁定。
 
 ```cpp
 virtual void unlink_targets();
@@ -303,4 +303,4 @@ virtual void unlink_targets();
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [choice 类](choice-class.md)<br/>
-[join 类](join-class.md)
+[联接类](join-class.md)

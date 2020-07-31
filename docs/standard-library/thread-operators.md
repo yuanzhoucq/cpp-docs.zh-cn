@@ -18,22 +18,22 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 6312d14dc681736ee396d5c7af6c50ba8d72cd3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215564"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
 
 ||||
 |-|-|-|
-|[操作员！](#op_neq)|[算子&gt;](#op_gt)|[算子&gt;=](#op_gt_eq)|
-|[算子&lt;](#op_lt)|[算子&lt;&lt;](#op_lt_lt)|[算子&lt;=](#op_lt_eq)|
-|[运算符*](#op_eq_eq)|
+|[operator！ =](#op_neq)|[操作员&gt;](#op_gt)|[操作员&gt;=](#op_gt_eq)|
+|[操作员&lt;](#op_lt)|[操作员&lt;&lt;](#op_lt_lt)|[操作员&lt;=](#op_lt_eq)|
+|[operator = =](#op_eq_eq)|
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
 确定一个 `thread::id` 对象是否大于或等于另一个。
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 左 `thread::id` 对象。
 
-*对*\
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -59,7 +59,7 @@ bool operator>= (
 
 此函数不引发任何异常。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
 
 确定一个 `thread::id` 对象是否大于另一个。
 
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 左 `thread::id` 对象。
 
-*对*\
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -85,7 +85,7 @@ bool operator> (
 
 此函数不引发任何异常。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
 
 确定一个 `thread::id` 对象是否小于或等于另一个。
 
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 左 `thread::id` 对象。
 
-*对*\
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -111,7 +111,7 @@ bool operator<= (
 
 此函数不引发任何异常。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
 
 确定一个 `thread::id` 对象是否小于另一个。
 
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 左 `thread::id` 对象。
 
-*对*\
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 *"左"* 在总排序中位于*右侧*，**则为 true;** 否则，**假**。
+**`true`** 如果在合计*顺序中**靠左*，则为;否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -139,7 +139,7 @@ bool operator<(
 
 此函数不引发任何异常。
 
-## <a name="operator"></a><a name="op_neq"></a>操作员！
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 比较两个 `thread::id` 对象是否相等。
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 左 `thread::id` 对象。
 
-*对*\
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -165,7 +165,7 @@ bool operator!= (
 
 此函数不引发任何异常。
 
-## <a name="operator"></a><a name="op_eq_eq"></a>运算符*
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 比较两个 `thread::id` 对象是否相等。
 
@@ -177,21 +177,21 @@ bool operator== (
 
 ### <a name="parameters"></a>参数
 
-*离开*\
+*左中*\
 左 `thread::id` 对象。
 
-*对*\
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果两个对象表示相同的执行线程，或者两个对象都不表示执行线程，**则为 true;** 否则，**假**。
+**`true`** 如果两个对象表示相同的执行线程，或者如果这两个对象都不表示执行线程，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
 此函数不引发任何异常。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
 
 将 `thread::id` 对象的文本表示形式插入流。
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*奥斯特*\
+*Ostr*\
 一个 [basic_ostream](../standard-library/basic-ostream-class.md) 对象。
 
-*Id*\
+*识别*\
 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
-*奥斯特*.
+*Ostr*。
 
 ### <a name="remarks"></a>备注
 
-此函数将*ID*插入*到 Ostr*。
+此函数将*Id*插入*Ostr*。
 
 如果两个`thread::id` 对象相等，这些对象的文本表示形式相同。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<线程>](../standard-library/thread.md)
+[\<thread>](../standard-library/thread.md)

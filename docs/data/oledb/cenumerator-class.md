@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211791"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214914"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
 
@@ -56,7 +56,7 @@ class CEnumerator :
 
 ## <a name="remarks"></a>备注
 
-您可以从此类间接检索 `ISourcesRowset` 数据。
+您可以 `ISourcesRowset` 从此类间接检索数据。
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator：： Find
 
@@ -68,18 +68,18 @@ class CEnumerator :
 bool Find(TCHAR* szSearchName) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *szSearchName*<br/>
 [in] 要搜索的名称。
 
 ### <a name="return-value"></a>返回值
 
-如果找到该名称，**则为 true** 。 否则为 **false**。
+**`true`** 如果找到该名称，则为。 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-此名称映射到[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))接口的 `SOURCES_NAME` 成员。
+此名称映射到 `SOURCES_NAME` [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))接口的成员。
 
 ## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator：： GetMoniker
 
@@ -94,7 +94,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *ppMoniker*<br/>
 弄从当前行的显示名称（[CEnumeratorAccessor：： m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)）分析的名字对象。
@@ -120,15 +120,15 @@ HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();
 HRESULT Open(const CEnumerator& enumerator) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *pMoniker*<br/>
 中指向枚举器的名字对象的指针。
 
 *pClsid*<br/>
-中指向枚举器的 `CLSID` 的指针。
+中指向枚举器的的指针 `CLSID` 。
 
-*enumerator*<br/>
+*枚举器*<br/>
 中对枚举数的引用。
 
 ### <a name="return-value"></a>返回值

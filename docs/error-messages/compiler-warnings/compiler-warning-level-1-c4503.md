@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d3af2b5629906679db46f6f669084c11a41f7ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233244"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>编译器警告（等级 1）C4503
 
@@ -23,7 +23,7 @@ ms.locfileid: "80186538"
 
 修饰名的长度超过编译器限制（4096），已被截断。 若要避免此警告和截断，请减少参数的数量或使用的标识符的名称长度。 比编译器限制更长的修饰名应用了哈希，并且不存在名称冲突的危险。
 
-当使用较旧版本的 Visual Studio 时，如果您的代码重复包含在模板上专用化的模板，则可以发出此警告。 例如，映射（来自C++标准库）的映射。 在这种情况下，你可以将你的 typedef 设置为包含该映射的类型（如**结构**）。
+当使用较旧版本的 Visual Studio 时，如果您的代码重复包含在模板上专用化的模板，则可以发出此警告。 例如，映射（来自 c + + 标准库）的映射。 在这种情况下，你可以将你的 typedef 设置为（ **`struct`** 例如）包含该映射的类型。
 
 但是，你可能决定不重构你的代码。  可以提供生成 C4503 的应用程序，但如果在截断的符号上收到链接时间错误，则很难确定错误中的符号类型。 调试也可能更困难;调试器可能就越大将符号名称映射到类型名称。 但是，程序的正确性不受截断名称的影响。
 

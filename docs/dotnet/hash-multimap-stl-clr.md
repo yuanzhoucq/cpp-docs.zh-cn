@@ -98,26 +98,26 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-ms.openlocfilehash: 815ec8c51bf4a446d5ff92c443f1086c1b2d0eca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7faba79dfcd585e9f397c6ecd0bf594a5fb6c501
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208710"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221401"
 ---
 # <a name="hash_multimap-stlclr"></a>hash_multimap (STL/CLR)
 
-此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 使用容器 `hash_multimap` 将一系列元素作为哈希表进行管理，每个表项存储一个双向链接的节点列表，每个节点存储一个元素。 元素包含一个键，用于对序列进行排序，并包含一个映射值，此值将随之进行。
+此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 使用容器可以将 `hash_multimap` 一系列元素作为哈希表管理，每个表项存储一个双向链接的节点列表，每个节点存储一个元素。 元素包含一个键，用于对序列进行排序，并包含一个映射值，此值将随之进行。
 
-在下面的说明中，`GValue` 与相同：
+在下面的说明中，与 `GValue` 相同：
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
 其中：
 
-`GKey` 与*键*相同，除非后者为 ref 类型，在这种情况下，它是 `Key^`
+`GKey`与*Key*相同，除非后者为 ref 类型，在这种情况下，它是`Key^`
 
-`GMapped` 与*映射*相同，除非后者为 ref 类型，在这种情况下，它是 `Mapped^`
+`GMapped`与*映射*相同，除非后者为 ref 类型，在这种情况下，它是`Mapped^`
 
 ## <a name="syntax"></a>语法
 
@@ -136,23 +136,23 @@ template<typename Key,
     { ..... };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Key*<br/>
 受控序列中元素的键组件的类型。
 
-*贴*<br/>
+*Mapped*<br/>
 受控序列中元素的附加组件的类型。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<cliext/hash_map >
+**标头：**\<cliext/hash_map>
 
 **命名空间：** cliext
 
 ## <a name="declarations"></a>声明
 
-|类型定义|说明|
+|类型定义|描述|
 |---------------------|-----------------|
 |[hash_multimap::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|
 |[hash_multimap::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
@@ -173,7 +173,7 @@ template<typename Key,
 |[hash_multimap::value_compare (STL/CLR)](#value_compare)|两个元素值的排序委托。|
 |[hash_multimap::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[hash_multimap::begin (STL/CLR)](#begin)|指定受控序列的开头。|
 |[hash_multimap::bucket_count (STL/CLR)](#bucket_count)|计算 bucket 的数目。|
@@ -201,52 +201,52 @@ template<typename Key,
 |[hash_multimap::upper_bound (STL/CLR)](#upper_bound)|查找与指定键匹配的范围的末尾。|
 |[hash_multimap::value_comp (STL/CLR)](#value_comp)|复制两个元素值的排序委托。|
 
-|操作员|说明|
+|操作员|描述|
 |--------------|-----------------|
 |[hash_multimap::operator= (STL/CLR)](#op)|替换受控序列。|
 
-## <a name="interfaces"></a>界面
+## <a name="interfaces"></a>接口
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
 |<xref:System.Collections.ICollection>|维护元素组。|
 |<xref:System.Collections.Generic.IEnumerable%601>|通过类型化元素进行排序。|
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
-|IHash\<项，值 >|维护泛型容器。|
+|IHash\<Key, Value>|维护泛型容器。|
 
 ## <a name="remarks"></a>备注
 
 对象为其控制的序列分配并释放存储，并将其控制为双向链接列表中的单个节点。 为了加快访问速度，对象还会在列表中保留一个长度可变的指针数组（哈希表），并有效地将整个列表作为子列表或存储桶序列进行管理。 它通过更改节点之间的链接，将元素插入到存储桶中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
 
-对象通过调用[hash_set：： key_compare （STL/CLR）](../dotnet/hash-set-key-compare-stl-clr.md)类型的存储委托对象，对其控制的每个 bucket 进行排序。 构造 hash_set 时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为比较 `operator<=(key_type, key_type)`。
+对象通过调用[hash_set：： key_compare （STL/CLR）](../dotnet/hash-set-key-compare-stl-clr.md)类型的存储委托对象，对其控制的每个 bucket 进行排序。 构造 hash_set 时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为 "比较" `operator<=(key_type, key_type)` 。
 
-可以通过调用成员函数[hash_set：： key_comp （STL/CLR）](../dotnet/hash-set-key-comp-stl-clr.md)`()`来访问存储的委托对象。 此类委托对象必须在类型[hash_set：： key_type （STL/CLR）](../dotnet/hash-set-key-type-stl-clr.md)的键之间定义等效顺序。 这意味着，对于任意两个密钥 `X` 和 `Y`：
+可以通过调用成员函数[hash_set：： key_comp （STL/CLR）](../dotnet/hash-set-key-comp-stl-clr.md)访问存储的委托对象 `()` 。 此类委托对象必须在类型[hash_set：： key_type （STL/CLR）](../dotnet/hash-set-key-type-stl-clr.md)的键之间定义等效顺序。 这意味着，对于任意两个密钥 `X` 和 `Y` ：
 
-`key_comp()(X, Y)` 将在每次调用时返回相同的布尔值结果。
+`key_comp()(X, Y)`针对每个调用返回相同的布尔值结果。
 
-如果 `key_comp()(X, Y) && key_comp()(Y, X)` 为 true，则认为 `X` 和 `Y` 具有等效的顺序。
+如果 `key_comp()(X, Y) && key_comp()(Y, X)` 为 true，则 `X` `Y` 认为和具有等效的排序。
 
-行为类似于 `operator<=(key_type, key_type)`、`operator>=(key_type, key_type)` 或 `operator==(key_type, key_type)` 的任何排序规则定义 eqivalent 排序。
+行为类似的任何排序规则 `operator<=(key_type, key_type)` `operator>=(key_type, key_type)` 或 `operator==(key_type, key_type)` 定义 eqivalent 排序规则。
 
-请注意，容器仅确保其键具有等效排序的元素（以及到相同整数值的哈希）在存储桶中相邻。 与模板类[hash_map （STL/CLR）](../dotnet/hash-map-stl-clr.md)不同，`hash_multimap` 模板类的对象不需要所有元素的键都是唯一的。 （两个或两个以上的键可以具有等效的顺序。）
+请注意，容器仅确保其键具有等效排序的元素（以及到相同整数值的哈希）在存储桶中相邻。 与模板类[hash_map （STL/CLR）](../dotnet/hash-map-stl-clr.md)不同，模板类的对象 `hash_multimap` 不需要所有元素的键都是唯一的。 （两个或两个以上的键可以具有等效的顺序。）
 
-对象通过调用[hash_set：： hasher （STL/CLR）](../dotnet/hash-set-hasher-stl-clr.md)类型的存储委托对象来确定哪个 bucket 应包含给定的排序关键字。 可以通过调用成员函数[hash_set：： hash_delegate （STL/CLR）](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` 来访问此存储对象，以获取依赖于键值的整数值。 构造 hash_set 时，可以指定存储的委托对象;如果未指定任何委托对象，则默认为函数 `System::Object::hash_value(key_type)`。 这意味着，对于 `X` 和 `Y`的任何密钥：
+对象通过调用[hash_set：： hasher （STL/CLR）](../dotnet/hash-set-hasher-stl-clr.md)类型的存储委托对象来确定哪个 bucket 应包含给定的排序关键字。 可以通过调用成员函数[hash_set：： hash_delegate （STL/CLR）](../dotnet/hash-set-hash-delegate-stl-clr.md)来访问此存储对象， `()` 以获取依赖于键值的整数值。 构造 hash_set 时，可以指定存储的委托对象;如果未指定任何委托对象，则默认为函数 `System::Object::hash_value(key_type)` 。 这意味着，对于任何密钥 `X` 和 `Y` ：
 
-`hash_delegate()(X)` 将在每次调用时返回相同的整数结果。
+`hash_delegate()(X)`针对每个调用返回相同的整数结果。
 
-如果 `X` 和 `Y` 具有等效的排序，则 `hash_delegate()(X)` 应返回与 `hash_delegate()(Y)`相同的整数结果。
+如果 `X` 和 `Y` 具有等效的排序，则 `hash_delegate()(X)` 应返回与相同的整数结果 `hash_delegate()(Y)` 。
 
 每个元素都包含一个单独的键和一个映射值。 序列以允许查找、插入和移除任意元素的方式表示，该元素具有与序列中的元素数无关的多个操作（常量时间），至少最适用于事例。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
 但是，如果哈希值不是均匀分布的，则哈希表可能会退化。 对于始终返回相同值的哈希函数，查找、插入和移除与序列中的元素数成正比（线性时间）。 容器可用于选择合理的哈希函数、平均存储桶大小和哈希表大小（bucket 的总数），但你可以覆盖这些选项中的任何一个或全部。 例如，函数[hash_set：： max_load_factor （stl/clr）](../dotnet/hash-set-max-load-factor-stl-clr.md)和[hash_set：： rehash （stl/clr）](../dotnet/hash-set-rehash-stl-clr.md)。
 
-Hash_multimap 支持双向迭代器，这意味着，可以在给定指定了受控序列元素的迭代器的情况下单步执行相邻元素。 特殊头节点对应于[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)`()`返回的迭代器。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增 hash_multimap 迭代器来访问头节点，然后将其与 `end()`相等。 但不能取消引用 `end()`返回的迭代器。
+Hash_multimap 支持双向迭代器，这意味着，可以在给定指定了受控序列元素的迭代器的情况下单步执行相邻元素。 特殊头节点对应于[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 可以递增 hash_multimap 迭代器来访问头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
 
 请注意，不能直接引用 hash_multimap 元素，因为它的数字位置需要随机访问迭代器。
 
-Hash_multimap 迭代器将句柄存储到其关联的 hash_multimap 节点，后者又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要 hash_multimap 迭代器的关联 hash_multimap 节点与某些 hash_multimap 相关联，就会保持有效。 而且，有效的迭代器是 dereferencable 的，可以使用它来访问或更改它指定的元素值，只要它不等于 `end()`。
+Hash_multimap 迭代器将句柄存储到其关联的 hash_multimap 节点，后者又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要 hash_multimap 迭代器的关联 hash_multimap 节点与某些 hash_multimap 相关联，就会保持有效。 而且，有效的迭代器是 dereferencable 的，您可以使用它来访问或更改它指定的元素值，但前提是它不等于 `end()` 。
 
 清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器*不*会销毁其元素。
 
@@ -389,7 +389,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[hash_multimap：： erase （stl](../dotnet/hash-multimap-erase-stl-clr.md) /clr）`(` [hash_multimap：： begin](../dotnet/hash-multimap-begin-stl-clr.md) （stl/clr）`(),` [HASH_MULTIMAP：： end （stl/clr）](../dotnet/hash-multimap-end-stl-clr.md)`())`。 用于确保受控序列为空。
+成员函数有效地调用[hash_multimap：： erase （stl/clr）](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap：： begin （stl/clr](../dotnet/hash-multimap-begin-stl-clr.md) ） `(),` [hash_multimap：： end （stl/clr）](../dotnet/hash-multimap-end-stl-clr.md) `())` 。 用于确保受控序列为空。
 
 ### <a name="example"></a>示例
 
@@ -447,7 +447,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>备注
 
-该类型描述可用作受控序列的常量双向迭代器的未指定类型 `T2` 的对象。
+该类型描述 `T2` 可用作受控序列的常量双向迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -534,7 +534,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>备注
 
-该类型描述可用作受控序列的常量反向迭代器的未指定类型 `T4` 的对象。
+该类型描述 `T4` 可用作受控序列的常量反向迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -574,9 +574,9 @@ int main()
 size_type count(key_type key);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -684,7 +684,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[hash_multimap：： size （STL/CLR）](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`。 用于测试 hash_multimap 是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[hash_multimap：： size （STL/CLR）](../dotnet/hash-multimap-size-stl-clr.md) `() == 0` 。 用于测试 hash_multimap 是否为空。
 
 ### <a name="example"></a>示例
 
@@ -787,14 +787,14 @@ int main()
 cliext::pair<iterator, iterator> equal_range(key_type key);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [hash_multimap：： lower_bound （stl/clr）](../dotnet/hash-multimap-lower-bound-stl-clr.md)`(key),` [hash_multimap：： upper_bound （stl/clr）](../dotnet/hash-multimap-upper-bound-stl-clr.md)`(key))`。 用于确定受控序列中当前与指定键匹配的元素范围。
+此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [hash_multimap：： lower_bound （stl/clr）](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap：： upper_bound （stl/clr）](../dotnet/hash-multimap-upper-bound-stl-clr.md) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
 
 ### <a name="example"></a>示例
 
@@ -850,12 +850,12 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *first*<br/>
 要清除的范围的开头。
 
-*键*<br/>
+*key*<br/>
 要清除的键值。
 
 *last*<br/>
@@ -866,9 +866,9 @@ bool erase(key_type key)
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定删除的元素之外的第一个元素; 如果此类元素不存在，则为[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)`()`。 使用它可以删除单个元素。
+第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定删除的元素之外剩余的第一个元素; 如果此类元素不存在，则返回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md) `()` 。 使用它可以删除单个元素。
 
-第二个成员函数删除范围 [`first`，`last`）中的受控序列的元素，并返回一个迭代器，该迭代器指定删除的任何元素之外的第一个元素，如果此类元素不存在，则为 `end()`。 使用它可以删除零个或多个连续元素。
+第二个成员函数删除范围 [，）中的受控序列的元素， `first` `last` 并返回一个迭代器，该迭代器指定删除的任何元素之外保留的第一个元素; `end()` 如果此类元素不存在，则为。 使用它可以删除零个或多个连续元素。
 
 第三个成员函数删除受控序列中其键与*键*具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
 
@@ -941,14 +941,14 @@ erase(L'e') = 1
 iterator find(key_type key);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)`()`。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
+如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
 
 ### <a name="example"></a>示例
 
@@ -1179,7 +1179,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>备注
 
-该类型描述了一个 `GValue` 类型的对象，该对象描述用于此模板容器类的泛型接口的存储元素值。
+类型描述了一个类型为的对象 `GValue` ，该对象描述用于此模板容器类的泛型接口的存储元素值。
 
 ### <a name="example"></a>示例
 
@@ -1286,7 +1286,7 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *first*<br/>
 要插入的范围的开头。
@@ -1300,7 +1300,7 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *pred*<br/>
 受控序列的排序谓词。
 
-right<br/>
+*然后*<br/>
 要插入的对象或范围。
 
 ### <a name="remarks"></a>备注
@@ -1309,7 +1309,7 @@ right<br/>
 
 `hash_multimap();`
 
-用默认的排序谓词 `key_compare()`和默认的哈希函数初始化受控序列，该序列不包含任何元素。 使用它可以指定一个空的初始受控序列，其中包含默认的排序谓词和哈希函数。
+用默认的排序谓词 `key_compare()` 和默认哈希函数初始化受控序列，其中不包含任何元素。 使用它可以指定一个空的初始受控序列，其中包含默认的排序谓词和哈希函数。
 
 构造函数：
 
@@ -1327,31 +1327,31 @@ right<br/>
 
 `hash_multimap(hash_multimap<Key, Mapped>% right);`
 
-用序列 [`right.begin()`、`right.end()`）和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象*权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
+用序列 [ `right.begin()` ， `right.end()` ）、默认的排序谓词和默认哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象*权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
 
 构造函数：
 
 `hash_multimap(hash_multimap<Key, Mapped>^ right);`
 
-用序列 [`right->begin()`、`right->end()`）和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象*权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
+用序列 [ `right->begin()` ， `right->end()` ）、默认的排序谓词和默认哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象*权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
 
 构造函数：
 
 `template<typename InIter> hash_multimap(InIter first, InIter last);`
 
-用序列 [`first`、`last`）和默认的哈希函数初始化受控序列。 使用它可以通过默认的排序谓词和哈希函数使受控序列成为另一个序列的副本。
+用序列 [ `first` ， `last` ）、默认的排序谓词和默认哈希函数初始化受控序列。 使用它可以通过默认的排序谓词和哈希函数使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`
 
-用序列谓词*pred*和默认哈希函数初始化受控序列，序列为 [`first`，`last`）。 使用指定的排序谓词和默认哈希函数，可以使用它来使受控序列成为另一个序列的副本。
+用序列 [ `first` ， `last` ）、排序谓词*pred*和默认哈希函数初始化受控序列。 使用指定的排序谓词和默认哈希函数，可以使用它来使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-用序列 [`first`，`last`）、排序谓词*pred*和哈希函数*hashfn*初始化受控序列。 使用指定的排序谓词和哈希函数可将其用于使受控序列成为另一个序列的副本。
+用序列 [ `first` ， `last` ）、排序谓词*pred*和哈希函数*hashfn*初始化受控序列。 使用指定的排序谓词和哈希函数可将其用于使受控序列成为另一个序列的副本。
 
 构造函数：
 
@@ -1555,7 +1555,7 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *first*<br/>
 要插入的范围的开头。
@@ -1563,10 +1563,10 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 要插入的范围的末尾。
 
-right<br/>
+*然后*<br/>
 要插入的枚举。
 
-*val*<br/>
+*初始值*<br/>
 要插入的项值。
 
 *where*<br/>
@@ -1580,7 +1580,7 @@ right<br/>
 
 第二个成员函数插入具有值*val*的元素，并使用*where*作为提示（以提高性能），并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
 
-第三个成员函数插入序列 [`first`，`last`）。 用于插入从另一个序列复制的零个或多个元素。
+第三个成员函数插入序列 [ `first` ， `last` ）。 用于插入从另一个序列复制的零个或多个元素。
 
 第四个成员函数插入由*权限*指定的序列。 使用它可以插入枚举器描述的序列。
 
@@ -1671,7 +1671,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>备注
 
-该类型描述可用作受控序列的双向迭代器的未指定类型 `T1` 的对象。
+该类型描述 `T1` 可用作受控序列的双向迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -1877,7 +1877,7 @@ float load_factor();
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回 `(float)`[hash_multimap：： size （stl/clr）](../dotnet/hash-multimap-size-stl-clr.md)`() /` [hash_multimap：： bucket_count （stl/clr）](../dotnet/hash-multimap-bucket-count-stl-clr.md)`()`。 使用它来确定平均存储桶大小。
+此成员函数返回 `(float)` [hash_multimap：： size （stl/clr）](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap：： bucket_count （stl/clr）](../dotnet/hash-multimap-bucket-count-stl-clr.md) `()` 。 使用它来确定平均存储桶大小。
 
 ### <a name="example"></a>示例
 
@@ -1949,14 +1949,14 @@ max_load_factor() = 0.25
 iterator lower_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数确定受控序列中 `X` 的第一个元素，该元素将哈希处理为与*键*相同的存储桶并具有与*键*等效的顺序。 如果此类元素不存在，它将返回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)`()`;否则，它会返回指定 `X`的迭代器。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
+成员函数确定受控序列中的第一个元素 `X` ，该元素将哈希处理为与*键*相同的存储桶并具有与*键*等效的排序。 如果此类元素不存在，它将返回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md) `()` ; 否则返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
 
 ### <a name="example"></a>示例
 
@@ -2008,9 +2008,9 @@ lower_bound(L'x')==end() = True
 static value_type make_value(key_type key, mapped_type mapped);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*键*<br/>
+*key*<br/>
 要使用的密钥值。
 
 *贴*<br/>
@@ -2018,7 +2018,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 
 ### <a name="remarks"></a>备注
 
-该成员函数将返回一个 `value_type` 对象，其键为*key* ，其映射值已*映射*。 使用它来编写适用于多个其他成员函数的对象。
+成员函数返回一个 `value_type` 对象，其键为*key* ，并*映射*其映射值。 使用它来编写适用于多个其他成员函数的对象。
 
 ### <a name="example"></a>示例
 
@@ -2103,7 +2103,7 @@ float max_load_factor();
 void max_load_factor(float new_factor);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *new_factor*<br/>
 要存储的新的最大加载因子。
@@ -2184,14 +2184,14 @@ max_load_factor() = 0.25
 hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符*直接*复制到对象，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2337,7 +2337,7 @@ void rehash();
 
 ### <a name="remarks"></a>备注
 
-此成员函数重新生成哈希表，确保[hash_multimap：： load_factor （stl/clr）](../dotnet/hash-multimap-load-factor-stl-clr.md)`() <=` [hash_multimap：： max_load_factor （stl/clr）](../dotnet/hash-multimap-max-load-factor-stl-clr.md)。 否则，只有在插入后才需要哈希表的大小。 （大小永远不会自动减小。）您可以使用它来调整哈希表的大小。
+此成员函数重新生成哈希表，确保[hash_multimap：： load_factor （stl/clr）](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap：： max_load_factor （stl/clr）](../dotnet/hash-multimap-max-load-factor-stl-clr.md)。 否则，只有在插入后才需要哈希表的大小。 （大小永远不会自动减小。）您可以使用它来调整哈希表的大小。
 
 ### <a name="example"></a>示例
 
@@ -2506,7 +2506,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[hash_multimap：： empty （STL/CLR）](../dotnet/hash-multimap-empty-stl-clr.md)`()`。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[hash_multimap：： empty （STL/CLR）](../dotnet/hash-multimap-empty-stl-clr.md) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -2604,14 +2604,14 @@ end()-begin() = 3
 void swap(hash_multimap<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要与其交换内容的容器。
 
 ### <a name="remarks"></a>备注
 
-成员函数在 `this` 和*右*之间交换受控序列。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
+成员函数交换和右之间的受控 **`this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2722,14 +2722,14 @@ int main()
 iterator upper_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*键*<br/>
+*key*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数确定受控序列中 `X` 的最后一个元素，该元素哈希处理为与*键*相同的存储桶并具有*等效的顺序。* 如果此类元素不存在，或者 `X` 为受控序列中的最后一个元素，则它将返回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)`()`;否则，它将返回一个迭代器，该迭代器指定 `X`以外的第一个元素。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
+成员函数确定受控序列中的最后一个元素 `X` ，该元素将哈希处理为与*键*相同的存储桶并具有与*键*等效的排序。 如果此类元素不存在，或者如果 `X` 是受控序列中的最后一个元素，则它将返回[hash_multimap：： END （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md) `()` ; 否则返回指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
 
 ### <a name="example"></a>示例
 
@@ -2878,7 +2878,7 @@ typedef generic_value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `generic_value`的同义词。
+该类型是 `generic_value` 的同义词。
 
 ### <a name="example"></a>示例
 

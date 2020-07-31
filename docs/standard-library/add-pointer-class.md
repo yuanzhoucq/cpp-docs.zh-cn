@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-ms.openlocfilehash: 8adeffd0352d04fe844b286ea7456c66e907a0a7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 74e8cf037f8adfb6fdd9338c3cd95e2363f8de75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619261"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222610"
 ---
 # <a name="add_pointer-class"></a>add_pointer 类
 
@@ -35,7 +35,7 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ## <a name="remarks"></a>备注
 
-成员**typedef** `type` 将与相同的类型命名为 `remove_reference<T>::type*` 。 别名 `add_pointer_t` 是访问成员**typedef**的快捷方式 `type` 。
+成员 **`typedef`** `type` 的名称与相同 `remove_reference<T>::type*` 。 别名 `add_pointer_t` 是访问成员的快捷方式 **`typedef`** `type` 。
 
 因为从引用创建指针是无效的，所以 `add_pointer` 将从指定类型中移除引用（如果有），然后再创建指向类型的指针。 因此，你可以将某一类型用于 `add_pointer`，而不必考虑该类型是否是引用。
 

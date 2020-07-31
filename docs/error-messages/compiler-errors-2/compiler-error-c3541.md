@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 1308ff91bcebabc5495b015321494f3457cf2d1e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 32926d0ef9343bad9ed73458e4d52d317b628109
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761499"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221037"
 ---
 # <a name="compiler-error-c3541"></a>编译器错误 C3541
 
 "type"：不能将 typeid 应用于包含 "auto" 的类型
 
-[Typeid](../../extensions/typeid-cpp-component-extensions.md)运算符不能应用于所指示的类型，因为它包含 `auto` 说明符。
+[Typeid](../../extensions/typeid-cpp-component-extensions.md)运算符不能应用于所指示的类型，因为它包含 **`auto`** 说明符。
 
 ## <a name="example"></a>示例
 
@@ -35,8 +35,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [auto 关键字](../../cpp/auto-keyword.md)<br/>
-[/Zc:auto（推导变量类型）](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[/Zc： auto （推导变量类型）](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [typeid](../../extensions/typeid-cpp-component-extensions.md)

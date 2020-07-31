@@ -6,18 +6,18 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: ebdfea18e6e8445dd734bf43fb6a4ecf422975e9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622750"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223182"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>异常：从您自己的函数引发异常
 
 可以单独使用 MFC 异常处理范例来捕获 MFC 或其他库中的函数引发的异常。 除了捕获库代码引发的异常之外，当您编写可能遇到异常条件的函数时，您还可以从自己的函数引发异常。
 
-当引发异常时，将停止执行当前函数并直接跳到最内部异常帧的**catch**块。 异常机制将绕过函数的正常退出路径。 因此，您必须确保在正常退出会删除那些内存块。
+当引发异常时，将停止当前函数的执行并直接跳到最 **`catch`** 内部异常帧的块。 异常机制将绕过函数的正常退出路径。 因此，您必须确保在正常退出会删除那些内存块。
 
 #### <a name="to-throw-an-exception"></a>引发异常
 

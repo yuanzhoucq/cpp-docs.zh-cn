@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 C4463
+title: 编译器警告（等级4） C4463
 ms.date: 11/04/2016
 f1_keywords:
 - C4463
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: e125a532f87533958ec43ed5580665ad4108856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214355"
 ---
-# <a name="compiler-warning-level-4-c4463"></a>编译器警告 （等级 C4463
+# <a name="compiler-warning-level-4-c4463"></a>编译器警告（等级4） C4463
 
-> 地址信息溢出;将分配*值*到只包含中的值的位域*low_value*到*high_value*
+> 超出将*值*分配给只包含*low_value*的值的位域*high_value*
 
-已分配*值*之外的值的位域所能容纳的范围。 有符号的位域类型使用高顺序位表示符号，因此，如果*n*是位域大小范围的有符号的位域，-2<sup>n-1</sup>到 2<sup>n-1</sup>-1，而无符号位域使范围介于 0 到 2<sup>n</sup>-1。
+分配的*值*不在位域可以包含的值范围内。 带符号位域类型对符号使用高位位，因此，如果*n*为位域大小，则已签名位域的范围为-2<sup>n-1</sup>到 2<sup>n-1</sup>-1，而无符号位域的范围介于0到 2<sup>n</sup>-1 之间。
 
 ## <a name="example"></a>示例
 
-此示例生成 C4463，因为它尝试分配给类型的位字段的值为 3`int`大小为 2，其中包含从-2 到 1 的范围。
+此示例将生成 C4463，因为它尝试将值3分配给类型为2的位域 **`int`** ，其范围介于-2 到1之间。
 
-若要解决此问题，可以分配的值更改为所允许的范围中的某些内容。 如果位字段旨在在范围从 0 到 3 中保存无符号的值，您可以将声明类型更改为`unsigned`。 如果该字段用于在范围-4 到 3 中保存值，然后可以更改位字段大小为 3。
+若要解决此问题，可以将分配的值更改为允许范围内的某个值。 如果位域用于保存范围为0到3之间的无符号值，则可以将声明类型更改为 **`unsigned`** 。 如果字段旨在保存范围为-4 到3之间的值，则可以将位域大小更改为3。
 
 ```cpp
 // C4463_overflow.cpp

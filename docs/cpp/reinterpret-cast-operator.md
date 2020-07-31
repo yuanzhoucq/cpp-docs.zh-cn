@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188280"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233595"
 ---
 # <a name="reinterpret_cast-operator"></a>reinterpret_cast 运算符
 
@@ -25,17 +25,17 @@ reinterpret_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>备注
 
-对**reinterpret_cast**运算符的滥用很容易是不安全的。 除非所需转换本身是低级别的，否则应使用其他强制转换运算符之一。
+滥用操作员的 **`reinterpret_cast`** 操作很容易就会不安全。 除非所需转换本身是低级别的，否则应使用其他强制转换运算符之一。
 
-**Reinterpret_cast**运算符可用于将 `char*` 转换为 `int*`或 `One_class*` 为 `Unrelated_class*`的转换，这些转换本质上是不安全的。
+**`reinterpret_cast`** 运算符可用于转换（例如）或转换 **`char*`** **`int*`** `One_class*` 为 `Unrelated_class*` ，它们本质上是不安全的。
 
-不能安全地将**reinterpret_cast**的结果用于强制转换回其原始类型的任何内容。 在最好的情况下，其他用途也是不可移植的。
+**`reinterpret_cast`** 除强制转换回其原始类型外，不能安全地使用的结果。 在最好的情况下，其他用途也是不可移植的。
 
-**Reinterpret_cast**运算符不能转换为**const**、 **volatile**或 **__unaligned**属性。 有关删除这些属性的信息，请参阅[Const_cast 运算符](../cpp/const-cast-operator.md)。
+**`reinterpret_cast`** 运算符不能转换为 **`const`** 、 **`volatile`** 或 **`__unaligned`** 特性。 有关删除这些属性的信息，请参阅[Const_cast 运算符](../cpp/const-cast-operator.md)。
 
-**Reinterpret_cast**运算符将 null 指针值转换为目标类型的 null 指针值。
+**`reinterpret_cast`** 运算符将 null 指针值转换为目标类型的 null 指针值。
 
-**Reinterpret_cast**的一种实际用法是在哈希函数中，这种方式将值映射到索引，这种方法的两个不同值很少会以相同的索引结束。
+的一种实际用法 **`reinterpret_cast`** 是在哈希函数中，将值映射到索引，这种方式的两个不同值很少会以相同的索引结束。
 
 ```cpp
 #include <iostream>
@@ -77,9 +77,9 @@ Output:
 64829
 ```
 
-**Reinterpret_cast**允许将指针视为整型。 结果随后将按位移位并与自身进行“异或”运算以生成唯一的索引（具有唯一性的概率非常高）。 该索引随后被标准 C 样式强制转换截断为函数的返回类型。
+**`reinterpret_cast`** 允许将指针视为整型。 结果随后将按位移位并与自身进行“异或”运算以生成唯一的索引（具有唯一性的概率非常高）。 该索引随后被标准 C 样式强制转换截断为函数的返回类型。
 
 ## <a name="see-also"></a>另请参阅
 
-[强制转换运算符](../cpp/casting-operators.md)<br/>
+[转换运算符](../cpp/casting-operators.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

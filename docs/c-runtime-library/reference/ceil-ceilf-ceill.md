@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221947"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -81,9 +81,9 @@ long double ceill(
 
 **ceil**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**ceil**的重载。 在 C 程序中， **ceil**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用或类型的**ceil**的重载 **`float`** **`long double`** 。 在 C 程序中， **ceil**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221934"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 
@@ -88,7 +88,7 @@ long double _copysignl(
 *x*<br/>
 作为结果的数值返回的浮点值。
 
-*y*<br/>
+*误差*<br/>
 作为结果的符号返回的浮点值。
 
 [浮点支持例程](../../c-runtime-library/floating-point-support.md)
@@ -99,7 +99,7 @@ long double _copysignl(
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用**copysign**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **copysign**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此可以调用**copysign**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **copysign**始终采用并返回 **`double`** 。
 
 ## <a name="requirements"></a>要求
 
@@ -108,9 +108,9 @@ long double _copysignl(
 |**_copysign**|\<float.h>|
 |**copysign**、 **copysignf**、 **copysignl**、 **_copysignf**、 **_copysignl**|\<math.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
 [_chgsign、_chgsignf、_chgsignl](chgsign-chgsignf-chgsignl.md)<br/>

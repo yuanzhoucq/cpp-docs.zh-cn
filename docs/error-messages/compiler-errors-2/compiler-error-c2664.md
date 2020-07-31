@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756001"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221115"
 ---
 # <a name="compiler-error-c2664"></a>编译器错误 C2664
 
 “函数”: 无法将自变量 n 从“类型 1”转换为“类型 2”
 
-如果创建了某个类的实例，然后尝试了对用 `explicit` 关键字标记的构造函数进行隐式转换，则可能会发生此参数转换问题。 有关显式转换的详细信息，请参阅[用户定义的类型转换](../../cpp/user-defined-type-conversions-cpp.md)。
+如果创建了类的实例，并尝试对用关键字标记的构造函数进行隐式转换，则可能会发生此参数转换问题 **`explicit`** 。 有关显式转换的详细信息，请参阅[用户定义的类型转换](../../cpp/user-defined-type-conversions-cpp.md)。
 
-如果将临时对象传递给采用指向对象的引用作为参数的函数，则该引用必须是 `const` 引用。
+如果将临时对象传递到采用对象引用作为参数的函数，则该引用必须是 **`const`** 引用。
 
 如果使用不是函数所预期的类型的参数传递该函数，则使用适当的构造函数可创建临时对象。 然后将该临时对象传递给函数。 在这种情况下，该临时对象用于初始化引用。 在该语言的早期版本中，所有的引用都可以由临时对象进行初始化。
 
@@ -31,7 +31,7 @@ ms.locfileid: "74756001"
 
 如果某个类在它的一个基类中隐藏了成员，也可能生成 C2664。
 
-有关详细信息，请参阅[如何：将 System：： String 转换为 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
+有关详细信息，请参阅[如何：将 System：： String 转换为 wchar_t * 或 \* char](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
 
 ## <a name="example"></a>示例
 
@@ -119,7 +119,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-编译器强制实施应用 `const` 的 C++ 标准需求。 此示例生成 C2664：
+编译器强制实施应用的 c + + 标准要求 **`const`** 。 此示例生成 C2664：
 
 ```cpp
 // C2664d.cpp
@@ -232,7 +232,7 @@ library myproj1 {
 }
 ```
 
-将代码从 Visual C++ 6.0 移植到更高版本时，使用 `wchar_t` 也会引发 C2664。 在 Visual C++ 6.0 和更早版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此也可隐式转换为该类型。 在 Visual C++ 6.0 后，`wchar_t` 是它自己的内置类型（在 C++ 标准中指定），因此不再能隐式转换为 `unsigned short`。 请参阅[/zc： wchar_t （Wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+将 **`wchar_t`** 代码从 Visual C++ 6.0 迁移到更高版本时，也会引发 C2664。 在 Visual C++ 6.0 及更早版本中， **`wchar_t`** 是 **`typedef`** 的， **`unsigned short`** 因此可隐式转换为该类型。 Visual C++ 6.0 后， **`wchar_t`** 是它自己的内置类型（如 c + + 标准中所指定），并且不再可隐式转换为 **`unsigned short`** 。 请参阅[/zc： wchar_t （Wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ## <a name="example"></a>示例
 

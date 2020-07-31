@@ -52,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216903"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -122,7 +122,7 @@ long long int llrintl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用**lrint**和**llrint**的重载，这些重载采用**float**和**long** **double**类型。 在 C 程序中， **lrint**和**llrint**始终采用**double**。
+由于 c + + 允许重载，因此你可以调用采用和类型的**lrint**和**llrint**的重载 **`float`** **`long double`** 。 在 C 程序中， **lrint**和**llrint**始终采用 **`double`** 。
 
 如果*x*不表示整数值的浮点等效项，则这些函数将引发**FE_INEXACT**。
 
@@ -140,4 +140,4 @@ long long int llrintl(
 
 ## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>

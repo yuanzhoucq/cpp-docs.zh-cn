@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-ms.openlocfilehash: 6453156a59b73bcb06c7c86920e1dc524874cef8
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: a38ddb7e3575e883c11b14a9b01004bb54fcd4a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168535"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230008"
 ---
 # <a name="_atlcreatewnddata-structure"></a>_AtlCreateWndData 结构
 
@@ -33,13 +33,13 @@ ms.locfileid: "82168535"
 ## <a name="members"></a>成员
 
 `m_pThis`<br/>
-用于获取对窗口过程中的类实例的访问权限的**this**指针。
+**`this`** 用于获取对窗口过程中的类实例的访问权限的指针。
 
 `m_dwThreadID`<br/>
 当前类实例的线程 ID。
 
 `m_pNext`<br/>
-指向下一个`_AtlCreateWndData`对象的指针。
+指向下一个对象的指针 `_AtlCreateWndData` 。
 
 ## <a name="requirements"></a>要求
 

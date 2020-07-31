@@ -1,17 +1,17 @@
 ---
-title: ptr （C++ COM 特性）
+title: ptr （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166414"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224378"
 ---
 # <a name="ptr"></a>ptr
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166414"
 
 ## <a name="remarks"></a>备注
 
-**Ptr** C++特性具有与[ptr](/windows/win32/Midl/ptr) MIDL 特性相同的功能。
+**Ptr** c + + 属性具有与[ptr](/windows/win32/Midl/ptr) MIDL 属性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -37,9 +37,9 @@ ms.locfileid: "80166414"
 
 |||
 |-|-|
-|**适用对象**|Interface 参数、interface 方法、 **typedef**|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|Interface 参数、interface 方法、**`typedef`**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

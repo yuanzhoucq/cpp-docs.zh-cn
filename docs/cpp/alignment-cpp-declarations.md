@@ -1,20 +1,20 @@
 ---
-title: Alignment
-description: 如何在新式C++中指定数据对齐方式。
+title: 对齐方式
+description: 如何在新式 c + + 中指定数据对齐方式。
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 7f6bef061fee41389bad644d9ac5244f5644da76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076116"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227642"
 ---
-# <a name="alignment"></a>Alignment
+# <a name="alignment"></a>对齐方式
 
-C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器会按大小值对类和结构成员进行对齐： `bool` 和 `char` 在1个字节的边界上，`short` 2 字节边界、`int`、`long`和 `float`，在4个字节边界上，以及在8字节边界上 `long long`、`double`和 `long double`。
+C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器会按大小值对类和结构成员进行对齐：在1个字节的边界上、在2字节边界上、 **`bool`** **`char`** **`short`** **`int`** 、和 **`long`** 4 字节 **`float`** **`long long`** **`double`** 边界上、、以及 **`long double`** 8 字节边界上。
 
-在大多数情况下，你永远不需要关心对齐方式，因为默认对齐已经是最佳的。 但是，在某些情况下，您可以通过为数据结构指定自定义对齐方式来实现显著的性能改进或节省内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 特定的关键字 `__alignof` 和 `declspec(alignas)` 指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 c + + 11 标准关键字**alignof**和**alignas** ，以获得最大的代码可移植性。 新关键字的行为方式与 Microsoft 特定的扩展相同。 这些扩展插件的文档也适用于新关键字。 有关详细信息，请参阅[__Alignof 运算符](../cpp/alignof-operator.md)并[对齐](../cpp/align-cpp.md)。 C++标准不指定在边界比目标平台的编译器默认值小的边界上对齐的封装行为，因此在这种情况下仍需要使用 Microsoft #pragma [pack](../preprocessor/pack.md) 。
+在大多数情况下，你永远不需要关心对齐方式，因为默认对齐已经是最佳的。 但是，在某些情况下，您可以通过为数据结构指定自定义对齐方式来实现显著的性能改进或节省内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 特定的关键字 **`__alignof`** 并 **`__declspec(align)`** 指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 c + + 11 标准关键字 **`alignof`** ，并 **`alignas`** 获得最大的代码可移植性。 新关键字的行为方式与 Microsoft 特定的扩展相同。 这些扩展插件的文档也适用于新关键字。 有关详细信息，请参阅[ `alignof` 运算符](../cpp/alignof-operator.md)和[对齐](../cpp/align-cpp.md)。 C + + 标准不指定封装行为，以便在小于目标平台的编译器默认值的边界上对齐，因此 [`#pragma pack`](../preprocessor/pack.md) 在这种情况下仍需要使用 Microsoft。
 
 使用[aligned_storage 类](../standard-library/aligned-storage-class.md)通过自定义对齐方式为数据结构分配内存。 [Aligned_union 类](../standard-library/aligned-union-class.md)用于为具有不常用构造函数或析构函数的联合指定对齐方式。
 
@@ -28,9 +28,9 @@ Cpu 执行对存储在内存中的数据执行的指令。 数据由其在内存
 
 编译器会尝试使用阻止数据不一致的方式来进行数据分配。
 
-对于简单的数据类型，编译器将分配是数据类型的大小（以字节为单位）的倍数的地址。 例如，编译器会将地址分配给类型 `long` 的变量，这些变量是4的倍数，将地址的下2位设置为零。
+对于简单的数据类型，编译器将分配是数据类型的大小（以字节为单位）的倍数的地址。 例如，编译器会将地址分配给类型为4的倍数的变量 **`long`** ，将地址的下2位设置为零。
 
-编译器还以自然对齐结构的每个元素的方式来填充结构。 请考虑以下代码示例中的结构 `struct x_`：
+编译器还以自然对齐结构的每个元素的方式来填充结构。 请考虑 `struct x_` 以下代码示例中的结构：
 
 ```cpp
 struct x_
@@ -63,13 +63,13 @@ struct x_
 
 第二个声明包括两个填充元素：
 
-1. `char _pad0[3]` 将 `int b` 成员与4字节边界对齐。
+1. `char _pad0[3]`用于使 `int b` 成员在4字节边界上对齐。
 
-1. `char _pad1[1]`，将结构的数组元素 `struct _x bar[3];` 在四个字节的边界上对齐。
+1. `char _pad1[1]`将结构的数组元素与 `struct _x bar[3];` 四个字节的边界对齐。
 
-填充以允许自然访问的方式对齐 `bar[3]` 的元素。
+填充 `bar[3]` 以允许自然访问的方式对齐的元素。
 
-下面的代码示例演示了 `bar[3]` 数组布局：
+下面的代码示例显示 `bar[3]` 数组布局：
 
 ```Output
 adr offset   element
@@ -96,13 +96,13 @@ adr offset   element
 0x0023   char _pad1[1];
 ```
 
-## <a name="alignof-and-alignas"></a>alignof 和 alignas
+## <a name="alignof-and-alignas"></a>`alignof` 和 `alignas`
 
-**Alignas**类型说明符是一种用于指定C++变量和用户定义类型的自定义对齐方式的可移植标准方法。 **Alignof**运算符也是一种标准的可移植方法，用于获取指定类型或变量的对齐方式。
+**`alignas`** 类型说明符是一种可移植的 c + + 标准方法，用于指定变量和用户定义类型的自定义对齐方式。 **`alignof`** 运算符也是一种标准的可移植方法，用于获取指定类型或变量的对齐方式。
 
 ## <a name="example"></a>示例
 
-可以在类、结构或联合或单个成员上使用**alignas** 。 当遇到多个**alignas**说明符时，编译器将选择最严格的说明符（具有最大值的说明符）。
+可以 **`alignas`** 在类、结构或联合中使用，也可以在单个成员上使用。 如果遇到多个 **`alignas`** 说明符，编译器将选择最严格的说明符（值最大的一个）。
 
 ```cpp
 // alignas_alignof.cpp

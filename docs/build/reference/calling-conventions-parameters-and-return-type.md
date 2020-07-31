@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223910"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>调用约定、参数和返回类型
 
@@ -24,12 +24,12 @@ FARPROC WINAPI __delayLoadHelper2(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pidd*<br/>
-一个指向 `ImgDelayDescr` 的 `const` 指针，该指针包含各种导入相关数据的偏移量、绑定信息的时间戳，以及提供有关描述符内容的进一步信息的一组属性。 目前，只有一个属性 `dlattrRva`，它指示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅*delayimp.lib*中的声明。
+**`const`** 指向的指针， `ImgDelayDescr` 该指针包含各种导入相关数据的偏移量、绑定信息的时间戳，以及提供有关描述符内容的进一步信息的一组属性。 目前只有一个属性，该属性 `dlattrRva` 指示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅*delayimp.lib*中的声明。
 
-有关 `PCImgDelayDescr` 结构的定义，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
+有关结构的定义 `PCImgDelayDescr` ，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
 指向延迟加载导入地址表（IAT）中的槽的指针，该槽是使用导入函数的地址更新的。 Helper 例程需要存储返回到此位置的相同值。
@@ -50,7 +50,7 @@ FARPROC WINAPI __delayLoadHelper2(
 
 ## <a name="remarks"></a>备注
 
-Helper 函数的调用约定是 `__stdcall`。 返回值的类型不相关，因此使用了 FARPROC。 该函数具有 C 链接。
+Helper 函数的调用约定是 **`__stdcall`** 。 返回值的类型不相关，因此使用了 FARPROC。 该函数具有 C 链接。
 
 除非要将 Helper 例程用作通知挂钩，否则延迟加载 Helper 的返回值需要存储在已传入函数指针的位置。 在这种情况下，由你的代码负责查找要返回的适当函数指针。 然后，链接器生成的 thunk 代码可将该返回值用作导入的实际目标并直接跳转到该目标。
 

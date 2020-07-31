@@ -37,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506879"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229358"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -73,9 +73,9 @@ long double sqrtl(
 *x*<br/>
 非负浮点值
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用采用**浮点**或**长****双精度**类型的**sqrt**的重载。 在 C 程序中， **sqrt**始终采用并返回**double**。
+由于 c + + 允许重载，因此可以调用采用或类型的**sqrt**的重载 **`float`** **`long double`** 。 在 C 程序中， **sqrt**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

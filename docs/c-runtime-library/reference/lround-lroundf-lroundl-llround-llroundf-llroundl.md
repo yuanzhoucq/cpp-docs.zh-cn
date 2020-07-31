@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911366"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216890"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -99,7 +99,7 @@ long long llroundl(
 
 ## <a name="return-value"></a>返回值
 
-**Lround**和**llround**函数将最接近的**长****整数或****长**整数返回到*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
+**Lround**和**llround**函数将最接近的 **`long`** 或 **`long long`** 整数返回到*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -107,13 +107,13 @@ long long llroundl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用**lround**或**llround**的重载，该重载采用并返回**浮点**和**长****双精度**值。 在 C 程序中， **lround**和**llround**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和值的**lround**或**llround**的重载 **`float`** **`long double`** 。 在 C 程序中， **lround**和**llround**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
 
@@ -160,7 +160,7 @@ lroundl(-3.500000) is -4
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
-[fmod、fmodf](fmod-fmodf.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint、lrintf、lrintl、llrint、llrintf、llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [round、roundf、roundl](round-roundf-roundl.md)<br/>
 [nearbyint、nearbyintf、nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>

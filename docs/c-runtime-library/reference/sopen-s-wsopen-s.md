@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912694"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229384"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s、_wsopen_s
 
@@ -72,7 +72,7 @@ errno_t _wsopen_s(
 *pfh*<br/>
 文件句柄或 -1（如果出现错误）。
 
-*名字*<br/>
+*filename*<br/>
 文件名。
 
 *oflag*<br/>
@@ -114,7 +114,7 @@ errno_t _wsopen_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-整数表达式*oflag*是通过组合在 fcntl.h>> 中\<定义的一个或多个清单常量而形成的。 当两个或多个常量构成参数*oflag*时，它们将与按位 "或" 运算符（ **&#124;** ）组合在一起。
+整数表达式*oflag*是通过合并在中定义的一个或多个清单常量而形成的 \<fcntl.h> 。 当两个或多个常量构成参数*oflag*时，它们将与按位 "或" 运算符（ **&#124;** ）组合在一起。
 
 |*oflag*常量|行为|
 |-|-|
@@ -138,11 +138,11 @@ errno_t _wsopen_s(
 
 若要指定文件访问模式，必须指定 **_O_RDONLY**、 **_O_RDWR**或 **_O_WRONLY**。 对于访问模式，不存在默认值。
 
-当使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型**wchar_t**的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型**wchar_t**的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
+当使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型的 utf-16 数据 **`wchar_t`** 。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型的 UTF-16 数据的缓冲区 **`wchar_t`** 。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致参数验证错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
 
-如果通过 **_O_WRONLY** | **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用 **_sopen_s** ，它将首先尝试打开文件以进行读取和写入、读取 BOM，然后将其重新打开以进行写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
+如果 **_sopen_s**通过 **_O_WRONLY**  |  **_O_APPEND** （追加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**调用 _sopen_s，它将首先尝试打开文件以进行读取和写入、读取 BOM，然后将其重新打开以进行写入。 如果无法打开该文件以供读取和写入，则它将打开该文件以供只写，并使用 Unicode 模式设置的默认值。
 
-自变量*shflag*是一个常量表达式，它包含在 share> 中\<定义的以下清单常量之一。
+自变量*shflag*是一个常量表达式，它包含在中定义的以下清单常量之一 \<share.h> 。
 
 |*shflag*常量|行为|
 |-|-|
@@ -151,7 +151,7 @@ errno_t _wsopen_s(
 | **_SH_DENYRD** | 拒绝对文件的读取访问。 |
 | **_SH_DENYNO** | 允许读取和写入访问。 |
 
-*Pmode*参数始终是必需的，与 **_sopen**中的不同。 指定 **_O_CREAT**时，如果该文件不存在， *pmode*将指定文件的权限设置，该设置将在首次关闭新文件时设置。 否则，将忽略*pmode* 。 *pmode*是一个整数表达式，它包含在 sys\stat.h> 中\<定义的清单常量 **_S_IWRITE**和 **_S_IREAD**。 当给定这两个常量时，将使用按位“或”运算符合并它们。 *Pmode*的含义如下所示。
+*Pmode*参数始终是必需的，与 **_sopen**中的不同。 指定 **_O_CREAT**时，如果该文件不存在， *pmode*将指定文件的权限设置，该设置将在首次关闭新文件时设置。 否则，将忽略*pmode* 。 *pmode*是一个整数表达式，它包含中定义的一个或两个清单常量 **_S_IWRITE**和 **_S_IREAD** \<sys\stat.h> 。 当给定这两个常量时，将使用按位“或”运算符合并它们。 *Pmode*的含义如下所示。
 
 |*pmode*|含义|
 |-|-|
@@ -159,16 +159,16 @@ errno_t _wsopen_s(
 | **_S_IWRITE** | 允许写入。 （实际上，允许读取和写入。） |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
-如果未授予写入权限，则该文件为只读。 在 Windows 操作系统中，所有文件均可读；不可能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD** | **_S_IWRITE**的模式是等效的。
+如果未授予写入权限，则该文件为只读。 在 Windows 操作系统中，所有文件均可读；不可能提供只写权限。 因此， **_S_IWRITE**和 **_S_IREAD**  |  **_S_IWRITE**的模式是等效的。
 
 **_sopen_s**在设置权限之前将当前文件权限掩码应用到*pmode* 。 （请参阅 [_umask](umask.md)。）
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
-|**_sopen_s**|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|
-|**_wsopen_s**|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys/types.h>、\<sys/stat.h>、\<share.h>|
+|**_sopen_s**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
+|**_wsopen_s**|\<io.h> 或 \<wchar.h>|\<fcntl.h>, \<sys/types.h>, \<sys/stat.h>, \<share.h>|
 
 **_sopen_s**和 **_wsopen_s**是 Microsoft 扩展。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

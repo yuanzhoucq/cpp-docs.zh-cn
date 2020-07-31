@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2ef9c879c160d4b27fc51afbdef0e709058bda79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545173"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225678"
 ---
 # <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
 
@@ -476,7 +476,7 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-不能指定简单事件来重写或隐藏基类事件。  必须定义所有事件的访问器函数，然后在每个访问器函数上指定 `new` 或 `override` 关键字。
+不能指定简单事件来重写或隐藏基类事件。  必须定义所有事件的访问器函数，然后 **`new`** `override` 在每个访问器函数上指定或关键字。
 
 ```cpp
 // mcppv2_events5_a.cpp

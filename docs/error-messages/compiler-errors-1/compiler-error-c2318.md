@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2318
 ms.assetid: 169e30b9-df78-46cb-90bf-576ad3c32fd4
-ms.openlocfilehash: 0af0b0e0fbf8894e5f29482a80c05c9ed1ce141d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5f608d0407c24bd01ed7b80dbef873dd30662661
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748081"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221245"
 ---
 # <a name="compiler-error-c2318"></a>编译器错误 C2318
 
 没有与该 catch 处理程序关联的 Try 块
 
-定义一个 `catch` 处理程序，但其前面没有 `try` 块。
+定义了一个 **`catch`** 处理程序，但其前面没有 **`try`** 块。
 
 以下示例生成 C2318：
 

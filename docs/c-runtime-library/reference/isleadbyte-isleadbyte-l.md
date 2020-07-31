@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909548"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234076"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
@@ -68,7 +68,7 @@ int _isleadbyte_l( int c );
 
 如果**isleadbyte**宏的参数是多字节字符的第一个字节，则它返回非零值。 **isleadbyte**为从-1 （**EOF**）到**UCHAR_MAX** （0xff）（含）的任何整数参数生成有意义的结果。
 
-**Isleadbyte**的预期参数类型为**int**;如果传递了带符号的字符，编译器可能会通过符号扩展将其转换为整数，从而产生不可预知的结果。
+**Isleadbyte**的预期参数类型是 **`int`** ; 如果传递了带符号的字符，编译器可能会通过符号扩展将其转换为整数，从而产生不可预知的结果。
 
 带有 **_l**后缀的此函数的版本是相同的，只不过它使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。
 
@@ -82,7 +82,7 @@ int _isleadbyte_l( int c );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|
@@ -92,5 +92,5 @@ int _isleadbyte_l( int c );
 ## <a name="see-also"></a>另请参阅
 
 [字节分类](../../c-runtime-library/byte-classification.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404842"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222753"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
@@ -60,7 +60,7 @@ void StandardMethod() {
 
 - 数据：数据由三个数组组成。 全部具有相同的秩（一）和长度（5）。
 
-- 迭代：第一 `for` 循环提供一种机制来循环访问数组中的元素。 要执行以计算总和的代码包含在第一个 `for` 块中。
+- 迭代：第一 **`for`** 循环提供一种机制来循环访问数组中的元素。 要执行以计算总和的代码包含在第一个 **`for`** 块中。
 
 - Index： `idx` 变量访问数组的各个元素。
 
@@ -225,7 +225,7 @@ for (int i = 0; i < 5; i++)
 
 下表总结了和类之间的相似性和 `array` 差异 `array_view` 。
 
-|说明|array 类|array_view 类|
+|描述|array 类|array_view 类|
 |-----------------|-----------------|-----------------------|
 |确定名次的时间|在编译时。|在编译时。|
 |确定范围时|在运行时。|在运行时。|
@@ -238,7 +238,7 @@ for (int i = 0; i < 5; i++)
 
 共享内存是可以由 CPU 和加速器访问的内存。 使用共享内存可消除或大大降低在 CPU 和加速器之间复制数据的开销。 尽管内存是共享的，但它不能同时由 CPU 和加速器进行访问，这样做会导致未定义的行为。
 
-`array`如果关联的快捷键支持共享内存，则可以使用对象来指定对其使用的精细控制。 加速器是否支持共享内存取决于加速器的[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)属性，如果支持共享内存，该属性将返回**true** 。 如果支持共享内存，则加速器上内存分配的默认[Access_type 枚举](reference/concurrency-namespace-enums-amp.md#access_type)由 `default_cpu_access_type` 属性确定。 默认情况下， `array` 和 `array_view` 对象采用与 `access_type` 主关联的相同的 `accelerator` 。
+`array`如果关联的快捷键支持共享内存，则可以使用对象来指定对其使用的精细控制。 加速器是否支持共享内存由加速器的[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)属性确定，该属性 **`true`** 在支持共享内存时返回。 如果支持共享内存，则加速器上内存分配的默认[Access_type 枚举](reference/concurrency-namespace-enums-amp.md#access_type)由 `default_cpu_access_type` 属性确定。 默认情况下， `array` 和 `array_view` 对象采用与 `access_type` 主关联的相同的 `accelerator` 。
 
 通过显式设置[array：： Cpu_access_type 数据成员](reference/array-class.md#cpu_access_type)属性 `array` ，可以对使用共享内存的方式进行精细的控制，以便可以根据其计算内核的内存访问模式优化应用程序的性能特征。 的 `array_view` 反射与其 `cpu_access_type` 关联的相同 `array` ; 或者，如果 array_view 是在没有数据源的情况下构造的，则其 `access_type` 反映的是第一个导致其分配存储的环境。 也就是说，如果第一次被主机（CPU）访问，则其行为方式就像是通过 CPU 数据源创建的，并共享的是 `access_type` `accelerator_view` 通过捕获关联的; 但是，如果首次访问，则它的 `accelerator_view` 行为就像是在创建的上创建的， `array` `accelerator_view` 并且共享的 `array` `access_type` 。
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>数学库
 
-C++ AMP 包括两个数学库。 [Concurrency：:p Recise_math 命名空间](../../parallel/amp/reference/concurrency-precise-math-namespace.md)中的双精度库为双精度函数提供支持。 它还提供对单精度函数的支持，但仍需要对硬件进行双精度支持。 它符合[C99 规范（ISO/IEC 9899）](https://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必须支持完全双精度。 您可以通过检查 "[快捷键：： supports_double_precision" 数据成员](reference/accelerator-class.md#supports_double_precision)的值来确定它是否执行此操作。 [Concurrency：： Fast_math 命名空间](../../parallel/amp/reference/concurrency-fast-math-namespace.md)中的快速数学库包含另一组数学函数。 这些函数仅支持 `float` 操作数，执行速度更快，但不会精确到双精度数学库中的函数。 函数包含在 \<amp_math.h> 标头文件中，所有都是用进行声明的 `restrict(amp)` 。 \<cmath>标头文件中的函数将导入 `fast_math` 和 `precise_math` 命名空间。 **Restrict**关键字用于区分 \<cmath> 版本和 C++ AMP 版本。 下面的代码使用 fast 方法计算计算域中每个值的以10为底的对数。
+C++ AMP 包括两个数学库。 [Concurrency：:p Recise_math 命名空间](../../parallel/amp/reference/concurrency-precise-math-namespace.md)中的双精度库为双精度函数提供支持。 它还提供对单精度函数的支持，但仍需要对硬件进行双精度支持。 它符合[C99 规范（ISO/IEC 9899）](https://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必须支持完全双精度。 您可以通过检查 "[快捷键：： supports_double_precision" 数据成员](reference/accelerator-class.md#supports_double_precision)的值来确定它是否执行此操作。 [Concurrency：： Fast_math 命名空间](../../parallel/amp/reference/concurrency-fast-math-namespace.md)中的快速数学库包含另一组数学函数。 这些函数仅支持 **`float`** 操作数，执行速度更快，但不会精确到双精度数学库中的函数。 函数包含在 \<amp_math.h> 标头文件中，所有都是用进行声明的 `restrict(amp)` 。 \<cmath>标头文件中的函数将导入 `fast_math` 和 `precise_math` 命名空间。 **`restrict`** 关键字用于区分 \<cmath> 版本和 C++ AMP 版本。 下面的代码使用 fast 方法计算计算域中每个值的以10为底的对数。
 
 ```cpp
 #include <amp.h>
@@ -465,7 +465,7 @@ C++ AMP 包含为加速图形编程而设计的图形库。 此库仅在支持�
 
 - [Writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)：提供对任何纹理的只写访问权限。
 
-- Short 矢量库：定义一组基于**int**、 `uint` 、 **float**、 **double**、int64 或[unorm](../../parallel/amp/reference/unorm-class.md)的长度为2、3和4的短矢量类型[norm](../../parallel/amp/reference/norm-class.md)。
+- Short 矢量库：定义一组基于 **`int`** 、 `uint` 、 **`float`** 、 **`double`** 、[标准](../../parallel/amp/reference/norm-class.md)或[unorm](../../parallel/amp/reference/unorm-class.md)的长度为2、3和4的短矢量类型。
 
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用
 

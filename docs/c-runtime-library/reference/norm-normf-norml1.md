@@ -33,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951322"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234050"
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml1
 
@@ -68,7 +68,7 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**标准**重载，并返回**float**或**long double**值。 在 C 程序中，"**标准**" 始终采用 **_Dcomplex**值并返回一个**双精度**值。
+由于 c + + 允许重载，因此你可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**标准**重载，以及返回值 **`float`** 或 **`long double`** 值。 在 C 程序中，"**标准**" 始终采用 **_Dcomplex**值并返回 **`double`** 值。
 
 ## <a name="requirements"></a>要求
 
@@ -76,11 +76,11 @@ long double norm( _Lcomplex z );  // C++ only
 |-------------|--------------|------------------|
 |**标准**、 **normf**、 **norml**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**类型分别是特定于 Microsoft 的本机 C99 类型的等效项： **float _Complex**、 **double _Complex**和**long double _Complex**。  有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**类型是特定于 Microsoft 的等效项，它们分别是未实现的本机 C99 类型**float _Complex**、 **double _Complex**和**long double _Complex**。  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [creal、crealf、creall](creal-crealf-creall.md)<br/>
 [cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj、conjf、conjl](conj-conjf-conjl.md)<br/>

@@ -18,37 +18,37 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 61a5983eec13902ed4b0e397e3befca4860977d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5a7263ae5cac81508ab2450a530132879ed45b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222818"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控件的对话框数据交换函数
 
-本主题列出了用于在对话框、窗体视图或控件视图对象中的 OLE 控件的属性与对话框、窗体视图或控件视图对象的数据成员之间交换数据的DDX_OC函数。
+本主题列出了用于在对话框、窗体视图或控件视图对象的属性与对话框、窗体视图或控件视图对象的数据成员之间交换数据的 DDX_OC 函数。
 
-### <a name="ddx_oc-functions"></a>DDX_OC功能
+### <a name="ddx_oc-functions"></a>DDX_OC 函数
 
 |||
 |-|-|
-|[DDX_OCBool](#ddx_ocbool)|管理**BOOL**数据在 OLE 控件的属性和**BOOL**数据成员之间的传输。|
-|[DDX_OCBoolRO](#ddx_ocboolro)|管理**BOOL**数据在 OLE 控件的只读属性和**BOOL**数据成员之间的传输。|
-|[DDX_OCColor](#ddx_occolor)|管理**OLE_COLOR**数据在 OLE 控件的属性和**OLE_COLOR**数据成员之间的传输。|
-|[DDX_OCColorRO](#ddx_occolorro)|管理**OLE_COLOR**的 OLE 控件的只读属性和**OLE_COLOR**数据成员之间的传输。|
-|[DDX_OCFloat](#ddx_ocfloat)|管理 OLE 控件的属性和**浮点**（或**双**精度）数据成员之间的**浮点**（或**双精度**）数据传输。|
-|[DDX_OCFloatRO](#ddx_ocfloatro)|管理 OLE 控件的只读属性和**浮点**（或**双****精度**）数据成员之间的**浮点**（或双精度）数据传输。|
-|[DDX_OCInt](#ddx_ocint)|管理在 OLE 控件的属性和**long** **int（** 或长）数据成员之间传输**int（** 或**长**） 数据。|
-|[DDX_OCIntRO](#ddx_ocintro)|管理在 OLE 控件的只**long**读属性和**int（** 或长）数据成员之间传输**int（** 或**长**） 数据。|
-|[DDX_OCShort](#ddx_ocshort)|管理 OLE 控件的属性和**短**数据成员之间的**短**数据传输。|
-|[DDX_OCShortRO](#ddx_ocshortro)|管理 OLE 控件的只读属性和**短**数据成员之间的**短**数据传输。|
-|[DDX_OCText](#ddx_octext)|管理在 OLE 控件的属性和**CString**数据成员之间传输**CString**数据。|
-|[DDX_OCTextRO](#ddx_octextro)|管理在 OLE 控件的只读属性和**CString**数据成员之间传输**CString**数据。|
+|[DDX_OCBool](#ddx_ocbool)|管理 OLE 控件的属性和**bool**数据成员之间的**布尔**数据传输。|
+|[DDX_OCBoolRO](#ddx_ocboolro)|管理在 OLE 控件和**bool**数据成员的只读属性之间传输的**布尔**数据。|
+|[DDX_OCColor](#ddx_occolor)|管理 OLE 控件的属性和**OLE_COLOR**数据成员之间**OLE_COLOR**数据的传输。|
+|[DDX_OCColorRO](#ddx_occolorro)|管理 OLE 控件的只读属性与**OLE_COLOR**数据成员之间**OLE_COLOR**数据的传输。|
+|[DDX_OCFloat](#ddx_ocfloat)|管理 **`float`** **`double`** OLE 控件的属性和 **`float`** （或 **`double`** ）数据成员之间的数据传输（或）。|
+|[DDX_OCFloatRO](#ddx_ocfloatro)|管理 **`float`** **`double`** OLE 控件的只读属性与 **`float`** （或 **`double`** ）数据成员之间的数据传输（或）。|
+|[DDX_OCInt](#ddx_ocint)|管理 **`int`** **`long`** OLE 控件的属性和 **`int`** （或 **`long`** ）数据成员之间的数据传输（或）。|
+|[DDX_OCIntRO](#ddx_ocintro)|管理 **`int`** **`long`** OLE 控件的只读属性与 **`int`** （或 **`long`** ）数据成员之间的数据传输（或）。|
+|[DDX_OCShort](#ddx_ocshort)|管理 **`short`** OLE 控件的属性和数据成员之间的数据传输 **`short`** 。|
+|[DDX_OCShortRO](#ddx_ocshortro)|管理 **`short`** OLE 控件的只读属性与数据成员之间的数据传输 **`short`** 。|
+|[DDX_OCText](#ddx_octext)|管理 OLE 控件的属性和**cstring**数据成员之间**CString**数据的传输。|
+|[DDX_OCTextRO](#ddx_octextro)|管理在 OLE 控件和**CString**数据成员的只读属性之间传输**CString**数据的情况。|
 
 ## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool
 
-该`DDX_OCBool`函数管理**在**对话框、窗体视图或控件视图对象中的 OLE 控件的属性与对话框、窗体视图或控件视图对象的**BOOL**数据成员之间的传输。
+`DDX_OCBool`函数管理对话框、窗体视图或控件视图对象中 OLE 控件的属性与对话框、窗体视图或控件视图对象的**布尔**数据成员之间的**bool**数据传输。
 
 ```cpp
 void AFXAPI DDX_OCBool(
@@ -66,7 +66,7 @@ void AFXAPI DDX_OCBool(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -82,7 +82,7 @@ void AFXAPI DDX_OCBool(
 
 ## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO
 
-该`DDX_OCBoolRO`函数管理**在**对话框、窗体视图或控件视图对象中的 OLE 控件的只读属性和对话框、窗体视图或控件视图对象的**BOOL**数据成员之间的传输。
+`DDX_OCBoolRO`函数管理对话框、窗体视图或控件视图对象中 OLE 控件的只读属性与对话框、窗体视图或控件视图对象的**布尔**数据成员之间的**布尔**数据的传输。
 
 ```cpp
 void AFXAPI DDX_OCBoolRO(
@@ -100,7 +100,7 @@ void AFXAPI DDX_OCBoolRO(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -112,11 +112,11 @@ void AFXAPI DDX_OCBoolRO(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_occolor"></a><a name="ddx_occolor"></a>DDX_OCColor
 
-该`DDX_OCColor`函数管理在对话框、窗体视图或控件视图对象中的 OLE 控件的属性与对话框、窗体视图或控件视图对象的OLE_COLOR数据成员之间的传输OLE_COLOR数据。
+`DDX_OCColor`函数管理对话框、窗体视图或控件视图对象中 OLE 控件的属性与对话框、窗体视图或控件视图对象 OLE_COLOR 数据成员之间 OLE_COLOR 数据的传输。
 
 ```cpp
 void AFXAPI DDX_OCColor(
@@ -134,7 +134,7 @@ void AFXAPI DDX_OCColor(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -146,11 +146,11 @@ void AFXAPI DDX_OCColor(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO
 
-该`DDX_OCColorRO`函数管理在对话框、窗体视图或控件视图对象的仅读属性和对话框、窗体视图或控件视图对象的OLE_COLOR数据成员之间的传输OLE_COLOR数据。
+`DDX_OCColorRO`函数管理对话框、窗体视图或控件视图对象中 OLE 控件的只读属性与对话框、窗体视图或控件视图对象 OLE_COLOR 数据成员之间 OLE_COLOR 数据的传输。
 
 ```cpp
 void AFXAPI DDX_OCColorRO(
@@ -168,7 +168,7 @@ void AFXAPI DDX_OCColorRO(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -180,11 +180,11 @@ void AFXAPI DDX_OCColorRO(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat
 
-该`DDX_OCFloat`函数管理在对话框、窗体视图或控件视图对象的 OLE 控件的属性和对话框、窗体视图或控件视图对象的**浮点**（或**双**）数据成员之间的**浮动**（或**双**）数据之间的传输。
+`DDX_OCFloat`函数管理 **`float`** **`double`** 对话框、窗体视图或控件视图对象中 OLE 控件的属性与 **`float`** **`double`** 对话框、窗体视图或控件视图对象的（或）数据成员之间的数据传输。
 
 ```cpp
 void AFXAPI DDX_OCFloat(
@@ -208,7 +208,7 @@ void AFXAPI DDX_OCFloat(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -220,11 +220,11 @@ void AFXAPI DDX_OCFloat(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO
 
-该`DDX_OCFloatRO`函数管理在对话框、窗体视图或控件视图对象中的 OLE 控件的只读属性和对话框、窗体视图或控件视图对象的**浮点**（或**双**）数据成员之间的**浮动**（或**双**）数据之间的传输。
+`DDX_OCFloatRO`函数管理 **`float`** **`double`** 对话框、窗体视图或控件视图对象中 OLE 控件的只读属性与 **`float`** **`double`** 对话框、窗体视图或控件视图对象的（或）数据成员之间的数据传输。
 
 ```cpp
 void AFXAPI DDX_OCFloatRO(
@@ -248,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -260,11 +260,11 @@ void AFXAPI DDX_OCFloatRO(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_ocint"></a><a name="ddx_ocint"></a>DDX_OCInt
 
-该`DDX_OCInt`函数管理在对话框、窗体视图或控件视图对象中的 OLE 控件的属性与对话框、窗体视图或控件视图对象的**int（** 或**长**）数据成员之间的**int（** 或**长**） 数据之间的传输。
+`DDX_OCInt`函数管理 **`int`** **`long`** 对话框、窗体视图或控件视图对象中 OLE 控件的属性与 **`int`** **`long`** 对话框、窗体视图或控件视图对象的（或）数据成员之间的数据传输。
 
 ```cpp
 void AFXAPI DDX_OCInt(
@@ -288,7 +288,7 @@ void AFXAPI DDX_OCInt(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -300,11 +300,11 @@ void AFXAPI DDX_OCInt(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO
 
-该`DDX_OCIntRO`函数管理在对话框、窗体视图或控件视图对象中的 OLE 控件的只读属性和对话框、窗体视图或控件视图对象的**int（** 或**长**）数据成员之间的**int（** 或**长**） 数据的传输。
+`DDX_OCIntRO`函数管理 **`int`** **`long`** 对话框、窗体视图或控件视图对象中 OLE 控件的只读属性与 **`int`** **`long`** 对话框、窗体视图或控件视图对象的（或）数据成员之间的数据传输。
 
 ```cpp
 void AFXAPI DDX_OCIntRO(
@@ -328,7 +328,7 @@ void AFXAPI DDX_OCIntRO(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -340,11 +340,11 @@ void AFXAPI DDX_OCIntRO(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort
 
-该`DDX_OCShort`函数管理在对话框、窗体视图或控件视图对象中的 OLE 控件的属性与对话框、窗体视图或控件视图对象的短数据成员之间的短数据传输。
+`DDX_OCShort`函数管理对话框、窗体视图或控件视图对象中 OLE 控件的属性与对话框、窗体视图或控件视图对象的简短数据成员之间的短数据传输。
 
 ```cpp
 void AFXAPI DDX_OCShort(
@@ -362,7 +362,7 @@ void AFXAPI DDX_OCShort(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -374,11 +374,11 @@ void AFXAPI DDX_OCShort(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO
 
-该`DDX_OCShortRO`函数管理在对话框、窗体视图或控件视图对象中的 OLE 控件的只读属性和对话框、窗体视图或控件视图对象的短数据成员之间的短数据传输。
+`DDX_OCShortRO`函数管理对话框、窗体视图或控件视图对象中 OLE 控件的只读属性与对话框、窗体视图或控件视图对象的简短数据成员之间的短数据传输。
 
 ```cpp
 void AFXAPI DDX_OCShortRO(
@@ -396,7 +396,7 @@ void AFXAPI DDX_OCShortRO(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -408,11 +408,11 @@ void AFXAPI DDX_OCShortRO(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_octext"></a><a name="ddx_octext"></a>DDX_OCText
 
-**DDX_OCText**函数管理**在**对话框、窗体视图或控件视图对象中的 OLE 控件的属性与对话框、窗体视图或控件视图对象的 CString 数据成员之间的**CString**数据传输。
+**DDX_OCText**函数管理对话框、窗体视图或控件视图对象中 OLE 控件的属性与对话框、窗体视图或控件视图对象的**CString**数据成员之间的**cstring**数据的传输。
 
 ```cpp
 void AFXAPI DDX_OCText(
@@ -430,7 +430,7 @@ void AFXAPI DDX_OCText(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -442,7 +442,7 @@ void AFXAPI DDX_OCText(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="ddx_octextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO
 
@@ -464,7 +464,7 @@ void AFXAPI DDX_OCTextRO(
 *nIDC*<br/>
 对话框、窗体视图或控件视图对象中 OLE 控件的 ID。
 
-*不一部分*<br/>
+*dispid*<br/>
 该控件的属性的调度 ID。
 
 *value*<br/>
@@ -476,7 +476,7 @@ void AFXAPI DDX_OCTextRO(
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdisp.h
+  **标头**afxdisp.h&gt
 
 ## <a name="see-also"></a>另请参阅
 

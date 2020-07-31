@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404933"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213263"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 可将限制说明符应用于函数和 lambda 声明。 它会强制对函数中的代码以及使用 C++ Accelerated Massive Parallelism (C++ AMP) 运行时的应用程序中的函数的行为实施限制。
 
 > [!NOTE]
-> 有关 **__declspec**存储类属性中的**restrict**关键字的详细信息，请参阅[restrict](../cpp/restrict.md)。
+> 有关 **`restrict`** 属于存储类特性的关键字的信息 **`__declspec`** ，请参阅[restrict](../cpp/restrict.md)。
 
-**Restrict**子句采用以下形式：
+**`restrict`** 子句采用以下形式：
 
 |子句|说明|
 |------------|-----------------|
@@ -31,7 +31,7 @@ ms.locfileid: "86404933"
 
 ## <a name="remarks"></a>备注
 
-**Restrict**关键字是上下文关键字。 限制说明符、`cpu` 和 `amp` 不是保留字。 说明符列表不可扩展。 没有**restrict**子句的函数与具有子句的函数相同 `restrict(cpu)` 。
+**`restrict`** 关键字为上下文关键字。 限制说明符、`cpu` 和 `amp` 不是保留字。 说明符列表不可扩展。 没有子句的函数与 **`restrict`** 具有子句的函数相同 `restrict(cpu)` 。
 
 包含 `restrict(amp)` 子句的函数具有以下限制：
 
@@ -39,7 +39,7 @@ ms.locfileid: "86404933"
 
 - 函数必须可内联。
 
-- 函数只能声明**int**、**无符号 int**、 **float**和**double**变量以及仅包含这些类型的类和结构。 还允许使用**bool** ，但如果在复合类型中使用，则它必须为4字节对齐。
+- 函数只能声明 **`int`** 、 **`unsigned int`** 、 **`float`** 和 **`double`** 变量，以及仅包含这些类型的类和结构。 **`bool`** 也是允许的，但如果将其用于复合类型，则它必须与4字节对齐。
 
 - Lambda 函数无法通过引用捕获，并且无法捕获指针。
 
@@ -61,19 +61,19 @@ ms.locfileid: "86404933"
 
   - 指向指针的指针。
 
-  - **goto**语句。
+  - **`goto`** 前瞻性.
 
   - Labeled 语句。
 
-  - 请**尝试**、**捕获**或**抛**出语句。
+  - **`try`**、 **`catch`** 或 **`throw`** 语句。
 
   - 全局变量。
 
   - 静态变量。 请改用[Tile_static 关键字](../cpp/tile-static-keyword.md)。
 
-  - **dynamic_cast**强制转换。
+  - **`dynamic_cast`** 强制.
 
-  - **Typeid**运算符。
+  - **`typeid`** 运算符。
 
   - asm 声明。
 

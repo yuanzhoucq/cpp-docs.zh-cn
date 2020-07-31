@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 68dbd0b5b2e9d4fc04821a7e7e0193840b55e312
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6b1ab2e8e93fda194532fbc8d6f484aaa91249d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077130"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212964"
 ---
 # <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper 函数
 
-验证指定参数的类型是否派生自 `IUnknown` 接口。
+验证指定参数的类型是否从 `IUnknown` 接口派生。
 
 > [!IMPORTANT]
 > 此模板专用化支持 WRL 基础结构，不应在代码中直接使用。 改用[IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) 。
@@ -30,7 +30,7 @@ void** IID_PPV_ARGS_Helper(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
 自变量*pp*的类型。
@@ -40,11 +40,11 @@ void** IID_PPV_ARGS_Helper(
 
 ## <a name="return-value"></a>返回值
 
-参数*pp*强制转换为指向**void**的指针到指针。
+自变量*pp*强制转换为指向的指针的指针 **`void`** 。
 
 ## <a name="remarks"></a>备注
 
-如果模板参数*T*不是派生自 `IUnknown`，则会生成编译时错误。
+如果模板参数*T*不是从派生的，则会生成编译时错误 `IUnknown` 。
 
 ## <a name="requirements"></a>要求
 

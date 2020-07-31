@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f9746ecb41e873fb1d929a939c78f1817dc0e2f9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220270"
 ---
 # <a name="compiler-error-c2663"></a>编译器错误 C2663
 
 "function"：数字重载没有 "this" 指针的合法转换
 
-编译器无法将 `this` 转换为成员函数的任何重载版本。
+编译器无法转换 **`this`** 为成员函数的任何重载版本。
 
-此错误的原因可能是对 `const` 对象调用了非`const` 成员函数。  可能的解决方法：
+此错误可能是由于调用对象上的非 **`const`** 成员函数导致的 **`const`** 。  可能的解决方法：
 
-1. 从对象声明中删除 `const`。
+1. **`const`** 从对象声明中移除。
 
-1. 将 `const` 添加到其中一个成员函数重载。
+1. 添加 **`const`** 到成员函数重载之一。
 
 下面的示例生成 C2663：
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
-ms.openlocfilehash: 03fc7e9da8a9b3a2e2c445f5b06395c2616f0d98
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a632d6a47afb29b8bb46761c3188391905eda842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755429"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206869"
 ---
 # <a name="compiler-error-c2581"></a>编译器错误 C2581
 
 "type"：静态 "operator =" 函数是非法的
 
-赋值（`=`）运算符错误地声明为 `static`。 不能 `static`赋值运算符。 有关详细信息，请参阅[用户定义的运算符C++（/cli）](../../dotnet/user-defined-operators-cpp-cli.md)。
+赋值（ `=` ）运算符错误地声明为 **`static`** 。 赋值运算符不能为 **`static`** 。 有关详细信息，请参阅[用户定义的运算符（c + +/cli）](../../dotnet/user-defined-operators-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

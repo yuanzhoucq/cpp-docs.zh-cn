@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919611"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232646"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -73,7 +73,7 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-使用 c + + 时，可以调用**asinh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **asinh**始终采用并返回**double**。
+使用 c + + 时，可以调用采用并返回或值的**asinh**的重载 **`float`** **`long double`** 。 在 C 程序中， **asinh**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -81,7 +81,7 @@ long double asinh( long double x );  // C++ only
 
 |函数|必需的 C 标头|必需的 C++ 标头|
 |--------------|--------------|------------------|
-|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<h> 或\<math<|
+|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<cmath>或 \<<|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

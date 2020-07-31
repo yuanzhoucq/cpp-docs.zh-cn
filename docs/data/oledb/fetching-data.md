@@ -1,5 +1,5 @@
 ---
-title: 获取数据
+title: 提取数据
 ms.date: 10/19/2018
 helpviewer_keywords:
 - data [C++], fetching
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 441f036d1677806e81bc419ec6a45e810e63a34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409054"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184639"
 ---
-# <a name="fetching-data"></a>获取数据
+# <a name="fetching-data"></a>提取数据
 
-打开数据源、 会话和行集对象后，可以提取数据。 具体取决于正在使用的访问器的类型，可能需要将列绑定。
+打开数据源、会话和行集对象之后，就可以提取数据了。 可能需要绑定列，具体取决于所使用的访问器类型。
 
-## <a name="to-fetch-data"></a>若要提取的数据
+## <a name="to-fetch-data"></a>提取数据
 
-1. 打开使用相应的行集**打开**命令。
+1. 使用适当的 "**打开**" 命令打开行集。
 
-1. 如果您使用的`CManualAccessor`，绑定的输出列，如果尚未这样做。 下面的示例取自[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)示例。 若要绑定的列，调用`GetColumnInfo`，，然后使用绑定创建取值函数，如下面的示例中所示：
+1. 如果你使用 `CManualAccessor` 的是，请绑定输出列（如果尚未这样做）。 下面的示例摘自[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)示例。 若要绑定列，请调用 `GetColumnInfo` ，然后使用绑定创建访问器，如以下示例中所示：
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -39,7 +39,7 @@ ms.locfileid: "62409054"
     rs.Bind();
     ```
 
-1. 编写**虽然**循环，以检索数据。 在循环中，调用`MoveNext`前进游标和测试，则为 S_OK，针对返回的值，如下面的示例中所示：
+1. 编写 **`while`** 循环以检索数据。 在循环中，调用 `MoveNext` 以使游标前进并针对 S_OK 测试返回值，如下面的示例中所示：
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -49,9 +49,9 @@ ms.locfileid: "62409054"
     }
     ```
 
-1. 内**虽然**循环中，您可以根据你访问器的类型获取数据。
+1. 在 **`while`** 循环中，可以根据访问器类型提取数据。
 
-   - 如果您使用[CAccessor](../../data/oledb/caccessor-class.md)类，您应该具有一个包含数据成员的用户记录。 可以访问使用这些数据成员，您的数据，如下面的示例中所示：
+   - 如果使用[CAccessor](../../data/oledb/caccessor-class.md)类，则应具有包含数据成员的用户记录。 您可以使用这些数据成员访问数据，如以下示例中所示：
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -63,7 +63,7 @@ ms.locfileid: "62409054"
         }
         ```
 
-   - 如果您使用`CDynamicAccessor`或`CDynamicParameterAccessor`类，就可以通过使用访问函数获取数据`GetValue`和`GetColumn`，如以下示例所示。 如果你想要确定的数据类型使用，请使用`GetType`。
+   - 如果使用 `CDynamicAccessor` 或 `CDynamicParameterAccessor` 类，则可以通过使用访问函数和来提取数据 `GetValue` `GetColumn` ，如下面的示例中所示。 如果要确定所使用的数据类型，请使用 `GetType` 。
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -78,7 +78,7 @@ ms.locfileid: "62409054"
         }
         ```
 
-   - 如果使用`CManualAccessor`，必须指定您自己的数据成员，将其绑定自己，并直接访问它们，如下面的示例中所示：
+   - 如果你使用 `CManualAccessor` ，则必须指定你自己的数据成员、自行绑定并直接访问这些成员，如以下示例中所示：
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -90,6 +90,6 @@ ms.locfileid: "62409054"
         }
         ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

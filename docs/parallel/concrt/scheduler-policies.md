@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: 0f90b461ecba702501c2f6919572dc828c80907f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d074646a333090138c916bc4d3b7a2e072731b3d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142286"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228409"
 ---
 # <a name="scheduler-policies"></a>计划程序策略
 
@@ -20,7 +20,7 @@ ms.locfileid: "77142286"
 > [!TIP]
 > 并发运行时提供默认计划程序。 因此，不必在应用程序中创建计划程序。 由于任务计划程序有助于微调应用程序的性能，因此，如果你不熟悉并发运行时，则建议你从[并行模式库（PPL）](../../parallel/concrt/parallel-patterns-library-ppl.md)或[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)开始。
 
-使用[concurrency：： CurrentScheduler：： create](reference/currentscheduler-class.md#create)、 [Concurrency：：调度](reference/scheduler-class.md#create)器：： create 或[concurrency：： SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)方法创建计划程序实例时，需要提供[concurrency：： SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md)对象，该对象包含指定计划程序行为的键值对的集合。 `SchedulerPolicy` 构造函数采用可变数量的参数。 第一个参数是要指定的策略元素的数目。 其余的参数是每个策略元素的键值对。 下面的示例创建一个 `SchedulerPolicy` 对象，该对象指定三个策略元素。 运行时对未指定的策略键使用默认值。
+使用[concurrency：： CurrentScheduler：： create](reference/currentscheduler-class.md#create)、 [Concurrency：：调度](reference/scheduler-class.md#create)器：： create 或[concurrency：： SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)方法创建计划程序实例时，需要提供[concurrency：： SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md)对象，该对象包含指定计划程序行为的键值对的集合。 `SchedulerPolicy`构造函数采用可变数量的参数。 第一个参数是要指定的策略元素的数目。 其余的参数是每个策略元素的键值对。 下面的示例创建一个 `SchedulerPolicy` 对象，该对象指定三个策略元素。 运行时对未指定的策略键使用默认值。
 
 [!code-cpp[concrt-scheduler-policy#2](../../parallel/concrt/codesnippet/cpp/scheduler-policies_1.cpp)]
 
@@ -29,16 +29,16 @@ ms.locfileid: "77142286"
 |策略密钥|说明|默认值|
 |----------------|-----------------|-------------------|
 |`SchedulerKind`|[Concurrency：： SchedulerType](reference/concurrency-namespace-enums.md#schedulertype)值，指定用于计划任务的线程类型。|`ThreadScheduler`（使用正常线程）。 这是此键的唯一有效值。|
-|`MaxConcurrency`|一个 `unsigned int` 值，该值指定计划程序使用的最大并发资源数。|[concurrency：： MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
-|`MinConcurrency`|一个 `unsigned int` 值，该值指定计划程序使用的最小并发资源数。|`1`|
-|`TargetOversubscriptionFactor`|一个 `unsigned int` 值，该值指定要分配给每个处理资源的线程数。|`1`|
-|`LocalContextCacheSize`|一个 `unsigned int` 值，该值指定可以在每个虚拟处理器的本地队列中缓存的最大上下文数。|`8`|
-|`ContextStackSize`|一个 `unsigned int` 值，该值指定要为每个上下文保留的堆栈大小（以 kb 为单位）。|`0` （使用默认堆栈大小）|
-|`ContextPriority`|一个 `int` 值，该值指定每个上下文的线程优先级。 这可以是可传递给[参见 setthreadpriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)或 `INHERIT_THREAD_PRIORITY`的任何值。|`THREAD_PRIORITY_NORMAL`|
+|`MaxConcurrency`|一个 **`unsigned int`** 值，该值指定计划程序使用的并发资源的最大数量。|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
+|`MinConcurrency`|一个 **`unsigned int`** 值，该值指定计划程序使用的最小并发资源数。|`1`|
+|`TargetOversubscriptionFactor`|一个 **`unsigned int`** 值，该值指定要分配给每个处理资源的线程数。|`1`|
+|`LocalContextCacheSize`|一个 **`unsigned int`** 值，该值指定可以在每个虚拟处理器的本地队列中缓存的最大上下文数。|`8`|
+|`ContextStackSize`|一个 **`unsigned int`** 值，该值指定要为每个上下文保留的堆栈的大小（以 kb 为单位）。|`0`（使用默认堆栈大小）|
+|`ContextPriority`|一个 **`int`** 值，该值指定每个上下文的线程优先级。 这可以是可传递给[参见 setthreadpriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)或的任何值 `INHERIT_THREAD_PRIORITY` 。|`THREAD_PRIORITY_NORMAL`|
 
-|`SchedulingProtocol`|一个[concurrency：： SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype)值，该值指定要使用的计划算法。 |`EnhanceScheduleGroupLocality`| |`DynamicProgressFeedback`|[Concurrency：:D ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype)值，该值指定是否根据基于统计信息的进度信息重新平衡资源。<br /><br /> **注意**请勿将此策略设置为 "`ProgressFeedbackDisabled`"，因为它是保留供运行时使用的。 |`ProgressFeedbackEnabled`|
+|`SchedulingProtocol`|一个[concurrency：： SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype)值，该值指定要使用的计划算法。 | `EnhanceScheduleGroupLocality` ||`DynamicProgressFeedback`|[Concurrency：:D ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype)值，该值指定是否根据基于统计信息的进度信息重新平衡资源。<br /><br /> **注意**不要将此策略设置为， `ProgressFeedbackDisabled` 因为它是保留供运行时使用的。 |`ProgressFeedbackEnabled`|
 
-每个计划程序在计划任务时使用其自己的策略。 与一个计划程序关联的策略不影响任何其他计划程序的行为。 此外，创建 `Scheduler` 对象后，将无法更改计划程序策略。
+每个计划程序在计划任务时使用其自己的策略。 与一个计划程序关联的策略不影响任何其他计划程序的行为。 此外，在创建对象后，将无法更改计划程序策略 `Scheduler` 。
 
 > [!IMPORTANT]
 > 仅使用计划程序策略来控制运行时创建的线程的属性。 不要更改线程关联或运行时创建的线程的优先级，因为这可能会导致未定义的行为。

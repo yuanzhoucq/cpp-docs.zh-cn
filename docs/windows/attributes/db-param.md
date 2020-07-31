@@ -1,21 +1,21 @@
 ---
-title: db_param (C++ COM 属性)
+title: db_param （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32dcceae1e4e4fbc730101381eda84b5350ffd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215304"
 ---
-# <a name="dbparam"></a>db_param
+# <a name="db_param"></a>db_param
 
-指定的成员变量相关联的输入或输出参数和分隔变量。
+将指定的成员变量与输入或输出参数关联，并将变量分隔。
 
 ## <a name="syntax"></a>语法
 
@@ -25,48 +25,48 @@ ms.locfileid: "62148089"
 
 ### <a name="parameters"></a>参数
 
-*ordinal*<br/>
-列对应的编号 （DBCOLUMNINFO 序号） 到要将数据绑定到行集中的字段。
+*序号*<br/>
+与行集中要将数据绑定到的字段相对应的列号（DBCOLUMNINFO 序数）。
 
 *paramtype*<br/>
-（可选）要为参数设置的类型。 提供程序仅支持参数 I/O 类型所支持的基础数据源。 类型为一个或多个 DBPARAMIOENUM 值的组合：
+可有可无要为参数设置的类型。 提供程序仅支持基础数据源支持的参数 i/o 类型。 该类型是一个或多个 DBPARAMIOENUM 值的组合：
 
 - DBPARAMIO_INPUT 输入参数。
 
 - DBPARAMIO_OUTPUT 输出参数。
 
-- DBPARAMIO_NOTPARAM 访问器没有任何参数。 设置`eParamIO`为行中此值的访问器提醒用户参数将被忽略。
+- DBPARAMIO_NOTPARAM 访问器没有参数。 如果 `eParamIO` 在行访问器中将此值设置为此值，则将提醒用户忽略参数。
 
 *dbtype*<br/>
-（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251(v=vs.85))列条目。
+可有可无列项的 OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251(v=vs.85))。
 
-*precision*<br/>
-（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
+*精度*<br/>
+可有可无要用于列项的精度。 有关详细信息，请参阅 `bPrecision` [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))的元素说明
 
 *scale*<br/>
-（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))
+可有可无要用于列项的刻度。 有关详细信息，请参阅 `bScale` [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))的元素说明
 
 *status*<br/>
-（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))中*OLE DB 程序员参考*。
+可有可无用于保存此列的状态的成员变量。 状态指示列值是否为数据值或其他值（如 NULL）。 有关可能的值，请参阅*OLE DB 程序员参考*中的[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))。
 
 *length*<br/>
-（可选）成员变量，用来保存的列的大小以字节为单位。
+可有可无一个成员变量，用于保存列的大小（以字节为单位）。
 
 ## <a name="remarks"></a>备注
 
-**db_param**定义的参数，在命令中使用; 因此可以将它与`db_command`。 例如，可以使用**db_param**绑定中的 SQL 查询或存储的过程的参数。 由问号 （？），表示存储过程中的参数，并应将数据成员绑定参数的显示顺序。
+**db_param**定义在命令中使用的参数;因此，可将它用于 `db_command` 。 例如，可以使用**db_param**来绑定 SQL 查询或存储过程中的参数。 存储过程中的参数由问号（？）表示，您应按照参数出现的顺序来绑定数据成员。
 
-**db_param**分隔可以参与在 OLE DB 中的成员数据`ICommandWithParameters`-基于绑定。 它设置参数类型 （输入或输出）、 OLE DB 类型、 精度、 小数位数、 状态和为指定的参数的长度。 此属性将插入的 OLE DB 使用者宏 BEGIN_PARAM_MAP...END_PARAM_MAP. 您会使用标记每个成员**db_param**属性将占用 COLUMN_ENTRY 窗体中的映射中的一个条目。
+**db_param**分隔可参与基于 OLE DB 的绑定的成员数据 `ICommandWithParameters` 。 它设置指定参数的参数类型（输入或输出）、OLE DB 类型、精度、小数位数、状态和长度。 此属性将 OLE DB 使用者宏插入 BEGIN_PARAM_MAP .。。END_PARAM_MAP。 使用**db_param**特性标记的每个成员都将在映射中以 COLUMN_ENTRY 的形式占用一个条目。
 
-**db_param**与可以结合使用[db_table](db-table.md)或[db_command](db-command.md)属性。
+**db_param**与[db_table](db-table.md)或[db_command](db-command.md)特性结合使用。
 
-编译器时使用者特性提供程序适用于类，此属性，将重命名为类\_ *YourClassName*访问器，其中*名为 YourClassName*是您为指定的名称类和编译器还将创建一个名为类*名为 YourClassName*，它派生\_*名为 YourClassName*访问器。  将在类视图中看到这两个类。
+当使用者特性提供程序将此特性应用于类时，编译器会将类重命名为 \_ *YourClassName*访问器，其中*YourClassName*是您赋予类的名称，并且编译器还将创建一个名为*YourClassName*的类，该类派生自 \_ *YourClassName*访问器。  将在类视图中看到这两个类。
 
 ## <a name="example"></a>示例
 
-以下示例创建基于 Northwind 数据库中的 SalesbyYear 存储过程的命令类。 它将关联的存储过程的第一个参数`m_RETURN_VALUE`变量，并将其定义为 output 参数。 它将使用最后两个 （输入） 参数相关联`m_Beginning_Date`和`m_Ending_Date`。
+下面的示例基于 Northwind 数据库中的 SalesbyYear 存储过程创建一个 command 类。 它将存储过程中的第一个参数与变量相关联 `m_RETURN_VALUE` ，并将其定义为输出参数。 它将最后两个（输入）参数与 `m_Beginning_Date` 和相关联 `m_Ending_Date` 。
 
-下面的示例关联`nOutput`使用输出参数变量。
+下面的示例将 `nOutput` 变量与 output 参数相关联。
 
 ```cpp
 // db_param.cpp
@@ -108,13 +108,13 @@ struct CSalesbyYear {
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**，成员、 方法、 本地|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**`class`**、 **`struct`** 、成员、方法、本地|
+|**且**|否|
+|**必需属性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[OLE DB 使用者特性](ole-db-consumer-attributes.md)
+[OLE DB 使用者属性](ole-db-consumer-attributes.md)

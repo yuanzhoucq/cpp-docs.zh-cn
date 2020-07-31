@@ -57,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 81c272187c681010e7b8560d43f2fad87e1e0fdc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910126"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221895"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -132,7 +132,7 @@ int _fstat64i32(
 
 这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀（**32**或**64**）表示所用时间类型的大小;第二个后缀是**i32**或**i64**，指示文件大小是否表示为32位或64位整数。
 
-**_fstat**等效于 **_fstat64i32**，而**struct** **_stat**包含64位时间。 除非定义 **_USE_32BIT_TIME_T** ，这种情况下旧行为有效;**_fstat**使用32位时间，**结构** **_stat**包含32位时间。 **_Fstati64**也是如此。
+**_fstat**等效于 **_fstat64i32**， **`struct`** **_stat**包含64位时间。 除非定义 **_USE_32BIT_TIME_T** ，这种情况下旧行为有效;**_fstat**使用32位时间， **`struct`** **_stat**包含32位时间。 **_Fstati64**也是如此。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

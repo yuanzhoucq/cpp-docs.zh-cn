@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_cast keyword [C++]
 ms.assetid: 4d8bb203-ef33-4a10-9f9f-c64d4fbc1687
-ms.openlocfilehash: d2711142e4aa73cc0119949876e7e593067cd45d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36de296d1e871ca759108497922973ddea8e3382
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180337"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227551"
 ---
 # <a name="const_cast-operator"></a>const_cast 运算符
 
-从类中移除**const**、 **volatile**和 **__unaligned**特性。
+**`const`** **`volatile`** **`__unaligned`** 从类中移除、和特性。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ const_cast <type-id> (expression)
 
 ## <a name="remarks"></a>备注
 
-指向任何对象类型的指针或指向数据成员的指针可以显式转换为完全相同的类型，该类型除了**const**、 **volatile**和 **__unaligned**限定符。 对于指针和引用，结果将引用原始对象。 对于指向数据成员的指针，结果将引用与指向数据成员的原始（未强制转换）的指针相同的成员。 根据引用对象的类型，通过生成的指针、引用或指向数据成员的指针的写入操作可能产生未定义的行为。
+指向任何对象类型的指针或指向数据成员的指针可以显式转换为完全相同的类型 **`const`** （、 **`volatile`** 和限定符除外） **`__unaligned`** 。 对于指针和引用，结果将引用原始对象。 对于指向数据成员的指针，结果将引用与指向数据成员的原始（未强制转换）的指针相同的成员。 根据引用对象的类型，通过生成的指针、引用或指向数据成员的指针的写入操作可能产生未定义的行为。
 
-不能使用**const_cast**运算符直接重写常量变量的常量状态。
+不能使用 **`const_cast`** 运算符直接重写常量变量的常量状态。
 
-**Const_cast**运算符将 null 指针值转换为目标类型的 null 指针值。
+**`const_cast`** 运算符将 null 指针值转换为目标类型的 null 指针值。
 
 ## <a name="example"></a>示例
 
@@ -62,9 +62,9 @@ int main() {
 }
 ```
 
-在包含**const_cast**的行上，**此**指针的数据类型为 `const CCTest *`。 **Const_cast**运算符将**this**指针的数据类型更改为 `CCTest *`，从而允许修改成员 `number`。 强制转换仅对其所在的语句中的其余部分持续。
+在包含的行上 **`const_cast`** ，指针的数据类型 **`this`** 为 `const CCTest *` 。 **`const_cast`** 运算符将指针的数据类型更改 **`this`** 为 `CCTest *` ，从而允许修改该成员 `number` 。 强制转换仅对其所在的语句中的其余部分持续。
 
 ## <a name="see-also"></a>另请参阅
 
-[强制转换运算符](../cpp/casting-operators.md)<br/>
+[转换运算符](../cpp/casting-operators.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

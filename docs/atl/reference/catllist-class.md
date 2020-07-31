@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 15830a30e8236a13f3911d1b84d3727d3246fc0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168041"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226667"
 ---
 # <a name="catllist-class"></a>CAtlList 类
 
@@ -80,7 +80,7 @@ class CAtlList
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
 |[CAtlList::AddHead](#addhead)|调用此方法可将元素添加到列表的开头。|
 |[CAtlList::AddHeadList](#addheadlist)|调用此方法可将现有列表添加到列表的开头。|
@@ -115,7 +115,7 @@ class CAtlList
 
 `CAtlList`类支持按顺序或值访问的不唯一对象的有序列表。 `CAtlList`列表的行为类似于双重链接列表。 每个列表都有一个头和尾部，新元素（或在某些情况下为列表）可以添加到列表的任意一端，或插入到特定元素的前面或后面。
 
-大多数`CAtlList`方法使用位置值。 方法使用此值来引用存储元素的实际内存位置，而不应直接计算或预测元素。 如果需要访问列表中的第*n*个元素，则方法[CAtlList：： FindIndex](#findindex)将返回给定索引的相应位置值。 方法[CAtlList：： GetNext](#getnext)和[CAtlList：： GetPrev](#getprev)可用于循环访问列表中的对象。
+大多数 `CAtlList` 方法使用位置值。 方法使用此值来引用存储元素的实际内存位置，而不应直接计算或预测元素。 如果需要访问列表中的第*n*个元素，则方法[CAtlList：： FindIndex](#findindex)将返回给定索引的相应位置值。 方法[CAtlList：： GetNext](#getnext)和[CAtlList：： GetPrev](#getprev)可用于循环访问列表中的对象。
 
 有关 ATL 提供的集合类的详细信息，请参阅[Atl Collection 类](../../atl/atl-collection-classes.md)。
 
@@ -248,7 +248,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>备注
 
-`CAtlList`对象的构造函数。 块大小是在需要新元素时分配的内存量的度量值。 较大的块大小可减少对内存分配例程的调用，但会占用更多资源。
+对象的构造函数 `CAtlList` 。 块大小是在需要新元素时分配的内存量的度量值。 较大的块大小可减少对内存分配例程的调用，但会占用更多资源。
 
 ### <a name="example"></a>示例
 
@@ -266,7 +266,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 释放所有已分配的资源，包括对[CAtlList：： RemoveAll](#removeall)的调用，以从列表中删除所有元素。
 
-在调试版本中，如果列表在调用后仍包含某些元素，则会发生断言失败`RemoveAll`。
+在调试版本中，如果列表在调用后仍包含某些元素，则会发生断言失败 `RemoveAll` 。
 
 ## <a name="catllistfind"></a><a name="find"></a>CAtlList：： Find
 
@@ -343,9 +343,9 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="remarks"></a>备注
 
-如果列表是**const**， `GetAt`则返回该元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
+如果列表为 **`const`** ，则 `GetAt` 返回元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
 
-如果列表不是**常量**， `GetAt`则返回对元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
+如果列表不为 **`const`** ，则 `GetAt` 返回对元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
 
 在调试版本中，如果*pos*等于 NULL，则将发生断言失败。
 
@@ -384,9 +384,9 @@ const E& GetHead() const throw();
 
 ### <a name="remarks"></a>备注
 
-如果列表是**const**， `GetHead`则返回列表头中的元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
+如果列表为 **`const`** ，则 `GetHead` 返回该列表头中的元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
 
-如果列表不是**常量**， `GetHead`则返回对列表开头的元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
+如果列表不为 **`const`** ，则 `GetHead` 返回对列表开头的元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
 
 在调试版本中，如果列表的开头指向 NULL，则将发生断言失败。
 
@@ -426,13 +426,13 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="parameters"></a>参数
 
 *位置*<br/>
-一个位置值，由先前对的调用`GetNext`、 [CAtlList：： GetHeadPosition](#getheadposition)或其他`CAtlList`方法返回。
+一个位置值，由先前对的调用 `GetNext` 、 [CAtlList：： GetHeadPosition](#getheadposition)或其他方法返回 `CAtlList` 。
 
 ### <a name="return-value"></a>返回值
 
-如果列表为**const**， `GetNext`则返回列表中下一个元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
+如果列表为 **`const`** ，则 `GetNext` 返回列表中下一个元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
 
-如果列表不是**常量**， `GetNext`则返回对列表中下一个元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
+如果列表不为 **`const`** ，则 `GetNext` 返回对列表中下一个元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
 
 ### <a name="remarks"></a>备注
 
@@ -454,13 +454,13 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="parameters"></a>参数
 
 *位置*<br/>
-一个位置值，由先前对的调用`GetPrev`、 [CAtlList：： GetTailPosition](#gettailposition)或其他`CAtlList`方法返回。
+一个位置值，由先前对的调用 `GetPrev` 、 [CAtlList：： GetTailPosition](#gettailposition)或其他方法返回 `CAtlList` 。
 
 ### <a name="return-value"></a>返回值
 
-如果列表为**const**， `GetPrev`则返回列表中元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
+如果列表为 **`const`** ，则 `GetPrev` 返回列表中元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
 
-如果列表不是**常量**， `GetPrev`则返回对列表中元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
+如果列表不为 **`const`** ，则 `GetPrev` 返回对列表中元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
 
 ### <a name="remarks"></a>备注
 
@@ -485,9 +485,9 @@ const E& GetTail() const throw();
 
 ### <a name="remarks"></a>备注
 
-如果列表是**const**， `GetTail`则返回列表头中的元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
+如果列表为 **`const`** ，则 `GetTail` 返回该列表头中的元素的副本。 这允许方法仅用于赋值语句右侧，并保护列表不被修改。
 
-如果列表不是**常量**， `GetTail`则返回对列表开头的元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
+如果列表不为 **`const`** ，则 `GetTail` 返回对列表开头的元素的引用。 这允许在赋值语句的两侧使用方法，从而允许修改列表项。
 
 在调试版本中，如果列表的尾部指向 NULL，则将发生断言失败。
 
@@ -668,7 +668,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="remarks"></a>备注
 
-删除*pos*引用的元素，并释放内存。 可以使用`RemoveAt`删除列表的开头或结尾。
+删除*pos*引用的元素，并释放内存。 可以使用 `RemoveAt` 删除列表的开头或结尾。
 
 在调试版本中，如果列表无效，或者如果删除元素导致列表访问不属于列表结构的内存，则断言失败。
 

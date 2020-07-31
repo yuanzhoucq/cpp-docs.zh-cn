@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 243c75f4726927c54989c33c1738e38938aa5f64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221674"
 ---
 # <a name="deprecated-c"></a>已弃用 (C++)
 
-本主题介绍了特定于 Microsoft 的不推荐使用的 declspec 声明。 有关 c + + 14 `[[deprecated]]` 属性的信息，以及有关何时使用该属性与特定于 Microsoft 的 declspec 或杂注的指导，请参阅[ C++标准属性](attributes.md)。
+本主题介绍了特定于 Microsoft 的不推荐使用的 declspec 声明。 有关 c + + 14 属性的信息 `[[deprecated]]` ，以及有关何时使用该属性与特定于 Microsoft 的 declspec 或杂注的指导，请参阅[c + + 标准属性](attributes.md)。
 
-除了下面所述的异常，不**推荐**使用的声明提供与[弃用](../preprocessor/deprecated-c-cpp.md)的杂注相同的功能：
+除了下面所述的异常， **`deprecated`** 声明提供了与[弃用](../preprocessor/deprecated-c-cpp.md)的杂注相同的功能：
 
-- 不**推荐使用**的声明允许您将特定形式的函数重载指定为弃用，而杂注窗体适用于函数名称的所有重载形式。
+- **`deprecated`** 声明允许您将特定形式的函数重载指定为弃用，而杂注窗体适用于函数名称的所有重载形式。
 
-- 不**推荐使用**的声明可指定将在编译时显示的消息。 该消息的文本可以来自宏。
+- **`deprecated`** 声明允许指定在编译时将显示的消息。 该消息的文本可以来自宏。
 
-- 只有不**推荐**使用的杂注才能将宏标记为已弃用。
+- 只能使用杂注将宏标记为已弃用 **`deprecated`** 。
 
-如果编译器遇到不推荐使用的标识符或标准[`[[deprecated]]`](attributes.md)属性，则会引发[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告。
+如果编译器遇到不推荐使用的标识符或标准 [`[[deprecated]]`](attributes.md) 属性，则会引发[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告。
 
 ## <a name="example"></a>示例
 

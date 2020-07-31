@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919867"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232568"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
@@ -89,7 +89,7 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都返回通过将输入字符解释为数字而产生的**int**值。 如果输入不能转换为该类型的值，则**atoi**和 **_wtoi**的返回值为0。
+每个函数都返回 **`int`** 通过将输入字符解释为数字而生成的值。 如果输入不能转换为该类型的值，则**atoi**和 **_wtoi**的返回值为0。
 
 对于具有大量负整数值的溢出，将返回**LONG_MIN** 。 **atoi**和 **_wtoi**返回这些条件**INT_MAX**和**INT_MIN** 。 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
@@ -173,7 +173,7 @@ Overflow condition occurred.
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

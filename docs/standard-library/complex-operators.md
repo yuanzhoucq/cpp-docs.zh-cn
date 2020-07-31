@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 325e194e9cc5b597ae010477ecbe313be11b179a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423965"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222584"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试两个复数是否不相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。
 
@@ -45,17 +45,17 @@ bool operator!=(
     const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 将测试其不等性的复数或与复数的参数类型相同的对象。
 
-*right*\
+*然后*\
 将测试其不等性的复数或与复数的参数类型相同的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果数字不相等，则为 **true**；如果数字相等，则为 **false**。
+**`true`** 如果数字不相等，则为;**`false`** 如果数字相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -163,7 +163,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a> 运算符\*
+## <a name="operator"></a><a name="op_star"></a>操作员\*
 
 将两个复数相乘，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。
 
@@ -184,13 +184,13 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
-两个复数的第一个，或者是复数的参数类型的数字，该复数将乘以 \* 运算。
+*左中*\
+两个复数的第一个，或者是要与操作相乘的复数的参数类型 \* 。
 
-*right*\
-两个复数的第二个或一个数字，它是要与 \* 运算相乘的复数的参数类型。
+*然后*\
+两个复数的第二个或一个数字，它是要与运算相乘的复数的参数类型 \* 。
 
 ### <a name="return-value"></a>返回值
 
@@ -260,7 +260,7 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a>operator +
 
 将两个复数相加，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。
 
@@ -284,12 +284,12 @@ template <class Type>
 complex<Type> operator+(const complex<Type>& left);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个复数的第一个数或属于复数参数类型的数通过 + 运算相加。
 
-*right*\
+*然后*\
 两个复数的第二个数或属于复数参数类型的数通过 + 运算相加。
 
 ### <a name="return-value"></a>返回值
@@ -400,7 +400,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a>操作员
+## <a name="operator-"></a><a name="operator-"></a>操作员
 
 将两个复数相减，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。
 
@@ -424,12 +424,12 @@ template <class Type>
 complex<Type> operator-(const complex<Type>& left);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 两个复数的第一个数或属于复数参数类型的数通过 - 运算相减。
 
-*right*\
+*然后*\
 两个复数的第二个数或属于复数参数类型的数通过 - 运算相减。
 
 ### <a name="return-value"></a>返回值
@@ -542,7 +542,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a>操作员
+## <a name="operator"></a><a name="op_div"></a>操作员
 
 将两个复数相除，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。
 
@@ -563,12 +563,12 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 复数或属于复数参数类型的数通过 / 运算用分子除以分母。
 
-*right*\
+*然后*\
 复数或属于复数参数类型的数通过 / 运算用分子除以分母。
 
 ### <a name="return-value"></a>返回值
@@ -662,7 +662,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
 
 向输出流插入指定的复数。
 
@@ -673,12 +673,12 @@ basic_ostream<Elem, Traits>& operator<<(
     const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Ostr*\
 要输入到输出流的复数。
 
-*right*\
+*然后*\
 要输入到输出流的复数。
 
 ### <a name="return-value"></a>返回值
@@ -724,7 +724,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试两个复数是否相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。
 
@@ -745,17 +745,17 @@ bool operator==(
     const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 将测试其不等性的复数或与复数的参数类型相同的对象。
 
-*right*\
+*然后*\
 将测试其不等性的复数或与复数的参数类型相同的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果数字相等，则为 **true**；如果数字不相等，则为 **false**。
+**`true`** 如果数字相等，则为;**`false`** 如果数字不相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -863,7 +863,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a>操作员&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>操作员&gt;&gt;
 
 从输入流提取一个复值。
 
@@ -874,12 +874,12 @@ basic_istream<Elem, Traits>& operator>>(
    complex<Type>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Istr*\
 要从中提取复数的输入流。
 
-*right*\
+*然后*\
 正在从输入流提取的复数。
 
 ### <a name="return-value"></a>返回值

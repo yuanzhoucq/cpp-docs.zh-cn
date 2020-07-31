@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: 0ac34fbaf4cbb54583394dff5b8645fe56b8b9cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9d3875fdc17def1e7d3bcb72149c5faf90f656a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199040"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220049"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>编译器警告（等级3） C4101
 
@@ -27,7 +27,7 @@ int i;   // C4101
 }
 ```
 
-但是，当通过类的实例调用**静态**成员函数时，也会出现此警告：
+但是，当 **`static`** 通过类的实例调用成员函数时，也会出现此警告：
 
 ```cpp
 // C4101b.cpp
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-在这种情况下，编译器使用有关 `si` 的信息来访问**静态**函数，但不需要类的实例来调用**静态**函数;因此会出现警告。 若要解决此警告，可以执行以下操作：
+在这种情况下，编译器使用有关 `si` 的信息来访问 **`static`** 函数，但不需要类的实例来调用 **`static`** 函数; 因此会出现警告。 若要解决此警告，可以执行以下操作：
 
-- 添加一个构造函数，在此构造函数中，编译器将在调用 `func`时使用的实例 `si`。
+- 添加一个构造函数，在此构造函数中，编译器将在调用时使用的实例 `si` `func` 。
 
-- 从 `func`的定义中删除**static**关键字。
+- **`static`** 从的定义中删除关键字 `func` 。
 
-- 显式调用**静态**函数： `int y = S::func();`。
+- 显式调用 **`static`** 函数： `int y = S::func();` 。

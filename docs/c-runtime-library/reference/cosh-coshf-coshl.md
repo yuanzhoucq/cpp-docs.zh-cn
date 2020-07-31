@@ -33,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917230"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213601"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
@@ -71,17 +71,17 @@ long double cosh( long double x );  // C++ only
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± **QNAN**， **IND**|无|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**不精确**+**溢出**|**超出**|
+|*x* ≥ 7.104760 e + 002|不**精确** +**溢出**|**超出**|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用**cosh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **cosh**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此可以调用**cosh**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **cosh**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**coshf**、 **cosl**、 **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
 

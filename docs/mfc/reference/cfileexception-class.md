@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813517"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212444"
 ---
 # <a name="cfileexception-class"></a>CFileException 类
 
@@ -45,7 +45,7 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CFileException：： CFileException](#cfileexception)|构造 `CFileException` 对象。|
 
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CFileException：： m_cause](#m_cause)|包含与异常原因相对应的可移植代码。|
 |[CFileException：： m_lOsError](#m_loserror)|包含相关的操作系统错误号。|
@@ -185,7 +185,7 @@ int m_cause;
 
 ### <a name="remarks"></a>备注
 
-此数据成员是**int**类型的公共变量。枚举器及其含义如下：
+此数据成员是类型的公共变量 **`int`** 。 枚举器及其含义如下所示：
 
 | 错误 | 值和含义 |
 |--|--|
@@ -296,7 +296,7 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

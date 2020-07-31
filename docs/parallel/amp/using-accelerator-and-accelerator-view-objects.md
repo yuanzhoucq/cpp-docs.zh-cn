@@ -2,12 +2,12 @@
 title: 使用 accelerator 和 accelerator_view 对象
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: e3fed4dc2a431b751d4ad50484e32b738e786d10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404172"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215889"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>使用 accelerator 和 accelerator_view 对象
 
@@ -94,7 +94,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>Shared Memory
 
-共享内存是可以由 CPU 和加速器访问的内存。 使用共享内存可消除或大大降低在 CPU 和加速器之间复制数据的开销。 尽管内存是共享的，但它不能同时由 CPU 和加速器进行访问，这样做会导致未定义的行为。 如果快捷键支持共享内存，则该快捷键属性[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)将返回**true** ，而[default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)属性将获取分配的内存的默认[access_type](reference/concurrency-namespace-enums-amp.md#access_type) ， `accelerator` 例如，与中的关联的**数组** `accelerator` `array_view` `accelerator` 。
+共享内存是可以由 CPU 和加速器访问的内存。 使用共享内存可消除或大大降低在 CPU 和加速器之间复制数据的开销。 尽管内存是共享的，但它不能同时由 CPU 和加速器进行访问，这样做会导致未定义的行为。 [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) **`true`** 如果快捷键支持共享内存，则 supports_cpu_shared_memory 返回快捷键属性，而[default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)属性将获取分配的内存的默认[access_type](reference/concurrency-namespace-enums-amp.md#access_type) ， `accelerator` 例如与关联的**数组** `accelerator` ，或中 `array_view` 访问的对象 `accelerator` 。
 
 默认情况下，C++ AMP 运行时自动选择每个的最佳默认值 `access_type` `accelerator` ，但共享内存的性能特征（带宽和延迟）在从 cpu 读取、从 cpu 写入或两者时可能比专用（非共享）加速器内存更糟。 如果共享内存执行以及用于从 CPU 进行读取和写入的专用内存，则运行时默认为 `access_type_read_write` ; 否则，运行时将选择一个更保守的默认值 `access_type` ，并允许应用程序在其计算内核的内存访问模式受益于其他时进行重写 `access_type` 。
 
@@ -131,7 +131,7 @@ int main()
 
 ## <a name="changing-the-default-accelerator"></a>更改默认快捷键
 
-可以通过调用方法来更改默认快捷键 `accelerator::set_default` 。 你只能在每次应用程序执行时更改默认快捷键一次，并且你必须在 GPU 上执行任何代码之前对其进行更改。 任何用于更改加速器的后续函数调用都将返回**false**。 如果要在调用中使用其他加速器 `parallel_for_each` ，请参阅本文中的 "使用多个加速器" 一节。 下面的代码示例将默认快捷键设置为一个未模拟、未连接到显示器并支持双精度的快捷键。
+可以通过调用方法来更改默认快捷键 `accelerator::set_default` 。 你只能在每次应用程序执行时更改默认快捷键一次，并且你必须在 GPU 上执行任何代码之前对其进行更改。 任何后续函数调用以更改快捷键的返回 **`false`** 。 如果要在调用中使用其他加速器 `parallel_for_each` ，请参阅本文中的 "使用多个加速器" 一节。 下面的代码示例将默认快捷键设置为一个未模拟、未连接到显示器并支持双精度的快捷键。
 
 ```cpp
 bool pick_accelerator()

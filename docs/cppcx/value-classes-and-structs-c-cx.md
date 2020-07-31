@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214940"
 ---
 # <a name="value-classes-and-structs-ccx"></a>值类和结构 (C++/CX)
 
-*值结构*或*值类*是 Windows 运行时兼容 POD（"普通旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。
+*值结构*或*值类*是与 Windows 运行时兼容的 POD （"纯旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。
 
 下面的示例演示如何声明和初始化值结构。
 
@@ -48,17 +48,17 @@ ms.locfileid: "81752893"
     ts3.str = "Another way to init a value struct.";
 ```
 
-将一个值类型的变量分配给另一个变量时，该值被复制，因此，两个变量均有自己的数据副本。 ** 值结构是一种具有固定大小的结构，它只包含公共数据字段并使用 `value struct` 关键字来声明。
+将一个值类型的变量分配给另一个变量时，该值被复制，因此，两个变量均有自己的数据副本。 *值结构*是固定大小的结构，它只包含公共数据字段并使用关键字进行声明 **`value struct`** 。
 
-** 值类则类似于 `value struct` ，只不过必须为其字段显式给定公共可访问性。 使用 `value class` 关键字来声明它。
+*值类*与类似，只是 **`value struct`** 必须将其字段显式赋予公共可访问性。 它使用关键字进行声明 **`value class`** 。
 
-值结构或值类只能包含基本数值类型、`Platform::String^`枚举类或[Platform：iBox \<T>=](../cppcx/platform-ibox-interface.md)其中 T 是数值类型或枚举类或值类或结构。 `IBox<T>^` 字段的值可以是 `nullptr`，这是 C++ 实现 **“可以为 null 的值类型”概念的方式。
+值结构或值类只能作为字段包含基本数值类型、枚举类、 `Platform::String^` 或[Platform：： \<T> ^ IBox](../cppcx/platform-ibox-interface.md) ，其中 T 是数值类型或枚举类或值类或结构。 `IBox<T>^`字段的值可以是 **`nullptr`** ，这是 c + + 实现 "可以*为 null 的值类型*" 概念的方式。
 
 将 `Platform::String^` 或 `IBox<T>^` 类型作为成员包含在内的值类型或结构不支持 `memcpy`。
 
-由于 `value class` 或 `value struct` 的所有成员都是公共成员并且将发送到元数据中，因此不允许标准 C++ 类型。 这与 ref 类不同，ref 类可包含 `private` 或 `internal` 标准 C++ 类型。
+由于或的所有成员 **`value class`** **`value struct`** 都是公共成员并且将发送到元数据中，因此不允许标准 c + + 类型作为成员。 这与 ref 类不同，后者可能包含 **`private`** 或 **`internal`** 标准 c + + 类型。
 
-下面的代码片段声明 `Coordinates` 和 `City` 类型为值结构。 请注意，其中一个 `City` 数据成员是 `GeoCoordinates` 类型。 一个 `value struct` 可以包含其他值结构作为成员。
+下面的代码片段声明 `Coordinates` 和 `City` 类型为值结构。 请注意，其中一个 `City` 数据成员是 `GeoCoordinates` 类型。 **`value struct`** 可以包含其他值结构作为成员。
 
 [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]
 
@@ -90,7 +90,7 @@ Method2(ref obj);
 
 ## <a name="nullable-value-types"></a>可以为 null 的值类型
 
-如前所述，值类或值结构可以具有类型为[Platform：：iBox\<T>=](../cppcx/platform-ibox-interface.md)的字段，例如 。 `IBox<int>^` 此类字段的值可以是对 `int` 类型有效的任何数值，也可以是 `nullptr`。 对于可以为 null 的字段，可将其作为实参传递给已将形参声明为可选参数的方法，或传递到值类型不必具有值的任何其他地方。
+如前所述，值类或值结构可具有[Platform：： \<T> ^ IBox](../cppcx/platform-ibox-interface.md)类型的字段，例如 `IBox<int>^` 。 此类字段可以具有对该类型有效的任何数值 **`int`** ，也可以具有值 **`nullptr`** 。 对于可以为 null 的字段，可将其作为实参传递给已将形参声明为可选参数的方法，或传递到值类型不必具有值的任何其他地方。
 
 下面的示例演示如何初始化具有可以为 null 的字段的结构。
 
@@ -147,9 +147,9 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类型系统 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[命名空间参考](../cppcx/namespaces-reference-c-cx.md)<br/>
+[C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[命名空间引用](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Ref 类和结构 (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

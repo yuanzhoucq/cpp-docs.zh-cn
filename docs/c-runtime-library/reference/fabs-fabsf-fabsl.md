@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920243"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234115"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -83,7 +83,7 @@ long double fabsl(
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此，如果包含**fabs** \<h> 标头，则可以调用 fabs 的重载。 在 C 程序中， **fabs**始终采用并返回**双精度型**。
+C + + 允许重载，因此，如果包含标头，则可以调用**fabs**的重载 \<cmath> 。 在 C 程序中， **fabs**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

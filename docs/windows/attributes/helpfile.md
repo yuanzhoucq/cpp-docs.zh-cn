@@ -1,17 +1,17 @@
 ---
-title: 帮助帮助C++ （COM 特性）
+title: 帮助帮助（c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166973"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222116"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -23,14 +23,14 @@ ms.locfileid: "80166973"
 [ helpfile("filename") ]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *filename*<br/>
 包含帮助主题的文件的名称。
 
 ## <a name="remarks"></a>备注
 
-"**帮助** C++程序" 属性与 "[帮助](/windows/win32/Midl/helpfile)台 MIDL" 属性具有相同的功能。
+"**帮助**程序" c + + 属性与 "[帮助](/windows/win32/Midl/helpfile)台 MIDL" 特性具有相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -42,9 +42,9 @@ ms.locfileid: "80166973"
 
 |||
 |-|-|
-|**适用对象**|**接口**、 **typedef**、**类**、方法、**属性**|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**interface**、 **`typedef`** ， **`class`** 、method、**`property`**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

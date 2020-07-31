@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 6b487c0f94a00ec64e0c2178265c5a8c27544a51
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761551"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228786"
 ---
 # <a name="compiler-error-c3535"></a>编译器错误 C3535
 
 无法从 "type2" 推导 "type1" 的类型
 
-不能从初始化表达式的类型推导 `auto` 关键字声明的变量的类型。 例如，如果初始化表达式的计算结果为 `void`（不是类型），则会发生此错误。
+**`auto`** 不能从初始化表达式的类型推导出由关键字声明的变量的类型。 例如，如果初始化表达式的计算结果为而 **`void`** 不是类型，则会发生此错误。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
-1. 确保不 `void`初始化表达式的类型。
+1. 确保初始化表达式的类型不是 **`void`** 。
 
 1. 确保声明不是指向基本类型的指针。 有关详细信息，请参阅[基本类型](../../cpp/fundamental-types-cpp.md)。
 
@@ -29,7 +29,7 @@ ms.locfileid: "74761551"
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3535，因为初始化表达式的计算结果为 `void`。
+下面的示例生成 C3535，因为初始化表达式的计算结果为 **`void`** 。
 
 ```cpp
 // C3535a.cpp
@@ -44,7 +44,7 @@ int main()
 
 ## <a name="example"></a>示例
 
-下面的示例将生成 C3535，因为该语句将变量声明 `x` 为指向推导出的类型的指针，而初始值设定项表达式的类型为 double。 因此，编译器无法推导出变量的类型。
+下面的示例生成 C3535，因为该语句将变量声明 `x` 为指向推导出的类型的指针，而初始值设定项表达式的类型为 double。 因此，编译器无法推导出变量的类型。
 
 ```cpp
 // C3535b.cpp
@@ -58,7 +58,7 @@ int main()
 
 ## <a name="example"></a>示例
 
-下面的示例将生成 C3535，因为变量 `p` 声明指向推导出的类型的指针，但初始化表达式不是指针类型。
+下面的示例生成 C3535，因为变量 `p` 声明指向推导出的类型的指针，但初始化表达式不是指针类型。
 
 ```cpp
 // C3535c.cpp
@@ -68,7 +68,7 @@ A x;
 auto *p = x;  // C3535
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [auto 关键字](../../cpp/auto-keyword.md)<br/>
 [基本类型](../../cpp/fundamental-types-cpp.md)

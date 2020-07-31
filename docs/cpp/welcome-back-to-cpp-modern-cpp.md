@@ -1,17 +1,17 @@
-﻿---
-title: 欢迎回到 c + +-新式 c + +
+---
+title: 欢迎回到 C++ - 现代 C++
 description: 介绍新式 c + + 中的新编程惯例及其原理。
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 76ac17e71368cdeee669b98505778838ef0dfee7
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550792"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232191"
 ---
-# <a name="welcome-back-to-c---modern-c"></a>欢迎回到 c + +-新式 c + +
+# <a name="welcome-back-to-c---modern-c"></a>欢迎回到 C++ - 现代 C++
 
 自创建后，c + + 已成为世界上最广泛使用的编程语言之一。 正确编写的 C++ 程序快速、高效。 语言比其他语言更加灵活：它可以在最高的抽象级别上运行，并在硅级别下运行。 C + + 提供高度优化的标准库。 它支持访问低级别硬件功能，最大限度地提高速度并最大程度地减少内存需求。 使用 c + +，可以创建各种应用。 游戏、设备驱动程序和高性能科学软件。 嵌入的程序。 Windows 客户端应用程序。 甚至其他编程语言的库和编译器都是用 c + + 编写的。
 
@@ -115,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>基于范围的 `for` 循环
 
-数组和容器上的 C 样式迭代容易导致索引错误，而且键入单调乏味。 若要消除这些错误，并使代码更具可读性，请将基于范围的 `for` 循环用于标准库容器和原始阵列。 有关详细信息，请参阅[基于范围的 `for` 语句](../cpp/range-based-for-statement-cpp.md)。
+数组和容器上的 C 样式迭代容易导致索引错误，而且键入单调乏味。 若要消除这些错误，并使代码更具可读性，请将基于范围的 **`for`** 循环用于标准库容器和原始阵列。 有关详细信息，请参阅[基于范围的 `for` 语句](../cpp/range-based-for-statement-cpp.md)。
 
 ```cpp
 #include <iostream>
@@ -200,7 +200,7 @@ int main()
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-Lambda 表达式 `[=](int i) { return i > x && i < y; }` 可以读取为 "函数，该函数采用类型的单个自变量 `int` ，并返回一个布尔值，指示该参数是否大于 `x` 且小于 `y` 。" 请注意， `x` `y` 可在 lambda 中使用来自周围上下文的变量和。 `[=]`指定这些变量是通过值*捕获*的; 换言之，lambda 表达式具有其自己的这些值的副本。
+Lambda 表达式 `[=](int i) { return i > x && i < y; }` 可以读取为 "函数，该函数采用类型的单个自变量 **`int`** ，并返回一个布尔值，指示该参数是否大于 `x` 且小于 `y` 。" 请注意， `x` `y` 可在 lambda 中使用来自周围上下文的变量和。 `[=]`指定这些变量是通过值*捕获*的; 换言之，lambda 表达式具有其自己的这些值的副本。
 
 ## <a name="exceptions"></a>例外
 
@@ -214,9 +214,9 @@ Lambda 表达式 `[=](int i) { return i > x && i < y; }` 可以读取为 "函数
 
 联合通常在 C 样式编程中使用，以通过使不同类型的成员占用相同的内存位置来节省内存。 但是，联合不是类型安全的，很容易出错。 C + + 17 引入了 [`std::variant`](../standard-library/variant-class.md) 类，作为联合的更可靠、更安全的替代方法。 [`std::visit`](../standard-library/variant-functions.md#visit)函数可用于以 `variant` 类型安全的方式访问类型的成员。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C + + 语言参考](../cpp/cpp-language-reference.md)\
+[C++ 语言参考](../cpp/cpp-language-reference.md)\
 [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)\
-[C + + 标准库](../standard-library/cpp-standard-library-reference.md)\
-[Microsoft c + + 语言一致性表](../overview/visual-cpp-language-conformance.md)
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)\
+[Microsoft C++ 语言一致性表](../overview/visual-cpp-language-conformance.md)

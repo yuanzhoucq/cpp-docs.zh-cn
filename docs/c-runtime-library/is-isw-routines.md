@@ -19,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8292f04fb8771b8270b6f8e2be3ca2f044f6c9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940180"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189774"
 ---
 # <a name="is-isw-routines"></a>is、isw 例程
 
@@ -35,7 +35,7 @@ ms.locfileid: "70940180"
 |[isascii、__isascii、iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower、iswlower、_islower_l、_iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|
 |[isblank、iswblank、_isblank_l、_iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint、iswprint、_isprint_l、_iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|
 |[iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct、iswpunct、_ispunct_l、_iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|
-|[iscsym、iscsymf、__iscsym、\___iswcsym、\___iscsymf、\___iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace、iswspace、_isspace_l、_iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
+|[iscsym、iscsymf、__iscsym、 \_ _iswcsym、 \_ _iscsymf、 \_ _iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace、iswspace、_isspace_l、_iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
 |[_isctype、iswctype、_isctype_l、_iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper、_isupper_l、iswupper、_iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit、iswdigit、_isdigit_l、_iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
@@ -43,12 +43,12 @@ ms.locfileid: "70940180"
 
 特定条件下的例程测试字符。
 
-对于从 -1 (`EOF`) 到 **UCHAR_MAX** (0xFF)（含）的任何整数参数，**is** 例程都将产生有意义的结果。 参数类型应为 `int`。
+对于从 -1 (`EOF`) 到 **UCHAR_MAX** (0xFF)（含）的任何整数参数，**is** 例程都将产生有意义的结果。 预期的参数类型为 **`int`** 。
 
 > [!CAUTION]
-> 对于 **is** 例程，传递 `char` 参数类型可能会产生不可预测的结果。 如果类型为 `char` 的 SBCS 或 MBCS 单字节字符的值大于 0x7F，则该值为负值。 如果传递了 `char`，编译器可能会将该值转换为带符号的 `int` 或带符号的 **long**。 该值可能由编译器进行符号扩展，产生意外的结果。
+> 对于**is**例程，传递类型的参数 **`char`** 可能会产生不可预知的结果。 类型为的 SBCS 或 MBCS 单字节字符的 **`char`** 值大于0x7f，为负数。 如果 **`char`** 传递了，编译器可能会将值转换为 **`signed int`** 或 **`signed long`** 。 该值可能由编译器进行符号扩展，产生意外的结果。
 
-对于从 -1 (**WEOF**) 到 0xFFFF（含）的任何整数值，**isw** 例程都会产生有意义的结果。 **wint_t** 数据类型在 WCHAR.H 中定义为 **unsigned short**；它可以保存任何宽字符或宽字符文件尾 (**WEOF**) 值。
+对于从 -1 (**WEOF**) 到 0xFFFF（含）的任何整数值，**isw** 例程都会产生有意义的结果。 **Wint_t**数据类型是在 WCHAR 中定义的。H 作为 **`unsigned short`** ; 它可以保留任何宽字符或宽字符文件结尾（**WEOF**）值。
 
 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。
 

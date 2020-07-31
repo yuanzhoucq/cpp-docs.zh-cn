@@ -84,16 +84,16 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: 1e5994faab69c1809f820b41186d9b618aa7c193
-ms.sourcegitcommit: d2ccbba1bf4e66d6b6b0582dc01ba39f4a54f0aa
+ms.openlocfilehash: c637c4893a13df577fd6c083c8a4f2380c9c4cad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82984079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219152"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函数
 
-[ \<Filesystem>](../standard-library/filesystem.md)标头中的这些自由功能对路径、文件、符号链接、目录和卷执行修改和查询操作。 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
+标头中的这些 free 函数 [\<filesystem>](../standard-library/filesystem.md) 对路径、文件、符号链接、目录和卷执行修改和查询操作。 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
 ## <a name="absolute"></a><a name="absolute"></a>绝
 
@@ -101,15 +101,15 @@ ms.locfileid: "82984079"
 path absolute(const path& pval, const path& base = current_path());
 ```
 
-该函数返回相对于路径名`base`的相对于*pval*的绝对路径名：
+该函数返回相对于路径名的相对于*pval*的绝对路径名 `base` ：
 
-1. 如果`pval.has_root_name() && pval.has_root_directory()`函数返回*pval*，则为。
+1. 如果 `pval.has_root_name() && pval.has_root_directory()` 函数返回*pval*，则为。
 
-1. 如果`pval.has_root_name() && !pval.has_root_directory()` `pval.root_name()`  /  `absolute(base).root_directory()`函数 / 返回`absolute(base).relative_path()`， / 为。 `pval.relative_path()`
+1. 如果 `pval.has_root_name() && !pval.has_root_directory()` 函数返回，则为 `pval.root_name()`  /  `absolute(base).root_directory()`  /  `absolute(base).relative_path()`  /  `pval.relative_path()` 。
 
-1. 如果`!pval.has_root_name() && pval.has_root_directory()`函数返回`absolute(base).root_name()`  /  *pval*，则为。
+1. 如果 `!pval.has_root_name() && pval.has_root_directory()` 函数返回 pval，则为 `absolute(base).root_name()`  /  *pval*。
 
-1. 如果`!pval.has_root_name() && !pval.has_root_directory()`函数返回`absolute(base)`  /  *pval*，则为。
+1. 如果 `!pval.has_root_name() && !pval.has_root_directory()` 函数返回 pval，则为 `absolute(base)`  /  *pval*。
 
 ## <a name="begin"></a><a name="begin"></a>准备
 
@@ -129,15 +129,15 @@ path canonical(const path& pval, error_code& ec);
 path canonical(const path& pval, const path& base, error_code& ec);
 ```
 
-函数全部形成绝对路径名`pabs = absolute(pval, base)` （ `pabs = absolute(pval)`对于没有基参数的重载），然后将其缩小为以下一系列步骤中的规范格式：
+函数全部形成绝对路径名 `pabs = absolute(pval, base)` （ `pabs = absolute(pval)` 对于没有基参数的重载），然后将其缩小为以下一系列步骤中的规范格式：
 
-1. 为 true 的`X`每个`is_symlink(X)`路径**true**组件都将替换`read_symlink(X)`为。
+1. 的每个路径组件都 `X` `is_symlink(X)` **`true`** 将替换为 `read_symlink(X)` 。
 
-1. 删除每个`.`路径组件（点是由以前的路径组件建立的当前目录）。
+1. 删除每个路径组件 `.` （点是由以前的路径组件建立的当前目录）。
 
-1. 删除每对路径组件`X` / `..` （点点是由以前的路径组件建立的父目录）。
+1. 删除每对路径组件 `X` / `..` （点点是由以前的路径组件建立的父目录）。
 
-然后，该函数`pabs`返回。
+然后，该函数返回 `pabs` 。
 
 ## <a name="copy"></a><a name="copy"></a>复本
 
@@ -148,7 +148,7 @@ void copy(const path& from, const path& to, copy_options opts);
 void copy(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-函数可以从到的控件中将一个或多个文件复制或链接到 " *opts* *"，* 并将`copy_options::none`其*从*"" *opts* *opts*只包含以下项之一：
+函数可以从*到的控件*中将一个或多个文件复制或*链接到 ""，* 并将其*从* `copy_options::none` "" *opts* *opts*只包含以下项之一：
 
 - `skip_existing`、`overwrite_existing` 或 `update_existing`
 
@@ -156,37 +156,37 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - `directories_only`、`create_symlinks` 或 `create_hard_links`
 
-函数首先确定的*from*和`t` for `f` *的 file_status 值：*
+函数首先确定的 `f` *from*和 for 的 file_status 值 `t` ： *to*
 
-- 如果`opts & (copy_options::create_symlinks | copy_options::skip_symlinks)`为，则通过调用`symlink_status`
+- 如果为 `opts & (copy_options::create_symlinks | copy_options::skip_symlinks)` ，则通过调用`symlink_status`
 
 - 否则，通过调用`status`
 
 - 否则报告错误。
 
-如果`!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory(f)&& is_regular_file(t)`为，则它们将报告一个错误（不执行任何其他操作）。
+如果 `!exists(f) || equivalent(f, t) || is_other(f) || is_other(t) || is_directory(f)&& is_regular_file(t)` 为，则它们将报告一个错误（不执行任何其他操作）。
 
-否则，如果`is_symlink(f)`为，则：
+否则，如果 `is_symlink(f)` 为，则：
 
-- 如果`options & copy_options::skip_symlinks`为，则不执行任何操作。
+- 如果为 `options & copy_options::skip_symlinks` ，则不执行任何操作。
 
-- 否则，如果`!exists(t)&& options & copy_options::copy_symlinks`为， `copy_symlink(from, to, opts)`则为。
+- 否则，如果为 `!exists(t)&& options & copy_options::copy_symlinks` ，则为 `copy_symlink(from, to, opts)` 。
 
 - 否则，将报告错误。
 
-否则，如果`is_regular_file(f)`为，则：
+否则，如果为 `is_regular_file(f)` ，则：
 
-- 如果`opts & copy_options::directories_only`为，则不执行任何操作。
+- 如果为 `opts & copy_options::directories_only` ，则不执行任何操作。
 
-- 否则，如果`opts & copy_options::create_symlinks`为， `create_symlink(to, from)`则为。
+- 否则，如果为 `opts & copy_options::create_symlinks` ，则为 `create_symlink(to, from)` 。
 
-- 否则，如果`opts & copy_options::create_hard_links`为， `create_hard_link(to, from)`则为。
+- 否则，如果为 `opts & copy_options::create_hard_links` ，则为 `create_hard_link(to, from)` 。
 
-- 否则，如果`is_directory(f)`为， `copy_file(from, to`  /  `from.filename(), opts)`则为。
+- 否则，如果为 `is_directory(f)` ，则为 `copy_file(from, to`  /  `from.filename(), opts)` 。
 
 - 否则为 `copy_file(from, to, opts)`。
 
-否则，如果`is_directory(f) && (opts & copy_options::recursive || !opts)`为，则：
+否则，如果为 `is_directory(f) && (opts & copy_options::recursive || !opts)` ，则：
 
 ```cpp
 if (!exists(t))
@@ -211,13 +211,13 @@ bool copy_file(const path& from, const path& to, copy_options opts);
 bool copy_file(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;
 ```
 
-*opts*所有函数都可能会`copy_options::none`将文件*从中*的 "从" 复制*opts*到 "在" *to* 只*应包含*、 `overwrite_existing`或`update_existing`中的`skip_existing`一个。
+所有函数都可能会将文件*从中**的 "* 从"*复制到 "在"* `copy_options::none` *opts* 只*应包含*、或中的 `skip_existing` 一个 `overwrite_existing` `update_existing` 。
 
-如果`exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))`为，则将报告为错误，指出该文件已存在。
+如果 `exists(to) && !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options::update_existing))` 为，则将报告为错误，指出该文件已存在。
 
-否则，如果`!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))`为，则尝试将文件的内容和属性*从**复制到文件。* 如果复制尝试失败，则报告错误。
+否则，如果为 `!exists(to) || opts & copy_options::overwrite_existing || opts & copy_options::update_existing&& last_write_time(to) < last_write_time(from) || !(opts & (copy_options::skip_existing | copy_options::overwrite_existing | copy_options:update_existing))` ，则尝试将文件的内容和属性*从*复制到文件。 *to* 如果复制尝试失败，则报告错误。
 
-如果尝试复制并成功，则函数返回**true** ，否则返回**false**。
+**`true`** 如果尝试复制并成功，则函数将返回; 否则返回 **`false`** 。
 
 ## <a name="copy_symlink"></a><a name="copy_symlink"></a>copy_symlink
 
@@ -226,7 +226,7 @@ void copy_symlink(const path& from, const path& to);
 void copy_symlink(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-如果`is_directory(from)`为，则该`create_directory_symlink(from, to)`函数调用。 否则，它会`create_symlink(from, to)`调用。
+如果 `is_directory(from)` 为，则该函数调用 `create_directory_symlink(from, to)` 。 否则，它会调用 `create_symlink(from, to)` 。
 
 ## <a name="create_directories"></a><a name="create_directories"></a>create_directories
 
@@ -235,7 +235,7 @@ bool create_directories(const path& pval);
 bool create_directories(const path& pval, error_code& ec) noexcept;
 ```
 
-对于诸如\/a b\/c 的路径名，函数根据需要创建目录 a 和\/b，以便它可以根据需要创建目录 a\/b\/c。 仅当它实际创建目录*pval*时，它才返回**true** 。
+对于诸如 a \/ b c 的路径名 \/ ，函数根据需要创建目录 a 和 \/ b，以便它可以根据需要创建目录 a \/ b \/ c。 **`true`** 仅当它实际创建目录*pval*时，它才返回。
 
 ## <a name="create_directory"></a><a name="create_directory"></a>create_directory
 
@@ -247,7 +247,7 @@ bool create_directory(const path& pval, const path& attr);
 bool create_directory(const path& pval, const path& attr, error_code& ec) noexcept;
 ```
 
-函数根据需要创建目录*pval* 。 仅当它实际创建目录*pval*时才返回 true，在这种情况下，它将从现有*的文件属性*复制`perms::all`权限，或将其用于没有*attr*参数的重载。
+函数根据需要创建目录*pval* 。 仅当它实际创建目录*pval*时才返回 true，在这种情况*下，它*将从现有的文件属性复制权限，或将其 `perms::all` 用于没有*attr*参数的重载。
 
 ## <a name="create_directory_symlink"></a><a name="create_directory_symlink"></a>create_directory_symlink
 
@@ -295,16 +295,16 @@ directory_iterator& end(const directory_iterator& iter) noexcept;
 recursive_directory_iterator& end(const recursive_directory_iterator& iter) noexcept;
 ```
 
-第一个函数返回`directory_iterator()` ，第二个函数返回`recursive_directory_iterator()`
+第一个函数返回 `directory_iterator()` ，第二个函数返回`recursive_directory_iterator()`
 
-## <a name="equivalent"></a><a name="equivalent"></a>项
+## <a name="equivalent"></a><a name="equivalent"></a> 等效
 
 ```cpp
 bool equivalent(const path& left, const path& right);
 bool equivalent(const path& left, const path& right, error_code& ec) noexcept;
 ```
 
-仅当*向左*和*向右*选择相同的文件系统实体时，函数才返回**true** 。
+**`true`** 仅当*左*和*右*选择相同的文件系统实体时，函数才返回。
 
 ## <a name="exists"></a><a name="exists"></a>已经
 
@@ -314,7 +314,7 @@ bool exists(const path& pval);
 bool exists(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `status_known && stat.type() != file_not_found`。 第二个和第三`exists(status(pval))`个函数返回。
+第一个函数返回 `status_known && stat.type() != file_not_found`。 第二个和第三个函数返回 `exists(status(pval))` 。
 
 ## <a name="file_size"></a><a name="file_size"></a>file_size
 
@@ -323,7 +323,7 @@ uintmax_t file_size(const path& pval);
 uintmax_t file_size(const path& pval, error_code& ec) noexcept;
 ```
 
-如果`exists(pval) && is_regular_file(pval)`和文件大小可以确定，则函数返回*pval*所选文件的大小（以字节为单位）。 否则，它们会报告错误并`uintmax_t(-1)`返回。
+如果*pval* `exists(pval) && is_regular_file(pval)` 和文件大小可以确定，则函数返回 pval 所选文件的大小（以字节为单位）。 否则，它们会报告错误并返回 `uintmax_t(-1)` 。
 
 ## <a name="hard_link_count"></a><a name="hard_link_count"></a>hard_link_count
 
@@ -332,7 +332,7 @@ uintmax_t hard_link_count(const path& pval);
 uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 ```
 
-该函数返回*pval*的硬链接数，如果出现错误\-，则返回1。
+该函数返回*pval*的硬链接数， \- 如果出现错误，则返回1。
 
 ## <a name="hash_value"></a><a name="hash_value"></a>hash_value
 
@@ -340,7 +340,7 @@ uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 size_t hash_value(const path& pval) noexcept;
 ```
 
-函数返回的哈希值`pval.native()`。
+函数返回的哈希值 `pval.native()` 。
 
 ## <a name="is_block_file"></a><a name="is_block_file"></a>is_block_file
 
@@ -350,7 +350,7 @@ bool is_block_file(const path& pval);
 bool is_block_file(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::block`。 其余函数返回`is_block_file(status(pval))`。
+第一个函数返回 `stat.type() == file_type::block`。 其余函数返回 `is_block_file(status(pval))` 。
 
 ## <a name="is_character_file"></a><a name="is_character_file"></a>is_character_file
 
@@ -360,7 +360,7 @@ bool is_character_file(const path& pval);
 bool is_character_file(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::character`。 其余函数返回`is_character_file(status(pval))`。
+第一个函数返回 `stat.type() == file_type::character`。 其余函数返回 `is_character_file(status(pval))` 。
 
 ## <a name="is_directory"></a><a name="is_directory"></a>is_directory
 
@@ -370,7 +370,7 @@ bool is_directory(const path& pval);
 bool is_directory(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::directory`。 其余函数返回`is_directory_file(status(pval))`。
+第一个函数返回 `stat.type() == file_type::directory`。 其余函数返回 `is_directory_file(status(pval))` 。
 
 ## <a name="is_empty"></a><a name="is_empty"></a>is_empty
 
@@ -380,7 +380,7 @@ bool is_empty(const path& pval);
 bool is_empty(const path& pval, error_code& ec) noexcept;
 ```
 
-如果`is_directory(pval)`为，则函数返回`directory_iterator(pval) == directory_iterator()`;否则，它`file_size(pval) == 0`将返回。
+如果 `is_directory(pval)` 为，则该函数将返回 `directory_iterator(pval) == directory_iterator()` ; 否则返回 `file_size(pval) == 0` 。
 
 ## <a name="is_fifo"></a><a name="is_fifo"></a>is_fifo
 
@@ -390,7 +390,7 @@ bool is_fifo(const path& pval);
 bool is_fifo(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::fifo`。 其余函数返回`is_fifo(status(pval))`。
+第一个函数返回 `stat.type() == file_type::fifo`。 其余函数返回 `is_fifo(status(pval))` 。
 
 ## <a name="is_other"></a><a name="is_other"></a>is_other
 
@@ -400,7 +400,7 @@ bool is_other(const path& pval);
 bool is_other(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::other`。 其余函数返回`is_other(status(pval))`。
+第一个函数返回 `stat.type() == file_type::other`。 其余函数返回 `is_other(status(pval))` 。
 
 ## <a name="is_regular_file"></a><a name="is_regular_file"></a>is_regular_file
 
@@ -410,7 +410,7 @@ bool is_regular_file(const path& pval);
 bool is_regular_file(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::regular`。 其余函数返回`is_regular_file(status(pval))`。
+第一个函数返回 `stat.type() == file_type::regular`。 其余函数返回 `is_regular_file(status(pval))` 。
 
 ## <a name="is_socket"></a><a name="is_socket"></a>is_socket
 
@@ -420,7 +420,7 @@ bool is_socket(const path& pval);
 bool is_socket(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::socket`。 其余函数返回`is_socket(status(pval))`。
+第一个函数返回 `stat.type() == file_type::socket`。 其余函数返回 `is_socket(status(pval))` 。
 
 ## <a name="is_symlink"></a><a name="is_symlink"></a>is_symlink
 
@@ -430,7 +430,7 @@ bool is_symlink(const path& pval);
 bool is_symlink(const path& pval, error_code& ec) noexcept;
 ```
 
-第一个函数返回 `stat.type() == file_type::symlink`。 其余函数返回`is_symlink(status(pval))`。
+第一个函数返回 `stat.type() == file_type::symlink`。 其余函数返回 `is_symlink(status(pval))` 。
 
 ## <a name="last_write_time"></a><a name="last_write_time"></a>last_write_time
 
@@ -441,7 +441,7 @@ void last_write_time(const path& pval, file_time_type new_time);
 void last_write_time(const path& pval, file_time_type new_time, error_code& ec) noexcept;
 ```
 
-前两个函数返回*pval*的上次数据修改时间，或`file_time_type(-1)`发生错误的时间。 最后两个函数将*pval*的上次数据修改时间设置为*new_time*。
+前两个函数返回*pval*的上次数据修改时间，或 `file_time_type(-1)` 发生错误的时间。 最后两个函数将*pval*的上次数据修改时间设置为*new_time*。
 
 ## <a name="permissions"></a><a name="permissions"></a>访问
 
@@ -450,9 +450,9 @@ void permissions(const path& pval, perms mask);
 void permissions(const path& pval, perms mask, error_code& ec) noexcept;
 ```
 
-函数将*pval*选择的路径名的权限设置为`mask & perms::mask` "控制" 下的`perms & (perms::add_perms | perms::remove_perms)`。 *掩码*应最多包含和`perms::add_perms` `perms::remove_perms`中的一个。
+函数将*pval*选择的路径名的权限设置为 `mask & perms::mask` "控制" 下的 `perms & (perms::add_perms | perms::remove_perms)` 。 *掩码*应最多包含和中的一个 `perms::add_perms` `perms::remove_perms` 。
 
-如果`mask & perms::add_perms`为，则这些函数将权限`status(pval).permissions() | mask & perms::mask`设置为。 否则，如果`mask & perms::remove_perms`为，则这些函数将权限`status(pval).permissions() & ~(mask & perms::mask)`设置为。 否则，这些函数将权限设置为`mask & perms::mask`。
+如果为 `mask & perms::add_perms` ，则这些函数将权限设置为 `status(pval).permissions() | mask & perms::mask` 。 否则，如果为 `mask & perms::remove_perms` ，则这些函数将权限设置为 `status(pval).permissions() & ~(mask & perms::mask)` 。 否则，这些函数将权限设置为 `mask & perms::mask` 。
 
 ## <a name="proximate"></a><a name="proximate"></a>近程
 
@@ -469,7 +469,7 @@ path read_symlink(const path& pval);
 path read_symlink(const path& pval, error_code& ec);
 ```
 
-函数将报告错误，并返回`path()` if `!is_symlink(pval)`。 否则，函数返回包含符号链接的 `path` 类型的对象。
+函数将报告错误，并返回 `path()` if `!is_symlink(pval)` 。 否则，函数返回包含符号链接的 `path` 类型的对象。
 
 ## <a name="relative"></a><a name="relative"></a>相对
 
@@ -486,7 +486,7 @@ bool remove(const path& pval);
 bool remove(const path& pval, error_code& ec) noexcept;
 ```
 
-仅当和**true**文件成功删除`exists(symlink_status(pval))`时，函数才返回 true。 符号链接本身会被删除，而不是它所选择的文件。
+**`true`** 仅当 `exists(symlink_status(pval))` 和文件成功删除时，函数才返回。 符号链接本身会被删除，而不是它所选择的文件。
 
 ## <a name="remove_all"></a><a name="remove_all"></a>remove_all
 
@@ -495,7 +495,7 @@ uintmax_t remove_all(const path& pval);
 uintmax_t remove_all(const path& pval, error_code& ec) noexcept;
 ```
 
-如果*pval*是一个目录，则函数将以递归方式删除所有目录项，然后删除该项本身。 否则，这些函数将`remove`调用。 它们返回已成功删除的所有元素数。
+如果*pval*是一个目录，则函数将以递归方式删除所有目录项，然后删除该项本身。 否则，这些函数将调用 `remove` 。 它们返回已成功删除的所有元素数。
 
 ## <a name="rename"></a><a name="rename"></a>重命名
 
@@ -522,7 +522,7 @@ space_info space(const path& pval);
 space_info space(const path& pval, error_code& ec) noexcept;
 ```
 
-函数在类型`space_info`为的结构中返回有关*pval*选择的卷的信息。 结构包含`uintmax_t(-1)`无法确定的任何值。
+函数在类型为的结构中返回有关*pval*选择的卷的信息 `space_info` 。 结构包含 `uintmax_t(-1)` 无法确定的任何值。
 
 ## <a name="status"></a><a name="status"></a>状态值
 
@@ -556,7 +556,7 @@ file_status symlink_status(const path& pval);
 file_status symlink_status(const path& pval, error_code& ec) noexcept;
 ```
 
-这些函数返回与*pval*关联的路径名符号链接状态、文件类型和权限。 函数的行为与的行为`status(pval)`相同，只不过符号会自行测试，而不是它所选择的文件。
+这些函数返回与*pval*关联的路径名符号链接状态、文件类型和权限。 函数的行为与的行为相同 `status(pval)` ，只不过符号会自行测试，而不是它所选择的文件。
 
 ## <a name="system_complete"></a><a name="system_complete"></a>system_complete
 
@@ -565,7 +565,7 @@ path system_complete(const path& pval);
 path system_complete(const path& pval, error_code& ec);
 ```
 
-这些函数返回纳入考虑的绝对路径名，并在必要时返回与其根名称关联的当前目录。 \(对于 POSIX，这些函数返回`absolute(pval)`。\)
+这些函数返回纳入考虑的绝对路径名，并在必要时返回与其根名称关联的当前目录。 \(对于 POSIX，这些函数返回 `absolute(pval)` 。\)
 
 ## <a name="temp_directory_path"></a><a name="temp_directory_path"></a>temp_directory_path
 
@@ -586,7 +586,7 @@ template <class InIt>
 path u8path(InIt first, InIt last);
 ```
 
-第一个函数的行为与相同`path(source)` ，第二个函数的行为与`path(first, last)`相同，不同之处在于，每个事例中的所选源将作为编码为 utf-8 的 char 元素序列（无论文件系统是什么）。
+第一个函数的行为与相同 `path(source)` ，第二个函数的行为与相同， `path(first, last)` 不同之处在于，每个事例中的所选源将作为编码为 utf-8 的 char 元素序列（无论文件系统是什么）。
 
 ## <a name="weakly_canonical"></a><a name="weakly_canonical"></a>weakly_canonical
 

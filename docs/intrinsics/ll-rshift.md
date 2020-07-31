@@ -8,18 +8,18 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217497"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219659"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
 **Microsoft 专用**
 
-将第一个参数指定的64位值向右移位, 由第二个参数指定的位数。
+将第一个参数指定的64位值向右移位，由第二个参数指定的位数。
 
 ## <a name="syntax"></a>语法
 
@@ -40,19 +40,19 @@ __int64 __ll_rshift(
 
 ## <a name="return-value"></a>返回值
 
-按`nBit`位移动的掩码。
+按位移动的掩码 `nBit` 。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__ll_rshift`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-如果第二个参数大于 x64 上的 64 (x86 上为 32), 则将该数字取模 64 (x86 上的 32) 以确定要移位的位数。 前缀指示它是对`long long`的操作, 另一个名称为`__int64`64 位有符号整数类型。 `ll`
+如果第二个参数大于 x64 上的64（x86 上为32），则将该数字取模64（x86 上的32）以确定要移位的位数。 `ll`前缀指示它是对的操作 **`long long`** ，另一个名称为 **`__int64`** 64 位有符号整数类型。
 
 ## <a name="example"></a>示例
 
@@ -78,7 +78,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 ffffffffffffff00
@@ -88,7 +88,7 @@ fffffffffffffff0
 ```
 
 > [!NOTE]
-> 如果`_ull_rshift`使用了, 则右移后的值的 MSB 将为零, 因此在负值情况下不会获得所需的结果。
+> 如果 `_ull_rshift` 使用了，则右移后的值的 MSB 将为零，因此在负值情况下不会获得所需的结果。
 
 **结束 Microsoft 专用**
 

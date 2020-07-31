@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 9d4397c11c4d2f0f9013c7df914cbc4be9fd4e9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: afca92602aa6033c56869d3f84192ca0f029a23e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198479"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218112"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>编译器警告（等级 4）C4127
 
@@ -19,9 +19,9 @@ ms.locfileid: "80198479"
 
 ## <a name="remarks"></a>备注
 
-**If**语句或**while**循环的控制表达式的计算结果为常量。 由于其常见的惯用用法，从 Visual Studio 2015 update 3 开始，普通常量（例如1或**true** ）不会触发警告，除非它们是表达式中操作的结果。
+**`if`** 语句或循环的控制表达式的 **`while`** 计算结果为常量。 由于其常见的惯用用法，从 Visual Studio 2015 update 3 开始，普通常量（例如1）或 **`true`** 不触发警告，除非它们是表达式中操作的结果。
 
-如果**while**循环的控制表达式是常量，因为循环在中间退出，请考虑将**while**循环替换**为 for**循环。 您可以省略**for**循环的初始化、终止测试和循环增量，这将导致循环无限，就像 `while(1)`一样，您可以从**for**语句的主体退出循环。
+如果循环的控制表达式 **`while`** 是常量，因为循环在中间退出，请考虑将循环替换为 **`while`** **`for`** 循环。 您可以省略循环的初始化、终止测试和循环增量 **`for`** ，这将导致循环无限，就像那样， `while(1)` 您可以从语句的主体退出循环 **`for`** 。
 
 ## <a name="example"></a>示例
 

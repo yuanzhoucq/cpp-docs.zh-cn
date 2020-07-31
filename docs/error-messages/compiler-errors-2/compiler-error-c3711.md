@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bf8d1ea745ed96d782fdc95d825e278e894066ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753401"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220179"
 ---
 # <a name="compiler-error-c3711"></a>编译器错误 C3711
 
 "method"：非托管事件源方法必须返回 void 或者整型类型
 
-在事件源中定义的方法未返回 void 或整数类型。 若要修复此错误，请使事件和事件处理程序的返回类型为 `void` 或整数类型，如 `int` 或 `long`。
+在事件源中定义的方法未返回 void 或整数类型。 若要修复此错误，请使事件和事件处理程序的返回类型为 **`void`** 或整数类型（如 **`int`** 或） **`long`** 。
 
 下面的示例生成 C3711：
 

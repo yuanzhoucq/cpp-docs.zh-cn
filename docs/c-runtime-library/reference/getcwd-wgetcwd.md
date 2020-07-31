@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6fb32a593a969f93a934f251f38cd50960440b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915739"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221882"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
@@ -70,7 +70,7 @@ wchar_t *_wgetcwd(
 路径的存储位置。
 
 *maxlen*\
-**_Wgetcwd**的 **_getcwd**和**wchar_t**的路径的最大**长度（以字符为字符**）。
+路径的最大长度（字符）： **`char`** 适用于 **_getcwd**和 **`wchar_t`** **_wgetcwd**。
 
 ## <a name="return-value"></a>返回值
 
@@ -82,7 +82,7 @@ wchar_t *_wgetcwd(
 
 **_Getcwd**函数获取默认驱动器的当前工作目录的完整路径，并将其存储在*缓冲区*中。 整数参数*maxlen*指定路径的最大长度。 如果路径长度（包括终止 null 字符）超过*maxlen*，则会出现错误。 *Buffer*参数可以为**NULL**;使用**malloc**自动分配*maxlen*大小至少为（仅在必要时更多）的缓冲区，以存储路径。 稍后可通过调用**free**并向其传递 **_getcwd**返回值（指向已分配缓冲区的指针）来释放此缓冲区。
 
-**_getcwd**返回一个字符串，该字符串表示当前工作目录的路径。 如果当前工作目录是根，则字符串以反斜杠（`\`）结尾。 如果当前工作目录为根目录之外的目录，则字符串以目录名称结尾，而不是以反斜杠结尾。
+**_getcwd**返回一个字符串，该字符串表示当前工作目录的路径。 如果当前工作目录是根，则字符串以反斜杠（ `\` ）结尾。 如果当前工作目录为根目录之外的目录，则字符串以目录名称结尾，而不是以反斜杠结尾。
 
 **_wgetcwd**是 **_getcwd**的宽字符版本;**_wgetcwd**的*缓冲区*参数和返回值都是宽字符字符串。 否则 **_wgetcwd**和 **_getcwd**的行为相同。
 
@@ -98,7 +98,7 @@ wchar_t *_wgetcwd(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<direct.h> 或 \<wchar.h>|

@@ -3,12 +3,12 @@ title: 了解 SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: fe48e31e5f4390915c4f3b5b6bf9c09bbd9fffe1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403980"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226042"
 ---
 # <a name="understanding-sal"></a>了解 SAL
 
@@ -359,7 +359,7 @@ Visual Studio Code 分析验证此函数在取消引用之前是否检查 NULL `
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>示例： \_ 成功 \_ 批注与 \_ Out 组合\_
 
-批注可应用于大多数对象。  特别是，您可以批注整个函数。  函数最明显的特征之一是它可以成功或失败。 但就像缓冲区及其大小之间的关联，C/c + + 无法表达函数的成功或失败。 通过使用 `_Success_` 批注，可以说出函数的成功情况。  批注的参数 `_Success_` 只是一个表达式，该表达式为 true 时表示函数已成功。 表达式可以是批注分析器可处理的任何内容。 当函数返回后，批注的效果仅适用于函数成功。 此示例演示如何 `_Success_` 与 `_Out_` 进行交互以执行正确的操作。 可以使用关键字 `return` 来表示返回值。
+批注可应用于大多数对象。  特别是，您可以批注整个函数。  函数最明显的特征之一是它可以成功或失败。 但就像缓冲区及其大小之间的关联，C/c + + 无法表达函数的成功或失败。 通过使用 `_Success_` 批注，可以说出函数的成功情况。  批注的参数 `_Success_` 只是一个表达式，该表达式为 true 时表示函数已成功。 表达式可以是批注分析器可处理的任何内容。 当函数返回后，批注的效果仅适用于函数成功。 此示例演示如何 `_Success_` 与 `_Out_` 进行交互以执行正确的操作。 可以使用关键字 **`return`** 来表示返回值。
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)

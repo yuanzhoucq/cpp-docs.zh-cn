@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216721"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -77,9 +77,9 @@ long double sin(long double x);  // C++ only
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回**浮点**或**长****双精度**值的**sin**重载。 在 C 程序中， **sin**始终采用并返回**double**。
+由于 c + + 允许重载，因此可以调用采用和返回或值的**sin**重载 **`float`** **`long double`** 。 在 C 程序中， **sin**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

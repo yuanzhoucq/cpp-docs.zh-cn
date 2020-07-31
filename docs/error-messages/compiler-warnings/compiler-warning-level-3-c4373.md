@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4373
 ms.assetid: 670c0ba3-b7d6-4aed-b207-1cb84da3bcde
-ms.openlocfilehash: 5891d4679b74695f187fb50bb24fe941882fdcc7
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: b3ab8a0c5d826aa44eee3fea53908091ef0c6803
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518343"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225314"
 ---
 # <a name="compiler-warning-level-3-c4373"></a>编译器警告（等级 3）C4373
 
@@ -21,7 +21,7 @@ ms.locfileid: "76518343"
 
 应用程序在派生类中包含一个方法，可重写基类中的虚拟方法，在重写方法中的参数中，只有 [const](../../cpp/const-cpp.md) 或 [volatile](../../cpp/volatile-cpp.md) 限定符与虚拟方法中的参数不同。 这就意味着编译器必须将函数引用绑定到基类或派生类中的方法。
 
-Visual Studio 2008 之前的编译器版本将函数绑定到基类中的方法，然后发出警告消息。 后续版本的编译器忽略 `const` 或 `volatile` 限定符，将函数绑定到派生类中的方法，然后发出 warning **C4373**。 后一种行为符合 C++ 标准。
+Visual Studio 2008 之前的编译器版本将函数绑定到基类中的方法，然后发出警告消息。 后续版本的编译器忽略 **`const`** 或 **`volatile`** 限定符，将函数绑定到派生类中的方法，然后发出警告**C4373**。 后一种行为符合 C++ 标准。
 
 ## <a name="example"></a>示例
 

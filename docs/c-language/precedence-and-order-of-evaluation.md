@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: c1a5feb4552dd43b26263ebd3080e18adef6cb32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211731"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>计算的优先级和顺序
 
@@ -25,7 +25,7 @@ C 运算符的优先级和结合性将影响表达式中操作数的分组和计
 | 符号 <sup>1</sup> | 操作类型 | 结合性 |
 |-------------|-----------------------|-------------------|
 | `[` `]` `(` `)` `.` `->`<br/>`++` `--`（后缀） | 表达式 | 从左到右 |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--`（前缀） | 一元 | 从右到左 |
+| **`sizeof`** `&` `*` `+` `-` `~` `!`<br/>`++` `--`（前缀） | 一元 | 从右到左 |
 | *typecasts* | 一元 | 从右到左 |
 | `*` `/` `%` | 乘法 | 从左到右 |
 | `+` `-` | 加法 | 从左到右 |

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912301"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215109"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
 
@@ -74,13 +74,13 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用**tanh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **tanh**始终采用并返回**double**。
+由于 c + + 允许重载，因此可以调用**tanh**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **tanh**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C)|
 |-------------|---------------------|-|
 |**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 

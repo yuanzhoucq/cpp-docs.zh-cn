@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441613"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212184"
 ---
 # <a name="nested_exception-class"></a>nested_exception 类
 
@@ -28,13 +28,13 @@ class nested_exception {
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="operators"></a>运算符
 
 |||
 |-|-|
-|[operator=](#op_as)||
+|[operator =](#op_as)||
 
 ### <a name="functions"></a>函数
 
@@ -43,13 +43,13 @@ class nested_exception {
 |[rethrow_nested](#rethrow_nested)|引发存储的异常。|
 |[nested_ptr](#nested_ptr)|返回存储的异常。|
 
-### <a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a>operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,9 +57,9 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>返回值
 
-此 `nested_exception` 对象捕获的存储异常。
+由此对象捕获的存储异常 `nested_exception` 。
 
-### <a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,15 +67,15 @@ exception_ptr nested_ptr() const;
 
 #### <a name="remarks"></a>备注
 
-如果 `nested_ptr()` 返回空指针，则该函数将调用 `std::terminate()`。 否则，它会引发 `*this`捕获的存储异常。
+如果 `nested_ptr()` 返回一个 null 指针，则该函数将调用 `std::terminate()` 。 否则，它会引发由捕获的存储异常 **`*this`** 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<异常 >
+**标头：**\<exception>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>另请参阅
 
-[Exception 类](../standard-library/exception-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[exception 类](../standard-library/exception-class.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

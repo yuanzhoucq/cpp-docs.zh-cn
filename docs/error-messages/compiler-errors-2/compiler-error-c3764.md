@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 3ede846c9068978ad5d283e97b1c96d3527bf67c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 657cb6598eedf8abd050b47c124c78c3a028509f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757224"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214498"
 ---
 # <a name="compiler-error-c3764"></a>编译器错误 C3764
 
 "override_function"：不能重写基类方法 "base_class_function"
 
-编译器检测到格式错误的重写。 例如，基类函数未 `virtual`。 有关详细信息，请参阅[override](../../extensions/override-cpp-component-extensions.md)。
+编译器检测到格式错误的重写。 例如，基类函数不是 **`virtual`** 。 有关详细信息，请参阅[override](../../extensions/override-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

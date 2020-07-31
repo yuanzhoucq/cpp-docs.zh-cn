@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 57e2134a2254dc4bc34d515e65e2ec629efeff33
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139514"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226745"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math 命名空间
 
-`fast_math` 命名空间中的函数的准确性较低，仅支持单精度（`float`），并调用 DirectX 内部函数。 每个函数都有两个版本，例如 `cos` 和 `cosf`。 这两个版本都采用并返回 `float`，但每个版本都调用相同的 DirectX 内部函数。
+命名空间中的函数 `fast_math` 的准确性较低，仅支持单精度（ **`float`** ），并调用 DirectX 内部函数。 每个函数都有两个版本，例如 `cos` 和 `cosf` 。 这两个版本都采用并返回 **`float`** ，但每个版本都调用相同的 DirectX 内部函数。
 
 ## <a name="syntax"></a>语法
 
@@ -21,13 +21,13 @@ ms.locfileid: "77139514"
 namespace fast_math;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="functions"></a>函数
 
 |名称|说明|
 |----------|-----------------|
-|[cos](concurrency-fast-math-namespace-functions.md#cos)|计算参数的反余弦|
+|[缆](concurrency-fast-math-namespace-functions.md#cos)|计算参数的反余弦|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|计算参数的反余弦|
 |[asin](concurrency-fast-math-namespace-functions.md#asin)|计算参数的反正弦|
 |[asinf](concurrency-fast-math-namespace-functions.md#asinf)|计算参数的反正弦|
@@ -37,7 +37,7 @@ namespace fast_math;
 |[atanf](concurrency-fast-math-namespace-functions.md#atanf)|计算参数的反正切值|
 |[ceil](concurrency-fast-math-namespace-functions.md#ceil)|计算参数的上限|
 |[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|计算参数的上限|
-|[cos](concurrency-fast-math-namespace-functions.md#cos)|计算参数的余弦值|
+|[缆](concurrency-fast-math-namespace-functions.md#cos)|计算参数的余弦值|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|计算参数的余弦值|
 |[cosh](concurrency-fast-math-namespace-functions.md#cosh)|计算参数的双曲余弦值|
 |[coshf](concurrency-fast-math-namespace-functions.md#coshf)|计算参数的双曲余弦值|
@@ -47,7 +47,7 @@ namespace fast_math;
 |[expf](concurrency-fast-math-namespace-functions.md#expf)|计算自变量的以 e 为底的指数|
 |[fabs](concurrency-fast-math-namespace-functions.md#fabs)|返回参数的绝对值。|
 |[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|返回参数的绝对值。|
-|[floor](concurrency-fast-math-namespace-functions.md#floor)|计算参数的下限|
+|[突破](concurrency-fast-math-namespace-functions.md#floor)|计算参数的下限|
 |[floorf](concurrency-fast-math-namespace-functions.md#floorf)|计算参数的下限|
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|确定参数的最大数值|
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|确定参数的最大数值|
@@ -62,7 +62,7 @@ namespace fast_math;
 |[isnan](concurrency-fast-math-namespace-functions.md#isnan)|确定参数是否为 NaN|
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|从尾数和指数计算实数|
 |[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|从尾数和指数计算实数|
-|[log](concurrency-fast-math-namespace-functions.md#log)|计算自变量的以 e 为底的对数|
+|[日志](concurrency-fast-math-namespace-functions.md#log)|计算自变量的以 e 为底的对数|
 |[log10](concurrency-fast-math-namespace-functions.md#log10)|计算自变量的以10为底的对数|
 |[log10f](concurrency-fast-math-namespace-functions.md#log10f)|计算自变量的以10为底的对数|
 |[log2](concurrency-fast-math-namespace-functions.md#log2)|计算参数的以2为底的对数|
@@ -72,7 +72,7 @@ namespace fast_math;
 |[modff](concurrency-fast-math-namespace-functions.md#modff)|将 _X 拆分为小数部分和整数部分。|
 |[pow](concurrency-fast-math-namespace-functions.md#pow)|计算 _X 的次幂 _Y|
 |[powf](concurrency-fast-math-namespace-functions.md#powf)|计算 _X 的次幂 _Y|
-|[round](concurrency-fast-math-namespace-functions.md#round)|将 _X 舍入到最接近的整数|
+|[圆满](concurrency-fast-math-namespace-functions.md#round)|将 _X 舍入到最接近的整数|
 |[roundf](concurrency-fast-math-namespace-functions.md#roundf)|将 _X 舍入到最接近的整数|
 |[rsqrt](concurrency-fast-math-namespace-functions.md#rsqrt)|返回参数平方根的倒数|
 |[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|返回参数平方根的倒数|
@@ -101,4 +101,4 @@ namespace fast_math;
 
 ## <a name="see-also"></a>另请参阅
 
-[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[并发命名空间（C++ AMP）](concurrency-namespace-cpp-amp.md)

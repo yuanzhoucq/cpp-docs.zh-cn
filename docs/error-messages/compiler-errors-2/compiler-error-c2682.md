@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2697ce5a790fffe762d97ca3380853514de6d437
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760278"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220257"
 ---
 # <a name="compiler-error-c2682"></a>编译器错误 C2682
 
 无法使用 casting_operator 从 "type1" 转换为 "type2"
 
-转换运算符尝试在不兼容的类型之间进行转换。 例如，不能使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)运算符来转换指向引用的指针。 不能使用 `dynamic_cast` 运算符来强制转换掉限定符。 类型上的所有限定符都必须匹配。
+转换运算符尝试在不兼容的类型之间进行转换。 例如，不能使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)运算符来转换指向引用的指针。 **`dynamic_cast`** 运算符不能用于转换远离限定符。 类型上的所有限定符都必须匹配。
 
-您可以使用 `const_cast` 运算符来删除 `const`、`volatile`或 `__unaligned`之类的属性。
+可以使用 **`const_cast`** 运算符删除 **`const`** 、或等属性 **`volatile`** **`__unaligned`** 。
 
 下面的示例生成 C2682：
 

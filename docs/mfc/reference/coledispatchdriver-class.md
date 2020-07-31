@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 265fca7288ca2aa760fb1faffa94f9d74896a975
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753891"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214095"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 
@@ -47,45 +47,45 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[COle调度驱动程序：COle调度驱动程序](#coledispatchdriver)|构造 `COleDispatchDriver` 对象。|
+|[COleDispatchDriver：： COleDispatchDriver](#coledispatchdriver)|构造 `COleDispatchDriver` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[COle调度驱动程序：：附加调度](#attachdispatch)|将`IDispatch`连接附加到`COleDispatchDriver`对象。|
-|[COle调度驱动程序：创建调度](#createdispatch)|创建`IDispatch`连接并将其附加到`COleDispatchDriver`对象。|
-|[COle调度驱动程序：:Detach调度](#detachdispatch)|分离`IDispatch`连接，而不释放它。|
-|[COle调度驱动程序：获取财产](#getproperty)|获取自动化属性。|
-|[COleDispatchDriver::InvokeHelper](#invokehelper)|用于调用自动化方法的帮助器。|
-|[COle调度驱动程序：：发布调度](#releasedispatch)|释放`IDispatch`连接。|
-|[COle调度驱动程序：：设置属性](#setproperty)|设置自动化属性。|
+|[COleDispatchDriver：： AttachDispatch](#attachdispatch)|附加 `IDispatch` 到对象的连接 `COleDispatchDriver` 。|
+|[COleDispatchDriver：： CreateDispatch](#createdispatch)|创建 `IDispatch` 连接并将其附加到 `COleDispatchDriver` 对象。|
+|[COleDispatchDriver：:D etachDispatch](#detachdispatch)|分离 `IDispatch` 连接，而不释放连接。|
+|[COleDispatchDriver：： GetProperty](#getproperty)|获取自动化属性。|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|用于调用自动化方法的帮助程序。|
+|[COleDispatchDriver：： ReleaseDispatch](#releasedispatch)|释放 `IDispatch` 连接。|
+|[COleDispatchDriver：： SetProperty](#setproperty)|设置自动化属性。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[COle调度驱动程序：：操作员 |](#operator_eq)|将源值复制到对象中`COleDispatchDriver`。|
-|[COle调度驱动程序：：操作员 LPDISPATCH](#operator_lpdispatch)|访问基础`IDispatch`指针。|
+|[COleDispatchDriver：： operator =](#operator_eq)|将源值复制到 `COleDispatchDriver` 对象中。|
+|[COleDispatchDriver：： operator LPDISPATCH](#operator_lpdispatch)|访问基础 `IDispatch` 指针。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[COle调度驱动程序：m_bAutoRelease](#m_bautorelease)|指定是释放`IDispatch`销毁期间`ReleaseDispatch`还是对象销毁。|
-|[COle调度驱动程序：m_lpDispatch](#m_lpdispatch)|指示指向附加到此`IDispatch``COleDispatchDriver`的接口的指针。|
+|[COleDispatchDriver：： m_bAutoRelease](#m_bautorelease)|指定 `IDispatch` 在过程中还是在 `ReleaseDispatch` 对象析构过程中释放。|
+|[COleDispatchDriver：： m_lpDispatch](#m_lpdispatch)|指示指向 `IDispatch` 附加到此的接口的指针 `COleDispatchDriver` 。|
 
 ## <a name="remarks"></a>备注
 
 `COleDispatchDriver`没有基类。
 
-OLE 调度接口提供对对象方法和属性的访问。 `COleDispatchDriver`附加、分离、创建和释放类型的`IDispatch`调度连接的成员函数。 其他成员函数使用变量参数列表来简化调用`IDispatch::Invoke`。
+OLE 调度接口提供对对象的方法和属性的访问。 `COleDispatchDriver`附加、分离、创建和发布类型的调度连接的成员函数 `IDispatch` 。 其他成员函数使用变量参数列表简化调用 `IDispatch::Invoke` 。
 
-此类可以直接使用，但通常仅由添加类向导创建的类使用。 通过导入类型库创建新C++类时，新类派生自`COleDispatchDriver`。
+此类可以直接使用，但它通常仅由添加类向导创建的类使用。 当你通过导入类型库来创建新的 c + + 类时，新类派生自 `COleDispatchDriver` 。
 
-有关 使用`COleDispatchDriver`的详细信息，请参阅以下文章：
+有关使用的详细信息 `COleDispatchDriver` ，请参阅以下文章：
 
 - [自动化客户端](../../mfc/automation-clients.md)
 
@@ -99,7 +99,7 @@ OLE 调度接口提供对对象方法和属性的访问。 `COleDispatchDriver`�
 
 **标头：** afxdisp.h
 
-## <a name="coledispatchdriverattachdispatch"></a><a name="attachdispatch"></a>COle调度驱动程序：：附加调度
+## <a name="coledispatchdriverattachdispatch"></a><a name="attachdispatch"></a>COleDispatchDriver：： AttachDispatch
 
 调用 `AttachDispatch` 成员函数以将 `IDispatch` 指针附加到 `COleDispatchDriver` 对象。 有关详细信息，请参阅 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
@@ -114,7 +114,7 @@ void AttachDispatch(
 *lpDispatch*<br/>
 指向 OLE `IDispatch` 对象的指针被附加到 `COleDispatchDriver` 对象。
 
-*b自动释放*<br/>
+*bAutoRelease*<br/>
 指定当此对象超出范围时是否要释放调度。
 
 ### <a name="remarks"></a>备注
@@ -125,7 +125,7 @@ void AttachDispatch(
 
 [!code-cpp[NVC_MFCOleContainer#3](../../mfc/codesnippet/cpp/coledispatchdriver-class_1.cpp)]
 
-## <a name="coledispatchdrivercoledispatchdriver"></a><a name="coledispatchdriver"></a>COle调度驱动程序：COle调度驱动程序
+## <a name="coledispatchdrivercoledispatchdriver"></a><a name="coledispatchdriver"></a>COleDispatchDriver：： COleDispatchDriver
 
 构造 `COleDispatchDriver` 对象。
 
@@ -140,25 +140,25 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 *lpDispatch*<br/>
 指向 OLE `IDispatch` 对象的指针被附加到 `COleDispatchDriver` 对象。
 
-*b自动释放*<br/>
+*bAutoRelease*<br/>
 指定当此对象超出范围时是否要释放调度。
 
-*调度Src*<br/>
-对现有`COleDispatchDriver`对象的引用。
+*dispatchSrc*<br/>
+对现有对象的引用 `COleDispatchDriver` 。
 
 ### <a name="remarks"></a>备注
 
-窗体`COleDispatchDriver`（ `LPDISPATCH lpDispatch`， **BOOL**`bAutoRelease` = **TRUE**） 连接[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)接口。
+形式 `COleDispatchDriver` （ `LPDISPATCH lpDispatch` **布尔** `bAutoRelease`  =  **值为 TRUE**）连接[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)接口。
 
-`COleDispatchDriver`窗体 （ **const**`COleDispatchDriver`& `dispatchSrc`）`COleDispatchDriver`复制现有对象并递增引用计数。
+窗体 `COleDispatchDriver` （ **`const`** `COleDispatchDriver` &  `dispatchSrc` ）复制现有 `COleDispatchDriver` 对象并递增引用计数。
 
-窗体`COleDispatchDriver`（ ）`COleDispatchDriver`创建一个对象，`IDispatch`但不连接接口。 在不使用`COleDispatchDriver`（ ） 之前，应`IDispatch`使用[COleDispatchDriver：：创建调度](#createdispatch)或[COleDispatch驱动程序：：附加调度](#attachdispatch)。 有关详细信息，请参阅 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+窗体 `COleDispatchDriver` （）创建 `COleDispatchDriver` 对象，但不连接 `IDispatch` 接口。 在 `COleDispatchDriver` 不使用参数的情况下使用（）之前，应 `IDispatch` 使用[COleDispatchDriver：： CreateDispatch](#createdispatch)或[COleDispatchDriver：： AttachDispatch](#attachdispatch)连接到它。 有关详细信息，请参阅 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ### <a name="example"></a>示例
 
   请参阅 [COleDispatchDriver::CreateDispatch](#createdispatch)的示例。
 
-## <a name="coledispatchdrivercreatedispatch"></a><a name="createdispatch"></a>COle调度驱动程序：创建调度
+## <a name="coledispatchdrivercreatedispatch"></a><a name="createdispatch"></a>COleDispatchDriver：： CreateDispatch
 
 创建一个 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 接口对象，并将其附加到 `COleDispatchDriver` 对象。
 
@@ -174,7 +174,7 @@ BOOL CreateDispatch(
 
 ### <a name="parameters"></a>参数
 
-*Clsid*<br/>
+*clsid*<br/>
 要创建的 `IDispatch` 连接对象的类 ID。
 
 *pError*<br/>
@@ -191,9 +191,9 @@ BOOL CreateDispatch(
 
 [!code-cpp[NVC_MFCOleContainer#4](../../mfc/codesnippet/cpp/coledispatchdriver-class_2.cpp)]
 
-## <a name="coledispatchdriverdetachdispatch"></a><a name="detachdispatch"></a>COle调度驱动程序：:Detach调度
+## <a name="coledispatchdriverdetachdispatch"></a><a name="detachdispatch"></a>COleDispatchDriver：:D etachDispatch
 
-从此对象分离`IDispatch`当前连接。
+`IDispatch`从此对象分离当前连接。
 
 ```
 LPDISPATCH DetachDispatch();
@@ -201,7 +201,7 @@ LPDISPATCH DetachDispatch();
 
 ### <a name="return-value"></a>返回值
 
-指向以前附加的 OLE`IDispatch`对象的指针。
+指向以前附加的 OLE 对象的指针 `IDispatch` 。
 
 ### <a name="remarks"></a>备注
 
@@ -213,7 +213,7 @@ LPDISPATCH DetachDispatch();
 
 [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]
 
-## <a name="coledispatchdrivergetproperty"></a><a name="getproperty"></a>COle调度驱动程序：获取财产
+## <a name="coledispatchdrivergetproperty"></a><a name="getproperty"></a>COleDispatchDriver：： GetProperty
 
 获取*dwDispID*指定的对象属性。
 
@@ -233,13 +233,13 @@ void GetProperty(
 指定要检索的属性。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](#invokehelper)。
 
 *pvProp*<br/>
-将接收属性值的变量的地址。 它必须匹配*vtProp*指定的类型。
+将接收属性值的变量的地址。 它必须与*vtProp*指定的类型匹配。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-## <a name="coledispatchdriverinvokehelper"></a><a name="invokehelper"></a>COle调度驱动程序：：调用帮助器
+## <a name="coledispatchdriverinvokehelper"></a><a name="invokehelper"></a>COleDispatchDriver：： InvokeHelper
 
 在*wFlags*指定的上下文中调用*dwDispID*指定的对象方法或属性。
 
@@ -258,55 +258,55 @@ void AFX_CDECL InvokeHelper(
 标识要调用的方法或属性。
 
 *wFlags*<br/>
-描述对`IDispatch::Invoke`的调用上下文的标志。 . 有关可能值的列表，请参阅[IDispatch：：：在](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)Windows SDK 中的调用中的*wFlags*参数。
+描述调用的上下文的标志 `IDispatch::Invoke` 。 . 有关可能值的列表，请参阅 Windows SDK 中的[IDispatch：： Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)中的*wFlags*参数。
 
-*弗特雷特*<br/>
+*vtRet*<br/>
 指定返回值的类型。 有关可能值，请参阅“备注”部分。
 
 *pvRet*<br/>
 将接收属性值或返回值的变量的地址。 它必须与*vtRet*指定的类型匹配。
 
 *pbParamInfo*<br/>
-指向 null 端接字节字符串的指针，指定*pbParamInfo*之后的参数类型。
+指向以 null 结尾的字节字符串的指针，该字符串指定*pbParamInfo*后面的参数类型。
 
 *...*<br/>
-参数的变量列表，在*pbParamInfo*中指定的类型。
+在*pbParamInfo*中指定的类型的参数的变量列表。
 
 ### <a name="remarks"></a>备注
 
-*pbParamInfo*参数指定传递给方法或属性的参数的类型。 参数的变量列表在语法声明中通过 **...** 进行表示。
+*PbParamInfo*参数指定传递到方法或属性的参数的类型。 参数的变量列表在语法声明中通过 **...** 进行表示。
 
-*vtRet*参数的可能值取自 VARENUM 枚举。 可能的值如下所示：
+*VtRet*参数的可能值取自 VARENUM 枚举。 可能的值如下：
 
 |符号|返回类型|
 |------------|-----------------|
-|VT_EMPTY|**void**|
-|VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_EMPTY|**`void`**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 |VT_CY|**CY**|
-|VT_DATE|**日期**|
+|VT_DATE|DATE|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|**Bool**|
-|VT_VARIANT|**变异**|
+|VT_BOOL|**型**|
+|VT_VARIANT|**变体**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*pbParamInfo*参数是**VTS_** 常量的空间分隔列表。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能值使用 [EVENT_CUSTOM](event-maps.md#event_custom) 宏来列出。
+*PbParamInfo*参数是一个空格分隔列表，其中列出了**VTS_** 常量。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能值使用 [EVENT_CUSTOM](event-maps.md#event_custom) 宏来列出。
 
-此函数将参数转换为 VARIANTARG 值，然后调用 [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果返回的 SCODE（状态代码）DISP_E_EXCEPTION，则此函数将引发一个 COleException 对象;如果返回`IDispatch::Invoke`的 SCODE（状态代码）DISP_E_EXCEPTION，则此函数将引发一个[COleException](../../mfc/reference/coleexception-class.md)对象。否则，它抛出一个[COleDispatch例外](../../mfc/reference/coledispatchexception-class.md)。
+此函数将参数转换为 VARIANTARG 值，然后调用 [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果 DISP_E_EXCEPTION 返回的 SCODE （状态代码） `IDispatch::Invoke` ，则此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象; 否则，将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
-有关详细信息，请参阅[VARIANTARG](/windows/win32/api/oaidl/ns-oaidl-variant)，[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) [、IDispatch：：：调用](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)和 Windows SDK 中的[COM 错误代码结构](/windows/win32/com/structure-of-com-error-codes)。
+有关详细信息，请参阅[VARIANTARG](/windows/win32/api/oaidl/ns-oaidl-variant)、[实现 idispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)、 [IDISPATCH：： Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)和[COM 错误 Windows SDK 代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="example"></a>示例
 
   请参阅 [COleDispatchDriver::CreateDispatch](#createdispatch)的示例。
 
-## <a name="coledispatchdriverm_bautorelease"></a><a name="m_bautorelease"></a>COle调度驱动程序：m_bAutoRelease
+## <a name="coledispatchdriverm_bautorelease"></a><a name="m_bautorelease"></a>COleDispatchDriver：： m_bAutoRelease
 
-如果为 TRUE，则[当](#m_lpdispatch)调用[ReleaseDispatch](#releasedispatch)或销毁此`COleDispatchDriver`对象时，m_lpDispatch访问的 COM 对象将自动释放。
+如果为 TRUE，则在调用[ReleaseDispatch](#releasedispatch)或销毁此对象时，将自动释放由[M_LPDISPATCH](#m_lpdispatch)访问的 COM 对象 `COleDispatchDriver` 。
 
 ```
 BOOL m_bAutoRelease;
@@ -314,17 +314,17 @@ BOOL m_bAutoRelease;
 
 ### <a name="remarks"></a>备注
 
-默认情况下，`m_bAutoRelease`在构造函数中设置为 TRUE。
+默认情况下， `m_bAutoRelease` 在构造函数中将设置为 TRUE。
 
-有关释放 COM 对象的详细信息，请参阅在 Windows SDK 中[实现引用计数](/windows/win32/com/implementing-reference-counting)和[I 未知：：发布](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)。
+有关释放 COM 对象的详细信息，请参阅 Windows SDK 中的[实现引用计数](/windows/win32/com/implementing-reference-counting)和[IUnknown：： Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]
 
-## <a name="coledispatchdriverm_lpdispatch"></a><a name="m_lpdispatch"></a>COle调度驱动程序：m_lpDispatch
+## <a name="coledispatchdriverm_lpdispatch"></a><a name="m_lpdispatch"></a>COleDispatchDriver：： m_lpDispatch
 
-指向附加到此`COleDispatchDriver`的`IDispatch`接口的指针。
+指向 `IDispatch` 附加到此的接口的指针 `COleDispatchDriver` 。
 
 ```
 LPDISPATCH m_lpDispatch;
@@ -332,17 +332,17 @@ LPDISPATCH m_lpDispatch;
 
 ### <a name="remarks"></a>备注
 
-数据`m_lpDispatch`成员是 LPDISPATCH 类型的公共变量。
+`m_lpDispatch`数据成员是 LPDISPATCH 类型的公共变量。
 
-有关详细信息，请参阅 Windows SDK 中的[IDispatch。](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
+有关详细信息，请参阅 Windows SDK 中的[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 。
 
 ### <a name="example"></a>示例
 
-  请参阅[COleDispatch 驱动程序的示例：：附加调度](#attachdispatch)。
+  请参阅[COleDispatchDriver：： AttachDispatch](#attachdispatch)的示例。
 
-## <a name="coledispatchdriveroperator-"></a><a name="operator_eq"></a>COle调度驱动程序：：操作员 |
+## <a name="coledispatchdriveroperator-"></a><a name="operator_eq"></a>COleDispatchDriver：： operator =
 
-将源值复制到对象中`COleDispatchDriver`。
+将源值复制到 `COleDispatchDriver` 对象中。
 
 ```
 const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
@@ -350,12 +350,12 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 
 ### <a name="parameters"></a>参数
 
-*调度Src*<br/>
-指向现有`COleDispatchDriver`对象的指针。
+*dispatchSrc*<br/>
+指向现有对象的指针 `COleDispatchDriver` 。
 
-## <a name="coledispatchdriveroperator-lpdispatch"></a><a name="operator_lpdispatch"></a>COle调度驱动程序：：操作员 LPDISPATCH
+## <a name="coledispatchdriveroperator-lpdispatch"></a><a name="operator_lpdispatch"></a>COleDispatchDriver：： operator LPDISPATCH
 
-访问`IDispatch``COleDispatchDriver`对象的基础指针。
+访问对象的基础 `IDispatch` 指针 `COleDispatchDriver` 。
 
 ```
 operator LPDISPATCH();
@@ -365,9 +365,9 @@ operator LPDISPATCH();
 
 [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]
 
-## <a name="coledispatchdriverreleasedispatch"></a><a name="releasedispatch"></a>COle调度驱动程序：：发布调度
+## <a name="coledispatchdriverreleasedispatch"></a><a name="releasedispatch"></a>COleDispatchDriver：： ReleaseDispatch
 
-释放`IDispatch`连接。 有关详细信息，请参阅实现[IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
+释放 `IDispatch` 连接。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
 ```cpp
 void ReleaseDispatch();
@@ -375,15 +375,15 @@ void ReleaseDispatch();
 
 ### <a name="remarks"></a>备注
 
-如果已为此连接设置了自动释放，则此函数在释放`IDispatch::Release`接口之前调用。
+如果已为此连接设置了自动发布，则此函数将 `IDispatch::Release` 在释放接口之前调用。
 
 ### <a name="example"></a>示例
 
-  请参阅[COleDispatch 驱动程序的示例：：附加调度](#attachdispatch)。
+  请参阅[COleDispatchDriver：： AttachDispatch](#attachdispatch)的示例。
 
-## <a name="coledispatchdriversetproperty"></a><a name="setproperty"></a>COle调度驱动程序：：设置属性
+## <a name="coledispatchdriversetproperty"></a><a name="setproperty"></a>COleDispatchDriver：： SetProperty
 
-设置*dwDispID*指定的 OLE 对象属性。
+设置由*dwDispID*指定的 OLE 对象属性。
 
 ```cpp
 void AFX_CDECL SetProperty(
@@ -400,7 +400,7 @@ void AFX_CDECL SetProperty(
 指定要设置的属性的类型。 有关可能的值，请参阅备注部分 [COleDispatchDriver::InvokeHelper](#invokehelper)。
 
 *...*<br/>
-*vtProp*指定的类型的单个参数。
+由*vtProp*指定的类型的单个参数。
 
 ### <a name="example"></a>示例
 
@@ -408,7 +408,7 @@ void AFX_CDECL SetProperty(
 
 ## <a name="see-also"></a>另请参阅
 
-[MFC 样品 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
-[MFC 样品 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[MFC 示例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)

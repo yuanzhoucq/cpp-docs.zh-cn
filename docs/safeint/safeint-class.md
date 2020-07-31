@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219347"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
@@ -33,7 +33,7 @@ class SafeInt;
 
 ### <a name="parameters"></a>参数
 
-| 模板  |  说明 |
+| 模板  |  描述 |
 |--------|------------|
 | T         |  `SafeInt` 替换的整数或布尔参数的类型。 |
 | E         |  定义错误处理策略的枚举数据类型。 |
@@ -187,7 +187,7 @@ class SafeInt;
 
 - `((uint)~0) > -1`
 
-第一个语句解析为 true****，而第二个语句则解析为 `false`。 0 的按位求反结果为 0xFFFFFFFF。 在第二个语句中，默认比较运算符将 0xFFFFFFFF 与 0xFFFFFFFF 进行比较，并认为它们相等。 类的比较运算符 `SafeInt` 认识到第二个参数为负值，但第一个参数未签名。 因此，尽管位表示形式完全相同，但 `SafeInt` 逻辑运算符认识到无符号整数大于-1。
+第一条语句解析为 **`true`** ，但第二条语句解析为 **`false`** 。 0 的按位求反结果为 0xFFFFFFFF。 在第二个语句中，默认比较运算符将 0xFFFFFFFF 与 0xFFFFFFFF 进行比较，并认为它们相等。 `SafeInt` 类的比较运算符了解到，第二个参数为负数，而第一个参数则无符号。 因此，尽管位表示形式完全相同，但 `SafeInt` 逻辑运算符了解到无符号整数大于 -1。
 
 结合使用 `SafeInt` 类和 `?:` 三元运算符时要谨慎。 以下面的代码行为例。
 
@@ -201,7 +201,7 @@ Int x = flag ? SafeInt<unsigned int>(y) : -1;
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-如果 `flag` 为 `false`，编译器会抛出异常，而不是将值 -1 赋给 `x`。 因此，为了避免此行为，请使用如下正确的代码行。
+如果 `flag` 为 **`false`** ，则编译器会引发异常，而不是将值-1 赋给 `x` 。 因此，为了避免此行为，请使用如下正确的代码行。
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;

@@ -33,19 +33,19 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 2eb5b908d66b221e9efae20ba04e2963805798ab
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: 86324d126fa1c3b659e6500579c4a1d220874094
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182741"
 ---
 # <a name="concurrency-namespace-functions"></a>并发命名空间函数
 
 ||||
 |-|-|-|
 |[分配](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
-|[EnableTracing](#enabletracing)|免费|[GetExecutionContextId](#getexecutioncontextid)|
+|[EnableTracing](#enabletracing)|[免费](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
 |[cancel_current_task](#cancel_current_task)|[清除](#clear)|[create_async](#create_async)|
@@ -54,7 +54,7 @@ ms.locfileid: "86446601"
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[接收](#receive)|
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[收](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[再](#wait)|
@@ -110,7 +110,7 @@ bool asend(
 
 ### <a name="return-value"></a>返回值
 
-如果在返回方法之前接受了消息，**则为 true** ; 否则为**false** 。
+**`true`** 如果在返回方法之前接受了消息，则 **`false`** 为; 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -199,7 +199,7 @@ IResourceManager* __cdecl CreateResourceManager();
 
 ## <a name="create_task"></a><a name="create_task"></a>create_task
 
-创建 PPL[任务](task-class.md)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 出于便利性提供该函数，因为它允许在创建任务时使用 `auto` 关键字。
+创建 PPL[任务](task-class.md)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 提供此方法主要是为了方便，因为它允许在 **`auto`** 创建任务时使用关键字。
 
 ```cpp
 template<typename T>
@@ -408,7 +408,7 @@ inline void interruption_point();
 
 ## <a name="is_current_task_group_canceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
-返回在当前上下文中进行内联执行的任务组是否正处于活动取消的过程中（或不久将取消）的指示。 请注意，如果当前上下文中没有当前正在进行内联执行的任务组，则将返回 `false`。
+返回在当前上下文中进行内联执行的任务组是否正处于活动取消的过程中（或不久将取消）的指示。 请注意，如果当前上下文中没有当前正在内联执行的任务组， **`false`** 则将返回。
 
 ```cpp
 bool __cdecl is_current_task_group_canceling();
@@ -416,7 +416,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>返回值
 
-如果正在取消当前正在执行的任务组，**则为 true** ; 否则为**false** 。
+**`true`** 如果要取消当前正在执行的任务组，则为 **`false`** ; 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -679,7 +679,7 @@ inline void parallel_buffered_sort(
 与 c + + 标准库兼容的内存分配器的实例。
 
 *_Func*<br/>
-用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。 该比较器函数必须对序列中的元素对进行严格弱排序。
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数，并且 **`true`** 在满足时返回， **`false`** 未满足时返回。 该比较器函数必须对序列中的元素对进行严格弱排序。
 
 *_Chunk_size*<br/>
 最小大小的区块将拆分为两个区块用于并行执行。
@@ -767,7 +767,7 @@ void parallel_for(
 要在每次迭代时执行的函数。 这可能是 lambda 表达式、函数指针或支持具有签名的函数调用运算符版本的任何对象 `void operator()(_Index_type)` 。
 
 *_Part*<br/>
-对分区程序对象的引用。 参数可以是 `const` [auto_partitioner](auto-partitioner-class.md) `&` 、 `const` [static_partitioner](static-partitioner-class.md) `&` 、 `const` [simple_partitioner](simple-partitioner-class.md) `&` 或[affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用的是[affinity_partitioner](affinity-partitioner-class.md)对象，则引用必须是非常量的左值引用，以便算法可以存储状态以供将来的循环再次使用。
+对分区程序对象的引用。 参数可以是 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` 、 **`const`** [static_partitioner](static-partitioner-class.md) `&` 、 **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 或[affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用的是[affinity_partitioner](affinity-partitioner-class.md)对象，则引用必须是非常量的左值引用，以便算法可以存储状态以供将来的循环再次使用。
 
 ### <a name="remarks"></a>备注
 
@@ -811,7 +811,7 @@ void parallel_for_each(
 应用于范围中的每个元素的用户定义函数对象。
 
 *_Part*<br/>
-对分区程序对象的引用。 参数可以是 `const` [auto_partitioner](auto-partitioner-class.md) `&` 、 `const` [static_partitioner](static-partitioner-class.md) `&` 、 `const` [simple_partitioner](simple-partitioner-class.md) `&` 或[affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用的是[affinity_partitioner](affinity-partitioner-class.md)对象，则引用必须是非常量的左值引用，以便算法可以存储状态以供将来的循环再次使用。
+对分区程序对象的引用。 参数可以是 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` 、 **`const`** [static_partitioner](static-partitioner-class.md) `&` 、 **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 或[affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用的是[affinity_partitioner](affinity-partitioner-class.md)对象，则引用必须是非常量的左值引用，以便算法可以存储状态以供将来的循环再次使用。
 
 ### <a name="remarks"></a>备注
 
@@ -1209,7 +1209,7 @@ inline void parallel_sort(
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *_Func*<br/>
-用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。 该比较器函数必须对序列中的元素对进行严格弱排序。
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数，并且 **`true`** 在满足时返回， **`false`** 未满足时返回。 该比较器函数必须对序列中的元素对进行严格弱排序。
 
 *_Chunk_size*<br/>
 要拆分为两个以并行执行的块区的最小大小。
@@ -1325,7 +1325,7 @@ first2,
 用户定义的应用于源范围内每个元素的一元函数对象。
 
 *_Part*<br/>
-对分区程序对象的引用。 参数可以是 `const` [auto_partitioner](auto-partitioner-class.md) `&` 、 `const` [static_partitioner](static-partitioner-class.md) `&` 、 `const` [simple_partitioner](simple-partitioner-class.md) `&` 或[affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用的是[affinity_partitioner](affinity-partitioner-class.md)对象，则引用必须是非常量的左值引用，以便算法可以存储状态以供将来的循环再次使用。
+对分区程序对象的引用。 参数可以是 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` 、 **`const`** [static_partitioner](static-partitioner-class.md) `&` 、 **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 或[affinity_partitioner](affinity-partitioner-class.md) `&` 如果使用的是[affinity_partitioner](affinity-partitioner-class.md)对象，则引用必须是非常量的左值引用，以便算法可以存储状态以供将来的循环再次使用。
 
 *first2*<br/>
 一种输入迭代器，用于定址所操作的第二个源范围内第一个元素的位置。
@@ -1452,7 +1452,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="return-value"></a>返回值
 
-如果接受消息，**则为 true** ; 否则为**false** 。
+**`true`** 如果消息被接受，则 **`false`** 为; 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -1605,7 +1605,7 @@ void Trace_agents_register_name(
 
 ## <a name="try_receive"></a><a name="try_receive"></a>try_receive
 
-常规尝试-接收实现，允许上下文仅查找来自一个源的数据并筛选所接受的值。 如果数据未就绪，则方法将返回**false**。
+常规尝试-接收实现，允许上下文仅查找来自一个源的数据并筛选所接受的值。 如果数据未就绪，则方法将返回 **`false`** 。
 
 ```cpp
 template <class T>
@@ -1643,7 +1643,7 @@ bool try_receive(
 
 ### <a name="return-value"></a>返回值
 
-一个 `bool` 值，该值指示是否在中放置负载 `_value` 。
+一个 **`bool`** 值，该值指示是否在中放置负载 `_value` 。
 
 ### <a name="remarks"></a>备注
 
@@ -1696,7 +1696,7 @@ auto when_all(
 
 ### <a name="return-value"></a>返回值
 
-在所有输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::vector<T>>`。 如果输入任务的类型为 `void`，则输出任务也将是 `task<void>`。
+在所有输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::vector<T>>`。 如果输入任务的类型为， **`void`** 则输出任务也将是 `task<void>` 。
 
 ### <a name="remarks"></a>备注
 
@@ -1749,7 +1749,7 @@ auto when_any(
 
 ### <a name="return-value"></a>返回值
 
-在任意输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::pair<T, size_t>>>`，其中的 pair 的第一个元素是正在完成的任务的结果，第二个元素是已完成的任务的索引。 如果输入任务的类型为 `void`，则输出为 `task<size_t>`，其中的结果是正在完成的任务的索引。
+在任意输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::pair<T, size_t>>>`，其中的 pair 的第一个元素是正在完成的任务的结果，第二个元素是已完成的任务的索引。 如果输入任务的类型为 **`void`** ，则输出为 `task<size_t>` ，其中的结果是完成任务的索引。
 
 ### <a name="remarks"></a>备注
 
@@ -1757,6 +1757,6 @@ auto when_any(
 
 有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6e31220fa6b15d958e94e82322467cd73e1c3a6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215694"
 ---
-# <a name="isdefaultconstructible-class"></a>is_default_constructible 类
+# <a name="is_default_constructible-class"></a>is_default_constructible 类
 
 测试类型是否具有默认构造函数。
 
@@ -31,7 +31,7 @@ struct is_default_constructible;
 
 ## <a name="remarks"></a>备注
 
-如果类型*T*是具有默认构造函数的类类型, 则类型谓词的实例为 true; 否则为 false。 这等效于谓词 `is_constructible<T>`。 类型*T*必须是完整类型、**无效**或未知绑定的数组。
+如果类型*T*是具有默认构造函数的类类型，则类型谓词的实例为 true; 否则为 false。 这等效于谓词 `is_constructible<T>`。 类型*T*必须是完整类型、 **`void`** 或未知绑定的数组。
 
 ## <a name="example"></a>示例
 
@@ -69,10 +69,10 @@ is_default_constructible<Simple2> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

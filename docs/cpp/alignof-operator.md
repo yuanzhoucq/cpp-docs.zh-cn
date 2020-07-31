@@ -1,5 +1,5 @@
 ---
-title: __alignof 运算符
+title: alignof 运算符
 ms.date: 12/17/2018
 f1_keywords:
 - __alignof_cpp
@@ -13,49 +13,44 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 6bddce29dd97d965303a58cc72aa97dfe8cbd8d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a2046774674858211ae89abb9b4cfc7b09c0a6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181533"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227629"
 ---
-# <a name="__alignof-operator"></a>__alignof 运算符
+# <a name="alignof-operator"></a>alignof 运算符
 
-C + + 11 引入了**alignof**运算符，该运算符返回指定类型的对齐方式（以字节为单位）。 为实现最大的可移植性，应使用 alignof 运算符，而不是特定于 Microsoft 的 __alignof 运算符。
-
-**Microsoft 专用**
-
-返回 `size_t` 类型的值，该值是类型的对齐要求。
+**`alignof`** 运算符将指定类型的对齐方式返回为类型的值 **`size_t`** 。
 
 ## <a name="syntax"></a>语法
 
 ```cpp
-  __alignof( type )
+alignof( type )
 ```
 
 ## <a name="remarks"></a>备注
 
 例如：
 
-|表达式|值|
-|----------------|-----------|
-|**__alignof （字符）**|1|
-|**__alignof （short）**|2|
-|**__alignof （int）**|4|
-|**__alignof （\__int64）**|8|
-|**__alignof （float）**|4|
-|**__alignof （双精度型）**|8|
-|**__alignof （char\*）**|4|
+| 表达式 | 值 |
+|--|--|
+| **`alignof( char )`** | 1 |
+| **`alignof( short )`** | 2 |
+| **`alignof( int )`** | 4 |
+| **`alignof( long long )`** | 8 |
+| **`alignof( float )`** | 4 |
+| **`alignof( double )`** | 8 |
 
-**__Alignof**值与基本类型 `sizeof` 的值相同。 但是，请考虑该示例：
+**`alignof`** 值与 **`sizeof`** 用于基本类型的值相同。 但是，请考虑该示例：
 
 ```cpp
 typedef struct { int a; double b; } S;
-// __alignof(S) == 8
+// alignof(S) == 8
 ```
 
-在这种情况下， **__alignof**值是结构中最大元素的对齐要求。
+在这种情况下， **`alignof`** 值是结构中的最大元素的对齐要求。
 
 同样，
 
@@ -63,17 +58,15 @@ typedef struct { int a; double b; } S;
 typedef __declspec(align(32)) struct { int a; } S;
 ```
 
-`__alignof(S)` 等于 `32`。
+`alignof(S)` 等于 `32`。
 
-**__Alignof**的一种用途是作为自己的内存分配例程之一的参数。 例如，假定下面定义的结构 `S`，您可以调用名为 `aligned_malloc` 的内存分配例程以在特定对齐边界上分配内存。
+一种用途 **`alignof`** 是作为自己的内存分配例程之一的参数。 例如，假定下面定义的结构 `S`，您可以调用名为 `aligned_malloc` 的内存分配例程以在特定对齐边界上分配内存。
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; double b; } S;
 int n = 50; // array size
-S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
+S* p = (S*)aligned_malloc(n * sizeof(S), alignof(S));
 ```
-
-为了与早期版本兼容， **_alignof**是 **__alignof**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
 
 有关修改对齐方式的详细信息，请参阅：
 
@@ -83,7 +76,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [/Zp（结构成员对齐）](../build/reference/zp-struct-member-alignment.md)
+- [/Zp （结构成员对齐）](../build/reference/zp-struct-member-alignment.md)
 
 - [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)（特定于 x64）
 
@@ -91,9 +84,13 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 
 - [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
-**结束 Microsoft 专用**
+### <a name="microsoft-specific"></a>Microsoft 专用
 
-## <a name="see-also"></a>另请参阅
+**`alignof`** 和 **`__alignof`** 是 Microsoft 编译器中的同义词。 在 c + + 11 中成为标准的一部分之前，特定于 Microsoft 的 **`__alignof`** 操作员提供此功能。 为了获得最大的可移植性，应使用 **`alignof`** 运算符而不是特定于 Microsoft 的 **`__alignof`** 运算符。
+
+对于与以前版本的兼容性，为， **`_alignof`** **`__alignof`** 除非指定编译器选项 " [ `/Za` \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"，否则将是同义词。
+
+## <a name="see-also"></a>请参阅
 
 [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

@@ -6,16 +6,16 @@ f1_keywords:
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234089"
 ---
 # <a name="isinf"></a>isinf
 
-确定浮点值是否为无穷大。
+确定浮点值是否为无穷值。
 
 ## <a name="syntax"></a>语法
 
@@ -37,11 +37,11 @@ inline bool isinf(
 
 ## <a name="return-value"></a>返回值
 
-**isinf**返回非零值 (**true**在C++代码) 如果该参数*x*是正或负无穷大。 **isinf**返回 0 (**false**在C++代码) 如果该参数是有限的或 NAN。 正常和次正常的浮点值被视为有限。
+**isinf** **`true`** 如果参数*x*为正无穷或负无穷，则 isinf 返回非零值（在 c + + 代码中为）。 **isinf** **`false`** 如果参数是有限的或 NAN，则 isinf 将返回0（在 c + + 代码中）。 正常和次正常浮点值都被视为有限值。
 
 ## <a name="remarks"></a>备注
 
-**isinf**是一个宏时编译为 C 和内联模板函数在作为编译时C++。
+在编译为 C 时， **isinf**是一个宏，在编译为 c + + 时为内联模板函数。
 
 ## <a name="requirements"></a>要求
 
@@ -49,9 +49,9 @@ inline bool isinf(
 |--------------|---------------------------|-------------------------------|
 |**isinf**|\<math.h>|\<math.h> 或 \<cmath>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

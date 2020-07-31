@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446735"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230371"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 
@@ -83,7 +83,7 @@ namespace concurrency;
 |[invalid_link_target 类](invalid-link-target-class.md)|此类描述调用消息块的 `link_target` 方法且消息块无法链接到目标时引发的异常。 这可能是因为超出消息块允许的链接数或两次尝试将特定目标链接到同一源。|
 |[invalid_multiple_scheduling 类](invalid-multiple-scheduling-class.md)|此类描述在没有对 `wait` 或 `run_and_wait` 方法进行干预调用的情况下，通过 `task_group` 或 `structured_task_group` 对象的 `run` 方法对 `task_handle` 对象进行多次计划时引发的异常。|
 |[invalid_operation 类](invalid-operation-class.md)|此类描述执行无效操作时引发的异常，由并发运行时引发的其他异常类型不会对此异常进行更为准确的描述。|
-|[invalid_oversubscribe_operation 类](invalid-oversubscribe-operation-class.md)|此类描述在先前没有对 `Context::Oversubscribe` 方法进行调用（`_BeginOversubscription` 参数设置为 `true`）的情况下，调用 `Context::Oversubscribe` 方法（`_BeginOversubscription` 参数设置为 `false`）时引发的异常。|
+|[invalid_oversubscribe_operation 类](invalid-oversubscribe-operation-class.md)|此类描述在以下情况下引发的异常：在 `Context::Oversubscribe` `_BeginOversubscription` 参数设置为的 **`false`** 情况下调用方法，且 `Context::Oversubscribe` `_BeginOversubscription` 参数设置为 **`true`** 。|
 |[invalid_scheduler_policy_key 类](invalid-scheduler-policy-key-class.md)|此类描述无效或未知键传递给 `SchedulerPolicy` 对象构造函数，或 `SchedulerPolicy` 对象的 `SetPolicyValue` 方法被传递了必须使用其他方式（例如 `SetConcurrencyLimits` 方法）进行更改的键时引发的异常。|
 |[invalid_scheduler_policy_thread_specification 类](invalid-scheduler-policy-thread-specification-class.md)|此类描述尝试设置 `SchedulerPolicy` 对象的并发限制，以便 `MinConcurrency` 键的值小于 `MaxConcurrency` 键的值时引发的异常。|
 |[invalid_scheduler_policy_value 类](invalid-scheduler-policy-value-class.md)|此类描述 `SchedulerPolicy` 对象的策略键设置为对于该键无效的值时引发的异常。|
@@ -179,7 +179,7 @@ namespace concurrency;
 |[asend 函数](concurrency-namespace-functions.md#asend)|已重载。 异步发送操作，计划任务以将数据传播到目标块。|
 |[cancel_current_task 函数](concurrency-namespace-functions.md#cancel_current_task)|获取当前执行的任务。 此函数可从任务主体中进行调用，以便中止任务的执行并使其进入 `canceled` 状态。<br /><br /> 不支持从 `task` 主体外部调用此函数的情况。 这样做将导致应用程序中出现未定义的行为，例如崩溃或无响应。|
 |[create_async 函数](concurrency-namespace-functions.md#create_async)|基于用户提供的 lambda 或函数对象创建 Windows 运行时异步构造。 `create_async` 的返回类型是基于传递给方法的 lambda 的签名的 `IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^` 之一。|
-|[create_task 函数](concurrency-namespace-functions.md#create_task)|已重载。 创建 PPL[任务](task-class.md)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 出于便利性提供该函数，因为它允许在创建任务时使用 `auto` 关键字。|
+|[create_task 函数](concurrency-namespace-functions.md#create_task)|已重载。 创建 PPL[任务](task-class.md)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 提供此方法主要是为了方便，因为它允许在 **`auto`** 创建任务时使用关键字。|
 |[CreateResourceManager 函数](concurrency-namespace-functions.md#createresourcemanager)|返回表示并发运行时的资源管理器的单一实例的接口。 资源管理器负责将资源分配给想要相互合作的计划程序。|
 |[DisableTracing 函数](concurrency-namespace-functions.md#disabletracing)|在并发运行时中禁用跟踪。 此函数被弃用，因为默认注销 ETW 跟踪。|
 |[EnableTracing 函数](concurrency-namespace-functions.md#enabletracing)|在并发运行时中启用跟踪。 此函数被弃用，因为现在默认启用 ETW 跟踪。|
@@ -191,7 +191,7 @@ namespace concurrency;
 |[GetProcessorNodeCount 函数](concurrency-namespace-functions.md#getprocessornodecount)|返回基础系统上的 NUMA 节点数或处理器包数。|
 |[GetSchedulerId 函数](concurrency-namespace-functions.md#getschedulerid)|返回可以分配给实现 `IScheduler` 接口的计划程序的唯一标识符。|
 |[interruption_point 函数](concurrency-namespace-functions.md#interruption_point)|创建取消的中断点。 如果正在调用此函数的上下文中执行取消操作，则此函数将引发内部异常，该内部异常中止当前执行并行工作的执行。 如果没有正在执行取消操作，则函数不执行任何操作。|
-|[is_current_task_group_canceling 函数](concurrency-namespace-functions.md#is_current_task_group_canceling)|返回在当前上下文中进行内联执行的任务组是否正处于活动取消的过程中（或不久将取消）的指示。 请注意，如果当前上下文中没有当前正在进行内联执行的任务组，则将返回 `false`。|
+|[is_current_task_group_canceling 函数](concurrency-namespace-functions.md#is_current_task_group_canceling)|返回在当前上下文中进行内联执行的任务组是否正处于活动取消的过程中（或不久将取消）的指示。 请注意，如果当前上下文中没有当前正在内联执行的任务组， **`false`** 则将返回。|
 |[make_choice 函数](concurrency-namespace-functions.md#make_choice)|已重载。 从可选的 `choice` 或 `Scheduler` 及两个或更多输入源构造 `ScheduleGroup` 消息块。|
 |[make_greedy_join 函数](concurrency-namespace-functions.md#make_greedy_join)|已重载。 从可选的 `greedy multitype_join` 或 `Scheduler` 及两个或更多输入源构造 `ScheduleGroup` 消息块。|
 |[make_join 函数](concurrency-namespace-functions.md#make_join)|已重载。 从可选的 `non_greedy multitype_join` 或 `Scheduler` 及两个或更多输入源构造 `ScheduleGroup` 消息块。|
@@ -258,6 +258,6 @@ namespace concurrency;
 
 **标头：** concrt、concrtrm.h、concurrent_priority_queue、concurrent_queue、concurrent_unordered_set concurrent_unordered_map、concurrent_vector、internal_concurrent_hash、internal_split_ordered_list、pplcancellation_token、pplconcrt.h、pplinterface.h、、、ppltasks.h、、、、、、、、
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [引用](reference-concurrency-runtime.md)

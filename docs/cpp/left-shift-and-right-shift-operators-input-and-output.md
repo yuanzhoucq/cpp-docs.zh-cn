@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4cdb353c950313396b331dc7ba01b3ea392ed0f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186953"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左移和右移运算符（ &gt; &gt; 和 &lt; &lt; ）
 
@@ -176,7 +176,7 @@ int main() {
 
 移位运算符两侧的表达式必须是整数类型。 根据[标准转换](standard-conversions.md)中所述的规则执行整型提升。 结果的类型与提升的*移位表达式*的类型相同。
 
-在下面的示例中， **char**类型的变量被提升为**int**。
+在下面的示例中，类型的变量 **`char`** 被提升为 **`int`** 。
 
 ```cpp
 #include <iostream>

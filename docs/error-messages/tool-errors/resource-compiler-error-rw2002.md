@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31962e3e7e4af63ec07ad569f7f72782b194032c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225171"
 ---
 # <a name="resource-compiler-error-rw2002"></a>资源编译器错误 RW2002
 
@@ -21,7 +21,7 @@ ms.locfileid: "80190685"
 
 1. **需要加速器类型（ASCII 或 VIRTKEY）**
 
-   `type` ACCELERATORS **语句中的** 字段中必须包含 ASCII 或 VIRTKEY 值。
+   **加速器**语句中的*类型*字段必须包含 ASCII 或 VIRTKEY 值。
 
 1. **快捷键对应表中需要 BEGIN**
 
@@ -31,7 +31,7 @@ ms.locfileid: "80190685"
 
    **BEGIN**关键字必须紧跟在**对话框**关键字后面。
 
-1. **菜单中需要 BEGIN**
+1. **MENU 中应具有 BEGIN**
 
    **BEGIN** 关键字必须紧跟 **MENU** 关键字。
 
@@ -49,7 +49,7 @@ ms.locfileid: "80190685"
 
 1. **控制字符超出范围 [^ A-^ Z]**
 
-   **ACCELERATORS** 语句中的控制字符无效。 插入符号 ( **^** ) 后面的字符必须介于 A 和 Z（包含 A 和 Z）。
+   **ACCELERATORS** 语句中的控制字符无效。 插入符号（）后面的字符 **^** 必须介于 A 和 Z （含）之间。
 
 1. **不允许空菜单**
 
@@ -59,17 +59,17 @@ ms.locfileid: "80190685"
 
    **End**关键字必须出现在**对话**语句的末尾。 请确保前面的语句中没有左引号。
 
-1. **菜单中需要结束**
+1. **MENU 中应具有 END**
 
    **END** 关键字必须出现在 **MENU** 语句的末尾。 确保没有任何左引号或不匹配的 **BEGIN** 和 **END** 语句对。
 
 1. **快捷键对应表中需要逗号**
 
-   资源编译器在 `event` ACCELERATORS *语句中的* 与 **idvalue** 字段之间需要逗号。
+   资源编译器要求**加速器**语句中的 "*事件*" 和 " *idvalue* " 字段之间有一个逗号。
 
 1. **应为控件类名**
 
-   **对话**语句中**控制**语句的 "`class`" 字段必须是以下类型之一：按钮、组合框、编辑、LISTBOX、滚动条、静态或用户定义。 请确保类拼写正确。
+   **对话**语句中**控制**语句的 "*类*" 字段必须是以下类型之一：按钮、组合框、编辑、LISTBOX、滚动条、静态或用户定义。 请确保类拼写正确。
 
 1. **应输入字体名称**
 
@@ -77,7 +77,7 @@ ms.locfileid: "80190685"
 
 1. **菜单项的预期 ID 值**
 
-   “菜单” 语句必须包含 *menuID* 字段，该字段指定用于标识菜单资源的名称或数字。
+   “菜单” **** 语句必须包含 *menuID* 字段，该字段指定用于标识菜单资源的名称或数字。
 
 1. **应为菜单字符串**
 
@@ -85,7 +85,7 @@ ms.locfileid: "80190685"
 
 1. **应为数值命令值**
 
-   资源编译器需要**加速器**语句中的数字*idvalue*字段。 请确保已使用 `#define` 常量来指定值，并且常量拼写正确。
+   资源编译器需要**加速器**语句中的数字*idvalue*字段。 请确保已使用 `#define` 常量指定值并且常量拼写正确。
 
 1. **字符串表中的预期数值常量**
 
@@ -105,19 +105,19 @@ ms.locfileid: "80190685"
 
 1. **应输入字符串或常量快捷键命令**
 
-   资源编译器无法确定为加速器设置的项的种类。 `event` ACCELERATORS **语句中的** 字段可能无效。
+   资源编译器无法确定为加速器设置的项的种类。 **加速器**语句中的*事件*字段可能无效。
 
 1. **应为 ID 数量**
 
-   **对话框**语句中控制语句的 `id` 字段的值应为数字。 请确保有一个数字或 `#define` 语句作为控件 ID。
+   应为**对话框**语句中控制语句的*id*字段提供一个数字。 请确保有一个数字或 `#define` 语句作为控件 ID。
 
 1. **对话框类中需要带引号的字符串**
 
-   `class` DIALOG **语句中 CLASS 选项的** 字段必须为括在双引号内整数或字符串。
+   **DIALOG**语句中 class 选项的 "*类*" 字段必须是整数或字符串，用双引号引起来。
 
 1. **对话框标题中需要带引号的字符串**
 
-   `captiontext` DIALOG **语句中 CAPTION 选项的** 字段必须为括在双引号内的 ASCII 字符字符串。
+   **DIALOG**语句中 CAPTION 选项的*captiontext*字段必须是括在双引号内的 ASCII 字符字符串。
 
 1. **找不到文件：文件名**
 
@@ -125,15 +125,15 @@ ms.locfileid: "80190685"
 
 1. **字体名称必须是序号**
 
-   FONT 语句中的*pointsize*字段必须是整数，而不能是字符串。
+   *FONT* 语句中的 Pointsize 字段必须为整数，而不是字符串。
 
 1. **加速器无效**
 
-   `event` ACCELERATORS **语句中的** 字段无法识别或长度超过两个字符。
+   **加速器**语句中的*事件*字段无法识别或长度超过两个字符。
 
 1. **加速器类型（ASCII 或 VIRTKEY）无效**
 
-   `type` ACCELERATORS **语句中的** 字段中必须包含 ASCII 或 VIRTKEY 值。
+   **加速器**语句中的*类型*字段必须包含 ASCII 或 VIRTKEY 值。
 
 1. **控制字符无效**
 

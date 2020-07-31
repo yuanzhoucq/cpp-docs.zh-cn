@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172173"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219685"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -29,7 +29,7 @@ __identifier(C++_keyword)
 
 ### <a name="remarks"></a>备注
 
-允许对不是关键字的标识符使用 _identifier 关键字，但强烈建议不要这样做。
+允许对不是关键字的标识符使用 _identifier**** 关键字，但强烈建议不要这样做。
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
@@ -41,7 +41,7 @@ __identifier(C++_keyword)
 
 **示例**
 
-在下面的示例中，名为“template”的类在 C# 中创建，并作为 DLL 分发。 在使用 template 类的 C++/CLI 程序中，_identifier 关键字掩盖了 template 是标准 C++ 关键字这一事实。
+在下面的示例中，使用 c # 创建一个名为的类 `template` ，并将其作为 DLL 进行分发。 在使用类的 c + +/CLI 程序中 `template` ， **`__identifier`** 关键字隐藏 `template` 了是标准 c + + 关键字的事实。
 
 ```csharp
 // identifier_template.cs
@@ -65,7 +65,7 @@ int main() {
 
 ### <a name="remarks"></a>备注
 
-_identifier 关键字对 `/clr` 编译器选项有效。
+_identifier**** 关键字对 `/clr` 编译器选项有效。
 
 ### <a name="requirements"></a>要求
 
@@ -73,7 +73,7 @@ _identifier 关键字对 `/clr` 编译器选项有效。
 
 ### <a name="examples"></a>示例
 
-在下面的示例中，名为“template”的类在 C# 中创建，并作为 DLL 分发。 在使用 template 类的 C++/CLI 程序中，_identifier 关键字掩盖了 template 是标准 C++ 关键字这一事实。
+在下面的示例中，使用 c # 创建一个名为的类 `template` ，并将其作为 DLL 进行分发。 在使用类的 c + +/CLI 程序中 `template` ， **`__identifier`** 关键字隐藏 `template` 了是标准 c + + 关键字的事实。
 
 ```csharp
 // identifier_template.cs
@@ -96,5 +96,5 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

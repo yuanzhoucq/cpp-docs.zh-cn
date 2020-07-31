@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226098"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213289"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 
@@ -25,7 +25,7 @@ ms.locfileid: "84226098"
 
    - 可选存储类说明符。
 
-   - 可选**const**和**volatile**说明符。
+   - 可选 **`const`** 和 **`volatile`** 说明符。
 
    - 类型说明符：类型的名称。 这是要指向的成员的类型，而不是类。
 
@@ -39,7 +39,7 @@ ms.locfileid: "84226098"
 
    - __`*`__ 运算符。
 
-   - 可选**const**和**volatile**说明符。
+   - 可选 **`const`** 和 **`volatile`** 说明符。
 
    - 命名指向成员的指针的标识符。
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-在前面的示例中， `pwCaption` 是指向类型为的类的任何成员的指针 `Window` `char*` 。 类型 `pwCaption` 不是 `char * Window::*`。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。
+在前面的示例中， `pwCaption` 是指向类型为的类的任何成员的指针 `Window` **`char*`** 。 类型 `pwCaption` 不是 `char * Window::*`。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

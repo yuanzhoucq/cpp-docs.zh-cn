@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245834"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187954"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>如何：创建和使用 shared_ptr 实例
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>示例 1
 
-如有可能，第一次创建内存资源时，请使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函数创建 `shared_ptr`。 `make_shared` 为异常安全。 它使用同一调用为控制块和资源分配内存，这会减少构造开销。 如果不使用 `make_shared`，则必须先使用显式 `new` 表达式来创建对象，然后才能将其传递到 `shared_ptr` 构造函数。 以下示例演示了同时声明和初始化 `shared_ptr` 和新对象的各种方式。
+如有可能，第一次创建内存资源时，请使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函数创建 `shared_ptr`。 `make_shared` 异常安全。 它使用同一调用为控制块和资源分配内存，这会减少构造开销。 如果不使用，则在将 `make_shared` **`new`** 对象传递给构造函数之前，必须使用显式表达式来创建对象 `shared_ptr` 。 以下示例演示了同时声明和初始化 `shared_ptr` 和新对象的各种方式。
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -90,7 +90,7 @@ int main()
 
 ## <a name="example-4"></a>示例 4
 
-您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 来转换 `shared_ptr`。 这些函数类似于 `dynamic_cast`、`static_cast` 和 `const_cast` 运算符。 以下示例演示如何测试基类的 `shared_ptr` 向量中每个元素的派生类型，然后复制元素并显示有关它们的信息。
+您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 来转换 `shared_ptr`。 这些函数类似于 **`dynamic_cast`** 、 **`static_cast`** 和 **`const_cast`** 运算符。 以下示例演示如何测试基类的 `shared_ptr` 向量中每个元素的派生类型，然后复制元素并显示有关它们的信息。
 
 [!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 

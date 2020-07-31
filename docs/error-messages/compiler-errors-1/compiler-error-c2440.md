@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 75b2ba62182a33137b433c836b4acf7c9e1fc231
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448034"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207974"
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
 
-conversion： 无法从 type1 转换为 type2
+"转换"：不能从 "type1" 转换为 "type2"
 
-编译器不能强制转换从`type1`到`type2`。
+编译器无法从强制转换 `type1` 为 `type2` 。
 
 ## <a name="example"></a>示例
 
-如果你尝试初始化非常量会导致 C2440 `char*` (或`wchar_t*`) 通过使用中的字符串文字C++代码，当编译器一致性选项[/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)设置。 在 C 中，字符串文字的类型是数组`char`，但在C++，它是数组`const char`。 此示例生成 C2440:
+如果在 **`char*`** `wchar_t*` 设置编译器一致性选项[/zc： strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)时尝试使用 c + + 代码中的字符串来初始化非常量（或），则可能会导致 C2440。 在 C 中，字符串文本的类型为的数组 **`char`** ，但在 c + + 中，它是的数组 `const char` 。 此示例生成 C2440：
 
 ```cpp
 // C2440s.cpp
@@ -40,7 +40,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果你尝试将一个指针转换为成员添加到 void *，也会导致 C2440。 下一步的示例生成 C2440:
+如果尝试将指向成员的指针转换为 void *，也会导致 C2440。 下一个示例生成 C2440：
 
 ```cpp
 // C2440.cpp
@@ -63,7 +63,7 @@ public:
 
 ## <a name="example"></a>示例
 
-如果你尝试从只向前声明但未定义的类型强制转换还会导致 C2440。 此示例生成 C2440:
+如果尝试强制转换类型，而该类型只是已声明但未定义的类型，则也会导致 C2440。 此示例生成 C2440：
 
 ```cpp
 // c2440a.cpp
@@ -78,13 +78,13 @@ Base * func(Derived * d) {
 
 ## <a name="example"></a>示例
 
-第 15 和 16 的下一个示例行上的 C2440 错误限定与`Incompatible calling conventions for UDT return value`消息。 一个*UDT*是用户定义类型，如类、 结构或联合。 UDT 的调用约定指定与实际的调用约定的 udt 并且涉及函数指针前向声明冲突的返回类型中，会导致这些类型的不兼容性错误。
+下一个示例中第15行和第16行的 C2440 错误都是通过消息进行限定的 `Incompatible calling conventions for UDT return value` 。 *UDT*是用户定义的类型，如类、结构或联合。 当前向声明的返回类型中指定的 UDT 的调用约定与 UDT 的实际调用约定冲突以及涉及函数指针时，将导致这种不兼容性错误。
 
-在示例中，首先有某结构和函数返回该结构中; 前向声明编译器将假定该结构使用C++调用约定。 接下来结构定义，其中，默认情况下，使用 C 调用约定。 因为编译器不知道该结构的调用约定，直到它完成读取整个结构中的返回类型的结构的调用约定`get_c2`也被假定为C++。
+在此示例中，第一个结构和一个返回该结构的函数的前向声明;编译器假定结构使用 c + + 调用约定。 接下来是结构定义，默认情况下使用 C 调用约定。 由于编译器不知道结构的调用约定，直到它完成整个结构的读取，因此的返回类型中的结构的调用约定 `get_c2` 也假设为 c + +。
 
-该结构后跟另一个返回该结构的函数声明，但此时，编译器知道该结构的调用约定是C++。 同样，函数指针，它返回该结构，定义在结构定义之后，以便让编译器知道该结构使用C++调用约定。
+结构后跟另一个返回该结构的函数声明，但此时编译器知道该结构的调用约定为 c + +。 同样，返回该结构的函数指针在 struct 定义之后定义，以便编译器知道该结构使用 c + + 调用约定。
 
-若要解决由于不兼容调用约定而发生的 C2440，声明在 UDT 定义之后返回 UDT 的函数。
+若要解决由于调用约定不兼容而发生的 C2440，请在 UDT 定义之后声明返回 UDT 的函数。
 
 ```cpp
 // C2440b.cpp
@@ -128,7 +128,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果将零分配给内部指针，也可能出现 C2440:
+如果将零赋给内部指针，也会出现 C2440：
 
 ```cpp
 // C2440c.cpp
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-错误使用的用户定义的转换也可能出现 C2440。 例如，如果转换运算符具有已定义为`explicit`，编译器不能将其隐式转换。 有关用户定义的转换的详细信息，请参阅[用户定义的转换 (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md))。 此示例生成 C2440:
+如果不正确地使用用户定义的转换，也会出现 C2440。 例如，当转换运算符定义为时 **`explicit`** ，编译器不能在隐式转换中使用它。 有关用户定义的转换的详细信息，请参阅[用户定义的转换（c + +/cli）](../../dotnet/user-defined-conversions-cpp-cli.md)。 此示例生成 C2440：
 
 ```cpp
 // C2440d.cpp
@@ -167,7 +167,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果你尝试创建视觉对象的实例，也可能出现 C2440C++数组的类型为<xref:System.Array>。  有关详细信息，请参阅[数组](../../extensions/arrays-cpp-component-extensions.md)。  下一步的示例生成 C2440:
+如果尝试创建类型为的 Visual C++ 数组的实例，也可能出现 C2440 <xref:System.Array> 。  有关详细信息，请参阅 [array](../../extensions/arrays-cpp-component-extensions.md)。  下一个示例生成 C2440：
 
 ```cpp
 // C2440e.cpp
@@ -182,7 +182,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-特性功能中的更改也会导致 C2440。  下面的示例生成 C2440。
+由于特性功能发生更改，也可能出现 C2440。  下面的示例生成 C2440。
 
 ```cpp
 // c2440f.cpp
@@ -194,11 +194,11 @@ int main() {
 
 ## <a name="example"></a>示例
 
-MicrosoftC++编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下强制转换时使用的源代码 **/clr**编译编程。
+当编译使用 **/clr**编程的源代码时，Microsoft c + + 编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下转换。
 
 若要解决此 C2440，请使用正确的强制转换运算符。 有关详细信息，请参阅[强制转换运算符](../../cpp/casting-operators.md)。
 
-此示例生成 C2440:
+此示例生成 C2440：
 
 ```cpp
 // c2440g.cpp
@@ -215,9 +215,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-为 Visual Studio 2015 Update 3 中的编译器符合性更改会导致 C2440。 以前，编译器错误地处理某些非重复表达式为相同的类型标识的模板匹配项时`static_cast`操作。 现在，编译器正确区分类型和代码的依赖以前`static_cast`行为已中断。 若要解决此问题，请更改要匹配的模板参数类型，或使用的模板自变量`reinterpret_cast`或 C 样式强制转换。
+由于 Visual Studio 2015 Update 3 中对编译器进行了一致性更改，导致出现 C2440。 以前，编译器在标识操作的模板匹配项时将某些非重复表达式错误地处理为同一类型 **`static_cast`** 。 现在，编译器会正确区分类型，而依赖于先前行为的代码 **`static_cast`** 会中断。 若要解决此问题，请将模板参数更改为与模板参数类型匹配，或使用 **`reinterpret_cast`** 或 C 样式强制转换。
 
-此示例生成 C2440:
+此示例生成 C2440：
 
 ```cpp
 // c2440h.cpp
@@ -244,9 +244,9 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 
 ### <a name="copy-list-initialization"></a>复制列表初始化
 
-Visual Studio 2017 和更高版本正确引发与使用 Visual Studio 2015 中已不捕获并可能导致故障的初始值设定项列表的对象创建相关的编译器错误或未定义的运行时行为。 在 C + + 17 复制列表初始化，编译器需要考虑用于重载决策的显式构造函数，但如果实际选择该重载必须引发错误。
+Visual Studio 2017 和更高版本使用未在 Visual Studio 2015 中捕获的初始值设定项列表正确地引发与对象创建相关的编译器错误，并可能导致崩溃或未定义的运行时行为。 在 c + + 17 的复制列表初始化中，要求编译器考虑用于重载决策的显式构造函数，但如果实际选择了该重载，则必须引发错误。
 
-在 Visual Studio 2015，但在 Visual Studio 2017 中不会编译下面的示例。
+下面的示例在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中未进行编译。
 
 ```cpp
 // C2440j.cpp
@@ -283,7 +283,7 @@ int main()
 
 ### <a name="cv-qualifiers-in-class-construction"></a>类构造中的 cv 限定符
 
-在 Visual Studio 2015 中，编译器有时会在通过构造函数调用生成类对象时错误地忽略 cv 限定符。 这可能会导致故障或意外的运行时行为。 下面的示例在 Visual Studio 2015 中编译，但引发了编译器错误在 Visual Studio 2017 及更高版本：
+在 Visual Studio 2015 中，编译器有时会在通过构造函数调用生成类对象时错误地忽略 cv 限定符。 这可能会导致故障或意外的运行时行为。 下面的示例在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 和更高版本中引发编译器错误：
 
 ```cpp
 struct S

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: a5576e8f2416804cac89f5ec34005f4e08b99c47
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 9cf42df0926022f93633a6b5b1365ae9fc646a1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142115"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213913"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>如何：使用异常处理中断并行循环
 
 本主题说明如何编写基本树结构的搜索算法。
 
-主题[取消](cancellation-in-the-ppl.md)说明了并行模式库中取消操作的角色。 与使用[concurrency：： task_group：： cancel](reference/task-group-class.md#cancel)和[concurrency：： structured_task_group：： cancel](reference/structured-task-group-class.md#cancel)方法相比，使用异常处理是一种不太有效的方法来取消并行工作。 但是，当你调入使用任务或并行算法的第三方库，但不提供要取消的 `task_group` 或 `structured_task_group` 对象时，可以使用异常处理来取消工作。
+主题[取消](cancellation-in-the-ppl.md)说明了并行模式库中取消操作的角色。 与使用[concurrency：： task_group：： cancel](reference/task-group-class.md#cancel)和[concurrency：： structured_task_group：： cancel](reference/structured-task-group-class.md#cancel)方法相比，使用异常处理是一种不太有效的方法来取消并行工作。 但是，当你调入使用任务或并行算法但未提供 `task_group` 或对象取消的第三方库时，可以使用异常处理取消工作的一种情况 `structured_task_group` 。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一个基本 `tree` 类型，该类型包含一个数据元素和一个子节点列表。 以下部分介绍 `for_all` 方法的主体，该方法将以递归方式在每个子节点上执行工作函数。
+下面的示例演示 `tree` 包含数据元素和子节点列表的基本类型。 以下部分显示了方法的主体 `for_all` ，该方法以递归方式在每个子节点上执行工作函数。
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
@@ -32,17 +32,17 @@ ms.locfileid: "77142115"
 
 ## <a name="example"></a>示例
 
-下面的介绍了 `search_for_value` 函数，它可在所提供的 `tree` 对象中搜索值。 此函数将一个工作函数传递给 `for_all` 方法，该函数会在找到包含所提供值的树节点时引发。
+下面的介绍了 `search_for_value` 函数，它可在所提供的 `tree` 对象中搜索值。 此函数向方法传递 `for_all` 一个工作函数，该函数在找到包含所提供值的树节点时引发。
 
-假定 `tree` 类由第三方库提供，并且您不能修改它。 在这种情况下，使用异常处理是合适的，因为 `for_all` 方法不向调用方提供 `task_group` 或 `structured_task_group` 对象。 因此，工作函数无法直接取消其父任务组。
+假设类由 `tree` 第三方库提供，并且您不能修改它。 在这种情况下，使用异常处理是合适的，因为方法不向 `for_all` `task_group` `structured_task_group` 调用方提供或对象。 因此，工作函数无法直接取消其父任务组。
 
-当你提供给任务组的工作函数引发异常时，运行时会停止任务组中的所有任务（包括任何子任务组），并放弃尚未启动的任何任务。 `search_for_value` 函数使用 `try`-`catch` 块来捕获异常，并将结果输出到控制台。
+当你提供给任务组的工作函数引发异常时，运行时会停止任务组中的所有任务（包括任何子任务组），并放弃尚未启动的任何任务。 `search_for_value`函数使用 **`try`** - **`catch`** 块来捕获异常，并将结果输出到控制台。
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
 ## <a name="example"></a>示例
 
-下面的示例创建一个 `tree` 对象，并以并行方式搜索多个值。 本主题后面的部分将显示 `build_tree` 函数。
+下面的示例创建一个 `tree` 对象，并以并行方式搜索多个值。 `build_tree`此函数将在本主题的后面部分显示。
 
 [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]
 
@@ -64,15 +64,15 @@ Did not find node with value 17522.
 
 ## <a name="compiling-the-code"></a>编译代码
 
-复制代码示例并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `task-tree-search.cpp` 的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。
+复制代码示例并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为的文件中， `task-tree-search.cpp` 然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-> **cl/EHsc task-tree-search**
+> **cl.exe/EHsc task-tree-search**
 
 ## <a name="see-also"></a>另请参阅
 
 [PPL 中的取消操作](cancellation-in-the-ppl.md)<br/>
 [异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
+[任务并行度](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [并行算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [task_group 类](reference/task-group-class.md)<br/>
 [structured_task_group 类](../../parallel/concrt/reference/structured-task-group-class.md)<br/>

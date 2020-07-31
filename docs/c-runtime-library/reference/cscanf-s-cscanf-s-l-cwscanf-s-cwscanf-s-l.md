@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938529"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234232"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
 
@@ -93,7 +93,7 @@ int _cwscanf_s_l(
 *format*<br/>
 窗体控件字符串。
 
-*实际*<br/>
+argument <br/>
 可选参数。
 
 *locale*<br/>
@@ -112,9 +112,9 @@ int _cwscanf_s_l(
 与**scanf**系列中函数的其他安全版本一样， **_cscanf_s**和 **_cswscanf_s**需要类型字段字符**c**、 **c**、 **s**、 **s**和 **[** 的大小参数。 有关详细信息，请参阅 [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)。
 
 > [!NOTE]
-> 大小参数的类型为**无符号**类型，而不是**size_t**。
+> 大小参数的类型为 **`unsigned`** ，而不是**size_t**。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -127,10 +127,10 @@ int _cwscanf_s_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_cscanf_s**、 **_cscanf_s_l**|\<conio.h>|
-|**_cwscanf_s**、 **_cwscanf_s_l**|\<conio.h> 或 \<wchar.h>|
+|**_cscanf_s**， **_cscanf_s_l**|\<conio.h>|
+|**_cwscanf_s**， **_cwscanf_s_l**|\<conio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -171,9 +171,9 @@ int main( void )
 You entered 1 2 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

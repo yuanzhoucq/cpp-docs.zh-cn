@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198960"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220023"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>编译器警告（等级 3）C4191
 
@@ -25,11 +25,11 @@ ms.locfileid: "80198960"
 
 - 具有不同的大小、类型类别或分类的参数或返回类型。
 
-- 不同的参数列表长度（在 `__cdecl`上，仅在从较长列表到较短列表的强制转换中，即使较短的列表为 varargs）。
+- 不同的参数列表长度（在上 **`__cdecl`** ，仅在从较长列表到较短列表的强制转换中，即使较短的为 varargs）。
 
-- 指向函数的指针的数据的指针（ **void** <strong>\*</strong>除外）。
+- 指向函数的指针的指向数据的指针（而不 **`void`** <strong>\*</strong> 是）别名。
 
-- 任何其他将在 `reinterpret_cast`上产生错误或警告的类型差异。
+- 将在上产生错误或警告的任何其他类型差异 **`reinterpret_cast`** 。
 
 通过结果指针调用此函数可能会导致程序故障。
 

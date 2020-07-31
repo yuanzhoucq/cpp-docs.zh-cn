@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: c1721d472c81c62ba01282f43c7e678d7f84206b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c9ab9c22d41e7732c86d43f5c6b4f09c50bbda8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200078"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196846"
 ---
 # <a name="compiler-warning-level-1-c4142"></a>编译器警告（等级1） C4142
 
@@ -23,7 +23,7 @@ ms.locfileid: "80200078"
 
 - 派生类的成员函数与基类的相应成员函数具有不同的返回类型。
 
-- 使用不同语法重新定义使用 `typedef` 命令定义的类型。
+- 使用命令定义的类型 **`typedef`** 将使用不同的语法重新定义。
 
 下面的示例生成 C4142：
 

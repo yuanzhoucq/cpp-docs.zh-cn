@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cfa03706bc6030b337009f7228466a26e242aa6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213689"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221531"
 ---
 # <a name="mixin-structure"></a>MixIn 结构
 
@@ -29,7 +29,7 @@ template<
 struct MixIn;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *派生*<br/>
 从[实现](implements-structure.md)结构派生的类型。
@@ -38,7 +38,7 @@ struct MixIn;
 基类型。
 
 *hasImplements*<br/>
-如果*MixInType*派生自当前实现的基类型，**则为 true** ;否则**为 false** 。
+**`true`** 如果*MixInType*派生自当前实现的基类型，则为;**`false`** 否则为。
 
 ## <a name="remarks"></a>备注
 
@@ -56,4 +56,4 @@ struct MixIn;
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0c95d234fee412c1dacb014dd135ca56fc73bf5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193960"
 ---
 # <a name="invalid_oversubscribe_operation-class"></a>invalid_oversubscribe_operation 类
 
-此类描述在以下情况下引发的异常：在调用 `Context::Oversubscribe` 方法时，如果 `_BeginOversubscription` 参数设置为**false** ，则不会调用 `Context::Oversubscribe` 方法，并将 `_BeginOversubscription` 参数设置为**true**。
+此类描述在以下情况下引发的异常：在 `Context::Oversubscribe` `_BeginOversubscription` 参数设置为的 **`false`** 情况下调用方法，且 `Context::Oversubscribe` `_BeginOversubscription` 参数设置为 **`true`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ ms.locfileid: "77140835"
 class invalid_oversubscribe_operation : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[invalid_oversubscribe_operation](#ctor)|已重载。 构造 `invalid_oversubscribe_operation` 对象。|
 
@@ -45,7 +45,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>invalid_oversubscribe_operation
+## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a>invalid_oversubscribe_operation
 
 构造 `invalid_oversubscribe_operation` 对象。
 

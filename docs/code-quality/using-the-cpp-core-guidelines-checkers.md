@@ -1,37 +1,75 @@
 ---
 title: 使用 C++ 核心准则检查程序
-ms.date: 08/14/2018
+description: 如何为 C++ Core Guidelines 设置和使用 Microsoft c + + 代码分析规则。
+ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: b9eea6dc466db202ee388a2bfb2e59632e210b7f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8a9c09eba23e2db3c1929cf1e24163947cf015b9
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076182"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389982"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>使用 C++ Core Guidelines 检查器
 
-C++核心指导原则是有关C++专家和设计人员所C++创建的编码的一组可移植指导原则、规则和最佳实践。 Visual Studio 当前支持将这些规则作为的代码分析工具的一部分C++。 默认情况下，在 Visual Studio 2017 和 Visual Studio 2019 中安装核心准则检查程序，它们[可用作 Visual studio 2015 的 NuGet 包](#vs2015_corecheck)。
+C++ Core Guidelines 是有关 c + + 专家和设计人员创建的 c + + 编码的一组可移植指导原则、规则和最佳实践。 Visual Studio 当前支持将这些规则作为 c + + 代码分析工具的一部分。 默认情况下，在 Visual Studio 2017 和 Visual Studio 2019 中安装核心准则检查程序。 它们[可用作 Visual Studio 2015 的 NuGet 包](#vs2015_corecheck)。
 
-## <a name="the-c-core-guidelines-project"></a>C++核心准则项目
+## <a name="the-c-core-guidelines-project"></a>C++ Core Guidelines 项目
 
-由 Bjarne Stroustrup 和其他人创建， C++核心准则是使用新式C++安全有效的指南。 这些指南强调了静态类型安全和资源安全性。 它们确定了消除或最小化语言中最容易出错的部分的方法，并建议如何以可靠的方式使代码更简单、更具性能。 这些准则由标准C++基础维护。 若要了解详细信息，请参阅[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的文档、 [ C++核心准则](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)和访问C++核心准则文档项目文件。
+C++ Core Guidelines 是由 Bjarne Stroustrup 和其他用户创建的，它是一种安全、有效地使用现代 c + + 的指南。 这些指南强调了静态类型安全和资源安全性。 它们确定了消除或最小化语言中最容易出错的部分的方法。 它们还建议如何使代码更简单、更可靠，并获得更好的性能。 这些准则由标准的 c + + 基础维护。 若要了解详细信息，请参阅文档， [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)，并访问[GitHub](https://github.com/isocpp/CppCoreGuidelines)上的 C++ Core Guidelines 文档项目文件。
 
-## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>启用代码C++分析中的核心检查指南
+## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>启用代码分析中的 C++ Core Check 准则
 
-可以通过在项目的 "**属性页**" 对话框的 "**代码分析**" 部分中选择 "**生成时启用代码分析**" 复选框，对项目启用代码分析。
+::: moniker range="<=vs-2017"
+
+Microsoft 本机建议规则集中包含 C++ Core Check 规则的子集。 这是启用代码分析时默认运行的规则集。
+
+### <a name="to-enable-code-analysis-on-your-project"></a>对项目启用代码分析
+
+1. 打开项目的 "**属性页**" 对话框。
+
+1. 选择 "**配置属性** > **代码分析**" 属性页。
+
+1. 选中 "**生成时启用代码分析"** 复选框。
 
 ![代码分析常规设置的属性页](media/cppcorecheck_codeanalysis_general.png)
 
-默认情况下C++ ，当启用代码分析时，将在默认运行的 Microsoft Native 建议规则集中包含部分核心检查规则。 若要启用其他核心检查规则，请单击下拉列表，然后选择要包括的规则集：
+若要启用其他核心检查规则，请打开下拉列表并选择要包括的规则集：
 
-![其他C++核心检查规则集的下拉列表](media/cppcorecheck_codeanalysis_extensions.png)
+![其他 C++ Core Check 规则集的下拉列表](media/cppcorecheck_codeanalysis_extensions.png)
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+Microsoft 本机建议规则集中包含 C++ Core Check 规则的子集。 这是启用 Microsoft 代码分析时默认运行的规则集。
+
+### <a name="to-enable-code-analysis-on-your-project"></a>对项目启用代码分析：
+
+1. 打开项目的 "**属性页**" 对话框。
+
+1. 选择 "**配置属性** > **代码分析**" 属性页。
+
+1. 设置 "**生成时启用代码分析"** 和 "**启用 Microsoft 代码分析**" 属性。
+
+你还可以选择运行所有受支持的 C++ Core Check 规则，或选择你自己的子集运行：
+
+### <a name="to-enable-additional-core-check-rules"></a>启用其他核心检查规则
+
+1. 打开项目的 "**属性页**" 对话框。
+
+1. 选择 "**配置属性** > **代码分析**" > **Microsoft**属性页。
+
+1. 打开 "**活动规则**" 下拉列表，然后选择 "**选择多个规则集**"。
+
+1. 在 "**添加或删除规则集**" 对话框中，选择要包括的规则集。
+
+::: moniker-end
 
 ## <a name="examples"></a>示例
 
-下面是C++核心检查规则可以发现的一些问题的示例：
+下面是 C++ Core Check 规则可以发现的一些问题的示例：
 
 ```cpp
 // CoreCheckExample.cpp
@@ -52,7 +90,7 @@ int main()
 }
 ```
 
-此示例演示C++核心检查规则可以发现的几个警告：
+此示例演示了 C++ Core Check 规则可以发现的几个警告：
 
 - C26494 是规则类型。5：始终初始化对象。
 
@@ -60,7 +98,7 @@ int main()
 
 - C26481 是规则界限。1：不要使用指针算法。 请改用 `span`。
 
-如果编译C++此代码时安装并启用了核心检查代码分析规则集，则会输出前两个警告，但会禁止显示第三个警告。 下面是示例代码的生成输出：
+安装并启用 C++ Core Check 代码分析规则集，然后编译此代码。 代码分析输出前两个警告，并取消第三个警告。 下面是 Visual Studio 2015 中示例代码的生成输出：
 
 ```Output
 1>------ Build started: Project: CoreCheckExample, Configuration: Debug Win32 ------
@@ -72,45 +110,73 @@ c:\users\username\documents\visual studio 2015\projects\corecheckexample\coreche
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-C++核心准则可帮助您编写更好和更安全的代码。 但是，如果你有一个不应应用规则或配置文件的实例，则可以轻松地直接在代码中将其取消。 你可以使用 `gsl::suppress` 特性来防止C++核心检查检测和报告以下代码块中的任何规则冲突。 您可以标记各个语句以禁止显示特定规则。 甚至可以通过编写 `[[gsl::suppress(bounds)]]` 来禁止整个边界配置文件，而无需包含特定的规则号。
+C++ Core Guidelines 可帮助你编写更好、更安全的代码。 但是，你可能会发现不应应用规则或配置文件的实例。 可以轻松地直接在代码中将其取消。 您可以使用 `[[gsl::suppress]]` 属性来防止 C++ Core Check 检测和报告以下代码块中的任何规则冲突。 您可以标记各个语句以禁止显示特定规则。 甚至可以通过编写 `[[gsl::suppress(bounds)]]` 而不包含特定的规则号来禁止整个边界配置文件。
 
 ## <a name="supported-rule-sets"></a>支持的规则集
 
-将新规则添加到C++核心准则检查器时，为预先存在的代码生成的警告数可能会增加。 您可以使用预定义的规则集来筛选要启用的规则类型。
-大多数规则的参考主题位于[Visual Studio C++ Core 检查参考](code-analysis-for-cpp-corecheck.md)中。
+将新规则添加到 C++ Core Guidelines 检查器时，为预先存在的代码生成的警告数可能会增加。 您可以使用预定义的规则集来筛选要启用的规则类型。 你将在[Visual Studio C++ Core Check 引用](code-analysis-for-cpp-corecheck.md)中找到大多数规则的参考文章。
 
-在 Visual Studio 2017 版本15.3 中，支持的规则集包括：
+- **算术规则**：用于检测算术[溢出](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)、[未签名的操作](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)和[位操作](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative)的规则。<sup>15.6</sup>
 
-- **所有者指针规则**强制执行与[从核心准则中的 Owner\<t > 相关C++的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **边界规则**：强制实施[C++ Core Guidelines 的边界配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。<sup>15.3</sup>
 
-- **Const 规则**强制实施[来自C++核心准则的 const 相关检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。
+- **类规则**：几个将重点放在正确使用特殊成员函数和虚拟规范的规则。 它们是为[类和类层次结构](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)推荐的检查的子集。<sup>15.5</sup>
 
-- **原始指针规则**强制执行[与核心准则中的C++原始指针相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **并发规则**：捕获不良防护对象声明的单个规则。 有关详细信息，请参阅[与并发相关的准则](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency)。<sup>15.5</sup>
 
-- **唯一的指针规则**强制执行与[ C++核心准则中具有唯一指针语义的类型相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **Const 规则**：[从 C++ Core Guidelines 强制执行与常量有关的检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。<sup>15.3</sup>
 
-- **边界规则**强制实施[ C++核心准则的边界配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
+- **声明规则**：[接口准则](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces)中的几个规则，这些规则重点介绍全局变量的声明方式。<sup>15.5</sup>
 
-- **类型规则**强制实施[ C++核心准则的类型配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)。
+- **枚举规则**：这些规则[从 C++ Core Guidelines 强制执行与枚举相关的检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum)。<sup>16.3</sup>
 
-**Visual Studio 2017 版本 15.5**：
+- **实验性规则**这些是一些有用的试验性 C++ Core Check 规则，但不能用于日常使用。 试用并[提供反馈](https://developercommunity.visualstudio.com/content/idea/post.html?space=62)。<sup>16.0</sup>
 
-- **类规则**一些规则重点介绍如何正确使用特殊成员函数和虚拟规范。 这是建议用于[类和类层次结构](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)的检查的子集。
-- **并发规则**单个规则，用于捕获未正确声明的保护对象。 有关详细信息，请参阅[与并发相关的准则](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency)。
-- **声明规则**[接口准则](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces)中的几个规则，重点介绍全局变量的声明方式。
-- **函数规则**有助于采用 `noexcept` 说明符的两个检查。 这是用于[清除函数设计和实现](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions)的指导原则。
-- **共享指针规则**作为执行[资源管理](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource)指导原则的一部分，我们添加了几个特定于共享指针如何传递到函数或在本地使用的规则。
-- **样式规则**一个简单但重要的检查，它 ban 使用[goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto)。 这是在中C++提高编码样式和使用表达式和语句的第一步。
+- **函数规则**：有助于采用说明符的两个检查 **`noexcept`** 。 它们是用于[清除函数设计和实现](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions)的指导原则。<sup>15.5</sup>
 
-**Visual Studio 2017 15.6 版**：
+- **GSL 规则**：这些规则强制执行与[C++ Core Guidelines 中的准则支持库](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl)相关的检查。<sup>15.7</sup>
 
-- **算术规则**用于检测算术[溢出](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)、[未签名的操作](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)和[位操作](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative)的规则。
+- **生存期规则**：这些规则强制执行[C++ Core Guidelines 的生存期配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile)。<sup>15.7</sup>
 
-可以选择将警告仅限制为一个或多个组。 除了其他 PREfast 检查，**本机的最小**和**本机建议**规则集还包括C++核心检查规则。 若要查看可用的规则集，请打开 "项目属性" 对话框，选择 "**代码 Analysis\General**"，打开 "**规则集**" 组合框中的下拉列表，然后**选择 "选择多个规则集**"。 有关在 Visual Studio 中使用规则集的详细信息，请参阅[使用规则集指定C++要运行的规则](using-rule-sets-to-specify-the-cpp-rules-to-run.md)。
+- **所有者指针规则**：强制执行与[ \<T> C++ Core Guidelines 中的所有者相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。<sup>15.3</sup>
+
+- **原始指针规则**：强制执行[与 C++ Core Guidelines 中的原始指针相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。<sup>15.3</sup>
+
+- **共享指针规则**：这是强制执行[资源管理](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource)指导原则的一部分。<sup>15.5</sup>我们添加了几个特定于共享指针如何传递到函数或在本地使用的规则。
+
+- **STL 规则**：这些规则强制执行与[c + + 标准库（STL）相关的检查，C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib)。<sup>15.7</sup>
+
+- **样式规则**：一个简单但重要的检查，它 ban 使用[goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto)。<sup>15.5</sup>在 c + + 中，这是提高编码样式和使用表达式和语句的第一步。
+
+- **类型规则**：强制实施[C++ Core Guidelines 的类型配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)。<sup>15.3</sup>
+
+- **唯一的指针规则**：强制执行与[C++ Core Guidelines 中具有唯一指针语义的类型相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。<sup>15.3</sup>
+
+- **C++ Core Check 规则**：此规则集包含[C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines)中当前实现的所有检查，实验性规则除外。
+
+<sup>15.3</sup>这些规则首先出现在 Visual Studio 2017 版本 15.3 \ 中
+<sup>15.5</sup>这些规则首先出现在 Visual Studio 2017 版本 15.5 \ 中
+<sup>15.6</sup>这些规则首先出现在 Visual Studio 2017 版本 15.6 \ 中
+<sup>15.7</sup>这些规则首先出现在 Visual Studio 2017 版本 15.7 \ 中
+<sup>16.0</sup>这些规则首先出现在 Visual Studio 2019 版本 16.0 \ 中
+<sup>16.3</sup> Visual Studio 2019 版本16.3 中首次出现这些规则
+
+可以选择将警告仅限制为一个或多个组。 **本机的最小**和**本机建议**规则集包括 C++ Core Check 规则和其他 PREfast 检查。
+
+::: moniker range="<=vs-2017"
+
+若要查看可用的规则集，请打开 "**项目属性**" 对话框。 在 "**属性页**" 对话框中，选择**配置属性**  >  **代码分析**  >  **常规**属性页。 然后，打开 "**规则集**" 组合框中的下拉列表，查看可用的规则集。 若要生成自定义规则集组合，请选择 "**选择多个规则集**"。 "**添加或删除规则集**" 对话框列出了可以选择的规则。 有关在 Visual Studio 中使用规则集的详细信息，请参阅[使用规则集指定要运行的 c + + 规则](using-rule-sets-to-specify-the-cpp-rules-to-run.md)。
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+若要查看可用的规则集，请打开 "**项目属性**" 对话框。 在 "**属性页**" 对话框中，选择**配置属性**  >  **代码分析**  >  **Microsoft**属性页。 然后，打开 "**活动规则**" 组合框中的下拉列表，查看可用的规则集。 若要生成自定义规则集组合，请选择 "**选择多个规则集**"。 "**添加或删除规则集**" 对话框列出了可以选择的规则。 有关在 Visual Studio 中使用规则集的详细信息，请参阅[使用规则集指定要运行的 c + + 规则](using-rule-sets-to-specify-the-cpp-rules-to-run.md)。
+
+::: moniker-end
 
 ## <a name="macros"></a>宏
 
-C++核心指导原则检查器附带了标头文件，该文件定义了宏，使您可以更轻松地在代码中禁止显示所有类别的警告：
+C++ Core Guidelines 检查器附带了标头文件，该文件定义了宏，使您可以更轻松地在代码中禁止显示所有类别的警告：
 
 ```cpp
 ALL_CPPCORECHECK_WARNINGS
@@ -132,7 +198,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 
 ## <a name="attributes"></a>属性
 
-Microsoft C++编译器对 GSL 禁止显示属性的支持有限。 它可用于禁止在函数内的 expression 和 block 语句上出现警告。
+Microsoft c + + 编译器限制了对属性的支持 `[[gsl::suppress]]` 。 它可用于取消对函数内的 expression 和 block 语句的警告。
 
 ```cpp
 // Suppress only warnings from the 'r.11' rule in expression.
@@ -158,34 +224,41 @@ Microsoft C++编译器对 GSL 禁止显示属性的支持有限。 它可用于�
 
 您可以在文件的属性页中使用命令行选项来禁止显示项目或单个文件的警告，而不是 #pragmas。 例如，若要对文件禁用警告 C26400，请执行以下操作：
 
-1. 右键单击中的文件**解决方案资源管理器**
+1. 在**解决方案资源管理器**中右键单击该文件，然后选择 "**属性**"。
 
-1. 选择**属性 |C/C++|命令行**
+1. 在 "**属性页**" 对话框中，选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 在 "**其他选项**" 窗口中，添加 `/wd26400`。
+1. 在 "**其他选项**" 编辑框中，添加 *`/wd26400`* 。
 
-通过指定 `/analyze-`，可以使用命令行选项来暂时禁用文件的所有代码分析。 这会生成警告*D9025，并将 "/analyze" 替换为 "/analyze-"* ，这会提醒你稍后重新启用代码分析。
+您可以使用命令行选项通过指定为文件暂时禁用所有代码分析 **`/analyze-`** 。 你将看到警告*D9025 使用 "/analyze-" 替代 "/analyze*"，这会提醒你稍后重新启用代码分析。
 
-## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>启用特定C++项目文件的核心准则检查器
+## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>启用特定项目文件的 C++ Core Guidelines 检查器
 
-有时，执行焦点代码分析并仍使用 Visual Studio IDE 可能会很有用。 下面的示例方案可用于大项目以节省生成时间，并使其更易于筛选结果：
+有时，执行焦点代码分析并仍使用 Visual Studio IDE 是非常有用的。 对于大型项目，请尝试下面的示例方案。 它可以节省生成时间，并更容易筛选结果：
 
 1. 在命令外壳中，设置 `esp.extension` 和 `esp.annotationbuildlevel` 环境变量。
+
 1. 若要继承这些变量，请从命令行界面打开 Visual Studio。
+
 1. 加载项目并打开其属性。
+
 1. 启用代码分析，选取适当的规则集，但不要启用代码分析扩展。
-1. 在C++核心准则检查器中转到要分析的文件，然后打开其属性。
-1. 选择 " **CC++/\Command Line 选项**" 并添加 `/analyze:plugin EspXEngine.dll`
-1. 禁用预编译头（**C/C++\Precompiled 标**头）的使用。 这是必需的，因为扩展引擎可能会尝试从预编译标头（PCH）读取其内部信息;如果 PCH 用默认项目选项编译，则它将不兼容。
-1. 重新生成项目。 常见的 PREFast 检查应在所有文件上运行。 由于C++核心准则检查器默认情况下未启用，因此它只应在配置为使用它的文件上运行。
 
-## <a name="how-to-use-the-c-core-guidelines-checker-outside-of-visual-studio"></a>如何在C++ Visual Studio 外部使用核心准则检查器
+1. 在 C++ Core Guidelines 检查器中转到要分析的文件，然后打开其属性。
 
-可以在自动生成C++中使用核心准则检查。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" "  >  **其他选项**" 并添加*`/analyze:plugin EspXEngine.dll`*
+
+1. 禁用预编译头的使用（**配置属性**  >  **C/c + +**  >  **预编译标头**）。 这是必需的，因为扩展引擎可能会尝试从预编译标头（PCH）读取其内部信息。 如果 PCH 是用默认项目选项编译的，则它将不兼容。
+
+1. 重新生成项目。 常见的 PREFast 检查应在所有文件上运行。 由于默认情况下未启用 C++ Core Guidelines 检查器，因此它只应在配置为使用它的文件上运行。
+
+## <a name="how-to-use-the-c-core-guidelines-checker-outside-of-visual-studio"></a>如何在 Visual Studio 外使用 C++ Core Guidelines 检查器
+
+你可以使用自动生成中的 C++ Core Guidelines 检查。
 
 ### <a name="msbuild"></a>MSBuild
 
-本机代码分析检查器（PREfast）通过自定义目标文件集成到 MSBuild 环境中。 你可以使用项目属性来启用它，并添加C++核心准则检查器（基于 PREfast）：
+本机代码分析检查器（PREfast）通过自定义目标文件集成到 MSBuild 环境中。 您可以使用项目属性来启用它，并添加 C++ Core Guidelines 检查器（基于 PREfast）：
 
 ```xml
   <PropertyGroup>
@@ -195,9 +268,9 @@ Microsoft C++编译器对 GSL 禁止显示属性的支持有限。 它可用于�
   </PropertyGroup>
 ```
 
-请确保在导入 Microsoft .Cpp 文件之前添加这些属性。 您可以选择特定规则集或创建自定义规则集，或使用包括其他 PREfast 检查的默认规则集。
+请确保在导入该文件之前添加这些属性 *`Microsoft.Cpp.targets`* 。 可以选取特定规则集或创建自定义规则集。 或者，使用包含其他 PREfast 检查的默认规则集。
 
-您可以使用C++ [前面所述](#corecheck_per_file)的相同方法仅对指定文件运行核心检查程序，但使用 MSBuild 文件。 可以通过使用 `BuildMacro` 项来设置环境变量：
+只能对指定的文件运行 c + + Core 检查器。 使用与[前面所述](#corecheck_per_file)相同的方法，但使用 MSBuild 文件。 可以使用项设置环境变量 `BuildMacro` ：
 
 ```xml
 <ItemGroup>
@@ -220,30 +293,32 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 
 ### <a name="non-msbuild-projects"></a>非 MSBuild 项目
 
-如果你使用的生成系统不依赖于 MSBuild，你仍可以运行检查器，但需要熟悉代码分析引擎配置的某些内部机制。 以后不保证支持这些内部机制。
+如果你使用的生成系统不依赖于 MSBuild，你仍可以运行检查器。 若要使用它，需要熟悉代码分析引擎配置的一些内部机制。 在 Visual Studio 的未来版本中，我们不保证支持这些内部机制。
 
-必须设置几个环境变量并为编译器使用正确的命令行选项。 最好在 "本机工具命令提示" 环境下工作，这样您就不必搜索编译器的特定路径、包括目录等。
+代码分析需要一些环境变量和编译器命令行选项。 建议使用**本机工具命令提示**环境，这样就不必搜索编译器的特定路径，包括目录，等等。
 
 - **环境变量**
-  - `set esp.extensions=cppcorecheck.dll` 这将告知引擎加载C++核心准则模块。
-  - `set esp.annotationbuildlevel=ignore` 这将禁用处理 SAL 注释的逻辑。 批注不会影响C++核心准则检查器中的代码分析，但其处理时间（有时是长时间）。 此设置是可选的，但强烈建议使用此设置。
-  - `set caexcludepath=%include%` 强烈建议您禁用在标准标头上触发的警告。 你可以在此处添加更多路径，例如项目中的公共标头的路径。
+  - `set esp.extensions=cppcorecheck.dll`这会告知引擎加载 C++ Core Guidelines 模块。
+  - `set esp.annotationbuildlevel=ignore`这将禁用处理 SAL 批注的逻辑。 批注不会影响 C++ Core Guidelines 检查器中的代码分析，但其处理时间（有时很长时间）。 此设置是可选的，但强烈建议使用此设置。
+  - `set caexcludepath=%include%`我们强烈建议你禁用在标准标头上触发的警告。 你可以在此处添加更多路径，例如项目中的公共标头的路径。
 
 - **命令行选项**
-  - `/analyze` 启用代码分析（还应考虑使用/analyze： only 和/analyze： quiet）。
-  - `/analyze:plugin EspXEngine.dll` 此选项将代码分析扩展引擎加载到 PREfast 中。 此引擎反过来会加载C++核心准则检查器。
+  - **`/analyze`** 启用代码分析（还应考虑使用 **`/analyze:only`** 和 **`/analyze:quiet`** ）。
+  - **`/analyze:plugin EspXEngine.dll`** 此选项将代码分析扩展引擎加载到 PREfast 中。 此引擎反过来会加载 C++ Core Guidelines 检查器。
 
 ## <a name="use-the-guideline-support-library"></a>使用准则支持库
 
-准则支持库旨在帮助你遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，您可以使用 `span<T>` 类型替换 `T*, length` 参数对。 [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)提供了 GSL。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)中找到该项目。
+准则支持库（GSL）旨在帮助您遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，可以将一 `T*, length` 对参数替换为 `span<T>` 类型。 GSL 在上可用 [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl) 。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在中找到该项目 [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) 。
 
-## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>使用 Visual C++ Studio 2015 项目中的核心检查指南
+::: moniker range="vs-2015"
 
-如果使用 Visual Studio 2015，则C++默认情况下不会安装核心检查代码分析规则集。 必须执行一些附加步骤，然后才能在 Visual Studio C++ 2015 中启用核心检查代码分析工具。 Microsoft 通过使用 Nuget 包为 Visual Studio 2015 项目提供支持。 此包的名称为 CppCoreCheck，可[http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck)。 此程序包需要至少安装了 Visual Studio 2015 Update 1。
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>使用 Visual Studio 2015 项目中的 C++ Core Check 准则
 
-该包还会安装另一个包作为依赖项，即仅标头的准则支持库（GSL）。 [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)上还提供了 GitHub 上的 GSL。
+如果使用 Visual Studio 2015，默认情况下不会安装 C++ Core Check 代码分析规则集。 还需要执行其他步骤，然后才能在 Visual Studio 2015 中启用 C++ Core Check 代码分析工具。 Microsoft 通过使用 NuGet 包为 Visual Studio 2015 项目提供支持。 此包的名称为 CppCoreCheck，可从获取 [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck) 。 此程序包需要至少安装了 Visual Studio 2015 Update 1。
 
-由于代码分析规则的加载方式，你必须将 CppCoreCheck NuGet 包安装到要在 Visual Studio 2015 中C++检查的每个项目。
+该包还会安装另一个包作为依赖项、仅标头的准则支持库（GSL）。 GitHub 上还提供了 GSL [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) 。
+
+由于在 Visual Studio 2015 中加载代码分析规则的方式，你必须将 `Microsoft.CppCoreCheck` NuGet 包安装到要检查的每个 c + + 项目中。
 
 ### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>将 CppCoreCheck 包添加到 Visual Studio 2015 中的项目
 
@@ -255,8 +330,10 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 
 1. 选择 CppCoreCheck 包，然后选择 "**安装**" 按钮，将规则添加到项目。
 
-   在项目中启用代码分析后，NuGet 包会向项目添加一个附加*的 MSBuild 文件。* 此 *.targets*文件将C++核心检查规则作为附加扩展添加到 Visual Studio 代码分析工具。 安装包后，可以使用 "属性页" 对话框启用或禁用已发布和实验性规则。
+   在 *`.targets`* 项目上启用代码分析时，NuGet 包会向项目添加一个附加的 MSBuild 文件。 *`.targets`* 文件将 C++ Core Check 规则作为附加扩展添加到 Visual Studio 代码分析工具。 安装包后，可以使用 "属性页" 对话框启用或禁用已发布和实验性规则。
 
-## <a name="see-also"></a>另请参阅
+::: moniker-end
 
-- [Visual Studio C++ Core 检查引用](code-analysis-for-cpp-corecheck.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Studio C++ Core Check 参考](code-analysis-for-cpp-corecheck.md)

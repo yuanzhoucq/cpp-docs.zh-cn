@@ -1,5 +1,5 @@
 ---
-title: 调试迭代器支持
+title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416202"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231580"
 ---
-# <a name="debug-iterator-support"></a>调试迭代器支持
+# <a name="debug-iterator-support"></a>Debug Iterator Support
 
 Visual c + + 运行库检测到不正确使用的迭代器，并在运行时断言和显示一个对话框。 若要启用调试迭代器支持，必须使用 c + + 标准库和 C 运行库的调试版本来编译你的程序。 有关详细信息，请参阅 [ CRT 库功能](../c-runtime-library/crt-library-features.md)。 有关如何使用经过检查的迭代器的信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-请注意，本示例使用 lambda 表达式 `[] (int& elem) { elem *= 2; }` 而不是某个函数。 虽然此选项对于断言失败没有任何影响 - 类似函数会导致相同的故障，lambda 是完成 compact 函数对象任务非常有用的方式。 有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。
+请注意，本示例使用 lambda 表达式 `[] (int& elem) { elem *= 2; }` 而不是某个函数。 虽然此选项对于断言失败没有任何影响 - 类似函数会导致相同的故障，lambda 是完成 compact 函数对象任务非常有用的方式。 有关 lambda 表达式的详细信息，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。
 
 ## <a name="iterators-going-out-of-scope"></a>迭代器超出范围
 
-调试迭代器检查还会导致在**for**循环中声明的迭代器变量在**for**循环范围结束时超出范围。
+调试迭代器检查还会导致循环中声明的迭代器变量在 **`for`** 循环范围结束时超出范围 **`for`** 。
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -175,4 +175,4 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)

@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: a42caaf07f6ec0c71f63d6a0df8a79fff6f737e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221440"
 ---
 # <a name="friend-assemblies-c"></a>友元程序集 (C++)
 
-对于适用运行时*友元程序集*语言功能使位于命名空间范围或全局范围中一个或多个客户端程序集或.netmodule 可以访问程序集组件的类型。
+对于适用的运行时，*友元程序集*语言功能使得在程序集组件中的命名空间范围或全局范围内的类型可由一个或多个客户端程序集或 netmodule 访问。
 
 ## <a name="all-runtimes"></a>所有运行时
 
-**备注**
+**注释**
 
 （并不是所有运行时都支持此语言功能。）
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-**备注**
+**注释**
 
-（此语言功能不支持在 Windows 运行时中。）
+（Windows 运行时不支持此语言功能。）
 
 ### <a name="requirements"></a>要求
 
@@ -33,21 +33,21 @@ ms.locfileid: "65447304"
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-**备注**
+**注释**
 
 #### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>使位于程序集组件命名空间范围或全局范围的类型可供客户端程序集或 .netmodule 访问
 
 1. 在组件中，指定程序集特性 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>，然后传递将访问位于组件命名空间范围或全局范围的类型的客户端程序集或 .netmodule 的名称。  您可通过指定其他特性来指定多个客户端程序集或 .netmodule。
 
-1. 在客户端程序集或 .netmodule 中，当您使用 `#using` 引用组件程序集时，请传递 `as_friend` 特性。  如果您为未指定 `as_friend` 的程序集指定 `InternalsVisibleToAttribute` 特性，则将在您尝试访问位于组件命令空间范围或全局范围的类型时引发运行时异常。
+1. 在客户端程序集或 .netmodule 中，当你通过使用引用组件程序集时， `#using` 将传递 **`as_friend`** 属性。  如果为 **`as_friend`** 未指定的程序集指定属性 `InternalsVisibleToAttribute` ，则当您尝试在组件中访问命名空间范围或全局范围内的类型时，将引发运行时异常。
 
-如果包含 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 特性的程序集没有强名称，但使用 `as_friend` 特性的客户端程序集有，则将导致生成错误。
+如果包含该特性的程序集没有 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 强名称，但使用该特性的客户端程序集具有强名称，则会导致生成错误 **`as_friend`** 。
 
 虽然位于命名空间范围和全局范围的类型可为客户端程序集所知，但成员可访问性仍然有效。  例如，您无法访问私有成员。
 
 必须显式授予对程序集中所有类型的访问权限。  例如，如果程序集 C 引用程序集 B，而程序集 B 具有对程序集 A 中所有类型的访问权限，则程序集 C 没有对程序集 A 中所有类型的访问权限。
 
-有关如何进行签名的信息 — 即，如何使强名称的 — 使用 Microsoft 生成的程序集C++编译器，请参阅[强名称程序集 （程序集签名） (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+有关如何对进行签名（即如何向使用 Microsoft c + + 编译器生成的程序集）进行签名的信息，请参阅[强名称程序集（程序集签名）（c + +/cli）](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
 作为对使用友元程序集功能的替代，您可使用 <xref:System.Security.Permissions.StrongNameIdentityPermission> 限制对单独类型的访问。
 
@@ -94,7 +94,7 @@ Class1::Test_Public
 
 下一代码示例定义了未指定将对组件中类型具有访问权限的客户端程序集的组件。
 
-请注意，使用链接组件 **/opt: noref**。 这确保私有类型在组件的元数据中发出，`InternalsVisibleTo` 特性存在时不需要元数据。 有关详细信息，请参阅[/OPT （优化）](../build/reference/opt-optimizations.md)。
+请注意，该组件是使用 **/opt： noref**链接的。 这确保私有类型在组件的元数据中发出，`InternalsVisibleTo` 特性存在时不需要元数据。 有关详细信息，请参阅 [/OPT（优化）](../build/reference/opt-optimizations.md)。
 
 ```cpp
 // friend_assemblies_3.cpp
@@ -157,13 +157,13 @@ public:
 
 请注意，组件必须指定其公钥。 我们建议您在命令提示符处按顺序运行下列命令以创建密钥对并获取公钥：
 
-**sn -d friend_assemblies.snk**
+**sn-d friend_assemblies .snk**
 
-**sn -k friend_assemblies.snk**
+**sn-k friend_assemblies .snk**
 
-**sn -i friend_assemblies.snk friend_assemblies.snk**
+**sn-i friend_assemblies .snk friend_assemblies .snk**
 
-**sn -pc friend_assemblies.snk key.publickey**
+**sn-pc friend_assemblies .snk publickey**
 
 **sn -tp key.publickey**
 
@@ -184,6 +184,6 @@ int main() {
 Class1::Test_Public
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)

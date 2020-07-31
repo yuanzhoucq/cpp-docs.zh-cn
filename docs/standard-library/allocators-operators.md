@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: a21708ca090b0db561391308f347d90b77c62645
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623561"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204555"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 运算符
 
@@ -40,7 +40,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>返回值
 
-如果分配器对象不相等，则为 **true**；如果分配器对象相等，则为 **false**。
+**`true`** 如果分配器对象不相等，则为; 否则为。**`false`** 如果分配器对象相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -66,7 +66,7 @@ bool operator==(
 
 ### <a name="return-value"></a>返回值
 
-如果分配器对象相等，则为 **true**；如果分配器对象不相等，则为 **false**。
+**`true`** 如果分配器对象相等，则为;**`false`** 如果分配器对象不相等，则为。
 
 ### <a name="remarks"></a>备注
 

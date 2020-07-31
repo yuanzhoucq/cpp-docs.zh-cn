@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2937
 ms.assetid: 95671ca3-79f7-4b56-a5f2-a92296da1629
-ms.openlocfilehash: f682cd6346d214f4173226d78301f563083ef607
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 615b4fbb639249179d34f0d92b4891aadc0ff3a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758367"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233400"
 ---
 # <a name="compiler-error-c2937"></a>编译器错误 C2937
 
 “class”：type-class-id 被重新定义为全局 typedef
 
-不能将泛型或模板类用作全局 `typedef`成员。
+不能将泛型或模板类用作全局类 **`typedef`** 。
 
 下面的示例生成 C2937：
 

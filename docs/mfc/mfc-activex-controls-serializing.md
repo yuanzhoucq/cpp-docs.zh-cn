@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621203"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225015"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控件：序列化
 
@@ -52,19 +52,19 @@ ActiveX 控件的序列化是通过重写[COleControl：:D opropexchange](refere
 
 下表列出了可用于序列化控件的属性的可能的属性交换函数：
 
-|属性交换函数|目的|
+|属性交换函数|目标|
 |---------------------------------|-------------|
 |**PX_Blob （）**|序列化类型二进制大型对象（BLOB）数据属性。|
 |**PX_Bool （）**|序列化类型布尔属性。|
 |**PX_Color （）**|序列化类型颜色属性。|
 |**PX_Currency （）**|序列化类型**CY** （currency）属性。|
-|**PX_Double （）**|序列化类型**双精度**属性。|
+|**PX_Double （）**|序列化类型 **`double`** 属性。|
 |**PX_Font （）**|序列化字体类型属性。|
-|**PX_Float （）**|序列化类型**float**属性。|
+|**PX_Float （）**|序列化类型 **`float`** 属性。|
 |**PX_IUnknown （）**|序列化类型的属性 `LPUNKNOWN` 。|
-|**PX_Long （）**|序列化**long**类型的属性。|
+|**PX_Long （）**|序列化类型 **`long`** 属性。|
 |**PX_Picture （）**|序列化类型图片属性。|
-|**PX_Short （）**|序列化**short**类型属性。|
+|**PX_Short （）**|序列化类型 **`short`** 属性。|
 |**PXstring( )**|序列化类型 `CString` 属性。|
 |**PX_ULong （）**|序列化类型**ULONG**属性。|
 |**PX_UShort （）**|序列化类型**USHORT**属性。|

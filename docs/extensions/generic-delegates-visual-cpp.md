@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228708"
 ---
 # <a name="generic-delegates-ccli"></a>泛型委托 (C++/CLI)
 
@@ -27,27 +27,27 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *attributes*<br/>
 （可选）其他声明性信息。 有关特性和特性类的详细信息，请参阅“特性”。
 
-type-parameter-identifier(s)<br/>
+type-parameter-identifier(s)**<br/>
 类型参数标识符的逗号分隔列表。
 
-type-parameter-constraints-clauses<br/>
+type-parameter-constraints-clauses**<br/>
 采用[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的形式
 
-accessibility-modifiers<br/>
-（可选）可访问性修饰符（例如 public、private）。
+accessibility-modifiers**<br/>
+可有可无可访问性修饰符（ **`public`** 如 **`private`** ）。
 
-result-type<br/>
+*result-类型*<br/>
 委托的返回类型。
 
 *identifier*<br/>
 委托名称。
 
-formal-parameters<br/>
+formal-parameters**<br/>
 （可选）委托的参数列表。
 
 ## <a name="example"></a>示例
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [泛型](generics-cpp-component-extensions.md)

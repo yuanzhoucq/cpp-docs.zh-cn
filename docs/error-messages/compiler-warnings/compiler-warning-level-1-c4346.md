@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187240"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223195"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>编译器警告（等级 1）C4346
 
 "name"：依赖名称不是类型
 
-如果要将依赖名称视为类型，则需要使用[typename](../../cpp/typename.md)关键字。 对于在所有版本的 Visual C++中都相同的代码，请将 `typename` 添加到声明。
+如果要将依赖名称视为类型，则需要使用[typename](../../cpp/typename.md)关键字。 对于在所有版本的 Visual C++ 中都相同的代码，请将添加 **`typename`** 到声明。
 
 下面的示例生成 C4346：
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-下面的示例演示了要求**typename**关键字的其他示例：
+以下示例显示了需要关键字的其他示例 **`typename`** ：
 
 ```cpp
 // C4346b.cpp

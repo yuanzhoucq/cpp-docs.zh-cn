@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226237"
 ---
 # <a name="filename-search-functions"></a>文件名搜索函数
 
@@ -67,7 +67,7 @@ ms.locfileid: "75300298"
 不能指定目标属性（如 `_A_RDONLY`来限制执行查找操作。 这些属性在 `attrib` 结构的 `_finddata_t` 字段中返回，并且可能具有以下值（在 IO.h 中定义）。 用户不应依赖可能为 `attrib` 字段中的唯一值的这些值。
 
 `_A_ARCH`<br/>
-存档。 每当通过 **BACKUP** 命令更改或清除文件时进行设置。 值：0x20。
+存档。 每当文件被**备份**命令更改和清除时设置。 值：0x20。
 
 `_A_HIDDEN`<br/>
 隐藏文件。 使用 DIR 命令时通常不可见，除非使用 **/AH** 选项。 返回普通文件和具有此属性的文件的相关信息。 值：0x02。
@@ -88,7 +88,7 @@ ms.locfileid: "75300298"
 
 你可以嵌套 `_find` 函数。 例如，如果对 `_findfirst` 或 `_findnext` 的调用找到作为子目录的文件，则可以使用对 `_findfirst` 或 `_findnext`的另一个调用开始新的搜索。
 
-`_wfindfirst` 和 `_wfindnext` 是 `_findfirst` 和 `_findnext`的宽字符版本。 宽字符版本的结构参数具有在 IO.h 和 Wchar.h 中定义的 `_wfinddata_t` 数据类型。 该数据类型的字段与 `_finddata_t` 数据类型中的相同，除非在 `_wfinddata_t` 中，名称字段属于 `wchar_t` 类型，而不属于 `char`类型。 除此之外， `_wfindfirst` 和 `_wfindnext` 的行为与 `_findfirst` 和 `_findnext`完全相同。
+`_wfindfirst` 和 `_wfindnext` 是 `_findfirst` 和 `_findnext`的宽字符版本。 宽字符版本的结构参数具有在 IO.h 和 Wchar.h 中定义的 `_wfinddata_t` 数据类型。 此数据类型的字段与数据类型的字段相同 `_finddata_t` ，不同之处在于， `_wfinddata_t` 名称字段中的为类型 **`wchar_t`** 而不是类型 **`char`** 。 除此之外， `_wfindfirst` 和 `_wfindnext` 的行为与 `_findfirst` 和 `_findnext`完全相同。
 
 `_findfirst` 和 `_findnext` 使用 64 位时间类型。 如果你必须使用旧的 32 位时间类型，则可以定义 `_USE_32BIT_TIME_T`。 名称中具有 `32` 后缀的这些函数的版本使用 32 位时间类型，而具有 `64` 后缀的那些版本使用 64 位时间类型。
 
@@ -100,11 +100,11 @@ ms.locfileid: "75300298"
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|**`__int64`**|
+|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` 是 `unsigned long` 的 `typedef`（32 位）。
+`_fsize_t`是 **`typedef`** **`unsigned long`** （32位）的。
 
 ## <a name="example"></a>示例
 

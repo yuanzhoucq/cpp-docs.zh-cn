@@ -7,32 +7,32 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 7c95f061e195ccf7fef8a6a21d193b257baa5f39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04bd0c49528d86ddd4d1e6c77804cf64278db188
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335682"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211874"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary（强制实施条件运算符规则）
+# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary`（强制条件运算符规则）
 
-启用C++标准规则，用于条件运算符表达式中第二个和第三个操作数的类型和 const 或易失性 （cv） 限定。
+为条件运算符表达式中的第二个和第三个操作数启用 c + + 标准规则的强制实施。
 
 ## <a name="syntax"></a>语法
 
-> **/Zc：三元****-*** |
+> **`/Zc:ternary`**[**`-`**]
 
 ## <a name="remarks"></a>备注
 
-从 Visual Studio 2017 开始，编译器支持C++标准*条件运算符***（？：**） 行为。 它也被称为*三元运算符*。 C++标准要求三元操作数满足三个条件之一：操作数必须相同类型和**条件**或**挥发性**限定（cv 限定），或者只有一个操作数必须明确转换为与另一种类型和 cv 限定相同的操作数。 或者，一个或两个操作数必须是引发表达式。 在 Visual Studio 2017 版本 15.5 之前的版本中，编译器允许按标准认为不明确的转换。
+从 Visual Studio 2017 开始，编译器支持 c + + 标准*条件运算符*（ **`?:`** ）行为。 它也称为*三元运算符*。 C + + 标准要求三元操作数满足以下三个条件之一：操作数必须具有相同的类型和 **`const`** 或 **`volatile`** 限定（cv 限定），或者只有一个操作数必须可明确转换为同一类型和 cv 限定。 或者，一个或两个操作数必须是 throw 表达式。 在 Visual Studio 2017 版本15.5 之前的版本中，编译器允许由标准视为不明确的转换。
 
-指定 **/Zc：三元**选项时，编译器符合标准。 它拒绝不符合匹配类型规则的代码以及第二个和第三个操作数的 cv 限定。
+当 **`/Zc:ternary`** 指定选项时，编译器将符合标准。 它拒绝不满足匹配类型和第二个和第三个操作数的 cv 限定规则的代码。
 
-**/Zc：三元**选项在 Visual Studio 2017 中默认处于关闭状态。 使用 **/Zc：三元**来启用符合性行为，或 **/Zc：三元-** 显式指定以前的不符合编译器行为。 [/允许-](permissive-standards-conformance.md)选项隐式启用此选项，但可以使用 **/Zc：ternary-** 重写它。
+**`/Zc:ternary`** 默认情况下，此选项在 Visual Studio 2017 中处于关闭状态。 使用 **`/Zc:ternary`** 启用一致的行为，或 **`/Zc:ternary-`** 显式指定以前的不一致编译器行为。 [`/permissive-`](permissive-standards-conformance.md)选项隐式启用此选项，但可以使用重写它 **`/Zc:ternary-`** 。
 
 ### <a name="examples"></a>示例
 
-此示例显示提供类型非显式初始化和转换为类型的类如何导致不明确的转换。 默认情况下，编译器接受此代码，但在指定 **/Zc：三元**或 **/允许时**拒绝。
+此示例演示如何从类型提供非显式初始化并转换为类型的类可能导致不明确的转换。 默认情况下，编译器接受此代码，但在 **/`Zc:ternary`** 指定了或时被拒绝 **`/permissive-`** 。
 
 ```cpp
 // zcternary1.cpp
@@ -56,9 +56,9 @@ int main()
 }
 ```
 
-要修复此代码，请对首选公共类型进行显式强制转换，或防止类型转换的一个方向。 通过显式表示转换，可以使编译器与类型转换匹配。
+若要修复此代码，请显式强制转换为首选的通用类型，或防止出现类型转换的一个方向。 可以通过显式转换来保持编译器与类型转换的匹配。
 
-此常见模式的一个重要例外是，当操作数的类型是 null 终止字符串类型之一，如`const char*`，`const char16_t*`等。 您还可以使用数组类型及其衰减到的指针类型重现效果。 当实际的第二个或第三个操作数`?:`为相应类型的字符串文本时的行为取决于所使用的语言标准。 C++17 已更改此案例的语义，从 C++14。 因此，编译器在默认 **/std：c++14**下接受以下示例中的代码，但在指定 **/std：c++17**时拒绝它。
+当操作数的类型为以 null 结尾的字符串类型之一（例如、等）时，这种常见模式是一个重要的例外情况 `const char*` `const char16_t*` 。 你还可以通过数组类型以及它们所衰减到的指针类型来重现该效果。 当实际的第二个或第三个操作数为 `?:` 相应类型的字符串文字时，行为取决于所使用的语言标准。 C + + 17 已更改了 c + + 14 中此情况的语义。 因此，编译器接受默认的以下示例中的代码 **`/std:c++14`** ，但在指定时将其拒绝 **`/std:c++17`** 。
 
 ```cpp
 // zcternary2.cpp
@@ -78,9 +78,9 @@ int main()
 }
 ```
 
-要修复此代码，请显式转换其中一个操作数。
+若要修复此代码，请显式强制转换其中一个操作数。
 
-在 **/Zc：ternary**下，编译器拒绝条件运算符，其中一个参数的类型为**void，** 另一个不是引发表达式。 此模式的常见用在 ASSERT 类似宏中：
+在下 **`/Zc:ternary`** ，编译器拒绝条件运算符，其中一个参数的类型为，另一个参数不 **`void`** 是 **`throw`** 表达式。 此模式的一种常见用法是类似于断言的宏：
 
 ```cpp
 // zcternary3.cpp
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-典型的解决方案是用 替换非 void 参数。 `void()`
+典型的解决方案是将非 void 参数替换为 `void()` 。
 
-此示例显示在 **/Zc：三元**和 **/Zc：三元 -** 下生成错误的代码：
+此示例显示了在和下生成错误的 **`/Zc:ternary`** 代码 **`/Zc:ternary-`** ：
 
 ```cpp
 // zcternary4.cpp
@@ -114,14 +114,14 @@ int main() {
 }
 ```
 
-此代码以前给出此错误：
+此代码先前提供此错误：
 
 ```Output
 error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37033>' to 'foo::<lambda_717fca3fc65510deea10bc47e2b06be4>'
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-随着 **/Zc：三元，** 失败的原因变得更加清晰。 可以使用多个实现定义的调用约定中的任何一个生成每个 lambda。 但是，编译器没有首选项规则来消除可能的 lambda 签名的歧义。 新输出如下所示：
+对于 **`/Zc:ternary`** ，失败的原因变得更清晰。 可以使用多个实现定义的调用约定中的任何一个来生成每个 lambda。 但编译器没有首选项规则来消除可能的 lambda 签名。 新的输出如下所示：
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -132,7 +132,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-**/Zc：ternary**发现的问题的常见来源来自模板元编程中使用的条件运算符。 某些结果类型在此开关下更改。 下面的示例演示了两种情况，其中 **/Zc：ternary**在非元编程上下文中更改条件表达式的结果类型：
+发现的问题的常见原因 **`/Zc:ternary`** 出自模板元编程中使用的条件运算符。 某些结果类型在此开关下发生变化。 下面的示例演示了两种情况 **`/Zc:ternary`** ：在非元编程上下文中更改条件表达式的结果类型：
 
 ```cpp
 // zcternary5.cpp
@@ -147,18 +147,18 @@ int main(int argc, char**) {
 }
 ```
 
-典型的解决方法是在结果类型上应用`std::remove_reference`特征，在需要的地方保留旧行为。
+典型的修复方法是 `std::remove_reference` 在需要保留旧行为的情况下，对结果类型应用特性。
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/C++** > **命令行**属性页。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 修改 **"附加选项"** 属性以包括 **/Zc：三元**或 **/Zc：三元-** 然后选择 **"确定**"。
+1. 修改 "**附加选项**" 属性以包含 **`/Zc:ternary`** 或 **`/Zc:ternary-`** ，然后选择 **"确定"**。
 
 ## <a name="see-also"></a>另请参阅
 
-[/Zc（一致性）](zc-conformance.md)
+[`/Zc`度](zc-conformance.md)

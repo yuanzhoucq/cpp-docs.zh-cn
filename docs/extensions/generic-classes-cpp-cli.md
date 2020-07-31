@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172355"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216019"
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 
@@ -40,38 +40,38 @@ class-body
 *attributes*<br/>
 （可选）其他声明性信息。 有关特性和特性类的详细信息，请参阅“特性”。
 
-class-key<br/>
-应为 class 或 typename
+class-key**<br/>
+**`class`** 或**`typename`**
 
-type-parameter-identifier(s)：标识符的逗号分隔列表，用于指定类型参数的名称。
+type-parameter-identifier(s)**：标识符的逗号分隔列表，用于指定类型参数的名称。
 
-constraint-clauses<br/>
-where 子句的非逗号分隔列表，用于指定类型参数的约束。 采用以下形式：
+constraint-clauses**<br/>
+where**** 子句的非逗号分隔列表，用于指定类型参数的约束。 采用以下形式：
 
 > **where** *类型参数标识符* **：** *constraint-list*  **...**
 
-constraint-list<br/>
-*类或接口*[`,` *...* ]
+constraint-list**<br/>
+*类或接口*[ `,` *...*]
 
-accessibility-modifiers<br/>
-泛型类的可访问性修饰符。 对于 Windows 运行时，唯一允许的修饰符是 private。 对于公共语言运行时，允许的修饰符为 private 和 public。
+accessibility-modifiers**<br/>
+泛型类的可访问性修饰符。 对于 Windows 运行时，唯一允许的修饰符是 **`private`** 。 对于公共语言运行时，允许的修饰符为 **`private`** 和 **`public`** 。
 
 *identifier*<br/>
 泛型类的名称，即任意有效的 C++ 标识符。
 
-modifiers<br/>
-（可选）允许的修饰符包括 sealed 和 abstract。
+*组成*<br/>
+（可选）允许的修饰符包括 sealed**** 和 abstract****。
 
-base-list<br/>
+base-list**<br/>
 包含一个基类和任何实现接口（全都以逗号分隔）的列表。
 
-class-body<br/>
+class-body**<br/>
 包含字段、成员函数等的类主体。
 
-declarators<br/>
-采用此类型的任何变量的声明。 例如：`^`identifier[`,` ...]
+*声明符*<br/>
+采用此类型的任何变量的声明。 例如： `^` *identifier*[ `,` ...]
 
-可以声明下面这些泛型类（请注意，关键字 class 可以代替 typename 使用）。 在此示例中，`ItemType`、`KeyType` 和 `ValueType` 是在类型所在位置指定的未知类型。 `HashTable<int, int>` 是泛型类型 `HashTable<KeyType, ValueType>` 的构造类型。 可以通过一个泛型类型来构造许多不同的构造类型。 将通过泛型类构造的构造类型视为与其他任何 ref class 类型一样。
+可以声明这样的泛型类（请注意，可以使用关键字 **`class`** 而不是 **`typename`** ）。 在此示例中，`ItemType`、`KeyType` 和 `ValueType` 是在类型所在位置指定的未知类型。 `HashTable<int, int>` 是泛型类型 `HashTable<KeyType, ValueType>` 的构造类型。 可以通过一个泛型类型来构造许多不同的构造类型。 将通过泛型类构造的构造类型视为与其他任何 ref class 类型一样。
 
 ```cpp
 // generic_classes_1.cpp
@@ -95,9 +95,9 @@ int main() {
 }
 ```
 
-值类型（int 或 double 等内置类型，或用户定义值类型）和引用类型都可以用作泛型类型参数。 无论如何，泛型定义中的语法是相同的。 从语法上讲，将未知类型视为引用类型。 不过，运行时可以确定实际使用的类型是否是值类型，并替换生成的相应代码，以直接访问成员。 用作泛型类型参数的值类型未装箱，因此不会有装箱造成的性能损失。 泛型主体中使用的语法应为 `T^` 和 `->`，而不是 `.`。 运行时会将对类型参数使用 [ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md) 相应地解释为，如果类型参数为值类型，就直接创建值类型。
+这两个值类型（内置类型（如 **`int`** 或） **`double`** 或用户定义的值类型）和引用类型都可用作泛型类型参数。 无论如何，泛型定义中的语法是相同的。 从语法上讲，将未知类型视为引用类型。 不过，运行时可以确定实际使用的类型是否是值类型，并替换生成的相应代码，以直接访问成员。 用作泛型类型参数的值类型未装箱，因此不会有装箱造成的性能损失。 泛型主体中使用的语法应为 `T^` 和 `->`，而不是 `.`。 运行时会将对类型参数使用 [ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md) 相应地解释为，如果类型参数为值类型，就直接创建值类型。
 
-还可以根据[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)，对可用于类型参数的类型声明泛型类。 在下面的示例中，任何用于 `ItemType` 的类型都必须实现 `IItem` 接口。 例如，尝试使用未实现  **的 int**`IItem` 会产生编译时错误，因为类型参数不符合约束条件。
+还可以根据[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)，对可用于类型参数的类型声明泛型类。 在下面的示例中，任何用于 `ItemType` 的类型都必须实现 `IItem` 接口。 例如，如果尝试使用不实现的， **`int`** `IItem` 将产生编译时错误，因为类型参数不满足约束。
 
 ```cpp
 // generic_classes_2.cpp
@@ -108,7 +108,7 @@ where ItemType : IItem
 ref class Stack {};
 ```
 
-无法仅通过更改类型参数的数量或类型来重载相同命名空间中的泛型类。 不过，如果每个类位于不同的命名空间中，可以重载它们。 例如，假设以下两个类位于命名空间 `MyClass` 和 `MyClass<ItemType>` 中：`A` 和 `B`。 然后，可以在第三个命名空间 C 中重载这两个类：
+无法仅通过更改类型参数的数量或类型来重载相同命名空间中的泛型类。 不过，如果每个类位于不同的命名空间中，可以重载它们。 例如，假设以下两个类位于命名空间 `A` 和 `B` 中：`MyClass` 和 `MyClass<ItemType>`。 然后，可以在第三个命名空间 C 中重载这两个类：
 
 ```cpp
 // generic_classes_3.cpp
@@ -159,7 +159,7 @@ ref class MyClass : IInterface<ItemType> {};
 
 ## <a name="example"></a>示例
 
-下面的示例使用适当的类型参数（int\< **、double** **和 string** **）创建泛型类 MyClass**ItemType> 的三个不同实例。
+在下面的示例中， \<ItemType> 通过使用相应的类型自变量（ **`int`** 、 **`double`** 和**字符串**）创建泛型类 MyClass 的三个不同实例。
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -284,7 +284,7 @@ Test1
 
 ## <a name="example"></a>示例
 
-下面的示例在泛型类 `ProtectData` 中声明非泛型方法 `MyClass<ItemType>`。 此方法在签名中使用类的类型参数 `ItemType`（包含在开放式构造类型中）。
+下面的示例在泛型类 `MyClass<ItemType>` 中声明非泛型方法 `ProtectData`。 此方法在签名中使用类的类型参数 `ItemType`（包含在开放式构造类型中）。
 
 ```cpp
 // generics_non_generic_methods1.cpp
@@ -665,7 +665,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-下面的示例声明包含一个字段 `MyGenStruct` 的泛型结构 `myField`，并将不同类型（int、double、`String^`）的值分配给此字段。
+下面的示例声明一个泛型结构，其中 `MyGenStruct` 包含一个字段， `myField` 并将不同类型（ **`int`** 、、）的值分配 **`double`** `String^` 给此字段。
 
 ```cpp
 // generics_generic_struct1.cpp
@@ -710,6 +710,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [泛型](generics-cpp-component-extensions.md)

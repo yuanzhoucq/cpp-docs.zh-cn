@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615911"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225067"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>删除 CObject 集合中的所有对象
 
@@ -38,7 +38,7 @@ ms.locfileid: "84615911"
 
 1. 使用 `GetHeadPosition` 和 `GetNext` 循环访问该列表。
 
-1. 使用**delete**运算符删除迭代时遇到的每个对象。
+1. 使用 **`delete`** 运算符可以删除迭代时遇到的每个对象。
 
 1. 在删除与列表中所有元素关联的对象之后，调用 `RemoveAll` 函数删除这些元素。
 
@@ -54,7 +54,7 @@ ms.locfileid: "84615911"
 
 1. 使用 `GetSize` 和整数索引值循环访问数组。
 
-1. 使用**delete**运算符删除迭代时遇到的每个元素。
+1. 使用 **`delete`** 运算符删除迭代中遇到的每个元素。
 
 1. 在删除数组中的所有元素后，调用 `RemoveAll` 函数从数组中移除这些元素。
 
@@ -68,7 +68,7 @@ ms.locfileid: "84615911"
 
 1. 使用 `GetStartPosition` 和 `GetNextAssoc` 循环访问数组。
 
-1. 使用**delete**运算符删除迭代中遇到的每个地图元素的键和/或值。
+1. 使用 **`delete`** 运算符可以删除在迭代中遇到的每个地图元素的键和/或值。
 
 1. 在删除映射中的所有元素后，调用 `RemoveAll` 函数从映射中移除这些元素。
 

@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5ada0fbed705af34391709653dbd3638fed32bf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327855"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226576"
 ---
 # <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 类
 
-此类提供的方法与[CCom临界节](../../atl/reference/ccomcriticalsection-class.md)相同，但不提供关键部分。
+此类提供与[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)相同的方法，但不提供临界区。
 
 ## <a name="syntax"></a>语法
 
@@ -32,26 +32,26 @@ class CComFakeCriticalSection
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
-|[CcomFake关键部分：：Init](#init)|由于没有关键部分，因此不执行任何操作。|
-|[CComFake关键部分：：锁定](#lock)|由于没有关键部分，因此不执行任何操作。|
-|[CComFake关键部分：：学期](#term)|由于没有关键部分，因此不执行任何操作。|
-|[CComFake关键部分：：解锁](#unlock)|由于没有关键部分，因此不执行任何操作。|
+|[CComFakeCriticalSection：： Init](#init)|不执行任何操作，因为没有关键部分。|
+|[CComFakeCriticalSection：： Lock](#lock)|不执行任何操作，因为没有关键部分。|
+|[CComFakeCriticalSection：： Term](#term)|不执行任何操作，因为没有关键部分。|
+|[CComFakeCriticalSection：： Unlock](#unlock)|不执行任何操作，因为没有关键部分。|
 
 ## <a name="remarks"></a>备注
 
-`CComFakeCriticalSection`镜像[CCom临界节](../../atl/reference/ccomcriticalsection-class.md)中找到的方法。 但是，`CComFakeCriticalSection`不提供关键部分;但是，不提供关键部分。因此，它的方法什么都不做。
+`CComFakeCriticalSection`镜像[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)中的方法。 但是， `CComFakeCriticalSection` 并不提供临界区，因此它的方法不执行任何操作。
 
-通常`CComFakeCriticalSection`，您可以通过`typedef`名称或`AutoCriticalSection`。 `CriticalSection` 当使用[CCom单线程模型](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)时，这`typedef`两个名称`CComFakeCriticalSection`都引用。 当使用[CComMultiThread模型](../../atl/reference/ccommultithreadmodel-class.md)时，它们分别引用[CComAuto临界部分](../../atl/reference/ccomautocriticalsection-class.md)和`CComCriticalSection`。
+通常，可以 `CComFakeCriticalSection` 通过名称使用 **`typedef`** `AutoCriticalSection` 或 `CriticalSection` 。 使用[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)时，这两个 **`typedef`** 名称引用 `CComFakeCriticalSection` 。 当使用[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)时，它们分别引用[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)和 `CComCriticalSection` 。
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlcore.h
+**标头：** atlcore
 
-## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CcomFake关键部分：：Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection：： Init
 
-由于没有关键部分，因此不执行任何操作。
+不执行任何操作，因为没有关键部分。
 
 ```
 HRESULT Init() throw();
@@ -59,11 +59,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
-## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFake关键部分：：锁定
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection：： Lock
 
-由于没有关键部分，因此不执行任何操作。
+不执行任何操作，因为没有关键部分。
 
 ```
 HRESULT Lock() throw();
@@ -71,11 +71,11 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
-## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFake关键部分：：学期
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection：： Term
 
-由于没有关键部分，因此不执行任何操作。
+不执行任何操作，因为没有关键部分。
 
 ```
 HRESULT Term() throw();
@@ -83,11 +83,11 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
-## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFake关键部分：：解锁
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection：： Unlock
 
-由于没有关键部分，因此不执行任何操作。
+不执行任何操作，因为没有关键部分。
 
 ```
 HRESULT Unlock() throw();
@@ -95,7 +95,7 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ## <a name="see-also"></a>另请参阅
 

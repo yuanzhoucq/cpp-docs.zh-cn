@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939404"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220738"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -75,7 +75,7 @@ long double cabsl(
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此你可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**cab**的重载，并返回**浮点**或**长** **双精度**值。 在 C 程序中， **cab**始终使用 **_Dcomplex**值并返回一个**双精度**值。
+由于 c + + 允许重载，因此可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**cab**的重载，以及返回值 **`float`** 或 **`long double`** 值。 在 C 程序中， **cab**始终采用 **_Dcomplex**值并返回 **`double`** 值。
 
 ## <a name="requirements"></a>要求
 
@@ -83,12 +83,12 @@ long double cabsl(
 |-------------|--------------|------------------|
 |**cab**、 **cabsf**、 **cabsl**|\<complex.h>|\<ccomplex>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
-[norm、normf、norml](norm-normf-norml1.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
+[norm、normf、norml1](norm-normf-norml1.md)<br/>
 [creal、crealf、creall](creal-crealf-creall.md)<br/>
 [cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj、conjf、conjl](conj-conjf-conjl.md)<br/>

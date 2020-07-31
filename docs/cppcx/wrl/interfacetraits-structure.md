@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216565"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 结构
 
@@ -50,38 +50,38 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 *I0*<br/>
 接口的名称。
 
-*隐形型*<br/>
-`Implements``ChainInterfaces`和`RuntimeClass`的接口不会位于受支持的接口指示的列表中。
+*CloakedType*<br/>
+对于 `RuntimeClass` 、 `Implements` 和 `ChainInterfaces` ，不在支持的接口 id 列表中的接口。
 
 ## <a name="remarks"></a>备注
 
-实现接口的通用特性。
+实现接口的常见特性。
 
-第二个模板是掩蔽接口的专门化。 第三个模板是 Nil 参数的专门化。
+第二个模板是掩蔽接口的专用化。 第三个模板是零参数的专用化。
 
 ## <a name="members"></a>成员
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>公共类型
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>公共 Typedef
 
-名称   | 说明
+名称   | 描述
 ------ | ------------------------------------------
 `Base` | *I0*模板参数的同义词。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                   | 说明
+“属性”                                                   | 描述
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[接口特征：：坎卡斯特托](#cancastto)               | 指示指定指针是否可以转换为指向`Base`的指针。
-[接口特征：：CasttoBase](#casttobase)             | 将指定的指针强制转换为 指向`Base`的指针。
-[接口特征：：强制未知](#casttounknown)       | 将指定的指针强制转换为 指向`IUnknown`的指针。
-[接口特征：：填充带](#fillarraywithiid) | 将 的`Base`接口 ID 分配给索引参数指定的数组元素。
-[接口特征：验证](#verify)                     | 验证`Base`正确派生的。
+[InterfaceTraits：： CanCastTo](#cancastto)               | 指示是否可以将指定指针转换为指向的指针 `Base` 。
+[InterfaceTraits：： CastToBase](#casttobase)             | 将指定指针强制转换为指向的指针 `Base` 。
+[InterfaceTraits：： CastToUnknown](#casttounknown)       | 将指定指针强制转换为指向的指针 `IUnknown` 。
+[InterfaceTraits：： FillArrayWithIid](#fillarraywithiid) | 将的接口 ID 分配 `Base` 给索引参数指定的数组元素。
+[InterfaceTraits：： Verify](#verify)                     | 验证 `Base` 是否已正确派生。
 
 ### <a name="public-constants"></a>公共常量
 
-名称                                   | 说明
+名称                                   | 描述
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[接口特征：：IidCount](#iidcount) | 保存与当前`InterfaceTraits`对象关联的接口指示数。
+[InterfaceTraits：： IidCount](#iidcount) | 保存与当前对象关联的接口 Id 的数量 `InterfaceTraits` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -89,11 +89,11 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 实现.h
+**标头：** 实现。h
 
-**命名空间：** 微软：：WRL：:D
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>接口特征：：坎卡斯特托
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits：： CanCastTo
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -108,26 +108,26 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>参数
 
-*Ptr*<br/>
+*ptr*<br/>
 指向类型的指针的名称。
 
 *riid*<br/>
-的接口`Base`ID。
+的接口 ID `Base` 。
 
-*Ppv*<br/>
-如果此操作成功 *，ppv*将指向 指定的`Base`接口。 否则 *，ppv*设置为`nullptr`。
+*ppv*<br/>
+如果此操作成功， *ppv*将指向由指定的接口 `Base` 。 否则， *ppv*设置为 **`nullptr`** 。
 
 ### <a name="return-value"></a>返回值
 
-如果此操作成功，并且*ptr*被强制转换为指向`Base`的指针，**则为 true。** 否则，**假**。
+**`true`** 如果此操作成功并且*ptr*强制转换为指向的指针 `Base` ，则为; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-指示指定指针是否可以转换为指向`Base`的指针。
+指示是否可以将指定指针转换为指向的指针 `Base` 。
 
-有关 的详细信息`Base`，请参阅[公共类型防御区](#public-typedefs)部分。
+有关的详细信息 `Base` ，请参阅[公共 typedef](#public-typedefs)部分。
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>接口特征：：CasttoBase
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits：： CastToBase
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -141,9 +141,9 @@ static __forceinline Base* CastToBase(
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-参数*ptr*的类型。
+参数*指针*的类型。
 
-*Ptr*<br/>
+*ptr*<br/>
 指向类型*T*的指针。
 
 ### <a name="return-value"></a>返回值
@@ -152,11 +152,11 @@ static __forceinline Base* CastToBase(
 
 ### <a name="remarks"></a>备注
 
-将指定的指针强制转换为 指向`Base`的指针。
+将指定指针强制转换为指向的指针 `Base` 。
 
-有关 的详细信息`Base`，请参阅[公共类型防御区](#public-typedefs)部分。
+有关的详细信息 `Base` ，请参阅[公共 typedef](#public-typedefs)部分。
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>接口特征：：强制未知
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits：： CastToUnknown
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -170,22 +170,22 @@ static __forceinline IUnknown* CastToUnknown(
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-参数*ptr*的类型。
+参数*指针*的类型。
 
-*Ptr*<br/>
-指向类型*T 的*指针。
+*ptr*<br/>
+指向类型*T*的指针。
 
 ### <a name="return-value"></a>返回值
 
-指向派生的 I 未知`Base`项的指针。
+一个指针，指向派生的 IUnknown `Base` 。
 
 ### <a name="remarks"></a>备注
 
-将指定的指针强制转换为 指向`IUnknown`的指针。
+将指定指针强制转换为指向的指针 `IUnknown` 。
 
-有关 的详细信息`Base`，请参阅[公共类型防御区](#public-typedefs)部分。
+有关的详细信息 `Base` ，请参阅[公共 typedef](#public-typedefs)部分。
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>接口特征：：填充带
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits：： FillArrayWithIid
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -199,20 +199,20 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>参数
 
 *index*<br/>
-指向包含零基索引值的字段的指针。
+指向包含从零开始的索引值的字段的指针。
 
-*伊德*<br/>
-接口指示的数组。
+*iid*<br/>
+接口 Id 的数组。
 
 ### <a name="remarks"></a>备注
 
-将 的`Base`接口 ID 分配给索引参数指定的数组元素。
+将的接口 ID 分配 `Base` 给索引参数指定的数组元素。
 
-与此 API 的名称相反，只修改一个数组元素;而不是整个数组。
+与此 API 的名称相反，只修改一个数组元素;不是整个数组。
 
-有关 的详细信息`Base`，请参阅[公共类型防御区](#public-typedefs)部分。
+有关的详细信息 `Base` ，请参阅[公共 typedef](#public-typedefs)部分。
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>接口特征：：IidCount
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits：： IidCount
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -222,9 +222,9 @@ static const unsigned long IidCount = 1;
 
 ### <a name="remarks"></a>备注
 
-保存与当前`InterfaceTraits`对象关联的接口指示数。
+保存与当前对象关联的接口 Id 的数量 `InterfaceTraits` 。
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>接口特征：验证
+## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits：： Verify
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -234,6 +234,6 @@ __forceinline static void Verify();
 
 ### <a name="remarks"></a>备注
 
-验证`Base`正确派生的。
+验证 `Base` 是否已正确派生。
 
-有关 的详细信息`Base`，请参阅[公共类型防御区](#public-typedefs)部分。
+有关的详细信息 `Base` ，请参阅[公共 typedef](#public-typedefs)部分。

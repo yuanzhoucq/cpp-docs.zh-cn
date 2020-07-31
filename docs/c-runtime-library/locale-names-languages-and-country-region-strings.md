@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 5a430154c9ad31a9776eeb2ba569fa0da33fac81
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189670"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT 区域设置名称、语言和国家/地区字符串
 
@@ -34,7 +34,7 @@ code-page** 是与区域设置关联的 ANSI/OEM 代码页。 通过语言或通
 
 如果你仅使用代码页指定区域设置，则将使用 [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename) 所报告的用户的默认语言和国家/地区。 例如，如果指定 `".1254"`（ANSI 土耳其语）作为系统上为英语（美国）配置的用户区域设置，则存储的区域设置是 `English_United States.1254`。 我们不建议使用该格式，因为它可能导致不一致的行为。
 
-`C` 的 *locale* 参数值 为 C 转换指定最小的符合 ANSI 标准的环境。 `C` 区域设置假定每个 char 数据类型为 1 字节，并且其值始终小于 256****。 如果 *locale* 指向一个空字符串，则区域设置是实现定义的本机环境。
+`C` 的 *locale* 参数值 为 C 转换指定最小的符合 ANSI 标准的环境。 `C`区域设置假定每个 **`char`** 数据类型都为1个字节，并且其值始终小于256。 如果 *locale* 指向一个空字符串，则区域设置是实现定义的本机环境。
 
 使用 `setlocale` 类别，可以为 `_wsetlocale` 和 `LC_ALL` 函数同时指定所有区域设置类别。 这些类别可以全部设置为同一区域设置，你也可以使用具有该格式的区域设置参数分别设置每个类别：
 

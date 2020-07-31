@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182014"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218021"
 ---
 # <a name="generic-interfaces-ccli"></a>泛型接口 (C++/CLI)
 
@@ -33,30 +33,30 @@ ms.locfileid: "80182014"
 ## <a name="remarks"></a>备注
 
 *attributes*<br/>
-（可选）其他声明性信息。 若要详细了解特性和特性类，请参阅“attribute”。
+（可选）其他声明性信息。 有关特性和特性类的详细信息，请参阅**特性**。
 
-class-key<br/>
-class 或 typename
+class-key**<br/>
+**`class`** 或 **`typename`**
 
-type-parameter-identifier(s)<br/>
+type-parameter-identifier(s)**<br/>
 标识符的逗号分隔列表。
 
-type-parameter-constraints-clauses<br/>
+type-parameter-constraints-clauses**<br/>
 采用[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的形式
 
-accessibility-modifiers<br/>
-（可选）可访问性修饰符（例如，public、private）。
+accessibility-modifiers**<br/>
+可有可无可访问性修饰符（例如**public、private**）。
 
 *identifier*<br/>
 接口名称。
 
-base-list<br/>
+base-list**<br/>
 （可选）包含一个或多个显式基接口的逗号分隔列表。
 
-interface-body<br/>
+interface-body**<br/>
 接口成员的声明。
 
-declarators<br/>
+*声明符*<br/>
 （可选）基于此类型的变量的声明。
 
 ## <a name="example"></a>示例
@@ -238,7 +238,7 @@ List2
 
 ## <a name="example"></a>示例
 
-下面的示例声明一个泛型接口 `IMyGenIface`，以及两个专用化 `IMySpecializedInt` 的非泛型接口（`ImySpecializedString` 和 `IMyGenIface`）。 然后，两个专用化接口由两个类（`MyIntClass` 和 `MyStringClass`）实现。 此示例展示了如何专用化泛型接口、如何实例化泛型接口和非泛型接口，以及如何调用接口中已显式实现的成员。
+下面的示例声明一个泛型接口 `IMyGenIface`，以及两个专用化 `IMyGenIface` 的非泛型接口（`IMySpecializedInt` 和 `ImySpecializedString`）。 然后，两个专用化接口由两个类（`MyIntClass` 和 `MyStringClass`）实现。 此示例展示了如何专用化泛型接口、如何实例化泛型接口和非泛型接口，以及如何调用接口中已显式实现的成员。
 
 ```cpp
 // generic_interface2.cpp
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [泛型](generics-cpp-component-extensions.md)

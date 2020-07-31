@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3e01f97c67803408c9ce5bf056e3e9ed4746d259
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245920"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229163"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid 异常
 
-当**typeid**的操作数为 NULL 指针时， [typeid 运算符](../cpp/typeid-operator.md)将引发**bad_typeid**异常。
+如果的操作数为 NULL 指针，则[typeid 运算符](../cpp/typeid-operator.md)引发**bad_typeid**异常 **`typeid`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-下面的示例演示了引发**bad_typeid**异常的**typeid**运算符。
+下面的示例演示了 **`typeid`** 引发**bad_typeid**异常的运算符。
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -78,7 +78,7 @@ catch (bad_typeid){
 Object is NULL
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [运行时类型信息](../cpp/run-time-type-information.md)\
 [关键字](../cpp/keywords-cpp.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909415"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217007"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
@@ -81,7 +81,7 @@ errno_t _wasctime_s(
 用于存储结果的缓冲区的大小。
 
 *tmSource*<br/>
-时间/日期结构。 此函数假定为指向有效**结构** **tm**对象的指针。
+时间/日期结构。 此函数假定为指向有效 **`struct`** **tm**对象的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -91,10 +91,10 @@ errno_t _wasctime_s(
 
 |*宽限*|*numberOfElements*|*tmSource*|返回|*缓冲区*中的值|
 |--------------|------------------------|----------|------------|-----------------------|
-|**Null**|任意|任意|**EINVAL**|未修改|
-|Not **NULL** （指向有效内存）|0|任意|**EINVAL**|未修改|
-|Not **NULL**|0< 大小 < 26|任意|**EINVAL**|空字符串|
-|Not **NULL**|>= 26|**Null**|**EINVAL**|空字符串|
+|**NULL**|任意|任意|**EINVAL**|未修改|
+|Not **NULL** （指向有效内存）|0|Any|**EINVAL**|未修改|
+|Not **NULL**|0< 大小 < 26|Any|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|**NULL**|**EINVAL**|空字符串|
 |Not **NULL**|>= 26|无效的时间结构或超出时间组件值范围|**EINVAL**|空字符串|
 
 > [!NOTE]
@@ -118,7 +118,7 @@ errno_t _wasctime_s(
 
 转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间的信息，请参阅 [time、_time32、_time64](time-time32-time64.md) 和 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md) 以及 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 函数，有关定义时区环境和全局变量的信息，请参阅 [_tzset](tzset.md) 函数。
 
-**Asctime_s**生成的字符串结果正好包含26个字符，其形式`Wed Jan 02 02:03:55 1980\n\0`为。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果小于，则返回错误代码**EINVAL**。
+**Asctime_s**生成的字符串结果正好包含26个字符，其形式为 `Wed Jan 02 02:03:55 1980\n\0` 。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果小于，则返回错误代码**EINVAL**。
 
 **_wasctime_s**是**asctime_s**的宽字符版本。 否则 **_wasctime_s**和**asctime_s**的行为相同。
 
@@ -136,7 +136,7 @@ errno_t _wasctime_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> 或 \<wchar.h>|
@@ -187,7 +187,7 @@ Current date and time: Wed May 14 15:30:17 2003
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
-[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
 [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>

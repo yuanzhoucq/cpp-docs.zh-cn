@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: 9515abb6fed2ffd2c818fc14eae321bfcc856ce5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5768487c9b720b1a49e50de88022a2bdc02d482
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214277"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：用 const 关键字声明内部指针 (C++/CLI)
 
-下面的示例展示了如何在内部指针的声明中使用 const。
+下面的示例演示如何 **`const`** 在内部指针的声明中使用。
 
 > [!IMPORTANT]
 > `/clr` 编译器选项支持此语言功能，但是 `/ZW` 编译器选项不支持此语言功能。
@@ -80,4 +80,4 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
+[interior_ptr （c + +/CLI）](interior-ptr-cpp-cli.md)

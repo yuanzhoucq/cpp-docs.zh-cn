@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: b4ae511caab8278daf723bbcb8ffc5d57f5a1cd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442666"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223039"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr 类
 
@@ -51,9 +51,9 @@ ms.locfileid: "79442666"
 class CMapPtrToPtr : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-`CMapPtrToPtr` 的成员函数类似于类[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)的成员函数。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论你在何处看到作为函数参数或返回值的 `CObject` 指针，都要用一个指向**void**的指针。 无论你在何处看到作为函数参数或返回值的**char**的 `CString` 或**常量**指针，都请替换指向**void**的指针。
+的成员函数 `CMapPtrToPtr` 类似于类[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)的成员函数。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论你在何处看到 `CObject` 作为函数参数或返回值的指针，都要将指针替换为 **`void`** 。 无论你在何处看到 `CString` **`const`** **`char`** 作为函数参数或返回值的指针，都可以将指针替换为 **`void`** 。
 
 `BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`
 
@@ -69,7 +69,7 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
 |[CMapPtrToPtr：： GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|返回此映射中的元素数。|
 |[CMapPtrToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|确定哈希表中元素的当前数目。|
@@ -85,21 +85,21 @@ class CMapPtrToPtr : public CObject
 |[CMapPtrToPtr::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|移除由键指定的元素。|
 |[CMapPtrToPtr：： SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|将元素插入到映射中;如果找到匹配的键，则替换现有元素。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |----------|-----------------|
-|[CMapPtrToPtr：： operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射中-用于 `SetAt`的运算符替换。|
+|[CMapPtrToPtr：： operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射中-的运算符替换 `SetAt` 。|
 
 ## <a name="remarks"></a>备注
 
-`CMapPtrToPtr` 包含 IMPLEMENT_DYNAMIC 宏来支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单独的地图元素（指针值）的转储，则必须将转储上下文的深度设置为1或更大。
+`CMapPtrToPtr`合并了 IMPLEMENT_DYNAMIC 宏，以支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单独的地图元素（指针值）的转储，则必须将转储上下文的深度设置为1或更大。
 
 指针到指针的映射不能序列化。
 
 当删除 `CMapPtrToPtr` 对象或其元素时，仅删除指针而不是指针引用的实体。
 
-有关 `CMapPtrToPtr`的详细信息，请参阅文章[集合](../../mfc/collections.md)。
+有关的详细信息 `CMapPtrToPtr` ，请参阅文章[集合](../../mfc/collections.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

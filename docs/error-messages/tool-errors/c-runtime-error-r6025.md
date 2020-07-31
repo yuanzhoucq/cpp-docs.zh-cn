@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-ms.openlocfilehash: d5edb08278b7b6b9b3eb62e92fc04410f96a8f09
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6e184ba24ad535697a727276a980fd082625e082
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075132"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218047"
 ---
 # <a name="c-runtime-error-r6025"></a>C 运行时错误 R6025
 
@@ -30,4 +30,4 @@ ms.locfileid: "80075132"
 
 尚未实例化对象来处理纯虚函数调用。
 
-此错误是由通过转换为派生类的类型创建的指针调用抽象基类中的虚函数引起的，但实际上是指向基类的指针。 当从**void** <strong>\*</strong>强制转换为指向类的指针时，如果在构造基类的过程中创建了**void** <strong>\*</strong> ，则会发生这种情况。
+此错误是由通过转换为派生类的类型创建的指针调用抽象基类中的虚函数引起的，但实际上是指向基类的指针。 当在 **`void`** <strong>\*</strong> **`void`** <strong>\*</strong> 基类的构造过程中创建时，当从转换为指向类的指针时，会发生这种情况。

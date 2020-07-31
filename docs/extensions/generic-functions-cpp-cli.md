@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516372"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216006"
 ---
 # <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
 
@@ -53,28 +53,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>参数
 
-*特性*<br/>
+*attributes*<br/>
 （可选）其他声明性信息。 若要详细了解特性和特性类，请参阅“attribute”。
 
-modifiers<br/>
-（可选）函数修饰符（如 static）。  禁止使用 virtual，因为虚方法可能不是泛型。
+*组成*<br/>
+（可选）函数修饰符（如 static）。  **`virtual`** 不允许使用，因为虚方法可能不是泛型方法。
 
-return-type<br/>
+*返回类型*<br/>
 由方法返回的类型。 如果返回类型为 void，则不需要返回值。
 
 *identifier*<br/>
 函数名称。
 
-type-parameter identifier(s)<br/>
+type-parameter identifier(s)**<br/>
 标识符的逗号分隔列表。
 
-formal-parameters<br/>
+formal-parameters**<br/>
 （可选）参数列表。
 
-type-parameter-constraints-clauses<br/>
+type-parameter-constraints-clauses**<br/>
 这指定了对可以用作类型参数的类型施加的限制，并采用[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的形式。
 
-function-body<br/>
+*函数体*<br/>
 方法主体，可能会引用类型参数标识符。
 
 ### <a name="remarks"></a>备注
@@ -181,7 +181,7 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [泛型](generics-cpp-component-extensions.md)

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 16f4315837873c8d78065ea97a11188bdddedbed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916240"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234102"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime、_gmtime32、_gmtime64
 
@@ -63,7 +63,7 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>返回值
 
-指向类型 [tm](../../c-runtime-library/standard-types.md) 的结构的指针。 返回的结构的字段以 UTC 而不是本地时间保存*sourceTime*参数的计算值。 每个结构字段的类型均为**int**，如下所示：
+指向类型 [tm](../../c-runtime-library/standard-types.md) 的结构的指针。 返回的结构的字段以 UTC 而不是本地时间保存*sourceTime*参数的计算值。 每个结构字段的类型均为 **`int`** ，如下所示：
 
 |字段|说明|
 |-|-|
@@ -96,9 +96,9 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime> 或\<time .h>|
+|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime> 或 \<time.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -139,8 +139,8 @@ Coordinated universal time is Tue Feb 12 23:11:31 2002
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime、_wasctime](asctime-wasctime.md)<br/>
-[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
-[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
+[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
 [_mkgmtime、_mkgmtime32、_mkgmtime64](mkgmtime-mkgmtime32-mkgmtime64.md)<br/>

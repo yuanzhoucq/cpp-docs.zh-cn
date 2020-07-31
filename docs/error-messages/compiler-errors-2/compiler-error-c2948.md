@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2948
 ms.assetid: 780c6ed3-43a0-4112-8d00-b7bf79086c05
-ms.openlocfilehash: af759d424c61d9471c69891bbddb03a40fea2af9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 54b5e601090b79cc05ac787a08cf5942742bc5df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176840"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212613"
 ---
 # <a name="compiler-error-c2948"></a>编译器错误 C2948
 
 显式实例化;专用化中不允许存储类说明符 "说明符"
 
-不能在以前显式实例化的模板类的专用化中使用存储类说明符（如 `extern`）。
+不能 **`extern`** 在以前显式实例化的模板类的专用化中使用存储类说明符（如）。

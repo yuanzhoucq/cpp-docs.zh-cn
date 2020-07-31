@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
-ms.openlocfilehash: f74c115a3cabb421ba5a9cf4c34696a0c223512e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ad6b9624a1bf510465843167d104d1bec189bc70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165270"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197353"
 ---
 # <a name="compiler-warning-c4394"></a>编译器警告 C4394
 
 "function"：不应将每个 appdomain 符号标记 __declspec （dllexport）
 
-使用[appdomain](../../cpp/appdomain.md)`__declspec` 修饰符标记的函数编译为 MSIL （而不是本机），并且托管函数不支持导出表（[export](../../windows/export.md)`__declspec` 修饰符）。
+使用[appdomain](../../cpp/appdomain.md)修饰符标记的函数 **`__declspec`** 编译为 MSIL （而不是本机），托管函数不支持导出表（[export](../../windows/export.md) **`__declspec`** 修饰符）。
 
 您可以将托管函数声明为具有公共可访问性。 有关详细信息，请参阅[类型可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)和[成员可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility)。
 
-C4394 始终作为错误发出。  你可以通过 `#pragma warning` 或 **/wd**关闭此警告;有关详细信息，请参阅[警告](../../preprocessor/warning.md)或[/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/we、/wo、/Wv、/Wx （警告等级）](../../build/reference/compiler-option-warning-level.md) 。
+C4394 始终作为错误发出。  可以通过或/wd 关闭此警告 `#pragma warning` ; 有关 **/wd**详细信息，请参阅[警告](../../preprocessor/warning.md)或[/W、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/WE、/Wo、/Wv、/wx （警告等级）](../../build/reference/compiler-option-warning-level.md) 。
 
 ## <a name="example"></a>示例
 

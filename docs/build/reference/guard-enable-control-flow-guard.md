@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: e6a8a1545b97976cbe82d1c81b0e70c3dac3a266
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8661f94e0ee35f8d5e2c8caba1fc01bbf4072876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270797"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190684"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard（启用控制流保护）
 
@@ -26,7 +26,7 @@ ms.locfileid: "62270797"
 
 **/guard:cf** 选项使编译器在编译时为间接调用目标分析控制流，然后插入代码以在运行时验证目标。 默认情况下， **/guard:cf** 处于关闭状态，必须显式启用它。 若要显式禁用此选项，请使用 **/guard:cf-**。
 
-**Visual Studio 2017 及更高版本**：此选项将添加为临界**切换**生成的语句跳转表。
+**Visual Studio 2017 及更高版本**：此选项为 **`switch`** 生成跳转表的语句添加了临界。
 
 当指定 **/guard:cf** 控制流监护 (CFG) 选项时，编译器和链接器会插入额外的运行时安全性检查，以检测会危及你的代码的尝试。 在编译和链接期间，将分析代码中的所有间接调用以查找当代码正确时它能够到达的每个位置。 此信息存储在你二进制文件标头的额外结构中。 编译器还会在代码中的每个间接调用之前插入检查，以确保目标是已验证过的位置之一。 如果运行时 CFG 感知的操作系统上检查失败，操作系统将关闭该程序。
 
@@ -40,7 +40,7 @@ ms.locfileid: "62270797"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 依次选择 **“配置属性”**、 **“C/C++”** 和 **“代码生成”**。
 
@@ -48,7 +48,7 @@ ms.locfileid: "62270797"
 
 1. 在下拉控件中，选择 **“是”** 以启用控制流保护，或选择 **“否”** 加以禁用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

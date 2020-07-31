@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 5263612a26b2bcb606ad712a2a8e0a521ce9437a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6b34fb6b20b2aaf2f18fbe8d937e50bdbaa3bdff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228344"
 ---
 # <a name="const_mem_fun_t-class"></a>const_mem_fun_t 类
 
@@ -30,10 +30,10 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>参数
 
-*Pm* \
+*下午*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*Pleft* \
+*Pleft*\
 在其上调用*Pm*成员函数的对象。
 
 ## <a name="return-value"></a>返回值
@@ -42,7 +42,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>备注
 
-类模板存储*Pm*的副本，该副本必须是指向私有成员对象中 `Type` 类的成员函数的指针。 它将其成员函数定义 `operator()` 为返回（`Pleft` -> \* `Pm`）（） **const**。
+类模板*Pm* `Type` 在私有成员对象中存储 Pm 的副本，该副本必须是指向类的成员函数的指针。 它将其成员函数定义 `operator()` 为返回（ `Pleft` -> \* `Pm` ）（） **`const`** 。
 
 ## <a name="example"></a>示例
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<wchar_t> class
 ms.assetid: 31f34072-04d6-4871-88fe-48e17d473484
-ms.openlocfilehash: a2f8a882020ddb3d87436d08b3d85ea9407b1c08
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b2504dbb124ccca7f9b27619585abb2b5795f92
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219165"
 ---
-# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 结构
+# <a name="char_traitsltwchar_tgt-struct"></a>char_traits&lt;wchar_t&gt; 结构
 
-一个类, 该类是模板结构**char_traits\<CharType >** 的专用化到**wchar_t**类型的元素。
+一个类，该类是模板结构**char_traits \<CharType> **专用于类型的元素的 **`wchar_t`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -27,15 +27,15 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>备注
 
-专用化允许结构利用操作此类型**wchar_t**的对象的库函数。
+专用化允许结构利用操作此类型对象的库函数 **`wchar_t`** 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<string>
+**标头：**\<string>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [char_traits 结构](../standard-library/char-traits-struct.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

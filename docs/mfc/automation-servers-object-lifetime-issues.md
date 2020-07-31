@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 6e8c4189e8c895cf41323528c70d9277645d8f9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8031902318a091b0ed5f340b454a14b9df195069
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619059"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225080"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>自动化服务器：对象生存期问题
 
@@ -20,7 +20,7 @@ ms.locfileid: "84619059"
 
 框架维护对从[CCmdTarget](reference/ccmdtarget-class.md)派生的任何服务器对象的引用数的内部计数。 当自动化客户端或其他实体添加或释放对对象的引用时，将更新此计数。
 
-当引用计数变为0时，框架将调用虚拟函数[CCmdTarget：： OnFinalRelease](reference/ccmdtarget-class.md#onfinalrelease)。 此函数的默认实现将调用**delete**运算符来删除此对象。
+当引用计数变为0时，框架将调用虚拟函数[CCmdTarget：： OnFinalRelease](reference/ccmdtarget-class.md#onfinalrelease)。 此函数的默认实现将调用 **`delete`** 运算符来删除此对象。
 
 当外部客户端具有对应用程序的对象的引用时，Microsoft 基础类库提供用于控制应用程序行为的附加工具。 除了维护对每个对象的引用的计数之外，服务器还维护活动对象的全局计数。 全局函数[AfxOleLockApp](reference/application-control.md#afxolelockapp)和[AfxOleUnlockApp](reference/application-control.md#afxoleunlockapp)更新应用程序的活动对象计数。 如果此计数不为零，则在用户从系统菜单中选择“关闭”或从“文件”菜单中选择“退出”时，应用程序不会终止。 相反，应用程序的主窗口将隐藏（但不销毁），直到完成所有等待的客户端请求。 通常，分别在支持自动化的类的构造函数和析构函数中调用 `AfxOleLockApp` 和 `AfxOleUnlockApp`。
 

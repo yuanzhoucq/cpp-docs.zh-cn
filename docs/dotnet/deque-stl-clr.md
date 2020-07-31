@@ -98,18 +98,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-ms.openlocfilehash: 74fb98d99e0aba94c40dce9ad1bcd6af83394231
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 75c83240b9125628fd5121368af547a5266bfb5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208762"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221492"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
-此模板类描述一个对象，该对象控制具有随机访问权限的、长度可变的元素序列。 可以使用容器 `deque` 来管理类似于连续存储块的一系列元素，但这两个元素可以在一端增长或收缩，而无需复制任何剩余元素。 因此，它可以有效地实现 `double-ended queue`。 （因此，名称为。）
+此模板类描述一个对象，该对象控制具有随机访问权限的、长度可变的元素序列。 使用容器可以 `deque` 管理类似于连续存储块的一系列元素，但在任一端可以增大或缩小，无需复制任何剩余元素。 因此，它可以有效地实现 `double-ended queue` 。 （因此，名称为。）
 
-在下面的说明中，`GValue` 与 `Value` 相同，除非后者为 ref 类型，在这种情况下，它是 `Value^`的。
+在下面的说明中，与 `GValue` 相同， `Value` 除非后者为 ref 类型，在这种情况下，它是 `Value^` 。
 
 ## <a name="syntax"></a>语法
 
@@ -127,7 +127,7 @@ template<typename Value>
     { ..... };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *GValue*<br/>
 受控序列中的元素的泛型类型。
@@ -137,13 +137,13 @@ template<typename Value>
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<cliext/deque >
+**标头：**\<cliext/deque>
 
 **命名空间：** cliext
 
 ## <a name="declarations"></a>声明
 
-|类型定义|说明|
+|类型定义|描述|
 |---------------------|-----------------|
 |[deque::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|
 |[deque::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
@@ -159,7 +159,7 @@ template<typename Value>
 |[deque::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[deque::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[deque::assign (STL/CLR)](#assign)|替换所有元素。|
 |[deque::at (STL/CLR)](#at)|访问指定位置处的元素。|
@@ -183,25 +183,25 @@ template<typename Value>
 |[deque::swap (STL/CLR)](#swap)|交换两个容器的内容。|
 |[deque::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 
-|properties|说明|
+|属性|描述|
 |--------------|-----------------|
 |[deque::back_item (STL/CLR)](#back_item)|访问最后一个元素。|
 |[deque::front_item (STL/CLR)](#front_item)|访问第一个元素。|
 
-|操作员|说明|
+|操作员|描述|
 |--------------|-----------------|
 |[deque::operator!= (STL/CLR)](#op_neq)|确定两个 `deque` 对象是否不相等。|
 |[deque::operator(STL/CLR)](#operator)|访问指定位置处的元素。|
 |[operator< (deque) (STL/CLR)](#op_lt)|确定 `deque` 对象是否小于另一个 `deque` 对象。|
-|[operator<= (deque) (STL/CLR)](#op_lteq)|确定 `deque` 对象是否小于或等于另一个 `deque` 对象。|
-|[operator= (deque) (STL/CLR)](#op_as)|替换受控序列。|
-|[operator== (deque) (STL/CLR)](#op_eq)|确定 `deque` 对象是否等于另一个 `deque` 对象。|
-|[operator> (deque) (STL/CLR)](#op_gt)|确定 `deque` 对象是否大于另一个 `deque` 对象。|
-|[operator>= (deque) (STL/CLR)](#op_gteq)|确定 `deque` 对象是否大于或等于另一个 `deque` 对象。|
+|[operator<= （deque）（STL/CLR）](#op_lteq)|确定 `deque` 对象是否小于或等于另一个 `deque` 对象。|
+|[operator = （deque）（STL/CLR）](#op_as)|替换受控序列。|
+|[operator = = （deque）（STL/CLR）](#op_eq)|确定 `deque` 对象是否等于另一个 `deque` 对象。|
+|[operator> （deque）（STL/CLR）](#op_gt)|确定 `deque` 对象是否大于另一个 `deque` 对象。|
+|[operator>= （deque）（STL/CLR）](#op_gteq)|确定 `deque` 对象是否大于或等于另一个 `deque` 对象。|
 
-## <a name="interfaces"></a>界面
+## <a name="interfaces"></a>接口
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
@@ -209,17 +209,17 @@ template<typename Value>
 |<xref:System.Collections.Generic.IEnumerable%601>|通过类型化元素进行排序。|
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
 |<xref:System.Collections.Generic.IList%601>|维护类型化元素的有序组。|
-|IDeque < 值\>|维护泛型容器。|
+|IDeque<值\>|维护泛型容器。|
 
 ## <a name="remarks"></a>备注
 
-对象为其控制的序列分配并释放存储，并通过存储的句柄数组指定 `Value` 元素块。 阵列按需增长。 增长发生的方式是：预先计算或追加新元素的成本是固定时间，并且不会干扰剩余的元素。 你还可以在常量时间结束时删除元素，而不会干扰剩余元素。 因此，deque 非常适合用于模板类[队列（stl/clr）](../dotnet/queue-stl-clr.md)或模板类[堆栈（stl/clr）](../dotnet/stack-stl-clr.md)的基础容器。
+对象为其控制的序列分配并释放存储，并通过存储的句柄数组指定元素块 `Value` 。 阵列按需增长。 增长发生的方式是：预先计算或追加新元素的成本是固定时间，并且不会干扰剩余的元素。 你还可以在常量时间结束时删除元素，而不会干扰剩余元素。 因此，deque 非常适合用于模板类[队列（stl/clr）](../dotnet/queue-stl-clr.md)或模板类[堆栈（stl/clr）](../dotnet/stack-stl-clr.md)的基础容器。
 
-`deque` 对象支持随机访问迭代器，这意味着，可以直接引用元素的数值位置，从零开始，为最后一个（后端）元素计算[deque：： size （STL/CLR）](#size)`() - 1`。 这也意味着 deque 非常适合用于模板类[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)的基础容器。
+`deque`对象支持随机访问迭代器，这意味着，可以直接引用元素的数值位置，从零开始，为最后一个（后端）元素计算为[deque：： SIZE （STL/CLR）](#size) `() - 1` 。 这也意味着 deque 非常适合用于模板类[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)的基础容器。
 
 Deque 迭代器将句柄存储到其关联的 deque 对象，以及它指定的元素的偏移量。 只能将迭代器与其关联的容器对象一起使用。 Deque 元素的偏移*不*一定与其位置相同。 插入的第一个元素的偏移量为零，下一个追加的元素的偏移量为1，但下一个预置元素的偏移量为-1。
 
-在任一端插入或删除元素时，*不*会更改存储在任何有效偏移上的元素的值。 但是，插入或删除内部元素*可以*更改在给定偏移量下存储的元素值，因此由迭代器指定的值也可以更改。 （容器可能需要复制元素以在插入前创建孔洞，或在擦除后填充孔。）尽管如此，只要 deque 迭代器的偏差指定了有效的元素，它就会保持有效。 而且，有效的迭代器仍 dereferencable，可以使用它来访问或更改它指定的元素值，只要其偏差不等于 `end()`返回的迭代器的偏移量。
+在任一端插入或删除元素时，*不*会更改存储在任何有效偏移上的元素的值。 但是，插入或删除内部元素*可以*更改在给定偏移量下存储的元素值，因此由迭代器指定的值也可以更改。 （容器可能需要复制元素以在插入前创建孔洞，或在擦除后填充孔。）尽管如此，只要 deque 迭代器的偏差指定了有效的元素，它就会保持有效。 此外，有效的迭代器仍 dereferencable，可以使用它来访问或更改它指定的元素值，只要其偏差不等于返回的迭代器的偏移量 `end()` 。
 
 清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器*不*会销毁其元素。
 
@@ -238,7 +238,7 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *计数*<br/>
 要插入的元素数。
@@ -249,17 +249,17 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 要插入的范围的末尾。
 
-right<br/>
+*然后*<br/>
 要插入的枚举。
 
-*val*<br/>
+*初始值*<br/>
 要插入的元素的值。
 
 ### <a name="remarks"></a>备注
 
 第一个成员函数会将受控序列替换为值*val*的*计数*元素的重复。 使用它可以将具有相同值的元素填充到容器中。
 
-如果 `InIt` 是整数类型，则第二个成员函数的行为与 `assign((size_type)first, (value_type)last)`相同。 否则，它会将受控序列替换为序列 [`first`，`last`）。 用于使受控序列成为副本的另一个序列。
+如果 `InIt` 是整数类型，则第二个成员函数的行为与相同 `assign((size_type)first, (value_type)last)` 。 否则，它会将受控序列替换为序列 [ `first` ， `last` ）。 用于使受控序列成为副本的另一个序列。
 
 第三个成员函数将受控序列替换*为枚举器*指定的序列。 用于使受控序列成为枚举器所描述的序列的副本。
 
@@ -316,9 +316,9 @@ a b c
 reference at(size_type pos);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-pos<br/>
+*位置*<br/>
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -527,7 +527,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[deque：： erase （stl/clr）](#erase)`(` [deque：： begin](#begin) （stl/clr）`(),` [DEQUE：： end （stl](#end) /clr）`())`。 用于确保受控序列为空。
+Member 函数有效地调用[deque：： erase （stl/clr）](#erase) `(` [deque：： begin （stl/clr](#begin) ） `(),` [deque：： end （stl/clr）](#end) `())` 。 用于确保受控序列为空。
 
 ### <a name="example"></a>示例
 
@@ -584,7 +584,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>备注
 
-该类型描述可用作受控序列的常量随机访问迭代器的未指定类型 `T2` 的对象。
+该类型描述 `T2` 可用作受控序列的常量随机访问迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -669,7 +669,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>备注
 
-该类型描述可用作受控序列的常量反向迭代器的未指定类型 `T4` 的对象。
+该类型描述 `T4` 可用作受控序列的常量反向迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -716,7 +716,7 @@ template<typename InIt>
 deque(System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *计数*<br/>
 要插入的元素数。
@@ -727,10 +727,10 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 要插入的范围的末尾。
 
-right<br/>
+*然后*<br/>
 要插入的对象或范围。
 
-*val*<br/>
+*初始值*<br/>
 要插入的元素的值。
 
 ### <a name="remarks"></a>备注
@@ -745,25 +745,25 @@ right<br/>
 
 `deque(deque<Value>% right);`
 
-用序列 [`right.begin()`，`right.end()`）初始化受控序列。 用于指定初始受控序列，该序列是由 deque 对象*权限*控制的序列的副本。 有关迭代器的详细信息，请参阅[deque：： begin （stl/clr）](#begin)和[deque：： end （stl/clr）](#end)。
+用序列 [，）初始化受控序列 `right.begin()` `right.end()` 。 用于指定初始受控序列，该序列是由 deque 对象*权限*控制的序列的副本。 有关迭代器的详细信息，请参阅[deque：： begin （stl/clr）](#begin)和[deque：： end （stl/clr）](#end)。
 
 构造函数：
 
 `deque(deque<Value>^ right);`
 
-用序列 [`right->begin()`，`right->end()`）初始化受控序列。 用于指定初始受控序列，该序列是由 deque 对象（其句柄是*正确*的）所控制的序列的副本。
+用序列 [，）初始化受控序列 `right->begin()` `right->end()` 。 用于指定初始受控序列，该序列是由 deque 对象（其句柄是*正确*的）所控制的序列的副本。
 
 构造函数：
 
 `explicit deque(size_type count);`
 
-初始化受控序列 *，其中每个元素都*具有值 `value_type()`。 使用它可以使用具有默认值的元素填充容器。
+用*count*元素每个值初始化受控序列 `value_type()` 。 使用它可以使用具有默认值的元素填充容器。
 
 构造函数：
 
 `deque(size_type count, value_type val);`
 
-用每*个值为值的* *计数*元素初始化受控序列。 使用它可以将具有相同值的元素填充到容器中。
+用每*个值为值的**计数*元素初始化受控序列。 使用它可以将具有相同值的元素填充到容器中。
 
 构造函数：
 
@@ -771,7 +771,7 @@ right<br/>
 
 `deque(InIt first, InIt last);`
 
-用序列 [`first`，`last`）初始化受控序列。 用于使受控序列成为另一个序列的副本。
+用序列 [，）初始化受控序列 `first` `last` 。 用于使受控序列成为另一个序列的副本。
 
 构造函数：
 
@@ -910,7 +910,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[deque：： size （STL/CLR）](#size)`() == 0`。 用于测试 deque 是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[deque：： size （STL/CLR）](#size) `() == 0` 。 用于测试 deque 是否为空。
 
 ### <a name="example"></a>示例
 
@@ -1016,7 +1016,7 @@ iterator erase(iterator where);
 iterator erase(iterator first, iterator last);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *first*<br/>
 要清除的范围的开头。
@@ -1033,7 +1033,7 @@ iterator erase(iterator first, iterator last);
 
 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 使用它可以删除零个或多个连续元素。
 
-这两个成员函数都返回一个迭代器，该迭代器指定在删除的任何元素之外保留的第一个元素; 如果不存在此类元素，则为[deque：： end （STL/CLR）](#end)`()`
+这两个成员函数都返回一个迭代器，该迭代器指定在删除的任何元素之外保留的第一个元素; 如果此类元素不存在，则为[deque：： end （STL/CLR）](#end) `()` 。
 
 擦除元素时，元素副本的数目在擦除结束和序列的最近结束之间的元素数中是线性的。 （在序列的任一端删除一个或多个元素时，不会发生元素复制。）
 
@@ -1378,7 +1378,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>备注
 
-该类型描述了一个 `GValue` 类型的对象，该对象描述用于此模板容器类的泛型接口的存储元素值。
+类型描述了一个类型为的对象 `GValue` ，该对象描述用于此模板容器类的泛型接口的存储元素值。
 
 ### <a name="example"></a>示例
 
@@ -1437,7 +1437,7 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *计数*<br/>
 要插入的元素数。
@@ -1448,10 +1448,10 @@ void insert(iterator where,
 *last*<br/>
 要插入的范围的末尾。
 
-right<br/>
+*然后*<br/>
 要插入的枚举。
 
-*val*<br/>
+*初始值*<br/>
 要插入的元素的值。
 
 *where*<br/>
@@ -1465,11 +1465,11 @@ right<br/>
 
 第二个成员函数插入值*val*的*计数*元素的重复。 使用它可以插入零个或多个连续元素，这些元素是同一值的所有副本。
 
-如果 `InIt` 是整数类型，则第三个成员函数的行为与 `insert(where, (size_type)first, (value_type)last)` 相同。 否则，将插入序列 [`first`，`last`）。 使用它可以插入从另一个序列复制的零个或多个连续元素。
+如果 `InIt` 是整数类型，则第三个成员函数的行为与 `insert(where, (size_type)first, (value_type)last)` 相同。 否则，将插入序列 [ `first` ， `last` ）。 使用它可以插入从另一个序列复制的零个或多个连续元素。
 
 第四个成员函数插入由*权限*指定的序列。 使用它可以插入枚举器描述的序列。
 
-在插入单个元素时，元素副本的数目在插入点与序列的最近结束之间的元素数中是线性的。 （在序列的任一端插入一个或多个元素时，不会发生元素复制。）如果 `InIt` 是输入迭代器，则第三个成员函数将为序列中的每个元素有效地执行单个插入。 否则，在插入 `N` 元素时，元素副本的数目在 `N` 加上插入点与序列的最近结束之间的元素数为线性。
+在插入单个元素时，元素副本的数目在插入点与序列的最近结束之间的元素数中是线性的。 （在序列的任一端插入一个或多个元素时，不会发生元素复制。）如果 `InIt` 是输入迭代器，则第三个成员函数将为序列中的每个元素有效地执行单个插入。 否则，在插入 `N` 元素时，元素副本的数量为线性， `N` 并加上插入点与序列的最近结束之间的元素数。
 
 ### <a name="example"></a>示例
 
@@ -1543,7 +1543,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>备注
 
-该类型描述可用作受控序列的随机访问迭代器的未指定类型 `T1` 的对象。
+该类型描述 `T1` 可用作受控序列的随机访问迭代器的未指定类型的对象。
 
 ### <a name="example"></a>示例
 
@@ -1592,17 +1592,17 @@ template<typename Value>
         deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)`。 使用此方法可以测试在按元素对两个 deque 进行*比较时，是否按原样对* *左侧*进行排序。
+Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素对两个 deque 进行*比较时，是否按原样对**左侧*进行排序。
 
 ### <a name="example"></a>示例
 
@@ -1659,9 +1659,9 @@ a b d
 reference operator[](size_type pos);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-pos<br/>
+*位置*<br/>
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -1807,7 +1807,7 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>备注
 
-此成员函数在受控序列的末尾插入一个具有值 `val` 的元素。 使用它可以向 deque 中追加另一个元素。
+此成员函数在 `val` 受控序列的末尾插入一个具有值的元素。 使用它可以向 deque 中追加另一个元素。
 
 ### <a name="example"></a>示例
 
@@ -1847,7 +1847,7 @@ void push_front(value_type val);
 
 ### <a name="remarks"></a>备注
 
-此成员函数在受控序列的开头插入一个具有值 `val` 的元素。 使用此方法可以将另一个元素预置到 deque。
+此成员函数在受控序列的开头插入一个具有值的元素 `val` 。 使用此方法可以将另一个元素预置到 deque。
 
 ### <a name="example"></a>示例
 
@@ -2052,17 +2052,17 @@ void resize(size_type new_size);
 void resize(size_type new_size, value_type val);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *new_size*<br/>
 受控序列的新大小。
 
-*val*<br/>
+*初始值*<br/>
 填充元素的值。
 
 ### <a name="remarks"></a>备注
 
-成员函数确保[deque：： size （STL/CLR）](#size)`()` 之后返回*new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为 `value_type()`的元素，而第二个成员函数则追加值为*val*的元素。 为了使受控序列更短，两个成员函数将有效地清除最后一个元素[deque：： size （STL/CLR）](#size)`() -` `new_size` 时间。 使用它可以通过修整或填充当前受控序列来确保受控序列*new_size*大小。
+成员函数确保[deque：： size （STL/CLR）](#size) `()` 之后返回*new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `value_type()` ，而第二个成员函数则追加值为*val*的元素。 为了使受控序列更短，两个成员函数实际上会清除最后一个元素[deque：： size （STL/CLR）](#size) `() -` `new_size` 次。 使用它可以通过修整或填充当前受控序列来确保受控序列*new_size*大小。
 
 ### <a name="example"></a>示例
 
@@ -2162,7 +2162,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[deque：： empty （STL/CLR）](#empty)`()`。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[deque：： empty （STL/CLR）](#empty) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -2258,14 +2258,14 @@ end()-begin() = 3
 void swap(deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 要与其交换内容的容器。
 
 ### <a name="remarks"></a>备注
 
-成员函数在 `*this` 和*右*之间交换受控序列。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
+成员函数交换和右之间的受控 **`*this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2406,7 +2406,7 @@ int main()
 a b c
 ```
 
-## <a name="operatorlt-deque-stlclr"></a><a name="op_lt"></a>operator&lt; （deque）（STL/CLR）
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lt"></a>operator &lt; （deque）（STL/CLR）
 
 Deque 小于比较。
 
@@ -2418,17 +2418,17 @@ template<typename Value>
         deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-如果为，则运算符函数将返回 true，以便为其 `!(right[i] < left[i])` `i` 也为 `left[i] < right[i]`。 否则，它将返回 `left->size() < right->size()` 你使用它来测试在按元素对两个 deque 进行*比较时，* 是否向*左*排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回，用于 `left->size() < right->size()` 测试在按元素对两个*right* deque 进行比较时，是否向*左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2475,7 +2475,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-deque-stlclr"></a><a name="op_lteq"></a>operator&lt;= （deque）（STL/CLR）
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lteq"></a>operator &lt; = （deque）（STL/CLR）
 
 Deque 小于或等于比较。
 
@@ -2487,17 +2487,17 @@ template<typename Value>
         deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)`。 使用此方法可以测试是否在按元素对两个 deque 进行比较时*向* *左*排序。
+Operator 函数返回 `!(right < left)` 。 使用此方法可以测试是否在按元素对两个 deque 进行比较时*向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2554,14 +2554,14 @@ a b d
 deque<Value>% operator=(deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-right<br/>
+*然后*<br/>
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符*直接*复制到对象，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2609,17 +2609,17 @@ template<typename Value>
         deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-仅当由*左*和*右*控制的序列具有相同的长度，并且每个位置 `i``left[i] ==` `right[i]`时，operator 函数才返回 true。 使用此方法可以*测试在按*元素对两个 deque 进行比较时，是否*向左*排序。
+仅当由*左*和*右*控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以*测试在按*元素对两个 deque 进行比较时，是否*向左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2666,7 +2666,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-deque-stlclr"></a><a name="op_gt"></a>operator&gt; （deque）（STL/CLR）
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gt"></a>operator &gt; （deque）（STL/CLR）
 
 Deque 大于比较。
 
@@ -2678,17 +2678,17 @@ template<typename Value>
         deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left`。 使用此方法可以测试是否在按元素对两个 deque 进行*比较时向* *左*排序。
+Operator 函数返回 `right` `<` `left` 。 使用此方法可以测试是否在按元素对两个 deque 进行*比较时向**左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2735,7 +2735,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-deque-stlclr"></a><a name="op_gteq"></a>operator&gt;= （deque）（STL/CLR）
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gteq"></a>operator &gt; = （deque）（STL/CLR）
 
 Deque 大于或等于比较。
 
@@ -2747,17 +2747,17 @@ template<typename Value>
         deque<Value>% right);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*<br/>
 要比较的左容器。
 
-right<br/>
+*然后*<br/>
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left` `<` `right)`。 用于测试在按元素对两个 deque 进行比较*时，是否向* *左*排序。
+Operator 函数返回 `!(left` `<` `right)` 。 用于测试在按元素对两个 deque 进行比较*时，是否向**左*排序。
 
 ### <a name="example"></a>示例
 

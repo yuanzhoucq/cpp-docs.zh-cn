@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f6f20d9af424fdd4254fc15e0580d62b9dfba144
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738318"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184470"
 ---
 # <a name="compiler-error-c3491"></a>编译器错误 C3491
 
@@ -21,7 +21,7 @@ ms.locfileid: "74738318"
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
-- 用 `mutable` 关键字声明 lambda 表达式，或者
+- 用关键字声明 lambda 表达式 **`mutable`** ，或者
 
 - 将该变量按引用传递到 lambda 表达式的捕获列表。
 
@@ -41,7 +41,7 @@ int main()
 
 ## <a name="example"></a>示例
 
-下面的示例通过使用 `mutable` 关键字声明 lambda 表达式来解决 C3491：
+下面的示例通过使用关键字声明 lambda 表达式来解析 C3491 **`mutable`** ：
 
 ```cpp
 // C3491b.cpp

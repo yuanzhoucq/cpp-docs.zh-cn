@@ -1,21 +1,21 @@
 ---
 title: 使用规则集指定要运行的 C++ 规则
-ms.date: 07/13/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373848"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389813"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用规则集指定要运行的 C++ 规则
 
-在 Visual Studio 中，你可以创建和修改自定义*规则集*，以满足与代码分析相关的特定项目需求。 默认规则集存储在中 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` 。
+在 Visual Studio 中，你可以创建和修改自定义*规则集*，以满足与代码分析相关的特定项目需求。 默认规则集存储在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* 。
 
-**Visual Studio 2017 版本15.7 及更高版本：** 你可以使用任何文本编辑器创建自定义规则集，并在命令行生成中应用它们，无论你使用的是何种生成系统。 有关详细信息，请参阅[/analyze：规则集](/cpp/build/reference/analyze-code-analysis)。
+**Visual Studio 2017 版本15.7 及更高版本：** 你可以使用任何文本编辑器创建自定义规则集，并在命令行生成中应用它们，无论你使用的是何种生成系统。 有关详细信息，请参阅 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis)。
 
 若要在 Visual Studio 中创建自定义 c + + 规则集，必须在 Visual Studio IDE 中打开 C/c + + 项目。 然后在规则集编辑器中打开标准规则集，然后添加或删除特定规则，并根据需要更改在代码分析确定违反规则时发生的操作。
 
@@ -23,9 +23,11 @@ ms.locfileid: "86373848"
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>基于单个现有规则集创建自定义规则
 
+::: moniker range="<=vs-2017"
+
 1. 在解决方案资源管理器中，打开项目的快捷菜单，然后选择 "**属性**"。
 
-1. 在 "**属性**" 选项卡上，选择 "**代码分析**"。
+1. 在 "**属性页**" 对话框中，选择**配置属性** > **代码分析** > **常规**属性页。
 
 1. 在 "**规则集**" 下拉列表中，执行下列操作之一：
 
@@ -36,6 +38,25 @@ ms.locfileid: "86373848"
    - 选择 **\<Browse...>** 指定列表中不存在的现有规则集。
 
 1. 选择 "**打开**" 以在规则集编辑器中显示规则。
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+1. 在解决方案资源管理器中，打开项目的快捷菜单，然后选择 "**属性**"。
+
+1. 在 "**属性页**" 对话框中，选择**配置属性** > **代码分析** > **Microsoft**属性页。
+
+1. 在 "**活动规则**" 下拉列表中，执行下列操作之一：
+
+   - 选择要自定义的规则集。
+
+     \- 或 -
+
+   - 选择 **\<Browse...>** 指定列表中不存在的现有规则集。
+
+1. 选择 "**打开**" 以在规则集编辑器中显示规则。
+
+::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>在规则集编辑器中修改规则集
 
@@ -77,41 +98,23 @@ ms.locfileid: "86373848"
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>在文本编辑器中创建规则集
 
-您可以在文本编辑器中创建自定义规则集，将其存储在具有扩展名的任何位置， `.ruleset` 并使用 " [/analyze：规则集](/cpp/build/reference/analyze-code-analysis)编译器" 选项应用于。
+您可以在文本编辑器中创建自定义规则集，将其存储在具有扩展名的任何位置， *`.ruleset`* 并使用 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) 编译器选项应用。
 
 下面的示例演示了一个基本规则集文件，你可以将其用作起始点：
 
-::: moniker range="<=vs-2017"
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+<RuleSet Name="New Rule Set" Description="New rules to apply." ToolsVersion="10.0">
   <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
     <Rule Id="C6001" Action="Warning" />
     <Rule Id="C26494" Action="Warning" />
   </Rules>
 </RuleSet>
 ```
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
-    <Rule Id="C6001" Action="Warning" />
-    <Rule Id="C26494" Action="Warning" />
-  </Rules>
-</RuleSet>
-```
-
-::: moniker-end
 
 ## <a name="ruleset-schema"></a>规则集架构
 
-下面的规则集架构描述了规则集文件的 XML 架构。 规则集架构存储在中 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` 。 你可以使用它以编程方式创作自己的规则集，或验证自定义规则集是否符合正确格式。 有关详细信息，请参阅[如何：基于 XSD 架构创建 XML 文档](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)。
+下面的规则集架构描述了规则集文件的 XML 架构。 规则集架构存储在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* 。 你可以使用它以编程方式创作自己的规则集，或验证自定义规则集是否符合正确格式。 有关详细信息，请参阅[如何：基于 XSD 架构创建 XML 文档](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -236,7 +239,7 @@ ms.locfileid: "86373848"
 
 架构元素详细信息：
 
-| 架构元素 | 说明 |
+| 架构元素 | 描述 |
 |--------------------|--------------|
 | `TLocalization` | 本地化信息包括规则集文件的名称、规则集文件的说明、包含本地化资源的资源程序集的名称以及本地化资源的基名称 |
 | `TRuleHintPaths` | 用作提示以搜索规则集文件的文件路径 |

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217202"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive-（标准符合性）
 
@@ -40,7 +40,7 @@ Visual Studio 2017 及更高版本支持此选项。
 
 在 Visual Studio 2017 版本15.3 中开始的编译器版本中， **`/permissive-`** 选项设置 [**`/Zc:ternary`**](zc-ternary.md) 选项。 编译器还实现了两阶段名称查找的更多要求。 如果 **`/permissive-`** 设置了选项，则编译器会分析函数和类模板定义，并标识模板中使用的依赖和非依赖名称。 在此版本中，只执行名称依赖项分析。
 
-标准留给实现的环境特定扩展和语言区域不受影响 **`/permissive-`** 。 例如，Microsoft 特定的 `__declspec` 调用约定和结构化异常处理关键字，以及编译器特定的杂注指令或属性不由编译器在模式下进行标记 **`/permissive-`** 。
+标准留给实现的环境特定扩展和语言区域不受影响 **`/permissive-`** 。 例如，Microsoft 特定的 **`__declspec`** 调用约定和结构化异常处理关键字，以及编译器特定的杂注指令或属性不由编译器在模式下进行标记 **`/permissive-`** 。
 
 **`/permissive-`** 选项使用当前编译器版本中的一致性支持来确定哪些语言构造是不一致的。 选项不确定您的代码是否符合特定版本的 c + + 标准。 若要为最新草案标准启用所有实现的编译器支持，请使用 [**`/std:c++latest`**](std-specify-language-standard-version.md) 选项。 若要将编译器支持限制为当前实现的 c + + 17 标准，请使用 [**`/std:c++17`**](std-specify-language-standard-version.md) 选项。 若要使编译器支持更接近 c + + 14 标准，请使用 [**`/std:c++14`**](std-specify-language-standard-version.md) 选项，这是默认选项。
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-ms.openlocfilehash: 1d775551d0f4955dc4eda9b0d418ea31e065714f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0463f6de51e324bd02c8b766fd39909ee2803ecd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743128"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212574"
 ---
 # <a name="compiler-error-c3482"></a>编译器错误 C3482
 
 “this”只能在非静态成员函数中用作 lambda 捕获
 
-不能将 `this` 传递至在静态方法或全局函数中声明的 lambda 表达式的捕获列表中。
+不能将传递 **`this`** 给在静态方法或全局函数中声明的 lambda 表达式的捕获列表。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
 - 将封闭函数转换为非静态方法，或
 
-- 从 lambda 表达式的捕获列表中删除 `this` 指针。
+- **`this`** 从 lambda 表达式的捕获列表中删除指针。
 
 ## <a name="example"></a>示例
 

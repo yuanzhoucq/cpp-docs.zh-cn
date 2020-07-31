@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916218"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213549"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
@@ -85,8 +85,8 @@ errno_t _gmtime64_s(
 
 |*tmDest*|*sourceTime*|返回|*TmDest*中的值|
 |-----------|------------|------------|--------------------|
-|**Null**|any|**EINVAL**|未修改。|
-|Not **NULL** （指向有效内存）|**Null**|**EINVAL**|所有字段都设置为 -1。|
+|**NULL**|any|**EINVAL**|未修改。|
+|Not **NULL** （指向有效内存）|**NULL**|**EINVAL**|所有字段都设置为 -1。|
 |Not **NULL**|< 0|**EINVAL**|所有字段都设置为 -1。|
 
 对于前两种错误条件，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
@@ -98,9 +98,9 @@ errno_t _gmtime64_s(
 > [!NOTE]
 > 目标环境应尝试确定夏令时是否生效。 C 运行时库假设使用美国规则实现夏令时的计算。
 
-每个结构字段的类型均为**int**，如下表所示。
+每个结构字段的类型均为 **`int`** ，如下表所示。
 
-|字段|说明|
+|字段|描述|
 |-|-|
 |**tm_sec**|每分钟的秒数（0-59）。|
 |**tm_min**|每小时后的分钟数（0-59）。|
@@ -120,9 +120,9 @@ errno_t _gmtime64_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**gmtime_s**、 **_gmtime32_s** **_gmtime64_s**|\<time.h>|\<ctime> 或\<time .h>|
+|**gmtime_s**、 **_gmtime32_s** **_gmtime64_s**|\<time.h>|\<ctime> 或 \<time.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -174,8 +174,8 @@ Coordinated universal time is Fri Apr 25 20:12:33 2003
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>
-[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
-[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
+[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
 [_mkgmtime、_mkgmtime32、_mkgmtime64](mkgmtime-mkgmtime32-mkgmtime64.md)<br/>

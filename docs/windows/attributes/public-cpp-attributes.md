@@ -1,17 +1,17 @@
 ---
-title: public （C++特性）（C++ COM 特性）
+title: public （c + + 特性）（c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 6912117ad05d6b608c45425ebec27cd49c0e5dc4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5307b96c58492aa06f115ca7a814aa221062e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224365"
 ---
 # <a name="public-c-attributes"></a>public（C++ 特性）
 
@@ -25,11 +25,11 @@ ms.locfileid: "80214685"
 
 ## <a name="remarks"></a>备注
 
-**公共** C++特性具有与[公共](/windows/win32/Midl/public)MIDL 特性相同的功能。
+**`public`** C + + 特性具有与[公共](/windows/win32/Midl/public)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**public**特性：
+下面的代码演示如何使用 **`public`** 特性：
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -51,9 +51,9 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**适用对象**|**typedef**|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**`typedef`**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

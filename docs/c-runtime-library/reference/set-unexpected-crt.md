@@ -25,12 +25,12 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: 77c8f0ae8c64423a656a2ebbe1fe3ef6dbe1b794
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f05eab14a53c8abc119a8014d5ac99dc076a9c25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226159"
 ---
 # <a name="set_unexpected-crt"></a>set_unexpected (CRT)
 
@@ -53,21 +53,21 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ## <a name="remarks"></a>备注
 
-**Set_unexpected**函数将*unexpFunction*安装为**意外**调用的函数。 当前C++异常处理实现中未**使用异常。** **Unexpected_function**类型在 EH 中定义。H 作为指向用户定义的意外函数的指针， *unexpFunction*返回**void**。 自定义*unexpFunction*函数不应返回到其调用方。
+**Set_unexpected**函数将*unexpFunction*安装为**意外**调用的函数。 当前 c + + 异常处理实现中未**使用异常。** **Unexpected_function**类型在 EH 中定义。H 作为指向用户定义的意外函数的指针， *unexpFunction*返回 **`void`** 。 自定义*unexpFunction*函数不应返回到其调用方。
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-默认情况下，**意外**调用**终止**。 可以通过以下方式更改此默认行为：编写自己的终止函数并调用**set_unexpected** ，并将函数名称作为其参数。 **意外**调用作为**set_unexpected**的参数提供的最后一个函数。
+默认情况下，**意外**调用**终止**。 可以通过以下方式更改此默认行为：编写自己的终止函数并调用**set_unexpected** ，并将函数名称作为其参数。 **意外**调用最后一个函数作为**set_unexpected**的参数。
 
 与通过调用**set_terminate**安装的自定义终止函数不同， *unexpFunction*中可能会引发异常。
 
 在多线程环境中，单独为每个线程维护意外函数。 每个新线程都需要安装它自己的意外函数。 因此，每个线程都负责它自己的意外处理。
 
-在当前的C++异常处理实现中，**意外**调用会在默认情况下**终止**，并从不由异常处理运行时库调用。 不会有任何特定的优势来调用**意外**而不是**终止**。
+在当前的 c + + 异常处理实现中，**意外**调用会在默认情况下**终止**，并从不由异常处理运行时库调用。 不会有任何特定的优势来调用**意外**而不是**终止**。
 
-所有动态链接的 Dll 或 Exe 都有一个**set_unexpected**的处理程序;即使您调用**set_unexpected** ，您的处理程序也可能被另一个 DLL 或 EXE 替换为其他 DLL 或 EXE。
+所有动态链接的 Dll 或 Exe 都有单个**set_unexpected**处理程序;即使你调用**set_unexpected**你的处理程序也可能被另一个 DLL 或 EXE 替换为其他 DLL 或 EXE。
 
 ## <a name="requirements"></a>要求
 
@@ -75,13 +75,13 @@ typedef void ( *unexpected_function )( );
 |-------------|---------------------|
 |**set_unexpected**|\<eh.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[中止](abort.md)<br/>
 [_get_unexpected](get-unexpected.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[终止](terminate-crt.md)<br/>
+[之外](unexpected-crt.md)<br/>

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d2c74ef46babe388cfa6d649e8b4501b7c235bb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688152"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220959"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 类
 
-类是类模板 `ctype\<CharType>` 向类型**char**的显式专用化，它描述可用作区域设置 facet 的对象，以描述类型为**char**的字符的各种属性。
+类是类模板到类型的显式专用化 `ctype\<CharType>` **`char`** ，它描述可用作区域设置 facet 的对象，以便为类型的字符的各种属性设置特征 **`char`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -108,9 +108,9 @@ protected:
 
 显式专用化的不同之处在于类模板：
 
-- 类 ctype < 的对象 `char` > 存储指向 ctype 掩码表中第一个元素的指针，该数组为类型 `ctype_base::mask` 的 UCHAR_MAX + 1 元素数组。 它还存储布尔对象，指明当 ctype\< **Elem**> 对象被销毁时是否应（使用 `operator delete[]`）删除数组。
+- 类的对象 `ctype<char>` 存储一个指向 ctype 掩码表中第一个元素的指针，该指针是一个类型为 UCHAR_MAX + 1 个元素的数组 `ctype_base::mask` 。 它还存储一个布尔对象，该对象指示 `operator delete[]` 在销毁 ctype 对象时是否应删除（使用）数组 \< **Elem**> 。
 
-- 它的唯一公共构造函数使你能够指定 `tab`、ctype 掩码表和 `del`，这是一个布尔值对象，如果应在 > `char` < 该对象被销毁时删除数组，则为 true; 如果应删除该数组，则该对象的引用计数参数将引用。
+- 它的唯一公共构造函数允许你指定 `tab` 、ctype 掩码表和 `del` 布尔对象。如果在销毁对象时应删除数组，则为 true `ctype<char>` ; 对于引用计数参数的引用，则为 true。
 
 - 受保护的成员函数 `table` 返回存储的 ctype 掩码表。
 
@@ -124,12 +124,12 @@ protected:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [facet 类](locale-class.md#facet_class)\
 [ctype_base 类](../standard-library/ctype-base-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

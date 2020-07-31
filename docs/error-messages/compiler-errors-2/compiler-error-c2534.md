@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2534
 ms.assetid: 481f9f54-5b51-4aa0-8eea-218f10807705
-ms.openlocfilehash: 4b1e481c733f52b0be419b7fd786b26a90362f9c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 202e3bbe2238b4cc2a5233ac4e093717d623f099
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737084"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207896"
 ---
 # <a name="compiler-error-c2534"></a>编译器错误 C2534
 
 "identifier"：构造函数无法返回值
 
-构造函数不能返回值或具有返回类型（甚至不能返回 `void` 返回类型）。
+构造函数不能返回值，也不能具有返回类型（甚至是 **`void`** 返回类型）。
 
-可以通过从构造函数定义中删除 `return` 语句来解决此错误。
+通过 **`return`** 从构造函数定义中删除语句，可以解决此错误。
 
 下面的示例生成 C2534：
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917821"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216786"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -71,13 +71,13 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>返回值
 
-**remquo**返回*x* / *y*的浮点余数。 如果*y*的值为0.0，则**remquo**将返回静默的 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**返回*x*  /  *y*的浮点余数。 如果*y*的值为0.0，则**remquo**将返回静默的 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**Remquo**函数计算*x* / *y*的浮点余数*f* ，这是*x* = *i* \* *y* + *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
+**Remquo**函数计算*x*y 的浮点余数*f*  /  *y* ，这是*x*  =  *i* \* *y*  +  *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
 
-C + + 允许重载，因此你可以调用**remquo**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **remquo**始终采用两个**双精度**参数并返回**double**。
+C + + 允许重载，因此你可以调用**remquo**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **remquo**始终采用两个 **`double`** 参数，并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -119,5 +119,5 @@ Approximate signed quotient is -3
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv、lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
-[fmod、fmodf](fmod-fmodf.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
 [remainder、remainderf、remainderl](remainder-remainderf-remainderl.md)<br/>

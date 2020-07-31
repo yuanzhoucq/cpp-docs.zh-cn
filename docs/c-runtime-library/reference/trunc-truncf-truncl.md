@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945998"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232386"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -70,15 +70,15 @@ float trunc( float x ); //C++ only
 
 |问题|返回|
 |-----------|------------|
-|*x* = ±INFINITY|x|
-|*x* =  ±0|x|
+|*x* = ±无限大|x|
+|*x* = ±0|x|
 |*x* = NaN|NaN|
 
 按 [_matherr](matherr.md) 中所指定的报告错误。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**trunc**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **trunc**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的**trunc**的重载 **`float`** **`long double`** 。 在 C 程序中， **trunc**始终采用并返回 **`double`** 。
 
 由于最大的浮点值是精确的整数，因此该函数不会自行溢出。 但是，将值还原为整型时可能会导致此函数溢出。
 
@@ -90,11 +90,11 @@ float trunc( float x ); //C++ only
 |--------------|--------------|------------------|
 |**trunc**、 **truncf**、 **truncl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [round、roundf、roundl](round-roundf-roundl.md)<br/>

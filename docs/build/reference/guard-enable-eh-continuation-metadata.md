@@ -1,5 +1,5 @@
 ---
-title: /guard： ehcont （启用 EH 继续元数据）
+title: /guard:ehcont（启用 EH 持续元数据）
 description: Microsoft c + +/guard： ehcont 编译器选项的参考指南。
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421358"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190515"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard： ehcont （启用 EH 继续元数据）
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont（启用 EH 持续元数据）
 
 通过编译器启用 EH 继续（EHCONT）元数据的生成。
 
@@ -33,7 +33,7 @@ ms.locfileid: "84421358"
 
 当有可用的卷影堆栈来防止 ROP 攻击时，攻击者会继续使用其他利用方法。 它们可能使用的一种方法是损坏[上下文](/windows/win32/api/winnt/ns-winnt-context)结构内的指令指针值。 此结构传递到重定向线程执行的系统调用，如 `NtContinue` 、 [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) 和 [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) 。 `CONTEXT`结构存储在内存中。 损坏它包含的指令指针可能会导致系统调用将执行传输到攻击者控制的地址。 目前， `NTContinue` 可以通过任何延续点来调用。 这就是在启用影子堆栈时验证指令指针至关重要的原因。
 
-`RtlRestoreContext``NtContinue`在结构化异常处理（SEH）异常展开过程中，将使用和来展开到包含该块的目标框架 `__except` 。 块的指令指针 `__except` 不应位于阴影堆栈上，因为这会导致指令指针验证失败。 **`/guard:ehcont`** 编译器开关生成 "EH 延续表"。 它包含二进制文件中所有有效异常处理延续目标的 Rva 的排序列表。 `NtContinue`首先检查用户提供的指令指针的阴影堆栈，并且如果在此处找不到指令指针，它将继续检查包含指令指针的二进制文件中的 EH 延续表。 如果包含的二进制文件未使用表编译，则允许继续进行与旧版二进制文件的兼容性 `NtContinue` 。 很重要的一点是，区分没有 EHCONT 数据的旧二进制文件和包含 EHCONT 数据但没有表条目的二进制文件。 前者允许二进制文件中的所有地址都是有效的继续目标。 后者不允许二进制文件中的任何地址作为有效的延续目标。
+`RtlRestoreContext``NtContinue`在结构化异常处理（SEH）异常展开过程中，将使用和来展开到包含该块的目标框架 **`__except`** 。 块的指令指针 **`__except`** 不应位于阴影堆栈上，因为这会导致指令指针验证失败。 **`/guard:ehcont`** 编译器开关生成 "EH 延续表"。 它包含二进制文件中所有有效异常处理延续目标的 Rva 的排序列表。 `NtContinue`首先检查用户提供的指令指针的阴影堆栈，并且如果在此处找不到指令指针，它将继续检查包含指令指针的二进制文件中的 EH 延续表。 如果包含的二进制文件未使用表编译，则允许继续进行与旧版二进制文件的兼容性 `NtContinue` 。 很重要的一点是，区分没有 EHCONT 数据的旧二进制文件和包含 EHCONT 数据但没有表条目的二进制文件。 前者允许二进制文件中的所有地址都是有效的继续目标。 后者不允许二进制文件中的任何地址作为有效的延续目标。
 
 **`/guard:ehcont`** 必须将选项传递给编译器和链接器以生成适用于二进制的 EH 继续目标 rva。 如果你的二进制文件是使用单个 `cl` 命令生成的，则编译器会将该选项传递到链接器。 编译器还会将 [**`/guard:cf`**](guard-enable-control-flow-guard.md) 选项传递到链接器。 如果单独编译和链接，则必须同时在编译器和链接器命令上设置这些选项。
 

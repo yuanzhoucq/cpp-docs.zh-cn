@@ -13,16 +13,16 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: 7bcf0f2eb2bef08757250999d0a6696b256fb15c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d95fed3d9af81d89ac03a52a1e6433786118430e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322200"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223832"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J（默认 char 类型是无符号的）
 
-将默认 `char` 类型从 `signed char` 更改为 `unsigned char`，并且在将 `char` 类型扩展到 `int` 类型时，将对其进行零扩展。
+将的默认 **`char`** 类型更改 **`signed char`** 为 **`unsigned char`** ，并且在 **`char`** 将类型扩大到类型时，将类型设置为零扩展 **`int`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -32,22 +32,22 @@ ms.locfileid: "81322200"
 
 ## <a name="remarks"></a>备注
 
-如果`char`值显式声明为`signed` **，/J**选项不会影响该值，并且当该值被扩展为`int`类型时，该值将符号扩展。
+如果将 **`char`** 值显式声明为 **`signed`** ，则 **/j**选项不会影响它，并且在将值扩展到类型时，该值将进行符号扩展 **`int`** 。
 
-**/J**选项定义`_CHAR_UNSIGNED`，用于`#ifndef`在`char`
+**/J**选项定义 `_CHAR_UNSIGNED` ，它 `#ifndef` 在限制 .h 文件中用于定义默认类型的范围 **`char`** 。
 
-ANSI C 和C++不需要`char`该类型的特定实现。 当您使用字符数据时，此选项非常有用，这些数据最终将转换为英语以外的语言。
+ANSI C 和 c + + 不需要类型的特定实现 **`char`** 。 如果使用的字符数据最终将翻译为非英语语言，则此选项很有用。
 
 > [!NOTE]
 > 如果您将此编译器选项用于 ATL/MFC，则可能产生错误。 尽管您可以通过定义 `_ATL_ALLOW_CHAR_UNSIGNED` 禁用此错误，但此解决方法不受支持可能不会总是有用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 在**解决方案资源管理器**中，打开项目的快捷方式菜单，然后选择**属性**。
+1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。
 
-1. 在"项目**属性页"** 对话框中，在 **"配置属性**"下的左侧窗格中，展开**C/C++，** 然后选择**命令行**。
+1. 在 "项目**属性页**" 对话框的 "**配置属性**" 下的左窗格中，展开 " **C/c + +** "，然后选择 "**命令行**"。
 
-1. 在"**附加选项"** 窗格中，指定 **/J**编译器选项。
+1. 在 "**其他选项**" 窗格中，指定 **/j**编译器选项。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

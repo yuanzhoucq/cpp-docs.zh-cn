@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 87cc0000f74935990cb5956e0fb3afd44e01532b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624198"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225028"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 
-本文介绍与开发 ActiveX 控件相关的高级主题。 其中包括：
+本文介绍与开发 ActiveX 控件相关的高级主题。 其中包括:
 
 - [在 ActiveX 控件中使用数据库类](#_core_using_database_classes_in_activex_controls)
 
@@ -69,7 +69,7 @@ ms.locfileid: "84624198"
 
 1. 在 "**属性名称**" 框中，键入 `Array` 。
 
-1. 在 "**属性类型**" 框中，选择**short**。
+1. 在 "**属性类型**" 框中，选择 **`short`** 。
 
 1. 对于 "**实现**类型"，请单击 " **Get/Set 方法**"。
 
@@ -79,7 +79,7 @@ ms.locfileid: "84624198"
 
 1. 添加第二个名为*column*的参数（类型为*short*）。
 
-1. 单击“完成”。
+1. 单击 **“完成”** 。
 
 ### <a name="changes-made-by-the-add-property-wizard"></a>添加属性向导所做的更改
 
@@ -97,7 +97,7 @@ ms.locfileid: "84624198"
 
 最后，将 `GetArray` 和函数的实现 `SetArray` 添加到的末尾。CPP 文件。 在大多数情况下，你将修改 Get 函数以返回属性的值。 Set 函数通常包含应在属性更改之前或之后执行的代码。
 
-若要使此属性有用，可以在类型为**short**的控件类中声明一个二维数组成员变量，以存储参数化属性的值。 然后，您可以修改 Get 函数以返回按参数所指示的正确行和列存储的值，然后修改 Set 函数以更新由 row 和 column 参数引用的值。
+若要使此属性有用，可以在类型为的控件类中声明一个二维数组成员变量， **`short`** 以存储参数化属性的值。 然后，您可以修改 Get 函数以返回按参数所指示的正确行和列存储的值，然后修改 Set 函数以更新由 row 和 column 参数引用的值。
 
 ## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>处理 ActiveX 控件中的错误
 
@@ -107,7 +107,7 @@ ms.locfileid: "84624198"
 
 ### <a name="activex-control-error-codes"></a>ActiveX 控件错误代码
 
-|错误|描述|
+|错误|说明|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|非法的函数调用|
 |CTL_E_OVERFLOW|溢出|
@@ -174,7 +174,7 @@ ms.locfileid: "84624198"
 
 - 使用 "添加成员变量" 向导，选择 "**控制变量**"，然后选择控件的 ID。 输入成员变量名称并选择控件的包装器类作为**控件类型**。
 
-     \- 或 -
+     -或-
 
 - 将局部变量和子类声明为对话框项。 插入类似于以下内容的代码（ `CMyCtrl` 是包装类，IDC_MYCTRL1 是控件的 ID）：
 

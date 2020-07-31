@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912233"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218515"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -99,7 +99,7 @@ long double tgammal(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用**tgamma**的重载，该重载采用并返回**浮点**型和**长****双精度**类型。 在 C 程序中， **tgamma**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的**tgamma**的重载 **`float`** **`long double`** 。 在 C 程序中， **tgamma**始终采用并返回 **`double`** 。
 
 如果 x 是自然数，则此函数返回 (x-1) 的阶乘。
 
@@ -115,5 +115,5 @@ long double tgammal(
 
 ## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [lgamma、lgammaf、lgammal](lgamma-lgammaf-lgammal.md)<br/>

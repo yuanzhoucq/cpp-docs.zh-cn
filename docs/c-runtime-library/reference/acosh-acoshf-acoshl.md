@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913031"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220751"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -68,7 +68,7 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Acosh**函数返回*x*的反双曲余弦（反双曲余弦）。 这些函数在域*x* ≥1上是有效的。 如果*x*小于1， `errno`则将设置为`EDOM` ，并且结果为 quiet NaN。 如果*x*为静默 NaN、不定或无穷大，则返回相同的值。
+**Acosh**函数返回*x*的反双曲余弦（反双曲余弦）。 这些函数在域*x* ≥1上是有效的。 如果*x*小于1， `errno` 则将设置为 `EDOM` ，并且结果为 quiet NaN。 如果*x*为静默 NaN、不定或无穷大，则返回相同的值。
 
 |输入|SEH 异常|`_matherr` 异常|
 |-----------|-------------------|--------------------------|
@@ -77,7 +77,7 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-使用 c + + 时，可以调用**acosh**的重载，该重载采用并返回**浮点**或**长****双精度**值。 在 C 程序中， **acosh**始终采用并返回**double**。
+使用 c + + 时，可以调用采用并返回或值的**acosh**的重载 **`float`** **`long double`** 。 在 C 程序中， **acosh**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

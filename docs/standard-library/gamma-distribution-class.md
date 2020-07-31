@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370674"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220907"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution 类
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*真实类型*\
-浮点结果类型，默认值为**双精度**值。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型，默认为 **`double`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-*乌尔格*\
-统一的随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
+*URNG*\
+统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>备注
 
-类模板描述生成用户指定的浮点类型的值的分布，或者如果没有提供，则表示**双精度值**，该分布根据 Gamma 分布进行分布。 下表链接到有关各个成员的文章。
+**`double`** 如果未根据伽玛分布提供和分布任何类型，则类模板将描述产生用户指定的浮点类型或类型的值的分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
 有关 gamma 分布的详细信息，请参阅 Wolfram MathWorld 文章 [Gamma 分布](https://go.microsoft.com/fwlink/p/?linkid=401111)。
 
@@ -184,11 +184,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：**\<random>
 
 **命名空间:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution：：gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution：： gamma_distribution
 
 构造分布。
 
@@ -199,13 +199,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*阿 尔 法*\
+*全角字*\
 `alpha` 分布参数。
 
 *试用版*\
 `beta` 分布参数。
 
-*帕尔姆*\
+*parm*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -216,7 +216,7 @@ explicit gamma_distribution(const param_type& parm);
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution：:p阿拉姆型
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution：:p aram_type
 
 存储分布的参数。
 
@@ -234,13 +234,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*阿 尔 法*\
+*全角字*\
 `alpha` 分布参数。
 
 *试用版*\
 `beta` 分布参数。
 
-*对*\
+*然后*\
 与此比较的 `param_type` 实例。
 
 ### <a name="remarks"></a>备注
@@ -251,4 +251,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另请参阅
 
-[\<随机>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

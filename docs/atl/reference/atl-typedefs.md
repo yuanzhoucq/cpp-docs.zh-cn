@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 26e4e80ed3110351130731e6030427d25fc4a0ea
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: a6b1ce33fe201338a0cc9356f2ef86e598629fd6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168727"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228032"
 ---
 # <a name="atl-typedefs"></a>ATL Typedef
 
@@ -44,10 +44,10 @@ ms.locfileid: "82168727"
 |[CComDispatchDriver](#ccomdispatchdriver)|此类管理 COM 接口指针。|
 |[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|调用适当的线程模型方法，而不考虑所使用的线程模型。|
 |[CComObjectThreadModel](#ccomobjectthreadmodel)|调用适当的线程模型方法，而不考虑所使用的线程模型。|
-|[CContainedWindow](#ccontainedwindow)|此类是的`CContainedWindowT`专用化。|
-|[CPath](#cpath)|使用`CString`的[CPathT](../../atl/reference/cpatht-class.md)的专用化。|
-|[CPathA](#cpatha)|使用`CStringA`的[CPathT](../../atl/reference/cpatht-class.md)的专用化。|
-|[CPathW](#cpathw)|使用`CStringW`的[CPathT](../../atl/reference/cpatht-class.md)的专用化。|
+|[CContainedWindow](#ccontainedwindow)|此类是的专用化 `CContainedWindowT` 。|
+|[CPath](#cpath)|使用的[CPathT](../../atl/reference/cpatht-class.md)的专用化 `CString` 。|
+|[CPathA](#cpatha)|使用的[CPathT](../../atl/reference/cpatht-class.md)的专用化 `CStringA` 。|
+|[CPathW](#cpathw)|使用的[CPathT](../../atl/reference/cpatht-class.md)的专用化 `CStringW` 。|
 |[CSimpleValArray](#csimplevalarray)|表示用于存储简单类型的数组。|
 |[DefaultThreadTraits](#defaultthreadtraits)|默认的线程特征类。|
 |[LPCURL](#lpcurl)|指向恒定[曲线](../../atl/reference/curl-class.md)对象的指针。|
@@ -161,23 +161,23 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 ### <a name="remarks"></a>备注
 
-根据应用程序使用的线程模型， **typedef**名称`CComGlobalsThreadModel`引用[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 这些类提供了`typedef`其他名称来引用临界区类。
+根据应用程序使用的线程模型，该 **`typedef`** 名称引用的 `CComGlobalsThreadModel` 是[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 这些类提供 **`typedef`** 了其他名称来引用临界区类。
 
 > [!NOTE]
 > `CComGlobalsThreadModel`不引用类[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。
 
-通过`CComGlobalsThreadModel`使用，您可以指定特定的线程模型类。 无论使用何种线程模型，都将调用相应的方法。
+通过使用 `CComGlobalsThreadModel` ，您可以指定特定的线程模型类。 无论使用何种线程模型，都将调用相应的方法。
 
-除外`CComGlobalsThreadModel`，ATL 还提供**typedef**名称[CComObjectThreadModel](#ccomobjectthreadmodel)。 每个引用的类`typedef`都依赖于所使用的线程模型，如下表所示：
+除外 `CComGlobalsThreadModel` ，ATL 还提供 **`typedef`** 名称[CComObjectThreadModel](#ccomobjectthreadmodel)。 每个引用的类都 **`typedef`** 依赖于所使用的线程模型，如下表所示：
 
 |typedef|单线程|单元线程处理|自由线程处理|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`;M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ;M =`CComMultiThreadModel`
 
-在`CComObjectThreadModel`单个对象类中使用。 在`CComGlobalsThreadModel`全局可用于你的程序的对象中使用，或者当你想要跨多个线程保护模块资源时使用。
+`CComObjectThreadModel`在单个对象类中使用。 `CComGlobalsThreadModel`在全局可用于你的程序的对象中使用，或者当你想要跨多个线程保护模块资源时使用。
 
 ### <a name="requirements"></a>要求
 
@@ -201,23 +201,23 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 ### <a name="remarks"></a>备注
 
-根据应用程序使用的线程模型， `typedef`该名称`CComObjectThreadModel`引用的是[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 这些类提供了`typedef`其他名称来引用临界区类。
+根据应用程序使用的线程模型，该 **`typedef`** 名称引用的 `CComObjectThreadModel` 是[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 这些类提供 **`typedef`** 了其他名称来引用临界区类。
 
 > [!NOTE]
 > `CComObjectThreadModel`不引用类[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。
 
-通过`CComObjectThreadModel`使用，您可以指定特定的线程模型类。 无论使用何种线程模型，都将调用相应的方法。
+通过使用 `CComObjectThreadModel` ，您可以指定特定的线程模型类。 无论使用何种线程模型，都将调用相应的方法。
 
-除外`CComObjectThreadModel`，ATL 还提供**typedef**名称[CComGlobalsThreadModel](#ccomglobalsthreadmodel)。 每个**typedef**引用的类取决于所使用的线程模型，如下表所示：
+除外 `CComObjectThreadModel` ，ATL 还提供 **`typedef`** 名称[CComGlobalsThreadModel](#ccomglobalsthreadmodel)。 每个引用的类都 **`typedef`** 依赖于所使用的线程模型，如下表所示：
 
 |typedef|单线程|单元线程处理|自由线程处理|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`;M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ;M =`CComMultiThreadModel`
 
-在`CComObjectThreadModel`单个对象类中使用。 在`CComGlobalsThreadModel`全局可用的对象中使用，或者当您想要跨多个线程保护模块资源时使用。
+`CComObjectThreadModel`在单个对象类中使用。 `CComGlobalsThreadModel`在全局可用的对象中使用，或者当您想要跨多个线程保护模块资源时使用。
 
 ### <a name="requirements"></a>要求
 
@@ -225,7 +225,7 @@ S = `CComSingleThreadModel`;M =`CComMultiThreadModel`
 
 ## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a>CContainedWindow
 
-此类是的`CContainedWindowT`专用化。
+此类是的专用化 `CContainedWindowT` 。
 
 ```cpp
 typedef CContainedWindowT<CWindow> CContainedWindow;
@@ -237,11 +237,11 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 ### <a name="remarks"></a>备注
 
-`CContainedWindow`是[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)的专用化。 如果要更改基类或特征，请直接使用`CContainedWindowT` 。
+`CContainedWindow`是[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)的专用化。 如果要更改基类或特征，请 `CContainedWindowT` 直接使用。
 
 ## <a name="cpath"></a><a name="cpath"></a>CPath
 
-使用`CString`的[CPathT](../../atl/reference/cpatht-class.md)的专用化。
+使用的[CPathT](../../atl/reference/cpatht-class.md)的专用化 `CString` 。
 
 ```cpp
 typedef CPathT<CString> CPath;
@@ -253,7 +253,7 @@ typedef CPathT<CString> CPath;
 
 ## <a name="cpatha"></a><a name="cpatha"></a>CPathA
 
-使用`CStringA`的[CPathT](../../atl/reference/cpatht-class.md)的专用化。
+使用的[CPathT](../../atl/reference/cpatht-class.md)的专用化 `CStringA` 。
 
 ```cpp
 typedef CPathT<CStringA> CPathA;
@@ -265,7 +265,7 @@ typedef CPathT<CStringA> CPathA;
 
 ## <a name="cpathw"></a><a name="cpathw"></a>CPathW
 
-使用`CStringW`的[CPathT](../../atl/reference/cpatht-class.md)的专用化。
+使用的[CPathT](../../atl/reference/cpatht-class.md)的专用化 `CStringW` 。
 
 ```cpp
 typedef ATL::CPathT<CStringW> CPathW;

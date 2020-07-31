@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 8c373ad1eba07337dc970cb84202370c147560dd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 333f76c2f570832c9d08a7ad666f2540cca37f05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163905"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233335"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>编译器警告（等级1） C4091
 
@@ -21,7 +21,7 @@ ms.locfileid: "80163905"
 
 ## <a name="example"></a>示例
 
-用户定义的类型声明的开头 `__declspec` 特性适用于该类型的变量。 C4091 指示未声明变量。 下面的示例生成 C4091。
+**`__declspec`** 用户定义类型声明的开头的特性适用于该类型的变量。 C4091 指示未声明变量。 下面的示例生成 C4091。
 
 ```cpp
 // C4091.cpp

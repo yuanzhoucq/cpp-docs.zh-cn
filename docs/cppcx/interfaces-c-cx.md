@@ -2,12 +2,12 @@
 title: 接口 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: df010468d5e90fe61ac2cf57c754ac5ed01b1c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032351"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230982"
 ---
 # <a name="interfaces-ccx"></a>接口 (C++/CX)
 
@@ -25,7 +25,7 @@ ms.locfileid: "82032351"
 
 - 不允许字段和静态成员。
 
-- 用作属性、方法参数或返回值的类型只能是 Windows 运行时类型;否则，这些类型只能用作 Windows 运行时类型。这包括基本类型和枚举类类型。
+- 用作属性、方法参数或返回值的类型只能是 Windows 运行时类型;这包括基本类型和枚举类类型。
 
 ## <a name="declaration-and-usage"></a>声明和用法
 
@@ -63,19 +63,19 @@ ms.locfileid: "82032351"
 
 ## <a name="generic-interfaces"></a>泛型接口
 
-在C++/CX 中`generic`，关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义了一些通用接口，例如[Windows：：基础：：集合：：iVector\<T>](/uwp/api/windows.foundation.collections.ivector-1)-但它不支持在C++/CX 中创建公共用户定义的泛型接口。 但可以创建私有泛型接口。
+在 c + +/CX 中， **`generic`** 关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义一些泛型接口（例如， [Windows：： Foundation：：集合：： IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1)），但它不支持在 c + + 中创建公共用户定义的泛型接口/cx 但可以创建私有泛型接口。
 
-以下是如何使用 Windows 运行时类型来创作通用界面：
+下面是如何使用 Windows 运行时类型创作泛型接口的方式：
 
-- 不允许将组件中的泛型用户定义的 `interface class` 发送到其 Windows 元数据文件；因此，它无法具有公共可访问性，并且其他 .winmd 文件中的客户端代码无法实现它。 它可由同一组件中的非公共 ref 类实现。 公共 ref 类可将泛型接口类型作为私有成员。
+- **`interface class`** 不允许将在组件中定义的泛型用户发送到其 Windows 元数据文件中; 因此，它不能具有公共可访问性，并且其他 winmd 文件中的客户端代码无法实现它。 它可由同一组件中的非公共 ref 类实现。 公共 ref 类可将泛型接口类型作为私有成员。
 
-   下面的代码片段演示如何声明泛型 `interface class` ，然后在私有 ref 类中实现它，并且在公共 ref 类中将该 ref 类用作私有成员。
+   下面的代码段演示如何声明泛型 **`interface class`** ，然后在私有 ref 类中实现它，并在公共 ref 类中将该 ref 类用作私有成员。
 
    [!code-cpp[cx_interfaces#07](../cppcx/codesnippet/CPP/interfacestest/class1.h#07)]
 
 - 泛型接口必须遵循控制可访问性、成员、 ** 需要关系、基类等内容的标准接口规则。
 
-- 泛型接口可以采用前面带有 `typename` 或 `class`的一个或多个泛型类型参数。 不支持非类型参数。
+- 泛型接口可以采用前面带有或的一个或多个泛型类型参数 **`typename`** **`class`** 。 不支持非类型参数。
 
 - 类型参数可以是任何 Windows 运行时类型。 即，类型参数可以是引用类型、值类型、接口类、委托、基本类型或公共枚举类。
 
@@ -89,14 +89,14 @@ ms.locfileid: "82032351"
 
 - 封闭式泛型接口具有隐式生成的 UUID。 用户不能指定 UUID。
 
-- 在接口中，对当前接口的任何引用（在方法参数、返回值或属性中）都假定引用当前实例化。 例如 *，IMyintf*表示*\<imyintf T>*。
+- 在接口中，对当前接口的任何引用（在方法参数、返回值或属性中）都假定引用当前实例化。 例如， *IMyIntf*表示*IMyIntf \<T> *。
 
 - 当方法参数的类型是类型参数时，该参数或变量的声明将使用类型参数的名称，而不带任何指针、本机引用或句柄声明符。 换言之，绝不会写入“T^”。
 
-- 模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并将模板参数*T*传递给泛型参数*T*。模板化 ref 类的每个实例化本身就是一个 ref 类。
+- 模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并且可以将模板参数*t*传递给泛型参数*t*。模板化 ref 类的每个实例化本身就是一个 ref 类。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[命名空间参考](../cppcx/namespaces-reference-c-cx.md)
+[C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[命名空间引用](../cppcx/namespaces-reference-c-cx.md)

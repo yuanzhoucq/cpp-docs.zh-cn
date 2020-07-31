@@ -7,18 +7,18 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63b5e0131642692d9372c148827a583f19114fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618758"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223156"
 ---
 # <a name="general-window-creation-sequence"></a>常用窗口创建序列
 
 创建自己的窗口（如子窗口）时，框架使用的过程与[文档/视图创建](document-view-creation.md)中所述的过程大致相同。
 
-MFC 提供的所有窗口类都采用[两阶段构造](one-stage-and-two-stage-construction-of-objects.md)。 也就是说，当调用 c + + **new**运算符时，构造函数分配并初始化 c + + 对象，但不创建相应的 Windows 窗口。 这是通过调用 window 对象的[Create](reference/cwnd-class.md#create)成员函数来完成的。
+MFC 提供的所有窗口类都采用[两阶段构造](one-stage-and-two-stage-construction-of-objects.md)。 也就是说，在调用 c + + 运算符时 **`new`** ，构造函数分配并初始化 c + + 对象，但不创建相应的 Windows 窗口。 这是通过调用 window 对象的[Create](reference/cwnd-class.md#create)成员函数来完成的。
 
 `Create`成员函数使 Windows 窗口并将其存储 `HWND` 在 c + + 对象的公共数据成员[m_hWnd](reference/cwnd-class.md#m_hwnd)中。 `Create`对创建参数提供完全的灵活性。 在调用之前 `Create` ，您可能需要向全局函数[AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass)注册一个窗口类，以便为框架设置图标和类样式。
 
@@ -39,4 +39,4 @@ MFC 提供的所有窗口类都采用[两阶段构造](one-stage-and-two-stage-c
 
 ## <a name="see-also"></a>另请参阅
 
-[创建窗口](creating-windows.md)
+[创建 Windows](creating-windows.md)

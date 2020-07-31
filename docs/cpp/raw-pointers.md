@@ -1,66 +1,66 @@
 ---
-title: 原始指针 （C++）
-description: 如何使用原始指针C++
+title: 原始指针（c + +）
+description: 如何在 c + + 中使用原始指针
 ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
 no-loc:
-- void
-- nullptr
-- const
-- char
-- new
-- delete
-ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+- ':::no-loc(void):::'
+- ':::no-loc(nullptr):::'
+- ':::no-loc(const):::'
+- ':::no-loc(char):::'
+- ':::no-loc(new):::'
+- ':::no-loc(delete):::'
+ms.openlocfilehash: 53679559888191fe7f2aad7cb5a70d607974ae96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032091"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233647"
 ---
-# <a name="raw-pointers-c"></a>原始指针 （C++）
+# <a name="raw-pointers-c"></a>原始指针（c + +）
 
-*指针*是变量的类型。 它将对象的地址存储在内存中，并用于访问该对象。 *原始指针*是一个指针，其生存期不受封装对象（如[智能指针](smart-pointers-modern-cpp.md)）控制的控制。 可以为原始指针分配另一个非指针变量的地址，也可以为其分配值[nullptr](nullptr.md)。 尚未分配值的指针包含随机数据。
+*指针*是一种类型的变量。 它将对象的地址存储在内存中，并用于访问该对象。 *原始指针*是一个指针，其生存期不受封装对象（如[智能指针](smart-pointers-modern-cpp.md)）的控制。 可以为原始指针分配另一个非指针变量的地址，也可以为其分配值 [:::no-loc(nullptr):::](:::no-loc(nullptr):::.md) 。 尚未分配值的指针包含随机数据。
 
-也可以*取消引用*指针以检索它指向的对象的值。 *成员访问运算符*提供对对象成员的访问。
+还可以取消*引用*指针以检索它指向的对象的值。 *成员访问运算符*提供对象成员的访问权限。
 
 ```cpp
-    int* p = nullptr; // declare pointer and initialize it
+    int* p = :::no-loc(nullptr):::; // declare pointer and initialize it
                       // so that it doesn't store a random address
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
 ```
 
-指针可以指向类型化对象或**void**。 当程序在内存中的[堆](https://wikipedia.org/wiki/Heap)上分配对象时，它将以指针的形式接收该对象的地址。 此类指针称为*拥有指针*。 必须使用拥有指针（或其副本）在不再需要堆分配的对象时显式释放它。 无法释放内存会导致*内存泄漏*，并使该内存位置对计算机上的任何其他程序不可用。 使用**new** 分配的内存必须使用**delete**（或**delete\[]** 释放）。 有关详细信息，请参阅[new和delete运算符](new-and-delete-operators.md)。
+指针可指向类型化对象或 **`:::no-loc(void):::`** 。 当程序在内存中的[堆](https://wikipedia.org/wiki/Heap)上分配对象时，它将以指针的形式接收该对象的地址。 此类指针称为*拥有指针*。 如果不再需要堆分配的对象，则必须使用拥有指针（或它的副本）来显式释放该对象。 未能释放内存会导致*内存泄漏*，并将该内存位置呈现给计算机上的任何其他程序不可用。 使用分配 **`:::no-loc(new):::`** 的内存必须使用 **`:::no-loc(delete):::`** （或** :::no-loc(delete)::: \[ ]**）释放。 有关详细信息，请参阅[ :::no-loc(new)::: 和 :::no-loc(delete)::: 运算符](:::no-loc(new):::-and-:::no-loc(delete):::-operators.md)。
 
 ```cpp
-    MyClass* mc = new MyClass(); // allocate object on the heap
+    MyClass* mc = :::no-loc(new)::: MyClass(); // allocate object on the heap
     mc->print(); // access class member
-    delete mc; // delete object (please don't forget!)
+    :::no-loc(delete)::: mc; // :::no-loc(delete)::: object (please don't forget!)
 ```
 
-指针（如果未声明为**const**）可以递增或递减以指向内存中的另一个位置。 此操作称为*指针算术*。 它用于 C 样式编程，用于迭代数组或其他数据结构中的元素。 不能**const** 用指针指向不同的内存位置，因此与[引用](references-cpp.md)类似 。 有关详细信息，请参阅[const和易失性指针](const-and-volatile-pointers.md)。
+如果指针（未声明为 **`:::no-loc(const):::`** ），则可以递增或递减到内存中的另一个位置。 此操作称为*指针算法*。 C 样式编程中使用它来循环访问数组或其他数据结构中的元素。 **`:::no-loc(const):::`** 指针不能指向不同的内存位置，在这种情况下，与[引用](references-cpp.md)类似。 有关详细信息，请参阅[ :::no-loc(const)::: 和可变指针](:::no-loc(const):::-and-volatile-pointers.md)。
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
-    const char* str = "Hello world";
+    :::no-loc(const)::: :::no-loc(char):::* str = "Hello world";
 
-    const int c = 1;
-    const int* pconst = &c; // declare a non-const pointer to const int
-    const int c2 = 2;
-    pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c;
-    // pconst2 = &c2; // Error! pconst2 is const.
+    :::no-loc(const)::: int c = 1;
+    :::no-loc(const)::: int* p:::no-loc(const)::: = &c; // declare a non-:::no-loc(const)::: pointer to :::no-loc(const)::: int
+    :::no-loc(const)::: int c2 = 2;
+    p:::no-loc(const)::: = &c2;  // OK p:::no-loc(const)::: itself isn't :::no-loc(const):::
+    :::no-loc(const)::: int* :::no-loc(const)::: p:::no-loc(const):::2 = &c;
+    // p:::no-loc(const):::2 = &c2; // Error! p:::no-loc(const):::2 is :::no-loc(const):::.
 ```
 
-在 64 位操作系统上，指针的大小为 64 位。 系统的指针大小决定了它可以具有多少可寻址内存。 指针的所有副本都指向同一内存位置。 指针（以及引用）在C++中广泛使用，以传递较大的对象和从函数传递。 这是因为复制对象的地址通常比复制整个对象更有效。 定义函数时，将指针参数指定为，**const** 除非您打算修改该函数。 通常，**const** 引用是将对象传递给函数的首选方法，除非对象的值可能是**nullptr**。
+在64位操作系统上，指针的大小为64位。 系统的指针大小决定了可以有多少可寻址内存。 指针指向同一内存位置的所有副本。 指针（连同引用）在 c + + 中广泛用于向函数传递更大的对象。 这是因为复制对象的地址比复制整个对象通常更有效。 在定义函数时，将指针参数指定为， **`:::no-loc(const):::`** 除非您想要函数修改对象。 通常， **`:::no-loc(const):::`** 引用是将对象传递到函数的首选方式，除非对象的值可能是 **`:::no-loc(nullptr):::`** 。
 
-[函数的指针](#pointers_to_functions)允许函数传递到其他函数，并用于 C 样式编程中的"回调"。 现代C++为此使用[lambda 表达式](lambda-expressions-in-cpp.md)。
+指向[函数的指针](#pointers_to_functions)使函数能够传递到其他函数，并用于 C 样式编程中的 "回调"。 现代 c + + 使用[lambda 表达式](lambda-expressions-in-cpp.md)来实现此目的。
 
 ## <a name="initialization-and-member-access"></a>初始化和成员访问
 
-下面的示例演示如何声明、初始化和使用原始指针。 它的初始化用于**new** 指向在堆上分配的对象，您必须显式使用**delete**。 该示例还显示了与原始指针相关的一些危险。 （请记住，此示例是 C 样式编程，而不是现代C++！
+下面的示例演示如何声明、初始化和使用原始指针。 它使用 **`:::no-loc(new):::`** 来对堆上分配的对象进行初始化，该对象必须显式进行 **`:::no-loc(delete):::`** 。 该示例还演示了一些与原始指针相关的危险。 （请记住，此示例是 C 样式编程，而不是新式 c + +！）
 
 ```cpp
 #include <iostream>
@@ -71,11 +71,11 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 // Accepts a MyClass pointer
-void func_A(MyClass* mc)
+:::no-loc(void)::: func_A(MyClass* mc)
 {
     // Modify the object that mc points to.
     // All copies of the pointer will point to
@@ -84,7 +84,7 @@ void func_A(MyClass* mc)
 }
 
 // Accepts a MyClass object
-void func_B(MyClass mc)
+:::no-loc(void)::: func_B(MyClass mc)
 {
     // mc here is a regular object, not a pointer.
     // Use the "." operator to access members.
@@ -98,8 +98,8 @@ void func_B(MyClass mc)
 int main()
 {
     // Use the * operator to declare a pointer type
-    // Use new to allocate and initialize memory
-    MyClass* pmc = new MyClass{ 108, "Nick" };
+    // Use :::no-loc(new)::: to allocate and initialize memory
+    MyClass* pmc = :::no-loc(new)::: MyClass{ 108, "Nick" };
 
     // Prints the memory address. Usually not what you want.
     std:: cout << pmc << std::endl;
@@ -133,24 +133,24 @@ int main()
     func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
-    delete(pmc); // don't forget to give memory back to operating system!
-   // delete(pmc2); //crash! memory location was already deleted
+    :::no-loc(delete):::(pmc); // don't forget to give memory back to operating system!
+   // :::no-loc(delete):::(pmc2); //crash! memory location was already :::no-loc(delete):::d
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>指针算术和数组
+## <a name="pointer-arithmetic-and-arrays"></a>指针算法和数组
 
-指针和数组密切相关。 当数组通过值传递给函数时，它作为指向第一个元素的指针传递。 下面的示例演示了指针和数组的以下重要属性：
+指针和数组密切相关。 当数组按值传递到函数时，它将作为指向第一个元素的指针传递。 下面的示例演示了指针和数组的以下重要属性：
 
-- 运算符`sizeof`返回数组的总大小（以字节为单位）
-- 确定元素数，将总字节除以一个元素的大小
-- 当数组传递给函数时，它将*衰减*为指针类型
-- 当`sizeof`应用于指针时，运算符返回指针大小，x86 上为 4 个字节，在 x64 上返回 8 个字节
+- **`sizeof`** 运算符返回数组的总大小（以字节为单位）
+- 若要确定元素的数目，请将总字节数除以一个元素的大小
+- 当数组传递到函数时，它会*decays*到指针类型
+- **`sizeof`** 应用到指针时，运算符返回指针大小、x86 上的4个字节或 x64 上的8个字节
 
 ```cpp
 #include <iostream>
 
-void func(int arr[], int length)
+:::no-loc(void)::: func(int arr[], int length)
 {
     // returns pointer size. not useful here.
     size_t test = sizeof(arr);
@@ -171,9 +171,9 @@ int main()
 }
 ```
 
-某些算术运算可用于非const指针，使它们指向另一个内存位置。 **++** 指针使用**+=**、**-=** 和 运算符递增和**--** 递减。 此技术可用于数组，在未键入数据的缓冲区中特别有用。 获取**void** 以**char**（1 字节） 的大小递增。 键入的指针会按它指向的类型的大小递增。
+某些算术运算可用于非 :::no-loc(const)::: 指针，以使其指向其他内存位置。 使用 **++** 、 **+=** **-=** 和运算符递增和递减指针 **--** 。 此方法可用于数组中，在非类型化数据的缓冲区中尤其有用。 以的 **:::no-loc(void):::\*** 大小增加 **`:::no-loc(char):::`** （1个字节）。 类型化指针将按它所指向的类型的大小增加。
 
-下面的示例演示如何使用指针算术访问 Windows 上的位图中的单个像素。 请注意 和**delete****new** 和 和 的 引用运算符的使用。
+下面的示例演示如何使用指针算法访问 Windows 上位图中的单个像素。 请注意，和的使用 **`:::no-loc(new):::`** **`:::no-loc(delete):::`** 和取消引用运算符。
 
 ```cpp
 #include <Windows.h>
@@ -192,8 +192,8 @@ int main()
     header.biCompression = BI_RGB;
     header.biSize = sizeof(BITMAPINFOHEADER);
 
-    constexpr int bufferSize = 30000;
-    unsigned char* buffer = new unsigned char[bufferSize];
+    :::no-loc(const):::expr int bufferSize = 30000;
+    unsigned :::no-loc(char):::* buffer = :::no-loc(new)::: unsigned :::no-loc(char):::[bufferSize];
 
     BITMAPFILEHEADER bf;
     bf.bfType = 0x4D42;
@@ -203,11 +203,11 @@ int main()
     bf.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER); //54
 
     // Create a gray square with a 2-pixel wide outline.
-    unsigned char* begin = &buffer[0];
-    unsigned char* end = &buffer[0] + bufferSize;
-    unsigned char* p = begin;
-    constexpr int pixelWidth = 3;
-    constexpr int borderWidth = 2;
+    unsigned :::no-loc(char):::* begin = &buffer[0];
+    unsigned :::no-loc(char):::* end = &buffer[0] + bufferSize;
+    unsigned :::no-loc(char):::* p = begin;
+    :::no-loc(const):::expr int pixelWidth = 3;
+    :::no-loc(const):::expr int borderWidth = 2;
 
     while (p < end)
     {
@@ -224,32 +224,32 @@ int main()
         {
             *p = 0xC3; // Gray
         }
-        p++; // Increment one byte sizeof(unsigned char).
+        p++; // Increment one byte sizeof(unsigned :::no-loc(char):::).
     }
 
     ofstream wf(R"(box.bmp)", ios::out | ios::binary);
 
-    wf.write(reinterpret_cast<char*>(&bf), sizeof(bf));
-    wf.write(reinterpret_cast<char*>(&header), sizeof(header));
-    wf.write(reinterpret_cast<char*>(begin), bufferSize);
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&bf), sizeof(bf));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&header), sizeof(header));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(begin), bufferSize);
 
-    delete[] buffer; // Return memory to the OS.
+    :::no-loc(delete):::[] buffer; // Return memory to the OS.
     wf.close();
 }
 ```
 
-## <a name="opno-locvoid-pointers"></a>void• 指针
+## <a name="no-locvoid-pointers"></a>:::no-loc(void):::* 指针
 
-指向**void** 原始内存位置的指针。 有时有必要使用**void** 指针，例如，在C++代码和 C 函数之间传递时。
+指向 **`:::no-loc(void):::`** 原始内存位置的指针。 有时需要使用 **:::no-loc(void):::\*** 指针，例如在 c + + 代码和 c 函数之间传递时。
 
-当类型化指针被投射到指针时void，内存位置的内容将保持不变。 但是，类型信息将丢失，因此无法执行增量或递减操作。 例如，可以将内存位置强制转换为 ，从`MyClass*`到`void*`和 返回`MyClass*`到 。 此类操作本质上是容易出错的，需要非常小心以避免错误。 现代C++阻止在几乎所有情况下使用void指针。
+将类型化的指针强制转换为 :::no-loc(void)::: 指针时，内存位置的内容将保持不变。 但类型信息会丢失，因此不能执行递增或递减操作。 例如，可以将内存位置转换为，也可以强制转换 `MyClass*` **`:::no-loc(void):::*`** 回 `MyClass*` 。 此类操作本质上容易出错，并需要小心处理 :::no-loc(void)::: 错误。 现代 c + + :::no-loc(void)::: 在几乎所有情况下都不鼓励使用指针。
 
 ```cpp
 
 //func.c
-void func(void* data, int length)
+:::no-loc(void)::: func(:::no-loc(void):::* data, int length)
 {
-    char* c = (char*)(data);
+    :::no-loc(char):::* c = (:::no-loc(char):::*)(data);
 
     // fill in the buffer with data
     for (int i = 0; i < length; ++i)
@@ -264,7 +264,7 @@ void func(void* data, int length)
 
 extern "C"
 {
-    void func(void* data, int length);
+    :::no-loc(void)::: func(:::no-loc(void):::* data, int length);
 }
 
 class MyClass
@@ -272,35 +272,35 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 int main()
 {
-    MyClass* mc = new MyClass{10, "Marian"};
-    void* p = static_cast<void*>(mc);
+    MyClass* mc = :::no-loc(new)::: MyClass{10, "Marian"};
+    :::no-loc(void):::* p = static_cast<:::no-loc(void):::*>(mc);
     MyClass* mc2 = static_cast<MyClass*>(p);
     std::cout << mc2->name << std::endl; // "Marian"
 
-    // use operator new to allocate untyped memory block
-    void* pvoid = operator new(1000);
-    char* pchar = static_cast<char*>(pvoid);
-    for(char* c = pchar; c < pchar + 1000; ++c)
+    // use operator :::no-loc(new)::: to allocate untyped memory block
+    :::no-loc(void):::* p:::no-loc(void)::: = operator :::no-loc(new):::(1000);
+    :::no-loc(char):::* p:::no-loc(char)::: = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::);
+    for(:::no-loc(char):::* c = p:::no-loc(char):::; c < p:::no-loc(char)::: + 1000; ++c)
     {
         *c = 0x00;
     }
-    func(pvoid, 1000);
-    char ch = static_cast<char*>(pvoid)[0];
+    func(p:::no-loc(void):::, 1000);
+    :::no-loc(char)::: ch = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::)[0];
     std::cout << ch << std::endl; // 'A'
-    operator delete(p);
+    operator :::no-loc(delete):::(p);
 }
 ```
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>指向函数的指针
 
-在 C 样式编程中，函数指针主要用于将函数传递给其他函数。 此技术允许调用方自定义函数的行为，而无需对其进行修改。 在现代C++中[，lambda 表达式](lambda-expressions-in-cpp.md)提供了相同的功能，具有更大的类型安全性和其他优势。
+在 C 样式编程中，函数指针主要用于将函数传递到其他函数。 此方法允许调用方自定义函数的行为而不进行修改。 在现代 c + + 中， [lambda 表达式](lambda-expressions-in-cpp.md)提供相同的功能以及更高的类型安全性和其他优点。
 
-函数指针声明指定指向函数必须具有的签名：
+函数指针声明指定所指向的函数必须具有的签名：
 
 ```cpp
 // Declare pointer to any function that...
@@ -309,14 +309,14 @@ int main()
 string (*g)(string a);
 
 // has no return value and no parameters
-void (*x)();
+:::no-loc(void)::: (*x)();
 
 // ...returns an int and takes three parameters
 // of the specified types
 int (*i)(int i, string s, double d);
 ```
 
-下面的示例显示一个函数`combine`，该函数将接受`std::string`和 返回 的任何函数作为`std::string`参数。 根据传递给`combine`的函数，它要么准备或追加字符串。
+下面的示例演示一个函数 `combine` ，该函数将接受的任何函数作为参数 `std::string` ，并返回 `std::string` 。 根据传递到的函数 `combine` ，它将添加或追加字符串。
 
 ```cpp
 #include <iostream>
@@ -348,9 +348,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[智能指针](smart-pointers-modern-cpp.md)
-[方向运算符： |](indirection-operator-star.md)<br/>
+[智能指针](smart-pointers-modern-cpp.md) 
+[间接寻址运算符： *](indirection-operator-star.md)<br/>
 [Address-of 运算符：&](address-of-operator-amp.md)</br>
-[欢迎回到C++](welcome-back-to-cpp-modern-cpp.md)
+[欢迎回到 c + +](welcome-back-to-cpp-modern-cpp.md)

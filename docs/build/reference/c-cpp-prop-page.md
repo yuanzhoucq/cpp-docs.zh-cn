@@ -1,15 +1,15 @@
 ---
-title: " (Visual Studio 的 c/c + + 项目属性) "
+title: C/c + + 项目属性（Visual Studio）
 description: Visual Studio Microsoft C/c + + 项目属性页属性的参考指南。
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180885"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229735"
 ---
 # <a name="cc-property-pages"></a>C/c + + 属性页
 
@@ -19,21 +19,21 @@ ms.locfileid: "86180885"
 
 ### <a name="additional-include-directories"></a>附加包含目录
 
-指定一个或多个要添加到包含路径中的目录；存在多个目录时，请用分号分隔。 将[ `/I` (其他包含目录) ](i-additional-include-directories.md)。
+指定一个或多个要添加到包含路径中的目录；存在多个目录时，请用分号分隔。 集[ `/I` （附加包含目录）](i-additional-include-directories.md)。
 
 ### <a name="additional-using-directories"></a>其他 #using 目录
 
-指定一个或多个目录 (用分号) 分隔的目录名称，以解析传递到 #using 指令的名称。 集 [`/AI`](ai-specify-metadata-directories.md) 。
+指定要搜索的一个或多个目录（用分号分隔的目录名称）来解析传递给 #using 指令的名称。 集 [`/AI`](ai-specify-metadata-directories.md) 。
 
 ### <a name="debug-information-format"></a>调试信息格式
 
-指定编译器生成的调试信息的类型。  此属性需要兼容的链接器设置。 设置[ `/Z7` 、 `/Zi` 、 `/ZI` (调试信息格式) ](z7-zi-zi-debug-information-format.md)。
+指定编译器生成的调试信息的类型。  此属性需要兼容的链接器设置。 设置[ `/Z7` 、 `/Zi` 、 `/ZI` （调试信息格式）](z7-zi-zi-debug-information-format.md)。
 
 #### <a name="choices"></a>选项
 
 - **无** - 没有生成调试信息，因此编译可能会更快。
-- **C7 兼容**-选择为程序创建的调试信息的类型，并确定是将此信息保存在对象 ( .obj) 文件中，还是保存在程序数据库 (PDB) 中。
-- **程序数据库**-生成程序数据库 (PDB) ，其中包含用于调试器的类型信息和符号调试信息。 符号调试信息包括变量和函数的名称和类型，以及行号。
+- **C7 兼容**-选择为程序创建的调试信息的类型，以及是将此信息保存在对象（.obj）文件中，还是保存在程序数据库（PDB）中。
+- **程序数据库**-生成一个程序数据库（PDB），其中包含用于调试器的类型信息和符号调试信息。 符号调试信息包括变量和函数的名称和类型，以及行号。
 - **用于 "编辑并继续" 的程序数据库**-以支持 "[编辑并继续](/visualstudio/debugger/edit-and-continue)" 功能的格式生成程序数据库（如上所述）。
 
 ### <a name="support-just-my-code-debugging"></a>支持仅我的代码调试
@@ -49,7 +49,7 @@ ms.locfileid: "86180885"
 - **无公共语言运行时支持**-无公共语言运行时支持
 - **公共语言运行时支持**-为您的应用程序创建可供其他 CLR 应用程序使用的元数据。 还允许应用程序使用其他 CLR 组件的元数据中的类型和数据。
 - **纯 Msil 公共语言运行时支持**-生成仅包含[msil](/dotnet/standard/managed-code)的输出文件（没有本机可执行代码），尽管该文件可以包含编译为 MSIL 的本机类型。
-- **安全 Msil 公共语言运行时支持**-生成仅限 MSIL (没有本机可执行代码) 和可验证输出文件。
+- **安全 Msil 公共语言运行时支持**-生成仅限 MSIL （没有本机可执行代码）和可验证输出文件。
 
 ### <a name="consume-windows-runtime-extension"></a>使用 Windows 运行时扩展
 
@@ -92,7 +92,7 @@ ms.locfileid: "86180885"
 
 ### <a name="sdl-checks"></a>SDL 检查
 
- (SDL) 建议的检查的其他安全开发生命周期;包括启用其他安全代码生成功能，并将额外的安全相关警告作为错误启用。 设置[ `/sdl` ， `/sdl-` ](sdl-enable-additional-security-checks.md)。
+其他安全性开发生命周期（SDL）建议的检查;包括启用其他安全代码生成功能，并将额外的安全相关警告作为错误启用。 设置[ `/sdl` ， `/sdl-` ](sdl-enable-additional-security-checks.md)。
 
 ### <a name="multi-processor-compilation"></a>多处理器编译
 
@@ -108,9 +108,9 @@ ms.locfileid: "86180885"
 
 - 自定义 - 自定义优化****。
 - 禁用 - 禁用优化****。
-- **最大优化 (优选大小) ** -等效于**`/Os /Oy /Ob2 /Gs /GF /Gy`**
-- **最大优化 (优选速度) **等效于**`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
-- **优化 (优选速度) **等效于**`/Oi /Ot /Oy /Ob2`**
+- **最大优化（优选大小）** -等效于**`/Os /Oy /Ob2 /Gs /GF /Gy`**
+- **最大优化（优选速度）** -等效于**`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
+- **优化（优选速度）** -等效于**`/Oi /Ot /Oy /Ob2`**
 
 ### <a name="inline-function-expansion"></a>内联函数展开
 
@@ -118,10 +118,10 @@ ms.locfileid: "86180885"
 
 #### <a name="choices"></a>选项
 
-- **默认值**
+- **默认**
 - **Disabled** -禁用默认情况下打开的内联展开。
-- **仅 __inline** -只展开标记为 **`inline`** 、 `__forceinline` 或的函数 `__inline` 。 或在类声明中定义的 c + + 成员函数中。
-- **Any Suitable**标记为 **`inline`** 或 `__inline` 以及编译器选择的任何其他函数的任何合适的扩展函数。  (扩展发生在编译器判断上，通常称为*自动内联*。 ) 
+- **仅 __inline** -只展开标记为 **`inline`** 、 **`__forceinline`** 或的函数 **`__inline`** 。 或在类声明中定义的 c + + 成员函数中。
+- **Any Suitable**标记为 **`inline`** 或 **`__inline`** 以及编译器选择的任何其他函数的任何合适的扩展函数。 （扩展发生于编译器的判断，通常称为*自动内联*。）
 
 ### <a name="enable-intrinsic-functions"></a>启用内部函数
 
@@ -134,7 +134,7 @@ ms.locfileid: "86180885"
 #### <a name="choices"></a>选项
 
 - **优选小型代码**，代码优先于小代码。 通过指示编译器的大小优于速度来最大程度地降低 Exe 和 Dll 的大小。
-- **代码**编写速度更快代码。 通过指示编译器优选速度，使 Exe 和 Dll 的速度最大化。  (此值为默认值。 ) 
+- **代码**编写速度更快代码。 通过指示编译器优选速度，使 Exe 和 Dll 的速度最大化。 （默认值为此值。）
 - 无 **-无**大小和速度优化。
 
 ### <a name="omit-frame-pointers"></a>省略帧指针
@@ -195,7 +195,7 @@ ms.locfileid: "86180885"
 
 #### <a name="choices"></a>选项
 
-- **是，但有 SEH 异常**-捕获异步 (结构化) 和同步 (c + +) 异常的异常处理模型。 集 [`/EHa`](eh-exception-handling-model.md) 。
+- **是，但有 SEH 异常**-捕获异步（结构化）和同步（c + +）异常的异常处理模型。 集 [`/EHa`](eh-exception-handling-model.md) 。
 - **是**-仅捕获 c + + 异常并通知编译器假定 extern c 函数永远不引发 c + + 异常的异常处理模型。 集 [`/EHsc`](eh-exception-handling-model.md) 。
 - **是，使用 Extern c 函数**-仅捕获 c + + 异常并通知编译器假定 Extern C 函数确实会引发异常的异常处理模型。 集 [`/EHs`](eh-exception-handling-model.md) 。
 - **否**-无异常处理。
@@ -212,7 +212,7 @@ ms.locfileid: "86180885"
 
 - **堆栈帧**-启用堆栈帧运行时错误检查。
 - **未初始化的变量**-在未初始化的情况下使用变量进行报告。
-- ** (/rtc1、http-equiv 和/RTCsu) **等效于/rtcsu。
+- **两者（/RTC1，http-equiv）** -等效于/rtcsu。
 - **默认**值-默认运行时检查。
 
 ### <a name="runtime-library"></a>运行库
@@ -235,7 +235,7 @@ ms.locfileid: "86180885"
 - **1**字节边界上1个字节包结构。 与相同 **`/Zp`** 。
 - **2 字节**-在2字节边界上包结构。
 - **4 字节**-在4字节边界上打包结构。
-- **8 字节**-在8字节边界上打包结构 (默认) 。
+- **8 字节**-在8字节边界上打包结构（默认值）。
 - **16 字节**-在16字节边界上包结构。
 - **默认**值-默认对齐方式设置。
 
@@ -317,11 +317,11 @@ ms.locfileid: "86180885"
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>将 wchar_t 视为内置类型
 
-当指定时，类型 **`wchar_t`** 将变成映射到的本机类型 `__wchar_t` **`short`** `__int16` 。 [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)默认情况下处于打开状态。
+当指定时，类型 **`wchar_t`** 将变成映射到的本机类型 **`__wchar_t`** **`short`** **`__int16`** 。 [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)默认情况下处于打开状态。
 
 ### <a name="force-conformance-in-for-loop-scope"></a>强制 For 循环范围中的一致性
 
-用于通过 Microsoft 扩展为 for 语句循环实现标准 c + + 行为。 设置[ `/Za` 、 `/Ze` (禁用语言扩展](za-ze-disable-language-extensions.md)。 [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md)默认情况下处于打开状态。
+用于通过 Microsoft 扩展为 for 语句循环实现标准 c + + 行为。 设置[ `/Za` `/Ze` （禁用语言扩展](za-ze-disable-language-extensions.md)。 [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md)默认情况下处于打开状态。
 
 ### <a name="remove-unreferenced-code-and-data"></a>删除未引用的代码和数据
 
@@ -345,12 +345,12 @@ ms.locfileid: "86180885"
 
 #### <a name="choices"></a>选项
 
-- **默认值**
+- **默认**
 - **ISO c + + 14 标准**
 - **ISO c + + 17 标准版**
 - **预览-来自最新 c + + 工作草案的功能**
 
-### <a name="enable-c-modules-experimental"></a>启用 c + + 模块 (试验) 
+### <a name="enable-c-modules-experimental"></a>启用 c + + 模块（实验）
 
 对 c + + 模块 TS 和标准库模块的实验性支持。
 
@@ -362,8 +362,8 @@ ms.locfileid: "86180885"
 
 #### <a name="choices"></a>选项
 
-- **Create** -指示编译器创建一个预编译标头 ( .pch) 文件，该文件表示某个时间点的编译状态。
-- **Use** -指示编译器在当前编译中使用现有预编译头 ( .pch) 文件。
+- **Create** -指示编译器创建一个预编译标头（.pch）文件，该文件表示某个时间点的编译状态。
+- **Use** -指示编译器在当前编译中使用现有预编译头（.pch）文件。
 - **不使用预编译标头**-不使用预编译头。
 
 ### <a name="precompiled-header-file"></a>预编译标头文件
@@ -410,7 +410,7 @@ ms.locfileid: "86180885"
 
 ### <a name="generate-xml-documentation-files"></a>生成 XML 文档文件
 
-指定编译器应生成 XML 文档注释文件 (。.XDC) 。 集 [`/doc`](doc-process-documentation-comments-c-cpp.md) 。
+指定编译器应生成 XML 文档注释文件（。.XDC）。 集 [`/doc`](doc-process-documentation-comments-c-cpp.md) 。
 
 ### <a name="xml-documentation-file-name"></a>XML 文档文件名
 
@@ -430,14 +430,14 @@ ms.locfileid: "86180885"
 
 ### <a name="calling-convention"></a>调用约定
 
-选择应用程序的默认调用约定 (可以通过函数) 进行重写。 设置[ `/Gd` 、 `/Gr` 、 `/Gz` 和 `/Gv` ](gd-gr-gv-gz-calling-convention.md)。
+选择应用程序的默认调用约定（可由函数重写）。 设置[ `/Gd` 、 `/Gr` 、 `/Gz` 和 `/Gv` ](gd-gr-gv-gz-calling-convention.md)。
 
 #### <a name="choices"></a>选项
 
-- **__cdecl** - `__cdecl` 为除 c + + 成员函数和标记为的函数之外的所有函数指定调用约定 `__stdcall` `__fastcall` 。
-- **__fastcall** - `__fastcall` 为除 c + + 成员函数和标记为的函数之外的所有函数指定调用约定 `__cdecl` `__stdcall` 。 所有 `__fastcall` 函数都必须有原型。
-- **__stdcall** - `__stdcall` 为除 c + + 成员函数和标记为的函数之外的所有函数指定调用约定 `__cdecl` `__fastcall` 。 所有 `__stdcall` 函数都必须有原型。
-- **__vectorcall** - `__vectorcall` 为除 c + + 成员函数和标记为、或的函数以外的所有函数指定调用约定 `__cdecl` `__fastcall` `__stdcall` 。 所有 `__vectorcall` 函数都必须有原型。
+- **`__cdecl`**- **`__cdecl`** 为除 c + + 成员函数和标记为的函数之外的所有函数指定调用约定 **`__stdcall`** **`__fastcall`** 。
+- **`__fastcall`**- **`__fastcall`** 为除 c + + 成员函数和标记为的函数之外的所有函数指定调用约定 **`__cdecl`** **`__stdcall`** 。 所有 **`__fastcall`** 函数都必须具有原型。
+- **`__stdcall`**- **`__stdcall`** 为除 c + + 成员函数和标记为的函数之外的所有函数指定调用约定 **`__cdecl`** **`__fastcall`** 。 所有 **`__stdcall`** 函数都必须具有原型。
+- **`__vectorcall`**- **`__vectorcall`** 为除 c + + 成员函数和标记为、或的函数以外的所有函数指定调用约定 **`__cdecl`** **`__fastcall`** **`__stdcall`** 。 所有 **`__vectorcall`** 函数都必须具有原型。
 
 ### <a name="compile-as"></a>编译为
 
@@ -476,7 +476,7 @@ ms.locfileid: "86180885"
 ### <a name="internal-compiler-error-reporting"></a>内部编译器错误报告
 
 > [!NOTE]
-> 此选项已弃用。 从 Windows Vista 开始，错误报告由[Windows 错误报告 (WER) ](/windows/win32/wer/windows-error-reporting)设置控制。
+> 此选项已弃用。 从 Windows Vista 开始，错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。
 
 ### <a name="treat-specific-warnings-as-errors"></a>将特定的警告视为错误
 

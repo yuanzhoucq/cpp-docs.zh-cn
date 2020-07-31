@@ -13,16 +13,16 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-ms.openlocfilehash: c18b29cf69c2f899fbf06c7cb75ebbd2242ab427
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b79b65ab3cbf4565f31ad6717f8163c678697c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178556"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213185"
 ---
 # <a name="static-members-c"></a>静态成员 (C++)
 
-类可以包含静态成员数据和成员函数。 如果将数据成员声明为**静态**，则只为类的所有对象维护数据的一个副本。
+类可以包含静态成员数据和成员函数。 将数据成员声明为时 **`static`** ，只会为类的所有对象维护数据的一个副本。
 
 静态数据成员不是给定的类类型的对象的一部分。 因此，静态数据成员的声明不被视为一个定义。 在类范围中声明数据成员，但在文件范围内执行定义。 这些静态类成员具有外部链接。 以下示例对此进行了说明：
 
@@ -63,7 +63,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;
 ```
 
-对于存在的静态成员，类类型的所有对象的存在则没有必要。 静态成员还可以使用成员选择（ **.** 和 **->** ）运算符。 例如：
+对于存在的静态成员，类类型的所有对象的存在则没有必要。 静态成员还可以使用成员选择（**.** 和 **->** ）运算符。 例如：
 
 ```cpp
 BufferedOutput Console;
@@ -75,7 +75,7 @@ long nBytes = Console.bytecount;
 
 静态数据成员遵循类成员访问规则，因此只允许类成员函数和友元拥有对静态数据成员的私有访问权限。 这些规则在[成员访问控制](../cpp/member-access-control-cpp.md)中进行了介绍。 例外情况是，无论静态数据成员的访问限制如何，都必须在文件范围内进行定义。 如果进行显式初始化数据成员，则必须使用定义提供初始值设定项。
 
-静态成员的类型不是由其类名称限定的。 因此，`BufferedOutput::bytecount` 的类型很**长**。
+静态成员的类型不是由其类名称限定的。 因此，的类型 `BufferedOutput::bytecount` 为 **`long`** 。
 
 ## <a name="see-also"></a>另请参阅
 

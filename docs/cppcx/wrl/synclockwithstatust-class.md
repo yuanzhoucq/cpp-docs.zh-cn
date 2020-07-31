@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: a111e0368ec6f4fcf8e89383b6261ad25ca6ebcf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4b7dbe8ae1648e4185a9eb1e1142df4a3869aa2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403812"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216539"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 类
 
@@ -48,26 +48,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                                             | 说明
+名称                                                             | 描述
 ---------------------------------------------------------------- | --------------------------------------------------------------
 [SyncLockWithStatusT：： SyncLockWithStatusT](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 类的新实例。
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-名称                                                             | 说明
+名称                                                             | 描述
 ---------------------------------------------------------------- | --------------------------------------------------------------
 [SyncLockWithStatusT：： SyncLockWithStatusT](#synclockwithstatust) | 初始化 `SyncLockWithStatusT` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-“属性”                                         | 说明
+“属性”                                         | 描述
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
 [SyncLockWithStatusT：： GetStatus](#getstatus) | 检索当前对象的等待状态 `SyncLockWithStatusT` 。
 [SyncLockWithStatusT：： IsLocked](#islocked)   | 指示当前对象是否 `SyncLockWithStatusT` 拥有资源; 即， `SyncLockWithStatusT` 对象已*锁定*。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-名称                                    | 说明
+名称                                    | 描述
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
 [SyncLockWithStatusT：： status_](#status) | 保存基于当前对象的对象上的锁定操作后的基础等待操作的结果 `SyncLockWithStatusT` 。
 
@@ -115,7 +115,7 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 `SyncLockWithStatusT` 对象被锁定，则为 true; 否则为**false**。
+**`true`** 如果 `SyncLockWithStatusT` 对象被锁定，则为; 否则为 **`false`** 。
 
 ## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT：： status_
 
@@ -159,4 +159,4 @@ explicit SyncLockWithStatusT(
 
 初始化 `SyncLockWithStatusT` 类的新实例。
 
-第一个构造函数 `SyncLockWithStatusT` 从另一个由参数指定的中初始化当前对象 `SyncLockWithStatusT` ，然后使另一个对象失效*other* `SyncLockWithStatusT` 。 第二个构造函数为 `protected` ，并将当前 `SyncLockWithStatusT` 对象初始化为无效状态。
+第一个构造函数 `SyncLockWithStatusT` 从另一个由参数指定的中初始化当前对象 `SyncLockWithStatusT` ，然后使另一个对象失效*other* `SyncLockWithStatusT` 。 第二个构造函数为 **`protected`** ，并将当前 `SyncLockWithStatusT` 对象初始化为无效状态。

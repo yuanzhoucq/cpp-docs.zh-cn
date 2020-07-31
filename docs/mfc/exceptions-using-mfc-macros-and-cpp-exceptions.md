@@ -16,12 +16,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9e97eb545dedd3ac38dd93471f82aecc382717ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622725"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223169"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>异常：使用 MFC 宏和 C++ 异常
 
@@ -49,7 +49,7 @@ ms.locfileid: "84622725"
 
 ## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Catch 块内的 Try 块
 
-不能从**CATCH**块内的**try**块内重新引发当前异常。 下面的示例无效：
+不能从 **`try`** **CATCH**块内的块内重新引发当前异常。 下面的示例无效：
 
 [!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 

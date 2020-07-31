@@ -28,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 03d1a9ece92dbedfdceb89488e5d0440dc64f7ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737470"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220725"
 ---
 # <a name="clock"></a>clock
 
@@ -53,7 +53,7 @@ clock_t clock( void );
 
 **时钟**函数告诉您自开始处理 CRT 初始化以来已经过了多少时钟时间。 请注意，此函数并不严格遵守 ISO C，它将净 CPU 时间指定为返回值。 若要获取 CPU 时间，请使用 Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 函数。 若要确定经过的时间（以秒为单位），请将由**时钟**函数返回的值除以宏**CLOCKS_PER_SEC**。
 
-给定足够的时间，**时钟**返回的值可能会超出**clock_t**的最大正值。 当进程运行时间较长时 **，由 C99 返回的值**始终由 `(clock_t)(-1)` iso standard （7.23.2.1）和 iso C11 standard （7.27.2.1）指定。 Microsoft 将**clock_t**实现为**长**、有符号的32位整数， **CLOCKS_PER_SEC**宏定义为1000。 这将提供最大**时钟**函数返回值2147483.647 秒，即约24.8 天。 不要依赖于运行时间超过此时间的进程中**时钟**返回的值。 可以使用64位[时间](time-time32-time64.md)函数或 Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)函数记录多年的进程运行时间。
+给定足够的时间，**时钟**返回的值可能会超出**clock_t**的最大正值。 当进程运行时间较长时 **，由 C99 返回的值**始终由 `(clock_t)(-1)` iso standard （7.23.2.1）和 iso C11 standard （7.27.2.1）指定。 Microsoft 将**clock_t**实现为 **`long`** ，已签名的32位整数， **CLOCKS_PER_SEC**宏定义为1000。 这将提供最大**时钟**函数返回值2147483.647 秒，即约24.8 天。 不要依赖于运行时间超过此时间的进程中**时钟**返回的值。 可以使用64位[时间](time-time32-time64.md)函数或 Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)函数记录多年的进程运行时间。
 
 ## <a name="requirements"></a>要求
 
@@ -114,7 +114,7 @@ Done!
 Time to do 600000000 empty loops is 1.354 seconds
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [difftime, _difftime32, _difftime64](difftime-difftime32-difftime64.md)<br/>

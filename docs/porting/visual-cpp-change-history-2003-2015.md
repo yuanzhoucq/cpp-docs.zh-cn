@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 51de46487d85f4b8d7d357a0d1842f3d3192fff7
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b68d9c857db35791486dfc0c1ee02a096a8f5a0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219464"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -66,7 +66,7 @@ ms.locfileid: "86404790"
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` 和 `long double` 版本的浮点函数：`acos`、`acosh`、`asin`、`asinh`、`atan``atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma` 和 `trunc`
+  - **`float`** 和 **`long double`** 版本的浮点函数 `acos` ， `acosh` ，， `asin` ， `asinh` `atan` `atanh` `atan2` `cbrt` `ceil` `copysign` `cos` `cosh` `erf` `erfc` `exp` `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `lround` `modf` `nearbyint` `nextafter` `nexttoward` `remainder` `remquo` `rint` `round` `scalbln` `scalbn` `sin` `sinh` `sqrt` `tan` ， `tanh` ， `tgamma` ，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，`trunc`
 
   如果你的代码 `abs` 与只包含标头的浮点类型一起使用 \<math.h> ，则浮点版本将不再可用。 该调用现在解析为 `abs(int)`，即使使用浮点参数，也会生成错误：
 
@@ -275,7 +275,7 @@ ms.locfileid: "86404790"
 
 #### \<time.h>
 
-- **时钟**
+- **clock**
 
    在早期版本中，已使用 Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 实现了 [clock](../c-runtime-library/reference/clock.md) 函数。 使用此实现，clock 函数对系统时间比较敏感，因此不一定是单一的。 已根据 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 重新实现了 clock 函数，现在它是单一的。
 
@@ -451,7 +451,7 @@ ms.locfileid: "86404790"
 
 - **可变关键字**
 
-   在其之前正确编译的位置，不再允许存在可变存储类说明符****。 现在，编译器报告错误 C2071（非法存储类）。 根据标准，可变说明符仅可应用于类数据成员的名称，不能应用于声明为 const 或 static 的名称，也不能应用于引用成员****。
+   **`mutable`** 存储类说明符在以前未发生错误的情况下不再允许存在。 现在，编译器报告错误 C2071（非法存储类）。 根据标准， **`mutable`** 说明符仅可应用于类数据成员的名称，不能应用于声明为 const 或 static 的名称，并且不能应用于引用成员。
 
    例如，考虑以下代码：
 
@@ -468,11 +468,11 @@ ms.locfileid: "86404790"
     error C2071: 'S::r': illegal storage class
     ```
 
-   要消除此错误，请删除冗余的可变关键字****。
+   若要修复此错误，请删除多余的 **`mutable`** 关键字。
 
 - **char_16_t 和 char32_t**
 
-   你不能再使用 `char16_t` 或 `char32_t` 作为**typedef**中的别名，因为这些类型现在被视为内置。 用户和库作者过去通常将 `char16_t` 和 `char32_t` 分别定义为 `uint16_t` 和 `uint32_t` 的别名。
+   不能再将 **`char16_t`** 或 **`char32_t`** 用作中的别名 **`typedef`** ，因为这些类型现在被视为内置。 用户和库作者经常将 **`char16_t`** 和 **`char32_t`** 分别定义为 `uint16_t` 和别名 `uint32_t` 。
 
     ```cpp
     #include <cstdint>
@@ -489,7 +489,7 @@ ms.locfileid: "86404790"
     }
     ```
 
-   若要更新你的代码，请删除**typedef**声明，并重命名与这些名称冲突的任何其他标识符。
+   若要更新你的代码，请删除 **`typedef`** 声明并重命名与这些名称冲突的任何其他标识符。
 
 - **非类型模板参数**
 
@@ -522,7 +522,7 @@ ms.locfileid: "86404790"
 
    若要在代码中修复此错误，请确保你使用的模板自变量类型匹配模板参数声明的类型。
 
-- **__declspec(align)**
+- **`__declspec(align)`**
 
    编译器不再接受函数上的 `__declspec(align)` 。 以前会始终忽略此构造，但现在会产生编译器错误。
 
@@ -551,7 +551,7 @@ ms.locfileid: "86404790"
     }
     ```
 
-   问题在于，复制构造函数是私有的，因此对象无法像处理异常的标准过程那样进行复制。 当复制构造函数声明为显式时，这同样适用****。
+   问题在于，复制构造函数是私有的，因此对象无法像处理异常的标准过程那样进行复制。 声明复制构造函数时，也是如此 **`explicit`** 。
 
     ```cpp
     struct S
@@ -566,7 +566,7 @@ ms.locfileid: "86404790"
     }
     ```
 
-   若要更新你的代码，请确保异常对象的复制构造函数是**公用**的且未标记为**explicit**。
+   若要更新你的代码，请确保异常对象的复制构造函数为 **`public`** ，且未标记为 **`explicit`** 。
 
    通过值捕获异常还要求异常对象可复制。 下列代码可在 Visual Studio 2013 中进行编译，但在 Visual Studio 2015 中不会进行编译：
 
@@ -592,7 +592,7 @@ ms.locfileid: "86404790"
     }
     ```
 
-   可通过将 catch 的参数类型更改为“引用”来解决此问题****。
+   可以通过将的参数类型更改为引用来解决此问题 **`catch`** 。
 
     ```cpp
     catch (D& d)
@@ -641,9 +641,9 @@ ms.locfileid: "86404790"
 
 - **placement new 和 placement delete**
 
-   已对**delete**运算符进行了更改，以使其符合 c + + 14 标准。 标准更改的详细信息位于 [C++ 调整了大小的释放](https://isocpp.org/files/papers/n3778.html)。 更改将添加采用大小参数的全局**delete**运算符的形式。 重大更改为，如果你之前使用的是具有相同签名的运算符 delete（以与 placement new 运算符对应），你将收到编译器错误（C2956，在使用 placement new 的点位置出现，因为在代码中的该位置，编译器会尝试标识适当匹配的 delete 运算符）************。
+   已对操作员做出更改 **`delete`** ，使其符合 c + + 14 标准。 标准更改的详细信息位于 [C++ 调整了大小的释放](https://isocpp.org/files/papers/n3778.html)。 更改将添加 **`delete`** 采用大小参数的全局运算符的形式。 重大更改是，如果你以前使用的是 **`delete`** 具有相同签名的运算符（与**位置 new**运算符对应），你将收到编译器错误（C2956，该错误发生在使用 new 运算符的位置，因为这是代码中编译器尝试标识适当匹配运算符的位置 **`delete`** ）。
 
-   函数 `void operator delete(void *, size_t)` 是与 C++11 中的 placement new 函数 `void * operator new(size_t, size_t)` 对应的 placement delete 运算符********。 使用 C++14 调整了大小的释放，此 delete 函数现在是常用释放函数 （全局 delete 运算符）******。 标准要求为，如果使用 placement new 查找相应的 delete 函数和常用释放函数，则程序会出现格式错误。
+   函数 `void operator delete(void *, size_t)` 是与 C++11 中的 placement new 函数 `void * operator new(size_t, size_t)` 对应的 placement delete 运算符********。 使用 c + + 14 大小的释放，此 delete 函数现在是*常用释放函数*（全局 **`delete`** 运算符）。 标准要求为，如果使用 placement new 查找相应的 delete 函数和常用释放函数，则程序会出现格式错误。
 
    例如，假设你的代码同时定义了一个**新**的和一个**位置删除**：
 
@@ -652,15 +652,15 @@ ms.locfileid: "86404790"
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   出现此问题的原因是你定义的**放置删除**运算符与新的全局大小**删除**运算符之间的函数签名匹配。 考虑是否可使用任何 placement new 和 placement delete 运算符的其他类型（`size_t` 除外********）。  typedef 的类型取决于编译器；在 MSVC 中，它是一个无符号整型的 typedef`size_t` ************。 较好的解决办法就是使用如下的枚举类型：
+   出现此问题的原因是你定义的**放置删除**运算符与新的全局大小运算符之间的函数签名匹配 **`delete`** 。 考虑是否可以使用不同于 `size_t` 任何**位置 new**和运算符的其他类型 **`delete`** 。 的类型 `size_t` **`typedef`** 依赖于编译器; **`typedef`** **`unsigned int`** 在 MSVC 中它是的。 较好的解决办法就是使用如下的枚举类型：
 
     ```cpp
     enum class my_type : size_t {};
     ```
 
-   然后，将 "**新建**" 和 "**删除**" 的定义更改为使用此类型作为第二个参数，而不是 `size_t` 。 还需要更新对位置 new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新**new**和**delete**的定义以强制转换回整数类型。 无需为此使用**枚举**;带有成员的类类型 `size_t` 也将起作用。
+   然后，更改**new new**的定义，并 **`delete`** 使用此类型作为第二个参数，而不是 `size_t` 。 还需要更新对位置 new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新和的定义 **`new`** **`delete`** 以强制转换回整数类型。 不需要使用 **`enum`** 来实现此操作; 包含成员的类类型 `size_t` 也将起作用。
 
-   另一种解决方法是，可以完全消除新的**位置**。 如果你的代码使用**放置 new**实现内存池，其中位置参数是要分配或删除的对象的大小，则调整了大小的释放功能可能适合替换你自己的自定义内存池代码，并且你可以删除位置函数并只使用你自己的双参数**delete**运算符而不是放置函数。
+   另一种解决方法是，可以完全消除新的**位置**。 如果你的代码使用**放置 new**实现内存池，其中位置参数是要分配或删除的对象的大小，则调整了大小的释放功能可能适合替换你自己的自定义内存池代码，并且你可以删除位置函数，仅使用自己的双参数 **`delete`** 运算符而不是放置函数。
 
    如果你不想立即更新代码，可通过编译器选项 `/Zc:sizedDealloc-` 还原到之前的行为。 如果使用此选项，则这两个参数的 delete 函数不存在，因此不会导致与您的**放置 delete**运算符发生冲突。
 
@@ -949,7 +949,7 @@ ms.locfileid: "86404790"
     S1<S2> s;
     ```
 
-   若要修复此错误，请从初始值设定项中删除 `typename`：
+   若要修复此错误，请 **`typename`** 从初始值设定项中删除：
 
     ```cpp
     S1() : T::type() // OK
@@ -974,7 +974,7 @@ ms.locfileid: "86404790"
 
 - **在类模板内的 static_assert 中使用的常量始终都会失败。**
 
-   在下面的代码中，`static_assert` 始终都会失败：
+   下面的代码将导致 **`static_assert`** 始终失败：
 
     ```cpp
     template <size_t some_value>
@@ -987,7 +987,7 @@ ms.locfileid: "86404790"
     //other partial specializations here
     ```
 
-   若要解决此问题，请在结构中包装值****：
+   若要解决此问题，请在中包装值 **`struct`** ：
 
     ```cpp
     template <size_t some_value>
@@ -1072,7 +1072,7 @@ ms.locfileid: "86404790"
     };
     ```
 
-   若要修复此错误，可以将调用完全限定为 `bind: N::bind(...)`。 但是，如果此更改是通过未声明的标识符（C2065）进行的，则可能适合使用**using**声明来修复此更改。
+   若要修复此错误，可以将调用完全限定为 `bind: N::bind(...)`。 但是，如果此更改是通过未声明的标识符（C2065）进行的，则可能适合使用声明来修复此更改 **`using`** 。
 
    此模式的发生通常与 `Microsoft::WRL` 命名空间中的 ComPtr 和其他类型有关。
 
@@ -1215,17 +1215,17 @@ ms.locfileid: "86404790"
 
    若要修复此代码，可以将 catch 块更改为 `catch (const D &)`，但更好的解决方案通常是使用 MFC TRY/CATCH 宏。
 
-- **alignof 现在是关键字**
+- **`alignof`现在为关键字**
 
-   下面的代码现在生成错误 C2332："class":缺少标记名称。 若要修复此代码，必须重命名类；或者，如果类执行的工作与 alignof 相同，只需将类替换成新的关键字即可****。
+   下面的代码现在生成错误 C2332："class":缺少标记名称。 若要修复此代码，必须重命名类，或者，如果类正在执行与相同的工作 **`alignof`** ，只需将类替换为 new 关键字。
 
     ```cpp
     class alignof{}
     ```
 
-- **constexpr 现在是关键字**
+- **`constexpr`现在为关键字**
 
-   下面的代码现在生成错误 C2059：语法错误: ")"。 若要修复此代码，必须重命名任何名为“constexpr”的函数或变量名称。
+   下面的代码现在生成错误 C2059：语法错误: ")"。 若要修复此代码，必须重命名调用的任何函数或变量名称 **`constexpr`** 。
 
     ```cpp
     int constexpr() {return 1;}
@@ -1233,7 +1233,7 @@ ms.locfileid: "86404790"
 
 - **可移动类型不能为常量**
 
-   当函数返回预期要移动的类型时，其返回类型不得为常量****。
+   当函数返回打算移动的类型时，它的返回类型不应是 **`const`** 。
 
 - **已删除复制构造函数**
 
@@ -1507,7 +1507,7 @@ ms.locfileid: "86404790"
     };
     ```
 
-   若要修复此错误，请删除 0 两边的大括号；否则，改用 `0`，如以下示例所示****：
+   若要修复此错误，请删除或的前后的大括号 `0` **`nullptr`** ，如以下示例中所示：
 
     ```cpp
     struct S {
@@ -1582,7 +1582,7 @@ ms.locfileid: "86404790"
     };
     ```
 
-   若要修复此错误，请删除 `j` 两边的括号。 如果为明确起见而需要使用括号，请使用 typedef****。
+   若要修复此错误，请删除 `j` 两边的括号。 如果清楚地需要括号，则使用 **`typedef`** 。
 
 - **编译器生成的构造函数和 __declspec(novtable)**
 
@@ -1627,7 +1627,7 @@ ms.locfileid: "86404790"
     static_assert(std::is_convertible<D, B2>::value, "fail");
     ```
 
-   若要修复此错误，请将 `static_assert` 更改为比较 `D` 与 `B2` 指针：
+   若要修复此错误，请更改， **`static_assert`** 以便它将指针与和进行比较 `D` `B2` ：
 
     ```cpp
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
@@ -1635,7 +1635,7 @@ ms.locfileid: "86404790"
 
 - **__declspec(novtable) 声明必须保持一致**
 
-   `__declspec` 声明必须跨所有库保持一致。 下面的代码现在生成单个定义规则 (ODR) 冲突：
+   **`__declspec`** 声明在所有库中必须保持一致。 下面的代码现在生成单个定义规则 (ODR) 冲突：
 
     ```cpp
     //a.cpp
@@ -1755,7 +1755,7 @@ ms.locfileid: "86404790"
 
 - **重载的 new 运算符和 delete 运算符**
 
-   早期版本的编译器允许非成员 new 运算符和非成员 delete 运算符声明为静态，并在全局命名空间之外的命名空间中声明********。  之前的这种行为存在风险，导致程序不调用程序员期望的 new 或 delete 运算符实现，进而导致无提示的运行时行为错误********。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2323。
+   早期版本的编译器允许非成员 new 运算符和非成员 delete 运算符声明为静态，并在全局命名空间之外的命名空间中声明********。  这种旧行为会导致程序无法调用程序员所需的 **`new`** 或 **`delete`** 运算符实现，从而导致无提示的运行时行为。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2323。
 
     ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -1773,7 +1773,7 @@ ms.locfileid: "86404790"
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
     ```
 
-   此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确****。
+   此外，尽管编译器不会给予特定诊断，但内联运算符 **`new`** 被视为格式不正确。
 
 - **对非类类型调用“operator *type*()”（用户定义的转换）**
 
@@ -1807,7 +1807,7 @@ ms.locfileid: "86404790"
 
 - **详细的类型说明符中的多余 typename**
 
-   早期版本的编译器允许详细的类型说明符中出现 typename，但是用这种方式编写的代码在语义上不正确****。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C3406。
+   早期版本的编译器允许 **`typename`** 在详细类型说明符中使用，但是以这种方式编写的代码在语义上不正确。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C3406。
 
     ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -1915,7 +1915,7 @@ ms.locfileid: "86404790"
 
 - **switch 语句警告的还原**
 
-   前一个版本的编译器删除了一些与 switch 语句相关的警告；现在已还原所有这些警告****。 编译器现在将发出还原的警告，并且现在会在包含有问题用例的行中发出与特定用例（包括默认情况下）相关的警告，而不是在 switch 语句的最后一行发出。 因此，现在发出这些警告的行与过去不同，按照需要使用 `#pragma warning(disable:####)` 可不再禁止显示以前禁止显示的警告。 要按照需要禁止显示这些警告，可能需要将 `#pragma warning(disable:####)` 指令移到第一个有问题的用例上面的行。 以下是还原的警告：
+   以前版本的编译器删除了一些与语句相关的警告 **`switch`** ; 这些警告现在已还原。 编译器现在将发出还原的警告，并且现在会在包含有问题用例的行中发出与特定用例（包括默认情况下）相关的警告，而不是在 switch 语句的最后一行发出。 因此，现在发出这些警告的行与过去不同，按照需要使用 `#pragma warning(disable:####)` 可不再禁止显示以前禁止显示的警告。 要按照需要禁止显示这些警告，可能需要将 `#pragma warning(disable:####)` 指令移到第一个有问题的用例上面的行。 以下是还原的警告：
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -2205,9 +2205,9 @@ ms.locfileid: "86404790"
 
 - **可能会因对表达式 SFINAE 的部分支持而发出其他警告和错误**
 
-   由于缺少对表达式 SFINAE 的支持，编译器的早期版本无法分析 decltype 说明符中特定类型的表达式****。 这种旧行为不正确，也不符合 C++ 标准。 由于持续的符合性改进，此编译器现已可分析这些表达式，并能为表达式 SFINAE 提供部分支持。 因此，此编译器现在可发出在编译器的早期版本无法分析的表达式中找到的警告和错误。
+   **`decltype`** 由于缺少对表达式 SFINAE 的支持，早期版本的编译器不会分析说明符内的某些类型的表达式。 这种旧行为不正确，也不符合 C++ 标准。 由于持续的符合性改进，此编译器现已可分析这些表达式，并能为表达式 SFINAE 提供部分支持。 因此，此编译器现在可发出在编译器的早期版本无法分析的表达式中找到的警告和错误。
 
-   这种新行为分析包含尚未声明类型的 decltype 表达式时，将导致编译器发出编译器错误 C2039****。
+   此新行为分析 **`decltype`** 包含尚未声明的类型的表达式时，编译器会发出编译器错误 C2039。
 
     ```Output
     error C2039: 'type': is not a member of '`global namespace''
@@ -2241,7 +2241,7 @@ ms.locfileid: "86404790"
     }
     ```
 
-   当此新行为分析 decltype 表达式时（将依赖名称指定为类型时必须使用关键字 typename，而此表达式未使用），编译器将发出编译器警告 C4346 和编译器错误 C2923********。
+   当这一新行为解析 **`decltype`** 缺少必要使用 **`typename`** 关键字来指定依赖名称为类型的表达式时，编译器会发出编译器警告 C4346 以及编译器错误 C2923。
 
     ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -2292,9 +2292,9 @@ ms.locfileid: "86404790"
     };
     ```
 
-- `volatile` **成员变量将防止出现隐式定义的构造函数和赋值运算符**
+- **`volatile`****成员变量会阻止隐式定义的构造函数和赋值运算符**
 
-   编译器的早期版本允许具有可变成员变量的类自动生成默认复制/移动构造函数和默认复制/移动赋值运算符****。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现****。 当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 尝试构造或复制联合（或包含匿名联合的类）而不显式定义它们是错误的，将导致编译器发出编译器错误 C2280。
+   编译器的早期版本允许具有成员变量的类 **`volatile`** 自动生成默认复制/移动构造函数和默认复制/移动赋值运算符。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在会将具有成员变量的类视为 **`volatile`** 包含非普通构造和赋值运算符，这将防止自动生成这些运算符的默认实现。 当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 尝试构造或复制联合（或包含匿名联合的类）而不显式定义它们是错误的，将导致编译器发出编译器错误 C2280。
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2380,7 +2380,7 @@ ms.locfileid: "86404790"
 
 - **WinRT 代码中不允许枚举的前向声明**（仅影响 `/ZW`）
 
-   为 Windows 运行时 (WinRT) 编译的代码不允许前向声明 enum 类型，这与使用 `/clr` 编译器开关为 .Net Framework 编译托管 C++ 代码时相似****。 此行为可确保枚举大小始终为已知，并可将其正确映射到 WinRT 类型系统。 编译器将拒绝接受以这种方式编写的代码，并发出编译器错误 C2599 和编译器错误 C3197。
+   为 Windows 运行时（WinRT）编译的代码不允许 **`enum`** 前向声明类型，类似于使用编译器开关为 .Net Framework 编译托管 c + + 代码的时间 `/clr` 。 此行为可确保枚举大小始终为已知，并可将其正确映射到 WinRT 类型系统。 编译器将拒绝接受以这种方式编写的代码，并发出编译器错误 C2599 和编译器错误 C3197。
 
     ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -2467,7 +2467,7 @@ ms.locfileid: "86404790"
 
 - **现在，std::is_convertable 可以检测自我赋值**（标准库）
 
-   以前版本的 `std::is_convertable` type-trait 在其复制构造函数被删除或私有时，无法正确检测类类型的自我赋值。 现在，当应用于具有已删除或私有复制构造函数的类类型时，`std::is_convertable<>::value` 已正确设置为 false****。
+   以前版本的 `std::is_convertable` type-trait 在其复制构造函数被删除或私有时，无法正确检测类类型的自我赋值。 现在， `std::is_convertable<>::value` **`false`** 在应用于具有已删除或私有复制构造函数的类类型时，正确设置为。
 
    没有与此更改相关联的编译器诊断。
 
@@ -2491,7 +2491,7 @@ ms.locfileid: "86404790"
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   在以前版本的编译器中，此示例底部的静态断言通过，因为 `std::is_convertable<>::value` 错误地设置为**true**。 现在，`std::is_convertable<>::value` 正确设置为 false，使静态断言失败****。
+   在以前版本的编译器中，此示例底部的静态断言通过，因为 `std::is_convertable<>::value` 错误地设置为 **`true`** 。 现在， `std::is_convertable<>::value` 正确设置为 **`false`** ，导致静态断言失败。
 
 - **默认设置或已删除的日常复制和移动构造函数遵从访问说明符**
 
@@ -2723,7 +2723,7 @@ ms.locfileid: "86404790"
     }
     ```
 
-   在早期版本中，由于调用是一个**虚拟**调用，因此未发出错误;尽管如此，程序也会在运行时崩溃。 现在，由于类已知为最终的类，因此将发出链接器错误。 在此示例中，若要修复错误，请针对包含 `S2::f` 定义的对象进行链接。
+   在早期版本中，由于调用是调用，因此未发出错误 **`virtual`** ; 但是，程序会在运行时崩溃。 现在，由于类已知为最终的类，因此将发出链接器错误。 在此示例中，若要修复错误，请针对包含 `S2::f` 定义的对象进行链接。
 
 - 在使用命名空间中的友元函数时，必须先重新声明该友元函数，然后再对其进行引用，否则将收到错误，因为编译器现在遵循 ISO C++ 标准。 例如，此示例不再编译：
 
@@ -2740,7 +2740,7 @@ ms.locfileid: "86404790"
     }
     ```
 
-   若要更正此代码，请声明友元函数****：
+   若要更正此代码，请声明 **`friend`** 函数：
 
     ```cpp
     namespace NS {
@@ -2797,14 +2797,14 @@ ms.locfileid: "86404790"
     }
     ```
 
-- 在使编译器与 ISO C++11 兼容之前，必须先编译以下代码并使 `x` 解析为 int 类型****：
+- 在编译器符合 ISO c + + 11 之前，以下代码将编译并导致 `x` 解析为类型 **`int`** ：
 
     ```cpp
     auto x = {0};
     int y = x;
     ```
 
-   此代码现在解析 `x` 为类型的 `std::initializer_list<int>` ，并导致在尝试分配 `x` 给**int**类型的下一行上出现错误。（默认情况下不进行转换。）若要更正此代码，请使用**int**替换**auto**：
+   此代码现在解析 `x` 为类型的 `std::initializer_list<int>` ，并导致在尝试分配给类型的下一行上出现错误 `x` **`int`** 。 （默认情况下不进行转换。）若要更正此代码，请使用 **`int`** 替换 **`auto`** ：
 
     ```cpp
     int x = {0};
@@ -2854,7 +2854,7 @@ ms.locfileid: "86404790"
 
    在 Visual Studio 2012 中，表达式 `E1::b` 中的 `E1` 在全局范围内解析为 `::E1`。 在 Visual Studio 2013 中，表达式 `E1::b` 中的 `E1` 在 `main()` 中解析为 `typedef E2` 定义且具有 `::E2` 类型。
 
-- 对象布局已发生更改。 在 x64 上，类的对象布局可能在早期版本基础上发生了更改。 如果它具有一个**虚拟**函数，但它没有**虚拟**函数的基类，则编译器的对象模型会将一个指针插入到数据成员布局之后的**虚拟**函数表。 这意味着布局可能不会在所有情况下都达到最优。 在以前版本中，x64 优化会尝试改善布局，但由于它在复杂代码情况下不能正常运行，因此 Visual Studio 2013 中已将其删除。 例如，假设有以下代码：
+- 对象布局已发生更改。 在 x64 上，类的对象布局可能在早期版本基础上发生了更改。 如果它具有一个 **`virtual`** 函数，但它没有具有函数的基类，则 **`virtual`** 编译器的对象模型会将一个指针插入到 **`virtual`** 数据成员布局之后的函数表。 这意味着布局可能不会在所有情况下都达到最优。 在以前版本中，x64 优化会尝试改善布局，但由于它在复杂代码情况下不能正常运行，因此 Visual Studio 2013 中已将其删除。 例如，假设有以下代码：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2867,7 +2867,7 @@ ms.locfileid: "86404790"
     };
     ```
 
-- 在 Visual Studio 2013 中，x64 上 `sizeof(S2)` 的结果为 48，但在以前版本中，计算结果为 32。 若要使它在 x64 Visual Studio 2013 C++ 编译器中的计算结果为 32，请添加具有虚拟函数的虚拟基类****：
+- 在 Visual Studio 2013 中，x64 上 `sizeof(S2)` 的结果为 48，但在以前版本中，计算结果为 32。 若要使其在 x64 Visual Studio 2013 c + + 编译器中的计算结果为32，请添加一个具有函数的虚拟基类 **`virtual`** ：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -3000,7 +3000,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 已更改 `/Yl` 编译器选项。 默认情况下，编译器将使用此选项，这可能会导致在某些情况下出现 LNK2011 错误。 有关详细信息，请参阅 [/Yl（为调试库插入 PCH 引用）](../build/reference/yl-inject-pch-reference-for-debug-library.md)。
 
-- 在使用 `/clr` 编译的代码中，枚举类关键字定义 C++11 枚举，而不是公共语言运行时 (CLR) 枚举****。 若要定义 CLR 枚举，必须明确其可访问性。
+- 在使用编译的代码中 `/clr` ， **`enum`** class 关键字定义 c + + 11 枚举，而不是公共语言运行时（CLR）枚举。 若要定义 CLR 枚举，必须明确其可访问性。
 
 - 使用模板关键字显式消除依赖名称的歧义（遵从 C++ 语言标准）。 在以下示例中，突出显示的模板关键字是消除歧义所必需的。 有关详细信息，请参阅[依赖类型的名称解析](../cpp/name-resolution-for-dependent-types.md)。
 
@@ -3232,9 +3232,9 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="compiler"></a>编译器
 
-- auto 关键字具有新的默认含义****。 因为使用旧含义的情况很少见，所以大多数应用程序不会受到此更改的影响。
+- **`auto`** 关键字具有新的默认含义。 因为使用旧含义的情况很少见，所以大多数应用程序不会受到此更改的影响。
 
-- 引入了新关键字 static_assert，如果代码中已经有该名称的标识符，则会导致名称冲突****。
+- 引入 new **`static_assert`** 关键字，如果代码中已存在具有该名称的标识符，则会导致名称冲突。
 
 - 对新的 lambda 表示法的支持不包括支持对 IDL uuid 属性中的未引用 GUID 进行编码。
 
@@ -3284,7 +3284,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 已删除 `CComPtr::CComPtr(int)` 构造函数。 该构造函数允许从 NULL 宏构造 `CComPtr` 对象（但这是不必要的），并允许从非零整数构造无意义结构。
 
-   `CComPtr` 仍然可以从 NULL（其定义为 0）构造，但如果从文本 0 之外的整数构造，将失败。 请改用**nullptr** 。
+   `CComPtr` 仍然可以从 NULL（其定义为 0）构造，但如果从文本 0 之外的整数构造，将失败。 改为使用 **`nullptr`** 。
 
 - 已删除以下 `ctype` 成员函数：`ctype::_Do_narrow_s`、`ctype::_Do_widen_s`、`ctype::_narrow_s`、`ctype::_widen_s`。 如果应用程序使用这些成员函数之一，必须将其替换为相应的非安全版本：`ctype::do_narrow`、`ctype::do_widen`、`ctype::narrow`、`ctype::widen`。
 
@@ -3490,9 +3490,9 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 静态数据成员无法通过派生类初始化（[编译器错误 C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)）。
 
-- 根据标准，现在不允许 Typedef 的初始化，并且将生成编译器错误（[编译器错误 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)）****。
+- **`typedef`** 标准不允许初始化，现在会生成编译器错误（[编译器错误 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)）。
 
-- **bool**现在是正确的类型（[编译器错误 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)）。
+- **`bool`** 现在是正确的类型（[编译器错误 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)）。
 
 - 现在，UDC 可以使用重载的运算符创建多义性 ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md))。
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233972"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -108,7 +108,7 @@ double wcstod_l(
 
 ## <a name="remarks"></a>备注
 
-每个函数将输入字符串*strSource*转换为**双精度型**。 **Strtod**函数将*strSource*转换为双精度值。 **strtod**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 此字符可能是终止 null 字符。 **wcstod**是**strtod**的宽字符版本;其*strSource*参数是宽字符字符串。 否则这些函数具有相同行为。
+每个函数将输入字符串*strSource*转换为 **`double`** 。 **Strtod**函数将*strSource*转换为双精度值。 **strtod**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 此字符可能是终止 null 字符。 **wcstod**是**strtod**的宽字符版本;其*strSource*参数是宽字符字符串。 否则这些函数具有相同行为。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -205,12 +205,12 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [字符串到数值函数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol、wcstol、_strtol_l、_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul、_strtoul_l、wcstoul、_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

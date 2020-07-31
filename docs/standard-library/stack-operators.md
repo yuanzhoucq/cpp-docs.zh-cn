@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac694e517279e43a501bb8289544e5da5ddba72b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425069"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217410"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; 运算符
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试运算符左侧的堆栈对象是否不等于右侧的堆栈对象。
 
@@ -33,17 +33,17 @@ ms.locfileid: "79425069"
 bool operator!=(const stack <Type, Container>& left, const stack <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `stack` 类型的对象。
 
-*right*\
+*然后*\
 一个 `stack` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果堆栈或堆栈不相等，则为 **true**；否则为 **false**。
+**`true`** 如果堆栈或堆栈不相等，则为; 否则为。**`false`** 如果堆栈或堆栈相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -90,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
 
 测试运算符左侧的堆栈对象是否小于右侧的堆栈对象。
 
@@ -98,17 +98,17 @@ The stacks s1 and s3 are equal.
 bool operator<(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `stack` 类型的对象。
 
-*right*\
+*然后*\
 一个 `stack` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的堆栈小于但不等于运算符右侧的堆栈，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的堆栈小于且不等于运算符右侧的堆栈，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的堆栈对象是否小于或等于右侧的堆栈对象。
 
@@ -182,17 +182,17 @@ The stack s1 from the top down is: ( 8 6 4 2 ).
 bool operator<=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `stack` 类型的对象。
 
-*right*\
+*然后*\
 一个 `stack` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的堆栈小于或等于运算符右侧的堆栈，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的堆栈小于或等于运算符右侧的堆栈，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的堆栈对象是否等于右侧的堆栈对象。
 
@@ -249,17 +249,17 @@ The stack s1 is less than or equal to the stack s3.
 bool operator==(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `stack` 类型的对象。
 
-*right*\
+*然后*\
 一个 `stack` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果堆栈或堆栈相等，则为 **true**；否则为 **false**。
+**`true`** 如果堆栈或堆栈相等，则为; 否则为。**`false`** 如果堆栈或堆栈不相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -306,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> 运算符&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
 
 测试运算符左侧的堆栈对象是否大于右侧的堆栈对象。
 
@@ -314,17 +314,17 @@ The stacks s1 and s3 are equal.
 bool operator>(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `stack` 类型的对象。
 
-*right*\
+*然后*\
 一个 `stack` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的堆栈大于但不等于运算符右侧的堆栈，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的堆栈大于且不等于运算符右侧的堆栈，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的堆栈对象是否大于或等于右侧的堆栈对象。
 
@@ -383,17 +383,17 @@ The stack s1 is greater than the stack s3.
 bool operator>=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `stack` 类型的对象。
 
-*right*\
+*然后*\
 一个 `stack` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的堆栈严格小于右侧的堆栈，则为 **true**；否则为 **false**。
+**`true`** 如果运算符左侧的堆栈严格小于运算符右侧的堆栈，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 

@@ -6,25 +6,25 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172277"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195572"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
 
-interior_ptr 可以用于值类型。
+interior_ptr**** 可以用于值类型。
 
 > [!IMPORTANT]
 > `/clr` 编译器选项支持此语言功能，但是 `/ZW` 编译器选项不支持此语言功能。
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
-下面的 C++/CLI 示例展示了如何将 interior_ptr 用于值类型。
+下面的 C++/CLI 示例展示了如何将 interior_ptr**** 用于值类型。
 
 ### <a name="code"></a>代码
 
@@ -67,11 +67,11 @@ int main() {
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
-在值类型中，this 指针的计算结果为 interior_ptr。
+在值类型中， **`this`** 指针的计算结果为 interior_ptr。
 
-在值类型 `V` 的非静态成员函数主体中，this 是类型 `interior_ptr<V>` 的表达式，它的值是为其调用函数的对象的地址。
+在值类型的非静态成员函数体中 `V` ， **`this`** 是类型的表达式， `interior_ptr<V>` 其值是要为其调用函数的对象的地址。
 
 ### <a name="code"></a>代码
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 下面的示例演示了如何将 address-of 运算符与静态成员一起使用。
 
@@ -129,4 +129,4 @@ hello
 
 ## <a name="see-also"></a>另请参阅
 
-[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
+[interior_ptr （c + +/CLI）](interior-ptr-cpp-cli.md)

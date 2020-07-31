@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215083"
 ---
 # <a name="wctob"></a>wctob
 
@@ -58,7 +58,7 @@ int wctob(
 
 ## <a name="remarks"></a>备注
 
-如果多字节字符的长度正好为一个字节，则**wctob**函数会将*wchar*中包含的宽字符转换为返回**int**值传递的相应多字节字符。
+如果**wctob**多字节字符的*wchar* **`int`** 长度正好为一个字节，则 wctob 函数将 wchar 中包含的宽字符转换为返回值传递的相应多字节字符。
 
 如果**wctob**不成功且未找到相应的多字节字符，则该函数将**Errno**设置为**eilseq 且**并返回-1。
 
@@ -66,7 +66,7 @@ int wctob(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
@@ -109,7 +109,7 @@ Determined the corresponding multibyte character to be "A".
 ## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404301"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231853"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -95,13 +95,13 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CButton：： CButton](#cbutton)|构造 `CButton` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CButton：： Create](#create)|创建 Windows 按钮控件并将其附加到 `CButton` 对象。|
 |[CButton：:D rawItem](#drawitem)|重写以绘制所有者描述的 `CButton` 对象。|
@@ -170,7 +170,7 @@ class CButton : public CWnd
 
 如果 `CButton` 从对话框资源创建对象，则 `CButton` 当用户关闭对话框时，对象会自动销毁。
 
-如果在 `CButton` 窗口中创建对象，可能需要销毁它。 如果 `CButton` 通过使用**新**函数在堆上创建对象，则必须对对象调用**delete** ，以便在用户关闭 Windows 按钮控件时销毁该对象。 如果在 `CButton` 堆栈上创建对象或将其嵌入父对话框对象中，则它会自动销毁。
+如果在 `CButton` 窗口中创建对象，可能需要销毁它。 如果 `CButton` 使用函数在堆上创建对象 **`new`** ，则必须对对象调用以在 **`delete`** 用户关闭 Windows 按钮控件时销毁该对象。 如果在 `CButton` 堆栈上创建对象或将其嵌入父对话框对象中，则它会自动销毁。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -421,7 +421,7 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*lpszNote*|弄指向缓冲区的指针，调用方负责分配和解除分配。 如果返回值为 TRUE，则缓冲区包含与当前命令链接控件关联的注释文本;否则，缓冲区将保持不变。|
 |*cchNote*|[in，out]指向无符号整数变量的指针。<br /><br /> 调用此方法时，变量包含由*lpszNote*参数指定的缓冲区大小。<br /><br /> 此方法返回时，如果返回值为 TRUE，则变量包含与当前命令链接控件关联的便笺的大小。 如果返回值为 FALSE，则该变量包含包含该注释所需的缓冲区大小。|
@@ -506,7 +506,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*pInfo*|弄指向[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的指针，该结构接收当前拆分按钮控件的相关信息。 调用方负责分配结构。|
 
@@ -530,7 +530,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*pSize*|弄指向接收矩形说明的[大小](/windows/win32/api/windef/ns-windef-size)结构的指针。|
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 一个位域，其中包含指示按钮控件的当前状态的值的组合。 下表列出了可能的值。
 
-|按钮状态|Value|说明|
+|按钮状态|值|描述|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|初始状态。|
 |BST_CHECKED|0x0001|按钮控件处于选中状态。|
@@ -762,7 +762,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*fDropDown*|中若要设置 BST_DROPDOWNPUSHED 状态，则为 TRUE;否则为 FALSE。|
 
@@ -798,7 +798,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*fElevationRequired*|中如果设置状态，则为 TRUE `elevation required` ; 否则为 FALSE。|
 
@@ -882,7 +882,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*lpszNote*|中指向设置为命令链接控件的注释文本的 Unicode 字符串的指针。|
 
@@ -918,7 +918,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*chGlyph*|中一个字符，指定用作拆分按钮下拉箭头的标志符号。|
 
@@ -944,7 +944,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*pSplitImageList*|中指向要分配给当前拆分按钮控件的[CImageList](../../mfc/reference/cimagelist-class.md)对象的指针。|
 
@@ -968,7 +968,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*pInfo*|中指向定义当前拆分按钮控件的[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的指针。|
 
@@ -1004,7 +1004,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*pSize*|中指向描述边框的[大小](/windows/win32/api/windef/ns-windef-size)结构的指针。|
 
@@ -1042,7 +1042,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |*uSplitStyle*|中拆分按钮样式的按位组合。 有关详细信息，请参阅 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员。|
 
@@ -1120,7 +1120,7 @@ BOOL SetTextMargin(RECT* pmargin);
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [CComboBox 类](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit 类](../../mfc/reference/cedit-class.md)<br/>
 [CListBox 类](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic 类](../../mfc/reference/cstatic-class.md)<br/>

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - characters [C++], assignments
 - MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-ms.openlocfilehash: 88c42435d336ba78e87c9acfe3ada5fddbd18fb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f627f88ca2b1d3533d3690cd0316ee047a327ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410741"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217306"
 ---
 # <a name="character-assignment"></a>字符赋值
 
-请考虑以下示例中的，在其中**虽然**循环扫描一个字符串，将 X 以外的所有字符都复制到另一个字符串：
+请考虑以下示例，其中循环会 **`while`** 扫描字符串，将除 "X" 之外的所有字符复制到另一个字符串中：
 
 ```cpp
 while( *sz2 )
@@ -26,7 +26,7 @@ while( *sz2 )
 }
 ```
 
-代码将复制的字节位置`sz2`指向的位置`sz1`，然后递增`sz1`接收的下一个字节。 但是，如果中的下一个字符`sz2`是一个双字节字符，分配到`sz1`仅复制第一个字节。 下面的代码使用可移植的函数来安全地复制字符，另一个用于递增`sz1`和`sz2`正确：
+代码将中的字节复制 `sz2` 到所指向的位置 `sz1` ，然后递增 `sz1` 以接收下一个字节。 但如果中的下一个字符 `sz2` 是双字节字符，则赋值 `sz1` 仅复制第一个字节。 下面的代码使用可移植函数来安全地复制字符，并使用另一个函数来递增 `sz1` 和 `sz2` 正确地：
 
 ```cpp
 while( *sz2 )
@@ -42,7 +42,7 @@ while( *sz2 )
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MBCS 编程提示](../text/mbcs-programming-tips.md)<br/>
 [字符比较](../text/character-comparison.md)

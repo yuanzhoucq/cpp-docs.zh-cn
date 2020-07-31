@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8648258f17bff577ba1c0dde5016f5f284b82e25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224833"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 运算符
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 测试运算符左侧的列表对象是否不等于右侧的列表对象。
 
@@ -35,17 +35,17 @@ bool operator!=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `list` 类型的对象。
 
-*right*\
+*然后*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果列表不相等，则为 **true**；如果列表相等，则为 **false**。
+**`true`** 如果列表不相等，则为;**`false`** 如果列表相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -76,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a> 运算符&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
 
 测试运算符左侧的列表对象是否小于右侧的列表对象。
 
@@ -86,17 +86,17 @@ bool operator<(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `list` 类型的对象。
 
-*right*\
+*然后*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的列表小于但不等于运算符右侧的列表，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的列表小于但不等于运算符右侧的列表，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的列表对象是否小于或等于右侧的列表对象。
 
@@ -141,17 +141,17 @@ bool operator<=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `list` 类型的对象。
 
-*right*\
+*然后*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的列表小于或等于运算符右侧的列表，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的列表小于或等于运算符右侧的列表，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的列表对象是否等于右侧的列表对象。
 
@@ -196,17 +196,17 @@ bool operator==(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `list` 类型的对象。
 
-*right*\
+*然后*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的列表等于运算符右侧的列表，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的列表等于运算符右侧的列表，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -237,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a> 运算符&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
 
 测试运算符左侧的列表对象是否大于右侧的列表对象。
 
@@ -247,17 +247,17 @@ bool operator>(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `list` 类型的对象。
 
-*right*\
+*然后*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的列表大于右侧的列表，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的列表大于运算符右侧的列表，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的列表对象是否大于或等于右侧的列表对象。
 
@@ -302,17 +302,17 @@ bool operator>=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*左*\
+*左中*\
 一个 `list` 类型的对象。
 
-*right*\
+*然后*\
 一个 `list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的列表大于或等于右侧的列表，则为 **true**，否则为 **false**。
+**`true`** 如果运算符左侧的列表大于或等于运算符右侧的列表，则为; 否则为。否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 

@@ -1,21 +1,21 @@
 ---
-title: case （C++ COM 特性）
+title: case （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167326"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232802"
 ---
 # <a name="case-c"></a>case (C++)
 
-与**联合**中的[switch_type](switch-type.md)特性一起使用。
+与中的[switch_type](switch-type.md)特性一起使用 **`union`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -23,24 +23,24 @@ ms.locfileid: "80167326"
 [ case(value) ]
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *value*<br/>
 要为其提供处理的可能输入值。 **值**的类型可以是以下类型之一：
 
-- `int`
+- **`int`**
 
-- `char`
+- **`char`**
 
 - `boolean`
 
-- `enum`
+- **`enum`**
 
 或此类类型的标识符。
 
 ## <a name="remarks"></a>备注
 
-**Case** C++特性具有与**case** MIDL 特性相同的功能。 此属性仅与[switch_type](switch-type.md)特性一起使用。
+C **+ + 属性与** **case** MIDL 特性具有相同的功能。 此属性仅与[switch_type](switch-type.md)特性一起使用。
 
 ## <a name="example"></a>示例
 
@@ -69,9 +69,9 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**适用对象**|**类**或**结构**的成员|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|或的成员 **`class`****`struct`**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

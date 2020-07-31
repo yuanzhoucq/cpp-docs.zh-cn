@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8a0674defb0f5e81e0d1417bab5a282cf82b82b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172381"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195689"
 ---
 # <a name="event--ccli-and-ccx"></a>event（C++/CLI 和 C++/CX）
 
-event 关键字声明事件，这是向已注册订阅服务器（“事件处理程序”）发出的通知，以通知相关事件已发生。
+event**** 关键字声明事件**，这是向已注册订阅服务器（“事件处理程序”**）发出的通知，以通知相关事件已发生。
 
 ## <a name="all-runtimes"></a>所有运行时
 
-C++/CX 支持声明事件成员或事件块。 事件成员是用于声明事件块的速记属性。 默认情况下，事件成员声明 `add()`、`remove()` 和 `raise()` 函数，而这些函数将在事件块中显式声明。 若要自定义事件成员中的函数，请改为声明一个事件块，然后替代所需的函数。
+C++/CX 支持声明事件成员** 或事件块**。 事件成员是用于声明事件块的速记属性。 默认情况下，事件成员声明 `add()`、`remove()` 和 `raise()` 函数，而这些函数将在事件块中显式声明。 若要自定义事件成员中的函数，请改为声明一个事件块，然后替代所需的函数。
 
 ### <a name="syntax"></a>语法
 
@@ -38,22 +38,22 @@ modifiereventdelegate^ event_name
 }
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-modifier<br/>
-修饰符可用于事件声明或事件访问器方法。  可取值为 static 和 virtual。
+*组合键*<br/>
+修饰符可用于事件声明或事件访问器方法。  可能的值为 **`static`** 和 **`virtual`** 。
 
 *delegate*<br/>
 签名必须与事件处理程序匹配的 [delegate](delegate-cpp-component-extensions.md)。
 
-event_name<br/>
+*event_name*<br/>
 事件的名称。
 
-return_value<br/>
-事件访问器方法的返回值。  返回类型必须是 void，才是可验证的。
+*return_value*<br/>
+事件访问器方法的返回值。  若要能验证，返回类型必须为 **`void`** 。
 
-*参数*<br/>
-（可选）`raise` 方法的参数，与 delegate 参数的签名匹配。
+*parameters*<br/>
+（可选）`raise` 方法的参数，与 delegate** 参数的签名匹配。
 
 ### <a name="remarks"></a>备注
 
@@ -61,15 +61,15 @@ return_value<br/>
 
 有两种类型的事件声明：
 
-事件数据成员<br/>
+事件数据成员**<br/>
 编译器会自动以委托类型成员的形式为事件创建存储空间，并创建内部 `add()`、`remove()` 和 `raise()` 成员函数。 必须在类中声明事件数据成员。 委托的返回类型必须与事件处理程序的返回类型匹配。
 
-事件块<br/>
+事件块**<br/>
 事件块可显式声明并自定义 `add()`、`remove()` 和 `raise()` 方法的行为。
 
-可以使用 operators+= 和 operator-= 来添加和删除事件处理程序，也可以显式调用 `add()` 和 `remove()` 方法。
+可以使用 operators+=**** 和 operator-=**** 来添加和删除事件处理程序，也可以显式调用 `add()` 和 `remove()` 方法。
 
-event 是上下文相关关键字；有关详细信息，请参阅[上下文相关关键字](context-sensitive-keywords-cpp-component-extensions.md)。
+event**** 是上下文相关关键字；有关详细信息，请参阅[上下文相关关键字](context-sensitive-keywords-cpp-component-extensions.md)。
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
@@ -85,7 +85,7 @@ event 是上下文相关关键字；有关详细信息，请参阅[上下文相�
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-使用 event 关键字，可以声明事件。 事件是类在相关事件发生时提供通知的一种方式。
+使用 event**** 关键字，可以声明事件。 事件是类在相关事件发生时提供通知的一种方式。
 
 ### <a name="syntax"></a>语法
 
@@ -102,22 +102,22 @@ modifiereventdelegate^ event_name
 }
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-modifier<br/>
-修饰符可用于事件声明或事件访问器方法。  可取值为 static 和 virtual。
+*组合键*<br/>
+修饰符可用于事件声明或事件访问器方法。  可能的值为 **`static`** 和 **`virtual`** 。
 
 *delegate*<br/>
 签名必须与事件处理程序匹配的 [delegate](delegate-cpp-component-extensions.md)。
 
-event_name<br/>
+*event_name*<br/>
 事件的名称。
 
-return_value<br/>
-事件访问器方法的返回值。  返回类型必须是 void，才是可验证的。
+*return_value*<br/>
+事件访问器方法的返回值。  若要能验证，返回类型必须为 **`void`** 。
 
-*参数*<br/>
-（可选）`raise` 方法的参数，与 delegate 参数的签名匹配。
+*parameters*<br/>
+（可选）`raise` 方法的参数，与 delegate** 参数的签名匹配。
 
 ### <a name="remarks"></a>备注
 
@@ -127,10 +127,10 @@ return_value<br/>
 
 有两种类型的事件声明：
 
-事件数据成员<br/>
+事件数据成员**<br/>
 委托类型成员形式的事件存储空间由数据成员事件的编译器创建。  必须在类中声明事件数据成员。 这也称为普通事件（请参阅下面的代码示例。）
 
-事件块<br/>
+事件块**<br/>
 事件块允许通过实现添加、删除和引发方法来自定义添加、删除和引发方法的行为。 添加、删除和引发方法的签名必须与委托的签名匹配。  事件块事件不是数据成员，且任何用作数据成员的情况都将生成编译器错误。
 
 事件处理程序的返回类型必须与委托的返回类型匹配。
@@ -141,13 +141,13 @@ return_value<br/>
 
 必须遵循以下步骤在 Visual C++ 中创建并使用事件：
 
-1. 创建或标识委托。 若要定义你自己的事件，还必须确保有可以与 event 关键字一起使用的委托。 例如，如果该事件在 .NET Framework 中进行了预定义，则该事件的使用者只需知道委托的名称。
+1. 创建或标识委托。 若要定义你自己的事件，还必须确保有可以与 event**** 关键字一起使用的委托。 例如，如果该事件在 .NET Framework 中进行了预定义，则该事件的使用者只需知道委托的名称。
 
 2. 创建包括以下内容的类：
 
    - 从委托创建的事件。
 
-   - （可选）验证使用 event 关键字声明的委托实例是否存在的方法。 否则，此逻辑必须放在激发事件的代码中。
+   - （可选）验证使用 event**** 关键字声明的委托实例是否存在的方法。 否则，此逻辑必须放在激发事件的代码中。
 
    - 调用此事件的方法。 这些方法可以替代一些基类功能。
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-下面的代码示例演示了用于生成普通事件的 `raise` 方法的逻辑：如果该事件具有一个或多个订阅服务器，则隐式调用 `raise` 方法或显式调用委托。 如果委托的返回类型不是 void，并且没有事件订阅服务器，那么 `raise` 方法返回委托类型的默认值。 如果没有事件订阅服务器，则调用 `raise` 方法仅返回而不会引发异常。 如果委托的返回类型不是 void，返回的是委托类型。
+下面的代码示例演示了用于生成普通事件的 `raise` 方法的逻辑：如果该事件具有一个或多个订阅服务器，则隐式调用 `raise` 方法或显式调用委托。 如果委托的返回类型不是 **`void`** ，并且没有事件订阅服务器，则该 `raise` 方法将返回该委托类型的默认值。 如果没有事件订阅服务器，则调用 `raise` 方法仅返回而不会引发异常。 如果委托返回类型不是 **`void`** ，则返回委托类型。
 
 ```cpp
 // trivial_events.cpp
@@ -272,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

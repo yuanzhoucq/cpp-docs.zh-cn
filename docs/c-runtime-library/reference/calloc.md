@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 067ce6f347f4b24ad8c85990e70fe4d79305535c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918723"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213627"
 ---
 # <a name="calloc"></a>calloc
 
@@ -53,12 +53,12 @@ void *calloc(
 *数字*<br/>
 元素数量。
 
-size <br/>
+*大小*<br/>
 每个元素的长度（以字节为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**calloc**返回指向已分配空间的指针。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向非**void**类型的指针，请在返回值上使用类型转换。
+**calloc**返回指向已分配空间的指针。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型而非的指针 **`void`** ，请在返回值上使用类型转换。
 
 ## <a name="remarks"></a>备注
 
@@ -68,7 +68,7 @@ size <br/>
 
 在 Microsoft 实现中，如果*数字*或*大小*为零，则**calloc**将返回指向分配的非零大小块的指针。 尝试通过返回指针读取或写入会导致未定义的行为。
 
-**calloc**使用 c + + [_set_new_mode](set-new-mode.md)函数设置*新的处理程序模式*。 新处理程序模式指示在失败时， **calloc**是否调用[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下， **calloc**不会在失败时调用新的处理程序例程来分配内存。 您可以重写此默认行为，以便在**calloc**无法分配内存时，它将调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值，请在程序的早期调用：
+**calloc**使用 c + + [_set_new_mode](set-new-mode.md)函数设置*新的处理程序模式*。 新处理程序模式指示在失败时， **calloc**是否调用[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下， **calloc**不会在失败时调用新的处理程序例程来分配内存。 您可以重写此默认行为，以便在**calloc**无法分配内存时，它将调用新的处理程序例程，方法与 **`new`** 运算符在同一原因发生故障时相同。 若要重写默认值，请在程序的早期调用：
 
 ```C
 _set_new_mode(1);
@@ -78,13 +78,13 @@ _set_new_mode(1);
 
 当应用程序与调试版的 C 运行时库链接时， **calloc**解析为[_calloc_dbg](calloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-**calloc**被标记`__declspec(noalias)` `__declspec(restrict)`为，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**calloc**被标记为， `__declspec(noalias)` `__declspec(restrict)` 这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**calloc**|\<stdlib.h> 和 \<malloc.h>|
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-ms.openlocfilehash: 321451f0cc2ac538dbd0779001e22be047a3cc4d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 15105bb82409edd7bb7ca9ddd10b831b6dc3be94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991418"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196131"
 ---
 # <a name="compiler-warning-level-4-c4245"></a>编译器警告（等级 4）C4245
 
-"转换"：从 "type1" 转换为 "type2"，有符号/无符号不匹配
+> "*转换*"：从 "*type1*" 转换为 "*type2*"，有符号/无符号不匹配
 
-尝试将具有负值的有符号**常量**转换为 `unsigned`。
+尝试将 **`signed const`** 具有负值的类型转换为 **`unsigned`** 类型。
 
 下面的示例生成 C4245：
 

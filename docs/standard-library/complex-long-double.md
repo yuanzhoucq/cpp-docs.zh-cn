@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 73027ba76d608424b1a6da346e861b10c66989fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302336"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228383"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-此显式专用化的类模板描述了一个对象，该对象存储两个类型为**long double**的对象，第一个对象表示复数的实部，第二个对象表示复数的虚部。
+此显式专用化的类模板描述了一个对象，该对象存储两种类型的对象的有序对， **`long double`** 第一个对象表示复数的实部，第二个对象表示复数的虚部。
 
 ## <a name="syntax"></a>语法
 
@@ -39,25 +39,25 @@ complex(
 ### <a name="parameters"></a>参数
 
 *_RealVal*\
-正在构造的复数实部的 **long double** 类型值。
+**`long double`** 正在构造的复数的实部的类型值。
 
 *_ImagVal*\
-正在构造的复数的虚部的**long double**类型值。
+**`long double`** 正在构造的复数虚部的类型值。
 
 *complexNum*\
-类型为**double**或**float**的复数，其实部和虚部用于初始化正在构造的**long double**类型的复数。
+类型 **`double`** 或类型的复数， **`float`** 其实部和虚部用于初始化正在构造的类型的复数 **`long double`** 。
 
 ## <a name="return-value"></a>返回值
 
-**Long double**类型的复数。
+类型的复数 **`long double`** 。
 
 ## <a name="remarks"></a>备注
 
-类模板 `complex` 类模板的显式专用化只与它所定义的构造函数中的类**模板不同。** **长度**为**float**的转换可以是隐式的，但从**double**到**long double**的转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。
+类模板的显式专用化 `complex` 到类型的复杂类不同于 **`long double`** 它所定义的构造函数中的类模板。 允许从到的转换是 **`long double`** **`float`** 隐式的，但从到的 **`double`** 转换 **`long double`** 是必需的 **`explicit`** 。 使用 **`explicit`** 赋值语法将规则用于类型转换的启动。
 
-有关类模板 `complex` 及其成员的详细信息，请参阅[Complex 类](../standard-library/complex-class.md)。
+有关类模板及其成员的详细信息 `complex` ，请参阅[complex 类](../standard-library/complex-class.md)。
 
-**特定于 Microsoft**的：**长双精度**类型与**双精度**类型具有相同的表示形式，但它们是不同的类型。 有关详细信息，请参阅[内置类型](../cpp/fundamental-types-cpp.md)。
+**特定于 Microsoft**的： **`long double`** 和 **`double`** 类型具有相同的表示形式，但它们是不同的类型。 有关详细信息，请参阅[内置类型](../cpp/fundamental-types-cpp.md)。
 
 ## <a name="example"></a>示例
 
@@ -115,13 +115,13 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头**：\<complex>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>另请参阅
 
 [complex 类](../standard-library/complex-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

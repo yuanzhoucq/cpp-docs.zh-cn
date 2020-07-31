@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620013"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228617"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 
@@ -63,7 +63,7 @@ Microsoft 基础类库提供基于 C++ 模板的预定义类型安全集合。 �
 
 ## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>使用非模板集合类
 
-MFC 还支持 MFC 1.0 版引入的集合类。 这些类都不基于模板。 它们可用于包含支持的类型、、和的 `CObject*` 数据 `UINT` `DWORD` `CString` 。 您可以使用这些预定义的集合（如 `CObList`）保存派生自 `CObject` 的任何对象的集合。 MFC 还提供了其他预定义集合来保存基元类型 `UINT` ，如和 void 指针（ `void` *）。 但一般来说，定义自己的类型安全集合来保存更特定的类的对象及其派生类型往往很有用。 请注意，使用不基于模板的集合类这样做比使用基于模板的类工作量大。
+MFC 还支持 MFC 1.0 版引入的集合类。 这些类都不基于模板。 它们可用于包含支持的类型、、和的 `CObject*` 数据 `UINT` `DWORD` `CString` 。 您可以使用这些预定义的集合（如 `CObList`）保存派生自 `CObject` 的任何对象的集合。 MFC 还提供了其他预定义集合来保存基元类型 `UINT` ，如和 void 指针（ **`void*`** ）。 但一般来说，定义自己的类型安全集合来保存更特定的类的对象及其派生类型往往很有用。 请注意，使用不基于模板的集合类这样做比使用基于模板的类工作量大。
 
 使用非模板集合创建类型安全的集合有两种方式：
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216916"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
@@ -80,7 +80,7 @@ long double ldexpl(
 *x*<br/>
 浮点值。
 
-*.exp*<br/>
+*exp*<br/>
 整数指数。
 
 ## <a name="return-value"></a>返回值
@@ -91,13 +91,13 @@ long double ldexpl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用采用**float**或**long** **双精度**类型的**ldexp**的重载。 在 C 程序中， **ldexp**始终采用**double**和**int** ，并返回**double**。
+由于 c + + 允许重载，因此你可以调用采用或类型的**ldexp**的重载 **`float`** **`long double`** 。 在 C 程序中， **ldexp**始终采用 **`double`** 和 **`int`** 并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
 

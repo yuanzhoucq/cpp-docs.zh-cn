@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 70796db02f8ff3fcfd67694fb596722664e8f904
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 424ae09f6462d4d34b5a847fc210f9329e76d788
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218333"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL：SQL 和 C++ 数据类型 (ODBC)
 
@@ -26,11 +26,11 @@ ms.locfileid: "86404250"
 |------------------------|---------------------|
 |**CHAR**|`CString`|
 |DECIMAL|`CString`2|
-|**SMALLINT**|**int**|
-|**实际上**|**float**|
-|**整数**|**long**|
-|**FLOAT**|**double**|
-|**仔细**|**double**|
+|**SMALLINT**|**`int`**|
+|**实际上**|**`float`**|
+|**整数**|**`long`**|
+|**FLOAT**|**`double`**|
+|**仔细**|**`double`**|
 |**加法**|`CString`2|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`， `CString` 2|
@@ -42,7 +42,7 @@ ms.locfileid: "86404250"
 |**LONGVARBINARY**|`CLongBinary`， `CByteArray` 3|
 |DATE|`CTime`, `CString`|
 |**阶段**|`CTime`, `CString`|
-|**TIMESTAMP**|`CTime`, `CString`|
+|**标志**|`CTime`, `CString`|
 
 1. 将 ANSI **DECIMAL**和**NUMERIC**映射到， `CString` 因为**SQL_C_CHAR**是默认的 ODBC 传输类型。
 

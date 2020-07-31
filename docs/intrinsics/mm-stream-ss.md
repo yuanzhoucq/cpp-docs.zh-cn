@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ef1a2045a20070b667d416175826e5377fe30ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217348"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215980"
 ---
 # <a name="_mm_stream_ss"></a>_mm_stream_ss
 
@@ -34,8 +34,8 @@ void _mm_stream_ss(
 *位置*\
 弄指向写入源数据的位置的指针。
 
-*Source*\
-中一个128位数字, 其中包含要`float`在其下32位写入的值。
+*源程序*\
+中一个128位数字，其中包含 **`float`** 要在其下32位写入的值。
 
 ## <a name="return-value"></a>返回值
 
@@ -43,17 +43,17 @@ void _mm_stream_ss(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-内部函数生成`movntss`指令。 若要确定此指令的硬件支持, 请`__cpuid`调用`InfoType=0x80000001`内部, 并检查的`CPUInfo[2] (ECX)`第6位。 当支持指令时, 此位为 1; 否则为0。
+内部函数生成 `movntss` 指令。 若要确定此指令的硬件支持，请调用 `__cpuid` 内部， `InfoType=0x80000001` 并检查的第6位 `CPUInfo[2] (ECX)` 。 当支持指令时，此位为 1; 否则为0。
 
-如果在不`movntss`支持指令的硬件`_mm_stream_ss`上运行使用内部函数的代码, 则结果是不可预知的。
+如果在 `_mm_stream_ss` 不支持指令的硬件上运行使用内部函数的代码 `movntss` ，则结果是不可预知的。
 
 ## <a name="example"></a>示例
 
@@ -89,9 +89,9 @@ f[2] = -3, f[3] = 3
 
 **结束 Microsoft 专用**
 
-部分版权 2007, 由高级微设备, Inc。保留所有权利。 从高级微设备, Inc. 的权限重现。
+部分版权2007，由高级微设备，Inc。保留所有权利。 从高级微设备，Inc. 的权限重现。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
 [_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\

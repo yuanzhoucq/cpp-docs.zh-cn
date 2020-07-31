@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914212"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231333"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
@@ -116,7 +116,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="return-value"></a>返回值
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**返回*str*的多字节字符的第一个*计数*中找到的字节数。 **_mbsnccnt**和 **_mbsnccnt_l**返回*str*的第一个字节*计数*中找到的字符数。 如果在*str*的检查完成之前遇到 null 字符，则它们返回在空字符之前找到的字节数或字符数。 如果*str*包含的字符数或字节数少于*计数*，则它们将返回字符串中的字符数或字节数。 如果*count*小于零，则它们将返回0。 在以前的版本中，这些函数具有类型为**int**的返回值，而不是**size_t**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**返回*str*的多字节字符的第一个*计数*中找到的字节数。 **_mbsnccnt**和 **_mbsnccnt_l**返回*str*的第一个字节*计数*中找到的字符数。 如果在*str*的检查完成之前遇到 null 字符，则它们返回在空字符之前找到的字节数或字符数。 如果*str*包含的字符数或字节数少于*计数*，则它们将返回字符串中的字符数或字节数。 如果*count*小于零，则它们将返回0。 在以前的版本中，这些函数具有类型为的返回值， **`int`** 而不是**size_t**。
 
 **_strncnt**返回单字节字符串*str*的第一个*计数*字节中的字符数。 **_wcsncnt**返回宽字符字符串*str*的第一个*计数*宽字符中的字符数。
 
@@ -134,7 +134,7 @@ size_t _mbsnccnt_l(
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
-|例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|例程所返回的值|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
 |**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|不适用|
@@ -144,7 +144,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcnt**|\<mbstring.h>|
 |**_mbsnbcnt_l**|\<mbstring.h>|
@@ -185,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

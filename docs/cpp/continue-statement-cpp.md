@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 55a81338f1a0f9036a6d42c4bac7c99489c18d64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180272"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228994"
 ---
 # <a name="continue-statement-c"></a>continue 语句 (C++)
 
@@ -27,11 +27,11 @@ continue;
 
 将不会执行当前迭代中的所有剩余语句。 确定循环的下一次迭代，如下所示：
 
-- 在**do** **或** **while**循环中，下一个迭代首先重新计算**语句的控制**表达式。
+- 在 **`do`** 或 **`while`** 循环中，下一个迭代首先重新计算或语句的控制表达式 **`do`** **`while`** 。
 
-- 在**for**循环中（使用语法 `for`（`init-expr`; `cond-expr`; `loop-expr`）），将执行 `loop-expr` 子句。 然后，重新计算 `cond-expr` 子句，并根据结果确定该循环结束还是进行另一个迭代。
+- 在 **`for`** 循环（使用语法）中 `for( <init-expr> ; <cond-expr> ; <loop-expr> )` ， `<loop-expr>` 执行子句。 然后，重新计算 `<cond-expr>` 子句，并根据结果确定该循环结束还是进行另一个迭代。
 
-下面的示例演示如何使用**continue**语句跳过代码段并开始循环的下一次迭代。
+下面的示例演示如何 **`continue`** 使用语句跳过代码段和开始循环的下一次迭代。
 
 ## <a name="example"></a>示例
 

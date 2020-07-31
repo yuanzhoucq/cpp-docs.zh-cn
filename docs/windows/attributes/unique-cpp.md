@@ -1,17 +1,17 @@
 ---
-title: unique （C++ COM 特性）
+title: unique （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a46d607ef03fcb75fea31835726d0e2d95e71df8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214430"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201019"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214430"
 
 ## <a name="remarks"></a>备注
 
-**Unique** C++特性具有与[unique](/windows/win32/Midl/unique) MIDL 特性相同的功能。
+**Unique** c + + 特性具有与[unique](/windows/win32/Midl/unique) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -37,9 +37,9 @@ ms.locfileid: "80214430"
 
 |||
 |-|-|
-|**适用对象**|**typedef**、 **struct**、 **union**、interface 参数、interface 方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**`typedef`**、 **`struct`** 、 **`union`** 、interface 参数、interface 方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
@@ -48,4 +48,4 @@ ms.locfileid: "80214430"
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[参数特性](parameter-attributes.md)
+[参数属性](parameter-attributes.md)

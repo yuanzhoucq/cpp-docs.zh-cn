@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545269"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216383"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>如何：扩展封送处理库
 
 本主题说明如何扩展封送处理库，以便在数据类型之间提供更多的转换。 用户可以为库当前不支持的任何数据转换扩展封送处理库。
 
-可以通过以下两种方式之一扩展封送处理库-使用或不使用[Marshal_context 类](../dotnet/marshal-context-class.md)。 请参阅主题[中C++的封送概述](../dotnet/overview-of-marshaling-in-cpp.md)，确定新转换是否需要上下文。
+可以通过以下两种方式之一扩展封送处理库-使用或不使用[Marshal_context 类](../dotnet/marshal-context-class.md)。 查看[c + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)主题，确定新转换是否需要上下文。
 
 在这两种情况下，首先要创建新的封送处理转换文件。 这样做是为了保留标准封送库文件的完整性。 如果要将项目移植到另一台计算机或另一台程序员，则必须将新的封送处理文件与项目的其余部分一起复制。 通过这种方式，接收项目的用户可以接收新的转换，而不需要修改任何库文件。
 
@@ -30,13 +30,13 @@ ms.locfileid: "79545269"
 
    - marshal_windows windows 数据类型。
 
-   - C++标准库数据类型 marshal_cppstd .h。
+   - 适用于 c + + 标准库数据类型 marshal_cppstd .h。
 
    - ATL 数据类型 marshal_atl。
 
-1. 使用这些步骤末尾的代码编写转换函数。 在此代码中，TO 为要转换为的类型，FROM 是要从其转换的类型，`from` 是要转换的参数。
+1. 使用这些步骤末尾的代码编写转换函数。 在此代码中，要转换为的类型，FROM 是要从其转换的类型， `from` 是要转换的参数。
 
-1. 将有关转换逻辑的注释替换为代码，以将 `from` 参数转换为的对象，以键入并返回转换后的对象。
+1. 将有关转换逻辑的注释替换为代码，将 `from` 参数转换为的对象，以键入并返回转换后的对象。
 
 ```
 namespace msclr {
@@ -59,19 +59,19 @@ namespace msclr {
 
    - marshal_windows windows 数据类型。
 
-   - C++标准库数据类型 marshal_cppstd .h。
+   - 适用于 c + + 标准库数据类型 marshal_cppstd .h。
 
    - ATL 数据类型 marshal_atl。
 
-1. 使用这些步骤末尾的代码编写转换函数。 在此代码中，若为，则为要转换为的类型，FROM 是要从其转换的类型，`toObject` 是要在其中存储结果的指针，`fromObject` 是要转换的参数。
+1. 使用这些步骤末尾的代码编写转换函数。 在此代码中，若为，则为要转换为的类型，FROM 是要从其转换的类型， `toObject` 是要在其中存储结果的指针， `fromObject` 是要转换的参数。
 
-1. 将有关初始化的注释替换为代码，以将 `toPtr` 初始化为适当的空值。 例如，如果是指针，则将其设置为 `NULL`。
+1. 将有关初始化的注释替换为代码，以将初始化 `toPtr` 为适当的空值。 例如，如果是指针，则将其设置为 `NULL` 。
 
-1. 将有关转换逻辑的注释替换为代码，以将 `from` 参数转换*为*类型的对象。 此转换的对象将存储在 `toPtr`中。
+1. 将有关转换逻辑的注释替换为代码，以将 `from` 参数转换*为*类型的对象。 此转换的对象将存储在中 `toPtr` 。
 
-1. 将有关设置 `toObject` 的注释替换为代码，将 `toObject` 设置为转换后的对象。
+1. 将有关设置的注释替换为 `toObject` 要设置 `toObject` 为转换后的对象的代码。
 
-1. 替换有关使用代码清理本机资源的注释，以释放 `toPtr`分配的任何内存。 如果 `toPtr` 使用 `new`分配内存，请使用 `delete` 释放内存。
+1. 替换有关使用代码清理本机资源的注释，以释放由分配的任何内存 `toPtr` 。 如果 `toPtr` 使用分配的内存 **`new`** ，请使用 **`delete`** 释放内存。
 
 ```
 namespace msclr {
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-在前面的示例中，`marshal_as` 函数将返回转换后的数据的句柄。 这样做是为了防止创建额外的数据副本。 直接返回变量会导致不必要的性能开销。
+在上面的示例中， `marshal_as` 函数将返回转换后的数据的句柄。 这样做是为了防止创建额外的数据副本。 直接返回变量会导致不必要的性能开销。
 
 ```Output
 Managed name: Jeff Smith
@@ -268,4 +268,4 @@ Native zip code: 98111
 
 ## <a name="see-also"></a>另请参阅
 
-[C++ 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)
+[C + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)

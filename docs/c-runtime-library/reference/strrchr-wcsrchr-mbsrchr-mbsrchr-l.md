@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1350cf14df0c87d57a87ad3aced35e3887b6676
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911170"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231294"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
@@ -135,13 +135,13 @@ const unsigned char *_mbsrchr_l(
 
 ## <a name="remarks"></a>备注
 
-函数在*str*中查找*c*的最后一个匹配项（转换为 char）。 **char** `strrchr` 搜索包括终止 null 字符。
+`strrchr`函数查找 str 中*c* （转换为）的最后一个匹配项 **`char`** 。 *str* 搜索包括终止 null 字符。
 
 `wcsrchr` 和 `_mbsrchr` 分别是 `strrchr`的宽字符及多字节字符版本。 `wcsrchr` 的参数和返回值是宽字符字符串；而 `_mbsrchr` 的则是多字节字符字符串。
 
-在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些函数的**常量**和非常**量**版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS。 如果这两个 c + + 重载都需要非常**量**行为，请定义符号 _CONST_RETURN。
+在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向 **`const`** 非的指针 **`const`** 。 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS **`const`** 。 如果 **`const`** 这两个 c + + 重载都需要非行为，请定义符号 _CONST_RETURN。
 
-`_mbsrchr` 会验证其参数。 如果*str*为 NULL，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `errno`则将设置为 EINVAL，并`_mbsrchr`返回0。 `strrchr` 和 `wcsrchr` 不会验证其参数。 否则这三个函数否则具有相同行为。
+`_mbsrchr` 会验证其参数。 如果*str*为 NULL，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `errno` 则将设置为 EINVAL，并 `_mbsrchr` 返回0。 `strrchr` 和 `wcsrchr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置的设置的影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -152,11 +152,11 @@ const unsigned char *_mbsrchr_l(
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
-|**不适用**|**不适用**|`_mbsrchr_l`|**不适用**|
+|**n/a**|**n/a**|`_mbsrchr_l`|**n/a**|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`strrchr`|\<string.h>|
 |`wcsrchr`|\<string.h> 或 \<wchar.h>|
@@ -171,7 +171,7 @@ const unsigned char *_mbsrchr_l(
 ## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

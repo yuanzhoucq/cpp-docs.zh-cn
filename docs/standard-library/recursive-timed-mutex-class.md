@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 93ce7b99728d1ce89c8124efd6c74aea7ff66d22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15517425f3d81bc3798df2e42f39ac0b0d32ba31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320135"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217592"
 ---
 # <a name="recursive_timed_mutex-class"></a>recursive_timed_mutex 类
 
@@ -39,28 +39,28 @@ class recursive_timed_mutex;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|构造未锁定的 `recursive_timed_mutex` 对象。|
-|[*recursive_timed_mutex析构函数](#dtorrecursive_timed_mutex_destructor)|释放由 `recursive_timed_mutex` 对象使用的任何资源。|
+|[~ recursive_timed_mutex 析构函数](#dtorrecursive_timed_mutex_destructor)|释放由 `recursive_timed_mutex` 对象使用的任何资源。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[锁](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|
+|[lock](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|
 |[try_lock](#try_lock)|在不阻止的情况下尝试获取 `mutex` 的所有权。|
 |[try_lock_for](#try_lock_for)|尝试获取在指定时间间隔内有效的 `mutex` 的所有权。|
 |[try_lock_until](#try_lock_until)|尝试获取在指定时间之前有效的 `mutex` 的所有权。|
-|[解 锁](#unlock)|释放 `mutex` 的所有权。|
+|[解锁](#unlock)|释放 `mutex` 的所有权。|
 
 ## <a name="requirements"></a>要求
 
-**标题：**\<互斥>
+**标头：**\<mutex>
 
 **命名空间:** std
 
-## <a name="lock"></a><a name="lock"></a>锁
+## <a name="lock"></a><a name="lock"></a>住
 
 阻止调用线程，直到线程获取 `mutex` 的所有权。
 
@@ -72,7 +72,7 @@ void lock();
 
 如果调用线程已拥有 `mutex`，则该方法将立即返回，同时上一锁定保持有效。
 
-## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>recursive_timed_mutex构造函数
+## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>recursive_timed_mutex 构造函数
 
 构造未锁定的 `recursive_timed_mutex` 对象。
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**如果**该方法成功获得 的所有权`mutex`，或者调用线程已拥有 。 `mutex`否则，**假**。
+**`true`** 如果方法成功获取的所有权，则 `mutex` 为; 如果调用线程已拥有，则 `mutex` 为; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 ，`mutex`则函数将立即返回**true，** 并且以前的锁仍然有效。
+如果调用线程已拥有 `mutex` ，则该函数将立即返回 **`true`** ，而上一个锁仍有效。
 
 ## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
@@ -124,11 +124,11 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="return-value"></a>返回值
 
-**如果**该方法成功获得 或`mutex`调用线程已拥有 ， `mutex`否则，**假**。
+**`true`** 如果方法成功获取的所有权， `mutex` 或如果调用线程已拥有，则 `mutex` 为; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 ，`mutex`则该方法将立即返回**true，** 并且以前的锁仍然有效。
+如果调用线程已拥有 `mutex` ，则该方法会立即返回 **`true`** ，而上一个锁仍有效。
 
 ## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
 
@@ -148,13 +148,13 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="return-value"></a>返回值
 
-**如果**该方法成功获得 或`mutex`调用线程已拥有 ， `mutex`否则，**假**。
+**`true`** 如果方法成功获取的所有权， `mutex` 或如果调用线程已拥有，则 `mutex` 为; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 ，`mutex`则该方法将立即返回**true，** 并且以前的锁仍然有效。
+如果调用线程已拥有 `mutex` ，则该方法会立即返回 **`true`** ，而上一个锁仍有效。
 
-## <a name="unlock"></a><a name="unlock"></a>解 锁
+## <a name="unlock"></a><a name="unlock"></a>解锁
 
 释放 `mutex` 的所有权。
 
@@ -170,5 +170,5 @@ void unlock();
 
 ## <a name="see-also"></a>另请参阅
 
-[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[\<互斥>](../standard-library/mutex.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

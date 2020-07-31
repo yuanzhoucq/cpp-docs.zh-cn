@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4205
 ms.assetid: 39b5108c-7230-41b4-b2fe-2293eb6aae28
-ms.openlocfilehash: 7b6e273de196f6708b92774ce5b436dc810ad3a5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6e85d4b6382f8d3811585bcf887c08694b86b71a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225262"
 ---
 # <a name="compiler-warning-level-4-c4205"></a>编译器警告（等级 4）C4205
 
 使用了非标准扩展：函数范围内的静态函数声明
 
-利用 Microsoft 扩展（/Ze），可以在另一个函数内声明**静态**函数。 函数被赋予全局范围。
+利用 Microsoft 扩展（/Ze）， **`static`** 可以在另一个函数内声明函数。 函数被赋予全局范围。
 
 ## <a name="example"></a>示例
 

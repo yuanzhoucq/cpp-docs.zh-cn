@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234193"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-将**双精度**数字转换为字符串。 提供此函数的更安全的版本；请参阅 [_ecvt_s](ecvt-s.md)。
+将 **`double`** 数字转换为字符串。 提供此函数的更安全的版本；请参阅 [_ecvt_s](ecvt-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -62,7 +62,7 @@ char *_ecvt(
 *十进制*<br/>
 存储的十进制点位置。
 
-*表明*<br/>
+*sign*<br/>
 转换后的数字的符号。
 
 ## <a name="return-value"></a>返回值

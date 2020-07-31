@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 14d7bc25e514a217a6ab1160d41895ce2473b409
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189345"
 ---
 # <a name="creal-crealf-creall"></a>creal、crealf、creall
 
@@ -57,7 +57,7 @@ float creal( _Fcomplex z );  // C++ only
 long double creal( _Lcomplex z );  // C++ only
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *z*<br/>
 一个复数。
@@ -68,21 +68,21 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**creal**重载，并返回**float**或**long double**值。 在 C 程序中， **creal**始终采用 **_Dcomplex**值并返回一个**双精度**值。
+由于 c + + 允许重载，因此你可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**creal**重载，以及返回值 **`float`** 或 **`long double`** 值。 在 C 程序中， **creal**始终采用 **_Dcomplex**值并返回 **`double`** 值。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**creal**、 **crealf**、 **creall**|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**类型是特定于 Microsoft 的等效项，它们分别是未实现的本机 C99 类型**float _Complex**、 **double _Complex**和**long double _Complex**。 有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_Fcomplex**、 **_Dcomplex**和 **_Lcomplex**类型是特定于 Microsoft 的等效项，它们分别是未实现的本机 C99 类型**float _Complex**、 **double _Complex**和**long double _Complex**。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild、_FCbuild、_LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
-[norm、normf、norml](norm-normf-norml1.md)<br/>
+[norm、normf、norml1](norm-normf-norml1.md)<br/>
 [cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj、conjf、conjl](conj-conjf-conjl.md)<br/>
 [cimag、cimagf、cimagl](cimag-cimagf-cimagl.md)<br/>

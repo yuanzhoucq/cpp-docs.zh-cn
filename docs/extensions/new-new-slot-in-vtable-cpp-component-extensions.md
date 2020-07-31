@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "79544410"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214238"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new（vtable 中的新槽）（C++/CLI 和 C++/CX）
 
-new 关键字指明，虚成员在 vtable 中获取新槽。
+**`new`** 关键字指示虚拟成员将获取 vtable 中的新槽。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -28,9 +28,9 @@ Windows 运行时不支持此功能。
 
 ### <a name="remarks"></a>备注
 
-在 `/clr` 编译中，new 指明，虚成员将在 vtable 中获取新槽；且函数不重写基类方法。
+在 `/clr` 编译中， **`new`** 指示虚拟成员将获取 vtable 中的新槽; 该函数不会重写基类方法。
 
-new 导致 newslot 修饰符被添加到函数的 IL 中。  若要详细了解 newslot，请参阅：
+**`new`** 使 newslot 修饰符添加到函数的 IL。  若要详细了解 newslot，请参阅：
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
@@ -42,7 +42,7 @@ new 导致 newslot 修饰符被添加到函数的 IL 中。  若要详细了解 
 
 ### <a name="examples"></a>示例
 
-下面的示例展示了 new 的效果。
+下面的示例演示了的效果 **`new`** 。
 
 ```cpp
 // newslot.cpp
@@ -105,5 +105,5 @@ E::f() called
 
 ## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [重写说明符](override-specifiers-cpp-component-extensions.md)

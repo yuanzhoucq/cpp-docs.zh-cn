@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 84e6e3a46903a204444df9886556ae2c563304a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e2165a70dec8a3d3918eece6cb78057ac19138
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233036"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex 类（C++ 标准库）
 
@@ -39,25 +39,25 @@ class mutex;
 
 |名称|说明|
 |----------|-----------------|
-|[互斥](#mutex)|构造 `mutex` 对象。|
+|[终端](#mutex)|构造 `mutex` 对象。|
 |[mutex::~mutex 析构函数](#dtormutex_destructor)|释放由 `mutex` 对象使用的任何资源。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
-|[锁](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|
+|[lock](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|
 |[native_handle](#native_handle)|返回表示 mutex 句柄的特定于实现的类型。|
 |[try_lock](#try_lock)|在不阻止的情况下尝试获取 `mutex` 的所有权。|
-|[解 锁](#unlock)|释放 `mutex` 的所有权。|
+|[解锁](#unlock)|释放 `mutex` 的所有权。|
 
 ## <a name="requirements"></a>要求
 
-**标题：**\<互斥>
+**标头：**\<mutex>
 
 **命名空间:** std
 
-## <a name="mutexlock"></a><a name="lock"></a>互斥：：锁定
+## <a name="mutexlock"></a><a name="lock"></a>mutex：： lock
 
 阻止调用线程，直到线程获取 `mutex` 的所有权。
 
@@ -69,7 +69,7 @@ void lock();
 
 如果调用线程已拥有 `mutex`，则该行为不确定。
 
-## <a name="mutexmutex-constructor"></a><a name="mutex"></a>互斥：：互斥构造函数
+## <a name="mutexmutex-constructor"></a><a name="mutex"></a>mutex：： mutex 构造函数
 
 构造未锁定的 `mutex` 对象。
 
@@ -77,7 +77,7 @@ void lock();
 constexpr mutex() noexcept;
 ```
 
-## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>互斥：：=多斥析构函数
+## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>mutex：： ~ mutex 析构函数
 
 释放由 `mutex` 对象使用的任何资源。
 
@@ -89,7 +89,7 @@ constexpr mutex() noexcept;
 
 如果当析构函数运行时对象被锁定，则该行为不确定。
 
-## <a name="mutexnative_handle"></a><a name="native_handle"></a>互斥：：native_handle
+## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex：： native_handle
 
 返回表示 mutex 句柄的特定于实现的类型。 可以特定于实现的方式使用互斥体句柄。
 
@@ -101,7 +101,7 @@ native_handle_type native_handle();
 
 `native_handle_type` 定义为 `Concurrency::critical_section *`，其强制转换为 `void *`。
 
-## <a name="mutextry_lock"></a><a name="try_lock"></a>互斥：：try_lock
+## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex：： try_lock
 
 在不阻止的情况下尝试获取 `mutex` 的所有权。
 
@@ -111,13 +111,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>返回值
 
-**如果**该方法成功获得 的所有权， `mutex`否则，**假**。
+**`true`** 如果该方法成功获取的所有权 `mutex` ，则为; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
 如果调用线程已拥有 `mutex`，则该行为不确定。
 
-## <a name="mutexunlock"></a><a name="unlock"></a>互斥：：解锁
+## <a name="mutexunlock"></a><a name="unlock"></a>mutex：： unlock
 
 释放 `mutex` 的所有权。
 
@@ -131,5 +131,5 @@ void unlock();
 
 ## <a name="see-also"></a>另请参阅
 
-[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[\<互斥>](../standard-library/mutex.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

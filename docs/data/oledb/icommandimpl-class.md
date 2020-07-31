@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212157"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232152"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 类
 
@@ -69,13 +69,13 @@ template <class T, class CommandBase = ICommand>
 class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自 `ICommandImpl`的类。
+派生自的类 `ICommandImpl` 。
 
 *CommandBase*<br/>
-命令接口。 默认为 `ICommand`。
+命令接口。 默认值为 `ICommand`。
 
 ## <a name="requirements"></a>要求
 
@@ -146,36 +146,36 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
    RowsetClass*& pRowsetObj);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *RowsetClass*<br/>
 表示用户的行集类的模板类成员。 通常由向导生成。
 
 *pUnkOuter*<br/>
-中如果行集作为聚合的一部分创建，则为指向控制 `IUnknown` 接口的指针;否则为 null。
+中`IUnknown`如果行集作为聚合的一部分创建，则为指向控制接口的指针; 否则为 null。
 
 *riid*<br/>
-中对应于 `ICommand::Execute`中的*riid* 。
+中对应于中的*riid* `ICommand::Execute` 。
 
 *pParams*<br/>
-[in/out]对应于 `ICommand::Execute`中的*pParams* 。
+[in/out]对应于中的*pParams* `ICommand::Execute` 。
 
 *pcRowsAffected*<br/>
-对应于 `ICommand::Execute`中的*pcRowsAffected* 。
+对应于中的*pcRowsAffected* `ICommand::Execute` 。
 
 *ppRowset*<br/>
-[in/out]对应于 `ICommand::Execute`中的*ppRowset* 。
+[in/out]对应于中的*ppRowset* `ICommand::Execute` 。
 
 *pRowsetObj*<br/>
 弄指向行集对象的指针。 通常不使用此参数，但如果必须在将其传递给 COM 对象之前对行集执行更多工作，则可以使用此参数。 *PRowsetObj*的生存期由*ppRowset*绑定。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。 有关典型值的列表，请参阅 `ICommand::Execute`。
+标准的 HRESULT 值。 `ICommand::Execute`有关典型值的列表，请参阅。
 
 ### <a name="remarks"></a>备注
 
-若要创建多个行集，或提供自己的条件来创建不同的行集，请在 `Execute`中放置对 `CreateRowset` 的不同调用。
+若要创建多个行集，或提供自己的条件来创建不同的行集，请在中对进行不同 `CreateRowset` 的调用 `Execute` 。
 
 请参阅*OLE DB 程序员参考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
@@ -193,7 +193,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
    IUnknown** ppRowset);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
@@ -201,7 +201,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 请求的传出接口将是从该函数创建的行集对象获取的接口。
 
-`Execute` 调用[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 重写默认实现以创建多个行集，或提供自己的条件来创建不同的行集。
+`Execute`调用[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 重写默认实现以创建多个行集，或提供自己的条件来创建不同的行集。
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl：： GetDBSession
 
@@ -214,7 +214,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
    IUnknown** ppSession);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[ICommand：： GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 。
 
@@ -244,7 +244,7 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>备注
 
-可以在 command 类的 `Execute` 方法中检索此变量，并根据需要取消。
+可以在 command 类的方法中检索此变量 `Execute` ，并根据需要取消。
 
 ## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl：： m_bCancelWhenExecuting
 
@@ -258,7 +258,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>备注
 
-默认值为**true** （可取消）。
+默认值为 **`true`** （可取消）。
 
 ## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl：： m_bIsExecuting
 
@@ -272,7 +272,7 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>备注
 
-Command 类的 `Execute` 方法可将此变量设置为**true**。
+`Execute`Command 类的方法可以将此变量设置为 **`true`** 。
 
 ## <a name="see-also"></a>另请参阅
 

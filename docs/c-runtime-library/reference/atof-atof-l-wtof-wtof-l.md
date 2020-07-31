@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909113"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232581"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -94,7 +94,7 @@ double _wtof_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都返回通过将输入字符解释为数字而生成的**双精度**值。 如果输入无法转换为该类型的值，则返回值为 0.0。
+每个函数都返回 **`double`** 通过将输入字符解释为数字而生成的值。 如果输入无法转换为该类型的值，则返回值为 0.0。
 
 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
@@ -127,8 +127,8 @@ double _wtof_l(
 
 |例程|必需的标头|
 |------------------|---------------------|
-|**atof**、 **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
-|**_wtof**， **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**atof**、 **_atof_l**|C： \<math.h> 或 \<stdlib.h> c + +： \<cstdlib> 、 \<stdlib.h> \<cmath> 或\<math.h>|
+|**_wtof**， **_wtof_l**|C： \<stdlib.h> 或 \<wchar.h> c + +： \<cstdlib> 、 \<stdlib.h> 或\<wchar.h>|
 
 ## <a name="example"></a>示例
 
@@ -185,7 +185,7 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

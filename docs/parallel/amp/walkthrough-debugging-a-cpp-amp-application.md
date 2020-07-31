@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404712"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215876"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
 
@@ -215,7 +215,7 @@ ms.locfileid: "86404712"
 
 ## <a name="debugging-the-cpu-code"></a>调试 CPU 代码
 
-在此过程中，您将使用本地 Windows 调试器，以确保此应用程序中的 CPU 代码是正确的。 在此应用程序中，特别值得关注的 CPU 代码段是 `for` 函数中的 `reduction_sum_gpu_kernel` 循环。 它控制运行在 GPU 上的基于树的并行缩减。
+在此过程中，您将使用本地 Windows 调试器，以确保此应用程序中的 CPU 代码是正确的。 此应用程序中的 CPU 代码段特别值得注意的是 **`for`** 函数中的循环 `reduction_sum_gpu_kernel` 。 它控制运行在 GPU 上的基于树的并行缩减。
 
 ### <a name="to-debug-the-cpu-code"></a>调试 CPU 代码
 

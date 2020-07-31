@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
-ms.openlocfilehash: 515e2e151d27dd2eb84fc1dc71b9197b36b14cbb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 48012c0fe31b2017cad29cc98992c9b1121efa7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745039"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221180"
 ---
 # <a name="compiler-error-c2390"></a>编译器错误 C2390
 
@@ -21,7 +21,7 @@ ms.locfileid: "74745039"
 
 可能的解决方法：
 
-- 如果该标识符是一个函数，则使用 `extern` 存储来声明它。
+- 如果该标识符是一个函数，则使用存储来声明它 **`extern`** 。
 
 - 如果标识符是形参或局部变量，则使用自动存储来声明它。
 

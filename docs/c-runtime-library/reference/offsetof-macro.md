@@ -22,12 +22,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951248"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213497"
 ---
 # <a name="offsetof-macro"></a>offsetof 宏
 
@@ -47,7 +47,7 @@ size_t offsetof(
 *structName*<br/>
 父数据结构的名称。
 
-*memberName*<br/>
+*名称*<br/>
 确定其偏移量的父数据结构中成员的名称。
 
 ## <a name="return-value"></a>返回值
@@ -56,7 +56,7 @@ size_t offsetof(
 
 ## <a name="remarks"></a>备注
 
-**Offsetof**宏从由*structName*指定的结构的开头作为**size_t**类型的值返回*值的偏移*量（以字节为单位）。 可以用**struct**关键字指定类型。
+**Offsetof**宏从由*structName*指定的结构的开头作为**size_t**类型的值返回*值的偏移*量（以字节为单位）。 可以用关键字指定类型 **`struct`** 。
 
 > [!NOTE]
 > **offsetof**不是函数，无法使用 C 原型描述。
@@ -67,12 +67,12 @@ size_t offsetof(
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>

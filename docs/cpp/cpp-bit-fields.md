@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170600"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221778"
 ---
 # <a name="c-bit-fields"></a>C++ 位域
 
@@ -46,7 +46,7 @@ struct Date {
 ![Date 对象的内存布局](../cpp/media/vc38uq1.png "Date 对象的内存布局") <br/>
 数据对象的内容布局
 
-请注意，`nYear` 的长度为8位，并将溢出声明类型的字边界（**无符号** **short**）。 因此，它是在新的**无符号** **短**时间开始时开始的。 并不必使所有位域均适合基础类型的对象；根据声明中请求的位数来分配新的存储单元。
+请注意， `nYear` 长度为8位，并将溢出声明类型的字边界 **`unsigned short`** 。 因此，它从新的开头开始 **`unsigned short`** 。 并不必使所有位域均适合基础类型的对象；根据声明中请求的位数来分配新的存储单元。
 
 **Microsoft 专用**
 
@@ -70,12 +70,12 @@ struct Date {
 
 然后，内存布局如下图所示：
 
-![具有零&#45;长度位域的日期对象的布局](../cpp/media/vc38uq2.png "具有零&#45;长度位域的日期对象的布局") <br/>
+![具有零&#45;长度位域的 Date 对象的布局](../cpp/media/vc38uq2.png "具有零&#45;长度位域的 Date 对象的布局") <br/>
 带有零长度位域的数据对象的布局
 
 位域的基础类型必须是整型，如[内置类型](../cpp/fundamental-types-cpp.md)中所述。
 
-如果类型 `const T&` 的引用的初始值设定项是引用 `T`类型位域的左值，则引用不会直接绑定到位域。 相反，引用绑定到一个临时初始化的，以容纳位域的值。
+如果类型引用的初始值设定项 `const T&` 是引用类型的位域的左值 `T` ，则引用不会直接绑定到位域。 相反，引用绑定到一个临时初始化的，以容纳位域的值。
 
 ## <a name="restrictions-on-bit-fields"></a>位域的限制
 
@@ -83,7 +83,7 @@ struct Date {
 
 - 采用位域的地址。
 
-- 使用位域初始化非常**量**引用。
+- **`const`** 使用位域初始化非引用。
 
 ## <a name="see-also"></a>另请参阅
 

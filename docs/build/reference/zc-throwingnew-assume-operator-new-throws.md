@@ -1,5 +1,5 @@
 ---
-title: /Zc:throwingNew （假定运算符新的引发操作）
+title: /Zc:throwingNew（假定运算符执行新的引发操作）
 ms.date: 03/01/2018
 f1_keywords:
 - throwingNew
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7593107a280995145d252efa76e0a88bddbd2275
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315984"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211861"
 ---
-# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew （假定运算符新的引发操作）
+# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew（假定运算符执行新的引发操作）
 
-当 **/Zc:throwingNew**指定选项，编译器优化对调用`operator new`跳过检查返回的 null 指针。 此选项告知编译器假定所有链接的实现`operator new`和自定义分配器符合C++标准和分配失败时引发。 默认情况下，在 Visual Studio 中，编译器将保守地生成 null 检查 (**/Zc:throwingNew-**) 的这些调用，因为用户可以将链接的非引发实现`operator new`或编写自定义分配器例程返回 null 指针。
+指定 **/zc： throwingNew**选项时，编译器会优化对的调用， `operator new` 以便跳过对空指针返回的检查。 此选项告知编译器假定和自定义分配器的所有链接实现都 `operator new` 符合 c + + 标准并引发分配失败。 默认情况下，在 Visual Studio 中，编译器 pessimistically 为这些调用生成 null 检查（**/zc： throwingNew**），因为用户可以与的非引发实现进行链接 `operator new` 或编写返回 null 指针的自定义分配器例程。
 
 ## <a name="syntax"></a>语法
 
-> **/Zc:throwingNew**[**-**]
+> **/Zc： throwingNew**[ **-** ]
 
 ## <a name="remarks"></a>备注
 
-因为 ISO C + + 98，标准已指定，默认值[运算符 new](../../standard-library/new-operators.md#op_new)引发`std::bad_alloc`时内存分配失败。 视觉对象的版本C++最多分配失败时返回 null 指针的 Visual Studio 6.0。 在 Visual Studio 2002 年开始`operator new`符合标准，并在失败时引发。 若要支持使用较旧的分配样式的代码，Visual Studio 提供的实现，可链接`operator new`中失败时返回一个 null 指针的 nothrownew.obj。 默认情况下，编译器还会生成防御性 null 检查，以防止这些较旧样式的分配器而即时故障导致失败。 **/Zc:throwingNew**选项告知编译器将忽略这些 null 检查，假定所有链接内存分配器符合标准。 这不适用于显式非引发`operator new`重载，它使用类型的其他参数来声明`std::nothrow_t`和具有显式`noexcept`规范。
+自 ISO c + + 98 起，标准已指定默认[运算符](../../standard-library/new-operators.md#op_new)在 `std::bad_alloc` 内存分配失败时引发。 Visual C++ 多个版本的 Visual Studio 6.0 在分配失败时返回了 null 指针。 从 Visual Studio 2002 开始， `operator new` 符合标准并在失败时引发。 为了支持使用较旧分配样式的代码，Visual Studio 在 nothrownew.obj 中提供了可链接实现 `operator new` ，该实现在失败时返回 null 指针。 默认情况下，编译器还会生成防御性 null 检查，以防止这些旧样式的分配器导致失败时立即崩溃。 **/Zc： throwingNew**选项告知编译器省略这些 null 检查，假设所有链接内存分配器都符合标准。 这不适用于显式非引发 `operator new` 重载，这些重载通过使用类型的附加参数进行声明， `std::nothrow_t` 并具有显式 **`noexcept`** 规范。
 
-从概念上讲，若要在可用存储中创建一个对象，编译器生成代码，以分配其内存，然后调用其构造函数来初始化内存。 因为通常 MSVC 编译器无法确定是否此代码将链接到不符合要求，非引发的分配器，默认情况下它还会生成 null 检查之前调用的构造函数。 这可以防止 null 指针取消引用在构造函数调用中，如果非引发分配失败。 在大多数情况下，这些检查都是不必要的因为默认`operator new`分配器引发而不是返回 null 指针。 检查还具有令人遗憾的副作用。 膨胀的代码大小，从而它们、 它们填满分支预测，和他们会禁止 devirtualization 或通过从已初始化的对象的 const 传播等其他有用的编译器优化。 仅对支持链接到的代码存在支票*nothrownew.obj*具有自定义不符合要求或`operator new`实现。 如果不使用非一致性`operator new`，我们建议你使用 **/Zc:throwingNew**来优化您的代码。
+从概念上讲，若要在免费存储中创建对象，编译器将生成代码以分配其内存，然后调用其构造函数来初始化内存。 由于 MSVC 编译器通常无法判断此代码是否将链接到不一致的非引发分配器，因此默认情况下，它还会在调用构造函数之前生成 null 检查。 如果非引发分配失败，此操作可防止在构造函数调用中出现空指针取消引用。 在大多数情况下，不需要进行这些检查，因为默认 `operator new` 分配器会引发，而不是返回 null 指针。 检查也具有不幸的副作用。 它们会使代码大小膨胀，它们会使分支预测器扩散，并阻止其他有用的编译器优化，如 devirtualization 或从已初始化对象中进行的 const 传播。 这些检查只是为了支持链接到*nothrownew.obj*的代码或具有自定义的非一致性实现的代码 `operator new` 。 如果不使用不一致 `operator new` ，建议使用 **/Zc： throwingNew**优化代码。
 
-**/Zc:throwingNew**选项默认情况下处于关闭状态，不受[触发的](permissive-standards-conformance.md)选项。
+默认情况下， **/zc： throwingNew**选项处于关闭状态，并且不受[/permissive-](permissive-standards-conformance.md)选项的影响。
 
-如果使用链接时间代码生成 (LTCG) 进行编译，不需要指定 **/Zc:throwingNew**。 如果使用 LTCG 编译代码时，编译器可以检测到默认情况下，符合`operator new`使用实现。 如果是这样，编译器将省略 null 检查自动。 链接器寻找 **/ThrowingNew**标志是为了告知如果的实现`operator new`为一致性。 可以通过在你自定义的运算符的新实现的源中包含此指令指定此链接器标志：
+如果使用链接时间代码生成（LTCG）进行编译，则无需指定 **/zc： throwingNew**。 使用 LTCG 编译代码时，编译器可以检测是否使用默认的一致 `operator new` 实现。 如果是这样，编译器将自动省略 null 检查。 链接器将查找 **/ThrowingNew**标志，以判断的实现 `operator new` 是否一致。 可以通过在自定义运算符新实现的源中包含此指令，为链接器指定此标志：
 
 ```cpp
 #pragma comment(linker, "/ThrowingNew")
@@ -44,19 +44,19 @@ ms.locfileid: "62315984"
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 从**配置**下拉列表菜单中，选择**所有配置**。
+1. 从 "**配置**" 下拉菜单中，选择 "**所有配置**"。
 
-1. 选择**配置属性** > **C /C++** > **命令行**属性页。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 修改**其他选项**属性以包含 **/Zc:throwingNew**或 **/Zc:throwingNew-** ，然后选择**确定**。
+1. 修改 "**附加选项**" 属性以包括 **/zc： throwingNew**或 **/zc： ThrowingNew** ，然后选择 **"确定"**。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
 [/Zc（一致性）](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [异常规范 (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[terminate (exception)](../../standard-library/exception-functions.md#terminate)<br/>
+[终止（例外）](../../standard-library/exception-functions.md#terminate)<br/>

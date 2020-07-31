@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: dc9bb1c3edf9187b1e5dc1e924298b9dbb02e2ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376711"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230241"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution 类
 
@@ -72,21 +72,21 @@ public:
 ### <a name="parameters"></a>参数
 
 *IntType*\
-整数结果类型，默认值为**int**。有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
+整数结果类型，默认为 **`int`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-*乌尔格*\
-统一的随机数生成器引擎。 有关可能的类型，请参阅[\<随机>](../standard-library/random.md)。
+*URNG*\
+统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>备注
 
-类模板描述生成用户指定积分类型的值的分布，或者如果没有提供，则类型**int，** 根据二元分布离散概率函数进行分布。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的整型值的分布，如果未提供任何值，则 **`int`** 根据二项式分布离散概率函数进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-属性成员`t()`并`p()`分别返回当前存储的分布参数值*t*和*p。*
+属性成员 `t()` 和 `p()` 分别返回当前存储的分布参数值*t*和*p* 。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -96,7 +96,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-有关分发类及其成员的详细信息，请参阅[\<随机>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
 有关二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[二项式分步](https://go.microsoft.com/fwlink/p/?linkid=398469)。
 
@@ -227,11 +227,11 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：**\<random>
 
 **命名空间:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution：binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution：： binomial_distribution
 
 构造分布。
 
@@ -242,24 +242,24 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*t*\
+*关心*\
 `t` 分布参数。
 
-*P*\
+*h-p*\
 `p` 分布参数。
 
-*帕尔姆*\
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
 **前置条件：** `0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 
-第一个构造函数构造一个对象的存储*p*值包含值*p，* 其存储*t*值包含值*t*。
+第一个构造函数将构造一个对象，该对象的存储的*p*值保留值*p* ，并且存储的*t*值保留值*t*。
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution：:p阿拉姆型
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution：:p aram_type
 
 存储分布的所有参数。
 
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*t*\
+*关心*\
 `t` 分布参数。
 
-*P*\
+*h-p*\
 `p` 分布参数。
 
-*对*\
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
@@ -294,4 +294,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另请参阅
 
-[\<随机>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

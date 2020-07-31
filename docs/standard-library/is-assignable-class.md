@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-ms.openlocfilehash: 33b0ce6112119c935ff70e5d619b284acc6ee8c2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2137f6bfb63e93da2c1367a21f608c113e80d196
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456672"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215720"
 ---
-# <a name="isassignable-class"></a>is_assignable 类
+# <a name="is_assignable-class"></a>is_assignable 类
 
 测试 `From` 类型的值是否可以分配给 `To` 类型。
 
@@ -34,14 +34,14 @@ struct is_assignable;
 
 ## <a name="remarks"></a>备注
 
-未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 和必须是完整的类型、void 或未知绑定的数组。  `From` `To`
+未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 `From`和 `To` 必须是完整类型、 **`void`** 或未知绑定的数组。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

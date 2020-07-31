@@ -31,14 +31,14 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 59346dfded63aec315304f76c9bed753a4db1224
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682444"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217462"
 ---
-# <a name="sharedptr-class"></a>shared_ptr 类
+# <a name="shared_ptr-class"></a>shared_ptr 类
 
 将引用计数智能指针回绕在动态分配的对象周围。
 
@@ -53,11 +53,11 @@ class shared_ptr;
 
 `shared_ptr`类描述使用引用计数来管理资源的对象。 `shared_ptr` 对象有效保留一个指向其拥有的资源的指针或保留一个 null 指针。 资源可由多个 `shared_ptr` 对象拥有；当拥有特定资源的最后一个 `shared_ptr` 对象被销毁后，资源将释放。
 
-重新`shared_ptr`分配或重置资源时, 停止拥有该资源。
+`shared_ptr`重新分配或重置资源时，停止拥有该资源。
 
 模板参数 `T` 可能是一个不完整的类型，针对某些成员函数的情况除外。
 
-当从类型 `shared_ptr<T>` 的资源指针或 `G*` 中构造 `shared_ptr<G>` 对象时，指针类型 `G*` 必须可转换为 `T*`。 如果无法转换, 则代码将不会编译。 例如:
+当从类型 `shared_ptr<T>` 的资源指针或 `G*` 中构造 `shared_ptr<G>` 对象时，指针类型 `G*` 必须可转换为 `T*`。 如果无法转换，则代码将不会编译。 例如：
 
 ```cpp
 #include <memory>
@@ -81,7 +81,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 - 如果已从拥有该资源的 `shared_ptr` 对象构造它，
 
-- 如果它是从指向该资源的[weak_ptr](weak-ptr-class.md)对象构造的, 则为; 否则为
+- 如果它是从指向该资源的[weak_ptr](weak-ptr-class.md)对象构造的，或
 
 - 如果已使用 [shared_ptr::operator=](#op_eq) 或通过调用成员函数 [shared_ptr::reset](#reset) 将该资源的所有权分配给它。
 
@@ -107,21 +107,21 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 无参数 - 生成的对象是一个空 `shared_ptr` 对象或者一个空 `weak_ptr` 对象。
 
-`ptr` -- 一个指向要管理的资源的类型 `Other*` 的指针。 `T` 必须是完整类型。 如果函数失败 (因为无法分配控制块), 则它将计算表达式`delete ptr`。
+`ptr` -- 一个指向要管理的资源的类型 `Other*` 的指针。 `T` 必须是完整类型。 如果函数失败（因为无法分配控制块），则它将计算表达式 `delete ptr` 。
 
-`ptr, deleter` - 一个指向要管理的资源的类型 `Other*` 的指针和一个针对该资源的删除器。 如果函数失败 (因为无法分配控制块), 则它将调用`deleter(ptr)`, 该函数必须进行明确定义。
+`ptr, deleter` - 一个指向要管理的资源的类型 `Other*` 的指针和一个针对该资源的删除器。 如果函数失败（因为无法分配控制块），则它将调用 `deleter(ptr)` ，该函数必须进行明确定义。
 
-`ptr, deleter, alloc` - 一个指向要管理的资源的类型 `Other*` 的指针、一个针对资源的删除器和一个用于管理必须分配和释放的任何存储的分配器。 如果函数失败 (因为无法分配控制块), 则它将调用`deleter(ptr)`, 该函数必须进行明确定义。
+`ptr, deleter, alloc` - 一个指向要管理的资源的类型 `Other*` 的指针、一个针对资源的删除器和一个用于管理必须分配和释放的任何存储的分配器。 如果函数失败（因为无法分配控制块），则它将调用 `deleter(ptr)` ，该函数必须进行明确定义。
 
 `sp` - 一个拥有要管理的资源的 `shared_ptr<Other>` 对象。
 
 `wp` - 一个指向要管理的资源的 `weak_ptr<Other>` 对象。
 
-`ap` - 一个拥有指向要管理的资源的指针的 `auto_ptr<Other>` 对象。 如果函数成功, 则调用`ap.release()`; 否则, 它将保持`ap`不变。
+`ap` - 一个拥有指向要管理的资源的指针的 `auto_ptr<Other>` 对象。 如果函数成功，则调用 `ap.release()` ; 否则，它将保持 `ap` 不变。
 
 在所有情况下，指针类型 `Other*` 必须可转换为 `T*`。
 
-## <a name="thread-safety"></a>线程安全
+## <a name="thread-safety"></a>线程安全性
 
 多个线程可以同时读取和写入不同的 `shared_ptr` 对象，即使这些对象是共享所有权的副本。
 
@@ -132,7 +132,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 | **构造函数** | |
 |[shared_ptr](#shared_ptr)|构造一个 `shared_ptr`。|
 |[~ shared_ptr](#dtorshared_ptr)|销毁 `shared_ptr`。|
-| **Typedefs** | |
+| **Typedef** | |
 |[element_type](#element_type)|元素的类型。|
 |[weak_type](#weak_type)|指向元素的弱指针的类型。|
 | **成员函数** | |
@@ -144,11 +144,11 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |[use_count](#use_count)|计算资源所有者的数目。|
 | **运算符** | |
 |[operator bool](#op_bool)|测试拥有的资源是否存在。|
-|[operator*](#op_star)|获取指定的值。|
-|[operator=](#op_eq)|替换拥有的资源。|
+|[操作员](#op_star)|获取指定的值。|
+|[operator =](#op_eq)|替换拥有的资源。|
 |[操作员&gt;](#op_arrow)|获取指向指定的值的指针。|
 
-## <a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a>element_type
 
 元素的类型。
 
@@ -159,7 +159,7 @@ using element_type = remove_extent_t<T>; // C++17
 
 ### <a name="remarks"></a>备注
 
-该`element_type`类型是模板参数`T`的同义词。
+该 `element_type` 类型是模板参数的同义词 `T` 。
 
 ### <a name="example"></a>示例
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a>获取
+## <a name="get"></a><a name="get"></a>获取
 
 获取拥有的资源的地址。
 
@@ -194,7 +194,7 @@ element_type* get() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回已有资源的地址。 如果该对象没有资源, 则返回0。
+此成员函数返回已有资源的地址。 如果该对象没有资源，则返回0。
 
 ### <a name="example"></a>示例
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>operator bool
+## <a name="operator-bool"></a><a name="op_bool"></a>operator bool
 
 测试拥有的资源是否存在。
 
@@ -232,7 +232,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-如果`get() != nullptr`为, 则运算符返回值 true, 否则返回**false**。
+如果为，则运算符将返回值 **`true`** `get() != nullptr` ，否则返回 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="op_star"></a>操作员
+## <a name="operator"></a><a name="op_star"></a>操作员
 
 获取指定的值。
 
@@ -271,7 +271,7 @@ T& operator*() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-间接运算符返回 `*get()`。 因此存储指针不能为 null。
+间接运算符返回 `*get()`。 因此，存储的指针不能为空。
 
 ### <a name="example"></a>示例
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 替换拥有的资源。
 
@@ -323,20 +323,20 @@ shared_ptr& operator=(unique_ptr<Other, Deleter>&& up);
 要复制或移动的共享指针。
 
 *ap*\
-要移动的自动指针。 `auto_ptr`重载在 c + + 11 中已弃用, 并已在 c + + 17 中删除。
+要移动的自动指针。 `auto_ptr`重载在 c + + 11 中已弃用，并已在 c + + 17 中删除。
 
 *up*\
-指向要采用所有权的对象的唯一指针。 调用后,*不拥有任何*对象。
+指向要采用所有权的对象的唯一指针。 调用后，*不拥有任何*对象。
 
 *以外*\
 *Sp*、 *ap*或*up*指向的对象的类型。
 
 *删除器*\
-所拥有的对象的删除器的类型, 存储在以后删除对象时。
+所拥有的对象的删除器的类型，存储在以后删除对象时。
 
 ### <a name="remarks"></a>备注
 
-这些运算符均会递减 `*this` 当前拥有资源的引用计数，并将操作数序列命名的资源所有权分配给 `*this`。 如果引用计数降至零，则释放资源。 如果运算符失败, 则它将`*this`保持不变。
+这些运算符都递减当前拥有的资源的引用计数 **`*this`** ，并将由操作数序列命名的资源的所有权分配给 **`*this`** 。 如果引用计数降至零，则释放资源。 如果运算符失败，则它将保持 **`*this`** 不变。
 
 ### <a name="example"></a>示例
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="op_arrow"></a>operator->
+## <a name="operator-"></a><a name="op_arrow"></a>operator->
 
 获取指向指定的值的指针。
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a>owner_before
 
 如果此 `shared_ptr` 排在提供的指针之前（或小于该指针），则返回 true。
 
@@ -419,13 +419,13 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 ### <a name="parameters"></a>参数
 
 *ptr*\
-`shared_ptr` 对`weak_ptr`或的左值引用。
+对或的左值引用 `shared_ptr` `weak_ptr` 。
 
 ### <a name="remarks"></a>备注
 
-如果`*this`在之前`ptr`排序, 则模板成员函数返回 true。
+如果在之前排序，则模板成员函数返回 true **`*this`** `ptr` 。
 
-## <a name="reset"></a>&
+## <a name="reset"></a><a name="reset"></a>&
 
 替换拥有的资源。
 
@@ -469,7 +469,7 @@ void reset(
 
 ### <a name="remarks"></a>备注
 
-这些运算符均会递减 `*this` 当前拥有资源的引用计数，并将操作数序列命名的资源所有权分配给 `*this`。 如果引用计数降至零，则释放资源。 如果运算符失败, 则它将`*this`保持不变。
+这些运算符都递减当前拥有的资源的引用计数 **`*this`** ，并将由操作数序列命名的资源的所有权分配给 **`*this`** 。 如果引用计数降至零，则释放资源。 如果运算符失败，则它将保持 **`*this`** 不变。
 
 ### <a name="example"></a>示例
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
 
 构造一个 `shared_ptr`。
 
@@ -621,7 +621,7 @@ shared_ptr(
 
 ### <a name="remarks"></a>备注
 
-每个构造函数都将构造一个对象，该对象拥有由操作数序列命名的资源。 如果`shared_ptr(const weak_ptr<Other>& wp)` 为`wp.expired()`, 则构造函数将引发[bad_weak_ptr](bad-weak-ptr-class.md)类型的异常对象。
+每个构造函数都将构造一个对象，该对象拥有由操作数序列命名的资源。 如果为，则构造函数将 `shared_ptr(const weak_ptr<Other>& wp)` 引发类型[bad_weak_ptr](bad-weak-ptr-class.md)的异常对象 `wp.expired()` 。
 
 ### <a name="example"></a>示例
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
 
 销毁 `shared_ptr`。
 
@@ -685,7 +685,7 @@ int main()
 
 ### <a name="remarks"></a>备注
 
-析构函数递减 `*this` 当前拥有的资源的引用计数。 如果引用计数降至零，则释放资源。
+析构函数递减当前拥有的资源的引用计数 **`*this`** 。 如果引用计数降至零，则释放资源。
 
 ### <a name="example"></a>示例
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a>购
 
 交换两个 `shared_ptr` 对象。
 
@@ -737,7 +737,7 @@ void swap(shared_ptr& sp) noexcept;
 
 ### <a name="remarks"></a>备注
 
-成员函数会使最初拥有的资源成为`*this`由*sp*拥有的资源, 而该资源最初由*sp*拥有, 而`*this`该资源最初由拥有。 此函数不会更改两个资源的引用计数，也不会引发任何异常。
+成员函数会使最初拥有的资源成为由 **`*this`** *sp*拥有的资源，而该资源最初由*sp*拥有，而该资源最初由拥有 **`*this`** 。 此函数不会更改两个资源的引用计数，也不会引发任何异常。
 
 ### <a name="example"></a>示例
 
@@ -783,9 +783,9 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a>针对
+## <a name="unique"></a><a name="unique"></a>针对
 
-测试拥有的资源是否是唯一的。 此函数已在 c + + 17 中弃用, 并已在 c + + 20 中删除。
+测试拥有的资源是否是唯一的。 此函数已在 c + + 17 中弃用，并已在 c + + 20 中删除。
 
 ```cpp
 bool unique() const noexcept;
@@ -793,7 +793,7 @@ bool unique() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-如果没有其他`shared_ptr`对象拥有由`*this`拥有的资源, 则成员函数返回**true** ; 否则返回**false**。
+**`true`** 如果没有其他 `shared_ptr` 对象拥有由拥有的资源，则成员函数将返回 **`*this`** ; 否则返回 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a>use_count
 
 计算资源所有者的数目。
 
@@ -832,7 +832,7 @@ long use_count() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回 `shared_ptr` 对象的数量，该对象拥有为 `*this` 所有的资源。
+该成员函数将返回拥有 `shared_ptr` 由拥有的资源的对象的数目 **`*this`** 。
 
 ### <a name="example"></a>示例
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a>weak_type
 
 指向元素的弱指针的类型。
 
@@ -873,9 +873,9 @@ using weak_type = weak_ptr<T>; // C++17
 
 `weak_type`定义是在 c + + 17 中添加的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[头文件引用](cpp-standard-library-header-files.md)\
+[标头文件引用](cpp-standard-library-header-files.md)\
 [\<memory>](memory.md)\
 [unique_ptr](unique-ptr-class.md)\
 [weak_ptr 类](weak-ptr-class.md)

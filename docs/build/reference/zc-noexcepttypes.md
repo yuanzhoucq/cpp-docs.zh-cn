@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: 0f833209938ccc09cbc37235788b6f719d4d12d4
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 09817372e818a05c389a083aac5f04e03b1ab0e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218944"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes（C++17 noexcept 规则）
 
-C + + 17 标准 `throw()` 为创建别名 `noexcept` ，删除 `throw(` *`type-list`* `)` 和 `throw(...)` ，并允许特定类型包括 `noexcept` 。 此更改可能会导致与 c + + 14 或更早版本的代码中出现大量源兼容性问题。 **`/Zc:noexceptTypes`** 选项指定与 c + + 17 标准的一致性。 **`/Zc:noexceptTypes-`** 在 c + + 17 模式下编译代码时，允许 c + + 14 及更早的行为。
+C + + 17 标准 `throw()` 为创建别名 **`noexcept`** ，删除 `throw(` *`type-list`* `)` 和 `throw(...)` ，并允许特定类型包括 **`noexcept`** 。 此更改可能会导致与 c + + 14 或更早版本的代码中出现大量源兼容性问题。 **`/Zc:noexceptTypes`** 选项指定与 c + + 17 标准的一致性。 **`/Zc:noexceptTypes-`** 在 c + + 17 模式下编译代码时，允许 c + + 14 及更早的行为。
 
 ## <a name="syntax"></a>语法
 
 > **`/Zc:noexceptTypes`**\[**`-`**]
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 如果 **`/Zc:noexceptTypes`** 指定了选项，则编译器将遵循 c + + 17 标准并将视为的 [**`throw()`**](../../cpp/exception-specifications-throw-cpp.md) 别名 [**`noexcept`**](../../cpp/noexcept-cpp.md) ，删除 `throw(` *`type-list`* `)` 和 `throw(...)` ，并允许某些类型包括 **`noexcept`** 。 **`/Zc:noexceptTypes`** 仅当启用了或时，选项才可用 [**`/std:c++17`**](std-specify-language-standard-version.md) [**`/std:c++latest`**](std-specify-language-standard-version.md) 。 **`/Zc:noexceptTypes`** 默认情况下，启用以符合 ISO c + + 17 标准。 此 [**`/permissive-`**](permissive-standards-conformance.md) 选项不会影响 **`/Zc:noexceptTypes`** 。 通过指定 **`/Zc:noexceptTypes-`** 以恢复到 **`noexcept`** 指定或时的 c + + 14 行为，可关闭此选项 **`/std:c++17`** **`/std:c++latest`** 。
 

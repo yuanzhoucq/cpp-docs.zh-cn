@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909264"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189436"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -77,13 +77,13 @@ long double asin( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用**asin**的**重载**和**长****双精度**值。 在 C 程序中， **asin**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此可以调用**asin**的重载 **`float`** 和 **`long double`** 值。 在 C 程序中， **asin**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头 (C)|必需的标头 (C++)|
+|例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
 

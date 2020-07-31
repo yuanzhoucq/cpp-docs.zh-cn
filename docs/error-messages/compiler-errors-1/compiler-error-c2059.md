@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: f91eb428fcb49c81187788730128545916955790
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 52b389806f5bacac78750bc745cd77699eb59735
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212873"
 ---
 # <a name="compiler-error-c2059"></a>编译器错误 C2059
 
@@ -19,7 +19,7 @@ ms.locfileid: "77127655"
 
 令牌导致语法错误。
 
-下面的示例为声明 `j`的行生成错误消息。
+下面的示例为声明的行生成错误消息 `j` 。
 
 ```cpp
 // C2059e.cpp
@@ -31,9 +31,9 @@ ms.locfileid: "77127655"
 
 若要确定错误的原因，不仅要检查错误消息中列出的行，还应检查它上面的行。 如果检查行不产生关于问题的线索，请尝试注释掉错误消息中列出的行，并且可能会在其上方显示多行。
 
-如果错误消息出现在紧跟在 `typedef` 变量后面的符号上，请确保在源代码中定义了该变量。
+如果错误消息出现在紧跟变量后面的符号上 **`typedef`** ，请确保在源代码中定义了该变量。
 
-当预处理器符号名称被重新用作标识符时，将引发 C2059。 在下面的示例中，编译器将 `DIGITS.ONE` 视为第1号，这对于枚举元素名称无效：
+当预处理器符号名称被重新用作标识符时，将引发 C2059。 在下面的示例中，编译器将视为 `DIGITS.ONE` 数字1，这对于作为枚举元素名称无效：
 
 ```cpp
 #define ONE 1
@@ -44,7 +44,7 @@ enum class DIGITS {
 };
 ```
 
-如果符号的计算结果为 nothing （当使用 **/d**_符号_ **=** 进行编译时可能出现此情况），则可能会出现 C2059。
+如果符号的计算结果为 nothing （当使用 **/d**_符号_进行编译时可能出现这种情况），则可能会出现 C2059 **=** 。
 
 ```cpp
 // C2059a.cpp
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-如果可限定名称的运算符（`::`、`->`和 `.`）后面必须跟关键字 `template`，则可能会出现 C2059，如以下示例中所示：
+如果可限定名称（ `::` 、 `->` 和）的运算符 `.` 必须后跟关键字，则可能出现 C2059 **`template`** ，如以下示例中所示：
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-默认情况下，C++ 会假定 `AY::Rebind` 不是模板；因此，后面的 `<` 解释为小于号。  必须显式告知编译器 `Rebind` 是模板，以便其正确分析尖括号。 若要更正此错误，请在依赖类型的名称上使用 `template` 关键字，如下所示：
+默认情况下，C++ 会假定 `AY::Rebind` 不是模板；因此，后面的 `<` 解释为小于号。  必须显式告知编译器 `Rebind` 是模板，以便其正确分析尖括号。 若要更正此错误，请 **`template`** 在依赖类型的名称上使用关键字，如下所示：
 
 ```cpp
 template <typename T> struct Allocator {

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911821"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233920"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -85,7 +85,7 @@ int _timespec64_get(
 
 **Microsoft 专用**
 
-这些函数仅支持作为*基值* **TIME_UTC** 。 这会将*time_spec*值设置为自1970年1月1日午夜（1970，协调世界时（UTC）午夜）以来的秒数和纳秒数。 在**结构** **_timespec32**中， **tv_sec**为 **__time32_t**值。 在**结构** **_timespec64**中， **tv_sec**为 **__time64_t**值。 在**struct** **timespec**中， **tv_sec**是**time_t**类型，其长度为32位或64位，具体取决于是否定义预处理器宏 _USE_32BIT_TIME_T。 **Timespec_get**函数是一个内联函数，如果定义 _USE_32BIT_TIME_T，则调用 **_timespec32_get** ;否则，它会调用 **_timespec64_get**。
+这些函数仅支持作为*基值* **TIME_UTC** 。 这会将*time_spec*值设置为自1970年1月1日午夜（1970，协调世界时（UTC）午夜）以来的秒数和纳秒数。 在 **`struct`** **_timespec32**中， **tv_sec**为 **__time32_t**值。 在 **`struct`** **_timespec64**中， **tv_sec**为 **__time64_t**值。 在 **`struct`** **timespec**中， **tv_sec**是**time_t**类型，其长度为32位或64位，具体取决于是否定义预处理器宏 _USE_32BIT_TIME_T。 **Timespec_get**函数是一个内联函数，如果定义 _USE_32BIT_TIME_T，则调用 **_timespec32_get** ;否则，它会调用 **_timespec64_get**。
 
 **结束 Microsoft 专用**
 
@@ -93,9 +93,9 @@ int _timespec64_get(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**timespec_get**、 **_timespec32_get** **_timespec64_get**|C: \<time.h>、C++: \<ctime> 或 \<time.h>|
+|**timespec_get**、 **_timespec32_get** **_timespec64_get**|C： \<time.h> ，c + +： \<ctime> 或\<time.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -104,7 +104,7 @@ int _timespec64_get(
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime、_wasctime](asctime-wasctime.md)<br/>
 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>
-[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>

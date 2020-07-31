@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: befefba7cc76f24f6dddd58d0c5f040bfd205508
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182959"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216591"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference 类
 
@@ -30,13 +30,13 @@ class WeakReference
 
 |成员|描述|
 |------------|-----------------|
-|[Weakreference:: Weakreference](#ctor)|初始化 WeakReference 类的新实例。|
+|[WeakReference：： WeakReference](#ctor)|初始化 WeakReference 类的新实例。|
 
 ### <a name="methods"></a>方法
 
 |成员|描述|
 |------------|-----------------|
-|[WeakReference::Resolve](#resolve)|如果对象不再存在，则返回基础 ref 类的句柄或 nullptr。|
+|[WeakReference：： Resolve](#resolve)|如果对象不再存在，则返回基础 ref 类的句柄或 nullptr。|
 
 ### <a name="operators"></a>运算符
 
@@ -49,7 +49,7 @@ class WeakReference
 
 WeakReference 类本身不是 ref 类，因此不从 Platform::Object^ 继承，也不能在公共方法的签名中使用。
 
-## <a name="operator-assign"></a> WeakReference::operator =
+## <a name="weakreferenceoperator"></a><a name="operator-assign"></a>WeakReference：： operator =
 
 给 WeakReference 赋值。
 
@@ -64,9 +64,9 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 
 ### <a name="remarks"></a>备注
 
-使用上面列表中的最后一个重载，可以向 WeakReference 变量分配 ref 类。 在这种情况下，ref 类是向下转换到[platform:: object](../cppcx/platform-object-class.md)^。 您还原为原始类型更高版本通过指定为中类型形参的实参[weakreference:: Resolve\<T >](#resolve)成员函数。
+使用上面列表中的最后一个重载，可以向 WeakReference 变量分配 ref 类。 在这种情况下，ref 类向[Platform：： Object](../cppcx/platform-object-class.md)^ 向下转换。 稍后可通过将原始类型指定为[WeakReference：： Resolve \<T> ](#resolve)成员函数中类型参数的参数来还原原始类型。
 
-## <a name="booltype"></a> WeakReference::operator BoolType
+## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a>WeakReference：： operator BoolType
 
 实现 WeakReference 类的安全 bool 模式。 不在你的代码中显式调用。
 
@@ -76,9 +76,9 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 BoolType BoolType();
 ```
 
-## <a name="resolve"></a> Weakreference:: Resolve 方法 （平台命名空间）
+## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a>WeakReference：： Resolve 方法（平台命名空间）
 
-如果对象不再存在，则返回原始 ref 类的句柄或 `nullptr`。
+返回原始 ref 类的句柄， **`nullptr`** 如果对象不再存在，则返回。
 
 ### <a name="syntax"></a>语法
 
@@ -108,7 +108,7 @@ if (bar != nullptr)
 
 注意类型参数是 T 而非 T^。
 
-## <a name="ctor"></a> Weakreference:: Weakreference 构造函数
+## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a>WeakReference：： WeakReference 构造函数
 
 提供构造 WeakReference 的各种方式。
 
@@ -130,6 +130,6 @@ WeakReference wr(mc);
 MyClass^ copy2 = wr.Resolve<MyClass>();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

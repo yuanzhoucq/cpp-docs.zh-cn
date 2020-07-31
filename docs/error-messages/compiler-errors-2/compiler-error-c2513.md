@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 96f2ccc29eed5c1fa4e29f69d18ae6503417f211
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746521"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212717"
 ---
 # <a name="compiler-error-c2513"></a>编译器错误 C2513
 
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-另一种方法是删除 `typedef` 来使用聚合初始值设定项列表定义变量，但不建议这样做，因为它将创建与类型同名的变量并隐藏类型名称。
+另一种方法是删除 **`typedef`** 以使用聚合初始值设定项列表定义变量，但不建议这样做，因为它将创建一个与类型同名的变量并隐藏类型名称。

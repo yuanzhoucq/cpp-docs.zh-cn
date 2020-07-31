@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 89b28ae396322859596b99ba56a28375e9c9d6d5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742114"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232022"
 ---
 # <a name="compiler-error-c3020"></a>编译器错误 C3020
 
 "var"： OpenMP "for" 循环的索引变量不能在循环体中修改
 
-OpenMP `for` 循环可能不会修改 `for` 循环体中的索引（loop 计数器）。
+OpenMP **`for`** 循环不能修改循环体中的索引（loop 计数器） **`for`** 。
 
 下面的示例生成 C3020：
 

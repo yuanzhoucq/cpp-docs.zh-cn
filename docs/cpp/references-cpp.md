@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 8a771b8bfc067966c3c054700538ebf180a5eb23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857328"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233608"
 ---
 # <a name="references-c"></a>引用 (C++)
 
-与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用：引用命名变量的 lvalue 引用和引用[临时对象](../cpp/temporary-objects.md)的 rvalue 引用。 & 运算符表示左值引用，& & 运算符表示右值引用，或基于上下文的通用引用（rvalue 或左值）。
+与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用：引用命名变量的 lvalue 引用和引用[临时对象](../cpp/temporary-objects.md)的 rvalue 引用。 & 运算符表示左值引用，而 && 运算符表示右值引用或通用引用（rvalue 或左值），具体取决于上下文。
 
 可以通过以下语法声明引用：
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[ **=** *expression*] **;**
+> \[*存储类说明符*]\[ *cv 限定符*]*类型说明符* \[ *ms 修饰符*]*声明符* \[ **=** *表达式*]**;**
 
 可以使用指定引用的任何有效声明符。 除非引用是对函数或数组类型的引用，否则应用以下简化语法：
 
-> \[*存储类说明符*] \[*cv 限定符*]*类型说明符*\[ **&** 或 **&&** ] \[*cv 限定符*]*标识符*\[ **=** *表达式*] **;**
+> \[*存储类说明符*]\[ *cv 限定符*]*类型说明符* \[ **&** 或 **&&** ] \[ *cv 限定符*]*标识符* \[ **=** *表达式*]**;**
 
 使用以下序列声明引用：
 
@@ -34,7 +34,7 @@ ms.locfileid: "74857328"
 
    - 可选存储类说明符。
 
-   - 可选**const**和/或**volatile**限定符。
+   - 可选 **`const`** 和/或 **`volatile`** 限定符。
 
    - 类型说明符：类型的名称。
 
@@ -44,7 +44,7 @@ ms.locfileid: "74857328"
 
    - **&** 运算符或 **&&** 运算符。
 
-   - 可选**const**和/或**volatile**限定符。
+   - 可选 **`const`** 和/或 **`volatile`** 限定符。
 
    - 标识符。
 

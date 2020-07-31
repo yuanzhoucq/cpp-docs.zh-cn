@@ -36,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912869"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189280"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -65,7 +65,7 @@ wint_t fgetwc(
 
 ## <a name="return-value"></a>返回值
 
-**fgetc**返回作为**int**读取的字符，或返回**EOF**以指示错误或文件尾。 **fgetwc**以[wint_t](../../c-runtime-library/standard-types.md)的形式返回与读取字符对应的宽字符，或者返回**WEOF**以指示错误或文件尾。 对于这两个函数，请使用**feof**或**ferror**来区分错误和文件尾条件。 如果发生读取错误，则会设置流的错误指示器。 如果*stream*为**NULL**，则**fgetc**和**fgetwc**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EOF**。
+**fgetc**返回作为读取的字符， **`int`** 或返回**EOF**以指示错误或文件尾。 **fgetwc**以[wint_t](../../c-runtime-library/standard-types.md)的形式返回与读取字符对应的宽字符，或者返回**WEOF**以指示错误或文件尾。 对于这两个函数，请使用**feof**或**ferror**来区分错误和文件尾条件。 如果发生读取错误，则会设置流的错误指示器。 如果*stream*为**NULL**，则**fgetc**和**fgetwc**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EOF**。
 
 ## <a name="remarks"></a>备注
 

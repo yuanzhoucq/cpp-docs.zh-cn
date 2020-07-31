@@ -5,22 +5,22 @@ f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397583"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220413"
 ---
 # <a name="compiler-error-c2131"></a>编译器错误 C2131
 
-> 表达式计算结果不为常量
+> 表达式的计算结果不是常数
 
-一个表达式声明为**const**或**constexpr**在编译时的未计算结果为常量。 编译器必须能够确定在它使用的点表达式的值。
+**`const`** **`constexpr`** 在编译时声明为或未计算为常量的表达式。 编译器必须能够确定表达式在使用时的值。
 
 ## <a name="example"></a>示例
 
-此示例演示一种方法会导致错误 C2131，以及如何修复此错误。
+此示例演示了一种导致错误 C2131 的方式，以及如何修复该错误。
 
 ```cpp
 // c2131.cpp
@@ -42,7 +42,7 @@ c2131.cpp(7): note: failure was caused by non-constant arguments or reference to
 c2131.cpp(7): note: see usage of 'array_size'
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [const](../../cpp/const-cpp.md)<br/>
 [constexpr](../../cpp/constexpr-cpp.md)<br/>

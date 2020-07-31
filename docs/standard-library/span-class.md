@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813504"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217449"
 ---
 # <a name="span-class-c-standard-library"></a>span 类（c + + 标准库）
 
@@ -86,8 +86,8 @@ class span;
 
 | **类型定义** | **说明** |
 |-|-|
-| [const_pointer](#pointer) | 指向元素的指针的类型 `const` 。 |
-| [const_reference](#reference) | 对元素的引用的类型 `const` 。 |
+| [const_pointer](#pointer) | 指向元素的指针的类型 **`const`** 。 |
+| [const_reference](#reference) | 对元素的引用的类型 **`const`** 。 |
 | [difference_type](#difference_type) | 两个元素间的带符号距离的类型。 |
 | [element_type](#element_type) | Span 元素的类型。 |
 | [器](#iterator) | 范围的迭代器的类型。 |
@@ -95,22 +95,22 @@ class span;
 | [reference](#reference) | 元素的引用的类型。 |
 | [reverse_iterator](#reverse_iterator) | 跨度的反向迭代器的类型。 |
 | [size_type](#size_type) | 范围内两个元素之间的无符号距离的结果类型。 |
-| [value_type](#value_type) | 元素的类型，无 `const` 或 `volatile` 限定。 |
+| [value_type](#value_type) | 元素的类型，无 **`const`** 或 **`volatile`** 限定。 |
 | **构造函数** | **说明** |
-|[格](#span)| 构造 `span` 。|
+|[格](#span)| 构造 `span`。|
 | **迭代器支持** | **说明** |
 |[准备](#begin) | 获取一个迭代器，该迭代器指向范围中的第一个元素。|
-|[端面](#end) | 获取一个迭代器，该迭代器指向范围的末尾。 |
+|[end](#end) | 获取一个迭代器，该迭代器指向范围的末尾。 |
 |[rbegin](#rbegin) | 获取一个反向迭代器，该迭代器指向范围的最后一个元素;即反向跨度的开头。|
 |[rend](#rend) | 获取指向范围前部的反向迭代器;也就是说，已反转范围的结尾。|
 | **访问元素**| **说明** |
 |[返回](#back) | 获取跨度中的最后一个元素。|
-|[数据](#data) | 获取范围中第一个元素的地址。|
+|[data](#data) | 获取范围中第一个元素的地址。|
 |[主](#front) | 获取范围中的第一个元素。|
 |[操作员\[\]](#op_at) | 访问指定位置处的元素。|
 | **观察程序** | **说明** |
 |[empty](#empty)| 测试跨度是否为空。|
-|size  | 获取范围中的元素数。|
+|[大小](#size) | 获取范围中的元素数。|
 |[size_bytes](#size_bytes) | 获取范围的大小（以字节为单位）。|
 | **子视图** | **说明**|
 | [first](#first_view) | 从跨度的正面获取 subspan。|
@@ -306,7 +306,7 @@ constexpr bool empty() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-`true`如果为 `this->size() == 0` ，则返回。 否则为 `false`。
+**`true`** 如果为 `this->size() == 0` ，则返回。 否则为 **`false`** 。
 
 ### <a name="example"></a>示例
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-指向范围元素的指针和指针的类型 `const` 。
+指向范围元素的指针和指针的类型 **`const`** 。
 
 ```cpp
 using pointer = T*;
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-引用的类型和对 `const` span 元素的引用。
+引用的类型和对 **`const`** span 元素的引用。
 
 ```cpp
 using reference = T&;
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-跨度中的元素的类型，无 `const` 或 `volatile` 限定。
+跨度中的元素的类型，无 **`const`** 或 **`volatile`** 限定。
 
 ```cpp
 using value_type = std::remove_cv_t<T>;
@@ -1115,7 +1115,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<span>](../standard-library/span.md)  
 [如何使用类模板参数推导](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

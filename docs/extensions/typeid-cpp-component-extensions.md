@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181741"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225106"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid（C++/CLI 和 C++/CX）
 
@@ -27,7 +27,7 @@ ms.locfileid: "80181741"
 T::typeid
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
 类型名称。
@@ -40,7 +40,7 @@ T::typeid
 Platform::Type^ type = T::typeid;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
 类型名称。
@@ -61,22 +61,22 @@ Platform::Type^ type = T::typeid;
 type::typeid
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-type<br/>
+*type*<br/>
 要为其获取 `System::Type` 对象的类型（抽象声明符）的名称。
 
 ### <a name="remarks"></a>备注
 
-`typeid` 用于在编译时为类型获取 <xref:System.Type>。
+**`typeid`** 用于 <xref:System.Type> 在编译时获取类型的。
 
-`typeid` 类似于在运行时使用 <xref:System.Type.GetType%2A> 或 <xref:System.Object.GetType%2A> 为类型获取 System::Type。 然而，typeid 只接受类型名称作为参数。  若要使用类型实例来获取它的 System:: Type 名称，请使用 GetType。
+**`typeid`** 类似于 `System::Type` 在运行时使用或获取类型的 <xref:System.Type.GetType%2A> <xref:System.Object.GetType%2A> 。 但是， **`typeid`** 只接受类型名称作为参数。  如果要使用类型的实例来获取其 `System::Type` 名称，请使用 `GetType` 。
 
-`typeid` 必须可以在编译时计算类型名称（类型），而 GetType 则计算要在运行时返回的类型。
+**`typeid`** 必须能够在编译时计算类型名称（类型），而 GetType 计算在运行时返回的类型。
 
-`typeid` 可以使用本机类型名称，也可以使用本机类型名称的公共语言运行时别名；有关详细信息，请参阅[相当于 C++ 本机类型的 .NET Framework 类型 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)。
+**`typeid`** 可以采用本机类型名称或公共语言运行时别名作为本机类型名称;有关详细信息，请参阅[与 c + + 本机类型的等效 .NET Framework （c + +/cli）](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) 。
 
-`typeid` 还适用于本机类型，不过它仍返回 System::Type。  若要获取 type_info 结构，请使用 [typeid 运算符](../cpp/typeid-operator.md)。
+**`typeid`** 还适用于本机类型，但它仍返回 `System::Type` 。  若要获取 type_info 结构，请使用[ `typeid` 运算符](../cpp/typeid-operator.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -116,7 +116,7 @@ G
 System.Single*
 ```
 
-下面的示例展示了类型变量 System::Type 可用于获取类型的特性。  它还展示了，必须对一些类型创建 typedef，才能使用 `typeid`。
+下面的示例展示了类型变量 System::Type 可用于获取类型的特性。  它还显示，对于某些类型，必须创建要使用的 typedef **`typeid`** 。
 
 ```cpp
 // keyword__typeid_2.cpp
@@ -190,4 +190,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>另请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

@@ -45,12 +45,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: e869f9e0d4fa87c87878ffea987e4b6d85a75616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948875"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231359"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 
@@ -84,7 +84,7 @@ int _wscanf_s_l(
 *format*<br/>
 格式控制字符串。
 
-*实际*<br/>
+argument <br/>
 可选参数。
 
 *locale*<br/>
@@ -92,7 +92,7 @@ int _wscanf_s_l(
 
 ## <a name="return-value"></a>返回值
 
-返回已成功转换和分配的字段数。 返回值不包括已读取但未分配的字段。 如果返回值为0，则表示未分配任何字段。 对于错误，返回值为**EOF** ; 或者，如果在第一次尝试读取字符时找到文件尾字符或字符串末尾字符，则为。 如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**scanf_s**和**Wscanf_s**将返回**EOF**并将**errno**设置为**EINVAL**。
+返回已成功转换和分配的字段数。 返回值不包括已读取但未分配的字段。 如果返回值为0，则表示未分配任何字段。 对于错误，返回值为**EOF** ; 或者，如果在第一次尝试读取字符时找到文件尾字符或字符串末尾字符，则为。 如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， **scanf_s**和**wscanf_s**返回**EOF**并将**errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -102,9 +102,9 @@ int _wscanf_s_l(
 
 **wscanf_s**是**scanf_s**的宽字符版本;**wscanf_s**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**wscanf_s**和**scanf_s**的行为相同。 **scanf_s**当前不支持 UNICODE 流的输入。
 
-具有 **_l**后缀的这些函数的版本是相同的，只不过它们使用*区域设置*参数而不是当前线程区域设置。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用*区域设置*参数而不是当前线程区域设置。
 
-与**scanf**和**wscanf**不同， **scanf_s**和**wscanf_s**要求你为一些参数指定缓冲区大小。 指定所有**c**、 **c**、 **s**、 **s**或字符串控制集 **[]** 参数的大小。 以字符作为附加参数传递的缓冲区大小。 它紧跟在指向缓冲区或变量的指针后面。 例如，如果您正在读取一个字符串，则将传递该字符串的缓冲区大小，如下所示：
+与**scanf**和**wscanf**不同， **scanf_s**和**wscanf_s**要求你为某些参数指定缓冲区大小。 指定所有**c**、 **c**、 **s**、 **s**或字符串控制集 **[]** 参数的大小。 以字符作为附加参数传递的缓冲区大小。 它紧跟在指向缓冲区或变量的指针后面。 例如，如果您正在读取一个字符串，则将传递该字符串的缓冲区大小，如下所示：
 
 ```C
 char s[10];
@@ -114,7 +114,7 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 缓冲区大小包括终端 null。 您可以使用宽度规范字段来确保读入的令牌适合缓冲区。 如果某个令牌太大而无法容纳，则不会向该缓冲区写入任何内容，除非存在宽度规范。
 
 > [!NOTE]
-> 大小参数的类型为**无符号**类型，而不是**size_t**。 使用静态强制转换将**size_t**值转换为64位生成配置的**无符号**值。
+> 大小参数的类型为 **`unsigned`** ，而不是**size_t**。 使用静态强制转换将**size_t**的值转换为 **`unsigned`** 64 位生成配置。
 
 Buffer size 参数描述了最大字符数，而不是字节数。 在此示例中，缓冲区类型的宽度与格式说明符的宽度不匹配。
 
@@ -154,10 +154,10 @@ scanf_s("%4c", c, (unsigned)_countof(c)); // not null terminated
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**scanf_s**、 **_scanf_s_l**|\<stdio.h>|
-|**wscanf_s**、 **_wscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**scanf_s**， **_scanf_s_l**|\<stdio.h>|
+|**wscanf_s**， **_wscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 标准流处理**stdin**、 **stdout**和**stderr**必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 标准流处理**stdin**、 **stdout**和**stderr**必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -206,12 +206,12 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

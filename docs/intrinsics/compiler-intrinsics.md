@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 6f41b56995e1a5a7d7f4267cb1def5370f953d5c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7438c90eec8b1f88a4c1608953ce21772254f02c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171666"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230527"
 ---
 # <a name="compiler-intrinsics"></a>编译器内部函数
 
@@ -24,13 +24,13 @@ ms.locfileid: "80171666"
 
 使用内部函数会影响到代码的可移植性，因为在 Visual C++ 中可用的内部函数如果用其他编译器编译代码则可能不可用，并且对于某些目标体系结构可用的部分内部函数并非对所有体系结构都可用。 但是，内部函数通常比内联程序集可移植性更大。 64 位体系结构要求内部函数，但不支持内联程序集。
 
-某些内部函数（例如 `__assume` 和 `__ReadWriteBarrier`）向编译器提供信息，但这会影响到优化程序的行为。
+某些内部函数（如 **`__assume`** 和 `__ReadWriteBarrier` ）向编译器提供信息，这会影响优化器的行为。
 
-某些内部函数只能用作内部函数，某些内部函数可以同时用于函数和内部函数实现。 你可以指示编译器使用这两种方式中的一种来使用内部函数实现，具体取决于你是想仅启用特定函数还是想启用所有内部函数。 第一种方法是使用 `#pragma intrinsic(`*内部函数名称列表*`)`。 杂注可用于指定单个内部函数或用逗号分隔的多个内部函数。 第二种方法是使用[/Oi （生成内部函数）](../build/reference/oi-generate-intrinsic-functions.md)编译器选项，该选项使给定平台上的所有内部函数都可用。 在 **/Oi**下，使用 `#pragma function(`*内部函数名称列表*`)` 强制使用函数调用而不是内部函数。 如果特定内部函数的文档说明例程仅作为内部函数提供，则无论是否指定了 **/Oi**或 `#pragma intrinsic`，都将使用内部实现。 在所有情况下， **/Oi**或 `#pragma intrinsic` 都允许但不强制优化器使用内部函数。 优化程序仍然可以调用函数。
+某些内部函数只能用作内部函数，某些内部函数可以同时用于函数和内部函数实现。 你可以指示编译器使用这两种方式中的一种来使用内部函数实现，具体取决于你是想仅启用特定函数还是想启用所有内部函数。 第一种方法是使用 `#pragma intrinsic(` *内部函数名称列表* `)` 。 杂注可用于指定单个内部函数或用逗号分隔的多个内部函数。 第二种方法是使用[/Oi （生成内部函数）](../build/reference/oi-generate-intrinsic-functions.md)编译器选项，该选项使给定平台上的所有内部函数都可用。 在 **/Oi**下，使用 `#pragma function(` *内部函数名称列表* `)` 强制使用函数调用而不是内部函数。 如果特定内部函数的文档说明例程仅可作为内部函数，则无论是否指定了 **/Oi**或，都将使用内部实现 `#pragma intrinsic` 。 在所有情况下， **/Oi**或 `#pragma intrinsic` 允许但不强制优化器使用内部函数。 优化程序仍然可以调用函数。
 
 一些标准的 C/C++ 库函数在某些体系结构上可用于内部函数实现。 调用 CRT 函数时，如果在命令行上指定 **/Oi** ，则使用内部实现。
 
-标头文件（\<intrin.h >）可用于声明常用内部函数的原型。 制造商特定的内部函数在 \<immintrin.h> > 中提供，\<ammintrin.h > 头文件中。 此外，某些 Windows 头文件还可声明在编译器内部函数上映射的函数。
+标头文件 \<intrin.h> 可用于声明常用内部函数的原型。 \<immintrin.h>和标头文件中提供了制造商特定的内部函数 \<ammintrin.h> 。 此外，某些 Windows 头文件还可声明在编译器内部函数上映射的函数。
 
 以下部分列出了可用于各种体系结构的所有内部函数。 有关内部函数在特定目标处理器上的工作方式的详细信息，请参阅制造商参考文档。
 
@@ -42,9 +42,9 @@ ms.locfileid: "80171666"
 
 - [x64 (amd64) 内部函数列表](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [所有体系结构上可用的内部函数](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [在所有体系结构上都可用的内部函数](../intrinsics/intrinsics-available-on-all-architectures.md)
 
-- [按字母顺序列出的内部函数](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
+- [按字母顺序排序的内部函数列表](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>另请参阅
 

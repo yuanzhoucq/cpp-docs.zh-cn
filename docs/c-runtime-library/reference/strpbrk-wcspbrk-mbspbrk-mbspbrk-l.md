@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fbde746cba02605be7fa42e941a30bfa02d0561a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231307"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
@@ -137,15 +137,15 @@ null 终止的字符集。
 
 ## <a name="remarks"></a>备注
 
-函数返回一个指针，该指针指向*str*中某个字符的第一个匹配项，该字符属于 strCharSet 中的字符集。 *strCharSet* `strpbrk` 搜索不包括终止 null 字符。
+`strpbrk`函数返回一个指针，该指针指向*str*中某个字符的第一个匹配项，该字符属于*strCharSet*中的字符集。 搜索不包括终止 null 字符。
 
 `wcspbrk` 和 `_mbspbrk` 分别是 `strpbrk`的宽字符及多字节字符版本。 `wcspbrk` 的参数和返回值是宽字符字符串；而 `_mbspbrk` 的则是多字节字符字符串。
 
-`_mbspbrk` 会验证其参数。 如果*str*或*strCharSet*为 NULL，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `_mbspbrk`则返回 NULL，并将`errno`设置为 EINVAL。 `strpbrk` 和 `wcspbrk` 不会验证其参数。 否则这三个函数否则具有相同行为。
+`_mbspbrk` 会验证其参数。 如果*str*或*strCharSet*为 NULL，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `_mbspbrk` 返回 NULL，并将设置 `errno` 为 EINVAL。 `strpbrk` 和 `wcspbrk` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
 `_mbspbrk` 类似于 `_mbscspn`，只不过 `_mbspbrk` 返回一个指针，而不是 [size_t](../../c-runtime-library/standard-types.md) 类型的值。
 
-在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些函数的**常量**和非常**量**版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS。 如果这两个 c + + 重载都需要非常**量**行为，请定义符号 _CONST_RETURN。
+在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向 **`const`** 非的指针 **`const`** 。 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS **`const`** 。 如果 **`const`** 这两个 c + + 重载都需要非行为，请定义符号 _CONST_RETURN。
 
 输出值受区域设置的 LC_CTYPE 类别设置的设置的影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -156,11 +156,11 @@ null 终止的字符集。
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
-|**不适用**|**不适用**|`_mbspbrk_l`|**不适用**|
+|**n/a**|**n/a**|`_mbspbrk_l`|**n/a**|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`strpbrk`|\<string.h>|
 |`wcspbrk`|\<string.h> 或 \<wchar.h>|
@@ -205,7 +205,7 @@ int main( void )
 ## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>

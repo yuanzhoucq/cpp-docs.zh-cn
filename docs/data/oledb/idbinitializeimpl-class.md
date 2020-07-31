@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218320"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
 
@@ -56,10 +56,10 @@ template <class T>
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自 `IDBInitializeImpl`的类。
+派生自的类 `IDBInitializeImpl` 。
 
 ## <a name="requirements"></a>要求
 
@@ -77,7 +77,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 |||
 |-|-|
-|[Initialize](#initialize)|启动提供程序。|
+|[初始化](#initialize)|启动提供程序。|
 |[撤消](#uninitialize)|停止提供程序。|
 
 ### <a name="data-members"></a>数据成员
@@ -145,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>备注
 
-这些标志指定或指明数据源对象的各种属性的状态。 包含一个或多个以下**枚举**值：
+这些标志指定或指明数据源对象的各种属性的状态。 包含一个或多个以下 **`enum`** 值：
 
 ```cpp
 enum DATASOURCE_FLAGS {

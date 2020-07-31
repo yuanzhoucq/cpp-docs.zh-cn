@@ -1,5 +1,5 @@
 ---
-title: Operator 运算符： &amp;
+title: 操作员地址：&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 836802684e24c721f97dc4c5558d87b9a5e69bc8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181598"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227681"
 ---
-# <a name="address-of-operator-amp"></a>Operator 运算符： &amp;
+# <a name="address-of-operator-amp"></a>操作员地址：&amp;
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ ms.locfileid: "80181598"
 
 address-of 运算符仅适用于具有基本、结构、类或在文件范围级别声明的联合类型的变量，或仅适用于下标数组引用。 在这些表达式中，可在 address-of 表达式中添加或提取不包括 address-of 运算符的常数表达式。
 
-当应用于函数或左值时，该表达式的结果将是派生自操作数类型（右值）的指针类型。 例如，如果操作数的类型为**char**，则表达式的结果为指向**char**的类型指针。 应用于**const**或**volatile**对象的 address 运算符的计算结果为 `const type *` 或 `volatile type *`，其中**type**是原始对象的类型。
+当应用于函数或左值时，该表达式的结果将是派生自操作数类型（右值）的指针类型。 例如，如果操作数的类型为，则 **`char`** 表达式的结果为指向的类型指针 **`char`** 。 应用于或对象的 address 运算符的 **`const`** **`volatile`** 计算结果为 `const type *` 或 `volatile type *` ，其中**type**是原始对象的类型。
 
 当将地址运算符应用于限定名称时，结果取决于*限定名*是否指定了静态成员。 如果是这样，则结果为指向成员声明中指定的类型的指针。 如果成员不是静态的，则结果是一个指针，指向由*限定类名称*指示的类的成员*名称*。 （有关*限定类名*的详细信息，请参阅[主表达式](../cpp/primary-expressions.md)。）下面的代码片段演示了结果如何不同，具体取决于该成员是否为静态成员：
 
@@ -99,15 +99,15 @@ int main() {
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 25
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md)<br/>
-[间接寻址运算符和 Address-of 运算符](../c-language/indirection-and-address-of-operators.md)
+[间接寻址和地址运算符](../c-language/indirection-and-address-of-operators.md)

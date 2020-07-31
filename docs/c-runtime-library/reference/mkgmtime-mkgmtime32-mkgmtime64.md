@@ -43,16 +43,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc8ccfc628a0f0c5dd649dbb5cf3bd0b552b5d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914657"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216877"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
-将由**struct** **TM**表示的 utc 时间转换为**TIME_T**类型所表示的 utc 时间。
+将 tm 表示的 UTC 时间转换 **`struct`** **tm**为**time_t**类型所表示的 utc 时间。
 
 ## <a name="syntax"></a>语法
 
@@ -71,7 +71,7 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>参数
 
 *timeptr*\
-一个指针，它指向作为要转换的**struct** **tm**的 UTC 时间。
+一个指针，它指向作为 **`struct`** **tm**转换的 UTC 时间。
 
 ## <a name="return-value"></a>返回值
 

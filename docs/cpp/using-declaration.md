@@ -7,16 +7,16 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187838"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227018"
 ---
 # <a name="using-declaration"></a>using 声明
 
-**Using**声明将一个名称引入声明性区域，其中显示了 using 声明。
+**`using`** 声明将名称引入声明性区域，其中显示了 using 声明。
 
 ## <a name="syntax"></a>语法
 
@@ -25,17 +25,17 @@ using [typename] nested-name-specifier unqualified-id ;
 using declarator-list ;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*嵌套名称说明符*命名空间、类或枚举名称与范围解析运算符（：:)，由范围解析运算符终止的序列。 单个范围解析运算符可用于引入全局命名空间的名称。 关键字**typename**是可选的，可用于在从基类引入类模板时解析依赖名称。
+*嵌套名称说明符*命名空间、类或枚举名称与范围解析运算符（：:)，由范围解析运算符终止的序列。 单个范围解析运算符可用于引入全局命名空间的名称。 关键字 **`typename`** 是可选的，可用于在从基类引入类模板时解析依赖名称。
 
 *非限定 id*非限定 id 表达式，可以是标识符、重载运算符名称、用户定义的文本运算符或转换函数名称、类析构函数名称或模板名称和参数列表。
 
-*声明符-列表*一个逗号分隔列表，其中列出了 [**typename**]*嵌套名称说明符*非*限定 id*声明符，后面跟有省略号。
+*声明符-列表*以逗号分隔的列表，其中列出了 [ **`typename`** ]*嵌套名称说明符*非*限定标识符*，后面跟有省略号。
 
 ## <a name="remarks"></a>备注
 
-使用声明会将非限定名称引入到在其他位置声明的实体的同义词。 它允许使用特定命名空间中的单个名称，而无需在其出现的声明区域中进行显式限定。 这与[using 指令](../cpp/namespaces-cpp.md#using_directives)相反，后者允许使用命名空间中的*所有*名称而无需进行限定。 **Using**关键字还用于[类型别名](../cpp/aliases-and-typedefs-cpp.md)。
+使用声明会将非限定名称引入到在其他位置声明的实体的同义词。 它允许使用特定命名空间中的单个名称，而无需在其出现的声明区域中进行显式限定。 这与[using 指令](../cpp/namespaces-cpp.md#using_directives)相反，后者允许使用命名空间中的*所有*名称而无需进行限定。 **`using`** 关键字还用于[类型别名](../cpp/aliases-and-typedefs-cpp.md)。
 
 ## <a name="example"></a>示例
 
@@ -125,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>示例
 
-使用 using 声明声明的成员可以通过使用显式限定来引用。 `::` 前缀引用全局命名空间。
+使用 using 声明声明的成员可以通过使用显式限定来引用。 `::`前缀引用全局命名空间。
 
 ```cpp
 // using_declaration3.cpp
@@ -167,7 +167,7 @@ In A::g
 
 当使用声明时，由声明创建的同义词只引用在使用声明点有效的定义。 在 using 声明后面添加到命名空间的定义是无效同义词。
 
-**使用**声明定义的名称是其原始名称的别名。 它不会影响原始声明的类型、链接或其他特性。
+声明定义的名称 **`using`** 是其原始名称的别名。 它不会影响原始声明的类型、链接或其他特性。
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -213,7 +213,7 @@ void g() {
 }
 ```
 
-在上面的示例中，`using B::i` 语句导致第二个 `int i` 在 `g()` 函数中声明。 `using B::f` 语句与 `f(char)` 函数不冲突，因为 `B::f` 引入的函数名称具有不同的参数类型。
+在上面的示例中， `using B::i` 语句导致第二个 `int i` 在函数中声明 `g()` 。 `using B::f`语句不与函数冲突， `f(char)` 因为引入的函数名称 `B::f` 具有不同的参数类型。
 
 ## <a name="example"></a>示例
 

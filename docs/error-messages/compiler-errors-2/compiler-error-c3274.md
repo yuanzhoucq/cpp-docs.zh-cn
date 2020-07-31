@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3274
 ms.assetid: 1f03f18e-b569-48eb-9249-11c70122a305
-ms.openlocfilehash: d28deea0729a091ce0829187323a0d5a2d184944
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c2c7de919181cd0e89526f8ffacabaec73fb8f89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223429"
 ---
 # <a name="compiler-error-c3274"></a>编译器错误 C3274
 
 __finally/finally 没有匹配的 try
 
-发现 [__finally](../../cpp/try-finally-statement.md) 或 [finally](../../dotnet/finally.md) 语句没有匹配的 `try`。 若要解决此问题，删除 `__finally` 语句或为 `try` 添加 `__finally`语句。
+发现[__finally](../../cpp/try-finally-statement.md)或[finally](../../dotnet/finally.md)语句没有匹配的 **`try`** 。 若要解决此问题，请删除 **`__finally`** 语句或 **`try`** 为添加语句 **`__finally`** 。
 
 以下示例生成 C3274：
 

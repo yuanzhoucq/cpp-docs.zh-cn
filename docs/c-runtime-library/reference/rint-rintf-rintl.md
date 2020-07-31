@@ -34,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917724"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216760"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -74,7 +74,7 @@ long double rint( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用**rint**的重载，该重载采用并返回**浮点**和**长****双精度**值。 在 C 程序中， **rint**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用**rint**的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中， **rint**始终采用并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
@@ -127,7 +127,7 @@ rintl(-2.500000) is -3
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
-[fmod、fmodf](fmod-fmodf.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint、lrintf、lrintl、llrint、llrintf、llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround、lroundf、lroundl、llround、llroundf、llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
 [nearbyint、nearbyintf、nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>

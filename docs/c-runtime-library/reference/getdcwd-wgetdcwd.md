@@ -40,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919218"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218658"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -79,7 +79,7 @@ wchar_t *_wgetdcwd(
 如果指定**NULL** ，则此函数使用**malloc**分配至少*maxlen*大小的缓冲区，并且 **_getdcwd**的返回值是指向分配的缓冲区的指针。 可以通过调用**free**并向其传递指针来释放缓冲区。
 
 *maxlen*<br/>
-一个非零正整数，指定路径的最大长度（以**字符为字符），用于** **_wgetdcwd**的 **_getdcwd**和**wchar_t** 。
+指定路径的最大长度（以字符为限）的非零正整数： **`char`** 用于 **_getdcwd**和 **`wchar_t`** **_wgetdcwd**。
 
 如果*maxlen*小于或等于零，则调用无效的参数处理程序。 有关详细信息，请参阅[参数验证](../../c-runtime-library/parameter-validation.md)。
 
@@ -111,7 +111,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getdcwd**|\<direct.h>|
 |**_wgetdcwd**|\<direct.h> 或 \<wchar.h>|
@@ -124,7 +124,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="see-also"></a>另请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)<br/>
+[目录控件](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>
 [_getcwd、_wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617499"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204984"
 ---
 # <a name="allocator-class"></a>allocator 类
 
@@ -468,7 +468,7 @@ template <class _Other>
 
 #### <a name="remarks"></a>备注
 
-第一个成员函数等效于**new** （（ `void` \* ） `ptr` ）**类型**（ `val` ）。
+第一个成员函数等效于 `new ((void *) ptr) Type(val)` 。
 
 #### <a name="example"></a>示例
 
@@ -874,7 +874,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 此结构可用于为与所实现的容器的元素类型不同的类型分配内存。
 
-成员类模板定义其他类型。 其唯一目的是在**allocator** \<_ **Other**> 给定类型名称**分配**器的情况下提供类型名称分配器 \< **Type**> 。
+成员类模板定义其他类型。 其唯一目的是在 `allocator<_Other>` 给定类型名称的情况下提供类型名称 `allocator<Type>` 。
 
 例如，给定类型的分配器对象 `al` `A` ，可以使用表达式来分配类型为的对象 `_Other` ：
 

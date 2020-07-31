@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d77ac4fa9afcd5a6b8f86261c7a3ba466adc64a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215148"
 ---
 # <a name="data-type-mappings"></a>数据类型映射
 
@@ -44,19 +44,19 @@ TCHAR.H 中定义了这些数据类型映射，具体取决于程序中是否定
 
 ### <a name="generic-text-data-type-mappings"></a>一般文本数据类型映射
 
-|一般文本<br /><br /> 数据类型名|SBCS（_UNICODE、<br /><br /> _MBCS 未<br /><br /> 定义）|_MBCS<br /><br /> 已定义|_UNICODE<br /><br /> 已定义|
+|一般文本<br /><br /> 数据类型名|SBCS（_UNICODE、<br /><br /> _MBCS 未<br /><br /> 定义）|_MBCS<br /><br /> defined|_UNICODE<br /><br /> defined|
 |--------------------------------------|----------------------------------------------------|------------------------|---------------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
 |`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|
 |`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|
 |`_tfinddatai64_t`|`_finddatai64_t`|`_finddatai64_t`|`_wfinddatai64_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` 或 `_TEXT`|无效果（由预处理器删除）|无效果（由预处理器删除）|`L`（将以下字符或字符串转换为其 Unicode 对应项）|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [一般文本映射](../c-runtime-library/generic-text-mappings.md)<br/>
 [常量和全局变量映射](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>

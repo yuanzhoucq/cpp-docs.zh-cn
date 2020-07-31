@@ -43,19 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 62f97c901bc7e6dc34a2db6ad80193cc4aaa986a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079213"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231346"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 读取标准输入流中的格式化数据。 提供这些函数的更多安全版本；请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
 
 > [!NOTE]
-> 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列函数被声明为**内联**，并移到 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现*LNK2019* 。 有关详细信息，请[参阅C++ Visual change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
+> 在 Visual Studio 2015 中， `printf` 和 `scanf` 系列函数被声明为并 **`inline`** 移至 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现*LNK2019* 。 有关详细信息，请参阅[Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 ## <a name="syntax"></a>语法
 
@@ -80,12 +80,12 @@ int _wscanf_l(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-format<br/>
+*format*<br/>
 格式控制字符串。
 
-argument<br/>
+argument <br/>
 可选参数。
 
 *locale*<br/>
@@ -104,7 +104,7 @@ argument<br/>
 **Scanf**函数从标准输入流**stdin**中读取数据，并将数据写入到由*参数*给定的位置。 每个*参数*都必须是指向类型的变量的指针，该类型与*格式*中的类型说明符对应。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
-> 使用**scanf**读取字符串时，请始终指定 **% s**格式的宽度（例如， **"% 32s"** 而不是 **"% s"** ）;否则，输入格式不正确可能会导致缓冲区溢出。 或者，可以考虑使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
+> 使用**scanf**读取字符串时，请始终指定 **% s**格式的宽度（例如， **"% 32s"** 而不是 **"% s"**）;否则，输入格式不正确可能会导致缓冲区溢出。 或者，可以考虑使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
 
 **wscanf**是**scanf**的宽字符版本;**wscanf**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**wscanf**和**scanf**的行为相同。 **scanf**当前不支持 UNICODE 流的输入。
 
@@ -121,7 +121,7 @@ argument<br/>
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**scanf**、 **_scanf_l**|\<stdio.h>|
 |**wscanf**、 **_wscanf_l**|\<stdio.h> 或 \<wchar.h>|
@@ -173,5 +173,5 @@ The contents are: 36 92.300003 y n Wide characters
 [区域设置](../../c-runtime-library/locale.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

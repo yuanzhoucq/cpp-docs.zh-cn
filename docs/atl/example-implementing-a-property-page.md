@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319576"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224352"
 ---
 # <a name="example-implementing-a-property-page"></a>示例：实现属性页
 
@@ -51,9 +51,9 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
 |Item|值|
 |----------|-----------|
-|Title|TextDocument|
+|标题|TextDocument|
 |文档字符串|VCUE TextDocument 属性|
-|帮助文件|*\<空白>*|
+|帮助文件|*\<blank>*|
 
 调用 `IPropertyPage::GetPageInfo` 时，在向导的此页上设置的值会返回给属性页容器。 此后对字符串执行的操作取决于容器，但它们通常用于向用户标识属性页。 “标题”通常显示在属性页上方的选项卡中，“文档字符串”可能显示在状态栏或工具提示中（尽管标准属性框架根本不使用此字符串）。
 
@@ -90,7 +90,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-还需要引用 `IPropertyPageImpl` 基类；将以下 typedef**** 添加到 `CDocProperties` 类中：
+还需要引用基类，并 `IPropertyPageImpl` 将以下 **`typedef`** 内容添加到 `CDocProperties` 类：
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 

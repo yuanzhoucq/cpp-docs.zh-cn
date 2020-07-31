@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2732
 ms.assetid: 01b7ad2c-93cf-456f-a4c0-c5f2fdc7c07c
-ms.openlocfilehash: 61bac8c1b5c9e029cc5833f458669b490fed8c91
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 78be424040c7315271d0880c6678584f698b5be8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218177"
 ---
 # <a name="compiler-error-c2732"></a>编译器错误 C2732
 
@@ -21,7 +21,7 @@ ms.locfileid: "74755793"
 
 具有不同链接说明符的包含文件可能会导致此错误。
 
-要修复此错误，请更改 `extern` 语句，以便这些链接一致。 特别是，不要对 `extern "C"` 块中的 `#include` 指令换行。
+若要修复此错误，请更改 **`extern`** 语句，使链接一致。 特别是，不要对 `extern "C"` 块中的 `#include` 指令换行。
 
 ## <a name="example"></a>示例
 

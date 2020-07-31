@@ -7,24 +7,22 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf31423cd76c838cbeffa7458bbccb89592bf43
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227616"
 ---
 # <a name="allocate"></a>allocate
 
 **Microsoft 专用**
 
-**分配**声明说明符命名要在其中分配数据项的数据段。
+**`allocate`** 声明说明符命名要在其中分配数据项的数据段。
 
 ## <a name="syntax"></a>语法
 
-```
-   __declspec(allocate("segname")) declarator
-```
+> **`__declspec(allocate("`***segname* **`))`***声明符*
 
 ## <a name="remarks"></a>备注
 
@@ -38,7 +36,7 @@ ms.locfileid: "80181520"
 
 - [init_seg](../preprocessor/init-seg.md)
 
-- [部分](../preprocessor/section.md)
+- [区](../preprocessor/section.md)
 
 ## <a name="example"></a>示例
 
@@ -53,7 +51,7 @@ int main() {
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 6bc1e9c6d40599ae9a821179dcf56dbb7e21bf10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4eeec5db00ceca5429f4a3a270e1b249a8955249
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230917"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用托管异常中的基本概念
 
@@ -23,21 +23,21 @@ ms.locfileid: "81372532"
 
 ## <a name="in-this-topic"></a>本主题内容
 
-- [在 /clr 下引发异常](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [在/clr 下引发异常](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [CLR 扩展的尝试/捕获块](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [CLR 扩展的 Try/Catch 块](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
 ## <a name="remarks"></a>备注
 
-如果使用 **/clr**选项进行编译，则可以处理 CLR 异常以及标准<xref:System.Exception>类提供了许多用于处理 CLR 异常的有用方法，建议作为用户定义的异常类的基类。
+如果使用 **/clr**选项进行编译，则可以处理 clr 异常以及标准 <xref:System.Exception> 类提供许多用于处理 clr 异常的有用方法，并建议将其用作用户定义的异常类的基类。
 
-**在 /clr**下不支持捕获从接口派生的异常类型。 此外，通用语言运行时不允许捕获堆栈溢出异常;堆栈溢出异常将终止进程。
+在 **/clr**下，不支持捕获从接口派生的异常类型。 此外，公共语言运行时不允许捕获堆栈溢出异常;堆栈溢出异常将终止进程。
 
-有关托管和非托管应用程序中异常处理差异的详细信息，请参阅[C++ 的"托管扩展下异常处理行为差异](../dotnet/differences-in-exception-handling-behavior-under-clr.md)"。
+有关托管和非托管应用程序中的异常处理差异的详细信息，请参阅[Managed Extensions for C++ 下的异常处理行为的差异](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。
 
-## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>在 /clr 下引发异常
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>在/clr 下引发异常
 
-C++引发表达式将扩展以将句柄扔到 CLR 类型。 下面的示例创建自定义异常类型，然后引发该类型的实例：
+对 c + + throw 表达式进行扩展，以引发 CLR 类型的句柄。 下面的示例创建一个自定义异常类型，并引发该类型的实例：
 
 ```cpp
 // clr_exception_handling.cpp
@@ -53,7 +53,7 @@ void GlobalFunction() {
 }
 ```
 
-在引发之前，必须装箱值类型：
+在引发之前，必须对值类型进行装箱：
 
 ```cpp
 // clr_exception_handling_2.cpp
@@ -68,9 +68,9 @@ void GlobalFunction() {
 }
 ```
 
-## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>CLR 扩展的尝试/捕获块
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>CLR 扩展的 Try/Catch 块
 
-相同的**try**/**catch**块结构可用于捕获 CLR 和本机异常：
+相同的 **`try`** / **`catch`** 块结构可用于同时捕获 CLR 和本机异常：
 
 ```cpp
 // clr_exception_handling_3.cpp
@@ -126,25 +126,25 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>C++对象的展开顺序
+### <a name="order-of-unwinding-for-c-objects"></a>C + + 对象的展开顺序
 
-对于具有析构函数的任何C++对象，这些对象可能在引发函数和处理函数之间的运行时堆栈上。 由于 CLR 类型在堆上分配，因此展开不适用于它们。
+对于带有析构函数的任何 c + + 对象（可能在引发函数与处理函数之间的运行时堆栈上），将发生展开。 因为 CLR 类型是在堆上分配的，所以展开不应用于它们。
 
-引发异常的事件顺序如下：
+引发的异常的事件顺序如下所示：
 
-1. 运行时遍网查找适当的 catch 子句，或者对于 SEH（SEH 的筛选器除外）的情况，则运行以捕获异常。 先按词法顺序搜索 Catch 子句，然后动态向下调用堆栈。
+1. 运行时将遍历查找适当的 catch 子句的堆栈，对于 SEH，则会遍历该堆栈（SEH 除外）来捕获异常。 先按词法顺序搜索 Catch 子句，然后在调用堆栈中动态向下搜索。
 
-1. 找到正确的处理程序后，堆栈将解缠到该点。 对于堆栈上的每个函数调用，其本地对象都会被破坏，并且__finally块从大多数嵌套向外执行。
+1. 找到正确的处理程序后，堆栈将被展开到该点。 对于堆栈上的每个函数调用，其本地对象是销毁的，并且从最嵌套的外部执行 __finally 块。
 
-1. 解包后，将执行 catch 子句。
+1. 堆栈展开后，会执行 catch 子句。
 
 ### <a name="catching-unmanaged-types"></a>捕获非托管类型
 
-引发非托管对象类型时，将用 类型<xref:System.Runtime.InteropServices.SEHException>的异常包装它。 搜索适当的 CATCH 子**句**时，有两种可能性。
+当引发非托管对象类型时，它将包装为类型为的异常 <xref:System.Runtime.InteropServices.SEHException> 。 搜索相应的子句时 **`catch`** ，有两种可能的情况。
 
-- 如果遇到本机C++类型，则取消包装异常，并将其与遇到的类型进行比较。 此比较允许以正常方式捕获本机C++类型。
+- 如果遇到本机 c + + 类型，则会将异常解包，并将其与遇到的类型进行比较。 此比较允许以正常方式捕获本机 c + + 类型。
 
-- 但是，如果首先检查**SEHException**类型或其任何基类的**catch**子句，则子句将截取异常。 因此，应首先将捕获本机C++类型的所有 catch 子句放在 CLR 类型的任何 catch 子句之前。
+- 但是，如果 **`catch`** 首先检查类型为**SEHException**或其任何基类的子句，子句将截获该异常。 因此，应将捕获本机 c + + 类型的所有 catch 子句放在 CLR 类型的任何 catch 子句之前。
 
 请注意：
 
@@ -152,17 +152,17 @@ In 'catch(MyStruct^ catchException)'
 catch(Object^)
 ```
 
-and
+和
 
 ```
 catch(...)
 ```
 
-都会捕获任何引发类型，包括 SEH 异常。
+将捕获任何引发的类型，包括 SEH 异常。
 
-如果非托管类型被 catch（Object_）捕获，则不会破坏引发的对象。
+如果 catch （Object ^）捕获非托管类型，则不会销毁引发的对象。
 
-在引发或捕获非托管异常时，我们建议您使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项而不是 **/EHs**或 **/EHa**。
+引发或捕获非托管异常时，建议使用[/ehsc](../build/reference/eh-exception-handling-model.md)编译器选项，而不是 **/ehs**或 **/eha**。
 
 ## <a name="see-also"></a>另请参阅
 

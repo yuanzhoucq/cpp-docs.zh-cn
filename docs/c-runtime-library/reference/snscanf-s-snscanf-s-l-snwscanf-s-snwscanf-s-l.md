@@ -52,12 +52,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947951"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229397"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 
@@ -117,14 +117,14 @@ int __cdecl _snwscanf_s_l(
 
 ## <a name="remarks"></a>备注
 
-此函数类似于**sscanf_s** ，只不过它可以指定要从输入字符串中检查的固定数量的字符。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
+此函数与**sscanf_s**类似，只不过它可以指定要从输入字符串中检查的固定数量的字符。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
 
-缓冲区大小参数需要具有类型字段字符**c**、 **c**、 **s**、 **s**和 **[** 。 有关详细信息，请参阅 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
+缓冲区大小参数需要具有类型字段字符**c**、 **c**、 **s**、 **s**和 **[**。 有关详细信息，请参阅 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> 大小参数的类型为**无符号**类型，而不是**size_t**。
+> 大小参数的类型为 **`unsigned`** ，而不是**size_t**。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -137,10 +137,10 @@ int __cdecl _snwscanf_s_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_snscanf_s**、 **_snscanf_s_l**|\<stdio.h>|
-|**_snwscanf_s**、 **_snwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**_snscanf_s**， **_snscanf_s_l**|\<stdio.h>|
+|**_snwscanf_s**， **_snwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -177,6 +177,6 @@ _snscanf_s converted 2 fields: 15 and 12.000000
 _snwscanf_s converted 2 fields: 15 and 12.000000
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)<br/>

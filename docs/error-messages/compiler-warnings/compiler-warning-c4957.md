@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ada10b5989b714ec4c75a24de1bbb101e1f51ee6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164895"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230761"
 ---
 # <a name="compiler-warning-c4957"></a>编译器警告 C4957
 
@@ -21,9 +21,9 @@ ms.locfileid: "80164895"
 
 强制转换会导致不可验证的映像。
 
-某些转换是安全的（例如，触发用户定义的转换的 `static_cast` 和一个 `const_cast`）。 确保 [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) 生成可验证的代码。
+某些强制转换是安全的（例如， **`static_cast`** 触发用户定义的转换和的 **`const_cast`** ）。 确保 [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) 生成可验证的代码。
 
-有关详细信息，请参阅[纯代码和可C++验证代码（/cli）](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+有关详细信息，请参阅[纯代码和可验证代码（c + +/cli）](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
 **/Clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 

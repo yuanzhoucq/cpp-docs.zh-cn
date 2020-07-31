@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::MakeAllocator, constructor
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-ms.openlocfilehash: dc0d83f2550646572a4eff2bec7850037c6dbf6a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 19d3ab294df8adc059424c97e5733ae9ebb75c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371324"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218372"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator 类
 
@@ -49,32 +49,32 @@ class MakeAllocator<T, true>;
 *T*<br/>
 类型名称。
 
-*有弱参考支持*<br/>
-**为**支持弱引用的对象分配内存;为不支持弱引用的对象分配内存**为 false。**
+*hasWeakReferenceSupport*<br/>
+**`true`** 为支持弱引用的对象分配内存;**`false`** 为不支持弱引用的对象分配内存。
 
 ## <a name="remarks"></a>备注
 
-为可激活类分配内存，无论是否具有弱引用支持。
+为可激活的类分配内存，但不支持弱引用。
 
-重写类`MakeAllocator`以实现用户定义的内存分配模型。
+重写 `MakeAllocator` 类以实现用户定义的内存分配模型。
 
-`MakeAllocator`通常用于防止在构造期间对象引发时内存泄漏。
+`MakeAllocator`通常用于在构造过程中引发对象时防止内存泄漏。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                                  | 说明
+名称                                                  | 描述
 ----------------------------------------------------- | ----------------------------------------------------------------
-[制造定位器：：制造定位器](#makeallocator)        | 初始化 `MakeAllocator` 类的新实例。
-[制造定位器：：\制造定位器](#tilde-makeallocator) | 取消初始化类的`MakeAllocator`当前实例。
+[MakeAllocator：： MakeAllocator](#makeallocator)        | 初始化 `MakeAllocator` 类的新实例。
+[MakeAllocator：： ~ MakeAllocator](#tilde-makeallocator) | 取消初始化类的当前实例 `MakeAllocator` 。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                 | 说明
+“属性”                                 | 描述
 ------------------------------------ | -----------------------------------------------------------------------------------------------------------
-[制造定位器：：分配](#allocate) | 分配内存并将其与当前`MakeAllocator`对象关联。
-[制造者：:D埃塔奇](#detach)     | 将[分配](#allocate)方法分配的内存与当前`MakeAllocator`对象分离。
+[MakeAllocator：： Allocate](#allocate) | 分配内存并将其与当前的 `MakeAllocator` 对象相关联。
+[MakeAllocator：:D etach](#detach)     | 解除[分配](#allocate)方法从当前对象分配的内存 `MakeAllocator` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -82,11 +82,11 @@ class MakeAllocator<T, true>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 实现.h
+**标头：** 实现。h
 
-**命名空间：** 微软：：WRL：:D
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="makeallocatorallocate"></a><a name="allocate"></a>制造定位器：：分配
+## <a name="makeallocatorallocate"></a><a name="allocate"></a>MakeAllocator：： Allocate
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -96,17 +96,17 @@ __forceinline void* Allocate();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则指向分配的内存的指针;否则， `nullptr`.
+如果成功，则为指向分配的内存的指针;否则为 **`nullptr`** 。
 
 ### <a name="remarks"></a>备注
 
-分配内存并将其与当前`MakeAllocator`对象关联。
+分配内存并将其与当前的 `MakeAllocator` 对象相关联。
 
-分配的内存的大小是当前`MakeAllocator`模板参数指定的类型的大小。
+分配的内存的大小为当前模板参数所指定的类型的大小 `MakeAllocator` 。
 
-开发人员只需重写`Allocate()`该方法，以实现不同的内存分配模型。
+开发人员只需重写 `Allocate()` 方法即可实现不同的内存分配模型。
 
-## <a name="makeallocatordetach"></a><a name="detach"></a>制造者：:D埃塔奇
+## <a name="makeallocatordetach"></a><a name="detach"></a>MakeAllocator：:D etach
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -116,11 +116,11 @@ __forceinline void Detach();
 
 ### <a name="remarks"></a>备注
 
-将[分配](#allocate)方法分配的内存与当前`MakeAllocator`对象分离。
+解除[分配](#allocate)方法从当前对象分配的内存 `MakeAllocator` 。
 
-如果调用`Detach()`，则负责删除`Allocate`方法提供的内存。
+如果调用 `Detach()` ，则负责删除方法提供的内存 `Allocate` 。
 
-## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a>制造定位器：：制造定位器
+## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a>MakeAllocator：： MakeAllocator
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -132,7 +132,7 @@ MakeAllocator();
 
 初始化 `MakeAllocator` 类的新实例。
 
-## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a>制造定位器：：\制造定位器
+## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a>MakeAllocator：： ~ MakeAllocator
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -142,6 +142,6 @@ MakeAllocator();
 
 ### <a name="remarks"></a>备注
 
-取消初始化类的`MakeAllocator`当前实例。
+取消初始化类的当前实例 `MakeAllocator` 。
 
-如有必要，此析构函数还会删除基础分配的内存。
+如果需要，此析构函数还会删除基础已分配的内存。

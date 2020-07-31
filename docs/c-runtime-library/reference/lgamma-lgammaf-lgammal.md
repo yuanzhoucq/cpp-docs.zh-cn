@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916451"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218645"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -83,7 +83,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用**lgamma**的重载，该重载采用并返回**浮点**型和**长****双精度**类型。 在 C 程序中， **lgamma**始终采用并返回**双精度型**。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的**lgamma**的重载 **`float`** **`long double`** 。 在 C 程序中， **lgamma**始终采用并返回 **`double`** 。
 
 如果 x 是有理数，则此函数返回（x-1）的阶乘的对数。
 
@@ -99,5 +99,5 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [tgamma、tgammaf、tgammal](tgamma-tgammaf-tgammal.md)<br/>

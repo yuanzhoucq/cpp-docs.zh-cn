@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1045
 ms.assetid: 766c2f89-4ecd-4281-adaa-14b270cc0829
-ms.openlocfilehash: 2d1b1bb626e420f972993d73063e798b16e447a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 677575c95e3e46d4bbb1bf04f8657e98f1e0a06b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220322"
 ---
 # <a name="fatal-error-c1045"></a>错误 C1045
 
 编译器限制 : 链接规范嵌套太深
 
-嵌套的外部对象超过编译器限制。 允许嵌套的外部项使用外部链接类型，如 `extern` “C++”。 减少嵌套的外部项的数量以解决该错误。
+嵌套的外部对象超过编译器限制。 允许嵌套的外部链接类型，如 **`extern`** "c + +"。 减少嵌套的外部项的数量以解决该错误。

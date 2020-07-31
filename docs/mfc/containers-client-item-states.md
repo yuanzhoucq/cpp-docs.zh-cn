@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 927211ccec35d8ec26e2f76b971c59b80248ab96
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 660b544a0f061ae2e4435777cdd934367f2e7652
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625990"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228643"
 ---
 # <a name="containers-client-item-states"></a>容器：客户端项状态
 
@@ -30,7 +30,7 @@ ms.locfileid: "84625990"
 
 - *COleClientItem：： activeUIState*
 
-处于空状态时，客户端项尚未完全是项。 已为其分配内存，但尚未用 OLE 项的数据对其进行初始化。 这是客户端项在通过调用**new**创建，但尚未完成典型的两步创建的第二步时所处的状态。
+处于空状态时，客户端项尚未完全是项。 已为其分配内存，但尚未用 OLE 项的数据对其进行初始化。 这是客户端项在通过调用创建后的状态，但尚未完成典型的 **`new`** 两步创建的第二步。
 
 在第二步中，通过调用 `COleClientItem::CreateFromFile` 或其他 `CreateFrom` *xxxx*函数执行，将完全创建项。 OLE 数据（来自文件或某些其他源，如剪贴板）已与 `COleClientItem` 派生对象相关联。 现在，该项处于已加载状态。
 
@@ -43,5 +43,5 @@ ms.locfileid: "84625990"
 [容器](containers.md)<br/>
 [激活](activation-cpp.md)<br/>
 [容器：客户端项通知](containers-client-item-notifications.md)<br/>
-[跟踪](trackers.md)<br/>
+[跟踪器](trackers.md)<br/>
 [CRectTracker 类](reference/crecttracker-class.md)

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: d468226028928e3edfe67cc7f9b9eec06e06bd56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914881"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216955"
 ---
 # <a name="fopen-_wfopen"></a>fopen、_wfopen
 
@@ -64,7 +64,7 @@ FILE *_wfopen(
 
 ### <a name="parameters"></a>参数
 
-*名字*<br/>
+*filename*<br/>
 文件名。
 
 *mode*<br/>
@@ -90,11 +90,11 @@ FILE *_wfopen(
 
 **fopen**支持 Unicode 文件流。 若要打开 Unicode 文件，请将指定所需编码的**ccs**标志传递给**fopen**，如下所示。
 
-> **文件\*fp = fopen （"newfile .txt"，"rt +，ccs =**_encoding_**"）;**
+> **文件 \* fp = fopen （"newfile.txt"，"rt +，ccs =**_encoding_**"）;**
 
 允许的*编码*值为**UNICODE**、 **utf-8**和**utf-16le**。
 
-在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型**wchar_t**的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型**wchar_t**的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致 [参数验证](../../c-runtime-library/parameter-validation.md) 错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
+在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型的 UTF-16 数据 **`wchar_t`** 。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型的 UTF-16 数据的缓冲区 **`wchar_t`** 。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致 [参数验证](../../c-runtime-library/parameter-validation.md) 错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
 
 如果文件已存在并已打开以进行读取或追加，字节顺序标记 (BOM)（如果文件中有）将确定编码。 BOM 编码优先于**ccs**标志指定的编码。 仅在不存在 BOM 或文件是新文件时，才使用**ccs**编码。
 
@@ -123,7 +123,7 @@ FILE *_wfopen(
 
 字符字符串*模式*指定为文件请求的访问类型，如下所示。
 
-|*mode*|访问|
+|*mode*|Access|
 |-|-|
 | **迅驰** | 打开以便读取。 如果文件不存在或找不到，则**fopen**调用失败。 |
 | **水平** | 打开用于写入的空文件。 如果给定文件存在，则其内容会被销毁。 |
@@ -158,8 +158,8 @@ FILE *_wfopen(
 |*模式*修饰符|行为|
 |-|-|
 | **ansi-c** | 启用关联*文件名*的提交标志，以便在调用**fflush**或 **_flushall**时，将文件缓冲区的内容直接写入磁盘。 |
-| **n** | 将关联的*文件名*的提交标志重置为 "无提交"。 这是默认设置。 如果将程序显式链接到 COMMODE.OBJ，它还将重写全局提交标志。 除非将程序显式链接到 COMMODE.OBJ，否则全局提交标志默认为“no-commit”（请参阅 [Link Options](../../c-runtime-library/link-options.md)）。 |
-| **北** | 指定文件不由子进程继承。 |
+| **n** | 将关联的*文件名*的提交标志重置为 "无提交"。 这是默认值。 如果将程序显式链接到 COMMODE.OBJ，它还将重写全局提交标志。 除非将程序显式链接到 COMMODE.OBJ，否则全局提交标志默认为“no-commit”（请参阅 [Link Options](../../c-runtime-library/link-options.md)）。 |
+| N**** | 指定文件不由子进程继承。 |
 | **S** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
 | **R** | 指定缓存针对（但不限于）从磁盘的随机访问进行优化。 |
 | **T** | 将文件指定为临时。 如果可能，它不会刷新到磁盘。 |
@@ -168,25 +168,25 @@ FILE *_wfopen(
 
 **Fopen**和 **_fdopen**中使用的*模式*字符串的有效字符对应于[_open](open-wopen.md)和[_sopen](sopen-wsopen.md)中使用的*oflag*参数，如下所示。
 
-|*模式*字符串中的字符|Open/\_sopen 的\_等效*oflag*值|
+|*模式*字符串中的字符|*oflag* \_ Open/sopen 的等效 oflag \_ 值|
 |-------------------------------|----------------------------------------------------|
-|**的**|**\_O\_WRONLY** &#124; ** \_o\_append** （通常** \_为\_o WRONLY** &#124; ** \_\_o**将** \_&#124;\_o append**）|
-|**a +**|**\_O\_RDWR** &#124; ** \_o\_append** （通常** \_为\_o RDWR** &#124; ** \_\_o append** &#124; ** \_o\_** append）|
-|**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** （通常** \_为\_o WRONLY** &#124; ** \_\_o**将 &#124; ** \_\_TRUNC**|
-|**w +**|**\_O\_RDWR** （通常** \_为\_o RDWR** &#124; ** \_\_o**将 &#124; ** \_\_TRUNC**|
-|**b**|**\_O\_二进制**|
-|**关心**|**\_O\_文本**|
-|**ansi-c**|None|
-|**n**|None|
-|**S**|**\_O\_顺序**|
-|**R**|**\_O\_随机**|
-|**T**|**\_O\_SHORTLIVED**|
-|**D**|**\_O\_暂时性**|
-|**ccs = UNICODE**|**\_O\_WTEXT**|
-|**ccs = UTF-8**|**\_O\_UTF8**|
-|**ccs = UTF-16LE**|**\_O\_UTF16**|
+|**的**|** \_ O \_ WRONLY** &#124; ** \_ o \_ append** （通常为** \_ o \_ WRONLY** &#124; ** \_ o \_ **将 &#124; ** \_ o \_ append**）|
+|**a +**|** \_ O \_ RDWR** &#124; ** \_ o \_ append** （通常为** \_ o \_ RDWR** &#124; ** \_ o \_ append** &#124; ** \_ o \_ ** append）|
+|**r**|**\_O \_ RDONLY**|
+|**r +**|**\_O \_ RDWR**|
+|**w**|** \_ O \_ WRONLY** （通常为** \_ o \_ WRONLY** &#124; ** \_ o \_ **将 &#124; ** \_ \_ TRUNC**|
+|**w +**|** \_ O \_ RDWR** （通常为** \_ o \_ RDWR** &#124; ** \_ o \_ **将 &#124; ** \_ \_ TRUNC**|
+|**b**|**\_O \_ 二进制**|
+|**关心**|**\_O \_ 文本**|
+|**ansi-c**|无|
+|**n**|无|
+|**S**|**\_O \_ 顺序**|
+|**R**|**\_O \_ 随机**|
+|**T**|**\_O \_ SHORTLIVED**|
+|**D**|**\_O \_ 暂时性**|
+|**ccs = UNICODE**|**\_O \_ WTEXT**|
+|**ccs = UTF-8**|**\_O \_ UTF8**|
+|**ccs = UTF-16LE**|**\_O \_ UTF16**|
 
 如果你使用的是**rb**模式，则无需移植代码，如果你希望读取大文件中的大部分，或者不关心网络性能，你还可以考虑是否使用内存映射的 Win32 文件作为选项。
 
@@ -317,7 +317,7 @@ int main(int argc, char** argv)
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [fclose、_fcloseall](fclose-fcloseall.md)<br/>
-[_fdopen，_wfdopen](fdopen-wfdopen.md)<br/>
+[_fdopen、_wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>
 [_fileno](fileno.md)<br/>
 [freopen、_wfreopen](freopen-wfreopen.md)<br/>

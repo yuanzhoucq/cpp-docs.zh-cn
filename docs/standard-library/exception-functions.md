@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 849f3c8406c43b0efc2d34837e00fee6ff64e52a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076569"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193778"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 函数
 
@@ -49,9 +49,9 @@ exception_ptr current_exception();
 
 调用 catch 块中的 `current_exception` 函数。 如果异常处于飞行状态，而且 catch 块可捕获该异常，则 `current_exception` 函数将返回引用该异常的 `exception_ptr` 对象。 否则，该函数将返回 null `exception_ptr` 对象。
 
-`current_exception` 函数捕获处于飞行中的异常，而不考虑**catch**语句是否指定[异常声明](../cpp/try-throw-and-catch-statements-cpp.md)语句。
+`current_exception`函数捕获处于飞行中的异常，而不考虑该 **`catch`** 语句是否指定[异常声明](../cpp/try-throw-and-catch-statements-cpp.md)语句。
 
-如果未再次引发异常，则将在**catch**块的末尾调用当前异常的析构函数。 但是，即使调用析构函数中的 `current_exception` 函数，该函数仍返回引用当前异常的 `exception_ptr` 对象。
+如果未再次引发异常，则将在块的末尾调用当前异常的析构函数 **`catch`** 。 但是，即使调用析构函数中的 `current_exception` 函数，该函数仍返回引用当前异常的 `exception_ptr` 对象。
 
 对 `current_exception` 函数的相继调用将返回引用当前异常的不同副本的 `exception_ptr` 对象。 因此，由于对象引用不同的副本，即使副本具有相同的二进制值，其比较结果也是不相等。
 
@@ -66,7 +66,7 @@ template <class E>
 
 ### <a name="parameters"></a>参数
 
-*除外*\
+*只有*\
 具有要复制的异常的类。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
 
 ### <a name="return-value"></a>返回值
@@ -89,7 +89,7 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>参数
 
-*P*\
+*H-p*\
 要再次引发的已捕获异常。 如果*P*为空[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，则函数将引发[std：： bad_exception](../standard-library/bad-exception-class.md)。
 
 ### <a name="remarks"></a>备注
@@ -170,7 +170,7 @@ template <class E>
 
 ### <a name="remarks"></a>备注
 
-如果不是多态类类型，或者 `nested_exception` 不可访问或不明确，则不起作用。 否则，执行动态强制转换。
+如果不是多态类类型，或者如果不可 `nested_exception` 访问或不明确，则不起作用。 否则，执行动态强制转换。
 
 ## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
 
@@ -230,9 +230,9 @@ void terminate();
 
 ### <a name="remarks"></a>备注
 
-函数调用终止处理程序，即**void**类型的函数。 如果 `terminate` 由程序直接调用，则终止处理程序是最近通过调用[set_terminate](../standard-library/exception-functions.md#set_terminate)设置的处理程序。 如果对 throw 表达式求值过程中的多个其他原因调用 `terminate`，则终止处理程序是在计算 throw 表达式后立即生效的处理程序。
+函数调用终止处理程序，它是类型的函数 **`void`** 。 如果 `terminate` 由程序直接调用，则终止处理程序是通过调用[set_terminate](../standard-library/exception-functions.md#set_terminate)最近设置的处理程序。 如果在 `terminate` 计算 throw 表达式的过程中有多个其他原因调用了，则终止处理程序是在计算 throw 表达式后立即生效的处理程序。
 
-终止处理程序可能不会返回至其调用方。 在程序启动时，终止处理程序是调用 `abort`的函数。
+终止处理程序可能不会返回至其调用方。 在程序启动时，终止处理程序是调用的函数 `abort` 。
 
 ### <a name="example"></a>示例
 
@@ -251,7 +251,7 @@ template <class T> [[noreturn]]
 
 ## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
-仅当引发的异常当前正在处理时返回 **true**。
+**`true`** 仅当当前正在处理引发的异常时返回。
 
 ```cpp
 bool uncaught_exception();
@@ -259,7 +259,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>返回值
 
-在完成引发表达式计算后，以及完成匹配处理程序中的异常声明初始化或引发表达式导致的调用 [unexpected](../standard-library/exception-functions.md#unexpected) 前，返回 **true**。 具体而言，如果从在异常展开过程中调用的析构函数调用，`uncaught_exception` 将返回**true** 。 在设备上，仅 Windows CE 5.00 及更高版本（包括 Windows Mobile 2005 平台）支持 `uncaught_exception`。
+在 **`true`** 完成 throw 表达式的求值后，以及在匹配处理程序中完成异常声明的初始化之前返回，或在引发表达式的结果中调用[意外](../standard-library/exception-functions.md#unexpected)之前返回。 特别是， `uncaught_exception` **`true`** 当从异常展开过程中调用的析构函数调用时，将返回。 在设备上，仅 Windows CE 5.00 及更高版本（包括 Windows Mobile 2005 平台）支持 `uncaught_exception`。
 
 ### <a name="example"></a>示例
 
@@ -326,7 +326,7 @@ void unexpected();
 
 C++ 标准要求在函数引发其引发列表中未包含的异常时调用 `unexpected`。 当前实现不支持此操作。 此示例直接调用会调用意外处理程序的 `unexpected`。
 
-函数调用意外的处理程序，即**void**类型的函数。 如果直接通过程序调用了 `unexpected`，则此意外处理程序是最近通过对 [set_unexpected](../standard-library/exception-functions.md#set_unexpected) 的调用设置的那一个。
+函数调用类型的异常处理程序 **`void`** 。 如果直接通过程序调用了 `unexpected`，则此意外处理程序是最近通过对 [set_unexpected](../standard-library/exception-functions.md#set_unexpected) 的调用设置的那一个。
 
 意外处理程序可能不会返回其调用方。 其可能通过以下方式终止执行：
 
@@ -334,7 +334,7 @@ C++ 标准要求在函数引发其引发列表中未包含的异常时调用 `un
 
 - 引发 [bad_exception](../standard-library/bad-exception-class.md) 类型的对象。
 
-- 调用[terminate](../standard-library/exception-functions.md#terminate)、`abort` 或**exit**（`int`）。
+- 调用[terminate](../standard-library/exception-functions.md#terminate) `abort` 或 `exit` 。
 
 程序启动时，意外处理程序是调用 [terminate](../standard-library/exception-functions.md#terminate) 的函数。
 

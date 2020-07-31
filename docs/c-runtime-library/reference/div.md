@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234219"
 ---
 # <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
 
@@ -77,13 +77,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>返回值
 
-使用**int**类型的参数调用的**div**返回类型为**div_t**的结构，该结构包含商和余数。 带有**long**类型的参数的返回值为**ldiv_t**，且类型为 long 的参数的返回 **值为** **lldiv_t**。 stdlib.h > 中\<定义了 div_t、ldiv_t 和 lldiv_t。
+**div**使用类型的参数调用的 div **`int`** 返回**div_t**类型的结构，该结构包含商和余数。 具有类型参数的返回值 **`long`** 为**ldiv_t**，且具有类型的参数的返回值 **`long long`** 为**lldiv_t**。 **div_t**、 **ldiv_t**和**lldiv_t**是在中定义的 \<stdlib.h> 。
 
 ## <a name="remarks"></a>备注
 
 **Div**函数通过*denom*将*收藏*除以，从而计算商和余数。 [Div_t](../../c-runtime-library/standard-types.md)结构包含**商、商**和**余数。** 商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
-采用**long**或**long**类型的参数的**div**重载仅适用于C++代码。 返回类型[ldiv_t](../../c-runtime-library/standard-types.md)和[lldiv_t](../../c-runtime-library/standard-types.md)包含与**div_t**成员具有相同意义**的成员。**
+采用类型为或的参数的**div**重载 **`long`** **`long long`** 仅可用于 c + + 代码。 [Ldiv_t](../../c-runtime-library/standard-types.md) **和** [lldiv_t](../../c-runtime-library/standard-types.md)的返回类型**包含成员，它们与** **div_t**的成员具有相同的含义。
 
 ## <a name="requirements"></a>要求
 
@@ -91,7 +91,7 @@ lldiv_t div(
 |-------------|---------------------|
 |**div**、 **ldiv**、 **lldiv**|\<stdlib.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -131,7 +131,7 @@ x is 876, y is 13
 The quotient is 67, and the remainder is 5
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv、lldiv](ldiv-lldiv.md)<br/>

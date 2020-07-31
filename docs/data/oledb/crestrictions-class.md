@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211297"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220439"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 
@@ -32,7 +32,7 @@ class CRestrictions :
    public CSchemaRowset <T, nRestrictions>
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
 用于访问器的类。
@@ -73,7 +73,7 @@ HRESULT Open(const CSession& session,
    bool bBind = true);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *会议*<br/>
 中指定用于连接到数据源的现有会话对象。
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 中指定架构行集的限制。
 
 *bBind*<br/>
-中指定是否自动绑定列映射。 默认值为**true**，这将导致自动绑定列映射。 将*bBind*设置为**false**可阻止自动绑定列映射，以便可以手动绑定。 （手动绑定对 OLAP 用户特别感兴趣。）
+中指定是否自动绑定列映射。 默认值为 **`true`** ，这将导致自动绑定列映射。 将*bBind*设置为可 **`false`** 阻止自动绑定列映射，以便可以手动绑定。 （手动绑定对 OLAP 用户特别感兴趣。）
 
 ### <a name="return-value"></a>返回值
 

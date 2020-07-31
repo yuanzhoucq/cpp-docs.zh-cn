@@ -1,5 +1,5 @@
 ---
-title: 默认值C++ （COM 特性）
+title: default （c + + COM 特性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167181"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215265"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -25,10 +25,10 @@ ms.locfileid: "80167181"
 [ default(interface1, interface2) ]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *interface1*<br/>
-默认接口，将可用于根据类（使用 **default** 属性定义）创建对象的脚本环境。
+默认接口，将可用于根据使用特性定义的类创建对象的脚本环境 **`default`** 。
 
 如果未指定默认接口，则第一个出现的非源接口用作默认接口。
 
@@ -39,11 +39,11 @@ ms.locfileid: "80167181"
 
 ## <a name="remarks"></a>备注
 
-**default** C++ 属性具有与 [default](/windows/win32/Midl/default) MIDL 属性相同的功能。 **default** 属性还可以与 [case](case-cpp.md) 属性结合使用。
+**`default`** C + + 特性具有与[默认](/windows/win32/Midl/default)MIDL 特性相同的功能。 该 **`default`** 属性还与[case](case-cpp.md)属性结合使用。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何在组件类的定义中使用**default**来将 `ICustomDispatch` 指定为默认可编程性接口：
+下面的代码演示如何 **`default`** 在组件类的定义中使用来将指定 `ICustomDispatch` 为默认可编程性接口：
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,7 +91,7 @@ int main() {
 }
 ```
 
-[source](source-cpp.md) 属性也有说明如何使用 **default**的示例。
+[Source](source-cpp.md)属性还提供了有关如何使用的示例 **`default`** 。
 
 ## <a name="requirements"></a>要求
 
@@ -99,9 +99,9 @@ int main() {
 
 |||
 |-|-|
-|**适用对象**|**类**、**结构**、数据成员|
-|**可重复**|否|
-|**必需的特性**|**coclass** （应用于**类**或**结构**时）|
+|**适用于**|**`class`**、 **`struct`** 、数据成员|
+|**且**|否|
+|**必需属性**|**coclass** （应用于 **`class`** 或时 **`struct`** ）|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

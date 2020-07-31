@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204880"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](sync-per-thread-class.md) 同步筛选器来分配节点。
 
-块分配器是一个缓存或筛选器。 缓存是一个类模板，它采用一个类型为 std：： size_t 的参数。 它定义分配和释放单个大小内存块的块分配器。 它必须使用运算符**new**获取内存，但不需要对每个块单独调用 operator **new** 。 例如，从较大块或缓存释放分配块进行子分配，以用于后续的重新分配。
+块分配器是一个缓存或筛选器。 缓存是一个类模板，它采用一个类型为 std：： size_t 的参数。 它定义分配和释放单个大小内存块的块分配器。 它必须使用运算符获取内存 **`new`** ，但不需要对每个块单独调用运算符 **`new`** 。 例如，从较大块或缓存释放分配块进行子分配，以用于后续的重新分配。
 
 如果编译器无法重新绑定在对模板进行实例化时使用的 std：： size_t 参数的值，则不一定是传递给缓存成员函数的参数 _Sz 分配和解除分配。
 
@@ -132,7 +132,7 @@ _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](sync-per-thread-class.m
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|操作员|说明|
 |-|-|
 |[operator！ = （ \<allocators> ）](allocators-operators.md#op_neq)|测试指定类的分配器对象之间是否不相等。|
 |[operator = = （ \<allocators> ）](allocators-operators.md#op_eq_eq)|测试指定类的分配器对象之间是否相等。|

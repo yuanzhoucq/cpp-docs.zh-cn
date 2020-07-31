@@ -9,12 +9,12 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: a5f67935bde103cf10c1bd9948ac1388f5221322
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: e3e1a28310660ad1fbdae4dd58973de378ddf364
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473886"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233127"
 ---
 # <a name="invoke_result-class"></a>invoke_result 类
 
@@ -31,9 +31,9 @@ template<class Callable, class... Args>
    using invoke_result_t = typename invoke_result<Callable, Args...>::type;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-可*调用*\
+*多次*\
 要查询的可调用类型。
 
 *Args*\
@@ -41,13 +41,13 @@ template<class Callable, class... Args>
 
 ## <a name="remarks"></a>备注
 
-使用此模板可在编译时确定可*调用*（*args*...）的结果类型，其中，可*调用*的和*参数*中的所有类型都是任何完整类型、未知绑定的数组或可能的 cv 限定的 `void`。 类模板的 `type` 成员在使用参数*Args*... 调用时命名可*调用*的返回类型。仅当使用参数*Args*... 调用*可调用*时，才定义 `type` 成员。在未计算的上下文中。 否则，类模板没有成员 `type`，这允许在编译时对特定参数类型集进行 SFINAE 测试。
+使用此模板可在编译时确定可*调用*（*args*...）的结果类型，其中，可*调用*的和*参数*中的所有类型都是任何完整的类型、未知绑定的数组或可能的 cv 限定的 **`void`** 。 `type`类模板的成员在使用 arguments 参数 ... 调用时命名可*调用*的返回类型 *。*`type`仅当使用参数*Args*... *Callable*调用时可以调用可调用时，才定义成员在未计算的上下文中。 否则，类模板没有成员 `type` ，这允许在编译时对特定参数类型集进行 SFINAE 测试。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits >
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>另请参阅
 

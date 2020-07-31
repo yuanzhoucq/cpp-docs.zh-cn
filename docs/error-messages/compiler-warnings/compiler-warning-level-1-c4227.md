@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4227
 ms.assetid: 78f98374-c00b-4000-aefa-1b1c67b4666b
-ms.openlocfilehash: d63d6b4997e7a7e8baf4c80841ffb4c7e59d03c7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5cc9e67c06443a73692ce663a2106dacff6035c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175904"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221011"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>编译器警告（等级 1）C4227
 
 使用了记时错误：忽略引用上的限定符
 
-使用 `const` 或带引用的C++ `volatile` 等限定符是一种过时的做法。
+使用 **`const`** 或 **`volatile`** c + + 引用等限定符是一种过时的做法。
 
 ## <a name="example"></a>示例
 

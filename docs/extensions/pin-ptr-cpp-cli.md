@@ -10,16 +10,16 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a9144229b75c09a892ddbf5bd592e67c7c2b6d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172030"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230553"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
-声明固定指针，此指针仅适用于公共语言运行时。
+声明固定指针**，此指针仅适用于公共语言运行时。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -31,7 +31,7 @@ ms.locfileid: "80172030"
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-固定指针是一个内部指针，可防止指向的对象在垃圾回收堆上移动。 也就是说，公共语言运行时不会更改固定指针的值。 向未托管的函数传递托管类的地址时，必须使用此指针，这样地址就不会在解析未托管的函数调用过程中意外更改。
+固定指针** 是一个内部指针，可防止指向的对象在垃圾回收堆上移动。 也就是说，公共语言运行时不会更改固定指针的值。 向未托管的函数传递托管类的地址时，必须使用此指针，这样地址就不会在解析未托管的函数调用过程中意外更改。
 
 ### <a name="syntax"></a>语法
 
@@ -39,23 +39,23 @@ ms.locfileid: "80172030"
 [cli::]pin_ptr<cv_qualifiertype>var = &initializer;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-cv_qualifier<br/>
-const 或 volatile 限定符。 默认情况下，固定指针为 volatile。 将固定指针声明为 volatile 虽是多余做法，但并不是错误做法。
+cv_qualifier**<br/>
+**`const`** 或 **`volatile`** 限定符。 默认情况下，钉住指针是 **`volatile`** 。 它是冗余的，但不是声明钉住指针的错误 **`volatile`** 。
 
-type<br/>
-初始值设定项的类型。
+*type*<br/>
+初始值设定项** 的类型。
 
 *var*<br/>
-pin_ptr 变量的名称。
+pin_ptr**** 变量的名称。
 
 *initializer*<br/>
 可以分配给本机指针的引用类型、托管数组的元素或者任何其他对象的成员。
 
 ### <a name="remarks"></a>备注
 
-pin_ptr 表示本机指针的功能超集。 因此，可以分配给本机指针的所有内容也可以分配给 pin_ptr。 内部指针允许执行与本机指针相同的操作，其中包括比较和指针算法。
+pin_ptr**** 表示本机指针的功能超集。 因此，可以分配给本机指针的所有内容也可以分配给 pin_ptr****。 内部指针允许执行与本机指针相同的操作，其中包括比较和指针算法。
 
 可以固定托管类的对象或子对象，在这种情况下，公共语言运行时不会在垃圾回收期间移动它。 它的主要用途是，将指向托管数据的指针作为未托管的函数调用的实际参数进行传递。 在回收周期内，运行时会检查为固定指针创建的元数据，但不会移动它指向的项。
 
@@ -65,13 +65,13 @@ pin_ptr 表示本机指针的功能超集。 因此，可以分配给本机指�
 
 如果将固定指针重新分配为指向新值，指向的旧实例就不再视为固定。
 
-对象只有在 pin_ptr 指向它时才会固定。 如果对象的固定指针超出范围或设置为 [nullptr](nullptr-cpp-component-extensions.md)，对象就不再固定。 在 pin_ptr 超出范围后，垃圾回收器可以在堆中移动之前固定的对象。 任何仍指向此对象的本机指针都不会进行更新，如果取消引用其中一个指针，可能会抛出不可恢复的异常。
+对象只有在 pin_ptr**** 指向它时才会固定。 如果对象的固定指针超出范围或设置为 [nullptr](nullptr-cpp-component-extensions.md)，对象就不再固定。 在 pin_ptr**** 超出范围后，垃圾回收器可以在堆中移动之前固定的对象。 任何仍指向此对象的本机指针都不会进行更新，如果取消引用其中一个指针，可能会抛出不可恢复的异常。
 
 如果没有固定指针指向对象（所有固定指针都超出了范围、重新分配为指向其他对象，或分配有 [nullptr](nullptr-cpp-component-extensions.md)），那么对象保证不会固定。
 
 固定指针可以指向引用句柄、值类型或装箱类型句柄、托管类型的成员或托管数组的元素。 但无法指向引用类型。
 
-获取指向本机对象的 pin_ptr 的地址会导致未定义的行为发生。
+获取指向本机对象的 pin_ptr**** 的地址会导致未定义的行为发生。
 
 固定指针只能声明为堆栈上的非静态本地变量。
 
@@ -85,7 +85,7 @@ pin_ptr 表示本机指针的功能超集。 因此，可以分配给本机指�
 
 - 强制转换的目标类型。
 
-pin_ptr 位于 `cli` 命名空间中。 有关详细信息，请参阅[平台默认 cli 命名空间](platform-default-and-cli-namespaces-cpp-component-extensions.md)。
+pin_ptr**** 位于 `cli` 命名空间中。 有关详细信息，请参阅[平台默认 cli 命名空间](platform-default-and-cli-namespaces-cpp-component-extensions.md)。
 
 若要详细了解内部指针，请参阅 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)。
 
@@ -97,7 +97,7 @@ pin_ptr 位于 `cli` 命名空间中。 有关详细信息，请参阅[平台默
 
 ### <a name="examples"></a>示例
 
-下面的示例使用 pin_ptr 来约束数组中第一个元素的位置。
+下面的示例使用 pin_ptr**** 来约束数组中第一个元素的位置。
 
 ```cpp
 // pin_ptr_1.cpp

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 98c146cec2febefee9c16528bee8f6be83f2a026
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 6c50825cb3003c2b1b63a25419ca67742c92b52f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032429"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214992"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 
@@ -35,36 +35,36 @@ ref class MapView sealed;
 
 #### <a name="parameters"></a>参数
 
-*K*<br/>
+*温度*<br/>
 键值对中键的类型。
 
-*五*<br/>
+*向量*<br/>
 键值对中值的类型。
 
 *C*<br/>
-提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下[，std：：减去\<K>](../standard-library/less-struct.md)。
+提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下， [std：： \<K> less](../standard-library/less-struct.md)。
 
 ### <a name="remarks"></a>备注
 
-MapView 是[Windows：：基础：集合：：IMapView \<K，V>](/uwp/api/windows.foundation.collections.imapview-2)接口的具体 C++实现，该接口通过应用程序二进制接口 （ABI） 传递。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+MapView 是跨应用程序二进制接口（ABI）传递的[Windows：： Foundation：： \<K,V> 集合：： IMapView](/uwp/api/windows.foundation.collections.imapview-2)接口的具体 c + + 实现。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[地图视图：mapView](#ctor)|初始化 MapView 类的新实例。|
+|[MapView：： MapView](#ctor)|初始化 MapView 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[地图视图：第一](#first)|返回初始化为映射视图中第一个元素的迭代器。|
-|[地图视图：：有键](#haskey)|确定当前 MapView 中是否包含指定键。|
-|[地图视图：：查找](#lookup)|检索当前 MapView 对象中指定键处的元素。|
+|[MapView：： First](#first)|返回初始化为映射视图中第一个元素的迭代器。|
+|[MapView：： HasKey](#haskey)|确定当前 MapView 中是否包含指定键。|
+|[MapView：： Lookup](#lookup)|检索当前 MapView 对象中指定键处的元素。|
 |[MapView::Size](#size)|返回当前 MapView 对象中的元素数目。|
-|[地图视图：拆分](#split)|将原始 MapView 对象拆分成两个 MapView 对象。|
+|[MapView：： Split](#split)|将原始 MapView 对象拆分成两个 MapView 对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -72,11 +72,11 @@ MapView 是[Windows：：基础：集合：：IMapView \<K，V>](/uwp/api/window
 
 ### <a name="requirements"></a>要求
 
-**标题：** 集合.h
+**标头：** 集合。h
 
 **命名空间：** Platform::Collections
 
-## <a name="mapviewfirst-method"></a><a name="first"></a>地图视图：第一种方法
+## <a name="mapviewfirst-method"></a><a name="first"></a>MapView：： First 方法
 
 返回指定映射视图中第一个元素的迭代器。
 
@@ -93,9 +93,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>备注
 
-保存 First（） 返回的迭代器的一个方便方法是将返回值分配给使用**自动**类型扣减关键字声明的变量。 例如，`auto x = myMapView->First();` 。
+保存第一个（）返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myMapView->First();`。
 
-## <a name="mapviewhaskey-method"></a><a name="haskey"></a>地图视图：：有键方法
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView：： HasKey 方法
 
 确定当前 MapView 中是否包含指定键。
 
@@ -108,14 +108,14 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>参数
 
-*键*<br/>
-用于定位 MapView 元素的键。 *键*的类型是类型名称*K*。
+*key*<br/>
+用于定位 MapView 元素的键。 *键*类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-如果找到密钥，**则为 true;** 否则，**假**。
+**`true`** 如果找到该键，则为;否则为 **`false`** 。
 
-## <a name="mapviewlookup-method"></a><a name="lookup"></a>地图视图：：查找方法
+## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView：： Lookup 方法
 
 检索与类型 K 的指定键关联的类型 V 的值。
 
@@ -127,14 +127,14 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>参数
 
-*键*<br/>
-用于定位 MapView 中的元素的键。 的类型`key`是类型名称*K*。
+*key*<br/>
+用于定位 MapView 中的元素的键。 的类型 `key` 为 Typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-与 `key` 配对的值。 返回值的类型为类型名称*V*。
+与 `key` 配对的值。 返回值的类型为 typename *V*。
 
-## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>地图视图：mapView 构造函数
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView：： MapView 构造函数
 
 初始化 MapView 类的新实例。
 
@@ -159,25 +159,25 @@ MapView(
 
 ### <a name="parameters"></a>参数
 
-*Init*<br/>
+*InIt*<br/>
 当前 MapView 的类型名称。
 
-*Comp*<br/>
+*comp*<br/>
 可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序的函数对象。
 
-*米*<br/>
-对 用于初始化当前 MapView`map Class`的 引用或[Lvalue 和 Rvalue。](../cpp/lvalues-and-rvalues-visual-cpp.md)
+*m*<br/>
+用于初始化当前 MapView 的[左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)的引用 `map Class` 。
 
-*第一*<br/>
+*first*<br/>
 用于初始化当前 MapView 的一系列元素中的第一个元素的输入迭代器。
 
-*最后*<br/>
+*last*<br/>
 用于初始化当前 MapView 的一系列元素之后的第一个元素的输入迭代器。
 
-*I l*<br/>
-[std：：initializer_list<下：:p空气\<K，V>>](../standard-library/initializer-list-class.md)其元素将插入MapView。
+*il*<br/>
+[Std：： initializer_list<std \<K,V> > ：:p](../standard-library/initializer-list-class.md)要将其元素插入到 MapView 中的空气。
 
-## <a name="mapviewsize-method"></a><a name="size"></a>地图视图：大小方法
+## <a name="mapviewsize-method"></a><a name="size"></a>MapView：： Size 方法
 
 返回当前 MapView 对象中的元素数目。
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 当前 MapView 中的元素数目。
 
-## <a name="mapviewsplit-method"></a><a name="split"></a>映射视图：：拆分方法
+## <a name="mapviewsplit-method"></a><a name="split"></a>MapView：： Split 方法
 
 将当前 MapView 对象分成两个 MapView 对象。 此方法为非操作性的。
 
@@ -207,16 +207,16 @@ void Split(
 
 ### <a name="parameters"></a>参数
 
-*第一个分区*<br/>
+*firstPartition*<br/>
 原始 MapView 对象的第一部分。
 
-*第二个分区*<br/>
+*secondPartition*<br/>
 原始 MapView 对象的第二部分。
 
 ### <a name="remarks"></a>备注
 
 此方法为非操作性的，它不执行任何操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)

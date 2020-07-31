@@ -2,12 +2,12 @@
 title: 翻译单元和链接（c + +）
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: e964a3c70c138caf8848e6a6366097cbfb90f548
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: 5a166efc7ae926f6b028c35007b0972d0a652d6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108387"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227187"
 ---
 # <a name="translation-units-and-linkage"></a>翻译单元和链接
 
@@ -44,7 +44,7 @@ public:
 
 *Free 函数*是在全局或命名空间范围中定义的函数。 非常量的全局变量和 free 函数默认情况下具有*外部链接*;它们在程序的任何翻译单元中可见。 因此，其他全局对象不能具有该名称。 带有*内部链接*的符号或*没有链接*的符号仅在声明它的翻译单元中可见。 如果名称具有内部链接，则同一名称可能存在于另一个翻译单元中。 在类定义或函数体中声明的变量没有链接。
 
-可以通过将全局名称显式声明为**静态**，来强制全局名称具有内部链接。 这会将其可见性限制在声明它的同一转换单元中。 在这种情况下， **static**意味着应用于局部变量的情况有所不同。
+您可以通过将全局名称显式声明为来强制使用内部链接 **`static`** 。 这会将其可见性限制在声明它的同一转换单元中。 在这 **`static`** 种情况下，表示应用于局部变量的方式不同。
 
 默认情况下，下列对象具有内部链接：
 
@@ -53,7 +53,7 @@ public:
 - typedefs
 - 命名空间范围内的静态对象
 
-若要为常量对象外部链接，请将其声明为**extern** ，并为其分配一个值：
+若要为常量对象外部链接，请将其声明为， **`extern`** 并为其赋值：
 
 ```cpp
 extern const int value = 42;

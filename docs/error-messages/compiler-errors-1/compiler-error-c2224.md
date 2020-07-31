@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2224
 ms.assetid: 27b93bbf-4ce7-47a3-a9c4-f4fbed689bdf
-ms.openlocfilehash: 620d28bfed178f3bb38df268ae851412bf6b0815
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2d7e045d12e6a21c4a63aee6089a8caa5f9984b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87208936"
 ---
 # <a name="compiler-error-c2224"></a>编译器错误 C2224
 
@@ -19,4 +19,4 @@ ms.locfileid: "80206567"
 
 句点（.）左侧的操作数不是类、结构或联合。
 
-此错误可能是由作为未定义的变量的左操作数引起的（因此，类型 `int`）。
+此错误可能由作为未定义的变量（因此类型）的左操作数引起 **`int`** 。

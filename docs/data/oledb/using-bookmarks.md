@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8caa33b3bafbaa9e537d9669aa7b60a9355475ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209308"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218294"
 ---
 # <a name="using-bookmarks"></a>使用书签
 
-在打开行集之前，必须告知提供程序要使用书签。 为此，请将属性集中的 `DBPROP_BOOKMARKS` 属性设置为**true** 。 提供程序将书签检索为列零，因此，如果使用的是静态访问器，则必须使用特殊的宏 BOOKMARK_ENTRY 和 `CBookmark` 类。 `CBookmark` 是一个模板类，其中的参数是书签缓冲区的长度（以字节为单位）。 书签所需的缓冲区长度取决于提供程序。 如果使用的是 ODBC OLE DB 提供程序，如下面的示例中所示，缓冲区必须为4字节。
+在打开行集之前，必须告知提供程序要使用书签。 为此，请将属性设置为，并将属性 `DBPROP_BOOKMARKS` **`true`** 设置为。 提供程序将书签检索为列零，因此， `CBookmark` 如果使用的是静态访问器，则必须使用特殊的宏 BOOKMARK_ENTRY 和类。 `CBookmark`一个模板类，其中的参数为书签缓冲区的长度（以字节为单位）。 书签所需的缓冲区长度取决于提供程序。 如果使用的是 ODBC OLE DB 提供程序，如下面的示例中所示，缓冲区必须为4字节。
 
 ```cpp
 class CProducts
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-如果使用 `CDynamicAccessor`，则将在运行时动态设置缓冲区。 在这种情况下，你可以使用未指定缓冲区长度的 `CBookmark` 专用版本。 使用函数 `GetBookmark` 从当前记录中检索书签，如以下代码示例所示：
+如果使用 `CDynamicAccessor` ，则会在运行时动态设置缓冲区。 在这种情况下，您可以使用的专用版本， `CBookmark` 不会指定缓冲区长度。 使用函数 `GetBookmark` 从当前记录中检索书签，如以下代码示例所示：
 
 ```cpp
 CTable<CDynamicAccessor> product;

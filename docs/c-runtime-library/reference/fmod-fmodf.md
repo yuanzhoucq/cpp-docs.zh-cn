@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216968"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -77,13 +77,13 @@ long double fmodl(
 
 ## <a name="return-value"></a>返回值
 
-**fmod**返回*x* / *y*的浮点余数。 如果*y*的值为0.0，则**fmod**将返回静默的 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf](printf-printf-l-wprintf-wprintf-l.md)。
+**fmod**返回*x*  /  *y*的浮点余数。 如果*y*的值为0.0，则**fmod**将返回静默的 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fmod**函数计算*x* / *y*的浮点余数*f* ，这是*x* = *i* \* *y* + *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
+**Fmod**函数计算*x*y 的浮点余数*f*  /  *y* ，这是*x*  =  *i* \* *y*  +  *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
 
-C + + 允许重载，因此你可以调用**fmod**的重载，该重载采用并返回**浮点**和**长****双精度**值。 在 C 程序中， **fmod**始终采用两个**双精度**参数并返回**double**。
+C + + 允许重载，因此你可以调用**fmod**的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中， **fmod**始终采用两个 **`double`** 参数，并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872382"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224820"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -166,7 +166,7 @@ cout.imbue(loc);
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|操作员|说明|
 |-|-|
 |[operator =](#op_eq)|指定区域设置。|
 |[operator！ =](#op_neq)|测试两个区域设置是否不相等。|
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>备注
 
-类型是**int**类型的同义词，该类型可以表示类区域设置本地位掩码类型的一组非重复元素，也可以用来表示任何相应的 C 区域设置类别。 这些元素为：
+类型是一种类型的同义词 **`int`** ，该类型可以表示类区域设置的本地位掩码类型的一组非重复元素，也可以用来表示任何相应的 C 区域设置类别。 这些元素为：
 
 - `collate`，与 C 类别相对应 LC_COLLATE
 
@@ -574,7 +574,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="return-value"></a>返回值
 
-一个布尔值，如果区域设置不是相同区域设置的副本，则为**true** 。 如果区域设置是相同区域设置的副本，则**为 false** 。
+一个布尔值， **`true`** 如果区域设置不是相同区域设置的副本，则为。 **`false`** 如果区域设置是相同区域设置的副本，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -641,7 +641,7 @@ bool operator()(
 
 ### <a name="return-value"></a>返回值
 
-- `true`如果按字典顺序小于*右侧* *，则为*; 否则为 `false` 。
+- **`true`** 如果按字典顺序小于*右侧* *，则为*; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -701,7 +701,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="return-value"></a>返回值
 
-一个布尔值，如果区域设置是相同区域设置的副本，则为**true** 。 如果区域设置不是相同区域设置的副本，则**为 false** 。
+一个布尔值， **`true`** 如果区域设置是相同区域设置的副本，则该值为。 **`false`** 如果区域设置不是相同区域设置的副本，则为。
 
 ### <a name="remarks"></a>备注
 

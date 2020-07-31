@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 190acd619224bdf22a5c8d35f541fa48b6664fe1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223143"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>标准 Windows 消息的处理程序
 
@@ -23,7 +23,7 @@ ms.locfileid: "84625761"
 
 `afx_msg void OnPaint();`
 
-**Afx_msg**关键字通过区分来自其他成员函数的处理程序来建议 c + +**虚拟**关键字的影响 `CWnd` 。 但请注意，这些函数实际上都不是虚函数；它们是通过消息映射实现的。 消息映射仅取决于标准预处理器宏，而不是 C++ 语言的任何扩展。 在预处理后， **afx_msg**关键字解析为空白。
+**Afx_msg**关键字 **`virtual`** 通过区分来自其他成员函数的处理程序来建议 c + + 关键字的影响 `CWnd` 。 但请注意，这些函数实际上都不是虚函数；它们是通过消息映射实现的。 消息映射仅取决于标准预处理器宏，而不是 C++ 语言的任何扩展。 在预处理后， **afx_msg**关键字解析为空白。
 
 若要重写基类中定义的处理程序，只需使用派生类中相同的原型定义一个函数，并为处理程序生成一个消息映射条目。 您的处理程序将“重写”任何类的基类中名称相同的任意处理程序。
 
@@ -36,7 +36,7 @@ ms.locfileid: "84625761"
 
 [!code-cpp[NVC_MFCMessageHandling#3](codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
 
-按照约定，这些处理程序的名称以前缀“On”开头。 其中一些处理程序不采用任何自变量，而另一些处理程序采用几个自变量。 有些也有**void**以外的返回类型。 所有**WM_** 消息的默认处理程序在*MFC 引用*中记录为类的成员函数， `CWnd` 其名称以 "On" 开头。 中的成员函数声明以 `CWnd` **afx_msg**为前缀。
+按照约定，这些处理程序的名称以前缀“On”开头。 其中一些处理程序不采用任何自变量，而另一些处理程序采用几个自变量。 有些也有一个返回类型，而不是 **`void`** 。 所有**WM_** 消息的默认处理程序在*MFC 引用*中记录为类的成员函数， `CWnd` 其名称以 "On" 开头。 中的成员函数声明以 `CWnd` **afx_msg**为前缀。
 
 ## <a name="see-also"></a>另请参阅
 
