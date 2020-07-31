@@ -1,4 +1,4 @@
----
+﻿---
 title: /Qspectre
 ms.date: 09/06/2019
 f1_keywords:

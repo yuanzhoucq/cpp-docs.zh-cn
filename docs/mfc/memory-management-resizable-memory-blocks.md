@@ -1,4 +1,4 @@
----
+﻿---
 title: 内存管理：可调整大小的内存块
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -24,5 +24,7 @@ ms.locfileid: "87217917"
 > **`new`** **`delete`** 将和运算符与同一内存块上可调整大小的内存分配函数混合在一起会导致 MFC 调试版本中的内存损坏。 不应在使用**realloc**分配的内存块上使用 realloc **`new`** 。 同样，你不应使用运算符分配内存块 **`new`** 并将其删除，也**free**不应 **`delete`** 在使用**malloc**分配的内存块上使用运算符。
 
 ## <a name="see-also"></a>另请参阅
+将**new**和**delete**运算符与同一内存块上可调整大小的内存分配函数混合将导致 MFC 的 Debug 版本中的内存损坏。 您不应该在用**new**分配的内存块上使用**realloc**。 同样，您不应该使用**new**运算符分配内存块并使用**free**删除它，或者在使用**malloc**分配的内存块上使用**delete**运算符。
+
 
 [内存管理：堆分配](memory-management-heap-allocation.md)

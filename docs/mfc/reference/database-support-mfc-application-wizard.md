@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC 应用程序向导的数据库支持
 ms.date: 11/04/2016
 f1_keywords:
