@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: e9cb8c452cc3eea32b6eed9bf23fb454344c105d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4a24fcab0eb34bbba597ba0b5c1fac22a929c0c0
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214082"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470909"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 类
 
@@ -49,7 +49,7 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[COleDataObject：： COleDataObject](#coledataobject)|构造 `COleDataObject` 对象。|
 
@@ -76,7 +76,7 @@ class COleDataObject
 
 此类使你能够确定数据是否以指定格式存在。 您还可以枚举可用的数据格式，或检查给定的格式是否可用，然后以首选格式检索数据。 可以通过几种不同的方式完成对象检索，包括使用[CFile](../../mfc/reference/cfile-class.md)、HGLOBAL 或 `STGMEDIUM` 结构。
 
-有关详细信息，请参阅 Windows SDK 中的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)结构。
+有关详细信息，请参阅 Windows SDK 中的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)结构。
 
 有关在应用程序中使用数据对象的详细信息，请参阅文章[数据对象和数据源（OLE）](../../mfc/data-objects-and-data-sources-ole.md)。
 
@@ -189,7 +189,7 @@ BOOL GetData(
 要返回的数据的格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
 
 *lpStgMedium*<br/>
-指向将接收数据的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)结构。
+指向将接收数据的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)结构。
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，该结构描述要返回的数据的格式。 如果要指定超出*cfFormat*指定的剪贴板格式的其他格式信息，请提供此参数的值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
@@ -200,7 +200,7 @@ BOOL GetData(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅 Windows SDK 中的[IDataObject：：](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) [STGMEDIUM 和](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
+有关详细信息，请参阅 Windows SDK 中的[IDataObject：：](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) [STGMEDIUM 和](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
 
 有关详细信息，请参阅 Windows SDK 中的[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
 
@@ -336,7 +336,7 @@ void Release();
 
 `IDataObject`与 `COleDataObject` 通过调用 `Attach` 或 `AttachClipboard` 显式或通过框架来关联。 如果的*bAutoRelease*参数 `Attach` 为 FALSE，则 `IDataObject` 不会释放对象。 在这种情况下，调用方负责 `IDataObject` 通过调用[IUnknown：： Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)来释放。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [MFC 示例 OCLIENT](../../overview/visual-cpp-samples.md)<br/>
