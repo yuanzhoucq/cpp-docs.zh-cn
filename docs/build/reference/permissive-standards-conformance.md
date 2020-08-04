@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36861705acf0328af5c1207c3bf33a098fc3b348
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217202"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520546"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive-（标准符合性）
 
@@ -240,13 +240,13 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 此更改可能导致的常见错误包括：
 
-- **`error C2593`**`: 'operator ?' is ambiguous`
+- `error C2593: 'operator ?' is ambiguous`
 
-- **`error C2679`**`: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
+- `error C2679: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
 
-- **`error C2678`**`: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
+- `error C2678: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
 
-- **`error C2446`**`: ':': no conversion from 'B' to 'A'`
+- `error C2446: ':': no conversion from 'B' to 'A'`
 
 如果某个类 C 同时提供了另一类型 T 中的非显式构造函数和类型 T 的非显式转换运算符，则可能导致此问题的一种典型的代码模式。在这种情况下，第二个参数的类型转换为第三个参数的类型，第三个参数的转换为第二个参数的类型，是有效的转换。 由于两者都是有效的，因此它不明确，这一点与标准有所不同。
 
@@ -463,7 +463,7 @@ Windows 2018 年4月更新 SDK （10.0.17134.0）中发布的这些 WinRT WRL �
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)\
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

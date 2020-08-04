@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: fbbeb2fe8d122cd3ca396900ee1b3806e2069b7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0b33404f16df59e2cb73023f3539e87080734a1
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202878"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520598"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits 类
 
@@ -88,7 +88,7 @@ template <class Type>
     class numeric_limits
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 正在测试、查询或设置其属性的基础元素数据类型。 *类型*还可以声明为 **`const`** 、 **`volatile`** 或 **`const volatile`** 。
@@ -345,7 +345,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 #### <a name="return-value"></a>返回值
 
-类型的枚举值 **`const`** `float_denorm_style` ，指示类型是否允许非规范化值。
+类型的枚举值 `const float_denorm_style` ，指示类型是否允许非规范化值。
 
 #### <a name="remarks"></a>备注
 

@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 8876995f947823d046e0a3ea9a316a4249055d7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 481836b22544c7bcf35df7fe27e75aae0492af42
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212327"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521260"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap 类
 
@@ -110,7 +110,7 @@ template <class Key,
 class hash_multimap
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要存储在 hash_multimap 中的键数据类型。
@@ -156,7 +156,7 @@ hash_multimap 类所提供的迭代器是双向迭代器，但类成员函数 [i
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[hash_multimap](#hash_multimap)|构造一个列表，它具有特定大小、具有特定值的元素、包含特定 `allocator` 或作为其他一些 `hash_multimap` 的副本。|
 
@@ -212,7 +212,7 @@ hash_multimap 类所提供的迭代器是双向迭代器，但类成员函数 [i
 
 ### <a name="operators"></a>运算符
 
-|操作员|描述|
+|运算符|说明|
 |-|-|
 |[hash_multimap::operator=](#op_eq)|将一个 `hash_multimap` 中的元素替换为另一 `hash_multimap` 副本。|
 
@@ -587,7 +587,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要从 hash_multimap 中进行匹配的元素的键。
@@ -845,9 +845,9 @@ template <class ValTy>
 iterator emplace(ValTy&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|此值用于移动构造要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 的元素。|
 
@@ -902,9 +902,9 @@ iterator emplace_hint(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|要插入 [hash_multimap](../standard-library/hash-multimap-class.md) 的用于移动构造元素的值，除非此 `hash_multimap` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*_Where*|有关开始搜索正确插入点的位置的提示。|
@@ -1083,7 +1083,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
@@ -1174,7 +1174,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Where*\
 要从 hash_multimap 移除的元素的位置。
@@ -1298,7 +1298,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与搜索的 hash_multimap 中元素的排序键匹配的键。
@@ -1511,15 +1511,15 @@ hash_multimap(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*Fc-al*|要用于此 hash_multimap 对象的存储分配器类，默认为 `Allocator`。|
 |*压缩*|用于对 map 中元素排序的类型 `const Traits` 的比较函数，默认为 `Traits`。|
 |*Right*|所构造集要作为其副本的映射。|
 |*First*|要复制的范围元素中的第一个元素的位置。|
-|*时间*|要复制的元素范围以外的第一个元素的位置。|
+|*上一个*|要复制的元素范围以外的第一个元素的位置。|
 |*IList*|要从中进行复制的 initializer_list。|
 
 ### <a name="remarks"></a>备注
@@ -1571,14 +1571,14 @@ iterator insert(
     ValTy&& Val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|将插入 hash_multimap 的元素的值，除非已包含该元素，或更普遍的情况是除非它已包含其键已经过相同排序的元素。|
 |*Where*|有关从哪里开始搜索正确插入点的位置的提示。|
 |*First*|要从映射中复制的第一个元素的位置。|
-|*时间*|要从映射中复制的最后一个元素以外的位置。|
+|*上一个*|要从映射中复制的最后一个元素以外的位置。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1611,9 +1611,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 `iterator`定义的 hash_multimap 指向[value_type](#value_type)的对象，这些对象的类型为 `pair` \< **const Key, Type**> ，其第一个成员是元素的键，第二个成员是元素所持有的映射基准。
 
-若要取消**iterator**引用 `Iter` 指向 hash_multimap 中的元素的迭代器，请使用 `->` 运算符。
+若要取消引用名为的迭代器，该迭代器 `Iter` 指向 hash_multimap 中的元素，请使用 `->` 运算符。
 
-若要访问元素的键值，请使用 `Iter` -> **first**，其等同于 (\* `Iter`)。 **第一**种。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **第一**种。
+若要访问元素的键值，请使用 `Iter->first` 等效于的 `(*Iter).first` 。 若要访问元素的映射基准值，请使用 `Iter->second` 等效于的 `(*Iter).first` 。
 
 类型 `iterator` 可用于修改元素的值。
 
@@ -1640,7 +1640,7 @@ key_compare key_comp() const;
 
 存储对象会定义成员函数
 
-**bool operator(const Key&** `left` **, const Key&** `right` **);**
+`bool operator( const Key& left, const Key& right );`
 
 **`true`** 如果 `left` `right` 在排序顺序中先于且不等于，则返回。
 
@@ -1748,7 +1748,7 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
@@ -1902,9 +1902,9 @@ hash_multimap& operator=(const hash_multimap& right);
 hash_multimap& operator=(hash_multimap&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*然后*|正在复制到 `hash_multimap` 的 [hash_multimap](../standard-library/hash-multimap-class.md)。|
 
@@ -2302,7 +2302,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 void swap(hash_multimap& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 hash_multimap 提供要交换的元素或其元素要与 hash_multimap 的元素进行交换的 hash_multimap。
@@ -2376,7 +2376,7 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
@@ -2593,7 +2593,7 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

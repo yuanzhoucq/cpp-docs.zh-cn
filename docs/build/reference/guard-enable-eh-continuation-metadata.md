@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190515"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520520"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont（启用 EH 持续元数据）
 
@@ -51,9 +51,9 @@ ms.locfileid: "87190515"
 
 如果链接器无法生成元数据，则会发出以下错误之一：
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 若要检查二进制文件是否包含 EHCONT 数据，请在转储二进制文件的负载配置时查找以下元素：
 
@@ -87,7 +87,7 @@ e:\>link /dump /loadconfig CETTest.exe
 
 1. 在下拉控件中，选择 **"是" （/guard： ehcont）** 启用 EH 继续元数据，或选择 "**否" （/guard： ehcont-）** 以禁用它。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [/guard （启用控制流防护）](guard-enable-control-flow-guard.md)\
 [MSVC 编译器选项](compiler-options.md)\

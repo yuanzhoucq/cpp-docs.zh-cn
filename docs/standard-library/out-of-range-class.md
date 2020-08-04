@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3bbbc48aa2020782594606c6a53a34f7b937fc58
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453087"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521273"
 ---
-# <a name="outofrange-class"></a>out_of_range 类
+# <a name="out_of_range-class"></a>out_of_range 类
 
 此类用作引发报告无效自变量的所有异常的基类。
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-[what](../standard-library/exception-class.md) 返回的值是 **message**`.`[data](../standard-library/basic-string-class.md#data) 的副本。
+返回的值 `what()` 是的副本 `message.data()` 。 有关详细信息，请参阅 [`what`](../standard-library/exception-class.md) 和 [`data`](../standard-library/basic-string-class.md#data)。
 
 ## <a name="example"></a>示例
 
@@ -57,7 +57,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```cpp
 Caught: invalid string position
@@ -65,11 +65,11 @@ Caught: invalid string position
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<stdexcept>
+**标头：**\<stdexcept>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
 [logic_error 类](../standard-library/logic-error-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

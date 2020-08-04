@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229098"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521156"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>按位异或运算符：^
 
@@ -28,7 +28,7 @@ ms.locfileid: "87229098"
 
 ## <a name="remarks"></a>备注
 
-按位 "异或" 运算符（ **`^`** ）将第一个操作数的每个位与其第二操作数的相应位进行比较。 如果第一个操作数中的位是0，另一个位是1，则相应的结果位将设置为1。 否则，将对应的结果位设置为 0。
+按位 "异或" 运算符（ **`^`** ）将第一个操作数的每个位与其第二操作数的相应位进行比较。 如果其中一个操作数的位是0，另一个操作数中的位为1，则相应的结果位将设置为1。 否则，将对应的结果位设置为 0。
 
 运算符的两个操作数必须具有整数类型。 [标准转换](standard-conversions.md)中涵盖的常用算术转换将应用于操作数。
 
@@ -53,6 +53,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 内置运算符、优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

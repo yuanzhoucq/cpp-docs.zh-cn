@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: a38a22abe4381afd45948e56d46c54f39028517d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b93664377838cd5ff97346282cb9120ae9b5e37
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217371"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520585"
 ---
 # <a name="unary_function-struct"></a>unary_function 结构
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>备注
 
-模板结构用作定义**result_type** `operator()` （ **constargument_type&**）形式的成员函数的类的基类 **`const`** 。
+模板结构用作定义窗体的成员函数的类的基类 `result_type operator()( constargument_type& ) const` 。
 
 所有这些派生的一元函数都可将其唯一参数类型引用为 **argument_type**，将其返回类型引用为 **result_type**。
 

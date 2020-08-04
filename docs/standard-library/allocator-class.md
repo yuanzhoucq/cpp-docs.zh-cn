@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42d640ba456e8327df7a070cb12914b765c07bf5
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204984"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520909"
 ---
 # <a name="allocator-class"></a>allocator 类
 
@@ -52,7 +52,7 @@ template <class Type>
 class allocator
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 为其分配或释放存储的对象的类型。
@@ -126,7 +126,7 @@ pointer address(reference val) const;
 const_pointer address(const_reference val) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *初始值*\
 要搜索其地址的对象的常量或非常量值。
@@ -191,7 +191,7 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 pointer allocate(size_type count, const void* _Hint);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计*\
 要分配足够的存储空间的元素数量。
@@ -254,7 +254,7 @@ template <class Other>
     allocator(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*\
 要复制的分配器对象。
@@ -458,7 +458,7 @@ template <class _Other>
     void construct(pointer ptr, _Other&&... val);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要构造对象的位置的指针。
@@ -527,7 +527,7 @@ The modified vector v1 is:
 void deallocate(pointer ptr, size_type count);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要从存储中释放的第一个对象的指针。
@@ -551,14 +551,14 @@ void deallocate(pointer ptr, size_type count);
 void destroy(pointer ptr);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ptr*\
 指定要销毁的对象的地址的指针。
 
 #### <a name="remarks"></a>备注
 
-成员函数通过调用析构函数*ptr* `ptr->` **类型**：：**~ type**销毁由 ptr 指定的对象。
+成员函数通过调用析构函数来销毁由*ptr*指定的对象 `ptr->Type::~Type` 。
 
 #### <a name="example"></a>示例
 
@@ -748,7 +748,7 @@ template <class Other>
     allocator<Type>& operator=(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*\
 要分配到另一个对象的分配器对象。
@@ -865,7 +865,7 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 struct rebind { typedef allocator<_Other> other; };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *以外*\
 所分配内存的元素的类型。

@@ -1,14 +1,14 @@
-﻿---
+---
 title: C++ 类型系统
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: cbe0b4421d2e7727b919dfaf20218b8da03ea871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228981"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521208"
 ---
 # <a name="c-type-system"></a>C++ 类型系统
 
@@ -51,30 +51,32 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>基本（内置）类型
 
-不同于某些语言，C++ 中不存在派生所有其他类型的通用基类型。 该语言包含许多*基本类型*，也称为*内置类型*。 这包括数字类型，例如 **`int`** 、、、 **`double`** ，以及 **`long`** **`bool`** **`char`** **`wchar_t`** ASCII 和 UNICODE 字符的和类型。 大多数基础类型（除 **`bool`** 、 **`double`** 、 **wc.exe `har_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **` int `**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **` 无符号 int "**，它也存储为32位）可以存储0到4294967295之间的值。 可能的值的总数在每种情况下都相同；仅范围不同。
+不同于某些语言，C++ 中不存在派生所有其他类型的通用基类型。 该语言包含许多*基本类型*，也称为*内置类型*。 这包括数字类型，例如 **`int`** 、、、 **`double`** ，以及 **`long`** **`bool`** **`char`** **`wchar_t`** ASCII 和 UNICODE 字符的和类型。 大多数整型基本类型（、、、 **`bool`** **`double`** **`wchar_t`** 和相关类型除外）都具有 **`unsigned`** 版本，这些版本修改了变量可存储的值的范围。 例如， **`int`** 存储32位有符号整数的，可以表示从-2147483648 到2147483647的值。 **`unsigned int`**，它也存储为32位，可存储0到4294967295之间的值。 可能的值的总数在每种情况下都相同；仅范围不同。
 
 基础类型由编译器识别，编译机包含内置规则，这些规则管理可对它们执行的操作以及将它们转换为其他基础类型的方式。 有关内置类型及其大小和数值限制的完整列表，请参阅[内置类型](../cpp/fundamental-types-cpp.md)。
 
-下图显示了内置类型的相对大小：
+下图显示了 Microsoft c + + 实现中内置类型的相对大小：
 
 ![类型中生成&#45;的大小（以字节为单位）](../cpp/media/built-intypesizes.png "类型中生成&#45;的大小（以字节为单位）")
 
-下表列出了最常用的基础类型：
+下表列出了最常用的基本类型及其在 Microsoft c + + 实现中的大小：
 
-|类型|大小|评论|
-|----------|----------|-------------|
-|int|4 个字节|整数值的默认选择。|
-|Double|8 字节|浮点值的默认选择。|
-|bool|1 字节|表示可为 true 或 false 的值。|
-|char|1 字节|用于早期 C 样式字符串或 std:: 字符串对象中无需转换为 UNICODE 的 ASCII 字符。|
-|wchar_t|2 个字节|表示可能以 UNICODE 格式进行编码的“宽”字符值（Windows 上为 UTF-16，其他操作系统上可能不同）。 这是用于 `std::wstring` 类型字符串的字符类型。|
-|无符号 &nbsp; 字符|1 字节|C + + 没有内置字节类型。  用于 **`unsigned char`** 表示字节值。|
-|unsigned int|4 个字节|位标志的默认选项。|
-|long long|8 字节|表示非常大的整数值。|
+| 类型 | 大小 | 评论 |
+|--|--|--|
+| **`int`** | 4 个字节 | 整数值的默认选择。 |
+| **`double`** | 8 字节 | 浮点值的默认选择。 |
+| **`bool`** | 1 字节 | 表示可为 true 或 false 的值。 |
+| **`char`** | 1 字节 | 用于早期 C 样式字符串或 std:: 字符串对象中无需转换为 UNICODE 的 ASCII 字符。 |
+| **`wchar_t`** | 2 个字节 | 表示可能以 UNICODE 格式进行编码的“宽”字符值（Windows 上为 UTF-16，其他操作系统上可能不同）。 这是用于 `std::wstring` 类型字符串的字符类型。 |
+| **`unsigned char`** | 1 字节 | C + + 没有内置字节类型。  用于 **`unsigned char`** 表示字节值。 |
+| **`unsigned int`** | 4 个字节 | 位标志的默认选项。 |
+| **`long long`** | 8 字节 | 表示非常大的整数值。 |
+
+对于某些数值类型，其他 c + + 实现可能会使用不同的大小。 有关 c + + 标准需要的大小和大小关系的详细信息，请参阅[内置类型](fundamental-types-cpp.md)。
 
 ## <a name="the-void-type"></a>void 类型
 
-**`void`** 类型是一种特殊类型; 你不能声明类型的变量 **`void`** ，但你可以声明一个__void \* __类型的变量（指向的指针 **`void`** ），这在分配原始（非类型化）内存时有时是必需的。 但是，指向 **`void`** 的指针不是类型安全的，通常不建议在新式 c + + 中使用。 在函数声明中， **`void`** 返回值表示函数不返回值; 这是的常见和可接受用法 **`void`** 。 尽管 C 语言需要具有零个参数的函数 **`void`** 在参数列表中声明（例如），但 `fou(void)` 在现代 c + + 中不建议使用这种做法，应声明这种做法 `fou()` 。 有关详细信息，请参阅[类型转换和类型安全性](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
+**`void`** 类型是一种特殊类型; 你不能声明类型的变量 **`void`** ，但你可以声明类型的变量 `void *` （指向的指针 **`void`** ），这在分配原始（非类型化）内存时有时是必需的。 但是，指向 **`void`** 的指针不是类型安全的，通常不建议在新式 c + + 中使用。 在函数声明中， **`void`** 返回值表示函数不返回值; 这是的常见和可接受用法 **`void`** 。 尽管 C 语言需要具有零个参数的函数 **`void`** 在参数列表中声明（例如），但 `fou(void)` 在现代 c + + 中不建议使用这种做法，应声明这种做法 `fou()` 。 有关详细信息，请参阅[类型转换和类型安全性](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
 
 ## <a name="const-type-qualifier"></a>const 类型限定符
 
@@ -155,7 +157,7 @@ void someFunction() {
 
 在 C 和 c + + 的经典 Win32 编程中，大多数函数使用 Windows 特定的 typedef 和 `#define` 宏（在中定义 `windef.h` ）来指定参数类型和返回值。 这些 Windows 数据类型主要是为 C/c + + 内置类型提供的特殊名称（别名）。 有关这些 typedef 和预处理器定义的完整列表，请参阅[Windows 数据类型](/windows/win32/WinProg/windows-data-types)。 其中一些 typedef （如 `HRESULT` 和）非常 `LCID` 有用，并且具有描述性。 其他类（如 `INT` ）没有特殊含义，并且只是基础 c + + 类型的别名。 其他 Windows 数据类型的名称自 C 编程和 16 位处理器得到保留，并且在现代硬件或操作系统中不具有目的和意义。 还有与 Windows 运行时库关联的特殊数据类型，作为[Windows 运行时基本数据类型](/windows/win32/WinRT/base-data-types)列出。 在现代 C++ 中，一般准则是首选 C++ 基本类型，除非 Windows 类型传达一些有关如何解释值的附加意义。
 
-## <a name="more-information"></a>更多信息
+## <a name="more-information"></a>详细信息
 
 有关 C++ 类型系统的更多信息，请参见下列主题。
 
@@ -165,7 +167,7 @@ void someFunction() {
 [类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)\
 描述常见类型转换问题并说明如何避免这些问题出现。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>

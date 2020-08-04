@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215317"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521247"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -26,12 +26,12 @@ ms.locfileid: "87215317"
 ) ];
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uuid*<br/>
 唯一 ID。
 
-*value*<br/>
+value<br/>
 可以放入变量中的值。
 
 ## <a name="remarks"></a>备注
@@ -44,16 +44,14 @@ ms.locfileid: "87215317"
 
 ### <a name="attribute-context"></a>特性上下文
 
-|||
-|-|-|
-|**适用于**|非 COM**接口**， **`class`** ， **`enum`** s， `idl_module` 方法，接口成员，接口参数， **`typedef`** s， **`union`** s， **`struct`** s|
-|**且**|是|
-|**必需属性**|**coclass** （用于类时）|
-|**无效的特性**|无|
+- **适用**于：非 COM `interface` 、 `idl_module` 方法、接口成员、接口参数、、、、 **`typedef`** **`class`** **`enum`** **`union`** 和 **`struct`** 类型。
+- 可**重复**：是。
+- **必需的属性**：**组件类**（用于类时）。
+- **无效的属性**： None。
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [独立属性](stand-alone-attributes.md)<br/>

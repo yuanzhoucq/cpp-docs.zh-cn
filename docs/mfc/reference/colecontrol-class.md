@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: c49e71a3e43f74e0e68228c313d3198d0abd4f91
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470914"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520689"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[COleControl：： COleControl](#colecontrol)|创建一个 `COleControl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[COleControl：： AmbientAppearance](#ambientappearance)|检索控件当前的外观。|
 |[COleControl：： AmbientBackColor](#ambientbackcolor)|返回环境背景值属性的值。|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[COleControl：:D rawContent](#drawcontent)|当需要更新控件的外观时由框架调用。|
 |[COleControl：:D rawMetafile](#drawmetafile)|当使用图元文件设备上下文时由框架调用。|
@@ -785,7 +785,7 @@ BOOL AmbientUserMode();
 void BoundPropertyChanged(DISPID dispid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 控件的绑定属性的调度 ID。
@@ -802,7 +802,7 @@ void BoundPropertyChanged(DISPID dispid);
 BOOL BoundPropertyRequestEdit(DISPID dispid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 控件的绑定属性的调度 ID。
@@ -825,7 +825,7 @@ virtual void ClientToParent(
     LPPOINT pPoint) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 一个指针，指向容器中 OLE 控件的边界。 不是工作区，而是整个控件的区域（包括边框和滚动条）。
@@ -845,7 +845,7 @@ virtual void ClientToParent(
 BOOL ClipCaretRect(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 输入时，指向包含要调整的插入符号区域的[RECT](/windows/win32/api/windef/ns-windef-rect)结构的指针。 输出时，调整后的插入符号区域; 如果完全覆盖了插入符号矩形，则为 NULL。
@@ -899,7 +899,7 @@ virtual void DisplayError(
     UINT nHelpID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *scode*<br/>
 要报告的状态代码值。 有关可能代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
@@ -944,7 +944,7 @@ void DoClick();
 virtual void DoPropExchange(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 一个指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
@@ -965,7 +965,7 @@ void DoSuperclassPaint(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向控件容器的设备上下文的指针。
@@ -989,7 +989,7 @@ void DrawContent(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向设备上下文的指针。
@@ -1011,7 +1011,7 @@ void DrawMetafile(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向图元文件设备上下文的指针。
@@ -1039,7 +1039,7 @@ void EnableSimpleFrame();
 BOOL ExchangeExtent(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
@@ -1060,7 +1060,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
@@ -1080,7 +1080,7 @@ BOOL ExchangeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 一个指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
@@ -1140,7 +1140,7 @@ void FireError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *scode*<br/>
 要报告的状态代码值。 有关可能代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
@@ -1172,7 +1172,7 @@ void AFX_CDECL FireEvent(
 ...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 要激发的事件的调度 ID。
@@ -1204,7 +1204,7 @@ void AFX_CDECL FireEvent(
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
-> 已为所有变体类型定义了其他变体常量（VTS_FONT 和 VTS_PICTURE 除外），它们提供指向变量数据常量的指针。 这些常量是使用**VTS_P** `constantname` 约定命名的。 例如，VTS_PCOLOR 是指向 VTS_COLOR 常量的指针。
+> 已为所有变体类型定义了其他变体常量（VTS_FONT 和 VTS_PICTURE 除外），它们提供指向变量数据常量的指针。 这些常量是使用 VTS_P 约定命名的 \<CONSTANT-NAME> 。 例如，VTS_PCOLOR 是指向 VTS_COLOR 常量的指针。
 
 ## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl：： FireKeyDown
 
@@ -1216,7 +1216,7 @@ void FireKeyDown(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnChar*<br/>
 指向按下键的虚拟键代码值的指针。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -1244,7 +1244,7 @@ void FireKeyDown(
 void FireKeyPress(USHORT* pnChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnChar*<br/>
 一个指针，指向按下的键的字符值。
@@ -1267,7 +1267,7 @@ void FireKeyUp(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnChar*<br/>
 指向已释放密钥的虚拟键代码值的指针。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -1299,7 +1299,7 @@ void FireMouseDown(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButton*<br/>
 按下鼠标按钮的数值。 它可以包含以下值之一：
@@ -1343,7 +1343,7 @@ void FireMouseMove(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButton*<br/>
 按下鼠标按钮的数值。 包含以下值的组合：
@@ -1387,7 +1387,7 @@ void FireMouseUp(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButton*<br/>
 已释放的鼠标按钮的数值。 可以具有以下一个值：
@@ -1496,7 +1496,7 @@ BOOL GetAmbientProperty(
     void* pvProp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispid*<br/>
 所需环境属性的调度 ID。
@@ -1592,7 +1592,7 @@ CWnd* GetCapture();
 virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pclsid*<br/>
 指向类 ID 位置的指针。
@@ -1613,7 +1613,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdxOffset*<br/>
 指向 OLE 控件的工作区的水平偏移量的指针。
@@ -1633,7 +1633,7 @@ OLE 控件的容器内有一个矩形区域。 控件的工作区是不包括边
 virtual void GetClientRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向一个结构的指针，该 `RECT` 结构包含无窗口控件的工作区的尺寸，即控件的大小减去窗口边框、框架、滚动条等等。 *LpRect*参数指示控件的客户端矩形的大小，而不是其位置。
@@ -1702,7 +1702,7 @@ void GetControlSize(
     int* pcy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pcx*<br/>
 指定控件的宽度（以像素为单位）。
@@ -1724,7 +1724,7 @@ CDC* GetDC(
     DWORD dwFlags = OLEDC_PAINTBKGND);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcRect*<br/>
 一个指针，指向无窗口控件要在控件的工作区坐标中重绘的矩形。 NULL 表示完全对象的范围。
@@ -1820,7 +1820,7 @@ void GetFontTextMetrics(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lptm*<br/>
 指向[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构的指针。
@@ -1868,7 +1868,7 @@ virtual void GetMessageString(
     CString& rMessage) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 菜单项 ID。
@@ -1924,7 +1924,7 @@ long GetReadyState();
 BOOL GetRectInContainer(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 一个指针，指向将向其中复制控件坐标的矩形结构。
@@ -1945,7 +1945,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lptm*<br/>
 指向[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构的指针。
@@ -2003,7 +2003,7 @@ void InitializeIIDs(
     const IID* piidEvents);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *piidPrimary*<br/>
 指向控件的主调度接口的接口 ID 的指针。
@@ -2047,7 +2047,7 @@ const CString& InternalGetText();
 void InternalSetReadyState(long lNewReadyState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lNewReadyState*<br/>
 为控件设置的就绪状态为以下值之一：
@@ -2074,7 +2074,7 @@ void InvalidateControl(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向要使其无效的控件的区域的指针。
@@ -2094,7 +2094,7 @@ void InvalidateControl(
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRgn*<br/>
 指向[CRgn](../../mfc/reference/crgn-class.md)对象的指针，该对象标识要使其在包含窗口的工作区坐标中无效的 OLE 对象的显示区域。 如果此参数为 NULL，则范围为整个对象。
@@ -2206,7 +2206,7 @@ virtual BOOL IsSubclassedControl();
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strNewPath*<br/>
 指向字符串的指针，该字符串包含引用异步控件属性绝对位置的路径。
@@ -2222,7 +2222,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 BOOL LockInPlaceActive(BOOL bLock);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *模块*<br/>
 如果要锁定控件的就地活动状态，则为 TRUE;如果要解除锁定，则为 FALSE。
@@ -2243,7 +2243,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 virtual void OnAmbientPropertyChange(DISPID dispid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispID*<br/>
 已更改的环境属性的调度 ID，或在多个属性已更改的情况下 DISPID_UNKNOWN。
@@ -2294,7 +2294,7 @@ virtual void OnBorderStyleChanged();
 virtual void OnClick(USHORT iButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*<br/>
 鼠标按钮的索引。 可以是下列值之一：
@@ -2319,7 +2319,7 @@ virtual void OnClick(USHORT iButton);
 virtual void OnClose(DWORD dwSaveOption);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSaveOption*<br/>
 指示是否应在加载前保存对象的标志。 有效值是：
@@ -2346,7 +2346,7 @@ virtual BOOL OnDoVerb(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iVerb*<br/>
 要调用的控制谓词的索引。
@@ -2381,7 +2381,7 @@ virtual void OnDraw(
     const CRect& rcInvalid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 在其中进行绘制的设备上下文。
@@ -2406,7 +2406,7 @@ virtual void OnDrawMetafile(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 在其中进行绘制的设备上下文。
@@ -2429,7 +2429,7 @@ virtual BOOL OnEdit(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMsg*<br/>
 指向调用谓词的 Windows 消息的指针。
@@ -2472,7 +2472,7 @@ virtual void OnEnabledChanged();
 virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppenumOleVerb*<br/>
 指向 `IEnumOLEVERB` 对象的指针，该对象枚举控件的谓词。
@@ -2495,7 +2495,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 virtual void OnEventAdvise(BOOL bAdvise);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAdvise*<br/>
 如果为 TRUE，则表示事件处理程序已连接到控件。 FALSE 指示事件处理程序已与控件断开连接。
@@ -2540,7 +2540,7 @@ virtual void OnForeColorChanged();
 virtual void OnFreezeEvents(BOOL bFreeze);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bFreeze*<br/>
 如果控件的事件处理被冻结，则为 TRUE;否则为 FALSE。
@@ -2562,7 +2562,7 @@ virtual BOOL OnGetColorSet(
     LPLOGPALETTE* ppColorSet);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptd*<br/>
 指向应呈现图片的目标设备。 如果此值为 NULL，则应该为默认目标设备（通常为显示设备）呈现图片。
@@ -2591,7 +2591,7 @@ virtual BOOL OnGetColorSet(
 virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControlInfo*<br/>
 指向要填充的[CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo)结构的指针。
@@ -2612,7 +2612,7 @@ virtual BOOL OnGetDisplayString(
     CString& strValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -2658,7 +2658,7 @@ virtual BOOL OnGetNaturalExtent(
     LPSIZEL psizel);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 指定要如何表示该对象。 表示形式包括内容、图标、缩略图或打印文档。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
@@ -2712,7 +2712,7 @@ virtual BOOL OnGetPredefinedStrings(
     CDWordArray* pCookieArray);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -2742,7 +2742,7 @@ virtual BOOL OnGetPredefinedValue(
     VARIANT* lpvarOut);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -2769,7 +2769,7 @@ virtual BOOL OnGetViewExtent(
     LPSIZEL lpsizel);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDrawAspect*<br/>
 用于描述要显示对象的哪一窗体或方面的 DWORD。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
@@ -2799,7 +2799,7 @@ virtual BOOL OnGetViewExtent(
 virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 用于描述要显示对象的哪一窗体或方面的 DWORD。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2：
@@ -2868,7 +2868,7 @@ virtual void OnInactiveMouseMove(
     DWORD dwKeyState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 包含窗口的工作区坐标中的对象边框。 接收到 WM_MOUSEMOVE 消息时，通知对象在屏幕上的准确位置和大小。
@@ -2899,7 +2899,7 @@ virtual BOOL OnInactiveSetCursor(
     BOOL bSetAlways);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 包含窗口的工作区坐标中的对象边框。 接收到 WM_SETCURSOR 消息时，通知对象在屏幕上的准确位置和大小。
@@ -2934,7 +2934,7 @@ virtual void OnKeyDownEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -2960,7 +2960,7 @@ virtual void OnKeyDownEvent(
 virtual void OnKeyPressEvent(USHORT nChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 包含按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -2981,7 +2981,7 @@ virtual void OnKeyUpEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -3010,7 +3010,7 @@ virtual BOOL OnMapPropertyToPage(
     BOOL* pbPageOptional);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -3037,7 +3037,7 @@ virtual BOOL OnMapPropertyToPage(
 virtual void OnMnemonic(LPMSG pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMsg*<br/>
 一个指针，指向由助记键按键操作生成的 Windows 消息。
@@ -3053,7 +3053,7 @@ virtual BOOL OnProperties(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMsg*<br/>
 指向调用谓词的 Windows 消息的指针。
@@ -3087,7 +3087,7 @@ virtual BOOL OnQueryHitPoint(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 指定表示对象的方式。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
@@ -3133,7 +3133,7 @@ virtual BOOL OnQueryHitRect(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 指定要如何表示该对象。 有效值取自枚举[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)或 DVASPECT2。
@@ -3172,7 +3172,7 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
@@ -3204,7 +3204,7 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
@@ -3234,7 +3234,7 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
@@ -3295,7 +3295,7 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构的指针，该结构指定数据的格式。
@@ -3326,7 +3326,7 @@ virtual BOOL OnSetData(
 virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSizeL*<br/>
 指向 `SIZEL` 结构的指针，该结构使用长整数表示控件的宽度和高度，以 HIMETRIC 单位表示。
@@ -3351,7 +3351,7 @@ virtual BOOL OnSetObjectRects(
     LPCRECT lpRectClip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRectPos*<br/>
 指向结构的指针 `RECT` ，该结构指示控件相对于容器的新位置和大小。
@@ -3407,7 +3407,7 @@ virtual BOOL OnWindowlessMessage(
     LRESULT* plResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *msg*<br/>
 Windows 传递的消息标识符。
@@ -3442,7 +3442,7 @@ virtual UINT ParentToClient(
     BOOL bHitTest = FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 一个指针，指向容器中 OLE 控件的边界。 不是工作区，而是整个控件的区域（包括边框和滚动条）。
@@ -3517,7 +3517,7 @@ On input *pPoint*是相对于父级（容器左上角）的原点。 在 output 
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 模式对话框的父窗口的句柄。
@@ -3534,7 +3534,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 模式对话框的父窗口的句柄。
@@ -3591,7 +3591,7 @@ BOOL ReleaseCapture();
 int ReleaseDC(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 标识要释放的容器设备上下文。
@@ -3614,7 +3614,7 @@ virtual void ReparentControlWindow(
     HWND hWndParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndOuter*<br/>
 控件窗口的句柄。
@@ -3652,7 +3652,7 @@ void ResetStockProps();
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwVersionDefault*<br/>
 要分配给控件的版本号。
@@ -3673,7 +3673,7 @@ void ScrollWindow(
     LPCRECT lpClipRect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *xAmount*<br/>
 指定水平滚动的量（以设备单位为单位）。 此参数必须是负值才能滚动到左侧。
@@ -3697,7 +3697,7 @@ CFont* SelectFontObject(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向设备上下文对象的指针。
@@ -3717,7 +3717,7 @@ CFont* SelectFontObject(
 CFont* SelectStockFont(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 将选择字体的设备上下文。
@@ -3734,7 +3734,7 @@ CFont* SelectStockFont(CDC* pDC);
 void SerializeExtent(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 要 `CArchive` 序列化到或的对象。
@@ -3755,7 +3755,7 @@ void SerializeExtent(CArchive& ar);
 void SerializeStockProps(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 要 `CArchive` 序列化到或的对象。
@@ -3777,7 +3777,7 @@ DWORD SerializeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 要 `CArchive` 序列化到或的对象。
@@ -3804,7 +3804,7 @@ DWORD SerializeVersion(
 void SetAppearance (short sAppearance);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sAppearance*<br/>
 **`short`** 要用于控件外观的（VT_I2）值。 如果值为零，则将控件的外观设置为平面，值为1时，将控件的外观设置为三维。
@@ -3821,7 +3821,7 @@ void SetAppearance (short sAppearance);
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwBackColor*<br/>
 用于控件的背景绘制的 OLE_COLOR 值。
@@ -3838,7 +3838,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 void SetBorderStyle(short sBorderStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sBorderStyle*<br/>
 控件的新边框样式;0指示没有边框，1表示普通边框。
@@ -3871,7 +3871,7 @@ CWnd* SetCapture();
 BOOL SetControlSize(int cx, int cy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cx*<br/>
 指定控件的新宽度（以像素为单位）。
@@ -3897,7 +3897,7 @@ BOOL SetControlSize(int cx, int cy);
 void SetEnabled(BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnabled*<br/>
 如果要启用该控件，则为 TRUE;否则为 FALSE。
@@ -3932,7 +3932,7 @@ CWnd* SetFocus();
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFontDisp*<br/>
 指向字体调度接口的指针。
@@ -3945,7 +3945,7 @@ void SetFont(LPFONTDISP pFontDisp);
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwForeColor*<br/>
 用于控件的前景绘图的 OLE_COLOR 值。
@@ -3976,7 +3976,7 @@ void SetInitialSize(
     int cy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cx*<br/>
 OLE 控件的初始宽度（以像素为单位）。
@@ -3996,7 +3996,7 @@ OLE 控件的初始高度（以像素为单位）。
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bModified*<br/>
 控件的已修改标志的新值。 如果为 TRUE，则表示已修改控件的状态;FALSE 指示控件的状态刚刚保存。
@@ -4037,7 +4037,7 @@ void SetNotSupported();
 BOOL SetRectInContainer(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向一个矩形的指针，该矩形包含控件的新坐标（相对于容器）。
@@ -4058,7 +4058,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 void SetText(LPCTSTR pszText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszText*<br/>
 指向字符串的指针。
@@ -4083,7 +4083,7 @@ void ThrowError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sc*<br/>
 要报告的状态代码值。 有关可能代码的完整列表，请参阅文章[ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
@@ -4112,7 +4112,7 @@ void TransformCoords(
     DWORD flags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpptlHimetric*<br/>
 指向结构的指针，该 `POINTL` 结构包含 HIMETRIC 单位中的坐标。
@@ -4145,7 +4145,7 @@ COLORREF TranslateColor(
     HPALETTE hpal = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrColor*<br/>
 一个 OLE_COLOR 数据类型。 有关详细信息，请参阅 Windows [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor)函数。
@@ -4188,7 +4188,7 @@ virtual LRESULT WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *message*<br/>
 指定要处理的 Windows 消息。

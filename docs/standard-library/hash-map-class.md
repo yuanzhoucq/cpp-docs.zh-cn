@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: 063b71100af536a249949a1084ab208b6266fd8d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5939e2b4b0f8054ae5f7db7babd01dbeffc7f359
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222456"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520611"
 ---
 # <a name="hash_map-class"></a>hash_map 类
 
@@ -112,7 +112,7 @@ template <class Key,
 class hash_map
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要存储在 hash_map 中的键数据类型。
@@ -158,7 +158,7 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[hash_map](#hash_map)|构造一个空的或者是其他某个 `hash_map` 的全部或部分副本的 `hash_map`。|
 
@@ -215,7 +215,7 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 
 ### <a name="operators"></a>运算符
 
-|操作员|描述|
+|运算符|说明|
 |-|-|
 |[operator&#91;&#93;](#op_at)|将元素插入到具有指定键值的 `hash_map`。|
 |[hash_map：： operator =](#op_eq)|将一个 `hash_map` 中的元素替换为另一 `hash_map` 副本。|
@@ -254,7 +254,7 @@ Type& at(const Key& key);
 const Type& at(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |-|-|
@@ -635,7 +635,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要从 hash_map 中进行匹配的元素的键值。
@@ -887,9 +887,9 @@ emplace(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 
@@ -946,9 +946,9 @@ iterator emplace_hint(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*_Where*|有关开始搜索正确插入点的位置的提示。|
@@ -1127,7 +1127,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
@@ -1216,7 +1216,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Where*\
 要从 hash_map 移除的元素的位置。
@@ -1338,7 +1338,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_map 中元素的排序键匹配的键值。
@@ -1531,15 +1531,15 @@ hash_map(
     const Allocator& Al
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*Fc-al*|要用于此 hash_map 对象的存储分配器类，默认为 `Allocator` 。|
 |*压缩*|用于对 hash_map 中元素排序的类常量 `Traits` 的比较函数，默认为 `hash_compare`。|
 |*Right*|所构造映射要作为其副本的 hash_map。|
 |*First*|要复制的范围元素中的第一个元素的位置。|
-|*时间*|要复制的元素范围以外的第一个元素的位置。|
+|*上一个*|要复制的元素范围以外的第一个元素的位置。|
 |*IList*|initializer_list|
 
 ### <a name="remarks"></a>备注
@@ -1589,9 +1589,9 @@ iterator insert(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|要插入 hash_map 的元素的值，除非 hash_map 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*_Where*|有关开始搜索正确插入点的位置的提示。|
@@ -1737,11 +1737,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>备注
 
-`iterator`由定义的 hash_map 指向作为[value_type](#value_type)的对象的元素，这是类型**对 \<const Key, Type> ，** 其第一个成员是元素的键，第二个成员是元素所持有的映射基准。
+`iterator`定义的 hash_map 指向作为[value_type](#value_type)的对象的元素，它的类型为 `pair<const Key, Type>` ，其第一个成员是元素的键，第二个成员是元素所持有的映射基准。
 
-若要取消**iterator**引用 `Iter` 指向多重映射中的元素的迭代器，请使用 `->` 运算符。
+若要取消引用名为 `Iter` 指向多重映射中的元素的迭代器，请使用 `->` 运算符。
 
-若要访问元素的键值，请使用 `Iter` -> **first**，其等同于 (\* `Iter`)。 **第一**种。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second**。
+若要访问元素的键值，请使用 `Iter->first` 等效于的 `(*Iter).first` 。 若要访问元素的映射基准值，请使用 `Iter->second` 等效于的 `(*Iter).second` 。
 
 类型 `iterator` 可用于修改元素的值。
 
@@ -1768,7 +1768,7 @@ key_compare key_comp() const;
 
 存储对象会定义成员函数
 
-**bool operator**( **const Key&** `left`**, const Key&** `right`);
+`bool operator( const Key& left, const Key&right );`
 
 **`true`** 如果 `left` `right` 在排序顺序中先于且不等于，则返回。
 
@@ -1880,7 +1880,7 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
@@ -2017,7 +2017,7 @@ Type& operator[](const Key& key);
 Type& operator[](Key&& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |-|-|
@@ -2114,9 +2114,9 @@ hash_map& operator=(const hash_map& right);
 hash_map& operator=(hash_map&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*然后*|正在复制到 `hash_map` 的 [hash_map 类](../standard-library/hash-map-class.md)。|
 
@@ -2519,7 +2519,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 void swap(hash_map& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 参数 hash_map 提供与目标 hash_map 进行交换的元素。
@@ -2595,7 +2595,7 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_map 中元素的排序键值进行比较的参数键值。
@@ -2803,7 +2803,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 30.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

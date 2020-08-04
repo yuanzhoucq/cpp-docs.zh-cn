@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: 9b7c432a649b566b455109f6de1f7bcc0734ff9b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b94f7f4c2482f0317e37c6f4bf3618b91a175147
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453805"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521182"
 ---
-# <a name="logicerror-class"></a>logic_error 类
+# <a name="logic_error-class"></a>logic_error 类
 
 此类用作引发报告执行程序前大概可检测的错误（例如，违反逻辑前提条件）的所有异常的基类。
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-[what](../standard-library/exception-class.md) 返回的值是 **message**`.`[data](../standard-library/basic-string-class.md#data) 的副本。
+返回的值 `what()` 是的副本 `message.data()` 。 有关详细信息，请参阅 [`what`](../standard-library/exception-class.md) 和 [`data`](../standard-library/basic-string-class.md#data)。
 
 ## <a name="example"></a>示例
 
@@ -62,11 +62,11 @@ Type: class std::logic_error
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<stdexcept>
+**标头：**\<stdexcept>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
 [exception 类](../standard-library/exception-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
