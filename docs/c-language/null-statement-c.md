@@ -7,12 +7,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 58825544121c6cb189b52469403effb93f5f5f8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343421"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227811"
 ---
 # <a name="null-statement-c"></a>Null 语句 (C)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64343421"
 
 ## <a name="remarks"></a>备注
 
-do  、for  、if  和 `while` 等语句需要可执行语句显示为语句体。 在无需实质性语句体的情况下，null 语句可满足语法要求。
+`do`、`for`、`if` 和 `while` 等语句要求可执行语句作为语句主体出现。 在无需实质性语句体的情况下，null 语句可满足语法要求。
 
 与任何其他 C 语句一起使用时，您可在 null 语句前包含一个标签。 若要标记某个不是语句的项（如复合语句的右大括号），您可标记一个 null 语句并紧靠该项的前面插入该语句以取得相同的效果。
 
@@ -35,7 +35,7 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-在此示例中，for  语句 `line[i++] = 0` 的循环表达式将 `line` 的前 10 个元素初始化为 0。 由于无需任何其他语句，因此语句体为 null 语句。
+在此示例中，`for` 语句 `line[i++] = 0` 的循环表达式将 `line` 的前 10 个元素初始化为 0。 由于无需任何其他语句，因此语句体为 null 语句。
 
 ## <a name="see-also"></a>请参阅
 

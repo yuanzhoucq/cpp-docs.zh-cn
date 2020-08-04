@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422834"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223936"
 ---
 # <a name="link-an-executable-to-a-dll"></a>将可执行文件链接到 DLL
 
@@ -94,7 +94,7 @@ ms.locfileid: "79422834"
 
 - 调用 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) 或类似函数以加载 DLL 并获取模块句柄。
 
-- 调用 [GetProcAddress](getprocaddress.md) 以获取应用程序调用的每个导出函数的函数指针。 由于应用程序通过指针调用 DLL 函数，因此编译器不生成外部引用，从而不需要与导入库链接。 但是，必须有一个 `typedef` 或 `using` 语句来定义所调用的导出函数的调用签名。
+- 调用 [GetProcAddress](getprocaddress.md) 以获取应用程序调用的每个导出函数的函数指针。 由于应用程序通过指针调用 DLL 函数，因此编译器不生成外部引用，从而不需要与导入库链接。 不过，必须有 `typedef` 或 `using` 语句，此语句定义你调用的已导出函数的调用签名。
 
 - 处理完 DLL 时，调用 [FreeLibrary](freelibrary-and-afxfreelibrary.md)。
 

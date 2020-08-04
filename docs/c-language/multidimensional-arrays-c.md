@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: f94cdff03763f689edbdedffad4ac56abec5ee53
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62233358"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218827"
 ---
 # <a name="multidimensional-arrays-c"></a>多维数组 (C)
 
@@ -27,7 +27,7 @@ expression1 [ expression2 ] [ expression3 ] ...
 
 ## <a name="examples"></a>示例
 
-在下面的示例中，将使用 3 个元素声明名为 `prop` 的数组，其中每个元素都是 `int` 值的 4 x 6 数组。
+对于下面的示例，名为 `prop` 的数组声明为包含 3 个元素，其中每个元素都是由 `int` 值组成的 4x6 数组。
 
 ```
 int prop[3][4][6];
@@ -40,7 +40,7 @@ int i, *ip, (*ipp)[6];
 i = prop[0][0][1];
 ```
 
-上面的示例演示如何引用 `int` 的第二个单独的 `prop` 元素。 数组将按行存储，因此最后一个下标变化最快；表达式 `prop[0][0][2]` 引用数组的下一个（第三个）元素，依此类推。
+上面的示例展示了如何引用 `prop` 的第二个单独的 `int` 元素。 数组将按行存储，因此最后一个下标变化最快；表达式 `prop[0][0][2]` 引用数组的下一个（第三个）元素，依此类推。
 
 ```
 i = prop[2][1][3];
@@ -48,13 +48,13 @@ i = prop[2][1][3];
 
 此语句是对 `prop` 的单个元素的更复杂的引用。 此表达式的计算方式如下：
 
-1. 第一个下标 `2` 乘以 4 x 6 `int` 数组的大小，然后与指针值 `prop` 相加。 结果将指向 `prop` 的第三个 4 x 6 数组。
+1. 第一个下标 `2` 先与 4x6 `int` 数组的大小相乘，再与指针值 `prop` 相加。 结果将指向 `prop` 的第三个 4 x 6 数组。
 
-1. 第二个下标 (`1`) 乘以 6 元素 `int` 数组的大小，然后与 `prop[2]` 表示的地址相加。
+1. 第二个下标 `1` 先与 6 元素 `int` 数组的大小相乘，再与 `prop[2]` 表示的地址相加。
 
-1. 6 元素数组的每个元素都是一个 `int` 值，因此最后一个下标 `3` 在与 `int` 相加之前将乘以 `prop[2][1]` 的大小。 生成的指针将寻址到 6 元素数组的第四个元素。
+1. 由于 6 元素数组的每个元素都是 `int` 值，因此最后一个下标 `3` 先与 `int` 的大小相乘，再与 `prop[2][1]` 相加。 生成的指针将寻址到 6 元素数组的第四个元素。
 
-1. 将对指针值应用间接寻址运算符。 结果是该地址处的 `int` 元素。
+1. 将对指针值应用间接寻址运算符。 结果是此地址处的 `int` 元素。
 
 下面两个示例演示未应用间接寻址运算符的情况。
 

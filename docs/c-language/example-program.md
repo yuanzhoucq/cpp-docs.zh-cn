@@ -2,16 +2,16 @@
 title: 示例程序
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da8c772a3534df2c865c18959329ac850e359160
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233923"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218853"
 ---
 # <a name="example-program"></a>示例程序
 
-下面的 C 源程序包括两个源文件。 它尽可能在 C 程序中提供一些各种声明和定义的概述。 本书后面的节中描述了如何写入这些声明、定义和初始化，以及如何使用 C 关键字（例如，static  和 `extern`）。 在 C 标头文件 STDIO.H. 中声明 `printf` 函数。
+下面的 C 源程序包括两个源文件。 它尽可能在 C 程序中提供一些各种声明和定义的概述。 本书后面的各部分将介绍如何编写这些声明、定义和初始化，以及如何使用 C 关键字（如 `static` 和 `extern`）。 在 C 标头文件 STDIO.H. 中声明 `printf` 函数。
 
 假定 `main` 和 `max` 函数在单独的文件中，且程序的执行开始于 `main` 函数。 未在 `main` 之前执行任何显式用户函数。
 

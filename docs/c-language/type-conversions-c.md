@@ -8,12 +8,12 @@ helpviewer_keywords:
 - integral promotions
 - type casts, when performed
 ms.assetid: d130ee7c-03c3-48f4-af7b-1fdba0d3b086
-ms.openlocfilehash: 281234b857a97acbb57ebbfca7b678a637d00764
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7c55c15a8f3e2a53e350da947cf524ae064a09
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346283"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231424"
 ---
 # <a name="type-conversions-c"></a>类型转换 (C)
 
@@ -25,7 +25,7 @@ ms.locfileid: "62346283"
 
 - 当值作为参数传递给函数时，或当类型从函数返回时
 
-字符、短整数或整数位域（无论带符号还是无符号）或枚举类型的对象均可在可使用整数的表达式中使用。 如果一个 `int` 可表示原始类型的所有值，则该值将转换为 `int`；否则，该值将转换为 `unsigned int`。 此过程称为“整型提升”。 整型提升将保留值。 即，保证提升后的值与提升前一样。 有关详细信息，请参阅[常用算术转换](../c-language/usual-arithmetic-conversions.md)。
+字符、短整数或整数位域（无论带符号还是无符号）或枚举类型的对象均可在可使用整数的表达式中使用。 如果 `int` 可表示原始类型的所有值，则值转换为 `int`；否则，值转换为 `unsigned int`。 此过程称为“整型提升”。 整型提升将保留值。 即，保证提升后的值与提升前一样。 有关详细信息，请参阅[常用算术转换](../c-language/usual-arithmetic-conversions.md)。
 
 ## <a name="see-also"></a>请参阅
 

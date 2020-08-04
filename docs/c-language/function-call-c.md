@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [C], calling
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
-ms.openlocfilehash: d22bdebc8fa832afb14a2cc09e6a441b7b9e8a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23531f25128fc267caa3a3cad5f2c52e603a2cc6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233293"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229683"
 ---
 # <a name="function-call-c"></a>函数调用 (C)
 
@@ -26,9 +26,9 @@ ms.locfileid: "62233293"
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *assignment-expression*
 
-postfix-expression  的计算结果必须为函数地址（例如，函数标识符或函数指针值），argument-expression-list  是其值（“参数”）传递到函数的表达式的列表（用逗号分隔）。  argument-expression-list 参数可以为空。
+postfix-expression  的计算结果必须为函数地址（例如，函数标识符或函数指针值），argument-expression-list  是其值（“参数”）传递到函数的表达式的列表（用逗号分隔）。 argument-expression-list 参数可以为空。
 
-function-call 表达式具有函数的返回值的值和类型。 函数不能返回数组类型的对象。 如果函数的返回类型是 `void`（即该函数已被声明为从不返回值），则 function-call 表达式也具有 `void` 类型。 （有关详细信息，请参阅[函数调用](../c-language/function-calls.md)。）
+function-call 表达式具有函数的返回值的值和类型。 函数不能返回数组类型的对象。 如果函数的返回类型是 `void`（即函数已被声明为永不返回值），那么函数调用表达式的类型也是 `void`。 （有关详细信息，请参阅[函数调用](../c-language/function-calls.md)。）
 
 ## <a name="see-also"></a>请参阅
 

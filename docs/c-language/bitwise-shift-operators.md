@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8a72a8657daec39bb042fea744b5f97d3b34009
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226524"
 ---
 # <a name="bitwise-shift-operators"></a>按位移位运算符
 
@@ -27,7 +27,7 @@ ms.locfileid: "62326022"
 
 两个操作数都必须是整数值。 这些运算符执行常用算术转换；结果的类型是转换后左操作数的类型。
 
-对于左移，留空的右位将设置为 0。 对于右移，将根据转换后第一个操作数的类型填充留空的左位。 如果该类型为 `unsigned`，留空的左位将设置为 0。 否则，将使用符号位的副本填充它们。 对于没有溢出的左移运算符，语句
+对于左移，留空的右位将设置为 0。 对于右移，将根据转换后第一个操作数的类型填充留空的左位。 如果类型是 `unsigned`，则将留空的左位设置为 0。 否则，将使用符号位的副本填充它们。 对于没有溢出的左移运算符，语句
 
 ```C
 expr1 << expr2

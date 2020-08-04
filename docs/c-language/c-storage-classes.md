@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4f793e8485628faf0a80445ce0414835e3b71d1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857107"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217163"
 ---
 # <a name="c-storage-classes"></a>C 存储类
 
@@ -27,18 +27,18 @@ C 提供了以下存储类说明符：
 ## <a name="syntax"></a>语法
 
 *storage-class-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Microsoft-specific \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **`auto`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`register`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`static`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`extern`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;`__declspec (` extended-decl-modifier-seq `)` /\* 特定于 Microsoft \*/
 
-除 `__declspec` 之外，只能在声明中的 declaration-specifier  中使用一个 storage-class-specifier  。 如果没有制定存储类规范，块中的声明将创建自动对象。
+除了 `__declspec` 之外，只能在声明中的 declaration-specifier 内使用一个 storage-class-specifier。 如果没有制定存储类规范，块中的声明将创建自动对象。
 
-使用 auto  或 register  说明符声明的项具有本地生存期。 使用 static  或 `extern` 说明符声明的项具有全局生存期。
+使用 `auto` 或 `register` 说明符声明的项有本地生存期。 使用 `static` 或 `extern` 说明符声明的项有全局生存期。
 
-由于 `typedef` 和 `__declspec` 与其他四个 storage-class-specifier  终端的语义不同，因此将分开讨论它们。 有关 `typedef` 的特定信息，请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。 有关 `__declspec` 的特定信息，请参阅[扩展的存储类特性](../c-language/c-extended-storage-class-attributes.md)。
+由于 `typedef` 和 `__declspec` 在语义上与其他四个 storage-class-specifier 终止符不同，因此将分开介绍它们。 有关 `typedef` 的具体信息，请参阅 [`typedef` 声明](../c-language/typedef-declarations.md)。 有关 `__declspec` 的具体信息，请参阅[扩展的存储类特性](../c-language/c-extended-storage-class-attributes.md)。
 
 源文件中变量和函数声明的位置还会影响存储类和可见性。 所有函数定义之外的声明据说显示在“外部级别”。 函数定义中的声明显示在“内部级别”。
 

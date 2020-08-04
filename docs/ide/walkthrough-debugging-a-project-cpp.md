@@ -6,18 +6,18 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400981"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219672"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>演练：调试项目 (C++)
 
 在本演练中，你将修改程序以修复在测试项目时发现的问题。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 本演练假定你具备 C++ 语言的基础知识。
 
@@ -27,11 +27,11 @@ ms.locfileid: "67400981"
 
 1. 若要查看销毁 `Cardgame` 对象时发生的情况，请查看 `Cardgame` 类的析构函数。
 
-   在菜单栏上，选择“视图”   > “类视图”  。
+   在菜单栏上，选择“视图” > “类视图”。
 
-   在“类视图”窗口中，展开“游戏”项目树并选择“Cardgame”类来显示类成员和方法    。
+   在“类视图”窗口中，展开“游戏”项目树并选择“Cardgame”类来显示类成员和方法  。
 
-   打开“~Cardgame(void)”析构函数的快捷菜单，然后选择“转到定义”   。
+   打开“~Cardgame(void)”析构函数的快捷菜单，然后选择“转到定义” 。
 
 1. 若要在 Cardgame 终止时减少 `totalParticipants`，请在 `Cardgame::~Cardgame` 析构函数的左大括号和右大括号之间键入以下代码。
 
@@ -41,19 +41,19 @@ ms.locfileid: "67400981"
 
    [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
-1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案” 。
 
-1. 生成完成后，可以通过选择菜单栏上的“调试”   > “启动调试”  或选择 F5  键在调试模式下运行此解决方案。 程序在第一个断点处暂停程序。
+1. 生成完成后，可以通过选择菜单栏上的“调试” > “启动调试”或选择 F5 键在调试模式下运行此解决方案。 程序在第一个断点处暂停程序。
 
-1. 若要逐步执行此程序，请在菜单栏上，选择“调试”   > “逐过程执行”  或选择 F10  键。
+1. 若要逐步执行此程序，请在菜单栏上，选择“调试” > “逐过程执行”或选择 F10 键。
 
-   请注意，执行每个 `Cardgame` 构造函数后，`totalParticipants` 的值会增大。 在 `PlayGames` 函数返回时，由于每个 `Cardgame` 实例都超出范围且被删除（并且调用析构函数），因此 `totalParticipants` 会减小。 在刚要执行 `return` 语句前，`totalParticipants` 等于 0。
+   请注意，执行每个 `Cardgame` 构造函数后，`totalParticipants` 的值会增大。 在 `PlayGames` 函数返回时，由于每个 `Cardgame` 实例都超出范围且被删除（并且调用析构函数），因此 `totalParticipants` 会减小。 就在 `return` 语句执行之前，`totalParticipants` 等于 0。
 
-1. 继续逐步执行此程序直到其退出，或通过在菜单栏上选择“调试”   > “运行”  或选择 F5  键来使其运行。
+1. 继续逐步执行此程序直到其退出，或通过在菜单栏上选择“调试” > “运行”或选择 F5 键来使其运行。
 
 ## <a name="next-steps"></a>后续步骤
 
-上一步：  [演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+上一步：[演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 **下一篇：** [演练：部署程序 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="see-also"></a>请参阅

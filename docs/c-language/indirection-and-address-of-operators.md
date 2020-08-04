@@ -15,12 +15,12 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e631959e69fbdf026886b7a67a3d4e4cd7266989
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229631"
 ---
 # <a name="indirection-and-address-of-operators"></a>间接寻址和 Address-of 运算符
 
@@ -58,7 +58,7 @@ double d;
 pa = &a[5];
 ```
 
-间接寻址运算符 (&#42;) 在此示例中用于访问存储在 `pa` 中的地址的 `int` 值  。 将此值分配给整数变量 `x`：
+在此示例中，使用间接寻址运算符 (&#42;) 来访问存储在 `pa` 中的地址处的 `int` 值。 将此值分配给整数变量 `x`：
 
 ```C
 x = *pa;

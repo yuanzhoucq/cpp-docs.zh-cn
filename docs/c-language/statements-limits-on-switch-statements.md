@@ -2,18 +2,18 @@
 title: 语句：对 Switch 语句的限制
 ms.date: 11/04/2016
 ms.assetid: d327ef3f-2b11-4bd6-abfe-539697fd21a7
-ms.openlocfilehash: 56588bd14305738505f3c846621d2053c7f75c2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4adaaa9360ef5426e8f8c506f433383b2dc9fe15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157976"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229501"
 ---
 # <a name="statements-limits-on-switch-statements"></a>语句：对 Switch 语句的限制
 
-**ANSI 3.6.4.2**`switch` 语句中的 case  值的最大数量
+ANSI 3.6.4.2 `switch` 语句中的 `case` 值数量上限
 
-Microsoft C 未限制 switch  语句中  case 值的数量。 该数字仅受可用内存限制。
+Microsoft C 没有限制 `switch` 语句中的 `case` 值数量。 该数字仅受可用内存限制。
 
 ## <a name="see-also"></a>请参阅
 

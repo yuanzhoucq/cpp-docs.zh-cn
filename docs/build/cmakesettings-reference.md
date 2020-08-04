@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: c80bb27761b8de91f7caee5932f28f1ec2ac0e29
-ms.sourcegitcommit: 166039ceea3256c26fb23920b96de4257b8cf149
+ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84946643"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229865"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 

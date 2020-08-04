@@ -4,12 +4,12 @@ description: GitHub 上的存档 Visual Studio C++ 示例存储库中提供的�
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: 0862f6b512f7278f878ade53b320ad5298bccf68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80215093"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226758"
 ---
 # <a name="visual-studio-c-samples"></a>Visual Studio C++ 示例
 
@@ -246,7 +246,7 @@ Visual Studio 在以前的版本中包含了 C++ 示例代码。 该示例代码
 | [ListHdr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 演示如何使用公共控件 MFC 类 `CListCtrl` 和 `CHeaderCtrl`。 |
 | [MDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 未使用文档和视图的 MDI 应用程序。 |
 | [MDIDocVw](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 使用文档/视图体系结构的 MDI 示例的更新版本。 |
-| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 演示如何使用 `CImage`、`__m64` 数据类型和设备无关位图 (DIB)。 |
+| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 展示了如何使用 `CImage`、`__m64` 数据类型和设备无关位图 (DIB)。 |
 | [Modeless](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 演示如何将 MFC `CDialog` 对象作为无模式对话框使用。 |
 | [Multipad](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 简单的文本编辑器，用户可用它一次打开和编辑多个文本文件。 |
 | [Npp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 演示如何实现类似于记事本的接口 (SDI) 应用程序。 可利用它编辑文本消息，并通过 Windows 消息 API 或 MAPI 将它们发送给其他用户或其他系统。 |

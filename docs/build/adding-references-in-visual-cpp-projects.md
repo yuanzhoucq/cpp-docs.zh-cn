@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169950"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229904"
 ---
 # <a name="consuming-libraries-and-components"></a>使用库和组件
 
@@ -96,13 +96,13 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
    指定是否在生成期间自动将所引用的程序集复制到目标位置。
 
-- 复制本地附属程序集 (C++/CLI) 
+- 复制本地附属程序集 (C++/CLI)
 
-   指定是否在生成期间将所引用程序集的附属程序集复制到目标位置。 仅在“复制本地”为“true”时使用   。
+   指定是否在生成期间将所引用程序集的附属程序集复制到目标位置。 仅在“复制本地”为 `true` 时使用。
 
 - **引用程序集输出**
 
-   指定在生成过程中使用此程序集。 若为“true”，则在生成期间在编译器命令行上使用此程序集  。
+   指定在生成过程中使用此程序集。 如果是 `true`，则在生成期间在编译器命令行上使用此汇编。
 
 ### <a name="project-to-project-reference-properties"></a>项目到项目引用属性
 
@@ -158,7 +158,7 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
 - **强名称**
 
-   如果引用的程序集具有强名称，则为`true` 。 强名称程序集的版本是唯一的。
+   如果引用的汇编有强名称，则为 `true`。 强名称程序集的版本是唯一的。
 
 - **Version**
 

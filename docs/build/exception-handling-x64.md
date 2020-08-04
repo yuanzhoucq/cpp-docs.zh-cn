@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224040"
 ---
 # <a name="x64-exception-handling"></a>x64 异常处理
 
@@ -78,35 +78,35 @@ UNWIND_INFO 结构必须在内存中为 DWORD 对齐。 下面是每个字段的
    |`UNW_FLAG_UHANDLER`| 函数具有一个终止处理程序，应在展开异常时调用该处理程序。|
    |`UNW_FLAG_CHAININFO`| 此展开信息结构不是过程的主结构。 相反，链式展开信息条目是上一个 RUNTIME_FUNCTION 条目的内容。 有关信息，请参阅[链式展开信息结构](#chained-unwind-info-structures)。 如果设置了此标志，则必须清除 UNW_FLAG_EHANDLER 和 UNW_FLAG_UHANDLER 标志。 此外，帧寄存器和固定堆栈分配字段必须具有与主展开信息中相同的值。|
 
-- prolog 的大小 
+- prolog 的大小
 
    函数 prolog 的长度（以字节为单位）。
 
-- 展开代码的计数 
+- 展开代码的计数
 
    展开代码数组中的槽数。 某些展开代码（例如 UWOP_SAVE_NONVOL）要求数组中有多个槽。
 
-- 帧寄存器 
+- 帧寄存器
 
    如果为非零值，则函数使用帧指针 (FP)，并且此字段是用作帧指针的非易失性寄存器编号（对 UNWIND_CODE 节点的操作信息字段使用相同的编码）。
 
-- 帧寄存器偏移（比例） 
+- 帧寄存器偏移（比例）
 
    如果帧寄存器字段为非零值，则此字段是相对于在建立时应用于 FP 寄存器的 RSP 的比例偏移。 实际 FP 寄存器设置为 RSP + 16 \* 此数字，允许 0 到 240 的偏移。 此偏移允许将 FP 寄存器指向动态堆栈帧的本地堆栈分配中间，从而可通过更短的指令实现更好的代码密度。 （也就是说，更多指令可以使用 8 位有符号偏移形式。）
 
-- 展开代码数组 
+- 展开代码数组
 
    说明 prolog 对非易失性寄存器和 RSP 的影响的项的数组。 有关各个项的含义，请参阅有关 UNWIND_CODE 的章节。 出于对齐目的，此数组始终具有偶数数量的条目，最后一个条目可能未使用。 在这种情况下，数组的长度会超过展开代码字段计数所指示的长度。
 
-- 异常处理程序的地址 
+- 异常处理程序的地址
 
    相对于映像的指针，指向函数特定于语言的异常或终止处理程序（如果清除了标志 UNW_FLAG_CHAININFO，并且设置了标志 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER 中的一个）。
 
-- 特定于语言的处理程序数据 
+- 特定于语言的处理程序数据
 
    函数特定于语言的异常处理程序数据。 此数据的格式未指定，完全由所使用的特定异常处理程序确定。
 
-- 链式展开信息 
+- 链式展开信息
 
    如果设置了标志 UNW_FLAG_CHAININFO，则 UNWIND_INFO 结构以三个 UWORD 结尾。  这些 UWORD 表示链式展开函数的 RUNTIME_FUNCTION 信息。
 
@@ -150,7 +150,7 @@ UNWIND_INFO 结构必须在内存中为 DWORD 对齐。 下面是每个字段的
 
   堆栈分配的展开代码应始终使用可能的最短编码：
 
-  |分配大小 |展开代码 |
+  |分配大小|展开代码|
   |-|-|
   |8 到 128 个字节|`UWOP_ALLOC_SMALL`|
   |136 到 512K-8 个字节|`UWOP_ALLOC_LARGE` = 0|
@@ -211,7 +211,7 @@ UNWIND_INFO 结构必须在内存中为 DWORD 对齐。 下面是每个字段的
 
   1. 压入 CS
 
-  1. 压入 Temp 
+  1. 压入 Temp
 
   1. 压入错误代码（如果操作信息等于 1）
 
@@ -305,7 +305,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-ControlPc  是此函数中的 RIP 值。 此值可以是异常地址，也可以是控制离开建立函数的位置处的地址。 RIP 用于确定控制是否在此函数内的某个受保护构造中，例如，`__try`/`__except` 或 `__try`/`__finally` 的 `__try` 块。
+ControlPc  是此函数中的 RIP 值。 此值可以是异常地址，也可以是控制离开建立函数的位置处的地址。 RIP 用于确定控制权是否在此函数内的某受保护的构造中（例如，`__try`/`__except` 或 `__try`/`__finally` 的 `__try` 块）。
 
 ImageBase  是包含此函数的模块的映像基（加载地址），要与函数入口和展开信息中使用的 32 位偏移相加，以记录相对地址。
 
@@ -330,11 +330,11 @@ HandlerData  指向此函数的特定于语言的处理程序数据。
 |伪操作|描述|
 |-|-|
 |PROC FRAME \[:ehandler  ]|使 MASM 在 .pdata 中生成函数表条目，并在 .xdata 中生成展开信息，以实现函数的结构化异常处理展开行为。  如果 ehandler  存在，则此过程作为特定于语言的处理程序在 .xdata 中输入。<br /><br /> 使用 FRAME 特性时，它必须后跟 .ENDPROLOG 指令。  如果函数是叶函数（如[函数类型](../build/stack-usage.md#function-types)所定义），则不需要 FRAME 特性，其余的这些伪操作也是如此。|
-|.PUSHREG register |使用序言中的当前偏移为指定寄存器编号生成 UWOP_PUSH_NONVOL 展开代码条目。<br /><br /> 仅将它与非易失性整数寄存器一起使用。  对于易失性寄存器的压入，改为使用 .ALLOCSTACK 8|
-|.SETFRAME register  , offset |使用指定寄存器和偏移在展开信息中填充帧寄存器字段和偏移。 偏移必须是 16 的倍数，并且小于或等于 240。 此指令还使用当前序言偏移为指定寄存器生成 UWOP_SET_FPREG 展开代码条目。|
-|.ALLOCSTACK size |针对序言中的当前偏移生成具有指定大小的 UWOP_ALLOC_SMALL 或 UWOP_ALLOC_LARGE。<br /><br /> size  操作数必须是 8 的倍数。|
-|.SAVEREG register  , offset |使用当前序言偏移为指定寄存器和偏移生成 UWOP_SAVE_NONVOL 或 UWOP_SAVE_NONVOL_FAR 展开代码条目。 MASM 会选择最高效的编码。<br /><br /> offset  必须为正，并且是 8 的倍数。 offset  相对于过程帧（通常在 RSP 中）的基址或无比例帧指针（如果使用帧指针）。|
-|.SAVEXMM128 register, offset  |使用当前序言偏移为指定 XMM 寄存器和偏移生成 UWOP_SAVE_XMM128 或 UWOP_SAVE_XMM128_FAR 展开代码条目。 MASM 会选择最高效的编码。<br /><br /> offset  必须为正，并且是 16 的倍数。  offset  相对于过程帧（通常在 RSP 中）的基址或无比例帧指针（如果使用帧指针）。|
+|.PUSHREG register|使用序言中的当前偏移为指定寄存器编号生成 UWOP_PUSH_NONVOL 展开代码条目。<br /><br /> 仅将它与非易失性整数寄存器一起使用。  对于易失性寄存器的压入，改为使用 .ALLOCSTACK 8|
+|.SETFRAME register  , offset|使用指定寄存器和偏移在展开信息中填充帧寄存器字段和偏移。 偏移必须是 16 的倍数，并且小于或等于 240。 此指令还使用当前序言偏移为指定寄存器生成 UWOP_SET_FPREG 展开代码条目。|
+|.ALLOCSTACK size|针对序言中的当前偏移生成具有指定大小的 UWOP_ALLOC_SMALL 或 UWOP_ALLOC_LARGE。<br /><br /> size  操作数必须是 8 的倍数。|
+|.SAVEREG register  , offset|使用当前序言偏移为指定寄存器和偏移生成 UWOP_SAVE_NONVOL 或 UWOP_SAVE_NONVOL_FAR 展开代码条目。 MASM 会选择最高效的编码。<br /><br /> offset  必须为正，并且是 8 的倍数。 offset  相对于过程帧（通常在 RSP 中）的基址或无比例帧指针（如果使用帧指针）。|
+|.SAVEXMM128 register, offset|使用当前序言偏移为指定 XMM 寄存器和偏移生成 UWOP_SAVE_XMM128 或 UWOP_SAVE_XMM128_FAR 展开代码条目。 MASM 会选择最高效的编码。<br /><br /> offset  必须为正，并且是 16 的倍数。  offset  相对于过程帧（通常在 RSP 中）的基址或无比例帧指针（如果使用帧指针）。|
 |.PUSHFRAME \[code  ]|生成 UWOP_PUSH_MACHFRAME 展开代码条目。 如果指定了可选的 code  ，则为展开代码条目提供修饰符 1。 否则修饰符为 0。|
 |.ENDPROLOG|指示序言声明的结尾。  必须出现在函数的前 255 个字节中。|
 
@@ -396,11 +396,11 @@ sample ENDP
 |宏|描述|
 |-|-|
 |alloc_stack(n)|分配 n 个字节的堆栈帧（使用 `sub rsp, n`），并发出适当的展开信息 (.allocstack n)|
-|save_reg reg, loc  |将非易失性寄存器 reg  保存在堆栈上 RSP 偏移为 loc  的位置处，并发出适当的展开信息。 (.savereg reg, loc)|
-|push_reg reg |将非易失性寄存器 reg  压入堆栈，并发出适当的展开信息。 (.pushreg reg)|
-|rex_push_reg reg |使用 2 字节压入将非易失性寄存器保存在堆栈中，并发出适当的展开信息 (.pushreg reg)。  如果压入是函数中的第一个指令，则使用此宏，以确保函数是可进行热修补。|
-|save_xmm128 reg, loc  |将非易失性 XMM 寄存器 reg  保存在堆栈上 RSP 偏移为 loc  的位置处，并发出适当的展开信息 (.savexmm128 reg, loc)|
-|set_frame reg, offset  |将帧寄存器 reg  设置为 RSP + offset  （使用 `mov` 或 `lea`），并发出适当的展开信息 (.set_frame reg, offset)|
+|save_reg reg, loc|将非易失性寄存器 reg  保存在堆栈上 RSP 偏移为 loc  的位置处，并发出适当的展开信息。 (.savereg reg, loc)|
+|push_reg reg|将非易失性寄存器 reg  压入堆栈，并发出适当的展开信息。 (.pushreg reg)|
+|rex_push_reg reg|使用 2 字节压入将非易失性寄存器保存在堆栈中，并发出适当的展开信息 (.pushreg reg)。  如果压入是函数中的第一个指令，则使用此宏，以确保函数是可进行热修补。|
+|save_xmm128 reg, loc|将非易失性 XMM 寄存器 reg  保存在堆栈上 RSP 偏移为 loc  的位置处，并发出适当的展开信息 (.savexmm128 reg, loc)|
+|set_frame reg, offset|将帧寄存器 reg  设置为 RSP + offset  （使用 `mov` 或 `lea`），并发出适当的展开信息 (.set_frame reg, offset)|
 |push_eflags|将 eflags 与 `pushfq` 指令一起压入，并发出适当的展开信息 (.alloc_stack 8)|
 
 下面是一个示例函数 prolog，其中包含宏的正确用法：

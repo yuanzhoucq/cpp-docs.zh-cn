@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749196"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217124"
 ---
 # <a name="conditional-expression-operator"></a>条件表达式运算符
 
@@ -23,7 +23,7 @@ C 具有一个三元运算符：conditional-expression 运算符 (? :  )。
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
 
- logical-OR-expression 必须具有整型类型、浮点型或指针类型。 根据其等效性，其计算结果为 0。 序列点紧跟 logical-OR-expression  。 操作数的计算将继续，如下所示：
+logical-OR-expression 必须具有整型类型、浮点型或指针类型。 根据其等效性，其计算结果为 0。 序列点紧跟 logical-OR-expression  。 操作数的计算将继续，如下所示：
 
 - 如果 logical-OR-expression  不等于 0，则计算 expression  。 由非终止符 expression  给定的表达式的计算结果。 （这意味着，仅当 logical-OR-expression  为 true 时计算 expression  。）
 
@@ -37,13 +37,13 @@ C 具有一个三元运算符：conditional-expression 运算符 (? :  )。
 
 - 如果 expression  和 conditional-expression  都具有相同的结构、联合或指针类型，则结果的类型为相同的结构、联合或指针类型。
 
-- 如果两个操作数都具有类型 `void`，则结果具有类型 `void`。
+- 如果两个操作数的类型都是 `void`，则结果的类型为 `void`。
 
-- 如果其中一个操作数是指向任何类型的对象的指针，且另一个操作数是指向 `void` 的指针，则指向对象的指针将转换为指向 `void` 的指针，而结果是指向 `void` 的指针。
+- 如果其中一个操作数是指向任何类型的对象的指针，而另一个操作数是指向 `void` 的指针，则指向对象的指针会被转换为指向 `void` 的指针，结果是指向 `void` 的指针。
 
 - 如果 expression  或 conditional-expression  是指针，且另一个操作数是具有值 0 的常量表达式，则结果的类型为指针类型。
 
-在指针的类型比较中，指针指向的类型中的任何类型限定符（const  或 `volatile`）是无意义的，但结果类型从两个条件组件中继承限定符。
+在指针的类型比较中，指针所指向的类型中的任何类型限定符（`const` 或 `volatile`）都是不重要的，但结果类型从条件的两个组件继承了限定符。
 
 ## <a name="examples"></a>示例
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 075962758773660085ae0b98b668c264524cc6aa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dc6dc14efe2a7ccf46c41477ed4fd6d1956856
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328596"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224027"
 ---
 # <a name="exporting-from-a-dll-using-__declspecdllexport"></a>使用 __declspec(dllexport) 从 DLL 导出
 
-可以使用 __declspec(dllexport)  关键字从 DLL 中导出数据、函数、类或类成员函数。 __declspec(dllexport)  可将导出指令添加到对象文件中，因此你无需使用 .def 文件。
+可以使用 `__declspec(dllexport)` 关键字从 DLL 中导出数据、函数、类或类成员函数。 `__declspec(dllexport)` 将导出指令添加到对象文件中，因此你不需要使用 .def 文件。
 
-尝试导出已修饰的 C++ 函数名称时，这种便利性最为明显。 由于名称修饰没有标准规范，因此，导出函数的名称可能会因编译器版本而异。 如果使用 __declspec(dllexport)  ，则仅当命名约定发生更改时，才需要重新编译 DLL 和从属 .exe 文件。
+尝试导出已修饰的 C++ 函数名称时，这种便利性最为明显。 由于名称修饰没有标准规范，因此，导出函数的名称可能会因编译器版本而异。 如果你使用 `__declspec(dllexport)`，则只有在考虑到任何命名约定更改时，才需要重新编译 DLL 和依赖 .exe 文件。
 
-许多导出指令只能在 .def 文件中创建，例如 ordinals、NONAME 和 PRIVATE，并且没有 .def 文件就无法指定这些属性。 但是，除了使用 .def 文件外，使用 __declspec(dllexport)  也不会导致生成错误。
+许多导出指令只能在 .def 文件中创建，例如 ordinals、NONAME 和 PRIVATE，并且没有 .def 文件就无法指定这些属性。 不过，除了使用 .def 文件外还使用 `__declspec(dllexport)` 不会导致生成错误出现。
 
-若要导出函数，__declspec(dllexport)  关键字必须出现在调用约定关键字的左侧（如果指定了关键字）。 例如：
+若要导出函数，`__declspec(dllexport)` 关键字必须出现在调用约定关键字的左侧（如果指定了关键字的话）。 例如：
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
@@ -40,13 +40,13 @@ class __declspec(dllexport) CExampleExport : public CObject
 > [!NOTE]
 > `__declspec(dllexport)` 不能应用于采用 `__clrcall` 调用约定的函数。
 
-生成 DLL 时，通常会创建一个包含要导出的函数原型和/或类的头文件，并将 __declspec(dllexport)  添加到头文件的声明中。 为了使代码更具可读性，请为 __declspec(dllexport)  定义一个宏，并将该宏与要导出的每个符号一起使用：
+生成 DLL 时，通常会创建一个包含要导出的函数原型和/或类的头文件，并将 `__declspec(dllexport)` 添加到头文件中的声明内。 为了提高代码的可读性，请为 `__declspec(dllexport)` 定义宏，并对要导出的每个符号使用此宏：
 
 ```
 #define DllExport   __declspec( dllexport )
 ```
 
-__declspec(dllexport)  将函数名称存储在 DLL 的导出表中。 如果要优化表的大小，请参阅[按序号而不是按名称从 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
+`__declspec(dllexport)` 将函数名称存储在 DLL 的导出表中。 如果要优化表的大小，请参阅[按序号而不是按名称从 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 

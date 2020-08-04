@@ -10,12 +10,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: 7ac57a65d575ba6a9134f3c4474103735411847d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c310d610b4e4cfc5ae5620d38337a5b8fd5243ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226348"
 ---
 # <a name="one-dimensional-arrays"></a>一维数组
 
@@ -49,11 +49,11 @@ b[a]
 
 根据加法运算符的转换规则（在[相加运算符](../c-language/c-additive-operators.md)中提供），可通过将整数值乘以指针寻址的类型的长度来将整数值转换为地址偏移量。
 
-例如，假定标识符 `line` 引用 `int` 值的数组。 以下过程用于计算下标表达式 `line[ i ]`：
+例如，假设标识符 `line` 引用包含 `int` 值的数组。 以下过程用于计算下标表达式 `line[ i ]`：
 
-1. 将整数值 `i` 乘以定义为 `int` 项的长度的字节数。 `i` 的转换值表示 `i` `int` 位置。
+1. 整数值 `i` 与定义为 `int` 项的长度的字节数相乘。 `i` 的转换后的值表示 `i` `int` 位置。
 
-1. 此转换值将添加到原始指针值 (`line`) 以生成从 `line` 偏移 `i` `int` 个位置的地址。
+1. 此转换后的值与原始指针值 (`line`) 相加，以生成与 `line` 之间偏移 `i` `int` 位置的地址。
 
 1. 间接寻址运算符将应用于此新地址。 结果是位于该位置（直观地说，就是 `line [ i ]`）的数组元素的值。
 

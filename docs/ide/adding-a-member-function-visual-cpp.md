@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 1cd7abbbc43ae56861b3b83451b41933b8b0b4f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693407"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228682"
 ---
 # <a name="add-a-member-function"></a>添加成员函数
 
@@ -22,9 +22,9 @@ ms.locfileid: "51693407"
 
 **将成员函数添加到类：**
 
-1. 在 **“类视图”** 中，展开项目节点，显示项目中的类。 （若要打开“类视图”，请在菜单栏上，选择“视图”、“类视图”。）
+1. 在 **“类视图”** 中，展开项目节点，显示项目中的类。 （若要打开“类视图”，请在菜单栏上，选择“视图”、“类视图”  。）
 
-1. 打开想要向其添加成员函数的类的快捷菜单，然后选择“添加”、“添加函数”。
+1. 打开想要向其添加成员函数的类的快捷菜单，然后选择“添加”、“添加函数” 。
 
 1. 提供有关成员函数的适当详细信息。 有关详细信息，请参阅[添加成员函数向导](#add-member-function-wizard)。
 
@@ -46,10 +46,10 @@ ms.locfileid: "51693407"
 
   | | | |
   |---|---|---|
-  | `char` | `int` | `unsigned int` |
-  | `double` | `long` | `unsigned long` |
-  | `float` | `short` | `void` |
-  | `HRESULT` | `unsigned char` | |
+  | **`char`** | **`int`** | **`unsigned int`** |
+  | **`double`** | **`long`** | **`unsigned long`** |
+  | **`float`** | **`short`** | **`void`** |
+  | `HRESULT` | **`unsigned char`** | |
 
 - **函数名**
 
@@ -61,9 +61,9 @@ ms.locfileid: "51693407"
 
   | | | |
   |---|---|---|
-  | `char` | `int` | `unsigned char` |
-  | `double` | `long` | `unsigned int` |
-  | `float` | `short` | `unsigned long` |
+  | **`char`** | **`int`** | **`unsigned char`** |
+  | **`double`** | **`long`** | **`unsigned int`** |
+  | **`float`** | **`short`** | **`unsigned long`** |
 
 - **参数名称**
 
@@ -71,19 +71,19 @@ ms.locfileid: "51693407"
 
 - **参数列表**
 
-  显示已添加到成员函数的参数列表。 要将参数添加到列表中，请在“参数类型”和“参数名称”框中提供类型和名称，然后选择“添加”。 要从列表中删除参数，请选择该参数，然后选择“删除”。
+  显示已添加到成员函数的参数列表。 要将参数添加到列表中，请在“参数类型”和“参数名称”框中提供类型和名称，然后选择“添加”  。 要从列表中删除参数，请选择该参数，然后选择“删除”。
 
 - **访问**
 
-  设置成员函数的访问权限。 访问修饰符是一种关键字，用于指定其他类对该成员函数的访问权限。 有关指定访问权限的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。 默认情况下，成员函数的访问级别设置为 `public`。
+  设置成员函数的访问权限。 访问修饰符是一种关键字，用于指定其他类对该成员函数的访问权限。 有关指定访问权限的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。 默认情况下，成员函数访问级别设置为 `public`。
 
   - [public](../cpp/public-cpp.md)
-  - [protected](../cpp/protected-cpp.md)
+  - [受保护](../cpp/protected-cpp.md)
   - [private](../cpp/private-cpp.md)
 
-  检查新的成员函数是静态的还是虚拟的，以及它是内联函数还是纯函数。 如果将成员函数设置为纯函数，则会选中“虚拟”复选框，且“内联”复选框不可用。 默认为非静态、非虚拟的成员函数。
+  检查新的成员函数是静态的还是虚拟的，以及它是内联函数还是纯函数。 如果将成员函数设置为纯函数，则会选中“虚拟”复选框，且“内联”复选框不可用 。 默认为非静态、非虚拟的成员函数。
 
-  | 选项 | 描述 |
+  | 选项 | 说明 |
   |--------|-------------|
   | [Static](../cpp/storage-classes-cpp.md) |  指定该函数的作用类似于全局函数且可在类外调用（即使没有类实例化）。 成员函数无权访问非静态成员。 指定为 `Static` 的成员函数不能是虚拟函数。 |
   | [虚拟](../cpp/virtual-cpp.md) | 确保无论用于进行成员函数调用的表达式如何，均为对象调用正确的成员函数。 指定为 `Virtual` 的成员函数不能是静态函数。 |

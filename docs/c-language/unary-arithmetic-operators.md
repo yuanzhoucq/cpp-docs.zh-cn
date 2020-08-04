@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logical negation
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
-ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0acbd98e25c05fee6fb5217bf00d80287460dbeb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290659"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189917"
 ---
 # <a name="unary-arithmetic-operators"></a>一元算术运算符
 
@@ -29,7 +29,7 @@ ms.locfileid: "62290659"
 |**+**|括号内的表达式前面的一元加运算符强制对包含的运算进行分组。 它用于涉及多个结合的或可交换的二元运算符的表达式。 操作数必须具有算法类型。 结果为操作数的值。 整型操作数将进行整型提升。 结果的类型为提升后的操作数的类型。|
 |**-**|算术求反运算符生成其操作数的负值（2 的补数）。 操作数必须是整型值或浮点值。 此运算符执行常用算术转换。|
 |`~`|按位求补（或按位“非”）运算符将产生其操作数的按位补数。 操作数必须为整型。 此运算符执行常用算术转换；结果具有转换后的操作数的类型。|
-|**!**|如果其操作数为 true（非零），则逻辑求反（逻辑“非”）运算符将生成值 0；如果其操作数为 false (0)，则生成值 1。 结果具有 `int` 类型。 操作数必须是整型值、浮点值或指针值。|
+|**!**|如果其操作数为 true（非零），则逻辑求反（逻辑“非”）运算符将生成值 0；如果其操作数为 false (0)，则生成值 1。 结果的类型为 `int`。 操作数必须是整型值、浮点值或指针值。|
 
 指针上的一元算术运算是非法的。
 

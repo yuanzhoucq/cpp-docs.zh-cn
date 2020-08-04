@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291036"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213692"
 ---
 # <a name="union-declarations"></a>联合声明
 
@@ -24,8 +24,8 @@ ms.locfileid: "62291036"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -44,14 +44,14 @@ ms.locfileid: "62291036"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
 
-带 union  类型的变量存储该类型所定义的值之一。 相同的规则可控制结构和联合声明。 联合还可以具有位域。
+具有 `union` 类型的变量存储此类型所定义的值之一。 相同的规则可控制结构和联合声明。 联合还可以具有位域。
 
-联合的成员不能包含不完整类型、类型 `void` 或函数类型。 因此，成员不能是联合的实例，但可以是指向将声明的联合类型的指针。
+联合成员不能具有不完整类型、类型 `void` 或函数类型。 因此，成员不能是联合的实例，但可以是指向将声明的联合类型的指针。
 
 联合类型声明只是一个模板。 不保留内存，直到声明变量。
 
 > [!NOTE]
-> 如果声明两个类型的联合并存储一个值，但使用其它类型访问该联合，则结果是不可靠的。 例如，声明 float  和 `int` 的联合。 存储一个 float  值，但程序稍后会将该值作为 `int` 进行访问。 在这种情况下，值取决于 float  值的内部存储。 整数值是不可靠的。
+> 如果声明两个类型的联合并存储一个值，但使用其它类型访问该联合，则结果是不可靠的。 例如，声明了 `float` 和 `int` 的联合。 存储 `float` 值，但程序稍后会将此值作为 `int` 进行访问。 在这种情况下，此值取决于 `float` 值的内部存储。 整数值是不可靠的。
 
 ## <a name="examples"></a>示例
 
@@ -79,7 +79,7 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-`screen` 数组包含 2,000 个元素。 数组的每个元素均为一个包含以下两个成员的联合：`window1` 和 `screenval`。 `window1` 成员是带两个位域成员（`icon` 和 `color`）的结构。 `screenval` 成员是一个 `int`。 在任意给定时间，每个联合元素保留由 `int` 表示的 `screenval` 或由 `window1` 表示的结构。
+`screen` 数组包含 2,000 个元素。 数组的每个元素均为一个包含以下两个成员的联合：`window1` 和 `screenval`。 `window1` 成员是带两个位域成员（`icon` 和 `color`）的结构。 `screenval` 成员是 `int`。 在任意给定时间，每个联合元素都保留由 `screenval` 表示的 `int` 或由 `window1` 表示的结构。
 
 **Microsoft 专用**
 

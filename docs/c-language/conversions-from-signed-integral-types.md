@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: 79608b5ca4335ee3c30bdab27e7efade5b7e2f54
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: d41d2fd205a87f9f2be2179ffd8e38256a96e4f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998720"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226472"
 ---
 # <a name="conversions-from-signed-integral-types"></a>从带符号整型的转换
 
@@ -33,11 +33,11 @@ printf_s( "%hu\n", u );  // Prints 65533
 
 有关整型和浮点类型大小的信息，请参阅[基本类型的存储](../c-language/storage-of-basic-types.md)。
 
-下表汇总了来自带符号整型的转换。 它假定默认情况下，“char”类型是带符号的  。 如果使用编译时选项将 char 类型的默认值更改为无符号，则应用 unsigned char 类型的[从无符号整型转换](../c-language/conversions-from-unsigned-integral-types.md)表中给定的转换，而不是应用此表中的转换   。
+下表汇总了来自带符号整型的转换。 它假定 `char` 类型在默认情况下是带符号的。 如果你使用编译时选项将 `char` 类型更改为在默认情况下是不带符号的，则应用的是 `unsigned char` 类型的[从不带符号的整型类型转换](../c-language/conversions-from-unsigned-integral-types.md)表中给定的转换，而不是此表中的转换。
 
 **Microsoft 专用**
 
-在 Microsoft 编译器中，int 和 long 是不同但等效的类型   。 int 值的转换与 long 的转换的方式相同   。
+在 Microsoft 编译器中，`int` 和 `long` 是不同但等效的类型。 `int` 值与 `long` 的转换方式是一样的。
 
 **结束 Microsoft 专用**
 
@@ -45,48 +45,48 @@ printf_s( "%hu\n", u );  // Prints 65533
 
 |From|功能|方法|
 |----------|--------|------------|
-|**char**<sup>1</sup>|**short**|符号扩展|
-|**char**|**long**|符号扩展|
-|**char**|**long long**|符号扩展|
-|**char**|**unsigned char**|保留模式；高序位失去符号位的函数|
-|**char**|**unsigned short**|符号扩展至 **short**；将 **short** 转换为 **unsigned short**|
-|**char**|**unsigned long**|符号扩展至 **long**；将 **long** 转换为 **unsigned long**|
-|**char**|**unsigned long long**|符号扩展至 long long；将 long long 转换为 unsigned long long   |
-|**char**|**float**|符号扩展至 **long**；将 **long** 转换为 **float**|
-|**char**|**double**|符号扩展至 **long**；将 **long** 转换为 **double**|
-|**char**|**long double**|符号扩展至 **long**；将 **long** 转换为 **double**|
-|**short**|**char**|保留低位字节|
-|**short**|**long**|符号扩展|
-|**short**|**long long**|符号扩展|
-|**short**|**unsigned char**|保留低位字节|
-|**short**|**unsigned short**|保留位模式；高序位丢失符号位的函数|
-|**short**|**unsigned long**|符号扩展至 **long**；将 **long** 转换为 **unsigned long**|
-|**short**|**unsigned long long**|符号扩展至 long long；将 long long 转换为 unsigned long long   |
-|**short**|**float**|符号扩展至 **long**；将 **long** 转换为 **float**|
-|**short**|**double**|符号扩展至 **long**；将 **long** 转换为 **double**|
-|**short**|**long double**|符号扩展至 **long**；将 **long** 转换为 **double**|
-|**long**|**char**|保留低位字节|
-|**long**|**short**|保留低位字|
-|**long**|**long long**|符号扩展|
-|**long**|**unsigned char**|保留低位字节|
-|**long**|**unsigned short**|保留低位字|
-|**long**|**unsigned long**|保留位模式；高序位丢失符号位的函数|
-|**long**|**unsigned long long**|符号扩展至 long long；将 long long 转换为 unsigned long long   |
-|**long**|**float**|表示为 **float**。 如果不能精确表示 long，则某些精度将丢失  。|
-|**long**|**double**|表示为 **double**。 如果 long 不能精确表示为 double，则某些精度将丢失   。|
-|**long**|**long double**|表示为 **double**。 如果 long 不能精确表示为 double，则某些精度将丢失   。|
-|**long long**|**char**|保留低位字节|
-|**long long**|**short**|保留低位字|
-|**long long**|**long**|保留低位双字节|
-|**long long**|**unsigned char**|保留低位字节|
-|**long long**|**unsigned short**|保留低位字|
-|**long long**|**unsigned long**|保留低位双字节|
-|**long long**|**unsigned long long**|保留位模式；高序位丢失符号位的函数|
-|**long long**|**float**|表示为 **float**。 如果不能精确表示 long long，则某些精度将丢失  。|
-|**long long**|**double**|表示为 **double**。 如果 long long 不能精确表示为 double，则某些精度将丢失   。|
-|**long long**|**long double**|表示为 **double**。 如果 long long 不能精确表示为 double，则某些精度将丢失   。|
+|`char`<sup>1</sup>|**`short`**|符号扩展|
+|**`char`**|**`long`**|符号扩展|
+|**`char`**|**`long long`**|符号扩展|
+|**`char`**|**`unsigned char`**|保留模式；高序位失去符号位的函数|
+|**`char`**|**`unsigned short`**|符号扩展为 `short`；将 `short` 转换为 `unsigned short`|
+|**`char`**|**`unsigned long`**|符号扩展为 `long`；将 `long` 转换为 `unsigned long`|
+|**`char`**|**`unsigned long long`**|符号扩展为 `long long`；将 `long long` 转换为 `unsigned long long`|
+|**`char`**|**`float`**|符号扩展为 `long`；将 `long` 转换为 `float`|
+|**`char`**|**`double`**|符号扩展为 `long`；将 `long` 转换为 `double`|
+|**`char`**|**`long double`**|符号扩展为 `long`；将 `long` 转换为 `double`|
+|**`short`**|**`char`**|保留低位字节|
+|**`short`**|**`long`**|符号扩展|
+|**`short`**|**`long long`**|符号扩展|
+|**`short`**|**`unsigned char`**|保留低位字节|
+|**`short`**|**`unsigned short`**|保留位模式；高序位丢失符号位的函数|
+|**`short`**|**`unsigned long`**|符号扩展为 `long`；将 `long` 转换为 `unsigned long`|
+|**`short`**|**`unsigned long long`**|符号扩展为 `long long`；将 `long long` 转换为 `unsigned long long`|
+|**`short`**|**`float`**|符号扩展为 `long`；将 `long` 转换为 `float`|
+|**`short`**|**`double`**|符号扩展为 `long`；将 `long` 转换为 `double`|
+|**`short`**|**`long double`**|符号扩展为 `long`；将 `long` 转换为 `double`|
+|**`long`**|**`char`**|保留低位字节|
+|**`long`**|**`short`**|保留低位字|
+|**`long`**|**`long long`**|符号扩展|
+|**`long`**|**`unsigned char`**|保留低位字节|
+|**`long`**|**`unsigned short`**|保留低位字|
+|**`long`**|**`unsigned long`**|保留位模式；高序位丢失符号位的函数|
+|**`long`**|**`unsigned long long`**|符号扩展为 `long long`；将 `long long` 转换为 `unsigned long long`|
+|**`long`**|**`float`**|表示为 `float`。 如果无法精确表示 `long`，就会丢失一些精度。|
+|**`long`**|**`double`**|表示为 `double`。 如果无法将 `long` 精确表示为 `double`，就会丢失一些精度。|
+|**`long`**|**`long double`**|表示为 `double`。 如果无法将 `long` 精确表示为 `double`，就会丢失一些精度。|
+|**`long long`**|**`char`**|保留低位字节|
+|**`long long`**|**`short`**|保留低位字|
+|**`long long`**|**`long`**|保留低位双字节|
+|**`long long`**|**`unsigned char`**|保留低位字节|
+|**`long long`**|**`unsigned short`**|保留低位字|
+|**`long long`**|**`unsigned long`**|保留低位双字节|
+|**`long long`**|**`unsigned long long`**|保留位模式；高序位丢失符号位的函数|
+|**`long long`**|**`float`**|表示为 `float`。 如果无法精确表示 `long long`，就会丢失一些精度。|
+|**`long long`**|**`double`**|表示为 `double`。 如果无法将 `long long` 精确表示为 `double`，就会丢失一些精度。|
+|**`long long`**|**`long double`**|表示为 `double`。 如果无法将 `long long` 精确表示为 `double`，就会丢失一些精度。|
 
-<sup>1</sup> 所有 char 项假定默认情况下 char 类型是有符号的   。
+<sup>1</sup>所有 `char` 条目假定 `char` 类型在默认情况下是带符号的。
 
 ## <a name="see-also"></a>请参阅
 

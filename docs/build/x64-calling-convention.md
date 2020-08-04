@@ -3,12 +3,12 @@ title: x64 调用约定
 description: 默认 x64 调用约定的详细信息。
 ms.date: 07/06/2020
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 9bfecd0fb154658a299d3dac7d9e45398ebe450b
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: b615d2e4473fed1d090b7411211c08b0b824bc8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200850"
 ---
 # <a name="x64-calling-convention"></a>x64 调用约定
 
@@ -44,7 +44,7 @@ Prolog 和 epilog 受到严格限制，因此可以在 xdata 中对其进行正�
 
 前四个参数中的所有浮点和双精度参数都在 XMM0 - XMM3（具体视位置而定）中传递。 存在 varargs 参数时，浮点值只放在整数寄存器 RCX、RDX、R8 和 R9 中。 有关详细信息，请参阅 [Vararg](#varargs)。 同样，当相应的参数为整数或指针类型时，将忽略 XMM0 - XMM3 寄存器。
 
-[`__m128`](../cpp/m128.md) 类型、数组和字符串从不通过即时值传递。 而是将指针传递给调用方分配的内存。 大小为 8、16、32 或 64 位的结构和联合以及 `__m64` 类型作为相同大小的整数传递。 其他大小的结构或联合作为指针传递给调用方分配的内存。 对于这些作为指针传递的聚合类型（包括 `__m128`），调用方分配的临时内存必须对齐 16 字节。
+[`__m128`](../cpp/m128.md) 类型、数组和字符串从不通过即时值传递。 而是将指针传递给调用方分配的内存。 大小为 8、16、32 或 64 位的结构和联合以及 `__m64` 类型作为相同大小的整数传递。 其他大小的结构或联合作为指针传递给调用方分配的内存。 对于这些作为指针传递的聚合类型（包括 `__m128`），调用方分配的临时内存必须是 16 字节对准的。
 
 不分配堆栈空间且不调用其他函数的内部函数，有时使用其他易失性寄存器来传递其他寄存器参数。 编译器与内部函数实现之间的紧密绑定使此优化成为可能。
 
@@ -106,7 +106,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>返回值
 
-可容纳 64 位（包括 `__m64` 类型）的标量返回值是通过 RAX 返回的。 非标量类型（包括浮点数、双精度数和矢量类型，例如 [`__m128`](../cpp/m128.md)、[`__m128i`](../cpp/m128i.md)、[`__m128d`](../cpp/m128d.md)）以 XMM0 的形式返回。 返回到 RAX 或 XMM0 中的值的未使用位数的状态未定义。
+可以适应 64 位的标量返回值（包括 `__m64` 类型）是通过 RAX 返回的。 非标量类型（包括浮点数、双精度数和矢量类型，例如 [`__m128`](../cpp/m128.md)、[`__m128i`](../cpp/m128i.md)、[`__m128d`](../cpp/m128d.md)）以 XMM0 的形式返回。 返回到 RAX 或 XMM0 中的值的未使用位数的状态未定义。
 
 用户定义类型可以从全局函数和静态成员函数通过值返回。 若要将用户定义类型通过值返回到 RAX 中，其长度必须为 1、2、4、8、16、32 或 64 位。 它还必须没有用户定义的构造函数、析构函数或复制赋值运算符。 它不能具有私有或受保护的非静态数据成员，也不能具有引用类型的非静态数据成员。 它不能具有基类或虚拟函数。 而且，它只能有同样满足这些要求的数据成员。 （该定义基本上与 C++03 POD 类型相同。 由于 C++11 标准中的定义已更改，我们不建议使用 `std::is_pod` 进行此测试。）否则，调用方必须为返回值分配内存，并将指向它的指针作为第一个参数传递。 然后，其余参数将向右移动一个参数。 相同的指针必须在 RAX 中被调用方返回。
 
@@ -212,7 +212,7 @@ x64 ABI 考虑寄存器 RBX、RBP、RDI.TPL、RSI、RSP、R12、R13、R14、R15 
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-当包含 setjmpex.h 或 setjmp.h 时，对 [`setjmp`](../c-runtime-library/reference/setjmp.md) 或 [`longjmp`](../c-runtime-library/reference/longjmp.md) 的所有调用都会导致进行展开，从而调用析构函数和 `__finally` 调用。  此行为与 x86 不同；在 x86 中，包含 setjmp.h 会导致 `__finally` 子句和析构函数不被调用。
+当包含 setjmpex.h 或 setjmp.h 时，所有对 [`setjmp`](../c-runtime-library/reference/setjmp.md) 或 [`longjmp`](../c-runtime-library/reference/longjmp.md) 的调用都会导致展开发生，进而导致调用析构函数和 `__finally` 调用。  这种行为与 x86 不同；在 x86 中，包含 setjmp.h 会导致 `__finally` 子句和析构函数不被调用。
 
 调用 `setjmp` 会保留当前堆栈指针、非易失性寄存器和 MXCSR 寄存器。  调用 `longjmp` 会返回到最新的 `setjmp` 调用站点，并将堆栈指针、非易失性寄存器和 MXCSR 寄存器重置回最新 `setjmp` 调用所保留的状态。
 

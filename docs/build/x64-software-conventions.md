@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422720"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223767"
 ---
 # <a name="x64-software-conventions"></a>x64 软件约定
 
@@ -18,7 +18,7 @@ ms.locfileid: "79422720"
 
 ## <a name="overview-of-x64-calling-conventions"></a>x64 调用约定概述
 
-x86 和 x64 之间的两个重要区别是 64 位寻址功能和一组用于常规用途的平面 16 64 位寄存器。 给定扩展的寄存器组 x64 使用 [__fastcall ](../cpp/fastcall.md) 调用约定和基于 RISC 的异常处理模型。 `__fastcall` 约定使用前四个参数的寄存器和堆栈帧来传递其他参数。 有关 x64 调用约定的详细信息，包括寄存器使用情况、堆栈参数、返回值和堆栈展开，请参阅 [x64 调用约定](x64-calling-convention.md)。
+x86 和 x64 之间的两个重要区别是 64 位寻址功能和一组用于常规用途的平面 16 64 位寄存器。 给定扩展的寄存器组 x64 使用 [__fastcall ](../cpp/fastcall.md) 调用约定和基于 RISC 的异常处理模型。 `__fastcall` 约定对前四个参数和堆栈帧使用寄存器来传递其他参数。 有关 x64 调用约定的详细信息，包括寄存器使用情况、堆栈参数、返回值和堆栈展开，请参阅 [x64 调用约定](x64-calling-convention.md)。
 
 ## <a name="enable-optimization-for-x64"></a>对 x64 启动优化
 
@@ -47,19 +47,19 @@ x86 和 x64 之间的两个重要区别是 64 位寻址功能和一组用于常�
 |||||
 |-|-|-|-|
 |标量类型|C 数据类型|存储大小（以字节为单位）|建议的对齐方式|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|字|
-|**UINT16**|**unsigned short**|2|字|
-|**INT32**|**int**, **long**|4|双字|
+|**INT8**|**`char`**|1|Byte|
+|**UINT8**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|字|
+|**UINT16**|**`unsigned short`**|2|字|
+|**INT32**|**`int`** , **`long`**|4|双字|
 |**UINT32**|**unsigned int, unsigned long**|4|双字|
-|**INT64**|**__int64**|8|四字|
-|**UINT64**|unsigned __int64 |8|四字|
-|**FP32（单精度）**|**float**|4|双字|
-|**FP64（双精度）**|**double**|8|四字|
+|**INT64**|**`__int64`**|8|四字|
+|**UINT64**|unsigned __int64|8|四字|
+|**FP32（单精度）**|**`float`**|4|双字|
+|**FP64（双精度）**|**`double`**|8|四字|
 |**POINTER**|__\*__|8|四字|
-|**__m64**|**struct __m64**|8|四字|
-|**__m128**|**struct __m128**|16|八倍长字|
+|**`__m64`**|**struct __m64**|8|四字|
+|**`__m128`**|**struct __m128**|16|八倍长字|
 
 ### <a name="aggregates-and-unions"></a>聚合和联合
 
@@ -82,19 +82,19 @@ x86 和 x64 之间的两个重要区别是 64 位寻址功能和一组用于常�
 ||||
 |-|-|-|
 |标量类型|C 数据类型|所需的对齐方式|
-|**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|字|
-|**UINT16**|**unsigned short**|字|
-|**INT32**|**int**, **long**|双字|
+|**INT8**|**`char`**|Byte|
+|**UINT8**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|字|
+|**UINT16**|**`unsigned short`**|字|
+|**INT32**|**`int`** , **`long`**|双字|
 |**UINT32**|**unsigned int, unsigned long**|双字|
-|**INT64**|**__int64**|四字|
-|**UINT64**|unsigned __int64 |四字|
-|**FP32（单精度）**|**float**|双字|
-|**FP64（双精度）**|**double**|四字|
+|**INT64**|**`__int64`**|四字|
+|**UINT64**|unsigned __int64|四字|
+|**FP32（单精度）**|**`float`**|双字|
+|**FP64（双精度）**|**`double`**|四字|
 |**POINTER**|<strong>\*</strong>|四字|
-|**__m64**|**struct __m64**|四字|
-|**__m128**|**struct __m128**|八倍长字|
+|**`__m64`**|**struct __m64**|四字|
+|**`__m128`**|**struct __m128**|八倍长字|
 
 以下聚合对齐规则适用于：
 
@@ -209,9 +209,9 @@ x64 体系结构提供了 16 个通用寄存器（以后称为整数寄存器）
 |XMM0、YMM0|易失的|第一个 FP 参数；使用 `__vectorcall` 时的第一个矢量类型参数|
 |XMM1、YMM1|易失的|第二个 FP 参数；使用 `__vectorcall` 时的第二个矢量类型参数|
 |XMM2、YMM2|易失的|第三个 FP 参数；使用 `__vectorcall` 时的第三个矢量类型参数|
-|XMM3、YMM3|易失的|第四个 FP 自变量；使用 `__vectorcall` 时的第四个矢量类型参数|
-|XMM4、YMM4|易失的|必须根据需要由调用方保留；使用 `__vectorcall` 时的第五个矢量类型参数|
-|XMM5、YMM5|易失的|必须根据需要由调用方保留；使用 `__vectorcall` 时的第六个矢量类型参数|
+|XMM3、YMM3|易失的|第四个 FP 参数；使用 `__vectorcall` 时的第四个矢量类型参数|
+|XMM4、YMM4|易失的|必须根据调用方的需要保留；使用 `__vectorcall` 时的第五个矢量类型参数|
+|XMM5、YMM5|易失的|必须根据调用方的需要保留；使用 `__vectorcall` 时的第六个矢量类型参数|
 |XMM6:XMM15、YMM6:YMM15|非易失的 (XMM)，易失的（YMM 的上半部分）|必须由被调用方保留。 YMM 寄存器必须根据需要由调用方保留。|
 
 当函数进入和退出 C 运行时库调用和 Windows 系统调用时，CPU 标志寄存器的方向位标志将被清除。

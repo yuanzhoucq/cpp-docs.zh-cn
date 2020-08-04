@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229618"
 ---
 # <a name="initializing-aggregate-types"></a>初始化聚合类型
 
@@ -51,7 +51,7 @@ int x[ ] = { 0, 1, 2 }
 
 **Microsoft 专用**
 
-数组的最大大小由 size_t  定义。 头文件 STDDEF.H 中定义的 size_t  是一个 `unsigned int`，其范围从 0x00000000 到 0x7CFFFFFF。
+数组的最大大小由 size_t  定义。 头文件 STDDEF.H 中定义的 size_t 是介于 0x00000000 和 0x7CFFFFFF 范围之间的 `unsigned int`。
 
 **结束 Microsoft 专用**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 在此构造中，第 1 行上的第一个左大括号开始 `nlist[0]`（它是三个结构的数组）的初始化。 值 1、2 和 3 将赋给第一个结构的三个成员。 当遇到下一个右大括号（值 3 的后面）时，`nlist[0]` 的初始化已完成，并且三个结构数组中的其余两个结构将自动初始化为 0。 同样，`{ 4,5,6 }` 会初始化 `nlist` 的第二行中的第一个结构。 `nlist[1]` 的其余两个结构将设置为 0。 当编译器遇到下一个初始值设定项列表 (`{ 7,8,9 }`) 时，它会尝试初始化 `nlist[2]`。 由于 `nlist` 只具有两个行，因此该尝试会导致错误。
 
-在下一个示例中，`int` 的三个 `x` 成员分别初始化为 1、2 和 3。
+在下一个示例中，`x` 的三个 `int` 成员分别初始化为 1、2 和 3。
 
 ```C
 struct list

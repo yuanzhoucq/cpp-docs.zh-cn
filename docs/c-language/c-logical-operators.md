@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227993"
 ---
 # <a name="c-logical-operators"></a>C 逻辑运算符
 
@@ -25,16 +25,16 @@ ms.locfileid: "62326581"
 ## <a name="syntax"></a>语法
 
 *logical-AND-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;inclusive-OR-expression <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;inclusive-OR-expression<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
 
 *logical-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;logical-AND-expression <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;logical-AND-expression<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
 
 ## <a name="remarks"></a>备注
 
-逻辑运算符不执行常用算术转换。 相反，它们根据其等效性为 0 计算每个操作数。 逻辑运算的结果不是 0 就是 1。 结果的类型为 int  。
+逻辑运算符不执行常用算术转换。 相反，它们根据其等效性为 0 计算每个操作数。 逻辑运算的结果不是 0 就是 1。 结果的类型为 `int`。
 
 C 逻辑运算符如下所述：
 

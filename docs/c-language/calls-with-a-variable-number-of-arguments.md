@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9fee0c214b697126708ae36b4daee082ac0171e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032104"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227928"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>使用数目可变的自变量调用
 
@@ -24,7 +24,7 @@ ms.locfileid: "82032104"
 
 若要调用具有可变数量的参数的函数，只需在函数调用中指定任意数量的参数即可。 一个示例是 C 运行库中的 `printf` 函数。 函数调用必须包含参数列表或参数类型列表中声明的每个类型名称的一个参数。
 
-除非指定 `__fastcall` 调用约定，否则函数调用中指定的所有参数都将位于堆栈上。 为函数声明的形参的数量决定了从堆栈获取和分配给形参的实参的数量。 您负责从堆栈中检索任何其他参数和确定应存在的参数数量。 STDARG.H 文件包含 ANSI 样式宏，该宏用于访问采用可变数量的参数的函数的参数。 此外，VARARGS.H 中的 XENIX 样式宏仍受支持。
+除非指定了 `__fastcall` 调用约定，否则函数调用中指定的所有参数都被放在堆栈上。 为函数声明的形参的数量决定了从堆栈获取和分配给形参的实参的数量。 您负责从堆栈中检索任何其他参数和确定应存在的参数数量。 STDARG.H 文件包含 ANSI 样式宏，该宏用于访问采用可变数量的参数的函数的参数。 此外，VARARGS.H 中的 XENIX 样式宏仍受支持。
 
 以下示例声明用于调用可变数量的自变量的函数：
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-ms.openlocfilehash: 6940f36e37ec58ca8fe23c9062928cbf90b125bd
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 1484b43719696578be437909351e24a550ec9869
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778377"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217111"
 ---
 # <a name="c-and-c-integer-limits"></a>C 和 C++ 整数限制
 
@@ -26,24 +26,24 @@ Microsoft C 还允许声明固定大小的整数变量，即大小为 8 位、16
 |**常量**|含义|“值”|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|不是位域的最小变量中的位数。|8|
-|**SCHAR_MIN**|**signed char** 类型的变量的最小值。|-128|
-|**SCHAR_MAX**|**signed char** 类型的变量的最大值。|127|
-|**UCHAR_MAX**| unsigned char 类型的变量的最大值。|255 (0xff)|
-|**CHAR_MIN**| char 类型的变量的最小值。|-128；如果使用了 /J 选项，则为 0|
-|**CHAR_MAX**| char 类型的变量的最大值。|127；如果使用了 /J 选项，则为 255|
+|**SCHAR_MIN**|类型为 `signed char` 的变量的最小值。|-128|
+|**SCHAR_MAX**|类型为 `signed char` 的变量的最大值。|127|
+|**UCHAR_MAX**|类型为 `unsigned char` 的变量的最大值。|255 (0xff)|
+|**CHAR_MIN**|类型为 `char` 的变量的最小值。|-128；如果使用了 /J 选项，则为 0|
+|**CHAR_MAX**|类型为 `char` 的变量的最大值。|127；如果使用了 /J 选项，则为 255|
 |**MB_LEN_MAX**|多字符常量中的最大字节数。|5|
-|**SHRT_MIN**|**short** 类型的变量的最小值。|-32768|
-|**SHRT_MAX**|**short** 类型的变量的最大值。|32767|
-|**USHRT_MAX**|**unsigned short** 类型的变量的最大值。|65535 (0xffff)|
-|**INT_MIN**| int 类型的变量的最小值。|-2147483647 - 1|
-|**INT_MAX**| int 类型的变量的最大值。|2147483647|
-|**UINT_MAX**| unsigned int 类型的变量的最大值。|4294967295 (0xffffffff)|
-|**LONG_MIN**|**long** 类型的变量的最小值。|-2147483647 - 1|
-|**LONG_MAX**|**long** 类型的变量的最大值。|2147483647|
-|**ULONG_MAX**| unsigned long 类型的变量的最大值。|4294967295 (0xffffffff)|
-|**LLONG_MIN**|long long 类型的变量的最小值  。|-9,223,372,036,854,775,807 - 1|
-|**LLONG_MAX**|long long 类型的变量的最大值  。|9,223,372,036,854,775,807|
-|**ULLONG_MAX**|unsigned long long 类型的变量的最大值  。|18,446,744,073,709,551,615 (0xffffffffffffffff)|
+|**SHRT_MIN**|类型为 `short` 的变量的最小值。|-32768|
+|**SHRT_MAX**|类型为 `short` 的变量的最大值。|32767|
+|**USHRT_MAX**|类型为 `unsigned short` 的变量的最大值。|65535 (0xffff)|
+|**INT_MIN**|类型为 `int` 的变量的最小值。|-2147483647 - 1|
+|**INT_MAX**|类型为 `int` 的变量的最大值。|2147483647|
+|**UINT_MAX**|类型为 `unsigned int` 的变量的最大值。|4294967295 (0xffffffff)|
+|**LONG_MIN**|类型为 `long` 的变量的最小值。|-2147483647 - 1|
+|**LONG_MAX**|类型为 `long` 的变量的最大值。|2147483647|
+|**ULONG_MAX**|类型为 `unsigned long` 的变量的最大值。|4294967295 (0xffffffff)|
+|**LLONG_MIN**|类型为 `long long` 的变量的最小值。|-9,223,372,036,854,775,807 - 1|
+|**LLONG_MAX**|类型为 `long long` 的变量的最大值。|9,223,372,036,854,775,807|
+|**ULLONG_MAX**|类型为 `unsigned long long` 的变量的最大值。|18,446,744,073,709,551,615 (0xffffffffffffffff)|
 
 如果值超出了最大整数表示形式，则 Microsoft 编译器会产生错误。
 

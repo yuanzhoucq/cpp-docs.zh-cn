@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328956"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215993"
 ---
 # <a name="add-a-member-variable"></a>添加成员变量
 
@@ -49,7 +49,7 @@ ms.locfileid: "58328956"
 
 1. 右键单击要向其添加变量的类。
 
-1. 在快捷菜单上，选择“添加”，然后选择“添加变量”以显示添加成员变量向导。
+1. 在快捷菜单上，选择“添加”，然后选择“添加变量”以显示添加成员变量向导 。
 
 1. 在相应向导框中提供信息。 有关详细信息，请参阅[添加成员变量向导](#add-member-variable-wizard)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "58328956"
 
 - **访问**
 
-  设置成员变量的访问权限。 访问修饰符是一种关键字，用于指定其他类对该成员变量的访问权限。 有关指定访问权限的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。 默认情况下，成员变量的访问级别设置为 `public`。
+  设置成员变量的访问权限。 访问修饰符是一种关键字，用于指定其他类对该成员变量的访问权限。 有关指定访问权限的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。 默认情况下，成员变量访问级别设置为 `public`。
 
   - [public](../cpp/public-cpp.md)
   - [受保护](../cpp/protected-cpp.md)
@@ -82,13 +82,13 @@ ms.locfileid: "58328956"
 
     |||
     |-|-|
-    |`char`|`short`|
-    |`double`|`unsigned char`|
-    |`float`|`unsigned int`|
-    |`int`|`unsigned long`|
-    |`long`||
+    |**`char`**|**`short`**|
+    |**`double`**|**`unsigned char`**|
+    |**`float`**|**`unsigned int`**|
+    |**`int`**|**`unsigned long`**|
+    |**`long`**||
 
-  - 如果要添加一个对话框控件的成员变量，则此框填入控件或值的返回对象的类型。 如果选择“控件”，则“变量类型”指定在“控件 ID”框中选择的控件的基类。 如果对话框控件可以包含一个值，并且你选择了“值”，则“变量类型”指定控件可以包含的值的适当类型。 有关详细信息，请参阅[对话框控件和变量类型](#dialog-box-controls-and-variable-types)。
+  - 如果要添加一个对话框控件的成员变量，则此框填入控件或值的返回对象的类型。 如果选择“控件”，则“变量类型”指定在“控件 ID”框中选择的控件的基类  。 如果对话框控件可以包含一个值，并且你选择了“值”，则“变量类型”指定控件可以包含的值的适当类型 。 有关详细信息，请参阅[对话框控件和变量类型](#dialog-box-controls-and-variable-types)。
 
     此值取决于在“控件 ID”中所选的内容，且无法更改。
 
@@ -98,11 +98,11 @@ ms.locfileid: "58328956"
 
 - **控件变量**
 
-  指示成员变量在具有[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)支持的对话框中管理控件。 有关详细信息，请参阅 [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)。 此选项仅能用于向派生自 [CDialog](../mfc/reference/cdialog-class.md) 的类添加的成员变量。 选择此框以激活“控件 ID”和“控件类型”选项。
+  指示成员变量在具有[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)支持的对话框中管理控件。 有关详细信息，请参阅 [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)。 此选项仅能用于向派生自 [CDialog](../mfc/reference/cdialog-class.md) 的类添加的成员变量。 选择此框以激活“控件 ID”和“控件类型”选项 。
 
 - **控件 ID**
 
-  为要添加的控件变量设置 ID。 从要为其添加成员变量的控件类型的 ID 列表中进行选择。 该列表仅在选中“控件变量”框时为活动状态，且仅包含已添加到对话框的控件 ID。 例如，对于标准的“确定”按钮，控件 ID 为“IDOK”。
+  为要添加的控件变量设置 ID。 从要为其添加成员变量的控件类型的 ID 列表中进行选择。 该列表仅在选中“控件变量”框时为活动状态，且仅包含已添加到对话框的控件 ID。 例如，对于标准的“确定”按钮，控件 ID 为“IDOK” 。
 
   |选项|说明|
   |------------|-----------------|
@@ -115,7 +115,7 @@ ms.locfileid: "58328956"
 
 - **控件类型**
 
-  设置要添加的控件类型。 此框不可更改。 例如，按钮的控件类型为 BUTTON，而组合框的控件类型为 COMBOBOX。 有关详细信息，请参阅[对话框控件和变量类型](#dialog-box-controls-and-variable-types)。
+  设置要添加的控件类型。 此框不可更改。 例如，按钮的控件类型为 BUTTON，而组合框的控件类型为 COMBOBOX 。 有关详细信息，请参阅[对话框控件和变量类型](#dialog-box-controls-and-variable-types)。
 
 - **最大字符数**
 
@@ -123,11 +123,11 @@ ms.locfileid: "58328956"
 
 - **最小值**
 
-  仅当变量类型为 `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、[COLECurrency](../mfc/reference/colecurrency-class.md) 或 [CTime](../atl-mfc-shared/reference/ctime-class.md) 时才可用。 表示规模或日期范围可接受的最小值。
+  只有当变量类型为 `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、[COLECurrency](../mfc/reference/colecurrency-class.md) 或 [CTime](../atl-mfc-shared/reference/ctime-class.md) 时才可用。 表示规模或日期范围可接受的最小值。
 
 - **最大值**
 
-  仅当变量类型为 `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、`COLECurrency` 或 `CTime` 时才可用。 表示规模或日期范围可接受的最大值。
+  只有当变量类型为 `BOOL`、`int`、`UINT`、`long`、`DWORD`、`float`、`double`、`BYTE`、`short`、`COLECurrency` 或 `CTime` 时才可用。 表示规模或日期范围可接受的最大值。
 
 - **.h 文件**
 
@@ -162,8 +162,8 @@ ms.locfileid: "58328956"
 |进度控件|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|无；仅控件|不可用|
 |Rich Edit 2 控件|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|最大字符数|
 |Rich Edit 控件|RICHEDIT|`CRichEditCtrl`|`CString`|最大字符数|
-|滚动条（垂直或水平）|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|最小值/最大值|
-|Slider 控件|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|最小值/最大值|
+|滚动条（垂直或水平）|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|**`int`**|最小值/最大值|
+|Slider 控件|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|**`int`**|最小值/最大值|
 |数值调节钮控件|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|无；仅控件|不可用|
 |Tab 控件|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|无；仅控件|不可用|
-|树控件|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|无；仅控件|不可用|
+|树控件|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|无；仅控件|空值|

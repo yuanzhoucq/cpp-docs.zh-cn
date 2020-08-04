@@ -5,12 +5,12 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bcd6eb84503b80b1e38be5d134e7506a0f490891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343372"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229579"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八进制和十六进制字符规范
 
@@ -22,7 +22,7 @@ ms.locfileid: "64343372"
 
 同样，对十六进制转义序列必须至少使用一个数字，但是您可以忽略第二个和第三个数字。 因此，可以将退格符的十六进制转义序列指定为 \x8  、\x08  或 \x008  。
 
-八进制或十六进制转义序列的值必须在字符常量的类型 unsigned char  和宽字符常量的类型 `wchar_t` 的可表示值的范围内。 有关宽字符常量的信息，请参阅[多字节和宽字符](../c-language/multibyte-and-wide-characters.md)。
+八进制或十六进制转义序列的值必须在字符常数的类型 `unsigned char` 和宽字符常数的类型 `wchar_t` 的可表示值的范围内。 有关宽字符常量的信息，请参阅[多字节和宽字符](../c-language/multibyte-and-wide-characters.md)。
 
 不同于八进制转义常量，转义序列中的十六进制数字的数量不受限制。 十六进制转义序列在第一个不是十六进制数字的字符处结尾。 由于十六进制数字包含字母 a  到 f  ，因此必须小心谨慎，确保转义序列在预期的数字处终止。 为了避免混淆，您可以将八进制或十六进制字符定义放入宏定义：
 

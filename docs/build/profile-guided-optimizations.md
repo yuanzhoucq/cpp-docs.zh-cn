@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232724"
 ---
 # <a name="profile-guided-optimizations"></a>按配置文件优化
 
@@ -68,7 +68,7 @@ ms.locfileid: "84777313"
 
 - 函数布局 - 根据调用关系图和经过分析的调用方/被调用方行为，将倾向于沿相同路径执行的函数放在同一段中。
 
-- 条件分支优化 - 使用值探测，按配置优化可以确定 switch 语句中的给定值是否比其他值更常用。  然后，可以从 switch 语句中取出此值。  可以对 `if`...`else` 指令执行相同操作，这时，优化程序可以对 `if`...`else` 进行排序，以便根据哪个块为 true 的频率更高，将 `if` 块或 `else` 块放在最前面。
+- 条件分支优化 - 使用值探测，按配置优化可以确定 switch 语句中的给定值是否比其他值更常用。  然后，可以从 switch 语句中取出此值。  使用 `if`...`else` 指令同样可以，在此指令中，优化程序可以对 `if`...`else` 进行排序，以便根据哪个块为 true 的频率更高，将 `if` 块或 `else` 块放在前面。
 
 - 死代码分隔 - 将分析过程中没有调用的代码移到一个特殊的段中，该段附加在一组段的末尾。 它可以有效地将该段排除在常用页面之外。
 

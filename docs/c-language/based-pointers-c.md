@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers, based
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
-ms.openlocfilehash: e5d8c529adfb92c9db1fdcc5a38f688853606d5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1ef1ec98d718e408621f5303e809d09020d5719
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327426"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190242"
 ---
 # <a name="based-pointers-c"></a>基指针 (C)
 
@@ -24,7 +24,7 @@ ms.locfileid: "62327426"
 
 > *type* **__based(** *base* **)** *declarator*
 
-基寻址的“based on pointer”变体支持作为基的指针的规范。 该基指针是内存部分的偏移量，它从所基于的指针开始。 基于指针地址的指针是 32 位和 64 位编译中唯一有效的 `__based` 关键字形式。 在这些编译中，它们是来自 32 位或 64 位基的 32 位或 64 位置换。
+基寻址的“based on pointer”变体支持作为基的指针的规范。 该基指针是内存部分的偏移量，它从所基于的指针开始。 基于指针地址的指针是 `__based` 关键字的唯一有效的 32 位和 64 位编译 形式。 在这些编译中，它们是来自 32 位或 64 位基的 32 位或 64 位置换。
 
 基于指针的指针的用途之一是用于包含指针的永久标识符。 可将包含基于指针的指针的链接列表保存到磁盘，然后重新加载到内存中的另一个位置，并且指针保持有效。
 

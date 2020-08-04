@@ -2,12 +2,12 @@
 title: ARM ABI 约定概述
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229761"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 约定概述
 
@@ -201,7 +201,7 @@ Windows 中的内核模式堆栈默认为 3 个页面 (12 KB)。 请注意，不
 
 枚举为 32 位整数类型，除非枚举中至少有一个值需要 64 位双字存储。 在这种情况下，枚举将提升为 64 位整数类型。
 
-`wchar_t` 定义为等效于 `unsigned short`，以保留与其他平台的兼容性。
+为了保持与其他平台的兼容性，`wchar_t` 定义为与 `unsigned short` 等效。
 
 ## <a name="stack-walking"></a>堆栈审核
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313536"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218918"
 ---
 # <a name="array-declarations"></a>数组声明
 
@@ -38,7 +38,7 @@ direct-declarator  : /\* 函数声明符 \*/<br/>
 
 由于 constant-expression  是可选的，因此该语法有两种形式：
 
-- 第一种形式定义一个数组变量。 括号内的 constant-expression  参数指定数组中的元素数量。  constant-expression（如果有）必须具有整型类型和大于零的值。 每个元素均具有 type-specifier  给定的类型，可以是除 `void` 之外的任何类型。 数组元素不能是函数类型。
+- 第一种形式定义一个数组变量。 括号内的 constant-expression  参数指定数组中的元素数量。 constant-expression（如果有）必须具有整型类型和大于零的值。 每个元素都有 type-specifier 给出的类型，它可以是除 `void` 之外的任何类型。 数组元素不能是函数类型。
 
 - 第二种形式声明已在其他位置定义了变量。 它省略括号中的 constant-expression  参数而不是括号。 仅在之前已初始化数组、将其声明为参数或声明为对在程序中的其他位置显式定义的某个数组的引用的情况下才能使用此形式。
 
@@ -72,7 +72,7 @@ char A[2][3];
 float matrix[10][15];
 ```
 
-名为 `matrix` 的二维数组具有 150 个元素，其中每个元素都具有 float  类型。
+名为 `matrix` 的二维数组有 150 个元素，每个元素的类型都是 `float`。
 
 ```C
 struct {
@@ -90,7 +90,7 @@ extern char *name[];
 
 **Microsoft 专用**
 
-保存数组的最大大小所需的整数类型为 size_t  的大小。 头文件 STDDEF.H 中定义的 size_t  是一个 `unsigned int`，其范围从 0x00000000 到 0x7CFFFFFF。
+保存数组的最大大小所需的整数类型为 size_t  的大小。 头文件 STDDEF.H 中定义的 size_t 是介于 0x00000000 和 0x7CFFFFFF 范围之间的 `unsigned int`。
 
 **结束 Microsoft 专用**
 

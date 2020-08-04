@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157787"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217046"
 ---
 # <a name="structure-declarations"></a>结构声明
 
@@ -26,8 +26,8 @@ ms.locfileid: "62157787"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -53,7 +53,7 @@ ms.locfileid: "62157787"
 
 *struct-declaration-list* 指定结构成员的类型和名称。 *struct-declaration-list* 参数包含一个或多个变量或位域声明。
 
-每个在 *struct-declaration-list* 中声明的变量都被定义为结构类型的成员。 *struct-declaration-list* 中的变量声明与本节中讨论的其他变量声明的形式相同，只不过声明不能包含存储类说明符或初始值设定项。 结构成员可具有除类型 `void`、不完整类型或函数类型之外的任何变量类型。
+每个在 *struct-declaration-list* 中声明的变量都被定义为结构类型的成员。 *struct-declaration-list* 中的变量声明与本节中讨论的其他变量声明的形式相同，只不过声明不能包含存储类说明符或初始值设定项。 结构成员可以具有任何变量类型（类型 `void` 除外）、不完整类型或函数类型。
 
 不能将成员声明为具有其出现的结构的类型。 但是，可将成员声明为指向结构类型（只要该结构类型具有标记，该成员就会出现在其中）的指针。 这使您可以创建结构的链接列表。
 
@@ -94,7 +94,7 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-`employee` 结构有三个成员：`name`、`id` 和 `class`。 `name` 成员是一个包含 20 个元素的数组，`id` 和 `class` 分别为具有 `int` 和 **long** 类型的简单成员。 标识符 `employee` 是结构标识符。
+`employee` 结构有三个成员：`name`、`id` 和 `class`。 `name` 成员是一个包含 20 个元素的数组，`id` 和 `class` 是类型分别为 `int` 和 `long` 的简单成员。 标识符 `employee` 是结构标识符。
 
 ```C
 struct employee student, faculty, staff;
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-`complex` 结构具有两个 **float** 类型的成员：`x` 和 `y`。 结构类型没有标记，因此是未命名或匿名的。
+`complex` 结构有两个类型为 `float` 的成员，即 `x` 和 `y`。 结构类型没有标记，因此是未命名或匿名的。
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,7 +120,7 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-结构的前两个成员为 `char` 变量和指向 **float** 值的指针。 第三个成员 (`next`) 被声明为指向正在定义的结构类型 (`sample`) 的指针。
+结构的前两个成员是 `char` 变量和指向 `float` 值的指针。 第三个成员 (`next`) 被声明为指向正在定义的结构类型 (`sample`) 的指针。
 
 当不需要命名的标记时，匿名结构很有用。 当一个声明定义了所有结构实例时，就是这种情况。 例如：
 
@@ -149,9 +149,9 @@ struct somestruct
 
 编译器允许未确定大小或零大小的数组作为结构的最后一个成员。 如果常量数组在不同的情况下大小不同，这可能很有用。 此类结构的声明类似于以下形式：
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
+`struct` identifier { set-of-declarations type array-name\[]; };
 
-未确定大小的数组仅在作为结构的最后一个成员时才出现。 只要所有封闭结构中都不再进一步声明成员，那么包含未确定大小的数组声明的结构就可以嵌入其他结构中。 不允许有此类结构的数组。 当应用于此类型的变量或应用于此类型本身时，`sizeof` 运算符假定数组的大小为 0。
+未确定大小的数组仅在作为结构的最后一个成员时才出现。 只要所有封闭结构中都不再进一步声明成员，那么包含未确定大小的数组声明的结构就可以嵌入其他结构中。 不允许有此类结构的数组。 当将 `sizeof` 运算符应用于此类型的变量或应用于此类型本身时，假定数组的大小为 0。
 
 如果结构声明是另一结构或联合的成员，则可以在没有声明符的情况下指定该结构声明。 字段名将提升到该封闭结构中。 例如，无名称结构类似于以下形式：
 

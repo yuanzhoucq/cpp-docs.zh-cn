@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - integers, casting to floating-point values
 ms.assetid: 81fd5b7d-15eb-4c11-a8c8-e1621ff54fd3
-ms.openlocfilehash: 8fa013668278fae82bcb2bb9eb1f2aec3cb61581
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3c65beee0cef4eb74d1bad3c03e5a9c11efae27
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312643"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227915"
 ---
 # <a name="casting-integers-to-floating-point-values"></a>将整数转换为浮点值
 
@@ -17,7 +17,7 @@ ms.locfileid: "62312643"
 
 当一个整数转换为无法确切表示值的浮点值时，值将被舍入（向上或向下）到最接近的适当值。
 
-例如，将 unsigned long  （具有 32 位精度）转换为 float  （尾数具有 23 位精度）会将该数字舍入到 256 的最接近倍数。 介于 4,294,966,913 和 4,294,967,167 之间的所有 long  值都将舍入到 float  值 4,294,967,040。
+例如，将 `unsigned long`（精度为 32 位）强制转换为 `float`（尾数的精度为 23 位）会将数字舍入为 256 的最接近倍数。 介于 4,294,966,913 和 4,294,967,167 之间的所有 `long` 值都舍入为 `float` 值 4,294,967,040。
 
 ## <a name="see-also"></a>请参阅
 

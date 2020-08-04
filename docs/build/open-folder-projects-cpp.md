@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320963"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229800"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>对 Visual Studio 中 C++ 生成系统的“打开文件夹”支持
 
@@ -119,7 +119,7 @@ Visual Studio 提供以下默认配置：
 
 ## <a name="enable-intellisense-diagnostics"></a>启用 IntelliSense 诊断
 
-如果没有看到预期的 IntelliSense，可以通过转到“工具” > “选项” > “文本编辑器” > “C/C++” > “高级”，然后将“启用日志记录”设置为“true”        。 若要开始，请尝试将“日志记录级别”设置为 5，“日志记录筛选器”设置为 8   。
+如果没有按预期看到 IntelliSense，可以进行故障排除，具体方法为依次转到“工具” > “选项” > “文本编辑器” > “C/C++” > “高级”，然后将“启用日志记录”设置为 `true`。 若要开始，请尝试将“日志记录级别”设置为 5，“日志记录筛选器”设置为 8   。
 
 ![诊断日志记录](media/diagnostic-logging.png)
 

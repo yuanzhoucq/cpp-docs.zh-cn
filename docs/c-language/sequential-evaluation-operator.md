@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec2c866b512bc0b398375041b03c0ea697d3a0d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227772"
 ---
 # <a name="sequential-evaluation-operator"></a>顺序评估运算符
 
@@ -23,7 +23,7 @@ ms.locfileid: "62158516"
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
-顺序计算运算符的左操作数的计算结果为 `void` 表达式。 该运算的结果与右操作数具有相同的值和类型。 所有操作数都可以是任意类型。 顺序计算运算符在其操作数之间不执行类型转换，也不产生左值。 第一个操作数后有一个序列点，这意味着来自左操作数的计算的所有副作用在开始右操作数的计算前已完成。 有关详细信息，请参阅[序列点](../c-language/c-sequence-points.md)。
+顺序求值运算符的左操作数作为 `void` 表达式进行求值。 该运算的结果与右操作数具有相同的值和类型。 所有操作数都可以是任意类型。 顺序计算运算符在其操作数之间不执行类型转换，也不产生左值。 第一个操作数后有一个序列点，这意味着来自左操作数的计算的所有副作用在开始右操作数的计算前已完成。 有关详细信息，请参阅[序列点](../c-language/c-sequence-points.md)。
 
 顺序计算运算符通常用于计算只允许有一个表达式的上下文中的两个或多个表达式。
 
@@ -37,7 +37,7 @@ ms.locfileid: "62158516"
 for ( i = j = 1; i + j < 20; i += i, j-- );
 ```
 
-在本示例中，**for** 语句的第三个表达式的每个操作数都是单独计算的。 首先计算左操作数 `i += i`，然后计算右操作数 `j--`。
+在此示例中，`for` 语句的第三个表达式的每个操作数都是独立进行求值的。 首先计算左操作数 `i += i`，然后计算右操作数 `j--`。
 
 ```
 func_one( x, y + 2, z );

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e12817e016376d5b76ec67e8bd10fbd3e85dbdda
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422822"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229839"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常见问题
 
@@ -29,7 +29,7 @@ ms.locfileid: "79422822"
 
 ## <a name="can-an-mfc-dll-create-multiple-threads"></a><a name="mfc_multithreaded_1"></a> MFC DLL 是否可以创建多线程？
 
-除了在初始化过程中，只要 MFC DLL 使用 TlsAlloc 这样的 Win32 线程本地存储 (TLS) 函数来分配线程本地存储，就可以安全地创建多线程  。 但是，如果 MFC DLL 使用 __declspec(thread) 分配线程本地存储，客户端应用程序必须隐式链接到 DLL  。 如果客户端应用程序显式链接到 DLL，对 LoadLibrary 的调用将不会成功加载此 DLL。  。 有关 DLL 中的线程局部变量的详细信息，请参阅[线程](../cpp/thread.md)。
+除了在初始化过程中，只要 MFC DLL 使用 TlsAlloc 这样的 Win32 线程本地存储 (TLS) 函数来分配线程本地存储，就可以安全地创建多线程  。 不过，如果 MFC DLL 使用 `__declspec(thread)` 来分配线程本地存储，客户端应用程序必须隐式链接到 DLL。 如果客户端应用程序显式链接到 DLL，对 LoadLibrary 的调用将不会成功加载此 DLL。  。 有关 DLL 中的线程局部变量的详细信息，请参阅[线程](../cpp/thread.md)。
 
 启动期间创建新的 MFC 线程的 MFC DLL 在由应用程序加载时将停止响应。 每当在下列对象内部通过调用 `AfxBeginThread` 和 `CWinThread::CreateThread` 创建线程时，就会发生这种情况：
 
@@ -55,7 +55,7 @@ ms.locfileid: "79422822"
 
 如果 DLL 是静态链接到 MFC 的规则 MFC DLL，则将其更改为动态链接到 MFC 的规则 MFC DLL 可减小文件大小。
 
-如果 DLL 具有大量导出的函数，请使用 .def 文件导出函数（而不是使用 __declspec(dllexport)），并在每个导出的函数上使用 .def 文件 [NONAME 属性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  。 NONAME 属性仅将序号值而不是函数名存储在 DLL 的导出表中，这将减小文件大小。
+如果 DLL 有大量已导出函数，请使用 .def 文件（而不是使用 `__declspec(dllexport)`）导出函数，并对每个已导出函数使用 .def 文件 [NONAME 属性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。 NONAME 属性仅将序号值而不是函数名存储在 DLL 的导出表中，这将减小文件大小。
 
 加载应用程序时，同时将加载隐式链接到应用程序的 DLL。 为了提高加载时的性能，可尝试将 DLL 划分为不同的 DLL。 在加载到一个 DLL 后立即将调用应用程序需要的所有函数放入其中，并使调用应用程序隐式链接到该 DLL。 将调用应用程序不需要的其他函数直接放入另一个 DLL 中，并使应用程序显式链接到该 DLL。 有关详细信息，请参阅[将可执行文件链接到 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。
 

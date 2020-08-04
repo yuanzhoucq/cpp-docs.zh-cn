@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
-ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0147f51063127cb26ce8caf70bc46eadc87b8d3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313332"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226511"
 ---
 # <a name="c-sequence-points"></a>C 序列点
 
@@ -29,11 +29,11 @@ ms.locfileid: "62313332"
 
 - 表达式语句中的表达式。 表达式语句由可选表达式后跟分号 (;  ) 组成。 为其副作用计算该表达式，并且此计算后面有一个序列点。
 
-- 选择（if  或 `switch`）语句中的控制表达式。 完全计算该表达式，并在执行依赖于选择的代码之前完成所有副作用。
+- 选择语句（`if` 或 `switch`）中的控制表达式。 完全计算该表达式，并在执行依赖于选择的代码之前完成所有副作用。
 
-- `while` 或  do 语句的控制表达式。 完全计算该表达式，并且在执行 `while` 或 do  循环的下一次迭代中的任何语句执行之前完成所有副作用。
+- `while` 或 `do` 语句的控制表达式。 在执行 `while` 或 `do` 循环的下一个迭代中的任何语句前，完全计算表达式，并且完成所有副作用。
 
--  for 语句的所有三个表达式。 完全计算这些表达式，并在执行 for  循环的下一次迭代中的任何语句之前完成所有副作用。
+- `for` 语句的所有三个表达式。 在执行 `for` 循环的下一个迭代中的任何语句前，完全计算表达式，并且完成所有副作用。
 
 - `return` 语句中的表达式。 完全计算该表达式，并在控制返回调用函数之前完成所有副作用。
 

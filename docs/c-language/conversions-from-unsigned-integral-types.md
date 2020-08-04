@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998787"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226459"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>从无符号整型的转换
 
@@ -35,7 +35,7 @@ printf_s( "%hd\n", j );   // Prints -3
 
 **Microsoft 专用**
 
-在 Microsoft 编译器中，unsigned（或 unsigned int）和 unsigned long 是不同但等效的类型    。 unsigned int 值的转换与 unsigned long 的转换的方式相同   。
+在 Microsoft 编译器中，`unsigned`（或 `unsigned int`）和 `unsigned long` 是不同但等效的类型。 `unsigned int` 值与 `unsigned long` 的转换方式是一样的。
 
 **结束 Microsoft 专用**
 
@@ -45,46 +45,46 @@ printf_s( "%hd\n", j );   // Prints -3
 
 |From|功能|方法|
 |----------|--------|------------|
-|**unsigned char**|**char**|保留位模式；高序位将成为符号位|
-|**unsigned char**|**short**|零扩展|
-|**unsigned char**|**long**|零扩展|
-|**unsigned char**|**long long**|零扩展|
-|**unsigned char**|**unsigned short**|零扩展|
-|**unsigned char**|**unsigned long**|零扩展|
-|**unsigned char**|**unsigned long long**|零扩展|
-|**unsigned char**|**float**|转换为 long  ；将 long  转换为  float|
-|**unsigned char**|**double**|转换为 long  ；将 long  转换为  double|
-|**unsigned char**|**long double**|转换为 long  ；将 long  转换为  double|
-|**unsigned short**|**char**|保留低位字节|
-|**unsigned short**|**short**|保留位模式；高序位将成为符号位|
-|**unsigned short**|**long**|零扩展|
-|**unsigned short**|**long long**|零扩展|
-|**unsigned short**|**unsigned char**|保留低位字节|
-|**unsigned short**|**unsigned long**|零扩展|
-|**unsigned short**|**unsigned long long**|零扩展|
-|**unsigned short**|**float**|转换为 long  ；将 long  转换为  float|
-|**unsigned short**|**double**|转换为 long  ；将 long  转换为  double|
-|**unsigned short**|**long double**|转换为 long  ；将 long  转换为  double|
-|**unsigned long**|**char**|保留低位字节|
-|**unsigned long**|**short**|保留低位字|
-|**unsigned long**|**long**|保留位模式；高序位将成为符号位|
-|**unsigned long**|**long long**|零扩展|
-|**unsigned long**|**unsigned char**|保留低位字节|
-|**unsigned long**|**unsigned short**|保留低位字|
-|**unsigned long**|**unsigned long long**|零扩展|
-|**unsigned long**|**float**|转换为 long  ；将 long  转换为  float|
-|**unsigned long**|**double**|直接转换为 double |
-|**unsigned long**|**long double**|转换为 long  ；将 long  转换为  double|
-|**unsigned long long**|**char**|保留低位字节|
-|**unsigned long long**|**short**|保留低位字|
-|**unsigned long long**|**long**|保留低位双字节|
-|**unsigned long long**|**long long**|保留位模式；高序位将成为符号位|
-|**unsigned long long**|**unsigned char**|保留低位字节|
-|**unsigned long long**|**unsigned short**|保留低位字|
-|**unsigned long long**|**unsigned long**|保留低位双字节|
-|**unsigned long long**|**float**|转换为 long  ；将 long  转换为  float|
-|**unsigned long long**|**double**|直接转换为 double |
-|**unsigned long long**|**long double**|转换为 long  ；将 long  转换为  double|
+|**`unsigned char`**|**`char`**|保留位模式；高序位将成为符号位|
+|**`unsigned char`**|**`short`**|零扩展|
+|**`unsigned char`**|**`long`**|零扩展|
+|**`unsigned char`**|**`long long`**|零扩展|
+|**`unsigned char`**|**`unsigned short`**|零扩展|
+|**`unsigned char`**|**`unsigned long`**|零扩展|
+|**`unsigned char`**|**`unsigned long long`**|零扩展|
+|**`unsigned char`**|**`float`**|转换为 `long`；将 `long` 转换为 `float`|
+|**`unsigned char`**|**`double`**|转换为 `long`；将 `long` 转换为 `double`|
+|**`unsigned char`**|**`long double`**|转换为 `long`；将 `long` 转换为 `double`|
+|**`unsigned short`**|**`char`**|保留低位字节|
+|**`unsigned short`**|**`short`**|保留位模式；高序位将成为符号位|
+|**`unsigned short`**|**`long`**|零扩展|
+|**`unsigned short`**|**`long long`**|零扩展|
+|**`unsigned short`**|**`unsigned char`**|保留低位字节|
+|**`unsigned short`**|**`unsigned long`**|零扩展|
+|**`unsigned short`**|**`unsigned long long`**|零扩展|
+|**`unsigned short`**|**`float`**|转换为 `long`；将 `long` 转换为 `float`|
+|**`unsigned short`**|**`double`**|转换为 `long`；将 `long` 转换为 `double`|
+|**`unsigned short`**|**`long double`**|转换为 `long`；将 `long` 转换为 `double`|
+|**`unsigned long`**|**`char`**|保留低位字节|
+|**`unsigned long`**|**`short`**|保留低位字|
+|**`unsigned long`**|**`long`**|保留位模式；高序位将成为符号位|
+|**`unsigned long`**|**`long long`**|零扩展|
+|**`unsigned long`**|**`unsigned char`**|保留低位字节|
+|**`unsigned long`**|**`unsigned short`**|保留低位字|
+|**`unsigned long`**|**`unsigned long long`**|零扩展|
+|**`unsigned long`**|**`float`**|转换为 `long`；将 `long` 转换为 `float`|
+|**`unsigned long`**|**`double`**|直接转换为 `double`|
+|**`unsigned long`**|**`long double`**|转换为 `long`；将 `long` 转换为 `double`|
+|**`unsigned long long`**|**`char`**|保留低位字节|
+|**`unsigned long long`**|**`short`**|保留低位字|
+|**`unsigned long long`**|**`long`**|保留低位双字节|
+|**`unsigned long long`**|**`long long`**|保留位模式；高序位将成为符号位|
+|**`unsigned long long`**|**`unsigned char`**|保留低位字节|
+|**`unsigned long long`**|**`unsigned short`**|保留低位字|
+|**`unsigned long long`**|**`unsigned long`**|保留低位双字节|
+|**`unsigned long long`**|**`float`**|转换为 `long`；将 `long` 转换为 `float`|
+|**`unsigned long long`**|**`double`**|直接转换为 `double`|
+|**`unsigned long long`**|**`long double`**|转换为 `long`；将 `long` 转换为 `double`|
 
 ## <a name="see-also"></a>请参阅
 

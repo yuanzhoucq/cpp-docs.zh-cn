@@ -7,12 +7,12 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f5b640585ec3b55e4e3d65b37ea0929a757473
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336161"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229475"
 ---
 # <a name="storage-and-alignment-of-structures"></a>结构的存储和对齐
 
@@ -36,7 +36,7 @@ min( n, sizeof( item ) )
 
 若要使用 `pack` 杂注为特定结构指定命令行上指定的包装以外的包装，请在结构的前面提供 `pack` 杂注，其中包装大小为 1、2、4、8 或 16。 若要恢复命令行上提供的包装，请指定不带参数的 `pack` 杂注。
 
-位域默认为 Microsoft C 编译器的 long  大小。 基于类型大小或 /Zp[n] 大小（以较小者为准）对齐结构成员  。 默认大小为 4。
+对于 Microsoft C 编译器，位域默认为大小 `long`。 基于类型大小或 /Zp[n] 大小（以较小者为准）对齐结构成员  。 默认大小为 4。
 
 **结束 Microsoft 专用**
 

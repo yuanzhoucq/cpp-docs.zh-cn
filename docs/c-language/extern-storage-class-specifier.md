@@ -8,16 +8,16 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3242f86e30dcf3227586400b83266ad366ec7e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233829"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217098"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 存储类说明符
 
-使用 extern  存储类说明符声明的变量是对变量的引用，变量名称与另一个源文件中定义的名称相同。 它用于显示外部级别变量定义。 声明为 extern  的变量没有为自己分配的存储；它只是名称。
+使用 `extern` 存储类说明符声明的变量是对另一个源文件中定义的同名变量的引用。 它用于显示外部级别变量定义。 声明为 `extern` 的变量没有为自己分配存储；它只是名称。
 
 ## <a name="example"></a>示例
 
@@ -59,9 +59,9 @@ void func(void)
 }
 ```
 
-在此示例中，变量 `i` 是在 Source1.c 中定义，初始值为 1。 Source2.c 中的 extern  声明让“i”在此文件中显示。
+在此示例中，变量 `i` 是在 Source1.c 中定义，初始值为 1。 Source2.c 中的 `extern` 声明让“i”在此文件中可见。
 
-在 `func` 函数中，全局变量 `i` 的地址用于初始化 static  指针变量 `external_i`。 此用法之所以有效是因为全局变量具有 static  生存期，这意味着其地址在程序执行期间不会更改。 接下来，变量 `i` 在 `func` 的范围内定义为初始值为 16 的局部变量。 此定义不会影响外部级别 `i` 的值（通过对局部变量使用它的名称来隐藏它）。 全局 `i` 的值现在只能通过指针 `external_i` 访问。
+在 `func` 函数中，全局变量 `i` 的地址用于初始化 `static` 指针变量 `external_i`。 此用法之所以有效是因为，全局变量有 `static` 生存期；也就是说，它的地址在程序执行期间不会改变。 接下来，变量 `i` 在 `func` 的范围内定义为初始值为 16 的局部变量。 此定义不会影响外部级别 `i` 的值（通过对局部变量使用它的名称来隐藏它）。 全局 `i` 的值现在只能通过指针 `external_i` 访问。
 
 ## <a name="see-also"></a>请参阅
 

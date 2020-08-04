@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295666"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229787"
 ---
 # <a name="mutual-imports"></a>相互导入
 
@@ -41,14 +41,14 @@ ms.locfileid: "62295666"
 
 下图显示了两个相互导入 DLL（DLL1 和 DLL2）的解决方案。 步骤 1 是在 DLL1 上使用 /DEF 选项集运行 LIB。 步骤 1 会生成导入库 DLL1.lib 和 DLL1.exp。在步骤 2 中，导入库用于生成 DLL2，而 DLL2 又为 DLL2 的符号生成导入库。 步骤 3 使用 DLL1.exp 和 DLL2.lib 作为输入生成 DLL1。 请注意，DLL2 的 .exp 文件不是必需的，因为 LIB 不用于生成 DLL2 的导入库。
 
-![使用相互导入链接两个 DLL](media/vc37yj1.gif "Using mutual imports to link two DLLs")<br/>
+![使用相互导入来链接两个 DLL](media/vc37yj1.gif "使用相互导入来链接两个 DLL")<br/>
 用相互导入链接两个 DLL
 
 ## <a name="limitations-of-_afxext"></a>_AFXEXT 的限制
 
 只要没有多层 MFC 扩展 DLL，就可以对 MFC 扩展 DLL 使用 `_AFXEXT` 预处理器符号。 如果 MFC 扩展 DLL 调用或派生自你自己的 MFC 扩展 DLL 中的类，然后从 MFC 类派生，则必须使用你自己的预处理器符号以避免歧义。
 
-问题在于，在 Win32 中，如果要从 DLL 中导出任何数据，必须显式将其声明为 __declspec(dllexport)，如果要从 DLL 中导入任何数据，则必须显式将其声明为 __declspec(dllimport)   。 定义 `_AFXEXT` 时，MFC 标头确保了正确定义 AFX_EXT_CLASS  。
+问题在于，在 Win32 中，必须将要从 DLL 中导出的任何数据显式声明为 `__declspec(dllexport)`，且必须将要从 DLL 中导入的任何数据显式声明为 `__declspec(dllimport)`。 定义 `_AFXEXT` 时，MFC 标头确保了正确定义 AFX_EXT_CLASS  。
 
 如果有多个层，则一种符号（如 AFX_EXT_CLASS）是不够的，因为 MFC 扩展 DLL 可能正在导出新类，或者正在从其他 MFC 扩展 DLL 导入其他类  。 若要解决此问题，请使用一个特殊的预处理器符号，指示你正在生成 DLL 本身，而不是正在使用 DLL。 例如，假设两个 MFC 扩展 DLL：A.dll 和 B.dll。 它们各自分别导出 A.h 和 B.h 中的一些类。 B.dll 使用 A.dll 中的类。 头文件类似于以下形式：
 

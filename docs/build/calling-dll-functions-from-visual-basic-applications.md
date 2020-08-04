@@ -10,20 +10,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d792dac45d69a0857bda551d1f3c03fc3d03d1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229878"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>从 Visual Basic 应用程序调用 DLL 函数
 
 若要使 Visual Basic 应用程序（或诸如 Pascal 或 Fortran 等其他语言编写的应用程序）调用 C/C++ DLL 中的函数，必须使用正确的调用约定导出函数，而无需编译器进行任何名称修饰
 
-`__stdcall` 会为函数创建正确的调用约定（被调用的函数会清理堆栈，参数从右向左传递），但以不同方式修饰函数名称。 因此，当对 DLL 中的导出函数使用 __declspec(dllexport)  时，将导出修饰名。
+`__stdcall` 为函数创建正确的调用约定（被调用的函数会清理堆栈，且参数从右向左传递），但以不同方式修饰函数名称。 因此，当对 DLL 中的已导出函数使用 `__declspec(dllexport)` 时，导出修饰名。
 
-`__stdcall` 名称修饰使用下划线 (\_  ) 作为符号名称的前缀，并向符号追加 at 符号 (\@  )，后跟参数列表中的字节数（所需堆栈空间）。 因此，在声明为以下内容时：
+`__stdcall` 名称修饰使用下划线字符 (\_) 作为符号名称的前缀，并向符号追加 at 符号 (\@)，后跟参数列表中的字节数（所需堆栈空间）。 因此，在声明为以下内容时：
 
 ```C
 int __stdcall func (int a, double b)
@@ -33,13 +33,13 @@ int __stdcall func (int a, double b)
 
 C 调用约定 (`__cdecl`) 将名称修饰为 `_func`。
 
-若要获取修饰名，请使用 [/MAP](reference/map-generate-mapfile.md)。 使用 __declspec(dllexport)  会执行以下操作：
+若要获取修饰名，请使用 [/MAP](reference/map-generate-mapfile.md)。 使用 `__declspec(dllexport)` 可以执行以下操作：
 
-- 如果函数使用 C 调用约定 (`__cdecl`) 导出，则它会在导出名称时去除前导下划线 (\_  )。
+- 如果函数是使用 C 调用约定 (`__cdecl`) 导出的，则它会在导出名称时去掉前导下划线字符 (\_)。
 
-- 如果所导出的函数不使用 C 调用约定（例如 `__stdcall`），则它会导出修饰名。
+- 如果导出的函数不使用 C 调用约定（例如 `__stdcall`），则它会导出修饰名。
 
-因为无法替代进行堆栈清理的位置，所以必须使用 `__stdcall`。 若要使用 `__stdcall` 对名称取消修饰，必须在 .def 文件的 EXPORTS 节中使用别名指定它们。 对于以下函数声明，这会显示如下：
+因为无法替代发生堆栈清理的位置，所以必须使用 `__stdcall`。 若要使用 `__stdcall` 取消修饰名称，必须通过在 .def 文件的 EXPORTS 部分中使用别名来指定它们。 对于以下函数声明，这会显示如下：
 
 ```C
 int  __stdcall MyFunc (int a, double b);

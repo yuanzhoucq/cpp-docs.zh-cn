@@ -4,12 +4,12 @@ description: 介绍如何使用 Visual Studio 配置 CMake 调试器设置。
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: cc80827458ba7cb61339ec3a36f227747780a47c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224079"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
 
@@ -124,7 +124,7 @@ CMakeSettings.json 中定义的环境变量也可以通过语法 `${env.VARIABLE
 使用以下选项可将生成计算机（在 CMakeSettings.json 中定义）与远程调试计算机分隔开来。
 
 - `remoteMachineName`：远程调试计算机。 仅当与生成计算机不同时才需要。 必须在[连接管理器](../linux/connect-to-your-remote-linux-computer.md)中具有现有条目。 按 Ctrl+空格键可查看所有现有远程连接的列表。
-- `disableDeploy`：默认为 `false`。 指示是否禁用生成/调试分隔。 为 `false` 时，此选项允许在两个不同计算机上进行生成和调试。
+- `disableDeploy`：默认为 `false`。 指示是否禁用生成/调试分隔。 如果为 `false`，此选项允许在两台不同的计算机上进行生成和调试。
 - `deployDirectory`：`remoteMachineName` 上将可执行文件复制到其中的目录的完整 Unix 路径。
 - `deploy`：高级部署设置数组。 仅当要对部署过程进行更精细的控制时，才需要配置这些设置。 默认情况下，只会将要调试的进程所需的文件部署到远程调试计算机。
   - `sourceMachine`：从中复制文件或目录的计算机。 按 Ctrl+空格键可查看连接管理器中存储的所有远程连接的列表。 在 WSL 上进行本机生成时，将忽略此选项。
@@ -211,7 +211,7 @@ Visual Studio 支持执行自定义 `gdb` 命令，以便直接与底层调试�
 
 - `visualizerFile`：调试此进程时要使用的 [.natvis 文件](/visualstudio/debugger/create-custom-views-of-native-objects)。 此选项与 `gdb` 整齐打印不兼容。 设置此属性时，还需设置 `showDisplayString`。
 
-- `showDisplayString`：一个布尔值，在指定 `visualizerFile` 时启用显示字符串。 将此选项设置为 `true` 可能会导致调试过程中的性能降低。
+- `showDisplayString`：一个布尔值，在指定 `visualizerFile` 时启用显示字符串。 将此选项设置为 `true` 可能会导致调试期间性能下降。
 
 - `setupCommands`：要执行的一个或多个 `gdb` 命令，用于设置底层调试器。
 

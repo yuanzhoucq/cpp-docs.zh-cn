@@ -3,12 +3,12 @@ title: Visual Studio 中的 C++ 新变化
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226784"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -249,7 +249,7 @@ Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 版本 15.5
 
-编译器支持 C++17 中约 75% 的新增功能，包括结构化绑定、`constexpr` lambdas、`if constexpr`、内联变量、fold 表达式以及将 `noexcept` 添加到类型系统的功能。 可通过 `/std:c++17` 选项使用这些功能。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements.md)
+编译器支持 C++17 中约 75% 的新功能，其中包括结构化绑定、`constexpr` Lambda、`if constexpr`、内联变量、折叠表达式以及将 `noexcept` 添加到类型系统。 可通过 `/std:c++17` 选项使用这些功能。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements.md)
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
@@ -296,7 +296,7 @@ Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有�
 
 Microsoft C++ 编译器支持 Intel AVX-512。 它有矢量长度指令，可以将 AVX-512 中的新函数引入 128 位宽和 256 位宽的寄存器。
 
-通常，使用 C++17 模式时，可使用 [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) 选项还原为 `noexcept` 的 C++14 版本。 此选项可以将源代码更新为符合 C++17，而无需同时重写所有 `throw()` 代码。 有关详细信息，请参阅[动态异常规范的删除和 noexcept](cpp-conformance-improvements.md#noexcept_removal)。
+通常，在使用 C++17 模式时，可使用 [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) 选项恢复到 `noexcept` 的 C++14 版本。 此选项可以将源代码更新为符合 C++17，而无需同时重写所有 `throw()` 代码。 有关详细信息，请参阅[动态异常规范的删除和 noexcept](cpp-conformance-improvements.md#noexcept_removal)。
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
@@ -335,8 +335,8 @@ Visual Studio 2017 RTM 中有更多的标准库改进。 有关完整列表，�
 - 还修复了 Clang **-Wmicrosoft-exception-spec** 报告的“声明中的异常规范与以前的声明不匹配”这一问题。
 - 还修复了 Clang 和 C1XX 报告的 mem-initializer-list 排序警告。
 - 当容器本身交换时，无序容器不会交换其哈希函数或谓词。 现在它们会进行交换。
-- 现在，许多容器交换操作标记为 `noexcept`（因为标准库从未打算在检测到 non-`propagate_on_container_swap` non-equal-allocator 未定义的行为条件时引发异常）。
-- 许多 `vector<bool>` 操作现标记为 `noexcept`。
+- 现在，许多容器交换操作都被标记为 `noexcept`（因为标准库从未打算在检测到非 `propagate_on_container_swap` 不相等分配器未定义的行为条件时抛出异常）。
+- 许多 `vector<bool>` 操作现在都被标记为 `noexcept`。
 - 标准库现在将使用选择退出的转义交错线来强制执行匹配的分配器 `value_type`（在 C++17 模式中）。
 - 修复了一些将 self-range 插入 `basic_string` 会打乱字符串内容的情况。 （注意：标准库仍禁止将 self-range 插入到矢量）。
 - `basic_string::shrink_to_fit()` 不再受分配器的 `propagate_on_container_swap` 影响。
@@ -360,7 +360,7 @@ Visual Studio 2017 RTM 中有更多的标准库改进。 有关完整列表，�
 
 - 我们添加了 \<any\>、\<string_view\>、`apply()`、`make_from_tuple()`。
 - 添加了 \<optional\>、\<variant\>、`shared_ptr::weak_type` 和 \<cstdalign\>。
-- 在 `min(initializer_list)`、`max(initializer_list)`、`minmax(initializer_list)`、`min_element()`, `max_element()` 和 `minmax_element()` 中实现了 C++14 `constexpr`。
+- 在 `min(initializer_list)`、`max(initializer_list)`、`minmax(initializer_list)`、`min_element()`、`max_element()` 和 `minmax_element()` 中启用了 C++14 `constexpr`。
 
 有关详细信息，请参阅 [Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)。
 
@@ -368,7 +368,7 @@ Visual Studio 2017 RTM 中有更多的标准库改进。 有关完整列表，�
 
 - 已经实现了几个其他的 C++17 功能。 有关详细信息，请参阅 [Microsoft C++ 语言一致性表](cpp-conformance-improvements.md#improvements_153)。
 - 实现了 P0602R0“变体和可选项应传播副本/移动琐碎事项”。
-- 现在，标准库正式允许通过 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 选项禁用动态 RTTI。 `dynamic_pointer_cast()` 和 `rethrow_if_nested()` 本身都需要 `dynamic_cast`，因此标准库现在将它们标记为 `/GR-` 下的 `=delete`。
+- 现在，标准库正式允许通过 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 选项禁用动态 RTTI。 由于 `dynamic_pointer_cast()` 和 `rethrow_if_nested()` 本质上都需要 `dynamic_cast`，因此标准库现在将它们标记为 `/GR-` 下的 `=delete`。
 - 即使已通过 `/GR-` 禁用了动态 RTTI，“静态 RTTI”（采用 `typeid(SomeType)` 形式）仍可用，并为多个标准库组件提供技术支持。 现在，标准库也支持通过 `/D_HAS_STATIC_RTTI=0` 禁用此功能。 此标志还将禁用 `std::any`、`std::function` 的 `target()` 和 `target_type()` 成员函数，以及 `std::shared_ptr` 和 `std::weak_ptr` 的 `get_deleter()` 友元成员函数。
 - 标准库现在无条件地使用 C++14 `constexpr`，而不是有条件定义的宏。
 - 标准库现在内部使用别名模板。
@@ -657,7 +657,7 @@ Visual Studio 2017 随附的 Clang/C2 工具集现在支持 `/bigobj` 开关，�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 版本 15.5
 
-- 新的 C++ Core Guidelines 检查包含智能指针正确性、全局初始化表达式的正确使用和标记构造（如 `goto` 和错误转换）的使用。
+- 新的 C++ Core Guidelines 检查涉及智能指针正确性、全局初始值设定项的正确使用，以及标记构造的使用（如 `goto` 和错误强制转换）。
 
 - 15.3 中可能存在的一些警告编号在 15.5 中不再可用。 这些警告被更具体的检查替换。
 

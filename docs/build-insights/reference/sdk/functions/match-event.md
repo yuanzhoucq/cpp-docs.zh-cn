@@ -1,6 +1,6 @@
 ---
-title: 匹配事件
-description: C++生成见解 SDK 匹配事件函数引用。
+title: MatchEvent
+description: C++ Build Insights SDK MatchEvent 函数参考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c60653641c676716bcdd60865433773da79325f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323859"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224105"
 ---
-# <a name="matchevent"></a>匹配事件
+# <a name="matchevent"></a>MatchEvent
 
 ::: moniker range="<=vs-2015"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-该`MatchEvent`函数用于将事件与事件类型列表匹配。 如果事件与列表中的类型匹配，则该事件将转发到处理程序以进行进一步处理。
+`MatchEvent` 函数用于将事件与事件类型列表进行匹配。 如果事件与列表中的类型匹配，则会转发给处理程序，以供进一步处理。
 
 ## <a name="syntax"></a>语法
 
@@ -43,34 +43,34 @@ bool MatchEvent(
 
 ### <a name="parameters"></a>参数
 
-*TEvent*\
+TEvent\
 要匹配的第一个事件类型。
 
-*TEvents*\
-要匹配的剩余事件类型。
+TEvents\
+要匹配的其余事件类型。
 
-*可调用*\
-支持`operator()`的类型。 有关哪些参数传递给此运算符的详细信息，请参阅*可调用*参数说明。
+TCallable\
+支持 `operator()` 的类型。 若要详细了解哪些参数传递给此运算符，请参阅 callable 参数说明。
 
-*TExtraArgs*\
-传递给 的额外参数的类型`MatchEvent`。
+TExtraArgs\
+传递给 `MatchEvent` 的额外参数的类型。
 
-*事件*\
-要与*TEvent*和*TEvents*描述的事件类型匹配的事件。
+*event*\
+要与 TEvent 和 TEvents 描述的事件类型进行匹配的事件。
 
-*调用*\
-`MatchEvent`在成功将事件与*TEvent*和*TEvent*描述的任何事件类型匹配后*调用可调用*。 传递给*可调用*的第一个参数是匹配事件类型的 r 值。 在*可调用*的剩余参数中，*额外的Args*参数包是完美的转发。  
+callable\
+在成功地将事件与 TEvent 和 TEvents 描述的任何事件类型进行匹配后，`MatchEvent` 调用 callable。 传递给 callable 的第一个参数是匹配的事件类型的右值。 extraArgs 参数包在 callable 的其余参数中是完美转发的。  
 
-*额外阿格*\
-与匹配的事件类型一起被完全转发到*可调用*的参数。
+extraArgs\
+与匹配的事件类型一起完美转发给 callable 的参数。
 
 ### <a name="return-value"></a>返回值
 
-如果匹配成功，则为**true**的**bool**值，否则为**false。**
+如果匹配成功，则 `bool` 值为 `true`；否则，值为 `false`。
 
 ## <a name="remarks"></a>备注
 
-用于*TEvent*和*TEvents*参数的事件类型是从*捕获类*列表中选择的。 有关可用于匹配的事件和捕获类的列表，请参阅[事件表](../event-table.md)。
+用于 TEvent 和 TEvents 参数的事件类型是从 Capture 类的列表中选择的。 有关事件以及可用于匹配它们的 Capture 类的列表，请参阅[事件表](../event-table.md)。
 
 ## <a name="example"></a>示例
 

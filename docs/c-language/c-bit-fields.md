@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4878a9c8c206851b13484446b436952e655e06db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326490"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234284"
 ---
 # <a name="c-bit-fields"></a>C 位域
 
@@ -22,9 +22,9 @@ ms.locfileid: "62326490"
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
 
- constant-expression 指定域的宽度（以位为单位）。 `declarator` 的 type-specifier  必须为 `unsigned int`、signed int  或 `int`，而且 constant-expression  必须为非负整数值。 如果值为零，则声明没有任何 `declarator`。 不允许位域的数组、指向位域的指针和返回位域的函数。 可选的 `declarator` 命名位域。 位域只能声明为结构的一部分。 Address-of 运算符 (&  ) 不能应用于位域组件。
+constant-expression 指定域的宽度（以位为单位）。 `declarator` 的 type-specifier 必须为 `unsigned int`、`signed int` 或 `int`，而且 constant-expression 必须为非负整数值。 如果值为零，则声明没有任何 `declarator`。 不允许位域的数组、指向位域的指针和返回位域的函数。 可选的 `declarator` 命名位域。 位域只能声明为结构的一部分。 Address-of 运算符 (&  ) 不能应用于位域组件。
 
-未命名位域不可引用，且其内容在运行时是不可预测的。 它们可以出于对齐目的用作“虚拟”字段。 宽度指定为 0 的未命名位域确保在  struct-declaration-list 中跟在其后的成员的存储在 `int` 边界开始。
+未命名位域不可引用，且其内容在运行时是不可预测的。 它们可以出于对齐目的用作“虚拟”字段。 宽度指定为 0 的未命名位域可以保证 struct-declaration-list 中它后面的成员的存储从 `int` 边界开始。
 
 位域还必须足够长以包含该位模式。 例如，以下两个语句均不合法：
 
@@ -51,7 +51,7 @@ struct
 
 **Microsoft 专用**
 
-定义为 `int` 的位域被视为带符号的位域。 ANSI C 标准的 Microsoft 扩展允许位域的 `char` 和 long  类型（  signed 和 `unsigned`）。 带有基类型 long  、short  或 `char`（signed  或 `unsigned`）的未命名位域强制与适于基类型的边界对齐。
+定义为 `int` 的位域被视为 `signed`。 ANSI C 标准的 Microsoft 扩展允许对位域使用 `char` 和 `long` 类型（`signed` 和 `unsigned`）。 带基类型 `long`、`short` 或 `char`（`signed` 或 `unsigned`）的未命名位域强制与适合基类型的边界对齐。
 
 在整数中按照从最高有效位到最低有效位的顺序来分配位域。 在以下代码中
 

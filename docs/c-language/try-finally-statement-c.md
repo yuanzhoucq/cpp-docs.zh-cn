@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b800daa7689cef769ce3a3b070c957f18e8794c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213705"
 ---
 # <a name="try-finally-statement-c"></a>try-finally 语句 (C)
 
@@ -22,7 +22,7 @@ ms.locfileid: "81349605"
 
 *try-finally-statement*: **__try**  *compound-statement*
 
-**__finally**  *compound-statement*
+`__finally`  compound-statement
 
 `__try` 子句后的复合语句是受保护节。 `__finally` 子句后的复合语句是终止处理程序。 该处理程序将指定在退出受保护节时执行的一组操作，无论该受保护节是因异常（非正常终止）还是标准贯穿（正常终止）而退出。
 
@@ -32,11 +32,11 @@ ms.locfileid: "81349605"
 
 1. 调用终止处理程序。
 
-1. 当终止处理程序完成时，执行在 `__finally` 语句后继续。 无论受保护节如何结尾（例如，通过受保护体外部的 `goto` 语句或通过 `return` 语句），终止处理程序都在控制流移出受保护节之前执行。
+1. 当终止处理程序完成时，在 `__finally` 语句后继续执行。 无论受保护的部分如何结束（例如，通过受保护的主体外部的 `goto` 语句或通过 `return` 语句），终止处理程序都在控制流移出受保护的部分之前执行。
 
-`__leave` 关键字在 `try-finally` 语句块中有效。 `__leave` 的效果是跳转到 `try-finally` 块的末尾。 终止处理程序将立即执行。 尽管可使用 `goto` 语句来达到相同的结果，但 `goto` 语句会导致堆栈展开。 由于 `__leave` 语句不涉及堆栈展开，因此更有效。
+`__leave** keyword is valid within a `try-finally` statement block. The effect of **`__leave 的效果是跳转到 `try-finally` 块的末尾。 终止处理程序将立即执行。 尽管可以使用 `goto` 语句来完成相同的结果，但 `goto` 语句会导致堆栈展开。 `__leave 语句的效率更高，因为它不涉及堆栈展开。
 
-使用 `try-finally` 语句或 `return` 运行时函数退出 `longjmp` 语句被视为异常终止。 跳转到 `__try` 语句是非法的，但跳出该语句是合法的。 必须运行在起点和终点之间处于活动状态的所有 `__finally` 语句。 这称为“局部展开”。
+使用 `return` 语句或 `longjmp` 运行时函数退出 `try-finally` 语句被视为异常终止。 跳转到 `__try` 语句是非法的，但跳出该语句是合法的。 必须运行在起点和终点之间处于活动状态的所有 `__finally` 语句。 这称为“局部展开”。
 
 如果在执行 `try-finally` 语句时取消了进程，则不会调用终止处理程序。
 

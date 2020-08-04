@@ -2,12 +2,12 @@
 title: x64 堆栈使用
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: b598c33fbdd56630ca3e5ef0da551f38a73baa26
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1b1e0a8c30d5e24e81372912d5c488efce14841
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335534"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218931"
 ---
 # <a name="x64-stack-usage"></a>x64 堆栈使用
 
@@ -47,7 +47,7 @@ ms.locfileid: "81335534"
 
 ## <a name="malloc-alignment"></a>malloc 对齐
 
-[malloc](../c-runtime-library/reference/malloc.md) 保证返回适当对齐的内存，用于存储任何具有基本对齐以及可以适合所分配的内存量的对象。 基本对齐  是在没有对齐规范的情况下，小于或等于实现所支持的最大对齐的对齐。 （在 Visual C++ 中，这是 `double` 或 8 个字节所需的对齐。 在面向 64 位平台的代码中，是 16 个字节。）例如，四字节分配会在支持任何四字节或更小对象的边界上对齐。
+[malloc](../c-runtime-library/reference/malloc.md) 保证返回适当对齐的内存，用于存储任何具有基本对齐以及可以适合所分配的内存量的对象。 基本对齐  是在没有对齐规范的情况下，小于或等于实现所支持的最大对齐的对齐。 （在 Visual C++ 中，这是 `double` 或 8 个字节所需的对准。 在面向 64 位平台的代码中，是 16 个字节。）例如，四字节分配会在支持任何四字节或更小对象的边界上对齐。
 
 Visual C++ 允许使用具有扩展对齐  的类型，这些类型也称为过度对齐  类型。 例如，SSE 类型 [__m128](../cpp/m128.md) 和 `__m256` 以及使用 `__declspec(align( n ))`（其中 `n` 大于 8）声明的类型具有扩展对齐。 `malloc` 不保证内存在适合于需要扩展对齐的对象的边界上对齐。 若要为过度对齐类型分配内存，请使用 [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) 和相关函数。
 

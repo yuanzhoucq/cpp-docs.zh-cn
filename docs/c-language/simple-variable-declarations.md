@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42547828e78566982053d22e8288fe1ccbe6e26b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158231"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229527"
 ---
 # <a name="simple-variable-declarations"></a>简单变量声明
 
@@ -40,7 +40,7 @@ int x, y;        /* Declares two simple variables of type int */
 int const z = 1; /* Declares a constant value of type int */
 ```
 
-变量 `x` 和 `y` 可以保留由特定实现的 `int` 类型定义的集中的任何值。 简单对象 `z` 将初始化为值 1 且不可修改。
+变量 `x` 和 `y` 可以保留由 `int` 类型为特定实现定义的集中的任何值。 简单对象 `z` 将初始化为值 1 且不可修改。
 
 如果 `z` 的声明针对未初始化的静态变量或在文件范围内，则它将接收初始值 0，并且该值是不可修改的。
 
@@ -49,7 +49,7 @@ unsigned long reply, flag; /* Declares two variables
                               named reply and flag     */
 ```
 
-在此示例中，两个变量（`reply` 和 `flag`）具有 `unsigned long` 类型并包含无符号的整数值。
+在此示例中，`reply` 和 `flag` 这两个变量都是 `unsigned long` 类型，并包含不带符号整数值。
 
 ## <a name="see-also"></a>请参阅
 

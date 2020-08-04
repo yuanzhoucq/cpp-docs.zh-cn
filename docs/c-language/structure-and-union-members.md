@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 70c89344e6afcdf52981f779c441c5ec47791a77
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825686"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211640"
 ---
 # <a name="structure-and-union-members"></a>结构和联合成员
 
@@ -27,7 +27,7 @@ ms.locfileid: "82825686"
 
 此列表描述了成员选择表达式的两种形式：
 
-1. 在第一种形式中，postfix-expression 表示 struct 或 union 类型的值，而 identifier 为指定的结构或联合的成员命名     。 运算的值是 *identifier* 的值且是一个左值（如果 *postfix-expression* 是左值）。 有关详细信息，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。
+1. 在第一种形式中，postfix-expression 表示类型为 `struct` 或 `union` 的值，而 identifier 为指定的结构或联合的成员命名。 运算的值是 *identifier* 的值且是一个左值（如果 *postfix-expression* 是左值）。 有关详细信息，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。
 
 1. 在第二种形式中，*postfix-expression* 表示指向结构或联合的指针，而 *identifier* 命名指定的结构或联合的成员。 该值是 *identifier* 的值且是一个左值。
 

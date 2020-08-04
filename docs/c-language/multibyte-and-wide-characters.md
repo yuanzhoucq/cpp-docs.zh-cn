@@ -14,20 +14,20 @@ helpviewer_keywords:
 - character codes [C++], wide
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
-ms.openlocfilehash: 0d573fac938f5e4d62c99c8cd6e676b96123a0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e27a1832284c109cc2d8a4655f6d093bf7a2d99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232909"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199654"
 ---
 # <a name="multibyte-and-wide-characters"></a>多字节和宽字符
 
 多字节字符是由一个或多个字节的序列构成的字符。 每个字节序列表示扩展字符集中的单个字符。 多字节字符用于字符集（如日文汉字）中。
 
-宽字符是宽度始终为 16 位的多语言字符代码。 字符常量的类型是 `char`；对于宽字符，该类型是 `wchar_t`。 由于宽字符始终具有固定大小，因此使用宽字符集可以简化使用国际字符集进行的编程。
+宽字符是宽度始终为 16 位的多语言字符代码。 字符常数的类型是 `char`；对于宽字符，类型是 `wchar_t`。 由于宽字符始终具有固定大小，因此使用宽字符集可以简化使用国际字符集进行的编程。
 
-宽字符串文本 `L"hello"` 将成为类型为 `wchar_t` 的六个整数的数组。
+宽字符串文本 `L"hello"` 成为类型为 `wchar_t` 的包含六个整数的数组。
 
 ```
 {L'h', L'e', L'l', L'l', L'o', 0}

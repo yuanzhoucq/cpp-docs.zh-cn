@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 6f7d58bcb42edd89527fff41b08a15321722a6cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229826"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 DEF 文件从 DLL 导出
 
-模块定义或 DEF 文件 (*.def) 文件是文本文件，其中包含一个或多个描述 DLL 的各种特性的模块语句。 如果不使用 __declspec(dllexport)  关键字导出 DLL 的函数，则 DLL 需要 DEF 文件。
+模块定义或 DEF 文件 (*.def) 文件是文本文件，其中包含一个或多个描述 DLL 的各种特性的模块语句。 如果没有使用 `__declspec(dllexport)` 关键字来导出 DLL 的函数，则 DLL 需要 DEF 文件。
 
 最小的 DEF 文件必须包含以下模块定义语句：
 

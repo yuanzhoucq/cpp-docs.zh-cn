@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6a8555561fcf935b3968bd6cb6d19ec42a78563
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196737"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224014"
 ---
 # <a name="exporting-from-a-dll"></a>从 DLL 导出
 
@@ -25,7 +25,7 @@ DLL 文件的布局与 .exe 文件非常相似，但有一个重要的区别：D
 
 - 创建模块定义 (.def) 文件，然后在生成 DLL 时使用 .def 文件。 如果希望[按序号而不是按名称从 DLL 中导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)，请使用此方法。
 
-- 在函数定义中使用关键字 __declspec(dllexport)  。
+- 在函数定义中使用关键字 `__declspec(dllexport)`。
 
 用任一方法导出函数时，请确保使用 [__stdcall](../cpp/stdcall.md) 调用约定。
 

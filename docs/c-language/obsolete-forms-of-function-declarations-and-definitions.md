@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745872"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218788"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>函数声明和定义的过时形式
 
@@ -26,7 +26,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 }
 ```
 
-返回与 `int` 的大小相同的整数或指针的函数不需要具有声明，但建议具有声明。
+返回与 `int` 大小相同的整数或指针的函数不需要有声明，尽管建议有声明。
 
 为了遵循 ANSI C 标准，使用省略号的旧式函数声明现在会在使用 /Za 选项进行编译是生成错误，并在使用 /Ze 进行编译时生成 4 级别警告。 例如：
 

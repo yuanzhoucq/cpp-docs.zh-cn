@@ -5,12 +5,12 @@ helpviewer_keywords:
 - functions [C++]
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
-ms.openlocfilehash: 1c54dcdeec1bad1ffbd335d411e39c77be0ad961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c9f24b049ee8e9a33557f3262cd6abcc624957
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232281"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217059"
 ---
 # <a name="overview-of-functions"></a>函数概述
 
@@ -20,7 +20,7 @@ ms.locfileid: "62232281"
 
 编译器使用原型来比较随后通过函数的参数对函数进行的调用中的自变量类型，并在需要时，将自变量类型转换为参数类型。
 
-函数调用将执行控制从正在调用的函数传递到已调用函数。 通过值将参数（如果有）传递给已调用函数。 已调用函数中的 `return` 语句的执行将返回控制，并且可能将一个值返回给正在调用的函数。
+函数调用将执行控制从正在调用的函数传递到已调用函数。 通过值将参数（如果有）传递给已调用函数。 在被调用的函数中执行 `return` 语句会向正在调用的函数返回控制权和可能的值。
 
 ## <a name="see-also"></a>请参阅
 

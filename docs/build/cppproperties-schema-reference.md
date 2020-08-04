@@ -3,12 +3,12 @@ title: CppProperties.json 参考
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: be6db52e1e62244e9f44db8ac86238242ab50ca0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224053"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json 参考
 
@@ -28,7 +28,7 @@ ms.locfileid: "81328721"
 |`forcedInclude`|会自动包含在每个编译单元的标头（对于 MSVC，映射到 /FI；对于 clang，映射到 -include）|
 |`undefines`|未定义的宏的列表（对于 MSVC，映射到 /U）|
 |`intelliSenseMode`|要使用的 IntelliSense 引擎。 你可以为 MSVC、gcc 或 Clang 指定预定义体系结构特定的变量之一。|
-|`environments`|用户定义的变量集，其行为类似于命令提示符中的环境变量，并使用 ${env.\<VARIABLE>} 宏进行访问。|
+|`environments`|用户定义的变量集，其行为类似于命令提示符中的环境变量，可以使用 ${env.\<VARIABLE>} 宏访问。|
 
 ### <a name="intellisensemode-values"></a>intelliSenseMode 值
 
@@ -62,9 +62,9 @@ ms.locfileid: "81328721"
 
 ## <a name="pre-defined-environments"></a>预定义环境
 
-Visual Studio 为 Microsoft C++ 提供了以下预定义环境，它们会映射到相应的开发人员命令提示。 继承其中一个环境时，可以通过将全局属性 `env` 与以下宏语法一起使用来引用任何环境变量：${env.\<VARIABLE>}。
+Visual Studio 为 Microsoft C++ 提供了以下预定义环境，它们会映射到相应的开发人员命令提示。 继承其中一个环境时，可以将全局属性 `env` 与以下宏语法一起使用，从而引用任何环境变量：${env.\<VARIABLE>}。
 
-|变量名|描述|
+|变量名|说明|
 |-----------|-----------------|
 |vsdev|默认的 Visual Studio 环境|
 |msvc_x86|使用 x86 工具为 x86 编译|
@@ -85,7 +85,7 @@ Visual Studio 为 Microsoft C++ 提供了以下预定义环境，它们会映射
 
 ## <a name="user-defined-environments"></a><a name="user_defined_environments"></a> 用户定义的环境
 
-可以选择在 CppProperties.json  中以全局形式或按配置使用 `environments` 属性定义变量集。 这些变量的行为类似于“打开文件夹”项目上下文中的环境变量，可以在此处定义之后，从 tasks.vs.json  和 launch.vs.json  使用 ${env.\<VARIABLE>} 语法进行访问。 但是，不一定要在 Visual Studio 内部使用的任何命令提示符中将它们设置为实际环境变量。
+可以选择在 CppProperties.json  中以全局形式或按配置使用 `environments` 属性定义变量集。 这些变量的行为类似于“打开文件夹”项目上下文中的环境变量，可以使用在此处定义的 tasks.vs.json 和 launch.vs.json 中的 ${env.\<VARIABLE>}  语法进行访问。 但是，不一定要在 Visual Studio 内部使用的任何命令提示符中将它们设置为实际环境变量。
 
 Visual Studio 2019 版本 16.4 及更高版本  ：CppProperties.json  中定义的特定于配置的变量由调试目标和任务自动选取，无需设置 `inheritEnvironments`。 调试目标会使用在 CppProperties.json  中指定的环境自动启动。
 
@@ -160,7 +160,7 @@ Visual Studio 2019 版本 16.3 及更早版本  ：使用环境时，必须在 `
 
 ## <a name="troubleshoot-intellisense-errors"></a>对 IntelliSense 错误进行故障排除
 
-如果没有看到预期的 IntelliSense，可以通过转到“工具” > “选项” > “文本编辑器” > “C/C++” > “高级”，然后将“启用日志记录”设置为“true”        。 若要开始，请尝试将“日志记录级别”设置为 5，“日志记录筛选器”设置为 8   。
+如果没有按预期看到 IntelliSense，可以进行故障排除，具体方法为依次转到“工具” > “选项” > “文本编辑器” > “C/C++” > “高级”，然后将“启用日志记录”设置为 `true`。 若要开始，请尝试将“日志记录级别”设置为 5，“日志记录筛选器”设置为 8   。
 
 ![诊断日志记录](media/diagnostic-logging.png)
 

@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d4ec3036a5c4d42d9d98e91f628416b75e596d12
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630461"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213939"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 语言一致性表
 
@@ -397,7 +397,7 @@ ms.locfileid: "83630461"
 
 ### <a name="notes"></a>说明
 
-<a name="note_A"></a> A 在 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 模式下，动态异常规范仍没有实现，且 `throw()` 仍被视为 `__declspec(nothrow)` 的同义词。 在 C++17 中，动态异常规范大部分已被 P0003R5 删除，只有一个残留部分：`throw()` 已遭弃用，并被要求起到 `noexcept` 的同义词作用。 在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 模式下，MSVC 现在通过赋予 `throw()` 与 `noexcept` 相同的行为（即通过终止强制执行）来符合标准。
+<a name="note_A"></a> A 在 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 模式下，动态异常规范仍没有实现，且 `throw()` 仍被视为 `__declspec(nothrow)` 的同义词。 在 C++17 中，动态异常规范大部分已被 P0003R5 删除，只有一个残留部分：`throw()` 已被弃用，并被要求与 `noexcept` 同义。 在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 模式下，MSVC 现在通过赋予 `throw()` 与 `noexcept` 相同的行为（即通过终止强制执行）来符合标准。
 
 编译器选项 [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) 请求获取 `__declspec(nothrow)` 的旧行为。 很可能 `throw()` 会从 C++20 中删除。 为了有助于迁移代码来响应标准和实现中的这些更改，在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 和 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 下添加了针对异常规范问题的新编译器警告。
 
@@ -407,7 +407,7 @@ ms.locfileid: "83630461"
 
 <a name="note_D"></a> D 在 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 下受支持，但出现可取消的警告 [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
-<a name="note_E"></a> __E__ 此为全新实现，与之前的 `std::experimental` 版本不兼容，这对符号链接支持、bug 修复以及更改必须符合标准的行为而言是必不可少的。 目前，添加 \<filesystem> 可提供新 `std::filesystem` 和旧 `std::experimental::filesystem`，而添加 \<experimental/filesystem> 则仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。
+<a name="note_E"></a> __E__ 此为全新实现，与之前的 `std::experimental` 版本不兼容，这对符号链接支持、bug 修复以及更改必须符合标准的行为而言是必不可少的。 目前，添加 \<filesystem> 可提供新的 `std::filesystem` 和旧的 `std::experimental::filesystem`，而添加 \<experimental/filesystem> 则只提供旧的实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。
 
 <a name="note_G"></a> __G__ 受编译器内部函数支持。
 

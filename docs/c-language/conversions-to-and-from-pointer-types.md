@@ -7,18 +7,18 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6358216e72f054becf33d18aadb6a3a51bab8363
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218892"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>指针类型之间的转换
 
 指向值的一个类型的指针可以转换为指向另一类型的指针。 但是，由于对齐需求和存储中不同类型的大小，结果可能是未定义的。 指向对象的指针可转换为指向其类型要求小于或等于严格存储对齐的对象的指针，然后再次返回而不做更改。
 
-指向 `void` 的指针可转换为/自指向任何类型的指针，且不受限制或不丢失信息。 如果结果转换回原始类型，则将恢复原始指针。
+指向 `void` 的指针可以与指向任何类型的指针之间来回转换，既不受限制，也不会丢失信息。 如果结果转换回原始类型，则将恢复原始指针。
 
 如果指针转换为另一个类型相同但具有不同的或其它限定符的指针，则新指针与旧指针相同（新限定符强加的限制除外）。
 
@@ -34,7 +34,7 @@ ms.locfileid: "62312400"
 
 - 如果整型类型的大小与指针类型的大小不同，则使用表[从带符号整型类型转换](../c-language/conversions-from-signed-integral-types.md)和[从无符号整型类型转换](../c-language/conversions-from-unsigned-integral-types.md)中给定的转换路径，首先将整型转换为指针的大小。 然后将其视为一个指针值。
 
-带值 0 的整型常量表达式或到类型 void <strong>\*</strong> 的表达式转换可以通过类型转换、赋值或者与指向任何类型的指针进行比较来进行转换  。 这将产生与同一类型的另一个 null 指针相等的 null 指针，但此 null 指针与指向函数或对象的任何指针不相等。 常数 0 以外的整数可以转换为指针类型，但结果是不可移植的。
+值为 0 的整型常数表达式或强制转换为类型 `void` \* 的此类表达式可以通过类型强制转换、赋值或与任何类型的指针进行比较来进行转换。 这将产生与同一类型的另一个 null 指针相等的 null 指针，但此 null 指针与指向函数或对象的任何指针不相等。 常数 0 以外的整数可以转换为指针类型，但结果是不可移植的。
 
 ## <a name="see-also"></a>请参阅
 

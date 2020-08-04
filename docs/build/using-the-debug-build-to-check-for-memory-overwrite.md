@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 42e3a7f1f1c34ba5a263adfca7496c24e162ab5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152f72749d2ebdacd46dd3e4db671bc5705d4b6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314281"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213744"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用调试版本检查内存改写
 
@@ -21,7 +21,7 @@ afxMemDF |= checkAlwaysMemDF;
 
 调试内存分配器会在所有内存分配周围放置保护字节。 但这些保护字节没有任何用处，除非检查它们是否已被更改（这将指示内存覆盖）。 否则，这只是提供一个缓冲区，实际上可能允许你摆脱内存覆盖。
 
-通过打开 `checkAlwaysMemDF`，你将强制 MFC 在每次调用“new”或“delete”时都对 `AfxCheckMemory` 函数进行调用   。 如果检测到内存覆盖，它将生成类似于以下内容的 TRACE 消息：
+通过启用 `checkAlwaysMemDF`，你将强制 MFC 在每次调用 `new` 或 `delete` 时都调用 `AfxCheckMemory` 函数。 如果检测到内存覆盖，它将生成类似于以下内容的 TRACE 消息：
 
 ```
 Damage Occurred! Block=0x5533

@@ -7,29 +7,29 @@ helpviewer_keywords:
 - loop structures, continue keyword
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
-ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cf5d1c25b8edc70bd686ca26ad98b15b970383c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312553"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218905"
 ---
 # <a name="continue-statement-c"></a>continue 语句 (C)
 
-`continue` 语句将控制传递给它在其中出现的最近的封闭 `do`、`for` 或 `while` 语句的下一个迭代，并绕过 `do`、`for` 或 `while` 语句主体中的任何剩余语句。
+`continue` 语句将控制权传递给出现它的最近的封闭 `do`、`for` 或 `while` 语句的下一个迭代，并绕过 `do`、`for` 或 `while` 语句主体中的任何剩余语句。
 
 ## <a name="syntax"></a>语法
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**continue ;**
 
-确定 `do`、`for` 或 `while` 语句的下一次迭代，如下所示：
+`do`、`for` 或 `while` 语句的下一个迭代是按如下方式确定的：
 
-- 在 `do` 或 `while` 语句中，下一个迭代首先会重新计算 `do` 或 `while` 语句的表达式。
+- 在 `do` 或 `while` 语句中，下一个迭代会先重新计算 `do` 或 `while` 语句的表达式。
 
-- `continue` 语句中的 `for` 语句会导致计算 `for` 语句的循环表达式。 然后，编译器会重新计算条件表达式并根据结果终止或迭代语句主体。 有关 `for` 语句及其非终止符的详细信息，请参阅 [for 语句](../c-language/for-statement-c.md)。
+- `for` 语句中的 `continue` 语句会导致计算 `for` 语句的循环表达式。 然后，编译器会重新计算条件表达式并根据结果终止或迭代语句主体。 若要详细了解 `for` 语句及其非终止符，请参阅 [for 语句](../c-language/for-statement-c.md)。
 
-以下是 `continue` 语句的示例：
+下面的示例展示了 `continue` 语句：
 
 ```
 while ( i-- > 0 )

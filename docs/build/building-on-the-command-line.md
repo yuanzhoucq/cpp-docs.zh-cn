@@ -1,8 +1,8 @@
 ---
 title: 通过命令行使用 Microsoft C++ 工具集
-description: 通过 Visual Studio IDE 外部的命令行使用 Microsoft C++ 编译器工具链 (MSVC)。
+description: 在 Visual Studio IDE 之外的命令行中使用 Microsoft C++ (MSVC) 编译器工具集。
 ms.custom: conceptual
-ms.date: 11/12/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,19 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229891"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>通过命令行使用 Microsoft C++ 工具集
 
-使用包含在 Visual Studio 中的工具，可在命令行上生成 C 和 C++ 应用程序。 Microsoft C++ (MSVC) 编译器工具集也可作为独立的包下载，不包括 Visual Studio IDE。
+使用包含在 Visual Studio 中的工具，可在命令行上生成 C 和 C++ 应用程序。 Microsoft C++ (MSVC) 编译器工具集也可以作为独立的包下载。 如果不打算使用 Visual Studio IDE，则不需要安装它。
+
+> [!NOTE]
+> 本文介绍了如何设置环境来使用各个编译器、链接器、文档管理程序和其他基本工具。 本机项目生成系统 MSBuild 不使用本文中所述的环境。 若要详细了解如何在命令行中使用 MSBuild，请参阅[命令行上的 MSBuild - C++](msbuild-visual-cpp.md)。
 
 ## <a name="download-and-install-the-tools"></a>下载并安装工具
 
@@ -75,7 +78,7 @@ ms.locfileid: "79422900"
 
 ::: moniker range=">= vs-2019"
 
-命令文件的位置取决于所安装的 Visual Studio 的版本以及在安装过程中所做的选择。 对于 Visual Studio 2019，64 位系统上的典型安装位置位于 \\Program Files (x86)\\Microsoft Visual Studio\\2019\\版本  中。 “版本”可以是 Community、Professional、Enterprise、BuildTools 或提供的其他昵称  。
+命令文件的位置取决于所安装的 Visual Studio 的版本以及在安装过程中所做的选择。 对于 Visual Studio 2019，64 位系统上的典型安装位置位于 \\Program Files (x86)\\Microsoft Visual Studio\\2019\\版本  中。 “版本”可以是 Community、Professional、Enterprise、BuildTools 或提供的其他昵称。
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
@@ -123,40 +126,40 @@ ms.locfileid: "79422900"
 
 在现有命令窗口中指定特定生成体系结构的最简单方法是使用 vcvarsall.bat 文件。 使用 vcvarsall.bat 设置环境变量以配置本机 32 位或 64 位编译的命令行。 参数可用于指定到 x86、x64、ARM 或 ARM64 处理器的交叉编译。 可以将 Microsoft Store、通用 Windows 平台或 Windows 桌面平台作为目标。 甚至可以指定要使用的 Windows SDK，并选择平台工具集版本。
 
-在没有参数的情况下使用时，vcvarsall.bat 将配置环境变量，使其使用当前面向 32 位 Windows 桌面版的 x86 位本机编译器。 可以添加参数来配置环境以使用任何本机或跨编译器工具。 如果指定的配置未安装或在计算机上不可用，vcvarsall.bat 将显示错误消息。
+在没有参数的情况下使用时，vcvarsall.bat 将配置环境变量，使其使用当前面向 32 位 Windows 桌面版的 x86 位本机编译器。 可以添加参数来配置环境以使用任何本机或跨编译器工具。 如果你指定的配置未安装或在计算机上不可用，则 vcvarsall.bat 显示错误消息。
 
 ### <a name="vcvarsall-syntax"></a>vcvarsall 语法
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver=** _vcversion_]
 
-architecture <br/>
+architecture<br/>
 此可选参数指定要使用的主机和目标体系结构。 如果未指定体系结构，则使用默认生成环境  。 支持以下参数：
 
-|architecture |编译器|主机计算机体系结构|生成输出（目标）体系结构|
+|architecture|编译器|主机计算机体系结构|生成输出（目标）体系结构|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 32 位本机|x86、x64|x86|
 |**x86\_amd64** 或 **x86\_x64**|x86 跨平台上的 x64|x86、x64|X64|
 |**x86_arm**|x86 跨平台上的 ARM|x86、x64|ARM|
 |**x86_arm64**|x86 跨平台上的 ARM64|x86、x64|ARM64|
-|“amd64”或“x64”  |x64 64 位本机编译器|X64|X64|
+|“amd64”或“x64”|x64 64 位本机编译器|X64|X64|
 |**amd64\_x86** 或 **x64\_x86**|x64 跨平台上的 x86|X64|x86|
 |**amd64\_arm** 或 **x64\_arm**|x64 跨平台上的 ARM|X64|ARM|
 |**amd64\_arm64** 或 **x64\_arm64**|x64 跨平台上的 ARM64|X64|ARM64|
 
-platform_type <br/>
+platform_type<br/>
 可选择使用此参数指定“store”或“uwp”作为平台类型   。 默认情况下，环境设置为生成桌面或控制台应用。
 
-winsdk_version <br/>
+winsdk_version<br/>
 （可选）指定要使用的 Windows SDK 的版本。 默认情况下，使用最新安装的 Windows SDK。 若要指定 Windows SDK 版本，可使用完整的 Windows 10 SDK 编号，例如“10.0.10240.0”，或指定“8.1”以使用 Windows 8.1 SDK   。
 
-vcversion <br/>
+vcversion<br/>
 （可选）指定要使用的 Visual Studio 编译器工具集。 默认情况下，环境设置为使用当前的 Visual Studio 编译器工具集。
 
 ::: moniker range=">= vs-2019"
 
 使用“-vcvars_ver=14.2x.yyyyy”指定 Visual Studio 2019 编译器工具集的特定版本  。
 
-使用“-vcvars_ver=14.16”指定 Visual Studio 2017 编译器工具集的最新版本  。
+使用“-vcvars_ver=14.16”指定 Visual Studio 2017 编译器工具集的最新版本。
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
@@ -231,16 +234,20 @@ vcversion <br/>
 [链接](reference/linking.md)<br/>
 使用链接器 (link.exe) 可将已编译的对象文件和库链接到应用和 DLL 中。
 
-[MSBuild](msbuild-visual-cpp.md)<br/>
-使用 MSBuild (msbuild.exe) 和项目文件 (.vcxproj) 配置生成并间接调用该工具集。 这相当于在 Visual Studio IDE 中运行“生成”项目或“生成解决方案”命令   。 从命令行运行 MSBuild 是一种高级方案，通常不建议使用。
-
-[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-将 DEVENV (devenv.exe) 与命令行开关（例如，“/Build”或“/Clean”）结合使用可在不显示 Visual Studio IDE 的情况下执行某些生成命令   。 一般来说，DEVENV 比直接使用 MSBuild 要好，因为可以让 Visual Studio 处理 MSBuild 的复杂操作。
-
 [NMAKE](reference/nmake-reference.md)<br/>
 在 Windows 上使用 NMAKE (nmake.exe) 基于传统的生成文件生成 C++ 项目。
 
-在命令行上生成时，F1 命令不可用于即时帮助。 相反，可使用搜索引擎获取有关警告、错误和消息的信息，也可以使用脱机帮助文件。 若要在 [docs.microsoft.com](https://docs.microsoft.com/cpp/) 中使用搜索，请使用页面顶部的搜索框。
+在命令行上生成时，F1 命令不可用于即时帮助。 相反，可使用搜索引擎来获取有关警告、错误和消息的信息。 也可以下载并使用脱机帮助文件。 若要在 [docs.microsoft.com](https://docs.microsoft.com/cpp/) 中使用搜索，请在任意文章顶部的搜索框中输入查询。
+
+## <a name="command-line-project-management-tools"></a>命令行项目管理工具
+
+Visual Studio IDE 使用基于 MSBuild 的本机项目生成系统。 可以直接调用 MSBuild，也可以在不使用 IDE 的情况下使用本机项目系统：
+
+[MSBuild](msbuild-visual-cpp.md)<br/>
+使用 MSBuild (msbuild.exe) 和项目文件 (.vcxproj) 配置生成并间接调用该工具集。 这相当于在 Visual Studio IDE 中运行“生成”项目或“生成解决方案”命令   。 从命令行运行 MSBuild 是一种高级方案，通常不建议使用。 自 Visual Studio 版本 16.5 起，MSBuild 不使用命令行环境来控制所使用的工具集和库。
+
+[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
+将 DEVENV (devenv.exe) 与命令行开关（例如，“/Build”或“/Clean”）结合使用可在不显示 Visual Studio IDE 的情况下执行某些生成命令   。 一般来说，DEVENV 比直接使用 MSBuild 要好，因为可以让 Visual Studio 处理 MSBuild 的复杂操作。 自 Visual Studio 版本 16.5 起，DEVENV 不使用命令行环境来控制所使用的工具集和库。
 
 ## <a name="in-this-section"></a>本节内容
 

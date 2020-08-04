@@ -5,16 +5,16 @@ helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 196eb39d901b38ab7b005b03a933827ec4288218
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 540b938e2c4121f189216942bc06630fc61ee19c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220855"
 ---
 # <a name="c-abstract-declarators"></a>C 抽象声明符
 
-抽象声明符是没有标识符的声明符，由一个或多个指针、数组或函数修饰符组成。 指针修饰符 (\*) 始终在声明符中的标识符前面；数组 ([ ]  ) 和函数 ( ( )  ) 修饰符紧跟在标识符后面。 了解这种情况后，您可以确定标识符将在抽象声明符中显示的位置并相应地解释声明符。 有关复杂声明符的其他信息和示例，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。 通常 `typedef` 可用于简化声明符。 请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。
+抽象声明符是没有标识符的声明符，由一个或多个指针、数组或函数修饰符组成。 指针修饰符 (\*) 始终在声明符中的标识符前面；数组 ([ ]  ) 和函数 ( ( )  ) 修饰符紧跟在标识符后面。 了解这种情况后，您可以确定标识符将在抽象声明符中显示的位置并相应地解释声明符。 有关复杂声明符的其他信息和示例，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。 `typedef` 通常可用于简化声明符。 请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。
 
 抽象声明符可能很复杂。 复杂的抽象声明符中的括号指定一个特定的解释，正如它们为声明中的复杂声明符所做的一样。
 

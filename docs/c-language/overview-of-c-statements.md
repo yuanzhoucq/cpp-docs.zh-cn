@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6b6cf9ee7aab3f14b3cb4b48c10e59125391c14c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211770"
 ---
 # <a name="overview-of-c-statements"></a>C 语句概述
 
@@ -41,7 +41,7 @@ C 语句由标记、表达式和其他语句组成。 构成另一个语句的�
 
 表达式语句包含可包含[表达式和赋值](../c-language/expressions-and-assignments.md)中介绍的算术或逻辑运算符的 C 表达式。 null 语句是空语句。
 
-所有 C 语句都可以以由名称和冒号组成的标识标签开头。 由于只有 `goto` 语句可识别语句标签，因此语句标签将与 `goto` 一起讨论。 有关详细信息，请参阅 [goto 和标记语句](../c-language/goto-and-labeled-statements-c.md)。
+所有 C 语句都可以以由名称和冒号组成的标识标签开头。 由于只有 `goto` 语句才能识别语句标签，因此将用 `goto` 介绍语句标签。 有关详细信息，请参阅 [goto 和标记语句](../c-language/goto-and-labeled-statements-c.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 039b86eec024daf8e3473bba5d89f190507f3cfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2cc8062368b89e38b5f96b3134742123af24310
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335459"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231476"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>提高时间关键代码的技巧
 
@@ -107,7 +107,7 @@ CPU 缓存命中可以花费程序 10-20 个时钟周期。 外部缓存命中�
 
 Microsoft 基础类 (MFC) 可以在很大程度上简化代码的编写。 当编写时间关键代码时，应该注意一些类中的固有系统开销。 检查时间关键代码使用的 MFC 代码，查看它是否满足性能需求。 下面的列表标识了应该注意的 MFC 类和函数：
 
-- `CString` MFC 调用 C 运行时库以为 [CString](../atl-mfc-shared/reference/cstringt-class.md) 动态分配内存。 一般而言，`CString` 与其他任何动态分配的字符串一样有效。 与任何动态分配的字符串一样，它也有动态分配和释放的系统开销。 堆栈上的简单 `char` 数组通常可以用于相同的目的并且更快。 不要使用 `CString` 存储常数字符串。 请改用 `const char *`。 使用 `CString` 对象执行的任何操作都有一些系统开销。 使用运行时库[字符串函数](../c-runtime-library/string-manipulation-crt.md)可能更快。
+- `CString` MFC 调用 C 运行时库以为 [CString](../atl-mfc-shared/reference/cstringt-class.md) 动态分配内存。 一般而言，`CString` 与其他任何动态分配的字符串一样有效。 与任何动态分配的字符串一样，它也有动态分配和释放的系统开销。 通常，堆栈上的简单 `char` 数组可以达到同样的目的，而且速度更快。 不要使用 `CString` 存储常数字符串。 请改用 `const char *`。 使用 `CString` 对象执行的任何操作都有一些系统开销。 使用运行时库[字符串函数](../c-runtime-library/string-manipulation-crt.md)可能更快。
 
 - `CArray` [CArray](../mfc/reference/carray-class.md) 提供了规则数组不具备的灵活性，但是程序可能不需要它。 如果知道数组的特定限制，反而可以使用全局固定数组。 如果使用 `CArray`，当需要重新分配时，使用 `CArray::SetSize` 建立它的大小并指定增长的元素数。 否则，添加元素可能导致数组经常重新分配和复制，这样做效率很低而且可能产生内存碎片。 还需注意的是，如果将一项插入数组中，则 `CArray` 移动内存中后面的项并且可能需要增长数组。 这些操作可能导致缓存未命中和页错误。 如果浏览 MFC 使用的代码，你可能会发现可编写一些更特定于方案的内容以提高性能。 例如，由于 `CArray` 是一个模板，可以提供特定类型的 `CArray` 专用化。
 

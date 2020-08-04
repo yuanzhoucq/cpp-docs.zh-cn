@@ -3,12 +3,12 @@ title: Launch.vs.json 架构参考 (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: ff4713642ab95a9bbc31f1a06236de459e53f9c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323054"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223949"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Launch.vs.json 架构参考 (C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "81323054"
 |`inheritEnvironments`|array|指定从多个源继承的一组环境变量。 可以在 CMakeSettings.json 或 CppProperties.json 等文件中定义一些变量，并使它们可用于调试上下文   。  Visual Studio 16.4  ：使用 `env.VARIABLE_NAME` 语法，根据每个目标指定环境变量。 若要取消设置某个变量，请将它设置为“null”。|
 |`args`|array|指定传递给已启动程序的命令行参数。|
 |`currentDir`|string|指定生成目标的完整目录路径。 除非设置了此参数，否则将自动对此进行检测。|
-|`noDebug`|boolean|指定是否调试已启动程序。 如果未指定，则此参数的默认值为 `false`。|
+|`noDebug`|boolean|指定是否调试已启动程序。 如果没有指定，则此参数的默认值为 `false`。|
 |`stopOnEntry`|boolean|指定在启动进程并附加调试程序后是否立即中断。 此参数的默认值为 `false`。|
 |`remoteMachine`|string|指定启动程序的远程计算机的名称。|
 |`env`|array| 指定自定义环境变量的键值列表。 env:{"myEnv":"myVal"}。|
@@ -84,7 +84,7 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 |`pipeArgs`|array|传递给管道程序用于配置连接的命令行参数。|
 |`debuggerPath`|string|目标计算机上调试程序的完整路径，例如，/usr/bin/gdb。|
 |`pipeEnv`|对象 (object)|传递给管道程序的环境变量。|
-|`quoteArgs`|boolean|如果各个参数包含字符（例如空格或制表符），是否应将其加引号？ 如果为 `false`，将不再自动对调试程序命令加引号。 默认值为 `true`。|
+|`quoteArgs`|boolean|如果各个参数包含字符（例如空格或制表符），是否应将其加引号？ 如果为 `false`，则调试器命令将不再被自动引用。 默认为 `true`。|
 
 ## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>源文件映射选项
 
@@ -93,4 +93,4 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 ||||
 |-|-|-|
 |`editorPath`|string|编辑器要查找的源代码的位置。|
-|`useForBreakpoints`|boolean|设置断点时，应使用此源映射。 如果为 `false`，仅文件名和行号会用于设置断点。 如果为 `true`，仅当使用此源映射时，才会使用文件的完整路径和行号设置断点。 否则，设置断点时将仅使用文件名和行号。 默认值为 `true`。|
+|`useForBreakpoints`|boolean|设置断点时，应使用此源映射。 如果为 `false`，则只有文件名和行号用于设置断点。 如果为 `true`，则只有在使用此源映射时，才会使用文件的完整路径和行号设置断点。 否则，设置断点时将仅使用文件名和行号。 默认为 `true`。|

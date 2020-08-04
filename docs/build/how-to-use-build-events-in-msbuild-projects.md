@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 3fe205223b6cf381bbf3e2872b1a84f9d81a3cb7
-ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.openlocfilehash: 7c35abbcabe62da2e60fbc2393c575e7c3872cf3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060065"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224001"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
 
@@ -17,7 +17,7 @@ ms.locfileid: "70060065"
 
 所有三个生成事件都由所执行的命令元素 (`<Command>`) 以及在 MSBuild  执行生成事件时显示的消息元素 (`<Message>`) 在项定义组中进行表示。 每个元素都是可选的，如果多次指定同一个元素，则最后一次出现的元素优先。
 
-可以在属性组中指定可选的“在生成中使用”  元素 (`<`build-event  `UseInBuild>`)，以指明是否执行生成事件。 “在生成中使用”  元素内容的值为 true  或 false  。 默认情况下会执行生成事件，除非其对应的“在生成中使用”  元素设置为 `false`。
+可以在属性组中指定可选的“在生成中使用”  元素 (`<`build-event  `UseInBuild>`)，以指明是否执行生成事件。 use-in-build 元素的内容值为 `true` 或 `false`。 默认情况下会执行生成事件，除非其对应的 use-in-build 元素设置为 `false`。
 
 下表列出了每个生成事件 XML 元素：
 

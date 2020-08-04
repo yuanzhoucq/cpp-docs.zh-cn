@@ -5,12 +5,12 @@ helpviewer_keywords:
 - conversions, assignment
 - assignment conversions
 ms.assetid: 4ee01013-de32-4aae-b12e-0051d0cde927
-ms.openlocfilehash: f118c4a7fee493793b1410cb26f6a0af571c5fcc
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: cc75bdd8227c09247f6d4270f1fc21235de2eb05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998703"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211835"
 ---
 # <a name="assignment-conversions"></a>赋值转换
 
@@ -26,7 +26,7 @@ ms.locfileid: "71998703"
 
 - [从其他类型的转换](../c-language/conversions-from-other-types.md)
 
-虽然 const  左值不能在赋值的左侧使用，但类型限定符不会影响允许的转换。
+虽然不能在赋值的左侧使用 `const` 左值，但类型限定符不会影响转换的可允许性。
 
 ## <a name="see-also"></a>请参阅
 
