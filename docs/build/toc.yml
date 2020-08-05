@@ -114,7 +114,7 @@
           href: ../build/using-function-name-without-parens-produces-no-code.md
         - name: 优化最佳做法
           href: ../build/optimization-best-practices.md
-        - name: 按配置文件优化
+        - name: 按配置优化
           expanded: false
           items:
             - name: 按配置文件优化
@@ -669,6 +669,8 @@
                   href: ../build/reference/showincludes-list-include-files.md
                 - name: /source-charset（设置源字符集）
                   href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /sourceDependencies（报告源级别依赖项）
+                  href: ../build/reference/sourcedependencies.md
                 - name: /std（指定语言标准版本）
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: /Tc、/Tp、/TC、/TP（指定源文件类型）
