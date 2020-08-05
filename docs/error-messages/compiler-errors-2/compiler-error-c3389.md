@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 823b28deae3e3cfc18cdad8d37007bf8e8cff494
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8a040e649074e115b1b86ea56db6c9ef48f4c0d0
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221050"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520468"
 ---
 # <a name="compiler-error-c3389"></a>编译器错误 C3389
 
-> __declspec （*关键字*）不能与/clr： pure 或/clr： safe 一起使用
+> __declspec (*关键字*) 不能与/clr： pure 或/clr： safe 一起使用
 
 ## <a name="remarks"></a>备注
 
-**/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
+**`/clr:pure`** 和 **`/clr:safe`** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-使用的[__declspec](../../cpp/declspec.md)修饰符隐含每个进程状态。  [/clr： pure](../../build/reference/clr-common-language-runtime-compilation.md)表示每个[appdomain](../../cpp/appdomain.md)状态。  因此，不允许在声明变量时使用 `keyword` **`__declspec`** 修饰符并使用 **/clr： pure**进行编译。
+[`__declspec`](../../cpp/declspec.md)使用的修饰符隐含每个进程的状态。  [`/clr:pure`](../../build/reference/clr-common-language-runtime-compilation.md)表示每个 [`appdomain`](../../cpp/appdomain.md) 状态。  因此，不允许使用*关键字* **`__declspec`** 修饰符和编译来声明变量 **`/clr:pure`** 。
 
 ## <a name="example"></a>示例
 

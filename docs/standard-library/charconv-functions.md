@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230195"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565944"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 函数
 
@@ -23,20 +23,20 @@ ms.locfileid: "87230195"
 |[to_chars](#to_chars) | 将整数或浮点值转换为的序列 **`char`** 。 |
 |[from_chars](#from_chars) | 将的序列转换 **`char`** 为整数或浮点值。 |
 
-这些转换函数针对性能进行了优化，并且还支持最短的往返行为。 最短往返行为意味着当数字转换为字符时，只写出足够的精度，以便在将这些字符转换回浮点时恢复原始数字。
+这些转换函数针对性能进行了优化，并且还支持最短的往返行为。 最短往返行为表示将数字转换为字符时，只写出足够的精度，以便在将这些字符转换回浮点时恢复原始数字。
 
-- 将字符转换为数字时，数值不需要以 null 值结束。 同样，将数字转换为字符时，结果不是以 null 结尾的。
+- 将字符转换为数字时，数值不需要以 null 值终止。 同样，将数字转换为字符时，结果不是以 null 结尾的。
 - 转换函数不分配内存。 所有情况下都拥有缓冲区。
 - 转换函数不会引发。 返回一个结果，您可以从该结果确定转换是否成功。
 - 转换函数不区分运行时舍入模式。
-- 转换函数不是区域设置感知。 它们始终将小数点打印并分析为 `'.'` 使用逗号的区域设置，而不是使用 "，"。
+- 转换函数不能识别区域设置。 它们始终将小数点打印并分析为 `'.'` 使用逗号的区域设置，而不是使用 "，"。
 
 ## `to_chars`
 
 将整数或浮点值转换为的序列 **`char`** 。
 
-`value`通过填充范围来转换为字符串， \[ `first` `last` 其中 \[ `first` ， `last` ）必须为有效范围。
-返回[to_chars_result 结构](to-chars-result-structure.md)。 如果转换成功，则为 `to_char_result.ec` ，成员 `ptr` 是所写入字符的一-后端指针。 否则， `to_char_result.ec` 具有值 `errc::value_too_large` ，其 `to_char_result.ptr` 值为， `last` 并且 \[ `first` 未指定范围的内容 `last` 。
+`value`通过填充范围 \[ `first` 、 `last`) 、where \[ `first` 、 `last`) 必须为有效范围来转换为字符串。
+返回[to_chars_result 结构](to-chars-result-structure.md)。 如果转换成功，则为 `to_char_result.ec` ，成员 `ptr` 是所写入字符的一-后端指针。 否则， `to_char_result.ec` 具有值，其值为， `errc::value_too_large` `to_char_result.ptr` `last` 且 \[ `first` 未指定) 范围内的内容 `last` 。
 
 `to_chars`如果您提供不足大的缓冲区来保存结果，则唯一可能会失败的方法是。
 
@@ -81,7 +81,7 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 要转换的值。 如果 `value` 为负，则表示形式以开头 `-` 。
 
 *基座*\
-对于整数转换，是转换为字符时要使用的基 `value` 。 必须介于2和36（含）之间。 不会有前导零。 介于 10. 35 （含）之间的数字表示为小写字符 a.。z
+对于整数转换，是转换为字符时要使用的基 `value` 。 必须介于2和36（含）之间。 不会有前导零。 范围为 10. 35 (包含) 的数字表示为小写字符 a。z
 
 *bcp.fmt*\
 对于浮点转换，为用于指定要使用的转换格式（如科学、固定或十六进制）的位掩码。 有关详细信息，请参阅[chars_format](chars-format-class.md) 。
@@ -95,15 +95,15 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 ### <a name="remarks"></a>备注
 
-采用[chars_format](chars-format-class.md)参数的函数会确定转换说明符，就像它们使用如下所示：如果为，则为; 如果为，则为; 如果为，则为; 如果为，则为 `printf()` `f` `fmt` `chars_format::fixed` `e` `fmt` `chars_format::scientific` `a` `fmt` `chars_format::hex` `g` `fmt` `chars_format::general` 。 指定最短的固定表示法仍可能会导致长时间的输出，因为当值非常大或很小时，可能是最短的表示形式。
+采用[chars_format](chars-format-class.md)参数的函数会确定转换说明符，就像它们是按如下方式使用一样：如果为，则转换说明符为; (如果为，则在结果) ，如果为，则为; `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` `fmt` `chars_format::hex` `'g'` 如果 `fmt` 为， `chars_format::general` 则为。 指定最短的固定表示法仍可能会导致长时间的输出，因为当值非常大或很小时，可能是最短的表示形式。
 
-下表描述了和参数的不同组合的转换 `fmt` 行为 `precision` 。 "最短往返" 一词是指写入所需的最少位数，以便使用相应的函数分析该表示形式 `from_chars` 会完全恢复值。
+下表描述了和参数的不同组合的转换 `fmt` 行为 `precision` 。 "最短往返行为" 一词是指写入所需的最少位数，以便使用相应的函数分析该表示形式 `from_chars` 会完全恢复值。
 
-| `fmt`and `precision` 组合 | 输出 |
+| `fmt`and `precision` 组合 | Output |
 |--|--|
 |  两者均未选中 | 无论是固定的还是科学记数法，都要将其作为 tiebreaker 进行修复。</br>此行为不能由采用参数的任何重载模拟 `fmt` 。 |
 | `fmt` | 指定格式的最短往返行为，如最短科学格式。 |
-| `fmt` 和 `precision` | 使用以下样式的给定精度（ `printf()` 无最短往返行为）。 |
+| `fmt` 和 `precision` | 使用遵循样式的给定精度， `printf()` 无需最短的往返行为。 |
 
 ### <a name="return-value"></a>返回值
 
@@ -188,7 +188,7 @@ from_chars_result from_chars(const char* first, const char* last, long double& v
 
 ### <a name="remarks"></a>备注
 
-`from_chars()`用于分析字符串的函数（ \[ `first` `last` 其中，）必须为 \[ `first` `last` 有效范围。
+`from_chars()`函数分析字符串 \[ `first` ， `last`) 用于数字模式，其中 \[ `first` ， `last`) 需要为有效范围。
 
 分析字符时，不忽略空格。 `strtod()`例如，缓冲区的开头必须是有效的数字表示形式。
 
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="requirements"></a>要求
+
+**标头：**\<charconv>
+
+**命名空间:** std
+
+/std： c + + 17 或更高版本是必需的。
+
+## <a name="see-also"></a>请参阅
 
 [\<charconv>](charconv.md)  
-[往返的最短十进制字符串](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+往返的最[短十进制字符串](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+[printf ( # A1 格式说明符](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)
