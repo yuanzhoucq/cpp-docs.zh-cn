@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228721"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807766"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class 和 ref struct（C++/CLI 和 C++/CX）
 
@@ -29,28 +29,25 @@ ref class**** 或 ref struct**** 扩展声明了对象生存期** 受自动管�
 ### <a name="syntax"></a>语法
 
 ```cpp
-      class_access
-      ref class
-      name
-      modifier :  inherit_accessbase_type {};
-class_accessref structnamemodifier :  inherit_accessbase_type {};
-class_accessvalue classnamemodifier :  inherit_accessbase_type {};
-class_accessvalue structnamemodifier :  inherit_accessbase_type {};
+class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref struct name modifier : inherit_access base_type {};
+class_access value class name modifier : inherit_access base_type {};
+class_access value struct name modifier : inherit_access base_type {};
 ```
 
 ### <a name="parameters"></a>参数
 
 class_access**<br/>
-（可选）程序集外部类或结构的可访问性。 可能的值为 **`public`** 和 **`private`** （默认值 **`private`** ）。 嵌套类或结构不得包含 class_access** 说明符。
+（可选）程序集外部类或结构的可访问性。 可能的值为 **`public`** ，并且 **`private`** (**`private`** 为默认) 。 嵌套类或结构不得包含 class_access** 说明符。
 
-*name*<br/>
+name<br/>
 类或结构的名称。
 
 *组合键*<br/>
 （可选）[abstract](abstract-cpp-component-extensions.md) 和 [sealed](sealed-cpp-component-extensions.md) 是有效修饰符。
 
 inherit_access**<br/>
-（可选）base_type** 的可访问性。 唯一允许的可访问性为 **`public`** （ **`public`** 默认值）。
+（可选）base_type** 的可访问性。 唯一允许的可访问性是 **`public`** **`public`** 默认)  (。
 
 base_type<br/>
 （可选）基类型。 但是，值类型不能充当基类型。
@@ -73,7 +70,7 @@ base_type<br/>
 
 - [类、结构和联合](../cpp/classes-and-structs-cpp.md)
 
-- [中的析构函数和终结器如何：定义和使用类和结构（c + +/CLI）](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [中的析构函数和终结器如何：定义和使用类和结构 (c + +/CLI) ](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [用户定义的运算符 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -81,7 +78,7 @@ base_type<br/>
 
 - [如何：包装本机类以供 C 使用#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-- [泛型类（c + +/CLI）](generic-classes-cpp-cli.md)
+- [C + +/CLI)  (泛型类](generic-classes-cpp-cli.md)
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
