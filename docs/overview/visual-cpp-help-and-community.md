@@ -1,18 +1,18 @@
 ---
 title: Visual C++ 帮助和社区
-ms.date: 11/30/2017
+ms.date: 08/03/2020
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: 66ff4844e34d1d3c781791b5e250387d6ac2a0d1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e3dd475112f217e9d7891a18f7dc91972b221dd9
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405073"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565919"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 帮助和社区
 
-下面是如何获取 C++ 代码编写方式和 Visual Studio 开发工具使用方式的相关信息。
+下面提供帮助信息，并介绍如何编写 C++ 代码和使用 Visual Studio 开发工具。
 
 ## <a name="samples"></a>示例
 
@@ -42,4 +42,4 @@ ms.locfileid: "86405073"
 |[C++ 团队博客](https://devblogs.microsoft.com/cppblog/)|包含一些博文，它们介绍了专家就 Microsoft 的 C++ 产品团队进行的各种主题。|
 |[第 9 频道](https://channel9.msdn.com/)|包含视频访谈和演讲。 使用第 9 频道主页上的搜索框查找 C++ 内容。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|包含有关 Visual Studio 和相关开发工具的文章和新闻。|
-|[MSDN 论坛](https://social.msdn.microsoft.com/Forums/)和 Visual Studio [开发者社区](https://developercommunity.visualstudio.com)|官方 Microsoft 论坛，可在上面发布有关 C++ 的问题，并从 Microsoft 和社区内的专家处获取答案。|
+|[Microsoft Docs Q&A](https://docs.microsoft.com/answers/topics/c%2B%2B.html) 和 Visual Studio C++ [开发者社区](https://developercommunity.visualstudio.com/spaces/62/index.html)|官方 Microsoft 论坛，可在上面发布有关 C++ 的问题，并从 Microsoft 和社区内的专家处获取答案。|

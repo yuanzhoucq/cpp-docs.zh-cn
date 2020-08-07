@@ -12,12 +12,12 @@ helpviewer_keywords:
 - simple types, names
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: bfbca4ae87d84286b94120eaf24de928ae75f3c9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc8ba746bea7f6ea885beb625de414d83367b53f
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87200317"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520676"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>数据类型说明符和等效项
 
@@ -25,22 +25,22 @@ ms.locfileid: "87200317"
 
 ## <a name="type-specifiers-and-equivalents"></a>类型说明符和等效项
 
-|类型说明符|等效项|
-|--------------------|---------------------|
-|`signed char`1|**`char`**|
-|**`signed int`**|**`signed`** , **`int`**|
-|**`signed short int`**|**`short`** , **`signed short`**|
-|**`signed long int`**|**`long`** , **`signed long`**|
-|**`unsigned char`**|—|
-|**`unsigned int`**|**`unsigned`**|
-|**`unsigned short int`**|**`unsigned short`**|
-|**`unsigned long int`**|**`unsigned long`**|
-|**`float`**|—|
-|`long double`2|—|
+| 类型说明符 | 等效项 |
+|--|--|
+| `signed char`<sup>1</sup> | **`char`** |
+| **`signed int`** | **`signed`** , **`int`** |
+| **`signed short int`** | **`short`** , **`signed short`** |
+| **`signed long int`** | **`long`** , **`signed long`** |
+| **`unsigned char`** | — |
+| **`unsigned int`** | **`unsigned`** |
+| **`unsigned short int`** | **`unsigned short`** |
+| **`unsigned long int`** | **`unsigned long`** |
+| **`float`** | — |
+| `long double`<sup>2</sup> | — |
 
-1   当你将 `char` 类型设为在默认情况下是不带符号的（通过指定 `/J` 编译器选项）时，无法将 `signed char` 缩写为 `char`。
+<sup>1</sup> 当在默认情况下将 `char` 类型设为无符号时（通过指定 `/J` 编译器选项），无法将 `signed char` 缩写为 `char`。
 
-2   在 32 位和 64 位操作系统中，Microsoft C 编译器将 `long double` 映射到类型 `double`。
+<sup>2</sup> 在 32 位和 64 位操作系统中，Microsoft C 编译器将 `long double` 映射到类型 `double`。
 
 **Microsoft 专用**
 

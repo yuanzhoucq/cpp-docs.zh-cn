@@ -3,12 +3,12 @@ title: Visual Studio 中的 C++ 新变化
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226784"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389995"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -513,12 +513,11 @@ CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细
 
 多种使用 IntelliSense 引擎重构和导航代码的 C++ 操作运行速度更快。 以下数字基于有 3500 个项目的 Visual Studio Chromium 解决方案：
 
-|||
-|-|-|
-|功能|性能改进|
-|重命名|5.3 倍|
-|更改签名 |4.5 倍|
-|查找所有引用|4.7 倍|
+| 功能 | 性能改进 |
+|--|--|
+| 重命名 | 5.3 倍 |
+| 更改签名 | 4.5 倍 |
+| 查找所有引用 | 4.7 倍 |
 
 C++ 现在支持通过“Ctrl+单击”转到定义，使利用鼠标导航到定义更轻松。 Productivity Power Tools 包的结构可视化工具现在也默认包含在产品中。
 
@@ -667,7 +666,7 @@ Visual Studio 2017 随附的 Clang/C2 工具集现在支持 `/bigobj` 开关，�
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
-- 添加了对 [/analyze:ruleset](../build/reference/analyze-code-analysis.md) 的支持，它允许指定要运行的代码分析规则。
+- 添加了对 [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) 的支持，它允许指定要运行的代码分析规则。
 - 添加了对其他 C++ Core Guidelines 规则的支持。  有关详细信息，请参阅[使用 C++ 核心准则检查器](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Visual Studio 2017 中的单元测试
