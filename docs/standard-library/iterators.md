@@ -5,18 +5,18 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: eaa4d50fc50528febf923f1c13a5283b9a1bd389
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
+ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334965"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87870147"
 ---
 # <a name="iterators"></a>迭代器
 
 迭代器是一个对象，可以循环访问 C++ 标准库容器中的元素，并提供对各个元素的访问。 C++ 标准库容器全都提供迭代器，以便算法可以采用标准方式访问其元素，而不必考虑用于存储元素的容器类型。
 
-可以使用成员和全局函数（如和）显式使用迭代器，使用和等 `begin()` `end()` 运算符 `++` `--` 向前或向后移动。 你还可以使用范围 for 循环或（对于某些迭代器类型）下标运算符隐式使用迭代器 `[]` 。
+可以使用成员和全局函数（如和）显式使用迭代器，使用和等 `begin()` `end()` 运算符 `++` `--` 向前或向后移动。 你还可以使用范围 for 循环或 (为) 下标运算符的某些迭代器类型隐式使用迭代器 `[]` 。
 
 在 C++ 标准库中，序列或范围的开头是第一个元素。 序列或范围的末尾始终定义为最后一个元素的下一个位置。 全局函数 `begin` 并 `end` 返回指定容器的迭代器。 典型显式迭代器循环访问容器中的所有元素，如下所示：
 
@@ -34,7 +34,7 @@ for (auto it = begin(vec); it != end(vec); it++)
 ```cpp
 for (auto num : vec)
 {
-    // no deference operator
+    // no dereference operator
     cout << num << " ";
 }
 ```
@@ -88,7 +88,7 @@ for (auto num : vec)
 
 Microsoft c + + 现在提供经过检查的迭代器和调试迭代器，以确保不会覆盖容器的边界。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
