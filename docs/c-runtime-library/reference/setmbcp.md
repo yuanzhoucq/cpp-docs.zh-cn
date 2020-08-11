@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
+ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918819"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88086963"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -59,17 +59,7 @@ int _setmbcp(
 
 ## <a name="remarks"></a>备注
 
-**_Setmbcp**函数指定新的多字节代码页。 默认情况下，运行时系统将多字节代码页自动设置为系统默认的 ANSI 代码页。 多字节代码页设置将影响所有独立于区域设置的多字节例程。 但是，可以指示 **_setmbcp**使用为当前区域设置定义的代码页（请参阅以下清单常量和关联的行为结果列表）。 有关依赖于区域设置代码页，而不是多字节代码页的多字节例程的列表，请参阅[多字节字符序列解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)。
-
-多字节代码页还会通过以下运行时库例程来影响多字节字符处理：
-
-||||
-|-|-|-|
-|[_exec 函数](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
-|[_fullpath](fullpath-wfullpath.md)|[_spawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-
-此外，所有将多字节字符*argv*或*envp*程序参数作为参数（如 **_exec**和 **_spawn**系列）的运行时库例程会根据多字节代码页处理这些字符串。 因此，对更改多字节代码页的 **_setmbcp**的调用也会影响这些例程。
+**_Setmbcp**函数指定新的多字节代码页。 默认情况下，运行时系统将多字节代码页自动设置为系统默认的 ANSI 代码页。 多字节代码页设置将影响所有独立于区域设置的多字节例程。 但是，可以指示 **_setmbcp**使用为当前区域设置定义的代码页 (请参阅下面列出的清单常量和关联的行为结果) 。 有关依赖于区域设置代码页，而不是多字节代码页的多字节例程的列表，请参阅[多字节字符序列解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)。
 
 *代码页*参数可设置为以下任意值：
 
@@ -83,13 +73,13 @@ int _setmbcp(
 
 - **_MB_CP_UTF8**使用 UTF-8。  将代码页设置为 **_MB_CP_UTF8**时，例程（如[_ismbblead](ismbblead-ismbblead-l.md) ）始终返回 false。
 
-- 任何其他有效的代码页值，无论该值是 ANSI、OEM 还是其他操作系统支持的代码页（不支持 UTF-7 除外）。
+- 任何其他有效的代码页值，无论该值是 ANSI、OEM 还是其他操作系统支持的代码页 (除了 UTF-7 外，不支持) 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 
