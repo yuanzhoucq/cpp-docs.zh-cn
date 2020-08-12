@@ -12,11 +12,11 @@
       href: ../linux/connectionmanager-reference.md
 - name: 在 Visual Studio 中使用 MSBuild 生成 Linux 项目
   items:
-    - name: 新建 Linux 项目
+    - name: 创建 Linux MSBuild 项目
       href: ../linux/create-a-new-linux-project.md
-    - name: 配置 Linux 项目
+    - name: 配置 Linux MSBuild 项目
       href: ../linux/configure-a-linux-project.md
-    - name: 部署、运行和调试 Linux 项目
+    - name: 部署、运行和调试 Linux MSBuild 项目
       href: ../linux/deploy-run-and-debug-your-linux-project.md
     - name: Linux 项目属性页参考
       items:
@@ -44,8 +44,10 @@
           href: ../linux/prop-pages/remote-ar-linux.md
 - name: 在 Visual Studio 中使用 CMake 生成 Linux 项目
   items:
-    - name: 创建和配置 Linux CMake 项目
+    - name: 创建 Linux CMake 项目
       href: ../linux/cmake-linux-project.md
+    - name: 配置 Linux CMake 项目
+      href: ../linux/cmake-linux-configure.md
     - name: 教程：在 Visual Studio 中创建 C++ 跨平台项目
       href: ../build/get-started-linux-cmake.md
 - name: 配置 Linux 项目以使用地址擦除器
