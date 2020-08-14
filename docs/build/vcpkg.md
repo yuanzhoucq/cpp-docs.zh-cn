@@ -36,7 +36,7 @@ vcpkg 是用于 C++ 的一种命令行包管理器。 它极大地简化了 Wind
 - `bootstrap-vcpkg.bat` (Windows)
 - `./bootstrap-vcpkg.sh`（Linux、macOS）
 
-在 Linux 或 macOS 上，你可能需要在以下示例中使用 `./` 作为 vcpkg 命令的前缀。 请记得从 vcpgg 根目录运行这些命令。
+在 Linux 或 macOS 上，你可能需要在以下示例中使用 `./` 作为 vcpkg 命令的前缀。 请记得从 vcpkg 根目录运行这些命令。
 
 ## <a name="search-the-list-of-available-libraries"></a>搜索可用库列表
 
